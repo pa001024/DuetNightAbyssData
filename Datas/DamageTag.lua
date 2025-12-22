@@ -60,16 +60,21 @@ return ReadOnly("DamageTag", {
   NifuSpLight = {
     DamageTag = "NifuSpLight"
   },
+  NoCombo = {DamageTag = "NoCombo"},
   PhantomAvoid = {
     DamageTag = "PhantomAvoid"
   },
   Poison = {DamageTag = "Poison"},
+  Prop42001Ray = {
+    DamageTag = "Prop42001Ray"
+  },
   Prop42002Ray = {
     DamageTag = "Prop42002Ray"
   },
   QiuxianSpSkill1 = {
     DamageTag = "QiuxianSpSkill1"
   },
+  RaidLink = {DamageTag = "RaidLink"},
   Ranged = {DamageTag = "Ranged"},
   Ranged20502 = {
     DamageTag = "Ranged20502"
@@ -101,6 +106,10 @@ return ReadOnly("DamageTag", {
     DamageTag = "SpiritualFire"
   },
   Support = {DamageTag = "Support"},
+  SuyiSkill02Creature = {
+    DamageTag = "SuyiSkill02Creature"
+  },
+  SuyiWeapon = {DamageTag = "SuyiWeapon"},
   ThunderLaser = {
     DamageTag = "ThunderLaser"
   },

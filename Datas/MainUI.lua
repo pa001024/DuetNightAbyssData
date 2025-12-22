@@ -26,7 +26,6 @@ return ReadOnly("MainUI", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Bag.T_Entrance_Bag",
     Name = "MAIN_UI_BAG",
     Sequence = 20,
-    ShowCondition = T.RT_2,
     SystemUIName = "BagMain",
     UIUnlockRuleName = "Bag"
   },
@@ -104,7 +103,6 @@ return ReadOnly("MainUI", {
     Name = "MAIN_UI_QUEST",
     ReddotNode = "Quest",
     Sequence = 40,
-    ShowCondition = T.RT_2,
     SystemUIName = "TaskPanel",
     UIUnlockRuleName = "Quest"
   },
@@ -272,7 +270,11 @@ return ReadOnly("MainUI", {
     Name = "MAIN_UI_MODGUIDEBOOK",
     ReddotNode = "ModArchive",
     Sequence = 171,
-    ShowCondition = T.RT_2,
+    ShowCondition = {
+      2,
+      5,
+      350
+    },
     SystemUIName = "ModArchiveMain",
     UIUnlockRuleName = "ModArchive"
   },
@@ -282,6 +284,7 @@ return ReadOnly("MainUI", {
     EscShowType = 1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Set.T_Entrance_Set",
     Name = "UI_Esc_CommonSet",
+    ReddotNode = "Setting_Root",
     Sequence = 230,
     SystemUIName = "Setting"
   },
@@ -300,9 +303,28 @@ return ReadOnly("MainUI", {
     EscShowType = 1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_TrainingLevel.T_Entrance_TrainingLevel",
     Name = "MAIN_UI_PlayLevel",
-    ReddotNode = "ExperienceMain",
     Sequence = 95,
     SystemUIName = "ExperienceMain",
     UIUnlockRuleName = "PlayerLevel"
+  },
+  [29] = {
+    EnterId = 29,
+    EscShowCondition = T.RT_1,
+    EscShowType = 1,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Clock.T_Entrance_Clock'",
+    Name = "UI_Esc_DayAndNight",
+    ReddotNode = "DayAndNight",
+    Sequence = 105,
+    SystemUIName = "DayAndNight",
+    UIUnlockRuleName = "TODSetting"
+  },
+  [30] = {
+    EnterId = 30,
+    EscShowCondition = T.RT_1,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_CloudGame.T_Entrance_CloudGame'",
+    Link = "CloudGame",
+    Name = "UI_OPTION_CloudGame",
+    Sequence = 221,
+    SystemUIName = "GlobalWebBrowser"
   }
 })

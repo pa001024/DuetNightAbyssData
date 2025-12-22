@@ -58,6 +58,13 @@ return ReadOnly("ArchiveTab", {
     TabName = "UI_Archive_Tab_ChurchEnemy",
     TabPara = "Mon.Jh"
   },
+  [9] = {
+    ArchiveID = 1006,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Training_East",
+    TabId = 9,
+    TabName = "UI_Archive_Tab_HxEnemy",
+    TabPara = "Mon.Hx"
+  },
   [10] = {
     ArchiveID = 1006,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Archive_Boss",

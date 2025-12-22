@@ -170,6 +170,22 @@ return ReadOnly("DestroyReason", {
     IsTriggerDestroyEvent = false,
     IsTriggrRelationSpawn = false
   },
+  OwnerLeaveRegion = {
+    DestroyReason = "OwnerLeaveRegion",
+    IsClearGuide = true,
+    IsClearStaticCreatorRef = true,
+    IsMonClearBattleInfo = true,
+    IsTriggerDestroyEvent = false,
+    IsTriggrRelationSpawn = false
+  },
+  OwnerTagChange = {
+    DestroyReason = "OwnerTagChange",
+    IsClearGuide = true,
+    IsClearStaticCreatorRef = true,
+    IsMonClearBattleInfo = true,
+    IsTriggerDestroyEvent = false,
+    IsTriggrRelationSpawn = false
+  },
   PetAfterInteractive = {
     DestroyReason = "PetAfterInteractive",
     IsClearGuide = true,

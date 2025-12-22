@@ -77,6 +77,35 @@ return ReadOnly("BattleCharBuffUI", {
     IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Buff/T_Buff_Weapon_Spd_Up.T_Buff_Weapon_Spd_Up'",
     Type = "LastTime"
   },
+  [1504] = {
+    BuffId = {
+      [0] = 150402,
+      [1] = 150402,
+      [2] = 150402,
+      [3] = 150402,
+      [4] = 150402,
+      [5] = 150402,
+      [6] = 150402
+    },
+    ElementAttr = "Light",
+    ID = 1504,
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Buff/T_Buff_Weapon_Spd_Up.T_Buff_Weapon_Spd_Up'",
+    Type = "Layer"
+  },
+  [1505] = {
+    BuffId = {
+      [0] = 150503,
+      [1] = 150503,
+      [2] = 150503,
+      [3] = 150503,
+      [4] = 150503,
+      [5] = 150503,
+      [6] = 150503
+    },
+    ID = 1505,
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Buff/T_Buff_Weapon_Spd_Up.T_Buff_Weapon_Spd_Up'",
+    Type = "LastTime"
+  },
   [1601] = {
     BuffId = {
       [0] = 160101,

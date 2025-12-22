@@ -3,6 +3,10 @@ T.RT_1 = {Name = "IQ1002", Value = 1}
 T.RT_2 = {
   [1] = T.RT_1
 }
+T.RT_3 = {Name = "AltStart", Value = 1}
+T.RT_4 = {
+  [1] = T.RT_3
+}
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -231,6 +235,147 @@ return ReadOnly("QuestSetVariable", {
         }
       },
       QuestId = 11010816,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [12010307] = {
+    Start = {
+      Info = {
+        [1] = {Name = "IQ12010307", Value = 1}
+      },
+      QuestId = 12010307,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [12010313] = {
+    Start = {
+      Info = {
+        [1] = {Name = "IQ12010313", Value = 1}
+      },
+      QuestId = 12010313,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [12010315] = {
+    Start = {
+      Info = {
+        [1] = {Name = "IQ12010313", Value = 0}
+      },
+      QuestId = 12010315,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [12010322] = {
+    Start = {
+      Info = {
+        [1] = {Name = "IQ12010307", Value = 0}
+      },
+      QuestId = 12010322,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [12010502] = {
+    Start = {
+      Info = {
+        [1] = {Name = "IQ12010502", Value = 1}
+      },
+      QuestId = 12010502,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [12010513] = {
+    Start = {
+      Info = {
+        [1] = {
+          Name = "IQ12010513_fu",
+          Value = 1
+        }
+      },
+      QuestId = 12010513,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [12010516] = {
+    Start = {
+      Info = {
+        [1] = {
+          Name = "IQ12010513_fu",
+          Value = 0
+        }
+      },
+      QuestId = 12010516,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [12010519] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ12010502", Value = 0}
+      },
+      QuestId = 12010519,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [12010602] = {
+    Success = {
+      Info = T.RT_4,
+      QuestId = 12010602,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [12010603] = {
+    Start = {
+      Info = {
+        [1] = {Name = "IQ12010513", Value = 1}
+      },
+      QuestId = 12010603,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [12010604] = {
+    Start = {
+      Info = {
+        [1] = {Name = "IQ12010513", Value = 0}
+      },
+      QuestId = 12010604,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [12010606] = {
+    Start = {
+      Info = {
+        [1] = {Name = "AltStart", Value = 0}
+      },
+      QuestId = 12010606,
+      QuestStartorSuccess = "Start"
+    },
+    Success = {
+      Info = T.RT_4,
+      QuestId = 12010606,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [20030303] = {
+    Success = {
+      Info = {
+        [1] = {
+          Name = "DaFengBaoXiang200303",
+          Value = 1
+        }
+      },
+      QuestId = 20030303,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [20030304] = {
+    Success = {
+      Info = {
+        [1] = {
+          Name = "DaFengBaoXiang200303",
+          Value = 0
+        }
+      },
+      QuestId = 20030304,
       QuestStartorSuccess = "Success"
     }
   }

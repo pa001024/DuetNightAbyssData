@@ -74,6 +74,10 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "ArmoryExpResourceID",
     ConstantValue = 2001
   },
+  AutoRejectTime = {
+    ConstantName = "AutoRejectTime",
+    ConstantValue = 25
+  },
   BackToHomeBaseCondition = {
     ConstantName = "BackToHomeBaseCondition",
     ConstantValue = 25
@@ -117,6 +121,10 @@ return ReadOnly("GlobalConstant", {
   BirthdayMailId = {
     ConstantName = "BirthdayMailId",
     ConstantValue = 10013
+  },
+  BlockReconnectTime = {
+    ConstantName = "BlockReconnectTime",
+    ConstantValue = 180
   },
   BossRewardRefresh = {
     ConstantName = "BossRewardRefresh",
@@ -177,6 +185,10 @@ return ReadOnly("GlobalConstant", {
   Chapter1ChangeChar_M = {
     ConstantName = "Chapter1ChangeChar_M",
     ConstantValue = 160101
+  },
+  CharAccessoryNum = {
+    ConstantName = "CharAccessoryNum",
+    ConstantValue = 11
   },
   CharCardLevelMax = {
     ConstantName = "CharCardLevelMax",
@@ -250,9 +262,21 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "CumulativeDayPrizeMailId",
     ConstantValue = 10014
   },
+  CurrentVersion = {
+    ConstantName = "CurrentVersion",
+    ConstantValue = 110
+  },
   Daily_Goal_RandomTaskNum = {
     ConstantName = "Daily_Goal_RandomTaskNum",
     ConstantValue = 6
+  },
+  DefaultFXHelixLeap = {
+    ConstantName = "DefaultFXHelixLeap",
+    ConstantValue = 21001
+  },
+  DefaultFXPlungingATK = {
+    ConstantName = "DefaultFXPlungingATK",
+    ConstantValue = 11001
   },
   DefautFXDead = {
     ConstantName = "DefautFXDead",
@@ -378,6 +402,10 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "ExterminateGuideInterval",
     ConstantValue = 5
   },
+  FORBIDDEN_INVALID_REWARD_IN_DUNGEON = {
+    ConstantName = "FORBIDDEN_INVALID_REWARD_IN_DUNGEON",
+    ConstantValue = 0
+  },
   FishingGameInitialProgress = {
     ConstantName = "FishingGameInitialProgress",
     ConstantValue = 0.2
@@ -412,7 +440,7 @@ return ReadOnly("GlobalConstant", {
   },
   FriendApplyRecieveMax = {
     ConstantName = "FriendApplyRecieveMax",
-    ConstantValue = 50
+    ConstantValue = 10
   },
   FriendApplySendMax = {
     ConstantName = "FriendApplySendMax",
@@ -617,6 +645,10 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "MonthlyCardHoldMax",
     ConstantValue = 90
   },
+  NearbyPlayerDistance = {
+    ConstantName = "NearbyPlayerDistance",
+    ConstantValue = 1000
+  },
   NicknameMaxLen = {
     ConstantName = "NicknameMaxLen",
     ConstantValue = 14
@@ -733,9 +765,21 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "Prologue_HideReward",
     ConstantValue = 10010102
   },
+  PunishmentMailId = {
+    ConstantName = "PunishmentMailId",
+    ConstantValue = 10060
+  },
   QuestIDPetCaptureMustSuccess = {
     ConstantName = "QuestIDPetCaptureMustSuccess",
     ConstantValue = 20010305
+  },
+  RaidRankTopN = {
+    ConstantName = "RaidRankTopN",
+    ConstantValue = 100
+  },
+  RaidTimeRate = {
+    ConstantName = "RaidTimeRate",
+    ConstantValue = 1
   },
   RecommandFriendCD = {
     ConstantName = "RecommandFriendCD",
@@ -858,6 +902,10 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "TKRangedExpDis",
     ConstantValue = 0.333
   },
+  TODUnitTime = {
+    ConstantName = "TODUnitTime",
+    ConstantValue = 120
+  },
   TaskWarningLevel = {
     ConstantName = "TaskWarningLevel",
     ConstantValue = 10
@@ -874,13 +922,21 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "TeamInviteStayTime",
     ConstantValue = 15
   },
+  TeleportMinDistance = {
+    ConstantName = "TeleportMinDistance",
+    ConstantValue = 16000
+  },
+  TeleportPressTime = {
+    ConstantName = "TeleportPressTime",
+    ConstantValue = 1.5
+  },
   TicketSelectTime = {
     ConstantName = "TicketSelectTime",
     ConstantValue = 30
   },
   TotalReconnectTimeout = {
     ConstantName = "TotalReconnectTimeout",
-    ConstantValue = 60
+    ConstantValue = 180
   },
   TrainingPlayerRecoveryTime = {
     ConstantName = "TrainingPlayerRecoveryTime",
@@ -933,6 +989,10 @@ return ReadOnly("GlobalConstant", {
   WalnutSelectTime = {
     ConstantName = "WalnutSelectTime",
     ConstantValue = 30
+  },
+  Walnut_Mail_Lost = {
+    ConstantName = "Walnut_Mail_Lost",
+    ConstantValue = 10038
   },
   WeChatVerifyMailId = {
     ConstantName = "WeChatVerifyMailId",

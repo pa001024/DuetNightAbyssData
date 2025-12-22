@@ -43,6 +43,7 @@ end
 return ReadOnly("HardBossMain", {
   [1] = {
     AirWallStaticId = 1610010620,
+    BossIcon = "/Game/UI/Texture/Dynamic/Image/Play/T_HardBoss_CampIcon_Xibi.T_HardBoss_CampIcon_Xibi",
     CameraParam = T.RT_2,
     DifficultyId = {
       1001,
@@ -72,6 +73,7 @@ return ReadOnly("HardBossMain", {
   },
   [2] = {
     AirWallStaticId = 1440064,
+    BossIcon = "/Game/UI/Texture/Dynamic/Image/Play/T_HardBoss_CampIcon_ShiJingZhe.T_HardBoss_CampIcon_ShiJingZhe",
     CameraParam = T.RT_2,
     DifficultyId = {
       1011,
@@ -101,6 +103,7 @@ return ReadOnly("HardBossMain", {
   },
   [3] = {
     AirWallStaticId = 1240025,
+    BossIcon = "/Game/UI/Texture/Dynamic/Image/Play/T_HardBoss_CampIcon_Saqi.T_HardBoss_CampIcon_Saqi",
     CameraParam = T.RT_2,
     DifficultyId = {
       1021,
@@ -130,6 +133,7 @@ return ReadOnly("HardBossMain", {
   },
   [4] = {
     AirWallStaticId = 1660120,
+    BossIcon = "/Game/UI/Texture/Dynamic/Image/Play/T_HardBoss_CampIcon_Haier.T_HardBoss_CampIcon_Haier",
     CameraParam = T.RT_2,
     DifficultyId = {
       1031,
@@ -159,6 +163,7 @@ return ReadOnly("HardBossMain", {
   },
   [5] = {
     AirWallStaticId = 1969947,
+    BossIcon = "/Game/UI/Texture/Dynamic/Image/Play/T_HardBoss_CampIcon_Linen.T_HardBoss_CampIcon_Linen",
     CameraParam = T.RT_2,
     DifficultyId = {
       1041,

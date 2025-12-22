@@ -2,6 +2,10 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("ConditionText", {
+  ActivePropEffectId = {
+    ConditionLogic = "C",
+    ConditionType = "ActivePropEffectId"
+  },
   AvatarStatus = {
     AutoTrigger = true,
     ConditionLogic = "S",
@@ -24,6 +28,11 @@ return ReadOnly("ConditionText", {
     AutoTrigger = true,
     ConditionLogic = "S",
     ConditionType = "CurrentCharId"
+  },
+  DailyFreeTicketAmount = {
+    AutoTrigger = true,
+    ConditionLogic = "S",
+    ConditionType = "DailyFreeTicketAmount"
   },
   DailyLoginEnd = {
     ConditionLogic = "S",
@@ -107,6 +116,10 @@ return ReadOnly("ConditionText", {
     ConditionLogic = "C",
     ConditionType = "InStoryMode"
   },
+  IsCurrentCharEquipMod = {
+    ConditionLogic = "C",
+    ConditionType = "IsCurrentCharEquipMod"
+  },
   IsSpecialQuest = {
     ConditionType = "IsSpecialQuest"
   },
@@ -154,6 +167,10 @@ return ReadOnly("ConditionText", {
     ConditionLogic = "S",
     ConditionName = "UI_QUEST_CONDITION_FINISHQUEST",
     ConditionType = "QuestChain"
+  },
+  RegionCapturePet = {
+    ConditionLogic = "S",
+    ConditionType = "RegionCapturePet"
   },
   RougeLikeComplete = {
     AutoTrigger = true,
@@ -211,6 +228,17 @@ return ReadOnly("ConditionText", {
   TimeArrived = {
     ConditionLogic = "S",
     ConditionType = "TimeArrived"
+  },
+  TrueQuest = {
+    AutoTrigger = true,
+    ConditionLogic = "S",
+    ConditionType = "TrueQuest"
+  },
+  TrueQuestChain = {
+    AutoTrigger = true,
+    ConditionLogic = "S",
+    ConditionName = "UI_QUEST_CONDITION_FINISHQUEST",
+    ConditionType = "TrueQuestChain"
   },
   VarEqual = {ConditionLogic = "S", ConditionType = "VarEqual"}
 })

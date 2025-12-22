@@ -135,6 +135,16 @@ return ReadOnly("MonBattleMgrData", {
       }
     }
   },
+  [8523] = {
+    BattleGroupId = 8523,
+    SkillShareRule = {
+      {
+        Count = 1,
+        SkillCd = 5,
+        SkillId = 852310
+      }
+    }
+  },
   [9001] = {
     BattleGroupId = 9001,
     SkillShareRule = {
@@ -195,12 +205,12 @@ return ReadOnly("MonBattleMgrData", {
       },
       {
         Count = 1,
-        SkillCd = 10,
+        SkillCd = 6,
         SkillId = 1000104
       },
       {
         Count = 1,
-        SkillCd = 10,
+        SkillCd = 8,
         SkillId = 1000107
       }
     }
@@ -215,12 +225,12 @@ return ReadOnly("MonBattleMgrData", {
       },
       {
         Count = 1,
-        SkillCd = 10,
+        SkillCd = 6,
         SkillId = 1000504
       },
       {
         Count = 1,
-        SkillCd = 10,
+        SkillCd = 8,
         SkillId = 1000507
       }
     }

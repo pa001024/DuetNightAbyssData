@@ -103,7 +103,11 @@ return ReadOnly("MSDKUploadInfo", {
     bUploadToGA = true
   },
   draws_50 = {EventName = "draws_50"},
-  entry_game = {EventName = "entry_game"},
+  entry_game = {
+    EventName = "entry_game",
+    bUploadToFB = true,
+    bUploadToGA = true
+  },
   find_remain = {
     EventName = "find_remain",
     QuestSuccess = 10010201
@@ -113,7 +117,9 @@ return ReadOnly("MSDKUploadInfo", {
     QuestSuccess = 10010108
   },
   finish_sdk_login = {
-    EventName = "finish_sdk_login"
+    EventName = "finish_sdk_login",
+    bUploadToFB = true,
+    bUploadToGA = true
   },
   first_anime = {
     EventName = "first_anime"

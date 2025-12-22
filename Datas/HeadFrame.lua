@@ -113,5 +113,26 @@ return ReadOnly("HeadFrame", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/HeadFrame/T_Head_Frame16.T_Head_Frame16'",
     Name = "UI_HeadFrame_Name_10016",
     SmallIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head_Frame/T_Head_Frame16.T_Head_Frame16'"
+  },
+  [10017] = {
+    Des = "UI_HeadFrame_Des_10017",
+    FrameID = 10017,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/HeadFrame/T_Head_Frame17.T_Head_Frame17'",
+    Name = "UI_HeadFrame_Name_10017",
+    SmallIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head_Frame/T_Head_Frame17.T_Head_Frame17'"
+  },
+  [10018] = {
+    Des = "UI_HeadFrame_Des_10018",
+    FrameID = 10018,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/HeadFrame/T_Head_Frame18.T_Head_Frame18'",
+    Name = "UI_HeadFrame_Name_10018",
+    SmallIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head_Frame/T_Head_Frame18.T_Head_Frame18'"
+  },
+  [10019] = {
+    Des = "UI_HeadFrame_Des_10019",
+    FrameID = 10019,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/HeadFrame/T_Head_Frame19.T_Head_Frame19'",
+    Name = "UI_HeadFrame_Name_10019",
+    SmallIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head_Frame/T_Head_Frame19.T_Head_Frame19'"
   }
 })

@@ -81,19 +81,6 @@ return {
       SequenceStateRecorder = {}
     },
     {
-      RegionId = 101108,
-      SequenceStateRecorder = {
-        {
-          RecorderId = 1,
-          SequenceState = {1, 2}
-        },
-        {
-          RecorderId = 2,
-          SequenceState = {1, 2}
-        }
-      }
-    },
-    {
       RegionId = 101301,
       SequenceStateRecorder = {
         {
@@ -223,6 +210,15 @@ return {
       }
     },
     {
+      RegionId = 104105,
+      SequenceStateRecorder = {
+        {
+          RecorderId = 1,
+          SequenceState = {1}
+        }
+      }
+    },
+    {
       RegionId = 104107,
       SequenceStateRecorder = {
         {
@@ -332,6 +328,15 @@ return {
       }
     },
     {
+      RegionId = 104504,
+      SequenceStateRecorder = {
+        {
+          RecorderId = 1,
+          SequenceState = {1}
+        }
+      }
+    },
+    {
       RegionId = 104601,
       SequenceStateRecorder = {
         {
@@ -378,14 +383,6 @@ return {
         {
           RecorderId = 2,
           SequenceState = {1}
-        },
-        {
-          RecorderId = 3,
-          SequenceState = {1}
-        },
-        {
-          RecorderId = 4,
-          SequenceState = {1}
         }
       }
     },
@@ -410,6 +407,41 @@ return {
         },
         {
           RecorderId = 5,
+          SequenceState = {1}
+        }
+      }
+    },
+    {
+      RegionId = 105601,
+      SequenceStateRecorder = {
+        {
+          RecorderId = 1,
+          SequenceState = {1}
+        },
+        {
+          RecorderId = 2,
+          SequenceState = {1}
+        }
+      }
+    },
+    {
+      RegionId = 105801,
+      SequenceStateRecorder = {
+        {
+          RecorderId = 1,
+          SequenceState = {1}
+        },
+        {
+          RecorderId = 2,
+          SequenceState = {1}
+        }
+      }
+    },
+    {
+      RegionId = 106001,
+      SequenceStateRecorder = {
+        {
+          RecorderId = 1,
           SequenceState = {1}
         }
       }

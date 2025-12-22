@@ -2,6 +2,12 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("Access", {
+  Abyss = {
+    AccessKey = "Abyss",
+    AccessRule = "Return",
+    AccessText = "Abyss_entry",
+    UIUnlockRuleId = "Abyss"
+  },
   Dungeon = {
     AccessKey = "Dungeon",
     AccessRule = "Return",
@@ -64,13 +70,24 @@ return ReadOnly("Access", {
   },
   Forging = {
     AccessKey = "Forging",
-    AccessText = "MAIN_UI_FORGE",
+    AccessText = "MAIN_UI_FORGE02",
     UIUnlockRuleId = "Forging"
+  },
+  HardBoss = {
+    AccessKey = "HardBoss",
+    AccessRule = "Return",
+    AccessText = "MAIN_UI_HARDBOSS",
+    UIUnlockRuleId = "HardBoss"
   },
   Home = {
     AccessKey = "Home",
     AccessText = "UI_HOME_FORGING",
     UIUnlockRuleId = "Home"
+  },
+  ImpressionShop = {
+    AccessKey = "ImpressionShop",
+    AccessRule = "Return",
+    AccessText = "Access_EggBai"
   },
   MonsterStrong = {
     AccessKey = "MonsterStrong",
@@ -97,6 +114,13 @@ return ReadOnly("Access", {
     AccessParam = "FishingShop",
     AccessRule = "Return",
     AccessText = "UI_SHOP_Fishing",
+    UIUnlockRuleId = "Shop"
+  },
+  Shop_HuaxuEvent = {
+    AccessKey = "Shop_HuaxuEvent",
+    AccessParam = "HuaxuEventShop",
+    AccessRule = "Return",
+    AccessText = "MAIN_UI_SHOP",
     UIUnlockRuleId = "Shop"
   },
   Shop_Main = {
@@ -140,6 +164,42 @@ return ReadOnly("Access", {
   Text_Collecting_EX01 = {
     AccessKey = "Text_Collecting_EX01",
     AccessText = "Access_Collecting_EX01"
+  },
+  Text_Collecting_East01 = {
+    AccessKey = "Text_Collecting_East01",
+    AccessText = "Access_Collecting_East01"
+  },
+  Text_Collecting_East02 = {
+    AccessKey = "Text_Collecting_East02",
+    AccessText = "Access_Collecting_East02"
+  },
+  Text_Collecting_East03 = {
+    AccessKey = "Text_Collecting_East03",
+    AccessText = "Access_Collecting_East03"
+  },
+  Text_Collecting_East04 = {
+    AccessKey = "Text_Collecting_East04",
+    AccessText = "Access_Collecting_East04"
+  },
+  Text_Collecting_East05 = {
+    AccessKey = "Text_Collecting_East05",
+    AccessText = "Access_Collecting_East05"
+  },
+  Text_Collecting_East06 = {
+    AccessKey = "Text_Collecting_East06",
+    AccessText = "Access_Collecting_East06"
+  },
+  Text_Collecting_East07 = {
+    AccessKey = "Text_Collecting_East07",
+    AccessText = "Access_Collecting_East07"
+  },
+  Text_Collecting_East08 = {
+    AccessKey = "Text_Collecting_East08",
+    AccessText = "Access_Collecting_East08"
+  },
+  Text_Collecting_East09 = {
+    AccessKey = "Text_Collecting_East09",
+    AccessText = "Access_Collecting_East09"
   },
   Text_Collecting_Icelake01 = {
     AccessKey = "Text_Collecting_Icelake01",
@@ -187,12 +247,6 @@ return ReadOnly("Access", {
     AccessKey = "Text_Dungeon",
     AccessText = "UI_Dungeon_TabName"
   },
-  Text_EggBai = {
-    AccessKey = "Text_EggBai",
-    AccessParam = "58",
-    AccessRule = "InterfaceJump",
-    AccessText = "Access_EggBai"
-  },
   Text_Event = {
     AccessKey = "Text_Event",
     AccessText = "MAIN_UI_GAMEEVENT"
@@ -206,12 +260,6 @@ return ReadOnly("Access", {
     AccessText = "MAIN_UI_GACHA",
     UIUnlockRuleId = "Gacha"
   },
-  Text_HardBoss = {
-    AccessKey = "Text_HardBoss",
-    AccessParam = "22",
-    AccessRule = "InterfaceJump",
-    AccessText = "MAIN_UI_HARDBOSS"
-  },
   Text_HardMonster = {
     AccessKey = "Text_HardMonster",
     AccessText = "Access_Monster_HardNormal"
@@ -223,6 +271,14 @@ return ReadOnly("Access", {
   Text_Monster = {
     AccessKey = "Text_Monster",
     AccessText = "Access_Monster_Normal"
+  },
+  Text_Raid_DungeonReward = {
+    AccessKey = "Text_Raid_DungeonReward",
+    AccessText = "Access_RaidDungeon"
+  },
+  Text_Raid_Reward = {
+    AccessKey = "Text_Raid_Reward",
+    AccessText = "Access_RaidReward"
   },
   Text_Rouge = {
     AccessKey = "Text_Rouge",

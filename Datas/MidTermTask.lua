@@ -219,7 +219,7 @@ return ReadOnly("MidTermTask", {
   },
   [2053] = {
     EnableDay = 5,
-    JumpUIId = 19,
+    JumpUIId = 31,
     Target = 1,
     TargetId = T.RT_6,
     TaskDes = "MidTermGoal_Des_5_3",
@@ -471,7 +471,7 @@ return ReadOnly("MidTermTask", {
   },
   [2123] = {
     EnableDay = 12,
-    JumpUIId = 19,
+    JumpUIId = 31,
     Target = 1,
     TargetId = T.RT_6,
     TaskDes = "MidTermGoal_Des_5_3",
@@ -723,7 +723,7 @@ return ReadOnly("MidTermTask", {
   },
   [2193] = {
     EnableDay = 19,
-    JumpUIId = 19,
+    JumpUIId = 31,
     Target = 1,
     TargetId = T.RT_6,
     TaskDes = "MidTermGoal_Des_5_3",
@@ -975,7 +975,7 @@ return ReadOnly("MidTermTask", {
   },
   [2239] = {
     EnableDay = 26,
-    JumpUIId = 19,
+    JumpUIId = 31,
     Target = 1,
     TargetId = T.RT_6,
     TaskDes = "MidTermGoal_Des_5_3",
@@ -1227,7 +1227,7 @@ return ReadOnly("MidTermTask", {
   },
   [2267] = {
     EnableDay = 33,
-    JumpUIId = 19,
+    JumpUIId = 31,
     Target = 1,
     TargetId = T.RT_6,
     TaskDes = "MidTermGoal_Des_5_3",
@@ -1479,7 +1479,7 @@ return ReadOnly("MidTermTask", {
   },
   [2295] = {
     EnableDay = 40,
-    JumpUIId = 19,
+    JumpUIId = 31,
     Target = 1,
     TargetId = T.RT_6,
     TaskDes = "MidTermGoal_Des_5_3",
@@ -1731,7 +1731,7 @@ return ReadOnly("MidTermTask", {
   },
   [2323] = {
     EnableDay = 47,
-    JumpUIId = 19,
+    JumpUIId = 31,
     Target = 1,
     TargetId = T.RT_6,
     TaskDes = "MidTermGoal_Des_5_3",
@@ -1983,7 +1983,7 @@ return ReadOnly("MidTermTask", {
   },
   [2351] = {
     EnableDay = 54,
-    JumpUIId = 19,
+    JumpUIId = 31,
     Target = 1,
     TargetId = T.RT_6,
     TaskDes = "MidTermGoal_Des_5_3",
@@ -2235,7 +2235,7 @@ return ReadOnly("MidTermTask", {
   },
   [2379] = {
     EnableDay = 61,
-    JumpUIId = 19,
+    JumpUIId = 31,
     Target = 1,
     TargetId = T.RT_6,
     TaskDes = "MidTermGoal_Des_5_3",

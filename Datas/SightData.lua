@@ -52,6 +52,11 @@ return ReadOnly("SightData", {
     SightId = 6003001,
     SightRadius = 2000
   },
+  [7001101] = {
+    SightAngle = 90,
+    SightId = 7001101,
+    SightRadius = 4000
+  },
   [7008001] = {
     SightAngle = 360,
     SightId = 7008001,

@@ -69,14 +69,14 @@ return ReadOnly("RewardType", {
   Title = {
     DungeonRewardSeq = 62,
     OperationGM = true,
-    Remark = "称号",
+    Remark = "头像",
     RewardType = "Title",
     UniqueType = true
   },
   TitleFrame = {
     DungeonRewardSeq = 63,
     OperationGM = true,
-    Remark = "称号框",
+    Remark = "头像框",
     RewardType = "TitleFrame",
     UniqueType = true
   },

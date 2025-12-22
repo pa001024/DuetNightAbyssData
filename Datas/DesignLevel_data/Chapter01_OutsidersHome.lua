@@ -165,26 +165,6 @@ return {
       UnitType = "Npc",
       UnitId = 211015
     },
-    ["1230079"] = {
-      CreatorId = 1230079,
-      UnitType = "Npc",
-      UnitId = 211001
-    },
-    ["1230076"] = {
-      CreatorId = 1230076,
-      UnitType = "Npc",
-      UnitId = 211015
-    },
-    ["1230078"] = {
-      CreatorId = 1230078,
-      UnitType = "Npc",
-      UnitId = 211012
-    },
-    ["1230077"] = {
-      CreatorId = 1230077,
-      UnitType = "Npc",
-      UnitId = 211002
-    },
     ["1230049"] = {
       CreatorId = 1230049,
       UnitType = "Mechanism",
@@ -225,11 +205,6 @@ return {
       UnitType = "Npc",
       UnitId = 100001
     },
-    ["1230080"] = {
-      CreatorId = 1230080,
-      UnitType = "Npc",
-      UnitId = 100001
-    },
     ["1230075"] = {
       CreatorId = 1230075,
       UnitType = "Npc",
@@ -240,35 +215,60 @@ return {
       UnitType = "Npc",
       UnitId = 100001
     },
-    ["1230084"] = {
-      CreatorId = 1230084,
+    ["1230083"] = {
+      CreatorId = 1230083,
       UnitType = "Npc",
-      UnitId = 211001
-    },
-    ["1230082"] = {
-      CreatorId = 1230082,
-      UnitType = "Npc",
-      UnitId = 211015
+      UnitId = 100001
     },
     ["1230085"] = {
       CreatorId = 1230085,
       UnitType = "Npc",
       UnitId = 211012
     },
+    ["1230082"] = {
+      CreatorId = 1230082,
+      UnitType = "Npc",
+      UnitId = 211015
+    },
     ["1230081"] = {
       CreatorId = 1230081,
       UnitType = "Npc",
       UnitId = 211002
     },
-    ["1230083"] = {
-      CreatorId = 1230083,
+    ["1230084"] = {
+      CreatorId = 1230084,
       UnitType = "Npc",
-      UnitId = 100001
+      UnitId = 211001
     },
     ["1230087"] = {
       CreatorId = 1230087,
       UnitType = "Drop",
       UnitId = 11052
+    },
+    ["1230079"] = {
+      CreatorId = 1230079,
+      UnitType = "Npc",
+      UnitId = 211001
+    },
+    ["1230076"] = {
+      CreatorId = 1230076,
+      UnitType = "Npc",
+      UnitId = 211015
+    },
+    ["1230078"] = {
+      CreatorId = 1230078,
+      UnitType = "Npc",
+      UnitId = 211012
+    },
+    ["1230077"] = {
+      CreatorId = 1230077,
+      UnitType = "Npc",
+      UnitId = 211002
+    },
+    ["1230080"] = {
+      CreatorId = 1230080,
+      UnitType = "Npc",
+      UnitId = 100001
     }
   },
   ManualItem = {},

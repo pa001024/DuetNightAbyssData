@@ -118,6 +118,13 @@ return ReadOnly("RegionDoor", {
     Id = 10170108,
     StaticId = 172001
   },
+  [10170109] = {
+    DoorPos = {-19060, -5040},
+    DoorSubRegion = 101701,
+    DoorTelepointId = 1030,
+    Id = 10170109,
+    StaticId = 172040
+  },
   [10170201] = {
     DoorPos = {-19462, -10638},
     DoorSubRegion = 101702,

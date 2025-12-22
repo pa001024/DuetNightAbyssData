@@ -17,6 +17,18 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("ArtLevelControl_TaskVar2Data", {
+  AltStart = {
+    [1057] = {
+      Id = 19,
+      InTime = 0,
+      LoadLevel = {
+        [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Yanjindu_Alt/Task_Data/Huaxu_Yanjindu_Alt_AltStart_Task.Huaxu_Yanjindu_Alt_AltStart_Task"
+      },
+      OutTime = 0,
+      RegionId = 1057,
+      VarName = "AltStart"
+    }
+  },
   BH_Thea_Online = {
     [1019] = {
       Id = 17,
@@ -186,6 +198,66 @@ return ReadOnly("ArtLevelControl_TaskVar2Data", {
       VarName = "IQ110107"
     }
   },
+  IQ12010307 = {
+    [1041] = {
+      Id = 23,
+      InTime = 0,
+      LoadLevel = {
+        [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Yanjindu_Main/Task_Data/Huaxu_Yanjingdu_Shi_12010307_Task.Huaxu_Yanjingdu_Shi_12010307_Task"
+      },
+      OutTime = 0,
+      RegionId = 1041,
+      VarName = "IQ12010307"
+    }
+  },
+  IQ12010313 = {
+    [1041] = {
+      Id = 24,
+      InTime = 0,
+      LoadLevel = {
+        [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Yanjindu_Main/Task_Data/Huaxu_Yanjindu_Npc01_Task.Huaxu_Yanjindu_Npc01_Task"
+      },
+      OutTime = 0,
+      RegionId = 1041,
+      VarName = "IQ12010313"
+    }
+  },
+  IQ12010502 = {
+    [1041] = {
+      Id = 25,
+      InTime = 0,
+      LoadLevel = {
+        [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Yanjindu_Main/Task_Data/Huaxu_Yanjindu_Batt_12010502_Task.Huaxu_Yanjindu_Batt_12010502_Task"
+      },
+      OutTime = 0,
+      RegionId = 1041,
+      VarName = "IQ12010502"
+    }
+  },
+  IQ12010513 = {
+    [1057] = {
+      Id = 26,
+      InTime = 0,
+      LoadLevel = {
+        [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Yanjindu_Alt/Task_Data/Huaxu_Yanjindu_Alt_12010513_Task.Huaxu_Yanjindu_Alt_12010513_Task"
+      },
+      OutTime = 0,
+      RegionId = 1057,
+      VarName = "IQ12010513"
+    }
+  },
+  IQ12010513_fu = {
+    [1041] = {
+      Id = 27,
+      InTime = 0,
+      LoadLevel = {
+        [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Yanjindu_Main/Task_Data/Huaxu_Yanjindu_Batt_12010513_fu_Task.Huaxu_Yanjindu_Batt_12010513_fu_Task"
+      },
+      OutTime = 0,
+      RegionId = 1041,
+      VarName = "IQ12010513_fu"
+    }
+  },
   LinshiNPC110101 = {
     [1021] = {
       Id = 7,
@@ -232,6 +304,42 @@ return ReadOnly("ArtLevelControl_TaskVar2Data", {
       OutTime = 0,
       RegionId = 1021,
       VarName = "ShenWenNPC110105"
+    }
+  },
+  Special_Zhiliu_12020515 = {
+    [1053] = {
+      Id = 22,
+      InTime = 0,
+      LoadLevel = {
+        [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_TRLM/Design_Data/DesignTask/Huaxu_TRLM_IQ12020515_DesignTask.Huaxu_TRLM_IQ12020515_DesignTask"
+      },
+      OutTime = 0,
+      RegionId = 1053,
+      VarName = "Special_Zhiliu_12020515"
+    }
+  },
+  Wuyousheng_Escape_12020212 = {
+    [1045] = {
+      Id = 21,
+      InTime = 0,
+      LoadLevel = {
+        [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Main/Design_Data/DesignTask/Huaxu_Haojing_IQ12020212_DesignTask.Huaxu_Haojing_IQ12020212_DesignTask"
+      },
+      OutTime = 0,
+      RegionId = 1045,
+      VarName = "Wuyousheng_Escape_12020212"
+    }
+  },
+  Wuyousheng_First_12020122 = {
+    [1045] = {
+      Id = 20,
+      InTime = 0,
+      LoadLevel = {
+        [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Main/Design_Data/DesignTask/Huaxu_Haojing_IQ12020122_DesignTask.Huaxu_Haojing_IQ12020122_DesignTask"
+      },
+      OutTime = 0,
+      RegionId = 1045,
+      VarName = "Wuyousheng_First_12020122"
     }
   },
   XimengNPC110105 = {

@@ -1,1272 +1,389 @@
 local Data = {
   {
-    MinKey = "ChatCharacter14",
-    MaxKey = "UI_CHAR_DATA_TEXT_33010202",
+    MinKey = "CVName1001",
+    MaxKey = "VoiceDes069",
     Loader = function()
       return {
+        CVName1001 = {ContentDE = "贺文潇", TextMapId = "CVName1001"},
+        CVName1002 = {ContentDE = "朔小兔", TextMapId = "CVName1002"},
+        CVName1003 = {ContentDE = "虚元", TextMapId = "CVName1003"},
+        CVName1004 = {ContentDE = "柳知萧", TextMapId = "CVName1004"},
+        CVName1005 = {ContentDE = "常蓉珊", TextMapId = "CVName1005"},
+        CVName1006 = {ContentDE = "蔡娜", TextMapId = "CVName1006"},
+        CVName1007 = {ContentDE = "云鹤追", TextMapId = "CVName1007"},
+        CVName1008 = {
+          ContentDE = "卢力峰DK",
+          TextMapId = "CVName1008"
+        },
+        CVName1009 = {ContentDE = "杨昕燃", TextMapId = "CVName1009"},
+        CVName1010 = {ContentDE = "蔡海婷", TextMapId = "CVName1010"},
+        CVName1011 = {ContentDE = "张琦", TextMapId = "CVName1011"},
+        CVName1012 = {ContentDE = "叶知秋", TextMapId = "CVName1012"},
+        CVName1013 = {ContentDE = "弭洋", TextMapId = "CVName1013"},
+        CVName1014 = {ContentDE = "黑特", TextMapId = "CVName1014"},
+        CVName1015 = {ContentDE = "赵爽", TextMapId = "CVName1015"},
+        CVName1016 = {ContentDE = "李春胤", TextMapId = "CVName1016"},
+        CVName1017 = {ContentDE = "橙璃", TextMapId = "CVName1017"},
+        CVName1018 = {ContentDE = "吕思衡", TextMapId = "CVName1018"},
+        CVName1019 = {ContentDE = "姜贺", TextMapId = "CVName1019"},
+        CVName1020 = {ContentDE = "李嘉祥", TextMapId = "CVName1020"},
+        CVName1021 = {ContentDE = "钟可", TextMapId = "CVName1021"},
+        CVName1022 = {ContentDE = "龟娘", TextMapId = "CVName1022"},
+        CVName1023 = {ContentDE = "Cai Shujin", TextMapId = "CVName1023"},
+        CVName2001 = {
+          ContentDE = "Alexandra Guelff",
+          TextMapId = "CVName2001"
+        },
+        CVName2002 = {
+          ContentDE = "Montserrat Lombard",
+          TextMapId = "CVName2002"
+        },
+        CVName2003 = {
+          ContentDE = "Harriet Carmichael",
+          TextMapId = "CVName2003"
+        },
+        CVName2004 = {ContentDE = "Crystal Yu", TextMapId = "CVName2004"},
+        CVName2005 = {
+          ContentDE = "Jess Nesling",
+          TextMapId = "CVName2005"
+        },
+        CVName2006 = {
+          ContentDE = "Lucy Aarden",
+          TextMapId = "CVName2006"
+        },
+        CVName2007 = {
+          ContentDE = "Gabrielle Nellis-Pain",
+          TextMapId = "CVName2007"
+        },
+        CVName2008 = {
+          ContentDE = "Dominic Thorburn",
+          TextMapId = "CVName2008"
+        },
+        CVName2009 = {
+          ContentDE = "James MacNaughton",
+          TextMapId = "CVName2009"
+        },
+        CVName2010 = {
+          ContentDE = "Lizzie Waterworth-Santo",
+          TextMapId = "CVName2010"
+        },
+        CVName2011 = {
+          ContentDE = "Eleanor Bennett",
+          TextMapId = "CVName2011"
+        },
+        CVName2012 = {
+          ContentDE = "Devora Wilde",
+          TextMapId = "CVName2012"
+        },
+        CVName2013 = {
+          ContentDE = "Claire Morgan",
+          TextMapId = "CVName2013"
+        },
+        CVName2014 = {
+          ContentDE = "Carina Reeves",
+          TextMapId = "CVName2014"
+        },
+        CVName2015 = {
+          ContentDE = "Shannon Tarbet",
+          TextMapId = "CVName2015"
+        },
+        CVName2016 = {
+          ContentDE = "Jamie Hoskin",
+          TextMapId = "CVName2016"
+        },
+        CVName2017 = {
+          ContentDE = "Sophie Colquhoun",
+          TextMapId = "CVName2017"
+        },
+        CVName2018 = {ContentDE = "Jack Ayres", TextMapId = "CVName2018"},
+        CVName2019 = {
+          ContentDE = "Allegra Marland",
+          TextMapId = "CVName2019"
+        },
+        CVName2020 = {
+          ContentDE = "Robin Liew Harper",
+          TextMapId = "CVName2020"
+        },
+        CVName2021 = {
+          ContentDE = "Quanna Luo Masterson",
+          TextMapId = "CVName2021"
+        },
+        CVName2022 = {
+          ContentDE = "Fern Deacon",
+          TextMapId = "CVName2022"
+        },
+        CVName2023 = {
+          ContentDE = "Penelope Rawlins",
+          TextMapId = "CVName2023"
+        },
+        CVName3001 = {
+          ContentDE = "石川由依",
+          TextMapId = "CVName3001"
+        },
+        CVName3002 = {ContentDE = "悠木碧", TextMapId = "CVName3002"},
+        CVName3003 = {
+          ContentDE = "新井里美",
+          TextMapId = "CVName3003"
+        },
+        CVName3004 = {
+          ContentDE = "南條愛乃",
+          TextMapId = "CVName3004"
+        },
+        CVName3005 = {
+          ContentDE = "佐藤利奈",
+          TextMapId = "CVName3005"
+        },
+        CVName3006 = {ContentDE = "戸松遥", TextMapId = "CVName3006"},
+        CVName3007 = {
+          ContentDE = "小清水亜美",
+          TextMapId = "CVName3007"
+        },
+        CVName3008 = {
+          ContentDE = "細谷佳正",
+          TextMapId = "CVName3008"
+        },
+        CVName3009 = {
+          ContentDE = "小野賢章",
+          TextMapId = "CVName3009"
+        },
+        CVName3010 = {
+          ContentDE = "豊崎愛生",
+          TextMapId = "CVName3010"
+        },
+        CVName3011 = {
+          ContentDE = "佐藤聡美",
+          TextMapId = "CVName3011"
+        },
+        CVName3012 = {
+          ContentDE = "田中理恵",
+          TextMapId = "CVName3012"
+        },
+        CVName3013 = {
+          ContentDE = "田村睦心",
+          TextMapId = "CVName3013"
+        },
+        CVName3014 = {
+          ContentDE = "黒沢ともよ",
+          TextMapId = "CVName3014"
+        },
+        CVName3015 = {
+          ContentDE = "長縄まりあ",
+          TextMapId = "CVName3015"
+        },
+        CVName3016 = {ContentDE = "古川慎", TextMapId = "CVName3016"},
+        CVName3017 = {
+          ContentDE = "瀬戸麻沙美",
+          TextMapId = "CVName3017"
+        },
+        CVName3018 = {ContentDE = "KENN", TextMapId = "CVName3018"},
+        CVName3019 = {
+          ContentDE = "井上喜久子",
+          TextMapId = "CVName3019"
+        },
+        CVName3020 = {
+          ContentDE = "高橋広樹",
+          TextMapId = "CVName3020"
+        },
+        CVName3021 = {
+          ContentDE = "沢城みゆき",
+          TextMapId = "CVName3021"
+        },
+        CVName3022 = {
+          ContentDE = "石見舞菜香",
+          TextMapId = "CVName3022"
+        },
+        CVName3023 = {ContentDE = "Asumi Kana", TextMapId = "CVName3023"},
+        CVName4001 = {ContentDE = "김하영", TextMapId = "CVName4001"},
+        CVName4002 = {ContentDE = "조경이", TextMapId = "CVName4002"},
+        CVName4003 = {ContentDE = "성예원", TextMapId = "CVName4003"},
+        CVName4004 = {ContentDE = "이다은", TextMapId = "CVName4004"},
+        CVName4005 = {ContentDE = "소연", TextMapId = "CVName4005"},
+        CVName4006 = {ContentDE = "성예원", TextMapId = "CVName4006"},
+        CVName4007 = {ContentDE = "김보나", TextMapId = "CVName4007"},
+        CVName4008 = {ContentDE = "김민주", TextMapId = "CVName4008"},
+        CVName4009 = {ContentDE = "남도형", TextMapId = "CVName4009"},
+        CVName4010 = {ContentDE = "강새봄", TextMapId = "CVName4010"},
+        CVName4011 = {ContentDE = "유영", TextMapId = "CVName4011"},
+        CVName4012 = {ContentDE = "이새아", TextMapId = "CVName4012"},
+        CVName4013 = {ContentDE = "이은조", TextMapId = "CVName4013"},
+        CVName4014 = {ContentDE = "박이서", TextMapId = "CVName4014"},
+        CVName4015 = {ContentDE = "강은애", TextMapId = "CVName4015"},
+        CVName4016 = {ContentDE = "표영재", TextMapId = "CVName4016"},
+        CVName4017 = {ContentDE = "김예림", TextMapId = "CVName4017"},
+        CVName4018 = {ContentDE = "장서화", TextMapId = "CVName4018"},
+        CVName4019 = {ContentDE = "이달래", TextMapId = "CVName4019"},
+        CVName4020 = {ContentDE = "박요한", TextMapId = "CVName4020"},
+        CVName4021 = {ContentDE = "강시현", TextMapId = "CVName4021"},
+        CVName4022 = {ContentDE = "이현진", TextMapId = "CVName4022"},
+        CVName4023 = {
+          ContentDE = "Kim Suyoung",
+          TextMapId = "CVName4023"
+        },
+        ChatCharacter01 = {
+          ContentDE = "Berenica",
+          TextMapId = "ChatCharacter01"
+        },
+        ChatCharacter02 = {
+          ContentDE = "Chaos",
+          TextMapId = "ChatCharacter02"
+        },
+        ChatCharacter03 = {
+          ContentDE = "Hilda",
+          TextMapId = "ChatCharacter03"
+        },
+        ChatCharacter04 = {
+          ContentDE = "Seth",
+          TextMapId = "ChatCharacter04"
+        },
+        ChatCharacter05 = {
+          ContentDE = "Flora",
+          TextMapId = "ChatCharacter05"
+        },
+        ChatCharacter06 = {
+          ContentDE = "Yuming",
+          TextMapId = "ChatCharacter06"
+        },
+        ChatCharacter07 = {
+          ContentDE = "Hellfire",
+          TextMapId = "ChatCharacter07"
+        },
+        ChatCharacter08 = {
+          ContentDE = "Psyche",
+          TextMapId = "ChatCharacter08"
+        },
+        ChatCharacter09 = {
+          ContentDE = "Randy",
+          TextMapId = "ChatCharacter09"
+        },
+        ChatCharacter10 = {
+          ContentDE = "Sibylle",
+          TextMapId = "ChatCharacter10"
+        },
+        ChatCharacter11 = {
+          ContentDE = "Lynn",
+          TextMapId = "ChatCharacter11"
+        },
+        ChatCharacter12 = {
+          ContentDE = "Camilla",
+          TextMapId = "ChatCharacter12"
+        },
+        ChatCharacter13 = {
+          ContentDE = "Truffle und Filbert",
+          TextMapId = "ChatCharacter13"
+        },
         ChatCharacter14 = {
-          ContentDE = "L’Étranger",
+          ContentDE = "Outsider",
           TextMapId = "ChatCharacter14"
+        },
+        ChatCharacter15 = {
+          ContentDE = "Rebecca",
+          TextMapId = "ChatCharacter15"
+        },
+        ChatCharacter16 = {
+          ContentDE = "Tabethe",
+          TextMapId = "ChatCharacter16"
+        },
+        ChatCharacter17 = {
+          ContentDE = "Lisbell",
+          TextMapId = "ChatCharacter17"
+        },
+        ChatCharacter18 = {
+          ContentDE = "Fushu",
+          TextMapId = "ChatCharacter18"
+        },
+        ChatCharacter19 = {
+          ContentDE = "Fina",
+          TextMapId = "ChatCharacter19"
         },
         ChatCharacter20 = {
           ContentDE = "Rhythm",
           TextMapId = "ChatCharacter20"
+        },
+        ChatCharacter21 = {
+          ContentDE = "Lirico",
+          TextMapId = "ChatCharacter21"
         },
         ChatCharacter22 = {
           ContentDE = "Eleutheria",
           TextMapId = "ChatCharacter22"
         },
         ChatCharacter23 = {
-          ContentDE = "Dame Nifle",
+          ContentDE = "Frau Nifle",
           TextMapId = "ChatCharacter23"
         },
         ChatCharacter24 = {
-          ContentDE = "Yale et Oliver",
+          ContentDE = "Yale und Oliver",
           TextMapId = "ChatCharacter24"
         },
+        ChatCharacter25 = {
+          ContentDE = "Phantasio",
+          TextMapId = "ChatCharacter25"
+        },
+        ChatCharacter26 = {
+          ContentDE = "Margie",
+          TextMapId = "ChatCharacter26"
+        },
         ChatCharacter31 = {
-          ContentDE = "Maître Qiu",
+          ContentDE = "Herr Qiu",
           TextMapId = "ChatCharacter31"
+        },
+        ChatCharacter32 = {
+          ContentDE = "Tal",
+          TextMapId = "ChatCharacter32"
+        },
+        ChatCharacter33 = {
+          ContentDE = "Vergilius",
+          TextMapId = "ChatCharacter33"
         },
         ChatCharacter34 = {
           ContentDE = "Daphne",
           TextMapId = "ChatCharacter34"
         },
+        Condition_Test = {
+          ContentDE = "Die Voraussetzungen-Tabelle besteht den Test nicht.",
+          TextMapId = "Condition_Test"
+        },
+        Mail_Content_100001 = {
+          ContentDE = "Vielen Dank für das Ausfüllen der Umfrage! Wir haben ein kleines Geschenk für dich vorbereitet.",
+          TextMapId = "Mail_Content_100001"
+        },
+        Mail_Content_100002 = {
+          ContentDE = "{性别:Lieber Phoxjäger|Liebe Phoxjägerin},\nvielen Dank, dass du die Umfrage ausgefüllt hast! Im Anhang findest du deine Belohnung.\nWir schätzen jedes Feedback und jede Anregung, die du uns gibst. Dein Feedback ist entscheidend, um die Gesamtqualität des Spiels weiter zu verbessern.",
+          TextMapId = "Mail_Content_100002"
+        },
+        Mail_Content_100003 = {
+          ContentDE = "Dies ist eine Test-E-Mail mit dem Bonuspaket 130004 (Dämonenkeil-Bundle der Nahkampfwaffe von Mittelstufe).\nLäuft in 1 Tag ab.",
+          TextMapId = "Mail_Content_100003"
+        },
+        Mail_Content_10005 = {
+          ContentDE = [[
+
+ ]],
+          TextMapId = "Mail_Content_10005"
+        },
+        Mail_Title_100001 = {
+          ContentDE = "Belohnung für das Ausfüllen der Umfrage",
+          TextMapId = "Mail_Title_100001"
+        },
+        Mail_Title_100002 = {
+          ContentDE = "Belohnung für das Ausfüllen der Umfrage",
+          TextMapId = "Mail_Title_100002"
+        },
         PhantomTalk_160101_Chest = {
-          ContentDE = "Pas mal... une belle surprise.",
+          ContentDE = "Nun, was für eine angenehme Überraschung.",
           TextMapId = "PhantomTalk_160101_Chest"
         },
         PhantomTalk_1601_Chest = {
-          ContentDE = "Pas mal... une belle surprise.",
+          ContentDE = "Nun, was für eine angenehme Überraschung.",
           TextMapId = "PhantomTalk_1601_Chest"
         },
-        UI_CHAR_DATA_TEXT_11010101 = {
-          ContentDE = "Depuis que tu as des souvenirs, Berenica a toujours été à tes côtés.\nPeut-être es-tu la personne avec qui elle a passé le plus de temps au monde, et pourtant... tu ne la connais pas entièrement, pas plus que tu ne te connais toi-même.\nQui es-tu ? Qui est-elle ? D’où venez-vous, et qu’est-ce qui vous a rapprochés ? Chaque fois que tu lui poses ces questions, Berenica hésite, répond vaguement... puis se mure dans un long silence. Avec le temps, tu as cessé de demander.\nIl y a beaucoup de choses que tu ignores. Mais une seule ne fait aucun doute :\nPeu importe quand, peu importe où... tu pourras toujours lui faire confiance.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010101"
-        },
-        UI_CHAR_DATA_TEXT_11010102 = {
-          ContentDE = "Berenica est une personne directe et sincère. Elle ne ment jamais et a du mal à comprendre les sous-entendus dans les paroles des autres. Dans une vie rude où beaucoup apprennent à dissimuler la vérité par des paroles hypocrites, Berenica, dès qu’elle ouvre la bouche, perce tous les faux-semblants, toutes les mensonges, plongeant souvent l’assemblée dans un silence gênant. Quand elle était enfant, on pouvait encore pardonner cette franchise comme de l’innocence. Mais en grandissant, ce caractère lui valut d’être de moins en moins appréciée dans le village.\nAlors, très jeune, tu as appris à lire les gens et à adapter tes paroles selon les situations, pour les choses que Berenica n’aimait pas ou ne maîtrisait pas, tu prenais le relais. Tu as choisi de devenir son masque, sa voix.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010102"
-        },
-        UI_CHAR_DATA_TEXT_11010103 = {
-          ContentDE = "En contraste frappant avec la protection minutieuse qu’elle te réserve, Berenica se montre d’une dureté implacable envers elle-même.\nÀ chaque attaque de bêtes sauvages ou de Souillés, elle répond par une riposte dévastatrice, prête à s’infliger mille blessures pour en infliger mille à l’ennemi. Même si cela signifie exposer sans aucune retenue les parties les plus vulnérables de son corps, elle avance sans hésiter, le regard déterminé. Le résultat est toujours le même : sa lame sombre s’enfonce dans la cible avec précision, tuant la créature d’un seul coup. Bien sûr, elle en ressort presque toujours grièvement blessée.\nChaque fois que cela arrive, tu la soignes en la suppliant de ne pas se faire autant de mal, mais elle reste obstinée, convaincue que c’est la meilleure façon de se battre.\n« Ça va, je n’ai pas peur de la douleur », répète-t-elle inlassablement.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010103"
-        },
-        UI_CHAR_DATA_TEXT_11010104 = {
-          ContentDE = "Beaucoup de gens, même à l’approche de leurs vieux jours, aiment à ressasser les premières années de leur vie, ce qu’ils appellent leur « enfance ».\nChez eux, ce mot est indissociable de la joie : il suffit d’évoquer ces souvenirs pour qu’un sourire éclaire leur visage et que de fines rides se creusent au coin des yeux. De la même manière, quand tu repenses aux jours passés avec Berenica sur l’Île du Purgatoire, tes lèvres esquissent un sourire avant même que tu t’en rendes compte.\nMais si quelqu’un ne parle jamais de son enfance, c’est sans doute que ces années sont tapissées de blessures invisibles et de cicatrices enfouies.\nUn jour, tu as compris cette vérité. Depuis, tu ne poses plus de questions sur la vie de Berenica avant vos souvenirs communs. Vous avez passé un accord : si elle ne souhaite pas en parler, tu ne chercheras pas à creuser, mais si un jour elle veut se confier, tu porteras ce fardeau avec elle.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010104"
-        },
-        UI_CHAR_DATA_TEXT_11010105 = {
-          ContentDE = "Depuis ton arrivée sur le territoire de l’Empire, tu as tenté tous les moyens possibles, licites comme illicites, pour retrouver la trace de Berenica, mais sans le moindre résultat. Dans les Asphodèles, il t’arrivait parfois, en acceptant certaines missions, de recevoir des informations mystérieuses d’origine inconnue, t’envoyant délivrer un prisonnier anonyme des prisons de l’Empire.\nChaque fois, tu nourrissais en secret l’espoir que, derrière l’une des portes de cellule que tu forcerais, résonnerait cette voix si familière à tes souvenirs... Mais non. Jamais.\nPourtant, chaque fois que tu brandis cette épée d’un blanc immaculé, tu as l’impression qu’elle se tient encore à tes côtés. Et tu es {性别:certain|certaine} que vous vous reverrez un jour, car toi, tu ne trahiras pas votre promesse, et Berenica non plus.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010105"
-        },
-        UI_CHAR_DATA_TEXT_11010201 = {
-          ContentDE = "On aime souvent se bercer d’illusions sur les lieux coupés du monde, comme s’ils étaient forcément paisibles et purs. Pourtant, l’Île du Purgatoire, perdue au milieu d’une mer déserte, est tout sauf un paradis. Même sur ce petit bout de terre magnifique, la solitude et la fatigue ont toujours nourri la malveillance. Les forts montrent les crocs aux faibles, et les faibles, à leur tour, plantent leurs griffes dans plus faible qu’eux. C’est la loi de la nature... une loi que les habitants de l’Île du Purgatoire connaissent bien, et appliquent sans remords.\nMais cette loi impitoyable a buté sur une exception : une fillette prénommée Berenica.\nOrpheline sans personne pour la défendre, elle n’avait pourtant appris ni la patience ni la résignation. Quand elle décidait quelque chose, ni la menace la plus brutale, ni la flatterie la plus douce ne la faisaient céder d’un pas. Même le plus costaud des pêcheurs ne pouvait rien contre elle, non seulement parce qu’elle avait, pour une enfant, une force sidérante, mais surtout parce qu’elle se battait jusqu’au bout, telle un petit animal sauvage, mordant avec ses toutes premières dents. Heureusement, il n’y avait pas grand-chose pour la pousser à une telle rage : elle ne convoitait ni nourriture ni argent, et ne se battait vraiment que pour ce qui touchait à un certain enfant appelé {nickname}.\nMais tout cela remonte à bien longtemps. Quand Berenica eut grandi jusqu’à atteindre la moitié de la taille d’un adulte, plus aucun habitant de l’île, même réunis, n’était de taille à l’affronter. Et dans leurs regards, une lueur nouvelle apparut : la crainte.\n« Peut-être que c’est un monstre », pensaient-ils.\nSauf que... les monstres ne sont-ils pas censés être égoïstes ? Peut-il vraiment exister un monstre qui tienne à quelqu’un autant qu’elle ?",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010201"
-        },
-        UI_CHAR_DATA_TEXT_11010202 = {
-          ContentDE = "C’était un matin de milieu d’été, un jour parfaitement ordinaire pour les habitants de l’Île du Purgatoire.\nLes pêcheurs s’étaient levés tôt, recevant des mains de leurs épouses filets et voiles fraîchement raccommodés, avant de se diriger vers le petit quai où les bateaux attendaient. Bientôt, ils partiraient affronter le vent chargé d’embruns pour plusieurs jours en mer. Avec un peu de chance, ils reviendraient les paniers pleins, assurant ainsi la subsistance de leur famille pour un temps.\nAu milieu de l’agitation des adieux sur le quai, personne ne prêta attention à une jeune fille, Abigail, qui s’éloignait discrètement dans la direction opposée, remontant le sentier boueux menant à la montagne. À mesure qu’elle s’éloignait, le brouhaha du village s’estompait, remplacé par le sifflement du vent à travers les branches calcinées, comme les sanglots d’une forêt en deuil. Heureusement, ce ne sont pas des Souillés, se rassura-t-elle, posant une main sur sa poitrine pour calmer les battements précipités de son cœur, avant de poursuivre sa course.\n\nPour les villageois, la montagne n’était pas un lieu sûr ces derniers jours. Deux jours plus tôt, un fracas assourdissant avait retenti depuis le vieux temple abandonné, aussitôt suivi d’un incendie vite éteint par une pluie torrentielle. Certains y voyaient le châtiment divin infligé par la déesse aux étrangers irrévérencieux, d’autres accusaient la femme qui vivait là-haut, d’autres encore prétendaient que les Souillés avaient été dérangés... Quelles que soient les versions, tout le monde s’accordait sur un point : il ne fallait pas monter à la montagne. Pas maintenant.\nMais Abigail n’avait pas le choix.\nLa maladie de sa mère s’était aggravée, et toute la nuit, elle avait entendu ses gémissements étouffés. Elle savait qu’une herbe médicinale poussait près du temple et pouvait soulager la douleur. Alors, malgré le danger, elle avait décidé d’y aller.\nElle trébucha sur quelque chose de mou.\nTrop concentrée sur sa destination, elle n’avait pas remarqué ce qui se dissimulait dans les hautes herbes. En se frottant le genou meurtri, elle jeta un coup d’œil au sol, et poussa un cri avant de retomber lourdement en arrière.\n« Un... un cadavre ! » \nC’était une fillette de cinq ou six ans, à en juger par les traits de son visage. Son corps était couvert de suie et de saleté, et ses magnifiques cheveux argentés, emmêlés et pleins de boue. Recroquevillée comme un nouveau-né, elle reposait au milieu de plusieurs Souillés morts, ainsi qu’à côté d’un couteau noirci. Avait-elle été attaquée ? Mais alors... qui avait tué les monstres ?\n« Tu... »\nLa peur céda peu à peu la place à l’inquiétude. Abigail se frotta la poitrine pour calmer son cœur affolé, puis toucha timidement l’épaule de l’enfant.\n« Hé... tu es... vivante ? »\nQue ce soit à cause du pied qu’Abigail lui avait posé dessus ou de sa voix, le \"cadavre\" se mit soudain à tressaillir violemment, puis à trembler de toutes ses forces.\nElle était vivante !\nSoulagée, Abigail s’écria :\n« Ouf ! Allez, je vais t’aider à te relever. »\nElle voulut saisir sa main, mais l’enfant serrait quelque chose contre elle, les bras croisés avec une force incroyable. Abigail tira, sans succès.\n« Il faut me donner ta main », soupira-t-elle en contournant la fillette pour se mettre face à elle.\n« Ne t’inquiète pas, je suis là pour t’aider. »\nLa fillette ouvrit les yeux avec peine, les fixant sur Abigail avec méfiance... puis croisa son regard franc et bienveillant. Elle baissa la tête, mordit ses lèvres gercées, comme si elle luttait avec une décision douloureuse. Enfin, elle hocha la tête avec gravité et, à contrecœur, desserra son étreinte. À travers la lumière dorée de l’aube filtrant entre les branches, Abigail aperçut enfin ce que l’enfant protégeait si jalousement...\n\nC’était un autre enfant, encore plus jeune.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010202"
-        },
-        UI_CHAR_DATA_TEXT_11010203 = {
-          ContentDE = "Le premier soir, les deux enfants restaient blottis dans l’herbe, leurs souffles faibles et laborieux étaient les seuls signes de vie. Abigail avait déjà vu ce genre de scène, enfant, lors de ses chasses en montagne avec son père, des petits animaux orphelins, seuls, apeurés, sans leur mère pour les protéger.\nElle déposa une outre d’eau fraîche près de la fille aînée, ajoutant quelques morceaux de poisson séché et du pain dur sur un vieux chiffon. C’était tout ce qu’elle pouvait faire. Quand elle avait supplié les villageois de venir en aide aux enfants, elle s’était heurtée à un mur d’indifférence. Les plus cléments lui avaient expliqué que le village manquait déjà de ressources et ne pouvait nourrir deux bouches de plus, les plus durs l’avaient sermonnée pour s’être aventurée en montagne. Certains avaient même reconnu les cornes sur leurs têtes, un signe mal vu dans leur terre natale, Hyperborea. Sa propre mère, d’ordinaire si douce, avait froncé les sourcils, lui disant que leur famille était déjà en difficulté et ne pouvait rien faire.\n« Je souhaite que vous soyez en sécurité, » murmura Abigail, posant le panier et jetant un dernier regard inquiet avant de s’éloigner.\n\nLa nuit suivante, la fille aînée semblait avoir retrouvé un peu de force. Elle réussit à se lever péniblement, portant l’enfant plus jeune dans ses bras, et tituba vers une petite grotte non loin de là, qui les protégerait de la pluie nocturne. Sans nourriture, certes, mais au moins un abri. Après avoir installé le plus petit, elle s’écroula au sol, épuisée. Après un court repos, elle retourna chancelante vers l’endroit où Abigail avait laissé la nourriture. Elle ouvrit l’outre et but à grandes gorgées, mais soudain sembla se raviser. Elle referma le récipient et se hâta vers la grotte, préservant ainsi la majeure partie de l’eau pour l’autre enfant.\n\nLe troisième matin, quand Abigail revint discrètement, elle trouva la fille appuyée contre la paroi rocheuse, en train de panser ses blessures avec le chiffon. Malgré les marques visibles sur tout son corps, elle paraissait plus vivante, ses yeux rougeâtres brillaient d’un éclat nouveau. Abigail vit ses lèvres bouger comme si elle voulait parler, mais elle ne prononça rien, fixant l’outre désormais vide. Elle devait avoir soif, pensa Abigail en prenant l’outre pour aller chercher de l’eau à la rivière. Mais brusquement, la fille attrapa son bras et secoua la tête avec force. « Je... viens avec toi », dit-elle d’une voix rauque.\nAbigail l’aida à se relever et la suivit jusqu’au ruisseau, où elle l’observa pencher la tête avec difficulté pour remplir l’outre. La fille ne semblait pas vouloir dépendre des autres, malgré ses blessures, elle voulait tout faire seule. Abigail sentit une pointe de compassion, même si les enfants du village apprenaient tôt à aider leurs parents, voir une si jeune fille blessée et si courageuse l’émut profondément.\n\nLe quatrième après-midi, un groupe de pêcheurs revint au village, chargé d’une belle pêche vendue à bon prix au port de l’Empire, qui leur permit de rapporter étoffes et provisions. C’était normalement le jour le plus joyeux des enfants du village, mais Abigail ne cessait de penser à la fille sur la montagne. Elle emballa précautionneusement sa part de gâteaux dans un panier. Elle retrouva la fille, qui venait de se laver le visage dans le ruisseau. Une fois la boue retirée, Abigail remarqua à quel point elle était belle.\n« M-Merci... » La voix de la fille était moins rauque, comme si elle n’avait pas parlé depuis longtemps. Elle prononça soigneusement chaque syllabe. « Merci. » Elle prit le panier solennellement. « Avec ça... elle ira mieux. » Curieuse, Abigail demanda : \n« D’où venez-vous ? Je ne vous ai jamais {性别:vus|vues} ici. Oh, et... »\nLa curiosité la gagna. « On dit qu’une femme vivait sur cette montagne. C’est votre mère ? Que lui est-il arrivé ? Et ce bruit fort il y a quelques jours, vous savez ce que c’était ? » À la mention de la femme de la montagne, la fille tressaillit. « Je... ne peux pas... en parler », murmura-t-elle en mordant sa lèvre inférieure.\n« D’accord, c’est comme tu veux. » Abigail se sentit un peu découragée. \n« Le village est plus peuplé ces jours-ci, je ne pourrai peut-être plus venir si souvent. Prenez soin de vous, d’accord ? »\n\nLe dixième soir, Abigail retrouva les deux enfants au bord de la mer. Ils semblaient complètement rétablis. Les deux silhouettes se tenaient sur le sable découvert par la mer, leurs cheveux d’argent étincelant sous le soleil couchant qui baignait aussi la plage d’une lumière dorée. En voyant Abigail, l’aînée prit la main {性别:du plus jeune|de la plus jeune} et s’approcha lentement, portant le panier laissé auparavant, maintenant rempli de petits poissons, crevettes et crabes. \n« C’est pour toi, » dit-elle. « En remerciement. »\nAbigail voulut refuser d’un geste, mais la détermination dans le regard de la fille la fit changer d’avis. En acceptant le panier, elle remarqua un léger sourire sur ses lèvres. Abigail sourit aussi, rassurée : Ils étaient désormais capables de survivre seuls.\n\nDes années plus tard, lors d’une interview accordée au journal Les Courants, Abigail Morley, devenue une figure majeure de la pêche, se laissa emporter par un souvenir en répondant à une question du journaliste :\n« Madame Morley, j’ai encore une question. On dit que vous avez bâti votre empire à partir de rien. Qu’est-ce qui a changé votre vie ? Ou plutôt, quels sont les trois événements les plus marquants qui l’ont façonnée ? »\n« Le premier, ce fut la destruction de mon île natale par les Souillés. Mes parents ont survécu à la fuite, mais étaient déjà malades et blessés, et ils sont vite décédés. Seule, j’ai appris à tout faire par moi-même. Quant au second événement... il a peut-être eu plus d’importance pour le monde que pour moi. »\nAbigail s’interrompit un instant, son regard perdu dans le passé. Ce jour-là, quand les pêcheurs partaient en mer, elle était montée seule en montagne pour cueillir des herbes afin de soulager sa mère malade.\n« Ce jour-là, sur la montagne de mon village natal, j’ai sauvé deux enfants plus jeunes que moi. À cet instant, je ne savais pas encore que le cours de l’histoire... que la roue du destin... venait de basculer, entraînée par mes mains. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010203"
-        },
-        UI_CHAR_DATA_TEXT_11010204 = {
-          ContentDE = "Autrefois, au sein de la Légion, beaucoup surnommaient Berenica la « Nouvelle Lame de l’Empire ». Selon qui le prononçait, ce titre s’accompagnait parfois d’admiration, parfois de crainte, et parfois encore d’un brin de raillerie. En tout cas, ce n’étaient pas là les regards que l’on poserait sur un simple être humain. Aussi, Berenica finit par haïr ce nom, intensément, presque viscéralement.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010204"
-        },
-        UI_CHAR_DATA_TEXT_11010205 = {
-          ContentDE = "« Elle sourit plus souvent, désormais, presque comme un enfant ordinaire. Et elle est bien plus forte et courageuse que je ne l’aurais jamais cru... Ainsi, je peux confier {nickname} à ses soins avec davantage de sérénité. Chaque jour qui passe me convainc davantage qu’arracher Berenica à la Légion fut la bonne décision.\nÀ présent, il est temps pour moi de payer le prix de ce choix... Je suis désolée, Berenica. Pardonne-moi de devoir partir. »\n\n« Et... je vous aime. {性别:Tous les deux|Toutes les deux}. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010205"
-        },
-        UI_CHAR_DATA_TEXT_11010301 = {
-          ContentDE = "Berenica adore tout ce qui est doux au toucher, comme la fourrure soyeuse d’un petit animal.\nMalheureusement, les animaux, eux, ne partagent pas cet enthousiasme. Au moindre échange de regards, même le chat le plus placide se cambre soudain et détale comme une boule de poils affolée.\nDe quoi rendre Berenica perplexe... et la pousser à se rabattre sur toi : elle te passe un bras autour du cou, plonge ses doigts dans ta chevelure et te la froisse jusqu’à ce qu’elle soit totalement en bataille.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010301"
-        },
-        UI_CHAR_DATA_TEXT_11010302 = {
-          ContentDE = "Berenica a toujours eu un sommeil léger, un vieux réflexe bien ancré. Pourtant, elle est parfois tourmentée par des cauchemars fragmentés : tantôt elle retourne dans une prison ancienne, tantôt elle est exilée seule dans la forêt ou perdue sur une mer infinie. Le plus souvent, elle se voit enfermée sous une immense cloche de verre. D’étranges eaux montent de tous côtés, engloutissant ses membres, sa poitrine, ses oreilles et ses yeux, l’entourant et la noyant.\nLa peur et la solitude du rêve la dévorent, elle se débat pour se réveiller, le cœur battant à tout rompre. Ce n’est que lorsqu’elle entend ta respiration régulière à ses côtés qu’elle retrouve son calme, soulagée de ne pas être seule.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010302"
-        },
-        UI_CHAR_DATA_TEXT_11010303 = {
-          ContentDE = "Berenica ne pleure jamais.\nPeu importe la douleur qui la ronge ou le désespoir qui l’étreint, elle serre les dents et endure sans laisser tomber la moindre larme. Pour un enfant, pleurer est un moyen d’exprimer son mal-être, un appel au réconfort. Mais pour une arme, pleurer est un signe de faiblesse, une humidité qui ne ferait que faire rouiller l’acier.\nBien avant d’avoir rencontré une famille prête à prendre soin d’elle, Berenica avait déjà manqué sa chance d’apprendre à pleurer.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010303"
-        },
-        UI_CHAR_DATA_TEXT_11010304 = {
-          ContentDE = "Berenica sait confusément qu’une force inhabituelle sommeille en elle. Dans les histoires que racontent les ménestrels et les conteurs, un personnage doté d’un tel pouvoir se voit presque toujours investi d’une mission grandiose : sauver le monde ou s’asseoir sur un trône.\nElle, n’aspire à rien de tout cela. Si un jour elle apprend à maîtriser cette force, elle veut la consacrer entièrement à protéger ceux qui lui sont chers. Peut-être que d’autres trouveraient ce choix regrettable, mais pour Berenica, rien n’a plus de valeur que cela.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010304"
-        },
-        UI_CHAR_DATA_TEXT_11010305 = {
-          ContentDE = "Pour Berenica, te protéger a toujours été la mission la plus importante de sa vie. À ses yeux, tu étais plus jeune, moins robuste qu’elle, et donc forcément {性别:dépendant|dépendante} de sa présence.\nPourtant, ce jour-là, sur la falaise, au moment où elle t’a vu exécuter ce signal... elle a compris que, en réalité, c’était elle qui ne pouvait pas se passer de toi.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010305"
-        },
-        UI_CHAR_DATA_TEXT_11010401 = {
-          ContentDE = "Les habitants de l’Île du Purgatoire tendaient parfois leurs filets le long de la plage, profitant du va-et-vient des marées pour piéger les poissons. Une fois les prises visibles ramassées, il restait toujours quelques menus poissons ou crevettes épargnés par la récolte. Avant d’être en âge de subvenir à leurs besoins, c’étaient là la principale source de nourriture de Berenica et de {nickname}.\nDans la vase laissée par le passage des pêcheurs, les deux enfants avançaient courbés, fouillant l’eau trouble à la recherche des petites proies dissimulées. C’était un travail fastidieux et éreintant, souvent peu fructueux, mais ils s’en amusaient en transformant l’exercice en concours : qui rapporterait le plus de \"trésors\" ?\n« Berry, regarde ! J’ai attrapé un gros poisson ! »\nÀ quelques pas, {nickname} brandissait fièrement un poisson à peine plus grand qu’une main, une taille qui n’intéressait pas les pêcheurs, mais qui, pour eux, tenait du festin.\n« Pas mal », répondit Berenica avec un léger sourire.\n{性别:Encouragé|Encouragée} par cette approbation, {nickname} garda sa prise en main, savourant sa victoire... jusqu’à ce qu’une épine dorsale {性别:le|la} pique à la paume, lui infligeant une \"blessure de guerre\". Lors du décompte final, Berenica avait naturellement récolté davantage. {nickname}, {性别:vexé|vexée}, protesta :\n« Si je ne m’étais pas {性别:blessé|blessée}, j’aurais gagné ! C’est la faute de ce fichu poisson... Ce soir, on le fait bouillir ! »\n« Ne fais pas {性别:l’orgueilleux|l’orgueilleuse}. Et la prochaine fois, fais attention quand tu attrapes un poisson », dit-elle... mais {nickname} avait déjà {性别:harnaché|harnachée} son panier et filait vers la maison.\n« Course jusqu’à la maison ! » lança-t-{性别:il|elle} en se retournant pour lui adresser un signe.\nAvec un soupir amusé, Berenica ajusta son panier et se mit à courir derrière {性别:lui|elle}. Mais à peine avait-elle fait quelques pas que le ciel s’assombrit brusquement, une pluie battante s’abattit, les trempant jusqu’aux os. Quelle malchance, pensa-t-elle, avant que la voix claire de {nickname} ne traverse le rideau d’eau :\n« Berry, regarde ! Il pleut ! Plus besoin de monter à la montagne chercher de l’eau. C’est un cadeau des dieux ! On est vraiment {性别:chanceux|chanceuse}... plus que les princes et princesses des palais ! »\nBerenica esquissa un sourire. Elle ne croyait pas aux dieux, pour elle, la pluie n’était qu’un phénomène naturel. Mais sur ce dernier point, elle devait admettre qu’{性别:il|elle} avait raison : le temps passé avec {nickname} valait bien tous les trésors du monde.\n\nDemain, je {性别:le|la} laisserai peut-être gagner, songea-t-elle en accélérant le pas.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010401"
-        },
-        UI_CHAR_DATA_TEXT_11010402 = {
-          ContentDE = "Pour varier les ingrédients à leur table, Berenica et {nickname} partaient parfois cueillir fruits et légumes en montagne. Le terrain était difficile et dangereux, peuplé de bêtes sauvages. Pour ne pas alerter ces animaux en cas de danger, Berenica inventa un code secret : deux tapotements sur l’épaule droite signifiaient \"Fais attention derrière toi\", deux frappes sur la poitrine voulaient dire \"Rapproche-toi\".\n« Je pense... on peut ajouter un signal, un léger effleurement sur le nez pour dire \"Tout va bien\" » expliqua Berenica à {nickname}. « Avec ça, on devrait s’en sortir. Mémorise bien. »\nGrâce à ces signes, ils évitèrent bien des périls, jusqu’à ce qu’ils rencontrent une menace plus terrible, les Souillés. C’était la première fois que {nickname} voyait ces créatures, mais Berenica connaissait leur danger. Elle protégea {nickname} de son corps en affrontant les monstres, accumulant blessures sur blessures. Malgré la douleur, elle continua le combat, jusqu’à vaincre l’ennemi... avant de sentir le poison s’infiltrer dans ses veines. Avant de perdre conscience, elle vit le visage paniqué de {nickname}. Elle voulut parler, mais n’eut plus la force de prononcer un son.\nQuand elle rouvrit les yeux, elle était chez elle, dans son lit.\n« Berry... ? Berry, tu es réveillée ! » {nickname} accourut et lui prit la main fermement, comme si elle allait disparaître.\n« Ne t’inquiète pas, je vais bien maintenant », répondit Berenica en s’appuyant et regardant autour d’elle. La pièce était sens dessus dessous, casseroles et bols entassés près du feu, certains contenant un liquide suspect. La tirelire était renversée et vidée de ses pièces. {nickname} avait toujours été calme et {性别:posé, même seul, il|posée, même seule, elle} n’aurait jamais laissé un tel chaos. Intriguée, Berenica apprit que tout l’argent avait été dépensé en remèdes.\n« J’ai paniqué, alors j’ai donné au marchand tout ce qu’il demandait. Comme il manquait d’argent dans la tirelire, il m’a fait une réduction... Mais une fois rentrée, j’ai réalisé que c’était juste du jus de légumes, pas de vrais remèdes », expliqua {nickname} à voix basse. « {性别:Désolé|Désolée} Berry, je sais que tu avais économisé ces pièces longtemps. »\nL’enfant aux cheveux argentés baissa la tête, les mains serrées, la sueur perlant sur son nez. Berenica remarqua ses cheveux en désordre, ses vêtements sales, comprenant qu’{性别:il|elle} n’avait sans doute ni dormi ni mangé. Juste à ce moment, l’estomac de {nickname} émit un bruit.\n« ... Bon », soupira Berenica avec un sourire mêlé d’exaspération, en remettant de l’ordre dans ses cheveux. \n« On doit ajouter un signal. Quand la situation est trop urgente pour les gestes... ce sera le clignement des yeux. Trois clignements, c’est notre nouveau signe. »\n« Qu’est-ce que ça veut dire ? » demanda {nickname}.\n« Que même si je ne suis plus là, tu dois continuer à bien vivre. »\n« Non ! Je ne veux pas ! » secoua la tête {nickname} avec frénésie, comme un hochet d’argent. « On est une famille, non ? La famille reste toujours ensemble. »\nUne silhouette floue et lointaine traversa l’esprit de Berenica. Même en famille, on peut être séparés un jour, elle l’avait déjà vécu.\n« {nickname}, écoute-moi bien... Ce signal ne parle pas de séparation, mais de ce que tu dois faire si un jour on est forcés de se quitter... Tu dois continuer à vivre, pour que l’on puisse se retrouver. » Berenica plongea son regard dans celui de {nickname}, d’un ton plus grave. \n« Souviens-toi : trois clignements veulent dire \"Même {性别:seul|seule}, tu dois continuer à vivre... jusqu’au jour où nous nous reverrons.\" »",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010402"
-        },
-        UI_CHAR_DATA_TEXT_11010403 = {
-          ContentDE = "« Lève-toi, et continue de te battre. »\nLa voix glaciale résonna derrière la paroi de verre, tandis qu’un nouveau groupe de drones de combat se déversait dans l’arène d’entraînement exiguë. Leurs capteurs écarlates luisaient d’une menace sinistre alors qu’ils fondaient sur la jeune fille au centre du terrain.\nSerrant son épée, la fillette se redressa tant bien que mal parmi les carcasses de ses précédents adversaires. Malgré la douleur cuisante de ses blessures et la fatigue qui paralysait ses bras, elle réajusta rapidement sa posture, soulevant de toutes ses forces la lame rouge, plus grande qu’elle. Inlassablement, elle répétait les mêmes gestes mécaniques. Les adultes, drapés dans leurs uniformes gris sombre, le lui avaient appris : cesser de frapper signifiait finir brisée au sol, comme les machines qu’elle affrontait.\n\nCe jour-là, les ennemis étaient plus coriaces, et l’entraînement dura plus longtemps que jamais. C’était un supplice bien au-delà de ce qu’un enfant pouvait endurer, mais elle l’ignorait. Elle ne savait pas que, derrière le miroir sans tain, les adultes l’observaient avec une excitation fébrile, les seuls mots qu’elle entendait, encore et encore, étaient : « Pas assez. » Depuis sa naissance, on lui avait répété que sa seule raison d’exister était de devenir l’épée la plus affûtée. Alors, elle acceptait naturellement chaque épreuve, endurait chaque douleur, et voyait dans chaque défi plus cruel encore une reconnaissance de sa valeur.\n« Ça suffira pour aujourd’hui. Bon travail, n° 0. »\nL’entraînement prit fin sur cette louange légère, presque distraite. Éreintée, elle regagna sa chambre en traînant les pieds, trop épuisée pour manger. Elle s’effondra sur son lit, incapable de trouver le sommeil à cause de ses blessures. Allongée, elle comptait les minutes, espérant que le temps les efface plus vite.\n« Petite... ? Petite ? »\nÀ minuit, alors qu’elle comptait encore, une voix douce perça le silence. Elle était si tendre, comme un rayon de lune glissant par la fente étroite de sa fenêtre. \n« Je dois rêver », pensa-t-elle, dans cette prison d’acier, personne ne lui avait jamais parlé sur ce ton. Mais la voix se répéta, plus proche cette fois, comme si elle venait de son chevet. Dans l’obscurité, elle ne distingua pas le visage de l’intrus. Elle se redressa dans ses draps glacés et murmura :\n« C’est... à moi que tu parles ? »\nSa voix tremblait. L’inconnu semblait lui aussi nerveux.\n« Oui. N’aie pas peur... Tiens, prends ce fruit. »\nUne petite sphère rouge sombre reposait dans sa paume. Bien plus tard, Berenica apprendrait son nom : grenade.\n« Je m’appelle n° 0... » dit la fillette en caressant maladroitement le fruit du bout des doigts.\n« Non. Ce nom n’est pas beau. » répondit l’autre en lui tendant la main. \n« Viens, quittons cet endroit. Je t’en donnerai un meilleur. »\n« Quitter... ? Pour aller où ? » demanda-t-elle, avec dans sa voix glaciale une infime trace de naïveté.\n« Dans un lieu sans guerre, sans douleur. »\nImpossible. La guerre et la douleur étaient partout, inévitables. Sa destinée avait été tracée depuis toujours, c’est ce qu’on lui avait appris, et elle y croyait. Elle comprit que cet inconnu tentait de la pousser à trahir les règles, à renier son destin... un crime impardonnable. Elle aurait dû refuser et prévenir les adultes en gris. Mais, à cet instant, la lune glissa par la fenêtre et se refléta dans les yeux de l’inconnu : si purs, si proches, si clairs. Pour la première fois, la fillette ressentit un désir brûlant : quitter sa cage, aller là où l’on pouvait toucher la lune.\nAlors, elle hocha la tête, saisit la main tendue, et dit :\n« D’accord. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010403"
-        },
-        UI_CHAR_DATA_TEXT_11010404 = {
-          ContentDE = "« Berenica, ma chère, écoute-moi bien. »\nLa femme se pencha, serra Berenica de toutes ses forces, puis la repoussa brusquement. Sa voix, d’ordinaire douce, était traversée d’une pointe d’anxiété et de tourment.\n« Vite, emmène {nickname} au village, en bas de la montagne. »\nElle marqua une pause, ouvrit un tiroir, y fouilla à la hâte et en sortit quelques bijoux délicats ainsi qu’une montre à gousset.\n« Prends-les. Les villageois devraient vous recueillir. S’ils vous questionnent, dites que vous êtes des {性别:orphelins échoués|orphelines échouées} ici par hasard, que vous ignorez tout du monde extérieur, et que ces objets sont les reliques de votre mère. »\n« Tu ne viens pas avec nous ? » demanda Berenica.\n« Je ne peux pas. »\nBerenica resta figée, l’esprit soudain vidé. Elle cligna des yeux, incrédule.\n« Tu... tu nous abandonnes ? »\n« Si je reste, vous ne connaîtrez jamais la paix. Va. Protège {nickname} et vis. Oublie l’Empire Hyperboréen, la XIIIᵉ Légion et n° 0. Souviens-toi : tu es un enfant ordinaire. Tu es Berenica. Rien que Berenica. »\n\nElle débita ses instructions d’une traite, puis, une fois encore, tendit la main pour caresser les cheveux de Berenica. Ce geste portait une hésitation infime, une réticence douloureuse que l’enfant sentit jusqu’au fond du cœur. Mais la femme retira aussitôt sa main comme si elle s’était brûlée, tourna le dos, et raffermit sa voix :\n« Il n’y a plus de temps. Tu te souviens de l’entraînement à la course de vitesse ? Dix minutes. Tu as dix minutes pour quitter ce temple et rejoindre la route qui mène au village. C’est un ordre. »\nCe ton impératif réveilla les plus anciens souvenirs de Berenica : obéir à tout ordre sans discuter, on le lui avait inculqué depuis toujours. Par réflexe, elle répondit :\n« Oui. »\nMais, soudain, elle secoua la tête, leva vers elle des yeux implorants, comme pour qu’elle retire ses paroles.\n« Pourquoi... ? Je ne comprends pas... »\n« Berenica, oublie-moi. Oublie tout. Ne reviens jamais ici. »\nInstinctivement, Berenica fit un pas en arrière. Dans la seconde, la porte du temple tomba lourdement devant elle, elle ne sut même pas quand la femme avait actionné le mécanisme. {nickname}, {性别:effrayé|effrayée} par le vacarme, se pressa contre elle et agrippa son bras.\nBerenica jeta un dernier regard vers la porte scellée, puis souleva {nickname} et partit sans se retourner.\n« Dix minutes, » répéta-t-elle, « protéger {nickname}... et vivre. »\nÀ voix basse, elle ajouta :\n« Je le ferai. »\n\nDix minutes plus tard, déjà sur le sentier de montagne, elle entendit derrière elle une explosion assourdissante. Elle ignorait les détails, mais elle comprit assez pour deviner l’essentiel. Elle cligna des yeux, mais aucune larme ne vint, cela faisait longtemps qu’elle ne pleurait plus. Pourtant, elle sentit quelque chose se déverser en elle, comme l’éboulement qui dévalait alors la pente derrière elle.\nCette nuit-là, la montagne prit feu, puis la pluie s’abattit. Et, dans le cœur de Berenica, cette pluie ne s’est jamais arrêtée.\nPar la suite, elle et {nickname} croisèrent la route des Souillés, après un combat désespéré, elles furent sauvées par une jeune villageoise au grand cœur. Quoi qu’il en soit, {性别:ils|elles} survécurent.\nPlus tard, Berenica retourna plusieurs fois devant la porte du temple. Elle n’osa jamais briser sa promesse en tournant la \"clé\", elle se contentait d’attendre, immobile, espérant qu’un jour, la porte s’ouvrirait, et que la femme sortirait, souriante, se pencherait pour lui caresser les cheveux et lui dire : \n« Tout va bien maintenant. Je suis rentrée. »\n\nLes saisons passèrent, la porte resta scellée, et l’attente devint habitude. Jusqu’à ce qu’un jour, une grenade séchée lui tombe sur la tête. Elle la ramassa et se souvint qu’autrefois, à chaque saison des fruits, la femme en cueillait, les lavait, et les apportait à elle et {nickname}.\nEn serrant dans sa main ce fruit racorni et immangeable, Berenica comprit que la femme ne reviendrait plus. Désormais, il ne resterait plus qu’elle et {nickname}.\n« Je tiendrai ma promesse », jura-t-elle en silence. \n« Je prendrai soin {性别:de lui|d’elle}, et je ne te décevrai pas. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010404"
-        },
-        UI_CHAR_DATA_TEXT_11010405 = {
-          ContentDE = "Peut-être faut-il y voir une forme de chance : la rigueur de l’entraînement subi par Berenica dès l’enfance lui permit de s’adapter sans peine à une vie d’errance. Dans les premiers jours suivant sa fuite de la Légion, elle accompagna la femme qui l’avait sauvée, dormant dans des grottes sombres et humides, affrontant des tempêtes sur une mer déchaînée, fuyant le long de falaises abruptes pour échapper aux poursuivants impériaux. Quelles que soient la rudesse ou la dangerosité de la situation, jamais elle ne se plaignit, jamais elle ne s’arrêta.\nMais supporter la douleur était plus facile que l’oublier.\n\nMême loin de cette prison, même après avoir échappé à une traque sans fin, les ombres du passé ne l’avaient pas quittée. Sur l’Île du Purgatoire, des habitudes héritées de cette autre vie persistaient, elle se réveillait avant l’aube et restait immobile un long moment, avant de se rappeler qu’elle n’avait plus à se lever pour l’entraînement. Quand la faim se faisait sentir, elle attendait toujours l’heure exacte du repas, même si la nourriture se trouvait à portée de main. Malade ou blessée, elle endurait ses maux en silence, sans jamais demander d’aide. Le contact physique, même accidentel, la faisait se raidir, se reculer, voire se mettre en position de combat, parfois, le simple passage d’un oiseau devant la fenêtre suffisait à la mettre sur ses gardes.\nPuis, elle te rencontra.\n{性别:Petit, doux, encore blotti|Petite, douce, encore blottie} dans les bras de cette femme, tu lui adressas un sourire d’une pureté désarmante. Prudemment, elle effleura ta joue, aussitôt, ta petite main vint emprisonner son doigt. Tu semblais si fragile, comme si le moindre danger pouvait t’anéantir.\n\nPour la première fois, Berenica ressentit le désir profond de protéger quelqu’un.\nPour te donner l’exemple, elle adopta des horaires de sommeil réguliers. Pour te voir grandir en bonne santé, elle osa goûter à mille ingrédients, maladroitement, et rassembla toutes sortes de condiments vantés comme délicieux. Pour prendre soin de toi, elle apprit à reconnaître les signes de maladie : un rhume qui amène la toux, un coup de chaleur qui provoque des vertiges. Pour ne pas t’effrayer, elle s’efforça de maîtriser ses réflexes d’attaque... et se mit à sourire plus souvent. En te voyant grandir, elle se retrouva elle-même, renouant avec ces sensations propres aux êtres humains.\nUn après-midi ordinaire, après avoir terminé le ménage, Berenica s’assoupit dans son fauteuil. À demi éveillée, elle sentit sur sa joue un contact familier, en rouvrant les yeux, elle te découvrit, {性别:perché|perchée} sur la table, en train de la tapoter du bout des doigts. C’était peut-être la première fois qu’elle laissait quelqu’un s’approcher ainsi de ses points faibles. Berenica sourit et pinça doucement ta joue en retour. À cet instant, elle sut, avec une clarté absolue, qu’elle était vivante, vraiment vivante, dans ce monde.\n\nSi on lui demandait pourquoi tu comptes tant à ses yeux, sa réponse tiendrait en peu de mots : c’est ta présence qui l’a fait passer de l’arme de l’Empire « n° 0 » à la fille nommée « Berenica ».",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010405"
-        },
-        UI_CHAR_DATA_TEXT_11030101 = {
-          ContentDE = "Tu te tiens sur le balcon où Parsifal répétait autrefois ses chansons.\nAvant qu’il n’y ait des rideaux lourds pour le séparer du public, ici, c’était sa scène.\nL’aube lui servait de projecteur. La rue, de décor. Le vent chargé de neige, d’orchestre. Le chant des oiseaux, d’harmonie.\nLe sol, bien qu’enseveli sous la propreté, laissait percer, entre deux dalles, une tige sauvage... sans doute la main chargée de nettoyer n’avait-elle pas eu le cœur de l’arracher.\nTu frôles doucement ses feuilles, comme pour y déposer un vœu silencieux :\nPuisses-tu grandir... pour celui qui ne le pourra plus.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11030101"
-        },
-        UI_CHAR_DATA_TEXT_11030102 = {
-          ContentDE = "En feuilletant l’album d’un collectionneur passionné d’opéra, tu tombes sur une vieille affiche. À l’emplacement réservé au rôle principal, une bande de ruban décoré recouvre soigneusement le nom : « Parsifal Snowfield ».\nL’affiche ne montre pas la fée des neiges : elle se tient hors du cadre, observant de loin le monde des enfants. Cette perspective te rappelle l’envers du théâtre : lorsque les projecteurs s’allument, un mince filet de lumière passe sous l’épais rideau de velours. Pour Parsifal, la scène était ce monde lointain, qu’il ne pouvait entrevoir qu’à travers cette fente lumineuse.\nAlors, comme la fée de l’histoire, il renonça à tout... pour tenter d’atteindre ce monde inaccessible.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11030102"
-        },
-        UI_CHAR_DATA_TEXT_11030103 = {
-          ContentDE = "Tu trouves un avis de recrutement de la VIᵉ Légion épinglé dans un coin discret du panneau d’affichage de Givrelac.\nLa plupart des détails, conditions de participation, épreuves, ont été effacés par le vent et la pluie, mais une ligne reste parfaitement lisible : \n« Les candidats exceptionnels se verront décerner le titre de Charon Couronné. »\nC’est avec ce genre de promesses, éclatantes, séduisantes et entièrement mensongères, que l’on attire un jeune plein d’espoir, et tant d’autres, vers l’enfer.\nPour Parsifal, être soldat ou être comédien revenait au même : ce sont des professions où l’effort devait être récompensé, où le travail portait ses fruits. C’est sans doute ce monde juste et équitable qu’il avait imaginé en lisant pour la première fois cet avis... un monde où les rêves se méritent.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11030103"
-        },
-        UI_CHAR_DATA_TEXT_11030104 = {
-          ContentDE = "Tu retournas une fois encore dans les égouts, jusqu’à l’angle reculé où Parsifal s’était jadis réfugié.\nMême dans ce recoin sombre et humide, il avait construit une scène, avec ses mains déformées.\nAvait-il fait cela par nostalgie, pour un théâtre à jamais hors de sa portée ? \nOu simplement pour se rappeler qu’il avait été, un jour, un être de chair et de sang ?",
-          TextMapId = "UI_CHAR_DATA_TEXT_11030104"
-        },
-        UI_CHAR_DATA_TEXT_11030105 = {
-          ContentDE = "Le Théâtre Galea avait rouvert ses portes.\nLes planches et les murs étaient flambant neufs, pas la moindre fissure, pas le moindre impact, pas une trace de sang. Tu traversas la scène d’un bout à l’autre, en quête du moindre vestige de lui. Rien. Pas même une ombre. Comme si tout ce qui s’était passé ici, à l’instar de son nom, n’avait été qu’un mirage éphémère.\nPourtant, tu te souvenais de votre dernière rencontre. Derrière ce masque grimaçant, tu avais distingué un comédien sûr de lui, rayonnant, prêt à entrer dans la lumière pour offrir à son public la représentation parfaite.\nEt il l’avait fait.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11030105"
-        },
-        UI_CHAR_DATA_TEXT_11030201 = {
-          ContentDE = "Dans une rue tranquille du quartier sud de la cité extérieure de Givrelac, une femme qui tenait une petite boulangerie attendait toujours le retour de l’un de ses clients réguliers.\nIl y a plus d’une décennie, elle n’avait pas encore de boutique, juste un petit étal installé sur cette même rue. Chaque matin, alors qu’elle se préparait à ouvrir, elle entendait la voix claire et cristalline d’un enfant chanter depuis un des étages supérieurs. Bien qu’elle n’ait jamais vu le chanteur, elle en vint à considérer cet enfant comme un compagnon invisible, quelqu’un qui, comme elle, affrontait le matin avec effort et espoir. Chaque fois qu’elle se sentait fatiguée ou prête à abandonner, il lui suffisait d’entendre cette voix pour retrouver courage et énergie.\nUn jour, la femme remarqua que le chant venait à sonner différemment. Bien qu’elle n’eût aucune formation musicale, elle pouvait percevoir la différence : les notes semblaient distraites, irrégulières, comme si quelque chose pesait lourd sur le cœur de l’enfant. Cela dura plusieurs jours. Puis, un matin, le chant s’interrompit brusquement au milieu d’une note, suivi d’un cri soudain. Surprise, la femme monta précipitamment les escaliers et se retrouva face à un jeune Charon paniqué.\n« Madame... ma mère... elle s’est évanouie ! Aidez-nous, je vous en prie... » balbutia le garçon, les mots à peine articulés.\nElle resta figée un instant. Cette voix... elle la reconnaissait immédiatement. Aucun doute : ce garçon était le chanteur, ce compagnon invisible dont la voix avait égayé ses matins pendant tant d’années.\nRapidement, elle reprit ses esprits et aida le garçon à emmener sa mère dans une clinique proche. Après traitement, la santé de la mère se stabilisa, mais le garçon resta collé à son chevet sans vouloir s’éloigner. Voyant qu’il n’avait pas mangé de la journée, la boulangère retourna à son étal, prépara un panier de pains et l’apporta à la clinique.\n« Merci... merci beaucoup, madame, » répéta le garçon, visiblement embarrassé. \n« Je... je ne sais même pas comment vous remercier. »\n« Appelle-moi simplement Tante Horrel », répondit la femme en souriant. \n« Et il n’y a pas besoin de me remercier, tu m’as aussi beaucoup aidée. »\nLe garçon cligna des yeux, confus.\n« Grâce à toi », ajouta-t-elle, « j’ai eu droit à des représentations d’opéra gratuites tous les matins. Je voulais te le dire depuis longtemps, petit, tu chantes merveilleusement bien. »\n« Me... merci, tante Horrel ! » balbutia le garçon, un mélange de surprise et de timidité traversant son visage. \n« Mais... ma mère disait toujours qu’on ne devait jamais accepter la gentillesse des autres sans rien donner en retour. »\n« Alors la prochaine fois », rit la femme, « viens simplement acheter un morceau de pain à mon étal. »\nC’était une remarque lancée à la légère, sans y penser vraiment. Pourtant, à partir de ce jour, le garçon commença vraiment à descendre tous les deux ou trois jours pour acheter un morceau de pain. À travers ces petites conversations, Tante Horrel apprit peu à peu qu’il n’avait jamais connu son père. Depuis toujours, il vivait avec sa mère, fragile depuis de nombreuses années, et dont la santé avait récemment empiré.\nTante Horrel priait silencieusement pour le garçon et sa mère. Pourtant, le chant de l’enfant ne retrouva jamais sa pureté d’antan. Peu importe la mélodie, un fil de tristesse restait toujours présent. En écoutant sa voix, elle ressentait souvent une profonde mélancolie. Elle ne pouvait que faire ce qu’elle pouvait : chaque jour, elle mettait de côté le pain le plus moelleux et le plus plein, le gardant pour lui, espérant que sa simple douceur pourrait apaiser, ne serait-ce qu’un peu, sa peine.\n\nPuis, un jour, le chant s’arrêta. Et le garçon ne vint plus acheter de pain.\nDe nombreux jours passèrent, jusqu’à ce que Tante Horrel le revoie par hasard, marchant dans la rue, le regard vide et l’air perdu. Elle l’appela immédiatement.\n« Pourquoi ne chantes-tu plus ? » demanda-t-elle doucement.\n« Ma mère est décédée », répondit-il d’une voix sèche et cassante. \n« Avant, je chantais pour lui faire plaisir... mais maintenant qu’elle n’est plus là... »\nTante Horrel resta silencieuse un instant, puis glissa dans ses mains un sac de pain encore chaud.\n« Ta mère m’avait dit », lui confia-t-elle, « qu’elle espérait que tu grandisses pour chanter sur une vraie scène un jour. Une scène brillante, où tout le monde pourrait entendre ta voix. Même si elle n’est plus là... tu peux encore réaliser ce souhait. »\nLe garçon leva les yeux, et une lueur fugace traversa son regard.\nEn vérité, la femme n’avait rencontré la mère du garçon que quelques fois. Elle ne se souvenait que d’une personne réservée, toujours masquée sous un chapeau ou un voile. Mais cela n’avait plus d’importance maintenant. La seule chose qu’elle pouvait offrir au garçon, c’était un petit mensonge raconté avec gentillesse.\nLe lendemain matin, le chant reprit. Peut-être parce qu’il avait été silencieux si longtemps, il portait maintenant une force plus profonde, et une émotion plus touchante que jamais auparavant.\n\nAnnée après année, la neige de Givrelac tombait et fondait à nouveau. L’enfant devint un jeune homme, et l’étal de la femme devint une véritable boulangerie. Un matin ordinaire, juste avant l’ouverture, quelqu’un frappa à la porte du magasin.\n« Tante Horrel, je vais m’absenter un moment », dit le jeune homme en lui tendant une petite bourse de pièces et la clé de sa maison. \n« Je me suis engagé dans la Légion. Pendant mon absence... pourriez-vous veiller sur ma maison ? »\n« Bien sûr. Mais je ne peux pas prendre ton argent », répondit la femme en repoussant doucement la bourse. \n« Tu vis seul... tu en auras bien plus besoin que moi. Mais pourquoi la Légion ? Tu ne chantes plus ? »\n« Je veux obtenir le titre de Charon Couronné. C’est le seul moyen pour moi de monter sur une vraie scène », expliqua-t-il en poussant la bourse vers elle. « Acceptez-le, je ne peux pas recevoir votre aide pour rien. »\n« Alors rembourse-moi à ton retour », dit-elle en lui donnant le pain qu’elle avait mis de côté, le plus moelleux, comme toujours. \n« Quand tu deviendras célèbre, viens représenter ma boulangerie, d’accord ? »\n« Si vous voulez bien... »\n« Alors c’est promis. » Elle lui fit un geste chaleureux de la main. \n« Que ton souhait se réalise, Parsifal. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_11030201"
-        },
-        UI_CHAR_DATA_TEXT_11030202 = {
-          ContentDE = "Toutes les pièces ne sont pas réussies, et même les meilleures ont leurs passages creux. Le public se laisse happer par les scènes haletantes et pleines de rebondissements, mais lorsque l’intrigue se calme, beaucoup laissent leur esprit vagabonder. Les comédiens, eux aussi, accordent souvent plus de soin aux moments forts, à ces scènes qui marquent les esprits.\nParsifal, lui, faisait exception. Son ancienne professeure se souvenait : même dans les passages les plus ordinaires, les plus négligés par les autres, il jouait avec un sérieux sans faille. Bien sûr, c’était en partie dû à son travail acharné. Mais il y avait plus que cela : pour lui, même les instants les plus banals sur scène étaient la vision fugace d’une vie à laquelle il n’aurait jamais accès.\n« Pour la plupart des comédiens, le théâtre est un métier, une passion, ou peut-être un rêve », confia un jour sa professeure. \n« Mais pour Parsifal... c’était sans doute aussi précieux que la vie elle-même, ou peut-être quelque chose qui faisait déjà partie de sa vie. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_11030202"
-        },
-        UI_CHAR_DATA_TEXT_11030203 = {
-          ContentDE = "Le banquet avait commencé.\nSous les lumières éblouissantes, les coupes de vin et les bijoux scintillaient comme de petites lanternes, répandant des reflets dorés dans chaque recoin de la salle. Comme dans tous les rassemblements de ce type, l’endroit vibrait d’admiration pour la richesse et de désir de prestige, enveloppé de courtoisies vides et de flatteries polies. Et pourtant, au milieu de tout cet éclat et de cette apparence, une romance digne d’un conte de fées était sur le point de naître.\n\nC’était sa première fois à un banquet d’une telle envergure. Il était impeccable dans son costume, ses gestes soigneusement maîtrisés, mais l’inquiétude dans ses yeux et la raideur de sa posture trahissaient son malaise. Jeune et brillant, il était un entrepreneur autodidacte dont la fortune dans le commerce de l’acier lui avait enfin ouvert les portes de l’élite de la ville. Mais aucun costume ne pouvait masquer ses origines modestes, visibles aux yeux de tous, lui compris. Les regards suivaient chacun de ses mouvements avec amusement. Des sourires polis accueillaient ses salutations, légèrement condescendants, pour céder ensuite, dans son dos, à des ricanements sur son goût dépassé et sa conversation maladroite. Après qu’un noble au sarcasme acéré l’eut incité à avaler trois verres de liqueur amère, il se retira discrètement dans un coin de l’ombre et demanda doucement un verre d’eau.\n\nElle, en revanche, était la coqueluche de la haute société de la ville, une habituée de ces réceptions. Elle naviguait parmi le flot incessant d’admirateurs avec une aisance experte, donnant à chacun l’illusion d’être le favori. Quelques mots choisis suffisaient à calmer deux jeunes hommes sur le point de s’affronter pour elle. Du coin de l’œil, elle aperçut un baron, celui-là même qui lui avait offert un collier somptueux quelques jours plus tôt. À ses côtés, une autre femme, jeune et belle, lui était inconnue. Cela ne l’étonna guère. Aux yeux de ces nobles, elle n’était guère différente d’un vase en porcelaine de luxe... précieux, décoratif, remplaçable. On le brise, on le tache, on s’en lasse, et l’on trouve aussitôt un autre. Mais à la différence d’un vase, elle savait parler et sourire. Avec grâce, esprit et charme, elle pouvait toujours se rendre désirée à nouveau. C’était un jeu qu’elle maîtrisait parfaitement, et qu’elle gagnait toujours.\nAlors qu’elle relevait sa jupe pour reprendre le jeu, un vertige soudain la prit au dépourvu. Peut-être était-ce le vin qu’elle venait de boire. Elle se dirigea vers le buffet et aperçut une assiette de tranches de citron fraîchement coupées. Elle en prit une, un petit rituel personnel. L’acidité du citron la réveillait immédiatement.\nPour ne pas tâcher sa robe blanche, elle mit le quartier de citron entier dans sa bouche. En relevant les yeux, elle vit l’homme la regarder, verre d’eau à la main, totalement ébahi.\n« ... C’est pas trop acide ? » demanda-t-il.\nElle ne put répondre que par un hochement de tête, les joues gonflées, laissant échapper un faible « Hmm ».\n« Alors pourquoi en manger ? »\nElle tapa légèrement sa tempe, signifiant qu’elle cherchait à se réveiller.\nL’homme la fixa un moment, difficile de dire s’il comprenait, puis il prit lui aussi un quartier de citron et l’imita. Dès qu’il mordit dedans, son visage se plissa dans une grimace complète.\nElle sourit, couvrant sa bouche d’un mouchoir pour recracher délicatement la peau de citron, puis demanda avec toute l’élégance du monde :\n« Vous sentez-vous un peu plus réveillé, monsieur ? »\n« O-oui... merci, mademoiselle. Vous êtes... très belle », balbutia-t-il, s’étouffant presque avec son eau. Ces mots, bien que pouvant sonner comme du sarcasme, étaient pour elle les plus sincères qu’il lui eût été donné d’entendre ce soir-là.\n« Je m’appelle Herzeleide Snowfield », dit-elle. \n« Je ne crois pas que nous nous soyons rencontrés. Et vous êtes ? »\n« Morris Glenville. Un commerçant. »\n« Un commerçant ? » répéta-t-elle, inclinant légèrement la tête, les yeux curieux mais sans aucune trace de condescendance. \n« Et dans quel commerce êtes-vous ? »\nIl sourit. \n« Un peu de tout. Dernièrement, je pensais me lancer dans l’importation de fruits, peut-être quelque chose de moins acide que ces citrons. »\nElle éclata de rire. Lui aussi.\n\nAinsi, dans cette salle éblouissante, deux âmes solitaires se trouvèrent dans un petit coin adouci par l’ombre, là où la lumière dorée n’atteignait pas tout à fait. Comme un citron tombant dans un verre d’eau, l’amertume se mêlait juste assez pour laisser une pointe de douceur.\nLes contes de fées sont ainsi faits qu’ils s’arrêtent toujours au moment idéal, tant que l’illusion du \"ils vécurent heureux\" perdure, protégeant le lecteur de la vérité crue qui l’attend au-delà de la beauté. Quand le rideau tombe, il ne reste que le poids froid de la réalité.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11030203"
-        },
-        UI_CHAR_DATA_TEXT_11030204 = {
-          ContentDE = "Il y a quelques années, le nom d’Herzeleide résonnait dans toute la haute société de Givrelac.\nMuse des fantasmes les plus fous, baromètre des tendances, étoile des bals les plus somptueux... Certains l’adoraient, éperdument amoureux, prêts à la hisser sur un piédestal et à proclamer qu’elle était la femme parfaite. D’autres la haïssaient, la traitant de séductrice de bas étage, persuadés qu’elle n’avait gravi les échelons qu’en charmant les puissants, et rêvant de la voir rabaissée jusqu’à la boue.\nMais qui était-elle vraiment ?\nNée dans une famille ordinaire de Charon, orpheline très jeune, elle avait trouvé du travail comme aide dans une auberge. Vive, appliquée, irréprochable dans ses tâches... jusqu’à ce que sa beauté attire l’attention d’un noble de passage, de la pire des manières.\nLe cœur des habitants de Givrelac est aussi glacé que les eaux prises par la banquise. Personne ne prit la défense de cette fille de basse extraction, bien qu’elle fût entièrement victime. On la chassa, couverte de honte, et elle échoua dans les taudis, survivant au jour le jour par de petits boulots.\nElle pensait y finir ses jours, oubliée. Mais le destin n’en avait pas fini avec elle.\nDes années plus tard, le même noble réapparut, malade, à l’agonie. Peut-être pour apaiser sa conscience avant la fin, il lui offrit argent, logis dans la cité intérieure, et alla jusqu’à lui procurer, par quelque stratagème, le titre de Charon Couronné.\nPour les autres, c’était une chance inouïe. Pour elle, une farce cruelle. Ni excuses, ni richesses ne pouvaient combler le gouffre qu’elle portait en elle. Elle ne supportait plus les miroirs ni rien qui pût refléter son visage. Elle haïssait sa beauté. Elle haïssait sa naïveté. Car on lui avait répété que tout était de sa faute : pourquoi ne pas avoir été plus sage ? Pourquoi ne pas être née laide ?\nEt voilà que tout se renversait. Sa beauté, autrefois cause de sa perte, devenait un trésor que les nobles se disputaient. Après un bref moment de stupeur, elle fit un choix : se venger. Elle forgea un nom de famille élégant, se força à apprendre l’étiquette et la lecture, puis s’immisça dans les cercles des arts et des débats. Rapidement, grâce à son esprit affûté et à ses charmes, elle devint la courtisane la plus convoitée de la cité intérieure.\nDe bal en bal, elle savourait le plaisir froid de manipuler ces nobles à sa guise, de les voir tour à tour enfiévrés et désespérés. Son cœur se glaçait un peu plus chaque jour, jusqu’à oublier presque complètement celle qu’elle avait été.\n\nJusqu’à ce qu’elle le rencontre.\nIl n’était pas noble. Comme elle, il portait un masque dans ce théâtre mondain. Et pour cela, il vit aussitôt la solitude dissimulée sous ses atours éclatants. Elle crut y voir un signe du ciel : une chance de retrouver la femme qu’elle avait perdue. Sous les nuits parfumées, elle lui ouvrit son cœur et, entourée de dorures et de lustres, la seule présence de cet homme suffisait à réchauffer son âme.\nLorsqu’elle découvrit qu’elle portait son enfant, elle déborda de joie. Mais lui devint hésitant. Ses affaires prospéraient déjà au-delà de tout besoin, ce qu’il convoitait désormais, c’était le rang. Et cela, une Charon ne pouvait lui offrir. Elle devint comme un poisson arraché à son bassin, haletant sur la pierre glacée. Elle supplia, promit de l’aider, s’humilia. Finalement, il consentit... à une condition : si l’enfant naissait Sola, il accepterait d’épouser la mère.\n\nPar une nuit d’automne baignée de lune, l’enfant vint au monde. Un beau garçon, au teint clair, au visage délicat... et sur son front, deux petites cornes noires, d’un éclat rare chez les Charons, signe que l’enfant avait de grandes chances de s’éveiller un jour en tant que Daimon.\nEn voyant ces cornes, son cœur sombra. Tremblante, elle saisit un couteau. Si elles disparaissaient, tout irait mieux... Il suffisait de les trancher, et la vie rêvée l’attendrait encore.\nMais alors que la lame reflétait un éclat froid, le bébé ouvrit les yeux et la fixa. Dans ses prunelles claires, elle vit son propre reflet... et ses propres cornes, semblables aux siennes. Elle comprit : après toutes ces années, elle n’avait jamais cessé de se haïr, de se renier.\nElle reposa la lame.\n« Allons-nous-en, mon enfant. Quittons cet endroit. »\nAinsi s’acheva l’histoire d’Herzeleide, jadis perle des salons de la cité intérieure.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11030204"
-        },
-        UI_CHAR_DATA_TEXT_11030205 = {
-          ContentDE = "On racontait à Givrelac que la tombe des Fischer avait été récemment dérangée.\nLeur fille venait chaque année se recueillir, mais cette fois, ce n’était clairement pas elle. La pierre n’avait pas été nettoyée, aucune fleur fraîche n’y avait été déposée. Seule la terre semblait différente... retournée, puis soigneusement tassée.\nS’il s’agissait d’un pilleur de tombes ou d’un ennemi venu profaner la sépulture, les lieux auraient été laissés en désordre. S’il y avait eu un nouvel enterrement, un nom aurait été gravé sur la stèle. Mais rien.\nÉtait-ce un nom jugé trop insignifiant pour figurer sur la pierre ? Un nom qu’il fallait taire ? Ou déjà oublié du monde ?\nQuelques neiges tombèrent, quelques vents de printemps passèrent. La terre gela, dégelant, puis regela. Et la tombe des Fischer reprit son apparence d’antan. Peu à peu, on oublia qu’elle avait changé. Seules les jeunes pousses jaillies du sol en gardaient la mémoire : leurs racines étaient allées frôler celui qui dormait là.\nQuant à celui qui l’avait enseveli, il ne revint jamais.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11030205"
-        },
-        UI_CHAR_DATA_TEXT_11030301 = {
-          ContentDE = "Très jeune, Parsifal sut qu’il était un \"enfant illégitime\", chose courante dans la ville extérieure. Jamais il n’en ressentit honte ni gêne.\nAu contraire, pouvoir porter le même nom que sa mère était pour lui une fierté discrète.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11030301"
-        },
-        UI_CHAR_DATA_TEXT_11030302 = {
-          ContentDE = "Parsifal ne savait absolument rien de la couture, sa mère ne l’avait jamais laissé toucher une aiguille.\nDouce et attentionnée en toutes choses, elle se montrait pourtant d’une obstination étrange dès qu’il s’agissait de son éducation. Leur foyer n’avait rien de riche, et pourtant, elle voulait que son fils ait l’allure et les manières d’un héritier de bonne famille. Elle passait des heures à lui enseigner la littérature, la musique, et même l’art de se tenir à table, autant de choses que les voisins jugeaient inutiles, voire ridicules. En revanche, elle lui interdisait presque tout contact avec les tâches ménagères : cuisiner, laver le linge, recoudre un vêtement... autant de gestes simples qu’elle avait choisi de lui épargner.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11030302"
-        },
-        UI_CHAR_DATA_TEXT_11030303 = {
-          ContentDE = "Parsifal n’était pas un garçon chaleureux. Il avait du mal à exprimer ses émotions, et encore plus à les recevoir. Bien souvent, quand quelqu’un s’approchait de lui, il se repliait instinctivement.\nHeureusement, ses camarades de troupe étaient gentils et accueillants. Entre les répétitions et les cours, ils l’entraînaient dans des jeux idiots, des bavardages sans importance, ou partageaient leurs friandises avec lui. Leur enthousiasme le déstabilisait parfois, et la professeure les réprimandait avec résignation : \n« Arrêtez d’harceler Parsifal tout le temps, voulez-vous ? »\nCe qu’il n’arrivait jamais à dire, c’était qu’au fond, cela ne le dérangeait pas du tout. Malgré le sentiment, au plus profond de lui, qu’un lourd rideau le séparait de leur monde, comme sur scène, il restait profondément reconnaissant que le théâtre lui ait offert une façon de toucher l’extérieur. Pourtant, chaque fois que les mots montaient à ses lèvres, ils se bloquaient.\nSi seulement il pouvait les chanter... Peut-être qu’un jour, s’ils montaient une pièce sur l’amitié entre camarades, il pourrait emprunter le courage que la scène lui offrirait et enfin prononcer ces mots à voix haute :\n« Merci de m’avoir traité comme un ami. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_11030303"
-        },
-        UI_CHAR_DATA_TEXT_11030304 = {
-          ContentDE = "Parsifal avait caressé un rêve :\nLe jour où il deviendrait comédien, où il monterait enfin sur scène et rendrait au théâtre tout ce qu’il lui avait donné, il emmènerait sa mère loin de l’Empire pour s’installer à Luca.\nC’était là que son professeur, Madame Violetta, avait appris la musique. On disait qu’à Luca, les Charons ne subissaient pas de discrimination, que l’art dramatique y était florissant, avec de plus grandes scènes et bien plus d’opportunités.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11030304"
-        },
-        UI_CHAR_DATA_TEXT_11030305 = {
-          ContentDE = "Parsifal pouvait jouer presque tous les rôles. Mais c’était toujours dans la peau de personnages brisés, aux destins contrariés, qu’il brillait le plus... même s’il refusait de l’admettre.\nPour lui, le théâtre était une porte entrouverte sur d’autres vies possibles. Mais, si affûté que fût son talent, il ne pouvait jamais se délester entièrement de lui-même.\nEt lorsque, par hasard, les émotions d’un rôle se superposaient aux siennes, la douleur gravée au fond de son âme résonnait avec la fiction, libérant une force brute, poignante, qui laissait le public suspendu à ses gestes.\nUn don unique... magnifique, et cruel.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11030305"
-        },
-        UI_CHAR_DATA_TEXT_11030401 = {
-          ContentDE = "Je suis né dans la cité extérieure, dans ce qu’on pourrait appeler une famille ordinaire... même si, en vérité, elle ne l’était pas tant que ça. Je n’ai jamais connu mon père, ma mère m’a élevé seule.\nAvant que la maladie ne la cloue au lit, je me souviens d’elle comme d’une femme pleine d’énergie. Elle travaillait au Théâtre Galea, à nettoyer et à entretenir les lieux : ranger les décors, balayer les sièges, vérifier les installations... tout ce qu’il fallait faire. Grâce à ce travail, elle entendait toutes sortes d’opéras. Et le soir, de retour à la maison, elle chantait. Elle aimait ça... chanter. Qu’elle se repose ou qu’elle fasse le ménage, il y avait toujours un air qui lui venait aux lèvres. À force de l’écouter, jour après jour, je m’étais mis à fredonner avec elle... puis à chanter à l’unisson.\nNous vivions simplement, mais tant que la musique emplissait l’air, je ne ressentais aucune gêne, aucun manque. Jusqu’au jour où elle tomba malade. Je ne saurais plus dire quand exactement cela commença, je me souviens seulement de cet hiver glacial où, soudain, sa santé se dégrada brutalement. Autrefois, quelques jours de repos suffisaient à la remettre sur pied. Mais cette fois, même lorsque la neige fondit et que le printemps revint, elle restait alitée. Le médecin expliqua que c’était dû à sa constitution fragile et aux années d’efforts incessants, il n’y avait pas de remède, seulement du repos... et l’espoir.\n\nPrivés de ses revenus, nous commencions à manquer de tout. Un jour, d’un ton grave que je lui connaissais peu, elle m’appela à son chevet et me demanda de sortir de dessous le lit une boîte que je n’avais jamais vue. C’était un objet d’une facture trop fine, presque incongru dans notre modeste foyer. Mais ce qui me surprit davantage encore fut ce qu’elle contenait : Quelques pièces de joaillerie richement ouvragées, manifestement précieuses. Et, au centre, reposait un insigne portant les mots « Charon Couronné » gravés au-dessus du nom de ma mère. Ce fut alors que je compris : son passé était sans doute bien plus complexe que je ne l’avais imaginé.\n« Prends ces bijoux et vends-les », me dit-elle.\n« Ils devraient nous faire tenir quelque temps. Mais n’y va pas seul, demande à quelqu’un du théâtre de t’accompagner. Sinon, tu risques de te faire rouler. »\nJ’acquiesçai et pris les bijoux comme elle l’avait dit. Au fond de la boîte, il y avait aussi des lettres... beaucoup de lettres. Elle les aperçut, puis me demanda de tout remettre en place. Sans que je la questionne, elle devina ma curiosité et ajouta :\n« Ce ne sont que de vieux souvenirs... d’une époque où je vivais encore dans la cité intérieure.\n« Maman... tu étais riche ? » lui demandai-je.\n« Si tu parles d’argent, alors oui », répondit-elle avec détachement.\n« Mon armoire débordait de robes de bal. Si l’une d’elles se salissait ou se déchirait, je n’y prêtais guère attention, il y en avait toujours une autre pour la remplacer. J’avais tant de bijoux que je pouvais en changer chaque jour. Et si quelque chose me plaisait, je n’avais pas besoin de l’acheter : il me suffisait de le dire au détour d’un bal, et quelques jours plus tard, on me l’apportait dans un coffret noué d’un ruban, en échange d’une ou deux danses. Si je n’avais pas quitté la cité intérieure, notre maison croulerait aujourd’hui sous les bouquets et les toniques hors de prix. »\nTandis qu’elle parlait, le soleil couchant caressait son visage amaigri, y révélant une beauté à la fois fragile et mélancolique. Je n’arrivais pas à lire l’émotion dans ses yeux. Était-ce de la nostalgie ? Du regret ?\n« Maman... tu regrettes d’avoir quitté la cité intérieure ? »\n« Regretter ? Elle eut un sourire, un sourire qui la rendit plus belle encore, mais aussi plus vulnérable. Les dix années que j’y ai passées... c’était comme des bulles de savon au soleil : éclatantes, scintillantes, mais prêtes à se briser au moindre contact. Parfois, je me demande même si tout cela m’est vraiment arrivé. »\nElle reprit, d’une voix douce mais ferme :\n« En revanche, depuis mon départ... chaque instant passé ici était réel. Je me souviens du jour où j’ai appris par cœur la disposition du théâtre, du moment où j’ai su où se trouvait chaque outil. Je me souviens de ma première salle montée seule, de la première ampoule dans mes mains, de ma première douleur au genou, de la première ride au coin de l’œil. »\nElle posa sa main sur ma joue. Sa paume portait la trace des années : rêche, mais emplie de chaleur.\n« Et je me souviens de toi, Parsifal. La première fois que tu as chanté avec moi. La première fois que tu as retenu toute une partition. La première fois que tu as mené une scène entière sans faillir. »\nSes yeux plongés dans les miens, elle ajouta :\n« Je n’ai jamais, jamais regretté de quitter la cité intérieure. C’est la meilleure décision que j’aie prise de toute ma vie. »\n\nJe ne connaissais presque rien de la cité intérieure, je ne pouvais pas imaginer à quoi ressemblait cette vie. Mais je croyais ma mère. Elle avait renoncé à beaucoup, mais c’était un prix qu’elle avait choisi de payer pour vivre en accord avec elle-même. Moi aussi, je voulais vivre ainsi : un chemin choisi, et aucun regret.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11030401"
-        },
-        UI_CHAR_DATA_TEXT_11030402 = {
-          ContentDE = "Je me souviens encore de la première fois où ma mère m’emmena au théâtre. C’était au début du printemps, et, pour une fois, le ciel de Givrelac était clair. La neige avait fondu, laissant les rues fraîches et propres. Elle me tenait la main, et nous avancions doucement, comme si le monde entier retenait son souffle.\n« Maman, c’est quoi, un \"théâtre\" ? » demandai-je.\n« C’est un endroit où l’on joue des opéras », répondit-elle.\n« Un opéra... c’est comme vivre une histoire autrement, on n’incarne pas seulement les personnages, on les fait chanter. »\n« Comme quand nous chantons ensemble à la maison ? »\n« Un peu... mais c’est très différent. Tu comprendras quand tu le verras », dit-elle avec un sourire tendre.\nPour moi, le théâtre était un palais. Ses portes immenses, ses dorures et ses vitraux me semblaient irréels. Devant l’entrée, des hommes et des femmes vêtus de velours descendaient de carrosses étincelants. Je me sentais comme un jeune berger égaré dans un château enchanté.\nMa mère me fit passer par une porte latérale et me présenta Madame Putsch, la directrice de la troupe de la Flûte Enchantée. Elles semblaient vieilles amies, c’était grâce à elle que ma mère avait trouvé ce travail. Pendant qu’elles parlaient, une femme apparut à la porte du théâtre, puis se retrouva en un instant devant moi, secouant mes cheveux d’un geste brusque mais vif.\n« Oh ! Quel charmant petit monsieur ! Tu dois être le fils d’Herzeleide, n’est-ce pas ? Regarde ces yeux, tu es le portrait de ta mère ! »\nC’était la première phrase de Madame Violetta, celle qui deviendrait plus tard ma professeure. À ce moment-là, je ne l’aimais pas vraiment. Elle était trop flamboyante, trop brusque, et me toucher les cheveux sans prévenir me sembla impoli. Les autres membres de la troupe avaient eux aussi quelque chose de bizarre et de mystérieux. Je me sentis si mal à l’aise que, dès que ma mère commença son travail, je me réfugiai dans un coin du salon, seul avec mes pensées.\nJe ne sais combien de temps je dormis avant que Madame Putsch ne vienne me réveiller. Elle me dit que les spectacles étaient terminés et que seuls les membres de la troupe restaient dans le théâtre. « Tu peux aller explorer la scène et la salle si tu veux », ajouta-t-elle. En réalité, je voulais juste retourner dormir, mais il me sembla impoli de refuser sa gentillesse. Je me levai donc et m’avançai vers la scène.\nAlors, je perçus une voix lointaine, douce et flottante. Je me rappelai les paroles de ma mère : l’opéra, c’était chanter une histoire. Était-ce cela ? Je suivis cette voix, pas après pas, jusqu’à ce qu’il ne reste qu’un rideau entre nous.\nJe tirai légèrement le tissu, et une lumière éclatante me frappa, me rendant presque étourdi. Là, sous le projecteur, se tenait Madame Violetta... mais était-ce vraiment elle ?\nElle dansait seule sur la scène, et le vide autour d’elle se transforma en forêt vivante :\nElle souleva sa jupe et avança sur la pointe des pieds, franchissant un ruisseau invisible. Elle baissa la tête et écarquilla les cheveux, des branches semblaient frôler ses boucles. Elle porta deux doigts à ses lèvres et fit une grimace, comme goûtant une baie sauvage et acide. Et quand elle sourit, le visage plein de tendresse, elle tendit la main vers un petit cerf caché entre les arbres.\nSes vêtements, son visage, tout était exactement le même que la femme brusque qui m’avait frotté les cheveux. Et pourtant, je jurerais que je voyais quelqu’un d’autre, quelque chose de merveilleux et fragile à la fois.\n« Oh ? »\nElle me vit enfin. Légère comme l’air, elle s’approcha et écarta le rideau. \n« Es-tu perdu, mon petit ? La forêt peut être dangereuse. Viens, je vais te montrer le chemin. »\n« Vous êtes... Madame Violetta ? » demandai-je, hésitant.\nElle ouvrit grand les yeux et secoua la tête.\n« Tu te trompes. Je m’appelle Rose Blanche. Je vis dans un moulin, à l’est de la forêt, à l’ouest du lac. »\n\nMa mère m’avait appris à chanter depuis toujours. Mais ce fut ce jour-là, derrière le rideau, que je sus pour la première fois que je voulais devenir comédien.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11030402"
-        },
-        UI_CHAR_DATA_TEXT_11030403 = {
-          ContentDE = "Après avoir été interdit de scène, j’ai demandé à ma professeure de m’emmener dans la cité intérieure, pour retrouver mon père biologique, Morris Glenville.\nJ’avais découvert son nom parmi les affaires de ma mère. Elle ne m’en avait jamais parlé de son vivant. Bien sûr, enfant, j’avais posé la question, mais elle m’avait seulement répondu, d’un air absent : « Je ne sais pas. » Je supposais qu’il y avait derrière ce silence des secrets trop douloureux à révéler. Jamais, si je n’avais été au pied du mur, je n’aurais songé à me tourner vers cet homme.\nMais je n’avais plus de choix. Nous rêvons tous d’un art pur, débarrassé des hypocrisies et des mesquineries du monde. À Givrelac, ce n’était qu’un rêve fragile comme un flocon de neige : délicat, éphémère, prêt à disparaître.\nDevant cette somptueuse demeure, je restai longuement à hésiter, rassemblant mon courage avant d’appuyer sur la sonnette. Une servante ouvrit. Elle me dit que Monsieur Glenville n’était pas là et ne reviendrait pas avant la fin de la journée. Puis elle referma la porte, comme un couperet. Je restai un instant, hébété, tandis que le vent d’hiver me mordait les joues. Je m’apprêtais à partir quand j’entendis une voix de fille :\n« Rendez-moi Monsieur l’Oiseau blanc... s’il vous plaît... »\nSa voix n’était pas joyeuse, elle sonnait désespérée. Je connaissais ce ton par cœur. Sans réfléchir, je me précipitai vers l’origine du son, contournant la maison par l’arrière. Soudain, un objet blanc tomba du haut. Je le rattrapai instinctivement, comme pour l’envelopper d’un tendre élan : c’était une peluche d’oiseau blanc, presque de ma taille, ronde et dodue, sortie tout droit d’un conte. Certainement le fameux \"Monsieur l’Oiseau blanc\".\n\n« Ah, il s’est échappé ! On dirait qu’il ne t’aime pas beaucoup », lança une voix aiguë, moqueuse, du balcon. La servante d’avant.\nJ’entendis des petits pas précipités, des portes claquer, puis un silence, interrompu seulement par de faibles sanglots.\n« Monsieur l’Oiseau blanc... »\nJe sortis de l’ombre, serrant la peluche contre moi, et m’avançai jusqu’à ce qu’elle apparaisse à ma vue. Elle ne devait pas avoir plus de douze ou treize ans, cheveux blancs comme sa peluche, yeux bleu saphir, l’héroïne d’un conte de fées. À ma surprise, elle était une Charon. Monsieur Glenville étant un Sola, il avait dû épouser une femme Charon. Un mince espoir me traversa l’esprit : s’il avait déjà un enfant Charon... peut-être qu’il n’aurait pas de préjugé à mon égard.\nLa fille me vit et sursauta. Je lui fis signe de se taire, puis, rassemblant mon souffle, je lançai la peluche vers le balcon. \nMerci, Dennis, de m’avoir entraîné aux interminables jeux de balle avec tes frères et sœurs. Sans ça, je n’aurais jamais réussi un lancer aussi précis.\nElle attrapa Monsieur l’Oiseau blanc contre elle. La peluche était légère, mais le lancer la fit basculer. Elle chancela un instant, puis se redressa en serrant le jouet contre sa poitrine, le visage illuminé de joie.\n« Merci. » Elle me fit un geste muet pour me le dire.\nJe hochai la tête et m’apprêtai à partir. Mais elle fit soudain une série de gestes frénétiques que je ne compris pas, puis disparut à l’intérieur. Un instant plus tard, elle réapparut sur le balcon et lança vers moi un petit papier carré, soigneusement plié. Je le ramassai et l’ouvris avec précaution : à l’intérieur se trouvait un simple dessin, un petit garçon brandissant un oiseau blanc. Il fallut quelques secondes pour comprendre que c’était moi. En bas, une inscription soigneusement calligraphiée : \n« Merci, grand frère, tu es si gentil ! »\n\nGrand frère.\nCes mots me frappèrent avec plus de force que je ne l’aurais cru. Sur-le-champ, je compris... oui, elle pouvait vraiment être considérée comme ma petite sœur.\nJe glissai le dessin dans ma poche et inclinai un profond salut théâtral, comme la fée d’un conte exauçant le vœu de l’héroïne.\nElle rit.\nÀ cet instant, je me promis que je serais un bon grand frère. Je lui lirais des contes, je jouerais avec elle, je louerais ses dessins, je lui chanterais des berceuses. Et si elle voulait, je lui apprendrais même à chanter.\nMais toutes ces illusions s’évanouirent le jour où je croisai Monsieur Glenville... plus vite que la neige fondant au creux de ma main. Avec du recul, j’aurais dû le savoir. Si cette fille avait été vraiment chérie dans la maison Glenville, aucune servante n’aurait osé la malmener.\n\nJe ne pourrais jamais être son grand frère. Je ne pouvais rien faire pour elle. Nous étions deux enfants piégés dans des cages séparées, chacun rêvant d’un ciel inaccessible.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11030403"
-        },
-        UI_CHAR_DATA_TEXT_11030404 = {
-          ContentDE = "À l’époque où nous vivions dans les égouts, Blues parlait souvent d’une lumière.\nElle se trouvait, disait-il, au sommet de la tour de guet, le point le plus haut de Givrelac. Il aimait s’imaginer debout sous elle, embrassant la cité d’un seul regard.\nMoi, je n’aimais guère sortir et je levais rarement les yeux vers le ciel, je n’avais même jamais remarqué qu’il y avait une telle lumière. Mais quand il en parlait, je l’imaginais toujours dorée, douce, tombant sur la tête comme la chaleur tiède d’un rayon de soleil. Après sa mort, je décidai de me rendre dans la cité intérieure. Puisque j’allais me glisser dans sa peau, autant accomplir pour lui ce rêve inaccompli.\nPar une nuit sans lune, j’évitai les gardes et montai, étage après étage, jusqu’au sommet.\nEt là, je la vis enfin : cette fameuse lumière dont Blues n’avait cessé de parler.\nLa déception fut immédiate.\nCe n’était qu’une lampe. Immense, certes, mais banale. Sa lueur était froide, blanchâtre, presque maladive, une épaisse couche de poussière ternissait son enveloppe, et le bruit mécanique de son moteur agaçait l’oreille.\nQuel idiot, pensai-je. Tout sacrifier pour ça. Mourir pour ça.\n\nMais en redescendant, je m’arrêtai pour la regarder encore une fois.\nDe là-bas, dans la nuit, elle brillait vraiment. On n’entendait plus le ronronnement du moteur. On ne voyait plus la poussière. Et ce faisceau blafard, dilué dans l’obscurité, n’était pas si laid. Elle remplaçait la lune et éclairait la ville aussi fidèlement qu’elle le pouvait.\nAlors, pourquoi avais-je été si déçu ?\nJe repensai à la façon dont Blues me l’avait décrite, et je compris. Ce n’était pas la lumière qui m’avait trahi. Dès le moment où il avait évoqué une lampe inaccessible, j’avais déjà décidé à quoi elle devait ressembler : dorée, chaleureuse, réconfortante. Mais ce que j’imaginais n’avait rien d’un projecteur de tour. En vérité, je pensais à tout autre chose.\nDans mon esprit, ce que je voyais depuis le début... c’était le projecteur suspendu au-dessus de la scène du Théâtre Galea.\nAlors oui, au fond, j’étais aussi stupide que lui. J’avais tout donné, moi aussi... pour courir après une lumière.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11030404"
-        },
-        UI_CHAR_DATA_TEXT_15020101 = {
-          ContentDE = "La première impression que laisse Dame Nifle est celle d’un calme empreint de douceur, inébranlable. Rien, semble-t-il, ne saurait troubler sa sérénité.",
-          TextMapId = "UI_CHAR_DATA_TEXT_15020101"
-        },
-        UI_CHAR_DATA_TEXT_15020102 = {
-          ContentDE = "Lorsqu’elle escorte les âmes vers le lieu qui leur est destiné, Dame Nifle choisit toujours des lieux déserts, à l’abri de toute intrusion. Mais il t’a été donné, rare privilège, d’assister à un tel adieu. Sa voix, basse et douce, semblait porter à la fois la compassion pour les vies éteintes, le regret des caprices du destin, et une tendre mélancolie face au temps qui s’efface... Ou peut-être ne disait-elle rien de tout cela. \nPeut-être n’était-ce qu’une brise légère, glissant sur la terre endormie.",
-          TextMapId = "UI_CHAR_DATA_TEXT_15020102"
-        },
-        UI_CHAR_DATA_TEXT_15020103 = {
-          ContentDE = "Quand Dame Nifle t’adresse la parole, sa voix porte toujours la douceur patiente d’une aînée.\nEt lorsque tes pensées s’embrouillent, elle t’offre simplement un sourire calme, posant sur toi ce regard apaisé qu’ont ceux que le temps a rendus sages. Peu à peu, sans qu’elle dise un mot, ton inquiétude s’allège.",
-          TextMapId = "UI_CHAR_DATA_TEXT_15020103"
-        },
-        UI_CHAR_DATA_TEXT_15020104 = {
-          ContentDE = "Dame Nifle ne se met jamais en colère, mais elle accueille la tienne, et lui offre un lieu où reposer.\n« La colère est la chaleur des vivants », disait-elle. « Elle prouve que ta flamme brûle encore. La mienne... s’est éteinte depuis longtemps. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_15020104"
-        },
-        UI_CHAR_DATA_TEXT_15020105 = {
-          ContentDE = "La seule fois où tu as cru percevoir un éclat différent dans le calme immuable des yeux de Dame Nifle, ce fut lorsqu’elle évoqua un lieu appelé la Forêt d’Émeraude.\nMais ce ne fut qu’une infime ondulation, si fugace qu’elle aurait pu n’être qu’une illusion.",
-          TextMapId = "UI_CHAR_DATA_TEXT_15020105"
-        },
-        UI_CHAR_DATA_TEXT_15020201 = {
-          ContentDE = "D’après les légendes anciennes des Charons, l’âme des défunts retourne inévitablement à la Mer du Silence. Depuis toujours, leur peuple perpétue la tradition des funérailles sur l’eau.\nSous la lumière de la lune, on dépose sur de petites embarcations les ossements ou les effets les plus chers du disparu. Alors, la Passeuse entame la Danse des Adieux, un rite funèbre destiné à guider l’âme errante vers son dernier voyage, jusqu’aux brumes silencieuses.",
-          TextMapId = "UI_CHAR_DATA_TEXT_15020201"
-        },
-        UI_CHAR_DATA_TEXT_15020202 = {
-          ContentDE = "Au cœur de la Libre-Alliance d’Aethyrie, sur la cime de l’immense arbre de l’Académie d’Arcadia, repose, dans la lumière de l’aube, la tombe de Dame Aletheia, sa fondatrice. Tous les dix ans, à la date de sa naissance, on y tient une cérémonie en hommage à cette grande figure, bien plus qu’une pédagogue, elle fut un guide, une stratège, et plusieurs fois sauva la Libre-Alliance, fragile entre les ambitions de l’Empire et les volontés de l’Église, en préservant sa neutralité au fil des tempêtes.\nParmi la foule venue se recueillir, il arrive qu’apparaisse une silhouette à part, une femme voilée de noir. Contrairement aux autres, elle n’apporte ni fleurs ni paroles. Elle se tient simplement là, à l’écart, immobile, le regard fixé sur le nom gravé dans la pierre.\nLes années passent. Les générations se succèdent. Les visages changent. Mais la femme voilée, elle, ne vieillit pas. Comme si le temps l’avait oubliée.",
-          TextMapId = "UI_CHAR_DATA_TEXT_15020202"
-        },
-        UI_CHAR_DATA_TEXT_15020204 = {
-          ContentDE = "Dans les annales d’Élysium, on raconte que, des siècles plus tôt, un Seigneur surnommé \"Généreux\" avait consacré une jeune fille miraculeuse, proclamant qu’elle était l’émissaire choisie par le Dieu de la Vie. Dans ses veines coulait un Sang d’Or, capable de guérir toute maladie. Envoyée parmi les hommes, elle devait offrir son sang pour répandre la bénédiction divine, délivrant les mortels de la souffrance et de la vieillesse.\nMais...\nCette bénédiction avait un prix : le sang, recueilli dans de petits flacons de cristal, se vendait à prix d’or. Les nobles en faisaient un étendard de richesse, les pauvres s’y ruinaient, y voyant leur dernier espoir.\nEt elle n’était pas éternelle : le sang ne faisait que retarder la mort, sans jamais guérir vraiment. Pourtant, la foule se pressait aux portes du sanctuaire, l’or et l’argent à la main, mendiant quelques instants de miracle volé au temps.\nFace à ces prières fiévreuses, à cette reconnaissance haletante, à cette adoration proche de la folie, la jeune fille demeurait silencieuse. Assise sur l’autel, elle ne prononçait jamais un mot.\nNul ne savait que, sous le voile blanc, se cachait un visage pâle et beau, figé non par la grâce, mais par de longues années de captivité, que ses lèvres, fermées au monde, n’étaient pas muettes par choix, mais par solitude.\nNul ne savait que, sous la robe brodée, se trouvait un corps sans défaut, mais couvert de blessures invisibles, et un cœur si usé par la douleur qu’il avait oublié comment battre.",
-          TextMapId = "UI_CHAR_DATA_TEXT_15020204"
-        },
-        UI_CHAR_DATA_TEXT_15020205 = {
-          ContentDE = "Il y a mille ans, dans les forêts frontalières d’Élysium, vivait un couple.\nLa femme était une Passeuse, celle qui guidait les âmes des défunts par un rite sacré d’inhumation aquatique. Ce rituel, hérité des antiques traditions du peuple Charon, allait à l’encontre des dogmes prêchés par l’Église orthodoxe d’Élysium. Il était donc formellement proscrit.\nOn ne pouvait apprendre l’existence d’une Passeuse, ni la route qui menait à elle, qu’au détour d’un chuchotement entre amis sûrs, dans l’ombre des confidences.\nAu commencement, seuls quelques Charons, fidèles aux croyances anciennes, osaient entreprendre à pied la traversée des bois pour demander à la Passeuse d’accompagner un proche dans son dernier voyage.\nMais à mesure que le ressentiment envers les patriciens de l’Église grandissait, ce rite funéraire prit une autre valeur : celle d’un acte silencieux de rébellion.\nPeu à peu, nombreux furent ceux qui choisirent de confier leur âme, après la mort, aux bras de la Mer du Silence plutôt qu’à l’étreinte sanctifiée de l’Église.\nFinalement, ces murmures parvinrent aux oreilles des espions de l’Église.\nPar une nuit sans lune, les exécuteurs vinrent, torches à la main, et envahirent la forêt.\nLes deux hérétiques furent arrachés à leur demeure, jetés sur le bûcher, puis leurs restes rejetés par-delà la frontière, dans une fosse commune sans pierre, afin de ne pas souiller la terre sacrée d’Élysium.\n\nAinsi s’acheva la légende de la Passeuse.\nPourtant, un autre récit circula quelque temps parmi le petit peuple : on disait que, le lendemain de l’exécution, quelqu’un avait vu un enfant ramper hors de la fosse.\nSa poitrine portait une plaie traversante, son corps frêle était couvert de sang et de cendres, son visage noirci par la suie.\nEt pourtant... ses yeux, clairs, vifs, et étrangement lucides, n’étaient pas ceux d’une mourante.",
-          TextMapId = "UI_CHAR_DATA_TEXT_15020205"
-        },
-        UI_CHAR_DATA_TEXT_15020301 = {
-          ContentDE = "Au fil de ses longues années, Dame Nifle a parcouru chaque recoin du continent d’Atlasia. Ses pas ont foulé plus de terres que n’importe quel aventurier dont les exploits emplissent les chansons.",
-          TextMapId = "UI_CHAR_DATA_TEXT_15020301"
-        },
-        UI_CHAR_DATA_TEXT_15020302 = {
-          ContentDE = "Dame Nifle ne vieillit pas. Elle ne meurt pas. Nulle blessure, si profonde soit-elle, ne laisse sur elle la moindre trace.\nIl fut un temps où elle tenait ce don pour une bénédiction. Et un autre où elle le voyait comme une malédiction. Puis elle comprit que le pouvoir, en lui-même, ne portait ni bien ni mal, et que seule la vie, avec ses épreuves, lui donnait un sens. Aujourd’hui, elle ne s’interroge plus. Elle veille en silence sur les changements du monde, accueillant sans résistance tout ce que l’éternité choisit de placer entre ses mains.",
-          TextMapId = "UI_CHAR_DATA_TEXT_15020302"
-        },
-        UI_CHAR_DATA_TEXT_15020303 = {
-          ContentDE = "Lors des cérémonies d’adieu, Nifle exécute la Danse des Adieux, un rite réservé aux Passeuses.\nC’est une danse que sa mère avait toujours refusé de lui enseigner.\n« Cette danse », disait-elle, « n’est faite que pour ceux qui ne reviendront jamais. »\nBien des années plus tard, alors qu’elle se tenait au bord de la rivière de son enfance, dans la lumière blanche de la lune, Nifle vit ce souvenir s’éveiller. Cette nuit-là, en disant adieu à son amie la plus chère, elle se hissa sur la pointe des pieds et imita les gestes que sa mère avait esquissés jadis.\nElle comprit enfin pourquoi cette danse lui avait été refusée. Mais sa mère n’était plus là pour entendre sa réponse.",
-          TextMapId = "UI_CHAR_DATA_TEXT_15020303"
-        },
-        UI_CHAR_DATA_TEXT_15020304 = {
-          ContentDE = "Le sang de Nifle possède le pouvoir de prolonger la vie d’autrui, mais, dans toute sa longue existence, elle n’a suscité qu’un seul véritable miracle.\nC’était pour un enfant né sur la route de la Grande Migration. La troupe avec laquelle elle voyageait avait été engloutie par un marais, quand on les retrouva, il ne restait qu’un unique nourrisson, maintenu bien haut, au-dessus de la boue, par les bras déjà figés de ceux qui avaient péri.\nCet enfant eut la force de traverser les années de guerre et d’errance, jusqu’à connaître enfin la paix, pour succomber aussitôt à une terrible épidémie.\nLes médecins étaient impuissants. Mais Nifle refusa d’abandonner. La nuit où l’enfant vacilla entre la vie et la mort, elle se taillada les veines à maintes reprises, lui offrant son propre sang en échange du sien, s’évanouissant plus d’une fois sous l’effet de l’hémorragie.\nEt peut-être, si les dieux existent vraiment, furent-ils touchés par sa détresse. Car à l’aube, la fièvre avait disparu, ses plaies s’étaient refermées comme par enchantement, et de petites cornes, semblables à celles de Nifle, avaient commencé à poindre sur son front.\nNifle l’éleva comme sa propre fille, espérant partager avec elle les longues années à venir. Mais l’enfant grandit, comme tous les mortels. Et bientôt, elle n’eut plus l’air de sa fille, mais de sa sœur, de sa mère... puis de sa grand-mère.\nAlors Nifle comprit : les miracles qu’elle pouvait offrir étaient comptés. Sur la route vers l’immortalité, les dieux ne lui avaient accordé qu’un seul privilège : celui de marcher seule.",
-          TextMapId = "UI_CHAR_DATA_TEXT_15020304"
-        },
-        UI_CHAR_DATA_TEXT_15020305 = {
-          ContentDE = "On dit que les rêves reflètent les désirs enfouis au plus profond de l’âme.\nPeut-être est-ce pour cette raison que Nifle rêve rarement : il ne reste plus rien, en ce monde, qui puisse l’appeler.\nParfois pourtant, ses songes la ramènent à ses parents. Le temps a effacé leurs visages, mais pas le souvenir de ce qu’elle ressentait alors : quand sa main se refermait sur les doigts rugueux et chauds de son père... quand son regard se plongeait dans les yeux à demi fermés de sa mère, adoucis par un sourire invisible.\nCe sentiment, elle le sait, s’appelait « chaleur ».",
-          TextMapId = "UI_CHAR_DATA_TEXT_15020305"
-        },
-        UI_CHAR_DATA_TEXT_15020401 = {
-          ContentDE = "Les murmures des âmes défuntes emplissaient ses oreilles de colère, rancune, douleur, regrets... Les émotions se mêlaient en un flot houleux, dense comme un brouillard qui voile le soleil. Et pourtant, à chaque fois, elles s’apaisaient sous la caresse de son chant, chaque pas de danse effilochait leur tumulte, jusqu’à les dissiper dans les replis flottants de sa robe.\nAu cœur de la Forêt du Sommeil, les âmes errantes étaient nombreuses. Ce soir-là, la cérémonie d’adieu avait duré plus longtemps qu’à l’accoutumée. Quand Dame Nifle s’immobilisa enfin, une brise légère souleva le voile sur sa tête. Des mois s’étaient écoulés depuis la bataille, l’odeur du sang avait disparu, remplacée par la senteur mêlée de terre et de verdure. Elle ferma les yeux et tourna le visage vers le vent, pour mieux goûter à ce parfum oublié.\n« Chaque terre a son propre souffle », elle avait lu cette phrase, jadis, dans un livre. Aujourd’hui, foulant à nouveau ce sol des décennies plus tard, elle en saisissait pleinement le sens. Dans ce moment de quiétude, enveloppée par l’odeur familière de ses souvenirs, elle revit les années passées sur ces terres, se rappela ses promenades innombrables dans les bois, le regard fixé sur la silhouette vive et joyeuse qui marchait toujours un peu devant elle.\nDes pas brisèrent le silence. Elle rouvrit les yeux. Entre les troncs, une touche de couleur apparut. Une jeune fille, un bouquet de fleurs sauvages entre les bras. Un instant, son image se superposa à un visage perdu dans la mémoire, tant leur ressemblance frappait. Et il lui sembla même entendre cette voix aimée l’appeler, joyeuse, comme au sortir d’un rêve.\nL’illusion s’évanouit. La jeune fille cligna des yeux, curieuse :\n« Bonjour, madame. Je ne vous ai jamais vue ici... Vous venez de loin ? »\nSa voix, claire comme une pierre jetée dans un lac, ramena doucement Dame Nifle au présent. Elle répondit avec un sourire paisible :\n« Oui, mon enfant. De très, très loin. »\n« Pourtant... vous avez l’accent d’ici. »\n« Ce \"loin\" dont je parle », dit-elle en levant la main vers l’horizon, « ne se mesure pas en distance. »\nLa jeune fille pencha la tête, intriguée, mais son regard se fixa bientôt sur la lanterne que tenait Dame Nifle, dont la lueur pâle semblait respirer.\n« Vous êtes... une Passeuse ? Pour... les défunts ? »\n« En effet. Je viens de guider les âmes errantes de cette forêt vers la Mer du Silence. »\n« Ce sont... les miens », murmura la jeune fille en baissant les yeux.\n« Les gens d’Aethyrie ne pouvaient plier devant l’Empire Hyperboréen. Pas davantage retourner vers les dieux qui nous ont abandonnés. Alors nous avons tenu bon, avec nos bras, avec notre sang, pour défendre notre liberté et notre dignité. Certains disent que notre lutte était insensée. Je ne le crois pas. Et vous, madame ? Si nous perdons... nos morts auront-ils donné leur vie en vain ? »\n« Toute vie a une fin », dit doucement Dame Nifle. \n« Mais les pensées survivent. Les corps tombés sont des monuments inachevés... un jour, quelqu’un gravera dessus, en lettres de liberté, les noms qui leur reviennent. »\nElle marqua une pause, comme si elle se souvenait de quelqu’un.\n« Ce sont les paroles d’un vieil ami. Puissent-elles apaiser ton cœur. »\n« Votre ami devait être bien courageux », répondit la jeune fille avec un sourire. \n« Merci... d’avoir guidé les miens vers la Mer du Silence. Ils pourront enfin reposer en paix. » Elle se pencha pour déposer ses fleurs au pied d’un vieil arbre, puis se releva et s’éloigna. Après quelques pas, elle se retourna :\n« Ma grand-mère me racontait l’histoire d’une Passeuse, voilée de noir, portant une lanterne... douce comme la nuit elle-même. Vous lui ressemblez beaucoup. »\nTu ressembles beaucoup à ta grand-mère, pensa Dame Nifle. Mais elle ne le dit pas.\nElle se contenta de sourire doucement et inclina la tête :\n« Il est temps pour moi de reprendre la route... Que Mère Embla guide tes pas, mon enfant. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_15020401"
-        },
-        UI_CHAR_DATA_TEXT_15020402 = {
-          ContentDE = "« Qui est donc cette Passeuse ? »\n« C’est la mère de Dame Aletheia. »\n« Quoi... ? Mais elle paraît si jeune ! »\n« Elle possède la magie de la longévité. Elle ne vieillit jamais. »\n« Une telle faculté... C’est prodigieux. Quelle chance... »\n« Peut-être... Mais enterrer de ses mains l’enfant qu’on a élevé... ce doit être une peine qu’aucun mot ne saurait décrire. »\nLes voix, pourtant basses, portées par la brise du soir, parvinrent jusqu’à Nifle. Elles ne soulevèrent en elle ni trouble, ni colère, elle s’était depuis longtemps habituée à l’émerveillement, à l’envie, à la curiosité... et aux soupirs discrets qui les suivent.\n« L’heure est venue, Dame Nifle. » murmura le jeune assistant à ses côtés.\nElle acquiesça, prit sa lanterne et s’avança vers le fleuve dont les eaux miroitantes semblaient recueillir la lumière des étoiles. À quai reposait une fine embarcation, sur elle, un cercueil délicatement ouvragé.\nLa défunte y dormait, couronnée de fleurs, paisible comme au cœur d’une sieste d’été. Les années avaient creusé des rides autour de ses yeux et de ses lèvres, sa peau s’était ternie, ses cheveux blancs s’étaient mêlés à ses tempes. Pour tout autre, elle n’était qu’une vieille femme au soir de sa vie. Mais pour Nifle, elle restait l’enfant qu’elle avait connue. À travers ce visage vieilli, elle revoyait la fillette à l’éclat rieur, l’adolescente penchée sur ses livres, la jeune femme frêle et déterminée qui parcourait les lignes de front, et la savante aux cheveux d’argent dont le regard brillait encore sous les marques du temps.\nNifle avait cru ressentir la même peine que jadis, lorsqu’elle avait conduit des amis vers l’autre rive. Mais ce fut une paix étrange, presque sereine, qui se leva en elle.\nUne à une, elle alluma les bougies disposées autour du cercueil. Puis, de sa robe, elle sortit une petite pierre striée de fines crevasses, un fragment de météore, qu’elle posa sur la poitrine de sa fille adoptive. C’était le gage d’une ancienne promesse : un jour, alors qu’elle s’apprêtait à se rendre au marché, Nifle avait demandé à l’enfant si elle désirait quelque chose. Les yeux brillants, la fillette lui avait répondu : \n« Je veux une étoile qui parle. »\nBien sûr, nulle étoile ne se vendait au marché, et encore moins une qui parle. Mais Nifle avait promis de la trouver, un jour. Les enfants oublient souvent leurs rêves de jadis... elle, jamais.\n« Je t’ai apporté ton étoile parlante, Aletha. » souffla-t-elle.\n\nElle se souvenait de ces carnets où Aletheia écrivait que les étoiles n’étaient ni des gemmes fixées au dôme de verre du ciel, comme le prêchaient les prêtres d’Élysium, ni des feuilles d’or suspendues aux branches d’un arbre cosmique, ainsi que le disait le peuple Charon. Peut-être, pensait-elle, chaque étoile était un monde, lointain, mais semblable à Atlasia, et qu’aux yeux d’autres étoiles, Atlasia elle-même n’était qu’un point lumineux perdu dans l’immensité. Alors, ce fragment tombé du ciel, avec ses veines et ses sillons, portait peut-être en lui le murmure d’un autre monde.\nNifle contempla une dernière fois ce visage endormi, puis referma doucement le cercueil. Elle poussa la barque sur le courant, la laissant s’éloigner. Et, se redressant, elle entama la Danse des Adieux.\nDes sanglots étouffés flottaient derrière elle, sur la berge, la foule suivait l’embarcation du regard. Dans leurs yeux se reflétaient les flammes des bougies, comme un petit ciel étoilé, tombé sur la terre.\n\nAlors Nifle comprit : si l’enfant ne demandait plus d’étoiles, ce n’était pas par oubli, mais parce qu’elle en était devenue une. Une lumière douce, éternelle, au-dessus du ciel d’Aethyrie, guidant à jamais ceux qui regardent vers elle.",
-          TextMapId = "UI_CHAR_DATA_TEXT_15020402"
-        },
-        UI_CHAR_DATA_TEXT_15020403 = {
-          ContentDE = "« Prends donc une gorgée, ma jolie. »\nLa vieille femme qui marchait à côté de Nifle lui tendit une gourde avec un sourire bienveillant.\n« Merci. » Nifle hocha la tête, prit la gourde... et recracha aussitôt en toussant, la gorge en feu.\n« Ah ! J’aurais dû te prévenir : c’est du vin ! » rit la femme. \n« Par ce froid, quelques gorgées réchauffent vite le corps. Mais si tu n’es pas habituée, évite d’en boire trop... Sinon, tu risques de tourner de l’œil. »\nNifle répondit par un sourire gêné et lui rendit la gourde. La femme lui tapota l’épaule, avant de s’éloigner pour s’occuper des autres.\nParmi les migrants, seuls Erika et Lexis savaient que cette fille mince et discrète, perdue dans la foule, avait jadis été la jeune élue que l’on vénérait sur l’autel sacré. Pour la première fois de sa vie, Nifle vivait comme une personne ordinaire : avec des camarades, des amis.\nLeur route avait commencé sous l’ombre de la Tour Sacrée, traversé la Forêt d’Émeraude, et s’étirait toujours plus au nord. Ici, les arbres perdaient leurs feuilles jaunes dès les premiers froids. Le nord n’avait rien de la douceur des terres méridionales bénies par les dieux. Et pourtant, quelque chose, en elle, commençait à se dégeler. Désormais, son plus cher désir était de tenir la promesse faite à Erika : trouver un lieu de liberté, y fonder un nouveau foyer.\nMais ce vœu était un luxe que l’époque ne pouvait offrir. Les chevaliers d’Élysium les traquaient sans répit, bien plus nombreux, bien mieux armés. Assaut après assaut, Erika revenait du champ de bataille marquée de nouvelles blessures.\n« Laisse-moi y aller à ta place. Je ne peux pas être blessée. »\nMais Erika se contentait de sourire et secouer la tête.\n« Je dois y aller. Personne ne peut me remplacer. »\nSon dernier combat, Erika le livra non contre un roi ni un dieu, mais contre son propre père. Ce jour-là, le Seigneur \"Généreux\" mena lui-même l’assaut, prêchant la purge des \"hérétiques\", et visant sa fille. La tragédie se conclut par la mort des deux : au moment précis où la flèche sacrée de l’arc Mammon perçait la poitrine d’Erika, sa lance atteignit le cœur de son père.\nQuand Nifle la retrouva au milieu des décombres, Erika n’était déjà plus qu’un souffle, la vie s’échappant goutte à goutte. Dans un geste désespéré, Nifle leva son poignard pour s’entailler le bras : dans ses veines coulait le \"Sang d’Or\", jadis capable de repousser la mort. Mais Erika, d’une main tremblante, l’arrêta.\n« C’est une blessure fatale », murmura-t-elle, la voix faible mais résolue. \n« Même si tu me maintenais en vie... je ne guérirais jamais. »\n« Je peux te garder en vie pour toujours ! » protesta Nifle.\nErika secoua la tête.\n« Ce ne serait pas vivre. Je veux mourir en guerrière... sur le champ de bataille. Je suis désolée... mais ce monde de liberté... notre maison... je n’irai pas avec toi. »\n« Pourquoi... ? » Nifle baissa la tête, les larmes inondant ses joues, tout son corps tremblant. \n« Ce sang est censé sauver des vies... Alors pourquoi pas la tienne ? Si je ne peux même pas te sauver... à quoi bon vivre ? »\n« Nifle... » La main calleuse d’Erika effleura sa joue. \n« Mon maudit père... avait peut-être raison sur un point : tu es vraiment bénie des dieux. Ta vie... a un sens que nous ne partageons pas. Un jour... tu le découvriras. »\nCe jour-là, Nifle ne comprit pas. Elle se contenta de serrer le corps de son amie, qui refroidissait déjà, et de laisser couler ses larmes.\n\nAprès la mort d’Erika, les migrants poursuivirent leur marche vers le nord. Le chemin fut assez long pour que les chevaliers d’Élysium perdent leur trace. Ils étaient libres. Mais, au bout du compte, les bras qui s’étaient jadis enlacés levèrent les armes les uns contre les autres, le vin partagé se changea en sang versé. La route vers la liberté était pavée d’épines et de trahisons. Nifle vit plus de douleur, plus d’adieux. Mais elle comprit aussi : même si la vie est instable, même si la mort est inévitable, les braves peuvent choisir, pour quoi vivre, et pour quoi mourir. La mort ne prend sens que si l’on choisit de lui en donner un.\nC’était le privilège des mortels.\nElle, ce privilège lui était refusé. Elle ne pouvait que vivre. Et continuer à vivre. Et regarder, impuissante, tout s’effacer autour d’elle.",
-          TextMapId = "UI_CHAR_DATA_TEXT_15020403"
-        },
-        UI_CHAR_DATA_TEXT_15020404 = {
-          ContentDE = "Elle avait l’impression d’être prisonnière d’un cycle sans fin.\nChaque matin, à heure fixe, les suivantes du Seigneur \"Généreux\" ouvraient la porte de sa chambre, détachaient les chaînes à ses poignets et à ses chevilles, puis abaissaient sur son visage un voile blanc immaculé.\nPas à pas, les pieds foulant les pétales frais que l’on semait devant elle, elle avançait vers le trône du sanctuaire, baignée dans les regards pleins de révérence, telle qu’une véritable Émissaire Céleste se devait de paraître.\nAlors le Seigneur \"Généreux\", en personne, s’avançait pour lui présenter un coffret empli de flacons de verre, clairs, parfaits, et vides. Et le rite de bénédiction commençait.\nElle était l’élue des dieux : à ce titre, on attendait d’elle qu’elle transcende la douleur des mortels. Son sang devait être donné de la manière la plus ancienne, pas d’aiguille fine, pas d’herbe qui engourdisse la douleur. De tels artifices auraient profané le rite, le réduisant à quelque chose de clinique, de froid.\nLa lame devait être belle. Argentée, ornée de dorures et du blason de l’iris d’or. Froid comme la pierre du sanctuaire, tranchant au point de fendre la chair d’un simple effleurement. Le rouge profond coulait le long de la paroi du flacon, libérant une odeur sucrée et métallique, tout sauf divine, bien vite noyée par l’épaisse fragrance de l’encens.\nUn flacon se remplissait. Puis un autre. Et encore un autre... jusqu’à ce que les louanges reconnaissantes des fidèles se fondent en un murmure lointain, et que la dague glisse de ses doigts épuisés.\nLes portes du sanctuaire se refermaient alors dans un fracas sourd, laissant au-dehors les regards avides. Elle, désormais coquille creuse, était portée jusqu’à sa chambre par les suivantes, le voile retiré.\nIl ne lui restait plus qu’à fixer le plafond, immobile, pendant que les plaies à son bras se refermaient peu à peu, que sa peau pâle retrouvait une nuance de vie, et que les fissures de ses doigts disparaissaient, reconstituées avec une précision impossible.\nAinsi, elle redevenait entière, identique à la veille, à l’avant-veille, et à tous les jours précédents.\nEn attendant qu’on lui remette le voile. En attendant le prochain coffret de flacons vides. \nEn attendant.\n\nCe jour-là, des pas résonnèrent derrière la porte plus tôt qu’à l’accoutumée. Rien d’inhabituel : lorsqu’un invité important se présentait, le Seigneur \"Généreux\" ordonnait souvent qu’on prépare une réserve supplémentaire de \"Sang d’Or\".\nPourtant, cette fois, il n’y avait qu’un seul pas. Et une voix inconnue, vive, pleine de fraîcheur, s’éleva derrière le rideau.\n« Salut... euh... c’est bien toi, l’Émissaire Céleste ? »\nElle se redressa, mais ne répondit pas.\n« Ah ! Tu es réveillée ! » s’exclama la voix, enjouée.\n« Je m’appelle Erika. Normalement, mon père m’interdit d’entrer ici, mais... tu dois te sentir tellement seule, enfermée dans cette chambre tout le temps... Tu veux pas venir voir dehors ? Juste un peu ? C’est encore tôt, personne ne le remarquera. »\nElle ouvrit la bouche, mais ses cordes vocales, longtemps muettes, refusaient d’obéir.\n« Hmm ? Ce n’est pas le bon moment ? » reprit la voix, hésitante. \n« Bon... tant pis ! Je reviendrai un autre jour ! »\nNon. Ne pars pas.\nElle rampa en avant, traînant son corps affaibli, les chaînes grinçant contre le bois dans un crissement strident. Sa gorge vibra d’effort, un son finit par franchir ses lèvres, rauque, presque inhumain :\n« S... sauve... »\n« Hein ? Qu’est-ce que tu as dit ? »\n« Sauve... moi... » articula-t-elle avec peine, les mots se brisant dans sa gorge.\n« Hein ? »\nUn silence. Puis le rideau se souleva d’un geste brusque. Et, avec elle, entrèrent la lumière du soleil, la caresse du vent, et le parfum d’un monde encore vivant, un monde qu’elle avait presque oublié.\n\nPlus tard, Nifle apprit qu’Erika était la fille du Seigneur \"Généreux\". Ayant découvert la vérité derrière le \"Sang d’Or\", Erika venait désormais à l’aube, en secret. Elle lui apportait à manger, lui réapprenait à parler, lui racontait ce qui se passait au-dehors.\n« Émissaire... non, Nifle. Je vais te sortir de là. Je te le promets. » Elle l’avait dit un jour, les yeux dans ceux de Nifle, sans détour, la voix ferme et sincère.\nNifle avait cru à un mensonge bienveillant, une chaleur passagère pour apaiser sa peine. Mais Erika tint parole.\nLe jour venu, elle défit les chaînes et la souleva sur son dos. Bien qu’elles aient le même âge, Nifle était si maigre, si légère, qu’on aurait dit un enfant.\n« Tu es aussi légère qu’une plume... » murmura-t-elle. « Quand on sera dans le nord, tu mangeras à ta faim. Tu reprendras des forces. On montera à cheval, on tirera à l’arc. » « D’accord », murmura Nifle, esquissant un sourire.\n\nDes années plus tard, chaque fois que Nifle feuilletait les chroniques d’Atlasia, elle repensait à cette nuit-là. Elle chevauchait derrière Erika, les bras serrés autour de sa taille ferme, sculptée par l’entraînement, si différente de sa propre peau fragile. Cette solidité la rassurait.\nElles galopèrent dans la nuit, le vent hurlant à ses oreilles, la ville s’éloignant dans son sillage. La monture s’arrêta enfin dans un campement, où Nifle vit pour la première fois les compagnons d’Erika : des visages de guerriers au rire franc, de paysans aux traits burinés par le soleil, de savants au front soucieux, et de vieux bardes aux lèvres craquelées par les chansons. La lueur des flammes se reflétait dans leurs yeux.\nCes regards brûlaient d’une ardeur semblable à celle qu’elle avait vue dans le sanctuaire... mais ici, pas de prière suppliant la clémence des dieux. Seulement le désir ardent de bâtir, de leurs propres mains et pieds, une terre nouvelle.\nAvec eux, Nifle participa à une fuite bien plus vaste : ce que l’histoire nommerait la Grande Migration, l’exode des gens du bas-peuple d’Élysium, refusant de plier sous le joug des nobles-théocrates, et suivant un chef sage vers les terres sauvages du nord.\nPour Nifle, ce fut la même renaissance : elle avait fui le sanctuaire, et retrouvé la vie... non comme un symbole. Comme une personne.",
-          TextMapId = "UI_CHAR_DATA_TEXT_15020404"
-        },
-        UI_CHAR_DATA_TEXT_15020405 = {
-          ContentDE = "Au cœur de la forêt, la fillette s’éveilla sous la lumière tachetée qui filtrait à travers les feuilles. Deux jolies baies rouges pendaient juste devant ses yeux, oscillant doucement. Une perle de rosée glissa sur leur peau rebondie et tomba dans l’herbe.\n« Hein !? »\nElle se redressa d’un bond, quittant la douceur du sol.\n« La chasse a déjà commencé ? »\nSon père rit, les baies entre les doigts.\n« Tu voulais absolument venir dès l’aube... et tu t’es endormie sur mon dos avant même qu’on ait fait la moitié du chemin. C’est fini, la chasse, ma chérie. On rentre. »\n« Quoi ? Mais j’ai rien vu ! » protesta-t-elle en gonflant les joues.\n« Tu pouvais pas me réveiller avant que ça commence ? »\n« D’accord, d’accord... la prochaine fois, promis. »\nIl fit danser les deux baies sous ses yeux.\n« Elles sont sucrées, goûte. Ça te remontera peut-être le moral. »\nAvec méfiance, elle en prit une et la porta à sa bouche. Le jus éclata sur sa langue, mêlant douceur et légère acidité. Un sourire, timide d’abord, commença à effacer sa moue.\n« Comment ça s’appelle ? » demanda-t-elle.\n« Des framboises. Dans la forêt, il y a plein de fruits sauvages, mais seuls quelques-uns se mangent. Et la framboise... c’est la plus douce. »\nElle lui en déroba une petite poignée et lui prit la main pour repartir.\n« Papa, j’en veux encore... »\n« Bon, deux... allez, trois. Mais le reste, c’est pour ta mère. »\n« Pourquoi elles sont si petites ? Ce serait mieux si elles étaient plus grosses... »\n« Eh bien, il faut attendre qu’elles grandissent. Une framboise qui grossit devient une groseille, puis une pomme. Et si la pomme continue à pousser... elle devient un melon. »\n« Oh... alors moi, quand je grandirai, je deviendrai quoi ? »\nSon père ébouriffa ses cheveux sans répondre, en souriant.\nAu bout du chemin apparut une petite maison en bois : leur foyer. Sa mère se tenait sur le pas de la porte et leur fit signe. La fillette lâcha la main de son père et se précipita dans ses bras.\n« Et voilà que tu as encore du jus aux coins des lèvres », dit la mère en l’essuyant doucement.\n« Tu n’aurais pas grignoté quelque chose en route, par hasard ? »\n« Pas du tout », répondit le père en riant, sortant de sa besace un paquet noué dans un mouchoir.\n« On t’en a rapporté aussi. »\n« Elles sont si belles... j’en aurais presque du mal à les manger », dit la mère en souriant.\nTout en bavardant, les parents se dirigèrent vers la cuisine. La fillette, elle, s’éclipsa déjà, trottinant jusqu’au ruisseau voisin.\nElle répétait à mi-voix la liste de fruits que son père lui avait apprise :\n« Framboises... groseilles... pommes... melons... »\nDans son esprit, les fruits prenaient des formes gigantesques, comme de petites collines.\n\nPuis, soudain...\n« Ouah... »\nElle s’immobilisa, les yeux écarquillés. Tout près, une libellule descendait en spirale et se posa sur la pointe d’un bouton de nénuphar encore fermé. Ses ailes fines accrochaient la lumière, la brisant en mille éclats irisés. Elle retint son souffle, de peur qu’un geste, si léger soit-il, ne chasse la petite créature.\nEn ce temps-là, elle rêvait de grandir. Chaque chose qu’elle voyait lui semblait nouvelle, et le vaste monde inconnu l’emplissait de curiosité.\nElle ne savait pas encore qu’un jour, elle verrait toutes les fleurs et toutes les feuilles, toutes les rencontres et toutes les séparations, toutes les naissances... et toutes les fins.\nCe jour-là, elle n’était qu’une enfant ordinaire, les yeux illuminés de joie, fixant une libellule posée au bord d’un nénuphar.",
-          TextMapId = "UI_CHAR_DATA_TEXT_15020405"
-        },
-        UI_CHAR_DATA_TEXT_18010101 = {
-          ContentDE = "Extrait de Chant du Rossignol Blanc, page 2 :\n\nQuand elle était petite, le petit rossignol vivait dans un nid bien chaud, avec papa et maman rossignol. Papa rossignol avait de grandes ailes pour la protéger du vent et de la pluie. Maman rossignol chantait des berceuses très douces, qui faisaient fuir les cauchemars. Grâce à eux, le petit rossignol grandissait de jour en jour. Son duvet tombait, et de jolies plumes toutes blanches poussaient à la place. Elle avait hâte de pouvoir voler avec ses parents, dans le ciel tout bleu, quand ses ailes seraient prêtes.\n\n« Les jours passés avec papa et maman étaient les plus heureux de toute la vie du petit rossignol. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_18010101"
-        },
-        UI_CHAR_DATA_TEXT_18010102 = {
-          ContentDE = "Extrait de Chant du Rossignol Blanc, page 6 :\n\n... Un jour, sans prévenir, des étrangers appelés \"les chasseurs\" firent irruption dans la forêt. Ils détruisirent le nid douillet de la famille rossignol et capturèrent le père, aux plumes épaisses et chaleureuses.\nLa mère, effrayée, s’enfuit avec son petit, dont les ailes n’étaient pas encore formées, et chercha refuge dans les terres des bêtes. Mais là-bas, nul ne voulait d’elles. Le petit rossignol vécut dans la peur, chaque jour. Il ne trouvait un peu de paix que blotti sous l’aile de sa mère, seul souvenir tiède de l’ancien foyer.\n\n« Comme dans tous les contes tristes... Les plus belles choses qu’on voit au début... sont toujours celles qu’on détruit à la fin. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_18010102"
-        },
-        UI_CHAR_DATA_TEXT_18010103 = {
-          ContentDE = "Extrait de Chant du Rossignol Blanc, page 16 :\nUne nuit terrible, une tempête déchaînée détruisit le nid où vivaient le petit rossignol et sa maman.\nLes bêtes sauvages, qui rôdaient depuis longtemps autour d’elles, finirent par attaquer. Elles jaillirent des ombres, rugissant, et se lancèrent à leur poursuite. Pour protéger son enfant, la maman rossignol fit face aux monstres. Elle ne recula pas. Elle leur tint tête jusqu’au bout... puis ferma les yeux à jamais.\nSeul, le petit rossignol blessé se débattit dans la boue de la lande. Il haletait, trempé, ses ailes blanches souillées de sang et de terre, incapable de ressentir à nouveau la caresse du vent.\n\n« La pluie, c’est cruel. Elle mouille les ailes des oiseaux, et les empêche de voler. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_18010103"
-        },
-        UI_CHAR_DATA_TEXT_18010104 = {
-          ContentDE = "Extrait de Chant du Rossignol Blanc, page 19 :\n\nAinsi commença la vie du petit rossignol blanc auprès du Grand Magicien. Leur maison était minuscule, presque vide de jouets, mais elle regorgeait de merveilles insoupçonnées : une horloge qui chantait des berceuses chaque soir à neuf heures pile, une cheminée qui allumait des flammes dans son ventre dès que le froid s’installait, et une boîte en fer blanc qui faisait pousser des bonbons chaque fois qu’on détournait les yeux...\nMais la plus grande des magies, c’était encore le Grand Magicien lui-même, le plus vaillant des chasseurs, un aventurier hors pair, gardien du foyer, protecteur du petit rossignol, et rapporteur d’histoires fabuleuses, de mets délicieux et de cadeaux inattendus.\n« Le petit rossignol qui croise la route d’un Grand Magicien... quelle chance il a eue, hein. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_18010104"
-        },
-        UI_CHAR_DATA_TEXT_18010105 = {
-          ContentDE = "Extrait de Chant du Rossignol Blanc, page 23 :\n\n... Près de l’âtre tiède, le petit Rossignol ne cessait de faire de nouvelles rencontres.\nCe jour-là, il reçut la visite d’une Licorne, aussi blanc que lui, venue de très loin.\n{性别:Bienveillant|Bienveillante} et digne de confiance, {性别:Monsieur|Mademoiselle} Licorne rejoignit le Grand Magicien pour affronter les sorciers maléfiques et défendre la paix de leur foyer...\n\nFina referma le livre. Dans ses yeux bleus limpides se reflétaient tes cheveux d’un blanc neigeux et ta corne rouge. Tu le sais : ce conte ne s’est pas terminé.\nTu vas en écrire la suite, chapitre après chapitre... jusqu’au bout du temps.",
-          TextMapId = "UI_CHAR_DATA_TEXT_18010105"
-        },
-        UI_CHAR_DATA_TEXT_18010201 = {
-          ContentDE = "À un âge où les enfants délaissent depuis longtemps leurs contes de fées, Fina, elle, continue de les lire, inlassablement. Sa voix, même au quotidien, semble calquée sur ces récits : douce, hésitante, pleine d’images magiques.\nCeux qui croisent son chemin se surprennent à lui répondre sur le même ton, mimant ses mots. Par moquerie, parfois, parce qu’elle est une Charon. Par pitié, aussi, devant sa fragilité.\nOu peut-être... parce que ses mots ont réellement quelque chose d’ensorcelant. Comme une incantation douce qui les ferait glisser, sans qu’ils ne s’en rendent compte, dans son monde à elle.",
-          TextMapId = "UI_CHAR_DATA_TEXT_18010201"
-        },
-        UI_CHAR_DATA_TEXT_18010202 = {
-          ContentDE = "Parmi les senteurs mêlées d’alcool et les confidences murmurées à demi-mot, une rumeur s’est répandue de taverne en taverne : Morris Glenville, le célèbre industriel de Givrelac, allait se marier.\nIssu du peuple, Glenville avait bâti sa fortune grâce à son usine sidérurgique, devenant l’un des jeunes partis les plus convoités de la ville. Tout le beau monde spéculait sur l'identité de sa future épouse. Mais à la surprise générale, il choisit une veuve sans fortune ni soutien. Certes, cette femme appartenait jadis à une ancienne lignée noble de Givrelac, mais son nom n’était plus qu’un titre vide, vestige d’un passé révolu. Pire encore : son défunt mari avait été condamné pour avoir pratiqué la foi interdite d’Élysium, et sa fille, une enfant Charon, était vue comme une paria.\n\nLes ragots allèrent bon train. Les romantiques prétendaient que la veuve était aussi belle qu’une diva d’opéra. Les commerçants plus cyniques évoquaient une fortune secrète bien cachée. Les chroniqueurs à scandales disaient que, rejeté par les vieux aristocrates à cause de ses origines modestes, Glenville avait opté pour la seule \"noblesse\" qu’il pouvait épouser. Et dans les tavernes plus sombres, on racontait que l’enfant Charon avait ensorcelé l’industriel avec sa magie, dans le but de voler son héritage.\n\nLa vérité, elle, demeure floue. On sait seulement qu’à peine deux ans après le mariage, la veuve donna naissance à un enfant de Glenville. Et que Serafina, la petite fille qui était venue avec elle... disparut à jamais des yeux du public.",
-          TextMapId = "UI_CHAR_DATA_TEXT_18010202"
-        },
-        UI_CHAR_DATA_TEXT_18010203 = {
-          ContentDE = "La haine que Monsieur Morris Glenville vouait à sa belle-fille, Mademoiselle Serafina, était un secret de polichinelle au manoir Glenville.\nLe majordome, qui connaissait bien les secrets de la maison, savait pourquoi le maître des lieux avait épousé sa femme : une part pour sa beauté et son éducation raffinée, mais surtout pour son rang aristocratique... et pour un coffre, un héritage précieux transmis de génération en génération dans la famille de la maîtresse.\n\nOn racontait tant de choses à propos de ce coffre mystérieux : certains parlaient d’un joyau inestimable, d’autres d’une carte menant à un trésor caché, d’autres encore d’une baguette magique capable de transformer le plomb en or. Mais personne, en dehors des héritiers légitimes, n’en avait jamais vu la vérité.\nLes domestiques savaient seulement qu’il était doté de mécanismes complexes, et qu’il ne pouvait s’ouvrir qu’avec un code secret transmis uniquement aux descendants directs. Toute erreur ou tentative forcée d’ouverture déclenchait une explosion, réduisant à néant le précieux contenu.\n\nAujourd’hui, ce coffre énigmatique était le seul atout de Madame Glenville dans ses négociations délicates avec son mari.",
-          TextMapId = "UI_CHAR_DATA_TEXT_18010203"
-        },
-        UI_CHAR_DATA_TEXT_18010204 = {
-          ContentDE = "Plus tard, des rumeurs ont commencé à circuler.\nOn disait que Madame Glenville, cette veuve remariée à un riche notable, avait soudainement perdu la tête. Une nuit, prise de délire, elle aurait tenté de mettre le feu à sa somptueuse demeure. Heureusement, l’incendie fut vite maîtrisé. On raconte ensuite qu’elle s’enfuit dans la nuit avec sa fille Charon, et qu’au cours de leur fuite, elles tombèrent dans une rixe de vagabonds dans les Faubourgs de Givrelac, où elle fut mortellement touchée par une balle perdue.\nDans les tavernes, les clients spéculaient avec entrain sur les moindres détails, décrivant avec enthousiasme comment cette femme, devenue folle, aurait voulu réduire en cendres une fortune inaccessible au commun des mortels, abandonnant un mari séduisant et prospère pour errer sans but dans les rues.\n\nDerrière son comptoir, l’aubergiste versait le sirop dans les boissons sans même lever les yeux :\n« Mais... cette nuit-là, il pleuvait sans arrêt, non ? Comment aurait-elle pu allumer un feu par ce temps ? »\nMais les détails banals n’intéressent personne quand le scandale est si savoureux. Le récit se transforma peu à peu, et c’est finalement la fille Charon qui porta le blâme de tous les malheurs : on disait qu’elle haïssait son beau-père, qu’elle enviait ses demi-frères et sœurs Solariens, et qu’elle avait usé de sombre magie pour faire s’abattre calamités et malheurs sur sa propre famille.\n\n« Et cette fille, qu’est-ce qu’elle est devenue ? » demanda quelqu’un.\n« Qui sait ? Elle vit sûrement avec les rats dans les égouts. En tout cas, faites gaffe quand vous rentrez tard le soir, hein... elle pourrait bien vous choper pour son dîner ! »\nDes éclats de rire fusèrent dans la salle, couvrant le bruit des chopes qui s’entrechoquaient.",
-          TextMapId = "UI_CHAR_DATA_TEXT_18010204"
-        },
-        UI_CHAR_DATA_TEXT_18010205 = {
-          ContentDE = "La malédiction de la famille Glenville se poursuivit. À la fin, même Monsieur Morris Glenville n’y échappa pas. Il disparut mystérieusement par une nuit de neige, sans jamais avoir dit à quiconque où il allait.\nBeaucoup pensaient que tous les malheurs de la famille venaient de la fillette Charon adoptée, le prix à payer pour avoir offert refuge à un \"enfant du démon\". D’autres disaient que le mal venait du trésor familial de Madame Glenville : un objet secret et maudit qui rendit d’abord les époux fous, avant d’attirer Monsieur Glenville dans un monde inconnu.\nSes proches le pleurèrent brièvement... puis se partagèrent sa fortune sans tarder.\nAinsi s’acheva, dans un silence morne, la légende du roturier devenu magnat à Givrelac.\nUn jour, alors qu’il balayait les marches désertes du manoir, l’ancien majordome poussa un léger soupir. Car lui seul savait où Monsieur Glenville était parti cette nuit-là, et pourquoi. Il ne se considérait pas comme un homme bon, mais garder ce secret, c’était tout ce qu’il pouvait encore faire pour cette enfant née sous une mauvaise étoile.",
-          TextMapId = "UI_CHAR_DATA_TEXT_18010205"
-        },
-        UI_CHAR_DATA_TEXT_18010301 = {
-          ContentDE = "Quand elle est malade ou à peine éveillée, Fina appelle parfois les gens autour d’elle « maman », sans s’en rendre compte.\nLa première fois, tu as été un peu {性别:pris|prise} de court. C’était étrange, presque déplacé. Mais en la voyant si paisible dans son sommeil, le front légèrement froncé comme si un cauchemar la guettait... tu n’as rien dit. Tu t’es {性别:contenté|contentée} d’acquiescer.",
-          TextMapId = "UI_CHAR_DATA_TEXT_18010301"
-        },
-        UI_CHAR_DATA_TEXT_18010302 = {
-          ContentDE = "Fina est née dans un foyer mixte : un père Charon, une mère Sola, une union presque impensable en Hyperborea.\nEn réalité, ses deux parents étaient des fidèles clandestins des Neuf Dieux d’Élysium. Selon leur foi, Charons et Solariens ne différaient que par l’apparence et les dons physiques. Mais cette croyance était strictement proscrite en Hyperborea.\nLe père de Fina fut arrêté puis exécuté pour hérésie. Jusqu’au bout, il affirma que les écrits interdits retrouvés chez eux lui appartenaient à lui seul, espérant ainsi protéger sa femme et sa fille.",
-          TextMapId = "UI_CHAR_DATA_TEXT_18010302"
-        },
-        UI_CHAR_DATA_TEXT_18010303 = {
-          ContentDE = "Fina possède une boîte à vœux, délicate et finement ouvragée, conçue pour accueillir ses étoiles en papier.\nChaque fois qu’elle pense à ses parents, ou qu’un événement important survient, elle écrit quelques mots sur un petit bout de papier, des choses qu’elle aurait voulu leur dire. Puis elle le plie soigneusement en forme d’étoile, et le glisse dans la boîte.\nUn vœu de plus, une étoile de plus.",
-          TextMapId = "UI_CHAR_DATA_TEXT_18010303"
-        },
-        UI_CHAR_DATA_TEXT_18010304 = {
-          ContentDE = "Cette nuit-là, sous une pluie torrentielle, Fina tomba dans les Égouts de Givrelac. Son dernier lien familial brisé, elle n’avait plus la force de se relever. Elle laissa simplement la pluie glacée la tirer vers le fond, sans opposer de résistance. \nMais peut-être que ce jour-là, un dieu bienveillant posa enfin les yeux sur elle. Par pur hasard, l’Étranger, qui se trouvait là pour honorer une mission, la découvrit, à moitié noyée, à peine consciente. Il avait l’habitude de fermer les yeux : des tragédies, il en voyait tous les jours à Givrelac. Pourtant, quelque chose dans les mots fiévreux que murmurait cette fille l’empêcha de tourner les talons.\nAlors il la recueillit. Il l’enveloppa soigneusement dans sa cape, l’emmena chez lui, et prit soin d’elle comme de sa propre famille.",
-          TextMapId = "UI_CHAR_DATA_TEXT_18010304"
-        },
-        UI_CHAR_DATA_TEXT_18010305 = {
-          ContentDE = "Bien qu’elle ait toujours considéré l’Étranger comme un frère, Fina ne l’a jamais appelé autrement que par son nom.\nPeut-être parce qu’au fond, la peur d’être abandonnée par ceux qu’elle aime n’a jamais vraiment disparu. Elle craignait qu’en l’appelant \"grand frère\", les choses tapies dans l’ombre comprennent qu’il faisait partie de sa famille... Et qu’alors, elles viennent le lui prendre. Par une balle. Ou une nuit d’orage.",
-          TextMapId = "UI_CHAR_DATA_TEXT_18010305"
-        },
-        UI_CHAR_DATA_TEXT_18010401 = {
-          ContentDE = "Dans ses souvenirs d’enfance, encore fragiles et éparpillés, Fina ne retient que quelques éclats. Elle était toute petite, à peine capable de marcher. Ses parents parlaient souvent d’une phrase mystérieuse : \"Le Codex d’Élysium\". Ils la prononçaient avec une sorte de respect sacré, comme s’il s’agissait d’un trésor. \n« C’est quoi, maman ? » avait-elle demandé un jour, la voix encore mal assurée.\nSa mère avait souri doucement. « C’est ce en quoi nous croyons, ton papa et moi. Tous les êtres vivants, Solariens ou Charons ont été sculptés par les anciens dieux dans le bois de l’Arbre Sacré. Ses branches sont notre chair, ses feuilles nos cheveux, et sa sève... nos âmes. »\nFina n’avait rien compris. Son regard s’était voilé, un peu perdu. « Solariens », « Charons », « âmes »... Pour une enfant de trois ans, tout cela était bien trop difficile à comprendre. Alors, sa mère avait dessiné deux petits bonshommes : l’un avec un front lisse, l’autre avec deux cornes.\n« Celui-ci est un Sola, celui-là un petit elfe. Leurs familles leur disaient qu’ils étaient ennemis, juste à cause de leur apparence. »\n« Mais... pourquoi ils peuvent pas être amis ? » avait demandé Fina, toute inquiète.\n« Ils ne pouvaient pas. Jusqu’au jour où une fée leur a offert à chacun un livre. Le Codex d’Élysium. Alors ils ont compris. Qu’ils avaient la même âme. Et qu’ils pouvaient s’aimer. »\n« Ah ! Comme toi et papa ! » s’était-elle exclamée. « Lui, il a des cornes. Toi non. Mais vous vous aimez. Et vous m’avez eue, moi. »\nSa mère avait souri, puis l’avait embrassée sur le front. « Oui. Comme j’aime ton papa, et comme on t’aime, toi aussi. »\n\nMais le conte s’est mal terminé.\n\nUn soir, les soldats de Givrelac ont fait irruption chez eux, fouillant tout avec violence. Sa mère l’avait emmenée dans une cachette sous le plancher. Au-dessus, des bruits de bottes, des cris. Son père, qui protestait. Des mots qu’elle n’a pas bien compris : « livres interdits », « faux dieux », « hérésie »... Puis un fracas. Un corps qui tombe.\nSa mère l’avait serrée contre elle, la main sur sa bouche, pour l’empêcher de crier.\nQuand tout fut fini, elle murmura :\n« Papa est parti dans un pays lointain. Il ne reviendra pas. »\nCe soir-là, le papa rossignol est tombé du ciel. Et pour Fina, le conte de fées a pris fin.",
-          TextMapId = "UI_CHAR_DATA_TEXT_18010401"
-        },
-        UI_CHAR_DATA_TEXT_18010402 = {
-          ContentDE = "« Chhh... »\nLa mère de Fina craqua une allumette. Une petite flamme joyeuse jaillit au sommet de la bougie bleue, illuminant le petit gâteau à la crème posé dessous. C’était le premier anniversaire de Fina passé dans cette grande demeure.\nElle et sa mère y vivaient depuis plusieurs années déjà. La maison, digne d’un conte de fées, ressemblait à un château, où des lustres en cristal doré projetaient de magnifiques jeux de lumière sur les papiers peints luxueux. Chaque fois que les lustres s’illuminaient, Fina pensait au cirque de son enfance, notamment aux cages métalliques où les animaux attendaient leur tour. La lourde serrure en laiton de ces cages, brillante au soleil, semblait d’ailleurs avoir la même couleur que les lustres.\nDans ce manoir, les anniversaires étaient un privilège réservé à ses demi-frères et demi-sœurs. Fina, elle, se glissait toujours après les fêtes dans le salon, espérant qu’une servante lui donne un bout de gâteau sans chocolat ni fruits. Mais ce jour-là, le maître de maison était parti en voyage d’affaires. Alors, pour la première fois depuis longtemps, Fina eut droit à une fête rien que pour elle.\n\n« Joyeux anniversaire, Fina ! » lui dit sa mère avec un sourire chaleureux.\nFina cligna des yeux, voulant lui rendre un sourire aussi radieux. Pourtant, son regard restait fixé sur les bleus qui marquaient le bras de sa mère. Ces marques, elle les connaissait bien : c’étaient celles laissées par la canne de son beau-père. Son tempérament était imprévisible, une hausse des prix du Phoxène, un mauvais coup au commerce, une partie de cartes perdue, ou même un simple goûter qui ne lui plaisait pas pouvait le mettre en colère. Et quand il s’énervait, c’était souvent Fina, sa fille, une Charon, qui en faisait les frais, même si rien n’avait à voir avec ses soucis. Lorsque sa mère se dressait pour la protéger, la canne s’abattait aussi durement sur elle, faisant un bruit sourd.\nCette mère vêtue de soie, belle mais fragile, était comme un oiseau en cage dorée, peinant même à protéger son petit oisillon. Pourtant, Fina n’avait pas peur. Le jour, sa mère appartenait à la maison, au maître, à ses demi-frères et sœurs, aux éclats de verre du salon et aux robes chatoyantes du bal. Mais la nuit, elle lui appartenait. Chaque soir, sa mère montait en douce dans le petit grenier, s’asseyait au bord de son lit, lui contait de merveilleuses histoires avant de chanter des berceuses, jusqu’à ce qu’elle s’endorme.\nContrairement à Fina, souvent en larmes, sa mère pleurait rarement. Elle n’avait pas pleuré à la mort de ses parents ni à celle de son mari, dont elle avait seule organisé les funérailles. Elle n’avait pas pleuré quand des cousins avides l’avaient forcée à se remarier, échangeant des héritages contre la chance de garder Fina auprès d’elle. Et elle ne pleurait jamais face aux colères soudaines de son nouveau mari, même si sa détermination lui attirait insultes et coups. Elle lui disait toujours en souriant : \n« Ne t’inquiète pas, ces petites blessures, ça passera vite. »\nAyant remarqué le regard de Fina, sa mère tira doucement son châle pour cacher ses bleus et caressa tendrement ses cheveux : « Fais un vœu. » Fina hocha la tête, ferma les yeux et fit silencieusement ce souhait : « Grand Dieu, faites que je sois aussi forte et courageuse que maman. »\n\nQuand elle rouvrit les yeux, sa mère avait disparu, remplacée par un immense oiseau blanc en peluche. Son pelage doux et dense était aussi blanc que les cheveux argentés de Fina, et ses grandes ailes dépassaient la taille de ses bras.\n« Piou-piou, enchanté, Mademoiselle Fina, je suis ton cadeau d’anniversaire ! » La voix de sa mère semblait venir de derrière la peluche. « Devenons amis, d’accord ? »\n« Ouah... bonjour Monsieur l’Oiseau blanc ! » s’exclama Fina, enlaçant l’oiseau. La douceur du pelage chatouillait sa joue, lui réchauffant le cœur.\n« Il est comme papa, » murmura-t-elle. « Papa avait aussi de grands bras pour tenir maman et moi. »\nSans le dire, elles savaient toutes deux de quel \"Papa\" il s’agissait. Après un court silence, Fina entendit un sanglot étouffé. Elle lâcha l’oiseau et se pencha derrière pour voir sa mère. Pour la première fois, elle vit des larmes dans ses yeux.\n« Pardon... Fina... » sanglota sa mère en se cachant le visage. « J’aurais dû t’emmener loin d’ici... J’ai été stupide de penser qu’un vrai foyer t’aiderait à grandir. »\nSur le visage émacié de sa mère, Fina se vit elle-même, la petite fille qui retenait ses larmes pour ne pas l’inquiéter, qui faisait semblant d’être forte. Elle comprit alors que sa mère aussi avait été une petite fille, capable de rire et de pleurer, mais qu’elle avait caché ses faiblesses pour elle.\n« Ce n’est rien, Maman... » dit doucement Fina en tirant les grandes ailes de la peluche pour que celle-ci serre sa mère dans ses bras. \n« Quand je serai grande, j’aurai moi aussi de grandes ailes. Je te protégerai. »\n\nPour elle, elle devait grandir vite. Fina voulait devenir comme les preux chevaliers de ses histoires, assez forte pour chasser tous les méchants. C’est après cet anniversaire que Fina vit pour la première fois la lumière de la magie scintiller au bout de ses doigts.",
-          TextMapId = "UI_CHAR_DATA_TEXT_18010402"
-        },
-        UI_CHAR_DATA_TEXT_18010403 = {
-          ContentDE = "« J’ai conclu un accord avec la VIᵉ Légion. On l’y enverra la semaine prochaine. Cette gamine ne nous est d’aucune utilité ici. Là-bas, au moins, elle pourra peut-être décrocher deux ou trois médailles. »\n« De quoi parlez-vous, Morris ?! Elle n’a que treize ans ! Comment pouvez-vous l’envoyer à l’armée ? Vous savez qu’elle est fragile... elle mourra là-bas ! »\n« Peu importe. La Légion veut sa magie. Peut-être que ça la renforcera. Et toi, tu pourras enfin te concentrer sur nos enfants. »\n« Mais... ! »\nLeurs cris résonnaient dans le salon. En haut, dans le couloir, Fina s’était blottie à l’angle du mur, serrant fort contre elle son oiseau en peluche.\n\nLe jour où elle avait découvert ses pouvoirs, Fina avait dévalé l’escalier pour étreindre sa mère et lui annoncer la nouvelle. Mais sa mère ne s’était pas réjouie. Elle avait simplement pâli, puis répété plusieurs fois à Fina de ne le dire à personne. Fina en avait conclu qu’elle devait encore devenir plus forte, pour rassurer sa mère. Alors, en secret, elle s’était mise à pratiquer. Sans livres, sans professeurs, elle apprit avec les contes pour manuels, et les fées pour maîtresses. Petit à petit, elle parvint à faire venir dans le monde réel les \"amis\" de ses histoires.\nUn après-midi où sa mère et son beau-père étaient absents, Fina aperçut son petit frère en train de pleurer, seul dans le jardin. Il devait se sentir seul, pensa-t-elle.\nElle hésita... puis alla le rejoindre, doucement. Elle prit ses petites mains dans les siennes.\n« Chut. » souffla Fina. « Ne pleure pas. Je vais te faire un cadeau. »\nQuand elle rouvrit les mains, plusieurs papillons s’envolèrent d’entre ses paumes, tourbillonnant dans l’air froid. Le petit garçon, ébahi, les poursuivit en riant, oubliant ses larmes. Fina sourit. Elle en était sûre : la magie pouvait rendre heureux. Elle ne vit pas le regard glacial du domestique, posté derrière elle.\nFina ne comprenait pas pourquoi il avait tout raconté à son beau-père. Pas plus qu’elle ne comprenait pourquoi un endroit comme la Légion existait, qui enlevait les enfants Charon doués à leurs familles.\nDans les éclats de voix et le fracas de verre brisé, Fina n’avait compris qu’une chose :\nla magie, ce pouvoir qu’elle avait obtenu pour protéger sa mère, allait désormais les séparer.\n\n« Pourquoi ? » demanda-t-elle à Monsieur l’Oiseau blanc. \nMonsieur l’Oiseau blanc ne répondit pas. Il la regardait de ses grands yeux ronds.\n« Si tu pouvais voler... est-ce que tu nous emmènerais loin d’ici, maman et moi ? »\nIl ne répondit pas. Il l’enveloppa simplement de ses ailes douces.\nCette nuit-là, Fina fut réveillée par sa mère. Elle ne dit rien. Seule la pluie battait violemment les vitres du grenier. Fina, à moitié endormie, vit que sa mère portait une grande cape noire.\n« Maman ? On sort ? »\n« Oui. Je t’emmène dans une nouvelle maison. Comme dans les contes, une petite cabane pleine de chaleur. »\n« Et Monsieur l’Oiseau blanc vient avec nous ? »\nUn silence. Un regard triste.\n« On ne peut pas emporter trop de choses... Je suis désolée, Fina. »\nAlors Fina comprit : ce n’était pas un voyage. C’était une fuite.\n« Alors Monsieur l’Oiseau blanc restera ici. Il pourra jouer avec mon petit frère. Moi, je veux juste être avec toi, maman. »\n« Mon trésor... » murmura sa mère en lui caressant les cheveux.\n« Quand on aura trouvé une maison, je travaillerai dur. Je t’en offrirai plein d’autres, des amis. Pas seulement Monsieur l’Oiseau blanc, mais aussi des chiens, des poneys, des papillons... Tous les amis que tu voudras. »\n« Promis ? »\nFina hocha la tête. Avant de partir, elle retourna border son oiseau en peluche, en s’assurant que ses ailes ne dépassaient pas.\n« Au revoir, Monsieur l’Oiseau blanc. T’inquiète pas pour moi : maman sera avec moi. Toi aussi, prends soin de toi, d’accord ? »\nElle crut l’entendre répondre : « Piou-piou, petit rossignol. Bonne chance. »\nEn silence, elle suivit sa mère dans l’escalier en colimaçon. Une dernière fois, elle leva les yeux vers le lustre de cristal. Il brillait faiblement dans l’ombre, comme une centaine d’yeux d’or tournés vers elle.\n\nLa porte s’ouvrit. Un éclair fendit le ciel. La pluie froide lui fouetta le visage. Elle recula d’un pas, mais sa mère ouvrit le parapluie, créant un petit abri tranquille dans le tumulte.\n« Allons-y, Fina. »\nEt d’un coup, l’orage ne faisait plus peur. Fina serra la main de sa mère, et s’élança sous la pluie.",
-          TextMapId = "UI_CHAR_DATA_TEXT_18010403"
-        },
-        UI_CHAR_DATA_TEXT_18010404 = {
-          ContentDE = "« Fina, je suis rentré »\nLa nuit tombait, et le vent faisait rage dans la neige tourbillonnante lorsque l’Étranger poussa la porte de bois ornée d’un petit oiseau peint, les bras chargés de quelques ingrédients bon marché dénichés sur un étal.\nCette maison, étroite et modeste, c’était désormais chez Fina.\nIci, il n’y avait ni jolies robes, ni vaisselle précieuse, ni or étincelant... mais justement pour cela, elle n’avait plus à craindre de trébucher dans une tenue trop luxueuse pour elle, ni d’avaler des restes froids dans une assiette d’apparat, ni de se faire battre à coups de canne dorée pour une révérence mal exécutée. À la place, il y avait de simples habits cousus avec soin dans du tissu rêche, de la soupe fumante servie dans un bol ébréché, et une petite veilleuse transparente faite d’un bout de verre récupéré.\nLa neige avait fondu sur les épaules de l’Étranger, laissant perler des gouttes d’eau. Il s’essuya vaguement avec une serviette, puis se dirigea vers la cuisine pour préparer le repas. Très vite, un parfum alléchant se répandit dans la pièce. Fina referma doucement le livre d’images qu’elle dessinait, le posa avec précaution sur ses genoux pour libérer la table, et accueillir la soupe qu’il lui apportait.\nC’était un soir comme tant d’autres... Jusqu’à ce que quelqu’un frappe brutalement à la vieille porte de bois.\nSur le seuil se tenait un homme élégant, vêtu avec richesse. À la vue de la canne dorée qu’il tenait en main, Fina lâcha ses couverts dans un bruit métallique, cling, et ses crayons ainsi que son carnet s’éparpillèrent sur le sol.\n\n« Monsieur l’Étranger, je présume ? » dit l’homme d’un ton affable en ôtant son chapeau.\n« Je suis Morris Glenville. Je vous remercie d’avoir hébergé Serafina, ma fille disparue. Je suis venu la ramener à la maison. »\nL’Étranger se retourna. Fina s’était réfugiée dans un coin de la pièce, recroquevillée sur elle-même comme un tout petit enfant. Lorsqu’elle leva les yeux vers lui, son regard était noyé de larmes et de terreur. Alors l’Étranger comprit ce qu’il devait faire. Il fit un pas en avant et se posta devant elle.\n« Veuillez partir. Cette fille est ma sœur. Elle n’est pas votre fille. »\nLe sourire de Morris s’élargit, tandis que son regard se glaçait.\n« Il semble qu’il y ait un malentendu, monsieur. Après tout... ce n’est pas à un vulgaire Charon de décider de l’identité d’un enfant. »\nIl sortit alors une arme de la poche de son manteau, et braqua le canon sur le front de l’Étranger.\n« Vous avez sans doute entendu parler de moi. Je ne suis pas amateur de longues négociations. Si vous savez rester à votre place, il ne vous arrivera rien. Mieux : je suis même prêt à vous offrir une belle somme pour avoir pris soin de ma fille ces derniers jours. »\nPuis il se tourna vers Fina, toujours tapie dans l’ombre.\n« Ma chérie... sois raisonnable. Redonne à Papa la boîte que Maman t’a confiée. Et rentrons ensemble. »\nNi l’Étranger ni Fina ne répondirent. Peut-être lassé de jouer seul sa scène, Morris haussa le ton et appuya l’arme contre le front de l’Étranger.\n« Ne m’obligez pas à perdre patience. Je vais compter jusqu’à dix. Si, à la fin, vous ne vous êtes pas montrés coopératifs... je devrai employer des méthodes moins courtoises. »\n\n« Dix. »\nFina fixait l’arme. Elle se souvenait. Cette nuit d’orage, deux semaines plus tôt, c’était cette même arme qui avait ôté la vie de sa mère. La balle lui était destinée, à elle. Mais sa mère s’était interposée. Elle s’était écroulée, le sang jaillissant de sa poitrine, comme une fleur rouge éclatant dans une flaque de pluie. Et jusqu’au dernier instant, elle avait murmuré :\n« Fina, cours. Ne te retourne pas. »\n\n« Neuf. »\nFina regarda l’Étranger. Sa main, derrière son dos, frôlait discrètement le manche d’un couteau. Mais il tremblait. Même elle, qui n’avait presque jamais quitté la maison, avait entendu les domestiques dire ce qu’il arrivait aux Charons qui osaient lever la main sur un Sola.\n\n« Huit. »\nElle se souvint de sa fuite, ce soir-là. Elle avait couru, de toutes ses forces, sous la pluie. Derrière elle, les pas de son beau-père et des domestiques résonnaient sans relâche. Elle avait appelé Monsieur l’Oiseau blanc, comme dans ses contes, et l’apparition avait brièvement retenu ses poursuivants. Elle avait cru être sauvée. Elle haletait. Puis, tout à coup, son pied avait glissé. Le noir l’avait engloutie. Dans l’obscurité, elle avait senti l’eau glacée l’enserrer, la tirer vers le fond. Elle se débattait, désespérée, cherchant à saisir quelque chose, une planche, des morceaux de bois flottant... mais rien ne pouvait la porter. Ses mains frôlaient des légumes pourris, des arêtes de poisson tranchantes, et une étrange viscosité gluante entre les os. Puis, peu à peu, ses forces l’avaient abandonnée. Elle avait cessé de lutter. Elle s’était laissée emporter, dans ce courant glacé qui l’avalait.\nVers un endroit plus sombre encore que cette nuit de pluie.\n\n« Sept. »\nFina se revit, cette nuit-là, sous la pluie.\n« Moi aussi, je vais rejoindre Papa et Maman... dans un autre monde », pensa-t-elle.\nElle sentait que bien des choses l’abandonnaient peu à peu : sa conscience, ses souvenirs... et la vie elle-même.\n« Maman... » appela-t-elle, d’une voix de plus en plus faible. « Maman... »\nPeut-être ses mots avaient-ils franchi les frontières du réel. Elle crut entendre des pas s’arrêter près d’elle, puis sentit des bras doux et chauds la soulever hors des ténèbres.\nC’est sûrement Maman, pensa-t-elle. Et elle sombra dans un profond sommeil.\n\n« Six. »\nFina se rappela ce matin-là, celui où elle s’était éveillée dans une pièce inconnue. La chambre était minuscule, plus petite encore que le grenier où elle vivait autrefois.\nLe lit était dur, plus dur que ceux des domestiques. Mais un rayon de lumière avait percé un trou dans le toit, et la poussière flottait joyeusement dans l’air avant de se déposer sur le dos d’un inconnu. Elle ne le connaissait pas. Et pourtant, elle n’eut pas peur. Parce que, très loin dans ses souvenirs, à l’époque où elle avait encore un \"chez-elle\", elle se souvenait s’être réveillée souvent ainsi : le matin, avec la silhouette de sa mère qui s’activait doucement dans la lumière.\n« Maman... » murmura-t-elle d’une voix rauque, les yeux fixés sur ce dos. « Maman... »\n\n« Cinq. »\nFina se souvint du jour où elle avait appelé l’Étranger « Maman ». Il avait croisé les bras, complètement déconcerté.\n« Tu veux dire Papa, non ? Enfin... je suis pas si vieux que ça... Dis plutôt Grand frère, ce sera mieux. »\nMais sa tête était encore embrouillée, alors elle n’avait pas réussi à se corriger.\n« Maman... » répéta-t-elle, en boucle.\nl’Étranger avait soupiré, résigné :\n« Bon, si tu veux... appelle-moi comme tu veux. »\n\n« Quatre. »\nSa main fouilla à tâtons autour d’elle. Depuis qu’elle avait été gravement blessée en tombant dans les égouts, sa petite réserve de magie n’était toujours pas revenue.\nElle chercha à tâtons, priant pour trouver quelque chose qui pourrait l’aider. Soudain, ses doigts touchèrent un objet froid et métallique.\nElle s’en souvint : c’était le pistolet de l’Étranger.\n\n« Trois. »\nFina se rappela ses premiers jours dans cette maison. L’Étranger ne savait pas s’occuper d’un enfant. Elle pleurait souvent, repensant à sa mère, incapable de s’arrêter. Désespéré, il s’était gratté la tête jusqu’à en décoiffer ses cheveux, puis, comme illuminé par une idée géniale, avait claqué des doigts, fouillé dans un tiroir, et en avait sorti une arme. Il en avait retiré les balles une à une, puis lui avait tendu le pistolet vide :\n« Tiens, joue avec ça. C’était mon jouet préféré quand j’étais gosse. »\nMais pour Fina, ce n’était pas un jouet. C’était ce genre d’objet qui avait pris la vie de sa mère. Alors elle avait pleuré encore plus fort.\n\n« Deux. »\nElle se souvint du silence de l’Étranger quand elle avait rejeté l’arme. Mais, au final, il l’avait quand même ramassée... et lui avait tendue à nouveau. Il avait longuement réfléchi, puis s’était accroupi, le regard grave mais doux.\n« N’en aie pas peur », dit-il. « Je vais t’apprendre à la dompter. Oui, elle peut ôter une vie... Mais c’est aussi la seule chose qui puisse protéger la tienne, et celle de ceux que tu veux protéger. »\n\n« Un. »\nFina se souvint de son petit anniversaire. Ce jour-là, elle avait enveloppé sa mère avec les ailes de son doudou Monsieur l’Oiseau blanc.\n« Fina protégera Maman. »\n\n« Zéro. »\nLes plumes de l’oiseau en peluche tombèrent comme des flocons de neige, voilant sa vision.\n\nBANG...\nLa détonation retentit. Morris Glenville bascula en arrière, son corps s’effondra lourdement au sol dans un bruit sourd. Son visage figé dans la stupeur, incrédule.\nUn couteau lui transperçait le cœur. Une balle lui avait transpercé la poitrine.\nClac. Le pistolet tomba des mains de Fina, encore fumant. Elle leva les yeux vers l’Étranger. Un sourire doux, empreint de tristesse, fleurit sur ses lèvres.\n« L’Étranger... maintenant, on est tous les deux des \"mauvais sorciers\", hein ? »",
-          TextMapId = "UI_CHAR_DATA_TEXT_18010404"
-        },
-        UI_CHAR_DATA_TEXT_18010405 = {
-          ContentDE = "Fina et l’Étranger enterrèrent ensemble son beau-père, avec sa canne dorée, au pied d’un pin, près de la Rive du Lac du Deuil.\nElle ferma les yeux. Autrefois, elle avait haï et redouté cet homme qui n’avait été que source de malheur. Mais à présent, ses souvenirs de lui n’étaient plus que neige fondue dans ses cheveux, fondus, effacés, devenus transparents... jusqu’à ne plus laisser qu’un blanc lointain.\nSes cheveux avaient poussé. L’Étranger l’avait aidée à les teindre : du blanc d’argent au bleu limpide, comme l’eau du lac, comme ses yeux. Désormais, elle pouvait sortir sans être reconnue. Le nom de Serafina Glenville s’était peu à peu dissous dans les vents de Givrelac. Elle était Fina, la sœur de l’Étranger.\nEt un nouveau chapitre de son histoire venait de s’ouvrir.\n\nPar un après-midi clair, Fina ouvrit un carnet vierge. Elle prit une plume, et écrivit soigneusement le titre de son nouveau récit : Le Chant du Rossignol Blanc. \nUne série de bruits métalliques la tira de ses pensées. Elle posa la plume, prête à demander à son frère de faire moins de bruit, quand elle le vit arriver, un carton dans les bras.\n« Regarde si y’a quelque chose d’utile là-dedans, dit l’Étranger en posant la boîte. J’ai oublié de te le dire, j’ai trouvé ça à côté de toi dans les égouts. C’était dans un paquet, je me suis dit que ça t’appartenait. »\n« C’est... » Fina souleva un petit coffret couvert de boue et de poussière.\nMalgré son état, il restait délicatement ouvragé.\n« ... Le trésor hérité de Maman. »\n« Trop bien ! Allez, voyons si c’est un vrai trésor. Avec un peu de chance, on devient riches et on s’achète une vraie maison, plus grande. »\nL’Étranger essuya la surface.\n« Tiens, y’a un cadenas à code... »\n« Attends ! » s’écria Fina, le souvenir revenant d’un coup.\n« Ne touche pas à ce coffret ! Maman disait que si on entre un mauvais code... ça explose ! »\nElle bondit, tendant la main pour lui arracher l’objet. Mais trop tard, un clic sec résonna.\n« Ben, ça a pas explosé », dit l’Étranger, déconcerté.\n« J’ai mis un chiffre au pif, et hop, ça s’est ouvert. Mais y’a rien d’intéressant... juste une feuille de papier. »\nIl marqua une pause, puis lui tendit le coffret avec sérieux :\n« Tu ferais mieux de la lire toi-même. »\n\n« Oh, ce serait... une carte au trésor ? »\nFina pencha la tête, curieuse, et déplia le papier. Elle se figea. Ses mains se mirent à trembler. L’Étranger se pencha à son tour. C’était une simple lettre, fine comme un souffle, où ne figurait qu’une seule ligne, tracée d’une écriture douce et soignée :\n<H>« Ma chère enfant... Puisses-tu trouver ton propre bonheur. »</>\n\nLes pensées de Fina la ramenèrent à une nuit lointaine. Réveillée en sursaut par un cauchemar, elle était descendue chercher sa mère. Mais avant d’entrer dans la chambre, elle avait entendu la voix de sa mère, et celle de son beau-père, à travers la porte :\n« Morris, j’ai promis de vous remettre le trésor. Mais pas aujourd’hui. Ce sera pour le jour où Serafina atteindra sa majorité. » Sa mère parlait avec calme, d’une voix sûre :\n« En échange, je veux votre promesse : celle de veiller à ce qu’elle grandisse en sécurité. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_18010405"
-        },
-        UI_CHAR_DATA_TEXT_21010101 = {
-          ContentDE = "Parmi toutes les fragrances que Rebecca propose, une seule porte un nom aussi envoûtant que dangereux : « L’être destiné ».\n\nContrairement à ses autres créations, celle-ci contient une infime dose de venin, un poison naturel qui suinte lentement de ses doigts. Il ne tue pas, dit-elle... mais elle ne garantit pas l’absence d’effets secondaires.\n« C’est dangereux », prévient-elle toujours, le sourire aux lèvres.\n« Mais son parfum est enivrant. Il attirera celui ou celle que vous aimez. L’amour, après tout, n’est-il pas un poison qu’on boit en toute conscience ? »",
-          TextMapId = "UI_CHAR_DATA_TEXT_21010101"
-        },
-        UI_CHAR_DATA_TEXT_21010102 = {
-          ContentDE = "Ceux qui ont effleuré par mégarde la peau de Rebecca décrivent une sensation étrange, humide comme une pluie d’été, suivie d’un engourdissement subtil.\nElle, pourtant, ne montre aucune réaction. Son regard reste posé sur l’autre, calme et insondable... Comme si elle attendait quelque chose.",
-          TextMapId = "UI_CHAR_DATA_TEXT_21010102"
-        },
-        UI_CHAR_DATA_TEXT_21010103 = {
-          ContentDE = "Un témoin raconte avoir surpris Rebecca en train de caresser un petit animal blanc : un Périnou. Lorsqu’il a posé la main sur sa fourrure, la bête est restée inerte, affaissée dans la paume de la jeune femme.\n« Peut-être, lui aussi, a-t-il subi l’épreuve du Dieu de l’Amour... », aurait-elle dit avec un sourire amusé.\n« Il y a tant d’êtres étranges sur ce continent. Celui-ci est magnifique, mais son cœur est mal formé. Il était destiné à être abandonné par les siens. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_21010103"
-        },
-        UI_CHAR_DATA_TEXT_21010104 = {
-          ContentDE = "Du coin de l’œil, tu crois voir Rebecca retirer discrètement la main qu’elle s’apprêtait à te tendre.\nSur son visage, une expression que tu ne lui connais pas : plus de sourire radieux, mais un mélange confus d’hésitation et de trouble.",
-          TextMapId = "UI_CHAR_DATA_TEXT_21010104"
-        },
-        UI_CHAR_DATA_TEXT_21010105 = {
-          ContentDE = "Tu écoutais Rebecca te raconter une histoire, un vieux conte de fées transmis dans sa contrée natale.\nIl parlait d'une princesse sirène tombée amoureuse d’un humain. Pour le rejoindre, elle avala un poison qui transforma sa queue en jambes humaines. Mais chaque pas qu’elle faisait devenait un supplice, comme si elle dansait sur des lames.\n« Ce conte est affreusement cruel », as-tu murmuré. « Et à la fin ? Est-ce que l’humain l’a aimée en retour ? Tout ce qu’elle a enduré... ça en valait vraiment la peine ? »\nRebecca sourit avec tendresse.\n« La fin n’a aucune importance, pas plus que ce que l’humain a ressenti », a-t-elle dit, les yeux sombres et profonds comme l’océan.\n« Ce qui compte, c’est que la princesse sirène a aimé, follement, celle qu’elle devenait en poursuivant l’amour. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_21010105"
-        },
-        UI_CHAR_DATA_TEXT_21010201 = {
-          ContentDE = "« Si je pouvais vivre une histoire d’amour avec Mademoiselle Rebecca, je mourrais heureux demain. »\n« Quand est-ce que ce monstre quittera enfin notre ville ? »\n« Tu crois que si j’obtiens l’un de ses parfums, ma prochaine relation se passera mieux ? »\n\nLes avis sur la parfumeuse Rebecca sont plus que partagés. D’un côté, on la murmure comme la plus cruelle des créatures. De l’autre, on l’idolâtre telle une ange venue des cieux. L’ensemble de ces récits fragmentés trace deux portraits opposés : \nRebecca, le démon aux charmes mortels. Rebecca, l’ange au parfum d’amour.",
-          TextMapId = "UI_CHAR_DATA_TEXT_21010201"
-        },
-        UI_CHAR_DATA_TEXT_21010202 = {
-          ContentDE = "Pour certains, Rebecca est une créature étrange, inquiétante.\nD’étranges rumeurs circulent à son sujet : On dit qu’elle est une sirène envoûteuse, qu’elle dévore l’âme de ceux qui l’approchent.\nDes récits invérifiables, dira-t-on. Et pourtant, un fait demeure : plusieurs individus, éblouis par sa beauté, ont disparu sans laisser de trace.\nÀ ceux qui l’interrogent, Rebecca répond toujours avec le même sourire rêveur : \n« Ils sont partis vers le Royaume de l’Amour... »",
-          TextMapId = "UI_CHAR_DATA_TEXT_21010202"
-        },
-        UI_CHAR_DATA_TEXT_21010203 = {
-          ContentDE = "Mais alors, ce Royaume de l’Amour, existe-t-il vraiment ?\nCeux qui disent y être allés ne sont jamais revenus pour en parler. Du moins... pas vivants.\nOn les a retrouvés, paralysés, le corps figé par un poison inconnu. Leurs lèvres, à jamais closes, ont emporté le secret de ce royaume.",
-          TextMapId = "UI_CHAR_DATA_TEXT_21010203"
-        },
-        UI_CHAR_DATA_TEXT_21010301 = {
-          ContentDE = "Rebecca se moque éperdument de ce que les gens pensent d’elle. Elle ne vit que pour deux choses :\nCréer des parfums envoûtants, imprégnés d’amour, et les offrir à celles et ceux qui rêvent d’aimer. Et trouver son être destiné, capable d’accepter la beauté... et le venin.",
-          TextMapId = "UI_CHAR_DATA_TEXT_21010301"
-        },
-        UI_CHAR_DATA_TEXT_21010302 = {
-          ContentDE = "Le corps de Rebecca sécrète naturellement un venin invisible, qui s’écoule en permanence par chaque pore de sa peau.",
-          TextMapId = "UI_CHAR_DATA_TEXT_21010302"
-        },
-        UI_CHAR_DATA_TEXT_21010303 = {
-          ContentDE = "Rebecca adore les petites créatures difformes. Celles qui, à l’évidence, ne rentrent dans aucune norme. Comme elle.",
-          TextMapId = "UI_CHAR_DATA_TEXT_21010303"
-        },
-        UI_CHAR_DATA_TEXT_21010304 = {
-          ContentDE = "Pour Rebecca, son « être destiné » ne serait pas quelqu’un capable de résister physiquement à son venin inné.\nElle cherche plutôt un être qui, consciemment, accepterait d’aimer un cœur aussi toxique que le sien.",
-          TextMapId = "UI_CHAR_DATA_TEXT_21010304"
-        },
-        UI_CHAR_DATA_TEXT_21010305 = {
-          ContentDE = "Rebecca est convaincue d’avoir enfin trouvé la personne qu’elle cherchait : son \"être destiné\".",
-          TextMapId = "UI_CHAR_DATA_TEXT_21010305"
-        },
-        UI_CHAR_DATA_TEXT_21010401 = {
-          ContentDE = "C’était un été éclatant. La lumière filtrait à travers les feuilles épaisses, projetant des ombres dansantes au sol. Sous un grand arbre, des enfants formaient un cercle timide, riant à demi-voix. Petite, Rebecca s’est faufilée parmi eux, curieuse. Au centre, une créature étrange : un Périnou, à la fourrure blanche comme neige. Sa blancheur immaculée fascinait, aucun des enfants n’avait jamais vu un tel animal.\n\n« Je peux le caresser ? » demanda Rebecca timidement.\nLes autres hésitèrent, puis s’écartèrent. Rebecca le prit dans ses mains, le caressa doucement. Sous le soleil, ses poils brillaient d’un éclat doré.\nMais soudain, le lapin poussa un cri perçant, sauta de ses bras, et s’enfuit en courant... Il s’effondra à quelques mètres, sans vie. Son pelage perdit sa lumière.\n« C’est elle… »\n« Oui, forcément elle. Ces gens-là, avec des cornes, sont dangereux. Dans l’Empire, de l’autre côté de la mer, on les appelle des \"Démons\". »\n« C’est un... monstre... »\n\nUn à un, les enfants reculèrent, la laissant seule au milieu de l’ombre et du soleil brûlant. Ce jour-là, Rebecca sentit un vide s’ouvrir dans sa poitrine, brûlant, dévorant, que rien ne pourrait jamais combler.",
-          TextMapId = "UI_CHAR_DATA_TEXT_21010401"
-        },
-        UI_CHAR_DATA_TEXT_21010402 = {
-          ContentDE = "Les nuages noirs ont englouti les derniers rayons du soleil. La pluie tombe avec violence, comme le visage de Rebecca, figé dans un éclair : une expression déformée par l’extase, celle d’une prédatrice.\n\nLa \"proie\" ouvre grand les yeux, la bouche entrouverte par la stupeur, il y a à peine une heure, cette même bouche débitait encore les plus belles paroles d’amour du monde. Mais depuis que Rebecca a ôté sa cape et révélé calmement son secret, elle ne crache plus que des injures, comme une bouche d’égout.\n« Espèce de menteuse, de monstre... Qu’est-ce que tu veux faire ?! »\n« T’inviter pour une dernière danse », répond Rebecca en retirant ses gants, toujours souriante. « Un petit cadeau d’adieu. Tu aimes ? »\n\nLa ruelle étroite, noyée de pluie, devient alors un parfait parquet de bal. La pointe de ses pieds effleure les flaques. Ses mains, imprégnées de venin, saisissent fermement celles de son \"cavalier\", l’entraînant dans une valse joyeuse. Le malheureux, incapable de fuir, tremble sous l’effet de la paralysie, sa voix ne produisant qu’un râle rauque et dissonant, une note pourtant exquise aux oreilles de Rebecca. Elle danse plus vivement encore, traçant des cercles sur l’eau.\nUn dernier ploc. C’est la pluie qui s’arrête... ou bien le corps qui s’effondre.\nLe \"cavalier\" a quitté la scène. Rebecca sait que le venin a déjà gagné chacun de ses membres. Elle fixe ce partenaire désormais inerte, puis termine seule sa valse, le cœur un peu vide.\n\n« Même pas capable de tenir jusqu’au bout... Tu n’étais pas le bon non plus », murmure-t-elle en ouvrant son ombrelle. Puis elle s’éloigna, disparaissant dans la lumière tamisée du matin.",
-          TextMapId = "UI_CHAR_DATA_TEXT_21010402"
-        },
-        UI_CHAR_DATA_TEXT_21010403 = {
-          ContentDE = "Rebecca a un jour croisé quelqu’un qui aurait pu l’accepter. Ou plutôt, une semblable.\nElle se souvient d’une femme étrange, une peau rougeoyante comme du feu, mais un regard froid comme la glace. Rebecca n’eut presque rien à faire : elle attendit patiemment le bon moment, la chute. Puis elle tendit la main, prononça quelques mots doux, juste assez sincères. Cela suffit.\n\nLa fonctionnaire impériale, rigide et silencieuse, céda. Elle renia ses serments. Elle trahit les lois qu’elle avait servies une vie durant. Elle effaça les preuves de Rebecca.\nVoilà ce qu’était, au fond, l’incarnation des lois d’Hyperborea : non pas incorruptible, mais simplement jamais mise à l’épreuve. Rebecca sourit avec dédain, s’en alla vers une autre ville, et l’oublia.\nMais les nuits suivantes, dans le silence absolu, alors qu’elle mêlait son venin à un nouveau parfum, Rebecca pensait parfois à elle, à cette femme au teint ardent, et à ses mots :\n« On est du même genre... Des monstres. » Ses doigts tremblaient. Le flacon tombait au sol.\n« Tu voulais tant trouver quelqu’un qui puisse t’accepter... Alors pourquoi as-tu fui, le jour où cette personne s’est présentée ? » demandait Rebecca à son reflet dans la vitre.\n\nIl lui fallut longtemps pour comprendre la vraie raison de sa fuite :\nUn monstre ne tombe pas amoureux d’un autre monstre. Tout comme un poisson échoué n’aimerait pas un autre poisson échoué, même s’ils se maintiennent mutuellement en vie. Il lèvera toujours les yeux vers les oiseaux marins, là-haut. Espérant qu’un jour, l’un d’eux le prenne sous son aile pour le ramener à la mer.\n\nElle ne voulait pas être rejetée comme un monstre. Ni être aimée par un autre monstre.\nCe qu’elle a toujours attendu, c’était qu’on la traite... comme une personne ordinaire.",
-          TextMapId = "UI_CHAR_DATA_TEXT_21010403"
-        },
-        UI_CHAR_DATA_TEXT_21010404 = {
-          ContentDE = "C’était un rêve, un rêve de début d’été.\nTout y était moite, collant, baigné par l’une de ces pluies ensoleillées que Rebecca adore. Elle y revoyait les créatures étranges qu’elle chérissait enfant... mais cette fois, elles lui semblaient fades. Seule une chose attirait son regard : un Périnou, sans cœur.\nLe Périnou l’invita à un \"déjeuner d’amour\". Au menu : grenouille fondante, serpent mariné... et Périnou rôti.\n« Tu as fait rôtir un des tiens », dit Rebecca, en savourant la chair délicate.\n« Parce qu’il ne t’aimait pas. »\n« Hmm... alors toi, tu m’aimes, pas vrai ? »\nLe Périnou ne répondit pas. Il se laissa envelopper, lentement, par Rebecca. Son venin s’insinua lentement, comblant le vide de son cœur absent.\nSous cette pluie baignée de lumière, Rebecca et le Périnou s’enlacèrent.\n« Maintenant, on est enfin complets. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_21010404"
-        },
-        UI_CHAR_DATA_TEXT_23010101 = {
-          ContentDE = "Quand Tabethe réussit un larcin, elle aime revenir sur ses pas. Silencieuse comme un chat, elle s’approche de sa victime... et lui flanque un coup de tentacule bien senti. Juste pour se faire repérer. Les cris, parfois stridents, parfois étouffés, les visages déformés par la colère, les mains qui fouillent frénétiquement leurs poches à la recherche d’une arme... tout cela l’enchante.\nElle en rit, étouffe ses éclats, puis se contorsionne de joie pour imiter leur expression la plus pathétique, avant de s’éclipser, légère comme le vent.",
-          TextMapId = "UI_CHAR_DATA_TEXT_23010101"
-        },
-        UI_CHAR_DATA_TEXT_23010102 = {
-          ContentDE = "Devant vous... cet objet est-il réel, ou bien est-ce Tabethe qui se cache à l’intérieur ?\nDifficile à dire. Pour un œil ordinaire, impossible à détecter. Grâce à son don de mimétisme, elle peut se fondre dans n’importe quel décor, se transformer en n’importe quoi. Une aptitude qui fait d’elle une voleuse d’exception, imprévisible et inattrapable.",
-          TextMapId = "UI_CHAR_DATA_TEXT_23010102"
-        },
-        UI_CHAR_DATA_TEXT_23010103 = {
-          ContentDE = "Tabethe voue une tendresse particulière aux poissons de mer, bien frais. Elle dit que leur goût lui rappelle quelques souvenirs, les rares qu’elle chérisse.\nDes souvenirs vagues, brumeux, venus d’un village sans nom, quelque part sur la côte ouest de l’Empire. Des souvenirs remplis de chair tendre, de lampes jaunes vacillantes, d’embruns poisseux... et d’un ourlet de robe bleue, profond comme l’océan.",
-          TextMapId = "UI_CHAR_DATA_TEXT_23010103"
-        },
-        UI_CHAR_DATA_TEXT_23010104 = {
-          ContentDE = "Tabethe excelle dans l’art de la filature. Quand les voleurs suivent leur proie et pensent rentrer discrètement, ils ignorent souvent qu’elle, les suit déjà à la trace.\nIl fut un temps où elle réservait cette habileté aux marchands, mais ça, c’était avant.",
-          TextMapId = "UI_CHAR_DATA_TEXT_23010104"
-        },
-        UI_CHAR_DATA_TEXT_23010105 = {
-          ContentDE = "Quand le ciel est d’un bleu limpide, Tabethe aime s’asseoir au bord de la rue, tête levée, paupières mi-closes, pour contempler les nuages. Ils ont la forme d’écailles ou de mousse blanche. Le ciel, alors, ressemble à la mer renversée.\nLes rayons du soleil tentent de lui clore les paupières. Lorsqu’elle rouvre les yeux, les passants sont déjà baignés d’une lumière tiède.\nElle s’accoude, l’air absent, et laisse son regard dériver. Marchands fatigués, soldats rigides, enfants querelleurs. Puis, soudain, deux sœurs riant à gorge déployée.\nTabethe les suit du regard jusqu’à ce qu’elles disparaissent, rentrant chez elles, dans une maison éclairée par le couchant.\nAlors, elle se lève et s’éloigne. Dans l’autre sens. Vers les rues sans lumière.",
-          TextMapId = "UI_CHAR_DATA_TEXT_23010105"
-        },
-        UI_CHAR_DATA_TEXT_23010201 = {
-          ContentDE = "Dans un petit port de la côte d’Hyperborea, circule une légende que seuls les voleurs prennent au sérieux : celle de \"Démon Tabethe, la Main Rouge\".\nPetite, vive, insaisissable : rien de ce qu’elle convoite ne lui échappe.\nOn raconte qu’elle n’a ni toit ni adresse, qu’elle se fond dans la foule comme une ombre dans la nuit, et qu’aucun déguisement ne lui résiste.\nOn dit qu’elle change de forme à volonté, que ses métamorphoses trompent même les plus vigilants.\nCes rumeurs ne circulent qu’entre malfrats. Chaque soir, avant de dormir, ils cachent leurs trésors dans la peur muette d’attirer l’attention de Démon Tabethe, la Main Rouge.",
-          TextMapId = "UI_CHAR_DATA_TEXT_23010201"
-        },
-        UI_CHAR_DATA_TEXT_23010202 = {
-          ContentDE = "Un voleur ne rend jamais ce qu’il a volé. C’est une règle. Une évidence.\nEt pourtant, la poupée à la robe bleue est revenue chez sa propriétaire.\nCe fut la seule fois. Démon Tabethe, la Main Rouge avait dérobé cette poupée à un autre voleur, mais au moment de la rendre, elle hésita.\nElle la posa doucement près du lit de l’enfant. Puis, au lieu de partir, elle s’assit, se leva, reprit la poupée, la reposa... Elle lui parla longtemps, comme à une vieille amie qu’on n’a jamais oubliée. Quand le soleil se leva, il lui rappela qu’il était temps de partir.\nLa fillette, les yeux fermés mais éveillée, comprit alors.\nIl y avait eu, un jour, une autre fillette en robe bleue, très chère au cœur de la voleuse.\nEt c’était ce souvenir, plus fort que le désir, qui l’avait poussée à rendre la poupée.",
-          TextMapId = "UI_CHAR_DATA_TEXT_23010202"
-        },
-        UI_CHAR_DATA_TEXT_23010203 = {
-          ContentDE = "Avant d’être connue comme \"Démon Tabethe, la Main Rouge\", elle n’était qu’une voleuse de plus, une petite peste que les marchands fuyaient.\nÀ l’évocation de son nom, tous soupiraient, excédés. Elle ne volait que de la nourriture, mais chaque vol s’accompagnait d’une farce, d’un tour pendable qui finissait toujours par les rendre fous. De fil en aiguille, on se mit à l’appeler « Démon ».\nPlus tard, le « Démon » devint « Démon Tabethe, la Main Rouge ». Et les marchands n’eurent plus jamais à craindre ses tours. Peut-être s’était-elle lassée. Peut-être que quelque chose en elle avait changé. Peu importait : elle n’était plus la même.\nIls cessèrent de l’appeler « Démon ». Pourtant, ce nom ne disparut pas. Il circula parmi les voleurs, porteur d’un tout autre sens.",
-          TextMapId = "UI_CHAR_DATA_TEXT_23010203"
-        },
-        UI_CHAR_DATA_TEXT_23010301 = {
-          ContentDE = "Tabethe ne vole jamais les honnêtes gens. Ses cibles ? Les voleurs. Une voleuse de voleurs.",
-          TextMapId = "UI_CHAR_DATA_TEXT_23010301"
-        },
-        UI_CHAR_DATA_TEXT_23010302 = {
-          ContentDE = "Tabethe n’est pas née en Hyperborea. Sa terre natale, c’est la République de Luca, une contrée éloignée, dont elle n’a gardé qu’un souvenir trouble : la mer noire, les vagues rugissantes, et le naufrage. Elle fut la seule survivante.\nLes flots, pleins de pitié, la portèrent jusqu’aux rivages d’Hyperborea. Quand elle rouvrit les yeux, elle n’était plus l’enfant chérie d’un foyer, mais une fillette sans famille, recueillie dans un foyer d’accueil, une petite fille qu’on appelait Tabethe.",
-          TextMapId = "UI_CHAR_DATA_TEXT_23010302"
-        },
-        UI_CHAR_DATA_TEXT_23010303 = {
-          ContentDE = "Ce jour-là, plusieurs invités en blouses blanches débarquèrent à l’orphelinat. Pour accueillir ces \"hôtes de marque\" venus, disait-on, d’un lieu appelé l’Académie d’Alchimie, les vilains grands s’agitèrent dès l’aube. Tabethe, elle, y vit une chance à saisir.\nLe soir de sa fuite, le ciel nocturne lui rappela les abysses houleuses de ses souvenirs. Même sans tout avoir préparé, elle décida d’en profiter pour s’échapper vers la ville voisine. Rester une minute de plus, c’était se noyer dans l’angoisse.\nSa capacité de mimétisme avait encore progressé. Elle parvint à destination sans qu’aucun adulte ne s’en aperçoive. Pour la première fois, elle découvrit que le ciel pouvait être vaste, libre. Au loin, les étoiles semblaient lui répondre : elles scintillaient doucement.\nÀ partir de cette nuit-là, le ciel ne fut plus la mer profonde qu’elle redoutait, mais une teinte protectrice, complice de ses échappées.\nL’orphelinat de la petite ville de la côte ouest perdit une pensionnaire nommée Tabethe. Et dans la cité voisine, une petite voleuse à la peau sombre et aux tentacules grinçants fit son apparition.",
-          TextMapId = "UI_CHAR_DATA_TEXT_23010303"
-        },
-        UI_CHAR_DATA_TEXT_23010304 = {
-          ContentDE = "Sans la fille de l’étal de poissons, Tabethe serait restée une voleuse.\nElle ne serait jamais devenue \"Démon Tabethe, la Main Rouge\".",
-          TextMapId = "UI_CHAR_DATA_TEXT_23010304"
-        },
-        UI_CHAR_DATA_TEXT_23010305 = {
-          ContentDE = "« C’est vrai que c’est dur pour nous... mais on n’a pas le droit de voler les gens gentils, hein ? » Cette simple question de la fillette frappa Tabethe.\nLes « vilains grands » ne devaient pas faire payer leur cruauté à ceux qui avaient encore du cœur. Si elle ne changeait rien, elle finirait par devenir comme eux.\nUne vilaine grande.",
-          TextMapId = "UI_CHAR_DATA_TEXT_23010305"
-        },
-        UI_CHAR_DATA_TEXT_23010401 = {
-          ContentDE = "Le ciel noir enveloppait le petit orphelinat. Tabethe avançait avec prudence dans le couloir, long et étroit comme un boyau prêt à la digérer toute entière. Elle, qui n’avait rien avalé depuis si longtemps.\nLa cuisine. Vite. Il faut aller à la cuisine.\nLa faim donne un courage insoupçonné. Tabethe hésita à changer d’itinéraire : sur ce chemin, elle risquait de croiser un des « vilains grands » de l’orphelinat.\nIls étaient tous comme ça, les adultes ici. Non seulement ils laissaient les enfants le ventre vide, mais ils frappaient, criaient, blessaient avec des mots aussi durs que leurs mains.\nPourtant, Tabethe prit le risque. Le vide de son estomac chassa la peur. Collée au mur, fondue dans l’ombre, elle se sentait comme une nageuse sur une mer de béton, glissant vers son terrain de chasse.\nMais ce ne fut pas une proie délicieuse qui l’attendait, juste un « vilains grands » en patrouille. Les coups pleuvaient, lourds, et le manche du poêlon de fer, encore imprégné d’une odeur de poisson mijoté, s’abattait sans relâche.\nCe poisson-là, elle l’avait senti toute la journée, supplié de le goûter, pleuré pour en avoir. En vain.\nElle grava chaque coup, chaque insulte au fond de sa mémoire. Elle les mâcha en silence, pour remplir son ventre vide. Un jour, elle partirait. Elle fuirait ce ciel nocturne, lourd comme l’océan, et ce monde où respirer lui faisait mal.",
-          TextMapId = "UI_CHAR_DATA_TEXT_23010401"
-        },
-        UI_CHAR_DATA_TEXT_23010402 = {
-          ContentDE = "La première fois que Tabethe entendit qu’on la surnommait « Démon », ce furent les souvenirs de l’orphelinat qui refirent surface : les marchands n’étaient pas différents des adultes d’autrefois. Tous les mêmes. Tous aussi cruels.\nAlors, un petit goût de vengeance se glissa dans son cœur. Elle, qui jusque-là ne volait que pour survivre, décida de commettre quelque chose digne d’un vrai démon.\nUn soir de lune, elle se glissa jusqu’à l’étal de poissons qu’elle visitait souvent. Quelques poissons, bien alignés. Juste derrière, une cahute de briques bon marché. À l’intérieur : presque rien, sinon un vieux lit, un poêlon, et un tiroir fermé à clé. Son objectif.\nUne brise iodée soufflait, l’ampoule vacillait au plafond. Tabethe hésita, puis agrippa le tiroir si fort que ses phalanges blanchirent. Si elle l’ouvrait, elle deviendrait vraiment ce qu’ils disaient : un démon. \n« Tu ne peux pas prendre ça ! » Elle sursauta et tourna la tête. Ce qu’elle vit d’abord, ce fut un ourlet d’un bleu profond, le bleu pur de la mer. Une robe qui flottait dans l’air, comme la surface de l’eau.\nLa robe appartenait à une fillette au visage doux. Elle attrapa deux poissons et, un peu gênée, lui parla de sa mère malade, de l’argent dans le tiroir, de ces fois où elle avait surpris Tabethe, les yeux brillants, devant les poissons.\nTabethe, pétrifiée, n’eut même pas le temps de réagir : la fille lui fourra les deux poissons dans les bras. Ils étaient lourds, et plus elle tentait de les retenir, plus ils glissaient entre ses doigts.\n« Tu me donnes ça... et toi, tu manges quoi ? »\n« Une nuit sans manger, c’est pas grave... Et puis, je crois que t’as plus faim que moi. »\nSa voix était douce, timide, un petit courant bienveillant. Et dans le cœur de Tabethe, il fit naître de légers remous.",
-          TextMapId = "UI_CHAR_DATA_TEXT_23010402"
-        },
-        UI_CHAR_DATA_TEXT_23010403 = {
-          ContentDE = "Ce soir-là, le poisson offert par la fillette était d’une tendresse inouïe. Pourtant, dès le lendemain, Tabethe disparut du coin.\nUn mélange étrange de culpabilité et de gratitude la rongeait. Ces émotions, confuses et enchevêtrées, laissèrent un goût salé dans son cœur. Elle resta à distance, goûtant ce bouleversement sans jamais revenir déranger la fillette. Ce n’est que bien plus tard, quand la curiosité l’emporta sur le tumulte intérieur, qu’elle se résolut à s’approcher doucement du vieil étal.\nMais nulle trace de la robe bleu profond. Seule la lune pleine éclairait l’échoppe vidée de vie. Les poissons avaient perdu leur éclat, la maison attenante était muette, et les murs de briques semblaient des pierres tombales. Dans un coin, le tiroir, vide.\nTabethe resta figée. Puis elle décida de comprendre ce qui s’était passé.\nLes jours passèrent. Les poissons pourrirent. Elle ne laissa aucun voleur approcher l’étal, comme si elle gardait un trésor, ou plutôt, un souvenir.\nJusqu’à ce qu’un jour, la robe réapparaisse. Mais sa couleur avait changé : ce n’était plus le bleu clair de la mer, mais un gris trouble, celui des eaux polluées.\n« Désolée... Je n’ai plus rien à te donner. Maman est morte. »\nLa voix était lasse. Sur le visage sali de la fillette, deux traces blanches de larmes coulaient, solitaires. Ses yeux, autrefois étincelants, étaient ternes, pareils aux abysses.\nTabethe ne savait que faire. Ses tentacules se nouèrent nerveusement. Elle tâta ses poches à plusieurs reprises, puis sortit lentement un petit morceau de poisson grillé, enveloppé dans du papier huilé, et le tendit à la fillette.\n« Tu me donnes ton poisson ? Et toi, tu manges quoi ? »\n« Je suis habituée à avoir faim. Et puis... je crois que t’en as plus besoin que moi. »\nLa fillette accepta. Les grosses larmes qui tombèrent ensuite lessivèrent son visage en silence. Ces larmes-là sont les bonnes, pensa Tabethe. Celles qui lavent la douleur, qui permettent d’être fragile. Et, tout au fond de ses yeux sombres, quelques étoiles se mirent à briller.",
-          TextMapId = "UI_CHAR_DATA_TEXT_23010403"
-        },
-        UI_CHAR_DATA_TEXT_23010404 = {
-          ContentDE = "Avoir. Perdre. Tabethe avait connu cela deux fois.\nD’abord, elle avait eu l’amour inconditionnel de ses parents... avant que la mer impitoyable ne le lui arrache.\nPuis, elle avait goûté à la chaleur d’un lien fraternel avec la fillette... avant qu’un père revenu de loin ne l’emmène ailleurs.\nL'a-t-on enlevée ? Non. Ce père était revenu du front pour l’emmener loin, vers une vie meilleure. C’était ce qu’il y avait de mieux pour elle, se répéta Tabethe. Elle ne devait pas rester dans l’ombre, pas comme elle. Elle méritait la lumière.\nAlors, elle força un sourire. Elle voulait offrir un vrai sourire pour lui dire au revoir. Mais son cœur se mit à chauffer, puis à picoter, jusque dans son nez, jusque dans ses yeux.\n« Merci, grande sœur Tabethe. »\nCes mots d’adieu vinrent heurter tout ce qu’elle tentait de retenir.\nSi seulement... Elle aurait voulu porter des vêtements qu’on choisit soi-même. Se promener main dans la main avec elle. Goûter de nouveaux desserts. Parler de l’école, grimper par-dessus les murs pour rentrer, faire des bêtises... puis se faire gronder, ensemble.\n« Si seulement je pouvais être ta vraie grande sœur », cria-t-elle en silence.\nMais ses lèvres, après s’être entrouvertes, se refermèrent. Lentement. Fermement.\n« Prends soin de toi. »\nC’était peut-être, après tout, le plus beau des adieux.",
-          TextMapId = "UI_CHAR_DATA_TEXT_23010404"
-        },
-        UI_CHAR_DATA_TEXT_31010101 = {
-          ContentDE = "Se faire comprendre à coups de poing : c’est la règle immuable de Lynn. Peu importe qui se dresse devant elle, sa réponse est toujours la même : « Tu veux contester ? Alors viens goûter à mes poings. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_31010101"
-        },
-        UI_CHAR_DATA_TEXT_31010102 = {
-          ContentDE = "Lynn n’a qu’un seul principe : ne jamais blesser quelqu’un qui n’a rien à voir avec la mission.\nElle raconte s’être imposé cette règle en silence, à l’époque où elle rampait dans la crasse des taudis de Givrelac.\nMais aujourd’hui, au sein de la Légion... elle ne sait plus vraiment combien de temps elle pourra encore s’y tenir.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31010102"
-        },
-        UI_CHAR_DATA_TEXT_31010103 = {
-          ContentDE = "Lynn n’aime pas les enfants. Elle a un jour déclaré : « Sans cette bande de gamins insupportables, je ne serais pas celle que je suis aujourd’hui. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_31010103"
-        },
-        UI_CHAR_DATA_TEXT_31010104 = {
-          ContentDE = "Lynn n’abandonne jamais un camarade en mission. Non pas par bonté d’âme ou par empathie. Mais parce que le règlement l’exige. Elle sait que c’est ce qu’il faut faire pour gagner du prestige. Pour espérer monter en grade. Les missions l’épuisent, mentalement comme physiquement. Il ne lui reste ni l’énergie ni l’espace pour s’inquiéter des autres. Alors, non, elle n’a pas le temps d’être comme ses supérieurs, qui trouvent toujours un mot pour chacun.\nParfois, elle demande quand même à ces jeunes recrues pleines d’enthousiasme si elles regrettent leur choix. Si elles regrettent d’avoir risqué leur vie ici, peut-être pour la perdre. « Regretter ? Jamais. C’est notre devoir. » La recrue avait les yeux qui s’éteignaient peu à peu, mais sa voix restait douce, pleine d’espoir : « Major Lynn... vous allez réussir, n’est-ce pas ? Tout le monde dit que vous ne ratez jamais. »\nLe devoir. Devoir envers la famille. Le travail. L’armée. Ce mot pèse sur Lynn comme un fardeau. Elle rame à contre-courant, agrippée à ces lourdes pagaies qu’on appelle \"devoir\", et à chaque faux mouvement, le courant menace de la ramener au point de départ.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31010104"
-        },
-        UI_CHAR_DATA_TEXT_31010201 = {
-          ContentDE = "La Major Lynn de la XIIIᵉ Légion est une officière en qui ses soldats placent une confiance sans faille.\n\nElle n’a ni la sévérité implacable de Sibylle, ni la finesse manœuvrière de Randy, mais elle possède un charisme bien à elle. Efficace, tranchante, elle agit sans hésiter, mais jamais au détriment de ses camarades. Aucun soldat ne reste en arrière, quelle que soit la mission. Elle grogne souvent sur la charge de travail... mais revient toujours victorieuse. \nOfficière, certes, mais issue du peuple. Et c’est peut-être là sa plus grande force : elle connaît la fatigue, la douleur, et les doutes de ceux qu’elle commande. \nPour les soldats de la XIIIᵉ Légion, Lynn est plus qu’un supérieur : elle est l’une des leurs. Authentique. Humaine. Inébranlable.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31010201"
-        },
-        UI_CHAR_DATA_TEXT_31010202 = {
-          ContentDE = "À l’inverse de la confiance qu’elle inspire aujourd’hui, Lynn n’était pas la bienvenue lorsqu’elle a rejoint la Légion. Habituée à marcher seule, avec une attitude franche et rebelle, elle jurait parmi ces soldats formés en académie militaire. On racontait même qu’elle avait tué des soldats de la Légion avec une cruauté sans nom, et qu’elle avait réussi à infiltrer la XIIIᵉ Légion par des moyens obscurs. Ces rumeurs, vraies ou fausses, alimentaient le mépris. Où qu’elle aille, les railleries la suivaient : \n« Lynn ? Ah, cette opportuniste. On raconte qu’elle a tué ses propres camarades... »",
-          TextMapId = "UI_CHAR_DATA_TEXT_31010202"
-        },
-        UI_CHAR_DATA_TEXT_31010203 = {
-          ContentDE = "Alors que les enfants Solariens de l’Empire étaient encore au collège, Lynn avait déjà commencé à travailler. Elle avait extrait du Phoxène dans les mines, porté des tonneaux dans les tavernes, servi comme domestique dans des maisons riches... Puis elle devint Chasseuse de Phoxène, une tueuse à gages. Son talent et son adresse remarquables lui valurent rapidement une réputation grandissante, et ses clients se firent de plus en plus nombreux. Les missions, d’abord ordinaires, devinrent peu à peu plus obscures, certains contournant même les Asphodèles pour lui confier des \"petits boulots\" en secret.\n\nEntre ses 18 et 20 ans, Lynn était connue comme une \"messagère\". Chaque nuit, elle recevait des \"lettres\" de ses employeurs à bord de carrosses dorés venus de la ville intérieure. Elle incarnait, dans ses armes, les pensées intenses, passionnées, presque folles de ses commanditaires, puis partait avant l’aube pour livrer ces messages, affrontant vent et neige durant plusieurs jours avant de revenir. \n\nAux yeux de Camilla Scarlet, la jeune fille nommée Lynn entrait toujours dans la taverne au crépuscule, secouait la neige de sa cape, achetait la boisson la moins chère, et restait seule près de la fenêtre, silencieuse, jusqu’à la fermeture. Rarement, elle engageait la parole avec Camilla, comme ce jour où elle demanda un mouchoir : « Je ne veux pas que ma famille voie ça », murmura-t-elle, « j’ai… quelque chose sur le visage. » Camilla observa la tache rouge foncée sur son visage et fronça les sourcils, son odorat aiguisé détectant l’odeur âcre qui s’en dégageait. « Merci », dit Lynn en prenant le mouchoir. Un mince sourire fendit son visage froid, avant qu’elle ne disparaisse dans le vent et la neige.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31010203"
-        },
-        UI_CHAR_DATA_TEXT_31010204 = {
-          ContentDE = "Les armes à feu sont devenues les plus fidèles compagnes de Lynn. Mais à l’origine, elle ne les aimait pas. Leur poids signifiait bien plus qu’un simple objet à porter. Il fallait en prendre soin, les entretenir sans relâche, trouver des munitions, chères, rares, souvent volées, et surtout, porter le fardeau de la peur... et de la culpabilité.\nMais face à une balle, tous sont égaux. Quand elle levait son arme, il n’y avait plus de différence entre elle et ceux d’en haut. Plus de titres, plus de rangs. Seulement un doigt sur une gâchette. Lynn n’avait jamais connu l’égalité dans le regard des autres.\nMais le métal froid d’un pistolet, lui, la lui avait offerte.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31010204"
-        },
-        UI_CHAR_DATA_TEXT_31010302 = {
-          ContentDE = "Lynn prend souvent des petits boulots à côté pour arrondir ses fins de mois, ce qui est strictement interdit dans la XIIIᵉ Légion. Mais elle s’en fiche, du moment que ses supérieurs ne la découvrent pas.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31010302"
-        },
-        UI_CHAR_DATA_TEXT_31010303 = {
-          ContentDE = "Le temps a passé, et Lynn a fini par s’imposer dans la Légion. Les rumeurs qui couraient à son sujet se sont tues, balayées par sa puissance. Certains camarades, même, se sont sentis galvanisés par sa détermination, redoublant d’ardeur au service de l’Empire. Certains l’ont même appelée « héroïne », fascinés par sa précision chirurgicale : ses deux pistolets traversaient chair et os sans jamais faillir, menant à bien mission après mission, même les plus \"impossibles\".\nMais cette admiration aveugle n’a jamais éveillé la moindre fierté chez Lynn. Dans son cœur, il n’y avait ni fierté, ni reconnaissance, seulement de l’amertume. Elle était une soldat qui tuait sans sourciller, une arme braquée sur ses propres semblables, une esclave vendue pour quelques billets. Elle pouvait porter bien des masques. Mais sûrement pas celui d’une héroïne.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31010303"
-        },
-        UI_CHAR_DATA_TEXT_31010304 = {
-          ContentDE = "Lynn se souviendra toujours de ce matin-là. Le premier cri des jumeaux déchira le souffle glacé de Givrelac, s’insinuant jusque dans ses tympans, plus tranchant que le vent lui-même.\nCe jour-là, les nouveau-nés emportèrent avec eux la vie vacillante de leur mère, comme une bougie qui s’éteint... et avec elle, la routine terne mais supportable que Lynn appelait « sa vie ». Ce fut le début de leur enfance. Et la fin de la sienne.\nElle pensait à eux, « mon frère, ma sœur », comme elle les appelait, toujours avec une lassitude amère.\nUn jour, elle le savait, elle finirait par devenir égoïste. Elle les enverrait promener, les abandonnerait, les laisserait derrière pour mener enfin la vie qu’elle voulait vraiment.\nChaque matin, elle se répétait ces mots, les dents serrées. Puis elle se mettait au travail. En attendant ce jour, il fallait gagner de l’argent. Toujours plus. Assez pour qu’ils puissent vivre dignement. \nPour qu’ils n’aient jamais à devenir comme elle.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31010304"
-        },
-        UI_CHAR_DATA_TEXT_31010305 = {
-          ContentDE = "Lynn n’a jamais parlé à personne de son rêve d’enfant. La seule fois, ce fut un soir de Nouvel An, où elle s’était enivrée avec des camarades qui, comme elle, ne pouvaient pas rentrer chez eux. \n« Quand j’étais petite... je voulais devenir une héroïne. » Lynn parlait à moitié endormie, la voix pâteuse.\n« Ouah... alors maintenant, entre toi et ton rêve... il doit bien y avoir, genre... la distance entre la Capitale Impériale et la Capitale Élyséenne... »\n« Tu as raison. » Ce fut la seule fois où Lynn ne répondit rien aux moqueries bon enfant de son supérieur.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31010305"
-        },
-        UI_CHAR_DATA_TEXT_31010401 = {
-          ContentDE = "Lynn, peu appréciée, restait toujours en marge lors des missions, fuyant ses coéquipiers inutiles pour agir seule. Ce comportement effrayait Randy, son supérieur direct, qui ne cessait de répéter que « les temps changent », « qu’il faut valoriser l’esprit d’équipe » et « la discipline militaire ». Lynn ne comprenait pas. Après tout, tant que la mission est accomplie, qu’importe qui l’a faite, ni comment ? Le plus important, est-ce que l’Empire se soucie des actes d’un ou deux soldats ?\n« Je n’ai pas besoin de tout ça », l’interrompit-elle d’un ton impatient. \n« Tant que la mission est terminée, ça suffit. Mon arme, voilà mon équipe. »\nElle n’avait pas besoin d’alliés ni d’aide. Seule, c’était ainsi qu’elle survivait.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31010401"
-        },
-        UI_CHAR_DATA_TEXT_31010402 = {
-          ContentDE = "Ce n’était qu’une mission banale. Du moins, c’est ce que Lynn avait cru. Transporter une cargaison : une tâche simple, comme elle n’en avait pas eue depuis longtemps. Le soulagement d’un moment de répit lui fit presque oublier de s’interroger : pourquoi payer aussi cher pour une simple livraison ?\nMais ce n’était qu’un piège, tendu par ses employeurs. Lynn, pensaient-ils, est une arme fiable, qui ne rate jamais sa cible. Mais une arme reste une arme. Et il était temps de lui faire révéler toute sa valeur.\nLes marques tracées sur la carte, les habits conçus pour dissimuler une silhouette féminine, le cliquetis sec du chargeur enclenché, Lynn avait, comme toujours, préparé chaque détail. Pourtant, à l’endroit convenu, ce n’était pas un \"destinataire\" qui l’attendait... mais une escouade de soldats impériaux, armes au poing.\n« Utiliser une fille comme appât pour couvrir sa fuite... pas très chevaleresque. » ricana celui qui semblait être leur chef. « Mais vous, mademoiselle, je pense qu’on devrait discuter ailleurs, non ? »\n\nLynn ne se souvenait plus combien de fois elle avait pressé la gâchette ce jour-là. Jusqu’à ce que le chargeur soit vide. Même la tête plaquée dans la boue, elle continuait à tirer mécaniquement, suppliant en silence qu’un ultime miracle surgisse de ce petit morceau de métal. \nElle le savait pourtant : nul ne s’échappe du filet de la XIIIᵉ Légion. \nDans une flaque à quelques pas, elle aperçut l’officier blond s’approcher, silhouette découpée à contre-jour, ses bottes militaires soulevant l’eau sale. « Je crois que vous devriez écouter ce que j’ai à proposer, Mademoiselle Lynn. »\n\n« Dis-moi pourquoi tu veux rejoindre la Légion. » Derrière la vitre d’interrogatoire, celle qu’on appelait la « Commandante » parlait d’un ton calme. \n« Randy, tais-toi. Laisse-la répondre. »\n« Parce que... » dit-elle. Lynn inspira profondément. Elle repensa à ce crépuscule, un mois plus tôt. L’eau stagnante, le reflet rouge sang du ciel. « Ce fichu ciel rouge, ce soir-là... il était magnifique. » murmura-t-elle. « J’aimerais le revoir... encore quelques fois. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_31010402"
-        },
-        UI_CHAR_DATA_TEXT_31010403 = {
-          ContentDE = "Petite, Lynn faisait la loi dans les rues. C’était la \"grande sœur\" du quartier, celle qui donnait les ordres et menait une bande d’enfants de son âge dans des \"missions de combat\" : contrecarrer les plans des voleurs, recoudre de vieux draps pour les offrir aux mendiants, démanteler les trafics organisés par les riches dans les taudis.\nIls se faisaient appeler les Justiciers, bien décidés à éradiquer tous les crimes des taudis.\nLe soir, après leur \"opération\", ils se retrouvaient pour fêter leurs réussites et se motiver pour le lendemain. Et quand les gardes véreux du Bureau de la Sécurité venaient les disperser, Lynn se plaçait toujours devant les autres, même si elle était aussi chétive qu’eux.\nMais Lynn ne s’en contentait pas. Elle répétait souvent à ses camarades qu’un jour, quand elle serait grande, elle irait botter les fesses des petits chefs de la cité intérieure.\nElle promettait qu’un jour, tout le monde ici mangerait du pain blanc, boirait du lait, goûterait au miel. Un jour, elle deviendrait la grande héroïne du quartier.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31010403"
-        },
-        UI_CHAR_DATA_TEXT_31010404 = {
-          ContentDE = "En revenant à Givrelac, Lynn découvrit que tout avait peu changé.\nPrès de la statue sur la petite place, des enfants jouaient aux cailloux, par petits groupes. Lynn n’aimait pas spécialement les enfants. Mais le visage d’une petite fille lui parut étrangement familier, si bien qu’elle tendit la main et lui demanda son nom.\nL’enfant, couverte de poussière, ne répondit pas. Fascinée par ce visage inconnu, elle lui retourna la question : « Et toi, t’es qui ? Je t’ai jamais vue ici. »\nSes grands yeux curieux se posèrent sur l’uniforme impeccable de Lynn, puis sur son pistolet brillamment entretenu. Avec un mélange d’émerveillement et de timidité, elle tendit la main pour toucher le protège-bras de Lynn. Ce geste, à la fois candide et naturel, lui rappela la gamine intrépide qu’elle avait été autrefois. Elle tenta de sourire, un sourire qui ne venait plus si facilement, mais un cri au loin coupa court à cet instant fragile.\nUne jeune femme accourut, attrapa l’enfant et la tira en arrière. Elle recula de quelques pas, se courba à plusieurs reprises, visiblement paniquée, et balbutia d’une voix basse et tremblante : « Pardon, officière... elle ne voulait pas vous offenser, elle ne comprend pas encore... je vous en prie, excusez-la. »\nDécontenancée, Lynn resta figée. Elle détailla la femme. Derrière son visage amaigri et pâle, les souvenirs refirent surface, cette femme... c’était une ancienne camarade, une amie d’enfance, avec qui elle jouait dans les rues.\nLa joie de la retrouver s’éveilla un instant dans son cœur... mais cette silhouette, à genoux devant elle, humble et terrorisée, la laissa muette. Elles n’étaient qu’à quelques pas l’une de l’autre. Mais Lynn ne parvint pas à tendre la main pour l’aider à se relever.\nDans un silence étouffant, elle murmura simplement : « ... Ce n’est rien. »\nPuis elle tourna les talons, presque en fuite. Derrière elle, les réprimandes de la mère et les pleurs de l’enfant résonnaient comme des aiguilles minuscules, qui venaient s’enfoncer droit dans son cœur.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31010404"
-        },
-        UI_CHAR_DATA_TEXT_31020101 = {
-          ContentDE = "Hilda a déjà réussi à faire ses courses cinq jours de suite dans la même boutique, en obtenant à chaque fois la remise \"nouveau client\".\nL’art de se fondre dans le décor... appliqué au commerce de proximité.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31020101"
-        },
-        UI_CHAR_DATA_TEXT_31020102 = {
-          ContentDE = "Comme bien des servantes d’élite, Hilda était réputée pour sa polyvalence.\nMais s’il y avait un domaine où elle excellait, c’était le nettoyage, peu importait la nature de ce qu’il fallait \"faire disparaître\".\nEt son outil préféré ? Les armes à feu.\nChaque fois qu’elle devait recourir à cette méthode, ses lèvres trahissaient un sourire discret, presque imperceptible. Comme si ce \"travail\" était, pour elle, un rare moment de plaisir.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31020102"
-        },
-        UI_CHAR_DATA_TEXT_31020103 = {
-          ContentDE = "Le lien entre Hilda et Flora dépassait largement celui d’une simple maîtresse et de sa servante. En privé, elles essayaient ensemble des vêtements, testaient différents maquillages... comme deux amies ordinaires.\nDifficile d’imaginer, dans ces moments-là, qu’Hilda était la même personne que celle qui, en pleine bataille, vidait ses chargeurs sans ciller, dansant au rythme des balles comme si elle suivait une mélodie cachée.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31020103"
-        },
-        UI_CHAR_DATA_TEXT_31020104 = {
-          ContentDE = "En tant que servante, Hilda savait par cœur où se trouvait chaque robe de Flora dans l’armoire. Elle connaissait aussi chaque ruelle du quartier, assez pour s’y faufiler en cas de danger et faire évacuer Flora sans délai.\nSon esprit était rempli de ce genre de détails anodins, minutieusement classés comme un écrin de bijoux : aucun mélange, aucun oubli. En somme, Hilda se trompait rarement.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31020104"
-        },
-        UI_CHAR_DATA_TEXT_31020105 = {
-          ContentDE = "Hilda se satisfaisait plutôt bien de sa vie actuelle.\nElle avait encore recours, à l’occasion, à la violence pour régler les problèmes rapidement. Et elle devait parfois accepter une mission bien rémunérée entre deux moments de répit, afin d’assurer la subsistance du duo. Mais désormais, elle possédait des choses qu’elle n’aurait jamais osé espérer autrefois. Par exemple, le droit de dire franchement ce qu’elle ressentait, sans craindre pour son statut.\nOu celui de regarder Flora non plus comme une cible à surveiller, mais avec l’attention d’une amie. Surtout, elle n’agissait plus selon les ordres d’un autre.\nElle vivait enfin selon ses propres choix, et cela faisait toute la différence.\nElle était redevenue elle-même.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31020105"
-        },
-        UI_CHAR_DATA_TEXT_31020201 = {
-          ContentDE = "Il est rare que l’on fasse vraiment la connaissance d’Hilda.\nLa plupart du temps, elle se tient aux côtés de sa maîtresse, Flora, tandis que tous les regards convergent naturellement vers cette dernière. Hilda, toujours un pas en retrait, semble n’être qu’une présence diffuse.\n« Il y a bien une domestique avec elle, non ? Ou peut-être pas ? Enfin, parlons plutôt de cette fascinante Mlle Flora, vous ne trouvez pas ? »\nUne impression vague, dont Hilda se satisfait pleinement. En réalité, elle s’y applique avec rigueur : tête baissée, voix douce, gestes mesurés, une posture discrète qui la fond dans l’ombre de Flora.\nAutrement dit, lorsqu’on retient le nom d’Hilda, ce n’est pas qu’on l’a rencontrée.\nC’est qu’elle a estimé que vous le méritiez.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31020201"
-        },
-        UI_CHAR_DATA_TEXT_31020202 = {
-          ContentDE = "Hilda aimait la sensation de se tenir dans l’ombre de Flora. C’était là qu’elle se sentait en position de force.\nComme si elle se trouvait derrière une glace sans tain, silencieuse mais toujours attentive, scrutant les passants d’un regard affûté. \nElle ne quittait sa position qu’en de très rares circonstances. Deux cas seulement la poussaient à passer devant Flora :\nSoit la personne en face pouvait s’avérer un allié utile, et Hilda prenait les devants pour négocier.\nSoit elle représentait un danger potentiel, et Hilda intervenait pour l’éliminer.\nMais ces deux types d’individus se ressemblaient souvent. Pire encore : parfois, il suffisait d’une seconde pour qu’un allié devienne une menace.\nVoilà pourquoi, jusqu’au dernier instant, Hilda préférait rester tapie dans l’ombre, invisible mais prête à agir.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31020202"
-        },
-        UI_CHAR_DATA_TEXT_31020203 = {
-          ContentDE = "Hilda n’était pas la servante exclusive de Flora. En cas de besoin, elle acceptait aussi des missions ponctuelles commanditées par d’autres, afin de subvenir aux besoins de leur vie d’exil. Mais elle posait trois conditions.\nLa première : la mission ne devait en aucun cas représenter un danger pour Flora.\nLa deuxième : aucune conversation superflue ne devait avoir lieu au-delà de ce qui était strictement nécessaire.\nLa troisième semblait la plus simple, mais c’était en réalité la plus difficile à remplir : il fallait pouvoir payer très cher.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31020203"
-        },
-        UI_CHAR_DATA_TEXT_31020301 = {
-          ContentDE = "En privé, Hilda n’est ni silencieuse ni douce. Elle peut même se montrer mordante, parfois violemment sarcastique.\nUn contraste surprenant... ou pas tant que ça, si on y réfléchit bien.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31020301"
-        },
-        UI_CHAR_DATA_TEXT_31020302 = {
-          ContentDE = "Avant de devenir une servante, Hilda avait eu une autre vie. Un autre rôle.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31020302"
-        },
-        UI_CHAR_DATA_TEXT_31020303 = {
-          ContentDE = "Hilda aimait tailler les fleurs à sa manière, parfois sans ménagement. C’était sa façon d’évacuer ses émotions.\nCar être à la fois servante et espionne, c’est exercer deux rôles où l’on accumule facilement de la tension... voire, parfois, un profond dégoût de soi.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31020303"
-        },
-        UI_CHAR_DATA_TEXT_31020304 = {
-          ContentDE = "Dans sa courte carrière d’agent, Hilda n’avait jamais mené à bien la moindre mission.\nNon qu’elle en fût incapable, ni même négligente. Simplement, elle ne voulait pas.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31020304"
-        },
-        UI_CHAR_DATA_TEXT_31020305 = {
-          ContentDE = "Hilda avait trouvé une nouvelle vie. Elle arpentait les montagnes sauvages qu’elle n’avait jamais vues, flânait dans les ruelles qu’elle n’avait connues qu’à travers les livres. Et, comme toujours, elle suivait Flora, discrète, silencieuse, dans son ombre.\nParfois, alors qu’elle observait le dos frêle de cette jeune fille marchant devant elle, une pensée lui traversait l’esprit, une pensée presque \"déplacée\" :\nToutes deux avaient encore des parents quelque part... mais la seule famille qui comptait, désormais, c’était elles.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31020305"
-        },
-        UI_CHAR_DATA_TEXT_31020401 = {
-          ContentDE = "L’enfance de Hilda fut lumineuse et confortable.\nChaque matin, elle se réveillait dans la douceur des draps de velours, encore habitée par ses rêves de la nuit. Contrairement à tant d’autres, elle n’avait pas à se soucier du pain du lendemain.\nAu petit-déjeuner, elle retirait avec soin les croûtes de son pain. À l’heure du goûter, elle grattait l’excès de crème sur les gâteaux, pour éviter l’écœurement du trop sucré.\nLe soir venu, avant de s’endormir, elle lisait des poèmes à voix basse sous la lumière du grand lustre du salon, mythes anciens ou romances modernes, peu importait.\nSa vie, alors, ressemblait à une vaste peinture pastel. Mais comme tout tableau, elle savait qu’il ne s’agissait que d’une surface fragile, facile à percer :\nDans le paysage de son enfance, il manquait quelque chose de fondamental. Ses parents.\n\nHilda était la fille d’un couple à la fois noble et militaire, deux agents infiltrés au sein de la IVᵉ Légion. Peu de nobles acceptaient de rejoindre cette Légion. Non pas que les entraînements infernaux ou les missions suicidaires les rebutent le plus. Ce qui effrayait vraiment, c’était l’engrenage d’une immense toile d’espionnage : une fois pris dans ses mailles, on ne pouvait plus s’en extraire. Adieu la stabilité. Bonjour le collier. On devenait un chien de chasse. À moins de supplier pour gravir les échelons, quitte à tout y laisser, liberté, honneur, vie.\n\nLe père d’Hilda, noble ruiné, vivait ce dilemme en permanence : élevé au-dessus des roturiers, mais trop pauvre pour profiter des mondanités. Frustré, il voulut prouver sa valeur, et rejoignit la Légion. On l’envoya dans un pays voisin, où, chaque jour, il se fondait dans la haute société, vêtu de costumes repassés et muni d’une canne, se faisant passer pour un haut fonctionnaire. Il banquait, buvait, souriait, et glanait, dans l’ivresse des autres, des secrets utiles à l’Empire.\n\nComme dans toute histoire d’agents, le sixième hiver de sa mission lui offrit une rencontre. Une femme aux cheveux rouges, espionne elle aussi, nom de code : Concerto. On l’admirait dans toute la Légion. Un rendez-vous secret. Des balles sifflantes. Le parfum d’un long imperméable. Un toit battu par le vent. Un dîner empoisonné. Des ennemis sans panache. Des verres à moitié vides. Une robe rouge. Et, surtout, un renseignement vital récupéré in extremis.\n\nTous les ingrédients étaient réunis. Il ne restait qu’à appuyer sur la détente.\nEt Hilda, née de cette combustion étrangère, en fut la dernière lueur : éclatante, brûlante... mais seule. Elle grandit dans l’ancien manoir de son père.\nElle ne voyait sa mère qu’une fois par mois. Quant à son père, elle n’en gardait qu’un nom... et un visage à peine esquissé.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31020401"
-        },
-        UI_CHAR_DATA_TEXT_31020402 = {
-          ContentDE = "À 12 ans, Hilda comprit enfin ce qui rendait sa famille si particulière.\nElle comprit pourquoi elle ne pouvait voir sa mère que les nuits de pleine lune, ces nuits où la lumière se répandait à flots, rendant les espions plus visibles, et leur offrant un rare instant de repos.\nCes soirs-là, Hilda fermait son recueil de poèmes. Elle n’avait plus besoin d’allumer toutes les lampes de la maison pour chasser sa solitude. Elle allait sur le balcon, et parlait avec sa mère.\nLa plupart du temps, elle récitait les vers qui l’avaient marquée. Parfois, sa mère lui racontait des choses vues au loin : des chats poursuivis par des chiens dans des ruelles étrangères, des amoureux chuchotant sous les remparts, ou encore des histoires anciennes, si différentes de celles racontées dans les livres.\n\nMadame Concerto, sa mère, évitait de trop parler d’elle-même. Les dangers qu’elle avait vécus ne pouvaient être racontés sans les déformer, leur donner un faux parfum d’aventure romantique. Et elle refusait que sa fille suive cette voie, même si elle n’avait jamais haï son métier.\nLe père, lui, pensait autrement. À ses rares retours, il affirmait que Hilda devait marcher dans leurs pas, qu’elle était née pour ça. Une fidélité brute à l’Empire, peut-être, mais aussi, une lucidité cruelle : dans une telle famille, une vie normale était impossible. La Légion finirait par la réclamer, d’une manière ou d’une autre.\n\nEt ainsi, une brèche s’ouvrit entre les parents. Une faille difficile à colmater.\nLors de sa deuxième rencontre avec son père, Hilda entendit leur dispute éclater. Le ton monta, suivi du bruit de pierres brisées : leur altercation s’était changée en combat, assez bruyant pour attirer des soldats à proximité. C’est ce soir-là qu’Hilda prit une décision. Elle voulait réparer ce foyer brisé. Et surtout... elle voulait voir ses parents plus souvent, leur parler ailleurs que sous la lune.\nElle rêvait même d’accomplir des missions à leurs côtés, dans l’ombre, avec pour toute lumière le reflet d’une lame, et leurs regards bienveillants.\n\nAlors, par une nuit de neige, à l’âge de 15 ans, elle referma ses recueils de poèmes. Elle éteignit les grandes lumières de la vieille demeure paternelle. Puis frappa à la porte d’un monde caché. Ce fut un départ, une fugue parfaitement préméditée.\nCe fut aussi le début d’un apprentissage : les balles, les lames, les silences.\nEt enfin, elle rejoignit la IVᵉ Légion. Fleur empoisonnée. Épine invisible. Ombre fidèle.\nÀ l’image de sa mère.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31020402"
-        },
-        UI_CHAR_DATA_TEXT_31020403 = {
-          ContentDE = "Hilda ne se souvenait plus très bien de sa vie avant sa rencontre avec Flora.\nSon esprit était rempli de choses plus importantes : c’était sa toute première mission. Sa cible : Flora, fille d’un noble au rang si élevé qu’on peinait à le décrire.\nSa couverture : une servante. \nSon objectif : la protéger, rester à ses côtés... et attendre les instructions à venir.\n\nElle récitait son protocole en boucle, le cœur à la fois curieux et inquiet, tandis qu’elle franchissait trois lourdes portes. De l’autre côté l’attendait une cour baignée de fleurs... et une jeune fille à peine plus âgée qu’elle.\nÀ cet instant, Hilda, qui croyait être devenue une véritable espionne, sentit le doute l’envahir. Était-ce les yeux indifférents de Flora qui ne frémirent pas d’un cil en la voyant ? Était-ce ce jardin éblouissant, doré comme une pièce montée d’apparat, cerné de murs trop hauts ?\nPuis les portes se refermèrent derrière elle dans un grondement sourd. Elles se retrouvèrent seules. Et ce n’est qu’alors que Flora, jusqu’ici muette, esquissa un sourire.\nBien plus tard, Hilda comprit : elle était la toute première personne du même âge que Flora rencontrait. Peut-être était-ce cela qui avait fait naître ce sourire si rare.\nDès lors, elles vécurent comme une maîtresse et sa servante dans cette cage dorée,\nun quotidien confortable, rempli de bavardages, de fleurs à soigner, de rires partagés. Mais chaque nuit sans lune, Hilda enfilait de nouveau ses habits d’agent.\nEt dans l’ombre, elle rapportait tout : les faits, les gestes, les paroles. Même ceux de Flora.\n\nIl lui arrivait, parfois, de douter. De se sentir coupable. Trahir ainsi la confiance de Flora... était-ce vraiment nécessaire ? Mais elle se répétait que tout cela, c’était pour la protéger. Et dans ce paradoxe amer, elle poursuivait son œuvre clandestine.\nDehors, hors de la cage dorée, rien n’avait vraiment changé. Pendant sa formation, Hilda avait souvent entendu parler de l’insaisissable « Dame Concerto »...\nMais elle n’avait jamais croisé sa mère dans les rangs de la IVᵉ Légion. Quant à son père, c’était encore pire : aucun signe. Était-il parti pour une mission encore plus secrète ? Ou bien avait-il succombé dans un pays lointain, oublié de tous ?\nHilda n’en savait rien. Elle n’avait pas le droit de savoir.\n\nElle continuait donc, comme toujours, à revenir certains soirs de pleine lune dans l’ancien manoir de son père. Elle y attendait sa mère, qui rentrait de nulle part, toujours avec un bouquet de fleurs un peu fanées, ou un gâteau froid... et une litanie inlassable de recommandations.\nDepuis qu’Hilda était devenue la servante de Flora, Concerto, cette femme redoutée dans toute la Légion, semblait de plus en plus être une mère ordinaire, répétant toujours les mêmes phrases : lui dire de partir, de quitter cette vie. De retrouver une existence normale.\nMais toutes deux savaient la vérité : Dans la IVᵉ Légion, il ne suffisait pas de saluer poliment pour sortir dignement d’un bal. Ici, pas d’issue. Pas de musique douce. Pas de lumière tamisée.\nSeulement une longue danse solitaire, chacune de leur côté, et qui ne finirait jamais.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31020403"
-        },
-        UI_CHAR_DATA_TEXT_31020404 = {
-          ContentDE = "Lors d’une rare visite familiale au manoir, Hilda aperçut par hasard un dossier manuscrit posé sur le bureau de sa mère.\nC’était la première fois qu’elle lisait noir sur blanc ce nom : « Dame Concerto ».\nC’était la première fois aussi qu’elle entrevoyait ce visage que sa mère ne montrait jamais. Des factions extrêmes au sein même du palais avaient reçu le soutien du sous-chef de la IVᵉ Légion. Leur objectif : éliminer tout élément instable dans l’Empire. Et au centre de leur plan se trouvait Flora.\nCelle à qui l’on avait confié cette mission capitale... n’était autre que Dame Concerto.\n\nRien d’étonnant à cela : Concerto était une légende au sein de la Légion, une figure invincible. Mais plus Hilda lisait, plus le texte lui glaçait le sang.\n« La servante du sujet, Hilda, est une excellente espionne. Si elle accepte de coopérer, la réussite de l’opération est assurée. Toutefois, Hilda accorde une grande valeur à ses liens personnels. Si elle refuse de participer et choisit de protéger Flora, toutes les mesures nécessaires seront prises, sans aucune restriction, pour garantir l’accomplissement de la mission. » Hilda tremblait en tenant le feuillet trop léger entre ses doigts. Elle, la jardinière censée éloigner les nuisibles, allait devenir la proie d’une toile déjà tissée.\nEt celle qui, quelques heures plus tôt, lui parlait en souriant, avait déjà scellé son sort.\nTous les conseils maternels pour quitter la Légion... n’étaient plus que les dernières traces de chaleur avant la nuit.\nEt de l’autre côté du cauchemar, il y avait Flora, sa maîtresse, son amie, peut-être même... une sœur.\n\nHilda ne savait plus quoi penser. Elle repartit précipitamment, laissant derrière elle une mère qui ne lui demandait plus de partir, comme si, elle aussi, avait déjà fait son choix.\nDans le jardin doré, Hilda n’arrivait plus à sourire sans que la tristesse ne transperce son masque. Et Flora, bien sûr, l’avait remarqué.\nFlora prit les devants. Elle demanda si Hilda avait reçu un ordre concernant sa personne. Face à son silence effaré, Flora lui répondit avec calme : dans une cage aussi luxueuse, rien n’était laissé au hasard. Comment aurait-elle pu croire, un seul instant, que Hilda n’était que sa servante ?\nEt pourtant, au milieu de ce monde entièrement factice, les jours et les nuits passés avec Hilda... étaient devenus sa seule certitude.\n\nElle lui prit la main, la serra dans ses bras. Et ce geste fit pencher la balance dans le cœur hésitant d’Hilda. Alors, elles en discutèrent longuement, trois jours, trois nuits, au milieu des fleurs. Puis elles prirent leur décision : fuir. Quitter à jamais cette cage dorée.\nAu matin du départ, un brouillard discret couvrait la ville. Les portes s’ouvrirent, pour la première fois, sans surveillance visible. Et sous ce voile pâle, Hilda s’en alla avec une silhouette fine dissimulée dans son ombre.\n\nQuand les agents postés aux abords du jardin découvrirent la disparition de Flora, il était déjà trop tard. Dans les sept marchés de la Capitale Impériale, à la même heure, sept jeunes filles richement vêtues entonnèrent la même chanson. Toutes portaient les traits de Flora, soigneusement camouflés sous des illusions. Même Dame Concerto, venue en personne, ne put discerner laquelle était la vraie.\n\nLa confusion s’étendit à toute la cité. Et dans le tumulte, deux silhouettes plus discrètes, habillées simplement, prirent le chemin inverse de la foule, et quittèrent la cité, guidées par un itinéraire que Hilda avait préparé depuis longtemps, tandis que derrière elles, les palais dorés se teintaient peu à peu de rouge, sous le soleil naissant.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31020404"
-        },
-        UI_CHAR_DATA_TEXT_31020405 = {
-          ContentDE = "Dans la mémoire actuelle d’Hilda, le visage de sa mère était devenu flou. Quant à son père, il n’était plus qu’une silhouette pâle et incertaine.\nElle gardait pourtant en tête quelques récits légendaires entendus après son entrée dans la Légion, à propos de Dame Concerto. Le grand public ne connaissait guère ce nom. Mais dans les rangs de la IVᵉ Légion, chaque explosion inexpliquée, chaque assassinat mystérieux, chaque chaos sans cause apparente était aussitôt attribué à elle.\nHilda avait du mal à associer ces histoires à sa propre mère. C’est d’ailleurs pour cela qu’elle les retenait si bien. Quant aux souvenirs d’avant, ils avaient été soigneusement taillés, comme des branches de fleurs. Ne restaient que les moments les plus beaux :\nLa première fois qu’elle avait vu son père, à l’âge de 10 ans. Le jour où elle avait appris un mot rare et doux à la fois. Ou encore le soir où elle avait terminé le recueil de poèmes offert par sa mère. Dans ces instants, sa mère était toujours la même : patiente, souriante, une présence calme qui répondait parfois.\nMais au fond d’elle, Hilda conservait une image bien plus nette.\n\nC’était une nuit particulière : son père était revenu, ils s’étaient violemment disputés.\nEt soudain, dans la lumière incertaine de la lune, Hilda avait vu ce qu’elle n’avait jamais remarqué jusque-là : Le visage de sa mère s’était ridé. Comme les fleurs fanées qu’elle rapportait parfois, le temps avait marqué cette femme autrefois intouchable. En voyant son expression tourmentée, Hilda avait compris qu’une autre voie existait.\nUne voie semée d’épines, peut-être... Mais qui permettrait de briser les chaînes invisibles qui la reliaient à elle.\nElle fit son choix. Elle entra dans l’ombre.\nContre toute attente, ce chemin ne la rapprocha pas de sa mère. Au contraire : les rencontres devinrent rares, les souvenirs plus flous, les échanges se vidèrent de poésie. Il ne restait plus que des reproches, des injonctions, des conseils.\n\nAlors, le jour où le document apparut devant elle, le visage de sa mère, autrefois si vivant, se réduisit en poussière. Comme une fleur séchée écrasée entre deux pages.\nDepuis ce jour, Hilda ne l’avait plus jamais revue. Elle avait entendu dire que Dame Concerto, après avoir échoué dans une mission décisive, avait été rétrogradée et envoyée dans un autre pays. Plus personne ne savait où elle était.\n\nParfois, très rarement, Hilda se demandait si ce document essentiel avait été oublié par erreur... ou s’il avait été laissé là volontairement. Mais au fond, elle ne voulait pas connaître la réponse. Pas plus qu’elle ne souhaitait savoir où étaient aujourd’hui son père ou sa mère, ni avec qui, ni comment ils vivaient.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31020405"
-        },
-        UI_CHAR_DATA_TEXT_31030101 = {
-          ContentDE = "À mesure que les jours passaient, de plus en plus de gens réalisaient que la balle accrochée à la ceinture de Yale... pouvait parler. Certes, ce continent regorgeait de Daimons tous plus étranges les uns que les autres, mais rien ne préparait les visiteurs à entendre une voix nasillarde et sarcastique jaillir d’un objet peint d’un affreux sourire.\nEncore plus déroutant que la balle, c’était la réaction de Yale lui-même : il se mettait à bredouiller d’excuses, rougissait comme une tomate, et finissait par révéler, un peu malgré lui, la vérité.\nLa balle s’appelait P’tit Boum, un surnom qu’il prononçait avec la gêne d’un garçon pris la main dans le sac. C’était une bombe. Une bombe... possédée. Ou plutôt : habitée par une âme. Celle d’un certain Oliver.\nEt bien que les deux vivent ensemble depuis longtemps, chaque fois qu’Oliver se permettait de juger ouvertement le style vestimentaire ou les goûts d’un client, Yale perdait aussitôt ses moyens.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31030101"
-        },
-        UI_CHAR_DATA_TEXT_31030102 = {
-          ContentDE = "Yale détestait l’odeur des hôpitaux. Celle de l’alcool. Celle des flacons. Celle des médicaments. Même les doux parfums d’herbes que portait l’apothicaire de Huaxu suffisaient à lui donner la nausée, il s’en éloignait, toujours, un peu honteux.\n\nCes odeurs, c’était celles du passé. Celles de l’Académie d’Alchimie. Celles de ses cauchemars.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31030102"
-        },
-        UI_CHAR_DATA_TEXT_31030103 = {
-          ContentDE = "D’abord un trait vertical, puis un petit crochet, c’est le nez.\nSous le nez, une longue courbe tendue, voilà la bouche.\nEnfin, deux petits points noirs placés en haut, les yeux, à la rigueur.\nC’est ainsi que le corps d’Oliver, ce P’tit Boum, prenait forme sous le dessin maladroit de Yale. Malgré les protestations d’Oliver, qui trouvait ses traits bien trop laids, Yale chérissait ces bombes comme s’il s’agissait de ses propres créations.\n\nCréations.\nOui, c’était ça, le mot qui tournait dans sa tête quand il attrapait une bombe. Monsieur Jones l’avait regardé grandir de la même façon, avec tant d’espoir dessiné sur lui. \nMais Yale savait une chose : il n’était pas comme Monsieur Jones.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31030103"
-        },
-        UI_CHAR_DATA_TEXT_31030104 = {
-          ContentDE = "Yale avait longtemps cru qu’il n’aurait jamais d’ami. L’Académie d’Alchimie était un lieu froid et stérile, des couloirs baignant dans une lumière blanche agressive, des chercheurs vêtus de blouses immaculées, des piles de rapports d’expériences s’amoncelant sur chaque bureau. Ce quotidien sans couleur avait imprégné tous ses souvenirs.\nDans ce décor sans vie, Yale rêvait d’un ami. Son talent pour le dessin était limité, tout ce qu’il pouvait tracer, c’était une balle, ou plutôt un cercle un peu maladroit. La lumière blanche se reflétait sur la feuille blanche, rendant ce cercle froid et distant, jusqu’au jour où Yale y ajouta une touche d’orange, la première couleur vive de sa mémoire.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31030104"
-        },
-        UI_CHAR_DATA_TEXT_31030105 = {
-          ContentDE = "Ce n’était pas le goût discutable de Yale en matière de dessin qui donnait le plus mal à la tête à Oliver. Non, ce qui l’épuisait, c’était cette idée que Yale ressassait parfois :\n« Je devrais te rendre ton corps. »\nLe genre de phrase qui suffisait à enflammer une dispute. Ils pouvaient rester fâchés pendant des jours, chacun boudant dans un coin de leur esprit partagé.\nDe temps en temps, Yale se plaignait qu’Oliver ne comprenait pas du tout ses bonnes intentions. Mais ce n’était pas le fond du conflit qui te surprenait. C’était la manière dont Yale l’exprimait. Fluide, net, sans bégaiement. Comme si ces mots-là venaient de plus loin, ou de plus profond.\nOliver n’en avait jamais parlé, et sans doute ne le ferait jamais. Mais tu pouvais le sentir. Yale, assis à l’établi de Crac’n’Pop, sculptait un nouveau jouet dans un morceau de liège, puis gribouillait dessus à l’aquarelle, avec ses motifs naïfs. À côté, Oliver commentait, avec verve et mauvaise foi.\nPeut-être que, finalement, cette vie tranquille était le dénouement qui lui convenait le mieux.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31030105"
-        },
-        UI_CHAR_DATA_TEXT_31030201 = {
-          ContentDE = "Dans un recoin discret de Rougerive, se tient une vieille boutique de jouets délabrée, connue sous le nom de Crac’n’Pop. Curieusement, elle ne ressemble en rien aux autres boutiques de la ville : là où les vitrines ouvrent tôt pour accueillir les enfants, celle-ci reste fermée toute la journée, ses volets obstinément clos.\nUn jour, quelques enfants trop curieux ont osé pousser la porte. En guise de récompense pour leur bravoure, chacun est ressorti avec un jouet étrange : un kaléidoscope aux éclats si vifs qu’ils en faisaient tourner la tête, un canard en bois qui trottine en remuant les fesses, ou encore une sucette magique, il suffisait d’enflammer la mèche au bout, et dans un sifflement sec, un feu d’artifice jaillissait dans le ciel.\nMais plus que les jouets farfelus, c’est le propriétaire des lieux qui alimentait les rumeurs : un jeune garçon nommé Yale, au regard fuyant et au dos voûté. Pourtant, bien des clients affirmaient avoir entendu deux voix distinctes venir de l’arrière-boutique.\n\nOn raconte qu’un soir sans lune, quelques garnements s’étaient introduits par une fenêtre mal fermée. Ils en sont ressortis en hurlant, pâles comme des fantômes.\n« La... la balle orange... elle... elle m’a parlé... elle m’a INSULTÉ... », sanglotait l’un d’eux, à bout de souffle.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31030201"
-        },
-        UI_CHAR_DATA_TEXT_31030202 = {
-          ContentDE = "La première fois que les habitants de Rougerive virent le garçon étrange qu’on appellerait plus tard Yale, c’était par un matin glacial d’hiver. La boulangère, en nettoyant son four, découvrit un gamin inconscient derrière sa maison.\nSes vêtements n’étaient plus que lambeaux, et sa peau portait des marques de brûlures. Il ressemblait à un animal tombé dans la braise... ou à un nouveau-né sans défense.\nLa cité se rassembla autour de lui. On apporta des serviettes, des onguents, des prières. Un jeune homme trouva, brodées sur le col de sa chemise, les lettres SPATHATOI. Il les reconnut, un institut militaire, les Spathatoi. Après un long silence, il jeta la chemise dans le feu. Le tissu fut réduit en cendres. Et avec lui, le passé de Yale.\nPeu après, une boutique de jouets ouvrit ses portes à Rougerive, discrète mais bizarrement fournie. Le garçon derrière le comptoir ne parlait pas beaucoup. Mais les jouets, eux, parlaient parfois pour lui.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31030202"
-        },
-        UI_CHAR_DATA_TEXT_31030203 = {
-          ContentDE = "« Récemment, un violent incendie s’est déclaré en périphérie de Rougerive, attirant l’attention de toute la ville. Voici le rapport détaillé.\nDans la nuit du 13 juillet, le laboratoire des Spathatoi de la IXᵉ Légion, situé en dehors des murs de la ville, a brusquement explosé puis pris feu. Selon plusieurs témoins, les flammes ont rapidement envahi les bâtiments alentours, dégageant une épaisse fumée noire. La situation sur place était critique. La IXᵉ Légion est rapidement intervenue pour organiser les secours, tandis que les habitants des environs s’organisaient spontanément pour évacuer les blessés et transporter des vivres.\nAprès plus de vingt-quatre heures d’efforts, le feu a été maîtrisé, mais le bilan humain reste encore incertain.\nD’après les premières investigations, un accident s’est produit lors de recherches sur des matériaux instables. Une erreur de manipulation a provoqué la fuite de substances dangereuses, qui ont pris feu et causé une puissante explosion. Plusieurs personnes liées à l’incident font l’objet d’une enquête. »\n\nLa Gazette de Rougerive, édition n° 1012 – Première page",
-          TextMapId = "UI_CHAR_DATA_TEXT_31030203"
-        },
-        UI_CHAR_DATA_TEXT_31030204 = {
-          ContentDE = "Un jour, un célèbre psychologue fut invité à évaluer un cobaye des Spathatoi. Conformément aux protocoles de sécurité, l’entretien devait se faire à l’aveugle, à travers un rideau opaque.\nLa voix du garçon, timide et douce, parvint de l’autre côté du tissu. Malgré ses efforts pour le cacher, le médecin perçut un trouble de la parole assez net.\n« Nous allons commencer. Je vais dire un mot. Ne réfléchis pas. Réponds simplement par ce qui te vient à l’esprit. »\n« D’a-d’accord. »\n« Matin. »\n« Ri-rideau. »\n« Vêtements. »\n« Blanc. »\n« Expérience. »\n« Attente. »\n« Liberté. »\n« Mur. »\n« Pomme. »\n« Moitié. »\n« Yale. »\n« Un gentil garçon. »\n« Dernier mot... Ton chercheur, Jones. »\nLe garçon, si prompt jusqu’ici, resta silencieux. Le stylo du médecin suspendit son mouvement.\nPuis une voix rugit à travers le rideau, une voix brisée par la haine :\n« Jones ! Ce... ce taré ! Ce rat de labo pourri ! »\nAlarmé, le psychologue s’apprêtait à alerter l’équipe, quand il entendit un gémissement douloureux. Puis, la voix douce, hésitante, revint :\n« Pa... pardon monsieur, je n’ai pas bien entendu. Vous pouvez... pouvez répéter ? »\nLe médecin, soulagé mais sur ses gardes, répéta calmement la question.\n« Ton chercheur... Jones. »\nCette fois, sans hésitation, le garçon répondit :\n« Père. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_31030204"
-        },
-        UI_CHAR_DATA_TEXT_31030205 = {
-          ContentDE = "L’homme, un chercheur de plus de cinquante ans, agonisait sur son lit d’hôpital. Ses membres, réduits à l’état de charbon, portaient les marques de graves brûlures étendues. L’explosion avait rompu ses organes internes, et sa peau, en partie nécrosée, laissait apparaître les os de sa mâchoire.\nÀ l’unité d’urgence de l’Hôpital Général de Flagson, personne ne réussit à contacter un quelconque proche. Jones Bryan n’avait plus ni famille ni amis, tous avaient péri dans la guerre, jusqu’à sa femme et son enfant. Personne n’était là pour l’accompagner dans ses derniers instants.\nLes infirmiers racontèrent que Jones, pourtant à l’article de la mort, ne montra aucune peur. Au contraire, un sourire inquiétant étira ses lèvres tremblantes.\nEn se penchant pour entendre ses derniers mots, ils n’entendirent qu’une phrase, répétée dans un souffle déformé, encore et encore :\n« L’expérience... a réussi. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_31030205"
-        },
-        UI_CHAR_DATA_TEXT_31030301 = {
-          ContentDE = "Un jour, un garnement particulièrement intrépide parvint à voler la petite bombe orange de Yale, alors que celui-ci avait le dos tourné. Profitant du soutien de sa bande, il pensait pouvoir donner une bonne leçon à cette bombe insolente.\nMais ils eurent beau l’insulter, la provoquer, la bombarder de moqueries... P’tit Boum ne réagit pas du tout.\nC’est ainsi qu’une autre rumeur vit le jour : peut-être que l’âme d’Oliver ne résidait pas dans la bombe. Peut-être... qu’elle était en réalité logée à l’intérieur de Yale lui-même.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31030301"
-        },
-        UI_CHAR_DATA_TEXT_31030302 = {
-          ContentDE = "La conscience d’Oliver sommeille au plus profond de Yale. Lorsqu’il décide de lui céder la place, il prend la bombe de la main droite : c’est le signal.\nS’il la tient dans la main gauche, alors c’est Yale qui parle.\nCe petit geste, presque imperceptible, suffit à savoir... à qui vous avez affaire.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31030302"
-        },
-        UI_CHAR_DATA_TEXT_31030303 = {
-          ContentDE = "Parfois, juste avant de s’endormir, Oliver s’asseyait au rebord de la fenêtre du balcon et jouait doucement une berceuse sur sa flûte d’os... une mélodie que seuls les Charons connaissaient.\nDans ces instants-là, Oliver était d’une telle tranquillité qu’on aurait dit qu’il ne faisait plus qu’un avec Yale.\nMais comment et quand Oliver avait appris à jouer de cette flûte... ça, personne ne le saurait jamais. ",
-          TextMapId = "UI_CHAR_DATA_TEXT_31030303"
-        },
-        UI_CHAR_DATA_TEXT_31030304 = {
-          ContentDE = "Yale avait un jour appris l’existence d’un comportement animal étrange : celui du coucou. Cet oiseau pond ses œufs dans le nid d’autres oiseaux, et à l’éclosion, son poussin expulse les véritables petits pour se faire nourrir exclusivement par les parents adoptifs.\nMême en comprenant que c’était un phénomène naturel, Yale ressentait une colère difficile à expliquer. S’incruster dans le nid des autres, voler leur nourriture, c’était une trahison impardonnable. Cela ne devrait pas être l’innocent petit oiseau qui tombe et se blesse, mais le vil coucou.\nCette perception resta gravée en lui longtemps, intacte même lorsqu’un jour, il découvrit un dossier confidentiel intitulé « Expérimentation de personnalité contrôlée ».",
-          TextMapId = "UI_CHAR_DATA_TEXT_31030304"
-        },
-        UI_CHAR_DATA_TEXT_31030305 = {
-          ContentDE = "Expérimentation de personnalité contrôlée — Sujet : Yale\n\nSujet expérimental : Personnalité originelle – Oliver / Personnalité secondaire – Yale\nLieu de recherche : Spathatoi, Section souterraine de la IXᵉ Légion, Rougerive\nResponsable du projet : Équipe du Docteur Jones Bryan\nObjectif : Domestiquer le sujet Charon, doté d’un potentiel magique exceptionnel mais d’une agressivité incontrôlable, en développant une seconde personnalité docile. Cette personnalité secondaire doit hériter pleinement des capacités magiques de la personnalité principale, et être capable de la contenir sans faille.\nEn cas de réussite, le processus permettra la création en série de soldats contrôlables, destinés à l’exploitation militaire.\nProtocole de sécurité : Si la personnalité secondaire échoue à dominer l’originale, elle devra, après assimilation complète de ses capacités, procéder à l’élimination de celle-ci.\nEn cas d’échec de suppression, l’intégralité du sujet expérimental sera détruite sans appel.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31030305"
-        },
-        UI_CHAR_DATA_TEXT_31030401 = {
-          ContentDE = "Une pièce blanche. Une table blanche. Une blouse blanche. Un Yale vêtu de blanc, assis, face à une montagne de pièces noires éparpillées. Ses souvenirs recommençaient toujours de la même manière : une voix froide, inhumaine, lançant simplement « Assemble-les ». Suivaient des heures de flottement, de confusion, de silence. Jusqu’au claquement sec de la porte, marquant la déception.\nYale ne savait plus combien de fois il avait revécu cette scène. Dans ce monde figé en noir et blanc, le temps avait perdu tout sens.\nIl en était venu à douter de la réalité. Et si ce monde n’était peuplé que de deux personnes : lui et l’homme en blouse blanche ? Si le reste n’était qu’illusion ?\nJusqu’au jour où une nouvelle voix brisa ce vide. Un mot, net, craché avec mépris. Un mot qui fit tout basculer :\n« Copie. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_31030401"
-        },
-        UI_CHAR_DATA_TEXT_31030402 = {
-          ContentDE = "« Copie. »\nYale se souvenait encore parfaitement de ce moment. Cette voix, lorsqu’il l’avait entendue pour la première fois, lui avait fait l’effet d’un caillou lancé dans un lac limpide : un choc net, suivi de remous. Il s’était réveillé en sursaut, mais autour de lui, il n’y avait rien d’autre que les murs blancs. L’homme en blouse blanche était revenu, une fois de plus, avec sa cargaison de pièces noires. Et comme à chaque fois, il s’était contenté de lâcher un simple : « Assemble-les. » Toujours cette même phrase, usée jusqu’à l’absurde, qui ouvrait chacun de ses souvenirs.\nYale avait pris les pièces dans ses mains, les avait fait rouler entre ses doigts. Mais cette fois-ci... il ne s’était pas senti perdu. Ses gestes lui semblaient guidés par une mémoire invisible. Les éléments complexes s’emboîtaient avec une aisance déconcertante, comme de simples blocs d’enfants. L’un après l’autre, ils trouvaient leur place, comme s’il les avait toujours connus.\nQuand la dernière pièce s’imbriqua dans un petit clic clair, le son parfait d’une clé tournant dans une serrure, Yale resta figé, fasciné par l’objet noir devant lui.\nEn face, l’homme en blouse blanche laissa tomber son stylo. Ses yeux, d’ordinaire si froids, brillaient d’un éclat de joie fiévreuse, comme ceux d’un vautour affamé tombant sur une proie vulnérable. Il se jeta sur Yale et l’enlaça avec force.\n\n« Parfait. C’est parfait. Tu y es arrivé. »\nIl répétait cette phrase, encore et encore. Yale prit enfin son courage à deux mains :\n« Qui êtes-vous ? »\n« Je suis chercheur, » répondit-il. « Tu peux m’appeler Monsieur Jones. »\n« Monsieur Jones. Chercheur. » Yale répéta le nom à voix basse. Puis il demanda :\n« Et moi... qui suis-je ? »\n« Tu es Yale, » répondit Monsieur Jones. « Tu es ma création. »\nYale hocha la tête. Puis la secoua. Il n’avait pas compris. Pas encore. Pas vraiment.\nÀ l’époque, il ne savait pas encore ce que signifiait vraiment être une \"création\".",
-          TextMapId = "UI_CHAR_DATA_TEXT_31030402"
-        },
-        UI_CHAR_DATA_TEXT_31030403 = {
-          ContentDE = "Avant que Yale ne connaisse le nom d’Oliver, leur relation était tout sauf bonne.\nD’un côté, il y avait cette voix dans sa tête, trop désagréable pour qu’on puisse s’y attacher, même un enfant aussi solitaire que Yale n’aurait pas pu lui accorder sa sympathie. En réalité, \"désagréable\" était un mot bien trop doux. La voix l’appelait sans cesse « copie », l’accablait d’injures cruelles et cinglantes, comme s’il avait commis des crimes que même la Mer du Silence n’aurait su laver. Parfois, Yale, indigné par ces accusations injustes, tentait de protester... mais son bégaiement l’en empêchait. Il ne parvenait qu’à sortir un « T–T–Toi... » en bredouillant. Évidemment, Oliver n’en devenait alors que plus cruel dans ses moqueries.\n\nMais le plus terrible restait sans doute la réaction de Monsieur Jones, lorsqu’il apprit l’existence de cette autre voix. Ce chercheur habituellement froid sombrait dans une frénésie fébrile : il saisissait les épaules frêles du garçon et, les mains tremblantes, enfonçait ses doigts dans sa peau jusqu’au sang.\n« Tu l’as entendu, pas vrai ?! Tu l’as entendu ! Dis-moi que tu l’as entendu ! Tu n’as pas le droit de perdre contre lui, mon chef-d’œuvre, ma précieuse création ! Tu dois le dominer, le contrôler et le tuer ! Tu entends ? Réponds-moi ! »\nLe visage déformé par une obsession démente, le front du chercheur se pressait contre celui de Yale, et ses postillons couvraient la peau du garçon. Ce souvenir, Yale ne le comprenait pas sur le moment. Mais plus tard, lorsqu’un assistant-chercheur lui expliqua ce qu’étaient les émotions, il comprit vaguement : cette sensation s’appelait la peur. Une peur profonde, viscérale. Ne comprenant pas ce qui avait bien pu transformer Monsieur Jones à ce point, Yale mit tout sur le dos de la voix dans sa tête.\n\nIls se détestèrent ainsi longtemps, jusqu’au jour où un chercheur installa un tourne-disque dans la chambre de Yale.\nCet appareil apporta une touche de couleur dans un monde jusque-là réduit au noir et blanc. Yale l’adora immédiatement. Chaque soir, il attendait avec impatience le nouveau disque que l’on allait insérer, et la musique qui allait s’en échapper. Oliver, à l’inverse, haïssait la machine. Ou plus précisément, il détestait le grésillement inévitable du tourne-disque, ce son qui le rendait encore plus irritable, nerveux, instable.\n\nEt puis, Yale eut cette pensée étrange : peut-être... peut-être que la voix avait peur de ce grésillement. Lui aussi connaissait la peur, et savait combien on avait envie de fuir, quand elle vous étreint. Alors, la fois suivante, lorsque l’assistante voulut lancer un disque, Yale l’arrêta.\n« Tu n’aimes plus celui-là ? »\n« Si, si je l’aime bien. Mais je... je ne veux pas l’écouter. »\n\nIncapable de mentir, Yale ne réussit pas à expliquer son revirement. Il ne fit que répéter qu’il ne voulait plus entendre la musique. Finalement, les chercheurs repartirent avec le disque. Cette nuit-là, l’endormissement fut plus difficile. Mais au bord du sommeil, Yale entendit un léger fredonnement, à la fois inconnu et familier. Une mélodie paisible, douce, comme une berceuse murmurée à un enfant endormi.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31030403"
-        },
-        UI_CHAR_DATA_TEXT_31030404 = {
-          ContentDE = "Yale ne chercha pas à se défaire des sangles noires qui l’immobilisaient sur la table d’opération. Il ne comprenait pas pourquoi il fallait l’attacher aussi fermement, lui qui n’avait aucune intention de résister.\nSur le sol, des dizaines de dossiers marqués « confidentiel » en rouge étaient éparpillés. Quand le chercheur Jones remarqua que Yale avait lu ces documents, il perdit de nouveau le contrôle. D’un geste brusque, il le fixa à la table et injecta dans son corps un catalyseur prévu pour la dernière phase de l’expérience, dans plusieurs mois.\n« Maudit gosse, tu as vu ce que tu ne devais pas voir, je veux que tu le tues, tout de suite ! »\nDe la lave sembla envahir ses veines, une douleur insupportable le força à pousser un cri perçant, inhabituel chez le garçon si doux d’ordinaire.\n« Hé, copie. »\nUne voix familière mais étrangère surgit dans son esprit. Yale ouvrit brusquement les yeux, mais il ne vit pas la table d’opération, seulement un regard aussi calme que le sien, un garçon identique à lui-même. Sous leurs pieds, une mer de lave rouge comme le sang coulait.\n« Qui es-tu ? »\nL’autre ne répondit pas, mais lui saisit la gorge avec une force inhumaine, coupant le souffle à Yale qui se débattait vainement. Puis, d’un ton lent et haineux :\n« Je suis Oliver... le vrai maître de ce corps. Toi, tu n’es qu’une copie, arrête de faire semblant, tu sais tout. »\nYale regarda dans ses yeux et se souvint du dossier « Expérimentation de personnalité contrôlée ». Chaque page racontait l’expérience, chaque donnée portait le nom « Oliver ». Jusqu’à la dernière, où soudain apparut le nom de Yale, marquant la réussite du remplacement de personnalité.\n« Yale, tu seras ma création parfaite. »\nC’était donc ça, le vrai sens de « création ». L’enfance heureuse, les souvenirs en dehors du laboratoire, la famille aimante, tout cela était absent, non pas parce que Yale avait oublié, mais parce qu’il n’avait jamais eu.\n\nAlors, qui était-il vraiment ? Yale. Mais Yale, c’était un lâche, une vilaine petite créature obéissant aux chercheurs, une création imparfaite, un parasite dans un nid qui n’était pas le sien. Cette fois, Yale décida d’aider ce pauvre œuf abandonné. Il lâcha la main d’Oliver, prêt à se laisser engloutir par la lave, à embrasser la mort brûlante.\nMais l’étouffement attendu ne vint pas. Il fut violemment soulevé. Tandis que les jurons d’Oliver éclataient autour d’eux, d’innombrables explosions retentirent, un bourdonnement intense transperça ses oreilles, son cerveau bouillonnait.\nToute cette colère, cette peur, cette haine éclatèrent en une déflagration, avant de s’éteindre dans un dernier fracas.\nYale leva les yeux vers Oliver, dont le visage restait dur. Pourtant, quelque chose avait changé, sans qu’on puisse dire quoi.\n« Hé, copie, y’a un moyen pour qu’on s’en sorte tous les deux. Tu viens ? »",
-          TextMapId = "UI_CHAR_DATA_TEXT_31030404"
-        },
-        UI_CHAR_DATA_TEXT_31030405 = {
-          ContentDE = "La douleur aiguë ramena Yale à la réalité. À un moment donné, les sangles qui l’attachaient à la table d’opération avaient été détachées. Il leva lentement la tête et croisa le regard de Jones, dont les yeux injectés de sang exprimaient une joie folle et incrédule.\nPour la première fois, Yale, qui n’avait jamais menti, devait tromper Jones. Il s’approcha à petits pas, chaque mouvement lui coûtant un effort immense. À chaque arrêt, des larmes silencieuses coulaient sur ses joues, dessinant une petite galaxie dans l’obscurité du laboratoire. Jones semblait sourire, persuadé que Yale pleurait la mort d’Oliver. Ce sujet timide lui paraissait finalement un enfant obéissant, une création parfaite qui ne désobéirait jamais aux ordres.\nMais seul Yale savait pourquoi il pleurait réellement. Pour la première fois, il prit l’initiative de se blottir contre Jones, cet homme imposant et terrifiant ne lui faisait plus peur.\n« J’ai tué Oliver. »\nSes sanglots redoublèrent alors qu’il se laissait aller dans les bras de Jones, pleurant sans retenue. Il sentit même Jones, d’un geste rare et doux, lui caresser la tête, comme un père imaginaire.\nMais tout cela était fragile, factice. Malgré la douceur de cette main, elle avait détruit, à force d’expériences cruelles, la vie qu’il partageait avec Oliver. Il était temps de quitter cette emprise. Yale sortit l’objet qu’il assemblait chaque jour, ce que Oliver appelait sa micro-bombe. Il lui suffisait de la coller contre Jones, puis, dans le chaos du feu, de fuir vers un monde plus vaste, loin de ce monde blanc.\n« Fais-le, Yale. Tu pourras pleurer la mort de cet homme plus tard. »\nLe feu dévorait le laboratoire, les flammes rouges, vives et menaçantes, peignaient le ciel nocturne, souillant à jamais la blancheur immaculée.\nYale courut de toutes ses forces, joyeux de pouvoir alterner le contrôle avec Oliver, respirant enfin l’air hors de la prison blanche. L’air, chargé de fumée, était âcre mais étrangement doux. Personne ne pouvait les arrêter : ils abandonnaient Jones, le laboratoire, l’Académie d’Alchimie toute entière.\n\nÉpuisé, Yale s’effondra, mais les paysages qui défilaient devant ses yeux l’empêchaient de fermer les paupières. Le vent de la liberté lui donnait envie de se relever, même sans force. Alors que sa conscience s’évanouissait, il entendit à nouveau la voix d’Oliver, calme et posée, comme jamais auparavant. Oliver décrocha la plaque d’identification collée sur Yale et déclara :\n« À partir de maintenant, Yale n’est plus la création de personne. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_31030405"
-        },
-        UI_CHAR_DATA_TEXT_32010101 = {
-          ContentDE = "Vulcera affectionne particulièrement deux méthodes pour faire parler les criminels : ses coups de pied d’une violence écrasante, et le châtiment du feu purificateur. Ceux qui ont subi ses interrogatoires jurent que ses bottes peuvent envoyer l’âme même d’un homme droit en enfer.\nLa douleur qu’elle inflige est telle qu’elle rend la vie pire que la mort, sous ce pouvoir terrifiant, nul ne peut garder son calme, et encore moins dissimuler ses crimes.",
-          TextMapId = "UI_CHAR_DATA_TEXT_32010101"
-        },
-        UI_CHAR_DATA_TEXT_32010102 = {
-          ContentDE = "Vulcera ne cesse de réaffirmer sa conception de la justice : non pas un idéal d’égalité pour tous, mais un ordre stable et inébranlable. Elle a croisé d’innombrables criminels, dont la plupart ont grandi dans la misère et l’injustice, leurs crimes souillés de la rouille du malheur. Beaucoup lui ont craché au visage :\n« Crois-tu vraiment que, dans ma situation, tu aurais fait mieux ? Chanceuse ! Tu crois vraiment rendre justice ? »\nVulcera sait mieux que quiconque que derrière les barreaux, la chaîne la plus commune, c’est une vie sans choix. L’injustice est le mortier qui maintient debout la forteresse de la prison, s’infiltrant dans chaque recoin où la vie s’accroche.\nMais elle sait aussi que si la tempête de haine venait à ébranler cette forteresse, l’abri qu’elle offre à tant de vies s’écroulerait avec elle. Vulcera ne tolérera jamais que ses fondations vacillent, sa justice est, et restera, le bastion qui la soutient.\nAinsi, face aux accusations les plus amères, sa voix demeure d’un calme tranchant :\n« Oui. Je rends justice à ma manière. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_32010102"
-        },
-        UI_CHAR_DATA_TEXT_32010103 = {
-          ContentDE = "La Prison Militaire Royale a vu tomber en cendres d’innombrables mensonges sous le regard inflexible de Vulcera.\nElle attrape le suspect par le col, le force à croiser son regard. Dès que leurs yeux se rencontrent, la peau du coupable brûle à vif, marquée de cloques ardentes. Il s’effondre au sol, hurlant de douleur.\n« Voilà ce qu’il en coûte de mentir devant la geôlière. »\nLe greffier chargé du procès n’en est plus à un spectacle près, tandis que tu restes interdit au milieu du chaos. Jusqu’ici, la défense du suspect tenait sans faille : la Légion ne trouvait aucune preuve, et les experts en micro-expressions de l’Académie d’Alchimie n’avaient décelé aucun signe de mensonge. Tu en étais presque à penser qu’il n’était qu’un malheureux passant.\n« Tant que Madame Vulcera restera froide et implacable, aucun mensonge ne pourra résister à son regard. »\nMais que se passerait-il si un jour, un accusé parvenait à briser cette froideur ?\nTu voulais poser la question, mais, voyant le greffier déjà plongé dans son travail, tu te ravisas.",
-          TextMapId = "UI_CHAR_DATA_TEXT_32010103"
-        },
-        UI_CHAR_DATA_TEXT_32010201 = {
-          ContentDE = "Vulcera, geôlière de la Prison Militaire Impériale, est l’incarnation vivante du pire cauchemar de tout criminel. Son intégrité inébranlable, alliée à un tempérament de braise et à des méthodes d’interrogatoire impitoyables, glace le sang de quiconque croise sa route.\nDepuis son éveil, la peau de Vulcera s’est teintée d’un rouge incandescent, irradiant une chaleur qui ne s’éteint jamais, un rare cas de retour aux origines dans sa lignée. Avant elle, seule la toute première geôlière de la prison avait connu la même métamorphose.\nSi beaucoup détournent le regard face à son apparence farouche et dérangeante, Vulcera y voit au contraire un don sacré de ses ancêtres : une mission brûlante, gravée dans sa chair, pour maintenir l’ordre impérial et allumer une flamme dans les recoins les plus sombres de l’Empire.",
-          TextMapId = "UI_CHAR_DATA_TEXT_32010201"
-        },
-        UI_CHAR_DATA_TEXT_32010202 = {
-          ContentDE = "Vulcera a une manie bien connue : jamais elle ne se sépare de son arme, la Fureur incandescente. On raconte que cette arme appartenait à la toute première geôlière, mais qu’aucun membre du clan n’avait pu la manier depuis, tant sa chaleur était insoutenable... jusqu’au jour de l’éveil de Vulcera. Brandir cette relique est sa plus grande fierté. Qu’elle interroge un détenu ou qu’elle s’endorme, tant que la Fureur incandescente repose à ses côtés, Vulcera se sent en sécurité.\nCertains murmurent dans son dos qu’elle traite son arme comme un amant, et qu’un jour peut-être, elle l’épousera vraiment. Après tout... qui voudrait aimer un monstre à la peau écarlate ?",
-          TextMapId = "UI_CHAR_DATA_TEXT_32010202"
-        },
-        UI_CHAR_DATA_TEXT_32010203 = {
-          ContentDE = "Dans la prison dirigée par Vulcera, on répète souvent : « Vulcera approche ».\nOn le glisse à l’oreille de celui qui vient de commettre une bassesse ou un crime, car rien n’échappe au regard de la geôlière. Les prisonniers en sont convaincus : Vulcera n’est pas humaine, mais un démon échappé des enfers. Nul ne sait quand elle se dressera devant votre cellule, prête à vous entraîner dans un gouffre de terreur.\nEn vérité, on pourrait dire que ses interrogatoires commencent bien avant qu’elle ne vous parle, dès que ses pas lents et lourds se mettent à résonner dans le couloir.",
-          TextMapId = "UI_CHAR_DATA_TEXT_32010203"
-        },
-        UI_CHAR_DATA_TEXT_32010204 = {
-          ContentDE = "On dit souvent que Vulcera est née pour être geôlière, tant elle n’a presque jamais échoué lors de ses interrogatoires, presque, car il y eut une unique exception, une tâche indélébile sur son palmarès jusque-là sans faille.\nLa rumeur raconte que la prisonnière qui humilia Vulcera n’était pas originaire d’Hyperborea, mais une parfumeuse venue de la République de Luca. Cette dernière, maîtresse de la tromperie, réussit à soutenir le regard brûlant de Vulcera sans que ses flammes ne la consument, avant de s’échapper de sa prison.\nPour Vulcera, cet échec reste une honte impérissable. Poussée par le besoin de réparer son erreur, elle poursuit inlassablement la traque de cette fugitive.",
-          TextMapId = "UI_CHAR_DATA_TEXT_32010204"
-        },
-        UI_CHAR_DATA_TEXT_32010205 = {
-          ContentDE = "La mère de Vulcera lui disait souvent en soupirant : « Ma fille, tu es telle une flamme éternelle, ardente, inextinguible et infatigable. »\nVulcera poursuivait inlassablement ses enquêtes, affrontant un criminel après l’autre, jusqu’à ce que les ténèbres se recroquevillent devant la chaleur de ses flammes sacrées.\n« Tes flammes sont trop ardentes, Vulcera... Je crains qu’un jour tu ne te consumes entièrement. »\n« Et alors ? » pensait-elle. Elle préférait mourir dans un brasier glorieux, un feu que quiconque croisant sa route ne pourrait qu’admirer... un feu qui, jusqu’à son dernier souffle, refuserait de s’éteindre.",
-          TextMapId = "UI_CHAR_DATA_TEXT_32010205"
-        },
-        UI_CHAR_DATA_TEXT_32010301 = {
-          ContentDE = "Dans le bureau de Vulcera trône une armoire de fer. Sur son étagère la plus en vue repose un fragment de corne d’un rouge sombre, sa propre corne gauche, brisée.\nElle l’a perdue à 19 ans, lors de ses premiers pas dans l’art de l’interrogatoire. Moins posée et aguerrie qu’aujourd’hui, mais déjà incapable de tolérer qu’un coupable échappe à sa peine.\nCe jour-là, elle se retrouva face à un noble criminel, arrogant, protégé par un réseau d’influences aussi serré qu’un étau. Il avait abusé de nombreuses jeunes femmes, mais ses appuis avaient effacé toutes les preuves, le soustrayant à toute sanction.\nLorsque l’ancienne geôlière s’accroupit pour lui ôter ses fers, l’homme, resté muet jusqu’alors, se mit à siffler puis à fredonner. Chaque note résonnait comme une botte lourde écrasant l’emblème de la prison, les pages du code de loi, et les joues brûlantes de Vulcera.\nUne flamme s’alluma dans sa poitrine et s’intensifia à chaque instant. Ni les avertissements ni les ordres de sa supérieure ne purent l’éteindre. Quand l’homme s’avança vers la lumière, libre et provocateur, elle craqua et leva le poing... Mais ce fut un morceau incandescent de sa propre corne qui tomba au sol, tranché net par la lame d’un garde. La pointe froide de l’acier effleura sa gorge : non un geste de clémence, mais un avertissement empoisonné de mépris.\n« Je jure de forcer la bouche de chaque criminel, pour que nul crime ne demeure caché dans tout Hyperborea. »\nDepuis ce jour, Vulcera conserve ce fragment de corne. C’est à la fois une cicatrice et un rappel constant : la morsure du métal, l’os brisé, la brûlure de l’humiliation... et le serment de ne jamais reculer face à l’ombre.",
-          TextMapId = "UI_CHAR_DATA_TEXT_32010301"
-        },
-        UI_CHAR_DATA_TEXT_32010302 = {
-          ContentDE = "Parmi ses rares plaisirs, Vulcera chérit les boissons fortes. L’ivresse qui engourdit l’esprit lui offre quelques instants d’oubli, loin des colères et du fardeau que lui apportent les détenus. Mais sa résistance à l’ivresse demeure un mystère. Même ses collègues ne savent l’évaluer : d’ordinaire, on juge au rouge qui monte aux joues... sauf que chez leur geôlière, cette couleur est permanente.",
-          TextMapId = "UI_CHAR_DATA_TEXT_32010302"
-        },
-        UI_CHAR_DATA_TEXT_32010303 = {
-          ContentDE = "Les gardiens de la prison militaire admirent un trait chez Vulcera : elle s’impose les exigences les plus dures, allant jusqu’à dormir sur le sol, comme un prisonnier austère.\nMais la vérité est autre : sa peau ardente consume les draps, et après plusieurs incendies, elle n’a d’autre choix que de dormir à même le sol.",
-          TextMapId = "UI_CHAR_DATA_TEXT_32010303"
-        },
-        UI_CHAR_DATA_TEXT_32010304 = {
-          ContentDE = "Tout liquide qui touche la peau de Vulcera s’évapore instantanément sous sa chaleur ardente, sauf ses larmes.\nSeules ces dernières parviennent brièvement à apaiser la brûlure, laissant sur son visage des traces froides, comme de l’acide gravant l’os.\nAprès avoir enduré cette douleur insupportable une fois, Vulcera jura de ne plus jamais verser de larmes.",
-          TextMapId = "UI_CHAR_DATA_TEXT_32010304"
-        },
-        UI_CHAR_DATA_TEXT_32010305 = {
-          ContentDE = "Vulcera garde précieusement un portrait d’elle enfant. Elle ne s’était pas encore éveillée à ce que les autres appelleraient plus tard un « monstre ». Elle ressemblait à n’importe quel autre enfant, fièrement dressée devant la statue d’un ancêtre, ses parents assis derrière elle. Une famille Charon ordinaire, au visage commun et aux vêtements simples, qui se fondrait aisément dans la foule. Ce qui retient l’attention de Vulcera, c’est ce léger sourire à peine perceptible qui éclaire le coin de ses yeux sévères sur le tableau.\nElle ne regarde que rarement ce portrait, qu’elle enferme profondément dans un tiroir, se rappelant de ne pas trop s’attacher à cette période d’avant qu’elle ne devienne ce que les autres nomment désormais un monstre.",
-          TextMapId = "UI_CHAR_DATA_TEXT_32010305"
-        },
-        UI_CHAR_DATA_TEXT_32010401 = {
-          ContentDE = "Vulcera descend d’une lignée de geôliers qui, depuis des générations, surveillent les criminels les plus dangereux de l’Empire et veillent à maintenir l’ordre dans ses recoins les plus sombres. C’est une charge solitaire et douloureuse, qui exige un esprit d’acier. Au fil des siècles, même au sein de sa propre famille, certains ont tenté de fuir ce fardeau par peur ou par faiblesse.\nMais Vulcera est différente. Née entre les murs de la Prison Militaire Impériale, elle y a grandi : les confessions des criminels furent ses premiers livres, les cris de douleur et les supplications ses berceuses, les séances d’interrogatoire le sel de ses repas.\nL’enfer que tous fuyaient... était son foyer.",
-          TextMapId = "UI_CHAR_DATA_TEXT_32010401"
-        },
-        UI_CHAR_DATA_TEXT_32010402 = {
-          ContentDE = "Le jour de son éveil, les flammes qui l’embrasèrent faillirent réduire en cendres le manoir ancestral. Lorsqu’elle en sortit, sa peau était devenue rouge sang et brûlante. Sa famille éclata en sanglots de joie, certains allèrent jusqu’à se brûler volontairement les doigts pour effleurer son visage. Leurs yeux mêlaient vénération et fanatisme, et en une nuit, ils cessèrent d’être de simples proches pour devenir ses fidèles. Ses propres parents les premiers.\nAutrefois, leur ancêtre, armée de son corps incandescent et de son épée enflammée, les avait sortis de la boue et de l’oubli. Aujourd’hui, ils attendaient de Vulcera qu’elle leur apporte une gloire plus grande encore.\nPour son clan, elle était une sainte, pour les étrangers, un monstre.\nMais quelle que soit l’opinion des autres ou l’apparence qu’elle porte, Vulcera savait que sa mission, elle, ne changerait jamais.",
-          TextMapId = "UI_CHAR_DATA_TEXT_32010402"
-        },
-        UI_CHAR_DATA_TEXT_32010403 = {
-          ContentDE = "Au fil de sa carrière, Vulcera a interrogé d’innombrables criminels, mais jamais elle n’aurait imaginé voir son propre adjudant, Artin Nonn, dans la salle d’interrogatoire.\nArtin était différent. Doux, même envers les criminels, il retenait les noms de ceux qui l’émouvaient, leur envoyait des provisions dans leurs prisons. Méticuleux, il soutenait Vulcera dans ses enquêtes. Sans preuves collectées de ses propres mains, elle n’aurait jamais cru qu’Artin était un traître corrompu, soudoyant pour faire libérer des détenus.\n« Ne me regarde pas comme ça, Vulcera. » Il affronta son regard déçu et furieux. \n« Je hais ce boulot. Cette fosse sans lumière me dégoûte... Tu vois ? Nos mains sont toutes tachées de sang. Les soldats dehors sont les héros d’Hyperborea. Et nous ? Les chiens de la Légion ! Les nobles nous méprisent, les criminels nous haïssent, les civils nous insultent. Tout ce sale boulot est inutile ! Je veux de la lumière, pas ça ! »\nVulcera ne put le réprimander, sachant qu’il avait perdu l’audition d’une oreille lors d’une mission d’espionnage ratée.\nElle comprenait que tout le monde ne pouvait s’habituer à être vu comme un monstre, comme elle l’avait fait. Elle dressa un dossier complet de ses mérites pour le juge.\nDans les prisons militaires de l’Empire, Artin n’était pas un cas isolé. Beaucoup aspirent à protéger l’ordre à la lumière, mais rares sont ceux prêts à éradiquer la pourriture dans l’ombre. Vulcera était de ceux-là. Ni la mauvaise réputation ni la nuit ne l’effraient. Si son feu infernal devait percer les ténèbres chargées de péchés pour atteindre la lumière, elle l’accepterait volontiers.",
-          TextMapId = "UI_CHAR_DATA_TEXT_32010403"
-        },
-        UI_CHAR_DATA_TEXT_32010404 = {
-          ContentDE = "Ce seul échec dans la carrière de Vulcera fut aussi sa seule faute.\nElle avait couvert une criminelle, détruit les preuves, et permis à cette personne de fuir loin.\nMais la traîtresse déçut ses attentes, revenant en Hyperborée, arborant son sourire charmeur et récidivant avec ses ruses.\nVulcera ne comprenait pas pourquoi son unique infraction, sa seule chance offerte pour la rédemption, avait été récompensée par le mensonge, la trahison et la perfidie.\n« Pourquoi tant de doutes ? » semblait résonner la voix moqueuse de la coupable, dans un tourbillon de senteurs : « J’admirais ta droiture, pourtant tu as piétiné ta propre justice pour moi... Quelle déception. »\nAvalant l’amertume de cette ironie et de cette trahison, Vulcera sentit la haine grandir en elle, nourrie par une détermination farouche à corriger cette \"unique erreur\".\nElle devait infliger elle-même à la criminelle la punition qu’elle méritait, une balle perçant son crâne.",
-          TextMapId = "UI_CHAR_DATA_TEXT_32010404"
-        },
-        UI_CHAR_DATA_TEXT_32010405 = {
-          ContentDE = "L’échec de laisser filer cette criminelle des années auparavant ne fut pas qu’une honte pour Vulcera, mais la graine d’une obsession. Elle se torture sans cesse d’une question : qu’est-ce qui l’a poussée à renier les principes qu’elle défendait depuis toujours, à trahir les lois qu’elle chérissait, en accordant son pardon à une coupable ?\n\nVulcera se souvient de tout concernant cette femme : ses méthodes, ses crimes, ses mensonges répétés, jusqu’aux petits gestes qui trahissaient sa culpabilité. Ces souvenirs restent gravés dans son esprit. Pourtant, quand elle tente d’oublier tout cela au fond d’un verre, les images s’effacent peu à peu, ne laissant que la nuit fatidique de sa décision erronée. La nuit embrasée, les preuves consumées en cendres, la neige tourbillonnante incapable d’éteindre l’incendie. Lorsqu’elle se retourne, le visage de la criminelle se reflète clairement dans ses yeux. Cette femme, elle aussi qualifiée de monstre, lui raconte son histoire, et pour la première fois, Vulcera comprend ce que signifie être \"semblable\". Dans le brouillard de son ivresse, elle entrevoit que certaines choses sont plus difficiles à pardonner que la haine, comme cette solitude qui ronge l’âme.",
-          TextMapId = "UI_CHAR_DATA_TEXT_32010405"
-        },
-        UI_CHAR_DATA_TEXT_33010101 = {
-          ContentDE = "Tu l’as rencontrée pour la première fois dans les Asphodèles. Face au calme de l’aubergiste, la jeune fille semblait pressée, décoiffée... visiblement en quête d’une aide urgente.\nPeut-être venait-elle de perdre la recette du jour, se condamnant à passer la nuit le ventre vide, peut-être sortait-elle d’une dispute stérile et cherchait désespérément quelqu’un pour prendre sa défense, ou peut-être, comme toi, n’était-elle qu’une étrangère égarée, sans savoir quelle route emprunter.\nCe que tu ignorais alors, c’est que cette inconnue avait bel et bien perdu une somme importante, qu’elle était réellement en difficulté, et qu’elle était, tout comme toi, une étrangère ici. Mais ses pas ne couraient pas pour elle-même : ils couraient pour une poignée de parfaits inconnus, dont la vie dépendait de son aide.",
-          TextMapId = "UI_CHAR_DATA_TEXT_33010101"
-        },
-        UI_CHAR_DATA_TEXT_33010102 = {
-          ContentDE = "Il y a mille façons de découvrir une cité... et celle que t’a apprise Margie porte sa marque bien particulière.\nUne ordonnance, une boîte d’étoiles en papier, une clé : trois objets sans lien apparent, trois énigmes pleines de secrets. Comme {性别:un|une} détective, tu as suivi la piste, écouté les histoires qu’elle menait à révéler, chacune teintée d’amour, de regret, de rancune ou d’espoir.\nEt lorsque tu es revenu vers Margie avec les réponses, elle t’a accueilli à nouveau à Givrelac... mais cette fois, la cité n’était plus pour toi qu’un dessin pâle sur une carte. Elle s’était emplie de couleurs, de voix et d’odeurs, et tu avais désormais ta propre vision de cette ville.",
-          TextMapId = "UI_CHAR_DATA_TEXT_33010102"
-        },
-        UI_CHAR_DATA_TEXT_33010103 = {
-          ContentDE = "En dehors de ses rares visites à Camilla aux Asphodèles, Margie se déplace toujours seule, rapide et discrète. On pourrait penser qu’elle partage le passé sombre de bien des orphelins de Givrelac, mais ce n’est pas le cas.\nUn après-midi, au cours d’une conversation anodine, elle t’a parlé de son père. Même si elle lui en voulait un peu de lui avoir confié la charge des poubelles tout en disparaissant mystérieusement, tu sentais qu’ils s’entraidaient, chacun à leur manière.\nPeut-être que c’est ça, en partie, qui fait que, dans cette ville toujours froide, Margie brille comme un petit soleil, éclatante et chaleureuse chaque jour.",
-          TextMapId = "UI_CHAR_DATA_TEXT_33010103"
-        },
-        UI_CHAR_DATA_TEXT_33010104 = {
-          ContentDE = "Sur le bureau de Margie trônent plusieurs vieilles photos. La plus récente date de son anniversaire l’an dernier, elle ne porte pas encore son casque habituel, mais son sourire est bien le même qu’aujourd’hui. Sur la photo la plus ancienne, on voit la petite Margie cachée derrière un homme adulte vêtu de haillons, qui semble tout aussi mal en point. Elle sort prudemment la tête, cheveux en bataille, nez tout rouge à force du froid, mais ses yeux brillent d’innocence et de curiosité.\nPourtant, une photo se démarque des autres : Margie n’y rit pas, ses yeux ne sont pas clairs, elle tourne la tête et affiche un air sombre. Quelqu’un lui tend la main, mais elle reste seule, dans un coin du cadre, serrant contre elle une petite poupée comme si c’était la seule chose à laquelle elle pouvait se fier.\nBien que la photo soit floue, on reconnaît cette poupée : c’est le petit chat en pendentif que Margie ne quitte jamais. Tu lui avais demandé son nom, elle t’avait répondu qu’il s’appelait « Touffu ».",
-          TextMapId = "UI_CHAR_DATA_TEXT_33010104"
-        },
-        UI_CHAR_DATA_TEXT_33010105 = {
-          ContentDE = "À Givrelac, les emplacements des poubelles ne sont jamais figés. Margie ajuste régulièrement leur position selon la météo, la topographie, ou encore la variation des revenus des habitants. Ces changements bien pensés maximisent souvent ses chances de trouver quelque chose de précieux.\nLa voir tracer avec entrain sur sa carte les itinéraires les plus rentables pour les jours à venir rappelle vos journées de chasse à l’Île du Purgatoire, quand toi et Berenica discutions des meilleurs endroits pour poser des pièges, afin d’attirer les proies rusées et agiles.\nPeut-être que, pour Margie, ces poubelles sont en fait les \"pièges\" urbains de sa propre chasse.",
-          TextMapId = "UI_CHAR_DATA_TEXT_33010105"
-        },
-        UI_CHAR_DATA_TEXT_33010201 = {
-          ContentDE = "À Givrelac, le nom de Margie reste absent des conversations... tant que la vie demeure clémente. Mais lorsque le malheur frappe à la porte et que les vents glacials de la cité emportent tout ce que l’on possède, ce nom devient bien souvent la dernière lueur d’espoir.\nQuand ces âmes en détresse reçoivent de ses mains quelques pièces, un morceau de pain ou un manteau d’hiver, leur première réaction est toujours la même : un mélange de méfiance et de doute. Cherche-t-elle une contrepartie ? Ou bien s’offre-t-elle le luxe d’une charité hautaine, juste pour se donner bonne conscience ?\nÀ chaque fois, leurs questions se heurtent au sourire espiègle de la jeune fille, sans la moindre réponse sérieuse. Et, à force de traverser à ses côtés les longs hivers de Givrelac, leurs soupçons finissent par disparaître, jetés comme de vulgaires déchets au fond de la poubelle de leurs souvenirs.",
-          TextMapId = "UI_CHAR_DATA_TEXT_33010201"
-        },
-        UI_CHAR_DATA_TEXT_33010202 = {
-          ContentDE = "Même les plus haut placés de Givrelac, bien au-dessus des réalités du peuple, ont entendu parler de la « Princesse des Déchets ».\nOn raconte qu’elle règne dans l’ombre sur toutes les poubelles de la cité, tel un vautour vorace fouillant chaque jour les rebuts pour en tirer profit. On raconte qu’avec ses trouvailles, elle a bâti dans les taudis un réseau de fidèles et un système d’informations capable de rivaliser avec celui des Veilleurs. On raconte qu’elle détient tant de secrets sur les puissants qu’il lui suffirait d’en dévoiler un seul pour semer le chaos dans toute la cité.\nPersonne ne sait d’où viennent ces rumeurs extravagantes, et Margie n’a jamais cherché à le savoir. Chaque jour, elle arpente les rues, ouvrant les couvercles après une petite prière pour une bonne récolte. Les biens utilisables vont aux nécessiteux, le reste, elle le revend sur un modeste étal.\nLes nobles, raides et élégants, passent devant en détournant les yeux... mais parfois, tu les entends murmurer à mi-voix, mi-inquiets, mi-fascinés, au sujet de la « Princesse des Déchets. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_33010202"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_TEXT_33010203",
-    MaxKey = "VoiceDes088",
-    Loader = function()
-      return {
-        UI_CHAR_DATA_TEXT_33010203 = {
-          ContentDE = "Avant que la « Princesse des Déchets » ne prenne les commandes, les poubelles de Givrelac étaient dirigées par le père de Margie, le vieux Martin, surnommé le « Roi des Déchets ».\nOn raconte qu’il venait d’un endroit appelé Anarchos, et qu’après un périple éprouvant de plusieurs mois avec sa fille, ils sont finalement arrivés aux portes de Givrelac.\nQuand le barbu Martin et la petite Margie sont apparus à l’entrée de la ville, on aurait dit deux sauvages tout droit sortis des étendues enneigées. Heureusement, Martin avait pris soin de préparer minutieusement tous ses papiers, permis de circulation inclus, sinon ils auraient pu être pris pour des Souillés et abattus sans sommation.\nEn faisant la queue pour entrer, les habitants les pointaient du doigt en ricanant. Mais Martin restait impassible, laissant la glace fondre sur sa barbe. Quant à la petite Margie, loin d’être intimidée, elle regardait tous ces gens d’un œil curieux et franc, sans accorder la moindre importance à leurs murmures moqueurs. Sous son regard direct, les mauvaises langues se faisaient plus discrètes et reprenaient leur attente, un peu gênées.\nÀ l’époque, personne n’aurait pu imaginer quelle \"empire\" cette paire père-fille allait bâtir à Givrelac. Et encore moins que le regard curieux de Margie ce jour-là ressemblerait tant à celui qu’elle poserait plus tard sur les poubelles de la cité, avec la même fascination.",
-          TextMapId = "UI_CHAR_DATA_TEXT_33010203"
-        },
-        UI_CHAR_DATA_TEXT_33010204 = {
-          ContentDE = "On raconte que...\nQuand la célèbre Princesse des Déchets était encore petite,\nSon regard s’échappait déjà bien au-delà des hautes murailles.\nL’intérieur de Givrelac, telle une prairie verdoyante et luxuriante,\nNotre Princesse Poubelle rêvait de grimper ces murs imposants.\nMais elle était trop frêle, trop jeune encore.\nElle s’interrogeait, souffrait, se rebellait, ruminait !\nAlors elle quitta la cité, jurant de ne jamais revenir en ce lieu douloureux !\nElle courait, fulminait, combattait, et gardait ses souvenirs en mémoire !\nSur son passage, les dégoûtants Souillés disparaissaient !\nMais fatiguée, elle sombra dans un sommeil doux au cœur de la neige.\nAccompagnée par ses petites bêtes, elle dormit jours et nuits,\nEt même en rêve, secourait les affligés, humains ou animaux.\nEnfin, le distrait Roi des Déchets, sur son trône, s’alarma de la fuite de sa fille chérie,\nEt ramena notre Princesse des Déchets, de retour dans sa fidèle cité de Givrelac !\n\nLa légende de la Princesse des Déchets, de Buck, le dramaturge.",
-          TextMapId = "UI_CHAR_DATA_TEXT_33010204"
-        },
-        UI_CHAR_DATA_TEXT_33010301 = {
-          ContentDE = "Margie n’aime ni les grands discours, ni les aveux larmoyants. Chaque fois qu’on la pousse dans ce genre de situations, elle préfère balayer la conversation d’un éclat de rire et passer aussitôt à autre chose.",
-          TextMapId = "UI_CHAR_DATA_TEXT_33010301"
-        },
-        UI_CHAR_DATA_TEXT_33010302 = {
-          ContentDE = "Peut-être parce qu’elle passe ses journées à fouiller des poubelles, Margie fait particulièrement attention à son hygiène.\nSi quelqu’un s’avise de pincer le nez ou de lui agiter la main devant le visage comme pour chasser une odeur, elle bondit comme un chat effarouché et disparaît dans un coin à l’abri des regards. Les jours suivants, cette personne n’aura aucune chance de la croiser, tout au plus devinera-t-elle sa présence à un parfum un peu plus prononcé que d’ordinaire.\nSi tu tiens à ne pas briser le cœur d’une fille de son âge... évite ce genre de plaisanterie.",
-          TextMapId = "UI_CHAR_DATA_TEXT_33010302"
-        },
-        UI_CHAR_DATA_TEXT_33010303 = {
-          ContentDE = "Margie adore tirer la queue des petits animaux. Elle a même essayé avec certains Souillés, ces créatures répugnantes, ce qui lui a valu un rare sermon du vieux Martin.\nVexée, Margie a juré de ne jamais lui pardonner ce « manque total de respect, de compréhension et d’acceptation de ses goûts personnels »... jusqu’à ce qu’il en ait une, comme les petits animaux.\nLe conflit a pris fin quand Martin, dans une mise en scène un peu folle, s’est mis à sauter sur un balai, affirmant qu'il avait fait pousser une queue magique en forme de sapin. Margie, ne pouvant retenir son rire, a alors prononcé un discours passionné intitulé « Les plus mignonnes sont les plus touffues », ce qui a brisé leur silence d’un mois et mis fin à leur communication faite uniquement de gestes.",
-          TextMapId = "UI_CHAR_DATA_TEXT_33010303"
-        },
-        UI_CHAR_DATA_TEXT_33010304 = {
-          ContentDE = "Margie avait traversé une profonde déception à l’égard de Givrelac. Elle venait de voir la haine viscérale que les Solariens portaient aux Charons et d’expérimenter les conditions de vie déplorables de cette communauté. Encore enfant, elle ne comprenait pas pourquoi ces violences continuaient sans cesse, alors que douleur et souffrance devraient être évitées. Pourtant, à Givrelac, certains démontraient leur pouvoir en faisant souffrir les autres, un comportement que Margie trouvait totalement insensé.\nÀ cette époque, la cité semblait pour elle enveloppée d’une étrange brume violette, une couleur qui évoquait pour elle la morsure glaciale du gel.",
-          TextMapId = "UI_CHAR_DATA_TEXT_33010304"
-        },
-        UI_CHAR_DATA_TEXT_33010305 = {
-          ContentDE = "Margie a été championne du concours de déneigement de Givrelac quatre années de suite. Pourquoi pas cinq ? Parce que l’an dernier, les autres participants se sont ligués pour la nommer membre du jury.",
-          TextMapId = "UI_CHAR_DATA_TEXT_33010305"
-        },
-        UI_CHAR_DATA_TEXT_33010401 = {
-          ContentDE = "Le printemps est rare à Givrelac, et c’est peut-être pour cela qu’il a tant de valeur.\nLes fleurs s’ouvrent, les oiseaux migrateurs reviennent, des papillons d’un vert émeraude dansent dans l’air doux... et si tu restes le nez plongé dans ton travail, laissant filer cette saison entre tes doigts, tu t’en mordras les doigts quand reviendra le long hiver.\nCe jour-là, Margie s’était aisément convaincue qu’une pause ne ferait pas de mal. Au lieu de tournoyer comme une toupie d’un coin à l’autre de la cité, elle s’était affalée paresseusement sur un banc, les yeux entrouverts sous la tiédeur du soleil.\nUne conversation flotta alors jusqu’à ses oreilles...\n « Regarde, maman, il me lèche la main ! Ce petit chat sans maison est si triste... je peux le ramener ? »\n« D’accord, mon trésor. Mais tu sais, dehors il y a tant de chats et de chiens errants... on ne peut pas tous les recueillir. Alors je ne peux dire oui qu’une seule fois. Tu es sûre que ce sera lui ? »\nLa suite se perdit dans le flou, non pas parce que la discussion s’achevait, mais parce que Margie, partagée entre un petit sentiment de culpabilité et le plaisir d’un rare moment de détente, s’assoupit.\n\nQuand elle rouvrit les yeux, le soleil s’était presque noyé derrière les murailles de Givrelac. Elle sentit sur sa main un poids chaud et soyeux : un minuscule chat noir, si maigre qu’on aurait dit un chaton nouveau-né, mais affublé de deux longs sourcils blancs en forme de huit, comme un vieux sage miniature. Sans doute la mère et l’enfant n’avaient-ils pas voulu de lui à cause de cette allure étrange. Margie le recueillit dans sa veste, traversa les ruelles du taudis en répondant aux salutations des habitants, et rentra chez elle. Câlinant la petite boule de poils, elle murmura avec un sourire :\n« Qu’on soit Sola, Charon... ou chaton, on a toujours besoin de quelqu’un pour veiller sur nous. » \nLe chat, mi-jeune, mi-vieux, ne comprenait pas ses mots mais se laissa faire, rentrant ses griffes. Margie, elle, attrapa sa queue qui battait l’air et déclara :\n« À partir d’aujourd’hui, tu t’appelleras Sourcil-Blanc... Aïe ! »\nLe lendemain, trois belles griffures marquaient son visage. Même le soleil de Givrelac n’arrivait pas à lui arracher un sourire. Mais tous savaient qu’avant l’heure du déjeuner, la Margie rieuse serait déjà de retour.",
-          TextMapId = "UI_CHAR_DATA_TEXT_33010401"
-        },
-        UI_CHAR_DATA_TEXT_33010402 = {
-          ContentDE = "La journée de Margie commence quand elle ajuste bien son casque sur la tête.\nEnsuite, elle sort sa fidèle carte et son carnet, qu’elle ne quitte jamais, et, en croisant ses connaissances des poubelles avec les observations de la veille dans les ruelles, elle décide de sa tournée. Enfin, elle traîne son sac en toile et porte sa pelle, sautillant joyeusement d’un conteneur à l’autre à la recherche de ses trouvailles du jour.\nEn fredonnant, elle passe au coin de la rue où tante Sarah, en train de faire sa lessive, lui fait signe avec sa main rougie par le froid. L’oncle Rett, le menuisier, jette des copeaux en l’air comme des confettis, ce qui fait rire aux éclats la fille de la fleuriste d’en face... C’est le quotidien de Margie, une routine qu’elle chérit, toujours souriante et prête à saluer tout le monde.\n\nSauf une exception, la fille du menuisier, Kennice, qui, en faisant une révérence exagérée, l’appelle d’un ton moqueur : « Bonjour, chère princesse, que le dieu des poubelles te bénisse à jamais ! » Avant qu’elle ait fini, la petite fille file, emportée par les rires des adultes alentour, tandis que Margie, qui affichait un grand sourire, fronce maintenant les sourcils et ouvre grand son sac, prête à récupérer aussi Kennice parmi les déchets du jour.\nBien plus que le surnom de « Princesse », qu’elle tient de son père, le « Roi des Déchets », Margie préfère se désigner comme « Dame Margie, la détective taciturne, voyageuse solitaire des bas-fonds de la ville ».\nPeut-être que la \"bénédiction\" de Kennice a porté ses fruits, car aujourd’hui, la récolte est particulièrement riche : des rideaux en velours abandonnés par un noble, une bibliothèque haute de presque deux mètres, quelques pièces d’argent oubliées dans une vieille sacoche... Et, miracle, parmi les poubelles d’une grande maison, des lettres au parfum de désinfectant et des piles de feuilles couvertes d’équations complexes.\nL’instinct de détective de Margie s’éveille aussitôt. Elle comprend que ces objets appartiennent à quelqu’un d’exceptionnel. Bien qu’elle ne déchiffre pas les formules incompréhensibles, les lettres, anonymes et sans adresse, pourraient révéler de secrets insoupçonnés.\nLe cœur battant, Margie commence leur lecture :\n« Ma fille, si tu étais encore en vie, le son de ton rire remplirait véritablement cette maison au lieu de n’être qu’un écho dans mes oreilles... »\n« Ce qui me torture, ce n’est ni le bien ni le mal, mais la perte irrémédiable... »\n« J’ai rejeté les parents de cette fille. Je ne peux supporter que ce cauchemar recommence. J’ai décidé d’arrêter mes recherches. Hayley, soutiendras-tu mon choix ? »\n« J’espère ne jamais avoir de regrets... »\nLes lettres ne portent pas de signature, mais Margie entrevoit le portrait d’un médecin reclus et le passé mystérieux qui le hante.\nLes poubelles contiennent plus que des restes ou des objets abandonnés, elles renferment aussi une multitude d’histoires et de secrets, mêlant tristesse et joie, témoins des luttes et des espoirs de tant d’âmes. Et pourtant, malgré cette grande cage qu’est la cité, chacun s’efforce de vivre.\n\nLe soir venu, chargée de ses trouvailles, Margie rentre chez elle. Kennice, la fille du menuisier, l’attend au coin de la rue, une fleur à la main, et s’excuse maladroitement : \n« Désolée de t’avoir appelée comme ça, je savais que ça ne te plaisait pas... »\nMargie lève les yeux vers la fille de la fleuriste qui, de l’autre côté de la fenêtre, arrose ses plantes et lui lance un clin d’œil complice.\nSouriant, Margie tapote l’épaule de Kennice : « Ce n’est rien ! C’est moi qui ai manqué à ma promesse de t’apporter un cadeau. Mais on peut en vouloir au dieu des poubelles qui ne m’a pas souri hier. »\nPuis, comme par magie, elle sort un vieux sac à dos propre de son sac : « Grâce à ta bénédiction, j’ai eu une sacrée chance aujourd’hui ! Voici mon cadeau en retard. » \nElle prend la petite fleur orange : « Et j’accepte tes excuses ! On est quittes, d’accord ? » « Tout à fait ! » s’exclame Kennice, en lui rendant une révérence : « Merci, honorable détective taciturne ! »",
-          TextMapId = "UI_CHAR_DATA_TEXT_33010402"
-        },
-        UI_CHAR_DATA_TEXT_33010403 = {
-          ContentDE = "Personne ne sait vraiment pourquoi le « Récupérateur » Martin a quitté sa terre natale, mais on suppose qu’il a dû enfreindre un interdit qu’on ne peut transgresser, peut-être a-t-il défié un puissant « Patriarche » auquel nul ne peut désobéir. Quoi qu’il en soit, cela devait être si grave pour que Martin, qui chérissait sa fille plus que tout, s’enfuie sous la menace des balles, portant la petite Margie à travers ces étendues de neige sans fin, entamant ainsi une lutte désespérée pour survivre.\nCe périple est sans doute le plus grand exploit de sa vie, non parce que personne n’avait jamais traversé ce désert blanc vivant, mais parce qu’en un tel enfer glacé, Martin a réussi à protéger à la fois lui-même et Margie, un enfant qui aurait normalement été vu comme un poids inutile dans un tel contexte. Même parmi les robustes Charons, rares étaient ceux capables de traverser cette étendue gelée avec un tout-petit.\nLorsque, enfin, père et fille posèrent les pieds à Givrelac, mettant fin à des mois de vie errante sous le vent et la neige, Martin fut surpris et heureux de constater que Margie avait poussé de deux centimètres depuis leur départ. À cet instant précis, les larmes lui montèrent aux yeux.\nLa petite Margie, elle, ne comprenait pas pourquoi son père, qui venait tout juste de mesurer sa taille avec enthousiasme, baissait soudain la tête. Peu importe combien elle l’appelait « vieux crétin », il refusait de lever les yeux. Intriguée, elle écarta machinalement la neige qui restait sur son épaule, pour découvrir avec surprise que son père, d’ordinaire si bavard et plein de malice, laissait maintenant apparaître quelques mèches de cheveux blancs que même ses gestes ne pouvaient dissimuler.",
-          TextMapId = "UI_CHAR_DATA_TEXT_33010403"
-        },
-        UI_CHAR_DATA_TEXT_33010404 = {
-          ContentDE = "La première fois que Margie se tint devant la porte de Givrelac, son esprit fut totalement envahi par l’immensité du colosse qui s’offrait à elle.\nSes souvenirs déjà flous de sa terre natale, assombris par une forte fièvre, s’étaient transformés en une masse confuse. Pour elle, le monde se réduisait à d’infinies champs de neige, un froid extrême, des prédateurs et des proies, un ciel étoilé et la chaleur solitaire d’un feu de camp partagé avec son père... son seul compagnon.\nPuis, soudain, Givrelac, cette destination dont son père lui avait parlé, apparut devant elle. Et à ce moment-là, sa seule impression se résuma en ces mots simples : \n« Ouah ! Quel immense campement ! Tant de monde ! Tant d’odeurs inconnues ! »\nMargie ressemblait à une enfant errante qui venait enfin de retrouver sa tribu. Elle n’avait ni peur ni trac, seulement ce sentiment inédit d’appartenance qui s’imprima profondément dans son cœur, elle comprit alors que le monde ne se limitait pas à elle et à son père. Et quand la nuit tomba, la transformation de la cité lui fit un choc inoubliable. Si un simple feu de camp suffisait autrefois à la réchauffer, alors toutes ces lumières scintillant derrière les fenêtres lui offraient maintenant un courant de chaleur inimaginable.\nQuand son père lui demanda si elle voulait vivre ici, elle acquiesça sans hésiter. Peu après, une certaine Camilla lui fit la longue liste des « choses interdites et endroits où il ne faut pas aller à Givrelac ». Trop d’informations pour l’enfant, qui sombra presque dans le sommeil. Lorsqu’elle fut réveillée pour la quatrième fois par Camilla, elle en eut assez et demanda : « Dans les champs de neiges, on n’a pas autant de règles ! Est-ce que c’est plus dangereux ici qu’en pleine nature ? »\nUn lourd silence s’installa entre Camilla et son père. Margie, sur le point de s’endormir, vit son père caresser doucement sa tête : « Ma chérie, peut-être que tu as raison. »\n\nLa deuxième fois qu’elle se retrouva devant la porte de Givrelac, c’était pour en sortir.\nLa cité, immense et fascinante auparavant, s’était muée dans ses yeux en un monstre silencieux, sa porte grande ouverte ressemblant à une gueule béante. La joie de la première visite avait fait place à la confusion et à la désillusion.\nElle ne comprenait pas pourquoi son immunité au froid et ses cornes pouvaient faire d’elle une cible. Pourquoi sa simple envie d’explorer la cité intérieure risquait une punition sévère. Et surtout, pourquoi tout le monde semblait accepter cela comme normal, même les enfants Solariens lançaient des pierres sans hésiter, comme si c’était elle l’étrangère, la menace.\nMargie réalisa, tardivement, que ce refuge qu’elle avait cru trouver ne lui avait jamais vraiment ouvert ses bras. Peut-être qu’un enfant né sur la neige est destiné à retourner à l’immensité blanche.\nElle se détourna, retenant ses larmes, et se lança dans une aventure en solitaire.",
-          TextMapId = "UI_CHAR_DATA_TEXT_33010404"
-        },
-        UI_CHAR_DATA_TEXT_33010405 = {
-          ContentDE = "Froid, toujours froid.\nMargie n’avait même pas besoin d’ouvrir les yeux pour revoir l’immensité blanche à perte de vue, jour après jour, mois après mois, comme si elle et son père étaient prisonniers de cet océan glacé.\nLa jeune Margie, encore petite et en colère contre la déception qu’elle ressentait face à Givrelac, s’enfonçait toujours plus loin dans la neige, loin de cette cité où régnaient les injustices. Plus elle avançait, plus son esprit feuilletait le passé, celui de sa première expédition avec son père Martin :\n\nDès leurs premiers pas dans cette terre gelée, Margie demandait chaque jour à son père : « On est bientôt arrivés ? »\nMartin répondait toujours par un chiffre. Petite, Margie ne comprenait pas vraiment ce que signifiait « distance », mais elle savait qu’à zéro, leur longue marche serait terminée. Sauf que ce chiffre ne baissait pas toujours. Lorsqu’ils se perdaient et retrouvaient leur campement de la veille, il augmentait. Si quelqu’un se blessait, il chutait plus lentement. Et quand la maladie finit par la terrasser, l’empêchant même de se tenir debout, ce nombre resta figé, comme tout autour d’eux.\nLes jours de fièvre transformèrent Margie en une petite braise brûlante dans ce désert blanc. Dans son esprit confus, les rêves d’été et de soleil avaient disparu, ne laissant place qu’à ce froid omniprésent. Pourtant, lors de ses rares instants de lucidité, elle murmurait toujours la même question, de plus en plus faiblement :\n« On est bientôt arrivés ? »\nMais seule la réponse du silence venait à elle, accompagnée du geste tremblant de son père posant la main sur son front brûlant.\nUne nuit glaciale, Margie rêva qu’une étoile tombait dans ses bras. Bien que faiblissante dans sa chute, elle brillait encore d’une chaleur brûlante pour elle. Le lendemain, au réveil, la lumière du matin caressa son visage, et la fièvre avait disparu. Son corps était chaud et léger. Elle crut presque être encore dans un rêve... jusqu’à ce que l’étreinte étouffante de son père la ramène à la réalité : un miracle venait de se produire.\nLe petit être chaud dans ses bras deviendrait plus tard la peluche Touffu qu’elle emmènerait toujours avec elle. Mais à l’époque, ce n’était qu’une petite sauvage maigrelette, sans famille, avec une fourrure trop fine pour résister au froid. Avant de mourir de froid, elle avait cherché refuge contre Margie et sa chaleur fébrile... peut-être sa seule chance de survie.\n\nDans les jours qui suivirent, la petite créature resta avec eux, prudente et distante, observant de loin, n’approchant que lorsque Margie déposait devant elle ses meilleures tranches de viande séchée et reculait doucement. Après avoir reniflé l’air comme pour capter toutes les odeurs, Touffu venait timidement s’emparer de la nourriture...\nUn cri d’oiseau perçant ramena Margie à la réalité : elle suivait désormais un chemin opposé à celui qu’elle avait parcouru avec son père. Elle souffla un soupir, voulant compter les kilomètres restants, mais elle ne savait plus par quel nombre commencer.\nOù devait-elle aller ? Elle ne le savait pas. Le pays natal de Martin n’était pas chez elle. Givrelac ne l’était pas non plus. Alors, où était sa place ? Dans cette neige sans fin ?\n\nLa neige tombait encore, comme les rubans colorés des parades des nobles, se déposant sur Margie. Elle perdit la notion du temps. Le blizzard s’intensifia, sa vision se brouilla. Quelqu’un la recouvrit d’une couverture argentée, et le vent chanta comme une berceuse, l’endormant doucement sur un tapis de laine. Malgré ce froid familier, ses rêves s’animèrent soudainement. Elle vit des visages heureux l’entourer, chantant et riant, leurs traits libérés de la douleur. Ils l’appelaient « Princesse », « Ma chérie », « Petite détective »... Elle reconnut Camilla, Kennice, la fille de la fleuriste. Tous avaient le teint rose, loin du vent et du froid mordants.\nEnfin, elle vit Touffu, sa première amie, qu’elle n’avait pas revue depuis la neige. Elle avait tellement grandi.\nCe n’était pas un rêve. Margie se réveilla pleinement : Touffu était bien réelle, différente de la petite bête maigrelette de ses souvenirs. Agile et habile, elle chassait dans la neige, gardant toujours un peu pour la faible Margie. Même ses restes attiraient les oiseaux gras, qui s’en régalaient aussi.\nMargie se sentit apaisée : Touffu, en prédateur, savait non seulement se nourrir, mais aussi soutenir les plus faibles autour d’elle. Et surtout, elle avait trouvé sa propre voie.\nElle se rappela alors ce rêve où tous les visages maigres des taudis retrouvaient leur santé et leur joie. Ce n’était qu’un songe, mais elle comprit soudain ce qu’elle devait faire.\n\n« Martin ! Je reviens ! » cria-t-elle vers le vent, tournant le dos à la neige. \n« À partir d’aujourd’hui, on va fouiller ensemble toutes les poubelles de Givrelac ! »\n« Au revoir, Touffu ! » fit-elle en saluant le chat dans la neige, puis s’élança de nouveau vers la cité immense, injuste, mais pleine de promesses.",
-          TextMapId = "UI_CHAR_DATA_TEXT_33010405"
-        },
-        UI_CHAR_DATA_TEXT_41010101 = {
-          ContentDE = "Rhythm n’a jamais été portée sur la musique, elle ne peut même pas suivre les notations les plus simples d’une partition. Et pourtant, d’une manière ou d’une autre, elle parvient à jouer Requiem pour les sans-noms à l’harmonica.",
-          TextMapId = "UI_CHAR_DATA_TEXT_41010101"
-        },
-        UI_CHAR_DATA_TEXT_41010102 = {
-          ContentDE = "Rhythm est silencieuse, non parce qu’elle n’a rien à dire, mais parce qu’elle ne sait pas comment parler de ce qu’elle ne maîtrise pas. Dans ces moments, plutôt que de se risquer à dire des demi-vérités, elle préfère écouter, attentivement, patiemment.\nCette ouverture la rend bien sûr facile à tromper. Mais cela ne la dérange pas. Pour Rhythm, se faire avoir est une manière d’apprendre. Les erreurs font partie de la croissance.\nElle s’ouvre réellement seulement quand la conversation porte sur ce qu’elle connaît... comme sa famille, ou les idéaux qui l’accompagnent depuis l’enfance. Mais beaucoup de son passé est devenu trop fragile, trop douloureux pour y revenir. Aujourd’hui, elle préfère parler de ce qui vient : le prochain contrat, la prochaine mission. Souvent, elle arrive sans prévenir pour donner un coup de main. Toujours concentrée. Toujours occupée. Et d’une certaine façon, silencieusement contente. Si vous lui demandez pourquoi, elle ne sourira que légèrement et dira que c’est sa manière de rendre la pareille, pour ce moment où vous êtes intervenu, quand elle en avait le plus besoin.",
-          TextMapId = "UI_CHAR_DATA_TEXT_41010102"
-        },
-        UI_CHAR_DATA_TEXT_41010103 = {
-          ContentDE = "Rhythm dit toujours qu’elle n’a rien de spécial.\nElle raconte qu’enfant, elle et son petit frère devaient se soutenir pour survivre aux coups du patron de l’usine. Qu’au sein de la Légion, elle ne tenait bon que grâce à ses camarades, pas à pas. Et après avoir quitté la Légion, ce sont les Vagabonds de la Nuit qui l’ont aidée à retrouver la force de continuer.\nElle insiste : elle n’est pas remarquable, juste une Charon des taudis qui a grimpé jusqu’au rang d’officier en tenant un peu plus longtemps que les autres.\nElle avoue même être égoïste, que tout ce qu’elle a fait n’avait qu’un but : devenir une Charon Couronnée.\nMais toi, tu sais la vérité. La fille qui se donne entièrement pour les autres, qui ne faiblit jamais face à ce qu’elle croit juste. Sa volonté est trempée comme l’acier. C’est sa force. C’est ce qui la rend exceptionnelle. Et dans les longues nuits glaciales de Givrelac, la lumière discrète qu’elle porte ne cesse de briller, peu importe comment tout a commencé.",
-          TextMapId = "UI_CHAR_DATA_TEXT_41010103"
-        },
-        UI_CHAR_DATA_TEXT_41010104 = {
-          ContentDE = "Après être devenue une Charon Couronnée, Rhythm fit quelque chose d’inhabituel : elle s’accorda un jour de congé. Seule, elle alla au Théâtre Galea pour assister à un opéra.\nLe public acclamait les retrouvailles des protagonistes et pleurait leurs séparations. Mais aucune de ces émotions n’effleura jamais le visage de Rhythm.\nElle resta là, deux billets serrés dans la main, immobile, silencieuse, jusqu’à ce que le rideau tombe et que la salle se vide. Ce n’est que lorsqu’un membre du personnel vint lui dire que le spectacle était terminé qu’elle baissa les yeux... et se rendit compte qu’elle avait acheté un billet de trop.",
-          TextMapId = "UI_CHAR_DATA_TEXT_41010104"
-        },
-        UI_CHAR_DATA_TEXT_41010201 = {
-          ContentDE = "Rhythm Fischer, ancienne adjudante des Veilleurs de Givrelac rattachée à la VIᵉ Légion. L’une des rares militaires hyperboréennes à se soucier sincèrement de la communauté Charon.\nElle était partout, enquêtant sur des crimes violents, rétablissant l’ordre, gérant les urgences, arbitrant les conflits de voisinage, débouchant des égouts, retrouvant des objets perdus, et même redémarrant le réseau électrique d’urgence de la cité. \nEt la majorité de ces tâches ingrates et épuisantes ? Personne ne les lui avait confiées. Elle se portait volontaire.\nPourtant, malgré tous ses efforts acharnés, les limites d’une seule personne se font sentir. Pour la communauté Charon qu’elle tentait d’aider, son travail ressemblait à verser quelques poignées d’eau dans l’océan... noble, certes, mais jamais suffisant.",
-          TextMapId = "UI_CHAR_DATA_TEXT_41010201"
-        },
-        UI_CHAR_DATA_TEXT_41010202 = {
-          ContentDE = "Rhythm suit un rythme de vie d’une précision quasi horlogère. Chaque matin à six heures précises, elle apparaît sur le terrain d’entraînement des Veilleurs pour commencer ses exercices, marquant le début d’une nouvelle journée. On raconte que les autres soldats règlent souvent leurs montres sur l’heure exacte de son arrivée.",
-          TextMapId = "UI_CHAR_DATA_TEXT_41010202"
-        },
-        UI_CHAR_DATA_TEXT_41010203 = {
-          ContentDE = "Rhythm peut se surpasser dans presque tout... sauf pour conduire. Peu importe ses efforts, chaque véhicule qu’elle touche finit par tomber en panne. Les systèmes plantent, les circuits surchauffent, quelque chose cloche toujours. Peut-être le courant qui circule en elle. Peut-être le destin. Quoi qu’il en soit, les véhicules et Rhythm ne se sont jamais entendus.",
-          TextMapId = "UI_CHAR_DATA_TEXT_41010203"
-        },
-        UI_CHAR_DATA_TEXT_41010204 = {
-          ContentDE = "Sous le poids de la vie, Rhythm est devenue insensible, à la douleur, à l’épuisement, même à ses propres limites. Et elle ne s’en rend même pas compte. Une fois, elle a travaillé huit heures d’affilée dans une zone de chaleur extrême... là où un humain ordinaire tomberait inconscient en dix minutes. Quand elle en est sortie, intacte et calme comme toujours, même certains de ses camarades qui nourrissaient de profonds préjugés contre les Charons ont commencé à la voir autrement : avec un soupçon de respect, et une ombre de peur.",
-          TextMapId = "UI_CHAR_DATA_TEXT_41010204"
-        },
-        UI_CHAR_DATA_TEXT_41010302 = {
-          ContentDE = "Lorsqu’elle a découvert ses pouvoirs, Rhythm n’était pas encore capable de les maîtriser. Même en marchant, elle pouvait produire de petits arcs électriques sur ses bottes. Un pêcheur de Givrelac l’aperçut et l’invita à rejoindre son équipage pour la pêche électrique. Elle refusa sans hésiter. Elle ne cherchait ni applaudissements ni argent. Ce qu’elle désirait vraiment, c’était devenir une Charon Couronnée, capable d’améliorer la vie des gens ordinaires.\nBien sûr, cette capacité lui cause encore parfois de petits désagréments : elle porte des gants pour serrer des mains, et la moitié de ses pulls finit couverte de bouloches statiques.",
-          TextMapId = "UI_CHAR_DATA_TEXT_41010302"
-        },
-        UI_CHAR_DATA_TEXT_41010303 = {
-          ContentDE = "Rhythm n’a jamais pu s’habituer au contact de l’acier froid. La résistance brutale de la lame contre la chair. La chaleur du sang sur ses paumes, collant là où aucun lavage ne pouvait l’enlever. Ce dégoût restait, lui faisait craindre le champ de bataille. C’est pour cela qu’elle préférait les armes à feu aux armes blanches.\nDepuis son enfance, le rêve de devenir une Charon Couronnée la poussait à continuer. Un instinct féroce pour protéger resserrait son doigt sur la détente. Une résolution silencieuse de réduire au maximum la souffrance de ses ennemis affinait sa précision de sniper.\nLa plupart du temps, elle réussissait, ses balles apportant une \"paix\" froide et implacable. Mais pas toujours. Parfois, la douleur persistait. Ces rares échecs, ces cris qu’elle n’avait pas pu étouffer, s’incrustaient dans sa peau, s’invitaient dans son sommeil et restaient. Alors elle se faisait une promesse, silencieuse et inébranlable : la prochaine fois, plus de douleur prolongée. Ce serait rapide. Net. Une seule balle.",
-          TextMapId = "UI_CHAR_DATA_TEXT_41010303"
-        },
-        UI_CHAR_DATA_TEXT_41010304 = {
-          ContentDE = "Rhythm n’a jamais retrouvé le corps de Blues. Pourtant, elle lui a sculpté une pierre tombale, et l’a déposée discrètement aux côtés de leurs parents.\nCette nuit-là, son courant électrique s’est échappé, chose rare pour elle, et des étincelles ont jailli dans l’obscurité. Pas de mots. Pas de larmes. Juste l’électricité, se déployant comme un souffle doux, l’enveloppant dans une étreinte silencieuse et tendre.",
-          TextMapId = "UI_CHAR_DATA_TEXT_41010304"
-        },
-        UI_CHAR_DATA_TEXT_41010305 = {
-          ContentDE = "La musique a toujours eu quelque chose de magique, le pouvoir d’apaiser la peine, de relever ceux qui vacillent. Chaque fois que Rhythm sentait ses forces l’abandonner, elle jouait Requiem pour les sans-noms. La mélodie ne manquait jamais de l’ancrer, de lui rendre assez de courage pour poursuivre.\nMais ces derniers temps... peu importe combien de fois elle la joue, la tristesse ne se dissipe plus. Pire encore, elle s’intensifie. Aujourd’hui, seule une succession sans fin de missions parvient à étouffer un peu la douleur. Elle s’y plonge corps et âme, traquant ces rares instants où l’engourdissement s’installe... et où, l’espace d’un souffle, la peine se tient à distance.",
-          TextMapId = "UI_CHAR_DATA_TEXT_41010305"
-        },
-        UI_CHAR_DATA_TEXT_41010401 = {
-          ContentDE = "« Les réservistes doivent s’attendre à en baver. Et pour des Charons comme vous, c’est deux fois plus dur. Rhythm Fischer, tu as du talent. Baisse la tête, travaille dur, et peut-être qu’un jour tu deviendras une Charon Couronnée. Maintenant, va nettoyer les égouts près du Bureau de la Sécurité. »\nC’est ce que lui avait dit son chef d’équipe lorsqu’elle avait signé pour devenir réserviste des Veilleurs.\n« Les recrues doivent s’attendre à en baver. Et pour des Charons comme vous, c’est deux fois plus dur. Rhythm Fischer, tu as du talent. Baisse la tête, travaille dur, et peut-être qu’un jour tu deviendras une Charon Couronnée. Maintenant, va t’occuper de ce sale Souillé. »\nC’était le sous-officier, quand elle avait enfin atteint le rang de soldat.\n« Les officiers subalternes doivent s’attendre à en baver. Et pour des Charons comme vous, c’est deux fois plus dur. Rhythm Fischer, tu as du talent. Baisse la tête, travaille dur, et peut-être qu’un jour tu deviendras une Charon Couronnée. Maintenant, allez chercher ce fugitif exilé. C’est un Déchu, un Daimon. La dernière équipe n’est jamais revenue. Je compte sur vous. »\nC’était le lieutenant, quand Rhythm était devenue adjudante.\nElle ne savait plus si tous avaient dit exactement la même chose, ou si les mots s’étaient estompés à force de répétition. Chaque nuit, elle recouvrait une nouvelle blessure, s’allongeait dans son lit et volait quelques secondes de silence avant de sombrer dans le sommeil. Les grades de la Légion ressemblaient aux branches d’un grand arbre. Et quelque part, haut dans le feuillage, scintillait la médaille des Charons Couronnés. Toujours un peu hors de portée. Presque à portée de main, jusqu’à ce qu’elle tende la main, et que la médaille s’élève encore, comme une bulle de savon jouant avec le vent.\nEst-ce qu’un jour elle l’atteindrait ? Elle l’ignorait. Mais après tout... ses repas n’étaient plus que du pain de seigle rassis. Ses rations s’étaient transformées en conserves de viande savoureuse. Elle avait plus d’un uniforme. Et parfois, quand tout allait bien, elle s’autorisait à vérifier son miroir et à arranger cette corne qu’elle n’aimait pas tant que ça. Les choses s’amélioraient. Lentement, mais sûrement. Murmurant pour elle-même, Rhythm tirait la couverture froide et rigide sur ses épaules et se laissait emporter par le sommeil.\n\nLes choses s’amélioreraient... même par petits pas. Chaque goutte de sueur qu’elle versait construisait une marche de plus sur le chemin pour devenir une Charon Couronnée. C’était ce qu’elle avait toujours cru, de tout son cœur.",
-          TextMapId = "UI_CHAR_DATA_TEXT_41010401"
-        },
-        UI_CHAR_DATA_TEXT_41010402 = {
-          ContentDE = "Pour aider {nickname} à en apprendre davantage sur Berenica, Rhythm prit le train.\nLe jour où elle quitta Givrelac, le ciel s’était, pour une fois, dégagé. Elle choisit une place près de la fenêtre. Au moment de se retourner pour jeter un dernier regard à la cité, une lumière éclatante traversa la vitre et lui brûla les yeux. Elle leva le bras pour se protéger... et réalisa soudain que ni elle, ni la cité qu’elle laissait derrière elle, n’avaient ressenti une telle chaleur depuis bien, bien longtemps.\nElle repensa aux derniers mots de son frère : \n« Promets-moi une chose... quoi qu’il arrive, vis. »\nBeaucoup de gens le lui avaient dit, sa famille, {nickname}, d’autres encore. Mais jamais personne ne lui avait expliqué ce que signifiait réellement vivre, ou ce qui rendait une vie pleine de sens.\nLe sifflement du train fendit l’air, long, grave, presque comme un sanglot de Givrelac. Puis les roues se mirent à grincer, et la rame s’ébranla, l’emportant loin de cette terre glacée, vers la capitale impériale, une destination lointaine et inconnue.\nPeut-être y trouverait-elle un soleil éclatant... ou bien l’obscurité sans fin. Peut-être y aurait-il des jeunes gens dansants et chantants... ou bien un silence pesant. Peut-être des vergers chargés de fruits... ou bien ces fruits seraient déjà pourris.\nElle n’en savait rien.\nMais, à cet instant précis, les rayons qui caressaient son visage étaient bien réels.",
-          TextMapId = "UI_CHAR_DATA_TEXT_41010402"
-        },
-        UI_CHAR_DATA_TEXT_42020101 = {
-          ContentDE = "Chaque matin, Randy classe ses tâches par ordre de priorité, un rituel qui lui permet de distinguer l’urgent de... l’oubliable.\n« Les missions sans importance ? Laisse-les traîner, elles finiront peut-être par disparaître toutes seules. » C’est un de ses principes de vie.\nSelon lui, il faut concentrer ses efforts sur ce qui compte vraiment, et consacrer le reste de son temps à savourer le repos.\nIl se sert souvent de cette philosophie pour esquiver quelques-unes de tes requêtes. Et, bien souvent, tu découvres qu’il avait raison : ces petites missions se sont, comme par magie, évaporées d’elles-mêmes.",
-          TextMapId = "UI_CHAR_DATA_TEXT_42020101"
-        },
-        UI_CHAR_DATA_TEXT_42020102 = {
-          ContentDE = "Pour Randy, le sommeil est une affaire sacrée.\nAvant de s’allonger sur son lit de camp pliable, il enfile un masque de nuit en soie, allume un encens apaisant spécial sieste réparatrice, puis se glisse dans les draps avec un sérieux presque religieux.\nSi, à cet instant, on ose lui parler travail, il dégaine aussitôt ses excuses favorites : \n« J’ai veillé tard hier pour finir un dossier », « Certaines choses ne peuvent pas être précipitées », « Les astres ne sont pas propices au travail aujourd’hui »... ou encore « Seuls ceux qui savent se reposer peuvent accomplir de grandes choses ».\nEn vérité, ceux qui se laissent convaincre découvrent rapidement qu’il avait déjà bouclé toutes ses tâches avant cette cérémonie du coucher : « Plus vite c’est fait, plus vite je dors », telle est sa devise.\nMais attention à ne pas croire qu’on peut lui refiler du travail en plus : il se jetterait alors sur son lit comme par esprit de contradiction... et deviendrait un dormeur impossible à réveiller, feignant un sommeil plus profond que l’abîme.",
-          TextMapId = "UI_CHAR_DATA_TEXT_42020102"
-        },
-        UI_CHAR_DATA_TEXT_42020103 = {
-          ContentDE = "Randy maîtrise aussi bien le rôle du cavalier que celui de la dame... grâce aux \"leçons\" imposées par ses sœurs.\nLe but ? Briller aux bals mondains de la famille. Et, immanquablement, il finit sous les projecteurs, contraint de virevolter sur la piste.\nMais passé le milieu de la soirée, Randy décroche totalement : regard perdu dans le vide, il se contente de répondre « Mmmh », « Bien sûr », « Pas de problème » à quiconque tente la conversation.",
-          TextMapId = "UI_CHAR_DATA_TEXT_42020103"
-        },
-        UI_CHAR_DATA_TEXT_42020104 = {
-          ContentDE = "À ce jour, Randy est incapable de réciter en entier le serment de la Légion, à l’opposé de son père, capable de le déclamer à l’envers sans la moindre hésitation.\nPour quelqu’un qui connaît par cœur les liens familiaux, les spécialités, le salaire et même les prêts immobiliers de chaque légionnaire, on pourrait croire qu’il y a deux raisons : la paresse... ou le désintérêt.\nEn vérité, c’est une autre histoire, il ne le comprend tout simplement pas.\nUn serment, ce n’est pas comme assembler un mécanisme, enquêter sur des indices ou concevoir un plan méthodique, c’est une affaire d’ardeur et de foi. Randy n’est pas insensible aux émotions humaines... mais il ne saisit pas la ferveur, voire la folie, qui pousse certains soldats à tout offrir à cet idéal.\nIl n’a jamais compris non plus pourquoi son père, pour cette \"honneur\" abstrait proclamé dans le serment, avait accepté de devenir une machine vouée à servir et combattre... jusqu’à y laisser sa conscience, prisonnier d’un corps réduit à l’état végétatif.",
-          TextMapId = "UI_CHAR_DATA_TEXT_42020104"
-        },
-        UI_CHAR_DATA_TEXT_42020105 = {
-          ContentDE = "Avec le temps, tu as remarqué un curieux schéma : les missions auxquelles Randy échappe, sous prétexte de mille excuses soigneusement arrangées, concernent souvent des Charons innocents.\nEst-ce un simple hasard... ou la ruse d’un chien de berger trop malin pour montrer ses crocs ?\nUn sourire discret te vient aux lèvres, tu choisis de garder cette pensée pour toi. Après tout, certains secrets gagnent à rester enfouis.",
-          TextMapId = "UI_CHAR_DATA_TEXT_42020105"
-        },
-        UI_CHAR_DATA_TEXT_42020201 = {
-          ContentDE = "Randy Howard, lieutenant-colonel de la XIIIᵉ Légion de l’Empire Hyperboréen, sert comme adjoint de la Commandante Sibylle Mason.\nOn l’aperçoit souvent dans un coin du grand hall, tasse de thé à la main, l’air parfaitement détendu au milieu de soldats s’agitant dans tous les sens. On raconte que son rêve n’est pas de commander, mais de devenir... le gardien de la porte de la XIIIᵉ Légion.\nLes nouvelles recrues, intriguées par tant de nonchalance, viennent parfois lui demander son secret. Elles repartent généralement chargées d’une pile épaisse de rapports impeccablement rédigés... et d’une mission : lui préparer une nouvelle théière. Pendant qu’elles versent le thé, elles ne peuvent s’empêcher d’admirer l’ampleur des tâches qu’il a traitées, la clarté de ses analyses et l’ingéniosité de ses solutions.\nSeule Lynn n’a jamais exprimé la moindre admiration en lisant ces rapports. Elle s’est contentée, en silence, de réviser son jugement sur lui : de « agaçante grande gueule dorée » à « agaçante grande gueule dorée... mais fiable ».",
-          TextMapId = "UI_CHAR_DATA_TEXT_42020201"
-        },
-        UI_CHAR_DATA_TEXT_42020202 = {
-          ContentDE = "Le nom Howard résonne depuis des siècles au cœur de l’Empire. Nul ne se souvient vraiment à quel moment cette famille devint l’incarnation même du Charon Couronné : des générations de gardes impériaux, de stratèges capables de vaincre en sous-nombre, et de héros prêts à mourir pour l’Empereur.\nLe père de Randy ne fit pas exception : loyal, puissant, intrépide, la quintessence des vertus familiales.\nMais, aux yeux de son père, aucune de ces qualités n’a trouvé écho chez son fils. Randy, dit-il, est loyal quand ça lui chante, cache sa force derrière une façade de paresse, et n’a jamais su ce que signifiait le mot courage.\n« La honte des Howard. » C’est ainsi qu’il le nomme... depuis son enfance.",
-          TextMapId = "UI_CHAR_DATA_TEXT_42020202"
-        },
-        UI_CHAR_DATA_TEXT_42020203 = {
-          ContentDE = "Issu d’une éducation d’élite, Randy ne se montre guère exigeant... sauf en matière de thé. Il ne boit que du Baihao Fleur d’Oranger, une variété précieuse vendue uniquement par les Tisses-Étoiles de Huaxu.\nMais ce n’est pas une affaire de palais raffiné : cette infusion n’a absolument aucun effet stimulant. Ainsi, il peut donner l’illusion de boire du thé pour rester alerte lors de nuits de travail... alors qu’en vérité, rien ne viendra troubler son sommeil sacré.",
-          TextMapId = "UI_CHAR_DATA_TEXT_42020203"
-        },
-        UI_CHAR_DATA_TEXT_42020301 = {
-          ContentDE = "Le Mode Howard Énergie Optimale : voilà le nom que Randy a donné à sa méthode personnelle pour... économiser ses efforts.\nCertains ont voulu l’imiter, mais ont fini avec un blâme pour activité passive au travail.\nCar, pour Randy, l’art de se ménager tout en accomplissant l’essentiel n’est pas de la paresse pure, c’est une discipline qui exige recherche, finesse... et un perfectionnement constant.",
-          TextMapId = "UI_CHAR_DATA_TEXT_42020301"
-        },
-        UI_CHAR_DATA_TEXT_42020302 = {
-          ContentDE = "Randy possède un don certain avec les femmes. Pour la plupart, il incarne même l’idéal du parfait gentleman.",
-          TextMapId = "UI_CHAR_DATA_TEXT_42020302"
-        },
-        UI_CHAR_DATA_TEXT_42020303 = {
-          ContentDE = "Randy adore bricoler des outils étranges... et presque toujours inutiles.\nParfois, un miracle : l’une de ses créations se révèle fiable. Mais le plus souvent, ce sont des bizarreries incompréhensibles, comme un briquet qui imite à la perfection la voix de Sibylle comptant « trois, deux, un »... ou un cric catapulte « Lynn » qui, au moindre contact, jaillit comme un projectile incontrôlable.",
-          TextMapId = "UI_CHAR_DATA_TEXT_42020303"
-        },
-        UI_CHAR_DATA_TEXT_42020304 = {
-          ContentDE = "Randy n’a presque jamais atteint les attentes de son père, pas bien grand, peu musclé, et, même devenu soldat, sans la moindre intention de \"mourir pour l’Empire\" comme lui.\nSon seul progrès notable ? L’art de l’épée, perfectionné au point de pouvoir éplucher une pomme en un seul mouvement fluide, la lame dansant comme une fleur d’acier.\nMais cette pomme, jamais il ne pourra la porter aux lèvres de son père, endormi à jamais dans un sommeil sans réveil.",
-          TextMapId = "UI_CHAR_DATA_TEXT_42020304"
-        },
-        UI_CHAR_DATA_TEXT_42020305 = {
-          ContentDE = "Enfant, Randy rêvait de créer l’arme la plus puissante du monde, celle qui apporterait la paix à tous. Alors, peut-être, son père rentrerait plus tôt, et cesserait d’exiger qu’il se renforce à coups d’exercices éreintants.\nMais après avoir étudié l’histoire des guerres d’Atlasia, il abandonna cette idée : pour les hommes, il n’existe pas \"d’arme ultime\"... seulement une arme plus puissante que la précédente. Les armes ne sont que des instruments de pouvoir, incapables de donner une paix véritable.\nAujourd’hui, Randy se dit qu’être un légionnaire à moitié investi est peut-être une voie nouvelle pour chercher la paix... une approche qu’il faudrait presque élever au rang d’exemple.",
-          TextMapId = "UI_CHAR_DATA_TEXT_42020305"
-        },
-        UI_CHAR_DATA_TEXT_42020401 = {
-          ContentDE = "Dans les souvenirs de Randy, les nuits pluvieuses se divisent en deux mondes : à l’intérieur, elles sont parfumées, paisibles, parfaites pour dormir, à l’extérieur, elles sont lourdes d’inquiétude, d’agitation... et propices au crime.\nUne ruelle sombre, l’odeur métallique du sang, un \"voleur\" armé d’une arme étrangère, et une élégante demoiselle semblant appeler à l’aide... ainsi débuta sa première mésaventure de manipulation, peu après son entrée dans la Légion.\nIl tenta d’apaiser le malfaiteur par la négociation, en retour, il récolta une volée de tirs d’une arme étrangère... Deux grenades lacrymogènes plus tard, il restitua le sac à main vide de la demoiselle... avant de comprendre que tout n’avait été qu’une mise en scène, masquée par son sourire enjôleur.\nChaque fois qu’il reçoit de sa part une bannière brodée de remerciements pour l’avoir \"débarrassée de ses poursuivants\", Randy repense à cette rencontre improbable. Il soupire alors devant ses sœurs, regrettant leur manque d’élégance... mais, sans même s’en rendre compte, son visage s’adoucit d’un sourire qu’il ne réserve qu’à sa famille.",
-          TextMapId = "UI_CHAR_DATA_TEXT_42020401"
-        },
-        UI_CHAR_DATA_TEXT_42020402 = {
-          ContentDE = "Chaque été, Randy revoit, malgré lui, les parties de cache-cache avec ses deux sœurs aînées.\nCe qu’elles se rappellent comme de radieux après-midis, baignés de soleil et de rires, reste pour lui une cuisante épreuve... un duel pour l’honneur.\nEnfant, il luttait dans la maison pour leur échapper, utilisant un mini-radar à bruit pour repérer leurs mouvements et tendant des cordes et pièges disposés avec soin dans sa chambre pour repousser l’assaut de l’aînée pétillante. Mais à peine avait-il échappé à ses griffes qu’il tombait dans celles, tout sourire, de la cadette, qui le tenait alors à sa merci... jusqu’à ce qu’il rende les armes.\nLa sentence ? Essayer les petites robes toutes neuves de ses sœurs, poser pour la photo, et voir ce trophée de sa défaite trôner, encadré, à l’entrée du grand salon familial. \nHeureusement, l’humiliation fut brève, la photo disparut dès le retour de leur père. C’est aussi cet été-là que Randy et ses sœurs découvrirent à quel point la ceinture d’un officier pouvait être redoutable.",
-          TextMapId = "UI_CHAR_DATA_TEXT_42020402"
-        },
-        UI_CHAR_DATA_TEXT_42020403 = {
-          ContentDE = "Un fils finit toujours par se rebeller contre son père. Jeune, on met cela sur le compte de l’absence d’affection, fruit d’un père défaillant. Plus tard, on comprend que c’est l’inévitable heurt entre deux âmes trop semblables pour coexister.\nRandy avait rejoint la Légion pour se prouver qu’il ne deviendrait jamais comme lui... du moins le croyait-il. Mais, au sein des rangs impeccables des soldats hyperboréens, la peur le saisit. Une force invisible semblait l’attirer, cherchant à le lier à jamais aux blindés, aux batteries et aux dirigeables qui l’entouraient, à l’absorber dans leur froid noyau d’acier.\nCe fut alors qu’il comprit ce que signifiaient vraiment ses cornes et cette magie qu’il maniait pour s’amuser. Ce n’étaient ni un ornement élégant, ni un tour de foire : c’était une cruelle malédiction, un sceau de damnation. Son père, sévère, l’avait forcé à apprendre l’art du combat, mais l’avait aussi abrité des horreurs les plus cruelles de l’Empire.\nIl comprit aussi ce que représentaient les médailles impeccablement lustrées que son père chérissait. Ce n’étaient que des os jetés par les loups aux chiens de berger : des restes mâchés qui leur épargnaient les crocs, et leur donnaient parfois l’illusion de pouvoir danser parmi les prédateurs.\nEt il saisit enfin la véritable intention derrière cet entraînement acharné : prendre le relais, préserver l’honneur des Howard, \"Charons Couronnés\", et tout ce que ce titre offrait, un confort préservé, une dignité intacte, le rire insouciant de ses sœurs... et, par-dessus tout, la survie.\nPour cela, il devrait devenir une pièce de l’immense machine de guerre hyperboréenne, une goutte dans son flot d’acier... ou, si la chance lui souriait, une vague capable de se dresser au-dessus de ce courant.\nIl devait le faire. Il devait devenir un second père.\nMais alors... qui était-il, lui ? Qui est donc Randy Howard aujourd’hui ?\n« Réveille-toi, vieux », murmura-t-il en s’asseyant près du lit, observant l’homme endormi, réduit à une enveloppe muette. \n« Tu sais, pas vrai ? Dis-le-moi... la réponse. »\nL’homme garda le silence.\nRandy poussa un long soupir et déposa sur sa poitrine une petite arme en bois : celle-là même que son père avait serrée contre lui alors qu’il tombait grièvement blessé, et que Randy, enfant, lui avait offert comme tout premier cadeau. Il se détourna, fit deux pas... puis revint sur ses pas, juste pour en ajuster la position.",
-          TextMapId = "UI_CHAR_DATA_TEXT_42020403"
-        },
-        UI_CHAR_DATA_TEXT_42020404 = {
-          ContentDE = "Il fut un temps où Randy se trouvait profondément troublé.\nAu début, il pensait que la tension entre vous pourrait se dissiper aussi facilement que tant d’autres obstacles rencontrés dans sa vie. Il accepta même d’entamer quelques négociations, prêt à fournir un effort léger pour toi. Mais avec le temps, il comprit que cette relation allait engendrer bien plus de complications qu’il ne l’avait imaginé. Son instinct de paresseux lui souffla qu’il valait mieux y mettre fin avant que les choses ne dégénèrent. Pourtant, couper les ponts, même avec quelqu’un de récent, restait une source d’ennuis.\nIncapable de trancher, Randy laissa le hasard décider : « face, on continue, pile, on se sépare », pensa-t-il en lançant une pièce.\nMais avant même qu’elle ne touche le sol, il savait déjà ce que son cœur désirait.\nNe jamais se faire de soucis inutiles, les choses finissent toujours par s’arranger.\nVoilà la véritable philosophie du fainéant.\n« Bah, on verra bien », pensa-t-il en regardant la pièce, posée en équilibre sur le bord, immobile sur la table.",
-          TextMapId = "UI_CHAR_DATA_TEXT_42020404"
-        },
-        UI_CHAR_DATA_TEXT_43010101 = {
-          ContentDE = "L’ascension de Sibylle, d’une simple Charon à Commandante de Légion, demeure un exploit presque sans précédent dans les annales impériales.\nBeaucoup de Charons s’en sont inspirés, s’engageant à leur tour dans la Légion dans l’espoir de reproduire sa réussite, affrontant sans crainte les champs de bataille, cherchant à se couvrir de gloire.\nMais la plupart échouèrent.\nCar vivre comme Sibylle, respectée, puissante, au sommet, exige bien plus que l’ambition : il faut la force, la ruse, et une implacable dureté que peu sont capables d’atteindre.",
-          TextMapId = "UI_CHAR_DATA_TEXT_43010101"
-        },
-        UI_CHAR_DATA_TEXT_43010102 = {
-          ContentDE = "Dans la capitale Dismania, cœur vibrant de l’Empire Hyperboréen, nul n’oserait prétendre connaître la ville mieux que Sibylle. Non seulement elle en maîtrise l’agencement, les ruelles et l’orientation des bâtiments, mais elle sait aussi où se cachent les passages secrets, ainsi que les recoins où poussent des plantes rares que peu de gens ont vues.\nEnfant, elle empruntait souvent ces chemins dissimulés, parfois pour semer les mendiants qui tentaient de la détrousser, parfois simplement pour trouver un endroit tranquille où dévorer son maigre repas à l’abri des regards et des convoitises.\nAujourd’hui, lorsqu’elle évoque ces souvenirs qui, pour d’autres, sembleraient amers, son ton reste détaché. Car les ruelles qui autrefois la protégeaient sont désormais celles où elle traque, avec une efficacité redoutable, espions, fugitifs et contrebandiers. Peut-être est-ce là l’héritage véritable de son enfance : un instinct qui la distingue de tous ses pairs.",
-          TextMapId = "UI_CHAR_DATA_TEXT_43010102"
-        },
-        UI_CHAR_DATA_TEXT_43010103 = {
-          ContentDE = "Sibylle se distingue des autres Commandants de Légion par sa présence constante sur la ligne de front. Là où beaucoup restent confinés au poste de commandement, elle mémorise le terrain bien avant le début des hostilités et prépare chaque plan de secours, ce qui lui permet de se déplacer librement au milieu de ses soldats et d’observer la bataille de près.\nPour elle, ces visites au front sont autant une stratégie qu’une mise en scène : elle combat aux côtés de ses troupes, panse elle-même leurs blessures, et prononce des discours galvanisants sous les acclamations enfiévrées de « Commandante Sibylle ! ».\nCes gestes renforcent le moral des troupes autant que sa propre aura. Sibylle le sait parfaitement, et manie cette théâtralité comme une arme supplémentaire dans son arsenal tactique.\n\nMais difficile de dire si tout cela n’est qu’un calcul froid ou l’expression sincère de ses émotions. Car, lorsqu’elle voit ces soldats se battre avec acharnement pour gagner gloire et reconnaissance, elle ne peut s’empêcher de revoir, dans leur ferveur, le reflet de la jeune femme qu’elle fut jadis.",
-          TextMapId = "UI_CHAR_DATA_TEXT_43010103"
-        },
-        UI_CHAR_DATA_TEXT_43010104 = {
-          ContentDE = "Sibylle n’a jamais été une grande dormeuse. Souvent, elle s’éveille en pleine nuit et peine à retrouver le sommeil. La voir, tard dans l’obscurité, penchée sur ses rapports militaires, est une image familière pour son entourage.\nÀ bord des vaisseaux aériens, sa vigilance redouble encore : nerfs tendus, esprit aux aguets, prête à réagir à la moindre alerte. Une habitude forgée par les cicatrices invisibles d’une guerre lointaine... une guerre perdue, mais qui, pour elle, ne s’est jamais vraiment terminée.",
-          TextMapId = "UI_CHAR_DATA_TEXT_43010104"
-        },
-        UI_CHAR_DATA_TEXT_43010202 = {
-          ContentDE = "On raconte que Sibylle, dont le visage semble toujours figé dans une austérité glaciale, éprouve pourtant une étrange tendresse pour les animaux faibles ou blessés. Qu’un chat ou un chien agonisant croise sa route, et elle ordonne aussitôt aux médecins de tenter de les sauver, en dépit de leurs protestations répétées : \n« Nous ne sommes pas vétérinaires... »\nChez les aristocrates qui la méprisent, cette rumeur suscite un ricanement moqueur :\n« Notre chère Commandante, impitoyable envers ses ennemis comme envers ses propres soldats, se montre pleine d’égards pour de vulgaires bêtes... Mais après tout, n’est-il pas vrai que les bêtes s’entendent toujours mieux entre elles ? »",
-          TextMapId = "UI_CHAR_DATA_TEXT_43010202"
-        },
-        UI_CHAR_DATA_TEXT_43010203 = {
-          ContentDE = "Même parmi les Commandants de Légion de l’Empire, tous ne se valent pas. Certains doivent leur place uniquement à leur noblesse, sans véritable mérite au combat. D’autres, comme Sibylle Mason, ont gravé leur nom par leur seule valeur militaire, influençant non seulement les champs de bataille, mais aussi les arcanes du pouvoir de l’Empire.\nLa fulgurante ascension de Sibylle, de simple Commandante de Légion à son rang actuel, tient largement à ses exploits remarquables : son style de combat est plus agile et inventif que celui de n’importe quel commandant que l’Empire ait connu.\n\nSelon la tradition de l’Empire, la plus haute gloire militaire s’obtient au prix d’un affrontement direct : les soldats avancent sans peur, disciplinés comme le fer, jusqu’à pouvoir discerner les traits mêmes de l’ennemi. Les commandants, eux, observent la mêlée d’un œil aiguisé, portant le poids de chaque vie tombée, attendant le moment propice pour miser toute leur force dans un ultime pari sanglant où le sort se joue à chaque seconde.\nAh, la gloire... quel rêve pour chaque Commandant de Légion, celui de signer une victoire colossale et sanglante qui graverait son nom dans la mémoire de l’Empire, au point de baptiser un vaisseau, une avenue, voire une cité.\nMais face à la rébellion des Déchus, ces ambitions n’étaient que chimères. Ces insurgés, s’appuyant sur les Daimons comme force principale, évitaient tout combat frontal avec la Légion. Usant de magie variée et d’une mobilité exceptionnelle, ils frappaient depuis l’ombre, en multipliant les raids éclairs, jusqu’à utiliser les Souillés comme armes. Les méthodes conventionnelles de la Légion échouaient, et les commandants trop attachés à la gloire ne récoltaient que la défaite amère.\n\nSibylle, elle, ne ressemblait pas aux autres. Née dans la rue, experte en alchimie et magie des Charons, elle savait comment faire face à ces ennemis insaisissables :\nElle réquisitionnait un maximum de vivres, privant ainsi les rebelles de leurs ressources. Elle envoyait des Charons, feignant la défection, pour infiltrer les Déchus, empoisonner leurs rations et déclencher des attaques surprises. Elle simulait des retraites, laissant derrière elle des pièges explosifs dans les stocks abandonnés, semant la terreur. Elle promettait titres et honneurs aux ennemis contre leur allégeance, pour finalement les exterminer une fois la victoire assurée.\nAinsi, Sibylle engrangea victoire sur victoire, sur chaque champ de bataille. Être une Charon ne freina jamais son ascension.\nSi certains raillaient ses méthodes, les qualifiant d’indignes, « Que pouvait-on attendre d’une fille de basse extraction ? », personne ne pouvait nier l’évidence : Sibylle est la plus précieuse Commandante de Légion de l’Empire. Face à l’ennemi, elle renonce à toute pitié, à l’éthique, à l’honneur, des valeurs que d’autres chérissent plus que leur vie et finit toujours par triompher.\n\nAlors, qui osera être le prochain ennemi de la Commandante Sibylle ?",
-          TextMapId = "UI_CHAR_DATA_TEXT_43010203"
-        },
-        UI_CHAR_DATA_TEXT_43010204 = {
-          ContentDE = "Bien que Sibylle soit connue pour une longue série de victoires, c’est pourtant une bataille \"perdue\" qui attira sur elle le regard de l’Empereur et la hissa au rang de Commandante de Légion.\nLes historiens lui donnèrent un nom resté dans toutes les mémoires : l’offensive de l’Élégie Divine. Comme son titre le suggère, ce fut une guerre opposant mortels et divinités. Partout en Hyperborea, des balades de ruelle aux plus nobles opéras, on célébra cette expédition grandiose. Car, même si elle s’acheva sur un échec, elle marqua la première fois depuis la Grande Migration que des mortels foulèrent de nouveau les terres antiques d’Élysium. Et cette fois, ils ne se contentèrent pas d’y marcher : ils gravirent la plus haute tour et pointèrent leurs flèches vers les dieux d’autrefois.\nMais les détails précis de cette bataille légendaire se sont perdus à jamais. Les historiens n’auront sans doute jamais de témoignage direct : seuls deux êtres revinrent vivants de cette ascension divine. L’un était Sibylle, qui n’a jamais laissé échapper la moindre bribe du récit. L’autre... une silhouette énigmatique, apparue comme par enchantement à la tête de l’expédition, puis disparue sitôt la guerre finie, comme si elle n’avait jamais existé.",
-          TextMapId = "UI_CHAR_DATA_TEXT_43010204"
-        },
-        UI_CHAR_DATA_TEXT_43010205 = {
-          ContentDE = "« Qu’un jour, ce pays connaisse enfin la paix. »\nSur une vieille brique à la périphérie de Dismania, cette phrase enfantine était gravée d’une écriture maladroite, toute tordue. Le vent et le soleil avaient terni la pierre, mais l’inscription restait là, fidèle au vœu naïf d’un enfant.\nSibylle laissa échapper un petit rire difficile à interpréter : amusement ? Mépris ?\nToi, tu ne voyais rien de risible dans ces mots, et quand tu fis part de ton opinion, elle se contenta d’un haussement d’épaules.\n« Mon professeur et une camarade ont dit à peu près la même chose. Dommage qu’elles aient été aveuglées par leur propre naïveté, destinées à être broyées sous le rouleau compresseur du temps. »\nTu restas silencieux.\n« Cela dit, tu auras du mal à le croire, mais moi, je partage cette conviction. »\nSans plus attendre, elle réduisit la vieille brique en poussière, emportant avec elle ce vœu d’enfant. Seule une demi-phrase vola dans le vent, inaudible :\n« Et je la réaliserai. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_43010205"
-        },
-        UI_CHAR_DATA_TEXT_43010301 = {
-          ContentDE = "L’arme de prédilection de Sibylle est une épée-fouet forgée sur mesure, un chef-d’œuvre aussi complexe à manier qu’à entretenir.\nMalgré les contraintes de son entretien, elle s’en occupe toujours elle-même, ne confiant cette tâche à personne.\nElle en est convaincue : quiconque peut trahir, mais une arme entretenue de ses propres mains ne vous trahira jamais.",
-          TextMapId = "UI_CHAR_DATA_TEXT_43010301"
-        },
-        UI_CHAR_DATA_TEXT_43010302 = {
-          ContentDE = "Sibylle connaît les lois de l’Empire comme d’autres connaissent les lignes de leur propre main. Elle sait exactement quels articles sont enfreints par la contrebande de breuvages, le pillage de marchands ou le trafic d’armes, et, mieux encore, elle devine où et comment les criminels tenteront de se glisser entre les mailles du filet.\nIl ne s’agit pas de simples conjectures : on dirait qu’elle a déjà, dans un passé moins reluisant, imaginé chaque stratagème qui permettrait de prendre l’avantage tout en échappant aux sanctions.\nMais un jour, elle semble avoir compris qu’il valait mieux gravir les échelons et s’élever assez haut pour influencer, modifier, voire créer les lois... plutôt que de ramper indéfiniment dans les interstices qu’elles laissent échapper.",
-          TextMapId = "UI_CHAR_DATA_TEXT_43010302"
-        },
-        UI_CHAR_DATA_TEXT_43010303 = {
-          ContentDE = "Sibylle commande désormais la XIIIᵉ Légion, une unité d’élite rattachée directement à l’Empereur, fidèle uniquement à Sa volonté. Ensemble, ils forment ses chiens de chasse les plus loyaux et fiables. Sa loyauté est telle que l’Empereur lui a accordé le privilège inédit de pouvoir porter des armes dans l’enceinte du palais, un honneur que jamais aucun Charons avant elle n’avait obtenu, et qui n’existait auparavant que dans les récits fantasques qu’ils se racontaient. Sibylle a transformé ce rêve en réalité.\nBien sûr, la confiance et la faveur de l’Empereur n’ont fait qu’attiser davantage la rancune du Sénat, qui méprise ses origines modestes et son arrogance affichée.\nMais seule Sibylle sait que la formule toute faite que tout l’Empire répète en chœur, « Toute gloire à l’Empereur », n’est qu’un discours creux. \nLa seule personne digne de sa loyauté désormais, c’est elle-même.",
-          TextMapId = "UI_CHAR_DATA_TEXT_43010303"
-        },
-        UI_CHAR_DATA_TEXT_43010304 = {
-          ContentDE = "« Ceux qui considèrent la connaissance comme un simple marchepied vers le pouvoir ne maîtriseront jamais la vérité qu’ils cherchent. »\nC’était la seule remarque que la Première Alchimiste laissa sur le certificat de Sibylle, bien qu’elle fût diplômée comme sa meilleure élève.\nLe silence dans la pièce était pesant, uniquement troublé par la respiration contenue de Sibylle.",
-          TextMapId = "UI_CHAR_DATA_TEXT_43010304"
-        },
-        UI_CHAR_DATA_TEXT_43010401 = {
-          ContentDE = "Dans la mémoire de Sibylle, le ciel de l’Empire ne s’est éclairci que le jour où elle entra à l’Académie d’Alchimie. Avant cela, sa vie n’avait été que boue et misère : vêtements en lambeaux, relents d’ordures, nuées de mouches. Jamais elle n’avait levé les yeux vers les nuages, certaine qu’au-dessus d’elle ne s’étendait qu’une chape grise et lourde, indigne du moindre regard.\n\nÀ dix ans, elle maîtrisait déjà l’art de la survie. Elle dissimulait ses jambes repliées dans un pantalon adapté, se faisant passer pour une infirme, rampant dans les rues en gémissant pour mendier quelques pièces ou un quignon de pain.\nSi un bienfaiteur se laissait attendrir, elle bondissait, arrachait sa bourse ou son sac, le bousculait et disparaissait dans les ruelles sinueuses, abandonnant loin derrière elle cris et malédictions. Sibylle savait exactement ce qu’elle faisait. La nourriture qu’elle dérobait, elle l’avait gagnée grâce à sa rapidité, sa force et sa ruse, triomphant de la pitié maladroite de ses victimes. Le repas qui emplissait son estomac était le trophée d’une victoire dans un monde où seule la loi du plus fort règne.\nEt si, un jour, elle courait moins vite... si sa cachette était découverte et qu’elle subissait les coups jusqu’à ce que mort s’ensuive, comme ce vieux chat noir boiteux qui hantait jadis les mêmes ruelles, elle n’émettrait pas la moindre plainte. Car cela aussi, c’est la loi du plus fort.",
-          TextMapId = "UI_CHAR_DATA_TEXT_43010401"
-        },
-        UI_CHAR_DATA_TEXT_43010402 = {
-          ContentDE = "Quand elle était enfant, Sibylle a un jour recueilli un corbeau.\nUn oiseau noir est soudainement tombé du ciel, s’écrasant devant sa cabane délabrée, la faisant sursauter. Le corbeau blessé, les yeux embués de larmes, a touché la bonté de Sibylle, qui l’a ramené chez elle, lui a soigné ses blessures, donné à manger et lavé. Peu à peu, le corbeau a guéri, picorant doucement dans sa paume, marchant, puis volant difficilement. Un vrai sourire sincère a illuminé le visage de Sibylle : même un corbeau laid, même tombé dans la boue, pouvait un jour retrouver le ciel.\nUn soir, des enfants des rues de son âge frappèrent à sa porte, les yeux eux aussi larmoyants, pour quémander de la nourriture. Avec la même gentillesse, Sibylle leur offrit son maigre repas, quelques morceaux de pain et un peu d’eau chaude. Mais au lieu de partir, ces enfants s’introduisirent chez elle, volant ce qu’il lui restait à manger et les souvenirs de ses parents. Quand elle tenta de s’opposer à eux, ils la jetèrent à terre, la frappant jusqu’à ce que son visage soit tuméfié.\nLe corbeau, semblant percevoir le danger, battit des ailes et se jeta sur les intrus en les picorant à la tête. Mais encore fragile, il fut rapidement attrapé par le meneur, qui ricana : \n« Petite mais féroce, hein ? »\n« Lâchez-la, je vous en supplie ! » hurla Sibylle, la voix brisée. \n« Prenez tout, mais ne lui faites pas de mal ! »\nElle hurlait, désespérée, tandis que deux enfants la maintenaient au sol, le visage enfoncé dans la boue mêlée à ses larmes.\nÀ travers ses yeux rougis, elle vit le corbeau jeté au sol avec violence, puis les semelles qui écrasaient son corps fragile.\nQuand les agresseurs s’éloignèrent enfin, Sibylle, meurtrie, ramassa le corbeau, l’embrassa silencieusement sur ses plumes froides. Elle ne pouvait mesurer combien de sang il avait perdu, son plumage d’un noir d’encre dissimulait toute trace. Cette petite vie s’était éteinte dans l’ombre, aussi silencieusement que son agonie.\n\nDes années plus tard, diplômée des Spathatoi et devenue une étoile montante de la Légion, Sibylle revint à cette cabane. Elle crut entendre le battement des ailes du corbeau, ou peut-être était-ce une illusion... la maison vide ne répondait qu’au bruit de ses pas. Elle se remémora cette nuit lointaine, lorsqu’elle pleura une dernière fois, pour cette vie fragile, pour sa propre impuissance. Depuis, jamais plus elle n’a versé de larmes. La nuit avait englouti ses pleurs, et personne n’avait entendu les sanglots d’une fillette de 8 ans.",
-          TextMapId = "UI_CHAR_DATA_TEXT_43010402"
-        },
-        UI_CHAR_DATA_TEXT_43010403 = {
-          ContentDE = "La lame d’un couteau était pressée contre la gorge de Flamel. La savante, plus habituée au silence de son laboratoire qu’aux menaces, poussa un long soupir.\n« Gamins... j’espère que vous mesurez ce que vous faites », dit-elle d’un ton calme.\n« Chaque millimètre de blessure que vous m’infligerez se changera en couperet prêt à s’abattre sur vous et sur ceux qui vous sont chers. »\nLes deux brigands n’écoutèrent pas. Ils lui enfoncèrent un chiffon humide dans la bouche, la ligotèrent avec une corde rêche, puis la jetèrent dans un coin comme un vulgaire colis. La porte du hangar se referma dans un fracas métallique. L’odeur de moisi du tissu faillit l’étouffer, lui coupant sa dernière phrase, celle qu’elle n’eut pas le temps de prononcer :\n« Laissez-moi partir, et vous aurez plus d’or que dans vos rêves les plus fous. »\nFlamel ferma les yeux, économisant ses forces. Plus tard, au cœur de la nuit, un bruit discret lui fit lever la tête. Une silhouette agile se laissa tomber par la lucarne. Dans la faible lumière des étoiles, elle distingua une gamine crasseuse, aux cheveux violets coupés court et au regard perçant.\n« Chut », murmura-t-elle en retirant le bâillon. Elle tendit à Flamel son sac à dos volé.\n« N’ayez crainte, ils dorment. Je suis venue vous faire sortir. Désolée... mes frères ont perdu la tête en voyant une personne importante de la capitale. »\n« Merci. Mais j’ai encore quelque chose à faire », répondit Flamel. \n« Peux-tu me ramener là où j’ai été enlevée hier ? Je te donnerai dix pièces d’or en échange. Je suis savante, et je ne peux repartir avant d’avoir terminé mes observations. »\n\nElles s’enfoncèrent dans la vallée, la nuit les enveloppant. Les lieux, encore inexplorés, exigeaient des heures de marche avant le premier village. Flamel n’aurait jamais risqué seule un tel trajet si un rapport ne mentionnait pas la présence d’une espèce de Souillé encore inconnue.\nLe vent d’automne leur mordait la peau. Flamel ralentissait à chaque pas, forçant la gamine à l’attendre de plus en plus souvent.\n« Connais-tu un type de Souillé qu’on appelle \"Souillé physalis\" ? », demanda Flamel. \n« Peut-être qu’ici, vous l’appelez autrement... »\n« On l’appelle \"Griffe-Fleur\", répondit la fille. On dirait une plante, mais elle dévore tout ce qui s’approche. Vous voulez vraiment la voir ? »\nFlamel hocha la tête, et elles prirent la direction de la forêt de l’ouest.\n« Tu n’as pas peur des Souillés », remarqua Flamel, admirative. \n« Tu es une Daimon, n’est-ce pas ? »\n« Oui. Et je trouve les Souillés fascinants », dit la jeune fille en se retournant, le regard aigu. \n« Si vous aviez lu l’ouvrage de Maxima Flamel, Étude des origines des Souillés et du peuple des Charons, vous seriez aussi passionnée que moi... ah, non, bien sûr : si vous cherchez la Griffe-Fleur, c’est que vous l’avez déjà lu. Ce livre explique que la Griffe-Fleur est le plus ancien Souillé connu. »\nFlamel sourit, mais garda le silence. Elles traversèrent un chaos rocheux, jusqu’à ce que la fille l’arrête brusquement d’un geste. L’air nocturne sembla se fendre, zébré par des éclairs bleutés.\n« La Griffe-Fleur vient de se replier dans le sol. Si on avait continué, elle nous aurait tuées. Mais elle est paralysée, maintenant. Vous pouvez l’étudier. »\nFlamel la remercia, sortit ses outils et commença à découper la créature avec précision, rangeant ses échantillons dans des fioles.\n« Tu connais donc ce livre... tu sais que la découverte de la \"Spirale\" a confirmé que tous les Charons descendent des Souillés. Cela ne t’effraie pas ? Pas seulement les Dégradés : tous les Charons portent du sang de Souillé dans leurs veines. Toi aussi. »\n« Rien qui mérite d’avoir peur. Je me moque de ce que j’ai été. Je ne m’intéresse qu’à ce que je deviendrai », répondit la fille, ses yeux violets brillants de détermination. \n« Et puis... on ne maîtrise sa force qu’en la connaissant. »\n« C’est fini », dit Flamel en rangeant ses outils. \n« Merci. C’est une sous-espèce très rare de Souillé physalis. Maintenant, conduis-moi au village le plus proche. Au fait... comment t’appelles-tu ? »\n« Sibylle Mason. »\n« Bien. Sibylle Mason. » Flamel sourit, son long manteau claquant au vent glacé.\n« Je vais te donner une adresse : si les Souillés et le pouvoir des Daimons t’intéressent, rends-toi à ce manoir et dis ton nom. Je t’y attendrai. »\n\n« Traîtresse ! Sibylle, c’est toi qui nous as dit d’attraper cette femme, et c’est toi qui la relâches ? Tu fous quoi, là ?! »\n« Dix pièces d’or, ça ne vous suffit pas ? »\n« Tu nous avais dit que c’était un gros bonnet de la capitale ! Qu’on allait se faire un pactole ! Et maintenant tu te dégonfles ? Dix malheureuses pièces ? On aurait mieux fait de la buter tout de suite ! »\nLes deux bandits, attachés dos à dos sur un banc branlant, s’agitaient en jurant, des bouteilles vides roulant à leurs pieds.\n« T’as du cran seulement quand on dort, hein ? Petite vermine... toujours à hésiter, jamais foutue d’agir. Attends un peu... on te crèvera, comme on a crevé ton foutu corbeau ! »\nSibylle se leva, leva les yeux au ciel et força la mâchoire du plus bruyant. Un craquement sec résonna : l’os venait de céder. Elle enfourna pièce après pièce dans leur bouche, étouffant leurs insultes dans des grognements sourds.\n« Crétins. Vos misérables vies s’arrêtent ici. La mienne ne fait que commencer. »\n\nSerrant contre elle le morceau de papier arraché du carnet de Flamel, Sibylle prit la route du retour vers la capitale, Dismania.",
-          TextMapId = "UI_CHAR_DATA_TEXT_43010403"
-        },
-        UI_CHAR_DATA_TEXT_43010405 = {
-          ContentDE = "Plusieurs corbeaux étaient perchés sur le rebord de la fenêtre, lissant leurs plumes noires et luisantes. Flamel ne pouvait s’empêcher de se rappeler leur autre surnom, messagers de la mort. Annoncer le malheur avait toujours semblé être la sinistre mission des corbeaux.\nÀ cause de la nature secrète des recherches à l’Académie d’Alchimie, les salles avaient rarement des fenêtres. Elles étaient éclairées en permanence par une lumière artificielle, semblable à un pâle soleil figé dans une nuit éternelle. Pourtant, Flamel avait obstinément tenu à ouvrir une fenêtre dans son bureau, comme si elle avait besoin de ce fragile lien avec le monde extérieur.\nMais aujourd’hui, la petite fenêtre était envahie par ces visiteurs aux plumes d’un noir profond.\nAssise droite derrière son bureau, les cheveux soigneusement relevés en chignon à la nuque, Flamel ignorait les coups frappés à la porte. Son regard restait fixé sur la fenêtre, sans accorder un seul coup d’œil à la personne venue frapper... son ancienne élève, la Commandante de Légion, Sibylle Mason.\n\n« Madame Maxima Flamel », la voix de Sibylle brisa le silence pesant, « je viens vous notifier officiellement que, du fait de vos actes considérés comme une trahison indirecte envers l’Empire, vos fonctions au sein des Spathatoi, ainsi que votre titre de Première Alchimiste, sont révoqués. »\nSibylle regarda son ancienne professeur, parlant d’un ton mesuré alors qu’elle annonçait la clémence qu’elle avait arrachée, sacrifiant son orgueil.\n« En reconnaissance de vos anciens services rendus à l’Empire, vous ne serez pas incarcérée à la Prison Militaire Royale. Si vous souhaitez poursuivre vos recherches, vous pourrez conserver un laboratoire ici, sous stricte surveillance, bien sûr. »\nFlamel resta silencieuse. Après une longue pause tendue, elle soupira profondément et se tourna enfin vers son interlocutrice.\n« C’est tout ce que vous aviez à me dire, Commandante Sibylle ? »\nSibylle détourna les yeux, évitant le regard de son ancienne professeur. \n« Oui, c’est tout. »\n« La première fois que je t’ai rencontrée, tu étais encore enfant. J’étais déjà ta captive à l’époque, comme aujourd’hui. » Le ton de Flamel était calme. \n« L’enlèvement, c’était toi qui l’avais organisé dès le début, n’est-ce pas ? » Sibylle secoua la tête. \n« Il est inutile de ressasser le passé, Madame Flamel. Ce qui importe, c’est le présent. »\n« L’Académie devait être un sanctuaire dédié à la quête du savoir, mais toi et Julius l’avez transformée en une honte pour l’Empire. » Le regard de la savante vieillissante rencontra celui de son ancienne élève, dans une ultime tentative vaine d’éveiller un semblant de remords. \n« Le savoir existe pour rendre le monde meilleur. Pourtant toi... »\n« Je considère la connaissance comme un simple marchepied vers le pouvoir », coupa Sibylle, achevant la phrase. \n« Oui, je me souviens de vos paroles. Vos idéaux sont nobles, et ma quête du savoir est déshonorante... je ne l’ai jamais nié. Mais avez-vous déjà songé qu’avoir de tels idéaux est un luxe réservé à ceux qui naissent dans le privilège, comme vous ? Votre vie a toujours été pleine de choix et de sécurités. Mais pour les corbeaux sur ce rebord ? Il n’y a que deux issues... voler de toutes leurs forces ou être abattus par une fronde d’enfant. »\nSibylle poursuivit : « Et ce que vous ignorez... »\n« Les corbeaux ont aussi leurs propres idéaux. Ils volent assez haut pour voir ce que les hommes au sol ne peuvent percevoir. Et grâce à cela, ils peuvent accomplir des choses que personne d’autre ne peut faire, des choses capables de changer véritablement le monde. »\n« Commandante... non, Sibylle, dis-moi la vérité ! » Flamel se leva brusquement, renversant sa chaise. Les corbeaux, effrayés, battirent des ailes et s’envolèrent de la fenêtre.\n« Ce jour-là, à la tour de l’Église Élyséenne, qu’avez-vous vu ? »\n\nSibylle resta silencieuse. Le soleil couchant filtrait enfin par la fenêtre, éclairant son visage. Un instant, Flamel crut voir dans l’expression de son élève une sorte de grâce divine, comme une icône sculptée par les artisans d’Élysium, froide et bienveillante à la fois.\n« Rien, Madame Flamel », finit-elle par dire.\n« Revenons-en aux choses sérieuses. Si vous souhaitez continuer vos recherches ici, signez ce document. Vous avez trois jours pour décider. »\nSans attendre de réponse, Sibylle tourna les talons et s’éloigna. Elle traversa les longs couloirs sombres sans jamais se retourner. Ce n’est que bien loin du bureau qu’elle s’arrêta et, se retournant, fit une profonde révérence vers la pièce.\n« Adieu, Madame Flamel. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_43010405"
-        },
-        UI_CHAR_DATA_TEXT_51010101 = {
-          ContentDE = "Lorsque les citadins parlent de Filbert, ce n’est pas seulement l’image d’un cochon chargé de vivres qui leur vient en tête... mais le grondement du sol et le souffle du vent qu’il laisse dans son sillage.\nPourquoi ?\nLa réponse se trouve dans ces murs penchés et ces étals écrasés que l’on voit parfois dans la cité, preuves irréfutables du passage de Filbert. Et, bien sûr, quelques lettres de plainte adressées à l’Église s’ensuivaient.\nMais chaque \"accident\" annonçait aussi le retour triomphal de Filbert, les sacs remplis à ras bord... Ce qui expliquait que, dans ces lettres, les mots de joie dépassaient souvent les récriminations :\n« Ce vieux mur, c’était comme un membre de notre famille... et voilà qu’il a mal ! Dites à Truffle de nous donner quelques pains de plus pour apaiser sa peine ! »\nOh... et déjà, au loin, retentit un nouveau BOUM...",
-          TextMapId = "UI_CHAR_DATA_TEXT_51010101"
-        },
-        UI_CHAR_DATA_TEXT_51010102 = {
-          ContentDE = "À bien y réfléchir, Truffle ferait une excellente éclaireuse.\nElle sait trouver les sentiers les plus praticables, lire la direction au tracé des frondaisons, et se souvient de chaque source claire où Filbert peut s’abreuver à loisir.\nLes fruits et champignons sauvages n’ont aucun secret pour elle : quels baies sont acides ou âpres, quels champignons, rouge vif, sont inoffensifs, et lesquels peuvent terrasser une escouade entière. Dans la forêt, elle se repère avec l’aisance d’un soldat maniant son fusil.\nMais cette image ne sied guère à Truffle : nul ne souhaite voir cette enfant happée par la fumée et le fracas des armes. Elle devrait fouler les chemins de campagne, portée par le vent des collines... et non marcher aux côtés des pires compagnons que sont la poudre et la guerre.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51010102"
-        },
-        UI_CHAR_DATA_TEXT_51010103 = {
-          ContentDE = "Il n’existe qu’une seule situation où la mémoire de Truffle se révèle prodigieuse : lorsqu’il est question de nourriture dans le texte. Elle sait exactement dans quel chapitre apparaissent le raisin, le pain ou le lait, combien de fois, et peut réciter mot pour mot les descriptions de leur goût.\nSon souvenir le plus vif concerne un passage sur des raisins : un grand, très grand prêtre, dont elle a oublié le nom, sur le point de mourir de soif dans un désert, vit le ciel lui offrir une grappe bénie. Neuf grains à la peau d’un pourpre améthyste, à la chair verte comme la forêt profonde, et au jus aussi doux que la toute première goutte de rosée du matin.\nTruffle en avait gardé l’image si longtemps que, le jour où elle goûta enfin de vrais raisins, la déception fut telle qu’elle éclata en sanglots... laissant les prêtres, qui pensaient lui faire plaisir, totalement désemparés.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51010103"
-        },
-        UI_CHAR_DATA_TEXT_51010104 = {
-          ContentDE = "Les cheveux de Truffle sont d’un blond doré, épais et longs, et ils s’emmêlent très vite pendant la nuit. C’est pourquoi chaque matin, la prêtresse McGuffin passe beaucoup plus de temps à les coiffer que pour les autres enfants.\nMais une fois que Truffle a passé quelques heures à courir et à jouer dehors, ses tresses se défont et ses cheveux deviennent un vrai désordre. Au fil du temps, la prêtresse a appris à reconnaître les endroits où Truffle est allée rien qu’en observant les petites baies sauvages ou les herbes accrochées à sa crinière indomptée.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51010104"
-        },
-        UI_CHAR_DATA_TEXT_51010105 = {
-          ContentDE = "Quand on est avec Truffle, les conversations tournent toujours autour de la nourriture. Les gens qu’elle rencontre, les histoires qu’elle raconte, presque tout dans sa vie est lié à la nourriture.\nMais si on lui demande quel est le plat le plus délicieux qu’elle ait jamais goûté, ce ne sont ni les copieuses galettes de pommes de terre, ni la rare bouillie de poisson Phero. Non, c’est simplement une tranche de pain complet, légèrement salée... un repas modeste qui faisait office de déjeuner quotidien à l’Église pendant une longue période de pénurie.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51010105"
-        },
-        UI_CHAR_DATA_TEXT_51010201 = {
-          ContentDE = "« ... Cher ami, si un jour vous croisez, dans les rues de cette cité, une frêle jeune fille filant à toute allure aux côtés d’un gigantesque cochon, ne soyez pas surpris. La vraie surprise, c’est qu’ici... personne ne trouve cela étrange.\nDans cette ville, tout le monde les connaît : Commissaire au Ravitaillement Truffle, et la Famille Filbert, ses inséparables compagnons, honorés du titre de Commissaires d’élite. Leur silhouette se détache sur la cité comme deux fraises éclatantes posées sur une crêpe dorée.\nPrononcez le nom de Truffle au sein de l’Église Élyséenne, et vous verrez quelques visages se froncer en évoquant ses mille espiègleries. Mais, dans leurs yeux, vous ne lirez jamais de vraie colère, tout au plus l’étonnement amusé de celui qui vient de se faire cogner la tête par un fruit mûr tombé de l’arbre... et qui, au fond, n’y voit rien de grave.\nSa voix claire et sincère se glisse dans les oreilles de ceux qui rêvent d’un peu de bonheur :\n« Que chacun, en ce monde, ait le ventre plein... et l’esprit en paix ! » »\n\nViviane, écrivaine et voyageuse de Luca, Chroniques des Terres du Sud",
-          TextMapId = "UI_CHAR_DATA_TEXT_51010201"
-        },
-        UI_CHAR_DATA_TEXT_51010202 = {
-          ContentDE = "Aux abords de la cité s’étendent de vieilles terres, tapissées de chênes séculaires et de buissons touffus. Dans l’ombre silencieuse de leurs racines sommeille un trésor discret : le Chapeau-de-Rubis.\nRien à voir avec les fleurs éclatantes qui s’ouvrent au grand jour, lui se cache, obstinément, et jadis seuls les plus chanceux parvenaient à en dénicher un.\nMais aujourd’hui, à l’automne, quand la chaleur du sud s’adoucit et que les vents du nord dorent la plaine, deux silhouettes familières apparaissent immanquablement : Truffle et Filbert.\nLeur mission ? La chasse au Chapeau-de-Rubis.\nLe groin levé, Filbert flaire les odeurs comme une pisteuse aguerrie : l’acidité des feuilles tombées, la douceur enivrante des baies fermentées... et cette fragrance étrange, riche, presque envoûtante, la signature du champignon recherché.\nEn un simple coup de groin, Filbert écarte tapis de feuilles et terre meuble. À peine un Chapeau-de-Rubis pointe-t-il que son parfum se répand, attirant jusqu’aux écureuils occupés à leurs noisettes. Ensemble, Truffle et Filbert déterrent le précieux champignon, le glissent dans une besace, puis, après un bref lavage de mains dans un ruisseau, filent vers la cité, Truffle perchée sur le dos de sa complice.\nAinsi, lors d’une année de pénurie dans la petite cité de l’Église Élyséenne, les plus pauvres purent festoyer de ces mets rares, jusqu’à satiété. Une étrangeté, certes... mais quiconque croisait le duo en plein travail comprenait aussitôt. Et, le sourire aux lèvres, avalait une bouchée de plus.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51010202"
-        },
-        UI_CHAR_DATA_TEXT_51010203 = {
-          ContentDE = "Le record absolu de Truffle pour se concentrer sur les Écritures élyséennes est de... sept minutes. Et, quelle que soit la page lue, dès qu’elle referme le livre, tout s’évapore aussitôt de sa mémoire. De quoi inquiéter sérieusement certains prêtres sur son avenir. On raconte même qu’un jour, l’un d’eux lâcha cette phrase, cruelle à l’époque, mais que le temps a transformée en une remarque délicieusement ironique :\n« Garder cette enfant ici, c’est juste gaspiller du pain. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_51010203"
-        },
-        UI_CHAR_DATA_TEXT_51010204 = {
-          ContentDE = "Le poste de Commissaire au Ravitaillement n’est pas un rôle permanent : il est généralement réservé aux très grandes villes, ou aux régions qui ne produisent pas leur propre nourriture, où il faut gérer la distribution des provisions.\nDans la petite ville où vit Truffle, ce poste n’aurait normalement pas lieu d’être. Ce n’est ni un avant-poste militaire, ni un lieu d’exploitation minière ou forestière.\nLes visiteurs qui viennent ici sont donc souvent intrigués : comment Truffle a-t-elle pu devenir Commissaire au Ravitaillement ? Et pourquoi Filbert, son cochon, est-il surnommé le « Commissaire d’élite au Ravitaillement » ?\nLes habitants de la ville se font un plaisir d’expliquer aux curieux que, lors d’une grande famine, Truffle et Filbert ont réussi à nourrir toute la ville.\nMais la plupart des visiteurs prennent cette histoire pour une légende locale, et en sourient poliment. \nAh, comme ils sont naïfs !",
-          TextMapId = "UI_CHAR_DATA_TEXT_51010204"
-        },
-        UI_CHAR_DATA_TEXT_51010205 = {
-          ContentDE = "Filbert est bien plus maligne qu’elle en a l’air. Elle pousse un petit grognement spécial quand elle est contente d’avoir aidé quelqu’un à remplir son ventre, et elle se recroqueville dans un coin si on se moque d’elle. Mais il ne lui faut jamais longtemps pour s’en remettre : au bout de quelques heures, elle remue la queue joyeusement comme d’habitude.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51010205"
-        },
-        UI_CHAR_DATA_TEXT_51010301 = {
-          ContentDE = "À ce jour, Truffle se souvient encore de ce que c’est... d’avoir faim.\nAu début, c’était comme si une armée de soldats de plomb, lances en main, livrait bataille à un dragon cracheur de flammes au creux de son ventre. Les affrontements brûlaient et transperçaient sa chair d’enfant. Puis, peu à peu, les soldats se lassaient, grimpaient jusqu’à sa tête, se donnaient la main et tournaient en rond, jusqu’à la faire tomber au sol, prise de vertige.\nSur sa langue persistait longtemps une amertume âpre, comme si on l’avait forcée à avaler un lourd bouillon d’herbes sauvages. Les seuls instants de bonheur étaient ceux où elle dormait : dans ses rêves, le pain venait juste de sortir du four, et son parfum chaud emplissait l’air.\nAlors, chaque soir, elle priait avec ferveur le dieu qui tisse les songes :\n« Ô grand Maître des Rêves, je vous en supplie... ne me réveillez pas. Laissez ce miracle durer... ne serait-ce qu’une seconde de plus. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_51010301"
-        },
-        UI_CHAR_DATA_TEXT_51010302 = {
-          ContentDE = "Officiellement Commissaire au Ravitaillement de l’Église Élyséenne, Truffle n’est guère friande aux règles et aux rituels de l’institution : réciter sans fin des passages entiers des écritures lui paraît d’un ennui mortel.\nPour elle, partir en quête de nourriture, c’est aussi fuir ces obligations pesantes, même si nul ne remet en cause sa générosité.\nAlors, quand on découvre cette \"seconde raison\" derrière ses courses effrénées, on ne peut s’empêcher... d’en rire.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51010302"
-        },
-        UI_CHAR_DATA_TEXT_51010303 = {
-          ContentDE = "Truffle ne sut jamais vraiment pourquoi elle aimait autant la nourriture. Était-ce l’ombre laissée par la famine de son enfance ? Ou le bonheur particulier qu’elle ressentait en offrant de quoi manger, aux côtés de Filbert, aux gens qu’elles rencontraient en ville ? Peut-être les deux.\nUne seule certitude : aujourd’hui, avec Filbert à ses côtés, elle est comblée.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51010303"
-        },
-        UI_CHAR_DATA_TEXT_51010304 = {
-          ContentDE = "Truffle déteste la guerre. À la moindre rumeur de conflit, elle commence immédiatement à stocker de la nourriture, non seulement pour les habitants de la ville, mais aussi pour ceux qui pourraient fuir leurs foyers détruits et chercher refuge ici.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51010304"
-        },
-        UI_CHAR_DATA_TEXT_51010305 = {
-          ContentDE = "Truffle pense souvent à la prêtresse McGuffin, même si cette dernière avait un caractère un peu bourru et affichait souvent un air renfrogné.\nMais Truffle n’a jamais oublié la chaleur de la main de la prêtresse qui tapotait son dos pour l’aider à s’endormir, ni l’expression douce qu’elle avait quand elle a finalement permis à Filbert de circuler librement dans l’Église.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51010305"
-        },
-        UI_CHAR_DATA_TEXT_51010401 = {
-          ContentDE = "Dans les tout premiers souvenirs de Truffle, il y a une comptine qui ne l’a jamais quittée :\n« Neige qui tombe, oh neige qui danse,\nSur le toit du saint-domaine en silence, l’hiver est là qui s’avance.\nSous l’Arbre Céleste, prions d’une voix ardente,\nLes Dieux sourient, nos guenilles quittées pour habits éclatants. »\nLa chanson venait d’une salle emplie de chandelles, aux vitres claires, chauffée par un feu joyeux. Autour d’une longue table, des enfants chantaient à l’unisson. Leurs voix se mêlaient aux parfums de tourtes, de soupe aux champignons et de tranches épaisses de viande rôtie. Ces effluves débordaient par une fenêtre mal fermée, portés jusqu’à Truffle, blottie dessous pour se protéger de la neige, les oreilles et le nez rougis par le froid.\nElle reniflait, sans savoir si c’était pour mieux capter ces odeurs ou à cause du gel. Et, sans y penser, fredonnait : « Neige qui tombe, oh neige qui danse... » comme si chanter la même chanson pouvait lui valoir une part de tourte.\n« J’ai encore faim... »\nElle serra son ventre qui venait de gronder, ramassa un bâton sec et traça dans la neige les mets dont elle rêvait : poulet rôti, beignets... et, plus simplement, du pain.\n« Du pain... ce serait déjà bien... » pensa-t-elle, continuant son dessin, persuadée que plus il serait fidèle, plus elle en sentirait l’odeur. Oui... elle se faisait plus intense, presque réelle.\nLevant soudain les yeux, elle aperçut... un pain, flottant devant elle. En tendant la main, elle vit qu’il était tenu par une petite créature.\nUn animal minuscule, au pelage rose parsemé de neige, tel un gâteau à la fraise nappé de sucre glace. Il tremblait de froid, mais n’avait aucune peur, au contraire, il levait la tête, rapprochant le pain de la main de Truffle.\nElle prit timidement le pain, découvrant la bête qui, debout sur ses pattes arrière, la fixait avec insistance, l’exhortant à manger.\nSous les notes de la comptine qui flottait encore dans l’air, Truffle vécut ce soir-là le premier, et peut-être le plus grand, miracle de sa vie. Et pour celle qui deviendrait plus tard Filbert, ce fut sûrement la même chose.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51010401"
-        },
-        UI_CHAR_DATA_TEXT_51010402 = {
-          ContentDE = "Nul ne sait vraiment quand la petite fille des rues est devenue inséparable d’un cochon rose. On les voyait parfois aider en cuisine, parfois fouiller sous un grand chêne à la recherche de quoi apaiser leur faim.\nLongtemps, Truffle chercha un nom pour sa compagne, jusqu’au jour où, en cassant une noisette, elle perdit sa première dent de lait. Les anciens disaient qu’une dent qui tombe signifiait qu’on grandissait. Pour Truffle, grandir voulait dire devenir assez forte pour ne plus jamais avoir faim. Ainsi, « Filbert », un vieux mot désignant la noisette dans une langue ancienne oubliée, devint le nom de son unique amie.\nLa séparation vint plus tôt que prévu. Un jour, alors qu’elle cueillait des champignons sur une falaise, Truffle glissa et chuta. À son réveil, elle se trouva allongée dans un lit moelleux, respirant un air pur au lieu de l’odeur de terre : elle était dans une petite chambre du sanctuaire de l’Église Élyséenne. La prêtresse McGuffin l’avait trouvée inconsciente au pied de la falaise et ramenée ici.\nLe lit chaud, les pansements propres, l’eau claire et le pain frais... tout cela appartenait au domaine du rêve. Les prêtres, pleins de sollicitude, lui demandèrent où elle vivait et s’il lui restait de la famille, prévoyant de la raccompagner une fois guérie.\n« Je... je n’ai pas de famille. Mais j’ai une amie qui m’attend dehors. Elle s’appelle Filbert. »\n« Filbert ? C’est peu courant... »\n« Oui, et c’est un cochon très très gentil.\n« Un cochon ?! Nous ne pouvons pas garder un si gros animal ici. »\n« Filbert n’est pas un animal ! C’est mon amie ! »\nMcGuffin coupa court :\n« Ne perds pas de temps, Truffle. Reste ici... ou pars la retrouver. »\nTruffle pensa alors à cette nuit d’hiver lointaine où, blottie contre un mur épais, elle entendait les enfants chanter des comptines en sécurité, sous la protection de leur famille. Ce souvenir la toucha profondément.\nElle n’eut pas beaucoup de temps pour décider. Elle songea au lit doux et chaud, aux montagnes de pain dans la chambre, puis prit la main de la prêtresse. Le soleil couchant, aux reflets d’orange et d’agrume, embua ses yeux. Elle croyait enfin avoir trouvé un foyer.\nPourtant, au cœur de la nuit, alors que tous dormaient, Truffle se leva en silence et quitta le sanctuaire. Guidée par des souvenirs vagues, elle traversa les rues sombres, boitant encore, jusqu’à apercevoir la grande fenêtre qu’elle avait vue un hiver auparavant. Rien ne garantissait que c’était le bon endroit, d’autant que cette fois, ni mélodie ni odeur n’en émanaient.\nPuis elle distingua une silhouette familière, bien plus grande qu’avant.\nAlors, dans le silence, Truffle se mit à courir, se jeta contre la masse chaude et familière : « Filbert ! »\nLes premières lueurs de l’aube vinrent caresser les larmes qui brillaient sur ses joues.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51010402"
-        },
-        UI_CHAR_DATA_TEXT_51010403 = {
-          ContentDE = "Peu de temps après que Truffle ait rejoint l’Église Élyséenne, la petite ville fut frappée par une famine sévère. Les réserves de nourriture de l’Église s’amenuisaient dangereusement, et les orphelins sous leur protection n’avaient presque plus rien à manger.\nChaque nuit, les bruits des estomacs affamés résonnaient dans le dortoir, créant une sorte de symphonie de la faim dans le silence de la nuit.\nLes plus jeunes, trop affamés pour trouver le sommeil, se blottissaient sous leurs couvertures en pleurant doucement. Truffle, dont le ventre était tout aussi vide, allait les consoler, fatiguée mais réconfortante :\n« Ne pleure pas, essaie de dormir, quand on dort on ne sent plus la faim. »\n« Mais j’ai trop faim pour dormir... Toi, tu n’as pas faim ? »\nTruffle posa une main sur son propre ventre creux, fronça les sourcils et soupira :\n« Moi aussi j’ai faim, mais ne t’inquiète pas, je vais te montrer comment s’endormir. Ferme les yeux ! »\nElle couvrit doucement les yeux de son amie de ses mains chaudes et murmura une comptine inventée sur le moment, pleine d’erreurs mais rassurante :\n« Imagine un immense champ de blé, et toi, tu es une petite taupe. Dans ton terrier, il y a plein de pommes de terre ! Tu les comptes : une pomme de terre, deux pommes de terre, trois pommes de terre, quatre pommes de terre... »\n« Vingt-sept pommes de terre, vingt-huit pommes de terre, vingt-neuf pommes de terre... »\n« Cinquante-trois pommes de terre... cinquante-quatre pommes de terre... cinquante-six... cinquante-sept... ronflement... »\nPeu à peu, la symphonie des ventres affamés s’estompa, la dernière note venant du ventre de Truffle elle-même.\nDans le silence, Truffle repensa à ses jours d’errance avec Filbert et prit la ferme résolution de changer les choses... pour elle, mais aussi pour tous les autres.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51010403"
-        },
-        UI_CHAR_DATA_TEXT_51010404 = {
-          ContentDE = "Par cette nuit où la faim lui embrouillait l’esprit, Truffle prit une grande décision : elle ne voulait plus jamais entendre cette symphonie de ventres qui grondent.\nLe lendemain, à la surprise générale, elle quitta la maison de l’Église et se dirigea droit vers la forêt, tout en sifflotant. D’ordinaire, Truffle ne s’aventurait dehors qu’à la nuit tombée, juste pour jouer en cachette avec sa compagne, sans jamais aller bien loin ni faire trop de bruit, par peur d’attirer le regard sévère de la prêtresse McGuffin. Mais aujourd’hui était différent : dans sa petite tête, un grand plan avait germé.\nComme elle s’y attendait, le bruit régulier de sabots se fit bientôt entendre entre les arbres : c’était Filbert, sa chère amie. La famine ne semblait pas l’avoir touchée, elle était toujours aussi rondelette, peut-être même un peu plus que dans le souvenir de Truffle.\n« Tu te souviens, Filbert, quand on errait toutes les deux ? »\nEt Truffle se remit à raconter leurs premiers jours ensemble : comment Filbert, portant sa petite cavalière presque à bout de forces, l’avait menée vers bien des trésors, d’abord à la rivière en dégel, où elles avaient pêché une belle quantité de poissons, puis dans une forêt austère, où elles avaient ramassé plein de noix, et même jusqu’au bord des falaises, pour y cueillir des champignons. Truffle avait alors compris qu’au-delà des murs de la ville s’étendait un monde plein de nourriture insoupçonnée.\nAlors si, aujourd’hui, il n’y avait plus assez à manger... pourquoi ne pas aller chercher au-dehors ?\nTruffle exposa son grand plan à Filbert, et le duo inséparable... non pas une fille et un cochon, mais deux amies... se mit en route.\nElles atteignirent la rivière : sur les deux rives, des gens affamés tentaient en vain de pêcher. Elles gagnèrent la forêt : même l’écorce et les feuilles des arbres avaient été arrachées pour se nourrir. Elles renoncèrent à aller aux falaises : inutile de vérifier pour deviner ce qu’elles y trouveraient...\nC’était comme si le monde entier mourait de faim. Poissons, insectes, oiseaux, bêtes, chacun essayait de dévorer l’autre, mais toujours en vain, jusqu’à s’effondrer, l’estomac vide, pour finir par pourrir sur place.\n\nÀ bout de forces, Truffle s’allongea contre le tronc d’un arbre grignoté jusqu’au cœur. Une sensation familière revint : ce froid... cette faim... Et Filbert, devant elle, devenait floue...\nMais soudain, Filbert, qui elle aussi semblait au bout du rouleau, redressa la tête : elle venait de flairer quelque chose. Elle trottina jusqu’à un arbre voisin et se mit à gratter la terre avec l’énergie du désespoir.\n...\nUne odeur piquante et terreuse emplit les narines de Truffle et la ramena à elle. Filbert, comme autrefois, venait de lui déposer un aliment devant la bouche. D’instinct, Truffle sut de quoi il s’agissait : un Chapeau-de-Rubis, champignon rare qui pousse profondément sous les racines. Trop bien caché, trop difficile à déterrer : personne, jusqu’ici, n’avait songé à en chercher. Le goût était étrange, mais à mesure qu’elle mâchait, Truffle sentait la force lui revenir. Filbert, elle, avait déjà déterré une bonne douzaine de Chapeaux-de-Rubis.\nÀ force d’allers-retours, elles finirent par amonceler une montagne de champignons devant la porte de l’Église. Les prêtresses s’en régalèrent, puis les distribuèrent aux affamés du voisinage.\nQuand la forêt vit enfin éclore de nouvelles pousses, la famine était terminée. Pourtant, Truffle n’était pas aussi heureuse qu’elle l’aurait cru, si plus personne n’avait besoin d’elle et de Filbert pour trouver de la nourriture... cela voulait dire qu’elle ne pourrait plus passer autant de temps avec son amie.\nLa mine basse, elle pensa demander à la prêtresse McGuffin si elle pouvait jouer encore un peu avec Filbert. Mais elle n’osa pas, et se contenta de faire les cent pas devant l’Église... jusqu’à ce qu’elle tombe nez à nez avec elle au détour du chemin.\n« Je... euh... pour Filbert... enfin... » bredouilla-t-elle, cherchant ses mots.\nLa prêtresse, au lieu de froncer les sourcils, sortit une lettre et la lui tendit avec un sourire. Truffle la parcourut tant bien que mal :\n« Sous les branches sacrées de l’Arbre Céleste... par la grâce des Neuf... Truffle... euh... je comprends pas... quelque chose... aide en temps de besoin... la créature nommée Filbert... euh... nommée... commissaire... spécial... quelque chose... »\n« Je comprends pas, prêtresse McGuffin... Ça veut dire quoi ? Et... il y a aussi Filbert dans la lettre... Oh ! Vous pourriez pas la laisser rester ? Elle a beaucoup aidé, et... j’aimerais encore jouer avec elle...\nPrêtresse McGuffin se mit à sa hauteur et dit, toujours souriante :\n« Cette lettre veut dire que toi et Filbert pourrez rester ensemble pour toujours. »\n« Vraiment ?! » s’exclama Truffle en écarquillant les yeux, un peu incrédule. « Merci, grand Dieu ! Merci, prêtresse McGuffin ! »\n« Non, Truffle. C’est nous qui devons te remercier, toi et Filbert. Vous êtes le plus grand miracle que j’aie jamais vu. »\n\nTruffle ne comprenait pas tout... mais un grand sourire éclaira son visage, elle avait tout ce qu’elle désirait.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51010404"
-        },
-        UI_CHAR_DATA_TEXT_51020101 = {
-          ContentDE = "L’argent permet bien des choses, y compris de se faire des amis de beuverie. L’Étranger affirme lui-même en être un... et il s’en vante presque.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51020101"
-        },
-        UI_CHAR_DATA_TEXT_51020102 = {
-          ContentDE = "Méticuleux jusqu’à l’obsession, l’Étranger noircit carnet après carnet pour tenir ses comptes. Après avoir rejoint les Vagabonds de la Nuit, il a naturellement pris en charge la comptabilité du groupe.\nAussi économe soit-il, il ne rechigne jamais à dépenser pour deux choses : exaucer un vœu de Fina... et, à la même date chaque année, acheter une fleur blanche hors saison.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51020102"
-        },
-        UI_CHAR_DATA_TEXT_51020103 = {
-          ContentDE = "L’Étranger connaît une foule de petits trucs, utiles... ou franchement discutables.\nLes trois règles d’or pour entrer dans une taverne, comment faire semblant d’être ivre, l’art de tenir compagnie à un buveur, la couture pour que les vêtements durent le plus longtemps possible, ou encore la manière d’assommer quelqu’un sans séquelles...\nUn jour, il prétend qu’il écrira un livre intitulé Cent astuces de vie par l’Étranger, certain qu’il deviendra un véritable succès sur tout le continent, avec des fans partout sur son passage. \n« Autant m’entraîner à faire des signatures élégantes dès maintenant », plaisante-t-il souvent.\nDifficile de dire, en l’écoutant, s’il parle sous l’effet de la boisson ou s’il invente tout simplement. Mais si un tel livre voyait le jour, il y a fort à parier qu’il ferait causer dans toutes les tavernes.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51020103"
-        },
-        UI_CHAR_DATA_TEXT_51020104 = {
-          ContentDE = "Il prétend que ses relations ne sont que des \"amis de beuverie\", mais rares sont les fois où il refuse de leur rendre service.\nIl lui arrive même de se jeter dans des situations périlleuses pour eux.\nLorsqu’on l’interroge, il détourne le regard pour cacher la rougeur de ses joues, marmonnant qu’il ne veut simplement pas perdre une source de repas à long terme.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51020104"
-        },
-        UI_CHAR_DATA_TEXT_51020201 = {
-          ContentDE = "Mots tranchants, regard glacial, cicatrices à découvert... Chacun de ces détails suffirait à tenir certaines personnes à distance. L’Étranger cumule les trois. Aussi, la première réaction de ceux qui le croisent est presque toujours de s’écarter.\nPourtant, il paraît que derrière cette façade intimidante se cache un homme chaleureux, capable de détendre l’atmosphère en quelques mots. Mais ceux qui l’ont vraiment constaté sont rares... et, lorsqu’ils le racontent, personne ne les croit. On préfère imaginer qu’ils ont été contraints par l’Étranger à propager cette \"fable\" sous la menace.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51020201"
-        },
-        UI_CHAR_DATA_TEXT_51020202 = {
-          ContentDE = "Parmi les Chasseurs de Phoxène, l’Étranger est considéré comme le plus redoutable que Givrelac ait vu ces dernières années. Même Camilla, pourtant avare en compliments, reconnaît ses talents.\nLui, en revanche, ne tient pas à ce qu’on parle de lui au-delà du cercle restreint de ses pairs, comme s’il cherchait délibérément à effacer son nom des rumeurs de la cité.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51020202"
-        },
-        UI_CHAR_DATA_TEXT_51020203 = {
-          ContentDE = "Où qu’il se trouve, l’Étranger achète toujours un journal dès qu’il croise un vendeur. Pour lui, la presse n’est qu’un outil au service du pouvoir... mais, dans ce vaste flot de mots trompeurs, il parvient parfois à repérer quelques signaux de danger.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51020203"
-        },
-        UI_CHAR_DATA_TEXT_51020204 = {
-          ContentDE = "« C’est un monstre sous une peau humaine. Quand il répond à l’appel de sa nature, il devient une météore qui s’éteint en un instant, une lame qui s’abat sur les dieux, ou un feu capable de faire fondre le fer. Je suis persuadé que la trajectoire de cette météore, bien que déviée, reviendra toujours sur sa course prédestinée. C’est la mission qui nous a été donnée avant même notre naissance. »\nLa note manuscrite avait été déchirée en lambeaux, mais ses mots étaient comme des épines maudites et venimeuses, profondément ancrées dans son esprit.\nAu cours des dix dernières années, l’Étranger a parcouru de nombreux lieux, mais jamais il n’a pu arracher ces épines de sa mémoire.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51020204"
-        },
-        UI_CHAR_DATA_TEXT_51020301 = {
-          ContentDE = "Nombre de ses cicatrices sont dues à une étrange manie : arracher ses croûtes à peine formées, avant que la plaie n’ait le temps de guérir. Fina a déjà tenté de l’en dissuader, mais il lui a rétorqué, avec un sérieux absurde : \n« Les humains qui grattent leurs croûtes, c’est comme les chiens qui se lèchent le poil : un instinct naturel. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_51020301"
-        },
-        UI_CHAR_DATA_TEXT_51020302 = {
-          ContentDE = "L’Étranger n’aime pas les hauteurs : une impulsion sourde l’incite toujours à s’avancer dans le vide, vers cette \"liberté\" que tant d’êtres humains convoitent.\nMais abandonner ainsi tout ce qu’il possède lui est impensable.\nAlors, pour parer à toute éventualité, il transporte en permanence cordes, mousquetons et autres accessoires, pour prévenir toute chute, pour lui comme pour les autres.\nCette manie s’étend à tous les aspects de sa vie, face à un problème, il sort toujours l’outil exact qu’il faut... sans que personne ne sache où il range tout ça.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51020302"
-        },
-        UI_CHAR_DATA_TEXT_51020303 = {
-          ContentDE = "Même s’il garde ses distances, l’Étranger sait se rapprocher rapidement des autres quand c’est nécessaire.\nUne soirée arrosée suffit pour qu’un Chasseur de Phoxène livre des informations, une nuit entière pour qu’un voleur jure de le considérer comme un frère.\nUne tasse de thé, un paquet de cigarettes, et un brin de baratin bien mené ont déjà poussé un grippe-sou notoire à lui faire un prix... une première.\nCe n’est pas du savoir-vivre : après des années à survivre en bas de l’échelle, il connaît les besoins réels des gens... et sait comment les combler.\nEn revanche, face aux gens de la haute, lui qui ne craint pas les Souillés paraît soudain aussi déconcerté qu’un explorateur devant une espèce inconnue.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51020303"
-        },
-        UI_CHAR_DATA_TEXT_51020304 = {
-          ContentDE = "Trois images persistent dans la mémoire de l’Étranger, encore et encore.\n\nLa première image est un matin doré :\nune chambre ivoire baignée de lumière,\nune bouche douce déposant un baiser sur son front de nouveau-né.\nSon nom est ▇▇.\n\nLa deuxième image vient d’un crépuscule vermillon :\ndes rivières scindant la plaine comme les os d’un cadavre,\nune large main tenant sa petite main fragile.\nSon nom est ▇▇.\n\nLa troisième image est une nuit noire :\nla pluie glaciale frappe une fenêtre brisée,\nune jeune fille pâle, haletante, l’appelle par son nom.\nSon nom est ▇▇.\n\nAu plus profond de sa conscience, les images commencent à s’estomper.\n\nLa première devient ▇▇ courant à travers la ▇▇,\nelle murmure ▇▇,\n▇▇ s’élève vers ▇▇.\n\nLa deuxième se dresse sur ▇▇ par ▇▇,\nle vent ▇▇ soupirant ▇▇,\net dans la terre, ▇▇ arrachée par ▇▇.\n\n... Il ne peut plus supporter de s’aventurer plus loin dans ses souvenirs.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51020304"
-        },
-        UI_CHAR_DATA_TEXT_51020401 = {
-          ContentDE = "Au début, l’Étranger n’avait ni le temps ni le savoir-faire pour cuisiner : il se contentait d’attraper au hasard un insecte dans la nature pour calmer sa faim.\nPuis, après quelques protestations, il comprit qu’un repas devait être à la fois savoureux et nourrissant... et jugea cette tâche plus ardue que l’art du combat.\nAprès avoir brisé d’innombrables couteaux et percé quantité de poêles, feuilleté jusqu’à l’usure un mince livre de recettes couvert de notes serrées, il finit par faire de la cuisine un réflexe aussi instinctif que se battre.\nSeul bémol, lorsqu’il prépare un plat, son visage prend une expression si sérieuse et farouche qu’on dirait qu’il s’apprête à affronter un Souillé.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51020401"
-        },
-        UI_CHAR_DATA_TEXT_51020402 = {
-          ContentDE = "Il a mis en garde ses compagnons à de multiples reprises : ne jamais s’approcher des Déchus.\nSelon ses dires, il n’y a là-bas aucun noble idéal, seulement des désirs ignobles.\nNul ne sait ce que l’Étranger pense réellement de cette organisation derrière son ton méprisant... mais même lui ne peut cacher l’éclat fugace de tristesse qui traverse son regard quand il en parle.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51020402"
-        },
-        UI_CHAR_DATA_TEXT_51020403 = {
-          ContentDE = "L’Étranger se réveille parfois en sursaut au son du tonnerre.\nDehors, pas de cuirassés en flammes, pas de pluie de tirs mortels, seulement la pluie qui tambourine contre la vitre, remplaçant le vacarme des bottes écrasant des corps dans ses souvenirs.\nUne goutte s’infiltre par un interstice et lui éclabousse le visage.\nIl l’essuie, sans savoir s’il chasse l’eau... ou une larme.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51020403"
-        },
-        UI_CHAR_DATA_TEXT_51020404 = {
-          ContentDE = "Laisser les croûtes de sang ne faisait qu’attirer l’attention. Dans ses souvenirs, plusieurs personnes l’avaient déjà observé pour cela, et l’Étranger avait appris, dès son enfance, à les gratter.\nLorsque ces gens l’avaient peu à peu quitté, les cicatrices avaient cessé d’inquiéter et étaient devenues un signe de vulnérabilité. La peur de son sang poussait les autres à déchirer ses plaies, transformant une cicatrice en une multitude de marques.\nPuis Fina posa ses mains glacées sur lui, stoppant cette propagation sans fin. En voyant l’inquiétude dans ses yeux, l’Étranger comprit soudain que ces cicatrices ensanglantées, porteuses de douleur, d’humiliation, de cris et de résistance, retrouvaient enfin, en cet instant, leur véritable signification.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51020404"
-        },
-        UI_CHAR_DATA_TEXT_53010101 = {
-          ContentDE = "Dès votre première rencontre, Psyche a deviné l’inquiétude et la tristesse dissimulées derrière ton sourire.\nIl t’a fallu du temps pour comprendre : ce n’était ni un défaut de \"jeu\", ni un don de clairvoyance.\nC’est simplement que vous portiez chacun un fardeau, et que, sans même vous le dire, vous aviez choisi de le cacher.",
-          TextMapId = "UI_CHAR_DATA_TEXT_53010101"
-        },
-        UI_CHAR_DATA_TEXT_53010102 = {
-          ContentDE = "Psyche offre souvent des fleurs aux voyageurs, même si certains ne lui répondent qu’avec un silence froid, elle garde cette habitude.\nCelle qu’elle t’a donnée, à toi, était différente : une fleur discrète, ouverte sans qu’elle s’en aperçoive. Comme ta venue, ce jour-là.",
-          TextMapId = "UI_CHAR_DATA_TEXT_53010102"
-        },
-        UI_CHAR_DATA_TEXT_53010103 = {
-          ContentDE = "Tu as vite remarqué que Psyche n’est pas en très bonne santé. Son sourire a parfois un air perdu, et elle traverse des moments de vertige où sa vue se trouble complètement.\nMais chaque fois que tu t’inquiètes, elle te rassure sans hésiter : ce n’est rien, dit-elle, elle connaît ton visage par cœur. Dès que sa vue reviendra, elle saura te retrouver. Avec tes cheveux blancs et cette corne rouge, tu restes inoubliable à ses yeux.",
-          TextMapId = "UI_CHAR_DATA_TEXT_53010103"
-        },
-        UI_CHAR_DATA_TEXT_53010104 = {
-          ContentDE = "Et si... tu ne peux pas t’empêcher d’y penser... Et si Psyche parvenait à éveiller ses pouvoirs ? Alors, vous pourriez combattre côte à côte, comme deux véritables alliés.\nElle déploierait ses ailes dans les airs, légère comme le papillon qu’elle aime tant.\nEt à la fin des combats, elle atterrirait doucement devant toi, telle une aile posée sur une fleur.",
-          TextMapId = "UI_CHAR_DATA_TEXT_53010104"
-        },
-        UI_CHAR_DATA_TEXT_53010105 = {
-          ContentDE = "Tu as élevé un petit cairn pour Psyche. Un tas de pierres nu, sans ornement.\nTu as pensé y déposer des fleurs fraîches, mais elles finiraient par faner.\nTu as songé à y poser un papillon en papier, mais il pourrirait avec le temps.\nAlors tu n’y as rien mis du tout. Tes souvenirs d’elle suffisent. Ils resteront plus longtemps que tout le reste.\nTu fermes les yeux devant le cairn silencieux. Dans le flou de tes paupières fermées, une lumière verte scintille.\nElle s’élève, légère, virevoltante comme un papillon... et s’éloigne, de plus en plus loin.",
-          TextMapId = "UI_CHAR_DATA_TEXT_53010105"
-        },
-        UI_CHAR_DATA_TEXT_53010201 = {
-          ContentDE = "Psyche vit à la Maison d’Hypnos, où elle travaille également comme serveuse.\nCela dit, puisque la porte de l’auberge reste perpétuellement scellée au public, rares sont les voyageurs de Givrelac à avoir un jour goûté à son hospitalité.\nPourtant, chaque matin, si l’on se poste au bas des marches de l’entrée et qu’on lève les yeux, on peut distinguer une silhouette fine, à demi dissimulée par les feuilles et les lianes.\nC’est Psyche, affairée à sa routine : elle écarte les lourds rideaux pour laisser les fleurs se gorger du peu de lumière disponible, vaporise doucement les feuilles, puis taille avec soin les tiges fanées.\nDans cette bâtisse glaciale de pierres grises et de neige résiduelle, ce sont ses fleurs, et ses fleurs seules, qui apportent un soupçon de chaleur.",
-          TextMapId = "UI_CHAR_DATA_TEXT_53010201"
-        },
-        UI_CHAR_DATA_TEXT_53010202 = {
-          ContentDE = "Les plantes que Psyche soigne à la Maison d’Hypnos ne viennent pas de la boutique familiale. Elle aime tendrement les fleurs qu’elle cultivait chez elle, mais elle sait que ses parents en ont davantage besoin qu’elle. Celles qu’elle fait grandir ici, elle les a ramassées un matin, juste devant l’entrée.\nCe jour-là, une autre jeune fille, qui logeait aussi à la Maison d’Hypnos, pleurait à en perdre la voix, jetant par la fenêtre, une à une, les plantes que ses parents lui avaient envoyées. Après l’avoir réconfortée, Psyche était descendue seule sous la fenêtre. Elle avait taillé les tiges brisées, coupé les racines abîmées, recollé les morceaux de pots éclatés, un à un.\nSoignées avec tant d’attention, ces fleurs presque perdues avaient repris vie. Mieux encore : elles s’épanouissaient aujourd’hui plus que jamais.",
-          TextMapId = "UI_CHAR_DATA_TEXT_53010202"
-        },
-        UI_CHAR_DATA_TEXT_53010203 = {
-          ContentDE = "Les parents de Psyche sont d’excellents horticulteurs, propriétaires d’un petit commerce de fleurs à Givrelac. Pour certains, le départ de Psyche reste une énigme : ses parents s’aiment tendrement, elle a toujours été une enfant sage et respectueuse, et s’ils ne roulaient pas sur l’or, leur vie n’était en rien comparable à celle qu’on imagine dans la sinistre Maison d’Hypnos.\nLorsque l’un des habitants a posé la question à sa mère, elle n’a pas répondu. Son visage est resté calme, mais ses mains, occupées à soigner une plante, ont légèrement tremblé.",
-          TextMapId = "UI_CHAR_DATA_TEXT_53010203"
-        },
-        UI_CHAR_DATA_TEXT_53010204 = {
-          ContentDE = "Aux yeux des autres pensionnaires, Psyche fait figure d’exception. Eux savent qu’ils sont en sursis. Ils n’ont pas d’avenir, pas d’espoir : seulement attendre qu’Henrik leur accorde une sortie douce. Mais Psyche, elle, continue de sourire. Comme si un long avenir s’étendait encore devant elle. Comme si la lumière pouvait franchir les murs de pierre. Et à travers cette brèche invisible, elle laisse entrer un rayon de soleil.\nPour ceux qui vivaient dans l’ombre, ce n’est pas de la chaleur qu’ils ressentent en premier... mais une brûlure vive. Le choc d’être encore en vie.",
-          TextMapId = "UI_CHAR_DATA_TEXT_53010204"
-        },
-        UI_CHAR_DATA_TEXT_53010205 = {
-          ContentDE = "La jeune fille au sourire lumineux... n’était plus qu’une ligne glaciale, noire sur blanc, au milieu d’un rapport.\n\n« ... Cible : Souillé de grande taille, sexe féminin. Probable antécédent de Dégradation, identité exacte encore en cours d’analyse. Neutralisée le 21 novembre au soir, dans la région du Lac du Deuil. Aucun dommage collatéral. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_53010205"
-        },
-        UI_CHAR_DATA_TEXT_53010301 = {
-          ContentDE = "Psyche aime les papillons. Ces créatures fragiles, qui peinent à s’extirper de leur chrysalide diaphane, parviennent toujours à déployer leurs ailes, aussi légères qu’élégantes, pour s’envoler vers le ciel. Elle admire cette forme de renaissance après tant d’efforts. Peut-être que les nombreux papillons ornant ses vêtements témoignent de l’espoir, discret mais tenace, qu’elle garde pour elle-même.",
-          TextMapId = "UI_CHAR_DATA_TEXT_53010301"
-        },
-        UI_CHAR_DATA_TEXT_53010302 = {
-          ContentDE = "Psyche n’a jamais quitté Givrelac. Pour elle, le monde se divise en deux : Givrelac, et tout le reste. Beaucoup partagent cette vision... mais Psyche, elle, continue de chercher des éclats de cet ailleurs : dans de vieux manuels, dans les bibelots des colporteurs, dans les ballades des ménestrels... Et parfois, dans un de tes mots. Ou un de tes récits.",
-          TextMapId = "UI_CHAR_DATA_TEXT_53010302"
-        },
-        UI_CHAR_DATA_TEXT_53010303 = {
-          ContentDE = "Petite, Psyche a été témoin d’une \"Dégradation\". Une jeune fille transformée en monstre, à peine humaine, ivre de rage, attaquant tout ce qui vivait autour d’elle...\nElle s’est effondrée sous une salve de tirs, et les deux adultes qui avaient caché le Dégradé dans leur cave pendant des mois ont été exécutés en place publique. La neige a tout recouvert dans le silence, comme si rien n’avait jamais eu lieu.\nMais Psyche, elle, a continué longtemps à faire le même cauchemar :\nUne chrysalide s’ouvre, une aile fragile s’en dégage... puis la petite chose chute au sol, incapable de voler. La neige tombe et recouvre le tout, sans jamais laisser de trace.",
-          TextMapId = "UI_CHAR_DATA_TEXT_53010303"
-        },
-        UI_CHAR_DATA_TEXT_53010304 = {
-          ContentDE = "Psyche a déjà assisté à deux départs. Elle a supplié Henrik de la laisser entrer dans cette pièce interdite, pas seulement pour faire ses adieux, mais pour regarder en face sa propre destinée.\nLe feu se reflétait dans ses yeux : éclatant, brûlant, comme si toute la vie que ses amis n’avaient pas pu vivre s’y consumait d’un seul coup. Elle n’avait pas peur. Pour elle, la mort n’était qu’un départ comme un autre. Elle pensait avoir appris à dire adieu. À ne plus en souffrir.\nMais elle s’est trompée. Car ce dernier adieu-là, celui qu’elle t’a fait, lui a brisé le cœur.",
-          TextMapId = "UI_CHAR_DATA_TEXT_53010304"
-        },
-        UI_CHAR_DATA_TEXT_53010305 = {
-          ContentDE = "Dans les tout derniers instants de sa vie, Psyche ne se plaignait ni de la douleur, ni de son sort scellé depuis longtemps.\nElle souriait... parce qu’elle t’avait rencontré. Parce qu’elle avait vécu pour de vrai.",
-          TextMapId = "UI_CHAR_DATA_TEXT_53010305"
-        },
-        UI_CHAR_DATA_TEXT_53010401 = {
-          ContentDE = "« Psyche, il est l’heure de se lever. »\nÀ 6 ans, Psyche bondit hors du lit, elle attendait ce moment depuis si longtemps.\nLa veille, ses parents avaient enfin cédé : ils allaient lui apprendre à s’occuper des fleurs. Elle était si excitée qu’elle n’avait pas fermé l’œil de la nuit.\nMain dans la main avec son père et sa mère, Psyche entra dans la boutique.\nC’était un été trop court, le soleil perçait à travers les fenêtres, projetant, depuis les décorations en forme de papillons, de fines ombres sur les pétales... comme si de vrais papillons s’étaient posés parmi les fleurs.\nElle imita ses parents pour arroser le dernier pot, et, un peu fatiguée après une nuit blanche, alla somnoler sur le balcon.\nDans son rêve, le soleil faisait fondre la terre gelée de Givrelac, les champs se couvraient de fleurs éclatantes, et des papillons multicolores dansaient dans les airs. Les bras grands ouverts, Psyche courait vers la lumière, et avec les papillons, elle s’envolait sur un souffle de vent malicieux, libre comme jamais.\n\n« Psyche, il est l’heure de se lever. »\nÀ 12 ans, Psyche se leva sans bruit. Il faisait encore nuit, mais elle savait qu’elle devait aider à la boutique. Elle retroussa ses manches et suivit son père jusqu’au puits, à un kilomètre de là. En revenant, les pieds trempés de rosée, l’horizon s’éclairait à peine.\nSa mère avait déjà mis l’eau à bouillir. Sans prendre le temps de soulager ses bras endoloris, Psyche et son père mélangèrent l’eau chaude et froide pour atteindre la température idéale, à Givrelac, l’eau du puits est bien trop glacée pour les racines fragiles. Une fois la dernière plante arrosée et installée sur son étagère, elle regarda ses parents ouvrir les vitrines et lancer la journée. Alors seulement, elle leur fit un signe de la main et prit le chemin de l’école.\nÀ 12 ans, Psyche comprenait enfin pourquoi ses parents ne voulaient pas lui apprendre à jardiner quand elle était petite : pour eux, ce n’était ni une passion, ni un passe-temps, c’était leur gagne-pain. Heureusement, elle, elle les aimait, ces fleurs.\nLeurs bourgeons en train d’éclore suffisaient à lui faire sourire, même au cœur du froid et de la fatigue.\n\n« Psyche, il est l’heure de se lever. »\nÀ 17 ans, Psyche s’assit lentement sur son lit. Ses doigts caressèrent la vieille couverture usée par les années, elle n’était pas si chaude, et elle n’avait pas vraiment froid, mais elle avait du mal à s’en détacher. Elle savait que c’était sa dernière nuit ici. Sa mère portait une longue robe noire. Sous ses yeux, de larges cernes. Sur ses joues, des larmes déjà sèches. Psyche tendit la main pour lisser les mèches de cheveux en désordre.\n« Je t’aime, maman », murmura-t-elle, en essuyant une nouvelle larme sur sa joue.\nPuis, comme toujours, elle glissa un bras sous celui de son père, prit sa mère par la main, et ensemble, ils s’avancèrent vers la grande demeure dressée au nord de la cité.",
-          TextMapId = "UI_CHAR_DATA_TEXT_53010401"
-        },
-        UI_CHAR_DATA_TEXT_53010402 = {
-          ContentDE = "« Ne joue pas avec elle ! »\nC’est une phrase que Psyche a entendue toute son enfance, tant de fois, de la bouche de tant d’adultes. À chaque fois, les enfants qu’elle venait de rencontrer étaient entraînés loin d’elle, et disparaissaient pour de bon. Une seule fois, il y eut une exception. Une fillette Sola de son âge, rencontrée par hasard dans la boutique de fleurs. Curieuse et intrépide, elle n’écoutait ni les mises en garde de ses domestiques ni les regards réprobateurs. Elle courait retrouver Psyche, chaque jour, pour jouer.\nUn jour, elle l’invita dans sa maison luxueuse, où elles passèrent des heures à assembler de jolis blocs de bois.\n« Regarde, celui-là c’est moi, et celui avec les cornes... c’est toi ! »\n« On joue ensemble, comme ça... »\n« Mes cornes... elles ne te font pas peur ? » demanda Psyche, un peu gênée.\n« Pas du tout ! Je les trouve très belles ! » répondit la fillette sans hésiter.\n« Tiens, on pourrait même les décorer ! » Elle bondit sur ses pieds et fila vers une armoire pleine de rubans et de barrettes.\n« Mmmh... le rouge est joli, mais il ne va pas trop avec ta robe... et celui-là, doré, tu crois que... » En se relevant, le tissu de sa robe renversa la figurine cornue. Psyche la remit doucement debout, à côté de l’autre, et sourit. La fillette revint, les bras chargés de décorations.\n« Alors ? Tu préfères lequel ? Tu peux tout prendre, si tu veux ! »\n« Je... » \nMais Psyche n’eut pas le temps de répondre. La porte s’ouvrit. Une dame parfaitement apprêtée entra dans la pièce. Quand elle posa les yeux sur Psyche, son visage se tordit d’un mélange de colère et de dégoût, comme si une bête sale s’était introduite chez elle. Le reste se passa comme toujours : cris, reproches, insultes. Et Psyche, chassée de la maison, entendit la fillette pleurer et lui crier : \n« Psyche, pardon... ! Je viendrai te revoir, c’est promis ! » Mais dès ce jour-là, ses parents l’enfermèrent à la maison. Ils condamnèrent même ses fenêtres, qu’ils couvrirent de papier opaque.\nPsyche s’y attendait. Mais elle tenait à lui dire au moins une chose :\n« Peu importe ce que tu m’offres, je l’aimerai. » Un merci, en somme. Cette phrase, elle l’a gardée longtemps dans son cœur. Jusqu’à ce jour, des années plus tard, où elle heurta un jeune garçon vêtu de riches habits. Avant qu’elle puisse s’excuser, une adolescente tout aussi bien habillée s’interposa :\n« Combien de fois faut-il te le dire ? Ne t’approche pas de ces gens-là ! Et toi ! Espèce de Charon, t’as pas d’yeux ou quoi ? Tu te rends compte que t’as fait tomber... » Elle s’interrompit brusquement. Ses yeux venaient de se poser sur les cornes de Psyche. Son doigt pointé s’arrêta en plein air. Psyche, elle, la reconnut tout de suite.\nC’était elle. La fillette d’autrefois.\n« Psyche... ? Tu... » dit-elle, complètement perdue. « Je... »\n« Vous devez me confondre avec quelqu’un d’autre, mademoiselle » répondit Psyche avec un léger sourire. « Pardonnez-moi, j’ai eu un vertige. Je n’ai pas bien vu où j’allais. » Puis elle s’éloigna.\nEt la phrase qu’elle avait voulu dire, qu’elle avait gardée si longtemps dans un coin de son cœur... finit balayée avec les années, comme les rubans et les jouets qu’elle n’a jamais pu garder.",
-          TextMapId = "UI_CHAR_DATA_TEXT_53010402"
-        },
-        UI_CHAR_DATA_TEXT_53010403 = {
-          ContentDE = "« À demain, Psyche ! »\n« Oui, à demain ! »\nC’était une soirée banale. Psyche a salué {性别:ce nouvel ami Chasseur de Phoxène|cette nouvelle amie Chasseuse de Phoxène}, l’a regardé franchir les portes de la Maison d’Hypnos... et elle n’a pas bougé. Elle est restée longtemps à fixer la rue vide, bien après que sa silhouette ait disparu. Puis elle est rentrée dans sa chambre, lentement, à regret.\n« À demain », une promesse qu’on fait sans y penser. Mais pour Psyche, ces mots-là sont lourds de crainte. Car chaque soir, quand elle ferme les yeux, elle ignore si elle les rouvrira vraiment un jour.\n Juste avant de sombrer dans le sommeil, elle murmure une prière, discrète mais sincère. « S’il vous plaît... faites que je me réveille demain. »\n\nPuis la nuit passe. L’aube effleure la terre. Psyche ouvre les yeux.\nElle se redresse, touche son bras, et sent la chaleur de son propre corps. Elle est encore là. Elle n’est pas devenue un monstre. Elle sourit.\n« C’est bon... j’ai tenu ma promesse. »",
-          TextMapId = "UI_CHAR_DATA_TEXT_53010403"
-        },
-        UI_CHAR_DATA_TEXT_53010404 = {
-          ContentDE = "« Je te le demande une dernière fois. Est-ce vraiment ce que tu veux, Psyche ? »\nPsyche acquiesça, calme et résolue. Elle entendit alors le long soupir, lourd, de Henrik... mais elle ne voyait déjà plus rien. Elle ignorait quelle expression il avait à cet instant, elle devait la reconstituer, fragment par fragment, à partir de souvenirs.\n\nDans les premières images qu’elle gardait du Docteur Henrik, il semblait mélancolique, distant. Un homme toujours las, comme si une âme déjà vieille s’était réfugiée dans un corps encore jeune. Il n’y avait guère que lorsqu’il posait les yeux sur une photo sur son bureau qu’une trace d’émotion, humaine, fragile, venait troubler ses traits. Psyche avait deviné, plus ou moins, qui était la jeune fille sur cette image... mais elle n’avait jamais posé la question. Elle refusait d’arracher le pansement posé sur une douleur ancienne. Alors, elle se contentait de déposer chaque jour une fleur fraîche sur le bureau du médecin.\n\nHenrik restait silencieux, fidèle à sa routine simple et répétitive. Mais Psyche, elle, voyait peu à peu un éclat nouveau dans ses yeux, comme une pousse fragile sur une branche brûlée.\nUn jour, il ouvrit la serrure d’une vieille bibliothèque. Des années de poussière s’envolèrent aussitôt, Psyche ferma les yeux, piquée par la gêne. À travers ses doigts, elle aperçut Henrik penché sur des liasses de notes, toussant violemment, marmonnant des termes qu’elle comprenait à peine : « réaction de blocage », « Éclat stellaire »... Ce qu’elle n’a jamais oublié, en revanche, ce sont ses derniers mots, presque murmurés :\n« Hayley... Je veux réessayer. Tu crois que cette fois, ce sera différent ? »\nDepuis ce jour-là, Henrik s’est enfermé dans son bureau. Nuit et jour, il n’a cessé d’expérimenter, manipulant des fioles, des liquides colorés, des fragments instables d’espoir. Psyche n’a pas cherché à l’arrêter. Car jamais elle ne l’avait vu poursuivre quelque chose avec une telle ardeur. Autrefois, il ressemblait à un dieu lointain, empreint de compassion mais détaché, dont le rôle se bornait à trancher, apaiser, mettre fin à la souffrance. Mais aujourd’hui, il ressemblait à un homme. Un homme prêt à tout pour une chance. Ou à un enfant lancé à la poursuite d’un trésor oublié.\nPour la première fois, Henrik lui semblait pleinement humain.\n\n…\n\n« Bois. »\nLa voix d’Henrik la ramena au présent. Un objet froid fut glissé dans sa main. Elle en devina la forme : une petite fiole, au verre rugueux, un peu collant. Elle la caressa longuement du bout des doigts. Si légère... mais si lourde de sens. C’était là le fruit de tout le travail acharné de Henrik, le résultat de nuits sans sommeil. Avec un peu de chance, cela suffirait à la délivrer de son destin. Sinon... elle aurait au moins contribué à sa recherche. Et peut-être permis d’en sauver d’autres, après elle.\nElle se prit à imaginer la couleur du liquide. Puisqu’il contenait de l’Éclat stellaire, il devait être limpide, irisé... presque étoilé. Un sourire se dessina sur ses lèvres.\n« L’Éclat stellaire, je l’ai trouvé avec {nickname}. Je suis sûre qu’il me portera chance. » pensa-t-elle.",
-          TextMapId = "UI_CHAR_DATA_TEXT_53010404"
-        },
-        UI_CHAR_DATA_TEXT_53010405 = {
-          ContentDE = "Tu sais que c’est un rêve, tu en es {性别:certain|certaine}.\nIl neige sur Givrelac, une neige grisâtre, familière. Tu marches dans les ruelles glissantes, tu traverses les places vides, tu respires l’odeur âpre de l’alcool qui s’échappe des Asphodèles.\nLes gens vont et viennent, sans te prêter attention. Tu es leur passant, comme ils sont les tiens. Puis tu t’arrêtes devant une maison perchée sur les hauteurs. Dans ton souvenir, elle était abandonnée depuis longtemps. \nMais ce soir-là, une lumière jaune douce brille derrière les vitres, diffusant sa chaleur dans le brouillard glacé.\nTu frappes. Une fille aux cheveux d’argent t’ouvre, vêtue de vert.\n« Bonjour ! » dit-elle en souriant, les sourcils joliment arqués.\n« Ici, c’est la Maison d’Hypnos. Tu viens de loin, {性别:voyageur|voyageuse} ? »\nQuelque chose se réveille en toi, comme si une banquise venait de fondre, comme si une graine oubliée sous le permafrost se mettait à germer. \nTes lèvres remuent. Tu as tant à dire, mais aucun mot ne sort : ils restent figés dans le vent. Finalement, tu murmures simplement :\n« ... Psyche. Regarde. Il neige encore, sur Givrelac. » \nElle penche la tête, légèrement perplexe.\n« Il neige tous les jours ici. C’est normal, tu t’y habitueras vite. »\nLe vent se lève. La neige s’épaissit. Et le rêve s’efface dans le blanc.",
-          TextMapId = "UI_CHAR_DATA_TEXT_53010405"
+        UI_Bai_Beibao_Finish = {
+          ContentDE = "Tschüss!",
+          TextMapId = "UI_Bai_Beibao_Finish"
+        },
+        UI_Bai_Beibao_Start = {
+          ContentDE = "Zeig mal, was für gute Sachen du diesmal gefunden hast!",
+          TextMapId = "UI_Bai_Beibao_Start"
         },
         UI_SystemNotice_TestContent = {
           ContentDE = "德语测试文本",
@@ -1277,596 +394,4422 @@ local Data = {
           TextMapId = "UI_SystemNotice_Title"
         },
         VoiceDes001 = {
-          ContentDE = "Discussion",
+          ContentDE = "Plauderei",
           TextMapId = "VoiceDes001"
         },
         VoiceDes002 = {
-          ContentDE = "Première rencontre",
+          ContentDE = "Erste Begegnung",
           TextMapId = "VoiceDes002"
         },
         VoiceDes003 = {
-          ContentDE = "Salutation",
+          ContentDE = "Grüße",
           TextMapId = "VoiceDes003"
         },
         VoiceDes004 = {
-          ContentDE = "Monologue",
+          ContentDE = "Monolog",
           TextMapId = "VoiceDes004"
         },
         VoiceDes005 = {
-          ContentDE = "Vœux d'anniversaire",
+          ContentDE = "Geburtstagsgrüße",
           TextMapId = "VoiceDes005"
         },
         VoiceDes006 = {
-          ContentDE = "Prêt à l’action",
+          ContentDE = "Bereit",
           TextMapId = "VoiceDes006"
         },
         VoiceDes007 = {
-          ContentDE = "Ascension",
+          ContentDE = "Aufstieg",
           TextMapId = "VoiceDes007"
         },
         VoiceDes008 = {
-          ContentDE = "Début du combat",
+          ContentDE = "Kampfbeginn",
           TextMapId = "VoiceDes008"
         },
         VoiceDes009 = {
-          ContentDE = "Repos",
+          ContentDE = "Untätig",
           TextMapId = "VoiceDes009"
         },
         VoiceDes012 = {
-          ContentDE = "Blessé : I",
+          ContentDE = "Verletzt (Ⅰ)",
           TextMapId = "VoiceDes012"
         },
         VoiceDes013 = {
-          ContentDE = "Blessé : II",
+          ContentDE = "Verletzt (Ⅱ)",
           TextMapId = "VoiceDes013"
         },
         VoiceDes014 = {
-          ContentDE = "Compétence de combat : I",
+          ContentDE = "Fertigkeit (Ⅰ)",
           TextMapId = "VoiceDes014"
         },
         VoiceDes015 = {
-          ContentDE = "Compétence de combat : II",
+          ContentDE = "Fertigkeit (Ⅱ)",
           TextMapId = "VoiceDes015"
         },
         VoiceDes016 = {
-          ContentDE = "Compétence ultime : I",
+          ContentDE = "Ultimate (Ⅰ)",
           TextMapId = "VoiceDes016"
         },
         VoiceDes017 = {
-          ContentDE = "Compétence ultime : II",
+          ContentDE = "Ultimate (Ⅱ)",
           TextMapId = "VoiceDes017"
         },
         VoiceDes018 = {
-          ContentDE = "Compétence ultime : III",
+          ContentDE = "Ultimate (Ⅲ)",
           TextMapId = "VoiceDes018"
         },
         VoiceDes019 = {
-          ContentDE = "Vaincu : I",
+          ContentDE = "Handlungsunfähig (Ⅰ)",
           TextMapId = "VoiceDes019"
         },
         VoiceDes020 = {
-          ContentDE = "Vaincu : II",
+          ContentDE = "Handlungsunfähig (Ⅱ)",
           TextMapId = "VoiceDes020"
         },
         VoiceDes021 = {
-          ContentDE = "Ressuscité",
+          ContentDE = "Wiederbelebung",
           TextMapId = "VoiceDes021"
         },
         VoiceDes022 = {
-          ContentDE = "Victoire",
+          ContentDE = "Sieg",
           TextMapId = "VoiceDes022"
         },
         VoiceDes023 = {
-          ContentDE = "Retraite",
+          ContentDE = "Rückzug",
           TextMapId = "VoiceDes023"
         },
         VoiceDes024 = {
-          ContentDE = "Victoire : I",
+          ContentDE = "Sieg (Ⅰ)",
           TextMapId = "VoiceDes024"
         },
         VoiceDes025 = {
-          ContentDE = "Victoire : II",
+          ContentDE = "Sieg (Ⅱ)",
           TextMapId = "VoiceDes025"
         },
         VoiceDes026 = {
-          ContentDE = "Victoire : III",
+          ContentDE = "Sieg (Ⅲ)",
           TextMapId = "VoiceDes026"
         },
         VoiceDes027 = {
-          ContentDE = "Victoire : IV",
+          ContentDE = "Sieg (Ⅳ)",
           TextMapId = "VoiceDes027"
         },
         VoiceDes028 = {
-          ContentDE = "(Doublage à venir)",
+          ContentDE = "(Stimme folgt in Kürze)",
           TextMapId = "VoiceDes028"
         },
         VoiceDes031 = {
-          ContentDE = "I",
+          ContentDE = "(Ⅰ)",
           TextMapId = "VoiceDes031"
         },
         VoiceDes032 = {
-          ContentDE = "II",
+          ContentDE = "(Ⅱ)",
           TextMapId = "VoiceDes032"
         },
         VoiceDes033 = {
-          ContentDE = "III",
+          ContentDE = "(Ⅲ)",
           TextMapId = "VoiceDes033"
         },
         VoiceDes034 = {
-          ContentDE = "IV",
+          ContentDE = "(Ⅳ)",
           TextMapId = "VoiceDes034"
         },
         VoiceDes035 = {
-          ContentDE = "V",
+          ContentDE = "(Ⅴ)",
           TextMapId = "VoiceDes035"
         },
         VoiceDes036 = {
-          ContentDE = "VI",
+          ContentDE = "(Ⅵ)",
           TextMapId = "VoiceDes036"
         },
         VoiceDes037 = {
-          ContentDE = "VII",
+          ContentDE = "(Ⅶ)",
           TextMapId = "VoiceDes037"
         },
         VoiceDes038 = {
-          ContentDE = "VIII",
+          ContentDE = "(Ⅷ)",
           TextMapId = "VoiceDes038"
         },
         VoiceDes039 = {
-          ContentDE = "IX",
+          ContentDE = "(Ⅸ)",
           TextMapId = "VoiceDes039"
         },
         VoiceDes040 = {
-          ContentDE = "X",
+          ContentDE = "(Ⅹ)",
           TextMapId = "VoiceDes040"
         },
         VoiceDes041 = {
-          ContentDE = "Rencontre aléatoire : I",
+          ContentDE = "Zufällige Begegnung (Ⅰ)",
           TextMapId = "VoiceDes041"
         },
         VoiceDes042 = {
-          ContentDE = "Rencontre aléatoire : II",
+          ContentDE = "Zufällige Begegnung (Ⅱ)",
           TextMapId = "VoiceDes042"
         },
         VoiceDes043 = {
-          ContentDE = "Rencontre aléatoire : III",
+          ContentDE = "Zufällige Begegnung (Ⅲ)",
           TextMapId = "VoiceDes043"
         },
         VoiceDes044 = {
-          ContentDE = "Rencontre aléatoire : IV",
+          ContentDE = "Zufällige Begegnung (Ⅳ)",
           TextMapId = "VoiceDes044"
         },
         VoiceDes045 = {
-          ContentDE = "Rencontre aléatoire : V",
+          ContentDE = "Zufällige Begegnung (Ⅴ)",
           TextMapId = "VoiceDes045"
         },
         VoiceDes046 = {
-          ContentDE = "Rencontre aléatoire : VI",
+          ContentDE = "Zufällige Begegnung (Ⅵ)",
           TextMapId = "VoiceDes046"
         },
         VoiceDes047 = {
-          ContentDE = "Rencontre aléatoire : VII",
+          ContentDE = "Zufällige Begegnung (Ⅶ)",
           TextMapId = "VoiceDes047"
         },
         VoiceDes048 = {
-          ContentDE = "Rencontre aléatoire : VIII",
+          ContentDE = "Zufällige Begegnung (Ⅷ)",
           TextMapId = "VoiceDes048"
         },
         VoiceDes049 = {
-          ContentDE = "Rencontre aléatoire : IX",
+          ContentDE = "Zufällige Begegnung (Ⅸ)",
           TextMapId = "VoiceDes049"
         },
         VoiceDes050 = {
-          ContentDE = "Rencontre aléatoire : X",
+          ContentDE = "Zufällige Begegnung (Ⅹ)",
           TextMapId = "VoiceDes050"
         },
         VoiceDes051 = {
-          ContentDE = "À propos des jours de pluie",
+          ContentDE = "Über Regentage",
           TextMapId = "VoiceDes051"
         },
         VoiceDes052 = {
-          ContentDE = "À propos de l’amour",
+          ContentDE = "Über die Liebe",
           TextMapId = "VoiceDes052"
         },
         VoiceDes053 = {
-          ContentDE = "À propos de ceux qui te trouvent étrange",
+          ContentDE = "Über Leute, die sie seltsam finden",
           TextMapId = "VoiceDes053"
         },
         VoiceDes054 = {
-          ContentDE = "À propos de ton venin",
+          ContentDE = "Über ihr Gift",
           TextMapId = "VoiceDes054"
         },
         VoiceDes055 = {
-          ContentDE = "À propos de ce parfum évanescent",
+          ContentDE = "Über den flüchtigen Duft",
           TextMapId = "VoiceDes055"
         },
         VoiceDes056 = {
-          ContentDE = "Pourquoi es-tu ici ?",
+          ContentDE = "Warum sie hier ist",
           TextMapId = "VoiceDes056"
         },
         VoiceDes057 = {
-          ContentDE = "À propos des vœux",
+          ContentDE = "Über Wünsche",
           TextMapId = "VoiceDes057"
         },
         VoiceDes058 = {
-          ContentDE = "À propos de Givrelac",
+          ContentDE = "Über Icelake",
           TextMapId = "VoiceDes058"
         },
         VoiceDes059 = {
-          ContentDE = "À propos de la Légion",
+          ContentDE = "Über die Legion",
           TextMapId = "VoiceDes059"
         },
         VoiceDes060 = {
-          ContentDE = "À propos d’une nouvelle vie",
+          ContentDE = "Über neues Leben",
           TextMapId = "VoiceDes060"
         },
         VoiceDes061 = {
-          ContentDE = "Je suis épuisée...",
+          ContentDE = "Ich bin müde ...",
           TextMapId = "VoiceDes061"
         },
         VoiceDes062 = {
-          ContentDE = "À propos de l’imitation",
+          ContentDE = "Über Nachahmung",
           TextMapId = "VoiceDes062"
         },
         VoiceDes063 = {
-          ContentDE = "À propos du mimétisme",
+          ContentDE = "Über Mimikry",
           TextMapId = "VoiceDes063"
         },
         VoiceDes064 = {
-          ContentDE = "À propos du vol",
+          ContentDE = "Über das Stehlen",
           TextMapId = "VoiceDes064"
         },
         VoiceDes065 = {
-          ContentDE = "À propos de ton titre",
+          ContentDE = "Über ihren Titel",
           TextMapId = "VoiceDes065"
         },
         VoiceDes066 = {
-          ContentDE = "À propos de Sibylle",
+          ContentDE = "Über Sibylle",
           TextMapId = "VoiceDes066"
         },
         VoiceDes067 = {
-          ContentDE = "À propos des moyens de résoudre un problème",
+          ContentDE = "Über Auswege aus Problemen",
           TextMapId = "VoiceDes067"
         },
         VoiceDes068 = {
-          ContentDE = "À propos de ton arme de prédilection",
+          ContentDE = "Über ihre Lieblingswaffe",
           TextMapId = "VoiceDes068"
         },
         VoiceDes069 = {
-          ContentDE = "À propos des raisons de ton labeur",
+          ContentDE = "Über die Beweggründe zu arbeiten",
           TextMapId = "VoiceDes069"
-        },
-        VoiceDes070 = {
-          ContentDE = "À propos de la météo",
-          TextMapId = "VoiceDes070"
-        },
-        VoiceDes071 = {
-          ContentDE = "À propos du combat",
-          TextMapId = "VoiceDes071"
-        },
-        VoiceDes072 = {
-          ContentDE = "À propos de ton identité",
-          TextMapId = "VoiceDes072"
-        },
-        VoiceDes073 = {
-          ContentDE = "À propos de ton attitude",
-          TextMapId = "VoiceDes073"
-        },
-        VoiceDes074 = {
-          ContentDE = "À propos de Flora",
-          TextMapId = "VoiceDes074"
-        },
-        VoiceDes075 = {
-          ContentDE = "À propos des vêtements",
-          TextMapId = "VoiceDes075"
-        },
-        VoiceDes076 = {
-          ContentDE = "À propos de l’Empire et des Charons",
-          TextMapId = "VoiceDes076"
-        },
-        VoiceDes077 = {
-          ContentDE = "À propos du jardinage",
-          TextMapId = "VoiceDes077"
-        },
-        VoiceDes078 = {
-          ContentDE = "À propos du voyage",
-          TextMapId = "VoiceDes078"
-        },
-        VoiceDes079 = {
-          ContentDE = "À propos de ta voix intérieure",
-          TextMapId = "VoiceDes079"
-        },
-        VoiceDes080 = {
-          ContentDE = "À propos de ton vieil ami",
-          TextMapId = "VoiceDes080"
-        },
-        VoiceDes081 = {
-          ContentDE = "À propos de l’Empire Hyperboréen",
-          TextMapId = "VoiceDes081"
-        },
-        VoiceDes082 = {
-          ContentDE = "À propos de ta patrie",
-          TextMapId = "VoiceDes082"
-        },
-        VoiceDes083 = {
-          ContentDE = "À propos des rêves",
-          TextMapId = "VoiceDes083"
-        },
-        VoiceDes084 = {
-          ContentDE = "À propos d’être Commissaire au Ravitaillement",
-          TextMapId = "VoiceDes084"
-        },
-        VoiceDes085 = {
-          ContentDE = "À propos de Filbert",
-          TextMapId = "VoiceDes085"
-        },
-        VoiceDes086 = {
-          ContentDE = "À propos de la gourmandise",
-          TextMapId = "VoiceDes086"
-        },
-        VoiceDes087 = {
-          ContentDE = "À propos de la famille",
-          TextMapId = "VoiceDes087"
-        },
-        VoiceDes088 = {
-          ContentDE = "À propos du repos",
-          TextMapId = "VoiceDes088"
         }
       }
     end
   },
   {
-    MinKey = "VoiceDes089",
-    MaxKey = "VoiceDes150",
+    MinKey = "VoiceDes070",
+    MaxKey = "voice_ch_char_Dafu_vo_battlestart",
     Loader = function()
       return {
+        VoiceDes070 = {
+          ContentDE = "Über das Wetter",
+          TextMapId = "VoiceDes070"
+        },
+        VoiceDes071 = {
+          ContentDE = "Über den Kampf",
+          TextMapId = "VoiceDes071"
+        },
+        VoiceDes072 = {
+          ContentDE = "Über ihre Identität",
+          TextMapId = "VoiceDes072"
+        },
+        VoiceDes073 = {
+          ContentDE = "Über die Einstellung",
+          TextMapId = "VoiceDes073"
+        },
+        VoiceDes074 = {
+          ContentDE = "Über Flora",
+          TextMapId = "VoiceDes074"
+        },
+        VoiceDes075 = {
+          ContentDE = "Über Kleidung",
+          TextMapId = "VoiceDes075"
+        },
+        VoiceDes076 = {
+          ContentDE = "Über das Imperium und Charon",
+          TextMapId = "VoiceDes076"
+        },
+        VoiceDes077 = {
+          ContentDE = "Über Gartenarbeit",
+          TextMapId = "VoiceDes077"
+        },
+        VoiceDes078 = {
+          ContentDE = "Über das Reisen",
+          TextMapId = "VoiceDes078"
+        },
+        VoiceDes079 = {
+          ContentDE = "Über ihre innere Stimme",
+          TextMapId = "VoiceDes079"
+        },
+        VoiceDes080 = {
+          ContentDE = "Über ihren alten Freund",
+          TextMapId = "VoiceDes080"
+        },
+        VoiceDes081 = {
+          ContentDE = "Über das Hyperboreische Imperium",
+          TextMapId = "VoiceDes081"
+        },
+        VoiceDes082 = {
+          ContentDE = "Über die Heimat",
+          TextMapId = "VoiceDes082"
+        },
+        VoiceDes083 = {
+          ContentDE = "Über Träume",
+          TextMapId = "VoiceDes083"
+        },
+        VoiceDes084 = {
+          ContentDE = "Über das Amt der Kommissarin",
+          TextMapId = "VoiceDes084"
+        },
+        VoiceDes085 = {
+          ContentDE = "Über Filbert",
+          TextMapId = "VoiceDes085"
+        },
+        VoiceDes086 = {
+          ContentDE = "Über Völlerei",
+          TextMapId = "VoiceDes086"
+        },
+        VoiceDes087 = {
+          ContentDE = "Über Familie",
+          TextMapId = "VoiceDes087"
+        },
+        VoiceDes088 = {
+          ContentDE = "Über Ruhe",
+          TextMapId = "VoiceDes088"
+        },
         VoiceDes089 = {
-          ContentDE = "Que fais-tu ?",
+          ContentDE = "Womit ist er beschäftigt?",
           TextMapId = "VoiceDes089"
         },
         VoiceDes090 = {
-          ContentDE = "À propos de la XIIIᵉ Légion",
+          ContentDE = "Über die 13. Legion",
           TextMapId = "VoiceDes090"
         },
         VoiceDes091 = {
-          ContentDE = "À propos de l’Empire",
+          ContentDE = "Über das Imperium",
           TextMapId = "VoiceDes091"
         },
         VoiceDes092 = {
-          ContentDE = "À propos des sentiments",
+          ContentDE = "Über Gefühle",
           TextMapId = "VoiceDes092"
         },
         VoiceDes093 = {
-          ContentDE = "À propos de ton identité",
+          ContentDE = "Über ihre Identität",
           TextMapId = "VoiceDes093"
         },
         VoiceDes094 = {
-          ContentDE = "À propos d’Oliver",
+          ContentDE = "Über Oliver",
           TextMapId = "VoiceDes094"
         },
         VoiceDes095 = {
-          ContentDE = "À propos de ce que tu maîtrises",
+          ContentDE = "Über seine Stärken",
           TextMapId = "VoiceDes095"
         },
         VoiceDes096 = {
-          ContentDE = "À propos du bégaiement",
+          ContentDE = "Über das Stottern",
           TextMapId = "VoiceDes096"
         },
         VoiceDes097 = {
-          ContentDE = "À propos de l’enfance",
+          ContentDE = "Über die Kindheit",
           TextMapId = "VoiceDes097"
         },
         VoiceDes098 = {
-          ContentDE = "À propos d’être une récupératrice",
+          ContentDE = "Über das Schrottsammeln",
           TextMapId = "VoiceDes098"
         },
         VoiceDes099 = {
-          ContentDE = "À propos des poubelles",
+          ContentDE = "Über den Mülleimer",
           TextMapId = "VoiceDes099"
         },
         VoiceDes100 = {
-          ContentDE = "À propos des champs de neige",
+          ContentDE = "Über das Schneefeld",
           TextMapId = "VoiceDes100"
         },
         VoiceDes101 = {
-          ContentDE = "À propos du pendentif",
+          ContentDE = "Über den Anhänger",
           TextMapId = "VoiceDes101"
         },
         VoiceDes102 = {
-          ContentDE = "À propos de ton surnom",
+          ContentDE = "Über ihren Titel",
           TextMapId = "VoiceDes102"
         },
         VoiceDes103 = {
-          ContentDE = "À propos des vœux",
+          ContentDE = "Über Wünsche",
           TextMapId = "VoiceDes103"
         },
         VoiceDes104 = {
-          ContentDE = "À propos des secrets",
+          ContentDE = "Über Geheimnisse",
           TextMapId = "VoiceDes104"
         },
         VoiceDes105 = {
-          ContentDE = "À propos des rêves",
+          ContentDE = "Über Träume",
           TextMapId = "VoiceDes105"
         },
         VoiceDes106 = {
-          ContentDE = "À propos des parents",
+          ContentDE = "Über Eltern",
           TextMapId = "VoiceDes106"
         },
         VoiceDes107 = {
-          ContentDE = "À propos de l’Étranger",
+          ContentDE = "Über Outsider",
           TextMapId = "VoiceDes107"
         },
         VoiceDes108 = {
-          ContentDE = "À propos de ta peau",
+          ContentDE = "Über ihre Haut",
           TextMapId = "VoiceDes108"
         },
         VoiceDes109 = {
-          ContentDE = "À propos du travail",
+          ContentDE = "Über Arbeit",
           TextMapId = "VoiceDes109"
         },
         VoiceDes110 = {
-          ContentDE = "À propos de la justice",
+          ContentDE = "Über Gerechtigkeit",
           TextMapId = "VoiceDes110"
         },
         VoiceDes111 = {
-          ContentDE = "À propos des passe-temps",
+          ContentDE = "Über Hobbys",
           TextMapId = "VoiceDes111"
         },
         VoiceDes112 = {
-          ContentDE = "À propos de Huaxu",
+          ContentDE = "Über Huaxu",
           TextMapId = "VoiceDes112"
         },
         VoiceDes113 = {
-          ContentDE = "À propos du devoir",
+          ContentDE = "Über Pflichten",
           TextMapId = "VoiceDes113"
         },
         VoiceDes114 = {
-          ContentDE = "À propos de ton humeur",
+          ContentDE = "Über Stimmung",
           TextMapId = "VoiceDes114"
         },
         VoiceDes115 = {
-          ContentDE = "À propos de la nuit",
+          ContentDE = "Über Nächte",
           TextMapId = "VoiceDes115"
         },
         VoiceDes116 = {
-          ContentDE = "À propos de ta patrie",
+          ContentDE = "Über die Heimat",
           TextMapId = "VoiceDes116"
         },
         VoiceDes117 = {
-          ContentDE = "À propos de la Mer du Silence",
+          ContentDE = "Über das Nebelmeer",
           TextMapId = "VoiceDes117"
         },
         VoiceDes118 = {
-          ContentDE = "À propos des amis",
+          ContentDE = "Über Freunde",
           TextMapId = "VoiceDes118"
         },
         VoiceDes119 = {
-          ContentDE = "À propos de son harmonica I",
+          ContentDE = "Über ihre Mundharmonika (Ⅰ)",
           TextMapId = "VoiceDes119"
         },
         VoiceDes120 = {
-          ContentDE = "À propos de son harmonica II",
+          ContentDE = "Über ihre Mundharmonika (Ⅱ)",
           TextMapId = "VoiceDes120"
         },
         VoiceDes121 = {
-          ContentDE = "À propos de la Légion I",
+          ContentDE = "Über die Legion (Ⅰ)",
           TextMapId = "VoiceDes121"
         },
         VoiceDes122 = {
-          ContentDE = "À propos de la Légion II",
+          ContentDE = "Über die Legion (Ⅱ)",
           TextMapId = "VoiceDes122"
         },
         VoiceDes123 = {
-          ContentDE = "À propos de ses cornes",
+          ContentDE = "Über die Hörner",
           TextMapId = "VoiceDes123"
         },
         VoiceDes124 = {
-          ContentDE = "À propos de Blues",
+          ContentDE = "Über Blues",
           TextMapId = "VoiceDes124"
         },
         VoiceDes125 = {
-          ContentDE = "À propos de son nom",
+          ContentDE = "Über den Namen",
           TextMapId = "VoiceDes125"
         },
         VoiceDes126 = {
-          ContentDE = "À propos du jeu de scène",
+          ContentDE = "Über die Schauspielkunst",
           TextMapId = "VoiceDes126"
         },
         VoiceDes127 = {
-          ContentDE = "À propos du théâtre",
+          ContentDE = "Über das Theater",
           TextMapId = "VoiceDes127"
         },
         VoiceDes128 = {
-          ContentDE = "À propos de la médecine",
+          ContentDE = "Über die Medizin",
           TextMapId = "VoiceDes128"
         },
         VoiceDes129 = {
-          ContentDE = "À propos de l’Académie d’Alchimie",
+          ContentDE = "Über die Alchemie-Akademie",
           TextMapId = "VoiceDes129"
         },
         VoiceDes130 = {
-          ContentDE = "À propos de son sac à dos",
+          ContentDE = "Über den Rucksack",
           TextMapId = "VoiceDes130"
         },
         VoiceDes131 = {
-          ContentDE = "À propos de l’entraînement",
+          ContentDE = "Über das Training",
           TextMapId = "VoiceDes131"
         },
         VoiceDes132 = {
-          ContentDE = "À propos de son père",
+          ContentDE = "Über ihren Vater",
           TextMapId = "VoiceDes132"
         },
         VoiceDes133 = {
-          ContentDE = "À propos du maniement de l’épée",
+          ContentDE = "Über Schwertkunst",
           TextMapId = "VoiceDes133"
         },
         VoiceDes134 = {
-          ContentDE = "À propos de la rébellion",
+          ContentDE = "Über Rebellion",
           TextMapId = "VoiceDes134"
         },
         VoiceDes135 = {
-          ContentDE = "À propos de la maîtrise des armes",
+          ContentDE = "Über Waffenbeherrschung",
           TextMapId = "VoiceDes135"
         },
         VoiceDes136 = {
-          ContentDE = "XI",
+          ContentDE = "(Ⅺ)",
           TextMapId = "VoiceDes136"
         },
         VoiceDes137 = {
-          ContentDE = "Blessé : III",
+          ContentDE = "Verletzt (Ⅲ)",
           TextMapId = "VoiceDes137"
         },
         VoiceDes138 = {
-          ContentDE = "Blessé : IV",
+          ContentDE = "Verletzt (Ⅳ)",
           TextMapId = "VoiceDes138"
         },
         VoiceDes139 = {
-          ContentDE = "Compétence de combat : III",
+          ContentDE = "Fertigkeit (Ⅲ)",
           TextMapId = "VoiceDes139"
         },
         VoiceDes140 = {
-          ContentDE = "Compétence de combat : IV",
+          ContentDE = "Fertigkeit (Ⅳ)",
           TextMapId = "VoiceDes140"
         },
         VoiceDes141 = {
-          ContentDE = "Compétence de combat : V",
+          ContentDE = "Fertigkeit (Ⅴ)",
           TextMapId = "VoiceDes141"
         },
         VoiceDes142 = {
-          ContentDE = "À propos des techniques",
+          ContentDE = "Über Techniken",
           TextMapId = "VoiceDes142"
         },
         VoiceDes143 = {
-          ContentDE = "À propos des Déchus",
+          ContentDE = "Über die Verlassenen",
           TextMapId = "VoiceDes143"
         },
         VoiceDes144 = {
-          ContentDE = "À propos des blessures",
+          ContentDE = "Über Wunden",
           TextMapId = "VoiceDes144"
         },
         VoiceDes145 = {
-          ContentDE = "À propos de la survie",
+          ContentDE = "Über das Überleben",
           TextMapId = "VoiceDes145"
         },
         VoiceDes146 = {
-          ContentDE = "À propos des récompenses",
+          ContentDE = "Über Belohnungen",
           TextMapId = "VoiceDes146"
         },
         VoiceDes147 = {
-          ContentDE = "À propos du prix à payer",
+          ContentDE = "Über den Preis der Dinge",
           TextMapId = "VoiceDes147"
         },
         VoiceDes148 = {
-          ContentDE = "À propos des affaires",
+          ContentDE = "Über Geschäfte",
           TextMapId = "VoiceDes148"
         },
         VoiceDes149 = {
-          ContentDE = "À propos de la peur",
+          ContentDE = "Über Angst",
           TextMapId = "VoiceDes149"
         },
         VoiceDes150 = {
-          ContentDE = "Compétence ultime : IV",
+          ContentDE = "Ultimate (Ⅳ)",
           TextMapId = "VoiceDes150"
+        },
+        VoiceDes151 = {
+          ContentDE = "Über Samael",
+          TextMapId = "VoiceDes151"
+        },
+        VoiceDes152 = {
+          ContentDE = "Über die Elysische Kirche",
+          TextMapId = "VoiceDes152"
+        },
+        VoiceDes153 = {
+          ContentDE = "Über die Geduld",
+          TextMapId = "VoiceDes153"
+        },
+        VoiceDes154 = {
+          ContentDE = "Über die Sieben Tugenden",
+          TextMapId = "VoiceDes154"
+        },
+        VoiceLocked_Dialogue = {
+          ContentDE = "Freigeschaltet nach kurzen Gesprächen in der Raststätte",
+          TextMapId = "VoiceLocked_Dialogue"
+        },
+        voice_ch_char_Aote_vo_appear = {
+          ContentDE = "Das ist ein ziemlich heikler Auftrag. Sollen wir sie zusammen angehen?",
+          TextMapId = "voice_ch_char_Aote_vo_appear"
+        },
+        voice_ch_char_Aote_vo_battleidle = {
+          ContentDE = "Lagerkosten ... Transportkosten ... Wie viel war es noch gleich? Verdammt, ich habe es schon wieder vergessen. Ohne mein Kassenbuch fühle ich mich verloren.",
+          TextMapId = "voice_ch_char_Aote_vo_battleidle"
+        },
+        voice_ch_char_Aote_vo_battlestart = {
+          ContentDE = "Lass uns das schnell erledigen. Zu Hause warten jede Menge Aufgaben auf mich.",
+          TextMapId = "voice_ch_char_Aote_vo_battlestart"
+        },
+        voice_ch_char_Aote_vo_be_hit_heavy_r01 = {
+          ContentDE = "Ich habe meine Kleidung doch gerade erst geflickt!",
+          TextMapId = "voice_ch_char_Aote_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Aote_vo_be_hit_heavy_r02 = {
+          ContentDE = "Ach ...",
+          TextMapId = "voice_ch_char_Aote_vo_be_hit_heavy_r02"
+        },
+        voice_ch_char_Aote_vo_birthday = {
+          ContentDE = "Alles Gute zum Geburtstag! Alles Gute zum Geburtstag ... Ah, erinnerst du dich, wie wir uns trafen, beide auf der Suche nach Geburtstagsgeschenken? Und jetzt, all die Zeit später, feiern wir einen weiteren Geburtstag – und wir sind immer noch zusammen. Ist das Schicksal nicht wundervoll?",
+          TextMapId = "voice_ch_char_Aote_vo_birthday"
+        },
+        voice_ch_char_Aote_vo_companio_01 = {
+          ContentDE = "Warum bist du auch hier? Ist dein Körper in Ordnung, ist deine Krankheit im Griff, hast du schon gegessen? Hey, sag mir einfach, was du brauchst. Es ist besser, nicht einfach ziellos umherzulaufen.",
+          TextMapId = "voice_ch_char_Aote_vo_companio_01"
+        },
+        voice_ch_char_Aote_vo_companio_02_1 = {
+          ContentDE = "Bist du dass Mädchen, welches mit {nickname} gut befreundet ist? Ich habe gehört, dass du dich nicht gut fühlst. Setze dich also hin und ruhe dich für eine Weile aus.",
+          TextMapId = "voice_ch_char_Aote_vo_companio_02_1"
+        },
+        voice_ch_char_Aote_vo_companio_02_2 = {
+          ContentDE = "Wenn du Hunger oder Durst hast oder sonst etwas brauchst, sag einfach Bescheid. Kein Problem – ich kümmere mich zu Hause ständig um meine kränkliche Schwester. Eine Freundin von {nickname} ist auch eine Freundin von mir.",
+          TextMapId = "voice_ch_char_Aote_vo_companio_02_2"
+        },
+        voice_ch_char_Aote_vo_companio_03_1 = {
+          ContentDE = "Chefin, was machst du hier ... Es ist hoffentlich kein dringender Auftrag, oder? {nickname} ist in letzter Zeit wirklich überlastet. Lass uns mal etwas ausruhen ...",
+          TextMapId = "voice_ch_char_Aote_vo_companio_03_1"
+        },
+        voice_ch_char_Aote_vo_companio_03_2 = {
+          ContentDE = "Aber wenn die Bezahlung stimmt, bin ich ganz Ohr.",
+          TextMapId = "voice_ch_char_Aote_vo_companio_03_2"
+        },
+        voice_ch_char_Aote_vo_companio_04 = {
+          ContentDE = "Erinnerst du dich noch an mich, als ich klein war? Du warst wie eine liebe Schwester für mich und zugleich ein strenger Vater ... Äh, ich sage nicht, dass du alt und gewalttätig bist, nur ... danke, dass ich mich damals bei dir zugehörig fühlen durfte.",
+          TextMapId = "voice_ch_char_Aote_vo_companio_04"
+        },
+        voice_ch_char_Aote_vo_die_r01 = {
+          ContentDE = "*hust* ... Selbst die Besten von uns fallen manchmal.",
+          TextMapId = "voice_ch_char_Aote_vo_die_r01"
+        },
+        voice_ch_char_Aote_vo_die_r02 = {
+          ContentDE = "Pass bitte auf Fina auf ... für mich.",
+          TextMapId = "voice_ch_char_Aote_vo_die_r02"
+        },
+        voice_ch_char_Aote_vo_fail = {
+          ContentDE = "Tss. Ihr zieht euch zurück. Ich folge euch.",
+          TextMapId = "voice_ch_char_Aote_vo_fail"
+        },
+        voice_ch_char_Aote_vo_gain = {
+          ContentDE = "Wir sind so miteinander vertraut. Muss ich mich wirklich noch vorstellen? Ok, ich bin Outsider von den Nachtfahrern.Ich diene wohl als so etwas wie der Wächter dieses kindlich übermütigen Teams, schätze ich?",
+          TextMapId = "voice_ch_char_Aote_vo_gain"
+        },
+        voice_ch_char_Aote_vo_idle = {
+          ContentDE = "Es ist gut, ein Gefühl der Ruhe zu haben und gibt mir nach so vielen Jahren das Gefühl, ein Zuhause zu haben.",
+          TextMapId = "voice_ch_char_Aote_vo_idle"
+        },
+        voice_ch_char_Aote_vo_lvup = {
+          ContentDE = "Mach dir nicht zu viele Gedanken um mich. Es ist nur ... irgendwie peinlich. Ach, vergiss es.",
+          TextMapId = "voice_ch_char_Aote_vo_lvup"
+        },
+        voice_ch_char_Aote_vo_revive = {
+          ContentDE = "Kein Problem. Ich bin sowieso von Wunden übersät.",
+          TextMapId = "voice_ch_char_Aote_vo_revive"
+        },
+        voice_ch_char_Aote_vo_skill01_r01 = {
+          ContentDE = "Kleine Tricks, große Wirkung.",
+          TextMapId = "voice_ch_char_Aote_vo_skill01_r01"
+        },
+        voice_ch_char_Aote_vo_skill01_r02 = {
+          ContentDE = "Schau dir das an!",
+          TextMapId = "voice_ch_char_Aote_vo_skill01_r02"
+        },
+        voice_ch_char_Aote_vo_skill02_r01 = {
+          ContentDE = "Entspann dich – es ist zu deinem eigenen Besten.",
+          TextMapId = "voice_ch_char_Aote_vo_skill02_r01"
+        },
+        voice_ch_char_Aote_vo_skill02_r02 = {
+          ContentDE = "Spielzeit vorbei – jetzt wird’s ernst.",
+          TextMapId = "voice_ch_char_Aote_vo_skill02_r02"
+        },
+        voice_ch_char_Aote_vo_skill02_r03 = {
+          ContentDE = "Genieße deinen letzten Blick auf die Welt.",
+          TextMapId = "voice_ch_char_Aote_vo_skill02_r03"
+        },
+        voice_ch_char_Aote_vo_topic_01_1 = {
+          ContentDE = "Leitfaden? Nein, die meisten Leute in dieser Branche lesen keine Bücher. Aber ich habe ein paar Prinzipien, die ich teilen kann, zum Beispiel mein persönliches Kampfmantra: „Zwei Schläge in die Hüfte und einen auf die Koteletten, dann ist er auch vom Imperator nicht mehr zu retten.“",
+          TextMapId = "voice_ch_char_Aote_vo_topic_01_1"
+        },
+        voice_ch_char_Aote_vo_topic_01_2 = {
+          ContentDE = "Du solltest es nicht übertreiben. In unserer Branche ist Gier der größte Feind – Manchmal kommt sie von anderen, oftmals kommt sie aber von einem selbst.",
+          TextMapId = "voice_ch_char_Aote_vo_topic_01_2"
+        },
+        voice_ch_char_Aote_vo_topic_02_1 = {
+          ContentDE = "Sie sind wie ein Wildfeuer, dass man nicht löschen kann. Es ist jederzeit bereit zu lodern. Zu deinem eigenen Schutz solltest du ihnen aus dem Weg gehen ...",
+          TextMapId = "voice_ch_char_Aote_vo_topic_02_1"
+        },
+        voice_ch_char_Aote_vo_topic_02_2 = {
+          ContentDE = "Nun ... Wir hatten ein paar Reibereien. Wenn du mit ihnen zu tun bekommst, solltest du auf keinen Fall meinen Namen erwähnen.",
+          TextMapId = "voice_ch_char_Aote_vo_topic_02_2"
+        },
+        voice_ch_char_Aote_vo_topic_03_1 = {
+          ContentDE = "Ja. Kannst du den Verband für mich herüberholen? Ich muss sie vor Fina geheimhalten, oder sie wird wieder ein Theater machen.",
+          TextMapId = "voice_ch_char_Aote_vo_topic_03_1"
+        },
+        voice_ch_char_Aote_vo_topic_03_2 = {
+          ContentDE = "Ich weiß, aber Verletzungen gehören nun mal zum Job. Ich möchte nur nicht, dass sie sich zu viele Sorgen macht. Wenn sie fragt, deck mich bitte, ja? Ich steh in deiner Schuld.",
+          TextMapId = "voice_ch_char_Aote_vo_topic_03_2"
+        },
+        voice_ch_char_Aote_vo_topic_04_1 = {
+          ContentDE = "Oh, möchtest du welche probieren? Lass dich vom Aussehen nicht täuschen – einfach den Kopf abknipsen, und sie sind knusprig wie Kekse, mit einem Hauch von fleischigem Nachgeschmack ...",
+          TextMapId = "voice_ch_char_Aote_vo_topic_04_1"
+        },
+        voice_ch_char_Aote_vo_topic_04_2 = {
+          ContentDE = "Was? Wo willst du hin?! Das ist überlebenswichtiges Wissen! Wenn du dich in der Wildnis ohne Nahrung verirrst, könnten dir diese kleinen Biester das Leben retten!",
+          TextMapId = "voice_ch_char_Aote_vo_topic_04_2"
+        },
+        voice_ch_char_Aote_vo_topic_05_1 = {
+          ContentDE = "Äh ... Warte mal. Warum hast du in der Hand nur ein paar Münzen? Hast du schon wieder deinen Teil des Kopfgelds an andere Leute abgegeben?",
+          TextMapId = "voice_ch_char_Aote_vo_topic_05_1"
+        },
+        voice_ch_char_Aote_vo_topic_05_2 = {
+          ContentDE = "Aber ... ach, egal. Das bist eben du – immer darauf bedacht, dich um andere zu kümmern. Sag mir einfach Bescheid, wenn du mal knapp bei Kasse bist.",
+          TextMapId = "voice_ch_char_Aote_vo_topic_05_2"
+        },
+        voice_ch_char_Aote_vo_topic_05_3 = {
+          ContentDE = "... Ich bin als Freund um dich besorgt, aber du solltest es nicht übertreiben!",
+          TextMapId = "voice_ch_char_Aote_vo_topic_05_3"
+        },
+        voice_ch_char_Aote_vo_victory = {
+          ContentDE = "Lasst alles an mir. Ich sehe nach, ob ich noch brauchbare Teile und Kleinigkeiten finde.",
+          TextMapId = "voice_ch_char_Aote_vo_victory"
+        },
+        voice_ch_char_Aote_vo_welcome = {
+          ContentDE = "Da bist du ja endlich! Ich habe all meine Aufgaben erledigt und bin völlig erschöpft, aber dabei nur ein paar Münzen verdient. Uff … Du weißt doch, was ich alles für euch tue.",
+          TextMapId = "voice_ch_char_Aote_vo_welcome"
+        },
+        voice_ch_char_Baiheng_vo_appear = {
+          ContentDE = "Ich werde ausreichend Medikamente für die bevorstehende Schlacht vorbereiten.",
+          TextMapId = "voice_ch_char_Baiheng_vo_appear"
+        },
+        voice_ch_char_Baiheng_vo_battleidle = {
+          ContentDE = "Wie kann ich die Hilferufe in der Ferne ignorieren!",
+          TextMapId = "voice_ch_char_Baiheng_vo_battleidle"
+        },
+        voice_ch_char_Baiheng_vo_battlestart = {
+          ContentDE = "Ich darf nicht zulassen, dass der Tod die Oberhand behält.",
+          TextMapId = "voice_ch_char_Baiheng_vo_battlestart"
+        },
+        voice_ch_char_Baiheng_vo_be_hit_heavy_r01 = {
+          ContentDE = "Üble Unreinheiten ...",
+          TextMapId = "voice_ch_char_Baiheng_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Baiheng_vo_be_hit_r02 = {
+          ContentDE = "Meine Kleider sind schmutzig ...",
+          TextMapId = "voice_ch_char_Baiheng_vo_be_hit_r02"
+        },
+        voice_ch_char_Baiheng_vo_birthday = {
+          ContentDE = "Da heute dein Geburtstag ist, habe ich einige Medizin für äußere Nutzung als ein kleines Geschenk vorbereitet. Wenn du dich erkältest oder verletzt, könnte sie nützlich sein. Mögest du jedoch das ganze Jahr über gesund sein und diese Sachen nie benötigen.",
+          TextMapId = "voice_ch_char_Baiheng_vo_birthday"
+        },
+        voice_ch_char_Baiheng_vo_companio = {
+          ContentDE = "Herr Chaos, du hast schon wieder neue Wunden. Soll ich mir das mal ansehen? *seufz* ... Dann nimm wenigstens diese Salbe, okay? Sie verhindert Entzündungen. Sie brennt, aber ich wette, das gefällt dir sogar ... Nur nicht zu viel davon draufschmieren.",
+          TextMapId = "voice_ch_char_Baiheng_vo_companio"
+        },
+        voice_ch_char_Baiheng_vo_companio_01 = {
+          ContentDE = "Herr Randy. Lethargie und Faulheit sind die Symptome einer Krankheit. Sie machen dir vielleicht jetzt keinen Ärger, aber sie legen die Saat für spätere Leiden. Wie wäre es, wenn ich mit dir etwas trainiere und du dich etwas bewegst? Das wäre gut für deinen Körper.",
+          TextMapId = "voice_ch_char_Baiheng_vo_companio_01"
+        },
+        voice_ch_char_Baiheng_vo_companio_02 = {
+          ContentDE = "Ein Heiler kann zwar das Leid von Menschen lindern, aber wir können das Schicksal nicht abwenden. Ich kann eine Heilung liefern, um die Probleme deines Herzens zu lindern, aber ich kann nicht die Ursachen dieses Problems beseitigen. Es ist am besten, den Lauf der Zeit zu akzeptieren und deinen eigenen Pfad zur Ruhe zu finden.",
+          TextMapId = "voice_ch_char_Baiheng_vo_companio_02"
+        },
+        voice_ch_char_Baiheng_vo_companio_03 = {
+          ContentDE = "Du hörst häufig eine andere Stimme sprechen, oder? Belastet dich etwas mental? Können andere sie ebenfalls hören? Und wie hast du geschlafen? Die Belastung des Geistes ist am schwersten zu heilen, selbst mit der Hilfe der Zhuyou-Technik. Aber als Heilerin werde ich mein Bestes geben.",
+          TextMapId = "voice_ch_char_Baiheng_vo_companio_03"
+        },
+        voice_ch_char_Baiheng_vo_die_r01 = {
+          ContentDE = "Du musst ... die anderen beschützen ...",
+          TextMapId = "voice_ch_char_Baiheng_vo_die_r01"
+        },
+        voice_ch_char_Baiheng_vo_die_r02 = {
+          ContentDE = "Wenn ich nur ... eine bessere Heilerin wäre ...",
+          TextMapId = "voice_ch_char_Baiheng_vo_die_r02"
+        },
+        voice_ch_char_Baiheng_vo_fail = {
+          ContentDE = "Fürchte dich nicht. Hier, nimm das, um deinen Schmerz zu lindern.",
+          TextMapId = "voice_ch_char_Baiheng_vo_fail"
+        },
+        voice_ch_char_Baiheng_vo_gain_1 = {
+          ContentDE = "Der Weg vor uns ist lang und voller Unsicherheit ... Da das Schicksal unsere Wege zusammengeführt hat, lass uns für eine Weile Seite an Seite reisen.",
+          TextMapId = "voice_ch_char_Baiheng_vo_gain_1"
+        },
+        voice_ch_char_Baiheng_vo_gain_2 = {
+          ContentDE = "Ich bin Fushu, eine Heilerin aus Huaxu. Falls du verletzt oder krank bist, solltest du es nicht vor mir verbergen. Auch wenn meine Fähigkeiten beschränkt sind, werde ich mein Bestes geben, um dich zu beschützen.",
+          TextMapId = "voice_ch_char_Baiheng_vo_gain_2"
+        },
+        voice_ch_char_Baiheng_vo_idle = {
+          ContentDE = "Am frühen Morgen sauber machen und zu lüften, am Nachmittag Alkohol zu sprühen und am Nachmittag Duftkerzen anzuzünden, um Insekten zu vertreiben. Das ist der einzige Weg, um ein Zimmer sauber zu halten.",
+          TextMapId = "voice_ch_char_Baiheng_vo_idle"
+        },
+        voice_ch_char_Baiheng_vo_lvup = {
+          ContentDE = "Eine gesunde Lebensweise und regelmäßiges Training sind eine grundlegende Pflicht für jeden Heiler.",
+          TextMapId = "voice_ch_char_Baiheng_vo_lvup"
+        },
+        voice_ch_char_Baiheng_vo_revive = {
+          ContentDE = "Wie eine Blüte sprieße ich aufs Neue.",
+          TextMapId = "voice_ch_char_Baiheng_vo_revive"
+        },
+        voice_ch_char_Baiheng_vo_skill01_r01 = {
+          ContentDE = "Werde bald gesund!",
+          TextMapId = "voice_ch_char_Baiheng_vo_skill01_r01"
+        },
+        voice_ch_char_Baiheng_vo_skill01_r02 = {
+          ContentDE = "Schmerz, weiche!",
+          TextMapId = "voice_ch_char_Baiheng_vo_skill01_r02"
+        },
+        voice_ch_char_Baiheng_vo_skill02_r01 = {
+          ContentDE = "In der Stille wird alles erneuert.",
+          TextMapId = "voice_ch_char_Baiheng_vo_skill02_r01"
+        },
+        voice_ch_char_Baiheng_vo_skill02_r02 = {
+          ContentDE = "Wie der Mond, der zu voller Größe wächst.",
+          TextMapId = "voice_ch_char_Baiheng_vo_skill02_r02"
+        },
+        voice_ch_char_Baiheng_vo_skill02_r03 = {
+          ContentDE = "Atme tief den Duft der Heilung ein.",
+          TextMapId = "voice_ch_char_Baiheng_vo_skill02_r03"
+        },
+        voice_ch_char_Baiheng_vo_topic_01_1 = {
+          ContentDE = "Ja, aber der Inhalt des Buches ist schwer zu verstehen. Und selbst die Unterschiede zwischen verschiedenen Heilungsmethoden sind für mich schwer zu differenzieren. Vielleicht habe ich kein Talent für diese Art von Wissen.",
+          TextMapId = "voice_ch_char_Baiheng_vo_topic_01_1"
+        },
+        voice_ch_char_Baiheng_vo_topic_01_2 = {
+          ContentDE = "In meiner Zeit waren Medikamente nicht der wichtigste Weg zur Heilung. Die Menschen verließen sich auf eine wundersame Heilmethode mit dem Namen „Zhuyou“, um sich vor Krankheit zu bewahren.",
+          TextMapId = "voice_ch_char_Baiheng_vo_topic_01_2"
+        },
+        voice_ch_char_Baiheng_vo_topic_01_3 = {
+          ContentDE = "Obwohl diese Methode Heilung und Frieden mit sich bringt, verlangt sie, dass der Heiler seine Lebenskraft wechselt und opfert. Keiner von uns wurde sehr alt. Unsere einzige Wahl war es, unsere Lebenskraft bis zum Tode zu erschöpfen.",
+          TextMapId = "voice_ch_char_Baiheng_vo_topic_01_3"
+        },
+        voice_ch_char_Baiheng_vo_topic_01_4 = {
+          ContentDE = "Obwohl die Halle der Vergänglichkeit nun ein Relikt der Vergangenheit ist, wird es im Bereich der Heilung und dem Retten von Leben nie an Nachfolgern fehlen. Auch unter der größten Belastung wird es solche geben, die voller Entschlossenheit nach vorne schreiten.",
+          TextMapId = "voice_ch_char_Baiheng_vo_topic_01_4"
+        },
+        voice_ch_char_Baiheng_vo_topic_02_1 = {
+          ContentDE = "Der Tod ist wie eine Lampe, die erlischt. Alle Spuren verwischen, alle Stimmen verschwinden. Diese Isolation, die tiefgehende Stille verschlingt jeden Funken Hoffnung. Wenn ich es könnte, würde ich jeden Patienten davor bewahren, in solch einen Abgrund zu stürzen.",
+          TextMapId = "voice_ch_char_Baiheng_vo_topic_02_1"
+        },
+        voice_ch_char_Baiheng_vo_topic_02_2 = {
+          ContentDE = "Das ist wirklich so. Ich ... stand schon mal kurz vor dem Tod und entkam einer schweren Krankheit. Wenn ich noch einmal einer solchen Prüfung gegenüberstehen würde, ich wüsste nicht, ob ich die gleiche Entscheidung treffen würde.",
+          TextMapId = "voice_ch_char_Baiheng_vo_topic_02_2"
+        },
+        voice_ch_char_Baiheng_vo_topic_03_1 = {
+          ContentDE = "Es ist ein Ort zur Heilung und zum Retten von Menschenleben.",
+          TextMapId = "voice_ch_char_Baiheng_vo_topic_03_1"
+        },
+        voice_ch_char_Baiheng_vo_topic_03_2 = {
+          ContentDE = "Das ist die einzige Mission der Halle der Vergänglichkeit. Zu heilen und nichts anderes. Was andere Dinge betrifft ... jeder Heiler, der in der Halle der Vergänglichkeit trainiert, pflanzt am ersten Tag des Trainings einen Aprikosenbaum innerhalb ihrer Mauern. Aber im Laufe der Zeit haben Stürme die Leben von vielen von ihnen mit sich genommen. Es sind weniger als die Hälfte von ihnen übrig.",
+          TextMapId = "voice_ch_char_Baiheng_vo_topic_03_2"
+        },
+        voice_ch_char_Baiheng_vo_topic_03_3 = {
+          ContentDE = "Aus einem langen Schlaf erwachend, habe ich den Aprikosenbaum gesucht, den ich einst in meiner Jugend gepflanzt habe. Leider war der Baum verwelkt und nicht einmal die Wärme dieses Frühlings konnte bewirken, dass bei ihm neue Knospen sprießen.",
+          TextMapId = "voice_ch_char_Baiheng_vo_topic_03_3"
+        },
+        voice_ch_char_Baiheng_vo_topic_03_4 = {
+          ContentDE = "Das Leben vergeht, wie ein rennendes Pferd, das Feuer in einem Stein, wie ein Schatten in einem Traum. Wie kann man in einer solchen Vergänglichkeit zurückfinden? Die Vergangenheit wird immer weniger greifbar, während die Hoffnung, sie wiederzufinden, schwindet.",
+          TextMapId = "voice_ch_char_Baiheng_vo_topic_03_4"
+        },
+        voice_ch_char_Baiheng_vo_topic_04_1 = {
+          ContentDE = "Ich träume von einer Welt, in der es keine unheilbaren Krankheiten gibt.",
+          TextMapId = "voice_ch_char_Baiheng_vo_topic_04_1"
+        },
+        voice_ch_char_Baiheng_vo_topic_04_2 = {
+          ContentDE = "Es klingt nach Träumerei, oder? Aber auch ohne die Wunder der Heilmagie bleibt das Ziel eines Heilers unverändert. Ich muss zugeben, dass es absurd klingen muss, diese Worte von einer Heilerin zu hören, die es noch nicht völlig versteht, medizinische Texte zu lesen.",
+          TextMapId = "voice_ch_char_Baiheng_vo_topic_04_2"
+        },
+        voice_ch_char_Baiheng_vo_topic_04_3 = {
+          ContentDE = "Aber ... ich werde diesen Weg weiter gehen. Nicht nur um der anderen Menschen willen, oder für die Halle der Vergänglichkeit, sondern auch für mich selbst.",
+          TextMapId = "voice_ch_char_Baiheng_vo_topic_04_3"
+        },
+        voice_ch_char_Baiheng_vo_victory = {
+          ContentDE = "Ich muss mich zu Hause umziehen.",
+          TextMapId = "voice_ch_char_Baiheng_vo_victory"
+        },
+        voice_ch_char_Baiheng_vo_welcome = {
+          ContentDE = "Die Umgebung formt den Geist, und achtsame Pflege stärkt den Körper. Vielleicht würde ein Spaziergang unter diesem gütigen Himmel Wunder für deine Gesundheit wirken.",
+          TextMapId = "voice_ch_char_Baiheng_vo_welcome"
+        },
+        voice_ch_char_Baonu_vo_appear = {
+          ContentDE = "Samael, los geht’s!",
+          TextMapId = "voice_ch_char_Baonu_vo_appear"
+        },
+        voice_ch_char_Baonu_vo_battleidle = {
+          ContentDE = "Komm raus und stell dich deiner Abreibung!",
+          TextMapId = "voice_ch_char_Baonu_vo_battleidle"
+        },
+        voice_ch_char_Baonu_vo_battlestart = {
+          ContentDE = "Absolution ist Gottes Sache, nicht meine!",
+          TextMapId = "voice_ch_char_Baonu_vo_battlestart"
+        },
+        voice_ch_char_Baonu_vo_be_hit_heavy_r01 = {
+          ContentDE = "Feiger Wicht!",
+          TextMapId = "voice_ch_char_Baonu_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Baonu_vo_be_hit_heavy_r02 = {
+          ContentDE = "Samael!",
+          TextMapId = "voice_ch_char_Baonu_vo_be_hit_heavy_r02"
+        },
+        voice_ch_char_Baonu_vo_birthday = {
+          ContentDE = "Äh ... Nach einer Mission bin ich zufällig an dieser Konditorei vorbeigekommen, und sie haben gerade kostenlose Geburtstagskuchen verteilt – und dann bin ich über dich gestolpert, diesen kleinen Quälgeist, der ständig meinen Schutz braucht. Also ... äh, du, hilf mir, diesen Rest Himbeerkuchen aufzuessen. Kein Krümel bleibt übrig!",
+          TextMapId = "voice_ch_char_Baonu_vo_birthday"
+        },
+        voice_ch_char_Baonu_vo_companio_01 = {
+          ContentDE = "Samael? Ach, schon gut. Es weckt mich jeden Morgen, feuert mich im Kampf an und hat sogar ein Dutzend Gutenachtgeschichten für mich parat! Also gibt’s keinen Grund zur Sorge.",
+          TextMapId = "voice_ch_char_Baonu_vo_companio_01"
+        },
+        voice_ch_char_Baonu_vo_companio_02 = {
+          ContentDE = "„Geduld ist eine der Sieben Tugenden. Jene, die mit Geduld gesegnet sind, können verborgene Geheimnisse entdecken und außergewöhnliche ... Taten vollbringen ...“\n Ich kann nicht mehr! Wage es ja nicht, mich noch einmal zu imitieren, du Zwerg – bei den Neun Göttern, ich zerschneide dich mit Samael, wenn du das noch einmal machst!",
+          TextMapId = "voice_ch_char_Baonu_vo_companio_02"
+        },
+        voice_ch_char_Baonu_vo_companio_03 = {
+          ContentDE = "Sahne? Was soll das heißen, was ist daran falsch? So pflegen wir Elyser unsere Waffen! Hast du etwa ein Problem damit?",
+          TextMapId = "voice_ch_char_Baonu_vo_companio_03"
+        },
+        voice_ch_char_Baonu_vo_companio_04 = {
+          ContentDE = "Wie seltsam. Ich habe dich noch nie wütend gesehen ...\n Nun gut ... Ich, die Kandidatin der Sieben Tugenden, befehle dir, mir deinen Zorn zu zeigen! Keine Predigten mehr über diese dämlichen Tugenden, Lehren und Schriften – zeig mir endlich echte Gefühle!",
+          TextMapId = "voice_ch_char_Baonu_vo_companio_04"
+        },
+        voice_ch_char_Baonu_vo_die_r01 = {
+          ContentDE = "Ich kann ... Samaels Namen nicht beschmutzen ...",
+          TextMapId = "voice_ch_char_Baonu_vo_die_r01"
+        },
+        voice_ch_char_Baonu_vo_die_r02 = {
+          ContentDE = "Ich will den Göttern nicht allein begegnen ...",
+          TextMapId = "voice_ch_char_Baonu_vo_die_r02"
+        },
+        voice_ch_char_Baonu_vo_fail = {
+          ContentDE = "Nein, nein, nein ... ich lass mich davon nicht aus der Ruhe bringen ...",
+          TextMapId = "voice_ch_char_Baonu_vo_fail"
+        },
+        voice_ch_char_Baonu_vo_gain = {
+          ContentDE = "Siehe da, ich bin die große Frau Lisbell, Kandidatin für die Tugend der Geduld unter den Sieben Tugenden der Elysischen Kirche. Im Namen des allmächtigen Turms, der neun göttlichen Götter von Elysium, des ... äh, wie war das gleich ...? Ähm, egal. Jedenfalls befehle ich dir, mich „Herrin Geduld“ zu nennen. Hast du das verstanden?",
+          TextMapId = "voice_ch_char_Baonu_vo_gain"
+        },
+        voice_ch_char_Baonu_vo_idle = {
+          ContentDE = "Samael, was für ein wunderschöner Tag! Ist das nicht das perfekte Wetter, um etwas Kühles zu essen? Ich habe gehört, in der Heiligen Stadt gibt es ein unglaubliches Dessert namens Eiscreme. Es ist zwar eine Speise des einfachen Volkes, aber ich wette, sie schmeckt viel besser als das fade Zeug, das diese alten Knacker immer austeilen. Ich besorg dir heimlich etwas!",
+          TextMapId = "voice_ch_char_Baonu_vo_idle"
+        },
+        voice_ch_char_Baonu_vo_lvup = {
+          ContentDE = "Samael, ich bin noch stärker geworden! Lass uns diese komischen Typen gemeinsam beschützen!",
+          TextMapId = "voice_ch_char_Baonu_vo_lvup"
+        },
+        voice_ch_char_Baonu_vo_revive = {
+          ContentDE = "Selbst Herrin Geduld hat ihre Grenzen!",
+          TextMapId = "voice_ch_char_Baonu_vo_revive"
+        },
+        voice_ch_char_Baonu_vo_skill01_r01 = {
+          ContentDE = "Heiligkeit!",
+          TextMapId = "voice_ch_char_Baonu_vo_skill01_r01"
+        },
+        voice_ch_char_Baonu_vo_skill01_r02 = {
+          ContentDE = "Im Namen der Geduld!",
+          TextMapId = "voice_ch_char_Baonu_vo_skill01_r02"
+        },
+        voice_ch_char_Baonu_vo_skill02_r01 = {
+          ContentDE = "Ich halt das ... nicht mehr aus!",
+          TextMapId = "voice_ch_char_Baonu_vo_skill02_r01"
+        },
+        voice_ch_char_Baonu_vo_skill02_r02 = {
+          ContentDE = "Samael, erhöre meinen Ruf!",
+          TextMapId = "voice_ch_char_Baonu_vo_skill02_r02"
+        },
+        voice_ch_char_Baonu_vo_skill02_r03 = {
+          ContentDE = "Samael, verleihe mir deinen Zorn!",
+          TextMapId = "voice_ch_char_Baonu_vo_skill02_r03"
+        },
+        voice_ch_char_Baonu_vo_topic_01_1 = {
+          ContentDE = "Samael ist nicht einfach nur eine Waffe – es ist mein bester Freund!",
+          TextMapId = "voice_ch_char_Baonu_vo_topic_01_1"
+        },
+        voice_ch_char_Baonu_vo_topic_01_2 = {
+          ContentDE = "In der Kirche können nur diejenigen, die von einem der Sieben Reliquien auserwählt werden, zu einer der „Sieben Tugenden“ werden. An jenem Tag gab es unzählige starke Krieger, aber ich war die Einzige, die Samael aus seiner Fassung ziehen konnte. Es hat mich erwählt – also muss ich es natürlich gut behandeln!",
+          TextMapId = "voice_ch_char_Baonu_vo_topic_01_2"
+        },
+        voice_ch_char_Baonu_vo_topic_01_3 = {
+          ContentDE = "... Nur, seitdem hat es kein einziges Mal mehr auf mich reagiert. W... Warte ... das ist streng geheim! Du darfst es niemandem erzählen, klar?!",
+          TextMapId = "voice_ch_char_Baonu_vo_topic_01_3"
+        },
+        voice_ch_char_Baonu_vo_topic_01_4 = {
+          ContentDE = "Hä?! Es mag kein Eis?! Dann ... was ist mit Kartoffelpüree? Oder Salatdressing?",
+          TextMapId = "voice_ch_char_Baonu_vo_topic_01_4"
+        },
+        voice_ch_char_Baonu_vo_topic_02_1 = {
+          ContentDE = "Ugh ...! Halt den Mund! Ich will nicht über diese alten Spaßbremsen reden! Ah, du hast mir den Tag verdorben! ... Nein, nein, ich darf mich nicht aufregen. Ruhig bleiben, Lisbell ...",
+          TextMapId = "voice_ch_char_Baonu_vo_topic_02_1"
+        },
+        voice_ch_char_Baonu_vo_topic_02_2 = {
+          ContentDE = "Äh, ganz und gar nicht! Sie sind absolut wundervoll. So freundlich und verständnisvoll. Wenn man bei einem Kirchenlied einen Fehler macht, muss man es nur dreißigmal abschreiben. Und wenn sie dich erwischen, wie du Samael mit Sahne fütterst, gibt’s nur zwei Tage Einzelbesinnung. Wirklich, sie sind die Besten. Ganz reizend.",
+          TextMapId = "voice_ch_char_Baonu_vo_topic_02_2"
+        },
+        voice_ch_char_Baonu_vo_topic_03_1 = {
+          ContentDE = "Na, was der Name sagt! Geduldig zu sein heißt, stark und gefasst zu bleiben – alles zu ertragen und niemals, wirklich niemals, auszurasten!",
+          TextMapId = "voice_ch_char_Baonu_vo_topic_03_1"
+        },
+        voice_ch_char_Baonu_vo_topic_03_2 = {
+          ContentDE = "Nicht wahr?! Aber wegen dieses Titels sagen sie ständig zu mir: „Verschluck deinen Zorn mit Geduld.“ Das ist, als müsste man mitten im Gähnen aufhören oder sein Schwert zu einem perfekten Schlag heben, nur um zu hören: „Hey! Das ist kein Feind, das ist ein Freund!“ Das macht einen nur noch wütender.",
+          TextMapId = "voice_ch_char_Baonu_vo_topic_03_2"
+        },
+        voice_ch_char_Baonu_vo_topic_03_3 = {
+          ContentDE = "Ah, sie sagen, Zorn sei eine schwere Sünde. Ich darf nicht wütend werden. Ich darf nicht ...",
+          TextMapId = "voice_ch_char_Baonu_vo_topic_03_3"
+        },
+        voice_ch_char_Baonu_vo_topic_03_4 = {
+          ContentDE = "Tja ... gehört eben zum Job! Ich bin schließlich Herrin der Geduld! Hehe!",
+          TextMapId = "voice_ch_char_Baonu_vo_topic_03_4"
+        },
+        voice_ch_char_Baonu_vo_topic_04_1 = {
+          ContentDE = "Die „Sieben Tugenden“ sind die edelsten, mächtigsten und absolut umwerfendsten Champions in ganz Elysium! Natürlich auch die tugendhaftesten – steht ja schon im Namen!",
+          TextMapId = "voice_ch_char_Baonu_vo_topic_04_1"
+        },
+        voice_ch_char_Baonu_vo_topic_04_2 = {
+          ContentDE = "Was soll dieser Blick? Wie kannst du es wagen, an mir zu zweifeln! Ich verurteile dich hiermit dazu, den Kodex dreißig – nein, hundertmal abzuschreiben!",
+          TextMapId = "voice_ch_char_Baonu_vo_topic_04_2"
+        },
+        voice_ch_char_Baonu_vo_victory = {
+          ContentDE = "Das war natürlich ganz allein mir, der Herrin Geduld, zu verdanken!",
+          TextMapId = "voice_ch_char_Baonu_vo_victory"
+        },
+        voice_ch_char_Baonu_vo_welcome = {
+          ContentDE = "He! Ich geh mit Samael ein bisschen an die frische Luft – Sonne tanken, die Gegend erkunden. Willst du Hallo sagen? Es wird sich sicher freuen! ... Also, wahrscheinlich! Hehe.",
+          TextMapId = "voice_ch_char_Baonu_vo_welcome"
+        },
+        voice_ch_char_Dafu_vo_appear = {
+          ContentDE = "Die Hilfsgüter sind verstaut. Wir können jederzeit aufbrechen.",
+          TextMapId = "voice_ch_char_Dafu_vo_appear"
+        },
+        voice_ch_char_Dafu_vo_battleidle = {
+          ContentDE = "Auch wenn sich die Situation in der Schlacht blitzschnell ändern kann, vertraue ich deinem Urteil.",
+          TextMapId = "voice_ch_char_Dafu_vo_battleidle"
+        },
+        voice_ch_char_Dafu_vo_battlestart = {
+          ContentDE = "Wir werden auch dieses Mal sicher zurückkehren.",
+          TextMapId = "voice_ch_char_Dafu_vo_battlestart"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Dafu_vo_be_hit_heavy_r01",
+    MaxKey = "voice_ch_char_Landi_vo_battleidle",
+    Loader = function()
+      return {
+        voice_ch_char_Dafu_vo_be_hit_heavy_r01 = {
+          ContentDE = "Pass auf!",
+          TextMapId = "voice_ch_char_Dafu_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Dafu_vo_be_hit_heavy_r02 = {
+          ContentDE = "Halte durch ...",
+          TextMapId = "voice_ch_char_Dafu_vo_be_hit_heavy_r02"
+        },
+        voice_ch_char_Dafu_vo_birthday = {
+          ContentDE = "Weißt du, was den heutigen Tag so besonders macht? Richtig – es ist dein Geburtstag.\nIch weiß, dass das Leben uns mit zunehmendem Alter in alle Richtungen zieht. Wir jagen Zielen hinterher, balancieren Pflichten und eilen von Ort zu Ort. Es mag kindisch klingen, aber ich glaube wirklich, Geburtstage sollten anders sein. Nur an diesem einen Tag dürfen wir unsere Lasten ablegen – wieder sorglose Kinder sein, eingehüllt in die Liebe und die guten Wünsche derer, die uns nahestehen. Also, leg deine Sorgen beiseite. Sei heute ein glückliches Kind – genieß den Kuchen, blas die Kerzen aus und wünsch dir etwas …\nUnd falls du gerade allein bist – lass mich für dich die Rolle des „Erwachsenen“ übernehmen.\nAlles Gute zum Geburtstag.",
+          TextMapId = "voice_ch_char_Dafu_vo_birthday"
+        },
+        voice_ch_char_Dafu_vo_companio_01 = {
+          ContentDE = "Ich habe einst medizinische Texte von Huaxu in der Bibliothek der Kaiserstadt gelesen. Obwohl sich ihre Theorien von denen medizinischer Tradition von Hyperborea unterscheiden, sind sie medizinisch äußerst wirksam. Ich habe mit diesem Buch aber noch einige Probleme. Kannst du mir damit helfen?",
+          TextMapId = "voice_ch_char_Dafu_vo_companio_01"
+        },
+        voice_ch_char_Dafu_vo_companio_02 = {
+          ContentDE = "Frau Wächterin, ich frage mich, ob Gerechtigkeit, die mit Verspätung kommt, noch als Gerechtigkeit bezeichnet werden kann?",
+          TextMapId = "voice_ch_char_Dafu_vo_companio_02"
+        },
+        voice_ch_char_Dafu_vo_companio_03 = {
+          ContentDE = "Lange nicht mehr gesehen. Wir haben kaum miteinander gesprochen, seit ich die Alchemie-Akademie verlassen habe ... Wie geht es dir?",
+          TextMapId = "voice_ch_char_Dafu_vo_companio_03"
+        },
+        voice_ch_char_Dafu_vo_companio_04 = {
+          ContentDE = "Obwohl ich die Spathatoi bereits verlassen habe, ist es trotzdem ein Ort, an dem ich viel gelernt habe. Vielleicht wirst du mir nie verzeihen. Dennoch möchte ich Entschuldigung sagen.",
+          TextMapId = "voice_ch_char_Dafu_vo_companio_04"
+        },
+        voice_ch_char_Dafu_vo_die_r01 = {
+          ContentDE = "Ich bin ... eine Sanitäterin. Ich kann nicht ...",
+          TextMapId = "voice_ch_char_Dafu_vo_die_r01"
+        },
+        voice_ch_char_Dafu_vo_die_r02 = {
+          ContentDE = "Weiter ... nach vorne ...",
+          TextMapId = "voice_ch_char_Dafu_vo_die_r02"
+        },
+        voice_ch_char_Dafu_vo_fail = {
+          ContentDE = "Ich decke euch!",
+          TextMapId = "voice_ch_char_Dafu_vo_fail"
+        },
+        voice_ch_char_Dafu_vo_gain = {
+          ContentDE = "Ich bin Daphne Theodore, eine Sanitäterin von der Greifen unter der 13. Legion von Hyperborea. Das Schlachtfeld ist voller Gefahren, aber sei unbesorgt, ich werde für dich mit meiner Hilfe bereitstehen.",
+          TextMapId = "voice_ch_char_Dafu_vo_gain"
+        },
+        voice_ch_char_Dafu_vo_idle = {
+          ContentDE = "Es gibt nur selten solch entspannte Momente. Keine Rufe nach Hilfe, keine dringenden Berichte. Hmm ... vielleicht mache ich etwas Kaffee und lese diesen Roman zu Ende. Mit wem wird die Prinzessin schlussendlich zusammen sein?",
+          TextMapId = "voice_ch_char_Dafu_vo_idle"
+        },
+        voice_ch_char_Dafu_vo_lvup = {
+          ContentDE = "Auf diese Weise werde ich das Leid der Leute lindern können.",
+          TextMapId = "voice_ch_char_Dafu_vo_lvup"
+        },
+        voice_ch_char_Dafu_vo_revive = {
+          ContentDE = "Ich habe es versprochen – wir werden alle sicher zusammen zurückkehren.",
+          TextMapId = "voice_ch_char_Dafu_vo_revive"
+        },
+        voice_ch_char_Dafu_vo_skill01_r01 = {
+          ContentDE = "Betäubung und Wundausschneidung sind bereit.",
+          TextMapId = "voice_ch_char_Dafu_vo_skill01_r01"
+        },
+        voice_ch_char_Dafu_vo_skill01_r02 = {
+          ContentDE = "Abbindegriff für Blutungen!",
+          TextMapId = "voice_ch_char_Dafu_vo_skill01_r02"
+        },
+        voice_ch_char_Dafu_vo_skill02_r01 = {
+          ContentDE = "Wie lange noch müssen die Flammen des Krieges unser Blut fordern?",
+          TextMapId = "voice_ch_char_Dafu_vo_skill02_r01"
+        },
+        voice_ch_char_Dafu_vo_skill02_r02 = {
+          ContentDE = "Ich werde das höchste Maß an Respekt vor dem menschlichen Leben wahren.",
+          TextMapId = "voice_ch_char_Dafu_vo_skill02_r02"
+        },
+        voice_ch_char_Dafu_vo_skill02_r03 = {
+          ContentDE = "Für den Frieden, der eines Tages kommen wird.",
+          TextMapId = "voice_ch_char_Dafu_vo_skill02_r03"
+        },
+        voice_ch_char_Dafu_vo_topic_01_1 = {
+          ContentDE = "Ich ... habe keine speziellen Hobbys. Vielleicht zählt Lesen ja dazu?",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_01_1"
+        },
+        voice_ch_char_Dafu_vo_topic_01_2 = {
+          ContentDE = "Meine Mutter sagt immer, dass es mich unzählige Chancen kosten wird, in der Gesellschaft aufzusteigen, wenn ich zu Hause bleibe, in meinen Büchern versinke und all diese Bälle und Salons schwänze.",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_01_2"
+        },
+        voice_ch_char_Dafu_vo_topic_01_3 = {
+          ContentDE = "Aber ich bin so eigentlich ganz zufrieden.",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_01_3"
+        },
+        voice_ch_char_Dafu_vo_topic_01_4 = {
+          ContentDE = "Meistens Bücher zu Kriegsmedizin wie „Handbuch für Erste Hilfe im Einsatz“, „Leitfaden zur Traumaversorgung“ und „Einrichtung eines provisorischen Feldlazaretts“ ...",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_01_4"
+        },
+        voice_ch_char_Dafu_vo_topic_01_5 = {
+          ContentDE = "Du weißt vielleicht, dass sich meine früheren Studien nie auf erste Hilfe konzentriert haben. Daher fühle ich mich trotz meiner Qualifikation als Sanitäterin der Legion manchmal überfordert.",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_01_5"
+        },
+        voice_ch_char_Dafu_vo_topic_01_6 = {
+          ContentDE = "Hmm, zuletzt lese ich auch ein Buch mit dem Titel „Glasschuhe“. Es geht darin um eine Prinzessin und einen Ritter ... Es ist nicht so, dass ich auf romantische Romane stehe! Ich brauche nur etwas ... um mal ab und zu reinzuschauen.",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_01_6"
+        },
+        voice_ch_char_Dafu_vo_topic_02_1 = {
+          ContentDE = "Hmm, natürlich! Alchemie ist einer der Grundbausteine von Hyperborea. Sie wird von Gelehrten als „urzeitliches Wunder“ bezeichnet!",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_02_1"
+        },
+        voice_ch_char_Dafu_vo_topic_02_2 = {
+          ContentDE = "Ganz zu Beginn war das Ziel, durch Phoxene Gold zu gewinnen. Aber später haben die Menschen entdeckt, dass dieser kleine Stein noch mehr Verwendungszwecke hat ... Maschinen antreiben, Elektrizität erzeugen ... Es ist die „Magie“ von Solas.",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_02_2"
+        },
+        voice_ch_char_Dafu_vo_topic_02_3 = {
+          ContentDE = "... Aber dann die Alchemie-Akademie ...",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_02_3"
+        },
+        voice_ch_char_Dafu_vo_topic_02_4 = {
+          ContentDE = "Ja, aber das gehört alles der Vergangenheit an.",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_02_4"
+        },
+        voice_ch_char_Dafu_vo_topic_02_5 = {
+          ContentDE = "Ich habe sie verlassen, weil die Spathatoi vom richtigen Weg abgekommen sind. Was mit der Suche nach Wissen begonnen hat, wurde zu etwas Finsterem. Es wurde zum Kern der Kriegsmaschine von Hyperborea. Aber ihr Treibstoff bestand aus dem Leid und Unglück vieler Menschen.",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_02_5"
+        },
+        voice_ch_char_Dafu_vo_topic_02_6 = {
+          ContentDE = "Ich glaube, dass ich nicht so stark war, wie ich dachte. Ich wurde nicht damit fertig, was daraus geworden ist und ich hatte nicht den Mut und die Stärke, sie aufzuhalten. Mir blieb nur die Wahl zur Flucht.",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_02_6"
+        },
+        voice_ch_char_Dafu_vo_topic_03_1 = {
+          ContentDE = "Einige Notfallutensilien und Versorgungsmaterial. Verbandswickel, Antiseptika, Betäubungsmittel und Basiswerkzeuge für Wundbehandlung wie chirurgische Klingen und Nähmaterial.",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_03_1"
+        },
+        voice_ch_char_Dafu_vo_topic_03_2 = {
+          ContentDE = "Ich habe auch ein Taschentusch und einen Kamm.",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_03_2"
+        },
+        voice_ch_char_Dafu_vo_topic_03_3 = {
+          ContentDE = "Es ist nicht, was du denkst ... Die Sachen sind nicht für mich. Wenn die Verletzten nicht mehr zu retten sind, nutze ich die Geräte, um sie optisch ansprechender zu machen.",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_03_3"
+        },
+        voice_ch_char_Dafu_vo_topic_03_4 = {
+          ContentDE = "Die Grausamkeit des Todes beraubt die Menschen nicht nur ihres Lebens, sondern auch ihrer Würde.",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_03_4"
+        },
+        voice_ch_char_Dafu_vo_topic_03_5 = {
+          ContentDE = "Ich hoffe ... wenn ihre Familien kommen, um sich von ihnen zu verabschieden, dass sie diese in Frieden ruhen sehen, so als würden sie schlafen ... Nachdem sie so lange voneinander getrennt waren, sollten keine Eltern ihr Kind mit schmerzerfülltem Gesicht sehen.",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_03_5"
+        },
+        voice_ch_char_Dafu_vo_topic_04_1 = {
+          ContentDE = "Ach, es ist nicht schlimm! ... Nun, zumindest ein bisschen ... Die Lektionen für Notfallfürsorge und Pflege sind nicht so schlimm. Aber die körperlichen Fitnesstests machen mir wirklich zu schaffen.",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_04_1"
+        },
+        voice_ch_char_Dafu_vo_topic_04_2 = {
+          ContentDE = "Obwohl ich früher als alle anderen aufstehe, um zusätzlich zu trainieren, bestehe ich gerade so die Tests ... Ach, mache dich nicht über mich lustig. Ausdauer zu entwickeln, ist viel schwerer, als zu lernen.",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_04_2"
+        },
+        voice_ch_char_Dafu_vo_topic_04_3 = {
+          ContentDE = "Hmm, das ist es. Aber wenn ich mich ablenke und nach oben schaue, sehe ich Weizenfelder, wie sie sich über die Stadt hinaus erstrecken und sehe Landhäuser am Horizont. Ich höre das Knacken der Windmühlen und das Pfeifen von Hirten. Es sorgt bei mir immer für ein gutes Gefühl.",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_04_3"
+        },
+        voice_ch_char_Dafu_vo_topic_04_4 = {
+          ContentDE = "Denn ... wenn ich auf diesem Pfad laufe, gibt es mir das Gefühl, dass ich auch diese einfachen Dinge beschütze.",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_04_4"
+        },
+        voice_ch_char_Dafu_vo_topic_05_1 = {
+          ContentDE = "... Das letzte Mal, als ich mit meinem Vater gesprochen habe, war es über das Radio. Es war auf dem Schlachtfeld der Lonza-Festung und trotz der Gefahren sagte er „Sei unbesorgt“.",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_05_1"
+        },
+        voice_ch_char_Dafu_vo_topic_05_2 = {
+          ContentDE = "Nachdem all dies passiert ist, habe ich häufig mitten in der Nacht mein Radio eingeschaltet und drücke den Anruf-Knopf, in der Hoffnung, seine Stimme zu hören ...",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_05_2"
+        },
+        voice_ch_char_Dafu_vo_topic_05_3 = {
+          ContentDE = "Ich saß da und wartete gefühlsmäßig eine Ewigkeit, bis ich plötzlich erkannte, dass er nicht zurückkommen wird.",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_05_3"
+        },
+        voice_ch_char_Dafu_vo_topic_05_4 = {
+          ContentDE = "Danke. Sei unbesorgt. Ich werde weiterleben. Bis ich meinen Vater und die Opfer in der Schlacht von Lonza gerächt habe, werde ich nicht halt machen.",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_05_4"
+        },
+        voice_ch_char_Dafu_vo_victory = {
+          ContentDE = "Wenn dies nur die letzte Schlacht wäre.",
+          TextMapId = "voice_ch_char_Dafu_vo_victory"
+        },
+        voice_ch_char_Dafu_vo_welcome = {
+          ContentDE = "Es freut mich, dass du unversehrt bist. Pass auf dich auf. Eines Tages wird es Frieden geben.",
+          TextMapId = "voice_ch_char_Dafu_vo_welcome"
+        },
+        voice_ch_char_Feina_vo_appear = {
+          ContentDE = "Willst du mich zum Spielen ausführen? Abgemacht, ich zähle auf dein Wort!",
+          TextMapId = "voice_ch_char_Feina_vo_appear"
+        },
+        voice_ch_char_Feina_vo_battleidle = {
+          ContentDE = "Wo sind alle hin?",
+          TextMapId = "voice_ch_char_Feina_vo_battleidle"
+        },
+        voice_ch_char_Feina_vo_battlestart = {
+          ContentDE = "Was für ein riesiger Garten!",
+          TextMapId = "voice_ch_char_Feina_vo_battlestart"
+        },
+        voice_ch_char_Feina_vo_be_hit_heavy_r02 = {
+          ContentDE = "Ich habe keine Angst!",
+          TextMapId = "voice_ch_char_Feina_vo_be_hit_heavy_r02"
+        },
+        voice_ch_char_Feina_vo_be_hit_r02 = {
+          ContentDE = "Rühre mich nicht an!",
+          TextMapId = "voice_ch_char_Feina_vo_be_hit_r02"
+        },
+        voice_ch_char_Feina_vo_birthday = {
+          ContentDE = "Am Geburtstag ist {性别:Herr|Frau} Weißes Einhorn in {性别:sein|ihr} kleines, flauschiges Zuhause zurückgekehrt. Der weiße Vogel brachte Zimtblätter. Der Magier sang Zaubersprüche, die für Gelächter sorgten, und der tapfere Ritter stand treu wie immer an {性别:seiner|ihrer} Seite. Flammen tanzten vergnügt im Ofen, während weiße Schneeflocken für Segen aus dem Himmel sorgten. Das kleine Zuhause war mit Glück erfüllt ...",
+          TextMapId = "voice_ch_char_Feina_vo_birthday"
+        },
+        voice_ch_char_Feina_vo_companio_01 = {
+          ContentDE = "Versprich mir, dass, du nie nie nie wieder an diesen furchtbaren Ort mit vielen bösen Zauberern gehen wirst, in Ordnung?",
+          TextMapId = "voice_ch_char_Feina_vo_companio_01"
+        },
+        voice_ch_char_Feina_vo_companio_02 = {
+          ContentDE = "Was ist das? Ist das dein Elfenhaustier von Fräulein Hamster? Wow, unglaublich ... Es muss dich tragen können, während es über die Mauern der Schlösser fliegt.",
+          TextMapId = "voice_ch_char_Feina_vo_companio_02"
+        },
+        voice_ch_char_Feina_vo_companio_03 = {
+          ContentDE = "Fräulein Löwin, versuchst du etwa, die Fee im riesigen Schwert zu wecken? Vielleicht musst du viele Zaubersprüche aufsagen, wie zum Beispiel: „O Auserwählter, der das heilige Großschwert Samael erweckte, dazu bestimmt, König von Elysium zu sein!“",
+          TextMapId = "voice_ch_char_Feina_vo_companio_03"
+        },
+        voice_ch_char_Feina_vo_companio_04 = {
+          ContentDE = "Herr Seepferdchen aus dem südlichen Reich, du kommst mir bekannt vor. Hm ... Oh! Vor langer, langer Zeit hing Papa ein Porträt von dir an unsere Wand zu Hause.",
+          TextMapId = "voice_ch_char_Feina_vo_companio_04"
+        },
+        voice_ch_char_Feina_vo_die_r01 = {
+          ContentDE = "Ich will auch in ein fernes Land gehen ...",
+          TextMapId = "voice_ch_char_Feina_vo_die_r01"
+        },
+        voice_ch_char_Feina_vo_die_r02 = {
+          ContentDE = "Es ist als hätte ich einen langen Traum gehabt ...",
+          TextMapId = "voice_ch_char_Feina_vo_die_r02"
+        },
+        voice_ch_char_Feina_vo_fail = {
+          ContentDE = "Das Ende gefällt mir überhaupt nicht ...",
+          TextMapId = "voice_ch_char_Feina_vo_fail"
+        },
+        voice_ch_char_Feina_vo_gain = {
+          ContentDE = "„Piep piep.“ sagt die kleine Nachtigall. Das heißt „Hallo, {性别:Herr|Frau} Weißes Einhorn! Von jetzt an bist du mit Fina befreundet!“",
+          TextMapId = "voice_ch_char_Feina_vo_gain"
+        },
+        voice_ch_char_Feina_vo_idle = {
+          ContentDE = "♪ Was für ein winziges, winziges Heim ... Es ruht und versteckt sich hoch im Baumstamm-Reim. Und der magische goldene Fluss fließt fein ... Siehst du den Ofen dort, so klein? Die Glut knistert, knistert im Schein ... Papa bastelt ein Spielzeug, hell und rein, Und Mama summt ein Schlafliedlein ... Gute Nacht, schlaf sanft und fein ...",
+          TextMapId = "voice_ch_char_Feina_vo_idle"
+        },
+        voice_ch_char_Feina_vo_lvup = {
+          ContentDE = "Wow!",
+          TextMapId = "voice_ch_char_Feina_vo_lvup"
+        },
+        voice_ch_char_Feina_vo_revive = {
+          ContentDE = "Hä ... Was ist passiert?",
+          TextMapId = "voice_ch_char_Feina_vo_revive"
+        },
+        voice_ch_char_Feina_vo_skill01_r01 = {
+          ContentDE = "♪ Sterne leuchten hell ...",
+          TextMapId = "voice_ch_char_Feina_vo_skill01_r01"
+        },
+        voice_ch_char_Feina_vo_skill01_r02 = {
+          ContentDE = "♪ Mein schönster Garten ...",
+          TextMapId = "voice_ch_char_Feina_vo_skill01_r02"
+        },
+        voice_ch_char_Feina_vo_skill02_r01 = {
+          ContentDE = "Meine Freunde, kommt und beschützt alle!",
+          TextMapId = "voice_ch_char_Feina_vo_skill02_r01"
+        },
+        voice_ch_char_Feina_vo_skill02_r02 = {
+          ContentDE = "Es ist kein Lärm im Garten erlaubt!",
+          TextMapId = "voice_ch_char_Feina_vo_skill02_r02"
+        },
+        voice_ch_char_Feina_vo_skill02_r03 = {
+          ContentDE = "Zieht los, meine tapferen Soldaten!",
+          TextMapId = "voice_ch_char_Feina_vo_skill02_r03"
+        },
+        voice_ch_char_Feina_vo_topic_01_1 = {
+          ContentDE = "Ähm, ich habe mich gefragt ... ob es wohl ein Bonbon gibt, das mich sehr groß werden lässt ...",
+          TextMapId = "voice_ch_char_Feina_vo_topic_01_1"
+        },
+        voice_ch_char_Feina_vo_topic_01_2 = {
+          ContentDE = "So groß, dass ich über die Wolken sehen und sogar die Sterne berühren könnte!",
+          TextMapId = "voice_ch_char_Feina_vo_topic_01_2"
+        },
+        voice_ch_char_Feina_vo_topic_01_3 = {
+          ContentDE = "Nein, ich würde vorsichtig gehen, versprochen! Hmm ... Wenn du wirklich besorgt bist, könntest du dich auf meine Hand setzen und wir könnten etwas umherlaufen. Wir wäre das?",
+          TextMapId = "voice_ch_char_Feina_vo_topic_01_3"
+        },
+        voice_ch_char_Feina_vo_topic_02_1 = {
+          ContentDE = "Ich habe eine sehr große Glaskiste, die mit weichem Schnee von draußen und mit Marschmallows so weiß wie Schnee gefüllt ist. Ich würde auch gerne Wolken hinein tun, die so flauschig wie Marschmallows sind und eine Brise so warm wie diese Wolken ...",
+          TextMapId = "voice_ch_char_Feina_vo_topic_02_1"
+        },
+        voice_ch_char_Feina_vo_topic_02_2 = {
+          ContentDE = "Packe auch noch euer Gelächter mit hinein.",
+          TextMapId = "voice_ch_char_Feina_vo_topic_02_2"
+        },
+        voice_ch_char_Feina_vo_topic_02_3 = {
+          ContentDE = "Nun ... wenn du eines dieser Bonbons nippst, das dich winzig schrumpfen lässt, könntest du dort hineingehen. Aber alles ist dort weiß, also pass auf, dass du dich nicht verläufst.",
+          TextMapId = "voice_ch_char_Feina_vo_topic_02_3"
+        },
+        voice_ch_char_Feina_vo_topic_02_4 = {
+          ContentDE = "Lass mich mal überlegen ... wenn du dich verirrst, werde ich Brotkrumen für dich verstreuen, um dir einen Weg zu streuen. Folge ihnen und du wirst den Weg hinaus finden!",
+          TextMapId = "voice_ch_char_Feina_vo_topic_02_4"
+        },
+        voice_ch_char_Feina_vo_topic_03_1 = {
+          ContentDE = "Mm-hm! Ich habe von einer Nachtigall geträumt, so rein wie frisch gefallener Schnee, die einen Moment auf meiner Hand ruhte und im nächsten Verstecken mit mir spielte ... Hm, war es ich, der träumte, oder träumte sie von mir, frage ich mich?",
+          TextMapId = "voice_ch_char_Feina_vo_topic_03_1"
+        },
+        voice_ch_char_Feina_vo_topic_03_2 = {
+          ContentDE = "Du hast recht! Vielleicht war es ein Wunderland. Alle schlafenden Kinder und kleinen Tiere können darin spielen. Hmm ... ich weiß nicht, wen ich in meinem nächsten Traum treffen werde. Die weise Eule, Frau Kanarienvogel oder Herr Weißhase?",
+          TextMapId = "voice_ch_char_Feina_vo_topic_03_2"
+        },
+        voice_ch_char_Feina_vo_topic_04_1 = {
+          ContentDE = "Ich hatte mal eine Mutter und zwei Väter, aber die sind alle nicht mehr da ...",
+          TextMapId = "voice_ch_char_Feina_vo_topic_04_1"
+        },
+        voice_ch_char_Feina_vo_topic_04_2 = {
+          ContentDE = "Der erste Vater ist mit Mutter in ein weit entferntes Land gegangen. Der zweite ist auch in ein Land in weiter Ferne gegangen ... Ich habe ihn dort hingebracht.",
+          TextMapId = "voice_ch_char_Feina_vo_topic_04_2"
+        },
+        voice_ch_char_Feina_vo_topic_05_1 = {
+          ContentDE = "Er ist der größte Magier mit einer besänftigenden Stimme und dem sanftesten Gemüt auf der ganzen Welt.",
+          TextMapId = "voice_ch_char_Feina_vo_topic_05_1"
+        },
+        voice_ch_char_Feina_vo_topic_05_2 = {
+          ContentDE = "Hmm, was ist los, du siehst sehr verwirrt aus?",
+          TextMapId = "voice_ch_char_Feina_vo_topic_05_2"
+        },
+        voice_ch_char_Feina_vo_topic_05_3 = {
+          ContentDE = "Hä ...? Du meinst, dass er nicht nett und sanft zu dir ist? Tut mir leid ... Ich werde ihm einen Klapps auf den Kopf geben und ihm sagen, dass er sich bessern soll!",
+          TextMapId = "voice_ch_char_Feina_vo_topic_05_3"
+        },
+        voice_ch_char_Feina_vo_victory = {
+          ContentDE = "„Von da an lebten alle glücklich zusammen.“ Gute Nacht. Träume was Schönes.",
+          TextMapId = "voice_ch_char_Feina_vo_victory"
+        },
+        voice_ch_char_Feina_vo_welcome = {
+          ContentDE = "Ach ... Du bist es. Hallo, wie geht’s dir?",
+          TextMapId = "voice_ch_char_Feina_vo_welcome"
+        },
+        voice_ch_char_Haier_vo_appear = {
+          ContentDE = "Wo sind die Sünder?",
+          TextMapId = "voice_ch_char_Haier_vo_appear"
+        },
+        voice_ch_char_Haier_vo_battleidle = {
+          ContentDE = "Hast du Angst? Ich habe gedacht, du wärst anders als die anderen Häftlinge. Echt enttäuschend.",
+          TextMapId = "voice_ch_char_Haier_vo_battleidle"
+        },
+        voice_ch_char_Haier_vo_battlestart = {
+          ContentDE = "Alle Sünden sollen durch Flammen befreit werden!",
+          TextMapId = "voice_ch_char_Haier_vo_battlestart"
+        },
+        voice_ch_char_Haier_vo_be_hit_heavy_r01 = {
+          ContentDE = "Sünder!",
+          TextMapId = "voice_ch_char_Haier_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Haier_vo_be_hit_heavy_r02 = {
+          ContentDE = "Halte durch!",
+          TextMapId = "voice_ch_char_Haier_vo_be_hit_heavy_r02"
+        },
+        voice_ch_char_Haier_vo_birthday = {
+          ContentDE = "Geburtstag? Als ob sich eine Wächterin um solche lächerlichen Dinge kümmern würde!\nMacht dich ein Glückwunsch zufrieden, du einfache Kreatur? Tss, dann alles Gute zum Geburtstag. Ich werde heute eine Ausnahme machen und mit dir gemeinsam etwas trinken. Aber nur heute.",
+          TextMapId = "voice_ch_char_Haier_vo_birthday"
+        },
+        voice_ch_char_Haier_vo_companio_01 = {
+          ContentDE = "Ich bin die Wächterin und du bist die Großkommandantin der Legion. Gemeinsam sind wir die unerbittlichen Hüter der „dunklen“ Ordnung des Imperiums. Ihr Hass für uns bedeutet nichts, solange wir Hyperborea dienen!",
+          TextMapId = "voice_ch_char_Haier_vo_companio_01"
+        },
+        voice_ch_char_Haier_vo_companio_02 = {
+          ContentDE = "Du bist es wieder.",
+          TextMapId = "voice_ch_char_Haier_vo_companio_02"
+        },
+        voice_ch_char_Haier_vo_companio_03 = {
+          ContentDE = "Tss, du bist der Adjutant von Sibylle ... dem man vorwirft, nie die eigene Pflicht zu erfüllen, nicht wahr? Ich erkenne, dass du deine Stärke und Ehrgeiz verbirgst, so dass du an der Seite von der Großkommandantin stehen kannst. Was ist aber dein eigentliches Ziel?",
+          TextMapId = "voice_ch_char_Haier_vo_companio_03"
+        },
+        voice_ch_char_Haier_vo_die_r01 = {
+          ContentDE = "Für die Ordnung des Imperiums ...",
+          TextMapId = "voice_ch_char_Haier_vo_die_r01"
+        },
+        voice_ch_char_Haier_vo_die_r02 = {
+          ContentDE = "Ich fürchte mich ... nicht ... vor der Hölle ...",
+          TextMapId = "voice_ch_char_Haier_vo_die_r02"
+        },
+        voice_ch_char_Haier_vo_fail = {
+          ContentDE = "Ich muss diesen Abschaum selbst beseitigen!",
+          TextMapId = "voice_ch_char_Haier_vo_fail"
+        },
+        voice_ch_char_Haier_vo_gain = {
+          ContentDE = "Interessant. Der Verbrecher des Imperiums ist aus freiem Willen zu mir gekommen. Nun denn – bereite dich auf Qualen vor, während ich dich zu Asche verbrenne. Ich bin Hellfire, und ich werde dir zeigen, wie die Hölle wirklich ist!",
+          TextMapId = "voice_ch_char_Haier_vo_gain"
+        },
+        voice_ch_char_Haier_vo_idle = {
+          ContentDE = "Was für ein herrlicher Anblick ... Hast du keine Angst vor Feuer, du ahnungsloses Insekt? Du wirst deine Ignoranz bereuen, wenn ich dich in den Boden stampfe.",
+          TextMapId = "voice_ch_char_Haier_vo_idle"
+        },
+        voice_ch_char_Haier_vo_lvup = {
+          ContentDE = "Nicht schlecht ... Meine Flamme brennt heftiger.",
+          TextMapId = "voice_ch_char_Haier_vo_lvup"
+        },
+        voice_ch_char_Haier_vo_revive = {
+          ContentDE = "Auf der Erde gibt es mehr Sünder als in der Hölle!",
+          TextMapId = "voice_ch_char_Haier_vo_revive"
+        },
+        voice_ch_char_Haier_vo_skill01_r01 = {
+          ContentDE = "Brenne!",
+          TextMapId = "voice_ch_char_Haier_vo_skill01_r01"
+        },
+        voice_ch_char_Haier_vo_skill01_r02 = {
+          ContentDE = "Gib dich deiner Angst hin!",
+          TextMapId = "voice_ch_char_Haier_vo_skill01_r02"
+        },
+        voice_ch_char_Haier_vo_skill02_r01 = {
+          ContentDE = "Bereite dich auf ein intensives Verhör vor!",
+          TextMapId = "voice_ch_char_Haier_vo_skill02_r01"
+        },
+        voice_ch_char_Haier_vo_skill02_r02 = {
+          ContentDE = "Es gibt keine Gnade!",
+          TextMapId = "voice_ch_char_Haier_vo_skill02_r02"
+        },
+        voice_ch_char_Haier_vo_skill02_r03 = {
+          ContentDE = "Bereue deine Sünden!",
+          TextMapId = "voice_ch_char_Haier_vo_skill02_r03"
+        },
+        voice_ch_char_Haier_vo_topic_01_1 = {
+          ContentDE = "Wenn du etwas über Geschichte gelernt hättest, wüsstest du, dass die erste Wächterin des Königlichen Militärgefängnisses Haut hatte, die wie geschmolzene Lava war. Selbst die skrupellosesten Verbrecher hatten Angst vor ihrem Verhör.",
+          TextMapId = "voice_ch_char_Haier_vo_topic_01_1"
+        },
+        voice_ch_char_Haier_vo_topic_01_2 = {
+          ContentDE = "Als ihre Nachfolgerin trage ich stolz ihren Namen und bin bereit, alle Sünden mit meinem Feuer zu verbrennen.",
+          TextMapId = "voice_ch_char_Haier_vo_topic_01_2"
+        },
+        voice_ch_char_Haier_vo_topic_01_3 = {
+          ContentDE = "Es gibt einige Einschränkungen. Ich kann nur auf einem Eisenbett schlafen und ich kann mich nicht lange in Holzhütten aufhalten. Aber es ermöglicht mir, Verbrecher aus brennenden Gebäuden zu holen und für Gerechtigkeit zu sorgen. Und ich fürchte mich nicht vor Kälte.",
+          TextMapId = "voice_ch_char_Haier_vo_topic_01_3"
+        },
+        voice_ch_char_Haier_vo_topic_01_4 = {
+          ContentDE = "Mein ungewöhnliches Aussehen ist mehr wie ein Geschenk. Was die Probleme betrifft ... ich möchte so gerne Eiscreme essen, aber es schmilzt immer in meiner Hand ...",
+          TextMapId = "voice_ch_char_Haier_vo_topic_01_4"
+        },
+        voice_ch_char_Haier_vo_topic_02_1 = {
+          ContentDE = "Seit der Gründung des Imperiums verwaltet meine Familie das Gefängnis, in dem die abscheulichsten Verbrecher eingesperrt sind – wir richten Unrecht und beseitigen Bedrohungen.",
+          TextMapId = "voice_ch_char_Haier_vo_topic_02_1"
+        },
+        voice_ch_char_Haier_vo_topic_02_2 = {
+          ContentDE = "Meine feuerrote Haut, ein Erbe der ersten Wächterin, bestimmte mich dazu, den ehernen Kodex fortzuführen, den sie einst aufstellte. Es war also nicht ich, die sich entschied, Wächterin zu werden – es war das Amt der Wächterin, das mich erwählte.",
+          TextMapId = "voice_ch_char_Haier_vo_topic_02_2"
+        },
+        voice_ch_char_Haier_vo_topic_02_3 = {
+          ContentDE = "Eine Wächterin zu werden, ist lediglich der Anfang. Es treibt mich dazu an, wachsam zu sein, Ungerechtigkeit im Imperium bis zu meinem letzten Atemzug zu beseitigen.",
+          TextMapId = "voice_ch_char_Haier_vo_topic_02_3"
+        },
+        voice_ch_char_Haier_vo_topic_03_1 = {
+          ContentDE = "Gewiss. Das Kaiserliche Gefängnis ist voll von hinterlistigen Verbrechern. Zu meinen Pflichten gehören Verhöre, die Durchsicht von Akten und die Vereitelung von Fluchtversuchen.",
+          TextMapId = "voice_ch_char_Haier_vo_topic_03_1"
+        },
+        voice_ch_char_Haier_vo_topic_03_2 = {
+          ContentDE = "Jede Minute der Ruhe verzögert die Gerechtigkeit nur ein bisschen – und wenn die Gerechtigkeit verzögert wird, behalten das Chaos und das Recht des Stärkeren die Oberhand.",
+          TextMapId = "voice_ch_char_Haier_vo_topic_03_2"
+        },
+        voice_ch_char_Haier_vo_topic_03_3 = {
+          ContentDE = "Einige Gelehrte haben über eine Welt ohne Verbrechen nachgedacht. Sollte solch ein Tag jemals kommen, hätte ich keine Aufgabe mehr, da nur das Böse die Existenz einer Wächterin erforderlich macht. Bis dahin gebe ich mein Bestes, um Recht und Ordnung aufrechtzuerhalten.",
+          TextMapId = "voice_ch_char_Haier_vo_topic_03_3"
+        },
+        voice_ch_char_Haier_vo_topic_04_1 = {
+          ContentDE = "Gerechtigkeit? Es ist die Einschränkung von Begierde durch Macht, die Unterdrückung der Sünde durch Stärke und die Bestrafung des Bösen durch die Mächtigen.",
+          TextMapId = "voice_ch_char_Haier_vo_topic_04_1"
+        },
+        voice_ch_char_Haier_vo_topic_04_2 = {
+          ContentDE = "Extrem? Mein naives Kind. Wir leben nicht in einer Welt, in der die Menschen ihre Hand halten und sich gerne haben. Nur durch absolute Macht und Ordnung kann Gerechtigkeit bewahrt werden!",
+          TextMapId = "voice_ch_char_Haier_vo_topic_04_2"
+        },
+        voice_ch_char_Haier_vo_topic_05_1 = {
+          ContentDE = "In einer Zeit, in der Verbrecher des Imperiums auf der Straße herumlaufen, hat eine Wächterin keine Freizeit. Die einzige Entspannung, die ich finde, ist, wenn ich mir während der Arbeit ein paar hochprozentige Drinks genehmige.",
+          TextMapId = "voice_ch_char_Haier_vo_topic_05_1"
+        },
+        voice_ch_char_Haier_vo_topic_05_2 = {
+          ContentDE = "Bist du überrascht? Es ist nur eine Art Ablenkung. Bei Verhören habe ich schon von verschiedenen Arten von Alkohol gehört. Deshalb wurde ich neugierig bezüglich dieses bösen Getränks, was anscheinend einen Bezug zu Kriminalität hat. Deshalb trinke ich ab und zu.",
+          TextMapId = "voice_ch_char_Haier_vo_topic_05_2"
+        },
+        voice_ch_char_Haier_vo_topic_05_3 = {
+          ContentDE = "Und je mehr ich trinke, desto mehr bin ich davon überzeugt, dass es nicht der Alkohol ist, der schlimm ist.",
+          TextMapId = "voice_ch_char_Haier_vo_topic_05_3"
+        },
+        voice_ch_char_Haier_vo_victory = {
+          ContentDE = "Hältst du solche Hitze nicht mehr aus? Das ist erst der Anfang!",
+          TextMapId = "voice_ch_char_Haier_vo_victory"
+        },
+        voice_ch_char_Haier_vo_welcome = {
+          ContentDE = "Bist du für ein Verhör bereit?",
+          TextMapId = "voice_ch_char_Haier_vo_welcome"
+        },
+        voice_ch_char_Heitao_vo_appear = {
+          ContentDE = "Los.",
+          TextMapId = "voice_ch_char_Heitao_vo_appear"
+        },
+        voice_ch_char_Heitao_vo_battleidle = {
+          ContentDE = "Beenden wir diesen Kampf schnell und gehen dann gemeinsam nach Hause.",
+          TextMapId = "voice_ch_char_Heitao_vo_battleidle"
+        },
+        voice_ch_char_Heitao_vo_battlestart = {
+          ContentDE = "Ich gehe zuerst.",
+          TextMapId = "voice_ch_char_Heitao_vo_battlestart"
+        },
+        voice_ch_char_Heitao_vo_birthday = {
+          ContentDE = "Du hast mir einmal gesagt, du möchtest auch so eine Geburtstagsfeier wie andere haben. Also habe ich dir einen Kuchen gemacht – ich habe gehört, ein Geburtstag ohne Kuchen ist gar kein richtiger Geburtstag. Möge dich in den kommenden Jahren Freude erfüllen, jedes Mal, wenn du das Wort „Geburtstag“ hörst.",
+          TextMapId = "voice_ch_char_Heitao_vo_birthday"
+        },
+        voice_ch_char_Heitao_vo_companio_01 = {
+          ContentDE = "All die Jahre habe ich gut auf {性别:ihn|sie} und auf mich selbst aufgepasst, so wie ich es dir versprochen habe ... Könntest du mir über den Kopf streichen und sagen, dass ich es gut gemacht habe – so wie damals, als ich klein war? Und dieses Mal, bitte ... verlass uns nicht wieder.",
+          TextMapId = "voice_ch_char_Heitao_vo_companio_01"
+        },
+        voice_ch_char_Heitao_vo_companio_02_1 = {
+          ContentDE = "Frau Truffle, darf ich … dein Schwein streicheln? Nur ein einziges Mal. Bitte halte es kurz fest, ich fürchte, es könnte davonlaufen. Kleine Tiere neigen immer dazu, vor mir zu fliehen.",
+          TextMapId = "voice_ch_char_Heitao_vo_companio_02_1"
+        },
+        voice_ch_char_Heitao_vo_companio_02_2 = {
+          ContentDE = "Danke. Es ist so warm und weich. Echt schön ...",
+          TextMapId = "voice_ch_char_Heitao_vo_companio_02_2"
+        },
+        voice_ch_char_Heitao_vo_companio_03 = {
+          ContentDE = "Ich bin nicht diese „Nr. 0“ aus der Legion, und ich bin auch nicht dein Lakai. Verschwinde – denn solange ich lebe, werde ich niemals mit dir gehen.",
+          TextMapId = "voice_ch_char_Heitao_vo_companio_03"
+        },
+        voice_ch_char_Heitao_vo_companio_04_1 = {
+          ContentDE = "Ich habe gehört, dass du ein echter Feinschmecker bist. Kannst du mir einige deiner Rezepte zeigen? {nickname} lobt ständig deine Kochkunst. Es klingt nicht nach höflichen Floskeln, sondern nach ehrlichem Lob.",
+          TextMapId = "voice_ch_char_Heitao_vo_companio_04_1"
+        },
+        voice_ch_char_Heitao_vo_companio_04_2 = {
+          ContentDE = "Die Zutaten, die du verwendet hast, sind das ganz normale Sachen? Aber warum ...",
+          TextMapId = "voice_ch_char_Heitao_vo_companio_04_2"
+        },
+        voice_ch_char_Heitao_vo_die_r01 = {
+          ContentDE = "Ich muss ... beschützen ...",
+          TextMapId = "voice_ch_char_Heitao_vo_die_r01"
+        },
+        voice_ch_char_Heitao_vo_die_r02 = {
+          ContentDE = "Wie sehr ich mir wünsche, an diesen Ort zurückzukehren ...",
+          TextMapId = "voice_ch_char_Heitao_vo_die_r02"
+        },
+        voice_ch_char_Heitao_vo_fail = {
+          ContentDE = "Gut, dass du in Sicherheit bist.",
+          TextMapId = "voice_ch_char_Heitao_vo_fail"
+        },
+        voice_ch_char_Heitao_vo_gain = {
+          ContentDE = "Ich bin zurück.",
+          TextMapId = "voice_ch_char_Heitao_vo_gain"
+        },
+        voice_ch_char_Heitao_vo_idle = {
+          ContentDE = "{性别:Er|Sie} sollte eigentlich nie eingesperrt sein. Ich wusste immer, dass {性别:er|sie} eines Tages die Insel verlassen und nach dem Himmel greifen würde. Was ich nicht sagen konnte, war, ob das für uns ein Segen oder ein Fluch sein würde.",
+          TextMapId = "voice_ch_char_Heitao_vo_idle"
+        },
+        voice_ch_char_Heitao_vo_lvup = {
+          ContentDE = "Was meinst du?",
+          TextMapId = "voice_ch_char_Heitao_vo_lvup"
+        },
+        voice_ch_char_Heitao_vo_revive = {
+          ContentDE = "Es ist noch nicht zu Ende.",
+          TextMapId = "voice_ch_char_Heitao_vo_revive"
+        },
+        voice_ch_char_Heitao_vo_skill01_r01 = {
+          ContentDE = "Zerreißen.",
+          TextMapId = "voice_ch_char_Heitao_vo_skill01_r01"
+        },
+        voice_ch_char_Heitao_vo_skill01_r02 = {
+          ContentDE = "Ergib dich.",
+          TextMapId = "voice_ch_char_Heitao_vo_skill01_r02"
+        },
+        voice_ch_char_Heitao_vo_skill02_r01 = {
+          ContentDE = "Mögest du in Frieden ruhen.",
+          TextMapId = "voice_ch_char_Heitao_vo_skill02_r01"
+        },
+        voice_ch_char_Heitao_vo_skill02_r02 = {
+          ContentDE = "Sag lebewohl.",
+          TextMapId = "voice_ch_char_Heitao_vo_skill02_r02"
+        },
+        voice_ch_char_Heitao_vo_skill02_r03 = {
+          ContentDE = "Wer dir Schaden zufügt, dem wird kein Erbarmen gezeigt.",
+          TextMapId = "voice_ch_char_Heitao_vo_skill02_r03"
+        },
+        voice_ch_char_Heitao_vo_topic_01_1 = {
+          ContentDE = "Warum? ... Ich weiß auch nicht. Vielleicht ist es ein wunderbarer Traum, in dem ich immer noch wie früher an deiner Seite bin.",
+          TextMapId = "voice_ch_char_Heitao_vo_topic_01_1"
+        },
+        voice_ch_char_Heitao_vo_topic_01_2 = {
+          ContentDE = "Das will ich auch, und wie ich das will ... Eines Tages werden wir wieder vereint sein.",
+          TextMapId = "voice_ch_char_Heitao_vo_topic_01_2"
+        },
+        voice_ch_char_Heitao_vo_topic_02_1 = {
+          ContentDE = "Wünsche? Ich ... habe keine speziellen Wünsche. Jeden Morgen dein Lächeln zu sehen, würde mir schon ausreichen.",
+          TextMapId = "voice_ch_char_Heitao_vo_topic_02_1"
+        },
+        voice_ch_char_Heitao_vo_topic_02_2 = {
+          ContentDE = "Mach dir nicht zu viel Druck. Wenn du schlecht gelaunt bist, komm einfach zu mir, um ein bisschen zu plaudern. Oder wenn du nicht reden willst, werden wir einfach gemeinsam die Stille genießen.",
+          TextMapId = "voice_ch_char_Heitao_vo_topic_02_2"
+        },
+        voice_ch_char_Heitao_vo_topic_03_1 = {
+          ContentDE = "Anders als auf der Purgatorio-Insel schneit es hier jeden Tag. Nur gut, dass du einen warmen Ort zum Wohnen hast. Im Vergleich zu unserer heruntergekommenen Bude auf der Insel ist das Leben hier echt luxuriös.",
+          TextMapId = "voice_ch_char_Heitao_vo_topic_03_1"
+        },
+        voice_ch_char_Heitao_vo_topic_03_2 = {
+          ContentDE = "Erinnere dich daran, dass deine Hände in jedem Winter kalt werden? Komm, lass mich deine Hände etwas aufwärmen.",
+          TextMapId = "voice_ch_char_Heitao_vo_topic_03_2"
+        },
+        voice_ch_char_Heitao_vo_topic_04_1 = {
+          ContentDE = "Nun, dieser Ort ist wie eine Stadt aus Stahl ... oder eher wie ein Gefängnis, um genau zu sein. Ich habe meine Kindheit dort verbracht.",
+          TextMapId = "voice_ch_char_Heitao_vo_topic_04_1"
+        },
+        voice_ch_char_Heitao_vo_topic_04_2 = {
+          ContentDE = "Später wurde ich von jemandem fortgebracht und ich wurde von ihr auf die Purgatorio-Insel gebracht. Und dann bist noch du da. Was sie betrifft, kann ich nicht zu viel sagen ... Tut mir leid. Ich habe es ihr versprochen.",
+          TextMapId = "voice_ch_char_Heitao_vo_topic_04_2"
+        },
+        voice_ch_char_Heitao_vo_topic_04_3 = {
+          ContentDE = "... Das Leben auf der Purgatorio-Insel war so friedlich. Ich hatte fast geglaubt, dass wir dort für immer leben würden. Aber an jenem Tag, als sie wieder auftauchten, ist mir erst bewusst geworden, dass ich nie aus diesem Gefängnis entkommen bin.",
+          TextMapId = "voice_ch_char_Heitao_vo_topic_04_3"
+        },
+        voice_ch_char_Heitao_vo_topic_05_1 = {
+          ContentDE = "Es ist zwar ein bisschen laut, aber das stört mich nicht wirklich. Du hast viele Freunde gefunden – das ist schön. Ich freue mich für dich.",
+          TextMapId = "voice_ch_char_Heitao_vo_topic_05_1"
+        },
+        voice_ch_char_Heitao_vo_topic_05_2 = {
+          ContentDE = "So wirst du dich nicht einsam fühlen, selbst wenn ich nicht bei dir bin.",
+          TextMapId = "voice_ch_char_Heitao_vo_topic_05_2"
+        },
+        voice_ch_char_Heitao_vo_topic_06_1 = {
+          ContentDE = "Dann leg deinen Kopf auf mich und ruh dich etwas aus, so wie früher.",
+          TextMapId = "voice_ch_char_Heitao_vo_topic_06_1"
+        },
+        voice_ch_char_Heitao_vo_victory = {
+          ContentDE = "Es ist alles vorbei.",
+          TextMapId = "voice_ch_char_Heitao_vo_victory"
+        },
+        voice_ch_char_Heitao_vo_welcome = {
+          ContentDE = "Du bist wieder da. Was hast du heute vor? Dich zu Hause ausruhen?",
+          TextMapId = "voice_ch_char_Heitao_vo_welcome"
+        },
+        voice_ch_char_Kezhou_vo_appear = {
+          ContentDE = "Um zu töten, führe das Schwert in der Hand; um Frieden zu finden, schärfe das Schwert in dir.",
+          TextMapId = "voice_ch_char_Kezhou_vo_appear"
+        },
+        voice_ch_char_Kezhou_vo_battleidle = {
+          ContentDE = "Meine Tricks sind noch nicht erschöpft. Noch eine Runde!",
+          TextMapId = "voice_ch_char_Kezhou_vo_battleidle"
+        },
+        voice_ch_char_Kezhou_vo_battlestart = {
+          ContentDE = "Selbst der Löwe gibt alles, wenn er einen Hasen jagt.",
+          TextMapId = "voice_ch_char_Kezhou_vo_battlestart"
+        },
+        voice_ch_char_Kezhou_vo_be_hit_heavy_r01 = {
+          ContentDE = "Guter Schlag!",
+          TextMapId = "voice_ch_char_Kezhou_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Kezhou_vo_be_hit_heavy_r02 = {
+          ContentDE = "Die entscheidenden Stellen verfehlt.",
+          TextMapId = "voice_ch_char_Kezhou_vo_be_hit_heavy_r02"
+        },
+        voice_ch_char_Kezhou_vo_birthday = {
+          ContentDE = "Heute ist ein großartiger Tag zum Trinken und Singen ... Was?! Hast du Geburtstag?\n Wir Wanderer schenken Geburtstagen nicht viel Beachtung. Draußen, im harten Leben, weiß man nie, wann der letzte Tag kommt, also feiern wir normalerweise nicht.\n Aber hey, da du nicht von hier bist und jeden Tag mit mir sparst, fühlt sich eine Feier genau richtig an.\n Dann lass heute mit Liedern von Helden erklingen! Lasst uns singen für {性别:den jungen, tapferen Phoxjäger|die junge, tapfere Phoxjägerin}, gebunden durch Ehre und Versprechen, die so viel wert sind wie Gold!",
+          TextMapId = "voice_ch_char_Kezhou_vo_birthday"
+        },
+        voice_ch_char_Kezhou_vo_companio_01 = {
+          ContentDE = "Man sagt, der beste Schwertkämpfer braucht nicht einmal ein Schwert – alles, sei es ein Grashalm oder ein Zweig, kann zur Waffe werden. Ich habe gehört, du kämpfst mit Putzwerkzeugen. Macht dich das auch zur Meisterin der Klinge? Willst du mir ein, zwei Tricks zeigen?",
+          TextMapId = "voice_ch_char_Kezhou_vo_companio_01"
+        },
+        voice_ch_char_Kezhou_vo_companio_02 = {
+          ContentDE = "Ich halte dein altes Schwert vorerst für mich. Wenn du aufhörst, mit diesem düsteren Gesicht herumzuhängen, gebe ich es dir zurück – aber nur, wenn du mich in einem Duell besiegst. Verlierst du, gehört es für immer mir.",
+          TextMapId = "voice_ch_char_Kezhou_vo_companio_02"
+        },
+        voice_ch_char_Kezhou_vo_companio_03 = {
+          ContentDE = "Ein Schwert kann ein Freund, ein Spielzeug oder ein Werkzeug für allerlei Dinge sein – Schneiden, Hebeln, Rasieren. Aber es sollte niemals dein Herr sein. Lass dich von der Klinge nicht aufhalten.",
+          TextMapId = "voice_ch_char_Kezhou_vo_companio_03"
+        },
+        voice_ch_char_Kezhou_vo_die_r01 = {
+          ContentDE = "Ein Weiser weiß, wann er sich zurückziehen muss – bis wir uns wiedersehen.",
+          TextMapId = "voice_ch_char_Kezhou_vo_die_r01"
+        },
+        voice_ch_char_Kezhou_vo_die_r02 = {
+          ContentDE = "Fertigkeit schärft sich durch Anstrengung. Nachlässigkeit stumpft die Klinge.",
+          TextMapId = "voice_ch_char_Kezhou_vo_die_r02"
+        },
+        voice_ch_char_Kezhou_vo_fail = {
+          ContentDE = "Manche Kämpfe gewinnt man, manche verliert man, kein Problem. Wir machen weiter.",
+          TextMapId = "voice_ch_char_Kezhou_vo_fail"
+        },
+        voice_ch_char_Kezhou_vo_gain = {
+          ContentDE = "Der Himmel ist meine Decke, die Erde mein Bett. Mit dem Schwert in der Hand streife ich unter dem Himmel umher und suche Gerechtigkeit, wo sie verweigert wurde.\nUgh, vergiss es. Diese geschwollene Einleitung klingt einfach nie richtig. Machen wir’s einfach – ich bin Kezhou, ein Wanderer aus Huaxu. Wenn du Hilfe brauchst, sag einfach Bescheid.",
+          TextMapId = "voice_ch_char_Kezhou_vo_gain"
+        },
+        voice_ch_char_Kezhou_vo_idle = {
+          ContentDE = "Dieser Ort ist sehr hell und mit viel Platz. Aber es sind hier sehr viele Tische, Stühle und Bänke. Sonst wäre es ein guter Ort, um Kampfkunst zu trainieren.",
+          TextMapId = "voice_ch_char_Kezhou_vo_idle"
+        },
+        voice_ch_char_Kezhou_vo_lvup = {
+          ContentDE = "Du musst tausend Schwerter gesehen haben, bevor du wirklich eines verstehst.",
+          TextMapId = "voice_ch_char_Kezhou_vo_lvup"
+        },
+        voice_ch_char_Kezhou_vo_revive = {
+          ContentDE = "Dieser Kampf ist noch lange nicht vorbei!",
+          TextMapId = "voice_ch_char_Kezhou_vo_revive"
+        },
+        voice_ch_char_Kezhou_vo_skill01_r01 = {
+          ContentDE = "Schnell wie ein Schatten!",
+          TextMapId = "voice_ch_char_Kezhou_vo_skill01_r01"
+        },
+        voice_ch_char_Kezhou_vo_skill01_r02 = {
+          ContentDE = "Bleib hier und benimm dich!",
+          TextMapId = "voice_ch_char_Kezhou_vo_skill01_r02"
+        },
+        voice_ch_char_Kezhou_vo_skill02_r01 = {
+          ContentDE = "Zehn Schritte hinein, nichts lebt.",
+          TextMapId = "voice_ch_char_Kezhou_vo_skill02_r01"
+        },
+        voice_ch_char_Kezhou_vo_skill02_r02 = {
+          ContentDE = "Tanz des Schwertes, dein letztes Wort.",
+          TextMapId = "voice_ch_char_Kezhou_vo_skill02_r02"
+        },
+        voice_ch_char_Kezhou_vo_skill02_r03 = {
+          ContentDE = "Zeit, diese Klinge zu testen!",
+          TextMapId = "voice_ch_char_Kezhou_vo_skill02_r03"
+        },
+        voice_ch_char_Kezhou_vo_topic_01_1 = {
+          ContentDE = "Interessierst du dich auch für Schwertkunst? Oh, ich sehe, dass du ebenfalls ein hochwertiges Schwert bei dir trägst. Du hast bestimmt eine Familientradition in der Schwertkunst. Lass uns etwas kämpfen und sehen, was du kannst.",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_01_1"
+        },
+        voice_ch_char_Kezhou_vo_topic_01_2 = {
+          ContentDE = "Um ehrlich zu sein, bin ich schon lange nicht mehr auf einen ebenbürtigen Gegner gestoßen. Mein Meister sagte aber, dass ich zu direkt und ich nicht gut darin bin, eine Rolle zu spielen. Daher muss ich weiter an meinen Fähigkeiten arbeiten.",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_01_2"
+        },
+        voice_ch_char_Kezhou_vo_topic_01_3 = {
+          ContentDE = "Nun eigentlich bin ich nicht dieser Meinung, aber mein Meister sagte, beim Schwertkampf müsse man „können, aber nicht zeigen“ beherrschen, genauso wie „den Gegner zur Aufgabe zu zwingen, ohne eigentlich zu kämpfen“ oder „die Überzahl gegen die Minderzahl einsetzen“, all das sind hohe Techniken.",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_01_3"
+        },
+        voice_ch_char_Kezhou_vo_topic_01_4 = {
+          ContentDE = "Als ich ein Kind war, hat er denselben Trick bei mir angewandt. Er tat so, als wären seine Fähigkeiten mittelmäßig, und sagte mir, wenn ich ihn zu Boden stoßen könnte, müsste ich nie wieder trainieren. Ein ganzes Jahr hat es gedauert, bis ich merkte, dass ich nicht einmal seinen Ärmel berühren konnte.",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_01_4"
+        },
+        voice_ch_char_Kezhou_vo_topic_01_5 = {
+          ContentDE = "Eines Tages war ich so erschöpft, dass ich einfach zusammenbrach. Da fiel mir auf – unter seinen Füßen war kein einziger Tropfen Schweiß. Dieses wackelige, unbeholfene Getue von ihm? Alles nur gespielt.",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_01_5"
+        },
+        voice_ch_char_Kezhou_vo_topic_02_1 = {
+          ContentDE = "Es gibt wirklich eine Menge Gründe. Aber wenn ich es zusammenfassen muss: Ich will einfach nicht.",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_02_1"
+        },
+        voice_ch_char_Kezhou_vo_topic_02_2 = {
+          ContentDE = "Ich bin mein ganzes Leben ein Freigeist gewesen. Immer wenn ich Ungerechtigkeit gesehen habe, habe ich mein Schwert gezogen. Ich wollte von meinem Meister und großem Bruder nur die Dinge hören, die mir in den Kram passten. Es ging zu einem Ohr rein und beim anderen wieder heraus. Warum sollte ich mich also von irgendwelchen Fesseln einschränken lassen?",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_02_2"
+        },
+        voice_ch_char_Kezhou_vo_topic_02_3 = {
+          ContentDE = "Es sind die Bedenken eines Schwertkämpfers: Nur als ein Beispiel ... Wenn du zuerst Schwertkunst erlernst, folgst du den Schwertkampfanweisungen Bewegung für Bewegung. Nicht wahr? Gegen gewöhnliche Gegner reicht das aus. Dein Schwert bewegt sich instinktiv.",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_02_3"
+        },
+        voice_ch_char_Kezhou_vo_topic_02_4 = {
+          ContentDE = "Aber wenn du zu starr an der Anweisungen festhältst und nicht spontan reagieren kannst, ist dein Schwert nicht mehr wert als ein Stück Schrott – stumpf, unbeholfen, nutzlos. Begegnet dir etwas Unerwartetes, fuchtelst du herum wie ein kopfloses Huhn.",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_02_4"
+        },
+        voice_ch_char_Kezhou_vo_topic_02_5 = {
+          ContentDE = "Meiner Meinung nach ist Huaxu wie ein unbeholfener Schwertkämpfer, der steif an den Neun Kapiteln von Dafeng festhält. Sie werden noch nicht einmal mit einem Herumstreuner wie mir fertig. Was für eine Chance haben sie gegen eine echte Bedrohung? Sie werden früher oder später scheitern.",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_02_5"
+        },
+        voice_ch_char_Kezhou_vo_topic_03_1 = {
+          ContentDE = "Natürlich! Gekonnt im Umgang eines Schwertes zu sein, heißt nicht, dass man nur ein Schwert als Waffe nutzen kann. In Huaxu gibt es Leute, die Stifte und Essstäbchen als Waffen nutzen. Bedeutet dies, dass Schwertkämpfer hungern müssen oder nie einen Text schreiben?",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_03_1"
+        },
+        voice_ch_char_Kezhou_vo_topic_03_2 = {
+          ContentDE = "Das kann ich. Aber warum sollte ich mich damit befassen? Es ist einfacher, der Kugel auszuweichen. Wildschweine in den Bergen wissen, dass sie nicht an Baumrinde nagen müssen, wenn sie Karotten fressen können.",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_03_2"
+        },
+        voice_ch_char_Kezhou_vo_topic_03_3 = {
+          ContentDE = "Natürlich kannst du sicher sein, dass wenn ich auf einen ebenbürtigen Gegner treffe, dass ich mein Schwert ziehen und aufs Ganze gehen werde.",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_03_3"
+        },
+        voice_ch_char_Kezhou_vo_topic_04_1 = {
+          ContentDE = "Ja, jetzt, wo du davon sprichst, fallen mir einige ein, zum Beispiel „König von sowieso“, „Irgendwelcher Lord“ oder „Unsterblicher irgendwie“. Es gibt viele Leute, die Tiere als Spitznamen nutzen, wie Drachen, Tiger, Kraniche usw. Es ist wie in einem Zoo.",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_04_1"
+        },
+        voice_ch_char_Kezhou_vo_topic_04_2 = {
+          ContentDE = "Und was diese Titel betrifft, kann man sagen: Je länger der Titel, desto übler sind die Fähigkeiten. Ein Titel aus vier Wörtern ist für Anfänger. Ein mit drei Wörtern zeigt Erfahrung. Ein mit zwei Wörtern steht für einen Könner. Und jemand ohne Spitznamen ist ein echter Meister.",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_04_2"
+        },
+        voice_ch_char_Kezhou_vo_topic_04_3 = {
+          ContentDE = "Ich bin in der Welt mit meinem echten Namen unterwegs. Ich weiß, dass er so klingt, als hätte man ihn sich ausgedacht. Selbst mein Meister hat dies gesagt. Er hat mich gewarnt, dass dieser Name für Irrtümer sorgen wird, dass mich Leute für einen Wunderknaben halten und das nur für Ärger sorgt.",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_04_3"
+        },
+        voice_ch_char_Kezhou_vo_topic_04_4 = {
+          ContentDE = "Aber es ist der Name, den mir mein Vater gegeben hat. Vielleicht weil er die Hoffnung hatte, dass ich zu einem Helden würde. Er hat mir nicht viel zurückgelassen. Aber solange der Name existiert, habe ich das Gefühl, dass sein Schwert, immer noch seine Spuren in dieser Welt zurücklässt.",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_04_4"
+        },
+        voice_ch_char_Kezhou_vo_victory = {
+          ContentDE = "Ein Schwert in der Hand, um Unrecht zu richten – wer ist als Nächstes?",
+          TextMapId = "voice_ch_char_Kezhou_vo_victory"
+        },
+        voice_ch_char_Kezhou_vo_welcome = {
+          ContentDE = "Heute ist ein perfekter Tag zum Trinken und Singen! Komm schon, lass mich dieses Glas austrinken, und dann jagen wir die Sünder, die mein Schwert verdienen. Was? Ich habe gestern dasselbe gesagt? Na ja, jeder Tag ist ein guter Tag, um so zu leben, findest du nicht?",
+          TextMapId = "voice_ch_char_Kezhou_vo_welcome"
+        },
+        voice_ch_char_Landi_vo_appear = {
+          ContentDE = "Muss ich dieses Mal wirklich dort hin?",
+          TextMapId = "voice_ch_char_Landi_vo_appear"
+        },
+        voice_ch_char_Landi_vo_battleidle = {
+          ContentDE = "Wenn sie doch nur verstehen würden, dass es wichtig ist, mal eine Pause zu machen.",
+          TextMapId = "voice_ch_char_Landi_vo_battleidle"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Landi_vo_battlestart",
+    MaxKey = "voice_ch_char_Nifu_vo_topic_03_3",
+    Loader = function()
+      return {
+        voice_ch_char_Landi_vo_battlestart = {
+          ContentDE = "Lass uns die Schwachstelle ihrer Verteidigung treffen.",
+          TextMapId = "voice_ch_char_Landi_vo_battlestart"
+        },
+        voice_ch_char_Landi_vo_be_hit_heavy_r01 = {
+          ContentDE = "Echt heftig.",
+          TextMapId = "voice_ch_char_Landi_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Landi_vo_be_hit_heavy_r02 = {
+          ContentDE = "Das ist echt anstrengend.",
+          TextMapId = "voice_ch_char_Landi_vo_be_hit_heavy_r02"
+        },
+        voice_ch_char_Landi_vo_birthday = {
+          ContentDE = "Ich habe hier heute ewig auf dich gewartet und meine kostbare Ruhezeit geopfert, um für dich für einen unvergesslichen Geburtstag zu sorgen. Ich habe sogar die Küchengeräte verbessert, um diesen Kuchen zu backen. Was die Optik des Kuchens betrifft ... du solltest mir das nicht übel nehmen. Das war mein erster Kuchen und war daher für mich eine ziemlich schwere Aufgabe.",
+          TextMapId = "voice_ch_char_Landi_vo_birthday"
+        },
+        voice_ch_char_Landi_vo_companio_01 = {
+          ContentDE = "Frau Großkommandantin, Bericht! Die heutigen Aufgaben wurden arrangiert. Wenn Sie zusätzliche Aufträge haben, bin ich bereit, sie auszuführen. Heute war aber ziemlich anstrengend. Sie sollten Ihnen daher nicht noch zusätzlichen Stress geben.",
+          TextMapId = "voice_ch_char_Landi_vo_companio_01"
+        },
+        voice_ch_char_Landi_vo_companio_02 = {
+          ContentDE = "Du hattest es beim letzten Auftrag nicht einfach. Ich habe aber einige Beschwerden über deine Zerstörung von öffentlichem Eigentum erhalten ... Es ist etwas unangenehm mich in deinem Namen bei anderen Leuten zu entschuldigen ... Du weißt ja, ich bin schließlich etwas schüchtern. Deshalb ... liebe Fräulein Lynn, kannst du diese dringenden Aufträge für mich übernehmen? Ich bin sicher, dass du nicht ablehnen wirst!",
+          TextMapId = "voice_ch_char_Landi_vo_companio_02"
+        },
+        voice_ch_char_Landi_vo_companio_03 = {
+          ContentDE = "Was ... wie kann das passieren? Vielleicht bin ich schon so müde, dass ich schon Halluzinationen habe. Ich könnte auch eine Arbeitsverletzung melden und zwei Tage zusätzlich frei nehmen.",
+          TextMapId = "voice_ch_char_Landi_vo_companio_03"
+        },
+        voice_ch_char_Landi_vo_die_r01 = {
+          ContentDE = "Ich ... hätte diesen Auftrag nicht annehmen sollen ...",
+          TextMapId = "voice_ch_char_Landi_vo_die_r01"
+        },
+        voice_ch_char_Landi_vo_die_r02 = {
+          ContentDE = "Lange zu schlafen ... ist auch nicht so toll ...",
+          TextMapId = "voice_ch_char_Landi_vo_die_r02"
+        },
+        voice_ch_char_Landi_vo_fail = {
+          ContentDE = "Die Kunst des Krieges beinhaltet auch zu wissen, wann man sich zurückzieht! Ich gehe dann.",
+          TextMapId = "voice_ch_char_Landi_vo_fail"
+        },
+        voice_ch_char_Landi_vo_gain = {
+          ContentDE = "Ach, du hast mich. Es scheint, dass meine entspannten Tage vorüber sind ... Du bist aber anscheinend ganz anständig. Daher kann ich dir wohl in meinem Namen ein bisschen helfen.",
+          TextMapId = "voice_ch_char_Landi_vo_gain"
+        },
+        voice_ch_char_Landi_vo_idle = {
+          ContentDE = "Hmm ... Diese nach dem Schießen sich zusammenklappende Schrotflinte könnte gut auf Autofeuer verbessert werden und wenn ich sie durchschlagskräftiger mache ... Hmm, gut gemacht, dann können wir unsere Gegner noch schneller auf unserem nächsten Auftrag erledigen und früher nach Hause, um uns auszuruhen.",
+          TextMapId = "voice_ch_char_Landi_vo_idle"
+        },
+        voice_ch_char_Landi_vo_lvup = {
+          ContentDE = "Es ist vielleicht nervig, aber sich vor der Schlacht vorzubereiten, ist niemals ein Fehler.",
+          TextMapId = "voice_ch_char_Landi_vo_lvup"
+        },
+        voice_ch_char_Landi_vo_revive = {
+          ContentDE = "Zeit, sich aufzurappeln.",
+          TextMapId = "voice_ch_char_Landi_vo_revive"
+        },
+        voice_ch_char_Landi_vo_skill01_r01 = {
+          ContentDE = "Ergebt euch.",
+          TextMapId = "voice_ch_char_Landi_vo_skill01_r01"
+        },
+        voice_ch_char_Landi_vo_skill01_r02 = {
+          ContentDE = "Entspannt euch.",
+          TextMapId = "voice_ch_char_Landi_vo_skill01_r02"
+        },
+        voice_ch_char_Landi_vo_skill02_r01 = {
+          ContentDE = "Schwachstelle, erkannt.",
+          TextMapId = "voice_ch_char_Landi_vo_skill02_r01"
+        },
+        voice_ch_char_Landi_vo_skill02_r02 = {
+          ContentDE = "Das ist, die beste Taktik.",
+          TextMapId = "voice_ch_char_Landi_vo_skill02_r02"
+        },
+        voice_ch_char_Landi_vo_skill02_r03 = {
+          ContentDE = "Das ist der Preis dafür, mir die Ruhe geraubt zu haben.",
+          TextMapId = "voice_ch_char_Landi_vo_skill02_r03"
+        },
+        voice_ch_char_Landi_vo_topic_01_1 = {
+          ContentDE = "Familienangehörige? Meine Eltern kümmern sich schon einige Jahre nicht mehr um mich. Nur meine älteren Schwestern versuchen mich gelegentlich herumzukommandieren. Jetzt wo ich aber in der Legion bin, kommen sie nicht an mich heran.",
+          TextMapId = "voice_ch_char_Landi_vo_topic_01_1"
+        },
+        voice_ch_char_Landi_vo_topic_01_2 = {
+          ContentDE = "Oh, nein, überhaupt nicht! Sie sind absolut wunderbar. Sie sind intelligent, gutmütig, charmant, wunderschön und perfekt! Aber ein bisschen bescheidener wäre noch besser ...",
+          TextMapId = "voice_ch_char_Landi_vo_topic_01_2"
+        },
+        voice_ch_char_Landi_vo_topic_02_1 = {
+          ContentDE = "Hmpf. Du bist einer der Menschen, die ein gutes Nickerchen nicht wertschätzen! Höre mir zu. Betten sind wie der Himmel, wo die Seele Ruhe findet, Dächer sind Heiligtümer, wo Unruhe verfliegt. Mache im Nachmittagsgarten ein Nickerchen. Die Sonne glitzert und du genießt die Symphonie der Träume ...",
+          TextMapId = "voice_ch_char_Landi_vo_topic_02_1"
+        },
+        voice_ch_char_Landi_vo_topic_02_2 = {
+          ContentDE = "... Hey! Höre mir zu, bis ich fertig bin!",
+          TextMapId = "voice_ch_char_Landi_vo_topic_02_2"
+        },
+        voice_ch_char_Landi_vo_topic_03_1 = {
+          ContentDE = "Sie ist sehr dominant, dass es nicht ausreicht, wenn eine Person soviel arbeitet wie drei ... Ähm, ich möchte sagen, dass Sibylle immer streng mit ihren Untergebenen ist.",
+          TextMapId = "voice_ch_char_Landi_vo_topic_03_1"
+        },
+        voice_ch_char_Landi_vo_topic_03_2 = {
+          ContentDE = "Oh, was soll ich bloß tun ... Wie wäre es, wenn ich dich zu einem Nachmittagstee einlade und du so tust, als hättest du nichts gehört? Sei unbesorgt. Da ist keine Medizin drin.",
+          TextMapId = "voice_ch_char_Landi_vo_topic_03_2"
+        },
+        voice_ch_char_Landi_vo_topic_04_1 = {
+          ContentDE = "Ich habe etwas Tolles für dich entworfen. Eine kleine Roboterpuppe. Während Kämpfen kann sie dir von hinten folgen und eine Flagge schwenken, während sie ruft „Komm schon, die Art und Weise, wie du Leute vermöbelst, ist echt cool!“",
+          TextMapId = "voice_ch_char_Landi_vo_topic_04_1"
+        },
+        voice_ch_char_Landi_vo_topic_04_2 = {
+          ContentDE = "Wie ist das? Fühlst du dich voller Energie? Warte nur, bis ich andere Sachen für dich gemacht habe ...",
+          TextMapId = "voice_ch_char_Landi_vo_topic_04_2"
+        },
+        voice_ch_char_Landi_vo_topic_04_3 = {
+          ContentDE = "Hey, ich bin noch nicht fertig! Ich habe diese Pläne während meiner kostbaren Pausen ausgearbeitet. Weißt du, wie schwer es für mich war, sie vor Sibylle geheim zu halten?",
+          TextMapId = "voice_ch_char_Landi_vo_topic_04_3"
+        },
+        voice_ch_char_Landi_vo_victory = {
+          ContentDE = "{性别:Ein cleverer Anführer|Eine clevere Anführerin} wie du, sollte selber eine Aufgabe abschließen können. Ich gehe dann mal!",
+          TextMapId = "voice_ch_char_Landi_vo_victory"
+        },
+        voice_ch_char_Landi_vo_welcome = {
+          ContentDE = "Puh ... Ich fühle mich nach dem Aufwachen so erholt. Höre zu, Kumpel. Es macht keinen Sinn, den ganzen Tag zu arbeiten. Deine Aufgabenliste wird nie ein Ende nehmen. Denke daran, dass Entspannung eine Notwendigkeit und kein Luxus ist.",
+          TextMapId = "voice_ch_char_Landi_vo_welcome"
+        },
+        voice_ch_char_Linen_vo_appear = {
+          ContentDE = "Sag schon. Gegen wen wird heute gekämpft?",
+          TextMapId = "voice_ch_char_Linen_vo_appear"
+        },
+        voice_ch_char_Linen_vo_battleidle = {
+          ContentDE = "Wenn du dich nicht bewegst, wirst du nicht lange genug leben, um mich zu bezahlen.",
+          TextMapId = "voice_ch_char_Linen_vo_battleidle"
+        },
+        voice_ch_char_Linen_vo_battlestart = {
+          ContentDE = "Lass uns gehen!",
+          TextMapId = "voice_ch_char_Linen_vo_battlestart"
+        },
+        voice_ch_char_Linen_vo_be_hit_heavy_r01 = {
+          ContentDE = "Das tut weh!",
+          TextMapId = "voice_ch_char_Linen_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Linen_vo_be_hit_heavy_r02 = {
+          ContentDE = "Nicht schlecht.",
+          TextMapId = "voice_ch_char_Linen_vo_be_hit_heavy_r02"
+        },
+        voice_ch_char_Linen_vo_be_hit_r01 = {
+          ContentDE = "Tss.",
+          TextMapId = "voice_ch_char_Linen_vo_be_hit_r01"
+        },
+        voice_ch_char_Linen_vo_be_hit_r02 = {
+          ContentDE = "Ugh.",
+          TextMapId = "voice_ch_char_Linen_vo_be_hit_r02"
+        },
+        voice_ch_char_Linen_vo_birthday = {
+          ContentDE = "Oh, alles Gute zum Geburtstag. Ich habe keine speziellen Glückwünsche. Ich hoffe nur, dass es dir nie an Geld fehlt ... Ich gebe dir auch einen 20 % Rabatt für den heutigen Auftrag. Nett von mir, oder?",
+          TextMapId = "voice_ch_char_Linen_vo_birthday"
+        },
+        voice_ch_char_Linen_vo_companio_01 = {
+          ContentDE = "Kannst du mir von dem nächsten Auftrag direkt erzählen? Dieses Rumgelaber ist ziemlich nervig.",
+          TextMapId = "voice_ch_char_Linen_vo_companio_01"
+        },
+        voice_ch_char_Linen_vo_companio_02 = {
+          ContentDE = "... Hallo Kommandantin.",
+          TextMapId = "voice_ch_char_Linen_vo_companio_02"
+        },
+        voice_ch_char_Linen_vo_companio_03 = {
+          ContentDE = "Du bist ein ausgezeichneter Soldat. Das ist alles, was ich zu sagen habe. Und ... abgesehen von der harten Arbeit solltest du auch gut leben ... Tss, und jetzt verschwinde.",
+          TextMapId = "voice_ch_char_Linen_vo_companio_03"
+        },
+        voice_ch_char_Linen_vo_die_r01 = {
+          ContentDE = "Wer ... ist noch da ...?",
+          TextMapId = "voice_ch_char_Linen_vo_die_r01"
+        },
+        voice_ch_char_Linen_vo_die_r02 = {
+          ContentDE = "Ich ... halte es nicht mehr aus ...",
+          TextMapId = "voice_ch_char_Linen_vo_die_r02"
+        },
+        voice_ch_char_Linen_vo_fail = {
+          ContentDE = "Behalte das für dich, sonst werde ich dich grün und blau schlagen.",
+          TextMapId = "voice_ch_char_Linen_vo_fail"
+        },
+        voice_ch_char_Linen_vo_gain = {
+          ContentDE = "Ich hätte nicht gedacht, dass ich einen Privatauftrag für dich übernehmen würde. Wenn du eine Aufgabe hast, sag es mir einfach. Aber das Honorar muss erst vereinbart werden.",
+          TextMapId = "voice_ch_char_Linen_vo_gain"
+        },
+        voice_ch_char_Linen_vo_idle = {
+          ContentDE = "Nicht schlecht. Ich sollte für diesen Monat genug Geld haben. Ich habe gedacht, dass der Dummkopf Randy alles selbst nehmen würde ... Hmm, wenn ich es nach Hause schicke, sollte der Rest ausreichen, um die Lebenshaltungskosten zu decken.",
+          TextMapId = "voice_ch_char_Linen_vo_idle"
+        },
+        voice_ch_char_Linen_vo_lvup = {
+          ContentDE = "Echt nervig.",
+          TextMapId = "voice_ch_char_Linen_vo_lvup"
+        },
+        voice_ch_char_Linen_vo_revive = {
+          ContentDE = "Komm schon.",
+          TextMapId = "voice_ch_char_Linen_vo_revive"
+        },
+        voice_ch_char_Linen_vo_skill01_r01 = {
+          ContentDE = "Zerstören!",
+          TextMapId = "voice_ch_char_Linen_vo_skill01_r01"
+        },
+        voice_ch_char_Linen_vo_skill01_r02 = {
+          ContentDE = "Ich werde dich plattmachen.",
+          TextMapId = "voice_ch_char_Linen_vo_skill01_r02"
+        },
+        voice_ch_char_Linen_vo_skill02_r01 = {
+          ContentDE = "Du hast es nicht anders gewollt.",
+          TextMapId = "voice_ch_char_Linen_vo_skill02_r01"
+        },
+        voice_ch_char_Linen_vo_skill02_r02 = {
+          ContentDE = "Du bist für die Zeitverschwendung verantwortlich.",
+          TextMapId = "voice_ch_char_Linen_vo_skill02_r02"
+        },
+        voice_ch_char_Linen_vo_skill02_r03 = {
+          ContentDE = "Jetzt bin ich wütend.",
+          TextMapId = "voice_ch_char_Linen_vo_skill02_r03"
+        },
+        voice_ch_char_Linen_vo_topic_01_1 = {
+          ContentDE = "Sibylle? Sie ist die Großkommandantin der 13. Legion.",
+          TextMapId = "voice_ch_char_Linen_vo_topic_01_1"
+        },
+        voice_ch_char_Linen_vo_topic_01_2 = {
+          ContentDE = "Tss, woher soll ich so viel wissen. Sie ist eine Anführerin. Ich führe ihre Befehle aus. Das ist alles.",
+          TextMapId = "voice_ch_char_Linen_vo_topic_01_2"
+        },
+        voice_ch_char_Linen_vo_topic_02_1 = {
+          ContentDE = "Erfahrungen? Was für Erfahrungen denn. Die einzige Erfahrung, die ich kenne, ist, dass es keine Probleme gibt, die ein Schlag nicht lösen kann. Und wenn nicht, dann ist noch ein Schlag notwendig.",
+          TextMapId = "voice_ch_char_Linen_vo_topic_02_1"
+        },
+        voice_ch_char_Linen_vo_topic_02_2 = {
+          ContentDE = "Dann sollte der Schuss einer Schusswaffe das Problem lösen.",
+          TextMapId = "voice_ch_char_Linen_vo_topic_02_2"
+        },
+        voice_ch_char_Linen_vo_topic_02_3 = {
+          ContentDE = "Heh, das ist ja nur ein Beispiel. Wenn du stark genug bist, ist alles möglich. Wenn du weiter Erbsen zählen willst, werde ich dir auch zwei Schläge verpassen.",
+          TextMapId = "voice_ch_char_Linen_vo_topic_02_3"
+        },
+        voice_ch_char_Linen_vo_topic_03_1 = {
+          ContentDE = "Ich habe vor kurzem eine echt tolle Knarre gesehen ... Vergiss es, ich kann nicht nur wegen ihr am Hungertuch nagen. Die alte ist immer noch gut zu nutzen.",
+          TextMapId = "voice_ch_char_Linen_vo_topic_03_1"
+        },
+        voice_ch_char_Linen_vo_topic_03_2 = {
+          ContentDE = "Ist das ... dein Ernst? Du scheint auch nicht mehr Geld zu haben als ich ... Lassen wir das. Ich zweifle nicht an deinem guten Willen. Du musst dich aber nicht für mich in Unkosten stürzen. Ich möchte nicht, dass ich dir etwas schuldig bin.",
+          TextMapId = "voice_ch_char_Linen_vo_topic_03_2"
+        },
+        voice_ch_char_Linen_vo_topic_04_1 = {
+          ContentDE = "Wenn ich nicht arbeite, habe ich nichts zu essen. Die Logik ist doch nicht schwer zu verstehen, oder?",
+          TextMapId = "voice_ch_char_Linen_vo_topic_04_1"
+        },
+        voice_ch_char_Linen_vo_topic_04_2 = {
+          ContentDE = "Das denke ich auch, aber meine Kunden sind anderer Meinung. Sie fragen ständig, ob ein Auftrag abgeschlossen wurde und wenn sie schnell fertig werden muss, liegen sie mir damit in den Ohren. Wenn ich nicht noch eine Familie zum Unterstützen hätte, würde ich ihnen gerne ein paar Nachrichten mit meiner Meinung schicken.",
+          TextMapId = "voice_ch_char_Linen_vo_topic_04_2"
+        },
+        voice_ch_char_Linen_vo_victory = {
+          ContentDE = "Das ist alles? Erbärmlich.",
+          TextMapId = "voice_ch_char_Linen_vo_victory"
+        },
+        voice_ch_char_Linen_vo_welcome = {
+          ContentDE = "Sag, wenn du etwas hast. Wenn nicht, gehe ich einfach und kümmere mich um einen anderen Auftrag.",
+          TextMapId = "voice_ch_char_Linen_vo_welcome"
+        },
+        voice_ch_char_Lise_vo_appear = {
+          ContentDE = "Die 17. Prüfung von Waffen, Versorgungsmaterial und Strom wurde abgeschlossen. Ich warte auf Befehle.",
+          TextMapId = "voice_ch_char_Lise_vo_appear"
+        },
+        voice_ch_char_Lise_vo_battleidle = {
+          ContentDE = "Ich kann hier nicht aufhören. Ich muss weiterkämpfen.",
+          TextMapId = "voice_ch_char_Lise_vo_battleidle"
+        },
+        voice_ch_char_Lise_vo_battlestart = {
+          ContentDE = "Rhythm Fischer macht Meldung! Ich bin bereit für Befehle!",
+          TextMapId = "voice_ch_char_Lise_vo_battlestart"
+        },
+        voice_ch_char_Lise_vo_be_hit_heavy_r01 = {
+          ContentDE = "Nur ein Kratzer.",
+          TextMapId = "voice_ch_char_Lise_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Lise_vo_birthday = {
+          ContentDE = "Geburtstag? Ich war schon lange bei keiner Geburtstagsfeier mehr dabei ... Als ich ein Kind war, haben wir lange im Voraus unsere Familiengeburtstage vorbereitet. Nachdem ich groß wurde, konnte mein junger Bruder und ich uns das ganze Jahr über nicht sehen. Daher hatten wir kein Interesse daran, Geburtstage zu feiern.\nIch habe immer gedacht, dass sobald wir Erfolg haben und ein ordentliches Leben führen, wir eine prunkvolle Geburtstagsfeier wie die wohlhabenden Leute in der Stadt halten können. Kristallleuchter, Sahnekuchen, Seidekleider ... und vieles andere. Aber jetzt haben wir nie wieder diese Chance ...\nAch ... Es tut mir leid, dass ich so viele enttäuschende Sachen erzähle, an einem Tag, der eigentlich gefeiert werden sollte ... Bitte verzeih mir! Obwohl ich meinen eigenen Geburtstag noch nicht feiern kann, ist heute dein Geburtstag und ich schicke dir meine aufrichtigsten Glückwünsche. Ich hoffe, dass du einen schönen Tag hast, mit wichtigen Leuten zusammen bist und für unvergessliche Erinnerungen sorgst.",
+          TextMapId = "voice_ch_char_Lise_vo_birthday"
+        },
+        voice_ch_char_Lise_vo_companio_01 = {
+          ContentDE = "Immer wenn ich etwas sehe, was krumm und schief ist, kann ich nicht anders, als es gerade zu biegen. Aber Fräulein Hilda, bei dir würde so etwas auf keinen Fall passieren. Dein Zuhause ist immer gut organisiert. Es ist echt schön.",
+          TextMapId = "voice_ch_char_Lise_vo_companio_01"
+        },
+        voice_ch_char_Lise_vo_companio_02 = {
+          ContentDE = "Dieser Plan ist erstaunlich detailliert – bis auf die Sekunde genau durchdacht. Ihn Schritt für Schritt umzusetzen, muss wirklich ungemein befriedigend sein. Es ist nur ... schwer zu glauben, dass so etwas von Oberstleutnant Randy stammt.",
+          TextMapId = "voice_ch_char_Lise_vo_companio_02"
+        },
+        voice_ch_char_Lise_vo_companio_03 = {
+          ContentDE = "Würdest du vielleicht ein anderes Stück spielen? Es liegt nicht daran, dass deine Musik nicht schön wäre – das ist sie. Nur ... sie weckt Erinnerungen, über die ich lieber nicht nachdenken möchte.",
+          TextMapId = "voice_ch_char_Lise_vo_companio_03"
+        },
+        voice_ch_char_Lise_vo_die_r01 = {
+          ContentDE = "Tut mir leid ... Ich habe mein Versprechen nicht gehalten ...",
+          TextMapId = "voice_ch_char_Lise_vo_die_r01"
+        },
+        voice_ch_char_Lise_vo_die_r02 = {
+          ContentDE = "Das ... ist nicht schlecht ...",
+          TextMapId = "voice_ch_char_Lise_vo_die_r02"
+        },
+        voice_ch_char_Lise_vo_fail = {
+          ContentDE = "Schon wieder ... konnte ich die Menschen um mich herum nicht beschützen.",
+          TextMapId = "voice_ch_char_Lise_vo_fail"
+        },
+        voice_ch_char_Lise_vo_gain_01 = {
+          ContentDE = "Feldwebel Rhythm Fischer, Eskorte Icelake, 6. Legion von Hyperborea. Was ist los? Wenn es etwas ist, das außerhalb deiner Kontrolle liegt, kann ich helfen – aber betrachte es als persönlichen Gefallen, nicht mehr.",
+          TextMapId = "voice_ch_char_Lise_vo_gain_01"
+        },
+        voice_ch_char_Lise_vo_gain_02 = {
+          ContentDE = "Ja, Herr! Rhythm Fischer, melde mich für ... Oh, du bist es ... Entschuldigung. Ich vergesse oft ... Ich gehöre nicht mehr zur Eskorte. Verzeihe mir.",
+          TextMapId = "voice_ch_char_Lise_vo_gain_02"
+        },
+        voice_ch_char_Lise_vo_idle = {
+          ContentDE = "Gibt es etwas, wobei ich helfen kann? Es ist nicht so, dass ich ein Workaholic wäre – es ist nur ... eine Gewohnheit, schätze ich. Wenn ich nicht beschäftigt bin, fühle ich mich unruhig.",
+          TextMapId = "voice_ch_char_Lise_vo_idle"
+        },
+        voice_ch_char_Lise_vo_lvup = {
+          ContentDE = "Chaotische Ströme ... Wem sollen sie helfen?",
+          TextMapId = "voice_ch_char_Lise_vo_lvup"
+        },
+        voice_ch_char_Lise_vo_revive = {
+          ContentDE = "Hmm ... Ich habe versprochen, weiter zu leben.",
+          TextMapId = "voice_ch_char_Lise_vo_revive"
+        },
+        voice_ch_char_Lise_vo_skill01_r01 = {
+          ContentDE = "Zack!",
+          TextMapId = "voice_ch_char_Lise_vo_skill01_r01"
+        },
+        voice_ch_char_Lise_vo_skill01_r02 = {
+          ContentDE = "Zerberst!",
+          TextMapId = "voice_ch_char_Lise_vo_skill01_r02"
+        },
+        voice_ch_char_Lise_vo_skill02_r01 = {
+          ContentDE = "Der Auftrag ist gleich abgeschlossen.",
+          TextMapId = "voice_ch_char_Lise_vo_skill02_r01"
+        },
+        voice_ch_char_Lise_vo_skill02_r02 = {
+          ContentDE = "Der Strom wird euch ruhig stellen.",
+          TextMapId = "voice_ch_char_Lise_vo_skill02_r02"
+        },
+        voice_ch_char_Lise_vo_skill02_r03 = {
+          ContentDE = "Weil ... ich weiter leben werde!",
+          TextMapId = "voice_ch_char_Lise_vo_skill02_r03"
+        },
+        voice_ch_char_Lise_vo_topic_01_1 = {
+          ContentDE = "Oh ... Das ist dir aufgefallen. Ja, ich habe eine. Sie wurde mir von jemand sehr vertrauten gegeben. Ich behalte sie an einem sicheren Ort, aber ich muss zwangsläufig immer mal wieder schauen, um zu sehen, ob sie nicht verschwunden ist.",
+          TextMapId = "voice_ch_char_Lise_vo_topic_01_1"
+        },
+        voice_ch_char_Lise_vo_topic_01_2 = {
+          ContentDE = "Eigentlich kann ich nur ein Lied spielen, welches mir von meiner Familie beigebracht worden ist. Ich bin auch kein schneller Lerner, da ich nicht gut in Dingen wie Musik bin, die emotionale Schwankungen erfordern ...",
+          TextMapId = "voice_ch_char_Lise_vo_topic_01_2"
+        },
+        voice_ch_char_Lise_vo_topic_01_3 = {
+          ContentDE = "Aber immer, wenn ich zu angespannt oder mitgerissen bin, greife ich danach. Es ist wie ein Anker – eine Erinnerung an die Dinge, die wichtig sind, an die Dinge, denen ich vertrauen kann. Es hilft mir immer, wieder Ruhe zu finden.",
+          TextMapId = "voice_ch_char_Lise_vo_topic_01_3"
+        },
+        voice_ch_char_Lise_vo_topic_01_4 = {
+          ContentDE = "Viele meiner Kameraden suchen ärztliche Hilfe aufgrund von Stress. Sie benötigen Ruhe oder Aufregung. Ich benötige nichts davon, ganz gleich, ob mein Herz langsam oder schnell schlägt. Die Mundharmonika hilft mir, meinen normalen Rhythmus wieder zu erlangen.",
+          TextMapId = "voice_ch_char_Lise_vo_topic_01_4"
+        },
+        voice_ch_char_Lise_vo_topic_02_1 = {
+          ContentDE = "Es geht nicht schlecht. Die Legion ist ein Ort, an dem du belohnt wirst, solange du hart arbeitest. Ich werde jetzt anerkannt und habe einige Untergebene. Ich kann ihnen auch befehlen, Charons und Solas gleich zu behandeln.",
+          TextMapId = "voice_ch_char_Lise_vo_topic_02_1"
+        },
+        voice_ch_char_Lise_vo_topic_02_2 = {
+          ContentDE = "Ich habe gehört, dass sich eine Menge Leute beklagen, dass die Legion zu streng mit den Charons ist und ich kann mein bestes versuchen, diese Kritik verstummen zu lassen ... Ich hoffe, dass die Legion langfristig betrachtet in den Augen der Menschen sich etwas verändern kann.",
+          TextMapId = "voice_ch_char_Lise_vo_topic_02_2"
+        },
+        voice_ch_char_Lise_vo_topic_02_3 = {
+          ContentDE = "Die Zahl wird langsam steigen. Es gab früher in der Legion nicht einen einzigen Charon. Obwohl es nicht viel gibt, was ich tun kann, solange ich meine Untergebenen so unterrichte, werden die Konflikte zwischen Charons und Solas weniger werden.",
+          TextMapId = "voice_ch_char_Lise_vo_topic_02_3"
+        },
+        voice_ch_char_Lise_vo_topic_02_4 = {
+          ContentDE = "Ja, alle gleich zu behandeln, hart zu arbeiten und alle vor Filthoid und vor Verderbnis zu beschützen, wird auf jeden Fall die Situation der Charons verbessern und die Probleme in Icelake lindern.",
+          TextMapId = "voice_ch_char_Lise_vo_topic_02_4"
+        },
+        voice_ch_char_Lise_vo_topic_03_1 = {
+          ContentDE = "Ich kann nicht sagen, dass ich Verantwortungsgefühl habe. Ich folge nur allen Bestimmungen der Eskorte.",
+          TextMapId = "voice_ch_char_Lise_vo_topic_03_1"
+        },
+        voice_ch_char_Lise_vo_topic_03_2 = {
+          ContentDE = "Gemäß der Bestimmungen ist es nicht erlaubt, die Worte und Taten von Kameraden zu diskutieren. Dies wird sonst als ein Verstoß gegen die Militärdisziplin betrachtet.",
+          TextMapId = "voice_ch_char_Lise_vo_topic_03_2"
+        },
+        voice_ch_char_Lise_vo_topic_03_3 = {
+          ContentDE = "Aber um ehrlich zu sein, weiß ich nicht, was in ihnen vorgeht. Sie denken vielleicht, dass die Eskorte nur ein gewöhnlicher Job ist und das es nichts ausmacht, wie sie sich verhalten, solange sie nicht von ihrem Vorgesetzten erwischt werden.",
+          TextMapId = "voice_ch_char_Lise_vo_topic_03_3"
+        },
+        voice_ch_char_Lise_vo_topic_03_4 = {
+          ContentDE = "Ich finde, dass die Situation nicht so sein sollte. Die Leute sollten gemäß fester Regeln leben. Andernfalls werden sie kontinuierlich die Erwartungen an sich selbst reduzieren und letztlich mit Ratten in der Gosse enden.",
+          TextMapId = "voice_ch_char_Lise_vo_topic_03_4"
+        },
+        voice_ch_char_Lise_vo_topic_04_1 = {
+          ContentDE = "Nein ... Danke. Ich sehe nicht wirklich gerne in den Spiegel. Meine Hörner zu sehen, macht mich immer ... unwohl.",
+          TextMapId = "voice_ch_char_Lise_vo_topic_04_1"
+        },
+        voice_ch_char_Lise_vo_topic_04_2 = {
+          ContentDE = "Nein, ich sage nichts Abwertendes über das Aussehen unseres Clans. Ich denke nur, dass wenn es etwas symmetrischer wachsen würde, es schöner anzuschauen wäre. Ach, ich spreche auch nicht über dein Horn ...",
+          TextMapId = "voice_ch_char_Lise_vo_topic_04_2"
+        },
+        voice_ch_char_Lise_vo_topic_05_1 = {
+          ContentDE = "Sie ist noch da. Sie wird jetzt nur so schwer ... Ich weiß nicht, ob ich sie noch halten und weiter spielen kann.",
+          TextMapId = "voice_ch_char_Lise_vo_topic_05_1"
+        },
+        voice_ch_char_Lise_vo_topic_05_2 = {
+          ContentDE = "Schließlich hat die Mundharmonika mal all meine Erwartungen und Träume in sich getragen.",
+          TextMapId = "voice_ch_char_Lise_vo_topic_05_2"
+        },
+        voice_ch_char_Lise_vo_topic_05_3 = {
+          ContentDE = "Danke. Ich verspreche, wenn der Tag kommt, an dem ich es wieder aufnehmen kann – wenn ich bereit bin, ein neues Stück zu lernen –, wirst du {性别:der Erste sein, der|die Erste sein, die} es hört.",
+          TextMapId = "voice_ch_char_Lise_vo_topic_05_3"
+        },
+        voice_ch_char_Lise_vo_topic_06_1 = {
+          ContentDE = "Ich nehme hier und da Gelegenheitsarbeiten an. Das reicht, um meine Ausgaben zu decken. Aber ehrlich gesagt, geht es mir beim Geldverdienen nicht mehr wirklich darum. Heutzutage bedeutet Arbeit für mich eher, beschäftigt zu bleiben.",
+          TextMapId = "voice_ch_char_Lise_vo_topic_06_1"
+        },
+        voice_ch_char_Lise_vo_topic_06_2 = {
+          ContentDE = "Ja ... Arbeit gibt mir einen Sinn. Sie macht mich glücklich. Wenn ich beschäftigt bin, fühlt sich selbst das Sonnenlicht ein wenig wärmer an.",
+          TextMapId = "voice_ch_char_Lise_vo_topic_06_2"
+        },
+        voice_ch_char_Lise_vo_topic_07_1 = {
+          ContentDE = "Besser, als wäre ich geblieben, nehme ich an. Die Legion war einst meine Zuflucht, der Ort, an dem ich dachte, meine Träume könnten Flügel bekommen. Doch diese Träume ... sie erwiesen sich als Illusionen, und jene sogenannte Zuflucht war eine Hölle, die meinen Geliebten in einen endlosen Abgrund der Verzweiflung riss.",
+          TextMapId = "voice_ch_char_Lise_vo_topic_07_1"
+        },
+        voice_ch_char_Lise_vo_topic_07_2 = {
+          ContentDE = "Nun brennt mein Herz nach Rache, und doch kann ich mein Schwert nicht gegen jene richten, die ich einst Kameraden nannte. Ich fühle mich verloren ... Sag mir, was soll ich tun?",
+          TextMapId = "voice_ch_char_Lise_vo_topic_07_2"
+        },
+        voice_ch_char_Lise_vo_topic_07_3 = {
+          ContentDE = "... Tut mir leid. Ich habe meine Fassung verloren. Du hast recht. Ich sollte die Antwort selbst finden, anstatt das Problem auf dich abzuwälzen. Auch wenn es lange dauern könnte.",
+          TextMapId = "voice_ch_char_Lise_vo_topic_07_3"
+        },
+        voice_ch_char_Lise_vo_victory = {
+          ContentDE = "Leider ist alles so schnell zu Ende gegangen. Bring mich zum nächsten Auftrag. Du erhältst den Sieg, und ich bleibe beschäftigt.",
+          TextMapId = "voice_ch_char_Lise_vo_victory"
+        },
+        voice_ch_char_Lise_vo_welcome = {
+          ContentDE = "Die Patrouille des Stützpunktes ist heute zu Ende gegangen. Keine gefährlichen Organismen gefunden. Keine Risse in der Mauer erkannt. Keine verdächtigen Signale entdeckt. Keine potentiellen Bedrohungen und das tägliche Leben kann seinen gewohnten Gang weitergehen. Der Bericht ist zu Ende.",
+          TextMapId = "voice_ch_char_Lise_vo_welcome"
+        },
+        voice_ch_char_Maer_vo_appear = {
+          ContentDE = "Wohin geht’s heute zum Sammeln?",
+          TextMapId = "voice_ch_char_Maer_vo_appear"
+        },
+        voice_ch_char_Maer_vo_battleidle = {
+          ContentDE = "Noch nicht genug! Ich kann noch mehr einsammeln!",
+          TextMapId = "voice_ch_char_Maer_vo_battleidle"
+        },
+        voice_ch_char_Maer_vo_battlestart = {
+          ContentDE = "Mal sehen, was für Schätze wir diesmal finden!",
+          TextMapId = "voice_ch_char_Maer_vo_battlestart"
+        },
+        voice_ch_char_Maer_vo_be_hit_heavy_r01 = {
+          ContentDE = "Das tut wirklich weh!",
+          TextMapId = "voice_ch_char_Maer_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Maer_vo_be_hit_heavy_r02 = {
+          ContentDE = "Auaaua!",
+          TextMapId = "voice_ch_char_Maer_vo_be_hit_heavy_r02"
+        },
+        voice_ch_char_Maer_vo_birthday = {
+          ContentDE = "Alles Gute zum Geburtstag! Hier, nimm das – ein kleines Fettschweif-Plüschtier, selbst gemacht! Sieht genauso aus wie meins. Ich weiß doch, du wolltest schon immer mal Fettschweif streicheln, oder? Hehe, die schweigende Detektivin durchschaut einfach alles!",
+          TextMapId = "voice_ch_char_Maer_vo_birthday"
+        },
+        voice_ch_char_Maer_vo_companio_01 = {
+          ContentDE = "Schau dir den Stoff, das Abzeichen und das Leder an! Frau Hilda, du bist mein Engel! Wenn du wieder solcher zweifelhaft erworbenen Güter hast, die du diskret loswerden musst, komm einfach zu mir! Du kannst dich darauf verlassen, dass ich mich gut darum kümmere!",
+          TextMapId = "voice_ch_char_Maer_vo_companio_01"
+        },
+        voice_ch_char_Maer_vo_companio_02 = {
+          ContentDE = "Fina! Lange nicht gesehen! Willst du wissen, wie es mit „Schneekatzen-Ranger & Orangenkatzen-Detektiv“ weitergeht? Na gut! Ich hole mir nur schnell einen Hocker, dann erzähle ich dir alles ganz gemütlich!",
+          TextMapId = "voice_ch_char_Maer_vo_companio_02"
+        },
+        voice_ch_char_Maer_vo_companio_03 = {
+          ContentDE = "Liebe Frau Wächterin, ich schwöre, ich bin eine ehrliche Bürgerin! Ich habe nichts gestohlen, nichts geraubt. Ich nehme nur ein bisschen Essensreste aus den Mülleimern, um satt zu werden. Selbst Ihre Hingabe erstreckt sich doch nicht auf Müll, oder?",
+          TextMapId = "voice_ch_char_Maer_vo_companio_03"
+        },
+        voice_ch_char_Maer_vo_companio_04 = {
+          ContentDE = "Du führst ja ein echt kärgliches Leben! Mensch, du Armer ... Willst du mit mir zusammen Müll sammeln? Vielleicht wird dein Leben dann sogar etwas besser!",
+          TextMapId = "voice_ch_char_Maer_vo_companio_04"
+        },
+        voice_ch_char_Maer_vo_companio_05 = {
+          ContentDE = "Die allerliebste, wunderschöne Camilla! Ich habe da ein kleines Problemchen und brauche deine Hilfe. Diesmal ist es wirklich das letzte Mal! Also ... das letzte Mal diesen Monat! Du hilfst mir doch, oder?",
+          TextMapId = "voice_ch_char_Maer_vo_companio_05"
+        },
+        voice_ch_char_Maer_vo_die_r01 = {
+          ContentDE = "Werde ich auch ... recycelt ...?",
+          TextMapId = "voice_ch_char_Maer_vo_die_r01"
+        },
+        voice_ch_char_Maer_vo_die_r02 = {
+          ContentDE = "Ich will wirklich ... zurück nach Icelake ...",
+          TextMapId = "voice_ch_char_Maer_vo_die_r02"
+        },
+        voice_ch_char_Maer_vo_fail = {
+          ContentDE = "Warensammeln ... fehlgeschlagen ...",
+          TextMapId = "voice_ch_char_Maer_vo_fail"
+        },
+        voice_ch_char_Maer_vo_gain_1 = {
+          ContentDE = "Hey, {性别:Fremder|Fremde}! Willkommen in Icelake! Falls du dich hier nicht willkommen fühlst, dann lass mich, Margie, dir zeigen, wie es hier wirklich läuft! Zuerst fangen wir doch damit an, ein paar „Überraschungsmülleimer“ zu öffnen!",
+          TextMapId = "voice_ch_char_Maer_vo_gain_1"
+        },
+        voice_ch_char_Maer_vo_gain_2 = {
+          ContentDE = "Was?! Du hast schon von meinem Titel „Prinzessin Mülleimer“ gehört?! Uaaah ... Bitte mach da bloß nicht mit! Nenn mich einfach Margie, okay? Ich bin keine Prinzessin, nur eine kleine Schrottsammlerin in Icelake.",
+          TextMapId = "voice_ch_char_Maer_vo_gain_2"
+        },
+        voice_ch_char_Maer_vo_idle = {
+          ContentDE = "Mmh ... schönes Wetter. Es ist perfekt, um ein paar Blumen zu pflücken und gut zu duften! {nickname}, willst du mitkommen?",
+          TextMapId = "voice_ch_char_Maer_vo_idle"
+        },
+        voice_ch_char_Maer_vo_lvup = {
+          ContentDE = "Wow! Der Sack zum Sammeln ist ja viel größer geworden!",
+          TextMapId = "voice_ch_char_Maer_vo_lvup"
+        },
+        voice_ch_char_Maer_vo_revive = {
+          ContentDE = "Aus Müll wird Schatz!",
+          TextMapId = "voice_ch_char_Maer_vo_revive"
+        },
+        voice_ch_char_Maer_vo_skill01_r01 = {
+          ContentDE = "Recycelbar!",
+          TextMapId = "voice_ch_char_Maer_vo_skill01_r01"
+        },
+        voice_ch_char_Maer_vo_skill01_r02 = {
+          ContentDE = "Nicht recycelbar!",
+          TextMapId = "voice_ch_char_Maer_vo_skill01_r02"
+        },
+        voice_ch_char_Maer_vo_skill02_r01 = {
+          ContentDE = "Überflüssiger Müll – der muss verbrannt werden!",
+          TextMapId = "voice_ch_char_Maer_vo_skill02_r01"
+        },
+        voice_ch_char_Maer_vo_skill02_r02 = {
+          ContentDE = "Ihr seid allesamt Müll!",
+          TextMapId = "voice_ch_char_Maer_vo_skill02_r02"
+        },
+        voice_ch_char_Maer_vo_skill02_r03 = {
+          ContentDE = "Verbrennen! Vergraben! Unschädlich machen!",
+          TextMapId = "voice_ch_char_Maer_vo_skill02_r03"
+        },
+        voice_ch_char_Maer_vo_topic_01_1 = {
+          ContentDE = "Hmm ... im Grunde geht’s darum, für weggeworfene Dinge passende Besitzer zu finden. Und vielleicht auch darum, Menschen, die unter Mangel leiden, ein besseres Leben zu ermöglichen.",
+          TextMapId = "voice_ch_char_Maer_vo_topic_01_1"
+        },
+        voice_ch_char_Maer_vo_topic_01_2 = {
+          ContentDE = "Zum Beispiel, wenn man die ausrangierten Samtvorhänge eines Adligen in warme Wintermäntel für ältere Menschen verwandelt oder weggeworfene Puppen zu Kindern bringt, deren einziges Spielzeug Kieselsteine sind – sie werden sich noch lange darüber freuen.",
+          TextMapId = "voice_ch_char_Maer_vo_topic_01_2"
+        },
+        voice_ch_char_Maer_vo_topic_01_3 = {
+          ContentDE = "Einmal habe ich ein kaputtes, weggeworfenes Bücherregal nach Hause geschleppt – fast vor Erschöpfung zusammengebrochen – aber kurz darauf kamen eine Mutterkatze und ihre Kätzchen vorbei und haben darauf von morgens bis abends herumgetobt.",
+          TextMapId = "voice_ch_char_Maer_vo_topic_01_3"
+        },
+        voice_ch_char_Maer_vo_topic_01_4 = {
+          ContentDE = "So ist die Arbeit einer Schrottsammlerin! Meist sind es nur Kleinigkeiten, aber langweilig wird es nie. Na, hast du Lust? Willst du mitmachen?",
+          TextMapId = "voice_ch_char_Maer_vo_topic_01_4"
+        },
+        voice_ch_char_Maer_vo_topic_02_1 = {
+          ContentDE = "Pssst! Das ist unser höchstes Geheimnis! Wenn du mir damals nicht beim Fangen des Diebes geholfen hättest, hätte ich dir das niemals verraten!",
+          TextMapId = "voice_ch_char_Maer_vo_topic_02_1"
+        },
+        voice_ch_char_Maer_vo_topic_02_2 = {
+          ContentDE = "Auf der Karte sind alle Mülleimer in Icelake eingezeichnet. Ich habe die Mülleimer mit den besten Schätzen markiert und sie durch größere ersetzt. Und die Zeiten, wann wir was Gutes holen, habe ich natürlich genau durchgerechnet!",
+          TextMapId = "voice_ch_char_Maer_vo_topic_02_2"
+        },
+        voice_ch_char_Maer_vo_topic_02_3 = {
+          ContentDE = "Aber in unserem Job gibt es keine Garantie. Wie viel man findet, hängt meist einfach vom Glück ab ...",
+          TextMapId = "voice_ch_char_Maer_vo_topic_02_3"
+        },
+        voice_ch_char_Maer_vo_topic_02_4 = {
+          ContentDE = "Stimmt. Wusste ich’s doch – du bist ein kluger Kopf!",
+          TextMapId = "voice_ch_char_Maer_vo_topic_02_4"
+        },
+        voice_ch_char_Maer_vo_topic_03_1 = {
+          ContentDE = "Nein, du hast es falsch verstanden! Ich liebe Icelake von ganzem Herzen. Ich erinnere mich nur oft an die Zeit, als ich mit meinem Papa durch die Schneefelder gestreift bin. Dort habe ich meine ganze Kindheit verbracht.",
+          TextMapId = "voice_ch_char_Maer_vo_topic_03_1"
+        },
+        voice_ch_char_Maer_vo_topic_03_2 = {
+          ContentDE = "Von hier aus sehen die Schneefelder so schön aus wie ein Märchenreich aus Schnee und Eis. Aber wenn man weiter hineingeht, fühlt man sich winzig klein. Und egal, wie weit man durch kniehohen Schnee stapft, die Landschaft bleibt immer gleich.",
+          TextMapId = "voice_ch_char_Maer_vo_topic_03_2"
+        },
+        voice_ch_char_Maer_vo_topic_03_3 = {
+          ContentDE = "Ich hasse diese Zeit nicht, aber am meisten liebe ich trotzdem die lebendige, laute Icelake!",
+          TextMapId = "voice_ch_char_Maer_vo_topic_03_3"
+        },
+        voice_ch_char_Maer_vo_topic_04_1 = {
+          ContentDE = "Das ist die große Katze, mit der ich damals durch die Schneefelder gestreift bin! Sie heißt „Fettschweif“. Normalerweise muss ich sie mit Trockenfleisch bestechen, damit sie sich streicheln lässt. Aber dieses Fell ... hehehe ... einfach wunderbar!",
+          TextMapId = "voice_ch_char_Maer_vo_topic_04_1"
+        },
+        voice_ch_char_Maer_vo_topic_04_2 = {
+          ContentDE = "Mmh ... sie macht bestimmt kein „Miau“, eher so „Auuuuh ... Auuuuh“!",
+          TextMapId = "voice_ch_char_Maer_vo_topic_04_2"
+        },
+        voice_ch_char_Maer_vo_topic_04_3 = {
+          ContentDE = "Fettschweif zieht das wilde Leben dem Stadtleben vor. Wir mussten uns trennen, aber sie wird immer ein Teil von mir bleiben – so wie die Schneefelder.",
+          TextMapId = "voice_ch_char_Maer_vo_topic_04_3"
+        },
+        voice_ch_char_Maer_vo_topic_05_1 = {
+          ContentDE = "Nein, das bin ich nicht! Ich bin viel zu erwachsen für so einen kindischen Titel! Bitte, ich flehe dich an, nenn mich nie wieder so!",
+          TextMapId = "voice_ch_char_Maer_vo_topic_05_1"
+        },
+        voice_ch_char_Maer_vo_topic_05_2 = {
+          ContentDE = "Äh, das wäre – Frau Margie, die schweigende Detektivin, eine einsame Schattenwandlerin der Stadt! Heute werde ich dir, wie immer, die Geheimnisse von Icelake enthüllen!",
+          TextMapId = "voice_ch_char_Maer_vo_topic_05_2"
+        },
+        voice_ch_char_Maer_vo_topic_05_3 = {
+          ContentDE = "Hehe! Das ist doch ein passender Spitzname, oder?",
+          TextMapId = "voice_ch_char_Maer_vo_topic_05_3"
+        },
+        voice_ch_char_Maer_vo_victory = {
+          ContentDE = "Große Beute heute!",
+          TextMapId = "voice_ch_char_Maer_vo_victory"
+        },
+        voice_ch_char_Maer_vo_welcome = {
+          ContentDE = "Ach, übrigens, als ich vorbeikam, habe ich gleich mal den Schnee vor deiner Tür weggeräumt! Gerührt, oder? Da willst du mich doch bestimmt auf einen heißen Kakao einladen, hm?",
+          TextMapId = "voice_ch_char_Maer_vo_welcome"
+        },
+        voice_ch_char_NanzhuLight_vo_appear = {
+          ContentDE = "Die Welt außerhalb von Purgatorio-Insel widerspricht allen Darstellungen – weiter, aber grausamer. Das kann nicht ihr wahres Schicksal sein. Deshalb muss sich etwas ändern.",
+          TextMapId = "voice_ch_char_NanzhuLight_vo_appear"
+        },
+        voice_ch_char_NanzhuLight_vo_battleidle = {
+          ContentDE = "Wohin als Nächstes? Lass mich die Karte prüfen ... Eh ... Ich weiß, Karten mögen mich nicht.",
+          TextMapId = "voice_ch_char_NanzhuLight_vo_battleidle"
+        },
+        voice_ch_char_NanzhuLight_vo_battlestart = {
+          ContentDE = "Dieses Schwert verrichtet noch immer seine Pflicht.",
+          TextMapId = "voice_ch_char_NanzhuLight_vo_battlestart"
+        },
+        voice_ch_char_NanzhuLight_vo_die_r01 = {
+          ContentDE = "Ich kann nicht aufhören ... nicht jetzt ...",
+          TextMapId = "voice_ch_char_NanzhuLight_vo_die_r01"
+        },
+        voice_ch_char_NanzhuLight_vo_die_r02 = {
+          ContentDE = "Wenn ich doch nur zurückkäme an den Ort, den wir uns versprochen haben ...",
+          TextMapId = "voice_ch_char_NanzhuLight_vo_die_r02"
+        },
+        voice_ch_char_NanzhuLight_vo_fail = {
+          ContentDE = "Beim nächsten Mal werden sie dafür bezahlen.  ",
+          TextMapId = "voice_ch_char_NanzhuLight_vo_fail"
+        },
+        voice_ch_char_NanzhuLight_vo_lvup = {
+          ContentDE = "Jeder Schritt, den ich getan habe, jedes Wort, das ich hörte, und jede Seele, der ich begegnete – all das hat meinen Blick auf diese Welt geschärft und die Schneide meiner Klinge geschärft.",
+          TextMapId = "voice_ch_char_NanzhuLight_vo_lvup"
+        },
+        voice_ch_char_NanzhuLight_vo_revive = {
+          ContentDE = "War das ... nur ein Albtraum?",
+          TextMapId = "voice_ch_char_NanzhuLight_vo_revive"
+        },
+        voice_ch_char_NanzhuLight_vo_skill01_r01 = {
+          ContentDE = "Verschwinde.",
+          TextMapId = "voice_ch_char_NanzhuLight_vo_skill01_r01"
+        },
+        voice_ch_char_NanzhuLight_vo_skill01_r02 = {
+          ContentDE = "Lichtschnitt.",
+          TextMapId = "voice_ch_char_NanzhuLight_vo_skill01_r02"
+        },
+        voice_ch_char_NanzhuLight_vo_skill02_r01 = {
+          ContentDE = "Diesmal werde ich der Schild sein.",
+          TextMapId = "voice_ch_char_NanzhuLight_vo_skill02_r01"
+        },
+        voice_ch_char_NanzhuLight_vo_skill02_r02 = {
+          ContentDE = "Für die Zukunft, der wir gemeinsam entgegentreten werden.",
+          TextMapId = "voice_ch_char_NanzhuLight_vo_skill02_r02"
+        },
+        voice_ch_char_NanzhuLight_vo_skill02_r03 = {
+          ContentDE = "Zurück ins Nebelmeer.",
+          TextMapId = "voice_ch_char_NanzhuLight_vo_skill02_r03"
+        },
+        voice_ch_char_NanzhuLight_vo_victory = {
+          ContentDE = "Noch ein Schritt nach vorn. Solange ich weitergehe, werde ich es schaffen.",
+          TextMapId = "voice_ch_char_NanzhuLight_vo_victory"
+        },
+        voice_ch_char_Nifu_vo_appear = {
+          ContentDE = "Ich werde alles tun, was in meiner Macht steht.",
+          TextMapId = "voice_ch_char_Nifu_vo_appear"
+        },
+        voice_ch_char_Nifu_vo_battleidle = {
+          ContentDE = "Wenn du müde bist, zwing dich nicht. Ruh dich hier eine Weile aus.",
+          TextMapId = "voice_ch_char_Nifu_vo_battleidle"
+        },
+        voice_ch_char_Nifu_vo_battlestart = {
+          ContentDE = "So wache ich am Ufer dieses Flusses des Lebens.",
+          TextMapId = "voice_ch_char_Nifu_vo_battlestart"
+        },
+        voice_ch_char_Nifu_vo_be_hit_heavy_r01 = {
+          ContentDE = "... Ich bin unverletzt.",
+          TextMapId = "voice_ch_char_Nifu_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Nifu_vo_be_hit_heavy_r02 = {
+          ContentDE = "Geduld wird mich leiten.",
+          TextMapId = "voice_ch_char_Nifu_vo_be_hit_heavy_r02"
+        },
+        voice_ch_char_Nifu_vo_birthday = {
+          ContentDE = "Kind, du hast ein weiteres Jahr heil überstanden. Das freut mich von Herzen.\nKomm, wünsch dir etwas. In deinem Alter solltest du voller Sehnsucht und Hoffnung in die Zukunft blicken.\nKein Fluss fließt ewig ruhig. Doch selbst wenn dich Dornen verletzen oder dich Irrwege in die Irre führen, wünsche ich dir, dass du mutig weitergehst – und eines Tages, wenn du das Ufer erreichst, deine gesamte Reise von Herzen lieben kannst.\nWenn du dich verloren oder hilflos fühlst, oder einfach nur eine Geschichte hören möchtest, werde ich dich immer mit offenen Armen empfangen. Ich werde für dich beten, dich segnen ... für immer.",
+          TextMapId = "voice_ch_char_Nifu_vo_birthday"
+        },
+        voice_ch_char_Nifu_vo_companio_01 = {
+          ContentDE = "Man kann seiner Vergangenheit nicht wirklich entkommen. Eines Tages wirst du dich ihr stellen müssen ... Ich hoffe, bis dahin hast du die Kraft, ihr entgegenzutreten.",
+          TextMapId = "voice_ch_char_Nifu_vo_companio_01"
+        },
+        voice_ch_char_Nifu_vo_companio_02 = {
+          ContentDE = "Mädchen, du trägst eine Aura, die mir sehr vertraut ist. Bist du vielleicht, so wie ich, jemand aus alter Zeit?",
+          TextMapId = "voice_ch_char_Nifu_vo_companio_02"
+        },
+        voice_ch_char_Nifu_vo_companio_03 = {
+          ContentDE = "Hallo, Kind. Hehe ... ja, wir tragen ähnliche Hörner. Vielleicht verbindet uns etwas aus der Vergangenheit. Aber das ist keine Geschichte von dir. Leg sie beiseite und folge dem Weg, den dein Herz begehrt.",
+          TextMapId = "voice_ch_char_Nifu_vo_companio_03"
+        },
+        voice_ch_char_Nifu_vo_companio_04 = {
+          ContentDE = "Ich trage lange Erinnerungen in mir, doch vieles, was ich erlebte, war voller Gnadenlosigkeiten. Vielleicht ist Vergessen nicht immer ein Unglück. Glaube mir: Die wirklich wichtigen Dinge werden schließlich den Weg zu dir zurückfinden – auch wenn du sie längst vergessen hast.",
+          TextMapId = "voice_ch_char_Nifu_vo_companio_04"
+        },
+        voice_ch_char_Nifu_vo_die_r01 = {
+          ContentDE = "Keine Sorge. Wie immer wird es bald ...",
+          TextMapId = "voice_ch_char_Nifu_vo_die_r01"
+        },
+        voice_ch_char_Nifu_vo_die_r02 = {
+          ContentDE = "Genieße einfach diesen Augenblick des Schlummers.",
+          TextMapId = "voice_ch_char_Nifu_vo_die_r02"
+        },
+        voice_ch_char_Nifu_vo_fail = {
+          ContentDE = "Macht nichts. Sieg und Niederlage sind vergänglich. Sammle dich und beginne von Neuem.",
+          TextMapId = "voice_ch_char_Nifu_vo_fail"
+        },
+        voice_ch_char_Nifu_vo_gain = {
+          ContentDE = "Ich bin Nifle, die Fährfrau des Nebelmeers. Hab keine Angst. Dieser Ort führt nicht zum Nebelmeer, und du bist auch keine wandernde Seele. Sieh mich einfach als eine Vorübergehende ... oder als Zeugin deiner Wege.",
+          TextMapId = "voice_ch_char_Nifu_vo_gain"
+        },
+        voice_ch_char_Nifu_vo_idle = {
+          ContentDE = "In diesem Land voller Streit ist es schon etwas Schönes, einen friedlichen Ort für sich zu haben und einen Moment der Entspannung zu genießen.",
+          TextMapId = "voice_ch_char_Nifu_vo_idle"
+        },
+        voice_ch_char_Nifu_vo_lvup = {
+          ContentDE = "Wie in jedem Frühling, wenn das Gras aus der Erde sprießt und die Bäume neue Zweige treiben.",
+          TextMapId = "voice_ch_char_Nifu_vo_lvup"
+        },
+        voice_ch_char_Nifu_vo_revive = {
+          ContentDE = "Es ist noch nicht an der Zeit zu gehen.",
+          TextMapId = "voice_ch_char_Nifu_vo_revive"
+        },
+        voice_ch_char_Nifu_vo_skill01_r01 = {
+          ContentDE = "Samsara kreist unaufhörlich.",
+          TextMapId = "voice_ch_char_Nifu_vo_skill01_r01"
+        },
+        voice_ch_char_Nifu_vo_skill01_r02 = {
+          ContentDE = "Der Abend weicht dem Tag.",
+          TextMapId = "voice_ch_char_Nifu_vo_skill01_r02"
+        },
+        voice_ch_char_Nifu_vo_skill02_r01 = {
+          ContentDE = "Wie die barmherzigen Tränen von Embla.",
+          TextMapId = "voice_ch_char_Nifu_vo_skill02_r01"
+        },
+        voice_ch_char_Nifu_vo_skill02_r02 = {
+          ContentDE = "Wie jeder Fluss, der zum Nebelmeer zurückkehrt.",
+          TextMapId = "voice_ch_char_Nifu_vo_skill02_r02"
+        },
+        voice_ch_char_Nifu_vo_skill02_r03 = {
+          ContentDE = "Sei still, verlorene Seele, folge meiner Führung.",
+          TextMapId = "voice_ch_char_Nifu_vo_skill02_r03"
+        },
+        voice_ch_char_Nifu_vo_topic_01_1 = {
+          ContentDE = "Ja. Im Laufe der Zeit bin ich durch jeden Winkel Atlasias gereist – oder vielleicht eher gewandert. Ich habe jeden Zentimeter dieses Landes betreten und jedes Sandkorn mit meinen Fingerspitzen berührt.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_01_1"
+        },
+        voice_ch_char_Nifu_vo_topic_01_2 = {
+          ContentDE = "Wenn du genug Orte bereist hast, wirst du erkennen, dass sich die Landschaften kaum voneinander unterscheiden. Ob der Schnee aus dem Norden, der Sand von Khemet oder der Schornsteinrauch von Huaxu – all das ist letztlich nur eine andere Art von Waldnebel.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_01_2"
+        },
+        voice_ch_char_Nifu_vo_topic_01_3 = {
+          ContentDE = "Wenn ich jedoch einen Ort nennen müsste ... wären es dann die Berge und Wälder von Aethyrie. Die Luft dort schenkt mir die größte Ruhe.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_01_3"
+        },
+        voice_ch_char_Nifu_vo_topic_01_4 = {
+          ContentDE = "Das wirst du.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_01_4"
+        },
+        voice_ch_char_Nifu_vo_topic_01_5 = {
+          ContentDE = "Wenn du eines Tages den Smaragdwald besuchst, bring bitte zur Grüße einen Strauß weißer Astern dorthin. Unter seiner Erde ruhen meine Freunde, mein Kind und das Mädchen, das ich einst war.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_01_5"
+        },
+        voice_ch_char_Nifu_vo_topic_02_1 = {
+          ContentDE = "Das Nebelmeer ist Ursprung und Ziel aller Lebewesen. Alles kehrt ins Nebelmeer zurück, und aus ihm entsteht neues Leben … so wie sterbende Wolken als Regen zur Erde fallen und daraus Blumen erblühen.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_02_1"
+        },
+        voice_ch_char_Nifu_vo_topic_02_2 = {
+          ContentDE = "Ich glaube schon. Eines Tages wirst du ins Nebelmeer heimkehren – in die Arme der Mutter Embla.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_02_2"
+        },
+        voice_ch_char_Nifu_vo_topic_02_3 = {
+          ContentDE = "Mein Kind, liebe das Leben in all seinen Formen, doch fürchte nicht sein Ende. Der Tod ist kein Schmerz, nur der unvermeidliche Schlusspunkt des Lebens.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_02_3"
+        },
+        voice_ch_char_Nifu_vo_topic_02_4 = {
+          ContentDE = "Wenn du müde bist, ruhe dich einen Moment in meinen Armen aus ... Fürchte dich nicht, es ist kein ewiger Schlaf. Es gibt jetzt noch vieles, das du erleben musst.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_02_4"
+        },
+        voice_ch_char_Nifu_vo_topic_03_1 = {
+          ContentDE = "Oh? Das überrascht dich? Um die Wahrheit zu sagen: Während der Großen Wanderung war ich eine Kriegerin an der Front – eine geübte Nahkämpferin.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_03_1"
+        },
+        voice_ch_char_Nifu_vo_topic_03_2 = {
+          ContentDE = "Es war zwar vor sehr langer Zeit, doch an die grundlegende Kampftechnik erinnere ich mich noch.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_03_2"
+        },
+        voice_ch_char_Nifu_vo_topic_03_3 = {
+          ContentDE = "Auf meinen Wanderungen muss ich immer wieder gegen wilde Bestien kämpfen. Sie haben mir Kratzer, Blutergüsse und sogar den Tod beschert, der mir bestimmt war.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_03_3"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Nifu_vo_topic_03_4",
+    MaxKey = "voice_ch_char_Tuosi_vo_topic_05_5",
+    Loader = function()
+      return {
+        voice_ch_char_Nifu_vo_topic_03_4 = {
+          ContentDE = "Selbst der ewige Mond verändert sich jeden Tag. Menschen sind natürlich vielschichtiger – besonders jemand wie ich, die viele Male länger gelebt hat als ein Sterblicher.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_03_4"
+        },
+        voice_ch_char_Nifu_vo_topic_03_5 = {
+          ContentDE = "Interessiert dich diese Vergangenheit, erzähle ich sie dir ein andermal ausführlich.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_03_5"
+        },
+        voice_ch_char_Nifu_vo_topic_04_1 = {
+          ContentDE = "Freunde … Nach der üblichen Bedeutung dieses Wortes hatte ich viele.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_04_1"
+        },
+        voice_ch_char_Nifu_vo_topic_04_10 = {
+          ContentDE = "Haha … worüber sie sich damals eigentlich gestritten hatten, kann ich mich gar nicht mehr erinnern. Seltsam, nicht wahr? Wenn ich heute an sie denke, fallen mir immer zuerst diese kleinen, unbedeutenden Details ein.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_04_10"
+        },
+        voice_ch_char_Nifu_vo_topic_04_11 = {
+          ContentDE = "Ja, das stimmt ... Es war wirklich eine sehr glückliche Zeit ... Nur liegt sie schon sehr lange zurück.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_04_11"
+        },
+        voice_ch_char_Nifu_vo_topic_04_2 = {
+          ContentDE = "Aber wenn ich dieses Wort höre, denke ich zuerst an Lexis und Erika – jene beiden, die mich aus Elysium führten.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_04_2"
+        },
+        voice_ch_char_Nifu_vo_topic_04_3 = {
+          ContentDE = "In späteren Chroniken und Heldensagen werden sie als „die Weisen“ beschrieben, die den Schleier göttlicher Unwissenheit zerrissen, den Menschen die Wahrheit brachten – und als „Helden“, die ihr Leben für diese Wahrheit gaben ...",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_04_3"
+        },
+        voice_ch_char_Nifu_vo_topic_04_4 = {
+          ContentDE = "Aber in meinen Erinnerungen sind sie einfach nur Lexis und Erika.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_04_4"
+        },
+        voice_ch_char_Nifu_vo_topic_04_5 = {
+          ContentDE = "Damals war Erika ein mutiges, lebhaftes Mädchen, das von allen gemocht wurde. Lexis war zwar klug, doch manchmal zu ernst, verfiel oft plötzlich in tiefe Gedanken und wirkte dann etwas unbeholfen.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_04_5"
+        },
+        voice_ch_char_Nifu_vo_topic_04_6 = {
+          ContentDE = "Hm … einmal wollte Lexis sich bei Erika für etwas entschuldigen. Da zeigte Erika beiläufig auf eine Zielscheibe der Soldaten und sagte, sie würde ihm verzeihen, wenn er ins Zentrum träfe …",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_04_6"
+        },
+        voice_ch_char_Nifu_vo_topic_04_7 = {
+          ContentDE = "Es war natürlich ein Scherz. Nicht einmal jeder Soldat konnte das schaffen, geschweige denn Lexis, dessen Hände nicht für das Schwert, sondern für die Aufzeichnung von Weisheit und Wahrheit bestimmt waren.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_04_7"
+        },
+        voice_ch_char_Nifu_vo_topic_04_8 = {
+          ContentDE = "Aber er nahm ihre Worte ernst und übte, nachdem die Soldaten sich zur Ruhe begeben hatten, die ganze Nacht lang.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_04_8"
+        },
+        voice_ch_char_Nifu_vo_topic_04_9 = {
+          ContentDE = "Doch Geschichte ist keine Heldensage. Selbst jemand so Kluges wie Lexis hatte seine Grenzen. Er übte, bis seine Handflächen wund waren, und Erika verband sie ihm mit Leinen – doch das Ziel traf er nie.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_04_9"
+        },
+        voice_ch_char_Nifu_vo_victory = {
+          ContentDE = "Die Seelen, die dem Nebelmeer zuströmen, finden Trost in seiner Umarmung und gehen mit dem Regen der Wiedergeburt in den nächsten unendlichen Fluss ein.",
+          TextMapId = "voice_ch_char_Nifu_vo_victory"
+        },
+        voice_ch_char_Nifu_vo_welcome = {
+          ContentDE = "Ach, du bist es, mein liebes Kind. Guten Tag. Gibt es etwas, was du mir erzählen möchtest?",
+          TextMapId = "voice_ch_char_Nifu_vo_welcome"
+        },
+        voice_ch_char_NvzhuLight_vo_appear = {
+          ContentDE = "Die Welt außerhalb von Purgatorio-Insel widerspricht allen Darstellungen – weiter, aber grausamer. Das kann nicht ihr wahres Schicksal sein. Deshalb muss sich etwas ändern.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_appear"
+        },
+        voice_ch_char_NvzhuLight_vo_battleidle = {
+          ContentDE = "Wohin als Nächstes? Lass mich die Karte prüfen ... Eh ... Ich weiß, Karten mögen mich nicht.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_battleidle"
+        },
+        voice_ch_char_NvzhuLight_vo_battlestart = {
+          ContentDE = "Dieses Schwert verrichtet noch immer seine Pflicht.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_battlestart"
+        },
+        voice_ch_char_NvzhuLight_vo_die_r01 = {
+          ContentDE = "Ich kann nicht aufhören ... nicht jetzt ...",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_die_r01"
+        },
+        voice_ch_char_NvzhuLight_vo_die_r02 = {
+          ContentDE = "Wenn ich doch nur zurückkäme an den Ort, den wir uns versprochen haben ...",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_die_r02"
+        },
+        voice_ch_char_NvzhuLight_vo_fail = {
+          ContentDE = "Beim nächsten Mal werden sie dafür bezahlen.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_fail"
+        },
+        voice_ch_char_NvzhuLight_vo_lvup = {
+          ContentDE = "Jeder Schritt, den ich getan habe, jedes Wort, das ich hörte, und jede Seele, der ich begegnete – all das hat meinen Blick auf diese Welt geschärft und die Schneide meiner Klinge geschärft.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_lvup"
+        },
+        voice_ch_char_NvzhuLight_vo_revive = {
+          ContentDE = "War das ... nur ein Albtraum?",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_revive"
+        },
+        voice_ch_char_NvzhuLight_vo_skill01_r01 = {
+          ContentDE = "Verschwinde.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_skill01_r01"
+        },
+        voice_ch_char_NvzhuLight_vo_skill01_r02 = {
+          ContentDE = "Lichtschnitt.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_skill01_r02"
+        },
+        voice_ch_char_NvzhuLight_vo_skill02_r01 = {
+          ContentDE = "Diesmal werde ich der Schild sein.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_skill02_r01"
+        },
+        voice_ch_char_NvzhuLight_vo_skill02_r02 = {
+          ContentDE = "Für die Zukunft, der wir gemeinsam entgegentreten werden.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_skill02_r02"
+        },
+        voice_ch_char_NvzhuLight_vo_skill02_r03 = {
+          ContentDE = "Zurück ins Nebelmeer.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_skill02_r03"
+        },
+        voice_ch_char_NvzhuLight_vo_victory = {
+          ContentDE = "Noch ein Schritt nach vorn. Solange ich weitergehe, werde ich es schaffen.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_victory"
+        },
+        voice_ch_char_Saiqi_vo_appear = {
+          ContentDE = "Ich wusste, du würdest mich mitnehmen.",
+          TextMapId = "voice_ch_char_Saiqi_vo_appear"
+        },
+        voice_ch_char_Saiqi_vo_battleidle = {
+          ContentDE = "Ich hoffe, diese Reise wird niemals enden.",
+          TextMapId = "voice_ch_char_Saiqi_vo_battleidle"
+        },
+        voice_ch_char_Saiqi_vo_battlestart = {
+          ContentDE = "Ich bin so aufgeregt! Endlich kann ich an deiner Seite kämpfen.",
+          TextMapId = "voice_ch_char_Saiqi_vo_battlestart"
+        },
+        voice_ch_char_Saiqi_vo_be_hit_heavy_r01 = {
+          ContentDE = "Ich werde nicht aufgeben!",
+          TextMapId = "voice_ch_char_Saiqi_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Saiqi_vo_be_hit_heavy_r02 = {
+          ContentDE = "Ich kann noch kämpfen!",
+          TextMapId = "voice_ch_char_Saiqi_vo_be_hit_heavy_r02"
+        },
+        voice_ch_char_Saiqi_vo_be_hit_r01 = {
+          ContentDE = "Aua!",
+          TextMapId = "voice_ch_char_Saiqi_vo_be_hit_r01"
+        },
+        voice_ch_char_Saiqi_vo_be_hit_r02 = {
+          ContentDE = "Autsch!",
+          TextMapId = "voice_ch_char_Saiqi_vo_be_hit_r02"
+        },
+        voice_ch_char_Saiqi_vo_birthday = {
+          ContentDE = "Alles Gute zum Geburtstag! Ich habe ein Geschenk für dich – ich hoffe, es gefällt dir ... Ja, es ist ein Schneeglöckchen, das für „Wiedergeburt“ steht. Seit wir uns begegnet sind, haben wir so viel gemeinsam erlebt, und in dieser Zeit durfte ich deine Wandlung und dein Wachstum miterleben. Deshalb finde ich, dass „Wiedergeburt“ perfekt zu dir passt!",
+          TextMapId = "voice_ch_char_Saiqi_vo_birthday"
+        },
+        voice_ch_char_Saiqi_vo_companio_01 = {
+          ContentDE = "Herr Outsider, ich habe gehört, dass du für Fina eine große Geburtstagsfeier vorbereitet hast. Ich weiß, dass du trotz deiner scharfen Zunge ein sehr fürsorglicher Mensch bist. Darf ich das nächste Mal dabei sein, wenn ihr wieder eine Überraschung für sie plant?",
+          TextMapId = "voice_ch_char_Saiqi_vo_companio_01"
+        },
+        voice_ch_char_Saiqi_vo_companio_02 = {
+          ContentDE = "Frau Camilla, du erinnerst mich immer an deine laute, aber gemütliche Taverne. Ich bin so glücklich, Freunde wie euch zu haben.",
+          TextMapId = "voice_ch_char_Saiqi_vo_companio_02"
+        },
+        voice_ch_char_Saiqi_vo_companio_03 = {
+          ContentDE = "Willst du mir die Geschichte von Elysium erzählen? Wie lieb von dir! Hm ... welche Blume soll ich dir zum Dank schenken?\n Hä? Deine Lieblingsblume ist leckere Blume?",
+          TextMapId = "voice_ch_char_Saiqi_vo_companio_03"
+        },
+        voice_ch_char_Saiqi_vo_die_r01 = {
+          ContentDE = "Ich war einst voller Glanz ... Das ist genug.",
+          TextMapId = "voice_ch_char_Saiqi_vo_die_r01"
+        },
+        voice_ch_char_Saiqi_vo_die_r02 = {
+          ContentDE = "Die Reise ist also zu Ende ...",
+          TextMapId = "voice_ch_char_Saiqi_vo_die_r02"
+        },
+        voice_ch_char_Saiqi_vo_fail = {
+          ContentDE = "Sei nicht traurig. Hier, diese Blume ist für dich. Beim nächsten Mal wird das Glück auf unserer Seite sein.",
+          TextMapId = "voice_ch_char_Saiqi_vo_fail"
+        },
+        voice_ch_char_Saiqi_vo_gain = {
+          ContentDE = "Ach, du bist es – {性别:mein Freund|meine Freundin} aus der Ferne. Rufst du nach mir?",
+          TextMapId = "voice_ch_char_Saiqi_vo_gain"
+        },
+        voice_ch_char_Saiqi_vo_idle = {
+          ContentDE = "Wenn wir einfach nur dasitzen und alle betrachten, vergeht die Zeit so unglaublich schnell ... Ich wünschte, sie würde ein bisschen langsamer vergehen.",
+          TextMapId = "voice_ch_char_Saiqi_vo_idle"
+        },
+        voice_ch_char_Saiqi_vo_lvup = {
+          ContentDE = "Jetzt kann ich euch alle beschützen.",
+          TextMapId = "voice_ch_char_Saiqi_vo_lvup"
+        },
+        voice_ch_char_Saiqi_vo_revive = {
+          ContentDE = "Ich … lebe noch ...?",
+          TextMapId = "voice_ch_char_Saiqi_vo_revive"
+        },
+        voice_ch_char_Saiqi_vo_skill01_r01 = {
+          ContentDE = "Es tut mir leid.",
+          TextMapId = "voice_ch_char_Saiqi_vo_skill01_r01"
+        },
+        voice_ch_char_Saiqi_vo_skill01_r02 = {
+          ContentDE = "Zerstreu sie.",
+          TextMapId = "voice_ch_char_Saiqi_vo_skill01_r02"
+        },
+        voice_ch_char_Saiqi_vo_skill02_r01 = {
+          ContentDE = "Blühe wie eine Blume.",
+          TextMapId = "voice_ch_char_Saiqi_vo_skill02_r01"
+        },
+        voice_ch_char_Saiqi_vo_skill02_r02 = {
+          ContentDE = "Schlüpfe aus dem Kokon.",
+          TextMapId = "voice_ch_char_Saiqi_vo_skill02_r02"
+        },
+        voice_ch_char_Saiqi_vo_skill02_r03 = {
+          ContentDE = "Verfallen oder in der Sonne verbrennen.",
+          TextMapId = "voice_ch_char_Saiqi_vo_skill02_r03"
+        },
+        voice_ch_char_Saiqi_vo_topic_01_1 = {
+          ContentDE = "Danke, aber keine Sorge, ich erkälte mich nicht so leicht. Wir Charons frieren kaum. Daher müssen wir uns keine dicken, teuren Wintermäntel kaufen.",
+          TextMapId = "voice_ch_char_Saiqi_vo_topic_01_1"
+        },
+        voice_ch_char_Saiqi_vo_topic_01_2 = {
+          ContentDE = "Dieses Kleid hat meine Mama für mich genäht, aber die Farbe habe ich selbst gewählt – dieses zarte Grün. Auch die Schmetterlingsverzierungen habe ich selbst ausgesucht. Wäre ich im warmen Süden, würde dieses Outfit bestimmt ganz natürlich wirken.",
+          TextMapId = "voice_ch_char_Saiqi_vo_topic_01_2"
+        },
+        voice_ch_char_Saiqi_vo_topic_01_3 = {
+          ContentDE = "Wirklich? Wie schön! Bisher habe ich rund um Icelake nur blaue Schmetterlinge gesehen. Würde ich einmal anderswohin reisen, möchte ich unbedingt Schmetterlinge in anderen Farben sehen.",
+          TextMapId = "voice_ch_char_Saiqi_vo_topic_01_3"
+        },
+        voice_ch_char_Saiqi_vo_topic_02_1 = {
+          ContentDE = "Genau. Angeblich ist das seit Jahrhunderten so. Wir werden wie Schädlinge behandelt, und ich wurde schon oft grundlos schikaniert und beleidigt.",
+          TextMapId = "voice_ch_char_Saiqi_vo_topic_02_1"
+        },
+        voice_ch_char_Saiqi_vo_topic_02_2 = {
+          ContentDE = "Vielleicht. „Magie ist die Wurzel allen Bösen“, heißt es immer. In den Geschichtsbüchern steht, dass die Vorfahren von Charons vor über tausend Jahren mit Magie über die Solas herrschten und viele schlimme Dinge taten.",
+          TextMapId = "voice_ch_char_Saiqi_vo_topic_02_2"
+        },
+        voice_ch_char_Saiqi_vo_topic_02_3 = {
+          ContentDE = "Ehrlich gesagt kann ich mir das kaum vorstellen ... Denn die Charons, die ich kenne, haben eher Angst vor den Solas – sie wagen kaum ein Gespräch, sind stets vorsichtig und nutzen erst recht keine Magie.",
+          TextMapId = "voice_ch_char_Saiqi_vo_topic_02_3"
+        },
+        voice_ch_char_Saiqi_vo_topic_02_4 = {
+          ContentDE = "Und die Magie der Charons ist meist ganz alltäglich – sie entzündet höchstens Kamine oder kühlt Speisen.",
+          TextMapId = "voice_ch_char_Saiqi_vo_topic_02_4"
+        },
+        voice_ch_char_Saiqi_vo_topic_02_5 = {
+          ContentDE = "Nein, überhaupt nicht. Warum muss zwischen Charons und Solas die eine die andere beherrschen? Warum muss die eine die andere fürchten?",
+          TextMapId = "voice_ch_char_Saiqi_vo_topic_02_5"
+        },
+        voice_ch_char_Saiqi_vo_topic_02_6 = {
+          ContentDE = "Ich wünsche mir nur ... wenn der Frühling kommt, dass alle Seite an Seite auf die Wiese gehen und gemeinsam die Blumen bewundern können. Das allein wäre schon genug.",
+          TextMapId = "voice_ch_char_Saiqi_vo_topic_02_6"
+        },
+        voice_ch_char_Saiqi_vo_topic_03_1 = {
+          ContentDE = "Ah, das könnte von meinem neuen Gartenprojekt stammen. Der Innenhof im Hypnos’ Haus wirkte mit nur ein paar Bäumen etwas kahl, also habe ich dort ein paar weiße Blumen gepflanzt.",
+          TextMapId = "voice_ch_char_Saiqi_vo_topic_03_1"
+        },
+        voice_ch_char_Saiqi_vo_topic_03_2 = {
+          ContentDE = "Vielleicht sollte ich auch hier ein paar setzen – Maiglöckchen, Kronen-Anemonen, weiße Silberwurz ... Welche würden wohl am besten passen?",
+          TextMapId = "voice_ch_char_Saiqi_vo_topic_03_2"
+        },
+        voice_ch_char_Saiqi_vo_topic_03_3 = {
+          ContentDE = "Du hast recht, das sollten wir alle gemeinsam entscheiden. Ich werde sie fragen! Ach, übrigens, ist darunter eine Blume, die dir besonders gefällt? Wenn sie blühen, pflücke ich dir ein paar.",
+          TextMapId = "voice_ch_char_Saiqi_vo_topic_03_3"
+        },
+        voice_ch_char_Saiqi_vo_topic_04_1 = {
+          ContentDE = "Nein, ich lebe hier, seit ich geboren wurde. Jeden Tag höre ich die Züge vorbeifahren – aber ich war noch nie woanders. Wenn sich einmal die Gelegenheit ergäbe, würde ich so gern die Welt draußen sehen.",
+          TextMapId = "voice_ch_char_Saiqi_vo_topic_04_1"
+        },
+        voice_ch_char_Saiqi_vo_topic_04_2 = {
+          ContentDE = "Hmm, lass mich mal überlegen ... In die Hauptstadt natürlich! Onkel Henrik sagte, in Scarletriver sei der Sonnenuntergang atemberaubend. Und ich würde gern die Purgatorio-Insel im Süden besuchen, von der du mir erzählt hast, um die Meeresbrise zu spüren und zu sehen, ob sie wirklich salzig ist!",
+          TextMapId = "voice_ch_char_Saiqi_vo_topic_04_2"
+        },
+        voice_ch_char_Saiqi_vo_topic_05_1 = {
+          ContentDE = "Ach, nichts Besonderes. Ich möchte nur ... euch noch ein bisschen länger ansehen, damit ich mir eure Gesichter besser einprägen kann.",
+          TextMapId = "voice_ch_char_Saiqi_vo_topic_05_1"
+        },
+        voice_ch_char_Saiqi_vo_topic_05_2 = {
+          ContentDE = "Könntest du mich auch ein wenig länger ansehen? Ich möchte, dass du dich an mich erinnerst ... so, wie ich jetzt bin.",
+          TextMapId = "voice_ch_char_Saiqi_vo_topic_05_2"
+        },
+        voice_ch_char_Saiqi_vo_victory = {
+          ContentDE = "Diese Reise wird für immer in meinem Herzen bleiben.",
+          TextMapId = "voice_ch_char_Saiqi_vo_victory"
+        },
+        voice_ch_char_Saiqi_vo_welcome = {
+          ContentDE = "Wie schön, dass ich heute noch hier bin. Und du auch ...",
+          TextMapId = "voice_ch_char_Saiqi_vo_welcome"
+        },
+        voice_ch_char_Shuimu_vo_appear = {
+          ContentDE = "Na, willst du mich auf ein Date einladen?",
+          TextMapId = "voice_ch_char_Shuimu_vo_appear"
+        },
+        voice_ch_char_Shuimu_vo_battleidle = {
+          ContentDE = "Beeil dich! Ich will unser Date nicht ruinieren, indem ich zu spät komme.",
+          TextMapId = "voice_ch_char_Shuimu_vo_battleidle"
+        },
+        voice_ch_char_Shuimu_vo_battlestart = {
+          ContentDE = "Mein Gift kommt hoch, wie meine Leidenschaft für die Liebe.",
+          TextMapId = "voice_ch_char_Shuimu_vo_battlestart"
+        },
+        voice_ch_char_Shuimu_vo_be_hit_heavy_r01 = {
+          ContentDE = "Wie fies.",
+          TextMapId = "voice_ch_char_Shuimu_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Shuimu_vo_be_hit_heavy_r02 = {
+          ContentDE = "Echt kaltherzig!",
+          TextMapId = "voice_ch_char_Shuimu_vo_be_hit_heavy_r02"
+        },
+        voice_ch_char_Shuimu_vo_be_hit_r01 = {
+          ContentDE = "Hmm!",
+          TextMapId = "voice_ch_char_Shuimu_vo_be_hit_r01"
+        },
+        voice_ch_char_Shuimu_vo_be_hit_r02 = {
+          ContentDE = "Ugh!",
+          TextMapId = "voice_ch_char_Shuimu_vo_be_hit_r02"
+        },
+        voice_ch_char_Shuimu_vo_birthday = {
+          ContentDE = "Ich habe gehört, dass heute dein Geburtstag ist. Möchtest du mit mir gemeinsam in meinen Gewürzgarten? Dort sind Gewürze, die ich extra für dich angepflanzt habe. Wenn du mit ihnen Aromatherapie machst, wirst du jedes Mal bei der Verwendung den Duft voller Liebe spüren, die nur uns gehört. Hmm? Ob Gewürze giftig sind? Hehe, wenn du hingehst, wirst du es wissen.",
+          TextMapId = "voice_ch_char_Shuimu_vo_birthday"
+        },
+        voice_ch_char_Shuimu_vo_companio_01 = {
+          ContentDE = "Dieser trockene Duft ... ach, du bist es. Lange nicht gesehen. Willst du mich immer noch in Handschellen mitnehmen? Klingt nach einem unterhaltsamen Plan ... Schließlich – selbst wenn ich dir tausend Chancen gäbe, würde ich dir trotzdem immer wieder entkommen ... Stimmst du mir da nicht zu, Frau Wächterin?",
+          TextMapId = "voice_ch_char_Shuimu_vo_companio_01"
+        },
+        voice_ch_char_Shuimu_vo_companio_02 = {
+          ContentDE = "Hast du Angst vor mir? Dann werde ich dafür sorgen, dass du dich in mich verliebst. Komm und rieche den Duft, den ich erstellt habe. Er ist sehr süß und ich garantiere dir, dass du bisher unerlebtes Glück erfahren wirst.",
+          TextMapId = "voice_ch_char_Shuimu_vo_companio_02"
+        },
+        voice_ch_char_Shuimu_vo_companio_03 = {
+          ContentDE = "Bist du auch ein Sonderling? Fühle den Schmerz, den man sich gegenseitig zufügt. Den süßen Schmerz kosten und sich dann gegenseitig töten? Hehe ... ich weiß, warum du dies tust. Es ist deine Art und Weise, Liebe zum Ausdruck zu bringen.",
+          TextMapId = "voice_ch_char_Shuimu_vo_companio_03"
+        },
+        voice_ch_char_Shuimu_vo_die_r01 = {
+          ContentDE = "Gott der Liebe ... Verlasse mich nicht ...",
+          TextMapId = "voice_ch_char_Shuimu_vo_die_r01"
+        },
+        voice_ch_char_Shuimu_vo_die_r02 = {
+          ContentDE = "Lebwohl ... meine Liebe ...",
+          TextMapId = "voice_ch_char_Shuimu_vo_die_r02"
+        },
+        voice_ch_char_Shuimu_vo_fail = {
+          ContentDE = "Versagen tut weh ... Ich könnte jetzt wirklich ein bisschen Trost von dir gebrauchen.",
+          TextMapId = "voice_ch_char_Shuimu_vo_fail"
+        },
+        voice_ch_char_Shuimu_vo_gain = {
+          ContentDE = "Was für ein romantisches Treffen. War dies die Arbeit des Gottes der Liebe? Hehe, ich bin Rebecca, eine Parfümistin. Wie wär’s ... wenn du dich einem einzigartigen Duft hingeben würdest. Der Duft der Liebe. Ich habe ihn selbst kreiert.",
+          TextMapId = "voice_ch_char_Shuimu_vo_gain"
+        },
+        voice_ch_char_Shuimu_vo_idle = {
+          ContentDE = "Bleibst du hier, um etwas Zeit mit mir zu verbringen? Hehe ... Ich freue mich bereits darauf.",
+          TextMapId = "voice_ch_char_Shuimu_vo_idle"
+        },
+        voice_ch_char_Shuimu_vo_lvup = {
+          ContentDE = "Ist das eine Belohnung für meine überwältigende Liebe?",
+          TextMapId = "voice_ch_char_Shuimu_vo_lvup"
+        },
+        voice_ch_char_Shuimu_vo_revive = {
+          ContentDE = "Das ist die Kraft der Liebe, oder?",
+          TextMapId = "voice_ch_char_Shuimu_vo_revive"
+        },
+        voice_ch_char_Shuimu_vo_skill01_r01 = {
+          ContentDE = "Haue nicht ab.",
+          TextMapId = "voice_ch_char_Shuimu_vo_skill01_r01"
+        },
+        voice_ch_char_Shuimu_vo_skill01_r02 = {
+          ContentDE = "Kein gewaltsamer Kontakt.",
+          TextMapId = "voice_ch_char_Shuimu_vo_skill01_r02"
+        },
+        voice_ch_char_Shuimu_vo_skill02_r01 = {
+          ContentDE = "Süßes Gift geht deine Kehle hinunter!",
+          TextMapId = "voice_ch_char_Shuimu_vo_skill02_r01"
+        },
+        voice_ch_char_Shuimu_vo_skill02_r02 = {
+          ContentDE = "Verfaule in dem süßen Aroma!",
+          TextMapId = "voice_ch_char_Shuimu_vo_skill02_r02"
+        },
+        voice_ch_char_Shuimu_vo_skill02_r03 = {
+          ContentDE = "Habe keine Angst. Ich schicke dich nun in das Land der Liebe.",
+          TextMapId = "voice_ch_char_Shuimu_vo_skill02_r03"
+        },
+        voice_ch_char_Shuimu_vo_topic_01_1 = {
+          ContentDE = "Ja, ich liebe Tage, an denen es regnet. Sie erinnern mich an Liebesgeschichten, die ich gelesen habe, in denen es an regnerischen Tagen immer zu einem romantischen Aufeinandertreffen kommt.",
+          TextMapId = "voice_ch_char_Shuimu_vo_topic_01_1"
+        },
+        voice_ch_char_Shuimu_vo_topic_01_2 = {
+          ContentDE = "Hast du jemals Leute beobachtet, die vor Regen Schutz suchen? Sie treffen sich unerwartet unter einer Regentraufe und der Geruch von Feuchtigkeit macht den Duft von Pflanzen und Bäumen noch intensiver. Er sorgt dafür, dass die Liebe fließen kann.",
+          TextMapId = "voice_ch_char_Shuimu_vo_topic_01_2"
+        },
+        voice_ch_char_Shuimu_vo_topic_01_3 = {
+          ContentDE = "Hehe ... Begleite mich das nächste Mal, wenn es regnet und du wirst verstehen, was ich meine.",
+          TextMapId = "voice_ch_char_Shuimu_vo_topic_01_3"
+        },
+        voice_ch_char_Shuimu_vo_topic_02_1 = {
+          ContentDE = "Oh, ich hätte nicht gedacht, dass du mit mir eine Unterhaltung über Liebe beginnst.",
+          TextMapId = "voice_ch_char_Shuimu_vo_topic_02_1"
+        },
+        voice_ch_char_Shuimu_vo_topic_02_2 = {
+          ContentDE = "Wie soll ich es beschreiben ... Es ist wie Wasser in Parfüm, dessen Zutaten sich gegenseitig küssen und umarmen. Es wird ihr Duft verschlungen und schließlich gehen sie ineinander über, um ein lange anhaltendes Aroma zu erzeugen.",
+          TextMapId = "voice_ch_char_Shuimu_vo_topic_02_2"
+        },
+        voice_ch_char_Shuimu_vo_topic_02_3 = {
+          ContentDE = "Nicht nur das. Die Liebe, die ich suche, ist vollständige Integration, ohne Unterscheidung zwischen beiden Seiten ... Selbst wenn das Leben von einem endet, wird es zum Pflanzenkompost im Gewürzgarten. Die Blumen, die daraus blühen, werden zu einem Duft, der für immer an dem Ort verweilt.",
+          TextMapId = "voice_ch_char_Shuimu_vo_topic_02_3"
+        },
+        voice_ch_char_Shuimu_vo_topic_03_1 = {
+          ContentDE = "Besonders? Oh, ja ... Von meiner Kindheit bis zu meinem Erwachsenenalter haben viele Leute in meinem Umfeld mich als ein Monster betrachtet.",
+          TextMapId = "voice_ch_char_Shuimu_vo_topic_03_1"
+        },
+        voice_ch_char_Shuimu_vo_topic_03_2 = {
+          ContentDE = "Sie zeigen immer einen angewiderten Gesichtsausdruck, wenn sie mich sehen. Aber dieser Ausdruck sieht nicht gut aus. Ich muss einen Weg finden, dies zu ändern …",
+          TextMapId = "voice_ch_char_Shuimu_vo_topic_03_2"
+        },
+        voice_ch_char_Shuimu_vo_topic_03_3 = {
+          ContentDE = "Wenn es in ihrem Gesicht schmerzt und es Giften ermöglicht, ihre Haut zu durchdringen, wird dieser angewiderte Gesichtsausdruck sicher sanft werden ... Hehe.",
+          TextMapId = "voice_ch_char_Shuimu_vo_topic_03_3"
+        },
+        voice_ch_char_Shuimu_vo_topic_03_4 = {
+          ContentDE = "Doch, wenn man darüber nachdenkt, was für eine Art von „besonders“ meinst du mit „besonders“? Meinst du „besonders“ wie ein Monster ... oder bedeutet es „besonders“ faszinierend?",
+          TextMapId = "voice_ch_char_Shuimu_vo_topic_03_4"
+        },
+        voice_ch_char_Shuimu_vo_topic_04_1 = {
+          ContentDE = "Nein, mir geht es gut. Das Gift ist ein Teil von mir, wie ein Geschenk des Gottes der Liebe. Es fügt mir keinen Schaden zu und hilft mir nur, den Geliebten zu finden, der für mich bestimmt ist.",
+          TextMapId = "voice_ch_char_Shuimu_vo_topic_04_1"
+        },
+        voice_ch_char_Shuimu_vo_topic_04_2 = {
+          ContentDE = "Ja, auch wenn das unkontrollierte Toxin mich häufig wie ein Monster aussehen lässt, hebt es mich von anderen Leuten ab. Ich glaube, dass der auserwählte Geliebte, der für ein Monster bestimmt ist, auch etwas Besonderes sein muss, nicht wahr?",
+          TextMapId = "voice_ch_char_Shuimu_vo_topic_04_2"
+        },
+        voice_ch_char_Shuimu_vo_topic_05_1 = {
+          ContentDE = "Es ist mein selbstgemachter Duft. Die Kopfnote ist so intensiv wie das erste Treffen. Die Herznote aus süßen Nichtigkeiten, die den Duft festigen, und die Endnote ist ein verweilender Nachgeschmack, der leicht bitter ist.",
+          TextMapId = "voice_ch_char_Shuimu_vo_topic_05_1"
+        },
+        voice_ch_char_Shuimu_vo_topic_05_2 = {
+          ContentDE = "Das ist ein Geheimnis. Natürlich würde ich dich gerne selbst durch den Herstellungsprozess führen. Schritt für Schritt, von Anfang bis Ende.",
+          TextMapId = "voice_ch_char_Shuimu_vo_topic_05_2"
+        },
+        voice_ch_char_Shuimu_vo_victory = {
+          ContentDE = "Diese Leute ... sind dem Gott der Liebe nicht treu genug. Deshalb bestrafe ich sie im Namen vom Gott der Liebe.",
+          TextMapId = "voice_ch_char_Shuimu_vo_victory"
+        },
+        voice_ch_char_Shuimu_vo_welcome = {
+          ContentDE = "Seitdem ich aufgewacht bin, habe ich hier gewartet. Das Toxin in meinem Körper ist fast aufgebraucht ... Daher kommst du genau richtig. Ich spüre wieder, wie es durch meine Venen sprudelt. Kannst du etwas näher kommen ...?",
+          TextMapId = "voice_ch_char_Shuimu_vo_welcome"
+        },
+        voice_ch_char_Songlu_vo_appear = {
+          ContentDE = "Filbert, wach auf! Es ist Zeit zu gehen!",
+          TextMapId = "voice_ch_char_Songlu_vo_appear"
+        },
+        voice_ch_char_Songlu_vo_battleidle = {
+          ContentDE = "Mampf, mampf ...",
+          TextMapId = "voice_ch_char_Songlu_vo_battleidle"
+        },
+        voice_ch_char_Songlu_vo_battlestart = {
+          ContentDE = "Filbert, los geht's!",
+          TextMapId = "voice_ch_char_Songlu_vo_battlestart"
+        },
+        voice_ch_char_Songlu_vo_be_hit_heavy_r01 = {
+          ContentDE = "Das ist unfair ...",
+          TextMapId = "voice_ch_char_Songlu_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Songlu_vo_be_hit_r01 = {
+          ContentDE = "Aua ...",
+          TextMapId = "voice_ch_char_Songlu_vo_be_hit_r01"
+        },
+        voice_ch_char_Songlu_vo_birthday = {
+          ContentDE = "Alles Gute zum Geburtstag! Ich habe dir eine Torte voller Nüsse, Sahne und Marmelade gebacken. Aber der Duft hat viele Leute angelockt. Also … ähm … habe ich sie mit ihnen geteilt.\n Aber keine Sorge! Ich habe ein Stück für dich aufgehoben! Schau mal, extra mit viel Marmelade und Borealbeeren obendrauf!\n Komm, probier es. Es schmeckt bestimmt viel besser als die normale Armeeverpflegung!",
+          TextMapId = "voice_ch_char_Songlu_vo_birthday"
+        },
+        voice_ch_char_Songlu_vo_companio_01 = {
+          ContentDE = "Du hast keimende Kartoffeln im Mülleimer gefunden? Wirf sie nicht weg! Wir können sie pflanzen! Einfach ein bisschen Erde lockern, gießen – und schon bald haben wir genug Kartoffeln für alle!",
+          TextMapId = "voice_ch_char_Songlu_vo_companio_01"
+        },
+        voice_ch_char_Songlu_vo_companio_02 = {
+          ContentDE = "Du bist immer nur am Arbeiten. Hast du keinen Hunger? Möchtest du der Elysischen Kirche beitreten? Ich sorge dafür, dass du satt wirst!",
+          TextMapId = "voice_ch_char_Songlu_vo_companio_02"
+        },
+        voice_ch_char_Songlu_vo_companio_03 = {
+          ContentDE = "Hallo! Ich wollte mal fragen … Man sagt, Beten sättige die Seele. Aber ich finde, Essen tut das auch. Was wirkt wohl besser?",
+          TextMapId = "voice_ch_char_Songlu_vo_companio_03"
+        },
+        voice_ch_char_Songlu_vo_die_r01 = {
+          ContentDE = "Ich glaube … ich sehe Körner, größer als Beeren …",
+          TextMapId = "voice_ch_char_Songlu_vo_die_r01"
+        },
+        voice_ch_char_Songlu_vo_die_r02 = {
+          ContentDE = "Unmöglich ... Ich habe vor dem Kampf richtig gegessen ...",
+          TextMapId = "voice_ch_char_Songlu_vo_die_r02"
+        },
+        voice_ch_char_Songlu_vo_fail = {
+          ContentDE = "Geht's dir gut, Filbert? Tut deine Nase weh? Komm, lass mich dich streicheln ...",
+          TextMapId = "voice_ch_char_Songlu_vo_fail"
+        },
+        voice_ch_char_Songlu_vo_gain = {
+          ContentDE = "Hallöchen! Ich bin Kommissarin Truffle, und das hier ist meine verlässliche, süße und treue Untergebene, die Familie Filbert. Das war's mit meiner Selbstvorstellung! Du machst so große Augen. Bist du etwa hungrig?",
+          TextMapId = "voice_ch_char_Songlu_vo_gain"
+        },
+        voice_ch_char_Songlu_vo_idle = {
+          ContentDE = "Lass uns eine Pause machen, Filbert. Iss etwas Körner, Nüsse und ein paar Blumen als Snack. Wenn etwas übrig bleibt, stecke ich es erstmal an meinen Hut.",
+          TextMapId = "voice_ch_char_Songlu_vo_idle"
+        },
+        voice_ch_char_Songlu_vo_lvup = {
+          ContentDE = "Nur satt wird man stark! Mit leerem Bauch kann man nicht kämpfen!",
+          TextMapId = "voice_ch_char_Songlu_vo_lvup"
+        },
+        voice_ch_char_Songlu_vo_revive = {
+          ContentDE = "Notverpflegung schmeckt schrecklich ... Egal, Hauptsache satt.",
+          TextMapId = "voice_ch_char_Songlu_vo_revive"
+        },
+        voice_ch_char_Songlu_vo_skill01_r01 = {
+          ContentDE = "Weg mit dir!",
+          TextMapId = "voice_ch_char_Songlu_vo_skill01_r01"
+        },
+        voice_ch_char_Songlu_vo_skill01_r02 = {
+          ContentDE = "Das wird wehtun!",
+          TextMapId = "voice_ch_char_Songlu_vo_skill01_r02"
+        },
+        voice_ch_char_Songlu_vo_skill02_r01 = {
+          ContentDE = "Die Kommissarin bringt die volle Mahlzeit!",
+          TextMapId = "voice_ch_char_Songlu_vo_skill02_r01"
+        },
+        voice_ch_char_Songlu_vo_skill02_r02 = {
+          ContentDE = "Die Sonderkommissarin vertreibt den Hunger!",
+          TextMapId = "voice_ch_char_Songlu_vo_skill02_r02"
+        },
+        voice_ch_char_Songlu_vo_skill02_r03 = {
+          ContentDE = "Gib mir das Essen, sonst schlage ich dich zusammen!",
+          TextMapId = "voice_ch_char_Songlu_vo_skill02_r03"
+        },
+        voice_ch_char_Songlu_vo_topic_01_1 = {
+          ContentDE = "Hä? Das weißt du nicht? Eine Kommissarin sorgt dafür, dass alle gut versorgt sind! Wir beschäftigen uns jeden Tag mit allen möglichen Lebensmitteln.",
+          TextMapId = "voice_ch_char_Songlu_vo_topic_01_1"
+        },
+        voice_ch_char_Songlu_vo_topic_01_2 = {
+          ContentDE = "Ich zum Beispiel sammele draußen in der Wildnis allerlei Essbares, lasse Filbert es in die Stadt tragen und bitte dann Onkel Bart in der Bäckerei, daraus leckeres Essen für alle zuzubereiten.",
+          TextMapId = "voice_ch_char_Songlu_vo_topic_01_2"
+        },
+        voice_ch_char_Songlu_vo_topic_01_3 = {
+          ContentDE = "Ach ja, mit Onkel Bart zu feilschen gehört auch zu meinen Aufgaben! Hmpf.",
+          TextMapId = "voice_ch_char_Songlu_vo_topic_01_3"
+        },
+        voice_ch_char_Songlu_vo_topic_01_4 = {
+          ContentDE = "Natürlich nicht! Die anderen sind eher die intellektuellen Typen. Sie kümmern sich um Papierkram – füllen Anträge aus, und dann kommt ein Zug mit einem Berg voller Essen an.",
+          TextMapId = "voice_ch_char_Songlu_vo_topic_01_4"
+        },
+        voice_ch_char_Songlu_vo_topic_01_5 = {
+          ContentDE = "Aber in unserer kleinen Stadt reichen Filbert und ich, um alle zu versorgen! Sonst müsste ich wohl auch lernen, diese Anträge auszufüllen – puh, wer blickt da schon durch?",
+          TextMapId = "voice_ch_char_Songlu_vo_topic_01_5"
+        },
+        voice_ch_char_Songlu_vo_topic_02_1 = {
+          ContentDE = "Hmm ... vielleicht schon? Ich habe noch nie wirklich darüber nachgedacht. Aber jedenfalls rammt Filbert nur diese bösen Typen um, die rumbrüllen und Unruhe auslösen! Die haben es total verdient!",
+          TextMapId = "voice_ch_char_Songlu_vo_topic_02_1"
+        },
+        voice_ch_char_Songlu_vo_topic_02_2 = {
+          ContentDE = "Diese Typen sind nach ihren Schlägereien immer hungrig. Anstatt Waffen zu schwingen, sollten die lieber mehr Land umpflügen, dann hätten mehr Leute etwas zu beißen.",
+          TextMapId = "voice_ch_char_Songlu_vo_topic_02_2"
+        },
+        voice_ch_char_Songlu_vo_topic_02_3 = {
+          ContentDE = "Klar doch! Krieg führt nur zu Hunger – das ist wirklich schrecklich! Ich habe gehört, dass in Kriegszeiten am Ende alle hungrig sind, was einfach das Schlimmste ist! Hoffentlich muss ich das nie erleben.",
+          TextMapId = "voice_ch_char_Songlu_vo_topic_02_3"
+        },
+        voice_ch_char_Songlu_vo_topic_02_4 = {
+          ContentDE = "Ganz genau! Wer andere hungern lässt, den wirft Filbert früher oder später um!",
+          TextMapId = "voice_ch_char_Songlu_vo_topic_02_4"
+        },
+        voice_ch_char_Songlu_vo_topic_03_1 = {
+          ContentDE = "Schon, aber ich muss ihr kein Essen vorbereiten. Sie findet alles selbst. Selbst über mehrere Bäche hinweg riecht Filbert reife Beeren und trägt mich im Galopp hin – ziemlich beeindruckend!",
+          TextMapId = "voice_ch_char_Songlu_vo_topic_03_1"
+        },
+        voice_ch_char_Songlu_vo_topic_03_2 = {
+          ContentDE = "Keine Sorge. Filbert bringt immer genug zu essen mit! Mach dich also niemals über sie lustig – das würde ihre Gefühle verletzen, und meine auch.",
+          TextMapId = "voice_ch_char_Songlu_vo_topic_03_2"
+        },
+        voice_ch_char_Songlu_vo_topic_04_1 = {
+          ContentDE = "Danke! Eigentlich sind es Hosen, kein Kleid. Ursprünglich war es ein hübsches, langes, weißes Kleid, aber die alte Dame in der Schneiderei hat es für mich zu Hosen umgeändert.",
+          TextMapId = "voice_ch_char_Songlu_vo_topic_04_1"
+        },
+        voice_ch_char_Songlu_vo_topic_04_2 = {
+          ContentDE = "Weil es unpraktisch war, im Kleid herumzurennen. Einmal bin ich zu schnell gelaufen und über den Saum gestolpert, und all mein Brot ist hingefallen.",
+          TextMapId = "voice_ch_char_Songlu_vo_topic_04_2"
+        },
+        voice_ch_char_Songlu_vo_topic_04_3 = {
+          ContentDE = "Deshalb ... ach ... Wenn irgendwann mal keiner mehr Hunger leiden muss, lasse ich sie wieder zu einem Kleid umändern!",
+          TextMapId = "voice_ch_char_Songlu_vo_topic_04_3"
+        },
+        voice_ch_char_Songlu_vo_topic_05_1 = {
+          ContentDE = "Abschweifen? Nein, ich meditiere. Ich bin schließlich Mitglied der Elysischen Kirche, also versuche ich hin und wieder, über tiefgründige Dinge nachzudenken.",
+          TextMapId = "voice_ch_char_Songlu_vo_topic_05_1"
+        },
+        voice_ch_char_Songlu_vo_topic_05_2 = {
+          ContentDE = "Das habe ich mich früher auch gefragt, aber die Geistlichen nannten das Blasphemie oder so. Also habe ich aufgehört, darüber nachzudenken.",
+          TextMapId = "voice_ch_char_Songlu_vo_topic_05_2"
+        },
+        voice_ch_char_Songlu_vo_topic_05_3 = {
+          ContentDE = "Ich verstehe nie ganz, was sie sagen, zum Beispiel, dass Völlerei eine schreckliche Sünde sei … Aber es scheint, je höher der Status einer Person, desto mehr isst sie.",
+          TextMapId = "voice_ch_char_Songlu_vo_topic_05_3"
+        },
+        voice_ch_char_Songlu_vo_victory = {
+          ContentDE = "Lass uns eine Feier veranstalten! Ähm ... Nein, das wäre Verschwendung von Essen.",
+          TextMapId = "voice_ch_char_Songlu_vo_victory"
+        },
+        voice_ch_char_Songlu_vo_welcome = {
+          ContentDE = "Die Sonne scheint hell, die Wolken sind fluffig und weich, und die frühen Vögel haben sich schon satt gefressen. Gluckert dein Bauch auch so wie bei den Vögelchen?",
+          TextMapId = "voice_ch_char_Songlu_vo_welcome"
+        },
+        voice_ch_char_Tuosi02_attack_r01 = {
+          ContentDE = "Hör ihr Klagen!",
+          TextMapId = "voice_ch_char_Tuosi02_attack_r01"
+        },
+        voice_ch_char_Tuosi02_shoot_r01 = {
+          ContentDE = "Ziel erfasst.",
+          TextMapId = "voice_ch_char_Tuosi02_shoot_r01"
+        },
+        voice_ch_char_Tuosi02_skill01_r01 = {
+          ContentDE = "Es gibt kein Entkommen.",
+          TextMapId = "voice_ch_char_Tuosi02_skill01_r01"
+        },
+        voice_ch_char_Tuosi02_vo_be_hit_heavy_r01 = {
+          ContentDE = "Wieder ... wie immer.",
+          TextMapId = "voice_ch_char_Tuosi02_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Tuosi02_vo_be_hit_heavy_r02 = {
+          ContentDE = "Zerreiß sie in Stücke.",
+          TextMapId = "voice_ch_char_Tuosi02_vo_be_hit_heavy_r02"
+        },
+        voice_ch_char_Tuosi_vo_appear = {
+          ContentDE = "Du hast für mich eine neue Bühne vorbereitet.",
+          TextMapId = "voice_ch_char_Tuosi_vo_appear"
+        },
+        voice_ch_char_Tuosi_vo_battleidle = {
+          ContentDE = "Wie sah ich nur aus, frage ich mich ...",
+          TextMapId = "voice_ch_char_Tuosi_vo_battleidle"
+        },
+        voice_ch_char_Tuosi_vo_battlestart = {
+          ContentDE = "Nun präsentieren wir eine Geschichte voller Abenteuer und Pracht.",
+          TextMapId = "voice_ch_char_Tuosi_vo_battlestart"
+        },
+        voice_ch_char_Tuosi_vo_be_hit_heavy_r01 = {
+          ContentDE = "Mir geht es gut.",
+          TextMapId = "voice_ch_char_Tuosi_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Tuosi_vo_be_hit_heavy_r02 = {
+          ContentDE = "Ganz schön tragisch.",
+          TextMapId = "voice_ch_char_Tuosi_vo_be_hit_heavy_r02"
+        },
+        voice_ch_char_Tuosi_vo_birthday = {
+          ContentDE = "Alles Gute zum Geburtstag, {nickname}. Danke für deine Einladung.\nFür mich sind Geburtstage, seit ich von der Bühne verstoßen wurde, zu einem bitteren Erinnerungsstück an schmerzhafte vergangene Tage geworden, wie erloschene Scheinwerfer, die nie wieder leuchten werden, oder alte Drehbücher, zerknüllt und vergessen am Boden eines Müllbehälters.\nDoch heute ertappe ich mich dabei, darüber nachzudenken, wie ein gewöhnlicher Geburtstag wohl sein könnte – einer aus einfachen, warmen Momenten, die nur für diejenigen von besonderer Bedeutung sind, die Teil davon sind: eine handgemachte Geschenkbox mit unebenen Kanten, ein Kuchen, leicht beschädigt durch eine falsch platzierte Kerze, und ...\n... ein Geburtstagslied, gesungen von Freunden? Du meinst, ich soll singen? Sehr wohl, aber ich muss gestehen, dass ich die Geburtstagsmelodie deiner Heimat nicht kenne. Du wirst sie mir zuerst beibringen müssen. Keine Sorge – ich lerne schnell.",
+          TextMapId = "voice_ch_char_Tuosi_vo_birthday"
+        },
+        voice_ch_char_Tuosi_vo_companio_01 = {
+          ContentDE = "Wie geht es dir in letzter Zeit?\n... Tut mir leid, für die plötzliche Frage. Wir sind nicht miteinander vertraut ... Ich stelle die Frage nur für einen Freund.",
+          TextMapId = "voice_ch_char_Tuosi_vo_companio_01"
+        },
+        voice_ch_char_Tuosi_vo_companio_02 = {
+          ContentDE = "Ist das so? Du hast jetzt ein neues Zuhause und eine Familie, die sich um dich kümmert ... Das ist toll. Du hast dich aus deinem Käfig befreit. Was für ein tapferer Mensch du bist.",
+          TextMapId = "voice_ch_char_Tuosi_vo_companio_02"
+        },
+        voice_ch_char_Tuosi_vo_companio_03 = {
+          ContentDE = "Fräulein, die Musik, die du spielst, ist wirklich fesselnd. Darf ich den Namen dieses Stückes erfragen?\nAh, eine Originalkomposition deinerseits ... welch beneidenswerte Gabe. Dürfte ich die Ehre haben, die Noten zu bewundern?",
+          TextMapId = "voice_ch_char_Tuosi_vo_companio_03"
+        },
+        voice_ch_char_Tuosi_vo_companio_04 = {
+          ContentDE = "Deine Nachahmung ist außergewöhnlich. Selbst die besten Requisitenkünstler der Bühne könnten nichts so exquisit Detailreiches erschaffen.",
+          TextMapId = "voice_ch_char_Tuosi_vo_companio_04"
+        },
+        voice_ch_char_Tuosi_vo_companio_05 = {
+          ContentDE = "Ich brauche keinen Spiegel, der mich ständig an meine eigene Groteske erinnert.",
+          TextMapId = "voice_ch_char_Tuosi_vo_companio_05"
+        },
+        voice_ch_char_Tuosi_vo_die_r01 = {
+          ContentDE = "Mein letzter Akt ... ist vollbracht.",
+          TextMapId = "voice_ch_char_Tuosi_vo_die_r01"
+        },
+        voice_ch_char_Tuosi_vo_die_r02 = {
+          ContentDE = "Auf ... eine ganz neue Welt ...",
+          TextMapId = "voice_ch_char_Tuosi_vo_die_r02"
+        },
+        voice_ch_char_Tuosi_vo_fail = {
+          ContentDE = "Tragödie ist die Prüfung der Tapferen.",
+          TextMapId = "voice_ch_char_Tuosi_vo_fail"
+        },
+        voice_ch_char_Tuosi_vo_gain = {
+          ContentDE = "Möge unser Wiedersehen in der schwärzesten Stunde der Nacht geschehen, wenn Schatten mein Antlitz verhüllen und dich vor dem Schrecken meines wahren Wesens bewahren.",
+          TextMapId = "voice_ch_char_Tuosi_vo_gain"
+        },
+        voice_ch_char_Tuosi_vo_idle = {
+          ContentDE = "Psst ... Ich werde zu dem Charakter.",
+          TextMapId = "voice_ch_char_Tuosi_vo_idle"
+        },
+        voice_ch_char_Tuosi_vo_lvup = {
+          ContentDE = "Ich habe in der Vergangenheit auch für solche Momente unzählige Male geprobt.",
+          TextMapId = "voice_ch_char_Tuosi_vo_lvup"
+        },
+        voice_ch_char_Tuosi_vo_revive = {
+          ContentDE = "War das gerade nur eine Pause?",
+          TextMapId = "voice_ch_char_Tuosi_vo_revive"
+        },
+        voice_ch_char_Tuosi_vo_skill01_r01 = {
+          ContentDE = "Verbeuge dich.",
+          TextMapId = "voice_ch_char_Tuosi_vo_skill01_r01"
+        },
+        voice_ch_char_Tuosi_vo_skill01_r02 = {
+          ContentDE = "Schweigen.",
+          TextMapId = "voice_ch_char_Tuosi_vo_skill01_r02"
+        },
+        voice_ch_char_Tuosi_vo_skill02_r01 = {
+          ContentDE = "Selbst wenn ich zu einem Tier reduziert werde ...",
+          TextMapId = "voice_ch_char_Tuosi_vo_skill02_r01"
+        },
+        voice_ch_char_Tuosi_vo_skill02_r02 = {
+          ContentDE = "Dann nimm mein Herz ...",
+          TextMapId = "voice_ch_char_Tuosi_vo_skill02_r02"
+        },
+        voice_ch_char_Tuosi_vo_skill02_r03 = {
+          ContentDE = "Selbst wenn alle Träume zerbrochen sind.",
+          TextMapId = "voice_ch_char_Tuosi_vo_skill02_r03"
+        },
+        voice_ch_char_Tuosi_vo_topic_01_1 = {
+          ContentDE = "Er ist eine zerstörte Glaslampe, ein Stern, der in die Gosse gefallen ist.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_01_1"
+        },
+        voice_ch_char_Tuosi_vo_topic_01_2 = {
+          ContentDE = "Er war genau wie diese Dinge. Völlig absurd aber trotzdem hell leuchtend.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_01_2"
+        },
+        voice_ch_char_Tuosi_vo_topic_01_3 = {
+          ContentDE = "Die Wand zwischen unseren Zellen war sehr dünn und es ging jeder Laut durch sie durch. Er war für mich nicht sichtbar, aber nur einen Meter entfernt und murmelte etwas über seine Familie, manchmal nach der Zukunft sehnend und manchmal ein Lied undeutlich summend.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_01_3"
+        },
+        voice_ch_char_Tuosi_vo_topic_01_4 = {
+          ContentDE = "Manchmal hatte ich sogar vergessen, dass ich ein eingekesseltes Tier bin. Stattdessen fühlte ich mich wie ein gewöhnliches Kind in der Schule, welches bei einem Mittagsschläfchen aus einem Alptraum erwachte, weil es durch den Lärm eines Mitschülers aufgeweckt wurde.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_01_4"
+        },
+        voice_ch_char_Tuosi_vo_topic_01_5 = {
+          ContentDE = "Hmpf ... Vielleicht.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_01_5"
+        },
+        voice_ch_char_Tuosi_vo_topic_01_6 = {
+          ContentDE = "Aber „Freund“ ist ein zu positives Wort. Wir waren mehr wie zwei gestrandete Fische in einem trockenen Flussbett.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_01_6"
+        },
+        voice_ch_char_Tuosi_vo_topic_02_1 = {
+          ContentDE = "Warum? Die Geschichte von Parsifal ist vor langer Zeit zu Ende gegangen. Der Name liegt jetzt in weiter Ferne und er ist so weit weg, dass ich mich manchmal frage, ob er jemals real war.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_02_1"
+        },
+        voice_ch_char_Tuosi_vo_topic_02_2 = {
+          ContentDE = "... Wirklich?",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_02_2"
+        },
+        voice_ch_char_Tuosi_vo_topic_02_3 = {
+          ContentDE = "Naja, dann sollte ich diese Aufführung an ihr Ende bringen – für dich, mein letztes und einziges Publikum.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_02_3"
+        },
+        voice_ch_char_Tuosi_vo_topic_02_4 = {
+          ContentDE = "Danke, dass du mir diese Bühne gewährst.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_02_4"
+        },
+        voice_ch_char_Tuosi_vo_topic_03_1 = {
+          ContentDE = "Du bist doch großzügig. Aber all meine Versprechen sind bereits eingelöst.Und es gibt nichts mehr, was es noch wert ist, sich daran zu erinnern.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_03_1"
+        },
+        voice_ch_char_Tuosi_vo_topic_03_3 = {
+          ContentDE = "Falls du eines Tages zum Galea-Theater kommen solltest, übermittle bitte Frau Violetta, dass ich mich in Aethyrie niedergelassen habe. Sage ihr, dass es keinen Grund zur Sorge gibt, da es mir jetzt sehr gut geht.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_03_3"
+        },
+        voice_ch_char_Tuosi_vo_topic_03_4 = {
+          ContentDE = "„Ein Land der Musik und Poesie, wo jeder Kiesel einen Rhythmus schlägt und jeder Bach eine Melodie singt.“",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_03_4"
+        },
+        voice_ch_char_Tuosi_vo_topic_03_5 = {
+          ContentDE = "Hoffentlich hält das sie davon ab, nach mir zu fragen. Einst ihr bevorzugter Schüler ... ich möchte ihre Erinnerungen lieber nicht trüben.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_03_5"
+        },
+        voice_ch_char_Tuosi_vo_topic_03_6 = {
+          ContentDE = "Ja, Ignoranz ist immer ein Segen.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_03_6"
+        },
+        voice_ch_char_Tuosi_vo_topic_04_1 = {
+          ContentDE = "Warum willst du eine Rolle spielen? Du hast es nicht nötig, zu einer anderen Person zu werden.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_04_1"
+        },
+        voice_ch_char_Tuosi_vo_topic_04_2 = {
+          ContentDE = "Wenn du auf der Bühne stehst, wird jeder Teil von dir – von deinen Knochen bis zu deinem Atem – zu diesem Charakter. In diesem Moment kannst du all deine Sorgen und Schmerzen vergessen und betrittst eine nie dagewesene Welt.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_04_2"
+        },
+        voice_ch_char_Tuosi_vo_topic_04_3 = {
+          ContentDE = "Aber du wurdest als gesegneter Protagonist in einer Abenteuergeschichte geboren und trägst die Bewunderung und Vertrauen der anderen Charaktere. Du scheinst auch ohne Bühne unentwegt zu glänzen.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_04_3"
+        },
+        voice_ch_char_Tuosi_vo_topic_05_1 = {
+          ContentDE = "Es steht da und hat Dinge erlebt, die länger als mein Leben reichen. Auf einer Seite der sich erhebenden Mauern liegt die imposante Innenstadt. Hoch wie die dunklen Wolken, noch kälter als die dunklen Wolken.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_05_1"
+        },
+        voice_ch_char_Tuosi_vo_topic_05_2 = {
+          ContentDE = "Elegant gekleidete Gestalten steigen aus seidengefütterten Kutschen, diskutieren über Kunst, Poesie und das ewige Grau des Himmels. Sie tratschen über Bälle und Verlobungen und beklagen, wie der Matsch aus schmelzendem Schnee aus der äußeren Stadt ihre feinen Lederstiefel beschmutzt.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_05_2"
+        },
+        voice_ch_char_Tuosi_vo_topic_05_3 = {
+          ContentDE = "Auf der anderen Seite der Mauern pulsiert das lärmende Mist Aken im Chaos. Händler rufen laut ihre Waren aus, Mütter halten ihre Kinder fest und betteln um einen Krümel Roggenbrot. Schelmische Hände kritzeln trotzige Graffiti, stets einen Schritt voraus vor den Patrouillen.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_05_3"
+        },
+        voice_ch_char_Tuosi_vo_topic_05_4 = {
+          ContentDE = "So steht unser Galea-Theater, gefangen zwischen diesen beiden Welten, hört alles, versteht aber nichts.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_05_4"
+        },
+        voice_ch_char_Tuosi_vo_topic_05_5 = {
+          ContentDE = "Seltsamerweise sind es nicht die Stücke oder die prunkvollen Kostüme, die mir zuerst einfallen, noch der überfüllte Requisitenraum, den ich täglich fegte.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_05_5"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Tuosi_vo_topic_05_6",
+    MaxKey = "voice_ch_char_Zhiliu_vo_fail",
+    Loader = function()
+      return {
+        voice_ch_char_Tuosi_vo_topic_05_6 = {
+          ContentDE = "Es ist der Samtteppich, der nach dem Fallen des Vorhangs die Bühne bedeckte. Als Kind, nach der frühesten Aufführung, an die ich mich erinnern kann, verweilten meine Mutter und ich nach dem Verlassen aller auf der Bühne, sprachen unsere Texte und tanzten durch die Nacht.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_05_6"
+        },
+        voice_ch_char_Tuosi_vo_topic_05_7 = {
+          ContentDE = "Als die Morgendämmerung brach, überwältigte mich schließlich die Erschöpfung. Ich legte mich auf diesen Teppich, ruhte den Kopf im Schoß meiner Mutter und glitt in einen langen, süßen Traum.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_05_7"
+        },
+        voice_ch_char_Tuosi_vo_victory = {
+          ContentDE = "Komödie ist die Satire der Weisen.",
+          TextMapId = "voice_ch_char_Tuosi_vo_victory"
+        },
+        voice_ch_char_Tuosi_vo_welcome = {
+          ContentDE = "Ich nehme die Rolle des gebrochenen Gefangenen ein, und du, als {性别:wachsamer Wächter|wachsame Wächterin}, stehst {性别:Hüter|Hüterin} über meinen Ketten.",
+          TextMapId = "voice_ch_char_Tuosi_vo_welcome"
+        },
+        voice_ch_char_Xibi_vo_appear = {
+          ContentDE = "Hilfe von einem Feind suchen? Gut ... Anscheinend hat der Hass deine Vernunft noch nicht verschlungen.",
+          TextMapId = "voice_ch_char_Xibi_vo_appear"
+        },
+        voice_ch_char_Xibi_vo_battleidle = {
+          ContentDE = "Keine Faulheit. In der Legion gäbe es dafür schon die Peitsche.",
+          TextMapId = "voice_ch_char_Xibi_vo_battleidle"
+        },
+        voice_ch_char_Xibi_vo_battlestart = {
+          ContentDE = "Wer wagt es, meine Zeit zu verschwenden?",
+          TextMapId = "voice_ch_char_Xibi_vo_battlestart"
+        },
+        voice_ch_char_Xibi_vo_be_hit_heavy_r01 = {
+          ContentDE = "Unverschämt!",
+          TextMapId = "voice_ch_char_Xibi_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Xibi_vo_be_hit_heavy_r02 = {
+          ContentDE = "Ugh!",
+          TextMapId = "voice_ch_char_Xibi_vo_be_hit_heavy_r02"
+        },
+        voice_ch_char_Xibi_vo_birthday = {
+          ContentDE = "Was erwartest du? Dass ich dir eine Geburtstagstorte backe? Hmpf, träume weiter. Vielleicht gewähre ich dir beim nächsten Duell ein paar Zugeständnisse.",
+          TextMapId = "voice_ch_char_Xibi_vo_birthday"
+        },
+        voice_ch_char_Xibi_vo_companio_01 = {
+          ContentDE = "… Es ist Zeit, dass wir ein Ende machen.",
+          TextMapId = "voice_ch_char_Xibi_vo_companio_01"
+        },
+        voice_ch_char_Xibi_vo_companio_02 = {
+          ContentDE = "Unsere Wege sind völlig entgegengesetzt. Ich habe schon früher an mir gezweifelt und mich gefragt, ob du Recht hast. Leider wirst du nur als der Besiegte in die Geschichte eingehen.",
+          TextMapId = "voice_ch_char_Xibi_vo_companio_02"
+        },
+        voice_ch_char_Xibi_vo_companio_03 = {
+          ContentDE = "Wärst du nicht sein Erbe ... hätte mein Schwert schon längst dein Herz durchbohrt.",
+          TextMapId = "voice_ch_char_Xibi_vo_companio_03"
+        },
+        voice_ch_char_Xibi_vo_companio_04 = {
+          ContentDE = "Je perfekter du dich verbirgst, desto schärfer wetzt du im Verborgenen deine Fangzähne. Ich warte auf den Tag, an dem du ausbrichst, dann werde ich dir persönlich die Fangzähne zerschmettern.",
+          TextMapId = "voice_ch_char_Xibi_vo_companio_04"
+        },
+        voice_ch_char_Xibi_vo_companio_05 = {
+          ContentDE = "Sind die aktuellen Auftragsbeschreibungen, Kampfpläne, Logistikaufträge und Verlustlisten bereits geordnet?\n Gut. Dann erledigen wir heute noch die externen Kampagnenslogans, die interne Fallanalyse, den Tagesbericht an den Kaiser sowie die Testdaten der neuen Waffe aus der Spathatoi. Arbeit ist keine zusätzliche Belastung.",
+          TextMapId = "voice_ch_char_Xibi_vo_companio_05"
+        },
+        voice_ch_char_Xibi_vo_die_r01 = {
+          ContentDE = "Wir sehen uns bald wieder ... Eure Majestät.",
+          TextMapId = "voice_ch_char_Xibi_vo_die_r01"
+        },
+        voice_ch_char_Xibi_vo_die_r02 = {
+          ContentDE = "Eure Majestät ... Euer Wunsch ... Ich ...",
+          TextMapId = "voice_ch_char_Xibi_vo_die_r02"
+        },
+        voice_ch_char_Xibi_vo_fail = {
+          ContentDE = "Das nächste Mal werde ich dieses Schlachtfeld vollständig vernichten.",
+          TextMapId = "voice_ch_char_Xibi_vo_fail"
+        },
+        voice_ch_char_Xibi_vo_gain = {
+          ContentDE = "Ich weiß, was du fragen möchtest, aber du bist noch nicht stark genug, um eine Antwort von mir zu verdienen. Leg also dein Schwert nieder – das ist der freundlichste Rat, den ich dir geben kann.",
+          TextMapId = "voice_ch_char_Xibi_vo_gain"
+        },
+        voice_ch_char_Xibi_vo_idle = {
+          ContentDE = "Du kehrst deinem Feind so unvorsichtig den Rücken zu ... Soll ich dich naiv nennen – oder dumm?",
+          TextMapId = "voice_ch_char_Xibi_vo_idle"
+        },
+        voice_ch_char_Xibi_vo_lvup = {
+          ContentDE = "Nur wer unaufhörlich aufsteigt, stürzt nicht in den Abgrund.",
+          TextMapId = "voice_ch_char_Xibi_vo_lvup"
+        },
+        voice_ch_char_Xibi_vo_revive = {
+          ContentDE = "Die Hölle ist nicht schlimmer als die Menschenwelt.",
+          TextMapId = "voice_ch_char_Xibi_vo_revive"
+        },
+        voice_ch_char_Xibi_vo_skill01_r01 = {
+          ContentDE = "Aus dem Weg!",
+          TextMapId = "voice_ch_char_Xibi_vo_skill01_r01"
+        },
+        voice_ch_char_Xibi_vo_skill01_r02 = {
+          ContentDE = "Zittert!",
+          TextMapId = "voice_ch_char_Xibi_vo_skill01_r02"
+        },
+        voice_ch_char_Xibi_vo_skill02_r01 = {
+          ContentDE = "Erbärmlicher Schwächling.",
+          TextMapId = "voice_ch_char_Xibi_vo_skill02_r01"
+        },
+        voice_ch_char_Xibi_vo_skill02_r02 = {
+          ContentDE = "Heule noch lauter!",
+          TextMapId = "voice_ch_char_Xibi_vo_skill02_r02"
+        },
+        voice_ch_char_Xibi_vo_skill02_r03 = {
+          ContentDE = "Ergebt euch mir!",
+          TextMapId = "voice_ch_char_Xibi_vo_skill02_r03"
+        },
+        voice_ch_char_Xibi_vo_topic_01_1 = {
+          ContentDE = "Eine Spezialeinheit, die direkt dem Kaiser untersteht. Sie führt geheime Aufträge durch und dient als eiserne Faust auf dem Schlachtfeld.",
+          TextMapId = "voice_ch_char_Xibi_vo_topic_01_1"
+        },
+        voice_ch_char_Xibi_vo_topic_01_2 = {
+          ContentDE = "Da liegst du völlig falsch. Ohne den Kaiser würde die Legion bestehen bleiben, aber ohne die Legion würde die Krone fallen.",
+          TextMapId = "voice_ch_char_Xibi_vo_topic_01_2"
+        },
+        voice_ch_char_Xibi_vo_topic_01_3 = {
+          ContentDE = "Versuche es ruhig. Hochverrat ist ein schweres Vergehen, und jede Anklage würde die Hierarchie durchlaufen und schließlich auf meinem Schreibtisch landen.",
+          TextMapId = "voice_ch_char_Xibi_vo_topic_01_3"
+        },
+        voice_ch_char_Xibi_vo_topic_02_1 = {
+          ContentDE = "Naja, meine Loyalität gilt nicht dem Imperium, sondern einem Ideal. Ein Mann hat einst alles dafür gegeben, und ich bewahre sein Vermächtnis und vollstrecke seinen Willen.",
+          TextMapId = "voice_ch_char_Xibi_vo_topic_02_1"
+        },
+        voice_ch_char_Xibi_vo_topic_02_2 = {
+          ContentDE = "Das bestreite ich nicht. Aber für mein Ziel nutze ich jedes Mittel und klettere rücksichtslos nach oben. Mit jeder Stufe komme ich meinem Ideal näher. Und du – wie weit bist du gekommen?",
+          TextMapId = "voice_ch_char_Xibi_vo_topic_02_2"
+        },
+        voice_ch_char_Xibi_vo_topic_03_1 = {
+          ContentDE = "Das macht nichts. Meine Familie gibt es schon lange nicht mehr.",
+          TextMapId = "voice_ch_char_Xibi_vo_topic_03_1"
+        },
+        voice_ch_char_Xibi_vo_topic_03_2 = {
+          ContentDE = "Ich finde es eigentlich befreiend. So habe ich keine Schwachstelle im Rücken und kann mich dem Kampf gegen meine Feinde – frontal wie aus dem Hinterhalt – voll und ganz widmen.",
+          TextMapId = "voice_ch_char_Xibi_vo_topic_03_2"
+        },
+        voice_ch_char_Xibi_vo_topic_03_3 = {
+          ContentDE = "Gefühle sind für jeden in der Legion nur Schwächen.",
+          TextMapId = "voice_ch_char_Xibi_vo_topic_03_3"
+        },
+        voice_ch_char_Xibi_vo_topic_04_1 = {
+          ContentDE = "Sicher. Offene Beschimpfungen und Hohn habe ich oft genug gehört. Und das Gemaule der Ratten in den Schatten ist noch lauter.",
+          TextMapId = "voice_ch_char_Xibi_vo_topic_04_1"
+        },
+        voice_ch_char_Xibi_vo_topic_04_2 = {
+          ContentDE = "Doch glücklicherweise kann man in dieser ungerechten Welt mit absoluter Macht immer noch ein Mindestmaß an Respekt erlangen.",
+          TextMapId = "voice_ch_char_Xibi_vo_topic_04_2"
+        },
+        voice_ch_char_Xibi_vo_topic_04_3 = {
+          ContentDE = "Stimmt. Darum werde ich mich niemals vor ihnen verbeugen, sonst würden sie sich wie Wölfe auf den Geruch von Blut stürzen und mich zerreißen.",
+          TextMapId = "voice_ch_char_Xibi_vo_topic_04_3"
+        },
+        voice_ch_char_Xibi_vo_victory = {
+          ContentDE = "Sieg? Ein Kinderspiel.",
+          TextMapId = "voice_ch_char_Xibi_vo_victory"
+        },
+        voice_ch_char_Xibi_vo_welcome = {
+          ContentDE = "Wenn ich deine unermüdlichen Bemühungen sehe, kann ich es kaum erwarten, bis du mich eines Tages wieder herausforderst.",
+          TextMapId = "voice_ch_char_Xibi_vo_welcome"
+        },
+        voice_ch_char_Xier_vo_appear = {
+          ContentDE = "Na gut. Ich füge mich vorerst.",
+          TextMapId = "voice_ch_char_Xier_vo_appear"
+        },
+        voice_ch_char_Xier_vo_battleidle = {
+          ContentDE = "Die Wäsche ist fast trocken ...",
+          TextMapId = "voice_ch_char_Xier_vo_battleidle"
+        },
+        voice_ch_char_Xier_vo_battlestart = {
+          ContentDE = "Die Reinigung beginnt.",
+          TextMapId = "voice_ch_char_Xier_vo_battlestart"
+        },
+        voice_ch_char_Xier_vo_be_hit_heavy_r01 = {
+          ContentDE = "Nur ein Kratzer.",
+          TextMapId = "voice_ch_char_Xier_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Xier_vo_birthday = {
+          ContentDE = "Alles Gute zum Geburtstag. Wenn ich mich recht erinnere, ist heute dein Geburtstag. Dann gibt es wohl keine Aufgabe mehr für mich – schließlich bist du sicher damit beschäftigt, mit anderen zu feiern. Also ziehe ich mich jetzt in mein Zimmer zurück und werde mich richtig ausschlafen. Ach ja, ich habe einen Kuchen gebacken und auf den Tisch gestellt. Der Geschmack wird dich nicht enttäuschen. Bitte iss ihn ganz auf.",
+          TextMapId = "voice_ch_char_Xier_vo_birthday"
+        },
+        voice_ch_char_Xier_vo_companio_01 = {
+          ContentDE = "Meine Lieblingsblume wächst unter einer Kuppel ewiger Wärme. Ein einziges Blütenblatt genügt für einen beruhigenden Abendtee, und zehn Blütenblätter ergeben einen Tropfen Toxin, der einen in den ewigen Schlaf schickt. Manchmal schneide ich diese Blumen in meinen Träumen zurück. Und wenn ich aufwache, bin ich froh, dass ich mich nicht mehr um sie kümmern muss.",
+          TextMapId = "voice_ch_char_Xier_vo_companio_01"
+        },
+        voice_ch_char_Xier_vo_companio_02 = {
+          ContentDE = "Wie beeindruckend. Ich empfinde tiefsten Respekt. Du denkst ständig über so tiefgründige Dinge nach. Ganz anders als ich, ein schlichtes Dienstmädchen, das sich nur um die kleinen Dinge des Lebens sorgt.",
+          TextMapId = "voice_ch_char_Xier_vo_companio_02"
+        },
+        voice_ch_char_Xier_vo_companio_03 = {
+          ContentDE = "Diese Unmengen an Gerümpel sind mir schon lange ein Dorn im Auge. Ich würde mich freuen, wenn du sie wegbringen könntest. Aber bevor du den Raum betritt, muss ich dir unbedingt einen Reinigungsservice anbieten. Du hast kein Recht, das abzulehnen. Wehre du bitte nicht.",
+          TextMapId = "voice_ch_char_Xier_vo_companio_03"
+        },
+        voice_ch_char_Xier_vo_die_r01 = {
+          ContentDE = "Meine Kleider sind schmutzig ...",
+          TextMapId = "voice_ch_char_Xier_vo_die_r01"
+        },
+        voice_ch_char_Xier_vo_die_r02 = {
+          ContentDE = "Es tut mir leid ... Fräulein Flodia …",
+          TextMapId = "voice_ch_char_Xier_vo_die_r02"
+        },
+        voice_ch_char_Xier_vo_fail = {
+          ContentDE = "Verzeihung … ich habe diesen Unrat unterschätzt. Es scheint, als bräuchte ich etwas geeignetere Reinigungswerkzeuge.",
+          TextMapId = "voice_ch_char_Xier_vo_fail"
+        },
+        voice_ch_char_Xier_vo_gain = {
+          ContentDE = "Ich bin Hilda, ein schlichtes Dienstmädchen. Ich kümmere mich um alles, was Fräulein Flora betrifft – von den täglichen Routinen und Speiseplänen bis hin zum Schneidern und Bewirten. Ach ja, wenn ich gerade nichts zu tun habe, kann ich für meine Herrin lästige oder unerwünschte Gäste vertreiben. Das ist nur ein kleiner Zusatzservice von mir.",
+          TextMapId = "voice_ch_char_Xier_vo_gain"
+        },
+        voice_ch_char_Xier_vo_idle = {
+          ContentDE = "Von morgens bis abends ist ein Dienstmädchen immer beschäftigt. Doch hin und wieder kann es zu unerwünschten Ablenkungen kommen – etwa, wenn sie über den Speiseplan der nächsten Woche nachdenkt und von einer herumlungernden Person angesprochen wird.",
+          TextMapId = "voice_ch_char_Xier_vo_idle"
+        },
+        voice_ch_char_Xier_vo_lvup = {
+          ContentDE = "Aus Höflichkeit sollte ich dir danken. Aber stärker zu werden heißt für mich nur mehr Arbeit.",
+          TextMapId = "voice_ch_char_Xier_vo_lvup"
+        },
+        voice_ch_char_Xier_vo_revive = {
+          ContentDE = "Nur eine kurze Rast. Weiter mit der Reinigung.",
+          TextMapId = "voice_ch_char_Xier_vo_revive"
+        },
+        voice_ch_char_Xier_vo_skill01_r01 = {
+          ContentDE = "Dreckiger Schädling.",
+          TextMapId = "voice_ch_char_Xier_vo_skill01_r01"
+        },
+        voice_ch_char_Xier_vo_skill01_r02 = {
+          ContentDE = "Tss.",
+          TextMapId = "voice_ch_char_Xier_vo_skill01_r02"
+        },
+        voice_ch_char_Xier_vo_skill02_r01 = {
+          ContentDE = "Alles gereinigt!",
+          TextMapId = "voice_ch_char_Xier_vo_skill02_r01"
+        },
+        voice_ch_char_Xier_vo_skill02_r02 = {
+          ContentDE = "Die Reinigung verläuft gut – wenn auch mit ein wenig Lärm. Aber keine Sorge.",
+          TextMapId = "voice_ch_char_Xier_vo_skill02_r02"
+        },
+        voice_ch_char_Xier_vo_skill02_r03 = {
+          ContentDE = "Der Staub wurde vollständig beseitigt.",
+          TextMapId = "voice_ch_char_Xier_vo_skill02_r03"
+        },
+        voice_ch_char_Xier_vo_topic_01_1 = {
+          ContentDE = "Das stimmt. Durch den ständigen Nebel trocknet die Wäsche nie und nimmt den allgegenwärtigen Staub auf.",
+          TextMapId = "voice_ch_char_Xier_vo_topic_01_1"
+        },
+        voice_ch_char_Xier_vo_topic_01_2 = {
+          ContentDE = "Und manchmal ermutigt er gewisse Unerwünschte, sich Fräulein Flora zu nähern.",
+          TextMapId = "voice_ch_char_Xier_vo_topic_01_2"
+        },
+        voice_ch_char_Xier_vo_topic_01_3 = {
+          ContentDE = "Sonnige Tage sind zwar gut zum Trocknen, aber sie machen es auch leichter, Fräulein Flora und mich zu entdecken. Für uns gibt es kein ideales Wetter – nur Tage, die etwas weniger unangenehm sind.",
+          TextMapId = "voice_ch_char_Xier_vo_topic_01_3"
+        },
+        voice_ch_char_Xier_vo_topic_02_1 = {
+          ContentDE = "Dass ein Dienstmädchen kämpfen kann, ist völlig normal. Daran ist nichts Ungewöhnliches.",
+          TextMapId = "voice_ch_char_Xier_vo_topic_02_1"
+        },
+        voice_ch_char_Xier_vo_topic_02_2 = {
+          ContentDE = "Ob Fliegen oder Filthoiden – für mich sind sie alle nur Schmutz, der beseitigt werden muss. Kampf ist also nichts anderes als eine besonders befriedigende Form der Reinigung.",
+          TextMapId = "voice_ch_char_Xier_vo_topic_02_2"
+        },
+        voice_ch_char_Xier_vo_topic_03_1 = {
+          ContentDE = "Gefährliche Gegenstände? Was meinst du damit? Kannst du bitte etwas genauer werden, anstatt mich raten zu lassen?",
+          TextMapId = "voice_ch_char_Xier_vo_topic_03_1"
+        },
+        voice_ch_char_Xier_vo_topic_03_2 = {
+          ContentDE = "... Ich gebe zu, ich habe eine gewisse Vorliebe für Schusswaffen. Unter all den Werkzeugen, die ein Dienstmädchen täglich benutzt, sind sie in der Handhabung besonders angenehm – und in der Beseitigung von Schmutz unübertroffen.",
+          TextMapId = "voice_ch_char_Xier_vo_topic_03_2"
+        },
+        voice_ch_char_Xier_vo_topic_03_3 = {
+          ContentDE = "Falls du gelegentlich unter Druck stehst, könnte ich dir gern ein paar leihen. Ein bisschen „Ratatatata“ kann sehr entspannend sein.",
+          TextMapId = "voice_ch_char_Xier_vo_topic_03_3"
+        },
+        voice_ch_char_Xier_vo_topic_04_1 = {
+          ContentDE = "Äh, vielleicht. Ich mag es nicht, mich mit Belanglosen zu lange aufzuhalten.",
+          TextMapId = "voice_ch_char_Xier_vo_topic_04_1"
+        },
+        voice_ch_char_Xier_vo_topic_04_2 = {
+          ContentDE = "Du hast das falsch verstanden. Das liegt nur daran, dass du gut bezahlt hast. Wärst du eines Tages pleite, würde ich dich wohl fallen lassen.",
+          TextMapId = "voice_ch_char_Xier_vo_topic_04_2"
+        },
+        voice_ch_char_Xier_vo_topic_04_3 = {
+          ContentDE = "Mach dir keine Sorgen. Glaubst du mir, ich werde es nicht so weit kommen lassen.",
+          TextMapId = "voice_ch_char_Xier_vo_topic_04_3"
+        },
+        voice_ch_char_Xier_vo_topic_05_1 = {
+          ContentDE = "Hm? Wo ist sie? Laut ihrem heutigen Zeitplan sollte sie eigentlich gar nicht hier sein ...",
+          TextMapId = "voice_ch_char_Xier_vo_topic_05_1"
+        },
+        voice_ch_char_Xier_vo_topic_05_2 = {
+          ContentDE = "Ach, du hast mich getäuscht.",
+          TextMapId = "voice_ch_char_Xier_vo_topic_05_2"
+        },
+        voice_ch_char_Xier_vo_topic_05_3 = {
+          ContentDE = "Überhaupt nicht. Fräulein Flora bedeutet mir alles. Vielleicht ist es vermessen von mir, das zu sagen, aber sie ist weit mehr als nur meine Herrin ...",
+          TextMapId = "voice_ch_char_Xier_vo_topic_05_3"
+        },
+        voice_ch_char_Xier_vo_topic_05_4 = {
+          ContentDE = "Leider bin ich ja keine Wanderbarde, sonst würde ich wohl das perfekte Wort finden, das die Bedeutung von Freundschaft und Familie vereint.",
+          TextMapId = "voice_ch_char_Xier_vo_topic_05_4"
+        },
+        voice_ch_char_Xier_vo_topic_05_5 = {
+          ContentDE = "Ich behalte solche Gefühle lieber für mich. Den Weg meiner Herrin von allem Unrat zu säubern, ist sowohl meine Pflicht als Dienstmädchen als auch mein Privileg.",
+          TextMapId = "voice_ch_char_Xier_vo_topic_05_5"
+        },
+        voice_ch_char_Xier_vo_victory_r01 = {
+          ContentDE = "Reinigung abgeschlossen! Puh ... dann gehe ich jetzt die Wäsche waschen.",
+          TextMapId = "voice_ch_char_Xier_vo_victory_r01"
+        },
+        voice_ch_char_Xier_vo_victory_r02 = {
+          ContentDE = "Reinigung abgeschlossen! Puh ... dann gehe ich jetzt das Essen zubereiten.",
+          TextMapId = "voice_ch_char_Xier_vo_victory_r02"
+        },
+        voice_ch_char_Xier_vo_victory_r03 = {
+          ContentDE = "Reinigung abgeschlossen! Puh ... dann gehe ich mich jetzt um die Blumen kümmern.",
+          TextMapId = "voice_ch_char_Xier_vo_victory_r03"
+        },
+        voice_ch_char_Xier_vo_victory_r04 = {
+          ContentDE = "Reinigung abgeschlossen! Puh ... dann gehe ich jetzt ein neues Kleid für Fräulein Flora anfertigen.",
+          TextMapId = "voice_ch_char_Xier_vo_victory_r04"
+        },
+        voice_ch_char_Xier_vo_welcome = {
+          ContentDE = "Also, was kann ich heute für dich tun? Möchtest du eine Tasse Blütentee? Oder soll ich ein paar Feinde für dich beseitigen?",
+          TextMapId = "voice_ch_char_Xier_vo_welcome"
+        },
+        voice_ch_char_Yeer_vo_appear = {
+          ContentDE = "Yale: V... Vielleicht kann Oliver v... viel besser als ich kämpfen.",
+          TextMapId = "voice_ch_char_Yeer_vo_appear"
+        },
+        voice_ch_char_Yeer_vo_battleidle = {
+          ContentDE = "Oliver: Hey, steh nicht rum, such dir etwas zum Sprengen.\n Yale: Psst ... Wir müssen uns an die Anweisungen halten.",
+          TextMapId = "voice_ch_char_Yeer_vo_battleidle"
+        },
+        voice_ch_char_Yeer_vo_battlestart_r01 = {
+          ContentDE = "Oliver: Ha ... frische Luft.",
+          TextMapId = "voice_ch_char_Yeer_vo_battlestart_r01"
+        },
+        voice_ch_char_Yeer_vo_battlestart_r02 = {
+          ContentDE = "Yale: Das Experiment beginnt gleich. B... Bitte sei vorsichtig.",
+          TextMapId = "voice_ch_char_Yeer_vo_battlestart_r02"
+        },
+        voice_ch_char_Yeer_vo_be_hit_heavy_r01 = {
+          ContentDE = "Oliver: Warte nur ab!",
+          TextMapId = "voice_ch_char_Yeer_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Yeer_vo_be_hit_heavy_r02 = {
+          ContentDE = "Yale: Hör mit dem Schlagen auf!",
+          TextMapId = "voice_ch_char_Yeer_vo_be_hit_heavy_r02"
+        },
+        voice_ch_char_Yeer_vo_birthday = {
+          ContentDE = "Yale: Alles Gute zum Geburtstag! I... Ich habe ein Geschenk für dich vorbereitet – ein neues Modell von „Kleiner Knaller“. Ich habe sogar uns beide darauf gemalt, wie wir Seite an Seite kämpfen.\n Yale: Aber jedes Mal, wenn ich es male, wischt Oliver es wieder weg ... und dann ... explodiert es. Äh, ich werde dir heute auf jeden Fall ein neues machen!\n Oliver: Hör auf damit, Yale. Soll das Kunst sein? Das sieht aus wie zwei halbtote Filthoiden! Lass mich den Bombengott darauf malen und {nickname} zeigen, wie ein großartiger Künstler ist!",
+          TextMapId = "voice_ch_char_Yeer_vo_birthday"
+        },
+        voice_ch_char_Yeer_vo_companio_01 = {
+          ContentDE = [[
+Yale: H... Hallo ... du singst wirklich w... wunderbar.
+ Oliver: Hmpf, schon wieder ein Opfer.]],
+          TextMapId = "voice_ch_char_Yeer_vo_companio_01"
+        },
+        voice_ch_char_Yeer_vo_companio_02 = {
+          ContentDE = "Yale: Ist Filbert ... dein Freund? Ich habe auch einen guten Freund. Er ist genauso z... zuverlässig wie Filbert.\n Oliver: Moment mal, wen meinst du damit?",
+          TextMapId = "voice_ch_char_Yeer_vo_companio_02"
+        },
+        voice_ch_char_Yeer_vo_companio_03 = {
+          ContentDE = "Yale: Äh ... b... bitte sei nicht böse. Alle meine Bombenversuche e... ent... entsprechen den Sicherheitsstandards ...",
+          TextMapId = "voice_ch_char_Yeer_vo_companio_03"
+        },
+        voice_ch_char_Yeer_vo_die_r01 = {
+          ContentDE = "Oliver: Das tut bestimmt auch Yale weh ...",
+          TextMapId = "voice_ch_char_Yeer_vo_die_r01"
+        },
+        voice_ch_char_Yeer_vo_die_r02 = {
+          ContentDE = "Yale: Macht nichts, Oliver. Ich bleibe bei dir ...",
+          TextMapId = "voice_ch_char_Yeer_vo_die_r02"
+        },
+        voice_ch_char_Yeer_vo_fail = {
+          ContentDE = "Oliver: Hmpf, nächstes Mal kommt keiner davon.",
+          TextMapId = "voice_ch_char_Yeer_vo_fail"
+        },
+        voice_ch_char_Yeer_vo_gain = {
+          ContentDE = "Yale: H... Hallo ... ich bin Yale. D... Du bist auch hier, um „K... K... Kleiner Knaller“ zu kaufen, oder?\n Oliver: Tss. Du stotterst immer noch wie früher. Kein bisschen besser geworden.",
+          TextMapId = "voice_ch_char_Yeer_vo_gain"
+        },
+        voice_ch_char_Yeer_vo_idle = {
+          ContentDE = "Yale: Blaukraut bleibt ... B... Braut... Brautkleid bleibt Braut... Blaukraut ...\n Oliver: Es heißt „Blaukraut bleibt Blaukraut und Brautkleid bleibt Brautkleid“, du Idiot! Noch mal!\n Yale: O... Okay! B... Blaukraut bleibt Blaukraut ...",
+          TextMapId = "voice_ch_char_Yeer_vo_idle"
+        },
+        voice_ch_char_Yeer_vo_lvup = {
+          ContentDE = "Yale: Juhu! Oliver, wir sind zusammen stärker geworden.",
+          TextMapId = "voice_ch_char_Yeer_vo_lvup"
+        },
+        voice_ch_char_Yeer_vo_revive = {
+          ContentDE = "Oliver: Wer zum Teufel war das?!",
+          TextMapId = "voice_ch_char_Yeer_vo_revive"
+        },
+        voice_ch_char_Yeer_vo_skill01_r01 = {
+          ContentDE = "Oliver: BUMM!",
+          TextMapId = "voice_ch_char_Yeer_vo_skill01_r01"
+        },
+        voice_ch_char_Yeer_vo_skill01_r02 = {
+          ContentDE = "Yale: „Kleiner Knaller“, l... los geht’s!",
+          TextMapId = "voice_ch_char_Yeer_vo_skill01_r02"
+        },
+        voice_ch_char_Yeer_vo_skill02_r01 = {
+          ContentDE = "Oliver: Es wird auch Zeit!",
+          TextMapId = "voice_ch_char_Yeer_vo_skill02_r01"
+        },
+        voice_ch_char_Yeer_vo_skill02_r02 = {
+          ContentDE = "Oliver: Genieße das Meisterwerk des größten Genies!",
+          TextMapId = "voice_ch_char_Yeer_vo_skill02_r02"
+        },
+        voice_ch_char_Yeer_vo_skill02_r03 = {
+          ContentDE = "Oliver: Halte dir die Ohren zu – BUMM!",
+          TextMapId = "voice_ch_char_Yeer_vo_skill02_r03"
+        },
+        voice_ch_char_Yeer_vo_topic_01_1 = {
+          ContentDE = "Yale: Oliver ist keine sprechende Bombe ... Klingt vielleicht seltsam, aber ... eigentlich ist er ...",
+          TextMapId = "voice_ch_char_Yeer_vo_topic_01_1"
+        },
+        voice_ch_char_Yeer_vo_topic_01_2 = {
+          ContentDE = "Oliver: Ugh, du bringst mich um hier! Ich bin Yale, und Yale bin ich. Verstanden? Nicht, dass ich von jemandem mit deinem erbsengroßen Gehirn erwarten würde, dass er das versteht.",
+          TextMapId = "voice_ch_char_Yeer_vo_topic_01_2"
+        },
+        voice_ch_char_Yeer_vo_topic_01_3 = {
+          ContentDE = "Yale: O... Oliver ist ein netter Kerl! E... Er mag etwas rau und gemein sein ... und t... taucht gerne plötzlich auf, aber ...",
+          TextMapId = "voice_ch_char_Yeer_vo_topic_01_3"
+        },
+        voice_ch_char_Yeer_vo_topic_01_4 = {
+          ContentDE = "Oliver: Hey, nennst du das etwa ein Kompliment?",
+          TextMapId = "voice_ch_char_Yeer_vo_topic_01_4"
+        },
+        voice_ch_char_Yeer_vo_topic_02_1 = {
+          ContentDE = "Yale: I... Ich bin vielleicht keine große Hilfe ... Das Einzige, was ich gut kann ... ist wahrscheinlich „Kleiner Knaller“ herzustellen ...",
+          TextMapId = "voice_ch_char_Yeer_vo_topic_02_1"
+        },
+        voice_ch_char_Yeer_vo_topic_02_2 = {
+          ContentDE = "Yale: Das sind die beliebtesten Artikel in unserem Spielzeugladen „Snap 'n' Spark“... Sie brauchen viel Zeit zur Herstellung.",
+          TextMapId = "voice_ch_char_Yeer_vo_topic_02_2"
+        },
+        voice_ch_char_Yeer_vo_topic_02_3 = {
+          ContentDE = "Yale: Aber das liegt nicht daran, dass ich so geschickt bin ... Das verdanken wir alles Olivers Fachwissen.",
+          TextMapId = "voice_ch_char_Yeer_vo_topic_02_3"
+        },
+        voice_ch_char_Yeer_vo_topic_03_1 = {
+          ContentDE = "Yale: Ach, entschuldige! A... Aber wenn ich zu schnell spreche, dann ... äh ... verheddert sich meine Zunge.",
+          TextMapId = "voice_ch_char_Yeer_vo_topic_03_1"
+        },
+        voice_ch_char_Yeer_vo_topic_03_2 = {
+          ContentDE = "Yale: D... Das ist okay, manchmal spricht Oliver für mich ... und wenn niemand anderes da ist, hört Oliver mir immer zu.",
+          TextMapId = "voice_ch_char_Yeer_vo_topic_03_2"
+        },
+        voice_ch_char_Yeer_vo_topic_04_1 = {
+          ContentDE = "Yale: Ich hatte nie wirklich eine Kindheit ... Seit ich mich erinnern kann, bin ich in diesem Körper. Oliver hatte vielleicht eine.",
+          TextMapId = "voice_ch_char_Yeer_vo_topic_04_1"
+        },
+        voice_ch_char_Yeer_vo_topic_04_2 = {
+          ContentDE = "Yale: Ich habe mich oft gefragt, wie eine Kindheit wohl wäre ... Ob Herr Jones mir jeden Abend Geschichten vorgelesen hätte, bevor ich schlafen gehe ... wie ein richtiger Vater ...",
+          TextMapId = "voice_ch_char_Yeer_vo_topic_04_2"
+        },
+        voice_ch_char_Yeer_vo_topic_04_3 = {
+          ContentDE = "Oliver: Du erwartest, dass der Idiot Jones dir Geschichten erzählt hat? Hast du den Verstand verloren?",
+          TextMapId = "voice_ch_char_Yeer_vo_topic_04_3"
+        },
+        voice_ch_char_Yeer_vo_topic_04_4 = {
+          ContentDE = "Yale: T... Tut mir leid! Ich weiß ... er interessiert sich nur für Experimente, also hat er das nicht getan ...",
+          TextMapId = "voice_ch_char_Yeer_vo_topic_04_4"
+        },
+        voice_ch_char_Yeer_vo_victory = {
+          ContentDE = "Oliver: Hat dir mein großartiges Meisterwerk gefallen?",
+          TextMapId = "voice_ch_char_Yeer_vo_victory"
+        },
+        voice_ch_char_Yeer_vo_welcome = {
+          ContentDE = "Yale: Du bist da ... Was für ein schöner Tag ... äh ... perfekt für ein paar Explosion-Experimente ... Ja, schöner Tag.",
+          TextMapId = "voice_ch_char_Yeer_vo_welcome"
+        },
+        voice_ch_char_Yuming_vo_appear = {
+          ContentDE = "Es ist mir eine Ehre.",
+          TextMapId = "voice_ch_char_Yuming_vo_appear"
+        },
+        voice_ch_char_Yuming_vo_battleidle = {
+          ContentDE = "Zögere niemals.",
+          TextMapId = "voice_ch_char_Yuming_vo_battleidle"
+        },
+        voice_ch_char_Yuming_vo_battlestart = {
+          ContentDE = "Überlass mir die Drecksarbeit.",
+          TextMapId = "voice_ch_char_Yuming_vo_battlestart"
+        },
+        voice_ch_char_Yuming_vo_be_hit_heavy_r01 = {
+          ContentDE = "Nicht mehr als das.",
+          TextMapId = "voice_ch_char_Yuming_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Yuming_vo_be_hit_r01 = {
+          ContentDE = "Uff!",
+          TextMapId = "voice_ch_char_Yuming_vo_be_hit_r01"
+        },
+        voice_ch_char_Yuming_vo_be_hit_r02 = {
+          ContentDE = "Hmm!",
+          TextMapId = "voice_ch_char_Yuming_vo_be_hit_r02"
+        },
+        voice_ch_char_Yuming_vo_birthday = {
+          ContentDE = "Geburtstag? Ich habe einem solchen Anlass kaum Beachtung geschenkt. Meine Treue zu den Neun Kapiteln von Dafeng macht Leben und Tod zu Nebensachen.\nDennoch bringt ein Segenswort dich wohl zum Lächeln, oder? Alles Gute zum Geburtstag.",
+          TextMapId = "voice_ch_char_Yuming_vo_birthday"
+        },
+        voice_ch_char_Yuming_vo_companio_01 = {
+          ContentDE = "Ich weiß nicht, von welcher Vergangenheit du dich losgesagt hast, doch unsere Aura ist sich ähnlich. Lass uns Abstand wahren. Ich finde wenig Trost in meinesgleichen.",
+          TextMapId = "voice_ch_char_Yuming_vo_companio_01"
+        },
+        voice_ch_char_Yuming_vo_companio_02 = {
+          ContentDE = "Wir sind nicht mehr die Kameraden von einst. Begegnungen im Leben sind wie ein Windhauch – schnell verweht. Lass es gut sein.",
+          TextMapId = "voice_ch_char_Yuming_vo_companio_02"
+        },
+        voice_ch_char_Yuming_vo_companio_03 = {
+          ContentDE = "Ich beneide dich um deinen Willen und die ebenso fest gefügten Gesetze. Gab es für dich je einen Moment, in dem du an dir selbst gezweifelt hast?",
+          TextMapId = "voice_ch_char_Yuming_vo_companio_03"
+        },
+        voice_ch_char_Yuming_vo_die_r01 = {
+          ContentDE = "Es tut mir leid ... dass du das mitansehen musstest ...",
+          TextMapId = "voice_ch_char_Yuming_vo_die_r01"
+        },
+        voice_ch_char_Yuming_vo_die_r02 = {
+          ContentDE = "Kann ich ... meine Fesseln abwerfen?",
+          TextMapId = "voice_ch_char_Yuming_vo_die_r02"
+        },
+        voice_ch_char_Yuming_vo_fail = {
+          ContentDE = "Ein weiteres Zeichen der Schande ...",
+          TextMapId = "voice_ch_char_Yuming_vo_fail"
+        },
+        voice_ch_char_Yuming_vo_gain = {
+          ContentDE = "Bittest du mich um Hilfe als Freund? Oder siehst du mich nur als Waffe, die du nach Belieben einsetzen kannst?",
+          TextMapId = "voice_ch_char_Yuming_vo_gain"
+        },
+        voice_ch_char_Yuming_vo_idle = {
+          ContentDE = "Keine Nachrichten sind gute Nachrichten.",
+          TextMapId = "voice_ch_char_Yuming_vo_idle"
+        },
+        voice_ch_char_Yuming_vo_lvup = {
+          ContentDE = "Die Jahreszeiten wechseln, doch der Streit hört niemals auf.",
+          TextMapId = "voice_ch_char_Yuming_vo_lvup"
+        },
+        voice_ch_char_Yuming_vo_revive = {
+          ContentDE = "Verfolgen die Fesseln sogar jene, die im Tod Zuflucht suchten?",
+          TextMapId = "voice_ch_char_Yuming_vo_revive"
+        },
+        voice_ch_char_Yuming_vo_skill01_r01 = {
+          ContentDE = "Zerbersten.",
+          TextMapId = "voice_ch_char_Yuming_vo_skill01_r01"
+        },
+        voice_ch_char_Yuming_vo_skill01_r02 = {
+          ContentDE = "Sternenfall-Schlag.",
+          TextMapId = "voice_ch_char_Yuming_vo_skill01_r02"
+        },
+        voice_ch_char_Yuming_vo_skill02_r01 = {
+          ContentDE = "Das Urteil fällt!",
+          TextMapId = "voice_ch_char_Yuming_vo_skill02_r01"
+        },
+        voice_ch_char_Yuming_vo_skill02_r02 = {
+          ContentDE = "Xuanjiao, zerreiß die Front.",
+          TextMapId = "voice_ch_char_Yuming_vo_skill02_r02"
+        },
+        voice_ch_char_Yuming_vo_skill02_r03 = {
+          ContentDE = "Seele zu Stahl.",
+          TextMapId = "voice_ch_char_Yuming_vo_skill02_r03"
+        },
+        voice_ch_char_Yuming_vo_topic_01_1 = {
+          ContentDE = "Lies ein Buch, oder such dir für solch belanglose Gespräche andere Gesellschaft. Vielleicht können die Sternenweber, die ihre Waren feilbieten, deine Neugier stillen.",
+          TextMapId = "voice_ch_char_Yuming_vo_topic_01_1"
+        },
+        voice_ch_char_Yuming_vo_topic_01_2 = {
+          ContentDE = "Mein Alltag ist voller Pflichten, daher ist mein Blickwinkel begrenzt. Wenn du wirklich neugierig bist, begnüge dich nicht mit den Worten anderer, sondern mach dich selbst auf den Weg dorthin. Was hältst du davon?",
+          TextMapId = "voice_ch_char_Yuming_vo_topic_01_2"
+        },
+        voice_ch_char_Yuming_vo_topic_02_1 = {
+          ContentDE = "Die Neun Kapitel von Dafeng sind die Gesetze von Huaxu, denen sich niemand widersetzen darf. Wer sich dem Himmlischen Mandat widersetzt, den beseitige ich.",
+          TextMapId = "voice_ch_char_Yuming_vo_topic_02_1"
+        },
+        voice_ch_char_Yuming_vo_topic_02_2 = {
+          ContentDE = "... Vielleicht. Ich pflege kaum Umgang mit den Menschen. Denn wo immer ich zum Einsatz komme, gibt es Verluste zu beklagen. Die meisten Bewohner von Huaxu sehen mich nicht gern.",
+          TextMapId = "voice_ch_char_Yuming_vo_topic_02_2"
+        },
+        voice_ch_char_Yuming_vo_topic_03_1 = {
+          ContentDE = "Es gibt nichts zu feiern. Das ist alles, was es dazu zu sagen gibt.",
+          TextMapId = "voice_ch_char_Yuming_vo_topic_03_1"
+        },
+        voice_ch_char_Yuming_vo_topic_03_2 = {
+          ContentDE = "Danke. Aber ich möchte niemanden mit meinen Problemen belasten. Das ist unnötig.",
+          TextMapId = "voice_ch_char_Yuming_vo_topic_03_2"
+        },
+        voice_ch_char_Yuming_vo_topic_04_1 = {
+          ContentDE = "Ja. Der Mond ist wirklich schön. Was auch immer am Tag geschehen ist – Festlichkeiten oder üble Taten – das Mondlicht wäscht alles rein. Egal, wie viel Zeit vergeht, am Himmel ist immer eine Mondsichel für dich.",
+          TextMapId = "voice_ch_char_Yuming_vo_topic_04_1"
+        },
+        voice_ch_char_Yuming_vo_topic_04_2 = {
+          ContentDE = "Nein. Ich habe mich von der Vergangenheit losgesagt. Doch heute habe ich bloß ein halbes Glas zu viel getrunken.",
+          TextMapId = "voice_ch_char_Yuming_vo_topic_04_2"
+        },
+        voice_ch_char_Yuming_vo_victory = {
+          ContentDE = "Unterschätze niemals den Feind.",
+          TextMapId = "voice_ch_char_Yuming_vo_victory"
+        },
+        voice_ch_char_Yuming_vo_welcome = {
+          ContentDE = "Solange du noch nicht von all den Gesetzen gebunden bist, tu, was du tun willst.",
+          TextMapId = "voice_ch_char_Yuming_vo_welcome"
+        },
+        voice_ch_char_Zhangyu_vo_appear = {
+          ContentDE = "Wohin gehen wir spielen?",
+          TextMapId = "voice_ch_char_Zhangyu_vo_appear"
+        },
+        voice_ch_char_Zhangyu_vo_battleidle = {
+          ContentDE = "*gähn* Mir ist sooo langweilig!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_battleidle"
+        },
+        voice_ch_char_Zhangyu_vo_battlestart = {
+          ContentDE = "Hehe, Dämon Tabethe, der Roten Hand ist da!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_battlestart"
+        },
+        voice_ch_char_Zhangyu_vo_be_hit_heavy_r01 = {
+          ContentDE = "Jetzt bin ich wirklich sauer!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Zhangyu_vo_be_hit_heavy_r02 = {
+          ContentDE = "Wie kannst du es wagen?!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_be_hit_heavy_r02"
+        },
+        voice_ch_char_Zhangyu_vo_be_hit_r01 = {
+          ContentDE = "Aua!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_be_hit_r01"
+        },
+        voice_ch_char_Zhangyu_vo_be_hit_r02 = {
+          ContentDE = "Ugh!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_be_hit_r02"
+        },
+        voice_ch_char_Zhangyu_vo_birthday = {
+          ContentDE = "Ich habe meinen Geburtstag noch nie gefeiert, also weiß ich nicht genau, was man da sagen soll. Also wünsche ich dir, dass du niemals erfahren musst, wie es ist, zu hungern oder zum Überleben zu stehlen. Wie war das?!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_birthday"
+        },
+        voice_ch_char_Zhangyu_vo_companio_01 = {
+          ContentDE = "Du willst mich fangen? Aber ich bin doch keine Böse! Ich stehle nur von anderen Dieben. Das ist keine große Sache ... Hey, bleib weg von mir! Aua! Das hat gebrannt!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_companio_01"
+        },
+        voice_ch_char_Zhangyu_vo_companio_02 = {
+          ContentDE = "Ist der Duft für mich? Hmm, aber du siehst ziemlich gefährlich aus, also behalte es lieber. Warte ... dieser Duft macht mich ganz benommen ... Meine Tentakel werden taub ... Du bist wirklich gefährlich!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_companio_02"
+        },
+        voice_ch_char_Zhangyu_vo_companio_03 = {
+          ContentDE = "Wie lustig du aussiehst, wenn du mit deinem Schwert sprichst! „Samael, gefällt dir dieser Ort? Lass uns gemeinsam noch mehr Orte erkunden!“\n Hm ...? Was ist los mit dir, warum regst du dich so auf? Hehehe, jetzt siehst du sogar lustiger aus!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_companio_03"
+        },
+        voice_ch_char_Zhangyu_vo_die_r01 = {
+          ContentDE = "Dämon Tabethe, der Roten Hand verliert niemals ...",
+          TextMapId = "voice_ch_char_Zhangyu_vo_die_r01"
+        },
+        voice_ch_char_Zhangyu_vo_die_r02 = {
+          ContentDE = "Ich will … weiterspielen …",
+          TextMapId = "voice_ch_char_Zhangyu_vo_die_r02"
+        },
+        voice_ch_char_Zhangyu_vo_fail = {
+          ContentDE = "Ihr seid alle Bösewichte! Schlimmer als diese Diebe! Wäääh ...",
+          TextMapId = "voice_ch_char_Zhangyu_vo_fail"
+        },
+        voice_ch_char_Zhangyu_vo_gain = {
+          ContentDE = "Hehe, bei dir gibt's ja jede Menge spannender Sachen! Das macht mich ein bisschen neugierig ... Keine Sorge, Dämon Tabethe, der Roten Hand stiehlt nichts von anständigen Leuten! Oder bist du etwa doch ein übler Schurke?",
+          TextMapId = "voice_ch_char_Zhangyu_vo_gain"
+        },
+        voice_ch_char_Zhangyu_vo_idle = {
+          ContentDE = "... Hey ... hey, lass mich mit dir kämpfen! Ich langweile mich zu Tode und meine Tentakel müssen sich strecken!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_idle"
+        },
+        voice_ch_char_Zhangyu_vo_lvup = {
+          ContentDE = "Hehe, wenn ich mich das nächste Mal als Fass verkleide, wirst du mich nicht erkennen können!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_lvup"
+        },
+        voice_ch_char_Zhangyu_vo_revive = {
+          ContentDE = "Das war nicht das Ende für mich. Ich wusste es!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_revive"
+        },
+        voice_ch_char_Zhangyu_vo_skill01_r01 = {
+          ContentDE = "Das macht so viel Spaß!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_skill01_r01"
+        },
+        voice_ch_char_Zhangyu_vo_skill01_r02 = {
+          ContentDE = "K.O.!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_skill01_r02"
+        },
+        voice_ch_char_Zhangyu_vo_skill02_r01 = {
+          ContentDE = "Autsch! Das tut weh ... Hehe, nur ein Scherz!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_skill02_r01"
+        },
+        voice_ch_char_Zhangyu_vo_skill02_r02 = {
+          ContentDE = "Spiel mit mir!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_skill02_r02"
+        },
+        voice_ch_char_Zhangyu_vo_skill02_r03 = {
+          ContentDE = "Dämon Tabethe, der Roten Hand ist hier!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_skill02_r03"
+        },
+        voice_ch_char_Zhangyu_vo_topic_01_1 = {
+          ContentDE = "„Berry, ich ...“",
+          TextMapId = "voice_ch_char_Zhangyu_vo_topic_01_1"
+        },
+        voice_ch_char_Zhangyu_vo_topic_01_2 = {
+          ContentDE = "„Morgen dein Lächeln zu sehen, würde mir schon ausreichen. Von nun an werde ich immer da sein, um dich zu beschützen.“ Hehe, ziemlich überzeugend, nicht wahr?",
+          TextMapId = "voice_ch_char_Zhangyu_vo_topic_01_2"
+        },
+        voice_ch_char_Zhangyu_vo_topic_01_3 = {
+          ContentDE = "Sauer? Hehehe, dieser finstere Blick auf deinem Gesicht macht mich nur noch mehr dazu, dich nachzuahmen!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_topic_01_3"
+        },
+        voice_ch_char_Zhangyu_vo_topic_02_1 = {
+          ContentDE = "Ganz einfach, ich kann mein Aussehen beliebig verändern. Ich kann jede Form und jede Farbe annehmen und tarne mich perfekt. Niemand kann mich entdecken!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_topic_02_1"
+        },
+        voice_ch_char_Zhangyu_vo_topic_02_2 = {
+          ContentDE = "Einmal habe ich mich sogar in ein Fass verwandelt, um dich zu erschrecken … Aber du bist ja nicht mal in die Nähe gekommen …",
+          TextMapId = "voice_ch_char_Zhangyu_vo_topic_02_2"
+        },
+        voice_ch_char_Zhangyu_vo_topic_02_3 = {
+          ContentDE = "Was?! Du hast mich also absichtlich ignoriert! Das ist nicht cool!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_topic_02_3"
+        },
+        voice_ch_char_Zhangyu_vo_topic_03_1 = {
+          ContentDE = "Heyyy! Ich bin doch ganz anders als diese Diebe, die alles klauen und nur Böses im Schilde führen!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_topic_03_1"
+        },
+        voice_ch_char_Zhangyu_vo_topic_03_2 = {
+          ContentDE = "Ich stehle nur von Dieben! Ich tarne mich, sodass sie mich nicht erkennen, schleiche mich an und klaue meine Lieblingsschätze direkt aus ihren Taschen – alles wird mitgenommen!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_topic_03_2"
+        },
+        voice_ch_char_Zhangyu_vo_topic_03_3 = {
+          ContentDE = "Wenn sie es merken, sind sie immer total schockiert! Hehehe ... Ich verschaffe mir doch nur Gerechtigkeit! Da kann ich doch kein Bösewicht sein!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_topic_03_3"
+        },
+        voice_ch_char_Zhangyu_vo_topic_04_1 = {
+          ContentDE = "Na klar! Du würdest es auch nicht mögen, wenn man dich mit Abscheu als Dämon bezeichnen würde.",
+          TextMapId = "voice_ch_char_Zhangyu_vo_topic_04_1"
+        },
+        voice_ch_char_Zhangyu_vo_topic_04_2 = {
+          ContentDE = "Weil ich das Wort „Dämon“ cool machen will! Heute zittern Diebe schon, wenn sie den Namen „Dämon Tabethe, der Roten Hand“ hören.",
+          TextMapId = "voice_ch_char_Zhangyu_vo_topic_04_2"
+        },
+        voice_ch_char_Zhangyu_vo_topic_04_3 = {
+          ContentDE = "Und ich hoffe, eines Tages wird das Wort „Dämon“ die Leute nur noch daran denken lassen, wie großartig ich bin. Das wäre ziemlich cool, findest du nicht?",
+          TextMapId = "voice_ch_char_Zhangyu_vo_topic_04_3"
+        },
+        voice_ch_char_Zhangyu_vo_victory = {
+          ContentDE = "Du Dummkopf, versuch doch, mich zu schlagen! Hmpf, gib auf!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_victory"
+        },
+        voice_ch_char_Zhangyu_vo_welcome = {
+          ContentDE = "Hm, jetzt ist der perfekte Zeitpunkt loszulegen. Ich muss schnell raus, sonst ... Hä?! Seit wann bist du denn hier?",
+          TextMapId = "voice_ch_char_Zhangyu_vo_welcome"
+        },
+        voice_ch_char_Zhiliu_vo_appear = {
+          ContentDE = "Brauchst du meine Hilfe? Hehe. Ich helfe gern.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_appear"
+        },
+        voice_ch_char_Zhiliu_vo_battleidle = {
+          ContentDE = "Zeit ist kostbar – ebenso wie mein Honorar.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_battleidle"
+        },
+        voice_ch_char_Zhiliu_vo_battlestart = {
+          ContentDE = "Lass es uns schnell und entschlossen erledigen.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_battlestart"
+        },
+        voice_ch_char_Zhiliu_vo_be_hit_heavy_r01 = {
+          ContentDE = "Hmph, Zeit zu zahlen.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Zhiliu_vo_birthday = {
+          ContentDE = "Heute ist dein Geburtstag. Ich habe ein kleines Geschenk für dich vorbereitet – du darfst es später öffnen.\nÜberrascht, dass ich es weiß? Sagen wir einfach, ich habe ein paar Fäden gezogen, um dein Profil zu erhalten. Die Details sind natürlich in meinem Gedächtnis verankert geblieben.\nVieles hat sich mit der Zeit geändert, doch mein Wunsch nach deinem Wohlergehen und Glück bleibt derselbe. Aber wenn es dir recht ist, dass ich es dir persönlich sage ... Alles Gute zum Geburtstag.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_birthday"
+        },
+        voice_ch_char_Zhiliu_vo_companio_01 = {
+          ContentDE = "Dein Parfum trägt eine kühne, berauschende Süße – ungezügelt, selbstbewusst. Ein auffälliger Kontrast zu den dezenten Düften von Huaxu. Ich bin fasziniert.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_companio_01"
+        },
+        voice_ch_char_Zhiliu_vo_companio_02_1 = {
+          ContentDE = "Täuschung mag im Krieg ihren Zweck erfüllen, doch in der feinen Kunst menschlicher Beziehungen ist sie ein grobes Werkzeug. Wer sich zu sehr auf solche Mittel verlässt, riskiert nur, seinen Ruf im Geschäftsleben zu beflecken.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_companio_02_1"
+        },
+        voice_ch_char_Zhiliu_vo_companio_02_2 = {
+          ContentDE = "Aber natürlich – du hast deine eigene Art, mit allem umzugehen. Ich vermute, meine Worte verhallen ungehört.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_companio_02_2"
+        },
+        voice_ch_char_Zhiliu_vo_companio_03 = {
+          ContentDE = "Ich glaubte, in dir einen Schatten von jemandem zu erkennen, den ich einst kannte ... Nein, ich muss mich geirrt haben. Schenk dem bitte keine Beachtung.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_companio_03"
+        },
+        voice_ch_char_Zhiliu_vo_companio_04 = {
+          ContentDE = "Es ist schon eine Weile her, seit ich das Vergnügen hatte, ein Getränk zu kosten, das du eigenhändig zubereitet hast. Wenn es die Zeit erlaubt – dürfte ich dich heute um ein weiteres Glas deiner köstlichen Nachmittagskreation bitten?",
+          TextMapId = "voice_ch_char_Zhiliu_vo_companio_04"
+        },
+        voice_ch_char_Zhiliu_vo_die_r01 = {
+          ContentDE = "Nie gedacht ... dass ich eines Tages falsch kalkulieren würde ...",
+          TextMapId = "voice_ch_char_Zhiliu_vo_die_r01"
+        },
+        voice_ch_char_Zhiliu_vo_die_r02 = {
+          ContentDE = "Also konnte ich ihr am Ende doch nicht entkommen ...",
+          TextMapId = "voice_ch_char_Zhiliu_vo_die_r02"
+        },
+        voice_ch_char_Zhiliu_vo_fail = {
+          ContentDE = "Lass nicht zu, dass Verzweiflung dein Urteilsvermögen trübt. Überdenke es und versuche es erneut.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_fail"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Zhiliu_vo_gain",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
+        voice_ch_char_Zhiliu_vo_gain = {
+          ContentDE = "Die meisten Dinge in dieser Welt sind nur Illusionen – Aufrichtigkeit oder Kalkül, spielt das wirklich eine Rolle? Am Ende zählt nur, dass ich hier vor dir stehe, hier und jetzt.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_gain"
+        },
+        voice_ch_char_Zhiliu_vo_idle = {
+          ContentDE = "Ich habe meine Sekretärin gebeten, meinen Terminkalender für die nächsten Tage freizuräumen. Für den Moment wünsche ich mir nur, diese Ruhe mit dir zu genießen – unberührt vom Lärm der Außenwelt. Ist das aus Aufrichtigkeit, oder ein weiterer berechneter Schachzug? Warum rätst du nicht selbst?",
+          TextMapId = "voice_ch_char_Zhiliu_vo_idle"
+        },
+        voice_ch_char_Zhiliu_vo_lvup = {
+          ContentDE = "Wie erwartet, fügt sich alles sauber zusammen.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_lvup"
+        },
+        voice_ch_char_Zhiliu_vo_revive = {
+          ContentDE = "Dachtest du wirklich, es sei vorbei? Ein gravierender Fehler.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_revive"
+        },
+        voice_ch_char_Zhiliu_vo_skill01_r01 = {
+          ContentDE = "Hexagramm, entfalte dich.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_skill01_r01"
+        },
+        voice_ch_char_Zhiliu_vo_skill01_r02 = {
+          ContentDE = "Achte auf die Schärfe des Schicksals.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_skill01_r02"
+        },
+        voice_ch_char_Zhiliu_vo_skill02_r01 = {
+          ContentDE = "Der Pfad des Glücks entflammt.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_skill02_r01"
+        },
+        voice_ch_char_Zhiliu_vo_skill02_r02 = {
+          ContentDE = "Der Sturm der Strategie erreicht seinen Höhepunkt.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_skill02_r02"
+        },
+        voice_ch_char_Zhiliu_vo_skill02_r03 = {
+          ContentDE = "Widerstand ist blanker Wahnsinn.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_skill02_r03"
+        },
+        voice_ch_char_Zhiliu_vo_skill02_sp = {
+          ContentDE = "Vorwärts, vernichte sie alle.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_skill02_sp"
+        },
+        voice_ch_char_Zhiliu_vo_topic_01_1 = {
+          ContentDE = "Es gibt nichts, das sich nicht in einer Verhandlung nutzen ließe. Die einzige Frage ist – welcher Preis wird die Waage zu deinen Gunsten kippen?",
+          TextMapId = "voice_ch_char_Zhiliu_vo_topic_01_1"
+        },
+        voice_ch_char_Zhiliu_vo_topic_01_2 = {
+          ContentDE = "Ganz recht. Dein Leben, meins und das Leben zahlloser anderer ... jedes ist nur ein Spielstein auf einem größeren Spielbrett, dessen Wert allein von den Einsätzen abhängt.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_topic_01_2"
+        },
+        voice_ch_char_Zhiliu_vo_topic_01_3 = {
+          ContentDE = "Für solche Unbedeutenden wie uns, das Wenige, das wir besitzen, gegen das zu tauschen, was wir begehren, ist das nicht für sich genommen schon ein Glücksfall?",
+          TextMapId = "voice_ch_char_Zhiliu_vo_topic_01_3"
+        },
+        voice_ch_char_Zhiliu_vo_topic_01_4 = {
+          ContentDE = "Beunruhigt dich meine Antwort? Dann, nur zu, widerlege mich.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_topic_01_4"
+        },
+        voice_ch_char_Zhiliu_vo_topic_02_1 = {
+          ContentDE = "Mmmh ... Verliere dich niemals in flüchtigen Gewinnen oder Verlusten. Spiele das langfristige Spiel. Sei großzügig, wenn es nötig ist. Lerne, Menschen zu lesen, sie zu nutzen und ihnen Gefälligkeiten zu erweisen, sodass sie dich respektieren, bewundern und auch fürchten. Wahre Macht liegt in diesem feinen Gleichgewicht.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_topic_02_1"
+        },
+        voice_ch_char_Zhiliu_vo_topic_02_2 = {
+          ContentDE = "Heh. Waren haben feste Preise, doch menschliche Verbindungen sind eine ganz andere Währung. Wer über jeden Cent feilscht, bleibt für immer in seinem kleinen Marktstück gefangen. Nur wer die Kunst der Einflussnahme meistert, kann über den bloßen Handel hinauswachsen und wahre Größe erreichen.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_topic_02_2"
+        },
+        voice_ch_char_Zhiliu_vo_topic_03_1 = {
+          ContentDE = "Ich bin meist in die Kleinigkeiten des Geschäfts verstrickt und habe selten das Privileg wahrer Muße.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_topic_03_1"
+        },
+        voice_ch_char_Zhiliu_vo_topic_03_2 = {
+          ContentDE = "Doch sollte mir das Schicksal einen flüchtigen Moment der Ruhe gewähren ... würde ich wohl im Theater Zuflucht suchen. Ob die uralten Erzähltraditionen von Huaxu, die erlesenen Opern des Imperiums oder die avantgardistischen Filme, die im Ausland an Popularität gewinnen – jedes besitzt seinen eigenen Reiz.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_topic_03_2"
+        },
+        voice_ch_char_Zhiliu_vo_topic_03_3 = {
+          ContentDE = "He ... Nein, wohl kaum. Das Theater destilliert die flüchtigen Augenblicke des Lebens, und doch offenbart es in diesen Fragmenten tiefe Wahrheiten über die menschliche Seele – eine Seele, die sich der Vernunft entzieht, in Widersprüchen gedeiht und in ihrer Unberechenbarkeit endlos fesselnd bleibt.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_topic_03_3"
+        },
+        voice_ch_char_Zhiliu_vo_topic_03_4 = {
+          ContentDE = "Welche unerwarteten Wendungen wirst du wohl in meine Geschichte bringen? Ich werde mit großem Interesse zusehen.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_topic_03_4"
+        },
+        voice_ch_char_Zhiliu_vo_topic_04_1 = {
+          ContentDE = "Hm? Du hast es bemerkt. Eine alte Angewohnheit, nicht mehr.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_topic_04_1"
+        },
+        voice_ch_char_Zhiliu_vo_topic_04_2 = {
+          ContentDE = "Als Kind geriet ich bei einem Unfall in eine pechschwarze Schlucht und blieb dort drei Tage und Nächte gefangen. Damals nahm diese ... Neigung ihren Anfang.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_topic_04_2"
+        },
+        voice_ch_char_Zhiliu_vo_topic_04_3 = {
+          ContentDE = "In dieser Welt trägt jeder seine eigenen Ängste mit sich. Ich bin da keine Ausnahme ... Du wirkst überrascht, warum?",
+          TextMapId = "voice_ch_char_Zhiliu_vo_topic_04_3"
+        },
+        voice_ch_char_Zhiliu_vo_topic_04_4 = {
+          ContentDE = "Hehe ... Da hast du recht. Schwäche kann einem Händler zum Verhängnis werden.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_topic_04_4"
+        },
+        voice_ch_char_Zhiliu_vo_topic_04_5 = {
+          ContentDE = "Ich habe ein strenges Training durchlaufen, um diese Angst zu unterdrücken. Am Verhandlungstisch kann ich sie mühelos ablegen. Doch in Ihrer Gegenwart – da gibt es keinen Grund, eine Maske zu tragen.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_topic_04_5"
+        },
+        voice_ch_char_Zhiliu_vo_victory = {
+          ContentDE = "Eine Kleinigkeit, kaum der Erwähnung wert.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_victory"
+        },
+        voice_ch_char_Zhiliu_vo_welcome = {
+          ContentDE = "Ah, also bist du gekommen, um mich zu sehen. Hegst du noch Groll? Vielleicht bist du zwiegespalten? Oder bist du mir gegenüber gleichgültig geworden? Das macht keinen Unterschied. Wir haben alle Zeit der Welt, es herauszufinden.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_welcome"
         }
       }
     end

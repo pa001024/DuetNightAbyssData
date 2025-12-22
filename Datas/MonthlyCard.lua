@@ -120,7 +120,7 @@ return ReadOnly("MonthlyCard", {
     EndTime = 1769374800,
     GoodsId = "com.hero.dna.Pay_107",
     Name = "RESOURCE_NAME_121",
-    UniqueReward = 82012
+    UniqueReward = 82018
   },
   [10011] = {
     BeginTime = 1769374800,
@@ -132,7 +132,7 @@ return ReadOnly("MonthlyCard", {
     EndTime = 1771966800,
     GoodsId = "com.hero.dna.Pay_107",
     Name = "RESOURCE_NAME_121",
-    UniqueReward = 82014
+    UniqueReward = 82019
   },
   [10012] = {
     BeginTime = 1771966800,

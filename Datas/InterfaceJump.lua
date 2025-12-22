@@ -6,6 +6,8 @@ T.RT_4 = {4030}
 T.RT_5 = {3003}
 T.RT_6 = {3002}
 T.RT_7 = {3001, 125}
+T.RT_8 = {4240}
+T.RT_9 = {4220}
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -220,7 +222,8 @@ return ReadOnly("InterfaceJump", {
   [31] = {
     InterfaceJumpId = 31,
     JumpParameter1 = "JumpToStyleOfPlaySubUI",
-    JumpParameter2 = "DailyMain",
+    JumpParameter2 = "PlayTaskRoot",
+    JumpParameter3 = "DailyMain",
     JumpType = "SelfDefinedJump",
     PortalUnlockCondition = {4320},
     PortalUnlockTips = "UI_Locked_Des_DailyGoal"
@@ -228,7 +231,8 @@ return ReadOnly("InterfaceJump", {
   [32] = {
     InterfaceJumpId = 32,
     JumpParameter1 = "JumpToStyleOfPlaySubUI",
-    JumpParameter2 = "StarterQuest",
+    JumpParameter2 = "PlayTaskRoot",
+    JumpParameter3 = "StarterQuest",
     JumpType = "SelfDefinedJump",
     PortalUnlockCondition = {4370},
     PortalUnlockTips = "UI_Locked_Des_StarterQuest"
@@ -472,8 +476,9 @@ return ReadOnly("InterfaceJump", {
   },
   [58] = {
     InterfaceJumpId = 58,
-    JumpParameter1 = "ImpressionShop",
-    JumpType = "MereJump"
+    JumpParameter1 = "JumpToImprShopPage",
+    JumpParameter2 = "1011",
+    JumpType = "SelfDefinedJump"
   },
   [59] = {
     InterfaceJumpId = 59,
@@ -499,8 +504,9 @@ return ReadOnly("InterfaceJump", {
   },
   [61] = {
     InterfaceJumpId = 61,
-    JumpParameter1 = "ActivityTheaterTask",
-    JumpType = "MereJump"
+    JumpParameter1 = "JumpToRegionMapByTeleportId",
+    JumpParameter2 = "1050",
+    JumpType = "SelfDefinedJump"
   },
   [62] = {
     InterfaceJumpId = 62,
@@ -514,11 +520,22 @@ return ReadOnly("InterfaceJump", {
   },
   [63] = {
     InterfaceJumpId = 63,
+    JumpParameter1 = "JumpToImprShopPage",
+    JumpParameter2 = "1041",
+    JumpType = "SelfDefinedJump"
+  },
+  [64] = {
+    InterfaceJumpId = 64,
+    JumpParameter1 = "ActivityTempleSoloTask",
+    JumpType = "MereJump"
+  },
+  [65] = {
+    InterfaceJumpId = 65,
     JumpParameter1 = "JumpToStyleOfPlaySubUI",
     JumpParameter2 = "NewDeputeRoot",
     JumpParameter3 = "WeeklySelectDungeon",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = {4240},
+    PortalUnlockCondition = T.RT_8,
     PortalUnlockTips = "UI_Locked_Des_CurrentComission"
   },
   [66] = {
@@ -533,6 +550,75 @@ return ReadOnly("InterfaceJump", {
     JumpType = "QuestChain",
     PortalUnlockCondition = {100202},
     PortalUnlockTips = "UI_Locked_Des_Quest"
+  },
+  [68] = {
+    InterfaceJumpId = 68,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "23",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_9,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [69] = {
+    InterfaceJumpId = 69,
+    JumpParameter1 = "GuildWarLevel",
+    JumpType = "MereJump",
+    PortalUnlockCondition = T.RT_9,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [70] = {
+    InterfaceJumpId = 70,
+    JumpParameter1 = "JumpToRegionMapByTeleportId",
+    JumpParameter2 = "1011",
+    JumpType = "SelfDefinedJump"
+  },
+  [71] = {
+    InterfaceJumpId = 71,
+    JumpParameter1 = "JumpToShopPage",
+    JumpParameter2 = "10004",
+    JumpParameter3 = "100041",
+    JumpParameter4 = "nil",
+    JumpParameter5 = "RaidShopSeason01",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_9,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [72] = {
+    InterfaceJumpId = 72,
+    JumpParameter1 = "JumpToShopPage",
+    JumpParameter2 = "10005.0",
+    JumpParameter3 = "100051",
+    JumpParameter4 = "nil",
+    JumpParameter5 = "HuaxuExploreShop",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = {12010306},
+    PortalUnlockTips = "UI_Locked_Des_Shop"
+  },
+  [73] = {
+    InterfaceJumpId = 73,
+    JumpParameter1 = "JumpToShopPage",
+    JumpParameter2 = "10003.0",
+    JumpParameter3 = "100031",
+    JumpParameter4 = "nil",
+    JumpParameter5 = "WeeklyDungeonShop",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_8,
+    PortalUnlockTips = "UI_Locked_Des_Match"
+  },
+  [74] = {
+    InterfaceJumpId = 74,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "16",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_9,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [77] = {
+    InterfaceJumpId = 77,
+    JumpParameter1 = "JumpToAbyssMainFromActivity",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_3,
+    PortalUnlockTips = "UI_Locked_Des_Abyss"
   },
   [1101] = {
     InterfaceJumpId = 1101,
@@ -874,6 +960,16 @@ return ReadOnly("InterfaceJump", {
     PortalUnlockCondition = T.RT_1,
     PortalUnlockTips = "UI_Locked_Des_Armory"
   },
+  [10208] = {
+    InterfaceJumpId = 10208,
+    JumpParameter1 = "JumpToArmory",
+    JumpParameter2 = "MeeleWeapon",
+    JumpParameter3 = "Mod",
+    JumpParameter4 = "10208",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_Armory"
+  },
   [10301] = {
     InterfaceJumpId = 10301,
     JumpParameter1 = "JumpToArmory",
@@ -1200,6 +1296,16 @@ return ReadOnly("InterfaceJump", {
     JumpParameter2 = "RangedWeapon",
     JumpParameter3 = "Mod",
     JumpParameter4 = "20504.0",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_Armory"
+  },
+  [20506] = {
+    InterfaceJumpId = 20506,
+    JumpParameter1 = "JumpToArmory",
+    JumpParameter2 = "RangedWeapon",
+    JumpParameter3 = "Mod",
+    JumpParameter4 = "20506",
     JumpType = "SelfDefinedJump",
     PortalUnlockCondition = T.RT_1,
     PortalUnlockTips = "UI_Locked_Des_Armory"

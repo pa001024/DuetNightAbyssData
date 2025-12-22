@@ -13,7 +13,13 @@ return ReadOnly("ShopMainTab2ShopType", {
   [701] = "ExploreBadgeShop",
   [702] = "ExploreBadgeShop",
   [703] = "ExploreBadgeShop",
+  [704] = "ExploreBadgeShop",
   [801] = "FishingShop",
+  [802] = "FishingShop",
   [10000] = "AbyssShop",
-  [10002] = "Rouge"
+  [10001] = "HuaxuEventShop",
+  [10002] = "Rouge",
+  [10003] = "WeeklyDungeonShop",
+  [10004] = "RaidShopSeason01",
+  [10005] = "HuaxuExploreShop"
 })

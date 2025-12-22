@@ -110,5 +110,15 @@ return ReadOnly("DetectiveQuestion", {
     QuestName = "Name_200305",
     QuestionID = 2003,
     Tips = "TextMap_Inference_2003"
+  },
+  [2004] = {
+    ProbablyNeededAnswers = {
+      200401,
+      200402,
+      200403
+    },
+    QuestName = "Name_200309",
+    QuestionID = 2004,
+    Tips = "TextMap_Inference_2004"
   }
 })

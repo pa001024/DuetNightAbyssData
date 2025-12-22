@@ -414,6 +414,41 @@ return ReadOnly("KeyboardMap", {
     Key = "H",
     SortId = 46
   },
+  TrainingCharacterSkills = {
+    ActionName = "TrainingCharacterSkills",
+    IsActionMapping = true,
+    IsShowInSetting = false,
+    Key = "F2",
+    SortId = 53
+  },
+  TrainingInvincible = {
+    ActionName = "TrainingInvincible",
+    IsActionMapping = true,
+    IsShowInSetting = false,
+    Key = "F3",
+    SortId = 54
+  },
+  TrainingKillMonsters = {
+    ActionName = "TrainingKillMonsters",
+    IsActionMapping = true,
+    IsShowInSetting = false,
+    Key = "F4",
+    SortId = 55
+  },
+  TrainingMonstersActive = {
+    ActionName = "TrainingMonstersActive",
+    IsActionMapping = true,
+    IsShowInSetting = false,
+    Key = "F5",
+    SortId = 56
+  },
+  TrainingOpenSetup = {
+    ActionName = "TrainingOpenSetup",
+    IsActionMapping = true,
+    IsShowInSetting = false,
+    Key = "F1",
+    SortId = 52
+  },
   UpSelect = {
     ActionName = "UpSelect",
     ActionNameText = "UI_Keyboard_UpSelect",

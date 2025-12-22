@@ -544,6 +544,36 @@ return ReadOnly("HitPerformanceData", {
     HitId = "HitFly_XY800Z1000",
     TNZeroHeavyHitParam = T.RT_3
   },
+  HitFly_XY800Z300A270 = {
+    CauseHit = "HitFly",
+    CauseHitParam = {
+      Angle = 270,
+      HitFlyXY = 800,
+      HitFlyZ = 300
+    },
+    HitFlyComboParam = {
+      Angle = 270,
+      HitFlyXY = 800,
+      HitFlyZ = 200
+    },
+    HitId = "HitFly_XY800Z300A270",
+    TNZeroHeavyHitParam = T.RT_18
+  },
+  HitFly_XY800Z300A90 = {
+    CauseHit = "HitFly",
+    CauseHitParam = {
+      Angle = 90,
+      HitFlyXY = 800,
+      HitFlyZ = 300
+    },
+    HitFlyComboParam = {
+      Angle = 90,
+      HitFlyXY = 800,
+      HitFlyZ = 200
+    },
+    HitId = "HitFly_XY800Z300A90",
+    TNZeroHeavyHitParam = T.RT_18
+  },
   HitFly_XY800Z400 = {
     CauseHit = "HitFly",
     CauseHitParam = {HitFlyXY = 800, HitFlyZ = 400},

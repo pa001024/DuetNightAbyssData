@@ -2,6 +2,18 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("TeleportStaticId2TeleportPointName", {
+  [17] = {TeleportPointName = "核心1"},
+  [18] = {TeleportPointName = "核心2"},
+  [19] = {TeleportPointName = "斜坡"},
+  [20] = {
+    TeleportPointName = "绿色独立联机区域"
+  },
+  [21] = {TeleportPointName = "电梯上"},
+  [22] = {TeleportPointName = "山上"},
+  [23] = {
+    TeleportPointName = "彩色独立联机区域"
+  },
+  [24] = {TeleportPointName = "钓鱼点"},
   [1180086] = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_2",
     Temples = {
@@ -153,8 +165,17 @@ return ReadOnly("TeleportStaticId2TeleportPointName", {
       [1] = 80302
     }
   },
+  [2010067] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_1"
+  },
+  [2010068] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_2"
+  },
+  [2010069] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
+  },
   [2020005] = {
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_15"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_105701_1"
   },
   [2030001] = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_8"
@@ -178,10 +199,10 @@ return ReadOnly("TeleportStaticId2TeleportPointName", {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_10"
   },
   [2080026] = {
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_13"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_14"
   },
   [2080027] = {
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_14"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_13"
   },
   [2090006] = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_1"
@@ -194,5 +215,53 @@ return ReadOnly("TeleportStaticId2TeleportPointName", {
   },
   [2110001] = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_4"
+  },
+  [2340003] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_105501_1"
+  },
+  [2360004] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_105201_1"
+  },
+  [2360005] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_105201_2"
+  },
+  [2370633] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_105301_1"
+  },
+  [2370634] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_105301_2"
+  },
+  [2400013] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104502_1"
+  },
+  [2400014] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104502_2"
+  },
+  [2400015] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104502_3"
+  },
+  [2410015] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
+  },
+  [2410016] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_2"
+  },
+  [2420027] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_1"
+  },
+  [2420028] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_2"
+  },
+  [2420029] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_3"
+  },
+  [2430044] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104505_1"
+  },
+  [2430045] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104505_2"
+  },
+  [2440008] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104506_1"
   }
 })

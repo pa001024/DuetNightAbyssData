@@ -222,6 +222,12 @@ return {
     },
     ["7013097"] = {
       AutoReset = 1,
+      ["1380060"] = {
+        CreatorId = 1380060,
+        UnitType = "Drop",
+        UnitId = 20503,
+        RarelyId = 7013097
+      },
       ["1380054"] = {
         CreatorId = 1380054,
         UnitType = "Mechanism",
@@ -232,6 +238,48 @@ return {
         CreatorId = 1380053,
         UnitType = "Mechanism",
         UnitId = 70105,
+        RarelyId = 7013097
+      },
+      ["1380179"] = {
+        CreatorId = 1380179,
+        UnitType = "Mechanism",
+        UnitId = 705061,
+        RarelyId = 7013097
+      },
+      ["1380193"] = {
+        CreatorId = 1380193,
+        UnitType = "Mechanism",
+        UnitId = 705061,
+        RarelyId = 7013097
+      },
+      ["1380198"] = {
+        CreatorId = 1380198,
+        UnitType = "Mechanism",
+        UnitId = 705061,
+        RarelyId = 7013097
+      },
+      ["1380197"] = {
+        CreatorId = 1380197,
+        UnitType = "Mechanism",
+        UnitId = 705061,
+        RarelyId = 7013097
+      },
+      ["1380196"] = {
+        CreatorId = 1380196,
+        UnitType = "Mechanism",
+        UnitId = 705061,
+        RarelyId = 7013097
+      },
+      ["1380195"] = {
+        CreatorId = 1380195,
+        UnitType = "Mechanism",
+        UnitId = 705061,
+        RarelyId = 7013097
+      },
+      ["1380194"] = {
+        CreatorId = 1380194,
+        UnitType = "Mechanism",
+        UnitId = 705061,
         RarelyId = 7013097
       },
       ["1380055"] = {
@@ -276,10 +324,16 @@ return {
         UnitId = 705061,
         RarelyId = 7013097
       },
-      ["1380059"] = {
-        CreatorId = 1380059,
+      ["1380180"] = {
+        CreatorId = 1380180,
         UnitType = "Mechanism",
-        UnitId = 70200,
+        UnitId = 131011,
+        RarelyId = 7013097
+      },
+      ["1380184"] = {
+        CreatorId = 1380184,
+        UnitType = "Mechanism",
+        UnitId = 131011,
         RarelyId = 7013097
       },
       ["1380114"] = {
@@ -288,10 +342,10 @@ return {
         UnitId = 0,
         RarelyId = 7013097
       },
-      ["1380060"] = {
-        CreatorId = 1380060,
-        UnitType = "Drop",
-        UnitId = 20503,
+      ["1380059"] = {
+        CreatorId = 1380059,
+        UnitType = "Mechanism",
+        UnitId = 70200,
         RarelyId = 7013097
       },
       ["1380097"] = {

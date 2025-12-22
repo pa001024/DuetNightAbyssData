@@ -131,6 +131,10 @@ return ReadOnly("AttributeType", {
     }
   },
   BonusDamage = {
+    Attack = {
+      ID = "BonusDamage",
+      Type = "Attack"
+    },
     Dark = {
       ID = "BonusDamage",
       Type = "Dark"

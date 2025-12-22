@@ -383,6 +383,49 @@ return ReadOnly("Message", {
     MessageId = 200034,
     MessageType = "Guide"
   },
+  [200035] = {
+    HighLightUIPath = "BattleMain.Battle_Skill",
+    IsAdapted = true,
+    MessageContentGamePad = "MESSAGE_SKILL3_2_PC_1st",
+    MessageContentPC = "MESSAGE_SKILL3_2_PC_1st",
+    MessageContentPhone = "MESSAGE_SKILL3_2_PC_1st",
+    MessageId = 200035,
+    MessageLoc = "UpLeft",
+    MessageType = "Guide",
+    UICompName = "Battle_Skill_2.Btn_Skill_SM",
+    UIShape = "Circle"
+  },
+  [200036] = {
+    HighLightUIPath = "BattleMain.Battle_Skill",
+    IsAdapted = true,
+    MessageContentGamePad = "MESSAGE_LOADING_1_PC",
+    MessageContentPC = "MESSAGE_LOADING_1_PC",
+    MessageContentPhone = "MESSAGE_BULLETJUMP_PHONE_NEW",
+    MessageId = 200036,
+    MessageTitlePC = "MESSAGE_TITLE_BULLETJUMP_PC",
+    MessageType = "Guide",
+    UICompName = "Battle_Skill_Metee.Btn_Attack",
+    UIShape = "Circle"
+  },
+  [200037] = {
+    HighLightUIPath = "BattleMain.Battle_Skill",
+    IsAdapted = true,
+    MessageContentGamePad = "MESSAGE_SLIDE_PC",
+    MessageContentPC = "MESSAGE_SLIDE_PC",
+    MessageContentPhone = "MESSAGE_SLIDE_PHONE_NEW",
+    MessageId = 200037,
+    MessageLoc = "UpLeft",
+    MessageType = "Guide",
+    UICompName = "Battle_Skill_Squat.Img_Slide",
+    UIShape = "Circle"
+  },
+  [200038] = {
+    MessageContentGamePad = "MESSAGE_SKILL3_GAMEPAD",
+    MessageContentPC = "MESSAGE_SKILL3_PC",
+    MessageContentPhone = "MESSAGE_SKILL3_PHONE",
+    MessageId = 200038,
+    MessageType = "Guide"
+  },
   [203001] = {
     MessageContentGamePad = "Message_Guide_Pet_01",
     MessageContentPC = "Message_Guide_Pet_01",
@@ -1025,6 +1068,13 @@ return ReadOnly("Message", {
     MessageContentPC = "Message_Guide_Mod_15",
     MessageContentPhone = "Message_Guide_Mod_15",
     MessageId = 300715,
+    MessageType = "Text"
+  },
+  [300716] = {
+    MessageContentGamePad = "Message_Guide_Mod_16_Pad",
+    MessageContentPC = "Message_Guide_Mod_16",
+    MessageContentPhone = "Message_Guide_Mod_16",
+    MessageId = 300716,
     MessageType = "Text"
   },
   [300801] = {
@@ -2316,6 +2366,27 @@ return ReadOnly("Message", {
     MessageId = 303407,
     MessageType = "Guide"
   },
+  [303501] = {
+    MessageContentGamePad = "Message_Guide_Qianji_1",
+    MessageContentPC = "Message_Guide_Qianji_1",
+    MessageContentPhone = "Message_Guide_Qianji_1",
+    MessageId = 303501,
+    MessageType = "Guide"
+  },
+  [303502] = {
+    MessageContentGamePad = "Message_Guide_Qianji_2_Pad",
+    MessageContentPC = "Message_Guide_Qianji_2",
+    MessageContentPhone = "Message_Guide_Qianji_2",
+    MessageId = 303502,
+    MessageType = "Guide"
+  },
+  [303503] = {
+    MessageContentGamePad = "Message_Guide_Qianji_3",
+    MessageContentPC = "Message_Guide_Qianji_3",
+    MessageContentPhone = "Message_Guide_Qianji_3",
+    MessageId = 303503,
+    MessageType = "Guide"
+  },
   [310001] = {
     MessageContentGamePad = "Message_Guide_Fish01",
     MessageContentPC = "Message_Guide_Fish01",
@@ -2784,6 +2855,282 @@ return ReadOnly("Message", {
     MessageId = 900054,
     MessageTitlePC = "MESSAGE_TITLE_LOADING_51_PC",
     MessageType = "LoadingText"
+  },
+  [900101] = {
+    MessageContentPC = "MESSAGE_LOADING_101_PC",
+    MessageContentPhone = "MESSAGE_LOADING_101_PC",
+    MessageId = 900101,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_101_PC"
+  },
+  [900102] = {
+    MessageContentPC = "MESSAGE_LOADING_102_PC",
+    MessageContentPhone = "MESSAGE_LOADING_102_PC",
+    MessageId = 900102,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_102_PC"
+  },
+  [900103] = {
+    MessageContentPC = "MESSAGE_LOADING_103_PC",
+    MessageContentPhone = "MESSAGE_LOADING_103_PC",
+    MessageId = 900103,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_103_PC"
+  },
+  [900104] = {
+    MessageContentPC = "MESSAGE_LOADING_104_PC",
+    MessageContentPhone = "MESSAGE_LOADING_104_PC",
+    MessageId = 900104,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_104_PC"
+  },
+  [900105] = {
+    MessageContentPC = "MESSAGE_LOADING_105_PC",
+    MessageContentPhone = "MESSAGE_LOADING_105_PC",
+    MessageId = 900105,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_105_PC"
+  },
+  [900106] = {
+    MessageContentPC = "MESSAGE_LOADING_106_PC",
+    MessageContentPhone = "MESSAGE_LOADING_106_PC",
+    MessageId = 900106,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_106_PC"
+  },
+  [900107] = {
+    MessageContentPC = "MESSAGE_LOADING_107_PC",
+    MessageContentPhone = "MESSAGE_LOADING_107_PC",
+    MessageId = 900107,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_107_PC"
+  },
+  [900108] = {
+    MessageContentPC = "MESSAGE_LOADING_108_PC",
+    MessageContentPhone = "MESSAGE_LOADING_108_PC",
+    MessageId = 900108,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_108_PC"
+  },
+  [900109] = {
+    MessageContentPC = "MESSAGE_LOADING_109_PC",
+    MessageContentPhone = "MESSAGE_LOADING_109_PC",
+    MessageId = 900109,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_109_PC"
+  },
+  [900110] = {
+    MessageContentPC = "MESSAGE_LOADING_110_PC",
+    MessageContentPhone = "MESSAGE_LOADING_110_PC",
+    MessageId = 900110,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_110_PC"
+  },
+  [900111] = {
+    MessageContentPC = "MESSAGE_LOADING_111_PC",
+    MessageContentPhone = "MESSAGE_LOADING_111_PC",
+    MessageId = 900111,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_111_PC"
+  },
+  [900112] = {
+    MessageContentPC = "MESSAGE_LOADING_112_PC",
+    MessageContentPhone = "MESSAGE_LOADING_112_PC",
+    MessageId = 900112,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_112_PC"
+  },
+  [900113] = {
+    MessageContentPC = "MESSAGE_LOADING_113_PC",
+    MessageContentPhone = "MESSAGE_LOADING_113_PC",
+    MessageId = 900113,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_113_PC"
+  },
+  [900114] = {
+    MessageContentPC = "MESSAGE_LOADING_114_PC",
+    MessageContentPhone = "MESSAGE_LOADING_114_PC",
+    MessageId = 900114,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_114_PC"
+  },
+  [900115] = {
+    MessageContentPC = "MESSAGE_LOADING_115_PC",
+    MessageContentPhone = "MESSAGE_LOADING_115_PC",
+    MessageId = 900115,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_115_PC"
+  },
+  [900116] = {
+    MessageContentPC = "MESSAGE_LOADING_116_PC",
+    MessageContentPhone = "MESSAGE_LOADING_116_PC",
+    MessageId = 900116,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_116_PC"
+  },
+  [900117] = {
+    MessageContentPC = "MESSAGE_LOADING_117_PC",
+    MessageContentPhone = "MESSAGE_LOADING_117_PC",
+    MessageId = 900117,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_117_PC"
+  },
+  [900118] = {
+    MessageContentPC = "MESSAGE_LOADING_118_PC",
+    MessageContentPhone = "MESSAGE_LOADING_118_PC",
+    MessageId = 900118,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_118_PC"
+  },
+  [900119] = {
+    MessageContentPC = "MESSAGE_LOADING_119_PC",
+    MessageContentPhone = "MESSAGE_LOADING_119_PC",
+    MessageId = 900119,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_119_PC"
+  },
+  [900201] = {
+    MessageContentPC = "MESSAGE_LOADING_201_PC",
+    MessageContentPhone = "MESSAGE_LOADING_201_PC",
+    MessageId = 900201,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_201_PC"
+  },
+  [900202] = {
+    MessageContentPC = "MESSAGE_LOADING_202_PC",
+    MessageContentPhone = "MESSAGE_LOADING_202_PC",
+    MessageId = 900202,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_202_PC"
+  },
+  [900203] = {
+    MessageContentPC = "MESSAGE_LOADING_203_PC",
+    MessageContentPhone = "MESSAGE_LOADING_203_PC",
+    MessageId = 900203,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_203_PC"
+  },
+  [900204] = {
+    MessageContentPC = "MESSAGE_LOADING_204_PC",
+    MessageContentPhone = "MESSAGE_LOADING_204_PC",
+    MessageId = 900204,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_204_PC"
+  },
+  [900205] = {
+    MessageContentPC = "MESSAGE_LOADING_205_PC",
+    MessageContentPhone = "MESSAGE_LOADING_205_PC",
+    MessageId = 900205,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_205_PC"
+  },
+  [900206] = {
+    MessageContentPC = "MESSAGE_LOADING_206_PC",
+    MessageContentPhone = "MESSAGE_LOADING_206_PC",
+    MessageId = 900206,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_206_PC"
+  },
+  [900207] = {
+    MessageContentPC = "MESSAGE_LOADING_207_PC",
+    MessageContentPhone = "MESSAGE_LOADING_207_PC",
+    MessageId = 900207,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_207_PC"
+  },
+  [900208] = {
+    MessageContentPC = "MESSAGE_LOADING_208_PC",
+    MessageContentPhone = "MESSAGE_LOADING_208_PC",
+    MessageId = 900208,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_208_PC"
+  },
+  [900209] = {
+    MessageContentPC = "MESSAGE_LOADING_209_PC",
+    MessageContentPhone = "MESSAGE_LOADING_209_PC",
+    MessageId = 900209,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_209_PC"
+  },
+  [900210] = {
+    MessageContentPC = "MESSAGE_LOADING_210_PC",
+    MessageContentPhone = "MESSAGE_LOADING_210_PC",
+    MessageId = 900210,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_210_PC"
+  },
+  [900211] = {
+    MessageContentPC = "MESSAGE_LOADING_211_PC",
+    MessageContentPhone = "MESSAGE_LOADING_211_PC",
+    MessageId = 900211,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_211_PC"
+  },
+  [900212] = {
+    MessageContentPC = "MESSAGE_LOADING_212_PC",
+    MessageContentPhone = "MESSAGE_LOADING_212_PC",
+    MessageId = 900212,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_212_PC"
+  },
+  [900213] = {
+    MessageContentPC = "MESSAGE_LOADING_213_PC",
+    MessageContentPhone = "MESSAGE_LOADING_213_PC",
+    MessageId = 900213,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_213_PC"
+  },
+  [900214] = {
+    MessageContentPC = "MESSAGE_LOADING_214_PC",
+    MessageContentPhone = "MESSAGE_LOADING_214_PC",
+    MessageId = 900214,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_214_PC"
+  },
+  [900215] = {
+    MessageContentPC = "MESSAGE_LOADING_215_PC",
+    MessageContentPhone = "MESSAGE_LOADING_215_PC",
+    MessageId = 900215,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_215_PC"
+  },
+  [900216] = {
+    MessageContentPC = "MESSAGE_LOADING_216_PC",
+    MessageContentPhone = "MESSAGE_LOADING_216_PC",
+    MessageId = 900216,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_216_PC"
+  },
+  [900217] = {
+    MessageContentPC = "MESSAGE_LOADING_217_PC",
+    MessageContentPhone = "MESSAGE_LOADING_217_PC",
+    MessageId = 900217,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_217_PC"
+  },
+  [900218] = {
+    MessageContentPC = "MESSAGE_LOADING_218_PC",
+    MessageContentPhone = "MESSAGE_LOADING_218_PC",
+    MessageId = 900218,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_218_PC"
+  },
+  [900219] = {
+    MessageContentPC = "MESSAGE_LOADING_219_PC",
+    MessageContentPhone = "MESSAGE_LOADING_219_PC",
+    MessageId = 900219,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_219_PC"
+  },
+  [900220] = {
+    MessageContentPC = "MESSAGE_LOADING_220_PC",
+    MessageContentPhone = "MESSAGE_LOADING_220_PC",
+    MessageId = 900220,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_220_PC"
+  },
+  [900221] = {
+    MessageContentPC = "MESSAGE_LOADING_221_PC",
+    MessageContentPhone = "MESSAGE_LOADING_221_PC",
+    MessageId = 900221,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_221_PC"
+  },
+  [900222] = {
+    MessageContentPC = "MESSAGE_LOADING_222_PC",
+    MessageContentPhone = "MESSAGE_LOADING_222_PC",
+    MessageId = 900222,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_222_PC"
+  },
+  [900223] = {
+    MessageContentPC = "MESSAGE_LOADING_223_PC",
+    MessageContentPhone = "MESSAGE_LOADING_223_PC",
+    MessageId = 900223,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_223_PC"
+  },
+  [900224] = {
+    MessageContentPC = "MESSAGE_LOADING_224_PC",
+    MessageContentPhone = "MESSAGE_LOADING_224_PC",
+    MessageId = 900224,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_224_PC"
+  },
+  [900225] = {
+    MessageContentPC = "MESSAGE_LOADING_225_PC",
+    MessageContentPhone = "MESSAGE_LOADING_225_PC",
+    MessageId = 900225,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_225_PC"
+  },
+  [900226] = {
+    MessageContentPC = "MESSAGE_LOADING_226_PC",
+    MessageContentPhone = "MESSAGE_LOADING_226_PC",
+    MessageId = 900226,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_226_PC"
+  },
+  [900227] = {
+    MessageContentPC = "MESSAGE_LOADING_227_PC",
+    MessageContentPhone = "MESSAGE_LOADING_227_PC",
+    MessageId = 900227,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_227_PC"
   },
   [910001] = {
     MessageContentPC = "MESSAGE_TRACKQUEST_910001_PC",

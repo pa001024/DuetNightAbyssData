@@ -6,7 +6,6 @@ return ReadOnly("PlaySubTab", {
     BgImage = "/Game/UI/Texture/Static/Image/Max2048/T_Activity_Abyss.T_Activity_Abyss",
     EnterImage = "/Game/UI/Texture/Static/Image/Max2048/T_Activity_Abyss.T_Activity_Abyss",
     JumpUIId = 14,
-    RewardViewId = 1030022,
     Sequence = 90,
     ShopJumpId = 28,
     SubTabDes = "UI_Abyss_Des",

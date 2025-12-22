@@ -56,7 +56,7 @@ return ReadOnly("CharTrial", {
     QuestRoleId = 530101,
     TrialDungeonId = 900002,
     UOffset = -0.11,
-    VOffset = -0.15
+    VOffset = -0.1
   },
   [101013] = {
     CharTrialId = 101013,
@@ -76,7 +76,7 @@ return ReadOnly("CharTrial", {
     CharTrialId = 101015,
     QuestRoleId = 510101,
     TrialDungeonId = 900002,
-    UOffset = -0.12,
+    UOffset = -0.15,
     VOffset = -0.06
   },
   [101016] = {
@@ -92,5 +92,19 @@ return ReadOnly("CharTrial", {
     TrialDungeonId = 900002,
     UOffset = -0.12,
     VOffset = -0.06
+  },
+  [101018] = {
+    CharTrialId = 101018,
+    QuestRoleId = 240101,
+    TrialDungeonId = 900002,
+    UOffset = -0.15,
+    VOffset = 0.08
+  },
+  [101019] = {
+    CharTrialId = 101019,
+    QuestRoleId = 1503,
+    TrialDungeonId = 900002,
+    UOffset = -0.0876,
+    VOffset = -0.0619
   }
 })

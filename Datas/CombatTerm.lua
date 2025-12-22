@@ -2,6 +2,31 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("CombatTerm", {
+  TERM_1504_ExtraPassive_01 = {
+    CombatTerm = "TERM_1504_ExtraPassive_01",
+    CombatTermExplaination = "TERMEXP_1504_ExtraPassive_01",
+    CombatTermId = "TERM_1504_ExtraPassive_01"
+  },
+  TERM_1504_Passive_01 = {
+    CombatTerm = "TERM_1504_Passive_01",
+    CombatTermExplaination = "TERMEXP_1504_Passive_01",
+    CombatTermId = "TERM_1504_Passive_01"
+  },
+  TERM_1504_Skill02_01 = {
+    CombatTerm = "TERM_1504_Skill02_01",
+    CombatTermExplaination = "TERMEXP_1504_Skill02_01",
+    CombatTermId = "TERM_1504_Skill02_01"
+  },
+  TERM_1504_Skill02_02 = {
+    CombatTerm = "TERM_1504_Skill02_02",
+    CombatTermExplaination = "TERMEXP_1504_Skill02_02",
+    CombatTermId = "TERM_1504_Skill02_02"
+  },
+  TERM_1504_Skill02_03 = {
+    CombatTerm = "TERM_1504_Skill02_03",
+    CombatTermExplaination = "TERMEXP_1504_Skill02_03",
+    CombatTermId = "TERM_1504_Skill02_03"
+  },
   Term_1103_Combo = {
     CombatTerm = "TERM_1103_Combo",
     CombatTermExplaination = "TERMEXP_1103_Combo",

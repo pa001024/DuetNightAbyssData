@@ -2,11 +2,6 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("GameFlow", {
-  AfterEntertainment = {
-    Channel = "AfterEntertainment",
-    GameFlow = "AfterEntertainment",
-    Priority = 100
-  },
   GetItemPage = {
     Channel = "GetItemPage",
     GameFlow = "GetItemPage",
@@ -22,6 +17,11 @@ return ReadOnly("GameFlow", {
     GameFlow = "ImmersiveStory",
     Priority = 100
   },
+  LevelDelivery = {
+    Channel = "LevelDelivery",
+    GameFlow = "LevelDelivery",
+    Priority = 200
+  },
   OpenSystemUI = {
     Channel = "OpenSystemUI",
     GameFlow = "OpenSystemUI",
@@ -30,6 +30,11 @@ return ReadOnly("GameFlow", {
   SkillFeature = {
     Channel = "SkillFeature",
     GameFlow = "SkillFeature",
+    Priority = 100
+  },
+  Sojourn = {
+    Channel = "Sojourn",
+    GameFlow = "Sojourn",
     Priority = 100
   },
   SystemGuideWithUI = {

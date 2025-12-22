@@ -7,5 +7,7 @@ return ReadOnly("UnrestrictedPayGoods", {
   [3] = "com.hero.dna.Pay_103",
   [4] = "com.hero.dna.Pay_104",
   [5] = "com.hero.dna.Pay_105",
-  [6] = "com.hero.dna.Pay_106"
+  [6] = "com.hero.dna.Pay_106",
+  [7] = "com.hero.dna.Pay_108",
+  [8] = "com.hero.dna.Pay_109"
 })

@@ -18,7 +18,7 @@ return {
     ["1930152"] = {
       CreatorId = 1930152,
       UnitType = "Monster",
-      UnitId = 6004001
+      UnitId = 8517001
     },
     ["1930143"] = {
       CreatorId = 1930143,
@@ -27,6 +27,16 @@ return {
     },
     ["2030014"] = {
       CreatorId = 2030014,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["2030015"] = {
+      CreatorId = 2030015,
+      UnitType = "Mechanism",
+      UnitId = 11001
+    },
+    ["2030042"] = {
+      CreatorId = 2030042,
       UnitType = "Mechanism",
       UnitId = 1
     },
@@ -89,61 +99,75 @@ return {
       CreatorId = 2030006,
       UnitType = "Npc",
       UnitId = 100001
+    },
+    ["2030016"] = {
+      CreatorId = 2030016,
+      UnitType = "Npc",
+      UnitId = 200002
     }
   },
   ManualItem = {},
   Explore = {
-    ["7047001"] = {
-      AutoReset = 0,
-      ["2030003"] = {
-        CreatorId = 2030003,
-        UnitType = "Mechanism",
-        UnitId = 39023,
-        RarelyId = 7047001
-      },
-      ["2030004"] = {
-        CreatorId = 2030004,
-        UnitType = "Mechanism",
-        UnitId = 131006,
-        RarelyId = 7047001
-      }
-    },
-    ["7047002"] = {
-      AutoReset = 0,
-      ["2030007"] = {
-        CreatorId = 2030007,
-        UnitType = "Mechanism",
-        UnitId = 70100,
-        RarelyId = 7047002
-      }
-    },
-    ["7047003"] = {
-      AutoReset = 0,
-      ["2030008"] = {
-        CreatorId = 2030008,
-        UnitType = "Mechanism",
-        UnitId = 70100,
-        RarelyId = 7047003
-      }
-    },
     ["7047004"] = {
       AutoReset = 1,
-      ["2030009"] = {
-        CreatorId = 2030009,
-        UnitType = "Drop",
-        UnitId = 20503,
+      ["2030011"] = {
+        CreatorId = 2030011,
+        UnitType = "Mechanism",
+        UnitId = 70118,
         RarelyId = 7047004
       },
-      ["2030010"] = {
-        CreatorId = 2030010,
+      ["2030018"] = {
+        CreatorId = 2030018,
         UnitType = "Mechanism",
         UnitId = 70131,
         RarelyId = 7047004
       },
-      ["2030011"] = {
-        CreatorId = 2030011,
+      ["2030031"] = {
+        CreatorId = 2030031,
         UnitType = "Mechanism",
-        UnitId = 70105,
+        UnitId = 131011,
+        RarelyId = 7047004
+      },
+      ["2030032"] = {
+        CreatorId = 2030032,
+        UnitType = "Mechanism",
+        UnitId = 131011,
+        RarelyId = 7047004
+      },
+      ["2030033"] = {
+        CreatorId = 2030033,
+        UnitType = "Mechanism",
+        UnitId = 131011,
+        RarelyId = 7047004
+      },
+      ["2030034"] = {
+        CreatorId = 2030034,
+        UnitType = "Mechanism",
+        UnitId = 131011,
+        RarelyId = 7047004
+      },
+      ["2030035"] = {
+        CreatorId = 2030035,
+        UnitType = "Mechanism",
+        UnitId = 131011,
+        RarelyId = 7047004
+      },
+      ["2030036"] = {
+        CreatorId = 2030036,
+        UnitType = "Mechanism",
+        UnitId = 131011,
+        RarelyId = 7047004
+      },
+      ["2030037"] = {
+        CreatorId = 2030037,
+        UnitType = "Mechanism",
+        UnitId = 131011,
+        RarelyId = 7047004
+      },
+      ["2030038"] = {
+        CreatorId = 2030038,
+        UnitType = "Mechanism",
+        UnitId = 131011,
         RarelyId = 7047004
       },
       ["2030012"] = {
@@ -152,15 +176,118 @@ return {
         UnitId = 0,
         RarelyId = 7047004
       },
+      ["2030009"] = {
+        CreatorId = 2030009,
+        UnitType = "Drop",
+        UnitId = 20503,
+        RarelyId = 7047004
+      },
+      ["2030027"] = {
+        CreatorId = 2030027,
+        UnitType = "Mechanism",
+        UnitId = 70131,
+        RarelyId = 7047004
+      },
+      ["2030028"] = {
+        CreatorId = 2030028,
+        UnitType = "Mechanism",
+        UnitId = 70131,
+        RarelyId = 7047004
+      },
+      ["2030029"] = {
+        CreatorId = 2030029,
+        UnitType = "Mechanism",
+        UnitId = 70131,
+        RarelyId = 7047004
+      },
+      ["2030030"] = {
+        CreatorId = 2030030,
+        UnitType = "Mechanism",
+        UnitId = 70131,
+        RarelyId = 7047004
+      },
+      ["2030019"] = {
+        CreatorId = 2030019,
+        UnitType = "Mechanism",
+        UnitId = 70131,
+        RarelyId = 7047004
+      },
+      ["2030020"] = {
+        CreatorId = 2030020,
+        UnitType = "Mechanism",
+        UnitId = 70131,
+        RarelyId = 7047004
+      },
+      ["2030021"] = {
+        CreatorId = 2030021,
+        UnitType = "Mechanism",
+        UnitId = 70131,
+        RarelyId = 7047004
+      },
+      ["2030022"] = {
+        CreatorId = 2030022,
+        UnitType = "Mechanism",
+        UnitId = 70131,
+        RarelyId = 7047004
+      },
+      ["2030023"] = {
+        CreatorId = 2030023,
+        UnitType = "Mechanism",
+        UnitId = 70131,
+        RarelyId = 7047004
+      },
+      ["2030024"] = {
+        CreatorId = 2030024,
+        UnitType = "Mechanism",
+        UnitId = 70131,
+        RarelyId = 7047004
+      },
+      ["2030025"] = {
+        CreatorId = 2030025,
+        UnitType = "Mechanism",
+        UnitId = 70131,
+        RarelyId = 7047004
+      },
+      ["2030026"] = {
+        CreatorId = 2030026,
+        UnitType = "Mechanism",
+        UnitId = 70131,
+        RarelyId = 7047004
+      },
       ["2030013"] = {
         CreatorId = 2030013,
         UnitType = "Mechanism",
         UnitId = 70200,
         RarelyId = 7047004
       }
+    },
+    ["7047005"] = {
+      AutoReset = 1,
+      ["2030041"] = {
+        CreatorId = 2030041,
+        UnitType = "Npc",
+        UnitId = 830001,
+        RarelyId = 7047005
+      },
+      ["2030039"] = {
+        CreatorId = 2030039,
+        UnitType = "Mechanism",
+        UnitId = 131026,
+        RarelyId = 7047005
+      }
+    },
+    ["7047006"] = {
+      AutoReset = 0,
+      ["2030043"] = {
+        CreatorId = 2030043,
+        UnitType = "Drop",
+        UnitId = 29004,
+        RarelyId = 7047006
+      }
     }
   },
   RandomRule = {
-    ["9040801"] = {RandomRuleId = 9040801}
+    ["9040801"] = {RandomRuleId = 9040801},
+    ["8012009"] = {RandomRuleId = 8012009}
   }
 }

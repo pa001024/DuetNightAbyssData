@@ -374,9 +374,9 @@ return ReadOnly("BattleAchiTargetType", {
   [2201] = {
     Args = {
       UnitId = {
-        10004001,
-        10004061,
-        10004062
+        10003001,
+        10003061,
+        10003062
       }
     },
     Id = 2201,
@@ -385,10 +385,20 @@ return ReadOnly("BattleAchiTargetType", {
   [2202] = {
     Args = {
       UnitId = {
-        10001001,
-        10001061,
-        10001062,
-        10002001
+        10005001,
+        10005011,
+        10005012,
+        10005014,
+        10005016,
+        10005017,
+        10005018,
+        10005019,
+        10005020,
+        10005021,
+        10005023,
+        10005024,
+        10005061,
+        10005062
       }
     },
     Id = 2202,
@@ -396,7 +406,7 @@ return ReadOnly("BattleAchiTargetType", {
   },
   [2203] = {
     Args = {
-      UnitId = {8510002}
+      UnitId = {8510001}
     },
     Id = 2203,
     TargetType = "OnTargetKilled"

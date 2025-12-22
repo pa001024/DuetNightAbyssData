@@ -15,7 +15,8 @@ T.RT_1 = {
   [13] = false,
   [14] = false,
   [15] = false,
-  [16] = false
+  [16] = false,
+  [17] = false
 }
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
@@ -38,7 +39,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = true,
       [14] = true,
       [15] = true,
-      [16] = true
+      [16] = true,
+      [17] = true
     },
     [2] = {
       [1] = true,
@@ -56,7 +58,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = false,
       [14] = false,
       [15] = false,
-      [16] = false
+      [16] = false,
+      [17] = false
     },
     [3] = T.RT_1,
     [4] = {
@@ -75,7 +78,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = true,
       [14] = false,
       [15] = false,
-      [16] = true
+      [16] = true,
+      [17] = true
     },
     [5] = {
       [1] = true,
@@ -93,7 +97,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = false,
       [14] = false,
       [15] = false,
-      [16] = true
+      [16] = true,
+      [17] = true
     },
     [6] = {
       [1] = false,
@@ -111,7 +116,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = false,
       [14] = false,
       [15] = false,
-      [16] = false
+      [16] = false,
+      [17] = false
     },
     [7] = {
       [1] = true,
@@ -129,7 +135,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = false,
       [14] = false,
       [15] = false,
-      [16] = false
+      [16] = false,
+      [17] = true
     },
     [8] = {
       [1] = false,
@@ -147,7 +154,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = false,
       [14] = false,
       [15] = false,
-      [16] = true
+      [16] = true,
+      [17] = true
     },
     [9] = {
       [1] = false,
@@ -165,7 +173,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = true,
       [14] = false,
       [15] = false,
-      [16] = true
+      [16] = true,
+      [17] = true
     },
     [10] = {
       [1] = true,
@@ -183,7 +192,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = false,
       [14] = false,
       [15] = false,
-      [16] = true
+      [16] = true,
+      [17] = true
     },
     [11] = {
       [1] = false,
@@ -201,7 +211,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = true,
       [14] = false,
       [15] = false,
-      [16] = true
+      [16] = true,
+      [17] = true
     },
     [12] = T.RT_1,
     [13] = T.RT_1,
@@ -222,9 +233,11 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = false,
       [14] = false,
       [15] = false,
-      [16] = true
+      [16] = true,
+      [17] = true
     },
-    [16] = T.RT_1
+    [16] = T.RT_1,
+    [17] = T.RT_1
   },
   TurningMap = {
     [1] = {
@@ -243,7 +256,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = false,
       [14] = false,
       [15] = false,
-      [16] = false
+      [16] = false,
+      [17] = false
     },
     [2] = {
       [1] = false,
@@ -261,7 +275,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = true,
       [14] = true,
       [15] = true,
-      [16] = false
+      [16] = false,
+      [17] = true
     },
     [3] = {
       [1] = false,
@@ -279,7 +294,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = false,
       [14] = false,
       [15] = true,
-      [16] = false
+      [16] = false,
+      [17] = false
     },
     [4] = {
       [1] = true,
@@ -297,7 +313,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = false,
       [14] = false,
       [15] = false,
-      [16] = false
+      [16] = false,
+      [17] = false
     },
     [5] = {
       [1] = false,
@@ -315,7 +332,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = false,
       [14] = false,
       [15] = false,
-      [16] = false
+      [16] = false,
+      [17] = false
     },
     [6] = {
       [1] = false,
@@ -333,12 +351,13 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = false,
       [14] = false,
       [15] = false,
-      [16] = false
+      [16] = false,
+      [17] = false
     },
     [7] = {
       [1] = true,
       [2] = false,
-      [3] = false,
+      [3] = true,
       [4] = true,
       [5] = false,
       [6] = true,
@@ -346,12 +365,13 @@ return ReadOnly("AvatarStatusMachine", {
       [8] = false,
       [9] = false,
       [10] = false,
-      [11] = false,
+      [11] = true,
       [12] = false,
       [13] = false,
       [14] = false,
       [15] = false,
-      [16] = false
+      [16] = false,
+      [17] = false
     },
     [8] = {
       [1] = false,
@@ -369,7 +389,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = false,
       [14] = false,
       [15] = false,
-      [16] = false
+      [16] = false,
+      [17] = false
     },
     [9] = {
       [1] = false,
@@ -387,7 +408,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = false,
       [14] = false,
       [15] = false,
-      [16] = false
+      [16] = false,
+      [17] = false
     },
     [10] = {
       [1] = false,
@@ -405,7 +427,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = false,
       [14] = false,
       [15] = false,
-      [16] = false
+      [16] = false,
+      [17] = false
     },
     [11] = {
       [1] = false,
@@ -423,7 +446,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = false,
       [14] = false,
       [15] = false,
-      [16] = false
+      [16] = false,
+      [17] = false
     },
     [12] = {
       [1] = false,
@@ -441,7 +465,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = true,
       [14] = true,
       [15] = true,
-      [16] = false
+      [16] = false,
+      [17] = false
     },
     [13] = {
       [1] = false,
@@ -459,7 +484,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = false,
       [14] = true,
       [15] = true,
-      [16] = false
+      [16] = false,
+      [17] = false
     },
     [14] = {
       [1] = false,
@@ -477,7 +503,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = false,
       [14] = false,
       [15] = true,
-      [16] = false
+      [16] = false,
+      [17] = true
     },
     [15] = {
       [1] = false,
@@ -495,7 +522,8 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = true,
       [14] = false,
       [15] = false,
-      [16] = false
+      [16] = false,
+      [17] = false
     },
     [16] = {
       [1] = true,
@@ -513,7 +541,27 @@ return ReadOnly("AvatarStatusMachine", {
       [13] = true,
       [14] = true,
       [15] = true,
-      [16] = false
+      [16] = false,
+      [17] = true
+    },
+    [17] = {
+      [1] = true,
+      [2] = true,
+      [3] = true,
+      [4] = true,
+      [5] = true,
+      [6] = true,
+      [7] = true,
+      [8] = true,
+      [9] = true,
+      [10] = false,
+      [11] = true,
+      [12] = true,
+      [13] = true,
+      [14] = true,
+      [15] = true,
+      [16] = true,
+      [17] = false
     }
   }
 })

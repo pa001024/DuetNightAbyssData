@@ -278,6 +278,10 @@ return ReadOnly("DanmakuTemplate", {
     BPPath = "/Game/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossJushi_Skill0601.BP_Danmaku_BossJushi_Skill0601",
     Type = 851506
   },
+  [851801] = {
+    BPPath = "/Game/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossJuque_Laser.BP_Danmaku_BossJuque_Laser",
+    Type = 851801
+  },
   [851901] = {
     BPPath = "/Game/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLiecheCannon_Skill0201.BP_Danmaku_BossLiecheCannon_Skill0201",
     Type = 851901

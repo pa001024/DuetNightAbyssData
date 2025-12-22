@@ -10,5 +10,6 @@ return ReadOnly("WeaponCostumeTemplate", {
   },
   [1020101] = {SkinId = 3010402, WeaponCostumeId = 1020101},
   [1020401] = {SkinId = 3010401, WeaponCostumeId = 1020401},
-  [2060201] = {SkinId = 3010301, WeaponCostumeId = 2060201}
+  [2060201] = {SkinId = 3010301, WeaponCostumeId = 2060201},
+  [3010501] = {SkinId = 3010501, WeaponCostumeId = 3010501}
 })

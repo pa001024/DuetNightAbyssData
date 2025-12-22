@@ -506,6 +506,90 @@ return ReadOnly("Title", {
     Name = "Title_10072",
     TitleID = 10072
   },
+  [10073] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = false,
+    Name = "Title_10073",
+    TitleID = 10073
+  },
+  [10074] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = false,
+    Name = "Title_10074",
+    TitleID = 10074
+  },
+  [10075] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = false,
+    Name = "Title_10075",
+    TitleID = 10075
+  },
+  [10076] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = false,
+    Name = "Title_10076",
+    TitleID = 10076
+  },
+  [10077] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = false,
+    Name = "Title_10077",
+    TitleID = 10077
+  },
+  [10078] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = false,
+    Name = "Title_10078",
+    TitleID = 10078
+  },
+  [10079] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = false,
+    Name = "Title_10079",
+    TitleID = 10079
+  },
+  [10080] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = false,
+    Name = "Title_10080",
+    TitleID = 10080
+  },
+  [10081] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = false,
+    Name = "Title_10081",
+    TitleID = 10081
+  },
+  [10082] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = false,
+    Name = "Title_10082",
+    TitleID = 10082
+  },
+  [10083] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = false,
+    Name = "Title_10083",
+    TitleID = 10083
+  },
+  [10084] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = false,
+    Name = "Title_10084",
+    TitleID = 10084
+  },
   [20001] = {
     Des = "Title_Des",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
@@ -925,5 +1009,61 @@ return ReadOnly("Title", {
     IfSuffix = true,
     Name = "Title_20060",
     TitleID = 20060
+  },
+  [20061] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = true,
+    Name = "Title_20061",
+    TitleID = 20061
+  },
+  [20062] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = true,
+    Name = "Title_20062",
+    TitleID = 20062
+  },
+  [20063] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = true,
+    Name = "Title_20063",
+    TitleID = 20063
+  },
+  [20064] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = true,
+    Name = "Title_20064",
+    TitleID = 20064
+  },
+  [20065] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = true,
+    Name = "Title_20065",
+    TitleID = 20065
+  },
+  [20066] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = true,
+    Name = "Title_20066",
+    TitleID = 20066
+  },
+  [20067] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = true,
+    Name = "Title_20067",
+    TitleID = 20067
+  },
+  [20068] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = true,
+    Name = "Title_20068",
+    TitleID = 20068
   }
 })

@@ -155,7 +155,6 @@ return ReadOnly("RougeLikeContract", {
     RoomType = {
       1,
       2,
-      5,
       6
     },
     UnitId = {39002, 39004},

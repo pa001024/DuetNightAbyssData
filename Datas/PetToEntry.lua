@@ -101,6 +101,7 @@ return ReadOnly("PetToEntry", {
   [4041] = T.RT_1,
   [4042] = T.RT_1,
   [4043] = T.RT_1,
+  [4049] = T.RT_1,
   [4051] = T.RT_1,
   [4052] = T.RT_1,
   [4053] = T.RT_1,
@@ -152,5 +153,8 @@ return ReadOnly("PetToEntry", {
   [4933] = T.RT_2,
   [4934] = T.RT_1,
   [4935] = T.RT_1,
-  [4936] = T.RT_1
+  [4936] = T.RT_1,
+  [4941] = T.RT_1,
+  [4942] = T.RT_1,
+  [4943] = T.RT_1
 })

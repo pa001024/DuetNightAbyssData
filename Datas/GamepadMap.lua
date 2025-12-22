@@ -64,81 +64,93 @@ T.RT_27 = {"B", "Right"}
 T.RT_28 = {"RS"}
 T.RT_29 = {"Right", "X"}
 T.RT_30 = {"Right", "B"}
-T.RT_31 = {"Right", "LB"}
-T.RT_32 = {"LT"}
-T.RT_33 = {"View"}
-T.RT_34 = {
-  [1] = T.RT_33,
-  [2] = T.RT_33,
-  [3] = T.RT_33,
-  [4] = T.RT_33
+T.RT_31 = {
+  [1] = T.RT_30,
+  [2] = T.RT_30,
+  [3] = T.RT_30,
+  [4] = T.RT_30
 }
-T.RT_35 = {"Right", "Y"}
-T.RT_36 = {"Right", "RT"}
-T.RT_37 = {"Right", "RB"}
-T.RT_38 = {"LB", "Left"}
-T.RT_39 = {"B", "Left"}
-T.RT_40 = {
+T.RT_32 = {"Right", "LB"}
+T.RT_33 = {"LT"}
+T.RT_34 = {"View"}
+T.RT_35 = {
+  [1] = T.RT_34,
+  [2] = T.RT_34,
+  [3] = T.RT_34,
+  [4] = T.RT_34
+}
+T.RT_36 = {"Right", "Y"}
+T.RT_37 = {"Right", "RT"}
+T.RT_38 = {"Right", "RB"}
+T.RT_39 = {"LB", "Left"}
+T.RT_40 = {"B", "Left"}
+T.RT_41 = {
   [1] = "Special_Left",
   [2] = "Special_Left",
   [3] = "Special_Left",
   [4] = "Special_Left"
 }
-T.RT_41 = {"Menu"}
-T.RT_42 = {"Right", "A"}
-T.RT_43 = {"Right", "LT"}
-T.RT_44 = {"Right", "RS"}
-T.RT_45 = {"Left"}
-T.RT_46 = {
-  [1] = T.RT_45,
-  [2] = T.RT_45,
-  [3] = T.RT_45,
-  [4] = T.RT_45
+T.RT_42 = {"Menu"}
+T.RT_43 = {"Right", "A"}
+T.RT_44 = {
+  [1] = T.RT_43,
+  [2] = T.RT_43,
+  [3] = T.RT_43,
+  [4] = T.RT_43
 }
-T.RT_47 = {
+T.RT_45 = {"Right", "LT"}
+T.RT_46 = {"Right", "RS"}
+T.RT_47 = {"Left"}
+T.RT_48 = {
+  [1] = T.RT_47,
+  [2] = T.RT_47,
+  [3] = T.RT_47,
+  [4] = T.RT_47
+}
+T.RT_49 = {
   [1] = "DPad_Left",
   [2] = "DPad_Left",
   [3] = "DPad_Left",
   [4] = "DPad_Left"
 }
-T.RT_48 = {"LB", "X"}
-T.RT_49 = {"B", "LB"}
-T.RT_50 = {"LB", "Y"}
-T.RT_51 = {"B", "RB"}
-T.RT_52 = {"LB", "B"}
-T.RT_53 = {"B", "Y"}
-T.RT_54 = {
+T.RT_50 = {"LB", "X"}
+T.RT_51 = {"B", "LB"}
+T.RT_52 = {"LB", "Y"}
+T.RT_53 = {"B", "RB"}
+T.RT_54 = {"LB", "B"}
+T.RT_55 = {"B", "Y"}
+T.RT_56 = {
   [1] = T.RT_6,
   [2] = T.RT_6,
   [3] = T.RT_6,
   [4] = T.RT_6
 }
-T.RT_55 = {
+T.RT_57 = {
   [1] = "FaceButton_Bottom",
   [2] = "FaceButton_Bottom",
   [3] = "FaceButton_Bottom",
   [4] = "FaceButton_Bottom"
 }
-T.RT_56 = {
+T.RT_58 = {
   [1] = T.RT_5,
   [2] = T.RT_5,
   [3] = T.RT_5,
   [4] = T.RT_5
 }
-T.RT_57 = {
+T.RT_59 = {
   [1] = "FaceButton_Right",
   [2] = "FaceButton_Right",
   [3] = "FaceButton_Right",
   [4] = "FaceButton_Right"
 }
-T.RT_58 = {"Up"}
-T.RT_59 = {
-  [1] = T.RT_58,
-  [2] = T.RT_58,
-  [3] = T.RT_58,
-  [4] = T.RT_58
+T.RT_60 = {"Up"}
+T.RT_61 = {
+  [1] = T.RT_60,
+  [2] = T.RT_60,
+  [3] = T.RT_60,
+  [4] = T.RT_60
 }
-T.RT_60 = {
+T.RT_62 = {
   [1] = "DPad_Up",
   [2] = "DPad_Up",
   [3] = "DPad_Up",
@@ -370,12 +382,7 @@ return ReadOnly("GamepadMap", {
   },
   OpenBag = {
     ActionName = "OpenBag",
-    GamepadIcon = {
-      [1] = T.RT_30,
-      [2] = T.RT_30,
-      [3] = T.RT_30,
-      [4] = T.RT_30
-    },
+    GamepadIcon = T.RT_31,
     SystemInput = {
       [1] = "Avoid",
       [2] = "Avoid",
@@ -386,10 +393,10 @@ return ReadOnly("GamepadMap", {
   OpenBattlePass = {
     ActionName = "OpenBattlePass",
     GamepadIcon = {
-      [1] = T.RT_31,
-      [2] = T.RT_31,
-      [3] = T.RT_31,
-      [4] = T.RT_31
+      [1] = T.RT_32,
+      [2] = T.RT_32,
+      [3] = T.RT_32,
+      [4] = T.RT_32
     },
     SystemInput = {
       [1] = "GamepadUseSkill",
@@ -401,10 +408,10 @@ return ReadOnly("GamepadMap", {
   OpenBattleWheel = {
     ActionName = "OpenBattleWheel",
     GamepadIcon = {
-      [1] = T.RT_32,
-      [2] = T.RT_32,
-      [3] = T.RT_32,
-      [4] = T.RT_32
+      [1] = T.RT_33,
+      [2] = T.RT_33,
+      [3] = T.RT_33,
+      [4] = T.RT_33
     },
     GamepadKey = {
       [1] = "LeftTrigger",
@@ -415,15 +422,15 @@ return ReadOnly("GamepadMap", {
   },
   OpenChat = {
     ActionName = "OpenChat",
-    GamepadIcon = T.RT_34
+    GamepadIcon = T.RT_35
   },
   OpenEvent = {
     ActionName = "OpenEvent",
     GamepadIcon = {
-      [1] = T.RT_35,
-      [2] = T.RT_35,
-      [3] = T.RT_35,
-      [4] = T.RT_35
+      [1] = T.RT_36,
+      [2] = T.RT_36,
+      [3] = T.RT_36,
+      [4] = T.RT_36
     },
     SystemInput = {
       [1] = "Interactive",
@@ -435,20 +442,20 @@ return ReadOnly("GamepadMap", {
   OpenForge = {
     ActionName = "OpenForge",
     GamepadIcon = {
-      [1] = T.RT_36,
-      [2] = T.RT_36,
-      [3] = T.RT_36,
-      [4] = T.RT_36
+      [1] = T.RT_37,
+      [2] = T.RT_37,
+      [3] = T.RT_37,
+      [4] = T.RT_37
     },
     SystemInput = T.RT_12
   },
   OpenGacha = {
     ActionName = "OpenGacha",
     GamepadIcon = {
-      [1] = T.RT_37,
-      [2] = T.RT_37,
-      [3] = T.RT_37,
-      [4] = T.RT_37
+      [1] = T.RT_38,
+      [2] = T.RT_38,
+      [3] = T.RT_38,
+      [4] = T.RT_38
     },
     SystemInput = {
       [1] = "Slide",
@@ -466,24 +473,24 @@ return ReadOnly("GamepadMap", {
       [4] = "ShowTeamInfo"
     },
     GamepadIcon = {
-      [1] = T.RT_38,
-      [2] = T.RT_38,
-      [3] = T.RT_39,
-      [4] = T.RT_39
+      [1] = T.RT_39,
+      [2] = T.RT_39,
+      [3] = T.RT_40,
+      [4] = T.RT_40
     }
   },
   OpenMap = {
     ActionName = "OpenMap",
-    GamepadIcon = T.RT_34,
-    GamepadKey = T.RT_40
+    GamepadIcon = T.RT_35,
+    GamepadKey = T.RT_41
   },
   OpenMenu = {
     ActionName = "OpenMenu",
     GamepadIcon = {
-      [1] = T.RT_41,
-      [2] = T.RT_41,
-      [3] = T.RT_41,
-      [4] = T.RT_41
+      [1] = T.RT_42,
+      [2] = T.RT_42,
+      [3] = T.RT_42,
+      [4] = T.RT_42
     },
     GamepadKey = {
       [1] = "Special_Right",
@@ -494,12 +501,7 @@ return ReadOnly("GamepadMap", {
   },
   OpenPlay = {
     ActionName = "OpenPlay",
-    GamepadIcon = {
-      [1] = T.RT_42,
-      [2] = T.RT_42,
-      [3] = T.RT_42,
-      [4] = T.RT_42
-    },
+    GamepadIcon = T.RT_44,
     SystemInput = {
       [1] = "Jump",
       [2] = "Jump",
@@ -510,10 +512,10 @@ return ReadOnly("GamepadMap", {
   OpenTask = {
     ActionName = "OpenTask",
     GamepadIcon = {
-      [1] = T.RT_43,
-      [2] = T.RT_43,
-      [3] = T.RT_43,
-      [4] = T.RT_43
+      [1] = T.RT_45,
+      [2] = T.RT_45,
+      [3] = T.RT_45,
+      [4] = T.RT_45
     },
     SystemInput = {
       [1] = "OpenBattleWheel",
@@ -525,10 +527,10 @@ return ReadOnly("GamepadMap", {
   QuitChallenge = {
     ActionName = "QuitChallenge",
     GamepadIcon = {
-      [1] = T.RT_44,
-      [2] = T.RT_44,
-      [3] = T.RT_44,
-      [4] = T.RT_44
+      [1] = T.RT_46,
+      [2] = T.RT_46,
+      [3] = T.RT_46,
+      [4] = T.RT_46
     },
     SystemInput = {
       [1] = "LockMonster",
@@ -549,8 +551,8 @@ return ReadOnly("GamepadMap", {
   },
   ShowTeamInfo = {
     ActionName = "ShowTeamInfo",
-    GamepadIcon = T.RT_46,
-    GamepadKey = T.RT_47
+    GamepadIcon = T.RT_48,
+    GamepadKey = T.RT_49
   },
   Skill1 = {
     ActionName = "Skill1",
@@ -561,10 +563,10 @@ return ReadOnly("GamepadMap", {
       [4] = "Slide"
     },
     GamepadIcon = {
-      [1] = T.RT_48,
-      [2] = T.RT_48,
-      [3] = T.RT_49,
-      [4] = T.RT_49
+      [1] = T.RT_50,
+      [2] = T.RT_50,
+      [3] = T.RT_51,
+      [4] = T.RT_51
     }
   },
   Skill2 = {
@@ -576,10 +578,10 @@ return ReadOnly("GamepadMap", {
       [4] = "Avoid"
     },
     GamepadIcon = {
-      [1] = T.RT_50,
-      [2] = T.RT_50,
-      [3] = T.RT_51,
-      [4] = T.RT_51
+      [1] = T.RT_52,
+      [2] = T.RT_52,
+      [3] = T.RT_53,
+      [4] = T.RT_53
     }
   },
   Skill3 = {
@@ -591,10 +593,10 @@ return ReadOnly("GamepadMap", {
       [4] = "Interactive"
     },
     GamepadIcon = {
-      [1] = T.RT_52,
-      [2] = T.RT_52,
-      [3] = T.RT_53,
-      [4] = T.RT_53
+      [1] = T.RT_54,
+      [2] = T.RT_54,
+      [3] = T.RT_55,
+      [4] = T.RT_55
     }
   },
   Slide = {
@@ -614,13 +616,13 @@ return ReadOnly("GamepadMap", {
   },
   StoryInteractive = {
     ActionName = "StoryInteractive",
-    GamepadIcon = T.RT_54,
-    GamepadKey = T.RT_55
+    GamepadIcon = T.RT_56,
+    GamepadKey = T.RT_57
   },
   StoryInteractiveClose = {
     ActionName = "StoryInteractiveClose",
-    GamepadIcon = T.RT_56,
-    GamepadKey = T.RT_57
+    GamepadIcon = T.RT_58,
+    GamepadKey = T.RT_59
   },
   TalkAutoPlay = {
     ActionName = "TalkAutoPlay",
@@ -629,8 +631,8 @@ return ReadOnly("GamepadMap", {
   },
   TalkClick = {
     ActionName = "TalkClick",
-    GamepadIcon = T.RT_54,
-    GamepadKey = T.RT_55
+    GamepadIcon = T.RT_56,
+    GamepadKey = T.RT_57
   },
   TalkDownSelect = {
     ActionName = "TalkDownSelect",
@@ -639,28 +641,28 @@ return ReadOnly("GamepadMap", {
   },
   TalkExit = {
     ActionName = "TalkExit",
-    GamepadIcon = T.RT_56,
-    GamepadKey = T.RT_57
+    GamepadIcon = T.RT_58,
+    GamepadKey = T.RT_59
   },
   TalkOption = {
     ActionName = "TalkOption",
-    GamepadIcon = T.RT_54,
-    GamepadKey = T.RT_55
+    GamepadIcon = T.RT_56,
+    GamepadKey = T.RT_57
   },
   TalkReview = {
     ActionName = "TalkReview",
-    GamepadIcon = T.RT_34,
-    GamepadKey = T.RT_40
+    GamepadIcon = T.RT_35,
+    GamepadKey = T.RT_41
   },
   TalkSkip = {
     ActionName = "TalkSkip",
-    GamepadIcon = T.RT_54,
-    GamepadKey = T.RT_55
+    GamepadIcon = T.RT_56,
+    GamepadKey = T.RT_57
   },
   TalkUpSelect = {
     ActionName = "TalkUpSelect",
-    GamepadIcon = T.RT_59,
-    GamepadKey = T.RT_60
+    GamepadIcon = T.RT_61,
+    GamepadKey = T.RT_62
   },
   TalkWiki = {
     ActionName = "TalkWiki",
@@ -669,22 +671,42 @@ return ReadOnly("GamepadMap", {
   },
   TrainingCharacterSkills = {
     ActionName = "TrainingCharacterSkills",
-    GamepadIcon = T.RT_59,
-    GamepadKey = T.RT_60
+    GamepadIcon = T.RT_61,
+    GamepadKey = T.RT_62
   },
-  TrainingKillMonsters = {
-    ActionName = "TrainingKillMonsters",
+  TrainingInvincible = {
+    ActionName = "TrainingInvincible",
     GamepadIcon = T.RT_16,
     GamepadKey = T.RT_17
   },
+  TrainingKillMonsters = {
+    ActionName = "TrainingKillMonsters",
+    GamepadIcon = T.RT_31,
+    SystemInput = {
+      [1] = "StoryInteractiveClose",
+      [2] = "StoryInteractiveClose",
+      [3] = "StoryInteractiveClose",
+      [4] = "StoryInteractiveClose"
+    }
+  },
+  TrainingMonstersActive = {
+    ActionName = "TrainingMonstersActive",
+    GamepadIcon = T.RT_44,
+    SystemInput = {
+      [1] = "StoryInteractive",
+      [2] = "StoryInteractive",
+      [3] = "StoryInteractive",
+      [4] = "StoryInteractive"
+    }
+  },
   TrainingOpenSetup = {
     ActionName = "TrainingOpenSetup",
-    GamepadIcon = T.RT_46,
-    GamepadKey = T.RT_47
+    GamepadIcon = T.RT_48,
+    GamepadKey = T.RT_49
   },
   UpSelect = {
     ActionName = "UpSelect",
-    GamepadIcon = T.RT_59,
-    GamepadKey = T.RT_60
+    GamepadIcon = T.RT_61,
+    GamepadKey = T.RT_62
   }
 })

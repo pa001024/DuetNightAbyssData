@@ -2,6 +2,11 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("RegionMap", {
+  [1] = {
+    MainRegionMap = true,
+    RegionId = 9997,
+    RegionMapId = 1
+  },
   [100] = {
     MainRegionMap = true,
     RegionId = 1001,
@@ -38,5 +43,16 @@ return ReadOnly("RegionMap", {
     RegionMapId = 300,
     RegionMapUnlockCondition = 11010103,
     UISubRegionType = "EX"
+  },
+  [400] = {
+    MainRegionMap = true,
+    RegionId = 1041,
+    RegionMapId = 400,
+    RegionMapUnlockCondition = 325
+  },
+  [401] = {
+    RegionId = 1057,
+    RegionMapId = 401,
+    RegionMapUnlockCondition = 324
   }
 })

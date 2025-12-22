@@ -3,13 +3,16 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
 end
 return ReadOnly("PaotaiEventConstant", {
   PaotaiGameEventId = {
-    ConstantName = "PaotaiGameEventId"
+    ConstantName = "PaotaiGameEventId",
+    ConstantValue = 103007
   },
   PreDungeonRequiredStar = {
-    ConstantName = "PreDungeonRequiredStar"
+    ConstantName = "PreDungeonRequiredStar",
+    ConstantValue = 1
   },
-  PropNumMax = {ConstantName = "PropNumMax"},
+  PropNumMax = {ConstantName = "PropNumMax", ConstantValue = 2},
   WeaponNumMax = {
-    ConstantName = "WeaponNumMax"
+    ConstantName = "WeaponNumMax",
+    ConstantValue = 1
   }
 })

@@ -16,6 +16,7 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
 end
 return ReadOnly("UWeapon", {
   [110101] = {
+    ArmoryTitleUIPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Consonance/WBP_Armory_Consonance_Ymir.WBP_Armory_Consonance_Ymir'",
     BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Baonu_WP.T_Bust_Baonu_WP",
     GachaIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Broadsword_Baonu.T_Gacha_Broadsword_Baonu",
     Icon = "/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Heitao_WP.T_Head_Heitao_WP",
@@ -26,6 +27,7 @@ return ReadOnly("UWeapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_110101",
     WeaponRarity = 5,
+    WeaponSound = "event:/ui/common/tonglv_heitao",
     WeaponValue = -1
   },
   [110301] = {
@@ -57,6 +59,7 @@ return ReadOnly("UWeapon", {
     WeaponValue = -1
   },
   [150101] = {
+    ArmoryTitleUIPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Consonance/WBP_Armory_Consonance_Samael.WBP_Armory_Consonance_Samael'",
     BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Baonu_WP.T_Bust_Baonu_WP",
     GachaIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Broadsword_Baonu.T_Gacha_Broadsword_Baonu",
     Icon = "/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Baonu_WP.T_Head_Baonu_WP",
@@ -67,6 +70,7 @@ return ReadOnly("UWeapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_150101",
     WeaponRarity = 5,
+    WeaponSound = "event:/ui/common/tonglv_baonu",
     WeaponValue = -1
   },
   [150301] = {
@@ -167,6 +171,7 @@ return ReadOnly("UWeapon", {
     WeaponValue = -1
   },
   [310101] = {
+    ArmoryTitleUIPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Consonance/WBP_Armory_Consonance_Hansel.WBP_Armory_Consonance_Hansel'",
     BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Baonu_WP.T_Bust_Baonu_WP",
     GachaIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Broadsword_Baonu.T_Gacha_Broadsword_Baonu",
     Icon = "/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Linen_WP.T_Head_Linen_WP",
@@ -177,6 +182,7 @@ return ReadOnly("UWeapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_310101",
     WeaponRarity = 5,
+    WeaponSound = "event:/ui/common/tonglv_linen",
     WeaponValue = -1
   },
   [510101] = {
@@ -194,6 +200,7 @@ return ReadOnly("UWeapon", {
     WeaponValue = -1
   },
   [530101] = {
+    ArmoryTitleUIPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Consonance/WBP_Armory_Consonance_Ikaros.WBP_Armory_Consonance_Ikaros'",
     BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Baonu_WP.T_Bust_Baonu_WP",
     GachaIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Broadsword_Baonu.T_Gacha_Broadsword_Baonu",
     Icon = "/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Saiqi_WP.T_Head_Saiqi_WP",
@@ -204,6 +211,7 @@ return ReadOnly("UWeapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_530101",
     WeaponRarity = 5,
+    WeaponSound = "event:/ui/common/tonglv_saiqi",
     WeaponValue = -1
   }
 })

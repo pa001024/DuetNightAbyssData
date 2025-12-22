@@ -7,9 +7,9 @@
         -800000.0
       ],
       "level_center": [
-        500,
-        500,
-        500
+         5500,
+        -500,
+        -1500
       ],
       "struct": "/Game/Maps/Datas/Data_Design/Special/Temple/Temple_Battle_11",
       "enterLevel": 1,

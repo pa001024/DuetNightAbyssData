@@ -11,6 +11,12 @@ T.RT_5 = {
   "UI_Disabled_InStoryMode"
 }
 T.RT_6 = {1, 5}
+T.RT_7 = {
+  "UI_Locked_Des_NewMap"
+}
+T.RT_8 = {
+  "UI_Locked_Des_Shop"
+}
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -336,9 +342,7 @@ return ReadOnly("UIUnlockRule", {
     ConditionId = 322,
     IsHideUnlockPopup = 1,
     OpenConditionId = T.RT_1,
-    OpenSystemDesc = {
-      "UI_Locked_Des_NewMap"
-    },
+    OpenSystemDesc = T.RT_7,
     UIUnlockName = "UI_SHOP_TAB_ExploreBadge_EXChapter01",
     UIUnlockRuleId = "LonzaFortressShopTab"
   },
@@ -529,6 +533,14 @@ return ReadOnly("UIUnlockRule", {
     UIUnlockRuleId = "Quest",
     UnlockPopupType = "Normal"
   },
+  RegionalShopTab = {
+    ConditionId = 12010306,
+    IsHideUnlockPopup = 1,
+    OpenConditionId = T.RT_1,
+    OpenSystemDesc = T.RT_8,
+    UIUnlockName = "UI_SHOP_MAINTAB_COMPLEX_3",
+    UIUnlockRuleId = "RegionalShopTab"
+  },
   Rouge = {
     AfterUIUnlockDesc = "System_Des_Rouge",
     ConditionId = 4170,
@@ -631,6 +643,11 @@ return ReadOnly("UIUnlockRule", {
     UIUnlockRuleId = "Swatch",
     UnlockPopupType = "Normal"
   },
+  TODSetting = {
+    ConditionId = 4400,
+    IsHideUnlockPopup = 1,
+    UIUnlockRuleId = "TODSetting"
+  },
   Temple = {
     AfterUIUnlockDesc = "System_Des_Temple_CBT3",
     ConditionId = 4230,
@@ -644,6 +661,14 @@ return ReadOnly("UIUnlockRule", {
     UIUnlockName = "MAIN_UI_Temple",
     UIUnlockRuleId = "Temple",
     UnlockPopupType = "Light"
+  },
+  TimeRewardShopTab = {
+    ConditionId = 4240,
+    IsHideUnlockPopup = 1,
+    OpenConditionId = T.RT_1,
+    OpenSystemDesc = T.RT_8,
+    UIUnlockName = "UI_SHOP_MAINTAB_COMPLEX_2",
+    UIUnlockRuleId = "TimeRewardShopTab"
   },
   UWeapon = {
     AfterUIUnlockDesc = "System_Des_Uweapon",
@@ -671,6 +696,12 @@ return ReadOnly("UIUnlockRule", {
     UIUnlockRuleId = "WalnutBag",
     UnlockPopupType = "Light"
   },
+  WalnutSell = {
+    ConditionId = 4341,
+    IsHideUnlockPopup = 1,
+    OpenConditionId = T.RT_1,
+    UIUnlockRuleId = "WalnutSell"
+  },
   Wiki = {
     AfterUIUnlockDesc = "System_Des_Wiki",
     ConditionId = 4070,
@@ -684,5 +715,13 @@ return ReadOnly("UIUnlockRule", {
     UIUnlockName = "MAIN_UI_WIKI",
     UIUnlockRuleId = "Wiki",
     UnlockPopupType = "Light"
+  },
+  YanjinduShopTab = {
+    ConditionId = 325,
+    IsHideUnlockPopup = 1,
+    OpenConditionId = T.RT_1,
+    OpenSystemDesc = T.RT_7,
+    UIUnlockName = "UI_SHOP_TAB_ExploreBadge_EXChapter01",
+    UIUnlockRuleId = "YanjinduShopTab"
   }
 })

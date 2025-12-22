@@ -84,6 +84,7 @@ T.RT_17 = {MaxSummonerCount = 2, UnitId = 240101}
 T.RT_18 = {
   ID = 14,
   Params = T.RT_17,
+  ScaleNode = "Main",
   SkillGrade = T.RT_2,
   UIName = "UISKillFushu"
 }
@@ -91,6 +92,7 @@ T.RT_19 = {MaxSummonerCount = 3, UnitId = 240101}
 T.RT_20 = {
   ID = 14,
   Params = T.RT_19,
+  ScaleNode = "Main",
   SkillGrade = T.RT_5,
   UIName = "UISKillFushu"
 }
@@ -111,6 +113,7 @@ T.RT_23 = {FireBuffId = 110331}
 T.RT_24 = {
   ID = 18,
   Params = T.RT_23,
+  ScaleNode = "Main",
   SkillGrade = T.RT_11,
   UIName = "UISkillTuosi"
 }
@@ -201,53 +204,62 @@ T.RT_41 = {BuffId = 150101}
 T.RT_42 = {
   ID = 28,
   Params = T.RT_41,
+  ScaleNode = "Main",
   SkillGrade = T.RT_11,
   UIName = "UISkillBaonu"
 }
-T.RT_43 = {
+T.RT_43 = {CreatureId = 320202}
+T.RT_44 = {
+  ID = 29,
+  Params = T.RT_43,
+  ScaleNode = "Main",
+  SkillGrade = T.RT_11,
+  UIName = "UISkillKami"
+}
+T.RT_45 = {
   ID = 3,
   SkillGrade = T.RT_11,
   TriggerBuffId = 530101,
   UIName = "UISkillSaqiUlti"
 }
-T.RT_44 = {EnhancedReloadBuffId = 310131, FirepowerSuppressionBuffId = 310132}
-T.RT_45 = {
+T.RT_46 = {EnhancedReloadBuffId = 310131, FirepowerSuppressionBuffId = 310132}
+T.RT_47 = {
   ID = 4,
-  Params = T.RT_44,
+  Params = T.RT_46,
   ScaleNode = "Main",
   SkillGrade = T.RT_11,
   UIName = "UISkillLinen"
 }
-T.RT_46 = {RideBuff = 510121, SummonerId = 510101}
-T.RT_47 = {
+T.RT_48 = {RideBuff = 510121, SummonerId = 510101}
+T.RT_49 = {
   ID = 5,
-  Params = T.RT_46,
+  Params = T.RT_48,
   ScaleNode = "Main",
   SkillGrade = T.RT_11,
   UIName = "UISkillSonglu"
 }
-T.RT_48 = {SummonerId = 420101}
-T.RT_49 = {
+T.RT_50 = {SummonerId = 420101}
+T.RT_51 = {
   ID = 6,
-  Params = T.RT_48,
+  Params = T.RT_50,
   ScaleNode = "Main",
   SkillGrade = T.RT_11,
   UIName = "UISkillHeilong"
 }
-T.RT_50 = {
+T.RT_52 = {
   ID = 7,
   ScaleNode = "Main",
   SkillGrade = T.RT_11,
   TriggerBuffId = 310122,
   UIName = "UISkill2Linen"
 }
-T.RT_51 = {
+T.RT_53 = {
   ID = 8,
   SkillGrade = T.RT_11,
   TriggerBuffId = 850405,
   UIName = "UISkillSaqiUlti"
 }
-T.RT_52 = {
+T.RT_54 = {
   ID = 9,
   SkillGrade = T.RT_11,
   TriggerBuffId = 310301,
@@ -276,15 +288,6 @@ return ReadOnly("BattleCharUI", {
     [6] = T.RT_27
   },
   [3] = {
-    [0] = T.RT_43,
-    [1] = T.RT_43,
-    [2] = T.RT_43,
-    [3] = T.RT_43,
-    [4] = T.RT_43,
-    [5] = T.RT_43,
-    [6] = T.RT_43
-  },
-  [4] = {
     [0] = T.RT_45,
     [1] = T.RT_45,
     [2] = T.RT_45,
@@ -293,7 +296,7 @@ return ReadOnly("BattleCharUI", {
     [5] = T.RT_45,
     [6] = T.RT_45
   },
-  [5] = {
+  [4] = {
     [0] = T.RT_47,
     [1] = T.RT_47,
     [2] = T.RT_47,
@@ -302,7 +305,7 @@ return ReadOnly("BattleCharUI", {
     [5] = T.RT_47,
     [6] = T.RT_47
   },
-  [6] = {
+  [5] = {
     [0] = T.RT_49,
     [1] = T.RT_49,
     [2] = T.RT_49,
@@ -311,16 +314,7 @@ return ReadOnly("BattleCharUI", {
     [5] = T.RT_49,
     [6] = T.RT_49
   },
-  [7] = {
-    [0] = T.RT_50,
-    [1] = T.RT_50,
-    [2] = T.RT_50,
-    [3] = T.RT_50,
-    [4] = T.RT_50,
-    [5] = T.RT_50,
-    [6] = T.RT_50
-  },
-  [8] = {
+  [6] = {
     [0] = T.RT_51,
     [1] = T.RT_51,
     [2] = T.RT_51,
@@ -329,7 +323,7 @@ return ReadOnly("BattleCharUI", {
     [5] = T.RT_51,
     [6] = T.RT_51
   },
-  [9] = {
+  [7] = {
     [0] = T.RT_52,
     [1] = T.RT_52,
     [2] = T.RT_52,
@@ -337,6 +331,24 @@ return ReadOnly("BattleCharUI", {
     [4] = T.RT_52,
     [5] = T.RT_52,
     [6] = T.RT_52
+  },
+  [8] = {
+    [0] = T.RT_53,
+    [1] = T.RT_53,
+    [2] = T.RT_53,
+    [3] = T.RT_53,
+    [4] = T.RT_53,
+    [5] = T.RT_53,
+    [6] = T.RT_53
+  },
+  [9] = {
+    [0] = T.RT_54,
+    [1] = T.RT_54,
+    [2] = T.RT_54,
+    [3] = T.RT_54,
+    [4] = T.RT_54,
+    [5] = T.RT_54,
+    [6] = T.RT_54
   },
   [10] = {
     [0] = T.RT_8,
@@ -500,5 +512,14 @@ return ReadOnly("BattleCharUI", {
     [4] = T.RT_42,
     [5] = T.RT_42,
     [6] = T.RT_42
+  },
+  [29] = {
+    [0] = T.RT_44,
+    [1] = T.RT_44,
+    [2] = T.RT_44,
+    [3] = T.RT_44,
+    [4] = T.RT_44,
+    [5] = T.RT_44,
+    [6] = T.RT_44
   }
 })

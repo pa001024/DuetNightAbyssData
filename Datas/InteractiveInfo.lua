@@ -30,6 +30,10 @@ return ReadOnly("InteractiveInfo", {
     BPPath = "/Game/BluePrints/Story/Interactive/InteractiveComponent/InteractChild/BP_GachaInteract.BP_GachaInteract",
     Id = "Gacha"
   },
+  HuaxuExploreShop = {
+    BPPath = "/Game/BluePrints/Story/Interactive/InteractiveComponent/InteractChild/BP_HuaxuExploreShopInteract.BP_HuaxuExploreShopInteract",
+    Id = "HuaxuExploreShop"
+  },
   ImpressionShop = {
     BPPath = "/Game/BluePrints/Story/Interactive/InteractiveComponent/InteractChild/BP_ImpressionShopInteract.BP_ImpressionShopInteract",
     Id = "ImpressionShop"
@@ -65,6 +69,14 @@ return ReadOnly("InteractiveInfo", {
   Shop = {
     BPPath = "/Game/BluePrints/Story/Interactive/InteractiveComponent/InteractChild/BP_ShopInteract.BP_ShopInteract",
     Id = "Shop"
+  },
+  TheaDonate = {
+    BPPath = "/Game/BluePrints/Story/Interactive/InteractiveComponent/InteractChild/BP_TheaDonateInteract.BP_TheaDonateInteract",
+    Id = "TheaDonate"
+  },
+  TheaOnline = {
+    BPPath = "/Game/BluePrints/Story/Interactive/InteractiveComponent/InteractChild/BP_TheaOnlineInteract.BP_TheaOnlineInteract",
+    Id = "TheaOnline"
   },
   ZhiLiuEntrust = {
     BPPath = "/Game/BluePrints/Story/Interactive/InteractiveComponent/InteractChild/BP_ZhiLiuEntrustInteract",

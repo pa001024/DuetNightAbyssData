@@ -11,6 +11,32 @@ T.RT_1 = {
 T.RT_2 = {
   [1] = T.RT_1
 }
+T.RT_3 = {
+  FinishQuest = 12010309,
+  GuideId = 96,
+  GuideNoteId = 121,
+  GuideNoteTab = 3,
+  MechanismTag = "Petal",
+  RewardId = 7000
+}
+T.RT_4 = {
+  CompleteUIGuideId = 95,
+  FinishQuest = 12010309,
+  GuideId = 95,
+  GuideNoteId = 120,
+  GuideNoteTab = 3,
+  MechanismTag = "MoInteractive",
+  RewardId = 7000
+}
+T.RT_5 = {
+  CompleteUIGuideId = 94,
+  FinishQuest = 12010309,
+  GuideId = 94,
+  GuideNoteId = 119,
+  GuideNoteTab = 3,
+  MechanismTag = "GravityBall",
+  RewardId = 7000
+}
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -81,6 +107,15 @@ return ReadOnly("GuideBookConditionOne", {
         FinishQuest = 10010209,
         GuideId = 27,
         GuideNoteId = 43,
+        GuideNoteTab = 5,
+        RewardId = 7000
+      }
+    },
+    [10020101] = {
+      [1] = {
+        FinishQuest = 10020101,
+        GuideId = 89,
+        GuideNoteId = 117,
         GuideNoteTab = 5,
         RewardId = 7000
       }
@@ -206,6 +241,81 @@ return ReadOnly("GuideBookConditionOne", {
         GuideId = 52,
         GuideNoteId = 72,
         GuideNoteTab = 3,
+        RewardId = 7000
+      }
+    },
+    [12010309] = {
+      [1] = {
+        CompleteUIGuideId = 90,
+        FinishQuest = 12010309,
+        GuideId = 90,
+        GuideNoteId = 113,
+        GuideNoteTab = 3,
+        RewardId = 7000
+      },
+      [2] = {
+        CompleteUIGuideId = 91,
+        FinishQuest = 12010309,
+        GuideId = 91,
+        GuideNoteId = 114,
+        GuideNoteTab = 3,
+        RewardId = 7000
+      },
+      [3] = {
+        CompleteUIGuideId = 92,
+        FinishQuest = 12010309,
+        GuideId = 92,
+        GuideNoteId = 115,
+        GuideNoteTab = 3,
+        RewardId = 7000
+      },
+      [4] = {
+        CompleteUIGuideId = 93,
+        FinishQuest = 12010309,
+        GuideId = 93,
+        GuideNoteId = 116,
+        GuideNoteTab = 3,
+        RewardId = 7000
+      },
+      [5] = T.RT_5,
+      [6] = T.RT_4,
+      [7] = T.RT_3
+    },
+    [12010310] = {
+      [1] = {
+        CompleteUIGuideId = 106,
+        FinishQuest = 12010310,
+        GuideId = 106,
+        GuideNoteId = 131,
+        GuideNoteTab = 3,
+        RewardId = 7000
+      }
+    },
+    [12010406] = {
+      [1] = {
+        CompleteUIGuideId = 104,
+        FinishQuest = 12010406,
+        GuideId = 104,
+        GuideNoteId = 129,
+        GuideNoteTab = 3,
+        RewardId = 7000
+      },
+      [2] = {
+        CompleteUIGuideId = 105,
+        FinishQuest = 12010406,
+        GuideId = 105,
+        GuideNoteId = 130,
+        GuideNoteTab = 3,
+        RewardId = 7000
+      }
+    },
+    [12010415] = {
+      [1] = {
+        CompleteUIGuideId = 97,
+        FinishQuest = 12010415,
+        GuideId = 97,
+        GuideNoteId = 122,
+        GuideNoteTab = 5,
         RewardId = 7000
       }
     }
@@ -392,6 +502,16 @@ return ReadOnly("GuideBookConditionOne", {
         RewardId = 7000
       }
     },
+    TODSetting = {
+      [1] = {
+        CompleteUIGuideId = 112,
+        FunctionId = "TODSetting",
+        GuideId = 112,
+        GuideNoteId = 118,
+        GuideNoteTab = 5,
+        RewardId = 7000
+      }
+    },
     Temple = {
       [1] = {
         FunctionId = "Temple",
@@ -403,12 +523,108 @@ return ReadOnly("GuideBookConditionOne", {
     }
   },
   MechanismTag = {
+    DongGuoBuffItem = {
+      [1] = {
+        GuideId = 107,
+        GuideNoteId = 132,
+        GuideNoteTab = 3,
+        MechanismTag = "DongGuoBuffItem",
+        RewardId = 7000
+      }
+    },
+    EastQiZi = {
+      [1] = {
+        CompleteUIGuideId = 103,
+        GuideId = 103,
+        GuideNoteId = 128,
+        GuideNoteTab = 3,
+        MechanismTag = "EastQiZi",
+        RewardId = 7000
+      }
+    },
+    FlowerLantern = {
+      [1] = {
+        GuideId = 98,
+        GuideNoteId = 123,
+        GuideNoteTab = 3,
+        MechanismTag = "FlowerLantern",
+        RewardId = 7000
+      }
+    },
+    GongMing = {
+      [1] = {
+        CompleteUIGuideId = 108,
+        GuideId = 108,
+        GuideNoteId = 133,
+        GuideNoteTab = 3,
+        MechanismTag = "GongMing",
+        RewardId = 7000
+      }
+    },
+    GravityBall = {
+      [1] = T.RT_5
+    },
+    HuaRui = {
+      [1] = {
+        CompleteUIGuideId = 109,
+        GuideId = 109,
+        GuideNoteId = 134,
+        GuideNoteTab = 3,
+        MechanismTag = "HuaRui",
+        RewardId = 7000
+      }
+    },
+    KongmingLantern = {
+      [1] = {
+        CompleteUIGuideId = 99,
+        GuideId = 99,
+        GuideNoteId = 124,
+        GuideNoteTab = 3,
+        MechanismTag = "KongmingLantern",
+        RewardId = 7000
+      }
+    },
+    LanternShip = {
+      [1] = {
+        CompleteUIGuideId = 100,
+        GuideId = 100,
+        GuideNoteId = 125,
+        GuideNoteTab = 3,
+        MechanismTag = "LanternShip",
+        RewardId = 7000
+      }
+    },
     MirrorPuzzle = {
       [1] = {
         GuideId = 84,
         GuideNoteId = 109,
         GuideNoteTab = 3,
         MechanismTag = "MirrorPuzzle",
+        RewardId = 7000
+      }
+    },
+    MoInteractive = {
+      [1] = T.RT_4
+    },
+    Petal = {
+      [1] = T.RT_3
+    },
+    WindBell = {
+      [1] = {
+        CompleteUIGuideId = 101,
+        GuideId = 101,
+        GuideNoteId = 126,
+        GuideNoteTab = 3,
+        MechanismTag = "WindBell",
+        RewardId = 7000
+      }
+    },
+    XingShiBei = {
+      [1] = {
+        GuideId = 102,
+        GuideNoteId = 127,
+        GuideNoteTab = 3,
+        MechanismTag = "XingShiBei",
         RewardId = 7000
       }
     }

@@ -25,7 +25,11 @@ return ReadOnly("ImpressionRegion", {
   [1041] = {
     Icon = "/Game/UI/Texture/Dynamic/Image/Area/T_Area_05.T_Area_05",
     ImpressionRegionId = 1041,
-    RegionId = {1041},
+    RegionId = {
+      1041,
+      1049,
+      1057
+    },
     RegionPointId = 2612,
     UIName = "DimensionGraph_East"
   }

@@ -6,6 +6,10 @@ return ReadOnly("PolicyLink", {
     Cache = "ChildPrivacy",
     ChinaCN = "https://www.yingxiong.com/p/per_child_pan.html?productId=17337&cid=56"
   },
+  CloudGame = {
+    Cache = "CloudGame",
+    ChinaCN = "https://dna.yingxiong.com/cloud/download?source=game"
+  },
   PaymentPolicyJP = {
     AbroadCN = "https://duetnightabyss.dna-panstudio.com/ja/#/news/content?id=8567",
     AbroadEN = "https://duetnightabyss.dna-panstudio.com/ja/#/news/content?id=8567",

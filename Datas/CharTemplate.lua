@@ -153,14 +153,26 @@ T.RT_18 = {
 T.RT_19 = {
   [1] = 51002,
   [2] = 51003,
-  [3] = 51007
+  [3] = 51007,
+  [4] = 51911,
+  [5] = 51711,
+  [6] = 51712
 }
 T.RT_20 = {
   [1] = 10,
   [2] = 10,
-  [3] = 10
+  [3] = 10,
+  [4] = 5,
+  [5] = 5,
+  [6] = 5
 }
-T.RT_21 = {
+T.RT_21 = {2}
+T.RT_22 = {
+  [1] = T.RT_21,
+  [2] = T.RT_21,
+  [3] = T.RT_21
+}
+T.RT_23 = {
   [1] = 51301,
   [2] = 51331,
   [3] = 51002,
@@ -168,19 +180,13 @@ T.RT_21 = {
   [5] = 51711,
   [6] = 51712
 }
-T.RT_22 = {
+T.RT_24 = {
   [1] = 10,
   [2] = 5,
   [3] = 10,
   [4] = 10,
   [5] = 5,
   [6] = 5
-}
-T.RT_23 = {2}
-T.RT_24 = {
-  [1] = T.RT_23,
-  [2] = T.RT_23,
-  [3] = T.RT_23
 }
 T.RT_25 = {
   [1] = 51732,
@@ -293,167 +299,15 @@ T.RT_35 = {
   [8] = 10
 }
 T.RT_36 = {
-  [1] = 21401,
-  [2] = 21005,
-  [3] = 21006,
-  [4] = 11001
+  [1] = 31326,
+  [2] = 31301,
+  [3] = 41761,
+  [4] = 41763,
+  [5] = 41001,
+  [6] = 41962,
+  [7] = 51463
 }
 T.RT_37 = {
-  [1] = 3,
-  [2] = 3,
-  [3] = 3
-}
-T.RT_38 = {
-  [1] = T.RT_37
-}
-T.RT_39 = {
-  [1] = 21406,
-  [2] = 21005,
-  [3] = 21006,
-  [4] = 11001
-}
-T.RT_40 = {
-  [1] = 21402,
-  [2] = 21005,
-  [3] = 21006,
-  [4] = 11001
-}
-T.RT_41 = {
-  [1] = 21403,
-  [2] = 21005,
-  [3] = 21006,
-  [4] = 11001
-}
-T.RT_42 = {
-  [1] = 21404,
-  [2] = 21005,
-  [3] = 21006,
-  [4] = 11001
-}
-T.RT_43 = {
-  [1] = 21405,
-  [2] = 21005,
-  [3] = 21006,
-  [4] = 11001
-}
-T.RT_44 = {
-  [1] = 21005,
-  [2] = 21006,
-  [3] = 31401,
-  [4] = 31321,
-  [5] = 31301
-}
-T.RT_45 = {
-  [1] = 3,
-  [2] = 3,
-  [3] = 5,
-  [4] = 5,
-  [5] = 5
-}
-T.RT_46 = {
-  [1] = T.RT_10
-}
-T.RT_47 = {
-  [1] = 21005,
-  [2] = 21006,
-  [3] = 31406,
-  [4] = 31326,
-  [5] = 31301
-}
-T.RT_48 = {
-  [1] = 21005,
-  [2] = 21006,
-  [3] = 31402,
-  [4] = 31322,
-  [5] = 31301
-}
-T.RT_49 = {
-  [1] = 21005,
-  [2] = 21006,
-  [3] = 31403,
-  [4] = 31323,
-  [5] = 31301
-}
-T.RT_50 = {
-  [1] = 21005,
-  [2] = 21006,
-  [3] = 31404,
-  [4] = 31324,
-  [5] = 31301
-}
-T.RT_51 = {
-  [1] = 21005,
-  [2] = 21006,
-  [3] = 31405,
-  [4] = 31325,
-  [5] = 31301
-}
-T.RT_52 = {
-  [1] = 21005,
-  [2] = 31401,
-  [3] = 31321,
-  [4] = 31301,
-  [5] = 41001,
-  [6] = 41911
-}
-T.RT_53 = {
-  [1] = 3,
-  [2] = 5,
-  [3] = 5,
-  [4] = 5,
-  [5] = 5,
-  [6] = 5
-}
-T.RT_54 = {
-  [1] = 5,
-  [2] = 5,
-  [3] = 3,
-  [4] = 3
-}
-T.RT_55 = {
-  [1] = T.RT_54
-}
-T.RT_56 = {
-  [1] = 21005,
-  [2] = 31406,
-  [3] = 31326,
-  [4] = 31301,
-  [5] = 41001,
-  [6] = 41962
-}
-T.RT_57 = {
-  [1] = 21005,
-  [2] = 31402,
-  [3] = 31322,
-  [4] = 31301,
-  [5] = 41001,
-  [6] = 41922
-}
-T.RT_58 = {
-  [1] = 21005,
-  [2] = 31403,
-  [3] = 31323,
-  [4] = 31301,
-  [5] = 41001,
-  [6] = 41931
-}
-T.RT_59 = {
-  [1] = 21005,
-  [2] = 31404,
-  [3] = 31324,
-  [4] = 31301,
-  [5] = 41001,
-  [6] = 41941
-}
-T.RT_60 = {
-  [1] = 21005,
-  [2] = 31405,
-  [3] = 31325,
-  [4] = 31301,
-  [5] = 41001,
-  [6] = 41951
-}
-T.RT_61 = {
   [1] = 5,
   [2] = 5,
   [3] = 5,
@@ -462,25 +316,51 @@ T.RT_61 = {
   [6] = 5,
   [7] = 5
 }
-T.RT_62 = {
-  [1] = 31322,
-  [2] = 31301,
-  [3] = 41723,
-  [4] = 41724,
-  [5] = 41001,
-  [6] = 41922,
-  [7] = 51424
+T.RT_38 = {
+  [1] = 21401,
+  [2] = 21005,
+  [3] = 21006,
+  [4] = 11001
 }
-T.RT_63 = {
-  [1] = 31323,
-  [2] = 31301,
-  [3] = 41732,
-  [4] = 41732,
-  [5] = 41001,
-  [6] = 41931,
-  [7] = 51431
+T.RT_39 = {
+  [1] = 3,
+  [2] = 3,
+  [3] = 3
 }
-T.RT_64 = {
+T.RT_40 = {
+  [1] = T.RT_39
+}
+T.RT_41 = {
+  [1] = 21406,
+  [2] = 21005,
+  [3] = 21006,
+  [4] = 11001
+}
+T.RT_42 = {
+  [1] = 21402,
+  [2] = 21005,
+  [3] = 21006,
+  [4] = 11001
+}
+T.RT_43 = {
+  [1] = 21403,
+  [2] = 21005,
+  [3] = 21006,
+  [4] = 11001
+}
+T.RT_44 = {
+  [1] = 21404,
+  [2] = 21005,
+  [3] = 21006,
+  [4] = 11001
+}
+T.RT_45 = {
+  [1] = 21405,
+  [2] = 21005,
+  [3] = 21006,
+  [4] = 11001
+}
+T.RT_46 = {
   [1] = 31324,
   [2] = 31301,
   [3] = 41742,
@@ -489,12 +369,147 @@ T.RT_64 = {
   [6] = 41941,
   [7] = 51441
 }
+T.RT_47 = {
+  [1] = 31322,
+  [2] = 31301,
+  [3] = 41723,
+  [4] = 41724,
+  [5] = 41001,
+  [6] = 41922,
+  [7] = 51424
+}
+T.RT_48 = {
+  [1] = 21005,
+  [2] = 21006,
+  [3] = 31401,
+  [4] = 31321,
+  [5] = 31301
+}
+T.RT_49 = {
+  [1] = 3,
+  [2] = 3,
+  [3] = 5,
+  [4] = 5,
+  [5] = 5
+}
+T.RT_50 = {
+  [1] = T.RT_10
+}
+T.RT_51 = {
+  [1] = 21005,
+  [2] = 21006,
+  [3] = 31406,
+  [4] = 31326,
+  [5] = 31301
+}
+T.RT_52 = {
+  [1] = 21005,
+  [2] = 21006,
+  [3] = 31402,
+  [4] = 31322,
+  [5] = 31301
+}
+T.RT_53 = {
+  [1] = 21005,
+  [2] = 21006,
+  [3] = 31403,
+  [4] = 31323,
+  [5] = 31301
+}
+T.RT_54 = {
+  [1] = 21005,
+  [2] = 21006,
+  [3] = 31404,
+  [4] = 31324,
+  [5] = 31301
+}
+T.RT_55 = {
+  [1] = 21005,
+  [2] = 21006,
+  [3] = 31405,
+  [4] = 31325,
+  [5] = 31301
+}
+T.RT_56 = {
+  [1] = 21005,
+  [2] = 31401,
+  [3] = 31321,
+  [4] = 31301,
+  [5] = 41001,
+  [6] = 41911
+}
+T.RT_57 = {
+  [1] = 3,
+  [2] = 5,
+  [3] = 5,
+  [4] = 5,
+  [5] = 5,
+  [6] = 5
+}
+T.RT_58 = {
+  [1] = 5,
+  [2] = 5,
+  [3] = 3,
+  [4] = 3
+}
+T.RT_59 = {
+  [1] = T.RT_58
+}
+T.RT_60 = {
+  [1] = 21005,
+  [2] = 31406,
+  [3] = 31326,
+  [4] = 31301,
+  [5] = 41001,
+  [6] = 41962
+}
+T.RT_61 = {
+  [1] = 21005,
+  [2] = 31402,
+  [3] = 31322,
+  [4] = 31301,
+  [5] = 41001,
+  [6] = 41922
+}
+T.RT_62 = {
+  [1] = 21005,
+  [2] = 31403,
+  [3] = 31323,
+  [4] = 31301,
+  [5] = 41001,
+  [6] = 41931
+}
+T.RT_63 = {
+  [1] = 21005,
+  [2] = 31404,
+  [3] = 31324,
+  [4] = 31301,
+  [5] = 41001,
+  [6] = 41941
+}
+T.RT_64 = {
+  [1] = 21005,
+  [2] = 31405,
+  [3] = 31325,
+  [4] = 31301,
+  [5] = 41001,
+  [6] = 41951
+}
 T.RT_65 = {
-  [1] = T.RT_23,
-  [2] = T.RT_2,
-  [3] = T.RT_23
+  [1] = 31323,
+  [2] = 31301,
+  [3] = 41732,
+  [4] = 41732,
+  [5] = 41001,
+  [6] = 41931,
+  [7] = 51431
 }
 T.RT_66 = {
+  [1] = T.RT_21,
+  [2] = T.RT_2,
+  [3] = T.RT_21
+}
+T.RT_67 = {
   [1] = 31322,
   [2] = 41722,
   [3] = 41722,
@@ -504,7 +519,7 @@ T.RT_66 = {
   [7] = 51421,
   [8] = 51301
 }
-T.RT_67 = {
+T.RT_68 = {
   [1] = 31322,
   [2] = 41723,
   [3] = 41723,
@@ -514,7 +529,7 @@ T.RT_67 = {
   [7] = 51424,
   [8] = 51301
 }
-T.RT_68 = {
+T.RT_69 = {
   [1] = 31323,
   [2] = 41732,
   [3] = 41732,
@@ -524,7 +539,7 @@ T.RT_68 = {
   [7] = 51431,
   [8] = 51301
 }
-T.RT_69 = {
+T.RT_70 = {
   [1] = 31324,
   [2] = 41742,
   [3] = 41742,
@@ -534,7 +549,7 @@ T.RT_69 = {
   [7] = 51441,
   [8] = 51301
 }
-T.RT_70 = {
+T.RT_71 = {
   [1] = 31325,
   [2] = 41754,
   [3] = 41754,
@@ -544,7 +559,7 @@ T.RT_70 = {
   [7] = 51454,
   [8] = 51301
 }
-T.RT_71 = {
+T.RT_72 = {
   [1] = 31325,
   [2] = 41752,
   [3] = 41752,
@@ -554,16 +569,16 @@ T.RT_71 = {
   [7] = 51452,
   [8] = 51301
 }
-T.RT_72 = {
+T.RT_73 = {
   [1] = 45002,
   [2] = 45103,
   [3] = 45004,
   [4] = 35005
 }
-T.RT_73 = {
-  [1] = T.RT_72
-}
 T.RT_74 = {
+  [1] = T.RT_73
+}
+T.RT_75 = {
   [1] = 31322,
   [2] = 41723,
   [3] = 41723,
@@ -573,7 +588,7 @@ T.RT_74 = {
   [7] = 51301,
   [8] = 51922
 }
-T.RT_75 = {
+T.RT_76 = {
   [1] = 31323,
   [2] = 41732,
   [3] = 41732,
@@ -583,7 +598,7 @@ T.RT_75 = {
   [7] = 51301,
   [8] = 51931
 }
-T.RT_76 = {
+T.RT_77 = {
   [1] = 31324,
   [2] = 41742,
   [3] = 41742,
@@ -593,7 +608,7 @@ T.RT_76 = {
   [7] = 51301,
   [8] = 51941
 }
-T.RT_77 = {
+T.RT_78 = {
   [1] = 41723,
   [2] = 41723,
   [3] = 41724,
@@ -603,7 +618,7 @@ T.RT_77 = {
   [7] = 51424,
   [8] = 51922
 }
-T.RT_78 = {
+T.RT_79 = {
   [1] = 41732,
   [2] = 41732,
   [3] = 41732,
@@ -613,7 +628,7 @@ T.RT_78 = {
   [7] = 51431,
   [8] = 51931
 }
-T.RT_79 = {
+T.RT_80 = {
   [1] = 41742,
   [2] = 41742,
   [3] = 41743,
@@ -623,7 +638,7 @@ T.RT_79 = {
   [7] = 51441,
   [8] = 51941
 }
-T.RT_80 = {
+T.RT_81 = {
   [1] = 41754,
   [2] = 41754,
   [3] = 41754,
@@ -637,6 +652,93 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("CharTemplate", {
+  [110] = {
+    CharId = 1101,
+    CharLevel = 1,
+    RuleId = 110,
+    SkillLevel = 1
+  },
+  [111] = {
+    CharId = 111,
+    CharLevel = 1,
+    RuleId = 111,
+    SkillLevel = 1
+  },
+  [112] = {
+    CharId = 112,
+    CharLevel = 1,
+    RuleId = 112,
+    SkillLevel = 1
+  },
+  [201] = {
+    CharId = 201,
+    CharLevel = 35,
+    RuleId = 201,
+    SkillLevel = 1
+  },
+  [202] = {
+    CharId = 202,
+    CharLevel = 35,
+    RuleId = 202,
+    SkillLevel = 1
+  },
+  [203] = {
+    CharId = 5301,
+    CharLevel = 20,
+    RuleId = 203,
+    SkillLevel = 1
+  },
+  [204] = {
+    CharId = 110301,
+    CharLevel = 45,
+    RuleId = 204,
+    SkillLevel = 1
+  },
+  [205] = {
+    CharId = 205,
+    CharLevel = 45,
+    RuleId = 205,
+    SkillLevel = 1
+  },
+  [206] = {
+    CharId = 206,
+    CharLevel = 45,
+    RuleId = 206,
+    SkillLevel = 1
+  },
+  [207] = {
+    CharId = 207,
+    CharLevel = 45,
+    RuleId = 207,
+    SkillLevel = 1
+  },
+  [210] = {
+    CharId = 4201,
+    CharLevel = 60,
+    ModId = T.RT_46,
+    ModLevel = T.RT_37,
+    RuleId = 210,
+    SkillLevel = 6,
+    SkillTreeUnlock = T.RT_22
+  },
+  [211] = {
+    CharId = 2401,
+    CharLevel = 60,
+    ModId = T.RT_47,
+    ModLevel = T.RT_37,
+    RuleId = 211,
+    SkillLevel = 6,
+    SkillTreeUnlock = T.RT_22
+  },
+  [212] = {
+    CharId = 1503,
+    CharLevel = 60,
+    ModId = T.RT_36,
+    ModLevel = T.RT_37,
+    RuleId = 212,
+    SkillLevel = 6,
+    SkillTreeUnlock = T.RT_22
+  },
   [10101] = {
     CharId = 111,
     CharLevel = 1,
@@ -690,25 +792,26 @@ return ReadOnly("CharTemplate", {
     ModId = T.RT_19,
     ModLevel = T.RT_20,
     RuleId = 110301,
-    SkillLevel = 3
+    SkillLevel = 3,
+    SkillTreeUnlock = T.RT_22
   },
   [110302] = {
     CharId = 1103,
     CharLevel = 50,
-    ModId = T.RT_21,
-    ModLevel = T.RT_22,
+    ModId = T.RT_23,
+    ModLevel = T.RT_24,
     RuleId = 110302,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [110303] = {
     CharId = 110301,
     CharLevel = 50,
-    ModId = T.RT_21,
-    ModLevel = T.RT_22,
+    ModId = T.RT_23,
+    ModLevel = T.RT_24,
     RuleId = 110303,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [110311] = {
     CharId = 110303,
@@ -717,12 +820,21 @@ return ReadOnly("CharTemplate", {
     ModLevel = T.RT_20,
     RuleId = 110311,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
+  },
+  [160101] = {
+    CharId = 1601,
+    CharLevel = 60,
+    ModId = T.RT_36,
+    ModLevel = T.RT_37,
+    RuleId = 160101,
+    SkillLevel = 6,
+    SkillTreeUnlock = T.RT_22
   },
   [201101] = {
     CharId = 1101,
     CharLevel = 20,
-    ModId = T.RT_36,
+    ModId = T.RT_38,
     ModLevel = T.RT_10,
     RuleId = 201101,
     SkillLevel = 1,
@@ -733,12 +845,12 @@ return ReadOnly("CharTemplate", {
         [3] = 24004
       }
     },
-    UltraWeaponModLevel = T.RT_38
+    UltraWeaponModLevel = T.RT_40
   },
   [201103] = {
     CharId = 1103,
     CharLevel = 20,
-    ModId = T.RT_36,
+    ModId = T.RT_38,
     ModLevel = T.RT_10,
     RuleId = 201103,
     SkillLevel = 1
@@ -746,7 +858,7 @@ return ReadOnly("CharTemplate", {
   [201502] = {
     CharId = 1502,
     CharLevel = 20,
-    ModId = T.RT_39,
+    ModId = T.RT_41,
     ModLevel = T.RT_10,
     RuleId = 201502,
     SkillLevel = 1
@@ -754,7 +866,7 @@ return ReadOnly("CharTemplate", {
   [201503] = {
     CharId = 1503,
     CharLevel = 20,
-    ModId = T.RT_39,
+    ModId = T.RT_41,
     ModLevel = T.RT_10,
     RuleId = 201503,
     SkillLevel = 1
@@ -762,7 +874,7 @@ return ReadOnly("CharTemplate", {
   [201801] = {
     CharId = 1801,
     CharLevel = 20,
-    ModId = T.RT_39,
+    ModId = T.RT_41,
     ModLevel = T.RT_10,
     RuleId = 201801,
     SkillLevel = 1
@@ -770,7 +882,7 @@ return ReadOnly("CharTemplate", {
   [202101] = {
     CharId = 2101,
     CharLevel = 20,
-    ModId = T.RT_40,
+    ModId = T.RT_42,
     ModLevel = T.RT_10,
     RuleId = 202101,
     SkillLevel = 1
@@ -778,7 +890,7 @@ return ReadOnly("CharTemplate", {
   [202301] = {
     CharId = 2301,
     CharLevel = 20,
-    ModId = T.RT_40,
+    ModId = T.RT_42,
     ModLevel = T.RT_10,
     RuleId = 202301,
     SkillLevel = 1
@@ -786,7 +898,7 @@ return ReadOnly("CharTemplate", {
   [202401] = {
     CharId = 2401,
     CharLevel = 20,
-    ModId = T.RT_40,
+    ModId = T.RT_42,
     ModLevel = T.RT_10,
     RuleId = 202401,
     SkillLevel = 1
@@ -794,7 +906,7 @@ return ReadOnly("CharTemplate", {
   [203101] = {
     CharId = 3101,
     CharLevel = 20,
-    ModId = T.RT_41,
+    ModId = T.RT_43,
     ModLevel = T.RT_10,
     RuleId = 203101,
     SkillLevel = 1,
@@ -805,12 +917,12 @@ return ReadOnly("CharTemplate", {
         [3] = 25004
       }
     },
-    UltraWeaponModLevel = T.RT_38
+    UltraWeaponModLevel = T.RT_40
   },
   [203102] = {
     CharId = 3102,
     CharLevel = 20,
-    ModId = T.RT_41,
+    ModId = T.RT_43,
     ModLevel = T.RT_10,
     RuleId = 203102,
     SkillLevel = 1
@@ -818,7 +930,7 @@ return ReadOnly("CharTemplate", {
   [203103] = {
     CharId = 3103,
     CharLevel = 20,
-    ModId = T.RT_41,
+    ModId = T.RT_43,
     ModLevel = T.RT_10,
     RuleId = 203103,
     SkillLevel = 1
@@ -839,7 +951,7 @@ return ReadOnly("CharTemplate", {
   [203301] = {
     CharId = 3301,
     CharLevel = 20,
-    ModId = T.RT_41,
+    ModId = T.RT_43,
     ModLevel = T.RT_10,
     RuleId = 203301,
     SkillLevel = 1
@@ -847,7 +959,7 @@ return ReadOnly("CharTemplate", {
   [204101] = {
     CharId = 4101,
     CharLevel = 20,
-    ModId = T.RT_42,
+    ModId = T.RT_44,
     ModLevel = T.RT_10,
     RuleId = 204101,
     SkillLevel = 1
@@ -855,7 +967,7 @@ return ReadOnly("CharTemplate", {
   [204102] = {
     CharId = 4102,
     CharLevel = 20,
-    ModId = T.RT_42,
+    ModId = T.RT_44,
     ModLevel = T.RT_10,
     RuleId = 204102,
     SkillLevel = 1
@@ -863,7 +975,7 @@ return ReadOnly("CharTemplate", {
   [204201] = {
     CharId = 4201,
     CharLevel = 20,
-    ModId = T.RT_42,
+    ModId = T.RT_44,
     ModLevel = T.RT_10,
     RuleId = 204201,
     SkillLevel = 1
@@ -910,7 +1022,7 @@ return ReadOnly("CharTemplate", {
   [205102] = {
     CharId = 5102,
     CharLevel = 20,
-    ModId = T.RT_43,
+    ModId = T.RT_45,
     ModLevel = T.RT_10,
     RuleId = 205102,
     SkillLevel = 1
@@ -918,7 +1030,7 @@ return ReadOnly("CharTemplate", {
   [205301] = {
     CharId = 5301,
     CharLevel = 20,
-    ModId = T.RT_43,
+    ModId = T.RT_45,
     ModLevel = T.RT_10,
     RuleId = 205301,
     SkillLevel = 1,
@@ -929,15 +1041,24 @@ return ReadOnly("CharTemplate", {
         [3] = 25004
       }
     },
-    UltraWeaponModLevel = T.RT_38
+    UltraWeaponModLevel = T.RT_40
   },
   [205401] = {
     CharId = 5401,
     CharLevel = 20,
-    ModId = T.RT_43,
+    ModId = T.RT_45,
     ModLevel = T.RT_10,
     RuleId = 205401,
     SkillLevel = 1
+  },
+  [240101] = {
+    CharId = 2401,
+    CharLevel = 60,
+    ModId = T.RT_47,
+    ModLevel = T.RT_37,
+    RuleId = 240101,
+    SkillLevel = 6,
+    SkillTreeUnlock = T.RT_22
   },
   [330101] = {
     CharId = 3301,
@@ -948,8 +1069,8 @@ return ReadOnly("CharTemplate", {
   [401101] = {
     CharId = 1101,
     CharLevel = 40,
-    ModId = T.RT_44,
-    ModLevel = T.RT_45,
+    ModId = T.RT_48,
+    ModLevel = T.RT_49,
     RuleId = 401101,
     SkillLevel = 2,
     UltraWeaponModId = {
@@ -960,69 +1081,69 @@ return ReadOnly("CharTemplate", {
         [4] = 24006
       }
     },
-    UltraWeaponModLevel = T.RT_46
+    UltraWeaponModLevel = T.RT_50
   },
   [401103] = {
     CharId = 1103,
     CharLevel = 40,
-    ModId = T.RT_44,
-    ModLevel = T.RT_45,
+    ModId = T.RT_48,
+    ModLevel = T.RT_49,
     RuleId = 401103,
     SkillLevel = 2
   },
   [401502] = {
     CharId = 1502,
     CharLevel = 40,
-    ModId = T.RT_47,
-    ModLevel = T.RT_45,
+    ModId = T.RT_51,
+    ModLevel = T.RT_49,
     RuleId = 401502,
     SkillLevel = 2
   },
   [401503] = {
     CharId = 1503,
     CharLevel = 40,
-    ModId = T.RT_47,
-    ModLevel = T.RT_45,
+    ModId = T.RT_51,
+    ModLevel = T.RT_49,
     RuleId = 401503,
     SkillLevel = 2
   },
   [401801] = {
     CharId = 1801,
     CharLevel = 40,
-    ModId = T.RT_47,
-    ModLevel = T.RT_45,
+    ModId = T.RT_51,
+    ModLevel = T.RT_49,
     RuleId = 401801,
     SkillLevel = 2
   },
   [402101] = {
     CharId = 2101,
     CharLevel = 40,
-    ModId = T.RT_48,
-    ModLevel = T.RT_45,
+    ModId = T.RT_52,
+    ModLevel = T.RT_49,
     RuleId = 402101,
     SkillLevel = 2
   },
   [402301] = {
     CharId = 2301,
     CharLevel = 40,
-    ModId = T.RT_48,
-    ModLevel = T.RT_45,
+    ModId = T.RT_52,
+    ModLevel = T.RT_49,
     RuleId = 402301,
     SkillLevel = 2
   },
   [402401] = {
     CharId = 2401,
     CharLevel = 40,
-    ModId = T.RT_48,
-    ModLevel = T.RT_45,
+    ModId = T.RT_52,
+    ModLevel = T.RT_49,
     RuleId = 402401,
     SkillLevel = 2
   },
   [403101] = {
     CharId = 3101,
     CharLevel = 40,
-    ModId = T.RT_49,
-    ModLevel = T.RT_45,
+    ModId = T.RT_53,
+    ModLevel = T.RT_49,
     RuleId = 403101,
     SkillLevel = 2,
     UltraWeaponModId = {
@@ -1033,101 +1154,101 @@ return ReadOnly("CharTemplate", {
         [4] = 25006
       }
     },
-    UltraWeaponModLevel = T.RT_46
+    UltraWeaponModLevel = T.RT_50
   },
   [403102] = {
     CharId = 3102,
     CharLevel = 40,
-    ModId = T.RT_49,
-    ModLevel = T.RT_45,
+    ModId = T.RT_53,
+    ModLevel = T.RT_49,
     RuleId = 403102,
     SkillLevel = 2
   },
   [403103] = {
     CharId = 3103,
     CharLevel = 40,
-    ModId = T.RT_49,
-    ModLevel = T.RT_45,
+    ModId = T.RT_53,
+    ModLevel = T.RT_49,
     RuleId = 403103,
     SkillLevel = 2
   },
   [403201] = {
     CharId = 3201,
     CharLevel = 40,
-    ModId = T.RT_49,
-    ModLevel = T.RT_45,
+    ModId = T.RT_53,
+    ModLevel = T.RT_49,
     RuleId = 403201,
     SkillLevel = 2
   },
   [403301] = {
     CharId = 3301,
     CharLevel = 40,
-    ModId = T.RT_49,
-    ModLevel = T.RT_45,
+    ModId = T.RT_53,
+    ModLevel = T.RT_49,
     RuleId = 403301,
     SkillLevel = 2
   },
   [404101] = {
     CharId = 4101,
     CharLevel = 40,
-    ModId = T.RT_50,
-    ModLevel = T.RT_45,
+    ModId = T.RT_54,
+    ModLevel = T.RT_49,
     RuleId = 404101,
     SkillLevel = 2
   },
   [404102] = {
     CharId = 4102,
     CharLevel = 40,
-    ModId = T.RT_50,
-    ModLevel = T.RT_45,
+    ModId = T.RT_54,
+    ModLevel = T.RT_49,
     RuleId = 404102,
     SkillLevel = 2
   },
   [404201] = {
     CharId = 4201,
     CharLevel = 40,
-    ModId = T.RT_50,
-    ModLevel = T.RT_45,
+    ModId = T.RT_54,
+    ModLevel = T.RT_49,
     RuleId = 404201,
     SkillLevel = 2
   },
   [404202] = {
     CharId = 4202,
     CharLevel = 40,
-    ModId = T.RT_50,
-    ModLevel = T.RT_45,
+    ModId = T.RT_54,
+    ModLevel = T.RT_49,
     RuleId = 404202,
     SkillLevel = 2
   },
   [404301] = {
     CharId = 4301,
     CharLevel = 40,
-    ModId = T.RT_50,
-    ModLevel = T.RT_45,
+    ModId = T.RT_54,
+    ModLevel = T.RT_49,
     RuleId = 404301,
     SkillLevel = 2
   },
   [405101] = {
     CharId = 5101,
     CharLevel = 40,
-    ModId = T.RT_51,
-    ModLevel = T.RT_45,
+    ModId = T.RT_55,
+    ModLevel = T.RT_49,
     RuleId = 405101,
     SkillLevel = 2
   },
   [405102] = {
     CharId = 5102,
     CharLevel = 40,
-    ModId = T.RT_51,
-    ModLevel = T.RT_45,
+    ModId = T.RT_55,
+    ModLevel = T.RT_49,
     RuleId = 405102,
     SkillLevel = 2
   },
   [405301] = {
     CharId = 5301,
     CharLevel = 40,
-    ModId = T.RT_51,
-    ModLevel = T.RT_45,
+    ModId = T.RT_55,
+    ModLevel = T.RT_49,
     RuleId = 405301,
     SkillLevel = 2,
     UltraWeaponModId = {
@@ -1138,24 +1259,24 @@ return ReadOnly("CharTemplate", {
         [4] = 25005
       }
     },
-    UltraWeaponModLevel = T.RT_46
+    UltraWeaponModLevel = T.RT_50
   },
   [405401] = {
     CharId = 5401,
     CharLevel = 40,
-    ModId = T.RT_51,
-    ModLevel = T.RT_45,
+    ModId = T.RT_55,
+    ModLevel = T.RT_49,
     RuleId = 405401,
     SkillLevel = 2
   },
   [501101] = {
     CharId = 1101,
     CharLevel = 50,
-    ModId = T.RT_52,
-    ModLevel = T.RT_53,
+    ModId = T.RT_56,
+    ModLevel = T.RT_57,
     RuleId = 501101,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24,
+    SkillTreeUnlock = T.RT_22,
     UltraWeaponModId = {
       [1] = {
         [1] = 34001,
@@ -1164,34 +1285,34 @@ return ReadOnly("CharTemplate", {
         [4] = 24006
       }
     },
-    UltraWeaponModLevel = T.RT_55
+    UltraWeaponModLevel = T.RT_59
   },
   [501103] = {
     CharId = 1103,
     CharLevel = 50,
-    ModId = T.RT_52,
-    ModLevel = T.RT_53,
+    ModId = T.RT_56,
+    ModLevel = T.RT_57,
     RuleId = 501103,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [501502] = {
     CharId = 1502,
     CharLevel = 50,
-    ModId = T.RT_56,
-    ModLevel = T.RT_53,
+    ModId = T.RT_60,
+    ModLevel = T.RT_57,
     RuleId = 501502,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [501503] = {
     CharId = 1503,
     CharLevel = 50,
-    ModId = T.RT_56,
-    ModLevel = T.RT_53,
+    ModId = T.RT_60,
+    ModLevel = T.RT_57,
     RuleId = 501503,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [501801] = {
     CharId = 1801,
@@ -1204,10 +1325,10 @@ return ReadOnly("CharTemplate", {
       [5] = 41001,
       [6] = 41961
     },
-    ModLevel = T.RT_53,
+    ModLevel = T.RT_57,
     RuleId = 501801,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [502101] = {
     CharId = 2101,
@@ -1220,37 +1341,37 @@ return ReadOnly("CharTemplate", {
       [5] = 41001,
       [6] = 41921
     },
-    ModLevel = T.RT_53,
+    ModLevel = T.RT_57,
     RuleId = 502101,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [502301] = {
     CharId = 2301,
     CharLevel = 50,
-    ModId = T.RT_57,
-    ModLevel = T.RT_53,
+    ModId = T.RT_61,
+    ModLevel = T.RT_57,
     RuleId = 502301,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [502401] = {
     CharId = 2401,
     CharLevel = 50,
-    ModId = T.RT_57,
-    ModLevel = T.RT_53,
+    ModId = T.RT_61,
+    ModLevel = T.RT_57,
     RuleId = 502401,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [503101] = {
     CharId = 3101,
     CharLevel = 50,
-    ModId = T.RT_58,
-    ModLevel = T.RT_53,
+    ModId = T.RT_62,
+    ModLevel = T.RT_57,
     RuleId = 503101,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24,
+    SkillTreeUnlock = T.RT_22,
     UltraWeaponModId = {
       [1] = {
         [1] = 35001,
@@ -1259,25 +1380,25 @@ return ReadOnly("CharTemplate", {
         [4] = 25006
       }
     },
-    UltraWeaponModLevel = T.RT_55
+    UltraWeaponModLevel = T.RT_59
   },
   [503102] = {
     CharId = 3102,
     CharLevel = 50,
-    ModId = T.RT_58,
-    ModLevel = T.RT_53,
+    ModId = T.RT_62,
+    ModLevel = T.RT_57,
     RuleId = 503102,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [503103] = {
     CharId = 3103,
     CharLevel = 50,
-    ModId = T.RT_58,
-    ModLevel = T.RT_53,
+    ModId = T.RT_62,
+    ModLevel = T.RT_57,
     RuleId = 503103,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [503201] = {
     CharId = 3201,
@@ -1290,46 +1411,46 @@ return ReadOnly("CharTemplate", {
       [5] = 41002,
       [6] = 41931
     },
-    ModLevel = T.RT_53,
+    ModLevel = T.RT_57,
     RuleId = 503201,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [503301] = {
     CharId = 3301,
     CharLevel = 50,
-    ModId = T.RT_58,
-    ModLevel = T.RT_53,
+    ModId = T.RT_62,
+    ModLevel = T.RT_57,
     RuleId = 503301,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [504101] = {
     CharId = 4101,
     CharLevel = 50,
-    ModId = T.RT_59,
-    ModLevel = T.RT_53,
+    ModId = T.RT_63,
+    ModLevel = T.RT_57,
     RuleId = 504101,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [504102] = {
     CharId = 4102,
     CharLevel = 50,
-    ModId = T.RT_59,
-    ModLevel = T.RT_53,
+    ModId = T.RT_63,
+    ModLevel = T.RT_57,
     RuleId = 504102,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [504201] = {
     CharId = 4201,
     CharLevel = 50,
-    ModId = T.RT_59,
-    ModLevel = T.RT_53,
+    ModId = T.RT_63,
+    ModLevel = T.RT_57,
     RuleId = 504201,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [504202] = {
     CharId = 4202,
@@ -1342,10 +1463,10 @@ return ReadOnly("CharTemplate", {
       [5] = 41007,
       [6] = 41941
     },
-    ModLevel = T.RT_53,
+    ModLevel = T.RT_57,
     RuleId = 504202,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [504301] = {
     CharId = 4301,
@@ -1358,10 +1479,10 @@ return ReadOnly("CharTemplate", {
       [5] = 41002,
       [6] = 41941
     },
-    ModLevel = T.RT_53,
+    ModLevel = T.RT_57,
     RuleId = 504301,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [505101] = {
     CharId = 5101,
@@ -1374,28 +1495,28 @@ return ReadOnly("CharTemplate", {
       [5] = 41002,
       [6] = 41952
     },
-    ModLevel = T.RT_53,
+    ModLevel = T.RT_57,
     RuleId = 505101,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [505102] = {
     CharId = 5102,
     CharLevel = 50,
-    ModId = T.RT_60,
-    ModLevel = T.RT_53,
+    ModId = T.RT_64,
+    ModLevel = T.RT_57,
     RuleId = 505102,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [505301] = {
     CharId = 5301,
     CharLevel = 50,
-    ModId = T.RT_60,
-    ModLevel = T.RT_53,
+    ModId = T.RT_64,
+    ModLevel = T.RT_57,
     RuleId = 505301,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24,
+    SkillTreeUnlock = T.RT_22,
     UltraWeaponModId = {
       [1] = {
         [1] = 35002,
@@ -1404,7 +1525,7 @@ return ReadOnly("CharTemplate", {
         [4] = 25005
       }
     },
-    UltraWeaponModLevel = T.RT_55
+    UltraWeaponModLevel = T.RT_59
   },
   [505401] = {
     CharId = 5401,
@@ -1417,10 +1538,10 @@ return ReadOnly("CharTemplate", {
       [5] = 41001,
       [6] = 41952
     },
-    ModLevel = T.RT_53,
+    ModLevel = T.RT_57,
     RuleId = 505401,
     SkillLevel = 4,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [530101] = {
     CharId = 5301,
@@ -1435,7 +1556,7 @@ return ReadOnly("CharTemplate", {
         [4] = 15004
       }
     },
-    UltraWeaponModLevel = T.RT_46
+    UltraWeaponModLevel = T.RT_50
   },
   [601101] = {
     CharId = 1101,
@@ -1449,10 +1570,10 @@ return ReadOnly("CharTemplate", {
       [6] = 41911,
       [7] = 51413
     },
-    ModLevel = T.RT_61,
+    ModLevel = T.RT_37,
     RuleId = 601101,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24,
+    SkillTreeUnlock = T.RT_22,
     UltraWeaponModId = {
       [1] = {
         [1] = 44001,
@@ -1475,10 +1596,10 @@ return ReadOnly("CharTemplate", {
       [6] = 41911,
       [7] = 51411
     },
-    ModLevel = T.RT_61,
+    ModLevel = T.RT_37,
     RuleId = 601103,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [601502] = {
     CharId = 1502,
@@ -1492,27 +1613,19 @@ return ReadOnly("CharTemplate", {
       [6] = 41962,
       [7] = 51461
     },
-    ModLevel = T.RT_61,
+    ModLevel = T.RT_37,
     RuleId = 601502,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [601503] = {
     CharId = 1503,
     CharLevel = 60,
-    ModId = {
-      [1] = 31326,
-      [2] = 31301,
-      [3] = 41761,
-      [4] = 41763,
-      [5] = 41001,
-      [6] = 41962,
-      [7] = 51463
-    },
-    ModLevel = T.RT_61,
+    ModId = T.RT_36,
+    ModLevel = T.RT_37,
     RuleId = 601503,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [601801] = {
     CharId = 1801,
@@ -1526,10 +1639,10 @@ return ReadOnly("CharTemplate", {
       [6] = 41961,
       [7] = 51464
     },
-    ModLevel = T.RT_61,
+    ModLevel = T.RT_37,
     RuleId = 601801,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [602101] = {
     CharId = 2101,
@@ -1543,28 +1656,28 @@ return ReadOnly("CharTemplate", {
       [6] = 41921,
       [7] = 51421
     },
-    ModLevel = T.RT_61,
+    ModLevel = T.RT_37,
     RuleId = 602101,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [602301] = {
     CharId = 2301,
     CharLevel = 60,
-    ModId = T.RT_62,
-    ModLevel = T.RT_61,
+    ModId = T.RT_47,
+    ModLevel = T.RT_37,
     RuleId = 602301,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [602401] = {
     CharId = 2401,
     CharLevel = 60,
-    ModId = T.RT_62,
-    ModLevel = T.RT_61,
+    ModId = T.RT_47,
+    ModLevel = T.RT_37,
     RuleId = 602401,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [603101] = {
     CharId = 3101,
@@ -1578,10 +1691,10 @@ return ReadOnly("CharTemplate", {
       [6] = 41931,
       [7] = 51433
     },
-    ModLevel = T.RT_61,
+    ModLevel = T.RT_37,
     RuleId = 603101,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24,
+    SkillTreeUnlock = T.RT_22,
     UltraWeaponModId = {
       [1] = {
         [1] = 45001,
@@ -1595,20 +1708,20 @@ return ReadOnly("CharTemplate", {
   [603102] = {
     CharId = 3102,
     CharLevel = 60,
-    ModId = T.RT_63,
-    ModLevel = T.RT_61,
+    ModId = T.RT_65,
+    ModLevel = T.RT_37,
     RuleId = 603102,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [603103] = {
     CharId = 3103,
     CharLevel = 60,
-    ModId = T.RT_63,
-    ModLevel = T.RT_61,
+    ModId = T.RT_65,
+    ModLevel = T.RT_37,
     RuleId = 603103,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [603201] = {
     CharId = 3201,
@@ -1622,46 +1735,46 @@ return ReadOnly("CharTemplate", {
       [6] = 41931,
       [7] = 51431
     },
-    ModLevel = T.RT_61,
+    ModLevel = T.RT_37,
     RuleId = 603201,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [603301] = {
     CharId = 3301,
     CharLevel = 60,
-    ModId = T.RT_63,
-    ModLevel = T.RT_61,
+    ModId = T.RT_65,
+    ModLevel = T.RT_37,
     RuleId = 603301,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [604101] = {
     CharId = 4101,
     CharLevel = 60,
-    ModId = T.RT_64,
-    ModLevel = T.RT_61,
+    ModId = T.RT_46,
+    ModLevel = T.RT_37,
     RuleId = 604101,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [604102] = {
     CharId = 4102,
     CharLevel = 60,
-    ModId = T.RT_64,
-    ModLevel = T.RT_61,
+    ModId = T.RT_46,
+    ModLevel = T.RT_37,
     RuleId = 604102,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [604201] = {
     CharId = 4201,
     CharLevel = 60,
-    ModId = T.RT_64,
-    ModLevel = T.RT_61,
+    ModId = T.RT_46,
+    ModLevel = T.RT_37,
     RuleId = 604201,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [604202] = {
     CharId = 4202,
@@ -1675,10 +1788,10 @@ return ReadOnly("CharTemplate", {
       [6] = 41941,
       [7] = 51444
     },
-    ModLevel = T.RT_61,
+    ModLevel = T.RT_37,
     RuleId = 604202,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [604301] = {
     CharId = 4301,
@@ -1692,10 +1805,10 @@ return ReadOnly("CharTemplate", {
       [6] = 41941,
       [7] = 51441
     },
-    ModLevel = T.RT_61,
+    ModLevel = T.RT_37,
     RuleId = 604301,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [605101] = {
     CharId = 5101,
@@ -1709,10 +1822,10 @@ return ReadOnly("CharTemplate", {
       [6] = 41952,
       [7] = 51454
     },
-    ModLevel = T.RT_61,
+    ModLevel = T.RT_37,
     RuleId = 605101,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [605102] = {
     CharId = 5102,
@@ -1726,10 +1839,10 @@ return ReadOnly("CharTemplate", {
       [6] = 41951,
       [7] = 51453
     },
-    ModLevel = T.RT_61,
+    ModLevel = T.RT_37,
     RuleId = 605102,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [605301] = {
     CharId = 5301,
@@ -1743,10 +1856,10 @@ return ReadOnly("CharTemplate", {
       [6] = 41951,
       [7] = 51452
     },
-    ModLevel = T.RT_61,
+    ModLevel = T.RT_37,
     RuleId = 605301,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24,
+    SkillTreeUnlock = T.RT_22,
     UltraWeaponModId = {
       [1] = {
         [1] = 45002,
@@ -1769,10 +1882,10 @@ return ReadOnly("CharTemplate", {
       [6] = 41952,
       [7] = 51454
     },
-    ModLevel = T.RT_61,
+    ModLevel = T.RT_37,
     RuleId = 605401,
     SkillLevel = 6,
-    SkillTreeUnlock = T.RT_24
+    SkillTreeUnlock = T.RT_22
   },
   [701101] = {
     CharId = 1101,
@@ -1790,7 +1903,7 @@ return ReadOnly("CharTemplate", {
     ModLevel = T.RT_1,
     RuleId = 701101,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65,
+    SkillTreeUnlock = T.RT_66,
     UltraWeaponModId = {
       [1] = {
         [1] = 44001,
@@ -1817,7 +1930,7 @@ return ReadOnly("CharTemplate", {
     ModLevel = T.RT_1,
     RuleId = 701103,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
   },
   [701502] = {
     CharId = 1502,
@@ -1835,7 +1948,7 @@ return ReadOnly("CharTemplate", {
     ModLevel = T.RT_1,
     RuleId = 701502,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
   },
   [701503] = {
     CharId = 1503,
@@ -1853,7 +1966,7 @@ return ReadOnly("CharTemplate", {
     ModLevel = T.RT_1,
     RuleId = 701503,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
   },
   [701801] = {
     CharId = 1801,
@@ -1871,34 +1984,34 @@ return ReadOnly("CharTemplate", {
     ModLevel = T.RT_1,
     RuleId = 701801,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
   },
   [702101] = {
     CharId = 2101,
     CharLevel = 70,
-    ModId = T.RT_66,
+    ModId = T.RT_67,
     ModLevel = T.RT_1,
     RuleId = 702101,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
   },
   [702301] = {
     CharId = 2301,
     CharLevel = 70,
-    ModId = T.RT_67,
+    ModId = T.RT_68,
     ModLevel = T.RT_1,
     RuleId = 702301,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
   },
   [702401] = {
     CharId = 2401,
     CharLevel = 70,
-    ModId = T.RT_67,
+    ModId = T.RT_68,
     ModLevel = T.RT_1,
     RuleId = 702401,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
   },
   [703101] = {
     CharId = 3101,
@@ -1916,7 +2029,7 @@ return ReadOnly("CharTemplate", {
     ModLevel = T.RT_1,
     RuleId = 703101,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65,
+    SkillTreeUnlock = T.RT_66,
     UltraWeaponModId = {
       [1] = {
         [1] = 45001,
@@ -1930,20 +2043,20 @@ return ReadOnly("CharTemplate", {
   [703102] = {
     CharId = 3102,
     CharLevel = 70,
-    ModId = T.RT_68,
+    ModId = T.RT_69,
     ModLevel = T.RT_1,
     RuleId = 703102,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
   },
   [703103] = {
     CharId = 3103,
     CharLevel = 70,
-    ModId = T.RT_68,
+    ModId = T.RT_69,
     ModLevel = T.RT_1,
     RuleId = 703103,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
   },
   [703201] = {
     CharId = 3201,
@@ -1961,43 +2074,43 @@ return ReadOnly("CharTemplate", {
     ModLevel = T.RT_1,
     RuleId = 703201,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
   },
   [703301] = {
     CharId = 3301,
     CharLevel = 70,
-    ModId = T.RT_68,
+    ModId = T.RT_69,
     ModLevel = T.RT_1,
     RuleId = 703301,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
   },
   [704101] = {
     CharId = 4101,
     CharLevel = 70,
-    ModId = T.RT_69,
+    ModId = T.RT_70,
     ModLevel = T.RT_1,
     RuleId = 704101,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
   },
   [704102] = {
     CharId = 4102,
     CharLevel = 70,
-    ModId = T.RT_69,
+    ModId = T.RT_70,
     ModLevel = T.RT_1,
     RuleId = 704102,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
   },
   [704201] = {
     CharId = 4201,
     CharLevel = 70,
-    ModId = T.RT_69,
+    ModId = T.RT_70,
     ModLevel = T.RT_1,
     RuleId = 704201,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
   },
   [704202] = {
     CharId = 4202,
@@ -2015,7 +2128,7 @@ return ReadOnly("CharTemplate", {
     ModLevel = T.RT_1,
     RuleId = 704202,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
   },
   [704301] = {
     CharId = 4301,
@@ -2033,16 +2146,16 @@ return ReadOnly("CharTemplate", {
     ModLevel = T.RT_1,
     RuleId = 704301,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
   },
   [705101] = {
     CharId = 5101,
     CharLevel = 70,
-    ModId = T.RT_70,
+    ModId = T.RT_71,
     ModLevel = T.RT_1,
     RuleId = 705101,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
   },
   [705102] = {
     CharId = 5102,
@@ -2060,17 +2173,17 @@ return ReadOnly("CharTemplate", {
     ModLevel = T.RT_1,
     RuleId = 705102,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
   },
   [705301] = {
     CharId = 5301,
     CharLevel = 70,
-    ModId = T.RT_71,
+    ModId = T.RT_72,
     ModLevel = T.RT_1,
     RuleId = 705301,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65,
-    UltraWeaponModId = T.RT_73,
+    SkillTreeUnlock = T.RT_66,
+    UltraWeaponModId = T.RT_74,
     UltraWeaponModLevel = T.RT_5
   },
   [705401] = {
@@ -2089,7 +2202,7 @@ return ReadOnly("CharTemplate", {
     ModLevel = T.RT_1,
     RuleId = 705401,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
   },
   [801101] = {
     CharId = 1101,
@@ -2211,7 +2324,7 @@ return ReadOnly("CharTemplate", {
   [802301] = {
     CharId = 2301,
     CharLevel = 80,
-    ModId = T.RT_74,
+    ModId = T.RT_75,
     ModLevel = T.RT_1,
     RuleId = 802301,
     SkillLevel = 10,
@@ -2220,7 +2333,7 @@ return ReadOnly("CharTemplate", {
   [802401] = {
     CharId = 2401,
     CharLevel = 80,
-    ModId = T.RT_74,
+    ModId = T.RT_75,
     ModLevel = T.RT_1,
     RuleId = 802401,
     SkillLevel = 10,
@@ -2256,7 +2369,7 @@ return ReadOnly("CharTemplate", {
   [803102] = {
     CharId = 3102,
     CharLevel = 80,
-    ModId = T.RT_75,
+    ModId = T.RT_76,
     ModLevel = T.RT_1,
     RuleId = 803102,
     SkillLevel = 10,
@@ -2265,7 +2378,7 @@ return ReadOnly("CharTemplate", {
   [803103] = {
     CharId = 3103,
     CharLevel = 80,
-    ModId = T.RT_75,
+    ModId = T.RT_76,
     ModLevel = T.RT_1,
     RuleId = 803103,
     SkillLevel = 10,
@@ -2292,7 +2405,7 @@ return ReadOnly("CharTemplate", {
   [803301] = {
     CharId = 3301,
     CharLevel = 80,
-    ModId = T.RT_75,
+    ModId = T.RT_76,
     ModLevel = T.RT_1,
     RuleId = 803301,
     SkillLevel = 10,
@@ -2301,7 +2414,7 @@ return ReadOnly("CharTemplate", {
   [804101] = {
     CharId = 4101,
     CharLevel = 80,
-    ModId = T.RT_76,
+    ModId = T.RT_77,
     ModLevel = T.RT_1,
     RuleId = 804101,
     SkillLevel = 10,
@@ -2310,7 +2423,7 @@ return ReadOnly("CharTemplate", {
   [804102] = {
     CharId = 4102,
     CharLevel = 80,
-    ModId = T.RT_76,
+    ModId = T.RT_77,
     ModLevel = T.RT_1,
     RuleId = 804102,
     SkillLevel = 10,
@@ -2319,7 +2432,7 @@ return ReadOnly("CharTemplate", {
   [804201] = {
     CharId = 4201,
     CharLevel = 80,
-    ModId = T.RT_76,
+    ModId = T.RT_77,
     ModLevel = T.RT_1,
     RuleId = 804201,
     SkillLevel = 10,
@@ -2562,7 +2675,7 @@ return ReadOnly("CharTemplate", {
   [902301] = {
     CharId = 2301,
     CharLevel = 80,
-    ModId = T.RT_77,
+    ModId = T.RT_78,
     ModLevel = T.RT_1,
     RuleId = 902301,
     SkillLevel = 10,
@@ -2571,7 +2684,7 @@ return ReadOnly("CharTemplate", {
   [902401] = {
     CharId = 2401,
     CharLevel = 80,
-    ModId = T.RT_77,
+    ModId = T.RT_78,
     ModLevel = T.RT_1,
     RuleId = 902401,
     SkillLevel = 10,
@@ -2625,7 +2738,7 @@ return ReadOnly("CharTemplate", {
   [903103] = {
     CharId = 3103,
     CharLevel = 80,
-    ModId = T.RT_78,
+    ModId = T.RT_79,
     ModLevel = T.RT_1,
     RuleId = 903103,
     SkillLevel = 10,
@@ -2652,7 +2765,7 @@ return ReadOnly("CharTemplate", {
   [903301] = {
     CharId = 3301,
     CharLevel = 80,
-    ModId = T.RT_78,
+    ModId = T.RT_79,
     ModLevel = T.RT_1,
     RuleId = 903301,
     SkillLevel = 10,
@@ -2661,7 +2774,7 @@ return ReadOnly("CharTemplate", {
   [904101] = {
     CharId = 4101,
     CharLevel = 80,
-    ModId = T.RT_79,
+    ModId = T.RT_80,
     ModLevel = T.RT_1,
     RuleId = 904101,
     SkillLevel = 10,
@@ -2670,7 +2783,7 @@ return ReadOnly("CharTemplate", {
   [904102] = {
     CharId = 4102,
     CharLevel = 80,
-    ModId = T.RT_79,
+    ModId = T.RT_80,
     ModLevel = T.RT_1,
     RuleId = 904102,
     SkillLevel = 10,
@@ -2715,7 +2828,7 @@ return ReadOnly("CharTemplate", {
   [904301] = {
     CharId = 4301,
     CharLevel = 80,
-    ModId = T.RT_79,
+    ModId = T.RT_80,
     ModLevel = T.RT_1,
     RuleId = 904301,
     SkillLevel = 10,
@@ -2724,7 +2837,7 @@ return ReadOnly("CharTemplate", {
   [905101] = {
     CharId = 5101,
     CharLevel = 80,
-    ModId = T.RT_80,
+    ModId = T.RT_81,
     ModLevel = T.RT_1,
     RuleId = 905101,
     SkillLevel = 10,
@@ -2778,7 +2891,7 @@ return ReadOnly("CharTemplate", {
   [905401] = {
     CharId = 5401,
     CharLevel = 80,
-    ModId = T.RT_80,
+    ModId = T.RT_81,
     ModLevel = T.RT_1,
     RuleId = 905401,
     SkillLevel = 10,
@@ -3580,53 +3693,63 @@ return ReadOnly("CharTemplate", {
     CharCostumeId = 530100,
     CharId = 2101,
     CharLevel = 70,
-    ModId = T.RT_66,
+    ModId = T.RT_67,
     ModLevel = T.RT_1,
     RuleId = 70210101,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
   },
   [70210102] = {
     CharCostumeId = 210101,
     CharId = 2101,
     CharLevel = 70,
-    ModId = T.RT_66,
+    ModId = T.RT_67,
     ModLevel = T.RT_1,
     RuleId = 70210102,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
+  },
+  [70240101] = {
+    CharCostumeId = 240101,
+    CharId = 2401,
+    CharLevel = 70,
+    ModId = T.RT_68,
+    ModLevel = T.RT_1,
+    RuleId = 70240101,
+    SkillLevel = 8,
+    SkillTreeUnlock = T.RT_66
   },
   [70510101] = {
     CharCostumeId = 510101,
     CharId = 5101,
     CharLevel = 70,
-    ModId = T.RT_70,
+    ModId = T.RT_71,
     ModLevel = T.RT_1,
     RuleId = 70510101,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65
+    SkillTreeUnlock = T.RT_66
   },
   [70530101] = {
     CharCostumeId = 530101,
     CharId = 5301,
     CharLevel = 70,
-    ModId = T.RT_71,
+    ModId = T.RT_72,
     ModLevel = T.RT_1,
     RuleId = 70530101,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65,
-    UltraWeaponModId = T.RT_73,
+    SkillTreeUnlock = T.RT_66,
+    UltraWeaponModId = T.RT_74,
     UltraWeaponModLevel = T.RT_5
   },
   [70530102] = {
     CharId = 5301,
     CharLevel = 70,
-    ModId = T.RT_71,
+    ModId = T.RT_72,
     ModLevel = T.RT_1,
     RuleId = 70530102,
     SkillLevel = 8,
-    SkillTreeUnlock = T.RT_65,
-    UltraWeaponModId = T.RT_73,
+    SkillTreeUnlock = T.RT_66,
+    UltraWeaponModId = T.RT_74,
     UltraWeaponModLevel = T.RT_5
   }
 })

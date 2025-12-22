@@ -26,24 +26,46 @@ T.RT_3 = {
   1
 }
 T.RT_4 = {
-  1,
-  1,
-  1,
-  1
+  6016011,
+  6016015,
+  6016016,
+  6016017,
+  6016018,
+  10005012,
+  10005014,
+  10005016,
+  10005018
 }
 T.RT_5 = {
   1,
   1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
   1
 }
-T.RT_6 = {1, 1}
-T.RT_7 = {1}
-T.RT_8 = {
+T.RT_6 = {
+  1,
+  1,
+  1,
+  1
+}
+T.RT_7 = {
+  1,
+  1,
+  1
+}
+T.RT_8 = {1, 1}
+T.RT_9 = {1}
+T.RT_10 = {
   6001012,
   6002017,
   6004013
 }
-T.RT_9 = {
+T.RT_11 = {
   6001012,
   6001014,
   6001016,
@@ -53,7 +75,7 @@ T.RT_9 = {
   7002016,
   7002018
 }
-T.RT_10 = {
+T.RT_12 = {
   6002011,
   6002015,
   6002016,
@@ -70,32 +92,32 @@ T.RT_10 = {
   7003017,
   7003018
 }
-T.RT_11 = {
-  1,
-  1,
-  1,
-  1,
-  1,
-  1,
-  1,
-  1,
-  1,
-  1,
-  1,
-  1,
-  1,
-  1,
-  1
-}
-T.RT_12 = {
-  1,
-  1,
-  1,
-  1,
-  1,
-  1
-}
 T.RT_13 = {
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  1
+}
+T.RT_14 = {
+  1,
+  1,
+  1,
+  1,
+  1,
+  1
+}
+T.RT_15 = {
   6001012,
   6001013,
   6001014,
@@ -107,7 +129,7 @@ T.RT_13 = {
   7001016,
   7001018
 }
-T.RT_14 = {
+T.RT_16 = {
   1,
   1,
   1,
@@ -119,7 +141,7 @@ T.RT_14 = {
   1,
   1
 }
-T.RT_15 = {
+T.RT_17 = {
   7003011,
   7003015,
   7003017
@@ -131,51 +153,51 @@ return ReadOnly("RelationSpawn", {
   [205] = {
     RelationId = 205,
     RelationSpawnTotalNum = T.RT_1,
-    UnitId = T.RT_9,
+    UnitId = T.RT_11,
     UnitLevel = 5,
     UnitWeight = T.RT_3
   },
   [206] = {
     RelationId = 206,
     RelationSpawnTotalNum = T.RT_1,
-    UnitId = T.RT_9,
+    UnitId = T.RT_11,
     UnitLevel = 5,
     UnitWeight = T.RT_3
   },
   [302] = {
     RelationId = 302,
     RelationSpawnTotalNum = T.RT_1,
-    UnitId = T.RT_10,
+    UnitId = T.RT_12,
     UnitLevel = 3,
-    UnitWeight = T.RT_11
+    UnitWeight = T.RT_13
   },
   [303] = {
     RelationId = 303,
     RelationSpawnTotalNum = T.RT_1,
-    UnitId = T.RT_10,
+    UnitId = T.RT_12,
     UnitLevel = 3,
-    UnitWeight = T.RT_11
+    UnitWeight = T.RT_13
   },
   [304] = {
     RelationId = 304,
     RelationSpawnTotalNum = T.RT_1,
-    UnitId = T.RT_10,
+    UnitId = T.RT_12,
     UnitLevel = 3,
-    UnitWeight = T.RT_11
+    UnitWeight = T.RT_13
   },
   [305] = {
     RelationId = 305,
     RelationSpawnTotalNum = T.RT_1,
-    UnitId = T.RT_10,
+    UnitId = T.RT_12,
     UnitLevel = 3,
-    UnitWeight = T.RT_11
+    UnitWeight = T.RT_13
   },
   [306] = {
     RelationId = 306,
     RelationSpawnTotalNum = T.RT_1,
-    UnitId = T.RT_10,
+    UnitId = T.RT_12,
     UnitLevel = 3,
-    UnitWeight = T.RT_11
+    UnitWeight = T.RT_13
   },
   [312] = {
     RelationId = 312,
@@ -189,28 +211,28 @@ return ReadOnly("RelationSpawn", {
       7003016
     },
     UnitLevel = 5,
-    UnitWeight = T.RT_12
+    UnitWeight = T.RT_14
   },
   [313] = {
     RelationId = 313,
     RelationSpawnTotalNum = T.RT_1,
-    UnitId = T.RT_10,
+    UnitId = T.RT_12,
     UnitLevel = 5,
-    UnitWeight = T.RT_11
+    UnitWeight = T.RT_13
   },
   [314] = {
     RelationId = 314,
     RelationSpawnTotalNum = T.RT_1,
-    UnitId = T.RT_10,
+    UnitId = T.RT_12,
     UnitLevel = 5,
-    UnitWeight = T.RT_11
+    UnitWeight = T.RT_13
   },
   [315] = {
     RelationId = 315,
     RelationSpawnTotalNum = T.RT_1,
-    UnitId = T.RT_10,
+    UnitId = T.RT_12,
     UnitLevel = 5,
-    UnitWeight = T.RT_11
+    UnitWeight = T.RT_13
   },
   [502] = {
     RelationId = 502,
@@ -224,49 +246,49 @@ return ReadOnly("RelationSpawn", {
       7001016
     },
     UnitLevel = 5,
-    UnitWeight = T.RT_12
+    UnitWeight = T.RT_14
   },
   [503] = {
     RelationId = 503,
     RelationSpawnTotalNum = T.RT_1,
-    UnitId = T.RT_13,
+    UnitId = T.RT_15,
     UnitLevel = 5,
-    UnitWeight = T.RT_14
+    UnitWeight = T.RT_16
   },
   [504] = {
     RelationId = 504,
     RelationSpawnTotalNum = T.RT_1,
-    UnitId = T.RT_13,
+    UnitId = T.RT_15,
     UnitLevel = 5,
-    UnitWeight = T.RT_14
+    UnitWeight = T.RT_16
   },
   [505] = {
     RelationId = 505,
     RelationSpawnTotalNum = T.RT_1,
-    UnitId = T.RT_13,
+    UnitId = T.RT_15,
     UnitLevel = 5,
-    UnitWeight = T.RT_14
+    UnitWeight = T.RT_16
   },
   [506] = {
     RelationId = 506,
     RelationSpawnTotalNum = T.RT_1,
-    UnitId = T.RT_13,
+    UnitId = T.RT_15,
     UnitLevel = 5,
-    UnitWeight = T.RT_14
+    UnitWeight = T.RT_16
   },
   [601] = {
     RelationId = 601,
     RelationSpawnTotalNum = T.RT_1,
-    UnitId = T.RT_15,
+    UnitId = T.RT_17,
     UnitLevel = 5,
-    UnitWeight = T.RT_5
+    UnitWeight = T.RT_7
   },
   [701] = {
     RelationId = 701,
     RelationSpawnTotalNum = T.RT_1,
-    UnitId = T.RT_15,
+    UnitId = T.RT_17,
     UnitLevel = 5,
-    UnitWeight = T.RT_5
+    UnitWeight = T.RT_7
   },
   [100205] = {
     RelationId = 100205,
@@ -282,135 +304,149 @@ return ReadOnly("RelationSpawn", {
     UnitLevel = 5,
     UnitWeight = T.RT_3
   },
+  [100303] = {
+    RelationId = 100303,
+    RelationSpawnTotalNum = T.RT_1,
+    UnitId = T.RT_4,
+    UnitLevel = 3,
+    UnitWeight = T.RT_5
+  },
+  [100305] = {
+    RelationId = 100305,
+    RelationSpawnTotalNum = T.RT_1,
+    UnitId = T.RT_4,
+    UnitLevel = 3,
+    UnitWeight = T.RT_5
+  },
   [10110101] = {
     RelationId = 10110101,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       6001011,
       6002011,
       6004011
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_5
+    UnitWeight = T.RT_7
   },
   [10110102] = {
     RelationId = 10110102,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {6001012, 6004012},
     UnitLevel = 3,
-    UnitWeight = T.RT_6
+    UnitWeight = T.RT_8
   },
   [10110103] = {
     RelationId = 10110103,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {6001013, 6004013},
     UnitLevel = 3,
-    UnitWeight = T.RT_6
+    UnitWeight = T.RT_8
   },
   [10110104] = {
     RelationId = 10110104,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {6001014, 6004014},
     UnitLevel = 3,
-    UnitWeight = T.RT_6
+    UnitWeight = T.RT_8
   },
   [10110105] = {
     RelationId = 10110105,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {6002015},
     UnitLevel = 3,
-    UnitWeight = T.RT_7
+    UnitWeight = T.RT_9
   },
   [10110106] = {
     RelationId = 10110106,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       6001016,
       6002016,
       6004016
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_5
+    UnitWeight = T.RT_7
   },
   [10110107] = {
     RelationId = 10110107,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       6001017,
       6002017,
       6004017
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_5
+    UnitWeight = T.RT_7
   },
   [10110108] = {
     RelationId = 10110108,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       6001018,
       6002018,
       6004018
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_5
+    UnitWeight = T.RT_7
   },
   [10110109] = {
     RelationId = 10110109,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       6001019,
       6002019,
       6004019
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_5
+    UnitWeight = T.RT_7
   },
   [10110110] = {
     RelationId = 10110110,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {6001020, 6004020},
     UnitLevel = 3,
-    UnitWeight = T.RT_6
+    UnitWeight = T.RT_8
   },
   [10110111] = {
     RelationId = 10110111,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       6001021,
       6002021,
       6004021
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_5
+    UnitWeight = T.RT_7
   },
   [10110112] = {
     RelationId = 10110112,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {6002022},
     UnitLevel = 3,
-    UnitWeight = T.RT_7
+    UnitWeight = T.RT_9
   },
   [10110113] = {
     RelationId = 10110113,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       6001023,
       6002023,
       6004023
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_5
+    UnitWeight = T.RT_7
   },
   [10110114] = {
     RelationId = 10110114,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       6001024,
       6002024,
       6004024
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_5
+    UnitWeight = T.RT_7
   },
   [10110115] = {RelationId = 10110115, UnitLevel = 3},
   [10110116] = {RelationId = 10110116, UnitLevel = 3},
@@ -438,7 +474,7 @@ return ReadOnly("RelationSpawn", {
   [10110138] = {RelationId = 10110138, UnitLevel = 3},
   [10110201] = {
     RelationId = 10110201,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       7001011,
       7002011,
@@ -446,39 +482,39 @@ return ReadOnly("RelationSpawn", {
       7004011
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_4
+    UnitWeight = T.RT_6
   },
   [10110202] = {
     RelationId = 10110202,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {7002012, 7004012},
     UnitLevel = 3,
-    UnitWeight = T.RT_6
+    UnitWeight = T.RT_8
   },
   [10110203] = {
     RelationId = 10110203,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {7002013, 7004013},
     UnitLevel = 3,
-    UnitWeight = T.RT_6
+    UnitWeight = T.RT_8
   },
   [10110204] = {
     RelationId = 10110204,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {7002014, 7004014},
     UnitLevel = 3,
-    UnitWeight = T.RT_6
+    UnitWeight = T.RT_8
   },
   [10110205] = {
     RelationId = 10110205,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {7001015, 7003015},
     UnitLevel = 3,
-    UnitWeight = T.RT_6
+    UnitWeight = T.RT_8
   },
   [10110206] = {
     RelationId = 10110206,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       7001016,
       7002016,
@@ -486,11 +522,11 @@ return ReadOnly("RelationSpawn", {
       7004016
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_4
+    UnitWeight = T.RT_6
   },
   [10110207] = {
     RelationId = 10110207,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       7001017,
       7002017,
@@ -498,11 +534,11 @@ return ReadOnly("RelationSpawn", {
       7004017
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_4
+    UnitWeight = T.RT_6
   },
   [10110208] = {
     RelationId = 10110208,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       7001018,
       7002018,
@@ -510,11 +546,11 @@ return ReadOnly("RelationSpawn", {
       7004018
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_4
+    UnitWeight = T.RT_6
   },
   [10110209] = {
     RelationId = 10110209,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       7001019,
       7002019,
@@ -522,18 +558,18 @@ return ReadOnly("RelationSpawn", {
       7004019
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_4
+    UnitWeight = T.RT_6
   },
   [10110210] = {
     RelationId = 10110210,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {7002020, 7004020},
     UnitLevel = 3,
-    UnitWeight = T.RT_6
+    UnitWeight = T.RT_8
   },
   [10110211] = {
     RelationId = 10110211,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       7001021,
       7002021,
@@ -541,18 +577,18 @@ return ReadOnly("RelationSpawn", {
       7004021
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_4
+    UnitWeight = T.RT_6
   },
   [10110212] = {
     RelationId = 10110212,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {7001022, 7003022},
     UnitLevel = 3,
-    UnitWeight = T.RT_6
+    UnitWeight = T.RT_8
   },
   [10110213] = {
     RelationId = 10110213,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       7001023,
       7002023,
@@ -560,11 +596,11 @@ return ReadOnly("RelationSpawn", {
       7004023
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_4
+    UnitWeight = T.RT_6
   },
   [10110214] = {
     RelationId = 10110214,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       7001024,
       7002024,
@@ -572,7 +608,7 @@ return ReadOnly("RelationSpawn", {
       7004024
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_4
+    UnitWeight = T.RT_6
   },
   [10110215] = {RelationId = 10110215, UnitLevel = 3},
   [10110216] = {RelationId = 10110216, UnitLevel = 3},
@@ -600,137 +636,137 @@ return ReadOnly("RelationSpawn", {
   [10110238] = {RelationId = 10110238, UnitLevel = 3},
   [10110301] = {
     RelationId = 10110301,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       8001011,
       8002011,
       8003011
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_5
+    UnitWeight = T.RT_7
   },
   [10110302] = {
     RelationId = 10110302,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {8002012},
     UnitLevel = 3,
-    UnitWeight = T.RT_7
+    UnitWeight = T.RT_9
   },
   [10110303] = {
     RelationId = 10110303,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {8002013},
     UnitLevel = 3,
-    UnitWeight = T.RT_7
+    UnitWeight = T.RT_9
   },
   [10110304] = {
     RelationId = 10110304,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {8002014},
     UnitLevel = 3,
-    UnitWeight = T.RT_7
+    UnitWeight = T.RT_9
   },
   [10110305] = {
     RelationId = 10110305,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {8001015, 8003015},
     UnitLevel = 3,
-    UnitWeight = T.RT_6
+    UnitWeight = T.RT_8
   },
   [10110306] = {
     RelationId = 10110306,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       8001016,
       8002016,
       8003016
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_5
+    UnitWeight = T.RT_7
   },
   [10110307] = {
     RelationId = 10110307,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       8001017,
       8002017,
       8003017
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_5
+    UnitWeight = T.RT_7
   },
   [10110308] = {
     RelationId = 10110308,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       8001018,
       8002018,
       8003018
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_5
+    UnitWeight = T.RT_7
   },
   [10110309] = {
     RelationId = 10110309,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       8001019,
       8002019,
       8003019
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_5
+    UnitWeight = T.RT_7
   },
   [10110310] = {
     RelationId = 10110310,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {8002020},
     UnitLevel = 3,
-    UnitWeight = T.RT_7
+    UnitWeight = T.RT_9
   },
   [10110311] = {
     RelationId = 10110311,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       8001021,
       8002021,
       8003021
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_5
+    UnitWeight = T.RT_7
   },
   [10110312] = {
     RelationId = 10110312,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {8001022, 8003022},
     UnitLevel = 3,
-    UnitWeight = T.RT_6
+    UnitWeight = T.RT_8
   },
   [10110313] = {
     RelationId = 10110313,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       8001023,
       8002023,
       8003023
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_5
+    UnitWeight = T.RT_7
   },
   [10110314] = {
     RelationId = 10110314,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       8001024,
       8002024,
       8003024
     },
     UnitLevel = 3,
-    UnitWeight = T.RT_5
+    UnitWeight = T.RT_7
   },
   [201010101] = {
     RelationId = 201010101,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       6001012,
       6001014,
@@ -738,11 +774,11 @@ return ReadOnly("RelationSpawn", {
       6001018
     },
     UnitLevel = 5,
-    UnitWeight = T.RT_4
+    UnitWeight = T.RT_6
   },
   [201010102] = {
     RelationId = 201010102,
-    RelationSpawnTotalNum = T.RT_4,
+    RelationSpawnTotalNum = T.RT_6,
     UnitId = {
       6002011,
       6002015,
@@ -761,16 +797,16 @@ return ReadOnly("RelationSpawn", {
   },
   [201010103] = {
     RelationId = 201010103,
-    RelationSpawnTotalNum = T.RT_4,
-    UnitId = T.RT_8,
+    RelationSpawnTotalNum = T.RT_6,
+    UnitId = T.RT_10,
     UnitLevel = 15,
-    UnitWeight = T.RT_5
+    UnitWeight = T.RT_7
   },
   [201010104] = {
     RelationId = 201010104,
-    RelationSpawnTotalNum = T.RT_4,
-    UnitId = T.RT_8,
+    RelationSpawnTotalNum = T.RT_6,
+    UnitId = T.RT_10,
     UnitLevel = 20,
-    UnitWeight = T.RT_5
+    UnitWeight = T.RT_7
   }
 })

@@ -204,7 +204,7 @@ return ReadOnly("NpcBiography", {
   },
   [102001] = {
     ConditionId = 1033,
-    DispConditionId = 200213,
+    DispConditionId = 1033,
     NpcAge = "29",
     NpcBiographyId = 102001,
     NpcInformation = "NpcBiography_Information_Luna",
@@ -374,6 +374,168 @@ return ReadOnly("NpcBiography", {
     NpcBiographyId = 103701,
     NpcInformation = "NpcBiography_Information_Giselle",
     NpcName = "UI_CMNpc_Name_Giselle",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [103801] = {
+    ConditionId = 1087,
+    DispConditionId = 1087,
+    NpcAge = "25",
+    NpcBiographyId = 103801,
+    NpcInformation = "NpcBiography_Information_Hesite",
+    NpcName = "UI_CMNpc_Name_Hesite",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [103901] = {
+    ConditionId = 1130,
+    DispConditionId = 1130,
+    NpcAge = "59",
+    NpcBiographyId = 103901,
+    NpcInformation = "NpcBiography_Information_MrCheng",
+    NpcName = "UI_CMNpc_Yanjindu_Name_MrCheng",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [104001] = {
+    ConditionId = 1131,
+    DispConditionId = 1131,
+    NpcAge = "59",
+    NpcBiographyId = 104001,
+    NpcInformation = "NpcBiography_Information_MrsCheng",
+    NpcName = "UI_CMNpc_Yanjindu_Name_MrsCheng",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [104101] = {
+    ConditionId = 1132,
+    DispConditionId = 1132,
+    NpcAge = "10",
+    NpcBiographyId = 104101,
+    NpcInformation = "NpcBiography_Information_JiangZhengyi",
+    NpcName = "UI_CMNpc_Yanjindu_Name_JiangZhengyi",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [104201] = {
+    ConditionId = 1133,
+    DispConditionId = 1133,
+    NpcAge = "31",
+    NpcBiographyId = 104201,
+    NpcInformation = "NpcBiography_Information_SaMi",
+    NpcName = "UI_CMNpc_Yanjindu_Name_SaMi",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [104301] = {
+    ConditionId = 1134,
+    DispConditionId = 1134,
+    NpcAge = "30",
+    NpcBiographyId = 104301,
+    NpcInformation = "NpcBiography_Information_LiShi",
+    NpcName = "UI_CMNpc_Yanjindu_Name_LiShi",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [104401] = {
+    ConditionId = 1135,
+    DispConditionId = 1135,
+    NpcAge = "29",
+    NpcBiographyId = 104401,
+    NpcInformation = "NpcBiography_Information_DuPing",
+    NpcName = "UI_CMNpc_Yanjindu_Name_DuPing",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [104501] = {
+    ConditionId = 1136,
+    DispConditionId = 1136,
+    NpcAge = "？？",
+    NpcBiographyId = 104501,
+    NpcInformation = "NpcBiography_Information_YiSheng",
+    NpcName = "UI_CMNpc_Yanjindu_Name_YiSheng",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [104601] = {
+    ConditionId = 1137,
+    DispConditionId = 1137,
+    NpcAge = "40",
+    NpcBiographyId = 104601,
+    NpcInformation = "NpcBiography_Information_LaMeng",
+    NpcName = "UI_CMNpc_Yanjindu_Name_LaMeng",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [104701] = {
+    ConditionId = 1138,
+    DispConditionId = 1138,
+    NpcAge = "21",
+    NpcBiographyId = 104701,
+    NpcInformation = "NpcBiography_Information_XiaoYun",
+    NpcName = "UI_CMNpc_Yanjindu_Name_XiaoYun",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [104801] = {
+    ConditionId = 1139,
+    DispConditionId = 1139,
+    NpcAge = "28",
+    NpcBiographyId = 104801,
+    NpcInformation = "NpcBiography_Information_JuMu",
+    NpcName = "UI_CMNpc_Yanjindu_Name_JuMu",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [104901] = {
+    ConditionId = 1140,
+    DispConditionId = 1140,
+    NpcAge = "44",
+    NpcBiographyId = 104901,
+    NpcInformation = "NpcBiography_Information_QuanDoutong",
+    NpcName = "UI_CMNpc_Yanjindu_Name_QuanDoutong",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [105001] = {
+    ConditionId = 1141,
+    DispConditionId = 1141,
+    NpcAge = "43",
+    NpcBiographyId = 105001,
+    NpcInformation = "NpcBiography_Information_DrHuang",
+    NpcName = "UI_CMNpc_Yanjindu_Name_DrHuang",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [105101] = {
+    ConditionId = 1142,
+    DispConditionId = 1142,
+    NpcAge = "20",
+    NpcBiographyId = 105101,
+    NpcInformation = "NpcBiography_Information_YuXia",
+    NpcName = "UI_CMNpc_Yanjindu_Name_YuXia",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [105201] = {
+    ConditionId = 1143,
+    DispConditionId = 1143,
+    NpcAge = "30",
+    NpcBiographyId = 105201,
+    NpcInformation = "NpcBiography_Information_KunSheng",
+    NpcName = "UI_CMNpc_Yanjindu_Name_KunSheng",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [105301] = {
+    ConditionId = 1144,
+    DispConditionId = 1144,
+    NpcAge = "50.0",
+    NpcBiographyId = 105301,
+    NpcInformation = "NpcBiography_Information_JiuPiaoZi",
+    NpcName = "UI_CMNpc_Yanjindu_Name_JiuPiaoZi",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [105401] = {
+    ConditionId = 1145,
+    DispConditionId = 1145,
+    NpcAge = "29.0",
+    NpcBiographyId = 105401,
+    NpcInformation = "NpcBiography_Information_FengDeng",
+    NpcName = "UI_CMNpc_Yanjindu_Name_FengDeng",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [105501] = {
+    ConditionId = 1146,
+    DispConditionId = 1146,
+    NpcAge = "？？",
+    NpcBiographyId = 105501,
+    NpcInformation = "NpcBiography_Information_MysteryWhite",
+    NpcName = "UI_CMNpc_Yanjindu_Name_MysteryWhite",
     ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
   }
 })

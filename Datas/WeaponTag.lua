@@ -16,8 +16,14 @@ return ReadOnly("WeaponTag", {
     WeaponTagTextmap = "WeaponType_Bow",
     WeaponTagfilter = "RangedType"
   },
-  Bow01 = {WeaponTag = "Bow01"},
-  Bow02 = {WeaponTag = "Bow02"},
+  Bow01 = {
+    WeaponTag = "Bow01",
+    WeaponTagTextmap = "WeaponType_Bow01"
+  },
+  Bow02 = {
+    WeaponTag = "Bow02",
+    WeaponTagTextmap = "WeaponType_Bow02"
+  },
   Cannon = {
     GachaIcon = "/Game/UI/Texture/Dynamic/Image/WeaponType/T_Gacha_WeaponType_Cannon.T_Gacha_WeaponType_Cannon",
     GachaSpine = "/Game/UI/WBP/Gacha/Widget/CampAni/WBP_Gacha_CampAni_Cannon.WBP_Gacha_CampAni_Cannon",

@@ -324,14 +324,9 @@ return ReadOnly("SubRegion", {
     SyncPlayerInfo = 1
   },
   [104101] = {
-    RegionId = 1041,
-    SubRegionDes = "UI_SUBREGION_DES_104101",
     SubRegionId = 104101,
-    SubRegionLevel = "Huaxu_Yanjindu_Alt",
-    SubRegionName = "UI_SUBREGION_NAME_104101",
-    SubRegionType = "field",
-    SwitchPlayer = "Player",
-    SyncPlayerInfo = 1
+    SubRegionLevel = "TestData01",
+    SubRegionName = "保持跟上线版本数据一致"
   },
   [104102] = {
     RegionId = 1041,
@@ -513,6 +508,26 @@ return ReadOnly("SubRegion", {
     SwitchPlayer = "Player",
     SyncPlayerInfo = 1
   },
+  [104507] = {
+    RegionId = 1045,
+    SubRegionDes = "UI_SUBREGION_DES_104507",
+    SubRegionId = 104507,
+    SubRegionLevel = "Huaxu_Haojing_IQ12020122",
+    SubRegionName = "UI_SUBREGION_NAME_104507",
+    SubRegionType = "field",
+    SwitchPlayer = "Player",
+    SyncPlayerInfo = 1
+  },
+  [104508] = {
+    RegionId = 1045,
+    SubRegionDes = "UI_SUBREGION_DES_104508",
+    SubRegionId = 104508,
+    SubRegionLevel = "Huaxu_Haojing_IQ12020212",
+    SubRegionName = "UI_SUBREGION_NAME_104508",
+    SubRegionType = "field",
+    SwitchPlayer = "Player",
+    SyncPlayerInfo = 1
+  },
   [104601] = {
     RegionId = 1046,
     SubRegionDes = "UI_SUBREGION_DES_104601",
@@ -544,6 +559,8 @@ return ReadOnly("SubRegion", {
     SyncPlayerInfo = 1
   },
   [104901] = {
+    DefaultQuestPoint = "-25263.617188,6763.143066,-859.742126",
+    NotShowInRegionMap = true,
     RegionId = 1049,
     SubRegionDes = "UI_SUBREGION_DES_104901",
     SubRegionId = 104901,
@@ -612,16 +629,45 @@ return ReadOnly("SubRegion", {
     RegionId = 1056,
     SubRegionDes = "测试区域",
     SubRegionId = 105601,
-    SubRegionLevel = "Huaxu_Haojing_ZhiLiuHJ",
+    SubRegionLevel = "Huaxu_Haojing_ZhiliuHJ_Door",
     SubRegionName = "测试区域",
     SubRegionType = "field",
+    SyncPlayerInfo = 1
+  },
+  [105602] = {
+    RegionId = 1056,
+    SubRegionDes = "测试区域",
+    SubRegionId = 105602,
+    SubRegionLevel = "Huaxu_Haojing_ZhiliuHJ_Talk",
+    SubRegionName = "测试区域",
+    SubRegionType = "field",
+    SyncPlayerInfo = 1
+  },
+  [105701] = {
+    RegionId = 1057,
+    SubRegionDes = "UI_SUBREGION_DES_105701",
+    SubRegionId = 105701,
+    SubRegionLevel = "Huaxu_Yanjindu_Alt",
+    SubRegionName = "UI_SUBREGION_NAME_105701",
+    SubRegionType = "field",
+    SwitchPlayer = "Player",
+    SyncPlayerInfo = 1
+  },
+  [105801] = {
+    RegionId = 1058,
+    SubRegionDes = "UI_SUBREGION_DES_105801",
+    SubRegionId = 105801,
+    SubRegionLevel = "Huaxu_Yanjindu_Stealth",
+    SubRegionName = "UI_SUBREGION_NAME_105801",
+    SubRegionType = "field",
+    SwitchPlayer = "Player",
     SyncPlayerInfo = 1
   },
   [106001] = {
     RegionId = 1060,
     SubRegionDes = "测试区域",
     SubRegionId = 106001,
-    SubRegionLevel = "Haiboliya_Chezhan01",
+    SubRegionLevel = "Haiboliya_Chezhan_BHCZ",
     SubRegionName = "测试区域",
     SubRegionType = "field",
     SwitchPlayer = "Player",
@@ -631,7 +677,7 @@ return ReadOnly("SubRegion", {
     RegionId = 1060,
     SubRegionDes = "测试区域",
     SubRegionId = 106002,
-    SubRegionLevel = "Haiboliya_Chezhan02",
+    SubRegionLevel = "Haiboliya_Chezhan_YLQ",
     SubRegionName = "测试区域",
     SubRegionType = "field",
     SyncPlayerInfo = 1
@@ -640,7 +686,7 @@ return ReadOnly("SubRegion", {
     RegionId = 1060,
     SubRegionDes = "测试区域",
     SubRegionId = 106003,
-    SubRegionLevel = "Haiboliya_Chezhan03",
+    SubRegionLevel = "Haiboliya_Chezhan_HWQ",
     SubRegionName = "测试区域",
     SubRegionType = "field",
     SyncPlayerInfo = 1
@@ -649,7 +695,7 @@ return ReadOnly("SubRegion", {
     RegionId = 1060,
     SubRegionDes = "测试区域",
     SubRegionId = 106004,
-    SubRegionLevel = "Haiboliya_Chezhan04",
+    SubRegionLevel = "Haiboliya_Chezhan_JGQ",
     SubRegionName = "测试区域",
     SubRegionType = "field",
     SyncPlayerInfo = 1
@@ -658,7 +704,34 @@ return ReadOnly("SubRegion", {
     RegionId = 1060,
     SubRegionDes = "测试区域",
     SubRegionId = 106005,
-    SubRegionLevel = "Haiboliya_Chezhan05",
+    SubRegionLevel = "Haiboliya_Chezhan_CXQ",
+    SubRegionName = "测试区域",
+    SubRegionType = "field",
+    SyncPlayerInfo = 1
+  },
+  [106006] = {
+    RegionId = 1060,
+    SubRegionDes = "测试区域",
+    SubRegionId = 106006,
+    SubRegionLevel = "Haiboliya_Chezhan_YT",
+    SubRegionName = "测试区域",
+    SubRegionType = "field",
+    SyncPlayerInfo = 1
+  },
+  [106007] = {
+    RegionId = 1060,
+    SubRegionDes = "测试区域",
+    SubRegionId = 106007,
+    SubRegionLevel = "Haiboliya_Chezhan_ZZZ",
+    SubRegionName = "测试区域",
+    SubRegionType = "field",
+    SyncPlayerInfo = 1
+  },
+  [106101] = {
+    RegionId = 1061,
+    SubRegionDes = "测试区域",
+    SubRegionId = 106101,
+    SubRegionLevel = "Haiboliya_Chezhan_YW01",
     SubRegionName = "测试区域",
     SubRegionType = "field",
     SyncPlayerInfo = 1
@@ -682,6 +755,16 @@ return ReadOnly("SubRegion", {
     SubRegionName = "UI_SUBREGION_NAME_210101",
     SubRegionType = "home",
     SwitchPlayer = "Player"
+  },
+  [999701] = {
+    RegionId = 9997,
+    SubRegionDes = "区域性能测试场景",
+    SubRegionId = 999701,
+    SubRegionLevel = "RegionProfTest",
+    SubRegionName = "区域性能测试场景",
+    SubRegionType = "field",
+    SwitchPlayer = "Player",
+    SyncPlayerInfo = 1
   },
   [999801] = {
     RegionId = 9998,

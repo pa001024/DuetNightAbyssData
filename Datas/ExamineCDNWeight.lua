@@ -7,11 +7,6 @@ return ReadOnly("ExamineCDNWeight", {
     IsGlobal = false,
     Weight = 80
   },
-  ["http://pan01-1-examine-huawei.shyxhy.com/Patches/FinalPatch/"] = {
-    CDNPath = "http://pan01-1-examine-huawei.shyxhy.com/Patches/FinalPatch/",
-    IsGlobal = false,
-    Weight = 30
-  },
   ["http://pan01-1-examine-huoshan.shyxhy.com/Patches/FinalPatch/"] = {
     CDNPath = "http://pan01-1-examine-huoshan.shyxhy.com/Patches/FinalPatch/",
     IsGlobal = false,

@@ -7,7 +7,7 @@ return ReadOnly("Player2RoleId", {
     [1] = 113
   },
   Player = {
-    [0] = 112,
-    [1] = 111
+    [0] = 160101,
+    [1] = 1601
   }
 })

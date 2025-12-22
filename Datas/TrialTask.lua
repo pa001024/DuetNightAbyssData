@@ -7,7 +7,7 @@ return ReadOnly("TrialTask", {
     TaskId = 1,
     TextMap = "DUNGEONSINGLE",
     TextTitle = "UI_CharTrial_Title",
-    TexturePath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
+    TexturePath = "MainMission",
     WidgetPath = "Guide_Point"
   },
   [2] = {
@@ -17,7 +17,7 @@ return ReadOnly("TrialTask", {
     TaskId = 2,
     TextMap = "TARGET_DUNGEON_TRAINING_102",
     TextTitle = "UI_CharTrial_Title",
-    TexturePath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
+    TexturePath = "DefeatMission",
     WidgetPath = "Guide_Point"
   },
   [3] = {
@@ -25,7 +25,7 @@ return ReadOnly("TrialTask", {
     TaskId = 3,
     TextMap = "TARGET_DUNGEON_103",
     TextTitle = "UI_CharTrial_Title",
-    TexturePath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Evacuation.T_Gp_Evacuation",
+    TexturePath = "Evacuation",
     WidgetPath = "Guide_Point"
   }
 })

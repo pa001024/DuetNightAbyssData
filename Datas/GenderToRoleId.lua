@@ -5,13 +5,13 @@ return ReadOnly("GenderToRoleId", {
   [1] = {
     Gender = 1,
     GenderToRoleId = 1,
-    RoleId = 111,
+    RoleId = 1601,
     SwitchPlayer = "Player"
   },
   [2] = {
     Gender = 0,
     GenderToRoleId = 2,
-    RoleId = 112,
+    RoleId = 160101,
     SwitchPlayer = "Player"
   },
   [3] = {

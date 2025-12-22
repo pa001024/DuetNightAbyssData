@@ -16,6 +16,20 @@ return ReadOnly("GenderToPhantomId", {
     RelatePhantomId = 111,
     SwitchPlayer = "Player"
   },
+  [113] = {
+    Gender = 1,
+    GroupId = 3,
+    PhantomId = 113,
+    RelatePhantomId = 114,
+    SwitchPlayer = "Player"
+  },
+  [114] = {
+    Gender = 0,
+    GroupId = 3,
+    PhantomId = 114,
+    RelatePhantomId = 113,
+    SwitchPlayer = "Player"
+  },
   [205] = {
     Gender = 1,
     GroupId = 2,

@@ -158,6 +158,18 @@ return ReadOnly("BossSkillToast", {
     TextMapKey = "BossSkillToast_Tuosi_Skill08",
     TipsStyle = "InSequence"
   },
+  [8510001] = {
+    Duration = 1.5,
+    ID = 8510001,
+    TextMapKey = "血量均摊伤害（带包装）",
+    TipsStyle = "Common"
+  },
+  [8510002] = {
+    Duration = 2,
+    ID = 8510002,
+    TextMapKey = "BossSkillToast_Heilong_Skill07",
+    TipsStyle = "Common"
+  },
   [8512001] = {
     Duration = 1.5,
     ID = 8512001,

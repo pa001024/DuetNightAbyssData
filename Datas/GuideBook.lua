@@ -582,6 +582,180 @@ return ReadOnly("GuideBook", {
     GuideNoteTab = 5,
     RewardId = 7000
   },
+  [113] = {
+    CompleteUIGuideId = 90,
+    FinishQuest = 12010309,
+    GuideId = 90,
+    GuideNoteId = 113,
+    GuideNoteTab = 3,
+    RewardId = 7000
+  },
+  [114] = {
+    CompleteUIGuideId = 91,
+    FinishQuest = 12010309,
+    GuideId = 91,
+    GuideNoteId = 114,
+    GuideNoteTab = 3,
+    RewardId = 7000
+  },
+  [115] = {
+    CompleteUIGuideId = 92,
+    FinishQuest = 12010309,
+    GuideId = 92,
+    GuideNoteId = 115,
+    GuideNoteTab = 3,
+    RewardId = 7000
+  },
+  [116] = {
+    CompleteUIGuideId = 93,
+    FinishQuest = 12010309,
+    GuideId = 93,
+    GuideNoteId = 116,
+    GuideNoteTab = 3,
+    RewardId = 7000
+  },
+  [117] = {
+    FinishQuest = 10020101,
+    GuideId = 89,
+    GuideNoteId = 117,
+    GuideNoteTab = 5,
+    RewardId = 7000
+  },
+  [118] = {
+    CompleteUIGuideId = 112,
+    FunctionId = "TODSetting",
+    GuideId = 112,
+    GuideNoteId = 118,
+    GuideNoteTab = 5,
+    RewardId = 7000
+  },
+  [119] = {
+    CompleteUIGuideId = 94,
+    FinishQuest = 12010309,
+    GuideId = 94,
+    GuideNoteId = 119,
+    GuideNoteTab = 3,
+    MechanismTag = "GravityBall",
+    RewardId = 7000
+  },
+  [120] = {
+    CompleteUIGuideId = 95,
+    FinishQuest = 12010309,
+    GuideId = 95,
+    GuideNoteId = 120,
+    GuideNoteTab = 3,
+    MechanismTag = "MoInteractive",
+    RewardId = 7000
+  },
+  [121] = {
+    FinishQuest = 12010309,
+    GuideId = 96,
+    GuideNoteId = 121,
+    GuideNoteTab = 3,
+    MechanismTag = "Petal",
+    RewardId = 7000
+  },
+  [122] = {
+    CompleteUIGuideId = 97,
+    FinishQuest = 12010415,
+    GuideId = 97,
+    GuideNoteId = 122,
+    GuideNoteTab = 5,
+    RewardId = 7000
+  },
+  [123] = {
+    GuideId = 98,
+    GuideNoteId = 123,
+    GuideNoteTab = 3,
+    MechanismTag = "FlowerLantern",
+    RewardId = 7000
+  },
+  [124] = {
+    CompleteUIGuideId = 99,
+    GuideId = 99,
+    GuideNoteId = 124,
+    GuideNoteTab = 3,
+    MechanismTag = "KongmingLantern",
+    RewardId = 7000
+  },
+  [125] = {
+    CompleteUIGuideId = 100,
+    GuideId = 100,
+    GuideNoteId = 125,
+    GuideNoteTab = 3,
+    MechanismTag = "LanternShip",
+    RewardId = 7000
+  },
+  [126] = {
+    CompleteUIGuideId = 101,
+    GuideId = 101,
+    GuideNoteId = 126,
+    GuideNoteTab = 3,
+    MechanismTag = "WindBell",
+    RewardId = 7000
+  },
+  [127] = {
+    GuideId = 102,
+    GuideNoteId = 127,
+    GuideNoteTab = 3,
+    MechanismTag = "XingShiBei",
+    RewardId = 7000
+  },
+  [128] = {
+    CompleteUIGuideId = 103,
+    GuideId = 103,
+    GuideNoteId = 128,
+    GuideNoteTab = 3,
+    MechanismTag = "EastQiZi",
+    RewardId = 7000
+  },
+  [129] = {
+    CompleteUIGuideId = 104,
+    FinishQuest = 12010406,
+    GuideId = 104,
+    GuideNoteId = 129,
+    GuideNoteTab = 3,
+    RewardId = 7000
+  },
+  [130] = {
+    CompleteUIGuideId = 105,
+    FinishQuest = 12010406,
+    GuideId = 105,
+    GuideNoteId = 130,
+    GuideNoteTab = 3,
+    RewardId = 7000
+  },
+  [131] = {
+    CompleteUIGuideId = 106,
+    FinishQuest = 12010310,
+    GuideId = 106,
+    GuideNoteId = 131,
+    GuideNoteTab = 3,
+    RewardId = 7000
+  },
+  [132] = {
+    GuideId = 107,
+    GuideNoteId = 132,
+    GuideNoteTab = 3,
+    MechanismTag = "DongGuoBuffItem",
+    RewardId = 7000
+  },
+  [133] = {
+    CompleteUIGuideId = 108,
+    GuideId = 108,
+    GuideNoteId = 133,
+    GuideNoteTab = 3,
+    MechanismTag = "GongMing",
+    RewardId = 7000
+  },
+  [134] = {
+    CompleteUIGuideId = 109,
+    GuideId = 109,
+    GuideNoteId = 134,
+    GuideNoteTab = 3,
+    MechanismTag = "HuaRui",
+    RewardId = 7000
+  },
   [1001] = {
     CompleteUIGuideId = 10011,
     GuideId = 10011,

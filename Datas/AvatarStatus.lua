@@ -35,7 +35,8 @@ return ReadOnly("AvatarStatus", {
       12,
       13,
       14,
-      15
+      15,
+      17
     }
   },
   [3] = {
@@ -58,7 +59,8 @@ return ReadOnly("AvatarStatus", {
       11,
       12,
       13,
-      16
+      16,
+      17
     },
     Priority = 2,
     StatusId = 4,
@@ -82,7 +84,8 @@ return ReadOnly("AvatarStatus", {
       10,
       11,
       12,
-      16
+      16,
+      17
     },
     Priority = 1,
     StatusId = 5,
@@ -121,15 +124,18 @@ return ReadOnly("AvatarStatus", {
       9,
       10,
       11,
-      12
+      12,
+      17
     },
     Priority = 1,
     StatusId = 7,
     StatusName = "InMultiDungeon",
     TurnList = {
       1,
+      3,
       4,
-      6
+      6,
+      11
     }
   },
   [8] = {
@@ -140,7 +146,8 @@ return ReadOnly("AvatarStatus", {
       9,
       11,
       12,
-      16
+      16,
+      17
     },
     Priority = 2,
     StatusId = 8,
@@ -156,7 +163,8 @@ return ReadOnly("AvatarStatus", {
       11,
       12,
       13,
-      16
+      16,
+      17
     },
     Priority = 2,
     StatusId = 9,
@@ -175,7 +183,8 @@ return ReadOnly("AvatarStatus", {
       9,
       11,
       12,
-      16
+      16,
+      17
     },
     Priority = 1,
     StatusId = 10,
@@ -191,7 +200,8 @@ return ReadOnly("AvatarStatus", {
       9,
       12,
       13,
-      16
+      16,
+      17
     },
     Priority = 2,
     StatusId = 11,
@@ -243,7 +253,8 @@ return ReadOnly("AvatarStatus", {
       6,
       11,
       12,
-      15
+      15,
+      17
     }
   },
   [15] = {
@@ -251,7 +262,8 @@ return ReadOnly("AvatarStatus", {
       3,
       11,
       12,
-      16
+      16,
+      17
     },
     Priority = 3,
     StatusId = 15,
@@ -279,7 +291,30 @@ return ReadOnly("AvatarStatus", {
       12,
       13,
       14,
-      15
+      15,
+      17
+    }
+  },
+  [17] = {
+    Priority = 2,
+    StatusId = 17,
+    StatusName = "InTheaterPerform",
+    TurnList = {
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
     }
   }
 })

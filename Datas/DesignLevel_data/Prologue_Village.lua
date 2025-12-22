@@ -599,6 +599,96 @@ return {
       CreatorId = 1590272,
       UnitType = "Npc",
       UnitId = 700210
+    },
+    ["1590316"] = {
+      CreatorId = 1590316,
+      UnitType = "Monster",
+      UnitId = 6002001
+    },
+    ["1590317"] = {
+      CreatorId = 1590317,
+      UnitType = "Monster",
+      UnitId = 6002001
+    },
+    ["1590318"] = {
+      CreatorId = 1590318,
+      UnitType = "Monster",
+      UnitId = 6001001
+    },
+    ["1590319"] = {
+      CreatorId = 1590319,
+      UnitType = "Monster",
+      UnitId = 6001001
+    },
+    ["1590320"] = {
+      CreatorId = 1590320,
+      UnitType = "Monster",
+      UnitId = 6002001
+    },
+    ["1590322"] = {
+      CreatorId = 1590322,
+      UnitType = "Monster",
+      UnitId = 6002001
+    },
+    ["1590323"] = {
+      CreatorId = 1590323,
+      UnitType = "Monster",
+      UnitId = 6001001
+    },
+    ["1590324"] = {
+      CreatorId = 1590324,
+      UnitType = "Monster",
+      UnitId = 6001001
+    },
+    ["1590321"] = {
+      CreatorId = 1590321,
+      UnitType = "Monster",
+      UnitId = 6001001
+    },
+    ["1590325"] = {
+      CreatorId = 1590325,
+      UnitType = "Monster",
+      UnitId = 6002001
+    },
+    ["1590328"] = {
+      CreatorId = 1590328,
+      UnitType = "Monster",
+      UnitId = 6002001
+    },
+    ["1590327"] = {
+      CreatorId = 1590327,
+      UnitType = "Monster",
+      UnitId = 6001001
+    },
+    ["1590326"] = {
+      CreatorId = 1590326,
+      UnitType = "Monster",
+      UnitId = 6001001
+    },
+    ["1590331"] = {
+      CreatorId = 1590331,
+      UnitType = "Monster",
+      UnitId = 6002001
+    },
+    ["1590335"] = {
+      CreatorId = 1590335,
+      UnitType = "Monster",
+      UnitId = 6002001
+    },
+    ["1590334"] = {
+      CreatorId = 1590334,
+      UnitType = "Monster",
+      UnitId = 6001001
+    },
+    ["1590333"] = {
+      CreatorId = 1590333,
+      UnitType = "Monster",
+      UnitId = 6001001
+    },
+    ["1590332"] = {
+      CreatorId = 1590332,
+      UnitType = "Monster",
+      UnitId = 6001001
     }
   },
   ManualItem = {

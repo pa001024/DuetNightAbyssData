@@ -23,17 +23,23 @@ return ReadOnly("SkillSplitEvalFormulate", {
   ["$Source:GetRootSource():GetFloat('Xibi_Skill04_Rate')$"] = function(Source, SkillLevel, Target)
     return Source:GetRootSource():GetFloat("Xibi_Skill04_Rate")
   end,
+  ["$Source:GetInt('MagazineBulletNum_20406')$"] = function(Source, SkillLevel, Target)
+    return Source:GetInt("MagazineBulletNum_20406")
+  end,
   ["$Source:GetRootSource():GetInt('PassiveWaitingNum')$"] = function(Source, SkillLevel, Target)
     return Source:GetRootSource():GetInt("PassiveWaitingNum")
-  end,
-  ["$Source:GetRootSource():GetFloat('Skill04TriggerRate')$"] = function(Source, SkillLevel, Target)
-    return Source:GetRootSource():GetFloat("Skill04TriggerRate")
   end,
   ["$Source:GetInt('MagazineBulletNum_20505')$"] = function(Source, SkillLevel, Target)
     return Source:GetInt("MagazineBulletNum_20505")
   end,
+  ["$Source:GetRootSource():GetFloat('Skill04TriggerRate')$"] = function(Source, SkillLevel, Target)
+    return Source:GetRootSource():GetFloat("Skill04TriggerRate")
+  end,
   ["$Source:GetRootSource():GetInt('Skill1Buff')$"] = function(Source, SkillLevel, Target)
     return Source:GetRootSource():GetInt("Skill1Buff")
+  end,
+  ["$Source:GetInt('Skill02BulletNum')$"] = function(Source, SkillLevel, Target)
+    return Source:GetInt("Skill02BulletNum")
   end,
   ["$Source:GetFloat('LinenSkill02ShootRate')*Source:GetCurrentWeaponAttr('MultiShoot', 1)$"] = function(Source, SkillLevel, Target)
     return Source:GetFloat("LinenSkill02ShootRate") * Source:GetCurrentWeaponAttr("MultiShoot", 1)

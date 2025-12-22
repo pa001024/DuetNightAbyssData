@@ -245,6 +245,51 @@ return ReadOnly("ImpressionPlus", {
     RegionId = 1041,
     WisdomPlus = 0
   },
+  [1221] = {
+    BenefitPlus = 1,
+    ChaosPlus = 0,
+    EmpathyPlus = 0,
+    ImprPlusId = 1221,
+    MoralityPlus = 0,
+    RegionId = 1041,
+    WisdomPlus = 0
+  },
+  [1222] = {
+    BenefitPlus = 0,
+    ChaosPlus = 0,
+    EmpathyPlus = 0,
+    ImprPlusId = 1222,
+    MoralityPlus = 1,
+    RegionId = 1041,
+    WisdomPlus = 0
+  },
+  [1223] = {
+    BenefitPlus = 0,
+    ChaosPlus = 0,
+    EmpathyPlus = 0,
+    ImprPlusId = 1223,
+    MoralityPlus = 0,
+    RegionId = 1041,
+    WisdomPlus = 1
+  },
+  [1224] = {
+    BenefitPlus = 0,
+    ChaosPlus = 0,
+    EmpathyPlus = 1,
+    ImprPlusId = 1224,
+    MoralityPlus = 0,
+    RegionId = 1041,
+    WisdomPlus = 0
+  },
+  [1225] = {
+    BenefitPlus = 0,
+    ChaosPlus = 1,
+    EmpathyPlus = 0,
+    ImprPlusId = 1225,
+    MoralityPlus = 0,
+    RegionId = 1041,
+    WisdomPlus = 0
+  },
   [3010] = {
     BenefitPlus = 1,
     ChaosPlus = 0,
@@ -288,6 +333,51 @@ return ReadOnly("ImpressionPlus", {
     ImprPlusId = 3014,
     MoralityPlus = 0,
     RegionId = 1011,
+    WisdomPlus = 0
+  },
+  [3015] = {
+    BenefitPlus = 1,
+    ChaosPlus = 0,
+    EmpathyPlus = 0,
+    ImprPlusId = 3015,
+    MoralityPlus = 0,
+    RegionId = 1041,
+    WisdomPlus = 0
+  },
+  [3016] = {
+    BenefitPlus = 0,
+    ChaosPlus = 0,
+    EmpathyPlus = 0,
+    ImprPlusId = 3016,
+    MoralityPlus = 1,
+    RegionId = 1041,
+    WisdomPlus = 0
+  },
+  [3017] = {
+    BenefitPlus = 0,
+    ChaosPlus = 0,
+    EmpathyPlus = 0,
+    ImprPlusId = 3017,
+    MoralityPlus = 0,
+    RegionId = 1041,
+    WisdomPlus = 1
+  },
+  [3018] = {
+    BenefitPlus = 0,
+    ChaosPlus = 0,
+    EmpathyPlus = 1,
+    ImprPlusId = 3018,
+    MoralityPlus = 0,
+    RegionId = 1041,
+    WisdomPlus = 0
+  },
+  [3019] = {
+    BenefitPlus = 0,
+    ChaosPlus = 1,
+    EmpathyPlus = 0,
+    ImprPlusId = 3019,
+    MoralityPlus = 0,
+    RegionId = 1041,
     WisdomPlus = 0
   }
 })

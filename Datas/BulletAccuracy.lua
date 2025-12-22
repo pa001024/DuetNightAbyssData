@@ -37,6 +37,15 @@ return ReadOnly("BulletAccuracy", {
     },
     BulletAccId = 2
   },
+  [3] = {
+    Accuracys = {
+      [1] = {
+        Accuracy = 100,
+        Range = {0, 1000}
+      }
+    },
+    BulletAccId = 3
+  },
   [101] = {
     Accuracys = {
       [1] = {

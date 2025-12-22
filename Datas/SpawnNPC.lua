@@ -56,6 +56,16 @@ T.RT_11 = {
 }
 T.RT_12 = {
   0,
+  -10,
+  0
+}
+T.RT_13 = {
+  5,
+  -9,
+  0
+}
+T.RT_14 = {
+  0,
   150,
   65
 }
@@ -112,7 +122,7 @@ return ReadOnly("SpawnNPC", {
       143
     },
     CameraPositionM = {
-      -13,
+      -18,
       360,
       144
     },
@@ -123,9 +133,14 @@ return ReadOnly("SpawnNPC", {
       -105,
       0
     },
-    CameraRotation2 = {
+    CameraRotationDelta = {
       0,
       -11,
+      0
+    },
+    CameraRotationDeltaM = {
+      0,
+      7,
       0
     },
     CameraRotationM = T.RT_10,
@@ -161,11 +176,8 @@ return ReadOnly("SpawnNPC", {
       -104.5,
       0
     },
-    CameraRotation2 = {
-      0,
-      -10,
-      0
-    },
+    CameraRotationDelta = T.RT_12,
+    CameraRotationDeltaM = T.RT_12,
     CameraRotationM = {
       0,
       -98,
@@ -222,11 +234,8 @@ return ReadOnly("SpawnNPC", {
       230.3,
       0
     },
-    CameraRotation2 = {
-      5,
-      -9,
-      0
-    },
+    CameraRotationDelta = T.RT_13,
+    CameraRotationDeltaM = T.RT_13,
     CameraRotationM = {
       350,
       -135,
@@ -249,7 +258,7 @@ return ReadOnly("SpawnNPC", {
   },
   [910002] = {
     BPPath = "/Game/AssetDesign/Char/Npc/BaiNpc/Bai_Beibao/BP_NPC_BaiBB",
-    CameraPosition = T.RT_12,
+    CameraPosition = T.RT_14,
     CameraPositionM = {
       -25,
       120,
@@ -291,9 +300,14 @@ return ReadOnly("SpawnNPC", {
       -107,
       0
     },
-    CameraRotation2 = {
+    CameraRotationDelta = {
       0,
       -7,
+      0
+    },
+    CameraRotationDeltaM = {
+      0,
+      3.5,
       0
     },
     CameraRotationM = {
@@ -317,7 +331,7 @@ return ReadOnly("SpawnNPC", {
   [910005] = {
     BPPath = "/Game/AssetDesign/Char/Npc/BaiNpc/Bai_Beibao/BP_NPC_BaiBB",
     CameraFov = 50,
-    CameraPosition = T.RT_12,
+    CameraPosition = T.RT_14,
     CameraPositionStart = T.RT_11,
     CameraRotation = T.RT_6,
     CameraRotationStart = T.RT_6,
@@ -348,7 +362,7 @@ return ReadOnly("SpawnNPC", {
     SpawnRadius = 0.5
   },
   [920005] = {
-    CameraPosition = T.RT_12,
+    CameraPosition = T.RT_14,
     CameraPositionStart = T.RT_11,
     CameraRotation = T.RT_6,
     CameraRotationStart = T.RT_6,

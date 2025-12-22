@@ -46,6 +46,13 @@ return ReadOnly("CombatMonitor", {
     SubId = {"Hijack"},
     Value = 80
   },
+  [7] = {
+    MonitorId = 7,
+    MonitorType = "Time",
+    ServerMark = true,
+    SubId = {"Rouge"},
+    Value = 4
+  },
   [8] = {
     MonitorId = 8,
     MonitorType = "Resource",

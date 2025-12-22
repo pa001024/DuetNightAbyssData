@@ -378,6 +378,27 @@ return ReadOnly("AlertData", {
     FightStateBroarCastTime = 0.5,
     MaxAlertValue = 240
   },
+  [7001101] = {
+    AlertId = 7001101,
+    AlertRanges = {
+      [1] = {
+        AlertRange = T.RT_3,
+        AlertRangeDownSpeed = -24,
+        AlertRangeHearId = 7001101,
+        AlertRangeSightId = 7001101,
+        AlertRangeUpSpeed = 9999
+      }
+    },
+    AlertResetChange = 0,
+    BroadCastAlertValue = 40,
+    BroadCastDis = 1000,
+    CanBroadCastAlert = true,
+    CommonAlertHearId = 2,
+    CommonAlertSetValue = 99,
+    CommonAlertSightId = 2,
+    FightStateBroarCastTime = 0.5,
+    MaxAlertValue = 240
+  },
   [7002102] = {
     AlertId = 7002102,
     AlertRanges = T.RT_6,
@@ -398,6 +419,27 @@ return ReadOnly("AlertData", {
     CommonAlertHearId = 2,
     CommonAlertSetValue = 99,
     CommonAlertSightId = 2,
+    MaxAlertValue = 240
+  },
+  [7002104] = {
+    AlertId = 7002104,
+    AlertRanges = {
+      [1] = {
+        AlertRange = T.RT_3,
+        AlertRangeDownSpeed = -24,
+        AlertRangeHearId = 7001101,
+        AlertRangeSightId = 7001101,
+        AlertRangeUpSpeed = 240
+      }
+    },
+    AlertResetChange = 0,
+    BroadCastAlertValue = 40,
+    BroadCastDis = 1000,
+    CanBroadCastAlert = true,
+    CommonAlertHearId = 2,
+    CommonAlertSetValue = 99,
+    CommonAlertSightId = 2,
+    FightStateBroarCastTime = 0.5,
     MaxAlertValue = 240
   },
   [7003051] = {
@@ -486,14 +528,14 @@ return ReadOnly("AlertData", {
         AlertRangeUpSpeed = 240
       },
       [2] = {
-        AlertRange = T.RT_2,
+        AlertRange = {120, 9999},
         AlertRangeDownSpeed = 0,
         AlertRangeUpSpeed = 0
       }
     },
     AlertResetChange = 0,
     BroadCastDis = 0,
-    MaxAlertValue = 240
+    MaxAlertValue = 9999
   },
   [9802001] = {
     AlertId = 9802001,

@@ -342,7 +342,8 @@ return ReadOnly("UIGuide", {
       7201,
       7202,
       7203,
-      7204
+      7204,
+      7205
     },
     GuideId = 72,
     MainGuideTitle = "UIGuide_Fish_Title"
@@ -382,7 +383,8 @@ return ReadOnly("UIGuide", {
     ChildGuideId = {
       7801,
       7802,
-      7803
+      7803,
+      7804
     },
     GuideId = 78,
     MainGuideTitle = "MAINUIGUIDE_TITLE_PETTRAIN"
@@ -448,6 +450,171 @@ return ReadOnly("UIGuide", {
     },
     GuideId = 88,
     MainGuideTitle = "MAINUIGUIDE_TITLE_ONLINEAREA"
+  },
+  [89] = {
+    ChildGuideId = {8901},
+    GuideId = 89,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_TongLv_1"
+  },
+  [90] = {
+    ChildGuideId = {
+      9001,
+      9002,
+      9003,
+      9004
+    },
+    GuideId = 90,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_FangShu_1"
+  },
+  [91] = {
+    ChildGuideId = {9101, 9102},
+    GuideId = 91,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_FuWen_1"
+  },
+  [92] = {
+    ChildGuideId = {9201, 9202},
+    GuideId = 92,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_ChenMo_1"
+  },
+  [93] = {
+    ChildGuideId = {9301},
+    GuideId = 93,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_ShanYe_1"
+  },
+  [94] = {
+    ChildGuideId = {9401},
+    GuideId = 94,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_XiQiu_1"
+  },
+  [95] = {
+    ChildGuideId = {9501, 9502},
+    GuideId = 95,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_FanZhuan_1"
+  },
+  [96] = {
+    ChildGuideId = {9601},
+    GuideId = 96,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_HuaBan_1"
+  },
+  [97] = {
+    ChildGuideId = {
+      9701,
+      9702,
+      9703
+    },
+    GuideId = 97,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_WangXi_1"
+  },
+  [98] = {
+    ChildGuideId = {9801},
+    GuideId = 98,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_DengHua_1"
+  },
+  [99] = {
+    ChildGuideId = {9901},
+    GuideId = 99,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_QiTianDeng_1"
+  },
+  [100] = {
+    ChildGuideId = {10001},
+    GuideId = 100,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_XiaoChuan_1"
+  },
+  [101] = {
+    ChildGuideId = {10101},
+    GuideId = 101,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_ZhanFeng_1"
+  },
+  [102] = {
+    ChildGuideId = {10201},
+    GuideId = 102,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_XingShi_1"
+  },
+  [103] = {
+    ChildGuideId = {
+      10301,
+      10302,
+      10303
+    },
+    GuideId = 103,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_JiGuanZhen_1"
+  },
+  [104] = {
+    ChildGuideId = {10401, 10402},
+    GuideId = 104,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_YanShi_1"
+  },
+  [105] = {
+    ChildGuideId = {10501, 10502},
+    GuideId = 105,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_HuaBao_1"
+  },
+  [106] = {
+    ChildGuideId = {
+      10601,
+      10602,
+      10603,
+      10604
+    },
+    GuideId = 106,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_LongLin_1"
+  },
+  [107] = {
+    ChildGuideId = {10701},
+    GuideId = 107,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_JiaSu_1"
+  },
+  [108] = {
+    ChildGuideId = {10801, 10802},
+    GuideId = 108,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_HuiYu_1"
+  },
+  [109] = {
+    ChildGuideId = {
+      10901,
+      10902,
+      10903
+    },
+    GuideId = 109,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_HuaRui_1"
+  },
+  [110] = {
+    ChildGuideId = {
+      11001,
+      11002,
+      11003
+    },
+    GuideId = 110,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_FenZuSai_1"
+  },
+  [111] = {
+    ChildGuideId = {
+      11101,
+      11102,
+      11103,
+      11104
+    },
+    GuideId = 111,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_DianFeng_1"
+  },
+  [112] = {
+    ChildGuideId = {11201},
+    GuideId = 112,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_ZhouYe_1"
+  },
+  [113] = {
+    ChildGuideId = {11301},
+    GuideId = 113,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_FangShu_4"
+  },
+  [114] = {
+    ChildGuideId = {
+      11401,
+      11402,
+      11403
+    },
+    GuideId = 114,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_JuYuan_1"
   },
   [115] = {
     ChildGuideId = {11501, 11502},
@@ -722,6 +889,11 @@ return ReadOnly("UIGuide", {
     ChildGuideId = {600700101},
     GuideId = 6007001,
     MainGuideTitle = "Mon_Guide_Title_6007001"
+  },
+  [6015001] = {
+    ChildGuideId = {601500101},
+    GuideId = 6015001,
+    MainGuideTitle = "Mon_Guide_Title_6015001"
   },
   [7001005] = {
     ChildGuideId = {700100501, 700100502},

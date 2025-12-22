@@ -171,15 +171,17 @@ return ReadOnly("CameraControlData", {
     bIncrementSocketOffset = true
   },
   FuluoSkill02 = {
-    ArmLength = 120,
+    ArmLength = 300,
     ArmPos = T.RT_1,
     CameraName = "FuluoSkill02",
+    LagMaxDistance = T.RT_6,
+    LagSpeed = T.RT_7,
     ProbeSize = 12,
-    SocketOffset = T.RT_3,
+    SocketOffset = T.RT_4,
     TimelineFloatCurve = "CameraCurve",
     bIncrementArmLength = true,
     bIncrementArmPos = true,
-    bIncrementSocketOffset = true
+    bIncrementSocketOffset = false
   },
   IncrementDefault = {
     ArmLength = 0,
@@ -231,6 +233,21 @@ return ReadOnly("CameraControlData", {
     bIncrementArmPos = true,
     bIncrementSocketOffset = true
   },
+  StoryCamera03 = {
+    ArmLength = 140,
+    ArmPos = T.RT_1,
+    CameraName = "StoryCamera03",
+    ProbeSize = 12,
+    SocketOffset = {
+      45,
+      40,
+      40
+    },
+    TimelineFloatCurve = "CameraCurve",
+    bIncrementArmLength = false,
+    bIncrementArmPos = false,
+    bIncrementSocketOffset = false
+  },
   StoryDefault = {
     ArmLength = 800,
     ArmPos = T.RT_1,
@@ -275,6 +292,32 @@ return ReadOnly("CameraControlData", {
     bIncrementArmLength = false,
     bIncrementArmPos = false,
     bIncrementSocketOffset = false
+  },
+  SuyiSkill01JetRush = {
+    ArmLength = 180,
+    ArmPos = T.RT_1,
+    CameraName = "SuyiSkill01JetRush",
+    ProbeSize = 12,
+    SocketOffset = T.RT_1,
+    TimelineFloatCurve = "CameraCurve",
+    bIncrementArmLength = true,
+    bIncrementArmPos = true,
+    bIncrementSocketOffset = true
+  },
+  SuyiSkill02Attack = {
+    ArmLength = 120,
+    ArmPos = T.RT_1,
+    CameraName = "SuyiSkill02Attack",
+    ProbeSize = 12,
+    SocketOffset = {
+      0,
+      150,
+      150
+    },
+    TimelineFloatCurve = "CameraCurve",
+    bIncrementArmLength = true,
+    bIncrementArmPos = true,
+    bIncrementSocketOffset = true
   },
   TuosiSkill02 = {
     ArmLength = 150,

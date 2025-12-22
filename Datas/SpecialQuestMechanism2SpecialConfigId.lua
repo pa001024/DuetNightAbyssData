@@ -11,6 +11,9 @@ return ReadOnly("SpecialQuestMechanism2SpecialConfigId", {
   [1180564] = {
     [1] = 1045
   },
+  [1191130] = {
+    [1] = 12000307
+  },
   [1191197] = {
     [1] = 12000208
   },
@@ -59,9 +62,6 @@ return ReadOnly("SpecialQuestMechanism2SpecialConfigId", {
   [1440071] = {
     [1] = 110
   },
-  [1640042] = {
-    [1] = 1004
-  },
   [1650072] = {
     [1] = 1009
   },
@@ -94,5 +94,8 @@ return ReadOnly("SpecialQuestMechanism2SpecialConfigId", {
   },
   [1730261] = {
     [1] = 1056
+  },
+  [2090061] = {
+    [1] = 2004
   }
 })

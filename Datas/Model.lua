@@ -42,122 +42,143 @@ T.RT_11 = {
   Visible = 1
 }
 T.RT_12 = {"NpcMan"}
-T.RT_13 = {"Melee"}
-T.RT_14 = {
+T.RT_13 = {
+  Path = "Asset/Char/Player/Char032_Suyi/Mesh/Suyi_Part01_SM.Suyi_Part01_SM",
+  Socket = "Root",
+  Visible = 1
+}
+T.RT_14 = {"Melee"}
+T.RT_15 = {1101}
+T.RT_16 = {
   0,
   0,
   0
 }
-T.RT_15 = {
+T.RT_17 = {1103}
+T.RT_18 = {
   HitFlyMinTime = 0,
   TurnIP180Threshold = 90,
   TurnIPMinAngle = 30
 }
-T.RT_16 = {"Ranged"}
-T.RT_17 = {
+T.RT_19 = {1501}
+T.RT_20 = {1502}
+T.RT_21 = {1503}
+T.RT_22 = {"Ranged"}
+T.RT_23 = {
   "FresnelColor"
 }
-T.RT_18 = {1006, 1007}
-T.RT_19 = {2060100}
-T.RT_20 = {
+T.RT_24 = {1006, 1007}
+T.RT_25 = {2060100}
+T.RT_26 = {
   Path = "Asset/Char/Player/Char005_Shuimu/Mesh/Shuimu_Part02_SM.Shuimu_Part02_SM",
   Socket = "skirt_right01_b1",
   Visible = 1
 }
-T.RT_21 = {1004, 1005}
-T.RT_22 = {
+T.RT_27 = {1004, 1005}
+T.RT_28 = {
   100,
   40,
   0
 }
-T.RT_23 = {
+T.RT_29 = {
   CondemnSocket = "Root",
-  LocationOffset = T.RT_22
+  LocationOffset = T.RT_28
 }
-T.RT_24 = {HitFlyMinTime = 0.63}
-T.RT_25 = {
+T.RT_30 = {HitFlyMinTime = 0.63}
+T.RT_31 = {
   0,
   0,
   110
 }
-T.RT_26 = {
-  PenalizeOffset = T.RT_25,
+T.RT_32 = {
+  PenalizeOffset = T.RT_31,
   PenalizeSocket = "head"
 }
-T.RT_27 = {5001}
-T.RT_28 = {5441}
-T.RT_29 = {5442}
-T.RT_30 = {5443}
-T.RT_31 = {5444}
-T.RT_32 = {5445}
-T.RT_33 = {5446}
-T.RT_34 = {5447}
-T.RT_35 = {5448}
-T.RT_36 = {5449}
-T.RT_37 = {5002}
-T.RT_38 = {5003, 5461}
-T.RT_39 = {5462}
-T.RT_40 = {5463}
-T.RT_41 = {5464}
-T.RT_42 = {5465}
-T.RT_43 = {5466}
-T.RT_44 = {"NpcGirl"}
-T.RT_45 = {"NpcLoli"}
-T.RT_46 = {
+T.RT_33 = {1040199}
+T.RT_34 = {2020199}
+T.RT_35 = {5001}
+T.RT_36 = {5441}
+T.RT_37 = {5442}
+T.RT_38 = {5443}
+T.RT_39 = {5444}
+T.RT_40 = {5445}
+T.RT_41 = {5446}
+T.RT_42 = {5447}
+T.RT_43 = {5448}
+T.RT_44 = {5449}
+T.RT_45 = {5002}
+T.RT_46 = {5003, 5461}
+T.RT_47 = {5462}
+T.RT_48 = {5463}
+T.RT_49 = {5464}
+T.RT_50 = {5465}
+T.RT_51 = {5466}
+T.RT_52 = {"NpcGirl"}
+T.RT_53 = {"NpcLoli"}
+T.RT_54 = {
   Path = "Asset/Char/Player/Char010_Saiqi/Mesh/Saiqi_Part01_SM.Saiqi_Part01_SM",
   Visible = 0
 }
-T.RT_47 = {
+T.RT_55 = {
   Path = "Asset/Char/Player/Char098_Saiqi01/Mesh/Saiqi_SP01_Part01_SM.Saiqi_SP01_Part01_SM",
   Visible = 0
 }
-T.RT_48 = {HitFlyMinTime = 0}
-T.RT_49 = {
+T.RT_56 = {HitFlyMinTime = 0}
+T.RT_57 = {
   "hit_outside"
 }
-T.RT_50 = {
+T.RT_58 = {1801}
+T.RT_59 = {2101}
+T.RT_60 = {2301}
+T.RT_61 = {2401}
+T.RT_62 = {3101}
+T.RT_63 = {3103}
+T.RT_64 = {3201}
+T.RT_65 = {3301}
+T.RT_66 = {4101}
+T.RT_67 = {4202}
+T.RT_68 = {4301}
+T.RT_69 = {
   40,
   0,
   0
 }
-T.RT_51 = {
+T.RT_70 = {
   CondemnSocket = "Root",
-  LocationOffset = T.RT_50
+  LocationOffset = T.RT_69
 }
-T.RT_52 = {
+T.RT_71 = {
+  240,
+  100,
+  0
+}
+T.RT_72 = {
+  CondemnSocket = "Root",
+  LocationOffset = T.RT_71
+}
+T.RT_73 = {
   80,
   0,
   0
 }
-T.RT_53 = {
+T.RT_74 = {
   CondemnSocket = "Root",
-  LocationOffset = T.RT_52
+  LocationOffset = T.RT_73
 }
-T.RT_54 = {
-  Arm_L = "hand_left01_b",
-  Arm_L1 = "hand_left01_c",
-  Arm_L2 = "lowerarm_l",
-  Arm_R = "hand_right01_b",
-  Arm_R1 = "hand_right01_c",
-  Arm_R2 = "lowerarm_r",
-  FootL = "foot_left01_b",
-  FootL1 = "foot_left01_c",
-  FootR = "foot_right01_b",
-  FootR1 = "foot_right01_c",
-  Foot_L3 = "calf_l",
-  Foot_R3 = "calf_r",
-  Middle = "spine01",
-  Tail = "tail_f"
-}
-T.RT_55 = {
+T.RT_75 = {
   70,
   100,
   0
 }
-T.RT_56 = {
+T.RT_76 = {
   CondemnSocket = "Root",
-  LocationOffset = T.RT_55
+  LocationOffset = T.RT_75
 }
+T.RT_77 = {5101}
+T.RT_78 = {5102}
+T.RT_79 = {"spine_02"}
+T.RT_80 = {5301}
+T.RT_81 = {5401}
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -290,7 +311,7 @@ return ReadOnly("Model", {
     ModelId = 115,
     MontageFolder = "/Game/Asset/Char/Monster/Jt_Ranger01/Animation/Montage/",
     MontagePrefix = "JT_Ranger_",
-    MoveParameters = T.RT_15,
+    MoveParameters = T.RT_18,
     SkeletonMeshPath = "Asset/Char/Monster/JT_Ranger/Mesh/JT_Ranger_SM.JT_Ranger_SM"
   },
   [116] = {
@@ -303,7 +324,7 @@ return ReadOnly("Model", {
     ModelId = 116,
     MontageFolder = "/Game/Asset/Char/Monster/JT_Juji01/Animation/Montage/",
     MontagePrefix = "JT_Juji_",
-    MoveParameters = T.RT_15,
+    MoveParameters = T.RT_18,
     SkeletonMeshPath = "Asset/Char/Monster/JT_Juji/Mesh/JT_Juji_SM.JT_Juji_SM"
   },
   [117] = {
@@ -409,6 +430,27 @@ return ReadOnly("Model", {
     ModelId = 310,
     SkeletonMeshPath = "Asset/Char/Player/Common/Part/Show/Mesh/Show_Car01_SM.Show_Car01_SM"
   },
+  [311] = {
+    ModelId = 311,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Part/Show/Mesh/Show_Swim02_SM.Show_Swim02_SM"
+  },
+  [312] = {
+    ModelId = 312,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Part/Show/Mesh/Show_Chenglu_SM.Show_Chenglu_SM"
+  },
+  [313] = {
+    ModelId = 313,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Part/Show/Mesh/Show_Pini_SM.Show_Pini_SM"
+  },
+  [314] = {ModelId = 314},
+  [315] = {
+    ModelId = 315,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Part/Show/Mesh/SM_Show_Tre01.SM_Show_Tre01"
+  },
+  [316] = {
+    ModelId = 316,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Part/Show/Mesh/SM_Show_Tre02.SM_Show_Tre02"
+  },
   [401] = {
     ModelId = 401,
     ModelScale = 0.8,
@@ -464,7 +506,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet009_Haomeng/Mesh/Pet_Haomeng_SM.Pet_Haomeng_SM"
   },
   [411] = {
-    AdditionalFXID = T.RT_27,
+    AdditionalFXID = T.RT_35,
     ModelId = 411,
     ModelScale = 0.7,
     PetModelId = 1,
@@ -591,70 +633,70 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet009_Haomeng/Mesh/Pet_Haomeng_SM.Pet_Haomeng_SM"
   },
   [441] = {
-    AdditionalFXID = T.RT_28,
+    AdditionalFXID = T.RT_36,
     ModelId = 441,
     ModelScale = 0.8,
     PetModelId = 3,
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet006_Zisha/Mesh/Pet_Zisha_SM.Pet_Zisha_SM"
   },
   [442] = {
-    AdditionalFXID = T.RT_29,
+    AdditionalFXID = T.RT_37,
     ModelId = 442,
     ModelScale = 0.8,
     PetModelId = 3,
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet001_Yuyi/Mesh/Pet_Yuyi_SM.Pet_Yuyi_SM"
   },
   [443] = {
-    AdditionalFXID = T.RT_30,
+    AdditionalFXID = T.RT_38,
     ModelId = 443,
     ModelScale = 0.85,
     PetModelId = 3,
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet002_Dahuo/Mesh/Pet_Dahuo_SM.Pet_Dahuo_SM"
   },
   [444] = {
-    AdditionalFXID = T.RT_31,
+    AdditionalFXID = T.RT_39,
     ModelId = 444,
     ModelScale = 0.7,
     PetModelId = 3,
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet004_Zhamao/Mesh/Pet_Zhamao_SM.Pet_Zhamao_SM"
   },
   [445] = {
-    AdditionalFXID = T.RT_32,
+    AdditionalFXID = T.RT_40,
     ModelId = 445,
     ModelScale = 0.85,
     PetModelId = 3,
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet003_Yaoye/Mesh/Pet_Yaoye_SM.Pet_Yaoye_SM"
   },
   [446] = {
-    AdditionalFXID = T.RT_33,
+    AdditionalFXID = T.RT_41,
     ModelId = 446,
     ModelScale = 0.85,
     PetModelId = 3,
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet005_Shanling/Mesh/Pet_Shanling_SM.Pet_Shanling_SM"
   },
   [447] = {
-    AdditionalFXID = T.RT_34,
+    AdditionalFXID = T.RT_42,
     ModelId = 447,
     ModelScale = 0.7,
     PetModelId = 3,
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet007_Nihao/Mesh/Pet_Nihao_SM.Pet_Nihao_SM"
   },
   [448] = {
-    AdditionalFXID = T.RT_35,
+    AdditionalFXID = T.RT_43,
     ModelId = 448,
     ModelScale = 0.75,
     PetModelId = 3,
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet008_Zhenzhu/Mesh/Pet_Zhenzhu_SM.Pet_Zhenzhu_SM"
   },
   [449] = {
-    AdditionalFXID = T.RT_36,
+    AdditionalFXID = T.RT_44,
     ModelId = 449,
     ModelScale = 0.75,
     PetModelId = 3,
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet009_Haomeng/Mesh/Pet_Haomeng_SM.Pet_Haomeng_SM"
   },
   [451] = {
-    AdditionalFXID = T.RT_37,
+    AdditionalFXID = T.RT_45,
     ModelId = 451,
     ModelScale = 0.7,
     PetModelId = 2,
@@ -691,42 +733,42 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet017_Qiuqiu/Mesh/Pet_Qiuqiu_SM.Pet_Qiuqiu_SM"
   },
   [461] = {
-    AdditionalFXID = T.RT_38,
+    AdditionalFXID = T.RT_46,
     ModelId = 461,
     ModelScale = 0.7,
     PetModelId = 3,
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet018_Fuyou/Mesh/Pet_Fuyou_SM.Pet_Fuyou_SM"
   },
   [462] = {
-    AdditionalFXID = T.RT_39,
+    AdditionalFXID = T.RT_47,
     ModelId = 462,
     ModelScale = 0.8,
     PetModelId = 3,
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet013_Tangshuang/Mesh/Pet_Tangshuang_SM.Pet_Tangshuang_SM"
   },
   [463] = {
-    AdditionalFXID = T.RT_40,
+    AdditionalFXID = T.RT_48,
     ModelId = 463,
     ModelScale = 0.8,
     PetModelId = 3,
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet014_YYHW/Mesh/Pet_YYHW_SM.Pet_YYHW_SM"
   },
   [464] = {
-    AdditionalFXID = T.RT_41,
+    AdditionalFXID = T.RT_49,
     ModelId = 464,
     ModelScale = 0.8,
     PetModelId = 3,
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet016_Pipa/Mesh/Pet_Pipa_SM.Pet_Pipa_SM"
   },
   [465] = {
-    AdditionalFXID = T.RT_42,
+    AdditionalFXID = T.RT_50,
     ModelId = 465,
     ModelScale = 0.75,
     PetModelId = 3,
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet015_Mianmian/Mesh/Pet_Mianmian_SM.Pet_Mianmian_SM"
   },
   [466] = {
-    AdditionalFXID = T.RT_43,
+    AdditionalFXID = T.RT_51,
     ModelId = 466,
     ModelScale = 0.8,
     PetModelId = 3,
@@ -755,6 +797,12 @@ return ReadOnly("Model", {
     ModelId = 474,
     ModelScale = 0.8,
     SkeletonMeshPath = "Asset/Char/Npc/NPC_Wuyou/Mesh/NPC_Wuyou01_SM.NPC_Wuyou01_SM"
+  },
+  [490] = {
+    ModelId = 490,
+    ModelScale = 0.75,
+    PetModelId = 4,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet019_YYD/Mesh/Pet_YYD04_SM.Pet_YYD04_SM"
   },
   [491] = {
     ModelId = 491,
@@ -897,7 +945,7 @@ return ReadOnly("Model", {
   },
   [922] = {
     ModelId = 922,
-    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/Shouwei_Jaohui_SM.Shouwei_Jaohui_SM"
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_Defence_JH.SM_IP_Defence_JH"
   },
   [923] = {
     ModelId = 923,
@@ -1029,10 +1077,22 @@ return ReadOnly("Model", {
     ModelId = 954,
     SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_TreasureMap04.SM_IP_TreasureMap04"
   },
+  [955] = {
+    ModelId = 955,
+    ModelScale = 2,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_Yjd_Book01.SM_IP_Yjd_Book01"
+  },
+  [956] = {
+    ModelId = 956,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_Yjd_Book02.SM_IP_Yjd_Book02"
+  },
+  [957] = {
+    ModelId = 957,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_Yjd_Book03.SM_IP_Yjd_Book03"
+  },
   [960] = {
     ModelId = 960,
-    ModelScale = 1.2,
-    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_Com_Dev01.SM_IP_Com_Dev01"
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_Com_Dec_01.SM_Com_Dec_01"
   },
   [999] = {
     AssistSockets = T.RT_4,
@@ -1045,6 +1105,7 @@ return ReadOnly("Model", {
     AssistSockets = T.RT_1,
     AudioPrefix = "Heitao_",
     AvatarExpressionPrefix = "Heitao_",
+    CharAccessoryOffsetId = T.RT_15,
     CloakMeshPath = "Asset/Char/Player/Char001_Heitao_J/Mesh/Heitao_Cloak_SM.Heitao_Cloak_SM",
     DamageFXSockets = T.RT_1,
     FootType = "heeledMid",
@@ -1057,13 +1118,14 @@ return ReadOnly("Model", {
     RunStopStartTime = 0.23,
     SkeletonMeshPath = "Asset/Char/Player/Char001_Heitao_J/Mesh/Heitao_SM.Heitao_SM",
     StandId = "001",
-    UnbindSocketOffset = T.RT_14,
+    UnbindSocketOffset = T.RT_16,
     WeaponScale = 1
   },
   [1102] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Player/Heitao/ABP_Heitao_New.ABP_Heitao_New_C'",
     AssistSockets = T.RT_1,
     AudioPrefix = "Heitao_",
+    CharAccessoryOffsetId = {1102},
     DamageFXSockets = T.RT_1,
     FootType = "heeledMid",
     HeadScale = 0.96,
@@ -1074,7 +1136,7 @@ return ReadOnly("Model", {
     RunStopStartTime = 0.23,
     SkeletonMeshPath = "Asset/Char/Player/Char016_Fuluo/Mesh/Fuluo_SM.Fuluo_SM",
     StandId = "001",
-    UnbindSocketOffset = T.RT_14,
+    UnbindSocketOffset = T.RT_16,
     WeaponScale = 1
   },
   [1103] = {
@@ -1082,6 +1144,7 @@ return ReadOnly("Model", {
     AssistSockets = T.RT_1,
     AudioPrefix = "Tuosi_",
     BuffLightMeshPath = "/Game/Asset/Char/Player/Char025_Tuosi/Mesh/Tuosi02B_Part03_SM.Tuosi02B_Part03_SM",
+    CharAccessoryOffsetId = T.RT_17,
     CloakMeshPath = "Asset/Char/Player/Char025_Tuosi/Mesh/Tuosi01_Cloak_SM.Tuosi01_Cloak_SM",
     DamageFXSockets = T.RT_1,
     FootType = "bootHeavy",
@@ -1116,6 +1179,7 @@ return ReadOnly("Model", {
     AssistSockets = T.RT_1,
     AudioPrefix = "Baonu_",
     BuffLightMeshPath = "/Game/Asset/Char/Player/Char007_Baonu/Mesh/Baonu_Part01_SM.Baonu_Part01_SM",
+    CharAccessoryOffsetId = T.RT_19,
     DamageFXSockets = T.RT_1,
     FootType = "heeledLight",
     HitMontageRule = "RoleDefault",
@@ -1132,6 +1196,7 @@ return ReadOnly("Model", {
     AssistSockets = T.RT_1,
     AudioPrefix = "Nifu_",
     BuffLightMeshPath = "/Game/Asset/Char/Player/Char031_Nifu/Mesh/Nifu_Part02_SM.Nifu_Part02_SM",
+    CharAccessoryOffsetId = T.RT_20,
     DamageFXSockets = T.RT_1,
     FootType = "heeledHeavy",
     HitMontageRule = "RoleDefault",
@@ -1150,6 +1215,7 @@ return ReadOnly("Model", {
     AudioPrefix = "Kezhou_",
     AvatarExpressionPrefix = "Kezhou_",
     BuffLightMeshPath = "/Game/Asset/Char/Player/Char030_Kezhou/Mesh/Kezhou_Part05_SM.Kezhou_Part05_SM",
+    CharAccessoryOffsetId = T.RT_21,
     CloakMeshPath = "Asset/Char/Player/Char030_Kezhou/Mesh/Kezhou_Cloak_SM.Kezhou_Cloak_SM",
     DamageFXSockets = T.RT_1,
     FootType = "bootHeavy",
@@ -1164,6 +1230,7 @@ return ReadOnly("Model", {
     WeaponScale = 1.14
   },
   [1504] = {
+    AccessoryMeshPath = T.RT_13,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Player/Suyi/ABP_Suyi.ABP_Suyi_C'",
     AssistSockets = T.RT_1,
     AudioPrefix = "Suyi_",
@@ -1172,7 +1239,7 @@ return ReadOnly("Model", {
     HeadScale = 0.98,
     HitMontageRule = "RoleDefault",
     ModelId = 1504,
-    ModelTag = T.RT_17,
+    ModelTag = T.RT_23,
     MontageFolder = "/Game/Asset/Char/Player/Char032_Suyi/Animation/Montage/",
     MontagePrefix = "Suyi_",
     RunStopStartTime = 0.23,
@@ -1181,7 +1248,7 @@ return ReadOnly("Model", {
     WeaponScale = 1
   },
   [1505] = {
-    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Player/Lizi/ABP_Lizi.ABP_Lizi_C'",
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Player/SpBaonu/ABP_SpBaonu.ABP_SpBaonu_C'",
     AssistSockets = T.RT_1,
     AudioPrefix = "Haier_",
     AvatarExpressionPrefix = "Haier_",
@@ -1189,7 +1256,7 @@ return ReadOnly("Model", {
     FootType = "heeledHeavy",
     HeadScale = 0.9215,
     HitMontageRule = "RoleDefault",
-    KawaiiIdList = T.RT_18,
+    KawaiiIdList = T.RT_24,
     ModelId = 1505,
     ModelScale = 0.95,
     MontageFolder = "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/",
@@ -1218,7 +1285,7 @@ return ReadOnly("Model", {
     WeaponScale = 0.9
   },
   [2101] = {
-    AccessoryMeshPath = T.RT_20,
+    AccessoryMeshPath = T.RT_26,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Player/Shuimu/ABP_Shuimu.ABP_Shuimu_C'",
     AssistSockets = T.RT_1,
     AudioPrefix = "Shuimu_",
@@ -1227,7 +1294,7 @@ return ReadOnly("Model", {
     FootType = "heeledMid",
     HeadScale = 0.931,
     HitMontageRule = "RoleDefault",
-    KawaiiIdList = T.RT_21,
+    KawaiiIdList = T.RT_27,
     ModelId = 2101,
     ModelScale = 0.9785,
     MontageFolder = "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/",
@@ -1261,18 +1328,15 @@ return ReadOnly("Model", {
     BuffLightMeshPath = "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Part02_SM.Baiheng_Part02_SM",
     DamageFXSockets = T.RT_1,
     FootType = "heeledHeavy",
-    HandScale = 0.855,
-    HeadScale = 0.9595,
     HitMontageRule = "RoleDefault",
     ModelId = 2401,
-    ModelScale = 0.95,
-    ModelTag = T.RT_17,
+    ModelTag = T.RT_23,
     MontageFolder = "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/",
     MontagePrefix = "Baiheng_",
     RunStopStartTime = 0.18,
-    SkeletonMeshPath = "Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_SM.Baiheng_SM",
+    SkeletonMeshPath = "Asset/Char/Player/Char015_Baiheng/Mesh/BaihengNew_SM.BaihengNew_SM",
     StandId = "004",
-    WeaponScale = 1.045
+    TailMeshPath = "Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Part03_SM.Baiheng_Part03_SM"
   },
   [3101] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Player/Linen/ABP_Linen.ABP_Linen_C'",
@@ -1335,7 +1399,7 @@ return ReadOnly("Model", {
     FootType = "heeledHeavy",
     HeadScale = 0.9215,
     HitMontageRule = "RoleDefault",
-    KawaiiIdList = T.RT_18,
+    KawaiiIdList = T.RT_24,
     ModelId = 3201,
     ModelScale = 0.95,
     MontageFolder = "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/",
@@ -1343,6 +1407,7 @@ return ReadOnly("Model", {
     RunStopStartTime = 0.18,
     SkeletonMeshPath = "Asset/Char/Player/Char006_Haier/Mesh/Haier_SM.Haier_SM",
     StandId = "006",
+    TailMeshPath = "Asset/Char/Player/Char006_Haier/Mesh/Haier_Part02_SM.Haier_Part02_SM",
     WeaponScale = 1.045
   },
   [3202] = {
@@ -1396,7 +1461,7 @@ return ReadOnly("Model", {
     RunStopStartTime = 0.23,
     SkeletonMeshPath = "Asset/Char/Player/Char020_Lise/Mesh/Lise_SM.Lise_SM",
     StandId = "001",
-    UnbindSocketOffset = T.RT_14
+    UnbindSocketOffset = T.RT_16
   },
   [4102] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Player/Zhiliu/ABP_Zhiliu.ABP_Zhiliu_C'",
@@ -1505,7 +1570,7 @@ return ReadOnly("Model", {
     WeaponScale = 1.14
   },
   [5301] = {
-    AccessoryMeshPath = T.RT_46,
+    AccessoryMeshPath = T.RT_54,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Player/Saiqi/ABP_Saiqi.ABP_Saiqi_C'",
     AssistSockets = T.RT_1,
     AudioPrefix = "Saiqi_",
@@ -1515,7 +1580,7 @@ return ReadOnly("Model", {
     HeadScale = 0.98,
     HitMontageRule = "RoleDefault",
     ModelId = 5301,
-    ModelTag = T.RT_17,
+    ModelTag = T.RT_23,
     MontageFolder = "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/",
     MontagePrefix = "Saiqi_",
     RunStopStartTime = 0.23,
@@ -1567,6 +1632,11 @@ return ReadOnly("Model", {
   [9144] = {
     ModelId = 9144,
     SkeletonMeshPath = "Asset/Scene/EN002_Haiboliya/Binghucheng/BH_Home/Mesh/SM_Home_Forge05.SM_Home_Forge05"
+  },
+  [10000] = {
+    BirthTime = -1,
+    ModelId = 10000,
+    SkeletonMeshPath = "Asset/Char/Mount/Mnt001_Bian/Mesh/Mnt001_Bian_SM.Mnt001_Bian_SM"
   },
   [10001] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/ZhujueNpc/Nvzhu/ABP_Npc_Nvzhu.ABP_Npc_Nvzhu_C'",
@@ -2035,35 +2105,44 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Char029_Zhiliu/Mesh/Zhiliu_SM"
   },
   [10053] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/HeiTao/ABP_NPC_Heitao.ABP_NPC_Heitao_C'",
     AudioPrefix = "Heitao_",
     ModelId = 10053,
     MontageFolder = "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/",
-    MontagePrefix = "Heitao_"
+    MontagePrefix = "Heitao_",
+    SkeletonMeshPath = "Asset/Char/Player/Char001_Heitao_J/Mesh/HeiTao_SM.HeiTao_SM"
   },
   [10054] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Saiqi/ABP_NPC_Saiqi.ABP_NPC_Saiqi_C'",
     AudioPrefix = "Saiqi_",
     ModelId = 10054,
     MontageFolder = "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/",
-    MontagePrefix = "Saiqi_"
+    MontagePrefix = "Saiqi_",
+    SkeletonMeshPath = "Asset/Char/Player/Char010_Saiqi/Mesh/Saiqi_SM.Saiqi_SM"
   },
   [10055] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/BaiNpc/BaiTX/ABP_BaiTX.ABP_BaiTX_C'",
     AudioPrefix = "Npc_BaiTX_",
     ModelId = 10055,
     MontageFolder = "/Game/Asset/Char/Npc/NPC_BaiTX/Animation/Montage/",
-    MontagePrefix = "Npc_BaiTX_"
+    MontagePrefix = "Npc_BaiTX_",
+    SkeletonMeshPath = "Asset/Char/Npc/NPC_BaiTX/Mesh/NPC_BaiTX_SM.NPC_BaiTX_SM"
   },
   [10056] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Kamila/ABP_NPC_Kami.ABP_NPC_Kami_C'",
     AudioPrefix = "Kami_",
     ModelId = 10056,
     MontageFolder = "/Game/Asset/Char/Player/Char014_Kami/Animation/Montage/",
-    MontagePrefix = "Kami_"
+    MontagePrefix = "Kami_",
+    SkeletonMeshPath = "Asset/Char/Player/Char014_Kami/Mesh/Kami_SM.Kami_SM"
   },
   [10057] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Baiheng/ABP_NPC_Baiheng.ABP_NPC_Baiheng_C'",
     AudioPrefix = "Baiheng_",
     ModelId = 10057,
-    ModelScale = 0.95,
     MontageFolder = "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/",
-    MontagePrefix = "Baiheng_"
+    MontagePrefix = "Baiheng_",
+    SkeletonMeshPath = "Asset/Char/Player/Char015_Baiheng/Mesh/BaihengNew_SM.BaihengNew_SM"
   },
   [10058] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/ZhujueNpc/Weita_F/ABP_NPC_Weita_F.ABP_NPC_Weita_F_C'",
@@ -2300,6 +2379,62 @@ return ReadOnly("Model", {
     MontagePrefix = "Tuosi_",
     SkeletonMeshPath = "Asset/Char/Player/Char025_Tuosi/Mesh/Tuosi01_SM.Tuosi01_SM"
   },
+  [10084] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Qiu/ABP_NPC_Qiu.ABP_NPC_Qiu_C'",
+    AudioPrefix = "NPC_Qiu_",
+    AvatarExpressionPrefix = "Qiu_",
+    FootType = "bootHeavy",
+    ModelId = 10084,
+    ModelScale = 0.95,
+    MontageFolder = "/Game/Asset/Char/Npc/NPC_Qiu/Animation/Montage/",
+    MontagePrefix = "NPC_Qiu_",
+    SkeletonMeshPath = "Asset/Char/Npc/NPC_Qiu/Mesh/NPC_Qiu_SM.NPC_Qiu_SM"
+  },
+  [10085] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Fufeng/ABP_NPC_Fufeng.ABP_NPC_Fufeng_C'",
+    AudioPrefix = "NPC_Fufeng_",
+    FootType = "heeledHeavy",
+    ModelId = 10085,
+    MontageFolder = "/Game/Asset/Char/Npc/NPC_Fufeng/Animation/Montage/",
+    MontagePrefix = "NPC_Fufeng_",
+    SkeletonMeshPath = "Asset/Char/Npc/NPC_Fufeng/Mesh/NPC_Fufeng_SM.NPC_Fufeng_SM"
+  },
+  [10086] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Fufeng/ABP_NPC_Fufeng.ABP_NPC_Fufeng_C'",
+    AudioPrefix = "NPC_Fufeng_",
+    ModelId = 10086,
+    MontageFolder = "/Game/Asset/Char/Npc/NPC_Fufeng/Animation/Montage/",
+    MontagePrefix = "NPC_Fufeng_",
+    SkeletonMeshPath = "Asset/Char/Npc/NPC_Fufeng/Mesh/NPC_Fufeng_SM.NPC_Fufeng_SM"
+  },
+  [10087] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/BaiNpc/BaiJL/ABP_BaiJL.ABP_BaiJL_C'",
+    AudioPrefix = "Npc_BaiJL_",
+    AvatarExpressionPrefix = "BaiJL_",
+    FootType = "heeledLight",
+    ModelId = 10087,
+    MontageFolder = "/Game/Asset/Char/Npc/NPC_BaiJL/Animation/Montage/",
+    MontagePrefix = "Npc_BaiJL_",
+    SkeletonMeshPath = "Asset/Char/Npc/NPC_BaiJL/Mesh/NPC_BaiJL_SM.NPC_BaiJL_SM"
+  },
+  [10088] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/BaiNpc/BaiHX/ABP_BaiHX.ABP_BaiHX_C'",
+    AudioPrefix = "Npc_BaiHX_",
+    ModelId = 10088,
+    MontageFolder = "/Game/Asset/Char/Npc/NPC_BaiHX/Animation/Montage/",
+    MontagePrefix = "Npc_BaiHX_",
+    SkeletonMeshPath = "Asset/Char/Npc/NPC_BaiHX/Mesh/NPC_BaiHX_SM.NPC_BaiHX_SM"
+  },
+  [10090] = {
+    AccessoryMeshPath = T.RT_13,
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Suyi/ABP_NPC_Suyi.ABP_NPC_Suyi_C'",
+    AudioPrefix = "NPC_Suyi_",
+    FootType = "heeledHeavy",
+    ModelId = 10090,
+    MontageFolder = "/Game/Asset/Char/Npc/NPC_Suyi/Animation/Montage/",
+    MontagePrefix = "NPC_Suyi_",
+    SkeletonMeshPath = "Asset/Char/Player/Char032_Suyi/Mesh/Suyi_SM.Suyi_SM"
+  },
   [30001] = {ModelId = 30001},
   [30002] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Custom/Base/ABP_LNM_Custom.ABP_LNM_Custom_C'",
@@ -2357,17 +2492,19 @@ return ReadOnly("Model", {
     MontagePrefix = "Npc_Qingnian_F_"
   },
   [30008] = {
-    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Custom/Base/ABP_YN_Custom.ABP_YN_Custom_C'",
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Custom/Base/ABP_YNM_Custom.ABP_YNM_Custom_C'",
     AudioPrefix = "Npc_Younian_",
     ModelId = 30008,
+    MontageFacePrefix = "Npc_Younian_M_",
     MontageFolder = "/Game/Asset/Char/Npc/Npc_Custom/CM_Younian/Animation/Montage/",
     MontagePrefix = "Npc_Younian_"
   },
   [30009] = {
-    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Custom/Base/ABP_YN_Custom.ABP_YN_Custom_C'",
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Custom/Base/ABP_YNF_Custom.ABP_YNF_Custom_C'",
     AudioPrefix = "Npc_Younian_",
     FootType = "heeledLight",
     ModelId = 30009,
+    MontageFacePrefix = "Npc_Younian_F_",
     MontageFolder = "/Game/Asset/Char/Npc/Npc_Custom/CM_Younian/Animation/Montage/",
     MontagePrefix = "Npc_Younian_"
   },
@@ -2456,32 +2593,36 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Monster/NE_Dajie/Mesh/NE_Dajie_SM.NE_Dajie_SM"
   },
   [30021] = {
-    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/NPC_Wuyou/Wuyou01/ABP_NPC_Wuyou01.ABP_NPC_Wuyou01_C'",
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/ABP_NPC_Wuyou.ABP_NPC_Wuyou_C'",
     AudioPrefix = "Wuyou_",
+    AvatarExpressionPrefix = "Wuyou01_",
     ModelId = 30021,
     MontageFolder = "/Game/Asset/Char/Npc/NPC_Wuyou/Animation/Montage/",
     MontagePrefix = "Wuyou_",
     SkeletonMeshPath = "Asset/Char/Npc/NPC_Wuyou/Mesh/NPC_Wuyou01_SM.NPC_Wuyou01_SM"
   },
   [30022] = {
-    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/NPC_Wuyou/Wuyou01/ABP_NPC_Wuyou01.ABP_NPC_Wuyou01_C'",
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/ABP_NPC_Wuyou.ABP_NPC_Wuyou_C'",
     AudioPrefix = "Wuyou_",
+    AvatarExpressionPrefix = "Wuyou02_",
     ModelId = 30022,
     MontageFolder = "/Game/Asset/Char/Npc/NPC_Wuyou/Animation/Montage/",
     MontagePrefix = "Wuyou_",
     SkeletonMeshPath = "Asset/Char/Npc/NPC_Wuyou/Mesh/NPC_Wuyou02_SM.NPC_Wuyou02_SM"
   },
   [30023] = {
-    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/NPC_Wuyou/Wuyou01/ABP_NPC_Wuyou01.ABP_NPC_Wuyou01_C'",
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/ABP_NPC_Wuyou.ABP_NPC_Wuyou_C'",
     AudioPrefix = "Wuyou_",
+    AvatarExpressionPrefix = "Wuyou03_",
     ModelId = 30023,
     MontageFolder = "/Game/Asset/Char/Npc/NPC_Wuyou/Animation/Montage/",
     MontagePrefix = "Wuyou_",
     SkeletonMeshPath = "Asset/Char/Npc/NPC_Wuyou/Mesh/NPC_Wuyou03_SM.NPC_Wuyou03_SM"
   },
   [30024] = {
-    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/NPC_Wuyou/Wuyou01/ABP_NPC_Wuyou01.ABP_NPC_Wuyou01_C'",
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/ABP_NPC_Wuyou.ABP_NPC_Wuyou_C'",
     AudioPrefix = "Wuyou_",
+    AvatarExpressionPrefix = "Wuyou04_",
     ModelId = 30024,
     MontageFolder = "/Game/Asset/Char/Npc/NPC_Wuyou/Animation/Montage/",
     MontagePrefix = "Wuyou_",
@@ -2513,8 +2654,9 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Monster/JT_Pizhuo/Mesh/JT_Pizhuo_SM.JT_Pizhuo_SM"
   },
   [30028] = {
-    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/NPC_Wuyou/Wuyou01/ABP_NPC_Wuyou01.ABP_NPC_Wuyou01_C'",
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/ABP_NPC_Wuyou.ABP_NPC_Wuyou_C'",
     AudioPrefix = "Wuyou_",
+    AvatarExpressionPrefix = "Wuyou06_",
     ModelId = 30028,
     MontageFolder = "/Game/Asset/Char/Npc/NPC_Wuyou/Animation/Montage/",
     MontagePrefix = "Wuyou_",
@@ -2533,6 +2675,40 @@ return ReadOnly("Model", {
     MontagePrefix = "Lilikou_",
     SkeletonMeshPath = "Asset/Char/Player/Char034_Lilikou/Mesh/Lilikou_SM.Lilikou_SM"
   },
+  [30031] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/ABP_NPC_Animal.ABP_NPC_Animal_C'",
+    AudioPrefix = "HX_BiAn_",
+    ModelId = 30031,
+    MontageFolder = "/Game/Asset/Char/Monster/HX_Bian/Animation/Montage/",
+    MontagePrefix = "HX_BiAn_",
+    SkeletonMeshPath = "Asset/Char/Monster/HX_Bian/Mesh/HX_Bian_SM.HX_Bian_SM"
+  },
+  [30032] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/TalkMonster/Monster/Heilong/ABP_NPC_Heilong.ABP_NPC_Heilong_C'",
+    AudioPrefix = "Boss_Heilong_",
+    ModelId = 30032,
+    MontageFolder = "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/",
+    MontagePrefix = "Boss_Heilong_",
+    SkeletonMeshPath = "Asset/Char/Monster/Boss10_Heilong/Mesh/Boss_Heilong_SM.Boss_Heilong_SM"
+  },
+  [30033] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/BaiNpc/BaiSD/ABP_BaiSD_Stand.ABP_BaiSD_Stand_C'",
+    AudioPrefix = "Bai_",
+    FootType = "heeledLight",
+    HeadScale = 0.97,
+    ModelId = 30033,
+    MontageFolder = "/Game/Asset/Char/Npc/NPC_BaiSD/Animation/Montage/",
+    MontagePrefix = "NPC_BaiSD_",
+    SkeletonMeshPath = "Asset/Char/Npc/NPC_BaiSD/Mesh/NPC_BaiSD_SM.NPC_BaiSD_SM"
+  },
+  [30034] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/TalkMonster/Monster/Heilong/ABP_Npc_Heilong_Stage02.ABP_Npc_Heilong_Stage02_C'",
+    AudioPrefix = "Boss_Heilong_",
+    ModelId = 30034,
+    MontageFolder = "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/",
+    MontagePrefix = "Boss_Heilong_",
+    SkeletonMeshPath = "Asset/Char/Monster/Boss10_Heilong/Mesh/Boss_Heilong_SM.Boss_Heilong_SM"
+  },
   [42002] = {
     ModelId = 42002,
     ModelScale = 0.65,
@@ -2545,7 +2721,7 @@ return ReadOnly("Model", {
     FootType = "heeledMid",
     ModelId = 51101,
     ModelScale = 0.9,
-    ModelTag = T.RT_44,
+    ModelTag = T.RT_52,
     MontageFolder = "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/",
     MontagePrefix = "Heitao_",
     SkeletonMeshPath = "Asset/Char/Player/Char001_Heitao_J/Mesh/HeiTao_SM.HeiTao_SM"
@@ -2576,7 +2752,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Char030_Kezhou/Mesh/Kezhou_SM.Kezhou_SM"
   },
   [52101] = {
-    AccessoryMeshPath = T.RT_20,
+    AccessoryMeshPath = T.RT_26,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Shuimu/ABP_NPC_Shuimu.ABP_NPC_Shuimu_C'",
     AudioPrefix = "ShuiMu_",
     FootType = "heeledMid",
@@ -2592,7 +2768,7 @@ return ReadOnly("Model", {
     AudioPrefix = "Zhangyu_",
     FootType = "heeledLight",
     ModelId = 52301,
-    ModelTag = T.RT_45,
+    ModelTag = T.RT_53,
     MontageFolder = "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/",
     MontagePrefix = "Zhangyu_",
     SkeletonMeshPath = "Asset/Char/Player/Char004_Zhangyu/Mesh/Zhangyu_SM.Zhangyu_SM"
@@ -2608,7 +2784,8 @@ return ReadOnly("Model", {
     ModelTag = T.RT_5,
     MontageFolder = "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/",
     MontagePrefix = "Haier_",
-    SkeletonMeshPath = "Asset/Char/Player/Char006_Haier/Mesh/Haier_SM.Haier_SM"
+    SkeletonMeshPath = "Asset/Char/Player/Char006_Haier/Mesh/Haier_SM.Haier_SM",
+    TailMeshPath = "Asset/Char/Player/Char006_Haier/Mesh/Haier_Part02_SM.Haier_Part02_SM"
   },
   [54102] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Zhiliu/ABP_NPC_Zhiliu.ABP_NPC_Zhiliu_C'",
@@ -2661,7 +2838,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet006_Zisha/Mesh/Pet_Zisha_SM.Pet_Zisha_SM"
   },
   [64013] = {
-    AdditionalFXID = T.RT_28,
+    AdditionalFXID = T.RT_36,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Pet/Zisha/ABP_PetQuad_Zisha.ABP_PetQuad_Zisha_C'",
     ModelId = 64013,
     ModelScale = 1.5,
@@ -2683,7 +2860,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet001_Yuyi/Mesh/Pet_Yuyi_SM.Pet_Yuyi_SM"
   },
   [64023] = {
-    AdditionalFXID = T.RT_29,
+    AdditionalFXID = T.RT_37,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Pet/Yuyi/ABP_PetFloat_Yuyi.ABP_PetFloat_Yuyi_C'",
     ModelId = 64023,
     ModelScale = 1.5,
@@ -2705,7 +2882,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet002_Dahuo/Mesh/Pet_Dahuo_SM.Pet_Dahuo_SM"
   },
   [64033] = {
-    AdditionalFXID = T.RT_30,
+    AdditionalFXID = T.RT_38,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Pet/Dahuo/ABP_PetFloat_Dahuo.ABP_PetFloat_Dahuo_C'",
     ModelId = 64033,
     ModelScale = 1.5,
@@ -2727,7 +2904,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet004_Zhamao/Mesh/Pet_Zhamao_SM.Pet_Zhamao_SM"
   },
   [64043] = {
-    AdditionalFXID = T.RT_31,
+    AdditionalFXID = T.RT_39,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Pet/Zhamao/ABP_PetQuad_Zhamao.ABP_PetQuad_Zhamao_C'",
     ModelId = 64043,
     ModelScale = 1.5,
@@ -2749,7 +2926,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet003_Yaoye/Mesh/Pet_Yaoye_SM.Pet_Yaoye_SM"
   },
   [64053] = {
-    AdditionalFXID = T.RT_32,
+    AdditionalFXID = T.RT_40,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Pet/Yaoye/ABP_PetFloat_Yaoye.ABP_PetFloat_Yaoye_C'",
     ModelId = 64053,
     ModelScale = 1.5,
@@ -2771,7 +2948,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet005_Shanling/Mesh/Pet_Shanling_SM.Pet_Shanling_SM"
   },
   [64063] = {
-    AdditionalFXID = T.RT_33,
+    AdditionalFXID = T.RT_41,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Pet/Shanling/ABP_PetBiped_Shanling.ABP_PetBiped_Shanling_C'",
     ModelId = 64063,
     ModelScale = 1.5,
@@ -2793,7 +2970,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet007_Nihao/Mesh/Pet_Nihao_SM.Pet_Nihao_SM"
   },
   [64073] = {
-    AdditionalFXID = T.RT_34,
+    AdditionalFXID = T.RT_42,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Pet/Nihao/ABP_PetFloatSpecial_Nihao.ABP_PetFloatSpecial_Nihao_C'",
     ModelId = 64073,
     ModelScale = 1.5,
@@ -2815,7 +2992,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet008_Zhenzhu/Mesh/Pet_Zhenzhu_SM.Pet_Zhenzhu_SM"
   },
   [64083] = {
-    AdditionalFXID = T.RT_35,
+    AdditionalFXID = T.RT_43,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Pet/Zhenzhu/ABP_PetBiped_Zhenzhu.ABP_PetBiped_Zhenzhu_C'",
     ModelId = 64083,
     ModelScale = 1.5,
@@ -2837,7 +3014,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet009_Haomeng/Mesh/Pet_Haomeng_SM.Pet_Haomeng_SM"
   },
   [64093] = {
-    AdditionalFXID = T.RT_36,
+    AdditionalFXID = T.RT_44,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Pet/Haomeng/ABP_PetBiped_Haomeng.ABP_PetBiped_Haomeng_C'",
     ModelId = 64093,
     ModelScale = 1.5,
@@ -2845,7 +3022,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet009_Haomeng/Mesh/Pet_Haomeng_SM.Pet_Haomeng_SM"
   },
   [64111] = {
-    AdditionalFXID = T.RT_27,
+    AdditionalFXID = T.RT_35,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Pet/Fuyou/ABP_PetFloat_Fuyou.ABP_PetFloat_Fuyou_C'",
     ModelId = 64111,
     ModelScale = 1.5,
@@ -2853,7 +3030,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet018_Fuyou/Mesh/Pet_Fuyou_SM.Pet_Fuyou_SM"
   },
   [64112] = {
-    AdditionalFXID = T.RT_37,
+    AdditionalFXID = T.RT_45,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Pet/Fuyou/ABP_PetFloat_Fuyou.ABP_PetFloat_Fuyou_C'",
     ModelId = 64112,
     ModelScale = 1.5,
@@ -2861,7 +3038,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet018_Fuyou/Mesh/Pet_Fuyou_SM.Pet_Fuyou_SM"
   },
   [64113] = {
-    AdditionalFXID = T.RT_38,
+    AdditionalFXID = T.RT_46,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Pet/Fuyou/ABP_PetFloat_Fuyou.ABP_PetFloat_Fuyou_C'",
     ModelId = 64113,
     ModelScale = 1.5,
@@ -2883,7 +3060,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet013_Tangshuang/Mesh/Pet_Tangshuang_SM.Pet_Tangshuang_SM"
   },
   [64123] = {
-    AdditionalFXID = T.RT_39,
+    AdditionalFXID = T.RT_47,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Pet/Tangshuang/ABP_PetBiped_Tangshuang.ABP_PetBiped_Tangshuang_C'",
     ModelId = 64123,
     ModelScale = 1.5,
@@ -2905,7 +3082,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet014_YYHW/Mesh/Pet_YYHW_SM.Pet_YYHW_SM"
   },
   [64133] = {
-    AdditionalFXID = T.RT_40,
+    AdditionalFXID = T.RT_48,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Pet/YYHW/ABP_PetQuad_YYHW.ABP_PetQuad_YYHW_C'",
     ModelId = 64133,
     ModelScale = 1.5,
@@ -2927,7 +3104,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet016_Pipa/Mesh/Pet_Pipa_SM.Pet_Pipa_SM"
   },
   [64143] = {
-    AdditionalFXID = T.RT_41,
+    AdditionalFXID = T.RT_49,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Pet/Pipa/ABP_PetFloat_Pipa.ABP_PetFloat_Pipa_C'",
     ModelId = 64143,
     ModelScale = 1.5,
@@ -2949,7 +3126,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet015_Mianmian/Mesh/Pet_Mianmian_SM.Pet_Mianmian_SM"
   },
   [64153] = {
-    AdditionalFXID = T.RT_42,
+    AdditionalFXID = T.RT_50,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Pet/Mianmian/ABP_PetFloat_Mianmian.ABP_PetFloat_Mianmian_C'",
     ModelId = 64153,
     ModelScale = 1.5,
@@ -2971,7 +3148,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet017_Qiuqiu/Mesh/Pet_Qiuqiu_SM.Pet_Qiuqiu_SM"
   },
   [64163] = {
-    AdditionalFXID = T.RT_43,
+    AdditionalFXID = T.RT_51,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Pet/Qiuqiu/ABP_PetFloat_Qiuqiu.ABP_PetFloat_Qiuqiu_C'",
     ModelId = 64163,
     ModelScale = 1.5,
@@ -3045,8 +3222,8 @@ return ReadOnly("Model", {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/Pet/YYD/ABP_PetFloat_YYD.ABP_PetFloat_YYD_C'",
     ModelId = 64934,
     ModelScale = 1.5,
-    PetModelId = 3,
-    SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet019_YYD/Mesh/Pet_YYD03_SM.Pet_YYD03_SM"
+    PetModelId = 4,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Pet/Pet019_YYD/Mesh/Pet_YYD04_SM.Pet_YYD04_SM"
   },
   [69001] = {
     ModelId = 69001,
@@ -3055,11 +3232,12 @@ return ReadOnly("Model", {
   [81101] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/HeiTao/ABP_NPC_Heitao.ABP_NPC_Heitao_C'",
     AudioPrefix = "Heitao_",
+    CharAccessoryOffsetId = T.RT_15,
     CloakMeshPath = "Asset/Char/Player/Char001_Heitao_J/Mesh/Heitao_Cloak_SM.Heitao_Cloak_SM",
     FootType = "heeledMid",
     HeadScale = 0.96,
     ModelId = 81101,
-    ModelTag = T.RT_44,
+    ModelTag = T.RT_52,
     MontageFolder = "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/",
     MontagePrefix = "Heitao_",
     SkeletonMeshPath = "Asset/Char/Player/Char001_Heitao_J/Mesh/HeiTao_SM.HeiTao_SM"
@@ -3068,6 +3246,7 @@ return ReadOnly("Model", {
     AccessoryMeshPath = T.RT_11,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Tuosi/ABP_NPC_Tuosi01.ABP_NPC_Tuosi01_C'",
     AudioPrefix = "Tuosi_",
+    CharAccessoryOffsetId = T.RT_17,
     CloakMeshPath = "Asset/Char/Player/Char025_Tuosi/Mesh/Tuosi01_Cloak_SM",
     FootType = "bootHeavy",
     ModelId = 81103,
@@ -3080,9 +3259,10 @@ return ReadOnly("Model", {
   [81501] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Baonu/ABP_NPC_Baonu.ABP_NPC_Baonu_C'",
     AudioPrefix = "Baonu_",
+    CharAccessoryOffsetId = T.RT_19,
     FootType = "heeledLight",
     ModelId = 81501,
-    ModelTag = T.RT_45,
+    ModelTag = T.RT_53,
     MontageFolder = "/Game/Asset/Char/Player/Char007_Baonu/Animation/Montage/",
     MontagePrefix = "Baonu_",
     SkeletonMeshPath = "Asset/Char/Player/Char007_Baonu/Mesh/Baonu_SM.Baonu_SM"
@@ -3090,6 +3270,7 @@ return ReadOnly("Model", {
   [81502] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Nifu/ABP_NPC_Nifu.ABP_NPC_Nifu_C'",
     AudioPrefix = "Nifu_",
+    CharAccessoryOffsetId = T.RT_20,
     FootType = "heeledHeavy",
     ModelId = 81502,
     ModelScale = 0.95,
@@ -3102,6 +3283,7 @@ return ReadOnly("Model", {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Kezhou/ABP_NPC_Kezhou.ABP_NPC_Kezhou_C'",
     AudioPrefix = "Kezhou_",
     AvatarExpressionPrefix = "Kezhou_",
+    CharAccessoryOffsetId = T.RT_21,
     CloakMeshPath = "Asset/Char/Player/Char030_Kezhou/Mesh/Kezhou_Cloak_SM",
     FootType = "bootHeavy",
     ModelId = 81503,
@@ -3115,18 +3297,20 @@ return ReadOnly("Model", {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Feena/ABP_Npc_Feina.ABP_Npc_Feina_C'",
     AudioPrefix = "Feina_",
     AvatarExpressionPrefix = "Feina_",
+    CharAccessoryOffsetId = T.RT_58,
     FootType = "heeledLight",
     ModelId = 81801,
     ModelScale = 0.9,
-    ModelTag = T.RT_44,
+    ModelTag = T.RT_52,
     MontageFolder = "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/",
     MontagePrefix = "Feina_",
     SkeletonMeshPath = "Asset/Char/Player/Char019_Feina/Mesh/Feina_SM.Feina_SM"
   },
   [82101] = {
-    AccessoryMeshPath = T.RT_20,
+    AccessoryMeshPath = T.RT_26,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Shuimu/ABP_NPC_Shuimu.ABP_NPC_Shuimu_C'",
     AudioPrefix = "ShuiMu_",
+    CharAccessoryOffsetId = T.RT_59,
     CloakMeshPath = "Asset/Char/Player/Char005_Shuimu/Mesh/Shuimu_Cloak_SM.Shuimu_Cloak_SM",
     FootType = "heeledMid",
     HeadScale = 0.8844,
@@ -3141,11 +3325,12 @@ return ReadOnly("Model", {
   [82301] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Zhangyu/ABP_NPC_Zhangyu.ABP_NPC_Zhangyu_C'",
     AudioPrefix = "Zhangyu_",
+    CharAccessoryOffsetId = T.RT_60,
     CloakMeshPath = "Asset/Char/Player/Char004_Zhangyu/Mesh/Zhangyu_Cloak_SM",
     FootType = "heeledLight",
     HeadScale = 0.96,
     ModelId = 82301,
-    ModelTag = T.RT_45,
+    ModelTag = T.RT_53,
     MontageFolder = "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/",
     MontagePrefix = "Zhangyu_",
     SkeletonMeshPath = "Asset/Char/Player/Char004_Zhangyu/Mesh/Zhangyu_SM.Zhangyu_SM"
@@ -3154,18 +3339,19 @@ return ReadOnly("Model", {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Baiheng/ABP_NPC_Baiheng.ABP_NPC_Baiheng_C'",
     AudioPrefix = "Baiheng_",
     AvatarExpressionPrefix = "Fushu_",
+    CharAccessoryOffsetId = T.RT_61,
     FootType = "heeledHeavy",
-    HeadScale = 0.9115,
     ModelId = 82401,
-    ModelScale = 0.95,
     ModelTag = T.RT_5,
     MontageFolder = "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/",
     MontagePrefix = "Baiheng_",
-    SkeletonMeshPath = "Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_SM.Baiheng_SM"
+    SkeletonMeshPath = "Asset/Char/Player/Char015_Baiheng/Mesh/BaihengNew_SM.BaihengNew_SM",
+    TailMeshPath = "Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Part03_SM.Baiheng_Part03_SM"
   },
   [83101] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Linen/ABP_NPC_Linen.ABP_NPC_Linen_C'",
     AudioPrefix = "Linen_",
+    CharAccessoryOffsetId = T.RT_62,
     FootType = "heeledHeavy",
     ModelId = 83101,
     ModelScale = 0.95,
@@ -3177,6 +3363,7 @@ return ReadOnly("Model", {
   [83102] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Xier/ABP_NPC_Xier.ABP_NPC_Xier_C'",
     AudioPrefix = "Xier_",
+    CharAccessoryOffsetId = {3102},
     FootType = "heeledMid",
     HeadScale = 0.9657,
     ModelId = 83102,
@@ -3189,10 +3376,11 @@ return ReadOnly("Model", {
   [83103] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Yeer/ABP_NPC_Yeer.ABP_NPC_Yeer_C'",
     AudioPrefix = "Yeer_",
+    CharAccessoryOffsetId = T.RT_63,
     FootType = "heeledLight",
     ModelId = 83103,
     ModelScale = 0.85,
-    ModelTag = T.RT_45,
+    ModelTag = T.RT_53,
     MontageFolder = "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/",
     MontagePrefix = "Yeer_",
     SkeletonMeshPath = "Asset/Char/Player/Char017_Yeer/Mesh/Yeer_SM.Yeer_SM"
@@ -3200,6 +3388,7 @@ return ReadOnly("Model", {
   [83201] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Haier/ABP_NPC_Haier.ABP_NPC_Haier_C'",
     AudioPrefix = "Haier_",
+    CharAccessoryOffsetId = T.RT_64,
     CloakMeshPath = "Asset/Char/Player/Char006_Haier/Mesh/Haier_Cloak_SM.Haier_Cloak_SM",
     FootType = "heeledHeavy",
     HeadScale = 0.8754,
@@ -3208,17 +3397,19 @@ return ReadOnly("Model", {
     ModelTag = T.RT_5,
     MontageFolder = "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/",
     MontagePrefix = "Haier_",
-    SkeletonMeshPath = "Asset/Char/Player/Char006_Haier/Mesh/Haier_SM.Haier_SM"
+    SkeletonMeshPath = "Asset/Char/Player/Char006_Haier/Mesh/Haier_SM.Haier_SM",
+    TailMeshPath = "Asset/Char/Player/Char006_Haier/Mesh/Haier_Part02_SM.Haier_Part02_SM"
   },
   [83301] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Maerjie/ABP_NPC_Maer.ABP_NPC_Maer_C'",
     AudioPrefix = "Maer_",
+    CharAccessoryOffsetId = T.RT_65,
     CloakMeshPath = "Asset/Char/Player/Char024_Maer/Mesh/Maer_Part02_SM.Maer_Part02_SM",
     FootType = "heeledMid",
     HeadScale = 1.02,
     ModelId = 83301,
     ModelScale = 0.95,
-    ModelTag = T.RT_44,
+    ModelTag = T.RT_52,
     MontageFolder = "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/",
     MontagePrefix = "Maer_",
     SkeletonMeshPath = "Asset/Char/Player/Char024_Maer/Mesh/Maer_SM.Maer_SM"
@@ -3226,9 +3417,10 @@ return ReadOnly("Model", {
   [84101] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Lise/ABP_NPC_Lise.ABP_NPC_Lise_C'",
     AudioPrefix = "Lise_",
+    CharAccessoryOffsetId = T.RT_66,
     FootType = "heeledMid",
     ModelId = 84101,
-    ModelTag = T.RT_44,
+    ModelTag = T.RT_52,
     MontageFolder = "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/",
     MontagePrefix = "Lise_",
     SkeletonMeshPath = "Asset/Char/Player/Char020_Lise/Mesh/Lise_SM.Lise_SM"
@@ -3237,6 +3429,7 @@ return ReadOnly("Model", {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Zhiliu/ABP_NPC_Zhiliu.ABP_NPC_Zhiliu_C'",
     AudioPrefix = "Zhiliu_",
     AvatarExpressionPrefix = "Zhiliu_",
+    CharAccessoryOffsetId = {4102},
     CloakMeshPath = "Asset/Char/Player/Char029_Zhiliu/Mesh/Zhiliu_Cloak_SM",
     FootType = "heeledHeavy",
     ModelId = 84102,
@@ -3250,6 +3443,7 @@ return ReadOnly("Model", {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Yuming/ABP_NPC_Yuming.ABP_NPC_Yuming_C'",
     AudioPrefix = "Yuming_",
     AvatarExpressionPrefix = "Yuming_",
+    CharAccessoryOffsetId = {4201},
     FootType = "bootHeavy",
     ModelId = 84201,
     ModelScale = 0.95,
@@ -3261,6 +3455,7 @@ return ReadOnly("Model", {
   [84202] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Landi/ABP_NPC_Landi.ABP_NPC_Landi_C'",
     AudioPrefix = "Landi_",
+    CharAccessoryOffsetId = T.RT_67,
     FootType = "bootHeavy",
     ModelId = 84202,
     ModelScale = 0.95,
@@ -3273,6 +3468,7 @@ return ReadOnly("Model", {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Xibi/ABP_NPC_Xibi.ABP_NPC_Xibi_C'",
     AudioPrefix = "Xibi_",
     AvatarExpressionPrefix = "Xibi_",
+    CharAccessoryOffsetId = T.RT_68,
     FootType = "heeledHeavy",
     ModelId = 84301,
     ModelScale = 0.95,
@@ -3285,10 +3481,11 @@ return ReadOnly("Model", {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Songlu/ABP_NPC_Songlu.ABP_NPC_Songlu_C'",
     AudioPrefix = "Songlu_",
     AvatarExpressionPrefix = "Songlu_",
+    CharAccessoryOffsetId = T.RT_77,
     FootType = "heeledLight",
     HeadScale = 0.98,
     ModelId = 85101,
-    ModelTag = T.RT_45,
+    ModelTag = T.RT_53,
     MontageFolder = "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/",
     MontagePrefix = "Songlu_",
     SkeletonMeshPath = "Asset/Char/Player/Char021_Songlu/Mesh/Songlu_SM.Songlu_SM"
@@ -3296,6 +3493,7 @@ return ReadOnly("Model", {
   [85102] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/OutSide/ABP_NPC_Aote.ABP_NPC_Aote_C'",
     AudioPrefix = "Aote_",
+    CharAccessoryOffsetId = T.RT_78,
     CloakMeshPath = "Asset/Char/Player/Char018_Aote/Mesh/Aote_Cloak_SM",
     FootType = "bootHeavy",
     ModelId = 85102,
@@ -3306,21 +3504,23 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Char018_Aote/Mesh/Aote_SM.Aote_SM"
   },
   [85301] = {
-    AccessoryMeshPath = T.RT_46,
+    AccessoryMeshPath = T.RT_54,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Saiqi/ABP_NPC_Saiqi.ABP_NPC_Saiqi_C'",
     AudioPrefix = "Saiqi_",
+    CharAccessoryOffsetId = T.RT_80,
     FootType = "heeledMid",
     HeadScale = 0.98,
     ModelId = 85301,
-    ModelTag = T.RT_44,
+    ModelTag = T.RT_52,
     MontageFolder = "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/",
     MontagePrefix = "Saiqi_",
-    SkeletonMeshPath = "Asset/Char/Player/Char010_Saiqi01/Mesh/Saiqi_SP01_SM"
+    SkeletonMeshPath = "Asset/Char/Player/Char010_Saiqi/Mesh/Saiqi_SM"
   },
   [85401] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Dafu/ABP_NPC_Dafu.ABP_NPC_Dafu_C'",
     AudioPrefix = "Dafu_",
     AvatarExpressionPrefix = "Dafu_",
+    CharAccessoryOffsetId = T.RT_81,
     CloakMeshPath = "Asset/Char/Player/Char026_Dafu/Mesh/Dafu_Cloak_SM",
     FootType = "heeledHeavy",
     ModelId = 85401,
@@ -3395,7 +3595,7 @@ return ReadOnly("Model", {
   },
   [91806] = {
     ModelId = 91806,
-    SkeletonMeshPath = "Asset/Scene/EN003_Huaxu/Yanjindu/Mesh/SM_Nai_Lamp04.SM_Nai_Lamp04"
+    SkeletonMeshPath = "Asset/Scene/Layout/Eastern/lanternland.lanternland"
   },
   [91807] = {
     ModelId = 91807,
@@ -3420,14 +3620,6 @@ return ReadOnly("Model", {
   [91812] = {
     ModelId = 91812,
     SkeletonMeshPath = "Asset/Scene/Layout/Eastern/Pingfeng02.Pingfeng02"
-  },
-  [91813] = {
-    ModelId = 91813,
-    SkeletonMeshPath = "Asset/Scene/Layout/Eastern/Mojia/RotateCenter2.RotateCenter2"
-  },
-  [91814] = {
-    ModelId = 91814,
-    SkeletonMeshPath = "Asset/Scene/Layout/Eastern/Mojia/RotatePanal2.RotatePanal2"
   },
   [91815] = {
     ModelId = 91815,
@@ -3557,6 +3749,54 @@ return ReadOnly("Model", {
     ModelId = 92615,
     ModelScale = 0.5,
     SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_Coll_Com_Mus02.SM_IP_Coll_Com_Mus02"
+  },
+  [92616] = {
+    ModelId = 92616,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_Coll_HX_Flow01.SM_IP_Coll_HX_Flow01"
+  },
+  [92617] = {
+    ModelId = 92617,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_Coll_HX_Rock01.SM_IP_Coll_HX_Rock01"
+  },
+  [92618] = {
+    ModelId = 92618,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_Coll_HX_Rock02.SM_IP_Coll_HX_Rock02"
+  },
+  [92619] = {
+    ModelId = 92619,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_Coll_HX_Rock02A.SM_IP_Coll_HX_Rock02A"
+  },
+  [92620] = {
+    ModelId = 92620,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_Coll_HX_Rock02B.SM_IP_Coll_HX_Rock02B"
+  },
+  [92621] = {
+    ModelId = 92621,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_Coll_HX_Rock02C.SM_IP_Coll_HX_Rock02C"
+  },
+  [92622] = {
+    ModelId = 92622,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_Coll_HX_Rock02D.SM_IP_Coll_HX_Rock02D"
+  },
+  [92623] = {
+    ModelId = 92623,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_Coll_HX_Rock02E.SM_IP_Coll_HX_Rock02E"
+  },
+  [92624] = {
+    ModelId = 92624,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_Coll_HX_Wea01.SM_IP_Coll_HX_Wea01"
+  },
+  [92625] = {
+    ModelId = 92625,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SV_IP_Coll_HX_Roach.SV_IP_Coll_HX_Roach"
+  },
+  [92626] = {
+    ModelId = 92626,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SV_IP_Coll_HX_Lizard.SV_IP_Coll_HX_Lizard"
+  },
+  [92627] = {
+    ModelId = 92627,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SV_IP_Coll_HX_Frog.SV_IP_Coll_HX_Frog"
   },
   [94101] = {
     ModelId = 94101,
@@ -3719,20 +3959,52 @@ return ReadOnly("Model", {
   },
   [150316] = {
     ModelId = 150316,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Char030_Kezhou/Mesh/Kezhou_Part06_SM.Kezhou_Part06_SM",
     StandId = "004",
     WeaponSeInfo = "Machinegun_Ruohua"
   },
   [150401] = {
     ModelId = 150401,
-    ModelScale = 0.5,
-    SkeletonMeshPath = "Asset/Char/Monster/JT_BlastRobot/Mesh/JT_BlastRobot_SM.JT_BlastRobot_SM"
+    SkeletonMeshPath = "Asset/Char/Player/Char032_Suyi/Mesh/Suyi_Part01_SM.Suyi_Part01_SM"
   },
   [150402] = {
+    AdditionalFXID = {150441},
     DamageFXSockets = T.RT_4,
     ModelId = 150402,
-    SkeletonMeshPath = "Asset/Char/Monster/Boss12_Linen/Mesh/Boss_Linen_WP_08_SM.Boss_Linen_WP_08_SM"
+    SkeletonMeshPath = "Asset/Char/Player/Char032_Suyi/Mesh/Suyi_WP01_SM.Suyi_WP01_SM"
+  },
+  [150502] = {
+    BirthTime = -1,
+    ModelId = 150502,
+    SkeletonMeshPath = "Asset/Char/Player/Char037_SpBaonu/Mesh/SpBaonu_Summon_SM.SpBaonu_Summon_SM"
+  },
+  [160102] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Player/Nvzhu/ABP_Nvzhu.ABP_Nvzhu_C'",
+    AudioPrefix = "NvzhuLight_",
+    AvatarExpressionPrefix = "Nvzhu_",
+    CloakMeshPath = "Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu_Cloak_SM.Nvzhu_Cloak_SM",
+    FootType = "heeledMid",
+    HeadScale = 0.95,
+    HitMontageRule = "RoleDefault",
+    ModelId = 160102,
+    MontageFolder = "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/",
+    MontagePrefix = "Nvzhu_",
+    RunStopStartTime = 0.23,
+    SkeletonMeshPath = "Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu_SM.Nvzhu_SM"
+  },
+  [160103] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Player/Nanzhu/ABP_Nanzhu.ABP_Nanzhu_C'",
+    AudioPrefix = "NanzhuLight_",
+    AvatarExpressionPrefix = "Nanzhu_",
+    CloakMeshPath = "Asset/Char/Player/NPC002_Nanzhu/Mesh/Nanzhu_Cloak_SM.Nanzhu_Cloak_SM",
+    FootType = "bootLight",
+    HitMontageRule = "RoleDefault",
+    ModelId = 160103,
+    MontageFolder = "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/",
+    MontagePrefix = "Nanzhu_",
+    RunStopStartTime = 0.16,
+    SkeletonMeshPath = "Asset/Char/Player/NPC002_Nanzhu/Mesh/Nanzhu_SM.Nanzhu_SM"
   },
   [180101] = {
     ModelId = 180101,
@@ -3771,7 +4043,7 @@ return ReadOnly("Model", {
   [210199] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Player/Shuimu/ABP_Shuimu01.ABP_Shuimu01_C'",
     AssistSockets = T.RT_1,
-    AudioPrefix = "Shuimu_",
+    AudioPrefix = "Shuimu01_",
     DamageFXSockets = T.RT_1,
     FootType = "heeledMid",
     HeadScale = 0.931,
@@ -3787,29 +4059,28 @@ return ReadOnly("Model", {
     WeaponScale = 0.9785
   },
   [210211] = {
-    AccessoryMeshPath = T.RT_20,
+    AccessoryMeshPath = T.RT_26,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Player/Shuimu/ABP_Shuimu.ABP_Shuimu_C'",
     AssistSockets = T.RT_1,
     AudioPrefix = "Shuimu_",
-    DamageFXSockets = T.RT_1,
+    BirthTime = -1,
     FootType = "heeledMid",
     HeadScale = 0.931,
     HitMontageRule = "RoleDefault",
-    KawaiiIdList = T.RT_21,
+    KawaiiIdList = T.RT_27,
     ModelId = 210211,
     ModelScale = 0.9785,
     MontageFolder = "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/",
     MontagePrefix = "Shuimu_",
     RunStopStartTime = 0.23,
     SkeletonMeshPath = "Asset/Char/Player/Char005_Shuimu/Mesh/Shuimu_SM.Shuimu_SM",
-    StandId = "005",
     WeaponScale = 0.9785
   },
   [210212] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/JH_Xianfeng/ABP_Mon_JH_Xianfeng.ABP_Mon_JH_Xianfeng_C'",
     AssistSockets = T.RT_4,
     AudioPrefix = "Eve_Summon_Soldier_",
-    DamageFXSockets = T.RT_3,
+    BirthTime = -1,
     HitMontageRule = "MonDefault",
     ModelId = 210212,
     ModelScale = 0.7,
@@ -3822,29 +4093,27 @@ return ReadOnly("Model", {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Jt_Zhihui/ABP_Mon_Jt_Zhihui.ABP_Mon_Jt_Zhihui_C'",
     AssistSockets = T.RT_3,
     AudioPrefix = "JT_Zhihui_",
-    AvatarExpressionPrefix = "Zhihui_",
-    DamageFXSockets = T.RT_4,
+    BirthTime = -1,
     HitMontageRule = "MonDefault",
     ModelId = 210213,
     ModelScale = 1.2,
-    MontageFolder = "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/",
-    MontagePrefix = "JT_Zhihui_",
-    MoveParameters = T.RT_15,
+    MontageFolder = "/Game/Asset/Char/Player/Char035_Eve/Animation/Summon/Montage/",
+    MontagePrefix = "Eve_Summon_Rook_",
+    MoveParameters = T.RT_18,
     SkeletonMeshPath = "Asset/Char/Monster/Jt_Zhihui/Mesh/JT_Zhihui_SM.JT_Zhihui_SM"
   },
   [210214] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Boss_05_Lianhuo/ABP_Boss_Lianhuo.ABP_Boss_Lianhuo_C'",
     AssistSockets = T.RT_4,
-    AudioPrefix = "Boss_Lianhuo_",
-    CondemnBoneName = T.RT_23,
-    DamageFXSockets = T.RT_4,
+    BirthTime = -1,
+    CondemnBoneName = T.RT_29,
     HitMontageRule = "BossLianhuo",
     ModelId = 210214,
     ModelScale = 0.8,
-    MontageFolder = "/Game/Asset/Char/Monster/Boss05_Lianhuo/Animation/Montage/",
-    MontagePrefix = "Boss_Lianhuo_",
-    MoveParameters = T.RT_24,
-    PenalizeParam = T.RT_26,
+    MontageFolder = "/Game/Asset/Char/Player/Char035_Eve/Animation/Summon/Montage/",
+    MontagePrefix = "Eve_Summon_Queen_",
+    MoveParameters = T.RT_30,
+    PenalizeParam = T.RT_32,
     SkeletonMeshPath = "Asset/Char/Player/Char035_Eve/Mesh/Eve_Summoned_Queen.Eve_Summoned_Queen",
     WeaponScale = 0.8
   },
@@ -3870,6 +4139,31 @@ return ReadOnly("Model", {
   [240102] = {
     ModelId = 240102,
     SkeletonMeshPath = "Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Part01_SM.Baiheng_Part01_SM"
+  },
+  [240199] = {
+    AdditionalFXID = {
+      240161,
+      240162,
+      240163,
+      240164,
+      240165,
+      240166,
+      240167
+    },
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Player/Baiheng/ABP_Baiheng01.ABP_Baiheng01_C'",
+    AssistSockets = T.RT_1,
+    AudioPrefix = "Baiheng01_",
+    DamageFXSockets = T.RT_1,
+    FootType = "heeledMid",
+    HitMontageRule = "RoleDefault",
+    ModelId = 240199,
+    ModelTag = T.RT_23,
+    MontageFolder = "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/",
+    MontagePrefix = "Baiheng01_",
+    RunStopStartTime = 0.18,
+    SkeletonMeshPath = "Asset/Char/Player/Char096_Baiheng01/Mesh/Baiheng_SP01_SM.Baiheng_SP01_SM",
+    StandId = "004",
+    TailMeshPath = "Asset/Char/Player/Char096_Baiheng01/Mesh/Baiheng_SP01_Part01_SM.Baiheng_SP01_Part01_SM"
   },
   [310101] = {
     ModelId = 310101,
@@ -4028,7 +4322,7 @@ return ReadOnly("Model", {
   [510199] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Player/Songlu/ABP_Songlu01.ABP_Songlu01_C'",
     AssistSockets = T.RT_1,
-    AudioPrefix = "Songlu_",
+    AudioPrefix = "Songlu01_",
     BuffLightMeshPath = "/Game/Asset/Char/Player/Char099_Songlu01/Mesh/Songlu_Part05_SM.Songlu_Part05_SM",
     DamageFXSockets = T.RT_1,
     FootType = "heeledLight",
@@ -4061,7 +4355,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Char098_Saiqi01/Mesh/Saiqi_SP01_Part02_SM.Saiqi_SP01_Part02_SM"
   },
   [530199] = {
-    AccessoryMeshPath = T.RT_47,
+    AccessoryMeshPath = T.RT_55,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Player/Saiqi/ABP_Saiqi01.ABP_Saiqi01_C'",
     AssistSockets = T.RT_1,
     AudioPrefix = "Saiqi01_",
@@ -4071,7 +4365,7 @@ return ReadOnly("Model", {
     HitMontageRule = "RoleDefault",
     IsSkinModel = true,
     ModelId = 530199,
-    ModelTag = T.RT_17,
+    ModelTag = T.RT_23,
     MontageFolder = "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/",
     MontagePrefix = "Saiqi_",
     RunStopStartTime = 0.23,
@@ -4103,7 +4397,7 @@ return ReadOnly("Model", {
     ModelId = 600201,
     MontageFolder = "/Game/Asset/Char/Monster/GR_Youji/Animation/Montage/",
     MontagePrefix = "GR_Youji_",
-    MoveParameters = T.RT_48,
+    MoveParameters = T.RT_56,
     SkeletonMeshPath = "Asset/Char/Monster/GR_Youji/Mesh/GR_Youji_SM.GR_Youji_SM"
   },
   [600202] = {
@@ -4226,7 +4520,7 @@ return ReadOnly("Model", {
     ModelId = 601601,
     MontageFolder = "/Game/Asset/Char/Monster/GR_Eshi/Animation/Montage/",
     MontagePrefix = "GR_Eshi_",
-    MoveParameters = T.RT_48,
+    MoveParameters = T.RT_56,
     SkeletonMeshPath = "Asset/Char/Monster/GR_Eshi/Mesh/GR_Eshi_SM.GR_Eshi_SM"
   },
   [601701] = {
@@ -4257,7 +4551,7 @@ return ReadOnly("Model", {
     ModelId = 700101,
     MontageFolder = "/Game/Asset/Char/Monster/JT_Juji/Animation/Montage/",
     MontagePrefix = "JT_Juji_",
-    MoveParameters = T.RT_15,
+    MoveParameters = T.RT_18,
     SkeletonMeshPath = "Asset/Char/Monster/JT_Juji/Mesh/JT_Juji_SM.JT_Juji_SM"
   },
   [700102] = {
@@ -4276,7 +4570,7 @@ return ReadOnly("Model", {
     ModelScale = 1.8,
     MontageFolder = "/Game/Asset/Char/Monster/JT_Juji/Animation/Montage/",
     MontagePrefix = "JT_Juji_",
-    MoveParameters = T.RT_15,
+    MoveParameters = T.RT_18,
     SkeletonMeshPath = "Asset/Char/Monster/JT_Juji/Mesh/JT_Juji_SM.JT_Juji_SM"
   },
   [700104] = {
@@ -4290,7 +4584,7 @@ return ReadOnly("Model", {
     ModelId = 700104,
     MontageFolder = "/Game/Asset/Char/Monster/JT_Juji/Animation/Montage/",
     MontagePrefix = "JT_Juji_",
-    MoveParameters = T.RT_15,
+    MoveParameters = T.RT_18,
     SkeletonMeshPath = "Asset/Char/Monster/JT_Juji/Mesh/JT_Juji_SM.JT_Juji_SM"
   },
   [700201] = {
@@ -4304,7 +4598,7 @@ return ReadOnly("Model", {
     ModelId = 700201,
     MontageFolder = "/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/",
     MontagePrefix = "JT_Pizhuo_",
-    MoveParameters = T.RT_48,
+    MoveParameters = T.RT_56,
     SkeletonMeshPath = "Asset/Char/Monster/JT_Pizhuo/Mesh/JT_Pizhuo_SM.JT_Pizhuo_SM"
   },
   [700202] = {
@@ -4321,7 +4615,7 @@ return ReadOnly("Model", {
     ModelId = 700203,
     MontageFolder = "/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/",
     MontagePrefix = "JT_Pizhuo_",
-    MoveParameters = T.RT_48,
+    MoveParameters = T.RT_56,
     SkeletonMeshPath = "Asset/Char/Monster/JT_Pizhuo/Mesh/JT_Pizhuo_SM.JT_Pizhuo_SM"
   },
   [700204] = {
@@ -4336,7 +4630,20 @@ return ReadOnly("Model", {
     ModelScale = 1.5,
     MontageFolder = "/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/",
     MontagePrefix = "JT_Pizhuo_",
-    MoveParameters = T.RT_48,
+    MoveParameters = T.RT_56,
+    SkeletonMeshPath = "Asset/Char/Monster/JT_Pizhuo/Mesh/JT_Pizhuo_SM.JT_Pizhuo_SM"
+  },
+  [700205] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Jt_Pizhuo/ABP_Mon_Jt_Pizhuo.ABP_Mon_Jt_Pizhuo_C'",
+    AssistSockets = T.RT_4,
+    AudioPrefix = "JT_Pizhuo_",
+    DamageFXSockets = T.RT_4,
+    EffectShape = "Human_M",
+    HitMontageRule = "MonDefault",
+    ModelId = 700205,
+    MontageFolder = "/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/",
+    MontagePrefix = "JT_Pizhuo_",
+    MoveParameters = T.RT_56,
     SkeletonMeshPath = "Asset/Char/Monster/JT_Pizhuo/Mesh/JT_Pizhuo_SM.JT_Pizhuo_SM"
   },
   [700301] = {
@@ -4351,7 +4658,7 @@ return ReadOnly("Model", {
     ModelId = 700301,
     MontageFolder = "/Game/Asset/Char/Monster/Jt_Ranger/Animation/Montage/",
     MontagePrefix = "JT_Ranger_",
-    MoveParameters = T.RT_15,
+    MoveParameters = T.RT_18,
     SkeletonMeshPath = "Asset/Char/Monster/JT_Ranger/Mesh/JT_Ranger_SM.JT_Ranger_SM"
   },
   [700302] = {
@@ -4369,7 +4676,7 @@ return ReadOnly("Model", {
     ModelId = 700401,
     MontageFolder = "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/",
     MontagePrefix = "JT_Tuji_",
-    MoveParameters = T.RT_15,
+    MoveParameters = T.RT_18,
     SkeletonMeshPath = "Asset/Char/Monster/JT_Tuji/Mesh/JT_Tuji_SM.JT_Tuji_SM"
   },
   [700402] = {
@@ -4395,7 +4702,7 @@ return ReadOnly("Model", {
     ModelId = 700405,
     MontageFolder = "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/",
     MontagePrefix = "JT_Tuji_",
-    MoveParameters = T.RT_15,
+    MoveParameters = T.RT_18,
     SkeletonMeshPath = "Asset/Char/Monster/NE_Kaiwen/Mesh/NE_Kaiwen_SM.NE_Kaiwen_SM"
   },
   [700601] = {
@@ -4412,9 +4719,9 @@ return ReadOnly("Model", {
   },
   [700701] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Jt_BlastRobot/ABP_Jt_BlastRobot.ABP_Jt_BlastRobot_C'",
-    AssistSockets = T.RT_49,
+    AssistSockets = T.RT_57,
     AudioPrefix = "JT_BlastRobot_",
-    DamageFXSockets = T.RT_49,
+    DamageFXSockets = T.RT_57,
     EffectShape = "Special_S",
     HitMontageRule = "MonJTBlastRobot",
     ModelId = 700701,
@@ -4424,9 +4731,9 @@ return ReadOnly("Model", {
   },
   [700702] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Jt_BlastRobot/ABP_Jt_BlastRobot.ABP_Jt_BlastRobot_C'",
-    AssistSockets = T.RT_49,
+    AssistSockets = T.RT_57,
     AudioPrefix = "JT_BlastRobot_",
-    DamageFXSockets = T.RT_49,
+    DamageFXSockets = T.RT_57,
     HitMontageRule = "MonJTBlastRobot",
     ModelId = 700702,
     MontageFolder = "/Game/Asset/Char/Monster/JT_BlastRobot/Animation/Montage/",
@@ -4445,7 +4752,7 @@ return ReadOnly("Model", {
     ModelScale = 1.2,
     MontageFolder = "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/",
     MontagePrefix = "JT_Zhihui_",
-    MoveParameters = T.RT_15,
+    MoveParameters = T.RT_18,
     SkeletonMeshPath = "Asset/Char/Monster/Jt_Zhihui/Mesh/JT_Zhihui_SM.JT_Zhihui_SM"
   },
   [700802] = {
@@ -4532,7 +4839,8 @@ return ReadOnly("Model", {
     ModelScale = 1.1,
     MontageFolder = "/Game/Asset/Char/Monster/JH_Zhishi/Animation/Montage/",
     MontagePrefix = "JH_Zhishi_",
-    SkeletonMeshPath = "Asset/Char/Monster/JH_Zhishi/Mesh/JH_Zhishi_SM.JH_Zhishi_SM"
+    SkeletonMeshPath = "Asset/Char/Monster/JH_Zhishi/Mesh/JH_Zhishi_SM.JH_Zhishi_SM",
+    WeaponScale = 1.1
   },
   [800102] = {
     ModelId = 800102,
@@ -4558,7 +4866,8 @@ return ReadOnly("Model", {
     ModelScale = 1.1,
     MontageFolder = "/Game/Asset/Char/Monster/JH_Xianfeng/Animation/Montage/",
     MontagePrefix = "JH_Xianfeng_",
-    SkeletonMeshPath = "Asset/Char/Monster/JH_Xianfeng/Mesh/JH_Xianfeng_SM.JH_Xianfeng_SM"
+    SkeletonMeshPath = "Asset/Char/Monster/JH_Xianfeng/Mesh/JH_Xianfeng_SM.JH_Xianfeng_SM",
+    WeaponScale = 1.1
   },
   [800202] = {
     ModelId = 800202,
@@ -4575,7 +4884,8 @@ return ReadOnly("Model", {
     ModelScale = 1.1,
     MontageFolder = "/Game/Asset/Char/Monster/JH_Shenfu/Animation/Montage/",
     MontagePrefix = "JH_Shenfu_",
-    SkeletonMeshPath = "Asset/Char/Monster/JH_Shenfu/Mesh/JH_Shenfu_SM.JH_Shenfu_SM"
+    SkeletonMeshPath = "Asset/Char/Monster/JH_Shenfu/Mesh/JH_Shenfu_SM.JH_Shenfu_SM",
+    WeaponScale = 1.1
   },
   [800302] = {
     ModelId = 800302,
@@ -4585,14 +4895,14 @@ return ReadOnly("Model", {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Boss_00_Xibi/ABP_Boss_Xibi.ABP_Boss_Xibi_C'",
     AssistSockets = T.RT_4,
     AudioPrefix = "Boss_Xibi_",
-    CondemnBoneName = T.RT_51,
+    CondemnBoneName = T.RT_70,
     DamageFXSockets = T.RT_4,
     HitMontageRule = "BossXibi",
     ModelId = 850001,
     MontageFolder = "/Game/Asset/Char/Monster/Boss00_Xibi/Animation/Montage/",
     MontagePrefix = "Boss_Xibi_",
-    MoveParameters = T.RT_24,
-    SkeletonMeshPath = "Asset/Char/Player/Char009_Xibi/Mesh/Xibi_SM.Xibi_SM"
+    MoveParameters = T.RT_30,
+    SkeletonMeshPath = "Asset/Char/Monster/Boss00_Xibi/Mesh/Boss_Xibi_SM.Boss_Xibi_SM"
   },
   [850002] = {
     ModelId = 850002,
@@ -4602,34 +4912,27 @@ return ReadOnly("Model", {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Boss_04_Lizhan/ABP_Boss_Lizhan.ABP_Boss_Lizhan_C'",
     AssistSockets = T.RT_4,
     AudioPrefix = "Boss_Lizhan_",
-    CondemnBoneName = {
-      CondemnSocket = "Root",
-      LocationOffset = {
-        240,
-        100,
-        0
-      }
-    },
+    CondemnBoneName = T.RT_72,
     DamageFXSockets = T.RT_4,
     HitMontageRule = "BossLizhan",
     ModelId = 850101,
     MontageFolder = "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/",
     MontagePrefix = "Boss_Lizhan_",
-    MoveParameters = T.RT_24,
+    MoveParameters = T.RT_30,
     SkeletonMeshPath = "Asset/Char/Monster/Boss06_Lizhan/Mesh/Boss_Lizhan_SM.Boss_Lizhan_SM"
   },
   [850102] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Boss_04_Lizhan/ABP_Boss_Lizhan.ABP_Boss_Lizhan_C'",
     AssistSockets = T.RT_4,
     AudioPrefix = "Boss_Lizhan_",
-    CondemnBoneName = T.RT_51,
+    CondemnBoneName = T.RT_70,
     DamageFXSockets = T.RT_4,
     HitMontageRule = "BossLizhan",
     ModelId = 850102,
     ModelScale = 0.8,
     MontageFolder = "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/",
     MontagePrefix = "Boss_Lizhan_",
-    MoveParameters = T.RT_24,
+    MoveParameters = T.RT_30,
     SkeletonMeshPath = "Asset/Char/Monster/Boss06_Lizhan/Mesh/Boss_Lizhan_SM.Boss_Lizhan_SM"
   },
   [850201] = {
@@ -4642,13 +4945,13 @@ return ReadOnly("Model", {
       "wing_right01_e2"
     },
     AudioPrefix = "Boss_Saiqi_",
-    CondemnBoneName = T.RT_53,
+    CondemnBoneName = T.RT_74,
     DamageFXSockets = {"hit2"},
     HitMontageRule = "BossSaiqi",
     ModelId = 850201,
     MontageFolder = "/Game/Asset/Char/Monster/Boss01_Saiqi01/Animation/Montage/",
     MontagePrefix = "Boss_Saiqi_",
-    MoveParameters = T.RT_24,
+    MoveParameters = T.RT_30,
     SkeletonMeshPath = "Asset/Char/Monster/Boss01_Saiqi01/Mesh/BossSaiqi_SM.BossSaiqi_SM"
   },
   [850202] = {
@@ -4666,7 +4969,22 @@ return ReadOnly("Model", {
         -100
       }
     },
-    HitCapsules = T.RT_54,
+    HitCapsules = {
+      Arm_L = "hand_left01_b",
+      Arm_L1 = "hand_left01_c",
+      Arm_L2 = "lowerarm_l",
+      Arm_R = "hand_right01_b",
+      Arm_R1 = "hand_right01_c",
+      Arm_R2 = "lowerarm_r",
+      FootL = "foot_left01_b",
+      FootL1 = "foot_left01_c",
+      FootR = "foot_right01_b",
+      FootR1 = "foot_right01_c",
+      Foot_L3 = "calf_l",
+      Foot_R3 = "calf_r",
+      Middle = "spine01",
+      Tail = "tail_f"
+    },
     HitMontageRule = "BossShijingzhe",
     ModelId = 850301,
     MontageFolder = "/Game/Asset/Char/Monster/Boss03_Shijingzhe/Animation/Montage/",
@@ -4690,13 +5008,13 @@ return ReadOnly("Model", {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Boss_03_Saiqi02/ABP_Boss_Saiqi02.ABP_Boss_Saiqi02_C'",
     AssistSockets = T.RT_4,
     AudioPrefix = "Boss_Saiqi02_",
-    CondemnBoneName = T.RT_53,
+    CondemnBoneName = T.RT_74,
     DamageFXSockets = T.RT_4,
     HitMontageRule = "BossSaiqi",
     ModelId = 850401,
     MontageFolder = "/Game/Asset/Char/Monster/Boss04_Saiqi02/Animation/Montage/",
     MontagePrefix = "Boss_Saiqi02_",
-    MoveParameters = T.RT_24,
+    MoveParameters = T.RT_30,
     SkeletonMeshPath = "Asset/Char/Monster/Boss04_Saiqi02/Mesh/Boss_Saiqi02_SM.Boss_Saiqi02_SM"
   },
   [850402] = {
@@ -4707,28 +5025,28 @@ return ReadOnly("Model", {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Boss_03_Saiqi02/ABP_Boss_Saiqi02.ABP_Boss_Saiqi02_C'",
     AssistSockets = T.RT_4,
     AudioPrefix = "Boss_Saiqi02_",
-    CondemnBoneName = T.RT_53,
+    CondemnBoneName = T.RT_74,
     DamageFXSockets = T.RT_4,
     HitMontageRule = "BossSaiqi",
     ModelId = 850403,
     ModelScale = 2.1,
     MontageFolder = "/Game/Asset/Char/Monster/Boss04_Saiqi02/Animation/Montage/",
     MontagePrefix = "Boss_Saiqi02_",
-    MoveParameters = T.RT_24,
+    MoveParameters = T.RT_30,
     SkeletonMeshPath = "Asset/Char/Monster/Boss04_Saiqi02/Mesh/Boss_Saiqi02_SM.Boss_Saiqi02_SM"
   },
   [850501] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Boss_05_Lianhuo/ABP_Boss_Lianhuo.ABP_Boss_Lianhuo_C'",
     AssistSockets = T.RT_4,
     AudioPrefix = "Boss_Lianhuo_",
-    CondemnBoneName = T.RT_23,
+    CondemnBoneName = T.RT_29,
     DamageFXSockets = T.RT_4,
     HitMontageRule = "BossLianhuo",
     ModelId = 850501,
     MontageFolder = "/Game/Asset/Char/Monster/Boss05_Lianhuo/Animation/Montage/",
     MontagePrefix = "Boss_Lianhuo_",
-    MoveParameters = T.RT_24,
-    PenalizeParam = T.RT_26,
+    MoveParameters = T.RT_30,
+    PenalizeParam = T.RT_32,
     SkeletonMeshPath = "Asset/Char/Monster/Boss05_Lianhuo/Mesh/Boss05_Lianhuo_SM.Boss05_Lianhuo_SM"
   },
   [850502] = {
@@ -4741,13 +5059,13 @@ return ReadOnly("Model", {
     AssistSockets = T.RT_4,
     AudioPrefix = "Boss_Nvzhu_",
     CloakMeshPath = "Asset/Char/Player/NPC004_WeitaF/Mesh/WeitaF_Cloak_SM.WeitaF_Cloak_SM",
-    CondemnBoneName = T.RT_51,
+    CondemnBoneName = T.RT_70,
     DamageFXSockets = T.RT_4,
     HitMontageRule = "BossNvzhu",
     ModelId = 850601,
     MontageFolder = "/Game/Asset/Char/Monster/Boss07_Nvzhu/Animation/Montage/",
     MontagePrefix = "Boss_Nvzhu_",
-    MoveParameters = T.RT_24,
+    MoveParameters = T.RT_30,
     SkeletonMeshPath = "Asset/Char/Player/NPC004_WeitaF/Mesh/WeitaF_SM.WeitaF_SM"
   },
   [850701] = {
@@ -4755,13 +5073,13 @@ return ReadOnly("Model", {
     AssistSockets = T.RT_4,
     AudioPrefix = "Boss_Nanzhu_",
     CloakMeshPath = "Asset/Char/Player/NPC005_WeitaM/Mesh/WeitaM_Cloak_SM.WeitaM_Cloak_SM",
-    CondemnBoneName = T.RT_51,
+    CondemnBoneName = T.RT_70,
     DamageFXSockets = T.RT_4,
     HitMontageRule = "BossNvzhu",
     ModelId = 850701,
     MontageFolder = "/Game/Asset/Char/Monster/Boss08_Nanzhu/Animation/Montage/",
     MontagePrefix = "Boss_Nanzhu_",
-    MoveParameters = T.RT_24,
+    MoveParameters = T.RT_30,
     SkeletonMeshPath = "Asset/Char/Player/NPC005_WeitaM/Mesh/WeitaM_SM.WeitaM_SM"
   },
   [850702] = {
@@ -4773,7 +5091,7 @@ return ReadOnly("Model", {
     AssistSockets = T.RT_4,
     AudioPrefix = "Boss_Tuosi_",
     AvatarExpressionPrefix = "Tuosi02_",
-    CondemnBoneName = T.RT_56,
+    CondemnBoneName = T.RT_76,
     DamageFXSockets = T.RT_4,
     HitMontageRule = "BossTuosi",
     ModelId = 850901,
@@ -4781,14 +5099,14 @@ return ReadOnly("Model", {
     MontageFolder = "/Game/Asset/Char/Monster/Boss09_Tuosi/Animation/Montage/",
     MontagePrefix = "Boss_Tuosi_",
     OverrideMaterialParam = T.RT_9,
-    SkeletonMeshPath = "Asset/Char/Player/Char025_Tuosi/Mesh/Tuosi02B_SM.Tuosi02B_SM"
+    SkeletonMeshPath = "Asset/Char/Monster/Boss09_Tuosi/Mesh/Boss_Tuosi_SM.Boss_Tuosi_SM"
   },
   [850902] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Boss_09_Tuosi/ABP_Boss_Tuosi.ABP_Boss_Tuosi_C'",
     AssistSockets = T.RT_4,
     AudioPrefix = "Boss_Tuosi_",
     AvatarExpressionPrefix = "Tuosi02_",
-    CondemnBoneName = T.RT_56,
+    CondemnBoneName = T.RT_76,
     DamageFXSockets = T.RT_4,
     HitMontageRule = "BossTuosi",
     ModelId = 850902,
@@ -4796,14 +5114,49 @@ return ReadOnly("Model", {
     MontageFolder = "/Game/Asset/Char/Monster/Boss09_Tuosi/Animation/Montage/",
     MontagePrefix = "Boss_Tuosi_",
     OverrideMaterialParam = T.RT_10,
-    SkeletonMeshPath = "Asset/Char/Player/Char025_Tuosi/Mesh/Tuosi02B_SM.Tuosi02B_SM"
+    SkeletonMeshPath = "Asset/Char/Monster/Boss09_Tuosi/Mesh/Boss_Tuosi_SM.Boss_Tuosi_SM"
   },
   [851001] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Boss_10_Heilong/ABP_Boss_Heilong.ABP_Boss_Heilong_C'",
     AssistSockets = T.RT_3,
     AudioPrefix = "Boss_Heilong_",
     CondemnBoneName = {CondemnSocket = "Jaw02"},
-    HitCapsules = T.RT_54,
+    HitCapsules = {
+      FootL = "Hand_l",
+      FootR = "Hand_r",
+      FootR1 = "Hand_r",
+      FootR2 = "Hand_r",
+      FootR3 = "Hand_r",
+      FootR4 = "Hand_r",
+      FootR5 = "Hand_r",
+      FootR6 = "Hand_r",
+      Head = "Head",
+      LowerarmL = "Lowerarm_l",
+      LowerarmR = "Lowerarm_r",
+      Neck01 = "Neck_01",
+      Neck02 = "Neck_03",
+      Neck03 = "Neck_05",
+      Spine01 = "Spine_01",
+      Spine02 = "Spine_02",
+      Spine03 = "Spine_03",
+      Spine04 = "Spine_04",
+      Spine05 = "Spine_05",
+      Tail01 = "Tail_01",
+      Tail010 = "Tail_10",
+      Tail02 = "Tail_02",
+      Tail03 = "Tail_03",
+      Tail04 = "Tail_04",
+      Tail05 = "Tail_05",
+      Tail06 = "Tail_06",
+      Tail07 = "Tail_07",
+      Tail08 = "Tail_08",
+      Tail09 = "Tail_09",
+      Tail11 = "Tail_11",
+      Tail13 = "Tail_13",
+      Tail18 = "Tail_17",
+      UpeerarmL = "Upeerarm_l",
+      UpeerarmR = "Upeerarm_r"
+    },
     HitMontageRule = "BossShijingzhe",
     ModelId = 851001,
     ModelScale = 1,
@@ -4831,14 +5184,14 @@ return ReadOnly("Model", {
     AssistSockets = T.RT_4,
     AudioPrefix = "Boss_Linen_",
     AvatarExpressionPrefix = "Linen_",
-    CondemnBoneName = T.RT_53,
+    CondemnBoneName = T.RT_74,
     DamageFXSockets = T.RT_4,
     HitMontageRule = "BossLinen",
     ModelId = 851201,
     ModelScale = 1.35,
     MontageFolder = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/",
     MontagePrefix = "Boss_Linen_",
-    MoveParameters = T.RT_24,
+    MoveParameters = T.RT_30,
     SkeletonMeshPath = "Asset/Char/Monster/Boss12_Linen/Mesh/Boss_Linen_SM.Boss_Linen_SM"
   },
   [851211] = {
@@ -4861,14 +5214,15 @@ return ReadOnly("Model", {
     AssistSockets = T.RT_4,
     AudioPrefix = "Boss_Kuxiu_",
     AvatarExpressionPrefix = "Kuxiu_",
-    CondemnBoneName = T.RT_51,
+    CondemnBoneName = T.RT_70,
     DamageFXSockets = T.RT_4,
     HitMontageRule = "BossKuxiu",
     ModelId = 851301,
     ModelScale = 1.1,
     MontageFolder = "/Game/Asset/Char/Monster/Boss13_Kuxiu/Animation/Montage/",
     MontagePrefix = "Boss_Kuxiu_",
-    SkeletonMeshPath = "Asset/Char/Monster/Boss13_Kuxiu/Mesh/Boss_Kuxiu_SM.Boss_Kuxiu_SM"
+    SkeletonMeshPath = "Asset/Char/Monster/Boss13_Kuxiu/Mesh/Boss_Kuxiu_SM.Boss_Kuxiu_SM",
+    WeaponScale = 1.1
   },
   [851302] = {
     ModelId = 851302,
@@ -4878,14 +5232,16 @@ return ReadOnly("Model", {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/ABP_Boss_Shenpan.ABP_Boss_Shenpan_C'",
     AssistSockets = T.RT_4,
     AudioPrefix = "Boss_Shenpan_",
-    CondemnBoneName = T.RT_51,
+    AvatarExpressionPrefix = "Shenpan_",
+    CondemnBoneName = T.RT_70,
     DamageFXSockets = T.RT_4,
     HitMontageRule = "BossShenpan",
     ModelId = 851401,
     ModelScale = 1.5,
     MontageFolder = "/Game/Asset/Char/Monster/Boss14_Shenpan/Animation/Montage/",
     MontagePrefix = "Boss_Shenpan_",
-    SkeletonMeshPath = "Asset/Char/Monster/Boss14_Shenpan/Mesh/Boss_Shenpan_SM.Boss_Shenpan_SM"
+    SkeletonMeshPath = "Asset/Char/Monster/Boss14_Shenpan/Mesh/Boss_Shenpan_SM.Boss_Shenpan_SM",
+    WeaponScale = 1.5
   },
   [851402] = {
     ModelId = 851402,
@@ -4924,7 +5280,7 @@ return ReadOnly("Model", {
   },
   [851601] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Boss_16_Fuer/ABP_Boss_Fuer.ABP_Boss_Fuer_C'",
-    AssistSockets = {"_002_jnt", "_004_jnt"},
+    AssistSockets = T.RT_79,
     AudioPrefix = "Boss_Fuer_",
     AvatarExpressionPrefix = "Fuer_",
     CondemnBoneName = {
@@ -4935,10 +5291,10 @@ return ReadOnly("Model", {
         0
       }
     },
-    DamageFXSockets = {"_002_jnt"},
+    DamageFXSockets = T.RT_79,
     HitMontageRule = "BossFuer",
     ModelId = 851601,
-    ModelScale = 0.5,
+    ModelScale = 0.6,
     MontageFolder = "/Game/Asset/Char/Monster/Boss16_Fuer/Animation/Montage/",
     MontagePrefix = "Boss_Fuer_",
     SkeletonMeshPath = "Asset/Char/Monster/Boss16_Fuer/Mesh/Boss_Fuer_SM.Boss_Fuer_SM"
@@ -4972,14 +5328,28 @@ return ReadOnly("Model", {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Boss_18_Juque/ABP_Boss_Juque.ABP_Boss_Juque_C'",
     AssistSockets = T.RT_4,
     AudioPrefix = "Boss_Juque_",
-    CondemnBoneName = T.RT_23,
+    CondemnBoneName = T.RT_29,
     DamageFXSockets = T.RT_4,
     HitMontageRule = "BossJuque",
     ModelId = 851801,
-    ModelScale = 1.4,
+    ModelScale = 1.8,
     MontageFolder = "/Game/Asset/Char/Monster/Boss18_Juque/Animation/Montage/",
     MontagePrefix = "Boss_Juque_",
-    PenalizeParam = T.RT_26,
+    PenalizeParam = T.RT_32,
+    SkeletonMeshPath = "Asset/Char/Monster/Boss18_Juque/Mesh/Boss_Juque_SM.Boss_Juque_SM"
+  },
+  [851802] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Boss_18_Juque/ABP_Boss_Juque.ABP_Boss_Juque_C'",
+    AssistSockets = T.RT_4,
+    AudioPrefix = "Boss_Juque_",
+    CondemnBoneName = T.RT_29,
+    DamageFXSockets = T.RT_4,
+    HitMontageRule = "BossJuque",
+    ModelId = 851802,
+    ModelScale = 10,
+    MontageFolder = "/Game/Asset/Char/Monster/Boss18_Juque/Animation/Montage/",
+    MontagePrefix = "Boss_Juque_",
+    PenalizeParam = T.RT_32,
     SkeletonMeshPath = "Asset/Char/Monster/Boss18_Juque/Mesh/Boss_Juque_SM.Boss_Juque_SM"
   },
   [851901] = {
@@ -5008,8 +5378,8 @@ return ReadOnly("Model", {
   },
   [851903] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Jt_BlastRobot/ABP_Jt_BlastRobot.ABP_Jt_BlastRobot_C'",
-    AssistSockets = T.RT_49,
-    DamageFXSockets = T.RT_49,
+    AssistSockets = T.RT_57,
+    DamageFXSockets = T.RT_57,
     HitMontageRule = "MonNoRagdoll",
     ModelId = 851903,
     ModelScale = 3,
@@ -5060,6 +5430,59 @@ return ReadOnly("Model", {
     MontagePrefix = "Boss_Aida_",
     SkeletonMeshPath = "Asset/Char/Monster/JT_Juji/Mesh/JT_Juji_SM.JT_Juji_SM"
   },
+  [852101] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Boss_04_Lizhan/ABP_Boss_Lizhan.ABP_Boss_Lizhan_C'",
+    AssistSockets = T.RT_4,
+    AudioPrefix = "Boss_Lizhan_",
+    CondemnBoneName = T.RT_72,
+    DamageFXSockets = T.RT_4,
+    HitMontageRule = "BossLizhan",
+    ModelId = 852101,
+    ModelScale = 0.7,
+    MontageFolder = "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/",
+    MontagePrefix = "Boss_Lizhan_",
+    MoveParameters = T.RT_30,
+    SkeletonMeshPath = "Asset/Char/Monster/Boss06_Lizhan/Mesh/Boss_Lizhan_SM.Boss_Lizhan_SM"
+  },
+  [852201] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Boss_01_Saiqi/ABP_Boss_Saiqi.ABP_Boss_Saiqi_C'",
+    AssistSockets = T.RT_4,
+    AudioPrefix = "Boss_Tuisheng_",
+    CondemnBoneName = T.RT_74,
+    DamageFXSockets = T.RT_4,
+    HitMontageRule = "BossDefault",
+    ModelId = 852201,
+    MontageFolder = "/Game/Asset/Char/Monster/Boss22_Tuisheng/Animation/Montage/",
+    MontagePrefix = "Boss_Tuisheng_",
+    SkeletonMeshPath = "Asset/Char/Monster/Boss01_Saiqi01/Mesh/BossSaiqi_SM.BossSaiqi_SM"
+  },
+  [852301] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Boss_23_Jishi/ABP_Boss_Jishi.ABP_Boss_Jishi_C'",
+    AssistSockets = T.RT_4,
+    AudioPrefix = "Boss_Jishi_",
+    CondemnBoneName = T.RT_74,
+    DamageFXSockets = T.RT_4,
+    HitMontageRule = "BossJishi",
+    ModelId = 852301,
+    ModelScale = 1.5,
+    MontageFolder = "/Game/Asset/Char/Monster/Boss23_Jishi/Animation/Montage/",
+    MontagePrefix = "Boss_Jishi_",
+    SkeletonMeshPath = "Asset/Char/Monster/Boss23_Jishi/Mesh/Boss_Jishi_SM.Boss_Jishi_SM"
+  },
+  [852302] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Boss_23_Jishi/ABP_Boss_Jishi.ABP_Boss_Jishi_C'",
+    AudioPrefix = "Boss_Jishi_Sum_",
+    ModelId = 852302,
+    ModelScale = 0.1,
+    MontageFolder = "/Game/Asset/Char/Monster/Boss23_Jishi/Animation/Montage/",
+    MontagePrefix = "Boss_Jishi_Sum_",
+    SkeletonMeshPath = "Asset/Char/Monster/Boss23_Jishi/Mesh/Boss_Jishi_Sum01_SM.Boss_Jishi_Sum01_SM"
+  },
+  [852303] = {
+    ModelId = 852303,
+    ModelScale = 1.5,
+    SkeletonMeshPath = "Asset/Char/Monster/HX_Tianwei/Mesh/HX_Tianwei_WP_SM.HX_Tianwei_WP_SM"
+  },
   [900101] = {
     ModelId = 900101,
     SkeletonMeshPath = "Asset/Char/Monster/SQ_Yinxie/Mesh/SQ_Yinxie_WP_SM.SQ_Yinxie_WP_SM"
@@ -5108,10 +5531,10 @@ return ReadOnly("Model", {
   },
   [900401] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/SQ_Wanju/ABP_Mon_SQ_Wanju_Sum01.ABP_Mon_SQ_Wanju_Sum01_C'",
-    AssistSockets = T.RT_49,
+    AssistSockets = T.RT_57,
     AudioPrefix = "SQ_Wanju_Sum01_",
     BirthTime = -1,
-    DamageFXSockets = T.RT_49,
+    DamageFXSockets = T.RT_57,
     HitMontageRule = "MonJTBlastRobot",
     ModelId = 900401,
     MontageFolder = "/Game/Asset/Char/Monster/SQ_Wanju/Animation/Montage/",
@@ -5162,6 +5585,78 @@ return ReadOnly("Model", {
     ModelId = 900702,
     SkeletonMeshPath = "Asset/Char/Monster/SQ_Niaopao/Mesh/SQ_Niaopao_WP_SM.SQ_Niaopao_WP_SM"
   },
+  [918130] = {
+    ModelId = 918130,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_RotateCenter_HX_Gear01.SM_IP_RotateCenter_HX_Gear01"
+  },
+  [918131] = {
+    ModelId = 918131,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_RotateCenter_HX_Gear02.SM_IP_RotateCenter_HX_Gear02"
+  },
+  [918132] = {
+    ModelId = 918132,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_RotateCenter_HX_Gear03.SM_IP_RotateCenter_HX_Gear03"
+  },
+  [918140] = {
+    ModelId = 918140,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_RotatePanel_HX_Gear01.SM_IP_RotatePanel_HX_Gear01"
+  },
+  [918141] = {
+    ModelId = 918141,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_RotatePanel_HX_Gear02.SM_IP_RotatePanel_HX_Gear02"
+  },
+  [918142] = {
+    ModelId = 918142,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_RotatePanel_HX_Gear03.SM_IP_RotatePanel_HX_Gear03"
+  },
+  [918143] = {
+    ModelId = 918143,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_RotatePanel_YYG_Gear01.SM_IP_RotatePanel_YYG_Gear01"
+  },
+  [918144] = {
+    ModelId = 918144,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_RotatePanel_YYG_Gear01A.SM_IP_RotatePanel_YYG_Gear01A"
+  },
+  [918145] = {
+    ModelId = 918145,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_RotatePanel_YYG_Gear02.SM_IP_RotatePanel_YYG_Gear02"
+  },
+  [918146] = {
+    ModelId = 918146,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_RotatePanel_YYG_Gear02A.SM_IP_RotatePanel_YYG_Gear02A"
+  },
+  [918147] = {
+    ModelId = 918147,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_RotatePanel_YYG_Gear03.SM_IP_RotatePanel_YYG_Gear03"
+  },
+  [918148] = {
+    ModelId = 918148,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_RotatePanel_YYG_Gear03A.SM_IP_RotatePanel_YYG_Gear03A"
+  },
+  [918149] = {
+    ModelId = 918149,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_RotatePanel_YYG_Gear04.SM_IP_RotatePanel_YYG_Gear04"
+  },
+  [918150] = {
+    ModelId = 918150,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_RotatePanel_YYG_Gear04A.SM_IP_RotatePanel_YYG_Gear04A"
+  },
+  [918151] = {
+    ModelId = 918151,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_RotatePanel_YYG_Gear05.SM_IP_RotatePanel_YYG_Gear05"
+  },
+  [918152] = {
+    ModelId = 918152,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_RotatePanel_YYG_Gear05A.SM_IP_RotatePanel_YYG_Gear05A"
+  },
+  [918153] = {
+    ModelId = 918153,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_RotatePanel_YYG_Gear05B.SM_IP_RotatePanel_YYG_Gear05B"
+  },
+  [918154] = {
+    ModelId = 918154,
+    SkeletonMeshPath = "Asset/Scene/common/InterProps/Mesh/SM_IP_RotatePanel_YYG_Gear05C.SM_IP_RotatePanel_YYG_Gear05C"
+  },
   [950001] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/NE_Dajie/ABP_Mon_NE_Dajie.ABP_Mon_NE_Dajie_C'",
     AssistSockets = T.RT_4,
@@ -5171,6 +5666,20 @@ return ReadOnly("Model", {
     DamageFXSockets = T.RT_4,
     HitMontageRule = "MonNEDajie",
     ModelId = 950001,
+    ModelScale = 1.2,
+    MontageFolder = "/Game/Asset/Char/Monster/NE_Dajie/Animation/Montage/",
+    MontagePrefix = "NE_Dajie_",
+    SkeletonMeshPath = "Asset/Char/Monster/NE_Dajie/Mesh/NE_Dajie_SM.NE_Dajie_SM"
+  },
+  [950002] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/NE_Dajie/ABP_Mon_NE_Dajie.ABP_Mon_NE_Dajie_C'",
+    AssistSockets = T.RT_4,
+    AudioPrefix = "NE_Dajie_",
+    AvatarExpressionPrefix = "Dajia_",
+    BirthTime = -1,
+    DamageFXSockets = T.RT_4,
+    HitMontageRule = "MonNEDajieTem102",
+    ModelId = 950002,
     ModelScale = 1.2,
     MontageFolder = "/Game/Asset/Char/Monster/NE_Dajie/Animation/Montage/",
     MontagePrefix = "NE_Dajie_",
@@ -5260,6 +5769,28 @@ return ReadOnly("Model", {
     MontageFolder = "/Game/Asset/Char/Monster/NE_Villiger04/Animation/Montage/",
     MontagePrefix = "NE_Villiger04_",
     SkeletonMeshPath = "Asset/Char/Monster/NE_Villiger/Mesh/NE_Villiger04_SM.NE_Villiger04_SM"
+  },
+  [950801] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/NE_Haer/ABP_NE_Haer.ABP_NE_Haer_C'",
+    AssistSockets = T.RT_4,
+    AudioPrefix = "NE_Villiger_",
+    DamageFXSockets = T.RT_4,
+    HitMontageRule = "MonDefault",
+    ModelId = 950801,
+    MontageFolder = "/Game/Asset/Char/Monster/NE_Villiger/Animation/Montage/",
+    MontagePrefix = "NE_Villiger_",
+    SkeletonMeshPath = "Asset/Char/Monster/NE_Villiger/Mesh/NE_Villiger05_SM.NE_Villiger05_SM"
+  },
+  [950901] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/NE_Haer/ABP_NE_Haer.ABP_NE_Haer_C'",
+    AssistSockets = T.RT_4,
+    AudioPrefix = "NE_Villiger_",
+    DamageFXSockets = T.RT_4,
+    HitMontageRule = "MonDefault",
+    ModelId = 950901,
+    MontageFolder = "/Game/Asset/Char/Monster/NE_Villiger/Animation/Montage/",
+    MontagePrefix = "NE_Villiger_",
+    SkeletonMeshPath = "Asset/Char/Monster/NE_Villiger/Mesh/NE_Villiger06_SM.NE_Villiger06_SM"
   },
   [980101] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Animal_Xuelang/ABP_Mon_Xuelang.ABP_Mon_Xuelang_C'",
@@ -5479,7 +6010,7 @@ return ReadOnly("Model", {
   },
   [1010101] = {
     ModelId = 1010101,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Sword/Sword_Huipo/Mesh/Sword_Huipo_SM.Sword_Huipo_SM",
     StandId = "001",
     WeaponHitedSeName = "Sword",
@@ -5487,7 +6018,7 @@ return ReadOnly("Model", {
   },
   [1010201] = {
     ModelId = 1010201,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Sword/Sword_Guzi/Mesh/Sword_Guzi_SM.Sword_Guzi_SM",
     StandId = "010",
     WeaponHitedSeName = "Sword",
@@ -5495,7 +6026,7 @@ return ReadOnly("Model", {
   },
   [1010301] = {
     ModelId = 1010301,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Sword/Sword_Zhuiyi/Mesh/Sword_Zhuiyi_SM.Sword_Zhuiyi_SM",
     StandId = "006",
     WeaponHitedSeName = "Sword",
@@ -5503,7 +6034,7 @@ return ReadOnly("Model", {
   },
   [1010401] = {
     ModelId = 1010401,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Sword/Sword_Huimou/Mesh/Sword_Huimou_SM.Sword_Huimou_SM",
     StandId = "008",
     WeaponHitedSeName = "Sword",
@@ -5511,7 +6042,7 @@ return ReadOnly("Model", {
   },
   [1010501] = {
     ModelId = 1010501,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Sword/Sword_Liulang/Mesh/Sword_Liulang_SM.Sword_Liulang_SM",
     StandId = "012",
     WeaponHitedSeName = "Sword",
@@ -5519,7 +6050,7 @@ return ReadOnly("Model", {
   },
   [1010601] = {
     ModelId = 1010601,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Sword/Sword_Yulu/Mesh/Sword_Yulu_SM.Sword_Yulu_SM",
     StandId = "012",
     WeaponHitedSeName = "Sword",
@@ -5527,7 +6058,7 @@ return ReadOnly("Model", {
   },
   [1019801] = {
     ModelId = 1019801,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Sword/Sword_Liandu/Mesh/Sword_Liandu01_SM.Sword_Liandu01_SM",
     StandId = "014",
     WeaponHitedSeName = "Sword",
@@ -5535,7 +6066,7 @@ return ReadOnly("Model", {
   },
   [1019901] = {
     ModelId = 1019901,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Sword/Sword_Jinshu/Mesh/Sword_Jinshu01_SM.Sword_Jinshu01_SM",
     StandId = "013",
     WeaponHitedSeName = "Sword",
@@ -5543,7 +6074,7 @@ return ReadOnly("Model", {
   },
   [1020101] = {
     ModelId = 1020101,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Polearm/Polearm_Sairen/Mesh/Polearm_Sairen_SM.Polearm_Sairen_SM",
     StandId = "003",
     WeaponHitedSeName = "spear",
@@ -5551,7 +6082,7 @@ return ReadOnly("Model", {
   },
   [1020201] = {
     ModelId = 1020201,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Polearm/Polearm_Chunjue/Mesh/Polearm_Chunjue_SM.Polearm_Chunjue_SM",
     StandId = "011",
     WeaponHitedSeName = "spear",
@@ -5559,7 +6090,7 @@ return ReadOnly("Model", {
   },
   [1020301] = {
     ModelId = 1020301,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Polearm/Polearm_Zuiqian/Mesh/Polearm_Zuiqian_SM.Polearm_Zuiqian_SM",
     StandId = "007",
     WeaponHitedSeName = "spear",
@@ -5567,7 +6098,7 @@ return ReadOnly("Model", {
   },
   [1020401] = {
     ModelId = 1020401,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Polearm/Polearm_Xiji/Mesh/Polearm_Xiji_SM.Polearm_Xiji_SM",
     StandId = "015",
     WeaponHitedSeName = "sickle",
@@ -5575,7 +6106,7 @@ return ReadOnly("Model", {
   },
   [1020501] = {
     ModelId = 1020501,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Polearm/Polearm_Jiushu/Mesh/Polearm_Jiushu_SM.Polearm_Jiushu_SM",
     StandId = "015",
     WeaponHitedSeName = "sickle",
@@ -5583,7 +6114,7 @@ return ReadOnly("Model", {
   },
   [1020601] = {
     ModelId = 1020601,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Polearm/Polearm_Chixing/Mesh/Polearm_Chixing_SM.Polearm_Chixing_SM",
     StandId = "015",
     WeaponHitedSeName = "sickle",
@@ -5591,7 +6122,7 @@ return ReadOnly("Model", {
   },
   [1020701] = {
     ModelId = 1020701,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Polearm/Polearm_Weilan/Mesh/Polearm_Weilan_SM.Polearm_Weilan_SM",
     StandId = "015",
     WeaponHitedSeName = "sickle",
@@ -5599,7 +6130,7 @@ return ReadOnly("Model", {
   },
   [1020801] = {
     ModelId = 1020801,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Polearm/Polearm_Yihe/Mesh/Polearm_Yihe_SM.Polearm_Yihe_SM",
     StandId = "015",
     WeaponHitedSeName = "sickle",
@@ -5607,7 +6138,7 @@ return ReadOnly("Model", {
   },
   [1020901] = {
     ModelId = 1020901,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Polearm/Polearm_Zhuixin/Mesh/Polearm_Zhuixin_SM.Polearm_Zhuixin_SM",
     StandId = "015",
     WeaponHitedSeName = "sickle",
@@ -5615,7 +6146,7 @@ return ReadOnly("Model", {
   },
   [1029801] = {
     ModelId = 1029801,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Polearm/Polearm_Liandu/Mesh/Polearm_Liandu01_SM.Polearm_Liandu01_SM",
     StandId = "003",
     WeaponHitedSeName = "spear",
@@ -5623,7 +6154,7 @@ return ReadOnly("Model", {
   },
   [1029901] = {
     ModelId = 1029901,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Polearm/Polearm_Jinshu/Mesh/Polearm_Jinshu01_SM.Polearm_Jinshu01_SM",
     StandId = "003",
     WeaponHitedSeName = "spear",
@@ -5631,7 +6162,7 @@ return ReadOnly("Model", {
   },
   [1030101] = {
     ModelId = 1030101,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Claymore/Claymore_Chengjie/Mesh/Claymore_Chengjie_SM.Claymore_Chengjie_SM",
     StandId = "017",
     WeaponHitedSeName = "heavysword",
@@ -5639,7 +6170,7 @@ return ReadOnly("Model", {
   },
   [1030201] = {
     ModelId = 1030201,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Claymore/Claymore_Rimian/Mesh/Claymore_Rimian_SM.Claymore_Rimian_SM",
     StandId = "009",
     WeaponHitedSeName = "heavysword",
@@ -5647,7 +6178,7 @@ return ReadOnly("Model", {
   },
   [1030301] = {
     ModelId = 1030301,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Claymore/Claymore_Chixing/Mesh/Claymore_Chixing_SM.Claymore_Chixing_SM",
     StandId = "009",
     WeaponHitedSeName = "heavysword",
@@ -5655,7 +6186,7 @@ return ReadOnly("Model", {
   },
   [1030401] = {
     ModelId = 1030401,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Claymore/Claymore_Wangu/Mesh/Claymore_Wangu_SM.Claymore_Wangu_SM",
     StandId = "009",
     WeaponHitedSeName = "heavysword",
@@ -5663,7 +6194,7 @@ return ReadOnly("Model", {
   },
   [1039801] = {
     ModelId = 1039801,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Claymore/Claymore_Liandu/Mesh/Claymore_Liandu_SM.Claymore_Liandu_SM",
     StandId = "009",
     WeaponHitedSeName = "heavysword",
@@ -5671,7 +6202,7 @@ return ReadOnly("Model", {
   },
   [1039901] = {
     ModelId = 1039901,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Claymore/Claymore_Jinshu/Mesh/Claymore_Jinshu_SM.Claymore_Jinshu_SM",
     StandId = "009",
     WeaponHitedSeName = "heavysword",
@@ -5679,7 +6210,7 @@ return ReadOnly("Model", {
   },
   [1040101] = {
     ModelId = 1040101,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Dualblade/Dualblade_Shixiang/Mesh/Dualblade_Shixiang01_SM.Dualblade_Shixiang01_SM",
     StandId = "009",
     WeaponHitedSeName = "Dualblade",
@@ -5687,7 +6218,7 @@ return ReadOnly("Model", {
   },
   [1040102] = {
     ModelId = 1040102,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Dualblade/Dualblade_Shixiang/Mesh/Dualblade_Shixiang02_SM.Dualblade_Shixiang02_SM",
     StandId = "009",
     WeaponHitedSeName = "Dualblade",
@@ -5695,7 +6226,7 @@ return ReadOnly("Model", {
   },
   [1040201] = {
     ModelId = 1040201,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Dualblade/Dualblade_Liujin/Mesh/Dualblade_Liujin01_SM.Dualblade_Liujin01_SM",
     StandId = "009",
     WeaponHitedSeName = "Dualblade",
@@ -5703,7 +6234,7 @@ return ReadOnly("Model", {
   },
   [1040202] = {
     ModelId = 1040202,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Dualblade/Dualblade_Liujin/Mesh/Dualblade_Liujin02_SM.Dualblade_Liujin02_SM",
     StandId = "009",
     WeaponHitedSeName = "Dualblade",
@@ -5711,7 +6242,7 @@ return ReadOnly("Model", {
   },
   [1040301] = {
     ModelId = 1040301,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Dualblade/Dualblade_Yousha/Mesh/Dualblade_Yousha01_SM.Dualblade_Yousha01_SM",
     StandId = "009",
     WeaponHitedSeName = "Dualblade",
@@ -5719,7 +6250,7 @@ return ReadOnly("Model", {
   },
   [1040302] = {
     ModelId = 1040302,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Dualblade/Dualblade_Yousha/Mesh/Dualblade_Yousha02_SM.Dualblade_Yousha02_SM",
     StandId = "009",
     WeaponHitedSeName = "Dualblade",
@@ -5727,7 +6258,7 @@ return ReadOnly("Model", {
   },
   [1049801] = {
     ModelId = 1049801,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Dualblade/Dualblade_Liandu/Mesh/Dualblade_Liandu01_SM.Dualblade_Liandu01_SM",
     StandId = "009",
     WeaponHitedSeName = "Dualblade",
@@ -5735,7 +6266,7 @@ return ReadOnly("Model", {
   },
   [1049802] = {
     ModelId = 1049802,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Dualblade/Dualblade_Liandu/Mesh/Dualblade_Liandu02_SM.Dualblade_Liandu02_SM",
     StandId = "009",
     WeaponHitedSeName = "Dualblade",
@@ -5743,7 +6274,7 @@ return ReadOnly("Model", {
   },
   [1049901] = {
     ModelId = 1049901,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Dualblade/Dualblade_Jinshu/Mesh/Dualblade_Jinshu01_SM.Dualblade_Jinshu01_SM",
     StandId = "009",
     WeaponHitedSeName = "Dualblade",
@@ -5751,7 +6282,7 @@ return ReadOnly("Model", {
   },
   [1049902] = {
     ModelId = 1049902,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Dualblade/Dualblade_Jinshu/Mesh/Dualblade_Jinshu02_SM.Dualblade_Jinshu02_SM",
     StandId = "009",
     WeaponHitedSeName = "Dualblade",
@@ -5759,7 +6290,7 @@ return ReadOnly("Model", {
   },
   [1050101] = {
     ModelId = 1050101,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Swordwhip/Swordwhip_Buyu/Mesh/Swordwhip_Buyu_SM.Swordwhip_Buyu_SM",
     StandId = "016",
     WeaponHitedSeName = "Swordwhip",
@@ -5768,7 +6299,7 @@ return ReadOnly("Model", {
   [1050201] = {
     AdditionalFXID = {1050201},
     ModelId = 1050201,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Swordwhip/Swordwhip_Zeshi/Mesh/Swordwhip_Zeshi_SM.Swordwhip_Zeshi_SM",
     StandId = "016",
     WeaponHitedSeName = "Swordwhip",
@@ -5776,7 +6307,7 @@ return ReadOnly("Model", {
   },
   [1050301] = {
     ModelId = 1050301,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Swordwhip/Swordwhip_Chixing/Mesh/Swordwhip_Chixing_SM.Swordwhip_Chixing_SM",
     StandId = "016",
     WeaponHitedSeName = "Swordwhip",
@@ -5784,7 +6315,7 @@ return ReadOnly("Model", {
   },
   [1050401] = {
     ModelId = 1050401,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Swordwhip/Swordwhip_Canghu/Mesh/Swordwhip_Canghu_SM.Swordwhip_Canghu_SM",
     StandId = "016",
     WeaponHitedSeName = "Swordwhip",
@@ -5792,7 +6323,7 @@ return ReadOnly("Model", {
   },
   [1060101] = {
     ModelId = 1060101,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Katana/Katana_Feiqie/Mesh/Katana_Feiqie_SM.Katana_Feiqie_SM",
     StandId = "016",
     WeaponHitedSeName = "Katana",
@@ -5800,7 +6331,7 @@ return ReadOnly("Model", {
   },
   [1060102] = {
     ModelId = 1060102,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Katana/Katana_Feiqie/Mesh/Katana_Feiqie_Accessary_SM.Katana_Feiqie_Accessary_SM",
     StandId = "016",
     WeaponHitedSeName = "Katana",
@@ -5808,7 +6339,7 @@ return ReadOnly("Model", {
   },
   [1060201] = {
     ModelId = 1060201,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Katana/Katana_Chixing/Mesh/Katana_Chixing_SM.Katana_Chixing_SM",
     StandId = "016",
     WeaponHitedSeName = "Katana",
@@ -5816,7 +6347,7 @@ return ReadOnly("Model", {
   },
   [1060202] = {
     ModelId = 1060202,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Katana/Katana_Chixing/Mesh/Katana_Chixing_Accessary_SM.Katana_Chixing_Accessary_SM",
     StandId = "016",
     WeaponHitedSeName = "Katana",
@@ -5824,7 +6355,7 @@ return ReadOnly("Model", {
   },
   [1060301] = {
     ModelId = 1060301,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Katana/Katana_Yuli/Mesh/Katana_Yuli_SM.Katana_Yuli_SM",
     StandId = "016",
     WeaponHitedSeName = "Katana",
@@ -5832,7 +6363,7 @@ return ReadOnly("Model", {
   },
   [1060302] = {
     ModelId = 1060302,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Katana/Katana_Yuli/Mesh/Katana_Yuli_Accessary_SM.Katana_Yuli_Accessary_SM",
     StandId = "016",
     WeaponHitedSeName = "Katana",
@@ -5840,7 +6371,7 @@ return ReadOnly("Model", {
   },
   [1069801] = {
     ModelId = 1069801,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Katana/Katana_Liandu/Mesh/Katana_Liandu_SM.Katana_Liandu_SM",
     StandId = "016",
     WeaponHitedSeName = "Katana",
@@ -5848,7 +6379,7 @@ return ReadOnly("Model", {
   },
   [1069802] = {
     ModelId = 1069802,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Katana/Katana_Liandu/Mesh/Katana_Liandu_Accessary_SM.Katana_Liandu_Accessary_SM",
     StandId = "016",
     WeaponHitedSeName = "Katana",
@@ -5856,7 +6387,7 @@ return ReadOnly("Model", {
   },
   [1069901] = {
     ModelId = 1069901,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Katana/Katana_Jinshu/Mesh/Katana_Jinshu_SM.Katana_Jinshu_SM",
     StandId = "016",
     WeaponHitedSeName = "Katana",
@@ -5864,7 +6395,7 @@ return ReadOnly("Model", {
   },
   [1069902] = {
     ModelId = 1069902,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Katana/Katana_Jinshu/Mesh/Katana_Jinshu_Accessary_SM.Katana_Jinshu_Accessary_SM",
     StandId = "016",
     WeaponHitedSeName = "Katana",
@@ -5872,295 +6403,316 @@ return ReadOnly("Model", {
   },
   [2010101] = {
     ModelId = 2010101,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Pistol/Pistol_Wuxu/Mesh/Pistol_Wuxu_SM.Pistol_Wuxu_SM",
     StandId = "001",
     WeaponSeInfo = "Pistol_Wuxu"
   },
   [2010201] = {
     ModelId = 2010201,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Chixing/Mesh/Crossbow_Chixing_R_SM.Crossbow_Chixing_R_SM",
     StandId = "001",
     WeaponSeInfo = "Pistol_Jinshu"
   },
   [2010301] = {
     ModelId = 2010301,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Gaoyu/Mesh/Crossbow_Gaoyu_R_SM.Crossbow_Gaoyu_R_SM",
     StandId = "001",
     WeaponSeInfo = "Pistol_Jinshu"
   },
   [2019801] = {
     ModelId = 2019801,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Liandu/Mesh/Crossbow_Liandu_R_SM.Crossbow_Liandu_R_SM",
     StandId = "001",
     WeaponSeInfo = "Pistol_Jinshu"
   },
   [2019901] = {
     ModelId = 2019901,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Jinshu/Mesh/Crossbow_Jinshu_R_SM.Crossbow_Jinshu_R_SM",
     StandId = "001",
     WeaponSeInfo = "Pistol_Jinshu"
   },
   [2020101] = {
     ModelId = 2020101,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Chixing/Mesh/Crossbow_Chixing_R_SM.Crossbow_Chixing_R_SM",
     StandId = "003",
     WeaponSeInfo = "Crossbow_Chixing"
   },
   [2020201] = {
     ModelId = 2020201,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Chixing/Mesh/Crossbow_Chixing_L_SM.Crossbow_Chixing_L_SM",
     StandId = "003",
     WeaponSeInfo = "Crossbow_Chixing"
   },
   [2020301] = {
     ModelId = 2020301,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Lanse/Mesh/Crossbow_Lanse_R_SM.Crossbow_Lanse_R_SM",
     StandId = "003",
     WeaponSeInfo = "Crossbow_Lanse"
   },
   [2020401] = {
     ModelId = 2020401,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Lanse/Mesh/Crossbow_Lanse_L_SM.Crossbow_Lanse_L_SM",
     StandId = "003",
     WeaponSeInfo = "Crossbow_Lanse"
   },
   [2020501] = {
     ModelId = 2020501,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Gaoyu/Mesh/Crossbow_Gaoyu_R_SM.Crossbow_Gaoyu_R_SM",
     StandId = "003",
     WeaponSeInfo = "Crossbow_Chixing"
   },
   [2020601] = {
     ModelId = 2020601,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Gaoyu/Mesh/Crossbow_Gaoyu_L_SM.Crossbow_Gaoyu_L_SM",
     StandId = "003",
     WeaponSeInfo = "Crossbow_Chixing"
   },
   [2029601] = {
     ModelId = 2029601,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Liandu/Mesh/Crossbow_Liandu_R_SM.Crossbow_Liandu_R_SM",
     StandId = "005",
     WeaponSeInfo = "Crossbow_Chixing"
   },
   [2029701] = {
     ModelId = 2029701,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Liandu/Mesh/Crossbow_Liandu_L_SM.Crossbow_Liandu_L_SM",
     StandId = "005",
     WeaponSeInfo = "Crossbow_Chixing"
   },
   [2029801] = {
     ModelId = 2029801,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Jinshu/Mesh/Crossbow_Jinshu_R_SM.Crossbow_Jinshu_R_SM",
     StandId = "004",
     WeaponSeInfo = "Crossbow_Chixing"
   },
   [2029901] = {
     ModelId = 2029901,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Jinshu/Mesh/Crossbow_Jinshu_L_SM.Crossbow_Jinshu_L_SM",
     StandId = "004",
     WeaponSeInfo = "Crossbow_Chixing"
   },
   [2030101] = {
     ModelId = 2030101,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Cannon/Cannon_Qunxing/Mesh/Cannon_Qunxing_SM.Cannon_Qunxing_SM",
     StandId = "002",
     WeaponSeInfo = "Cannon_Qunxing"
   },
   [2030201] = {
     ModelId = 2030201,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Cannon/Cannon_Chiqiang/Mesh/Cannon_Chiqiang_SM.Cannon_Chiqiang_SM",
     StandId = "002",
     WeaponSeInfo = "Cannon_Chiqiang"
   },
   [2030301] = {
     ModelId = 2030301,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Cannon/Cannon_Chixing/Mesh/Cannon_Chixing_SM.Cannon_Chixing_SM",
     StandId = "002",
     WeaponSeInfo = "Cannon_Chiqiang"
   },
   [2030401] = {
     ModelId = 2030401,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Cannon/Cannon_Guixu/Mesh/Cannon_Guixu_SM.Cannon_Guixu_SM",
     StandId = "002",
     WeaponSeInfo = "Cannon_Qingtong"
   },
   [2030501] = {
     ModelId = 2030501,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Cannon/Cannon_Yinbai/Mesh/Cannon_Yinbai_SM.Cannon_Yinbai_SM",
     StandId = "002",
     WeaponSeInfo = "Cannon_Yinbai"
   },
   [2030601] = {
     ModelId = 2030601,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Cannon/Cannon_Ronghuo/Mesh/Cannon_Ronghuo_SM.Cannon_Ronghuo_SM",
     StandId = "002",
     WeaponSeInfo = "Cannon_Chiqiang"
   },
   [2039801] = {
     ModelId = 2039801,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Cannon/Cannon_Liandu/Mesh/Cannon_Liandu_SM.Cannon_Liandu_SM",
     StandId = "002",
     WeaponSeInfo = "Cannon_Chiqiang"
   },
   [2039901] = {
     ModelId = 2039901,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Cannon/Cannon_Jinshu/Mesh/Cannon_Jinshu_SM.Cannon_Jinshu_SM",
     StandId = "002",
     WeaponSeInfo = "Cannon_Chiqiang"
   },
   [2040101] = {
     ModelId = 2040101,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Shotgun/Shotgun_Chixing/Mesh/Shotgun_Chixing_SM.Shotgun_Chixing_SM",
     StandId = "005",
     WeaponSeInfo = "Shotgun_Liandu"
   },
   [2040201] = {
     ModelId = 2040201,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Shotgun/Shotgun_Banzi/Mesh/Shotgun_Banzi_SM.Shotgun_Banzi_SM",
     StandId = "005",
     WeaponSeInfo = "Shotgun_Banzi"
   },
   [2040301] = {
     ModelId = 2040301,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Shotgun/Shotgun_Shengcai/Mesh/Shotgun_Shengcai_SM.Shotgun_Shengcai_SM",
     StandId = "005",
     WeaponSeInfo = "Shotgun_Shengcai"
   },
   [2040401] = {
     ModelId = 2040401,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Shotgun/Shotgun_Qiege/Mesh/Shotgun_Qiege_SM.Shotgun_Qiege_SM",
     StandId = "005",
     WeaponSeInfo = "Shotgun_Qiege"
   },
   [2040501] = {
     ModelId = 2040501,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Shotgun/Shotgun_Baopo/Mesh/Shotgun_Baopo.Shotgun_Baopo",
     StandId = "005",
     WeaponSeInfo = "Shotgun_Baopo"
   },
   [2040502] = {
     ModelId = 2040502,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Shotgun/Shotgun_Baopo/Mesh/Shotgun_Baopo_Part01_SM.Shotgun_Baopo_Part01_SM",
     StandId = "005",
     WeaponSeInfo = "Shotgun_Baopo"
   },
+  [2040701] = {
+    ModelId = 2040701,
+    ModelTag = T.RT_22,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Shotgun/Shotgun_Guchu/Mesh/Shotgun_Guchu_SM.Shotgun_Guchu_SM",
+    StandId = "005",
+    WeaponSeInfo = "Shotgun_Guchu"
+  },
   [2049801] = {
     ModelId = 2049801,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Shotgun/Shotgun_Liandu/Mesh/Shotgun_Liandu_SM.Shotgun_Liandu_SM",
     StandId = "005",
     WeaponSeInfo = "Shotgun_Liandu"
   },
   [2049901] = {
     ModelId = 2049901,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Shotgun/Shotgun_Jinshu/Mesh/Shotgun_Jinshu_SM.Shotgun_Jinshu_SM",
     StandId = "004",
     WeaponSeInfo = "Shotgun_Liandu"
   },
   [2050101] = {
     ModelId = 2050101,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Machinegun/Machinegun_Chixing/Mesh/Machinegun_Chixing_SM.Machinegun_Chixing_SM",
     StandId = "004",
     WeaponSeInfo = "Machinegun_Chixing"
   },
   [2050201] = {
     ModelId = 2050201,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Machinegun/Machinegun_Fangzhu/Mesh/Machinegun_Fangzhu_SM.Machinegun_Fangzhu_SM",
     StandId = "004",
     WeaponSeInfo = "Machinegun_Fangzhu"
   },
   [2050301] = {
     ModelId = 2050301,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Machinegun/Machinegun_Qiqing/Mesh/Machinegun_Qiqing_SM.Machinegun_Qiqing_SM",
     StandId = "004",
     WeaponSeInfo = "Machinegun_Qiqing"
   },
   [2050401] = {
     ModelId = 2050401,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Machinegun/Machinegun_Poxiao/Mesh/Machinegun_Poxiao_SM.Machinegun_Poxiao_SM",
     StandId = "004",
     WeaponSeInfo = "Machinegun_Poxiao"
   },
+  [2050501] = {
+    ModelId = 2050501,
+    ModelTag = T.RT_22,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Machinegun/Machinegun_Sanjiao/Mesh/Machinegun_Sanjiao_SM.Machinegun_Sanjiao_SM",
+    StandId = "004",
+    WeaponSeInfo = "Machinegun_Sanjiao"
+  },
+  [2050601] = {
+    ModelId = 2050601,
+    ModelTag = T.RT_22,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Machinegun/Machinegun_Quewu/Mesh/Machinegun_Quewu_SM.Machinegun_Quewu_SM",
+    StandId = "004",
+    WeaponSeInfo = "Machinegun_Quewu"
+  },
   [2050701] = {
     ModelId = 2050701,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Machinegun/Machinegun_Yinlang/Mesh/Machinegun_Yinlang_SM.Machinegun_Yinlang_SM",
     StandId = "004",
     WeaponSeInfo = "Machinegun_Yinlang"
   },
   [2050801] = {
     ModelId = 2050801,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Machinegun/Machinegun_Ruohua/Mesh/Machinegun_Ruohua_SM.Machinegun_Ruohua_SM",
     StandId = "004",
     WeaponSeInfo = "Machinegun_Qiqing"
   },
   [2050901] = {
     ModelId = 2050901,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Machinegun/Machinegun_Zhimeng/Mesh/Machinegun_Zhimeng_SM.Machinegun_Zhimeng_SM",
     StandId = "004",
     WeaponSeInfo = "Machinegun_Zhimeng"
   },
   [2051001] = {
     ModelId = 2051001,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Machinegun/Machinegun_Ruohua/Mesh/Machinegun_Ruohua_SM.Machinegun_Ruohua_SM",
     StandId = "004",
     WeaponSeInfo = "Machinegun_Ruohua"
   },
   [2059801] = {
     ModelId = 2059801,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Machinegun/Machinegun_Liandu/Mesh/Machinegun_Liandu_SM.Machinegun_Liandu_SM",
     StandId = "004",
     WeaponSeInfo = "Machinegun_Chixing"
   },
   [2059901] = {
     ModelId = 2059901,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Machinegun/Machinegun_Jinshu/Mesh/Machinegun_Jinshu_SM.Machinegun_Jinshu_SM",
     StandId = "004",
     WeaponSeInfo = "Machinegun_Chixing"
   },
   [2060101] = {
-    AdditionalFXID = T.RT_19,
+    AdditionalFXID = T.RT_25,
     ModelId = 2060101,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Bow/Bow_Shashi/Mesh/Bow_Shashi_SM.Bow_Shashi_SM",
     StandId = "003",
     WeaponSeInfo = "Bow_Lieyan"
@@ -6168,39 +6720,39 @@ return ReadOnly("Model", {
   [2060201] = {
     AdditionalFXID = {2060100, 2060202},
     ModelId = 2060201,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Bow/Bow_Huguang/Mesh/Bow_Huguang_SM.Bow_Huguang_SM",
     StandId = "003",
     WeaponSeInfo = "Bow_Huguang"
   },
   [2060301] = {
-    AdditionalFXID = T.RT_19,
+    AdditionalFXID = T.RT_25,
     ModelId = 2060301,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Bow/Bow_Yinbu/Mesh/Bow_Yinbu_SM.Bow_Yinbu_SM",
     StandId = "003",
     WeaponSeInfo = "Bow_Inbu"
   },
   [2060401] = {
-    AdditionalFXID = T.RT_19,
+    AdditionalFXID = T.RT_25,
     ModelId = 2060401,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Bow/Bow_Chixing/Mesh/Bow_Chixing_SM.Bow_Chixing_SM",
     StandId = "003",
     WeaponSeInfo = "Bow_Chixing"
   },
   [2069801] = {
-    AdditionalFXID = T.RT_19,
+    AdditionalFXID = T.RT_25,
     ModelId = 2069801,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Bow/Bow_Liandu/Mesh/Bow_Liandu_SM.Bow_Liandu_SM",
     StandId = "003",
     WeaponSeInfo = "Bow_Common"
   },
   [2069901] = {
-    AdditionalFXID = T.RT_19,
+    AdditionalFXID = T.RT_25,
     ModelId = 2069901,
-    ModelTag = T.RT_16,
+    ModelTag = T.RT_22,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Bow/Bow_Jinshu/Mesh/Bow_Jinshu_SM.Bow_Jinshu_SM",
     StandId = "003",
     WeaponSeInfo = "Bow_Common"
@@ -6218,10 +6770,25 @@ return ReadOnly("Model", {
   },
   [3010103] = {
     ModelId = 3010103,
-    ModelTag = T.RT_13,
+    ModelTag = T.RT_14,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Claymore/Claymore_Rongyao/Mesh/Claymore_Rongyao_SM.Claymore_Rongyao_SM",
     StandId = "009",
     WeaponHitedSeName = "heavysword"
+  },
+  [3010104] = {
+    ModelId = 3010104,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Claymore/Claymore_Fubei/Mesh/Claymore_Fubei_SM.Claymore_Fubei_SM",
+    WeaponHitedSeName = "lightSaber",
+    WeaponSeInfo = "Claymore_Lightsaber"
+  },
+  [3010105] = {
+    AdditionalFXID = {1030198},
+    ModelId = 3010105,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Claymore/Claymore_Damiao/Mesh/Claymore_Damiao_SM.Claymore_Damiao_SM"
+  },
+  [3010106] = {
+    ModelId = 3010106,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Claymore/Claymore_Shiru/Mesh/Claymore_Shiru_SM.Claymore_Shiru_SM"
   },
   [3010201] = {
     ModelId = 3010201,
@@ -6234,10 +6801,29 @@ return ReadOnly("Model", {
     WeaponHitedSeName = "lightSaber",
     WeaponSeInfo = "Sword_Lightsaber"
   },
+  [3010203] = {
+    AdditionalFXID = {1010199},
+    ModelId = 3010203,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Sword/Sword_Miaoshou/Mesh/Sword_Miaoshou_SM.Sword_Miaoshou_SM"
+  },
+  [3010204] = {
+    ModelId = 3010204,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Sword/Sword_Shiru/Mesh/Sword_Shiru_SM.Sword_Shiru_SM"
+  },
   [3010301] = {
     AdditionalFXID = {2060100, 2060199},
     ModelId = 3010301,
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Bow/Bow_Huanri/Mesh/Bow_Huanri_SM.Bow_Huanri_SM"
+  },
+  [3010302] = {
+    AdditionalFXID = {2060100, 2060198},
+    ModelId = 3010302,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Bow/Bow_Beigong/Mesh/Bow_Beigong_SM.Bow_Beigong_SM"
+  },
+  [3010303] = {
+    AdditionalFXID = {2060100, 2060197},
+    ModelId = 3010303,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Bow/Bow_Jinggong/Mesh/Bow_Jinggong_SM.Bow_Jinggong_SM"
   },
   [3010401] = {
     AdditionalFXID = {1020199},
@@ -6251,9 +6837,130 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Polearm/Polearm_Talang/Mesh/Polearm_Talang_SM.Polearm_Talang_SM",
     WeaponHitedSeName = "spear"
   },
+  [3010403] = {
+    ModelId = 3010403,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Polearm/Polearm_Fubei/Mesh/Polearm_Fubei_SM.Polearm_Fubei_SM",
+    WeaponHitedSeName = "lightSaber",
+    WeaponSeInfo = "Polearm_Lightsaber"
+  },
+  [3010404] = {
+    AdditionalFXID = {1020197},
+    ModelId = 3010404,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Polearm/Polearm_Miaotu/Mesh/Polearm_Miaotu_SM.Polearm_Miaotu_SM"
+  },
+  [3010405] = {
+    ModelId = 3010405,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Polearm/Polearm_Shiru/Mesh/Polearm_Shiru_SM.Polearm_Shiru_SM"
+  },
+  [3010501] = {
+    AdditionalFXID = {2040199},
+    ModelId = 3010501,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Machinegun/Machinegun_Dalang/Mesh/Machinegun_Dalang_SM.Machinegun_Dalang_SM"
+  },
+  [3010502] = {
+    AdditionalFXID = {2050199},
+    ModelId = 3010502,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Machinegun/Machinegun_Dianju/Mesh/Machinegun_Dianju_SM.Machinegun_Dianju_SM"
+  },
+  [3010601] = {
+    ModelId = 3010601,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Dualblade/Dualblade_Fubei/Mesh/Dualblade_Fubei01_SM.Dualblade_Fubei01_SM",
+    WeaponHitedSeName = "lightSaber",
+    WeaponSeInfo = "Dualblade_Lightsaber"
+  },
+  [3010602] = {
+    ModelId = 3010602,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Dualblade/Dualblade_Fubei/Mesh/Dualblade_Fubei02_SM.Dualblade_Fubei02_SM"
+  },
+  [3010603] = {
+    AdditionalFXID = T.RT_33,
+    ModelId = 3010603,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Dualblade/Dualblade_Maomao/Mesh/Dualblade_Maomao01_SM.Dualblade_Maomao01_SM"
+  },
+  [3010604] = {
+    AdditionalFXID = T.RT_33,
+    ModelId = 3010604,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Dualblade/Dualblade_Maomao/Mesh/Dualblade_Maomao02_SM.Dualblade_Maomao02_SM"
+  },
+  [3010605] = {
+    ModelId = 3010605,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Dualblade/Dualblade_Shiru/Mesh/Dualblade_Shiru01_SM.Dualblade_Shiru01_SM"
+  },
+  [3010606] = {
+    ModelId = 3010606,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Dualblade/Dualblade_Shiru/Mesh/Dualblade_Shiru02_SM.Dualblade_Shiru02_SM"
+  },
+  [3010701] = {
+    ModelId = 3010701,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Katana/Katana_Fubei/Mesh/Katana_Fubei_SM.Katana_Fubei_SM",
+    WeaponHitedSeName = "lightSaber",
+    WeaponSeInfo = "Katana_Lightsaber"
+  },
+  [3010702] = {
+    ModelId = 3010702,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Katana/Katana_Fubei/Mesh/Katana_Fubei_Accessary_SM.Katana_Fubei_Accessary_SM"
+  },
+  [3010703] = {
+    AdditionalFXID = {1060199},
+    ModelId = 3010703,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Katana/Katana_Woshi/Mesh/Katana_Woshi_SM.Katana_Woshi_SM"
+  },
+  [3010704] = {
+    ModelId = 3010704,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Katana/Katana_Woshi/Mesh/Katana_Woshi_Accessary_SM.Katana_Woshi_Accessary_SM"
+  },
+  [3010705] = {
+    ModelId = 3010705,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Katana/Katana_Shiru/Mesh/Katana_Shiru_SM.Katana_Shiru_SM"
+  },
+  [3010706] = {
+    ModelId = 3010706,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Katana/Katana_Shiru/Mesh/Katana_Shiru_Accessary_SM.Katana_Shiru_Accessary_SM"
+  },
+  [3010801] = {
+    ModelId = 3010801,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Swordwhip/Swordwhip_Fubei/Mesh/Swordwhip_Fubei_SM.Swordwhip_Fubei_SM",
+    WeaponHitedSeName = "lightSaber",
+    WeaponSeInfo = "Swordwhip_Lightsaber"
+  },
+  [3010802] = {
+    AdditionalFXID = {1050199},
+    ModelId = 3010802,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Swordwhip/Swordwhip_Miaomiao/Mesh/Swordwhip_Miaomiao_SM.Swordwhip_Miaomiao_SM"
+  },
+  [3010803] = {
+    ModelId = 3010803,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Swordwhip/Swordwhip_Shiru/Mesh/Swordwhip_Shiru_SM.Swordwhip_Shiru_SM"
+  },
+  [3010901] = {
+    AdditionalFXID = {2030199},
+    ModelId = 3010901,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Cannon/Cannon_Daju/Mesh/Cannon_Daju_SM.Cannon_Daju_SM"
+  },
+  [3011001] = {
+    AdditionalFXID = {2040198},
+    ModelId = 3011001,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Shotgun/Shotgun_Dianju/Mesh/Shotgun_Dianju_SM.Shotgun_Dianju_SM"
+  },
+  [3011101] = {
+    AdditionalFXID = {2010199},
+    ModelId = 3011101,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Pistol/Pistol_Maobing/Mesh/Pistol_Maobing_SM.Pistol_Maobing_SM"
+  },
+  [3011201] = {
+    AdditionalFXID = T.RT_34,
+    ModelId = 3011201,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Maobing/Mesh/Crossbow_Maobing_R_SM.Crossbow_Maobing_R_SM"
+  },
+  [3011202] = {
+    AdditionalFXID = T.RT_34,
+    ModelId = 3011202,
+    SkeletonMeshPath = "Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Maobing/Mesh/Crossbow_Maobing_L_SM.Crossbow_Maobing_L_SM"
+  },
   [8210199] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Shuimu01/ABP_NPC_Shuimu01.ABP_NPC_Shuimu01_C'",
     AudioPrefix = "Shuimu_",
+    CharAccessoryOffsetId = {210199},
     FootType = "heeledMid",
     HeadScale = 0.8844,
     IsSkinModel = true,
@@ -6264,6 +6971,19 @@ return ReadOnly("Model", {
     MontagePrefix = "Shuimu_",
     SkeletonMeshPath = "Asset/Char/Player/Char097_Shuimu01/Mesh/Shuimu_SP01_SM",
     WeaponScale = 0.9785
+  },
+  [8240199] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Baiheng01/ABP_NPC_Baiheng01.ABP_NPC_Baiheng01_C'",
+    AudioPrefix = "Baiheng_",
+    CharAccessoryOffsetId = {240199},
+    FootType = "heeledHeavy",
+    IsSkinModel = true,
+    ModelId = 8240199,
+    ModelTag = T.RT_5,
+    MontageFolder = "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/",
+    MontagePrefix = "Baiheng01_",
+    SkeletonMeshPath = "Asset/Char/Player/Char096_Baiheng01/Mesh/Baiheng_SP01_SM.Baiheng_SP01_SM",
+    TailMeshPath = "Asset/Char/Player/Char096_Baiheng01/Mesh/Baiheng_SP01_Part01_SM.Baiheng_SP01_Part01_SM"
   },
   [8510101] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Player/Songlu/ABP_Songlu_Summoned.ABP_Songlu_Summoned_C'",
@@ -6277,20 +6997,22 @@ return ReadOnly("Model", {
   [8510199] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Songlu01/ABP_NPC_Songlu01.ABP_NPC_Songlu01_C'",
     AudioPrefix = "Songlu_",
+    CharAccessoryOffsetId = {510199},
     FootType = "heeledLight",
     HeadScale = 0.98,
     IsSkinModel = true,
     ModelId = 8510199,
-    ModelTag = T.RT_45,
+    ModelTag = T.RT_53,
     MontageFolder = "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/",
     MontagePrefix = "Songlu_",
     SkeletonMeshPath = "Asset/Char/Player/Char099_Songlu01/Mesh/Songlu_SP01_SM",
     WeaponScale = 0.8
   },
   [8530199] = {
-    AccessoryMeshPath = T.RT_47,
+    AccessoryMeshPath = T.RT_55,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Saiqi01/ABP_NPC_Saiqi01.ABP_NPC_Saiqi01_C'",
     AudioPrefix = "Saiqi_",
+    CharAccessoryOffsetId = {530199},
     FootType = "heeledMid",
     HeadScale = 0.98,
     IsSkinModel = true,
@@ -6347,117 +7069,246 @@ return ReadOnly("Model", {
     ModelId = 11010010,
     SkeletonMeshPath = "Asset/Char/Player/Char001_Heitao_J/Mesh/Heitao_TP01_SM.Heitao_TP01_SM"
   },
+  [11010011] = {
+    IsSkinModel = true,
+    ModelId = 11010011,
+    SkeletonMeshPath = "Asset/Char/Player/Char001_Heitao_J/Mesh/Heitao_TP02_SM.Heitao_TP02_SM"
+  },
   [11030010] = {
     IsSkinModel = true,
     ModelId = 11030010,
     SkeletonMeshPath = "Asset/Char/Player/Char025_Tuosi/Mesh/Tuosi01_TP01_SM.Tuosi01_TP01_SM"
+  },
+  [11030011] = {
+    IsSkinModel = true,
+    ModelId = 11030011,
+    SkeletonMeshPath = "Asset/Char/Player/Char025_Tuosi/Mesh/Tuosi01_TP02_SM.Tuosi01_TP02_SM"
   },
   [15010010] = {
     IsSkinModel = true,
     ModelId = 15010010,
     SkeletonMeshPath = "Asset/Char/Player/Char007_Baonu/Mesh/Baonu_TP01_SM.Baonu_TP01_SM"
   },
+  [15010011] = {
+    IsSkinModel = true,
+    ModelId = 15010011,
+    SkeletonMeshPath = "Asset/Char/Player/Char007_Baonu/Mesh/Baonu_TP02_SM.Baonu_TP02_SM"
+  },
   [15020010] = {
     IsSkinModel = true,
     ModelId = 15020010,
     SkeletonMeshPath = "Asset/Char/Player/Char031_Nifu/Mesh/Nifu_TP01_SM.Nifu_TP01_SM"
+  },
+  [15020011] = {
+    IsSkinModel = true,
+    ModelId = 15020011,
+    SkeletonMeshPath = "Asset/Char/Player/Char031_Nifu/Mesh/Nifu_TP02_SM.Nifu_TP02_SM"
+  },
+  [15030011] = {
+    IsSkinModel = true,
+    ModelId = 15030011,
+    SkeletonMeshPath = "Asset/Char/Player/Char030_Kezhou/Mesh/Kezhou_TP02_SM.Kezhou_TP02_SM"
   },
   [16010010] = {
     IsSkinModel = true,
     ModelId = 16010010,
     SkeletonMeshPath = "Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu_TP01_SM.Nvzhu_TP01_SM"
   },
+  [16010011] = {
+    IsSkinModel = true,
+    ModelId = 16010011,
+    SkeletonMeshPath = "Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu_TP02_SM.Nvzhu_TP02_SM"
+  },
   [16010110] = {
     IsSkinModel = true,
     ModelId = 16010110,
     SkeletonMeshPath = "Asset/Char/Player/NPC002_Nanzhu/Mesh/Nanzhu_TP01_SM.Nanzhu_TP01_SM"
+  },
+  [16010111] = {
+    IsSkinModel = true,
+    ModelId = 16010111,
+    SkeletonMeshPath = "Asset/Char/Player/NPC002_Nanzhu/Mesh/Nanzhu_TP02_SM.Nanzhu_TP02_SM"
   },
   [18010010] = {
     IsSkinModel = true,
     ModelId = 18010010,
     SkeletonMeshPath = "Asset/Char/Player/Char019_Feina/Mesh/Feina_TP01_SM.Feina_TP01_SM"
   },
+  [18010011] = {
+    IsSkinModel = true,
+    ModelId = 18010011,
+    SkeletonMeshPath = "Asset/Char/Player/Char019_Feina/Mesh/Feina_TP02_SM.Feina_TP02_SM"
+  },
   [21010010] = {
     IsSkinModel = true,
     ModelId = 21010010,
     SkeletonMeshPath = "Asset/Char/Player/Char005_Shuimu/Mesh/Shuimu_TP01_SM.Shuimu_TP01_SM"
+  },
+  [21010011] = {
+    IsSkinModel = true,
+    ModelId = 21010011,
+    SkeletonMeshPath = "Asset/Char/Player/Char005_Shuimu/Mesh/Shuimu_TP02_SM.Shuimu_TP02_SM"
   },
   [23010010] = {
     IsSkinModel = true,
     ModelId = 23010010,
     SkeletonMeshPath = "Asset/Char/Player/Char004_Zhangyu/Mesh/Zhangyu_TP01_SM.Zhangyu_TP01_SM"
   },
+  [23010011] = {
+    IsSkinModel = true,
+    ModelId = 23010011,
+    SkeletonMeshPath = "Asset/Char/Player/Char004_Zhangyu/Mesh/Zhangyu_TP02_SM.Zhangyu_TP02_SM"
+  },
+  [24010011] = {
+    IsSkinModel = true,
+    ModelId = 24010011,
+    SkeletonMeshPath = "Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_TP02_SM.Baiheng_TP02_SM",
+    TailMeshPath = "Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Part03_SM.Baiheng_Part03_SM"
+  },
   [31010010] = {
     IsSkinModel = true,
     ModelId = 31010010,
     SkeletonMeshPath = "Asset/Char/Player/Char011_Linen/Mesh/Linen_TP01_SM.Linen_TP01_SM"
+  },
+  [31010011] = {
+    IsSkinModel = true,
+    ModelId = 31010011,
+    SkeletonMeshPath = "Asset/Char/Player/Char011_Linen/Mesh/Linen_TP02_SM.Linen_TP02_SM"
   },
   [31030010] = {
     IsSkinModel = true,
     ModelId = 31030010,
     SkeletonMeshPath = "Asset/Char/Player/Char017_Yeer/Mesh/Yeer_TP01_SM.Yeer_TP01_SM"
   },
+  [31030011] = {
+    IsSkinModel = true,
+    ModelId = 31030011,
+    SkeletonMeshPath = "Asset/Char/Player/Char017_Yeer/Mesh/Yeer_TP02_SM.Yeer_TP02_SM"
+  },
   [32010010] = {
     IsSkinModel = true,
     ModelId = 32010010,
-    SkeletonMeshPath = "Asset/Char/Player/Char006_Haier/Mesh/Haier_TP01_SM.Haier_TP01_SM"
+    SkeletonMeshPath = "Asset/Char/Player/Char006_Haier/Mesh/Haier_TP01_SM.Haier_TP01_SM",
+    TailMeshPath = "Asset/Char/Player/Char006_Haier/Mesh/Haier_TP01_Part01_SM.Haier_TP01_Part01_SM"
+  },
+  [32010011] = {
+    IsSkinModel = true,
+    ModelId = 32010011,
+    SkeletonMeshPath = "Asset/Char/Player/Char006_Haier/Mesh/Haier_TP02_SM.Haier_TP02_SM",
+    TailMeshPath = "Asset/Char/Player/Char006_Haier/Mesh/Haier_TP02_Part01_SM.Haier_TP02_Part01_SM"
   },
   [33010010] = {
     IsSkinModel = true,
     ModelId = 33010010,
     SkeletonMeshPath = "Asset/Char/Player/Char024_Maer/Mesh/Maer_TP01_SM.Maer_TP01_SM"
   },
+  [33010011] = {
+    IsSkinModel = true,
+    ModelId = 33010011,
+    SkeletonMeshPath = "Asset/Char/Player/Char024_Maer/Mesh/Maer_TP02_SM.Maer_TP02_SM"
+  },
   [41010010] = {
     IsSkinModel = true,
     ModelId = 41010010,
     SkeletonMeshPath = "Asset/Char/Player/Char020_Lise/Mesh/Lise_TP01_SM.Lise_TP01_SM"
+  },
+  [41010011] = {
+    IsSkinModel = true,
+    ModelId = 41010011,
+    SkeletonMeshPath = "Asset/Char/Player/Char020_Lise/Mesh/Lise_TP02_SM.Lise_TP02_SM"
   },
   [42020010] = {
     IsSkinModel = true,
     ModelId = 42020010,
     SkeletonMeshPath = "Asset/Char/Player/Char012_Landi/Mesh/Landi_TP01_SM.Landi_TP01_SM"
   },
+  [42020011] = {
+    IsSkinModel = true,
+    ModelId = 42020011,
+    SkeletonMeshPath = "Asset/Char/Player/Char012_Landi/Mesh/Landi_TP02_SM.Landi_TP02_SM"
+  },
   [43010010] = {
     IsSkinModel = true,
     ModelId = 43010010,
     SkeletonMeshPath = "Asset/Char/Player/Char009_Xibi/Mesh/Xibi_TP01_SM.Xibi_TP01_SM"
+  },
+  [43010011] = {
+    IsSkinModel = true,
+    ModelId = 43010011,
+    SkeletonMeshPath = "Asset/Char/Player/Char009_Xibi/Mesh/Xibi_TP02_SM.Xibi_TP02_SM"
   },
   [51010010] = {
     IsSkinModel = true,
     ModelId = 51010010,
     SkeletonMeshPath = "Asset/Char/Player/Char021_Songlu/Mesh/Songlu_TP01_SM.Songlu_TP01_SM"
   },
+  [51010011] = {
+    IsSkinModel = true,
+    ModelId = 51010011,
+    SkeletonMeshPath = "Asset/Char/Player/Char021_Songlu/Mesh/Songlu_TP02_SM.Songlu_TP02_SM"
+  },
   [51020010] = {
     IsSkinModel = true,
     ModelId = 51020010,
     SkeletonMeshPath = "Asset/Char/Player/Char018_Aote/Mesh/Aote_TP01_SM.Aote_TP01_SM"
   },
+  [51020011] = {
+    IsSkinModel = true,
+    ModelId = 51020011,
+    SkeletonMeshPath = "Asset/Char/Player/Char018_Aote/Mesh/Aote_TP02_SM.Aote_TP02_SM"
+  },
   [53010010] = {
-    AccessoryMeshPath = T.RT_46,
+    AccessoryMeshPath = T.RT_54,
     IsSkinModel = true,
     ModelId = 53010010,
     SkeletonMeshPath = "Asset/Char/Player/Char010_Saiqi/Mesh/Saiqi_TP01_SM.Saiqi_TP01_SM"
+  },
+  [53010011] = {
+    AccessoryMeshPath = T.RT_54,
+    IsSkinModel = true,
+    ModelId = 53010011,
+    SkeletonMeshPath = "Asset/Char/Player/Char010_Saiqi/Mesh/Saiqi_TP02_SM.Saiqi_TP02_SM"
   },
   [54010010] = {
     IsSkinModel = true,
     ModelId = 54010010,
     SkeletonMeshPath = "Asset/Char/Player/Char026_Dafu/Mesh/Dafu_TP01_SM.Dafu_TP01_SM"
   },
+  [54010011] = {
+    IsSkinModel = true,
+    ModelId = 54010011,
+    SkeletonMeshPath = "Asset/Char/Player/Char026_Dafu/Mesh/Dafu_TP02_SM.Dafu_TP02_SM"
+  },
   [811010010] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/HeiTao/ABP_NPC_Heitao.ABP_NPC_Heitao_C'",
     AudioPrefix = "Heitao_",
+    CharAccessoryOffsetId = T.RT_15,
     FootType = "heeledMid",
     HeadScale = 0.96,
     IsSkinModel = true,
     ModelId = 811010010,
-    ModelTag = T.RT_44,
+    ModelTag = T.RT_52,
     MontageFolder = "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/",
     MontagePrefix = "Heitao_",
     SkeletonMeshPath = "Asset/Char/Player/Char001_Heitao_J/Mesh/Heitao_TP01_SM.Heitao_TP01_SM"
   },
+  [811010011] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/HeiTao/ABP_NPC_Heitao.ABP_NPC_Heitao_C'",
+    AudioPrefix = "Heitao_",
+    CharAccessoryOffsetId = T.RT_15,
+    FootType = "heeledMid",
+    HeadScale = 0.96,
+    IsSkinModel = true,
+    ModelId = 811010011,
+    ModelTag = T.RT_52,
+    MontageFolder = "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/",
+    MontagePrefix = "Heitao_",
+    SkeletonMeshPath = "Asset/Char/Player/Char001_Heitao_J/Mesh/Heitao_TP02_SM.Heitao_TP02_SM"
+  },
   [811030010] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Tuosi/ABP_NPC_Tuosi01.ABP_NPC_Tuosi01_C'",
     AudioPrefix = "Tuosi_",
+    CharAccessoryOffsetId = T.RT_17,
     FootType = "bootHeavy",
     IsSkinModel = true,
     ModelId = 811030010,
@@ -6467,20 +7318,47 @@ return ReadOnly("Model", {
     MontagePrefix = "Tuosi_",
     SkeletonMeshPath = "Asset/Char/Player/Char025_Tuosi/Mesh/Tuosi01_TP01_SM.Tuosi01_TP01_SM"
   },
+  [811030011] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Tuosi/ABP_NPC_Tuosi01.ABP_NPC_Tuosi01_C'",
+    AudioPrefix = "Tuosi_",
+    CharAccessoryOffsetId = T.RT_17,
+    FootType = "bootHeavy",
+    IsSkinModel = true,
+    ModelId = 811030011,
+    ModelScale = 0.95,
+    ModelTag = T.RT_12,
+    MontageFolder = "/Game/Asset/Char/Player/Char025_Tuosi/Animation/Montage/",
+    MontagePrefix = "Tuosi_",
+    SkeletonMeshPath = "Asset/Char/Player/Char025_Tuosi/Mesh/Tuosi01_TP02_SM.Tuosi01_TP02_SM"
+  },
   [815010010] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Baonu/ABP_NPC_Baonu.ABP_NPC_Baonu_C'",
     AudioPrefix = "Baonu_",
+    CharAccessoryOffsetId = T.RT_19,
     FootType = "heeledLight",
     IsSkinModel = true,
     ModelId = 815010010,
-    ModelTag = T.RT_45,
+    ModelTag = T.RT_53,
     MontageFolder = "/Game/Asset/Char/Player/Char007_Baonu/Animation/Montage/",
     MontagePrefix = "Baonu_",
     SkeletonMeshPath = "Asset/Char/Player/Char007_Baonu/Mesh/Baonu_TP01_SM.Baonu_TP01_SM"
   },
+  [815010011] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Baonu/ABP_NPC_Baonu.ABP_NPC_Baonu_C'",
+    AudioPrefix = "Baonu_",
+    CharAccessoryOffsetId = T.RT_19,
+    FootType = "heeledLight",
+    IsSkinModel = true,
+    ModelId = 815010011,
+    ModelTag = T.RT_53,
+    MontageFolder = "/Game/Asset/Char/Player/Char007_Baonu/Animation/Montage/",
+    MontagePrefix = "Baonu_",
+    SkeletonMeshPath = "Asset/Char/Player/Char007_Baonu/Mesh/Baonu_TP02_SM.Baonu_TP02_SM"
+  },
   [815020010] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Nifu/ABP_NPC_Nifu.ABP_NPC_Nifu_C'",
     AudioPrefix = "Nifu_",
+    CharAccessoryOffsetId = T.RT_20,
     FootType = "heeledHeavy",
     IsSkinModel = true,
     ModelId = 815020010,
@@ -6490,22 +7368,65 @@ return ReadOnly("Model", {
     MontagePrefix = "Nifu_",
     SkeletonMeshPath = "Asset/Char/Player/Char031_Nifu/Mesh/Nifu_TP01_SM.Nifu_TP01_SM"
   },
+  [815020011] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Nifu/ABP_NPC_Nifu.ABP_NPC_Nifu_C'",
+    AudioPrefix = "Nifu_",
+    CharAccessoryOffsetId = T.RT_20,
+    FootType = "heeledHeavy",
+    IsSkinModel = true,
+    ModelId = 815020011,
+    ModelScale = 0.95,
+    ModelTag = T.RT_5,
+    MontageFolder = "/Game/Asset/Char/Player/Char031_Nifu/Animation/Montage/",
+    MontagePrefix = "Nifu_",
+    SkeletonMeshPath = "Asset/Char/Player/Char031_Nifu/Mesh/Nifu_TP02_SM.Nifu_TP02_SM"
+  },
+  [815030011] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Kezhou/ABP_NPC_Kezhou.ABP_NPC_Kezhou_C'",
+    AudioPrefix = "Kezhou_",
+    AvatarExpressionPrefix = "Kezhou_",
+    CharAccessoryOffsetId = T.RT_21,
+    FootType = "bootHeavy",
+    IsSkinModel = true,
+    ModelId = 815030011,
+    ModelScale = 0.95,
+    ModelTag = T.RT_12,
+    MontageFolder = "/Game/Asset/Char/Player/Char030_Kezhou/Animation/Montage/",
+    MontagePrefix = "Kezhou_",
+    SkeletonMeshPath = "Asset/Char/Player/Char030_Kezhou/Mesh/Kezhou_TP02_SM.Kezhou_TP02_SM"
+  },
   [818010010] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Feena/ABP_Npc_Feina.ABP_Npc_Feina_C'",
     AudioPrefix = "Feina_",
     AvatarExpressionPrefix = "Feina_",
+    CharAccessoryOffsetId = T.RT_58,
     FootType = "heeledLight",
     IsSkinModel = true,
     ModelId = 818010010,
     ModelScale = 0.9,
-    ModelTag = T.RT_44,
+    ModelTag = T.RT_52,
     MontageFolder = "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/",
     MontagePrefix = "Feina_",
     SkeletonMeshPath = "Asset/Char/Player/Char019_Feina/Mesh/Feina_TP01_SM.Feina_TP01_SM"
   },
+  [818010011] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Feena/ABP_Npc_Feina.ABP_Npc_Feina_C'",
+    AudioPrefix = "Feina_",
+    AvatarExpressionPrefix = "Feina_",
+    CharAccessoryOffsetId = T.RT_58,
+    FootType = "heeledLight",
+    IsSkinModel = true,
+    ModelId = 818010011,
+    ModelScale = 0.9,
+    ModelTag = T.RT_52,
+    MontageFolder = "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/",
+    MontagePrefix = "Feina_",
+    SkeletonMeshPath = "Asset/Char/Player/Char019_Feina/Mesh/Feina_TP02_SM.Feina_TP02_SM"
+  },
   [821010010] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Shuimu/ABP_NPC_Shuimu.ABP_NPC_Shuimu_C'",
     AudioPrefix = "ShuiMu_",
+    CharAccessoryOffsetId = T.RT_59,
     FootType = "heeledMid",
     HeadScale = 0.8844,
     IsSkinModel = true,
@@ -6517,21 +7438,65 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Char005_Shuimu/Mesh/Shuimu_TP01_SM.Shuimu_TP01_SM",
     WeaponScale = 0.9785
   },
+  [821010011] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Shuimu/ABP_NPC_Shuimu.ABP_NPC_Shuimu_C'",
+    AudioPrefix = "ShuiMu_",
+    CharAccessoryOffsetId = T.RT_59,
+    FootType = "heeledMid",
+    HeadScale = 0.8844,
+    IsSkinModel = true,
+    ModelId = 821010011,
+    ModelScale = 0.9785,
+    ModelTag = T.RT_5,
+    MontageFolder = "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/",
+    MontagePrefix = "ShuiMu_",
+    SkeletonMeshPath = "Asset/Char/Player/Char005_Shuimu/Mesh/Shuimu_TP02_SM.Shuimu_TP02_SM",
+    WeaponScale = 0.9785
+  },
   [823010010] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Zhangyu/ABP_NPC_Zhangyu.ABP_NPC_Zhangyu_C'",
     AudioPrefix = "Zhangyu_",
+    CharAccessoryOffsetId = T.RT_60,
     FootType = "heeledLight",
     HeadScale = 0.96,
     IsSkinModel = true,
     ModelId = 823010010,
-    ModelTag = T.RT_45,
+    ModelTag = T.RT_53,
     MontageFolder = "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/",
     MontagePrefix = "Zhangyu_",
     SkeletonMeshPath = "Asset/Char/Player/Char004_Zhangyu/Mesh/Zhangyu_TP01_SM.Zhangyu_TP01_SM"
   },
+  [823010011] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Zhangyu/ABP_NPC_Zhangyu.ABP_NPC_Zhangyu_C'",
+    AudioPrefix = "Zhangyu_",
+    CharAccessoryOffsetId = T.RT_60,
+    FootType = "heeledLight",
+    HeadScale = 0.96,
+    IsSkinModel = true,
+    ModelId = 823010011,
+    ModelTag = T.RT_53,
+    MontageFolder = "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/",
+    MontagePrefix = "Zhangyu_",
+    SkeletonMeshPath = "Asset/Char/Player/Char004_Zhangyu/Mesh/Zhangyu_TP02_SM.Zhangyu_TP02_SM"
+  },
+  [824010011] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Baiheng/ABP_NPC_Baiheng.ABP_NPC_Baiheng_C'",
+    AudioPrefix = "Baiheng_",
+    AvatarExpressionPrefix = "Fushu_",
+    CharAccessoryOffsetId = T.RT_61,
+    FootType = "heeledHeavy",
+    IsSkinModel = true,
+    ModelId = 824010011,
+    ModelTag = T.RT_5,
+    MontageFolder = "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/",
+    MontagePrefix = "Baiheng_",
+    SkeletonMeshPath = "Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_TP02_SM.Baiheng_TP02_SM",
+    TailMeshPath = "Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Part03_SM.Baiheng_Part03_SM"
+  },
   [831010010] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Linen/ABP_NPC_Linen.ABP_NPC_Linen_C'",
     AudioPrefix = "Linen_",
+    CharAccessoryOffsetId = T.RT_62,
     FootType = "heeledHeavy",
     IsSkinModel = true,
     ModelId = 831010010,
@@ -6541,21 +7506,48 @@ return ReadOnly("Model", {
     MontagePrefix = "Linen_",
     SkeletonMeshPath = "Asset/Char/Player/Char011_Linen/Mesh/Linen_TP01_SM.Linen_TP01_SM"
   },
+  [831010011] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Linen/ABP_NPC_Linen.ABP_NPC_Linen_C'",
+    AudioPrefix = "Linen_",
+    CharAccessoryOffsetId = T.RT_62,
+    FootType = "heeledHeavy",
+    IsSkinModel = true,
+    ModelId = 831010011,
+    ModelScale = 0.95,
+    ModelTag = T.RT_5,
+    MontageFolder = "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/",
+    MontagePrefix = "Linen_",
+    SkeletonMeshPath = "Asset/Char/Player/Char011_Linen/Mesh/Linen_TP02_SM.Linen_TP02_SM"
+  },
   [831030010] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Yeer/ABP_NPC_Yeer.ABP_NPC_Yeer_C'",
     AudioPrefix = "Yeer_",
+    CharAccessoryOffsetId = T.RT_63,
     FootType = "heeledLight",
     IsSkinModel = true,
     ModelId = 831030010,
     ModelScale = 0.85,
-    ModelTag = T.RT_45,
+    ModelTag = T.RT_53,
     MontageFolder = "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/",
     MontagePrefix = "Yeer_",
     SkeletonMeshPath = "Asset/Char/Player/Char017_Yeer/Mesh/Yeer_TP01_SM.Yeer_TP01_SM"
   },
+  [831030011] = {
+    AudioPrefix = "Yeer_",
+    CharAccessoryOffsetId = T.RT_63,
+    FootType = "heeledLight",
+    IsSkinModel = true,
+    ModelId = 831030011,
+    ModelScale = 0.85,
+    ModelTag = T.RT_53,
+    MontageFolder = "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/",
+    MontagePrefix = "Yeer_",
+    SkeletonMeshPath = "Asset/Char/Player/Char017_Yeer/Mesh/Yeer_TP02_SM.Yeer_TP02_SM"
+  },
   [832010010] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Haier/ABP_NPC_Haier.ABP_NPC_Haier_C'",
     AudioPrefix = "Haier_",
+    CharAccessoryOffsetId = T.RT_64,
     FootType = "heeledHeavy",
     HeadScale = 0.8754,
     IsSkinModel = true,
@@ -6564,35 +7556,80 @@ return ReadOnly("Model", {
     ModelTag = T.RT_5,
     MontageFolder = "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/",
     MontagePrefix = "Haier_",
-    SkeletonMeshPath = "Asset/Char/Player/Char006_Haier/Mesh/Haier_TP01_SM.Haier_TP01_SM"
+    SkeletonMeshPath = "Asset/Char/Player/Char006_Haier/Mesh/Haier_TP01_SM.Haier_TP01_SM",
+    TailMeshPath = "Asset/Char/Player/Char006_Haier/Mesh/Haier_TP01_Part01_SM.Haier_TP01_Part01_SM"
+  },
+  [832010011] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Haier/ABP_NPC_Haier.ABP_NPC_Haier_C'",
+    AudioPrefix = "Haier_",
+    CharAccessoryOffsetId = T.RT_64,
+    FootType = "heeledHeavy",
+    HeadScale = 0.8754,
+    IsSkinModel = true,
+    ModelId = 832010011,
+    ModelScale = 0.95,
+    ModelTag = T.RT_5,
+    MontageFolder = "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/",
+    MontagePrefix = "Haier_",
+    SkeletonMeshPath = "Asset/Char/Player/Char006_Haier/Mesh/Haier_TP02_SM.Haier_TP02_SM",
+    TailMeshPath = "Asset/Char/Player/Char006_Haier/Mesh/Haier_TP02_Part01_SM.Haier_TP02_Part01_SM"
   },
   [833010010] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Maerjie/ABP_NPC_Maer.ABP_NPC_Maer_C'",
     AudioPrefix = "Maer_",
+    CharAccessoryOffsetId = T.RT_65,
     FootType = "heeledMid",
     HeadScale = 1.02,
     IsSkinModel = true,
     ModelId = 833010010,
     ModelScale = 0.95,
-    ModelTag = T.RT_44,
+    ModelTag = T.RT_52,
     MontageFolder = "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/",
     MontagePrefix = "Maer_",
     SkeletonMeshPath = "Asset/Char/Player/Char024_Maer/Mesh/Maer_TP01_SM.Maer_TP01_SM"
   },
+  [833010011] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Maerjie/ABP_NPC_Maer.ABP_NPC_Maer_C'",
+    AudioPrefix = "Maer_",
+    CharAccessoryOffsetId = T.RT_65,
+    FootType = "heeledMid",
+    HeadScale = 1.02,
+    IsSkinModel = true,
+    ModelId = 833010011,
+    ModelScale = 0.95,
+    ModelTag = T.RT_52,
+    MontageFolder = "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/",
+    MontagePrefix = "Maer_",
+    SkeletonMeshPath = "Asset/Char/Player/Char024_Maer/Mesh/Maer_TP02_SM.Maer_TP02_SM"
+  },
   [841010010] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Lise/ABP_NPC_Lise.ABP_NPC_Lise_C'",
     AudioPrefix = "Lise_",
+    CharAccessoryOffsetId = T.RT_66,
     FootType = "heeledMid",
     IsSkinModel = true,
     ModelId = 841010010,
-    ModelTag = T.RT_44,
+    ModelTag = T.RT_52,
     MontageFolder = "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/",
     MontagePrefix = "Lise_",
     SkeletonMeshPath = "Asset/Char/Player/Char020_Lise/Mesh/Lise_TP01_SM.Lise_TP01_SM"
   },
+  [841010011] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Lise/ABP_NPC_Lise.ABP_NPC_Lise_C'",
+    AudioPrefix = "Lise_",
+    CharAccessoryOffsetId = T.RT_66,
+    FootType = "heeledMid",
+    IsSkinModel = true,
+    ModelId = 841010011,
+    ModelTag = T.RT_52,
+    MontageFolder = "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/",
+    MontagePrefix = "Lise_",
+    SkeletonMeshPath = "Asset/Char/Player/Char020_Lise/Mesh/Lise_TP02_SM.Lise_TP02_SM"
+  },
   [842020010] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Landi/ABP_NPC_Landi.ABP_NPC_Landi_C'",
     AudioPrefix = "Landi_",
+    CharAccessoryOffsetId = T.RT_67,
     FootType = "bootHeavy",
     IsSkinModel = true,
     ModelId = 842020010,
@@ -6602,10 +7639,24 @@ return ReadOnly("Model", {
     MontagePrefix = "Landi_",
     SkeletonMeshPath = "Asset/Char/Player/Char012_Landi/Mesh/Landi_TP01_SM.Landi_TP01_SM"
   },
+  [842020011] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Landi/ABP_NPC_Landi.ABP_NPC_Landi_C'",
+    AudioPrefix = "Landi_",
+    CharAccessoryOffsetId = T.RT_67,
+    FootType = "bootHeavy",
+    IsSkinModel = true,
+    ModelId = 842020011,
+    ModelScale = 0.95,
+    ModelTag = T.RT_12,
+    MontageFolder = "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/",
+    MontagePrefix = "Landi_",
+    SkeletonMeshPath = "Asset/Char/Player/Char012_Landi/Mesh/Landi_TP02_SM.Landi_TP02_SM"
+  },
   [843010010] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Xibi/ABP_NPC_Xibi.ABP_NPC_Xibi_C'",
     AudioPrefix = "Xibi_",
     AvatarExpressionPrefix = "Xibi_",
+    CharAccessoryOffsetId = T.RT_68,
     FootType = "heeledHeavy",
     IsSkinModel = true,
     ModelId = 843010010,
@@ -6615,22 +7666,52 @@ return ReadOnly("Model", {
     MontagePrefix = "Xibi_",
     SkeletonMeshPath = "Asset/Char/Player/Char009_Xibi/Mesh/Xibi_TP01_SM.Xibi_TP01_SM"
   },
+  [843010011] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Xibi/ABP_NPC_Xibi.ABP_NPC_Xibi_C'",
+    AudioPrefix = "Xibi_",
+    AvatarExpressionPrefix = "Xibi_",
+    CharAccessoryOffsetId = T.RT_68,
+    FootType = "heeledHeavy",
+    IsSkinModel = true,
+    ModelId = 843010011,
+    ModelScale = 0.95,
+    ModelTag = T.RT_5,
+    MontageFolder = "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/",
+    MontagePrefix = "Xibi_",
+    SkeletonMeshPath = "Asset/Char/Player/Char009_Xibi/Mesh/Xibi_TP02_SM.Xibi_TP02_SM"
+  },
   [851010010] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Songlu/ABP_NPC_Songlu.ABP_NPC_Songlu_C'",
     AudioPrefix = "Songlu_",
     AvatarExpressionPrefix = "Songlu_",
+    CharAccessoryOffsetId = T.RT_77,
     FootType = "heeledLight",
     HeadScale = 0.98,
     IsSkinModel = true,
     ModelId = 851010010,
-    ModelTag = T.RT_45,
+    ModelTag = T.RT_53,
     MontageFolder = "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/",
     MontagePrefix = "Songlu_",
     SkeletonMeshPath = "Asset/Char/Player/Char021_Songlu/Mesh/Songlu_TP01_SM.Songlu_TP01_SM"
   },
+  [851010011] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Songlu/ABP_NPC_Songlu.ABP_NPC_Songlu_C'",
+    AudioPrefix = "Songlu_",
+    AvatarExpressionPrefix = "Songlu_",
+    CharAccessoryOffsetId = T.RT_77,
+    FootType = "heeledLight",
+    HeadScale = 0.98,
+    IsSkinModel = true,
+    ModelId = 851010011,
+    ModelTag = T.RT_53,
+    MontageFolder = "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/",
+    MontagePrefix = "Songlu_",
+    SkeletonMeshPath = "Asset/Char/Player/Char021_Songlu/Mesh/Songlu_TP02_SM.Songlu_TP02_SM"
+  },
   [851020010] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/OutSide/ABP_NPC_Aote.ABP_NPC_Aote_C'",
     AudioPrefix = "Aote_",
+    CharAccessoryOffsetId = T.RT_78,
     FootType = "bootHeavy",
     IsSkinModel = true,
     ModelId = 851020010,
@@ -6640,23 +7721,52 @@ return ReadOnly("Model", {
     MontagePrefix = "Aote_",
     SkeletonMeshPath = "Asset/Char/Player/Char018_Aote/Mesh/Aote_TP01_SM.Aote_TP01_SM"
   },
+  [851020011] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/OutSide/ABP_NPC_Aote.ABP_NPC_Aote_C'",
+    AudioPrefix = "Aote_",
+    CharAccessoryOffsetId = T.RT_78,
+    FootType = "bootHeavy",
+    IsSkinModel = true,
+    ModelId = 851020011,
+    ModelScale = 0.95,
+    ModelTag = T.RT_12,
+    MontageFolder = "/Game/Asset/Char/Player/Char018_Aote/Animation/Montage/",
+    MontagePrefix = "Aote_",
+    SkeletonMeshPath = "Asset/Char/Player/Char018_Aote/Mesh/Aote_TP02_SM.Aote_TP02_SM"
+  },
   [853010010] = {
-    AccessoryMeshPath = T.RT_46,
+    AccessoryMeshPath = T.RT_54,
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Saiqi/ABP_NPC_Saiqi.ABP_NPC_Saiqi_C'",
     AudioPrefix = "Saiqi_",
+    CharAccessoryOffsetId = T.RT_80,
     FootType = "heeledMid",
     HeadScale = 0.98,
     IsSkinModel = true,
     ModelId = 853010010,
-    ModelTag = T.RT_44,
+    ModelTag = T.RT_52,
     MontageFolder = "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/",
     MontagePrefix = "Saiqi_",
     SkeletonMeshPath = "Asset/Char/Player/Char010_Saiqi/Mesh/Saiqi_TP01_SM.Saiqi_TP01_SM"
+  },
+  [853010011] = {
+    AccessoryMeshPath = T.RT_54,
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Saiqi/ABP_NPC_Saiqi.ABP_NPC_Saiqi_C'",
+    AudioPrefix = "Saiqi_",
+    CharAccessoryOffsetId = T.RT_80,
+    FootType = "heeledMid",
+    HeadScale = 0.98,
+    IsSkinModel = true,
+    ModelId = 853010011,
+    ModelTag = T.RT_52,
+    MontageFolder = "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/",
+    MontagePrefix = "Saiqi_",
+    SkeletonMeshPath = "Asset/Char/Player/Char010_Saiqi/Mesh/Saiqi_TP02_SM.Saiqi_TP02_SM"
   },
   [854010010] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Dafu/ABP_NPC_Dafu.ABP_NPC_Dafu_C'",
     AudioPrefix = "Dafu_",
     AvatarExpressionPrefix = "Dafu_",
+    CharAccessoryOffsetId = T.RT_81,
     FootType = "heeledHeavy",
     IsSkinModel = true,
     ModelId = 854010010,
@@ -6665,5 +7775,19 @@ return ReadOnly("Model", {
     MontageFolder = "/Game/Asset/Char/Player/Char026_Dafu/Animation/Montage/",
     MontagePrefix = "Dafu_",
     SkeletonMeshPath = "Asset/Char/Player/Char026_Dafu/Mesh/Dafu_TP01_SM.Dafu_TP01_SM"
+  },
+  [854010011] = {
+    AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Dafu/ABP_NPC_Dafu.ABP_NPC_Dafu_C'",
+    AudioPrefix = "Dafu_",
+    AvatarExpressionPrefix = "Dafu_",
+    CharAccessoryOffsetId = T.RT_81,
+    FootType = "heeledHeavy",
+    IsSkinModel = true,
+    ModelId = 854010011,
+    ModelScale = 0.94,
+    ModelTag = T.RT_5,
+    MontageFolder = "/Game/Asset/Char/Player/Char026_Dafu/Animation/Montage/",
+    MontagePrefix = "Dafu_",
+    SkeletonMeshPath = "Asset/Char/Player/Char026_Dafu/Mesh/Dafu_TP02_SM.Dafu_TP02_SM"
   }
 })

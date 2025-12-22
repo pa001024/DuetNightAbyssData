@@ -214,6 +214,43 @@ return ReadOnly("Mail", {
     MailTimeLimit = 1,
     MailTitle = "Mail_Title_10033"
   },
+  [10034] = {
+    MailContent = "Mail_Content_10034",
+    MailId = 10034,
+    MailReward = 110501,
+    MailSenderId = 900013,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10034"
+  },
+  [10035] = {
+    MailContent = "Mail_Content_10034",
+    MailId = 10035,
+    MailReward = 110502,
+    MailSenderId = 900013,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10035"
+  },
+  [10036] = {
+    MailContent = "Mail_Content_10034",
+    MailId = 10036,
+    MailReward = 110503,
+    MailSenderId = 900013,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10036"
+  },
+  [10037] = {
+    MailContent = "Mail_Content_10037",
+    MailId = 10037,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10037"
+  },
+  [10038] = {
+    MailContent = "Mail_Content_10038",
+    MailId = 10038,
+    MailSenderId = 900002,
+    MailTimeLimit = 7,
+    MailTitle = "Mail_Title_10038"
+  },
   [10041] = {
     MailContent = "Mail_Content_10021",
     MailId = 10041,
@@ -360,6 +397,60 @@ return ReadOnly("Mail", {
     MailSenderId = 99999,
     MailTimeLimit = -1,
     MailTitle = "Mail_Title_10059"
+  },
+  [10060] = {
+    MailContent = "Mail_Content_10060",
+    MailId = 10060,
+    MailSenderId = 99999,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10060"
+  },
+  [10061] = {
+    MailContent = "Mail_Content_10061",
+    MailId = 10061,
+    MailSenderId = 99999,
+    MailTimeLimit = 7,
+    MailTitle = "Mail_Title_10061"
+  },
+  [10062] = {
+    MailContent = "Mail_Content_10062",
+    MailId = 10062,
+    MailReward = 110516,
+    MailSenderId = 900016,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10062"
+  },
+  [10063] = {
+    MailContent = "Mail_Content_10063",
+    MailId = 10063,
+    MailReward = 110517,
+    MailSenderId = 900015,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10063"
+  },
+  [10064] = {
+    MailContent = "Mail_Content_10064",
+    MailId = 10064,
+    MailReward = 110518,
+    MailSenderId = 900017,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10064"
+  },
+  [10065] = {
+    MailContent = "Mail_Content_10065",
+    MailId = 10065,
+    MailReward = 110519,
+    MailSenderId = 900018,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10065"
+  },
+  [10066] = {
+    MailContent = "Mail_Content_10066",
+    MailId = 10066,
+    MailReward = 110520,
+    MailSenderId = 900019,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10066"
   },
   [19101] = {
     Condition = 4100,

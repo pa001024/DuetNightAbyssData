@@ -13,7 +13,8 @@ return ReadOnly("Shop", {
     MainTabId = {
       701,
       702,
-      703
+      703,
+      704
     },
     ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/BG/WBP_Shop_BG_Area.WBP_Shop_BG_Area'",
     ShopName = "UI_SHOP_ExploreBadge",
@@ -22,13 +23,34 @@ return ReadOnly("Shop", {
     SystemName = "ExploreBadgeShop"
   },
   FishingShop = {
-    MainTabId = {801},
+    MainTabId = {801, 802},
     PlaySystemUIBGM = "event:/bgm/cbt03/0082_system_fishing",
     ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/BG/WBP_Shop_BG_Fishing.WBP_Shop_BG_Fishing'",
     ShopName = "UI_SHOP_Fishing",
     ShopUIName = "ShopActivity",
     SpawnNPCId = 900010,
     SystemName = "FishingShop"
+  },
+  HuaxuEventShop = {
+    MainTabId = {10001},
+    ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/BG/WBP_Shop_BG_Abyss.WBP_Shop_BG_Abyss'",
+    ShopName = "HuaxuEventShop",
+    ShopUIName = "ShopActivity",
+    SystemName = "HuaxuEventShop"
+  },
+  HuaxuExploreShop = {
+    MainTabId = {10005},
+    ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/BG/WBP_Shop_BG_Dongguo.WBP_Shop_BG_Dongguo'",
+    ShopName = "HuaxuExploreShop",
+    ShopUIName = "ShopActivity",
+    SystemName = "HuaxuExploreShop"
+  },
+  RaidShopSeason01 = {
+    MainTabId = {10004},
+    ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Shop/ShopBG/WBP_Activity_Shop_BG_GuildWar.WBP_Activity_Shop_BG_GuildWar'",
+    ShopName = "RaidDungeon_Shop_Name",
+    ShopUIName = "ShopActivity",
+    SystemName = "RaidShopSeason01"
   },
   Rouge = {
     MainTabId = {10002},
@@ -54,5 +76,12 @@ return ReadOnly("Shop", {
     ShopUIName = "ShopMain",
     SpawnNPCId = 900002,
     SystemName = "Shop"
+  },
+  WeeklyDungeonShop = {
+    MainTabId = {10003},
+    ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/BG/WBP_Shop_BG_Mod.WBP_Shop_BG_Mod'",
+    ShopName = "WeeklyDungeonShop",
+    ShopUIName = "ShopActivity",
+    SystemName = "WeeklyDungeonShop"
   }
 })

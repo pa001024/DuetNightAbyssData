@@ -4,14 +4,10 @@ T.RT_2 = {311}
 T.RT_3 = {312}
 T.RT_4 = {313}
 T.RT_5 = {314}
-T.RT_6 = {90171, 901710}
-T.RT_7 = {90172, 901720}
-T.RT_8 = {90173, 901730}
-T.RT_9 = {90174, 901740}
-T.RT_10 = {90175, 901750}
-T.RT_11 = {90176, 901760}
-T.RT_12 = {90177, 901770}
-T.RT_13 = {90178, 901780}
+T.RT_6 = {315}
+T.RT_7 = {316}
+T.RT_8 = {317}
+T.RT_9 = {318}
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -21,6 +17,7 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90161,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_2,
       [2] = {90161, 312},
@@ -37,6 +34,7 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90162,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_2,
       [2] = {90162, 312},
@@ -53,6 +51,7 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90163,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_4,
       [2] = {90163, 314},
@@ -69,6 +68,7 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90164,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_4,
       [2] = {90164, 314},
@@ -85,6 +85,7 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90165,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_4,
       [2] = {90165, 314},
@@ -101,6 +102,7 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90166,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_4,
       [2] = {90166, 314},
@@ -117,6 +119,7 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90167,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_2,
       [2] = {90167, 312},
@@ -133,6 +136,7 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90168,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_2,
       [2] = {90168, 312},
@@ -149,15 +153,20 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90171,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_6,
-      [2] = T.RT_6,
-      [3] = T.RT_2,
-      [4] = T.RT_3,
-      [5] = T.RT_2,
-      [6] = T.RT_3
+      [2] = {
+        90171,
+        901710,
+        316
+      },
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
     },
-    MonsterTotalBaseNum = 7,
+    MonsterTotalBaseNum = 100,
     WavesPerStage = 2
   },
   [90172] = {
@@ -165,15 +174,20 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90172,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_7,
-      [2] = T.RT_7,
-      [3] = T.RT_2,
-      [4] = T.RT_3,
-      [5] = T.RT_2,
-      [6] = T.RT_3
+      [1] = T.RT_6,
+      [2] = {
+        90172,
+        901720,
+        316
+      },
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
     },
-    MonsterTotalBaseNum = 7,
+    MonsterTotalBaseNum = 100,
     WavesPerStage = 2
   },
   [90173] = {
@@ -181,15 +195,20 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90173,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_8,
-      [2] = T.RT_8,
-      [3] = T.RT_2,
-      [4] = T.RT_3,
-      [5] = T.RT_2,
-      [6] = T.RT_3
+      [1] = T.RT_6,
+      [2] = {
+        90173,
+        901730,
+        316
+      },
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
     },
-    MonsterTotalBaseNum = 7,
+    MonsterTotalBaseNum = 100,
     WavesPerStage = 2
   },
   [90174] = {
@@ -197,15 +216,20 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90174,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_9,
-      [2] = T.RT_9,
-      [3] = T.RT_2,
-      [4] = T.RT_3,
-      [5] = T.RT_2,
-      [6] = T.RT_3
+      [1] = T.RT_6,
+      [2] = {
+        90174,
+        901740,
+        316
+      },
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
     },
-    MonsterTotalBaseNum = 7,
+    MonsterTotalBaseNum = 100,
     WavesPerStage = 2
   },
   [90175] = {
@@ -213,15 +237,20 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90175,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_10,
-      [2] = T.RT_10,
-      [3] = T.RT_2,
-      [4] = T.RT_3,
-      [5] = T.RT_2,
-      [6] = T.RT_3
+      [1] = T.RT_8,
+      [2] = {
+        90175,
+        901750,
+        318
+      },
+      [3] = T.RT_8,
+      [4] = T.RT_9,
+      [5] = T.RT_8,
+      [6] = T.RT_9
     },
-    MonsterTotalBaseNum = 7,
+    MonsterTotalBaseNum = 100,
     WavesPerStage = 2
   },
   [90176] = {
@@ -229,15 +258,20 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90176,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_11,
-      [2] = T.RT_11,
-      [3] = T.RT_2,
-      [4] = T.RT_3,
-      [5] = T.RT_2,
-      [6] = T.RT_3
+      [1] = T.RT_8,
+      [2] = {
+        90176,
+        901760,
+        318
+      },
+      [3] = T.RT_8,
+      [4] = T.RT_9,
+      [5] = T.RT_8,
+      [6] = T.RT_9
     },
-    MonsterTotalBaseNum = 7,
+    MonsterTotalBaseNum = 100,
     WavesPerStage = 2
   },
   [90177] = {
@@ -245,15 +279,20 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90177,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_12,
-      [2] = T.RT_12,
-      [3] = T.RT_4,
-      [4] = T.RT_5,
-      [5] = T.RT_4,
-      [6] = T.RT_5
+      [1] = T.RT_8,
+      [2] = {
+        90177,
+        901770,
+        318
+      },
+      [3] = T.RT_8,
+      [4] = T.RT_9,
+      [5] = T.RT_8,
+      [6] = T.RT_9
     },
-    MonsterTotalBaseNum = 7,
+    MonsterTotalBaseNum = 100,
     WavesPerStage = 2
   },
   [90178] = {
@@ -261,15 +300,20 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90178,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_13,
-      [2] = T.RT_13,
-      [3] = T.RT_4,
-      [4] = T.RT_5,
-      [5] = T.RT_4,
-      [6] = T.RT_5
+      [1] = T.RT_8,
+      [2] = {
+        90178,
+        901780,
+        318
+      },
+      [3] = T.RT_8,
+      [4] = T.RT_9,
+      [5] = T.RT_8,
+      [6] = T.RT_9
     },
-    MonsterTotalBaseNum = 7,
+    MonsterTotalBaseNum = 100,
     WavesPerStage = 2
   },
   [90180] = {
@@ -277,6 +321,7 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90180,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_2,
       [2] = {90180, 312},
@@ -293,6 +338,7 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90181,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_2,
       [2] = {90181, 312},
@@ -309,6 +355,7 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90182,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_2,
       [2] = {90182, 312},
@@ -325,6 +372,7 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90183,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_2,
       [2] = {90183, 312},
@@ -341,6 +389,7 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90184,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_2,
       [2] = {90184, 312},
@@ -357,6 +406,7 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90185,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_2,
       [2] = {90185, 312},
@@ -373,6 +423,7 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90186,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_2,
       [2] = {90186, 312},
@@ -389,6 +440,7 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90187,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_2,
       [2] = {90187, 312},
@@ -405,6 +457,7 @@ return ReadOnly("DefenceMove", {
     ButcherMonsterSpawnMinWave = 10,
     ButcherMonsterSpawnProbability = T.RT_1,
     DungeonId = 90188,
+    EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_2,
       [2] = {90188, 312},
@@ -414,6 +467,195 @@ return ReadOnly("DefenceMove", {
       [6] = T.RT_3
     },
     MonsterTotalBaseNum = 50,
+    WavesPerStage = 2
+  },
+  [91251] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 10,
+    ButcherMonsterSpawnProbability = T.RT_1,
+    DungeonId = 91251,
+    EnsureGuideTime = 180,
+    MonsterSpawnId = {
+      [1] = T.RT_6,
+      [2] = {
+        91251,
+        912510,
+        316
+      },
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
+    },
+    MonsterTotalBaseNum = 100,
+    WavesPerStage = 2
+  },
+  [91252] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 10,
+    ButcherMonsterSpawnProbability = T.RT_1,
+    DungeonId = 91252,
+    EnsureGuideTime = 180,
+    MonsterSpawnId = {
+      [1] = T.RT_6,
+      [2] = {
+        91252,
+        912520,
+        316
+      },
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
+    },
+    MonsterTotalBaseNum = 100,
+    WavesPerStage = 2
+  },
+  [91253] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 10,
+    ButcherMonsterSpawnProbability = T.RT_1,
+    DungeonId = 91253,
+    EnsureGuideTime = 180,
+    MonsterSpawnId = {
+      [1] = T.RT_6,
+      [2] = {
+        91253,
+        912530,
+        316
+      },
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
+    },
+    MonsterTotalBaseNum = 100,
+    WavesPerStage = 2
+  },
+  [91254] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 10,
+    ButcherMonsterSpawnProbability = T.RT_1,
+    DungeonId = 91254,
+    EnsureGuideTime = 180,
+    MonsterSpawnId = {
+      [1] = T.RT_6,
+      [2] = {
+        91254,
+        912540,
+        316
+      },
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
+    },
+    MonsterTotalBaseNum = 100,
+    WavesPerStage = 2
+  },
+  [91255] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 10,
+    ButcherMonsterSpawnProbability = T.RT_1,
+    DungeonId = 91255,
+    EnsureGuideTime = 180,
+    MonsterSpawnId = {
+      [1] = T.RT_6,
+      [2] = {
+        91255,
+        912550,
+        316
+      },
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
+    },
+    MonsterTotalBaseNum = 100,
+    WavesPerStage = 2
+  },
+  [91256] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 10,
+    ButcherMonsterSpawnProbability = T.RT_1,
+    DungeonId = 91256,
+    EnsureGuideTime = 180,
+    MonsterSpawnId = {
+      [1] = T.RT_6,
+      [2] = {
+        91256,
+        912560,
+        316
+      },
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
+    },
+    MonsterTotalBaseNum = 100,
+    WavesPerStage = 2
+  },
+  [91257] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 10,
+    ButcherMonsterSpawnProbability = T.RT_1,
+    DungeonId = 91257,
+    EnsureGuideTime = 180,
+    MonsterSpawnId = {
+      [1] = T.RT_6,
+      [2] = {
+        91257,
+        912570,
+        316
+      },
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
+    },
+    MonsterTotalBaseNum = 100,
+    WavesPerStage = 2
+  },
+  [91258] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 10,
+    ButcherMonsterSpawnProbability = T.RT_1,
+    DungeonId = 91258,
+    EnsureGuideTime = 180,
+    MonsterSpawnId = {
+      [1] = T.RT_6,
+      [2] = {
+        91258,
+        912580,
+        316
+      },
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
+    },
+    MonsterTotalBaseNum = 100,
+    WavesPerStage = 2
+  },
+  [91259] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 10,
+    ButcherMonsterSpawnProbability = T.RT_1,
+    DungeonId = 91259,
+    EnsureGuideTime = 180,
+    MonsterSpawnId = {
+      [1] = T.RT_6,
+      [2] = {
+        91259,
+        912590,
+        316
+      },
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
+    },
+    MonsterTotalBaseNum = 100,
     WavesPerStage = 2
   }
 })

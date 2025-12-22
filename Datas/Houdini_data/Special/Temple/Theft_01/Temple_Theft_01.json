@@ -11,7 +11,7 @@
         500,
         500
       ],
-      "struct": "/Game/Maps/Datas/Data_Design/Special/Temple/Temple_Theft_01",
+      "struct": "/Game/Maps/Datas/Data_Design/Special/Temple/Temple_Theft_02",
       "enterLevel": 1,
       "exitLevel": 0,
       "if_layout": 0,

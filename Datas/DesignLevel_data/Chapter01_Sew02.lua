@@ -966,33 +966,6 @@ return {
         RarelyId = 7021029
       }
     },
-    ["7021031"] = {
-      AutoReset = 0,
-      ["1730293"] = {
-        CreatorId = 1730293,
-        UnitType = "Drop",
-        UnitId = 2000059,
-        RarelyId = 7021031
-      }
-    },
-    ["7021032"] = {
-      AutoReset = 0,
-      ["1730294"] = {
-        CreatorId = 1730294,
-        UnitType = "Drop",
-        UnitId = 2000060,
-        RarelyId = 7021032
-      }
-    },
-    ["7021033"] = {
-      AutoReset = 0,
-      ["1730295"] = {
-        CreatorId = 1730295,
-        UnitType = "Drop",
-        UnitId = 2000061,
-        RarelyId = 7021033
-      }
-    },
     ["7021030"] = {
       AutoReset = 1,
       ["1730288"] = {
@@ -1018,6 +991,33 @@ return {
         UnitType = "Mechanism",
         UnitId = 70800,
         RarelyId = 7021030
+      }
+    },
+    ["7021031"] = {
+      AutoReset = 0,
+      ["1730293"] = {
+        CreatorId = 1730293,
+        UnitType = "Drop",
+        UnitId = 2000059,
+        RarelyId = 7021031
+      }
+    },
+    ["7021032"] = {
+      AutoReset = 0,
+      ["1730294"] = {
+        CreatorId = 1730294,
+        UnitType = "Drop",
+        UnitId = 2000060,
+        RarelyId = 7021032
+      }
+    },
+    ["7021033"] = {
+      AutoReset = 0,
+      ["1730295"] = {
+        CreatorId = 1730295,
+        UnitType = "Drop",
+        UnitId = 2000061,
+        RarelyId = 7021033
       }
     }
   },

@@ -587,5 +587,54 @@ return ReadOnly("SystemGuide", {
     IsInRegion = 1,
     OpenInterface = "DetectiveMinigame",
     SysGuideId = 2081
+  },
+  [2082] = {
+    FinishQuest = 12010309,
+    GuideChannel = "SystemGuideWithUI",
+    GuideEnd = 0,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_Qianji.story",
+    IsInRegion = 1,
+    OpenInterface = "BattleMain",
+    PlayerInControl = 1,
+    SysGuideId = 2082
+  },
+  [2083] = {
+    ConditionCheck = 6023,
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_FenZuSai.story",
+    SysGuideId = 2083
+  },
+  [2084] = {
+    ConditionCheck = 6024,
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_DianFeng.story",
+    SysGuideId = 2084
+  },
+  [2085] = {
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_Zhouye.story",
+    IsInRegion = 1,
+    OpenInterface = "BattleMain",
+    PlayerInControl = 1,
+    SysGuideId = 2085,
+    UIUnlockRule = "TODSetting"
+  },
+  [2086] = {
+    FinishQuestChain = 400111,
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_JuYuan.story",
+    IsInRegion = 1,
+    OpenInterface = "BattleMain",
+    PlayerInControl = 1,
+    SysGuideId = 2086
   }
 })

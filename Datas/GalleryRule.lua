@@ -13,108 +13,126 @@ return ReadOnly("GalleryRule", {
   [6001001] = {
     DescriptionDetail = "Mon_DesDetail_6001001",
     GalleryRuleId = 6001001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Gr_Jichong.T_Head_Gr_Jichong",
     PreferredMonsterId = 6001001,
     Priority = 11011
   },
   [6002001] = {
     DescriptionDetail = "Mon_DesDetail_6002001",
     GalleryRuleId = 6002001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Gr_Youji.T_Head_Gr_Youji",
     PreferredMonsterId = 6002001,
     Priority = 11511
   },
   [6003001] = {
     DescriptionDetail = "Mon_DesDetail_6003001",
     GalleryRuleId = 6003001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Gr_Piaofu.T_Head_Gr_Piaofu",
     PreferredMonsterId = 6003001,
     Priority = 11521
   },
   [6004001] = {
     DescriptionDetail = "Mon_DesDetail_6004001",
     GalleryRuleId = 6004001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Gr_Baotu.T_Head_Gr_Baotu",
     PreferredMonsterId = 6004001,
     Priority = 10011
   },
   [6005001] = {
     DescriptionDetail = "Mon_DesDetail_6005001",
     GalleryRuleId = 6005001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_GR_Longcao.T_Head_GR_Longcao",
     PreferredMonsterId = 6005001,
     Priority = 11531
   },
   [6006001] = {
     DescriptionDetail = "Mon_DesDetail_6006001",
     GalleryRuleId = 6006001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_GR_Banyun.T_Head_GR_Banyun",
     PreferredMonsterId = 6006001,
     Priority = 11541
   },
   [6007001] = {
     DescriptionDetail = "Mon_DesDetail_6007001",
     GalleryRuleId = 6007001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_GR_Zhuoxin.T_Head_GR_Zhuoxin",
     PreferredMonsterId = 6007001,
     Priority = 11551
   },
   [6011001] = {
     DescriptionDetail = "Mon_DesDetail_6011001",
     GalleryRuleId = 6011001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Gr_Jichong_C01.T_Head_Gr_Jichong_C01",
     PreferredMonsterId = 6011001,
     Priority = 11012
   },
   [6012001] = {
     DescriptionDetail = "Mon_DesDetail_6012001",
     GalleryRuleId = 6012001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Gr_Youji_C01.T_Head_Gr_Youji_C01",
     PreferredMonsterId = 6012001,
     Priority = 11512
   },
   [6013001] = {
     DescriptionDetail = "Mon_DesDetail_6013001",
     GalleryRuleId = 6013001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Gr_Piaofu_C01.T_Head_Gr_Piaofu_C01",
     PreferredMonsterId = 6013001,
     Priority = 11522
   },
   [6014001] = {
     DescriptionDetail = "Mon_DesDetail_6014001",
     GalleryRuleId = 6014001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Gr_Baotu_C01.T_Head_Gr_Baotu_C01",
     PreferredMonsterId = 6014001,
     Priority = 10012
   },
   [6015001] = {
     DescriptionDetail = "Mon_DesDetail_6015001",
     GalleryRuleId = 6015001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_GR_Fangjin.T_Head_GR_Fangjin",
     PreferredMonsterId = 6015001,
     Priority = 11551
   },
   [6016001] = {
     DescriptionDetail = "Mon_DesDetail_6016001",
     GalleryRuleId = 6016001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_GR_Eshi.T_Head_GR_Eshi",
     PreferredMonsterId = 6016001,
     Priority = 11511
   },
   [6017001] = {
     DescriptionDetail = "Mon_DesDetail_6017001",
     GalleryRuleId = 6017001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_GR_Kuirui.T_Head_GR_Kuirui",
     PreferredMonsterId = 6017001,
     Priority = 11011
   },
   [7001001] = {
     DescriptionDetail = "Mon_DesDetail_7001001",
     GalleryRuleId = 7001001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Juji.T_Head_Jt_Juji",
     PreferredMonsterId = 7001001,
     Priority = 21511
   },
   [7002001] = {
     DescriptionDetail = "Mon_DesDetail_7002001",
     GalleryRuleId = 7002001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Pizhuo.T_Head_Jt_Pizhuo",
     PreferredMonsterId = 7002001,
     Priority = 21011
   },
   [7003001] = {
     DescriptionDetail = "Mon_DesDetail_7003001",
     GalleryRuleId = 7003001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Ranger.T_Head_Jt_Ranger",
     PreferredMonsterId = 7003001,
     Priority = 21521
   },
   [7004001] = {
     DescriptionDetail = "Mon_DesDetail_7004001",
     GalleryRuleId = 7004001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Tuji.T_Head_Jt_Tuji",
     PreferredMonsterId = 7004001,
     Priority = 20011
   },
@@ -122,6 +140,7 @@ return ReadOnly("GalleryRule", {
     DescriptionDetail = "Mon_DesDetail_7006001",
     DisableTrainingGround = true,
     GalleryRuleId = 7006001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_HealRobot.T_Head_Jt_HealRobot",
     PreferredMonsterId = 7006001,
     Priority = 21531
   },
@@ -129,86 +148,99 @@ return ReadOnly("GalleryRule", {
     DescriptionDetail = "Mon_DesDetail_7007001",
     DisableTrainingGround = true,
     GalleryRuleId = 7007001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_BlastRobot.T_Head_Jt_BlastRobot",
     PreferredMonsterId = 7007001,
     Priority = 21021
   },
   [7007002] = {
     DescriptionDetail = "Mon_DesDetail_7007002",
-    DisableArchive = true,
     DisableTrainingGround = true,
     GalleryRuleId = 7007002,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_BlastRobot_C01.T_Head_Jt_BlastRobot_C01",
     PreferredMonsterId = 7007002,
     Priority = 21022
   },
   [7008001] = {
     DescriptionDetail = "Mon_DesDetail_7008001",
     GalleryRuleId = 7008001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Zhihui.T_Head_Jt_Zhihui",
     PreferredMonsterId = 7008001,
     Priority = 20021
   },
   [7009001] = {
     DescriptionDetail = "Mon_DesDetail_7009001",
     GalleryRuleId = 7009001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Zhiren.T_Head_Jt_Zhiren",
     PreferredMonsterId = 7009001,
     Priority = 20021
   },
   [7010001] = {
     DescriptionDetail = "Mon_DesDetail_7010001",
     GalleryRuleId = 7010001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Zhijian.T_Head_Jt_Zhijian",
     PreferredMonsterId = 7010001,
     Priority = 21531
   },
   [7011001] = {
     DescriptionDetail = "Mon_DesDetail_7011001",
     GalleryRuleId = 7011001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Juji_C01.T_Head_Jt_Juji_C01",
     PreferredMonsterId = 7011001,
     Priority = 21512
   },
   [7012001] = {
     DescriptionDetail = "Mon_DesDetail_7012001",
     GalleryRuleId = 7012001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Pizhuo_C01.T_Head_Jt_Pizhuo_C01",
     PreferredMonsterId = 7012001,
     Priority = 21012
   },
   [7013001] = {
     DescriptionDetail = "Mon_DesDetail_7013001",
     GalleryRuleId = 7013001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Ranger_C01.T_Head_Jt_Ranger_C01",
     PreferredMonsterId = 7013001,
     Priority = 21522
   },
   [7014001] = {
     DescriptionDetail = "Mon_DesDetail_7014001",
     GalleryRuleId = 7014001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Tuji_C01.T_Head_Jt_Tuji_C01",
     PreferredMonsterId = 7014001,
     Priority = 20012
   },
   [7015001] = {
     DescriptionDetail = "Mon_DesDetail_7015001",
     GalleryRuleId = 7015001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_JT_Jingjie.T_Head_JT_Jingjie",
     PreferredMonsterId = 7015001,
     Priority = 21541
   },
   [7016001] = {
     DescriptionDetail = "Mon_DesDetail_7016001",
     GalleryRuleId = 7016001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_JT_Zhiyan.T_Head_JT_Zhiyan",
     PreferredMonsterId = 7016001,
     Priority = 21551
   },
   [8001001] = {
     DescriptionDetail = "Mon_DesDetail_8001001",
     GalleryRuleId = 8001001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jh_Zhishi.T_Head_Jh_Zhishi",
     PreferredMonsterId = 8001001,
     Priority = 31511
   },
   [8002001] = {
     DescriptionDetail = "Mon_DesDetail_8002001",
     GalleryRuleId = 8002001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jh_Xianfeng.T_Head_Jh_Xianfeng",
     PreferredMonsterId = 8002001,
     Priority = 31011
   },
   [8003001] = {
     DescriptionDetail = "Mon_DesDetail_8003001",
     GalleryRuleId = 8003001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jh_Shenfu.T_Head_Jh_Shenfu",
     PreferredMonsterId = 8003001,
     Priority = 31512
   },
@@ -216,6 +248,7 @@ return ReadOnly("GalleryRule", {
     DescriptionDetail = "Mon_DesDetail_8500001",
     DisableTrainingGround = true,
     GalleryRuleId = 8500001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Boss_00_Xibi.T_Head_Boss_00_Xibi",
     PreferredMonsterId = 8500001,
     Priority = 0
   },
@@ -223,6 +256,7 @@ return ReadOnly("GalleryRule", {
     DescriptionDetail = "Mon_DesDetail_8501001",
     DisableTrainingGround = true,
     GalleryRuleId = 8501001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Boss_04_Lizhan.T_Head_Boss_04_Lizhan",
     PreferredMonsterId = 8501001,
     Priority = 1
   },
@@ -230,6 +264,7 @@ return ReadOnly("GalleryRule", {
     DescriptionDetail = "Mon_DesDetail_8502001",
     DisableTrainingGround = true,
     GalleryRuleId = 8502001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Boss_01_Saiqi.T_Head_Boss_01_Saiqi",
     PreferredMonsterId = 8502001,
     Priority = 2
   },
@@ -237,6 +272,7 @@ return ReadOnly("GalleryRule", {
     DescriptionDetail = "Mon_DesDetail_8503001",
     DisableTrainingGround = true,
     GalleryRuleId = 8503001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Boss_03_Shijing.T_Head_Boss_03_Shijing",
     PreferredMonsterId = 8503001,
     Priority = 3
   },
@@ -244,6 +280,7 @@ return ReadOnly("GalleryRule", {
     DescriptionDetail = "Mon_DesDetail_8505001",
     DisableTrainingGround = true,
     GalleryRuleId = 8505001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Boss_05_Lianhuo.T_Head_Boss_05_Lianhuo",
     PreferredMonsterId = 8505001,
     Priority = 5
   },
@@ -251,6 +288,7 @@ return ReadOnly("GalleryRule", {
     DescriptionDetail = "Mon_DesDetail_8509001",
     DisableTrainingGround = true,
     GalleryRuleId = 8509001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Boss_Tuosi.T_Head_Boss_Tuosi",
     PreferredMonsterId = 8509001,
     Priority = 9
   },
@@ -258,6 +296,7 @@ return ReadOnly("GalleryRule", {
     DescriptionDetail = "Mon_DesDetail_8512001",
     DisableTrainingGround = true,
     GalleryRuleId = 8512001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Boss_Linen.T_Head_Boss_Linen",
     PreferredMonsterId = 8512001,
     Priority = 12
   },
@@ -265,6 +304,7 @@ return ReadOnly("GalleryRule", {
     DescriptionDetail = "Mon_DesDetail_8513001",
     DisableTrainingGround = true,
     GalleryRuleId = 8513001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Boss_Kuxiu.T_Head_Boss_Kuxiu",
     PreferredMonsterId = 8513001,
     Priority = 13
   },
@@ -272,6 +312,7 @@ return ReadOnly("GalleryRule", {
     DescriptionDetail = "Mon_DesDetail_8514001",
     DisableTrainingGround = true,
     GalleryRuleId = 8514001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Boss_Shenpan.T_Head_Boss_Shenpan",
     PreferredMonsterId = 8514001,
     Priority = 14
   },
@@ -279,66 +320,89 @@ return ReadOnly("GalleryRule", {
     DescriptionDetail = "Mon_DesDetail_8515001",
     DisableTrainingGround = true,
     GalleryRuleId = 8515001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Boss_Jushi.T_Head_Boss_Jushi",
     PreferredMonsterId = 8515001,
     Priority = 15
   },
   [8516001] = {
     DescriptionDetail = "Mon_DesDetail_8516001",
-    DisableArchive = true,
     DisableTrainingGround = true,
     GalleryRuleId = 8516001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Empty.T_Head_Empty",
     PreferredMonsterId = 8516001,
     Priority = 15
   },
   [8519001] = {
     DescriptionDetail = "Mon_DesDetail_8519001",
-    DisableArchive = true,
     DisableTrainingGround = true,
     GalleryRuleId = 8519001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Empty.T_Head_Empty",
     PreferredMonsterId = 8519003,
     Priority = 19
   },
   [8520001] = {
     DescriptionDetail = "Mon_DesDetail_8520001",
-    DisableArchive = true,
     DisableTrainingGround = true,
     GalleryRuleId = 8520001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Empty.T_Head_Empty",
     PreferredMonsterId = 8520001,
     Priority = 20
+  },
+  [8522001] = {
+    DescriptionDetail = "Mon_DesDetail_8522001",
+    DisableTrainingGround = true,
+    GalleryRuleId = 8522001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Empty.T_Head_Empty",
+    PreferredMonsterId = 8522001,
+    Priority = 22
+  },
+  [8523001] = {
+    DescriptionDetail = "Mon_DesDetail_8523001",
+    DisableTrainingGround = true,
+    GalleryRuleId = 8523001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Empty.T_Head_Empty",
+    PreferredMonsterId = 8523001,
+    Priority = 23
   },
   [9001001] = {
     DescriptionDetail = "Mon_DesDetail_9001001",
     GalleryRuleId = 9001001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_SQ_Yinxie.T_Head_SQ_Yinxie",
     PreferredMonsterId = 9001001,
     Priority = 41011
   },
   [9002001] = {
     DescriptionDetail = "Mon_DesDetail_9002001",
     GalleryRuleId = 9002001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_SQ_Dufeng.T_Head_SQ_Dufeng",
     PreferredMonsterId = 9002001,
     Priority = 41511
   },
   [9003001] = {
     DescriptionDetail = "Mon_DesDetail_9003001",
     GalleryRuleId = 9003001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_SQ_Wanju.T_Head_SQ_Wanju",
     PreferredMonsterId = 9003001,
     Priority = 40011
   },
   [9005001] = {
     DescriptionDetail = "Mon_DesDetail_9005001",
     GalleryRuleId = 9005001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_SQ_Baozha.T_Head_SQ_Baozha",
     PreferredMonsterId = 9005001,
     Priority = 40021
   },
   [9006001] = {
     DescriptionDetail = "Mon_DesDetail_9006001",
     GalleryRuleId = 9006001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_SQ_Qizha.T_Head_SQ_Qizha",
     PreferredMonsterId = 9006001,
     Priority = 40031
   },
   [9007001] = {
     DescriptionDetail = "Mon_DesDetail_9007001",
     GalleryRuleId = 9007001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_SQ_Niaopao.T_Head_SQ_Niaopao",
     PreferredMonsterId = 9007001,
     Priority = 41521
   },
@@ -346,6 +410,7 @@ return ReadOnly("GalleryRule", {
     DescriptionDetail = "Mon_DesDetail_9500001",
     DisableTrainingGround = true,
     GalleryRuleId = 9500001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_NE_Dajie.T_Head_NE_Dajie",
     PreferredMonsterId = 9500001,
     Priority = 50001
   },
@@ -354,82 +419,138 @@ return ReadOnly("GalleryRule", {
     DisableArchive = true,
     DisableTrainingGround = true,
     GalleryRuleId = 9501001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_MN_Haer.T_Head_MN_Haer",
     PreferredMonsterId = 9501001,
     Priority = 50002
   },
   [9801001] = {
     DescriptionDetail = "Mon_DesDetail_9801001",
     GalleryRuleId = 9801001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Animal_Xuelang_01.T_Head_Animal_Xuelang_01",
     PreferredMonsterId = 9801001,
     Priority = 51011
   },
   [9801002] = {
     DescriptionDetail = "Mon_DesDetail_9801001",
     GalleryRuleId = 9801002,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Animal_Xuelang_02.T_Head_Animal_Xuelang_02",
     PreferredMonsterId = 9801002,
     Priority = 51012
   },
   [9802001] = {
     DescriptionDetail = "Mon_DesDetail_9802001",
     GalleryRuleId = 9802001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Animal_Hongjiaolu_02.T_Head_Animal_Hongjiaolu_02",
     PreferredMonsterId = 9802001,
     Priority = 51021
   },
   [9802002] = {
     DescriptionDetail = "Mon_DesDetail_9802001",
     GalleryRuleId = 9802002,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Animal_Hongjiaolu_01.T_Head_Animal_Hongjiaolu_01",
     PreferredMonsterId = 9802002,
     Priority = 51022
   },
   [9803001] = {
     DescriptionDetail = "Mon_DesDetail_9803001",
     GalleryRuleId = 9803001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Animal_Yinbeishu_02.T_Head_Animal_Yinbeishu_02",
     PreferredMonsterId = 9803001,
     Priority = 51031
   },
   [9803002] = {
     DescriptionDetail = "Mon_DesDetail_9803001",
     GalleryRuleId = 9803002,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Animal_Yinbeishu_02.T_Head_Animal_Yinbeishu_02",
     PreferredMonsterId = 9803002,
     Priority = 51032
   },
+  [9804001] = {
+    DescriptionDetail = "Mon_DesDetail_9804001",
+    DisableTrainingGround = true,
+    GalleryRuleId = 9804001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Mon_Jiiujiu.T_Head_Mon_Jiiujiu",
+    PreferredMonsterId = 9804001,
+    Priority = 51041
+  },
+  [9805001] = {
+    DescriptionDetail = "Mon_DesDetail_9805001",
+    DisableTrainingGround = true,
+    GalleryRuleId = 9805001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Mon_Suoweng.T_Head_Mon_Suoweng",
+    PreferredMonsterId = 9805001,
+    Priority = 51051
+  },
+  [9806001] = {
+    DescriptionDetail = "Mon_DesDetail_9806001",
+    DisableTrainingGround = true,
+    GalleryRuleId = 9806001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Mon_Cuiping01.T_Head_Mon_Cuiping01",
+    PreferredMonsterId = 9806001,
+    Priority = 51061
+  },
+  [9807001] = {
+    DescriptionDetail = "Mon_DesDetail_9807001",
+    DisableTrainingGround = true,
+    GalleryRuleId = 9807001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Mon_Zhenzhu.T_Head_Mon_Zhenzhu",
+    PreferredMonsterId = 9807001,
+    Priority = 51071
+  },
+  [9808001] = {
+    DescriptionDetail = "Mon_DesDetail_9808001",
+    DisableTrainingGround = true,
+    GalleryRuleId = 9808001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Mon_Chihu.T_Head_Mon_Chihu",
+    PreferredMonsterId = 9808001,
+    Priority = 51081
+  },
+  [9809001] = {
+    DescriptionDetail = "Mon_DesDetail_9809001",
+    GalleryRuleId = 9809001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Mon_Yunzong02.T_Head_Mon_Yunzong02",
+    PreferredMonsterId = 9809001,
+    Priority = 51091
+  },
+  [9809002] = {
+    DescriptionDetail = "Mon_DesDetail_9809001",
+    GalleryRuleId = 9809002,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Mon_Yunzong01.T_Head_Mon_Yunzong01",
+    PreferredMonsterId = 9809002,
+    Priority = 51092
+  },
   [10001001] = {
     DescriptionDetail = "Mon_DesDetail_10001001",
-    DisableArchive = true,
-    DisableTrainingGround = true,
     GalleryRuleId = 10001001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_HX_Tianshi01.T_Head_HX_Tianshi01",
     PreferredMonsterId = 10001001,
     Priority = 61001
   },
   [10002001] = {
     DescriptionDetail = "Mon_DesDetail_10002001",
-    DisableArchive = true,
-    DisableTrainingGround = true,
     GalleryRuleId = 10002001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_HX_Tianwei.T_Head_HX_Tianwei",
     PreferredMonsterId = 10002001,
     Priority = 60001
   },
   [10003001] = {
     DescriptionDetail = "Mon_DesDetail_10003001",
-    DisableArchive = true,
-    DisableTrainingGround = true,
     GalleryRuleId = 10003001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_HX_Bian01.T_Head_HX_Bian01",
     PreferredMonsterId = 10003001,
     Priority = 60002
   },
   [10004001] = {
     DescriptionDetail = "Mon_DesDetail_10004001",
-    DisableArchive = true,
-    DisableTrainingGround = true,
     GalleryRuleId = 10004001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_HX_Bian02.T_Head_HX_Bian02",
     PreferredMonsterId = 10004001,
     Priority = 60003
   },
   [10005001] = {
     DescriptionDetail = "Mon_DesDetail_10005001",
-    DisableArchive = true,
-    DisableTrainingGround = true,
     GalleryRuleId = 10005001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_HX_Tianshi02.T_Head_HX_Tianshi02",
     PreferredMonsterId = 10005001,
     Priority = 61002
   }

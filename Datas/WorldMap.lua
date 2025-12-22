@@ -12,7 +12,7 @@ return ReadOnly("WorldMap", {
     WorldMapRegion = {100}
   },
   [2] = {
-    RegionIcon = "/Game/UI/Texture/Dynamic/Image/Chapter/T_Chapter_Icon02.T_Chapter_Icon02",
+    RegionIcon = "/Game/UI/Texture/Dynamic/Image/Chapter/T_Chapter_Icon01.T_Chapter_Icon01",
     RegionName = "UI_WORLDMAP_REGIONNAME_1",
     RegionUIIndex = 1,
     UIIndex = 2,
@@ -28,13 +28,24 @@ return ReadOnly("WorldMap", {
     WorldMapUnlockCondition = 26
   },
   [3] = {
-    RegionName = "UI_WORLDMAP_REGIONNAME_2",
-    RegionUIIndex = 2,
+    RegionIcon = "/Game/UI/Texture/Dynamic/Image/Chapter/T_Chapter_Icon02.T_Chapter_Icon02",
+    RegionName = "UI_WORLDMAP_REGIONNAME_1",
+    RegionUIIndex = 1,
     UIIndex = 1,
     UIRegionType = "EX",
     WorldMapId = 3,
     WorldMapName = "UI_WORLDMAP_NAME_3",
     WorldMapRegion = {300},
     WorldMapUnlockCondition = 11010103
+  },
+  [4] = {
+    RegionIcon = "/Game/UI/Texture/Dynamic/Image/Chapter/T_Chapter_Icon03.T_Chapter_Icon03",
+    RegionName = "UI_WORLDMAP_REGIONNAME_2",
+    RegionUIIndex = 2,
+    UIIndex = 5,
+    WorldMapId = 4,
+    WorldMapName = "UI_WORLDMAP_NAME_4",
+    WorldMapRegion = {400, 401},
+    WorldMapUnlockCondition = 325
   }
 })

@@ -26,11 +26,6 @@ return ReadOnly("MechanismSummon", {
     UnitBPPath = "/Game/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.BP_Nvzhu_Summon",
     UnitId = 10001
   },
-  [110202] = {
-    DisableBuff = true,
-    UnitBPPath = "/Game/BluePrints/Combat/MechanismSummon/Player/BP_Fuluo_Skill02Ring.BP_Fuluo_Skill02Ring",
-    UnitId = 110202
-  },
   [150302] = {
     DisableBuff = true,
     UnitBPPath = "/Game/BluePrints/Combat/MechanismSummon/Player/Bp_Kezhou_ShadowSword_Control.Bp_Kezhou_ShadowSword_Control",
@@ -350,12 +345,12 @@ return ReadOnly("MechanismSummon", {
     UnitId = 851501
   },
   [851801] = {
-    BluePrintParams = {Yaw = 30},
+    BluePrintParams = {Yaw = -30},
     UnitBPPath = "/Game/BluePrints/Combat/MechanismSummon/Monster/BP_Boss_Robot__Creature.BP_Boss_Robot__Creature",
     UnitId = 851801
   },
   [851802] = {
-    BluePrintParams = {Yaw = -30},
+    BluePrintParams = {Yaw = 30},
     UnitBPPath = "/Game/BluePrints/Combat/MechanismSummon/Monster/BP_Boss_Robot__Creature02.BP_Boss_Robot__Creature02",
     UnitId = 851802
   },
@@ -377,7 +372,6 @@ return ReadOnly("MechanismSummon", {
   },
   [900001] = {
     BattleRoleId = 39005,
-    DelayDestroyTime = 2,
     UnitBPPath = "/Game/BluePrints/Combat/MechanismSummon/Monster/BP_Bomb_Field.BP_Bomb_Field",
     UnitId = 900001
   },

@@ -1,19 +1,19 @@
 local T = {}
 T.RT_1 = {
-  [1] = "Text01"
+  [1] = "Item_Tip1"
 }
 T.RT_2 = {
-  [1] = "Item_Tip3"
+  [1] = "Text01"
 }
 T.RT_3 = {
+  [1] = "Item_Tip3"
+}
+T.RT_4 = {
   [1] = "Short_Text",
   [2] = "ItemSubsize"
 }
-T.RT_4 = {
-  [1] = "Item_Currency"
-}
 T.RT_5 = {
-  [1] = "Item_Tip1"
+  [1] = "Item_Currency"
 }
 T.RT_6 = {
   [1] = "Item_Tip3",
@@ -43,6 +43,10 @@ T.RT_13 = {
 T.RT_14 = {
   [1] = "Shop_BuySinglePart"
 }
+T.RT_15 = {
+  [1] = "Item_Tip1",
+  [2] = "Item_Currency"
+}
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -67,6 +71,8 @@ return ReadOnly("CommonPopupUIStyle", {
     ShowContent = {
       [1] = "WBP_Activity_BuffDialog"
     },
+    ShowRightButton = 1,
+    ShowTip = T.RT_1,
     StyleId = "Activity_BuffDialog"
   },
   Activity_RewardPreview = {
@@ -76,11 +82,18 @@ return ReadOnly("CommonPopupUIStyle", {
     StyleId = "Activity_RewardPreview"
   },
   AlertDefault = {
-    ShowContent = T.RT_1,
+    ShowContent = T.RT_2,
     ShowLeftButton = 1,
     ShowRightButton = 1,
-    ShowTip = T.RT_2,
+    ShowTip = T.RT_3,
     StyleId = "AlertDefault"
+  },
+  Angling_Dayandnight_Dialog = {
+    ShowContent = {
+      [1] = "Angling_Dayandnight"
+    },
+    ShowRightButton = 1,
+    StyleId = "Angling_Dayandnight_Dialog"
   },
   Angling_RodSelect = {
     BigSize = true,
@@ -125,7 +138,7 @@ return ReadOnly("CommonPopupUIStyle", {
     StyleId = "AttrRestraint_Dialog"
   },
   BagSellConfirm = {
-    ShowContent = T.RT_3,
+    ShowContent = T.RT_4,
     ShowLeftButton = 1,
     ShowRightButton = 1,
     ShowTip = {
@@ -141,7 +154,7 @@ return ReadOnly("CommonPopupUIStyle", {
     },
     ShowLeftButton = 1,
     ShowRightButton = 1,
-    ShowTip = T.RT_4,
+    ShowTip = T.RT_5,
     StyleId = "BattlePassDialog"
   },
   ChangeBirth_1 = {
@@ -150,7 +163,7 @@ return ReadOnly("CommonPopupUIStyle", {
     },
     ShowLeftButton = 1,
     ShowRightButton = 2,
-    ShowTip = T.RT_5,
+    ShowTip = T.RT_1,
     StyleId = "ChangeBirth_1"
   },
   Chat_DontDisturbContent_Dialog = {
@@ -180,7 +193,7 @@ return ReadOnly("CommonPopupUIStyle", {
     StyleId = "Chat_Report"
   },
   CheckDefault = {
-    ShowContent = T.RT_1,
+    ShowContent = T.RT_2,
     ShowLeftButton = 1,
     ShowRightButton = 1,
     ShowTip = {
@@ -193,6 +206,12 @@ return ReadOnly("CommonPopupUIStyle", {
       [1] = "CombatData_List"
     },
     StyleId = "CombatData"
+  },
+  CommonDefinitionDialog = {
+    ShowContent = {
+      [1] = "WBP_Armory_DefinitionDialog"
+    },
+    StyleId = "CommonDefinitionDialog"
   },
   CommonDialogAttr2 = {
     ShowContent = {
@@ -230,7 +249,7 @@ return ReadOnly("CommonPopupUIStyle", {
     BigSize = true,
     ShowContent = T.RT_8,
     ShowRightButton = 1,
-    ShowTip = T.RT_5,
+    ShowTip = T.RT_1,
     StyleId = "Depute_Dungeon_Ticket"
   },
   Depute_Ticket = {
@@ -238,7 +257,7 @@ return ReadOnly("CommonPopupUIStyle", {
     ShowContent = T.RT_8,
     ShowLeftButton = 1,
     ShowRightButton = 1,
-    ShowTip = T.RT_5,
+    ShowTip = T.RT_1,
     StyleId = "Depute_Ticket"
   },
   Dispatch_CharDispatchAbility = {
@@ -291,11 +310,11 @@ return ReadOnly("CommonPopupUIStyle", {
     },
     ShowLeftButton = 1,
     ShowRightButton = 1,
-    ShowTip = T.RT_5,
+    ShowTip = T.RT_1,
     StyleId = "ForgeCancelProduce"
   },
   ForgeConfirm = {
-    ShowContent = T.RT_1,
+    ShowContent = T.RT_2,
     ShowLeftButton = 1,
     ShowRightButton = 1,
     ShowTip = T.RT_10,
@@ -379,17 +398,17 @@ return ReadOnly("CommonPopupUIStyle", {
     StyleId = "Gacha_history_Empty"
   },
   Impression_Shop_Confirm = {
-    ShowContent = T.RT_3,
+    ShowContent = T.RT_4,
     ShowLeftButton = 1,
     ShowRightButton = 1,
-    ShowTip = T.RT_2,
+    ShowTip = T.RT_3,
     StyleId = "Impression_Shop_Confirm"
   },
   Impression_Shop_Confirm_1 = {
-    ShowContent = T.RT_3,
+    ShowContent = T.RT_4,
     ShowLeftButton = 1,
     ShowRightButton = 1,
-    ShowTip = T.RT_4,
+    ShowTip = T.RT_5,
     StyleId = "Impression_Shop_Confirm_1"
   },
   Invitation_Exchange = {
@@ -409,7 +428,7 @@ return ReadOnly("CommonPopupUIStyle", {
     },
     ShowLeftButton = 1,
     ShowRightButton = 1,
-    ShowTip = T.RT_2,
+    ShowTip = T.RT_3,
     StyleId = "Levelup_1"
   },
   Levelup_2 = {
@@ -420,7 +439,7 @@ return ReadOnly("CommonPopupUIStyle", {
     },
     ShowLeftButton = 1,
     ShowRightButton = 1,
-    ShowTip = T.RT_2,
+    ShowTip = T.RT_3,
     StyleId = "Levelup_2"
   },
   Levelup_3 = {
@@ -430,7 +449,7 @@ return ReadOnly("CommonPopupUIStyle", {
     },
     ShowLeftButton = 1,
     ShowRightButton = 1,
-    ShowTip = T.RT_2,
+    ShowTip = T.RT_3,
     StyleId = "Levelup_3"
   },
   LongTextDefault = {
@@ -474,7 +493,7 @@ return ReadOnly("CommonPopupUIStyle", {
     },
     ShowLeftButton = 1,
     ShowRightButton = 1,
-    ShowTip = T.RT_5,
+    ShowTip = T.RT_1,
     StyleId = "OverSea_Shop_RechargePart"
   },
   Play_Task_RewardPreview = {
@@ -484,7 +503,7 @@ return ReadOnly("CommonPopupUIStyle", {
     StyleId = "Play_Task_RewardPreview"
   },
   ResourceUseConfirm = {
-    ShowContent = T.RT_3,
+    ShowContent = T.RT_4,
     ShowLeftButton = 1,
     ShowRightButton = 1,
     StyleId = "ResourceUseConfirm"
@@ -509,21 +528,21 @@ return ReadOnly("CommonPopupUIStyle", {
     ShowContent = T.RT_12,
     ShowLeftButton = 1,
     ShowRightButton = 2,
-    ShowTip = T.RT_5,
+    ShowTip = T.RT_1,
     StyleId = "SettingChangeKey_1"
   },
   SettingChangeKey_2 = {
     ShowContent = T.RT_12,
     ShowLeftButton = 1,
     ShowRightButton = 1,
-    ShowTip = T.RT_5,
+    ShowTip = T.RT_1,
     StyleId = "SettingChangeKey_2"
   },
   SettingChangeKey_3 = {
     ShowContent = T.RT_12,
     ShowLeftButton = 1,
     ShowRightButton = 2,
-    ShowTip = T.RT_2,
+    ShowTip = T.RT_3,
     StyleId = "SettingChangeKey_3"
   },
   SettingChangeKey_4 = {
@@ -537,28 +556,28 @@ return ReadOnly("CommonPopupUIStyle", {
     ShowContent = T.RT_13,
     ShowLeftButton = 1,
     ShowRightButton = 1,
-    ShowTip = T.RT_4,
+    ShowTip = T.RT_5,
     StyleId = "Shop_BuyPackagePart_1"
   },
   Shop_BuyPackagePart_2 = {
     ShowContent = T.RT_13,
     ShowLeftButton = 1,
     ShowRightButton = 1,
-    ShowTip = T.RT_2,
+    ShowTip = T.RT_3,
     StyleId = "Shop_BuyPackagePart_2"
   },
   Shop_BuySinglePart_1 = {
     ShowContent = T.RT_14,
     ShowLeftButton = 1,
     ShowRightButton = 1,
-    ShowTip = T.RT_4,
+    ShowTip = T.RT_5,
     StyleId = "Shop_BuySinglePart_1"
   },
   Shop_BuySinglePart_2 = {
     ShowContent = T.RT_14,
     ShowLeftButton = 1,
     ShowRightButton = 1,
-    ShowTip = T.RT_2,
+    ShowTip = T.RT_3,
     StyleId = "Shop_BuySinglePart_2"
   },
   Shop_ExchangePart_Dialog = {
@@ -574,38 +593,38 @@ return ReadOnly("CommonPopupUIStyle", {
     StyleId = "Shop_ExchangePart_Dialog"
   },
   ShortTextComfirm = {
-    ShowContent = T.RT_1,
+    ShowContent = T.RT_2,
     ShowRightButton = 1,
     StyleId = "ShortTextComfirm"
   },
   ShortTextDefault = {
-    ShowContent = T.RT_1,
+    ShowContent = T.RT_2,
     ShowLeftButton = 1,
     ShowRightButton = 1,
     StyleId = "ShortTextDefault"
   },
   ShortTextDefault_1 = {
-    ShowContent = T.RT_1,
+    ShowContent = T.RT_2,
     ShowLeftButton = 1,
     ShowRightButton = 1,
     StyleId = "ShortTextDefault_1"
   },
   ShortTextDefault_2 = {
-    ShowContent = T.RT_1,
+    ShowContent = T.RT_2,
     ShowLeftButton = 1,
     ShowRightButton = 1,
-    ShowTip = T.RT_2,
+    ShowTip = T.RT_3,
     StyleId = "ShortTextDefault_2"
   },
   ShortTextDefault_3 = {
-    ShowContent = T.RT_1,
+    ShowContent = T.RT_2,
     ShowLeftButton = 1,
     ShowRightButton = 1,
-    ShowTip = T.RT_5,
+    ShowTip = T.RT_1,
     StyleId = "ShortTextDefault_3"
   },
   ShortTextDefault_4 = {
-    ShowContent = T.RT_1,
+    ShowContent = T.RT_2,
     StyleId = "ShortTextDefault_4"
   },
   SkinPreview_Suit = {
@@ -615,7 +634,7 @@ return ReadOnly("CommonPopupUIStyle", {
     StyleId = "SkinPreview_Suit"
   },
   TestStyle = {
-    ShowContent = T.RT_1,
+    ShowContent = T.RT_2,
     ShowLeftButton = 1,
     ShowRightButton = 1,
     StyleId = "TestStyle",
@@ -636,7 +655,7 @@ return ReadOnly("CommonPopupUIStyle", {
     },
     ShowLeftButton = 1,
     ShowRightButton = 2,
-    ShowTip = T.RT_5,
+    ShowTip = T.RT_15,
     StyleId = "WBP_Bag_OptionalAvatar"
   },
   WBP_Bag_OptionalGift = {
@@ -653,7 +672,7 @@ return ReadOnly("CommonPopupUIStyle", {
     },
     ShowLeftButton = 1,
     ShowRightButton = 2,
-    ShowTip = T.RT_5,
+    ShowTip = T.RT_15,
     StyleId = "WBP_Bag_OptionalProp"
   },
   WBP_Login_OverSeaSever = {
@@ -686,7 +705,7 @@ return ReadOnly("CommonPopupUIStyle", {
     },
     ShowLeftButton = 1,
     ShowRightButton = 1,
-    ShowTip = T.RT_2,
+    ShowTip = T.RT_3,
     StyleId = "WeaponResolveDialog"
   },
   catching_pets = {
@@ -710,7 +729,7 @@ return ReadOnly("CommonPopupUIStyle", {
     ShowContent = T.RT_9,
     ShowLeftButton = 1,
     ShowRightButton = 2,
-    ShowTip = T.RT_2,
+    ShowTip = T.RT_3,
     StyleId = "common_dialog_input_red"
   },
   lineup_changes_Dialog = {

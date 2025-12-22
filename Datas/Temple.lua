@@ -26,24 +26,39 @@ T.RT_6 = {
   35
 }
 T.RT_7 = {
-  0,
-  60,
-  120
+  1000,
+  2000,
+  3000
 }
 T.RT_8 = {
-  3000,
-  5000,
-  7000
-}
-T.RT_9 = {
   2000,
   3000,
   4000
 }
+T.RT_9 = {
+  0,
+  60,
+  120
+}
 T.RT_10 = {
+  3000,
+  5000,
+  7000
+}
+T.RT_11 = {
+  10,
+  20,
+  40
+}
+T.RT_12 = {
   30,
   50,
   80
+}
+T.RT_13 = {
+  7101,
+  7102,
+  7103
 }
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
@@ -211,11 +226,7 @@ return ReadOnly("Temple", {
   },
   [80401] = {
     DungeonId = 80401,
-    RatingRange = {
-      1000,
-      2500,
-      3500
-    },
+    RatingRange = T.RT_7,
     RewardId = T.RT_2,
     SucRule = "Score",
     UIHideCombo = 1,
@@ -223,11 +234,7 @@ return ReadOnly("Temple", {
   },
   [80402] = {
     DungeonId = 80402,
-    RatingRange = {
-      2000,
-      3500,
-      4500
-    },
+    RatingRange = T.RT_8,
     RewardId = T.RT_2,
     SucRule = "Score",
     UIHideCombo = 1,
@@ -237,8 +244,8 @@ return ReadOnly("Temple", {
     DungeonId = 80403,
     RatingRange = {
       5000,
-      7500,
-      8500
+      6500,
+      8000
     },
     RewardId = T.RT_2,
     SucRule = "Score",
@@ -248,9 +255,9 @@ return ReadOnly("Temple", {
   [80404] = {
     DungeonId = 80404,
     RatingRange = {
-      4500,
-      6000,
-      7500
+      4000,
+      5500,
+      7000
     },
     RewardId = T.RT_2,
     SucRule = "Score",
@@ -259,7 +266,7 @@ return ReadOnly("Temple", {
   },
   [80501] = {
     DungeonId = 80501,
-    RatingRange = T.RT_7,
+    RatingRange = T.RT_9,
     RewardId = T.RT_2,
     SucRule = "CountDown",
     UIHideCombo = 1
@@ -278,14 +285,14 @@ return ReadOnly("Temple", {
   },
   [80601] = {
     DungeonId = 80601,
-    RatingRange = T.RT_7,
+    RatingRange = T.RT_9,
     RewardId = T.RT_2,
     SucRule = "CountDown",
     UIHideCombo = 1
   },
   [80602] = {
     DungeonId = 80602,
-    RatingRange = T.RT_7,
+    RatingRange = T.RT_9,
     RewardId = T.RT_2,
     SucRule = "CountDown",
     UIHideCombo = 1
@@ -324,11 +331,7 @@ return ReadOnly("Temple", {
   },
   [80801] = {
     DungeonId = 80801,
-    RatingRange = {
-      1000,
-      2000,
-      3000
-    },
+    RatingRange = T.RT_7,
     RewardId = T.RT_2,
     SucRule = "Score",
     UIHideCombo = 1,
@@ -348,7 +351,7 @@ return ReadOnly("Temple", {
   },
   [80803] = {
     DungeonId = 80803,
-    RatingRange = T.RT_8,
+    RatingRange = T.RT_10,
     RewardId = T.RT_2,
     SucRule = "Score",
     UIHideCombo = 1,
@@ -356,7 +359,7 @@ return ReadOnly("Temple", {
   },
   [80804] = {
     DungeonId = 80804,
-    RatingRange = T.RT_8,
+    RatingRange = T.RT_10,
     RewardId = T.RT_2,
     SucRule = "Score",
     UIHideCombo = 1,
@@ -364,11 +367,7 @@ return ReadOnly("Temple", {
   },
   [80901] = {
     DungeonId = 80901,
-    RatingRange = {
-      10,
-      20,
-      40
-    },
+    RatingRange = T.RT_11,
     RewardId = T.RT_2,
     SucRule = "Score",
     UIHideCombo = 1
@@ -396,6 +395,13 @@ return ReadOnly("Temple", {
     SucRule = "Score",
     UIHideCombo = 1,
     UIHideDes = 1
+  },
+  [80904] = {
+    DungeonId = 80904,
+    RatingRange = T.RT_11,
+    RewardId = T.RT_2,
+    SucRule = "Score",
+    UIHideCombo = 1
   },
   [81001] = {
     DungeonId = 81001,
@@ -454,7 +460,7 @@ return ReadOnly("Temple", {
   },
   [81201] = {
     DungeonId = 81201,
-    RatingRange = T.RT_9,
+    RatingRange = T.RT_8,
     RewardId = T.RT_2,
     SucRule = "Score",
     UIHideCombo = 1,
@@ -462,7 +468,7 @@ return ReadOnly("Temple", {
   },
   [81202] = {
     DungeonId = 81202,
-    RatingRange = T.RT_9,
+    RatingRange = T.RT_8,
     RewardId = T.RT_2,
     SucRule = "Score",
     UIHideCombo = 1,
@@ -482,22 +488,40 @@ return ReadOnly("Temple", {
   },
   [81204] = {
     DungeonId = 81204,
-    RatingRange = {4000},
-    RewardId = T.RT_1,
+    RatingRange = {
+      1000,
+      2000,
+      4000
+    },
+    RewardId = T.RT_2,
     SucRule = "Score",
     UIHideCombo = 1,
     UIHideFailCond = 1
   },
   [81301] = {
     DungeonId = 81301,
-    RatingRange = T.RT_10,
+    RatingRange = T.RT_12,
+    RewardId = T.RT_2,
+    SucRule = "Score",
+    UIHideCombo = 1
+  },
+  [81302] = {
+    DungeonId = 81302,
+    RatingRange = T.RT_12,
     RewardId = T.RT_2,
     SucRule = "Score",
     UIHideCombo = 1
   },
   [81401] = {
     DungeonId = 81401,
-    RatingRange = T.RT_10,
+    RatingRange = T.RT_12,
+    RewardId = T.RT_2,
+    SucRule = "Score",
+    UIHideCombo = 1
+  },
+  [81402] = {
+    DungeonId = 81402,
+    RatingRange = T.RT_12,
     RewardId = T.RT_2,
     SucRule = "Score",
     UIHideCombo = 1
@@ -509,7 +533,7 @@ return ReadOnly("Temple", {
       1500,
       2500
     },
-    RewardId = T.RT_2,
+    RewardId = T.RT_13,
     SucRule = "Score",
     UIHideCombo = 1,
     UIHideFailCond = 1
@@ -521,7 +545,19 @@ return ReadOnly("Temple", {
       2500,
       4000
     },
-    RewardId = T.RT_2,
+    RewardId = T.RT_13,
+    SucRule = "Score",
+    UIHideCombo = 1,
+    UIHideFailCond = 1
+  },
+  [81601] = {
+    DungeonId = 81601,
+    RatingRange = {
+      100,
+      1500,
+      2500
+    },
+    RewardId = T.RT_13,
     SucRule = "Score",
     UIHideCombo = 1,
     UIHideFailCond = 1

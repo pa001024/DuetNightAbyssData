@@ -22,6 +22,10 @@ return ReadOnly("CommonDialogContent", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/RewardPreview/WBP_Activity_RewardPreview.WBP_Activity_RewardPreview'",
     ContentId = "Activity_RewardPreview_1"
   },
+  Angling_Dayandnight = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Angling/Widget/WBP_Angling_DayAndNightDialog.WBP_Angling_DayAndNightDialog'",
+    ContentId = "Angling_Dayandnight"
+  },
   Angling_Rod = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Angling/Widget/WBP_Angling_Dialog.WBP_Angling_Dialog'",
     ContentId = "Angling_Rod"
@@ -253,6 +257,10 @@ return ReadOnly("CommonDialogContent", {
   WBP_Armory_AttrRestraintDialog = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Unit/WBP_Armory_AttrRestraintDialog.WBP_Armory_AttrRestraintDialog'",
     ContentId = "WBP_Armory_AttrRestraintDialog"
+  },
+  WBP_Armory_DefinitionDialog = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/CharSkill/WBP_Armory_DefinitionDialog.WBP_Armory_DefinitionDialog'",
+    ContentId = "WBP_Armory_DefinitionDialog"
   },
   WBP_Armory_PosInfoDialog = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Unit/WBP_Armory_PosInfoDialog.WBP_Armory_PosInfoDialog'",

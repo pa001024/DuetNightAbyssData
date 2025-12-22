@@ -19,6 +19,10 @@ return ReadOnly("MapIdConfig", {
     MapID = 186,
     MapName = "BattleTest_Road_Design"
   },
+  Chapter01_Abyss_Boss01_Design = {
+    MapID = 257,
+    MapName = "Chapter01_Abyss_Boss01_Design"
+  },
   Chapter01_Alch_Design = {
     MapID = 192,
     MapName = "Chapter01_Alch_Design"
@@ -303,6 +307,34 @@ return ReadOnly("MapIdConfig", {
     MapID = 246,
     MapName = "Haiboliya_Chezhan05_Design"
   },
+  Haiboliya_Chezhan_BHCZ_Design = {
+    MapID = 248,
+    MapName = "Haiboliya_Chezhan_BHCZ_Design"
+  },
+  Haiboliya_Chezhan_CXQ_Design = {
+    MapID = 249,
+    MapName = "Haiboliya_Chezhan_CXQ_Design"
+  },
+  Haiboliya_Chezhan_HWQ_Design = {
+    MapID = 250,
+    MapName = "Haiboliya_Chezhan_HWQ_Design"
+  },
+  Haiboliya_Chezhan_JGQ_Design = {
+    MapID = 251,
+    MapName = "Haiboliya_Chezhan_JGQ_Design"
+  },
+  Haiboliya_Chezhan_YLQ_Design = {
+    MapID = 252,
+    MapName = "Haiboliya_Chezhan_YLQ_Design"
+  },
+  Haiboliya_Chezhan_YT_Design = {
+    MapID = 253,
+    MapName = "Haiboliya_Chezhan_YT_Design"
+  },
+  Haiboliya_Chezhan_ZZZ_Design = {
+    MapID = 254,
+    MapName = "Haiboliya_Chezhan_ZZZ_Design"
+  },
   Haiboliya_Longsha01_Design = {
     ExploreID = 7030,
     MapID = 164,
@@ -331,6 +363,16 @@ return ReadOnly("MapIdConfig", {
     ExploreID = 7045,
     MapID = 201,
     MapName = "Huaxu_Haojing_Eas_Design"
+  },
+  Huaxu_Haojing_IQ12020122_DesignTask = {
+    ExploreID = 7076,
+    MapID = 258,
+    MapName = "Huaxu_Haojing_IQ12020122_DesignTask"
+  },
+  Huaxu_Haojing_IQ12020212_DesignTask = {
+    ExploreID = 7077,
+    MapID = 259,
+    MapName = "Huaxu_Haojing_IQ12020212_DesignTask"
   },
   Huaxu_Haojing_Inn_Design = {
     ExploreID = 7071,
@@ -387,10 +429,15 @@ return ReadOnly("MapIdConfig", {
     MapID = 231,
     MapName = "Huaxu_Haojing_YYG_Design"
   },
-  Huaxu_Haojing_ZhiLiuHJ_Design = {
+  Huaxu_Haojing_ZhiliuHJ_Door_Design = {
     ExploreID = 7069,
     MapID = 239,
-    MapName = "Huaxu_Haojing_ZhiLiuHJ_Design"
+    MapName = "Huaxu_Haojing_ZhiliuHJ_Door_Design"
+  },
+  Huaxu_Haojing_ZhiliuHJ_Talk_Design = {
+    ExploreID = 7075,
+    MapID = 247,
+    MapName = "Huaxu_Haojing_ZhiliuHJ_Talk_Design"
   },
   Huaxu_Yanjindu_Alt_Design = {
     ExploreID = 7046,
@@ -476,6 +523,14 @@ return ReadOnly("MapIdConfig", {
     ExploreID = 7055,
     MapID = 211,
     MapName = "Huaxu_Yanjindu_Spr_Design"
+  },
+  Huaxu_Yanjindu_Stealth_Design = {
+    MapID = 255,
+    MapName = "Huaxu_Yanjindu_Stealth_Design"
+  },
+  Prologue_Abyss_Boss01_Design = {
+    MapID = 256,
+    MapName = "Prologue_Abyss_Boss01_Design"
   },
   Prologue_Balcony_Design = {
     ExploreID = 7001,

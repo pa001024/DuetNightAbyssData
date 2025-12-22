@@ -78,5 +78,12 @@ return ReadOnly("PlayerExpSubSource", {
     Sequence = 90,
     Source = 5,
     SubSourceName = "PlayerLevel_DailyGoal"
+  },
+  [12] = {
+    ID = 12,
+    Key = "ModGuideBookTask",
+    Sequence = 90,
+    Source = 4,
+    SubSourceName = "PlayerLevel_ModQuest"
   }
 })

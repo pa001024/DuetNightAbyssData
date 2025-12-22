@@ -46,6 +46,7 @@ return ReadOnly("ReasonType", {
     ReasonId = 10001,
     ReasonName = "BLUE_PRODUCT_CONSUME"
   },
+  CDK = {ReasonId = 21014, ReasonName = "CDK"},
   CHAR_BREAK_CONSUME = {
     ReasonId = 1002,
     ReasonName = "CHAR_BREAK_CONSUME"
@@ -79,6 +80,10 @@ return ReadOnly("ReasonType", {
     ReasonId = 21009,
     ReasonName = "COLLECT_REWARD_EXP"
   },
+  COMMON_QUEST_REWARD = {
+    ReasonId = 40001,
+    ReasonName = "COMMON_QUEST_REWARD"
+  },
   COMMUNITY_FOLLOW_REWARD = {
     ReasonId = 35001,
     ReasonName = "COMMUNITY_FOLLOW_REWARD"
@@ -86,6 +91,10 @@ return ReadOnly("ReasonType", {
   CONDITIONAL_REWRD = {
     ReasonId = 21007,
     ReasonName = "CONDITIONAL_REWRD"
+  },
+  DAILY_PACK_BUY = {
+    ReasonId = 38001,
+    ReasonName = "DAILY_PACK_BUY"
   },
   DAILY_TASK_PROGRESS_GRADE_REWARD = {
     ReasonId = 32002,
@@ -254,6 +263,10 @@ return ReadOnly("ReasonType", {
     ReasonId = 1004,
     ReasonName = "OTHER_CHAR_SKIN"
   },
+  PAOTAI_SCORE_REWARD = {
+    ReasonId = 40003,
+    ReasonName = "PAOTAI_SCORE_REWARD"
+  },
   PARTY_CONSUME = {
     ReasonId = 6002,
     ReasonName = "PARTY_CONSUME"
@@ -273,6 +286,10 @@ return ReadOnly("ReasonType", {
   PET_ENTRY_REPLACE_CONSUME = {
     ReasonId = 21003,
     ReasonName = "PET_ENTRY_REPLACE_CONSUME"
+  },
+  PET_ENTRY_UP_CONSUME = {
+    ReasonId = 21011,
+    ReasonName = "PET_ENTRY_UP_CONSUME"
   },
   PET_FOOD_CONSUME = {
     ReasonId = 21001,
@@ -294,6 +311,14 @@ return ReadOnly("ReasonType", {
     ReasonId = 18001,
     ReasonName = "PHASE_QUEST"
   },
+  PLAYER_LEVEL_EVENT = {
+    ReasonId = 21012,
+    ReasonName = "PLAYER_LEVEL_EVENT"
+  },
+  PRE_RAID_RANK_REWARD = {
+    ReasonId = 37001,
+    ReasonName = "PRE_RAID_RANK_REWARD"
+  },
   PURCHASE_ACTIONPOINT_CONSUME = {
     ReasonId = 20001,
     ReasonName = "PURCHASE_ACTIONPOINT_CONSUME "
@@ -306,9 +331,25 @@ return ReadOnly("ReasonType", {
     ReasonId = 5002,
     ReasonName = "PURCHASE_SHOPITEM_CONSUME"
   },
+  QUEST_CHAIN_FAKE_COMPLETE = {
+    ReasonId = 11003,
+    ReasonName = "QUEST_CHAIN_FAKE_COMPLETE"
+  },
   QUEST_COMPLETE = {
     ReasonId = 11001,
     ReasonName = "QUEST_COMPLETE"
+  },
+  QUEST_FAKE_COMPLETE = {
+    ReasonId = 11002,
+    ReasonName = "QUEST_FAKE_COMPLETE"
+  },
+  RAID_DUNGEON_CONSUME = {
+    ReasonId = 14009,
+    ReasonName = "RAID_DUNGEON_CONSUME"
+  },
+  RAID_DUNGEON_REWARD = {
+    ReasonId = 14008,
+    ReasonName = "RAID_DUNGEON_REWARD"
   },
   REPEAT_CHAR_ACCESSORY_TRANSFORM_RESOURCE_GET = {
     ReasonId = 4015,
@@ -334,6 +375,10 @@ return ReadOnly("ReasonType", {
     ReasonId = 4003,
     ReasonName = "RESOURCE_CONVERSION"
   },
+  RESOURCE_DROP_REISSUE = {
+    ReasonId = 4019,
+    ReasonName = "RESOURCE_DROP_REISSUE"
+  },
   RESOURCE_DROP_REWARD = {
     ReasonId = 4004,
     ReasonName = "RESOURCE_DROP_REWARD"
@@ -345,6 +390,10 @@ return ReadOnly("ReasonType", {
   RESOURCE_FISH_SALE_GET = {
     ReasonId = 4011,
     ReasonName = "RESOURCE_FISH_SALE_GET"
+  },
+  RESOURCE_MOUNT_GET = {
+    ReasonId = 4018,
+    ReasonName = "RESOURCE_MOUNT_GET"
   },
   RESOURCE_OPEN_CHEST = {
     ReasonId = 4006,
@@ -365,6 +414,10 @@ return ReadOnly("ReasonType", {
   RESOURCE_SELECT_GET = {
     ReasonId = 4010,
     ReasonName = "RESOURCE_SELECT_GET"
+  },
+  RESOURCE_THEATER_DONATE_CONSUME = {
+    ReasonId = 39001,
+    ReasonName = "RESOURCE_THEATER_DONATE_CONSUME"
   },
   RESOURCE_TRANSFORM_CONSUME = {
     ReasonId = 4007,
@@ -438,9 +491,25 @@ return ReadOnly("ReasonType", {
     ReasonId = 23006,
     ReasonName = "ROUGELIKE_WEEKLY_REWARD"
   },
+  STARTER_QUEST = {
+    ReasonId = 21013,
+    ReasonName = "STARTER_QUEST"
+  },
   SYSTEMGUIDE_FINISH_REWARD = {
     ReasonId = 8001,
     ReasonName = "SYSTEMGUIDE_FINISH_REWARD"
+  },
+  TEMPLE_REWARD_GET = {
+    ReasonId = 40002,
+    ReasonName = "TEMPLE_REWARD_GET"
+  },
+  THEATER_PERFORMGAME_REWARD_GET = {
+    ReasonId = 39003,
+    ReasonName = "THEATER_PERFORMGAME_REWARD_GET"
+  },
+  THEATER_TASK_REWARD = {
+    ReasonId = 39002,
+    ReasonName = "THEATER_TASK_REWARD"
   },
   WALNUT_OPEN = {
     ReasonId = 25002,
@@ -477,6 +546,10 @@ return ReadOnly("ReasonType", {
   WEAPON_UP_GRADELEVEL_CONSUME = {
     ReasonId = 36001,
     ReasonName = "WEAPON_UP_GRADELEVEL_CONSUME"
+  },
+  WEB_JUMP_REWARD = {
+    ReasonId = 35002,
+    ReasonName = "WEB_JUMP_REWARD"
   },
   WECHAT_SMALL_APP = {
     ReasonId = 21010,

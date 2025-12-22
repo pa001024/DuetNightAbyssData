@@ -43,5 +43,12 @@ return ReadOnly("CommonAsset", {
     },
     Type = "Dungeon"
   },
-  Region = {Type = "Region"}
+  Region = {
+    AssetPath = {
+      [1] = {
+        Path = "WidgetBlueprint'/Game/UI/WBP/World/NPC/Widget/WBP_NPC_UniformHeadWidget.WBP_NPC_UniformHeadWidget'"
+      }
+    },
+    Type = "Region"
+  }
 })

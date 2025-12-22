@@ -52,6 +52,34 @@ return {
     }
   },
   ManualItem = {},
-  Explore = {},
+  Explore = {
+    ["7058001"] = {
+      AutoReset = 0,
+      ["2270011"] = {
+        CreatorId = 2270011,
+        UnitType = "Drop",
+        UnitId = 2000088,
+        RarelyId = 7058001
+      }
+    },
+    ["7058002"] = {
+      AutoReset = 0,
+      ["2270012"] = {
+        CreatorId = 2270012,
+        UnitType = "Drop",
+        UnitId = 2000095,
+        RarelyId = 7058002
+      }
+    },
+    ["7058003"] = {
+      AutoReset = 0,
+      ["2270013"] = {
+        CreatorId = 2270013,
+        UnitType = "Drop",
+        UnitId = 2000092,
+        RarelyId = 7058003
+      }
+    }
+  },
   RandomRule = {}
 }

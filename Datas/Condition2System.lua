@@ -5,6 +5,9 @@ return ReadOnly("Condition2System", {
   [322] = {
     [1] = "LonzaFortressShopTab"
   },
+  [325] = {
+    [1] = "YanjinduShopTab"
+  },
   [4010] = {
     [1] = "Bag"
   },
@@ -88,7 +91,8 @@ return ReadOnly("Condition2System", {
     [2] = "Temple"
   },
   [4240] = {
-    [1] = "Match"
+    [1] = "Match",
+    [2] = "TimeRewardShopTab"
   },
   [4250] = {
     [1] = "Entertainment"
@@ -117,6 +121,9 @@ return ReadOnly("Condition2System", {
     [1] = "SecretLetterShopTab",
     [2] = "WalnutBag"
   },
+  [4341] = {
+    [1] = "WalnutSell"
+  },
   [4350] = {
     [1] = "ModArchive"
   },
@@ -129,10 +136,16 @@ return ReadOnly("Condition2System", {
   [4380] = {
     [1] = "PlayTaskRoot"
   },
+  [4400] = {
+    [1] = "TODSetting"
+  },
   [8002] = {
     [1] = "Abyss"
   },
   [10101001] = {
     [1] = "ExploreBadgeShop"
+  },
+  [12010306] = {
+    [1] = "RegionalShopTab"
   }
 })

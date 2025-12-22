@@ -43,10 +43,6 @@ return ReadOnly("SubSound", {
     SubSoundId = 7,
     TriggerSoundPath = "event:/sfx/common/player/hit/weapon/special_shield"
   },
-  [11] = {
-    DeadSoundPath = "event:/sfx/common/player/hit/weapon/hit_death",
-    SubSoundId = 11
-  },
   [51] = {
     CritSoundPath = "event:/sfx/common/player/hit/magic/fireairHit_Crihit",
     DeadSoundPath = "event:/sfx/common/player/hit/weapon/fireHit_death",

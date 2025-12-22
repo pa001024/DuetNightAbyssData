@@ -28,6 +28,21 @@ return ReadOnly("ArtLevelControl_RegionId2TaskVar", {
   [1041] = {
     [1] = "DaFengBaoXiang200303",
     [2] = "ZhuXingMuXiang200302",
-    [3] = "ZhuXingMuXiang20030203"
+    [3] = "ZhuXingMuXiang20030203",
+    [4] = "IQ12010307",
+    [5] = "IQ12010313",
+    [6] = "IQ12010502",
+    [7] = "IQ12010513_fu"
+  },
+  [1045] = {
+    [1] = "Wuyousheng_First_12020122",
+    [2] = "Wuyousheng_Escape_12020212"
+  },
+  [1053] = {
+    [1] = "Special_Zhiliu_12020515"
+  },
+  [1057] = {
+    [1] = "AltStart",
+    [2] = "IQ12010513"
   }
 })

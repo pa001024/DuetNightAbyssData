@@ -1,9 +1,21 @@
+local T = {}
+T.RT_1 = {
+  99,
+  1004,
+  1003
+}
+T.RT_2 = {1004, 1003}
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("SkinGacha", {
   [9001] = {
     ConditionId = 4041,
+    DisplayCostRes = {
+      99,
+      100,
+      1001
+    },
     GachaCoreDes = "UI_SkinGacha_Core_GoldSkin",
     GachaCoreDesColor = 5,
     GachaCostNum10 = 10,
@@ -31,12 +43,13 @@ return ReadOnly("SkinGacha", {
   [9002] = {
     BgBGM = "event:/bgm/1_0/0088_saiqi_skin",
     BgMusic = "event:/ui/btc/gacha_pool_saiqi_skin01",
-    BubbleShowGoods = 140207,
+    BubbleShowGoods = {140205},
     ConditionId = 4041,
+    DisplayCostRes = T.RT_1,
     GachaCoreDes = "UI_SkinGacha_Core_GoldSkin",
     GachaCoreDesColor = 5,
     GachaCostNum10 = 10,
-    GachaCostRes = {1004, 1003},
+    GachaCostRes = T.RT_2,
     GachaDes = "SkinGacha_Des_Special",
     GachaDisplayPath = "FileMediaSource'/Game/Asset/UIVideo/Gacha/Gacha_Pool_Saiqi01.Gacha_Pool_Saiqi01'",
     GachaDisplayType = 1,
@@ -55,5 +68,38 @@ return ReadOnly("SkinGacha", {
     Star4ItemId = 99982,
     Star5ItemId = 99981,
     TabId = 2
+  },
+  [9003] = {
+    BgBGM = "event:/bgm/1_1/0133_fushu_skin",
+    BgMusic = "event:/ui/btc/gacha_pool_fushu_skin01",
+    BubbleShowGoods = {
+      140227,
+      140229,
+      140228
+    },
+    ConditionId = 4041,
+    DisplayCostRes = T.RT_1,
+    GachaCoreDes = "UI_SkinGacha_Core_GoldSkin",
+    GachaCoreDesColor = 5,
+    GachaCostNum10 = 10,
+    GachaCostRes = T.RT_2,
+    GachaDes = "SkinGacha_Des_Special",
+    GachaDisplayPath = "FileMediaSource'/Game/Asset/UIVideo/Gacha/Gacha_Pool_Baiheng01.Gacha_Pool_Baiheng01'",
+    GachaDisplayType = 1,
+    GachaEndTime = 1770667200,
+    GachaHistoryType = 2,
+    GachaId = 9003,
+    GachaName = "SkinGacha_Name_Special_2",
+    GachaNameBp = "WidgetBlueprint'/Game/UI/WBP/GachaNew/Widget/Title/WBP_Gacha_PoolTitle_Baiheng01.WBP_Gacha_PoolTitle_Baiheng01'",
+    GachaStartTime = 1766408400,
+    GachaTimes = 1,
+    GachaType = "GACHA_SKIN_TYPE_SPECIAL_2",
+    GachaWarning = "SkinGacha_Warning_Special_2",
+    ProbabilityId = 1001,
+    Sequence = 2,
+    Star3ItemId = 99973,
+    Star4ItemId = 99972,
+    Star5ItemId = 99971,
+    TabId = 3
   }
 })

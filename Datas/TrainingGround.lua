@@ -4,7 +4,6 @@ end
 return ReadOnly("TrainingGround", {
   [1] = {
     CharId = 1101,
-    CharImage = "/Game/UI/UI_PNG/03Image/Avatar_Bust/Bust_Heitao.Bust_Heitao",
     SkillId = {
       110101,
       110102,

@@ -12,9 +12,6 @@ return ReadOnly("DataSetIgnore", {
   CamBlendTime = {
     ID = "CamBlendTime"
   },
-  CollisionName = {
-    ID = "CollisionName"
-  },
   DeadDissolveTime = {
     ID = "DeadDissolveTime"
   },
@@ -34,6 +31,12 @@ return ReadOnly("DataSetIgnore", {
   Maer_Skill02_Level3 = {
     ID = "Maer_Skill02_Level3"
   },
+  NiagaraTriggerComponent = {
+    ID = "NiagaraTriggerComponent"
+  },
+  NotifyCurCtrlRotation = {
+    ID = "NotifyCurCtrlRotation"
+  },
   NotifyMonMoveSpeed = {
     ID = "NotifyMonMoveSpeed"
   },
@@ -43,5 +46,8 @@ return ReadOnly("DataSetIgnore", {
   Skill01Count2 = {
     ID = "Skill01Count2"
   },
-  ToExplode = {ID = "ToExplode"}
+  ToExplode = {ID = "ToExplode"},
+  Weapon20402_Scale = {
+    ID = "Weapon20402_Scale"
+  }
 })

@@ -6,6 +6,8 @@ return ReadOnly("CharAccessroryType", {
   FX_Body = 1,
   FX_Dead = 1,
   FX_Footprint = 1,
+  FX_HelixLeap = 1,
+  FX_PlungingATK = 1,
   FX_Teleport = 1,
   Face = 1,
   Head = 1,

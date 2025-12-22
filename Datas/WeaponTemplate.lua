@@ -77,6 +77,30 @@ T.RT_8 = {
   [5] = 5
 }
 T.RT_9 = {
+  [1] = 22007,
+  [2] = 22008,
+  [3] = 32102,
+  [4] = 32004,
+  [5] = 32005,
+  [6] = 42001
+}
+T.RT_10 = {
+  [1] = 3,
+  [2] = 3,
+  [3] = 5,
+  [4] = 5,
+  [5] = 5,
+  [6] = 5
+}
+T.RT_11 = {
+  [1] = 22007,
+  [2] = 22008,
+  [3] = 32101,
+  [4] = 32004,
+  [5] = 32005,
+  [6] = 42001
+}
+T.RT_12 = {
   [1] = 5,
   [2] = 5,
   [3] = 10,
@@ -86,7 +110,7 @@ T.RT_9 = {
   [7] = 5,
   [8] = 5
 }
-T.RT_10 = {
+T.RT_13 = {
   [1] = 5,
   [2] = 5,
   [3] = 10,
@@ -96,142 +120,25 @@ T.RT_10 = {
   [7] = 10,
   [8] = 5
 }
-T.RT_11 = {
+T.RT_14 = {
   [1] = 22007,
   [2] = 12001,
   [3] = 12002,
   [4] = 12003
 }
-T.RT_12 = {
+T.RT_15 = {
   [1] = 3,
   [2] = 3,
   [3] = 3,
   [4] = 3
 }
-T.RT_13 = {
+T.RT_16 = {
   [1] = 23007,
   [2] = 13001,
   [3] = 13002,
   [4] = 13003
 }
-T.RT_14 = {
-  [1] = 22007,
-  [2] = 22008,
-  [3] = 22113,
-  [4] = 12001
-}
-T.RT_15 = {
-  [1] = 22007,
-  [2] = 22008,
-  [3] = 22112,
-  [4] = 12001
-}
-T.RT_16 = {
-  [1] = 22007,
-  [2] = 22008,
-  [3] = 22111,
-  [4] = 12001
-}
 T.RT_17 = {
-  [1] = 23007,
-  [2] = 23008,
-  [3] = 23111,
-  [4] = 13001
-}
-T.RT_18 = {
-  [1] = 23007,
-  [2] = 23008,
-  [3] = 23113,
-  [4] = 13001
-}
-T.RT_19 = {
-  [1] = 23007,
-  [2] = 23008,
-  [3] = 23112,
-  [4] = 13001
-}
-T.RT_20 = {
-  [1] = 22007,
-  [2] = 22008,
-  [3] = 22113,
-  [4] = 32004,
-  [5] = 32005
-}
-T.RT_21 = {
-  [1] = 3,
-  [2] = 3,
-  [3] = 3,
-  [4] = 5,
-  [5] = 5
-}
-T.RT_22 = {
-  [1] = 22007,
-  [2] = 22008,
-  [3] = 22112,
-  [4] = 32004,
-  [5] = 32005
-}
-T.RT_23 = {
-  [1] = 22007,
-  [2] = 22008,
-  [3] = 22111,
-  [4] = 32004,
-  [5] = 32005
-}
-T.RT_24 = {
-  [1] = 23007,
-  [2] = 23008,
-  [3] = 23111,
-  [4] = 33004,
-  [5] = 33005
-}
-T.RT_25 = {
-  [1] = 23007,
-  [2] = 23008,
-  [3] = 23113,
-  [4] = 33004,
-  [5] = 33005
-}
-T.RT_26 = {
-  [1] = 23007,
-  [2] = 23008,
-  [3] = 23112,
-  [4] = 33004,
-  [5] = 33005
-}
-T.RT_27 = {
-  [1] = 22007,
-  [2] = 22008,
-  [3] = 32103,
-  [4] = 32004,
-  [5] = 32005,
-  [6] = 42001
-}
-T.RT_28 = {
-  [1] = 3,
-  [2] = 3,
-  [3] = 5,
-  [4] = 5,
-  [5] = 5,
-  [6] = 5
-}
-T.RT_29 = {
-  [1] = 22007,
-  [2] = 22008,
-  [3] = 32102,
-  [4] = 32004,
-  [5] = 32005,
-  [6] = 42001
-}
-T.RT_30 = {
-  [1] = 22007,
-  [2] = 22008,
-  [3] = 32101,
-  [4] = 32004,
-  [5] = 32005,
-  [6] = 42001
-}
-T.RT_31 = {
   [1] = 23007,
   [2] = 23008,
   [3] = 33101,
@@ -239,18 +146,111 @@ T.RT_31 = {
   [5] = 33005,
   [6] = 43001
 }
-T.RT_32 = {
+T.RT_18 = {
   [1] = 23007,
   [2] = 23008,
-  [3] = 33103,
+  [3] = 33102,
   [4] = 33004,
   [5] = 33005,
   [6] = 43001
 }
+T.RT_19 = {
+  [1] = 22007,
+  [2] = 22008,
+  [3] = 22113,
+  [4] = 12001
+}
+T.RT_20 = {
+  [1] = 22007,
+  [2] = 22008,
+  [3] = 22112,
+  [4] = 12001
+}
+T.RT_21 = {
+  [1] = 22007,
+  [2] = 22008,
+  [3] = 22111,
+  [4] = 12001
+}
+T.RT_22 = {
+  [1] = 23007,
+  [2] = 23008,
+  [3] = 23111,
+  [4] = 13001
+}
+T.RT_23 = {
+  [1] = 23007,
+  [2] = 23008,
+  [3] = 23113,
+  [4] = 13001
+}
+T.RT_24 = {
+  [1] = 23007,
+  [2] = 23008,
+  [3] = 23112,
+  [4] = 13001
+}
+T.RT_25 = {
+  [1] = 22007,
+  [2] = 22008,
+  [3] = 22113,
+  [4] = 32004,
+  [5] = 32005
+}
+T.RT_26 = {
+  [1] = 3,
+  [2] = 3,
+  [3] = 3,
+  [4] = 5,
+  [5] = 5
+}
+T.RT_27 = {
+  [1] = 22007,
+  [2] = 22008,
+  [3] = 22112,
+  [4] = 32004,
+  [5] = 32005
+}
+T.RT_28 = {
+  [1] = 22007,
+  [2] = 22008,
+  [3] = 22111,
+  [4] = 32004,
+  [5] = 32005
+}
+T.RT_29 = {
+  [1] = 23007,
+  [2] = 23008,
+  [3] = 23111,
+  [4] = 33004,
+  [5] = 33005
+}
+T.RT_30 = {
+  [1] = 23007,
+  [2] = 23008,
+  [3] = 23113,
+  [4] = 33004,
+  [5] = 33005
+}
+T.RT_31 = {
+  [1] = 23007,
+  [2] = 23008,
+  [3] = 23112,
+  [4] = 33004,
+  [5] = 33005
+}
+T.RT_32 = {
+  [1] = 22007,
+  [2] = 22008,
+  [3] = 32103,
+  [4] = 32004,
+  [5] = 32005,
+  [6] = 42001
+}
 T.RT_33 = {
   [1] = 23007,
   [2] = 23008,
-  [3] = 33102,
+  [3] = 33103,
   [4] = 33004,
   [5] = 33005,
   [6] = 43001
@@ -436,1374 +436,1409 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("WeaponTemplate", {
+  [111] = {
+    RuleId = 111,
+    WeaponId = 10103,
+    WeaponLevel = 1
+  },
+  [203] = {
+    RuleId = 203,
+    WeaponId = 10204,
+    WeaponLevel = 20
+  },
+  [205] = {
+    RuleId = 205,
+    WeaponId = 10103,
+    WeaponLevel = 45
+  },
+  [207] = {
+    RuleId = 207,
+    WeaponId = 10101,
+    WeaponLevel = 45
+  },
+  [210] = {
+    RuleId = 210,
+    WeaponId = 10203,
+    WeaponLevel = 55
+  },
+  [211] = {
+    RuleId = 211,
+    WeaponId = 10502,
+    WeaponLevel = 55
+  },
+  [212] = {
+    RuleId = 212,
+    WeaponId = 10202,
+    WeaponLevel = 55
+  },
   [2010101] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010101,
     WeaponId = 10101,
     WeaponLevel = 20
   },
   [2010102] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010102,
     WeaponId = 10102,
     WeaponLevel = 20
   },
   [2010103] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010103,
     WeaponId = 10103,
     WeaponLevel = 20
   },
   [2010104] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010104,
     WeaponId = 10104,
     WeaponLevel = 20
   },
   [2010105] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010105,
     WeaponId = 10105,
     WeaponLevel = 20
   },
   [2010201] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010201,
     WeaponId = 10201,
     WeaponLevel = 20
   },
   [2010202] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010202,
     WeaponId = 10202,
     WeaponLevel = 20
   },
   [2010203] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010203,
     WeaponId = 10203,
     WeaponLevel = 20
   },
   [2010204] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010204,
     WeaponId = 10204,
     WeaponLevel = 20
   },
   [2010206] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010206,
     WeaponId = 10206,
     WeaponLevel = 20
   },
   [2010301] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010301,
     WeaponId = 10301,
     WeaponLevel = 20
   },
   [2010302] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010302,
     WeaponId = 10302,
     WeaponLevel = 20
   },
   [2010303] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010303,
     WeaponId = 10303,
     WeaponLevel = 20
   },
   [2010304] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010304,
     WeaponId = 10304,
     WeaponLevel = 20
   },
   [2010401] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010401,
     WeaponId = 10401,
     WeaponLevel = 20
   },
   [2010402] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010402,
     WeaponId = 10402,
     WeaponLevel = 20
   },
   [2010403] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010403,
     WeaponId = 10403,
     WeaponLevel = 20
   },
   [2010501] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010501,
     WeaponId = 10501,
     WeaponLevel = 20
   },
   [2010502] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010502,
     WeaponId = 10502,
     WeaponLevel = 20
   },
   [2010503] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010503,
     WeaponId = 10503,
     WeaponLevel = 20
   },
   [2010504] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010504,
     WeaponId = 10504,
     WeaponLevel = 20
   },
   [2010601] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010601,
     WeaponId = 10601,
     WeaponLevel = 20
   },
   [2010602] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010602,
     WeaponId = 10602,
     WeaponLevel = 20
   },
   [2010603] = {
-    ModId = T.RT_11,
-    ModLevel = T.RT_12,
+    ModId = T.RT_14,
+    ModLevel = T.RT_15,
     RuleId = 2010603,
     WeaponId = 10603,
     WeaponLevel = 20
   },
   [2020101] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020101,
     WeaponId = 20101,
     WeaponLevel = 20
   },
   [2020102] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020102,
     WeaponId = 20102,
     WeaponLevel = 20
   },
   [2020103] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020103,
     WeaponId = 20103,
     WeaponLevel = 20
   },
   [2020201] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020201,
     WeaponId = 20201,
     WeaponLevel = 20
   },
   [2020203] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020203,
     WeaponId = 20203,
     WeaponLevel = 20
   },
   [2020205] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020205,
     WeaponId = 20205,
     WeaponLevel = 20
   },
   [2020301] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020301,
     WeaponId = 20301,
     WeaponLevel = 20
   },
   [2020302] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020302,
     WeaponId = 20302,
     WeaponLevel = 20
   },
   [2020303] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020303,
     WeaponId = 20303,
     WeaponLevel = 20
   },
   [2020304] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020304,
     WeaponId = 20304,
     WeaponLevel = 20
   },
   [2020305] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020305,
     WeaponId = 20305,
     WeaponLevel = 20
   },
   [2020401] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020401,
     WeaponId = 20401,
     WeaponLevel = 20
   },
   [2020402] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020402,
     WeaponId = 20402,
     WeaponLevel = 20
   },
   [2020403] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020403,
     WeaponId = 20403,
     WeaponLevel = 20
   },
   [2020405] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020405,
     WeaponId = 20405,
     WeaponLevel = 20
   },
   [2020501] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020501,
     WeaponId = 20501,
     WeaponLevel = 20
   },
   [2020502] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020502,
     WeaponId = 20502,
     WeaponLevel = 20
   },
   [2020503] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020503,
     WeaponId = 20503,
     WeaponLevel = 20
   },
   [2020504] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020504,
     WeaponId = 20504,
     WeaponLevel = 20
   },
   [2020507] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020507,
     WeaponId = 20507,
     WeaponLevel = 20
   },
   [2020509] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020509,
     WeaponId = 20509,
     WeaponLevel = 20
   },
   [2020510] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020510,
     WeaponId = 20510,
     WeaponLevel = 20
   },
   [2020601] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020601,
     WeaponId = 20601,
     WeaponLevel = 20
   },
   [2020602] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020602,
     WeaponId = 20602,
     WeaponLevel = 20
   },
   [2020603] = {
-    ModId = T.RT_13,
-    ModLevel = T.RT_12,
+    ModId = T.RT_16,
+    ModLevel = T.RT_15,
     RuleId = 2020603,
     WeaponId = 20603,
     WeaponLevel = 20
   },
   [4010101] = {
-    ModId = T.RT_14,
-    ModLevel = T.RT_12,
+    ModId = T.RT_19,
+    ModLevel = T.RT_15,
     RuleId = 4010101,
     WeaponId = 10101,
     WeaponLevel = 40
   },
   [4010102] = {
-    ModId = T.RT_15,
-    ModLevel = T.RT_12,
+    ModId = T.RT_20,
+    ModLevel = T.RT_15,
     RuleId = 4010102,
     WeaponId = 10102,
     WeaponLevel = 40
   },
   [4010103] = {
-    ModId = T.RT_15,
-    ModLevel = T.RT_12,
+    ModId = T.RT_20,
+    ModLevel = T.RT_15,
     RuleId = 4010103,
     WeaponId = 10103,
     WeaponLevel = 40
   },
   [4010104] = {
-    ModId = T.RT_16,
-    ModLevel = T.RT_12,
+    ModId = T.RT_21,
+    ModLevel = T.RT_15,
     RuleId = 4010104,
     WeaponId = 10104,
     WeaponLevel = 40
   },
   [4010105] = {
-    ModId = T.RT_15,
-    ModLevel = T.RT_12,
+    ModId = T.RT_20,
+    ModLevel = T.RT_15,
     RuleId = 4010105,
     WeaponId = 10105,
     WeaponLevel = 40
   },
   [4010201] = {
-    ModId = T.RT_15,
-    ModLevel = T.RT_12,
+    ModId = T.RT_20,
+    ModLevel = T.RT_15,
     RuleId = 4010201,
     WeaponId = 10201,
     WeaponLevel = 40
   },
   [4010202] = {
-    ModId = T.RT_16,
-    ModLevel = T.RT_12,
+    ModId = T.RT_21,
+    ModLevel = T.RT_15,
     RuleId = 4010202,
     WeaponId = 10202,
     WeaponLevel = 40
   },
   [4010203] = {
-    ModId = T.RT_14,
-    ModLevel = T.RT_12,
+    ModId = T.RT_19,
+    ModLevel = T.RT_15,
     RuleId = 4010203,
     WeaponId = 10203,
     WeaponLevel = 40
   },
   [4010204] = {
-    ModId = T.RT_16,
-    ModLevel = T.RT_12,
+    ModId = T.RT_21,
+    ModLevel = T.RT_15,
     RuleId = 4010204,
     WeaponId = 10204,
     WeaponLevel = 40
   },
   [4010206] = {
-    ModId = T.RT_16,
-    ModLevel = T.RT_12,
+    ModId = T.RT_21,
+    ModLevel = T.RT_15,
     RuleId = 4010206,
     WeaponId = 10206,
     WeaponLevel = 40
   },
   [4010301] = {
-    ModId = T.RT_14,
-    ModLevel = T.RT_12,
+    ModId = T.RT_19,
+    ModLevel = T.RT_15,
     RuleId = 4010301,
     WeaponId = 10301,
     WeaponLevel = 40
   },
   [4010302] = {
-    ModId = T.RT_16,
-    ModLevel = T.RT_12,
+    ModId = T.RT_21,
+    ModLevel = T.RT_15,
     RuleId = 4010302,
     WeaponId = 10302,
     WeaponLevel = 40
   },
   [4010303] = {
-    ModId = T.RT_14,
-    ModLevel = T.RT_12,
+    ModId = T.RT_19,
+    ModLevel = T.RT_15,
     RuleId = 4010303,
     WeaponId = 10303,
     WeaponLevel = 40
   },
   [4010304] = {
-    ModId = T.RT_16,
-    ModLevel = T.RT_12,
+    ModId = T.RT_21,
+    ModLevel = T.RT_15,
     RuleId = 4010304,
     WeaponId = 10304,
     WeaponLevel = 40
   },
   [4010401] = {
-    ModId = T.RT_16,
-    ModLevel = T.RT_12,
+    ModId = T.RT_21,
+    ModLevel = T.RT_15,
     RuleId = 4010401,
     WeaponId = 10401,
     WeaponLevel = 40
   },
   [4010402] = {
-    ModId = T.RT_14,
-    ModLevel = T.RT_12,
+    ModId = T.RT_19,
+    ModLevel = T.RT_15,
     RuleId = 4010402,
     WeaponId = 10402,
     WeaponLevel = 40
   },
   [4010403] = {
-    ModId = T.RT_15,
-    ModLevel = T.RT_12,
+    ModId = T.RT_20,
+    ModLevel = T.RT_15,
     RuleId = 4010403,
     WeaponId = 10403,
     WeaponLevel = 40
   },
   [4010501] = {
-    ModId = T.RT_15,
-    ModLevel = T.RT_12,
+    ModId = T.RT_20,
+    ModLevel = T.RT_15,
     RuleId = 4010501,
     WeaponId = 10501,
     WeaponLevel = 40
   },
   [4010502] = {
-    ModId = T.RT_16,
-    ModLevel = T.RT_12,
+    ModId = T.RT_21,
+    ModLevel = T.RT_15,
     RuleId = 4010502,
     WeaponId = 10502,
     WeaponLevel = 40
   },
   [4010503] = {
-    ModId = T.RT_14,
-    ModLevel = T.RT_12,
+    ModId = T.RT_19,
+    ModLevel = T.RT_15,
     RuleId = 4010503,
     WeaponId = 10503,
     WeaponLevel = 40
   },
   [4010504] = {
-    ModId = T.RT_15,
-    ModLevel = T.RT_12,
+    ModId = T.RT_20,
+    ModLevel = T.RT_15,
     RuleId = 4010504,
     WeaponId = 10504,
     WeaponLevel = 40
   },
   [4010601] = {
-    ModId = T.RT_16,
-    ModLevel = T.RT_12,
+    ModId = T.RT_21,
+    ModLevel = T.RT_15,
     RuleId = 4010601,
     WeaponId = 10601,
     WeaponLevel = 40
   },
   [4010602] = {
-    ModId = T.RT_14,
-    ModLevel = T.RT_12,
+    ModId = T.RT_19,
+    ModLevel = T.RT_15,
     RuleId = 4010602,
     WeaponId = 10602,
     WeaponLevel = 40
   },
   [4010603] = {
-    ModId = T.RT_15,
-    ModLevel = T.RT_12,
+    ModId = T.RT_20,
+    ModLevel = T.RT_15,
     RuleId = 4010603,
     WeaponId = 10603,
     WeaponLevel = 40
   },
   [4020101] = {
-    ModId = T.RT_17,
-    ModLevel = T.RT_12,
+    ModId = T.RT_22,
+    ModLevel = T.RT_15,
     RuleId = 4020101,
     WeaponId = 20101,
     WeaponLevel = 40
   },
   [4020102] = {
-    ModId = T.RT_18,
-    ModLevel = T.RT_12,
+    ModId = T.RT_23,
+    ModLevel = T.RT_15,
     RuleId = 4020102,
     WeaponId = 20102,
     WeaponLevel = 40
   },
   [4020103] = {
-    ModId = T.RT_19,
-    ModLevel = T.RT_12,
+    ModId = T.RT_24,
+    ModLevel = T.RT_15,
     RuleId = 4020103,
     WeaponId = 20103,
     WeaponLevel = 40
   },
   [4020201] = {
-    ModId = T.RT_19,
-    ModLevel = T.RT_12,
+    ModId = T.RT_24,
+    ModLevel = T.RT_15,
     RuleId = 4020201,
     WeaponId = 20201,
     WeaponLevel = 40
   },
   [4020203] = {
-    ModId = T.RT_19,
-    ModLevel = T.RT_12,
+    ModId = T.RT_24,
+    ModLevel = T.RT_15,
     RuleId = 4020203,
     WeaponId = 20203,
     WeaponLevel = 40
   },
   [4020205] = {
-    ModId = T.RT_17,
-    ModLevel = T.RT_12,
+    ModId = T.RT_22,
+    ModLevel = T.RT_15,
     RuleId = 4020205,
     WeaponId = 20205,
     WeaponLevel = 40
   },
   [4020301] = {
-    ModId = T.RT_18,
-    ModLevel = T.RT_12,
+    ModId = T.RT_23,
+    ModLevel = T.RT_15,
     RuleId = 4020301,
     WeaponId = 20301,
     WeaponLevel = 40
   },
   [4020302] = {
-    ModId = T.RT_17,
-    ModLevel = T.RT_12,
+    ModId = T.RT_22,
+    ModLevel = T.RT_15,
     RuleId = 4020302,
     WeaponId = 20302,
     WeaponLevel = 40
   },
   [4020303] = {
-    ModId = T.RT_18,
-    ModLevel = T.RT_12,
+    ModId = T.RT_23,
+    ModLevel = T.RT_15,
     RuleId = 4020303,
     WeaponId = 20303,
     WeaponLevel = 40
   },
   [4020304] = {
-    ModId = T.RT_17,
-    ModLevel = T.RT_12,
+    ModId = T.RT_22,
+    ModLevel = T.RT_15,
     RuleId = 4020304,
     WeaponId = 20304,
     WeaponLevel = 40
   },
   [4020305] = {
-    ModId = T.RT_19,
-    ModLevel = T.RT_12,
+    ModId = T.RT_24,
+    ModLevel = T.RT_15,
     RuleId = 4020305,
     WeaponId = 20305,
     WeaponLevel = 40
   },
   [4020401] = {
-    ModId = T.RT_18,
-    ModLevel = T.RT_12,
+    ModId = T.RT_23,
+    ModLevel = T.RT_15,
     RuleId = 4020401,
     WeaponId = 20401,
     WeaponLevel = 40
   },
   [4020402] = {
-    ModId = T.RT_18,
-    ModLevel = T.RT_12,
+    ModId = T.RT_23,
+    ModLevel = T.RT_15,
     RuleId = 4020402,
     WeaponId = 20402,
     WeaponLevel = 40
   },
   [4020403] = {
-    ModId = T.RT_17,
-    ModLevel = T.RT_12,
+    ModId = T.RT_22,
+    ModLevel = T.RT_15,
     RuleId = 4020403,
     WeaponId = 20403,
     WeaponLevel = 40
   },
   [4020405] = {
-    ModId = T.RT_18,
-    ModLevel = T.RT_12,
+    ModId = T.RT_23,
+    ModLevel = T.RT_15,
     RuleId = 4020405,
     WeaponId = 20405,
     WeaponLevel = 40
   },
   [4020501] = {
-    ModId = T.RT_17,
-    ModLevel = T.RT_12,
+    ModId = T.RT_22,
+    ModLevel = T.RT_15,
     RuleId = 4020501,
     WeaponId = 20501,
     WeaponLevel = 40
   },
   [4020502] = {
-    ModId = T.RT_19,
-    ModLevel = T.RT_12,
+    ModId = T.RT_24,
+    ModLevel = T.RT_15,
     RuleId = 4020502,
     WeaponId = 20502,
     WeaponLevel = 40
   },
   [4020503] = {
-    ModId = T.RT_17,
-    ModLevel = T.RT_12,
+    ModId = T.RT_22,
+    ModLevel = T.RT_15,
     RuleId = 4020503,
     WeaponId = 20503,
     WeaponLevel = 40
   },
   [4020504] = {
-    ModId = T.RT_19,
-    ModLevel = T.RT_12,
+    ModId = T.RT_24,
+    ModLevel = T.RT_15,
     RuleId = 4020504,
     WeaponId = 20504,
     WeaponLevel = 40
   },
   [4020507] = {
-    ModId = T.RT_17,
-    ModLevel = T.RT_12,
+    ModId = T.RT_22,
+    ModLevel = T.RT_15,
     RuleId = 4020507,
     WeaponId = 20507,
     WeaponLevel = 40
   },
   [4020509] = {
-    ModId = T.RT_17,
-    ModLevel = T.RT_12,
+    ModId = T.RT_22,
+    ModLevel = T.RT_15,
     RuleId = 4020509,
     WeaponId = 20509,
     WeaponLevel = 40
   },
   [4020510] = {
-    ModId = T.RT_17,
-    ModLevel = T.RT_12,
+    ModId = T.RT_22,
+    ModLevel = T.RT_15,
     RuleId = 4020510,
     WeaponId = 20510,
     WeaponLevel = 40
   },
   [4020601] = {
-    ModId = T.RT_19,
-    ModLevel = T.RT_12,
+    ModId = T.RT_24,
+    ModLevel = T.RT_15,
     RuleId = 4020601,
     WeaponId = 20601,
     WeaponLevel = 40
   },
   [4020602] = {
-    ModId = T.RT_18,
-    ModLevel = T.RT_12,
+    ModId = T.RT_23,
+    ModLevel = T.RT_15,
     RuleId = 4020602,
     WeaponId = 20602,
     WeaponLevel = 40
   },
   [4020603] = {
-    ModId = T.RT_17,
-    ModLevel = T.RT_12,
+    ModId = T.RT_22,
+    ModLevel = T.RT_15,
     RuleId = 4020603,
     WeaponId = 20603,
     WeaponLevel = 40
   },
   [5010101] = {
-    ModId = T.RT_20,
-    ModLevel = T.RT_21,
+    ModId = T.RT_25,
+    ModLevel = T.RT_26,
     RuleId = 5010101,
     WeaponId = 10101,
     WeaponLevel = 50
   },
   [5010102] = {
-    ModId = T.RT_22,
-    ModLevel = T.RT_21,
+    ModId = T.RT_27,
+    ModLevel = T.RT_26,
     RuleId = 5010102,
     WeaponId = 10102,
     WeaponLevel = 50
   },
   [5010103] = {
-    ModId = T.RT_22,
-    ModLevel = T.RT_21,
+    ModId = T.RT_27,
+    ModLevel = T.RT_26,
     RuleId = 5010103,
     WeaponId = 10103,
     WeaponLevel = 50
   },
   [5010104] = {
-    ModId = T.RT_23,
-    ModLevel = T.RT_21,
+    ModId = T.RT_28,
+    ModLevel = T.RT_26,
     RuleId = 5010104,
     WeaponId = 10104,
     WeaponLevel = 50
   },
   [5010105] = {
-    ModId = T.RT_22,
-    ModLevel = T.RT_21,
+    ModId = T.RT_27,
+    ModLevel = T.RT_26,
     RuleId = 5010105,
     WeaponId = 10105,
     WeaponLevel = 50
   },
   [5010201] = {
-    ModId = T.RT_22,
-    ModLevel = T.RT_21,
+    ModId = T.RT_27,
+    ModLevel = T.RT_26,
     RuleId = 5010201,
     WeaponId = 10201,
     WeaponLevel = 50
   },
   [5010202] = {
-    ModId = T.RT_23,
-    ModLevel = T.RT_21,
+    ModId = T.RT_28,
+    ModLevel = T.RT_26,
     RuleId = 5010202,
     WeaponId = 10202,
     WeaponLevel = 50
   },
   [5010203] = {
-    ModId = T.RT_20,
-    ModLevel = T.RT_21,
+    ModId = T.RT_25,
+    ModLevel = T.RT_26,
     RuleId = 5010203,
     WeaponId = 10203,
     WeaponLevel = 50
   },
   [5010204] = {
-    ModId = T.RT_23,
-    ModLevel = T.RT_21,
+    ModId = T.RT_28,
+    ModLevel = T.RT_26,
     RuleId = 5010204,
     WeaponId = 10204,
     WeaponLevel = 50
   },
   [5010206] = {
-    ModId = T.RT_23,
-    ModLevel = T.RT_21,
+    ModId = T.RT_28,
+    ModLevel = T.RT_26,
     RuleId = 5010206,
     WeaponId = 10206,
     WeaponLevel = 50
   },
   [5010301] = {
-    ModId = T.RT_20,
-    ModLevel = T.RT_21,
+    ModId = T.RT_25,
+    ModLevel = T.RT_26,
     RuleId = 5010301,
     WeaponId = 10301,
     WeaponLevel = 50
   },
   [5010302] = {
-    ModId = T.RT_23,
-    ModLevel = T.RT_21,
+    ModId = T.RT_28,
+    ModLevel = T.RT_26,
     RuleId = 5010302,
     WeaponId = 10302,
     WeaponLevel = 50
   },
   [5010303] = {
-    ModId = T.RT_20,
-    ModLevel = T.RT_21,
+    ModId = T.RT_25,
+    ModLevel = T.RT_26,
     RuleId = 5010303,
     WeaponId = 10303,
     WeaponLevel = 50
   },
   [5010304] = {
-    ModId = T.RT_23,
-    ModLevel = T.RT_21,
+    ModId = T.RT_28,
+    ModLevel = T.RT_26,
     RuleId = 5010304,
     WeaponId = 10304,
     WeaponLevel = 50
   },
   [5010401] = {
-    ModId = T.RT_23,
-    ModLevel = T.RT_21,
+    ModId = T.RT_28,
+    ModLevel = T.RT_26,
     RuleId = 5010401,
     WeaponId = 10401,
     WeaponLevel = 50
   },
   [5010402] = {
-    ModId = T.RT_20,
-    ModLevel = T.RT_21,
+    ModId = T.RT_25,
+    ModLevel = T.RT_26,
     RuleId = 5010402,
     WeaponId = 10402,
     WeaponLevel = 50
   },
   [5010403] = {
-    ModId = T.RT_22,
-    ModLevel = T.RT_21,
+    ModId = T.RT_27,
+    ModLevel = T.RT_26,
     RuleId = 5010403,
     WeaponId = 10403,
     WeaponLevel = 50
   },
   [5010501] = {
-    ModId = T.RT_22,
-    ModLevel = T.RT_21,
+    ModId = T.RT_27,
+    ModLevel = T.RT_26,
     RuleId = 5010501,
     WeaponId = 10501,
     WeaponLevel = 50
   },
   [5010502] = {
-    ModId = T.RT_23,
-    ModLevel = T.RT_21,
+    ModId = T.RT_28,
+    ModLevel = T.RT_26,
     RuleId = 5010502,
     WeaponId = 10502,
     WeaponLevel = 50
   },
   [5010503] = {
-    ModId = T.RT_20,
-    ModLevel = T.RT_21,
+    ModId = T.RT_25,
+    ModLevel = T.RT_26,
     RuleId = 5010503,
     WeaponId = 10503,
     WeaponLevel = 50
   },
   [5010504] = {
-    ModId = T.RT_22,
-    ModLevel = T.RT_21,
+    ModId = T.RT_27,
+    ModLevel = T.RT_26,
     RuleId = 5010504,
     WeaponId = 10504,
     WeaponLevel = 50
   },
   [5010601] = {
-    ModId = T.RT_23,
-    ModLevel = T.RT_21,
+    ModId = T.RT_28,
+    ModLevel = T.RT_26,
     RuleId = 5010601,
     WeaponId = 10601,
     WeaponLevel = 50
   },
   [5010602] = {
-    ModId = T.RT_20,
-    ModLevel = T.RT_21,
+    ModId = T.RT_25,
+    ModLevel = T.RT_26,
     RuleId = 5010602,
     WeaponId = 10602,
     WeaponLevel = 50
   },
   [5010603] = {
-    ModId = T.RT_22,
-    ModLevel = T.RT_21,
+    ModId = T.RT_27,
+    ModLevel = T.RT_26,
     RuleId = 5010603,
     WeaponId = 10603,
     WeaponLevel = 50
   },
   [5020101] = {
-    ModId = T.RT_24,
-    ModLevel = T.RT_21,
+    ModId = T.RT_29,
+    ModLevel = T.RT_26,
     RuleId = 5020101,
     WeaponId = 20101,
     WeaponLevel = 50
   },
   [5020102] = {
-    ModId = T.RT_25,
-    ModLevel = T.RT_21,
+    ModId = T.RT_30,
+    ModLevel = T.RT_26,
     RuleId = 5020102,
     WeaponId = 20102,
     WeaponLevel = 50
   },
   [5020103] = {
-    ModId = T.RT_26,
-    ModLevel = T.RT_21,
+    ModId = T.RT_31,
+    ModLevel = T.RT_26,
     RuleId = 5020103,
     WeaponId = 20103,
     WeaponLevel = 50
   },
   [5020201] = {
-    ModId = T.RT_26,
-    ModLevel = T.RT_21,
+    ModId = T.RT_31,
+    ModLevel = T.RT_26,
     RuleId = 5020201,
     WeaponId = 20201,
     WeaponLevel = 50
   },
   [5020203] = {
-    ModId = T.RT_26,
-    ModLevel = T.RT_21,
+    ModId = T.RT_31,
+    ModLevel = T.RT_26,
     RuleId = 5020203,
     WeaponId = 20203,
     WeaponLevel = 50
   },
   [5020205] = {
-    ModId = T.RT_24,
-    ModLevel = T.RT_21,
+    ModId = T.RT_29,
+    ModLevel = T.RT_26,
     RuleId = 5020205,
     WeaponId = 20205,
     WeaponLevel = 50
   },
   [5020301] = {
-    ModId = T.RT_25,
-    ModLevel = T.RT_21,
+    ModId = T.RT_30,
+    ModLevel = T.RT_26,
     RuleId = 5020301,
     WeaponId = 20301,
     WeaponLevel = 50
   },
   [5020302] = {
-    ModId = T.RT_24,
-    ModLevel = T.RT_21,
+    ModId = T.RT_29,
+    ModLevel = T.RT_26,
     RuleId = 5020302,
     WeaponId = 20302,
     WeaponLevel = 50
   },
   [5020303] = {
-    ModId = T.RT_25,
-    ModLevel = T.RT_21,
+    ModId = T.RT_30,
+    ModLevel = T.RT_26,
     RuleId = 5020303,
     WeaponId = 20303,
     WeaponLevel = 50
   },
   [5020304] = {
-    ModId = T.RT_24,
-    ModLevel = T.RT_21,
+    ModId = T.RT_29,
+    ModLevel = T.RT_26,
     RuleId = 5020304,
     WeaponId = 20304,
     WeaponLevel = 50
   },
   [5020305] = {
-    ModId = T.RT_26,
-    ModLevel = T.RT_21,
+    ModId = T.RT_31,
+    ModLevel = T.RT_26,
     RuleId = 5020305,
     WeaponId = 20305,
     WeaponLevel = 50
   },
   [5020401] = {
-    ModId = T.RT_25,
-    ModLevel = T.RT_21,
+    ModId = T.RT_30,
+    ModLevel = T.RT_26,
     RuleId = 5020401,
     WeaponId = 20401,
     WeaponLevel = 50
   },
   [5020402] = {
-    ModId = T.RT_25,
-    ModLevel = T.RT_21,
+    ModId = T.RT_30,
+    ModLevel = T.RT_26,
     RuleId = 5020402,
     WeaponId = 20402,
     WeaponLevel = 50
   },
   [5020403] = {
-    ModId = T.RT_24,
-    ModLevel = T.RT_21,
+    ModId = T.RT_29,
+    ModLevel = T.RT_26,
     RuleId = 5020403,
     WeaponId = 20403,
     WeaponLevel = 50
   },
   [5020405] = {
-    ModId = T.RT_25,
-    ModLevel = T.RT_21,
+    ModId = T.RT_30,
+    ModLevel = T.RT_26,
     RuleId = 5020405,
     WeaponId = 20405,
     WeaponLevel = 50
   },
   [5020501] = {
-    ModId = T.RT_24,
-    ModLevel = T.RT_21,
+    ModId = T.RT_29,
+    ModLevel = T.RT_26,
     RuleId = 5020501,
     WeaponId = 20501,
     WeaponLevel = 50
   },
   [5020502] = {
-    ModId = T.RT_26,
-    ModLevel = T.RT_21,
+    ModId = T.RT_31,
+    ModLevel = T.RT_26,
     RuleId = 5020502,
     WeaponId = 20502,
     WeaponLevel = 50
   },
   [5020503] = {
-    ModId = T.RT_24,
-    ModLevel = T.RT_21,
+    ModId = T.RT_29,
+    ModLevel = T.RT_26,
     RuleId = 5020503,
     WeaponId = 20503,
     WeaponLevel = 50
   },
   [5020504] = {
-    ModId = T.RT_26,
-    ModLevel = T.RT_21,
+    ModId = T.RT_31,
+    ModLevel = T.RT_26,
     RuleId = 5020504,
     WeaponId = 20504,
     WeaponLevel = 50
   },
   [5020507] = {
-    ModId = T.RT_24,
-    ModLevel = T.RT_21,
+    ModId = T.RT_29,
+    ModLevel = T.RT_26,
     RuleId = 5020507,
     WeaponId = 20507,
     WeaponLevel = 50
   },
   [5020509] = {
-    ModId = T.RT_24,
-    ModLevel = T.RT_21,
+    ModId = T.RT_29,
+    ModLevel = T.RT_26,
     RuleId = 5020509,
     WeaponId = 20509,
     WeaponLevel = 50
   },
   [5020510] = {
-    ModId = T.RT_24,
-    ModLevel = T.RT_21,
+    ModId = T.RT_29,
+    ModLevel = T.RT_26,
     RuleId = 5020510,
     WeaponId = 20510,
     WeaponLevel = 50
   },
   [5020601] = {
-    ModId = T.RT_26,
-    ModLevel = T.RT_21,
+    ModId = T.RT_31,
+    ModLevel = T.RT_26,
     RuleId = 5020601,
     WeaponId = 20601,
     WeaponLevel = 50
   },
   [5020602] = {
-    ModId = T.RT_25,
-    ModLevel = T.RT_21,
+    ModId = T.RT_30,
+    ModLevel = T.RT_26,
     RuleId = 5020602,
     WeaponId = 20602,
     WeaponLevel = 50
   },
   [5020603] = {
-    ModId = T.RT_24,
-    ModLevel = T.RT_21,
+    ModId = T.RT_29,
+    ModLevel = T.RT_26,
     RuleId = 5020603,
     WeaponId = 20603,
     WeaponLevel = 50
   },
   [6010101] = {
-    ModId = T.RT_27,
-    ModLevel = T.RT_28,
+    ModId = T.RT_32,
+    ModLevel = T.RT_10,
     RuleId = 6010101,
     WeaponId = 10101,
     WeaponLevel = 60
   },
   [6010102] = {
-    ModId = T.RT_29,
-    ModLevel = T.RT_28,
+    ModId = T.RT_9,
+    ModLevel = T.RT_10,
     RuleId = 6010102,
     WeaponId = 10102,
     WeaponLevel = 60
   },
   [6010103] = {
-    ModId = T.RT_29,
-    ModLevel = T.RT_28,
+    ModId = T.RT_9,
+    ModLevel = T.RT_10,
     RuleId = 6010103,
     WeaponId = 10103,
     WeaponLevel = 60
   },
   [6010104] = {
-    ModId = T.RT_30,
-    ModLevel = T.RT_28,
+    ModId = T.RT_11,
+    ModLevel = T.RT_10,
     RuleId = 6010104,
     WeaponId = 10104,
     WeaponLevel = 60
   },
   [6010105] = {
-    ModId = T.RT_29,
-    ModLevel = T.RT_28,
+    ModId = T.RT_9,
+    ModLevel = T.RT_10,
     RuleId = 6010105,
     WeaponId = 10105,
     WeaponLevel = 60
   },
   [6010201] = {
-    ModId = T.RT_29,
-    ModLevel = T.RT_28,
+    ModId = T.RT_9,
+    ModLevel = T.RT_10,
     RuleId = 6010201,
     WeaponId = 10201,
     WeaponLevel = 60
   },
   [6010202] = {
-    ModId = T.RT_30,
-    ModLevel = T.RT_28,
+    ModId = T.RT_11,
+    ModLevel = T.RT_10,
     RuleId = 6010202,
     WeaponId = 10202,
     WeaponLevel = 60
   },
   [6010203] = {
-    ModId = T.RT_27,
-    ModLevel = T.RT_28,
+    ModId = T.RT_32,
+    ModLevel = T.RT_10,
     RuleId = 6010203,
     WeaponId = 10203,
     WeaponLevel = 60
   },
   [6010204] = {
-    ModId = T.RT_30,
-    ModLevel = T.RT_28,
+    ModId = T.RT_11,
+    ModLevel = T.RT_10,
     RuleId = 6010204,
     WeaponId = 10204,
     WeaponLevel = 60
   },
   [6010206] = {
-    ModId = T.RT_30,
-    ModLevel = T.RT_28,
+    ModId = T.RT_11,
+    ModLevel = T.RT_10,
     RuleId = 6010206,
     WeaponId = 10206,
     WeaponLevel = 60
   },
   [6010301] = {
-    ModId = T.RT_27,
-    ModLevel = T.RT_28,
+    ModId = T.RT_32,
+    ModLevel = T.RT_10,
     RuleId = 6010301,
     WeaponId = 10301,
     WeaponLevel = 60
   },
   [6010302] = {
-    ModId = T.RT_30,
-    ModLevel = T.RT_28,
+    ModId = T.RT_11,
+    ModLevel = T.RT_10,
     RuleId = 6010302,
     WeaponId = 10302,
     WeaponLevel = 60
   },
   [6010303] = {
-    ModId = T.RT_27,
-    ModLevel = T.RT_28,
+    ModId = T.RT_32,
+    ModLevel = T.RT_10,
     RuleId = 6010303,
     WeaponId = 10303,
     WeaponLevel = 60
   },
   [6010304] = {
-    ModId = T.RT_30,
-    ModLevel = T.RT_28,
+    ModId = T.RT_11,
+    ModLevel = T.RT_10,
     RuleId = 6010304,
     WeaponId = 10304,
     WeaponLevel = 60
   },
   [6010401] = {
-    ModId = T.RT_30,
-    ModLevel = T.RT_28,
+    ModId = T.RT_11,
+    ModLevel = T.RT_10,
     RuleId = 6010401,
     WeaponId = 10401,
     WeaponLevel = 60
   },
   [6010402] = {
-    ModId = T.RT_27,
-    ModLevel = T.RT_28,
+    ModId = T.RT_32,
+    ModLevel = T.RT_10,
     RuleId = 6010402,
     WeaponId = 10402,
     WeaponLevel = 60
   },
   [6010403] = {
-    ModId = T.RT_29,
-    ModLevel = T.RT_28,
+    ModId = T.RT_9,
+    ModLevel = T.RT_10,
     RuleId = 6010403,
     WeaponId = 10403,
     WeaponLevel = 60
   },
   [6010501] = {
-    ModId = T.RT_29,
-    ModLevel = T.RT_28,
+    ModId = T.RT_9,
+    ModLevel = T.RT_10,
     RuleId = 6010501,
     WeaponId = 10501,
     WeaponLevel = 60
   },
   [6010502] = {
-    ModId = T.RT_30,
-    ModLevel = T.RT_28,
+    ModId = T.RT_11,
+    ModLevel = T.RT_10,
     RuleId = 6010502,
     WeaponId = 10502,
     WeaponLevel = 60
   },
   [6010503] = {
-    ModId = T.RT_27,
-    ModLevel = T.RT_28,
+    ModId = T.RT_32,
+    ModLevel = T.RT_10,
     RuleId = 6010503,
     WeaponId = 10503,
     WeaponLevel = 60
   },
   [6010504] = {
-    ModId = T.RT_29,
-    ModLevel = T.RT_28,
+    ModId = T.RT_9,
+    ModLevel = T.RT_10,
     RuleId = 6010504,
     WeaponId = 10504,
     WeaponLevel = 60
   },
   [6010601] = {
-    ModId = T.RT_30,
-    ModLevel = T.RT_28,
+    ModId = T.RT_11,
+    ModLevel = T.RT_10,
     RuleId = 6010601,
     WeaponId = 10601,
     WeaponLevel = 60
   },
   [6010602] = {
-    ModId = T.RT_27,
-    ModLevel = T.RT_28,
+    ModId = T.RT_32,
+    ModLevel = T.RT_10,
     RuleId = 6010602,
     WeaponId = 10602,
     WeaponLevel = 60
   },
   [6010603] = {
-    ModId = T.RT_29,
-    ModLevel = T.RT_28,
+    ModId = T.RT_9,
+    ModLevel = T.RT_10,
     RuleId = 6010603,
     WeaponId = 10603,
     WeaponLevel = 60
   },
   [6020101] = {
-    ModId = T.RT_31,
-    ModLevel = T.RT_28,
+    ModId = T.RT_17,
+    ModLevel = T.RT_10,
     RuleId = 6020101,
     WeaponId = 20101,
     WeaponLevel = 60
   },
   [6020102] = {
-    ModId = T.RT_32,
-    ModLevel = T.RT_28,
+    ModId = T.RT_33,
+    ModLevel = T.RT_10,
     RuleId = 6020102,
     WeaponId = 20102,
     WeaponLevel = 60
   },
   [6020103] = {
-    ModId = T.RT_33,
-    ModLevel = T.RT_28,
+    ModId = T.RT_18,
+    ModLevel = T.RT_10,
     RuleId = 6020103,
     WeaponId = 20103,
     WeaponLevel = 60
   },
   [6020201] = {
-    ModId = T.RT_33,
-    ModLevel = T.RT_28,
+    ModId = T.RT_18,
+    ModLevel = T.RT_10,
     RuleId = 6020201,
     WeaponId = 20201,
     WeaponLevel = 60
   },
   [6020203] = {
-    ModId = T.RT_33,
-    ModLevel = T.RT_28,
+    ModId = T.RT_18,
+    ModLevel = T.RT_10,
     RuleId = 6020203,
     WeaponId = 20203,
     WeaponLevel = 60
   },
   [6020205] = {
-    ModId = T.RT_31,
-    ModLevel = T.RT_28,
+    ModId = T.RT_17,
+    ModLevel = T.RT_10,
     RuleId = 6020205,
     WeaponId = 20205,
     WeaponLevel = 60
   },
   [6020301] = {
-    ModId = T.RT_32,
-    ModLevel = T.RT_28,
+    ModId = T.RT_33,
+    ModLevel = T.RT_10,
     RuleId = 6020301,
     WeaponId = 20301,
     WeaponLevel = 60
   },
   [6020302] = {
-    ModId = T.RT_31,
-    ModLevel = T.RT_28,
+    ModId = T.RT_17,
+    ModLevel = T.RT_10,
     RuleId = 6020302,
     WeaponId = 20302,
     WeaponLevel = 60
   },
   [6020303] = {
-    ModId = T.RT_32,
-    ModLevel = T.RT_28,
+    ModId = T.RT_33,
+    ModLevel = T.RT_10,
     RuleId = 6020303,
     WeaponId = 20303,
     WeaponLevel = 60
   },
   [6020304] = {
-    ModId = T.RT_31,
-    ModLevel = T.RT_28,
+    ModId = T.RT_17,
+    ModLevel = T.RT_10,
     RuleId = 6020304,
     WeaponId = 20304,
     WeaponLevel = 60
   },
   [6020305] = {
-    ModId = T.RT_33,
-    ModLevel = T.RT_28,
+    ModId = T.RT_18,
+    ModLevel = T.RT_10,
     RuleId = 6020305,
     WeaponId = 20305,
     WeaponLevel = 60
   },
   [6020401] = {
-    ModId = T.RT_32,
-    ModLevel = T.RT_28,
+    ModId = T.RT_33,
+    ModLevel = T.RT_10,
     RuleId = 6020401,
     WeaponId = 20401,
     WeaponLevel = 60
   },
   [6020402] = {
-    ModId = T.RT_32,
-    ModLevel = T.RT_28,
+    ModId = T.RT_33,
+    ModLevel = T.RT_10,
     RuleId = 6020402,
     WeaponId = 20402,
     WeaponLevel = 60
   },
   [6020403] = {
-    ModId = T.RT_31,
-    ModLevel = T.RT_28,
+    ModId = T.RT_17,
+    ModLevel = T.RT_10,
     RuleId = 6020403,
     WeaponId = 20403,
     WeaponLevel = 60
   },
   [6020405] = {
-    ModId = T.RT_32,
-    ModLevel = T.RT_28,
+    ModId = T.RT_33,
+    ModLevel = T.RT_10,
     RuleId = 6020405,
     WeaponId = 20405,
     WeaponLevel = 60
   },
   [6020501] = {
-    ModId = T.RT_31,
-    ModLevel = T.RT_28,
+    ModId = T.RT_17,
+    ModLevel = T.RT_10,
     RuleId = 6020501,
     WeaponId = 20501,
     WeaponLevel = 60
   },
   [6020502] = {
-    ModId = T.RT_33,
-    ModLevel = T.RT_28,
+    ModId = T.RT_18,
+    ModLevel = T.RT_10,
     RuleId = 6020502,
     WeaponId = 20502,
     WeaponLevel = 60
   },
   [6020503] = {
-    ModId = T.RT_31,
-    ModLevel = T.RT_28,
+    ModId = T.RT_17,
+    ModLevel = T.RT_10,
     RuleId = 6020503,
     WeaponId = 20503,
     WeaponLevel = 60
   },
   [6020504] = {
-    ModId = T.RT_33,
-    ModLevel = T.RT_28,
+    ModId = T.RT_18,
+    ModLevel = T.RT_10,
     RuleId = 6020504,
     WeaponId = 20504,
     WeaponLevel = 60
   },
   [6020507] = {
-    ModId = T.RT_31,
-    ModLevel = T.RT_28,
+    ModId = T.RT_17,
+    ModLevel = T.RT_10,
     RuleId = 6020507,
     WeaponId = 20507,
     WeaponLevel = 60
   },
   [6020509] = {
-    ModId = T.RT_31,
-    ModLevel = T.RT_28,
+    ModId = T.RT_17,
+    ModLevel = T.RT_10,
     RuleId = 6020509,
     WeaponId = 20509,
     WeaponLevel = 60
   },
   [6020510] = {
-    ModId = T.RT_31,
-    ModLevel = T.RT_28,
+    ModId = T.RT_17,
+    ModLevel = T.RT_10,
     RuleId = 6020510,
     WeaponId = 20510,
     WeaponLevel = 60
   },
   [6020601] = {
-    ModId = T.RT_33,
-    ModLevel = T.RT_28,
+    ModId = T.RT_18,
+    ModLevel = T.RT_10,
     RuleId = 6020601,
     WeaponId = 20601,
     WeaponLevel = 60
   },
   [6020602] = {
-    ModId = T.RT_32,
-    ModLevel = T.RT_28,
+    ModId = T.RT_33,
+    ModLevel = T.RT_10,
     RuleId = 6020602,
     WeaponId = 20602,
     WeaponLevel = 60
   },
   [6020603] = {
-    ModId = T.RT_31,
-    ModLevel = T.RT_28,
+    ModId = T.RT_17,
+    ModLevel = T.RT_10,
     RuleId = 6020603,
     WeaponId = 20603,
     WeaponLevel = 60
@@ -3220,6 +3255,13 @@ return ReadOnly("WeaponTemplate", {
     WeaponId = 10601,
     WeaponLevel = 50
   },
+  [10103001] = {
+    ModId = T.RT_9,
+    ModLevel = T.RT_10,
+    RuleId = 10103001,
+    WeaponId = 10103,
+    WeaponLevel = 60
+  },
   [10105001] = {
     RuleId = 10105001,
     WeaponId = 10105,
@@ -3230,688 +3272,695 @@ return ReadOnly("WeaponTemplate", {
     WeaponId = 10204,
     WeaponLevel = 30
   },
+  [10502001] = {
+    ModId = T.RT_11,
+    ModLevel = T.RT_10,
+    RuleId = 10502001,
+    WeaponId = 10502,
+    WeaponLevel = 60
+  },
   [11010101] = {
     ModId = T.RT_1,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010101,
     WeaponId = 10101,
     WeaponLevel = 80
   },
   [11010102] = {
     ModId = T.RT_3,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010102,
     WeaponId = 10102,
     WeaponLevel = 80
   },
   [11010103] = {
     ModId = T.RT_3,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010103,
     WeaponId = 10103,
     WeaponLevel = 80
   },
   [11010104] = {
     ModId = T.RT_4,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010104,
     WeaponId = 10104,
     WeaponLevel = 80
   },
   [11010105] = {
     ModId = T.RT_3,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010105,
     WeaponId = 10105,
     WeaponLevel = 80
   },
   [11010201] = {
     ModId = T.RT_3,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010201,
     WeaponId = 10201,
     WeaponLevel = 80
   },
   [11010202] = {
     ModId = T.RT_4,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010202,
     WeaponId = 10202,
     WeaponLevel = 80
   },
   [11010203] = {
     ModId = T.RT_1,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010203,
     WeaponId = 10203,
     WeaponLevel = 80
   },
   [11010204] = {
     ModId = T.RT_4,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010204,
     WeaponId = 10204,
     WeaponLevel = 80
   },
   [11010206] = {
     ModId = T.RT_4,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010206,
     WeaponId = 10206,
     WeaponLevel = 80
   },
   [11010301] = {
     ModId = T.RT_1,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010301,
     WeaponId = 10301,
     WeaponLevel = 80
   },
   [11010302] = {
     ModId = T.RT_4,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010302,
     WeaponId = 10302,
     WeaponLevel = 80
   },
   [11010303] = {
     ModId = T.RT_1,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010303,
     WeaponId = 10303,
     WeaponLevel = 80
   },
   [11010304] = {
     ModId = T.RT_4,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010304,
     WeaponId = 10304,
     WeaponLevel = 80
   },
   [11010401] = {
     ModId = T.RT_4,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010401,
     WeaponId = 10401,
     WeaponLevel = 80
   },
   [11010402] = {
     ModId = T.RT_1,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010402,
     WeaponId = 10402,
     WeaponLevel = 80
   },
   [11010403] = {
     ModId = T.RT_3,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010403,
     WeaponId = 10403,
     WeaponLevel = 80
   },
   [11010501] = {
     ModId = T.RT_3,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010501,
     WeaponId = 10501,
     WeaponLevel = 80
   },
   [11010502] = {
     ModId = T.RT_4,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010502,
     WeaponId = 10502,
     WeaponLevel = 80
   },
   [11010503] = {
     ModId = T.RT_1,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010503,
     WeaponId = 10503,
     WeaponLevel = 80
   },
   [11010504] = {
     ModId = T.RT_3,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010504,
     WeaponId = 10504,
     WeaponLevel = 80
   },
   [11010601] = {
     ModId = T.RT_4,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010601,
     WeaponId = 10601,
     WeaponLevel = 80
   },
   [11010602] = {
     ModId = T.RT_1,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010602,
     WeaponId = 10602,
     WeaponLevel = 80
   },
   [11010603] = {
     ModId = T.RT_3,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11010603,
     WeaponId = 10603,
     WeaponLevel = 80
   },
   [11020101] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020101,
     WeaponId = 20101,
     WeaponLevel = 80
   },
   [11020102] = {
     ModId = T.RT_6,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020102,
     WeaponId = 20102,
     WeaponLevel = 80
   },
   [11020103] = {
     ModId = T.RT_7,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020103,
     WeaponId = 20103,
     WeaponLevel = 80
   },
   [11020201] = {
     ModId = T.RT_7,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020201,
     WeaponId = 20201,
     WeaponLevel = 80
   },
   [11020203] = {
     ModId = T.RT_7,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020203,
     WeaponId = 20203,
     WeaponLevel = 80
   },
   [11020205] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020205,
     WeaponId = 20205,
     WeaponLevel = 80
   },
   [11020301] = {
     ModId = T.RT_6,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020301,
     WeaponId = 20301,
     WeaponLevel = 80
   },
   [11020302] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020302,
     WeaponId = 20302,
     WeaponLevel = 80
   },
   [11020303] = {
     ModId = T.RT_6,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020303,
     WeaponId = 20303,
     WeaponLevel = 80
   },
   [11020304] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020304,
     WeaponId = 20304,
     WeaponLevel = 80
   },
   [11020305] = {
     ModId = T.RT_7,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020305,
     WeaponId = 20305,
     WeaponLevel = 80
   },
   [11020401] = {
     ModId = T.RT_6,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020401,
     WeaponId = 20401,
     WeaponLevel = 80
   },
   [11020402] = {
     ModId = T.RT_6,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020402,
     WeaponId = 20402,
     WeaponLevel = 80
   },
   [11020403] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020403,
     WeaponId = 20403,
     WeaponLevel = 80
   },
   [11020405] = {
     ModId = T.RT_6,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020405,
     WeaponId = 20405,
     WeaponLevel = 80
   },
   [11020501] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020501,
     WeaponId = 20501,
     WeaponLevel = 80
   },
   [11020502] = {
     ModId = T.RT_7,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020502,
     WeaponId = 20502,
     WeaponLevel = 80
   },
   [11020503] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020503,
     WeaponId = 20503,
     WeaponLevel = 80
   },
   [11020504] = {
     ModId = T.RT_7,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020504,
     WeaponId = 20504,
     WeaponLevel = 80
   },
   [11020507] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020507,
     WeaponId = 20507,
     WeaponLevel = 80
   },
   [11020509] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020509,
     WeaponId = 20509,
     WeaponLevel = 80
   },
   [11020510] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020510,
     WeaponId = 20510,
     WeaponLevel = 80
   },
   [11020601] = {
     ModId = T.RT_7,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020601,
     WeaponId = 20601,
     WeaponLevel = 80
   },
   [11020602] = {
     ModId = T.RT_6,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020602,
     WeaponId = 20602,
     WeaponLevel = 80
   },
   [11020603] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_9,
+    ModLevel = T.RT_12,
     RuleId = 11020603,
     WeaponId = 20603,
     WeaponLevel = 80
   },
   [12010101] = {
     ModId = T.RT_1,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010101,
     WeaponId = 10101,
     WeaponLevel = 80
   },
   [12010102] = {
     ModId = T.RT_3,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010102,
     WeaponId = 10102,
     WeaponLevel = 80
   },
   [12010103] = {
     ModId = T.RT_3,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010103,
     WeaponId = 10103,
     WeaponLevel = 80
   },
   [12010104] = {
     ModId = T.RT_4,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010104,
     WeaponId = 10104,
     WeaponLevel = 80
   },
   [12010105] = {
     ModId = T.RT_3,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010105,
     WeaponId = 10105,
     WeaponLevel = 80
   },
   [12010201] = {
     ModId = T.RT_3,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010201,
     WeaponId = 10201,
     WeaponLevel = 80
   },
   [12010202] = {
     ModId = T.RT_4,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010202,
     WeaponId = 10202,
     WeaponLevel = 80
   },
   [12010203] = {
     ModId = T.RT_1,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010203,
     WeaponId = 10203,
     WeaponLevel = 80
   },
   [12010204] = {
     ModId = T.RT_4,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010204,
     WeaponId = 10204,
     WeaponLevel = 80
   },
   [12010206] = {
     ModId = T.RT_4,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010206,
     WeaponId = 10206,
     WeaponLevel = 80
   },
   [12010301] = {
     ModId = T.RT_1,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010301,
     WeaponId = 10301,
     WeaponLevel = 80
   },
   [12010302] = {
     ModId = T.RT_4,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010302,
     WeaponId = 10302,
     WeaponLevel = 80
   },
   [12010303] = {
     ModId = T.RT_1,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010303,
     WeaponId = 10303,
     WeaponLevel = 80
   },
   [12010304] = {
     ModId = T.RT_4,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010304,
     WeaponId = 10304,
     WeaponLevel = 80
   },
   [12010401] = {
     ModId = T.RT_4,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010401,
     WeaponId = 10401,
     WeaponLevel = 80
   },
   [12010402] = {
     ModId = T.RT_1,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010402,
     WeaponId = 10402,
     WeaponLevel = 80
   },
   [12010403] = {
     ModId = T.RT_3,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010403,
     WeaponId = 10403,
     WeaponLevel = 80
   },
   [12010501] = {
     ModId = T.RT_3,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010501,
     WeaponId = 10501,
     WeaponLevel = 80
   },
   [12010502] = {
     ModId = T.RT_4,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010502,
     WeaponId = 10502,
     WeaponLevel = 80
   },
   [12010503] = {
     ModId = T.RT_1,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010503,
     WeaponId = 10503,
     WeaponLevel = 80
   },
   [12010504] = {
     ModId = T.RT_3,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010504,
     WeaponId = 10504,
     WeaponLevel = 80
   },
   [12010601] = {
     ModId = T.RT_4,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010601,
     WeaponId = 10601,
     WeaponLevel = 80
   },
   [12010602] = {
     ModId = T.RT_1,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010602,
     WeaponId = 10602,
     WeaponLevel = 80
   },
   [12010603] = {
     ModId = T.RT_3,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12010603,
     WeaponId = 10603,
     WeaponLevel = 80
   },
   [12020101] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020101,
     WeaponId = 20101,
     WeaponLevel = 80
   },
   [12020102] = {
     ModId = T.RT_6,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020102,
     WeaponId = 20102,
     WeaponLevel = 80
   },
   [12020103] = {
     ModId = T.RT_7,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020103,
     WeaponId = 20103,
     WeaponLevel = 80
   },
   [12020201] = {
     ModId = T.RT_7,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020201,
     WeaponId = 20201,
     WeaponLevel = 80
   },
   [12020203] = {
     ModId = T.RT_7,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020203,
     WeaponId = 20203,
     WeaponLevel = 80
   },
   [12020205] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020205,
     WeaponId = 20205,
     WeaponLevel = 80
   },
   [12020301] = {
     ModId = T.RT_6,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020301,
     WeaponId = 20301,
     WeaponLevel = 80
   },
   [12020302] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020302,
     WeaponId = 20302,
     WeaponLevel = 80
   },
   [12020303] = {
     ModId = T.RT_6,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020303,
     WeaponId = 20303,
     WeaponLevel = 80
   },
   [12020304] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020304,
     WeaponId = 20304,
     WeaponLevel = 80
   },
   [12020305] = {
     ModId = T.RT_7,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020305,
     WeaponId = 20305,
     WeaponLevel = 80
   },
   [12020401] = {
     ModId = T.RT_6,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020401,
     WeaponId = 20401,
     WeaponLevel = 80
   },
   [12020402] = {
     ModId = T.RT_6,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020402,
     WeaponId = 20402,
     WeaponLevel = 80
   },
   [12020403] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020403,
     WeaponId = 20403,
     WeaponLevel = 80
   },
   [12020405] = {
     ModId = T.RT_6,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020405,
     WeaponId = 20405,
     WeaponLevel = 80
   },
   [12020501] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020501,
     WeaponId = 20501,
     WeaponLevel = 80
   },
   [12020502] = {
     ModId = T.RT_7,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020502,
     WeaponId = 20502,
     WeaponLevel = 80
   },
   [12020503] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020503,
     WeaponId = 20503,
     WeaponLevel = 80
   },
   [12020504] = {
     ModId = T.RT_7,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020504,
     WeaponId = 20504,
     WeaponLevel = 80
   },
   [12020507] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020507,
     WeaponId = 20507,
     WeaponLevel = 80
   },
   [12020509] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020509,
     WeaponId = 20509,
     WeaponLevel = 80
   },
   [12020510] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020510,
     WeaponId = 20510,
     WeaponLevel = 80
   },
   [12020601] = {
     ModId = T.RT_7,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020601,
     WeaponId = 20601,
     WeaponLevel = 80
   },
   [12020602] = {
     ModId = T.RT_6,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020602,
     WeaponId = 20602,
     WeaponLevel = 80
   },
   [12020603] = {
     ModId = T.RT_5,
-    ModLevel = T.RT_10,
+    ModLevel = T.RT_13,
     RuleId = 12020603,
     WeaponId = 20603,
     WeaponLevel = 80
@@ -3928,6 +3977,20 @@ return ReadOnly("WeaponTemplate", {
     RuleId = 20401001,
     WeaponId = 20405,
     WeaponLevel = 50
+  },
+  [20501001] = {
+    ModId = T.RT_17,
+    ModLevel = T.RT_10,
+    RuleId = 20501001,
+    WeaponId = 20501,
+    WeaponLevel = 60
+  },
+  [20502001] = {
+    ModId = T.RT_18,
+    ModLevel = T.RT_10,
+    RuleId = 20502001,
+    WeaponId = 20502,
+    WeaponLevel = 60
   },
   [20503001] = {
     RuleId = 20503001,
@@ -3956,6 +4019,14 @@ return ReadOnly("WeaponTemplate", {
     RuleId = 701020401,
     WeaponCostumeId = 1020401,
     WeaponId = 10204,
+    WeaponLevel = 70
+  },
+  [702050301] = {
+    ModId = T.RT_36,
+    ModLevel = T.RT_35,
+    RuleId = 702050301,
+    WeaponCostumeId = 3010501,
+    WeaponId = 20503,
     WeaponLevel = 70
   },
   [702060201] = {

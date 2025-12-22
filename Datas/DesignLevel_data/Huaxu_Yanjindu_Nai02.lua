@@ -353,7 +353,7 @@ return {
     ["2000411"] = {
       CreatorId = 2000411,
       UnitType = "Monster",
-      UnitId = 10004001
+      UnitId = 6017001
     },
     ["2000412"] = {
       CreatorId = 2000412,
@@ -373,7 +373,7 @@ return {
     ["2000415"] = {
       CreatorId = 2000415,
       UnitType = "Monster",
-      UnitId = 10004001
+      UnitId = 6017001
     },
     ["2000416"] = {
       CreatorId = 2000416,
@@ -388,7 +388,7 @@ return {
     ["2000417"] = {
       CreatorId = 2000417,
       UnitType = "Monster",
-      UnitId = 10004001
+      UnitId = 6017001
     },
     ["2000418"] = {
       CreatorId = 2000418,
@@ -510,15 +510,55 @@ return {
       UnitType = "Mechanism",
       UnitId = 131001
     },
+    ["2000545"] = {
+      CreatorId = 2000545,
+      UnitType = "Mechanism",
+      UnitId = 131052
+    },
     ["2000526"] = {
       CreatorId = 2000526,
       UnitType = "Mechanism",
       UnitId = 1
     },
-    ["2000529"] = {
-      CreatorId = 2000529,
+    ["2000548"] = {
+      CreatorId = 2000548,
       UnitType = "Mechanism",
       UnitId = 1
+    },
+    ["2000532"] = {
+      CreatorId = 2000532,
+      UnitType = "Mechanism",
+      UnitId = 70117
+    },
+    ["2000533"] = {
+      CreatorId = 2000533,
+      UnitType = "Mechanism",
+      UnitId = 70118
+    },
+    ["2000534"] = {
+      CreatorId = 2000534,
+      UnitType = "Mechanism",
+      UnitId = 70117
+    },
+    ["2000535"] = {
+      CreatorId = 2000535,
+      UnitType = "Mechanism",
+      UnitId = 70117
+    },
+    ["2000547"] = {
+      CreatorId = 2000547,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["2000549"] = {
+      CreatorId = 2000549,
+      UnitType = "Mechanism",
+      UnitId = 131006
+    },
+    ["2000550"] = {
+      CreatorId = 2000550,
+      UnitType = "Npc",
+      UnitId = 210133
     },
     ["2000495"] = {
       CreatorId = 2000495,
@@ -528,7 +568,7 @@ return {
     ["2000090"] = {
       CreatorId = 2000090,
       UnitType = "Npc",
-      UnitId = 210036
+      UnitId = 210044
     },
     ["2000085"] = {
       CreatorId = 2000085,
@@ -544,6 +584,16 @@ return {
       CreatorId = 2000103,
       UnitType = "Npc",
       UnitId = 210029
+    },
+    ["2000541"] = {
+      CreatorId = 2000541,
+      UnitType = "Npc",
+      UnitId = 210013
+    },
+    ["2000542"] = {
+      CreatorId = 2000542,
+      UnitType = "Npc",
+      UnitId = 210044
     },
     ["2000523"] = {
       CreatorId = 2000523,
@@ -578,86 +628,8 @@ return {
   },
   ManualItem = {},
   Explore = {
-    ["7044006"] = {
-      AutoReset = 0,
-      ["2000137"] = {
-        CreatorId = 2000137,
-        UnitType = "Monster",
-        UnitId = 6015001,
-        RarelyId = 7044006
-      },
-      ["2000138"] = {
-        CreatorId = 2000138,
-        UnitType = "Monster",
-        UnitId = 6016001,
-        RarelyId = 7044006
-      },
-      ["2000139"] = {
-        CreatorId = 2000139,
-        UnitType = "Monster",
-        UnitId = 6016001,
-        RarelyId = 7044006
-      },
-      ["2000140"] = {
-        CreatorId = 2000140,
-        UnitType = "Monster",
-        UnitId = 6017001,
-        RarelyId = 7044006
-      },
-      ["2000141"] = {
-        CreatorId = 2000141,
-        UnitType = "Monster",
-        UnitId = 6017001,
-        RarelyId = 7044006
-      },
-      ["2000142"] = {
-        CreatorId = 2000142,
-        UnitType = "Mechanism",
-        UnitId = 70117,
-        RarelyId = 7044006
-      }
-    },
-    ["7044004"] = {
-      AutoReset = 0,
-      ["2000134"] = {
-        CreatorId = 2000134,
-        UnitType = "Mechanism",
-        UnitId = 1310041,
-        RarelyId = 7044004
-      },
-      ["2000135"] = {
-        CreatorId = 2000135,
-        UnitType = "Mechanism",
-        UnitId = 1310041,
-        RarelyId = 7044004
-      },
-      ["2000042"] = {
-        CreatorId = 2000042,
-        UnitType = "Mechanism",
-        UnitId = 131004,
-        RarelyId = 7044004
-      },
-      ["2000043"] = {
-        CreatorId = 2000043,
-        UnitType = "Mechanism",
-        UnitId = 131004,
-        RarelyId = 7044004
-      },
-      ["2000133"] = {
-        CreatorId = 2000133,
-        UnitType = "Mechanism",
-        UnitId = 131004,
-        RarelyId = 7044004
-      },
-      ["2000049"] = {
-        CreatorId = 2000049,
-        UnitType = "Mechanism",
-        UnitId = 131006,
-        RarelyId = 7044004
-      }
-    },
     ["7044007"] = {
-      AutoReset = 0,
+      AutoReset = 1,
       ["2000514"] = {
         CreatorId = 2000514,
         UnitType = "Mechanism",
@@ -672,7 +644,7 @@ return {
       }
     },
     ["7044005"] = {
-      AutoReset = 0,
+      AutoReset = 1,
       ["2000170"] = {
         CreatorId = 2000170,
         UnitType = "Mechanism",
@@ -726,6 +698,78 @@ return {
         UnitType = "Mechanism",
         UnitId = 131006,
         RarelyId = 7044005
+      }
+    },
+    ["7044006"] = {
+      AutoReset = 0,
+      ["2000137"] = {
+        CreatorId = 2000137,
+        UnitType = "Monster",
+        UnitId = 6015001,
+        RarelyId = 7044006
+      },
+      ["2000138"] = {
+        CreatorId = 2000138,
+        UnitType = "Monster",
+        UnitId = 6016001,
+        RarelyId = 7044006
+      },
+      ["2000139"] = {
+        CreatorId = 2000139,
+        UnitType = "Monster",
+        UnitId = 6016001,
+        RarelyId = 7044006
+      },
+      ["2000140"] = {
+        CreatorId = 2000140,
+        UnitType = "Monster",
+        UnitId = 6017001,
+        RarelyId = 7044006
+      },
+      ["2000141"] = {
+        CreatorId = 2000141,
+        UnitType = "Monster",
+        UnitId = 6017001,
+        RarelyId = 7044006
+      },
+      ["2000142"] = {
+        CreatorId = 2000142,
+        UnitType = "Mechanism",
+        UnitId = 70119,
+        RarelyId = 7044006
+      }
+    },
+    ["7044004"] = {
+      AutoReset = 1,
+      ["2000134"] = {
+        CreatorId = 2000134,
+        UnitType = "Mechanism",
+        UnitId = 1310041,
+        RarelyId = 7044004
+      },
+      ["2000135"] = {
+        CreatorId = 2000135,
+        UnitType = "Mechanism",
+        UnitId = 1310041,
+        RarelyId = 7044004
+      },
+      ["2000042"] = {
+        CreatorId = 2000042,
+        UnitType = "Mechanism",
+        UnitId = 131004,
+        RarelyId = 7044004
+      },
+      ["2000043"] = {
+        CreatorId = 2000043,
+        UnitType = "Mechanism",
+        UnitId = 131004,
+        RarelyId = 7044004
+      },
+      ["2000049"] = {
+        CreatorId = 2000049,
+        UnitType = "Mechanism",
+        UnitId = 131006,
+        RarelyId = 7044004
       }
     }
   },

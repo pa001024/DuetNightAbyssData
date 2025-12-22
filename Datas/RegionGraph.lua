@@ -135,6 +135,28 @@ T.RT_28 = {
   RegionTarget = T.RT_27
 }
 T.RT_29 = {102101, 102102}
+T.RT_30 = {
+  104102,
+  104103,
+  104104,
+  104105,
+  104106,
+  104107,
+  104108,
+  104109,
+  104110
+}
+T.RT_31 = {
+  104901,
+  "TargetPoint_EnterQiuOffice",
+  1
+}
+T.RT_32 = {
+  T.RT_31
+}
+T.RT_33 = {
+  RegionTarget = T.RT_32
+}
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -309,6 +331,51 @@ return ReadOnly("RegionGraph", {
   [102102] = {
     RegionStart = T.RT_29,
     SubRegionStart = 102102
+  },
+  [104102] = {
+    RegionStart = T.RT_30,
+    SubRegionStart = 104102,
+    SubRegionTarget = T.RT_33
+  },
+  [104103] = {
+    RegionStart = T.RT_30,
+    SubRegionStart = 104103,
+    SubRegionTarget = T.RT_33
+  },
+  [104104] = {
+    RegionStart = T.RT_30,
+    SubRegionStart = 104104,
+    SubRegionTarget = T.RT_33
+  },
+  [104105] = {
+    RegionStart = T.RT_30,
+    SubRegionStart = 104105,
+    SubRegionTarget = T.RT_33
+  },
+  [104106] = {
+    RegionStart = T.RT_30,
+    SubRegionStart = 104106,
+    SubRegionTarget = T.RT_33
+  },
+  [104107] = {
+    RegionStart = T.RT_30,
+    SubRegionStart = 104107,
+    SubRegionTarget = T.RT_33
+  },
+  [104108] = {
+    RegionStart = T.RT_30,
+    SubRegionStart = 104108,
+    SubRegionTarget = T.RT_33
+  },
+  [104109] = {
+    RegionStart = T.RT_30,
+    SubRegionStart = 104109,
+    SubRegionTarget = T.RT_33
+  },
+  [104110] = {
+    RegionStart = T.RT_30,
+    SubRegionStart = 104110,
+    SubRegionTarget = T.RT_33
   },
   [104901] = {
     SubRegionStart = 104901,

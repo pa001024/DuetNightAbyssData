@@ -37,6 +37,20 @@ return ReadOnly("Facial", {
     NpcMouth = "Angry03_Mouth",
     SoundBaseMouth = "LipSyncBase_Normal_Mouth"
   },
+  Angry04 = {
+    Eye1BlendInTime = 0.3,
+    FacialId = "Angry04",
+    NpcEye = "Angry04",
+    NpcMouth = "Angry04_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
+  Bai_Beg = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Bai_Beg",
+    NpcEye = "Beg",
+    NpcMouth = "None_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
   Beg = {
     Eye1BlendInTime = 0.4,
     FacialId = "Beg",
@@ -61,6 +75,12 @@ return ReadOnly("Facial", {
     FacialId = "CM_Angry01",
     NpcEye = "Angry01",
     NpcMouth = "Sad01_Mouth"
+  },
+  CM_Close = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "CM_Close",
+    NpcEye = "Close",
+    NpcMouth = "None_Mouth"
   },
   CM_Happy01 = {
     Eye1BlendInTime = 0.4,
@@ -92,11 +112,109 @@ return ReadOnly("Facial", {
     NpcEye = "Smile01",
     NpcMouth = "Smile01_Mouth"
   },
+  Cin_Ahaha01 = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Cin_Ahaha01",
+    NpcEye = "Cin_Ahaha01",
+    NpcMouth = "Cin_Ahaha01_Mouth",
+    SoundBaseMouth = "Cin_LipSyncBase_Smile_Mouth"
+  },
+  Cin_Ahaha02 = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Cin_Ahaha02",
+    NpcEye = "Cin_Ahaha02",
+    NpcMouth = "Cin_Ahaha02_Mouth",
+    SoundBaseMouth = "Cin_LipSyncBase_Smile_Mouth"
+  },
+  Cin_Angry01 = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Cin_Angry01",
+    NpcEye = "Cin_Angry01",
+    NpcMouth = "Cin_Angry01_Mouth",
+    SoundBaseMouth = "Cin_LipSyncBase_Normal_Mouth"
+  },
+  Cin_Blink = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Cin_Blink",
+    NpcEye = "Cin_Blink",
+    NpcMouth = "Cin_None_Mouth",
+    SoundBaseMouth = "Cin_LipSyncBase_Normal_Mouth"
+  },
+  Cin_Close01 = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Cin_Close01",
+    NpcEye = "Cin_Close01",
+    NpcMouth = "Cin_Close01_Mouth",
+    SoundBaseMouth = "Cin_LipSyncBase_Normal_Mouth"
+  },
+  Cin_Grief = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Cin_Grief",
+    NpcEye = "Cin_Grief",
+    NpcMouth = "Cin_Grief_Mouth",
+    SoundBaseMouth = "Cin_LipSyncBase_Normal_Mouth"
+  },
+  Cin_Happy01 = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Cin_Happy01",
+    NpcEye = "Cin_Happy01",
+    NpcMouth = "Cin_Happy01_Mouth",
+    SoundBaseMouth = "Cin_LipSyncBase_Smile_Mouth"
+  },
+  Cin_Idle = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Cin_Idle",
+    NpcEye = "Cin_None",
+    NpcMouth = "Cin_None_Mouth",
+    SoundBaseMouth = "Cin_LipSyncBase_Normal_Mouth"
+  },
+  Cin_Pain01 = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Cin_Pain01",
+    NpcEye = "Cin_Pain01",
+    NpcMouth = "Cin_Pain01_Mouth",
+    SoundBaseMouth = "Cin_LipSyncBase_Normal_Mouth"
+  },
+  Cin_Sad01 = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Cin_Sad01",
+    NpcEye = "Cin_Sad01",
+    NpcMouth = "Cin_Sad01_Mouth",
+    SoundBaseMouth = "Cin_LipSyncBase_Normal_Mouth"
+  },
+  Cin_Shock01 = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Cin_Shock01",
+    NpcEye = "Cin_Shock01",
+    NpcMouth = "Cin_Shock01_Mouth",
+    SoundBaseMouth = "Cin_LipSyncBase_Normal_Mouth"
+  },
+  Cin_Smile01 = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Cin_Smile01",
+    NpcEye = "Cin_Smile01",
+    NpcMouth = "Cin_Smile01_Mouth",
+    SoundBaseMouth = "Cin_LipSyncBase_Smile_Mouth"
+  },
+  Cin_Smile02 = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Cin_Smile02",
+    NpcEye = "Cin_Smile02",
+    NpcMouth = "Cin_Smile02_Mouth",
+    SoundBaseMouth = "Cin_LipSyncBase_Smile_Mouth"
+  },
   Close = {
     Eye1BlendInTime = 0.4,
     FacialId = "Close",
     NpcEye = "Close",
     NpcMouth = "Close_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
+  Close_Pain = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Close_Pain",
+    NpcEye = "Close",
+    NpcMouth = "Specialpain_Mouth",
     SoundBaseMouth = "LipSyncBase_Normal_Mouth"
   },
   Confident01 = {
@@ -262,6 +380,13 @@ return ReadOnly("Facial", {
     NpcMouth = "Satisfy01_Mouth",
     SoundBaseMouth = "LipSyncBase_Smile_Mouth"
   },
+  Serious = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Serious",
+    NpcEye = "Serious",
+    NpcMouth = "Serious_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
   Shock01 = {
     Eye1BlendInTime = 0.3,
     FacialId = "Shock01",
@@ -304,6 +429,27 @@ return ReadOnly("Facial", {
     NpcMouth = "Smile03_Mouth",
     SoundBaseMouth = "LipSyncBase_Smile_Mouth"
   },
+  SpecialSmile = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "SpecialSmile",
+    NpcEye = "SpecialSmile",
+    NpcMouth = "SpecialSmile_Mouth",
+    SoundBaseMouth = "LipSyncBase_Smile_Mouth"
+  },
+  Special_Angry = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Special_Angry",
+    NpcEye = "Special_Angry",
+    NpcMouth = "Special_Angry_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
+  Specialpain = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Specialpain",
+    NpcEye = "Specialpain",
+    NpcMouth = "Specialpain_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
   Syouganai01 = {
     Eye1BlendInTime = 0.6,
     FacialId = "Syouganai01",
@@ -316,6 +462,13 @@ return ReadOnly("Facial", {
     FacialId = "Think01",
     NpcEye = "Think01",
     NpcMouth = "Think01_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
+  Think02 = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Think02",
+    NpcEye = "Think02",
+    NpcMouth = "Think02_Mouth",
     SoundBaseMouth = "LipSyncBase_Normal_Mouth"
   },
   Unacceptable01 = {
@@ -366,6 +519,20 @@ return ReadOnly("Facial", {
     NpcEye = "EyeChangedSad",
     NpcMouth = "EyeChangedSad_Mouth",
     SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
+  Yinsen = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Yinsen",
+    NpcEye = "Yinsen",
+    NpcMouth = "Yinsen_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
+  Zhiliu_SpecialDoubt = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Zhiliu_SpecialDoubt",
+    NpcEye = "Doubt01",
+    NpcMouth = "None_Mouth",
+    SoundBaseMouth = "LipSyncBase_Smile_Mouth"
   },
   Zhiliu_SpecialSad = {
     Eye1BlendInTime = 0.4,

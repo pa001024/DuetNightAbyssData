@@ -8,6 +8,12 @@ return ReadOnly("MonsterCamp", {
     MonCampTag = "Mon.Gr",
     Priority = 1
   },
+  ["Mon.Hx"] = {
+    MonCampIcon = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Training_East.T_Tab_Training_East",
+    MonCampName = "UI_DUNGEON_DES_TRAINING_35",
+    MonCampTag = "Mon.Hx",
+    Priority = 5
+  },
   ["Mon.Jh"] = {
     MonCampIcon = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Training_Church.T_Tab_Training_Church",
     MonCampName = "UI_DUNGEON_DES_TRAINING_21",

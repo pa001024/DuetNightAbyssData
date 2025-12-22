@@ -51,6 +51,13 @@ return ReadOnly("HearData", {
     HearReduceAlertValue = -30,
     HearSetAlertValue = 60
   },
+  [7001101] = {
+    HearBaseRadius = 100,
+    HearCD = 1,
+    HearId = 7001101,
+    HearReduceAlertValue = 0,
+    HearSetAlertValue = 5
+  },
   [9802001] = {
     HearBaseRadius = 0,
     HearCD = 1,

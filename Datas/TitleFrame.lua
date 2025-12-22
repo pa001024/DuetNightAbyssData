@@ -50,5 +50,40 @@ return ReadOnly("TitleFrame", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_TitleFrame.T_Icon_Random_TitleFrame'",
     Name = "TitleFrame_10007",
     TitleFrameID = 10007
+  },
+  [10008] = {
+    Des = "TitleFrame_Des",
+    FramePath = "WidgetBlueprint'/Game/UI/WBP/PersonalInfo/Widget/Title/Title/WBP_PersonalInfo_Title_04_1.WBP_PersonalInfo_Title_04_1'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_TitleFrame.T_Icon_Random_TitleFrame'",
+    Name = "TitleFrame_10008",
+    TitleFrameID = 10008
+  },
+  [10009] = {
+    Des = "TitleFrame_Des",
+    FramePath = "WidgetBlueprint'/Game/UI/WBP/PersonalInfo/Widget/Title/Title/WBP_PersonalInfo_Title_04_2.WBP_PersonalInfo_Title_04_2'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_TitleFrame.T_Icon_Random_TitleFrame'",
+    Name = "TitleFrame_10009",
+    TitleFrameID = 10009
+  },
+  [10010] = {
+    Des = "TitleFrame_Des",
+    FramePath = "WidgetBlueprint'/Game/UI/WBP/PersonalInfo/Widget/Title/Title/WBP_PersonalInfo_Title_04_3.WBP_PersonalInfo_Title_04_3'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_TitleFrame.T_Icon_Random_TitleFrame'",
+    Name = "TitleFrame_10010",
+    TitleFrameID = 10010
+  },
+  [10011] = {
+    Des = "TitleFrame_Des",
+    FramePath = "WidgetBlueprint'/Game/UI/WBP/PersonalInfo/Widget/Title/Title/WBP_PersonalInfo_Title_04_4.WBP_PersonalInfo_Title_04_4'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_TitleFrame.T_Icon_Random_TitleFrame'",
+    Name = "TitleFrame_10011",
+    TitleFrameID = 10011
+  },
+  [10012] = {
+    Des = "TitleFrame_Des",
+    FramePath = "WidgetBlueprint'/Game/UI/WBP/PersonalInfo/Widget/Title/Title/WBP_PersonalInfo_Title_04_5.WBP_PersonalInfo_Title_04_5'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_TitleFrame.T_Icon_Random_TitleFrame'",
+    Name = "TitleFrame_10012",
+    TitleFrameID = 10012
   }
 })

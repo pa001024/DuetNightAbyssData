@@ -9,12 +9,14 @@ return ReadOnly("SkillSplitEval", {
     [150214] = true,
     [150224] = true,
     [150225] = true,
+    [150421] = true,
     [210263] = true,
     [310111] = true,
     [310131] = true,
     [430113] = true,
     [430115] = true,
     [430119] = true,
+    [2040611] = true,
     [2050515] = true
   }
 })

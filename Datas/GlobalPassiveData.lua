@@ -10,6 +10,58 @@ return ReadOnly("GlobalPassiveData", {
     ID = 1,
     Vars = {GrowVar = "#1", TestVar = 30}
   },
+  [11112] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_PersonalRemoveBuff.BP_AbyssGP_PersonalRemoveBuff",
+    Camp = "Player",
+    ID = 11112,
+    Vars = {Buff = 2011111}
+  },
+  [11113] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HealAddBuff.BP_AbyssGP_HealAddBuff",
+    Camp = "Player",
+    ID = 11113,
+    Vars = {Buff = 2011113, LastTime = 10}
+  },
+  [11121] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HpCostAddBuff.BP_AbyssGP_HpCostAddBuff",
+    Camp = "Player",
+    ID = 11121,
+    Vars = {
+      Buff = 2011121,
+      HpCost = 0.04,
+      LastTime = 12
+    }
+  },
+  [11122] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_AddBuff.BP_AbyssGP_AddBuff",
+    Camp = "Player",
+    ID = 11122,
+    Vars = {Buff = 2011122}
+  },
+  [11211] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HpAboveBuff.BP_AbyssGP_HpAboveBuff",
+    Camp = "Player",
+    ID = 11211,
+    Vars = {Buff = 2011211, HpRate = 0.8}
+  },
+  [11212] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_AddBuff.BP_AbyssGP_AddBuff",
+    Camp = "Player",
+    ID = 11212,
+    Vars = {Buff = 2011212}
+  },
+  [11221] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_MeleeAddBuff.BP_AbyssGP_MeleeAddBuff",
+    Camp = "Player",
+    ID = 11221,
+    Vars = {Buff = 2011221, LastTime = 10}
+  },
+  [11222] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_AddBuff.BP_AbyssGP_AddBuff",
+    Camp = "Player",
+    ID = 11222,
+    Vars = {Buff = 2011222}
+  },
   [20030] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitCountBuff.BP_AbyssGP_HitCountBuff",
     Camp = "Player",
@@ -57,6 +109,36 @@ return ReadOnly("GlobalPassiveData", {
       Buff = 2010203,
       Condition = "Tag",
       DamageTag = "Ranged"
+    }
+  },
+  [20204] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HittedRemoveBuff.BP_AbyssGP_HittedRemoveBuff",
+    Camp = "Monster",
+    ID = 20204,
+    Vars = {
+      Buff = 2010204,
+      Condition = "Tag",
+      DamageTag = "Weapon"
+    }
+  },
+  [20205] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HittedRemoveBuff.BP_AbyssGP_HittedRemoveBuff",
+    Camp = "Monster",
+    ID = 20205,
+    Vars = {
+      Buff = 2010205,
+      Condition = "Tag",
+      DamageTag = "Melee"
+    }
+  },
+  [20206] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HittedRemoveBuff.BP_AbyssGP_HittedRemoveBuff",
+    Camp = "Monster",
+    ID = 20206,
+    Vars = {
+      Buff = 2010205,
+      Condition = "Tag",
+      DamageTag = "Dot"
     }
   },
   [20301] = {
@@ -114,30 +196,41 @@ return ReadOnly("GlobalPassiveData", {
     ID = 20512,
     Vars = {Buff = 2010512, TriggerProb = 1}
   },
+  [22001] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_Wys_1.BP_EventGP_Wys_1",
+    Camp = "Player",
+    ID = 22001
+  },
+  [22002] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_Wys_2.BP_EventGP_Wys_2",
+    Camp = "Player",
+    ID = 22002
+  },
+  [22003] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_Wys_3.BP_EventGP_Wys_3",
+    Camp = "Player",
+    ID = 22003
+  },
+  [22004] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_Wys_4.BP_EventGP_Wys_4",
+    Camp = "Player",
+    ID = 22004
+  },
   [30100] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Raid/BP_RaidGP_Common.BP_RaidGP_Common",
     Camp = "Monster",
-    ID = 30100
+    ID = 30100,
+    Vars = {EliteRate = 0.27, NormalRate = 0.033}
   },
-  [40101] = {
-    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_Wys_1.BP_EventGP_Wys_1",
+  [30101] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Raid/BP_RaidGP_010.BP_RaidGP_010",
     Camp = "Player",
-    ID = 40101
-  },
-  [40102] = {
-    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_Wys_2.BP_EventGP_Wys_2",
-    Camp = "Player",
-    ID = 40102
-  },
-  [40103] = {
-    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_Wys_3.BP_EventGP_Wys_3",
-    Camp = "Player",
-    ID = 40103
-  },
-  [40104] = {
-    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_Wys_4.BP_EventGP_Wys_4",
-    Camp = "Player",
-    ID = 40104
+    ID = 30101,
+    Vars = {
+      Divider = 0.3,
+      MaxSkillInten = 4,
+      Penetration = 0.05
+    }
   },
   [30101001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Contract/BP_Rou_Contract_30101001.BP_Rou_Contract_30101001",

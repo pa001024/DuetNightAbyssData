@@ -12,6 +12,7 @@ T.RT_8 = {"HitLight"}
 T.RT_9 = {"HeavyHit1", "HeavyHit2"}
 T.RT_10 = {"LightHit1"}
 T.RT_11 = {KillSelf = 0}
+T.RT_12 = {"HeavyHit4"}
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -38,6 +39,13 @@ return ReadOnly("HitMontageData", {
     HitMontageId = "AnimalFly",
     LightHitMontage = T.RT_8
   },
+  BossDefault = {
+    DeadDissolveTime = 1,
+    DeadMontage = T.RT_2,
+    HitAddtiveDuration = 0.3,
+    HitMontageId = "BossDefault",
+    LightHitMontage = T.RT_8
+  },
   BossFuer = {
     DeadDissolveTime = 1,
     DeadMontage = T.RT_2,
@@ -45,7 +53,18 @@ return ReadOnly("HitMontageData", {
     HitMontageId = "BossFuer",
     LightHitMontage = T.RT_8
   },
+  BossJishi = {
+    DeadDissolveTime = 1,
+    DeadMontage = T.RT_2,
+    HitAddtiveDuration = 0.3,
+    HitMontageId = "BossJishi",
+    LightHitMontage = T.RT_8
+  },
   BossJuque = {
+    ConditionHitMontage = {
+      [851801] = "LightHit2",
+      [851802] = "LightHit1"
+    },
     DeadDissolveTime = 1,
     DeadMontage = T.RT_2,
     HitAddtiveDirection = 1,
@@ -102,7 +121,8 @@ return ReadOnly("HitMontageData", {
       [850205] = "LightHit2",
       [850206] = "LightHit2",
       [850207] = "LightHit1",
-      [850208] = "LightHit1"
+      [850208] = "LightHit1",
+      [850213] = "LightHit1"
     },
     DeadDissolveTime = 1,
     DeadMontage = T.RT_2,
@@ -239,6 +259,14 @@ return ReadOnly("HitMontageData", {
     HitAddtiveDuration = 0.46,
     HitMontageId = "MonNEDajie",
     LightHitMontage = T.RT_6
+  },
+  MonNEDajieTem102 = {
+    DeadDissolveTime = 2,
+    DeadMontage = T.RT_2,
+    HeavyHitMontage = T.RT_12,
+    HitAddtiveDuration = 0.46,
+    HitMontageId = "MonNEDajieTem102",
+    LightHitMontage = T.RT_12
   },
   MonNEHaer = {
     DeadDissolveTime = 2,

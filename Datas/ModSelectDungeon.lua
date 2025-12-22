@@ -69,7 +69,9 @@ return ReadOnly("ModSelectDungeon", {
       6003,
       6004,
       6005,
-      6006
+      6006,
+      6007,
+      6008
     },
     Name = "UI_DungeonMod_Tab_60",
     Sequence = 70
@@ -105,7 +107,13 @@ return ReadOnly("ModSelectDungeon", {
   },
   UI_DungeonMod_Tab_80 = {
     Condition = {160},
-    MonRewardIdList = {8001},
+    MonRewardIdList = {
+      8001,
+      8002,
+      8003,
+      8004,
+      8005
+    },
     Name = "UI_DungeonMod_Tab_80",
     Sequence = 100
   }

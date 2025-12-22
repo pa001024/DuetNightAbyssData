@@ -2,7 +2,9 @@ local T = {}
 T.RT_1 = {
   "Dungeon",
   "Shop_Main",
-  "Shop_Abyss"
+  "Shop_Abyss",
+  "HardBoss",
+  "Abyss"
 }
 T.RT_2 = {10}
 T.RT_3 = {2}
@@ -40,7 +42,7 @@ T.RT_9 = {
   "Dungeon",
   "Shop_Main",
   "Shop_Abyss",
-  "Text_HardBoss"
+  "HardBoss"
 }
 T.RT_10 = {100}
 T.RT_11 = {50}
@@ -90,6 +92,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_1000",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -101,7 +104,7 @@ return ReadOnly("Walnut", {
     WalnutType = 1
   },
   [1001] = {
-    AccessKey = T.RT_9,
+    AccessKey = T.RT_1,
     Count = T.RT_5,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Avatar/T_Walnut_Char_Tuosi01.T_Walnut_Char_Tuosi01",
     Id = {
@@ -116,6 +119,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_1001",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -127,7 +131,7 @@ return ReadOnly("Walnut", {
     WalnutType = 1
   },
   [1002] = {
-    AccessKey = T.RT_9,
+    AccessKey = T.RT_1,
     Count = T.RT_5,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Avatar/T_Walnut_Char_Baonu.T_Walnut_Char_Baonu",
     Id = {
@@ -142,6 +146,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_1002",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -168,6 +173,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_1003",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -178,13 +184,35 @@ return ReadOnly("Walnut", {
     WalnutNumber = 1,
     WalnutType = 1
   },
-  [1005] = {
-    AccessKey = {
-      "Dungeon",
-      "Shop_Main",
-      "Shop_Abyss",
-      "Text_Abyss"
+  [1004] = {
+    AccessKey = T.RT_1,
+    Count = T.RT_5,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Avatar/T_Walnut_Char_Kezhou.T_Walnut_Char_Kezhou",
+    Id = {
+      [1] = 1001503,
+      [2] = 1001503,
+      [3] = 30001,
+      [4] = 2012,
+      [5] = 2008,
+      [6] = 211
     },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_1004",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 110,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_8,
+    WalnutId = 1004,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 1
+  },
+  [1005] = {
+    AccessKey = T.RT_1,
     Count = T.RT_5,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Avatar/T_Walnut_Char_Feina.T_Walnut_Char_Feina",
     Id = {
@@ -199,6 +227,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_1005",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 105,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -225,6 +254,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_1006",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -251,12 +281,40 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_1007",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
     Sound = "SOUND_ITEM_MIHAN",
     Type = T.RT_8,
     WalnutId = 1007,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 1
+  },
+  [1008] = {
+    AccessKey = T.RT_1,
+    Count = T.RT_5,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Avatar/T_Walnut_Char_Baiheng.T_Walnut_Char_Baiheng",
+    Id = {
+      [1] = 1002401,
+      [2] = 1002401,
+      [3] = 30001,
+      [4] = 2012,
+      [5] = 2008,
+      [6] = 211
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_1008",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 110,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_8,
+    WalnutId = 1008,
     WalnutIndex = "A",
     WalnutNumber = 1,
     WalnutType = 1
@@ -277,6 +335,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_1009",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -287,8 +346,35 @@ return ReadOnly("Walnut", {
     WalnutNumber = 1,
     WalnutType = 1
   },
+  [1010] = {
+    AccessKey = T.RT_1,
+    Count = T.RT_5,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Avatar/T_Walnut_Char_Xier.T_Walnut_Char_Xier",
+    Id = {
+      [1] = 1003102,
+      [2] = 1003102,
+      [3] = 30001,
+      [4] = 2012,
+      [5] = 2008,
+      [6] = 211
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_1010",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 140,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_8,
+    WalnutId = 1010,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 1
+  },
   [1011] = {
-    AccessKey = T.RT_9,
+    AccessKey = T.RT_1,
     Count = T.RT_5,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Avatar/T_Walnut_Char_Yeer.T_Walnut_Char_Yeer",
     Id = {
@@ -303,6 +389,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_1011",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -314,7 +401,7 @@ return ReadOnly("Walnut", {
     WalnutType = 1
   },
   [1012] = {
-    AccessKey = T.RT_9,
+    AccessKey = T.RT_1,
     Count = T.RT_5,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Avatar/T_Walnut_Char_Haier.T_Walnut_Char_Haier",
     Id = {
@@ -329,12 +416,40 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_1012",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
     Sound = "SOUND_ITEM_MIHAN",
     Type = T.RT_8,
     WalnutId = 1012,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 1
+  },
+  [1013] = {
+    AccessKey = T.RT_1,
+    Count = T.RT_5,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Avatar/T_Walnut_Char_Kami.T_Walnut_Char_Kami",
+    Id = {
+      [1] = 1003202,
+      [2] = 1003202,
+      [3] = 30001,
+      [4] = 2012,
+      [5] = 2008,
+      [6] = 211
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_1013",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 149,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_8,
+    WalnutId = 1013,
     WalnutIndex = "A",
     WalnutNumber = 1,
     WalnutType = 1
@@ -355,6 +470,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_1014",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -366,7 +482,7 @@ return ReadOnly("Walnut", {
     WalnutType = 1
   },
   [1015] = {
-    AccessKey = T.RT_9,
+    AccessKey = T.RT_1,
     Count = T.RT_5,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Avatar/T_Walnut_Char_Lise.T_Walnut_Char_Lise",
     Id = {
@@ -381,12 +497,67 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_1015",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
     Sound = "SOUND_ITEM_MIHAN",
     Type = T.RT_8,
     WalnutId = 1015,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 1
+  },
+  [1016] = {
+    AccessKey = T.RT_1,
+    Count = T.RT_5,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Avatar/T_Walnut_Char_Zhiliu.T_Walnut_Char_Zhiliu",
+    Id = {
+      [1] = 1004102,
+      [2] = 1004102,
+      [3] = 30001,
+      [4] = 2012,
+      [5] = 2008,
+      [6] = 211
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_1016",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 120,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_8,
+    WalnutId = 1016,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 1
+  },
+  [1017] = {
+    AccessKey = T.RT_1,
+    Count = T.RT_5,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Avatar/T_Walnut_Char_Yuming.T_Walnut_Char_Yuming",
+    Id = {
+      [1] = 1004201,
+      [2] = 1004201,
+      [3] = 30001,
+      [4] = 2012,
+      [5] = 2008,
+      [6] = 211
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_1017",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 125,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_8,
+    WalnutId = 1017,
     WalnutIndex = "A",
     WalnutNumber = 1,
     WalnutType = 1
@@ -407,6 +578,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_1018",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -433,6 +605,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_1019",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -444,7 +617,7 @@ return ReadOnly("Walnut", {
     WalnutType = 1
   },
   [1020] = {
-    AccessKey = T.RT_9,
+    AccessKey = T.RT_1,
     Count = T.RT_5,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Avatar/T_Walnut_Char_Songlu.T_Walnut_Char_Songlu",
     Id = {
@@ -459,6 +632,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_1020",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -485,6 +659,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_1021",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -496,7 +671,7 @@ return ReadOnly("Walnut", {
     WalnutType = 1
   },
   [1022] = {
-    AccessKey = T.RT_9,
+    AccessKey = T.RT_1,
     Count = T.RT_5,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Avatar/T_Walnut_Char_Saiqi.T_Walnut_Char_Saiqi",
     Id = {
@@ -511,6 +686,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_1022",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -537,6 +713,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_1023",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -548,7 +725,7 @@ return ReadOnly("Walnut", {
     WalnutType = 1
   },
   [2001] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Melee/T_Walnut_Broadsword_Huipo.T_Walnut_Broadsword_Huipo",
     Id = {
@@ -563,6 +740,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2001",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -574,7 +752,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2002] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Melee/T_Walnut_Sword_Zhuiyi.T_Walnut_Sword_Zhuiyi",
     Id = {
@@ -589,6 +767,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2002",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -600,7 +779,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2003] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Melee/T_Walnut_Sword_Huimou.T_Walnut_Sword_Huimou",
     Id = {
@@ -615,6 +794,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2003",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -626,7 +806,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2004] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Melee/T_Walnut_Polearm_Sairen.T_Walnut_Polearm_Sairen",
     Id = {
@@ -641,6 +821,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2004",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -652,7 +833,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2005] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Melee/T_Walnut_Polearm_Chixing.T_Walnut_Polearm_Chixing",
     Id = {
@@ -667,6 +848,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2005",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -678,7 +860,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2006] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Melee/T_Walnut_Claymore_Rimian.T_Walnut_Claymore_Rimian",
     Id = {
@@ -693,6 +875,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2006",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -704,7 +887,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2007] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Melee/T_Walnut_Claymore_Chixing.T_Walnut_Claymore_Chixing",
     Id = {
@@ -719,6 +902,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2007",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -730,7 +914,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2008] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Melee/T_Walnut_Dualblade_Shixiang.T_Walnut_Dualblade_Shixiang",
     Id = {
@@ -745,6 +929,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2008",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -756,7 +941,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2009] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Melee/T_Walnut_Dualblade_Yousha.T_Walnut_Dualblade_Yousha",
     Id = {
@@ -771,6 +956,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2009",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -782,7 +968,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2010] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Melee/T_Walnut_Swordwhip_Buyu.T_Walnut_Swordwhip_Buyu",
     Id = {
@@ -797,6 +983,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2010",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -808,7 +995,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2011] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Melee/T_Walnut_Swordwhip_Chixing.T_Walnut_Swordwhip_Chixing",
     Id = {
@@ -823,6 +1010,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2011",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -834,7 +1022,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2012] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Melee/T_Walnut_Katana_Feiqie.T_Walnut_Katana_Feiqie",
     Id = {
@@ -849,6 +1037,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2012",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -860,7 +1049,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2013] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Melee/T_Walnut_Katana_Chixing.T_Walnut_Katana_Chixing",
     Id = {
@@ -875,6 +1064,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2013",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -886,7 +1076,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2014] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Range/T_Walnut_Pistol_Wuxu.T_Walnut_Pistol_Wuxu",
     Id = {
@@ -901,6 +1091,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2014",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -912,7 +1103,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2015] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Range/T_Walnut_Pistol_Chixing.T_Walnut_Pistol_Chixing",
     Id = {
@@ -927,6 +1118,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2015",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -938,7 +1130,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2016] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Range/T_Walnut_Crossbow_Chixing.T_Walnut_Crossbow_Chixing",
     Id = {
@@ -953,6 +1145,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2016",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -964,7 +1157,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2017] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Range/T_Walnut_Crossbow_Lanse.T_Walnut_Crossbow_Lanse",
     Id = {
@@ -979,6 +1172,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2017",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -990,7 +1184,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2018] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Range/T_Walnut_Cannon_Chixing.T_Walnut_Cannon_Chixing",
     Id = {
@@ -1005,6 +1199,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2018",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1016,7 +1211,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2019] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Range/T_Walnut_Canon_Yinbai.T_Walnut_Canon_Yinbai",
     Id = {
@@ -1031,6 +1226,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2019",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1042,7 +1238,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2020] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Range/T_Walnut_Shotgun_Chixing.T_Walnut_Shotgun_Chixing",
     Id = {
@@ -1057,6 +1253,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2020",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1068,7 +1265,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2021] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Range/T_Walnut_Shotgun_Banzi.T_Walnut_Shotgun_Banzi",
     Id = {
@@ -1083,6 +1280,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2021",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1094,7 +1292,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2022] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Range/T_Walnut_Machinegun_Chixing.T_Walnut_Machinegun_Chixing",
     Id = {
@@ -1109,6 +1307,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2022",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1120,7 +1319,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2023] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Range/T_Walnut_Machinegun_Qiqing.T_Walnut_Machinegun_Qiqing",
     Id = {
@@ -1135,6 +1334,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2023",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1146,7 +1346,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2024] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Range/T_Walnut_Bow_Shashi.T_Walnut_Bow_Shashi",
     Id = {
@@ -1161,6 +1361,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2024",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1172,7 +1373,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2025] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Range/T_Walnut_Bow_Chixing.T_Walnut_Bow_Chixing",
     Id = {
@@ -1187,6 +1388,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2025",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1198,7 +1400,7 @@ return ReadOnly("Walnut", {
     WalnutType = 2
   },
   [2026] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Melee/T_Walnut_Broadsword_Guzi.T_Walnut_Broadsword_Guzi",
     Id = {
@@ -1213,6 +1415,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2026",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1239,6 +1442,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2027",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1265,6 +1469,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2028",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1291,6 +1496,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2029",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1317,6 +1523,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2030",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1343,6 +1550,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2031",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1369,6 +1577,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2032",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1395,6 +1604,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2033",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1421,6 +1631,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2034",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1447,6 +1658,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2035",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1473,6 +1685,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2036",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1499,6 +1712,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2037",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1525,6 +1739,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2038",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1551,6 +1766,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2039",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1577,6 +1793,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2040",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1603,6 +1820,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2041",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1629,6 +1847,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2042",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1655,6 +1874,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2043",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1681,6 +1901,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2044",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1691,8 +1912,143 @@ return ReadOnly("Walnut", {
     WalnutNumber = 1,
     WalnutType = 2
   },
+  [2045] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_16,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/T_Walnut_Weapon.T_Walnut_Weapon",
+    Id = {
+      [1] = 910203,
+      [2] = 12024,
+      [3] = 30002,
+      [4] = 12025,
+      [5] = 211,
+      [6] = 2008
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_2045",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 120,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 2045,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 2
+  },
+  [2046] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_16,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/T_Walnut_Weapon.T_Walnut_Weapon",
+    Id = {
+      [1] = 910304,
+      [2] = 12055,
+      [3] = 30002,
+      [4] = 12056,
+      [5] = 211,
+      [6] = 2008
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_2046",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 120,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 2046,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 2
+  },
+  [2047] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_16,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Melee/T_Walnut_Swordwhip_Zeshi.T_Walnut_Swordwhip_Zeshi",
+    Id = {
+      [1] = 910502,
+      [2] = 12057,
+      [3] = 30002,
+      [4] = 12058,
+      [5] = 211,
+      [6] = 2008
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_2047",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 110,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 2047,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 2
+  },
+  [2048] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_16,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/T_Walnut_Weapon.T_Walnut_Weapon",
+    Id = {
+      [1] = 920302,
+      [2] = 12059,
+      [3] = 30002,
+      [4] = 12060,
+      [5] = 12061,
+      [6] = 211
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_2048",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 140,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 2048,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 2
+  },
+  [2049] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_16,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Range/T_Walnut_Machinegun_Ruohua.T_Walnut_Machinegun_Ruohua",
+    Id = {
+      [1] = 920510,
+      [2] = 12062,
+      [3] = 30002,
+      [4] = 12063,
+      [5] = 12064,
+      [6] = 211
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_2049",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 110,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 2049,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 2
+  },
   [2050] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_16,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Range/T_Walnut_Machinegun_Zhimeng.T_Walnut_Machinegun_Zhimeng",
     Id = {
@@ -1707,6 +2063,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_2050",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 105,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1717,8 +2074,62 @@ return ReadOnly("Walnut", {
     WalnutNumber = 1,
     WalnutType = 2
   },
+  [2051] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_16,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Melee/T_Walnut_Polearm_Yihe.T_Walnut_Polearm_Yihe",
+    Id = {
+      [1] = 910208,
+      [2] = 12133,
+      [3] = 30002,
+      [4] = 12134,
+      [5] = 211,
+      [6] = 2008
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_2051",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 110,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 2051,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 2
+  },
+  [2052] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_16,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Range/T_Walnut_Machinegun_Quewu.T_Walnut_Machinegun_Quewu",
+    Id = {
+      [1] = 920506,
+      [2] = 12135,
+      [3] = 30002,
+      [4] = 12136,
+      [5] = 12137,
+      [6] = 211
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_2052",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 110,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 2052,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 2
+  },
   [151321] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Griffin01_Black",
     Id = {
@@ -1733,6 +2144,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151321",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1744,7 +2156,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151322] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Griffin01_Blue",
     Id = {
@@ -1759,6 +2171,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151322",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1770,7 +2183,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151323] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Griffin01_Red",
     Id = {
@@ -1785,6 +2198,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151323",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1796,7 +2210,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151324] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Griffin01_Purple",
     Id = {
@@ -1811,6 +2225,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151324",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1822,7 +2237,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151325] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Griffin01",
     Id = {
@@ -1837,6 +2252,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151325",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1848,7 +2264,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151326] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Griffin01_Orange",
     Id = {
@@ -1863,6 +2279,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151326",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1874,7 +2291,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151331] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Griffin01_Black",
     Id = {
@@ -1889,6 +2306,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151331",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1900,7 +2318,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151332] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Griffin01_Blue",
     Id = {
@@ -1915,6 +2333,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151332",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1926,7 +2345,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151333] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Griffin01_Red",
     Id = {
@@ -1941,6 +2360,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151333",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1952,7 +2372,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151334] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Griffin01_Purple",
     Id = {
@@ -1967,6 +2387,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151334",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1978,7 +2399,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151335] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Griffin01",
     Id = {
@@ -1993,6 +2414,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151335",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2004,7 +2426,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151336] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Griffin01_Orange",
     Id = {
@@ -2019,6 +2441,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151336",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2030,7 +2453,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151411] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Black",
     Id = {
@@ -2045,6 +2468,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151411",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2056,7 +2480,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151412] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Black",
     Id = {
@@ -2071,6 +2495,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151412",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2082,7 +2507,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151413] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Black",
     Id = {
@@ -2097,6 +2522,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151413",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2108,7 +2534,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151414] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Black",
     Id = {
@@ -2123,6 +2549,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151414",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2134,7 +2561,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151415] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Black",
     Id = {
@@ -2149,6 +2576,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151415",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2160,7 +2588,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151421] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Blue",
     Id = {
@@ -2175,6 +2603,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151421",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2186,7 +2615,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151422] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Blue",
     Id = {
@@ -2201,6 +2630,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151422",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2212,7 +2642,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151423] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Blue",
     Id = {
@@ -2227,6 +2657,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151423",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2238,7 +2669,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151424] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Blue",
     Id = {
@@ -2253,6 +2684,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151424",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2264,7 +2696,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151425] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Blue",
     Id = {
@@ -2279,6 +2711,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151425",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2290,7 +2723,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151431] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01",
     Id = {
@@ -2305,6 +2738,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151431",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2316,7 +2750,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151432] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01",
     Id = {
@@ -2331,6 +2765,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151432",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2342,7 +2777,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151433] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01",
     Id = {
@@ -2357,6 +2792,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151433",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2368,7 +2804,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151434] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01",
     Id = {
@@ -2383,6 +2819,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151434",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2394,7 +2831,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151435] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01",
     Id = {
@@ -2409,6 +2846,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151435",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2420,7 +2858,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151441] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Purple",
     Id = {
@@ -2435,6 +2873,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151441",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2446,7 +2885,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151442] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Purple",
     Id = {
@@ -2461,6 +2900,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151442",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2472,7 +2912,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151443] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Purple",
     Id = {
@@ -2487,6 +2927,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151443",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2498,7 +2939,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151444] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Purple",
     Id = {
@@ -2513,6 +2954,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151444",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2524,7 +2966,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151445] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Purple",
     Id = {
@@ -2539,6 +2981,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151445",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2550,7 +2993,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151451] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Green",
     Id = {
@@ -2565,6 +3008,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151451",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2576,7 +3020,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151452] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Green",
     Id = {
@@ -2591,6 +3035,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151452",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2602,7 +3047,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151453] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Green",
     Id = {
@@ -2617,6 +3062,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151453",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2628,7 +3074,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151454] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Green",
     Id = {
@@ -2643,6 +3089,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151454",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2654,7 +3101,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151455] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Green",
     Id = {
@@ -2669,6 +3116,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151455",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2680,7 +3128,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151461] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Orange",
     Id = {
@@ -2695,6 +3143,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151461",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2706,7 +3155,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151462] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Orange",
     Id = {
@@ -2721,6 +3170,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151462",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2732,7 +3182,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151463] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Orange",
     Id = {
@@ -2747,6 +3197,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151463",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2758,7 +3209,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151464] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Orange",
     Id = {
@@ -2773,6 +3224,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151464",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2784,7 +3236,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151465] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Typhon01_Orange",
     Id = {
@@ -2799,6 +3251,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151465",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2810,7 +3263,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151711] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01_Black",
     Id = {
@@ -2825,6 +3278,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151711",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2836,7 +3290,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151712] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01_Black",
     Id = {
@@ -2851,6 +3305,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151712",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2862,7 +3317,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151713] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01_Black",
     Id = {
@@ -2877,6 +3332,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151713",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2888,7 +3344,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151714] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01_Black",
     Id = {
@@ -2903,6 +3359,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151714",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2914,7 +3371,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151721] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01",
     Id = {
@@ -2929,6 +3386,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151721",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2940,7 +3398,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151722] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01",
     Id = {
@@ -2955,6 +3413,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151722",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2966,7 +3425,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151723] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01",
     Id = {
@@ -2981,6 +3440,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151723",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -2992,7 +3452,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151724] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01",
     Id = {
@@ -3007,6 +3467,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151724",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3018,7 +3479,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151731] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01_Red",
     Id = {
@@ -3033,6 +3494,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151731",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3044,7 +3506,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151732] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01_Red",
     Id = {
@@ -3059,6 +3521,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151732",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3070,7 +3533,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151733] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01_Red",
     Id = {
@@ -3085,6 +3548,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151733",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3096,7 +3560,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151734] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01_Red",
     Id = {
@@ -3111,6 +3575,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151734",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3122,7 +3587,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151741] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01_Purple",
     Id = {
@@ -3137,6 +3602,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151741",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3148,7 +3614,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151742] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01_Purple",
     Id = {
@@ -3163,6 +3629,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151742",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3174,7 +3641,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151743] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01_Purple",
     Id = {
@@ -3189,6 +3656,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151743",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3200,7 +3668,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151744] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01_Purple",
     Id = {
@@ -3215,6 +3683,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151744",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3226,7 +3695,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151751] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01_Green",
     Id = {
@@ -3241,6 +3710,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151751",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3252,7 +3722,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151752] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01_Green",
     Id = {
@@ -3267,6 +3737,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151752",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3278,7 +3749,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151753] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01_Green",
     Id = {
@@ -3293,6 +3764,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151753",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3304,7 +3776,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151754] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01_Green",
     Id = {
@@ -3319,6 +3791,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151754",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3329,8 +3802,62 @@ return ReadOnly("Walnut", {
     WalnutNumber = 1,
     WalnutType = 3
   },
+  [151755] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_14,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_FeatheredSnake01_Green",
+    Id = {
+      [1] = 151755,
+      [2] = 102,
+      [3] = 102,
+      [4] = 102,
+      [5] = 102,
+      [6] = 102
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_151755",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 110,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 151755,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 3
+  },
+  [151756] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_14,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_FeatheredSnake01_Green",
+    Id = {
+      [1] = 151756,
+      [2] = 102,
+      [3] = 102,
+      [4] = 102,
+      [5] = 102,
+      [6] = 102
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_151756",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 110,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 151756,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 3
+  },
   [151761] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01_Orange",
     Id = {
@@ -3345,6 +3872,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151761",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3356,7 +3884,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151762] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01_Orange",
     Id = {
@@ -3371,6 +3899,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151762",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3382,7 +3911,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151763] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01_Orange",
     Id = {
@@ -3397,6 +3926,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151763",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3408,7 +3938,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151764] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Mephisto01_Orange",
     Id = {
@@ -3423,6 +3953,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151764",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3434,7 +3965,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151911] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Anubis01_Purple",
     Id = {
@@ -3449,6 +3980,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151911",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3460,7 +3992,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151921] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Bahamut01",
     Id = {
@@ -3475,6 +4007,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151921",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3486,7 +4019,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151922] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Bahamut01",
     Id = {
@@ -3501,6 +4034,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151922",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3512,7 +4046,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151931] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Ifrit01",
     Id = {
@@ -3527,6 +4061,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151931",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3538,7 +4073,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151941] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Summanus01",
     Id = {
@@ -3553,6 +4088,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151941",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3564,7 +4100,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151951] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Hastur01",
     Id = {
@@ -3579,6 +4115,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151951",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3590,7 +4127,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151952] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Hastur01",
     Id = {
@@ -3605,6 +4142,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151952",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3616,7 +4154,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151961] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Yatagarasu01",
     Id = {
@@ -3631,6 +4169,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151961",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -3642,7 +4181,7 @@ return ReadOnly("Walnut", {
     WalnutType = 3
   },
   [151962] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_9,
     Count = T.RT_14,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Yatagarasu01",
     Id = {
@@ -3657,12 +4196,121 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_151962",
     Param = T.RT_6,
     Rarity = 5,
+    ReleaseVersion = 100,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
     Sound = "SOUND_ITEM_MIHAN",
     Type = T.RT_15,
     WalnutId = 151962,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 3
+  },
+  [156151] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_14,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Changeling01",
+    Id = {
+      [1] = 156151,
+      [2] = 102,
+      [3] = 102,
+      [4] = 102,
+      [5] = 102,
+      [6] = 102
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_156151",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 110,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 156151,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 3
+  },
+  [156152] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_14,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Siren01_Green",
+    Id = {
+      [1] = 156152,
+      [2] = 102,
+      [3] = 102,
+      [4] = 102,
+      [5] = 102,
+      [6] = 102
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_156152",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 110,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 156152,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 3
+  },
+  [156153] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_14,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Changeling01",
+    Id = {
+      [1] = 156153,
+      [2] = 102,
+      [3] = 102,
+      [4] = 102,
+      [5] = 102,
+      [6] = 102
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_156153",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 110,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 156153,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 3
+  },
+  [156154] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_14,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Siren01_Green",
+    Id = {
+      [1] = 156154,
+      [2] = 102,
+      [3] = 102,
+      [4] = 102,
+      [5] = 102,
+      [6] = 102
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_156154",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 110,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 156154,
     WalnutIndex = "A",
     WalnutNumber = 1,
     WalnutType = 3

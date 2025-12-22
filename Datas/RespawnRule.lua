@@ -89,5 +89,17 @@ return ReadOnly("RespawnRule", {
     PlayerRecoverTimes = 1,
     RecoverUI = "BattleResurgence",
     RuleId = "Rouge"
+  },
+  SpecialQuestNoRes = {
+    DelayTime = 1.8,
+    DissolveAfterDead = true,
+    DyingDuration = 20,
+    NotModify = true,
+    PhantomRecoverSpeed = 0,
+    PhantomRecoverTimes = 0,
+    PlayerRecoverSpeed = 0,
+    PlayerRecoverTimes = 0,
+    RecoverUI = "None",
+    RuleId = "SpecialQuestNoRes"
   }
 })

@@ -39,7 +39,8 @@ return ReadOnly("ShopTabMain", {
   [170] = {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Shop_Banner.T_Tab_Shop_Banner'",
     MainName = "UI_SHOP_MAINTAB_BANNER",
-    MainTabId = 170
+    MainTabId = 170,
+    PinVideo = true
   },
   [180] = {
     ConditionId = "SecretLetterShopTab",
@@ -71,10 +72,29 @@ return ReadOnly("ShopTabMain", {
     MainTabId = 703,
     UnlockHide = true
   },
+  [704] = {
+    ConditionId = "YanjinduShopTab",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_East_Season01.T_Tab_East_Season01'",
+    MainName = "UI_SHOP_TAB_ExploreBadge_East01",
+    MainTabId = 704,
+    UnlockHide = true
+  },
   [801] = {
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Item.T_Tab_Item'",
-    MainName = "UI_SHOP_MAINTAB_ITEM",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_IceLake.T_Tab_IceLake'",
+    MainName = "UI_SHOP_Fishing_Chapter01",
     MainTabId = 801
+  },
+  [802] = {
+    ConditionId = "YanjinduShopTab",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_East_Season01.T_Tab_East_Season01'",
+    MainName = "UI_SHOP_Fishing_East01",
+    MainTabId = 802,
+    UnlockHide = true
+  },
+  [9901] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_ShopClothes.T_Tab_ShopClothes'",
+    MainName = "MAIN_UI_SHOP",
+    MainTabId = 9901
   },
   [10000] = {
     ConditionId = "Abyss",
@@ -84,7 +104,7 @@ return ReadOnly("ShopTabMain", {
   },
   [10001] = {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_ShopClothes.T_Tab_ShopClothes'",
-    MainName = "UI_SHOP_TAB_Fishing",
+    MainName = "HuaxuEventShop",
     MainTabId = 10001
   },
   [10002] = {
@@ -92,5 +112,20 @@ return ReadOnly("ShopTabMain", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_ShopClothes.T_Tab_ShopClothes'",
     MainName = "Rouge_ExchangeShop",
     MainTabId = 10002
+  },
+  [10003] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Item.T_Tab_Item'",
+    MainName = "WeeklyDungeonShop",
+    MainTabId = 10003
+  },
+  [10004] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Item.T_Tab_Item'",
+    MainName = "RaidDungeon_Shop_Name",
+    MainTabId = 10004
+  },
+  [10005] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Item.T_Tab_Item'",
+    MainName = "HuaxuExploreShop",
+    MainTabId = 10005
   }
 })

@@ -1,10 +1,5 @@
 return {
   StaticCreator = {
-    ["2010028"] = {
-      CreatorId = 2010028,
-      UnitType = "Mechanism",
-      UnitId = 1
-    },
     ["2010030"] = {
       CreatorId = 2010030,
       UnitType = "Mechanism",
@@ -15,15 +10,10 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
-    ["2010043"] = {
-      CreatorId = 2010043,
+    ["2440008"] = {
+      CreatorId = 2440008,
       UnitType = "Mechanism",
-      UnitId = 1
-    },
-    ["2010032"] = {
-      CreatorId = 2010032,
-      UnitType = "Mechanism",
-      UnitId = 1
+      UnitId = 90100
     }
   },
   ManualItem = {},

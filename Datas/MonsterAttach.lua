@@ -14,7 +14,8 @@ return ReadOnly("MonsterAttach", {
     RelativeRotation = 0,
     SetPositionAndRotate = true,
     SourceSocketName = "pelvis",
-    TargetSocketName = "pelvis"
+    TargetSocketName = "pelvis",
+    bRelativeUseLocalSpace = false
   },
   [7002] = {
     AttachRuleId = 7002,
@@ -28,6 +29,7 @@ return ReadOnly("MonsterAttach", {
     RelativeRotation = 0,
     SetPositionAndRotate = true,
     SourceSocketName = "root",
-    TargetSocketName = "hand_l"
+    TargetSocketName = "hand_l",
+    bRelativeUseLocalSpace = false
   }
 })

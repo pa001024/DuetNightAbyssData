@@ -141,5 +141,25 @@ return ReadOnly("ChannelInfo", {
     Provider = "oppo",
     Region = "china",
     SDKChannelId = 0
+  },
+  [305] = {
+    AccountPrefix = "hero",
+    ChannelId = 305,
+    DeviceType = "pc",
+    Name = "全球官方steam-pc",
+    OS = "windows",
+    Provider = "hero",
+    Region = "global",
+    SDKChannelId = 0
+  },
+  [314] = {
+    AccountPrefix = "hero",
+    ChannelId = 314,
+    DeviceType = "pc",
+    Name = "PC云游戏",
+    OS = "windows",
+    Provider = "cloud",
+    Region = "china",
+    SDKChannelId = 0
   }
 })

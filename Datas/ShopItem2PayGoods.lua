@@ -2,12 +2,16 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("ShopItem2PayGoods", {
+  [99001] = "com.hero.dna.Pay_DailyCharaShards_fushu",
+  [99002] = "com.hero.dna.Pay_DailyCharaShards_kezhou",
   [110101] = "com.hero.dna.Pay_101",
   [110102] = "com.hero.dna.Pay_102",
   [110103] = "com.hero.dna.Pay_103",
   [110104] = "com.hero.dna.Pay_104",
   [110105] = "com.hero.dna.Pay_105",
   [110106] = "com.hero.dna.Pay_106",
+  [110107] = "com.hero.dna.Pay_108",
+  [110108] = "com.hero.dna.Pay_109",
   [160101] = "com.hero.dna.Pay_SummerBlossomBox1",
   [160102] = "com.hero.dna.Pay_SummerBlossomBox2",
   [160103] = "com.hero.dna.Pay_SummerBlossomBox3",
@@ -19,5 +23,20 @@ return ReadOnly("ShopItem2PayGoods", {
   [160109] = "com.hero.dna.Pay_Bundle3",
   [160110] = "com.hero.dna.Pay_Bundle4",
   [160111] = "com.hero.dna.Pay_ThemedSkinPack",
-  [160316] = "com.hero.dna.Pay_ThemedSkinPack01"
+  [160112] = "com.hero.dna.Pay_TideMelody1",
+  [160113] = "com.hero.dna.Pay_TideMelody2",
+  [160114] = "com.hero.dna.Pay_TideMelody3",
+  [160115] = "com.hero.dna.Pay_FragranceMelody1",
+  [160116] = "com.hero.dna.Pay_FragranceMelody2",
+  [160117] = "com.hero.dna.Pay_FragranceMelody3",
+  [160118] = "com.hero.dna.Pay_ThemedSkinPack_qipao",
+  [160119] = "com.hero.dna.Pay_CharaShards_fushu1",
+  [160120] = "com.hero.dna.Pay_CharaShards_fushu2",
+  [160121] = "com.hero.dna.Pay_CharaShards_fushu3",
+  [160122] = "com.hero.dna.Pay_CharaShards_kezhou1",
+  [160123] = "com.hero.dna.Pay_CharaShards_kezhou2",
+  [160124] = "com.hero.dna.Pay_CharaShards_kezhou3",
+  [160125] = "com.hero.dna.Pay_CosmeticBundle",
+  [160316] = "com.hero.dna.Pay_ThemedSkinPack01",
+  [160317] = "com.hero.dna.Pay_ThemedSkinPack_qipao01"
 })

@@ -21,7 +21,8 @@ T.RT_4 = {
 T.RT_5 = {
   4041,
   4042,
-  4043
+  4043,
+  4049
 }
 T.RT_6 = {
   4051,
@@ -89,6 +90,34 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("PetBreak", {
+  [601] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 601
+    }
+  },
+  [602] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 602
+    }
+  },
+  [603] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 603
+    }
+  },
+  [604] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 604
+    }
+  },
   [4011] = {
     [0] = {
       CollectRewardExp = 50,
@@ -555,6 +584,42 @@ return ReadOnly("PetBreak", {
       EntryNum = 4,
       PetBreakNum = 3,
       PetId = 4043
+    }
+  },
+  [4049] = {
+    [0] = {
+      CollectRewardExp = 50,
+      ConsumePetId = T.RT_5,
+      ConsumeResource = T.RT_2,
+      EntryNum = 0,
+      PetBreakLevel = 20,
+      PetBreakNum = 0,
+      PetId = 4049
+    },
+    [1] = {
+      CollectRewardExp = 50,
+      ConsumePetId = T.RT_5,
+      ConsumeResource = T.RT_2,
+      EntryNum = 1,
+      PetBreakLevel = 40,
+      PetBreakNum = 1,
+      PetId = 4049
+    },
+    [2] = {
+      CollectRewardExp = 50,
+      ConsumePetId = T.RT_5,
+      ConsumeResource = T.RT_2,
+      EntryNum = 2,
+      PetBreakLevel = 60,
+      PetBreakNum = 2,
+      PetId = 4049
+    },
+    [3] = {
+      CollectRewardExp = 50,
+      ConsumeResource = T.RT_2,
+      EntryNum = 3,
+      PetBreakNum = 3,
+      PetId = 4049
     }
   },
   [4051] = {
@@ -2079,6 +2144,27 @@ return ReadOnly("PetBreak", {
       EntryNum = 1,
       PetBreakNum = 0,
       PetId = 4936
+    }
+  },
+  [4941] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 4941
+    }
+  },
+  [4942] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 4942
+    }
+  },
+  [4943] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 4943
     }
   }
 })

@@ -23,9 +23,13 @@ return ReadOnly("AfterLoadingFSM", {
     FSMState = "JumpToRogueMain",
     NextState = "GameplayReward"
   },
+  LayoutPlan = {
+    FSMState = "LayoutPlan",
+    NextState = "DynamicQuest"
+  },
   MainLineQuest = {
     FSMState = "MainLineQuest",
-    NextState = "DynamicQuest"
+    NextState = "LayoutPlan"
   },
   OpenForcePopup = {
     FSMState = "OpenForcePopup",

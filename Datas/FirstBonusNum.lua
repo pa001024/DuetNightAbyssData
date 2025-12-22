@@ -31,5 +31,15 @@ return ReadOnly("FirstBonusNum", {
     BonusNum = 1680,
     FirstBonusNum = 6480,
     ItemId = 110106
+  },
+  [110107] = {
+    BonusNum = 3340,
+    FirstBonusNum = 3340,
+    ItemId = 110107
+  },
+  [110108] = {
+    BonusNum = 8550,
+    FirstBonusNum = 8550,
+    ItemId = 110108
   }
 })

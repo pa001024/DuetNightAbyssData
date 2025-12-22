@@ -21,12 +21,18 @@ return ReadOnly("GMIntegration", {
   },
   Batt01 = {
     GMCommands = {
-      [1] = "gm UnlockRegionTeleport 1",
-      [2] = "gm MockAllSystemCondition",
-      [3] = "gm SuccessAllSystemGuide",
-      [4] = "gm SuccQuestChain 120103",
-      [5] = "gm SuccQuest 12010503",
-      [6] = "gm skipregion 1 104201 1"
+      [1] = "sgm sl 42",
+      [2] = "sgm ct 60",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm MockAllSystemCondition",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020101",
+      [8] = "sgm qcf 120101",
+      [9] = "sgm qcf 120103",
+      [10] = "sgm qc 12010504",
+      [11] = "gm skipregion 1 104201 1",
+      [12] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "古战场幻境1",
     GMIntegrationName = "Batt01",
@@ -34,12 +40,18 @@ return ReadOnly("GMIntegration", {
   },
   Batt02 = {
     GMCommands = {
-      [1] = "gm UnlockRegionTeleport 1",
-      [2] = "gm MockAllSystemCondition",
-      [3] = "gm SuccessAllSystemGuide",
-      [4] = "gm SuccQuestChain 120103",
-      [5] = "gm SuccQuest 12010517",
-      [6] = "gm skipregion 1 104601 1"
+      [1] = "sgm sl 42",
+      [2] = "sgm ct 60",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm MockAllSystemCondition",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020101",
+      [8] = "sgm qcf 120101",
+      [9] = "sgm qcf 120103",
+      [10] = "sgm qc 12010517",
+      [11] = "gm skipregion 1 104601 1",
+      [12] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "古战场幻境2",
     GMIntegrationName = "Batt02",
@@ -47,12 +59,18 @@ return ReadOnly("GMIntegration", {
   },
   Batt03 = {
     GMCommands = {
-      [1] = "gm UnlockRegionTeleport 1",
-      [2] = "gm MockAllSystemCondition",
-      [3] = "gm SuccessAllSystemGuide",
-      [4] = "gm SuccQuestChain 120103",
-      [5] = "gm SuccQuest 12010518",
-      [6] = "gm skipregion 1 104701 1"
+      [1] = "sgm sl 42",
+      [2] = "sgm ct 60",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm MockAllSystemCondition",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020101",
+      [8] = "sgm qcf 120101",
+      [9] = "sgm qcf 120103",
+      [10] = "sgm qc 12010518",
+      [11] = "gm skipregion 1 104701 1",
+      [12] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "古战场幻境3",
     GMIntegrationName = "Batt03",
@@ -92,18 +110,18 @@ return ReadOnly("GMIntegration", {
   },
   CE_EX01_2 = {
     GMCommands = {
-      [1] = "gm succquestchain 100102",
-      [2] = "gm succquestchain 100103",
-      [3] = "gm succquestchain 100201",
-      [4] = "gm succquestchain 200101",
-      [5] = "gm succquestchain 100202",
-      [6] = "gm succquestchain 100203",
-      [7] = "gm succquestchain 100204",
-      [8] = "gm succquestchain 100205",
-      [9] = "gm succquestchain 200102",
-      [10] = "gm succquestchain 100206",
-      [11] = "gm succquestchain 100207",
-      [12] = "gm succquestchain 100208",
+      [1] = "sgm qcf 100102",
+      [2] = "sgm qcf 100103",
+      [3] = "sgm qcf 100201",
+      [4] = "sgm qcf 200101",
+      [5] = "sgm qcf 100202",
+      [6] = "sgm qcf 100203",
+      [7] = "sgm qcf 100204",
+      [8] = "sgm qcf 100205",
+      [9] = "sgm qcf 200102",
+      [10] = "sgm qcf 100206",
+      [11] = "sgm qcf 100207",
+      [12] = "sgm qcf 100208",
       [13] = "sgm aitv 1011 Morality 60",
       [14] = "sgm aitv 1011 Empathy 60",
       [15] = "sgm aitv 1011 Wisdom 60",
@@ -160,25 +178,18 @@ return ReadOnly("GMIntegration", {
     GMDisplayName = "解锁序章动态事件",
     GMIntegrationName = "DynPrologue"
   },
-  East01 = {
-    GMCommands = {
-      [1] = "gm UnlockRegionTeleport 1",
-      [2] = "gm MockAllSystemCondition",
-      [3] = "gm SuccessAllSystemGuide",
-      [4] = "gm skipregion 1 104101 1",
-      [5] = "gm succquestchain 990103"
-    },
-    GMDisplayName = "东国一期（总）",
-    GMIntegrationName = "East01",
-    GMTab = "任务"
-  },
   East01C1 = {
     GMCommands = {
-      [1] = "gm UnlockRegionTeleport 1",
-      [2] = "gm MockAllSystemCondition",
-      [3] = "gm SuccessAllSystemGuide",
-      [4] = "gm succquestchain 990103",
-      [5] = "gm skipregion 1 104108 1"
+      [1] = "sgm sl 42",
+      [2] = "sgm ct 60",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm MockAllSystemCondition",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020101",
+      [8] = "sgm qcf 120003",
+      [9] = "gm skipregion 1 104108 1",
+      [10] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "东国一期（一）",
     GMIntegrationName = "East01C1",
@@ -186,11 +197,16 @@ return ReadOnly("GMIntegration", {
   },
   East01C2 = {
     GMCommands = {
-      [1] = "gm UnlockRegionTeleport 1",
-      [2] = "gm MockAllSystemCondition",
-      [3] = "gm SuccessAllSystemGuide",
-      [4] = "gm succquestchain 120101",
-      [5] = "gm skipregion 1 104110 1"
+      [1] = "sgm sl 42",
+      [2] = "sgm ct 60",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm MockAllSystemCondition",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020101",
+      [8] = "sgm qcf 120101",
+      [9] = "gm skipregion 1 104110 1",
+      [10] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "东国一期（二）",
     GMIntegrationName = "East01C2",
@@ -198,11 +214,16 @@ return ReadOnly("GMIntegration", {
   },
   East01C3 = {
     GMCommands = {
-      [1] = "gm UnlockRegionTeleport 1",
-      [2] = "gm MockAllSystemCondition",
-      [3] = "gm SuccessAllSystemGuide",
-      [4] = "gm succquestchain 120102",
-      [5] = "gm skipregion 1 104109 1"
+      [1] = "sgm sl 42",
+      [2] = "sgm ct 60",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm MockAllSystemCondition",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020101",
+      [8] = "sgm qcf 120102",
+      [9] = "gm skipregion 1 104109 1",
+      [10] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "东国一期（三）",
     GMIntegrationName = "East01C3",
@@ -210,11 +231,16 @@ return ReadOnly("GMIntegration", {
   },
   East01C4 = {
     GMCommands = {
-      [1] = "gm UnlockRegionTeleport 1",
-      [2] = "gm MockAllSystemCondition",
-      [3] = "gm SuccessAllSystemGuide",
-      [4] = "gm succquestchain 120103",
-      [5] = "gm skipregion 1 104110 1"
+      [1] = "sgm sl 42",
+      [2] = "sgm ct 60",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm MockAllSystemCondition",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020101",
+      [8] = "sgm qc 12010317",
+      [9] = "gm skipregion 1 104106 1",
+      [10] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "东国一期（扶疏线）",
     GMIntegrationName = "East01C4",
@@ -222,11 +248,16 @@ return ReadOnly("GMIntegration", {
   },
   East01C5 = {
     GMCommands = {
-      [1] = "gm UnlockRegionTeleport 1",
-      [2] = "gm MockAllSystemCondition",
-      [3] = "gm SuccessAllSystemGuide",
-      [4] = "gm succquestchain 120103",
-      [5] = "gm skipregion 1 104109 1"
+      [1] = "sgm sl 42",
+      [2] = "sgm ct 60",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm MockAllSystemCondition",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020101",
+      [8] = "sgm qcf 120104",
+      [9] = "gm skipregion 1 104109 1",
+      [10] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "东国一期（虬先生线）",
     GMIntegrationName = "East01C5",
@@ -234,12 +265,17 @@ return ReadOnly("GMIntegration", {
   },
   East01C6 = {
     GMCommands = {
-      [1] = "gm UnlockRegionTeleport 1",
-      [2] = "gm MockAllSystemCondition",
-      [3] = "gm SuccessAllSystemGuide",
-      [4] = "gm succquestchain 120104",
-      [5] = "gm succquestchain 120105",
-      [6] = "gm skipregion 1 104110 1"
+      [1] = "sgm sl 42",
+      [2] = "sgm ct 60",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm MockAllSystemCondition",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020101",
+      [8] = "sgm qcf 120104",
+      [9] = "sgm qcf 120105",
+      [10] = "gm skipregion 1 104110 1",
+      [11] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "东国一期（六）",
     GMIntegrationName = "East01C6",
@@ -248,17 +284,32 @@ return ReadOnly("GMIntegration", {
   EastOpen = {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
-      [2] = "gm succquestchain 100102",
-      [3] = "gm succquestchain 100103",
-      [4] = "gm succquestchain 100201",
-      [5] = "gm succquestchain 100208",
-      [6] = "gm succquestchain 100301",
-      [7] = "gm succquestchain 100307",
+      [2] = "sgm qcf 100102",
+      [3] = "sgm qcf 100103",
+      [4] = "sgm qcf 100201",
+      [5] = "sgm qcf 100208",
+      [6] = "sgm qcf 100301",
+      [7] = "sgm qcf 100307",
       [8] = "sgm sl 40",
-      [9] = "gm skipregion 1 101107 1"
+      [9] = "gm skipregion 1 101107 1",
+      [10] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "东国引入",
     GMIntegrationName = "EastOpen",
+    GMTab = "任务"
+  },
+  FakeQuest1002 = {
+    GMCommands = {
+      [1] = "gm FSG 2002",
+      [2] = "gm FSG 2038",
+      [3] = "gm FSG 2055",
+      [4] = "gm FSG 2015",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020107"
+    },
+    GMDisplayName = "提前完成第一章",
+    GMIntegrationName = "FakeQuest1002",
     GMTab = "任务"
   },
   Feina01 = {
@@ -266,7 +317,7 @@ return ReadOnly("GMIntegration", {
       [1] = "gm UnlockRegionTeleport 1",
       [2] = "gm MockAllSystemCondition",
       [3] = "gm SuccessAllSystemGuide",
-      [4] = "gm SuccQuestChain 100208",
+      [4] = "sgm qcf 990103",
       [5] = "gm skipregion 1 101105 1",
       [6] = "gm aade",
       [7] = "gm CompleteCondition 4220"
@@ -280,7 +331,7 @@ return ReadOnly("GMIntegration", {
       [1] = "gm UnlockRegionTeleport 1",
       [2] = "gm MockAllSystemCondition",
       [3] = "gm SuccessAllSystemGuide",
-      [4] = "gm SuccQuestChain 120111",
+      [4] = "sgm qcf 120111",
       [5] = "gm skipregion 1 101105 1",
       [6] = "gm aade",
       [7] = "gm CompleteCondition 4220"
@@ -294,7 +345,7 @@ return ReadOnly("GMIntegration", {
       [1] = "gm UnlockRegionTeleport 1",
       [2] = "gm MockAllSystemCondition",
       [3] = "gm SuccessAllSystemGuide",
-      [4] = "gm SuccQuestChain 120112",
+      [4] = "sgm qcf 120112",
       [5] = "gm skipregion 1 101105 1",
       [6] = "gm aade",
       [7] = "gm CompleteCondition 4220"
@@ -308,7 +359,7 @@ return ReadOnly("GMIntegration", {
       [1] = "gm UnlockRegionTeleport 1",
       [2] = "gm MockAllSystemCondition",
       [3] = "gm SuccessAllSystemGuide",
-      [4] = "gm SuccQuestChain 120113",
+      [4] = "sgm qcf 120113",
       [5] = "gm skipregion 1 101105 1",
       [6] = "gm aade",
       [7] = "gm CompleteCondition 4220"
@@ -322,8 +373,8 @@ return ReadOnly("GMIntegration", {
       [1] = "gm UnlockRegionTeleport 1",
       [2] = "gm MockAllSystemCondition",
       [3] = "gm SuccessAllSystemGuide",
-      [4] = "gm SuccQuestChain 120113",
-      [5] = "gm SuccQuest 12011407",
+      [4] = "sgm qcf 120113",
+      [5] = "sgm qc 12011406",
       [6] = "gm skipregion 1 101103 6",
       [7] = "gm aade"
     },
@@ -336,8 +387,8 @@ return ReadOnly("GMIntegration", {
       [1] = "gm UnlockRegionTeleport 1",
       [2] = "gm MockAllSystemCondition",
       [3] = "gm SuccessAllSystemGuide",
-      [4] = "gm SuccQuestChain 120113",
-      [5] = "gm SuccQuest 12011405",
+      [4] = "sgm qcf 120113",
+      [5] = "sgm qc 12011405",
       [6] = "gm skipregion 1 101103 6",
       [7] = "gm aade"
     },
@@ -350,8 +401,8 @@ return ReadOnly("GMIntegration", {
       [1] = "gm UnlockRegionTeleport 1",
       [2] = "gm MockAllSystemCondition",
       [3] = "gm SuccessAllSystemGuide",
-      [4] = "gm SuccQuestChain 120113",
-      [5] = "gm SuccQuest 12011411",
+      [4] = "sgm qcf 120113",
+      [5] = "sgm qc 12011411",
       [6] = "gm skipregion 1 101105 1",
       [7] = "gm aade"
     },
@@ -674,14 +725,93 @@ return ReadOnly("GMIntegration", {
     GMDisplayName = "解锁教学手册条目",
     GMIntegrationName = "GuideBook"
   },
+  HeilongBoss = {
+    GMCommands = {
+      [1] = "sgm sl 42",
+      [2] = "sgm ct 60",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm MockAllSystemCondition",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020101",
+      [8] = "sgm qcf 120104",
+      [9] = "sgm qcf 120105",
+      [10] = "gm skipregion 1 105701 1",
+      [11] = "sgm qc 12010605",
+      [12] = "gm SuccessAllSystemGuide"
+    },
+    GMDisplayName = "东国一期（黑龙BOSS战）",
+    GMIntegrationName = "HeilongBoss",
+    GMTab = "任务"
+  },
+  HeilongBossAlt = {
+    GMCommands = {
+      [1] = "sgm sl 42",
+      [2] = "sgm ct 60",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm MockAllSystemCondition",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020101",
+      [8] = "sgm qcf 120104",
+      [9] = "sgm qcf 120105",
+      [10] = "sgm qc 12010602",
+      [11] = "gm skipregion 1 105701 1",
+      [12] = "gm SuccessAllSystemGuide"
+    },
+    GMDisplayName = "东国一期（到达黑龙祭坛）",
+    GMIntegrationName = "HeilongBossAlt"
+  },
+  HeilonglingFight = {
+    GMCommands = {
+      [1] = "sgm sl 42",
+      [2] = "sgm ct 60",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm MockAllSystemCondition",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020101",
+      [8] = "sgm qcf 120102",
+      [9] = "gm skipregion 1 104105 1",
+      [10] = "sgm qc 12010352",
+      [11] = "gm SuccessAllSystemGuide"
+    },
+    GMDisplayName = "东国一期（采集黑龙鳞）",
+    GMIntegrationName = "HeilonglingFight"
+  },
+  JuqueBoss = {
+    GMCommands = {
+      [1] = "sgm sl 42",
+      [2] = "sgm ct 60",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm MockAllSystemCondition",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020101",
+      [8] = "sgm qcf 120103",
+      [9] = "sgm qc 12010518",
+      [10] = "gm SS:SetInt(\"East01Nai03Phase\",1)",
+      [11] = "gm skipregion 1 104701 1",
+      [12] = "gm SuccessAllSystemGuide"
+    },
+    GMDisplayName = "东国一期（巨阙BOSS战）",
+    GMIntegrationName = "JuqueBoss",
+    GMTab = "任务"
+  },
   Nai01 = {
     GMCommands = {
-      [1] = "gm UnlockRegionTeleport 1",
-      [2] = "gm MockAllSystemCondition",
-      [3] = "gm SuccessAllSystemGuide",
-      [4] = "gm SuccQuestChain 120103",
-      [5] = "gm SuccQuest 12010415",
-      [6] = "gm skipregion 1 104301 1"
+      [1] = "sgm sl 42",
+      [2] = "sgm ct 60",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm MockAllSystemCondition",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020101",
+      [8] = "sgm qcf 120101",
+      [9] = "sgm qcf 120103",
+      [10] = "sgm qc 12010415",
+      [11] = "gm skipregion 1 104301 1",
+      [12] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "扶疏幻境1",
     GMIntegrationName = "Nai01",
@@ -689,12 +819,18 @@ return ReadOnly("GMIntegration", {
   },
   Nai02 = {
     GMCommands = {
-      [1] = "gm UnlockRegionTeleport 1",
-      [2] = "gm MockAllSystemCondition",
-      [3] = "gm SuccessAllSystemGuide",
-      [4] = "gm SuccQuestChain 120103",
-      [5] = "gm SuccQuest 12010416",
-      [6] = "gm skipregion 1 104401 1"
+      [1] = "sgm sl 42",
+      [2] = "sgm ct 60",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm MockAllSystemCondition",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020101",
+      [8] = "sgm qcf 120101",
+      [9] = "sgm qcf 120103",
+      [10] = "sgm qc 12010416",
+      [11] = "gm skipregion 1 104401 1",
+      [12] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "扶疏幻境2",
     GMIntegrationName = "Nai02",
@@ -702,16 +838,39 @@ return ReadOnly("GMIntegration", {
   },
   Nai03 = {
     GMCommands = {
-      [1] = "gm UnlockRegionTeleport 1",
-      [2] = "gm MockAllSystemCondition",
-      [3] = "gm SuccessAllSystemGuide",
-      [4] = "gm SuccQuestChain 120103",
-      [5] = "gm SuccQuest 12010417",
-      [6] = "gm skipregion 1 105001 1"
+      [1] = "sgm sl 42",
+      [2] = "sgm ct 60",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm MockAllSystemCondition",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020101",
+      [8] = "sgm qcf 120101",
+      [9] = "sgm qcf 120103",
+      [10] = "sgm qc 12010417",
+      [11] = "gm skipregion 1 105001 1",
+      [12] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "扶疏幻境3",
     GMIntegrationName = "Nai03",
     GMTab = "任务"
+  },
+  PorJiebei = {
+    GMCommands = {
+      [1] = "sgm sl 42",
+      [2] = "sgm ct 60",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm MockAllSystemCondition",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020101",
+      [8] = "sgm qcf 120003",
+      [9] = "sgm qc 12010107",
+      [10] = "gm skipregion 1 104108 2",
+      [11] = "gm SuccessAllSystemGuide"
+    },
+    GMDisplayName = "东国一期（界碑移动）",
+    GMIntegrationName = "PorJiebei"
   },
   ResetDispatch = {
     GMCommands = {
@@ -873,13 +1032,13 @@ return ReadOnly("GMIntegration", {
       [2] = "gm MockAllSystemCondition",
       [3] = "gm SuccessAllSystemGuide",
       [4] = "gm skipRegion 1 101101 1",
-      [5] = "gm succquestchain 100201",
-      [6] = "gm succquestchain 100202",
-      [7] = "gm succquestchain 100203",
-      [8] = "gm succquestchain 100204",
-      [9] = "gm succquestchain 100205",
-      [10] = "gm succquestchain 100206",
-      [11] = "gm succquestchain 100208",
+      [5] = "sgm qcf 100201",
+      [6] = "sgm qcf 100202",
+      [7] = "sgm qcf 100203",
+      [8] = "sgm qcf 100204",
+      [9] = "sgm qcf 100205",
+      [10] = "sgm qcf 100206",
+      [11] = "sgm qcf 100208",
       [12] = "sgm aitv 1011 Morality 100",
       [13] = "sgm aitv 1011 Empathy 100",
       [14] = "sgm aitv 1011 Wisdom 100",
@@ -889,14 +1048,31 @@ return ReadOnly("GMIntegration", {
     GMIntegrationName = "SSS",
     GMTab = "任务"
   },
+  SprFight = {
+    GMCommands = {
+      [1] = "sgm sl 42",
+      [2] = "sgm ct 60",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm MockAllSystemCondition",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020101",
+      [8] = "sgm qcf 120102",
+      [9] = "sgm qc 12010312",
+      [10] = "gm skipregion 1 104107 2",
+      [11] = "gm SuccessAllSystemGuide"
+    },
+    GMDisplayName = "东国一期（百年春保卫战）",
+    GMIntegrationName = "SprFight",
+    GMTab = "任务"
+  },
   StartChapter01 = {
     GMCommands = {
       [1] = "sgm aoc 1601",
-      [2] = "gm succquestchain 100102",
-      [3] = "gm succquestchain 100103",
+      [2] = "sgm qcf 100102",
+      [3] = "sgm qcf 100103",
       [4] = "gm skipregion 1 101103 10",
-      [5] = "gm TestTrackingQuest 100201",
-      [6] = "sgm FSG 3001"
+      [5] = "gm TestTrackingQuest 100201"
     },
     GMDisplayName = "直接开始第一章",
     GMIntegrationName = "StartChapter01",
@@ -921,8 +1097,8 @@ return ReadOnly("GMIntegration", {
   },
   TrainingGroundQuest = {
     GMCommands = {
-      [1] = "gm succquestchain 100103",
-      [2] = "gm startquest 10020109",
+      [1] = "sgm qcf 100103",
+      [2] = "sgm stq 10020109",
       [3] = "gm TestTrackingQuest 100201",
       [4] = "gm cm 6001001 1 1"
     },
@@ -974,12 +1150,31 @@ return ReadOnly("GMIntegration", {
   },
   XibiBoss = {
     GMCommands = {
-      [1] = "gm succquestchain 100102",
-      [2] = "gm succquest 10010305",
+      [1] = "sgm qcf 100102",
+      [2] = "sgm qc 10010305",
       [3] = "gm skipregion 1 100103 1"
     },
     GMDisplayName = "序章（西比尔boss战）",
     GMIntegrationName = "XibiBoss",
+    GMTab = "任务"
+  },
+  YumingBoss = {
+    GMCommands = {
+      [1] = "sgm sl 42",
+      [2] = "sgm ct 60",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm MockAllSystemCondition",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020101",
+      [8] = "sgm qcf 120103",
+      [9] = "gm skipregion 1 104102 1",
+      [10] = "sgm qc 12010518",
+      [11] = "sgm qc 12010513",
+      [12] = "gm SuccessAllSystemGuide"
+    },
+    GMDisplayName = "东国一期（煜明BOSS战）",
+    GMIntegrationName = "YumingBoss",
     GMTab = "任务"
   },
   alch = {
@@ -1003,14 +1198,14 @@ return ReadOnly("GMIntegration", {
       [1] = "gm SystemCommonUnlock",
       [2] = "sgm sl 60",
       [3] = "sgm ct 50",
-      [4] = "gm succquestchain 100202",
-      [5] = "gm succquestchain 100102",
-      [6] = "gm succquestchain 100103",
-      [7] = "gm succquestchain 100201",
-      [8] = "gm succquestchain 100208",
-      [9] = "gm succquestchain 110109",
-      [10] = "gm succquestchain 200227",
-      [11] = "gm succquest 20021501",
+      [4] = "sgm qcf 100202",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qcf 100201",
+      [8] = "sgm qcf 100208",
+      [9] = "sgm qcf 110109",
+      [10] = "sgm qcf 200227",
+      [11] = "sgm qc 20021501",
       [12] = "gm TestTrackingQuest 100301"
     },
     GMDisplayName = "第二章第一幕",
@@ -1022,14 +1217,14 @@ return ReadOnly("GMIntegration", {
       [1] = "gm SystemCommonUnlock",
       [2] = "sgm sl 60",
       [3] = "sgm ct 50",
-      [4] = "gm succquestchain 100202",
-      [5] = "gm succquestchain 100102",
-      [6] = "gm succquestchain 100103",
-      [7] = "gm succquestchain 100201",
-      [8] = "gm succquestchain 100208",
-      [9] = "gm succquestchain 110109",
-      [10] = "gm succquestchain 100301",
-      [11] = "gm succquest 20021501",
+      [4] = "sgm qcf 100202",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qcf 100201",
+      [8] = "sgm qcf 100208",
+      [9] = "sgm qcf 110109",
+      [10] = "sgm qcf 100301",
+      [11] = "sgm qc 20021501",
       [12] = "gm TestTrackingQuest 100302"
     },
     GMDisplayName = "第二章第二幕",
@@ -1041,15 +1236,15 @@ return ReadOnly("GMIntegration", {
       [1] = "gm SystemCommonUnlock",
       [2] = "sgm sl 60",
       [3] = "sgm ct 50",
-      [4] = "gm succquestchain 100202",
-      [5] = "gm succquestchain 100102",
-      [6] = "gm succquestchain 100103",
-      [7] = "gm succquestchain 100201",
-      [8] = "gm succquestchain 100208",
-      [9] = "gm succquestchain 110109",
-      [10] = "gm succquestchain 100301",
-      [11] = "gm succquest 20021501",
-      [12] = "gm succquestchain 100302",
+      [4] = "sgm qcf 100202",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qcf 100201",
+      [8] = "sgm qcf 100208",
+      [9] = "sgm qcf 110109",
+      [10] = "sgm qcf 100301",
+      [11] = "sgm qc 20021501",
+      [12] = "sgm qcf 100302",
       [13] = "gm TestTrackingQuest 100303"
     },
     GMDisplayName = "第二章第三幕",
@@ -1061,16 +1256,16 @@ return ReadOnly("GMIntegration", {
       [1] = "gm SystemCommonUnlock",
       [2] = "sgm sl 60",
       [3] = "sgm ct 50",
-      [4] = "gm succquestchain 100202",
-      [5] = "gm succquestchain 100102",
-      [6] = "gm succquestchain 100103",
-      [7] = "gm succquestchain 100201",
-      [8] = "gm succquestchain 100208",
-      [9] = "gm succquestchain 110109",
-      [10] = "gm succquestchain 100301",
-      [11] = "gm succquest 20021501",
-      [12] = "gm succquestchain 100302",
-      [13] = "gm succquestchain 100303",
+      [4] = "sgm qcf 100202",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qcf 100201",
+      [8] = "sgm qcf 100208",
+      [9] = "sgm qcf 110109",
+      [10] = "sgm qcf 100301",
+      [11] = "sgm qc 20021501",
+      [12] = "sgm qcf 100302",
+      [13] = "sgm qcf 100303",
       [14] = "gm TestTrackingQuest 100304"
     },
     GMDisplayName = "第二章第四幕",
@@ -1082,17 +1277,17 @@ return ReadOnly("GMIntegration", {
       [1] = "gm SystemCommonUnlock",
       [2] = "sgm sl 60",
       [3] = "sgm ct 50",
-      [4] = "gm succquestchain 100202",
-      [5] = "gm succquestchain 100102",
-      [6] = "gm succquestchain 100103",
-      [7] = "gm succquestchain 100201",
-      [8] = "gm succquestchain 100208",
-      [9] = "gm succquestchain 110109",
-      [10] = "gm succquestchain 100301",
-      [11] = "gm succquest 20021501",
-      [12] = "gm succquestchain 100302",
-      [13] = "gm succquestchain 100303",
-      [14] = "gm succquestchain 100304",
+      [4] = "sgm qcf 100202",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qcf 100201",
+      [8] = "sgm qcf 100208",
+      [9] = "sgm qcf 110109",
+      [10] = "sgm qcf 100301",
+      [11] = "sgm qc 20021501",
+      [12] = "sgm qcf 100302",
+      [13] = "sgm qcf 100303",
+      [14] = "sgm qcf 100304",
       [15] = "gm TestTrackingQuest 100305"
     },
     GMDisplayName = "第二章第五幕",
@@ -1104,18 +1299,18 @@ return ReadOnly("GMIntegration", {
       [1] = "gm SystemCommonUnlock",
       [2] = "sgm sl 60",
       [3] = "sgm ct 50",
-      [4] = "gm succquestchain 100202",
-      [5] = "gm succquestchain 100102",
-      [6] = "gm succquestchain 100103",
-      [7] = "gm succquestchain 100201",
-      [8] = "gm succquestchain 100208",
-      [9] = "gm succquestchain 110109",
-      [10] = "gm succquestchain 100301",
-      [11] = "gm succquest 20021501",
-      [12] = "gm succquestchain 100302",
-      [13] = "gm succquestchain 100303",
-      [14] = "gm succquestchain 100304",
-      [15] = "gm succquestchain 100305",
+      [4] = "sgm qcf 100202",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qcf 100201",
+      [8] = "sgm qcf 100208",
+      [9] = "sgm qcf 110109",
+      [10] = "sgm qcf 100301",
+      [11] = "sgm qc 20021501",
+      [12] = "sgm qcf 100302",
+      [13] = "sgm qcf 100303",
+      [14] = "sgm qcf 100304",
+      [15] = "sgm qcf 100305",
       [16] = "gm TestTrackingQuest 100306",
       [17] = "gm SS = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UStorySubsystem:StaticClass())",
       [18] = "gm SS:SetInt(\"thea100306\", 3)",
@@ -1144,7 +1339,7 @@ return ReadOnly("GMIntegration", {
   dream = {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
-      [2] = "gm succquestchain 100207",
+      [2] = "sgm qcf 100207",
       [3] = "gm skipregion 1 101401 1"
     },
     GMIntegrationName = "dream"
@@ -1152,8 +1347,8 @@ return ReadOnly("GMIntegration", {
   dreamboss1 = {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
-      [2] = "gm succquestchain 100207",
-      [3] = "gm startquest 10020803",
+      [2] = "sgm qcf 100207",
+      [3] = "sgm stq 10020803",
       [4] = "gm skipregion 1 101402 1"
     },
     GMIntegrationName = "dreamboss1"
@@ -1161,8 +1356,8 @@ return ReadOnly("GMIntegration", {
   dreamboss2 = {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
-      [2] = "gm succquestchain 100207",
-      [3] = "gm startquest 10020804",
+      [2] = "sgm qcf 100207",
+      [3] = "sgm stq 10020804",
       [4] = "gm skipregion 1 101402 1"
     },
     GMIntegrationName = "dreamboss2"
@@ -1170,7 +1365,7 @@ return ReadOnly("GMIntegration", {
   enlike = {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
-      [2] = "gm succquestchain 100206",
+      [2] = "sgm qcf 100206",
       [3] = "sgm ar 2001 15000"
     },
     GMDisplayName = "第一章（恩里克之死）",
@@ -1180,12 +1375,12 @@ return ReadOnly("GMIntegration", {
   ex01 = {
     GMCommands = {
       [1] = "gm SystemCommonUnlock1",
-      [2] = "gm succquestchain 100102",
-      [3] = "gm succquestchain 100103",
-      [4] = "gm succquestchain 100201",
-      [5] = "gm succquestchain 100208",
-      [6] = "gm succquestchain 200215",
-      [7] = "gm succquestchain 200104",
+      [2] = "sgm qcf 100102",
+      [3] = "sgm qcf 100103",
+      [4] = "sgm qcf 100201",
+      [5] = "sgm qcf 100208",
+      [6] = "sgm qcf 200215",
+      [7] = "sgm qcf 200104",
       [8] = "gm TestTrackingQuest 110101",
       [9] = "sgm sl 60"
     },
@@ -1228,8 +1423,8 @@ return ReadOnly("GMIntegration", {
   ex01Haier = {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
-      [2] = "gm succquestchain 110108",
-      [3] = "gm succquest 11010908",
+      [2] = "sgm qcf 110108",
+      [3] = "sgm qc 11010908",
       [4] = "gm skipregion 1 102104 1"
     },
     GMDisplayName = "EX01海尔法",
@@ -1240,8 +1435,8 @@ return ReadOnly("GMIntegration", {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
       [2] = "gm skipregion 1 102102 3",
-      [3] = "gm succquestchain 110107",
-      [4] = "gm succquest 11010809",
+      [3] = "sgm qcf 110107",
+      [4] = "sgm qc 11010809",
       [5] = "gm TestTrackingQuest 11010810"
     },
     GMDisplayName = "EX01下水道前埋伏",
@@ -1252,8 +1447,8 @@ return ReadOnly("GMIntegration", {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
       [2] = "gm skipregion 1 102101 3",
-      [3] = "gm succquestchain 110101",
-      [4] = "gm succquest 11010305",
+      [3] = "sgm qcf 110101",
+      [4] = "sgm qc 11010305",
       [5] = "gm TestTrackingQuest 11010306"
     },
     GMDisplayName = "EX01能源室下层",
@@ -1264,8 +1459,8 @@ return ReadOnly("GMIntegration", {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
       [2] = "gm skipregion 1 102101 3",
-      [3] = "gm succquestchain 110101",
-      [4] = "gm succquest 11010313",
+      [3] = "sgm qcf 110101",
+      [4] = "sgm qc 11010313",
       [5] = "gm TestTrackingQuest 11010305"
     },
     GMDisplayName = "EX01能源室上层",
@@ -1276,8 +1471,8 @@ return ReadOnly("GMIntegration", {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
       [2] = "gm skipregion 1 102102 3",
-      [3] = "gm succquestchain 110103",
-      [4] = "gm succquest 11010523",
+      [3] = "sgm qcf 110103",
+      [4] = "sgm qc 11010523",
       [5] = "gm TestTrackingQuest 11010526"
     },
     GMDisplayName = "EX01推车-准备",
@@ -1288,8 +1483,8 @@ return ReadOnly("GMIntegration", {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
       [2] = "gm skipregion 1 102102 2",
-      [3] = "gm succquestchain 110103",
-      [4] = "gm succquest 11010512",
+      [3] = "sgm qcf 110103",
+      [4] = "sgm qc 11010512",
       [5] = "gm TestTrackingQuest 11010513"
     },
     GMDisplayName = "EX01大炮玩法",
@@ -1300,8 +1495,8 @@ return ReadOnly("GMIntegration", {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
       [2] = "gm skipregion 1 102103 3",
-      [3] = "gm succquestchain 110107",
-      [4] = "gm succquest 11010814",
+      [3] = "sgm qcf 110107",
+      [4] = "sgm qc 11010814",
       [5] = "gm TestTrackingQuest 11010801"
     },
     GMDisplayName = "EX01下水道",
@@ -1312,7 +1507,7 @@ return ReadOnly("GMIntegration", {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
       [2] = "gm skipregion 1 102104 3",
-      [3] = "gm succquestchain 110108"
+      [3] = "sgm qcf 110108"
     },
     GMDisplayName = "EX01监狱审判",
     GMIntegrationName = "ex01Shenpan",
@@ -1322,8 +1517,8 @@ return ReadOnly("GMIntegration", {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
       [2] = "gm skipregion 1 102102 3",
-      [3] = "gm succquestchain 110103",
-      [4] = "gm succquest 11010511",
+      [3] = "sgm qcf 110103",
+      [4] = "sgm qc 11010511",
       [5] = "gm TestTrackingQuest 11010512"
     },
     GMDisplayName = "EX01推车-炮台",
@@ -1333,9 +1528,9 @@ return ReadOnly("GMIntegration", {
   findsaiqi1 = {
     GMCommands = {
       [1] = "sgm sl 19",
-      [2] = "gm succquestchain 100206",
-      [3] = "gm succquestchain 200215",
-      [4] = "gm succquest 10020705",
+      [2] = "sgm qcf 100206",
+      [3] = "sgm qcf 200215",
+      [4] = "sgm qc 10020705",
       [5] = "gm skipregion 1 101101 10"
     },
     GMDisplayName = "第一章（追踪赛琪-城门前）",
@@ -1345,9 +1540,9 @@ return ReadOnly("GMIntegration", {
   findsaiqi2 = {
     GMCommands = {
       [1] = "sgm sl 19",
-      [2] = "gm succquestchain 100206",
-      [3] = "gm succquestchain 200215",
-      [4] = "gm succquest 10020706",
+      [2] = "sgm qcf 100206",
+      [3] = "sgm qcf 200215",
+      [4] = "sgm qc 10020706",
       [5] = "gm skipregion 1 101103 1"
     },
     GMDisplayName = "第一章（追踪赛琪-冰湖下）",
@@ -1357,7 +1552,7 @@ return ReadOnly("GMIntegration", {
   fish = {
     GMCommands = {
       [1] = "SystemCommonUnlock",
-      [2] = "gm succquest 20021501",
+      [2] = "sgm qc 20021501",
       [3] = "sgm ar 5110100 1",
       [4] = "sgm ar 5110200 1",
       [5] = "sgm ar 5110300 1",
@@ -1375,7 +1570,7 @@ return ReadOnly("GMIntegration", {
   fish_icelake = {
     GMCommands = {
       [1] = "SystemCommonUnlock",
-      [2] = "gm succquest 20021501",
+      [2] = "sgm qc 20021501",
       [3] = "sgm ar 5110100 1",
       [4] = "sgm ar 5210100 99",
       [5] = "sgm ar 5210200 99",
@@ -1413,8 +1608,8 @@ return ReadOnly("GMIntegration", {
   ht = {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
-      [2] = "gm succquestchain 100204",
-      [3] = "gm startquest 10020506",
+      [2] = "sgm qcf 100204",
+      [3] = "sgm stq 10020506",
       [4] = "gm skipregion 1 101101 8",
       [5] = "gm TestTrackingQuest 100205"
     },
@@ -1432,9 +1627,9 @@ return ReadOnly("GMIntegration", {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
       [2] = "sgm sl 19",
-      [3] = "gm succquestchain 100206",
-      [4] = "gm succquestchain 200102",
-      [5] = "gm startquest 10020708",
+      [3] = "sgm qcf 100206",
+      [4] = "sgm qcf 200102",
+      [5] = "sgm stq 10020708",
       [6] = "gm skipregion 1 101103 2"
     },
     GMIntegrationName = "icelakeboss"
@@ -1483,9 +1678,9 @@ return ReadOnly("GMIntegration", {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
       [2] = "sgm sl 12",
-      [3] = "gm succquestchain 100202",
-      [4] = "gm succquestchain 200103",
-      [5] = "gm startquest 10020305",
+      [3] = "sgm qcf 100202",
+      [4] = "sgm qcf 200103",
+      [5] = "sgm stq 10020305",
       [7] = "gm skipregion 1 101301 1",
       [8] = "gm TestTrackingQuest 100203"
     },
@@ -1540,12 +1735,12 @@ return ReadOnly("GMIntegration", {
   },
   letmeplay = {
     GMCommands = {
-      [1] = "gm succquestchain 200101",
-      [2] = "gm succquestchain 200102",
-      [3] = "gm succquestchain 200103",
-      [4] = "gm succquestchain 200215",
-      [5] = "gm succquestchain 200228",
-      [6] = "gm succquestchain 200229",
+      [1] = "sgm qcf 200101",
+      [2] = "sgm qcf 200102",
+      [3] = "sgm qcf 200103",
+      [4] = "sgm qcf 200215",
+      [5] = "sgm qcf 200228",
+      [6] = "sgm qcf 200229",
       [7] = "sgm ar 2001 50000"
     },
     GMDisplayName = "清所有卡主线支线",
@@ -1611,9 +1806,9 @@ return ReadOnly("GMIntegration", {
   searchsaiqi = {
     GMCommands = {
       [1] = "sgm ar 2001 8000",
-      [2] = "gm succquestchain 100206",
-      [3] = "gm succquestchain 200102",
-      [4] = "gm startquest 10020705",
+      [2] = "sgm qcf 100206",
+      [3] = "sgm qcf 200102",
+      [4] = "sgm stq 10020705",
       [5] = "gm skipregion 1 101101 2"
     },
     GMIntegrationName = "searchsaiqi"
@@ -1629,9 +1824,9 @@ return ReadOnly("GMIntegration", {
   sew = {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
-      [2] = "gm succquestchain 100201",
-      [3] = "gm succquestchain 200101",
-      [4] = "gm succquest 10020210",
+      [2] = "sgm qcf 100201",
+      [3] = "sgm qcf 200101",
+      [4] = "sgm qc 10020210",
       [5] = "gm skipregion 1 101702 3"
     },
     GMIntegrationName = "sew"
@@ -1696,9 +1891,9 @@ return ReadOnly("GMIntegration", {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
       [2] = "sgm sl 12",
-      [3] = "gm succquestchain 100202",
-      [4] = "gm succquestchain 200103",
-      [5] = "gm startquest 10020312",
+      [3] = "sgm qcf 100202",
+      [4] = "sgm qcf 200103",
+      [5] = "sgm stq 10020312",
       [6] = "gm skipregion 1 101304 1"
     },
     GMIntegrationName = "sjz"
@@ -1770,8 +1965,8 @@ return ReadOnly("GMIntegration", {
   waitsaiqi = {
     GMCommands = {
       [1] = "sgm ar 2001 8000",
-      [2] = "gm succquestchain 100206",
-      [3] = "gm succquestchain 200102",
+      [2] = "sgm qcf 100206",
+      [3] = "sgm qcf 200102",
       [4] = "gm skipregion 1 101101 2"
     },
     GMIntegrationName = "waitsaiqi"
@@ -1779,10 +1974,10 @@ return ReadOnly("GMIntegration", {
   walk = {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
-      [2] = "gm succquestchain 100205",
-      [3] = "gm succquestchain 200102",
+      [2] = "sgm qcf 100205",
+      [3] = "sgm qcf 200102",
       [4] = "gm skipregion 1 101103 1",
-      [5] = "gm startquest 10020608"
+      [5] = "sgm stq 10020608"
     },
     GMIntegrationName = "walk"
   },

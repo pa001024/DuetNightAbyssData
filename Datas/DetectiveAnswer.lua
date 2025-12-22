@@ -319,5 +319,26 @@ return ReadOnly("DetectiveAnswer", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_InformtIcon.T_DetectiveMinigame_InformtIcon",
     Name = "TextMap_AnswerName_200307",
     QuestionID = 2003
+  },
+  [200401] = {
+    AnswerID = 200401,
+    Detail = "TextMap_AnswerDetail_200401",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_InformtIcon.T_DetectiveMinigame_InformtIcon",
+    Name = "TextMap_AnswerName_200401",
+    QuestionID = 2004
+  },
+  [200402] = {
+    AnswerID = 200402,
+    Detail = "TextMap_AnswerDetail_200402",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_InformtIcon.T_DetectiveMinigame_InformtIcon",
+    Name = "TextMap_AnswerName_200402",
+    QuestionID = 2004
+  },
+  [200403] = {
+    AnswerID = 200403,
+    Detail = "TextMap_AnswerDetail_200403",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_InformtIcon.T_DetectiveMinigame_InformtIcon",
+    Name = "TextMap_AnswerName_200403",
+    QuestionID = 2004
   }
 })

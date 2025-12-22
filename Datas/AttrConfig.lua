@@ -248,6 +248,16 @@ return ReadOnly("AttrConfig", {
     SortIndex3 = 9.5,
     SortIndex4 = 9.5
   },
+  DamagedRate = {
+    Id = "DamagedRate",
+    IsPercent = true,
+    Name = "Attr_DamagedRate_Nmae",
+    ShowInInspector = true,
+    SortIndex1 = 9.6,
+    SortIndex2 = 9.6,
+    SortIndex3 = 9.6,
+    SortIndex4 = 9.6
+  },
   DropDistance = {
     Id = "DropDistance",
     Name = "Attr_DropDistance_Name",

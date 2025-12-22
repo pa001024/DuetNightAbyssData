@@ -35,78 +35,92 @@ T.RT_5 = {
   22111
 }
 T.RT_6 = {
+  32302,
+  32103,
+  32004,
+  22113,
+  22007
+}
+T.RT_7 = {
   31215,
   31326,
   31301,
   31201,
   31202
 }
-T.RT_7 = {
+T.RT_8 = {
   31326,
   31201,
   31203,
   31202,
   31001
 }
-T.RT_8 = {
+T.RT_9 = {
   31215,
   31217,
   31322,
   31201,
   31301
 }
-T.RT_9 = {
+T.RT_10 = {
   31215,
   31323,
   31301,
   31201,
   31202
 }
-T.RT_10 = {
+T.RT_11 = {
   31218,
   31201,
   31011,
   31002,
   31301
 }
-T.RT_11 = {
+T.RT_12 = {
   33103,
   33004,
   33005,
   23007,
   23113
 }
-T.RT_12 = {
+T.RT_13 = {
   33102,
   33004,
   33005,
   23112,
   23007
 }
-T.RT_13 = {
+T.RT_14 = {
   33102,
   33004,
   33005,
   23007,
   23112
 }
-T.RT_14 = {
+T.RT_15 = {
   33101,
   33004,
   33005,
   23007,
   23111
 }
-T.RT_15 = {
+T.RT_16 = {
   33411,
   33103,
   33004,
   33005,
   23007
 }
-T.RT_16 = {
+T.RT_17 = {
   33411,
   33101,
+  33004,
+  33005,
+  23007
+}
+T.RT_18 = {
+  33331,
+  33102,
   33004,
   33005,
   23007
@@ -146,7 +160,7 @@ return ReadOnly("ModGuideBookBuild", {
   [1003] = {
     BuildId = 1003,
     InterfaceJumpId = 1501,
-    ModList = T.RT_6,
+    ModList = T.RT_7,
     TabId = 1,
     TargetId = 1501,
     TargetType = "Char"
@@ -154,7 +168,7 @@ return ReadOnly("ModGuideBookBuild", {
   [1004] = {
     BuildId = 1004,
     InterfaceJumpId = 1502,
-    ModList = T.RT_6,
+    ModList = T.RT_7,
     TabId = 1,
     TargetId = 1502,
     TargetType = "Char"
@@ -176,7 +190,7 @@ return ReadOnly("ModGuideBookBuild", {
   [1006] = {
     BuildId = 1006,
     InterfaceJumpId = 1601,
-    ModList = T.RT_7,
+    ModList = T.RT_8,
     TabId = 1,
     TargetId = 1601,
     TargetType = "Char"
@@ -184,7 +198,7 @@ return ReadOnly("ModGuideBookBuild", {
   [1007] = {
     BuildId = 1007,
     InterfaceJumpId = 160101,
-    ModList = T.RT_7,
+    ModList = T.RT_8,
     TabId = 1,
     TargetId = 160101,
     TargetType = "Char"
@@ -220,7 +234,7 @@ return ReadOnly("ModGuideBookBuild", {
   [1010] = {
     BuildId = 1010,
     InterfaceJumpId = 2301,
-    ModList = T.RT_8,
+    ModList = T.RT_9,
     TabId = 1,
     TargetId = 2301,
     TargetType = "Char"
@@ -228,7 +242,7 @@ return ReadOnly("ModGuideBookBuild", {
   [1011] = {
     BuildId = 1011,
     InterfaceJumpId = 2401,
-    ModList = T.RT_8,
+    ModList = T.RT_9,
     TabId = 1,
     TargetId = 2401,
     TargetType = "Char"
@@ -236,7 +250,7 @@ return ReadOnly("ModGuideBookBuild", {
   [1012] = {
     BuildId = 1012,
     InterfaceJumpId = 3101,
-    ModList = T.RT_9,
+    ModList = T.RT_10,
     TabId = 1,
     TargetId = 3101,
     TargetType = "Char"
@@ -244,7 +258,7 @@ return ReadOnly("ModGuideBookBuild", {
   [1013] = {
     BuildId = 1013,
     InterfaceJumpId = 3102,
-    ModList = T.RT_9,
+    ModList = T.RT_10,
     TabId = 1,
     TargetId = 3102,
     TargetType = "Char"
@@ -252,7 +266,7 @@ return ReadOnly("ModGuideBookBuild", {
   [1014] = {
     BuildId = 1014,
     InterfaceJumpId = 3103,
-    ModList = T.RT_9,
+    ModList = T.RT_10,
     TabId = 1,
     TargetId = 3103,
     TargetType = "Char"
@@ -274,7 +288,7 @@ return ReadOnly("ModGuideBookBuild", {
   [1016] = {
     BuildId = 1016,
     InterfaceJumpId = 3301,
-    ModList = T.RT_9,
+    ModList = T.RT_10,
     TabId = 1,
     TargetId = 3301,
     TargetType = "Char"
@@ -338,7 +352,7 @@ return ReadOnly("ModGuideBookBuild", {
   [1021] = {
     BuildId = 1021,
     InterfaceJumpId = 4301,
-    ModList = T.RT_10,
+    ModList = T.RT_11,
     TabId = 1,
     TargetId = 4301,
     TargetType = "Char"
@@ -346,7 +360,7 @@ return ReadOnly("ModGuideBookBuild", {
   [1022] = {
     BuildId = 1022,
     InterfaceJumpId = 5101,
-    ModList = T.RT_10,
+    ModList = T.RT_11,
     TabId = 1,
     TargetId = 5101,
     TargetType = "Char"
@@ -548,13 +562,7 @@ return ReadOnly("ModGuideBookBuild", {
   [10020] = {
     BuildId = 10020,
     InterfaceJumpId = 10503,
-    ModList = {
-      32302,
-      32103,
-      32004,
-      22113,
-      22007
-    },
+    ModList = T.RT_6,
     TabId = 2,
     TargetId = 10503,
     TargetType = "Weapon"
@@ -591,6 +599,14 @@ return ReadOnly("ModGuideBookBuild", {
     TargetId = 10603,
     TargetType = "Weapon"
   },
+  [10025] = {
+    BuildId = 10025,
+    InterfaceJumpId = 10208,
+    ModList = T.RT_6,
+    TabId = 2,
+    TargetId = 10208,
+    TargetType = "Weapon"
+  },
   [20001] = {
     BuildId = 20001,
     InterfaceJumpId = 20101,
@@ -608,7 +624,7 @@ return ReadOnly("ModGuideBookBuild", {
   [20002] = {
     BuildId = 20002,
     InterfaceJumpId = 20102,
-    ModList = T.RT_11,
+    ModList = T.RT_12,
     TabId = 3,
     TargetId = 20102,
     TargetType = "Weapon"
@@ -616,7 +632,7 @@ return ReadOnly("ModGuideBookBuild", {
   [20003] = {
     BuildId = 20003,
     InterfaceJumpId = 20103,
-    ModList = T.RT_12,
+    ModList = T.RT_13,
     TabId = 3,
     TargetId = 20103,
     TargetType = "Weapon"
@@ -624,7 +640,7 @@ return ReadOnly("ModGuideBookBuild", {
   [20004] = {
     BuildId = 20004,
     InterfaceJumpId = 20203,
-    ModList = T.RT_13,
+    ModList = T.RT_14,
     TabId = 3,
     TargetId = 20203,
     TargetType = "Weapon"
@@ -632,7 +648,7 @@ return ReadOnly("ModGuideBookBuild", {
   [20005] = {
     BuildId = 20005,
     InterfaceJumpId = 20201,
-    ModList = T.RT_13,
+    ModList = T.RT_14,
     TabId = 3,
     TargetId = 20201,
     TargetType = "Weapon"
@@ -640,7 +656,7 @@ return ReadOnly("ModGuideBookBuild", {
   [20006] = {
     BuildId = 20006,
     InterfaceJumpId = 20205,
-    ModList = T.RT_14,
+    ModList = T.RT_15,
     TabId = 3,
     TargetId = 20205,
     TargetType = "Weapon"
@@ -648,7 +664,7 @@ return ReadOnly("ModGuideBookBuild", {
   [20007] = {
     BuildId = 20007,
     InterfaceJumpId = 20301,
-    ModList = T.RT_15,
+    ModList = T.RT_16,
     TabId = 3,
     TargetId = 20301,
     TargetType = "Weapon"
@@ -656,7 +672,7 @@ return ReadOnly("ModGuideBookBuild", {
   [20008] = {
     BuildId = 20008,
     InterfaceJumpId = 20302,
-    ModList = T.RT_16,
+    ModList = T.RT_17,
     TabId = 3,
     TargetId = 20302,
     TargetType = "Weapon"
@@ -664,7 +680,7 @@ return ReadOnly("ModGuideBookBuild", {
   [20009] = {
     BuildId = 20009,
     InterfaceJumpId = 20304,
-    ModList = T.RT_16,
+    ModList = T.RT_17,
     TabId = 3,
     TargetId = 20304,
     TargetType = "Weapon"
@@ -672,7 +688,7 @@ return ReadOnly("ModGuideBookBuild", {
   [20010] = {
     BuildId = 20010,
     InterfaceJumpId = 20303,
-    ModList = T.RT_15,
+    ModList = T.RT_16,
     TabId = 3,
     TargetId = 20303,
     TargetType = "Weapon"
@@ -680,7 +696,7 @@ return ReadOnly("ModGuideBookBuild", {
   [20011] = {
     BuildId = 20011,
     InterfaceJumpId = 20305,
-    ModList = T.RT_12,
+    ModList = T.RT_13,
     TabId = 3,
     TargetId = 20305,
     TargetType = "Weapon"
@@ -688,7 +704,7 @@ return ReadOnly("ModGuideBookBuild", {
   [20012] = {
     BuildId = 20012,
     InterfaceJumpId = 20402,
-    ModList = T.RT_15,
+    ModList = T.RT_16,
     TabId = 3,
     TargetId = 20402,
     TargetType = "Weapon"
@@ -696,7 +712,7 @@ return ReadOnly("ModGuideBookBuild", {
   [20013] = {
     BuildId = 20013,
     InterfaceJumpId = 20405,
-    ModList = T.RT_15,
+    ModList = T.RT_16,
     TabId = 3,
     TargetId = 20405,
     TargetType = "Weapon"
@@ -704,7 +720,7 @@ return ReadOnly("ModGuideBookBuild", {
   [20014] = {
     BuildId = 20014,
     InterfaceJumpId = 20403,
-    ModList = T.RT_16,
+    ModList = T.RT_17,
     TabId = 3,
     TargetId = 20403,
     TargetType = "Weapon"
@@ -712,7 +728,7 @@ return ReadOnly("ModGuideBookBuild", {
   [20015] = {
     BuildId = 20015,
     InterfaceJumpId = 20401,
-    ModList = T.RT_13,
+    ModList = T.RT_14,
     TabId = 3,
     TargetId = 20401,
     TargetType = "Weapon"
@@ -734,13 +750,7 @@ return ReadOnly("ModGuideBookBuild", {
   [20017] = {
     BuildId = 20017,
     InterfaceJumpId = 20504,
-    ModList = {
-      33331,
-      33102,
-      33004,
-      33005,
-      23007
-    },
+    ModList = T.RT_18,
     TabId = 3,
     TargetId = 20504,
     TargetType = "Weapon"
@@ -748,7 +758,7 @@ return ReadOnly("ModGuideBookBuild", {
   [20018] = {
     BuildId = 20018,
     InterfaceJumpId = 20507,
-    ModList = T.RT_14,
+    ModList = T.RT_15,
     TabId = 3,
     TargetId = 20507,
     TargetType = "Weapon"
@@ -770,7 +780,7 @@ return ReadOnly("ModGuideBookBuild", {
   [20020] = {
     BuildId = 20020,
     InterfaceJumpId = 20510,
-    ModList = T.RT_14,
+    ModList = T.RT_15,
     TabId = 3,
     TargetId = 20510,
     TargetType = "Weapon"
@@ -792,7 +802,7 @@ return ReadOnly("ModGuideBookBuild", {
   [20022] = {
     BuildId = 20022,
     InterfaceJumpId = 20501,
-    ModList = T.RT_13,
+    ModList = T.RT_14,
     TabId = 3,
     TargetId = 20501,
     TargetType = "Weapon"
@@ -800,7 +810,7 @@ return ReadOnly("ModGuideBookBuild", {
   [20023] = {
     BuildId = 20023,
     InterfaceJumpId = 20602,
-    ModList = T.RT_11,
+    ModList = T.RT_12,
     TabId = 3,
     TargetId = 20602,
     TargetType = "Weapon"
@@ -808,7 +818,7 @@ return ReadOnly("ModGuideBookBuild", {
   [20024] = {
     BuildId = 20024,
     InterfaceJumpId = 20603,
-    ModList = T.RT_14,
+    ModList = T.RT_15,
     TabId = 3,
     TargetId = 20603,
     TargetType = "Weapon"
@@ -816,7 +826,7 @@ return ReadOnly("ModGuideBookBuild", {
   [20025] = {
     BuildId = 20025,
     InterfaceJumpId = 20601,
-    ModList = T.RT_13,
+    ModList = T.RT_14,
     TabId = 3,
     TargetId = 20601,
     TargetType = "Weapon"
@@ -833,6 +843,14 @@ return ReadOnly("ModGuideBookBuild", {
     },
     TabId = 3,
     TargetId = 20604,
+    TargetType = "Weapon"
+  },
+  [20027] = {
+    BuildId = 20027,
+    InterfaceJumpId = 20506,
+    ModList = T.RT_18,
+    TabId = 3,
+    TargetId = 20506,
     TargetType = "Weapon"
   }
 })
