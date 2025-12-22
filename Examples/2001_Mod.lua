@@ -4,11 +4,14 @@ local ArmoryUtils = require("Utils.ArmoryUtils")
 local TableUtils = require("Utils.TableUtils")
 
 local ModData = DataMgr.Mod
+local CurrentVersion = DataMgr.GlobalConstant.CurrentVersion.ConstantValue
 
 local ModIdList = {}
 for _, ModInfo in pairs(ModData) do
     if not ModInfo.IsNotOpen and ModInfo.CollectRewardExp then
-        table.insert(ModIdList, ModInfo.Id)
+        if not ModInfo.ReleaseVersion or CurrentVersion >= ModInfo.ReleaseVersion then
+            table.insert(ModIdList, ModInfo.Id)
+        end
     end
 end
 
