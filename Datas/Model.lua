@@ -7075,11 +7075,13 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Char001_Heitao_J/Mesh/Heitao_TP02_SM.Heitao_TP02_SM"
   },
   [11030010] = {
+    BuffLightMeshPath = "/Game/Asset/Char/Player/Char025_Tuosi/Mesh/Tuosi02B_Part03_SM.Tuosi02B_Part03_SM",
     IsSkinModel = true,
     ModelId = 11030010,
     SkeletonMeshPath = "Asset/Char/Player/Char025_Tuosi/Mesh/Tuosi01_TP01_SM.Tuosi01_TP01_SM"
   },
   [11030011] = {
+    BuffLightMeshPath = "/Game/Asset/Char/Player/Char025_Tuosi/Mesh/Tuosi02B_Part03_SM.Tuosi02B_Part03_SM",
     IsSkinModel = true,
     ModelId = 11030011,
     SkeletonMeshPath = "Asset/Char/Player/Char025_Tuosi/Mesh/Tuosi01_TP02_SM.Tuosi01_TP02_SM"

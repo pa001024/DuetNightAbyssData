@@ -1130,8 +1130,11 @@ T.RT_156 = {
   ["Mon.Reward.E"] = 80,
   ["Mon.Sq"] = 150104
 }
-T.RT_157 = {3115}
-T.RT_158 = {
+T.RT_157 = {135}
+T.RT_158 = {145}
+T.RT_159 = {155}
+T.RT_160 = {3115}
+T.RT_161 = {
   ["Mon.Gr"] = 150105,
   ["Mon.Jh"] = 150107,
   ["Mon.Jt"] = 150106,
@@ -1141,9 +1144,10 @@ T.RT_158 = {
   ["Mon.Reward.E"] = 71,
   ["Mon.Sq"] = 150108
 }
-T.RT_159 = {51537}
-T.RT_160 = {112}
-T.RT_161 = {
+T.RT_162 = {51537}
+T.RT_163 = {160}
+T.RT_164 = {112}
+T.RT_165 = {
   9001001,
   9002001,
   9007001,
@@ -1152,9 +1156,9 @@ T.RT_161 = {
   6012001,
   6003001
 }
-T.RT_162 = {300163}
-T.RT_163 = {130}
-T.RT_164 = {
+T.RT_166 = {300163}
+T.RT_167 = {130}
+T.RT_168 = {
   8001001,
   8002001,
   8003001,
@@ -1163,11 +1167,10 @@ T.RT_164 = {
   6012001,
   6003001
 }
-T.RT_165 = {300165}
-T.RT_166 = {300162}
-T.RT_167 = {145}
-T.RT_168 = {300168}
-T.RT_169 = {
+T.RT_169 = {300165}
+T.RT_170 = {300162}
+T.RT_171 = {300168}
+T.RT_172 = {
   6000011,
   6000021,
   6000031,
@@ -1175,22 +1178,22 @@ T.RT_169 = {
   6000051,
   6000064
 }
-T.RT_170 = {
-  BuffList = T.RT_169
+T.RT_173 = {
+  BuffList = T.RT_172
 }
-T.RT_171 = {
+T.RT_174 = {
   [6001001] = 12,
   [6002001] = 11,
   [9003004] = 1,
   [9005004] = 1,
   [9006004] = 1
 }
-T.RT_172 = {300169}
-T.RT_173 = {300170}
-T.RT_174 = {300171}
-T.RT_175 = {300172}
-T.RT_176 = {300173}
-T.RT_177 = {
+T.RT_175 = {300169}
+T.RT_176 = {300170}
+T.RT_177 = {300171}
+T.RT_178 = {300172}
+T.RT_179 = {300173}
+T.RT_180 = {
   6000011,
   6000021,
   6000031,
@@ -1198,10 +1201,10 @@ T.RT_177 = {
   6000054,
   6000061
 }
-T.RT_178 = {
-  BuffList = T.RT_177
+T.RT_181 = {
+  BuffList = T.RT_180
 }
-T.RT_179 = {
+T.RT_182 = {
   ["Mon.Gr"] = 150201,
   ["Mon.Jh"] = 150203,
   ["Mon.Jt"] = 150202,
@@ -1212,11 +1215,8 @@ T.RT_179 = {
   ["Mon.Reward.E"] = 80,
   ["Mon.Sq"] = 150204
 }
-T.RT_180 = {115}
-T.RT_181 = {125}
-T.RT_182 = {135}
-T.RT_183 = {155}
-T.RT_184 = {160}
+T.RT_183 = {115}
+T.RT_184 = {125}
 T.RT_185 = {
   ["Mon.Gr"] = 150301,
   ["Mon.Jh"] = 150303,
@@ -11559,7 +11559,7 @@ return ReadOnly("Dungeon", {
   },
   [90108] = {
     CameraParam = T.RT_2,
-    Condition = {135, 3013},
+    Condition = T.RT_157,
     DropReward = {
       ["Mon.Gr"] = 150101,
       ["Mon.Hx"] = 150101,
@@ -11661,7 +11661,7 @@ return ReadOnly("Dungeon", {
   },
   [90110] = {
     CameraParam = T.RT_2,
-    Condition = {145, 3014},
+    Condition = T.RT_158,
     DropReward = T.RT_156,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -11747,7 +11747,7 @@ return ReadOnly("Dungeon", {
   },
   [90112] = {
     CameraParam = T.RT_2,
-    Condition = {155, 3015},
+    Condition = T.RT_159,
     DropReward = T.RT_156,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -11793,8 +11793,8 @@ return ReadOnly("Dungeon", {
   },
   [90113] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_157,
-    DropReward = T.RT_158,
+    Condition = T.RT_160,
+    DropReward = T.RT_161,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
     DungeonContent = "UI_DUNGEON_CONTENT_DEFENCE_2",
     DungeonCost = T.RT_37,
@@ -11806,7 +11806,7 @@ return ReadOnly("Dungeon", {
     DungeonMapFile = "/Game/Maps/Prologue_DefencePro01",
     DungeonMonsters = T.RT_23,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_159,
+    DungeonReward = T.RT_162,
     DungeonRewardView = 90376,
     DungeonType = "DefencePro",
     DungeonTypeShow = "DUNGEON_NAME_90101",
@@ -11833,7 +11833,7 @@ return ReadOnly("Dungeon", {
   },
   [90114] = {
     CameraParam = T.RT_2,
-    Condition = {160, 3016},
+    Condition = T.RT_163,
     DropReward = T.RT_156,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -11879,8 +11879,8 @@ return ReadOnly("Dungeon", {
   },
   [90115] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_157,
-    DropReward = T.RT_158,
+    Condition = T.RT_160,
+    DropReward = T.RT_161,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
     DungeonContent = "UI_DUNGEON_CONTENT_DEFENCE_2",
     DungeonCost = T.RT_37,
@@ -11892,7 +11892,7 @@ return ReadOnly("Dungeon", {
     DungeonMapFile = "/Game/Maps/Prologue_DefencePro01",
     DungeonMonsters = T.RT_23,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_159,
+    DungeonReward = T.RT_162,
     DungeonRewardView = 90376,
     DungeonType = "DefencePro",
     DungeonTypeShow = "DUNGEON_NAME_90101",
@@ -11919,7 +11919,7 @@ return ReadOnly("Dungeon", {
   },
   [90161] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_160,
+    Condition = T.RT_164,
     DropReward = T.RT_83,
     DropRewardMonsterNum = 120,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -11932,9 +11932,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 30,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_162,
+    DungeonReward = T.RT_166,
     DungeonRewardView = 90159,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90101",
@@ -11965,7 +11965,7 @@ return ReadOnly("Dungeon", {
   },
   [90162] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_160,
+    Condition = T.RT_164,
     DropReward = T.RT_83,
     DropRewardMonsterNum = 120,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -11978,9 +11978,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 30,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_162,
+    DungeonReward = T.RT_166,
     DungeonRewardView = 90160,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90101",
@@ -12011,7 +12011,7 @@ return ReadOnly("Dungeon", {
   },
   [90163] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_163,
+    Condition = T.RT_167,
     DropReward = T.RT_83,
     DropRewardMonsterNum = 120,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12024,9 +12024,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Prologue/DefenceMove",
     DungeonLevel = 50,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_164,
+    DungeonMonsters = T.RT_168,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_165,
+    DungeonReward = T.RT_169,
     DungeonRewardView = 90163,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90101",
@@ -12057,7 +12057,7 @@ return ReadOnly("Dungeon", {
   },
   [90164] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_163,
+    Condition = T.RT_167,
     DropReward = T.RT_83,
     DropRewardMonsterNum = 120,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12070,9 +12070,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Prologue/DefenceMove",
     DungeonLevel = 50,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_164,
+    DungeonMonsters = T.RT_168,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_165,
+    DungeonReward = T.RT_169,
     DungeonRewardView = 90164,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90101",
@@ -12103,7 +12103,7 @@ return ReadOnly("Dungeon", {
   },
   [90165] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_163,
+    Condition = T.RT_167,
     DropReward = T.RT_83,
     DropRewardMonsterNum = 120,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12116,9 +12116,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Prologue/DefenceMove",
     DungeonLevel = 50,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_164,
+    DungeonMonsters = T.RT_168,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_165,
+    DungeonReward = T.RT_169,
     DungeonRewardView = 90165,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90101",
@@ -12149,7 +12149,7 @@ return ReadOnly("Dungeon", {
   },
   [90166] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_163,
+    Condition = T.RT_167,
     DropReward = T.RT_83,
     DropRewardMonsterNum = 120,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12162,9 +12162,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Prologue/DefenceMove",
     DungeonLevel = 50,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_164,
+    DungeonMonsters = T.RT_168,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_165,
+    DungeonReward = T.RT_169,
     DungeonRewardView = 90166,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90101",
@@ -12195,7 +12195,7 @@ return ReadOnly("Dungeon", {
   },
   [90167] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_160,
+    Condition = T.RT_164,
     DropReward = T.RT_83,
     DropRewardMonsterNum = 120,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12208,9 +12208,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 30,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_166,
+    DungeonReward = T.RT_170,
     DungeonRewardView = 90161,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90101",
@@ -12241,7 +12241,7 @@ return ReadOnly("Dungeon", {
   },
   [90168] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_160,
+    Condition = T.RT_164,
     DropReward = T.RT_83,
     DropRewardMonsterNum = 120,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12254,9 +12254,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 30,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_166,
+    DungeonReward = T.RT_170,
     DungeonRewardView = 90162,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90101",
@@ -12287,7 +12287,7 @@ return ReadOnly("Dungeon", {
   },
   [90171] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_160,
+    Condition = T.RT_164,
     DropReward = T.RT_83,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12300,9 +12300,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 30,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_162,
+    DungeonReward = T.RT_166,
     DungeonRewardView = 90159,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90101",
@@ -12333,7 +12333,7 @@ return ReadOnly("Dungeon", {
   },
   [90172] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_160,
+    Condition = T.RT_164,
     DropReward = T.RT_83,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12346,9 +12346,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 30,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_162,
+    DungeonReward = T.RT_166,
     DungeonRewardView = 90160,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90101",
@@ -12379,7 +12379,7 @@ return ReadOnly("Dungeon", {
   },
   [90173] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_160,
+    Condition = T.RT_164,
     DropReward = T.RT_83,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12392,9 +12392,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 30,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_166,
+    DungeonReward = T.RT_170,
     DungeonRewardView = 90161,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90101",
@@ -12425,7 +12425,7 @@ return ReadOnly("Dungeon", {
   },
   [90174] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_160,
+    Condition = T.RT_164,
     DropReward = T.RT_83,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12438,9 +12438,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 30,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_166,
+    DungeonReward = T.RT_170,
     DungeonRewardView = 90162,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90101",
@@ -12471,7 +12471,7 @@ return ReadOnly("Dungeon", {
   },
   [90175] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_163,
+    Condition = T.RT_167,
     DropReward = T.RT_83,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12484,9 +12484,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Prologue/DefenceMove",
     DungeonLevel = 50,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_165,
+    DungeonReward = T.RT_169,
     DungeonRewardView = 90163,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90101",
@@ -12517,7 +12517,7 @@ return ReadOnly("Dungeon", {
   },
   [90176] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_163,
+    Condition = T.RT_167,
     DropReward = T.RT_83,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12530,9 +12530,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Prologue/DefenceMove",
     DungeonLevel = 50,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_165,
+    DungeonReward = T.RT_169,
     DungeonRewardView = 90164,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90101",
@@ -12563,7 +12563,7 @@ return ReadOnly("Dungeon", {
   },
   [90177] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_163,
+    Condition = T.RT_167,
     DropReward = T.RT_83,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12576,9 +12576,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Prologue/DefenceMove",
     DungeonLevel = 50,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_164,
+    DungeonMonsters = T.RT_168,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_165,
+    DungeonReward = T.RT_169,
     DungeonRewardView = 90165,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90101",
@@ -12609,7 +12609,7 @@ return ReadOnly("Dungeon", {
   },
   [90178] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_163,
+    Condition = T.RT_167,
     DropReward = T.RT_83,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12622,9 +12622,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Prologue/DefenceMove",
     DungeonLevel = 50,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_164,
+    DungeonMonsters = T.RT_168,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_165,
+    DungeonReward = T.RT_169,
     DungeonRewardView = 90166,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90101",
@@ -12656,7 +12656,7 @@ return ReadOnly("Dungeon", {
   [90180] = {
     AttributeType = "Dark",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_108,
     DropRewardMonsterNum = 120,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12669,9 +12669,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 65,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_168,
+    DungeonReward = T.RT_171,
     DungeonRewardView = 91201,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90101",
@@ -12687,12 +12687,12 @@ return ReadOnly("Dungeon", {
     IsMultiDungeon = true,
     IsPlayLevelEnter = true,
     IsRandom = 1,
-    MonsterBuff = T.RT_170,
+    MonsterBuff = T.RT_173,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     PreloadMonsters = T.RT_113,
     PreloadMonstersNum = T.RT_114,
-    PreloadStaticMonstersNum = T.RT_171,
+    PreloadStaticMonstersNum = T.RT_174,
     RespawnRule = "CommonSolo",
     SettlementOffset = T.RT_7,
     Squad = true,
@@ -12702,7 +12702,7 @@ return ReadOnly("Dungeon", {
   [90181] = {
     AttributeType = "Water",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_108,
     DropRewardMonsterNum = 120,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12715,9 +12715,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 65,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_172,
+    DungeonReward = T.RT_175,
     DungeonRewardView = 91202,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90102",
@@ -12738,7 +12738,7 @@ return ReadOnly("Dungeon", {
     NoTicketEnter = true,
     PreloadMonsters = T.RT_113,
     PreloadMonstersNum = T.RT_114,
-    PreloadStaticMonstersNum = T.RT_171,
+    PreloadStaticMonstersNum = T.RT_174,
     RespawnRule = "CommonSolo",
     SettlementOffset = T.RT_7,
     Squad = true,
@@ -12748,7 +12748,7 @@ return ReadOnly("Dungeon", {
   [90182] = {
     AttributeType = "Water",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_108,
     DropRewardMonsterNum = 120,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12761,9 +12761,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 65,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_172,
+    DungeonReward = T.RT_175,
     DungeonRewardView = 91203,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90103",
@@ -12784,7 +12784,7 @@ return ReadOnly("Dungeon", {
     NoTicketEnter = true,
     PreloadMonsters = T.RT_113,
     PreloadMonstersNum = T.RT_114,
-    PreloadStaticMonstersNum = T.RT_171,
+    PreloadStaticMonstersNum = T.RT_174,
     RespawnRule = "CommonSolo",
     SettlementOffset = T.RT_7,
     Squad = true,
@@ -12794,7 +12794,7 @@ return ReadOnly("Dungeon", {
   [90183] = {
     AttributeType = "Fire",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_108,
     DropRewardMonsterNum = 120,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12807,9 +12807,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 65,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_173,
+    DungeonReward = T.RT_176,
     DungeonRewardView = 91204,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90104",
@@ -12830,7 +12830,7 @@ return ReadOnly("Dungeon", {
     NoTicketEnter = true,
     PreloadMonsters = T.RT_113,
     PreloadMonstersNum = T.RT_114,
-    PreloadStaticMonstersNum = T.RT_171,
+    PreloadStaticMonstersNum = T.RT_174,
     RespawnRule = "CommonSolo",
     SettlementOffset = T.RT_7,
     Squad = true,
@@ -12840,7 +12840,7 @@ return ReadOnly("Dungeon", {
   [90184] = {
     AttributeType = "Thunder",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_108,
     DropRewardMonsterNum = 120,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12853,9 +12853,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 65,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_174,
+    DungeonReward = T.RT_177,
     DungeonRewardView = 91205,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90105",
@@ -12876,7 +12876,7 @@ return ReadOnly("Dungeon", {
     NoTicketEnter = true,
     PreloadMonsters = T.RT_113,
     PreloadMonstersNum = T.RT_114,
-    PreloadStaticMonstersNum = T.RT_171,
+    PreloadStaticMonstersNum = T.RT_174,
     RespawnRule = "CommonSolo",
     SettlementOffset = T.RT_7,
     Squad = true,
@@ -12886,7 +12886,7 @@ return ReadOnly("Dungeon", {
   [90185] = {
     AttributeType = "Wind",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_108,
     DropRewardMonsterNum = 120,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12899,9 +12899,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 65,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_175,
+    DungeonReward = T.RT_178,
     DungeonRewardView = 91206,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90106",
@@ -12922,7 +12922,7 @@ return ReadOnly("Dungeon", {
     NoTicketEnter = true,
     PreloadMonsters = T.RT_113,
     PreloadMonstersNum = T.RT_114,
-    PreloadStaticMonstersNum = T.RT_171,
+    PreloadStaticMonstersNum = T.RT_174,
     RespawnRule = "CommonSolo",
     SettlementOffset = T.RT_7,
     Squad = true,
@@ -12932,7 +12932,7 @@ return ReadOnly("Dungeon", {
   [90186] = {
     AttributeType = "Wind",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_108,
     DropRewardMonsterNum = 120,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12945,9 +12945,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 65,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_175,
+    DungeonReward = T.RT_178,
     DungeonRewardView = 91207,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90107",
@@ -12968,7 +12968,7 @@ return ReadOnly("Dungeon", {
     NoTicketEnter = true,
     PreloadMonsters = T.RT_113,
     PreloadMonstersNum = T.RT_114,
-    PreloadStaticMonstersNum = T.RT_171,
+    PreloadStaticMonstersNum = T.RT_174,
     RespawnRule = "CommonSolo",
     SettlementOffset = T.RT_7,
     Squad = true,
@@ -12978,7 +12978,7 @@ return ReadOnly("Dungeon", {
   [90187] = {
     AttributeType = "Light",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_108,
     DropRewardMonsterNum = 120,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -12991,9 +12991,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 65,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_176,
+    DungeonReward = T.RT_179,
     DungeonRewardView = 91208,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90108",
@@ -13009,12 +13009,12 @@ return ReadOnly("Dungeon", {
     IsMultiDungeon = true,
     IsPlayLevelEnter = true,
     IsRandom = 1,
-    MonsterBuff = T.RT_178,
+    MonsterBuff = T.RT_181,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     PreloadMonsters = T.RT_113,
     PreloadMonstersNum = T.RT_114,
-    PreloadStaticMonstersNum = T.RT_171,
+    PreloadStaticMonstersNum = T.RT_174,
     RespawnRule = "CommonSolo",
     SettlementOffset = T.RT_7,
     Squad = true,
@@ -13024,7 +13024,7 @@ return ReadOnly("Dungeon", {
   [90188] = {
     AttributeType = "Light",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_108,
     DropRewardMonsterNum = 120,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -13037,9 +13037,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 65,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_176,
+    DungeonReward = T.RT_179,
     DungeonRewardView = 91209,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90109",
@@ -13055,12 +13055,12 @@ return ReadOnly("Dungeon", {
     IsMultiDungeon = true,
     IsPlayLevelEnter = true,
     IsRandom = 1,
-    MonsterBuff = T.RT_178,
+    MonsterBuff = T.RT_181,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     PreloadMonsters = T.RT_113,
     PreloadMonstersNum = T.RT_114,
-    PreloadStaticMonstersNum = T.RT_171,
+    PreloadStaticMonstersNum = T.RT_174,
     RespawnRule = "CommonSolo",
     SettlementOffset = T.RT_7,
     Squad = true,
@@ -13069,7 +13069,7 @@ return ReadOnly("Dungeon", {
   },
   [90201] = {
     CameraParam = T.RT_2,
-    DropReward = T.RT_179,
+    DropReward = T.RT_182,
     DropRewardMonsterNum = 360,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
     DungeonContent = "UI_DUNGEON_CONTENT_EXCAVATION_1",
@@ -13114,8 +13114,8 @@ return ReadOnly("Dungeon", {
   },
   [90202] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_180,
-    DropReward = T.RT_179,
+    Condition = T.RT_183,
+    DropReward = T.RT_182,
     DropRewardMonsterNum = 360,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
     DungeonContent = "UI_DUNGEON_CONTENT_EXCAVATION_1",
@@ -13160,8 +13160,8 @@ return ReadOnly("Dungeon", {
   },
   [90203] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
-    DropReward = T.RT_179,
+    Condition = T.RT_184,
+    DropReward = T.RT_182,
     DropRewardMonsterNum = 360,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
     DungeonContent = "UI_DUNGEON_CONTENT_EXCAVATION_1",
@@ -13206,8 +13206,8 @@ return ReadOnly("Dungeon", {
   },
   [90204] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
-    DropReward = T.RT_179,
+    Condition = T.RT_157,
+    DropReward = T.RT_182,
     DropRewardMonsterNum = 360,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
     DungeonContent = "UI_DUNGEON_CONTENT_EXCAVATION_1",
@@ -13252,8 +13252,8 @@ return ReadOnly("Dungeon", {
   },
   [90205] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
-    DropReward = T.RT_179,
+    Condition = T.RT_158,
+    DropReward = T.RT_182,
     DropRewardMonsterNum = 360,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
     DungeonContent = "UI_DUNGEON_CONTENT_EXCAVATION_1",
@@ -13298,8 +13298,8 @@ return ReadOnly("Dungeon", {
   },
   [90206] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
-    DropReward = T.RT_179,
+    Condition = T.RT_159,
+    DropReward = T.RT_182,
     DropRewardMonsterNum = 360,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
     DungeonContent = "UI_DUNGEON_CONTENT_EXCAVATION_1",
@@ -13344,8 +13344,8 @@ return ReadOnly("Dungeon", {
   },
   [90207] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
-    DropReward = T.RT_179,
+    Condition = T.RT_163,
+    DropReward = T.RT_182,
     DropRewardMonsterNum = 360,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
     DungeonContent = "UI_DUNGEON_CONTENT_EXCAVATION_1",
@@ -13662,7 +13662,7 @@ return ReadOnly("Dungeon", {
   },
   [90308] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_185,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -13702,7 +13702,7 @@ return ReadOnly("Dungeon", {
   },
   [90309] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_185,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -13742,7 +13742,7 @@ return ReadOnly("Dungeon", {
   },
   [90310] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_185,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -13782,7 +13782,7 @@ return ReadOnly("Dungeon", {
   },
   [90311] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_185,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -14152,7 +14152,7 @@ return ReadOnly("Dungeon", {
     IsRandom = 1,
     LocAdjustDetectTime = 5,
     LocAdjustDis = 5000,
-    MonsterBuff = T.RT_170,
+    MonsterBuff = T.RT_173,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     RespawnRule = "CommonSolo",
@@ -14200,7 +14200,7 @@ return ReadOnly("Dungeon", {
     IsRandom = 1,
     LocAdjustDetectTime = 5,
     LocAdjustDis = 5000,
-    MonsterBuff = T.RT_178,
+    MonsterBuff = T.RT_181,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     RespawnRule = "CommonSolo",
@@ -14211,7 +14211,7 @@ return ReadOnly("Dungeon", {
   [90407] = {
     AttributeType = "Water",
     CameraParam = T.RT_2,
-    Condition = T.RT_180,
+    Condition = T.RT_183,
     DropReward = {
       ["Mon.Gr"] = 150401,
       ["Mon.Jh"] = 150403,
@@ -14277,7 +14277,7 @@ return ReadOnly("Dungeon", {
   [90408] = {
     AttributeType = "Fire",
     CameraParam = T.RT_2,
-    Condition = T.RT_180,
+    Condition = T.RT_183,
     DropReward = {
       ["Mon.Gr"] = 150401,
       ["Mon.Jh"] = 150403,
@@ -14336,7 +14336,7 @@ return ReadOnly("Dungeon", {
   [90409] = {
     AttributeType = "Thunder",
     CameraParam = T.RT_2,
-    Condition = T.RT_180,
+    Condition = T.RT_183,
     DropReward = {
       ["Mon.Gr"] = 150401,
       ["Mon.Jh"] = 150403,
@@ -14395,7 +14395,7 @@ return ReadOnly("Dungeon", {
   [90410] = {
     AttributeType = "Wind",
     CameraParam = T.RT_2,
-    Condition = T.RT_180,
+    Condition = T.RT_183,
     DropReward = {
       ["Mon.Gr"] = 150401,
       ["Mon.Jh"] = 150403,
@@ -14454,7 +14454,7 @@ return ReadOnly("Dungeon", {
   [90411] = {
     AttributeType = "Dark",
     CameraParam = T.RT_2,
-    Condition = T.RT_180,
+    Condition = T.RT_183,
     DropReward = {
       ["Mon.Gr"] = 150401,
       ["Mon.Jh"] = 150403,
@@ -14502,7 +14502,7 @@ return ReadOnly("Dungeon", {
     IsRandom = 1,
     LocAdjustDetectTime = 5,
     LocAdjustDis = 5000,
-    MonsterBuff = T.RT_170,
+    MonsterBuff = T.RT_173,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     RespawnRule = "CommonSolo",
@@ -14513,7 +14513,7 @@ return ReadOnly("Dungeon", {
   [90412] = {
     AttributeType = "Light",
     CameraParam = T.RT_2,
-    Condition = T.RT_180,
+    Condition = T.RT_183,
     DropReward = {
       ["Mon.Gr"] = 150401,
       ["Mon.Jh"] = 150403,
@@ -14561,7 +14561,7 @@ return ReadOnly("Dungeon", {
     IsRandom = 1,
     LocAdjustDetectTime = 5,
     LocAdjustDis = 5000,
-    MonsterBuff = T.RT_178,
+    MonsterBuff = T.RT_181,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     RespawnRule = "CommonSolo",
@@ -14572,7 +14572,7 @@ return ReadOnly("Dungeon", {
   [90413] = {
     AttributeType = "Water",
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
+    Condition = T.RT_184,
     DropReward = T.RT_188,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -14628,7 +14628,7 @@ return ReadOnly("Dungeon", {
   [90414] = {
     AttributeType = "Fire",
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
+    Condition = T.RT_184,
     DropReward = T.RT_189,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -14677,7 +14677,7 @@ return ReadOnly("Dungeon", {
   [90415] = {
     AttributeType = "Thunder",
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
+    Condition = T.RT_184,
     DropReward = T.RT_190,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -14726,7 +14726,7 @@ return ReadOnly("Dungeon", {
   [90416] = {
     AttributeType = "Wind",
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
+    Condition = T.RT_184,
     DropReward = T.RT_191,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -14775,7 +14775,7 @@ return ReadOnly("Dungeon", {
   [90417] = {
     AttributeType = "Dark",
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
+    Condition = T.RT_184,
     DropReward = T.RT_192,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -14813,7 +14813,7 @@ return ReadOnly("Dungeon", {
     IsRandom = 1,
     LocAdjustDetectTime = 5,
     LocAdjustDis = 5000,
-    MonsterBuff = T.RT_170,
+    MonsterBuff = T.RT_173,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     RespawnRule = "CommonSolo",
@@ -14824,7 +14824,7 @@ return ReadOnly("Dungeon", {
   [90418] = {
     AttributeType = "Light",
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
+    Condition = T.RT_184,
     DropReward = T.RT_193,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -14862,7 +14862,7 @@ return ReadOnly("Dungeon", {
     IsRandom = 1,
     LocAdjustDetectTime = 5,
     LocAdjustDis = 5000,
-    MonsterBuff = T.RT_178,
+    MonsterBuff = T.RT_181,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     RespawnRule = "CommonSolo",
@@ -14873,7 +14873,7 @@ return ReadOnly("Dungeon", {
   [90419] = {
     AttributeType = "Water",
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_188,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -14929,7 +14929,7 @@ return ReadOnly("Dungeon", {
   [90420] = {
     AttributeType = "Fire",
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_189,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -14978,7 +14978,7 @@ return ReadOnly("Dungeon", {
   [90421] = {
     AttributeType = "Thunder",
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_190,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -15027,7 +15027,7 @@ return ReadOnly("Dungeon", {
   [90422] = {
     AttributeType = "Wind",
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_191,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -15076,7 +15076,7 @@ return ReadOnly("Dungeon", {
   [90423] = {
     AttributeType = "Dark",
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_192,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -15114,7 +15114,7 @@ return ReadOnly("Dungeon", {
     IsRandom = 1,
     LocAdjustDetectTime = 5,
     LocAdjustDis = 5000,
-    MonsterBuff = T.RT_170,
+    MonsterBuff = T.RT_173,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     RespawnRule = "CommonSolo",
@@ -15125,7 +15125,7 @@ return ReadOnly("Dungeon", {
   [90424] = {
     AttributeType = "Light",
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_193,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -15163,7 +15163,7 @@ return ReadOnly("Dungeon", {
     IsRandom = 1,
     LocAdjustDetectTime = 5,
     LocAdjustDis = 5000,
-    MonsterBuff = T.RT_178,
+    MonsterBuff = T.RT_181,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     RespawnRule = "CommonSolo",
@@ -15174,7 +15174,7 @@ return ReadOnly("Dungeon", {
   [90425] = {
     AttributeType = "Water",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_188,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -15230,7 +15230,7 @@ return ReadOnly("Dungeon", {
   [90426] = {
     AttributeType = "Fire",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_189,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -15279,7 +15279,7 @@ return ReadOnly("Dungeon", {
   [90427] = {
     AttributeType = "Thunder",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_190,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -15328,7 +15328,7 @@ return ReadOnly("Dungeon", {
   [90428] = {
     AttributeType = "Wind",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_191,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -15377,7 +15377,7 @@ return ReadOnly("Dungeon", {
   [90429] = {
     AttributeType = "Dark",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_192,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -15415,7 +15415,7 @@ return ReadOnly("Dungeon", {
     IsRandom = 1,
     LocAdjustDetectTime = 5,
     LocAdjustDis = 5000,
-    MonsterBuff = T.RT_170,
+    MonsterBuff = T.RT_173,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     RespawnRule = "CommonSolo",
@@ -15426,7 +15426,7 @@ return ReadOnly("Dungeon", {
   [90430] = {
     AttributeType = "Light",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_193,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -15464,7 +15464,7 @@ return ReadOnly("Dungeon", {
     IsRandom = 1,
     LocAdjustDetectTime = 5,
     LocAdjustDis = 5000,
-    MonsterBuff = T.RT_178,
+    MonsterBuff = T.RT_181,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     RespawnRule = "CommonSolo",
@@ -15475,7 +15475,7 @@ return ReadOnly("Dungeon", {
   [90431] = {
     AttributeType = "Water",
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_194,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -15531,7 +15531,7 @@ return ReadOnly("Dungeon", {
   [90432] = {
     AttributeType = "Fire",
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_195,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -15580,7 +15580,7 @@ return ReadOnly("Dungeon", {
   [90433] = {
     AttributeType = "Thunder",
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_196,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -15629,7 +15629,7 @@ return ReadOnly("Dungeon", {
   [90434] = {
     AttributeType = "Wind",
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_197,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -15678,7 +15678,7 @@ return ReadOnly("Dungeon", {
   [90435] = {
     AttributeType = "Dark",
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_198,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -15716,7 +15716,7 @@ return ReadOnly("Dungeon", {
     IsRandom = 1,
     LocAdjustDetectTime = 5,
     LocAdjustDis = 5000,
-    MonsterBuff = T.RT_170,
+    MonsterBuff = T.RT_173,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     RespawnRule = "CommonSolo",
@@ -15727,7 +15727,7 @@ return ReadOnly("Dungeon", {
   [90436] = {
     AttributeType = "Light",
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_199,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -15765,7 +15765,7 @@ return ReadOnly("Dungeon", {
     IsRandom = 1,
     LocAdjustDetectTime = 5,
     LocAdjustDis = 5000,
-    MonsterBuff = T.RT_178,
+    MonsterBuff = T.RT_181,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     RespawnRule = "CommonSolo",
@@ -15776,7 +15776,7 @@ return ReadOnly("Dungeon", {
   [90437] = {
     AttributeType = "Water",
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_194,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -15832,7 +15832,7 @@ return ReadOnly("Dungeon", {
   [90438] = {
     AttributeType = "Fire",
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_195,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -15881,7 +15881,7 @@ return ReadOnly("Dungeon", {
   [90439] = {
     AttributeType = "Thunder",
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_196,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -15930,7 +15930,7 @@ return ReadOnly("Dungeon", {
   [90440] = {
     AttributeType = "Wind",
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_197,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -15979,7 +15979,7 @@ return ReadOnly("Dungeon", {
   [90441] = {
     AttributeType = "Dark",
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_198,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -16017,7 +16017,7 @@ return ReadOnly("Dungeon", {
     IsRandom = 1,
     LocAdjustDetectTime = 5,
     LocAdjustDis = 5000,
-    MonsterBuff = T.RT_170,
+    MonsterBuff = T.RT_173,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     RespawnRule = "CommonSolo",
@@ -16028,7 +16028,7 @@ return ReadOnly("Dungeon", {
   [90442] = {
     AttributeType = "Light",
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_199,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -16066,7 +16066,7 @@ return ReadOnly("Dungeon", {
     IsRandom = 1,
     LocAdjustDetectTime = 5,
     LocAdjustDis = 5000,
-    MonsterBuff = T.RT_178,
+    MonsterBuff = T.RT_181,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     RespawnRule = "CommonSolo",
@@ -16113,7 +16113,7 @@ return ReadOnly("Dungeon", {
   },
   [90502] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_180,
+    Condition = T.RT_183,
     DropReward = T.RT_200,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -16151,7 +16151,7 @@ return ReadOnly("Dungeon", {
   },
   [90503] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
+    Condition = T.RT_184,
     DropReward = T.RT_200,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -16189,7 +16189,7 @@ return ReadOnly("Dungeon", {
   },
   [90504] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_200,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -16227,7 +16227,7 @@ return ReadOnly("Dungeon", {
   },
   [90505] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_200,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -16266,7 +16266,7 @@ return ReadOnly("Dungeon", {
   },
   [90506] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_200,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -16305,7 +16305,7 @@ return ReadOnly("Dungeon", {
   },
   [90507] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_200,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -16505,7 +16505,7 @@ return ReadOnly("Dungeon", {
     IsMultiDungeon = true,
     IsPlayLevelEnter = true,
     IsRandom = 1,
-    MonsterBuff = T.RT_170,
+    MonsterBuff = T.RT_173,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     RespawnRule = "CommonSolo",
@@ -16544,7 +16544,7 @@ return ReadOnly("Dungeon", {
     IsMultiDungeon = true,
     IsPlayLevelEnter = true,
     IsRandom = 1,
-    MonsterBuff = T.RT_170,
+    MonsterBuff = T.RT_173,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     RespawnRule = "CommonSolo",
@@ -16766,7 +16766,7 @@ return ReadOnly("Dungeon", {
     IsMultiDungeon = true,
     IsPlayLevelEnter = true,
     IsRandom = 1,
-    MonsterBuff = T.RT_170,
+    MonsterBuff = T.RT_173,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     RespawnRule = "CommonSolo",
@@ -16805,7 +16805,7 @@ return ReadOnly("Dungeon", {
     IsMultiDungeon = true,
     IsPlayLevelEnter = true,
     IsRandom = 1,
-    MonsterBuff = T.RT_170,
+    MonsterBuff = T.RT_173,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     RespawnRule = "CommonSolo",
@@ -16815,7 +16815,7 @@ return ReadOnly("Dungeon", {
   },
   [90521] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
     DungeonContent = "UI_DUNGEON_CONTENT_SABOTAGE_1",
@@ -16853,7 +16853,7 @@ return ReadOnly("Dungeon", {
   },
   [90522] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
     DungeonContent = "UI_DUNGEON_CONTENT_SABOTAGE_1",
@@ -16891,7 +16891,7 @@ return ReadOnly("Dungeon", {
   },
   [90523] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
     DungeonContent = "UI_DUNGEON_CONTENT_SABOTAGE_1",
@@ -16969,7 +16969,7 @@ return ReadOnly("Dungeon", {
   },
   [90602] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_180,
+    Condition = T.RT_183,
     DropReward = T.RT_208,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -17016,7 +17016,7 @@ return ReadOnly("Dungeon", {
   },
   [90603] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
+    Condition = T.RT_184,
     DropReward = T.RT_208,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -17063,7 +17063,7 @@ return ReadOnly("Dungeon", {
   },
   [90604] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = {
       ["Mon.Gr"] = 150601,
       ["Mon.Hx"] = 150601,
@@ -17121,7 +17121,7 @@ return ReadOnly("Dungeon", {
   },
   [90605] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_208,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -17168,7 +17168,7 @@ return ReadOnly("Dungeon", {
   },
   [90606] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_208,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -17215,7 +17215,7 @@ return ReadOnly("Dungeon", {
   },
   [90607] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_208,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -17340,7 +17340,7 @@ return ReadOnly("Dungeon", {
   },
   [90703] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
+    Condition = T.RT_184,
     DropReward = T.RT_211,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -17380,7 +17380,7 @@ return ReadOnly("Dungeon", {
   },
   [90704] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_211,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -17420,7 +17420,7 @@ return ReadOnly("Dungeon", {
   },
   [90705] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_211,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -17460,7 +17460,7 @@ return ReadOnly("Dungeon", {
   },
   [90706] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_211,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -17500,7 +17500,7 @@ return ReadOnly("Dungeon", {
   },
   [90707] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_211,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -17579,7 +17579,7 @@ return ReadOnly("Dungeon", {
   [90802] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_180,
+    Condition = T.RT_183,
     DropReward = T.RT_212,
     DropRewardMonsterNum = 40,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -17618,7 +17618,7 @@ return ReadOnly("Dungeon", {
   [90803] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
+    Condition = T.RT_184,
     DropReward = T.RT_212,
     DropRewardMonsterNum = 40,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -17657,7 +17657,7 @@ return ReadOnly("Dungeon", {
   [90804] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = {
       ["Mon.Gr"] = 150801,
       ["Mon.Hx"] = 150801,
@@ -17706,7 +17706,7 @@ return ReadOnly("Dungeon", {
   [90805] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_212,
     DropRewardMonsterNum = 40,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -17745,7 +17745,7 @@ return ReadOnly("Dungeon", {
   [90806] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_212,
     DropRewardMonsterNum = 40,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -17784,7 +17784,7 @@ return ReadOnly("Dungeon", {
   [90807] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_212,
     DropRewardMonsterNum = 40,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -17896,7 +17896,7 @@ return ReadOnly("Dungeon", {
   },
   [90903] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
+    Condition = T.RT_184,
     DropReward = T.RT_215,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -17934,7 +17934,7 @@ return ReadOnly("Dungeon", {
   },
   [90904] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_215,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -17972,7 +17972,7 @@ return ReadOnly("Dungeon", {
   },
   [90905] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_215,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -18010,7 +18010,7 @@ return ReadOnly("Dungeon", {
   },
   [90906] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_215,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -18048,7 +18048,7 @@ return ReadOnly("Dungeon", {
   },
   [90907] = {
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_215,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -18806,7 +18806,7 @@ return ReadOnly("Dungeon", {
   [91107] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
+    Condition = T.RT_184,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -18849,7 +18849,7 @@ return ReadOnly("Dungeon", {
   [91108] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
+    Condition = T.RT_184,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -18892,7 +18892,7 @@ return ReadOnly("Dungeon", {
   [91109] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
+    Condition = T.RT_184,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -18935,7 +18935,7 @@ return ReadOnly("Dungeon", {
   [91110] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
+    Condition = T.RT_184,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -18978,7 +18978,7 @@ return ReadOnly("Dungeon", {
   [91111] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
+    Condition = T.RT_184,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -19021,7 +19021,7 @@ return ReadOnly("Dungeon", {
   [91112] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -19064,7 +19064,7 @@ return ReadOnly("Dungeon", {
   [91113] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -19107,7 +19107,7 @@ return ReadOnly("Dungeon", {
   [91114] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -19150,7 +19150,7 @@ return ReadOnly("Dungeon", {
   [91115] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -19193,7 +19193,7 @@ return ReadOnly("Dungeon", {
   [91116] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -19236,7 +19236,7 @@ return ReadOnly("Dungeon", {
   [91117] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -19621,7 +19621,7 @@ return ReadOnly("Dungeon", {
   [91137] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -19664,7 +19664,7 @@ return ReadOnly("Dungeon", {
   [91138] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -19707,7 +19707,7 @@ return ReadOnly("Dungeon", {
   [91139] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -19750,7 +19750,7 @@ return ReadOnly("Dungeon", {
   [91140] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -19793,7 +19793,7 @@ return ReadOnly("Dungeon", {
   [91141] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -19836,7 +19836,7 @@ return ReadOnly("Dungeon", {
   [91142] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -19879,7 +19879,7 @@ return ReadOnly("Dungeon", {
   [91143] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -19922,7 +19922,7 @@ return ReadOnly("Dungeon", {
   [91144] = {
     AttributeType = "Wind",
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_239,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
@@ -19966,7 +19966,7 @@ return ReadOnly("Dungeon", {
   [91145] = {
     AttributeType = "Wind",
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_239,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
@@ -20010,7 +20010,7 @@ return ReadOnly("Dungeon", {
   [91146] = {
     AttributeType = "Wind",
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_242,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
@@ -20054,7 +20054,7 @@ return ReadOnly("Dungeon", {
   [91147] = {
     AttributeType = "Wind",
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_242,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
@@ -20099,7 +20099,7 @@ return ReadOnly("Dungeon", {
     AlertDisable = true,
     AttributeType = "Light",
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 100,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -20127,7 +20127,7 @@ return ReadOnly("Dungeon", {
     IsModDungeon = true,
     IsPlayLevelEnter = true,
     IsRandom = 1,
-    MonsterBuff = T.RT_178,
+    MonsterBuff = T.RT_181,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     PreloadMonsters = T.RT_146,
@@ -20392,7 +20392,7 @@ return ReadOnly("Dungeon", {
   [91157] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
+    Condition = T.RT_184,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -20435,7 +20435,7 @@ return ReadOnly("Dungeon", {
   [91158] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
+    Condition = T.RT_184,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -20478,7 +20478,7 @@ return ReadOnly("Dungeon", {
   [91159] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
+    Condition = T.RT_184,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -20521,7 +20521,7 @@ return ReadOnly("Dungeon", {
   [91160] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
+    Condition = T.RT_184,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -20564,7 +20564,7 @@ return ReadOnly("Dungeon", {
   [91161] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_181,
+    Condition = T.RT_184,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -20607,7 +20607,7 @@ return ReadOnly("Dungeon", {
   [91162] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -20650,7 +20650,7 @@ return ReadOnly("Dungeon", {
   [91163] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -20693,7 +20693,7 @@ return ReadOnly("Dungeon", {
   [91164] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -20736,7 +20736,7 @@ return ReadOnly("Dungeon", {
   [91165] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -20779,7 +20779,7 @@ return ReadOnly("Dungeon", {
   [91166] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -20822,7 +20822,7 @@ return ReadOnly("Dungeon", {
   [91167] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_182,
+    Condition = T.RT_157,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -21123,7 +21123,7 @@ return ReadOnly("Dungeon", {
   [91174] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -21166,7 +21166,7 @@ return ReadOnly("Dungeon", {
   [91175] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -21209,7 +21209,7 @@ return ReadOnly("Dungeon", {
   [91176] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -21252,7 +21252,7 @@ return ReadOnly("Dungeon", {
   [91177] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -21295,7 +21295,7 @@ return ReadOnly("Dungeon", {
   [91178] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -21338,7 +21338,7 @@ return ReadOnly("Dungeon", {
   [91179] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -21381,7 +21381,7 @@ return ReadOnly("Dungeon", {
   [91180] = {
     AlertDisable = true,
     CameraParam = T.RT_2,
-    Condition = T.RT_183,
+    Condition = T.RT_159,
     DropReward = T.RT_130,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -21424,7 +21424,7 @@ return ReadOnly("Dungeon", {
   [91181] = {
     AttributeType = "Wind",
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_239,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
@@ -21467,7 +21467,7 @@ return ReadOnly("Dungeon", {
   [91182] = {
     AttributeType = "Wind",
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_239,
     DropRewardMonsterNum = 200,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
@@ -21510,7 +21510,7 @@ return ReadOnly("Dungeon", {
   [91183] = {
     AttributeType = "Wind",
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_242,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
@@ -21553,7 +21553,7 @@ return ReadOnly("Dungeon", {
   [91184] = {
     AttributeType = "Wind",
     CameraParam = T.RT_2,
-    Condition = T.RT_184,
+    Condition = T.RT_163,
     DropReward = T.RT_242,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
@@ -21678,7 +21678,7 @@ return ReadOnly("Dungeon", {
   [91251] = {
     AttributeType = "Dark",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_108,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -21691,9 +21691,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 65,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_168,
+    DungeonReward = T.RT_171,
     DungeonRewardView = 91201,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90101",
@@ -21709,12 +21709,12 @@ return ReadOnly("Dungeon", {
     IsMultiDungeon = true,
     IsPlayLevelEnter = true,
     IsRandom = 1,
-    MonsterBuff = T.RT_170,
+    MonsterBuff = T.RT_173,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     PreloadMonsters = T.RT_113,
     PreloadMonstersNum = T.RT_114,
-    PreloadStaticMonstersNum = T.RT_171,
+    PreloadStaticMonstersNum = T.RT_174,
     RespawnRule = "CommonSolo",
     SettlementOffset = T.RT_7,
     Squad = true,
@@ -21724,7 +21724,7 @@ return ReadOnly("Dungeon", {
   [91252] = {
     AttributeType = "Water",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_108,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -21737,9 +21737,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 65,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_172,
+    DungeonReward = T.RT_175,
     DungeonRewardView = 91202,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90102",
@@ -21760,7 +21760,7 @@ return ReadOnly("Dungeon", {
     NoTicketEnter = true,
     PreloadMonsters = T.RT_113,
     PreloadMonstersNum = T.RT_114,
-    PreloadStaticMonstersNum = T.RT_171,
+    PreloadStaticMonstersNum = T.RT_174,
     RespawnRule = "CommonSolo",
     SettlementOffset = T.RT_7,
     Squad = true,
@@ -21770,7 +21770,7 @@ return ReadOnly("Dungeon", {
   [91253] = {
     AttributeType = "Water",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_108,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -21783,9 +21783,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 65,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_172,
+    DungeonReward = T.RT_175,
     DungeonRewardView = 91203,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90103",
@@ -21806,7 +21806,7 @@ return ReadOnly("Dungeon", {
     NoTicketEnter = true,
     PreloadMonsters = T.RT_113,
     PreloadMonstersNum = T.RT_114,
-    PreloadStaticMonstersNum = T.RT_171,
+    PreloadStaticMonstersNum = T.RT_174,
     RespawnRule = "CommonSolo",
     SettlementOffset = T.RT_7,
     Squad = true,
@@ -21816,7 +21816,7 @@ return ReadOnly("Dungeon", {
   [91254] = {
     AttributeType = "Fire",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_108,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -21829,9 +21829,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 65,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_173,
+    DungeonReward = T.RT_176,
     DungeonRewardView = 91204,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90104",
@@ -21852,7 +21852,7 @@ return ReadOnly("Dungeon", {
     NoTicketEnter = true,
     PreloadMonsters = T.RT_113,
     PreloadMonstersNum = T.RT_114,
-    PreloadStaticMonstersNum = T.RT_171,
+    PreloadStaticMonstersNum = T.RT_174,
     RespawnRule = "CommonSolo",
     SettlementOffset = T.RT_7,
     Squad = true,
@@ -21862,7 +21862,7 @@ return ReadOnly("Dungeon", {
   [91255] = {
     AttributeType = "Thunder",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_108,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -21875,9 +21875,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 65,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_174,
+    DungeonReward = T.RT_177,
     DungeonRewardView = 91205,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90105",
@@ -21898,7 +21898,7 @@ return ReadOnly("Dungeon", {
     NoTicketEnter = true,
     PreloadMonsters = T.RT_113,
     PreloadMonstersNum = T.RT_114,
-    PreloadStaticMonstersNum = T.RT_171,
+    PreloadStaticMonstersNum = T.RT_174,
     RespawnRule = "CommonSolo",
     SettlementOffset = T.RT_7,
     Squad = true,
@@ -21908,7 +21908,7 @@ return ReadOnly("Dungeon", {
   [91256] = {
     AttributeType = "Wind",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_108,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -21921,9 +21921,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 65,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_175,
+    DungeonReward = T.RT_178,
     DungeonRewardView = 91206,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90106",
@@ -21944,7 +21944,7 @@ return ReadOnly("Dungeon", {
     NoTicketEnter = true,
     PreloadMonsters = T.RT_113,
     PreloadMonstersNum = T.RT_114,
-    PreloadStaticMonstersNum = T.RT_171,
+    PreloadStaticMonstersNum = T.RT_174,
     RespawnRule = "CommonSolo",
     SettlementOffset = T.RT_7,
     Squad = true,
@@ -21954,7 +21954,7 @@ return ReadOnly("Dungeon", {
   [91257] = {
     AttributeType = "Wind",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_108,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -21967,9 +21967,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 65,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_175,
+    DungeonReward = T.RT_178,
     DungeonRewardView = 91207,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90107",
@@ -21990,7 +21990,7 @@ return ReadOnly("Dungeon", {
     NoTicketEnter = true,
     PreloadMonsters = T.RT_113,
     PreloadMonstersNum = T.RT_114,
-    PreloadStaticMonstersNum = T.RT_171,
+    PreloadStaticMonstersNum = T.RT_174,
     RespawnRule = "CommonSolo",
     SettlementOffset = T.RT_7,
     Squad = true,
@@ -22000,7 +22000,7 @@ return ReadOnly("Dungeon", {
   [91258] = {
     AttributeType = "Light",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_108,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -22013,9 +22013,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 65,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_176,
+    DungeonReward = T.RT_179,
     DungeonRewardView = 91208,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90108",
@@ -22031,12 +22031,12 @@ return ReadOnly("Dungeon", {
     IsMultiDungeon = true,
     IsPlayLevelEnter = true,
     IsRandom = 1,
-    MonsterBuff = T.RT_178,
+    MonsterBuff = T.RT_181,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     PreloadMonsters = T.RT_113,
     PreloadMonstersNum = T.RT_114,
-    PreloadStaticMonstersNum = T.RT_171,
+    PreloadStaticMonstersNum = T.RT_174,
     RespawnRule = "CommonSolo",
     SettlementOffset = T.RT_7,
     Squad = true,
@@ -22046,7 +22046,7 @@ return ReadOnly("Dungeon", {
   [91259] = {
     AttributeType = "Light",
     CameraParam = T.RT_2,
-    Condition = T.RT_167,
+    Condition = T.RT_158,
     DropReward = T.RT_108,
     DropRewardMonsterNum = 240,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -22059,9 +22059,9 @@ return ReadOnly("Dungeon", {
     DungeonJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/DefenceMove",
     DungeonLevel = 65,
     DungeonMapFile = "/Game/Maps/Prologue_DefenceMove",
-    DungeonMonsters = T.RT_161,
+    DungeonMonsters = T.RT_165,
     DungeonName = "UI_DUNGEON_TYPE_DEFENCEPRO",
-    DungeonReward = T.RT_176,
+    DungeonReward = T.RT_179,
     DungeonRewardView = 91209,
     DungeonType = "DefenceMove",
     DungeonTypeShow = "DUNGEON_NAME_90109",
@@ -22077,12 +22077,12 @@ return ReadOnly("Dungeon", {
     IsMultiDungeon = true,
     IsPlayLevelEnter = true,
     IsRandom = 1,
-    MonsterBuff = T.RT_178,
+    MonsterBuff = T.RT_181,
     MultiPlayerLevels = T.RT_57,
     NoTicketEnter = true,
     PreloadMonsters = T.RT_113,
     PreloadMonstersNum = T.RT_114,
-    PreloadStaticMonstersNum = T.RT_171,
+    PreloadStaticMonstersNum = T.RT_174,
     RespawnRule = "CommonSolo",
     SettlementOffset = T.RT_7,
     Squad = true,

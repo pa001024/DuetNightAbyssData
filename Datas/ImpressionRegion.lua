@@ -30,7 +30,7 @@ return ReadOnly("ImpressionRegion", {
       1049,
       1057
     },
-    RegionPointId = 2612,
+    RegionPointId = 2826,
     UIName = "DimensionGraph_East"
   }
 })

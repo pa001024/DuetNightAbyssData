@@ -854,7 +854,7 @@ return ReadOnly("Skin", {
     Rarity = 5,
     RegainItemId = 110,
     RegainItemNum = 30,
-    ReleaseVersion = 115,
+    ReleaseVersion = 110,
     SkinDescribe = "UI_Skin_Des_0011",
     SkinId = 15030011,
     SkinModelId = 15030011,
