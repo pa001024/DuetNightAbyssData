@@ -147,7 +147,6 @@ for _, SkillId in ipairs(BattleCharData.SkillList) do
             end
         end
     end
-
 end
 
 print("\n===== 溯源 =====")
