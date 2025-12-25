@@ -3,6 +3,7 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
 end
 return ReadOnly("DamageRateZone", {
   Abyss = {RateZone = "Abyss"},
+  AbyssDown = {RateZone = "AbyssDown"},
   Almighty = {RateZone = "Almighty"},
   BossDown = {RateZone = "BossDown"},
   Enmity = {RateZone = "Enmity"},

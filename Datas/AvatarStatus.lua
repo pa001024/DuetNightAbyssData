@@ -296,7 +296,7 @@ return ReadOnly("AvatarStatus", {
     }
   },
   [17] = {
-    Priority = 2,
+    Priority = 1,
     StatusId = 17,
     StatusName = "InTheaterPerform",
     TurnList = {
@@ -309,6 +309,7 @@ return ReadOnly("AvatarStatus", {
       7,
       8,
       9,
+      10,
       11,
       12,
       13,

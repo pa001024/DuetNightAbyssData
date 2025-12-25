@@ -2254,7 +2254,7 @@ local Data = {
   },
   {
     MinKey = "Condition_Toast_PlayerLv_14",
-    MaxKey = "Event_Title_107002",
+    MaxKey = "Event_Title_107001",
     Loader = function()
       return {
         Condition_Toast_PlayerLv_14 = {
@@ -2660,6 +2660,10 @@ local Data = {
         Eight = {ContentES = "8.0", TextMapId = "Eight"},
         End = {ContentES = "Fin", TextMapId = "End"},
         Enter = {ContentES = "Intro", TextMapId = "Enter"},
+        Episode_Region_None_Trans = {
+          ContentES = "DONGGUO",
+          TextMapId = "Episode_Region_None_Trans"
+        },
         Equals = {ContentES = "=", TextMapId = "Equals"},
         Escape = {ContentES = "Esc", TextMapId = "Escape"},
         EventDungeonPass_Title1 = {
@@ -3025,19 +3029,19 @@ local Data = {
         Event_Title_107001 = {
           ContentES = "Himno de la abundancia",
           TextMapId = "Event_Title_107001"
-        },
-        Event_Title_107002 = {
-          ContentES = "Espiral de los vínculos",
-          TextMapId = "Event_Title_107002"
         }
       }
     end
   },
   {
-    MinKey = "Event_Title_107003",
-    MaxKey = "GRADEUP_4101_01",
+    MinKey = "Event_Title_107002",
+    MaxKey = "GRADEUP_3301_06",
     Loader = function()
       return {
+        Event_Title_107002 = {
+          ContentES = "Espiral de los vínculos",
+          TextMapId = "Event_Title_107002"
+        },
         Event_Title_107003 = {
           ContentES = "Huellas que se cruzan",
           TextMapId = "Event_Title_107003"
@@ -3824,19 +3828,19 @@ local Data = {
         GRADEUP_3301_06 = {
           ContentES = "Cuando [Basurero Combustible de Margie] inflige daño, el daño infligido al objetivo por Margie aumenta en #5 durante #4 s.",
           TextMapId = "GRADEUP_3301_06"
-        },
-        GRADEUP_4101_01 = {
-          ContentES = "El daño de [Carga Eléctrica] se convierte en daño de área en un radio de 3 metros.",
-          TextMapId = "GRADEUP_4101_01"
         }
       }
     end
   },
   {
-    MinKey = "GRADEUP_4101_02",
-    MaxKey = "MidTermGoal_Des_3_1",
+    MinKey = "GRADEUP_4101_01",
+    MaxKey = "MidTermGoal_Des_2_4",
     Loader = function()
       return {
+        GRADEUP_4101_01 = {
+          ContentES = "El daño de [Carga Eléctrica] se convierte en daño de área en un radio de 3 metros.",
+          TextMapId = "GRADEUP_4101_01"
+        },
         GRADEUP_4101_02 = {
           ContentES = "Cuando un enemigo con [Carga Eléctrica] es derrotado, su [Carga Eléctrica] se transfiere a otro objetivo en un radio de 20 metros según el tiempo restante.",
           TextMapId = "GRADEUP_4101_02"
@@ -4611,19 +4615,19 @@ local Data = {
         MidTermGoal_Des_2_4 = {
           ContentES = "Usa <highlight>1</> Manual de encargo",
           TextMapId = "MidTermGoal_Des_2_4"
-        },
-        MidTermGoal_Des_3_1 = {
-          ContentES = "Completa <highlight>1</> encargo del Manual de Noctoviajero",
-          TextMapId = "MidTermGoal_Des_3_1"
         }
       }
     end
   },
   {
-    MinKey = "MidTermGoal_Des_3_2",
-    MaxKey = "ModFilter_Title",
+    MinKey = "MidTermGoal_Des_3_1",
+    MaxKey = "ModFilter_SubTitle_TypeName",
     Loader = function()
       return {
+        MidTermGoal_Des_3_1 = {
+          ContentES = "Completa <highlight>1</> encargo del Manual de Noctoviajero",
+          TextMapId = "MidTermGoal_Des_3_1"
+        },
         MidTermGoal_Des_3_2 = {
           ContentES = "Obtén <highlight>1</> Cuña Demoníaca de nivel Azul",
           TextMapId = "MidTermGoal_Des_3_2"
@@ -5419,19 +5423,19 @@ local Data = {
         ModFilter_SubTitle_TypeName = {
           ContentES = "Colección",
           TextMapId = "ModFilter_SubTitle_TypeName"
-        },
-        ModFilter_Title = {
-          ContentES = "Filtrar",
-          TextMapId = "ModFilter_Title"
         }
       }
     end
   },
   {
-    MinKey = "Mod_AttrDelta",
-    MaxKey = "Mon_Name_6001201",
+    MinKey = "ModFilter_Title",
+    MaxKey = "Mon_Name_6001024",
     Loader = function()
       return {
+        ModFilter_Title = {
+          ContentES = "Filtrar",
+          TextMapId = "ModFilter_Title"
+        },
         Mod_AttrDelta = {
           ContentES = "Bonificación de atributos",
           TextMapId = "Mod_AttrDelta"
@@ -6229,19 +6233,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Mon_Name_6001024 = {
           ContentES = "Filthoid Veloz - Fantasma",
           TextMapId = "Mon_Name_6001024"
-        },
-        Mon_Name_6001201 = {
-          ContentES = "Filthoid Veloz - Trueno y Sacrificio",
-          TextMapId = "Mon_Name_6001201"
         }
       }
     end
   },
   {
-    MinKey = "Mon_Name_6001301",
-    MaxKey = "Mon_Name_7002015",
+    MinKey = "Mon_Name_6001201",
+    MaxKey = "Mon_Name_7002014",
     Loader = function()
       return {
+        Mon_Name_6001201 = {
+          ContentES = "Filthoid Veloz - Trueno y Sacrificio",
+          TextMapId = "Mon_Name_6001201"
+        },
         Mon_Name_6001301 = {
           ContentES = "Filthoid Veloz - Sacrificio, Marchitar y Explosión",
           TextMapId = "Mon_Name_6001301"
@@ -7037,19 +7041,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Mon_Name_7002014 = {
           ContentES = "Soldado Hendedor - Trueno",
           TextMapId = "Mon_Name_7002014"
-        },
-        Mon_Name_7002015 = {
-          ContentES = "Soldado Hendedor - Putrefacción",
-          TextMapId = "Mon_Name_7002015"
         }
       }
     end
   },
   {
-    MinKey = "Mon_Name_7002016",
-    MaxKey = "Mon_Name_8001022",
+    MinKey = "Mon_Name_7002015",
+    MaxKey = "Mon_Name_8001021",
     Loader = function()
       return {
+        Mon_Name_7002015 = {
+          ContentES = "Soldado Hendedor - Putrefacción",
+          TextMapId = "Mon_Name_7002015"
+        },
         Mon_Name_7002016 = {
           ContentES = "Soldado Hendedor - Marchitar",
           TextMapId = "Mon_Name_7002016"
@@ -7845,19 +7849,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Mon_Name_8001021 = {
           ContentES = "Diácono Bendito - Sacrificio",
           TextMapId = "Mon_Name_8001021"
-        },
-        Mon_Name_8001022 = {
-          ContentES = "Diácono Bendito - Tormenta Eléctrica",
-          TextMapId = "Mon_Name_8001022"
         }
       }
     end
   },
   {
-    MinKey = "Mon_Name_8001023",
-    MaxKey = "Mon_Name_9006301",
+    MinKey = "Mon_Name_8001022",
+    MaxKey = "Mon_Name_9006201",
     Loader = function()
       return {
+        Mon_Name_8001022 = {
+          ContentES = "Diácono Bendito - Tormenta Eléctrica",
+          TextMapId = "Mon_Name_8001022"
+        },
         Mon_Name_8001023 = {
           ContentES = "Diácono Bendito - Baño de Sangre",
           TextMapId = "Mon_Name_8001023"
@@ -8653,19 +8657,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Mon_Name_9006201 = {
           ContentES = "\"Engañador\" - Trueno e Infierno Gélido",
           TextMapId = "Mon_Name_9006201"
-        },
-        Mon_Name_9006301 = {
-          ContentES = "\"Engañador\" - Baño de Sangre, Fantasma y Congelación",
-          TextMapId = "Mon_Name_9006301"
         }
       }
     end
   },
   {
-    MinKey = "Mon_Name_9007001",
-    MaxKey = "Pet_Name_405",
+    MinKey = "Mon_Name_9006301",
+    MaxKey = "Pet_Name_404",
     Loader = function()
       return {
+        Mon_Name_9006301 = {
+          ContentES = "\"Engañador\" - Baño de Sangre, Fantasma y Congelación",
+          TextMapId = "Mon_Name_9006301"
+        },
         Mon_Name_9007001 = {
           ContentES = "Agente del Enjambre",
           TextMapId = "Mon_Name_9007001"
@@ -9413,19 +9417,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Pet_Name_404 = {
           ContentES = "Cubolto",
           TextMapId = "Pet_Name_404"
-        },
-        Pet_Name_405 = {
-          ContentES = "Champichito",
-          TextMapId = "Pet_Name_405"
         }
       }
     end
   },
   {
-    MinKey = "Pet_Name_406",
-    MaxKey = "SKILL_150003_NAME",
+    MinKey = "Pet_Name_405",
+    MaxKey = "SKILL_150003_DESC",
     Loader = function()
       return {
+        Pet_Name_405 = {
+          ContentES = "Champichito",
+          TextMapId = "Pet_Name_405"
+        },
         Pet_Name_406 = {
           ContentES = "Lumi",
           TextMapId = "Pet_Name_406"
@@ -10212,19 +10216,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         SKILL_150003_DESC = {
           ContentES = "<H>[Disponible solo al desplegarse como Compañero de combate]</>\nAumenta el ATQ propio y de los aliados Lumino.",
           TextMapId = "SKILL_150003_DESC"
-        },
-        SKILL_150003_NAME = {
-          ContentES = "Cuando el Cielo se Volvió Dorado",
-          TextMapId = "SKILL_150003_NAME"
         }
       }
     end
   },
   {
-    MinKey = "SKILL_150101_DESC",
-    MaxKey = "SKILL_510003_DESC",
+    MinKey = "SKILL_150003_NAME",
+    MaxKey = "SKILL_510001_NAME",
     Loader = function()
       return {
+        SKILL_150003_NAME = {
+          ContentES = "Cuando el Cielo se Volvió Dorado",
+          TextMapId = "SKILL_150003_NAME"
+        },
         SKILL_150101_DESC = {
           ContentES = "Se lanza hacia adelante e inflige daño de área Lumino 3 veces a lo largo del recorrido; luego cae e inflige daño Lumino de área.",
           TextMapId = "SKILL_150101_DESC"
@@ -11020,19 +11024,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         SKILL_510001_NAME = {
           ContentES = "Dominio del Cielo",
           TextMapId = "SKILL_510001_NAME"
-        },
-        SKILL_510003_DESC = {
-          ContentES = "<H>[Disponible solo al desplegarse como Compañero de combate]</>\nAumenta el ATQ propio y de sus aliados Anemo.",
-          TextMapId = "SKILL_510003_DESC"
         }
       }
     end
   },
   {
-    MinKey = "SKILL_510003_NAME",
-    MaxKey = "SKILL_DESC_4102Skill02_Range00",
+    MinKey = "SKILL_510003_DESC",
+    MaxKey = "SKILL_DESC_4102Skill02_Dmg04",
     Loader = function()
       return {
+        SKILL_510003_DESC = {
+          ContentES = "<H>[Disponible solo al desplegarse como Compañero de combate]</>\nAumenta el ATQ propio y de sus aliados Anemo.",
+          TextMapId = "SKILL_510003_DESC"
+        },
         SKILL_510003_NAME = {
           ContentES = "Rumores del Banquete",
           TextMapId = "SKILL_510003_NAME"
@@ -11828,19 +11832,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         SKILL_DESC_4102Skill02_Dmg04 = {
           ContentES = "Daño de [Claridad Cósmica]",
           TextMapId = "SKILL_DESC_4102Skill02_Dmg04"
-        },
-        SKILL_DESC_4102Skill02_Range00 = {
-          ContentES = "Radio de Daño de [Adivinación Cielo-Tierra]",
-          TextMapId = "SKILL_DESC_4102Skill02_Range00"
         }
       }
     end
   },
   {
-    MinKey = "SKILL_DESC_4102Skill02_Range01",
-    MaxKey = "SKILL_ICON_Damage",
+    MinKey = "SKILL_DESC_4102Skill02_Range00",
+    MaxKey = "SKILL_DESC_TriggerProbUpLayer",
     Loader = function()
       return {
+        SKILL_DESC_4102Skill02_Range00 = {
+          ContentES = "Radio de Daño de [Adivinación Cielo-Tierra]",
+          TextMapId = "SKILL_DESC_4102Skill02_Range00"
+        },
         SKILL_DESC_4102Skill02_Range01 = {
           ContentES = "Rango de Daño de [Toque Oracular del Trueno]",
           TextMapId = "SKILL_DESC_4102Skill02_Range01"
@@ -12636,19 +12640,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         SKILL_DESC_TriggerProbUpLayer = {
           ContentES = "Aumento de Probabilidad de Activación por acumulación",
           TextMapId = "SKILL_DESC_TriggerProbUpLayer"
-        },
-        SKILL_ICON_Damage = {
-          ContentES = "Daño",
-          TextMapId = "SKILL_ICON_Damage"
         }
       }
     end
   },
   {
-    MinKey = "SKILL_ICON_Defence",
-    MaxKey = "TERMEXP_1801_Passive",
+    MinKey = "SKILL_ICON_Damage",
+    MaxKey = "TERMEXP_1601_Skill02",
     Loader = function()
       return {
+        SKILL_ICON_Damage = {
+          ContentES = "Daño",
+          TextMapId = "SKILL_ICON_Damage"
+        },
         SKILL_ICON_Defence = {
           ContentES = "DEF",
           TextMapId = "SKILL_ICON_Defence"
@@ -13423,19 +13427,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         TERMEXP_1601_Skill02 = {
           ContentES = "Aumenta el Daño de Arma.",
           TextMapId = "TERMEXP_1601_Skill02"
-        },
-        TERMEXP_1801_Passive = {
-          ContentES = "Inflige Daño Lumino adicional.",
-          TextMapId = "TERMEXP_1801_Passive"
         }
       }
     end
   },
   {
-    MinKey = "TERMEXP_1801_Skill02",
-    MaxKey = "UI_ActionPoint_RecoverMax",
+    MinKey = "TERMEXP_1801_Passive",
+    MaxKey = "UI_ActionPoint_RecoverFailure",
     Loader = function()
       return {
+        TERMEXP_1801_Passive = {
+          ContentES = "Inflige Daño Lumino adicional.",
+          TextMapId = "TERMEXP_1801_Passive"
+        },
         TERMEXP_1801_Skill02 = {
           ContentES = "Genera un campo elemental según los [Invitados del Té Escandaloso]: [Ruiseñor] (Hydro), [Sabueso] (Pyro), [Unicornio] (Electro) y [Mariposa] (Anemo).\nAl aparecer o cambiar el elemento del campo, Fina y sus aliados obtienen daño adicional según el atributo del campo. Mientras [Fiesta de Té Escandalosa] está activa, inflige Daño Periódico elemental cada 2 s a los enemigos dentro del área.",
           TextMapId = "TERMEXP_1801_Skill02"
@@ -14213,19 +14217,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         UI_ActionPoint_RecoverFailure = {
           ContentES = "Excediendo el límite. Error al recuperar energía.",
           TextMapId = "UI_ActionPoint_RecoverFailure"
-        },
-        UI_ActionPoint_RecoverMax = {
-          ContentES = "La recuperación de energía no puede exceder el límite máximo",
-          TextMapId = "UI_ActionPoint_RecoverMax"
         }
       }
     end
   },
   {
-    MinKey = "UI_ActionPoint_RecoverSuccess",
-    MaxKey = "UI_BattlePass_PlatinumRank",
+    MinKey = "UI_ActionPoint_RecoverMax",
+    MaxKey = "UI_BattlePass_PetSelectionTab",
     Loader = function()
       return {
+        UI_ActionPoint_RecoverMax = {
+          ContentES = "La recuperación de energía no puede exceder el límite máximo",
+          TextMapId = "UI_ActionPoint_RecoverMax"
+        },
         UI_ActionPoint_RecoverSuccess = {
           ContentES = "Energía recuperada correctamente",
           TextMapId = "UI_ActionPoint_RecoverSuccess"
@@ -15015,19 +15019,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         UI_BattlePass_PetSelectionTab = {
           ContentES = "Recompensa de encuadernación",
           TextMapId = "UI_BattlePass_PetSelectionTab"
-        },
-        UI_BattlePass_PlatinumRank = {
-          ContentES = "Edición de coleccionista",
-          TextMapId = "UI_BattlePass_PlatinumRank"
         }
       }
     end
   },
   {
-    MinKey = "UI_BattlePass_PreviewPortal",
-    MaxKey = "UI_CTL_CheckCondition",
+    MinKey = "UI_BattlePass_PlatinumRank",
+    MaxKey = "UI_CTL_Camera",
     Loader = function()
       return {
+        UI_BattlePass_PlatinumRank = {
+          ContentES = "Edición de coleccionista",
+          TextMapId = "UI_BattlePass_PlatinumRank"
+        },
         UI_BattlePass_PreviewPortal = {
           ContentES = "Vista previa",
           TextMapId = "UI_BattlePass_PreviewPortal"
@@ -15820,19 +15824,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         UI_CTL_Camera = {
           ContentES = "Control de cámara",
           TextMapId = "UI_CTL_Camera"
-        },
-        UI_CTL_CheckCondition = {
-          ContentES = "Requisitos",
-          TextMapId = "UI_CTL_CheckCondition"
         }
       }
     end
   },
   {
-    MinKey = "UI_CTL_CheckPet",
-    MaxKey = "UI_Chat_PublicEmpty",
+    MinKey = "UI_CTL_CheckCondition",
+    MaxKey = "UI_Chat_NotSaveEmpty",
     Loader = function()
       return {
+        UI_CTL_CheckCondition = {
+          ContentES = "Requisitos",
+          TextMapId = "UI_CTL_CheckCondition"
+        },
         UI_CTL_CheckPet = {
           ContentES = "Ver Geniemon",
           TextMapId = "UI_CTL_CheckPet"
@@ -16628,19 +16632,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         UI_Chat_NotSaveEmpty = {
           ContentES = "No se puede guardar un mensaje vacío",
           TextMapId = "UI_Chat_NotSaveEmpty"
-        },
-        UI_Chat_PublicEmpty = {
-          ContentES = "Sin mensajes",
-          TextMapId = "UI_Chat_PublicEmpty"
         }
       }
     end
   },
   {
-    MinKey = "UI_Chat_QuickMsgEditSuccess",
-    MaxKey = "UI_EnemyArchive_All",
+    MinKey = "UI_Chat_PublicEmpty",
+    MaxKey = "UI_End_Forge_Confirm",
     Loader = function()
       return {
+        UI_Chat_PublicEmpty = {
+          ContentES = "Sin mensajes",
+          TextMapId = "UI_Chat_PublicEmpty"
+        },
         UI_Chat_QuickMsgEditSuccess = {
           ContentES = "Edición rápida de mensaje exitosa",
           TextMapId = "UI_Chat_QuickMsgEditSuccess"
@@ -17433,19 +17437,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         UI_End_Forge_Confirm = {
           ContentES = "Confirmar",
           TextMapId = "UI_End_Forge_Confirm"
-        },
-        UI_EnemyArchive_All = {
-          ContentES = "Todo",
-          TextMapId = "UI_EnemyArchive_All"
         }
       }
     end
   },
   {
-    MinKey = "UI_EnemyArchive_BossType",
-    MaxKey = "UI_GameEvent_TrialReward",
+    MinKey = "UI_EnemyArchive_All",
+    MaxKey = "UI_GameEvent_TrialPortal",
     Loader = function()
       return {
+        UI_EnemyArchive_All = {
+          ContentES = "Todo",
+          TextMapId = "UI_EnemyArchive_All"
+        },
         UI_EnemyArchive_BossType = {
           ContentES = "Enemigos de élite",
           TextMapId = "UI_EnemyArchive_BossType"
@@ -18238,19 +18242,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         UI_GameEvent_TrialPortal = {
           ContentES = "Probar ahora",
           TextMapId = "UI_GameEvent_TrialPortal"
-        },
-        UI_GameEvent_TrialReward = {
-          ContentES = "Prueba y obtendrás",
-          TextMapId = "UI_GameEvent_TrialReward"
         }
       }
     end
   },
   {
-    MinKey = "UI_GameEvent_TrialRewardClaim",
-    MaxKey = "UI_Locked_Des_Armory",
+    MinKey = "UI_GameEvent_TrialReward",
+    MaxKey = "UI_Locked_Des_Archive",
     Loader = function()
       return {
+        UI_GameEvent_TrialReward = {
+          ContentES = "Prueba y obtendrás",
+          TextMapId = "UI_GameEvent_TrialReward"
+        },
         UI_GameEvent_TrialRewardClaim = {
           ContentES = "Reclamar",
           TextMapId = "UI_GameEvent_TrialRewardClaim"
@@ -19046,19 +19050,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         UI_Locked_Des_Archive = {
           ContentES = "Archivos no desbloqueados",
           TextMapId = "UI_Locked_Des_Archive"
-        },
-        UI_Locked_Des_Armory = {
-          ContentES = "Arsenal no desbloqueado",
-          TextMapId = "UI_Locked_Des_Armory"
         }
       }
     end
   },
   {
-    MinKey = "UI_Locked_Des_BattlePass",
-    MaxKey = "UI_OPTION_CONTROLLER",
+    MinKey = "UI_Locked_Des_Armory",
+    MaxKey = "UI_OPTION_Brightness",
     Loader = function()
       return {
+        UI_Locked_Des_Armory = {
+          ContentES = "Arsenal no desbloqueado",
+          TextMapId = "UI_Locked_Des_Armory"
+        },
         UI_Locked_Des_BattlePass = {
           ContentES = "Tomo del bardo no desbloqueado",
           TextMapId = "UI_Locked_Des_BattlePass"
@@ -19851,19 +19855,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         UI_OPTION_Brightness = {
           ContentES = "Brillo",
           TextMapId = "UI_OPTION_Brightness"
-        },
-        UI_OPTION_CONTROLLER = {
-          ContentES = "Controles",
-          TextMapId = "UI_OPTION_CONTROLLER"
         }
       }
     end
   },
   {
-    MinKey = "UI_OPTION_CameraBack",
-    MaxKey = "UI_Option_Dropdown_44",
+    MinKey = "UI_OPTION_CONTROLLER",
+    MaxKey = "UI_Option_Dropdown_43",
     Loader = function()
       return {
+        UI_OPTION_CONTROLLER = {
+          ContentES = "Controles",
+          TextMapId = "UI_OPTION_CONTROLLER"
+        },
         UI_OPTION_CameraBack = {
           ContentES = "Centrado automático de cámara",
           TextMapId = "UI_OPTION_CameraBack"
@@ -20659,19 +20663,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         UI_Option_Dropdown_43 = {
           ContentES = "Cinemático",
           TextMapId = "UI_Option_Dropdown_43"
-        },
-        UI_Option_Dropdown_44 = {
-          ContentES = "90 Hz",
-          TextMapId = "UI_Option_Dropdown_44"
         }
       }
     end
   },
   {
-    MinKey = "UI_Option_Dropdown_45",
-    MaxKey = "UI_SHOP_SUBTAB_NAME_MOD",
+    MinKey = "UI_Option_Dropdown_44",
+    MaxKey = "UI_SHOP_SUBTAB_NAME_JINGLI",
     Loader = function()
       return {
+        UI_Option_Dropdown_44 = {
+          ContentES = "90 Hz",
+          TextMapId = "UI_Option_Dropdown_44"
+        },
         UI_Option_Dropdown_45 = {
           ContentES = "120 Hz",
           TextMapId = "UI_Option_Dropdown_45"
@@ -21446,19 +21450,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         UI_SHOP_SUBTAB_NAME_JINGLI = {
           ContentES = "Energía",
           TextMapId = "UI_SHOP_SUBTAB_NAME_JINGLI"
-        },
-        UI_SHOP_SUBTAB_NAME_MOD = {
-          ContentES = "Cuñas Demoníacas",
-          TextMapId = "UI_SHOP_SUBTAB_NAME_MOD"
         }
       }
     end
   },
   {
-    MinKey = "UI_SHOP_SUBTAB_NAME_MOD_CHAR",
-    MaxKey = "UI_Team_PlayerInDungeon",
+    MinKey = "UI_SHOP_SUBTAB_NAME_MOD",
+    MaxKey = "UI_Team_PersonalData",
     Loader = function()
       return {
+        UI_SHOP_SUBTAB_NAME_MOD = {
+          ContentES = "Cuñas Demoníacas",
+          TextMapId = "UI_SHOP_SUBTAB_NAME_MOD"
+        },
         UI_SHOP_SUBTAB_NAME_MOD_CHAR = {
           ContentES = "Para personajes",
           TextMapId = "UI_SHOP_SUBTAB_NAME_MOD_CHAR"
@@ -22248,19 +22252,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         UI_Team_PersonalData = {
           ContentES = "Perfil",
           TextMapId = "UI_Team_PersonalData"
-        },
-        UI_Team_PlayerInDungeon = {
-          ContentES = "Jugador en una comisión",
-          TextMapId = "UI_Team_PlayerInDungeon"
         }
       }
     end
   },
   {
-    MinKey = "UI_Team_PlayerInSpecaiDungeon",
-    MaxKey = "UI_WEAPON_NAME_20498",
+    MinKey = "UI_Team_PlayerInDungeon",
+    MaxKey = "UI_WEAPON_NAME_20405",
     Loader = function()
       return {
+        UI_Team_PlayerInDungeon = {
+          ContentES = "Jugador en una comisión",
+          TextMapId = "UI_Team_PlayerInDungeon"
+        },
         UI_Team_PlayerInSpecaiDungeon = {
           ContentES = "El jugador está actualmente en una misión especial",
           TextMapId = "UI_Team_PlayerInSpecaiDungeon"
@@ -23053,19 +23057,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         UI_WEAPON_NAME_20405 = {
           ContentES = "Arte Explosivo",
           TextMapId = "UI_WEAPON_NAME_20405"
-        },
-        UI_WEAPON_NAME_20498 = {
-          ContentES = "Escopeta del Cazador",
-          TextMapId = "UI_WEAPON_NAME_20498"
         }
       }
     end
   },
   {
-    MinKey = "UI_WEAPON_NAME_20499",
-    MaxKey = "VoiceDes112",
+    MinKey = "UI_WEAPON_NAME_20498",
+    MaxKey = "VoiceDes111",
     Loader = function()
       return {
+        UI_WEAPON_NAME_20498 = {
+          ContentES = "Escopeta del Cazador",
+          TextMapId = "UI_WEAPON_NAME_20498"
+        },
         UI_WEAPON_NAME_20499 = {
           ContentES = "Escopeta Metálica",
           TextMapId = "UI_WEAPON_NAME_20499"
@@ -23858,19 +23862,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         VoiceDes111 = {
           ContentES = "Sobre los pasatiempos",
           TextMapId = "VoiceDes111"
-        },
-        VoiceDes112 = {
-          ContentES = "Sobre Huaxu",
-          TextMapId = "VoiceDes112"
         }
       }
     end
   },
   {
-    MinKey = "VoiceDes113",
-    MaxKey = "voice_ch_char_Dafu_vo_fail",
+    MinKey = "VoiceDes112",
+    MaxKey = "voice_ch_char_Dafu_vo_die_r02",
     Loader = function()
       return {
+        VoiceDes112 = {
+          ContentES = "Sobre Huaxu",
+          TextMapId = "VoiceDes112"
+        },
         VoiceDes113 = {
           ContentES = "Sobre los deberes",
           TextMapId = "VoiceDes113"
@@ -24663,19 +24667,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         voice_ch_char_Dafu_vo_die_r02 = {
           ContentES = "No te detengas por mí... Sigue luchando...",
           TextMapId = "voice_ch_char_Dafu_vo_die_r02"
-        },
-        voice_ch_char_Dafu_vo_fail = {
-          ContentES = "Yo los cubriré a todos.",
-          TextMapId = "voice_ch_char_Dafu_vo_fail"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Dafu_vo_gain",
-    MaxKey = "voice_ch_char_Landi_vo_fail",
+    MinKey = "voice_ch_char_Dafu_vo_fail",
+    MaxKey = "voice_ch_char_Landi_vo_die_r02",
     Loader = function()
       return {
+        voice_ch_char_Dafu_vo_fail = {
+          ContentES = "Yo los cubriré a todos.",
+          TextMapId = "voice_ch_char_Dafu_vo_fail"
+        },
         voice_ch_char_Dafu_vo_gain = {
           ContentES = "Soy Daphne Theodore, paramédica de Los Grifos, subordinada a la 13.ª Legión de Hyperborea. El campo de batalla está lleno de peligros, pero no te preocupes, siempre estaré aquí para ayudarte.",
           TextMapId = "voice_ch_char_Dafu_vo_gain"
@@ -25471,19 +25475,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         voice_ch_char_Landi_vo_die_r02 = {
           ContentES = "Caer en un sueño profundo... no es tan agradable como pensaba...",
           TextMapId = "voice_ch_char_Landi_vo_die_r02"
-        },
-        voice_ch_char_Landi_vo_fail = {
-          ContentES = "¡Saber cuándo retirarse también es la táctica importante! Así que, me voy.",
-          TextMapId = "voice_ch_char_Landi_vo_fail"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Landi_vo_gain",
-    MaxKey = "voice_ch_char_Nifu_vo_topic_04_6",
+    MinKey = "voice_ch_char_Landi_vo_fail",
+    MaxKey = "voice_ch_char_Nifu_vo_topic_04_5",
     Loader = function()
       return {
+        voice_ch_char_Landi_vo_fail = {
+          ContentES = "¡Saber cuándo retirarse también es la táctica importante! Así que, me voy.",
+          TextMapId = "voice_ch_char_Landi_vo_fail"
+        },
         voice_ch_char_Landi_vo_gain = {
           ContentES = "Eh, me pillaste. Parece que se acabaron mis días tranquilos... De todas maneras, pareces una persona decente, así que supongo que podría echarte una mano, a título personal, claro está.",
           TextMapId = "voice_ch_char_Landi_vo_gain"
@@ -26279,19 +26283,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         voice_ch_char_Nifu_vo_topic_04_5 = {
           ContentES = "Erika era una joven chica valiente y vivaz, con un espíritu que atraía a todos. Lexis, aunque brillante, solía reflexionar demasiado. Se sumía en profundas reflexiones repentinamente, lo que, paradójicamente, le hacía parecer un poco lento.",
           TextMapId = "voice_ch_char_Nifu_vo_topic_04_5"
-        },
-        voice_ch_char_Nifu_vo_topic_04_6 = {
-          ContentES = "Humm... Una vez, Lexis intentó disculparse con Erika por algo que había hecho. Por capricho, ella señaló uno de los blancos de entrenamiento de los soldados y le dijo que lo perdonaría si lograba dar en la diana...",
-          TextMapId = "voice_ch_char_Nifu_vo_topic_04_6"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Nifu_vo_topic_04_7",
-    MaxKey = "voice_ch_char_Xibi_vo_birthday",
+    MinKey = "voice_ch_char_Nifu_vo_topic_04_6",
+    MaxKey = "voice_ch_char_Xibi_vo_be_hit_heavy_r02",
     Loader = function()
       return {
+        voice_ch_char_Nifu_vo_topic_04_6 = {
+          ContentES = "Humm... Una vez, Lexis intentó disculparse con Erika por algo que había hecho. Por capricho, ella señaló uno de los blancos de entrenamiento de los soldados y le dijo que lo perdonaría si lograba dar en la diana...",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_04_6"
+        },
         voice_ch_char_Nifu_vo_topic_04_7 = {
           ContentES = "Por supuesto, ella no lo decía en serio. Ni siquiera todos los soldados podían lograrlo, por no hablar de Lexis, cuyas manos eran para la pluma y el pergamino, no para el arco ni la espada.",
           TextMapId = "voice_ch_char_Nifu_vo_topic_04_7"
@@ -27087,19 +27091,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         voice_ch_char_Xibi_vo_be_hit_heavy_r02 = {
           ContentES = "¡Eh!",
           TextMapId = "voice_ch_char_Xibi_vo_be_hit_heavy_r02"
-        },
-        voice_ch_char_Xibi_vo_birthday = {
-          ContentES = "... ¿Qué estás esperando? ¿Creías que te prepararía un pastel de cumpleaños? ¡Ja! ¡Qué absurdo! Quizás en la próxima batalla seré piadoso e iré suave contigo.",
-          TextMapId = "voice_ch_char_Xibi_vo_birthday"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Xibi_vo_companio_01",
-    MaxKey = "voice_ch_char_Zhiliu_vo_skill02_sp",
+    MinKey = "voice_ch_char_Xibi_vo_birthday",
+    MaxKey = "voice_ch_char_Zhiliu_vo_skill02_r03",
     Loader = function()
       return {
+        voice_ch_char_Xibi_vo_birthday = {
+          ContentES = "... ¿Qué estás esperando? ¿Creías que te prepararía un pastel de cumpleaños? ¡Ja! ¡Qué absurdo! Quizás en la próxima batalla seré piadoso e iré suave contigo.",
+          TextMapId = "voice_ch_char_Xibi_vo_birthday"
+        },
         voice_ch_char_Xibi_vo_companio_01 = {
           ContentES = "... Es hora de zanjar nuestras diferencias.",
           TextMapId = "voice_ch_char_Xibi_vo_companio_01"
@@ -27895,19 +27899,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         voice_ch_char_Zhiliu_vo_skill02_r03 = {
           ContentES = "¡Resistir es inútil!",
           TextMapId = "voice_ch_char_Zhiliu_vo_skill02_r03"
-        },
-        voice_ch_char_Zhiliu_vo_skill02_sp = {
-          ContentES = "Adelante, aniquílalos a todos.",
-          TextMapId = "voice_ch_char_Zhiliu_vo_skill02_sp"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Zhiliu_vo_topic_01_1",
+    MinKey = "voice_ch_char_Zhiliu_vo_skill02_sp",
     MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
     Loader = function()
       return {
+        voice_ch_char_Zhiliu_vo_skill02_sp = {
+          ContentES = "Adelante, aniquílalos a todos.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_skill02_sp"
+        },
         voice_ch_char_Zhiliu_vo_topic_01_1 = {
           ContentES = "Nada es ajeno a una negociación. La única pregunta es: ¿qué precio hará que la balanza se incline a tu favor?",
           TextMapId = "voice_ch_char_Zhiliu_vo_topic_01_1"

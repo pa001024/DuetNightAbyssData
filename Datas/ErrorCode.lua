@@ -2770,10 +2770,10 @@ return ReadOnly("ErrorCode", {
     ErrorCodeId = 10062
   },
   [10063] = {
-    ContentEN = "Geniemon data not found",
-    ContentJP = "システムエラー：このpetは見つかりません",
-    ContentKR = "해당 Pet을 찾을 수 없습니다.",
-    ContentTC = "該Pet的狀態不是啟動狀態特指狀態更新",
+    ContentEN = "Geniemon not in an active state",
+    ContentJP = "このジェネモンはアクティブな状態ではありません",
+    ContentKR = "해당 마령이 활성화 상태가 아닙니다.",
+    ContentTC = "該Pet的狀態不是啟動狀態",
     ErrorCodeContent = "该魔灵的状态不是激活状态特指状态更新",
     ErrorCodeId = 10063
   },
@@ -4777,9 +4777,9 @@ return ReadOnly("ErrorCode", {
     ErrorCodeId = 25005
   },
   [25006] = {
-    ContentEN = "Accessory found on server without configuration data",
-    ContentJP = "リストに配置されてないアクセサリーがサーバーに存在します",
-    ContentKR = "서버에 테이블에 없는 장식이 존재합니다.",
+    ContentEN = "Server contains an accessory without corresponding configurations",
+    ContentJP = "サーバーサイドには設定されてない装飾があります。",
+    ContentKR = "서버에 구성 테이블이 없는 장식이 존재합니다.",
     ContentTC = "服務端存在一個沒有配表的配飾",
     ErrorCodeContent = "服务端存在一个没有配表的配饰",
     ErrorCodeId = 25006
@@ -7467,7 +7467,7 @@ return ReadOnly("ErrorCode", {
   [68003] = {
     ContentEN = "No available Luno Collections to claim in Friendly Games",
     ContentJP = "「平和な賭け事」に受取可能なルーナ族の秘蔵品がありません",
-    ContentKR = "문명 대결에 수령 가능한 루나 소장품이 없습니다.",
+    ContentKR = "문명 대결에 수령 가능한 루나의 보물이 없습니다.",
     ContentTC = "文明博弈沒有皎皎珍藏可領取",
     ErrorCodeContent = "文明博弈没有皎皎珍藏可领取",
     ErrorCodeId = 68003
