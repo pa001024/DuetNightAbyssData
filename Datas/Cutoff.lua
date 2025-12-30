@@ -466,5 +466,12 @@ return ReadOnly("Cutoff", {
     CutoffShow = 40,
     CutoffStartTime = 1768770000,
     ItemId = 10000606
+  },
+  [121] = {
+    CutoffId = 121,
+    CutoffPrice = 0,
+    CutoffShow = 0,
+    CutoffStartTime = 1768874400,
+    ItemId = 140155
   }
 })

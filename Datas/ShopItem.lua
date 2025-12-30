@@ -2367,6 +2367,20 @@ return ReadOnly("ShopItem", {
     TypeId = 30108,
     TypeNum = 1
   },
+  [140155] = {
+    IsSpPopup = 1,
+    ItemId = 140155,
+    ItemType = "Resource",
+    Price = 100,
+    PriceType = 110,
+    PurchaseLimit = 1,
+    Sequence = 253,
+    SoldOutDisplay = true,
+    StartTime = 1768874400,
+    SubTabId = 1402,
+    TypeId = 41028,
+    TypeNum = 1
+  },
   [140201] = {
     EndTime = 1766955600,
     IsAccessItem = 2,

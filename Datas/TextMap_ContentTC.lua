@@ -46399,7 +46399,7 @@ local Data = {
           TextMapId = "Target_Theater_3"
         },
         Target_Theater_4 = {
-          ContentTC = "完成<H>%s</>次動態事件",
+          ContentTC = "完成<H>%s</>次突發事件",
           TextMapId = "Target_Theater_4"
         },
         Target_Theater_5 = {
@@ -76468,7 +76468,7 @@ local Data = {
           TextMapId = "UI_WeaponSkin_Des_3010402"
         },
         UI_WeaponSkin_Des_3010403 = {
-          ContentTC = "一柄頗為特殊的長槍，象徵著父親的鞭策——呃，我的意思是說，父愛如山。",
+          ContentTC = "一柄頗為特殊的長柄武器，象徵著父親的鞭策——呃，我的意思是說，父愛如山。",
           TextMapId = "UI_WeaponSkin_Des_3010403"
         },
         UI_WeaponSkin_Des_3010404 = {
