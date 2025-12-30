@@ -2,7 +2,6 @@ local ArmoryUtils = {}
 
 local SkillUtils = require("Utils.SkillUtils")
 
--- L-498
 function ArmoryUtils:GenModPassiveEffectDesc(ModConf, BaseLevel, ExpectLevel)
     local Desc = ModConf.PassiveEffectsDesc and GText(ModConf.PassiveEffectsDesc) or ""
     if not ModConf.DescValues then
@@ -23,7 +22,6 @@ function ArmoryUtils:GenModPassiveEffectDesc(ModConf, BaseLevel, ExpectLevel)
     return Desc
 end
 
--- L-516
 local function _GetModAttrConf(DescValue, ModId, AttrIdx, ValueType)
     local ModConf = DataMgr.Mod[ModId]
     if not ModConf.AddAttrs then
@@ -40,7 +38,6 @@ local function _GetModAttrConf(DescValue, ModId, AttrIdx, ValueType)
     return ModAttrConf
 end
 
--- L-530
 function ArmoryUtils:_ModAttrGrowDesc2(DescValue, BaseLevel, ExpectLevel, Percent, CastTo, ForbidFormat)
     if string.match(DescValue, "GetModValue") then
         local function _GetModValue(GetModValue_Level)
@@ -89,7 +86,6 @@ function ArmoryUtils:_ModAttrGrowDesc2(DescValue, BaseLevel, ExpectLevel, Percen
     return ""
 end
 
--- L-575
 function ArmoryUtils:_SkillGrowDesc(DescValue, BaseLevel, ExpectLevel, Percent, CastTo, ForbidFormat)
     local OldValStr = SkillUtils.CalcSkillDesc(DescValue, BaseLevel) .. Percent
     local NewValStr = SkillUtils.CalcSkillDesc(DescValue, ExpectLevel) .. Percent
@@ -101,7 +97,6 @@ function ArmoryUtils:_SkillGrowDesc(DescValue, BaseLevel, ExpectLevel, Percent, 
     return OldValStr ~= NewValStr and OldValStr .. " -> " .. string.format("<H>%s</>", NewValStr) or NewValStr
 end
 
--- L-586
 function ArmoryUtils:GenModAttrData(ModAttrConf, ModLevel, AttrConf, ModId)
     local IsRate = ModAttrConf.Rate ~= nil
     local Value = self:CalcModAttrByLevel(ModAttrConf, ModLevel, nil, ModId)
@@ -110,7 +105,6 @@ function ArmoryUtils:GenModAttrData(ModAttrConf, ModLevel, AttrConf, ModId)
     return Value, ValueStr
 end
 
--- L-594
 function ArmoryUtils:CalcModAttrByLevel(ModAttrConf, ModLevel, ValueType, ModId)
     local IsRate = ModAttrConf.Rate ~= nil
     local Base = IsRate and ModAttrConf.Rate or ModAttrConf.Value

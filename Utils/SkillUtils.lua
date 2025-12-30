@@ -1,6 +1,5 @@
 local SkillUtils = {}
 
--- L-20
 function SkillUtils.SplitEval(Str, Rep, Args)
     local GText = GText
     local ReStr = "[" .. Rep .. "]" .. "([^" .. Rep .. "]*)" .. "[" .. Rep .. "]"
@@ -45,7 +44,6 @@ function SkillUtils.SplitEval(Str, Rep, Args)
     return Str
 end
 
--- L-61
 function SkillUtils.CalcSkillDescValue(Desc, SkillLevel, Args)
     local Str = SkillUtils.CalcSkillDesc(Desc, SkillLevel, Args)
     local NewStr = tonumber(Str)
@@ -55,7 +53,6 @@ function SkillUtils.CalcSkillDescValue(Desc, SkillLevel, Args)
     return Str
 end
 
--- L-70
 function SkillUtils.CalcSkillDesc(Desc, SkillLevel, Args)
     local NewDesc = string.gsub(Desc, "#", "SkillUtils.NewGrowDesc(" .. SkillLevel .. ").")
     local ok, ret = pcall(SkillUtils.SplitEval, NewDesc, "$", Args)
@@ -66,7 +63,6 @@ function SkillUtils.CalcSkillDesc(Desc, SkillLevel, Args)
     return ret
 end
 
--- L-233
 function SkillUtils.GetMaxLevel(SkillId)
     local SkillLevelUpInfo = DataMgr.SkillLevelUp[SkillId]
     if SkillLevelUpInfo then
@@ -75,7 +71,6 @@ function SkillUtils.GetMaxLevel(SkillId)
     return 1
 end
 
--- L-241
 function SkillUtils.GrowDescIndex(_FinalProxy, Key)
     local RawData = rawget(_FinalProxy, "RawData")
     assert(RawData, "找不到DataMgr." .. tostring(_FinalProxy.DataProxy._GrowType) .. "[" .. tostring(_FinalProxy.ID) .. "]的数据")
@@ -97,7 +92,6 @@ function SkillUtils.GrowDescIndex(_FinalProxy, Key)
     return SkillUtils.CreateFinalProxy(_FinalProxy.DataProxy, _FinalProxy.ID, GrowData, Value, rawget(_FinalProxy, "Error"))
 end
 
--- L-260
 function SkillUtils.CreateFinalProxy(_DataProxy, ID, GrowData, RawData, Error)
     local _FinalProxy = {
         DataProxy = _DataProxy,
@@ -112,7 +106,6 @@ function SkillUtils.CreateFinalProxy(_DataProxy, ID, GrowData, RawData, Error)
     return _FinalProxy
 end
 
--- L-274
 function SkillUtils.NewGrowDesc(SkillLevel)
     local bDistribution = true
     local _Proxy = {
@@ -144,7 +137,6 @@ function SkillUtils.NewGrowDesc(SkillLevel)
     return _Proxy
 end
 
--- L-303
 function SkillUtils.GetGrowData(GrowType, ID, SkillLevel)
     local _Data = DataMgr.SkillGrow[GrowType]
     if not _Data then
@@ -161,7 +153,6 @@ function SkillUtils.GetGrowData(GrowType, ID, SkillLevel)
     return _Data, ""
 end
 
--- L-319
 function SkillUtils.GrowProxyBySkillLevel(GrowType, ID, SkillLevel, RawData, Args)
     local GrowProxy = {
         _GrowType = GrowType,
@@ -173,7 +164,6 @@ function SkillUtils.GrowProxyBySkillLevel(GrowType, ID, SkillLevel, RawData, Arg
     return SkillUtils._GrowProxy(GrowProxy, GrowType, ID, RawData, Args)
 end
 
--- L-330
 function SkillUtils.GrowProxy(GrowType, ID, SkillLevelSource, RawData, Args)
     local GrowProxy = {
         _GrowType = GrowType,
@@ -188,7 +178,6 @@ function SkillUtils.GrowProxy(GrowType, ID, SkillLevelSource, RawData, Args)
     return SkillUtils._GrowProxy(GrowProxy, GrowType, ID, RawData, Args)
 end
 
--- L-344
 function SkillUtils._GrowProxy(GrowProxy, GrowType, ID, RawData, Args)
     local NeedSplitEvalProxy = false
     if DataMgr.SkillSplitEval[GrowType] and DataMgr.SkillSplitEval[GrowType][ID] then
@@ -221,7 +210,6 @@ function SkillUtils._GrowProxy(GrowProxy, GrowType, ID, RawData, Args)
     return SkillUtils.SplitEvalProxy(NeedSplitEvalProxy, GrowProxy._SkillLevel, GrowProxy, GrowProxy._Args)
 end
 
--- L-373
 function SkillUtils.SplitEvalProxy(NeedSplitEvalProxy, SkillLevel, RawData, Args)
     if not NeedSplitEvalProxy then
         return RawData
@@ -244,7 +232,6 @@ function SkillUtils.SplitEvalProxy(NeedSplitEvalProxy, SkillLevel, RawData, Args
     return SplitEvalProxy
 end
 
--- L-437
 function SkillUtils.CalcWeaponPassiveEffectsDesc(WeaponData, GradeLevel, ComparedGradeLevel)
     local data = DataMgr.BattleWeapon[WeaponData.WeaponId]
     local SkillDesc
@@ -270,7 +257,6 @@ function SkillUtils.CalcWeaponPassiveEffectsDesc(WeaponData, GradeLevel, Compare
     return SkillDesc
 end
 
--- L-515
 function SkillUtils.ReplaceDescValueTypeCast(Desc, Idx)
     if string.find(Desc, "{[I|i][N|n][T|t]}#" .. Idx) then
         return string.gsub(Desc, "{[I|i][N|n][T|t]}#" .. Idx, "#" .. Idx), true
@@ -279,7 +265,6 @@ function SkillUtils.ReplaceDescValueTypeCast(Desc, Idx)
     end
 end
 
--- L-523
 function SkillUtils.FormatDescValue1(str, bToInt)
     local Res = str
     local value = string.match(str, "(%d+%.?%d*)")
@@ -304,7 +289,6 @@ function SkillUtils.FormatDescValue1(str, bToInt)
     return Res
 end
 
--- L-547
 function SkillUtils.FormatDescValue2(str)
     local _start, _end = string.find(str, "%d+%.?%d*")
     local num = tonumber(string.sub(str, _start, _end))
@@ -315,7 +299,6 @@ function SkillUtils.FormatDescValue2(str)
     return str
 end
 
--- L-642
 function SkillUtils.GetSkillName(SkillId)
     local Data = DataMgr.Skill[SkillId]
     local SkillData = Data and Data[1] and Data[1][0]

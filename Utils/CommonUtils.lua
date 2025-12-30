@@ -1,6 +1,20 @@
 local CommonUtils = {}
 
--- L-412
+function CommonUtils.DeepCopy(Object)
+    local function _copy(object)
+        if type(object) ~= "table" then
+            return object
+        end
+        local new_table = {}
+        for key, value in pairs(object) do
+            new_table[_copy(key)] = _copy(value)
+        end
+        return setmetatable(new_table, getmetatable(object))
+    end
+
+    return _copy(Object)
+end
+
 function CommonUtils.AttrValueToString(AttrConfig, Value, IsRate, NotFormat)
     if not AttrConfig then
         return Value
@@ -36,7 +50,6 @@ function CommonUtils.AttrValueToString(AttrConfig, Value, IsRate, NotFormat)
     return str .. percent
 end
 
--- L-833
 function CommonUtils.Round(FloatValue)
     if FloatValue == 0 then
         return 0
@@ -48,7 +61,6 @@ function CommonUtils.Round(FloatValue)
     end
 end
 
--- L-844
 CommonUtils.AttrConvert = {
     Hp = CommonUtils.Round,
     MaxHp = CommonUtils.Round,
