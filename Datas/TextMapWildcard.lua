@@ -614,6 +614,34 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "Title_10077",
     WildcardClassification = "Story"
   },
+  Title_10078 = {
+    TextMapId = "Title_10078",
+    WildcardClassification = "Story"
+  },
+  Title_10079 = {
+    TextMapId = "Title_10079",
+    WildcardClassification = "Story"
+  },
+  Title_10080 = {
+    TextMapId = "Title_10080",
+    WildcardClassification = "Story"
+  },
+  Title_10081 = {
+    TextMapId = "Title_10081",
+    WildcardClassification = "Story"
+  },
+  Title_10082 = {
+    TextMapId = "Title_10082",
+    WildcardClassification = "Story"
+  },
+  Title_10083 = {
+    TextMapId = "Title_10083",
+    WildcardClassification = "Story"
+  },
+  Title_10084 = {
+    TextMapId = "Title_10084",
+    WildcardClassification = "Story"
+  },
   UIGuide_SwitchMaster_PC = {
     TextMapId = "UIGuide_SwitchMaster_PC",
     WildcardClassification = "Story"

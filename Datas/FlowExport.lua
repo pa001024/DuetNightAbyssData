@@ -75,12 +75,21 @@ T.RT_16 = {
   End = "76828C0045C719129F357880960C1AAE"
 }
 T.RT_17 = {
+  Option_281 = "56B7C1C045101E31A2BBAD84D43CAF84",
+  Option_282 = "2F65012C448211F784D8139F997774CF"
+}
+T.RT_18 = {120223281, 120223282}
+T.RT_19 = {
+  [120223281] = "Option_281",
+  [120223282] = "Option_282"
+}
+T.RT_20 = {
   End = "F09E9E7B45697E0AF3627C9FF38F01A2"
 }
-T.RT_18 = {
+T.RT_21 = {
   End = "56132B7447EE9FE9A08BB190401F69F4"
 }
-T.RT_19 = {
+T.RT_22 = {
   12022001,
   12022002,
   12022003,
@@ -98,8 +107,8 @@ T.RT_19 = {
   12022015,
   12022016
 }
-T.RT_20 = {
-  DialogueIds = T.RT_19
+T.RT_23 = {
+  DialogueIds = T.RT_22
 }
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
@@ -1574,17 +1583,11 @@ return ReadOnly("FlowExport", {
     TalkId = 120120
   },
   ["5CFC752649CB2D466D108B9A2E657497"] = {
-    Connect = {
-      Option_281 = "56B7C1C045101E31A2BBAD84D43CAF84",
-      Option_282 = "2F65012C448211F784D8139F997774CF"
-    },
+    Connect = T.RT_17,
     GUID = "5CFC752649CB2D466D108B9A2E657497",
     NodeParams = {
-      DialogueIds = {120223281, 120223282},
-      OptionOutput = {
-        [120223281] = "Option_281",
-        [120223282] = "Option_282"
-      }
+      DialogueIds = T.RT_18,
+      OptionOutput = T.RT_19
     },
     NodeType = "FlowNode_Option",
     TalkId = 120223
@@ -2405,7 +2408,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120126
   },
   ["9481A4454666B7CA137DAD9C137DC5F1"] = {
-    Connect = T.RT_17,
+    Connect = T.RT_20,
     GUID = "9481A4454666B7CA137DAD9C137DC5F1",
     NodeParams = {
       DialogueIds = {12010428}
@@ -2659,7 +2662,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120230
   },
   A467AE37450CE945856BE49A117AAC93 = {
-    Connect = T.RT_18,
+    Connect = T.RT_21,
     GUID = "A467AE37450CE945856BE49A117AAC93",
     NodeParams = {
       DialogueIds = {12010414}
@@ -2712,7 +2715,7 @@ return ReadOnly("FlowExport", {
       End = "515C97924F45ED725A0365917F472520"
     },
     GUID = "A704BB9B40981F05B2729CA6DABBAC09",
-    NodeParams = T.RT_20,
+    NodeParams = T.RT_23,
     NodeType = "FlowNode_Dialogue",
     TalkId = 120220
   },
@@ -2810,7 +2813,7 @@ return ReadOnly("FlowExport", {
       End = "D02FAD75420C2E856E62ACABE899C09B"
     },
     GUID = "AFCAFBDD49325D06DE01B4B4AC5A3345",
-    NodeParams = T.RT_20,
+    NodeParams = T.RT_23,
     NodeType = "FlowNode_Dialogue",
     TalkId = 120220
   },
@@ -2919,7 +2922,7 @@ return ReadOnly("FlowExport", {
   },
   B896D077462877497B13D3B264D72A41 = {
     Connect = {
-      End = "5CFC752649CB2D466D108B9A2E657497"
+      End = "EF467BD8411DD2E1D47E4C9D8ED36E2B"
     },
     GUID = "B896D077462877497B13D3B264D72A41",
     NodeParams = {
@@ -3506,7 +3509,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120159
   },
   EE04DD1444D1FE85167A0E8BA1D0204D = {
-    Connect = T.RT_17,
+    Connect = T.RT_20,
     GUID = "EE04DD1444D1FE85167A0E8BA1D0204D",
     NodeParams = {
       DialogueIds = T.RT_1
@@ -3519,6 +3522,20 @@ return ReadOnly("FlowExport", {
     GUID = "EE6B7D33429EB047C61F61AC6DC1E4F1",
     NodeType = "FlowNode_TalkFinish",
     TalkId = 511500
+  },
+  EF467BD8411DD2E1D47E4C9D8ED36E2B = {
+    Connect = T.RT_17,
+    GUID = "EF467BD8411DD2E1D47E4C9D8ED36E2B",
+    NodeParams = {
+      DialogueIds = T.RT_18,
+      OptionFailOutPut = {
+        [120223281] = "Fail_281",
+        [120223282] = "Fail_282"
+      },
+      OptionOutput = T.RT_19
+    },
+    NodeType = "FlowNode_ImpressingOption",
+    TalkId = 120223
   },
   EF861C7F4E37EA204C974F80D07073A4 = {
     Connect = {
@@ -3687,7 +3704,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120158
   },
   F6F5171D45C99C728EF11A8CDE26708C = {
-    Connect = T.RT_18,
+    Connect = T.RT_21,
     GUID = "F6F5171D45C99C728EF11A8CDE26708C",
     NodeParams = {
       DialogueIds = {12010413}

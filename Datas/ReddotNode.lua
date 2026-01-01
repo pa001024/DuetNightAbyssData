@@ -567,6 +567,7 @@ return ReadOnly("ReddotNode", {
     IsLeaf = true,
     Name = "ExperienceItem",
     NodeModuleName = "Experience",
+    RuleId = "PlayerLevel",
     Type = 0,
     bInvokeEveryTime = true
   },
