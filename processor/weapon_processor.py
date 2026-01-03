@@ -27,7 +27,11 @@ class WeaponProcessor(BaseProcessor):
         # 构建基础处理后的Weapon数据
         processed = {
             "id": weapon_id,
+            "icon": weapon_data.get("Icon", "").replace(
+                "/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_", ""
+            ),
             "名称": self.get_translated_text(weapon_data.get("WeaponName", "")),
+            "版本": self.process_release(weapon_data.get("ReleaseVersion", 100)),
             "描述": self.get_translated_text(weapon_data.get("WeaponDescribe", "")),
             "类型": self.process_tags(battle_weapon.get("WeaponTag", [])),
         }
