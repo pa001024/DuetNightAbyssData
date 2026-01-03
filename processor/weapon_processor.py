@@ -37,9 +37,19 @@ class WeaponProcessor(BaseProcessor):
                 "加成": self._process_add_attr(battle_weapon, weapon_id),
                 "突破": self._process_break(weapon_id, language),
                 "熔炼": self._process_smelting(battle_weapon, weapon_id),
-                "技能": self._process_skills(battle_weapon, weapon_id),
             }
         )
+        try:
+            processed.update(
+                {
+                    "技能": self._process_skills(battle_weapon, weapon_id),
+                }
+            )
+        except Exception as e:
+            print(f"处理武器 {weapon_id} 技能时出错: {e}")
+            import traceback
+
+            traceback.print_exc()
 
         return processed
 
@@ -61,7 +71,11 @@ class WeaponProcessor(BaseProcessor):
             if not skill_info:
                 skill_info = self.skill_data.get(skill_id, {})
 
-            if not skill_info or not isinstance(skill_info, list) or len(skill_info) == 0:
+            if (
+                not skill_info
+                or not isinstance(skill_info, list)
+                or len(skill_info) == 0
+            ):
                 continue
 
             # 获取技能信息（取第一个元素，通常技能只有一个等级）
@@ -72,9 +86,9 @@ class WeaponProcessor(BaseProcessor):
                 skill_entry = skill_data
 
             # 获取技能名称和描述
-            skill_name = self.get_translated_text(skill_entry.get("SkillName", ""))
-            skill_desc_key = skill_entry.get("SkillDesc", "")
-            skill_desc = self.get_translated_text(skill_desc_key)
+            # skill_name = self.get_translated_text(skill_entry.get("SkillName", ""))
+            # skill_desc_key = skill_entry.get("SkillDesc", "")
+            # skill_desc = self.get_translated_text(skill_desc_key)
 
             # 获取技能描述参数
             skill_desc_keys = skill_entry.get("SkillDescKeys", [])
@@ -82,105 +96,77 @@ class WeaponProcessor(BaseProcessor):
 
             # 构建技能信息
             skill_info_dict = {
-                "名称": skill_name,
+                "id": skill_id,
+                "type": skill_entry.get("SkillType", ""),
+                # "weapon": skill_entry.get("SkillWeaponType", ""),
             }
 
             # 如果有描述，处理描述中的占位符
-            if skill_desc:
+            if skill_desc_keys:
                 # 计算技能描述（默认使用武器等级1）
                 processed_desc = self._process_weapon_skill_desc(
                     skill_entry, weapon_id, skill_desc_keys, skill_desc_values
                 )
                 if processed_desc:
                     skill_info_dict["描述"] = processed_desc
-                else:
-                    skill_info_dict["描述"] = skill_desc
-
-                # 如果有参数字段，添加参数信息
-                if skill_desc_keys and skill_desc_values:
-                    fields = self._process_weapon_skill_fields(
-                        skill_entry, weapon_id, skill_desc_keys, skill_desc_values
-                    )
-                    if fields:
-                        skill_info_dict["字段"] = fields
 
             skills.append(skill_info_dict)
 
-        return skills
+        rst = {}
+        for skill in skills:
+            if "描述" in skill:
+                rst.update(skill["描述"])
+        return rst
 
-    def _process_weapon_skill_desc(self, _skill_entry, weapon_id, desc_keys, desc_values):
+    def _process_weapon_skill_desc(
+        self, _skill_entry, weapon_id, desc_keys, desc_values
+    ):
         """处理武器技能描述，替换占位符"""
         if not desc_keys or not desc_values:
             return ""
 
-        # 获取第一个描述key
-        desc_key = desc_keys[0] if desc_keys else ""
-        if not desc_key:
-            return ""
+        rst = {}
 
-        # 获取翻译文本
-        desc_text = self.get_translated_text(desc_key)
+        # desc_keys 和 desc_values 可能是列表或字典
+        if isinstance(desc_keys, dict):
+            # 字典格式：{'1': key1, '2': key2, ...}
+            items = desc_keys.items()
+        else:
+            # 列表格式：[key1, key2, ...]
+            items = enumerate(desc_keys)
 
-        # 替换占位符
-        result_desc = desc_text
-        for i, desc_value in enumerate(desc_values):
-            placeholder = f"#{i+1}"
+        for key_or_index, desc_key in items:
+            # 获取对应的 desc_value
+            if isinstance(desc_values, dict):
+                # 字格格式，使用相同的键
+                desc_value = desc_values.get(
+                    str(
+                        key_or_index + 1
+                        if isinstance(key_or_index, int)
+                        else key_or_index
+                    )
+                )
+            else:
+                # 列表格式，使用索引
+                if key_or_index >= len(desc_values):
+                    continue
+                desc_value = desc_values[key_or_index]
 
-            # 计算值（使用武器等级1）
-            calculated_value = self._parse_single_desc_value(
-                desc_value, weapon_id, 1, "BattleWeapon"
-            )
-
-            # 替换占位符
-            result_desc = result_desc.replace(placeholder, str(calculated_value))
-
-        # 移除高亮标签
-        result_desc = result_desc.replace("<H>", "").replace("</>", "")
-
-        return result_desc
-
-    def _process_weapon_skill_fields(self, _skill_entry, weapon_id, desc_keys, desc_values):
-        """处理武器技能字段，返回类似角色的技能字段格式"""
-        if not desc_keys or not desc_values:
-            return {}
-
-        fields = {}
-
-        for i, desc_key in enumerate(desc_keys):
-            if i >= len(desc_values):
+            if desc_value is None:
                 continue
 
             # 获取描述文本
             desc_text = self.get_translated_text(desc_key)
-            desc_value = desc_values[i]
+            # 预处理表达式，将 $GText("...")$ 替换为翻译后的文本
+            preprocessed_desc_value = self.preprocess_expression(desc_value)
 
-            # 计算各个等级的值（假设武器最多5个等级）
-            values = []
-            for level in range(1, 6):
-                calculated_value = self._parse_single_desc_value(
-                    desc_value, weapon_id, level, "BattleWeapon"
-                )
-                values.append(calculated_value)
+            # 计算值（使用武器等级1）
+            calculated_value = self._parse_single_desc_value(
+                preprocessed_desc_value, weapon_id, 1, "BattleWeapon"
+            )
+            rst[desc_text] = calculated_value
 
-            # 检查是否所有值都相同
-            if all(abs(v - values[0]) < 0.0001 for v in values):
-                # 如果值相同，只显示单个值
-                final_value = values[0]
-                # 尝试转换为整数
-                if final_value == int(final_value):
-                    final_value = int(final_value)
-                fields[desc_text] = {"值": final_value}
-            else:
-                # 如果值不同，显示所有等级的值
-                final_values = []
-                for v in values:
-                    if v == int(v):
-                        final_values.append(int(v))
-                    else:
-                        final_values.append(v)
-                fields[desc_text] = {"值": final_values}
-
-        return fields
+        return rst
 
     def _process_add_attr(self, battle_weapon, weapon_id):
         """处理武器属性加成"""
@@ -367,24 +353,37 @@ class WeaponProcessor(BaseProcessor):
         return result_desc
 
     def _parse_single_desc_value(self, desc_value, weapon_id, grade_level, table_type):
-        """解析单个DescValue，获取实际值"""
+        """解析单个DescValue，获取实际值，支持多个$...$表达式"""
         import re
         import math
 
-        # 处理$...$格式的表达式
-        expr_match = re.search(r"\$(-)?(.*?)\$(.*)", desc_value)
-        if expr_match:
-            has_neg = expr_match.group(1)
-            expr = expr_match.group(2)
-            suffix = expr_match.group(3)
+        # 处理所有$...$格式的表达式
+        result = desc_value
+        pattern = r"\$(-)?(.*?)\$"
+
+        # 查找所有匹配的表达式（从右到左替换，避免位置偏移问题）
+        matches = list(re.finditer(pattern, desc_value))
+
+        for match in reversed(matches):
+            expr_content = match.group(2)
+            has_neg = match.group(1)
+
+            # 提取表达式后面的后缀（如 %）
+            # 从匹配结束位置到下一个$或字符串结尾
+            after_match = result[match.end() :]
+            suffix = ""
+            for c in after_match:
+                if c == "$":
+                    break
+                suffix += c
 
             # 检查是否是math.floor或math.ceil表达式
-            math_match = re.match(r"math\.(ceil|floor)\((.*)\)", expr)
-            if math_match:
-                math_func = math_match.group(1)
-                inner_expr = math_match.group(2)
+            math_match = re.match(r"math\.(ceil|floor)\((.*)\)", expr_content)
+            try:
+                if math_match:
+                    math_func = math_match.group(1)
+                    inner_expr = math_match.group(2)
 
-                try:
                     expr_value = self._calculate_expr_value(
                         inner_expr, weapon_id, grade_level, table_type
                     )
@@ -399,30 +398,36 @@ class WeaponProcessor(BaseProcessor):
                             processed_value = -processed_value
 
                         formatted_value = f"{processed_value:.1f}"
-                        result = desc_value.replace(
-                            expr_match.group(0), f"{formatted_value}{suffix}"
-                        )
-                        return result.strip("$")
-                except ValueError as e:
-                    return desc_value.replace(expr_match.group(0), f"0{suffix}")
-
-            # 普通表达式
-            try:
-                expr_value = self._calculate_expr_value(
-                    expr, weapon_id, grade_level, table_type
-                )
-
-                if has_neg:
-                    final_value = -expr_value
+                    else:
+                        formatted_value = "0.0"
                 else:
-                    final_value = expr_value
+                    # 普通表达式
+                    expr_value = self._calculate_expr_value(
+                        expr_content, weapon_id, grade_level, table_type
+                    )
 
-                formatted_value = f"{final_value:.1f}"
-                result = desc_value.replace(
-                    expr_match.group(0), f"{formatted_value}{suffix}"
+                    if has_neg:
+                        final_value = -expr_value
+                    else:
+                        final_value = expr_value
+
+                    formatted_value = f"{final_value:.1f}"
+
+                # 替换匹配的表达式（包括后缀）
+                result = (
+                    result[: match.start()]
+                    + f"{formatted_value}{suffix}"
+                    + result[match.end() + len(suffix) :]
                 )
-                return result.strip("$")
-            except ValueError as e:
-                return desc_value.replace(expr_match.group(0), f"0{suffix}").strip("$")
 
-        return "{ERROR}"
+            except Exception as e:
+                # 表达式计算失败时，使用默认值 0
+                print(f"表达式解析错误: {e}")
+                formatted_value = "0.0"
+                result = (
+                    result[: match.start()]
+                    + f"{formatted_value}{suffix}"
+                    + result[match.end() + len(suffix) :]
+                )
+
+        return result

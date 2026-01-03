@@ -442,25 +442,6 @@ class CharProcessor(BaseProcessor):
             return True
         return False
 
-    def _preprocess_expression(self, desc_value):
-        """预处理表达式，将 $GText("...")$ 替换为翻译后的文本"""
-        import re
-
-        if not isinstance(desc_value, str):
-            return desc_value
-
-        result = desc_value
-
-        # 替换所有 $GText("...")$ 为翻译后的文本
-        def replace_gtext(match):
-            text_key = match.group(1)
-            translated = self.get_translated_text(text_key)
-            return translated if translated else text_key
-
-        result = re.sub(r'\$GText\("([^"]+)"\)\$', replace_gtext, result)
-
-        return result
-
     def process_skill_desc(self, skill_info, skill_id, max_level):
         """处理技能等级描述为紧凑格式"""
         desc_keys = skill_info.get("SkillDescKeys", [])
@@ -501,7 +482,7 @@ class CharProcessor(BaseProcessor):
                     impact_type = ",".join(impact_parts)
 
             # 预处理表达式，将 $GText("...")$ 替换为翻译后的文本
-            preprocessed_desc_value = self._preprocess_expression(desc_values[i])
+            preprocessed_desc_value = self.preprocess_expression(desc_values[i])
 
             # 检查是否有格式
             format_template = self._extract_format_from_expr(preprocessed_desc_value)
