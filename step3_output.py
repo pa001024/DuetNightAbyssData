@@ -14,6 +14,7 @@ class DataLoader:
         self.data_cache = {}
         self.indexes = {}
         self.language = None
+        self.i18n_data = self.load_json("TextMap_I18n.json")
 
     def set_language(self, language):
         self.language = language
@@ -59,59 +60,103 @@ class DataLoader:
         self.indexes[cache_key] = index
         return index
 
+    def translate(self, text_key, language=""):
+        """从i18n数据中获取翻译文本"""
+        # 从i18n_data中查找
+        text_entry = self.i18n_data.get(text_key, {})
+        if not text_entry:
+            return text_key
+
+        # 获取当前语言
+        language = language if language else self.language
+
+        # 根据当前语言获取对应字段
+        # 语言映射：cn->TextMapContent, en->ContentEN, jp->ContentJP, kr->ContentKR, fr->ContentFR, tc->ContentTC
+        language_field_map = {
+            "cn": "TextMapContent",
+            "en": "ContentEN",
+            "jp": "ContentJP",
+            "kr": "ContentKR",
+            "fr": "ContentFR",
+            "es": "ContentES",
+            "tc": "ContentTC",
+        }
+
+        # 获取对应语言字段
+        field = language_field_map.get(language, "TextMapContent")
+        content = text_entry.get(field, "")
+
+        # 如果对应语言字段为空，尝试使用其他可用字段
+        if not content:
+            # 优先顺序：TextMapContent > ContentEN > ContentJP > ContentKR > ContentFR > ContentTC
+            for fallback_field in [
+                "TextMapContent",
+                "ContentEN",
+                "ContentJP",
+                "ContentKR",
+                "ContentFR",
+                "ContentES",
+                "ContentTC",
+            ]:
+                if fallback_field in text_entry and text_entry[fallback_field]:
+                    content = text_entry[fallback_field]
+                    break
+
+        return content or text_key
+
     def get_achievement_type_name(self, type_id):
         # Use translated AchievementType from i18n directory
-        type_index = self.build_index("AchievementType.json", "Id", use_i18n=True)
-        return type_index.get(type_id, {}).get("AchievementTypeName", "").strip()
+        type_index = self.build_index("AchievementType.json", "Id")
+        return self.translate(
+            type_index.get(type_id, {}).get("AchievementTypeName", "")
+        )
 
     def get_resource_name(self, resource_id):
         # Resource.json uses ResourceId as the primary key
-        resource_index = self.build_index("Resource.json", "ResourceId", use_i18n=True)
-        return resource_index.get(resource_id, {}).get("ResourceName", "").strip()
+        resource_index = self.build_index("Resource.json", "ResourceId")
+        return self.translate(
+            resource_index.get(resource_id, {}).get("ResourceName", "")
+        )
 
     def get_draft_info(self, draft_id):
-        draft_index = self.build_index("Draft.json", "Id", use_i18n=True)
+        draft_index = self.build_index("Draft.json", "Id")
         return draft_index.get(draft_id, {})
 
     def get_mod_info(self, mod_id):
-        mod_index = self.build_index("Mod.json", "Id", use_i18n=True)
+        mod_index = self.build_index("Mod.json", "Id")
         return mod_index.get(mod_id, {})
 
     def get_mod_name(self, mod_id):
-        mod_index = self.build_index("Mod.json", "Id", use_i18n=True)
+        mod_index = self.build_index("Mod.json", "Id")
         mod = mod_index.get(mod_id, {})
         return f"{mod.get('TypeName', '')}{mod.get('Name', '')}".strip()
 
     def get_char_name(self, char_id):
-        char_index = self.build_index("Char.json", "Id", use_i18n=True)
-        return char_index.get(char_id, {}).get("Name", "").strip()
+        char_index = self.build_index("Char.json", "Id")
+        return self.translate(char_index.get(char_id, {}).get("Name", ""))
 
     def get_weapon_name(self, weapon_id):
-        weapon_index = self.build_index("Weapon.json", "Id", use_i18n=True)
-        return weapon_index.get(weapon_id, {}).get("Name", "").strip()
+        weapon_index = self.build_index("Weapon.json", "Id")
+        return self.translate(weapon_index.get(weapon_id, {}).get("Name", ""))
 
     def get_title_name(self, title_id):
         # Use translated Title from i18n directory
-        title_index = self.build_index("Title.json", "TitleID", use_i18n=True)
-        return title_index.get(title_id, {}).get("Name", "").strip()
+        title_index = self.build_index("Title.json", "TitleID")
+        return self.translate(title_index.get(title_id, {}).get("Name", ""))
 
     def get_titleframe_name(self, titleframe_id):
         # Use translated TitleFrame from i18n directory
-        titleframe_index = self.build_index(
-            "TitleFrame.json", "TitleFrameID", use_i18n=True
-        )
-        return titleframe_index.get(titleframe_id, {}).get("Name", "").strip()
+        titleframe_index = self.build_index("TitleFrame.json", "TitleFrameID")
+        return self.translate(titleframe_index.get(titleframe_id, {}).get("Name", ""))
 
     def get_mod_tag_info(self, application_type):
         # Use translated ModTag from i18n directory
-        mod_tag_index = self.build_index(
-            "ModTag.json", "ApplicationType", use_i18n=True
-        )
+        mod_tag_index = self.build_index("ModTag.json", "ApplicationType")
         return mod_tag_index.get(application_type, {})
 
     def get_tab_name(self, tab_id):
-        tab_index = self.build_index("ArchiveTab.json", "TabPara", use_i18n=True)
-        return tab_index.get(tab_id, {}).get("TabName", "").strip()
+        tab_index = self.build_index("ArchiveTab.json", "TabPara")
+        return self.translate(tab_index.get(tab_id, {}).get("TabName", ""))
 
 
 class FinalProcessor:

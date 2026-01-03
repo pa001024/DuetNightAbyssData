@@ -315,7 +315,20 @@
             "值": 2
           },
           "Effect Trigger Probability": {
-            "值": 1
+            "值": [
+              0.17,
+              0.2,
+              0.23,
+              0.26,
+              0.29,
+              0.32,
+              0.35,
+              0.38,
+              0.41,
+              0.44,
+              0.47,
+              0.5
+            ]
           }
         }
       },
@@ -615,7 +628,20 @@
           },
           "DMG Boost per stack of [Adagio]": {
             "影响": "威力",
-            "值": 1
+            "值": [
+              0.91,
+              1.12,
+              1.33,
+              1.54,
+              1.75,
+              1.96,
+              2.17,
+              2.38,
+              2.59,
+              2.8,
+              3.01,
+              3.22
+            ]
           },
           "[Fermata] Sanity Recovery": {
             "值": 10
@@ -1279,7 +1305,20 @@
           },
           "Enhanced [Solar Eclipse]\nDMG Boost Percentage": {
             "影响": "威力",
-            "值": 2
+            "值": [
+              22.64,
+              27.68,
+              32.72,
+              37.76,
+              42.8,
+              47.84,
+              52.88,
+              57.92,
+              62.96,
+              68,
+              73.04,
+              78.08
+            ]
           },
           "Enhanced [Lunar Hunt] DMG Radius": {
             "影响": "范围",
@@ -1295,7 +1334,20 @@
         "描述": "Based on the user's Trigger Probability for ranged weapons, casting [Lunar Hunt] has a chance to also spawn [Solar Eclipse] at the same location, which in turn may spawn another [Lunar Hunt]. [Solar Eclipse] and [Lunar Hunt] instances generated this way are not enhanced by [Misty Sea Requiem].",
         "字段": {
           "Effect Trigger Probability": {
-            "值": 1,
+            "值": [
+              0.14,
+              0.18,
+              0.22,
+              0.26,
+              0.3,
+              0.34,
+              0.38,
+              0.42,
+              0.46,
+              0.5,
+              0.54,
+              0.58
+            ],
             "格式": "{%}%Ranged Weapon Trigger Probability"
           },
           "Effect Trigger Probability Cap": {
@@ -1495,7 +1547,20 @@
             ]
           },
           "[Phanoplume] Effect Percentage": {
-            "值": 1,
+            "值": [
+              0.037,
+              0.044,
+              0.051,
+              0.058,
+              0.065,
+              0.072,
+              0.079,
+              0.086,
+              0.093,
+              0.1,
+              0.107,
+              0.114
+            ],
             "格式": "{%}%Melee Weapon Trigger Probability"
           },
           "Damage": {
@@ -2422,7 +2487,20 @@
           },
           "DMG Boost\nper stack of [Poison of Love]": {
             "影响": "威力",
-            "值": 1
+            "值": [
+              3.58,
+              4.38,
+              5.18,
+              5.98,
+              6.78,
+              7.58,
+              8.38,
+              9.18,
+              9.98,
+              10.78,
+              11.58,
+              12.38
+            ]
           },
           "DMG Radius": {
             "影响": "范围",
@@ -2654,7 +2732,20 @@
             "值": 30
           },
           "[Tentacle] DMG Boost": {
-            "值": 2
+            "值": [
+              0.37,
+              0.44,
+              0.51,
+              0.58,
+              0.65,
+              0.72,
+              0.79,
+              0.86,
+              0.93,
+              1,
+              1.07,
+              1.14
+            ]
           },
           "Skill DMG Boost": {
             "值": [
@@ -2726,7 +2817,20 @@
         "描述": "Dealing CRIT Damage using a ranged weapon has a chance to summon 1 [Tentacle] near the target, which can only be triggered once per second.\nA maximum of 18 [Tentacles] can exist at the same time.",
         "字段": {
           "Effect Trigger Probability": {
-            "值": 1
+            "值": [
+              0.065,
+              0.08,
+              0.095,
+              0.11,
+              0.125,
+              0.14,
+              0.155,
+              0.17,
+              0.185,
+              0.2,
+              0.215,
+              0.23
+            ]
           },
           "Summon DMG": {
             "影响": "威力",
@@ -2987,7 +3091,20 @@
             "格式": "{}s"
           },
           "Skill Damage Increase": {
-            "值": 1,
+            "值": [
+              0.12,
+              0.14,
+              0.16,
+              0.18,
+              0.2,
+              0.22,
+              0.24,
+              0.26,
+              0.28,
+              0.3,
+              0.32,
+              0.34
+            ],
             "格式": "{%}%Skill Damage"
           },
           "Skill Damage Cap Boost": {
@@ -3153,7 +3270,20 @@
           },
           "[Laceration] DMG": {
             "影响": "威力",
-            "值": 1
+            "值": [
+              0.66,
+              0.8,
+              0.94,
+              1.08,
+              1.22,
+              1.36,
+              1.5,
+              1.64,
+              1.78,
+              1.92,
+              2.06,
+              2.2
+            ]
           },
           "[Lacerated Wound] Count Cap": {
             "值": 10
@@ -3219,7 +3349,20 @@
             "格式": "{}s"
           },
           "DMG Boost per stack": {
-            "值": 1
+            "值": [
+              0.051,
+              0.062,
+              0.073,
+              0.084,
+              0.095,
+              0.106,
+              0.117,
+              0.128,
+              0.139,
+              0.15,
+              0.161,
+              0.172
+            ]
           }
         }
       },
@@ -3349,7 +3492,20 @@
             ]
           },
           "Sanity Recovery Probability": {
-            "值": 1
+            "值": [
+              0.13,
+              0.16,
+              0.19,
+              0.22,
+              0.25,
+              0.28,
+              0.31,
+              0.34,
+              0.37,
+              0.4,
+              0.43,
+              0.46
+            ]
           },
           "Sanity Recovery": {
             "值": 5
@@ -3450,7 +3606,20 @@
         "描述": "Carries 2 [Heavy Dirtexpellers] that automatically target and shoot nearby enemies once every 3s, dealing Pyro Damage.\nWhen dodging, Hilda reloads her ranged weapon Magazine to maximum and gains [Elegant Anger] for a period of time.",
         "字段": {
           "[Elegant Anger] Effect": {
-            "值": 1
+            "值": [
+              0.13,
+              0.16,
+              0.19,
+              0.22,
+              0.25,
+              0.28,
+              0.31,
+              0.34,
+              0.37,
+              0.4,
+              0.43,
+              0.46
+            ]
           },
           "[Elegant Anger] Duration": {
             "影响": "持续",
@@ -3650,7 +3819,20 @@
           },
           "Bonus Damage Multiplier per [Tot Popper] Detonated": {
             "影响": "威力",
-            "值": 1
+            "值": [
+              2.78,
+              3.4,
+              4.02,
+              4.64,
+              5.26,
+              5.88,
+              6.5,
+              7.12,
+              7.74,
+              8.36,
+              8.98,
+              9.6
+            ]
           },
           "Sanity Recovery per [Tot Popper] Detonated": {
             "值": 2
@@ -4610,7 +4792,20 @@
         "描述": "When consuming Sanity, converts a percentage of consumed Sanity into [Electric Energy]. The upper limit of [Electric Energy] is equal to the max Sanity.",
         "字段": {
           "Conversion Percentage": {
-            "值": 1
+            "值": [
+              0.37,
+              0.44,
+              0.51,
+              0.58,
+              0.65,
+              0.72,
+              0.79,
+              0.86,
+              0.93,
+              1,
+              1.07,
+              1.14
+            ]
           }
         }
       },
@@ -4956,7 +5151,20 @@
         "描述": "Obtains [Talismans] through [Celestial Revelation], up to 2 [Talismans]. When the number of [Talismans] exceeds the limit, the earliest obtained [Talisman] will be removed.\nWhen consuming [Talisman] after using [Thunder's Oracle Peal], [Myriad Things Thrive], or [Fortune's Clarity], each [Talisman] has a chance to be retained based on Zhiliu's Melee Weapon Trigger Probability.",
         "字段": {
           "Effect Trigger Probability": {
-            "值": 1,
+            "值": [
+              0.14,
+              0.18,
+              0.22,
+              0.26,
+              0.3,
+              0.34,
+              0.38,
+              0.42,
+              0.46,
+              0.5,
+              0.54,
+              0.58
+            ],
             "值2": 0.5,
             "格式": "{%}%+{%}%×Melee Weapon Trigger Probability"
           }
@@ -5079,18 +5287,18 @@
           },
           "[Starstorm Descent] DMG": {
             "值": [
-              2.94,
-              3.6,
-              4.26,
-              4.92,
-              5.58,
-              6.24,
-              6.9,
-              7.56,
-              8.22,
-              8.88,
-              9.54,
-              10.2
+              4.9,
+              6,
+              7.1,
+              8.2,
+              9.3,
+              10.4,
+              11.5,
+              12.6,
+              13.7,
+              14.8,
+              15.9,
+              17
             ]
           },
           "[Starlight Descent] DMG Radius": {
@@ -5530,7 +5738,20 @@
         "描述": "When Randy successfully grants an Ultra Shield to a teammate, applies 1 stack that increases their DEF based on Randy's DEF to them, up to 10 stacks.",
         "字段": {
           "DEF Boost per stack": {
-            "值": 1,
+            "值": [
+              0.0037,
+              0.0044,
+              0.0051,
+              0.0058,
+              0.0065,
+              0.0072,
+              0.0079,
+              0.0086,
+              0.0093,
+              0.01,
+              0.0107,
+              0.0114
+            ],
             "格式": "{%}%DEF"
           },
           "DEF Boost Cap per stack": {
@@ -5805,7 +6026,7 @@
             "格式": "{%}%Max HP+{}"
           },
           "DMG Taken Transfer": {
-            "值": 2
+            "值": 0.1
           },
           "Damage": {
             "影响": "威力",
@@ -5866,7 +6087,20 @@
         "描述": "When the damage dealt triggers Bonus Effect, Sibylle gains certain points of [Might of Thunder], up to 300 points.\n[Divine Conqueror] and [Stormcaller] can be empowered by consuming [Might of Thunder] points.",
         "字段": {
           "[Might of Thunder] Point Gained": {
-            "值": 1
+            "值": [
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ]
           }
         }
       },
@@ -6459,7 +6693,7 @@
         "描述": "When taking damage, Outsider generates 1 [Fang Spike] to attack the damage dealer. This effect can only be triggered once per second.",
         "字段": {
           "DMG Taken From [Outsider] Boost": {
-            "值": 2
+            "值": 0
           },
           "[Throatcutter] Duration": {
             "影响": "持续",
@@ -6770,7 +7004,20 @@
             "格式": "{}s"
           },
           "DMG Boost Per Buff": {
-            "值": 1
+            "值": [
+              0.012,
+              0.014,
+              0.016,
+              0.018,
+              0.02,
+              0.022,
+              0.024,
+              0.026,
+              0.028,
+              0.03,
+              0.032,
+              0.034
+            ]
           }
         }
       },

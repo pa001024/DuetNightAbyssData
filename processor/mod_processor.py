@@ -1,5 +1,4 @@
 from processor.base_processor import BaseProcessor
-from ast_parser import parse_ast, NodeType
 
 
 class ModProcessor(BaseProcessor):
@@ -23,7 +22,9 @@ class ModProcessor(BaseProcessor):
         mod_tag_info = self.data_loader.get_mod_tag_info(
             mod_data.get("ApplicationType", 0)
         )
-        mod_tag_text = mod_tag_info.get("ModTagText", [])
+        mod_tag_text = [
+            self.get_translated_text(tag) for tag in mod_tag_info.get("ModTagText", [])
+        ]
 
         # 计算耐受值
         cost = mod_data.get("Cost", 0)
@@ -33,8 +34,6 @@ class ModProcessor(BaseProcessor):
 
         # 处理类型名称，提取系列
         type_name = self.get_translated_text(mod_data.get("TypeName", ""))
-        series = type_name[:-1] if type_name and len(type_name) > 1 else ""
-
         # 处理品质和极性
         rarity = mod_data.get("Rarity", 1)
         # 使用品质名称映射
@@ -60,7 +59,7 @@ class ModProcessor(BaseProcessor):
         processed = {
             "id": mod_data.get("Id", 0),
             "名称": self.get_translated_text(mod_data.get("Name", "")),
-            "系列": series,
+            "系列": type_name.replace("之", ""),
             "品质": quality,
         }
 
@@ -480,7 +479,7 @@ class ModProcessor(BaseProcessor):
                 # 使用新的函数计算表达式值，确保使用正确的mod_level
                 try:
                     expr_value = self._calculate_expr_value(
-                        inner_expr, mod_id, mod_level
+                        inner_expr, mod_id, mod_level, "Mod"
                     )
 
                     # 对结果进行相应的函数计算
@@ -512,7 +511,7 @@ class ModProcessor(BaseProcessor):
 
             # 使用新的函数计算普通表达式值，捕获可能的异常，确保使用正确的mod_level
             try:
-                expr_value = self._calculate_expr_value(expr, mod_id, mod_level)
+                expr_value = self._calculate_expr_value(expr, mod_id, mod_level, "Mod")
 
                 # 根据是否有负号处理值
                 if has_neg:
@@ -541,13 +540,14 @@ class ModProcessor(BaseProcessor):
         # 处理普通表达式
         return "{ERROR}"
 
-    def _calculate_expr_value(self, expr, mod_id=None, mod_level=1):
+    def _calculate_expr_value(self, expr, mod_id=None, mod_level=1, table_type="Mod"):
         """计算表达式值，使用AST解析和上下文跟踪
 
         Args:
             expr: 表达式字符串，如 "#Buff[1311001].BuffDamagedRate.Value*100"
             mod_id: 当前MOD的ID
             mod_level: 当前MOD的等级
+            table_type: 表类型
 
         Returns:
             计算后的数值
@@ -595,228 +595,8 @@ class ModProcessor(BaseProcessor):
             )
             return float(attr_value)
 
-        # 使用AST解析表达式
-        try:
-            ast = parse_ast(expr)
-            result = self._evaluate_ast_node_with_context(ast, mod_id, mod_level)
-            return float(result)
-        except Exception as e:
-            print(f"AST解析失败: {e}, expr={expr}")
-            # 尝试使用eval作为后备方案
-            try:
-                return eval(expr)
-            except:
-                raise ValueError(f"无法解析表达式: '{expr}'")
-
-    def _evaluate_ast_node_with_context(
-        self, node, mod_id=None, mod_level=1, context=None
-    ):
-        """使用上下文信息评估AST节点
-
-        Args:
-            node: AST节点
-            mod_id: 当前MOD的ID
-            mod_level: 当前MOD的等级
-            context: 上下文信息字典，包含 table_type 和 table_id
-
-        Returns:
-            评估后的值
-        """
-        if context is None:
-            context = {}
-
-        if node.type == NodeType.LITERAL:
-            # 字面量直接返回值
-            return node.value
-
-        elif node.type == NodeType.IDENTIFIER:
-            # 标识符，可能在上下文中查找
-            return node.value
-
-        elif node.type == NodeType.BINARY_EXPR:
-            # 二元表达式
-            # 评估左侧表达式（保留上下文）
-            left_value = self._evaluate_ast_node_with_context(
-                node.left, mod_id, mod_level, context
-            )
-            # 评估右侧表达式（同样使用相同上下文）
-            right_value = self._evaluate_ast_node_with_context(
-                node.right, mod_id, mod_level, context
-            )
-
-            # 如果左侧是字符串且以#开头，使用SkillGrow查找
-            if isinstance(left_value, str) and left_value.startswith("#"):
-                table_type = context.get("table_type", "Mod")
-                table_id = context.get("table_id", mod_id)
-
-                attr = {
-                    "Type": table_type,
-                    "Value": left_value,
-                }
-
-                left_value = self._calc_mod_attr_by_level(attr, table_id, mod_level)
-
-            op = node.value
-            if op == "+":
-                return left_value + right_value
-            elif op == "-":
-                return left_value - right_value
-            elif op == "*":
-                return left_value * right_value
-            elif op == "/":
-                return left_value / right_value
-            elif op == "%":
-                return left_value % right_value
-            else:
-                raise ValueError(f"未知的运算符: {op}")
-
-        elif node.type == NodeType.MEMBER_ACCESS:
-            # 成员访问: object.property
-            object_value = self._evaluate_ast_node_with_context(
-                node.object, mod_id, mod_level, context
-            )
-            property_name = node.property.value
-
-            # 如果object_value是字典，访问属性
-            if isinstance(object_value, dict):
-                if property_name in object_value:
-                    value = object_value[property_name]
-
-                    # 如果值是字符串且以#开头，使用SkillGrow查找
-                    if isinstance(value, str) and value.startswith("#"):
-                        # 使用上下文信息进行SkillGrow查找
-                        table_type = context.get("table_type", "Mod")
-                        table_id = context.get("table_id", mod_id)
-
-                        # 构建attr对象用于SkillGrow查找
-                        attr_key = "Rate" if "Rate" in property_name else "Value"
-                        attr = {
-                            "Type": table_type,
-                            attr_key: value,
-                        }
-
-                        # 调用_calc_mod_attr_by_level获取实际值
-                        return self._calc_mod_attr_by_level(attr, table_id, mod_level)
-                    else:
-                        return value
-                else:
-                    raise ValueError(f"字典中找不到属性: {property_name}")
-            else:
-                raise ValueError(f"无法对非字典类型进行成员访问")
-
-        elif node.type == NodeType.INDEX_ACCESS:
-            # 索引访问: object[index]
-            object_value = self._evaluate_ast_node_with_context(
-                node.object, mod_id, mod_level, context
-            )
-            index_value = self._evaluate_ast_node_with_context(
-                node.index, mod_id, mod_level, context
-            )
-
-            # 如果object_value是字符串，可能是表名
-            if isinstance(object_value, str):
-                # 移除#前缀（如果有）
-                table_name = object_value.lstrip("#")
-                table_data = self.data_loader.load_json(f"{table_name}.json")
-                if not table_data:
-                    raise ValueError(f"无法找到表 '{table_name}'")
-
-                # 使用index_value作为ID获取数据
-                item_id = str(index_value)
-                if item_id in table_data:
-                    item_data = table_data[item_id]
-                    # 更新上下文，记录表类型和ID
-                    context["table_type"] = table_name
-                    context["table_id"] = index_value
-                    return item_data
-                else:
-                    raise ValueError(f"表 '{table_name}' 中找不到ID '{item_id}'")
-
-            # 如果object_value是字典，可能是访问嵌套字段
-            elif isinstance(object_value, dict):
-                # 尝试作为数组索引
-                if isinstance(index_value, int):
-                    # 转换为0-based索引（游戏数据使用1-based）
-                    adjusted_index = index_value - 1
-                    keys = list(object_value.keys())
-                    if 0 <= adjusted_index < len(keys):
-                        key = keys[adjusted_index]
-                        return object_value[key]
-                    else:
-                        raise ValueError(f"数组索引超出范围: {index_value}")
-                else:
-                    # 尝试作为键直接访问
-                    index_str = str(index_value)
-                    if index_str in object_value:
-                        return object_value[index_str]
-                    else:
-                        raise ValueError(f"字典中找不到键: {index_str}")
-
-            elif isinstance(object_value, list):
-                # 列表索引（转换为0-based）
-                if isinstance(index_value, int):
-                    adjusted_index = index_value - 1
-                    if 0 <= adjusted_index < len(object_value):
-                        return object_value[adjusted_index]
-                    else:
-                        raise ValueError(f"列表索引超出范围: {index_value}")
-                else:
-                    raise ValueError(f"列表索引必须是整数: {index_value}")
-
-            else:
-                raise ValueError(f"无法对类型 {type(object_value)} 进行索引访问")
-
-        elif node.type == NodeType.FUNCTION_CALL:
-            # 函数调用: func(args)
-            func_name = node.object.value
-            args = []
-            if node.arguments:
-                for arg in node.arguments:
-                    args.append(
-                        self._evaluate_ast_node_with_context(
-                            arg, mod_id, mod_level, context
-                        )
-                    )
-
-            # 处理特殊函数
-            if func_name == "GetModPolarity":
-                target_mod_id = int(args[0])
-                target_mod_data = self.data_loader.get_mod_info(target_mod_id)
-                if target_mod_data:
-                    polarity_value = target_mod_data.get("Polarity", -1)
-                    polarity = ["", "A", "D", "V", "O"][max(0, min(4, polarity_value))]
-                    return polarity
-                else:
-                    raise ValueError(f"无法找到MOD ID '{target_mod_id}'")
-
-            elif func_name == "GetModValue":
-                target_mod_id = int(args[0])
-                attr_idx = int(args[1])
-                value_type = int(args[2]) if len(args) > 2 else 1
-
-                target_mod_data = self.data_loader.get_mod_info(target_mod_id)
-                if not target_mod_data:
-                    raise ValueError(f"无法找到MOD ID '{target_mod_id}'")
-
-                add_attrs = target_mod_data.get("AddAttrs", [])
-                if attr_idx < 1 or attr_idx > len(add_attrs):
-                    raise ValueError(f"属性索引超出范围: {attr_idx}")
-
-                attr_config = add_attrs[attr_idx - 1]
-                max_level = target_mod_data.get("MaxLevel", 1)
-                mod_card_level_max = target_mod_data.get("ModCardLevelMax", 0)
-                correct_mod_level = max_level + mod_card_level_max
-
-                attr_value = self._calc_mod_attr_by_level(
-                    attr_config, target_mod_id, correct_mod_level, value_type
-                )
-                return float(attr_value)
-
-            else:
-                raise ValueError(f"未知的函数: {func_name}")
-
-        else:
-            raise ValueError(f"未知的节点类型: {node.type}")
+        # 使用基类的AST解析
+        return super()._calculate_expr_value(expr, mod_id, mod_level, table_type)
 
     def _translate_attribute_name(self, attr_name_key, language):
         """翻译属性名称为中文"""
