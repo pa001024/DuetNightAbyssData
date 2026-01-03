@@ -51,20 +51,48 @@ class BaseProcessor:
 
         return output_file
 
-    def get_translated_text(self, text_key):
-        """从i18n数据中获取翻译文本"""
-        if not text_key or not isinstance(text_key, str):
+    def process_tags(self, tags):
+        """处理武器标签"""
+        if not tags or not isinstance(tags, list):
             return ""
+        rst = []
+        tag_map = {
+            "Ultra": "同律",
+            "Melee": "近战",
+            "Ranged": "远程",
+            "Bow": self.get_translated_text("WeaponType_Bow", "cn"),
+            "Bow01": self.get_translated_text("WeaponType_Bow01", "cn"),
+            "Bow02": self.get_translated_text("WeaponType_Bow02", "cn"),
+            "Cannon": self.get_translated_text("WeaponType_Cannon", "cn"),
+            "Claymore": self.get_translated_text("WeaponType_Claymore", "cn"),
+            "Crossbow": self.get_translated_text("WeaponType_Crossbow", "cn"),
+            "Dualblade": self.get_translated_text("WeaponType_Dualblade", "cn"),
+            "Katana": self.get_translated_text("WeaponType_Katana", "cn"),
+            "Machinegun": self.get_translated_text("WeaponType_Machinegun", "cn"),
+            "Pistol": self.get_translated_text("WeaponType_Pistol", "cn"),
+            "Polearm": self.get_translated_text("WeaponType_Polearm", "cn"),
+            "Shotgun": self.get_translated_text("WeaponType_Shotgun", "cn"),
+            "Sword": self.get_translated_text("WeaponType_Sword", "cn"),
+            "Swordwhip": self.get_translated_text("WeaponType_Swordwhip", "cn"),
+        }
+        for tag in tags:
+            t = tag_map.get(tag, "")
+            if t:
+                rst.append(t)
+        return rst
 
+    def get_translated_text(self, text_key, language=""):
+        """从i18n数据中获取翻译文本"""
         # 从i18n_data中查找
         text_entry = self.i18n_data.get(text_key, {})
         if not text_entry:
             return text_key
 
         # 获取当前语言
-        language = self.data_loader.language if self.data_loader.language else "cn"
+        language = language if language else self.data_loader.language
 
         # 根据当前语言获取对应字段
+        # 语言映射：cn->TextMapContent, en->ContentEN, jp->ContentJP, kr->ContentKR, fr->ContentFR, tc->ContentTC
         language_field_map = {
             "cn": "TextMapContent",
             "en": "ContentEN",
@@ -81,6 +109,7 @@ class BaseProcessor:
 
         # 如果对应语言字段为空，尝试使用其他可用字段
         if not content:
+            # 优先顺序：TextMapContent > ContentEN > ContentJP > ContentKR > ContentFR > ContentTC
             for fallback_field in [
                 "TextMapContent",
                 "ContentEN",
@@ -94,4 +123,4 @@ class BaseProcessor:
                     content = text_entry[fallback_field]
                     break
 
-        return content
+        return content or text_key
