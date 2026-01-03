@@ -69,6 +69,7 @@ class CharProcessor(BaseProcessor):
             "阵营": self._process_camp(char_data.get("Camp", "None")),
             "属性": elm,
             "精通": self._process_mastery(battle_char.get("ExcelWeaponTags", [])),
+            "标签": self.process_tags(battle_char.get("Positioning", [])),
             "基础攻击": base_attr.get("攻击", 0),
             "基础生命": base_attr.get("生命", 0),
             "基础防御": base_attr.get("防御", 0),
@@ -81,6 +82,8 @@ class CharProcessor(BaseProcessor):
             # "档案": self._process_character_data(char_id),
             "同律武器": self._process_u_weapon(char_data.get("UWeapon", [])),
         }
+        if not processed["标签"]:
+            del processed["标签"]
         if not processed.get("同律武器"):
             del processed["同律武器"]
         if not processed.get("突破"):

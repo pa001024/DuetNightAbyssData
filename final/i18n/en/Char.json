@@ -11,6 +11,11 @@
       "Sword",
       "Dual Pistols"
     ],
+    "标签": [
+      "DPS",
+      "Consonance Weapon",
+      "Weapon DMG"
+    ],
     "基础攻击": 20,
     "基础生命": 100,
     "基础防御": 300,
@@ -387,6 +392,10 @@
     "精通": [
       "Greatsword",
       "Shotgun"
+    ],
+    "标签": [
+      "DPS",
+      "Skill DMG"
     ],
     "基础攻击": 21,
     "基础生命": 130,
@@ -766,6 +775,11 @@
     "精通": [
       "Greatsword",
       "Shotgun"
+    ],
+    "标签": [
+      "DPS",
+      "Consonance Weapon",
+      "Weapon DMG"
     ],
     "基础攻击": 24,
     "基础生命": 90,
@@ -1175,6 +1189,10 @@
       "Katana",
       "Pistol"
     ],
+    "标签": [
+      "DPS",
+      "Skill DMG"
+    ],
     "基础攻击": 21,
     "基础生命": 105,
     "基础防御": 255,
@@ -1388,6 +1406,10 @@
     "属性": "光",
     "精通": [
       "All Types"
+    ],
+    "标签": [
+      "DPS",
+      "Weapon DMG"
     ],
     "基础攻击": 25,
     "基础生命": 135,
@@ -1880,6 +1902,9 @@
       "Sword",
       "Assault Rifle"
     ],
+    "标签": [
+      "Support"
+    ],
     "基础攻击": 22,
     "基础生命": 120,
     "基础防御": 300,
@@ -2097,6 +2122,9 @@
     "精通": [
       "Sword",
       "Assault Rifle"
+    ],
+    "标签": [
+      "Support"
     ],
     "基础攻击": 22,
     "基础生命": 105,
@@ -2358,6 +2386,11 @@
       "Polearm",
       "Grenade Launcher"
     ],
+    "标签": [
+      "DPS",
+      "Summon",
+      "Skill DMG"
+    ],
     "基础攻击": 25,
     "基础生命": 100,
     "基础防御": 252,
@@ -2575,6 +2608,11 @@
       "Polearm",
       "Grenade Launcher"
     ],
+    "标签": [
+      "DPS",
+      "Summon",
+      "Skill DMG"
+    ],
     "基础攻击": 25,
     "基础生命": 100,
     "基础防御": 252,
@@ -2662,6 +2700,11 @@
     "精通": [
       "Sword",
       "Bow"
+    ],
+    "标签": [
+      "Support",
+      "Summon",
+      "Crowd Control"
     ],
     "基础攻击": 17,
     "基础生命": 115,
@@ -2888,6 +2931,11 @@
     "精通": [
       "Whipblade",
       "Bow"
+    ],
+    "标签": [
+      "Support",
+      "Sanity Recovery",
+      "Healing"
     ],
     "基础攻击": 23,
     "基础生命": 105,
@@ -3170,6 +3218,11 @@
       "Greatsword",
       "Dual Pistols"
     ],
+    "标签": [
+      "DPS",
+      "Consonance Weapon",
+      "Weapon DMG"
+    ],
     "基础攻击": 23,
     "基础生命": 105,
     "基础防御": 240,
@@ -3393,6 +3446,11 @@
     "精通": [
       "Dual Blades",
       "Grenade Launcher"
+    ],
+    "标签": [
+      "DPS",
+      "Skill DMG",
+      "Weapon DMG"
     ],
     "基础攻击": 27,
     "基础生命": 90,
@@ -3642,6 +3700,10 @@
       "Sword",
       "Shotgun"
     ],
+    "标签": [
+      "DPS",
+      "Skill DMG"
+    ],
     "基础攻击": 21,
     "基础生命": 96,
     "基础防御": 288,
@@ -3886,6 +3948,11 @@
     "精通": [
       "Greatsword",
       "Grenade Launcher"
+    ],
+    "标签": [
+      "DPS",
+      "Max HP",
+      "Skill DMG"
     ],
     "基础攻击": 15,
     "基础生命": 183,
@@ -4295,6 +4362,11 @@
       "Polearm",
       "Shotgun"
     ],
+    "标签": [
+      "DPS",
+      "Crowd Control",
+      "Skill DMG"
+    ],
     "基础攻击": 21,
     "基础生命": 83,
     "基础防御": 264,
@@ -4550,6 +4622,10 @@
       "Katana",
       "Assault Rifle"
     ],
+    "标签": [
+      "DPS",
+      "Skill DMG"
+    ],
     "基础攻击": 22,
     "基础生命": 94,
     "基础防御": 276,
@@ -4800,6 +4876,10 @@
     "精通": [
       "Greatsword",
       "Dual Pistols"
+    ],
+    "标签": [
+      "DPS",
+      "Skill DMG"
     ],
     "基础攻击": 24,
     "基础生命": 80,
@@ -5165,6 +5245,11 @@
       "Polearm",
       "Assault Rifle"
     ],
+    "标签": [
+      "DPS",
+      "Skill DMG",
+      "Weapon DMG"
+    ],
     "基础攻击": 22,
     "基础生命": 165,
     "基础防御": 300,
@@ -5462,6 +5547,11 @@
       "Sword",
       "Pistol"
     ],
+    "标签": [
+      "Support",
+      "DEF",
+      "Shielding"
+    ],
     "基础攻击": 14,
     "基础生命": 105,
     "基础防御": 510,
@@ -5733,6 +5823,11 @@
     "精通": [
       "Whipblade",
       "Pistol"
+    ],
+    "标签": [
+      "DPS",
+      "Max HP",
+      "Skill DMG"
     ],
     "基础攻击": 13,
     "基础生命": 185,
@@ -6067,6 +6162,11 @@
     "精通": [
       "Polearm",
       "Bow"
+    ],
+    "标签": [
+      "Support",
+      "Max HP",
+      "Healing"
     ],
     "基础攻击": 12,
     "基础生命": 185,
@@ -6457,6 +6557,10 @@
       "Dual Blades",
       "Dual Pistols"
     ],
+    "标签": [
+      "DPS",
+      "Weapon DMG"
+    ],
     "基础攻击": 20,
     "基础生命": 85,
     "基础防御": 285,
@@ -6676,6 +6780,12 @@
     "精通": [
       "Polearm",
       "Assault Rifle"
+    ],
+    "标签": [
+      "DPS",
+      "Consonance Weapon",
+      "Weapon DMG",
+      "Skill DMG"
     ],
     "基础攻击": 28,
     "基础生命": 70,
@@ -6983,6 +7093,11 @@
     "精通": [
       "Whipblade",
       "Assault Rifle"
+    ],
+    "标签": [
+      "Support",
+      "Crowd Control",
+      "Healing"
     ],
     "基础攻击": 19,
     "基础生命": 100,
