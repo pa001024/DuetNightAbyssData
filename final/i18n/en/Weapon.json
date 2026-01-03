@@ -1,0 +1,3122 @@
+[
+  {
+    "id": 10101,
+    "名称": "Blade Amberglow",
+    "描述": "The weapon that Berenica carries. A blade adorned with golden decorations. The blade is made from a black metal that is not commonly found. Clearly, this is not a weapon that the villagers of Purgatorio Island would normally possess.",
+    "属性": {
+      "Lv.1": 19,
+      "Lv.20": 50,
+      "Lv.30": 74,
+      "Lv.40": 101,
+      "Lv.50": 130,
+      "Lv.60": 167,
+      "Lv.70": 200,
+      "Lv.80": 246
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Damaged Sal Volatile×6",
+        "Basic Weapon Component: Grip×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Fuel Reagent×3",
+        "Basic Weapon Component: Grip×4",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Fuel Reagent×6",
+        "Intermediate Weapon Component: Grip×3",
+        "Intermediate Weapon Component: Blade×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Fuel Reagent×12",
+        "Advanced Weapon Component: Grip×6",
+        "Advanced Weapon Component: Blade×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Fuel Reagent×24",
+        "Advanced Weapon Component: Grip×10",
+        "Advanced Weapon Component: Blade×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Fuel Reagent×48",
+        "Advanced Weapon Component: Grip×20",
+        "Advanced Weapon Component: Blade×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Character ATK ‍+60.0%.",
+      "等级1": "Character ATK ‍+72.0%.",
+      "等级2": "Character ATK ‍+84.0%.",
+      "等级3": "Character ATK ‍+96.0%.",
+      "等级4": "Character ATK ‍+108.0%.",
+      "等级5": "Character ATK ‍+120.0%."
+    }
+  },
+  {
+    "id": 10102,
+    "名称": "Shackle of Lonewolf",
+    "描述": "May reckless revelries compensate for your loneliness.",
+    "属性": {
+      "Lv.1": 20,
+      "Lv.20": 51,
+      "Lv.30": 75,
+      "Lv.40": 103,
+      "Lv.50": 132,
+      "Lv.60": 171,
+      "Lv.70": 204,
+      "Lv.80": 251
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Damaged Sal Volatile×6",
+        "Basic Weapon Component: Grip×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Fuel Reagent×3",
+        "Basic Weapon Component: Grip×4",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Fuel Reagent×6",
+        "Intermediate Weapon Component: Grip×3",
+        "Intermediate Weapon Component: Blade×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Fuel Reagent×12",
+        "Advanced Weapon Component: Grip×6",
+        "Advanced Weapon Component: Blade×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Fuel Reagent×24",
+        "Advanced Weapon Component: Grip×10",
+        "Advanced Weapon Component: Blade×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Fuel Reagent×48",
+        "Advanced Weapon Component: Grip×20",
+        "Advanced Weapon Component: Blade×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Trigger Probability +75.0%. When a Hydro character triggers a bonus effect with this weapon, other allies gain +33.0% ATK for 6.0s.",
+      "等级1": "Trigger Probability +90.0%. When a Hydro character triggers a bonus effect with this weapon, other allies gain +39.6% ATK for 6.0s.",
+      "等级2": "Trigger Probability +105.0%. When a Hydro character triggers a bonus effect with this weapon, other allies gain +46.2% ATK for 6.0s.",
+      "等级3": "Trigger Probability +120.0%. When a Hydro character triggers a bonus effect with this weapon, other allies gain +52.8% ATK for 6.0s.",
+      "等级4": "Trigger Probability +135.0%. When a Hydro character triggers a bonus effect with this weapon, other allies gain +59.4% ATK for 6.0s.",
+      "等级5": "Trigger Probability +150.0%. When a Hydro character triggers a bonus effect with this weapon, other allies gain +66.0% ATK for 6.0s."
+    }
+  },
+  {
+    "id": 10103,
+    "名称": "Remanent Reminiscence",
+    "描述": "A sword of unknown origin. A sword that has been present since time immemorial. Perhaps one day, it will become the key to connecting the past and the present.",
+    "属性": {
+      "Lv.1": 17,
+      "Lv.20": 44,
+      "Lv.30": 64,
+      "Lv.40": 88,
+      "Lv.50": 112,
+      "Lv.60": 145,
+      "Lv.70": 173,
+      "Lv.80": 213
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Damaged Sal Volatile×6",
+        "Basic Weapon Component: Grip×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Fuel Reagent×3",
+        "Basic Weapon Component: Grip×4",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Fuel Reagent×6",
+        "Intermediate Weapon Component: Grip×3",
+        "Intermediate Weapon Component: Blade×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Fuel Reagent×12",
+        "Advanced Weapon Component: Grip×6",
+        "Advanced Weapon Component: Blade×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Fuel Reagent×24",
+        "Advanced Weapon Component: Grip×10",
+        "Advanced Weapon Component: Blade×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Fuel Reagent×48",
+        "Advanced Weapon Component: Grip×20",
+        "Advanced Weapon Component: Blade×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "ATK Range ‍+1.0. Landing a CRIT with this weapon has a 33.0% chance to restore 3.0 Sanity. Can trigger once every 0.5s.",
+      "等级1": "ATK Range ‍+1.2. Landing a CRIT with this weapon has a 39.6% chance to restore 3.0 Sanity. Can trigger once every 0.5s.",
+      "等级2": "ATK Range ‍+1.4. Landing a CRIT with this weapon has a 46.2% chance to restore 3.0 Sanity. Can trigger once every 0.5s.",
+      "等级3": "ATK Range ‍+1.6. Landing a CRIT with this weapon has a 52.8% chance to restore 3.0 Sanity. Can trigger once every 0.5s.",
+      "等级4": "ATK Range ‍+1.8. Landing a CRIT with this weapon has a 59.4% chance to restore 3.0 Sanity. Can trigger once every 0.5s.",
+      "等级5": "ATK Range ‍+2.0. Landing a CRIT with this weapon has a 66.0% chance to restore 3.0 Sanity. Can trigger once every 0.5s."
+    }
+  },
+  {
+    "id": 10104,
+    "名称": "Ingenious Tactics",
+    "描述": "The best defence is a good offence — but of course, don't forget the importance of adequate rest.",
+    "属性": {
+      "Lv.1": 18,
+      "Lv.20": 46,
+      "Lv.30": 68,
+      "Lv.40": 93,
+      "Lv.50": 119,
+      "Lv.60": 154,
+      "Lv.70": 183,
+      "Lv.80": 225
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Damaged Sal Volatile×6",
+        "Basic Weapon Component: Grip×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Fuel Reagent×3",
+        "Basic Weapon Component: Grip×4",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Fuel Reagent×6",
+        "Intermediate Weapon Component: Grip×3",
+        "Intermediate Weapon Component: Blade×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Fuel Reagent×12",
+        "Advanced Weapon Component: Grip×6",
+        "Advanced Weapon Component: Blade×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Fuel Reagent×24",
+        "Advanced Weapon Component: Grip×10",
+        "Advanced Weapon Component: Blade×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Fuel Reagent×48",
+        "Advanced Weapon Component: Grip×20",
+        "Advanced Weapon Component: Blade×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "DEF +50.0%. When dealing damage with this weapon triggers Bonus Effect, there's a 25.0% chance to decrease the target's Shield by 350.0% of the user's DEF.",
+      "等级1": "DEF +60.0%. When dealing damage with this weapon triggers Bonus Effect, there's a 30.0% chance to decrease the target's Shield by 350.0% of the user's DEF.",
+      "等级2": "DEF +70.0%. When dealing damage with this weapon triggers Bonus Effect, there's a 35.0% chance to decrease the target's Shield by 350.0% of the user's DEF.",
+      "等级3": "DEF +80.0%. When dealing damage with this weapon triggers Bonus Effect, there's a 40.0% chance to decrease the target's Shield by 350.0% of the user's DEF.",
+      "等级4": "DEF +90.0%. When dealing damage with this weapon triggers Bonus Effect, there's a 45.0% chance to decrease the target's Shield by 350.0% of the user's DEF.",
+      "等级5": "DEF +100.0%. When dealing damage with this weapon triggers Bonus Effect, there's a 50.0% chance to decrease the target's Shield by 350.0% of the user's DEF."
+    }
+  },
+  {
+    "id": 10105,
+    "名称": "Wandering Rose",
+    "描述": "I'll embark on a journey far beyond the sands, just like you.",
+    "属性": {
+      "Lv.1": 20,
+      "Lv.20": 51,
+      "Lv.30": 75,
+      "Lv.40": 103,
+      "Lv.50": 132,
+      "Lv.60": 171,
+      "Lv.70": 204,
+      "Lv.80": 251
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Damaged Sal Volatile×6",
+        "Basic Weapon Component: Grip×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Fuel Reagent×3",
+        "Basic Weapon Component: Grip×4",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Fuel Reagent×6",
+        "Intermediate Weapon Component: Grip×3",
+        "Intermediate Weapon Component: Blade×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Fuel Reagent×12",
+        "Advanced Weapon Component: Grip×6",
+        "Advanced Weapon Component: Blade×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Fuel Reagent×24",
+        "Advanced Weapon Component: Grip×10",
+        "Advanced Weapon Component: Blade×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Fuel Reagent×48",
+        "Advanced Weapon Component: Grip×20",
+        "Advanced Weapon Component: Blade×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "ATK Speed +25.0%‍. When performing a Charged Attack with this weapon, there is a 28.0% chance to reduce Geniemon Support CD by 3.0s.",
+      "等级1": "ATK Speed +30.0%‍. When performing a Charged Attack with this weapon, there is a 33.6% chance to reduce Geniemon Support CD by 3.0s.",
+      "等级2": "ATK Speed +35.0%‍. When performing a Charged Attack with this weapon, there is a 39.2% chance to reduce Geniemon Support CD by 3.0s.",
+      "等级3": "ATK Speed +40.0%‍. When performing a Charged Attack with this weapon, there is a 44.8% chance to reduce Geniemon Support CD by 3.0s.",
+      "等级4": "ATK Speed +45.0%‍. When performing a Charged Attack with this weapon, there is a 50.4% chance to reduce Geniemon Support CD by 3.0s.",
+      "等级5": "ATK Speed +50.0%‍. When performing a Charged Attack with this weapon, there is a 56.0% chance to reduce Geniemon Support CD by 3.0s."
+    }
+  },
+  {
+    "id": 10201,
+    "名称": "Siren's Kiss",
+    "描述": "Kiss me! Snog me! Before tomorrow arrives, before young hearts grow old, and before death do us part.",
+    "属性": {
+      "Lv.1": 21,
+      "Lv.20": 54,
+      "Lv.30": 79,
+      "Lv.40": 109,
+      "Lv.50": 139,
+      "Lv.60": 179,
+      "Lv.70": 214,
+      "Lv.80": 263
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Stone Powder×6",
+        "Basic Weapon Component: Grip×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Insulation Coating×3",
+        "Basic Weapon Component: Grip×4",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Insulation Coating×6",
+        "Intermediate Weapon Component: Grip×3",
+        "Intermediate Weapon Component: Blade×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Insulation Coating×12",
+        "Advanced Weapon Component: Grip×6",
+        "Advanced Weapon Component: Blade×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Insulation Coating×24",
+        "Advanced Weapon Component: Grip×10",
+        "Advanced Weapon Component: Blade×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Insulation Coating×48",
+        "Advanced Weapon Component: Grip×20",
+        "Advanced Weapon Component: Blade×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Skill Range +30.0%. When performing Normal Attacks with this weapon, grants a 3.6% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
+      "等级1": "Skill Range +36.0%. When performing Normal Attacks with this weapon, grants a 4.3% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
+      "等级2": "Skill Range +42.0%. When performing Normal Attacks with this weapon, grants a 5.0% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
+      "等级3": "Skill Range +48.0%. When performing Normal Attacks with this weapon, grants a 5.8% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
+      "等级4": "Skill Range +54.0%. When performing Normal Attacks with this weapon, grants a 6.5% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
+      "等级5": "Skill Range +60.0%. When performing Normal Attacks with this weapon, grants a 7.2% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons."
+    }
+  },
+  {
+    "id": 10202,
+    "名称": "Vernal Jade Halberd",
+    "描述": "A polearm the Starweavers brought from their homeland —  Huaxu. The blade's design and colour are inspired by a unique plant in Huaxu called willow. In Huaxu, this plant typically carries the meaning of \"homeland\". Although the Starweavers are now busy weaving starry skies across every inch of Atlasia, one day they will return to their verdant homeland of lush willows.",
+    "属性": {
+      "Lv.1": 18,
+      "Lv.20": 46,
+      "Lv.30": 68,
+      "Lv.40": 93,
+      "Lv.50": 119,
+      "Lv.60": 154,
+      "Lv.70": 183,
+      "Lv.80": 225
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Stone Powder×6",
+        "Basic Weapon Component: Grip×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Insulation Coating×3",
+        "Basic Weapon Component: Grip×4",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Insulation Coating×6",
+        "Intermediate Weapon Component: Grip×3",
+        "Intermediate Weapon Component: Blade×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Insulation Coating×12",
+        "Advanced Weapon Component: Grip×6",
+        "Advanced Weapon Component: Blade×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Insulation Coating×24",
+        "Advanced Weapon Component: Grip×10",
+        "Advanced Weapon Component: Blade×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Insulation Coating×48",
+        "Advanced Weapon Component: Grip×20",
+        "Advanced Weapon Component: Blade×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "ATK Speed‍ +25.0%. Deals +45.0% damage to targets afflicted with bonus effects.",
+      "等级1": "ATK Speed‍ +30.0%. Deals +54.0% damage to targets afflicted with bonus effects.",
+      "等级2": "ATK Speed‍ +35.0%. Deals +63.0% damage to targets afflicted with bonus effects.",
+      "等级3": "ATK Speed‍ +40.0%. Deals +72.0% damage to targets afflicted with bonus effects.",
+      "等级4": "ATK Speed‍ +45.0%. Deals +81.0% damage to targets afflicted with bonus effects.",
+      "等级5": "ATK Speed‍ +50.0%. Deals +90.0% damage to targets afflicted with bonus effects."
+    }
+  },
+  {
+    "id": 10203,
+    "名称": "Venial Sinscales",
+    "描述": "As the years roll by, earthlings sufferingly become mediocritized.",
+    "属性": {
+      "Lv.1": 20,
+      "Lv.20": 51,
+      "Lv.30": 75,
+      "Lv.40": 103,
+      "Lv.50": 132,
+      "Lv.60": 171,
+      "Lv.70": 204,
+      "Lv.80": 251
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Stone Powder×6",
+        "Basic Weapon Component: Grip×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Insulation Coating×3",
+        "Basic Weapon Component: Grip×4",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Insulation Coating×6",
+        "Intermediate Weapon Component: Grip×3",
+        "Intermediate Weapon Component: Blade×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Insulation Coating×12",
+        "Advanced Weapon Component: Grip×6",
+        "Advanced Weapon Component: Blade×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Insulation Coating×24",
+        "Advanced Weapon Component: Grip×10",
+        "Advanced Weapon Component: Blade×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Insulation Coating×48",
+        "Advanced Weapon Component: Grip×20",
+        "Advanced Weapon Component: Blade×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Skill Damage +20.0%. When an Electro character performs a Plunging Attack with this weapon, grants +15.0% Skill Damage for 10.0s (up to 3 stacks).",
+      "等级1": "Skill Damage +24.0%. When an Electro character performs a Plunging Attack with this weapon, grants +18.0% Skill Damage for 10.0s (up to 3 stacks).",
+      "等级2": "Skill Damage +28.0%. When an Electro character performs a Plunging Attack with this weapon, grants +21.0% Skill Damage for 10.0s (up to 3 stacks).",
+      "等级3": "Skill Damage +32.0%. When an Electro character performs a Plunging Attack with this weapon, grants +24.0% Skill Damage for 10.0s (up to 3 stacks).",
+      "等级4": "Skill Damage +36.0%. When an Electro character performs a Plunging Attack with this weapon, grants +27.0% Skill Damage for 10.0s (up to 3 stacks).",
+      "等级5": "Skill Damage +40.0%. When an Electro character performs a Plunging Attack with this weapon, grants +30.0% Skill Damage for 10.0s (up to 3 stacks)."
+    }
+  },
+  {
+    "id": 10204,
+    "名称": "Elpides Abound",
+    "描述": "I buried a seed in the frozen earth, hoping for a harvest moon that may never come.",
+    "属性": {
+      "Lv.1": 22,
+      "Lv.20": 56,
+      "Lv.30": 83,
+      "Lv.40": 114,
+      "Lv.50": 146,
+      "Lv.60": 188,
+      "Lv.70": 224,
+      "Lv.80": 276
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Stone Powder×6",
+        "Basic Weapon Component: Grip×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Insulation Coating×3",
+        "Basic Weapon Component: Grip×4",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Insulation Coating×6",
+        "Intermediate Weapon Component: Grip×3",
+        "Intermediate Weapon Component: Blade×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Insulation Coating×12",
+        "Advanced Weapon Component: Grip×6",
+        "Advanced Weapon Component: Blade×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Insulation Coating×24",
+        "Advanced Weapon Component: Grip×10",
+        "Advanced Weapon Component: Blade×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Insulation Coating×48",
+        "Advanced Weapon Component: Grip×20",
+        "Advanced Weapon Component: Blade×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Resolve +5.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 8.0% and ATK Speed by 15.0% for 15.0s. Each instance of Skill Damage or Ranged Weapon Damage extends the duration by 0.2s.",
+      "等级1": "Resolve +6.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 9.6% and ATK Speed by 18.0% for 15.0s. Each instance of Skill Damage or Ranged Weapon Damage extends the duration by 0.2s.",
+      "等级2": "Resolve +7.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 11.2% and ATK Speed by 21.0% for 15.0s. Each instance of Skill Damage or Ranged Weapon Damage extends the duration by 0.2s.",
+      "等级3": "Resolve +8.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 12.8% and ATK Speed by 24.0% for 15.0s. Each instance of Skill Damage or Ranged Weapon Damage extends the duration by 0.2s.",
+      "等级4": "Resolve +9.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 14.4% and ATK Speed by 27.0% for 15.0s. Each instance of Skill Damage or Ranged Weapon Damage extends the duration by 0.2s.",
+      "等级5": "Resolve +10.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 16.0% and ATK Speed by 30.0% for 15.0s. Each instance of Skill Damage or Ranged Weapon Damage extends the duration by 0.2s."
+    }
+  },
+  {
+    "id": 10206,
+    "名称": "Wanewraith",
+    "描述": "A type of scythe favoured by Atlasia hunters, capable of taking down small Filthoids one might encounter in the wild with a single swing.",
+    "属性": {
+      "Lv.1": 19,
+      "Lv.20": 49,
+      "Lv.30": 72,
+      "Lv.40": 98,
+      "Lv.50": 126,
+      "Lv.60": 162,
+      "Lv.70": 194,
+      "Lv.80": 238
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Stone Powder×6",
+        "Basic Weapon Component: Grip×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Insulation Coating×3",
+        "Basic Weapon Component: Grip×4",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Insulation Coating×6",
+        "Intermediate Weapon Component: Grip×3",
+        "Intermediate Weapon Component: Blade×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Insulation Coating×12",
+        "Advanced Weapon Component: Grip×6",
+        "Advanced Weapon Component: Blade×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Insulation Coating×24",
+        "Advanced Weapon Component: Grip×10",
+        "Advanced Weapon Component: Blade×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Insulation Coating×48",
+        "Advanced Weapon Component: Grip×20",
+        "Advanced Weapon Component: Blade×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Skill Damage +24.0%.",
+      "等级1": "Skill Damage +28.8%.",
+      "等级2": "Skill Damage +33.6%.",
+      "等级3": "Skill Damage +38.4%.",
+      "等级4": "Skill Damage +43.2%.",
+      "等级5": "Skill Damage +48.0%."
+    }
+  },
+  {
+    "id": 10208,
+    "名称": "Dove of Tomorrow",
+    "描述": "A dove sworn to defend dignity, offering up each feather in the pursuit of peace.",
+    "属性": {
+      "Lv.1": 21,
+      "Lv.20": 54,
+      "Lv.30": 79,
+      "Lv.40": 109,
+      "Lv.50": 139,
+      "Lv.60": 179,
+      "Lv.70": 214,
+      "Lv.80": 263
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Stone Powder×6",
+        "Basic Weapon Component: Grip×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Insulation Coating×3",
+        "Basic Weapon Component: Grip×4",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Insulation Coating×6",
+        "Intermediate Weapon Component: Grip×3",
+        "Intermediate Weapon Component: Blade×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Insulation Coating×12",
+        "Advanced Weapon Component: Grip×6",
+        "Advanced Weapon Component: Blade×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Insulation Coating×24",
+        "Advanced Weapon Component: Grip×10",
+        "Advanced Weapon Component: Blade×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Insulation Coating×48",
+        "Advanced Weapon Component: Grip×20",
+        "Advanced Weapon Component: Blade×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "CRIT Chance +50.0%. When dealing damage using normal attack with this weapon, there is a 1.7% chance to reload the user's ranged weapon magazine.",
+      "等级1": "CRIT Chance +60.0%. When dealing damage using normal attack with this weapon, there is a 2.0% chance to reload the user's ranged weapon magazine.",
+      "等级2": "CRIT Chance +70.0%. When dealing damage using normal attack with this weapon, there is a 2.4% chance to reload the user's ranged weapon magazine.",
+      "等级3": "CRIT Chance +80.0%. When dealing damage using normal attack with this weapon, there is a 2.7% chance to reload the user's ranged weapon magazine.",
+      "等级4": "CRIT Chance +90.0%. When dealing damage using normal attack with this weapon, there is a 3.1% chance to reload the user's ranged weapon magazine.",
+      "等级5": "CRIT Chance +100.0%. When dealing damage using normal attack with this weapon, there is a 3.4% chance to reload the user's ranged weapon magazine."
+    }
+  },
+  {
+    "id": 10301,
+    "名称": "Punitive Inferno",
+    "描述": "Burn, burn, burn! This chastening fire will consume all evil in the world.",
+    "属性": {
+      "Lv.1": 19,
+      "Lv.20": 49,
+      "Lv.30": 72,
+      "Lv.40": 98,
+      "Lv.50": 126,
+      "Lv.60": 162,
+      "Lv.70": 194,
+      "Lv.80": 238
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Filthoid Clot×6",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Statue Debris×3",
+        "Basic Weapon Component: Blade×4",
+        "Basic Weapon Component: Decoration×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Statue Debris×6",
+        "Intermediate Weapon Component: Blade×3",
+        "Intermediate Weapon Component: Decoration×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Statue Debris×12",
+        "Advanced Weapon Component: Blade×6",
+        "Advanced Weapon Component: Decoration×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Statue Debris×24",
+        "Advanced Weapon Component: Blade×10",
+        "Advanced Weapon Component: Decoration×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Statue Debris×48",
+        "Advanced Weapon Component: Blade×20",
+        "Advanced Weapon Component: Decoration×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Max HP +50.0%. When a Pyro character takes damage, grants +15.0% Skill Duration for 8.0s (up to 3.0 stacks).",
+      "等级1": "Max HP +60.0%. When a Pyro character takes damage, grants +18.0% Skill Duration for 8.0s (up to 3.0 stacks).",
+      "等级2": "Max HP +70.0%. When a Pyro character takes damage, grants +21.0% Skill Duration for 8.0s (up to 3.0 stacks).",
+      "等级3": "Max HP +80.0%. When a Pyro character takes damage, grants +24.0% Skill Duration for 8.0s (up to 3.0 stacks).",
+      "等级4": "Max HP +90.0%. When a Pyro character takes damage, grants +27.0% Skill Duration for 8.0s (up to 3.0 stacks).",
+      "等级5": "Max HP +100.0%. When a Pyro character takes damage, grants +30.0% Skill Duration for 8.0s (up to 3.0 stacks)."
+    }
+  },
+  {
+    "id": 10302,
+    "名称": "Ironforger",
+    "描述": "Only unmatched strength can forge laws of iron.",
+    "属性": {
+      "Lv.1": 18,
+      "Lv.20": 46,
+      "Lv.30": 68,
+      "Lv.40": 93,
+      "Lv.50": 119,
+      "Lv.60": 154,
+      "Lv.70": 183,
+      "Lv.80": 225
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Filthoid Clot×6",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Statue Debris×3",
+        "Basic Weapon Component: Blade×4",
+        "Basic Weapon Component: Decoration×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Statue Debris×6",
+        "Intermediate Weapon Component: Blade×3",
+        "Intermediate Weapon Component: Decoration×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Statue Debris×12",
+        "Advanced Weapon Component: Blade×6",
+        "Advanced Weapon Component: Decoration×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Statue Debris×24",
+        "Advanced Weapon Component: Blade×10",
+        "Advanced Weapon Component: Decoration×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Statue Debris×48",
+        "Advanced Weapon Component: Blade×20",
+        "Advanced Weapon Component: Decoration×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "CRIT Chance +50.0%. When dealing damage with this weapon triggers Bonus Effect, there is a 2.1% chance to increase the Combo Level to maximum.",
+      "等级1": "CRIT Chance +60.0%. When dealing damage with this weapon triggers Bonus Effect, there is a 2.5% chance to increase the Combo Level to maximum.",
+      "等级2": "CRIT Chance +70.0%. When dealing damage with this weapon triggers Bonus Effect, there is a 2.9% chance to increase the Combo Level to maximum.",
+      "等级3": "CRIT Chance +80.0%. When dealing damage with this weapon triggers Bonus Effect, there is a 3.4% chance to increase the Combo Level to maximum.",
+      "等级4": "CRIT Chance +90.0%. When dealing damage with this weapon triggers Bonus Effect, there is a 3.8% chance to increase the Combo Level to maximum.",
+      "等级5": "CRIT Chance +100.0%. When dealing damage with this weapon triggers Bonus Effect, there is a 4.2% chance to increase the Combo Level to maximum."
+    }
+  },
+  {
+    "id": 10303,
+    "名称": "Pyrothirst",
+    "描述": "An immaculate blade, slicing the air with a voiceless cry — forever longing to be stained in crimson.",
+    "属性": {
+      "Lv.1": 17,
+      "Lv.20": 44,
+      "Lv.30": 64,
+      "Lv.40": 88,
+      "Lv.50": 112,
+      "Lv.60": 145,
+      "Lv.70": 173,
+      "Lv.80": 213
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Filthoid Clot×6",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Statue Debris×3",
+        "Basic Weapon Component: Blade×4",
+        "Basic Weapon Component: Decoration×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Statue Debris×6",
+        "Intermediate Weapon Component: Blade×3",
+        "Intermediate Weapon Component: Decoration×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Statue Debris×12",
+        "Advanced Weapon Component: Blade×6",
+        "Advanced Weapon Component: Decoration×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Statue Debris×24",
+        "Advanced Weapon Component: Blade×10",
+        "Advanced Weapon Component: Decoration×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Statue Debris×48",
+        "Advanced Weapon Component: Blade×20",
+        "Advanced Weapon Component: Decoration×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Skill Duration +18.0%.",
+      "等级1": "Skill Duration +21.6%.",
+      "等级2": "Skill Duration +25.2%.",
+      "等级3": "Skill Duration +28.8%.",
+      "等级4": "Skill Duration +32.4%.",
+      "等级5": "Skill Duration +36.0%."
+    }
+  },
+  {
+    "id": 10304,
+    "名称": "Eternal Farewell",
+    "描述": "Sever the echoes of aeons long fled; let peace of the ages rise in their stead.",
+    "属性": {
+      "Lv.1": 22,
+      "Lv.20": 56,
+      "Lv.30": 83,
+      "Lv.40": 114,
+      "Lv.50": 146,
+      "Lv.60": 188,
+      "Lv.70": 224,
+      "Lv.80": 276
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Filthoid Clot×6",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Statue Debris×3",
+        "Basic Weapon Component: Blade×4",
+        "Basic Weapon Component: Decoration×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Statue Debris×6",
+        "Intermediate Weapon Component: Blade×3",
+        "Intermediate Weapon Component: Decoration×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Statue Debris×12",
+        "Advanced Weapon Component: Blade×6",
+        "Advanced Weapon Component: Decoration×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Statue Debris×24",
+        "Advanced Weapon Component: Blade×10",
+        "Advanced Weapon Component: Decoration×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Statue Debris×48",
+        "Advanced Weapon Component: Blade×20",
+        "Advanced Weapon Component: Decoration×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Morale +15.0%. When an Electro character uses their Ultimate Skill, grants +25.0% Skill Damage for 10.0s (up to 3.0 stacks).",
+      "等级1": "Morale +18.0%. When an Electro character uses their Ultimate Skill, grants +30.0% Skill Damage for 10.0s (up to 3.0 stacks).",
+      "等级2": "Morale +21.0%. When an Electro character uses their Ultimate Skill, grants +35.0% Skill Damage for 10.0s (up to 3.0 stacks).",
+      "等级3": "Morale +24.0%. When an Electro character uses their Ultimate Skill, grants +40.0% Skill Damage for 10.0s (up to 3.0 stacks).",
+      "等级4": "Morale +27.0%. When an Electro character uses their Ultimate Skill, grants +45.0% Skill Damage for 10.0s (up to 3.0 stacks).",
+      "等级5": "Morale +30.0%. When an Electro character uses their Ultimate Skill, grants +50.0% Skill Damage for 10.0s (up to 3.0 stacks)."
+    }
+  },
+  {
+    "id": 10401,
+    "名称": "Exiled Fangs",
+    "描述": "A lone wolfhound has nothing but its fangs. Before it lies the maze of fate; beneath it, the scorched soil of home.",
+    "属性": {
+      "Lv.1": 21,
+      "Lv.20": 54,
+      "Lv.30": 79,
+      "Lv.40": 109,
+      "Lv.50": 139,
+      "Lv.60": 179,
+      "Lv.70": 214,
+      "Lv.80": 263
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Blade×4",
+        "Basic Weapon Component: Decoration×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Blade×3",
+        "Intermediate Weapon Component: Decoration×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Blade×6",
+        "Advanced Weapon Component: Decoration×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Blade×10",
+        "Advanced Weapon Component: Decoration×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Blade×20",
+        "Advanced Weapon Component: Decoration×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "ATK Speed +25.0%. When dealing damage with this weapon triggers Bonus Effect, if the user's HP percentage is below 25%, there's a 45.0% chance to restore 1.5% of the Max HP.",
+      "等级1": "ATK Speed +30.0%. When dealing damage with this weapon triggers Bonus Effect, if the user's HP percentage is below 25%, there's a 45.0% chance to restore 1.8% of the Max HP.",
+      "等级2": "ATK Speed +35.0%. When dealing damage with this weapon triggers Bonus Effect, if the user's HP percentage is below 25%, there's a 45.0% chance to restore 2.1% of the Max HP.",
+      "等级3": "ATK Speed +40.0%. When dealing damage with this weapon triggers Bonus Effect, if the user's HP percentage is below 25%, there's a 45.0% chance to restore 2.4% of the Max HP.",
+      "等级4": "ATK Speed +45.0%. When dealing damage with this weapon triggers Bonus Effect, if the user's HP percentage is below 25%, there's a 45.0% chance to restore 2.7% of the Max HP.",
+      "等级5": "ATK Speed +50.0%. When dealing damage with this weapon triggers Bonus Effect, if the user's HP percentage is below 25%, there's a 45.0% chance to restore 3.0% of the Max HP."
+    }
+  },
+  {
+    "id": 10402,
+    "名称": "Aureate Yore",
+    "描述": "As the dark tide rose, the wielder raised these golden blades in offering — a final prayer to a silent god who never answered.",
+    "属性": {
+      "Lv.1": 18,
+      "Lv.20": 46,
+      "Lv.30": 68,
+      "Lv.40": 93,
+      "Lv.50": 119,
+      "Lv.60": 154,
+      "Lv.70": 183,
+      "Lv.80": 225
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Blade×4",
+        "Basic Weapon Component: Decoration×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Blade×3",
+        "Intermediate Weapon Component: Decoration×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Blade×6",
+        "Advanced Weapon Component: Decoration×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Blade×10",
+        "Advanced Weapon Component: Decoration×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Blade×20",
+        "Advanced Weapon Component: Decoration×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "CRIT Damage +62.5%. Sliding Attacks with this weapon gain +75.0% CRIT Chance.",
+      "等级1": "CRIT Damage +75.0%. Sliding Attacks with this weapon gain +90.0% CRIT Chance.",
+      "等级2": "CRIT Damage +87.5%. Sliding Attacks with this weapon gain +105.0% CRIT Chance.",
+      "等级3": "CRIT Damage +100.0%. Sliding Attacks with this weapon gain +120.0% CRIT Chance.",
+      "等级4": "CRIT Damage +112.5%. Sliding Attacks with this weapon gain +135.0% CRIT Chance.",
+      "等级5": "CRIT Damage +125.0%. Sliding Attacks with this weapon gain +150.0% CRIT Chance."
+    }
+  },
+  {
+    "id": 10403,
+    "名称": "Fathomless Sharkgaze",
+    "描述": "In this moment, you are the predator — lurking fathoms deep, waiting to strike.",
+    "属性": {
+      "Lv.1": 20,
+      "Lv.20": 51,
+      "Lv.30": 75,
+      "Lv.40": 103,
+      "Lv.50": 132,
+      "Lv.60": 171,
+      "Lv.70": 204,
+      "Lv.80": 251
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Blade×4",
+        "Basic Weapon Component: Decoration×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Blade×3",
+        "Intermediate Weapon Component: Decoration×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Blade×6",
+        "Advanced Weapon Component: Decoration×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Blade×10",
+        "Advanced Weapon Component: Decoration×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Blade×20",
+        "Advanced Weapon Component: Decoration×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Skill Range +36.0%.",
+      "等级1": "Skill Range +43.2%.",
+      "等级2": "Skill Range +50.4%.",
+      "等级3": "Skill Range +57.6%.",
+      "等级4": "Skill Range +64.8%.",
+      "等级5": "Skill Range +72.0%."
+    }
+  },
+  {
+    "id": 10501,
+    "名称": "Undying Oneiros",
+    "描述": "An old dream toward the future.",
+    "属性": {
+      "Lv.1": 21,
+      "Lv.20": 54,
+      "Lv.30": 79,
+      "Lv.40": 109,
+      "Lv.50": 139,
+      "Lv.60": 179,
+      "Lv.70": 214,
+      "Lv.80": 263
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Damaged Sal Volatile×6",
+        "Basic Weapon Component: Grip×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Fuel Reagent×3",
+        "Basic Weapon Component: Grip×4",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Fuel Reagent×6",
+        "Intermediate Weapon Component: Grip×3",
+        "Intermediate Weapon Component: Blade×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Fuel Reagent×12",
+        "Advanced Weapon Component: Grip×6",
+        "Advanced Weapon Component: Blade×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Fuel Reagent×24",
+        "Advanced Weapon Component: Grip×10",
+        "Advanced Weapon Component: Blade×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Fuel Reagent×48",
+        "Advanced Weapon Component: Grip×20",
+        "Advanced Weapon Component: Blade×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Max HP +50.0%. When this weapon triggers a bonus effect on hit, grants ‍+8.6%‍ Max HP for 15.0‍s (up to 10.0 stacks).",
+      "等级1": "Max HP +60.0%. When this weapon triggers a bonus effect on hit, grants ‍+10.3%‍ Max HP for 15.0‍s (up to 10.0 stacks).",
+      "等级2": "Max HP +70.0%. When this weapon triggers a bonus effect on hit, grants ‍+12.0%‍ Max HP for 15.0‍s (up to 10.0 stacks).",
+      "等级3": "Max HP +80.0%. When this weapon triggers a bonus effect on hit, grants ‍+13.8%‍ Max HP for 15.0‍s (up to 10.0 stacks).",
+      "等级4": "Max HP +90.0%. When this weapon triggers a bonus effect on hit, grants ‍+15.5%‍ Max HP for 15.0‍s (up to 10.0 stacks).",
+      "等级5": "Max HP +100.0%. When this weapon triggers a bonus effect on hit, grants ‍+17.2%‍ Max HP for 15.0‍s (up to 10.0 stacks)."
+    }
+  },
+  {
+    "id": 10502,
+    "名称": "Halcyon Gracefall",
+    "描述": "Heaven grants grace to all that grows; rain brings mercy where life still flows.",
+    "属性": {
+      "Lv.1": 18,
+      "Lv.20": 46,
+      "Lv.30": 68,
+      "Lv.40": 93,
+      "Lv.50": 119,
+      "Lv.60": 154,
+      "Lv.70": 183,
+      "Lv.80": 225
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Damaged Sal Volatile×6",
+        "Basic Weapon Component: Grip×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Fuel Reagent×3",
+        "Basic Weapon Component: Grip×4",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Fuel Reagent×6",
+        "Intermediate Weapon Component: Grip×3",
+        "Intermediate Weapon Component: Blade×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Fuel Reagent×12",
+        "Advanced Weapon Component: Grip×6",
+        "Advanced Weapon Component: Blade×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Fuel Reagent×24",
+        "Advanced Weapon Component: Grip×10",
+        "Advanced Weapon Component: Blade×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Fuel Reagent×48",
+        "Advanced Weapon Component: Grip×20",
+        "Advanced Weapon Component: Blade×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Skill Damage +20.0%. When a Hydro character deals CRIT Damage with this weapon, increases Skill DMG for allies by 17.0% for 6.0s.",
+      "等级1": "Skill Damage +24.0%. When a Hydro character deals CRIT Damage with this weapon, increases Skill DMG for allies by 20.4% for 6.0s.",
+      "等级2": "Skill Damage +28.0%. When a Hydro character deals CRIT Damage with this weapon, increases Skill DMG for allies by 23.8% for 6.0s.",
+      "等级3": "Skill Damage +32.0%. When a Hydro character deals CRIT Damage with this weapon, increases Skill DMG for allies by 27.2% for 6.0s.",
+      "等级4": "Skill Damage +36.0%. When a Hydro character deals CRIT Damage with this weapon, increases Skill DMG for allies by 30.6% for 6.0s.",
+      "等级5": "Skill Damage +40.0%. When a Hydro character deals CRIT Damage with this weapon, increases Skill DMG for allies by 34.0% for 6.0s."
+    }
+  },
+  {
+    "id": 10503,
+    "名称": "Tetherlash",
+    "描述": "It is not emotion alone that binds the human heart. This coiling whipblade binds tighter than words, and strikes deeper than trust.",
+    "属性": {
+      "Lv.1": 19,
+      "Lv.20": 49,
+      "Lv.30": 72,
+      "Lv.40": 98,
+      "Lv.50": 126,
+      "Lv.60": 162,
+      "Lv.70": 194,
+      "Lv.80": 238
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Damaged Sal Volatile×6",
+        "Basic Weapon Component: Grip×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Fuel Reagent×3",
+        "Basic Weapon Component: Grip×4",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Fuel Reagent×6",
+        "Intermediate Weapon Component: Grip×3",
+        "Intermediate Weapon Component: Blade×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Fuel Reagent×12",
+        "Advanced Weapon Component: Grip×6",
+        "Advanced Weapon Component: Blade×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Fuel Reagent×24",
+        "Advanced Weapon Component: Grip×10",
+        "Advanced Weapon Component: Blade×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Fuel Reagent×48",
+        "Advanced Weapon Component: Grip×20",
+        "Advanced Weapon Component: Blade×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Skill Duration +18.0%.",
+      "等级1": "Skill Duration +21.6%.",
+      "等级2": "Skill Duration +25.2%.",
+      "等级3": "Skill Duration +28.8%.",
+      "等级4": "Skill Duration +32.4%.",
+      "等级5": "Skill Duration +36.0%."
+    }
+  },
+  {
+    "id": 10504,
+    "名称": "Viridis Reefs",
+    "描述": "ithered coral lies strewn along the silent shore — fragments that cradle the sea's shattered dreams.",
+    "属性": {
+      "Lv.1": 17,
+      "Lv.20": 44,
+      "Lv.30": 64,
+      "Lv.40": 88,
+      "Lv.50": 112,
+      "Lv.60": 145,
+      "Lv.70": 173,
+      "Lv.80": 213
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Damaged Sal Volatile×6",
+        "Basic Weapon Component: Grip×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Fuel Reagent×3",
+        "Basic Weapon Component: Grip×4",
+        "Basic Weapon Component: Blade×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Fuel Reagent×6",
+        "Intermediate Weapon Component: Grip×3",
+        "Intermediate Weapon Component: Blade×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Fuel Reagent×12",
+        "Advanced Weapon Component: Grip×6",
+        "Advanced Weapon Component: Blade×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Fuel Reagent×24",
+        "Advanced Weapon Component: Grip×10",
+        "Advanced Weapon Component: Blade×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Fuel Reagent×48",
+        "Advanced Weapon Component: Grip×20",
+        "Advanced Weapon Component: Blade×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Trigger Probability +75.0%. Charged Attacks with this weapon grant +44.0% ATK Speed for 6.0s. Effect is removed when switching weapons.",
+      "等级1": "Trigger Probability +90.0%. Charged Attacks with this weapon grant +52.8% ATK Speed for 6.0s. Effect is removed when switching weapons.",
+      "等级2": "Trigger Probability +105.0%. Charged Attacks with this weapon grant +61.6% ATK Speed for 6.0s. Effect is removed when switching weapons.",
+      "等级3": "Trigger Probability +120.0%. Charged Attacks with this weapon grant +70.4% ATK Speed for 6.0s. Effect is removed when switching weapons.",
+      "等级4": "Trigger Probability +135.0%. Charged Attacks with this weapon grant +79.2% ATK Speed for 6.0s. Effect is removed when switching weapons.",
+      "等级5": "Trigger Probability +150.0%. Charged Attacks with this weapon grant +88.0% ATK Speed for 6.0s. Effect is removed when switching weapons."
+    }
+  },
+  {
+    "id": 10601,
+    "名称": "Momiji Itteki",
+    "描述": "A uniquely shaped blade featured in the acclaimed tragedy Momiji: A Chronicle of Rebellion. Its crimson-stained hilt is said to bear the blood of a king — struck down by the very hand sworn to protect him.",
+    "属性": {
+      "Lv.1": 19,
+      "Lv.20": 49,
+      "Lv.30": 72,
+      "Lv.40": 98,
+      "Lv.50": 126,
+      "Lv.60": 162,
+      "Lv.70": 194,
+      "Lv.80": 238
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Grip×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Grip×4",
+        "Basic Weapon Component: Decoration×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Grip×3",
+        "Intermediate Weapon Component: Decoration×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Grip×6",
+        "Advanced Weapon Component: Decoration×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Grip×10",
+        "Advanced Weapon Component: Decoration×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Grip×20",
+        "Advanced Weapon Component: Decoration×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "CRIT Damage +62.5%. When dealing damage with this weapon, increases Damage Dealt by 9.0%, with an additional 9.0% increase per Combo Level.",
+      "等级1": "CRIT Damage +75.0%. When dealing damage with this weapon, increases Damage Dealt by 10.8%, with an additional 10.8% increase per Combo Level.",
+      "等级2": "CRIT Damage +87.5%. When dealing damage with this weapon, increases Damage Dealt by 12.6%, with an additional 12.6% increase per Combo Level.",
+      "等级3": "CRIT Damage +100.0%. When dealing damage with this weapon, increases Damage Dealt by 14.4%, with an additional 14.4% increase per Combo Level.",
+      "等级4": "CRIT Damage +112.5%. When dealing damage with this weapon, increases Damage Dealt by 16.2%, with an additional 16.2% increase per Combo Level.",
+      "等级5": "CRIT Damage +125.0%. When dealing damage with this weapon, increases Damage Dealt by 18.0%, with an additional 18.0% increase per Combo Level."
+    }
+  },
+  {
+    "id": 10602,
+    "名称": "Withershade",
+    "描述": "In the eyes of the dying, a single crimson petal drifts down — weightless, silent, and final.",
+    "属性": {
+      "Lv.1": 17,
+      "Lv.20": 44,
+      "Lv.30": 64,
+      "Lv.40": 88,
+      "Lv.50": 112,
+      "Lv.60": 145,
+      "Lv.70": 173,
+      "Lv.80": 213
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Grip×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Grip×4",
+        "Basic Weapon Component: Decoration×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Grip×3",
+        "Intermediate Weapon Component: Decoration×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Grip×6",
+        "Advanced Weapon Component: Decoration×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Grip×10",
+        "Advanced Weapon Component: Decoration×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Grip×20",
+        "Advanced Weapon Component: Decoration×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Skill Range +36.0%.",
+      "等级1": "Skill Range +43.2%.",
+      "等级2": "Skill Range +50.4%.",
+      "等级3": "Skill Range +57.6%.",
+      "等级4": "Skill Range +64.8%.",
+      "等级5": "Skill Range +72.0%."
+    }
+  },
+  {
+    "id": 10603,
+    "名称": "Sacred Favour",
+    "描述": "Etched into the hilt in worn script: \"Praise be the Elysian Church. May the sacred grace of the Great Nine fall upon the wretched soil of Yashnia.\"",
+    "属性": {
+      "Lv.1": 20,
+      "Lv.20": 53,
+      "Lv.30": 77,
+      "Lv.40": 106,
+      "Lv.50": 136,
+      "Lv.60": 175,
+      "Lv.70": 209,
+      "Lv.80": 257
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Grip×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Grip×4",
+        "Basic Weapon Component: Decoration×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Grip×3",
+        "Intermediate Weapon Component: Decoration×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Grip×6",
+        "Advanced Weapon Component: Decoration×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Grip×10",
+        "Advanced Weapon Component: Decoration×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Grip×20",
+        "Advanced Weapon Component: Decoration×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Character ATK +50.0%. Charged Attacks with this weapon grant +75.0% CRIT Damage for 6.0s. Effect is removed when switching weapons.",
+      "等级1": "Character ATK +60.0%. Charged Attacks with this weapon grant +90.0% CRIT Damage for 6.0s. Effect is removed when switching weapons.",
+      "等级2": "Character ATK +70.0%. Charged Attacks with this weapon grant +105.0% CRIT Damage for 6.0s. Effect is removed when switching weapons.",
+      "等级3": "Character ATK +80.0%. Charged Attacks with this weapon grant +120.0% CRIT Damage for 6.0s. Effect is removed when switching weapons.",
+      "等级4": "Character ATK +90.0%. Charged Attacks with this weapon grant +135.0% CRIT Damage for 6.0s. Effect is removed when switching weapons.",
+      "等级5": "Character ATK +100.0%. Charged Attacks with this weapon grant +150.0% CRIT Damage for 6.0s. Effect is removed when switching weapons."
+    }
+  },
+  {
+    "id": 20101,
+    "名称": "Entropic Singularity",
+    "描述": "Through truth's bullet, reality unravels.",
+    "属性": {
+      "Lv.1": 16,
+      "Lv.20": 41,
+      "Lv.30": 60,
+      "Lv.40": 83,
+      "Lv.50": 106,
+      "Lv.60": 137,
+      "Lv.70": 163,
+      "Lv.80": 200
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Barrel×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Barrel×4",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Barrel×3",
+        "Intermediate Weapon Component: Frame×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Barrel×6",
+        "Advanced Weapon Component: Frame×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Barrel×10",
+        "Advanced Weapon Component: Frame×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Barrel×20",
+        "Advanced Weapon Component: Frame×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Trigger Probability +75.0%. Each shot with this weapon has a chance (based on its Weapon Trigger Probability) to fire an extra projectile at no Ammo cost, dealing AoE Damage equal to 50.0% of its ATK.",
+      "等级1": "Trigger Probability +90.0%. Each shot with this weapon has a chance (based on its Weapon Trigger Probability) to fire an extra projectile at no Ammo cost, dealing AoE Damage equal to 60.0% of its ATK.",
+      "等级2": "Trigger Probability +105.0%. Each shot with this weapon has a chance (based on its Weapon Trigger Probability) to fire an extra projectile at no Ammo cost, dealing AoE Damage equal to 70.0% of its ATK.",
+      "等级3": "Trigger Probability +120.0%. Each shot with this weapon has a chance (based on its Weapon Trigger Probability) to fire an extra projectile at no Ammo cost, dealing AoE Damage equal to 80.0% of its ATK.",
+      "等级4": "Trigger Probability +135.0%. Each shot with this weapon has a chance (based on its Weapon Trigger Probability) to fire an extra projectile at no Ammo cost, dealing AoE Damage equal to 90.0% of its ATK.",
+      "等级5": "Trigger Probability +150.0%. Each shot with this weapon has a chance (based on its Weapon Trigger Probability) to fire an extra projectile at no Ammo cost, dealing AoE Damage equal to 100.0% of its ATK."
+    }
+  },
+  {
+    "id": 20102,
+    "名称": "Rendhusk",
+    "描述": "A fallacy torn from the spiral of death — a truth that was never meant to be.",
+    "属性": {
+      "Lv.1": 15,
+      "Lv.20": 40,
+      "Lv.30": 59,
+      "Lv.40": 81,
+      "Lv.50": 103,
+      "Lv.60": 133,
+      "Lv.70": 159,
+      "Lv.80": 195
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Barrel×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Barrel×4",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Barrel×3",
+        "Intermediate Weapon Component: Frame×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Barrel×6",
+        "Advanced Weapon Component: Frame×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Barrel×10",
+        "Advanced Weapon Component: Frame×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Barrel×20",
+        "Advanced Weapon Component: Frame×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Character ATK ‍+60.0%.",
+      "等级1": "Character ATK ‍+72.0%.",
+      "等级2": "Character ATK ‍+84.0%.",
+      "等级3": "Character ATK ‍+96.0%.",
+      "等级4": "Character ATK ‍+108.0%.",
+      "等级5": "Character ATK ‍+120.0%."
+    }
+  },
+  {
+    "id": 20103,
+    "名称": "Sacrosanct Decree",
+    "描述": "The roar of divine oracles shall ring through every heretic's skull.",
+    "属性": {
+      "Lv.1": 18,
+      "Lv.20": 46,
+      "Lv.30": 68,
+      "Lv.40": 93,
+      "Lv.50": 119,
+      "Lv.60": 154,
+      "Lv.70": 183,
+      "Lv.80": 225
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Barrel×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Barrel×4",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Barrel×3",
+        "Intermediate Weapon Component: Frame×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Barrel×6",
+        "Advanced Weapon Component: Frame×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Barrel×10",
+        "Advanced Weapon Component: Frame×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Barrel×20",
+        "Advanced Weapon Component: Frame×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Multishot +37.5%. When this weapon triggers a bonus effect on hit, increases Melee Weapon DMG by 35.0% for 12.0s.",
+      "等级1": "Multishot +45.0%. When this weapon triggers a bonus effect on hit, increases Melee Weapon DMG by 42.0% for 12.0s.",
+      "等级2": "Multishot +52.5%. When this weapon triggers a bonus effect on hit, increases Melee Weapon DMG by 49.0% for 12.0s.",
+      "等级3": "Multishot +60.0%. When this weapon triggers a bonus effect on hit, increases Melee Weapon DMG by 56.0% for 12.0s.",
+      "等级4": "Multishot +67.5%. When this weapon triggers a bonus effect on hit, increases Melee Weapon DMG by 63.0% for 12.0s.",
+      "等级5": "Multishot +75.0%. When this weapon triggers a bonus effect on hit, increases Melee Weapon DMG by 70.0% for 12.0s."
+    }
+  },
+  {
+    "id": 20201,
+    "名称": "Excresduo",
+    "描述": "Within death's spiralling layers, each flaw begets another — and another still.",
+    "属性": {
+      "Lv.1": 21,
+      "Lv.20": 54,
+      "Lv.30": 79,
+      "Lv.40": 109,
+      "Lv.50": 139,
+      "Lv.60": 179,
+      "Lv.70": 214,
+      "Lv.80": 263
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Barrel×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Barrel×4",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Barrel×3",
+        "Intermediate Weapon Component: Frame×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Barrel×6",
+        "Advanced Weapon Component: Frame×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Barrel×10",
+        "Advanced Weapon Component: Frame×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Barrel×20",
+        "Advanced Weapon Component: Frame×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Skill Damage +24.0%.",
+      "等级1": "Skill Damage +28.8%.",
+      "等级2": "Skill Damage +33.6%.",
+      "等级3": "Skill Damage +38.4%.",
+      "等级4": "Skill Damage +43.2%.",
+      "等级5": "Skill Damage +48.0%."
+    }
+  },
+  {
+    "id": 20203,
+    "名称": "Bluecurrent Pulse",
+    "描述": "The ocean's vast expanse pulses endlessly with the rhythm of life — abundant, exuberant, and resilient.",
+    "属性": {
+      "Lv.1": 19,
+      "Lv.20": 49,
+      "Lv.30": 72,
+      "Lv.40": 98,
+      "Lv.50": 126,
+      "Lv.60": 162,
+      "Lv.70": 194,
+      "Lv.80": 238
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Barrel×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Barrel×4",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Barrel×3",
+        "Intermediate Weapon Component: Frame×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Barrel×6",
+        "Advanced Weapon Component: Frame×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Barrel×10",
+        "Advanced Weapon Component: Frame×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Barrel×20",
+        "Advanced Weapon Component: Frame×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Skill Duration +15.0%. When its projectiles hit enemies or the environment, they bounce once. When dealing damage with this weapon, increases Dual Pistols Damage by 45.0% for 15.0s.",
+      "等级1": "Skill Duration +18.0%. When its projectiles hit enemies or the environment, they bounce once. When dealing damage with this weapon, increases Dual Pistols Damage by 54.0% for 18.0s.",
+      "等级2": "Skill Duration +21.0%. When its projectiles hit enemies or the environment, they bounce once. When dealing damage with this weapon, increases Dual Pistols Damage by 63.0% for 21.0s.",
+      "等级3": "Skill Duration +24.0%. When its projectiles hit enemies or the environment, they bounce once. When dealing damage with this weapon, increases Dual Pistols Damage by 72.0% for 24.0s.",
+      "等级4": "Skill Duration +27.0%. When its projectiles hit enemies or the environment, they bounce once. When dealing damage with this weapon, increases Dual Pistols Damage by 81.0% for 27.0s.",
+      "等级5": "Skill Duration +30.0%. When its projectiles hit enemies or the environment, they bounce once. When dealing damage with this weapon, increases Dual Pistols Damage by 90.0% for 30.0s."
+    }
+  },
+  {
+    "id": 20205,
+    "名称": "Sacrosanct Chorus",
+    "描述": "The roar of divine oracles shall ring through every heretic's skull.",
+    "属性": {
+      "Lv.1": 18,
+      "Lv.20": 46,
+      "Lv.30": 68,
+      "Lv.40": 93,
+      "Lv.50": 119,
+      "Lv.60": 154,
+      "Lv.70": 183,
+      "Lv.80": 225
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Barrel×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Barrel×4",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Barrel×3",
+        "Intermediate Weapon Component: Frame×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Barrel×6",
+        "Advanced Weapon Component: Frame×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Barrel×10",
+        "Advanced Weapon Component: Frame×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Barrel×20",
+        "Advanced Weapon Component: Frame×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "CRIT Chance +50.0%. Dealing CRIT Damage with this weapon grants +6.2% Multishot for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
+      "等级1": "CRIT Chance +60.0%. Dealing CRIT Damage with this weapon grants +7.5% Multishot for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
+      "等级2": "CRIT Chance +70.0%. Dealing CRIT Damage with this weapon grants +8.8% Multishot for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
+      "等级3": "CRIT Chance +80.0%. Dealing CRIT Damage with this weapon grants +10.0% Multishot for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
+      "等级4": "CRIT Chance +90.0%. Dealing CRIT Damage with this weapon grants +11.2% Multishot for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
+      "等级5": "CRIT Chance +100.0%. Dealing CRIT Damage with this weapon grants +12.5% Multishot for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons."
+    }
+  },
+  {
+    "id": 20301,
+    "名称": "Stellar Finality",
+    "描述": "Let the penitent cease their stargazing — the heavens never listen, and the stars grant no absolution.",
+    "属性": {
+      "Lv.1": 14,
+      "Lv.20": 36,
+      "Lv.30": 53,
+      "Lv.40": 72,
+      "Lv.50": 92,
+      "Lv.60": 119,
+      "Lv.70": 142,
+      "Lv.80": 175
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Frame×4",
+        "Basic Weapon Component: Bolt×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Frame×3",
+        "Intermediate Weapon Component: Bolt×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Frame×6",
+        "Advanced Weapon Component: Bolt×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Frame×10",
+        "Advanced Weapon Component: Bolt×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Frame×20",
+        "Advanced Weapon Component: Bolt×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Explosion Range +0.2. When its projectiles explode, they split into 6 additional projectiles that explode and deal damage. When defeating a target with this weapon, grants 1 stack that increases CRIT Damage by 8.8% for 15.0s, up to 10.0 stacks.\nThis effect is removed when switching to another weapon.",
+      "等级1": "Explosion Range +0.3. When its projectiles explode, they split into 6 additional projectiles that explode and deal damage. When defeating a target with this weapon, grants 1 stack that increases CRIT Damage by 10.5% for 15.0s, up to 10.0 stacks.\nThis effect is removed when switching to another weapon.",
+      "等级2": "Explosion Range +0.3. When its projectiles explode, they split into 6 additional projectiles that explode and deal damage. When defeating a target with this weapon, grants 1 stack that increases CRIT Damage by 12.2% for 15.0s, up to 10.0 stacks.\nThis effect is removed when switching to another weapon.",
+      "等级3": "Explosion Range +0.4. When its projectiles explode, they split into 6 additional projectiles that explode and deal damage. When defeating a target with this weapon, grants 1 stack that increases CRIT Damage by 14.0% for 15.0s, up to 10.0 stacks.\nThis effect is removed when switching to another weapon.",
+      "等级4": "Explosion Range +0.5. When its projectiles explode, they split into 6 additional projectiles that explode and deal damage. When defeating a target with this weapon, grants 1 stack that increases CRIT Damage by 15.8% for 15.0s, up to 10.0 stacks.\nThis effect is removed when switching to another weapon.",
+      "等级5": "Explosion Range +0.5. When its projectiles explode, they split into 6 additional projectiles that explode and deal damage. When defeating a target with this weapon, grants 1 stack that increases CRIT Damage by 17.5% for 15.0s, up to 10.0 stacks.\nThis effect is removed when switching to another weapon."
+    }
+  },
+  {
+    "id": 20302,
+    "名称": "Firearm Feast",
+    "描述": "Nightfall, red dancing shoes, and dew on roses; rushes of air flashing across temples, outraged squeak of rapid gunshots, and smoke of gunpowder... All are witnessing a feast of projectiles.",
+    "属性": {
+      "Lv.1": 15,
+      "Lv.20": 38,
+      "Lv.30": 56,
+      "Lv.40": 77,
+      "Lv.50": 99,
+      "Lv.60": 128,
+      "Lv.70": 153,
+      "Lv.80": 188
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Frame×4",
+        "Basic Weapon Component: Bolt×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Frame×3",
+        "Intermediate Weapon Component: Bolt×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Frame×6",
+        "Advanced Weapon Component: Bolt×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Frame×10",
+        "Advanced Weapon Component: Bolt×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Frame×20",
+        "Advanced Weapon Component: Bolt×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Multishot +37.5%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill Damage and Ranged Weapon Damage by 12.0% for 12.0s, up to 4.0 stacks.",
+      "等级1": "Multishot +45.0%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill Damage and Ranged Weapon Damage by 14.4% for 12.0s, up to 4.0 stacks.",
+      "等级2": "Multishot +52.5%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill Damage and Ranged Weapon Damage by 16.8% for 12.0s, up to 4.0 stacks.",
+      "等级3": "Multishot +60.0%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill Damage and Ranged Weapon Damage by 19.2% for 12.0s, up to 4.0 stacks.",
+      "等级4": "Multishot +67.5%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill Damage and Ranged Weapon Damage by 21.6% for 12.0s, up to 4.0 stacks.",
+      "等级5": "Multishot +75.0%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill Damage and Ranged Weapon Damage by 24.0% for 12.0s, up to 4.0 stacks."
+    }
+  },
+  {
+    "id": 20303,
+    "名称": "Destructo",
+    "描述": "The truest return to nature is to crumble into ash and vanish into the waiting earth.",
+    "属性": {
+      "Lv.1": 18,
+      "Lv.20": 46,
+      "Lv.30": 68,
+      "Lv.40": 93,
+      "Lv.50": 119,
+      "Lv.60": 154,
+      "Lv.70": 183,
+      "Lv.80": 225
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Frame×4",
+        "Basic Weapon Component: Bolt×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Frame×3",
+        "Intermediate Weapon Component: Bolt×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Frame×6",
+        "Advanced Weapon Component: Bolt×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Frame×10",
+        "Advanced Weapon Component: Bolt×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Frame×20",
+        "Advanced Weapon Component: Bolt×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Skill Range +36.0%.",
+      "等级1": "Skill Range +43.2%.",
+      "等级2": "Skill Range +50.4%.",
+      "等级3": "Skill Range +57.6%.",
+      "等级4": "Skill Range +64.8%.",
+      "等级5": "Skill Range +72.0%."
+    }
+  },
+  {
+    "id": 20304,
+    "名称": "Guixu Ratchet",
+    "描述": "Bronze tempers the steel-born frame; amidst thorns, a soul forged for valour's claim.",
+    "属性": {
+      "Lv.1": 16,
+      "Lv.20": 41,
+      "Lv.30": 60,
+      "Lv.40": 83,
+      "Lv.50": 106,
+      "Lv.60": 137,
+      "Lv.70": 163,
+      "Lv.80": 200
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Frame×4",
+        "Basic Weapon Component: Bolt×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Frame×3",
+        "Intermediate Weapon Component: Bolt×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Frame×6",
+        "Advanced Weapon Component: Bolt×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Frame×10",
+        "Advanced Weapon Component: Bolt×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Frame×20",
+        "Advanced Weapon Component: Bolt×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "CRIT Damage +62.5%. When its projectiles hit enemies or the environment, they split into 2 additional projectiles that continue to travel. After switching to this weapon, increases Multishot by 38.0%, which decreases over time. This effect can only be triggered once every 10s and is removed when switching to another weapon.",
+      "等级1": "CRIT Damage +75.0%. When its projectiles hit enemies or the environment, they split into 2 additional projectiles that continue to travel. After switching to this weapon, increases Multishot by 45.0%, which decreases over time. This effect can only be triggered once every 10s and is removed when switching to another weapon.",
+      "等级2": "CRIT Damage +87.5%. When its projectiles hit enemies or the environment, they split into 2 additional projectiles that continue to travel. After switching to this weapon, increases Multishot by 52.0%, which decreases over time. This effect can only be triggered once every 10s and is removed when switching to another weapon.",
+      "等级3": "CRIT Damage +100.0%. When its projectiles hit enemies or the environment, they split into 2 additional projectiles that continue to travel. After switching to this weapon, increases Multishot by 59.0%, which decreases over time. This effect can only be triggered once every 10s and is removed when switching to another weapon.",
+      "等级4": "CRIT Damage +112.5%. When its projectiles hit enemies or the environment, they split into 2 additional projectiles that continue to travel. After switching to this weapon, increases Multishot by 66.0%, which decreases over time. This effect can only be triggered once every 10s and is removed when switching to another weapon.",
+      "等级5": "CRIT Damage +125.0%. When its projectiles hit enemies or the environment, they split into 2 additional projectiles that continue to travel. After switching to this weapon, increases Multishot by 73.0%, which decreases over time. This effect can only be triggered once every 10s and is removed when switching to another weapon."
+    }
+  },
+  {
+    "id": 20305,
+    "名称": "Silverwhite Edict",
+    "描述": "Hellfire rides upon a thousand silver shells as they rain to the ground, engraving the gods' edict into the hearts of every heretic.",
+    "属性": {
+      "Lv.1": 19,
+      "Lv.20": 49,
+      "Lv.30": 72,
+      "Lv.40": 98,
+      "Lv.50": 126,
+      "Lv.60": 162,
+      "Lv.70": 194,
+      "Lv.80": 238
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Frame×4",
+        "Basic Weapon Component: Bolt×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Frame×3",
+        "Intermediate Weapon Component: Bolt×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Frame×6",
+        "Advanced Weapon Component: Bolt×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Frame×10",
+        "Advanced Weapon Component: Bolt×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Frame×20",
+        "Advanced Weapon Component: Bolt×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "ATK Speed +25.0%. When this weapon triggers a bonus effect on hit, grants +5.0% ATK Speed for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
+      "等级1": "ATK Speed +30.0%. When this weapon triggers a bonus effect on hit, grants +6.0% ATK Speed for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
+      "等级2": "ATK Speed +35.0%. When this weapon triggers a bonus effect on hit, grants +7.0% ATK Speed for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
+      "等级3": "ATK Speed +40.0%. When this weapon triggers a bonus effect on hit, grants +8.0% ATK Speed for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
+      "等级4": "ATK Speed +45.0%. When this weapon triggers a bonus effect on hit, grants +9.0% ATK Speed for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
+      "等级5": "ATK Speed +50.0%. When this weapon triggers a bonus effect on hit, grants +10.0% ATK Speed for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons."
+    }
+  },
+  {
+    "id": 20401,
+    "名称": "Screamshot",
+    "描述": "Only after the last cry fades... can silence return to the world.",
+    "属性": {
+      "Lv.1": 18,
+      "Lv.20": 46,
+      "Lv.30": 68,
+      "Lv.40": 93,
+      "Lv.50": 119,
+      "Lv.60": 154,
+      "Lv.70": 183,
+      "Lv.80": 225
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Barrel×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Barrel×4",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Barrel×3",
+        "Intermediate Weapon Component: Frame×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Barrel×6",
+        "Advanced Weapon Component: Frame×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Barrel×10",
+        "Advanced Weapon Component: Frame×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Barrel×20",
+        "Advanced Weapon Component: Frame×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Skill Duration +18.0%.",
+      "等级1": "Skill Duration +21.6%.",
+      "等级2": "Skill Duration +25.2%.",
+      "等级3": "Skill Duration +28.8%.",
+      "等级4": "Skill Duration +32.4%.",
+      "等级5": "Skill Duration +36.0%."
+    }
+  },
+  {
+    "id": 20402,
+    "名称": "Silent Sower",
+    "描述": "Insert flower seeds into the body, allowing destruction to bloom from within.",
+    "属性": {
+      "Lv.1": 16,
+      "Lv.20": 41,
+      "Lv.30": 60,
+      "Lv.40": 83,
+      "Lv.50": 106,
+      "Lv.60": 137,
+      "Lv.70": 163,
+      "Lv.80": 200
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Barrel×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Barrel×4",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Barrel×3",
+        "Intermediate Weapon Component: Frame×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Barrel×6",
+        "Advanced Weapon Component: Frame×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Barrel×10",
+        "Advanced Weapon Component: Frame×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Barrel×20",
+        "Advanced Weapon Component: Frame×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "CRIT Chance +50.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 217.0%/0.0%/0.0% of the original damage.",
+      "等级1": "CRIT Chance +60.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 225.0%/0.0%/0.0% of the original damage.",
+      "等级2": "CRIT Chance +70.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 234.0%/0.0%/0.0% of the original damage.",
+      "等级3": "CRIT Chance +80.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 243.0%/0.0%/0.0% of the original damage.",
+      "等级4": "CRIT Chance +90.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 251.0%/0.0%/0.0% of the original damage.",
+      "等级5": "CRIT Chance +100.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 260.0%/0.0%/0.0% of the original damage."
+    }
+  },
+  {
+    "id": 20403,
+    "名称": "Day of Sacred Verdict",
+    "描述": "A firearm used by the Holy Iris Knights from the Elysian Church. Holy exaltation! We vow to spread the word of the Great Nine to every corner of Atlasia.",
+    "属性": {
+      "Lv.1": 17,
+      "Lv.20": 44,
+      "Lv.30": 64,
+      "Lv.40": 88,
+      "Lv.50": 112,
+      "Lv.60": 145,
+      "Lv.70": 173,
+      "Lv.80": 213
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Barrel×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Barrel×4",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Barrel×3",
+        "Intermediate Weapon Component: Frame×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Barrel×6",
+        "Advanced Weapon Component: Frame×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Barrel×10",
+        "Advanced Weapon Component: Frame×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Barrel×20",
+        "Advanced Weapon Component: Frame×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "CRIT Damage +62.5%. Fired projectiles track the crosshair. When dealing damage with this weapon, the farther the target, the higher the damage, up to a maximum increase of 45.0%.",
+      "等级1": "CRIT Damage +75.0%. Fired projectiles track the crosshair. When dealing damage with this weapon, the farther the target, the higher the damage, up to a maximum increase of 54.0%.",
+      "等级2": "CRIT Damage +87.5%. Fired projectiles track the crosshair. When dealing damage with this weapon, the farther the target, the higher the damage, up to a maximum increase of 63.0%.",
+      "等级3": "CRIT Damage +100.0%. Fired projectiles track the crosshair. When dealing damage with this weapon, the farther the target, the higher the damage, up to a maximum increase of 72.0%.",
+      "等级4": "CRIT Damage +112.5%. Fired projectiles track the crosshair. When dealing damage with this weapon, the farther the target, the higher the damage, up to a maximum increase of 81.0%.",
+      "等级5": "CRIT Damage +125.0%. Fired projectiles track the crosshair. When dealing damage with this weapon, the farther the target, the higher the damage, up to a maximum increase of 90.0%."
+    }
+  },
+  {
+    "id": 20405,
+    "名称": "Blast Artistry",
+    "描述": "Atlasia's ending? So be it. There are worse fates than going out in flames and fireworks.",
+    "属性": {
+      "Lv.1": 15,
+      "Lv.20": 40,
+      "Lv.30": 58,
+      "Lv.40": 80,
+      "Lv.50": 102,
+      "Lv.60": 132,
+      "Lv.70": 158,
+      "Lv.80": 194
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Barrel×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Barrel×4",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Barrel×3",
+        "Intermediate Weapon Component: Frame×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Barrel×6",
+        "Advanced Weapon Component: Frame×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Barrel×10",
+        "Advanced Weapon Component: Frame×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Barrel×20",
+        "Advanced Weapon Component: Frame×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Character ATK +50.0%. Charging fires a special bullet that travels slowly and explodes after a short delay, dealing AoE damage. Tap-firing bullets can trigger its early detonation on contact. When an Umbro character casts their Ultimate, grants +20.0% Skill Efficiency for 15.0s.",
+      "等级1": "Character ATK +60.0%. Charging fires a special bullet that travels slowly and explodes after a short delay, dealing AoE damage. Tap-firing bullets can trigger its early detonation on contact. When an Umbro character casts their Ultimate, grants +24.0% Skill Efficiency for 15.0s.",
+      "等级2": "Character ATK +70.0%. Charging fires a special bullet that travels slowly and explodes after a short delay, dealing AoE damage. Tap-firing bullets can trigger its early detonation on contact. When an Umbro character casts their Ultimate, grants +28.0% Skill Efficiency for 15.0s.",
+      "等级3": "Character ATK +80.0%. Charging fires a special bullet that travels slowly and explodes after a short delay, dealing AoE damage. Tap-firing bullets can trigger its early detonation on contact. When an Umbro character casts their Ultimate, grants +32.0% Skill Efficiency for 15.0s.",
+      "等级4": "Character ATK +90.0%. Charging fires a special bullet that travels slowly and explodes after a short delay, dealing AoE damage. Tap-firing bullets can trigger its early detonation on contact. When an Umbro character casts their Ultimate, grants +36.0% Skill Efficiency for 15.0s.",
+      "等级5": "Character ATK +100.0%. Charging fires a special bullet that travels slowly and explodes after a short delay, dealing AoE damage. Tap-firing bullets can trigger its early detonation on contact. When an Umbro character casts their Ultimate, grants +40.0% Skill Efficiency for 15.0s."
+    }
+  },
+  {
+    "id": 20501,
+    "名称": "Osteobreaker",
+    "描述": "When bullets tear through flesh and scorch the soul, how long can kindness, integrity, and courage endure?",
+    "属性": {
+      "Lv.1": 17,
+      "Lv.20": 44,
+      "Lv.30": 64,
+      "Lv.40": 88,
+      "Lv.50": 112,
+      "Lv.60": 145,
+      "Lv.70": 173,
+      "Lv.80": 213
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Bolt×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Bolt×4",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Bolt×3",
+        "Intermediate Weapon Component: Frame×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Bolt×6",
+        "Advanced Weapon Component: Frame×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Bolt×10",
+        "Advanced Weapon Component: Frame×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Bolt×20",
+        "Advanced Weapon Component: Frame×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Skill Duration +18.0%.",
+      "等级1": "Skill Duration +21.6%.",
+      "等级2": "Skill Duration +25.2%.",
+      "等级3": "Skill Duration +28.8%.",
+      "等级4": "Skill Duration +32.4%.",
+      "等级5": "Skill Duration +36.0%."
+    }
+  },
+  {
+    "id": 20502,
+    "名称": "Exiled Thunderwyrm",
+    "描述": "A firearm used by \"The Raven\" of The Forsakens. Hear the wrath of the exiled! The funeral bell of the Empire tolls!",
+    "属性": {
+      "Lv.1": 15,
+      "Lv.20": 38,
+      "Lv.30": 56,
+      "Lv.40": 77,
+      "Lv.50": 99,
+      "Lv.60": 128,
+      "Lv.70": 153,
+      "Lv.80": 188
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Bolt×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Bolt×4",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Bolt×3",
+        "Intermediate Weapon Component: Frame×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Bolt×6",
+        "Advanced Weapon Component: Frame×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Bolt×10",
+        "Advanced Weapon Component: Frame×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Bolt×20",
+        "Advanced Weapon Component: Frame×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Trigger Probability +75.0%. Fires a Beam Attack that ricochets off the target and hits up to 4 enemies within range. When an Electro character triggers bonus effects with this weapon, the user gains +45.0% Weapon Damage for 10.0s.",
+      "等级1": "Trigger Probability +90.0%. Fires a Beam Attack that ricochets off the target and hits up to 4 enemies within range. When an Electro character triggers bonus effects with this weapon, the user gains +54.0% Weapon Damage for 10.0s.",
+      "等级2": "Trigger Probability +105.0%. Fires a Beam Attack that ricochets off the target and hits up to 4 enemies within range. When an Electro character triggers bonus effects with this weapon, the user gains +63.0% Weapon Damage for 10.0s.",
+      "等级3": "Trigger Probability +120.0%. Fires a Beam Attack that ricochets off the target and hits up to 4 enemies within range. When an Electro character triggers bonus effects with this weapon, the user gains +72.0% Weapon Damage for 10.0s.",
+      "等级4": "Trigger Probability +135.0%. Fires a Beam Attack that ricochets off the target and hits up to 4 enemies within range. When an Electro character triggers bonus effects with this weapon, the user gains +81.0% Weapon Damage for 10.0s.",
+      "等级5": "Trigger Probability +150.0%. Fires a Beam Attack that ricochets off the target and hits up to 4 enemies within range. When an Electro character triggers bonus effects with this weapon, the user gains +90.0% Weapon Damage for 10.0s."
+    }
+  },
+  {
+    "id": 20503,
+    "名称": "Flamme De Epuration",
+    "描述": "A flamethrower used by Holy Iris Knights from the Elysian Church. Holy exaltation! Let the sacred fire engulf us. In your name, we vow to burn away all evil.",
+    "属性": {
+      "Lv.1": 19,
+      "Lv.20": 49,
+      "Lv.30": 72,
+      "Lv.40": 98,
+      "Lv.50": 126,
+      "Lv.60": 162,
+      "Lv.70": 194,
+      "Lv.80": 238
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Bolt×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Bolt×4",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Bolt×3",
+        "Intermediate Weapon Component: Frame×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Bolt×6",
+        "Advanced Weapon Component: Frame×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Bolt×10",
+        "Advanced Weapon Component: Frame×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Bolt×20",
+        "Advanced Weapon Component: Frame×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Trigger Probability +75.0%. When this weapon triggers a bonus effect on hit, there is a 30.0% chance to reload 1 projectile.",
+      "等级1": "Trigger Probability +90.0%. When this weapon triggers a bonus effect on hit, there is a 36.0% chance to reload 1 projectile.",
+      "等级2": "Trigger Probability +105.0%. When this weapon triggers a bonus effect on hit, there is a 42.0% chance to reload 1 projectile.",
+      "等级3": "Trigger Probability +120.0%. When this weapon triggers a bonus effect on hit, there is a 48.0% chance to reload 1 projectile.",
+      "等级4": "Trigger Probability +135.0%. When this weapon triggers a bonus effect on hit, there is a 54.0% chance to reload 1 projectile.",
+      "等级5": "Trigger Probability +150.0%. When this weapon triggers a bonus effect on hit, there is a 60.0% chance to reload 1 projectile."
+    }
+  },
+  {
+    "id": 20504,
+    "名称": "Daybreak Hymn",
+    "描述": "A machine gun wielded by the Holy Iris Knights of the Elysian Church. \"Holy exaltation! Should we but behold the first gleam of dawn, though our path be strewn with thorns, we shall embrace it as sweet succour.\"",
+    "属性": {
+      "Lv.1": 18,
+      "Lv.20": 46,
+      "Lv.30": 68,
+      "Lv.40": 93,
+      "Lv.50": 119,
+      "Lv.60": 154,
+      "Lv.70": 183,
+      "Lv.80": 225
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Bolt×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Bolt×4",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Bolt×3",
+        "Intermediate Weapon Component: Frame×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Bolt×6",
+        "Advanced Weapon Component: Frame×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Bolt×10",
+        "Advanced Weapon Component: Frame×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Bolt×20",
+        "Advanced Weapon Component: Frame×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Multishot +37.5%. When dealing damage with this weapon, the lower the remaining Ammo percentage, the higher the damage dealt, up to a maximum increase of 45.0%, with full effect when the Ammo count is below 20.0%.",
+      "等级1": "Multishot +45.0%. When dealing damage with this weapon, the lower the remaining Ammo percentage, the higher the damage dealt, up to a maximum increase of 54.0%, with full effect when the Ammo count is below 20.0%.",
+      "等级2": "Multishot +52.5%. When dealing damage with this weapon, the lower the remaining Ammo percentage, the higher the damage dealt, up to a maximum increase of 63.0%, with full effect when the Ammo count is below 20.0%.",
+      "等级3": "Multishot +60.0%. When dealing damage with this weapon, the lower the remaining Ammo percentage, the higher the damage dealt, up to a maximum increase of 72.0%, with full effect when the Ammo count is below 20.0%.",
+      "等级4": "Multishot +67.5%. When dealing damage with this weapon, the lower the remaining Ammo percentage, the higher the damage dealt, up to a maximum increase of 81.0%, with full effect when the Ammo count is below 20.0%.",
+      "等级5": "Multishot +75.0%. When dealing damage with this weapon, the lower the remaining Ammo percentage, the higher the damage dealt, up to a maximum increase of 90.0%, with full effect when the Ammo count is below 20.0%."
+    }
+  },
+  {
+    "id": 20506,
+    "名称": "Cloudveil Unfurl",
+    "描述": "Through parting clouds, a painted flight takes form, where peacocks meet on silk to court their grace.",
+    "属性": {
+      "Lv.1": 16,
+      "Lv.20": 41,
+      "Lv.30": 60,
+      "Lv.40": 83,
+      "Lv.50": 106,
+      "Lv.60": 137,
+      "Lv.70": 163,
+      "Lv.80": 200
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Bolt×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Bolt×4",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Bolt×3",
+        "Intermediate Weapon Component: Frame×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Bolt×6",
+        "Advanced Weapon Component: Frame×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Bolt×10",
+        "Advanced Weapon Component: Frame×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Bolt×20",
+        "Advanced Weapon Component: Frame×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Mag Capacity +30.0%. On a CRIT with this weapon, grants 1 stack of +5.0% ATK Speed for 6.0s, stacking up to 10.0 times. The effect is removed when switching weapons.",
+      "等级1": "Mag Capacity +36.0%. On a CRIT with this weapon, grants 1 stack of +6.0% ATK Speed for 6.0s, stacking up to 10.0 times. The effect is removed when switching weapons.",
+      "等级2": "Mag Capacity +42.0%. On a CRIT with this weapon, grants 1 stack of +7.0% ATK Speed for 6.0s, stacking up to 10.0 times. The effect is removed when switching weapons.",
+      "等级3": "Mag Capacity +48.0%. On a CRIT with this weapon, grants 1 stack of +8.0% ATK Speed for 6.0s, stacking up to 10.0 times. The effect is removed when switching weapons.",
+      "等级4": "Mag Capacity +54.0%. On a CRIT with this weapon, grants 1 stack of +9.0% ATK Speed for 6.0s, stacking up to 10.0 times. The effect is removed when switching weapons.",
+      "等级5": "Mag Capacity +60.0%. On a CRIT with this weapon, grants 1 stack of +10.0% ATK Speed for 6.0s, stacking up to 10.0 times. The effect is removed when switching weapons."
+    }
+  },
+  {
+    "id": 20507,
+    "名称": "Submerged Serenade",
+    "描述": "The young sailor, ever too preoccupied with stowing the mast before the tempest, never tallied the hidden love notes beneath the waves — unaware that each of the mermaid's songs was a serenade meant just for him.",
+    "属性": {
+      "Lv.1": 16,
+      "Lv.20": 41,
+      "Lv.30": 60,
+      "Lv.40": 83,
+      "Lv.50": 106,
+      "Lv.60": 137,
+      "Lv.70": 163,
+      "Lv.80": 200
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Bolt×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Bolt×4",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Bolt×3",
+        "Intermediate Weapon Component: Frame×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Bolt×6",
+        "Advanced Weapon Component: Frame×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Bolt×10",
+        "Advanced Weapon Component: Frame×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Bolt×20",
+        "Advanced Weapon Component: Frame×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "CRIT Damage +62.5%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. For each additional Ammo count gained, the damage dealt by this weapon is increased by 4.5%, up to a maximum increase of 45.0%.",
+      "等级1": "CRIT Damage +75.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. For each additional Ammo count gained, the damage dealt by this weapon is increased by 5.4%, up to a maximum increase of 54.0%.",
+      "等级2": "CRIT Damage +87.5%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. For each additional Ammo count gained, the damage dealt by this weapon is increased by 6.3%, up to a maximum increase of 63.0%.",
+      "等级3": "CRIT Damage +100.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. For each additional Ammo count gained, the damage dealt by this weapon is increased by 7.2%, up to a maximum increase of 72.0%.",
+      "等级4": "CRIT Damage +112.5%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. For each additional Ammo count gained, the damage dealt by this weapon is increased by 8.1%, up to a maximum increase of 81.0%.",
+      "等级5": "CRIT Damage +125.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. For each additional Ammo count gained, the damage dealt by this weapon is increased by 9.0%, up to a maximum increase of 90.0%."
+    }
+  },
+  {
+    "id": 20509,
+    "名称": "Dreamweaver's Feather",
+    "描述": "With a snowy plume I wove a slender cage, sealing the savage world within.",
+    "属性": {
+      "Lv.1": 15,
+      "Lv.20": 38,
+      "Lv.30": 56,
+      "Lv.40": 77,
+      "Lv.50": 99,
+      "Lv.60": 128,
+      "Lv.70": 153,
+      "Lv.80": 188
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Bolt×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Bolt×4",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Bolt×3",
+        "Intermediate Weapon Component: Frame×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Bolt×6",
+        "Advanced Weapon Component: Frame×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Bolt×10",
+        "Advanced Weapon Component: Frame×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Bolt×20",
+        "Advanced Weapon Component: Frame×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Skill Range +30.0%. When a Lumino character deals additional damage, there is a 30.0% chance to grant allies +9.0% ATK for 15.0s (up to 10.0 stacks).",
+      "等级1": "Skill Range +36.0%. When a Lumino character deals additional damage, there is a 30.0% chance to grant allies +10.8% ATK for 15.0s (up to 10.0 stacks).",
+      "等级2": "Skill Range +42.0%. When a Lumino character deals additional damage, there is a 30.0% chance to grant allies +12.6% ATK for 15.0s (up to 10.0 stacks).",
+      "等级3": "Skill Range +48.0%. When a Lumino character deals additional damage, there is a 30.0% chance to grant allies +14.4% ATK for 15.0s (up to 10.0 stacks).",
+      "等级4": "Skill Range +54.0%. When a Lumino character deals additional damage, there is a 30.0% chance to grant allies +16.2% ATK for 15.0s (up to 10.0 stacks).",
+      "等级5": "Skill Range +60.0%. When a Lumino character deals additional damage, there is a 30.0% chance to grant allies +18.0% ATK for 15.0s (up to 10.0 stacks)."
+    }
+  },
+  {
+    "id": 20510,
+    "名称": "Ephemeral Lumina",
+    "描述": "My sword stirred the argent moon mirrored in a river of dream; in time's hush, yet another autumn waned beneath its silver gleam.",
+    "属性": {
+      "Lv.1": 18,
+      "Lv.20": 46,
+      "Lv.30": 68,
+      "Lv.40": 93,
+      "Lv.50": 119,
+      "Lv.60": 154,
+      "Lv.70": 183,
+      "Lv.80": 225
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Bolt×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Bolt×4",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Bolt×3",
+        "Intermediate Weapon Component: Frame×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Bolt×6",
+        "Advanced Weapon Component: Frame×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Bolt×10",
+        "Advanced Weapon Component: Frame×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Bolt×20",
+        "Advanced Weapon Component: Frame×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Skill Duration +15.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. When a Lumino character triggers Bonus Effect, grants 1 stack that increases ATK by 17.5% for 24.0s, up to 9.0 stacks. Using an Ultimate Skill refreshes the duration of all stacks to 24.0s.",
+      "等级1": "Skill Duration +18.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. When a Lumino character triggers Bonus Effect, grants 1 stack that increases ATK by 21.0% for 24.0s, up to 9.0 stacks. Using an Ultimate Skill refreshes the duration of all stacks to 24.0s.",
+      "等级2": "Skill Duration +21.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. When a Lumino character triggers Bonus Effect, grants 1 stack that increases ATK by 24.5% for 24.0s, up to 9.0 stacks. Using an Ultimate Skill refreshes the duration of all stacks to 24.0s.",
+      "等级3": "Skill Duration +24.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. When a Lumino character triggers Bonus Effect, grants 1 stack that increases ATK by 28.0% for 24.0s, up to 9.0 stacks. Using an Ultimate Skill refreshes the duration of all stacks to 24.0s.",
+      "等级4": "Skill Duration +27.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. When a Lumino character triggers Bonus Effect, grants 1 stack that increases ATK by 31.5% for 24.0s, up to 9.0 stacks. Using an Ultimate Skill refreshes the duration of all stacks to 24.0s.",
+      "等级5": "Skill Duration +30.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. When a Lumino character triggers Bonus Effect, grants 1 stack that increases ATK by 35.0% for 24.0s, up to 9.0 stacks. Using an Ultimate Skill refreshes the duration of all stacks to 24.0s."
+    }
+  },
+  {
+    "id": 20601,
+    "名称": "Searing Sandwhisper",
+    "描述": "Thou, a solitary soul, standest at the heart of burning flame, yet dost willingly become but a grain of sand, swept by the winds of change. So begins thy rebirth, and the claiming of thy fate anew.",
+    "属性": {
+      "Lv.1": 17,
+      "Lv.20": 44,
+      "Lv.30": 64,
+      "Lv.40": 88,
+      "Lv.50": 112,
+      "Lv.60": 145,
+      "Lv.70": 173,
+      "Lv.80": 213
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Frame×4",
+        "Basic Weapon Component: Barrel×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Frame×3",
+        "Intermediate Weapon Component: Barrel×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Frame×6",
+        "Advanced Weapon Component: Barrel×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Frame×10",
+        "Advanced Weapon Component: Barrel×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Frame×20",
+        "Advanced Weapon Component: Barrel×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "ATK Speed +25.0%‍. Each enemy struck by a single arrow increases the arrow's damage by 9.0%, with a maximum increase of 45.0%.",
+      "等级1": "ATK Speed +30.0%‍. Each enemy struck by a single arrow increases the arrow's damage by 10.8%, with a maximum increase of 54.0%.",
+      "等级2": "ATK Speed +35.0%‍. Each enemy struck by a single arrow increases the arrow's damage by 12.6%, with a maximum increase of 63.0%.",
+      "等级3": "ATK Speed +40.0%‍. Each enemy struck by a single arrow increases the arrow's damage by 14.4%, with a maximum increase of 72.0%.",
+      "等级4": "ATK Speed +45.0%‍. Each enemy struck by a single arrow increases the arrow's damage by 16.2%, with a maximum increase of 81.0%.",
+      "等级5": "ATK Speed +50.0%‍. Each enemy struck by a single arrow increases the arrow's damage by 18.0%, with a maximum increase of 90.0%."
+    }
+  },
+  {
+    "id": 20602,
+    "名称": "Arclight Apocalypses",
+    "描述": "The bowstring hums, indicating the enemies are within range. Stay calm, my friend — your foe hasn't a whisper of a chance.",
+    "属性": {
+      "Lv.1": 18,
+      "Lv.20": 46,
+      "Lv.30": 68,
+      "Lv.40": 93,
+      "Lv.50": 119,
+      "Lv.60": 154,
+      "Lv.70": 183,
+      "Lv.80": 225
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Frame×4",
+        "Basic Weapon Component: Barrel×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Frame×3",
+        "Intermediate Weapon Component: Barrel×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Frame×6",
+        "Advanced Weapon Component: Barrel×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Frame×10",
+        "Advanced Weapon Component: Barrel×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Frame×20",
+        "Advanced Weapon Component: Barrel×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Skill Duration +15.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +10.0% ATK, +10.0% DEF, +7.5% Skill Damage, or +10.0% Skill Duration.",
+      "等级1": "Skill Duration +18.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +12.0% ATK, +12.0% DEF, +9.0% Skill Damage, or +12.0% Skill Duration.",
+      "等级2": "Skill Duration +21.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +14.0% ATK, +14.0% DEF, +10.5% Skill Damage, or +14.0% Skill Duration.",
+      "等级3": "Skill Duration +24.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +16.0% ATK, +16.0% DEF, +12.0% Skill Damage, or +16.0% Skill Duration.",
+      "等级4": "Skill Duration +27.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +18.0% ATK, +18.0% DEF, +13.5% Skill Damage, or +18.0% Skill Duration.",
+      "等级5": "Skill Duration +30.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +20.0% ATK, +20.0% DEF, +15.0% Skill Damage, or +20.0% Skill Duration."
+    }
+  },
+  {
+    "id": 20603,
+    "名称": "Embla Inflorescence",
+    "描述": "No living soul knows what lies beyond the Misty Sea. Perhaps, in that primordial chaos, a single unseen flower still dares to bloom.",
+    "属性": {
+      "Lv.1": 15,
+      "Lv.20": 38,
+      "Lv.30": 56,
+      "Lv.40": 77,
+      "Lv.50": 99,
+      "Lv.60": 128,
+      "Lv.70": 153,
+      "Lv.80": 188
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Frame×4",
+        "Basic Weapon Component: Barrel×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Frame×3",
+        "Intermediate Weapon Component: Barrel×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Frame×6",
+        "Advanced Weapon Component: Barrel×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Frame×10",
+        "Advanced Weapon Component: Barrel×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Frame×20",
+        "Advanced Weapon Component: Barrel×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Skill Range +30.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill Damage, grants +35.0% Skill DMG for 6.0s.",
+      "等级1": "Skill Range +36.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill Damage, grants +42.0% Skill DMG for 6.0s.",
+      "等级2": "Skill Range +42.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill Damage, grants +49.0% Skill DMG for 6.0s.",
+      "等级3": "Skill Range +48.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill Damage, grants +56.0% Skill DMG for 6.0s.",
+      "等级4": "Skill Range +54.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill Damage, grants +63.0% Skill DMG for 6.0s.",
+      "等级5": "Skill Range +60.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill Damage, grants +70.0% Skill DMG for 6.0s."
+    }
+  },
+  {
+    "id": 20604,
+    "名称": "Soulrend",
+    "描述": "A twang of life and death, a soul-rending lament.",
+    "属性": {
+      "Lv.1": 19,
+      "Lv.20": 49,
+      "Lv.30": 72,
+      "Lv.40": 98,
+      "Lv.50": 126,
+      "Lv.60": 162,
+      "Lv.70": 194,
+      "Lv.80": 238
+    },
+    "突破": {
+      "阶段1": [
+        "Coin×2800",
+        "Vermilion Teardrop×6",
+        "Basic Weapon Component: Frame×2"
+      ],
+      "阶段2": [
+        "Coin×6100",
+        "Chain×3",
+        "Basic Weapon Component: Frame×4",
+        "Basic Weapon Component: Barrel×2"
+      ],
+      "阶段3": [
+        "Coin×6900",
+        "Chain×6",
+        "Intermediate Weapon Component: Frame×3",
+        "Intermediate Weapon Component: Barrel×1"
+      ],
+      "阶段4": [
+        "Coin×17000",
+        "Chain×12",
+        "Advanced Weapon Component: Frame×6",
+        "Advanced Weapon Component: Barrel×2"
+      ],
+      "阶段5": [
+        "Coin×49000",
+        "Chain×24",
+        "Advanced Weapon Component: Frame×10",
+        "Advanced Weapon Component: Barrel×4"
+      ],
+      "阶段6": [
+        "Coin×180000",
+        "Chain×48",
+        "Advanced Weapon Component: Frame×20",
+        "Advanced Weapon Component: Barrel×8"
+      ]
+    },
+    "熔炼": {
+      "等级0": "Skill Range +36.0%.",
+      "等级1": "Skill Range +43.2%.",
+      "等级2": "Skill Range +50.4%.",
+      "等级3": "Skill Range +57.6%.",
+      "等级4": "Skill Range +64.8%.",
+      "等级5": "Skill Range +72.0%."
+    }
+  }
+]
