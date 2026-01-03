@@ -39,7 +39,7 @@ class WeaponProcessor(BaseProcessor):
         processed.update(
             {
                 "加成": self._process_add_attr(battle_weapon, weapon_id),
-                "突破": self._process_break(weapon_id, language),
+                # "突破": self._process_break(weapon_id, language),
                 "熔炼": self._process_smelting(battle_weapon, weapon_id),
             }
         )
@@ -101,7 +101,7 @@ class WeaponProcessor(BaseProcessor):
             # 构建技能信息
             skill_info_dict = {
                 "id": skill_id,
-                "type": skill_entry.get("SkillType", ""),
+                "名称": skill_entry.get("SkillType", ""),
                 # "weapon": skill_entry.get("SkillWeaponType", ""),
             }
 
@@ -112,14 +112,27 @@ class WeaponProcessor(BaseProcessor):
                     skill_entry, weapon_id, skill_desc_keys, skill_desc_values
                 )
                 if processed_desc:
-                    skill_info_dict["描述"] = processed_desc
+                    skill_info_dict["字段"] = processed_desc
 
             skills.append(skill_info_dict)
 
-        rst = {}
+        rst = []
+        typeMap = {
+            "Shooting": "射击",
+            "Attack": "普通攻击",
+            "HeavyAttack": "蓄力攻击",
+            "FallAttack": "下落攻击",
+            "SlideAttack": "滑行攻击",
+        }
         for skill in skills:
-            if "描述" in skill:
-                rst.update(skill["描述"])
+            if "字段" in skill:
+                rst.append(
+                    {
+                        "名称": typeMap.get(skill["名称"], skill["名称"]),
+                        "类型": "武器伤害",
+                        "字段": skill["字段"],
+                    }
+                )
         return rst
 
     def _process_weapon_skill_desc(
@@ -181,37 +194,33 @@ class WeaponProcessor(BaseProcessor):
         add_attrs = battle_weapon.get("AddAttrs", [])
         attributes = {}
         # 尝试从AddAttrs中找到ATK属性
+        anmap = {
+            "暴击率": "暴击",
+            "暴击伤害": "暴伤",
+            "攻击速度": "攻速",
+            "触发概率": "触发",
+            "多重射击": "多重",
+            "弹匣容量": "弹匣",
+        }
         for attr in add_attrs:
-            if attr.get("AttrName") == "ATK":
-                # 从SkillGrow获取等级1的ATK值作为基础值
-                attr_rate = attr.get("Rate", "")
-                if attr_rate and attr_rate.startswith("#"):
-                    # 确保attr对象有正确的Type字段
-                    if "Type" not in attr:
-                        attr = dict(attr)  # 创建副本避免修改原始数据
-                        attr["Type"] = "BattleWeapon"
-                    # 使用_calc_attr_by_level获取等级1的值
-                    base_atk = self._calc_attr_by_level(attr, weapon_id, 1)
-                else:
-                    base_atk = float(attr_rate) if attr_rate else 0
-                attributes["攻击"] = base_atk
+            attr_name = attr.get("AttrName", "")
+            if (
+                attr_name in self.attr_config
+                or attr_name + "_Normal" in self.attr_config
+            ):
+                cfg = self.attr_config.get(attr_name) or self.attr_config.get(
+                    attr_name + "_Normal", {}
+                )
+                an = self.get_translated_text(cfg.get("Name", ""), "cn")
+                # 确保attr对象有正确的Type字段
+                if "Type" not in attr:
+                    attr = dict(attr)  # 创建副本避免修改原始数据
+                    attr["Type"] = "BattleWeapon"
+                if an in anmap:
+                    an = anmap[an]
+                attributes[an] = self._calc_attr_by_level(attr, weapon_id, 1)
             else:
-                attr_name = attr.get("AttrName", "")
-                if (
-                    attr_name in self.attr_config
-                    or attr_name + "_Normal" in self.attr_config
-                ):
-                    cfg = self.attr_config.get(attr_name) or self.attr_config.get(
-                        attr_name + "_Normal", {}
-                    )
-                    an = self.get_translated_text(cfg.get("Name", ""), "cn")
-                    # 确保attr对象有正确的Type字段
-                    if "Type" not in attr:
-                        attr = dict(attr)  # 创建副本避免修改原始数据
-                        attr["Type"] = "BattleWeapon"
-                    attributes[an] = self._calc_attr_by_level(attr, weapon_id, 1)
-                else:
-                    attributes[attr_name] = attr_name
+                attributes[attr_name] = attr_name
         return attributes
 
     def _process_attributes(self, battle_weapon, weapon_id):
