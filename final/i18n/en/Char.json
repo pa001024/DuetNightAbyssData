@@ -1565,7 +1565,7 @@
         },
         "术语解释": {
           "Phanosword": "Inherits all stats from Kezhou's melee weapon and gains increased Attack Range.\n[Phanosword] has Normal Attack modes for Sword, Greatsword, Polearm, and Dual Blades. After executing the final hit of [Phanosword], it switches to a random attack mode and launches all [Phanoplumes].",
-          "Phanoplume": "Kezhou can have a maximum of 7 [Phanoplumes] at the same time. When launched, each [Phanoplume] selects a random enemy to orbit and homes towards them to attack, dealing Lumino Damage to enemies along the path. After attacking the enemy 4 times, the [Phanoplume] dissipates.\n\nTargets hit by [Phanoplume] take additional damage, which is equivalent to a certain percentage of the DoT of Bonus Effect: Lumino multiplied by Kezhou's Melee Weapon Trigger Probability.",
+          "Phanoplume": "Kezhou can have a maximum of 7 [Phanoplumes] at the same time. When launched, each [Phanoplume] selects a random enemy to orbit and homes towards them to attack, dealing Lumino Damage to enemies along the path. After attacking the enemy 3 times, the [Phanoplume] dissipates.\n\nTargets hit by [Phanoplume] take additional damage, which is equivalent to a certain percentage of the DoT of Bonus Effect: Lumino multiplied by Kezhou's Melee Weapon Trigger Probability.",
           "Feathers Chase Dust In Dreams": "Ends [Aspect Manifestation] state and deals Lumino Damage to enemies in front."
         }
       },
@@ -1591,7 +1591,7 @@
               0.0206
             ]
           },
-          "Sanity Cost Reduced": {
+          "[Lightswords Slice Starry Streams] Sanity Cost Reduced": {
             "值": 0.3,
             "格式": "{}×[Sword Intent]"
           },
@@ -1885,7 +1885,7 @@
         "id": 160103,
         "名称": "Diffusion",
         "类型": "Passive",
-        "描述": "When a Lumino bonus effect is triggered, deals an additional Lumino AoE Damage at the target's location.",
+        "描述": "When a Lumino bonus effect is triggered, deals an additional Lumino AoE Damage at the target's location. This effect triggers 1 time every 0.5s.",
         "字段": {
           "DMG": {
             "影响": "技能威力",
@@ -3073,7 +3073,7 @@
       "Grants 6 stacks of [Preload] when battle starts, and increases Morale by 35% for 60s.",
       "During [Gunpowder Revelry], reduces Damage Taken by 30%, and decreases the interval of gaining the ATK Speed boost to 0.06s.",
       "[Deadly Blossom] Level +2; [Tactical Rapid Fire] Level +1.",
-      "Increases damage dealt to targets with a HP percentage lower than 70% by 35%.",
+      "Increases damage dealt to targets with a HP percentage lower than 50% by 70%.",
       "[Gunpowder Revelry] Level +2; [Tactical Rapid Fire] Level +1.",
       "During [Gunpowder Revelry], when triggering Bonus Effect using [Hansel and Gretel], inflicts [Laceration] on the target(s) for 8s."
     ],
@@ -3265,7 +3265,7 @@
         "id": 310203,
         "名称": "Automatic Sanitizing",
         "类型": "Passive",
-        "描述": "Carries 2 [Heavy Dirtexpellers] that automatically target and shoot nearby enemies once every 3s, dealing Pyro Damage.\nWhen dodging, Hilda reloads her ranged weapon Magazine to maximum and gains [Elegant Anger] for a period of time.",
+        "描述": "When dodging, Hilda reloads her ranged weapon Magazine to maximum and gains [Elegant Anger].",
         "字段": {
           "[Elegant Anger] Effect": {
             "值": [
