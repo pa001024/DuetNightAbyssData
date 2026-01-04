@@ -6,6 +6,7 @@ from processor.weapon_processor import WeaponProcessor
 from processor.mod_processor import ModProcessor
 from processor.achievement_processor import AchievementProcessor
 from processor.monster_processor import MonsterProcessor
+from processor.draft_processor import DraftProcessor
 
 
 class DataLoader:
@@ -129,15 +130,27 @@ class DataLoader:
     def get_mod_name(self, mod_id):
         mod_index = self.build_index("Mod.json", "Id")
         mod = mod_index.get(mod_id, {})
-        return f"{mod.get('TypeName', '')}{mod.get('Name', '')}".strip()
+        return f"{self.translate(mod.get('TypeName', ''))}{self.translate(mod.get('Name', ''))}".strip()
 
     def get_char_name(self, char_id):
         char_index = self.build_index("Char.json", "Id")
         return self.translate(char_index.get(char_id, {}).get("Name", ""))
 
     def get_weapon_name(self, weapon_id):
-        weapon_index = self.build_index("Weapon.json", "Id")
-        return self.translate(weapon_index.get(weapon_id, {}).get("Name", ""))
+        # Weapon.json 是字典形式，直接使用武器ID作为键
+        weapon_data = self.load_json("Weapon.json")
+        # 尝试将weapon_id转换为字符串，因为Weapon.json的键是字符串形式
+        weapon_info = weapon_data.get(str(weapon_id), {})
+        # Weapon.json中武器名称的字段名是WeaponName，不是Name
+        return self.translate(weapon_info.get("WeaponName", ""))
+
+    def get_accessory_name(self, accessory_id):
+        # CharAccessory.json 是字典形式，直接使用配件ID作为键
+        accessory_data = self.load_json("CharAccessory.json")
+        # 尝试将accessory_id转换为字符串，因为CharAccessory.json的键是字符串形式
+        accessory_info = accessory_data.get(str(accessory_id), {})
+        # CharAccessory.json中配件名称的字段名是Name
+        return self.translate(accessory_info.get("Name", ""))
 
     def get_title_name(self, title_id):
         # Use translated Title from i18n directory
@@ -173,6 +186,7 @@ class FinalProcessor:
             "Weapon": WeaponProcessor,
             "Char": CharProcessor,
             "Monster": MonsterProcessor,
+            "Draft": DraftProcessor,
             # Add other processor classes here as they are implemented
         }
 
@@ -265,11 +279,12 @@ if __name__ == "__main__":
     # Example: process multiple file types (when other processors are implemented)
     FILE_TYPES = [
         #  11
-        "Achievement",
-        "Mod",
-        "Weapon",
+        # "Achievement",
+        # "Mod",
+        # "Weapon",
         "Char",
-        "Monster",
+        # "Monster",
+        # "Draft",
     ]
 
     # Create processor and process all specified file types for all languages

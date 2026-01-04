@@ -1,5 +1,6 @@
 from processor.base_processor import BaseProcessor
 from ast_parser import NodeType
+import re
 
 
 class CharProcessor(BaseProcessor):
@@ -450,11 +451,34 @@ class CharProcessor(BaseProcessor):
         desc_keys = skill_info.get("SkillDescKeys", [])
         desc_values = skill_info.get("SkillDescValues", [])
         desc_hints = skill_info.get("SkillDescHints", [])
+        skill_desc_groups = skill_info.get("SkillDescGroups", [])
 
         if not desc_keys or not desc_values:
-            return {}
+            return []
 
-        result = {}
+        # 处理SkillDescGroups，获取每个组的翻译名称和对应的项目索引
+        group_mapping = {}
+        if skill_desc_groups:
+            # 遍历每个技能描述组
+            for group_data in skill_desc_groups:
+                if isinstance(group_data, dict):
+                    # 获取字典中的唯一键作为GroupNameKey
+                    for group_name_key, item_indices in group_data.items():
+                        # 获取组名称的翻译
+                        group_name = self.get_translated_text(group_name_key)
+                        if not group_name:
+                            continue
+
+                        # 将每个项目索引映射到对应的组名称
+                        for idx in item_indices:
+                            # 注意：索引从1开始，需要转换为从0开始
+                            group_mapping[idx - 1] = group_name
+
+                else:
+                    # 如果不是字典，跳过
+                    continue
+
+        result = []
 
         for i, desc_key in enumerate(desc_keys):
             if i >= len(desc_values):
@@ -462,6 +486,11 @@ class CharProcessor(BaseProcessor):
 
             # 获取描述文本
             desc_text = self.get_translated_text(desc_key)
+
+            # 如果该项目属于某个组，添加组名称前缀
+            if i in group_mapping:
+                desc_text = f"[{group_mapping[i]}]{desc_text}"
+                desc_text = re.sub(r"\[.*?\]\[", "[", desc_text)
 
             # 获取影响类型 (从 SkillDescHints)
             impact_type = None
@@ -491,7 +520,6 @@ class CharProcessor(BaseProcessor):
             format_template = self._extract_format_from_expr(preprocessed_desc_value)
 
             # 分割表达式部分（处理复合表达式）
-            import re
 
             # 提取所有 $...$ 表达式，排除GText等特殊格式
             # 只保留包含#的表达式（这些是数值计算表达式）
@@ -568,7 +596,7 @@ class CharProcessor(BaseProcessor):
             if format_template:
                 item["格式"] = format_template
 
-            result[desc_text] = item
+            result.append({"名称": desc_text, **item})
 
         return result
 
