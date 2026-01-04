@@ -1,92 +1,8 @@
 [
   {
-    "id": 20001,
-    "n": "Exploration",
-    "t": "Survival",
-    "ts": "Exploration",
-    "lv": 60,
-    "rd": 1,
-    "desc": "Secure the Serum and continue with the investigation",
-    "m": [
-      7001001,
-      7002001,
-      7003001,
-      6003001,
-      6004001
-    ],
-    "r": [
-      50100
-    ],
-    "win": 1
-  },
-  {
-    "id": 20002,
-    "n": "Defence (Ⅰ)",
-    "t": "Defence",
-    "ts": "Defence (Ⅰ)",
-    "lv": 10,
-    "rd": 1,
-    "desc": "Protect Lunoxplorer and defeat the enemies",
-    "m": [
-      6001001,
-      6002001,
-      7001001,
-      7002001,
-      7003001
-    ],
-    "r": [
-      50100
-    ],
-    "win": 1
-  },
-  {
-    "id": 20003,
-    "n": "Defence",
-    "t": "DefencePro",
-    "ts": "Defence",
-    "lv": 60,
-    "rd": 1,
-    "desc": "Protect Lunoxplorer and defeat the enemies",
-    "m": [
-      6001001,
-      6002001,
-      7001001,
-      7002001,
-      7003001
-    ],
-    "r": [
-      50100
-    ],
-    "win": 1
-  },
-  {
-    "id": 20004,
-    "n": "Hedge",
-    "t": "SurvivalPro",
-    "ts": "Hedge",
-    "lv": 60,
-    "rd": 1,
-    "desc": "Prepare the serum to complete the commission",
-    "m": [
-      7001001,
-      7002001,
-      7003001,
-      7004001,
-      6001001,
-      6002001,
-      6003001,
-      6004001
-    ],
-    "r": [
-      50100
-    ],
-    "win": 1
-  },
-  {
     "id": 21001,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 55,
     "rd": 1,
     "m": [
@@ -111,7 +27,6 @@
     "id": 21002,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 65,
     "rd": 1,
     "m": [
@@ -136,7 +51,6 @@
     "id": 21003,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 100,
     "rd": 1,
     "m": [
@@ -161,7 +75,6 @@
     "id": 21011,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 60,
     "rd": 1,
     "m": [
@@ -187,7 +100,6 @@
     "id": 21012,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 75,
     "rd": 1,
     "m": [
@@ -213,7 +125,6 @@
     "id": 21013,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 110,
     "rd": 1,
     "m": [
@@ -239,7 +150,6 @@
     "id": 21101,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 55,
     "rd": 1,
     "m": [
@@ -264,7 +174,6 @@
     "id": 21102,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 65,
     "rd": 1,
     "m": [
@@ -289,7 +198,6 @@
     "id": 21103,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 100,
     "rd": 1,
     "m": [
@@ -314,7 +222,6 @@
     "id": 21111,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 60,
     "rd": 1,
     "m": [
@@ -340,7 +247,6 @@
     "id": 21112,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 75,
     "rd": 1,
     "m": [
@@ -366,7 +272,6 @@
     "id": 21113,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 110,
     "rd": 1,
     "m": [
@@ -392,7 +297,6 @@
     "id": 21201,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 55,
     "rd": 1,
     "m": [
@@ -417,7 +321,6 @@
     "id": 21202,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 65,
     "rd": 1,
     "m": [
@@ -442,7 +345,6 @@
     "id": 21203,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 100,
     "rd": 1,
     "m": [
@@ -467,7 +369,6 @@
     "id": 21211,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 60,
     "rd": 1,
     "m": [
@@ -493,7 +394,6 @@
     "id": 21212,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 75,
     "rd": 1,
     "m": [
@@ -519,7 +419,6 @@
     "id": 21213,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 110,
     "rd": 1,
     "m": [
@@ -545,7 +444,6 @@
     "id": 21301,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 55,
     "rd": 1,
     "m": [
@@ -570,7 +468,6 @@
     "id": 21302,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 65,
     "rd": 1,
     "m": [
@@ -595,7 +492,6 @@
     "id": 21303,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 100,
     "rd": 1,
     "m": [
@@ -620,7 +516,6 @@
     "id": 21311,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 60,
     "rd": 1,
     "m": [
@@ -646,7 +541,6 @@
     "id": 21312,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 75,
     "rd": 1,
     "m": [
@@ -672,7 +566,6 @@
     "id": 21313,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 110,
     "rd": 1,
     "m": [
@@ -698,7 +591,6 @@
     "id": 21401,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 55,
     "rd": 1,
     "m": [
@@ -723,7 +615,6 @@
     "id": 21402,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 65,
     "rd": 1,
     "m": [
@@ -748,7 +639,6 @@
     "id": 21403,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 100,
     "rd": 1,
     "m": [
@@ -773,7 +663,6 @@
     "id": 21411,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 60,
     "rd": 1,
     "m": [
@@ -799,7 +688,6 @@
     "id": 21412,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 75,
     "rd": 1,
     "m": [
@@ -825,7 +713,6 @@
     "id": 21413,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 110,
     "rd": 1,
     "m": [
@@ -851,7 +738,6 @@
     "id": 21501,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 55,
     "rd": 1,
     "m": [
@@ -876,7 +762,6 @@
     "id": 21502,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 65,
     "rd": 1,
     "m": [
@@ -901,7 +786,6 @@
     "id": 21503,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 100,
     "rd": 1,
     "m": [
@@ -926,7 +810,6 @@
     "id": 21511,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 60,
     "rd": 1,
     "m": [
@@ -952,7 +835,6 @@
     "id": 21512,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 75,
     "rd": 1,
     "m": [
@@ -978,7 +860,6 @@
     "id": 21513,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 110,
     "rd": 1,
     "m": [
@@ -1004,7 +885,6 @@
     "id": 21601,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 55,
     "rd": 1,
     "m": [
@@ -1029,7 +909,6 @@
     "id": 21602,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 65,
     "rd": 1,
     "m": [
@@ -1054,7 +933,6 @@
     "id": 21603,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 100,
     "rd": 1,
     "m": [
@@ -1079,7 +957,6 @@
     "id": 21611,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 60,
     "rd": 1,
     "m": [
@@ -1105,7 +982,6 @@
     "id": 21612,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 75,
     "rd": 1,
     "m": [
@@ -1131,7 +1007,6 @@
     "id": 21613,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 110,
     "rd": 1,
     "m": [
@@ -1157,7 +1032,6 @@
     "id": 21614,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 55,
     "rd": 1,
     "m": [
@@ -1182,7 +1056,6 @@
     "id": 21615,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 65,
     "rd": 1,
     "m": [
@@ -1207,7 +1080,6 @@
     "id": 21616,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 100,
     "rd": 1,
     "m": [
@@ -1232,7 +1104,6 @@
     "id": 21617,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 60,
     "rd": 1,
     "m": [
@@ -1258,7 +1129,6 @@
     "id": 21618,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 75,
     "rd": 1,
     "m": [
@@ -1284,7 +1154,6 @@
     "id": 21619,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 110,
     "rd": 1,
     "m": [
@@ -1310,7 +1179,6 @@
     "id": 21620,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 55,
     "rd": 1,
     "m": [
@@ -1335,7 +1203,6 @@
     "id": 21621,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 65,
     "rd": 1,
     "m": [
@@ -1360,7 +1227,6 @@
     "id": 21622,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 100,
     "rd": 1,
     "m": [
@@ -1385,7 +1251,6 @@
     "id": 21623,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 60,
     "rd": 1,
     "m": [
@@ -1411,7 +1276,6 @@
     "id": 21624,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 75,
     "rd": 1,
     "m": [
@@ -1437,7 +1301,6 @@
     "id": 21625,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 110,
     "rd": 1,
     "m": [
@@ -1463,7 +1326,6 @@
     "id": 21626,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 55,
     "rd": 1,
     "m": [
@@ -1488,7 +1350,6 @@
     "id": 21627,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 65,
     "rd": 1,
     "m": [
@@ -1513,7 +1374,6 @@
     "id": 21628,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 100,
     "rd": 1,
     "m": [
@@ -1538,7 +1398,6 @@
     "id": 21629,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 60,
     "rd": 1,
     "m": [
@@ -1564,7 +1423,6 @@
     "id": 21630,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 75,
     "rd": 1,
     "m": [
@@ -1590,7 +1448,6 @@
     "id": 21631,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 110,
     "rd": 1,
     "m": [
@@ -1616,7 +1473,6 @@
     "id": 21632,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 55,
     "rd": 1,
     "m": [
@@ -1641,7 +1497,6 @@
     "id": 21633,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 65,
     "rd": 1,
     "m": [
@@ -1666,7 +1521,6 @@
     "id": 21634,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 100,
     "rd": 1,
     "m": [
@@ -1691,7 +1545,6 @@
     "id": 21635,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 60,
     "rd": 1,
     "m": [
@@ -1717,7 +1570,6 @@
     "id": 21636,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 75,
     "rd": 1,
     "m": [
@@ -1743,7 +1595,6 @@
     "id": 21637,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 110,
     "rd": 1,
     "m": [
@@ -1769,7 +1620,6 @@
     "id": 21638,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 55,
     "rd": 1,
     "m": [
@@ -1794,7 +1644,6 @@
     "id": 21639,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 65,
     "rd": 1,
     "m": [
@@ -1819,7 +1668,6 @@
     "id": 21640,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 100,
     "rd": 1,
     "m": [
@@ -1844,7 +1692,6 @@
     "id": 21641,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 60,
     "rd": 1,
     "m": [
@@ -1870,7 +1717,6 @@
     "id": 21642,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 75,
     "rd": 1,
     "m": [
@@ -1896,7 +1742,6 @@
     "id": 21643,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 110,
     "rd": 1,
     "m": [
@@ -1922,7 +1767,6 @@
     "id": 21644,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 55,
     "rd": 1,
     "m": [
@@ -1947,7 +1791,6 @@
     "id": 21645,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 65,
     "rd": 1,
     "m": [
@@ -1972,7 +1815,6 @@
     "id": 21646,
     "n": "Group Stage",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 100,
     "rd": 1,
     "m": [
@@ -1997,7 +1839,6 @@
     "id": 21647,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 60,
     "rd": 1,
     "m": [
@@ -2023,7 +1864,6 @@
     "id": 21648,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 75,
     "rd": 1,
     "m": [
@@ -2049,7 +1889,6 @@
     "id": 21649,
     "n": "Apex Rankings",
     "t": "SoloRaid",
-    "ts": "",
     "lv": 110,
     "rd": 1,
     "m": [
@@ -2070,90 +1909,6 @@
       300327
     ],
     "win": 2
-  },
-  {
-    "id": 30001,
-    "n": "Excavation (Ⅰ)",
-    "t": "Excavation",
-    "ts": "Excavation (Ⅰ)",
-    "lv": 60,
-    "rd": 1,
-    "desc": "Assist Lunoxplorer with her terrain excavation and safeguard the Excavators",
-    "m": [
-      6001001,
-      6002001,
-      7001001,
-      7002001,
-      7003001
-    ],
-    "r": [
-      50100
-    ],
-    "win": 1
-  },
-  {
-    "id": 30002,
-    "n": "Capture (Ⅰ)",
-    "t": "Capture",
-    "ts": "Capture (Ⅰ)",
-    "lv": 10,
-    "rd": 1,
-    "desc": "Defeat and take control of the target",
-    "m": [
-      7001005,
-      7003005,
-      7001001,
-      7002001,
-      7003001
-    ],
-    "r": [
-      50100
-    ],
-    "win": 2
-  },
-  {
-    "id": 30004,
-    "n": "Capture (Ⅱ)",
-    "t": "Capture",
-    "ts": "Capture (Ⅱ)",
-    "lv": 10,
-    "rd": 1,
-    "desc": "Defeat and take control of the target",
-    "m": [
-      7001005,
-      7003005,
-      7001001,
-      7002001,
-      7003001
-    ],
-    "r": [
-      50100
-    ],
-    "win": 2
-  },
-  {
-    "id": 30005,
-    "n": "Mediation (Ⅰ)",
-    "t": "Sabotage",
-    "ts": "Mediation (Ⅰ)",
-    "lv": 10,
-    "rd": 1,
-    "desc": "Prevent the \"Finale Flare\" of The Forsakens from exploding and stop the conflict from escalating",
-    "m": [
-      9003004,
-      9005004,
-      9006004,
-      7001001,
-      7002001,
-      7003001,
-      6001001,
-      6002001,
-      6004001
-    ],
-    "r": [
-      50100
-    ],
-    "win": 3
   },
   {
     "id": 30101,
@@ -2598,100 +2353,6 @@
       50900
     ],
     "win": 2
-  },
-  {
-    "id": 40101,
-    "n": "DUNGEON_NAME_40101",
-    "t": "Paotai",
-    "ts": "",
-    "lv": 0,
-    "rd": 1,
-    "m": [
-      7012005
-    ],
-    "win": 3
-  },
-  {
-    "id": 40102,
-    "n": "DUNGEON_NAME_40102",
-    "t": "Paotai",
-    "ts": "",
-    "lv": 0,
-    "rd": 1,
-    "m": [
-      7002007,
-      7012005
-    ],
-    "win": 3
-  },
-  {
-    "id": 40103,
-    "n": "DUNGEON_NAME_40103",
-    "t": "Paotai",
-    "ts": "",
-    "lv": 0,
-    "rd": 1,
-    "m": [
-      7002007,
-      7012005
-    ],
-    "win": 3
-  },
-  {
-    "id": 40104,
-    "n": "DUNGEON_NAME_40104",
-    "t": "Paotai",
-    "ts": "",
-    "lv": 0,
-    "rd": 1,
-    "m": [
-      7002007,
-      7012005,
-      7001008
-    ],
-    "win": 3
-  },
-  {
-    "id": 40105,
-    "n": "DUNGEON_NAME_40105",
-    "t": "Paotai",
-    "ts": "",
-    "lv": 0,
-    "rd": 1,
-    "m": [
-      7002007,
-      7012005,
-      6006002
-    ],
-    "win": 3
-  },
-  {
-    "id": 40106,
-    "n": "DUNGEON_NAME_40106",
-    "t": "Paotai",
-    "ts": "",
-    "lv": 0,
-    "rd": 1,
-    "m": [
-      7012005,
-      7001008
-    ],
-    "win": 3
-  },
-  {
-    "id": 40107,
-    "n": "DUNGEON_NAME_40107",
-    "t": "Paotai",
-    "ts": "",
-    "lv": 0,
-    "rd": 1,
-    "m": [
-      7002007,
-      7012005,
-      6006002,
-      6004007
-    ],
-    "win": 3
   },
   {
     "id": 60101,
@@ -5563,27 +5224,6 @@
       50964
     ],
     "win": 1
-  },
-  {
-    "id": 90301,
-    "n": "Capture (Ⅰ)",
-    "t": "Capture",
-    "ts": "Capture (Ⅰ)",
-    "lv": 10,
-    "rd": 1,
-    "desc": "Defeat and take control of the target",
-    "m": [
-      7001005,
-      7002005,
-      7003005,
-      7001001,
-      7002001,
-      7003001
-    ],
-    "r": [
-      50100
-    ],
-    "win": 2
   },
   {
     "id": 90302,
