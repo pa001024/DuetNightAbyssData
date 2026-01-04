@@ -21,19 +21,35 @@ class MonsterProcessor(BaseProcessor):
         }
         self.processed_keys = set()
 
+        # 加载Dungeon.json数据并提取符合条件的怪物ID集合
+        self.valid_monster_ids = set()
+        dungeon_data = data_loader.load_json("Dungeon.json")
+        for dungeon_id, dungeon_info in dungeon_data.items():
+            # 检查DungeonID是否大于20000
+            if isinstance(dungeon_id, str):
+                dungeon_id_num = int(dungeon_id)
+            else:
+                dungeon_id_num = dungeon_id
+
+            if dungeon_id_num > 20000:
+                # 提取DungeonMonsters字段中的怪物ID
+                dungeon_monsters = dungeon_info.get("DungeonMonsters", [])
+                for monster_id in dungeon_monsters:
+                    self.valid_monster_ids.add(monster_id)
+                # 提取DungeonInitGuideUnitId字段中的怪物ID
+                dungeon_init_guide_unit_id = dungeon_info.get(
+                    "DungeonInitGuideUnitId", []
+                )
+                for monster_id in dungeon_init_guide_unit_id:
+                    self.valid_monster_ids.add(monster_id)
+
     def process_item(self, monster_data, language):
         id = monster_data.get("UnitId", 0)
-        if id < 6000000 or id > 20000000:
+        # 只处理在valid_monster_ids集合中的怪物ID
+        if id not in self.valid_monster_ids:
             return None
         name = self.get_translated_text(monster_data.get("UnitName", ""))
-        if "待包装" in name or "召唤物" in name or "Mon_Name_" in name:
-            return None
-        lastname = name.split(" ")[-1]
-        bt = monster_data.get("BT", "")
-        if "_SP_" in bt or "_AChess01" in bt or "_Tem" in bt or "_DYN" in bt:
-            return None
-        if "_St" in bt:
-            name += "(剧情)"
+        # lastname = name.split(" ")[-1]
 
         battle_role_id = monster_data.get("BattleRoleId", 0)
 
@@ -47,10 +63,10 @@ class MonsterProcessor(BaseProcessor):
         if def_value == 0 or def_value > 1000:
             return None
 
-        unique_key = f"{lastname}_{def_value}_{hp_value}"
-        if unique_key in self.processed_keys:
-            return None
-        self.processed_keys.add(unique_key)
+        # unique_key = f"{lastname}_{def_value}_{hp_value}"
+        # if unique_key in self.processed_keys:
+        #     return None
+        # self.processed_keys.add(unique_key)
 
         tags = monster_data.get("GamePlayTags", [])
         fact = [tag for tag in tags if tag in self.tab_trans]
@@ -60,7 +76,7 @@ class MonsterProcessor(BaseProcessor):
 
         processed = {
             "id": id,
-            "名称": name.replace("凛霜 ", "[号令者]"),
+            "名称": name,
             "阵营": self.tab_final.get(fact[0], ""),
             "攻击": atk_value,
             "防御": def_value,
