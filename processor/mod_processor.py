@@ -16,6 +16,40 @@ class ModProcessor(BaseProcessor):
         self.quality_names = ["白", "绿", "蓝", "紫", "金"]
         # 极性值映射
         self.polarity_values = ["", "A", "D", "V", "O"]
+        self.p_map = {
+            "最大神智": "神智",
+            "暴击率": "暴击",
+            "暴击伤害": "暴伤",
+            "触发概率": "触发",
+            "切割攻击": "物理",
+            "贯穿攻击": "物理",
+            "震荡攻击": "物理",
+            "攻击速度": "攻速",
+            "远程武器": "远程",
+            "近战武器": "近战",
+            "近战同律武器": "同律近战",
+            "远程同律武器": "同律远程",
+            "角色": "角色",
+            "暗属性攻击": "属性伤",
+            "水属性攻击": "属性伤",
+            "火属性攻击": "属性伤",
+            "雷属性攻击": "属性伤",
+            "风属性攻击": "属性伤",
+            "光属性攻击": "属性伤",
+            "ExtraComboProb": "额外连击",
+            "多重射击": "多重",
+            "最大弹药": "弹药",
+            "弹匣容量": "弹匣",
+            "子弹装填速度": "装填",
+            "GrRate": "歧视",
+            "JtRate": "歧视",
+            "JhRate": "歧视",
+            "SqRate": "歧视",
+            "触发贯穿额外效果时对生命伤害": "触发倍率",
+            "触发切割额外效果时对护盾伤害": "触发倍率",
+            "ExplodeBulletRate": "爆炸伤害",
+            "RayCreatureRate": "射线伤害",
+        }
 
     def process_item(self, mod_data, language):
         # 获取ModTag信息
@@ -29,6 +63,7 @@ class ModProcessor(BaseProcessor):
         # 计算耐受值
         cost = mod_data.get("Cost", 0)
         max_level = mod_data.get("MaxLevel", 0)
+        max_level += mod_data.get("ModCardLevelMax", 0)
         cost_change = mod_data.get("CostChange", 1)
         tolerance = cost + max_level * cost_change
 
@@ -54,6 +89,8 @@ class ModProcessor(BaseProcessor):
 
         # 处理类型
         mod_type = mod_tag_text[0] if mod_tag_text else ""
+        if mod_type in self.p_map:
+            mod_type = self.p_map[mod_type]
 
         # 构建基础处理后的Mod数据
         processed = {
@@ -90,17 +127,29 @@ class ModProcessor(BaseProcessor):
 
             # 处理BonusDamage_xxx转换为属性伤
             if attr_name.startswith("BonusDamage_"):
-                attr_chinese_name = "属性伤"
+                attr_chinese_name = "追加伤害"
             elif not attr_chinese_name:
                 attr_chinese_name = attr_name
+            if attr_chinese_name in ["切割攻击", "贯穿攻击", "震荡攻击"]:
+                processed["限定"] = attr_chinese_name[:2]
+            attr_chinese_name = self.p_map.get(attr_chinese_name, attr_chinese_name)
 
             # 计算属性值（根据CalcModAttrByLevel逻辑）
             attr_value = self._calc_mod_attr_by_level(
                 attr, mod_data.get("Id", 0), max_level
             )
 
+            if attr_chinese_name == "攻击范围":
+                attr_value /= 100
+                if isinstance(attr_value, float) and attr_value.is_integer():
+                    attr_value = int(attr_value)
+
             # 添加到processed中
-            processed[attr_chinese_name] = attr_value
+            if attr_chinese_name == "受到的伤害":
+                attr_chinese_name = "减伤"
+                processed[attr_chinese_name] = -attr_value
+            else:
+                processed[attr_chinese_name] = attr_value
 
         # 处理PassiveEffectsDesc，解析DescValues并填入占位符
         self._process_passive_effects_desc(mod_data, processed)
@@ -121,7 +170,7 @@ class ModProcessor(BaseProcessor):
             )
 
             # 将结果填入"效果"字段
-            processed["效果"] = effect_desc
+            processed["效果"] = effect_desc.replace("<Polarity>", "").replace("</>", "")
 
     def _parse_passive_desc(self, passive_desc, desc_values, mod_data):
         """解析PassiveEffectsDesc，将DescValues中的值填入占位符
@@ -164,17 +213,15 @@ class ModProcessor(BaseProcessor):
                 if "math.floor" in desc_value or "math.ceil" in desc_value:
                     cast_to = True
 
-                # 步骤3: 从desc_value中提取百分号后缀（如果有）
-                percent = "" if "%" not in desc_value else "%"
-
                 # 步骤4: 先尝试_ModAttrGrowDesc2，如果返回空字符串则尝试_SkillGrowDesc
                 # 注意：传入base_level和expect_level都为mod_level，这样会显示单一值而不是范围
+                # 移除percent参数，因为_desc_value中已经包含了百分号信息
                 val_str = self._mod_attr_grow_desc2(
-                    desc_value, mod_level, mod_level, percent, cast_to
+                    desc_value, mod_level, mod_level, "", cast_to
                 )
                 if val_str == "":
                     val_str = self._skill_grow_desc(
-                        desc_value, mod_level, mod_level, percent, cast_to, mod_id
+                        desc_value, mod_level, mod_level, "", cast_to, mod_id
                     )
 
                 # 步骤5: 替换占位符 #1, #2, ...
@@ -197,58 +244,63 @@ class ModProcessor(BaseProcessor):
 
         if "GetModValue" in desc_value:
             # 处理GetModValue类型的表达式
-            # 提取ModId, AttrIdx, ValueType
-            get_mod_value_match = re.search(
-                r"GetModValue\((\d+),\s*(\d+)(?:,\s*(\d+))?\)", desc_value
+            # 只处理纯GetModValue表达式，对于包含其他操作的表达式，返回空字符串，让_skill_grow_desc处理
+            # 检查desc_value是否只包含GetModValue函数和可选的$前缀后缀
+            get_mod_value_full_match = re.fullmatch(
+                r"\$?GetModValue\((\d+),\s*(\d+)(?:,\s*(\d+))?\)\$?", desc_value
             )
-            if get_mod_value_match:
-                mod_id = int(get_mod_value_match.group(1))
-                attr_idx = int(get_mod_value_match.group(2))
-                value_type = (
-                    int(get_mod_value_match.group(3))
-                    if get_mod_value_match.group(3)
-                    else None
+            if not get_mod_value_full_match:
+                # 不是纯GetModValue表达式，返回空字符串，让_skill_grow_desc处理
+                return ""
+
+            # 提取ModId, AttrIdx, ValueType
+            mod_id = int(get_mod_value_full_match.group(1))
+            attr_idx = int(get_mod_value_full_match.group(2))
+            value_type = (
+                int(get_mod_value_full_match.group(3))
+                if get_mod_value_full_match.group(3)
+                else None
+            )
+
+            # 获取MOD信息
+            mod_data = self.data_loader.get_mod_info(mod_id)
+            if (
+                mod_data
+                and "AddAttrs" in mod_data
+                and attr_idx <= len(mod_data["AddAttrs"])
+            ):
+                mod_attr_conf = mod_data["AddAttrs"][attr_idx - 1]
+
+                # 从MOD数据中获取正确的base_level和expect_level
+                # 使用MOD的MaxLevel + ModCardLevelMax来计算效果
+                max_level = mod_data.get("MaxLevel", 1)
+                mod_card_level_max = mod_data.get("ModCardLevelMax", 0)
+                correct_level = max_level + mod_card_level_max
+
+                # 计算基础值和期望的值，使用正确的level
+                old_val = self._calc_mod_attr_by_level(
+                    mod_attr_conf, mod_id, correct_level, value_type
+                )
+                new_val = self._calc_mod_attr_by_level(
+                    mod_attr_conf, mod_id, correct_level, value_type
                 )
 
-                # 获取MOD信息
-                mod_data = self.data_loader.get_mod_info(mod_id)
-                if (
-                    mod_data
-                    and "AddAttrs" in mod_data
-                    and attr_idx <= len(mod_data["AddAttrs"])
-                ):
-                    mod_attr_conf = mod_data["AddAttrs"][attr_idx - 1]
+                # 格式化值
+                old_val_str = f"{old_val:.1f}{percent}"
+                new_val_str = f"{new_val:.1f}{percent}"
 
-                    # 从MOD数据中获取正确的base_level和expect_level
-                    # 使用MOD的MaxLevel + ModCardLevelMax来计算效果
-                    max_level = mod_data.get("MaxLevel", 1)
-                    mod_card_level_max = mod_data.get("ModCardLevelMax", 0)
-                    correct_level = max_level + mod_card_level_max
+                # 根据cast_to格式化
+                if not forbid_format:
+                    if cast_to:
+                        old_val_str = f"{int(old_val)}{percent}"
+                        new_val_str = f"{int(new_val)}{percent}"
 
-                    # 计算基础值和期望的值，使用正确的level
-                    old_val = self._calc_mod_attr_by_level(
-                        mod_attr_conf, mod_id, correct_level, value_type
-                    )
-                    new_val = self._calc_mod_attr_by_level(
-                        mod_attr_conf, mod_id, correct_level, value_type
-                    )
-
-                    # 格式化值
-                    old_val_str = f"{old_val:.1f}{percent}"
-                    new_val_str = f"{new_val:.1f}{percent}"
-
-                    # 根据cast_to格式化
-                    if not forbid_format:
-                        if cast_to:
-                            old_val_str = f"{int(old_val)}{percent}"
-                            new_val_str = f"{int(new_val)}{percent}"
-
-                    # 返回结果，不同则显示范围，相同则显示单个值
-                    return (
-                        f"{old_val_str} -> <H>{new_val_str}</>"
-                        if old_val_str != new_val_str
-                        else old_val_str
-                    )
+                # 返回结果，不同则显示范围，相同则显示单个值
+                return (
+                    f"{old_val_str} -> <H>{new_val_str}</>"
+                    if old_val_str != new_val_str
+                    else old_val_str
+                )
         elif "GetModPolarity" in desc_value:
             # 处理GetModPolarity类型的表达式
             get_mod_polarity_match = re.search(r"GetModPolarity\((\d+)\)", desc_value)
@@ -294,20 +346,25 @@ class ModProcessor(BaseProcessor):
         if not forbid_format and not b_repeat_mod_level:
             if cast_to:
                 try:
-                    # 提取数值部分，转换为整数
+                    # 提取数值部分和后缀，转换为整数
                     import re
 
-                    old_val = float(re.search(r"([\d.]+)", old_val_str).group(1))
-                    new_val = float(re.search(r"([\d.]+)", new_val_str).group(1))
-                    # 转换为整数，但如果原值有小数部分且为0，保留.0格式
-                    if old_val == int(old_val):
-                        old_val_str = f"{int(old_val)}.0{percent}"
-                    else:
-                        old_val_str = f"{int(old_val)}{percent}"
-                    if new_val == int(new_val):
-                        new_val_str = f"{int(new_val)}.0{percent}"
-                    else:
-                        new_val_str = f"{int(new_val)}{percent}"
+                    # 匹配数值和后缀（包括%）
+                    old_match = re.search(r"([\d.]+)(.*)", old_val_str)
+                    new_match = re.search(r"([\d.]+)(.*)", new_val_str)
+                    if old_match and new_match:
+                        old_val = float(old_match.group(1))
+                        new_val = float(new_match.group(1))
+                        old_suffix = old_match.group(2)
+                        new_suffix = new_match.group(2)
+
+                        # 转换为整数，但如果原值有小数部分且为0，保留.0格式
+                        if old_val == int(old_val):
+                            old_val_str = f"{int(old_val)}.0{old_suffix}"
+                            new_val_str = f"{int(new_val)}.0{new_suffix}"
+                        else:
+                            old_val_str = f"{int(old_val)}{old_suffix}"
+                            new_val_str = f"{int(new_val)}{new_suffix}"
                 except:
                     pass
 
@@ -515,7 +572,35 @@ class ModProcessor(BaseProcessor):
 
             # 使用新的函数计算普通表达式值，捕获可能的异常，确保使用正确的mod_level
             try:
-                expr_value = self._calculate_expr_value(expr, mod_id, mod_level, "Mod")
+                # 检查表达式是否包含*100等乘法操作
+                if "*" in expr:
+                    # 对于包含乘法操作的表达式，我们需要特殊处理
+                    # 例如：GetModValue(41413,4)*100
+                    import re
+
+                    # 提取函数调用部分和乘数
+                    func_match = re.match(r"(GetModValue\([^)]+\))\s*\*(\d+)", expr)
+                    if func_match:
+                        func_call = func_match.group(1)
+                        multiplier = float(func_match.group(2))
+
+                        # 计算函数调用的值
+                        func_value = self._calculate_expr_value(
+                            func_call, mod_id, mod_level, "Mod"
+                        )
+
+                        # 应用乘法
+                        expr_value = func_value * multiplier
+                    else:
+                        # 如果无法解析，使用默认计算方式
+                        expr_value = self._calculate_expr_value(
+                            expr, mod_id, mod_level, "Mod"
+                        )
+                else:
+                    # 普通表达式，直接计算
+                    expr_value = self._calculate_expr_value(
+                        expr, mod_id, mod_level, "Mod"
+                    )
 
                 # 根据是否有负号处理值
                 if has_neg:

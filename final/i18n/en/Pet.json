@@ -1,0 +1,1550 @@
+[
+  {
+    "id": 4011,
+    "uid": 4011,
+    "名称": "Miraculous Equinex",
+    "icon": "Zisha03",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Deals Umbro Damage equivalent to {%} of the main character's ATK to enemies within range, with an additional random attribute-based effect for {}s.",
+      "值": [
+        4.68,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "The main character and Combat Partners gain:\nUmbro ATK +{%}, Max HP +{%}",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4012,
+    "uid": 4012,
+    "名称": "Ardent Equinex",
+    "icon": "Zisha02",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Deals Umbro Damage equivalent to {%} of the main character's ATK to enemies within range, with an additional random attribute-based effect for {}s.",
+      "值": [
+        4.68,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "The main character and Combat Partners gain:\nUmbro ATK +{%}, Max HP +{%}",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4013,
+    "uid": 4013,
+    "名称": "Shiny Equinex",
+    "icon": "Zisha01",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Deals Umbro Damage equivalent to {%} of the main character's ATK to enemies within range, with an additional random attribute-based effect for {}s.",
+      "值": [
+        4.68,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "The main character and Combat Partners gain:\nUmbro ATK +{%}, Max HP +{%}",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4021,
+    "uid": 4021,
+    "名称": "Miraculous Dripplet",
+    "icon": "Yuyi01",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Increases ATK for self and allies by {%} for {}s.",
+      "值": [
+        0.075,
+        12
+      ]
+    },
+    "被动": {
+      "描述": "The main character and Combat Partners gain:\nHydro ATK +{%}, Max HP +{%}",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4022,
+    "uid": 4022,
+    "名称": "Ardent Dripplet",
+    "icon": "Yuyi02",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Increases ATK for self and allies by {%} for {}s.",
+      "值": [
+        0.075,
+        12
+      ]
+    },
+    "被动": {
+      "描述": "The main character and Combat Partners gain:\nHydro ATK +{%}, Max HP +{%}",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4023,
+    "uid": 4023,
+    "名称": "Shiny Dripplet",
+    "icon": "Yuyi03",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Increases ATK for self and allies by {%} for {}s.",
+      "值": [
+        0.075,
+        12
+      ]
+    },
+    "被动": {
+      "描述": "The main character and Combat Partners gain:\nHydro ATK +{%}, Max HP +{%}",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4031,
+    "uid": 4031,
+    "名称": "Miraculous Zippyro",
+    "icon": "Dahuo01",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Restores {} Sanity to self and allies.",
+      "值": [
+        9
+      ]
+    },
+    "被动": {
+      "描述": "The main character and Combat Partners gain:\nPyro ATK +{%}, Max HP +{%}",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4032,
+    "uid": 4032,
+    "名称": "Ardent Zippyro",
+    "icon": "Dahuo02",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Restores {} Sanity to self and allies.",
+      "值": [
+        9
+      ]
+    },
+    "被动": {
+      "描述": "The main character and Combat Partners gain:\nPyro ATK +{%}, Max HP +{%}",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4033,
+    "uid": 4033,
+    "名称": "Shiny Zippyro",
+    "icon": "Dahuo03",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Restores {} Sanity to self and allies.",
+      "值": [
+        9
+      ]
+    },
+    "被动": {
+      "描述": "The main character and Combat Partners gain:\nPyro ATK +{%}, Max HP +{%}",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4039,
+    "uid": 4031,
+    "名称": "Miraculous Zippyro",
+    "icon": "Dahuo01",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Restores {} Sanity to self and allies.",
+      "值": [
+        9
+      ]
+    },
+    "被动": {
+      "描述": "The main character and Combat Partners gain:\nPyro ATK +{%}, Max HP +{%}",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4041,
+    "uid": 4041,
+    "名称": "Miraculous Cubolt",
+    "icon": "Zhamao01",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Damage, or +{%} Skill Duration.",
+      "值": [
+        10,
+        120,
+        0.1,
+        0.1,
+        0.075,
+        0.1
+      ]
+    },
+    "被动": {
+      "描述": "The main character and Combat Partners gain:\nElectro ATK +{%}, Max HP +{%}",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4042,
+    "uid": 4042,
+    "名称": "Ardent Cubolt",
+    "icon": "Zhamao02",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Damage, or +{%} Skill Duration.",
+      "值": [
+        10,
+        120,
+        0.1,
+        0.1,
+        0.075,
+        0.1
+      ]
+    },
+    "被动": {
+      "描述": "The main character and Combat Partners gain:\nElectro ATK +{%}, Max HP +{%}",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4043,
+    "uid": 4043,
+    "名称": "Shiny Cubolt",
+    "icon": "Zhamao03",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Damage, or +{%} Skill Duration.",
+      "值": [
+        10,
+        120,
+        0.1,
+        0.1,
+        0.075,
+        0.1
+      ]
+    },
+    "被动": {
+      "描述": "The main character and Combat Partners gain:\nElectro ATK +{%}, Max HP +{%}",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4049,
+    "uid": 4041,
+    "名称": "Miraculous Cubolt",
+    "icon": "Zhamao01",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Damage, or +{%} Skill Duration.",
+      "值": [
+        10,
+        120,
+        0.1,
+        0.1,
+        0.075,
+        0.1
+      ]
+    },
+    "被动": {
+      "描述": "The main character and Combat Partners gain:\nElectro ATK +{%}, Max HP +{%}",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4051,
+    "uid": 4051,
+    "名称": "Miraculous Shroomie",
+    "icon": "Yaoye01",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Heals self and allies by {%} of the main character's Max HP.",
+      "值": [
+        0.15
+      ]
+    },
+    "被动": {
+      "描述": "The main character and Combat Partners gain:\nAnemo ATK +{%}, Max HP +{%}",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4052,
+    "uid": 4052,
+    "名称": "Ardent Shroomie",
+    "icon": "Yaoye02",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Heals self and allies by {%} of the main character's Max HP.",
+      "值": [
+        0.15
+      ]
+    },
+    "被动": {
+      "描述": "The main character and Combat Partners gain:\nAnemo ATK +{%}, Max HP +{%}",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4053,
+    "uid": 4053,
+    "名称": "Shiny Shroomie",
+    "icon": "Yaoye03",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Heals self and allies by {%} of the main character's Max HP.",
+      "值": [
+        0.15
+      ]
+    },
+    "被动": {
+      "描述": "The main character and Combat Partners gain:\nAnemo ATK +{%}, Max HP +{%}",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4061,
+    "uid": 4061,
+    "名称": "Miraculous Lumi",
+    "icon": "Shanling01",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Deals Lumino DMG equal to {%} of the main character's ATK to enemies within range, while decreasing their Damage Dealt by {%} for {}s.",
+      "值": [
+        4.68,
+        0.018,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "The main character and Combat Partners gain:\nLumino ATK +{%}, Max HP +{%}",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4062,
+    "uid": 4062,
+    "名称": "Ardent Lumi",
+    "icon": "Shanling02",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Deals Lumino DMG equal to {%} of the main character's ATK to enemies within range, while decreasing their Damage Dealt by {%} for {}s.",
+      "值": [
+        4.68,
+        0.018,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "The main character and Combat Partners gain:\nLumino ATK +{%}, Max HP +{%}",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4063,
+    "uid": 4063,
+    "名称": "Shiny Lumi",
+    "icon": "Shanling03",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Deals Lumino DMG equal to {%} of the main character's ATK to enemies within range, while decreasing their Damage Dealt by {%} for {}s.",
+      "值": [
+        4.68,
+        0.018,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "The main character and Combat Partners gain:\nLumino ATK +{%}, Max HP +{%}",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4071,
+    "uid": 4071,
+    "名称": "Miraculous Bro Boxie",
+    "icon": "Nihao01",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 150,
+    "主动": {
+      "描述": "Deals damage equal to {%} of the main character's ATK to nearby enemies. Detects 1 Geniemon and 1 Chest within 100m, marking their positions for 30s.",
+      "值": [
+        11.7
+      ]
+    },
+    "被动": {
+      "描述": "Auto-Pickup Range +{}m, EXP gained from defeated enemies +{%}, and a {%} chance to drop bonus loot.",
+      "值": [
+        0.075,
+        0.075,
+        20
+      ]
+    }
+  },
+  {
+    "id": 4072,
+    "uid": 4072,
+    "名称": "Ardent Bro Boxie",
+    "icon": "Nihao02",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 150,
+    "主动": {
+      "描述": "Deals damage equal to {%} of the main character's ATK to nearby enemies. Detects 1 Geniemon and 1 Chest within 100m, marking their positions for 30s.",
+      "值": [
+        11.7
+      ]
+    },
+    "被动": {
+      "描述": "Auto-Pickup Range +{}m, EXP gained from defeated enemies +{%}, and a {%} chance to drop bonus loot.",
+      "值": [
+        0.075,
+        0.075,
+        20
+      ]
+    }
+  },
+  {
+    "id": 4073,
+    "uid": 4073,
+    "名称": "Shiny Bro Boxie",
+    "icon": "Nihao03",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 150,
+    "主动": {
+      "描述": "Deals damage equal to {%} of the main character's ATK to nearby enemies. Detects 1 Geniemon and 1 Chest within 100m, marking their positions for 30s.",
+      "值": [
+        11.7
+      ]
+    },
+    "被动": {
+      "描述": "Auto-Pickup Range +{}m, EXP gained from defeated enemies +{%}, and a {%} chance to drop bonus loot.",
+      "值": [
+        0.075,
+        0.075,
+        20
+      ]
+    }
+  },
+  {
+    "id": 4079,
+    "uid": 4071,
+    "名称": "Miraculous Bro Boxie",
+    "icon": "Nihao01",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 150,
+    "主动": {
+      "描述": "Deals damage equal to {%} of the main character's ATK to nearby enemies. Detects 1 Geniemon and 1 Chest within 100m, marking their positions for 30s.",
+      "值": [
+        11.7
+      ]
+    },
+    "被动": {
+      "描述": "Auto-Pickup Range +{}m, EXP gained from defeated enemies +{%}, and a {%} chance to drop bonus loot.",
+      "值": [
+        0.075,
+        0.075,
+        20
+      ]
+    }
+  },
+  {
+    "id": 4081,
+    "uid": 4081,
+    "名称": "Miraculous Pearabbit",
+    "icon": "Zhenzhu01",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 150,
+    "主动": {
+      "描述": "Grants self and allies -{%} Damage Taken for {}s.",
+      "值": [
+        0.45,
+        0.9
+      ]
+    },
+    "被动": {
+      "描述": "Jump Speed +{%}, Helix Leap Speed +{%}, Sliding Friction -{%}.",
+      "值": [
+        0.075,
+        0.075,
+        0.05
+      ]
+    }
+  },
+  {
+    "id": 4082,
+    "uid": 4082,
+    "名称": "Ardent Pearabbit",
+    "icon": "Zhenzhu02",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 150,
+    "主动": {
+      "描述": "Grants self and allies -{%} Damage Taken for {}s.",
+      "值": [
+        0.45,
+        0.9
+      ]
+    },
+    "被动": {
+      "描述": "Jump Speed +{%}, Helix Leap Speed +{%}, Sliding Friction -{%}.",
+      "值": [
+        0.075,
+        0.075,
+        0.05
+      ]
+    }
+  },
+  {
+    "id": 4083,
+    "uid": 4083,
+    "名称": "Shiny Pearabbit",
+    "icon": "Zhenzhu03",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 150,
+    "主动": {
+      "描述": "Grants self and allies -{%} Damage Taken for {}s.",
+      "值": [
+        0.45,
+        0.9
+      ]
+    },
+    "被动": {
+      "描述": "Jump Speed +{%}, Helix Leap Speed +{%}, Sliding Friction -{%}.",
+      "值": [
+        0.075,
+        0.075,
+        0.05
+      ]
+    }
+  },
+  {
+    "id": 4091,
+    "uid": 4091,
+    "名称": "Miraculous Mr Goodnight",
+    "icon": "Haomeng01",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 150,
+    "主动": {
+      "描述": "Continuously heals self and allies, restoring {%} of their Max HP per second for {}s.",
+      "值": [
+        0.027,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "ATK +{%}, Max HP +{%}, DEF +{%}.",
+      "值": [
+        0.018,
+        0.018,
+        0.018
+      ]
+    }
+  },
+  {
+    "id": 4092,
+    "uid": 4092,
+    "名称": "Ardent Mr Goodnight",
+    "icon": "Haomeng02",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 150,
+    "主动": {
+      "描述": "Continuously heals self and allies, restoring {%} of their Max HP per second for {}s.",
+      "值": [
+        0.027,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "ATK +{%}, Max HP +{%}, DEF +{%}.",
+      "值": [
+        0.018,
+        0.018,
+        0.018
+      ]
+    }
+  },
+  {
+    "id": 4093,
+    "uid": 4093,
+    "名称": "Shiny Mr Goodnight",
+    "icon": "Haomeng03",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 150,
+    "主动": {
+      "描述": "Continuously heals self and allies, restoring {%} of their Max HP per second for {}s.",
+      "值": [
+        0.027,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "ATK +{%}, Max HP +{%}, DEF +{%}.",
+      "值": [
+        0.018,
+        0.018,
+        0.018
+      ]
+    }
+  },
+  {
+    "id": 4111,
+    "uid": 4111,
+    "名称": "Miraculous Nebuthis",
+    "icon": "Fuyou01",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Deals Umbro Damage equal to {%} of the main character's ATK to enemies within range and reduces their DEF by {%} for {}s.",
+      "值": [
+        5.85,
+        0.03,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Increases Umbro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4112,
+    "uid": 4112,
+    "名称": "Ardent Nebuthis",
+    "icon": "Fuyou02",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Deals Umbro Damage equal to {%} of the main character's ATK to enemies within range and reduces their DEF by {%} for {}s.",
+      "值": [
+        5.85,
+        0.03,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Increases Umbro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4113,
+    "uid": 4113,
+    "名称": "Shiny Nebuthis",
+    "icon": "Fuyou03",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Deals Umbro Damage equal to {%} of the main character's ATK to enemies within range and reduces their DEF by {%} for {}s.",
+      "值": [
+        5.85,
+        0.03,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Increases Umbro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4121,
+    "uid": 4121,
+    "名称": "Miraculous Bunniva",
+    "icon": "Tangshuang01",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Increases ATK of all allied [Summons] by {%} for {}s.",
+      "值": [
+        0.09,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Increases Hydro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4122,
+    "uid": 4122,
+    "名称": "Ardent Bunniva",
+    "icon": "Tangshuang02",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Increases ATK of all allied [Summons] by {%} for {}s.",
+      "值": [
+        0.09,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Increases Hydro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4123,
+    "uid": 4123,
+    "名称": "Shiny Bunniva",
+    "icon": "Tangshuang03",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Increases ATK of all allied [Summons] by {%} for {}s.",
+      "值": [
+        0.09,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Increases Hydro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4131,
+    "uid": 4131,
+    "名称": "Miraculous Pyrootail",
+    "icon": "YYHW01",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Spawns 1 [Activated Sal Volatile], 1 [Tranquilizer Dewdrop], and 1 [Ammo Supply Chest]. Increases Skill Duration for self and allies by {%} for {}s.",
+      "值": [
+        0.15,
+        15
+      ]
+    },
+    "被动": {
+      "描述": "Increases Pyro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4132,
+    "uid": 4132,
+    "名称": "Ardent Pyrootail",
+    "icon": "YYHW02",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Spawns 1 [Activated Sal Volatile], 1 [Tranquilizer Dewdrop], and 1 [Ammo Supply Chest]. Increases Skill Duration for self and allies by {%} for {}s.",
+      "值": [
+        0.15,
+        15
+      ]
+    },
+    "被动": {
+      "描述": "Increases Pyro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4133,
+    "uid": 4133,
+    "名称": "Shiny Pyrootail",
+    "icon": "YYHW03",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Spawns 1 [Activated Sal Volatile], 1 [Tranquilizer Dewdrop], and 1 [Ammo Supply Chest]. Increases Skill Duration for self and allies by {%} for {}s.",
+      "值": [
+        0.15,
+        15
+      ]
+    },
+    "被动": {
+      "描述": "Increases Pyro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4141,
+    "uid": 4141,
+    "名称": "Miraculous Catizz",
+    "icon": "Pipa01",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Grants self and allies {} Ultra Shield points and restores their Sanity by {}.",
+      "值": [
+        225,
+        9
+      ]
+    },
+    "被动": {
+      "描述": "Increases Electro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4142,
+    "uid": 4142,
+    "名称": "Ardent Catizz",
+    "icon": "Pipa03",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Grants self and allies {} Ultra Shield points and restores their Sanity by {}.",
+      "值": [
+        225,
+        9
+      ]
+    },
+    "被动": {
+      "描述": "Increases Electro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4143,
+    "uid": 4143,
+    "名称": "Shiny Catizz",
+    "icon": "Pipa02",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Grants self and allies {} Ultra Shield points and restores their Sanity by {}.",
+      "值": [
+        225,
+        9
+      ]
+    },
+    "被动": {
+      "描述": "Increases Electro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4151,
+    "uid": 4151,
+    "名称": "Miraculous Dandemeow",
+    "icon": "Mianmian01",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Heals self and allies for {%} of the main character's Max HP and grants +{%} DEF for {}s.",
+      "值": [
+        0.06,
+        15,
+        0.18
+      ]
+    },
+    "被动": {
+      "描述": "Increases Anemo ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4152,
+    "uid": 4152,
+    "名称": "Ardent Dandemeow",
+    "icon": "Mianmian02",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Heals self and allies for {%} of the main character's Max HP and grants +{%} DEF for {}s.",
+      "值": [
+        0.06,
+        15,
+        0.18
+      ]
+    },
+    "被动": {
+      "描述": "Increases Anemo ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4153,
+    "uid": 4153,
+    "名称": "Shiny Dandemeow",
+    "icon": "Mianmian03",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Heals self and allies for {%} of the main character's Max HP and grants +{%} DEF for {}s.",
+      "值": [
+        0.06,
+        15,
+        0.18
+      ]
+    },
+    "被动": {
+      "描述": "Increases Anemo ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4161,
+    "uid": 4161,
+    "名称": "Miraculous Ballbee",
+    "icon": "Qiuqiu01",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill Damage taken by them by {%} for {}s.",
+      "值": [
+        5.85,
+        0.036,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Increases Lumino ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4162,
+    "uid": 4162,
+    "名称": "Ardent Ballbee",
+    "icon": "Qiuqiu02",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill Damage taken by them by {%} for {}s.",
+      "值": [
+        5.85,
+        0.036,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Increases Lumino ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4163,
+    "uid": 4163,
+    "名称": "Shiny Ballbee",
+    "icon": "Qiuqiu03",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill Damage taken by them by {%} for {}s.",
+      "值": [
+        5.85,
+        0.036,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Increases Lumino ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4211,
+    "uid": 4211,
+    "名称": "Umbrelf",
+    "icon": "Heiyao",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Deals Umbro DMG equal to {%} of the main character's ATK to nearby enemies, and increases [Morale] for self and allies by {%} for {}s.",
+      "值": [
+        11.7,
+        0.06,
+        12
+      ]
+    },
+    "被动": {
+      "描述": "Increases Umbro ATK for the main character and the Combat Partners by {%} and the stats provided by Umbro Demon Wedges prefixed with [Griffin], [Typhon], and [Covenanter] by {%}.",
+      "值": [
+        0.024,
+        0.009
+      ]
+    }
+  },
+  {
+    "id": 4221,
+    "uid": 4221,
+    "名称": "Hydrelf",
+    "icon": "Jinqing",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "For each [Summon] summoned by the main character, increases damage dealt by self and allies by {%} for {}s, up to {%}.",
+      "值": [
+        0.0405,
+        0.162,
+        12
+      ]
+    },
+    "被动": {
+      "描述": "Increases Hydro ATK for the main character and the Combat Partners by {%} and the stats provided by Hydro Demon Wedges prefixed with [Griffin], [Typhon], and [Covenanter] by {%}.",
+      "值": [
+        0.024,
+        0.009
+      ]
+    }
+  },
+  {
+    "id": 4231,
+    "uid": 4231,
+    "名称": "Pyrelf",
+    "icon": "Manao",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Deals Pyro DMG equal to {%} of the main character's ATK to nearby enemies, and increases [Multishot] for self and allies by {%} for {}s.",
+      "值": [
+        11.7,
+        0.105,
+        12
+      ]
+    },
+    "被动": {
+      "描述": "Increases Pyro ATK for the main character and the Combat Partners by {%} and the stats provided by Pyro Demon Wedges prefixed with [Griffin], [Typhon], and [Covenanter] by {%}.",
+      "值": [
+        0.024,
+        0.009
+      ]
+    }
+  },
+  {
+    "id": 4241,
+    "uid": 4241,
+    "名称": "Electrelf",
+    "icon": "Zijing",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Restores {} Sanity to self and allies, and increases their Skill DMG by {%} for {}s.",
+      "值": [
+        15,
+        0.105,
+        12
+      ]
+    },
+    "被动": {
+      "描述": "Increases Electro ATK for the main character and the Combat Partners by {%} and the stats provided by Electro Demon Wedges prefixed with [Griffin], [Typhon], and [Covenanter] by {%}.",
+      "值": [
+        0.024,
+        0.009
+      ]
+    }
+  },
+  {
+    "id": 4251,
+    "uid": 4251,
+    "名称": "Anemelf",
+    "icon": "Bixi",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Increases [Resolve] by {%} for self and allies for {}s. If the main character's HP falls below 25%, instantly heals them for {%} HP.",
+      "值": [
+        0.06,
+        12,
+        0.1
+      ]
+    },
+    "被动": {
+      "描述": "Increases Anemo ATK for the main character and the Combat Partners by {%} and the stats provided by Anemo Demon Wedges prefixed with [Griffin], [Typhon], and [Covenanter] by {%}.",
+      "值": [
+        0.024,
+        0.009
+      ]
+    }
+  },
+  {
+    "id": 4261,
+    "uid": 4261,
+    "名称": "Luminelf",
+    "icon": "Oubo",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Deals Lumino DMG equal to {%} of the main character's ATK to nearby enemies, and grants +{%} Lumino additional DMG to self and allies for {}s.",
+      "值": [
+        11.7,
+        0.0315,
+        12
+      ]
+    },
+    "被动": {
+      "描述": "Increases Lumino ATK for the main character and the Combat Partners by {%} and the stats provided by Lumino Demon Wedges prefixed with [Griffin], [Typhon], and [Covenanter] by {%}.",
+      "值": [
+        0.024,
+        0.009
+      ]
+    }
+  },
+  {
+    "id": 4911,
+    "uid": 4911,
+    "名称": "Miraculous Healing Drone",
+    "icon": "HealRobot01",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4912,
+    "uid": 4912,
+    "名称": "Ardent Healing Drone",
+    "icon": "HealRobot02",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4913,
+    "uid": 4913,
+    "名称": "Ethereal Healing Drone",
+    "icon": "HealRobot03",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4921,
+    "uid": 4921,
+    "名称": "Miraculous Magnetix Drone",
+    "icon": "BlastRobot01",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4922,
+    "uid": 4922,
+    "名称": "Ardent Magnetix Drone",
+    "icon": "BlastRobot02",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4923,
+    "uid": 4923,
+    "名称": "Ethereal Magnetix Drone",
+    "icon": "BlastRobot03",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4931,
+    "uid": 4931,
+    "名称": "Miraculous Jellomon",
+    "icon": "YYD01",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4932,
+    "uid": 4932,
+    "名称": "Ardent Jellomon",
+    "icon": "YYD02",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4933,
+    "uid": 4933,
+    "名称": "Ethereal Jellomon",
+    "icon": "YYD03",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4934,
+    "uid": 4931,
+    "名称": "Miraculous Jellomon",
+    "icon": "YYD01",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4935,
+    "uid": 4931,
+    "名称": "Miraculous Jellomon",
+    "icon": "YYD01",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4936,
+    "uid": 4932,
+    "名称": "Ardent Jellomon",
+    "icon": "YYD02",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4941,
+    "uid": 4941,
+    "名称": "Luminous Jellomon",
+    "icon": "YYD04",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4942,
+    "uid": 4941,
+    "名称": "Luminous Jellomon: At peace",
+    "icon": "YYD04",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4943,
+    "uid": 4941,
+    "名称": "Luminous Jellomon: Deft",
+    "icon": "YYD04",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  }
+]
