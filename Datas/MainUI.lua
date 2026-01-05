@@ -303,6 +303,7 @@ return ReadOnly("MainUI", {
     EscShowType = 1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_TrainingLevel.T_Entrance_TrainingLevel",
     Name = "MAIN_UI_PlayLevel",
+    ReddotNode = "ExperienceMain",
     Sequence = 95,
     SystemUIName = "ExperienceMain",
     UIUnlockRuleName = "PlayerLevel"

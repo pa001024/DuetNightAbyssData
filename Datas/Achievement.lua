@@ -5199,7 +5199,7 @@ return ReadOnly("Achievement", {
     AchievementId = 10010101,
     AchievementName = "UI_Achievement_Name_10010101",
     AchievementRarity = 3,
-    AchievementReward = 7001,
+    AchievementReward = 7480,
     AchievementType = 10,
     TargetId = T.RT_3,
     TargetProgress = 20
@@ -5221,7 +5221,7 @@ return ReadOnly("Achievement", {
     AchievementName = "UI_Achievement_Name_10010103",
     AchievementRarity = 1,
     AchievementRequire = {10010102},
-    AchievementReward = 7003,
+    AchievementReward = 7481,
     AchievementType = 10,
     TargetId = T.RT_3,
     TargetProgress = 100
@@ -6046,7 +6046,7 @@ return ReadOnly("Achievement", {
     AchievementName = "UI_Achievement_Name_160010103",
     AchievementRarity = 1,
     AchievementRequire = {160010102},
-    AchievementReward = 7003,
+    AchievementReward = 7482,
     AchievementType = 10,
     TargetId = T.RT_51,
     TargetProgress = 75,

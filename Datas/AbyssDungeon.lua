@@ -558,7 +558,7 @@ T.RT_74 = {
 T.RT_75 = {
   100,
   11221,
-  205,
+  204,
   11222
 }
 T.RT_76 = {
@@ -1278,7 +1278,7 @@ return ReadOnly("AbyssDungeon", {
     AbyssBuffID = {
       100,
       11221,
-      205
+      204
     },
     AbyssDungeonId = 2113012,
     DungeonId = 20101,

@@ -8797,7 +8797,6 @@ return ReadOnly("Buff", {
     AddAttrs = {
       [1] = {
         AttrName = "DamageRate",
-        DamageTag = "Skill",
         RateZone = "AbyssDown",
         Value = -0.25
       },
