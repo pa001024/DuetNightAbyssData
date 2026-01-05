@@ -14,6 +14,14 @@ class DungeonProcessor(BaseProcessor):
         self.mod_dungeon_mon_reward_data = data_loader.load_json(
             "ModDungeonMonReward.json"
         )
+        self.e_map = {
+            "Dark": "暗",
+            "Light": "光",
+            "Water": "水",
+            "Fire": "火",
+            "Thunder": "雷",
+            "Wind": "风",
+        }
 
     def process_item(self, dungeon_data, language):
         """处理单个Dungeon数据
@@ -40,11 +48,14 @@ class DungeonProcessor(BaseProcessor):
             "id": dungeon_id,
             "n": dungeon_name,
             "t": dungeon_data.get("DungeonType", ""),
+            "e": self.e_map.get(dungeon_data.get("AttributeType", ""), ""),
             "ts": self.get_translated_text(dungeon_data.get("DungeonTypeShow", "")),
             "lv": dungeon_data.get("DungeonLevel", 0),
             # "地图文件": dungeon_data.get("DungeonMapFile", ""),
             "rd": dungeon_data.get("IsRandom", 0),
         }
+        if not processed["e"]:
+            del processed["e"]
 
         if processed["ts"].startswith("DUNGEON_NAME_") or processed["ts"] == "":
             del processed["ts"]
