@@ -10,6 +10,8 @@ from processor.draft_processor import DraftProcessor
 from processor.dungeon_processor import DungeonProcessor
 from processor.reward_processor import RewardProcessor
 from processor.pet_processor import PetProcessor
+from processor.abyss_buff_processor import AbyssBuffProcessor
+from processor.abyss_dungeon_processor import AbyssDungeonProcessor
 
 
 class DataLoader:
@@ -193,6 +195,8 @@ class FinalProcessor:
             "Dungeon": DungeonProcessor,
             "Reward": RewardProcessor,
             "Pet": PetProcessor,
+            "AbyssBuff": AbyssBuffProcessor,
+            "AbyssDungeon": AbyssDungeonProcessor,
             # Add other processor classes here as they are implemented
         }
 
@@ -285,15 +289,17 @@ if __name__ == "__main__":
     # Example: process multiple file types (when other processors are implemented)
     FILE_TYPES = [
         #  11
-        "Achievement",
-        "Mod",
-        "Weapon",
-        "Char",
-        "Monster",
-        "Draft",
-        "Dungeon",
-        "Reward",
-        "Pet",
+        # "Achievement",
+        # "Mod",
+        # "Weapon",
+        # "Char",
+        # "Monster",
+        # "Draft",
+        # "Dungeon",
+        # "Reward",
+        # "Pet",
+        # "AbyssBuff",
+        "AbyssDungeon",
     ]
 
     # Create processor and process all specified file types for all languages

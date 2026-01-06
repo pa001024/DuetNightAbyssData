@@ -1,0 +1,245 @@
+[
+  {
+    "id": 10,
+    "icon": "Mon_Boss",
+    "n": "Invincible Cadence: Bastion of Loyalty",
+    "d": "When an Extreme-Threat enemy's HP falls below 50%, it becomes invincible for 30s and summons reinforcements. Each defeated enemy grants all allied units 1 stack of 1% Damage Dealt Increase, stacking up to 50 times. Invincibility ends early once a set number of enemies are defeated.",
+    "t": 2,
+    "tip": "Takes effect from Classic Repertoire Act Ⅴ"
+  },
+  {
+    "id": 20,
+    "icon": "Mon_Survive02",
+    "n": "Bulwark Cadence: Trembling Paladin",
+    "d": "Enemy units take 80% less damage, but each time they take Skill Damage or Weapon Damage, the damage reduction decreases by 1%.",
+    "t": 2,
+    "tip": "Takes effect when the Classic Repertoire Act Ⅲ challenge starts "
+  },
+  {
+    "id": 30,
+    "icon": "Common",
+    "n": "Andante Furioso: Onslaught's Boon",
+    "d": "Every 5 instances of damage dealt by any ally grant 1 stack of 12% ATK Increase, lasting 10 s and stacking up to 10 times.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 100,
+    "icon": "Mon_Boss",
+    "n": "Invincible Cadence: Bastion of Loyalty",
+    "d": "When an Extreme-Threat enemy's HP falls below 50%, it becomes invincible for 30s and summons reinforcements. Each defeated enemy grants all allied units 1 stack of 1% Damage Dealt Increase, stacking up to 50 times. Invincibility ends early once a set number of enemies are defeated.",
+    "t": 2
+  },
+  {
+    "id": 201,
+    "icon": "Mon_Survive02",
+    "n": "Bulwark Cadence: Trembling Paladin",
+    "d": "Enemy units take 80% less damage, but each time they take Skill Damage or Weapon Damage, the damage reduction decreases by 1%.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 202,
+    "icon": "Mon_Survive02",
+    "n": "Bulwark Cadence: Hero's Heel",
+    "d": "Enemy units take 80% less damage, but each time they take CRIT Damage, the damage reduction decreases by 2%.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 203,
+    "icon": "Mon_Survive02",
+    "n": "Defence Variation: Sniper's Honour",
+    "d": "Enemies take 80% less damage. This reduction diminishes by 2% each time they take damage from a ranged weapon.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 204,
+    "icon": "Mon_Survive02",
+    "n": "Defence Variation: Braveheart",
+    "d": "Enemy units take 80% reduced damage. This reduction diminishes by 2% each time they take weapon damage.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 205,
+    "icon": "Mon_Survive02",
+    "n": "Defence Variation: Swordsman's Honour",
+    "d": "Enemy units take 80% reduced damage. This reduction diminishes by 4% each time they take melee weapon damage.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 206,
+    "icon": "Mon_Survive02",
+    "n": "Defence Variation: Endless Trial",
+    "d": "Enemy units take 60% reduced damage. This reduction diminishes by 6% each time they take periodic damage.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 211,
+    "icon": "Mon_Survive02",
+    "n": "Shield Variation: Gloom of the Undying",
+    "d": "Enemies regenerate 30% of their Max Shield every 3 seconds. Regeneration pauses while any elemental bonus effect is active.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 301,
+    "icon": "Skill",
+    "n": "Andante Furioso: Ingenuity's Boon",
+    "d": "Every 5 instances of damage dealt by any ally grant 1 stack of 10% Skill Damage Increase, lasting 15 s and stacking up to 10 times.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 302,
+    "icon": "Range",
+    "n": "Allegro Agitato: Predator's Instinct",
+    "d": "Increases all allies' Ranged Weapon DMG by 50%.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 303,
+    "icon": "Common",
+    "n": "Andante Furioso: Mana-Seeking Bird",
+    "d": "When any ally deals Weapon DMG, that hit's CRIT Chance increases by 20% per elemental bonus effect on the target, stacking up to 4 times.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 304,
+    "icon": "Skill",
+    "n": "Allegro Agitato: Rogue Archive",
+    "d": "For every 15 Sanity spent by all allies in total, grants 20% Skill Damage Increase for 15s, stacking up to 5 times. At max stacks, grants immunity to Hitstun.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 401,
+    "icon": "Mon_Aura",
+    "n": "Fanfare Cadence: Banner's Covenant",
+    "d": "While a Primander is present, nearby enemies take 25% less damage.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 402,
+    "icon": "Mon_Survive01",
+    "n": "Defence Variation: Uncrowned Arena",
+    "d": "Enemies take 50% less Melee Weapon DMG.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 511,
+    "icon": "Exchange",
+    "n": "Coordinated Adagio: Munitions Emperor",
+    "d": "Allies lose 50% periodic damage and gain 50% Weapon DMG.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 512,
+    "icon": "Exchange",
+    "n": "Coordinated Adagio: Soul Insight",
+    "d": "Allies lose 50% CRIT Damage. Skill damage has a 100% chance to trigger an elemental bonus effect.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 905,
+    "icon": "Mon_Survive01",
+    "n": "Defence Variation: Thoroughly Tempered",
+    "d": "Damage taken by enemy units per hit is capped at 35% of their max HP.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 920,
+    "icon": "Exchange",
+    "n": "Verdict Cadence: Ballad of Water & Light",
+    "d": "Enemy units take 400% increased Hydro and Lumino damage. Damage taken from all other elements is reduced by 50%.",
+    "t": 1
+  },
+  {
+    "id": 925,
+    "icon": "Exchange",
+    "n": "Verdict Cadence: Ballad of Water & Wind",
+    "d": "Enemy units take 400% increased Hydro and Anemo damage. Damage taken from all other elements is reduced by 50%.",
+    "t": 1
+  },
+  {
+    "id": 935,
+    "icon": "Exchange",
+    "n": "Verdict Cadence: Ballad of Fire & Wind",
+    "d": "Enemy units take increased Pyro and Anemo Damage by 400%, and take reduced damage from other Attributes by 50%.",
+    "t": 1
+  },
+  {
+    "id": 951,
+    "icon": "Exchange",
+    "n": "Verdict Cadence: Ballad of Wind & Shadow",
+    "d": "Enemy units take increased Anemo and Umbro Damage by 400%, and take reduced damage from other Attributes by 50%.",
+    "t": 1
+  },
+  {
+    "id": 11111,
+    "icon": "Mon_Survive02",
+    "n": "Defence Variation: Brotherhood",
+    "d": "Enemy units take 60.0% reduced damage. This reduction diminishes by 10% each time they take damage from a different ally to the previous one.",
+    "t": 2
+  },
+  {
+    "id": 11113,
+    "icon": "Common",
+    "n": "Andante Furioso: Avatar of Redemption",
+    "d": "Allies gain 1 stack of +10% ATK Speed and +5% Skill Speed for 10s when healed by other allies, stacking up to 6 times. At max stacks, allies become immune to Hitstun.",
+    "t": 1
+  },
+  {
+    "id": 11121,
+    "icon": "Range",
+    "n": "Allegro Agitato: Bloodbound Crescendo",
+    "d": "Each 4% of max HP an ally loses grants 1 stack of +10% CRIT Chance for 12s, stacking up to 10 times.",
+    "t": 1
+  },
+  {
+    "id": 11122,
+    "icon": "Exchange",
+    "n": "Coordinated Adagio: Shattered Blade",
+    "d": "Allies lose 50% Weapon DMG and gain 100% CRIT Damage.",
+    "t": 2
+  },
+  {
+    "id": 11211,
+    "icon": "Skill",
+    "n": "Allegro Agitato: Giant's Hunt",
+    "d": "When an ally's HP is above 80%, their Skill Damage is increased by 100%, and they become immune to Hitstun.",
+    "t": 1
+  },
+  {
+    "id": 11212,
+    "icon": "Exchange",
+    "n": "Coordinated Adagio: Fatal Alchemist",
+    "d": "Allies lose 100% CRIT Damage and gain 50% periodic damage.",
+    "t": 2
+  },
+  {
+    "id": 11221,
+    "icon": "Melee",
+    "n": "Andante Furioso: Hero's Resolve",
+    "d": "After using a melee attack, allies gain 1 stack of +10% weapon damage for 10s, stacking up to 5 times. At max stacks, allies become immune to Hitstun.",
+    "t": 1
+  },
+  {
+    "id": 11222,
+    "icon": "Exchange",
+    "n": "Coordinated Adagio: Overload Armour",
+    "d": "Allies lose 25% Skill DMG and gain 100% CRIT Chance.",
+    "t": 2
+  }
+]

@@ -27,6 +27,7 @@ class MonsterProcessor(BaseProcessor):
         for gallery_id, gallery_info in ga.items():
             self.valid_monster_ids.add(int(gallery_id))
         dungeon_data = data_loader.load_json("Dungeon.json")
+
         for dungeon_id, dungeon_info in dungeon_data.items():
             # 检查DungeonID是否大于20000
             if isinstance(dungeon_id, str):
@@ -44,6 +45,12 @@ class MonsterProcessor(BaseProcessor):
                     "DungeonInitGuideUnitId", []
                 )
                 for monster_id in dungeon_init_guide_unit_id:
+                    self.valid_monster_ids.add(monster_id)
+        abyss_dungeon_data = data_loader.load_json("AbyssDungeon.json")
+        for abyss_dungeon_id, abyss_dungeon_info in abyss_dungeon_data.items():
+            # 检查AbyssDungeonID是否大于20000
+            if abyss_dungeon_info.get("DungeonMonsters", []):
+                for monster_id in abyss_dungeon_info.get("DungeonMonsters", []):
                     self.valid_monster_ids.add(monster_id)
 
     def process_item(self, monster_data, language):
