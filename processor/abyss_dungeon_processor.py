@@ -160,7 +160,8 @@ class AbyssDungeonProcessor(BaseProcessor):
                     if attr:
                         # 将英文属性名映射为中文
                         chinese_attr = self.attribute_name_map.get(attr, attr)
-                        processed["mb"][chinese_attr] = 4
+                        if not processed["mb"].get(chinese_attr):
+                            processed["mb"][chinese_attr] = 4
 
         # 尝试获取关联的Dungeon名称
         # if str(dungeon_id) in self.dungeon_data:
