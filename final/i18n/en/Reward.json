@@ -45874,24 +45874,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 111001,
-        "t": "Drop",
+        "id": 11001,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Blaze"
       },
       {
-        "id": 112001,
-        "t": "Drop",
+        "id": 12001,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Impetus"
       },
       {
-        "id": 112006,
-        "t": "Drop",
+        "id": 12006,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Trammel"
       }
     ]
@@ -45901,24 +45904,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 111004,
-        "t": "Drop",
+        "id": 11004,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Wings"
       },
       {
-        "id": 112002,
-        "t": "Drop",
+        "id": 12002,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Focus"
       },
       {
-        "id": 112003,
-        "t": "Drop",
+        "id": 12003,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Rage"
       }
     ]
@@ -45928,24 +45934,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 111001,
-        "t": "Drop",
+        "id": 11001,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Blaze"
       },
       {
-        "id": 113001,
-        "t": "Drop",
+        "id": 13001,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Impetus"
       },
       {
-        "id": 113006,
-        "t": "Drop",
+        "id": 13006,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Trammel"
       }
     ]
@@ -45955,24 +45964,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 111004,
-        "t": "Drop",
+        "id": 11004,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Wings"
       },
       {
-        "id": 113002,
-        "t": "Drop",
+        "id": 13002,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Focus"
       },
       {
-        "id": 113003,
-        "t": "Drop",
+        "id": 13003,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Rage"
       }
     ]
@@ -45982,80 +45994,91 @@
     "m": "Weight",
     "child": [
       {
-        "id": 133004,
-        "t": "Drop",
+        "id": 33004,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Celerity"
       },
       {
-        "id": 133005,
-        "t": "Drop",
+        "id": 33005,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Foldover"
       },
       {
-        "id": 133101,
-        "t": "Drop",
+        "id": 33101,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Edge"
       },
       {
-        "id": 133102,
-        "t": "Drop",
+        "id": 33102,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Penetration"
       },
       {
-        "id": 133103,
-        "t": "Drop",
+        "id": 33103,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Crusher"
       },
       {
-        "id": 133201,
-        "t": "Drop",
+        "id": 33201,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Quiver"
       },
       {
-        "id": 133202,
-        "t": "Drop",
+        "id": 33202,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Arrow"
       },
       {
-        "id": 133203,
-        "t": "Drop",
+        "id": 33203,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Dexterity"
       },
       {
-        "id": 133321,
-        "t": "Drop",
+        "id": 33321,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Tyranny"
       },
       {
-        "id": 133331,
-        "t": "Drop",
+        "id": 33331,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Hunt"
       },
       {
-        "id": 133411,
-        "t": "Drop",
+        "id": 33411,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Coercion"
       }
     ]
@@ -46065,24 +46088,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 121005,
-        "t": "Drop",
+        "id": 21005,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Blaze·Wings"
       },
       {
-        "id": 122007,
-        "t": "Drop",
+        "id": 22007,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Impetus·Focus"
       },
       {
-        "id": 123007,
-        "t": "Drop",
+        "id": 23007,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Impetus·Focus"
       }
     ]
@@ -46092,24 +46118,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 121006,
-        "t": "Drop",
+        "id": 21006,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Nirvana·Blessing"
       },
       {
-        "id": 122008,
-        "t": "Drop",
+        "id": 22008,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Rage·Trammel"
       },
       {
-        "id": 123008,
-        "t": "Drop",
+        "id": 23008,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Rage·Trammel"
       }
     ]
@@ -46119,24 +46148,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 131216,
-        "t": "Drop",
+        "id": 31216,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Inspo·Shards"
       },
       {
-        "id": 132004,
-        "t": "Drop",
+        "id": 32004,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Celerity"
       },
       {
-        "id": 133004,
-        "t": "Drop",
+        "id": 33004,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Celerity"
       }
     ]
@@ -46146,24 +46178,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 131218,
-        "t": "Drop",
+        "id": 31218,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Wings·Shards"
       },
       {
-        "id": 132005,
-        "t": "Drop",
+        "id": 32005,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Threshold"
       },
       {
-        "id": 133005,
-        "t": "Drop",
+        "id": 33005,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Foldover"
       }
     ]
@@ -46173,24 +46208,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 131215,
-        "t": "Drop",
+        "id": 31215,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Inspo·Elapse"
       },
       {
-        "id": 132004,
-        "t": "Drop",
+        "id": 32004,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Celerity"
       },
       {
-        "id": 133004,
-        "t": "Drop",
+        "id": 33004,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Celerity"
       }
     ]
@@ -46200,24 +46238,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 131217,
-        "t": "Drop",
+        "id": 31217,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Wings·Elapse"
       },
       {
-        "id": 132005,
-        "t": "Drop",
+        "id": 32005,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Threshold"
       },
       {
-        "id": 133005,
-        "t": "Drop",
+        "id": 33005,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Foldover"
       }
     ]
@@ -46227,24 +46268,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 131301,
-        "t": "Drop",
+        "id": 31301,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Wings·Inspo"
       },
       {
-        "id": 132301,
-        "t": "Drop",
+        "id": 32301,
+        "t": "Mod",
         "c": 1,
         "p": 4,
+        "dp": 1,
         "n": "Utmost"
       },
       {
-        "id": 133322,
-        "t": "Drop",
+        "id": 33322,
+        "t": "Mod",
         "c": 1,
         "p": 4,
+        "dp": 1,
         "n": "Decline"
       }
     ]
@@ -46254,24 +46298,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 131201,
-        "t": "Drop",
+        "id": 31201,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Volition"
       },
       {
-        "id": 132301,
-        "t": "Drop",
+        "id": 32301,
+        "t": "Mod",
         "c": 1,
         "p": 4,
+        "dp": 1,
         "n": "Utmost"
       },
       {
-        "id": 133321,
-        "t": "Drop",
+        "id": 33321,
+        "t": "Mod",
         "c": 1,
         "p": 4,
+        "dp": 1,
         "n": "Tyranny"
       }
     ]
@@ -46281,24 +46328,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 131202,
-        "t": "Drop",
+        "id": 31202,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Inspo"
       },
       {
-        "id": 133311,
-        "t": "Drop",
+        "id": 33311,
+        "t": "Mod",
         "c": 1,
         "p": 4,
+        "dp": 1,
         "n": "Lingering Might"
       },
       {
-        "id": 133322,
-        "t": "Drop",
+        "id": 33322,
+        "t": "Mod",
         "c": 1,
         "p": 4,
+        "dp": 1,
         "n": "Decline"
       }
     ]
@@ -46308,24 +46358,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 131203,
-        "t": "Drop",
+        "id": 31203,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Spectrum"
       },
       {
-        "id": 132302,
-        "t": "Drop",
+        "id": 32302,
+        "t": "Mod",
         "c": 1,
         "p": 4,
+        "dp": 1,
         "n": "Kismet"
       },
       {
-        "id": 133332,
-        "t": "Drop",
+        "id": 33332,
+        "t": "Mod",
         "c": 1,
         "p": 4,
+        "dp": 1,
         "n": "Carefree"
       }
     ]
@@ -46335,24 +46388,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 131204,
-        "t": "Drop",
+        "id": 31204,
+        "t": "Mod",
         "c": 1,
         "p": 1,
+        "dp": 1,
         "n": "Eternity"
       },
       {
-        "id": 133331,
-        "t": "Drop",
+        "id": 33331,
+        "t": "Mod",
         "c": 1,
         "p": 4,
+        "dp": 1,
         "n": "Hunt"
       },
       {
-        "id": 133411,
-        "t": "Drop",
+        "id": 33411,
+        "t": "Mod",
         "c": 1,
         "p": 4,
+        "dp": 1,
         "n": "Coercion"
       }
     ]
@@ -46362,24 +46418,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 142203,
-        "t": "Drop",
+        "id": 42203,
+        "t": "Mod",
         "c": 1,
         "p": 6,
+        "dp": 1,
         "n": "Continuity·Trammel"
       },
       {
-        "id": 142312,
-        "t": "Drop",
+        "id": 42312,
+        "t": "Mod",
         "c": 1,
         "p": 6,
+        "dp": 1,
         "n": "Fervor"
       },
       {
-        "id": 143123,
-        "t": "Drop",
+        "id": 43123,
+        "t": "Mod",
         "c": 1,
         "p": 6,
+        "dp": 1,
         "n": "Crusher·Quiver"
       }
     ]
@@ -46389,24 +46448,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 142322,
-        "t": "Drop",
+        "id": 42322,
+        "t": "Mod",
         "c": 1,
         "p": 6,
+        "dp": 1,
         "n": "Patrol"
       },
       {
-        "id": 143341,
-        "t": "Drop",
+        "id": 43341,
+        "t": "Mod",
         "c": 1,
         "p": 6,
+        "dp": 1,
         "n": "Frugality"
       },
       {
-        "id": 143123,
-        "t": "Drop",
+        "id": 43123,
+        "t": "Mod",
         "c": 1,
         "p": 6,
+        "dp": 1,
         "n": "Crusher·Quiver"
       }
     ]
@@ -46416,24 +46478,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 142321,
-        "t": "Drop",
+        "id": 42321,
+        "t": "Mod",
         "c": 1,
         "p": 6,
+        "dp": 1,
         "n": "Vigilance"
       },
       {
-        "id": 143301,
-        "t": "Drop",
+        "id": 43301,
+        "t": "Mod",
         "c": 1,
         "p": 6,
+        "dp": 1,
         "n": "Loadout"
       },
       {
-        "id": 143123,
-        "t": "Drop",
+        "id": 43123,
+        "t": "Mod",
         "c": 1,
         "p": 6,
+        "dp": 1,
         "n": "Crusher·Quiver"
       }
     ]
@@ -46443,24 +46508,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 143008,
-        "t": "Drop",
+        "id": 43008,
+        "t": "Mod",
         "c": 1,
         "p": 6,
+        "dp": 1,
         "n": "Rage·Trammel"
       },
       {
-        "id": 142311,
-        "t": "Drop",
+        "id": 42311,
+        "t": "Mod",
         "c": 1,
         "p": 6,
+        "dp": 1,
         "n": "Brutality"
       },
       {
-        "id": 143123,
-        "t": "Drop",
+        "id": 43123,
+        "t": "Mod",
         "c": 1,
         "p": 6,
+        "dp": 1,
         "n": "Crusher·Quiver"
       }
     ]
@@ -46470,24 +46538,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 141213,
-        "t": "Drop",
+        "id": 41213,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Eternity·Abnegation"
       },
       {
-        "id": 142401,
-        "t": "Drop",
+        "id": 42401,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Dropshot"
       },
       {
-        "id": 143401,
-        "t": "Drop",
+        "id": 43401,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Furious Blast"
       }
     ]
@@ -46497,24 +46568,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 141214,
-        "t": "Drop",
+        "id": 41214,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Spectrum·Omen"
       },
       {
-        "id": 142403,
-        "t": "Drop",
+        "id": 42403,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Blitz"
       },
       {
-        "id": 143402,
-        "t": "Drop",
+        "id": 43402,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Furious Beam"
       }
     ]
@@ -46524,24 +46598,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 143601,
-        "t": "Drop",
+        "id": 43601,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Focus·Mass"
       },
       {
-        "id": 142512,
-        "t": "Drop",
+        "id": 42512,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Severance"
       },
       {
-        "id": 143512,
-        "t": "Drop",
+        "id": 43512,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Severance"
       }
     ]
@@ -46551,24 +46628,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 143602,
-        "t": "Drop",
+        "id": 43602,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Celerity·Cunning"
       },
       {
-        "id": 142401,
-        "t": "Drop",
+        "id": 42401,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Dropshot"
       },
       {
-        "id": 143401,
-        "t": "Drop",
+        "id": 43401,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Furious Blast"
       }
     ]
@@ -46578,24 +46658,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 143603,
-        "t": "Drop",
+        "id": 43603,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Quiver·Loadout"
       },
       {
-        "id": 142403,
-        "t": "Drop",
+        "id": 42403,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Blitz"
       },
       {
-        "id": 143402,
-        "t": "Drop",
+        "id": 43402,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Furious Beam"
       }
     ]
@@ -46605,24 +46688,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 143604,
-        "t": "Drop",
+        "id": 43604,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Rain of Quivers"
       },
       {
-        "id": 142411,
-        "t": "Drop",
+        "id": 42411,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Swift Dropshot"
       },
       {
-        "id": 143403,
-        "t": "Drop",
+        "id": 43403,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Focus"
       }
     ]
@@ -46632,24 +46718,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 141311,
-        "t": "Drop",
+        "id": 41311,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Onslaught"
       },
       {
-        "id": 142411,
-        "t": "Drop",
+        "id": 42411,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Swift Dropshot"
       },
       {
-        "id": 143403,
-        "t": "Drop",
+        "id": 43403,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Focus"
       }
     ]
@@ -46659,24 +46748,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 141312,
-        "t": "Drop",
+        "id": 41312,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Intrepidity"
       },
       {
-        "id": 142412,
-        "t": "Drop",
+        "id": 42412,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Swift Momentum"
       },
       {
-        "id": 143404,
-        "t": "Drop",
+        "id": 43404,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Speed Boost"
       }
     ]
@@ -46686,24 +46778,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 141313,
-        "t": "Drop",
+        "id": 41313,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Duel"
       },
       {
-        "id": 142413,
-        "t": "Drop",
+        "id": 42413,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Flash Strike"
       },
       {
-        "id": 143405,
-        "t": "Drop",
+        "id": 43405,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Stall"
       }
     ]
@@ -46713,24 +46808,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 141314,
-        "t": "Drop",
+        "id": 41314,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Trapped"
       },
       {
-        "id": 142421,
-        "t": "Drop",
+        "id": 42421,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Afterimage"
       },
       {
-        "id": 142403,
-        "t": "Drop",
+        "id": 42403,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Blitz"
       }
     ]
@@ -46740,24 +46838,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 141315,
-        "t": "Drop",
+        "id": 41315,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Surge"
       },
       {
-        "id": 142504,
-        "t": "Drop",
+        "id": 42504,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Forsakens Hunt"
       },
       {
-        "id": 143504,
-        "t": "Drop",
+        "id": 43504,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Forsakens Hunt"
       }
     ]
@@ -46767,24 +46868,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 141316,
-        "t": "Drop",
+        "id": 41316,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Relentless"
       },
       {
-        "id": 142511,
-        "t": "Drop",
+        "id": 42511,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Pierce"
       },
       {
-        "id": 143511,
-        "t": "Drop",
+        "id": 43511,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Pierce"
       }
     ]
@@ -46794,24 +46898,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 141755,
-        "t": "Drop",
+        "id": 41755,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Resolve"
       },
       {
-        "id": 142411,
-        "t": "Drop",
+        "id": 42411,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Swift Dropshot"
       },
       {
-        "id": 143403,
-        "t": "Drop",
+        "id": 43403,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Focus"
       }
     ]
@@ -46821,24 +46928,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 141756,
-        "t": "Drop",
+        "id": 41756,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Eternity"
       },
       {
-        "id": 142413,
-        "t": "Drop",
+        "id": 42413,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Flash Strike"
       },
       {
-        "id": 143405,
-        "t": "Drop",
+        "id": 43405,
+        "t": "Mod",
         "c": 1,
         "p": 45,
+        "dp": 1,
         "n": "Stall"
       }
     ]
@@ -46848,24 +46958,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 141911,
-        "t": "Drop",
+        "id": 41911,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Illusionary Sacrifice"
       },
       {
-        "id": 141802,
-        "t": "Drop",
+        "id": 41802,
+        "t": "Mod",
         "c": 1,
         "p": 30,
+        "dp": 1,
         "n": "Gleaming Polearm"
       },
       {
-        "id": 141803,
-        "t": "Drop",
+        "id": 41803,
+        "t": "Mod",
         "c": 1,
         "p": 60,
+        "dp": 1,
         "n": "Gleaming Greatsword"
       }
     ]
@@ -46875,24 +46988,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 141921,
-        "t": "Drop",
+        "id": 41921,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Misty Veil"
       },
       {
-        "id": 141804,
-        "t": "Drop",
+        "id": 41804,
+        "t": "Mod",
         "c": 1,
         "p": 30,
+        "dp": 1,
         "n": "Gleaming Dual Blades"
       },
       {
-        "id": 141806,
-        "t": "Drop",
+        "id": 41806,
+        "t": "Mod",
         "c": 1,
         "p": 60,
+        "dp": 1,
         "n": "Gleaming Katana"
       }
     ]
@@ -46902,24 +47018,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 141922,
-        "t": "Drop",
+        "id": 41922,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Frosty Torrent"
       },
       {
-        "id": 141811,
-        "t": "Drop",
+        "id": 41811,
+        "t": "Mod",
         "c": 1,
         "p": 30,
+        "dp": 1,
         "n": "Gleaming Assault Rifle"
       },
       {
-        "id": 141807,
-        "t": "Drop",
+        "id": 41807,
+        "t": "Mod",
         "c": 1,
         "p": 60,
+        "dp": 1,
         "n": "Gleaming Pistol"
       }
     ]
@@ -46929,24 +47048,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 141931,
-        "t": "Drop",
+        "id": 41931,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Devouring Wildfire"
       },
       {
-        "id": 141809,
-        "t": "Drop",
+        "id": 41809,
+        "t": "Mod",
         "c": 1,
         "p": 30,
+        "dp": 1,
         "n": "Gleaming Grenade Launcher"
       },
       {
-        "id": 142501,
-        "t": "Drop",
+        "id": 42501,
+        "t": "Mod",
         "c": 1,
         "p": 60,
+        "dp": 1,
         "n": "Filthoid Hunt"
       }
     ]
@@ -46956,24 +47078,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 141941,
-        "t": "Drop",
+        "id": 41941,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Ravaging Thunder"
       },
       {
-        "id": 141805,
-        "t": "Drop",
+        "id": 41805,
+        "t": "Mod",
         "c": 1,
         "p": 30,
+        "dp": 1,
         "n": "Gleaming Whipblade"
       },
       {
-        "id": 142502,
-        "t": "Drop",
+        "id": 42502,
+        "t": "Mod",
         "c": 1,
         "p": 60,
+        "dp": 1,
         "n": "Legion Hunt"
       }
     ]
@@ -46983,24 +47108,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 141951,
-        "t": "Drop",
+        "id": 41951,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Whispering Zephyr"
       },
       {
-        "id": 141812,
-        "t": "Drop",
+        "id": 41812,
+        "t": "Mod",
         "c": 1,
         "p": 30,
+        "dp": 1,
         "n": "Gleaming Bow"
       },
       {
-        "id": 142503,
-        "t": "Drop",
+        "id": 42503,
+        "t": "Mod",
         "c": 1,
         "p": 60,
+        "dp": 1,
         "n": "Divine Herald Hunt"
       }
     ]
@@ -47010,24 +47138,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 141952,
-        "t": "Drop",
+        "id": 41952,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Turbulent Cyclone"
       },
       {
-        "id": 141808,
-        "t": "Drop",
+        "id": 41808,
+        "t": "Mod",
         "c": 1,
         "p": 30,
+        "dp": 1,
         "n": "Gleaming Dual Pistols"
       },
       {
-        "id": 143501,
-        "t": "Drop",
+        "id": 43501,
+        "t": "Mod",
         "c": 1,
         "p": 60,
+        "dp": 1,
         "n": "Filthoid Hunt"
       }
     ]
@@ -47037,24 +47168,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 141962,
-        "t": "Drop",
+        "id": 41962,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Gleam & Glimmer"
       },
       {
-        "id": 141810,
-        "t": "Drop",
+        "id": 41810,
+        "t": "Mod",
         "c": 1,
         "p": 30,
+        "dp": 1,
         "n": "Gleaming Shotgun"
       },
       {
-        "id": 143502,
-        "t": "Drop",
+        "id": 43502,
+        "t": "Mod",
         "c": 1,
         "p": 60,
+        "dp": 1,
         "n": "Legion Hunt"
       }
     ]
@@ -47064,24 +47198,27 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 141961,
-        "t": "Drop",
+        "id": 41961,
+        "t": "Mod",
         "c": 1,
         "p": 10,
+        "dp": 1,
         "n": "Prismatic Neon"
       },
       {
-        "id": 141801,
-        "t": "Drop",
+        "id": 41801,
+        "t": "Mod",
         "c": 1,
         "p": 30,
+        "dp": 1,
         "n": "Gleaming Sword"
       },
       {
-        "id": 143503,
-        "t": "Drop",
+        "id": 43503,
+        "t": "Mod",
         "c": 1,
         "p": 60,
+        "dp": 1,
         "n": "Divine Herald Hunt"
       }
     ]
@@ -59221,17 +59358,19 @@
     "m": "Weight",
     "child": [
       {
-        "id": 121005,
-        "t": "Drop",
+        "id": 21005,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Blaze·Wings"
       },
       {
-        "id": 121006,
-        "t": "Drop",
+        "id": 21006,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Nirvana·Blessing"
       }
     ]
@@ -59241,38 +59380,43 @@
     "m": "Weight",
     "child": [
       {
-        "id": 122007,
-        "t": "Drop",
+        "id": 22007,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Impetus·Focus"
       },
       {
-        "id": 122008,
-        "t": "Drop",
+        "id": 22008,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Rage·Trammel"
       },
       {
-        "id": 122111,
-        "t": "Drop",
+        "id": 22111,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Edge·Trammel"
       },
       {
-        "id": 122112,
-        "t": "Drop",
+        "id": 22112,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Penetration·Trammel"
       },
       {
-        "id": 122113,
-        "t": "Drop",
+        "id": 22113,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Crusher·Trammel"
       }
     ]
@@ -59282,38 +59426,43 @@
     "m": "Weight",
     "child": [
       {
-        "id": 123007,
-        "t": "Drop",
+        "id": 23007,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Impetus·Focus"
       },
       {
-        "id": 123008,
-        "t": "Drop",
+        "id": 23008,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Rage·Trammel"
       },
       {
-        "id": 123111,
-        "t": "Drop",
+        "id": 23111,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Edge·Trammel"
       },
       {
-        "id": 123112,
-        "t": "Drop",
+        "id": 23112,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Penetration·Trammel"
       },
       {
-        "id": 123113,
-        "t": "Drop",
+        "id": 23113,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Crusher·Trammel"
       }
     ]
@@ -59323,80 +59472,91 @@
     "m": "Weight",
     "child": [
       {
-        "id": 131201,
-        "t": "Drop",
+        "id": 31201,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Volition"
       },
       {
-        "id": 131202,
-        "t": "Drop",
+        "id": 31202,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Inspo"
       },
       {
-        "id": 131203,
-        "t": "Drop",
+        "id": 31203,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Spectrum"
       },
       {
-        "id": 131204,
-        "t": "Drop",
+        "id": 31204,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Eternity"
       },
       {
-        "id": 131301,
-        "t": "Drop",
+        "id": 31301,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Wings·Inspo"
       },
       {
-        "id": 131502,
-        "t": "Drop",
+        "id": 31502,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Helido"
       },
       {
-        "id": 131512,
-        "t": "Drop",
+        "id": 31512,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Prance"
       },
       {
-        "id": 131513,
-        "t": "Drop",
+        "id": 31513,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Blastwave"
       },
       {
-        "id": 131521,
-        "t": "Drop",
+        "id": 31521,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Recovery"
       },
       {
-        "id": 131531,
-        "t": "Drop",
+        "id": 31531,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Sidestep"
       },
       {
-        "id": 131532,
-        "t": "Drop",
+        "id": 31532,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Ignite"
       }
     ]
@@ -59406,66 +59566,75 @@
     "m": "Weight",
     "child": [
       {
-        "id": 132004,
-        "t": "Drop",
+        "id": 32004,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Celerity"
       },
       {
-        "id": 132005,
-        "t": "Drop",
+        "id": 32005,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Threshold"
       },
       {
-        "id": 132101,
-        "t": "Drop",
+        "id": 32101,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Edge"
       },
       {
-        "id": 132102,
-        "t": "Drop",
+        "id": 32102,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Penetration"
       },
       {
-        "id": 132103,
-        "t": "Drop",
+        "id": 32103,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Crusher"
       },
       {
-        "id": 132201,
-        "t": "Drop",
+        "id": 32201,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Continuity"
       },
       {
-        "id": 132202,
-        "t": "Drop",
+        "id": 32202,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Fortune"
       },
       {
-        "id": 132301,
-        "t": "Drop",
+        "id": 32301,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Utmost"
       },
       {
-        "id": 132302,
-        "t": "Drop",
+        "id": 32302,
+        "t": "Mod",
         "c": 1,
         "p": 100,
+        "dp": 1,
         "n": "Kismet"
       }
     ]

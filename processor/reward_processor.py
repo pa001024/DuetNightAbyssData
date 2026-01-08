@@ -109,6 +109,20 @@ class RewardProcessor(BaseProcessor):
                 # 添加d=1字段到当前子项中
                 item["d"] = 1
 
+            # 处理Drop类型特殊情况
+            if item_type == "Drop":
+                # 查询Drop表
+                drop_item = self.drop_data.get(str(item_id), {})
+                use_effect_type = drop_item.get("UseEffectType", "")
+                use_param = drop_item.get("UseParam", 0)
+                # 如果UseEffectType是GetMod，则将其id设为UseParam的值
+                if use_effect_type == "GetMod":
+                    item["id"] = use_param
+                    # 将类型从Drop改为Mod
+                    item["t"] = "Mod"
+                    # 添加dp=1字段到当前子项中
+                    item["dp"] = 1
+
             # 根据类型查询不同的表，传入language参数以支持语言特定前缀
             # 使用原始类型获取名称，确保Draft类型能正确获取带前缀的名称
             item_name = self._get_item_name(item_id, original_type)
