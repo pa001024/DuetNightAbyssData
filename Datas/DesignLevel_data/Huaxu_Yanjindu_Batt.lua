@@ -40,6 +40,156 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
+    ["2030044"] = {
+      CreatorId = 2030044,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030045"] = {
+      CreatorId = 2030045,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030046"] = {
+      CreatorId = 2030046,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030047"] = {
+      CreatorId = 2030047,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030048"] = {
+      CreatorId = 2030048,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030049"] = {
+      CreatorId = 2030049,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030050"] = {
+      CreatorId = 2030050,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030051"] = {
+      CreatorId = 2030051,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030052"] = {
+      CreatorId = 2030052,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030053"] = {
+      CreatorId = 2030053,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030054"] = {
+      CreatorId = 2030054,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030055"] = {
+      CreatorId = 2030055,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030056"] = {
+      CreatorId = 2030056,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030057"] = {
+      CreatorId = 2030057,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030058"] = {
+      CreatorId = 2030058,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030059"] = {
+      CreatorId = 2030059,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030060"] = {
+      CreatorId = 2030060,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030061"] = {
+      CreatorId = 2030061,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030062"] = {
+      CreatorId = 2030062,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030063"] = {
+      CreatorId = 2030063,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030064"] = {
+      CreatorId = 2030064,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030065"] = {
+      CreatorId = 2030065,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030066"] = {
+      CreatorId = 2030066,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030067"] = {
+      CreatorId = 2030067,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030069"] = {
+      CreatorId = 2030069,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030070"] = {
+      CreatorId = 2030070,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030071"] = {
+      CreatorId = 2030071,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030072"] = {
+      CreatorId = 2030072,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030073"] = {
+      CreatorId = 2030073,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
+    ["2030074"] = {
+      CreatorId = 2030074,
+      UnitType = "Mechanism",
+      UnitId = 121012
+    },
     ["1930148"] = {
       CreatorId = 1930148,
       UnitType = "Npc",

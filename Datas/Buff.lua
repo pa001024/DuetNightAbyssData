@@ -8798,7 +8798,7 @@ return ReadOnly("Buff", {
       [1] = {
         AttrName = "DamageRate",
         RateZone = "AbyssDown",
-        Value = -0.25
+        Value = -0.12
       },
       [2] = T.RT_240
     },

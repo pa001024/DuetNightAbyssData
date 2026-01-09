@@ -6657,7 +6657,7 @@ return ReadOnly("Resource", {
     DetailDes = "RESOURCE_DESC_41036",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Youya.T_Resource_Gesture_Youya",
-    PlayAnim = "Gesture_Tree_02",
+    PlayAnim = "Gesture_Dance02",
     Rarity = 4,
     ResourceId = 41036,
     ResourceName = "RESOURCE_NAME_41036",

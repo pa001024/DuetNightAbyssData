@@ -10599,6 +10599,20 @@ return ReadOnly("Condition", {
     },
     Remark = "小小研究者三阶段解锁"
   },
+  [20023001] = {
+    ConditionId = 20023001,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      MechanismState = {
+        {
+          1191512,
+          0,
+          602
+        }
+      }
+    },
+    Remark = "火灾案支线1-调频机关"
+  },
   [20023300] = {
     ConditionId = 20023300,
     ConditionLogic = "AND",

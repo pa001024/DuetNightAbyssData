@@ -1,9 +1,13 @@
 local Data = {
   {
-    MinKey = "CVName1001",
-    MaxKey = "VoiceDes061",
+    MinKey = "Buff_Content_11222",
+    MaxKey = "VoiceDes060",
     Loader = function()
       return {
+        Buff_Content_11222 = {
+          ContentDE = "Les alliés infligent #1 de dégâts en moins, mais leur Taux CRIT augmente de #2.",
+          TextMapId = "Buff_Content_11222"
+        },
         CVName1001 = {ContentDE = "贺文潇", TextMapId = "CVName1001"},
         CVName1002 = {ContentDE = "朔小兔", TextMapId = "CVName1002"},
         CVName1003 = {ContentDE = "虚元", TextMapId = "CVName1003"},
@@ -646,19 +650,19 @@ local Data = {
         VoiceDes060 = {
           ContentDE = "Über neues Leben",
           TextMapId = "VoiceDes060"
-        },
-        VoiceDes061 = {
-          ContentDE = "Ich bin müde ...",
-          TextMapId = "VoiceDes061"
         }
       }
     end
   },
   {
-    MinKey = "VoiceDes062",
-    MaxKey = "voice_ch_char_Baonu_vo_topic_03_3",
+    MinKey = "VoiceDes061",
+    MaxKey = "voice_ch_char_Baonu_vo_topic_03_2",
     Loader = function()
       return {
+        VoiceDes061 = {
+          ContentDE = "Ich bin müde ...",
+          TextMapId = "VoiceDes061"
+        },
         VoiceDes062 = {
           ContentDE = "Über Nachahmung",
           TextMapId = "VoiceDes062"
@@ -1454,19 +1458,19 @@ local Data = {
         voice_ch_char_Baonu_vo_topic_03_2 = {
           ContentDE = "Nicht wahr?! Aber wegen dieses Titels sagen sie ständig zu mir: „Verschluck deinen Zorn mit Geduld.“ Das ist, als müsste man mitten im Gähnen aufhören oder sein Schwert zu einem perfekten Schlag heben, nur um zu hören: „Hey! Das ist kein Feind, das ist ein Freund!“ Das macht einen nur noch wütender.",
           TextMapId = "voice_ch_char_Baonu_vo_topic_03_2"
-        },
-        voice_ch_char_Baonu_vo_topic_03_3 = {
-          ContentDE = "Ah, sie sagen, Zorn sei eine schwere Sünde. Ich darf nicht wütend werden. Ich darf nicht ...",
-          TextMapId = "voice_ch_char_Baonu_vo_topic_03_3"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Baonu_vo_topic_03_4",
-    MaxKey = "voice_ch_char_Kezhou_vo_topic_03_3",
+    MinKey = "voice_ch_char_Baonu_vo_topic_03_3",
+    MaxKey = "voice_ch_char_Kezhou_vo_topic_03_2",
     Loader = function()
       return {
+        voice_ch_char_Baonu_vo_topic_03_3 = {
+          ContentDE = "Ah, sie sagen, Zorn sei eine schwere Sünde. Ich darf nicht wütend werden. Ich darf nicht ...",
+          TextMapId = "voice_ch_char_Baonu_vo_topic_03_3"
+        },
         voice_ch_char_Baonu_vo_topic_03_4 = {
           ContentDE = "Tja ... gehört eben zum Job! Ich bin schließlich Herrin der Geduld! Hehe!",
           TextMapId = "voice_ch_char_Baonu_vo_topic_03_4"
@@ -2262,19 +2266,19 @@ local Data = {
         voice_ch_char_Kezhou_vo_topic_03_2 = {
           ContentDE = "Das kann ich. Aber warum sollte ich mich damit befassen? Es ist einfacher, der Kugel auszuweichen. Wildschweine in den Bergen wissen, dass sie nicht an Baumrinde nagen müssen, wenn sie Karotten fressen können.",
           TextMapId = "voice_ch_char_Kezhou_vo_topic_03_2"
-        },
-        voice_ch_char_Kezhou_vo_topic_03_3 = {
-          ContentDE = "Natürlich kannst du sicher sein, dass wenn ich auf einen ebenbürtigen Gegner treffe, dass ich mein Schwert ziehen und aufs Ganze gehen werde.",
-          TextMapId = "voice_ch_char_Kezhou_vo_topic_03_3"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Kezhou_vo_topic_04_1",
-    MaxKey = "voice_ch_char_Nifu_vo_topic_01_4",
+    MinKey = "voice_ch_char_Kezhou_vo_topic_03_3",
+    MaxKey = "voice_ch_char_Nifu_vo_topic_01_3",
     Loader = function()
       return {
+        voice_ch_char_Kezhou_vo_topic_03_3 = {
+          ContentDE = "Natürlich kannst du sicher sein, dass wenn ich auf einen ebenbürtigen Gegner treffe, dass ich mein Schwert ziehen und aufs Ganze gehen werde.",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_03_3"
+        },
         voice_ch_char_Kezhou_vo_topic_04_1 = {
           ContentDE = "Ja, jetzt, wo du davon sprichst, fallen mir einige ein, zum Beispiel „König von sowieso“, „Irgendwelcher Lord“ oder „Unsterblicher irgendwie“. Es gibt viele Leute, die Tiere als Spitznamen nutzen, wie Drachen, Tiger, Kraniche usw. Es ist wie in einem Zoo.",
           TextMapId = "voice_ch_char_Kezhou_vo_topic_04_1"
@@ -3070,19 +3074,19 @@ local Data = {
         voice_ch_char_Nifu_vo_topic_01_3 = {
           ContentDE = "Wenn ich jedoch einen Ort nennen müsste ... wären es dann die Berge und Wälder von Aethyrie. Die Luft dort schenkt mir die größte Ruhe.",
           TextMapId = "voice_ch_char_Nifu_vo_topic_01_3"
-        },
-        voice_ch_char_Nifu_vo_topic_01_4 = {
-          ContentDE = "Das wirst du.",
-          TextMapId = "voice_ch_char_Nifu_vo_topic_01_4"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Nifu_vo_topic_01_5",
-    MaxKey = "voice_ch_char_Tuosi_vo_topic_03_6",
+    MinKey = "voice_ch_char_Nifu_vo_topic_01_4",
+    MaxKey = "voice_ch_char_Tuosi_vo_topic_03_5",
     Loader = function()
       return {
+        voice_ch_char_Nifu_vo_topic_01_4 = {
+          ContentDE = "Das wirst du.",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_01_4"
+        },
         voice_ch_char_Nifu_vo_topic_01_5 = {
           ContentDE = "Wenn du eines Tages den Smaragdwald besuchst, bring bitte zur Grüße einen Strauß weißer Astern dorthin. Unter seiner Erde ruhen meine Freunde, mein Kind und das Mädchen, das ich einst war.",
           TextMapId = "voice_ch_char_Nifu_vo_topic_01_5"
@@ -3878,19 +3882,19 @@ local Data = {
         voice_ch_char_Tuosi_vo_topic_03_5 = {
           ContentDE = "Hoffentlich hält das sie davon ab, nach mir zu fragen. Einst ihr bevorzugter Schüler ... ich möchte ihre Erinnerungen lieber nicht trüben.",
           TextMapId = "voice_ch_char_Tuosi_vo_topic_03_5"
-        },
-        voice_ch_char_Tuosi_vo_topic_03_6 = {
-          ContentDE = "Ja, Ignoranz ist immer ein Segen.",
-          TextMapId = "voice_ch_char_Tuosi_vo_topic_03_6"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Tuosi_vo_topic_04_1",
-    MaxKey = "voice_ch_char_Zhiliu_vo_birthday",
+    MinKey = "voice_ch_char_Tuosi_vo_topic_03_6",
+    MaxKey = "voice_ch_char_Zhiliu_vo_be_hit_heavy_r01",
     Loader = function()
       return {
+        voice_ch_char_Tuosi_vo_topic_03_6 = {
+          ContentDE = "Ja, Ignoranz ist immer ein Segen.",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_03_6"
+        },
         voice_ch_char_Tuosi_vo_topic_04_1 = {
           ContentDE = "Warum willst du eine Rolle spielen? Du hast es nicht nötig, zu einer anderen Person zu werden.",
           TextMapId = "voice_ch_char_Tuosi_vo_topic_04_1"
@@ -4688,19 +4692,19 @@ Yale: H... Hallo ... du singst wirklich w... wunderbar.
         voice_ch_char_Zhiliu_vo_be_hit_heavy_r01 = {
           ContentDE = "Hmph, Zeit zu zahlen.",
           TextMapId = "voice_ch_char_Zhiliu_vo_be_hit_heavy_r01"
-        },
-        voice_ch_char_Zhiliu_vo_birthday = {
-          ContentDE = "Heute ist dein Geburtstag. Ich habe ein kleines Geschenk für dich vorbereitet – du darfst es später öffnen.\nÜberrascht, dass ich es weiß? Sagen wir einfach, ich habe ein paar Fäden gezogen, um dein Profil zu erhalten. Die Details sind natürlich in meinem Gedächtnis verankert geblieben.\nVieles hat sich mit der Zeit geändert, doch mein Wunsch nach deinem Wohlergehen und Glück bleibt derselbe. Aber wenn es dir recht ist, dass ich es dir persönlich sage ... Alles Gute zum Geburtstag.",
-          TextMapId = "voice_ch_char_Zhiliu_vo_birthday"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Zhiliu_vo_companio_01",
+    MinKey = "voice_ch_char_Zhiliu_vo_birthday",
     MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
     Loader = function()
       return {
+        voice_ch_char_Zhiliu_vo_birthday = {
+          ContentDE = "Heute ist dein Geburtstag. Ich habe ein kleines Geschenk für dich vorbereitet – du darfst es später öffnen.\nÜberrascht, dass ich es weiß? Sagen wir einfach, ich habe ein paar Fäden gezogen, um dein Profil zu erhalten. Die Details sind natürlich in meinem Gedächtnis verankert geblieben.\nVieles hat sich mit der Zeit geändert, doch mein Wunsch nach deinem Wohlergehen und Glück bleibt derselbe. Aber wenn es dir recht ist, dass ich es dir persönlich sage ... Alles Gute zum Geburtstag.",
+          TextMapId = "voice_ch_char_Zhiliu_vo_birthday"
+        },
         voice_ch_char_Zhiliu_vo_companio_01 = {
           ContentDE = "Dein Parfum trägt eine kühne, berauschende Süße – ungezügelt, selbstbewusst. Ein auffälliger Kontrast zu den dezenten Düften von Huaxu. Ich bin fasziniert.",
           TextMapId = "voice_ch_char_Zhiliu_vo_companio_01"

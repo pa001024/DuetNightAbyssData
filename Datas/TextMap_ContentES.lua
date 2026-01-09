@@ -1337,7 +1337,7 @@ local Data = {
           TextMapId = "Buff_Content_11221"
         },
         Buff_Content_11222 = {
-          ContentES = "Les alliés infligent #1 de Dégâts de compétence en moins, mais leur Taux CRIT augmente de #2.",
+          ContentES = "Los aliados pierden #1 de Daño y ganan #2 de Prob. CRIT.",
           TextMapId = "Buff_Content_11222"
         },
         Buff_Content_201 = {

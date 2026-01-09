@@ -51257,7 +51257,7 @@ local Data = {
           TextMapId = "UI_Achievement_Des_4011"
         },
         UI_Achievement_Des_40206 = {
-          ContentTC = "累計<highlight>#1</>把武器達到Lv.60",
+          ContentTC = "累計<highlight>#1</>把不同武器達到Lv.60",
           TextMapId = "UI_Achievement_Des_40206"
         },
         UI_Achievement_Des_4021 = {
@@ -51265,11 +51265,11 @@ local Data = {
           TextMapId = "UI_Achievement_Des_4021"
         },
         UI_Achievement_Des_40302 = {
-          ContentTC = "累計<highlight>#1</>把武器突破6階",
+          ContentTC = "累計<highlight>#1</>把不同武器突破2階",
           TextMapId = "UI_Achievement_Des_40302"
         },
         UI_Achievement_Des_40306 = {
-          ContentTC = "累計<highlight>#1</>把武器突破1階",
+          ContentTC = "累計<highlight>#1</>把不同武器突破6階",
           TextMapId = "UI_Achievement_Des_40306"
         },
         UI_Achievement_Des_4031 = {

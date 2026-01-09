@@ -803,7 +803,7 @@ local Data = {
   },
   {
     MinKey = "BATTLEPASS_DISCOUNT_LABEL",
-    MaxKey = "Condition_Toast_DungeonUnlock_3052",
+    MaxKey = "Condition_Toast_DungeonUnlock_3051",
     Loader = function()
       return {
         BATTLEPASS_DISCOUNT_LABEL = {
@@ -1287,6 +1287,10 @@ local Data = {
           ContentFR = "Lorsqu’un ennemi de menace majeure tombe sous #1 de PV, il devient invincible pendant #2 s et appelle des renforts. Chaque ennemi vaincu confère à tous les alliés un bonus de #3 aux dégâts infligés, cumulable jusqu’à #4 fois. L’invincibilité prend fin prématurément après la défaite d’un certain nombre d’ennemis.",
           TextMapId = "Buff_Content_100"
         },
+        Buff_Content_11222 = {
+          ContentFR = "Der verursachte SCH aller Verbündeten wird um #1 verringert. Der KRIT-Rate wird um #2 erhöht.",
+          TextMapId = "Buff_Content_11222"
+        },
         Buff_Content_201 = {
           ContentFR = "Les ennemis subissent #1 de dégâts en moins. Chaque fois qu’ils sont touchés par une compétence ou une arme, cette réduction diminue de #2.",
           TextMapId = "Buff_Content_201"
@@ -1589,19 +1593,19 @@ local Data = {
         Condition_Toast_DungeonUnlock_3051 = {
           ContentFR = "Se débloque après avoir terminé la mission : [Exploration ∞ (I)]",
           TextMapId = "Condition_Toast_DungeonUnlock_3051"
-        },
-        Condition_Toast_DungeonUnlock_3052 = {
-          ContentFR = "Se débloque après avoir terminé la mission : [Exploration ∞ (II)]",
-          TextMapId = "Condition_Toast_DungeonUnlock_3052"
         }
       }
     end
   },
   {
-    MinKey = "Condition_Toast_DungeonUnlock_3053",
-    MaxKey = "Content_200203_1",
+    MinKey = "Condition_Toast_DungeonUnlock_3052",
+    MaxKey = "Content_200202_3",
     Loader = function()
       return {
+        Condition_Toast_DungeonUnlock_3052 = {
+          ContentFR = "Se débloque après avoir terminé la mission : [Exploration ∞ (II)]",
+          TextMapId = "Condition_Toast_DungeonUnlock_3052"
+        },
         Condition_Toast_DungeonUnlock_3053 = {
           ContentFR = "Se débloque après avoir terminé la mission : [Exploration ∞ (III)]",
           TextMapId = "Condition_Toast_DungeonUnlock_3053"
@@ -2397,19 +2401,19 @@ local Data = {
         Content_200202_3 = {
           ContentFR = "Des étoiles en papier pliées à partir de billets périmés... Peut-être s’agit-il des effets personnels de cette vendeuse de billets.\nElle paraît toutefois étrangement... courtoise.",
           TextMapId = "Content_200202_3"
-        },
-        Content_200203_1 = {
-          ContentFR = "La voix de la femme était rauque et brisée, sa tenue pourtant soignée couverte de poussière.\nEncore et encore, elle arrêtait les passants, cherchant désespérément quelque chose...",
-          TextMapId = "Content_200203_1"
         }
       }
     end
   },
   {
-    MinKey = "Content_200203_12",
-    MaxKey = "DUNGEON_NAME_80705",
+    MinKey = "Content_200203_1",
+    MaxKey = "DUNGEON_NAME_80704",
     Loader = function()
       return {
+        Content_200203_1 = {
+          ContentFR = "La voix de la femme était rauque et brisée, sa tenue pourtant soignée couverte de poussière.\nEncore et encore, elle arrêtait les passants, cherchant désespérément quelque chose...",
+          TextMapId = "Content_200203_1"
+        },
         Content_200203_12 = {
           ContentFR = "Depuis que vous avez quitté cette femme éplorée, vous sentez un regard peser sur vous. Il semblerait qu’elle ait encore quelque chose à dire.",
           TextMapId = "Content_200203_12"
@@ -3205,19 +3209,19 @@ local Data = {
         DUNGEON_NAME_80704 = {
           ContentFR = "Puzzle chromatique IV",
           TextMapId = "DUNGEON_NAME_80704"
-        },
-        DUNGEON_NAME_80705 = {
-          ContentFR = "Puzzle chromatique V",
-          TextMapId = "DUNGEON_NAME_80705"
         }
       }
     end
   },
   {
-    MinKey = "DUNGEON_NAME_80706",
-    MaxKey = "Description_100101_7",
+    MinKey = "DUNGEON_NAME_80705",
+    MaxKey = "Description_100101_6",
     Loader = function()
       return {
+        DUNGEON_NAME_80705 = {
+          ContentFR = "Puzzle chromatique V",
+          TextMapId = "DUNGEON_NAME_80705"
+        },
         DUNGEON_NAME_80706 = {
           ContentFR = "Puzzle chromatique VI",
           TextMapId = "DUNGEON_NAME_80706"
@@ -4007,19 +4011,19 @@ local Data = {
         Description_100101_6 = {
           ContentFR = "Rejoignez le quai pour trouver un bateau.",
           TextMapId = "Description_100101_6"
-        },
-        Description_100101_7 = {
-          ContentFR = "Explorez la plage le long de la côte.",
-          TextMapId = "Description_100101_7"
         }
       }
     end
   },
   {
-    MinKey = "Description_100102_1",
-    MaxKey = "DynQuest_Bian_Title",
+    MinKey = "Description_100101_7",
+    MaxKey = "DynQuest_Bian_Des",
     Loader = function()
       return {
+        Description_100101_7 = {
+          ContentFR = "Explorez la plage le long de la côte.",
+          TextMapId = "Description_100101_7"
+        },
         Description_100102_1 = {
           ContentFR = "Rendez-vous aux ruines situées sur la montagne.",
           TextMapId = "Description_100102_1"
@@ -4809,19 +4813,19 @@ local Data = {
         DynQuest_Bian_Des = {
           ContentFR = "Repousser le Bi’an obscur",
           TextMapId = "DynQuest_Bian_Des"
-        },
-        DynQuest_Bian_Title = {
-          ContentFR = "Conséquences du Fléau de Zhuyin",
-          TextMapId = "DynQuest_Bian_Title"
         }
       }
     end
   },
   {
-    MinKey = "DynQuest_Clearice_Title",
-    MaxKey = "Event_Tab_103006",
+    MinKey = "DynQuest_Bian_Title",
+    MaxKey = "Event_Tab_103005",
     Loader = function()
       return {
+        DynQuest_Bian_Title = {
+          ContentFR = "Conséquences du Fléau de Zhuyin",
+          TextMapId = "DynQuest_Bian_Title"
+        },
         DynQuest_Clearice_Title = {
           ContentFR = "Entretien de la route",
           TextMapId = "DynQuest_Clearice_Title"
@@ -5602,19 +5606,19 @@ local Data = {
         Event_Tab_103005 = {
           ContentFR = "Visiteuse venue d’ailleurs",
           TextMapId = "Event_Tab_103005"
-        },
-        Event_Tab_103006 = {
-          ContentFR = "Jeux de l’Amitié",
-          TextMapId = "Event_Tab_103006"
         }
       }
     end
   },
   {
-    MinKey = "Event_Tab_103007",
-    MaxKey = "GRADEUP_3101_01",
+    MinKey = "Event_Tab_103006",
+    MaxKey = "GRADEUP_2401_06",
     Loader = function()
       return {
+        Event_Tab_103006 = {
+          ContentFR = "Jeux de l’Amitié",
+          TextMapId = "Event_Tab_103006"
+        },
         Event_Tab_103007 = {
           ContentFR = "Manœuvres Tonitruantes",
           TextMapId = "Event_Tab_103007"
@@ -6401,19 +6405,19 @@ local Data = {
         GRADEUP_2401_06 = {
           ContentFR = "Pendant toute la durée de l’augmentation de la Vitesse d’attaque conféré par [Symbiose parfaite], Fushu inflige #4 de Dégâts Hydro supplémentaires.",
           TextMapId = "GRADEUP_2401_06"
-        },
-        GRADEUP_3101_01 = {
-          ContentFR = "En entrant en combat, accorde 6 cumuls de [Préchargement].\nAugmente aussi la Vigueur de #4 pendant #5 s.",
-          TextMapId = "GRADEUP_3101_01"
         }
       }
     end
   },
   {
-    MinKey = "GRADEUP_3101_02",
-    MaxKey = "MAINUIGUIDE_TITLE_SKILL2",
+    MinKey = "GRADEUP_3101_01",
+    MaxKey = "MAINUIGUIDE_TITLE_SHADOW",
     Loader = function()
       return {
+        GRADEUP_3101_01 = {
+          ContentFR = "En entrant en combat, accorde 6 cumuls de [Préchargement].\nAugmente aussi la Vigueur de #4 pendant #5 s.",
+          TextMapId = "GRADEUP_3101_01"
+        },
         GRADEUP_3101_02 = {
           ContentFR = "Pendant [Ballet explosif], réduit les dégâts subis de #1 et réduit l’intervalle d’obtention des cumuls de Vitesse d’attaque à 0,06 s.",
           TextMapId = "GRADEUP_3101_02"
@@ -7191,19 +7195,19 @@ local Data = {
         MAINUIGUIDE_TITLE_SHADOW = {
           ContentFR = "Partenaires de combat",
           TextMapId = "MAINUIGUIDE_TITLE_SHADOW"
-        },
-        MAINUIGUIDE_TITLE_SKILL2 = {
-          ContentFR = "Compétence ultime",
-          TextMapId = "MAINUIGUIDE_TITLE_SKILL2"
         }
       }
     end
   },
   {
-    MinKey = "MAINUIGUIDE_TITLE_SP",
-    MaxKey = "MESSAGE_TITLE_LOADING_35_PC",
+    MinKey = "MAINUIGUIDE_TITLE_SKILL2",
+    MaxKey = "MESSAGE_TITLE_LOADING_34_PC",
     Loader = function()
       return {
+        MAINUIGUIDE_TITLE_SKILL2 = {
+          ContentFR = "Compétence ultime",
+          TextMapId = "MAINUIGUIDE_TITLE_SKILL2"
+        },
         MAINUIGUIDE_TITLE_SP = {
           ContentFR = "Lucidité",
           TextMapId = "MAINUIGUIDE_TITLE_SP"
@@ -7996,19 +8000,19 @@ local Data = {
         MESSAGE_TITLE_LOADING_34_PC = {
           ContentFR = "Module de transfert d’affinité",
           TextMapId = "MESSAGE_TITLE_LOADING_34_PC"
-        },
-        MESSAGE_TITLE_LOADING_35_PC = {
-          ContentFR = "Missions des Chasseurs de Phoxène",
-          TextMapId = "MESSAGE_TITLE_LOADING_35_PC"
         }
       }
     end
   },
   {
-    MinKey = "MESSAGE_TITLE_LOADING_36_PC",
-    MaxKey = "MOD_NAME_1525",
+    MinKey = "MESSAGE_TITLE_LOADING_35_PC",
+    MaxKey = "MOD_NAME_1524",
     Loader = function()
       return {
+        MESSAGE_TITLE_LOADING_35_PC = {
+          ContentFR = "Missions des Chasseurs de Phoxène",
+          TextMapId = "MESSAGE_TITLE_LOADING_35_PC"
+        },
         MESSAGE_TITLE_LOADING_36_PC = {
           ContentFR = "Missions des Chasseurs de Phoxène : Capture",
           TextMapId = "MESSAGE_TITLE_LOADING_36_PC"
@@ -8804,19 +8808,19 @@ local Data = {
         MOD_NAME_1524 = {
           ContentFR = "Vigilance",
           TextMapId = "MOD_NAME_1524"
-        },
-        MOD_NAME_1525 = {
-          ContentFR = "Soutien",
-          TextMapId = "MOD_NAME_1525"
         }
       }
     end
   },
   {
-    MinKey = "MOD_NAME_1526",
-    MaxKey = "Mail_Content_10007",
+    MinKey = "MOD_NAME_1525",
+    MaxKey = "Mail_Content_100005",
     Loader = function()
       return {
+        MOD_NAME_1525 = {
+          ContentFR = "Soutien",
+          TextMapId = "MOD_NAME_1525"
+        },
         MOD_NAME_1526 = {
           ContentFR = "Roc",
           TextMapId = "MOD_NAME_1526"
@@ -9612,19 +9616,19 @@ local Data = {
         Mail_Content_100005 = {
           ContentFR = "Chasseur de Phoxène,\nVous avez des récompenses d’événement non réclamées. Elles ont été envoyées à votre messagerie. Puisse votre prochaine mission être couronnée de succès.",
           TextMapId = "Mail_Content_100005"
-        },
-        Mail_Content_10007 = {
-          ContentFR = "Chasseur de Phoxène,\n\nVoici le détail de votre remboursement effectué durant la CBT2 :\n- Montant total rechargé : <H>{TotalRechargeMoney} ¥</> → Remboursé sous forme de <H>{Phoxene} Gemmes de Phoxène</>\n- Remboursement des Pass mensuels : <H>{MonthlyCard}</> Pass\n\nNous vous remercions sincèrement pour votre soutien et votre confiance envers Duet Night Abyss.",
-          TextMapId = "Mail_Content_10007"
         }
       }
     end
   },
   {
-    MinKey = "Mail_Content_10008",
-    MaxKey = "Message_Guide_Rouge_6",
+    MinKey = "Mail_Content_10007",
+    MaxKey = "Message_Guide_Rouge_5",
     Loader = function()
       return {
+        Mail_Content_10007 = {
+          ContentFR = "Chasseur de Phoxène,\n\nVoici le détail de votre remboursement effectué durant la CBT2 :\n- Montant total rechargé : <H>{TotalRechargeMoney} ¥</> → Remboursé sous forme de <H>{Phoxene} Gemmes de Phoxène</>\n- Remboursement des Pass mensuels : <H>{MonthlyCard}</> Pass\n\nNous vous remercions sincèrement pour votre soutien et votre confiance envers Duet Night Abyss.",
+          TextMapId = "Mail_Content_10007"
+        },
         Mail_Content_10008 = {
           ContentFR = "Chasseur de Phoxène,\n\nMerci d’avoir pris le temps de répondre à notre sondage !\nVous trouverez votre récompense en pièce jointe.\n\nNous accordons une grande importance à chaque retour : vos commentaires nous aident à améliorer continuellement la qualité et l’expérience de jeu.",
           TextMapId = "Mail_Content_10008"
@@ -10417,19 +10421,19 @@ local Data = {
         Message_Guide_Rouge_5 = {
           ContentFR = "Ici, vous pouvez ajuster la difficulté du Dédale",
           TextMapId = "Message_Guide_Rouge_5"
-        },
-        Message_Guide_Rouge_6 = {
-          ContentFR = "Vous pouvez consulter et réclamer vos récompenses du Dédale mystique ici. Les récompenses se réinitialisent chaque semaine.",
-          TextMapId = "Message_Guide_Rouge_6"
         }
       }
     end
   },
   {
-    MinKey = "Message_Guide_Rouge_7",
-    MaxKey = "ModArchive_Name_UMelee_4070",
+    MinKey = "Message_Guide_Rouge_6",
+    MaxKey = "ModArchive_Name_UMelee_4060",
     Loader = function()
       return {
+        Message_Guide_Rouge_6 = {
+          ContentFR = "Vous pouvez consulter et réclamer vos récompenses du Dédale mystique ici. Les récompenses se réinitialisent chaque semaine.",
+          TextMapId = "Message_Guide_Rouge_6"
+        },
         Message_Guide_Rouge_7 = {
           ContentFR = "Appuyez sur « Ad Abyssum »",
           TextMapId = "Message_Guide_Rouge_7"
@@ -11225,19 +11229,19 @@ local Data = {
         ModArchive_Name_UMelee_4060 = {
           ContentFR = "Cerbère occulte VI",
           TextMapId = "ModArchive_Name_UMelee_4060"
-        },
-        ModArchive_Name_UMelee_4070 = {
-          ContentFR = "Cerbère occulte VII",
-          TextMapId = "ModArchive_Name_UMelee_4070"
         }
       }
     end
   },
   {
-    MinKey = "ModArchive_Name_UMelee_4080",
-    MaxKey = "Mon_Name_6001021",
+    MinKey = "ModArchive_Name_UMelee_4070",
+    MaxKey = "Mon_Name_6001020",
     Loader = function()
       return {
+        ModArchive_Name_UMelee_4070 = {
+          ContentFR = "Cerbère occulte VII",
+          TextMapId = "ModArchive_Name_UMelee_4070"
+        },
         ModArchive_Name_UMelee_4080 = {
           ContentFR = "Cerbère occulte VIII",
           TextMapId = "ModArchive_Name_UMelee_4080"
@@ -12033,19 +12037,19 @@ local Data = {
         Mon_Name_6001020 = {
           ContentFR = "Souillé fulgurant — Feu résiduel",
           TextMapId = "Mon_Name_6001020"
-        },
-        Mon_Name_6001021 = {
-          ContentFR = "Souillé fulgurant — Sacrifice",
-          TextMapId = "Mon_Name_6001021"
         }
       }
     end
   },
   {
-    MinKey = "Mon_Name_6001022",
-    MaxKey = "Mon_Name_7003301",
+    MinKey = "Mon_Name_6001021",
+    MaxKey = "Mon_Name_7003201",
     Loader = function()
       return {
+        Mon_Name_6001021 = {
+          ContentFR = "Souillé fulgurant — Sacrifice",
+          TextMapId = "Mon_Name_6001021"
+        },
         Mon_Name_6001022 = {
           ContentFR = "Souillé fulgurant — Tempête électrique",
           TextMapId = "Mon_Name_6001022"
@@ -12841,19 +12845,19 @@ local Data = {
         Mon_Name_7003201 = {
           ContentFR = "Soldat expéditionnaire — Bain de sang et Déflagration",
           TextMapId = "Mon_Name_7003201"
-        },
-        Mon_Name_7003301 = {
-          ContentFR = "Soldat expéditionnaire — Spectre, Tempête électrique et Geôle de givre",
-          TextMapId = "Mon_Name_7003301"
         }
       }
     end
   },
   {
-    MinKey = "Mon_Name_7004001",
-    MaxKey = "Mon_Name_8003016",
+    MinKey = "Mon_Name_7003301",
+    MaxKey = "Mon_Name_8003015",
     Loader = function()
       return {
+        Mon_Name_7003301 = {
+          ContentFR = "Soldat expéditionnaire — Spectre, Tempête électrique et Geôle de givre",
+          TextMapId = "Mon_Name_7003301"
+        },
         Mon_Name_7004001 = {
           ContentFR = "Soldat d’assaut",
           TextMapId = "Mon_Name_7004001"
@@ -13649,19 +13653,19 @@ local Data = {
         Mon_Name_8003015 = {
           ContentFR = "Prêtre béni — Pourriture cramoisie",
           TextMapId = "Mon_Name_8003015"
-        },
-        Mon_Name_8003016 = {
-          ContentFR = "Prêtre béni — Flétrissure",
-          TextMapId = "Mon_Name_8003016"
         }
       }
     end
   },
   {
-    MinKey = "Mon_Name_8003017",
-    MaxKey = "Mon_Name_9806001",
+    MinKey = "Mon_Name_8003016",
+    MaxKey = "Mon_Name_9805001",
     Loader = function()
       return {
+        Mon_Name_8003016 = {
+          ContentFR = "Prêtre béni — Flétrissure",
+          TextMapId = "Mon_Name_8003016"
+        },
         Mon_Name_8003017 = {
           ContentFR = "Prêtre béni — Gardien",
           TextMapId = "Mon_Name_8003017"
@@ -14457,19 +14461,19 @@ local Data = {
         Mon_Name_9805001 = {
           ContentFR = "Héron pêcheur",
           TextMapId = "Mon_Name_9805001"
-        },
-        Mon_Name_9806001 = {
-          ContentFR = "Pinson d’émeraude",
-          TextMapId = "Mon_Name_9806001"
         }
       }
     end
   },
   {
-    MinKey = "Mon_Name_9807001",
-    MaxKey = "Pack_Name_Resource_Fuma",
+    MinKey = "Mon_Name_9806001",
+    MaxKey = "Pack_Name_Mod_Range",
     Loader = function()
       return {
+        Mon_Name_9806001 = {
+          ContentFR = "Pinson d’émeraude",
+          TextMapId = "Mon_Name_9806001"
+        },
         Mon_Name_9807001 = {
           ContentFR = "Sanglier pygmée",
           TextMapId = "Mon_Name_9807001"
@@ -15232,19 +15236,19 @@ local Data = {
         Pack_Name_Mod_Range = {
           ContentFR = "Sceau démoniaque inconnu (Arme à distance)",
           TextMapId = "Pack_Name_Mod_Range"
-        },
-        Pack_Name_Resource_Fuma = {
-          ContentFR = "Plan de fabrication inconnu (Module de transfert d’affinité)",
-          TextMapId = "Pack_Name_Resource_Fuma"
         }
       }
     end
   },
   {
-    MinKey = "Pack_Name_Shop_Accessory_01",
-    MaxKey = "PartyTopic_Description_510104",
+    MinKey = "Pack_Name_Resource_Fuma",
+    MaxKey = "PartyTopic_Description_510103",
     Loader = function()
       return {
+        Pack_Name_Resource_Fuma = {
+          ContentFR = "Plan de fabrication inconnu (Module de transfert d’affinité)",
+          TextMapId = "Pack_Name_Resource_Fuma"
+        },
         Pack_Name_Shop_Accessory_01 = {
           ContentFR = "Coffret de Versets en suspens – Bleu indigo",
           TextMapId = "Pack_Name_Shop_Accessory_01"
@@ -16034,19 +16038,19 @@ local Data = {
         PartyTopic_Description_510103 = {
           ContentFR = "Aux yeux du monde, un cochon n’a rien d’exceptionnel. Mais Filbert, pour Truffle, est irremplaçable.",
           TextMapId = "PartyTopic_Description_510103"
-        },
-        PartyTopic_Description_510104 = {
-          ContentFR = "Chacun a sa propre idée du bonheur. Mais quoi qu’il arrive, il faut un ventre plein pour avoir la force de le poursuivre.",
-          TextMapId = "PartyTopic_Description_510104"
         }
       }
     end
   },
   {
-    MinKey = "PartyTopic_Description_530101",
-    MaxKey = "PlayerLevel_WeaponProgress",
+    MinKey = "PartyTopic_Description_510104",
+    MaxKey = "PlayerLevel_WeaponBreak",
     Loader = function()
       return {
+        PartyTopic_Description_510104 = {
+          ContentFR = "Chacun a sa propre idée du bonheur. Mais quoi qu’il arrive, il faut un ventre plein pour avoir la force de le poursuivre.",
+          TextMapId = "PartyTopic_Description_510104"
+        },
         PartyTopic_Description_530101 = {
           ContentFR = "La valeur d’une vie ne se compte pas en jours, mais en la manière dont ces jours sont vécus.",
           TextMapId = "PartyTopic_Description_530101"
@@ -16833,19 +16837,19 @@ local Data = {
         PlayerLevel_WeaponBreak = {
           ContentFR = "Ascension d’arme",
           TextMapId = "PlayerLevel_WeaponBreak"
-        },
-        PlayerLevel_WeaponProgress = {
-          ContentFR = "Amélioration d’arme",
-          TextMapId = "PlayerLevel_WeaponProgress"
         }
       }
     end
   },
   {
-    MinKey = "PlayerLevel_WeaponSmelt",
-    MaxKey = "QuestName_10020412",
+    MinKey = "PlayerLevel_WeaponProgress",
+    MaxKey = "QuestName_10020411",
     Loader = function()
       return {
+        PlayerLevel_WeaponProgress = {
+          ContentFR = "Amélioration d’arme",
+          TextMapId = "PlayerLevel_WeaponProgress"
+        },
         PlayerLevel_WeaponSmelt = {
           ContentFR = "Fusion d’arme",
           TextMapId = "PlayerLevel_WeaponSmelt"
@@ -17641,19 +17645,19 @@ local Data = {
         QuestName_10020411 = {
           ContentFR = "Quitter la Maison d’Hypnos",
           TextMapId = "QuestName_10020411"
-        },
-        QuestName_10020412 = {
-          ContentFR = "Informer l’Étranger des résultats de votre enquête",
-          TextMapId = "QuestName_10020412"
         }
       }
     end
   },
   {
-    MinKey = "QuestName_10020501",
-    MaxKey = "READ_TEXT_20614",
+    MinKey = "QuestName_10020412",
+    MaxKey = "READ_TEXT_20612",
     Loader = function()
       return {
+        QuestName_10020412 = {
+          ContentFR = "Informer l’Étranger des résultats de votre enquête",
+          TextMapId = "QuestName_10020412"
+        },
         QuestName_10020501 = {
           ContentFR = "Accomplir la mission [Médiation]",
           TextMapId = "QuestName_10020501"
@@ -18449,19 +18453,19 @@ local Data = {
         READ_TEXT_20612 = {
           ContentFR = "<W>Il n’y a ici aucun morceau de Phoxène, pas même cent.</>\n\n(Sous ces mots, des lignes irrégulières esquissent vaguement les galeries de la mine. Le cercle rouge semble indiquer <H>l’entrée de la mine</>.)",
           TextMapId = "READ_TEXT_20612"
-        },
-        READ_TEXT_20614 = {
-          ContentFR = "Salut, étranger.\nJe suis un explorateur, et cette caverne est l’un des plus beaux endroits que j’aie jamais vus — on croirait le repaire des fées des neiges !\n\nDe gigantesques stalactites de glace pure, les racines pétrifiées d’un vieil Arbre Céleste, un labyrinthe naturel fascinant... Tout ici palpite d’énergie et d’émerveillement.\n\nSi tu es arrivé jusqu’ici, ne rebrousse pas chemin ! Plus haut, le spectacle est encore plus grandiose.\nJ’ai laissé pour toi un petit présent et quelques provisions <H>au sommet de la caverne</>.\n\nAvance sans crainte, aventurier : la vie est un voyage, et le voyage ne s’arrête jamais !",
-          TextMapId = "READ_TEXT_20614"
         }
       }
     end
   },
   {
-    MinKey = "READ_TEXT_20620",
-    MaxKey = "RESOURCE_DESC_3000001",
+    MinKey = "READ_TEXT_20614",
+    MaxKey = "RESOURCE_DESC_215",
     Loader = function()
       return {
+        READ_TEXT_20614 = {
+          ContentFR = "Salut, étranger.\nJe suis un explorateur, et cette caverne est l’un des plus beaux endroits que j’aie jamais vus — on croirait le repaire des fées des neiges !\n\nDe gigantesques stalactites de glace pure, les racines pétrifiées d’un vieil Arbre Céleste, un labyrinthe naturel fascinant... Tout ici palpite d’énergie et d’émerveillement.\n\nSi tu es arrivé jusqu’ici, ne rebrousse pas chemin ! Plus haut, le spectacle est encore plus grandiose.\nJ’ai laissé pour toi un petit présent et quelques provisions <H>au sommet de la caverne</>.\n\nAvance sans crainte, aventurier : la vie est un voyage, et le voyage ne s’arrête jamais !",
+          TextMapId = "READ_TEXT_20614"
+        },
         READ_TEXT_20620 = {
           ContentFR = "« La forteresse ne tiendra pas plus longtemps... Ne restez pas là à mourir en suivant les ordres. Vous n’êtes pas inscrits sur les registres militaires, personne ne remarquera votre absence.\nDes vivres de secours se trouvent <H>près du dirigeable</> — prenez-les, et rentrez chez vous. »\n\n(Le bas de la page est couvert d’une large tache brun rouge, rendant la suite illisible.)",
           TextMapId = "READ_TEXT_20620"
@@ -19257,19 +19261,19 @@ local Data = {
         RESOURCE_DESC_215 = {
           ContentFR = "Tissé de mille routes entrecroisées, ce fil consigne chacun de vos pas.\nTout ce qui fut incertain, tout ce qui échoua, tout ce qui ne trouva point d’issue... trouvera un jour sa réponse sur la trame de Sa filature.",
           TextMapId = "RESOURCE_DESC_215"
-        },
-        RESOURCE_DESC_3000001 = {
-          ContentFR = "Une boîte d’étoiles en papier pliées à partir de billets périmés. On raconte qu’un nombre suffisant d’étoiles exauce les vœux... pourtant, aucun n’a jamais semblé se réaliser.",
-          TextMapId = "RESOURCE_DESC_3000001"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_DESC_3000002",
-    MaxKey = "RESOURCE_NAME_12005",
+    MinKey = "RESOURCE_DESC_3000001",
+    MaxKey = "RESOURCE_NAME_12004",
     Loader = function()
       return {
+        RESOURCE_DESC_3000001 = {
+          ContentFR = "Une boîte d’étoiles en papier pliées à partir de billets périmés. On raconte qu’un nombre suffisant d’étoiles exauce les vœux... pourtant, aucun n’a jamais semblé se réaliser.",
+          TextMapId = "RESOURCE_DESC_3000001"
+        },
         RESOURCE_DESC_3000002 = {
           ContentFR = "Des vêtements usés dont la doublure cache un petit journal. Seul le nom Alice reste lisible sur la couverture, la plupart des pages sont tachées, à l’exception de quelques lignes récentes à peine déchiffrables.",
           TextMapId = "RESOURCE_DESC_3000002"
@@ -20065,19 +20069,19 @@ local Data = {
         RESOURCE_NAME_12004 = {
           ContentFR = "Momiji Itteki : Lame",
           TextMapId = "RESOURCE_NAME_12004"
-        },
-        RESOURCE_NAME_12005 = {
-          ContentFR = "Momiji Itteki : Ornement",
-          TextMapId = "RESOURCE_NAME_12005"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_NAME_12006",
-    MaxKey = "RESOURCE_SHORT_DESC_6",
+    MinKey = "RESOURCE_NAME_12005",
+    MaxKey = "RESOURCE_SHORT_DESC_2",
     Loader = function()
       return {
+        RESOURCE_NAME_12005 = {
+          ContentFR = "Momiji Itteki : Ornement",
+          TextMapId = "RESOURCE_NAME_12005"
+        },
         RESOURCE_NAME_12006 = {
           ContentFR = "Jugement stellaire : Verrou",
           TextMapId = "RESOURCE_NAME_12006"
@@ -20873,19 +20877,19 @@ local Data = {
         RESOURCE_SHORT_DESC_2 = {
           ContentFR = "Plan d’arme à distance",
           TextMapId = "RESOURCE_SHORT_DESC_2"
-        },
-        RESOURCE_SHORT_DESC_6 = {
-          ContentFR = "Mission spéciale",
-          TextMapId = "RESOURCE_SHORT_DESC_6"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_TEXT_100",
-    MaxKey = "RLBlessing_Desc_513",
+    MinKey = "RESOURCE_SHORT_DESC_6",
+    MaxKey = "RLBlessing_Desc_511",
     Loader = function()
       return {
+        RESOURCE_SHORT_DESC_6 = {
+          ContentFR = "Mission spéciale",
+          TextMapId = "RESOURCE_SHORT_DESC_6"
+        },
         RESOURCE_TEXT_100 = {
           ContentFR = "« Plutôt que de parler de monnaie, j’aimerais qualifier le Phoxène de « pierre ensorcelée » : nul ne peut résister à son envoûtement... En Atlasia, d’innombrables hommes et femmes ont tout sacrifié — bravé les pires épreuves, affronté le feu et l’acier, donné leur vie — pour obtenir ces minuscules fragments de Phoxène. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, Feuilles et Lune - Chroniques d’Atlasia",
           TextMapId = "RESOURCE_TEXT_100"
@@ -21681,19 +21685,19 @@ local Data = {
         RLBlessing_Desc_511 = {
           ContentFR = "Obtient <Highlight>$2</> cumuls de [Dévoreur d’ombre] toutes les <Highlight>$1</> s. Lorsque le nombre de cumuls dépasse <Highlight>$3</>, chaque cumul supplémentaire octroie également le tir d’une [Aile-lame] infligeant des dégâts équivalents à <Highlight>$4</> de l’ATQ du personnage.",
           TextMapId = "RLBlessing_Desc_511"
-        },
-        RLBlessing_Desc_513 = {
-          ContentFR = "ATQ du personnage +<Highlight>#1</>.",
-          TextMapId = "RLBlessing_Desc_513"
         }
       }
     end
   },
   {
-    MinKey = "RLBlessing_Desc_514",
-    MaxKey = "SKILL_110302_DESC",
+    MinKey = "RLBlessing_Desc_513",
+    MaxKey = "SKILL_110301_NAME",
     Loader = function()
       return {
+        RLBlessing_Desc_513 = {
+          ContentFR = "ATQ du personnage +<Highlight>#1</>.",
+          TextMapId = "RLBlessing_Desc_513"
+        },
         RLBlessing_Desc_514 = {
           ContentFR = "Vitesse d’attaque +<Highlight>$1</>.",
           TextMapId = "RLBlessing_Desc_514"
@@ -22480,19 +22484,19 @@ local Data = {
         SKILL_110301_NAME = {
           ContentFR = "Recitativo",
           TextMapId = "SKILL_110301_NAME"
-        },
-        SKILL_110302_DESC = {
-          ContentFR = "Entre en état [Fureur bestiale], consommant continuellement de la Lucidité. Lorsque la Lucidité atteint 0, l’état prend fin. Les armes ne peuvent pas être utilisées dans cet état.\nAttaque de mêlée remplacée par [Griffes sauvages], qui enchaîne jusqu’à 4 coups infligeant des Dégâts Umbro. En l’air, déclenche une Attaque plongeante infligeant des Dégâts Umbro en zone.\nAttaque à distance remplacée par [Hurlement funèbre], tirant un rayon d’énergie infligeant des Dégâts Umbro.\n— Le 3ᵉ coup de [Griffes sauvages] et [Hurlement funèbre] déclenche [Duo].\n— Le 4ᵉ coup de [Griffes sauvages] et l’Attaque plongeante déclenchent [Fermata].",
-          TextMapId = "SKILL_110302_DESC"
         }
       }
     end
   },
   {
-    MinKey = "SKILL_110302_NAME",
-    MaxKey = "SKILL_430102_DESC",
+    MinKey = "SKILL_110302_DESC",
+    MaxKey = "SKILL_430101_NAME",
     Loader = function()
       return {
+        SKILL_110302_DESC = {
+          ContentFR = "Entre en état [Fureur bestiale], consommant continuellement de la Lucidité. Lorsque la Lucidité atteint 0, l’état prend fin. Les armes ne peuvent pas être utilisées dans cet état.\nAttaque de mêlée remplacée par [Griffes sauvages], qui enchaîne jusqu’à 4 coups infligeant des Dégâts Umbro. En l’air, déclenche une Attaque plongeante infligeant des Dégâts Umbro en zone.\nAttaque à distance remplacée par [Hurlement funèbre], tirant un rayon d’énergie infligeant des Dégâts Umbro.\n— Le 3ᵉ coup de [Griffes sauvages] et [Hurlement funèbre] déclenche [Duo].\n— Le 4ᵉ coup de [Griffes sauvages] et l’Attaque plongeante déclenchent [Fermata].",
+          TextMapId = "SKILL_110302_DESC"
+        },
         SKILL_110302_NAME = {
           ContentFR = "Lever de rideau",
           TextMapId = "SKILL_110302_NAME"
@@ -23288,19 +23292,19 @@ local Data = {
         SKILL_430101_NAME = {
           ContentFR = "Usurpation divine",
           TextMapId = "SKILL_430101_NAME"
-        },
-        SKILL_430102_DESC = {
-          ContentFR = "Invoque un [Orbe chaotique]. Un seul peut exister à la fois.\nSi [Puissance foudroyante] est consommée, invoque un Orbe chaotique renforcé :\n– L’intervalle de [Tempête destructrice] passe à 2 s.\n– Les Dégâts de liaison sont augmentés.",
-          TextMapId = "SKILL_430102_DESC"
         }
       }
     end
   },
   {
-    MinKey = "SKILL_430102_NAME",
-    MaxKey = "SKILL_DESC_4102Skill02_Dmg00",
+    MinKey = "SKILL_430102_DESC",
+    MaxKey = "SKILL_DESC_4102Skill02_Buff",
     Loader = function()
       return {
+        SKILL_430102_DESC = {
+          ContentFR = "Invoque un [Orbe chaotique]. Un seul peut exister à la fois.\nSi [Puissance foudroyante] est consommée, invoque un Orbe chaotique renforcé :\n– L’intervalle de [Tempête destructrice] passe à 2 s.\n– Les Dégâts de liaison sont augmentés.",
+          TextMapId = "SKILL_430102_DESC"
+        },
         SKILL_430102_NAME = {
           ContentFR = "Appel de la tempête",
           TextMapId = "SKILL_430102_NAME"
@@ -24096,19 +24100,19 @@ local Data = {
         SKILL_DESC_4102Skill02_Buff = {
           ContentFR = "Augmentation des Dégâts de compétence de [Clarté du destin]",
           TextMapId = "SKILL_DESC_4102Skill02_Buff"
-        },
-        SKILL_DESC_4102Skill02_Dmg00 = {
-          ContentFR = "Dégâts de [Divination cosmique]",
-          TextMapId = "SKILL_DESC_4102Skill02_Dmg00"
         }
       }
     end
   },
   {
-    MinKey = "SKILL_DESC_4102Skill02_Dmg01",
-    MaxKey = "SKILL_DESC_TriggerProbUpLayer",
+    MinKey = "SKILL_DESC_4102Skill02_Dmg00",
+    MaxKey = "SKILL_DESC_TriggerProbUp",
     Loader = function()
       return {
+        SKILL_DESC_4102Skill02_Dmg00 = {
+          ContentFR = "Dégâts de [Divination cosmique]",
+          TextMapId = "SKILL_DESC_4102Skill02_Dmg00"
+        },
         SKILL_DESC_4102Skill02_Dmg01 = {
           ContentFR = "Dégâts de [Voix du tonnerre]",
           TextMapId = "SKILL_DESC_4102Skill02_Dmg01"
@@ -24904,19 +24908,19 @@ local Data = {
         SKILL_DESC_TriggerProbUp = {
           ContentFR = "Augmentation de la Chance de déclenchement",
           TextMapId = "SKILL_DESC_TriggerProbUp"
-        },
-        SKILL_DESC_TriggerProbUpLayer = {
-          ContentFR = "Bonus de Chance de déclenchement par cumul",
-          TextMapId = "SKILL_DESC_TriggerProbUpLayer"
         }
       }
     end
   },
   {
-    MinKey = "SKILL_ICON_Damage",
-    MaxKey = "TARGET_DUNGEON_Abyss_Battle3",
+    MinKey = "SKILL_DESC_TriggerProbUpLayer",
+    MaxKey = "TARGET_DUNGEON_Abyss_Battle2",
     Loader = function()
       return {
+        SKILL_DESC_TriggerProbUpLayer = {
+          ContentFR = "Bonus de Chance de déclenchement par cumul",
+          TextMapId = "SKILL_DESC_TriggerProbUpLayer"
+        },
         SKILL_ICON_Damage = {
           ContentFR = "Dégâts",
           TextMapId = "SKILL_ICON_Damage"
@@ -25697,19 +25701,19 @@ local Data = {
         TARGET_DUNGEON_Abyss_Battle2 = {
           ContentFR = "Épreuve III",
           TextMapId = "TARGET_DUNGEON_Abyss_Battle2"
-        },
-        TARGET_DUNGEON_Abyss_Battle3 = {
-          ContentFR = "Épreuve IV",
-          TextMapId = "TARGET_DUNGEON_Abyss_Battle3"
         }
       }
     end
   },
   {
-    MinKey = "TARGET_DUNGEON_Abyss_Battle4",
-    MaxKey = "Tag_Hp",
+    MinKey = "TARGET_DUNGEON_Abyss_Battle3",
+    MaxKey = "Tag_HeavyAttack",
     Loader = function()
       return {
+        TARGET_DUNGEON_Abyss_Battle3 = {
+          ContentFR = "Épreuve IV",
+          TextMapId = "TARGET_DUNGEON_Abyss_Battle3"
+        },
         TARGET_DUNGEON_Abyss_Battle4 = {
           ContentFR = "Épreuve finale",
           TextMapId = "TARGET_DUNGEON_Abyss_Battle4"
@@ -26484,16 +26488,16 @@ local Data = {
         Tag_HeavyAttack = {
           ContentFR = "Attaque chargée",
           TextMapId = "Tag_HeavyAttack"
-        },
-        Tag_Hp = {ContentFR = "PV", TextMapId = "Tag_Hp"}
+        }
       }
     end
   },
   {
-    MinKey = "Tag_MagazineCapacity",
-    MaxKey = "UIGuide_Title_Elevator",
+    MinKey = "Tag_Hp",
+    MaxKey = "UIGuide_Title_EX01Mechanism_2",
     Loader = function()
       return {
+        Tag_Hp = {ContentFR = "PV", TextMapId = "Tag_Hp"},
         Tag_MagazineCapacity = {
           ContentFR = "Capacité du chargeur",
           TextMapId = "Tag_MagazineCapacity"
@@ -27277,19 +27281,19 @@ local Data = {
         UIGuide_Title_EX01Mechanism_2 = {
           ContentFR = "État d’activation des câbles et dispositifs",
           TextMapId = "UIGuide_Title_EX01Mechanism_2"
-        },
-        UIGuide_Title_Elevator = {
-          ContentFR = "Ascenseur",
-          TextMapId = "UIGuide_Title_Elevator"
         }
       }
     end
   },
   {
-    MinKey = "UIGuide_Title_ExplorationMechanism_1",
-    MaxKey = "UI_Achievement_Des_20030102",
+    MinKey = "UIGuide_Title_Elevator",
+    MaxKey = "UI_Achievement_Des_200301",
     Loader = function()
       return {
+        UIGuide_Title_Elevator = {
+          ContentFR = "Ascenseur",
+          TextMapId = "UIGuide_Title_Elevator"
+        },
         UIGuide_Title_ExplorationMechanism_1 = {
           ContentFR = "Défi de Luno, l’exploratrice",
           TextMapId = "UIGuide_Title_ExplorationMechanism_1"
@@ -28076,19 +28080,19 @@ local Data = {
         UI_Achievement_Des_200301 = {
           ContentFR = "Porter toutes les Impressions de l’Empire Hyperboréen à <highlight>30</>",
           TextMapId = "UI_Achievement_Des_200301"
-        },
-        UI_Achievement_Des_20030102 = {
-          ContentFR = "Porter l’Impression [Avantage] dans l’Empire Hyperboréen à <highlight>100</>",
-          TextMapId = "UI_Achievement_Des_20030102"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Des_20030103",
-    MaxKey = "UI_Achievement_Des_60106",
+    MinKey = "UI_Achievement_Des_20030102",
+    MaxKey = "UI_Achievement_Des_60103",
     Loader = function()
       return {
+        UI_Achievement_Des_20030102 = {
+          ContentFR = "Porter l’Impression [Avantage] dans l’Empire Hyperboréen à <highlight>100</>",
+          TextMapId = "UI_Achievement_Des_20030102"
+        },
         UI_Achievement_Des_20030103 = {
           ContentFR = "Porter l’Impression [Morale] dans l’Empire Hyperboréen à <highlight>100</>",
           TextMapId = "UI_Achievement_Des_20030103"
@@ -28884,19 +28888,19 @@ local Data = {
         UI_Achievement_Des_60103 = {
           ContentFR = "Posséder <highlight>#1</> personnages Niv. 40",
           TextMapId = "UI_Achievement_Des_60103"
-        },
-        UI_Achievement_Des_60106 = {
-          ContentFR = "Posséder <highlight>#1</> personnages Niv. 60",
-          TextMapId = "UI_Achievement_Des_60106"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Des_60202",
-    MaxKey = "UI_Achievement_Name_160010101",
+    MinKey = "UI_Achievement_Des_60106",
+    MaxKey = "UI_Achievement_Name_150010801",
     Loader = function()
       return {
+        UI_Achievement_Des_60106 = {
+          ContentFR = "Posséder <highlight>#1</> personnages Niv. 60",
+          TextMapId = "UI_Achievement_Des_60106"
+        },
         UI_Achievement_Des_60202 = {
           ContentFR = "Posséder <highlight>#1</> personnages ayant atteint la phase 2 d’ascension",
           TextMapId = "UI_Achievement_Des_60202"
@@ -29692,19 +29696,19 @@ local Data = {
         UI_Achievement_Name_150010801 = {
           ContentFR = "Nuit étoilée III",
           TextMapId = "UI_Achievement_Name_150010801"
-        },
-        UI_Achievement_Name_160010101 = {
-          ContentFR = "Encyclopédiste d’Atlasia I",
-          TextMapId = "UI_Achievement_Name_160010101"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Name_160010102",
-    MaxKey = "UI_Achievement_Name_500403",
+    MinKey = "UI_Achievement_Name_160010101",
+    MaxKey = "UI_Achievement_Name_500402",
     Loader = function()
       return {
+        UI_Achievement_Name_160010101 = {
+          ContentFR = "Encyclopédiste d’Atlasia I",
+          TextMapId = "UI_Achievement_Name_160010101"
+        },
         UI_Achievement_Name_160010102 = {
           ContentFR = "Encyclopédiste d’Atlasia II",
           TextMapId = "UI_Achievement_Name_160010102"
@@ -30500,19 +30504,19 @@ local Data = {
         UI_Achievement_Name_500402 = {
           ContentFR = "Silence nocturne : Geôlière de la fournaise II",
           TextMapId = "UI_Achievement_Name_500402"
-        },
-        UI_Achievement_Name_500403 = {
-          ContentFR = "Silence nocturne : Geôlière de la fournaise III",
-          TextMapId = "UI_Achievement_Name_500403"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Name_500501",
-    MaxKey = "UI_Achievement_Name_911202",
+    MinKey = "UI_Achievement_Name_500403",
+    MaxKey = "UI_Achievement_Name_911201",
     Loader = function()
       return {
+        UI_Achievement_Name_500403 = {
+          ContentFR = "Silence nocturne : Geôlière de la fournaise III",
+          TextMapId = "UI_Achievement_Name_500403"
+        },
         UI_Achievement_Name_500501 = {
           ContentFR = "Silence nocturne : La Bête née du blizzard I",
           TextMapId = "UI_Achievement_Name_500501"
@@ -31308,19 +31312,19 @@ local Data = {
         UI_Achievement_Name_911201 = {
           ContentFR = "Illusions éphémères I",
           TextMapId = "UI_Achievement_Name_911201"
-        },
-        UI_Achievement_Name_911202 = {
-          ContentFR = "Illusions éphémères II",
-          TextMapId = "UI_Achievement_Name_911202"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Name_912101",
-    MaxKey = "UI_Attr_Wind_Name",
+    MinKey = "UI_Achievement_Name_911202",
+    MaxKey = "UI_Attr_Water_Name",
     Loader = function()
       return {
+        UI_Achievement_Name_911202 = {
+          ContentFR = "Illusions éphémères II",
+          TextMapId = "UI_Achievement_Name_911202"
+        },
         UI_Achievement_Name_912101 = {
           ContentFR = "Gardien du feu I",
           TextMapId = "UI_Achievement_Name_912101"
@@ -32113,19 +32117,19 @@ local Data = {
         UI_Attr_Water_Name = {
           ContentFR = "Hydro",
           TextMapId = "UI_Attr_Water_Name"
-        },
-        UI_Attr_Wind_Name = {
-          ContentFR = "Anémo",
-          TextMapId = "UI_Attr_Wind_Name"
         }
       }
     end
   },
   {
-    MinKey = "UI_BACK",
-    MaxKey = "UI_CHAR_DATA_TEXT_11030304",
+    MinKey = "UI_Attr_Wind_Name",
+    MaxKey = "UI_CHAR_DATA_TEXT_11030303",
     Loader = function()
       return {
+        UI_Attr_Wind_Name = {
+          ContentFR = "Anémo",
+          TextMapId = "UI_Attr_Wind_Name"
+        },
         UI_BACK = {ContentFR = "Retour", TextMapId = "UI_BACK"},
         UI_BAG_EMPTY = {
           ContentFR = "L’inventaire est vide",
@@ -32918,19 +32922,19 @@ local Data = {
         UI_CHAR_DATA_TEXT_11030303 = {
           ContentFR = "Parsifal n’était pas un garçon chaleureux. Il avait du mal à exprimer ses émotions, et encore plus à les recevoir. Bien souvent, quand quelqu’un s’approchait de lui, il se repliait instinctivement.\nHeureusement, ses camarades de troupe étaient gentils et accueillants. Entre les répétitions et les cours, ils l’entraînaient dans des jeux idiots, des bavardages sans importance, ou partageaient leurs friandises avec lui. Leur enthousiasme le déstabilisait parfois, et la professeure les réprimandait avec résignation : \n« Arrêtez d’harceler Parsifal tout le temps, voulez-vous ? »\nCe qu’il n’arrivait jamais à dire, c’était qu’au fond, cela ne le dérangeait pas du tout. Malgré le sentiment, au plus profond de lui, qu’un lourd rideau le séparait de leur monde, comme sur scène, il restait profondément reconnaissant que le théâtre lui ait offert une façon de toucher l’extérieur. Pourtant, chaque fois que les mots montaient à ses lèvres, ils se bloquaient.\nSi seulement il pouvait les chanter... Peut-être qu’un jour, s’ils montaient une pièce sur l’amitié entre camarades, il pourrait emprunter le courage que la scène lui offrirait et enfin prononcer ces mots à voix haute :\n« Merci de m’avoir traité comme un ami. »",
           TextMapId = "UI_CHAR_DATA_TEXT_11030303"
-        },
-        UI_CHAR_DATA_TEXT_11030304 = {
-          ContentFR = "Parsifal avait caressé un rêve :\nLe jour où il deviendrait comédien, où il monterait enfin sur scène et rendrait au théâtre tout ce qu’il lui avait donné, il emmènerait sa mère loin de l’Empire pour s’installer à Luca.\nC’était là que son professeur, Madame Violetta, avait appris la musique. On disait qu’à Luca, les Charons ne subissaient pas de discrimination, que l’art dramatique y était florissant, avec de plus grandes scènes et bien plus d’opportunités.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11030304"
         }
       }
     end
   },
   {
-    MinKey = "UI_CHAR_DATA_TEXT_11030305",
-    MaxKey = "UI_CHAR_DATA_TEXT_42020305",
+    MinKey = "UI_CHAR_DATA_TEXT_11030304",
+    MaxKey = "UI_CHAR_DATA_TEXT_42020304",
     Loader = function()
       return {
+        UI_CHAR_DATA_TEXT_11030304 = {
+          ContentFR = "Parsifal avait caressé un rêve :\nLe jour où il deviendrait comédien, où il monterait enfin sur scène et rendrait au théâtre tout ce qu’il lui avait donné, il emmènerait sa mère loin de l’Empire pour s’installer à Luca.\nC’était là que son professeur, Madame Violetta, avait appris la musique. On disait qu’à Luca, les Charons ne subissaient pas de discrimination, que l’art dramatique y était florissant, avec de plus grandes scènes et bien plus d’opportunités.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11030304"
+        },
         UI_CHAR_DATA_TEXT_11030305 = {
           ContentFR = "Parsifal pouvait jouer presque tous les rôles. Mais c’était toujours dans la peau de personnages brisés, aux destins contrariés, qu’il brillait le plus... même s’il refusait de l’admettre.\nPour lui, le théâtre était une porte entrouverte sur d’autres vies possibles. Mais, si affûté que fût son talent, il ne pouvait jamais se délester entièrement de lui-même.\nEt lorsque, par hasard, les émotions d’un rôle se superposaient aux siennes, la douleur gravée au fond de son âme résonnait avec la fiction, libérant une force brute, poignante, qui laissait le public suspendu à ses gestes.\nUn don unique... magnifique, et cruel.",
           TextMapId = "UI_CHAR_DATA_TEXT_11030305"
@@ -33726,19 +33730,19 @@ local Data = {
         UI_CHAR_DATA_TEXT_42020304 = {
           ContentFR = "Randy n’a presque jamais atteint les attentes de son père, pas bien grand, peu musclé, et, même devenu soldat, sans la moindre intention de \"mourir pour l’Empire\" comme lui.\nSon seul progrès notable ? L’art de l’épée, perfectionné au point de pouvoir éplucher une pomme en un seul mouvement fluide, la lame dansant comme une fleur d’acier.\nMais cette pomme, jamais il ne pourra la porter aux lèvres de son père, endormi à jamais dans un sommeil sans réveil.",
           TextMapId = "UI_CHAR_DATA_TEXT_42020304"
-        },
-        UI_CHAR_DATA_TEXT_42020305 = {
-          ContentFR = "Enfant, Randy rêvait de créer l’arme la plus puissante du monde, celle qui apporterait la paix à tous. Alors, peut-être, son père rentrerait plus tôt, et cesserait d’exiger qu’il se renforce à coups d’exercices éreintants.\nMais après avoir étudié l’histoire des guerres d’Atlasia, il abandonna cette idée : pour les hommes, il n’existe pas \"d’arme ultime\"... seulement une arme plus puissante que la précédente. Les armes ne sont que des instruments de pouvoir, incapables de donner une paix véritable.\nAujourd’hui, Randy se dit qu’être un légionnaire à moitié investi est peut-être une voie nouvelle pour chercher la paix... une approche qu’il faudrait presque élever au rang d’exemple.",
-          TextMapId = "UI_CHAR_DATA_TEXT_42020305"
         }
       }
     end
   },
   {
-    MinKey = "UI_CHAR_DATA_TEXT_42020401",
-    MaxKey = "UI_COMMONPOP_TEXT_100007",
+    MinKey = "UI_CHAR_DATA_TEXT_42020305",
+    MaxKey = "UI_COMMONPOP_TEXT_100006",
     Loader = function()
       return {
+        UI_CHAR_DATA_TEXT_42020305 = {
+          ContentFR = "Enfant, Randy rêvait de créer l’arme la plus puissante du monde, celle qui apporterait la paix à tous. Alors, peut-être, son père rentrerait plus tôt, et cesserait d’exiger qu’il se renforce à coups d’exercices éreintants.\nMais après avoir étudié l’histoire des guerres d’Atlasia, il abandonna cette idée : pour les hommes, il n’existe pas \"d’arme ultime\"... seulement une arme plus puissante que la précédente. Les armes ne sont que des instruments de pouvoir, incapables de donner une paix véritable.\nAujourd’hui, Randy se dit qu’être un légionnaire à moitié investi est peut-être une voie nouvelle pour chercher la paix... une approche qu’il faudrait presque élever au rang d’exemple.",
+          TextMapId = "UI_CHAR_DATA_TEXT_42020305"
+        },
         UI_CHAR_DATA_TEXT_42020401 = {
           ContentFR = "Dans les souvenirs de Randy, les nuits pluvieuses se divisent en deux mondes : à l’intérieur, elles sont parfumées, paisibles, parfaites pour dormir, à l’extérieur, elles sont lourdes d’inquiétude, d’agitation... et propices au crime.\nUne ruelle sombre, l’odeur métallique du sang, un \"voleur\" armé d’une arme étrangère, et une élégante demoiselle semblant appeler à l’aide... ainsi débuta sa première mésaventure de manipulation, peu après son entrée dans la Légion.\nIl tenta d’apaiser le malfaiteur par la négociation, en retour, il récolta une volée de tirs d’une arme étrangère... Deux grenades lacrymogènes plus tard, il restitua le sac à main vide de la demoiselle... avant de comprendre que tout n’avait été qu’une mise en scène, masquée par son sourire enjôleur.\nChaque fois qu’il reçoit de sa part une bannière brodée de remerciements pour l’avoir \"débarrassée de ses poursuivants\", Randy repense à cette rencontre improbable. Il soupire alors devant ses sœurs, regrettant leur manque d’élégance... mais, sans même s’en rendre compte, son visage s’adoucit d’un sourire qu’il ne réserve qu’à sa famille.",
           TextMapId = "UI_CHAR_DATA_TEXT_42020401"
@@ -34534,19 +34538,19 @@ local Data = {
         UI_COMMONPOP_TEXT_100006 = {
           ContentFR = "Tenter à nouveau le défi ?",
           TextMapId = "UI_COMMONPOP_TEXT_100006"
-        },
-        UI_COMMONPOP_TEXT_100007 = {
-          ContentFR = "Télécharger la mise à jour facultative ?",
-          TextMapId = "UI_COMMONPOP_TEXT_100007"
         }
       }
     end
   },
   {
-    MinKey = "UI_COMMONPOP_TEXT_100008",
-    MaxKey = "UI_CTL_ReplaceItem",
+    MinKey = "UI_COMMONPOP_TEXT_100007",
+    MaxKey = "UI_CTL_Remove",
     Loader = function()
       return {
+        UI_COMMONPOP_TEXT_100007 = {
+          ContentFR = "Télécharger la mise à jour facultative ?",
+          TextMapId = "UI_COMMONPOP_TEXT_100007"
+        },
         UI_COMMONPOP_TEXT_100008 = {
           ContentFR = "Quitter le jeu et revenir à l’écran de connexion ?",
           TextMapId = "UI_COMMONPOP_TEXT_100008"
@@ -35339,19 +35343,19 @@ local Data = {
         UI_CTL_Remove = {
           ContentFR = "Retirer",
           TextMapId = "UI_CTL_Remove"
-        },
-        UI_CTL_ReplaceItem = {
-          ContentFR = "Remplacer cet objet",
-          TextMapId = "UI_CTL_ReplaceItem"
         }
       }
     end
   },
   {
-    MinKey = "UI_CTL_Replace_Mod",
-    MaxKey = "UI_Consumable_Choose_Confirm_Have_Skin",
+    MinKey = "UI_CTL_ReplaceItem",
+    MaxKey = "UI_Consumable_Choose_Confirm",
     Loader = function()
       return {
+        UI_CTL_ReplaceItem = {
+          ContentFR = "Remplacer cet objet",
+          TextMapId = "UI_CTL_ReplaceItem"
+        },
         UI_CTL_Replace_Mod = {
           ContentFR = "Remplacer ce Sceau démoniaque",
           TextMapId = "UI_CTL_Replace_Mod"
@@ -36144,19 +36148,19 @@ local Data = {
         UI_Consumable_Choose_Confirm = {
           ContentFR = "Confirmer l’obtention de <highlight>%s</> ×1 ?",
           TextMapId = "UI_Consumable_Choose_Confirm"
-        },
-        UI_Consumable_Choose_Confirm_Have_Skin = {
-          ContentFR = "Apparence déjà obtenue. Échanger à nouveau ? (Les doublons seront convertis en ressources.)",
-          TextMapId = "UI_Consumable_Choose_Confirm_Have_Skin"
         }
       }
     end
   },
   {
-    MinKey = "UI_Consumable_Effect",
-    MaxKey = "UI_Disabled_Des_ExploreBadgeShop",
+    MinKey = "UI_Consumable_Choose_Confirm_Have_Skin",
+    MaxKey = "UI_Disabled_Des_Entertainment",
     Loader = function()
       return {
+        UI_Consumable_Choose_Confirm_Have_Skin = {
+          ContentFR = "Apparence déjà obtenue. Échanger à nouveau ? (Les doublons seront convertis en ressources.)",
+          TextMapId = "UI_Consumable_Choose_Confirm_Have_Skin"
+        },
         UI_Consumable_Effect = {
           ContentFR = "Utilise 1 %s pour obtenir <highlight>%s</> ×1",
           TextMapId = "UI_Consumable_Effect"
@@ -36949,19 +36953,19 @@ local Data = {
         UI_Disabled_Des_Entertainment = {
           ContentFR = "Fragments de mémoire temporairement indisponibles",
           TextMapId = "UI_Disabled_Des_Entertainment"
-        },
-        UI_Disabled_Des_ExploreBadgeShop = {
-          ContentFR = "Faveur de Luno, l’exploratrice temporairement indisponible",
-          TextMapId = "UI_Disabled_Des_ExploreBadgeShop"
         }
       }
     end
   },
   {
-    MinKey = "UI_Disabled_Des_Forging",
-    MaxKey = "UI_ElementDes_Fire",
+    MinKey = "UI_Disabled_Des_ExploreBadgeShop",
+    MaxKey = "UI_ElementDes_Dark",
     Loader = function()
       return {
+        UI_Disabled_Des_ExploreBadgeShop = {
+          ContentFR = "Faveur de Luno, l’exploratrice temporairement indisponible",
+          TextMapId = "UI_Disabled_Des_ExploreBadgeShop"
+        },
         UI_Disabled_Des_Forging = {
           ContentFR = "Forge temporairement indisponible",
           TextMapId = "UI_Disabled_Des_Forging"
@@ -37757,19 +37761,19 @@ local Data = {
         UI_ElementDes_Dark = {
           ContentFR = "Inflige des Dégâts <H>Umbro</> sur la durée et ralentit la vitesse de <H>récupération de posture</> de la cible",
           TextMapId = "UI_ElementDes_Dark"
-        },
-        UI_ElementDes_Fire = {
-          ContentFR = "Inflige des Dégâts <H>Pyro</> sur la durée",
-          TextMapId = "UI_ElementDes_Fire"
         }
       }
     end
   },
   {
-    MinKey = "UI_ElementDes_General",
-    MaxKey = "UI_Friend_SearchHint",
+    MinKey = "UI_ElementDes_Fire",
+    MaxKey = "UI_Friend_SearchBtn",
     Loader = function()
       return {
+        UI_ElementDes_Fire = {
+          ContentFR = "Inflige des Dégâts <H>Pyro</> sur la durée",
+          TextMapId = "UI_ElementDes_Fire"
+        },
         UI_ElementDes_General = {
           ContentFR = "Les dégâts d’un attribut élémentaire <H>avantagé</> sont augmentés de <H>400 %</>.\nLes dégâts d’un attribut élémentaire <W>non avantagé</> sont réduits de <W>50 %</>.",
           TextMapId = "UI_ElementDes_General"
@@ -38562,19 +38566,19 @@ local Data = {
         UI_Friend_SearchBtn = {
           ContentFR = "Rechercher",
           TextMapId = "UI_Friend_SearchBtn"
-        },
-        UI_Friend_SearchHint = {
-          ContentFR = "Saisir l’UID",
-          TextMapId = "UI_Friend_SearchHint"
         }
       }
     end
   },
   {
-    MinKey = "UI_Friend_SearchResTitle",
-    MaxKey = "UI_Keyboard_TeamInfo",
+    MinKey = "UI_Friend_SearchHint",
+    MaxKey = "UI_Keyboard_SwitchMaster",
     Loader = function()
       return {
+        UI_Friend_SearchHint = {
+          ContentFR = "Saisir l’UID",
+          TextMapId = "UI_Friend_SearchHint"
+        },
         UI_Friend_SearchResTitle = {
           ContentFR = "Résultats de recherche",
           TextMapId = "UI_Friend_SearchResTitle"
@@ -39370,19 +39374,19 @@ local Data = {
         UI_Keyboard_SwitchMaster = {
           ContentFR = "Changer de protagoniste",
           TextMapId = "UI_Keyboard_SwitchMaster"
-        },
-        UI_Keyboard_TeamInfo = {
-          ContentFR = "Composition d’équipe",
-          TextMapId = "UI_Keyboard_TeamInfo"
         }
       }
     end
   },
   {
-    MinKey = "UI_Keyboard_UpSelect",
-    MaxKey = "UI_MECHANISM_400",
+    MinKey = "UI_Keyboard_TeamInfo",
+    MaxKey = "UI_MECHANISM_39046",
     Loader = function()
       return {
+        UI_Keyboard_TeamInfo = {
+          ContentFR = "Composition d’équipe",
+          TextMapId = "UI_Keyboard_TeamInfo"
+        },
         UI_Keyboard_UpSelect = {
           ContentFR = "Sélection précédente",
           TextMapId = "UI_Keyboard_UpSelect"
@@ -40178,19 +40182,19 @@ local Data = {
         UI_MECHANISM_39046 = {
           ContentFR = "Monter à bord",
           TextMapId = "UI_MECHANISM_39046"
-        },
-        UI_MECHANISM_400 = {
-          ContentFR = "Lancer",
-          TextMapId = "UI_MECHANISM_400"
         }
       }
     end
   },
   {
-    MinKey = "UI_MECHANISM_401",
-    MaxKey = "UI_Name_Walnut_1003",
+    MinKey = "UI_MECHANISM_400",
+    MaxKey = "UI_Name_Walnut_1002",
     Loader = function()
       return {
+        UI_MECHANISM_400 = {
+          ContentFR = "Lancer",
+          TextMapId = "UI_MECHANISM_400"
+        },
         UI_MECHANISM_401 = {
           ContentFR = "Ramasser",
           TextMapId = "UI_MECHANISM_401"
@@ -40983,19 +40987,19 @@ local Data = {
         UI_Name_Walnut_1002 = {
           ContentFR = "Mandat scellé : Lisbell",
           TextMapId = "UI_Name_Walnut_1002"
-        },
-        UI_Name_Walnut_1003 = {
-          ContentFR = "Mandat scellé : Dame Nifle",
-          TextMapId = "UI_Name_Walnut_1003"
         }
       }
     end
   },
   {
-    MinKey = "UI_Name_Walnut_1004",
-    MaxKey = "UI_Npc_Name_Dig3",
+    MinKey = "UI_Name_Walnut_1003",
+    MaxKey = "UI_Npc_Name_Dig2",
     Loader = function()
       return {
+        UI_Name_Walnut_1003 = {
+          ContentFR = "Mandat scellé : Dame Nifle",
+          TextMapId = "UI_Name_Walnut_1003"
+        },
         UI_Name_Walnut_1004 = {
           ContentFR = "Mandat scellé : Kezhou",
           TextMapId = "UI_Name_Walnut_1004"
@@ -41788,19 +41792,19 @@ local Data = {
         UI_Npc_Name_Dig2 = {
           ContentFR = "Creuser à nouveau",
           TextMapId = "UI_Npc_Name_Dig2"
-        },
-        UI_Npc_Name_Dig3 = {
-          ContentFR = "Creuser à nouveau",
-          TextMapId = "UI_Npc_Name_Dig3"
         }
       }
     end
   },
   {
-    MinKey = "UI_Npc_Name_Dog",
-    MaxKey = "UI_OPTION_InterfaceMode_Window21:9",
+    MinKey = "UI_Npc_Name_Dig3",
+    MaxKey = "UI_OPTION_InterfaceMode_Window16:9",
     Loader = function()
       return {
+        UI_Npc_Name_Dig3 = {
+          ContentFR = "Creuser à nouveau",
+          TextMapId = "UI_Npc_Name_Dig3"
+        },
         UI_Npc_Name_Dog = {
           ContentFR = "Chien féroce",
           TextMapId = "UI_Npc_Name_Dog"
@@ -42596,19 +42600,19 @@ local Data = {
         ["UI_OPTION_InterfaceMode_Window16:9"] = {
           ContentFR = "Fenêtré 16:9",
           TextMapId = "UI_OPTION_InterfaceMode_Window16:9"
-        },
-        ["UI_OPTION_InterfaceMode_Window21:9"] = {
-          ContentFR = "Fenêtré 21:9",
-          TextMapId = "UI_OPTION_InterfaceMode_Window21:9"
         }
       }
     end
   },
   {
-    MinKey = "UI_OPTION_InterfaceMode_Window23:9",
-    MaxKey = "UI_PersonInfo_Name",
+    MinKey = "UI_OPTION_InterfaceMode_Window21:9",
+    MaxKey = "UI_PersonInfo_Held",
     Loader = function()
       return {
+        ["UI_OPTION_InterfaceMode_Window21:9"] = {
+          ContentFR = "Fenêtré 21:9",
+          TextMapId = "UI_OPTION_InterfaceMode_Window21:9"
+        },
         ["UI_OPTION_InterfaceMode_Window23:9"] = {
           ContentFR = "Fenêtré 23:9",
           TextMapId = "UI_OPTION_InterfaceMode_Window23:9"
@@ -43404,19 +43408,19 @@ local Data = {
         UI_PersonInfo_Held = {
           ContentFR = "Obtenu",
           TextMapId = "UI_PersonInfo_Held"
-        },
-        UI_PersonInfo_Name = {
-          ContentFR = "Profil",
-          TextMapId = "UI_PersonInfo_Name"
         }
       }
     end
   },
   {
-    MinKey = "UI_PersonInfo_NoChar",
-    MaxKey = "UI_Review_Chats",
+    MinKey = "UI_PersonInfo_Name",
+    MaxKey = "UI_Return_Forged",
     Loader = function()
       return {
+        UI_PersonInfo_Name = {
+          ContentFR = "Profil",
+          TextMapId = "UI_PersonInfo_Name"
+        },
         UI_PersonInfo_NoChar = {
           ContentFR = "Aucun personnage affiché",
           TextMapId = "UI_PersonInfo_NoChar"
@@ -44188,19 +44192,19 @@ local Data = {
         UI_Return_Forged = {
           ContentFR = "Forgé",
           TextMapId = "UI_Return_Forged"
-        },
-        UI_Review_Chats = {
-          ContentFR = "Revisiter l’Instant figé",
-          TextMapId = "UI_Review_Chats"
         }
       }
     end
   },
   {
-    MinKey = "UI_RewardUnlockTips_107003",
-    MaxKey = "UI_Select_Unique",
+    MinKey = "UI_Review_Chats",
+    MaxKey = "UI_Select_Time",
     Loader = function()
       return {
+        UI_Review_Chats = {
+          ContentFR = "Revisiter l’Instant figé",
+          TextMapId = "UI_Review_Chats"
+        },
         UI_RewardUnlockTips_107003 = {
           ContentFR = "Terminer la quête principale « Porté par la brise » pour déverrouiller",
           TextMapId = "UI_RewardUnlockTips_107003"
@@ -44993,19 +44997,19 @@ local Data = {
         UI_Select_Time = {
           ContentFR = "Date d’ajout",
           TextMapId = "UI_Select_Time"
-        },
-        UI_Select_Unique = {
-          ContentFR = "Rareté",
-          TextMapId = "UI_Select_Unique"
         }
       }
     end
   },
   {
-    MinKey = "UI_Select_Unlock",
-    MaxKey = "UI_TELEPORTPOINT_NAME_104101_8",
+    MinKey = "UI_Select_Unique",
+    MaxKey = "UI_TELEPORTPOINT_NAME_104101_7",
     Loader = function()
       return {
+        UI_Select_Unique = {
+          ContentFR = "Rareté",
+          TextMapId = "UI_Select_Unique"
+        },
         UI_Select_Unlock = {
           ContentFR = "Débloquer",
           TextMapId = "UI_Select_Unlock"
@@ -45798,19 +45802,19 @@ local Data = {
         UI_TELEPORTPOINT_NAME_104101_7 = {
           ContentFR = "Marché Voilé",
           TextMapId = "UI_TELEPORTPOINT_NAME_104101_7"
-        },
-        UI_TELEPORTPOINT_NAME_104101_8 = {
-          ContentFR = "Plaine des Corbeaux",
-          TextMapId = "UI_TELEPORTPOINT_NAME_104101_8"
         }
       }
     end
   },
   {
-    MinKey = "UI_TELEPORTPOINT_NAME_104101_9",
-    MaxKey = "UI_Toast_Experience_Title",
+    MinKey = "UI_TELEPORTPOINT_NAME_104101_8",
+    MaxKey = "UI_Toast_Dungeon_Detail",
     Loader = function()
       return {
+        UI_TELEPORTPOINT_NAME_104101_8 = {
+          ContentFR = "Plaine des Corbeaux",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104101_8"
+        },
         UI_TELEPORTPOINT_NAME_104101_9 = {
           ContentFR = "Mer de Poussière",
           TextMapId = "UI_TELEPORTPOINT_NAME_104101_9"
@@ -46614,19 +46618,19 @@ Tirer sur les cibles pour marquer des points.
         UI_Toast_Dungeon_Detail = {
           ContentFR = "1) Certains ennemis de missions possèdent des <Highlight>attributs élémentaires</>. Utiliser des personnages ayant l’avantage élémentaire rendra le combat plus facile.\n2) Les <Highlight>récompenses de mission</> peuvent varier selon l’élément. Consultez les détails de la mission pour plus d’informations.",
           TextMapId = "UI_Toast_Dungeon_Detail"
-        },
-        UI_Toast_Experience_Title = {
-          ContentFR = "Source d’EXP",
-          TextMapId = "UI_Toast_Experience_Title"
         }
       }
     end
   },
   {
-    MinKey = "UI_Toast_Firend_RefreshCd",
-    MaxKey = "UI_WORLDMAP_REGIONNAME_1",
+    MinKey = "UI_Toast_Experience_Title",
+    MaxKey = "UI_WORLDMAP_NAME_5",
     Loader = function()
       return {
+        UI_Toast_Experience_Title = {
+          ContentFR = "Source d’EXP",
+          TextMapId = "UI_Toast_Experience_Title"
+        },
         UI_Toast_Firend_RefreshCd = {
           ContentFR = "Actualisation en cours",
           TextMapId = "UI_Toast_Firend_RefreshCd"
@@ -47416,19 +47420,19 @@ Tirer sur les cibles pour marquer des points.
         UI_WORLDMAP_NAME_5 = {
           ContentFR = "Capitale Impériale",
           TextMapId = "UI_WORLDMAP_NAME_5"
-        },
-        UI_WORLDMAP_REGIONNAME_1 = {
-          ContentFR = "Empire Hyperboréen",
-          TextMapId = "UI_WORLDMAP_REGIONNAME_1"
         }
       }
     end
   },
   {
-    MinKey = "UI_WORLDMAP_REGIONNAME_2",
-    MaxKey = "VoiceDes114",
+    MinKey = "UI_WORLDMAP_REGIONNAME_1",
+    MaxKey = "VoiceDes113",
     Loader = function()
       return {
+        UI_WORLDMAP_REGIONNAME_1 = {
+          ContentFR = "Empire Hyperboréen",
+          TextMapId = "UI_WORLDMAP_REGIONNAME_1"
+        },
         UI_WORLDMAP_REGIONNAME_2 = {
           ContentFR = "Huaxu",
           TextMapId = "UI_WORLDMAP_REGIONNAME_2"
@@ -48221,19 +48225,19 @@ Tirer sur les cibles pour marquer des points.
         VoiceDes113 = {
           ContentFR = "À propos du devoir",
           TextMapId = "VoiceDes113"
-        },
-        VoiceDes114 = {
-          ContentFR = "À propos de ton humeur",
-          TextMapId = "VoiceDes114"
         }
       }
     end
   },
   {
-    MinKey = "VoiceDes115",
-    MaxKey = "voice_ch_char_Feina_vo_companio_04",
+    MinKey = "VoiceDes114",
+    MaxKey = "voice_ch_char_Feina_vo_companio_03",
     Loader = function()
       return {
+        VoiceDes114 = {
+          ContentFR = "À propos de ton humeur",
+          TextMapId = "VoiceDes114"
+        },
         VoiceDes115 = {
           ContentFR = "À propos de la nuit",
           TextMapId = "VoiceDes115"
@@ -49026,19 +49030,19 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Feina_vo_companio_03 = {
           ContentFR = "Dis, Mlle Lionne, tu veux réveiller la fée qui dort dans cette épée géante ? Alors il te faudra sûrement chanter des tas de sortilèges, comme : « Ô toi qui as éveillé l’épée sacrée Samaël... un jour, tu deviendras le roi d’Élysium ! »",
           TextMapId = "voice_ch_char_Feina_vo_companio_03"
-        },
-        voice_ch_char_Feina_vo_companio_04 = {
-          ContentFR = "Monsieur Hippocampe originaire du royaume du sud, je crois t’avoir déjà vu quelque part... Hmm... Je me souviens ! Il y a bien longtemps, Papa avait accroché ton portrait au mur de notre maison.",
-          TextMapId = "voice_ch_char_Feina_vo_companio_04"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Feina_vo_die_r01",
-    MaxKey = "voice_ch_char_Linen_vo_topic_02_1",
+    MinKey = "voice_ch_char_Feina_vo_companio_04",
+    MaxKey = "voice_ch_char_Linen_vo_topic_01_2",
     Loader = function()
       return {
+        voice_ch_char_Feina_vo_companio_04 = {
+          ContentFR = "Monsieur Hippocampe originaire du royaume du sud, je crois t’avoir déjà vu quelque part... Hmm... Je me souviens ! Il y a bien longtemps, Papa avait accroché ton portrait au mur de notre maison.",
+          TextMapId = "voice_ch_char_Feina_vo_companio_04"
+        },
         voice_ch_char_Feina_vo_die_r01 = {
           ContentFR = "Il est temps pour moi de partir pour ce pays lointain...",
           TextMapId = "voice_ch_char_Feina_vo_die_r01"
@@ -49834,19 +49838,19 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Linen_vo_topic_01_2 = {
           ContentFR = "Pff, qu’est-ce que tu veux que je sache ? C’est elle qui décide, moi je fais le boulot. C’est tout.",
           TextMapId = "voice_ch_char_Linen_vo_topic_01_2"
-        },
-        voice_ch_char_Linen_vo_topic_02_1 = {
-          ContentFR = "Des conseils ? Le seul que je connais, c’est qu’il n’y a aucun problème qu’un bon coup de poing ne puisse résoudre. Et si ça ne suffit pas, frappe encore.",
-          TextMapId = "voice_ch_char_Linen_vo_topic_02_1"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Linen_vo_topic_02_2",
-    MaxKey = "voice_ch_char_Shuimu_vo_fail",
+    MinKey = "voice_ch_char_Linen_vo_topic_02_1",
+    MaxKey = "voice_ch_char_Shuimu_vo_die_r02",
     Loader = function()
       return {
+        voice_ch_char_Linen_vo_topic_02_1 = {
+          ContentFR = "Des conseils ? Le seul que je connais, c’est qu’il n’y a aucun problème qu’un bon coup de poing ne puisse résoudre. Et si ça ne suffit pas, frappe encore.",
+          TextMapId = "voice_ch_char_Linen_vo_topic_02_1"
+        },
         voice_ch_char_Linen_vo_topic_02_2 = {
           ContentFR = "Dans ce cas, une balle suffit généralement.",
           TextMapId = "voice_ch_char_Linen_vo_topic_02_2"
@@ -50642,19 +50646,19 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Shuimu_vo_die_r02 = {
           ContentFR = "Adieu... mon amour...",
           TextMapId = "voice_ch_char_Shuimu_vo_die_r02"
-        },
-        voice_ch_char_Shuimu_vo_fail = {
-          ContentFR = "C’est trop triste... J'aurais vraiment besoin d'un peu de réconfort de ta part...",
-          TextMapId = "voice_ch_char_Shuimu_vo_fail"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Shuimu_vo_gain",
-    MaxKey = "voice_ch_char_Yeer_vo_battlestart_r02",
+    MinKey = "voice_ch_char_Shuimu_vo_fail",
+    MaxKey = "voice_ch_char_Yeer_vo_battlestart_r01",
     Loader = function()
       return {
+        voice_ch_char_Shuimu_vo_fail = {
+          ContentFR = "C’est trop triste... J'aurais vraiment besoin d'un peu de réconfort de ta part...",
+          TextMapId = "voice_ch_char_Shuimu_vo_fail"
+        },
         voice_ch_char_Shuimu_vo_gain = {
           ContentFR = "Quelle rencontre romantique ! Est-ce un signe du Dieu de l’Amour ? Je suis Rebecca, la parfumeuse. Que dirais-tu d’essayer mon parfum unique, l’Essence de l’Amour ?",
           TextMapId = "voice_ch_char_Shuimu_vo_gain"
@@ -51450,19 +51454,19 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Yeer_vo_battlestart_r01 = {
           ContentFR = "Oliver : Aaah... de l’air frais, enfin.",
           TextMapId = "voice_ch_char_Yeer_vo_battlestart_r01"
-        },
-        voice_ch_char_Yeer_vo_battlestart_r02 = {
-          ContentFR = "Yale : L’expérience va commencer, f-faites attention !",
-          TextMapId = "voice_ch_char_Yeer_vo_battlestart_r02"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Yeer_vo_be_hit_heavy_r01",
+    MinKey = "voice_ch_char_Yeer_vo_battlestart_r02",
     MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
     Loader = function()
       return {
+        voice_ch_char_Yeer_vo_battlestart_r02 = {
+          ContentFR = "Yale : L’expérience va commencer, f-faites attention !",
+          TextMapId = "voice_ch_char_Yeer_vo_battlestart_r02"
+        },
         voice_ch_char_Yeer_vo_be_hit_heavy_r01 = {
           ContentFR = "Oliver : Tu perds rien pour attendre.",
           TextMapId = "voice_ch_char_Yeer_vo_be_hit_heavy_r01"

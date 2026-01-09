@@ -2824,6 +2824,13 @@ return ReadOnly("Condition2Id", {
     },
     [1] = {
       [1] = T.RT_20
+    },
+    [1191512] = {
+      [0] = {
+        [602] = {
+          [1] = 20023001
+        }
+      }
     }
   },
   OwnCharIdAndLevel = {
