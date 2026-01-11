@@ -60,7 +60,7 @@
     "名称": "Keep the Grim Reaper Waiting Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Restore <H>5000 points of HP",
+    "描述": "Restore 5000 points of HP",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -71,7 +71,7 @@
     "名称": "Keep the Grim Reaper Waiting Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Restore <H>15000 points of HP",
+    "描述": "Restore 15000 points of HP",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -82,7 +82,7 @@
     "名称": "Keep the Grim Reaper Waiting Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Restore <H>30000 points of HP",
+    "描述": "Restore 30000 points of HP",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
@@ -94,7 +94,7 @@
     "名称": "Crusader of Light Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Deal <H>300000 points of Lumino Damage",
+    "描述": "Deal 300000 points of Lumino Damage",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -105,7 +105,7 @@
     "名称": "Crusader of Light Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Deal <H>1500000 points of Lumino Damage",
+    "描述": "Deal 1500000 points of Lumino Damage",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -116,7 +116,7 @@
     "名称": "Crusader of Light Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Deal <H>6000000 points of Lumino Damage",
+    "描述": "Deal 6000000 points of Lumino Damage",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -127,7 +127,7 @@
     "名称": "When Darkness Falls Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Deal <H>300000 points of Umbro Damage",
+    "描述": "Deal 300000 points of Umbro Damage",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -138,7 +138,7 @@
     "名称": "When Darkness Falls Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Deal <H>1500000 points of Umbro Damage",
+    "描述": "Deal 1500000 points of Umbro Damage",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -149,7 +149,7 @@
     "名称": "When Darkness Falls Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Deal <H>6000000 points of Umbro Damage",
+    "描述": "Deal 6000000 points of Umbro Damage",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -160,7 +160,7 @@
     "名称": "The Discontent of Water Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Deal <H>300000 points of Hydro Damage",
+    "描述": "Deal 300000 points of Hydro Damage",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -171,7 +171,7 @@
     "名称": "The Discontent of Water Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Deal <H>1500000 points of Hydro Damage",
+    "描述": "Deal 1500000 points of Hydro Damage",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -182,7 +182,7 @@
     "名称": "The Discontent of Water Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Deal <H>6000000 points of Hydro Damage",
+    "描述": "Deal 6000000 points of Hydro Damage",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -193,7 +193,7 @@
     "名称": "The Glee of Fire Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Deal <H>300000 points of Pyro Damage",
+    "描述": "Deal 300000 points of Pyro Damage",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -204,7 +204,7 @@
     "名称": "The Glee of Fire Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Deal <H>1500000 points of Pyro Damage",
+    "描述": "Deal 1500000 points of Pyro Damage",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -215,7 +215,7 @@
     "名称": "The Glee of Fire Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Deal <H>6000000 points of Pyro Damage",
+    "描述": "Deal 6000000 points of Pyro Damage",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -226,7 +226,7 @@
     "名称": "Don't Stand Under the Tree Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Deal <H>300000 points of Electro Damage",
+    "描述": "Deal 300000 points of Electro Damage",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -237,7 +237,7 @@
     "名称": "Don't Stand Under the Tree Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Deal <H>1500000 points of Electro Damage",
+    "描述": "Deal 1500000 points of Electro Damage",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -248,7 +248,7 @@
     "名称": "Don't Stand Under the Tree Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Deal <H>6000000 points of Electro Damage",
+    "描述": "Deal 6000000 points of Electro Damage",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -259,7 +259,7 @@
     "名称": "Quite the Racket... Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Deal <H>300000 points of Anemo Damage",
+    "描述": "Deal 300000 points of Anemo Damage",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -270,7 +270,7 @@
     "名称": "Quite the Racket... Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Deal <H>1500000 points of Anemo Damage",
+    "描述": "Deal 1500000 points of Anemo Damage",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -281,7 +281,7 @@
     "名称": "Quite the Racket... Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Deal <H>6000000 points of Anemo Damage",
+    "描述": "Deal 6000000 points of Anemo Damage",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -292,7 +292,7 @@
     "名称": "Dimension Asunder Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Deal <H>150000 points of Slash Damage",
+    "描述": "Deal 150000 points of Slash Damage",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -303,7 +303,7 @@
     "名称": "Dimension Asunder Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Deal <H>600000 points of Slash Damage",
+    "描述": "Deal 600000 points of Slash Damage",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -314,7 +314,7 @@
     "名称": "Dimension Asunder Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Deal <H>3000000 points of Slash Damage",
+    "描述": "Deal 3000000 points of Slash Damage",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -325,7 +325,7 @@
     "名称": "Deadbeat Warrior Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Deal <H>150000 points of Spike Damage",
+    "描述": "Deal 150000 points of Spike Damage",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -336,7 +336,7 @@
     "名称": "Deadbeat Warrior Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Deal <H>600000 points of Spike Damage",
+    "描述": "Deal 600000 points of Spike Damage",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -347,7 +347,7 @@
     "名称": "Deadbeat Warrior Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Deal <H>3000000 points of Spike Damage",
+    "描述": "Deal 3000000 points of Spike Damage",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -358,7 +358,7 @@
     "名称": "Don't Forget the Helmet Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Deal <H>150000 points of Smash Damage",
+    "描述": "Deal 150000 points of Smash Damage",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -369,7 +369,7 @@
     "名称": "Don't Forget the Helmet Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Deal <H>600000 points of Smash Damage",
+    "描述": "Deal 600000 points of Smash Damage",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -380,7 +380,7 @@
     "名称": "Don't Forget the Helmet Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Deal <H>3000000 points of Smash Damage",
+    "描述": "Deal 3000000 points of Smash Damage",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -391,7 +391,7 @@
     "名称": "Medical Miracle Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Restore <H>20 points of HP in one action",
+    "描述": "Restore 20 points of HP in one action",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -402,7 +402,7 @@
     "名称": "Medical Miracle Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Restore <H>50 points of HP in one action",
+    "描述": "Restore 50 points of HP in one action",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -413,7 +413,7 @@
     "名称": "Medical Miracle Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Restore <H>100 points of HP in one action",
+    "描述": "Restore 100 points of HP in one action",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -424,7 +424,7 @@
     "名称": "Just a Punch Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Deal <H>2000 points of damage in one action with any weapon",
+    "描述": "Deal 2000 points of damage in one action with any weapon",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -435,7 +435,7 @@
     "名称": "Just a Punch Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Deal <H>5000 points of damage in one action with any weapon",
+    "描述": "Deal 5000 points of damage in one action with any weapon",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -446,7 +446,7 @@
     "名称": "Just a Punch Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Deal <H>10000 points of damage in one action with any weapon",
+    "描述": "Deal 10000 points of damage in one action with any weapon",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -457,7 +457,7 @@
     "名称": "Standard Kick Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Deal <H>1500 points of damage in one action with any skill",
+    "描述": "Deal 1500 points of damage in one action with any skill",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -468,7 +468,7 @@
     "名称": "Standard Kick Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Deal <H>3000 points of damage in one action with any skill",
+    "描述": "Deal 3000 points of damage in one action with any skill",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -479,7 +479,7 @@
     "名称": "Standard Kick Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Deal <H>6000 points of damage in one action with any skill",
+    "描述": "Deal 6000 points of damage in one action with any skill",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -749,7 +749,7 @@
     "奖励": {
       "Secret Letter Clue": 2,
       "Title: Halting": 1,
-      "Title:  Executioner": 1
+      "Title: Executioner": 1
     }
   },
   {
@@ -922,7 +922,7 @@
     "名称": "Zap, Crackle, Boom! Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Finish off any enemy with any Beam attack <H>50 times",
+    "描述": "Finish off any enemy with any Beam attack 50 times",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -933,7 +933,7 @@
     "名称": "Zap, Crackle, Boom! Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Finish off any enemy with any Beam attack <H>150 times",
+    "描述": "Finish off any enemy with any Beam attack 150 times",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -944,7 +944,7 @@
     "名称": "Zap, Crackle, Boom! Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Finish off any enemy with any Beam attack <H>300 times",
+    "描述": "Finish off any enemy with any Beam attack 300 times",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -955,7 +955,7 @@
     "名称": "Blooming Fireworks Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Finish off any enemy with any explosive projectiles <H>50 times",
+    "描述": "Finish off any enemy with any explosive projectiles 50 times",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -966,7 +966,7 @@
     "名称": "Blooming Fireworks Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Finish off any enemy with any explosive projectiles <H>150 times",
+    "描述": "Finish off any enemy with any explosive projectiles 150 times",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -977,7 +977,7 @@
     "名称": "Blooming Fireworks Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Finish off any enemy with any explosive projectiles <H>300 times",
+    "描述": "Finish off any enemy with any explosive projectiles 300 times",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -988,7 +988,7 @@
     "名称": "Flawless Victory: Frostbite",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Defeat 1 <H>Primander - Frostbite before they can fire icicles in a solo-mode Commission ",
+    "描述": "Defeat 1 Primander - Frostbite before they can fire icicles in a solo-mode Commission ",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -999,7 +999,7 @@
     "名称": "Flawless Victory: Blast",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Defeat 1 <H>Primander - Blast without taking any damage from explosions caused by them in a solo-mode Commission ",
+    "描述": "Defeat 1 Primander - Blast without taking any damage from explosions caused by them in a solo-mode Commission ",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1010,7 +1010,7 @@
     "名称": "Flawless Victory: Thunderbolt",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Break a total of <H>60 Electric Orbs summoned by <H>Primander - Thunderclap in a solo-mode Commission ",
+    "描述": "Break a total of 60 Electric Orbs summoned by Primander - Thunderclap in a solo-mode Commission ",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1021,7 +1021,7 @@
     "名称": "Flawless Victory: Decay",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Defeat 1 <H>Primander - Decay without taking any damage from its Decaying Swamp in a solo-mode Commission ",
+    "描述": "Defeat 1 Primander - Decay without taking any damage from its Decaying Swamp in a solo-mode Commission ",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1032,7 +1032,7 @@
     "名称": "Flawless Victory: Wither",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Defeat 1 <H>Primander - Wither without taking any damage from its Withering Beam in a solo-mode Commission ",
+    "描述": "Defeat 1 Primander - Wither without taking any damage from its Withering Beam in a solo-mode Commission ",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1043,7 +1043,7 @@
     "名称": "Flawless Victory: Guard",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Defeat 1 <H>Primander - Guard without having projectiles blocked by its Guardian Field in a solo-mode Commission ",
+    "描述": "Defeat 1 Primander - Guard without having projectiles blocked by its Guardian Field in a solo-mode Commission ",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1054,7 +1054,7 @@
     "名称": "Flawless Victory: Revenge",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Defeat 1 <H>Primander - Revenge with less than <H>5 of its allies Empowered in a solo-mode Commission ",
+    "描述": "Defeat 1 Primander - Revenge with less than 5 of its allies Empowered in a solo-mode Commission ",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1142,7 +1142,7 @@
     "名称": "Flawless Victory: Stealth",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Defeat a total of <H>15 Decoys of <H>Sniper Private - Stealth in a solo-mode Commission ",
+    "描述": "Defeat a total of 15 Decoys of Sniper Private - Stealth in a solo-mode Commission ",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1153,7 +1153,7 @@
     "名称": "Flawless Victory: Armed Assault",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Defeat 1 <H>Expedition Private - Armed Assault without taking any damage from Landmine placed by them in a solo-mode Commission ",
+    "描述": "Defeat 1 Expedition Private - Armed Assault without taking any damage from Landmine placed by them in a solo-mode Commission ",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1164,7 +1164,7 @@
     "名称": "Flawless Victory: Magnetix",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Inflict Paralysis on any enemy <H>20 times in solo-mode [Commission: Capture]",
+    "描述": "Inflict Paralysis on any enemy 20 times in solo-mode [Commission: Capture]",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1175,7 +1175,7 @@
     "名称": "You're a Goner Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Complete once: Defeat <H>3 enemies within 3s",
+    "描述": "Complete once: Defeat 3 enemies within 3s",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -1186,7 +1186,7 @@
     "名称": "You're a Goner Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Complete once: Defeat <H>6 enemies within 3s",
+    "描述": "Complete once: Defeat 6 enemies within 3s",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -1197,7 +1197,7 @@
     "名称": "You're a Goner Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Complete once: Defeat <H>10 enemies within 3s",
+    "描述": "Complete once: Defeat 10 enemies within 3s",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1208,7 +1208,7 @@
     "名称": "Legendary Blitz: Combat Skill Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Complete once: Cast any Combat Skill <H>2 times within 3s",
+    "描述": "Complete once: Cast any Combat Skill 2 times within 3s",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -1219,7 +1219,7 @@
     "名称": "Legendary Blitz: Combat Skill Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Complete once: Cast any Combat Skill <H>4 times within 3s",
+    "描述": "Complete once: Cast any Combat Skill 4 times within 3s",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -1230,7 +1230,7 @@
     "名称": "Legendary Blitz: Combat Skill Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Complete once: Cast any Combat Skill <H>6 times within 3s",
+    "描述": "Complete once: Cast any Combat Skill 6 times within 3s",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1241,7 +1241,7 @@
     "名称": "Legendary Blitz: Ultimate Skill Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Complete once: Cast any Ultimate Skill <H>2 times within 6s",
+    "描述": "Complete once: Cast any Ultimate Skill 2 times within 6s",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -1252,7 +1252,7 @@
     "名称": "Legendary Blitz: Ultimate Skill Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Complete once: Cast any Ultimate Skill <H>3 times within 6s",
+    "描述": "Complete once: Cast any Ultimate Skill 3 times within 6s",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -1263,7 +1263,7 @@
     "名称": "Legendary Blitz: Ultimate Skill Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Complete once: Cast any Ultimate Skill <H>4 times within 6s",
+    "描述": "Complete once: Cast any Ultimate Skill 4 times within 6s",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1274,7 +1274,7 @@
     "名称": "Legendary Blitz: Elemental Bonus Effect Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Complete once: Inflict elemental bonus effect on any enemy <H>5 times within 3s",
+    "描述": "Complete once: Inflict elemental bonus effect on any enemy 5 times within 3s",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -1285,7 +1285,7 @@
     "名称": "Legendary Blitz: Elemental Bonus Effect Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Complete once: Inflict elemental bonus effect on any enemy <H>10 times within 3s",
+    "描述": "Complete once: Inflict elemental bonus effect on any enemy 10 times within 3s",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -1296,7 +1296,7 @@
     "名称": "Legendary Blitz: Elemental Bonus Effect Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Complete once: Inflict elemental bonus effect on any enemy <H>20 times within 3s",
+    "描述": "Complete once: Inflict elemental bonus effect on any enemy 20 times within 3s",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1307,7 +1307,7 @@
     "名称": "Practice Makes Perfect: Combat Skill Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Use Combat Skill <H>50 times",
+    "描述": "Use Combat Skill 50 times",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -1318,7 +1318,7 @@
     "名称": "Practice Makes Perfect: Combat Skill Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Use Combat Skill <H>100 times",
+    "描述": "Use Combat Skill 100 times",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -1329,7 +1329,7 @@
     "名称": "Practice Makes Perfect: Combat Skill Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Use Combat Skill <H>200 times",
+    "描述": "Use Combat Skill 200 times",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1340,7 +1340,7 @@
     "名称": "Practice Makes Perfect: Ultimate Skill Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Use Ultimate Skill <H>50 times",
+    "描述": "Use Ultimate Skill 50 times",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -1351,7 +1351,7 @@
     "名称": "Practice Makes Perfect: Ultimate Skill Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Use Ultimate Skill <H>100 times",
+    "描述": "Use Ultimate Skill 100 times",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -1362,7 +1362,7 @@
     "名称": "Practice Makes Perfect: Ultimate Skill Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Use Ultimate Skill <H>200 times",
+    "描述": "Use Ultimate Skill 200 times",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1473,7 +1473,7 @@
     "名称": "Infinite Compassion Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Rescue any teammate <H>10 times",
+    "描述": "Rescue any teammate 10 times",
     "版本": "1.0",
     "奖励": {
       "Coin": 5000,
@@ -1485,7 +1485,7 @@
     "名称": "Infinite Compassion Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Rescue any teammate <H>20 times",
+    "描述": "Rescue any teammate 20 times",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -1496,7 +1496,7 @@
     "名称": "Infinite Compassion Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Rescue any teammate <H>30 times",
+    "描述": "Rescue any teammate 30 times",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1507,7 +1507,7 @@
     "名称": "Skybreaker Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Move a total distance of <H>5000 metres using Helix Leap",
+    "描述": "Move a total distance of 5000 metres using Helix Leap",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -1518,7 +1518,7 @@
     "名称": "Skybreaker Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Move a total distance of <H>15000 metres using Helix Leap",
+    "描述": "Move a total distance of 15000 metres using Helix Leap",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -1529,7 +1529,7 @@
     "名称": "Skybreaker Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Move a total distance of <H>30000 metres using Helix Leap",
+    "描述": "Move a total distance of 30000 metres using Helix Leap",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1540,7 +1540,7 @@
     "名称": "Bathing Time Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Inflict a total of <H>600 seconds of Bonus Effect: Hydro on any enemy",
+    "描述": "Inflict a total of 600 seconds of Bonus Effect: Hydro on any enemy",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -1551,7 +1551,7 @@
     "名称": "Bathing Time Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Inflict a total of <H>1800 seconds of Bonus Effect: Hydro on any enemy",
+    "描述": "Inflict a total of 1800 seconds of Bonus Effect: Hydro on any enemy",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -1562,7 +1562,7 @@
     "名称": "Bathing Time Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Inflict a total of <H>3600 seconds of Bonus Effect: Hydro on any enemy",
+    "描述": "Inflict a total of 3600 seconds of Bonus Effect: Hydro on any enemy",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1573,7 +1573,7 @@
     "名称": "Sweating Time Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Inflict a total of <H>600 seconds of Bonus Effect: Pyro on any enemy",
+    "描述": "Inflict a total of 600 seconds of Bonus Effect: Pyro on any enemy",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -1584,7 +1584,7 @@
     "名称": "Sweating Time Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Inflict a total of <H>1800 seconds of Bonus Effect: Pyro on any enemy",
+    "描述": "Inflict a total of 1800 seconds of Bonus Effect: Pyro on any enemy",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -1595,7 +1595,7 @@
     "名称": "Sweating Time Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Inflict a total of <H>3600 seconds of Bonus Effect: Pyro on any enemy",
+    "描述": "Inflict a total of 3600 seconds of Bonus Effect: Pyro on any enemy",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1606,7 +1606,7 @@
     "名称": "Twitching Time Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Inflict a total of <H>600 seconds of Bonus Effect: Electro on any enemy",
+    "描述": "Inflict a total of 600 seconds of Bonus Effect: Electro on any enemy",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -1617,7 +1617,7 @@
     "名称": "Twitching Time Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Inflict a total of <H>1800 seconds of Bonus Effect: Electro on any enemy",
+    "描述": "Inflict a total of 1800 seconds of Bonus Effect: Electro on any enemy",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -1628,7 +1628,7 @@
     "名称": "Twitching Time Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Inflict a total of <H>3600 seconds of Bonus Effect: Electro on any enemy",
+    "描述": "Inflict a total of 3600 seconds of Bonus Effect: Electro on any enemy",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1639,7 +1639,7 @@
     "名称": "Hair-Blowing Time Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Inflict a total of <H>600 seconds of Bonus Effect: Anemo on any enemy",
+    "描述": "Inflict a total of 600 seconds of Bonus Effect: Anemo on any enemy",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -1650,7 +1650,7 @@
     "名称": "Hair-Blowing Time Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Inflict a total of <H>1800 seconds of Bonus Effect: Anemo on any enemy",
+    "描述": "Inflict a total of 1800 seconds of Bonus Effect: Anemo on any enemy",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -1661,7 +1661,7 @@
     "名称": "Hair-BlowingTime Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Inflict a total of <H>3600 seconds of Bonus Effect: Anemo on any enemy",
+    "描述": "Inflict a total of 3600 seconds of Bonus Effect: Anemo on any enemy",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1672,7 +1672,7 @@
     "名称": "Lights-Out Time Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Inflict a total of <H>600 seconds of Bonus Effect: Umbro on any enemy",
+    "描述": "Inflict a total of 600 seconds of Bonus Effect: Umbro on any enemy",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -1683,7 +1683,7 @@
     "名称": "Lights-Out Time Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Inflict a total of <H>1800 seconds of Bonus Effect: Umbro on any enemy",
+    "描述": "Inflict a total of 1800 seconds of Bonus Effect: Umbro on any enemy",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -1694,7 +1694,7 @@
     "名称": "Lights-Out Time Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Inflict a total of <H>3600 seconds of Bonus Effect: Umbro on any enemy",
+    "描述": "Inflict a total of 3600 seconds of Bonus Effect: Umbro on any enemy",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1705,7 +1705,7 @@
     "名称": "Lights-On Time Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Inflict a total of <H>600 seconds of Bonus Effect: Lumino on any enemy",
+    "描述": "Inflict a total of 600 seconds of Bonus Effect: Lumino on any enemy",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -1716,7 +1716,7 @@
     "名称": "Lights-On Time Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Inflict a total of <H>1800 seconds of Bonus Effect: Lumino on any enemy",
+    "描述": "Inflict a total of 1800 seconds of Bonus Effect: Lumino on any enemy",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -1727,7 +1727,7 @@
     "名称": "Lights-On Time Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Inflict a total of <H>3600 seconds of Bonus Effect: Lumino on any enemy",
+    "描述": "Inflict a total of 3600 seconds of Bonus Effect: Lumino on any enemy",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1738,7 +1738,7 @@
     "名称": "I Have Many Friends Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Summon any Combat Partner <H>15 times",
+    "描述": "Summon any Combat Partner 15 times",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -1749,7 +1749,7 @@
     "名称": "I Have Many Friends Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Summon any Combat Partner <H>30 times",
+    "描述": "Summon any Combat Partner 30 times",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -1760,11 +1760,11 @@
     "名称": "I Have Many Friends Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Summon any Combat Partner <H>60 times",
+    "描述": "Summon any Combat Partner 60 times",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title:  Captain": 1
+      "Title: Captain": 1
     }
   },
   {
@@ -1772,7 +1772,7 @@
     "名称": "The Receding Figure of a Hero Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Combat Partners deal <H>100000 points of damage",
+    "描述": "Combat Partners deal 100000 points of damage",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -1783,7 +1783,7 @@
     "名称": "The Receding Figure of a Hero Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Combat Partners deal <H>300000 points of damage",
+    "描述": "Combat Partners deal 300000 points of damage",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -1794,7 +1794,7 @@
     "名称": "The Receding Figure of a Hero Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Combat Partners deal <H>1000000 points of damage",
+    "描述": "Combat Partners deal 1000000 points of damage",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1805,7 +1805,7 @@
     "名称": "I've Got Your Back Ⅰ",
     "分类": "Beyond Numbers",
     "品质": 3,
-    "描述": "Combat Partners heal <H>1500 points of HP",
+    "描述": "Combat Partners heal 1500 points of HP",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -1816,7 +1816,7 @@
     "名称": "I've Got Your Back Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
-    "描述": "Combat Partners heal <H>3000 points of HP",
+    "描述": "Combat Partners heal 3000 points of HP",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -1827,7 +1827,7 @@
     "名称": "I've Got Your Back Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
-    "描述": "Combat Partners heal <H>10000 points of HP",
+    "描述": "Combat Partners heal 10000 points of HP",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -1838,7 +1838,7 @@
     "名称": "Nocturnal Finale: Sibylle Ⅰ",
     "分类": "Daimons' Awakening",
     "品质": 3,
-    "描述": "Secure victory within <H>300s in solo-mode [Nocturnal Echoes: Sibylle] on the highest difficulty",
+    "描述": "Secure victory within 300s in solo-mode [Nocturnal Echoes: Sibylle] on the highest difficulty",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -1849,7 +1849,7 @@
     "名称": "Nocturnal Finale: Sibylle Ⅱ",
     "分类": "Daimons' Awakening",
     "品质": 2,
-    "描述": "Secure victory within <H>180s in solo-mode [Nocturnal Echoes: Sibylle] on the highest difficulty",
+    "描述": "Secure victory within 180s in solo-mode [Nocturnal Echoes: Sibylle] on the highest difficulty",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -1860,11 +1860,11 @@
     "名称": "Nocturnal Finale: Sibylle Ⅲ",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Secure victory within <H>90s in solo-mode [Nocturnal Echoes: Sibylle] on the highest difficulty",
+    "描述": "Secure victory within 90s in solo-mode [Nocturnal Echoes: Sibylle] on the highest difficulty",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title:  Doombringer": 1
+      "Title: Doombringer": 1
     }
   },
   {
@@ -1872,7 +1872,7 @@
     "名称": "Nocturnal Finale: Crystalophile Ⅰ",
     "分类": "Daimons' Awakening",
     "品质": 3,
-    "描述": "Secure victory within <H>300s in solo-mode [Nocturnal Echoes: Crystalophile] on the highest difficulty",
+    "描述": "Secure victory within 300s in solo-mode [Nocturnal Echoes: Crystalophile] on the highest difficulty",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -1883,7 +1883,7 @@
     "名称": "Nocturnal Finale: Crystalophile Ⅱ",
     "分类": "Daimons' Awakening",
     "品质": 2,
-    "描述": "Secure victory within <H>180s in solo-mode [Nocturnal Echoes: Crystalophile] on the highest difficulty",
+    "描述": "Secure victory within 180s in solo-mode [Nocturnal Echoes: Crystalophile] on the highest difficulty",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -1894,7 +1894,7 @@
     "名称": "Nocturnal Finale: Crystalophile Ⅲ",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Secure victory within <H>90s in solo-mode [Nocturnal Echoes: Crystalophile] on the highest difficulty",
+    "描述": "Secure victory within 90s in solo-mode [Nocturnal Echoes: Crystalophile] on the highest difficulty",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
@@ -1906,7 +1906,7 @@
     "名称": "Nocturnal Finale: The Eclosioner Ⅰ",
     "分类": "Daimons' Awakening",
     "品质": 3,
-    "描述": "Secure victory within <H>300s in solo-mode [Nocturnal Echoes: The Eclosioner] on the highest difficulty",
+    "描述": "Secure victory within 300s in solo-mode [Nocturnal Echoes: The Eclosioner] on the highest difficulty",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -1917,7 +1917,7 @@
     "名称": "Nocturnal Finale: The Eclosioner Ⅱ",
     "分类": "Daimons' Awakening",
     "品质": 2,
-    "描述": "Secure victory within <H>180s in solo-mode [Nocturnal Echoes: The Eclosioner] on the highest difficulty",
+    "描述": "Secure victory within 180s in solo-mode [Nocturnal Echoes: The Eclosioner] on the highest difficulty",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -1928,7 +1928,7 @@
     "名称": "Nocturnal Finale: The Eclosioner Ⅲ",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Secure victory within <H>90s in solo-mode [Nocturnal Echoes: The Eclosioner] on the highest difficulty",
+    "描述": "Secure victory within 90s in solo-mode [Nocturnal Echoes: The Eclosioner] on the highest difficulty",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -2005,7 +2005,7 @@
     "名称": "Nocturnal Finale - Solo: Sibylle",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Secure victory in [Nocturnal Echoes: Sibylle] on the highest difficulty <H>without summoning any Combat Partners",
+    "描述": "Secure victory in [Nocturnal Echoes: Sibylle] on the highest difficulty without summoning any Combat Partners",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -2016,7 +2016,7 @@
     "名称": "Nocturnal Finale - Solo: Crystalophile",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Secure victory in [Nocturnal Echoes: Crystalophile] on the highest difficulty <H>without summoning any Combat Partners",
+    "描述": "Secure victory in [Nocturnal Echoes: Crystalophile] on the highest difficulty without summoning any Combat Partners",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -2027,7 +2027,7 @@
     "名称": "Nocturnal Finale - Solo: The Eclosioner",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Secure victory in [Nocturnal Echoes: The Eclosioner] on the highest difficulty <H>without summoning any Combat Partners",
+    "描述": "Secure victory in [Nocturnal Echoes: The Eclosioner] on the highest difficulty without summoning any Combat Partners",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -2060,7 +2060,7 @@
     "名称": "Physical Mediation - Solo",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Secure victory in solo-mode [Commission: Mediation] on the highest difficulty <H>without summoning any Combat Partners",
+    "描述": "Secure victory in solo-mode [Commission: Mediation] on the highest difficulty without summoning any Combat Partners",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -2071,7 +2071,7 @@
     "名称": "Complete Termination - Solo",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Secure victory in solo-mode [Commission: Termination] on the highest difficulty <H>without summoning any Combat Partners",
+    "描述": "Secure victory in solo-mode [Commission: Termination] on the highest difficulty without summoning any Combat Partners",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -2082,7 +2082,7 @@
     "名称": "Speed Rescue - Solo",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Secure victory in solo-mode [Commission: Escort] on the highest difficulty <H>without summoning any Combat Partners",
+    "描述": "Secure victory in solo-mode [Commission: Escort] on the highest difficulty without summoning any Combat Partners",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -2093,7 +2093,7 @@
     "名称": "Not Born a Racer - Solo",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Secure victory in solo-mode [Commission: Relocation] on the highest difficulty <H>without summoning any Combat Partners",
+    "描述": "Secure victory in solo-mode [Commission: Relocation] on the highest difficulty without summoning any Combat Partners",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -2104,7 +2104,7 @@
     "名称": "Warm-Hearted Investigator - Peerless Ⅰ",
     "分类": "Daimons' Awakening",
     "品质": 3,
-    "描述": "Secure victory in solo-mode [Commission: Exploration ∞] on the highest difficulty with at least <H>80 enemies defeated",
+    "描述": "Secure victory in solo-mode [Commission: Exploration ∞] on the highest difficulty with at least 80 enemies defeated",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -2115,7 +2115,7 @@
     "名称": "Warm-Hearted Investigator - Peerless Ⅱ",
     "分类": "Daimons' Awakening",
     "品质": 2,
-    "描述": "Secure victory in solo-mode [Commission: Exploration ∞] on the highest difficulty with at least <H>150 enemies defeated",
+    "描述": "Secure victory in solo-mode [Commission: Exploration ∞] on the highest difficulty with at least 150 enemies defeated",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -2126,7 +2126,7 @@
     "名称": "Warm-Hearted Investigator - Peerless Ⅲ",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Secure victory in solo-mode [Commission: Exploration ∞] on the highest difficulty with at least <H>300 enemies defeated",
+    "描述": "Secure victory in solo-mode [Commission: Exploration ∞] on the highest difficulty with at least 300 enemies defeated",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -2137,7 +2137,7 @@
     "名称": "The Eternal Guardian of Luno - Peerless Ⅰ",
     "分类": "Daimons' Awakening",
     "品质": 3,
-    "描述": "Secure victory in solo-mode [Commission: Defence ∞] on the highest difficulty with at least <H>80 enemies defeated",
+    "描述": "Secure victory in solo-mode [Commission: Defence ∞] on the highest difficulty with at least 80 enemies defeated",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -2148,7 +2148,7 @@
     "名称": "The Eternal Guardian of Luno - Peerless Ⅱ",
     "分类": "Daimons' Awakening",
     "品质": 2,
-    "描述": "Secure victory in solo-mode [Commission: Defence ∞] on the highest difficulty with at least <H>150 enemies defeated",
+    "描述": "Secure victory in solo-mode [Commission: Defence ∞] on the highest difficulty with at least 150 enemies defeated",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -2159,7 +2159,7 @@
     "名称": "The Eternal Guardian of Luno - Peerless Ⅲ",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Secure victory in solo-mode [Commission: Defence ∞] on the highest difficulty with at least <H>300 enemies defeated",
+    "描述": "Secure victory in solo-mode [Commission: Defence ∞] on the highest difficulty with at least 300 enemies defeated",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -2174,7 +2174,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title:  Challenger": 1
+      "Title: Challenger": 1
     }
   },
   {
@@ -2226,11 +2226,11 @@
     "名称": "Nocturnal Finale - Peerless: Sibylle",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Secure victory in [Nocturnal Echoes: Sibylle] on the highest difficulty <H>without losing HP or summoning any Combat Partners",
+    "描述": "Secure victory in [Nocturnal Echoes: Sibylle] on the highest difficulty without losing HP or summoning any Combat Partners",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title:  Chief": 1
+      "Title: Chief": 1
     }
   },
   {
@@ -2238,7 +2238,7 @@
     "名称": "Nocturnal Finale - Peerless: Crystalophile",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Secure victory in [Nocturnal Echoes: Crystalophile] on the highest difficulty <H>without losing HP or summoning any Combat Partners",
+    "描述": "Secure victory in [Nocturnal Echoes: Crystalophile] on the highest difficulty without losing HP or summoning any Combat Partners",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
@@ -2250,7 +2250,7 @@
     "名称": "Nocturnal Finale - Peerless: The Eclosioner",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Secure victory in [Nocturnal Echoes: The Eclosioner] on the highest difficulty <H>without losing HP or summoning any Combat Partners",
+    "描述": "Secure victory in [Nocturnal Echoes: The Eclosioner] on the highest difficulty without losing HP or summoning any Combat Partners",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
@@ -2266,7 +2266,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title:  Warden": 1
+      "Title: Warden": 1
     }
   },
   {
@@ -2384,7 +2384,7 @@
     "名称": "I've Seen Through Your Moves - Sibylle",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "Neutralise a total of <H>300 barrages in [Nocturnal Echoes: Sibylle] on the highest difficulty",
+    "描述": "Neutralise a total of 300 barrages in [Nocturnal Echoes: Sibylle] on the highest difficulty",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -2406,7 +2406,7 @@
     "名称": "I've Seen Through Your Moves - The Eclosioner",
     "分类": "Daimons' Awakening",
     "品质": 1,
-    "描述": "In [Nocturnal Echoes: The Eclosioner] - highest difficulty, destroy all of <H>The Eclosioner's wings within <H>8s",
+    "描述": "In [Nocturnal Echoes: The Eclosioner] - highest difficulty, destroy all of The Eclosioner's wings within 8s",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -2467,7 +2467,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title:  Roamer": 1
+      "Title: Roamer": 1
     }
   },
   {
@@ -3093,7 +3093,7 @@
     "名称": "Treasure Hunter: Purgatorio Island",
     "分类": "Wish List",
     "品质": 1,
-    "描述": "Collect all Lost Sheets in Icelake Environs",
+    "描述": "Collect all Lost Sheets in Purgatorio Island",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -3104,7 +3104,7 @@
     "名称": "Treasure Hunter: Icelake",
     "分类": "Wish List",
     "品质": 1,
-    "描述": "Collect all Lost Sheets in Icelake",
+    "描述": "Collect all Lost Sheets around Icelake",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -3170,7 +3170,7 @@
     "名称": "Beware of the Consumerism Trap Ⅰ",
     "分类": "Wish List",
     "品质": 3,
-    "描述": "Spend <H>1000000 Coins",
+    "描述": "Spend 1000000 Coins",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -3181,7 +3181,7 @@
     "名称": "Beware of the Consumerism Trap Ⅱ",
     "分类": "Wish List",
     "品质": 2,
-    "描述": "Spend <H>5000000 Coins",
+    "描述": "Spend 5000000 Coins",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -3192,11 +3192,11 @@
     "名称": "Beware of the Consumerism Trap Ⅲ",
     "分类": "Wish List",
     "品质": 1,
-    "描述": "Spend <H>10000000 Coins",
+    "描述": "Spend 10000000 Coins",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title:  Consumer": 1
+      "Title: Consumer": 1
     }
   },
   {
@@ -3204,7 +3204,7 @@
     "名称": "I Want Power Ⅰ",
     "分类": "Wish List",
     "品质": 3,
-    "描述": "Use <H>5000 Carmine Globules",
+    "描述": "Use 5000 Carmine Globules",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -3215,7 +3215,7 @@
     "名称": "I Want Power Ⅱ",
     "分类": "Wish List",
     "品质": 3,
-    "描述": "Use <H>50000 Carmine Globules",
+    "描述": "Use 50000 Carmine Globules",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -3226,7 +3226,7 @@
     "名称": "I Want Power Ⅲ",
     "分类": "Wish List",
     "品质": 3,
-    "描述": "Use <H>500000 Carmine Globules",
+    "描述": "Use 500000 Carmine Globules",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -3241,7 +3241,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title:  Time Traveler": 1
+      "Title: Time Traveler": 1
     }
   },
   {
@@ -3286,7 +3286,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title:  Angler": 1
+      "Title: Angler": 1
     }
   },
   {
@@ -3333,7 +3333,7 @@
     "奖励": {
       "Coin": 5000,
       "Title: Ivory-Keyed": 1,
-      "Title Frame:  Movement (Ⅰ) Style": 1
+      "Title Frame: Movement (Ⅰ) Style": 1
     }
   },
   {
@@ -3345,7 +3345,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1,
-      "Title Frame:  Movement (Ⅱ) Style": 1
+      "Title Frame: Movement (Ⅱ) Style": 1
     }
   },
   {
@@ -3358,7 +3358,7 @@
     "奖励": {
       "Secret Letter Clue": 2,
       "Title: Lyrical": 1,
-      "Title Frame:  Movement (Ⅲ) Style": 1
+      "Title Frame: Movement (Ⅲ) Style": 1
     }
   },
   {
@@ -3414,7 +3414,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title:  Strength": 1
+      "Title: Strength": 1
     }
   },
   {
@@ -3547,7 +3547,7 @@
     "名称": "Warrior's Blade Ⅰ",
     "分类": "To the Top",
     "品质": 3,
-    "描述": "Have 1 Lv. 40 weapons",
+    "描述": "Have 1 Lv. 60 weapons",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -3558,7 +3558,7 @@
     "名称": "Hero's Blade Ⅱ",
     "分类": "To the Top",
     "品质": 2,
-    "描述": "Have 5 Lv. 40 weapons",
+    "描述": "Have 5 Lv. 60 weapons",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -3569,7 +3569,7 @@
     "名称": "Hero's Blade Ⅲ",
     "分类": "To the Top",
     "品质": 1,
-    "描述": "Have 10 Lv. 40 weapons",
+    "描述": "Have 10 Lv. 60 weapons",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -3614,7 +3614,7 @@
     "名称": "Turn Stone Into Gold Ⅰ",
     "分类": "To the Top",
     "品质": 3,
-    "描述": "Upgrade a total of 1 4★ weapons' Smelting Level to Lv. 5",
+    "描述": "Upgrade a total of 1 weapons' Smelting Level to Lv. 5",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -3625,7 +3625,7 @@
     "名称": "Turn Stone Into Gold Ⅱ",
     "分类": "To the Top",
     "品质": 2,
-    "描述": "Upgrade a total of 5 4★ weapons' Smelting Level to Lv. 5",
+    "描述": "Upgrade a total of 5 weapons' Smelting Level to Lv. 5",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -3636,7 +3636,7 @@
     "名称": "Turn Stone Into Gold Ⅲ",
     "分类": "To the Top",
     "品质": 1,
-    "描述": "Upgrade a total of 10 4★ weapons' Smelting Level to Lv. 5",
+    "描述": "Upgrade a total of 10 weapons' Smelting Level to Lv. 5",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -4319,7 +4319,7 @@
     "奖励": {
       "Secret Letter Clue": 1,
       "Title: Sand-isolated": 1,
-      "Title:  Dreamt-of One": 1
+      "Title: Dreamt-of One": 1
     }
   },
   {
@@ -4343,7 +4343,7 @@
     "奖励": {
       "Secret Letter Clue": 1,
       "Title: Imperial": 1,
-      "Title:  Drifter": 1
+      "Title: Drifter": 1
     }
   },
   {
@@ -4355,7 +4355,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1,
-      "Title:  Phoxhunter": 1
+      "Title: Phoxhunter": 1
     }
   },
   {
@@ -4367,7 +4367,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1,
-      "Title:  Outlander": 1
+      "Title: Outlander": 1
     }
   },
   {
@@ -4391,7 +4391,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1,
-      "Title:  Fool": 1
+      "Title: Fool": 1
     }
   },
   {
@@ -4571,7 +4571,7 @@
     "版本": "1.0",
     "奖励": {
       "Coin": 5000,
-      "Title:  Will": 1
+      "Title: Will": 1
     }
   },
   {
@@ -4616,7 +4616,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1,
-      "Title:  Demon": 1
+      "Title: Demon": 1
     }
   },
   {
@@ -4719,7 +4719,7 @@
     "奖励": {
       "Secret Letter Clue": 2,
       "Title: Starlit": 1,
-      "Title:  Performer": 1
+      "Title: Performer": 1
     }
   },
   {
@@ -4731,7 +4731,7 @@
     "版本": "1.0",
     "奖励": {
       "Coin": 5000,
-      "Title:  BFF": 1
+      "Title: BFF": 1
     }
   },
   {
@@ -4744,7 +4744,7 @@
     "奖励": {
       "Coin": 5000,
       "Title: Lively": 1,
-      "Title:  Friend": 1
+      "Title: Friend": 1
     }
   },
   {
@@ -4778,7 +4778,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title:  Senior": 1
+      "Title: Senior": 1
     }
   },
   {
@@ -4790,7 +4790,7 @@
     "版本": "1.0",
     "奖励": {
       "Coin": 5000,
-      "Title:  Blacksmith": 1
+      "Title: Blacksmith": 1
     }
   },
   {
@@ -4879,7 +4879,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title:  Hero": 1
+      "Title: Hero": 1
     }
   },
   {
@@ -5034,7 +5034,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title:  Egg": 1
+      "Title: Egg": 1
     }
   },
   {
@@ -5274,7 +5274,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1,
-      "Title:  Explorer": 1
+      "Title: Explorer": 1
     }
   },
   {
@@ -5574,7 +5574,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title:  Geniemon Master": 1
+      "Title: Geniemon Master": 1
     }
   },
   {
@@ -5754,7 +5754,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title:  Remembrance": 1
+      "Title: Remembrance": 1
     }
   },
   {
@@ -5800,7 +5800,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1,
-      "Title:  Photographer": 1
+      "Title: Photographer": 1
     }
   },
   {
@@ -5834,7 +5834,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title:  Superior": 1
+      "Title: Superior": 1
     }
   },
   {

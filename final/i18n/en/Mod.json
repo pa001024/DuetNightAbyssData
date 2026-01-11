@@ -3267,14 +3267,14 @@
   {
     "id": 41805,
     "icon": "Jormungand01",
-    "名称": "Gleaming Whipsword",
+    "名称": "Gleaming Whipblade",
     "版本": "1.0",
     "系列": "Jormungand's ",
     "品质": "紫",
     "极性": "O",
     "耐受": 15,
     "类型": "Characters",
-    "效果": "Increases your Damage Dealt by 6.0% per Whipsword equipped by you or your Combat Partner (up to 18.0%; does not apply when acting as Combat Partner)."
+    "效果": "Increases your Damage Dealt by 6.0% per Whipblade equipped by you or your Combat Partner (up to 18.0%; does not apply when acting as Combat Partner)."
   },
   {
     "id": 41806,
@@ -5613,14 +5613,14 @@
   {
     "id": 51805,
     "icon": "Jormungand01",
-    "名称": "Gleaming Whipsword",
+    "名称": "Gleaming Whipblade",
     "版本": "1.0",
     "系列": "Jormungand's ",
     "品质": "金",
     "极性": "O",
     "耐受": 9,
     "类型": "Characters",
-    "效果": "Increases your Damage Dealt by 11.0% per Whipsword equipped by you or your Combat Partner (up to 33.0%; does not apply when acting as Combat Partner)."
+    "效果": "Increases your Damage Dealt by 11.0% per Whipblade equipped by you or your Combat Partner (up to 33.0%; does not apply when acting as Combat Partner)."
   },
   {
     "id": 51806,

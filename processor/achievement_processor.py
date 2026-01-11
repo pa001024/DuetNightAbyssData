@@ -563,7 +563,9 @@ class AchievementProcessor(BaseProcessor):
         processed = describe.replace("#1", str(completion_value))
 
         # 去除所有<highlight>标签
-        processed = processed.replace("<highlight>", "").replace("</>", "")
+        processed = (
+            processed.replace("<highlight>", "").replace("</>", "").replace("<H>", "")
+        )
 
         return processed
 
@@ -623,7 +625,11 @@ class AchievementProcessor(BaseProcessor):
             # Process based on item type
             if item_type == "Resource":
                 # Get resource name
-                resource_name = self.data_loader.get_resource_name(item_id)
+                resource_name = (
+                    self.data_loader.get_resource_name(item_id)
+                    .replace("{空格}", "")
+                    .strip()
+                )
                 if resource_name:
                     rewards[resource_name] = item_count
                 else:
@@ -669,7 +675,11 @@ class AchievementProcessor(BaseProcessor):
                         rewards[f"Draft: {product_type}{product_id}"] = item_count
             elif item_type == "Title":
                 # Get title name
-                title_name = self.data_loader.get_title_name(item_id)
+                title_name = (
+                    self.data_loader.get_title_name(item_id)
+                    .replace("{空格}", "")
+                    .strip()
+                )
                 if title_name:
                     # 根据不同语言使用不同的称号格式
                     if language in ["cn", "tc"]:
@@ -692,7 +702,11 @@ class AchievementProcessor(BaseProcessor):
                         rewards[f"Title-{item_id}"] = item_count
             elif item_type == "TitleFrame":
                 # Get titleframe name
-                titleframe_name = self.data_loader.get_titleframe_name(item_id)
+                titleframe_name = (
+                    self.data_loader.get_titleframe_name(item_id)
+                    .replace("{空格}", "")
+                    .strip()
+                )
                 if titleframe_name:
                     # 根据不同语言使用不同的称号框格式
                     if language in ["cn", "tc"]:
