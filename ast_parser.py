@@ -120,15 +120,24 @@ class ExpressionParser:
             self._skip_whitespace()
             op = self._current_char()
 
-            # 支持的运算符
-            if op in ("/", "*", "+", "-", "%"):
-                precedence = 1  # 简单起见,所有运算符优先级相同
-                if precedence < min_precedence:
+            # 支持的运算符及其优先级
+            # * 和 / 的优先级为 2
+            # + 和 - 的优先级为 1
+            # % 的优先级为 2
+            op_precedence = None
+            if op in ("*", "/", "%"):
+                op_precedence = 2
+            elif op in ("+", "-"):
+                op_precedence = 1
+
+            if op_precedence is not None:
+                if op_precedence < min_precedence:
                     break
 
                 self._advance()
                 self._skip_whitespace()
-                right = self._parse_member_access()
+                # 对于左结合的运算符，传入 op_precedence + 1
+                right = self._parse_binary_op(op_precedence + 1)
 
                 left = ASTNode(
                     type=NodeType.BINARY_EXPR, value=op, left=left, right=right
@@ -417,7 +426,7 @@ def test_parser():
     ]
 
     for expr in test_cases:
-        print(f"\n{'='*60}")
+        print(f"\n{'=' * 60}")
         print(f"表达式: {expr}")
         print("=" * 60)
         try:

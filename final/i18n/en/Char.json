@@ -1787,7 +1787,7 @@
       }
     ],
     "溯源": [
-      "Increases the effect percentage of [Sword Intent]/[String Intent] applied to [Life's A Fleeting, Shifting Tide] by 132.37%.\n\nWhen there is/are 1/2 enemy/enemies within 20 metres, the mutual conversion point between [Sword Intent] and [String Intent] is increased to 3/2 points when Kezhou deals weapon damage.",
+      "Increases the effect percentage of [Sword Intent]/[String Intent] applied to [Life's A Fleeting, Shifting Tide] by 0.7%.\n\nWhen there is/are 1/2 enemy/enemies within 20 metres, the mutual conversion point between [Sword Intent] and [String Intent] is increased to 3/2 points when Kezhou deals weapon damage.",
       "When damage triggers a bonus effect, gains +90% Damage Dealt for 5s and restores 2 Sanity. Sanity restoration can occur once every 1s.",
       "[Wanderings of Youth] Level +2; [Life's A Fleeting, Shifting Tide] Level +1.",
       "When using [Lightswords Slice Starry Streams], Kezhou gains [Blessed by Wind and Moon]: Grants immunity to Hitstun and reduces Damage Taken by 25% for 25s.",
@@ -2579,67 +2579,6 @@
       "Takes 30% less damage from targets inflicted with [Poison of Love].",
       "[Lada Lovedew] Level +2; [Truelove Trial] Level +1.",
       "When defeating a target inflicted with [Poison of Love], Rebecca gains 1 stack that increases Attack by 3% for 15s, up to 50 stacks. The remaining time of the effect is refreshed with each new stack gained."
-    ]
-  },
-  {
-    "id": 2102,
-    "icon": "Eve",
-    "名称": "Yvaine",
-    "版本": "1.5",
-    "别名": "UI_CHAR_SUBTITLE_2102",
-    "阵营": "Republic of Luca",
-    "属性": "水",
-    "精通": [
-      "Polearm",
-      "Grenade Launcher"
-    ],
-    "标签": [
-      "DPS",
-      "Summon",
-      "Skill DMG"
-    ],
-    "基础攻击": 25,
-    "基础生命": 100,
-    "基础防御": 252,
-    "基础护盾": 100,
-    "基础神智": 200,
-    "技能": [
-      {
-        "id": 210201,
-        "名称": "",
-        "类型": "Summon",
-        "描述": ""
-      },
-      {
-        "id": 210202,
-        "名称": "",
-        "类型": "Summon",
-        "描述": ""
-      },
-      {
-        "id": 210203,
-        "名称": "",
-        "类型": "Passive",
-        "描述": ""
-      },
-      {
-        "id": 210204,
-        "名称": "",
-        "类型": "Passive",
-        "描述": ""
-      },
-      {
-        "id": 210003,
-        "名称": "Seven-Day Spread",
-        "类型": "Support",
-        "描述": "[Available only when deployed as a Combat Partner]\n Increases ATK for self and Hydro allies.",
-        "字段": [
-          {
-            "名称": "ATK Boost",
-            "值": 0.5
-          }
-        ]
-      }
     ]
   },
   {

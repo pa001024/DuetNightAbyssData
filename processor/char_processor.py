@@ -93,6 +93,7 @@ class CharProcessor(BaseProcessor):
         #     del processed["突破"]
         if not processed.get("溯源"):
             del processed["溯源"]
+            return None
 
         return processed
 
@@ -671,7 +672,15 @@ class CharProcessor(BaseProcessor):
 
         if isinstance(desc_value, str):
             # 处理$...$格式的表达式
-            expr_match = re.search(r"\$(-)?(.*?)\$(.*)", desc_value)
+            expr_match = re.search(
+                re.escape("$")
+                + "(-)?([^"
+                + re.escape("$")
+                + "]+)"
+                + re.escape("$")
+                + "(.*)",
+                desc_value,
+            )
             if expr_match:
                 has_neg = expr_match.group(1)
                 expr = expr_match.group(2)
@@ -760,7 +769,15 @@ class CharProcessor(BaseProcessor):
                     # 处理 $...$ 格式的表达式
                     import re
 
-                    expr_match = re.search(r"\$(-)?(.*?)\$(.*)", parameter)
+                    expr_match = re.search(
+                        re.escape("$")
+                        + "(-)?([^"
+                        + re.escape("$")
+                        + "]+)"
+                        + re.escape("$")
+                        + "(.*)",
+                        parameter,
+                    )
                     if expr_match:
                         has_neg = expr_match.group(1)
                         expr = expr_match.group(2)

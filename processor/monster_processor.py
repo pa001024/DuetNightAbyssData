@@ -70,9 +70,6 @@ class MonsterProcessor(BaseProcessor):
         hp_value = battle_monster.get("MaxHp", 0)
         atk_value = battle_monster.get("ATK", 0)
 
-        if def_value == 0 or def_value > 1000:
-            return None
-
         # unique_key = f"{lastname}_{def_value}_{hp_value}"
         # if unique_key in self.processed_keys:
         #     return None
