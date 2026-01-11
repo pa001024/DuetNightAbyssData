@@ -1,0 +1,5877 @@
+[
+  {
+    "id": 1001,
+    "名称": "Sharpening Potion",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 20027,
+    "锻造时间": 15,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Gold Sand": 6,
+      "Repulsive Crystal": 4,
+      "Weaponholder": 2,
+      "Coolant": 2,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 1002,
+    "名称": "Projectile",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 20028,
+    "锻造时间": 15,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Gold Sand": 4,
+      "Repulsive Crystal": 6,
+      "Weaponholder": 2,
+      "Coolant": 2,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 1003,
+    "名称": "Serum Syringe",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 20030,
+    "锻造时间": 25,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sacred Candle": 5,
+      "Sharpening Potion": 1,
+      "Coin": 25000
+    }
+  },
+  {
+    "id": 1004,
+    "名称": "Filthoid Polymer",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 20031,
+    "锻造时间": 25,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Filthoid Tentacle": 5,
+      "Projectile": 1,
+      "Coin": 25000
+    }
+  },
+  {
+    "id": 1005,
+    "名称": "Weaponholder",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 2,
+    "产物ID": 20029,
+    "锻造时间": 10,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Creeping Tendrils": 100,
+      "Vermilion Teardrop": 50,
+      "Damaged Sal Volatile": 50,
+      "Filthoid Clot": 50,
+      "Coin": 10000
+    }
+  },
+  {
+    "id": 1006,
+    "名称": "Coolant",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 2,
+    "产物ID": 20032,
+    "锻造时间": 10,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Creeping Tendrils": 100,
+      "Chain": 50,
+      "Stone Powder": 50,
+      "Filthoid Clot": 50,
+      "Coin": 10000
+    }
+  },
+  {
+    "id": 1007,
+    "名称": "Gold Sand",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 20023,
+    "锻造时间": 10,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Luno Memento": 15,
+      "Snowswift Tail Feather": 5,
+      "Fuel Reagent": 5,
+      "Statue Debris": 2,
+      "Coin": 10000
+    }
+  },
+  {
+    "id": 1008,
+    "名称": "Repulsive Crystal",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 20008,
+    "锻造时间": 10,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Luno Memento": 15,
+      "Vehicle Armour": 5,
+      "Insulation Coating": 5,
+      "Statue Debris": 2,
+      "Coin": 10000
+    }
+  },
+  {
+    "id": 1014,
+    "名称": "Sal Volatile Ⅰ",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 10,
+    "产物ID": 40001,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Creeping Tendrils": 5,
+      "Coin": 5000
+    }
+  },
+  {
+    "id": 1015,
+    "名称": "Cognizing Sal Volatile Ⅰ",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 10,
+    "产物ID": 40002,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Creeping Tendrils": 10,
+      "Coolant": 1,
+      "Coin": 5000
+    }
+  },
+  {
+    "id": 1016,
+    "名称": "Ammo Supply Chest Ⅰ",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 10,
+    "产物ID": 40003,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Creeping Tendrils": 20,
+      "Gold Sand": 1,
+      "Coin": 5000
+    }
+  },
+  {
+    "id": 1017,
+    "名称": "Track-Shift Module",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 201,
+    "锻造时间": 40,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Essence Gelatin": 20,
+      "Gold Sand": 4,
+      "Repulsive Crystal": 4,
+      "Creeping Tendrils": 100,
+      "Coin": 240000
+    }
+  },
+  {
+    "id": 1018,
+    "名称": "Weapon Track-Shift Module",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 202,
+    "锻造时间": 30,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Precision Magnet": 20,
+      "Gold Sand": 3,
+      "Repulsive Crystal": 3,
+      "Creeping Tendrils": 80,
+      "Coin": 180000
+    }
+  },
+  {
+    "id": 1019,
+    "名称": "Sal Volatile Ⅱ",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 10,
+    "产物ID": 40011,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Creeping Tendrils": 50,
+      "Luno Memento": 6,
+      "Virifly": 10,
+      "Eclipta Grass": 10,
+      "Coin": 10000
+    }
+  },
+  {
+    "id": 1020,
+    "名称": "Cognizing Sal Volatile Ⅱ",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 10,
+    "产物ID": 40012,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Creeping Tendrils": 50,
+      "Coolant": 3,
+      "Phoxichor Canister": 5,
+      "Spring Water": 5,
+      "Coin": 5000
+    }
+  },
+  {
+    "id": 1021,
+    "名称": "Ammo Supply Chest Ⅱ",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 10,
+    "产物ID": 40013,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Creeping Tendrils": 100,
+      "Gold Sand": 3,
+      "Snowcap": 5,
+      "Silverite": 5,
+      "Coin": 5000
+    }
+  },
+  {
+    "id": 1022,
+    "名称": "Yum Treat",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 10,
+    "产物ID": 3002,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Creeping Tendrils": 25,
+      "Gold Sand": 1,
+      "Snowcap": 3,
+      "Silverite": 5,
+      "Coin": 5000
+    }
+  },
+  {
+    "id": 1023,
+    "名称": "Yum-Yum Treat",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 10,
+    "产物ID": 3003,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Creeping Tendrils": 50,
+      "Gold Sand": 2,
+      "Snowcap": 6,
+      "Silverite": 10,
+      "Coin": 10000
+    }
+  },
+  {
+    "id": 1050,
+    "名称": "D10 Die",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 10,
+    "产物ID": 3001,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Gold Sand": 1,
+      "Repulsive Crystal": 1,
+      "Coin": 5000
+    }
+  },
+  {
+    "id": 1051,
+    "名称": "Ammo Supply Chest Ⅰ",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 10,
+    "产物ID": 40003,
+    "锻造时间": 0,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Creeping Tendrils": 20,
+      "Gold Sand": 1,
+      "Coin": 5000
+    }
+  },
+  {
+    "id": 1052,
+    "名称": "Commission Manual: Volume Ⅱ",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 207,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Commission Manual: Volume Ⅰ": 4,
+      "Coin": 300
+    }
+  },
+  {
+    "id": 1053,
+    "名称": "Commission Manual: Volume Ⅲ",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 208,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Commission Manual: Volume Ⅱ": 4,
+      "Coin": 800
+    }
+  },
+  {
+    "id": 1054,
+    "名称": "Commission Manual: Volume Ⅳ",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 209,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Commission Manual: Volume Ⅲ": 4,
+      "Coin": 2000
+    }
+  },
+  {
+    "id": 2011,
+    "名称": "Galeweaver",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10002,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Withered Bough": 5,
+      "Coin": 100
+    }
+  },
+  {
+    "id": 2012,
+    "名称": "Oceanifly",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10003,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Galeweaver": 5,
+      "Coin": 200
+    }
+  },
+  {
+    "id": 2013,
+    "名称": "Tempest Piercer",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10004,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Oceanifly": 5,
+      "Coin": 300
+    }
+  },
+  {
+    "id": 2021,
+    "名称": "Everbright Flame",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10006,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Flame Lizard Scale": 5,
+      "Coin": 100
+    }
+  },
+  {
+    "id": 2022,
+    "名称": "Fire-Tempered Shackles",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10007,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Everbright Flame": 5,
+      "Coin": 200
+    }
+  },
+  {
+    "id": 2023,
+    "名称": "Solidified Lava",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10008,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Fire-Tempered Shackles": 5,
+      "Coin": 300
+    }
+  },
+  {
+    "id": 2031,
+    "名称": "Humectant",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10010,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Azure Pearl": 5,
+      "Coin": 100
+    }
+  },
+  {
+    "id": 2032,
+    "名称": "Water Purifier",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10011,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Humectant": 5,
+      "Coin": 200
+    }
+  },
+  {
+    "id": 2033,
+    "名称": "Cryo Teargem",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10012,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Water Purifier": 5,
+      "Coin": 300
+    }
+  },
+  {
+    "id": 2041,
+    "名称": "Stormfall Jade",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10014,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Lightning Rod": 5,
+      "Coin": 100
+    }
+  },
+  {
+    "id": 2042,
+    "名称": "Golden Wool",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10015,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Stormfall Jade": 5,
+      "Coin": 200
+    }
+  },
+  {
+    "id": 2043,
+    "名称": "Bottled Lightning",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10016,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Golden Wool": 5,
+      "Coin": 300
+    }
+  },
+  {
+    "id": 2051,
+    "名称": "Golden Floriated Diadem",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10018,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Lense of Enlightenment": 5,
+      "Coin": 100
+    }
+  },
+  {
+    "id": 2052,
+    "名称": "Copy of Elysian Hymnal",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10019,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Golden Floriated Diadem": 5,
+      "Coin": 200
+    }
+  },
+  {
+    "id": 2053,
+    "名称": "Scales of Eternal Justice",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10020,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Copy of Elysian Hymnal": 5,
+      "Coin": 300
+    }
+  },
+  {
+    "id": 2061,
+    "名称": "Obsidian Key",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10022,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Rust-Etched Dagger": 5,
+      "Coin": 100
+    }
+  },
+  {
+    "id": 2062,
+    "名称": "Tome of the Noclunism Ritual",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10023,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Obsidian Key": 5,
+      "Coin": 200
+    }
+  },
+  {
+    "id": 2063,
+    "名称": "Filthoid Cell Culture Dish",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10024,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Tome of the Noclunism Ritual": 5,
+      "Coin": 300
+    }
+  },
+  {
+    "id": 4001,
+    "名称": "Intermediate Weapon Component: Grip",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 11002,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Basic Weapon Component: Grip": 3,
+      "Coin": 100
+    }
+  },
+  {
+    "id": 4002,
+    "名称": "Advanced Weapon Component: Grip",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 11003,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Intermediate Weapon Component: Grip": 3,
+      "Coin": 200
+    }
+  },
+  {
+    "id": 4003,
+    "名称": "Intermediate Weapon Component: Blade",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 11005,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Basic Weapon Component: Blade": 3,
+      "Coin": 100
+    }
+  },
+  {
+    "id": 4004,
+    "名称": "Advanced Weapon Component: Blade",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 11006,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Intermediate Weapon Component: Blade": 3,
+      "Coin": 200
+    }
+  },
+  {
+    "id": 4005,
+    "名称": "Intermediate Weapon Component: Decoration",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 11008,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Basic Weapon Component: Decoration": 3,
+      "Coin": 100
+    }
+  },
+  {
+    "id": 4006,
+    "名称": "Advanced Weapon Component: Decoration",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 11009,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Intermediate Weapon Component: Decoration": 3,
+      "Coin": 200
+    }
+  },
+  {
+    "id": 4007,
+    "名称": "Intermediate Weapon Component: Barrel",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 11011,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Basic Weapon Component: Barrel": 3,
+      "Coin": 100
+    }
+  },
+  {
+    "id": 4008,
+    "名称": "Advanced Weapon Component: Barrel",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 11012,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Intermediate Weapon Component: Barrel": 3,
+      "Coin": 200
+    }
+  },
+  {
+    "id": 4009,
+    "名称": "Intermediate Weapon Component: Bolt",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 11014,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Basic Weapon Component: Bolt": 3,
+      "Coin": 100
+    }
+  },
+  {
+    "id": 4010,
+    "名称": "Advanced Weapon Component: Bolt",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 11015,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Intermediate Weapon Component: Bolt": 3,
+      "Coin": 200
+    }
+  },
+  {
+    "id": 4011,
+    "名称": "Intermediate Weapon Component: Frame",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 11017,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Basic Weapon Component: Frame": 3,
+      "Coin": 100
+    }
+  },
+  {
+    "id": 4012,
+    "名称": "Advanced Weapon Component: Frame",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 11018,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Intermediate Weapon Component: Frame": 3,
+      "Coin": 200
+    }
+  },
+  {
+    "id": 9526,
+    "名称": "Flamme De Epuration",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20503,
+    "锻造时间": 70,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Weaponholder": 1,
+      "Flamme De Epuration: Bolt": 1,
+      "Flamme De Epuration: Frame": 1,
+      "Flamme De Epuration: Barrel": 1,
+      "Coin": 70000
+    }
+  },
+  {
+    "id": 151002,
+    "名称": "Phoenix's Nirvana",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51002,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Phoenix's Nirvana": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151003,
+    "名称": "Phoenix's Blessing",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51003,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Phoenix's Blessing": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151007,
+    "名称": "Phoenix's Standfast",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51007,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Phoenix's Standfast": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151301,
+    "名称": "Siren's Wings·Inspo",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51301,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Phoenix's Wings": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151311,
+    "名称": "Sphinx's Onslaught",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51311,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Phoenix's Blaze": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151312,
+    "名称": "Sphinx's Intrepidity",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51312,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Phoenix's Blaze": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151313,
+    "名称": "Sphinx's Duel",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51313,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sphinx's Duel": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151314,
+    "名称": "Sphinx's Trapped",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51314,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sphinx's Trapped": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151315,
+    "名称": "Sphinx's Surge",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51315,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sphinx's Surge": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151316,
+    "名称": "Sphinx's Relentless",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51316,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sphinx's Relentless": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151321,
+    "名称": "Griffin's Nihility·Wildfire",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51321,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Griffin's Nihility·Wildfire": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151322,
+    "名称": "Griffin's Seawave·Wildfire",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51322,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Griffin's Seawave·Wildfire": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151323,
+    "名称": "Griffin's Inferno·Wildfire",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51323,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Griffin's Inferno·Wildfire": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151324,
+    "名称": "Griffin's Thunder·Wildfire",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51324,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Griffin's Thunder·Wildfire": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151325,
+    "名称": "Griffin's Squall·Wildfire",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51325,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Griffin's Squall·Wildfire": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151326,
+    "名称": "Griffin's Skylume·Wildfire",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51326,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Griffin's Skylume·Wildfire": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151331,
+    "名称": "Griffin's Nihility·Midnight Sun",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51331,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Griffin's Nihility·Midnight Sun": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151332,
+    "名称": "Griffin's Seawave·Midnight Sun",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51332,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Griffin's Seawave·Midnight Sun": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151333,
+    "名称": "Griffin's Inferno·Midnight Sun",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51333,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Griffin's Inferno·Midnight Sun": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151334,
+    "名称": "Griffin's Thunder·Midnight Sun",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51334,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Griffin's Thunder·Midnight Sun": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151335,
+    "名称": "Griffin's Squall·Midnight Sun",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51335,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Griffin's Squall·Midnight Sun": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151336,
+    "名称": "Griffin's Skylume·Midnight Sun",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51336,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Griffin's Skylume·Midnight Sun": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151411,
+    "名称": "Typhon's Prime·Morale",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51411,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Morale": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151412,
+    "名称": "Typhon's Prime·Resolve",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51412,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Resolve": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151413,
+    "名称": "Typhon's Prime·Huntdown",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51413,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Huntdown": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151414,
+    "名称": "Typhon's Prime·Serenity",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51414,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Serenity": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151415,
+    "名称": "Typhon's Prime·Uplift",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51415,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Uplift": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151421,
+    "名称": "Typhon's Prime·Morale",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51421,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Morale": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151422,
+    "名称": "Typhon's Prime·Resolve",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51422,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Resolve": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151423,
+    "名称": "Typhon's Prime·Huntdown",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51423,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Huntdown": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151424,
+    "名称": "Typhon's Prime·Serenity",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51424,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Serenity": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151425,
+    "名称": "Typhon's Prime·Uplift",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51425,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Uplift": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151431,
+    "名称": "Typhon's Prime·Morale",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51431,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Morale": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151432,
+    "名称": "Typhon's Prime·Resolve",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51432,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Resolve": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151433,
+    "名称": "Typhon's Prime·Huntdown",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51433,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Huntdown": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151434,
+    "名称": "Typhon's Prime·Serenity",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51434,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Serenity": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151435,
+    "名称": "Typhon's Prime·Uplift",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51435,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Uplift": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151441,
+    "名称": "Typhon's Prime·Morale",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51441,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Morale": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151442,
+    "名称": "Typhon's Prime·Resolve",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51442,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Resolve": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151443,
+    "名称": "Typhon's Prime·Huntdown",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51443,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Huntdown": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151444,
+    "名称": "Typhon's Prime·Serenity",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51444,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Serenity": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151445,
+    "名称": "Typhon's Prime·Uplift",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51445,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Uplift": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151451,
+    "名称": "Typhon's Prime·Morale",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51451,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Morale": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151452,
+    "名称": "Typhon's Prime·Resolve",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51452,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Resolve": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151453,
+    "名称": "Typhon's Prime·Huntdown",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51453,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Huntdown": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151454,
+    "名称": "Typhon's Prime·Serenity",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51454,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Serenity": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151455,
+    "名称": "Typhon's Prime·Uplift",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51455,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Uplift": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151461,
+    "名称": "Typhon's Prime·Morale",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51461,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Morale": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151462,
+    "名称": "Typhon's Prime·Resolve",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51462,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Resolve": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151463,
+    "名称": "Typhon's Prime·Huntdown",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51463,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Huntdown": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151464,
+    "名称": "Typhon's Prime·Serenity",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51464,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Serenity": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151465,
+    "名称": "Typhon's Prime·Uplift",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51465,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Typhon's Prime·Uplift": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151711,
+    "名称": "Covenanter's Scorch",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51711,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Scorch": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151712,
+    "名称": "Covenanter's Blaze·Morale",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51712,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Blaze·Morale": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151713,
+    "名称": "Covenanter's Blaze·Spectrum",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51713,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Blaze·Spectrum": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151714,
+    "名称": "Covenanter's Standfast·Inspo",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51714,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Standfast·Inspo": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151721,
+    "名称": "Covenanter's Blaze·Nirvana",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51721,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Blaze·Nirvana": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151722,
+    "名称": "Covenanter's Blaze·Spectrum",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51722,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Blaze·Spectrum": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151723,
+    "名称": "Covenanter's Blaze·Inspo",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51723,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Blaze·Inspo": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151724,
+    "名称": "Covenanter's Wings·Volition",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51724,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Wings·Volition": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151731,
+    "名称": "Covenanter's Blaze·Standfast",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51731,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Blaze·Standfast": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151732,
+    "名称": "Covenanter's Blaze·Eternity",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51732,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Blaze·Eternity": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151733,
+    "名称": "Covenanter's Blaze·Inspo",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51733,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Blaze·Inspo": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151734,
+    "名称": "Covenanter's Nirvana·Spectrum",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51734,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Nirvana·Spectrum": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151741,
+    "名称": "Covenanter's Blaze·Nirvana",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51741,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Blaze·Nirvana": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151742,
+    "名称": "Covenanter's Blaze·Morale",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51742,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Blaze·Morale": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151743,
+    "名称": "Covenanter's Blaze·Volition",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51743,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Blaze·Volition": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151744,
+    "名称": "Covenanter's Standfast·Eternity",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51744,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Standfast·Eternity": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151751,
+    "名称": "Covenanter's Blaze·Standfast",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51751,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Blaze·Standfast": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151752,
+    "名称": "Covenanter's Blaze·Resolve",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51752,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Blaze·Resolve": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151753,
+    "名称": "Covenanter's Blaze·Volition",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51753,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Blaze·Volition": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151754,
+    "名称": "Covenanter's Wings·Eternity",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51754,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Wings·Eternity": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151755,
+    "名称": "Feathered Serpent's{空格}Resolve",
+    "品质": 5,
+    "版本": "1.1",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51755,
+    "锻造时间": 60,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Feathered Serpent's{空格}Resolve": 5,
+      "Track-Shift Module": 2,
+      "Coin": 100000
+    }
+  },
+  {
+    "id": 151756,
+    "名称": "Feathered Serpent's{空格}Eternity",
+    "品质": 5,
+    "版本": "1.1",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51756,
+    "锻造时间": 60,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Feathered Serpent's{空格}Eternity": 5,
+      "Track-Shift Module": 2,
+      "Coin": 100000
+    }
+  },
+  {
+    "id": 151761,
+    "名称": "Covenanter's Scorch",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51761,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Scorch": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151762,
+    "名称": "Covenanter's Blaze·Resolve",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51762,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Blaze·Resolve": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151763,
+    "名称": "Covenanter's Blaze·Eternity",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51763,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Blaze·Eternity": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151764,
+    "名称": "Covenanter's Nirvana·Volition",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51764,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Covenanter's Nirvana·Volition": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151801,
+    "名称": "Jormungand's Gleaming Sword",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51801,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Jormungand's Gleaming Sword": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151802,
+    "名称": "Jormungand's Gleaming Polearm",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51802,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Jormungand's Gleaming Polearm": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151803,
+    "名称": "Jormungand's Gleaming Greatsword",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51803,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Jormungand's Gleaming Greatsword": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151804,
+    "名称": "Jormungand's Gleaming Dual Blades",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51804,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Jormungand's Gleaming Dual Blades": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151805,
+    "名称": "Jormungand's Gleaming Whipblade",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51805,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Jormungand's Gleaming Whipblade": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151806,
+    "名称": "Jormungand's Gleaming Katana",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51806,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Jormungand's Gleaming Katana": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151807,
+    "名称": "Jormungand's Gleaming Pistol",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51807,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Jormungand's Gleaming Pistol": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151808,
+    "名称": "Jormungand's Gleaming Dual Pistols",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51808,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Jormungand's Gleaming Dual Pistols": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151809,
+    "名称": "Jormungand's Gleaming Grenade Launcher",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51809,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Jormungand's Gleaming Grenade Launcher": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151810,
+    "名称": "Jormungand's Gleaming Shotgun",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51810,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Jormungand's Gleaming Shotgun": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151811,
+    "名称": "Jormungand's Gleaming Assault Rifle",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51811,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Jormungand's Gleaming Assault Rifle": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151812,
+    "名称": "Jormungand's Gleaming Bow",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51812,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Jormungand's Gleaming Bow": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151911,
+    "名称": "Arbiter's Illusionary Sacrifice",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51911,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Arbiter's Illusionary Sacrifice": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151921,
+    "名称": "Bahamut's Misty Veil",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51921,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Bahamut's Misty Veil": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151922,
+    "名称": "Bahamut's Frosty Torrent",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51922,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Bahamut's Frosty Torrent": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151931,
+    "名称": "Ifrit's Devouring Wildfire",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51931,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Ifrit's Devouring Wildfire": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151941,
+    "名称": "Summanus's Ravaging Thunder",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51941,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Summanus's Ravaging Thunder": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151951,
+    "名称": "Hastur's Whispering Zephyr",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51951,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Hastur's Whispering Zephyr": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151952,
+    "名称": "Hastur's Turbulent Cyclone",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51952,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Hastur's Turbulent Cyclone": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151961,
+    "名称": "Helios's Prismatic Neon",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51961,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Helios's Prismatic Neon": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 151962,
+    "名称": "Helios's Gleam & Glimmer",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 51962,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Helios's Gleam & Glimmer": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 152001,
+    "名称": "Cerberus's Impetus",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 52001,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Cerberus's Impetus": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 152004,
+    "名称": "Cerberus's Celerity",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 52004,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Fenrir's Brutality": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 152005,
+    "名称": "Cerberus's Threshold",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 52005,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Fenrir's Patrol": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 152007,
+    "名称": "Cerberus's Impetus·Focus",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 52007,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Cerberus's Impetus": 2,
+      "Cerberus's Focus": 1,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 152008,
+    "名称": "Cerberus's Rage·Trammel",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 52008,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Cerberus's Rage": 3,
+      "Cerberus's Trammel": 1,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 152101,
+    "名称": "Cerberus's Edge",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 52101,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Cerberus's Impetus": 3,
+      "Cerberus's Edge": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 152102,
+    "名称": "Cerberus's Penetration",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 52102,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Cerberus's Impetus": 3,
+      "Cerberus's Penetration": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 152103,
+    "名称": "Cerberus's Crusher",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 52103,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Cerberus's Impetus": 3,
+      "Cerberus's Crusher": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 153001,
+    "名称": "Lilith's Impetus",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 53001,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Lilith's Impetus": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 153004,
+    "名称": "Lilith's Celerity",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 53004,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Fafnir's Frugality": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 153005,
+    "名称": "Lilith's Foldover",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 53005,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Fafnir's Loadout": 3,
+      "Lilith's Foldover": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 153007,
+    "名称": "Lilith's Impetus·Focus",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 53007,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Lilith's Impetus": 2,
+      "Lilith's Focus": 1,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 153008,
+    "名称": "Lilith's Rage·Trammel",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 53008,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Lilith's Rage": 3,
+      "Lilith's Trammel": 1,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 153101,
+    "名称": "Lilith's Edge",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 53101,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Lilith's Impetus": 3,
+      "Lilith's Edge": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 153102,
+    "名称": "Lilith's Penetration",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 53102,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Lilith's Impetus": 3,
+      "Lilith's Penetration": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 153103,
+    "名称": "Lilith's Crusher",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 53103,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Lilith's Impetus": 3,
+      "Lilith's Crusher": 5,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 154001,
+    "名称": "Eldritch Cerberus's Impetus",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 54001,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Eldritch Cerberus's Impetus": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 154002,
+    "名称": "Eldritch Cerberus's Focus",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 54002,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Eldritch Cerberus's Focus": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 154003,
+    "名称": "Eldritch Cerberus's Rage",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 54003,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Eldritch Cerberus's Rage": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 154004,
+    "名称": "Eldritch Cerberus's Celerity",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 54004,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Eldritch Cerberus's Celerity": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 154005,
+    "名称": "Eldritch Cerberus's Threshold",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 54005,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Eldritch Cerberus's Threshold": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 154006,
+    "名称": "Eldritch Cerberus's Trammel",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 54006,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Eldritch Cerberus's Trammel": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 154101,
+    "名称": "Eldritch Cerberus's Edge",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 54101,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Eldritch Cerberus's Edge": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 154102,
+    "名称": "Eldritch Cerberus's Penetration",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 54102,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Eldritch Cerberus's Penetration": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 154103,
+    "名称": "Eldritch Cerberus's Crusher",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 54103,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Eldritch Cerberus's Crusher": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 155001,
+    "名称": "Eldritch Lilith's Impetus",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 55001,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Eldritch Lilith's Impetus": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 155002,
+    "名称": "Eldritch Lilith's Focus",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 55002,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Eldritch Lilith's Focus": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 155003,
+    "名称": "Eldritch Lilith's Rage",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 55003,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Eldritch Lilith's Rage": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 155004,
+    "名称": "Eldritch Lilith's Celerity",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 55004,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Eldritch Lilith's Celerity": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 155005,
+    "名称": "Eldritch Lilith's Foldover",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 55005,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Eldritch Lilith's Foldover": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 155006,
+    "名称": "Eldritch Lilith's Trammel",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 55006,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Eldritch Lilith's Trammel": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 155101,
+    "名称": "Eldritch Lilith's Edge",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 55101,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Eldritch Lilith's Edge": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 155102,
+    "名称": "Eldritch Lilith's Penetration",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 55102,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Eldritch Lilith's Penetration": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 155103,
+    "名称": "Eldritch Lilith's Crusher",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 55103,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Eldritch Lilith's Crusher": 3,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 156151,
+    "名称": "Changeling'sVolition",
+    "品质": 5,
+    "版本": "1.1",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 56151,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Pan's Inspo": 10,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 156152,
+    "名称": "Siren's Wings·Inspo·Volition",
+    "品质": 5,
+    "版本": "1.1",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 56152,
+    "锻造时间": 120,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Changeling'sVolition": 1,
+      "Siren's Wings·Inspo": 10,
+      "Sacred Candle": 20,
+      "Coin": 200000
+    }
+  },
+  {
+    "id": 156153,
+    "名称": "Changeling'sResolve",
+    "品质": 5,
+    "版本": "1.1",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 56153,
+    "锻造时间": 30,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Phoenix's Wings": 10,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 156154,
+    "名称": "Siren's Wings·Inspo·Resolve",
+    "品质": 5,
+    "版本": "1.1",
+    "产物类型": "模组",
+    "产物数量": 1,
+    "产物ID": 56154,
+    "锻造时间": 120,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Changeling'sResolve": 1,
+      "Siren's Wings·Inspo": 10,
+      "Filthoid Tentacle": 20,
+      "Coin": 200000
+    }
+  },
+  {
+    "id": 310001,
+    "名称": "Chickie JoeJoe",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10001,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Vermilion Teardrop": 50,
+      "Damaged Sal Volatile": 50,
+      "Chain": 50,
+      "Coin": 20000
+    }
+  },
+  {
+    "id": 310002,
+    "名称": "Chickie JoeJoe: Opaque White",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10002,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Vermilion Teardrop": 75,
+      "Damaged Sal Volatile": 75,
+      "Stone Powder": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 310003,
+    "名称": "Chickie JoeJoe: Caramel",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10003,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Vermilion Teardrop": 75,
+      "Damaged Sal Volatile": 75,
+      "Filthoid Clot": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 310004,
+    "名称": "Chickie JoeJoe: Azure",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10004,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Damaged Sal Volatile": 75,
+      "Chain": 75,
+      "Stone Powder": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 310005,
+    "名称": "Verdant Sprout",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10005,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Damaged Sal Volatile": 50,
+      "Chain": 50,
+      "Filthoid Clot": 50,
+      "Coin": 20000
+    }
+  },
+  {
+    "id": 310006,
+    "名称": "Verdant Sprout: Gilt",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10006,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Chain": 75,
+      "Stone Powder": 75,
+      "Filthoid Clot": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 310007,
+    "名称": "Verdant Sprout: Celeste",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10007,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Chain": 75,
+      "Stone Powder": 75,
+      "Vermilion Teardrop": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 310008,
+    "名称": "Verdant Sprout: Rose Red",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10008,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Snowswift Tail Feather": 75,
+      "Fuel Reagent": 75,
+      "Vehicle Armour": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 310009,
+    "名称": "Cinder",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10009,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Snowswift Tail Feather": 75,
+      "Fuel Reagent": 75,
+      "Insulation Coating": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 310010,
+    "名称": "Bowknot",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10010,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Snowswift Tail Feather": 50,
+      "Fuel Reagent": 50,
+      "Statue Debris": 50,
+      "Coin": 20000
+    }
+  },
+  {
+    "id": 310011,
+    "名称": "Bowknot: Opaque White",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10011,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Insulation Coating": 75,
+      "Statue Debris": 75,
+      "Snowswift Tail Feather": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 310012,
+    "名称": "Bowknot: Rose Red",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10012,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Insulation Coating": 75,
+      "Statue Debris": 75,
+      "Vehicle Armour": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 310013,
+    "名称": "Bowknot: White Sakura",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10013,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Snowswift Tail Feather": 75,
+      "Statue Debris": 75,
+      "Vehicle Armour": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 310014,
+    "名称": "Dragon of Fantasy - Liuliu",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10014,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Vermilion Teardrop": 75,
+      "Damaged Sal Volatile": 75,
+      "Chain": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 310015,
+    "名称": "Lunoeggy Plush Doll",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10015,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Bird Egg": 10,
+      "Snowcap": 20,
+      "Stone Powder": 50,
+      "Damaged Sal Volatile": 50,
+      "Coin": 20000
+    }
+  },
+  {
+    "id": 310016,
+    "名称": "Mood: Bubbly",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10016,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Weaponholder": 2,
+      "Coolant": 2,
+      "Coin": 40000
+    }
+  },
+  {
+    "id": 310017,
+    "名称": "Mood: Snowy",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10017,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Weaponholder": 2,
+      "Coolant": 2,
+      "Coin": 40000
+    }
+  },
+  {
+    "id": 310018,
+    "名称": "Mood: Rainy",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10018,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Weaponholder": 2,
+      "Coolant": 2,
+      "Coin": 40000
+    }
+  },
+  {
+    "id": 310019,
+    "名称": "Mood: Rainbow",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10019,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Sharpening Potion": 1,
+      "Projectile": 1,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 310020,
+    "名称": "Brain Teaser",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10020,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sacral Bellflower": 40,
+      "Snowcap": 40,
+      "Stone Powder": 100,
+      "Damaged Sal Volatile": 100,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 310021,
+    "名称": "Mask of Genesis: Gilt",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10021,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Weaponholder": 2,
+      "Coolant": 2,
+      "Coin": 40000
+    }
+  },
+  {
+    "id": 310022,
+    "名称": "Mask of Genesis: Leaden Grey",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10022,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Snowswift Tail Feather": 75,
+      "Fuel Reagent": 75,
+      "Insulation Coating": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 310023,
+    "名称": "Mask of Fertility",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10023,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Weaponholder": 2,
+      "Projectile": 1,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 310024,
+    "名称": "Solar Aureole",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10031,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Portable Power Unit": 40,
+      "Dewiolet": 60,
+      "Filthoid Clot": 100,
+      "Chain": 100,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 310025,
+    "名称": "Exquisite Umbrella",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10030,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Virifly": 15,
+      "Spring Water": 15,
+      "Chain": 75,
+      "Vermilion Teardrop": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 310026,
+    "名称": "Tales of Icelake",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10029,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Eclipta Grass": 30,
+      "Crackbloom": 30,
+      "Stone Powder": 75,
+      "Damaged Sal Volatile": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 310027,
+    "名称": "Lightbulb Moment",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10028,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sacral Bellflower": 30,
+      "Virifly": 15,
+      "Filthoid Clot": 75,
+      "Chain": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 310028,
+    "名称": "Genius Promoter: Emerald Green",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10027,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Phoxichor Canister": 60,
+      "Virifly": 20,
+      "Damaged Sal Volatile": 100,
+      "Filthoid Clot": 100,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 310029,
+    "名称": "Genius Promoter: Azure",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10026,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Portable Power Unit": 40,
+      "Crackbloom": 40,
+      "Vermilion Teardrop": 100,
+      "Stone Powder": 100,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 310030,
+    "名称": "Please Hold Forever",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10024,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Dewiolet": 60,
+      "Bird Egg": 20,
+      "Chain": 100,
+      "Vermilion Teardrop": 100,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 310031,
+    "名称": "Headpiece: Fortune's Favour",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10052,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Broken Relic": 20,
+      "Waywardstone": 10,
+      "Vermilion Teardrop": 100,
+      "Stone Powder": 100,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 310032,
+    "名称": "Axeident",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10033,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Loomhopper": 20,
+      "Skink": 10,
+      "Chain": 100,
+      "Vermilion Teardrop": 100,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 310033,
+    "名称": "Sleepy Capybara",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 10034,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Rainseer Frog": 25,
+      "Skylily": 15,
+      "Filthoid Clot": 100,
+      "Chain": 100,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 310201,
+    "名称": "Silver Emblem",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10201,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Iron Emblem": 3,
+      "Coin": 100
+    }
+  },
+  {
+    "id": 310202,
+    "名称": "Gilded Emblem",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10202,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Silver Emblem": 3,
+      "Coin": 200
+    }
+  },
+  {
+    "id": 310204,
+    "名称": "Eye of Infinity",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10204,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Veil of Silence": 3,
+      "Coin": 100
+    }
+  },
+  {
+    "id": 310205,
+    "名称": "Crown of Enlightenment",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10205,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Eye of Infinity": 3,
+      "Coin": 200
+    }
+  },
+  {
+    "id": 310207,
+    "名称": "Processed Herb",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10207,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Herbal Sprig": 3,
+      "Coin": 100
+    }
+  },
+  {
+    "id": 310208,
+    "名称": "Compound Potion",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10208,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Processed Herb": 3,
+      "Coin": 200
+    }
+  },
+  {
+    "id": 310210,
+    "名称": "Gleaming Precision Scope",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10210,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Gleaming Arrow": 3,
+      "Coin": 100
+    }
+  },
+  {
+    "id": 310211,
+    "名称": "Gleaming Quiver",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "资源",
+    "产物数量": 1,
+    "产物ID": 10211,
+    "锻造时间": 0,
+    "批量生产": true,
+    "无限生产": true,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Gleaming Precision Scope": 3,
+      "Coin": 200
+    }
+  },
+  {
+    "id": 320001,
+    "名称": "Sage's Spectacles",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20001,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Insulation Coating": 50,
+      "Statue Debris": 50,
+      "Snowswift Tail Feather": 50,
+      "Coin": 20000
+    }
+  },
+  {
+    "id": 320002,
+    "名称": "Sage's Spectacles: Rose Red",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20002,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Insulation Coating": 75,
+      "Statue Debris": 75,
+      "Vehicle Armour": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 320003,
+    "名称": "Sage's Spectacles: Leaden Grey",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20003,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Snowswift Tail Feather": 75,
+      "Statue Debris": 75,
+      "Vehicle Armour": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 320004,
+    "名称": "Sage's Spectacles: Caramel",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20004,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Vermilion Teardrop": 75,
+      "Damaged Sal Volatile": 75,
+      "Chain": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 320005,
+    "名称": "Ascetic's Blindfold",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20005,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Vermilion Teardrop": 50,
+      "Damaged Sal Volatile": 50,
+      "Stone Powder": 50,
+      "Coin": 20000
+    }
+  },
+  {
+    "id": 320006,
+    "名称": "Ascetic's Blindfold: Opaque White",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20006,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Vermilion Teardrop": 75,
+      "Damaged Sal Volatile": 75,
+      "Filthoid Clot": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 320007,
+    "名称": "Ascetic's Blindfold: Rose Red",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20007,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Damaged Sal Volatile": 75,
+      "Chain": 75,
+      "Stone Powder": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 320008,
+    "名称": "Arclight Butterfly",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20008,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Damaged Sal Volatile": 50,
+      "Chain": 50,
+      "Filthoid Clot": 50,
+      "Coin": 20000
+    }
+  },
+  {
+    "id": 320009,
+    "名称": "Arclight Butterfly: Celeste",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20009,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Chain": 75,
+      "Stone Powder": 75,
+      "Filthoid Clot": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 320010,
+    "名称": "Arclight Butterfly: White Sakura",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20010,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Chain": 75,
+      "Stone Powder": 75,
+      "Vermilion Teardrop": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 320011,
+    "名称": "Arclight Butterfly: Leaden Grey",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20011,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Snowswift Tail Feather": 75,
+      "Fuel Reagent": 75,
+      "Vehicle Armour": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 320012,
+    "名称": "Mistborn Butterfly",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20012,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Snowswift Tail Feather": 50,
+      "Fuel Reagent": 50,
+      "Insulation Coating": 50,
+      "Coin": 20000
+    }
+  },
+  {
+    "id": 320013,
+    "名称": "Mistborn Butterfly: Mint",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20013,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Snowswift Tail Feather": 75,
+      "Fuel Reagent": 75,
+      "Statue Debris": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 320014,
+    "名称": "Mistborn Butterfly: Rose Red",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20014,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Insulation Coating": 75,
+      "Statue Debris": 75,
+      "Snowswift Tail Feather": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 320015,
+    "名称": "Mistborn Butterfly: Leaden Grey",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20015,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Insulation Coating": 75,
+      "Statue Debris": 75,
+      "Vehicle Armour": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 320016,
+    "名称": "Bandage Wrap",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20016,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Snowswift Tail Feather": 50,
+      "Statue Debris": 50,
+      "Vehicle Armour": 50,
+      "Coin": 20000
+    }
+  },
+  {
+    "id": 320017,
+    "名称": "Bandage Wrap: Dark Jade",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20017,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Vermilion Teardrop": 75,
+      "Damaged Sal Volatile": 75,
+      "Chain": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 320018,
+    "名称": "Bandage Wrap: White Sakura",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20018,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Vermilion Teardrop": 75,
+      "Damaged Sal Volatile": 75,
+      "Stone Powder": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 320019,
+    "名称": "Bandage Wrap: Celeste",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20019,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Vermilion Teardrop": 75,
+      "Damaged Sal Volatile": 75,
+      "Filthoid Clot": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 320020,
+    "名称": "Life Sustainer",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20020,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Eclipta Grass": 20,
+      "Crackbloom": 20,
+      "Filthoid Clot": 50,
+      "Chain": 50,
+      "Coin": 20000
+    }
+  },
+  {
+    "id": 320021,
+    "名称": "Skyward Plume",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20021,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Sharpening Potion": 1,
+      "Projectile": 1,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 320022,
+    "名称": "Reversed Magician's Flower: Rose Red",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20022,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Weaponholder": 2,
+      "Coolant": 2,
+      "Coin": 40000
+    }
+  },
+  {
+    "id": 320023,
+    "名称": "Upright Magician's Flower: Opaque White",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20023,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Weaponholder": 2,
+      "Coolant": 2,
+      "Coin": 40000
+    }
+  },
+  {
+    "id": 320024,
+    "名称": "Lunosmith's Moustache",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20024,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Snowswift Tail Feather": 75,
+      "Fuel Reagent": 75,
+      "Vehicle Armour": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 320025,
+    "名称": "Valve of Perception",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20025,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Spring Water": 15,
+      "Indigofly": 30,
+      "Damaged Sal Volatile": 75,
+      "Filthoid Clot": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 320026,
+    "名称": "Buttoneer",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20029,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Sharpening Potion": 1,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 320027,
+    "名称": "Buttoneer: Mint",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20034,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Sharpening Potion": 1,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 320028,
+    "名称": "Buttoneer: White Sakura",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20033,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Sharpening Potion": 1,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 320029,
+    "名称": "Yesterday No More",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20026,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Portable Power Unit": 40,
+      "Dewiolet": 60,
+      "Filthoid Clot": 100,
+      "Chain": 100,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 320030,
+    "名称": "Banished Oni Mask",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 20030,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Bird Egg": 10,
+      "Snowcap": 20,
+      "Stone Powder": 50,
+      "Damaged Sal Volatile": 50,
+      "Coin": 20000
+    }
+  },
+  {
+    "id": 330001,
+    "名称": "Lantern",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 30001,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Silverite": 30,
+      "Phoxichor Canister": 30,
+      "Vermilion Teardrop": 50,
+      "Stone Powder": 50,
+      "Coin": 20000
+    }
+  },
+  {
+    "id": 330002,
+    "名称": "Cirrus Gourd",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 30002,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Sharpening Potion": 1,
+      "Projectile": 1,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 330003,
+    "名称": "Phoxichor Canister",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 30004,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Sharpening Potion": 1,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 330004,
+    "名称": "Miner's Lamp",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 30005,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Indigofly": 20,
+      "Silverite": 30,
+      "Damaged Sal Volatile": 50,
+      "Filthoid Clot": 50,
+      "Coin": 20000
+    }
+  },
+  {
+    "id": 330005,
+    "名称": "Porchlight of Home",
+    "品质": 3,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 30006,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Seashell": 10,
+      "Phoxichor Canister": 30,
+      "Chain": 50,
+      "Vermilion Teardrop": 50,
+      "Coin": 20000
+    }
+  },
+  {
+    "id": 330006,
+    "名称": "Dice of Fate",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 30009,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Portable Power Unit": 40,
+      "Dewiolet": 60,
+      "Filthoid Clot": 100,
+      "Chain": 100,
+      "Coin": 20000
+    }
+  },
+  {
+    "id": 330007,
+    "名称": "Axeident",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 30021,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Loomhopper": 20,
+      "Skink": 10,
+      "Stone Powder": 100,
+      "Damaged Sal Volatile": 100,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 340001,
+    "名称": "Phoxfox Tail",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 40001,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Insulation Coating": 5,
+      "Statue Debris": 5,
+      "Vehicle Armour": 5,
+      "Coin": 10000
+    }
+  },
+  {
+    "id": 340002,
+    "名称": "Cambay Commandment",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 40002,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": false,
+    "消耗资源": {
+      "Sharpening Potion": 1,
+      "Projectile": 1,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 340003,
+    "名称": "Vehicle Wheel",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 40003,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Silverite": 45,
+      "Seashell": 15,
+      "Vermilion Teardrop": 75,
+      "Stone Powder": 75,
+      "Coin": 30000
+    }
+  },
+  {
+    "id": 340004,
+    "名称": "Backpiece: Fortune's Favour",
+    "品质": 4,
+    "版本": "1.0",
+    "产物类型": "角色配件",
+    "产物数量": 1,
+    "产物ID": 40008,
+    "锻造时间": 5,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Broken Relic": 20,
+      "Waywardstone": 10,
+      "Damaged Sal Volatile": 100,
+      "Filthoid Clot": 100,
+      "Coin": 50000
+    }
+  },
+  {
+    "id": 910101,
+    "名称": "Blade Amberglow",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10101,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Blade Amberglow: Grip": 1,
+      "Blade Amberglow: Blade": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910102,
+    "名称": "Shackle of Lonewolf",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10102,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Shackle of Lonewolf: Grip": 1,
+      "Shackle of Lonewolf: Blade": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910103,
+    "名称": "Remanent Reminiscence",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10103,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Remanent Reminiscence: Grip": 1,
+      "Remanent Reminiscence: Blade": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910104,
+    "名称": "Ingenious Tactics",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10104,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Ingenious Tactics: Grip": 1,
+      "Ingenious Tactics: Blade": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910105,
+    "名称": "Wandering Rose",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10105,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Wandering Rose: Grip": 1,
+      "Wandering Rose: Blade": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910201,
+    "名称": "Siren's Kiss",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10201,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Siren's Kiss: Grip": 1,
+      "Siren's Kiss: Blade": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910202,
+    "名称": "Vernal Jade Halberd",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10202,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Vernal Jade Halberd: Grip": 1,
+      "Vernal Jade Halberd: Blade": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910203,
+    "名称": "Venial Sinscales",
+    "品质": 5,
+    "版本": "1.2",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10203,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Venial Sinscales: Grip": 1,
+      "Venial Sinscales: Blade": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910204,
+    "名称": "Elpides Abound",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10204,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Elpides Abound: Grip": 1,
+      "Elpides Abound: Blade": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910206,
+    "名称": "Wanewraith",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10206,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Wanewraith: Grip": 1,
+      "Wanewraith: Blade": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910208,
+    "名称": "Dove of Tomorrow",
+    "品质": 5,
+    "版本": "1.1",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10208,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Dove of Tomorrow: Grip": 1,
+      "Dove of Tomorrow: Blade": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910301,
+    "名称": "Punitive Inferno",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10301,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Punitive Inferno: Grip": 1,
+      "Punitive Inferno: Blade": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910302,
+    "名称": "Ironforger",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10302,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Ironforger: Grip": 1,
+      "Ironforger: Blade": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910303,
+    "名称": "Pyrothirst",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10303,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Pyrothirst: Grip": 1,
+      "Pyrothirst: Blade": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910304,
+    "名称": "Eternal Farewell",
+    "品质": 5,
+    "版本": "1.2",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10304,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Eternal Farewell: Grip": 1,
+      "Eternal Farewell: Blade": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910401,
+    "名称": "Exiled Fangs",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10401,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Exiled Fangs: Grip": 1,
+      "Exiled Fangs: Left Blade": 1,
+      "Exiled Fangs: Right Blade": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910402,
+    "名称": "Aureate Yore",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10402,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Aureate Yore: Grip": 1,
+      "Aureate Yore: Blade (Left)": 1,
+      "Aureate Yore: Blade (Right)": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910403,
+    "名称": "Fathomless Sharkgaze",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10403,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Fathomless Sharkgaze: Grip": 1,
+      "Fathomless Sharkgaze: Blade (Left)": 1,
+      "Fathomless Sharkgaze: Blade (Right)": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910501,
+    "名称": "Undying Oneiros",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10501,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Undying Oneiros: Grip": 1,
+      "Undying Oneiros: Blade": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910502,
+    "名称": "Halcyon Gracefall",
+    "品质": 5,
+    "版本": "1.1",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10502,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Halcyon Gracefall: Grip": 1,
+      "Halcyon Gracefall: Blade": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910503,
+    "名称": "Tetherlash",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10503,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Tetherlash: Grip": 1,
+      "Tetherlash: Blade": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910504,
+    "名称": "Viridis Reefs",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10504,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Viridis Reefs: Grip": 1,
+      "Viridis Reefs: Blade": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910601,
+    "名称": "Momiji Itteki",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10601,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Momiji Itteki: Grip": 1,
+      "Momiji Itteki: Blade": 1,
+      "Momiji Itteki: Decoration": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910602,
+    "名称": "Withershade",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10602,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Withershade: Grip": 1,
+      "Withershade: Blade": 1,
+      "Withershade: Decoration": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 910603,
+    "名称": "Sacred Favour",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 10603,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Sharpening Potion": 2,
+      "Sacred Favour: Grip": 1,
+      "Sacred Favour: Blade": 1,
+      "Sacred Favour: Decoration": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920101,
+    "名称": "Entropic Singularity",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20101,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Entropic Singularity: Bolt": 1,
+      "Entropic Singularity: Frame": 1,
+      "Entropic Singularity: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920102,
+    "名称": "Rendhusk",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20102,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Rendhusk: Bolt": 1,
+      "Rendhusk: Frame": 1,
+      "Rendhusk: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920103,
+    "名称": "Sacrosanct Decree",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20103,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Sacrosanct Decree: Bolt": 1,
+      "Sacrosanct Decree: Frame": 1,
+      "Sacrosanct Decree: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920201,
+    "名称": "Excresduo",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20201,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Tumeborn: Frame": 1,
+      "Tumeborn: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920203,
+    "名称": "Bluecurrent Pulse",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20203,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Bluecurrent Pulse: Frame": 1,
+      "Bluecurrent Pulse: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920205,
+    "名称": "Sacrosanct Chorus",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20205,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Sacrosanct Chorus: Frame": 1,
+      "Sacrosanct Chorus: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920301,
+    "名称": "Stellar Finality",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20301,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Stellar Finality: Bolt": 1,
+      "Stellar Finality: Frame": 1,
+      "Stellar Finality: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920302,
+    "名称": "Firearm Feast",
+    "品质": 5,
+    "版本": "1.4",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20302,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Firearm Feast: Bolt": 1,
+      "Firearm Feast: Frame": 1,
+      "Firearm Feast: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920303,
+    "名称": "Destructo",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20303,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Ruinstem: Bolt": 1,
+      "Ruinstem: Frame": 1,
+      "Ruinstem: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920304,
+    "名称": "Guixu Ratchet",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20304,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Guixu Ratchet: Bolt": 1,
+      "Guixu Ratchet: Frame": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920305,
+    "名称": "Silverwhite Edict",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20305,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Silverwhite Edict: Bolt": 1,
+      "Silverwhite Edict: Frame": 1,
+      "Silverwhite Edict: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920401,
+    "名称": "Screamshot",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20401,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Wailmaw: Bolt": 1,
+      "Wailmaw: Frame": 1,
+      "Wailmaw: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920402,
+    "名称": "Silent Sower",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20402,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Silent Sower: Bolt": 1,
+      "Silent Sower: Frame": 1,
+      "Silent Sower: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920403,
+    "名称": "Day of Sacred Verdict",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20403,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Day of Sacred Verdict: Bolt": 1,
+      "Day of Sacred Verdict: Frame": 1,
+      "Day of Sacred Verdict: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920405,
+    "名称": "Blast Artistry",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20405,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Blast Artistry: Bolt": 1,
+      "Blast Artistry: Frame": 1,
+      "Blast Artistry: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920501,
+    "名称": "Osteobreaker",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20501,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Marrowseep: Bolt": 1,
+      "Marrowseep: Frame": 1,
+      "Marrowseep: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920502,
+    "名称": "Exiled Thunderwyrm",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20502,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Exiled Thunderwyrm: Bolt": 1,
+      "Exiled Thunderwyrm: Frame": 1,
+      "Exiled Thunderwyrm: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920503,
+    "名称": "Flamme De Epuration",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20503,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Flamme De Epuration: Bolt": 1,
+      "Flamme De Epuration: Frame": 1,
+      "Flamme De Epuration: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920504,
+    "名称": "Daybreak Hymn",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20504,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Daybreak Hymn: Bolt": 1,
+      "Daybreak Hymn: Frame": 1,
+      "Daybreak Hymn: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920506,
+    "名称": "Cloudveil Unfurl",
+    "品质": 5,
+    "版本": "1.1",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20506,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Cloudveil Unfurl: Bolt": 1,
+      "Cloudveil Unfurl: Frame": 1,
+      "Cloudveil Unfurl: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920507,
+    "名称": "Submerged Serenade",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20507,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Submerged Serenade: Bolt": 1,
+      "Submerged Serenade: Frame": 1,
+      "Submerged Serenade: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920509,
+    "名称": "Dreamweaver's Feather",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20509,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Dreamweaver's Feather: Bolt": 1,
+      "Dreamweaver's Feather: Frame": 1,
+      "Dreamweaver's Feather: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920510,
+    "名称": "Ephemeral Lumina",
+    "品质": 5,
+    "版本": "1.1",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20510,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Ephemeral Lumina: Bolt": 1,
+      "Ephemeral Lumina: Frame": 1,
+      "Ephemeral Lumina: Barrel": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920601,
+    "名称": "Searing Sandwhisper",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20601,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Searing Sandwhisper: Bowstring": 1,
+      "Searing Sandwhisper: Upper Limb": 1,
+      "Searing Sandwhisper: Lower Limb": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920602,
+    "名称": "Arclight Apocalypses",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20602,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Arclight Apocalypses: Bowstring": 1,
+      "Arclight Apocalypses: Upper Limb": 1,
+      "Arclight Apocalypses: Lower Limb": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920603,
+    "名称": "Embla Inflorescence",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20603,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Embla Inflorescence: Bowstring": 1,
+      "Embla Inflorescence: Upper Limb": 1,
+      "Embla Inflorescence: Lower Limb": 1,
+      "Coin": 280000
+    }
+  },
+  {
+    "id": 920604,
+    "名称": "Soulrend",
+    "品质": 5,
+    "版本": "1.0",
+    "产物类型": "武器",
+    "产物数量": 1,
+    "产物ID": 20604,
+    "锻造时间": 180,
+    "批量生产": false,
+    "无限生产": false,
+    "显示在图纸图鉴": true,
+    "消耗资源": {
+      "Projectile": 2,
+      "Soulrend: Bowstring": 1,
+      "Soulrend: Upper Limb": 1,
+      "Soulrend: Lower Limb": 1,
+      "Coin": 280000
+    }
+  }
+]
