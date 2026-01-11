@@ -681,7 +681,7 @@
     "奖励": {
       "Secret Letter Clue": 2,
       "Title: Halting": 1,
-      "Title: Executioner": 1
+      "Title:  Executioner": 1
     }
   },
   {
@@ -1604,7 +1604,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title: Captain": 1
+      "Title:  Captain": 1
     }
   },
   {
@@ -1695,7 +1695,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title: Doombringer": 1
+      "Title:  Doombringer": 1
     }
   },
   {
@@ -1977,7 +1977,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title: Challenger": 1
+      "Title:  Challenger": 1
     }
   },
   {
@@ -2028,7 +2028,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title: Chief": 1
+      "Title:  Chief": 1
     }
   },
   {
@@ -2061,7 +2061,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title: Warden": 1
+      "Title:  Warden": 1
     }
   },
   {
@@ -2244,7 +2244,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title: Roamer": 1
+      "Title:  Roamer": 1
     }
   },
   {
@@ -2907,7 +2907,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title: Consumer": 1
+      "Title:  Consumer": 1
     }
   },
   {
@@ -2948,7 +2948,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title: Time Traveler": 1
+      "Title:  Time Traveler": 1
     }
   },
   {
@@ -2989,7 +2989,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title: Angler": 1
+      "Title:  Angler": 1
     }
   },
   {
@@ -3032,7 +3032,7 @@
     "奖励": {
       "Coin": 5000,
       "Title: Ivory-Keyed": 1,
-      "Title Frame: Movement (Ⅰ) Style": 1
+      "Title Frame:  Movement (Ⅰ) Style": 1
     }
   },
   {
@@ -3043,7 +3043,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1,
-      "Title Frame: Movement (Ⅱ) Style": 1
+      "Title Frame:  Movement (Ⅱ) Style": 1
     }
   },
   {
@@ -3055,7 +3055,7 @@
     "奖励": {
       "Secret Letter Clue": 2,
       "Title: Lyrical": 1,
-      "Title Frame: Movement (Ⅲ) Style": 1
+      "Title Frame:  Movement (Ⅲ) Style": 1
     }
   },
   {
@@ -3106,7 +3106,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title: Strength": 1
+      "Title:  Strength": 1
     }
   },
   {
@@ -3930,7 +3930,7 @@
     "奖励": {
       "Secret Letter Clue": 1,
       "Title: Sand-isolated": 1,
-      "Title: Dreamt-of One": 1
+      "Title:  Dreamt-of One": 1
     }
   },
   {
@@ -3952,7 +3952,7 @@
     "奖励": {
       "Secret Letter Clue": 1,
       "Title: Imperial": 1,
-      "Title: Drifter": 1
+      "Title:  Drifter": 1
     }
   },
   {
@@ -3963,7 +3963,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1,
-      "Title: Phoxhunter": 1
+      "Title:  Phoxhunter": 1
     }
   },
   {
@@ -3974,7 +3974,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1,
-      "Title: Outlander": 1
+      "Title:  Outlander": 1
     }
   },
   {
@@ -3996,7 +3996,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1,
-      "Title: Fool": 1
+      "Title:  Fool": 1
     }
   },
   {
@@ -4160,7 +4160,7 @@
     "版本": "1.0",
     "奖励": {
       "Coin": 5000,
-      "Title: Will": 1
+      "Title:  Will": 1
     }
   },
   {
@@ -4201,7 +4201,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1,
-      "Title: Demon": 1
+      "Title:  Demon": 1
     }
   },
   {
@@ -4295,7 +4295,7 @@
     "奖励": {
       "Secret Letter Clue": 2,
       "Title: Starlit": 1,
-      "Title: Performer": 1
+      "Title:  Performer": 1
     }
   },
   {
@@ -4306,7 +4306,7 @@
     "版本": "1.0",
     "奖励": {
       "Coin": 5000,
-      "Title: BFF": 1
+      "Title:  BFF": 1
     }
   },
   {
@@ -4318,7 +4318,7 @@
     "奖励": {
       "Coin": 5000,
       "Title: Lively": 1,
-      "Title: Friend": 1
+      "Title:  Friend": 1
     }
   },
   {
@@ -4349,7 +4349,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title: Senior": 1
+      "Title:  Senior": 1
     }
   },
   {
@@ -4360,7 +4360,7 @@
     "版本": "1.0",
     "奖励": {
       "Coin": 5000,
-      "Title: Blacksmith": 1
+      "Title:  Blacksmith": 1
     }
   },
   {
@@ -4441,7 +4441,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title: Hero": 1
+      "Title:  Hero": 1
     }
   },
   {
@@ -4582,7 +4582,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title: Egg": 1
+      "Title:  Egg": 1
     }
   },
   {
@@ -4801,7 +4801,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1,
-      "Title: Explorer": 1
+      "Title:  Explorer": 1
     }
   },
   {
@@ -5074,7 +5074,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title: Geniemon Master": 1
+      "Title:  Geniemon Master": 1
     }
   },
   {
@@ -5238,7 +5238,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title: Remembrance": 1
+      "Title:  Remembrance": 1
     }
   },
   {
@@ -5280,7 +5280,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1,
-      "Title: Photographer": 1
+      "Title:  Photographer": 1
     }
   },
   {
@@ -5311,7 +5311,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
-      "Title: Superior": 1
+      "Title:  Superior": 1
     }
   },
   {

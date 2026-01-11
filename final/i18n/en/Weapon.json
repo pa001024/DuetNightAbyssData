@@ -59,6 +59,20 @@
       "Character ATK ‍+96.0%.",
       "Character ATK ‍+108.0%.",
       "Character ATK ‍+120.0%."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -121,6 +135,20 @@
       "Trigger Probability +120.0%. When a Hydro character triggers a bonus effect with this weapon, other allies gain +52.8% ATK for 6.0s.",
       "Trigger Probability +135.0%. When a Hydro character triggers a bonus effect with this weapon, other allies gain +59.4% ATK for 6.0s.",
       "Trigger Probability +150.0%. When a Hydro character triggers a bonus effect with this weapon, other allies gain +66.0% ATK for 6.0s."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -183,6 +211,20 @@
       "ATK Range ‍+1.6. Landing a CRIT with this weapon has a 52.8% chance to restore 3.0 Sanity. Can trigger once every 0.5s.",
       "ATK Range ‍+1.8. Landing a CRIT with this weapon has a 59.4% chance to restore 3.0 Sanity. Can trigger once every 0.5s.",
       "ATK Range ‍+2.0. Landing a CRIT with this weapon has a 66.0% chance to restore 3.0 Sanity. Can trigger once every 0.5s."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -245,6 +287,20 @@
       "DEF +80.0%. When dealing damage with this weapon triggers Bonus Effect, there's a 40.0% chance to decrease the target's Shield by 350.0% of the user's DEF.",
       "DEF +90.0%. When dealing damage with this weapon triggers Bonus Effect, there's a 45.0% chance to decrease the target's Shield by 350.0% of the user's DEF.",
       "DEF +100.0%. When dealing damage with this weapon triggers Bonus Effect, there's a 50.0% chance to decrease the target's Shield by 350.0% of the user's DEF."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -307,6 +363,20 @@
       "ATK Speed +40.0%‍. When performing a Charged Attack with this weapon, there is a 44.8% chance to reduce Geniemon Support CD by 3.0s.",
       "ATK Speed +45.0%‍. When performing a Charged Attack with this weapon, there is a 50.4% chance to reduce Geniemon Support CD by 3.0s.",
       "ATK Speed +50.0%‍. When performing a Charged Attack with this weapon, there is a 56.0% chance to reduce Geniemon Support CD by 3.0s."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -369,6 +439,20 @@
       "Skill Range +48.0%. When performing Normal Attacks with this weapon, grants a 5.8% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
       "Skill Range +54.0%. When performing Normal Attacks with this weapon, grants a 6.5% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
       "Skill Range +60.0%. When performing Normal Attacks with this weapon, grants a 7.2% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -431,6 +515,20 @@
       "ATK Speed‍ +40.0%. Deals +72.0% damage to targets afflicted with bonus effects.",
       "ATK Speed‍ +45.0%. Deals +81.0% damage to targets afflicted with bonus effects.",
       "ATK Speed‍ +50.0%. Deals +90.0% damage to targets afflicted with bonus effects."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -493,6 +591,20 @@
       "Skill Damage +32.0%. When an Electro character performs a Plunging Attack with this weapon, grants +24.0% Skill Damage for 10.0s (up to 3 stacks).",
       "Skill Damage +36.0%. When an Electro character performs a Plunging Attack with this weapon, grants +27.0% Skill Damage for 10.0s (up to 3 stacks).",
       "Skill Damage +40.0%. When an Electro character performs a Plunging Attack with this weapon, grants +30.0% Skill Damage for 10.0s (up to 3 stacks)."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -555,6 +667,20 @@
       "Resolve +8.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 12.8% and ATK Speed by 24.0% for 15.0s. Each instance of Skill Damage or Ranged Weapon Damage extends the duration by 0.2s.",
       "Resolve +9.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 14.4% and ATK Speed by 27.0% for 15.0s. Each instance of Skill Damage or Ranged Weapon Damage extends the duration by 0.2s.",
       "Resolve +10.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 16.0% and ATK Speed by 30.0% for 15.0s. Each instance of Skill Damage or Ranged Weapon Damage extends the duration by 0.2s."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -617,6 +743,20 @@
       "Skill Damage +38.4%.",
       "Skill Damage +43.2%.",
       "Skill Damage +48.0%."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -679,6 +819,20 @@
       "CRIT Chance +80.0%. When dealing damage using normal attack with this weapon, there is a 2.7% chance to reload the user's ranged weapon magazine.",
       "CRIT Chance +90.0%. When dealing damage using normal attack with this weapon, there is a 3.1% chance to reload the user's ranged weapon magazine.",
       "CRIT Chance +100.0%. When dealing damage using normal attack with this weapon, there is a 3.4% chance to reload the user's ranged weapon magazine."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -741,6 +895,20 @@
       "Max HP +80.0%. When a Pyro character takes damage, grants +24.0% Skill Duration for 8.0s (up to 3.0 stacks).",
       "Max HP +90.0%. When a Pyro character takes damage, grants +27.0% Skill Duration for 8.0s (up to 3.0 stacks).",
       "Max HP +100.0%. When a Pyro character takes damage, grants +30.0% Skill Duration for 8.0s (up to 3.0 stacks)."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -803,6 +971,20 @@
       "CRIT Chance +80.0%. When dealing damage with this weapon triggers Bonus Effect, there is a 3.4% chance to increase the Combo Level to maximum.",
       "CRIT Chance +90.0%. When dealing damage with this weapon triggers Bonus Effect, there is a 3.8% chance to increase the Combo Level to maximum.",
       "CRIT Chance +100.0%. When dealing damage with this weapon triggers Bonus Effect, there is a 4.2% chance to increase the Combo Level to maximum."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -865,6 +1047,20 @@
       "Skill Duration +28.8%.",
       "Skill Duration +32.4%.",
       "Skill Duration +36.0%."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -927,6 +1123,20 @@
       "Morale +24.0%. When an Electro character uses their Ultimate Skill, grants +40.0% Skill Damage for 10.0s (up to 3.0 stacks).",
       "Morale +27.0%. When an Electro character uses their Ultimate Skill, grants +45.0% Skill Damage for 10.0s (up to 3.0 stacks).",
       "Morale +30.0%. When an Electro character uses their Ultimate Skill, grants +50.0% Skill Damage for 10.0s (up to 3.0 stacks)."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -989,6 +1199,20 @@
       "ATK Speed +40.0%. When dealing damage with this weapon triggers Bonus Effect, if the user's HP percentage is below 25%, there's a 45.0% chance to restore 2.4% of the Max HP.",
       "ATK Speed +45.0%. When dealing damage with this weapon triggers Bonus Effect, if the user's HP percentage is below 25%, there's a 45.0% chance to restore 2.7% of the Max HP.",
       "ATK Speed +50.0%. When dealing damage with this weapon triggers Bonus Effect, if the user's HP percentage is below 25%, there's a 45.0% chance to restore 3.0% of the Max HP."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -1051,6 +1275,20 @@
       "CRIT Damage +100.0%. Sliding Attacks with this weapon gain +120.0% CRIT Chance.",
       "CRIT Damage +112.5%. Sliding Attacks with this weapon gain +135.0% CRIT Chance.",
       "CRIT Damage +125.0%. Sliding Attacks with this weapon gain +150.0% CRIT Chance."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -1113,6 +1351,20 @@
       "Skill Range +57.6%.",
       "Skill Range +64.8%.",
       "Skill Range +72.0%."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -1175,6 +1427,20 @@
       "Max HP +80.0%. When this weapon triggers a bonus effect on hit, grants ‍+13.8%‍ Max HP for 15.0‍s (up to 10.0 stacks).",
       "Max HP +90.0%. When this weapon triggers a bonus effect on hit, grants ‍+15.5%‍ Max HP for 15.0‍s (up to 10.0 stacks).",
       "Max HP +100.0%. When this weapon triggers a bonus effect on hit, grants ‍+17.2%‍ Max HP for 15.0‍s (up to 10.0 stacks)."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -1237,6 +1503,20 @@
       "Skill Damage +32.0%. When a Hydro character deals CRIT Damage with this weapon, increases Skill DMG for allies by 27.2% for 6.0s.",
       "Skill Damage +36.0%. When a Hydro character deals CRIT Damage with this weapon, increases Skill DMG for allies by 30.6% for 6.0s.",
       "Skill Damage +40.0%. When a Hydro character deals CRIT Damage with this weapon, increases Skill DMG for allies by 34.0% for 6.0s."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -1299,6 +1579,20 @@
       "Skill Duration +28.8%.",
       "Skill Duration +32.4%.",
       "Skill Duration +36.0%."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -1361,6 +1655,20 @@
       "Trigger Probability +120.0%. Charged Attacks with this weapon grant +70.4% ATK Speed for 6.0s. Effect is removed when switching weapons.",
       "Trigger Probability +135.0%. Charged Attacks with this weapon grant +79.2% ATK Speed for 6.0s. Effect is removed when switching weapons.",
       "Trigger Probability +150.0%. Charged Attacks with this weapon grant +88.0% ATK Speed for 6.0s. Effect is removed when switching weapons."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -1423,6 +1731,20 @@
       "CRIT Damage +100.0%. When dealing damage with this weapon, increases Damage Dealt by 14.4%, with an additional 14.4% increase per Combo Level.",
       "CRIT Damage +112.5%. When dealing damage with this weapon, increases Damage Dealt by 16.2%, with an additional 16.2% increase per Combo Level.",
       "CRIT Damage +125.0%. When dealing damage with this weapon, increases Damage Dealt by 18.0%, with an additional 18.0% increase per Combo Level."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -1485,6 +1807,20 @@
       "Skill Range +57.6%.",
       "Skill Range +64.8%.",
       "Skill Range +72.0%."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -1547,6 +1883,20 @@
       "Character ATK +80.0%. Charged Attacks with this weapon grant +120.0% CRIT Damage for 6.0s. Effect is removed when switching weapons.",
       "Character ATK +90.0%. Charged Attacks with this weapon grant +135.0% CRIT Damage for 6.0s. Effect is removed when switching weapons.",
       "Character ATK +100.0%. Charged Attacks with this weapon grant +150.0% CRIT Damage for 6.0s. Effect is removed when switching weapons."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -1613,6 +1963,14 @@
       "Trigger Probability +120.0%. Each shot with this weapon has a chance (based on its Weapon Trigger Probability) to fire an extra projectile at no Ammo cost, dealing AoE Damage equal to 80.0% of its ATK.",
       "Trigger Probability +135.0%. Each shot with this weapon has a chance (based on its Weapon Trigger Probability) to fire an extra projectile at no Ammo cost, dealing AoE Damage equal to 90.0% of its ATK.",
       "Trigger Probability +150.0%. Each shot with this weapon has a chance (based on its Weapon Trigger Probability) to fire an extra projectile at no Ammo cost, dealing AoE Damage equal to 100.0% of its ATK."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -1679,6 +2037,14 @@
       "Character ATK ‍+96.0%.",
       "Character ATK ‍+108.0%.",
       "Character ATK ‍+120.0%."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -1745,6 +2111,14 @@
       "Multishot +60.0%. When this weapon triggers a bonus effect on hit, increases Melee Weapon DMG by 56.0% for 12.0s.",
       "Multishot +67.5%. When this weapon triggers a bonus effect on hit, increases Melee Weapon DMG by 63.0% for 12.0s.",
       "Multishot +75.0%. When this weapon triggers a bonus effect on hit, increases Melee Weapon DMG by 70.0% for 12.0s."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -1811,6 +2185,14 @@
       "Skill Damage +38.4%.",
       "Skill Damage +43.2%.",
       "Skill Damage +48.0%."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -1877,6 +2259,14 @@
       "Skill Duration +24.0%. When its projectiles hit enemies or the environment, they bounce once. When dealing damage with this weapon, increases Dual Pistols Damage by 72.0% for 24.0s.",
       "Skill Duration +27.0%. When its projectiles hit enemies or the environment, they bounce once. When dealing damage with this weapon, increases Dual Pistols Damage by 81.0% for 27.0s.",
       "Skill Duration +30.0%. When its projectiles hit enemies or the environment, they bounce once. When dealing damage with this weapon, increases Dual Pistols Damage by 90.0% for 30.0s."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -1943,6 +2333,14 @@
       "CRIT Chance +80.0%. Dealing CRIT Damage with this weapon grants +10.0% Multishot for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
       "CRIT Chance +90.0%. Dealing CRIT Damage with this weapon grants +11.2% Multishot for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
       "CRIT Chance +100.0%. Dealing CRIT Damage with this weapon grants +12.5% Multishot for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -2009,6 +2407,14 @@
       "Explosion Range +0.4. When its projectiles explode, they split into 6 additional projectiles that explode and deal damage. When defeating a target with this weapon, grants 1 stack that increases CRIT Damage by 14.0% for 15.0s, up to 10.0 stacks.\nThis effect is removed when switching to another weapon.",
       "Explosion Range +0.5. When its projectiles explode, they split into 6 additional projectiles that explode and deal damage. When defeating a target with this weapon, grants 1 stack that increases CRIT Damage by 15.8% for 15.0s, up to 10.0 stacks.\nThis effect is removed when switching to another weapon.",
       "Explosion Range +0.5. When its projectiles explode, they split into 6 additional projectiles that explode and deal damage. When defeating a target with this weapon, grants 1 stack that increases CRIT Damage by 17.5% for 15.0s, up to 10.0 stacks.\nThis effect is removed when switching to another weapon."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -2075,6 +2481,14 @@
       "Multishot +60.0%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill Damage and Ranged Weapon Damage by 19.2% for 12.0s, up to 4.0 stacks.",
       "Multishot +67.5%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill Damage and Ranged Weapon Damage by 21.6% for 12.0s, up to 4.0 stacks.",
       "Multishot +75.0%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill Damage and Ranged Weapon Damage by 24.0% for 12.0s, up to 4.0 stacks."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -2141,6 +2555,14 @@
       "Skill Range +57.6%.",
       "Skill Range +64.8%.",
       "Skill Range +72.0%."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -2207,6 +2629,14 @@
       "CRIT Damage +100.0%. When its projectiles hit enemies or the environment, they split into 2 additional projectiles that continue to travel. After switching to this weapon, increases Multishot by 59.0%, which decreases over time. This effect can only be triggered once every 10s and is removed when switching to another weapon.",
       "CRIT Damage +112.5%. When its projectiles hit enemies or the environment, they split into 2 additional projectiles that continue to travel. After switching to this weapon, increases Multishot by 66.0%, which decreases over time. This effect can only be triggered once every 10s and is removed when switching to another weapon.",
       "CRIT Damage +125.0%. When its projectiles hit enemies or the environment, they split into 2 additional projectiles that continue to travel. After switching to this weapon, increases Multishot by 73.0%, which decreases over time. This effect can only be triggered once every 10s and is removed when switching to another weapon."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -2273,6 +2703,14 @@
       "ATK Speed +40.0%. When this weapon triggers a bonus effect on hit, grants +8.0% ATK Speed for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
       "ATK Speed +45.0%. When this weapon triggers a bonus effect on hit, grants +9.0% ATK Speed for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
       "ATK Speed +50.0%. When this weapon triggers a bonus effect on hit, grants +10.0% ATK Speed for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -2339,6 +2777,14 @@
       "Skill Duration +28.8%.",
       "Skill Duration +32.4%.",
       "Skill Duration +36.0%."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -2405,6 +2851,14 @@
       "CRIT Chance +80.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 243.0%/0.0%/0.0% of the original damage.",
       "CRIT Chance +90.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 251.0%/0.0%/0.0% of the original damage.",
       "CRIT Chance +100.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 260.0%/0.0%/0.0% of the original damage."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -2471,6 +2925,14 @@
       "CRIT Damage +100.0%. Fired projectiles track the crosshair. When dealing damage with this weapon, the farther the target, the higher the damage, up to a maximum increase of 72.0%.",
       "CRIT Damage +112.5%. Fired projectiles track the crosshair. When dealing damage with this weapon, the farther the target, the higher the damage, up to a maximum increase of 81.0%.",
       "CRIT Damage +125.0%. Fired projectiles track the crosshair. When dealing damage with this weapon, the farther the target, the higher the damage, up to a maximum increase of 90.0%."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -2537,6 +2999,17 @@
       "Character ATK +80.0%. Charging fires a special bullet that travels slowly and explodes after a short delay, dealing AoE damage. Tap-firing bullets can trigger its early detonation on contact. When an Umbro character casts their Ultimate, grants +32.0% Skill Efficiency for 15.0s.",
       "Character ATK +90.0%. Charging fires a special bullet that travels slowly and explodes after a short delay, dealing AoE damage. Tap-firing bullets can trigger its early detonation on contact. When an Umbro character casts their Ultimate, grants +36.0% Skill Efficiency for 15.0s.",
       "Character ATK +100.0%. Charging fires a special bullet that travels slowly and explodes after a short delay, dealing AoE damage. Tap-firing bullets can trigger its early detonation on contact. When an Umbro character casts their Ultimate, grants +40.0% Skill Efficiency for 15.0s."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -2603,6 +3076,14 @@
       "Skill Duration +28.8%.",
       "Skill Duration +32.4%.",
       "Skill Duration +36.0%."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -2669,6 +3150,14 @@
       "Trigger Probability +120.0%. Fires a Beam Attack that ricochets off the target and hits up to 4 enemies within range. When an Electro character triggers bonus effects with this weapon, the user gains +72.0% Weapon Damage for 10.0s.",
       "Trigger Probability +135.0%. Fires a Beam Attack that ricochets off the target and hits up to 4 enemies within range. When an Electro character triggers bonus effects with this weapon, the user gains +81.0% Weapon Damage for 10.0s.",
       "Trigger Probability +150.0%. Fires a Beam Attack that ricochets off the target and hits up to 4 enemies within range. When an Electro character triggers bonus effects with this weapon, the user gains +90.0% Weapon Damage for 10.0s."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -2735,6 +3224,14 @@
       "Trigger Probability +120.0%. When this weapon triggers a bonus effect on hit, there is a 48.0% chance to reload 1 projectile.",
       "Trigger Probability +135.0%. When this weapon triggers a bonus effect on hit, there is a 54.0% chance to reload 1 projectile.",
       "Trigger Probability +150.0%. When this weapon triggers a bonus effect on hit, there is a 60.0% chance to reload 1 projectile."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -2801,6 +3298,14 @@
       "Multishot +60.0%. When dealing damage with this weapon, the lower the remaining Ammo percentage, the higher the damage dealt, up to a maximum increase of 72.0%, with full effect when the Ammo count is below 20.0%.",
       "Multishot +67.5%. When dealing damage with this weapon, the lower the remaining Ammo percentage, the higher the damage dealt, up to a maximum increase of 81.0%, with full effect when the Ammo count is below 20.0%.",
       "Multishot +75.0%. When dealing damage with this weapon, the lower the remaining Ammo percentage, the higher the damage dealt, up to a maximum increase of 90.0%, with full effect when the Ammo count is below 20.0%."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -2867,6 +3372,14 @@
       "Mag Capacity +48.0%. On a CRIT with this weapon, grants 1 stack of +8.0% ATK Speed for 6.0s, stacking up to 10.0 times. The effect is removed when switching weapons.",
       "Mag Capacity +54.0%. On a CRIT with this weapon, grants 1 stack of +9.0% ATK Speed for 6.0s, stacking up to 10.0 times. The effect is removed when switching weapons.",
       "Mag Capacity +60.0%. On a CRIT with this weapon, grants 1 stack of +10.0% ATK Speed for 6.0s, stacking up to 10.0 times. The effect is removed when switching weapons."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -2933,6 +3446,11 @@
       "CRIT Damage +100.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. For each additional Ammo count gained, the damage dealt by this weapon is increased by 7.2%, up to a maximum increase of 72.0%.",
       "CRIT Damage +112.5%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. For each additional Ammo count gained, the damage dealt by this weapon is increased by 8.1%, up to a maximum increase of 81.0%.",
       "CRIT Damage +125.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. For each additional Ammo count gained, the damage dealt by this weapon is increased by 9.0%, up to a maximum increase of 90.0%."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -2999,6 +3517,14 @@
       "Skill Range +48.0%. When a Lumino character deals additional damage, there is a 30.0% chance to grant allies +14.4% ATK for 15.0s (up to 10.0 stacks).",
       "Skill Range +54.0%. When a Lumino character deals additional damage, there is a 30.0% chance to grant allies +16.2% ATK for 15.0s (up to 10.0 stacks).",
       "Skill Range +60.0%. When a Lumino character deals additional damage, there is a 30.0% chance to grant allies +18.0% ATK for 15.0s (up to 10.0 stacks)."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -3065,6 +3591,11 @@
       "Skill Duration +24.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. When a Lumino character triggers Bonus Effect, grants 1 stack that increases ATK by 28.0% for 24.0s, up to 9.0 stacks. Using an Ultimate Skill refreshes the duration of all stacks to 24.0s.",
       "Skill Duration +27.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. When a Lumino character triggers Bonus Effect, grants 1 stack that increases ATK by 31.5% for 24.0s, up to 9.0 stacks. Using an Ultimate Skill refreshes the duration of all stacks to 24.0s.",
       "Skill Duration +30.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. When a Lumino character triggers Bonus Effect, grants 1 stack that increases ATK by 35.0% for 24.0s, up to 9.0 stacks. Using an Ultimate Skill refreshes the duration of all stacks to 24.0s."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -3132,6 +3663,14 @@
       "ATK Speed +40.0%‍. Each enemy struck by a single arrow increases the arrow's damage by 14.4%, with a maximum increase of 72.0%.",
       "ATK Speed +45.0%‍. Each enemy struck by a single arrow increases the arrow's damage by 16.2%, with a maximum increase of 81.0%.",
       "ATK Speed +50.0%‍. Each enemy struck by a single arrow increases the arrow's damage by 18.0%, with a maximum increase of 90.0%."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -3199,6 +3738,11 @@
       "Skill Duration +24.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +16.0% ATK, +16.0% DEF, +12.0% Skill Damage, or +16.0% Skill Duration.",
       "Skill Duration +27.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +18.0% ATK, +18.0% DEF, +13.5% Skill Damage, or +18.0% Skill Duration.",
       "Skill Duration +30.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +20.0% ATK, +20.0% DEF, +15.0% Skill Damage, or +20.0% Skill Duration."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -3266,6 +3810,14 @@
       "Skill Range +48.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill Damage, grants +56.0% Skill DMG for 6.0s.",
       "Skill Range +54.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill Damage, grants +63.0% Skill DMG for 6.0s.",
       "Skill Range +60.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill Damage, grants +70.0% Skill DMG for 6.0s."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      },
+      {
+        "名称": ""
+      }
     ]
   },
   {
@@ -3333,6 +3885,11 @@
       "Skill Range +57.6%.",
       "Skill Range +64.8%.",
       "Skill Range +72.0%."
+    ],
+    "技能": [
+      {
+        "名称": ""
+      }
     ]
   }
 ]
