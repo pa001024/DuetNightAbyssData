@@ -66,7 +66,8 @@ class BaseProcessor:
     def process_tags(self, tags):
         """处理武器标签"""
         if not tags or not isinstance(tags, list):
-            return ""
+            return []
+        Positioning = self.data_loader.load_json("Positioning.json")
         rst = []
         tag_map = {
             "Ultra": "同律",
@@ -91,6 +92,9 @@ class BaseProcessor:
             t = tag_map.get(tag, "")
             if t:
                 rst.append(t)
+            elif tag in Positioning:
+                t = Positioning[tag]
+                rst.append(self.get_translated_text(t["Name"]))
         return rst
 
     def get_translated_text(self, text_key, language=""):
