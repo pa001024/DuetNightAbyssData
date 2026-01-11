@@ -136,6 +136,25 @@ class BaseProcessor:
         # 否则返回浮点数（自动去除末尾的0）
         return rounded
 
+    def preprocess_expression(self, desc_value):
+        """预处理表达式，将 $GText("...")$ 替换为翻译后的文本"""
+        import re
+
+        if not isinstance(desc_value, str):
+            return desc_value
+
+        result = desc_value
+
+        # 替换所有 $GText("...")$ 为翻译后的文本
+        def replace_gtext(match):
+            text_key = match.group(1)
+            translated = self.get_translated_text(text_key)
+            return translated if translated else text_key
+
+        result = re.sub(r'\$GText\("([^"]+)"\)\$', replace_gtext, result)
+
+        return result
+
     def _calculate_expr_value(self, expr, table_id, level, table_type):
         """计算表达式值，使用AST解析和上下文跟踪
 
@@ -284,7 +303,7 @@ class BaseProcessor:
                 )
             except Exception as e:
                 print(f"DEBUG MEMBER_ACCESS: Exception evaluating object: {e}")
-                raise
+                raise e
 
             property_name = node.property.value
 
@@ -323,16 +342,10 @@ class BaseProcessor:
                     else:
                         return value
                 else:
-                    # 尝试使用原有的属性路径解析逻辑
-                    return self._get_attr_value_from_dict(
-                        object_value,
-                        property_name,
-                        table_id,
-                        level,
-                        context.get("table_type", "Skill"),
-                    )
+                    # 属性不存在时返回 0
+                    return 0.0
             else:
-                raise ValueError(f"无法对非字典类型进行成员访问")
+                return 0.0
 
         elif node.type == NodeType.INDEX_ACCESS:
             # 索引访问: object[index]
