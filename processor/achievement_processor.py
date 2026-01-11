@@ -541,6 +541,7 @@ class AchievementProcessor(BaseProcessor):
             "分类": self.data_loader.get_achievement_type_name(
                 achievement_data.get("AchievementType", 0)
             ),
+            "品质": achievement_data.get("AchievementRarity", 0),
             "描述": self._process_description(achievement_data),
             "版本": "1.0" if id in v100ids else "1.1",
             "奖励": self._process_reward(achievement_data, language),

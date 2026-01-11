@@ -1,7 +1,9 @@
 [
   {
     "id": 10101,
+    "icon": "Broadsword_Huipo",
     "名称": "Blade Amberglow",
+    "版本": "1.0",
     "描述": "The weapon that Berenica carries. A blade adorned with golden decorations. The blade is made from a black metal that is not commonly found. Clearly, this is not a weapon that the villagers of Purgatorio Island would normally possess.",
     "类型": [
       "近战",
@@ -72,7 +74,9 @@
   },
   {
     "id": 10102,
+    "icon": "Broadsword_Guzi",
     "名称": "Shackle of Lonewolf",
+    "版本": "1.0",
     "描述": "May reckless revelries compensate for your loneliness.",
     "类型": [
       "近战",
@@ -143,7 +147,9 @@
   },
   {
     "id": 10103,
+    "icon": "Sword_Zhuiyi",
     "名称": "Remanent Reminiscence",
+    "版本": "1.0",
     "描述": "A sword of unknown origin. A sword that has been present since time immemorial. Perhaps one day, it will become the key to connecting the past and the present.",
     "类型": [
       "近战",
@@ -214,7 +220,9 @@
   },
   {
     "id": 10104,
+    "icon": "Sword_Huimou",
     "名称": "Ingenious Tactics",
+    "版本": "1.0",
     "描述": "The best defence is a good offence — but of course, don't forget the importance of adequate rest.",
     "类型": [
       "近战",
@@ -285,7 +293,9 @@
   },
   {
     "id": 10105,
+    "icon": "Sword_Liulang",
     "名称": "Wandering Rose",
+    "版本": "1.0",
     "描述": "I'll embark on a journey far beyond the sands, just like you.",
     "类型": [
       "近战",
@@ -356,7 +366,9 @@
   },
   {
     "id": 10201,
+    "icon": "Polearm_Sairen",
     "名称": "Siren's Kiss",
+    "版本": "1.0",
     "描述": "Kiss me! Snog me! Before tomorrow arrives, before young hearts grow old, and before death do us part.",
     "类型": [
       "近战",
@@ -428,7 +440,9 @@
   },
   {
     "id": 10202,
+    "icon": "Polearm_Chunjue",
     "名称": "Vernal Jade Halberd",
+    "版本": "1.0",
     "描述": "A polearm the Starweavers brought from their homeland —  Huaxu. The blade's design and colour are inspired by a unique plant in Huaxu called willow. In Huaxu, this plant typically carries the meaning of \"homeland\". Although the Starweavers are now busy weaving starry skies across every inch of Atlasia, one day they will return to their verdant homeland of lush willows.",
     "类型": [
       "近战",
@@ -500,7 +514,9 @@
   },
   {
     "id": 10203,
+    "icon": "Polearm_Zuiqian",
     "名称": "Venial Sinscales",
+    "版本": "1.2",
     "描述": "As the years roll by, earthlings sufferingly become mediocritized.",
     "类型": [
       "近战",
@@ -572,7 +588,9 @@
   },
   {
     "id": 10204,
+    "icon": "Scythe_Xiji",
     "名称": "Elpides Abound",
+    "版本": "1.0",
     "描述": "I buried a seed in the frozen earth, hoping for a harvest moon that may never come.",
     "类型": [
       "近战",
@@ -644,7 +662,9 @@
   },
   {
     "id": 10206,
+    "icon": "Scythe_Chixing",
     "名称": "Wanewraith",
+    "版本": "1.0",
     "描述": "A type of scythe favoured by Atlasia hunters, capable of taking down small Filthoids one might encounter in the wild with a single swing.",
     "类型": [
       "近战",
@@ -716,7 +736,9 @@
   },
   {
     "id": 10208,
+    "icon": "Scythe_Yihe",
     "名称": "Dove of Tomorrow",
+    "版本": "1.1",
     "描述": "A dove sworn to defend dignity, offering up each feather in the pursuit of peace.",
     "类型": [
       "近战",
@@ -788,7 +810,9 @@
   },
   {
     "id": 10301,
+    "icon": "Claymore_Chengjie",
     "名称": "Punitive Inferno",
+    "版本": "1.0",
     "描述": "Burn, burn, burn! This chastening fire will consume all evil in the world.",
     "类型": [
       "近战",
@@ -860,7 +884,9 @@
   },
   {
     "id": 10302,
+    "icon": "Claymore_Rimian",
     "名称": "Ironforger",
+    "版本": "1.0",
     "描述": "Only unmatched strength can forge laws of iron.",
     "类型": [
       "近战",
@@ -932,7 +958,9 @@
   },
   {
     "id": 10303,
+    "icon": "Claymore_Chixing",
     "名称": "Pyrothirst",
+    "版本": "1.0",
     "描述": "An immaculate blade, slicing the air with a voiceless cry — forever longing to be stained in crimson.",
     "类型": [
       "近战",
@@ -1004,7 +1032,9 @@
   },
   {
     "id": 10304,
+    "icon": "Claymore_Wangu",
     "名称": "Eternal Farewell",
+    "版本": "1.2",
     "描述": "Sever the echoes of aeons long fled; let peace of the ages rise in their stead.",
     "类型": [
       "近战",
@@ -1076,7 +1106,9 @@
   },
   {
     "id": 10401,
+    "icon": "Dualblade_Shixiang",
     "名称": "Exiled Fangs",
+    "版本": "1.0",
     "描述": "A lone wolfhound has nothing but its fangs. Before it lies the maze of fate; beneath it, the scorched soil of home.",
     "类型": [
       "近战",
@@ -1148,7 +1180,9 @@
   },
   {
     "id": 10402,
+    "icon": "Dualblade_Liujin",
     "名称": "Aureate Yore",
+    "版本": "1.0",
     "描述": "As the dark tide rose, the wielder raised these golden blades in offering — a final prayer to a silent god who never answered.",
     "类型": [
       "近战",
@@ -1220,7 +1254,9 @@
   },
   {
     "id": 10403,
+    "icon": "Dualblade_Yousha",
     "名称": "Fathomless Sharkgaze",
+    "版本": "1.0",
     "描述": "In this moment, you are the predator — lurking fathoms deep, waiting to strike.",
     "类型": [
       "近战",
@@ -1292,7 +1328,9 @@
   },
   {
     "id": 10501,
+    "icon": "Swordwhip_Buyu",
     "名称": "Undying Oneiros",
+    "版本": "1.0",
     "描述": "An old dream toward the future.",
     "类型": [
       "近战",
@@ -1363,7 +1401,9 @@
   },
   {
     "id": 10502,
+    "icon": "Swordwhip_Zeshi",
     "名称": "Halcyon Gracefall",
+    "版本": "1.1",
     "描述": "Heaven grants grace to all that grows; rain brings mercy where life still flows.",
     "类型": [
       "近战",
@@ -1434,7 +1474,9 @@
   },
   {
     "id": 10503,
+    "icon": "Swordwhip_Chixing",
     "名称": "Tetherlash",
+    "版本": "1.0",
     "描述": "It is not emotion alone that binds the human heart. This coiling whipblade binds tighter than words, and strikes deeper than trust.",
     "类型": [
       "近战",
@@ -1505,7 +1547,9 @@
   },
   {
     "id": 10504,
+    "icon": "Swordwhip_Canghu",
     "名称": "Viridis Reefs",
+    "版本": "1.0",
     "描述": "ithered coral lies strewn along the silent shore — fragments that cradle the sea's shattered dreams.",
     "类型": [
       "近战",
@@ -1576,7 +1620,9 @@
   },
   {
     "id": 10601,
+    "icon": "Katana_Feiqie",
     "名称": "Momiji Itteki",
+    "版本": "1.0",
     "描述": "A uniquely shaped blade featured in the acclaimed tragedy Momiji: A Chronicle of Rebellion. Its crimson-stained hilt is said to bear the blood of a king — struck down by the very hand sworn to protect him.",
     "类型": [
       "近战",
@@ -1647,7 +1693,9 @@
   },
   {
     "id": 10602,
+    "icon": "Katana_Chixing",
     "名称": "Withershade",
+    "版本": "1.0",
     "描述": "In the eyes of the dying, a single crimson petal drifts down — weightless, silent, and final.",
     "类型": [
       "近战",
@@ -1718,7 +1766,9 @@
   },
   {
     "id": 10603,
+    "icon": "Katana_Yuli",
     "名称": "Sacred Favour",
+    "版本": "1.0",
     "描述": "Etched into the hilt in worn script: \"Praise be the Elysian Church. May the sacred grace of the Great Nine fall upon the wretched soil of Yashnia.\"",
     "类型": [
       "近战",
@@ -1789,7 +1839,9 @@
   },
   {
     "id": 20101,
+    "icon": "Pistol_Wuxu",
     "名称": "Entropic Singularity",
+    "版本": "1.0",
     "描述": "Through truth's bullet, reality unravels.",
     "类型": [
       "远程",
@@ -1860,7 +1912,9 @@
   },
   {
     "id": 20102,
+    "icon": "Pistol_Chixing",
     "名称": "Rendhusk",
+    "版本": "1.0",
     "描述": "A fallacy torn from the spiral of death — a truth that was never meant to be.",
     "类型": [
       "远程",
@@ -1929,7 +1983,9 @@
   },
   {
     "id": 20103,
+    "icon": "Pistol_Gaoyu",
     "名称": "Sacrosanct Decree",
+    "版本": "1.0",
     "描述": "The roar of divine oracles shall ring through every heretic's skull.",
     "类型": [
       "远程",
@@ -1998,7 +2054,9 @@
   },
   {
     "id": 20201,
+    "icon": "Crossbow_Chixing",
     "名称": "Excresduo",
+    "版本": "1.0",
     "描述": "Within death's spiralling layers, each flaw begets another — and another still.",
     "类型": [
       "远程",
@@ -2067,7 +2125,9 @@
   },
   {
     "id": 20203,
+    "icon": "Crossbow_Lanse",
     "名称": "Bluecurrent Pulse",
+    "版本": "1.0",
     "描述": "The ocean's vast expanse pulses endlessly with the rhythm of life — abundant, exuberant, and resilient.",
     "类型": [
       "远程",
@@ -2137,7 +2197,9 @@
   },
   {
     "id": 20205,
+    "icon": "Crossbow_Gaoyu",
     "名称": "Sacrosanct Chorus",
+    "版本": "1.0",
     "描述": "The roar of divine oracles shall ring through every heretic's skull.",
     "类型": [
       "远程",
@@ -2206,7 +2268,9 @@
   },
   {
     "id": 20301,
+    "icon": "Cannon_Qunxing",
     "名称": "Stellar Finality",
+    "版本": "1.0",
     "描述": "Let the penitent cease their stargazing — the heavens never listen, and the stars grant no absolution.",
     "类型": [
       "远程",
@@ -2278,7 +2342,9 @@
   },
   {
     "id": 20302,
+    "icon": "Cannon_Chiqiang",
     "名称": "Firearm Feast",
+    "版本": "1.4",
     "描述": "Nightfall, red dancing shoes, and dew on roses; rushes of air flashing across temples, outraged squeak of rapid gunshots, and smoke of gunpowder... All are witnessing a feast of projectiles.",
     "类型": [
       "远程",
@@ -2352,7 +2418,9 @@
   },
   {
     "id": 20303,
+    "icon": "Cannon_Chixing",
     "名称": "Destructo",
+    "版本": "1.0",
     "描述": "The truest return to nature is to crumble into ash and vanish into the waiting earth.",
     "类型": [
       "远程",
@@ -2422,7 +2490,9 @@
   },
   {
     "id": 20304,
+    "icon": "Cannon_Guixu",
     "名称": "Guixu Ratchet",
+    "版本": "1.0",
     "描述": "Bronze tempers the steel-born frame; amidst thorns, a soul forged for valour's claim.",
     "类型": [
       "远程",
@@ -2495,7 +2565,9 @@
   },
   {
     "id": 20305,
+    "icon": "Cannon_Yinbai",
     "名称": "Silverwhite Edict",
+    "版本": "1.0",
     "描述": "Hellfire rides upon a thousand silver shells as they rain to the ground, engraving the gods' edict into the hearts of every heretic.",
     "类型": [
       "远程",
@@ -2568,7 +2640,9 @@
   },
   {
     "id": 20401,
+    "icon": "Shotgun_Chixing",
     "名称": "Screamshot",
+    "版本": "1.0",
     "描述": "Only after the last cry fades... can silence return to the world.",
     "类型": [
       "远程",
@@ -2638,7 +2712,9 @@
   },
   {
     "id": 20402,
+    "icon": "Shotgun_Banzi",
     "名称": "Silent Sower",
+    "版本": "1.0",
     "描述": "Insert flower seeds into the body, allowing destruction to bloom from within.",
     "类型": [
       "远程",
@@ -2714,7 +2790,9 @@
   },
   {
     "id": 20403,
+    "icon": "Shotgun_Shengcai",
     "名称": "Day of Sacred Verdict",
+    "版本": "1.0",
     "描述": "A firearm used by the Holy Iris Knights from the Elysian Church. Holy exaltation! We vow to spread the word of the Great Nine to every corner of Atlasia.",
     "类型": [
       "远程",
@@ -2784,7 +2862,9 @@
   },
   {
     "id": 20405,
+    "icon": "Shotgun_Baopo",
     "名称": "Blast Artistry",
+    "版本": "1.0",
     "描述": "Atlasia's ending? So be it. There are worse fates than going out in flames and fireworks.",
     "类型": [
       "远程",
@@ -2856,7 +2936,9 @@
   },
   {
     "id": 20501,
+    "icon": "Machinegun_Chixing",
     "名称": "Osteobreaker",
+    "版本": "1.0",
     "描述": "When bullets tear through flesh and scorch the soul, how long can kindness, integrity, and courage endure?",
     "类型": [
       "远程",
@@ -2926,7 +3008,9 @@
   },
   {
     "id": 20502,
+    "icon": "Machinegun_Fangzhu",
     "名称": "Exiled Thunderwyrm",
+    "版本": "1.0",
     "描述": "A firearm used by \"The Raven\" of The Forsakens. Hear the wrath of the exiled! The funeral bell of the Empire tolls!",
     "类型": [
       "远程",
@@ -2997,7 +3081,9 @@
   },
   {
     "id": 20503,
+    "icon": "Machinegun_Qiqing",
     "名称": "Flamme De Epuration",
+    "版本": "1.0",
     "描述": "A flamethrower used by Holy Iris Knights from the Elysian Church. Holy exaltation! Let the sacred fire engulf us. In your name, we vow to burn away all evil.",
     "类型": [
       "远程",
@@ -3067,7 +3153,9 @@
   },
   {
     "id": 20504,
+    "icon": "Machinegun_Poxiao",
     "名称": "Daybreak Hymn",
+    "版本": "1.0",
     "描述": "A machine gun wielded by the Holy Iris Knights of the Elysian Church. \"Holy exaltation! Should we but behold the first gleam of dawn, though our path be strewn with thorns, we shall embrace it as sweet succour.\"",
     "类型": [
       "远程",
@@ -3141,7 +3229,9 @@
   },
   {
     "id": 20506,
+    "icon": "Machinegun_Quewu",
     "名称": "Cloudveil Unfurl",
+    "版本": "1.1",
     "描述": "Through parting clouds, a painted flight takes form, where peacocks meet on silk to court their grace.",
     "类型": [
       "远程",
@@ -3211,7 +3301,9 @@
   },
   {
     "id": 20507,
+    "icon": "Machinegun_Yinlang",
     "名称": "Submerged Serenade",
+    "版本": "1.0",
     "描述": "The young sailor, ever too preoccupied with stowing the mast before the tempest, never tallied the hidden love notes beneath the waves — unaware that each of the mermaid's songs was a serenade meant just for him.",
     "类型": [
       "远程",
@@ -3281,7 +3373,9 @@
   },
   {
     "id": 20509,
+    "icon": "Machinegun_Zhimeng",
     "名称": "Dreamweaver's Feather",
+    "版本": "1.0",
     "描述": "With a snowy plume I wove a slender cage, sealing the savage world within.",
     "类型": [
       "远程",
@@ -3351,7 +3445,9 @@
   },
   {
     "id": 20510,
+    "icon": "Machinegun_Ruohua",
     "名称": "Ephemeral Lumina",
+    "版本": "1.1",
     "描述": "My sword stirred the argent moon mirrored in a river of dream; in time's hush, yet another autumn waned beneath its silver gleam.",
     "类型": [
       "远程",
@@ -3421,7 +3517,9 @@
   },
   {
     "id": 20601,
+    "icon": "Bow_Shashi",
     "名称": "Searing Sandwhisper",
+    "版本": "1.0",
     "描述": "Thou, a solitary soul, standest at the heart of burning flame, yet dost willingly become but a grain of sand, swept by the winds of change. So begins thy rebirth, and the claiming of thy fate anew.",
     "类型": [
       "远程",
@@ -3496,7 +3594,9 @@
   },
   {
     "id": 20602,
+    "icon": "Bow_Huguang",
     "名称": "Arclight Apocalypses",
+    "版本": "1.0",
     "描述": "The bowstring hums, indicating the enemies are within range. Stay calm, my friend — your foe hasn't a whisper of a chance.",
     "类型": [
       "远程",
@@ -3567,7 +3667,9 @@
   },
   {
     "id": 20603,
+    "icon": "Bow_Yinbu",
     "名称": "Embla Inflorescence",
+    "版本": "1.0",
     "描述": "No living soul knows what lies beyond the Misty Sea. Perhaps, in that primordial chaos, a single unseen flower still dares to bloom.",
     "类型": [
       "远程",
@@ -3638,7 +3740,9 @@
   },
   {
     "id": 20604,
+    "icon": "Bow_Chixing",
     "名称": "Soulrend",
+    "版本": "1.0",
     "描述": "A twang of life and death, a soul-rending lament.",
     "类型": [
       "远程",

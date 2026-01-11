@@ -37,10 +37,10 @@ class CharProcessor(BaseProcessor):
 
         # SkillDescHints 映射表
         self.skill_desc_hints_map = {
-            "SkillEfficiency": "效益",
-            "SkillIntensity": "威力",
-            "SkillRange": "范围",
-            "SkillSustain": "持续",
+            "SkillEfficiency": "技能效益",
+            "SkillIntensity": "技能威力",
+            "SkillRange": "技能范围",
+            "SkillSustain": "技能耐久",
         }
 
     def process_item(self, char_data, language):
@@ -60,8 +60,11 @@ class CharProcessor(BaseProcessor):
         # 构建基础处理后的Char数据
         processed = {
             "id": char_id,
+            "icon": char_data.get("Icon", "").replace(
+                "/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_", ""
+            ),
             "名称": name,
-            "版本": self._process_release(char_data.get("ReleaseVersion", 100)),
+            "版本": self.process_release(char_data.get("ReleaseVersion", 100)),
             "别名": self.get_translated_text(char_data.get("CharSubtitle", "")),
             "阵营": self._process_camp(char_data.get("Camp", "None")),
             "属性": elm,
@@ -70,6 +73,7 @@ class CharProcessor(BaseProcessor):
             "基础生命": base_attr.get("生命", 0),
             "基础防御": base_attr.get("防御", 0),
             "基础护盾": base_attr.get("护盾", 0),
+            "基础神智": base_attr.get("神智", 0),
             "加成": self._process_addon(battle_char.get("CharAddonAttr", [])),
             "突破": self._process_break(char_id, language),
             "技能": self._process_skills(battle_char, language),
@@ -79,6 +83,10 @@ class CharProcessor(BaseProcessor):
         }
         if not processed.get("同律武器"):
             del processed["同律武器"]
+        if not processed.get("突破"):
+            del processed["突破"]
+        if not processed.get("溯源"):
+            del processed["溯源"]
 
         return processed
 
@@ -96,6 +104,7 @@ class CharProcessor(BaseProcessor):
             if "Abstract" in tags:
                 continue
             item = {
+                "id": weapon_id,
                 "名称": self.get_translated_text(weapon.get("WeaponName", "")),
                 "类型": self.process_tags(tags),
             }
@@ -175,16 +184,6 @@ class CharProcessor(BaseProcessor):
         }
         return colormap.get(elm_id, "暗" if char_id < 1500 else "光")
 
-    def _process_release(self, release_version):
-        """处理角色版本数据 100->1.3"""
-        if not release_version:
-            return ""
-        return (
-            f"{release_version // 100}.{release_version % 100//10}"
-            if release_version
-            else "1.0"
-        )
-
     def _process_attributes(self, battle_char, char_id):
         """处理角色属性，计算各个等级的属性值"""
         if not battle_char:
@@ -251,7 +250,9 @@ class CharProcessor(BaseProcessor):
                     attr_chinese_name = self.get_translated_text(attr_name_key, "cn")
 
                     level_attrs[attr_chinese_name] = int(value)
-
+            MaxSp = battle_char.get("MaxSp", 0)
+            if MaxSp:
+                level_attrs["神智"] = int(MaxSp)
             if level_attrs:
                 attributes[f"Lv.{level}"] = level_attrs
 
@@ -352,7 +353,7 @@ class CharProcessor(BaseProcessor):
         # 处理战斗术语解释
         explanation_ids = skill_info.get("ExplanationId", [])
         if explanation_ids:
-            explanations = []
+            explanations = {}
             for term_id in explanation_ids:
                 term_data = self.combat_term_data.get(str(term_id), {})
                 if term_data:
@@ -362,12 +363,7 @@ class CharProcessor(BaseProcessor):
                     term_name = self.get_translated_text(term_key)
                     term_desc = self.get_translated_text(term_explain_key)
 
-                    explanations.append(
-                        {
-                            "术语": term_name,
-                            "解释": term_desc,
-                        }
-                    )
+                    explanations[term_name] = term_desc
             if explanations:
                 result["术语解释"] = explanations
 
@@ -697,7 +693,7 @@ class CharProcessor(BaseProcessor):
     def _process_traces(self, battle_char, char_id):
         """处理角色溯源数据"""
         if not battle_char:
-            return {}
+            return []
 
         char_grade_description = battle_char.get("CharGradeDescription")
         if not char_grade_description:

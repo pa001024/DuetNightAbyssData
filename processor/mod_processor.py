@@ -58,7 +58,11 @@ class ModProcessor(BaseProcessor):
         # 构建基础处理后的Mod数据
         processed = {
             "id": mod_data.get("Id", 0),
+            "icon": mod_data.get("Icon", "")
+            .replace("/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_", "")
+            .split(".")[0],
             "名称": self.get_translated_text(mod_data.get("Name", "")),
+            "版本": self.process_release(mod_data.get("ReleaseVersion", 100)),
             "系列": type_name.replace("之", ""),
             "品质": quality,
         }

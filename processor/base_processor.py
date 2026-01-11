@@ -31,6 +31,8 @@ class BaseProcessor:
         processed_items = []
         for item in items:
             processed = self.process_item(item, language)
+            if not processed:
+                continue
             processed_items.append(processed)
         return processed_items
 
@@ -50,6 +52,16 @@ class BaseProcessor:
             json.dump(processed_items, f, ensure_ascii=False, indent=2, sort_keys=False)
 
         return output_file
+
+    def process_release(self, release_version):
+        """处理角色版本数据 100->1.3"""
+        if not release_version:
+            return ""
+        return (
+            f"{release_version // 100}.{release_version % 100//10}"
+            if release_version
+            else "1.0"
+        )
 
     def process_tags(self, tags):
         """处理武器标签"""
