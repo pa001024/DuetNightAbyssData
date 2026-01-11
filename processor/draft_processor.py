@@ -28,26 +28,30 @@ class DraftProcessor(BaseProcessor):
         # 构建基础处理后的图纸数据
         processed = {
             "id": draft_id,
-            "名称": self._get_product_name(draft_data),
+            "n": self._get_product_name(draft_data),
             # "图标": draft_data.get("Icon", "")
             # .replace("/Game/UI/Texture/Dynamic/Atlas/Prop/Item/", "")
             # .replace(".T_", ""),
-            "品质": draft_data.get("Rarity", 0),
-            "版本": self.process_release(draft_data.get("ReleaseVersion", 100)),
-            "产物类型": self._get_product_type_name(draft_data.get("ProductType", "")),
-            "产物数量": draft_data.get("ProductNum", 1),
-            "产物ID": draft_data.get("ProductId", 0),
-            "锻造时间": draft_data.get("Time", 0),
-            "批量生产": draft_data.get("Batch", False),
-            "无限生产": draft_data.get("IsInfinity", False),
-            "显示在图纸图鉴": draft_data.get("ShowInDraftArchive", False),
-            "消耗资源": self._process_resources(draft_data.get("Resource", [])),
-            "锻造成本": self._process_foundry_cost(draft_data.get("FoundryCost", {})),
+            "r": draft_data.get("Rarity", 0),
+            "v": self.process_release(draft_data.get("ReleaseVersion", 100)),
+            "t": draft_data.get("ProductType", ""),
+            "c": draft_data.get("ProductNum", 1),
+            "p": draft_data.get("ProductId", 0),
+            "d": draft_data.get("Time", 0),
+            "b": draft_data.get("Batch", False) and 1,
+            "i": draft_data.get("IsInfinity", False) and 1,
+            "s": draft_data.get("ShowInDraftArchive", False) and 1,
+            "x": self._process_resources(draft_data.get("Resource", [])),
+            "m": self._process_foundry_cost(draft_data.get("FoundryCost", {}))[0][
+                "数量"
+            ],
         }
-        processed["消耗资源"].update(
-            {processed["锻造成本"][0]["名称"]: processed["锻造成本"][0]["数量"]}
-        )
-        del processed["锻造成本"]
+        if not processed["b"]:
+            del processed["b"]
+        if not processed["i"]:
+            del processed["i"]
+        if not processed["s"]:
+            del processed["s"]
 
         return processed
 
@@ -125,7 +129,7 @@ class DraftProcessor(BaseProcessor):
         if not resources:
             return []
 
-        processed_resources = {}
+        processed_resources = []
         for resource in resources:
             if not isinstance(resource, dict):
                 continue
@@ -149,19 +153,14 @@ class DraftProcessor(BaseProcessor):
             if not resource_name:
                 resource_name = f"{resource_type}_{resource_id}"
 
-            processed_resources.update(
+            processed_resources.append(
                 {
-                    resource_name: resource_num,
+                    "id": resource_id,
+                    "n": resource_name,
+                    "c": resource_num,
+                    "t": resource_type,
                 }
             )
-            # processed_resources.append(
-            #     {
-            #         "id": resource_id,
-            #         "名称": resource_name,
-            #         "数量": resource_num,
-            #         "类型": resource_type,
-            #     }
-            # )
 
         return processed_resources
 

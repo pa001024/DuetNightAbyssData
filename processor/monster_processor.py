@@ -23,6 +23,9 @@ class MonsterProcessor(BaseProcessor):
 
         # 加载Dungeon.json数据并提取符合条件的怪物ID集合
         self.valid_monster_ids = set()
+        ga = data_loader.load_json("GalleryRule.json")
+        for gallery_id, gallery_info in ga.items():
+            self.valid_monster_ids.add(int(gallery_id))
         dungeon_data = data_loader.load_json("Dungeon.json")
         for dungeon_id, dungeon_info in dungeon_data.items():
             # 检查DungeonID是否大于20000
@@ -76,18 +79,21 @@ class MonsterProcessor(BaseProcessor):
 
         processed = {
             "id": id,
-            "名称": name,
-            "阵营": self.tab_final.get(fact[0], ""),
-            "攻击": atk_value,
-            "防御": def_value,
-            "护盾": battle_monster.get("MaxES", 0),
-            "生命": hp_value,
-            "战姿": battle_monster.get("MaxTN", 0),
+            "n": name,
+            "t": monster_data.get("BloodUIParmas", {}).get("UIStyleNodeName", ""),
+            "f": self.tab_final.get(fact[0], ""),
+            "atk": atk_value,
+            "def": def_value,
+            "es": battle_monster.get("MaxES", 0),
+            "hp": hp_value,
+            "tn": battle_monster.get("TN", 0),
         }
-        if processed["阵营"] == "":
-            del processed["阵营"]
-        if processed["护盾"] == 0:
-            del processed["护盾"]
+        if not processed["t"]:
+            del processed["t"]
+        if processed["f"] == "":
+            del processed["f"]
+        if processed["es"] == 0:
+            del processed["es"]
 
         return processed
 
