@@ -16,9 +16,6 @@ class WeaponProcessor(BaseProcessor):
         self.weapon_card_level_data = data_loader.load_json("WeaponCardLevel.json")
         self.attribute_data = data_loader.load_json("Attribute.json")
 
-        # 等级列表，用于显示属性
-        self.levels = [1, 20, 30, 40, 50, 60, 70, 80]
-
     def process_item(self, weapon_data, language):
         weapon_id = weapon_data.get("WeaponId", 0)
 
@@ -30,33 +27,29 @@ class WeaponProcessor(BaseProcessor):
         # 构建基础处理后的Weapon数据
         processed = {
             "id": weapon_id,
-            "名称": weapon_data.get("WeaponName", ""),
-            "描述": weapon_data.get("WeaponDescribe", ""),
-            "属性": self._process_attributes(battle_weapon, weapon_id),
-            "突破": self._process_break(weapon_id, language),
-            "熔炼": self._process_smelting(battle_weapon, weapon_id),
+            "名称": self.get_translated_text(weapon_data.get("WeaponName", "")),
+            "描述": self.get_translated_text(weapon_data.get("WeaponDescribe", "")),
+            "类型": self.process_tags(battle_weapon.get("WeaponTag", [])),
         }
+        processed.update(self._process_attributes(battle_weapon, weapon_id))
+        processed.update(
+            {
+                "加成": self._process_add_attr(battle_weapon, weapon_id),
+                "突破": self._process_break(weapon_id, language),
+                "熔炼": self._process_smelting(battle_weapon, weapon_id),
+            }
+        )
 
         return processed
 
-    def _process_attributes(self, battle_weapon, weapon_id):
-        """处理武器属性，计算各个等级的ATK值"""
+    def _process_add_attr(self, battle_weapon, weapon_id):
+        """处理武器属性加成"""
         if not battle_weapon:
             return {}
 
-        attributes = {}
-
-        # 获取ATKLevelGrow
-        atk_level_grow = battle_weapon.get("ATKLevelGrow", "")
-
-        if not atk_level_grow:
-            return attributes
-
-        # 从AddAttrs中获取基础ATK
         # AddAttrs[0]通常包含ATK属性，Rate字段是"#1"，需要从SkillGrow获取
         add_attrs = battle_weapon.get("AddAttrs", [])
-        base_atk = 0
-
+        attributes = {}
         # 尝试从AddAttrs中找到ATK属性
         for attr in add_attrs:
             if attr.get("AttrName") == "ATK":
@@ -67,45 +60,48 @@ class WeaponProcessor(BaseProcessor):
                     base_atk = self._calc_weapon_attr_by_level(attr, weapon_id, 1)
                 else:
                     base_atk = float(attr_rate) if attr_rate else 0
-                break
+                attributes["攻击"] = base_atk
+            else:
+                attr_name = attr.get("AttrName", "")
+                if (
+                    attr_name in self.attr_config
+                    or attr_name + "_Normal" in self.attr_config
+                ):
+                    cfg = self.attr_config.get(attr_name) or self.attr_config.get(
+                        attr_name + "_Normal", {}
+                    )
+                    an = self.get_translated_text(cfg.get("Name", ""), "cn")
+                    attributes[an] = self._calc_weapon_attr_by_level(attr, weapon_id, 1)
+                else:
+                    attributes[attr_name] = attr_name
+        return attributes
 
-        # 如果AddAttrs中没有ATK，尝试直接从ATK字段获取
-        if base_atk == 0:
-            base_atk = battle_weapon.get("ATK", 0)
+    def _process_attributes(self, battle_weapon, weapon_id):
+        """处理武器属性，计算各个等级的ATK值"""
+        if not battle_weapon:
+            return {}
+
+        attributes = {}
 
         # 计算所有属性加成（ATK_Dark, ATK_Fire等）
         for attr_name in self.attribute_data.keys():
             attr_key = f"ATK_{attr_name}"
             if attr_key in battle_weapon:
-                base_atk += battle_weapon[attr_key]
-
-        # 如果base_atk仍为0且没有ATKLevelGrow，返回空
-        if not base_atk or not atk_level_grow:
-            return attributes
-
-        # 为每个等级计算ATK值
-        for level in self.levels:
-            # 获取对应的WeaponLevelUp数据
-            level_data = None
-            for item in self.weapon_level_up_data:
-                if item.get("WeaponLevel") == level:
-                    level_data = item
-                    break
-
-            if not level_data:
-                continue
-
-            # 获取成长系数
-            grow_factor = level_data.get(atk_level_grow, 1.0)
-            if isinstance(grow_factor, str):
-                try:
-                    grow_factor = float(grow_factor)
-                except:
-                    grow_factor = 1.0
-
-            # 计算最终ATK值
-            final_atk = int(base_atk * grow_factor)
-            attributes[f"Lv.{level}"] = final_atk
+                attr_config = self.attr_config.get(attr_key, {})
+                atk_type = self.get_translated_text(attr_config.get("Name", ""), "cn")
+                attributes["伤害类型"] = atk_type[:2]
+                attributes[atk_type[2:]] = battle_weapon[attr_key]
+        attributes["暴击"] = battle_weapon.get("CRI", 0)
+        attributes["暴伤"] = battle_weapon.get("CRD", 0)
+        attributes["触发"] = battle_weapon.get("TriggerProbability", 0)
+        if "MagazineCapacity" in battle_weapon:
+            attributes["弹匣"] = battle_weapon["MagazineCapacity"]
+        if "BulletMax" in battle_weapon:
+            attributes["最大弹药"] = battle_weapon["BulletMax"]
+        if "BulletConver" in battle_weapon:
+            attributes["弹药转化率"] = battle_weapon["BulletConver"]
+        if "MaxDistance" in battle_weapon:
+            attributes["最大射程"] = battle_weapon["MaxDistance"]
 
         return attributes
 
@@ -116,17 +112,15 @@ class WeaponProcessor(BaseProcessor):
             break_list = self.weapon_break_data.get(weapon_id, [])
 
         if not break_list:
-            return {}
+            return []
 
-        break_info = {}
+        break_info = []
 
         for break_stage in break_list:
-            stage_num = break_stage.get("WeaponBreakNum", 0)
             item_ids = break_stage.get("ItemId", [])
             item_nums = break_stage.get("ItemNum", [])
 
-            stage_key = f"阶段{stage_num}"
-            stage_materials = []
+            stage_materials = {}
 
             for i, item_id in enumerate(item_ids):
                 if i >= len(item_nums):
@@ -137,9 +131,9 @@ class WeaponProcessor(BaseProcessor):
                 if not resource_name:
                     resource_name = str(item_id)
 
-                stage_materials.append(f"{resource_name}×{item_nums[i]}")
+                stage_materials[resource_name] = item_nums[i]
 
-            break_info[stage_key] = stage_materials
+            break_info.append(stage_materials)
 
         return break_info
 
@@ -153,9 +147,7 @@ class WeaponProcessor(BaseProcessor):
         if not card_level_data:
             card_level_data = self.weapon_card_level_data.get(weapon_id, {})
 
-        max_grade_level = card_level_data.get("CardLevelMax", 5)
-
-        smelting_info = {}
+        smelting_info = []
 
         # 处理PassiveEffectsDesc和PassiveEffectsDescValues
         passive_desc = battle_weapon.get("PassiveEffectsDesc", "")
@@ -165,12 +157,12 @@ class WeaponProcessor(BaseProcessor):
             return smelting_info
 
         # 为每个熔炼等级计算技能描述
-        for grade_level in range(1, max_grade_level + 2):
+        for grade_level in range(1, 7):
             # 计算该等级的技能描述
             skill_desc = self._calc_weapon_passive_effects_desc(
                 battle_weapon, grade_level, passive_desc, desc_values
             )
-            smelting_info[f"等级{grade_level-1}"] = skill_desc
+            smelting_info.append(skill_desc)
 
         return smelting_info
 
@@ -185,7 +177,7 @@ class WeaponProcessor(BaseProcessor):
 
         # passive_desc 可能是文本key（如 SKILL_10101_DESC），需要从i18n获取翻译
         # 先从i18n_data中查找翻译
-        translated_desc = self._get_translated_text(passive_desc)
+        translated_desc = self.get_translated_text(passive_desc)
         if not translated_desc:
             translated_desc = passive_desc
 
@@ -225,53 +217,6 @@ class WeaponProcessor(BaseProcessor):
         result_desc = result_desc.replace("<H>", "").replace("</>", "")
 
         return result_desc
-
-    def _get_translated_text(self, text_key):
-        """从i18n数据中获取翻译文本"""
-        if not text_key or not isinstance(text_key, str):
-            return ""
-
-        # 从i18n_data中查找
-        text_entry = self.i18n_data.get(text_key, {})
-        if not text_entry:
-            return ""
-
-        # 获取当前语言
-        language = self.data_loader.language if self.data_loader.language else "cn"
-
-        # 根据当前语言获取对应字段
-        # 语言映射：cn->TextMapContent, en->ContentEN, jp->ContentJP, kr->ContentKR, fr->ContentFR, tc->ContentTC
-        language_field_map = {
-            "cn": "TextMapContent",
-            "en": "ContentEN",
-            "jp": "ContentJP",
-            "kr": "ContentKR",
-            "fr": "ContentFR",
-            "es": "ContentES",
-            "tc": "ContentTC",
-        }
-
-        # 获取对应语言字段
-        field = language_field_map.get(language, "TextMapContent")
-        content = text_entry.get(field, "")
-
-        # 如果对应语言字段为空，尝试使用其他可用字段
-        if not content:
-            # 优先顺序：TextMapContent > ContentEN > ContentJP > ContentKR > ContentFR > ContentTC
-            for fallback_field in [
-                "TextMapContent",
-                "ContentEN",
-                "ContentJP",
-                "ContentKR",
-                "ContentFR",
-                "ContentES",
-                "ContentTC",
-            ]:
-                if fallback_field in text_entry and text_entry[fallback_field]:
-                    content = text_entry[fallback_field]
-                    break
-
-        return content
 
     def _parse_single_desc_value(self, desc_value, weapon_id, grade_level, table_type):
         """解析单个DescValue，获取实际值"""
@@ -351,17 +296,21 @@ class WeaponProcessor(BaseProcessor):
             # 初始化上下文
             context = {}
             if table_type:
-                context['table_type'] = table_type
+                context["table_type"] = table_type
             if weapon_id:
-                context['table_id'] = weapon_id
+                context["table_id"] = weapon_id
 
-            result = self._evaluate_ast_node_with_context(ast, weapon_id, grade_level, context)
+            result = self._evaluate_ast_node_with_context(
+                ast, weapon_id, grade_level, context
+            )
             return float(result)
         except Exception as e:
             print(f"计算表达式 '{expr}' 失败: {e}")
             return 0.0
 
-    def _evaluate_ast_node_with_context(self, node, weapon_id=None, grade_level=1, context=None):
+    def _evaluate_ast_node_with_context(
+        self, node, weapon_id=None, grade_level=1, context=None
+    ):
         """使用上下文信息评估AST节点
 
         Args:
@@ -387,39 +336,47 @@ class WeaponProcessor(BaseProcessor):
         elif node.type == NodeType.BINARY_EXPR:
             # 二元表达式
             # 评估左侧表达式（保留上下文）
-            left_value = self._evaluate_ast_node_with_context(node.left, weapon_id, grade_level, context)
+            left_value = self._evaluate_ast_node_with_context(
+                node.left, weapon_id, grade_level, context
+            )
             # 评估右侧表达式（同样使用相同上下文）
-            right_value = self._evaluate_ast_node_with_context(node.right, weapon_id, grade_level, context)
+            right_value = self._evaluate_ast_node_with_context(
+                node.right, weapon_id, grade_level, context
+            )
 
             # 如果左侧是字符串且以#开头，使用SkillGrow查找
-            if isinstance(left_value, str) and left_value.startswith('#'):
-                table_type = context.get('table_type', 'BattleWeapon')
-                table_id = context.get('table_id', weapon_id)
+            if isinstance(left_value, str) and left_value.startswith("#"):
+                table_type = context.get("table_type", "BattleWeapon")
+                table_id = context.get("table_id", weapon_id)
 
                 attr = {
                     "Type": table_type,
                     "Value": left_value,
                 }
 
-                left_value = self._calc_weapon_attr_by_level(attr, table_id, grade_level)
+                left_value = self._calc_weapon_attr_by_level(
+                    attr, table_id, grade_level
+                )
 
             op = node.value
-            if op == '+':
+            if op == "+":
                 return left_value + right_value
-            elif op == '-':
+            elif op == "-":
                 return left_value - right_value
-            elif op == '*':
+            elif op == "*":
                 return left_value * right_value
-            elif op == '/':
+            elif op == "/":
                 return left_value / right_value if right_value != 0 else 0.0
-            elif op == '%':
+            elif op == "%":
                 return left_value % right_value
             else:
                 raise ValueError(f"未知的运算符: {op}")
 
         elif node.type == NodeType.MEMBER_ACCESS:
             # 成员访问: object.property
-            object_value = self._evaluate_ast_node_with_context(node.object, weapon_id, grade_level, context)
+            object_value = self._evaluate_ast_node_with_context(
+                node.object, weapon_id, grade_level, context
+            )
             property_name = node.property.value
 
             # 如果object_value是字典，访问属性
@@ -428,10 +385,10 @@ class WeaponProcessor(BaseProcessor):
                     value = object_value[property_name]
 
                     # 如果值是字符串且以#开头，使用SkillGrow查找
-                    if isinstance(value, str) and value.startswith('#'):
+                    if isinstance(value, str) and value.startswith("#"):
                         # 使用上下文信息进行SkillGrow查找
-                        table_type = context.get('table_type', 'BattleWeapon')
-                        table_id = context.get('table_id', weapon_id)
+                        table_type = context.get("table_type", "BattleWeapon")
+                        table_id = context.get("table_id", weapon_id)
 
                         # 构建attr对象用于SkillGrow查找
                         attr_key = "Rate" if "Rate" in property_name else "Value"
@@ -441,24 +398,36 @@ class WeaponProcessor(BaseProcessor):
                         }
 
                         # 调用_calc_weapon_attr_by_level获取实际值
-                        return self._calc_weapon_attr_by_level(attr, table_id, grade_level)
+                        return self._calc_weapon_attr_by_level(
+                            attr, table_id, grade_level
+                        )
                     else:
                         return value
                 else:
                     # 尝试使用原有的属性路径解析逻辑
-                    return self._get_attr_value_from_dict(object_value, property_name, weapon_id, grade_level, context.get('table_type', 'BattleWeapon'))
+                    return self._get_attr_value_from_dict(
+                        object_value,
+                        property_name,
+                        weapon_id,
+                        grade_level,
+                        context.get("table_type", "BattleWeapon"),
+                    )
             else:
                 raise ValueError(f"无法对非字典类型进行成员访问")
 
         elif node.type == NodeType.INDEX_ACCESS:
             # 索引访问: object[index]
-            object_value = self._evaluate_ast_node_with_context(node.object, weapon_id, grade_level, context)
-            index_value = self._evaluate_ast_node_with_context(node.index, weapon_id, grade_level, context)
+            object_value = self._evaluate_ast_node_with_context(
+                node.object, weapon_id, grade_level, context
+            )
+            index_value = self._evaluate_ast_node_with_context(
+                node.index, weapon_id, grade_level, context
+            )
 
             # 如果object_value是字符串，可能是表名
             if isinstance(object_value, str):
                 # 移除#前缀（如果有）
-                table_name = object_value.lstrip('#')
+                table_name = object_value.lstrip("#")
                 table_data = self.data_loader.load_json(f"{table_name}.json")
                 if not table_data:
                     raise ValueError(f"无法找到表 '{table_name}'")
@@ -468,16 +437,16 @@ class WeaponProcessor(BaseProcessor):
                 if item_id in table_data:
                     item_data = table_data[item_id]
                     # 更新上下文，记录表类型和ID
-                    context['table_type'] = table_name
-                    context['table_id'] = index_value
+                    context["table_type"] = table_name
+                    context["table_id"] = index_value
                     return item_data
                 else:
                     # 尝试使用整数ID
                     int_id = int(index_value)
                     if str(int_id) in table_data:
                         item_data = table_data[str(int_id)]
-                        context['table_type'] = table_name
-                        context['table_id'] = int_id
+                        context["table_type"] = table_name
+                        context["table_id"] = int_id
                         return item_data
                     else:
                         raise ValueError(f"表 '{table_name}' 中找不到ID '{item_id}'")
@@ -524,7 +493,9 @@ class WeaponProcessor(BaseProcessor):
                 func_name = node.object.value
             elif node.object.type == NodeType.MEMBER_ACCESS:
                 # 处理 math.abs 这样的函数调用
-                module_obj = self._evaluate_ast_node_with_context(node.object.object, weapon_id, grade_level, context)
+                module_obj = self._evaluate_ast_node_with_context(
+                    node.object.object, weapon_id, grade_level, context
+                )
                 func_name = node.object.property.value
                 # 如果是 math 模块
                 if isinstance(module_obj, str) and module_obj == "math":
@@ -536,7 +507,9 @@ class WeaponProcessor(BaseProcessor):
             args = []
             if node.arguments:
                 for arg_node in node.arguments:
-                    arg_value = self._evaluate_ast_node_with_context(arg_node, weapon_id, grade_level, context)
+                    arg_value = self._evaluate_ast_node_with_context(
+                        arg_node, weapon_id, grade_level, context
+                    )
                     args.append(arg_value)
 
             # 执行函数调用
@@ -583,7 +556,9 @@ class WeaponProcessor(BaseProcessor):
 
         return 0.0
 
-    def _get_attr_value_from_dict(self, data, attr_path, weapon_id, grade_level, table_type):
+    def _get_attr_value_from_dict(
+        self, data, attr_path, weapon_id, grade_level, table_type
+    ):
         """从字典中根据属性路径获取值"""
         import re
 
@@ -636,9 +611,14 @@ class WeaponProcessor(BaseProcessor):
                                 array_index = int(array_content) - 1
                             else:
                                 # 可能是表达式，递归计算
-                                array_index = int(self._calculate_expr_value(
-                                    array_content, weapon_id, grade_level, table_type
-                                ))
+                                array_index = int(
+                                    self._calculate_expr_value(
+                                        array_content,
+                                        weapon_id,
+                                        grade_level,
+                                        table_type,
+                                    )
+                                )
 
                             if 0 <= array_index < len(array):
                                 value = array[array_index]

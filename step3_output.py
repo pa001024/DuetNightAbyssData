@@ -113,36 +113,6 @@ class DataLoader:
         tab_index = self.build_index("ArchiveTab.json", "TabPara", use_i18n=True)
         return tab_index.get(tab_id, {}).get("TabName", "").strip()
 
-    def process_reward(self, reward_id):
-        reward_index = self.build_index("Reward.json", "RewardId")
-        reward = reward_index.get(reward_id, {})
-
-        # Get reward type
-        reward_type = reward.get("Type", {}).get("1", "")
-
-        if reward_type == "Resource":
-            return self.get_resource_name(reward_id)
-        elif reward_type == "Draft":
-            draft_info = self.get_draft_info(reward_id)
-            product_type = draft_info.get("ProductType", "")
-            product_id = draft_info.get("ProductId", 0)
-
-            if product_type == "Mod":
-                return f"图纸: {self.get_mod_name(product_id)}"
-            elif product_type == "Char":
-                return f"图纸: {self.get_char_name(product_id)}"
-            elif product_type == "Weapon":
-                return f"图纸: {self.get_weapon_name(product_id)}"
-            else:
-                return f"图纸: {product_type}{product_id}"
-        elif product_type == "Title":
-            return self.get_title_name(reward_id)
-        elif reward_type == "Reward":
-            # Recursive processing for Reward type
-            return self.process_reward(reward_id)
-        else:
-            return str(reward_id)
-
 
 class FinalProcessor:
     def __init__(self, base_dir, output_dir):
@@ -210,7 +180,7 @@ class FinalProcessor:
         processor.data_loader.set_language(language)
 
         # Load data for the file type and language
-        file_path = os.path.join(self.base_dir, "i18n", language, f"{file_type}.json")
+        file_path = os.path.join(self.base_dir, f"{file_type}.json")
         if not os.path.exists(file_path):
             print(f"{file_type} data not found for language: {language}")
             return

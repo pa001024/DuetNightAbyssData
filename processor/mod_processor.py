@@ -32,7 +32,7 @@ class ModProcessor(BaseProcessor):
         tolerance = cost + max_level * cost_change
 
         # 处理类型名称，提取系列
-        type_name = mod_data.get("TypeName", "")
+        type_name = self.get_translated_text(mod_data.get("TypeName", ""))
         series = type_name[:-1] if type_name and len(type_name) > 1 else ""
 
         # 处理品质和极性
@@ -59,7 +59,7 @@ class ModProcessor(BaseProcessor):
         # 构建基础处理后的Mod数据
         processed = {
             "id": mod_data.get("Id", 0),
-            "名称": mod_data.get("Name", ""),
+            "名称": self.get_translated_text(mod_data.get("Name", "")),
             "系列": series,
             "品质": quality,
         }
@@ -106,7 +106,9 @@ class ModProcessor(BaseProcessor):
 
     def _process_passive_effects_desc(self, mod_data, processed):
         """处理PassiveEffectsDesc，解析DescValues并填入占位符"""
-        passive_effects_desc = mod_data.get("PassiveEffectsDesc", "")
+        passive_effects_desc = self.get_translated_text(
+            mod_data.get("PassiveEffectsDesc", "")
+        )
         desc_values = mod_data.get("DescValues", [])
 
         if passive_effects_desc:
@@ -291,6 +293,7 @@ class ModProcessor(BaseProcessor):
                 try:
                     # 提取数值部分，转换为整数
                     import re
+
                     old_val = float(re.search(r"([\d.]+)", old_val_str).group(1))
                     new_val = float(re.search(r"([\d.]+)", new_val_str).group(1))
                     # 转换为整数，但如果原值有小数部分且为0，保留.0格式
@@ -605,7 +608,9 @@ class ModProcessor(BaseProcessor):
             except:
                 raise ValueError(f"无法解析表达式: '{expr}'")
 
-    def _evaluate_ast_node_with_context(self, node, mod_id=None, mod_level=1, context=None):
+    def _evaluate_ast_node_with_context(
+        self, node, mod_id=None, mod_level=1, context=None
+    ):
         """使用上下文信息评估AST节点
 
         Args:
@@ -631,14 +636,18 @@ class ModProcessor(BaseProcessor):
         elif node.type == NodeType.BINARY_EXPR:
             # 二元表达式
             # 评估左侧表达式（保留上下文）
-            left_value = self._evaluate_ast_node_with_context(node.left, mod_id, mod_level, context)
+            left_value = self._evaluate_ast_node_with_context(
+                node.left, mod_id, mod_level, context
+            )
             # 评估右侧表达式（同样使用相同上下文）
-            right_value = self._evaluate_ast_node_with_context(node.right, mod_id, mod_level, context)
+            right_value = self._evaluate_ast_node_with_context(
+                node.right, mod_id, mod_level, context
+            )
 
             # 如果左侧是字符串且以#开头，使用SkillGrow查找
-            if isinstance(left_value, str) and left_value.startswith('#'):
-                table_type = context.get('table_type', 'Mod')
-                table_id = context.get('table_id', mod_id)
+            if isinstance(left_value, str) and left_value.startswith("#"):
+                table_type = context.get("table_type", "Mod")
+                table_id = context.get("table_id", mod_id)
 
                 attr = {
                     "Type": table_type,
@@ -648,22 +657,24 @@ class ModProcessor(BaseProcessor):
                 left_value = self._calc_mod_attr_by_level(attr, table_id, mod_level)
 
             op = node.value
-            if op == '+':
+            if op == "+":
                 return left_value + right_value
-            elif op == '-':
+            elif op == "-":
                 return left_value - right_value
-            elif op == '*':
+            elif op == "*":
                 return left_value * right_value
-            elif op == '/':
+            elif op == "/":
                 return left_value / right_value
-            elif op == '%':
+            elif op == "%":
                 return left_value % right_value
             else:
                 raise ValueError(f"未知的运算符: {op}")
 
         elif node.type == NodeType.MEMBER_ACCESS:
             # 成员访问: object.property
-            object_value = self._evaluate_ast_node_with_context(node.object, mod_id, mod_level, context)
+            object_value = self._evaluate_ast_node_with_context(
+                node.object, mod_id, mod_level, context
+            )
             property_name = node.property.value
 
             # 如果object_value是字典，访问属性
@@ -672,10 +683,10 @@ class ModProcessor(BaseProcessor):
                     value = object_value[property_name]
 
                     # 如果值是字符串且以#开头，使用SkillGrow查找
-                    if isinstance(value, str) and value.startswith('#'):
+                    if isinstance(value, str) and value.startswith("#"):
                         # 使用上下文信息进行SkillGrow查找
-                        table_type = context.get('table_type', 'Mod')
-                        table_id = context.get('table_id', mod_id)
+                        table_type = context.get("table_type", "Mod")
+                        table_id = context.get("table_id", mod_id)
 
                         # 构建attr对象用于SkillGrow查找
                         attr_key = "Rate" if "Rate" in property_name else "Value"
@@ -695,13 +706,17 @@ class ModProcessor(BaseProcessor):
 
         elif node.type == NodeType.INDEX_ACCESS:
             # 索引访问: object[index]
-            object_value = self._evaluate_ast_node_with_context(node.object, mod_id, mod_level, context)
-            index_value = self._evaluate_ast_node_with_context(node.index, mod_id, mod_level, context)
+            object_value = self._evaluate_ast_node_with_context(
+                node.object, mod_id, mod_level, context
+            )
+            index_value = self._evaluate_ast_node_with_context(
+                node.index, mod_id, mod_level, context
+            )
 
             # 如果object_value是字符串，可能是表名
             if isinstance(object_value, str):
                 # 移除#前缀（如果有）
-                table_name = object_value.lstrip('#')
+                table_name = object_value.lstrip("#")
                 table_data = self.data_loader.load_json(f"{table_name}.json")
                 if not table_data:
                     raise ValueError(f"无法找到表 '{table_name}'")
@@ -711,8 +726,8 @@ class ModProcessor(BaseProcessor):
                 if item_id in table_data:
                     item_data = table_data[item_id]
                     # 更新上下文，记录表类型和ID
-                    context['table_type'] = table_name
-                    context['table_id'] = index_value
+                    context["table_type"] = table_name
+                    context["table_id"] = index_value
                     return item_data
                 else:
                     raise ValueError(f"表 '{table_name}' 中找不到ID '{item_id}'")
@@ -757,7 +772,11 @@ class ModProcessor(BaseProcessor):
             args = []
             if node.arguments:
                 for arg in node.arguments:
-                    args.append(self._evaluate_ast_node_with_context(arg, mod_id, mod_level, context))
+                    args.append(
+                        self._evaluate_ast_node_with_context(
+                            arg, mod_id, mod_level, context
+                        )
+                    )
 
             # 处理特殊函数
             if func_name == "GetModPolarity":
@@ -806,12 +825,12 @@ class ModProcessor(BaseProcessor):
 
         # 获取i18n数据
         i18n_entry = self.i18n_data.get(attr_name_key, {})
-        if language == "cn":
-            return i18n_entry.get("TextMapContent", "")
-        else:
-            return i18n_entry.get(
-                f"Content{language.upper()}", i18n_entry.get("TextMapContent", "")
-            )
+        # if language == "cn":
+        return i18n_entry.get("TextMapContent", "")
+        # else:
+        #     return i18n_entry.get(
+        #         f"Content{language.upper()}", i18n_entry.get("TextMapContent", "")
+        #     )
 
     def process_all_items(self, items, language):
         """处理所有项目，添加过滤和排序"""

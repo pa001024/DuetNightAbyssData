@@ -25,21 +25,15 @@ class MonsterProcessor(BaseProcessor):
         id = monster_data.get("UnitId", 0)
         if id < 6000000 or id > 20000000:
             return None
-        name = monster_data.get("UnitName", "")
+        name = self.get_translated_text(monster_data.get("UnitName", ""))
         if "待包装" in name or "召唤物" in name or "Mon_Name_" in name:
             return None
         lastname = name.split(" ")[-1]
         bt = monster_data.get("BT", "")
-        if (
-            "_SP_" in bt
-            or "_AChess01" in bt
-            or "_St" in bt
-            or "_Tem" in bt
-            or "_DYN" in bt
-        ):
+        if "_SP_" in bt or "_AChess01" in bt or "_Tem" in bt or "_DYN" in bt:
             return None
-        blood_ui_params = monster_data.get("BloodUIParmas", {})
-        ui_style_node_name = blood_ui_params.get("UIStyleNodeName", "____")
+        if "_St" in bt:
+            name += "(剧情)"
 
         battle_role_id = monster_data.get("BattleRoleId", 0)
 
