@@ -3320,7 +3320,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1,
-      "Title: scholar": 1
+      "Title: Scholar": 1
     }
   },
   {
@@ -3580,7 +3580,7 @@
     "名称": "Thoroughly Tempered Ⅰ",
     "分类": "To the Top",
     "品质": 3,
-    "描述": "Have 1 weapons that have reached Ascension Phase 1",
+    "描述": "Have 1 weapons that have reached Ascension Phase 6",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -3591,7 +3591,7 @@
     "名称": "Thoroughly Tempered Ⅱ",
     "分类": "To the Top",
     "品质": 2,
-    "描述": "Have 5 weapons that have reached Ascension Phase 1",
+    "描述": "Have 5 weapons that have reached Ascension Phase 6",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -3602,7 +3602,7 @@
     "名称": "Thoroughly Tempered Ⅲ",
     "分类": "To the Top",
     "品质": 1,
-    "描述": "Have 10 weapons that have reached Ascension Phase 1",
+    "描述": "Have 10 weapons that have reached Ascension Phase 6",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
@@ -4890,7 +4890,8 @@
     "描述": "Make a total of 20 Weave pulls",
     "版本": "1.0",
     "奖励": {
-      "Coin": 2000
+      "Coin": 5000,
+      "Title: Dazzling": 1
     }
   },
   {
@@ -4912,7 +4913,10 @@
     "描述": "Make a total of 100 Weave pulls",
     "版本": "1.0",
     "奖励": {
-      "Secret Letter Clue": 2
+      "Secret Letter Clue": 2,
+      "Title: Winsome and Awesome": 1,
+      "Title: Mother": 1,
+      "Title: Father": 1
     }
   },
   {
@@ -5719,7 +5723,8 @@
     "描述": "Unlock 75 Atlasium entries",
     "版本": "1.0",
     "奖励": {
-      "Secret Letter Clue": 2
+      "Coin": 5000,
+      "Title: Erudite": 1
     }
   },
   {

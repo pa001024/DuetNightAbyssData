@@ -256,7 +256,7 @@
     "捕获经验": 100,
     "经验": 70,
     "主动": {
-      "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Damage, or +{%} Skill Duration.",
+      "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
       "值": [
         10,
         120,
@@ -285,7 +285,7 @@
     "捕获经验": 100,
     "经验": 70,
     "主动": {
-      "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Damage, or +{%} Skill Duration.",
+      "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
       "值": [
         10,
         120,
@@ -314,7 +314,7 @@
     "捕获经验": 100,
     "经验": 70,
     "主动": {
-      "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Damage, or +{%} Skill Duration.",
+      "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
       "值": [
         10,
         120,
@@ -343,7 +343,7 @@
     "捕获经验": 100,
     "经验": 70,
     "主动": {
-      "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Damage, or +{%} Skill Duration.",
+      "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
       "值": [
         10,
         120,
@@ -1159,7 +1159,7 @@
     "捕获经验": 100,
     "经验": 100,
     "主动": {
-      "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill Damage taken by them by {%} for {}s.",
+      "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill DMG taken by them by {%} for {}s.",
       "值": [
         5.85,
         0.036,
@@ -1185,7 +1185,7 @@
     "捕获经验": 100,
     "经验": 100,
     "主动": {
-      "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill Damage taken by them by {%} for {}s.",
+      "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill DMG taken by them by {%} for {}s.",
       "值": [
         5.85,
         0.036,
@@ -1211,7 +1211,7 @@
     "捕获经验": 100,
     "经验": 100,
     "主动": {
-      "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill Damage taken by them by {%} for {}s.",
+      "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill DMG taken by them by {%} for {}s.",
       "值": [
         5.85,
         0.036,

@@ -8354,7 +8354,7 @@
         "id": 20003,
         "t": "Title",
         "c": 1,
-        "n": "Bounty Hunter"
+        "n": " Bounty Hunter"
       }
     ]
   },
@@ -8648,7 +8648,7 @@
         "id": 20004,
         "t": "Title",
         "c": 1,
-        "n": "scholar"
+        "n": " Scholar"
       }
     ]
   },
@@ -8702,7 +8702,7 @@
         "id": 20002,
         "t": "Title",
         "c": 1,
-        "n": "Weapon Master"
+        "n": " Weapon Master"
       }
     ]
   },
@@ -8918,7 +8918,7 @@
         "id": 20005,
         "t": "Title",
         "c": 1,
-        "n": "Master"
+        "n": " Master"
       }
     ]
   },
@@ -10708,7 +10708,7 @@
         "id": 2002,
         "t": "Resource",
         "c": 100,
-        "n": "Stanza"
+        "n": "Verse"
       }
     ]
   },
@@ -10720,7 +10720,7 @@
         "id": 2002,
         "t": "Resource",
         "c": 150,
-        "n": "Stanza"
+        "n": "Verse"
       }
     ]
   },
@@ -10732,7 +10732,7 @@
         "id": 2002,
         "t": "Resource",
         "c": 200,
-        "n": "Stanza"
+        "n": "Verse"
       }
     ]
   },
@@ -10744,7 +10744,7 @@
         "id": 2002,
         "t": "Resource",
         "c": 500,
-        "n": "Stanza"
+        "n": "Verse"
       }
     ]
   },
@@ -10756,7 +10756,7 @@
         "id": 2002,
         "t": "Resource",
         "c": 600,
-        "n": "Stanza"
+        "n": "Verse"
       }
     ]
   },
@@ -10768,7 +10768,7 @@
         "id": 2002,
         "t": "Resource",
         "c": 800,
-        "n": "Stanza"
+        "n": "Verse"
       }
     ]
   },
@@ -10951,7 +10951,7 @@
         "id": 2002,
         "t": "Resource",
         "c": 1200,
-        "n": "Stanza"
+        "n": "Verse"
       }
     ]
   },
@@ -12613,7 +12613,7 @@
         "id": 2004,
         "t": "Resource",
         "c": 300,
-        "n": "Stanza"
+        "n": "Verse"
       }
     ]
   },
@@ -12625,7 +12625,7 @@
         "id": 2004,
         "t": "Resource",
         "c": 500,
-        "n": "Stanza"
+        "n": "Verse"
       }
     ]
   },
@@ -12637,7 +12637,7 @@
         "id": 2004,
         "t": "Resource",
         "c": 1000,
-        "n": "Stanza"
+        "n": "Verse"
       }
     ]
   },
@@ -12649,7 +12649,7 @@
         "id": 2004,
         "t": "Resource",
         "c": 1200,
-        "n": "Stanza"
+        "n": "Verse"
       }
     ]
   },
@@ -12661,7 +12661,7 @@
         "id": 2004,
         "t": "Resource",
         "c": 1500,
-        "n": "Stanza"
+        "n": "Verse"
       }
     ]
   },
@@ -22546,7 +22546,7 @@
       {
         "id": 1004,
         "t": "Walnut",
-        "c": 1,
+        "c": 4,
         "n": "Secret Letter: Kezhou"
       },
       {
@@ -22588,7 +22588,7 @@
       {
         "id": 1004,
         "t": "Walnut",
-        "c": 1,
+        "c": 4,
         "n": "Secret Letter: Kezhou"
       },
       {
@@ -22630,7 +22630,7 @@
       {
         "id": 1004,
         "t": "Walnut",
-        "c": 1,
+        "c": 4,
         "n": "Secret Letter: Kezhou"
       },
       {
@@ -22672,7 +22672,7 @@
       {
         "id": 1004,
         "t": "Walnut",
-        "c": 1,
+        "c": 4,
         "n": "Secret Letter: Kezhou"
       },
       {
@@ -22714,7 +22714,7 @@
       {
         "id": 1004,
         "t": "Walnut",
-        "c": 1,
+        "c": 4,
         "n": "Secret Letter: Kezhou"
       },
       {
@@ -22754,12 +22754,6 @@
     "m": "Fixed",
     "child": [
       {
-        "id": 1004,
-        "t": "Walnut",
-        "c": 1,
-        "n": "Secret Letter: Kezhou"
-      },
-      {
         "id": 214,
         "t": "Resource",
         "c": 150,
@@ -22795,12 +22789,6 @@
     "id": 46052,
     "m": "Fixed",
     "child": [
-      {
-        "id": 1004,
-        "t": "Walnut",
-        "c": 1,
-        "n": "Secret Letter: Kezhou"
-      },
       {
         "id": 214,
         "t": "Resource",
@@ -22838,12 +22826,6 @@
     "m": "Fixed",
     "child": [
       {
-        "id": 1004,
-        "t": "Walnut",
-        "c": 1,
-        "n": "Secret Letter: Kezhou"
-      },
-      {
         "id": 214,
         "t": "Resource",
         "c": 150,
@@ -22879,12 +22861,6 @@
     "id": 46054,
     "m": "Fixed",
     "child": [
-      {
-        "id": 1004,
-        "t": "Walnut",
-        "c": 1,
-        "n": "Secret Letter: Kezhou"
-      },
       {
         "id": 214,
         "t": "Resource",
@@ -22922,12 +22898,6 @@
     "m": "Fixed",
     "child": [
       {
-        "id": 1004,
-        "t": "Walnut",
-        "c": 1,
-        "n": "Secret Letter: Kezhou"
-      },
-      {
         "id": 214,
         "t": "Resource",
         "c": 150,
@@ -22963,12 +22933,6 @@
     "id": 46056,
     "m": "Fixed",
     "child": [
-      {
-        "id": 1004,
-        "t": "Walnut",
-        "c": 2,
-        "n": "Secret Letter: Kezhou"
-      },
       {
         "id": 214,
         "t": "Resource",
@@ -23006,12 +22970,6 @@
     "m": "Fixed",
     "child": [
       {
-        "id": 1004,
-        "t": "Walnut",
-        "c": 2,
-        "n": "Secret Letter: Kezhou"
-      },
-      {
         "id": 214,
         "t": "Resource",
         "c": 200,
@@ -23047,12 +23005,6 @@
     "id": 46058,
     "m": "Fixed",
     "child": [
-      {
-        "id": 1004,
-        "t": "Walnut",
-        "c": 2,
-        "n": "Secret Letter: Kezhou"
-      },
       {
         "id": 214,
         "t": "Resource",
@@ -23090,12 +23042,6 @@
     "m": "Fixed",
     "child": [
       {
-        "id": 1004,
-        "t": "Walnut",
-        "c": 2,
-        "n": "Secret Letter: Kezhou"
-      },
-      {
         "id": 214,
         "t": "Resource",
         "c": 200,
@@ -23131,12 +23077,6 @@
     "id": 46060,
     "m": "Fixed",
     "child": [
-      {
-        "id": 1004,
-        "t": "Walnut",
-        "c": 2,
-        "n": "Secret Letter: Kezhou"
-      },
       {
         "id": 214,
         "t": "Resource",
@@ -28657,7 +28597,7 @@
         "id": 20055,
         "t": "Title",
         "c": 1,
-        "n": "Nightingale"
+        "n": " Nightingale"
       }
     ]
   },
@@ -43305,7 +43245,7 @@
         "id": 2004,
         "t": "Resource",
         "c": 5000,
-        "n": "Stanza"
+        "n": "Verse"
       }
     ]
   },
@@ -43335,7 +43275,7 @@
         "id": 2004,
         "t": "Resource",
         "c": 5000,
-        "n": "Stanza"
+        "n": "Verse"
       }
     ]
   },
@@ -43365,7 +43305,7 @@
         "id": 2004,
         "t": "Resource",
         "c": 5000,
-        "n": "Stanza"
+        "n": "Verse"
       }
     ]
   },

@@ -97,6 +97,15 @@ Order imports by type, with no blank lines between groups of the same type:
 - **Lua Conversion**: Files in `Datas/*.lua` → `out/*.json` via `step1_convert.py`
 - **Expression Evaluation**: Use `_calculate_expr_value()` for game data expressions
 - **Skill Growth**: Access via `skill_grow_data` using `table_type` and `table_id`
+- **Deep Sort JSON**: Use `deep_sort_json()` for mixed-type keys (numeric, string digit, string)
+- **Cyclic Reference Handling**: When processing JSON, use `seen` set with `id()` to prevent infinite loops
+
+### Adding New Processors
+1. Create `processor/<name>_processor.py` inheriting from `BaseProcessor`
+2. Implement `process_item(self, item_data, language)` method
+3. Override `_calc_attr_by_level()` if custom attribute calculation needed
+4. Load necessary JSON data in `__init__` via `data_loader.load_json()`
+5. Follow pattern: `load_json()` → `process_item()` → `save_processed_items()`
 
 ### File Paths
 - Input data: `./Datas/*.lua` (Lua game data files)
@@ -120,4 +129,14 @@ Centralized JSON data loading with:
 ### AST Parser
 Handles game data expression evaluation (e.g., "#SkillEffects[310313].Value")
 - Supports: binary ops, member access, index access, function calls
-- Math functions: math.abs, math.floor, math.ceil, math.max, math.min
+- Math functions: math.abs, math.floor, math.ceil, math.max, math.min, math.sqrt
+- Node types: IDENTIFIER, MEMBER_ACCESS, INDEX_ACCESS, BINARY_EXPR, UNARY_EXPR, LITERAL, ARRAY_ACCESS, FUNCTION_CALL
+
+### Dependencies
+- `lupa`: Python-Lua bridge for parsing game data files
+- Standard library: os, json, sys, collections.OrderedDict, typing, unittest
+
+### Common Data Structures
+- `OrderedDict`: Preserves insertion order for JSON output
+- `TextMap_I18n.json`: i18n data with fields: cn, en, jp, kr, fr, es, tc
+- Game data expressions: "#TableName[id].Property" pattern

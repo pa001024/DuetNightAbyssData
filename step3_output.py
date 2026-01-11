@@ -289,17 +289,17 @@ if __name__ == "__main__":
     # Example: process multiple file types (when other processors are implemented)
     FILE_TYPES = [
         #  11
-        "Achievement",
-        "Mod",
-        "Weapon",
+        # "Achievement",
+        # "Mod",
+        # "Weapon",
         "Char",
-        "Monster",
-        "Draft",
-        "Dungeon",
-        "Reward",
-        "Pet",
-        "AbyssBuff",
-        "AbyssDungeon",
+        # "Monster",
+        # "Draft",
+        # "Dungeon",
+        # "Reward",
+        # "Pet",
+        # "AbyssBuff",
+        # "AbyssDungeon",
     ]
 
     # Create processor and process all specified file types for all languages

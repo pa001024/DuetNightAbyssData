@@ -44,6 +44,70 @@ class CharProcessor(BaseProcessor):
             "SkillSustain": "技能耐久",
         }
 
+        # SkillEffects TaskEffects 字段名缩写映射
+        # "" 表示排除该字段
+        self.skill_effect_field_abbr = {
+            # 排除的字段（内部使用或不必要）
+            "Function": "fn",
+            "TargetFilter": "",
+            "DamageTag": "",
+            "SEId": "",
+            "CauseHit": "",
+            "BossValue": "",
+            "TaskId": "",
+            "PassiveEffectId": "",
+            # 需要缩写的字段
+            "BaseAttr": "ba",
+            "DamageType": "dt",
+            "BaseChar": "bc",
+            "FXId": "fx",
+            "BuffId": "id",
+            "LastTime": "lt",
+            "SpChange": "sp",
+            "Rate": "r",
+            "Value": "v",
+            "Condition": "co",
+            "FunctionName": "fa",
+            "TriggerProbability": "tp",
+            "AllowSkillIntensity": "ai",
+            "AllowSkillSustain": "as",
+            "IsOverShield": "os",
+        }
+
+        # SkillEffects TaskEffects Function 黑名单
+        self.skill_effect_function_blacklist = {
+            "PlayFX",
+            "PlaySE",
+            "MakeSound",
+            "CameraShake",
+            "AdditionalHitFX",
+            "GatherTargets",
+            "PlayForceFeedback",
+            "PlayUIAnim",
+            "SetFloat",
+            # 以下这些都是需要保留处理的
+            # "ExecutePassiveFunctio",
+            # "CutToughness",
+            # "Damage",
+            # "Heal",
+            # "AddEnergyShield",
+            # "AddSp",
+            # "AddBuff",
+            # "RemoveBuff",
+            # "CreateSkillCreature",
+            # "CreateDanmaku",
+        }
+
+        # PassiveEffect 字段名缩写映射
+        # "" 表示排除该字段
+        self.passive_effect_field_abbr = {
+            "ID": "id",
+            "UniquePassive": "up",
+            "BPPath": "",
+            "Vars": "v",
+            "VarSkillLevelSource": "",  # 排除 VarSkillLevelSource（内部使用）
+        }
+
     def process_item(self, char_data, language):
         char_id = char_data.get("CharId", 0)
         if char_id > 100000:
@@ -147,14 +211,16 @@ class CharProcessor(BaseProcessor):
             attr_name = attr.get("AttrName", "")
             attr_config = self.attr_config.get(attr_name, {})
             attr_name_key = attr_config.get("Name", "")
-            if rst.get(self.get_translated_text(attr_name_key)):
-                rst[self.get_translated_text(attr_name_key)] += self.round_value(
-                    attr.get("Rate") or attr.get("Value", 0)
-                )
+            fkey = self.get_translated_text(attr_name_key)
+            fkeymap = {
+                "武器暴击率": "暴击",
+                "武器多重射击": "多重",
+            }
+            fkey = fkeymap.get(fkey, fkey)
+            if rst.get(fkey):
+                rst[fkey] += self.round_value(attr.get("Rate") or attr.get("Value", 0))
                 continue
-            rst[self.get_translated_text(attr_name_key)] = self.round_value(
-                attr.get("Rate") or attr.get("Value", 0)
-            )
+            rst[fkey] = self.round_value(attr.get("Rate") or attr.get("Value", 0))
         return rst
 
     def _process_mastery(self, weapon_tags):
@@ -356,6 +422,27 @@ class CharProcessor(BaseProcessor):
             "描述": skill_desc,
         }
 
+        if skill_info.get("CD"):
+            result["cd"] = skill_info.get("CD")
+
+        # 处理技能特效解析
+        skill_effects = self._process_skill_effects(skill_info, skill_id, max_level)
+        if skill_effects:
+            # 处理返回值结构，可能包含 e 和 b 两个字段
+            if isinstance(skill_effects, dict):
+                if skill_effects.get("e"):
+                    result["e"] = skill_effects["e"]
+                if skill_effects.get("b"):
+                    result["b"] = skill_effects["b"]
+            else:
+                # 兼容旧格式（直接返回列表）
+                result["e"] = skill_effects
+
+        # 处理被动技能特效解析
+        passive_effects = self._process_passive_effects(skill_info, skill_id, max_level)
+        if passive_effects:
+            result["p"] = passive_effects
+
         # 使用新的紧凑格式处理技能等级描述
         level_desc = self.process_skill_desc(skill_info, skill_id, max_level)
         if level_desc:
@@ -379,6 +466,588 @@ class CharProcessor(BaseProcessor):
                 result["术语解释"] = explanations
 
         return result
+
+    def _parse_buff_detail(
+        self,
+        buff_id,
+        buff_detail,
+        function_name,
+        grow_source,
+        max_level,
+        source_id=None,
+    ):
+        """解析buff详细信息
+
+        统一解析buff的AddAttrs、HaloDatas、DotDatas、LastTime等字段
+
+        Args:
+            buff_id: buff ID
+            buff_detail: buff详细数据（从Buff.json获取）
+            function_name: 函数名（AddBuff或RemoveBuff）
+            grow_source: 增长数据源（"SkillEffects" 或 "Buff"）
+            max_level: 最大等级
+            source_id: 源ID（用于查找增长数据，默认为None时使用buff_id）
+
+        Returns:
+            dict: 解析后的buff数据
+        """
+        if not buff_detail:
+            return None
+
+        buff_data = {"fn": function_name}
+
+        # 确定用于查找增长数据的ID
+        lookup_id = source_id if source_id is not None else buff_id
+
+        # 解析 AddAttrs
+        add_attrs = buff_detail.get("AddAttrs", [])
+        attrs_list = []
+        if add_attrs:
+            for attr in add_attrs:
+                attr_name = attr.get("AttrName", "")
+                attr_value = attr.get("Rate") or attr.get("Value", 0)
+                attr_value = self._process_placeholder(
+                    attr_value,
+                    lookup_id,
+                    max_level,
+                    grow_source,
+                )
+                if attr_value is not None:
+                    val = {"k": attr_name, "v": attr_value}
+                    if attr.get("RateZone"):
+                        val["z"] = attr["RateZone"]
+                    if attr.get("Type"):
+                        val["t"] = attr["Type"]
+                    attrs_list.append(val)
+
+        if attrs_list:
+            buff_data["t"] = attrs_list
+
+        # 解析 HaloDatas
+        halo_datas = buff_detail.get("HaloDatas", [])
+        if halo_datas:
+            aura_list = []
+            for halo in halo_datas:
+                halo_item = {}
+                if "BuffId" in halo:
+                    bid = halo["BuffId"]
+                    halo_item["id"] = bid
+                    halo_item["t"] = self._parse_buff_detail(
+                        bid,
+                        self.buff_data.get(str(bid), {}),
+                        function_name,
+                        grow_source,
+                        max_level,
+                        lookup_id,
+                    )
+                if "AuraRange" in halo:
+                    halo_item["range"] = halo["AuraRange"]
+                if "Camp" in halo:
+                    halo_item["camp"] = halo["Camp"]
+                if halo_item:
+                    aura_list.append(halo_item)
+            if aura_list:
+                buff_data["aura"] = aura_list
+
+        # 解析 DotDatas
+        dot_datas = buff_detail.get("DotDatas", [])
+        if dot_datas:
+            dot_list = []
+            for dot in dot_datas:
+                dot_item = {}
+                for key, value in dot.items():
+                    key_abbr = {
+                        "Type": "t",
+                        "AllowSkillIntensity": "asi",
+                        "Interval": "it",
+                        "Rate": "r",
+                        "Value": "v",
+                        "DamageType": "dt",
+                        "DamageTag": "dg",
+                        "EnableIcon": "ei",
+                        "Immediately": "im",
+                        "DefaultHealFX": "h",
+                        "Condition": "c",
+                        "DotDelay": "d",
+                    }.get(key, key)
+                    # 处理占位符
+                    values = self._process_placeholder(
+                        value,
+                        buff_id,
+                        max_level,
+                        grow_source,
+                    )
+
+                    dot_item[key_abbr] = values
+                if dot_item:
+                    dot_list.append(dot_item)
+            if dot_list:
+                # Dot 数据添加到 t 字段
+                if "dot" not in buff_data:
+                    buff_data["dot"] = dot_list
+
+        # 解析 LastTime
+        last_time = buff_detail.get("LastTime")
+        if last_time is not None:
+            buff_data["lt"] = last_time
+
+        return buff_data
+
+    def _process_skill_effects(self, skill_info, skill_id, max_level):
+        """处理技能特效解析
+
+        从技能的SkillEffectsList字段解析SkillEffects引用，
+        使用黑名单模式过滤Function，只保留需要的类型
+        解析Buff/RemoveBuff到buff字段，CreateSkillCreature和CreateDanmaku
+
+        返回格式: [{id: task_id, t: [{ba: "ATK_Char", rate: [1,2,3,...]}, {buff: [...]}, {cid: ...}, {dm: [...}] }]
+
+        Args:
+            skill_info: 单个技能数据
+            skill_id: 技能ID
+            max_level: 最大等级
+
+        Returns:
+            list: 解析后的技能特效数组
+        """
+        desc_values = skill_info.get("SkillDescValues", [])
+        if not desc_values:
+            return None
+
+        # 收集所有引用的SkillEffects ID和Buff ID
+        effect_ids = set()
+        buff_ids = set()
+        # 收集 e 字段中已处理的 Buff ID（用于去重）
+        buff_ids_in_e = set()
+        import re
+
+        for desc_value in desc_values:
+            if isinstance(desc_value, str):
+                # 查找所有 SkillEffects[id] 模式
+                matches = re.findall(r"SkillEffects\[(\d+)\]", desc_value)
+                effect_ids.update([int(m) for m in matches])
+
+                # 查找所有 Buff[id] 模式
+                buff_matches = re.findall(r"Buff\[(\d+)\]", desc_value)
+                buff_ids.update([int(m) for m in buff_matches])
+
+        if not effect_ids and not buff_ids:
+            return None
+
+        # 构建结果数组
+        effects_result = []
+
+        # 首先处理 SkillEffects，收集其中 AddBuff/RemoveBuff 的 buff_id
+        for task_id in effect_ids:
+            # 获取 SkillEffects 数据
+            effect_data = self.skill_effects_data.get(str(task_id))
+            if not effect_data:
+                continue
+
+            # 解析 TaskEffects
+            task_effects = effect_data.get("TaskEffects", [])
+            if not task_effects:
+                continue
+
+            # 为每个 task_effect 收集所有等级的数据
+            task_effects_result = []
+
+            for task_effect in task_effects:
+                # 检查 Function 是否在黑名单中
+                function_name = task_effect.get("Function", "")
+                if (
+                    not function_name
+                    or function_name in self.skill_effect_function_blacklist
+                ):
+                    continue
+
+                # 处理 AddBuff/RemoveBuff - 解析到 {fn,bid,t:[{k,v}]} 格式
+                if function_name in ["AddBuff", "RemoveBuff"]:
+                    buff_id = task_effect.get("BuffId", None)
+                    if buff_id is not None:
+                        # 解析 buff 详细数据
+                        buff_data = {}
+                        buff_id_value = (
+                            buff_id[0] if isinstance(buff_id, list) else buff_id
+                        )
+
+                        # 查找 buff 详情
+                        buff_id_value = (
+                            buff_id[0] if isinstance(buff_id, list) else buff_id
+                        )
+                        buff_detail = self.buff_data.get(str(buff_id_value))
+
+                        # 使用统一的函数解析 buff
+                        buff_data = self._parse_buff_detail(
+                            buff_id=buff_id,
+                            buff_detail=buff_detail,
+                            function_name=function_name,
+                            grow_source="SkillEffects",
+                            max_level=max_level,
+                            source_id=task_id,
+                        )
+
+                        if buff_data:
+                            task_effects_result.append(buff_data)
+                    continue
+
+                # 处理 CreateSkillCreature - 解析 CreatureId 并获取详细数据
+                if function_name == "CreateSkillCreature":
+                    creature_id = task_effect.get("CreatureId")
+                    if creature_id is not None:
+                        creature_data = {"fn": function_name, "cid": creature_id}
+
+                        # 从 SkillCreature.json 获取详细数据
+                        sc_data = self.skill_creature_data.get(str(creature_id))
+                        if sc_data:
+                            # 解析相关字段（跳过 BPPath 和其他内部字段）
+                            sc_field_abbr = {
+                                "Type": "tp",
+                                "LifeTime": "lt",
+                                "Radius": "r",
+                                "Height": "h",
+                                "AttackRange": "ar",
+                                "Speed": "sp",
+                                "Tags": "tg",
+                            }
+                            for field_name, field_value in sc_data.items():
+                                # 处理 ShapeInfo（重要数据）
+                                if field_name == "ShapeInfo" and isinstance(
+                                    field_value, dict
+                                ):
+                                    shape_info = {}
+                                    # ShapeInfo 包含 ShapeType 和具体尺寸数据
+                                    shape_type = field_value.get("ShapeType")
+                                    if shape_type:
+                                        shape_info["st"] = shape_type
+
+                                    # Sphere 类型
+                                    if "Radius" in field_value:
+                                        shape_info["r"] = field_value["Radius"]
+
+                                    # Box 类型
+                                    if "BoxHeight" in field_value:
+                                        shape_info["h"] = field_value["BoxHeight"]
+                                    if "BoxLength" in field_value:
+                                        shape_info["l"] = field_value["BoxLength"]
+                                    if "BoxWidth" in field_value:
+                                        shape_info["w"] = field_value["BoxWidth"]
+
+                                    # Capsule 类型
+                                    if "CapsuleRadius" in field_value:
+                                        shape_info["cr"] = field_value["CapsuleRadius"]
+                                    if "CapsuleHalfHeight" in field_value:
+                                        shape_info["ch"] = field_value[
+                                            "CapsuleHalfHeight"
+                                        ]
+
+                                    if shape_info:
+                                        creature_data["si"] = shape_info
+                                    continue
+
+                                # 处理其他字段
+                                if field_name in sc_field_abbr:
+                                    field_abbr = sc_field_abbr[field_name]
+                                    if field_value is not None and field_value != "":
+                                        if isinstance(field_value, (int, float)):
+                                            creature_data[field_abbr] = field_value
+                                        elif isinstance(field_value, list):
+                                            creature_data[field_abbr] = field_value
+                                        else:
+                                            creature_data[field_abbr] = str(field_value)
+
+                        # 处理 TaskEffects 中的其他字段
+                        for field_name, field_value in task_effect.items():
+                            if field_name == "Function":
+                                continue
+                            if field_name == "CreatureId":
+                                continue
+                            # 处理其他字段（BaseChar, Direction, Distance, Location, Rotation, UseBattlePointId）
+                            field_abbr = field_name[
+                                :2
+                            ].lower()  # 简单缩写：BaseChar->bc, Direction->dr, etc.
+                            if field_value is not None and field_value != "":
+                                if isinstance(field_value, (int, float)):
+                                    creature_data[field_abbr] = field_value
+                                elif isinstance(field_value, list):
+                                    creature_data[field_abbr] = field_value
+                                else:
+                                    creature_data[field_abbr] = str(field_value)
+
+                        if creature_data:
+                            task_effects_result.append(creature_data)
+                    continue
+
+                # 处理 CreateDanmaku - 解析 DanmakuTemplateId 并获取详细数据
+                if function_name == "CreateDanmaku":
+                    danmaku_data = {"fn": function_name}
+
+                    # 处理 TaskEffects 中的字段
+                    for field_name, field_value in task_effect.items():
+                        if field_name == "Function":
+                            continue
+                        if (
+                            field_name == "DanmakuTemplateId"
+                            and field_value is not None
+                        ):
+                            danmaku_data["dm"] = field_value
+                        elif field_name == "Duration" and field_value is not None:
+                            danmaku_data["lt"] = field_value
+                        elif field_value is not None and field_value != "":
+                            # 处理其他字段
+                            field_abbr = field_name[:2].lower()
+                            if isinstance(field_value, (int, float)):
+                                danmaku_data[field_abbr] = field_value
+                            else:
+                                danmaku_data[field_abbr] = str(field_value)
+
+                    if danmaku_data:
+                        task_effects_result.append(danmaku_data)
+                    continue
+
+                # 处理 ExecutePassiveFunction - inline 解析 PassiveEffect
+                if function_name == "ExecutePassiveFunction":
+                    passive_effect_id = task_effect.get("PassiveEffectId")
+                    if passive_effect_id is not None:
+                        # 获取 PassiveEffect 数据
+                        pe_data = self.passive_effect_data.get(str(passive_effect_id))
+                        if pe_data:
+                            pe_result = {}
+                            # 处理 Vars 字段
+                            vars_data = pe_data.get("Vars", {})
+                            if vars_data:
+                                vars_result = {}
+                                for var_name, var_value in vars_data.items():
+                                    val = self._process_placeholder(
+                                        var_value,
+                                        passive_effect_id,
+                                        max_level,
+                                        "PassiveEffect",
+                                    )
+                                    if val is not None:
+                                        vars_result[var_name] = val
+
+                                pe_result["pe"] = vars_result
+
+                            if pe_result:
+                                task_effects_result.append(pe_result)
+                    continue
+
+                # 其他Function类型：正常处理字段
+                effect_data_by_level = {}
+
+                for field_name, field_value in task_effect.items():
+                    # 获取字段缩写
+                    field_abbr = self.skill_effect_field_abbr.get(
+                        field_name, field_name
+                    )
+
+                    # 如果缩写为空字符串，跳过该字段
+                    if not field_abbr:
+                        continue
+                    # 处理占位符 #1, #2 等 - 收集所有等级的值
+                    val = self._process_placeholder(
+                        field_value, task_id, max_level, "SkillEffects"
+                    )
+                    if val is not None:
+                        if (
+                            val
+                            == "$Source:GetRootSource():GetFloat('Skill04TriggerRate')$"
+                        ):
+                            val = 0.5
+                        if (
+                            val
+                            == "$Source:GetRootSource():GetFloat('Xibi_Skill04_Rate')$"
+                        ):
+                            val = "近战触发"
+                        if (
+                            val
+                            == "$Source:GetFloat('LinenSkill02ShootRate')*Source:GetCurrentWeaponAttr('MultiShoot', 1)$"
+                        ):
+                            val = [
+                                1.27,
+                                1.41,
+                                1.55,
+                                1.69,
+                                1.83,
+                                1.97,
+                                2.11,
+                                2.25,
+                                2.39,
+                                2.53,
+                                2.67,
+                                2.81,
+                            ]
+                        effect_data_by_level[field_abbr] = val
+
+                if effect_data_by_level:
+                    task_effects_result.append(effect_data_by_level)
+
+            if task_effects_result:
+                effects_result.append({"id": task_id, "t": task_effects_result})
+
+        # 构建buff引用数组（存储在新的b字段中）
+        buffs_result = []
+
+        # 处理从 SkillDescValues 中收集的 Buff 引用
+        for buff_id in buff_ids:
+            # 跳过已在 e 字段中处理的 Buff ID（去重）
+            if buff_id in buff_ids_in_e:
+                continue
+
+            # 获取 Buff 数据
+            buff_detail = self.buff_data.get(str(buff_id))
+            if not buff_detail:
+                continue
+
+            # 使用统一的函数解析 buff
+            buff_data = self._parse_buff_detail(
+                buff_id=buff_id,
+                buff_detail=buff_detail,
+                function_name="AddBuff",
+                grow_source="Buff",
+                max_level=max_level,
+                source_id=None,
+            )
+
+            if buff_data:
+                buffs_result.append({"id": buff_id, "t": [buff_data]})
+
+        return {"e": effects_result, "b": buffs_result}
+
+    def _process_placeholder(self, field_value, passive_id, max_level, table):
+        """处理占位符替换
+
+        替换字段值中的占位符（如 #1, #2 等）为实际值
+
+        Args:
+            field_value: 包含占位符的字段值
+
+        Returns:
+            int|int[]: 替换占位符后的字段值
+        """
+        # 处理占位符 #1, #2 等
+        if isinstance(field_value, str) and field_value.startswith("#"):
+            placeholder = field_value
+            placeholder_match = re.match(r"#(\d+)", placeholder)
+            if placeholder_match:
+                param_index = int(placeholder_match.group(1))
+
+                # 收集所有等级的值
+                values = []
+                grow_data = self.skill_grow_data.get(table, {})
+                grow_entry = grow_data.get(str(passive_id))
+
+                if grow_entry and isinstance(grow_entry, list):
+                    for level in range(1, max_level + 1):
+                        level_index = level - 1
+                        if level_index < len(grow_entry):
+                            level_data = grow_entry[level_index]
+                            if isinstance(level_data, list) and len(level_data) > 0:
+                                param_index_zero = param_index - 1
+                                if 0 <= param_index_zero < len(level_data):
+                                    param_data = level_data[param_index_zero]
+                                    if isinstance(param_data, dict):
+                                        values.append(
+                                            param_data.get("Value", field_value)
+                                        )
+                                    else:
+                                        values.append(field_value)
+                                else:
+                                    values.append(field_value)
+                            else:
+                                values.append(field_value)
+                        else:
+                            values.append(field_value)
+
+                # 判断值是否全相同
+                if values:
+                    numeric_values = []
+                    for v in values:
+                        try:
+                            numeric_values.append(float(v))
+                        except (ValueError, TypeError):
+                            numeric_values.append(v)
+
+                    if all(isinstance(v, (int, float)) for v in numeric_values):
+                        all_same = all(
+                            abs(v - numeric_values[0]) < 0.0001 for v in numeric_values
+                        )
+                    else:
+                        all_same = all(v == numeric_values[0] for v in numeric_values)
+
+                    if all_same:
+                        return values[0]
+                    else:
+                        return values
+        else:
+            # 非占位符值，直接保存
+            if field_value is not None and field_value != "":
+                return field_value
+
+    def _process_passive_effects(self, skill_info, skill_id, max_level):
+        """处理被动技能特效解析
+
+        从技能的PassiveEffects字段解析PassiveEffect引用，
+        提取字段名并简化缩写后存储
+        处理占位符 #1, #2 等，使用技能成长数据填入
+
+        返回格式: [{id: passive_id, v: [{k,v}]}]
+
+        Args:
+            skill_info: 单个技能数据
+            skill_id: 技能ID
+            max_level: 最大等级
+
+        Returns:
+            list: 解析后的被动技能特效数组
+        """
+        passive_effects_list = skill_info.get("PassiveEffects")
+        if not passive_effects_list:
+            return None
+
+        # 构建结果数组
+        effects_result = []
+
+        for passive_id in passive_effects_list:
+            # 获取 PassiveEffect 数据
+            effect_data = self.passive_effect_data.get(str(passive_id))
+            if not effect_data:
+                continue
+
+            effect_data_by_level = {}
+
+            # 遍历所有字段并简化缩写
+            for field_name, field_value in effect_data.items():
+                # 获取字段缩写
+                field_abbr = self.passive_effect_field_abbr.get(field_name, field_name)
+
+                # 如果缩写为空，跳过
+                if not field_abbr:
+                    continue
+
+                # 处理 Vars 字段
+                if isinstance(field_value, dict) and field_name == "Vars":
+                    vars_result = {}
+                    for var_name, var_value in field_value.items():
+                        vars_result[var_name] = self._process_placeholder(
+                            var_value, passive_id, max_level, "PassiveEffect"
+                        )
+
+                    if vars_result:
+                        effect_data_by_level[field_abbr] = vars_result
+                    continue
+
+                # 处理普通字段
+                processed_value = self._process_placeholder(
+                    field_value, passive_id, max_level, "PassiveEffect"
+                )
+                if processed_value is not None:
+                    effect_data_by_level[field_abbr] = processed_value
+            if effect_data_by_level:
+                effects_result.append(effect_data_by_level)
+
+        return effects_result if effects_result else None
 
     def _get_skill_max_level(self, skill_id):
         """获取技能最大等级"""
