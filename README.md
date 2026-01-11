@@ -5,5 +5,8 @@ Repository containing the data for the game Duet Night Abyss.
 ## Usage
 
 ```sh
-./lua Examples/1001_CharVoice.lua
+# ./lua Examples/2001_Mod.lua
+python step1_convert.py
+python step2_translate.py
+python step3_output.py
 ```
