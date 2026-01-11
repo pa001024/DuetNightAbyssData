@@ -620,69 +620,91 @@
     "child": [
       {
         "id": 920302,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Firearm Feast"
       },
       {
         "id": 920304,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Guixu Ratchet"
       },
       {
         "id": 920402,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Silent Sower"
       },
       {
         "id": 920405,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Blast Artistry"
       },
       {
         "id": 920502,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Exiled Thunderwyrm"
       },
       {
         "id": 920504,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Daybreak Hymn"
       },
       {
         "id": 920507,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Submerged Serenade"
       },
       {
         "id": 920510,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Ephemeral Lumina"
       },
       {
         "id": 920509,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Dreamweaver's Feather"
       },
       {
         "id": 920602,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Arclight Apocalypses"
       },
       {
         "id": 920603,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Embla Inflorescence"
       }
     ]
   },
@@ -692,74 +714,98 @@
     "child": [
       {
         "id": 910102,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Shackle of Lonewolf"
       },
       {
         "id": 910104,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Ingenious Tactics"
       },
       {
         "id": 910201,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Siren's Kiss"
       },
       {
         "id": 910203,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Venial Sinscales"
       },
       {
         "id": 910204,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Elpides Abound"
       },
       {
         "id": 910301,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Punitive Inferno"
       },
       {
         "id": 910304,
-        "t": "Draft",
-        "c": 1
+        "t": "Weapon",
+        "c": 1,
+        "d": 1,
+        "n": "Eternal Farewell"
       },
       {
         "id": 910401,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Exiled Fangs"
       },
       {
         "id": 910501,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Undying Oneiros"
       },
       {
         "id": 910502,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Halcyon Gracefall"
       },
       {
         "id": 910601,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Momiji Itteki"
       },
       {
         "id": 920101,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 1000
+        "p": 1000,
+        "d": 1,
+        "n": "Entropic Singularity"
       }
     ]
   },
@@ -4868,19 +4914,19 @@
         "id": 32004,
         "t": "Mod",
         "c": 1,
-        "n": "Cerberus's Celerity"
+        "n": "Celerity"
       },
       {
         "id": 31502,
         "t": "Mod",
         "c": 1,
-        "n": "Feathered Serpent's{空格}Helido"
+        "n": "Helido"
       },
       {
         "id": 33201,
         "t": "Mod",
         "c": 1,
-        "n": "Fafnir's Quiver"
+        "n": "Quiver"
       }
     ]
   },
@@ -9316,7 +9362,7 @@
         "id": 10005,
         "t": "TitleFrame",
         "c": 1,
-        "n": "TitleFrame_10005"
+        "n": " Movement (Ⅰ)"
       }
     ]
   },
@@ -9340,7 +9386,7 @@
         "id": 10007,
         "t": "TitleFrame",
         "c": 1,
-        "n": "TitleFrame_10007"
+        "n": " Movement (Ⅲ)"
       }
     ]
   },
@@ -9496,7 +9542,7 @@
         "id": 10006,
         "t": "TitleFrame",
         "c": 1,
-        "n": "TitleFrame_10006"
+        "n": " Movement (Ⅱ)"
       }
     ]
   },
@@ -11061,13 +11107,13 @@
         "id": 530101,
         "t": "Skin",
         "c": 1,
-        "n": "Skin_530101"
+        "n": "Minuet Reverie"
       },
       {
         "id": 3010401,
         "t": "WeaponSkin",
         "c": 1,
-        "n": "WeaponSkin_3010401"
+        "n": "Midsummer Nocturne"
       },
       {
         "id": 11004,
@@ -11084,13 +11130,13 @@
         "id": 530101,
         "t": "Skin",
         "c": 1,
-        "n": "Skin_530101"
+        "n": "Minuet Reverie"
       },
       {
         "id": 3010401,
         "t": "WeaponSkin",
         "c": 1,
-        "n": "WeaponSkin_3010401"
+        "n": "Midsummer Nocturne"
       },
       {
         "id": 41012,
@@ -11102,25 +11148,25 @@
         "id": 10008,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10008"
+        "n": "Bowknot: Mint"
       },
       {
         "id": 10011,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10011"
+        "n": "Rose: Azure"
       },
       {
         "id": 10004,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10004"
+        "n": "Music Note: White Sakura"
       },
       {
         "id": 10014,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10014"
+        "n": "Wing: Azure"
       },
       {
         "id": 11004,
@@ -11137,13 +11183,13 @@
         "id": 510101,
         "t": "Skin",
         "c": 1,
-        "n": "Skin_510101"
+        "n": "Sunlit Gristmill"
       },
       {
         "id": 3010301,
         "t": "WeaponSkin",
         "c": 1,
-        "n": "WeaponSkin_3010301"
+        "n": "Sunrise Scherzo"
       },
       {
         "id": 11004,
@@ -11160,13 +11206,13 @@
         "id": 510101,
         "t": "Skin",
         "c": 1,
-        "n": "Skin_510101"
+        "n": "Sunlit Gristmill"
       },
       {
         "id": 3010301,
         "t": "WeaponSkin",
         "c": 1,
-        "n": "WeaponSkin_3010301"
+        "n": "Sunrise Scherzo"
       },
       {
         "id": 41015,
@@ -11178,25 +11224,25 @@
         "id": 10007,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10007"
+        "n": "Bowknot: Rose Red"
       },
       {
         "id": 10009,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10009"
+        "n": "Rose: Rose Red"
       },
       {
         "id": 10002,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10002"
+        "n": "Music Note: Gilt"
       },
       {
         "id": 10015,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10015"
+        "n": "Wing: Gilt"
       },
       {
         "id": 11004,
@@ -11213,13 +11259,13 @@
         "id": 210102,
         "t": "Skin",
         "c": 1,
-        "n": "Skin_210102"
+        "n": "Veils and Whispers"
       },
       {
         "id": 3010402,
         "t": "WeaponSkin",
         "c": 1,
-        "n": "WeaponSkin_3010402"
+        "n": "Tideborn Rhapsody"
       },
       {
         "id": 11004,
@@ -11236,13 +11282,13 @@
         "id": 210102,
         "t": "Skin",
         "c": 1,
-        "n": "Skin_210102"
+        "n": "Veils and Whispers"
       },
       {
         "id": 3010402,
         "t": "WeaponSkin",
         "c": 1,
-        "n": "WeaponSkin_3010402"
+        "n": "Tideborn Rhapsody"
       },
       {
         "id": 41016,
@@ -11254,25 +11300,25 @@
         "id": 10006,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10006"
+        "n": "Bowknot: Opaque White"
       },
       {
         "id": 10012,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10012"
+        "n": "Rose: Opaque White"
       },
       {
         "id": 10003,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10003"
+        "n": "Music Note: Opaque White"
       },
       {
         "id": 10016,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10016"
+        "n": "Wing: Opaque White"
       },
       {
         "id": 11004,
@@ -11295,25 +11341,25 @@
         "id": 10008,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10008"
+        "n": "Bowknot: Mint"
       },
       {
         "id": 10011,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10011"
+        "n": "Rose: Azure"
       },
       {
         "id": 10004,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10004"
+        "n": "Music Note: White Sakura"
       },
       {
         "id": 10014,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10014"
+        "n": "Wing: Azure"
       }
     ]
   },
@@ -11331,25 +11377,25 @@
         "id": 10007,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10007"
+        "n": "Bowknot: Rose Red"
       },
       {
         "id": 10009,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10009"
+        "n": "Rose: Rose Red"
       },
       {
         "id": 10002,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10002"
+        "n": "Music Note: Gilt"
       },
       {
         "id": 10015,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10015"
+        "n": "Wing: Gilt"
       }
     ]
   },
@@ -11367,25 +11413,25 @@
         "id": 10006,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10006"
+        "n": "Bowknot: Opaque White"
       },
       {
         "id": 10012,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10012"
+        "n": "Rose: Opaque White"
       },
       {
         "id": 10003,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10003"
+        "n": "Music Note: Opaque White"
       },
       {
         "id": 10016,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10016"
+        "n": "Wing: Opaque White"
       }
     ]
   },
@@ -11469,7 +11515,7 @@
         "id": 530101,
         "t": "Skin",
         "c": 1,
-        "n": "Skin_530101"
+        "n": "Minuet Reverie"
       },
       {
         "id": 11004,
@@ -11486,7 +11532,7 @@
         "id": 510101,
         "t": "Skin",
         "c": 1,
-        "n": "Skin_510101"
+        "n": "Sunlit Gristmill"
       },
       {
         "id": 11004,
@@ -11503,7 +11549,7 @@
         "id": 210102,
         "t": "Skin",
         "c": 1,
-        "n": "Skin_210102"
+        "n": "Veils and Whispers"
       },
       {
         "id": 11004,
@@ -11538,7 +11584,7 @@
         "id": 20001,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_20001"
+        "n": "Sage's Spectacles"
       }
     ]
   },
@@ -11562,7 +11608,7 @@
         "id": 40007,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_40007"
+        "n": "Hymn to the Wind"
       }
     ]
   },
@@ -11586,7 +11632,7 @@
         "id": 30008,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_30008"
+        "n": "Jade of Yin and Yang"
       }
     ]
   },
@@ -11610,7 +11656,7 @@
         "id": 10019,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_10019"
+        "n": "Mood: Rainbow"
       }
     ]
   },
@@ -11622,7 +11668,7 @@
         "id": 3010102,
         "t": "WeaponSkin",
         "c": 1,
-        "n": "WeaponSkin_3010102"
+        "n": "Stellar Blaze"
       }
     ]
   },
@@ -11634,7 +11680,7 @@
         "id": 3010202,
         "t": "WeaponSkin",
         "c": 1,
-        "n": "WeaponSkin_3010202"
+        "n": "Tough Love"
       }
     ]
   },
@@ -11646,7 +11692,7 @@
         "id": 3010201,
         "t": "WeaponSkin",
         "c": 1,
-        "n": "WeaponSkin_3010201"
+        "n": "The Backup Catch"
       }
     ]
   },
@@ -11658,7 +11704,7 @@
         "id": 3010101,
         "t": "WeaponSkin",
         "c": 1,
-        "n": "WeaponSkin_3010101"
+        "n": "Victory by Receipt"
       }
     ]
   },
@@ -11670,7 +11716,7 @@
         "id": 3010401,
         "t": "WeaponSkin",
         "c": 1,
-        "n": "WeaponSkin_3010401"
+        "n": "Midsummer Nocturne"
       },
       {
         "id": 11004,
@@ -11687,7 +11733,7 @@
         "id": 3010301,
         "t": "WeaponSkin",
         "c": 1,
-        "n": "WeaponSkin_3010301"
+        "n": "Sunrise Scherzo"
       },
       {
         "id": 11004,
@@ -11704,7 +11750,7 @@
         "id": 3010402,
         "t": "WeaponSkin",
         "c": 1,
-        "n": "WeaponSkin_3010402"
+        "n": "Tideborn Rhapsody"
       },
       {
         "id": 11004,
@@ -12117,25 +12163,25 @@
         "id": 530101,
         "t": "Skin",
         "c": 1,
-        "n": "Skin_530101"
+        "n": "Minuet Reverie"
       },
       {
         "id": 3010401,
         "t": "WeaponSkin",
         "c": 1,
-        "n": "WeaponSkin_3010401"
+        "n": "Midsummer Nocturne"
       },
       {
         "id": 10019,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_10019"
+        "n": "Mood: Rainbow"
       },
       {
         "id": 10008,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10008"
+        "n": "Bowknot: Mint"
       }
     ]
   },
@@ -12147,31 +12193,31 @@
         "id": 240101,
         "t": "Skin",
         "c": 1,
-        "n": "Skin_240101"
+        "n": "Tidal Repose"
       },
       {
         "id": 3010501,
         "t": "WeaponSkin",
         "c": 1,
-        "n": "WeaponSkin_3010501"
+        "n": "Fintastic Riptide"
       },
       {
         "id": 80002,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_80002"
+        "n": "Ripple Melody: Opaque White"
       },
       {
         "id": 10053,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_10053"
+        "n": "Midsummer Shades: Dark Jade"
       },
       {
         "id": 10024,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10024"
+        "n": "Slumberstar – Mint"
       }
     ]
   },
@@ -12267,13 +12313,13 @@
         "id": 16010010,
         "t": "Skin",
         "c": 1,
-        "n": "Skin_16010010"
+        "n": "Starry Hopes"
       },
       {
         "id": 16010110,
         "t": "Skin",
         "c": 1,
-        "n": "Skin_16010110"
+        "n": "Starry Hopes"
       }
     ]
   },
@@ -12405,13 +12451,13 @@
         "id": 16010011,
         "t": "Skin",
         "c": 1,
-        "n": "Skin_16010011"
+        "n": "Verdant Serenity"
       },
       {
         "id": 16010111,
         "t": "Skin",
         "c": 1,
-        "n": "Skin_16010111"
+        "n": "Verdant Serenity"
       }
     ]
   },
@@ -12489,25 +12535,25 @@
         "id": 10049,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_10049"
+        "n": "Frostar Halo"
       },
       {
         "id": 20041,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_20041"
+        "n": "Frostar Beard"
       },
       {
         "id": 30019,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_30019"
+        "n": "Frostar Snowman"
       },
       {
         "id": 40009,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_40009"
+        "n": "Frostar Wings"
       }
     ]
   },
@@ -25147,8 +25193,10 @@
       },
       {
         "id": 1014,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Sal Volatile Ⅰ"
       },
       {
         "id": 1002,
@@ -25214,22 +25262,28 @@
         "id": 102003,
         "t": "Mod",
         "c": 1,
-        "n": "Fenrir's Commanding Thrust"
+        "n": "Commanding Thrust"
       },
       {
         "id": 1050,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "D10 Die"
       },
       {
         "id": 1022,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Yum Treat"
       },
       {
         "id": 1023,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Yum-Yum Treat"
       },
       {
         "id": 3002,
@@ -25496,78 +25550,108 @@
       },
       {
         "id": 2011,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Galeweaver"
       },
       {
         "id": 2021,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Everbright Flame"
       },
       {
         "id": 2031,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Humectant"
       },
       {
         "id": 2041,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Stormfall Jade"
       },
       {
         "id": 2051,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Golden Floriated Diadem"
       },
       {
         "id": 2061,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Obsidian Key"
       },
       {
         "id": 4001,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Intermediate Weapon Component: Grip"
       },
       {
         "id": 4003,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Intermediate Weapon Component: Blade"
       },
       {
         "id": 4005,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Intermediate Weapon Component: Decoration"
       },
       {
         "id": 4007,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Intermediate Weapon Component: Barrel"
       },
       {
         "id": 4009,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Intermediate Weapon Component: Bolt"
       },
       {
         "id": 4011,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Intermediate Weapon Component: Frame"
       },
       {
         "id": 1019,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Sal Volatile Ⅱ"
       },
       {
         "id": 1020,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Cognizing Sal Volatile Ⅱ"
       },
       {
         "id": 1021,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Ammo Supply Chest Ⅱ"
       },
       {
         "id": 19002,
@@ -25655,23 +25739,31 @@
       },
       {
         "id": 310201,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Silver Emblem"
       },
       {
         "id": 310204,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Eye of Infinity"
       },
       {
         "id": 310207,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Processed Herb"
       },
       {
         "id": 310210,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Gleaming Precision Scope"
       },
       {
         "id": 31007002,
@@ -25717,13 +25809,17 @@
       },
       {
         "id": 1017,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Track-Shift Module"
       },
       {
         "id": 1018,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Weapon Track-Shift Module"
       }
     ]
   },
@@ -25877,63 +25973,87 @@
       },
       {
         "id": 2012,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Oceanifly"
       },
       {
         "id": 2022,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Fire-Tempered Shackles"
       },
       {
         "id": 2032,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Water Purifier"
       },
       {
         "id": 2042,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Golden Wool"
       },
       {
         "id": 2052,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Copy of Elysian Hymnal"
       },
       {
         "id": 2062,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Tome of the Noclunism Ritual"
       },
       {
         "id": 4002,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Advanced Weapon Component: Grip"
       },
       {
         "id": 4004,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Advanced Weapon Component: Blade"
       },
       {
         "id": 4006,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Advanced Weapon Component: Decoration"
       },
       {
         "id": 4008,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Advanced Weapon Component: Barrel"
       },
       {
         "id": 4010,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Advanced Weapon Component: Bolt"
       },
       {
         "id": 4012,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Advanced Weapon Component: Frame"
       },
       {
         "id": 201,
@@ -25991,23 +26111,31 @@
       },
       {
         "id": 310202,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Gilded Emblem"
       },
       {
         "id": 310205,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Crown of Enlightenment"
       },
       {
         "id": 310208,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Compound Potion"
       },
       {
         "id": 310211,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Gleaming Quiver"
       }
     ]
   },
@@ -26221,23 +26349,31 @@
       },
       {
         "id": 1017,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Track-Shift Module"
       },
       {
         "id": 1018,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Weapon Track-Shift Module"
       },
       {
         "id": 1003,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Serum Syringe"
       },
       {
         "id": 1004,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Filthoid Polymer"
       },
       {
         "id": 201,
@@ -26375,7 +26511,7 @@
         "id": 30003,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_30003"
+        "n": "Noctoyager"
       }
     ]
   },
@@ -26625,53 +26761,73 @@
       },
       {
         "id": 1001,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Sharpening Potion"
       },
       {
         "id": 1002,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Projectile"
       },
       {
         "id": 1005,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Weaponholder"
       },
       {
         "id": 1006,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Coolant"
       },
       {
         "id": 1007,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Gold Sand"
       },
       {
         "id": 1008,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Repulsive Crystal"
       },
       {
         "id": 1016,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Ammo Supply Chest Ⅰ"
       },
       {
         "id": 1052,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Commission Manual: Volume Ⅱ"
       },
       {
         "id": 1053,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Commission Manual: Volume Ⅲ"
       },
       {
         "id": 1054,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Commission Manual: Volume Ⅳ"
       }
     ]
   },
@@ -27817,7 +27973,7 @@
         "id": 4049,
         "t": "Pet",
         "c": 1,
-        "n": "Pet_4049"
+        "n": "Miraculous Cubolt"
       }
     ]
   },
@@ -29716,105 +29872,105 @@
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Pan's Volition"
+        "n": "Volition"
       },
       {
         "id": 31202,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Pan's Inspo"
+        "n": "Inspo"
       },
       {
         "id": 31203,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Pan's Spectrum"
+        "n": "Spectrum"
       },
       {
         "id": 31204,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Pan's Eternity"
+        "n": "Eternity"
       },
       {
         "id": 31216,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Pan's Inspo·Shards"
+        "n": "Inspo·Shards"
       },
       {
         "id": 31218,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Pan's Wings·Shards"
+        "n": "Wings·Shards"
       },
       {
         "id": 31301,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Siren's Wings·Inspo"
+        "n": "Wings·Inspo"
       },
       {
         "id": 32004,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Cerberus's Celerity"
+        "n": "Celerity"
       },
       {
         "id": 32005,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Cerberus's Threshold"
+        "n": "Threshold"
       },
       {
         "id": 33004,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Lilith's Celerity"
+        "n": "Celerity"
       },
       {
         "id": 33005,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Lilith's Foldover"
+        "n": "Foldover"
       },
       {
         "id": 33201,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Quiver"
+        "n": "Quiver"
       },
       {
         "id": 33202,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Arrow"
+        "n": "Arrow"
       },
       {
         "id": 33203,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Dexterity"
+        "n": "Dexterity"
       },
       {
         "id": 33204,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Abundance"
+        "n": "Abundance"
       }
     ]
   },
@@ -29827,98 +29983,98 @@
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Griffin's Nihility·Volition"
+        "n": "Nihility·Volition"
       },
       {
         "id": 31322,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Griffin's Seawave·Volition"
+        "n": "Seawave·Volition"
       },
       {
         "id": 31323,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Griffin's Inferno·Volition"
+        "n": "Inferno·Volition"
       },
       {
         "id": 31324,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Griffin's Thunder·Volition"
+        "n": "Thunder·Volition"
       },
       {
         "id": 31325,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Griffin's Squall·Volition"
+        "n": "Squall·Volition"
       },
       {
         "id": 31326,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Griffin's Skylume·Volition"
+        "n": "Skylume·Volition"
       },
       {
         "id": 32301,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fenrir's Utmost"
+        "n": "Utmost"
       },
       {
         "id": 32302,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fenrir's Kismet"
+        "n": "Kismet"
       },
       {
         "id": 33311,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Lingering Might"
+        "n": "Lingering Might"
       },
       {
         "id": 33321,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Tyranny"
+        "n": "Tyranny"
       },
       {
         "id": 33322,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Decline"
+        "n": "Decline"
       },
       {
         "id": 33331,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Hunt"
+        "n": "Hunt"
       },
       {
         "id": 33332,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Carefree"
+        "n": "Carefree"
       },
       {
         "id": 33411,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Coercion"
+        "n": "Coercion"
       }
     ]
   },
@@ -29931,238 +30087,238 @@
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Pan's Eternity·Abnegation"
+        "n": "Eternity·Abnegation"
       },
       {
         "id": 41214,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Pan's Spectrum·Omen"
+        "n": "Spectrum·Omen"
       },
       {
         "id": 41311,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Sphinx's Onslaught"
+        "n": "Onslaught"
       },
       {
         "id": 41312,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Sphinx's Intrepidity"
+        "n": "Intrepidity"
       },
       {
         "id": 41313,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Sphinx's Duel"
+        "n": "Duel"
       },
       {
         "id": 41314,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Sphinx's Trapped"
+        "n": "Trapped"
       },
       {
         "id": 41315,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Sphinx's Surge"
+        "n": "Surge"
       },
       {
         "id": 41316,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Sphinx's Relentless"
+        "n": "Relentless"
       },
       {
         "id": 41801,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Jormungand's Gleaming Sword"
+        "n": "Gleaming Sword"
       },
       {
         "id": 41802,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Jormungand's Gleaming Polearm"
+        "n": "Gleaming Polearm"
       },
       {
         "id": 41803,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Jormungand's Gleaming Greatsword"
+        "n": "Gleaming Greatsword"
       },
       {
         "id": 41804,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Jormungand's Gleaming Dual Blades"
+        "n": "Gleaming Dual Blades"
       },
       {
         "id": 41805,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Jormungand's Gleaming Whipblade"
+        "n": "Gleaming Whipblade"
       },
       {
         "id": 41806,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Jormungand's Gleaming Katana"
+        "n": "Gleaming Katana"
       },
       {
         "id": 41807,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Jormungand's Gleaming Pistol"
+        "n": "Gleaming Pistol"
       },
       {
         "id": 41808,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Jormungand's Gleaming Dual Pistols"
+        "n": "Gleaming Dual Pistols"
       },
       {
         "id": 41809,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Jormungand's Gleaming Grenade Launcher"
+        "n": "Gleaming Grenade Launcher"
       },
       {
         "id": 41810,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Jormungand's Gleaming Shotgun"
+        "n": "Gleaming Shotgun"
       },
       {
         "id": 41811,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Jormungand's Gleaming Assault Rifle"
+        "n": "Gleaming Assault Rifle"
       },
       {
         "id": 41812,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Jormungand's Gleaming Bow"
+        "n": "Gleaming Bow"
       },
       {
         "id": 42311,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fenrir's Brutality"
+        "n": "Brutality"
       },
       {
         "id": 42312,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fenrir's Fervor"
+        "n": "Fervor"
       },
       {
         "id": 42321,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fenrir's Vigilance"
+        "n": "Vigilance"
       },
       {
         "id": 42322,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fenrir's Patrol"
+        "n": "Patrol"
       },
       {
         "id": 43341,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Frugality"
+        "n": "Frugality"
       },
       {
         "id": 43401,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Furious Blast"
+        "n": "Furious Blast"
       },
       {
         "id": 43402,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Furious Beam"
+        "n": "Furious Beam"
       },
       {
         "id": 43403,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Focus"
+        "n": "Focus"
       },
       {
         "id": 43404,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Speed Boost"
+        "n": "Speed Boost"
       },
       {
         "id": 43405,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Stall"
+        "n": "Stall"
       },
       {
         "id": 43601,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Lilith's Focus·Mass"
+        "n": "Focus·Mass"
       },
       {
         "id": 43602,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Lilith's Celerity·Cunning"
+        "n": "Celerity·Cunning"
       },
       {
         "id": 43603,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Lilith's Quiver·Loadout"
+        "n": "Quiver·Loadout"
       },
       {
         "id": 43604,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Lilith's Rain of Quivers"
+        "n": "Rain of Quivers"
       }
     ]
   },
@@ -30175,238 +30331,238 @@
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Griffin's Nihility·Wildfire"
+        "n": "Nihility·Wildfire"
       },
       {
         "id": 41322,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Griffin's Seawave·Wildfire"
+        "n": "Seawave·Wildfire"
       },
       {
         "id": 41323,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Griffin's Inferno·Wildfire"
+        "n": "Inferno·Wildfire"
       },
       {
         "id": 41324,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Griffin's Thunder·Wildfire"
+        "n": "Thunder·Wildfire"
       },
       {
         "id": 41325,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Griffin's Squall·Wildfire"
+        "n": "Squall·Wildfire"
       },
       {
         "id": 41326,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Griffin's Skylume·Wildfire"
+        "n": "Skylume·Wildfire"
       },
       {
         "id": 41331,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Griffin's Nihility·Midnight Sun"
+        "n": "Nihility·Midnight Sun"
       },
       {
         "id": 41332,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Griffin's Seawave·Midnight Sun"
+        "n": "Seawave·Midnight Sun"
       },
       {
         "id": 41333,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Griffin's Inferno·Midnight Sun"
+        "n": "Inferno·Midnight Sun"
       },
       {
         "id": 41334,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Griffin's Thunder·Midnight Sun"
+        "n": "Thunder·Midnight Sun"
       },
       {
         "id": 41335,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Griffin's Squall·Midnight Sun"
+        "n": "Squall·Midnight Sun"
       },
       {
         "id": 41336,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Griffin's Skylume·Midnight Sun"
+        "n": "Skylume·Midnight Sun"
       },
       {
         "id": 41911,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Arbiter's Illusionary Sacrifice"
+        "n": "Illusionary Sacrifice"
       },
       {
         "id": 41921,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Bahamut's Misty Veil"
+        "n": "Misty Veil"
       },
       {
         "id": 41922,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Bahamut's Frosty Torrent"
+        "n": "Frosty Torrent"
       },
       {
         "id": 41931,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Ifrit's Devouring Wildfire"
+        "n": "Devouring Wildfire"
       },
       {
         "id": 41941,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Summanus's Ravaging Thunder"
+        "n": "Ravaging Thunder"
       },
       {
         "id": 41951,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Hastur's Whispering Zephyr"
+        "n": "Whispering Zephyr"
       },
       {
         "id": 41952,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Hastur's Turbulent Cyclone"
+        "n": "Turbulent Cyclone"
       },
       {
         "id": 41962,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Helios's Gleam & Glimmer"
+        "n": "Gleam & Glimmer"
       },
       {
         "id": 41961,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Helios's Prismatic Neon"
+        "n": "Prismatic Neon"
       },
       {
         "id": 42421,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fenrir's Afterimage"
+        "n": "Afterimage"
       },
       {
         "id": 42501,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fenrir's Filthoid Hunt"
+        "n": "Filthoid Hunt"
       },
       {
         "id": 42502,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fenrir's Legion Hunt"
+        "n": "Legion Hunt"
       },
       {
         "id": 42503,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fenrir's Divine Herald Hunt"
+        "n": "Divine Herald Hunt"
       },
       {
         "id": 42504,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fenrir's Forsakens Hunt"
+        "n": "Forsakens Hunt"
       },
       {
         "id": 42511,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fenrir's Pierce"
+        "n": "Pierce"
       },
       {
         "id": 42512,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fenrir's Severance"
+        "n": "Severance"
       },
       {
         "id": 43501,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Filthoid Hunt"
+        "n": "Filthoid Hunt"
       },
       {
         "id": 43502,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Legion Hunt"
+        "n": "Legion Hunt"
       },
       {
         "id": 43503,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Divine Herald Hunt"
+        "n": "Divine Herald Hunt"
       },
       {
         "id": 43504,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Forsakens Hunt"
+        "n": "Forsakens Hunt"
       },
       {
         "id": 43511,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Pierce"
+        "n": "Pierce"
       },
       {
         "id": 43512,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Fafnir's Severance"
+        "n": "Severance"
       }
     ]
   },
@@ -37634,183 +37790,243 @@
     "child": [
       {
         "id": 151411,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Morale"
       },
       {
         "id": 151412,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Resolve"
       },
       {
         "id": 151413,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Huntdown"
       },
       {
         "id": 151414,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Serenity"
       },
       {
         "id": 151415,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Uplift"
       },
       {
         "id": 151421,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Morale"
       },
       {
         "id": 151422,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Resolve"
       },
       {
         "id": 151423,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Huntdown"
       },
       {
         "id": 151424,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Serenity"
       },
       {
         "id": 151425,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Uplift"
       },
       {
         "id": 151431,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Morale"
       },
       {
         "id": 151432,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Resolve"
       },
       {
         "id": 151433,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Huntdown"
       },
       {
         "id": 151434,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Serenity"
       },
       {
         "id": 151435,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Uplift"
       },
       {
         "id": 151441,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Morale"
       },
       {
         "id": 151442,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Resolve"
       },
       {
         "id": 151443,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Huntdown"
       },
       {
         "id": 151444,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Serenity"
       },
       {
         "id": 151445,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Uplift"
       },
       {
         "id": 151451,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Morale"
       },
       {
         "id": 151452,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Resolve"
       },
       {
         "id": 151453,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Huntdown"
       },
       {
         "id": 151454,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Serenity"
       },
       {
         "id": 151455,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Uplift"
       },
       {
         "id": 151461,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Morale"
       },
       {
         "id": 151462,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Resolve"
       },
       {
         "id": 151463,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Huntdown"
       },
       {
         "id": 151464,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Serenity"
       },
       {
         "id": 151465,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 3
+        "p": 3,
+        "d": 1,
+        "n": "Typhon's Prime·Uplift"
       }
     ]
   },
@@ -40551,7 +40767,7 @@
         "id": 31215,
         "t": "Mod",
         "c": 1,
-        "n": "Pan's Inspo·Elapse"
+        "n": "Inspo·Elapse"
       },
       {
         "id": 1001,
@@ -40581,7 +40797,7 @@
         "id": 31217,
         "t": "Mod",
         "c": 1,
-        "n": "Pan's Wings·Elapse"
+        "n": "Wings·Elapse"
       },
       {
         "id": 2012,
@@ -40755,7 +40971,7 @@
         "id": 10002,
         "t": "TitleFrame",
         "c": 1,
-        "n": "TitleFrame_10002"
+        "n": "Duet Night Abyss Ⅰ"
       }
     ]
   },
@@ -40869,7 +41085,7 @@
         "id": 31512,
         "t": "Mod",
         "c": 1,
-        "n": "Feathered Serpent's{空格}Prance"
+        "n": "Prance"
       },
       {
         "id": 1001,
@@ -41253,7 +41469,7 @@
         "id": 10003,
         "t": "TitleFrame",
         "c": 1,
-        "n": "TitleFrame_10003"
+        "n": "Duet Night Abyss Ⅱ"
       }
     ]
   },
@@ -41751,7 +41967,7 @@
         "id": 10004,
         "t": "TitleFrame",
         "c": 1,
-        "n": "TitleFrame_10004"
+        "n": " Duet Night Abyss (Ⅲ)"
       }
     ]
   },
@@ -42063,7 +42279,7 @@
         "id": 4031,
         "t": "Pet",
         "c": 1,
-        "n": "Pet_4031"
+        "n": "Miraculous Zippyro"
       }
     ]
   },
@@ -42075,7 +42291,7 @@
         "id": 4032,
         "t": "Pet",
         "c": 1,
-        "n": "Pet_4032"
+        "n": "Ardent Zippyro"
       }
     ]
   },
@@ -42087,7 +42303,7 @@
         "id": 4033,
         "t": "Pet",
         "c": 1,
-        "n": "Pet_4033"
+        "n": "Shiny Zippyro"
       }
     ]
   },
@@ -42099,7 +42315,7 @@
         "id": 4021,
         "t": "Pet",
         "c": 1,
-        "n": "Pet_4021"
+        "n": "Miraculous Dripplet"
       }
     ]
   },
@@ -42111,7 +42327,7 @@
         "id": 4022,
         "t": "Pet",
         "c": 1,
-        "n": "Pet_4022"
+        "n": "Ardent Dripplet"
       }
     ]
   },
@@ -42123,7 +42339,7 @@
         "id": 4023,
         "t": "Pet",
         "c": 1,
-        "n": "Pet_4023"
+        "n": "Shiny Dripplet"
       }
     ]
   },
@@ -42135,7 +42351,7 @@
         "id": 4011,
         "t": "Pet",
         "c": 1,
-        "n": "Pet_4011"
+        "n": "Miraculous Equinex"
       }
     ]
   },
@@ -42147,7 +42363,7 @@
         "id": 4012,
         "t": "Pet",
         "c": 1,
-        "n": "Pet_4012"
+        "n": "Ardent Equinex"
       }
     ]
   },
@@ -42159,7 +42375,7 @@
         "id": 4013,
         "t": "Pet",
         "c": 1,
-        "n": "Pet_4013"
+        "n": "Shiny Equinex"
       }
     ]
   },
@@ -42171,7 +42387,7 @@
         "id": 4061,
         "t": "Pet",
         "c": 1,
-        "n": "Pet_4061"
+        "n": "Miraculous Lumi"
       }
     ]
   },
@@ -42183,7 +42399,7 @@
         "id": 4062,
         "t": "Pet",
         "c": 1,
-        "n": "Pet_4062"
+        "n": "Ardent Lumi"
       }
     ]
   },
@@ -42195,7 +42411,7 @@
         "id": 4063,
         "t": "Pet",
         "c": 1,
-        "n": "Pet_4063"
+        "n": "Shiny Lumi"
       }
     ]
   },
@@ -42207,7 +42423,7 @@
         "id": 4051,
         "t": "Pet",
         "c": 1,
-        "n": "Pet_4051"
+        "n": "Miraculous Shroomie"
       }
     ]
   },
@@ -42219,7 +42435,7 @@
         "id": 4052,
         "t": "Pet",
         "c": 1,
-        "n": "Pet_4052"
+        "n": "Ardent Shroomie"
       }
     ]
   },
@@ -42231,7 +42447,7 @@
         "id": 4053,
         "t": "Pet",
         "c": 1,
-        "n": "Pet_4053"
+        "n": "Shiny Shroomie"
       }
     ]
   },
@@ -42249,7 +42465,7 @@
         "id": 10014,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_10014"
+        "n": "Dragon of Fantasy - Liuliu"
       },
       {
         "id": 101,
@@ -42297,7 +42513,7 @@
         "id": 10014,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_10014"
+        "n": "Dragon of Fantasy - Liuliu"
       },
       {
         "id": 101,
@@ -42333,7 +42549,7 @@
         "id": 30015,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_30015"
+        "n": "狩月之证·WeGame"
       }
     ]
   },
@@ -42351,7 +42567,7 @@
         "id": 10014,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_10014"
+        "n": "Dragon of Fantasy - Liuliu"
       },
       {
         "id": 101,
@@ -42387,7 +42603,7 @@
         "id": 30013,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_30013"
+        "n": "狩月之证·TapTap"
       }
     ]
   },
@@ -42405,7 +42621,7 @@
         "id": 10014,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_10014"
+        "n": "Dragon of Fantasy - Liuliu"
       },
       {
         "id": 101,
@@ -42441,7 +42657,7 @@
         "id": 30010,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_30010"
+        "n": "狩月之证·bilibili"
       }
     ]
   },
@@ -42459,7 +42675,7 @@
         "id": 10014,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_10014"
+        "n": "Dragon of Fantasy - Liuliu"
       },
       {
         "id": 101,
@@ -42495,7 +42711,7 @@
         "id": 30011,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_30011"
+        "n": "狩月之证·好游快爆"
       }
     ]
   },
@@ -42513,7 +42729,7 @@
         "id": 10014,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_10014"
+        "n": "Dragon of Fantasy - Liuliu"
       },
       {
         "id": 101,
@@ -42549,7 +42765,7 @@
         "id": 30014,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_30014"
+        "n": "狩月之证·Lenovo"
       }
     ]
   },
@@ -42567,7 +42783,7 @@
         "id": 10014,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_10014"
+        "n": "Dragon of Fantasy - Liuliu"
       },
       {
         "id": 101,
@@ -42603,7 +42819,7 @@
         "id": 30012,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_30012"
+        "n": "狩月之证·抖音"
       }
     ]
   },
@@ -42615,7 +42831,7 @@
         "id": 10001,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "HeadSculpture_10001"
+        "n": "Portrait: Memory"
       }
     ]
   },
@@ -42627,7 +42843,7 @@
         "id": 10002,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "HeadSculpture_10002"
+        "n": "Portrait: The Huaxu Apothecary"
       }
     ]
   },
@@ -42639,7 +42855,7 @@
         "id": 10003,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "HeadSculpture_10003"
+        "n": "Portrait: The Seven Virtues - Patience"
       }
     ]
   },
@@ -42651,7 +42867,7 @@
         "id": 10004,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "HeadSculpture_10004"
+        "n": "Portrait: The Warden"
       }
     ]
   },
@@ -42663,7 +42879,7 @@
         "id": 10006,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "HeadSculpture_10006"
+        "n": "Portrait: The Sloppy Gentleman"
       }
     ]
   },
@@ -42675,7 +42891,7 @@
         "id": 10007,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "HeadSculpture_10007"
+        "n": "Portrait: The Self-Denying"
       }
     ]
   },
@@ -42687,7 +42903,7 @@
         "id": 10008,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "HeadSculpture_10008"
+        "n": "Portrait: The Sower"
       }
     ]
   },
@@ -42699,7 +42915,7 @@
         "id": 10009,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "HeadSculpture_10009"
+        "n": "Portrait: The Love Seeker"
       }
     ]
   },
@@ -42711,7 +42927,7 @@
         "id": 10010,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "HeadSculpture_10010"
+        "n": "Portrait: The Commissary"
       }
     ]
   },
@@ -42723,7 +42939,7 @@
         "id": 10011,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "HeadSculpture_10011"
+        "n": "Portrait: The Guilty"
       }
     ]
   },
@@ -42735,7 +42951,7 @@
         "id": 10001,
         "t": "HeadFrame",
         "c": 1,
-        "n": "HeadFrame_10001"
+        "n": "Old Photograph"
       }
     ]
   },
@@ -42747,7 +42963,7 @@
         "id": 10002,
         "t": "HeadFrame",
         "c": 1,
-        "n": "HeadFrame_10002"
+        "n": "Obsidian"
       }
     ]
   },
@@ -42759,7 +42975,7 @@
         "id": 10003,
         "t": "HeadFrame",
         "c": 1,
-        "n": "HeadFrame_10003"
+        "n": "Envelope – Dark Jade"
       }
     ]
   },
@@ -42771,7 +42987,7 @@
         "id": 10004,
         "t": "HeadFrame",
         "c": 1,
-        "n": "HeadFrame_10004"
+        "n": "Iron Thorns"
       }
     ]
   },
@@ -42783,7 +42999,7 @@
         "id": 10005,
         "t": "HeadFrame",
         "c": 1,
-        "n": "HeadFrame_10005"
+        "n": "Silent Censer"
       }
     ]
   },
@@ -42795,7 +43011,7 @@
         "id": 10006,
         "t": "HeadFrame",
         "c": 1,
-        "n": "HeadFrame_10006"
+        "n": "Envelope – Violet"
       }
     ]
   },
@@ -42807,7 +43023,7 @@
         "id": 10007,
         "t": "HeadFrame",
         "c": 1,
-        "n": "HeadFrame_10007"
+        "n": "Public Impression: Wisdom"
       }
     ]
   },
@@ -42819,7 +43035,7 @@
         "id": 10008,
         "t": "HeadFrame",
         "c": 1,
-        "n": "HeadFrame_10008"
+        "n": "Public Impression: Morality"
       }
     ]
   },
@@ -42831,7 +43047,7 @@
         "id": 10009,
         "t": "HeadFrame",
         "c": 1,
-        "n": "HeadFrame_10009"
+        "n": "Public Impression: Benefit"
       }
     ]
   },
@@ -42843,7 +43059,7 @@
         "id": 10010,
         "t": "HeadFrame",
         "c": 1,
-        "n": "HeadFrame_10010"
+        "n": "Public Impression: Empathy"
       }
     ]
   },
@@ -42855,7 +43071,7 @@
         "id": 10011,
         "t": "HeadFrame",
         "c": 1,
-        "n": "HeadFrame_10011"
+        "n": "Butterfly: Emerald Green"
       }
     ]
   },
@@ -42867,7 +43083,7 @@
         "id": 10012,
         "t": "HeadFrame",
         "c": 1,
-        "n": "HeadFrame_10012"
+        "n": "Butterfly: Celeste"
       }
     ]
   },
@@ -42879,7 +43095,7 @@
         "id": 10013,
         "t": "HeadFrame",
         "c": 1,
-        "n": "HeadFrame_10013"
+        "n": "Public Impression: Chaos"
       }
     ]
   },
@@ -42891,7 +43107,7 @@
         "id": 10014,
         "t": "HeadFrame",
         "c": 1,
-        "n": "HeadFrame_10014"
+        "n": "Timeworn Film"
       }
     ]
   },
@@ -42903,7 +43119,7 @@
         "id": 10015,
         "t": "HeadFrame",
         "c": 1,
-        "n": "HeadFrame_10015"
+        "n": "The Umbral Forest"
       }
     ]
   },
@@ -42915,7 +43131,7 @@
         "id": 10016,
         "t": "HeadFrame",
         "c": 1,
-        "n": "HeadFrame_10016"
+        "n": "White Quill"
       }
     ]
   },
@@ -42927,7 +43143,7 @@
         "id": 10017,
         "t": "HeadFrame",
         "c": 1,
-        "n": "HeadFrame_10017"
+        "n": "Helixed Fate"
       }
     ]
   },
@@ -42939,7 +43155,7 @@
         "id": 10018,
         "t": "HeadFrame",
         "c": 1,
-        "n": "HeadFrame_10018"
+        "n": "Rippling Tender"
       }
     ]
   },
@@ -42951,7 +43167,7 @@
         "id": 10019,
         "t": "HeadFrame",
         "c": 1,
-        "n": "HeadFrame_10019"
+        "n": "Inebriate Roar"
       }
     ]
   },
@@ -42963,7 +43179,7 @@
         "id": 210102,
         "t": "Skin",
         "c": 1,
-        "n": "Skin_210102"
+        "n": "Veils and Whispers"
       }
     ]
   },
@@ -42975,7 +43191,7 @@
         "id": 510101,
         "t": "Skin",
         "c": 1,
-        "n": "Skin_510101"
+        "n": "Sunlit Gristmill"
       }
     ]
   },
@@ -42987,7 +43203,7 @@
         "id": 530101,
         "t": "Skin",
         "c": 1,
-        "n": "Skin_530101"
+        "n": "Minuet Reverie"
       }
     ]
   },
@@ -42999,7 +43215,7 @@
         "id": 3010101,
         "t": "WeaponSkin",
         "c": 1,
-        "n": "WeaponSkin_3010101"
+        "n": "Victory by Receipt"
       }
     ]
   },
@@ -43011,7 +43227,7 @@
         "id": 3010102,
         "t": "WeaponSkin",
         "c": 1,
-        "n": "WeaponSkin_3010102"
+        "n": "Stellar Blaze"
       }
     ]
   },
@@ -43023,7 +43239,7 @@
         "id": 3010201,
         "t": "WeaponSkin",
         "c": 1,
-        "n": "WeaponSkin_3010201"
+        "n": "The Backup Catch"
       }
     ]
   },
@@ -43035,7 +43251,7 @@
         "id": 3010202,
         "t": "WeaponSkin",
         "c": 1,
-        "n": "WeaponSkin_3010202"
+        "n": "Tough Love"
       }
     ]
   },
@@ -43047,7 +43263,7 @@
         "id": 10001,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10001"
+        "n": "Music Note: Dark Jade"
       }
     ]
   },
@@ -43059,7 +43275,7 @@
         "id": 10002,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "WeaponAccessory_10002"
+        "n": "Music Note: Gilt"
       }
     ]
   },
@@ -43077,7 +43293,7 @@
         "id": 70001,
         "t": "CharAccessory",
         "c": 1,
-        "n": "CharAccessory_70001"
+        "n": "Flow of Grace"
       },
       {
         "id": 208,
@@ -43173,7 +43389,7 @@
         "id": 10005,
         "t": "HeadFrame",
         "c": 1,
-        "n": "HeadFrame_10005"
+        "n": "Silent Censer"
       },
       {
         "id": 1001,
@@ -44808,14 +45024,14 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Phoenix's Blaze·Wings"
+        "n": "Blaze·Wings"
       },
       {
         "id": 21006,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Phoenix's Nirvana·Blessing"
+        "n": "Nirvana·Blessing"
       }
     ]
   },
@@ -44828,35 +45044,35 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Impetus·Focus"
+        "n": "Impetus·Focus"
       },
       {
         "id": 22008,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Rage·Trammel"
+        "n": "Rage·Trammel"
       },
       {
         "id": 22111,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Edge·Trammel"
+        "n": "Edge·Trammel"
       },
       {
         "id": 22112,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Penetration·Trammel"
+        "n": "Penetration·Trammel"
       },
       {
         "id": 22113,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Crusher·Trammel"
+        "n": "Crusher·Trammel"
       }
     ]
   },
@@ -44869,35 +45085,35 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Impetus·Focus"
+        "n": "Impetus·Focus"
       },
       {
         "id": 23008,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Rage·Trammel"
+        "n": "Rage·Trammel"
       },
       {
         "id": 23111,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Edge·Trammel"
+        "n": "Edge·Trammel"
       },
       {
         "id": 23112,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Penetration·Trammel"
+        "n": "Penetration·Trammel"
       },
       {
         "id": 23113,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Crusher·Trammel"
+        "n": "Crusher·Trammel"
       }
     ]
   },
@@ -44910,49 +45126,49 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Pan's Volition"
+        "n": "Volition"
       },
       {
         "id": 31202,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Pan's Inspo"
+        "n": "Inspo"
       },
       {
         "id": 31203,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Pan's Spectrum"
+        "n": "Spectrum"
       },
       {
         "id": 31204,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Pan's Eternity"
+        "n": "Eternity"
       },
       {
         "id": 31301,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Siren's Wings·Inspo"
+        "n": "Wings·Inspo"
       },
       {
         "id": 31521,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Feathered Serpent's{空格}Recovery"
+        "n": "Recovery"
       },
       {
         "id": 31531,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Feathered Serpent's{空格}Sidestep"
+        "n": "Sidestep"
       }
     ]
   },
@@ -44965,49 +45181,49 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Celerity"
+        "n": "Celerity"
       },
       {
         "id": 32005,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Threshold"
+        "n": "Threshold"
       },
       {
         "id": 32101,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Edge"
+        "n": "Edge"
       },
       {
         "id": 32102,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 32103,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Crusher"
+        "n": "Crusher"
       },
       {
         "id": 32201,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fenrir's Continuity"
+        "n": "Continuity"
       },
       {
         "id": 32202,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fenrir's Fortune"
+        "n": "Fortune"
       }
     ]
   },
@@ -45020,70 +45236,70 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Celerity"
+        "n": "Celerity"
       },
       {
         "id": 33005,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Foldover"
+        "n": "Foldover"
       },
       {
         "id": 33101,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Edge"
+        "n": "Edge"
       },
       {
         "id": 33102,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 33103,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Crusher"
+        "n": "Crusher"
       },
       {
         "id": 33201,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fafnir's Quiver"
+        "n": "Quiver"
       },
       {
         "id": 33202,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fafnir's Arrow"
+        "n": "Arrow"
       },
       {
         "id": 33203,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fafnir's Dexterity"
+        "n": "Dexterity"
       },
       {
         "id": 33204,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fafnir's Abundance"
+        "n": "Abundance"
       },
       {
         "id": 33411,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fafnir's Coercion"
+        "n": "Coercion"
       }
     ]
   },
@@ -45095,31 +45311,31 @@
         "id": 11001,
         "t": "Mod",
         "c": 1,
-        "n": "Phoenix's Blaze"
+        "n": "Blaze"
       },
       {
         "id": 11002,
         "t": "Mod",
         "c": 1,
-        "n": "Phoenix's Nirvana"
+        "n": "Nirvana"
       },
       {
         "id": 11003,
         "t": "Mod",
         "c": 1,
-        "n": "Phoenix's Blessing"
+        "n": "Blessing"
       },
       {
         "id": 11004,
         "t": "Mod",
         "c": 1,
-        "n": "Phoenix's Wings"
+        "n": "Wings"
       },
       {
         "id": 11007,
         "t": "Mod",
         "c": 1,
-        "n": "Phoenix's Standfast"
+        "n": "Standfast"
       }
     ]
   },
@@ -45131,43 +45347,43 @@
         "id": 12001,
         "t": "Mod",
         "c": 1,
-        "n": "Cerberus's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 12002,
         "t": "Mod",
         "c": 1,
-        "n": "Cerberus's Focus"
+        "n": "Focus"
       },
       {
         "id": 12003,
         "t": "Mod",
         "c": 1,
-        "n": "Cerberus's Rage"
+        "n": "Rage"
       },
       {
         "id": 12006,
         "t": "Mod",
         "c": 1,
-        "n": "Cerberus's Trammel"
+        "n": "Trammel"
       },
       {
         "id": 12101,
         "t": "Mod",
         "c": 1,
-        "n": "Cerberus's Edge"
+        "n": "Edge"
       },
       {
         "id": 12102,
         "t": "Mod",
         "c": 1,
-        "n": "Cerberus's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 12103,
         "t": "Mod",
         "c": 1,
-        "n": "Cerberus's Crusher"
+        "n": "Crusher"
       }
     ]
   },
@@ -45179,43 +45395,43 @@
         "id": 13001,
         "t": "Mod",
         "c": 1,
-        "n": "Lilith's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 13002,
         "t": "Mod",
         "c": 1,
-        "n": "Lilith's Focus"
+        "n": "Focus"
       },
       {
         "id": 13003,
         "t": "Mod",
         "c": 1,
-        "n": "Lilith's Rage"
+        "n": "Rage"
       },
       {
         "id": 13006,
         "t": "Mod",
         "c": 1,
-        "n": "Lilith's Trammel"
+        "n": "Trammel"
       },
       {
         "id": 13101,
         "t": "Mod",
         "c": 1,
-        "n": "Lilith's Edge"
+        "n": "Edge"
       },
       {
         "id": 13102,
         "t": "Mod",
         "c": 1,
-        "n": "Lilith's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 13103,
         "t": "Mod",
         "c": 1,
-        "n": "Lilith's Crusher"
+        "n": "Crusher"
       }
     ]
   },
@@ -45228,35 +45444,35 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Phoenix's Blaze"
+        "n": "Blaze"
       },
       {
         "id": 41002,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Phoenix's Nirvana"
+        "n": "Nirvana"
       },
       {
         "id": 41003,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Phoenix's Blessing"
+        "n": "Blessing"
       },
       {
         "id": 41004,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Phoenix's Wings"
+        "n": "Wings"
       },
       {
         "id": 41007,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Phoenix's Standfast"
+        "n": "Standfast"
       }
     ]
   },
@@ -45269,63 +45485,63 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 42002,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Focus"
+        "n": "Focus"
       },
       {
         "id": 42003,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Rage"
+        "n": "Rage"
       },
       {
         "id": 42006,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Trammel"
+        "n": "Trammel"
       },
       {
         "id": 42401,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fenrir's Dropshot"
+        "n": "Dropshot"
       },
       {
         "id": 42411,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fenrir's Swift Dropshot"
+        "n": "Swift Dropshot"
       },
       {
         "id": 42412,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fenrir's Swift Momentum"
+        "n": "Swift Momentum"
       },
       {
         "id": 42501,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fenrir's Filthoid Hunt"
+        "n": "Filthoid Hunt"
       },
       {
         "id": 42502,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fenrir's Legion Hunt"
+        "n": "Legion Hunt"
       }
     ]
   },
@@ -45338,56 +45554,56 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 43002,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Focus"
+        "n": "Focus"
       },
       {
         "id": 43003,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Rage"
+        "n": "Rage"
       },
       {
         "id": 43006,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Trammel"
+        "n": "Trammel"
       },
       {
         "id": 43401,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fafnir's Furious Blast"
+        "n": "Furious Blast"
       },
       {
         "id": 43402,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fafnir's Furious Beam"
+        "n": "Furious Beam"
       },
       {
         "id": 43501,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fafnir's Filthoid Hunt"
+        "n": "Filthoid Hunt"
       },
       {
         "id": 43502,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fafnir's Legion Hunt"
+        "n": "Legion Hunt"
       }
     ]
   },
@@ -45410,45 +45626,59 @@
     "child": [
       {
         "id": 910102,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 2
+        "p": 2,
+        "d": 1,
+        "n": "Shackle of Lonewolf"
       },
       {
         "id": 910104,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 2
+        "p": 2,
+        "d": 1,
+        "n": "Ingenious Tactics"
       },
       {
         "id": 910201,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 2
+        "p": 2,
+        "d": 1,
+        "n": "Siren's Kiss"
       },
       {
         "id": 910203,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 2
+        "p": 2,
+        "d": 1,
+        "n": "Venial Sinscales"
       },
       {
         "id": 910204,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 2
+        "p": 2,
+        "d": 1,
+        "n": "Elpides Abound"
       },
       {
         "id": 910301,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 2
+        "p": 2,
+        "d": 1,
+        "n": "Punitive Inferno"
       },
       {
         "id": 910304,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 2
+        "p": 2,
+        "d": 1,
+        "n": "Eternal Farewell"
       }
     ]
   },
@@ -45458,45 +45688,59 @@
     "child": [
       {
         "id": 910401,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 2
+        "p": 2,
+        "d": 1,
+        "n": "Exiled Fangs"
       },
       {
         "id": 910501,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 2
+        "p": 2,
+        "d": 1,
+        "n": "Undying Oneiros"
       },
       {
         "id": 910502,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 2
+        "p": 2,
+        "d": 1,
+        "n": "Halcyon Gracefall"
       },
       {
         "id": 910601,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 2
+        "p": 2,
+        "d": 1,
+        "n": "Momiji Itteki"
       },
       {
         "id": 920101,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 2
+        "p": 2,
+        "d": 1,
+        "n": "Entropic Singularity"
       },
       {
         "id": 920203,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 2
+        "p": 2,
+        "d": 1,
+        "n": "Bluecurrent Pulse"
       },
       {
         "id": 920301,
-        "t": "Draft",
+        "t": "Weapon",
         "c": 1,
-        "p": 2
+        "p": 2,
+        "d": 1,
+        "n": "Stellar Finality"
       }
     ]
   },
@@ -45506,15 +45750,19 @@
     "child": [
       {
         "id": 1017,
-        "t": "Draft",
+        "t": "Resource",
         "c": 1,
-        "p": 100
+        "p": 100,
+        "d": 1,
+        "n": "Track-Shift Module"
       },
       {
         "id": 1018,
-        "t": "Draft",
+        "t": "Resource",
         "c": 1,
-        "p": 100
+        "p": 100,
+        "d": 1,
+        "n": "Weapon Track-Shift Module"
       }
     ]
   },
@@ -45526,31 +45774,31 @@
         "id": 14001,
         "t": "Mod",
         "c": 1,
-        "n": "Eldritch Cerberus's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 14002,
         "t": "Mod",
         "c": 1,
-        "n": "Eldritch Cerberus's Focus"
+        "n": "Focus"
       },
       {
         "id": 14003,
         "t": "Mod",
         "c": 1,
-        "n": "Eldritch Cerberus's Rage"
+        "n": "Rage"
       },
       {
         "id": 14004,
         "t": "Mod",
         "c": 1,
-        "n": "Eldritch Cerberus's Celerity"
+        "n": "Celerity"
       },
       {
         "id": 14006,
         "t": "Mod",
         "c": 1,
-        "n": "Eldritch Cerberus's Trammel"
+        "n": "Trammel"
       }
     ]
   },
@@ -45562,31 +45810,31 @@
         "id": 15001,
         "t": "Mod",
         "c": 1,
-        "n": "Eldritch Lilith's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 15002,
         "t": "Mod",
         "c": 1,
-        "n": "Eldritch Lilith's Focus"
+        "n": "Focus"
       },
       {
         "id": 15003,
         "t": "Mod",
         "c": 1,
-        "n": "Eldritch Lilith's Rage"
+        "n": "Rage"
       },
       {
         "id": 15004,
         "t": "Mod",
         "c": 1,
-        "n": "Eldritch Lilith's Celerity"
+        "n": "Celerity"
       },
       {
         "id": 15006,
         "t": "Mod",
         "c": 1,
-        "n": "Eldritch Lilith's Trammel"
+        "n": "Trammel"
       }
     ]
   },
@@ -46844,21 +47092,27 @@
     "child": [
       {
         "id": 151311,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 10
+        "p": 10,
+        "d": 1,
+        "n": "Sphinx's Onslaught"
       },
       {
         "id": 151801,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Jormungand's Gleaming Sword"
       },
       {
         "id": 151807,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Jormungand's Gleaming Pistol"
       }
     ]
   },
@@ -46868,21 +47122,27 @@
     "child": [
       {
         "id": 151312,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 10
+        "p": 10,
+        "d": 1,
+        "n": "Sphinx's Intrepidity"
       },
       {
         "id": 151802,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Jormungand's Gleaming Polearm"
       },
       {
         "id": 151808,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Jormungand's Gleaming Dual Pistols"
       }
     ]
   },
@@ -46892,21 +47152,27 @@
     "child": [
       {
         "id": 151313,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 10
+        "p": 10,
+        "d": 1,
+        "n": "Sphinx's Duel"
       },
       {
         "id": 151803,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Jormungand's Gleaming Greatsword"
       },
       {
         "id": 151809,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Jormungand's Gleaming Grenade Launcher"
       }
     ]
   },
@@ -46916,21 +47182,27 @@
     "child": [
       {
         "id": 151314,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 10
+        "p": 10,
+        "d": 1,
+        "n": "Sphinx's Trapped"
       },
       {
         "id": 151804,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Jormungand's Gleaming Dual Blades"
       },
       {
         "id": 151810,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Jormungand's Gleaming Shotgun"
       }
     ]
   },
@@ -46940,21 +47212,27 @@
     "child": [
       {
         "id": 151315,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 10
+        "p": 10,
+        "d": 1,
+        "n": "Sphinx's Surge"
       },
       {
         "id": 151805,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Jormungand's Gleaming Whipblade"
       },
       {
         "id": 151811,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Jormungand's Gleaming Assault Rifle"
       }
     ]
   },
@@ -46964,21 +47242,27 @@
     "child": [
       {
         "id": 151316,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 10
+        "p": 10,
+        "d": 1,
+        "n": "Sphinx's Relentless"
       },
       {
         "id": 151806,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Jormungand's Gleaming Katana"
       },
       {
         "id": 151812,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Jormungand's Gleaming Bow"
       }
     ]
   },
@@ -46988,27 +47272,35 @@
     "child": [
       {
         "id": 151301,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 10
+        "p": 10,
+        "d": 1,
+        "n": "Siren's Wings·Inspo"
       },
       {
         "id": 151002,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Phoenix's Nirvana"
       },
       {
         "id": 151003,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Phoenix's Blessing"
       },
       {
         "id": 151007,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Phoenix's Standfast"
       }
     ]
   },
@@ -47018,27 +47310,35 @@
     "child": [
       {
         "id": 156151,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 10
+        "p": 10,
+        "d": 1,
+        "n": "Changeling'sVolition"
       },
       {
         "id": 151002,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Phoenix's Nirvana"
       },
       {
         "id": 151003,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Phoenix's Blessing"
       },
       {
         "id": 151007,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Phoenix's Standfast"
       }
     ]
   },
@@ -47048,27 +47348,35 @@
     "child": [
       {
         "id": 156153,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 10
+        "p": 10,
+        "d": 1,
+        "n": "Changeling'sResolve"
       },
       {
         "id": 151002,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Phoenix's Nirvana"
       },
       {
         "id": 151003,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Phoenix's Blessing"
       },
       {
         "id": 151007,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Phoenix's Standfast"
       }
     ]
   },
@@ -47078,27 +47386,35 @@
     "child": [
       {
         "id": 156152,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 10
+        "p": 10,
+        "d": 1,
+        "n": "Siren's Wings·Inspo·Volition"
       },
       {
         "id": 151002,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Phoenix's Nirvana"
       },
       {
         "id": 151003,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Phoenix's Blessing"
       },
       {
         "id": 151007,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Phoenix's Standfast"
       }
     ]
   },
@@ -47108,27 +47424,35 @@
     "child": [
       {
         "id": 156154,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 10
+        "p": 10,
+        "d": 1,
+        "n": "Siren's Wings·Inspo·Resolve"
       },
       {
         "id": 151002,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Phoenix's Nirvana"
       },
       {
         "id": 151003,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Phoenix's Blessing"
       },
       {
         "id": 151007,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 30
+        "p": 30,
+        "d": 1,
+        "n": "Phoenix's Standfast"
       }
     ]
   },
@@ -47141,35 +47465,35 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Phoenix's Blaze"
+        "n": "Blaze"
       },
       {
         "id": 11002,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Phoenix's Nirvana"
+        "n": "Nirvana"
       },
       {
         "id": 11003,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Phoenix's Blessing"
+        "n": "Blessing"
       },
       {
         "id": 11004,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Phoenix's Wings"
+        "n": "Wings"
       },
       {
         "id": 11007,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Phoenix's Standfast"
+        "n": "Standfast"
       }
     ]
   },
@@ -47182,49 +47506,49 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 12002,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Focus"
+        "n": "Focus"
       },
       {
         "id": 12003,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Rage"
+        "n": "Rage"
       },
       {
         "id": 12006,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Trammel"
+        "n": "Trammel"
       },
       {
         "id": 12101,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Edge"
+        "n": "Edge"
       },
       {
         "id": 12102,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 12103,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Crusher"
+        "n": "Crusher"
       }
     ]
   },
@@ -47237,49 +47561,49 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 13002,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Focus"
+        "n": "Focus"
       },
       {
         "id": 13003,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Rage"
+        "n": "Rage"
       },
       {
         "id": 13006,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Trammel"
+        "n": "Trammel"
       },
       {
         "id": 13101,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Edge"
+        "n": "Edge"
       },
       {
         "id": 13102,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 13103,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Crusher"
+        "n": "Crusher"
       }
     ]
   },
@@ -47292,14 +47616,14 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Phoenix's Blaze·Wings"
+        "n": "Blaze·Wings"
       },
       {
         "id": 21006,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Phoenix's Nirvana·Blessing"
+        "n": "Nirvana·Blessing"
       }
     ]
   },
@@ -47312,98 +47636,98 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Impetus·Focus"
+        "n": "Impetus·Focus"
       },
       {
         "id": 22008,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Rage·Trammel"
+        "n": "Rage·Trammel"
       },
       {
         "id": 22111,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Edge·Trammel"
+        "n": "Edge·Trammel"
       },
       {
         "id": 22112,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Penetration·Trammel"
+        "n": "Penetration·Trammel"
       },
       {
         "id": 22113,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Crusher·Trammel"
+        "n": "Crusher·Trammel"
       },
       {
         "id": 24001,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 24002,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Focus"
+        "n": "Focus"
       },
       {
         "id": 24003,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Rage"
+        "n": "Rage"
       },
       {
         "id": 24004,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Celerity"
+        "n": "Celerity"
       },
       {
         "id": 24005,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Threshold"
+        "n": "Threshold"
       },
       {
         "id": 24006,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Trammel"
+        "n": "Trammel"
       },
       {
         "id": 24101,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Edge"
+        "n": "Edge"
       },
       {
         "id": 24102,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 24103,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Crusher"
+        "n": "Crusher"
       }
     ]
   },
@@ -47416,98 +47740,98 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Impetus·Focus"
+        "n": "Impetus·Focus"
       },
       {
         "id": 23008,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Rage·Trammel"
+        "n": "Rage·Trammel"
       },
       {
         "id": 23111,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Edge·Trammel"
+        "n": "Edge·Trammel"
       },
       {
         "id": 23112,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Penetration·Trammel"
+        "n": "Penetration·Trammel"
       },
       {
         "id": 23113,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Crusher·Trammel"
+        "n": "Crusher·Trammel"
       },
       {
         "id": 25001,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 25002,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Focus"
+        "n": "Focus"
       },
       {
         "id": 25003,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Rage"
+        "n": "Rage"
       },
       {
         "id": 25004,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Celerity"
+        "n": "Celerity"
       },
       {
         "id": 25005,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Foldover"
+        "n": "Foldover"
       },
       {
         "id": 25006,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Trammel"
+        "n": "Trammel"
       },
       {
         "id": 25101,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Edge"
+        "n": "Edge"
       },
       {
         "id": 25102,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 25103,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Crusher"
+        "n": "Crusher"
       }
     ]
   },
@@ -47520,28 +47844,28 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Pan's Volition"
+        "n": "Volition"
       },
       {
         "id": 31202,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Pan's Inspo"
+        "n": "Inspo"
       },
       {
         "id": 31203,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Pan's Spectrum"
+        "n": "Spectrum"
       },
       {
         "id": 31204,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Pan's Eternity"
+        "n": "Eternity"
       }
     ]
   },
@@ -47554,98 +47878,98 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Celerity"
+        "n": "Celerity"
       },
       {
         "id": 32005,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Threshold"
+        "n": "Threshold"
       },
       {
         "id": 32101,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Edge"
+        "n": "Edge"
       },
       {
         "id": 32102,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 32103,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Crusher"
+        "n": "Crusher"
       },
       {
         "id": 34001,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 34002,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Focus"
+        "n": "Focus"
       },
       {
         "id": 34003,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Rage"
+        "n": "Rage"
       },
       {
         "id": 34004,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Celerity"
+        "n": "Celerity"
       },
       {
         "id": 34005,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Threshold"
+        "n": "Threshold"
       },
       {
         "id": 34006,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Trammel"
+        "n": "Trammel"
       },
       {
         "id": 34101,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Edge"
+        "n": "Edge"
       },
       {
         "id": 34102,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 34103,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Crusher"
+        "n": "Crusher"
       }
     ]
   },
@@ -47658,112 +47982,112 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Celerity"
+        "n": "Celerity"
       },
       {
         "id": 33005,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Foldover"
+        "n": "Foldover"
       },
       {
         "id": 33101,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Edge"
+        "n": "Edge"
       },
       {
         "id": 33102,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 33103,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Crusher"
+        "n": "Crusher"
       },
       {
         "id": 33201,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fafnir's Quiver"
+        "n": "Quiver"
       },
       {
         "id": 33203,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fafnir's Dexterity"
+        "n": "Dexterity"
       },
       {
         "id": 35001,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 35002,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Focus"
+        "n": "Focus"
       },
       {
         "id": 35003,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Rage"
+        "n": "Rage"
       },
       {
         "id": 35004,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Celerity"
+        "n": "Celerity"
       },
       {
         "id": 35005,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Foldover"
+        "n": "Foldover"
       },
       {
         "id": 35006,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Trammel"
+        "n": "Trammel"
       },
       {
         "id": 35101,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Edge"
+        "n": "Edge"
       },
       {
         "id": 35102,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 35103,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Crusher"
+        "n": "Crusher"
       }
     ]
   },
@@ -47776,42 +48100,42 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Griffin's Nihility·Volition"
+        "n": "Nihility·Volition"
       },
       {
         "id": 31322,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Griffin's Seawave·Volition"
+        "n": "Seawave·Volition"
       },
       {
         "id": 31323,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Griffin's Inferno·Volition"
+        "n": "Inferno·Volition"
       },
       {
         "id": 31324,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Griffin's Thunder·Volition"
+        "n": "Thunder·Volition"
       },
       {
         "id": 31325,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Griffin's Squall·Volition"
+        "n": "Squall·Volition"
       },
       {
         "id": 31326,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Griffin's Skylume·Volition"
+        "n": "Skylume·Volition"
       }
     ]
   },
@@ -47824,14 +48148,14 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fenrir's Utmost"
+        "n": "Utmost"
       },
       {
         "id": 32302,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fenrir's Kismet"
+        "n": "Kismet"
       }
     ]
   },
@@ -47844,28 +48168,28 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fafnir's Arrow"
+        "n": "Arrow"
       },
       {
         "id": 33204,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fafnir's Abundance"
+        "n": "Abundance"
       },
       {
         "id": 33331,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fafnir's Hunt"
+        "n": "Hunt"
       },
       {
         "id": 33411,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fafnir's Coercion"
+        "n": "Coercion"
       }
     ]
   },
@@ -47878,35 +48202,35 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Phoenix's Blaze"
+        "n": "Blaze"
       },
       {
         "id": 41002,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Phoenix's Nirvana"
+        "n": "Nirvana"
       },
       {
         "id": 41003,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Phoenix's Blessing"
+        "n": "Blessing"
       },
       {
         "id": 41004,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Phoenix's Wings"
+        "n": "Wings"
       },
       {
         "id": 41007,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Phoenix's Standfast"
+        "n": "Standfast"
       }
     ]
   },
@@ -47919,119 +48243,119 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 42002,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Focus"
+        "n": "Focus"
       },
       {
         "id": 42003,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Rage"
+        "n": "Rage"
       },
       {
         "id": 42006,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Cerberus's Trammel"
+        "n": "Trammel"
       },
       {
         "id": 42203,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fenrir's Continuity·Trammel"
+        "n": "Continuity·Trammel"
       },
       {
         "id": 42401,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fenrir's Dropshot"
+        "n": "Dropshot"
       },
       {
         "id": 42411,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fenrir's Swift Dropshot"
+        "n": "Swift Dropshot"
       },
       {
         "id": 42412,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fenrir's Swift Momentum"
+        "n": "Swift Momentum"
       },
       {
         "id": 44001,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 44002,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Focus"
+        "n": "Focus"
       },
       {
         "id": 44003,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Rage"
+        "n": "Rage"
       },
       {
         "id": 44004,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Celerity"
+        "n": "Celerity"
       },
       {
         "id": 44005,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Threshold"
+        "n": "Threshold"
       },
       {
         "id": 44006,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Trammel"
+        "n": "Trammel"
       },
       {
         "id": 44101,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Edge"
+        "n": "Edge"
       },
       {
         "id": 44102,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 44103,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Cerberus's Crusher"
+        "n": "Crusher"
       }
     ]
   },
@@ -48044,126 +48368,126 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 43002,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Focus"
+        "n": "Focus"
       },
       {
         "id": 43003,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Rage"
+        "n": "Rage"
       },
       {
         "id": 43006,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Trammel"
+        "n": "Trammel"
       },
       {
         "id": 43008,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Rage·Trammel"
+        "n": "Rage·Trammel"
       },
       {
         "id": 43123,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Lilith's Crusher·Quiver"
+        "n": "Crusher·Quiver"
       },
       {
         "id": 43301,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fafnir's Loadout"
+        "n": "Loadout"
       },
       {
         "id": 43401,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fafnir's Furious Blast"
+        "n": "Furious Blast"
       },
       {
         "id": 43402,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fafnir's Furious Beam"
+        "n": "Furious Beam"
       },
       {
         "id": 45001,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 45002,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Focus"
+        "n": "Focus"
       },
       {
         "id": 45003,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Rage"
+        "n": "Rage"
       },
       {
         "id": 45004,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Celerity"
+        "n": "Celerity"
       },
       {
         "id": 45005,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Foldover"
+        "n": "Foldover"
       },
       {
         "id": 45006,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Trammel"
+        "n": "Trammel"
       },
       {
         "id": 45101,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Edge"
+        "n": "Edge"
       },
       {
         "id": 45102,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 45103,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Eldritch Lilith's Crusher"
+        "n": "Crusher"
       }
     ]
   },
@@ -48176,56 +48500,56 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Arbiter's Illusionary Sacrifice"
+        "n": "Illusionary Sacrifice"
       },
       {
         "id": 41921,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Bahamut's Misty Veil"
+        "n": "Misty Veil"
       },
       {
         "id": 41922,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Bahamut's Frosty Torrent"
+        "n": "Frosty Torrent"
       },
       {
         "id": 41931,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Ifrit's Devouring Wildfire"
+        "n": "Devouring Wildfire"
       },
       {
         "id": 41941,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Summanus's Ravaging Thunder"
+        "n": "Ravaging Thunder"
       },
       {
         "id": 41951,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Hastur's Whispering Zephyr"
+        "n": "Whispering Zephyr"
       },
       {
         "id": 41952,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Hastur's Turbulent Cyclone"
+        "n": "Turbulent Cyclone"
       },
       {
         "id": 41961,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Helios's Prismatic Neon"
+        "n": "Prismatic Neon"
       }
     ]
   },
@@ -48238,21 +48562,21 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fenrir's Brutality"
+        "n": "Brutality"
       },
       {
         "id": 42501,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fenrir's Filthoid Hunt"
+        "n": "Filthoid Hunt"
       },
       {
         "id": 42502,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fenrir's Legion Hunt"
+        "n": "Legion Hunt"
       }
     ]
   },
@@ -48265,21 +48589,21 @@
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fafnir's Frugality"
+        "n": "Frugality"
       },
       {
         "id": 43501,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fafnir's Filthoid Hunt"
+        "n": "Filthoid Hunt"
       },
       {
         "id": 43502,
         "t": "Mod",
         "c": 1,
         "p": 100,
-        "n": "Fafnir's Legion Hunt"
+        "n": "Legion Hunt"
       }
     ]
   },
@@ -48393,8 +48717,10 @@
     "child": [
       {
         "id": 154001,
-        "t": "Draft",
-        "c": 1
+        "t": "Mod",
+        "c": 1,
+        "d": 1,
+        "n": "Eldritch Cerberus's Impetus"
       }
     ]
   },
@@ -48404,8 +48730,10 @@
     "child": [
       {
         "id": 154002,
-        "t": "Draft",
-        "c": 1
+        "t": "Mod",
+        "c": 1,
+        "d": 1,
+        "n": "Eldritch Cerberus's Focus"
       }
     ]
   },
@@ -48415,8 +48743,10 @@
     "child": [
       {
         "id": 154003,
-        "t": "Draft",
-        "c": 1
+        "t": "Mod",
+        "c": 1,
+        "d": 1,
+        "n": "Eldritch Cerberus's Rage"
       }
     ]
   },
@@ -48426,8 +48756,10 @@
     "child": [
       {
         "id": 154004,
-        "t": "Draft",
-        "c": 1
+        "t": "Mod",
+        "c": 1,
+        "d": 1,
+        "n": "Eldritch Cerberus's Celerity"
       }
     ]
   },
@@ -48437,8 +48769,10 @@
     "child": [
       {
         "id": 154005,
-        "t": "Draft",
-        "c": 1
+        "t": "Mod",
+        "c": 1,
+        "d": 1,
+        "n": "Eldritch Cerberus's Threshold"
       }
     ]
   },
@@ -48448,8 +48782,10 @@
     "child": [
       {
         "id": 154006,
-        "t": "Draft",
-        "c": 1
+        "t": "Mod",
+        "c": 1,
+        "d": 1,
+        "n": "Eldritch Cerberus's Trammel"
       }
     ]
   },
@@ -48459,8 +48795,10 @@
     "child": [
       {
         "id": 154101,
-        "t": "Draft",
-        "c": 1
+        "t": "Mod",
+        "c": 1,
+        "d": 1,
+        "n": "Eldritch Cerberus's Edge"
       }
     ]
   },
@@ -48470,8 +48808,10 @@
     "child": [
       {
         "id": 154102,
-        "t": "Draft",
-        "c": 1
+        "t": "Mod",
+        "c": 1,
+        "d": 1,
+        "n": "Eldritch Cerberus's Penetration"
       }
     ]
   },
@@ -48481,8 +48821,10 @@
     "child": [
       {
         "id": 154103,
-        "t": "Draft",
-        "c": 1
+        "t": "Mod",
+        "c": 1,
+        "d": 1,
+        "n": "Eldritch Cerberus's Crusher"
       }
     ]
   },
@@ -48492,8 +48834,10 @@
     "child": [
       {
         "id": 155001,
-        "t": "Draft",
-        "c": 1
+        "t": "Mod",
+        "c": 1,
+        "d": 1,
+        "n": "Eldritch Lilith's Impetus"
       }
     ]
   },
@@ -48503,8 +48847,10 @@
     "child": [
       {
         "id": 155002,
-        "t": "Draft",
-        "c": 1
+        "t": "Mod",
+        "c": 1,
+        "d": 1,
+        "n": "Eldritch Lilith's Focus"
       }
     ]
   },
@@ -48514,8 +48860,10 @@
     "child": [
       {
         "id": 155003,
-        "t": "Draft",
-        "c": 1
+        "t": "Mod",
+        "c": 1,
+        "d": 1,
+        "n": "Eldritch Lilith's Rage"
       }
     ]
   },
@@ -48525,8 +48873,10 @@
     "child": [
       {
         "id": 155004,
-        "t": "Draft",
-        "c": 1
+        "t": "Mod",
+        "c": 1,
+        "d": 1,
+        "n": "Eldritch Lilith's Celerity"
       }
     ]
   },
@@ -48536,8 +48886,10 @@
     "child": [
       {
         "id": 155005,
-        "t": "Draft",
-        "c": 1
+        "t": "Mod",
+        "c": 1,
+        "d": 1,
+        "n": "Eldritch Lilith's Foldover"
       }
     ]
   },
@@ -48547,8 +48899,10 @@
     "child": [
       {
         "id": 155006,
-        "t": "Draft",
-        "c": 1
+        "t": "Mod",
+        "c": 1,
+        "d": 1,
+        "n": "Eldritch Lilith's Trammel"
       }
     ]
   },
@@ -48558,8 +48912,10 @@
     "child": [
       {
         "id": 155101,
-        "t": "Draft",
-        "c": 1
+        "t": "Mod",
+        "c": 1,
+        "d": 1,
+        "n": "Eldritch Lilith's Edge"
       }
     ]
   },
@@ -48569,8 +48925,10 @@
     "child": [
       {
         "id": 155102,
-        "t": "Draft",
-        "c": 1
+        "t": "Mod",
+        "c": 1,
+        "d": 1,
+        "n": "Eldritch Lilith's Penetration"
       }
     ]
   },
@@ -48580,8 +48938,10 @@
     "child": [
       {
         "id": 155103,
-        "t": "Draft",
-        "c": 1
+        "t": "Mod",
+        "c": 1,
+        "d": 1,
+        "n": "Eldritch Lilith's Crusher"
       }
     ]
   },
@@ -50047,33 +50407,45 @@
     "child": [
       {
         "id": 4001,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Intermediate Weapon Component: Grip"
       },
       {
         "id": 4003,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Intermediate Weapon Component: Blade"
       },
       {
         "id": 4005,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Intermediate Weapon Component: Decoration"
       },
       {
         "id": 4007,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Intermediate Weapon Component: Barrel"
       },
       {
         "id": 4009,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Intermediate Weapon Component: Bolt"
       },
       {
         "id": 4011,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Intermediate Weapon Component: Frame"
       }
     ]
   },
@@ -50083,33 +50455,45 @@
     "child": [
       {
         "id": 4002,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Advanced Weapon Component: Grip"
       },
       {
         "id": 4004,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Advanced Weapon Component: Blade"
       },
       {
         "id": 4006,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Advanced Weapon Component: Decoration"
       },
       {
         "id": 4008,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Advanced Weapon Component: Barrel"
       },
       {
         "id": 4010,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Advanced Weapon Component: Bolt"
       },
       {
         "id": 4012,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Advanced Weapon Component: Frame"
       }
     ]
   },
@@ -50119,33 +50503,45 @@
     "child": [
       {
         "id": 2011,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Galeweaver"
       },
       {
         "id": 2021,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Everbright Flame"
       },
       {
         "id": 2031,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Humectant"
       },
       {
         "id": 2041,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Stormfall Jade"
       },
       {
         "id": 2051,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Golden Floriated Diadem"
       },
       {
         "id": 2061,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Obsidian Key"
       }
     ]
   },
@@ -50155,33 +50551,45 @@
     "child": [
       {
         "id": 2012,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Oceanifly"
       },
       {
         "id": 2022,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Fire-Tempered Shackles"
       },
       {
         "id": 2032,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Water Purifier"
       },
       {
         "id": 2042,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Golden Wool"
       },
       {
         "id": 2052,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Copy of Elysian Hymnal"
       },
       {
         "id": 2062,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Tome of the Noclunism Ritual"
       }
     ]
   },
@@ -50191,33 +50599,45 @@
     "child": [
       {
         "id": 2013,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Tempest Piercer"
       },
       {
         "id": 2023,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Solidified Lava"
       },
       {
         "id": 2033,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Cryo Teargem"
       },
       {
         "id": 2043,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Bottled Lightning"
       },
       {
         "id": 2053,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Scales of Eternal Justice"
       },
       {
         "id": 2063,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Filthoid Cell Culture Dish"
       }
     ]
   },
@@ -52640,21 +53060,21 @@
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Phoenix's Nirvana"
+        "n": "Nirvana"
       },
       {
         "id": 11003,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Phoenix's Blessing"
+        "n": "Blessing"
       },
       {
         "id": 11007,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Phoenix's Standfast"
+        "n": "Standfast"
       }
     ]
   },
@@ -52667,21 +53087,21 @@
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Phoenix's Nirvana"
+        "n": "Nirvana"
       },
       {
         "id": 11003,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Phoenix's Blessing"
+        "n": "Blessing"
       },
       {
         "id": 11007,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Phoenix's Standfast"
+        "n": "Standfast"
       }
     ]
   },
@@ -52694,35 +53114,35 @@
         "t": "Mod",
         "c": 1,
         "p": 2,
-        "n": "Phoenix's Blaze"
+        "n": "Blaze"
       },
       {
         "id": 31002,
         "t": "Mod",
         "c": 1,
         "p": 2,
-        "n": "Phoenix's Nirvana"
+        "n": "Nirvana"
       },
       {
         "id": 31003,
         "t": "Mod",
         "c": 1,
         "p": 2,
-        "n": "Phoenix's Blessing"
+        "n": "Blessing"
       },
       {
         "id": 31004,
         "t": "Mod",
         "c": 1,
         "p": 2,
-        "n": "Phoenix's Wings"
+        "n": "Wings"
       },
       {
         "id": 31007,
         "t": "Mod",
         "c": 1,
         "p": 2,
-        "n": "Phoenix's Standfast"
+        "n": "Standfast"
       }
     ]
   },
@@ -52735,35 +53155,35 @@
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Phoenix's Blaze"
+        "n": "Blaze"
       },
       {
         "id": 31002,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Phoenix's Nirvana"
+        "n": "Nirvana"
       },
       {
         "id": 31003,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Phoenix's Blessing"
+        "n": "Blessing"
       },
       {
         "id": 31004,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Phoenix's Wings"
+        "n": "Wings"
       },
       {
         "id": 31007,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Phoenix's Standfast"
+        "n": "Standfast"
       }
     ]
   },
@@ -52776,35 +53196,35 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Blaze"
+        "n": "Blaze"
       },
       {
         "id": 41002,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Nirvana"
+        "n": "Nirvana"
       },
       {
         "id": 41003,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Blessing"
+        "n": "Blessing"
       },
       {
         "id": 41004,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Wings"
+        "n": "Wings"
       },
       {
         "id": 41007,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Standfast"
+        "n": "Standfast"
       }
     ]
   },
@@ -52817,35 +53237,35 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Blaze"
+        "n": "Blaze"
       },
       {
         "id": 41002,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Nirvana"
+        "n": "Nirvana"
       },
       {
         "id": 41003,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Blessing"
+        "n": "Blessing"
       },
       {
         "id": 41004,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Wings"
+        "n": "Wings"
       },
       {
         "id": 41007,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Standfast"
+        "n": "Standfast"
       }
     ]
   },
@@ -52858,35 +53278,35 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Blaze"
+        "n": "Blaze"
       },
       {
         "id": 41002,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Nirvana"
+        "n": "Nirvana"
       },
       {
         "id": 41003,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Blessing"
+        "n": "Blessing"
       },
       {
         "id": 41004,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Wings"
+        "n": "Wings"
       },
       {
         "id": 41007,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Standfast"
+        "n": "Standfast"
       }
     ]
   },
@@ -52899,35 +53319,35 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Blaze"
+        "n": "Blaze"
       },
       {
         "id": 41002,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Nirvana"
+        "n": "Nirvana"
       },
       {
         "id": 41003,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Blessing"
+        "n": "Blessing"
       },
       {
         "id": 41004,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Wings"
+        "n": "Wings"
       },
       {
         "id": 41007,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Standfast"
+        "n": "Standfast"
       }
     ]
   },
@@ -52940,21 +53360,21 @@
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Cerberus's Edge"
+        "n": "Edge"
       },
       {
         "id": 12102,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Cerberus's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 12103,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Cerberus's Crusher"
+        "n": "Crusher"
       }
     ]
   },
@@ -52967,21 +53387,21 @@
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Cerberus's Edge·Trammel"
+        "n": "Edge·Trammel"
       },
       {
         "id": 22112,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Cerberus's Penetration·Trammel"
+        "n": "Penetration·Trammel"
       },
       {
         "id": 22113,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Cerberus's Crusher·Trammel"
+        "n": "Crusher·Trammel"
       }
     ]
   },
@@ -52994,35 +53414,35 @@
         "t": "Mod",
         "c": 1,
         "p": 2,
-        "n": "Cerberus's Edge"
+        "n": "Edge"
       },
       {
         "id": 32102,
         "t": "Mod",
         "c": 1,
         "p": 2,
-        "n": "Cerberus's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 32103,
         "t": "Mod",
         "c": 1,
         "p": 2,
-        "n": "Cerberus's Crusher"
+        "n": "Crusher"
       },
       {
         "id": 32201,
         "t": "Mod",
         "c": 1,
         "p": 2,
-        "n": "Fenrir's Continuity"
+        "n": "Continuity"
       },
       {
         "id": 32202,
         "t": "Mod",
         "c": 1,
         "p": 2,
-        "n": "Fenrir's Fortune"
+        "n": "Fortune"
       }
     ]
   },
@@ -53035,28 +53455,28 @@
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Cerberus's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 42002,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Cerberus's Focus"
+        "n": "Focus"
       },
       {
         "id": 42003,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Cerberus's Rage"
+        "n": "Rage"
       },
       {
         "id": 42006,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Cerberus's Trammel"
+        "n": "Trammel"
       }
     ]
   },
@@ -53069,28 +53489,28 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Cerberus's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 42002,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Cerberus's Focus"
+        "n": "Focus"
       },
       {
         "id": 42003,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Cerberus's Rage"
+        "n": "Rage"
       },
       {
         "id": 42006,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Cerberus's Trammel"
+        "n": "Trammel"
       }
     ]
   },
@@ -53103,28 +53523,28 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Cerberus's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 42002,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Cerberus's Focus"
+        "n": "Focus"
       },
       {
         "id": 42003,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Cerberus's Rage"
+        "n": "Rage"
       },
       {
         "id": 42006,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Cerberus's Trammel"
+        "n": "Trammel"
       }
     ]
   },
@@ -53137,28 +53557,28 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Cerberus's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 42002,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Cerberus's Focus"
+        "n": "Focus"
       },
       {
         "id": 42003,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Cerberus's Rage"
+        "n": "Rage"
       },
       {
         "id": 42006,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Cerberus's Trammel"
+        "n": "Trammel"
       }
     ]
   },
@@ -53171,28 +53591,28 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Cerberus's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 42002,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Cerberus's Focus"
+        "n": "Focus"
       },
       {
         "id": 42003,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Cerberus's Rage"
+        "n": "Rage"
       },
       {
         "id": 42006,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Cerberus's Trammel"
+        "n": "Trammel"
       }
     ]
   },
@@ -53205,21 +53625,21 @@
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Lilith's Edge"
+        "n": "Edge"
       },
       {
         "id": 13102,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Lilith's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 13103,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Lilith's Crusher"
+        "n": "Crusher"
       }
     ]
   },
@@ -53232,21 +53652,21 @@
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Lilith's Edge·Trammel"
+        "n": "Edge·Trammel"
       },
       {
         "id": 23112,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Lilith's Penetration·Trammel"
+        "n": "Penetration·Trammel"
       },
       {
         "id": 23113,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Lilith's Crusher·Trammel"
+        "n": "Crusher·Trammel"
       }
     ]
   },
@@ -53259,49 +53679,49 @@
         "t": "Mod",
         "c": 1,
         "p": 2,
-        "n": "Lilith's Edge"
+        "n": "Edge"
       },
       {
         "id": 33102,
         "t": "Mod",
         "c": 1,
         "p": 2,
-        "n": "Lilith's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 33103,
         "t": "Mod",
         "c": 1,
         "p": 2,
-        "n": "Lilith's Crusher"
+        "n": "Crusher"
       },
       {
         "id": 33201,
         "t": "Mod",
         "c": 1,
         "p": 2,
-        "n": "Fafnir's Quiver"
+        "n": "Quiver"
       },
       {
         "id": 33202,
         "t": "Mod",
         "c": 1,
         "p": 2,
-        "n": "Fafnir's Arrow"
+        "n": "Arrow"
       },
       {
         "id": 33203,
         "t": "Mod",
         "c": 1,
         "p": 2,
-        "n": "Fafnir's Dexterity"
+        "n": "Dexterity"
       },
       {
         "id": 33204,
         "t": "Mod",
         "c": 1,
         "p": 2,
-        "n": "Fafnir's Abundance"
+        "n": "Abundance"
       }
     ]
   },
@@ -53314,28 +53734,28 @@
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Lilith's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 43002,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Lilith's Focus"
+        "n": "Focus"
       },
       {
         "id": 43003,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Lilith's Rage"
+        "n": "Rage"
       },
       {
         "id": 43006,
         "t": "Mod",
         "c": 1,
         "p": 3,
-        "n": "Lilith's Trammel"
+        "n": "Trammel"
       }
     ]
   },
@@ -53348,28 +53768,28 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Lilith's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 43002,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Lilith's Focus"
+        "n": "Focus"
       },
       {
         "id": 43003,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Lilith's Rage"
+        "n": "Rage"
       },
       {
         "id": 43006,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Lilith's Trammel"
+        "n": "Trammel"
       }
     ]
   },
@@ -53382,28 +53802,28 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Lilith's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 43002,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Lilith's Focus"
+        "n": "Focus"
       },
       {
         "id": 43003,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Lilith's Rage"
+        "n": "Rage"
       },
       {
         "id": 43006,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Lilith's Trammel"
+        "n": "Trammel"
       }
     ]
   },
@@ -53416,28 +53836,28 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Lilith's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 43002,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Lilith's Focus"
+        "n": "Focus"
       },
       {
         "id": 43003,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Lilith's Rage"
+        "n": "Rage"
       },
       {
         "id": 43006,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Lilith's Trammel"
+        "n": "Trammel"
       }
     ]
   },
@@ -53450,28 +53870,28 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Lilith's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 43002,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Lilith's Focus"
+        "n": "Focus"
       },
       {
         "id": 43003,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Lilith's Rage"
+        "n": "Rage"
       },
       {
         "id": 43006,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Lilith's Trammel"
+        "n": "Trammel"
       }
     ]
   },
@@ -53483,7 +53903,7 @@
         "id": 21401,
         "t": "Mod",
         "c": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       }
     ]
   },
@@ -53495,7 +53915,7 @@
         "id": 21402,
         "t": "Mod",
         "c": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       }
     ]
   },
@@ -53507,7 +53927,7 @@
         "id": 21403,
         "t": "Mod",
         "c": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       }
     ]
   },
@@ -53519,7 +53939,7 @@
         "id": 21404,
         "t": "Mod",
         "c": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       }
     ]
   },
@@ -53531,7 +53951,7 @@
         "id": 21405,
         "t": "Mod",
         "c": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       }
     ]
   },
@@ -53543,7 +53963,7 @@
         "id": 21406,
         "t": "Mod",
         "c": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       }
     ]
   },
@@ -53555,7 +53975,7 @@
         "id": 31321,
         "t": "Mod",
         "c": 1,
-        "n": "Griffin's Nihility·Volition"
+        "n": "Nihility·Volition"
       }
     ]
   },
@@ -53567,7 +53987,7 @@
         "id": 31322,
         "t": "Mod",
         "c": 1,
-        "n": "Griffin's Seawave·Volition"
+        "n": "Seawave·Volition"
       }
     ]
   },
@@ -53579,7 +53999,7 @@
         "id": 31323,
         "t": "Mod",
         "c": 1,
-        "n": "Griffin's Inferno·Volition"
+        "n": "Inferno·Volition"
       }
     ]
   },
@@ -53591,7 +54011,7 @@
         "id": 31324,
         "t": "Mod",
         "c": 1,
-        "n": "Griffin's Thunder·Volition"
+        "n": "Thunder·Volition"
       }
     ]
   },
@@ -53603,7 +54023,7 @@
         "id": 31325,
         "t": "Mod",
         "c": 1,
-        "n": "Griffin's Squall·Volition"
+        "n": "Squall·Volition"
       }
     ]
   },
@@ -53615,7 +54035,7 @@
         "id": 31326,
         "t": "Mod",
         "c": 1,
-        "n": "Griffin's Skylume·Volition"
+        "n": "Skylume·Volition"
       }
     ]
   },
@@ -53627,7 +54047,7 @@
         "id": 31401,
         "t": "Mod",
         "c": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       }
     ]
   },
@@ -53639,7 +54059,7 @@
         "id": 31402,
         "t": "Mod",
         "c": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       }
     ]
   },
@@ -53651,7 +54071,7 @@
         "id": 31403,
         "t": "Mod",
         "c": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       }
     ]
   },
@@ -53663,7 +54083,7 @@
         "id": 31404,
         "t": "Mod",
         "c": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       }
     ]
   },
@@ -53675,7 +54095,7 @@
         "id": 31405,
         "t": "Mod",
         "c": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       }
     ]
   },
@@ -53687,7 +54107,7 @@
         "id": 31406,
         "t": "Mod",
         "c": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       }
     ]
   },
@@ -53700,70 +54120,70 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Blaze·Wings"
+        "n": "Blaze·Wings"
       },
       {
         "id": 31006,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Nirvana·Blessing"
+        "n": "Nirvana·Blessing"
       },
       {
         "id": 31008,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Blaze·Nirvana"
+        "n": "Blaze·Nirvana"
       },
       {
         "id": 31009,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Blaze·Blessing"
+        "n": "Blaze·Blessing"
       },
       {
         "id": 31010,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Blaze·Standfast"
+        "n": "Blaze·Standfast"
       },
       {
         "id": 31011,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Nirvana·Wings"
+        "n": "Nirvana·Wings"
       },
       {
         "id": 31012,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Nirvana·Standfast"
+        "n": "Nirvana·Standfast"
       },
       {
         "id": 31013,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Blessing·Wings"
+        "n": "Blessing·Wings"
       },
       {
         "id": 31014,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Blessing·Standfast"
+        "n": "Blessing·Standfast"
       },
       {
         "id": 31015,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Phoenix's Wings·Standfast"
+        "n": "Wings·Standfast"
       }
     ]
   },
@@ -53776,14 +54196,14 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Griffin's Nihility·Wildfire"
+        "n": "Nihility·Wildfire"
       },
       {
         "id": 41331,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Griffin's Nihility·Midnight Sun"
+        "n": "Nihility·Midnight Sun"
       }
     ]
   },
@@ -53796,14 +54216,14 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Griffin's Seawave·Wildfire"
+        "n": "Seawave·Wildfire"
       },
       {
         "id": 41332,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Griffin's Seawave·Midnight Sun"
+        "n": "Seawave·Midnight Sun"
       }
     ]
   },
@@ -53816,14 +54236,14 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Griffin's Inferno·Wildfire"
+        "n": "Inferno·Wildfire"
       },
       {
         "id": 41333,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Griffin's Inferno·Midnight Sun"
+        "n": "Inferno·Midnight Sun"
       }
     ]
   },
@@ -53836,14 +54256,14 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Griffin's Thunder·Wildfire"
+        "n": "Thunder·Wildfire"
       },
       {
         "id": 41334,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Griffin's Thunder·Midnight Sun"
+        "n": "Thunder·Midnight Sun"
       }
     ]
   },
@@ -53856,14 +54276,14 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Griffin's Squall·Wildfire"
+        "n": "Squall·Wildfire"
       },
       {
         "id": 41335,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Griffin's Squall·Midnight Sun"
+        "n": "Squall·Midnight Sun"
       }
     ]
   },
@@ -53876,14 +54296,14 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Griffin's Skylume·Wildfire"
+        "n": "Skylume·Wildfire"
       },
       {
         "id": 41336,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Griffin's Skylume·Midnight Sun"
+        "n": "Skylume·Midnight Sun"
       }
     ]
   },
@@ -53896,35 +54316,35 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Morale"
+        "n": "Prime·Morale"
       },
       {
         "id": 41412,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Resolve"
+        "n": "Prime·Resolve"
       },
       {
         "id": 41413,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Huntdown"
+        "n": "Prime·Huntdown"
       },
       {
         "id": 41414,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Serenity"
+        "n": "Prime·Serenity"
       },
       {
         "id": 41415,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Uplift"
+        "n": "Prime·Uplift"
       }
     ]
   },
@@ -53937,35 +54357,35 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Morale"
+        "n": "Prime·Morale"
       },
       {
         "id": 41422,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Resolve"
+        "n": "Prime·Resolve"
       },
       {
         "id": 41423,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Huntdown"
+        "n": "Prime·Huntdown"
       },
       {
         "id": 41424,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Serenity"
+        "n": "Prime·Serenity"
       },
       {
         "id": 41425,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Uplift"
+        "n": "Prime·Uplift"
       }
     ]
   },
@@ -53978,35 +54398,35 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Morale"
+        "n": "Prime·Morale"
       },
       {
         "id": 41432,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Resolve"
+        "n": "Prime·Resolve"
       },
       {
         "id": 41433,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Huntdown"
+        "n": "Prime·Huntdown"
       },
       {
         "id": 41434,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Serenity"
+        "n": "Prime·Serenity"
       },
       {
         "id": 41435,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Uplift"
+        "n": "Prime·Uplift"
       }
     ]
   },
@@ -54019,35 +54439,35 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Morale"
+        "n": "Prime·Morale"
       },
       {
         "id": 41442,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Resolve"
+        "n": "Prime·Resolve"
       },
       {
         "id": 41443,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Huntdown"
+        "n": "Prime·Huntdown"
       },
       {
         "id": 41444,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Serenity"
+        "n": "Prime·Serenity"
       },
       {
         "id": 41445,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Uplift"
+        "n": "Prime·Uplift"
       }
     ]
   },
@@ -54060,35 +54480,35 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Morale"
+        "n": "Prime·Morale"
       },
       {
         "id": 41452,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Resolve"
+        "n": "Prime·Resolve"
       },
       {
         "id": 41453,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Huntdown"
+        "n": "Prime·Huntdown"
       },
       {
         "id": 41454,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Serenity"
+        "n": "Prime·Serenity"
       },
       {
         "id": 41455,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Uplift"
+        "n": "Prime·Uplift"
       }
     ]
   },
@@ -54101,35 +54521,35 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Morale"
+        "n": "Prime·Morale"
       },
       {
         "id": 41462,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Resolve"
+        "n": "Prime·Resolve"
       },
       {
         "id": 41463,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Huntdown"
+        "n": "Prime·Huntdown"
       },
       {
         "id": 41464,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Serenity"
+        "n": "Prime·Serenity"
       },
       {
         "id": 41465,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Typhon's Prime·Uplift"
+        "n": "Prime·Uplift"
       }
     ]
   },
@@ -54184,28 +54604,28 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Scorch"
+        "n": "Scorch"
       },
       {
         "id": 41712,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Blaze·Morale"
+        "n": "Blaze·Morale"
       },
       {
         "id": 41713,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Blaze·Spectrum"
+        "n": "Blaze·Spectrum"
       },
       {
         "id": 41714,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Standfast·Inspo"
+        "n": "Standfast·Inspo"
       }
     ]
   },
@@ -54218,28 +54638,28 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Blaze·Nirvana"
+        "n": "Blaze·Nirvana"
       },
       {
         "id": 41722,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Blaze·Spectrum"
+        "n": "Blaze·Spectrum"
       },
       {
         "id": 41723,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Blaze·Inspo"
+        "n": "Blaze·Inspo"
       },
       {
         "id": 41724,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Wings·Volition"
+        "n": "Wings·Volition"
       }
     ]
   },
@@ -54252,28 +54672,28 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Blaze·Standfast"
+        "n": "Blaze·Standfast"
       },
       {
         "id": 41732,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Blaze·Eternity"
+        "n": "Blaze·Eternity"
       },
       {
         "id": 41733,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Blaze·Inspo"
+        "n": "Blaze·Inspo"
       },
       {
         "id": 41734,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Nirvana·Spectrum"
+        "n": "Nirvana·Spectrum"
       }
     ]
   },
@@ -54286,28 +54706,28 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Blaze·Nirvana"
+        "n": "Blaze·Nirvana"
       },
       {
         "id": 41742,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Blaze·Morale"
+        "n": "Blaze·Morale"
       },
       {
         "id": 41743,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Blaze·Volition"
+        "n": "Blaze·Volition"
       },
       {
         "id": 41744,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Standfast·Eternity"
+        "n": "Standfast·Eternity"
       }
     ]
   },
@@ -54320,28 +54740,28 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Blaze·Standfast"
+        "n": "Blaze·Standfast"
       },
       {
         "id": 41752,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Blaze·Resolve"
+        "n": "Blaze·Resolve"
       },
       {
         "id": 41753,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Blaze·Volition"
+        "n": "Blaze·Volition"
       },
       {
         "id": 41754,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Wings·Eternity"
+        "n": "Wings·Eternity"
       }
     ]
   },
@@ -54354,28 +54774,28 @@
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Scorch"
+        "n": "Scorch"
       },
       {
         "id": 41762,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Blaze·Resolve"
+        "n": "Blaze·Resolve"
       },
       {
         "id": 41763,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Blaze·Eternity"
+        "n": "Blaze·Eternity"
       },
       {
         "id": 41764,
         "t": "Mod",
         "c": 1,
         "p": 5,
-        "n": "Covenanter's Nirvana·Volition"
+        "n": "Nirvana·Volition"
       }
     ]
   },
@@ -54388,63 +54808,63 @@
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 24002,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Focus"
+        "n": "Focus"
       },
       {
         "id": 24003,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Rage"
+        "n": "Rage"
       },
       {
         "id": 24004,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Celerity"
+        "n": "Celerity"
       },
       {
         "id": 24005,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Threshold"
+        "n": "Threshold"
       },
       {
         "id": 24006,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Trammel"
+        "n": "Trammel"
       },
       {
         "id": 24101,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Edge"
+        "n": "Edge"
       },
       {
         "id": 24102,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 24103,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Crusher"
+        "n": "Crusher"
       }
     ]
   },
@@ -54457,63 +54877,63 @@
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 34002,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Focus"
+        "n": "Focus"
       },
       {
         "id": 34003,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Rage"
+        "n": "Rage"
       },
       {
         "id": 34004,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Celerity"
+        "n": "Celerity"
       },
       {
         "id": 34005,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Threshold"
+        "n": "Threshold"
       },
       {
         "id": 34006,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Trammel"
+        "n": "Trammel"
       },
       {
         "id": 34101,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Edge"
+        "n": "Edge"
       },
       {
         "id": 34102,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 34103,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Crusher"
+        "n": "Crusher"
       }
     ]
   },
@@ -54526,63 +54946,63 @@
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 44002,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Focus"
+        "n": "Focus"
       },
       {
         "id": 44003,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Rage"
+        "n": "Rage"
       },
       {
         "id": 44004,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Celerity"
+        "n": "Celerity"
       },
       {
         "id": 44005,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Threshold"
+        "n": "Threshold"
       },
       {
         "id": 44006,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Trammel"
+        "n": "Trammel"
       },
       {
         "id": 44101,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Edge"
+        "n": "Edge"
       },
       {
         "id": 44102,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 44103,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Cerberus's Crusher"
+        "n": "Crusher"
       }
     ]
   },
@@ -54595,63 +55015,63 @@
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 25002,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Focus"
+        "n": "Focus"
       },
       {
         "id": 25003,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Rage"
+        "n": "Rage"
       },
       {
         "id": 25004,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Celerity"
+        "n": "Celerity"
       },
       {
         "id": 25005,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Foldover"
+        "n": "Foldover"
       },
       {
         "id": 25006,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Trammel"
+        "n": "Trammel"
       },
       {
         "id": 25101,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Edge"
+        "n": "Edge"
       },
       {
         "id": 25102,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 25103,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Crusher"
+        "n": "Crusher"
       }
     ]
   },
@@ -54664,63 +55084,63 @@
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 35002,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Focus"
+        "n": "Focus"
       },
       {
         "id": 35003,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Rage"
+        "n": "Rage"
       },
       {
         "id": 35004,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Celerity"
+        "n": "Celerity"
       },
       {
         "id": 35005,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Foldover"
+        "n": "Foldover"
       },
       {
         "id": 35006,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Trammel"
+        "n": "Trammel"
       },
       {
         "id": 35101,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Edge"
+        "n": "Edge"
       },
       {
         "id": 35102,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 35103,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Crusher"
+        "n": "Crusher"
       }
     ]
   },
@@ -54733,63 +55153,63 @@
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Impetus"
+        "n": "Impetus"
       },
       {
         "id": 45002,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Focus"
+        "n": "Focus"
       },
       {
         "id": 45003,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Rage"
+        "n": "Rage"
       },
       {
         "id": 45004,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Celerity"
+        "n": "Celerity"
       },
       {
         "id": 45005,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Foldover"
+        "n": "Foldover"
       },
       {
         "id": 45006,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Trammel"
+        "n": "Trammel"
       },
       {
         "id": 45101,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Edge"
+        "n": "Edge"
       },
       {
         "id": 45102,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Penetration"
+        "n": "Penetration"
       },
       {
         "id": 45103,
         "t": "Mod",
         "c": 1,
         "p": 20,
-        "n": "Eldritch Lilith's Crusher"
+        "n": "Crusher"
       }
     ]
   },
@@ -54802,7 +55222,7 @@
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       },
       {
         "id": 300000,
@@ -54833,7 +55253,7 @@
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       },
       {
         "id": 300000,
@@ -54864,7 +55284,7 @@
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       },
       {
         "id": 300000,
@@ -54895,7 +55315,7 @@
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       },
       {
         "id": 300000,
@@ -54926,7 +55346,7 @@
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       },
       {
         "id": 300000,
@@ -54957,7 +55377,7 @@
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       },
       {
         "id": 300000,
@@ -56098,42 +56518,42 @@
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       },
       {
         "id": 11402,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       },
       {
         "id": 11403,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       },
       {
         "id": 11404,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       },
       {
         "id": 11405,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       },
       {
         "id": 11406,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       }
     ]
   },
@@ -56146,42 +56566,42 @@
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       },
       {
         "id": 21402,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       },
       {
         "id": 21403,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       },
       {
         "id": 21404,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       },
       {
         "id": 21405,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       },
       {
         "id": 21406,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       }
     ]
   },
@@ -56194,42 +56614,42 @@
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       },
       {
         "id": 31402,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       },
       {
         "id": 31403,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       },
       {
         "id": 31404,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       },
       {
         "id": 31405,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       },
       {
         "id": 31406,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Typhon's Prime"
+        "n": "Prime"
       }
     ]
   },
@@ -56242,42 +56662,42 @@
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Griffin's Nihility·Volition"
+        "n": "Nihility·Volition"
       },
       {
         "id": 31322,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Griffin's Seawave·Volition"
+        "n": "Seawave·Volition"
       },
       {
         "id": 31323,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Griffin's Inferno·Volition"
+        "n": "Inferno·Volition"
       },
       {
         "id": 31324,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Griffin's Thunder·Volition"
+        "n": "Thunder·Volition"
       },
       {
         "id": 31325,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Griffin's Squall·Volition"
+        "n": "Squall·Volition"
       },
       {
         "id": 31326,
         "t": "Mod",
         "c": 1,
         "p": 1,
-        "n": "Griffin's Skylume·Volition"
+        "n": "Skylume·Volition"
       }
     ]
   },
@@ -56857,99 +57277,131 @@
     "child": [
       {
         "id": 152001,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Impetus"
       },
       {
         "id": 152004,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Celerity"
       },
       {
         "id": 152005,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Threshold"
       },
       {
         "id": 152007,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Impetus·Focus"
       },
       {
         "id": 152008,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Rage·Trammel"
       },
       {
         "id": 152101,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Edge"
       },
       {
         "id": 152102,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Penetration"
       },
       {
         "id": 152103,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Crusher"
       },
       {
         "id": 153001,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Impetus"
       },
       {
         "id": 153004,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Celerity"
       },
       {
         "id": 153005,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Foldover"
       },
       {
         "id": 153007,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Impetus·Focus"
       },
       {
         "id": 153008,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Rage·Trammel"
       },
       {
         "id": 153101,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Edge"
       },
       {
         "id": 153102,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Penetration"
       },
       {
         "id": 153103,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Crusher"
       }
     ]
   },
@@ -56959,99 +57411,131 @@
     "child": [
       {
         "id": 152001,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Impetus"
       },
       {
         "id": 152004,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Celerity"
       },
       {
         "id": 152005,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Threshold"
       },
       {
         "id": 152007,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Impetus·Focus"
       },
       {
         "id": 152008,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Rage·Trammel"
       },
       {
         "id": 152101,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Edge"
       },
       {
         "id": 152102,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Penetration"
       },
       {
         "id": 152103,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Crusher"
       },
       {
         "id": 153001,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Impetus"
       },
       {
         "id": 153004,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Celerity"
       },
       {
         "id": 153005,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Foldover"
       },
       {
         "id": 153007,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Impetus·Focus"
       },
       {
         "id": 153008,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Rage·Trammel"
       },
       {
         "id": 153101,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Edge"
       },
       {
         "id": 153102,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Penetration"
       },
       {
         "id": 153103,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Crusher"
       }
     ]
   },
@@ -57061,99 +57545,131 @@
     "child": [
       {
         "id": 152001,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Impetus"
       },
       {
         "id": 152004,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Celerity"
       },
       {
         "id": 152005,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Threshold"
       },
       {
         "id": 152007,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Impetus·Focus"
       },
       {
         "id": 152008,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Rage·Trammel"
       },
       {
         "id": 152101,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Edge"
       },
       {
         "id": 152102,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Penetration"
       },
       {
         "id": 152103,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Crusher"
       },
       {
         "id": 153001,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Impetus"
       },
       {
         "id": 153004,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Celerity"
       },
       {
         "id": 153005,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Foldover"
       },
       {
         "id": 153007,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Impetus·Focus"
       },
       {
         "id": 153008,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Rage·Trammel"
       },
       {
         "id": 153101,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Edge"
       },
       {
         "id": 153102,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Penetration"
       },
       {
         "id": 153103,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Crusher"
       }
     ]
   },
@@ -57163,99 +57679,131 @@
     "child": [
       {
         "id": 152001,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Impetus"
       },
       {
         "id": 152004,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Celerity"
       },
       {
         "id": 152005,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Threshold"
       },
       {
         "id": 152007,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Impetus·Focus"
       },
       {
         "id": 152008,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Rage·Trammel"
       },
       {
         "id": 152101,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Edge"
       },
       {
         "id": 152102,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Penetration"
       },
       {
         "id": 152103,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Crusher"
       },
       {
         "id": 153001,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Impetus"
       },
       {
         "id": 153004,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Celerity"
       },
       {
         "id": 153005,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Foldover"
       },
       {
         "id": 153007,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Impetus·Focus"
       },
       {
         "id": 153008,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Rage·Trammel"
       },
       {
         "id": 153101,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Edge"
       },
       {
         "id": 153102,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Penetration"
       },
       {
         "id": 153103,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Crusher"
       }
     ]
   },
@@ -57265,99 +57813,131 @@
     "child": [
       {
         "id": 152001,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Impetus"
       },
       {
         "id": 152004,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Celerity"
       },
       {
         "id": 152005,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Threshold"
       },
       {
         "id": 152007,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Impetus·Focus"
       },
       {
         "id": 152008,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Rage·Trammel"
       },
       {
         "id": 152101,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Edge"
       },
       {
         "id": 152102,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Penetration"
       },
       {
         "id": 152103,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Crusher"
       },
       {
         "id": 153001,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Impetus"
       },
       {
         "id": 153004,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Celerity"
       },
       {
         "id": 153005,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Foldover"
       },
       {
         "id": 153007,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Impetus·Focus"
       },
       {
         "id": 153008,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Rage·Trammel"
       },
       {
         "id": 153101,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Edge"
       },
       {
         "id": 153102,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Penetration"
       },
       {
         "id": 153103,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Crusher"
       }
     ]
   },
@@ -57367,99 +57947,131 @@
     "child": [
       {
         "id": 152001,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Impetus"
       },
       {
         "id": 152004,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Celerity"
       },
       {
         "id": 152005,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Threshold"
       },
       {
         "id": 152007,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Impetus·Focus"
       },
       {
         "id": 152008,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Rage·Trammel"
       },
       {
         "id": 152101,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Edge"
       },
       {
         "id": 152102,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Penetration"
       },
       {
         "id": 152103,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Crusher"
       },
       {
         "id": 153001,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Impetus"
       },
       {
         "id": 153004,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Celerity"
       },
       {
         "id": 153005,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Foldover"
       },
       {
         "id": 153007,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Impetus·Focus"
       },
       {
         "id": 153008,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Rage·Trammel"
       },
       {
         "id": 153101,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Edge"
       },
       {
         "id": 153102,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Penetration"
       },
       {
         "id": 153103,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Crusher"
       }
     ]
   },
@@ -57469,99 +58081,131 @@
     "child": [
       {
         "id": 152001,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Impetus"
       },
       {
         "id": 152004,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Celerity"
       },
       {
         "id": 152005,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Threshold"
       },
       {
         "id": 152007,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Impetus·Focus"
       },
       {
         "id": 152008,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Rage·Trammel"
       },
       {
         "id": 152101,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Edge"
       },
       {
         "id": 152102,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Penetration"
       },
       {
         "id": 152103,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Cerberus's Crusher"
       },
       {
         "id": 153001,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Impetus"
       },
       {
         "id": 153004,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Celerity"
       },
       {
         "id": 153005,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Foldover"
       },
       {
         "id": 153007,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Impetus·Focus"
       },
       {
         "id": 153008,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Rage·Trammel"
       },
       {
         "id": 153101,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Edge"
       },
       {
         "id": 153102,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Penetration"
       },
       {
         "id": 153103,
-        "t": "Draft",
+        "t": "Mod",
         "c": 1,
-        "p": 7
+        "p": 7,
+        "d": 1,
+        "n": "Lilith's Crusher"
       }
     ]
   },
@@ -57758,7 +58402,7 @@
         "id": 10008,
         "t": "TitleFrame",
         "c": 1,
-        "n": "TitleFrame_10008"
+        "n": "SSS-Rank Phoxhunter"
       },
       {
         "id": 218,
@@ -57788,7 +58432,7 @@
         "id": 10009,
         "t": "TitleFrame",
         "c": 1,
-        "n": "TitleFrame_10009"
+        "n": "SS-Rank Phoxhunter"
       },
       {
         "id": 218,
@@ -57818,7 +58462,7 @@
         "id": 10010,
         "t": "TitleFrame",
         "c": 1,
-        "n": "TitleFrame_10010"
+        "n": "S-Rank Phoxhunter"
       },
       {
         "id": 218,
@@ -57848,7 +58492,7 @@
         "id": 10012,
         "t": "TitleFrame",
         "c": 1,
-        "n": "TitleFrame_10012"
+        "n": "A-Rank Phoxhunter"
       },
       {
         "id": 218,
@@ -57878,7 +58522,7 @@
         "id": 10011,
         "t": "TitleFrame",
         "c": 1,
-        "n": "TitleFrame_10011"
+        "n": "B-Rank Phoxhunter"
       },
       {
         "id": 218,
@@ -59215,8 +59859,10 @@
     "child": [
       {
         "id": 910402,
-        "t": "Draft",
-        "c": 1
+        "t": "Weapon",
+        "c": 1,
+        "d": 1,
+        "n": "Aureate Yore"
       },
       {
         "id": 20032,
@@ -59316,8 +59962,10 @@
     "child": [
       {
         "id": 9526,
-        "t": "Draft",
-        "c": 1
+        "t": "Weapon",
+        "c": 1,
+        "d": 1,
+        "n": "Flamme De Epuration"
       },
       {
         "id": 3000012,
@@ -59363,8 +60011,10 @@
       },
       {
         "id": 1051,
-        "t": "Draft",
-        "c": 1
+        "t": "Resource",
+        "c": 1,
+        "d": 1,
+        "n": "Ammo Supply Chest Ⅰ"
       }
     ]
   },
@@ -60497,7 +61147,7 @@
         "id": 4131,
         "t": "Pet",
         "c": 1,
-        "n": "Pet_4131"
+        "n": "Miraculous Pyrootail"
       }
     ]
   },
@@ -63935,7 +64585,7 @@
         "id": 30087,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "HeadSculpture_30087"
+        "n": "My Bro Boxie"
       },
       {
         "id": 100,
@@ -63953,7 +64603,7 @@
         "id": 30088,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "HeadSculpture_30088"
+        "n": "Painted Sun"
       },
       {
         "id": 100,

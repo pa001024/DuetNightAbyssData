@@ -9,6 +9,7 @@ class RewardProcessor(BaseProcessor):
         self.drop_data = data_loader.load_json("Drop.json")
         self.mod_data = data_loader.load_json("Mod.json")
         self.resource_data = data_loader.load_json("Resource.json")
+        self.draft_data = data_loader.load_json("Draft.json")
 
     def process_item(self, item_data, language, processed_ids=None):
         """
@@ -95,8 +96,22 @@ class RewardProcessor(BaseProcessor):
             if item_param != 0:
                 item["p"] = item_param
 
-            # 根据类型查询不同的表
-            item_name = self._get_item_name(item_id, item_type)
+            # 保存原始类型用于获取名称
+            original_type = item_type
+
+            # 处理Draft类型特殊情况
+            if item_type == "Draft":
+                # 获取Draft的ProductType
+                draft_item = self.draft_data.get(str(item_id), {})
+                product_type = draft_item.get("ProductType", "Draft")
+                # 将类型从Draft改为ProductType
+                item["t"] = product_type
+                # 添加d=1字段到当前子项中
+                item["d"] = 1
+
+            # 根据类型查询不同的表，传入language参数以支持语言特定前缀
+            # 使用原始类型获取名称，确保Draft类型能正确获取带前缀的名称
+            item_name = self._get_item_name(item_id, original_type, language)
             if item_name:
                 item["n"] = item_name
 
@@ -109,11 +124,12 @@ class RewardProcessor(BaseProcessor):
 
         return processed
 
-    def _get_item_name(self, item_id, item_type):
+    def _get_item_name(self, item_id, item_type, language):
         """
         根据类型和ID获取项目名称
         :param item_id: 项目ID
         :param item_type: 项目类型
+        :param language: 目标语言
         :return: 项目名称，如果不需要返回名称则返回None
         """
         # 根据类型查询不同的表
@@ -128,7 +144,8 @@ class RewardProcessor(BaseProcessor):
         elif item_type == "Mod":
             # 查询Mod.json
             mod_item = self.mod_data.get(str(item_id), {})
-            return f"{self.get_translated_text(mod_item.get('TypeName', ''))}{self.get_translated_text(mod_item.get('Name', ''))}".strip()
+            return f"{self.get_translated_text(mod_item.get('Name', ''))}".strip()
+            # return f"{self.get_translated_text(mod_item.get('TypeName', ''))}{self.get_translated_text(mod_item.get('Name', ''))}".strip()
         elif item_type == "Resource":
             # 查询Resource.json
             resource_item = self.resource_data.get(str(item_id), {})
@@ -136,14 +153,57 @@ class RewardProcessor(BaseProcessor):
         elif item_type == "Reward":
             # Reward类型不需要添加名称，返回None
             return None
+        elif item_type == "Draft":
+            # 特殊处理Draft类型，根据ProductType和ProductId获取产物名称
+            draft_item = self.draft_data.get(str(item_id), {})
+            product_type = draft_item.get("ProductType", "")
+            product_id = draft_item.get("ProductId", 0)
+
+            # 根据ProductType获取产物名称
+            product_name = ""
+            if product_type == "Resource":
+                # 获取资源名称
+                resource_item = self.resource_data.get(str(product_id), {})
+                product_name = self.get_translated_text(
+                    resource_item.get("ResourceName", "")
+                )
+            elif product_type == "Mod":
+                # 获取模组名称
+                mod_item = self.mod_data.get(str(product_id), {})
+                product_name = f"{self.get_translated_text(mod_item.get('TypeName', ''))}{self.get_translated_text(mod_item.get('Name', ''))}".strip()
+            elif product_type == "Char":
+                # 获取角色名称，直接使用翻译
+                product_name = self.get_translated_text(f"UI_CHAR_NAME_{product_id}")
+            elif product_type == "Weapon":
+                # 获取武器名称，直接使用翻译
+                product_name = self.get_translated_text(f"UI_WEAPON_NAME_{product_id}")
+            elif product_type == "CharAccessory":
+                # 获取角色配件名称，直接使用翻译
+                product_name = self.get_translated_text(
+                    f"UI_Accessory_Name_{product_id}"
+                )
+
+            # 如果无法获取产物名称，返回类型和ID
+            if not product_name:
+                product_name = f"{item_type}_{item_id}"
+
+            # 不需要添加语言特定前缀
+            return product_name
         elif item_type in [
             "Walnut",
             "Item",
             "Char",
             "Weapon",
-            "Draft",
             "Monster",
             "Title",
+            "TitleFrame",
+            "CharAccessory",
+            "Pet",
+            "HeadSculpture",
+            "HeadFrame",
+            "Skin",
+            "WeaponSkin",
+            "WeaponAccessory",
         ]:
             # 这些类型可能有对应的json文件，尝试加载并获取名称
             try:
@@ -154,21 +214,13 @@ class RewardProcessor(BaseProcessor):
                 item_info = item_data.get(str(item_id), {})
 
                 # 根据类型获取对应的名称字段
-                name_field = ""
-                if item_type == "Walnut":
-                    name_field = "Name"  # 假设Walnut.json中的名称字段是Name
-                elif item_type == "Item":
-                    name_field = "Name"  # 假设Item.json中的名称字段是Name
-                elif item_type == "Char":
-                    name_field = "Name"  # 参考之前的代码，Char.json中的名称字段是Name
-                elif item_type == "Weapon":
+                name_field = "Name"
+                if item_type == "Weapon":
                     name_field = "WeaponName"  # 参考之前的代码，Weapon.json中的名称字段是WeaponName
-                elif item_type == "Draft":
-                    name_field = "Name"  # 假设Draft.json中的名称字段是Name
-                elif item_type == "Monster":
-                    name_field = "Name"  # 假设Monster.json中的名称字段是Name
-                elif item_type == "Title":
-                    name_field = "Name"  # 假设Title.json中的名称字段是Name
+                if item_type == "Skin":
+                    name_field = (
+                        "SkinName"  # 参考之前的代码，Skin.json中的名称字段是SkinName
+                    )
 
                 if name_field:
                     return self.data_loader.translate(item_info.get(name_field, ""))

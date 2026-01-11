@@ -73,6 +73,20 @@ EX_FIELDS = [
     "下落攻击",
     "普通攻击",
     "蓄力攻击",
+    "角色",
+    "武器",
+    "魔之楔",
+    "探险/无尽",
+    "驱离",
+    "拆解",
+    "驱逐",
+    "避险",
+    "扼守/无尽",
+    "护送",
+    "勘察/无尽",
+    "追缉",
+    "调停",
+    "迁移",
 ]
 
 # 是否在输出时添加字段前缀 (例如: "效果:xxx" -> "Effect:xxx")
@@ -598,7 +612,7 @@ def main():
 
     print(f"找到JSON文件: {[f.name for f in json_files]}")
 
-    allow_types = ["Mod", "Weapon", "Char", "Achievement"]
+    allow_types = ["Mod", "Weapon", "Char", "Achievement", "Monster"]
     # 对每个语言文件夹处理每个JSON文件
     for lang_dir in lang_dirs:
         lang_code = lang_dir.name
