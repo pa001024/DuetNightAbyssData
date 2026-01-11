@@ -56,7 +56,7 @@ class CharProcessor(BaseProcessor):
         name = self.get_translated_text(char_data.get("CharName", ""))
         elm = self._process_element(char_id)
         if name == "{nickname}":
-            name = f"主角({elm})"
+            name = f"主角-{elm}"
         # 构建基础处理后的Char数据
         processed = {
             "id": char_id,
@@ -76,18 +76,20 @@ class CharProcessor(BaseProcessor):
             "基础护盾": base_attr.get("护盾", 0),
             "基础神智": base_attr.get("神智", 0),
             "加成": self._process_addon(battle_char.get("CharAddonAttr", [])),
-            "突破": self._process_break(char_id, language),
+            # "突破": self._process_break(char_id, language),
             "技能": self._process_skills(battle_char, language),
             "溯源": self._process_traces(battle_char, char_id),
             # "档案": self._process_character_data(char_id),
             "同律武器": self._process_u_weapon(char_data.get("UWeapon", [])),
         }
+        if not processed["加成"]:
+            del processed["加成"]
         if not processed["标签"]:
             del processed["标签"]
         if not processed.get("同律武器"):
             del processed["同律武器"]
-        if not processed.get("突破"):
-            del processed["突破"]
+        # if not processed.get("突破"):
+        #     del processed["突破"]
         if not processed.get("溯源"):
             del processed["溯源"]
 
@@ -306,13 +308,13 @@ class CharProcessor(BaseProcessor):
         skills = []
 
         for skill_id in skill_list:
-            skill_info = self._process_single_skill(skill_id, language)
+            skill_info = self._process_single_skill(skill_id)
             if skill_info:
                 skills.append(skill_info)
 
         return skills
 
-    def _process_single_skill(self, skill_id, language):
+    def _process_single_skill(self, skill_id):
         """处理单个技能"""
         # 获取Skill数据
         skill = self.skill_data.get(str(skill_id), {})
@@ -333,7 +335,11 @@ class CharProcessor(BaseProcessor):
         skill_desc_key = skill_info.get("SkillDesc", "")
 
         skill_name = self.get_translated_text(skill_name_key)
-        skill_desc = self.get_translated_text(skill_desc_key)
+        skill_desc = (
+            self.get_translated_text(skill_desc_key)
+            .replace("<H>", "")
+            .replace("</>", "")
+        )
 
         # 获取技能最大等级
         max_level = min(
@@ -402,9 +408,6 @@ class CharProcessor(BaseProcessor):
 
         # 只有没有额外文本的单一表达式才返回 None
         # 如：$...$ 或 $...$% (其中 % 是后缀)
-        single_expr = re.match(r"^\$([^$]+)\$%?$", desc_value)
-        if single_expr:
-            return None
 
         result = desc_value
         placeholder_count = 0
@@ -423,11 +426,12 @@ class CharProcessor(BaseProcessor):
 
         # 替换所有 $...$ 为占位符
         result = re.sub(r"\$([^$]+)\$", replace_expr, result)
+        result = result.replace("{%}%", "{%}")
 
         # 如果没有占位符或只有一个占位符且没有其他文本，返回 None
         if placeholder_count == 0:
             return None
-        if placeholder_count == 1 and result in ("{}", "{%}"):
+        if placeholder_count == 1 and result in ("{%}"):
             return None
 
         return result
@@ -739,7 +743,7 @@ class CharProcessor(BaseProcessor):
                             expr_value = self._calculate_expr_value(
                                 expr, char_id, 1, "BattleChar"
                             )
-
+                            expr_value = self.round_value(expr_value)
                             if has_neg:
                                 expr_value = -expr_value
 

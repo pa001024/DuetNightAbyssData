@@ -34,9 +34,9 @@ from typing import Dict, List
 #
 # 当前配置: 只提取"名称"字段
 FIELD_CONFIG = [
-    ("名称", "translation.json"),
+    ("别名", "translation.json"),
     # ("分类", "translation_category.json"),
-    ("描述", "translation_description.json"),
+    # ("描述", "translation.json"),
     # ("奖励", "translation_reward.json"),  # 嵌套对象 - 提取奖励中所有键的翻译
     # ("效果", "translation_effect.json"),
 ]
