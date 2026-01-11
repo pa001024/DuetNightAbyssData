@@ -111,9 +111,12 @@ class RewardProcessor(BaseProcessor):
 
             # 根据类型查询不同的表，传入language参数以支持语言特定前缀
             # 使用原始类型获取名称，确保Draft类型能正确获取带前缀的名称
-            item_name = self._get_item_name(item_id, original_type, language)
+            item_name = self._get_item_name(item_id, original_type)
             if item_name:
                 item["n"] = item_name
+                if original_type == "Draft":
+                    draft_item = self.draft_data.get(str(item_id), {})
+                    item["id"] = draft_item.get("ProductId", 0)
 
             # 不再为子项添加child字段
             # 只在顶级处理结果中添加child字段，子项中不再包含child
@@ -124,7 +127,7 @@ class RewardProcessor(BaseProcessor):
 
         return processed
 
-    def _get_item_name(self, item_id, item_type, language):
+    def _get_item_name(self, item_id, item_type):
         """
         根据类型和ID获取项目名称
         :param item_id: 项目ID
@@ -170,7 +173,10 @@ class RewardProcessor(BaseProcessor):
             elif product_type == "Mod":
                 # 获取模组名称
                 mod_item = self.mod_data.get(str(product_id), {})
-                product_name = f"{self.get_translated_text(mod_item.get('TypeName', ''))}{self.get_translated_text(mod_item.get('Name', ''))}".strip()
+                # product_name = f"{self.get_translated_text(mod_item.get('TypeName', ''))}{self.get_translated_text(mod_item.get('Name', ''))}".strip()
+                product_name = (
+                    f"{self.get_translated_text(mod_item.get('Name', ''))}".strip()
+                )
             elif product_type == "Char":
                 # 获取角色名称，直接使用翻译
                 product_name = self.get_translated_text(f"UI_CHAR_NAME_{product_id}")
