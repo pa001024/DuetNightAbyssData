@@ -58,7 +58,7 @@ class BaseProcessor:
         if not release_version:
             return ""
         return (
-            f"{release_version // 100}.{release_version % 100//10}"
+            f"{release_version // 100}.{release_version % 100 // 10}"
             if release_version
             else "1.0"
         )
@@ -701,12 +701,30 @@ class BaseProcessor:
                     if isinstance(level_data, list):
                         for attr_entry in level_data:
                             if isinstance(attr_entry, dict):
-                                if attr_entry["Index"] == grow_index:
+                                # Check if grow_index (as string) is a key in dict (actual format)
+                                # or if Index property equals grow_index (old format)
+                                if str(grow_index) in attr_entry:
+                                    found_value = attr_entry[str(grow_index)].get(
+                                        "Value"
+                                    )
+                                    break
+                                elif (
+                                    "Index" in attr_entry
+                                    and attr_entry["Index"] == grow_index
+                                ):
                                     found_value = attr_entry["Value"]
                                     break
+                                # Also check if grow_index (as string) is a key in the dict
+                                elif str(grow_index) in attr_entry:
+                                    found_value = attr_entry[str(grow_index)].get(
+                                        "Value"
+                                    )
+                                    break
                     elif isinstance(level_data, dict):
-                        if level_data["Index"] == grow_index:
+                        if "Index" in level_data and level_data["Index"] == grow_index:
                             found_value = level_data["Value"]
+                        elif str(grow_index) in level_data:
+                            found_value = level_data[str(grow_index)].get("Value")
 
                     if found_value is not None:
                         return found_value

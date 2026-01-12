@@ -12,6 +12,7 @@ from processor.reward_processor import RewardProcessor
 from processor.pet_processor import PetProcessor
 from processor.abyss_buff_processor import AbyssBuffProcessor
 from processor.abyss_dungeon_processor import AbyssDungeonProcessor
+from processor.walnut_processor import WalnutProcessor
 
 
 class DataLoader:
@@ -197,6 +198,7 @@ class FinalProcessor:
             "Pet": PetProcessor,
             "AbyssBuff": AbyssBuffProcessor,
             "AbyssDungeon": AbyssDungeonProcessor,
+            "Walnut": WalnutProcessor,
             # Add other processor classes here as they are implemented
         }
 
@@ -292,7 +294,7 @@ if __name__ == "__main__":
         # "Achievement",
         # "Mod",
         # "Weapon",
-        "Char",
+        # "Char",
         # "Monster",
         # "Draft",
         # "Dungeon",
@@ -300,6 +302,7 @@ if __name__ == "__main__":
         # "Pet",
         # "AbyssBuff",
         # "AbyssDungeon",
+        "Walnut",
     ]
 
     # Create processor and process all specified file types for all languages

@@ -532,13 +532,15 @@ class CharProcessor(BaseProcessor):
                 if "BuffId" in halo:
                     bid = halo["BuffId"]
                     halo_item["id"] = bid
+                    # For nested buffs in HaloDatas, use the buff's own ID to look up SkillGrow data
+                    # not the parent's task_id (lookup_id)
                     halo_item["t"] = self._parse_buff_detail(
                         bid,
                         self.buff_data.get(str(bid), {}),
                         function_name,
-                        grow_source,
+                        "Buff",  # Nested buffs always use Buff source
                         max_level,
-                        lookup_id,
+                        bid,  # Use the nested buff's ID for SkillGrow lookup
                     )
                 if "AuraRange" in halo:
                     halo_item["range"] = halo["AuraRange"]
@@ -550,9 +552,9 @@ class CharProcessor(BaseProcessor):
                 buff_data["aura"] = aura_list
 
         # 解析 DotDatas
+        dot_list = []
         dot_datas = buff_detail.get("DotDatas", [])
         if dot_datas:
-            dot_list = []
             for dot in dot_datas:
                 dot_item = {}
                 for key, value in dot.items():
@@ -573,18 +575,20 @@ class CharProcessor(BaseProcessor):
                     # 处理占位符
                     values = self._process_placeholder(
                         value,
-                        buff_id,
+                        lookup_id,
                         max_level,
-                        grow_source,
+                        "Buff",
                     )
 
                     dot_item[key_abbr] = values
-                if dot_item:
-                    dot_list.append(dot_item)
-            if dot_list:
-                # Dot 数据添加到 t 字段
-                if "dot" not in buff_data:
-                    buff_data["dot"] = dot_list
+                    # Only add dot entry if it has meaningful damage data (Rate or Value)
+                    # Skip dot entries that only have EffectId, Interval, Type, etc. (these are just references)
+                    if dot_item and ("r" in dot_item or "v" in dot_item):
+                        dot_list.append(dot_item)
+        if dot_list:
+            # Dot 数据添加到 t 字段
+            if "dot" not in buff_data:
+                buff_data["dot"] = dot_list
 
         # 解析 LastTime
         last_time = buff_detail.get("LastTime")
@@ -818,6 +822,7 @@ class CharProcessor(BaseProcessor):
                             if vars_data:
                                 vars_result = {}
                                 for var_name, var_value in vars_data.items():
+                                    # Use PassiveEffect table type for growth data
                                     val = self._process_placeholder(
                                         var_value,
                                         passive_effect_id,
@@ -943,10 +948,26 @@ class CharProcessor(BaseProcessor):
                         level_index = level - 1
                         if level_index < len(grow_entry):
                             level_data = grow_entry[level_index]
+                            # Handle both list and dict formats for level_data
                             if isinstance(level_data, list) and len(level_data) > 0:
-                                param_index_zero = param_index - 1
-                                if 0 <= param_index_zero < len(level_data):
-                                    param_data = level_data[param_index_zero]
+                                # level_data is a list of dicts: [{"ID":..., "Index": N, "Value":...}, ...]
+                                # Need to find the dict where Index matches param_index
+                                found = False
+                                for item in level_data:
+                                    if (
+                                        isinstance(item, dict)
+                                        and item.get("Index") == param_index
+                                    ):
+                                        values.append(item.get("Value", field_value))
+                                        found = True
+                                        break
+                                if not found:
+                                    values.append(field_value)
+                            elif isinstance(level_data, dict):
+                                # Dict format: {"index": {"ID":..., "Value":...}}
+                                param_key = str(param_index)
+                                if param_key in level_data:
+                                    param_data = level_data[param_key]
                                     if isinstance(param_data, dict):
                                         values.append(
                                             param_data.get("Value", field_value)
