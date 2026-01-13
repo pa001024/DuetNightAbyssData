@@ -1,0 +1,2254 @@
+[
+  {
+    "id": 1101,
+    "name": "회유어",
+    "level": 2,
+    "type": 1,
+    "length": [
+      20,
+      40
+    ],
+    "icon": "Sea_Normal_1",
+    "price": [
+      20,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      110101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 1102,
+    "name": "오색 가시",
+    "level": 1,
+    "type": 1,
+    "length": [
+      80,
+      100
+    ],
+    "icon": "Sea_Normal_2",
+    "price": [
+      10,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      110201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 1103,
+    "name": "은괴어",
+    "level": 1,
+    "type": 1,
+    "length": [
+      50,
+      120
+    ],
+    "icon": "Sea_Normal_3",
+    "price": [
+      10,
+      5,
+      14
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      110301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 1201,
+    "name": "장수옹",
+    "level": 1,
+    "type": 1,
+    "length": [
+      50,
+      150
+    ],
+    "icon": "FreshWater_Normal_1",
+    "price": [
+      10,
+      5,
+      20
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      120101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 1202,
+    "name": "반점 창꼬치",
+    "level": 1,
+    "type": 1,
+    "length": [
+      60,
+      240
+    ],
+    "icon": "FreshWater_Normal_2",
+    "price": [
+      10,
+      5,
+      36
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      120201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 1203,
+    "name": "자라새우",
+    "level": 1,
+    "type": 1,
+    "length": [
+      3,
+      15
+    ],
+    "icon": "FreshWater_Normal_3",
+    "price": [
+      10,
+      5,
+      2
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      120301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 1301,
+    "name": "이빨 난쟁이",
+    "level": 2,
+    "type": 1,
+    "length": [
+      3,
+      15
+    ],
+    "icon": "DirtyWater_Normal_1",
+    "price": [
+      20,
+      5,
+      2
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      130101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 1302,
+    "name": "쩝쩝어",
+    "level": 1,
+    "type": 1,
+    "length": [
+      15,
+      30
+    ],
+    "icon": "DirtyWater_Normal_2",
+    "price": [
+      10,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      130201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 1303,
+    "name": "키다리 아저씨",
+    "level": 1,
+    "type": 1,
+    "length": [
+      5,
+      20
+    ],
+    "icon": "DirtyWater_Normal_3",
+    "price": [
+      10,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      130301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2101,
+    "name": "영원의 등대",
+    "level": 2,
+    "type": 1,
+    "length": [
+      3,
+      8
+    ],
+    "icon": "Sea_Village_1",
+    "price": [
+      20,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2104,
+    "var": [
+      210101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2102,
+    "name": "조수어",
+    "level": 3,
+    "type": 1,
+    "length": [
+      100,
+      300
+    ],
+    "icon": "Sea_Village_2",
+    "price": [
+      40,
+      5,
+      40
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      210201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2103,
+    "name": "수면 비행어",
+    "level": 4,
+    "type": 1,
+    "length": [
+      20,
+      45
+    ],
+    "icon": "Sea_Village_4",
+    "price": [
+      70,
+      5,
+      5
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2105,
+    "var": [
+      210301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2104,
+    "name": "보글보글밥",
+    "level": 5,
+    "type": 1,
+    "length": [
+      4,
+      9
+    ],
+    "icon": "Sea_Village_3",
+    "price": [
+      120,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      210401
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2105,
+    "name": "이파리 은상어",
+    "level": 6,
+    "type": 3,
+    "length": [
+      100,
+      200
+    ],
+    "icon": "Sea_Village_5",
+    "price": [
+      500,
+      5,
+      20
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      210501
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2201,
+    "name": "무늬 납작 상어",
+    "level": 5,
+    "type": 1,
+    "length": [
+      50,
+      100
+    ],
+    "icon": "Sea_East_1",
+    "price": [
+      120,
+      5,
+      10
+    ],
+    "appear": [
+      2,
+      3
+    ],
+    "var": [
+      220101
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2202,
+    "name": "톱니 소라게",
+    "level": 4,
+    "type": 1,
+    "length": [
+      8,
+      15
+    ],
+    "icon": "Sea_East_2",
+    "price": [
+      70,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2201,
+    "var": [
+      220201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2203,
+    "name": "현주어",
+    "level": 5,
+    "type": 1,
+    "length": [
+      50,
+      150
+    ],
+    "icon": "Sea_East_4",
+    "price": [
+      120,
+      5,
+      20
+    ],
+    "appear": [
+      1,
+      3
+    ],
+    "s2b": 2205,
+    "var": [
+      220301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2204,
+    "name": "역",
+    "level": 4,
+    "type": 1,
+    "length": [
+      4,
+      10
+    ],
+    "icon": "Sea_East_3",
+    "price": [
+      70,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      220401
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2205,
+    "name": "상투 상어",
+    "level": 6,
+    "type": 3,
+    "length": [
+      100,
+      300
+    ],
+    "icon": "Sea_East_5",
+    "price": [
+      500,
+      5,
+      40
+    ],
+    "appear": [
+      3
+    ],
+    "var": [
+      220501
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2301,
+    "name": "월야어",
+    "level": 2,
+    "type": 1,
+    "length": [
+      20,
+      50
+    ],
+    "icon": "FreshWater_IceLake_3",
+    "price": [
+      20,
+      5,
+      6
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      230101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2302,
+    "name": "호수 부인",
+    "level": 2,
+    "type": 1,
+    "length": [
+      50,
+      120
+    ],
+    "icon": "FreshWater_IceLake_2",
+    "price": [
+      20,
+      5,
+      14
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2304,
+    "var": [
+      230201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2303,
+    "name": "눈물의 호수어",
+    "level": 3,
+    "type": 1,
+    "length": [
+      70,
+      150
+    ],
+    "icon": "FreshWater_IceLake_4",
+    "price": [
+      40,
+      5,
+      16
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2305,
+    "var": [
+      230301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2304,
+    "name": "빨래 방망이어",
+    "level": 3,
+    "type": 1,
+    "length": [
+      20,
+      35
+    ],
+    "icon": "FreshWater_IceLake_1",
+    "price": [
+      40,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      230401
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2305,
+    "name": "빛고래",
+    "level": 6,
+    "type": 3,
+    "length": [
+      120,
+      300
+    ],
+    "icon": "FreshWater_IceLake_5",
+    "price": [
+      500,
+      5,
+      36
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      230501
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2401,
+    "name": "알로록치마",
+    "level": 4,
+    "type": 1,
+    "length": [
+      3,
+      10
+    ],
+    "icon": "FreshWater_East_1",
+    "price": [
+      70,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      240101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2402,
+    "name": "수성 오징어",
+    "level": 4,
+    "type": 1,
+    "length": [
+      3,
+      5
+    ],
+    "icon": "FreshWater_East_2",
+    "price": [
+      70,
+      5,
+      0
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2404,
+    "var": [
+      240201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2403,
+    "name": "고사 복어",
+    "level": 5,
+    "type": 1,
+    "length": [
+      30,
+      50
+    ],
+    "icon": "FreshWater_East_4",
+    "price": [
+      120,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      3
+    ],
+    "s2b": 2405,
+    "var": [
+      240301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2404,
+    "name": "주머니 잉어",
+    "level": 5,
+    "type": 1,
+    "length": [
+      30,
+      50
+    ],
+    "icon": "FreshWater_East_3",
+    "price": [
+      120,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2
+    ],
+    "var": [
+      240401
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2405,
+    "name": "수룡왕",
+    "level": 6,
+    "type": 3,
+    "length": [
+      200,
+      400
+    ],
+    "icon": "FreshWater_East_5",
+    "price": [
+      500,
+      5,
+      40
+    ],
+    "appear": [
+      3
+    ],
+    "var": [
+      240501
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2501,
+    "name": "찍찍어",
+    "level": 3,
+    "type": 1,
+    "length": [
+      7,
+      15
+    ],
+    "icon": "DirtyWater_Sew_1",
+    "price": [
+      40,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2504,
+    "var": [
+      250101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2502,
+    "name": "교골 장어",
+    "level": 4,
+    "type": 1,
+    "length": [
+      30,
+      50
+    ],
+    "icon": "DirtyWater_Sew_2",
+    "price": [
+      70,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      250201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2503,
+    "name": "수중 해골",
+    "level": 5,
+    "type": 1,
+    "length": [
+      10,
+      20
+    ],
+    "icon": "DirtyWater_Sew_4",
+    "price": [
+      120,
+      5,
+      2
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2505,
+    "var": [
+      250301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2504,
+    "name": "괴성수",
+    "level": 5,
+    "type": 1,
+    "length": [
+      50,
+      100
+    ],
+    "icon": "DirtyWater_Sew_3",
+    "price": [
+      120,
+      5,
+      10
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      250401
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2505,
+    "name": "물바퀴",
+    "level": 6,
+    "type": 3,
+    "length": [
+      10,
+      25
+    ],
+    "icon": "DirtyWater_Sew_5",
+    "price": [
+      500,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      250501
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2601,
+    "name": "맷돌비목어",
+    "level": 4,
+    "type": 1,
+    "length": [
+      50,
+      80
+    ],
+    "icon": "Sea_East_6",
+    "price": [
+      40,
+      5,
+      6
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2605,
+    "var": [
+      260101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2602,
+    "name": "난꽃게",
+    "level": 4,
+    "type": 1,
+    "length": [
+      13,
+      16
+    ],
+    "icon": "Sea_East_7",
+    "price": [
+      70,
+      5,
+      0
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      260201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2603,
+    "name": "불가사리",
+    "level": 5,
+    "type": 1,
+    "length": [
+      5,
+      10
+    ],
+    "icon": "Sea_East_8",
+    "price": [
+      120,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2604,
+    "var": [
+      260301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2604,
+    "name": "폭죽새우",
+    "level": 5,
+    "type": 1,
+    "length": [
+      10,
+      20
+    ],
+    "icon": "Sea_East_9",
+    "price": [
+      120,
+      5,
+      2
+    ],
+    "appear": [
+      2,
+      3
+    ],
+    "var": [
+      260401
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2605,
+    "name": "창랑곤",
+    "level": 6,
+    "type": 3,
+    "length": [
+      200,
+      250
+    ],
+    "icon": "Sea_East_10",
+    "price": [
+      500,
+      5,
+      10
+    ],
+    "appear": [
+      2
+    ],
+    "var": [
+      260501
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2701,
+    "name": "웅어",
+    "level": 4,
+    "type": 1,
+    "length": [
+      15,
+      25
+    ],
+    "icon": "FreshWater_East_6",
+    "price": [
+      40,
+      5,
+      2
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2704,
+    "var": [
+      270101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2702,
+    "name": "도화어",
+    "level": 4,
+    "type": 1,
+    "length": [
+      20,
+      40
+    ],
+    "icon": "FreshWater_East_7",
+    "price": [
+      70,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2705,
+    "var": [
+      270201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2703,
+    "name": "꺽정이",
+    "level": 5,
+    "type": 1,
+    "length": [
+      8,
+      10
+    ],
+    "icon": "FreshWater_East_8",
+    "price": [
+      120,
+      5,
+      0
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      270301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2704,
+    "name": "봉황어",
+    "level": 5,
+    "type": 1,
+    "length": [
+      10,
+      17
+    ],
+    "icon": "FreshWater_East_9",
+    "price": [
+      120,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2
+    ],
+    "var": [
+      270401
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2705,
+    "name": "제왕의 증거",
+    "level": 6,
+    "type": 3,
+    "length": [
+      500,
+      560
+    ],
+    "icon": "FreshWater_East_10",
+    "price": [
+      500,
+      5,
+      12
+    ],
+    "appear": [
+      1
+    ],
+    "var": [
+      270501
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2801,
+    "name": "가모치",
+    "level": 4,
+    "type": 1,
+    "length": [
+      15,
+      30
+    ],
+    "icon": "DirtyWater_East_1",
+    "price": [
+      40,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2804,
+    "var": [
+      280101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2802,
+    "name": "통통어",
+    "level": 4,
+    "type": 1,
+    "length": [
+      6,
+      20
+    ],
+    "icon": "DirtyWater_East_2",
+    "price": [
+      70,
+      5,
+      2
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2805,
+    "var": [
+      280201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2803,
+    "name": "장님물고기",
+    "level": 5,
+    "type": 1,
+    "length": [
+      5,
+      10
+    ],
+    "icon": "DirtyWater_East_3",
+    "price": [
+      120,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      280301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2804,
+    "name": "두꺼비",
+    "level": 5,
+    "type": 1,
+    "length": [
+      10,
+      15
+    ],
+    "icon": "DirtyWater_East_4",
+    "price": [
+      120,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      3
+    ],
+    "var": [
+      280401
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2805,
+    "name": "파닥감펭",
+    "level": 6,
+    "type": 3,
+    "length": [
+      30,
+      50
+    ],
+    "icon": "DirtyWater_East_5",
+    "price": [
+      500,
+      5,
+      4
+    ],
+    "appear": [
+      3
+    ],
+    "var": [
+      280501
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 110101,
+    "name": "회유어·특이종",
+    "level": 2,
+    "type": 2,
+    "length": [
+      20,
+      40
+    ],
+    "icon": "Sea_Normal_1_1",
+    "price": [
+      30,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 110201,
+    "name": "오색 가시·특이종",
+    "level": 1,
+    "type": 2,
+    "length": [
+      80,
+      100
+    ],
+    "icon": "Sea_Normal_2_1",
+    "price": [
+      15,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 110301,
+    "name": "은괴어·특이종",
+    "level": 1,
+    "type": 2,
+    "length": [
+      50,
+      120
+    ],
+    "icon": "Sea_Normal_3_1",
+    "price": [
+      15,
+      5,
+      14
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 120101,
+    "name": "장수옹·특이종",
+    "level": 1,
+    "type": 2,
+    "length": [
+      50,
+      150
+    ],
+    "icon": "FreshWater_Normal_1_1",
+    "price": [
+      15,
+      5,
+      20
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 120201,
+    "name": "반점 창꼬치·특이종",
+    "level": 1,
+    "type": 2,
+    "length": [
+      60,
+      240
+    ],
+    "icon": "FreshWater_Normal_2_1",
+    "price": [
+      15,
+      5,
+      36
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 120301,
+    "name": "자라새우·특이종",
+    "level": 1,
+    "type": 2,
+    "length": [
+      3,
+      15
+    ],
+    "icon": "FreshWater_Normal_3_1",
+    "price": [
+      15,
+      5,
+      2
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 130101,
+    "name": "이빨 난쟁이·특이종",
+    "level": 2,
+    "type": 2,
+    "length": [
+      3,
+      15
+    ],
+    "icon": "DirtyWater_Normal_1_1",
+    "price": [
+      30,
+      5,
+      2
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 130201,
+    "name": "쩝쩝어·특이종",
+    "level": 1,
+    "type": 2,
+    "length": [
+      15,
+      30
+    ],
+    "icon": "DirtyWater_Normal_2_1",
+    "price": [
+      15,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 130301,
+    "name": "키다리 아저씨·특이종",
+    "level": 1,
+    "type": 2,
+    "length": [
+      5,
+      20
+    ],
+    "icon": "DirtyWater_Normal_3_1",
+    "price": [
+      15,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 210101,
+    "name": "영원의 등대·특이종",
+    "level": 2,
+    "type": 2,
+    "length": [
+      3,
+      8
+    ],
+    "icon": "Sea_Village_1_1",
+    "price": [
+      30,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 210401
+  },
+  {
+    "id": 210201,
+    "name": "조수어·특이종",
+    "level": 3,
+    "type": 2,
+    "length": [
+      100,
+      300
+    ],
+    "icon": "Sea_Village_2_1",
+    "price": [
+      60,
+      5,
+      40
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 210301,
+    "name": "수면 비행어·특이종",
+    "level": 4,
+    "type": 2,
+    "length": [
+      20,
+      45
+    ],
+    "icon": "Sea_Village_4_1",
+    "price": [
+      105,
+      5,
+      5
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 210501
+  },
+  {
+    "id": 210401,
+    "name": "보글보글밥·특이종",
+    "level": 5,
+    "type": 2,
+    "length": [
+      4,
+      9
+    ],
+    "icon": "Sea_Village_3_1",
+    "price": [
+      240,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 210501,
+    "name": "이파리 은상어·특이종",
+    "level": 6,
+    "type": 4,
+    "length": [
+      100,
+      200
+    ],
+    "icon": "Sea_Village_5_1",
+    "price": [
+      500,
+      5,
+      20
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 220101,
+    "name": "무늬 납작 특이종",
+    "level": 5,
+    "type": 2,
+    "length": [
+      50,
+      100
+    ],
+    "icon": "Sea_East_1_1",
+    "price": [
+      240,
+      5,
+      10
+    ],
+    "appear": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": 220201,
+    "name": "톱니 소라게·특이종",
+    "level": 4,
+    "type": 2,
+    "length": [
+      8,
+      15
+    ],
+    "icon": "Sea_East_2_1",
+    "price": [
+      105,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 220101
+  },
+  {
+    "id": 220301,
+    "name": "현주어·특이종",
+    "level": 5,
+    "type": 2,
+    "length": [
+      50,
+      150
+    ],
+    "icon": "Sea_East_4_1",
+    "price": [
+      240,
+      5,
+      20
+    ],
+    "appear": [
+      1,
+      3
+    ],
+    "s2b": 220501
+  },
+  {
+    "id": 220401,
+    "name": "역·특이종",
+    "level": 4,
+    "type": 2,
+    "length": [
+      4,
+      10
+    ],
+    "icon": "Sea_East_3_1",
+    "price": [
+      105,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 220501,
+    "name": "상투 상어·특이종",
+    "level": 6,
+    "type": 4,
+    "length": [
+      100,
+      300
+    ],
+    "icon": "Sea_East_5_1",
+    "price": [
+      500,
+      5,
+      40
+    ],
+    "appear": [
+      3
+    ]
+  },
+  {
+    "id": 230101,
+    "name": "월야어·특이종",
+    "level": 2,
+    "type": 2,
+    "length": [
+      20,
+      50
+    ],
+    "icon": "FreshWater_IceLake_3_1",
+    "price": [
+      30,
+      5,
+      6
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 230201,
+    "name": "호수 부인·특이종",
+    "level": 2,
+    "type": 2,
+    "length": [
+      50,
+      120
+    ],
+    "icon": "FreshWater_IceLake_2_1",
+    "price": [
+      30,
+      5,
+      14
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 230401
+  },
+  {
+    "id": 230301,
+    "name": "눈물의 호수어·특이종",
+    "level": 3,
+    "type": 2,
+    "length": [
+      70,
+      150
+    ],
+    "icon": "FreshWater_IceLake_4_1",
+    "price": [
+      60,
+      5,
+      16
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 230501
+  },
+  {
+    "id": 230401,
+    "name": "빨래 방망이어·특이종",
+    "level": 3,
+    "type": 2,
+    "length": [
+      20,
+      35
+    ],
+    "icon": "FreshWater_IceLake_1_1",
+    "price": [
+      60,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 230501,
+    "name": "빛고래·특이종",
+    "level": 6,
+    "type": 4,
+    "length": [
+      120,
+      300
+    ],
+    "icon": "FreshWater_IceLake_5_1",
+    "price": [
+      500,
+      5,
+      36
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 240101,
+    "name": "알로록치마·특이종",
+    "level": 4,
+    "type": 2,
+    "length": [
+      3,
+      10
+    ],
+    "icon": "FreshWater_East_1_1",
+    "price": [
+      105,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 240201,
+    "name": "수성 오징어·특이종",
+    "level": 4,
+    "type": 2,
+    "length": [
+      3,
+      5
+    ],
+    "icon": "FreshWater_East_2_1",
+    "price": [
+      105,
+      5,
+      0
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 240401
+  },
+  {
+    "id": 240301,
+    "name": "고사 복어·특이종",
+    "level": 5,
+    "type": 2,
+    "length": [
+      30,
+      50
+    ],
+    "icon": "FreshWater_East_4_1",
+    "price": [
+      240,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      3
+    ],
+    "s2b": 240501
+  },
+  {
+    "id": 240401,
+    "name": "주머니 잉어·특이종",
+    "level": 5,
+    "type": 2,
+    "length": [
+      30,
+      50
+    ],
+    "icon": "FreshWater_East_3_1",
+    "price": [
+      240,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": 240501,
+    "name": "수룡왕·특이종",
+    "level": 6,
+    "type": 4,
+    "length": [
+      200,
+      400
+    ],
+    "icon": "FreshWater_East_5_1",
+    "price": [
+      500,
+      5,
+      40
+    ],
+    "appear": [
+      3
+    ]
+  },
+  {
+    "id": 250101,
+    "name": "찍찍어·특이종",
+    "level": 3,
+    "type": 2,
+    "length": [
+      7,
+      15
+    ],
+    "icon": "DirtyWater_Sew_1_1",
+    "price": [
+      60,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 250401
+  },
+  {
+    "id": 250201,
+    "name": "교골 장어·특이종",
+    "level": 4,
+    "type": 2,
+    "length": [
+      30,
+      50
+    ],
+    "icon": "DirtyWater_Sew_2_1",
+    "price": [
+      105,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 250301,
+    "name": "수중 해골·특이종",
+    "level": 5,
+    "type": 2,
+    "length": [
+      10,
+      20
+    ],
+    "icon": "DirtyWater_Sew_4_1",
+    "price": [
+      240,
+      5,
+      2
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 250501
+  },
+  {
+    "id": 250401,
+    "name": "괴성수·특이종",
+    "level": 5,
+    "type": 2,
+    "length": [
+      50,
+      100
+    ],
+    "icon": "DirtyWater_Sew_3_1",
+    "price": [
+      240,
+      5,
+      10
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 250501,
+    "name": "물바퀴·특이종",
+    "level": 6,
+    "type": 4,
+    "length": [
+      10,
+      25
+    ],
+    "icon": "DirtyWater_Sew_5_1",
+    "price": [
+      500,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 260101,
+    "name": "맷돌비목어·특이종",
+    "level": 4,
+    "type": 2,
+    "length": [
+      50,
+      80
+    ],
+    "icon": "Sea_East_6_1",
+    "price": [
+      60,
+      5,
+      6
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 260501
+  },
+  {
+    "id": 260201,
+    "name": "난꽃게·특이종",
+    "level": 4,
+    "type": 2,
+    "length": [
+      13,
+      16
+    ],
+    "icon": "Sea_East_7_1",
+    "price": [
+      105,
+      5,
+      0
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 260301,
+    "name": "불가사리·특이종",
+    "level": 5,
+    "type": 2,
+    "length": [
+      5,
+      10
+    ],
+    "icon": "Sea_East_8_1",
+    "price": [
+      240,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 260401
+  },
+  {
+    "id": 260401,
+    "name": "폭죽새우·특이종",
+    "level": 5,
+    "type": 2,
+    "length": [
+      10,
+      20
+    ],
+    "icon": "Sea_East_9_1",
+    "price": [
+      240,
+      5,
+      2
+    ],
+    "appear": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": 260501,
+    "name": "창랑곤·특이종",
+    "level": 6,
+    "type": 4,
+    "length": [
+      200,
+      250
+    ],
+    "icon": "Sea_East_10_1",
+    "price": [
+      500,
+      5,
+      10
+    ],
+    "appear": [
+      2
+    ]
+  },
+  {
+    "id": 270101,
+    "name": "웅어·특이종",
+    "level": 4,
+    "type": 2,
+    "length": [
+      15,
+      25
+    ],
+    "icon": "FreshWater_East_6_1",
+    "price": [
+      60,
+      5,
+      2
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 270401
+  },
+  {
+    "id": 270201,
+    "name": "도화어·특이종",
+    "level": 4,
+    "type": 2,
+    "length": [
+      20,
+      40
+    ],
+    "icon": "FreshWater_East_7_1",
+    "price": [
+      105,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 270501
+  },
+  {
+    "id": 270301,
+    "name": "꺽정이·특이종",
+    "level": 5,
+    "type": 2,
+    "length": [
+      8,
+      10
+    ],
+    "icon": "FreshWater_East_8_1",
+    "price": [
+      240,
+      5,
+      0
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 270401,
+    "name": "봉황어·특이종",
+    "level": 5,
+    "type": 2,
+    "length": [
+      10,
+      17
+    ],
+    "icon": "FreshWater_East_9_1",
+    "price": [
+      240,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": 270501,
+    "name": "제왕의 증거·특이종",
+    "level": 6,
+    "type": 4,
+    "length": [
+      500,
+      560
+    ],
+    "icon": "FreshWater_East_10_1",
+    "price": [
+      500,
+      5,
+      12
+    ],
+    "appear": [
+      1
+    ]
+  },
+  {
+    "id": 280101,
+    "name": "가모치·특이종",
+    "level": 4,
+    "type": 2,
+    "length": [
+      15,
+      30
+    ],
+    "icon": "DirtyWater_East_1_1",
+    "price": [
+      60,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 280401
+  },
+  {
+    "id": 280201,
+    "name": "통통어·특이종",
+    "level": 4,
+    "type": 2,
+    "length": [
+      6,
+      20
+    ],
+    "icon": "DirtyWater_East_2_1",
+    "price": [
+      105,
+      5,
+      2
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 280501
+  },
+  {
+    "id": 280301,
+    "name": "장님물고기·특이종",
+    "level": 5,
+    "type": 2,
+    "length": [
+      5,
+      10
+    ],
+    "icon": "DirtyWater_East_3_1",
+    "price": [
+      240,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 280401,
+    "name": "두꺼비·특이종",
+    "level": 5,
+    "type": 2,
+    "length": [
+      10,
+      15
+    ],
+    "icon": "DirtyWater_East_4_1",
+    "price": [
+      240,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      3
+    ]
+  },
+  {
+    "id": 280501,
+    "name": "파닥감펭·특이종",
+    "level": 6,
+    "type": 4,
+    "length": [
+      30,
+      50
+    ],
+    "icon": "DirtyWater_East_5_1",
+    "price": [
+      500,
+      5,
+      4
+    ],
+    "appear": [
+      3
+    ]
+  }
+]

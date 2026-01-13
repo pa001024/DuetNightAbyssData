@@ -33,28 +33,36 @@
           "1-Hit DMG": "45.0%",
           "2-Hit DMG": "50.0%",
           "3-Hit DMG": "40.0%×2",
-          "4-Hit DMG": "82.0%"
+          "4-Hit DMG": "82.0%",
+          "削韧": 25,
+          "延迟": "0.050s",
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "113.0%"
+          "Charged Attack DMG": "113.0%",
+          "削韧": 73,
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%"
+          "Plunge DMG": "51.0%",
+          "削韧": 33
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%"
+          "Sliding Attack DMG": "51.0%",
+          "削韧": 33,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -93,28 +101,36 @@
           "1-Hit DMG": "45.0%",
           "2-Hit DMG": "50.0%",
           "3-Hit DMG": "40.0%×2",
-          "4-Hit DMG": "82.0%"
+          "4-Hit DMG": "82.0%",
+          "削韧": 25,
+          "延迟": "0.050s",
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "113.0%"
+          "Charged Attack DMG": "113.0%",
+          "削韧": 73,
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%"
+          "Plunge DMG": "51.0%",
+          "削韧": 33
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%"
+          "Sliding Attack DMG": "51.0%",
+          "削韧": 33,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -153,28 +169,36 @@
           "1-Hit DMG": "45.0%",
           "2-Hit DMG": "50.0%",
           "3-Hit DMG": "40.0%×2",
-          "4-Hit DMG": "82.0%"
+          "4-Hit DMG": "82.0%",
+          "削韧": 25,
+          "延迟": "0.050s",
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "113.0%"
+          "Charged Attack DMG": "113.0%",
+          "削韧": 73,
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%"
+          "Plunge DMG": "51.0%",
+          "削韧": 33
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%"
+          "Sliding Attack DMG": "51.0%",
+          "削韧": 33,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -213,28 +237,36 @@
           "1-Hit DMG": "45.0%",
           "2-Hit DMG": "50.0%",
           "3-Hit DMG": "40.0%×2",
-          "4-Hit DMG": "82.0%"
+          "4-Hit DMG": "82.0%",
+          "削韧": 25,
+          "延迟": "0.050s",
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "113.0%"
+          "Charged Attack DMG": "113.0%",
+          "削韧": 73,
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%"
+          "Plunge DMG": "51.0%",
+          "削韧": 33
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%"
+          "Sliding Attack DMG": "51.0%",
+          "削韧": 33,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -273,28 +305,36 @@
           "1-Hit DMG": "45.0%",
           "2-Hit DMG": "50.0%",
           "3-Hit DMG": "40.0%×2",
-          "4-Hit DMG": "82.0%"
+          "4-Hit DMG": "82.0%",
+          "削韧": 25,
+          "延迟": "0.050s",
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "113.0%"
+          "Charged Attack DMG": "113.0%",
+          "削韧": 73,
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%"
+          "Plunge DMG": "51.0%",
+          "削韧": 33
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%"
+          "Sliding Attack DMG": "51.0%",
+          "削韧": 33,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -334,28 +374,34 @@
           "2-Hit DMG": "25.0%×3",
           "3-Hit DMG": "50.0%",
           "4-Hit DMG": "40.0%",
-          "5-Hit DMG": "75.0%"
+          "5-Hit DMG": "75.0%",
+          "削韧": 20,
+          "卡肉": "0.100s"
         }
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "10.0%"
+          "Charged Attack DMG": "10.0%",
+          "削韧": 5
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "47.0%"
+          "Plunge DMG": "47.0%",
+          "削韧": 30
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "40.0%"
+          "Sliding Attack DMG": "40.0%",
+          "削韧": 26,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -395,28 +441,34 @@
           "2-Hit DMG": "25.0%×3",
           "3-Hit DMG": "50.0%",
           "4-Hit DMG": "40.0%",
-          "5-Hit DMG": "75.0%"
+          "5-Hit DMG": "75.0%",
+          "削韧": 20,
+          "卡肉": "0.100s"
         }
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "10.0%"
+          "Charged Attack DMG": "10.0%",
+          "削韧": 5
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "47.0%"
+          "Plunge DMG": "47.0%",
+          "削韧": 30
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "40.0%"
+          "Sliding Attack DMG": "40.0%",
+          "削韧": 26,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -456,28 +508,34 @@
           "2-Hit DMG": "25.0%×3",
           "3-Hit DMG": "50.0%",
           "4-Hit DMG": "40.0%",
-          "5-Hit DMG": "75.0%"
+          "5-Hit DMG": "75.0%",
+          "削韧": 20,
+          "卡肉": "0.100s"
         }
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "10.0%"
+          "Charged Attack DMG": "10.0%",
+          "削韧": 5
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "47.0%"
+          "Plunge DMG": "47.0%",
+          "削韧": 30
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "40.0%"
+          "Sliding Attack DMG": "40.0%",
+          "削韧": 26,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -517,28 +575,34 @@
           "2-Hit DMG": "25.0%×3",
           "3-Hit DMG": "50.0%",
           "4-Hit DMG": "40.0%",
-          "5-Hit DMG": "75.0%"
+          "5-Hit DMG": "75.0%",
+          "削韧": 20,
+          "卡肉": "0.100s"
         }
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "10.0%"
+          "Charged Attack DMG": "10.0%",
+          "削韧": 5
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "47.0%"
+          "Plunge DMG": "47.0%",
+          "削韧": 30
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "40.0%"
+          "Sliding Attack DMG": "40.0%",
+          "削韧": 26,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -578,28 +642,34 @@
           "2-Hit DMG": "25.0%×3",
           "3-Hit DMG": "50.0%",
           "4-Hit DMG": "40.0%",
-          "5-Hit DMG": "75.0%"
+          "5-Hit DMG": "75.0%",
+          "削韧": 20,
+          "卡肉": "0.100s"
         }
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "10.0%"
+          "Charged Attack DMG": "10.0%",
+          "削韧": 5
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "47.0%"
+          "Plunge DMG": "47.0%",
+          "削韧": 30
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "40.0%"
+          "Sliding Attack DMG": "40.0%",
+          "削韧": 26,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -639,28 +709,34 @@
           "2-Hit DMG": "25.0%×3",
           "3-Hit DMG": "50.0%",
           "4-Hit DMG": "40.0%",
-          "5-Hit DMG": "75.0%"
+          "5-Hit DMG": "75.0%",
+          "削韧": 20,
+          "卡肉": "0.100s"
         }
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "10.0%"
+          "Charged Attack DMG": "10.0%",
+          "削韧": 5
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "47.0%"
+          "Plunge DMG": "47.0%",
+          "削韧": 30
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "40.0%"
+          "Sliding Attack DMG": "40.0%",
+          "削韧": 26,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -699,7 +775,9 @@
           "1-Hit DMG": "40.0%",
           "2-Hit DMG": "45.0%",
           "3-Hit DMG": "50.0%",
-          "4-Hit DMG": "120.0%"
+          "4-Hit DMG": "120.0%",
+          "削韧": 20,
+          "卡肉": "0.070s"
         }
       },
       {
@@ -707,21 +785,26 @@
         "类型": "武器伤害",
         "字段": {
           "Charged Attack DMG": "55.0%",
-          "Charged Attack Finisher DMG": "50.0%"
+          "Charged Attack Finisher DMG": "50.0%",
+          "削韧": 35,
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%"
+          "Plunge DMG": "51.0%",
+          "削韧": 33
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "73.0%"
+          "Sliding Attack DMG": "73.0%",
+          "削韧": 47,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -760,7 +843,9 @@
           "1-Hit DMG": "40.0%",
           "2-Hit DMG": "45.0%",
           "3-Hit DMG": "50.0%",
-          "4-Hit DMG": "120.0%"
+          "4-Hit DMG": "120.0%",
+          "削韧": 20,
+          "卡肉": "0.070s"
         }
       },
       {
@@ -768,21 +853,26 @@
         "类型": "武器伤害",
         "字段": {
           "Charged Attack DMG": "55.0%",
-          "Charged Attack Finisher DMG": "50.0%"
+          "Charged Attack Finisher DMG": "50.0%",
+          "削韧": 35,
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%"
+          "Plunge DMG": "51.0%",
+          "削韧": 33
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "73.0%"
+          "Sliding Attack DMG": "73.0%",
+          "削韧": 47,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -821,7 +911,9 @@
           "1-Hit DMG": "40.0%",
           "2-Hit DMG": "45.0%",
           "3-Hit DMG": "50.0%",
-          "4-Hit DMG": "120.0%"
+          "4-Hit DMG": "120.0%",
+          "削韧": 20,
+          "卡肉": "0.070s"
         }
       },
       {
@@ -829,21 +921,26 @@
         "类型": "武器伤害",
         "字段": {
           "Charged Attack DMG": "55.0%",
-          "Charged Attack Finisher DMG": "50.0%"
+          "Charged Attack Finisher DMG": "50.0%",
+          "削韧": 35,
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%"
+          "Plunge DMG": "51.0%",
+          "削韧": 33
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "73.0%"
+          "Sliding Attack DMG": "73.0%",
+          "削韧": 47,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -882,7 +979,9 @@
           "1-Hit DMG": "40.0%",
           "2-Hit DMG": "45.0%",
           "3-Hit DMG": "50.0%",
-          "4-Hit DMG": "120.0%"
+          "4-Hit DMG": "120.0%",
+          "削韧": 20,
+          "卡肉": "0.070s"
         }
       },
       {
@@ -890,21 +989,26 @@
         "类型": "武器伤害",
         "字段": {
           "Charged Attack DMG": "55.0%",
-          "Charged Attack Finisher DMG": "50.0%"
+          "Charged Attack Finisher DMG": "50.0%",
+          "削韧": 35,
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%"
+          "Plunge DMG": "51.0%",
+          "削韧": 33
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "73.0%"
+          "Sliding Attack DMG": "73.0%",
+          "削韧": 47,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -943,7 +1047,9 @@
           "1-Hit DMG": "20.0%×2",
           "2-Hit DMG": "25.0%×2",
           "3-Hit DMG": "38.0%",
-          "4-Hit DMG": "43.0%×3"
+          "4-Hit DMG": "43.0%×3",
+          "削韧": 15,
+          "卡肉": "0.070s"
         }
       },
       {
@@ -951,21 +1057,26 @@
         "类型": "武器伤害",
         "字段": {
           "Charged Attack DMG": "20.0%×6",
-          "Charged Attack Finisher DMG": "55.0%"
+          "Charged Attack Finisher DMG": "55.0%",
+          "削韧": 12,
+          "卡肉": "0.100s"
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%"
+          "Plunge DMG": "51.0%",
+          "削韧": 33
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "36.0%×2"
+          "Sliding Attack DMG": "36.0%×2",
+          "削韧": 12,
+          "卡肉": "0.030s"
         }
       }
     ]
@@ -1004,7 +1115,9 @@
           "1-Hit DMG": "20.0%×2",
           "2-Hit DMG": "25.0%×2",
           "3-Hit DMG": "38.0%",
-          "4-Hit DMG": "43.0%×3"
+          "4-Hit DMG": "43.0%×3",
+          "削韧": 15,
+          "卡肉": "0.070s"
         }
       },
       {
@@ -1012,21 +1125,26 @@
         "类型": "武器伤害",
         "字段": {
           "Charged Attack DMG": "20.0%×6",
-          "Charged Attack Finisher DMG": "55.0%"
+          "Charged Attack Finisher DMG": "55.0%",
+          "削韧": 12,
+          "卡肉": "0.100s"
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%"
+          "Plunge DMG": "51.0%",
+          "削韧": 33
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "36.0%×2"
+          "Sliding Attack DMG": "36.0%×2",
+          "削韧": 12,
+          "卡肉": "0.030s"
         }
       }
     ]
@@ -1065,7 +1183,9 @@
           "1-Hit DMG": "20.0%×2",
           "2-Hit DMG": "25.0%×2",
           "3-Hit DMG": "38.0%",
-          "4-Hit DMG": "43.0%×3"
+          "4-Hit DMG": "43.0%×3",
+          "削韧": 15,
+          "卡肉": "0.070s"
         }
       },
       {
@@ -1073,21 +1193,26 @@
         "类型": "武器伤害",
         "字段": {
           "Charged Attack DMG": "20.0%×6",
-          "Charged Attack Finisher DMG": "55.0%"
+          "Charged Attack Finisher DMG": "55.0%",
+          "削韧": 12,
+          "卡肉": "0.100s"
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%"
+          "Plunge DMG": "51.0%",
+          "削韧": 33
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "36.0%×2"
+          "Sliding Attack DMG": "36.0%×2",
+          "削韧": 12,
+          "卡肉": "0.030s"
         }
       }
     ]
@@ -1126,28 +1251,36 @@
           "1-Hit DMG": "40.0%",
           "2-Hit DMG": "50.0%",
           "3-Hit DMG": "60.0%",
-          "4-Hit DMG": "50.0%×2"
+          "4-Hit DMG": "50.0%×2",
+          "削韧": 25,
+          "延迟": "0.050s",
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "16.1%"
+          "Charged Attack DMG": "16.1%",
+          "削韧": 12,
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%"
+          "Plunge DMG": "51.0%",
+          "削韧": 33
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%"
+          "Sliding Attack DMG": "51.0%",
+          "削韧": 33,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -1186,28 +1319,36 @@
           "1-Hit DMG": "40.0%",
           "2-Hit DMG": "50.0%",
           "3-Hit DMG": "60.0%",
-          "4-Hit DMG": "50.0%×2"
+          "4-Hit DMG": "50.0%×2",
+          "削韧": 25,
+          "延迟": "0.050s",
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "16.1%"
+          "Charged Attack DMG": "16.1%",
+          "削韧": 12,
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%"
+          "Plunge DMG": "51.0%",
+          "削韧": 33
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%"
+          "Sliding Attack DMG": "51.0%",
+          "削韧": 33,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -1246,28 +1387,36 @@
           "1-Hit DMG": "40.0%",
           "2-Hit DMG": "50.0%",
           "3-Hit DMG": "60.0%",
-          "4-Hit DMG": "50.0%×2"
+          "4-Hit DMG": "50.0%×2",
+          "削韧": 25,
+          "延迟": "0.050s",
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "16.1%"
+          "Charged Attack DMG": "16.1%",
+          "削韧": 12,
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%"
+          "Plunge DMG": "51.0%",
+          "削韧": 33
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%"
+          "Sliding Attack DMG": "51.0%",
+          "削韧": 33,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -1306,28 +1455,36 @@
           "1-Hit DMG": "40.0%",
           "2-Hit DMG": "50.0%",
           "3-Hit DMG": "60.0%",
-          "4-Hit DMG": "50.0%×2"
+          "4-Hit DMG": "50.0%×2",
+          "削韧": 25,
+          "延迟": "0.050s",
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "16.1%"
+          "Charged Attack DMG": "16.1%",
+          "削韧": 12,
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%"
+          "Plunge DMG": "51.0%",
+          "削韧": 33
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%"
+          "Sliding Attack DMG": "51.0%",
+          "削韧": 33,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -1366,28 +1523,35 @@
           "1-Hit DMG": "20.0%×3",
           "2-Hit DMG": "30.0%×4",
           "3-Hit DMG": "40.0%×2+45.0%",
-          "4-Hit DMG": "85.0%"
+          "4-Hit DMG": "85.0%",
+          "削韧": 15,
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "10.0%×9"
+          "Charged Attack DMG": "10.0%×9",
+          "削韧": 8,
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%"
+          "Plunge DMG": "51.0%",
+          "削韧": 33
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%"
+          "Sliding Attack DMG": "51.0%",
+          "削韧": 33,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -1426,28 +1590,35 @@
           "1-Hit DMG": "20.0%×3",
           "2-Hit DMG": "30.0%×4",
           "3-Hit DMG": "40.0%×2+45.0%",
-          "4-Hit DMG": "85.0%"
+          "4-Hit DMG": "85.0%",
+          "削韧": 15,
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "10.0%×9"
+          "Charged Attack DMG": "10.0%×9",
+          "削韧": 8,
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%"
+          "Plunge DMG": "51.0%",
+          "削韧": 33
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%"
+          "Sliding Attack DMG": "51.0%",
+          "削韧": 33,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -1486,28 +1657,35 @@
           "1-Hit DMG": "20.0%×3",
           "2-Hit DMG": "30.0%×4",
           "3-Hit DMG": "40.0%×2+45.0%",
-          "4-Hit DMG": "85.0%"
+          "4-Hit DMG": "85.0%",
+          "削韧": 15,
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "10.0%×9"
+          "Charged Attack DMG": "10.0%×9",
+          "削韧": 8,
+          "卡肉": "0.030s"
         }
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%"
+          "Plunge DMG": "51.0%",
+          "削韧": 33
         }
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%"
+          "Sliding Attack DMG": "51.0%",
+          "削韧": 33,
+          "卡肉": "0.100s"
         }
       }
     ]
@@ -1548,7 +1726,8 @@
         "类型": "武器伤害",
         "字段": {
           "Projectile DMG": "71.0%",
-          "Explosion Radius": "3.0m"
+          "Explosion Radius": "3.0m",
+          "削韧": 12
         }
       }
     ]
@@ -1588,7 +1767,8 @@
         "名称": "射击",
         "类型": "武器伤害",
         "字段": {
-          "Projectile DMG": "71.0%"
+          "Projectile DMG": "71.0%",
+          "削韧": 12
         }
       }
     ]
@@ -1628,7 +1808,8 @@
         "名称": "射击",
         "类型": "武器伤害",
         "字段": {
-          "Projectile DMG": "71.0%"
+          "Projectile DMG": "71.0%",
+          "削韧": 12
         }
       }
     ]
@@ -1668,7 +1849,8 @@
         "名称": "射击",
         "类型": "武器伤害",
         "字段": {
-          "Projectile DMG": "47.0%"
+          "Projectile DMG": "47.0%",
+          "削韧": 8
         }
       }
     ]
@@ -1709,7 +1891,8 @@
         "类型": "武器伤害",
         "字段": {
           "Projectile DMG": "47.0%",
-          "Ricochet DMG": "47.0%"
+          "Ricochet DMG": "47.0%",
+          "削韧": 8
         }
       }
     ]
@@ -1749,7 +1932,8 @@
         "名称": "射击",
         "类型": "武器伤害",
         "字段": {
-          "Projectile DMG": "47.0%"
+          "Projectile DMG": "47.0%",
+          "削韧": 8
         }
       }
     ]
@@ -1792,7 +1976,8 @@
           "Explosion DMG": "80.0%",
           "Explosion DMG - Phase 2": "15.0%",
           "Explosion Radius": "3.0m",
-          "2-Hit Explosion Radius": "3.0m"
+          "2-Hit Explosion Radius": "3.0m",
+          "削韧": 30
         }
       }
     ]
@@ -1837,7 +2022,8 @@
           "Explosion DMG - Phase 3": "32.0%",
           "Explosion Radius": "3.0m",
           "2-Hit Explosion Radius": "3.0m",
-          "3-Hit Explosion Radius": "3.0m"
+          "3-Hit Explosion Radius": "3.0m",
+          "削韧": 12
         }
       }
     ]
@@ -1878,7 +2064,8 @@
         "类型": "武器伤害",
         "字段": {
           "Explosion DMG": "95.0%",
-          "Explosion Radius": "3.0m"
+          "Explosion Radius": "3.0m",
+          "削韧": 40
         }
       }
     ]
@@ -1922,7 +2109,8 @@
           "DoT": "4.0%",
           "Explosion DMG - Phase 2": "8.0%",
           "Explosion Radius": "3.0m",
-          "2-Hit Explosion Radius": "3.0m"
+          "2-Hit Explosion Radius": "3.0m",
+          "削韧": 1
         }
       }
     ]
@@ -1966,7 +2154,8 @@
           "Firing Interval": "0.3shots/s",
           "Firing Interval - Phase 2": "0.2shots/s",
           "Firing Interval - Phase 3": "0.1shots/s",
-          "Firing Interval - Phase 4": "0.1shots/s"
+          "Firing Interval - Phase 4": "0.1shots/s",
+          "削韧": 2
         }
       }
     ]
@@ -2007,7 +2196,8 @@
         "类型": "武器伤害",
         "字段": {
           "Projectile DMG": "30.0%",
-          "Number of Projectiles": "5.0"
+          "Number of Projectiles": "5.0",
+          "削韧": 2
         }
       }
     ]
@@ -2035,12 +2225,12 @@
       "暴击": 0.5
     },
     "熔炼": [
-      "CRIT Chance +50.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 217.0%/0.0%/0.0% of the original damage.",
-      "CRIT Chance +60.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 225.0%/0.0%/0.0% of the original damage.",
-      "CRIT Chance +70.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 234.0%/0.0%/0.0% of the original damage.",
-      "CRIT Chance +80.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 243.0%/0.0%/0.0% of the original damage.",
-      "CRIT Chance +90.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 251.0%/0.0%/0.0% of the original damage.",
-      "CRIT Chance +100.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 260.0%/0.0%/0.0% of the original damage."
+      "CRIT Chance +50.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 217.0%/383.0%/592.0% of the original damage.",
+      "CRIT Chance +60.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 225.0%/399.0%/615.0% of the original damage.",
+      "CRIT Chance +70.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 234.0%/414.0%/639.0% of the original damage.",
+      "CRIT Chance +80.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 243.0%/429.0%/663.0% of the original damage.",
+      "CRIT Chance +90.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 251.0%/445.0%/686.0% of the original damage.",
+      "CRIT Chance +100.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 260.0%/460.0%/710.0% of the original damage."
     ],
     "技能": [
       {
@@ -2049,12 +2239,13 @@
         "字段": {
           "Explosion DMG": "100.0%",
           "Explosion DMG - Phase 2": "217.0%",
-          "Explosion DMG - Phase 3": "0.0%",
-          "Explosion DMG - Phase 4": "0.0%",
+          "Explosion DMG - Phase 3": "383.0%",
+          "Explosion DMG - Phase 4": "592.0%",
           "Explosion Radius": "2.0m",
           "2-Hit Explosion Radius": "3.0m",
           "3-Hit Explosion Radius": "4.0m",
-          "4-Hit Explosion Radius": "5.0m"
+          "4-Hit Explosion Radius": "5.0m",
+          "削韧": 50
         }
       }
     ]
@@ -2095,7 +2286,8 @@
         "类型": "武器伤害",
         "字段": {
           "Explosion DMG": "139.0%",
-          "Explosion Radius": "3.0m"
+          "Explosion Radius": "3.0m",
+          "削韧": 25
         }
       }
     ]
@@ -2179,7 +2371,8 @@
         "类型": "武器伤害",
         "字段": {
           "Projectile DMG": "16.0%",
-          "Firing Interval": "0.1shots/s"
+          "Firing Interval": "0.1shots/s",
+          "削韧": 4
         }
       }
     ]
@@ -2221,7 +2414,8 @@
         "字段": {
           "Beam DMG": "17.6%",
           "Ricochet DMG": "17.6%",
-          "Firing Interval": "0.1shots/s"
+          "Firing Interval": "0.1shots/s",
+          "削韧": 4
         }
       }
     ]
@@ -2262,7 +2456,8 @@
         "类型": "武器伤害",
         "字段": {
           "Beam DMG": "20.0%",
-          "Firing Interval": "0.1shots/s"
+          "Firing Interval": "0.1shots/s",
+          "削韧": 4
         }
       }
     ]
@@ -2307,7 +2502,8 @@
           "Beam DMG - Phase 3": "37.0%",
           "Firing Interval": "0.5shots/s",
           "Firing Interval - Phase 2": "0.3shots/s",
-          "Firing Interval - Phase 3": "0.1shots/s"
+          "Firing Interval - Phase 3": "0.1shots/s",
+          "削韧": 3
         }
       }
     ]
@@ -2348,7 +2544,8 @@
         "类型": "武器伤害",
         "字段": {
           "Projectile DMG": "4.1%",
-          "Firing Interval": "0.1shots/s"
+          "Firing Interval": "0.1shots/s",
+          "削韧": 3
         }
       }
     ]
@@ -2389,7 +2586,8 @@
         "类型": "武器伤害",
         "字段": {
           "Projectile DMG": "6.0%",
-          "Firing Interval": "0.1shots/s"
+          "Firing Interval": "0.1shots/s",
+          "削韧": 1
         }
       }
     ]
@@ -2430,7 +2628,8 @@
         "类型": "武器伤害",
         "字段": {
           "Beam DMG": "20.0%",
-          "Firing Interval": "0.1shots/s"
+          "Firing Interval": "0.1shots/s",
+          "削韧": 4
         }
       }
     ]
@@ -2471,7 +2670,8 @@
         "类型": "武器伤害",
         "字段": {
           "Projectile DMG": "6.0%",
-          "Firing Interval": "0.1shots/s"
+          "Firing Interval": "0.1shots/s",
+          "削韧": 1
         }
       }
     ]
@@ -2517,7 +2717,8 @@
           "Projectile DMG - Phase 3": "143.0%",
           "Projectile Calibre": "0.2m",
           "Projectile Calibre - Phase 2": "1.0m",
-          "Projectile Calibre - Phase 3": "1.0m"
+          "Projectile Calibre - Phase 3": "1.0m",
+          "削韧": 8
         }
       }
     ]
@@ -2559,7 +2760,8 @@
         "类型": "武器伤害",
         "字段": {
           "Projectile DMG": "6.3%",
-          "Number of Projectiles": "7.0"
+          "Number of Projectiles": "7.0",
+          "削韧": 3
         }
       }
     ]
@@ -2601,7 +2803,8 @@
         "类型": "武器伤害",
         "字段": {
           "Projectile DMG": "18.0%",
-          "Projectile Calibre": "0.2m"
+          "Projectile Calibre": "0.2m",
+          "削韧": 3
         }
       }
     ]
@@ -2643,7 +2846,8 @@
         "类型": "武器伤害",
         "字段": {
           "Projectile DMG": "6.3%",
-          "Number of Projectiles": "7.0"
+          "Number of Projectiles": "7.0",
+          "削韧": 3
         }
       }
     ]

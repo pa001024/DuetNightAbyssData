@@ -15,6 +15,7 @@ class WeaponProcessor(BaseProcessor):
         self.battle_weapon_data = data_loader.load_json("BattleWeapon.json")
         self.weapon_card_level_data = data_loader.load_json("WeaponCardLevel.json")
         self.attribute_data = data_loader.load_json("Attribute.json")
+        self.skill_effects_data = data_loader.load_json("SkillEffects.json")
 
     def process_item(self, weapon_data, language):
         weapon_id = weapon_data.get("WeaponId", 0)
@@ -140,7 +141,7 @@ class WeaponProcessor(BaseProcessor):
     ):
         """处理武器技能描述，替换占位符"""
         if not desc_keys or not desc_values:
-            return ""
+            return {}
 
         rst = {}
 
@@ -182,6 +183,11 @@ class WeaponProcessor(BaseProcessor):
                 preprocessed_desc_value, weapon_id, 1, "BattleWeapon"
             )
             rst[desc_text] = calculated_value
+
+        # 解析SkillEffects中的HitStop和CutToughness信息
+        skill_effects_info = self._parse_skill_effects(desc_values, weapon_id)
+        if skill_effects_info:
+            rst.update(skill_effects_info)
 
         return rst
 
@@ -334,7 +340,7 @@ class WeaponProcessor(BaseProcessor):
         # 替换DescValues中的值
         if desc_values:
             for i, desc_value in enumerate(desc_values):
-                placeholder = f"#{i+1}"
+                placeholder = f"#{i + 1}"
 
                 # 检查desc_value中是否包含math.floor或math.ceil
                 cast_to = "math.floor" in desc_value or "math.ceil" in desc_value
@@ -442,5 +448,63 @@ class WeaponProcessor(BaseProcessor):
                     + f"{formatted_value}{suffix}"
                     + result[match.end() + len(suffix) :]
                 )
+
+        return result
+
+    def _parse_skill_effects(self, desc_values, weapon_id):
+        """解析SkillEffects引用，提取HitStop和CutToughness信息"""
+        if not desc_values:
+            return {}
+
+        result = {}
+        visited_effect_ids = set()
+
+        for desc_value in desc_values:
+            if not isinstance(desc_value, str):
+                continue
+
+            # 查找所有SkillEffects引用模式: $#SkillEffects[id]...
+            # 模式需要匹配 $#SkillEffects[id].TaskEffects[index].field...$
+            import re
+
+            pattern = r"\$#SkillEffects\[(\d+)\]"
+            matches = re.findall(pattern, desc_value)
+
+            for effect_id_str in matches:
+                effect_id = int(effect_id_str)
+
+                # 避免重复处理同一个SkillEffects
+                if effect_id in visited_effect_ids:
+                    continue
+                visited_effect_ids.add(effect_id)
+
+                # 获取SkillEffects数据
+                skill_effect = self.skill_effects_data.get(str(effect_id))
+                if not skill_effect:
+                    skill_effect = self.skill_effects_data.get(effect_id)
+
+                if not skill_effect:
+                    continue
+
+                # 遍历所有TaskEffects，查找HitStop和CutToughness
+                task_effects = skill_effect.get("TaskEffects", [])
+                for task_effect in task_effects:
+                    # 检查是否是HitStop函数
+                    if task_effect.get("Function") == "HitStop":
+                        # 解析HitStop字段
+                        delay = task_effect.get("Delay")
+                        duration = task_effect.get("Duration")
+
+                        if delay is not None and "延迟" not in result:
+                            result["延迟"] = delay
+                        if duration is not None and "卡肉" not in result:
+                            result["卡肉"] = duration
+
+                    # 检查是否是CutToughness函数
+                    if task_effect.get("Function") == "CutToughness":
+                        # 解析CutToughness的Value字段
+                        value = task_effect.get("Value")
+                        if value is not None and "削韧" not in result:
+                            result["削韧"] = value
 
         return result

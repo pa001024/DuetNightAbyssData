@@ -1,0 +1,2254 @@
+[
+  {
+    "id": 1101,
+    "name": "Tidewanderer",
+    "level": 2,
+    "type": 1,
+    "length": [
+      20,
+      40
+    ],
+    "icon": "Sea_Normal_1",
+    "price": [
+      20,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      110101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 1102,
+    "name": "Prismspike",
+    "level": 1,
+    "type": 1,
+    "length": [
+      80,
+      100
+    ],
+    "icon": "Sea_Normal_2",
+    "price": [
+      10,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      110201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 1103,
+    "name": "Silverslip",
+    "level": 1,
+    "type": 1,
+    "length": [
+      50,
+      120
+    ],
+    "icon": "Sea_Normal_3",
+    "price": [
+      10,
+      5,
+      14
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      110301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 1201,
+    "name": "Longwhisker",
+    "level": 1,
+    "type": 1,
+    "length": [
+      50,
+      150
+    ],
+    "icon": "FreshWater_Normal_1",
+    "price": [
+      10,
+      5,
+      20
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      120101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 1202,
+    "name": "Spotted Tagalong",
+    "level": 1,
+    "type": 1,
+    "length": [
+      60,
+      240
+    ],
+    "icon": "FreshWater_Normal_2",
+    "price": [
+      10,
+      5,
+      36
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      120201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 1203,
+    "name": "Shellgnarl",
+    "level": 1,
+    "type": 1,
+    "length": [
+      3,
+      15
+    ],
+    "icon": "FreshWater_Normal_3",
+    "price": [
+      10,
+      5,
+      2
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      120301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 1301,
+    "name": "Fangnome",
+    "level": 2,
+    "type": 1,
+    "length": [
+      3,
+      15
+    ],
+    "icon": "DirtyWater_Normal_1",
+    "price": [
+      20,
+      5,
+      2
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      130101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 1302,
+    "name": "Nomnom",
+    "level": 1,
+    "type": 1,
+    "length": [
+      15,
+      30
+    ],
+    "icon": "DirtyWater_Normal_2",
+    "price": [
+      10,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      130201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 1303,
+    "name": "Mr Leggy",
+    "level": 1,
+    "type": 1,
+    "length": [
+      5,
+      20
+    ],
+    "icon": "DirtyWater_Normal_3",
+    "price": [
+      10,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      130301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2101,
+    "name": "Guiding Star",
+    "level": 2,
+    "type": 1,
+    "length": [
+      3,
+      8
+    ],
+    "icon": "Sea_Village_1",
+    "price": [
+      20,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2104,
+    "var": [
+      210101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2102,
+    "name": "Tidechaser",
+    "level": 3,
+    "type": 1,
+    "length": [
+      100,
+      300
+    ],
+    "icon": "Sea_Village_2",
+    "price": [
+      40,
+      5,
+      40
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      210201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2103,
+    "name": "Seaskimmer",
+    "level": 4,
+    "type": 1,
+    "length": [
+      20,
+      45
+    ],
+    "icon": "Sea_Village_4",
+    "price": [
+      70,
+      5,
+      5
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2105,
+    "var": [
+      210301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2104,
+    "name": "Seapuff",
+    "level": 5,
+    "type": 1,
+    "length": [
+      4,
+      9
+    ],
+    "icon": "Sea_Village_3",
+    "price": [
+      120,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      210401
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2105,
+    "name": "Silverfrond",
+    "level": 6,
+    "type": 3,
+    "length": [
+      100,
+      200
+    ],
+    "icon": "Sea_Village_5",
+    "price": [
+      500,
+      5,
+      20
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      210501
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2201,
+    "name": "Pearldrop Flatfin",
+    "level": 5,
+    "type": 1,
+    "length": [
+      50,
+      100
+    ],
+    "icon": "Sea_East_1",
+    "price": [
+      120,
+      5,
+      10
+    ],
+    "appear": [
+      2,
+      3
+    ],
+    "var": [
+      220101
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2202,
+    "name": "Gearshell Crab",
+    "level": 4,
+    "type": 1,
+    "length": [
+      8,
+      15
+    ],
+    "icon": "Sea_East_2",
+    "price": [
+      70,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2201,
+    "var": [
+      220201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2203,
+    "name": "Pearllure",
+    "level": 5,
+    "type": 1,
+    "length": [
+      50,
+      150
+    ],
+    "icon": "Sea_East_4",
+    "price": [
+      120,
+      5,
+      20
+    ],
+    "appear": [
+      1,
+      3
+    ],
+    "s2b": 2205,
+    "var": [
+      220301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2204,
+    "name": "Yuu",
+    "level": 4,
+    "type": 1,
+    "length": [
+      4,
+      10
+    ],
+    "icon": "Sea_East_3",
+    "price": [
+      70,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      220401
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2205,
+    "name": "Twincrest Shark",
+    "level": 6,
+    "type": 3,
+    "length": [
+      100,
+      300
+    ],
+    "icon": "Sea_East_5",
+    "price": [
+      500,
+      5,
+      40
+    ],
+    "appear": [
+      3
+    ],
+    "var": [
+      220501
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2301,
+    "name": "Phoxenetrout",
+    "level": 2,
+    "type": 1,
+    "length": [
+      20,
+      50
+    ],
+    "icon": "FreshWater_IceLake_3",
+    "price": [
+      20,
+      5,
+      6
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      230101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2302,
+    "name": "Lady of the Lake",
+    "level": 2,
+    "type": 1,
+    "length": [
+      50,
+      120
+    ],
+    "icon": "FreshWater_IceLake_2",
+    "price": [
+      20,
+      5,
+      14
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2304,
+    "var": [
+      230201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2303,
+    "name": "Lamenting Lake Trout",
+    "level": 3,
+    "type": 1,
+    "length": [
+      70,
+      150
+    ],
+    "icon": "FreshWater_IceLake_4",
+    "price": [
+      40,
+      5,
+      16
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2305,
+    "var": [
+      230301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2304,
+    "name": "Washer's Club",
+    "level": 3,
+    "type": 1,
+    "length": [
+      20,
+      35
+    ],
+    "icon": "FreshWater_IceLake_1",
+    "price": [
+      40,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      230401
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2305,
+    "name": "Gleamspine",
+    "level": 6,
+    "type": 3,
+    "length": [
+      120,
+      300
+    ],
+    "icon": "FreshWater_IceLake_5",
+    "price": [
+      500,
+      5,
+      36
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      230501
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2401,
+    "name": "Iridescentscale",
+    "level": 4,
+    "type": 1,
+    "length": [
+      3,
+      10
+    ],
+    "icon": "FreshWater_East_1",
+    "price": [
+      70,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      240101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2402,
+    "name": "Shouxing Squid",
+    "level": 4,
+    "type": 1,
+    "length": [
+      3,
+      5
+    ],
+    "icon": "FreshWater_East_2",
+    "price": [
+      70,
+      5,
+      0
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2404,
+    "var": [
+      240201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2403,
+    "name": "Thornbearer",
+    "level": 5,
+    "type": 1,
+    "length": [
+      30,
+      50
+    ],
+    "icon": "FreshWater_East_4",
+    "price": [
+      120,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      3
+    ],
+    "s2b": 2405,
+    "var": [
+      240301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2404,
+    "name": "Pouchcarp",
+    "level": 5,
+    "type": 1,
+    "length": [
+      30,
+      50
+    ],
+    "icon": "FreshWater_East_3",
+    "price": [
+      120,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2
+    ],
+    "var": [
+      240401
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2405,
+    "name": "Waterwyrm",
+    "level": 6,
+    "type": 3,
+    "length": [
+      200,
+      400
+    ],
+    "icon": "FreshWater_East_5",
+    "price": [
+      500,
+      5,
+      40
+    ],
+    "appear": [
+      3
+    ],
+    "var": [
+      240501
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2501,
+    "name": "Mousetail",
+    "level": 3,
+    "type": 1,
+    "length": [
+      7,
+      15
+    ],
+    "icon": "DirtyWater_Sew_1",
+    "price": [
+      40,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2504,
+    "var": [
+      250101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2502,
+    "name": "Bonegnaw Eel",
+    "level": 4,
+    "type": 1,
+    "length": [
+      30,
+      50
+    ],
+    "icon": "DirtyWater_Sew_2",
+    "price": [
+      70,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      250201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2503,
+    "name": "Waterskull",
+    "level": 5,
+    "type": 1,
+    "length": [
+      10,
+      20
+    ],
+    "icon": "DirtyWater_Sew_4",
+    "price": [
+      120,
+      5,
+      2
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2505,
+    "var": [
+      250301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2504,
+    "name": "Screechbeast",
+    "level": 5,
+    "type": 1,
+    "length": [
+      50,
+      100
+    ],
+    "icon": "DirtyWater_Sew_3",
+    "price": [
+      120,
+      5,
+      10
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      250401
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2505,
+    "name": "Aquaroach",
+    "level": 6,
+    "type": 3,
+    "length": [
+      10,
+      25
+    ],
+    "icon": "DirtyWater_Sew_5",
+    "price": [
+      500,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      250501
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2601,
+    "name": "Stonemill Tonguefish",
+    "level": 4,
+    "type": 1,
+    "length": [
+      50,
+      80
+    ],
+    "icon": "Sea_East_6",
+    "price": [
+      40,
+      5,
+      6
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2605,
+    "var": [
+      260101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2602,
+    "name": "Orchid Crab",
+    "level": 4,
+    "type": 1,
+    "length": [
+      13,
+      16
+    ],
+    "icon": "Sea_East_7",
+    "price": [
+      70,
+      5,
+      0
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      260201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2603,
+    "name": "Starfish",
+    "level": 5,
+    "type": 1,
+    "length": [
+      5,
+      10
+    ],
+    "icon": "Sea_East_8",
+    "price": [
+      120,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2604,
+    "var": [
+      260301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2604,
+    "name": "Firecracker Shrimp",
+    "level": 5,
+    "type": 1,
+    "length": [
+      10,
+      20
+    ],
+    "icon": "Sea_East_9",
+    "price": [
+      120,
+      5,
+      2
+    ],
+    "appear": [
+      2,
+      3
+    ],
+    "var": [
+      260401
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2605,
+    "name": "Azurewave Kun",
+    "level": 6,
+    "type": 3,
+    "length": [
+      200,
+      250
+    ],
+    "icon": "Sea_East_10",
+    "price": [
+      500,
+      5,
+      10
+    ],
+    "appear": [
+      2
+    ],
+    "var": [
+      260501
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2701,
+    "name": "Edgefin",
+    "level": 4,
+    "type": 1,
+    "length": [
+      15,
+      25
+    ],
+    "icon": "FreshWater_East_6",
+    "price": [
+      40,
+      5,
+      2
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2704,
+    "var": [
+      270101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2702,
+    "name": "Bloom Perch",
+    "level": 4,
+    "type": 1,
+    "length": [
+      20,
+      40
+    ],
+    "icon": "FreshWater_East_7",
+    "price": [
+      70,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2705,
+    "var": [
+      270201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2703,
+    "name": "Roughskin Sculpin",
+    "level": 5,
+    "type": 1,
+    "length": [
+      8,
+      10
+    ],
+    "icon": "FreshWater_East_8",
+    "price": [
+      120,
+      5,
+      0
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      270301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2704,
+    "name": "Phoenix Cichlid",
+    "level": 5,
+    "type": 1,
+    "length": [
+      10,
+      17
+    ],
+    "icon": "FreshWater_East_9",
+    "price": [
+      120,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2
+    ],
+    "var": [
+      270401
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2705,
+    "name": "Emperorfish",
+    "level": 6,
+    "type": 3,
+    "length": [
+      500,
+      560
+    ],
+    "icon": "FreshWater_East_10",
+    "price": [
+      500,
+      5,
+      12
+    ],
+    "appear": [
+      1
+    ],
+    "var": [
+      270501
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2801,
+    "name": "Ink Glancer",
+    "level": 4,
+    "type": 1,
+    "length": [
+      15,
+      30
+    ],
+    "icon": "DirtyWater_East_1",
+    "price": [
+      40,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2804,
+    "var": [
+      280101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2802,
+    "name": "Mudleaper",
+    "level": 4,
+    "type": 1,
+    "length": [
+      6,
+      20
+    ],
+    "icon": "DirtyWater_East_2",
+    "price": [
+      70,
+      5,
+      2
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2805,
+    "var": [
+      280201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2803,
+    "name": "Blindlight",
+    "level": 5,
+    "type": 1,
+    "length": [
+      5,
+      10
+    ],
+    "icon": "DirtyWater_East_3",
+    "price": [
+      120,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      280301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2804,
+    "name": "Toad",
+    "level": 5,
+    "type": 1,
+    "length": [
+      10,
+      15
+    ],
+    "icon": "DirtyWater_East_4",
+    "price": [
+      120,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      3
+    ],
+    "var": [
+      280401
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2805,
+    "name": "Flutterfin",
+    "level": 6,
+    "type": 3,
+    "length": [
+      30,
+      50
+    ],
+    "icon": "DirtyWater_East_5",
+    "price": [
+      500,
+      5,
+      4
+    ],
+    "appear": [
+      3
+    ],
+    "var": [
+      280501
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 110101,
+    "name": "Tidewanderer Variant",
+    "level": 2,
+    "type": 2,
+    "length": [
+      20,
+      40
+    ],
+    "icon": "Sea_Normal_1_1",
+    "price": [
+      30,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 110201,
+    "name": "Prismspike Variant",
+    "level": 1,
+    "type": 2,
+    "length": [
+      80,
+      100
+    ],
+    "icon": "Sea_Normal_2_1",
+    "price": [
+      15,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 110301,
+    "name": "Silverslip Variant",
+    "level": 1,
+    "type": 2,
+    "length": [
+      50,
+      120
+    ],
+    "icon": "Sea_Normal_3_1",
+    "price": [
+      15,
+      5,
+      14
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 120101,
+    "name": "Longwhisker Variant",
+    "level": 1,
+    "type": 2,
+    "length": [
+      50,
+      150
+    ],
+    "icon": "FreshWater_Normal_1_1",
+    "price": [
+      15,
+      5,
+      20
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 120201,
+    "name": "Spotted Tagalong Variant",
+    "level": 1,
+    "type": 2,
+    "length": [
+      60,
+      240
+    ],
+    "icon": "FreshWater_Normal_2_1",
+    "price": [
+      15,
+      5,
+      36
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 120301,
+    "name": "Shellgnarl Variant",
+    "level": 1,
+    "type": 2,
+    "length": [
+      3,
+      15
+    ],
+    "icon": "FreshWater_Normal_3_1",
+    "price": [
+      15,
+      5,
+      2
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 130101,
+    "name": "Fangnome Variant",
+    "level": 2,
+    "type": 2,
+    "length": [
+      3,
+      15
+    ],
+    "icon": "DirtyWater_Normal_1_1",
+    "price": [
+      30,
+      5,
+      2
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 130201,
+    "name": "Nomnom Variant",
+    "level": 1,
+    "type": 2,
+    "length": [
+      15,
+      30
+    ],
+    "icon": "DirtyWater_Normal_2_1",
+    "price": [
+      15,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 130301,
+    "name": "Mr Leggy Variant",
+    "level": 1,
+    "type": 2,
+    "length": [
+      5,
+      20
+    ],
+    "icon": "DirtyWater_Normal_3_1",
+    "price": [
+      15,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 210101,
+    "name": "Guiding Star Variant",
+    "level": 2,
+    "type": 2,
+    "length": [
+      3,
+      8
+    ],
+    "icon": "Sea_Village_1_1",
+    "price": [
+      30,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 210401
+  },
+  {
+    "id": 210201,
+    "name": "Tidechaser Variant",
+    "level": 3,
+    "type": 2,
+    "length": [
+      100,
+      300
+    ],
+    "icon": "Sea_Village_2_1",
+    "price": [
+      60,
+      5,
+      40
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 210301,
+    "name": "Seaskimmer Variant",
+    "level": 4,
+    "type": 2,
+    "length": [
+      20,
+      45
+    ],
+    "icon": "Sea_Village_4_1",
+    "price": [
+      105,
+      5,
+      5
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 210501
+  },
+  {
+    "id": 210401,
+    "name": "Seapuff Variant",
+    "level": 5,
+    "type": 2,
+    "length": [
+      4,
+      9
+    ],
+    "icon": "Sea_Village_3_1",
+    "price": [
+      240,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 210501,
+    "name": "Silverfrond Variant",
+    "level": 6,
+    "type": 4,
+    "length": [
+      100,
+      200
+    ],
+    "icon": "Sea_Village_5_1",
+    "price": [
+      500,
+      5,
+      20
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 220101,
+    "name": "Pearldrop Flatfin Variant",
+    "level": 5,
+    "type": 2,
+    "length": [
+      50,
+      100
+    ],
+    "icon": "Sea_East_1_1",
+    "price": [
+      240,
+      5,
+      10
+    ],
+    "appear": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": 220201,
+    "name": "Gearshell Crab Variant",
+    "level": 4,
+    "type": 2,
+    "length": [
+      8,
+      15
+    ],
+    "icon": "Sea_East_2_1",
+    "price": [
+      105,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 220101
+  },
+  {
+    "id": 220301,
+    "name": "Pearllure Variant",
+    "level": 5,
+    "type": 2,
+    "length": [
+      50,
+      150
+    ],
+    "icon": "Sea_East_4_1",
+    "price": [
+      240,
+      5,
+      20
+    ],
+    "appear": [
+      1,
+      3
+    ],
+    "s2b": 220501
+  },
+  {
+    "id": 220401,
+    "name": "Yuu Variant",
+    "level": 4,
+    "type": 2,
+    "length": [
+      4,
+      10
+    ],
+    "icon": "Sea_East_3_1",
+    "price": [
+      105,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 220501,
+    "name": "Twincrest Shark Variant",
+    "level": 6,
+    "type": 4,
+    "length": [
+      100,
+      300
+    ],
+    "icon": "Sea_East_5_1",
+    "price": [
+      500,
+      5,
+      40
+    ],
+    "appear": [
+      3
+    ]
+  },
+  {
+    "id": 230101,
+    "name": "Phoxenetrout Variant",
+    "level": 2,
+    "type": 2,
+    "length": [
+      20,
+      50
+    ],
+    "icon": "FreshWater_IceLake_3_1",
+    "price": [
+      30,
+      5,
+      6
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 230201,
+    "name": "Lady of the Lake Variant",
+    "level": 2,
+    "type": 2,
+    "length": [
+      50,
+      120
+    ],
+    "icon": "FreshWater_IceLake_2_1",
+    "price": [
+      30,
+      5,
+      14
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 230401
+  },
+  {
+    "id": 230301,
+    "name": "Lamenting Lake Trout Variant",
+    "level": 3,
+    "type": 2,
+    "length": [
+      70,
+      150
+    ],
+    "icon": "FreshWater_IceLake_4_1",
+    "price": [
+      60,
+      5,
+      16
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 230501
+  },
+  {
+    "id": 230401,
+    "name": "Washer's Club Variant",
+    "level": 3,
+    "type": 2,
+    "length": [
+      20,
+      35
+    ],
+    "icon": "FreshWater_IceLake_1_1",
+    "price": [
+      60,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 230501,
+    "name": "Gleamspine Variant",
+    "level": 6,
+    "type": 4,
+    "length": [
+      120,
+      300
+    ],
+    "icon": "FreshWater_IceLake_5_1",
+    "price": [
+      500,
+      5,
+      36
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 240101,
+    "name": "Iridescentscale Variant",
+    "level": 4,
+    "type": 2,
+    "length": [
+      3,
+      10
+    ],
+    "icon": "FreshWater_East_1_1",
+    "price": [
+      105,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 240201,
+    "name": "Shouxing Squid Variant",
+    "level": 4,
+    "type": 2,
+    "length": [
+      3,
+      5
+    ],
+    "icon": "FreshWater_East_2_1",
+    "price": [
+      105,
+      5,
+      0
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 240401
+  },
+  {
+    "id": 240301,
+    "name": "Thornbearer Variant",
+    "level": 5,
+    "type": 2,
+    "length": [
+      30,
+      50
+    ],
+    "icon": "FreshWater_East_4_1",
+    "price": [
+      240,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      3
+    ],
+    "s2b": 240501
+  },
+  {
+    "id": 240401,
+    "name": "Pouchcarp Variant",
+    "level": 5,
+    "type": 2,
+    "length": [
+      30,
+      50
+    ],
+    "icon": "FreshWater_East_3_1",
+    "price": [
+      240,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": 240501,
+    "name": "Waterwyrm Variant",
+    "level": 6,
+    "type": 4,
+    "length": [
+      200,
+      400
+    ],
+    "icon": "FreshWater_East_5_1",
+    "price": [
+      500,
+      5,
+      40
+    ],
+    "appear": [
+      3
+    ]
+  },
+  {
+    "id": 250101,
+    "name": "Mousetail Variant",
+    "level": 3,
+    "type": 2,
+    "length": [
+      7,
+      15
+    ],
+    "icon": "DirtyWater_Sew_1_1",
+    "price": [
+      60,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 250401
+  },
+  {
+    "id": 250201,
+    "name": "Bonegnaw Eel Variant",
+    "level": 4,
+    "type": 2,
+    "length": [
+      30,
+      50
+    ],
+    "icon": "DirtyWater_Sew_2_1",
+    "price": [
+      105,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 250301,
+    "name": "Waterskull Variant",
+    "level": 5,
+    "type": 2,
+    "length": [
+      10,
+      20
+    ],
+    "icon": "DirtyWater_Sew_4_1",
+    "price": [
+      240,
+      5,
+      2
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 250501
+  },
+  {
+    "id": 250401,
+    "name": "Screechbeast Variant",
+    "level": 5,
+    "type": 2,
+    "length": [
+      50,
+      100
+    ],
+    "icon": "DirtyWater_Sew_3_1",
+    "price": [
+      240,
+      5,
+      10
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 250501,
+    "name": "Aquaroach Variant",
+    "level": 6,
+    "type": 4,
+    "length": [
+      10,
+      25
+    ],
+    "icon": "DirtyWater_Sew_5_1",
+    "price": [
+      500,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 260101,
+    "name": "Stonemill Tonguefish Variant",
+    "level": 4,
+    "type": 2,
+    "length": [
+      50,
+      80
+    ],
+    "icon": "Sea_East_6_1",
+    "price": [
+      60,
+      5,
+      6
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 260501
+  },
+  {
+    "id": 260201,
+    "name": "Orchid Crab Variant",
+    "level": 4,
+    "type": 2,
+    "length": [
+      13,
+      16
+    ],
+    "icon": "Sea_East_7_1",
+    "price": [
+      105,
+      5,
+      0
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 260301,
+    "name": "Starfish Variant",
+    "level": 5,
+    "type": 2,
+    "length": [
+      5,
+      10
+    ],
+    "icon": "Sea_East_8_1",
+    "price": [
+      240,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 260401
+  },
+  {
+    "id": 260401,
+    "name": "Firecracker Shrimp Variant",
+    "level": 5,
+    "type": 2,
+    "length": [
+      10,
+      20
+    ],
+    "icon": "Sea_East_9_1",
+    "price": [
+      240,
+      5,
+      2
+    ],
+    "appear": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": 260501,
+    "name": "Azurewave Kun Variant",
+    "level": 6,
+    "type": 4,
+    "length": [
+      200,
+      250
+    ],
+    "icon": "Sea_East_10_1",
+    "price": [
+      500,
+      5,
+      10
+    ],
+    "appear": [
+      2
+    ]
+  },
+  {
+    "id": 270101,
+    "name": "Edgefin Variant",
+    "level": 4,
+    "type": 2,
+    "length": [
+      15,
+      25
+    ],
+    "icon": "FreshWater_East_6_1",
+    "price": [
+      60,
+      5,
+      2
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 270401
+  },
+  {
+    "id": 270201,
+    "name": "Bloom Perch Variant",
+    "level": 4,
+    "type": 2,
+    "length": [
+      20,
+      40
+    ],
+    "icon": "FreshWater_East_7_1",
+    "price": [
+      105,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 270501
+  },
+  {
+    "id": 270301,
+    "name": "Roughskin Sculpin Variant",
+    "level": 5,
+    "type": 2,
+    "length": [
+      8,
+      10
+    ],
+    "icon": "FreshWater_East_8_1",
+    "price": [
+      240,
+      5,
+      0
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 270401,
+    "name": "Phoenix Cichlid Variant",
+    "level": 5,
+    "type": 2,
+    "length": [
+      10,
+      17
+    ],
+    "icon": "FreshWater_East_9_1",
+    "price": [
+      240,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": 270501,
+    "name": "Emperorfish Variant",
+    "level": 6,
+    "type": 4,
+    "length": [
+      500,
+      560
+    ],
+    "icon": "FreshWater_East_10_1",
+    "price": [
+      500,
+      5,
+      12
+    ],
+    "appear": [
+      1
+    ]
+  },
+  {
+    "id": 280101,
+    "name": "Ink Glancer Variant",
+    "level": 4,
+    "type": 2,
+    "length": [
+      15,
+      30
+    ],
+    "icon": "DirtyWater_East_1_1",
+    "price": [
+      60,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 280401
+  },
+  {
+    "id": 280201,
+    "name": "Mudleaper Variant",
+    "level": 4,
+    "type": 2,
+    "length": [
+      6,
+      20
+    ],
+    "icon": "DirtyWater_East_2_1",
+    "price": [
+      105,
+      5,
+      2
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 280501
+  },
+  {
+    "id": 280301,
+    "name": "Blindlight Variant",
+    "level": 5,
+    "type": 2,
+    "length": [
+      5,
+      10
+    ],
+    "icon": "DirtyWater_East_3_1",
+    "price": [
+      240,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 280401,
+    "name": "Toad Variant",
+    "level": 5,
+    "type": 2,
+    "length": [
+      10,
+      15
+    ],
+    "icon": "DirtyWater_East_4_1",
+    "price": [
+      240,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      3
+    ]
+  },
+  {
+    "id": 280501,
+    "name": "Flutterfin Variant",
+    "level": 6,
+    "type": 4,
+    "length": [
+      30,
+      50
+    ],
+    "icon": "DirtyWater_East_5_1",
+    "price": [
+      500,
+      5,
+      4
+    ],
+    "appear": [
+      3
+    ]
+  }
+]

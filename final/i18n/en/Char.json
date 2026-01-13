@@ -31,6 +31,7 @@
         "名称": "Faintlight",
         "类型": "DMG",
         "描述": "Charges forward, dealing Umbro AoE DMG 4 times along the path.",
+        "icon": "Heitao01",
         "e": [
           {
             "id": 110114,
@@ -125,6 +126,7 @@
         "名称": "Netherflames",
         "类型": "Buff",
         "描述": "Switches the melee weapon to [Ymir] and casts 1 Swordwave.\nWhen performing Normal Attack using [Ymir], unleashes Swordwaves in the attacking direction and constantly consumes Sanity, during which Benerica is immune to Hitstun when taking damage. Once Sanity drops to 0 or the skill is used again, [Ymir] is sheathed.",
+        "icon": "Heitao02_On",
         "cd": 2.7,
         "e": [
           {
@@ -724,6 +726,7 @@
         "名称": "Recuperation",
         "类型": "Passive",
         "描述": "When dealing damage with [Faintlight] or Sword, there is a chance to restore Sanity for Berenica.",
+        "icon": "Heitao03",
         "p": [
           {
             "id": 110101,
@@ -779,6 +782,7 @@
         "名称": "Afterburn",
         "类型": "Passive",
         "描述": "After using [Netherflames], the next use of [Faintlight] will not consume Sanity.",
+        "icon": "ExtraPassive",
         "p": [
           {
             "id": 110102
@@ -790,6 +794,7 @@
         "名称": "Heart Devourer",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\n Increases ATK for self and Umbro allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 110002,
@@ -839,6 +844,7 @@
           "近战",
           "单手剑"
         ],
+        "icon": "Heitao_WP",
         "伤害类型": "切割",
         "攻击": 24,
         "暴击": 0.12,
@@ -878,6 +884,7 @@
         "名称": "Recitativo",
         "类型": "DMG",
         "描述": "Deals Umbro Damage to enemies in front and inflicts 5 stacks of [Adagio] on them, up to 10 stacks. The remaining time of the effect is refreshed with each new stack gained.\nWhen in [Bestial Fury] state, this skill is replaced with [Aria].",
+        "icon": "Tuosi01_1",
         "e": [
           {
             "id": 110312,
@@ -1114,6 +1121,7 @@
         "名称": "Curtain Up",
         "类型": "Buff",
         "描述": "Enters [Bestial Fury] state and continuously consumes Sanity; when Sanity drops to 0, [Bestial Fury] state ends.\nWeapons can not be used during [Bestial Fury] state. \nMelee Attack is replaced with [Furious Claws], performing up to four consecutive attacks to deal Umbro Damage. When used in the air, Phantasio performs Plunging Attack and deals Umbro damage to enemies within range.\nRanged Attack is replaced with [Mournful Howl], firing an energy beam to deal Umbro Damage.\nWhen the 3-hit of [Furious Claws] and [Mournful Howl] deal damage, triggers [Duo]; when the 4-hit of [Furious Claws] and the Plunging Attack deal damage, triggers [Fermata].",
+        "icon": "Tuosi02_On",
         "cd": 3,
         "e": [
           {
@@ -1529,6 +1537,7 @@
         "名称": "On Stage",
         "类型": "Passive",
         "描述": "When in [Bestial Fury] state, increases Attack based on Phantasio's Max Sanity.\nPhantasio gains [Immersion] by using skills, with the [Immersion] cap equal to Phantasio's Max Sanity. Using [Recitativo] or [Aria] gains a certain amount of [Immersion]; when in [Bestial Fury] state, continuously gains [Immersion] per second.\nWhen [Immersion] reaches its maximum in [Bestial Fury] state, Phantasio enters [Bestial Fury: Devotion] state.",
+        "icon": "Tuosi03",
         "b": [
           {
             "id": 110331,
@@ -1708,6 +1717,7 @@
         "名称": "Concerto",
         "类型": "Passive",
         "描述": "When the 3-hit of [Furious Claws] and [Mournful Howl] deal damage, there is a chance to inflict 1 [Adagio] stack on the target.",
+        "icon": "ExtraPassive",
         "p": [
           {
             "id": 110302,
@@ -1729,6 +1739,7 @@
         "名称": "Scales of Justice",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\n Increases ATK for self and Umbro allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 110004,
@@ -1802,6 +1813,7 @@
         "名称": "In the Name of Patience",
         "类型": "DMG",
         "描述": "Lunges forward, dealing Lumino AoE DMG 3 times along the path, then slams down to deal more Lumino AoE damage.",
+        "icon": "Baonu01",
         "e": [
           {
             "id": 150112,
@@ -1917,6 +1929,7 @@
         "名称": "That's It!",
         "类型": "Buff",
         "描述": "Switches the user's melee weapon to [Samael], dealing Lumino DMG to enemies ahead. While wielding [Samael], use the skill is used again to withdraw [Samael].\nNormal Attacks with [Samael] chain up to 4 hits.\nWhile wielding [Samael], hold attack to charge — Sanity is consumed over time. While charging, gains [Impatience], generating combo points every 0.5s.\nReleasing attack, reaching max Combo Level, or running out of Sanity unleashes a powerful Charged Attack, dealing Lumino AoE DMG to enemies ahead.",
+        "icon": "Baonu02_On",
         "cd": 2.5,
         "e": [
           {
@@ -2444,6 +2457,7 @@
         "名称": "Hmph!!",
         "类型": "Passive",
         "描述": "When Combo Level increases, deals Lumino DMG to nearby enemies and enhances [Samael].\nAt Combo Levels C/B/A/S, [Samael] gains Enhancement Lv.1/2/3/4 respectively. If Combo Level drops, the current Enhancement Level persists for a short time.\nWhile [Samael] is enhanced, the user's Consonance Weapon gains increased ATK Range and Trigger Probability based on the Enhancement Level.",
+        "icon": "Baonu03",
         "e": [
           {
             "id": 150151,
@@ -2591,6 +2605,7 @@
         "名称": "Can't Keep My Cool!!!",
         "类型": "Passive",
         "描述": "Unleashing [Samael]'s Charged Attack at Combo Level S extends [Impatience] duration.",
+        "icon": "ExtraPassive",
         "p": [
           {
             "id": 150102,
@@ -2613,6 +2628,7 @@
         "名称": "Crimson Radiance",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\nIncreases ATK for self and Lumino allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 150002,
@@ -2662,6 +2678,7 @@
           "近战",
           "重剑"
         ],
+        "icon": "Baonu_WP",
         "伤害类型": "震荡",
         "攻击": 15,
         "暴击": 0.2,
@@ -2701,6 +2718,7 @@
         "名称": "Lunar Hunt",
         "类型": "DMG",
         "描述": "Creates 1 [Lunar Hunt] and replaces this skill with [Solar Eclipse]. \n [Lunar Hunt]: Deals Umbro Damage to all enemies within range upon spawn and reduces their Movement Speed.",
+        "icon": "Nifu01_1",
         "e": [
           {
             "id": 150213,
@@ -2900,6 +2918,7 @@
         "名称": "Misty Sea Requiem",
         "类型": "Buff",
         "描述": "Enters [Funeral Rite] status. Upon entry, if the user's Skill Range exceeds 100%, the excess is converted into Skill Intensity at a fixed ratio, and Skill Range is reduced to 100% for the duration.\nWhile under [Funeral Rite], gains Trigger Probability Increase for ranged weapons; [Lunar Hunt] and [Solar Eclipse] cost no Sanity; [Lunar Hunt] pulls enemies toward its centre; [Solar Eclipse] deals increased damage.\n[Funeral Rite] ends after a set duration or after casting a total of 6 [Lunar Hunt] and/or [Solar Eclipse].",
+        "icon": "Nifu02",
         "cd": 3,
         "e": [
           {
@@ -3059,6 +3078,7 @@
         "名称": "Interwoven Cries",
         "类型": "Passive",
         "描述": "Based on the user's Trigger Probability for ranged weapons, casting [Lunar Hunt] has a chance to also spawn [Solar Eclipse] at the same location, which in turn may spawn another [Lunar Hunt]. [Solar Eclipse] and [Lunar Hunt] instances generated this way are not enhanced by [Misty Sea Requiem].",
+        "icon": "Nifu03",
         "p": [
           {
             "id": 150201,
@@ -3133,6 +3153,7 @@
         "名称": "Nightfall",
         "类型": "Passive",
         "描述": "[Lunar Hunt] can trigger Umbro bonus effects. [Solar Eclipse] can trigger Lumino bonus effects.",
+        "icon": "ExtraPassive",
         "p": [
           {
             "id": 150202,
@@ -3153,6 +3174,7 @@
         "名称": "When the Sky Ran Gold",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\nIncreases ATK for self and Lumino allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 150004,
@@ -3224,6 +3246,7 @@
         "名称": "Drift of Youth",
         "类型": "DMG",
         "描述": "Deals Lumino Damage to enemies within range 3 times and increases Kezhou's Ranged Weapon Attack Speed.\n\nWhile in [Aspect Manifestation] state, increases Kezhou's Melee Weapon Attack Speed, during which Kezhou is immune to Hitstun when taking damage.",
+        "icon": "Kezhou01",
         "cd": 1,
         "e": [
           {
@@ -3379,6 +3402,7 @@
         "名称": "Lightswords Slice Starry Streams",
         "类型": "Buff",
         "描述": "Enters [Aspect Manifestation] state and summons [Edges of All Times] to rain from the sky, dealing Lumino Damage to enemies within range.\n\nWhile in [Aspect Manifestation] state, Kezhou's Melee Weapon becomes [Phanosword]. When triggering Bonus Effect using [Phanosword], generates 1 [Phanoplume].\nWhile in [Aspect Manifestation] state, this skill is replaced with [Feathers Chase Dust In Dreams].",
+        "icon": "Kezhou02_On",
         "cd": 3,
         "e": [
           {
@@ -3887,6 +3911,7 @@
         "名称": "Life's A Fleeting, Shifting Tide",
         "类型": "Passive",
         "描述": "Begins with 50 points each of [Sword Intent] and [String Intent] (maximum 100).\n [Sword Intent] increases Melee Weapon Damage Dealt and Melee Weapon Trigger Probability, and reduces the Sanity Cost of [Lightswords Slice Starry Streams]. At maximum [Sword Intent], Sanity Cost is further reduced by 30.\n [String Intent] increases Ranged Weapon Damage Dealt and Ranged Weapon Trigger Probability, and reduces the Sanity Cost of [Feathers Chase Dust In Dreams]. At maximum [String Intent], Sanity Cost is further reduced by 30.\nWhile in [Aspect Manifestation] state, each time damage is dealt with a melee weapon, 1 point of [Sword Intent] converts into [String Intent]. While out of [Aspect Manifestation] state, each time damage is dealt with a ranged weapon, 1 point of [String Intent] converts into [Sword Intent]. ",
+        "icon": "Kezhou03",
         "b": [
           {
             "id": 150301,
@@ -4042,6 +4067,7 @@
         "名称": "Yet the Drifter Marks the Change",
         "类型": "Passive",
         "描述": "Upon entering [Aspect Manifestation] state, records the current [Sword Intent] points. For a period of time, if the [Sword Intent] point drops below this value, the [Sword Intent] effect applied to [Life's A Fleeting, Shifting Tide] will adopt the recorded value instead. This effect is invalid after exiting [Aspect Manifestation] state.\n\nUpon ending [Aspect Manifestation] state, records the current [String Intent] points. For a period of time, if the [String Intent] point drops below this value, the [String Intent] effect applied to [Life's A Fleeting, Shifting Tide] will adopt the recorded value instead. This effect is invalid while in [Aspect Manifestation] state.",
+        "icon": "ExtraPassive",
         "p": [
           {
             "id": 150302,
@@ -4064,6 +4090,7 @@
         "名称": "When the Sky Ran Gold",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\nIncreases ATK for self and Lumino allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 150004,
@@ -4112,7 +4139,8 @@
           "同律",
           "近战",
           "单手剑"
-        ]
+        ],
+        "icon": "Heitao_WP"
       },
       {
         "id": 150302,
@@ -4121,7 +4149,8 @@
           "同律",
           "近战",
           "长柄"
-        ]
+        ],
+        "icon": "Heitao_WP"
       },
       {
         "id": 150303,
@@ -4130,7 +4159,8 @@
           "同律",
           "近战",
           "重剑"
-        ]
+        ],
+        "icon": "Heitao_WP"
       },
       {
         "id": 150304,
@@ -4139,7 +4169,8 @@
           "同律",
           "近战",
           "双刀"
-        ]
+        ],
+        "icon": "Heitao_WP"
       }
     ]
   },
@@ -4166,6 +4197,7 @@
         "名称": "Cruise",
         "类型": "Passive",
         "描述": "Enters [Cruise], gaining high-speed flight and dealing Lumino DMG to enemies along the path. This state continuously drains [Artificer Energy] and ends when Energy reaches 0 or when the skill is recast.",
+        "icon": "Passive",
         "cd": 1,
         "e": [
           {
@@ -4246,6 +4278,7 @@
         "名称": "Artificer Armament",
         "类型": "Buff",
         "描述": "Consumes all Sanity to summon the [Artificer Arsenal]. For a certain amount of Sanity consumed, grants 1 stack of [Artificer Supply], up to 10 stacks. Su Yi's melee weapon becomes the [Artificer Greatsword], and the ranged weapon becomes the [Artificer Cannon].\n While the Arsenal is active, Su Yi becomes immune to Hitstun. Recasting the skill retracts the Arsenal.",
+        "icon": "Saiqi02_On",
         "cd": 2
       },
       {
@@ -4253,6 +4286,7 @@
         "名称": "Artificer Kinetics",
         "类型": "Passive",
         "描述": "Each bullet fired by the [Artificer Arsenal] grants 1 stack of [Overheat], stacking up to 400 times. Retracting the Arsenal consumes all Overheat stacks. If 200 or more stacks are consumed, the Arsenal launches forward and explodes on impact, dealing AoE Lumino DMG.",
+        "icon": "Passive",
         "p": [
           {
             "id": 150401
@@ -4264,6 +4298,7 @@
         "名称": "Offense–Defense Integration",
         "类型": "Passive",
         "描述": "Generates an [Artificer Shield] when the [Artificer Arsenal] is summoned.",
+        "icon": "ExtraPassive",
         "p": [
           {
             "id": 150402
@@ -4288,6 +4323,7 @@
           "近战",
           "远程"
         ],
+        "icon": "Heitao_WP",
         "伤害类型": "震荡",
         "攻击": 7,
         "暴击": 0.3,
@@ -4326,6 +4362,7 @@
         "名称": "Dawn Beyond Night",
         "类型": "DMG",
         "描述": "Unleashes 2 Swordwaves, dealing Lumino DMG to enemies on hit and guaranteed to trigger Lumino bonus effects.",
+        "icon": "Zhujue01",
         "e": [
           {
             "id": 160113,
@@ -4394,6 +4431,7 @@
         "名称": "Flare",
         "类型": "Buff",
         "描述": "Deals Lumino DMG to nearby enemies and grants self and allies both Ultra Shields and [Incandescence].",
+        "icon": "Zhujue02",
         "cd": 3,
         "e": [
           {
@@ -4549,6 +4587,7 @@
         "名称": "Diffusion",
         "类型": "Passive",
         "描述": "When a Lumino bonus effect is triggered, deals an additional Lumino AoE Damage at the target's location. This effect triggers 1 time every 0.5s.",
+        "icon": "Zhujue03",
         "e": [
           {
             "id": 160132,
@@ -4620,6 +4659,7 @@
         "名称": "Radiant Grace",
         "类型": "Passive",
         "描述": "Using [Flare] grants Trigger Probability Increase for self and allies.",
+        "icon": "ExtraPassive",
         "e": [
           {
             "id": 160131,
@@ -4675,6 +4715,7 @@
         "名称": "Edge",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\n Increases Weapon DMG for self and allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 100006,
@@ -4747,6 +4788,7 @@
         "名称": "\"On a Warm Afternoon\"",
         "类型": "DMG",
         "描述": "Deals Lumino Damage to enemies in front and reduces their Movement Speed.\nWhile [Boisterous Tea Party] is active, using this skill relocates the field to the user's position, expands its range to match [Boisterous Tea Party], and increases its damage.",
+        "icon": "Feina01",
         "e": [
           {
             "id": 180113,
@@ -4899,6 +4941,7 @@
         "名称": "\"Let the Tea Party Begin!\"",
         "类型": "Buff",
         "描述": "Creates a [Boisterous Tea Party] field in front of Fina. [Boisterous Tea Party] continuously consumes Sanity and ends when Sanity drops to 0 or when this skill is held.\n\nDuring [Boisterous Tea Party], using the skill again will switch the field effects in the order of the [Tea Party Guests] — [Nightingale], [Hound], [Unicorn], and [Butterfly].\nUsing the skill again outside the range of [Boisterous Tea Party] will relocate it to Fina's current location.",
+        "icon": "Feina02_On",
         "cd": 2.5,
         "e": [
           {
@@ -5161,6 +5204,7 @@
         "名称": "\"Bad Sorcerers Hate Sunlight!\"",
         "类型": "Passive",
         "描述": "Grants additional Lumino Damage that lasts throughout the battle. Each time [\"On a Warm Afternoon\"] is used, grants 6 stacks of [Taleweaver Quill]. While [Boisterous Tea Party] is active, generates 1 stack of [Taleweaver Quill] per second (up to 30 stacks).",
+        "icon": "Feina03",
         "b": [
           {
             "id": 180101,
@@ -5283,6 +5327,7 @@
         "名称": "\"To Be Continued\"",
         "类型": "Passive",
         "描述": "Using [\"On a Warm Afternoon\"] increases the user's and allies' damage based on the number of [Taleweaver Quill] stacks.",
+        "icon": "ExtraPassive",
         "b": [
           {
             "id": 180141,
@@ -5327,6 +5372,7 @@
         "名称": "\"Advance, Poker Card Soldiers!\"",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\nIncreases Weapon DMG for self and allies proficient in Swords or Assault Rifles.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 180192,
@@ -5401,6 +5447,7 @@
         "名称": "Aurelian Caress",
         "类型": "Summon",
         "描述": "Summons 1 [Aurelia Aurita]. A maximum of 3 can exist at the same time.",
+        "icon": "Shuimu01",
         "e": [
           {
             "id": 210112,
@@ -5493,6 +5540,7 @@
         "名称": "Lada Lovedew",
         "类型": "DMG",
         "描述": "Deals Hydro Damage to nearby enemies; the damage is increased based on the number of [Poison of Love] stacks inflicted on the enemies.",
+        "icon": "Shuimu02",
         "cd": 3.5,
         "e": [
           {
@@ -5608,6 +5656,7 @@
         "名称": "Truelove Trial",
         "类型": "Passive",
         "描述": "When dealing damage with a melee weapon or [Aurelia Aurita]'s attack, inflicts 1 stack of [Poison of Love] on the target, up to 6 stacks.",
+        "icon": "Shuimu03",
         "b": [
           {
             "id": 210101,
@@ -5766,6 +5815,7 @@
         "名称": "Lovesick Synergy",
         "类型": "Passive",
         "描述": "When dealing damage with a Normal Attack using a melee weapon, there's a chance to have [Poison of Love] inflicted on the target to deal additional damage once.\nDealing damage with [Lada Lovedew] will always trigger this effect.",
+        "icon": "ExtraPassive",
         "p": [
           {
             "id": 210103,
@@ -5786,6 +5836,7 @@
         "名称": "Seven-Day Spread",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\n Increases ATK for self and Hydro allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 210004,
@@ -5859,6 +5910,7 @@
         "名称": "Tabethe's Specialty!",
         "类型": "Buff",
         "描述": "Commands all [Summon: Tentacles] to attack once, increasing their Damage Dealt. Also grants self and allies a boost to Skill DMG.",
+        "icon": "Zhangyu01",
         "e": [
           {
             "id": 230112,
@@ -5953,6 +6005,7 @@
         "名称": "Brawl For Justice!",
         "类型": "Summon",
         "描述": "Summons 9 [Tentacles] around Tabethe.",
+        "icon": "Zhangyu02",
         "cd": 3,
         "e": [
           {
@@ -6040,6 +6093,7 @@
         "名称": "Have Tricks, Will Travel!",
         "类型": "Passive",
         "描述": "Dealing CRIT Damage using a ranged weapon has a chance to summon 1 [Tentacle] near the target, which can only be triggered once per second.\nA maximum of 18 [Tentacles] can exist at the same time.",
+        "icon": "Zhangyu03",
         "e": [
           {
             "id": 230131,
@@ -6173,6 +6227,7 @@
         "名称": "Tentacles Abound!",
         "类型": "Passive",
         "描述": "When summoning [Tentacles], Tabethe gains 1 stack that increases her CRIT Chance, up to 10 stacks.",
+        "icon": "ExtraPassive",
         "b": [
           {
             "id": 230103,
@@ -6215,6 +6270,7 @@
         "名称": "Novelty",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\n Increases Skill DMG for self and allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 100004,
@@ -6289,6 +6345,7 @@
         "名称": "Subcelestial Solace",
         "类型": "Summon",
         "描述": "Summons 1 [Yunchi]. A maximum of 2 [Yunchi] can exist at the same time.",
+        "icon": "Baiheng01",
         "e": [
           {
             "id": 240103,
@@ -6435,6 +6492,7 @@
         "名称": "Holistic Harmony",
         "类型": "Buff",
         "描述": "Deals Hydro Damage to nearby enemies. Grants the user an Ultra Shield and an ATK Speed Increase. Nearby allies receive an Ultra Shield and [Nine-Needle Therapy].",
+        "icon": "Baiheng02",
         "cd": 2.4,
         "e": [
           {
@@ -6743,6 +6801,7 @@
         "名称": "Archaeus Revival",
         "类型": "Passive",
         "描述": "Using a Combat or Ultimate Skill (by the user or nearby allies) grants 1 stack of Skill Speed Increase, up to 2 stacks. Remaining Time refreshes each time a new stack is gained.",
+        "icon": "Baiheng03",
         "b": [
           {
             "id": 240133,
@@ -6826,6 +6885,7 @@
         "名称": "Brimful of Vitality",
         "类型": "Passive",
         "描述": "Increases Skill Intensity based on the number of [Yunchi] on the field.",
+        "icon": "ExtraPassive",
         "b": [
           {
             "id": 240141,
@@ -6860,6 +6920,7 @@
         "名称": "Meridian Synergy",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\nIncreases Skill DMG for self and allies if 2 or more characters on the team share the same element.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 240192,
@@ -6934,6 +6995,7 @@
         "名称": "Deadly Blossom",
         "类型": "DMG",
         "描述": "Deals Pyro Damage to enemies in front and inflicts [Laceration].",
+        "icon": "Linen01",
         "e": [
           {
             "id": 310111,
@@ -7038,6 +7100,7 @@
         "名称": "Gunpowder Revelry",
         "类型": "Buff",
         "描述": "Switches the ranged weapon to [Hansel and Gretel]. In this state, Lynn can shoot and use skills, but can only move using [Deadly Blossom].\nShooting deals damage to all enemies in front, during which Lynn gains 1 stack that increases Lynn's ATK Speed every 0.2s, up to 35 stacks.\nUsing [Hansel and Gretel] continuously consumes Sanity, during which Lynn is immune to Hitstun when taking damage. When Sanity drops to 0 or the skill is used again, sheathes [Hansel and Gretel].",
+        "icon": "Linen02_On",
         "cd": 2.5,
         "e": [
           {
@@ -7148,6 +7211,7 @@
         "名称": "Tactical Rapid Fire",
         "类型": "Passive",
         "描述": "When not shooting, Lynn gains 1 stack of [Preload] per second, up to 6 stacks.\nWhen shooting, consumes all stacks of [Preload] to gain [Suppressing Fire] for a period of time.\n[Suppressing Fire]: Increases the damage based on the number of the consumed [Preload] stacks. \nCannot gain [Preload] stack during [Suppressing Fire].",
+        "icon": "Linen03",
         "p": [
           {
             "id": 310101,
@@ -7207,6 +7271,7 @@
         "名称": "The Unforgivable",
         "类型": "Passive",
         "描述": "Immediately removes [Laceration] and deals damage once the [Lacerated Wound] count reaches its maximum.",
+        "icon": "ExtraPassive",
         "p": [
           {
             "id": 310102
@@ -7218,6 +7283,7 @@
         "名称": "Hellforge",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\nIncreases ATK for self and Pyro allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 310004,
@@ -7267,6 +7333,7 @@
           "远程",
           "双枪"
         ],
+        "icon": "Linen_WP",
         "伤害类型": "贯穿",
         "攻击": 28,
         "暴击": 0.12,
@@ -7307,6 +7374,7 @@
         "名称": "Pyrolytic Cleaning",
         "类型": "DMG",
         "描述": "Commands all [Dirtexpellers] to continuously revolve around Hilda and fire [Hyperthermal Purgejets], during which the duration timer for all [Light Dirtexpellers] pauses.\n[Hyperthermal Purgejets] deal Pyro Damage to enemies, and defeating an enemy has a chance to restore Sanity for Hilda during the [Hyperthermal Purgejets] firing.",
+        "icon": "Xier01",
         "cd": 1,
         "e": [
           {
@@ -7444,6 +7512,7 @@
         "名称": "Wholehearted Service",
         "类型": "Summon",
         "描述": "Deals Pyro Damage to surrounding enemies and inflicts [Disarm] on them. For each target hit, summons 1 [Light Dirtexpeller] around Hilda and resets the duration timer for all [Light Dirtexpellers].\nCarries 2 [Heavy Dirtexpellers] around. [Heavy Dirtexpellers] and [Light Dirtexpellers] automatically target and shoot nearby enemies once every 3s, dealing Pyro Damage.\nA maximum of 6 [Light Dirtexpellers] can exist at the same time.",
+        "icon": "Xier02",
         "cd": 3.3,
         "e": [
           {
@@ -7638,6 +7707,7 @@
         "名称": "Automatic Sanitizing",
         "类型": "Passive",
         "描述": "When dodging, Hilda reloads her ranged weapon Magazine to maximum and gains [Elegant Anger].",
+        "icon": "Xier03",
         "p": [
           {
             "id": 310201,
@@ -7698,6 +7768,7 @@
         "名称": "Multitasking",
         "类型": "Passive",
         "描述": "[Dirtexpeller] has a chance to fire 1 additional projectile, the probability equals to [30%+20%×Hilda's Ranged Weapon Multishot].\nIncreases the damage of [Hyperthermal Purgejet] by [30%+20%×Hilda's Ranged Weapon Multishot].",
+        "icon": "ExtraPassive",
         "p": [
           {
             "id": 310203,
@@ -7713,6 +7784,7 @@
         "名称": "Hellforge",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\nIncreases ATK for self and Pyro allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 310004,
@@ -7785,6 +7857,7 @@
         "名称": "Tot Popper",
         "类型": "DMG",
         "描述": "Drops a bomb named [Tot Popper], assuming the form of either [Tot Popper: Yale's Make] or [Tot Popper: Oliver's Make]. Upon landing, the bomb explodes after 2s, dealing Pyro Damage to enemies within a cross-shaped area and detonating any other [Tot Poppers] within range. A maximum of 10 [Tot Poppers] can exist at the same time.",
+        "icon": "Yeer01",
         "e": [
           {
             "id": 310313,
@@ -7907,6 +7980,7 @@
         "名称": "Nightmare's Grasp",
         "类型": "DMG",
         "描述": "Generates [Nightmare Lab] around Yale and Oliver. Using the skill again can close [Nightmare Lab] in advance.",
+        "icon": "Yeer02_On",
         "cd": 2.3,
         "e": [
           {
@@ -8048,6 +8122,7 @@
         "名称": "The Rules of Bomb",
         "类型": "Passive",
         "描述": "When a [Tot Popper] is deployed, if it's no less than 2 metres above the ground, it deals Pyro Damage to nearby enemies upon landing.",
+        "icon": "Yeer03",
         "e": [
           {
             "id": 310331,
@@ -8129,6 +8204,7 @@
         "名称": "Bombing Memories",
         "类型": "Passive",
         "描述": "Each time a [Tot Popper] is deployed, Yale and Oliver gains 1 stack of [Bombing Frenzy], up to 3 stacks.\n[Bombing Frenzy]: Increases Skill Efficiency.",
+        "icon": "ExtraPassive",
         "b": [
           {
             "id": 310304,
@@ -8171,6 +8247,7 @@
         "名称": "Aetherflame",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\nIncreases ATK for self and Pyro allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 310002,
@@ -8244,6 +8321,7 @@
         "名称": "Raging Inferno",
         "类型": "Buff",
         "描述": "Enters [Retribution] state.",
+        "icon": "Haier01",
         "e": [
           {
             "id": 320112,
@@ -8583,6 +8661,7 @@
         "名称": "Cage of Despair",
         "类型": "DMG",
         "描述": "Deals Pyro Damage to surrounding enemies and taunts them.",
+        "icon": "Haier02",
         "cd": 2.9,
         "e": [
           {
@@ -8689,6 +8768,7 @@
         "名称": "Retributive Resolve",
         "类型": "Passive",
         "描述": "Increases Max HP and continuously restores HP.",
+        "icon": "Haier03",
         "b": [
           {
             "id": 320101,
@@ -8779,6 +8859,7 @@
         "名称": "Guilty Verdict",
         "类型": "Passive",
         "描述": "Increases damage dealt to enemies taunted by Hellfire.",
+        "icon": "ExtraPassive",
         "p": [
           {
             "id": 320104,
@@ -8799,6 +8880,7 @@
         "名称": "Aetherflame",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\nIncreases ATK for self and Pyro allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 310002,
@@ -8863,6 +8945,7 @@
         "名称": "Burgundy Flurry",
         "类型": "DMG",
         "描述": "Launches all [Spinblades], dealing Pyro DMG to enemies in front and granting 1 stack of [Inebriation] to the user. Tap repeatedly or hold the Attack button to unleash a flurry of attacks.",
+        "icon": "Haier01",
         "e": [
           {
             "id": 320215,
@@ -8931,6 +9014,7 @@
         "名称": "Claret Waltz",
         "类型": "Summon",
         "描述": "Deals Pyro DMG to enemies in front and summons 8 [Spinblades] to orbit the user, dealing damage to enemies along their path.",
+        "icon": "Haier02",
         "e": [
           {
             "id": 320236,
@@ -8983,6 +9067,7 @@
         "名称": "Blood Upon Wine",
         "类型": "Passive",
         "描述": "Damage from [Spinblades] inflicts 1 stack of [Laceration], stacking up to 20 times.",
+        "icon": "Passive",
         "p": [
           {
             "id": 320201,
@@ -9010,6 +9095,7 @@
         "名称": "Blood Beneath Wine",
         "类型": "Passive",
         "描述": "Triggering [Laceration] grants 1 [Tipsy Mark]. Restores Sanity once every 20 Marks gained.",
+        "icon": "ExtraPassive",
         "e": [
           {
             "id": 320241,
@@ -9039,6 +9125,7 @@
         "名称": "Aetherflame",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\nIncreases ATK for self and Pyro allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 310002,
@@ -9112,6 +9199,7 @@
         "名称": "Margie's Treasure Shovel",
         "类型": "DMG",
         "描述": "Attack enemies within range in front, dealing Pyro Damage and stunning them. When using this skill by holding, Margie makes a continuous attack.",
+        "icon": "Maer01",
         "e": [
           {
             "id": 330112,
@@ -9207,6 +9295,7 @@
         "名称": "Margie's Combustible Bin",
         "类型": "DMG",
         "描述": "Casts 3 [Margie's Combustible Bins] forward. They immediately explode upon hitting any target or obstacle, dealing AoE Pyro Damage and consuming a certain stacks of [Jackpot!] for enhancement:\nWhen consuming 3 stacks of [Jackpot!]: Increases the explosion range and damage.\nWhen consuming 6 stacks of [Jackpot!]: Creates a Zealous Zone after the explosion, dealing Pyro Damage once every 2s to enemies within the zone.\nWhen consuming 9 stacks of [Jackpot!]: Deals additional AoE Pyro Damage 2 times after the explosion.",
+        "icon": "Maer02",
         "cd": 2.9,
         "e": [
           {
@@ -9429,6 +9518,7 @@
         "名称": "Margie's Recycling Sack",
         "类型": "Passive",
         "描述": "When the user or allies pick up loot, the user gains 1 stack of [Jackpot!], lasting for the rest of the battle. Each stack increases Skill Intensity, up to 20 stacks.",
+        "icon": "Maer03",
         "b": [
           {
             "id": 330101,
@@ -9499,6 +9589,7 @@
         "名称": "Margie's Pep Song",
         "类型": "Passive",
         "描述": "Grants ATK Increase to other allies.",
+        "icon": "ExtraPassive",
         "b": [
           {
             "id": 330142,
@@ -9532,6 +9623,7 @@
         "名称": "Strike",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\n Increases ATK for self and allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 100002,
@@ -9604,6 +9696,7 @@
         "名称": "Volt Rush",
         "类型": "DMG",
         "描述": "Rhythm leaps forward, dealing Electro Damage to enemies along the path.\nWhen the [Electric Energy] point is no less than 30, consumes 30 points to increase the leap speed and [Volt Rush]'s damage, and grants an effect that increases the damage dealt by Rhythm.",
+        "icon": "Lise01",
         "e": [
           {
             "id": 410114,
@@ -9775,6 +9868,7 @@
         "名称": "Electro Vortex",
         "类型": "Buff",
         "描述": "Deals Electro Damage to enemies within range and enters [Electro Surge] state, during which it continuously consumes Sanity.\n[Electro Surge] state ends when Sanity drops to 0 or when the skill is used again.",
+        "icon": "Lise02_On",
         "cd": 2,
         "e": [
           {
@@ -10038,6 +10132,7 @@
         "名称": "Tactical Preservation",
         "类型": "Passive",
         "描述": "When consuming Sanity, converts a percentage of consumed Sanity into [Electric Energy]. The upper limit of [Electric Energy] is equal to the max Sanity.",
+        "icon": "Lise03",
         "p": [
           {
             "id": 410101,
@@ -10086,6 +10181,7 @@
         "名称": "Poweroff Anxiety",
         "类型": "Passive",
         "描述": "When consuming [Electric Energy], converts 50% of the consumed [Electric Energy] into Sanity.",
+        "icon": "ExtraPassive",
         "p": [
           {
             "id": 410102,
@@ -10100,6 +10196,7 @@
         "名称": "Thundering Nightbreaker",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\nIncreases ATK for self and Electro allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 410002,
@@ -10172,6 +10269,7 @@
         "名称": "Celestial Revelation",
         "类型": "DMG",
         "描述": "Press: \nZhiliu uses [Celestial Revelation: Zhen], dealing Electro Damage to enemies within range in front, which grants Zhiliu 1 [Talisman: Zhen].\n\nHold:\nZhiliu uses [Celestial Revelation: Xun], dealing Electro Damage to enemies within range in front, which grants Zhiliu Ultra Shield and 1 [Talisman: Xun].",
+        "icon": "Zhiliu01",
         "e": [
           {
             "id": 410213,
@@ -10315,6 +10413,7 @@
         "名称": "Heaven-Earth Divination",
         "类型": "DMG",
         "描述": "When the user holds fewer than 2 [Talismans], deals Electro Damage to nearby enemies. \nWhen the user holds 2 or more [Talismans], this skill transforms based on the combination.",
+        "icon": "Zhiliu02_1",
         "cd": 2.5,
         "e": [
           {
@@ -10726,6 +10825,7 @@
         "名称": "Talismans Coalescence",
         "类型": "Passive",
         "描述": "Obtains [Talismans] through [Celestial Revelation], up to 2 [Talismans]. When the number of [Talismans] exceeds the limit, the earliest obtained [Talisman] will be removed.\nWhen consuming [Talisman] after using [Thunder's Oracle Peal], [Myriad Things Thrive], or [Fortune's Clarity], each [Talisman] has a chance to be retained based on Zhiliu's Melee Weapon Trigger Probability.",
+        "icon": "Zhiliu03",
         "p": [
           {
             "id": 410201,
@@ -10776,6 +10876,7 @@
         "名称": "Mutual Generation",
         "类型": "Passive",
         "描述": "Grants 1 stack of Morale when the user or any ally deals Electro Skill DMG (up to 20 stacks).",
+        "icon": "ExtraPassive",
         "b": [
           {
             "id": 410214,
@@ -10818,6 +10919,7 @@
         "名称": "Divine Retribution",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\nIncreases ATK for self and Electro allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 410004,
@@ -10891,6 +10993,7 @@
         "名称": "Precipitous Thunderfall",
         "类型": "Buff",
         "描述": "Yuming leaps into the air, and the next Plunging Attack is replaced with [Starlight Descent]. Using this skill in [Xuanjiao Manifest] state grants Yuming 1 [Reverse Scale].\nWhen the amount of [Reverse Scale] reaches its maxium, [Starlight Descent] is enhanced to [Starstorm Descent].",
+        "icon": "Yuming01",
         "cd": 0.7,
         "e": [
           {
@@ -11107,6 +11210,7 @@
         "名称": "Grimscales",
         "类型": "Buff",
         "描述": "Deals Electro AoE Damage to enemies in front and enters the [Xuanjiao Manifest] state.\n While active, the user and all Electro allies gain [Fish-Dragon Dance].",
+        "icon": "Yuming02",
         "cd": 3,
         "e": [
           {
@@ -11310,6 +11414,7 @@
         "名称": "Soaring Sky-High",
         "类型": "Passive",
         "描述": "When dealing damage with a melee weapon, inflicts [Thunderous Onslaught] on enemies, reducing their Electro Resistance.\n During [Xuanjiao Manifest], [Thunderous Onslaught] is automatically applied to all enemies.",
+        "icon": "Yuming03",
         "b": [
           {
             "id": 420131,
@@ -11395,6 +11500,7 @@
         "名称": "Thunder Roars",
         "类型": "Passive",
         "描述": "Yuming gains 6 [Reverse Scales] when using [Grimscales].",
+        "icon": "ExtraPassive",
         "p": [
           {
             "id": 420102
@@ -11406,6 +11512,7 @@
         "名称": "Gallop Northwestward",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\nIncreases Morale for self and Electro allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 420192,
@@ -11479,6 +11586,7 @@
         "名称": "Legitimate Slackness",
         "类型": "DEF",
         "描述": "Deploys a [Barrier] in front of Randy and deals Electro Damage to nearby enemies.\n[Barrier] consumes Sanity over time, during which Randy cannot move or use any weapon and is immune to Hitstun when taking damage. [Barrier] inflicts [Overwork Grudge] on nearby enemies.\nWhen this skill is used again, the [Barrier] is retracted.",
+        "icon": "Landi01_On",
         "cd": 2,
         "e": [
           {
@@ -11764,6 +11872,7 @@
         "名称": "Special Gift",
         "类型": "DMG",
         "描述": "Throws 1 [Bespoke Shield] forward, triggering [Impact] once when it halts. While active on the battlefield, [Bespoke Shield] triggers [Impact] every 3s.\n[Impact] deals damage only to Shields, based on Randy's DEF, and grants an Ultra Shield based on Randy's DEF to Randy and allies. For targets with 0 Shield, [Impact] paralyses them.",
+        "icon": "Landi02",
         "cd": 3.6,
         "e": [
           {
@@ -11928,6 +12037,7 @@
         "名称": "Shared Shield",
         "类型": "Passive",
         "描述": "When Randy successfully grants an Ultra Shield to a teammate, applies 1 stack that increases their DEF based on Randy's DEF to them, up to 10 stacks.",
+        "icon": "Landi03",
         "b": [
           {
             "id": 420201,
@@ -12004,6 +12114,7 @@
         "名称": "Well-Deserved Break",
         "类型": "Passive",
         "描述": "Once [Barrier] has absorbed damage equivalent to 70% of Randy's Max HP, consumes Sanity to reset the [Barrier] and deals the same barrier deployment damage of [Legitimate Slackness] 1 time.",
+        "icon": "ExtraPassive",
         "p": [
           {
             "id": 420202,
@@ -12026,6 +12137,7 @@
         "名称": "Holdfast",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\n Increases DEF for self and allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 100008,
@@ -12099,6 +12211,7 @@
         "名称": "Divine Conqueror",
         "类型": "DMG",
         "描述": "Deals Electro Damage to enemies within range in front and creates a field of [Legion's Punishment] at the locations.",
+        "icon": "Xibi01",
         "e": [
           {
             "id": 430113,
@@ -12296,6 +12409,7 @@
         "名称": "Stormcaller",
         "类型": "Summon",
         "描述": "Summons [Chaotic Thunderorb]. A maximum of 1 can exist at the same time. \nConsumes [Might of Thunder] to summon an enhanced [Chaotic Thunderorb]. The interval for the enhanced [Chaotic Thunderorb] to trigger [Devastating Storm] is reduced to 2s, and its Link Damage is increased.",
+        "icon": "Xibi02",
         "cd": 2.4,
         "e": [
           {
@@ -12585,6 +12699,7 @@
         "名称": "Might of Thunder",
         "类型": "Passive",
         "描述": "When the damage dealt triggers Bonus Effect, Sibylle gains certain points of [Might of Thunder], up to 300 points.\n[Divine Conqueror] and [Stormcaller] can be empowered by consuming [Might of Thunder] points.",
+        "icon": "Xibi03",
         "p": [
           {
             "id": 430101,
@@ -12641,6 +12756,7 @@
         "名称": "Master of Stormclouds",
         "类型": "Passive",
         "描述": "Damage dealt by [Divine Conqueror] and [Legion's Punishment] has a chance to trigger Bonus Effect based on Sibylle's Melee Weapon Trigger Probability.",
+        "icon": "ExtraPassive",
         "p": [
           {
             "id": 430102,
@@ -12662,6 +12778,7 @@
         "名称": "Divine Retribution",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\nIncreases ATK for self and Electro allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 410004,
@@ -12735,6 +12852,7 @@
         "名称": "Trotters Trot-Trot",
         "类型": "DMG",
         "描述": "Commands [Filbert] to charge forwards, dealing Anemo Damage to enemies in the path. Upon hitting any obstacles, triggers Anemo AoE Damage at the endpoint. While this skill is active, heals Truffle and allies, and increases their damage.\nWhen Truffle rides on [Filbert], this skill is replaced with [Trotters Charge-Charge].",
+        "icon": "Songlu01",
         "e": [
           {
             "id": 510113,
@@ -13087,6 +13205,7 @@
         "名称": "Tummy Full, Hands Full",
         "类型": "Buff",
         "描述": "Truffle rides on [Filbert] and gains 100 points of [Passion For Work] and a Movement Speed boost, dealing Anemo Damage to enemies in the path when moving.\nWhen riding on [Filbert], Truffle is unable to use any weapon but can command [Filbert] to attack. When this skill is used again, Truffle dismounts and unleashes [Trotters Trot-Trot] once.",
+        "icon": "Songlu02_On",
         "cd": 3.4,
         "e": [
           {
@@ -13407,6 +13526,7 @@
         "名称": "Chop-Chop, Commissaries!",
         "类型": "Passive",
         "描述": "Gains 1 stack of [Heavyweight] for every second Truffle keeps moving, up to 10 stacks.\n[Heavyweight]: Increases Damage Dealt and decreases Damage Taken.",
+        "icon": "Songlu03",
         "b": [
           {
             "id": 510103,
@@ -13496,6 +13616,7 @@
         "名称": "Combat Supply",
         "类型": "Passive",
         "描述": "When dealing Skill DMG, there is a chance to drop 1 [Ammo Supply Chest].",
+        "icon": "ExtraPassive",
         "p": [
           {
             "id": 510103,
@@ -13516,6 +13637,7 @@
         "名称": "Peep & Peck",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\nIncreases Resolve for self and allies if 2 or more characters on the team share the same element.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 510192,
@@ -13588,6 +13710,7 @@
         "名称": "Stealthy Prowl",
         "类型": "Buff",
         "描述": "Enters [Stealth] state and exits [Relentless Hunt] state. \nGenerates 2 [Fang Spikes] to attack nearby enemies when exiting [Stealth] state or using [Stealthy Prowl] again in [Stealth] state.",
+        "icon": "Aote01",
         "e": [
           {
             "id": 510211,
@@ -13659,6 +13782,7 @@
         "名称": "Predator's Pounce",
         "类型": "Buff",
         "描述": "Retracts all [Fang Spikes] and enters [Relentless Hunt] state.\nFor each [Fang Spike] retracted, Outsider loses certain HP, which is converted into an equivalent amount of Ultra Shield, and it additionally extends the duration of [Relentless Hunt] state.\nWhen losing HP due to this effect, the minimum HP will not drop below 1.",
+        "icon": "Aote02",
         "b": [
           {
             "id": 510221,
@@ -13778,6 +13902,7 @@
         "名称": "Fang for Fang",
         "类型": "Passive",
         "描述": "When taking damage, Outsider generates 1 [Fang Spike] to attack the damage dealer. This effect can only be triggered once per second.",
+        "icon": "Aote03",
         "e": [
           {
             "id": 510233,
@@ -13891,6 +14016,7 @@
         "名称": "Ravenous Gnaw",
         "类型": "Passive",
         "描述": "When not in [Relentless Hunt] state, there is a chance to generate 1 [Fang Spike] to attack the target while dealing damage with a melee weapon. This effect can only be triggered once per second.",
+        "icon": "ExtraPassive",
         "p": [
           {
             "id": 510202,
@@ -13911,6 +14037,7 @@
         "名称": "Air Dominance",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\nIncreases ATK for self and Anemo allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 510002,
@@ -13985,6 +14112,7 @@
         "名称": "Chrysalis Dreamweave",
         "类型": "DMG",
         "描述": "Creates 1 [Phantasm] and then flashes forward. This skill can be used at any time without interrupting Psyche's current action. In [Flamboyance] state, this skill is replaced with [Phototaxis].",
+        "icon": "Saiqi01_1",
         "cd": 0.3,
         "e": [
           {
@@ -14179,6 +14307,7 @@
         "名称": "Fluorescent Eclosion",
         "类型": "Buff",
         "描述": "Enters [Flamboyance] state and gains the ability to fly.\nWhen in [Flamboyance] state, Psyche can only use skills and shoot. [Flamboyance] state continuously consumes Sanity, and when Sanity drops to 0 or this skill is used again, [Flamboyance] state ends.\n\nWhen Psyche's HP percentage is above 15%, [Flamboyance] state consumes HP insteand of Sanity. The consumed HP will be converted into Ultra Shield at a certain percentage.",
+        "icon": "Saiqi02_On",
         "cd": 3.5,
         "e": [
           {
@@ -14298,6 +14427,7 @@
         "名称": "Amberlight",
         "类型": "Passive",
         "描述": "When dealing CRIT damage, Psyche gains one of the following buffs at random: ATK Boost, Skill Intensity Boost, or Resolve Boost.\nIncreases Psyche's damage for each buff she gains, up to 12 buffs.",
+        "icon": "Saiqi03",
         "b": [
           {
             "id": 530131,
@@ -14487,6 +14617,7 @@
         "名称": "Ephemeral as Dew",
         "类型": "Passive",
         "描述": "When using [Fluorescent Eclosion], if Psyche's HP percentage is no less than 75%, gains [Ephemeral as Dew].\n[Ephemeral as Dew]: When triggering the effect of Morale/Resolve, it regards Psyche's HP percentage as 1%. This effect can only be triggered once every 120s.",
+        "icon": "ExtraPassive",
         "p": [
           {
             "id": 530104,
@@ -14510,6 +14641,7 @@
         "名称": "Mirth Carries",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\nIncreases ATK for self and Anemo allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 510004,
@@ -14559,6 +14691,7 @@
           "远程",
           "突击枪"
         ],
+        "icon": "Saiqi_WP",
         "伤害类型": "贯穿",
         "攻击": 5,
         "暴击": 0.33,
@@ -14599,6 +14732,7 @@
         "名称": "Emerald Effusion",
         "类型": "Healing",
         "描述": "Grants [Emerald Effusion]. While active, alchemical smoke fills the area around the user, continuously healing self and allies while slowing enemies in the area. \nWhile [Emerald Effusion] is active, generates 2 [Azoth Projectiles] per second.",
+        "icon": "Dafu01",
         "e": [
           {
             "id": 540113,
@@ -14982,6 +15116,7 @@
         "名称": "Repulsion Synthesis",
         "类型": "Buff",
         "描述": "Heals self and allies, applying [Purification Formula]. Briefly restrains nearby enemies and inflicts [Decay Formula] on them. \nGenerates 1 [Azoth Projectile] per affected target (ally or enemy), up to a maximum of 12.",
+        "icon": "Dafu02",
         "cd": 4,
         "e": [
           {
@@ -15299,6 +15434,7 @@
         "名称": "Azoth Projectile",
         "类型": "Passive",
         "描述": "Increases Daphne's Ranged Weapon Trigger Probability when she possesses [Azoth Projectile].\nDaphne can hold up to 30 [Azoth Projectiles], and each ranged weapon attack consumes 1 [Azoth Projectile].",
+        "icon": "Dafu03",
         "b": [
           {
             "id": 540103,
@@ -15364,6 +15500,7 @@
         "名称": "Argent Lacrima",
         "类型": "Passive",
         "描述": "When Daphne possesses [Azoth Projectile] and her ranged weapon attack deals damage, target hit by the ranged weapon attack incurs the DoT of [Decay Formula] 1 time. The damage is based on a certain percentage of Daphne's Ranged Weapon Trigger Probability.",
+        "icon": "ExtraPassive",
         "p": [
           {
             "id": 540103,
@@ -15385,6 +15522,7 @@
         "名称": "Ardent Impulse",
         "类型": "Support",
         "描述": "[Available only when deployed as a Combat Partner]\n Increases CRIT Chance for self and allies.",
+        "icon": "PhantomPassive",
         "b": [
           {
             "id": 100010,

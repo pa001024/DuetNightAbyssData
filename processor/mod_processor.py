@@ -98,7 +98,9 @@ class ModProcessor(BaseProcessor):
             "icon": mod_data.get("Icon", "")
             .replace("/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_", "")
             .split(".")[0],
-            "名称": self.get_translated_text(mod_data.get("Name", "")),
+            "名称": self.get_translated_text(mod_data.get("Name", "")).replace(
+                "【待包装】", ""
+            ),
             "版本": self.process_release(mod_data.get("ReleaseVersion", 100)),
             "系列": type_name.replace("之", ""),
             "品质": quality,

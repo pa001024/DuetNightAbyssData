@@ -21,12 +21,42 @@ class MonsterProcessor(BaseProcessor):
         }
         self.processed_keys = set()
 
-        # 加载Dungeon.json数据并提取符合条件的怪物ID集合
+        # 加载GalleryRule.json数据并提取符合条件的怪物ID集合
         self.valid_monster_ids = set()
-        ga = data_loader.load_json("GalleryRule.json")
-        for gallery_id, gallery_info in ga.items():
+        self.gallery_rule_data = data_loader.load_json("GalleryRule.json")
+        for gallery_id, gallery_info in self.gallery_rule_data.items():
             self.valid_monster_ids.add(int(gallery_id))
         dungeon_data = data_loader.load_json("Dungeon.json")
+
+        # 加载Monster.json数据并创建UnitId到ModelId的映射
+        self.unit_id_to_model_id = {}
+        monster_data = data_loader.load_json("Monster.json")
+        for monster_id, monster_info in monster_data.items():
+            unit_id = monster_info.get("UnitId")
+            model_id = monster_info.get("ModelId")
+            if unit_id and model_id:
+                self.unit_id_to_model_id[unit_id] = model_id
+
+        # 创建ModelId到图标的映射
+        self.model_id_to_icon = {}
+        for gallery_id, gallery_info in self.gallery_rule_data.items():
+            # 获取PreferredMonsterId，它应该对应怪物的UnitId
+            preferred_monster_id = gallery_info.get("PreferredMonsterId")
+            if preferred_monster_id:
+                # 根据PreferredMonsterId获取对应的ModelId
+                model_id = self.unit_id_to_model_id.get(preferred_monster_id)
+                if model_id:
+                    # 提取图标名称
+                    if "MonsterIcon" in gallery_info:
+                        monster_icon = gallery_info["MonsterIcon"]
+                        if "T_Head_" in monster_icon:
+                            icon_part = monster_icon.split("T_Head_")[-1]
+                            if "." in icon_part:
+                                icon = icon_part.split(".")[0]
+                            else:
+                                icon = icon_part
+                            # 建立ModelId到图标的映射
+                            self.model_id_to_icon[model_id] = icon
 
         for dungeon_id, dungeon_info in dungeon_data.items():
             # 检查DungeonID是否大于20000
@@ -81,6 +111,29 @@ class MonsterProcessor(BaseProcessor):
         if len(fact) == 0:
             fact = [""]
 
+        # 从怪物数据中获取ModelId
+        icon = ""
+        # 直接从当前怪物数据中获取ModelId
+        model_id = monster_data.get("ModelId")
+
+        if model_id:
+            # 使用ModelId到图标的映射获取图标
+            icon = self.model_id_to_icon.get(model_id, "")
+
+        # 如果通过ModelId没有获取到图标，回退到原来的逻辑
+        if not icon:
+            gallery_info = self.gallery_rule_data.get(str(id), {})
+            if gallery_info and "MonsterIcon" in gallery_info:
+                monster_icon = gallery_info["MonsterIcon"]
+                # 提取T_Head_后面的值
+                if "T_Head_" in monster_icon:
+                    # 分割字符串，获取T_Head_后面的部分，再去掉后面的扩展名
+                    icon_part = monster_icon.split("T_Head_")[-1]
+                    if "." in icon_part:
+                        icon = icon_part.split(".")[0]
+                    else:
+                        icon = icon_part
+
         processed = {
             "id": id,
             "n": name,
@@ -92,6 +145,11 @@ class MonsterProcessor(BaseProcessor):
             "hp": hp_value,
             "tn": battle_monster.get("TN", 0),
         }
+
+        # 如果图标不为空，添加到processed字典
+        if icon:
+            processed["icon"] = icon
+
         if not processed["t"]:
             del processed["t"]
         if processed["f"] == "":

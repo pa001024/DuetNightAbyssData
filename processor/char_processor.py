@@ -174,10 +174,24 @@ class CharProcessor(BaseProcessor):
             tags = battle_weapon.get("WeaponTag", [])
             if "Abstract" in tags:
                 continue
+
+            # 处理图标，从Icon路径中提取图标名称
+            icon_path = weapon.get("Icon", "")
+            icon = ""
+            if icon_path:
+                # 提取T_Head_后面的值
+                if "T_Head_" in icon_path:
+                    icon_part = icon_path.split("T_Head_")[-1]
+                    if "." in icon_part:
+                        icon = icon_part.split(".")[0]
+                    else:
+                        icon = icon_part
+
             item = {
                 "id": weapon_id,
                 "名称": self.get_translated_text(weapon.get("WeaponName", "")),
                 "类型": self.process_tags(tags),
+                "icon": icon,
             }
             for attr_name in ["Spike", "Smash", "Slash"]:
                 attr_key = f"ATK_{attr_name}"
@@ -415,11 +429,17 @@ class CharProcessor(BaseProcessor):
             12,
         )
 
+        # 从SkillBtnIcon获取技能图标，提取Skill_后面的值
+        skill_icon = skill_info.get("SkillBtnIcon", "")
+        if skill_icon and "Skill_" in skill_icon:
+            skill_icon = skill_icon.split("Skill_")[-1]
+
         result = {
             "id": skill_id,
             "名称": skill_name,
             "类型": self.get_translated_text(skill_info.get("SkillBtnDesc", "")),
             "描述": skill_desc,
+            "icon": skill_icon,
         }
 
         if skill_info.get("CD"):
