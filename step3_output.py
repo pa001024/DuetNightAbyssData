@@ -15,6 +15,12 @@ from processor.abyss_dungeon_processor import AbyssDungeonProcessor
 from processor.walnut_processor import WalnutProcessor
 from processor.fish_processor import FishProcessor
 from processor.fishing_spot_processor import FishingSpotProcessor
+from processor.resource_processor import ResourceProcessor
+from processor.dyn_quest_processor import DynQuestProcessor
+from processor.region_processor import RegionProcessor
+from processor.sub_region_processor import SubRegionProcessor
+from processor.region_point_processor import RegionPointProcessor
+from processor.shop_item_processor import ShopItemProcessor
 
 
 class DataLoader:
@@ -203,6 +209,12 @@ class FinalProcessor:
             "Walnut": WalnutProcessor,
             "Fish": FishProcessor,
             "FishingSpot": FishingSpotProcessor,
+            "Resource": ResourceProcessor,
+            "DynQuest": DynQuestProcessor,
+            "Region": RegionProcessor,
+            "SubRegion": SubRegionProcessor,
+            "RegionPoint": RegionPointProcessor,
+            "ShopItem": ShopItemProcessor,
             # Add other processor classes here as they are implemented
         }
 
@@ -280,6 +292,20 @@ class FinalProcessor:
 
 
 if __name__ == "__main__":
+    import argparse
+
+    # 解析命令行参数
+    parser = argparse.ArgumentParser(
+        description="处理游戏数据文件，支持多语言和自定义文件类型"
+    )
+    parser.add_argument(
+        "--file-types",
+        "-f",
+        nargs="+",
+        help="要处理的文件类型列表，例如: -f Achievement Weapon Mod",
+    )
+    args = parser.parse_args()
+
     # Define base directory for input files
     BASE_DIR = os.path.join(os.getcwd(), "out")
 
@@ -289,11 +315,8 @@ if __name__ == "__main__":
     # Define languages to process
     LANGUAGES = ["cn", "en", "jp", "kr", "tc"]
 
-    # Define file types to process (controlled by switch)
-    # Example: process only Achievement files
-    # FILE_TYPES = ["Achievement"]
-    # Example: process multiple file types (when other processors are implemented)
-    FILE_TYPES = [
+    # Define default file types to process
+    default_file_types = [
         #  11
         "Achievement",
         "Mod",
@@ -309,7 +332,16 @@ if __name__ == "__main__":
         "Walnut",
         "Fish",
         "FishingSpot",
+        "Resource",
+        "DynQuest",
+        "Region",
+        "SubRegion",
+        "RegionPoint",
+        "ShopItem",
     ]
+
+    # 使用命令行参数指定的文件类型，如果没有则使用默认列表
+    FILE_TYPES = args.file_types if args.file_types else default_file_types
 
     # Create processor and process all specified file types for all languages
     processor = FinalProcessor(BASE_DIR, OUTPUT_DIR)

@@ -1,0 +1,39 @@
+local Component = {}
+
+function Component:TriggerTarget(targets, AvatarEid)
+  if type(targets) ~= "table" then
+    return
+  end
+  if AvatarEid then
+    self:SendAvatar(AvatarEid, "ServerTriggerTarget", targets)
+  else
+    self:ServerMulticast("ServerTriggerTarget", targets)
+  end
+end
+
+function Component:CombatItemTargetFinish(AvatarEid, TargetType, UniqueAttr, Count, ...)
+  local Params = {
+    ...
+  }
+  if #Params < 1 then
+    return
+  end
+  local Key = tostring(TargetType) .. "_" .. tostring(Params[1])
+  if not DataMgr.TargetTypeIdValidMap[Key] then
+    return
+  end
+  self:ServerTargetFinish(AvatarEid, TargetType, UniqueAttr, Count, ...)
+end
+
+function Component:ServerTargetFinish(AvatarEid, TargetType, UniqueAttr, Count, ...)
+  self.logger.debug("ServerTargetFinish", TargetType, UniqueAttr, Count, ...)
+  local args = {
+    ...
+  }
+  table.insert(args, 0)
+  self:ServerMulticast("ServerTargetFinish", TargetType, UniqueAttr, Count, args)
+  args[#args] = 1
+  self:SendAvatar(AvatarEid, "ServerTargetFinish", TargetType, UniqueAttr, Count, args)
+end
+
+return Component

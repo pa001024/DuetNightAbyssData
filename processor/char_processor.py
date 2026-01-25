@@ -32,6 +32,8 @@ class CharProcessor(BaseProcessor):
         self.camp_data = data_loader.load_json("CharCamp.json")
         self.weapon_tag_data = data_loader.load_json("WeaponTag.json")
         self.char_addon_attr_data = data_loader.load_json("CharAddonAttr.json")
+        # 加载技能升级所需材料数据
+        self.skill_level_up_data = data_loader.load_json("SkillLevelUp.json")
 
         # 等级列表，用于显示属性
         self.levels = [1]
@@ -141,7 +143,7 @@ class CharProcessor(BaseProcessor):
             "基础护盾": base_attr.get("护盾", 0),
             "基础神智": base_attr.get("神智", 0),
             "加成": self._process_addon(battle_char.get("CharAddonAttr", [])),
-            # "突破": self._process_break(char_id, language),
+            "突破": self._process_break(char_id, language),
             "技能": self._process_skills(battle_char, language),
             "溯源": self._process_traces(battle_char, char_id),
             # "档案": self._process_character_data(char_id),
@@ -396,6 +398,41 @@ class CharProcessor(BaseProcessor):
 
         return skills
 
+    def _process_skill_level_up(self, skill_id):
+        """处理技能升级所需材料"""
+        # 从SkillLevelUp.json获取技能升级数据
+        skill_level_up = self.skill_level_up_data.get(str(skill_id), [])
+        if not skill_level_up:
+            return []
+
+        level_up_materials = []
+
+        for level_data in skill_level_up:
+            skill_level = level_data.get("SkillLevel", 0)
+            item_ids = level_data.get("ItemId", [])
+            item_nums = level_data.get("ItemNum", [])
+
+            if not item_ids or not item_nums:
+                continue
+
+            level_materials = {}
+
+            for i, item_id in enumerate(item_ids):
+                if i >= len(item_nums):
+                    continue
+
+                # 获取材料名称
+                resource_name = self.data_loader.get_resource_name(item_id)
+                if not resource_name:
+                    resource_name = str(item_id)
+
+                level_materials[resource_name] = item_nums[i]
+
+            if level_materials:
+                level_up_materials.append(level_materials)
+
+        return level_up_materials
+
     def _process_single_skill(self, skill_id):
         """处理单个技能"""
         # 获取Skill数据
@@ -442,6 +479,11 @@ class CharProcessor(BaseProcessor):
             "icon": skill_icon,
         }
 
+        if not result.get("名称"):
+            del result["名称"]
+        if not result.get("描述"):
+            del result["描述"]
+
         if skill_info.get("CD"):
             result["cd"] = skill_info.get("CD")
 
@@ -468,6 +510,11 @@ class CharProcessor(BaseProcessor):
         if level_desc:
             result["字段"] = level_desc
 
+        # 处理技能升级材料
+        skill_level_up = self._process_skill_level_up(skill_id)
+        if skill_level_up:
+            result["升级"] = skill_level_up
+
         # 处理战斗术语解释
         explanation_ids = skill_info.get("ExplanationId", [])
         if explanation_ids:
@@ -484,6 +531,43 @@ class CharProcessor(BaseProcessor):
                     explanations[term_name] = term_desc
             if explanations:
                 result["术语解释"] = explanations
+
+        # 处理子技能
+        sub_skills = skill_info.get("SubSkills", [])
+        if sub_skills:
+            processed_sub_skills = []
+            for sub_skill_id in sub_skills:
+                sub_skill_data = self._process_single_skill(sub_skill_id)
+                if sub_skill_data:
+                    # 过滤条件：去除属性与父技能相同或为空的子技能
+                    # 当子技能的某个属性为空时，视为与父技能相同
+                    is_different = False
+                    for key, sub_value in sub_skill_data.items():
+                        # 跳过id和子技能字段
+                        if key in ["id", "子技能"]:
+                            continue
+                        # 获取父技能对应属性值
+                        parent_value = result.get(key)
+                        # 比较规则：
+                        # 1. 如果父技能没有该属性，且子技能属性值不为空，则视为不同
+                        # 2. 如果父技能有该属性，且子技能属性值与父技能不同（空值视为相同），则视为不同
+                        if key not in result:
+                            # 父技能没有该属性，子技能有该属性且不为空，则不同
+                            if sub_value:
+                                is_different = True
+                                break
+                        else:
+                            # 父技能有该属性，比较值
+                            # 子技能空值视为与父技能相同
+                            if sub_value and parent_value != sub_value:
+                                is_different = True
+                                break
+
+                    # 只有当子技能与父技能存在差异时，才添加到结果中
+                    if is_different:
+                        processed_sub_skills.append(sub_skill_data)
+            if processed_sub_skills:
+                result["子技能"] = processed_sub_skills
 
         return result
 

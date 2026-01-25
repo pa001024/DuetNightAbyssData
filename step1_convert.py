@@ -4,7 +4,7 @@ from collections import OrderedDict
 from lupa import LuaRuntime
 
 # 定义Datas文件夹路径和输出文件夹路径
-datas_dir = ".\\Datas"
+datas_dir = ".\\Script\\Datas"
 out_dir = ".\\out"
 
 

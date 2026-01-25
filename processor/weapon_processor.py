@@ -1,4 +1,10 @@
 from processor.base_processor import BaseProcessor
+import re
+import os
+from dotenv import load_dotenv
+
+# 加载.env文件
+load_dotenv()
 
 
 class WeaponProcessor(BaseProcessor):
@@ -36,11 +42,14 @@ class WeaponProcessor(BaseProcessor):
             "描述": self.get_translated_text(weapon_data.get("WeaponDescribe", "")),
             "类型": self.process_tags(battle_weapon.get("WeaponTag", [])),
         }
+
+        # 处理WeaponBlueprint，提取武器模型名称
+        processed.update(self._process_weapon_blueprint(battle_weapon))
         processed.update(self._process_attributes(battle_weapon, weapon_id))
         processed.update(
             {
                 "加成": self._process_add_attr(battle_weapon, weapon_id),
-                # "突破": self._process_break(weapon_id, language),
+                "突破": self._process_break(weapon_id, language),
                 "熔炼": self._process_smelting(battle_weapon, weapon_id),
             }
         )
@@ -109,11 +118,20 @@ class WeaponProcessor(BaseProcessor):
             # 如果有描述，处理描述中的占位符
             if skill_desc_keys:
                 # 计算技能描述（默认使用武器等级1）
-                processed_desc = self._process_weapon_skill_desc(
-                    skill_entry, weapon_id, skill_desc_keys, skill_desc_values
+                processed_desc, cut_toughness, delay, hit_stop = (
+                    self._process_weapon_skill_desc(
+                        skill_entry, weapon_id, skill_desc_keys, skill_desc_values
+                    )
                 )
                 if processed_desc:
                     skill_info_dict["字段"] = processed_desc
+                # 添加削韧、延迟、卡肉数据
+                if cut_toughness:
+                    skill_info_dict["削韧"] = cut_toughness
+                if delay:
+                    skill_info_dict["延迟"] = delay
+                if hit_stop:
+                    skill_info_dict["卡肉"] = hit_stop
 
             skills.append(skill_info_dict)
 
@@ -127,23 +145,48 @@ class WeaponProcessor(BaseProcessor):
         }
         for skill in skills:
             if "字段" in skill:
-                rst.append(
-                    {
-                        "名称": typeMap.get(skill["名称"], skill["名称"]),
-                        "类型": "武器伤害",
-                        "字段": skill["字段"],
-                    }
-                )
+                skill_item = {
+                    "名称": typeMap.get(skill["名称"], skill["名称"]),
+                    "类型": "武器伤害",
+                    "字段": skill["字段"],
+                }
+                # 添加id、削韧、延迟、卡肉数据
+                if "id" in skill:
+                    skill_item["id"] = skill["id"]
+                if "削韧" in skill:
+                    skill_item["削韧"] = skill["削韧"]
+                if "延迟" in skill:
+                    skill_item["延迟"] = skill["延迟"]
+                if "卡肉" in skill:
+                    skill_item["卡肉"] = skill["卡肉"]
+                rst.append(skill_item)
         return rst
+
+    def _trim_trailing_zeros(self, arr):
+        """去掉数组尾部的0，如果全为0则返回空数组"""
+        if not arr:
+            return []
+
+        # 创建数组副本以避免修改原始数据
+        trimmed = arr.copy()
+
+        # 从尾部开始去掉0
+        while trimmed and trimmed[-1] == 0:
+            trimmed.pop()
+
+        return trimmed
 
     def _process_weapon_skill_desc(
         self, _skill_entry, weapon_id, desc_keys, desc_values
     ):
         """处理武器技能描述，替换占位符"""
         if not desc_keys or not desc_values:
-            return {}
+            return {}, [], [], []
 
         rst = {}
+        cut_toughness = []
+        delay = []
+        hit_stop = []
 
         # desc_keys 和 desc_values 可能是列表或字典
         if isinstance(desc_keys, dict):
@@ -171,6 +214,10 @@ class WeaponProcessor(BaseProcessor):
                 desc_value = desc_values[key_or_index]
 
             if desc_value is None:
+                # 当desc_value为None时，使用0作为默认值
+                cut_toughness.append(0)
+                delay.append(0)
+                hit_stop.append(0)
                 continue
 
             # 获取描述文本
@@ -184,12 +231,24 @@ class WeaponProcessor(BaseProcessor):
             )
             rst[desc_text] = calculated_value
 
-        # 解析SkillEffects中的HitStop和CutToughness信息
-        skill_effects_info = self._parse_skill_effects(desc_values, weapon_id)
-        if skill_effects_info:
-            rst.update(skill_effects_info)
+            # 为每个技能字段解析对应的SkillEffects，提取HitStop和CutToughness信息
+            skill_effects_info = self._parse_skill_effects(desc_value, weapon_id)
+            if skill_effects_info:
+                cut_toughness.append(skill_effects_info.get("削韧", 0))
+                delay.append(skill_effects_info.get("延迟", 0))
+                hit_stop.append(skill_effects_info.get("卡肉", 0))
+            else:
+                # 当没有技能效果信息时，使用0作为默认值
+                cut_toughness.append(0)
+                delay.append(0)
+                hit_stop.append(0)
 
-        return rst
+        # 处理数组，去掉尾部的0
+        cut_toughness = self._trim_trailing_zeros(cut_toughness)
+        delay = self._trim_trailing_zeros(delay)
+        hit_stop = self._trim_trailing_zeros(hit_stop)
+
+        return rst, cut_toughness, delay, hit_stop
 
     def _process_add_attr(self, battle_weapon, weapon_id):
         """处理武器属性加成"""
@@ -451,60 +510,117 @@ class WeaponProcessor(BaseProcessor):
 
         return result
 
-    def _parse_skill_effects(self, desc_values, weapon_id):
-        """解析SkillEffects引用，提取HitStop和CutToughness信息"""
-        if not desc_values:
+    def _parse_skill_effects(self, desc_value, weapon_id):
+        """解析单个desc_value中的SkillEffects引用，提取HitStop和CutToughness信息"""
+        if not isinstance(desc_value, str):
             return {}
 
         result = {}
         visited_effect_ids = set()
 
-        for desc_value in desc_values:
-            if not isinstance(desc_value, str):
+        # 查找所有SkillEffects引用模式: $#SkillEffects[id]...
+        # 模式需要匹配 $#SkillEffects[id].TaskEffects[index].field...$
+        import re
+
+        pattern = r"\$#SkillEffects\[(\d+)\]"
+        matches = re.findall(pattern, desc_value)
+
+        for effect_id_str in matches:
+            effect_id = int(effect_id_str)
+
+            # 避免重复处理同一个SkillEffects
+            if effect_id in visited_effect_ids:
+                continue
+            visited_effect_ids.add(effect_id)
+
+            # 获取SkillEffects数据
+            skill_effect = self.skill_effects_data.get(str(effect_id))
+            if not skill_effect:
+                skill_effect = self.skill_effects_data.get(effect_id)
+
+            if not skill_effect:
                 continue
 
-            # 查找所有SkillEffects引用模式: $#SkillEffects[id]...
-            # 模式需要匹配 $#SkillEffects[id].TaskEffects[index].field...$
-            import re
+            # 遍历所有TaskEffects，查找HitStop和CutToughness
+            task_effects = skill_effect.get("TaskEffects", [])
+            for task_effect in task_effects:
+                # 检查是否是HitStop函数
+                if task_effect.get("Function") == "HitStop":
+                    # 解析HitStop字段
+                    delay = task_effect.get("Delay")
+                    duration = task_effect.get("Duration")
 
-            pattern = r"\$#SkillEffects\[(\d+)\]"
-            matches = re.findall(pattern, desc_value)
+                    if delay is not None:
+                        result["延迟"] = delay
+                    if duration is not None:
+                        result["卡肉"] = duration
 
-            for effect_id_str in matches:
-                effect_id = int(effect_id_str)
+                # 检查是否是CutToughness函数
+                if task_effect.get("Function") == "CutToughness":
+                    # 解析CutToughness的Value字段
+                    value = task_effect.get("Value")
+                    if value is not None:
+                        result["削韧"] = value
 
-                # 避免重复处理同一个SkillEffects
-                if effect_id in visited_effect_ids:
-                    continue
-                visited_effect_ids.add(effect_id)
+        return result
 
-                # 获取SkillEffects数据
-                skill_effect = self.skill_effects_data.get(str(effect_id))
-                if not skill_effect:
-                    skill_effect = self.skill_effects_data.get(effect_id)
+    def _process_weapon_blueprint(self, battle_weapon):
+        """处理WeaponBlueprint，提取武器模型名称并读取外部动画文件"""
 
-                if not skill_effect:
-                    continue
+        result = {}
 
-                # 遍历所有TaskEffects，查找HitStop和CutToughness
-                task_effects = skill_effect.get("TaskEffects", [])
-                for task_effect in task_effects:
-                    # 检查是否是HitStop函数
-                    if task_effect.get("Function") == "HitStop":
-                        # 解析HitStop字段
-                        delay = task_effect.get("Delay")
-                        duration = task_effect.get("Duration")
+        # 从环境变量获取导出路径，不设置默认值
+        export_path = os.getenv("EXPORT_PATH")
+        # 如果没有配置环境变量，直接返回空值
+        if not export_path:
+            return result
 
-                        if delay is not None and "延迟" not in result:
-                            result["延迟"] = delay
-                        if duration is not None and "卡肉" not in result:
-                            result["卡肉"] = duration
+        # 获取WeaponBlueprint
+        weapon_blueprint = battle_weapon.get("WeaponBlueprint", "")
+        if not weapon_blueprint:
+            return result
 
-                    # 检查是否是CutToughness函数
-                    if task_effect.get("Function") == "CutToughness":
-                        # 解析CutToughness的Value字段
-                        value = task_effect.get("Value")
-                        if value is not None and "削韧" not in result:
-                            result["削韧"] = value
+        # 提取BP_后面的部分，如Shotgun_Banzi
+        match = re.search(r"BP_([^.]+)", weapon_blueprint)
+        if not match:
+            return result
+
+        weapon_model = match.group(1)
+
+        # 从WeaponBlueprint路径中提取武器类型
+        weapon_type_match = re.search(r"/([^/]+)/BP_" + weapon_model, weapon_blueprint)
+        if not weapon_type_match:
+            return result
+
+        weapon_type = weapon_type_match.group(1)
+
+        # 构建基础路径
+        base_path = f"{export_path}/Asset/Char/Player/Common/Weapon/{weapon_type}/{weapon_model}/Animation"
+
+        # 读取射击间隔 (Shooting)
+        shooting_file = os.path.join(base_path, f"{weapon_model}_Shooting.props.txt")
+        if os.path.exists(shooting_file):
+            try:
+                with open(shooting_file, "r", encoding="utf-8") as f:
+                    content = f.read()
+                    seq_match = re.search(r"SequenceLength\s*=\s*([\d.]+)", content)
+                    if seq_match:
+                        result["射速"] = (
+                            round((1 / float(seq_match.group(1))) * 1000) / 1000
+                        )
+            except Exception as e:
+                print(f"读取射击文件错误: {e}")
+
+        # 读取装填时间 (Reload)
+        reload_file = os.path.join(base_path, f"{weapon_model}_Reload.props.txt")
+        if os.path.exists(reload_file):
+            try:
+                with open(reload_file, "r", encoding="utf-8") as f:
+                    content = f.read()
+                    seq_match = re.search(r"SequenceLength\s*=\s*([\d.]+)", content)
+                    if seq_match:
+                        result["装填"] = float(seq_match.group(1))
+            except Exception as e:
+                print(f"读取装填文件错误: {e}")
 
         return result

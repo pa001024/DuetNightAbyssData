@@ -25,6 +25,38 @@
       "ATK": 0.5,
       "Skill Efficiency": 0.125
     },
+    "突破": [
+      {
+        "Coin": 4160,
+        "Filthoid Clot": 10,
+        "Rust-Etched Dagger": 5
+      },
+      {
+        "Coin": 8320,
+        "Statue Debris": 5,
+        "Obsidian Key": 7
+      },
+      {
+        "Coin": 13040,
+        "Statue Debris": 10,
+        "Obsidian Key": 15
+      },
+      {
+        "Coin": 27760,
+        "Statue Debris": 20,
+        "Tome of the Noclunism Ritual": 6
+      },
+      {
+        "Coin": 65280,
+        "Statue Debris": 40,
+        "Tome of the Noclunism Ritual": 12
+      },
+      {
+        "Coin": 194400,
+        "Statue Debris": 80,
+        "Tome of the Noclunism Ritual": 25
+      }
+    ],
     "技能": [
       {
         "id": 110101,
@@ -118,6 +150,60 @@
             "影响": "技能范围",
             "值": 3,
             "格式": "{}m"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2080,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 2560,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 72000,
+            "Filthoid Polymer": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Filthoid Polymer": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
           }
         ]
       },
@@ -719,6 +805,68 @@
             "值": 12,
             "格式": "{}m"
           }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2080,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 2560,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 72000,
+            "Filthoid Polymer": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Filthoid Polymer": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "子技能": [
+          {
+            "id": 110121,
+            "类型": "Buff",
+            "icon": "Heitao02_Off",
+            "cd": 2.7
+          }
         ]
       },
       {
@@ -774,6 +922,60 @@
               0.47,
               0.5
             ]
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2080,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 2560,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 72000,
+            "Filthoid Polymer": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Filthoid Polymer": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
           }
         ]
       },
@@ -878,6 +1080,38 @@
       "ATK": 0.5,
       "Skill Efficiency": 0.125
     },
+    "突破": [
+      {
+        "Coin": 5200,
+        "Filthoid Clot": 10,
+        "Rust-Etched Dagger": 5
+      },
+      {
+        "Coin": 10400,
+        "Statue Debris": 5,
+        "Obsidian Key": 7
+      },
+      {
+        "Coin": 16300,
+        "Statue Debris": 10,
+        "Obsidian Key": 15
+      },
+      {
+        "Coin": 34700,
+        "Statue Debris": 20,
+        "Tome of the Noclunism Ritual": 6
+      },
+      {
+        "Coin": 81600,
+        "Statue Debris": 40,
+        "Tome of the Noclunism Ritual": 12
+      },
+      {
+        "Coin": 243000,
+        "Statue Debris": 80,
+        "Tome of the Noclunism Ritual": 25
+      }
+    ],
     "技能": [
       {
         "id": 110301,
@@ -1112,9 +1346,70 @@
             "格式": "{}s"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2600,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 3200,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Aria": "Dashes forward, dealing Umbro Damage to enemies along the path, and gains [Presto].\n[Presto]: Increases Skill Range and grants immunity to Hitstun."
-        }
+        },
+        "子技能": [
+          {
+            "id": 110311,
+            "类型": "DMG",
+            "icon": "Tuosi01_2"
+          }
+        ]
       },
       {
         "id": 110302,
@@ -1527,10 +1822,72 @@
             "格式": "{%}Max Sanity"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2600,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 3200,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Duo": "Grants a certain amount of [Immersion]. This effect can only be triggered once every 0.1 seconds.",
           "Fermata": "Increases Phantasio's damage based on the target's [Adagio] stacks, then removes all [Adagio] stacks. When there are 10 [Adagio] stacks on the target, restores Phantasio's Sanity and grants a certain amount of [Immersion]. This effect can only be triggered once every attack."
-        }
+        },
+        "子技能": [
+          {
+            "id": 110321,
+            "类型": "Buff",
+            "icon": "Tuosi02_Off",
+            "cd": 3
+          }
+        ]
       },
       {
         "id": 110303,
@@ -1708,6 +2065,60 @@
             "值": 0.3
           }
         ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2600,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 3200,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Bestial Fury: Devotion": "While under [Bestial Fury: Devotion], continuously drains [Immersion] instead of Sanity to maintain the state. Increases Skill Speed, and boosts ATK based on the user's Max Sanity. \nWhile active, [Bestial Fury: Devotion] prevents [Immersion] gain from sustaining Beast Form."
         }
@@ -1807,6 +2218,38 @@
       "ATK": 0.5,
       "Skill Duration": 0.15
     },
+    "突破": [
+      {
+        "Coin": 4160,
+        "Filthoid Clot": 10,
+        "Lense of Enlightenment": 5
+      },
+      {
+        "Coin": 8320,
+        "Statue Debris": 5,
+        "Golden Floriated Diadem": 7
+      },
+      {
+        "Coin": 13040,
+        "Statue Debris": 10,
+        "Golden Floriated Diadem": 15
+      },
+      {
+        "Coin": 27760,
+        "Statue Debris": 20,
+        "Copy of Elysian Hymnal": 6
+      },
+      {
+        "Coin": 65280,
+        "Statue Debris": 40,
+        "Copy of Elysian Hymnal": 12
+      },
+      {
+        "Coin": 194400,
+        "Statue Debris": 80,
+        "Copy of Elysian Hymnal": 25
+      }
+    ],
     "技能": [
       {
         "id": 150101,
@@ -1921,6 +2364,60 @@
             "影响": "技能范围",
             "值": 6,
             "格式": "{}m"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2080,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 2560,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 72000,
+            "Filthoid Polymer": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Filthoid Polymer": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
           }
         ]
       },
@@ -2448,9 +2945,71 @@
             "格式": "{}m"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2080,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 2560,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 72000,
+            "Filthoid Polymer": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Filthoid Polymer": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Impatience": "Grants immunity to Hitstun and reduces Damage Taken."
-        }
+        },
+        "子技能": [
+          {
+            "id": 150121,
+            "类型": "Buff",
+            "icon": "Baonu02_Off",
+            "cd": 2.5
+          }
+        ]
       },
       {
         "id": 150103,
@@ -2598,6 +3157,60 @@
             "值": 12,
             "格式": "{}s"
           }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2080,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 2560,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 72000,
+            "Filthoid Polymer": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Filthoid Polymer": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          }
         ]
       },
       {
@@ -2712,6 +3325,38 @@
       "ATK": 0.5,
       "Skill Range": 0.3
     },
+    "突破": [
+      {
+        "Coin": 5200,
+        "Filthoid Clot": 10,
+        "Lense of Enlightenment": 5
+      },
+      {
+        "Coin": 10400,
+        "Statue Debris": 5,
+        "Golden Floriated Diadem": 7
+      },
+      {
+        "Coin": 16300,
+        "Statue Debris": 10,
+        "Golden Floriated Diadem": 15
+      },
+      {
+        "Coin": 34700,
+        "Statue Debris": 20,
+        "Copy of Elysian Hymnal": 6
+      },
+      {
+        "Coin": 81600,
+        "Statue Debris": 40,
+        "Copy of Elysian Hymnal": 12
+      },
+      {
+        "Coin": 243000,
+        "Statue Debris": 80,
+        "Copy of Elysian Hymnal": 25
+      }
+    ],
     "技能": [
       {
         "id": 150201,
@@ -2909,15 +3554,86 @@
             "格式": "{}s"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2600,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 3200,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Solar Eclipse": "Creates 1 [Solar Eclipse] and replaces this skill with [Lunar Hunt]. \n[Solar Eclipse]: Deals Lumino Damage to all enemies in range upon creation and reduces their ATK."
-        }
+        },
+        "子技能": [
+          {
+            "id": 150211,
+            "类型": "DMG",
+            "icon": "Nifu01_2"
+          },
+          {
+            "id": 150212,
+            "类型": "DMG",
+            "icon": "Nifu01_3"
+          },
+          {
+            "id": 150213,
+            "类型": "DMG",
+            "icon": "Nifu01_4"
+          }
+        ]
       },
       {
         "id": 150202,
         "名称": "Misty Sea Requiem",
         "类型": "Buff",
-        "描述": "Enters [Funeral Rite] status. Upon entry, if the user's Skill Range exceeds 100%, the excess is converted into Skill Intensity at a fixed ratio, and Skill Range is reduced to 100% for the duration.\nWhile under [Funeral Rite], gains Trigger Probability Increase for ranged weapons; [Lunar Hunt] and [Solar Eclipse] cost no Sanity; [Lunar Hunt] pulls enemies toward its centre; [Solar Eclipse] deals increased damage.\n[Funeral Rite] ends after a set duration or after casting a total of 6 [Lunar Hunt] and/or [Solar Eclipse].",
+        "描述": "Enters [Funeral Rite] status. Upon entry, if the user's Skill Range exceeds 100%, the excess is converted into Skill Damage at a fixed ratio, and Skill Range is reduced to 100% for the duration.\nWhile under [Funeral Rite], gains Trigger Probability Increase for ranged weapons; [Lunar Hunt] and [Solar Eclipse] cost no Sanity; [Lunar Hunt] pulls enemies toward its centre; [Solar Eclipse] deals increased damage.\n[Funeral Rite] ends after a set duration or after casting a total of 6 [Lunar Hunt] and/or [Solar Eclipse].",
         "icon": "Nifu02",
         "cd": 3,
         "e": [
@@ -3071,6 +3787,60 @@
             "值": 10,
             "格式": "{}m"
           }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2600,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 3200,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          }
         ]
       },
       {
@@ -3145,6 +3915,60 @@
           {
             "名称": "Effect Trigger Probability Cap",
             "值": 0.5
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2600,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 3200,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
           }
         ]
       },
@@ -3240,6 +4064,38 @@
       "ATK": 0.5,
       "Weapon CRIT Chance": 0.5
     },
+    "突破": [
+      {
+        "Coin": 5200,
+        "Filthoid Clot": 10,
+        "Lense of Enlightenment": 5
+      },
+      {
+        "Coin": 10400,
+        "Statue Debris": 5,
+        "Golden Floriated Diadem": 7
+      },
+      {
+        "Coin": 16300,
+        "Statue Debris": 10,
+        "Golden Floriated Diadem": 15
+      },
+      {
+        "Coin": 34700,
+        "Statue Debris": 20,
+        "Copy of Elysian Hymnal": 6
+      },
+      {
+        "Coin": 81600,
+        "Statue Debris": 40,
+        "Copy of Elysian Hymnal": 12
+      },
+      {
+        "Coin": 243000,
+        "Statue Debris": 80,
+        "Copy of Elysian Hymnal": 25
+      }
+    ],
     "技能": [
       {
         "id": 150301,
@@ -3395,6 +4251,60 @@
             "值": 12,
             "格式": "{}s"
           }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2600,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 3200,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          }
         ]
       },
       {
@@ -3532,18 +4442,18 @@
                 "ba": "ATK_Melee",
                 "fn": "Damage",
                 "r": [
-                  0.03,
-                  0.04,
-                  0.05,
-                  0.06,
-                  0.07,
-                  0.08,
-                  0.09,
-                  0.1,
-                  0.11,
-                  0.12,
-                  0.13,
-                  0.14
+                  0.16,
+                  0.21,
+                  0.26,
+                  0.31,
+                  0.36,
+                  0.41,
+                  0.46,
+                  0.51,
+                  0.56,
+                  0.61,
+                  0.66,
+                  0.71
                 ]
               },
               {
@@ -3868,18 +4778,18 @@
           {
             "名称": "[Lightswords Slice Starry Streams]Plunging/Sliding/Charged Attack DMG",
             "值": [
-              0.03,
-              0.04,
-              0.05,
-              0.06,
-              0.07,
-              0.08,
-              0.09,
-              0.1,
-              0.11,
-              0.12,
-              0.13,
-              0.14
+              0.16,
+              0.21,
+              0.26,
+              0.31,
+              0.36,
+              0.41,
+              0.46,
+              0.51,
+              0.56,
+              0.61,
+              0.66,
+              0.71
             ]
           },
           {
@@ -3900,15 +4810,77 @@
             ]
           }
         ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2600,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 3200,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Phanosword": "Inherits all stats from Kezhou's melee weapon and gains increased Attack Range.\n[Phanosword] has Normal Attack modes for Sword, Greatsword, Polearm, and Dual Blades. After executing the final hit of [Phanosword], it switches to a random attack mode and launches all [Phanoplumes].",
-          "Phanoplume": "Kezhou can have a maximum of 7 [Phanoplumes] at the same time. When launched, each [Phanoplume] selects a random enemy to orbit and homes towards them to attack, dealing Lumino Damage to enemies along the path. After attacking the enemy 3 times, the [Phanoplume] dissipates.\n\nTargets hit by [Phanoplume] take additional damage, which is equivalent to a certain percentage of the DoT of Bonus Effect: Lumino multiplied by Kezhou's Melee Weapon Trigger Probability.",
+          "Phanoplume": "Kezhou can have a maximum of 7 [Phanoplumes] at the same time. When launched, each [Phanoplume] selects a random enemy to orbit and homes towards them to attack, dealing Lumino Damage to enemies along the path. After attacking the enemy 4 times, the [Phanoplume] dissipates.\n\nTargets hit by [Phanoplume] take additional damage, which is equivalent to a certain percentage of the DoT of Bonus Effect: Lumino multiplied by Kezhou's Melee Weapon Trigger Probability.",
           "Feathers Chase Dust In Dreams": "Ends [Aspect Manifestation] state and deals Lumino Damage to enemies in front."
-        }
+        },
+        "子技能": [
+          {
+            "id": 150321,
+            "类型": "Buff",
+            "icon": "Kezhou02_Off",
+            "cd": 3
+          }
+        ]
       },
       {
         "id": 150303,
-        "名称": "Life's A Fleeting, Shifting Tide",
+        "名称": "Life Drifts, Tides Rearrange",
         "类型": "Passive",
         "描述": "Begins with 50 points each of [Sword Intent] and [String Intent] (maximum 100).\n [Sword Intent] increases Melee Weapon Damage Dealt and Melee Weapon Trigger Probability, and reduces the Sanity Cost of [Lightswords Slice Starry Streams]. At maximum [Sword Intent], Sanity Cost is further reduced by 30.\n [String Intent] increases Ranged Weapon Damage Dealt and Ranged Weapon Trigger Probability, and reduces the Sanity Cost of [Feathers Chase Dust In Dreams]. At maximum [String Intent], Sanity Cost is further reduced by 30.\nWhile in [Aspect Manifestation] state, each time damage is dealt with a melee weapon, 1 point of [Sword Intent] converts into [String Intent]. While out of [Aspect Manifestation] state, each time damage is dealt with a ranged weapon, 1 point of [String Intent] converts into [Sword Intent]. ",
         "icon": "Kezhou03",
@@ -4051,7 +5023,7 @@
             ]
           },
           {
-            "名称": "[Lightswords Slice Starry Streams] Sanity Cost Reduced",
+            "名称": "Sanity Cost Reduced",
             "值": 0.3,
             "格式": "{}×[Sword Intent]"
           },
@@ -4059,6 +5031,60 @@
             "名称": "[Feathers Chase Dust In Dreams] — Sanity Cost Reduction",
             "值": 0.3,
             "格式": "{}×[String Intent]"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2600,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 3200,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
           }
         ]
       },
@@ -4126,7 +5152,7 @@
     "溯源": [
       "Increases the effect percentage of [Sword Intent]/[String Intent] applied to [Life's A Fleeting, Shifting Tide] by 0.7%.\n\nWhen there is/are 1/2 enemy/enemies within 20 metres, the mutual conversion point between [Sword Intent] and [String Intent] is increased to 3/2 points when Kezhou deals weapon damage.",
       "When damage triggers a bonus effect, gains +90% Damage Dealt for 5s and restores 2 Sanity. Sanity restoration can occur once every 1s.",
-      "[Drift of Youth] Level +2; [Life's A Fleeting, Shifting Tide] Level +1.",
+      "[Wanderings of Youth] Level +2; [Life's A Fleeting, Shifting Tide] Level +1.",
       "When using [Lightswords Slice Starry Streams], Kezhou gains [Blessed by Wind and Moon]: Grants immunity to Hitstun and reduces Damage Taken by 25% for 25s.",
       "[Lightswords Slice Starry Streams] Level +2;\n[Life's A Fleeting, Shifting Tide] Level +1.",
       "When triggering Bonus Effect, Kezhou gains 1 stack that increases his PEN stats by 3% for 12s, up to 18 stacks."
@@ -4191,6 +5217,7 @@
     "基础防御": 252,
     "基础护盾": 140,
     "基础神智": 150,
+    "突破": [],
     "技能": [
       {
         "id": 150401,
@@ -4279,7 +5306,15 @@
         "类型": "Buff",
         "描述": "Consumes all Sanity to summon the [Artificer Arsenal]. For a certain amount of Sanity consumed, grants 1 stack of [Artificer Supply], up to 10 stacks. Su Yi's melee weapon becomes the [Artificer Greatsword], and the ranged weapon becomes the [Artificer Cannon].\n While the Arsenal is active, Su Yi becomes immune to Hitstun. Recasting the skill retracts the Arsenal.",
         "icon": "Saiqi02_On",
-        "cd": 2
+        "cd": 2,
+        "子技能": [
+          {
+            "id": 150421,
+            "类型": "Buff",
+            "icon": "Feina02_Off",
+            "cd": 2
+          }
+        ]
       },
       {
         "id": 150403,
@@ -4356,6 +5391,38 @@
       "Skill Duration": 0.15,
       "Skill Range": 0.3
     },
+    "突破": [
+      {
+        "Coin": 5200,
+        "Filthoid Clot": 10,
+        "Lense of Enlightenment": 5
+      },
+      {
+        "Coin": 10400,
+        "Statue Debris": 5,
+        "Golden Floriated Diadem": 7
+      },
+      {
+        "Coin": 16300,
+        "Statue Debris": 10,
+        "Golden Floriated Diadem": 15
+      },
+      {
+        "Coin": 34700,
+        "Statue Debris": 20,
+        "Copy of Elysian Hymnal": 6
+      },
+      {
+        "Coin": 81600,
+        "Statue Debris": 40,
+        "Copy of Elysian Hymnal": 12
+      },
+      {
+        "Coin": 243000,
+        "Statue Debris": 80,
+        "Copy of Elysian Hymnal": 25
+      }
+    ],
     "技能": [
       {
         "id": 160101,
@@ -4423,6 +5490,60 @@
             "影响": "技能范围",
             "值": 10,
             "格式": "{}m"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2600,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 3200,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
           }
         ]
       },
@@ -4578,6 +5699,60 @@
             ]
           }
         ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2600,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 3200,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Incandescence": "Increases Weapon DMG."
         }
@@ -4586,7 +5761,7 @@
         "id": 160103,
         "名称": "Diffusion",
         "类型": "Passive",
-        "描述": "When a Lumino bonus effect is triggered, deals an additional Lumino AoE Damage at the target's location. This effect triggers 1 time every 0.5s.",
+        "描述": "When a Lumino bonus effect is triggered, deals an additional Lumino AoE Damage at the target's location.",
         "icon": "Zhujue03",
         "e": [
           {
@@ -4651,6 +5826,60 @@
             "影响": "技能范围",
             "值": 3,
             "格式": "{}m"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2600,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 3200,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
           }
         ]
       },
@@ -4782,6 +6011,38 @@
       "Skill Range": 0.3,
       "Skill Duration": 0.15
     },
+    "突破": [
+      {
+        "Coin": 5200,
+        "Filthoid Clot": 10,
+        "Lense of Enlightenment": 5
+      },
+      {
+        "Coin": 10400,
+        "Statue Debris": 5,
+        "Golden Floriated Diadem": 7
+      },
+      {
+        "Coin": 16300,
+        "Statue Debris": 10,
+        "Golden Floriated Diadem": 15
+      },
+      {
+        "Coin": 34700,
+        "Statue Debris": 20,
+        "Copy of Elysian Hymnal": 6
+      },
+      {
+        "Coin": 81600,
+        "Statue Debris": 40,
+        "Copy of Elysian Hymnal": 12
+      },
+      {
+        "Coin": 243000,
+        "Statue Debris": 80,
+        "Copy of Elysian Hymnal": 25
+      }
+    ],
     "技能": [
       {
         "id": 180101,
@@ -4933,6 +6194,68 @@
             "影响": "技能耐久",
             "值": 12,
             "格式": "{}s"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2600,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 3200,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "子技能": [
+          {
+            "id": 180111,
+            "类型": "DMG",
+            "icon": "Feina01",
+            "cd": 0.8
           }
         ]
       },
@@ -5195,9 +6518,71 @@
             "格式": "{}s"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2600,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 3200,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Boisterous Tea Party": "Generates an elemental field based on the type of the [Tea Party Guests] — [Nightingale] for Hydro, [Hound] for Pyro, [Unicorn] for Electro, and [Butterfly] for Anemo.\nWhen the field appears or its element shifts, Fina and allies  deal an instance of additional damage matching the field's type. While [Boisterous Tea Party] is active, the field also deals elemental damage to enemies within range every 2s."
-        }
+        },
+        "子技能": [
+          {
+            "id": 180121,
+            "类型": "Buff",
+            "icon": "Feina02_Off",
+            "cd": 0.8
+          }
+        ]
       },
       {
         "id": 180103,
@@ -5318,6 +6703,60 @@
             "格式": "{}s"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2600,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 3200,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Taleweaver Quill": "Deals additional Lumino Damage."
         }
@@ -5410,7 +6849,7 @@
       "Targets granted the ability to deal additional elemental damage by [Boisterous Tea Party] gain an effect that increases their PEN stats by 6% for each type of additional damage effect they possess.",
       "Increases max [Taleweaver Quill] stacks to 45. Using [\"On a Warm Afternoon\"] grants 3 additional stacks. While [Boisterous Tea Party] is active, gains 1 extra stack per second.",
       "[\"On a Warm Afternoon\"] Level +2; [\"Bad Sorcerers Hate Sunlight!\"] Level +1.",
-      "Each stack of [Taleweaver Quill] increases Fina's Skill Intensity by 2% and Skill Range by 1%.",
+      "Each stack of [Taleweaver Quill] increases Fina's Skill Damage by 2% and Skill Range by 1%.",
       "[\"Let the Tea Party Begin!\"] Level +2; [\"Bad Sorcerers Hate Sunlight!\"] Level +1.",
       "During [Boisterous Tea Party], when Fina deals weapon damage, for each Bonus Effect the target is suffering, the CRIT Chance of this attack is increased by 24%, and the elemental type of the damage is converted to the target's weakness type."
     ]
@@ -5441,6 +6880,38 @@
       "ATK": 0.5,
       "Skill Range": 0.3
     },
+    "突破": [
+      {
+        "Coin": 5200,
+        "Stone Powder": 10,
+        "Azure Pearl": 5
+      },
+      {
+        "Coin": 10400,
+        "Insulation Coating": 5,
+        "Humectant": 7
+      },
+      {
+        "Coin": 16300,
+        "Insulation Coating": 10,
+        "Humectant": 15
+      },
+      {
+        "Coin": 34700,
+        "Insulation Coating": 20,
+        "Water Purifier": 6
+      },
+      {
+        "Coin": 81600,
+        "Insulation Coating": 40,
+        "Water Purifier": 12
+      },
+      {
+        "Coin": 243000,
+        "Insulation Coating": 80,
+        "Water Purifier": 25
+      }
+    ],
     "技能": [
       {
         "id": 210101,
@@ -5529,6 +7000,60 @@
             "影响": "技能范围",
             "值": 10,
             "格式": "{}m"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Stone Powder": 3,
+            "Insulation Coating": 1
+          },
+          {
+            "Coin": 2600,
+            "Stone Powder": 6,
+            "Insulation Coating": 2
+          },
+          {
+            "Coin": 3200,
+            "Stone Powder": 9,
+            "Insulation Coating": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Stone Powder": 15,
+            "Insulation Coating": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Stone Powder": 30,
+            "Insulation Coating": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
           }
         ],
         "术语解释": {
@@ -5648,6 +7173,60 @@
             "影响": "技能范围",
             "值": 20,
             "格式": "{}m"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Stone Powder": 3,
+            "Insulation Coating": 1
+          },
+          {
+            "Coin": 2600,
+            "Stone Powder": 6,
+            "Insulation Coating": 2
+          },
+          {
+            "Coin": 3200,
+            "Stone Powder": 9,
+            "Insulation Coating": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Stone Powder": 15,
+            "Insulation Coating": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Stone Powder": 30,
+            "Insulation Coating": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
           }
         ]
       },
@@ -5806,6 +7385,60 @@
             "格式": "{}m"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Stone Powder": 3,
+            "Insulation Coating": 1
+          },
+          {
+            "Coin": 2600,
+            "Stone Powder": 6,
+            "Insulation Coating": 2
+          },
+          {
+            "Coin": 3200,
+            "Stone Powder": 9,
+            "Insulation Coating": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Stone Powder": 15,
+            "Insulation Coating": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Stone Powder": 30,
+            "Insulation Coating": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Poison of Love": "Deals Hydro Damage once every 2s.\nWhen defeated, enemies inflicted with [Poison of Love] transfer their [Poison of Love] to nearby enemies based on the current stack count and remaining duration."
         }
@@ -5904,6 +7537,38 @@
       "ATK": 0.5,
       "Skill Duration": 0.15
     },
+    "突破": [
+      {
+        "Coin": 4160,
+        "Stone Powder": 10,
+        "Azure Pearl": 5
+      },
+      {
+        "Coin": 8320,
+        "Insulation Coating": 5,
+        "Humectant": 7
+      },
+      {
+        "Coin": 13040,
+        "Insulation Coating": 10,
+        "Humectant": 15
+      },
+      {
+        "Coin": 27760,
+        "Insulation Coating": 20,
+        "Water Purifier": 6
+      },
+      {
+        "Coin": 65280,
+        "Insulation Coating": 40,
+        "Water Purifier": 12
+      },
+      {
+        "Coin": 194400,
+        "Insulation Coating": 80,
+        "Water Purifier": 25
+      }
+    ],
     "技能": [
       {
         "id": 230101,
@@ -5998,6 +7663,60 @@
             "值": 8,
             "格式": "{}s"
           }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Stone Powder": 3,
+            "Insulation Coating": 1
+          },
+          {
+            "Coin": 2080,
+            "Stone Powder": 6,
+            "Insulation Coating": 2
+          },
+          {
+            "Coin": 2560,
+            "Stone Powder": 9,
+            "Insulation Coating": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Stone Powder": 15,
+            "Insulation Coating": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Stone Powder": 30,
+            "Insulation Coating": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 72000,
+            "Filthoid Polymer": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Filthoid Polymer": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          }
         ]
       },
       {
@@ -6082,6 +7801,60 @@
             "影响": "技能耐久",
             "值": 12,
             "格式": "{}s"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Stone Powder": 3,
+            "Insulation Coating": 1
+          },
+          {
+            "Coin": 2080,
+            "Stone Powder": 6,
+            "Insulation Coating": 2
+          },
+          {
+            "Coin": 2560,
+            "Stone Powder": 9,
+            "Insulation Coating": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Stone Powder": 15,
+            "Insulation Coating": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Stone Powder": 30,
+            "Insulation Coating": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 72000,
+            "Filthoid Polymer": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Filthoid Polymer": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
           }
         ],
         "术语解释": {
@@ -6218,6 +7991,60 @@
             "格式": "{}s"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Stone Powder": 3,
+            "Insulation Coating": 1
+          },
+          {
+            "Coin": 2080,
+            "Stone Powder": 6,
+            "Insulation Coating": 2
+          },
+          {
+            "Coin": 2560,
+            "Stone Powder": 9,
+            "Insulation Coating": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Stone Powder": 15,
+            "Insulation Coating": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Stone Powder": 30,
+            "Insulation Coating": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 72000,
+            "Filthoid Polymer": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Filthoid Polymer": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Summon: Tentacles": "Inherits 100% of Tabethe's stats, continuously dealing Hydro Damage to nearby enemies and capturing up to 2 enemies to immobilise them."
         }
@@ -6322,7 +8149,7 @@
     "阵营": "Huaxu",
     "属性": "水",
     "精通": [
-      "Whipblade",
+      "Whipsword",
       "Bow"
     ],
     "标签": [
@@ -6337,8 +8164,40 @@
     "基础神智": 150,
     "加成": {
       "Skill Duration": 0.15,
-      "Skill Intensity": 0.2
+      "Skill DMG": 0.2
     },
+    "突破": [
+      {
+        "Coin": 5200,
+        "Stone Powder": 10,
+        "Azure Pearl": 5
+      },
+      {
+        "Coin": 10400,
+        "Insulation Coating": 5,
+        "Humectant": 7
+      },
+      {
+        "Coin": 16300,
+        "Insulation Coating": 10,
+        "Humectant": 15
+      },
+      {
+        "Coin": 34700,
+        "Insulation Coating": 20,
+        "Water Purifier": 6
+      },
+      {
+        "Coin": 81600,
+        "Insulation Coating": 40,
+        "Water Purifier": 12
+      },
+      {
+        "Coin": 243000,
+        "Insulation Coating": 80,
+        "Water Purifier": 25
+      }
+    ],
     "技能": [
       {
         "id": 240101,
@@ -6481,6 +8340,60 @@
             "名称": "Sanity Recovery",
             "值": 12,
             "格式": "{}"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Stone Powder": 3,
+            "Insulation Coating": 1
+          },
+          {
+            "Coin": 2600,
+            "Stone Powder": 6,
+            "Insulation Coating": 2
+          },
+          {
+            "Coin": 3200,
+            "Stone Powder": 9,
+            "Insulation Coating": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Stone Powder": 15,
+            "Insulation Coating": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Stone Powder": 30,
+            "Insulation Coating": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
           }
         ],
         "术语解释": {
@@ -6764,7 +8677,7 @@
             "格式": "{}s"
           },
           {
-            "名称": "[Nine-Needle Therapy]Skill Intensity Increase",
+            "名称": "[Nine-Needle Therapy]Skill Damage Increase",
             "值": [
               0.12,
               0.14,
@@ -6779,10 +8692,10 @@
               0.32,
               0.34
             ],
-            "格式": "{%}Skill Intensity"
+            "格式": "{%}Skill Damage"
           },
           {
-            "名称": "[Nine-Needle Therapy]Skill Intensity Cap Boost",
+            "名称": "[Nine-Needle Therapy]Skill Damage Cap Boost",
             "值": 1.2
           },
           {
@@ -6792,8 +8705,62 @@
             "格式": "{}s"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Stone Powder": 3,
+            "Insulation Coating": 1
+          },
+          {
+            "Coin": 2600,
+            "Stone Powder": 6,
+            "Insulation Coating": 2
+          },
+          {
+            "Coin": 3200,
+            "Stone Powder": 9,
+            "Insulation Coating": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Stone Powder": 15,
+            "Insulation Coating": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Stone Powder": 30,
+            "Insulation Coating": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
-          "Nine-Needle Therapy": "Increases Skill Intensity by a percentage of [Fushu]'s Skill Intensity."
+          "Nine-Needle Therapy": "Increases Skill Damage by a percentage of [Fushu]'s Skill Damage."
         }
       },
       {
@@ -6878,13 +8845,67 @@
             "值": 6,
             "格式": "{}"
           }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Stone Powder": 3,
+            "Insulation Coating": 1
+          },
+          {
+            "Coin": 2600,
+            "Stone Powder": 6,
+            "Insulation Coating": 2
+          },
+          {
+            "Coin": 3200,
+            "Stone Powder": 9,
+            "Insulation Coating": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Stone Powder": 15,
+            "Insulation Coating": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Stone Powder": 30,
+            "Insulation Coating": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          }
         ]
       },
       {
         "id": 240104,
         "名称": "Brimful of Vitality",
         "类型": "Passive",
-        "描述": "Increases Skill Intensity based on the number of [Yunchi] on the field.",
+        "描述": "Increases Skill Damage based on the number of [Yunchi] on the field.",
         "icon": "ExtraPassive",
         "b": [
           {
@@ -6909,7 +8930,7 @@
         ],
         "字段": [
           {
-            "名称": "Skill Intensity Boost",
+            "名称": "Skill DMG Boost",
             "值": 0.33,
             "格式": "{%}×the amount of [Yunchi]"
           }
@@ -6955,7 +8976,7 @@
       }
     ],
     "溯源": [
-      "When Fushu or her nearby teammates are applied with [Nine-Needle Therapy], they ignore the target's DEF by 30% when dealing Skill DMG.",
+      "When Fushu or her nearby teammates are applied with [Nine-Needle Therapy], they ignore the target's DEF by 30% when dealing Skill Damage.",
       "Increases the maximum number of [Yunchi] allowed on the field at the same time to 3.",
       "[Subcelestial Solace] Level +2; [Archaeus Revival] Level +1.",
       "Increase the stack cap of [Archaeus Revival] to 3, and grants 12% Morale Boost per stack.",
@@ -6989,6 +9010,38 @@
       "ATK": 0.5,
       "Skill Duration": 0.15
     },
+    "突破": [
+      {
+        "Coin": 5200,
+        "Damaged Sal Volatile": 10,
+        "Flame Lizard Scale": 5
+      },
+      {
+        "Coin": 10400,
+        "Fuel Reagent": 5,
+        "Everbright Flame": 7
+      },
+      {
+        "Coin": 16300,
+        "Fuel Reagent": 10,
+        "Everbright Flame": 15
+      },
+      {
+        "Coin": 34700,
+        "Fuel Reagent": 20,
+        "Fire-Tempered Shackles": 6
+      },
+      {
+        "Coin": 81600,
+        "Fuel Reagent": 40,
+        "Fire-Tempered Shackles": 12
+      },
+      {
+        "Coin": 243000,
+        "Fuel Reagent": 80,
+        "Fire-Tempered Shackles": 25
+      }
+    ],
     "技能": [
       {
         "id": 310101,
@@ -7089,6 +9142,60 @@
             "名称": "[Lacerated Wound] Count Cap",
             "值": 10,
             "格式": "{}"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Damaged Sal Volatile": 3,
+            "Fuel Reagent": 1
+          },
+          {
+            "Coin": 2600,
+            "Damaged Sal Volatile": 6,
+            "Fuel Reagent": 2
+          },
+          {
+            "Coin": 3200,
+            "Damaged Sal Volatile": 9,
+            "Fuel Reagent": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Damaged Sal Volatile": 15,
+            "Fuel Reagent": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Damaged Sal Volatile": 30,
+            "Fuel Reagent": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
           }
         ],
         "术语解释": {
@@ -7204,6 +9311,68 @@
             "名称": "ATK SPD Boost per stack",
             "值": 0.03
           }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Damaged Sal Volatile": 3,
+            "Fuel Reagent": 1
+          },
+          {
+            "Coin": 2600,
+            "Damaged Sal Volatile": 6,
+            "Fuel Reagent": 2
+          },
+          {
+            "Coin": 3200,
+            "Damaged Sal Volatile": 9,
+            "Fuel Reagent": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Damaged Sal Volatile": 15,
+            "Fuel Reagent": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Damaged Sal Volatile": 30,
+            "Fuel Reagent": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "子技能": [
+          {
+            "id": 310121,
+            "类型": "Buff",
+            "icon": "Linen02_Off",
+            "cd": 2
+          }
         ]
       },
       {
@@ -7264,6 +9433,60 @@
               0.172
             ]
           }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Damaged Sal Volatile": 3,
+            "Fuel Reagent": 1
+          },
+          {
+            "Coin": 2600,
+            "Damaged Sal Volatile": 6,
+            "Fuel Reagent": 2
+          },
+          {
+            "Coin": 3200,
+            "Damaged Sal Volatile": 9,
+            "Fuel Reagent": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Damaged Sal Volatile": 15,
+            "Fuel Reagent": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Damaged Sal Volatile": 30,
+            "Fuel Reagent": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          }
         ]
       },
       {
@@ -7320,7 +9543,7 @@
       "Grants 6 stacks of [Preload] when battle starts, and increases Morale by 35% for 60s.",
       "During [Gunpowder Revelry], reduces Damage Taken by 30%, and decreases the interval of gaining the ATK Speed boost to 0.06s.",
       "[Deadly Blossom] Level +2; [Tactical Rapid Fire] Level +1.",
-      "Increases damage dealt to targets with a HP percentage lower than 50% by 70%.",
+      "Increases damage dealt to targets with a HP percentage lower than 70% by 35%.",
       "[Gunpowder Revelry] Level +2; [Tactical Rapid Fire] Level +1.",
       "During [Gunpowder Revelry], when triggering Bonus Effect using [Hansel and Gretel], inflicts [Laceration] on the target(s) for 8s."
     ],
@@ -7368,6 +9591,38 @@
       "ATK": 0.5,
       "Weapon Multishot": 0.375
     },
+    "突破": [
+      {
+        "Coin": 5200,
+        "Damaged Sal Volatile": 10,
+        "Flame Lizard Scale": 5
+      },
+      {
+        "Coin": 10400,
+        "Fuel Reagent": 5,
+        "Everbright Flame": 7
+      },
+      {
+        "Coin": 16300,
+        "Fuel Reagent": 10,
+        "Everbright Flame": 15
+      },
+      {
+        "Coin": 34700,
+        "Fuel Reagent": 20,
+        "Fire-Tempered Shackles": 6
+      },
+      {
+        "Coin": 81600,
+        "Fuel Reagent": 40,
+        "Fire-Tempered Shackles": 12
+      },
+      {
+        "Coin": 243000,
+        "Fuel Reagent": 80,
+        "Fire-Tempered Shackles": 25
+      }
+    ],
     "技能": [
       {
         "id": 310201,
@@ -7504,6 +9759,60 @@
             "名称": "[Hyperthermal Purgejet] Length",
             "值": 15,
             "格式": "{}m"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Damaged Sal Volatile": 3,
+            "Fuel Reagent": 1
+          },
+          {
+            "Coin": 2600,
+            "Damaged Sal Volatile": 6,
+            "Fuel Reagent": 2
+          },
+          {
+            "Coin": 3200,
+            "Damaged Sal Volatile": 9,
+            "Fuel Reagent": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Damaged Sal Volatile": 15,
+            "Fuel Reagent": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Damaged Sal Volatile": 30,
+            "Fuel Reagent": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
           }
         ]
       },
@@ -7698,6 +10007,60 @@
             "格式": "{}s"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Damaged Sal Volatile": 3,
+            "Fuel Reagent": 1
+          },
+          {
+            "Coin": 2600,
+            "Damaged Sal Volatile": 6,
+            "Fuel Reagent": 2
+          },
+          {
+            "Coin": 3200,
+            "Damaged Sal Volatile": 9,
+            "Fuel Reagent": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Damaged Sal Volatile": 15,
+            "Fuel Reagent": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Damaged Sal Volatile": 30,
+            "Fuel Reagent": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Disarm": "Permanently disables ranged weapons."
         }
@@ -7706,7 +10069,7 @@
         "id": 310203,
         "名称": "Automatic Sanitizing",
         "类型": "Passive",
-        "描述": "When dodging, Hilda reloads her ranged weapon Magazine to maximum and gains [Elegant Anger].",
+        "描述": "Carries 2 [Heavy Dirtexpellers] that automatically target and shoot nearby enemies once every 3s, dealing Pyro Damage.\nWhen dodging, Hilda reloads her ranged weapon Magazine to maximum and gains [Elegant Anger] for a period of time.",
         "icon": "Xier03",
         "p": [
           {
@@ -7757,6 +10120,60 @@
             "影响": "技能耐久",
             "值": 6,
             "格式": "{}"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Damaged Sal Volatile": 3,
+            "Fuel Reagent": 1
+          },
+          {
+            "Coin": 2600,
+            "Damaged Sal Volatile": 6,
+            "Fuel Reagent": 2
+          },
+          {
+            "Coin": 3200,
+            "Damaged Sal Volatile": 9,
+            "Fuel Reagent": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Damaged Sal Volatile": 15,
+            "Fuel Reagent": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Damaged Sal Volatile": 30,
+            "Fuel Reagent": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
           }
         ],
         "术语解释": {
@@ -7849,8 +10266,40 @@
     "基础神智": 180,
     "加成": {
       "ATK": 0.5,
-      "Skill Intensity": 0.2
+      "Skill DMG": 0.2
     },
+    "突破": [
+      {
+        "Coin": 4160,
+        "Damaged Sal Volatile": 10,
+        "Flame Lizard Scale": 5
+      },
+      {
+        "Coin": 8320,
+        "Fuel Reagent": 5,
+        "Everbright Flame": 7
+      },
+      {
+        "Coin": 13040,
+        "Fuel Reagent": 10,
+        "Everbright Flame": 15
+      },
+      {
+        "Coin": 27760,
+        "Fuel Reagent": 20,
+        "Fire-Tempered Shackles": 6
+      },
+      {
+        "Coin": 65280,
+        "Fuel Reagent": 40,
+        "Fire-Tempered Shackles": 12
+      },
+      {
+        "Coin": 194400,
+        "Fuel Reagent": 80,
+        "Fire-Tempered Shackles": 25
+      }
+    ],
     "技能": [
       {
         "id": 310301,
@@ -7970,9 +10419,63 @@
             "格式": "{}m"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Damaged Sal Volatile": 3,
+            "Fuel Reagent": 1
+          },
+          {
+            "Coin": 2080,
+            "Damaged Sal Volatile": 6,
+            "Fuel Reagent": 2
+          },
+          {
+            "Coin": 2560,
+            "Damaged Sal Volatile": 9,
+            "Fuel Reagent": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Damaged Sal Volatile": 15,
+            "Fuel Reagent": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Damaged Sal Volatile": 30,
+            "Fuel Reagent": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
-          "Tot Popper: Yale's Make": "When dealing damage, causes greater Stance reduction to the target(s). The greater the difference between Yale and Oliver's Skill Range and the Skill Intensity, the higher the chance of deploying [Tot Popper: Yale's Make]. If the difference is no less than 50%, it's guaranteed to be a [Tot Popper: Yale's Make].",
-          "Tot Popper: Oliver's Make": "Deals higher damage. The greater the difference between Yale and Oliver's Skill Intensity and the Skill Range provided by equipped Demon Wedges, the higher the chance of deploying [Tot Popper: Oliver's Make]. If the difference is no less than 50%, it's guaranteed to be a [Tot Popper: Oliver's Make]."
+          "Tot Popper: Yale's Make": "When dealing damage, causes greater Stance reduction to the target(s). The greater the difference between Yale and Oliver's Skill Range and the Skill Damage, the higher the chance of deploying [Tot Popper: Yale's Make]. If the difference is no less than 50%, it's guaranteed to be a [Tot Popper: Yale's Make].",
+          "Tot Popper: Oliver's Make": "Deals higher damage. The greater the difference between Yale and Oliver's Skill Damage and the Skill Range provided by equipped Demon Wedges, the higher the chance of deploying [Tot Popper: Oliver's Make]. If the difference is no less than 50%, it's guaranteed to be a [Tot Popper: Oliver's Make]."
         }
       },
       {
@@ -8113,9 +10616,71 @@
             "格式": "{}"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Damaged Sal Volatile": 3,
+            "Fuel Reagent": 1
+          },
+          {
+            "Coin": 2080,
+            "Damaged Sal Volatile": 6,
+            "Fuel Reagent": 2
+          },
+          {
+            "Coin": 2560,
+            "Damaged Sal Volatile": 9,
+            "Fuel Reagent": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Damaged Sal Volatile": 15,
+            "Fuel Reagent": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Damaged Sal Volatile": 30,
+            "Fuel Reagent": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Nightmare Lab": "When in the area of [Nightmare Lab]:\nThe Movement Speed of enemies within range is decreased.\nThe detonation timers of [Tot Poppers] on the ground are paused, and they won't be detonated by other [Tot Poppers].\n\nWhen [Nightmare Lab] closes:\nDetonates all [Tot Poppers] within range and the lab explodes to deal Pyro Damage to the enemies within range. For each [Tot Popper] detonated, increases the explosion damage of [Nightmare Lab] and restores Sanity for Yale and Oliver."
-        }
+        },
+        "子技能": [
+          {
+            "id": 310321,
+            "类型": "DMG",
+            "icon": "Yeer02_Off",
+            "cd": 2.3
+          }
+        ]
       },
       {
         "id": 310303,
@@ -8196,6 +10761,60 @@
             "影响": "技能范围",
             "值": 6,
             "格式": "{}m"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Damaged Sal Volatile": 3,
+            "Fuel Reagent": 1
+          },
+          {
+            "Coin": 2080,
+            "Damaged Sal Volatile": 6,
+            "Fuel Reagent": 2
+          },
+          {
+            "Coin": 2560,
+            "Damaged Sal Volatile": 9,
+            "Fuel Reagent": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Damaged Sal Volatile": 15,
+            "Fuel Reagent": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Damaged Sal Volatile": 30,
+            "Fuel Reagent": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
           }
         ]
       },
@@ -8315,6 +10934,38 @@
       "HP": 0.5,
       "Skill Duration": 0.15
     },
+    "突破": [
+      {
+        "Coin": 4160,
+        "Damaged Sal Volatile": 10,
+        "Flame Lizard Scale": 5
+      },
+      {
+        "Coin": 8320,
+        "Fuel Reagent": 5,
+        "Everbright Flame": 7
+      },
+      {
+        "Coin": 13040,
+        "Fuel Reagent": 10,
+        "Everbright Flame": 15
+      },
+      {
+        "Coin": 27760,
+        "Fuel Reagent": 20,
+        "Fire-Tempered Shackles": 6
+      },
+      {
+        "Coin": 65280,
+        "Fuel Reagent": 40,
+        "Fire-Tempered Shackles": 12
+      },
+      {
+        "Coin": 194400,
+        "Fuel Reagent": 80,
+        "Fire-Tempered Shackles": 25
+      }
+    ],
     "技能": [
       {
         "id": 320101,
@@ -8652,6 +11303,60 @@
             "格式": "{}s"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Damaged Sal Volatile": 3,
+            "Fuel Reagent": 1
+          },
+          {
+            "Coin": 2080,
+            "Damaged Sal Volatile": 6,
+            "Fuel Reagent": 2
+          },
+          {
+            "Coin": 2560,
+            "Damaged Sal Volatile": 9,
+            "Fuel Reagent": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Damaged Sal Volatile": 15,
+            "Fuel Reagent": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Damaged Sal Volatile": 30,
+            "Fuel Reagent": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Retribution": "Deals Pyro Damage to nearby enemies once every 2s.\nIf Hellfire takes damage during [Retribution], extends the state duration and deals [Puncture Retribution] Pyro Damage to nearby enemies once every 2s."
         }
@@ -8761,6 +11466,60 @@
             "值": 5,
             "格式": "{}s"
           }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Damaged Sal Volatile": 3,
+            "Fuel Reagent": 1
+          },
+          {
+            "Coin": 2080,
+            "Damaged Sal Volatile": 6,
+            "Fuel Reagent": 2
+          },
+          {
+            "Coin": 2560,
+            "Damaged Sal Volatile": 9,
+            "Fuel Reagent": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Damaged Sal Volatile": 15,
+            "Fuel Reagent": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Damaged Sal Volatile": 30,
+            "Fuel Reagent": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          }
         ]
       },
       {
@@ -8852,6 +11611,60 @@
             "值": 0.003,
             "格式": "{%}Max HP"
           }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Damaged Sal Volatile": 3,
+            "Fuel Reagent": 1
+          },
+          {
+            "Coin": 2080,
+            "Damaged Sal Volatile": 6,
+            "Fuel Reagent": 2
+          },
+          {
+            "Coin": 2560,
+            "Damaged Sal Volatile": 9,
+            "Fuel Reagent": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Damaged Sal Volatile": 15,
+            "Fuel Reagent": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Damaged Sal Volatile": 30,
+            "Fuel Reagent": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          }
         ]
       },
       {
@@ -8931,7 +11744,7 @@
     "阵营": "The Hyperborean Empire",
     "属性": "火",
     "精通": [
-      "Whipblade",
+      "Whipsword",
       "Pistol"
     ],
     "基础攻击": 13,
@@ -8939,6 +11752,38 @@
     "基础防御": 345,
     "基础护盾": 120,
     "基础神智": 200,
+    "突破": [
+      {
+        "Coin": 4160,
+        "Damaged Sal Volatile": 10,
+        "Flame Lizard Scale": 5
+      },
+      {
+        "Coin": 8320,
+        "Fuel Reagent": 5,
+        "Everbright Flame": 7
+      },
+      {
+        "Coin": 13040,
+        "Fuel Reagent": 10,
+        "Everbright Flame": 15
+      },
+      {
+        "Coin": 27760,
+        "Fuel Reagent": 20,
+        "Fire-Tempered Shackles": 6
+      },
+      {
+        "Coin": 65280,
+        "Fuel Reagent": 40,
+        "Fire-Tempered Shackles": 12
+      },
+      {
+        "Coin": 194400,
+        "Fuel Reagent": 80,
+        "Fire-Tempered Shackles": 25
+      }
+    ],
     "技能": [
       {
         "id": 320201,
@@ -9005,6 +11850,60 @@
             "值": 0.2
           }
         ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Damaged Sal Volatile": 3,
+            "Fuel Reagent": 1
+          },
+          {
+            "Coin": 2600,
+            "Damaged Sal Volatile": 6,
+            "Fuel Reagent": 2
+          },
+          {
+            "Coin": 3200,
+            "Damaged Sal Volatile": 9,
+            "Fuel Reagent": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Damaged Sal Volatile": 15,
+            "Fuel Reagent": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Damaged Sal Volatile": 30,
+            "Fuel Reagent": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Inebriation": "Gains Skill Speed. [Spinblades] travel faster and their duration is paused. Gains immunity to Hitstun. All [Inebriation] stacks are removed when [Burgundy Flurry] ends."
         }
@@ -9058,6 +11957,60 @@
             "格式": "{}m/s"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Damaged Sal Volatile": 3,
+            "Fuel Reagent": 1
+          },
+          {
+            "Coin": 2600,
+            "Damaged Sal Volatile": 6,
+            "Fuel Reagent": 2
+          },
+          {
+            "Coin": 3200,
+            "Damaged Sal Volatile": 9,
+            "Fuel Reagent": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Damaged Sal Volatile": 15,
+            "Fuel Reagent": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Damaged Sal Volatile": 30,
+            "Fuel Reagent": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Spinblade": "Each [Spinblade] completes one orbit around the character every 2s. When launched, it travels up to 30m before returning. If struck by [Burgundy Flurry] while returning, it is relaunched toward a random enemy within 20m. Each launch refreshes its speed based on [Inebriation] stacks. A maximum of 8 [Spinblades] can exist at once."
         }
@@ -9086,8 +12039,62 @@
             "值": 0.1
           }
         ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Damaged Sal Volatile": 3,
+            "Fuel Reagent": 1
+          },
+          {
+            "Coin": 2600,
+            "Damaged Sal Volatile": 6,
+            "Fuel Reagent": 2
+          },
+          {
+            "Coin": 3200,
+            "Damaged Sal Volatile": 9,
+            "Fuel Reagent": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Damaged Sal Volatile": 15,
+            "Fuel Reagent": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Damaged Sal Volatile": 30,
+            "Fuel Reagent": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
-          "Laceration": "All Weapon and Skill DMG (excluding [Spinblades] and [Laceration]) detonates 2 stacks of [Laceration], dealing additional elemental damage. Max 20 detonations per second."
+          "Laceration": "All weapon and skill damage (excluding [Spinblades] and [Laceration]) detonates 2 stacks of [Laceration], dealing additional elemental damage. Max 20 detonations per second."
         }
       },
       {
@@ -9164,7 +12171,7 @@
       "[Burgundy Flurry] Level +2, [Claret Waltz] Level +1.",
       "Damage from [Laceration] detonation is increased by 30%.",
       "[Claret Waltz] Level +2, [Burgundy Flurry] Level +1.",
-      "All Weapon and Skill DMG (excluding [Spinblades] and [Laceration]) detonates 2 stacks of [Laceration]."
+      "All weapon and skill damage (excluding [Spinblades] and [Laceration]) detonates 2 stacks of [Laceration]."
     ]
   },
   {
@@ -9193,6 +12200,38 @@
       "ATK": 0.5,
       "Skill Range": 0.3
     },
+    "突破": [
+      {
+        "Coin": 4160,
+        "Damaged Sal Volatile": 10,
+        "Flame Lizard Scale": 5
+      },
+      {
+        "Coin": 8320,
+        "Fuel Reagent": 5,
+        "Everbright Flame": 7
+      },
+      {
+        "Coin": 13040,
+        "Fuel Reagent": 10,
+        "Everbright Flame": 15
+      },
+      {
+        "Coin": 27760,
+        "Fuel Reagent": 20,
+        "Fire-Tempered Shackles": 6
+      },
+      {
+        "Coin": 65280,
+        "Fuel Reagent": 40,
+        "Fire-Tempered Shackles": 12
+      },
+      {
+        "Coin": 194400,
+        "Fuel Reagent": 80,
+        "Fire-Tempered Shackles": 25
+      }
+    ],
     "技能": [
       {
         "id": 330101,
@@ -9287,6 +12326,60 @@
             "名称": "Max Targets",
             "值": 6,
             "格式": "{}"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Damaged Sal Volatile": 3,
+            "Fuel Reagent": 1
+          },
+          {
+            "Coin": 2080,
+            "Damaged Sal Volatile": 6,
+            "Fuel Reagent": 2
+          },
+          {
+            "Coin": 2560,
+            "Damaged Sal Volatile": 9,
+            "Fuel Reagent": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Damaged Sal Volatile": 15,
+            "Fuel Reagent": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Damaged Sal Volatile": 30,
+            "Fuel Reagent": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
           }
         ]
       },
@@ -9511,13 +12604,67 @@
             "值": 6,
             "格式": "{}m"
           }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Damaged Sal Volatile": 3,
+            "Fuel Reagent": 1
+          },
+          {
+            "Coin": 2080,
+            "Damaged Sal Volatile": 6,
+            "Fuel Reagent": 2
+          },
+          {
+            "Coin": 2560,
+            "Damaged Sal Volatile": 9,
+            "Fuel Reagent": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Damaged Sal Volatile": 15,
+            "Fuel Reagent": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Damaged Sal Volatile": 30,
+            "Fuel Reagent": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          }
         ]
       },
       {
         "id": 330103,
         "名称": "Margie's Recycling Sack",
         "类型": "Passive",
-        "描述": "When the user or allies pick up loot, the user gains 1 stack of [Jackpot!], lasting for the rest of the battle. Each stack increases Skill Intensity, up to 20 stacks.",
+        "描述": "When the user or allies pick up loot, the user gains 1 stack of [Jackpot!], lasting for the rest of the battle. Each stack increases Skill DMG, up to 20 stacks.",
         "icon": "Maer03",
         "b": [
           {
@@ -9566,7 +12713,7 @@
         ],
         "字段": [
           {
-            "名称": "Skill Intensity Boost per stack",
+            "名称": "Skill DMG Boost per stack",
             "值": [
               0.024,
               0.028,
@@ -9581,6 +12728,60 @@
               0.064,
               0.068
             ]
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Damaged Sal Volatile": 3,
+            "Fuel Reagent": 1
+          },
+          {
+            "Coin": 2080,
+            "Damaged Sal Volatile": 6,
+            "Fuel Reagent": 2
+          },
+          {
+            "Coin": 2560,
+            "Damaged Sal Volatile": 9,
+            "Fuel Reagent": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Damaged Sal Volatile": 15,
+            "Fuel Reagent": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Damaged Sal Volatile": 30,
+            "Fuel Reagent": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
           }
         ]
       },
@@ -9690,6 +12891,38 @@
       "ATK": 0.5,
       "Skill Range": 0.3
     },
+    "突破": [
+      {
+        "Coin": 4160,
+        "Chain": 10,
+        "Lightning Rod": 5
+      },
+      {
+        "Coin": 8320,
+        "Vehicle Armour": 5,
+        "Stormfall Jade": 7
+      },
+      {
+        "Coin": 13040,
+        "Vehicle Armour": 10,
+        "Stormfall Jade": 15
+      },
+      {
+        "Coin": 27760,
+        "Vehicle Armour": 20,
+        "Golden Wool": 6
+      },
+      {
+        "Coin": 65280,
+        "Vehicle Armour": 40,
+        "Golden Wool": 12
+      },
+      {
+        "Coin": 194400,
+        "Vehicle Armour": 80,
+        "Golden Wool": 25
+      }
+    ],
     "技能": [
       {
         "id": 410101,
@@ -9860,6 +13093,60 @@
             "影响": "技能耐久",
             "值": 9,
             "格式": "{}s"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Chain": 3,
+            "Vehicle Armour": 1
+          },
+          {
+            "Coin": 2080,
+            "Chain": 6,
+            "Vehicle Armour": 2
+          },
+          {
+            "Coin": 2560,
+            "Chain": 9,
+            "Vehicle Armour": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Chain": 15,
+            "Vehicle Armour": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Chain": 30,
+            "Vehicle Armour": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
           }
         ]
       },
@@ -10122,10 +13409,72 @@
             "格式": "{}s"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Chain": 3,
+            "Vehicle Armour": 1
+          },
+          {
+            "Coin": 2080,
+            "Chain": 6,
+            "Vehicle Armour": 2
+          },
+          {
+            "Coin": 2560,
+            "Chain": 9,
+            "Vehicle Armour": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Chain": 15,
+            "Vehicle Armour": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Chain": 30,
+            "Vehicle Armour": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Electro Surge": "Increases Movement Speed for self and allies. Every second, deals Electro Damage to 1 random enemy in range, alternating between [Positive Charge] and [Negative Charge]. Prioritises enemies with no [Electric Charge].",
           "Electric Charge": "Target with [Positive Charge] selects 1 random target with [Negative Charge] within range every 3s, both being pulled towards the midpoint between their positions and taking Electro Damage. If no [Negative Charge] targets are around, selects 1 random target to take Electro Damage together. \nWhen a target with [Electric Charge] is inflicted with the same charge type again, the duration of the [Electric Charge] on them is refreshed, and they cannot be applied with the opposite [Electric Charge] type."
-        }
+        },
+        "子技能": [
+          {
+            "id": 410121,
+            "类型": "Buff",
+            "icon": "Lise02_Off",
+            "cd": 2
+          }
+        ]
       },
       {
         "id": 410103,
@@ -10173,6 +13522,60 @@
               1.07,
               1.14
             ]
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Chain": 3,
+            "Vehicle Armour": 1
+          },
+          {
+            "Coin": 2080,
+            "Chain": 6,
+            "Vehicle Armour": 2
+          },
+          {
+            "Coin": 2560,
+            "Chain": 9,
+            "Vehicle Armour": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Chain": 15,
+            "Vehicle Armour": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Chain": 30,
+            "Vehicle Armour": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
           }
         ]
       },
@@ -10261,8 +13664,40 @@
     "基础神智": 240,
     "加成": {
       "Morale": 0.15,
-      "Skill Intensity": 0.2
+      "Skill DMG": 0.2
     },
+    "突破": [
+      {
+        "Coin": 5200,
+        "Chain": 10,
+        "Lightning Rod": 5
+      },
+      {
+        "Coin": 10400,
+        "Vehicle Armour": 5,
+        "Stormfall Jade": 7
+      },
+      {
+        "Coin": 16300,
+        "Vehicle Armour": 10,
+        "Stormfall Jade": 15
+      },
+      {
+        "Coin": 34700,
+        "Vehicle Armour": 20,
+        "Golden Wool": 6
+      },
+      {
+        "Coin": 81600,
+        "Vehicle Armour": 40,
+        "Golden Wool": 12
+      },
+      {
+        "Coin": 243000,
+        "Vehicle Armour": 80,
+        "Golden Wool": 25
+      }
+    ],
     "技能": [
       {
         "id": 410201,
@@ -10405,6 +13840,60 @@
             "影响": "技能威力",
             "值": 0.04,
             "格式": "{%}Max Shield"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Chain": 3,
+            "Vehicle Armour": 1
+          },
+          {
+            "Coin": 2600,
+            "Chain": 6,
+            "Vehicle Armour": 2
+          },
+          {
+            "Coin": 3200,
+            "Chain": 9,
+            "Vehicle Armour": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Chain": 15,
+            "Vehicle Armour": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Chain": 30,
+            "Vehicle Armour": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
           }
         ]
       },
@@ -10814,11 +14303,82 @@
             "格式": "{}s"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Chain": 3,
+            "Vehicle Armour": 1
+          },
+          {
+            "Coin": 2600,
+            "Chain": 6,
+            "Vehicle Armour": 2
+          },
+          {
+            "Coin": 3200,
+            "Chain": 9,
+            "Vehicle Armour": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Chain": 15,
+            "Vehicle Armour": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Chain": 30,
+            "Vehicle Armour": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Thunder's Oracle Peal": "When Zhiliu has 2 [Talismans: Zhen], [Heaven-Earth Divination] is replaced with [Thunder's Oracle Peal]. \n[Thunder's Oracle Peal]: Consumes all [Talismans], dealing Electro Damage to enemies in a straight line ahead.",
           "Myriad Things Thrive": "When holding 1 [Talisman: Zhen] and 1 [Talisman: Xun], replaces [Heaven-Earth Divination] with this skill. \nRemoves all [Talismans]. Deals DoT to enemies in a forward area, then creates a [Four Realms Align] field at their location. Every 3s, targets up to 5 enemies within the field to creates a [Zhen-Xun Convergence] at their location, dealing Electro AoE Damage.",
-          "Fortune's Clarity": "When Zhiliu has 2 [Talismans: Xun], [Heaven-Earth Divination] is replaced with [Fortune's Clarity].\n[Fortune's Clarity]: Consumes all [Talismans] to deal Electro Damage to enemies around and increase Zhiliu's Skill DMG."
-        }
+          "Fortune's Clarity": "When Zhiliu has 2 [Talismans: Xun], [Heaven-Earth Divination] is replaced with [Fortune's Clarity].\n[Fortune's Clarity]: Consumes all [Talismans] to deal Electro Damage to enemies around and increase Zhiliu's Skill Damage."
+        },
+        "子技能": [
+          {
+            "id": 410221,
+            "类型": "DMG",
+            "icon": "Zhiliu02_2"
+          },
+          {
+            "id": 410222,
+            "类型": "DMG",
+            "icon": "Zhiliu02_3"
+          },
+          {
+            "id": 410223,
+            "类型": "Buff",
+            "icon": "Zhiliu02_4"
+          }
+        ]
       },
       {
         "id": 410203,
@@ -10868,6 +14428,60 @@
             ],
             "值2": 0.5,
             "格式": "{%}+{%}×Melee Weapon Trigger Probability"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Chain": 3,
+            "Vehicle Armour": 1
+          },
+          {
+            "Coin": 2600,
+            "Chain": 6,
+            "Vehicle Armour": 2
+          },
+          {
+            "Coin": 3200,
+            "Chain": 9,
+            "Vehicle Armour": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Chain": 15,
+            "Vehicle Armour": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Chain": 30,
+            "Vehicle Armour": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
           }
         ]
       },
@@ -10985,8 +14599,40 @@
     "基础神智": 200,
     "加成": {
       "ATK": 0.5,
-      "Skill Intensity": 0.2
+      "Skill DMG": 0.2
     },
+    "突破": [
+      {
+        "Coin": 5200,
+        "Chain": 10,
+        "Lightning Rod": 5
+      },
+      {
+        "Coin": 10400,
+        "Vehicle Armour": 5,
+        "Stormfall Jade": 7
+      },
+      {
+        "Coin": 16300,
+        "Vehicle Armour": 10,
+        "Stormfall Jade": 15
+      },
+      {
+        "Coin": 34700,
+        "Vehicle Armour": 20,
+        "Golden Wool": 6
+      },
+      {
+        "Coin": 81600,
+        "Vehicle Armour": 40,
+        "Golden Wool": 12
+      },
+      {
+        "Coin": 243000,
+        "Vehicle Armour": 80,
+        "Golden Wool": 25
+      }
+    ],
     "技能": [
       {
         "id": 420101,
@@ -11198,6 +14844,60 @@
             "格式": "{}s"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Chain": 3,
+            "Vehicle Armour": 1
+          },
+          {
+            "Coin": 2600,
+            "Chain": 6,
+            "Vehicle Armour": 2
+          },
+          {
+            "Coin": 3200,
+            "Chain": 9,
+            "Vehicle Armour": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Chain": 15,
+            "Vehicle Armour": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Chain": 30,
+            "Vehicle Armour": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Starlight Descent": "Plunges at high speed, dealing AoE Electro Damage on impact. This attack is regarded as a melee weapon Plunging Attack. Using this skill in [Xuanjiao Manifest] state triggers [Wyrmcall Clouds].",
           "Reverse Scale": "Reverse Scale persists, with a maximum of 6 scales existing at the same time. The scales are removed when the [Xuanjiao Manifest] state ends.",
@@ -11404,6 +15104,60 @@
             ]
           }
         ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Chain": 3,
+            "Vehicle Armour": 1
+          },
+          {
+            "Coin": 2600,
+            "Chain": 6,
+            "Vehicle Armour": 2
+          },
+          {
+            "Coin": 3200,
+            "Chain": 9,
+            "Vehicle Armour": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Chain": 15,
+            "Vehicle Armour": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Chain": 30,
+            "Vehicle Armour": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Xuanjiao Manifest": "Immune to Hitstun. Xuanjiao hovers around [Yuming], dealing Electro Damage to enemies on contact (once every 2s per enemy).\n Xuanjiao absorbs HP damage inflicted on [Yuming]. When the absorbed amount reaches a set percentage of [Yuming]'s Max HP, [Xuanjiao Manifest] ends.",
           "Fish-Dragon Dance": "When dealing Skill DMG to a target afflicted with [Thunderous Onslaught], deals bonus Electro Damage. Can trigger on the same target once every 3s."
@@ -11493,6 +15247,60 @@
             "值": 3,
             "格式": "{}s"
           }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Chain": 3,
+            "Vehicle Armour": 1
+          },
+          {
+            "Coin": 2600,
+            "Chain": 6,
+            "Vehicle Armour": 2
+          },
+          {
+            "Coin": 3200,
+            "Chain": 9,
+            "Vehicle Armour": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Chain": 15,
+            "Vehicle Armour": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Chain": 30,
+            "Vehicle Armour": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          }
         ]
       },
       {
@@ -11549,7 +15357,7 @@
       "While in [Xuanjiao Manifest], each [Precipitous Thunderfall] grants 1 extra [Reverse Scale]. Using [Starstorm Descent] also increases Weapon Attack Range by 0.6 and Skill Range by 30% for self and allies, lasting 8s.",
       "[Fish-Dragon Dance] deals 300% of its base damage.",
       "[Precipitous Thunderfall] Level +2; [Soaring Sky-High] Level +1.",
-      "Plunging Attack deals additional damage equal to 18% of Yuming's Skill Intensity, with a maximum of 36%.",
+      "Plunging Attack deals additional damage equal to 18% of Yuming's Skill Damage, with a maximum of 36%.",
       "[Grimscales] Level +2; [Soaring Sky-High] Level +1.",
       "[Starlight Descent] and [Starstorm Descent] deal 90% more damage to targets affected by [Thunderous Onslaught]. Using [Starstorm Descent] restores [Xuanjiao]'s DMG absorption by 1.8%."
     ]
@@ -11580,6 +15388,38 @@
       "DEF": 0.5,
       "Skill Duration": 0.15
     },
+    "突破": [
+      {
+        "Coin": 4160,
+        "Chain": 10,
+        "Lightning Rod": 5
+      },
+      {
+        "Coin": 8320,
+        "Vehicle Armour": 5,
+        "Stormfall Jade": 7
+      },
+      {
+        "Coin": 13040,
+        "Vehicle Armour": 10,
+        "Stormfall Jade": 15
+      },
+      {
+        "Coin": 27760,
+        "Vehicle Armour": 20,
+        "Golden Wool": 6
+      },
+      {
+        "Coin": 65280,
+        "Vehicle Armour": 40,
+        "Golden Wool": 12
+      },
+      {
+        "Coin": 194400,
+        "Vehicle Armour": 80,
+        "Golden Wool": 25
+      }
+    ],
     "技能": [
       {
         "id": 420201,
@@ -11862,10 +15702,72 @@
             "格式": "{%}DEF"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Chain": 3,
+            "Vehicle Armour": 1
+          },
+          {
+            "Coin": 2080,
+            "Chain": 6,
+            "Vehicle Armour": 2
+          },
+          {
+            "Coin": 2560,
+            "Chain": 9,
+            "Vehicle Armour": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Chain": 15,
+            "Vehicle Armour": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Chain": 30,
+            "Vehicle Armour": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Barrier": "[Barrier] blocks frontal projectiles and absorbs their damage, and expires once it has absorbed damage equivalent to 100% of Randy's Max HP.",
           "Overwork Grudge": "Decreases ATK, and deals Electro Damage once every 2s."
-        }
+        },
+        "子技能": [
+          {
+            "id": 420211,
+            "类型": "DEF",
+            "icon": "Landi01_Off",
+            "cd": 2
+          }
+        ]
       },
       {
         "id": 420202,
@@ -12030,6 +15932,60 @@
             "值": 6,
             "格式": "{}m"
           }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Chain": 3,
+            "Vehicle Armour": 1
+          },
+          {
+            "Coin": 2080,
+            "Chain": 6,
+            "Vehicle Armour": 2
+          },
+          {
+            "Coin": 2560,
+            "Chain": 9,
+            "Vehicle Armour": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Chain": 15,
+            "Vehicle Armour": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Chain": 30,
+            "Vehicle Armour": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          }
         ]
       },
       {
@@ -12106,6 +16062,60 @@
             "影响": "技能耐久",
             "值": 10,
             "格式": "{}"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Chain": 3,
+            "Vehicle Armour": 1
+          },
+          {
+            "Coin": 2080,
+            "Chain": 6,
+            "Vehicle Armour": 2
+          },
+          {
+            "Coin": 2560,
+            "Chain": 9,
+            "Vehicle Armour": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Chain": 15,
+            "Vehicle Armour": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Chain": 30,
+            "Vehicle Armour": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
           }
         ]
       },
@@ -12188,7 +16198,7 @@
     "阵营": "The Hyperborean Empire",
     "属性": "雷",
     "精通": [
-      "Whipblade",
+      "Whipsword",
       "Pistol"
     ],
     "标签": [
@@ -12203,8 +16213,40 @@
     "基础神智": 200,
     "加成": {
       "HP": 0.5,
-      "Skill Intensity": 0.2
+      "Skill DMG": 0.2
     },
+    "突破": [
+      {
+        "Coin": 5200,
+        "Chain": 10,
+        "Lightning Rod": 5
+      },
+      {
+        "Coin": 10400,
+        "Vehicle Armour": 5,
+        "Stormfall Jade": 7
+      },
+      {
+        "Coin": 16300,
+        "Vehicle Armour": 10,
+        "Stormfall Jade": 15
+      },
+      {
+        "Coin": 34700,
+        "Vehicle Armour": 20,
+        "Golden Wool": 6
+      },
+      {
+        "Coin": 81600,
+        "Vehicle Armour": 40,
+        "Golden Wool": 12
+      },
+      {
+        "Coin": 243000,
+        "Vehicle Armour": 80,
+        "Golden Wool": 25
+      }
+    ],
     "技能": [
       {
         "id": 430101,
@@ -12398,6 +16440,60 @@
             "名称": "[Might of Thunder] Cost",
             "值": 20,
             "格式": "{}"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Chain": 3,
+            "Vehicle Armour": 1
+          },
+          {
+            "Coin": 2600,
+            "Chain": 6,
+            "Vehicle Armour": 2
+          },
+          {
+            "Coin": 3200,
+            "Chain": 9,
+            "Vehicle Armour": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Chain": 15,
+            "Vehicle Armour": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Chain": 30,
+            "Vehicle Armour": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
           }
         ],
         "术语解释": {
@@ -12689,6 +16785,60 @@
             "格式": "{}"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Chain": 3,
+            "Vehicle Armour": 1
+          },
+          {
+            "Coin": 2600,
+            "Chain": 6,
+            "Vehicle Armour": 2
+          },
+          {
+            "Coin": 3200,
+            "Chain": 9,
+            "Vehicle Armour": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Chain": 15,
+            "Vehicle Armour": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Chain": 30,
+            "Vehicle Armour": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Summoned: Chaotic Thunderorb": "Inherits a percentage of Sibylle's Max HP, has 0 DEF, and is treated as an enemy unit.\n[Summon: Chaotic Thunderorb] calls forth a [Devastating Storm] once every 3s.\nUpon summoning, [Summon: Chaotic Thunderorb] links to the 5 furthest enemies in range, linking 1 additional enemy per second, up to 10 in total. [Summon: Chaotic Thunderorb] deals Electro Damage to all linked targets once per second.\nWhen [Summon: Chaotic Thunderorb] takes damage, a percentage is transferred to the linked enemies.",
           "Devastating Storm": "Deals Electro Damage to nearby enemies."
@@ -12748,6 +16898,60 @@
               17
             ],
             "格式": "{}"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Chain": 3,
+            "Vehicle Armour": 1
+          },
+          {
+            "Coin": 2600,
+            "Chain": 6,
+            "Vehicle Armour": 2
+          },
+          {
+            "Coin": 3200,
+            "Chain": 9,
+            "Vehicle Armour": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Chain": 15,
+            "Vehicle Armour": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Chain": 30,
+            "Vehicle Armour": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
           }
         ]
       },
@@ -12846,6 +17050,38 @@
       "HP": 0.5,
       "Skill Duration": 0.15
     },
+    "突破": [
+      {
+        "Coin": 5200,
+        "Vermilion Teardrop": 10,
+        "Withered Bough": 5
+      },
+      {
+        "Coin": 10400,
+        "Snowswift Tail Feather": 5,
+        "Galeweaver": 7
+      },
+      {
+        "Coin": 16300,
+        "Snowswift Tail Feather": 10,
+        "Galeweaver": 15
+      },
+      {
+        "Coin": 34700,
+        "Snowswift Tail Feather": 20,
+        "Oceanifly": 6
+      },
+      {
+        "Coin": 81600,
+        "Snowswift Tail Feather": 40,
+        "Oceanifly": 12
+      },
+      {
+        "Coin": 243000,
+        "Snowswift Tail Feather": 80,
+        "Oceanifly": 25
+      }
+    ],
     "技能": [
       {
         "id": 510101,
@@ -13196,9 +17432,71 @@
             "格式": "{}m"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Vermilion Teardrop": 3,
+            "Snowswift Tail Feather": 1
+          },
+          {
+            "Coin": 2600,
+            "Vermilion Teardrop": 6,
+            "Snowswift Tail Feather": 2
+          },
+          {
+            "Coin": 3200,
+            "Vermilion Teardrop": 9,
+            "Snowswift Tail Feather": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Vermilion Teardrop": 15,
+            "Snowswift Tail Feather": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Vermilion Teardrop": 30,
+            "Snowswift Tail Feather": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Trotters Charge-Charge": "Hold for a sustained charge, continuously consuming Sanity and dealing Anemo Damage to enemies in the path. Upon hitting any obstacle, Filbert stops charging, dealing AoE Anemo Damage at the endpoint."
-        }
+        },
+        "子技能": [
+          {
+            "id": 510111,
+            "类型": "DMG",
+            "icon": "Songlu01_02",
+            "cd": 1
+          }
+        ]
       },
       {
         "id": 510102,
@@ -13517,9 +17815,71 @@
             "格式": "{%}Max HP+{}"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Vermilion Teardrop": 3,
+            "Snowswift Tail Feather": 1
+          },
+          {
+            "Coin": 2600,
+            "Vermilion Teardrop": 6,
+            "Snowswift Tail Feather": 2
+          },
+          {
+            "Coin": 3200,
+            "Vermilion Teardrop": 9,
+            "Snowswift Tail Feather": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Vermilion Teardrop": 15,
+            "Snowswift Tail Feather": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Vermilion Teardrop": 30,
+            "Snowswift Tail Feather": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Passion For Work": "[Passion For Work] loses 5 point per second, and restores 1 when dealing damage upon knocking into a target. During [Trotters Charge-Charge], [Passion For Work] will not lose. When all [Passion For Work] points drop to 0, Truffle dismounts and unleashes [Trotters Trot-Trot] once."
-        }
+        },
+        "子技能": [
+          {
+            "id": 510121,
+            "类型": "Buff",
+            "icon": "Songlu02_Off",
+            "cd": 3.4
+          }
+        ]
       },
       {
         "id": 510103,
@@ -13609,13 +17969,67 @@
             "值": 18,
             "格式": "{}s"
           }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Vermilion Teardrop": 3,
+            "Snowswift Tail Feather": 1
+          },
+          {
+            "Coin": 2600,
+            "Vermilion Teardrop": 6,
+            "Snowswift Tail Feather": 2
+          },
+          {
+            "Coin": 3200,
+            "Vermilion Teardrop": 9,
+            "Snowswift Tail Feather": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Vermilion Teardrop": 15,
+            "Snowswift Tail Feather": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Vermilion Teardrop": 30,
+            "Snowswift Tail Feather": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          }
         ]
       },
       {
         "id": 510106,
         "名称": "Combat Supply",
         "类型": "Passive",
-        "描述": "When dealing Skill DMG, there is a chance to drop 1 [Ammo Supply Chest].",
+        "描述": "When dealing skill damage, there is a chance to drop 1 [Ammo Supply Chest].",
         "icon": "ExtraPassive",
         "p": [
           {
@@ -13676,7 +18090,7 @@
       "[Trotters Trot-Trot] Level +2; [Chop-Chop, Commissaries!] Level +1.",
       "Increases the stack cap of [Heavyweight] to 20. When Truffle starts mounting [Filbert], gains 20 stacks of [Heavyweight].",
       "[Tummy Full, Hands Full] Level +2; [Chop-Chop, Commissaries!] Level +1.",
-      "After picking up [Activated Sal Volatile], [Tranquilizer Dewdrop], or [Ammo Supply Chest], Truffle gains 1 stack that increases her Skill Intensity by 45% for 15s, up to 3 stacks."
+      "After picking up [Activated Sal Volatile], [Tranquilizer Dewdrop], or [Ammo Supply Chest], Truffle gains 1 stack that increases her Skill Damage by 45% for 15s, up to 3 stacks."
     ]
   },
   {
@@ -13704,6 +18118,38 @@
       "ATK": 0.5,
       "Skill Duration": 0.15
     },
+    "突破": [
+      {
+        "Coin": 4160,
+        "Vermilion Teardrop": 10,
+        "Withered Bough": 5
+      },
+      {
+        "Coin": 8320,
+        "Snowswift Tail Feather": 5,
+        "Galeweaver": 7
+      },
+      {
+        "Coin": 13040,
+        "Snowswift Tail Feather": 10,
+        "Galeweaver": 15
+      },
+      {
+        "Coin": 27760,
+        "Snowswift Tail Feather": 20,
+        "Oceanifly": 6
+      },
+      {
+        "Coin": 65280,
+        "Snowswift Tail Feather": 40,
+        "Oceanifly": 12
+      },
+      {
+        "Coin": 194400,
+        "Snowswift Tail Feather": 80,
+        "Oceanifly": 25
+      }
+    ],
     "技能": [
       {
         "id": 510201,
@@ -13771,6 +18217,60 @@
               18
             ],
             "格式": "{}s"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Vermilion Teardrop": 3,
+            "Snowswift Tail Feather": 1
+          },
+          {
+            "Coin": 2080,
+            "Vermilion Teardrop": 6,
+            "Snowswift Tail Feather": 2
+          },
+          {
+            "Coin": 2560,
+            "Vermilion Teardrop": 9,
+            "Snowswift Tail Feather": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Vermilion Teardrop": 15,
+            "Snowswift Tail Feather": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Vermilion Teardrop": 30,
+            "Snowswift Tail Feather": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
           }
         ],
         "术语解释": {
@@ -13893,6 +18393,60 @@
             ]
           }
         ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Vermilion Teardrop": 3,
+            "Snowswift Tail Feather": 1
+          },
+          {
+            "Coin": 2080,
+            "Vermilion Teardrop": 6,
+            "Snowswift Tail Feather": 2
+          },
+          {
+            "Coin": 2560,
+            "Vermilion Teardrop": 9,
+            "Snowswift Tail Feather": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Vermilion Teardrop": 15,
+            "Snowswift Tail Feather": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Vermilion Teardrop": 30,
+            "Snowswift Tail Feather": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Relentless Hunt": "When in [Relentless Hunt] state, Outsider is immune to Hitstun and gains weapon Attack Speed boost and Resolve boost.\nOutsider cannot receive Healing in this state, and any Healing received is converted into an equivalent amount of Ultra Shield."
         }
@@ -14007,6 +18561,60 @@
             ]
           }
         ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Vermilion Teardrop": 3,
+            "Snowswift Tail Feather": 1
+          },
+          {
+            "Coin": 2080,
+            "Vermilion Teardrop": 6,
+            "Snowswift Tail Feather": 2
+          },
+          {
+            "Coin": 2560,
+            "Vermilion Teardrop": 9,
+            "Snowswift Tail Feather": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Vermilion Teardrop": 15,
+            "Snowswift Tail Feather": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Vermilion Teardrop": 30,
+            "Snowswift Tail Feather": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Fang Spike": "When generated, [Fang Spike] flies toward its target, dealing Anemo Damage to enemies along the path and infilcting [Throatcutter] on them.\nAfter flying for a period of time, [Fang Spike] falls and remains on the ground. A maximum of 10 [Fang Spikes] can exist at the same time.\n[Throatcutter]: increases damage taken from Outsider."
         }
@@ -14104,8 +18712,40 @@
     "基础神智": 150,
     "加成": {
       "Resolve": 0.05,
-      "Skill Intensity": 0.2
+      "Skill DMG": 0.2
     },
+    "突破": [
+      {
+        "Coin": 5200,
+        "Vermilion Teardrop": 10,
+        "Withered Bough": 5
+      },
+      {
+        "Coin": 10400,
+        "Snowswift Tail Feather": 5,
+        "Galeweaver": 7
+      },
+      {
+        "Coin": 16300,
+        "Snowswift Tail Feather": 10,
+        "Galeweaver": 15
+      },
+      {
+        "Coin": 34700,
+        "Snowswift Tail Feather": 20,
+        "Oceanifly": 6
+      },
+      {
+        "Coin": 81600,
+        "Snowswift Tail Feather": 40,
+        "Oceanifly": 12
+      },
+      {
+        "Coin": 243000,
+        "Snowswift Tail Feather": 80,
+        "Oceanifly": 25
+      }
+    ],
     "技能": [
       {
         "id": 530101,
@@ -14296,11 +18936,73 @@
             "格式": "{}s"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Vermilion Teardrop": 3,
+            "Snowswift Tail Feather": 1
+          },
+          {
+            "Coin": 2600,
+            "Vermilion Teardrop": 6,
+            "Snowswift Tail Feather": 2
+          },
+          {
+            "Coin": 3200,
+            "Vermilion Teardrop": 9,
+            "Snowswift Tail Feather": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Vermilion Teardrop": 15,
+            "Snowswift Tail Feather": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Vermilion Teardrop": 30,
+            "Snowswift Tail Feather": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Phantasm": "Once created, the Phantasm continuously slows down nearby enemies. After 5 seconds, it deals Anemo Damage to nearby enemies and vanishes. \nWhen a new [Phantasm] is created, the existing [Phantasm] immediately deals Anemo Damage and vanishes.",
           "Phototaxis": "Charges forward in the air and releases 16 [Ethereal Powders]. The [Ethereal Powders] automatically lock onto 1 enemy, dealing Anemo Damage and inflicting 1 stack of [Powder Stigma], up to 12 stacks.",
           "Powder Stigma": "When a target afflicted with [Powder Stigma] takes Ranged Weapon DMG from [Psyche], 1 stack of [Powder Stigma] is consumed to deal Anemo Damage."
-        }
+        },
+        "子技能": [
+          {
+            "id": 530111,
+            "类型": "DMG",
+            "icon": "Saiqi01_2",
+            "cd": 0.6
+          }
+        ]
       },
       {
         "id": 530102,
@@ -14420,13 +19122,75 @@
             "名称": "Ultra Shield Conversion Percentage",
             "值": 1.5
           }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Vermilion Teardrop": 3,
+            "Snowswift Tail Feather": 1
+          },
+          {
+            "Coin": 2600,
+            "Vermilion Teardrop": 6,
+            "Snowswift Tail Feather": 2
+          },
+          {
+            "Coin": 3200,
+            "Vermilion Teardrop": 9,
+            "Snowswift Tail Feather": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Vermilion Teardrop": 15,
+            "Snowswift Tail Feather": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Vermilion Teardrop": 30,
+            "Snowswift Tail Feather": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "子技能": [
+          {
+            "id": 530121,
+            "类型": "Buff",
+            "icon": "Saiqi02_Off",
+            "cd": 3.5
+          }
         ]
       },
       {
         "id": 530103,
         "名称": "Amberlight",
         "类型": "Passive",
-        "描述": "When dealing CRIT damage, Psyche gains one of the following buffs at random: ATK Boost, Skill Intensity Boost, or Resolve Boost.\nIncreases Psyche's damage for each buff she gains, up to 12 buffs.",
+        "描述": "When dealing CRIT damage, Psyche gains one of the following buffs at random: ATK Boost, Skill Damage Boost, or Resolve Boost.\nIncreases Psyche's damage for each buff she gains, up to 12 buffs.",
         "icon": "Saiqi03",
         "b": [
           {
@@ -14554,7 +19318,7 @@
             ]
           },
           {
-            "名称": "Skill Intensity Boost",
+            "名称": "Skill DMG Boost",
             "值": [
               0.079,
               0.098,
@@ -14609,6 +19373,60 @@
               0.032,
               0.034
             ]
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Vermilion Teardrop": 3,
+            "Snowswift Tail Feather": 1
+          },
+          {
+            "Coin": 2600,
+            "Vermilion Teardrop": 6,
+            "Snowswift Tail Feather": 2
+          },
+          {
+            "Coin": 3200,
+            "Vermilion Teardrop": 9,
+            "Snowswift Tail Feather": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Vermilion Teardrop": 15,
+            "Snowswift Tail Feather": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Vermilion Teardrop": 30,
+            "Snowswift Tail Feather": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 90000,
+            "Serum Syringe": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Serum Syringe": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
           }
         ]
       },
@@ -14709,7 +19527,7 @@
     "阵营": "The Hyperborean Empire",
     "属性": "风",
     "精通": [
-      "Whipblade",
+      "Whipsword",
       "Assault Rifle"
     ],
     "标签": [
@@ -14726,6 +19544,38 @@
       "ATK": 0.5,
       "Skill Range": 0.3
     },
+    "突破": [
+      {
+        "Coin": 4160,
+        "Vermilion Teardrop": 10,
+        "Withered Bough": 5
+      },
+      {
+        "Coin": 8320,
+        "Snowswift Tail Feather": 5,
+        "Galeweaver": 7
+      },
+      {
+        "Coin": 13040,
+        "Snowswift Tail Feather": 10,
+        "Galeweaver": 15
+      },
+      {
+        "Coin": 27760,
+        "Snowswift Tail Feather": 20,
+        "Oceanifly": 6
+      },
+      {
+        "Coin": 65280,
+        "Snowswift Tail Feather": 40,
+        "Oceanifly": 12
+      },
+      {
+        "Coin": 194400,
+        "Snowswift Tail Feather": 80,
+        "Oceanifly": 25
+      }
+    ],
     "技能": [
       {
         "id": 540101,
@@ -15109,6 +19959,60 @@
             "值": 6,
             "格式": "{}m"
           }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Vermilion Teardrop": 3,
+            "Snowswift Tail Feather": 1
+          },
+          {
+            "Coin": 2080,
+            "Vermilion Teardrop": 6,
+            "Snowswift Tail Feather": 2
+          },
+          {
+            "Coin": 2560,
+            "Vermilion Teardrop": 9,
+            "Snowswift Tail Feather": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Vermilion Teardrop": 15,
+            "Snowswift Tail Feather": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Vermilion Teardrop": 30,
+            "Snowswift Tail Feather": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          }
         ]
       },
       {
@@ -15424,6 +20328,60 @@
             "格式": "{}s"
           }
         ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Vermilion Teardrop": 3,
+            "Snowswift Tail Feather": 1
+          },
+          {
+            "Coin": 2080,
+            "Vermilion Teardrop": 6,
+            "Snowswift Tail Feather": 2
+          },
+          {
+            "Coin": 2560,
+            "Vermilion Teardrop": 9,
+            "Snowswift Tail Feather": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Vermilion Teardrop": 15,
+            "Snowswift Tail Feather": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Vermilion Teardrop": 30,
+            "Snowswift Tail Feather": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          }
+        ],
         "术语解释": {
           "Purification Formula": "Gains additional Anemo Damage.",
           "Decay Formula": "Decreases Attack and deals periodic Anemo Damage to affected targets once every 2s."
@@ -15492,6 +20450,60 @@
               1.07,
               1.14
             ]
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Vermilion Teardrop": 3,
+            "Snowswift Tail Feather": 1
+          },
+          {
+            "Coin": 2080,
+            "Vermilion Teardrop": 6,
+            "Snowswift Tail Feather": 2
+          },
+          {
+            "Coin": 2560,
+            "Vermilion Teardrop": 9,
+            "Snowswift Tail Feather": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Vermilion Teardrop": 15,
+            "Snowswift Tail Feather": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Vermilion Teardrop": 30,
+            "Snowswift Tail Feather": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
           }
         ]
       },

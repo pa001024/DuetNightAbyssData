@@ -2004,7 +2004,7 @@
     "类型": "Characters",
     "生命": -0.27,
     "护盾": -0.27,
-    "效果": "Increases Skill Intensity by 54.0% for 30.0s when battle starts during commissions or Nocturnal Echoes."
+    "效果": "Increases Skill Damage by 54.0% for 30.0s when battle starts during commissions or Nocturnal Echoes."
   },
   {
     "id": 41313,
@@ -2281,7 +2281,7 @@
     "生命": 0.75,
     "防御": 0.75,
     "追加伤害": 0.18,
-    "效果": "Skill DMG -50.0%. When attacking with a weapon, deals 18.0% additional damage of the same element type."
+    "效果": "Skill Damage -50.0%. When attacking with a weapon, deals 18.0% additional damage of the same element type."
   },
   {
     "id": 41414,
@@ -2362,7 +2362,7 @@
     "生命": 0.75,
     "防御": 0.75,
     "追加伤害": 0.18,
-    "效果": "Skill DMG -50.0%. When attacking with a weapon, deals 18.0% additional damage of the same element type."
+    "效果": "Skill Damage -50.0%. When attacking with a weapon, deals 18.0% additional damage of the same element type."
   },
   {
     "id": 41424,
@@ -2443,7 +2443,7 @@
     "生命": 0.75,
     "防御": 0.75,
     "追加伤害": 0.18,
-    "效果": "Skill DMG -50.0%. When attacking with a weapon, deals 18.0% additional damage of the same element type."
+    "效果": "Skill Damage -50.0%. When attacking with a weapon, deals 18.0% additional damage of the same element type."
   },
   {
     "id": 41434,
@@ -2524,7 +2524,7 @@
     "生命": 0.75,
     "防御": 0.75,
     "追加伤害": 0.18,
-    "效果": "Skill DMG -50.0%. When attacking with a weapon, deals 18.0% additional damage of the same element type."
+    "效果": "Skill Damage -50.0%. When attacking with a weapon, deals 18.0% additional damage of the same element type."
   },
   {
     "id": 41444,
@@ -2605,7 +2605,7 @@
     "生命": 0.75,
     "防御": 0.75,
     "追加伤害": 0.18,
-    "效果": "Skill DMG -50.0%. When attacking with a weapon, deals 18.0% additional damage of the same element type."
+    "效果": "Skill Damage -50.0%. When attacking with a weapon, deals 18.0% additional damage of the same element type."
   },
   {
     "id": 41454,
@@ -2686,7 +2686,7 @@
     "生命": 0.75,
     "防御": 0.75,
     "追加伤害": 0.18,
-    "效果": "Skill DMG -50.0%. When attacking with a weapon, deals 18.0% additional damage of the same element type."
+    "效果": "Skill Damage -50.0%. When attacking with a weapon, deals 18.0% additional damage of the same element type."
   },
   {
     "id": 41464,
@@ -3297,14 +3297,14 @@
   {
     "id": 41805,
     "icon": "Jormungand01",
-    "名称": "Gleaming Whipblade",
+    "名称": "Gleaming Whipsword",
     "版本": "1.0",
     "系列": "Jormungand's ",
     "品质": "紫",
     "极性": "O",
     "耐受": 15,
     "类型": "Characters",
-    "效果": "Increases your Damage Dealt by 6.0% per Whipblade equipped by you or your Combat Partner (up to 18.0%; does not apply when acting as Combat Partner)."
+    "效果": "Increases your Damage Dealt by 6.0% per Whipsword equipped by you or your Combat Partner (up to 18.0%; does not apply when acting as Combat Partner)."
   },
   {
     "id": 41806,
@@ -3458,7 +3458,7 @@
     "耐受": 24,
     "类型": "Characters",
     "技能威力": 0.3,
-    "效果": "When an Electro character uses skills, they gain 1 stack that increases Skill DMG by 5.4% for 16.0s, up to 8.0 stacks."
+    "效果": "When an Electro character uses skills, they gain 1 stack that increases Skill Damage by 5.4% for 16.0s, up to 8.0 stacks."
   },
   {
     "id": 41951,
@@ -3472,7 +3472,7 @@
     "耐受": 24,
     "类型": "Characters",
     "技能威力": 0.3,
-    "效果": "When an Anemo character uses Combat Skills, it gains a 84.0% Skill Intensity Increase for 6.0s."
+    "效果": "When an Anemo character uses Combat Skills, it gains a 84.0% Skill Damage Increase for 6.0s."
   },
   {
     "id": 41952,
@@ -4357,7 +4357,7 @@
     "类型": "Characters",
     "生命": -0.5,
     "护盾": -0.5,
-    "效果": "Increases Skill Intensity by 100.0% for 30.0s when battle starts during commissions or Nocturnal Echoes."
+    "效果": "Increases Skill Damage by 100.0% for 30.0s when battle starts during commissions or Nocturnal Echoes."
   },
   {
     "id": 51313,
@@ -4634,7 +4634,7 @@
     "生命": 1.54,
     "防御": 1.54,
     "追加伤害": 0.33,
-    "效果": "Skill DMG -50.0%. When attacking with a weapon, deals 33.0% additional damage of the same element type."
+    "效果": "Skill Damage -50.0%. When attacking with a weapon, deals 33.0% additional damage of the same element type."
   },
   {
     "id": 51414,
@@ -4715,7 +4715,7 @@
     "生命": 1.54,
     "防御": 1.54,
     "追加伤害": 0.33,
-    "效果": "Skill DMG -50.0%. When attacking with a weapon, deals 33.0% additional damage of the same element type."
+    "效果": "Skill Damage -50.0%. When attacking with a weapon, deals 33.0% additional damage of the same element type."
   },
   {
     "id": 51424,
@@ -4796,7 +4796,7 @@
     "生命": 1.54,
     "防御": 1.54,
     "追加伤害": 0.33,
-    "效果": "Skill DMG -50.0%. When attacking with a weapon, deals 33.0% additional damage of the same element type."
+    "效果": "Skill Damage -50.0%. When attacking with a weapon, deals 33.0% additional damage of the same element type."
   },
   {
     "id": 51434,
@@ -4877,7 +4877,7 @@
     "生命": 1.54,
     "防御": 1.54,
     "追加伤害": 0.33,
-    "效果": "Skill DMG -50.0%. When attacking with a weapon, deals 33.0% additional damage of the same element type."
+    "效果": "Skill Damage -50.0%. When attacking with a weapon, deals 33.0% additional damage of the same element type."
   },
   {
     "id": 51444,
@@ -4958,7 +4958,7 @@
     "生命": 1.54,
     "防御": 1.54,
     "追加伤害": 0.33,
-    "效果": "Skill DMG -50.0%. When attacking with a weapon, deals 33.0% additional damage of the same element type."
+    "效果": "Skill Damage -50.0%. When attacking with a weapon, deals 33.0% additional damage of the same element type."
   },
   {
     "id": 51454,
@@ -5039,7 +5039,7 @@
     "生命": 1.54,
     "防御": 1.54,
     "追加伤害": 0.33,
-    "效果": "Skill DMG -50.0%. When attacking with a weapon, deals 33.0% additional damage of the same element type."
+    "效果": "Skill Damage -50.0%. When attacking with a weapon, deals 33.0% additional damage of the same element type."
   },
   {
     "id": 51464,
@@ -5650,14 +5650,14 @@
   {
     "id": 51805,
     "icon": "Jormungand01",
-    "名称": "Gleaming Whipblade",
+    "名称": "Gleaming Whipsword",
     "版本": "1.0",
     "系列": "Jormungand's ",
     "品质": "金",
     "极性": "O",
     "耐受": 14,
     "类型": "Characters",
-    "效果": "Increases your Damage Dealt by 11.0% per Whipblade equipped by you or your Combat Partner (up to 33.0%; does not apply when acting as Combat Partner)."
+    "效果": "Increases your Damage Dealt by 11.0% per Whipsword equipped by you or your Combat Partner (up to 33.0%; does not apply when acting as Combat Partner)."
   },
   {
     "id": 51806,
@@ -5811,7 +5811,7 @@
     "耐受": 27,
     "类型": "Characters",
     "技能威力": 0.55,
-    "效果": "When an Electro character uses skills, they gain 1 stack that increases Skill DMG by 9.9% for 16.0s, up to 8.0 stacks."
+    "效果": "When an Electro character uses skills, they gain 1 stack that increases Skill Damage by 9.9% for 16.0s, up to 8.0 stacks."
   },
   {
     "id": 51951,
@@ -5825,7 +5825,7 @@
     "耐受": 27,
     "类型": "Characters",
     "技能威力": 0.55,
-    "效果": "When an Anemo character uses Combat Skills, it gains a 154.0% Skill Intensity Increase for 6.0s."
+    "效果": "When an Anemo character uses Combat Skills, it gains a 154.0% Skill Damage Increase for 6.0s."
   },
   {
     "id": 51952,
@@ -6395,7 +6395,7 @@
     "耐受": 29,
     "类型": "Characters",
     "减伤": 0.3,
-    "效果": "Grants +100.0% Skill Intensity to self and allies when Skill Efficiency is ≥ 150.0%."
+    "效果": "Grants +100.0% Skill Damage to self and allies when Skill Efficiency is ≥ 150.0%."
   },
   {
     "id": 56124,
@@ -6411,7 +6411,7 @@
     "神智": 1.0,
     "技能效益": 1.0,
     "减伤": 0.3,
-    "效果": "Grants +100.0% Skill Intensity to self and allies when Skill Efficiency is ≥ 150.0%."
+    "效果": "Grants +100.0% Skill Damage to self and allies when Skill Efficiency is ≥ 150.0%."
   },
   {
     "id": 56131,
@@ -6455,7 +6455,7 @@
     "耐受": 29,
     "类型": "Characters",
     "减伤": 0.3,
-    "效果": "Grants +100.0% Skill Intensity to self and allies when Skill Efficiency is ≥ 150.0%."
+    "效果": "Grants +100.0% Skill Damage to self and allies when Skill Efficiency is ≥ 150.0%."
   },
   {
     "id": 56134,
@@ -6471,7 +6471,7 @@
     "神智": 1.0,
     "技能效益": 1.0,
     "减伤": 0.3,
-    "效果": "Grants +100.0% Skill Intensity to self and allies when Skill Efficiency is ≥ 150.0%."
+    "效果": "Grants +100.0% Skill Damage to self and allies when Skill Efficiency is ≥ 150.0%."
   },
   {
     "id": 56141,
@@ -6485,7 +6485,7 @@
     "耐受": 29,
     "类型": "Characters",
     "减伤": 0.3,
-    "效果": "Grants +88.0% Skill Intensity when Skill Efficiency is ≥ 150.0%."
+    "效果": "Grants +88.0% Skill Damage when Skill Efficiency is ≥ 150.0%."
   },
   {
     "id": 56142,
@@ -6501,7 +6501,7 @@
     "神智": 1.0,
     "技能效益": 1.0,
     "减伤": 0.3,
-    "效果": "Grants +88.0% Skill Intensity when Skill Efficiency is ≥ 150.0%."
+    "效果": "Grants +88.0% Skill Damage when Skill Efficiency is ≥ 150.0%."
   },
   {
     "id": 56143,
@@ -6545,7 +6545,7 @@
     "耐受": 25,
     "类型": "Characters",
     "减伤": 0.3,
-    "效果": "Grants +88.0% Skill Intensity when Skill Efficiency is ≥ 130.0%."
+    "效果": "Grants +88.0% Skill Damage when Skill Efficiency is ≥ 130.0%."
   },
   {
     "id": 56152,
@@ -6561,7 +6561,7 @@
     "神智": 1.65,
     "技能效益": 0.44,
     "减伤": 0.5,
-    "效果": "Grants +88.0% Skill Intensity when Skill Efficiency is ≥ 130.0%."
+    "效果": "Grants +88.0% Skill Damage when Skill Efficiency is ≥ 130.0%."
   },
   {
     "id": 56153,

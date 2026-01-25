@@ -1,0 +1,419 @@
+require("UnLua")
+local EMCache = require("EMCache.EMCache")
+local S = Class("BluePrints.UI.BP_EMUserWidget_C")
+
+function S:Construct()
+  self.Button_Area.OnClicked:Add(self, self.OnBtnClicked)
+  self.NoticeCloseTime = 0.5
+  self.Button_Area.OnHovered:Add(self, self.OnBtnAreaHover)
+  self.Button_Area.OnUnhovered:Add(self, self.OnBtnAreaUnHover)
+  self.Bg_Set.Button_Base.OnClicked:Add(self, self.OnMainBtnClicked)
+end
+
+function S:Init(Parent, CacheName, CacheInfo, Content)
+  rawset(self, "Parent", Parent.Content and Parent.Content.ParentWidget.Parent or Parent)
+  rawset(self, "CacheName", CacheName)
+  rawset(self, "CacheInfo", CacheInfo)
+  rawset(self, "IsOther", false)
+  rawset(self, "CurOptionContent", Content)
+  if Content then
+    Content.ClickWidget = self
+  end
+  self.Button_Area:SetVisibility(UE4.ESlateVisibility.Visible)
+  self.Text_Fixed:SetRenderOpacity(1.0)
+  if self.CacheInfo then
+    self.DefaultValue = self.CacheInfo.DefaultValue
+    if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" and self.CacheInfo.DefaultValueM then
+      self.DefaultValue = self.CacheInfo.DefaultValueM
+    end
+  end
+  if CacheInfo then
+    self.IsOther = true
+    self:InitOtherKeyText()
+  else
+    self:InitKeyText()
+  end
+  self:SetHoverVisibility()
+  if self.CacheName == "CustomerService" then
+    ReddotManager.AddListenerEx("Setting_Service", self, self.OnServiceReddotChange)
+  end
+end
+
+function S:Gamepad_SetHovered(bIsHovered)
+  if bIsHovered then
+    self:OnBtnAreaHover()
+  else
+    self:OnBtnAreaUnHover()
+  end
+end
+
+function S:GetBottomKeyInfos()
+  return {
+    {
+      UIConst.GamePadImgKey.FaceButtonBottom,
+      GText("UI_Tips_Ensure")
+    },
+    {
+      UIConst.GamePadImgKey.FaceButtonRight,
+      GText("UI_BACK")
+    }
+  }
+end
+
+function S:Handle_KeyDownOnGamePad(InKeyName)
+  if InKeyName == Const.GamepadFaceButtonDown then
+    self:OnBtnClicked()
+    return true
+  end
+  return false
+end
+
+function S:Handle_KeyUpOnGamePad(InKeyName)
+end
+
+function S:GetFirstWidgetToNavigate()
+  return self
+end
+
+function S:GetLastWidgetToNavigate()
+  return self
+end
+
+function S:OnBtnDragClicked()
+  self.Parent:OnClickAllLeftMouseButton()
+end
+
+function S:OnBtnClicked()
+  UIUtils.PlayCommonBtnSe(self)
+  if self.IsOther then
+    if self["On" .. self.CacheName .. "Clicked"] then
+      self["On" .. self.CacheName .. "Clicked"](self)
+    end
+  else
+    self.CurOptionContent.ParentWidget:OnClickListOption(self.CurOptionContent)
+  end
+end
+
+function S:OnUpOptionValueChanged()
+  if self["On" .. self.CacheName .. "UpOptionValueChanged"] then
+    self["On" .. self.CacheName .. "UpOptionValueChanged"](self)
+  end
+end
+
+function S:OnMainBtnClicked()
+  if UIUtils.IsGamepadInput() then
+    self:OnBtnClicked()
+  end
+end
+
+function S:SetHoverVisibility()
+  if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+    self.Bg_Set:PlayAnimation(self.Bg_Set.Normal)
+    self.Bg_Set.Bg_Hover:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Bg_Set.Bg_Outline:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.Bg_Set.Bg_Hover:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Bg_Set.Bg_Outline:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+end
+
+function S:OnMouseEnter(MyGeometry, MouseEvent)
+  if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
+    return
+  end
+  self.Parent:AddHoverContent(self)
+  self:OnBtnAreaHover()
+end
+
+function S:OnMouseLeave(MyGeometry, MouseEvent)
+  if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
+    return
+  end
+  self.Parent:RemoveHoverContent(self)
+  self:OnBtnAreaUnHover()
+end
+
+function S:OnBtnAreaHover()
+  self.Bg_Set:StopAnimation(self.Bg_Set.UnHover)
+  self.Bg_Set:PlayAnimation(self.Bg_Set.Hover)
+end
+
+function S:OnBtnAreaUnHover()
+  self.Bg_Set:StopAnimation(self.Bg_Set.Hover)
+  self.Bg_Set:PlayAnimation(self.Bg_Set.UnHover)
+end
+
+function S:InitOtherKeyText()
+  self.Text_Option:SetText(GText(self.CacheInfo.CacheText))
+  if self["Set" .. self.CacheName .. "KeyText"] then
+    self["Set" .. self.CacheName .. "KeyText"](self)
+  else
+    local KeyText = self.DefaultValue
+    self.Text_Fixed:SetText(GText(KeyText))
+    self.Key_Modified:CreateCommonKey({
+      KeyInfoList = {
+        {
+          Type = "Text",
+          Text = GText(KeyText)
+        }
+      }
+    })
+    self.Key_State:SetActiveWidgetIndex(0)
+  end
+end
+
+function S:InitKeyText()
+  if self.CurOptionContent == nil then
+    return
+  end
+  self.Text_Option:SetText(self.CurOptionContent.ActionNameText)
+  self.Key_Modified:CreateCommonKey({
+    KeyInfoList = {
+      {
+        Type = "Text",
+        Text = self.CurOptionContent.Key
+      }
+    }
+  })
+end
+
+function S:ChangeKeyText(NewKey)
+  self:PlayAnimation(self.Enter)
+  self.CurOptionContent.Key = NewKey
+  local NewKeyText = CommonUtils:GetKeyText(NewKey)
+  self.CurOptionContent.KeyText = NewKeyText
+  self.Text_Fixed:SetText(NewKeyText)
+  self.Key_Modified:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Text", Text = NewKey}
+    }
+  })
+end
+
+function S:SetReleaseStuckKeyText()
+  local KeyText = self.DefaultValue
+  self.Key_State:SetActiveWidgetIndex(1)
+  if self:HasValidPortal() then
+    KeyText = GText("UI_OPTION_ReleaseStuck_Unable")
+    self.Button_Area:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Text_Fixed:SetRenderOpacity(0.4)
+  end
+  self.Text_Fixed:SetText(GText(KeyText))
+  self.Key_Modified:CreateCommonKey({
+    KeyInfoList = {
+      {
+        Type = "Text",
+        Text = GText(KeyText)
+      }
+    }
+  })
+end
+
+function S:OnReleaseStuckClicked()
+  self:PlayAnimation("Enter")
+  if not self:HasValidPortal() then
+    local Params = {}
+    Params.RightCallbackFunction = self.ResetLocation
+    Params.LeftCallbackObj = self
+    Params.RightCallbackObj = self
+    Params.CloseBtnCallbackObj = self
+    UIManager(self):ShowCommonPopupUI(100048, Params, self)
+  end
+end
+
+function S:HasValidPortal()
+  local Avatar = GWorld:GetAvatar()
+  return Avatar and not Avatar:IsInDungeon()
+end
+
+function S:ResetLocation()
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+  Player.RPCComponent:RequestSetPlayerSafeLoction(Player.Eid)
+  self.Parent:CloseSelfAndEsc()
+end
+
+function S:OnServiceReddotChange(Count)
+  if Count > 0 then
+    self.Reddot:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.Reddot:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+end
+
+function S:SetCustomerServiceKeyText()
+  local KeyText = self.DefaultValue
+  self.Key_State:SetActiveWidgetIndex(1)
+  self.Text_Fixed:SetText(GText(KeyText))
+  local Reddot = ReddotManager.GetTreeNode("Setting_Service")
+  if Reddot and Reddot.Count > 0 then
+    self.Reddot:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.Reddot:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+end
+
+function S:OnCustomerServiceClicked()
+  HeroUSDKSubsystem(self):OpenService()
+  ReddotManager.ClearLeafNodeCount("Setting_Service")
+end
+
+function S:SetLogUpdateKeyText()
+  local KeyText = self.DefaultValue
+  self.Key_State:SetActiveWidgetIndex(1)
+  self.Text_Fixed:SetText(GText(KeyText))
+end
+
+function S:OnLogUpdateUpOptionValueChanged()
+  if 1 == self.UpOptionValue then
+    self.UpOptionValue = false
+  end
+  if self.UpOptionValue then
+    rawset(self, "IsForbidden", false)
+    self:PlayAnimationReverse(self.Forbidden)
+  else
+    if self.IsForbidden then
+      return
+    end
+    rawset(self, "IsForbidden", true)
+    self:PlayAnimation(self.Forbidden)
+  end
+end
+
+function S:OnLogUpdateClicked()
+  local EnhanceLogSubsystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UEnhanceLogSubsystem:StaticClass())
+  if EnhanceLogSubsystem and EnhanceLogSubsystem:GetEnableEnhanceLog() then
+    local Params = {}
+    
+    function Params.RightCallbackFunction()
+      if EnhanceLogSubsystem then
+        EnhanceLogSubsystem:UploadEnhanceLog()
+        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Opition_Log_Updating"))
+      end
+    end
+    
+    UIManager(self):ShowCommonPopupUI(100281, Params, self.Parent)
+  else
+    UEPrint("请先开启增强日志功能")
+  end
+end
+
+function S:SetLogCleanKeyText()
+  local KeyText = self.DefaultValue
+  self.Key_State:SetActiveWidgetIndex(1)
+  self.Text_Fixed:SetText(GText(KeyText))
+end
+
+function S:OnLogCleanClicked()
+  local EnhanceLogSubsystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UEnhanceLogSubsystem:StaticClass())
+  if EnhanceLogSubsystem then
+    EnhanceLogSubsystem:DeleteAllLogFiles()
+  end
+end
+
+function S:SetExchangeCodeKeyText()
+  local KeyText = self.DefaultValue
+  self.Key_State:SetActiveWidgetIndex(1)
+  self.Text_Fixed:SetText(GText(KeyText))
+end
+
+function S:OnExchangeCodeClicked()
+  local Params = {}
+  Params.IsExchangeCode = true
+  Params.FirstInit = true
+  Params.UseReName = true
+  Params.Title = GText("UI_COMMONPOP_TITLE_100127")
+  UIManager(self):ShowCommonPopupUI(100133, Params, self.Parent)
+end
+
+function S:SetTermsOfServiceKeyText()
+  local KeyText = self.CacheInfo.DefaultValue
+  self.Key_State:SetActiveWidgetIndex(1)
+  self.Link = GLink(self.CacheName)
+  self.Text_Fixed:SetText(GText(KeyText))
+end
+
+function S:OnTermsOfServiceClicked()
+  UE4.UKismetSystemLibrary.LaunchURL(self.Link)
+end
+
+function S:SetPrivacyPolicyKeyText()
+  local KeyText = self.CacheInfo.DefaultValue
+  self.Key_State:SetActiveWidgetIndex(1)
+  self.Link = GLink(self.CacheName)
+  self.Text_Fixed:SetText(GText(KeyText))
+end
+
+function S:OnPrivacyPolicyClicked()
+  UE4.UKismetSystemLibrary.LaunchURL(self.Link)
+end
+
+function S:SetChildPrivacyKeyText()
+  local KeyText = self.CacheInfo.DefaultValue
+  self.Key_State:SetActiveWidgetIndex(1)
+  self.Link = GLink(self.CacheName)
+  self.Text_Fixed:SetText(GText(KeyText))
+end
+
+function S:OnChildPrivacyClicked()
+  UE4.UKismetSystemLibrary.LaunchURL(self.Link)
+end
+
+function S:SetThirdPartySDKKeyText()
+  local KeyText = self.CacheInfo.DefaultValue
+  self.Key_State:SetActiveWidgetIndex(1)
+  self.Link = GLink(self.CacheName)
+  self.Text_Fixed:SetText(GText(KeyText))
+end
+
+function S:OnThirdPartySDKClicked()
+  UE4.UKismetSystemLibrary.LaunchURL(self.Link)
+end
+
+function S:SetLogOffAccountKeyText()
+  local KeyText = self.CacheInfo.DefaultValue
+  self.Key_State:SetActiveWidgetIndex(1)
+  self.Text_Fixed:SetText(GText(KeyText))
+end
+
+function S:OnLogOffAccountClicked()
+  HeroUSDKSubsystem(self):AccountCancellation()
+end
+
+function S:SetUserCentreKeyText()
+  local KeyText = self.CacheInfo.DefaultValue
+  self.Key_State:SetActiveWidgetIndex(1)
+  self.Text_Fixed:SetText(GText(KeyText))
+end
+
+function S:OnUserCentreClicked()
+  HeroUSDKSubsystem(self):ShowAccountCenter()
+end
+
+function S:SetUserPolicyKeyText()
+  local KeyText = self.CacheInfo.DefaultValue
+  self.Key_State:SetActiveWidgetIndex(1)
+  self.Link = GLink(self.CacheName)
+  self.Text_Fixed:SetText(GText(KeyText))
+end
+
+function S:OnUserPolicyClicked()
+  UE4.UKismetSystemLibrary.LaunchURL(self.Link)
+end
+
+function S:OnVoiceResourceClicked()
+  EventManager:FireEvent(EventID.OnVoiceResourceClicked)
+end
+
+function S:SetVoiceResourceKeyText()
+  self.Key_State:SetActiveWidgetIndex(1)
+  local KeyText = self.CacheInfo.DefaultValue
+  self.Text_Fixed:SetText(GText(KeyText))
+end
+
+function S:Destruct()
+  if self.CacheName == "CustomerService" then
+    ReddotManager.RemoveListener("Setting_Service", self)
+  end
+end
+
+return S

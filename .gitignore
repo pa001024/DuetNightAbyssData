@@ -3,3 +3,6 @@ out/
 test_*.py
 .claude/
 copy.tran.bat
+.env
+copy_resource_icons.py
+bin/

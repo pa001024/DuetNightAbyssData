@@ -1,0 +1,29 @@
+local SwitchStoryModeNode = Class("StoryCreator.StoryLogic.StorylineNodes.BaseQuestNode")
+
+function SwitchStoryModeNode:Init()
+  self.LastStoryMode = false
+  local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
+  self.LastStoryMode = PlayerController:GetStoryModeState()
+  self.IsOpen = false
+end
+
+function SwitchStoryModeNode:Execute()
+  DebugPrint("-----------------------------------SwitchStoryModeNode-----------------------------------", self.IsOpen)
+  self:SetStoryModeInternal(self.IsOpen)
+end
+
+function SwitchStoryModeNode:SetStoryModeInternal(bEnable)
+  local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
+  PlayerController:SetStoryModeState(bEnable)
+end
+
+function SwitchStoryModeNode:OnQuestlineSuccess()
+  self.Context:SaveSuitUpdateData("UpdateSuitKey2Value", CommonConst.SuitType.PlayerCharacterSuit, CommonConst.PlayerCharacterSuit.SwitchStoryMode, "IsInStoryMode", self.IsOpen)
+end
+
+function SwitchStoryModeNode:OnQuestlineFail()
+  DebugPrint("SwitchStoryModeNode On QuestlineFail,还原剧情模式，还原为", self.LastStoryMode)
+  self:SetStoryModeInternal(self.LastStoryMode)
+end
+
+return SwitchStoryModeNode

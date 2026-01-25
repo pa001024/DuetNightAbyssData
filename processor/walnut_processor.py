@@ -7,6 +7,8 @@ class WalnutProcessor(BaseProcessor):
         self.file_type = "Walnut"
         # 加载Resource数据用于查询资源名称
         self.resource_data = data_loader.load_json("Resource.json")
+        self.weapon_data = data_loader.load_json("Weapon.json")
+        self.mod_data = data_loader.load_json("Mod.json")
         # AccessKey映射表，将英文获取途径映射为中文
         self.access_key_map = {
             "Dungeon": "副本",
@@ -111,21 +113,21 @@ class WalnutProcessor(BaseProcessor):
                 # 根据ProductType查找对应表
                 if product_type == "Weapon":
                     # 从Weapon.json中查找武器
-                    weapon_data = self.data_loader.load_json("Weapon.json")
-                    weapon_info = weapon_data.get(str(product_id), {})
+                    weapon_info = self.weapon_data.get(str(product_id), {})
                     weapon_name_key = weapon_info.get("WeaponName", "")
                     if weapon_name_key:
                         weapon_name = self.get_translated_text(weapon_name_key)
+                        resource["id"] = weapon_info.get("WeaponId", 0)
                         resource["name"] = weapon_name
                         resource["type"] = "Weapon"
                         resource["d"] = 1
                 elif product_type == "Mod":
                     # 从Char.json中查找角色
-                    mod_data = self.data_loader.load_json("Mod.json")
-                    mod_info = mod_data.get(str(product_id), {})
+                    mod_info = self.mod_data.get(str(product_id), {})
                     mod_name_key = mod_info.get("Name", "")
                     if mod_name_key:
                         mod_name = self.get_translated_text(mod_name_key)
+                        resource["id"] = mod_info.get("Id", 0)
                         resource["name"] = mod_name
                         resource["type"] = "Mod"
                         resource["d"] = 1

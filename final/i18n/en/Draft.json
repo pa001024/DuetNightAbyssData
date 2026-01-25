@@ -3123,7 +3123,7 @@
   },
   {
     "id": 151805,
-    "n": "Jormungand's Gleaming Whipblade",
+    "n": "Jormungand's Gleaming Whipsword",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3134,7 +3134,7 @@
     "x": [
       {
         "id": 41805,
-        "n": "Jormungand's Gleaming Whipblade",
+        "n": "Jormungand's Gleaming Whipsword",
         "c": 5,
         "t": "Mod"
       }
@@ -5268,7 +5268,7 @@
   },
   {
     "id": 310031,
-    "n": "Headpiece: Fortune's Favour",
+    "n": "Fortune's Favour — Headpiece",
     "r": 4,
     "v": "1.0",
     "t": "CharAccessory",
@@ -6657,7 +6657,7 @@
   },
   {
     "id": 330007,
-    "n": "Axeident",
+    "n": "金斧银斧与脑斧",
     "r": 4,
     "v": "1.0",
     "t": "CharAccessory",

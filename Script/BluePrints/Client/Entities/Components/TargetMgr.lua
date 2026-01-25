@@ -1,0 +1,69 @@
+local Component = {}
+
+function Component:TriggerTarget(targets)
+  if type(targets) ~= "table" then
+    return
+  end
+  
+  local function callback(ret)
+    PrintTable({TriggerTarget = 1, ret = ret})
+  end
+  
+  self:CallServer("TriggerTarget", callback, targets)
+end
+
+function Component:GetTargetCount(id)
+  local target = self.AchvTargets[id]
+  if target then
+    return target.Count
+  end
+end
+
+function Component:GetTargetCurrentValue(id)
+  local target = self.AchvTargets[id]
+  if target then
+    return target.CurrentValue
+  end
+end
+
+function Component:CombatItemTargetFinish(TargetType, UniqueAttr, Count, ...)
+  local Params = {
+    ...
+  }
+  if #Params < 1 then
+    return
+  end
+  local Key = tostring(TargetType) .. "_" .. tostring(Params[1])
+  if not DataMgr.TargetTypeIdValidMap[Key] then
+    return
+  end
+  table.insert(Params, 0)
+  self:ServerTargetFinish(TargetType, UniqueAttr, Count, table.unpack(Params))
+  Params[#Params] = 1
+  self:ServerTargetFinish(TargetType, UniqueAttr, Count, table.unpack(Params))
+end
+
+function Component:ServerTargetFinish(TargetType, UniqueAttr, Count, ...)
+  self.logger.debug("ServerTargetFinish", TargetType, UniqueAttr, Count, ...)
+  self:CallServerMethod("ServerTargetFinish", TargetType, UniqueAttr, Count, {
+    ...
+  })
+end
+
+function Component:ConditionComplete(ConditionId)
+  print(_G.LogTag, "ConditionComplete", ConditionId)
+  
+  local function cb(ret)
+    if ret then
+      EventManager:FireEvent(EventID.ConditionComplete, ConditionId)
+    end
+  end
+  
+  ConditionUtils.ServerCheckCondition(self, ConditionId, cb)
+end
+
+function Component:GMTestCheckTarget(Index, ErrorReason)
+  self.logger.debug(string.format("当前测试的成就触发器: %d, 执行结果：%s ", Index, ErrorReason))
+end
+
+return Component

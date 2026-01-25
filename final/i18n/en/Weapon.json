@@ -17,6 +17,43 @@
     "加成": {
       "攻击": 0.6
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Damaged Sal Volatile": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Fuel Reagent": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6900,
+        "Fuel Reagent": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Blade": 1
+      },
+      {
+        "Coin": 17000,
+        "Fuel Reagent": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 49000,
+        "Fuel Reagent": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Blade": 4
+      },
+      {
+        "Coin": 180000,
+        "Fuel Reagent": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Blade": 8
+      }
+    ],
     "熔炼": [
       "Character ATK ‍+60.0%.",
       "Character ATK ‍+72.0%.",
@@ -33,37 +70,66 @@
           "1-Hit DMG": "45.0%",
           "2-Hit DMG": "50.0%",
           "3-Hit DMG": "40.0%×2",
-          "4-Hit DMG": "82.0%",
-          "削韧": 25,
-          "延迟": "0.050s",
-          "卡肉": "0.030s"
-        }
+          "4-Hit DMG": "82.0%"
+        },
+        "id": 1010101,
+        "削韧": [
+          25,
+          30,
+          30,
+          50
+        ],
+        "延迟": [
+          0.05,
+          0.1,
+          0,
+          0.05
+        ],
+        "卡肉": [
+          0.03,
+          0.03,
+          0,
+          0.07
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "113.0%",
-          "削韧": 73,
-          "卡肉": "0.030s"
-        }
+          "Charged Attack DMG": "113.0%"
+        },
+        "id": 1010102,
+        "削韧": [
+          73
+        ],
+        "卡肉": [
+          0.03
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%",
-          "削韧": 33
-        }
+          "Plunge DMG": "51.0%"
+        },
+        "id": 1010103,
+        "削韧": [
+          33
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%",
-          "削韧": 33,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "51.0%"
+        },
+        "id": 1010104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -85,6 +151,43 @@
     "加成": {
       "触发": 0.75
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Damaged Sal Volatile": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Fuel Reagent": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6900,
+        "Fuel Reagent": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Blade": 1
+      },
+      {
+        "Coin": 17000,
+        "Fuel Reagent": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 49000,
+        "Fuel Reagent": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Blade": 4
+      },
+      {
+        "Coin": 180000,
+        "Fuel Reagent": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Blade": 8
+      }
+    ],
     "熔炼": [
       "Trigger Probability +75.0%. When a Hydro character triggers a bonus effect with this weapon, other allies gain +33.0% ATK for 6.0s.",
       "Trigger Probability +90.0%. When a Hydro character triggers a bonus effect with this weapon, other allies gain +39.6% ATK for 6.0s.",
@@ -101,37 +204,66 @@
           "1-Hit DMG": "45.0%",
           "2-Hit DMG": "50.0%",
           "3-Hit DMG": "40.0%×2",
-          "4-Hit DMG": "82.0%",
-          "削韧": 25,
-          "延迟": "0.050s",
-          "卡肉": "0.030s"
-        }
+          "4-Hit DMG": "82.0%"
+        },
+        "id": 1010101,
+        "削韧": [
+          25,
+          30,
+          30,
+          50
+        ],
+        "延迟": [
+          0.05,
+          0.1,
+          0,
+          0.05
+        ],
+        "卡肉": [
+          0.03,
+          0.03,
+          0,
+          0.07
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "113.0%",
-          "削韧": 73,
-          "卡肉": "0.030s"
-        }
+          "Charged Attack DMG": "113.0%"
+        },
+        "id": 1010102,
+        "削韧": [
+          73
+        ],
+        "卡肉": [
+          0.03
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%",
-          "削韧": 33
-        }
+          "Plunge DMG": "51.0%"
+        },
+        "id": 1010103,
+        "削韧": [
+          33
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%",
-          "削韧": 33,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "51.0%"
+        },
+        "id": 1010104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -153,6 +285,43 @@
     "加成": {
       "攻击范围": 100
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Damaged Sal Volatile": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Fuel Reagent": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6900,
+        "Fuel Reagent": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Blade": 1
+      },
+      {
+        "Coin": 17000,
+        "Fuel Reagent": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 49000,
+        "Fuel Reagent": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Blade": 4
+      },
+      {
+        "Coin": 180000,
+        "Fuel Reagent": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Blade": 8
+      }
+    ],
     "熔炼": [
       "ATK Range ‍+1.0. Landing a CRIT with this weapon has a 33.0% chance to restore 3.0 Sanity. Can trigger once every 0.5s.",
       "ATK Range ‍+1.2. Landing a CRIT with this weapon has a 39.6% chance to restore 3.0 Sanity. Can trigger once every 0.5s.",
@@ -169,37 +338,66 @@
           "1-Hit DMG": "45.0%",
           "2-Hit DMG": "50.0%",
           "3-Hit DMG": "40.0%×2",
-          "4-Hit DMG": "82.0%",
-          "削韧": 25,
-          "延迟": "0.050s",
-          "卡肉": "0.030s"
-        }
+          "4-Hit DMG": "82.0%"
+        },
+        "id": 1010101,
+        "削韧": [
+          25,
+          30,
+          30,
+          50
+        ],
+        "延迟": [
+          0.05,
+          0.1,
+          0,
+          0.05
+        ],
+        "卡肉": [
+          0.03,
+          0.03,
+          0,
+          0.07
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "113.0%",
-          "削韧": 73,
-          "卡肉": "0.030s"
-        }
+          "Charged Attack DMG": "113.0%"
+        },
+        "id": 1010102,
+        "削韧": [
+          73
+        ],
+        "卡肉": [
+          0.03
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%",
-          "削韧": 33
-        }
+          "Plunge DMG": "51.0%"
+        },
+        "id": 1010103,
+        "削韧": [
+          33
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%",
-          "削韧": 33,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "51.0%"
+        },
+        "id": 1010104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -221,6 +419,43 @@
     "加成": {
       "防御": 0.5
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Damaged Sal Volatile": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Fuel Reagent": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6900,
+        "Fuel Reagent": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Blade": 1
+      },
+      {
+        "Coin": 17000,
+        "Fuel Reagent": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 49000,
+        "Fuel Reagent": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Blade": 4
+      },
+      {
+        "Coin": 180000,
+        "Fuel Reagent": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Blade": 8
+      }
+    ],
     "熔炼": [
       "DEF +50.0%. When dealing damage with this weapon triggers Bonus Effect, there's a 25.0% chance to decrease the target's Shield by 350.0% of the user's DEF.",
       "DEF +60.0%. When dealing damage with this weapon triggers Bonus Effect, there's a 30.0% chance to decrease the target's Shield by 350.0% of the user's DEF.",
@@ -237,37 +472,66 @@
           "1-Hit DMG": "45.0%",
           "2-Hit DMG": "50.0%",
           "3-Hit DMG": "40.0%×2",
-          "4-Hit DMG": "82.0%",
-          "削韧": 25,
-          "延迟": "0.050s",
-          "卡肉": "0.030s"
-        }
+          "4-Hit DMG": "82.0%"
+        },
+        "id": 1010101,
+        "削韧": [
+          25,
+          30,
+          30,
+          50
+        ],
+        "延迟": [
+          0.05,
+          0.1,
+          0,
+          0.05
+        ],
+        "卡肉": [
+          0.03,
+          0.03,
+          0,
+          0.07
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "113.0%",
-          "削韧": 73,
-          "卡肉": "0.030s"
-        }
+          "Charged Attack DMG": "113.0%"
+        },
+        "id": 1010102,
+        "削韧": [
+          73
+        ],
+        "卡肉": [
+          0.03
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%",
-          "削韧": 33
-        }
+          "Plunge DMG": "51.0%"
+        },
+        "id": 1010103,
+        "削韧": [
+          33
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%",
-          "削韧": 33,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "51.0%"
+        },
+        "id": 1010104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -289,6 +553,43 @@
     "加成": {
       "攻速": 0.25
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Damaged Sal Volatile": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Fuel Reagent": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6900,
+        "Fuel Reagent": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Blade": 1
+      },
+      {
+        "Coin": 17000,
+        "Fuel Reagent": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 49000,
+        "Fuel Reagent": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Blade": 4
+      },
+      {
+        "Coin": 180000,
+        "Fuel Reagent": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Blade": 8
+      }
+    ],
     "熔炼": [
       "ATK Speed +25.0%‍. When performing a Charged Attack with this weapon, there is a 28.0% chance to reduce Geniemon Support CD by 3.0s.",
       "ATK Speed +30.0%‍. When performing a Charged Attack with this weapon, there is a 33.6% chance to reduce Geniemon Support CD by 3.0s.",
@@ -305,37 +606,66 @@
           "1-Hit DMG": "45.0%",
           "2-Hit DMG": "50.0%",
           "3-Hit DMG": "40.0%×2",
-          "4-Hit DMG": "82.0%",
-          "削韧": 25,
-          "延迟": "0.050s",
-          "卡肉": "0.030s"
-        }
+          "4-Hit DMG": "82.0%"
+        },
+        "id": 1010101,
+        "削韧": [
+          25,
+          30,
+          30,
+          50
+        ],
+        "延迟": [
+          0.05,
+          0.1,
+          0,
+          0.05
+        ],
+        "卡肉": [
+          0.03,
+          0.03,
+          0,
+          0.07
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "113.0%",
-          "削韧": 73,
-          "卡肉": "0.030s"
-        }
+          "Charged Attack DMG": "113.0%"
+        },
+        "id": 1010102,
+        "削韧": [
+          73
+        ],
+        "卡肉": [
+          0.03
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%",
-          "削韧": 33
-        }
+          "Plunge DMG": "51.0%"
+        },
+        "id": 1010103,
+        "削韧": [
+          33
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%",
-          "削韧": 33,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "51.0%"
+        },
+        "id": 1010104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -357,13 +687,50 @@
     "加成": {
       "技能范围": 0.3
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Stone Powder": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Insulation Coating": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6900,
+        "Insulation Coating": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Blade": 1
+      },
+      {
+        "Coin": 17000,
+        "Insulation Coating": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 49000,
+        "Insulation Coating": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Blade": 4
+      },
+      {
+        "Coin": 180000,
+        "Insulation Coating": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Blade": 8
+      }
+    ],
     "熔炼": [
-      "Skill Range +30.0%. Each hit of Normal Attack with this weapon grants a 3.6% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
-      "Skill Range +36.0%. Each hit of Normal Attack with this weapon grants a 4.3% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
-      "Skill Range +42.0%. Each hit of Normal Attack with this weapon grants a 5.0% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
-      "Skill Range +48.0%. Each hit of Normal Attack with this weapon grants a 5.8% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
-      "Skill Range +54.0%. Each hit of Normal Attack with this weapon grants a 6.5% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
-      "Skill Range +60.0%. Each hit of Normal Attack with this weapon grants a 7.2% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons."
+      "Skill Range +30.0%. When performing Normal Attacks with this weapon, grants a 3.6% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
+      "Skill Range +36.0%. When performing Normal Attacks with this weapon, grants a 4.3% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
+      "Skill Range +42.0%. When performing Normal Attacks with this weapon, grants a 5.0% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
+      "Skill Range +48.0%. When performing Normal Attacks with this weapon, grants a 5.8% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
+      "Skill Range +54.0%. When performing Normal Attacks with this weapon, grants a 6.5% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
+      "Skill Range +60.0%. When performing Normal Attacks with this weapon, grants a 7.2% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons."
     ],
     "技能": [
       {
@@ -374,35 +741,59 @@
           "2-Hit DMG": "25.0%×3",
           "3-Hit DMG": "50.0%",
           "4-Hit DMG": "40.0%",
-          "5-Hit DMG": "75.0%",
-          "削韧": 20,
-          "卡肉": "0.100s"
-        }
+          "5-Hit DMG": "75.0%"
+        },
+        "id": 1020101,
+        "削韧": [
+          20,
+          15,
+          35,
+          25,
+          50
+        ],
+        "卡肉": [
+          0.1,
+          0,
+          0,
+          0.03,
+          0.03
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "10.0%",
-          "削韧": 5
-        }
+          "Charged Attack DMG": "10.0%"
+        },
+        "id": 1020102,
+        "削韧": [
+          5
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "47.0%",
-          "削韧": 30
-        }
+          "Plunge DMG": "47.0%"
+        },
+        "id": 1020103,
+        "削韧": [
+          30
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "40.0%",
-          "削韧": 26,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "40.0%"
+        },
+        "id": 1020104,
+        "削韧": [
+          26
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -424,6 +815,43 @@
     "加成": {
       "攻速": 0.25
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Stone Powder": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Insulation Coating": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6900,
+        "Insulation Coating": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Blade": 1
+      },
+      {
+        "Coin": 17000,
+        "Insulation Coating": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 49000,
+        "Insulation Coating": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Blade": 4
+      },
+      {
+        "Coin": 180000,
+        "Insulation Coating": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Blade": 8
+      }
+    ],
     "熔炼": [
       "ATK Speed‍ +25.0%. Deals +45.0% damage to targets afflicted with bonus effects.",
       "ATK Speed‍ +30.0%. Deals +54.0% damage to targets afflicted with bonus effects.",
@@ -441,35 +869,59 @@
           "2-Hit DMG": "25.0%×3",
           "3-Hit DMG": "50.0%",
           "4-Hit DMG": "40.0%",
-          "5-Hit DMG": "75.0%",
-          "削韧": 20,
-          "卡肉": "0.100s"
-        }
+          "5-Hit DMG": "75.0%"
+        },
+        "id": 1020101,
+        "削韧": [
+          20,
+          15,
+          35,
+          25,
+          50
+        ],
+        "卡肉": [
+          0.1,
+          0,
+          0,
+          0.03,
+          0.03
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "10.0%",
-          "削韧": 5
-        }
+          "Charged Attack DMG": "10.0%"
+        },
+        "id": 1020102,
+        "削韧": [
+          5
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "47.0%",
-          "削韧": 30
-        }
+          "Plunge DMG": "47.0%"
+        },
+        "id": 1020103,
+        "削韧": [
+          30
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "40.0%",
-          "削韧": 26,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "40.0%"
+        },
+        "id": 1020104,
+        "削韧": [
+          26
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -491,13 +943,50 @@
     "加成": {
       "技能威力": 0.2
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Stone Powder": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Insulation Coating": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6900,
+        "Insulation Coating": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Blade": 1
+      },
+      {
+        "Coin": 17000,
+        "Insulation Coating": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 49000,
+        "Insulation Coating": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Blade": 4
+      },
+      {
+        "Coin": 180000,
+        "Insulation Coating": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Blade": 8
+      }
+    ],
     "熔炼": [
-      "Skill Intensity +20.0%. When an Electro character performs a Plunging Attack with this weapon, grants +15.0% Skill DMG for 10.0s (up to 3 stacks).",
-      "Skill Intensity +24.0%. When an Electro character performs a Plunging Attack with this weapon, grants +18.0% Skill DMG for 10.0s (up to 3 stacks).",
-      "Skill Intensity +28.0%. When an Electro character performs a Plunging Attack with this weapon, grants +21.0% Skill DMG for 10.0s (up to 3 stacks).",
-      "Skill Intensity +32.0%. When an Electro character performs a Plunging Attack with this weapon, grants +24.0% Skill DMG for 10.0s (up to 3 stacks).",
-      "Skill Intensity +36.0%. When an Electro character performs a Plunging Attack with this weapon, grants +27.0% Skill DMG for 10.0s (up to 3 stacks).",
-      "Skill Intensity +40.0%. When an Electro character performs a Plunging Attack with this weapon, grants +30.0% Skill DMG for 10.0s (up to 3 stacks)."
+      "Skill Damage +20.0%. When an Electro character performs a Plunging Attack with this weapon, grants +15.0% Skill Damage for 10.0s (up to 3 stacks).",
+      "Skill Damage +24.0%. When an Electro character performs a Plunging Attack with this weapon, grants +18.0% Skill Damage for 10.0s (up to 3 stacks).",
+      "Skill Damage +28.0%. When an Electro character performs a Plunging Attack with this weapon, grants +21.0% Skill Damage for 10.0s (up to 3 stacks).",
+      "Skill Damage +32.0%. When an Electro character performs a Plunging Attack with this weapon, grants +24.0% Skill Damage for 10.0s (up to 3 stacks).",
+      "Skill Damage +36.0%. When an Electro character performs a Plunging Attack with this weapon, grants +27.0% Skill Damage for 10.0s (up to 3 stacks).",
+      "Skill Damage +40.0%. When an Electro character performs a Plunging Attack with this weapon, grants +30.0% Skill Damage for 10.0s (up to 3 stacks)."
     ],
     "技能": [
       {
@@ -508,35 +997,59 @@
           "2-Hit DMG": "25.0%×3",
           "3-Hit DMG": "50.0%",
           "4-Hit DMG": "40.0%",
-          "5-Hit DMG": "75.0%",
-          "削韧": 20,
-          "卡肉": "0.100s"
-        }
+          "5-Hit DMG": "75.0%"
+        },
+        "id": 1020101,
+        "削韧": [
+          20,
+          15,
+          35,
+          25,
+          50
+        ],
+        "卡肉": [
+          0.1,
+          0,
+          0,
+          0.03,
+          0.03
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "10.0%",
-          "削韧": 5
-        }
+          "Charged Attack DMG": "10.0%"
+        },
+        "id": 1020102,
+        "削韧": [
+          5
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "47.0%",
-          "削韧": 30
-        }
+          "Plunge DMG": "47.0%"
+        },
+        "id": 1020103,
+        "削韧": [
+          30
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "40.0%",
-          "削韧": 26,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "40.0%"
+        },
+        "id": 1020104,
+        "削韧": [
+          26
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -558,13 +1071,50 @@
     "加成": {
       "背水": 0.05
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Stone Powder": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Insulation Coating": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6900,
+        "Insulation Coating": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Blade": 1
+      },
+      {
+        "Coin": 17000,
+        "Insulation Coating": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 49000,
+        "Insulation Coating": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Blade": 4
+      },
+      {
+        "Coin": 180000,
+        "Insulation Coating": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Blade": 8
+      }
+    ],
     "熔炼": [
-      "Resolve +5.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 8.0% and ATK Speed by 15.0% for 15.0s. Each instance of Skill DMG or Ranged Weapon DMG extends the duration by 0.2s.",
-      "Resolve +6.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 9.6% and ATK Speed by 18.0% for 15.0s. Each instance of Skill DMG or Ranged Weapon DMG extends the duration by 0.2s.",
-      "Resolve +7.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 11.2% and ATK Speed by 21.0% for 15.0s. Each instance of Skill DMG or Ranged Weapon DMG extends the duration by 0.2s.",
-      "Resolve +8.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 12.8% and ATK Speed by 24.0% for 15.0s. Each instance of Skill DMG or Ranged Weapon DMG extends the duration by 0.2s.",
-      "Resolve +9.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 14.4% and ATK Speed by 27.0% for 15.0s. Each instance of Skill DMG or Ranged Weapon DMG extends the duration by 0.2s.",
-      "Resolve +10.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 16.0% and ATK Speed by 30.0% for 15.0s. Each instance of Skill DMG or Ranged Weapon DMG extends the duration by 0.2s."
+      "Resolve +5.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 8.0% and ATK Speed by 15.0% for 15.0s. Each instance of Skill Damage or Ranged Weapon Damage extends the duration by 0.2s.",
+      "Resolve +6.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 9.6% and ATK Speed by 18.0% for 15.0s. Each instance of Skill Damage or Ranged Weapon Damage extends the duration by 0.2s.",
+      "Resolve +7.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 11.2% and ATK Speed by 21.0% for 15.0s. Each instance of Skill Damage or Ranged Weapon Damage extends the duration by 0.2s.",
+      "Resolve +8.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 12.8% and ATK Speed by 24.0% for 15.0s. Each instance of Skill Damage or Ranged Weapon Damage extends the duration by 0.2s.",
+      "Resolve +9.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 14.4% and ATK Speed by 27.0% for 15.0s. Each instance of Skill Damage or Ranged Weapon Damage extends the duration by 0.2s.",
+      "Resolve +10.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 16.0% and ATK Speed by 30.0% for 15.0s. Each instance of Skill Damage or Ranged Weapon Damage extends the duration by 0.2s."
     ],
     "技能": [
       {
@@ -575,35 +1125,59 @@
           "2-Hit DMG": "25.0%×3",
           "3-Hit DMG": "50.0%",
           "4-Hit DMG": "40.0%",
-          "5-Hit DMG": "75.0%",
-          "削韧": 20,
-          "卡肉": "0.100s"
-        }
+          "5-Hit DMG": "75.0%"
+        },
+        "id": 1020101,
+        "削韧": [
+          20,
+          15,
+          35,
+          25,
+          50
+        ],
+        "卡肉": [
+          0.1,
+          0,
+          0,
+          0.03,
+          0.03
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "10.0%",
-          "削韧": 5
-        }
+          "Charged Attack DMG": "10.0%"
+        },
+        "id": 1020102,
+        "削韧": [
+          5
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "47.0%",
-          "削韧": 30
-        }
+          "Plunge DMG": "47.0%"
+        },
+        "id": 1020103,
+        "削韧": [
+          30
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "40.0%",
-          "削韧": 26,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "40.0%"
+        },
+        "id": 1020104,
+        "削韧": [
+          26
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -625,13 +1199,50 @@
     "加成": {
       "技能威力": 0.24
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Stone Powder": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Insulation Coating": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6900,
+        "Insulation Coating": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Blade": 1
+      },
+      {
+        "Coin": 17000,
+        "Insulation Coating": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 49000,
+        "Insulation Coating": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Blade": 4
+      },
+      {
+        "Coin": 180000,
+        "Insulation Coating": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Blade": 8
+      }
+    ],
     "熔炼": [
-      "Skill Intensity +24.0%.",
-      "Skill Intensity +28.8%.",
-      "Skill Intensity +33.6%.",
-      "Skill Intensity +38.4%.",
-      "Skill Intensity +43.2%.",
-      "Skill Intensity +48.0%."
+      "Skill Damage +24.0%.",
+      "Skill Damage +28.8%.",
+      "Skill Damage +33.6%.",
+      "Skill Damage +38.4%.",
+      "Skill Damage +43.2%.",
+      "Skill Damage +48.0%."
     ],
     "技能": [
       {
@@ -642,35 +1253,59 @@
           "2-Hit DMG": "25.0%×3",
           "3-Hit DMG": "50.0%",
           "4-Hit DMG": "40.0%",
-          "5-Hit DMG": "75.0%",
-          "削韧": 20,
-          "卡肉": "0.100s"
-        }
+          "5-Hit DMG": "75.0%"
+        },
+        "id": 1020101,
+        "削韧": [
+          20,
+          15,
+          35,
+          25,
+          50
+        ],
+        "卡肉": [
+          0.1,
+          0,
+          0,
+          0.03,
+          0.03
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "10.0%",
-          "削韧": 5
-        }
+          "Charged Attack DMG": "10.0%"
+        },
+        "id": 1020102,
+        "削韧": [
+          5
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "47.0%",
-          "削韧": 30
-        }
+          "Plunge DMG": "47.0%"
+        },
+        "id": 1020103,
+        "削韧": [
+          30
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "40.0%",
-          "削韧": 26,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "40.0%"
+        },
+        "id": 1020104,
+        "削韧": [
+          26
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -692,6 +1327,43 @@
     "加成": {
       "暴击": 0.5
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Stone Powder": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Insulation Coating": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6900,
+        "Insulation Coating": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Blade": 1
+      },
+      {
+        "Coin": 17000,
+        "Insulation Coating": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 49000,
+        "Insulation Coating": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Blade": 4
+      },
+      {
+        "Coin": 180000,
+        "Insulation Coating": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Blade": 8
+      }
+    ],
     "熔炼": [
       "CRIT Chance +50.0%. When dealing damage using normal attack with this weapon, there is a 1.7% chance to reload the user's ranged weapon magazine.",
       "CRIT Chance +60.0%. When dealing damage using normal attack with this weapon, there is a 2.0% chance to reload the user's ranged weapon magazine.",
@@ -709,35 +1381,59 @@
           "2-Hit DMG": "25.0%×3",
           "3-Hit DMG": "50.0%",
           "4-Hit DMG": "40.0%",
-          "5-Hit DMG": "75.0%",
-          "削韧": 20,
-          "卡肉": "0.100s"
-        }
+          "5-Hit DMG": "75.0%"
+        },
+        "id": 1020101,
+        "削韧": [
+          20,
+          15,
+          35,
+          25,
+          50
+        ],
+        "卡肉": [
+          0.1,
+          0,
+          0,
+          0.03,
+          0.03
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "10.0%",
-          "削韧": 5
-        }
+          "Charged Attack DMG": "10.0%"
+        },
+        "id": 1020102,
+        "削韧": [
+          5
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "47.0%",
-          "削韧": 30
-        }
+          "Plunge DMG": "47.0%"
+        },
+        "id": 1020103,
+        "削韧": [
+          30
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "40.0%",
-          "削韧": 26,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "40.0%"
+        },
+        "id": 1020104,
+        "削韧": [
+          26
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -759,6 +1455,43 @@
     "加成": {
       "生命": 0.5
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Filthoid Clot": 6,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6100,
+        "Statue Debris": 3,
+        "Basic Weapon Component: Blade": 4,
+        "Basic Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 6900,
+        "Statue Debris": 6,
+        "Intermediate Weapon Component: Blade": 3,
+        "Intermediate Weapon Component: Decoration": 1
+      },
+      {
+        "Coin": 17000,
+        "Statue Debris": 12,
+        "Advanced Weapon Component: Blade": 6,
+        "Advanced Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 49000,
+        "Statue Debris": 24,
+        "Advanced Weapon Component: Blade": 10,
+        "Advanced Weapon Component: Decoration": 4
+      },
+      {
+        "Coin": 180000,
+        "Statue Debris": 48,
+        "Advanced Weapon Component: Blade": 20,
+        "Advanced Weapon Component: Decoration": 8
+      }
+    ],
     "熔炼": [
       "Max HP +50.0%. When a Pyro character takes damage, grants +15.0% Skill Duration for 8.0s (up to 3.0 stacks).",
       "Max HP +60.0%. When a Pyro character takes damage, grants +18.0% Skill Duration for 8.0s (up to 3.0 stacks).",
@@ -775,37 +1508,63 @@
           "1-Hit DMG": "40.0%",
           "2-Hit DMG": "45.0%",
           "3-Hit DMG": "50.0%",
-          "4-Hit DMG": "120.0%",
-          "削韧": 20,
-          "卡肉": "0.070s"
-        }
+          "4-Hit DMG": "120.0%"
+        },
+        "id": 1030101,
+        "削韧": [
+          20,
+          25,
+          30,
+          85
+        ],
+        "卡肉": [
+          0.07,
+          0.07,
+          0.07,
+          0.07
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
           "Charged Attack DMG": "55.0%",
-          "Charged Attack Finisher DMG": "50.0%",
-          "削韧": 35,
-          "卡肉": "0.030s"
-        }
+          "Charged Attack Finisher DMG": "50.0%"
+        },
+        "id": 1030102,
+        "削韧": [
+          35,
+          150
+        ],
+        "卡肉": [
+          0.03,
+          0.1
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%",
-          "削韧": 33
-        }
+          "Plunge DMG": "51.0%"
+        },
+        "id": 1030103,
+        "削韧": [
+          33
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "73.0%",
-          "削韧": 47,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "73.0%"
+        },
+        "id": 1030104,
+        "削韧": [
+          47
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -827,6 +1586,43 @@
     "加成": {
       "暴击": 0.5
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Filthoid Clot": 6,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6100,
+        "Statue Debris": 3,
+        "Basic Weapon Component: Blade": 4,
+        "Basic Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 6900,
+        "Statue Debris": 6,
+        "Intermediate Weapon Component: Blade": 3,
+        "Intermediate Weapon Component: Decoration": 1
+      },
+      {
+        "Coin": 17000,
+        "Statue Debris": 12,
+        "Advanced Weapon Component: Blade": 6,
+        "Advanced Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 49000,
+        "Statue Debris": 24,
+        "Advanced Weapon Component: Blade": 10,
+        "Advanced Weapon Component: Decoration": 4
+      },
+      {
+        "Coin": 180000,
+        "Statue Debris": 48,
+        "Advanced Weapon Component: Blade": 20,
+        "Advanced Weapon Component: Decoration": 8
+      }
+    ],
     "熔炼": [
       "CRIT Chance +50.0%. When dealing damage with this weapon triggers Bonus Effect, there is a 2.1% chance to increase the Combo Level to maximum.",
       "CRIT Chance +60.0%. When dealing damage with this weapon triggers Bonus Effect, there is a 2.5% chance to increase the Combo Level to maximum.",
@@ -843,37 +1639,63 @@
           "1-Hit DMG": "40.0%",
           "2-Hit DMG": "45.0%",
           "3-Hit DMG": "50.0%",
-          "4-Hit DMG": "120.0%",
-          "削韧": 20,
-          "卡肉": "0.070s"
-        }
+          "4-Hit DMG": "120.0%"
+        },
+        "id": 1030101,
+        "削韧": [
+          20,
+          25,
+          30,
+          85
+        ],
+        "卡肉": [
+          0.07,
+          0.07,
+          0.07,
+          0.07
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
           "Charged Attack DMG": "55.0%",
-          "Charged Attack Finisher DMG": "50.0%",
-          "削韧": 35,
-          "卡肉": "0.030s"
-        }
+          "Charged Attack Finisher DMG": "50.0%"
+        },
+        "id": 1030102,
+        "削韧": [
+          35,
+          150
+        ],
+        "卡肉": [
+          0.03,
+          0.1
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%",
-          "削韧": 33
-        }
+          "Plunge DMG": "51.0%"
+        },
+        "id": 1030103,
+        "削韧": [
+          33
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "73.0%",
-          "削韧": 47,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "73.0%"
+        },
+        "id": 1030104,
+        "削韧": [
+          47
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -895,6 +1717,43 @@
     "加成": {
       "技能耐久": 0.18
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Filthoid Clot": 6,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6100,
+        "Statue Debris": 3,
+        "Basic Weapon Component: Blade": 4,
+        "Basic Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 6900,
+        "Statue Debris": 6,
+        "Intermediate Weapon Component: Blade": 3,
+        "Intermediate Weapon Component: Decoration": 1
+      },
+      {
+        "Coin": 17000,
+        "Statue Debris": 12,
+        "Advanced Weapon Component: Blade": 6,
+        "Advanced Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 49000,
+        "Statue Debris": 24,
+        "Advanced Weapon Component: Blade": 10,
+        "Advanced Weapon Component: Decoration": 4
+      },
+      {
+        "Coin": 180000,
+        "Statue Debris": 48,
+        "Advanced Weapon Component: Blade": 20,
+        "Advanced Weapon Component: Decoration": 8
+      }
+    ],
     "熔炼": [
       "Skill Duration +18.0%.",
       "Skill Duration +21.6%.",
@@ -911,37 +1770,63 @@
           "1-Hit DMG": "40.0%",
           "2-Hit DMG": "45.0%",
           "3-Hit DMG": "50.0%",
-          "4-Hit DMG": "120.0%",
-          "削韧": 20,
-          "卡肉": "0.070s"
-        }
+          "4-Hit DMG": "120.0%"
+        },
+        "id": 1030101,
+        "削韧": [
+          20,
+          25,
+          30,
+          85
+        ],
+        "卡肉": [
+          0.07,
+          0.07,
+          0.07,
+          0.07
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
           "Charged Attack DMG": "55.0%",
-          "Charged Attack Finisher DMG": "50.0%",
-          "削韧": 35,
-          "卡肉": "0.030s"
-        }
+          "Charged Attack Finisher DMG": "50.0%"
+        },
+        "id": 1030102,
+        "削韧": [
+          35,
+          150
+        ],
+        "卡肉": [
+          0.03,
+          0.1
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%",
-          "削韧": 33
-        }
+          "Plunge DMG": "51.0%"
+        },
+        "id": 1030103,
+        "削韧": [
+          33
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "73.0%",
-          "削韧": 47,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "73.0%"
+        },
+        "id": 1030104,
+        "削韧": [
+          47
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -963,13 +1848,50 @@
     "加成": {
       "昂扬": 0.15
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Filthoid Clot": 6,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6100,
+        "Statue Debris": 3,
+        "Basic Weapon Component: Blade": 4,
+        "Basic Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 6900,
+        "Statue Debris": 6,
+        "Intermediate Weapon Component: Blade": 3,
+        "Intermediate Weapon Component: Decoration": 1
+      },
+      {
+        "Coin": 17000,
+        "Statue Debris": 12,
+        "Advanced Weapon Component: Blade": 6,
+        "Advanced Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 49000,
+        "Statue Debris": 24,
+        "Advanced Weapon Component: Blade": 10,
+        "Advanced Weapon Component: Decoration": 4
+      },
+      {
+        "Coin": 180000,
+        "Statue Debris": 48,
+        "Advanced Weapon Component: Blade": 20,
+        "Advanced Weapon Component: Decoration": 8
+      }
+    ],
     "熔炼": [
-      "Morale +15.0%. When an Electro character uses their Ultimate Skill, grants +25.0% Skill Intensity for 10.0s (up to 3.0 stacks).",
-      "Morale +18.0%. When an Electro character uses their Ultimate Skill, grants +30.0% Skill Intensity for 10.0s (up to 3.0 stacks).",
-      "Morale +21.0%. When an Electro character uses their Ultimate Skill, grants +35.0% Skill Intensity for 10.0s (up to 3.0 stacks).",
-      "Morale +24.0%. When an Electro character uses their Ultimate Skill, grants +40.0% Skill Intensity for 10.0s (up to 3.0 stacks).",
-      "Morale +27.0%. When an Electro character uses their Ultimate Skill, grants +45.0% Skill Intensity for 10.0s (up to 3.0 stacks).",
-      "Morale +30.0%. When an Electro character uses their Ultimate Skill, grants +50.0% Skill Intensity for 10.0s (up to 3.0 stacks)."
+      "Morale +15.0%. When an Electro character uses their Ultimate Skill, grants +25.0% Skill Damage for 10.0s (up to 3.0 stacks).",
+      "Morale +18.0%. When an Electro character uses their Ultimate Skill, grants +30.0% Skill Damage for 10.0s (up to 3.0 stacks).",
+      "Morale +21.0%. When an Electro character uses their Ultimate Skill, grants +35.0% Skill Damage for 10.0s (up to 3.0 stacks).",
+      "Morale +24.0%. When an Electro character uses their Ultimate Skill, grants +40.0% Skill Damage for 10.0s (up to 3.0 stacks).",
+      "Morale +27.0%. When an Electro character uses their Ultimate Skill, grants +45.0% Skill Damage for 10.0s (up to 3.0 stacks).",
+      "Morale +30.0%. When an Electro character uses their Ultimate Skill, grants +50.0% Skill Damage for 10.0s (up to 3.0 stacks)."
     ],
     "技能": [
       {
@@ -979,37 +1901,63 @@
           "1-Hit DMG": "40.0%",
           "2-Hit DMG": "45.0%",
           "3-Hit DMG": "50.0%",
-          "4-Hit DMG": "120.0%",
-          "削韧": 20,
-          "卡肉": "0.070s"
-        }
+          "4-Hit DMG": "120.0%"
+        },
+        "id": 1030101,
+        "削韧": [
+          20,
+          25,
+          30,
+          85
+        ],
+        "卡肉": [
+          0.07,
+          0.07,
+          0.07,
+          0.07
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
           "Charged Attack DMG": "55.0%",
-          "Charged Attack Finisher DMG": "50.0%",
-          "削韧": 35,
-          "卡肉": "0.030s"
-        }
+          "Charged Attack Finisher DMG": "50.0%"
+        },
+        "id": 1030102,
+        "削韧": [
+          35,
+          150
+        ],
+        "卡肉": [
+          0.03,
+          0.1
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%",
-          "削韧": 33
-        }
+          "Plunge DMG": "51.0%"
+        },
+        "id": 1030103,
+        "削韧": [
+          33
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "73.0%",
-          "削韧": 47,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "73.0%"
+        },
+        "id": 1030104,
+        "削韧": [
+          47
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -1031,6 +1979,43 @@
     "加成": {
       "攻速": 0.25
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Blade": 4,
+        "Basic Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Blade": 3,
+        "Intermediate Weapon Component: Decoration": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Blade": 6,
+        "Advanced Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Blade": 10,
+        "Advanced Weapon Component: Decoration": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Blade": 20,
+        "Advanced Weapon Component: Decoration": 8
+      }
+    ],
     "熔炼": [
       "ATK Speed +25.0%. When dealing damage with this weapon triggers Bonus Effect, if the user's HP percentage is below 25%, there's a 45.0% chance to restore 1.5% of the Max HP.",
       "ATK Speed +30.0%. When dealing damage with this weapon triggers Bonus Effect, if the user's HP percentage is below 25%, there's a 45.0% chance to restore 1.8% of the Max HP.",
@@ -1047,37 +2032,62 @@
           "1-Hit DMG": "20.0%×2",
           "2-Hit DMG": "25.0%×2",
           "3-Hit DMG": "38.0%",
-          "4-Hit DMG": "43.0%×3",
-          "削韧": 15,
-          "卡肉": "0.070s"
-        }
+          "4-Hit DMG": "43.0%×3"
+        },
+        "id": 1040101,
+        "削韧": [
+          15,
+          20,
+          35,
+          20
+        ],
+        "卡肉": [
+          0,
+          0,
+          0.07
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
           "Charged Attack DMG": "20.0%×6",
-          "Charged Attack Finisher DMG": "55.0%",
-          "削韧": 12,
-          "卡肉": "0.100s"
-        }
+          "Charged Attack Finisher DMG": "55.0%"
+        },
+        "id": 1040102,
+        "削韧": [
+          12,
+          40
+        ],
+        "卡肉": [
+          0,
+          0.1
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%",
-          "削韧": 33
-        }
+          "Plunge DMG": "51.0%"
+        },
+        "id": 1040103,
+        "削韧": [
+          33
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "36.0%×2",
-          "削韧": 12,
-          "卡肉": "0.030s"
-        }
+          "Sliding Attack DMG": "36.0%×2"
+        },
+        "id": 1040104,
+        "削韧": [
+          12
+        ],
+        "卡肉": [
+          0.03
+        ]
       }
     ]
   },
@@ -1099,6 +2109,43 @@
     "加成": {
       "暴伤": 0.625
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Blade": 4,
+        "Basic Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Blade": 3,
+        "Intermediate Weapon Component: Decoration": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Blade": 6,
+        "Advanced Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Blade": 10,
+        "Advanced Weapon Component: Decoration": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Blade": 20,
+        "Advanced Weapon Component: Decoration": 8
+      }
+    ],
     "熔炼": [
       "CRIT Damage +62.5%. Sliding Attacks with this weapon gain +75.0% CRIT Chance.",
       "CRIT Damage +75.0%. Sliding Attacks with this weapon gain +90.0% CRIT Chance.",
@@ -1115,37 +2162,62 @@
           "1-Hit DMG": "20.0%×2",
           "2-Hit DMG": "25.0%×2",
           "3-Hit DMG": "38.0%",
-          "4-Hit DMG": "43.0%×3",
-          "削韧": 15,
-          "卡肉": "0.070s"
-        }
+          "4-Hit DMG": "43.0%×3"
+        },
+        "id": 1040101,
+        "削韧": [
+          15,
+          20,
+          35,
+          20
+        ],
+        "卡肉": [
+          0,
+          0,
+          0.07
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
           "Charged Attack DMG": "20.0%×6",
-          "Charged Attack Finisher DMG": "55.0%",
-          "削韧": 12,
-          "卡肉": "0.100s"
-        }
+          "Charged Attack Finisher DMG": "55.0%"
+        },
+        "id": 1040102,
+        "削韧": [
+          12,
+          40
+        ],
+        "卡肉": [
+          0,
+          0.1
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%",
-          "削韧": 33
-        }
+          "Plunge DMG": "51.0%"
+        },
+        "id": 1040103,
+        "削韧": [
+          33
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "36.0%×2",
-          "削韧": 12,
-          "卡肉": "0.030s"
-        }
+          "Sliding Attack DMG": "36.0%×2"
+        },
+        "id": 1040104,
+        "削韧": [
+          12
+        ],
+        "卡肉": [
+          0.03
+        ]
       }
     ]
   },
@@ -1167,6 +2239,43 @@
     "加成": {
       "技能范围": 0.36
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Blade": 4,
+        "Basic Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Blade": 3,
+        "Intermediate Weapon Component: Decoration": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Blade": 6,
+        "Advanced Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Blade": 10,
+        "Advanced Weapon Component: Decoration": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Blade": 20,
+        "Advanced Weapon Component: Decoration": 8
+      }
+    ],
     "熔炼": [
       "Skill Range +36.0%.",
       "Skill Range +43.2%.",
@@ -1183,37 +2292,62 @@
           "1-Hit DMG": "20.0%×2",
           "2-Hit DMG": "25.0%×2",
           "3-Hit DMG": "38.0%",
-          "4-Hit DMG": "43.0%×3",
-          "削韧": 15,
-          "卡肉": "0.070s"
-        }
+          "4-Hit DMG": "43.0%×3"
+        },
+        "id": 1040101,
+        "削韧": [
+          15,
+          20,
+          35,
+          20
+        ],
+        "卡肉": [
+          0,
+          0,
+          0.07
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
           "Charged Attack DMG": "20.0%×6",
-          "Charged Attack Finisher DMG": "55.0%",
-          "削韧": 12,
-          "卡肉": "0.100s"
-        }
+          "Charged Attack Finisher DMG": "55.0%"
+        },
+        "id": 1040102,
+        "削韧": [
+          12,
+          40
+        ],
+        "卡肉": [
+          0,
+          0.1
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%",
-          "削韧": 33
-        }
+          "Plunge DMG": "51.0%"
+        },
+        "id": 1040103,
+        "削韧": [
+          33
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "36.0%×2",
-          "削韧": 12,
-          "卡肉": "0.030s"
-        }
+          "Sliding Attack DMG": "36.0%×2"
+        },
+        "id": 1040104,
+        "削韧": [
+          12
+        ],
+        "卡肉": [
+          0.03
+        ]
       }
     ]
   },
@@ -1235,6 +2369,43 @@
     "加成": {
       "生命": 0.5
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Damaged Sal Volatile": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Fuel Reagent": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6900,
+        "Fuel Reagent": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Blade": 1
+      },
+      {
+        "Coin": 17000,
+        "Fuel Reagent": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 49000,
+        "Fuel Reagent": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Blade": 4
+      },
+      {
+        "Coin": 180000,
+        "Fuel Reagent": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Blade": 8
+      }
+    ],
     "熔炼": [
       "Max HP +50.0%. When this weapon triggers a bonus effect on hit, grants ‍+8.6%‍ Max HP for 15.0‍s (up to 10.0 stacks).",
       "Max HP +60.0%. When this weapon triggers a bonus effect on hit, grants ‍+10.3%‍ Max HP for 15.0‍s (up to 10.0 stacks).",
@@ -1251,37 +2422,66 @@
           "1-Hit DMG": "40.0%",
           "2-Hit DMG": "50.0%",
           "3-Hit DMG": "60.0%",
-          "4-Hit DMG": "50.0%×2",
-          "削韧": 25,
-          "延迟": "0.050s",
-          "卡肉": "0.030s"
-        }
+          "4-Hit DMG": "50.0%×2"
+        },
+        "id": 1050101,
+        "削韧": [
+          25,
+          30,
+          35,
+          35
+        ],
+        "延迟": [
+          0.05,
+          0.1,
+          0,
+          0.05
+        ],
+        "卡肉": [
+          0.03,
+          0.03,
+          0,
+          0.07
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "16.1%",
-          "削韧": 12,
-          "卡肉": "0.030s"
-        }
+          "Charged Attack DMG": "16.1%"
+        },
+        "id": 1050102,
+        "削韧": [
+          12
+        ],
+        "卡肉": [
+          0.03
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%",
-          "削韧": 33
-        }
+          "Plunge DMG": "51.0%"
+        },
+        "id": 1010103,
+        "削韧": [
+          33
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%",
-          "削韧": 33,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "51.0%"
+        },
+        "id": 1010104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -1303,13 +2503,50 @@
     "加成": {
       "技能威力": 0.2
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Damaged Sal Volatile": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Fuel Reagent": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6900,
+        "Fuel Reagent": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Blade": 1
+      },
+      {
+        "Coin": 17000,
+        "Fuel Reagent": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 49000,
+        "Fuel Reagent": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Blade": 4
+      },
+      {
+        "Coin": 180000,
+        "Fuel Reagent": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Blade": 8
+      }
+    ],
     "熔炼": [
-      "Skill Intensity +20.0%. When a Hydro character deals CRIT DMG with this weapon, increases Skill DMG for allies by 17.0% for 6.0s.",
-      "Skill Intensity +24.0%. When a Hydro character deals CRIT DMG with this weapon, increases Skill DMG for allies by 20.4% for 6.0s.",
-      "Skill Intensity +28.0%. When a Hydro character deals CRIT DMG with this weapon, increases Skill DMG for allies by 23.8% for 6.0s.",
-      "Skill Intensity +32.0%. When a Hydro character deals CRIT DMG with this weapon, increases Skill DMG for allies by 27.2% for 6.0s.",
-      "Skill Intensity +36.0%. When a Hydro character deals CRIT DMG with this weapon, increases Skill DMG for allies by 30.6% for 6.0s.",
-      "Skill Intensity +40.0%. When a Hydro character deals CRIT DMG with this weapon, increases Skill DMG for allies by 34.0% for 6.0s."
+      "Skill Damage +20.0%. When a Hydro character deals CRIT Damage with this weapon, increases Skill DMG for allies by 17.0% for 6.0s.",
+      "Skill Damage +24.0%. When a Hydro character deals CRIT Damage with this weapon, increases Skill DMG for allies by 20.4% for 6.0s.",
+      "Skill Damage +28.0%. When a Hydro character deals CRIT Damage with this weapon, increases Skill DMG for allies by 23.8% for 6.0s.",
+      "Skill Damage +32.0%. When a Hydro character deals CRIT Damage with this weapon, increases Skill DMG for allies by 27.2% for 6.0s.",
+      "Skill Damage +36.0%. When a Hydro character deals CRIT Damage with this weapon, increases Skill DMG for allies by 30.6% for 6.0s.",
+      "Skill Damage +40.0%. When a Hydro character deals CRIT Damage with this weapon, increases Skill DMG for allies by 34.0% for 6.0s."
     ],
     "技能": [
       {
@@ -1319,37 +2556,66 @@
           "1-Hit DMG": "40.0%",
           "2-Hit DMG": "50.0%",
           "3-Hit DMG": "60.0%",
-          "4-Hit DMG": "50.0%×2",
-          "削韧": 25,
-          "延迟": "0.050s",
-          "卡肉": "0.030s"
-        }
+          "4-Hit DMG": "50.0%×2"
+        },
+        "id": 1050101,
+        "削韧": [
+          25,
+          30,
+          35,
+          35
+        ],
+        "延迟": [
+          0.05,
+          0.1,
+          0,
+          0.05
+        ],
+        "卡肉": [
+          0.03,
+          0.03,
+          0,
+          0.07
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "16.1%",
-          "削韧": 12,
-          "卡肉": "0.030s"
-        }
+          "Charged Attack DMG": "16.1%"
+        },
+        "id": 1050102,
+        "削韧": [
+          12
+        ],
+        "卡肉": [
+          0.03
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%",
-          "削韧": 33
-        }
+          "Plunge DMG": "51.0%"
+        },
+        "id": 1010103,
+        "削韧": [
+          33
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%",
-          "削韧": 33,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "51.0%"
+        },
+        "id": 1010104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -1358,7 +2624,7 @@
     "icon": "Swordwhip_Chixing",
     "名称": "Tetherlash",
     "版本": "1.0",
-    "描述": "It is not emotion alone that binds the human heart. This coiling whipblade binds tighter than words, and strikes deeper than trust.",
+    "描述": "It is not emotion alone that binds the human heart. This coiling whipsword binds tighter than words, and strikes deeper than trust.",
     "类型": [
       "近战",
       "鞭刃"
@@ -1371,6 +2637,43 @@
     "加成": {
       "技能耐久": 0.18
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Damaged Sal Volatile": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Fuel Reagent": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6900,
+        "Fuel Reagent": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Blade": 1
+      },
+      {
+        "Coin": 17000,
+        "Fuel Reagent": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 49000,
+        "Fuel Reagent": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Blade": 4
+      },
+      {
+        "Coin": 180000,
+        "Fuel Reagent": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Blade": 8
+      }
+    ],
     "熔炼": [
       "Skill Duration +18.0%.",
       "Skill Duration +21.6%.",
@@ -1387,37 +2690,66 @@
           "1-Hit DMG": "40.0%",
           "2-Hit DMG": "50.0%",
           "3-Hit DMG": "60.0%",
-          "4-Hit DMG": "50.0%×2",
-          "削韧": 25,
-          "延迟": "0.050s",
-          "卡肉": "0.030s"
-        }
+          "4-Hit DMG": "50.0%×2"
+        },
+        "id": 1050101,
+        "削韧": [
+          25,
+          30,
+          35,
+          35
+        ],
+        "延迟": [
+          0.05,
+          0.1,
+          0,
+          0.05
+        ],
+        "卡肉": [
+          0.03,
+          0.03,
+          0,
+          0.07
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "16.1%",
-          "削韧": 12,
-          "卡肉": "0.030s"
-        }
+          "Charged Attack DMG": "16.1%"
+        },
+        "id": 1050102,
+        "削韧": [
+          12
+        ],
+        "卡肉": [
+          0.03
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%",
-          "削韧": 33
-        }
+          "Plunge DMG": "51.0%"
+        },
+        "id": 1010103,
+        "削韧": [
+          33
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%",
-          "削韧": 33,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "51.0%"
+        },
+        "id": 1010104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -1426,7 +2758,7 @@
     "icon": "Swordwhip_Canghu",
     "名称": "Viridis Reefs",
     "版本": "1.0",
-    "描述": "Withered coral lies strewn along the silent shore — fragments that cradle the sea's shattered dreams.",
+    "描述": "ithered coral lies strewn along the silent shore — fragments that cradle the sea's shattered dreams.",
     "类型": [
       "近战",
       "鞭刃"
@@ -1439,6 +2771,43 @@
     "加成": {
       "触发": 0.75
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Damaged Sal Volatile": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Fuel Reagent": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6900,
+        "Fuel Reagent": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Blade": 1
+      },
+      {
+        "Coin": 17000,
+        "Fuel Reagent": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 49000,
+        "Fuel Reagent": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Blade": 4
+      },
+      {
+        "Coin": 180000,
+        "Fuel Reagent": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Blade": 8
+      }
+    ],
     "熔炼": [
       "Trigger Probability +75.0%. Charged Attacks with this weapon grant +44.0% ATK Speed for 6.0s. Effect is removed when switching weapons.",
       "Trigger Probability +90.0%. Charged Attacks with this weapon grant +52.8% ATK Speed for 6.0s. Effect is removed when switching weapons.",
@@ -1455,37 +2824,66 @@
           "1-Hit DMG": "40.0%",
           "2-Hit DMG": "50.0%",
           "3-Hit DMG": "60.0%",
-          "4-Hit DMG": "50.0%×2",
-          "削韧": 25,
-          "延迟": "0.050s",
-          "卡肉": "0.030s"
-        }
+          "4-Hit DMG": "50.0%×2"
+        },
+        "id": 1050101,
+        "削韧": [
+          25,
+          30,
+          35,
+          35
+        ],
+        "延迟": [
+          0.05,
+          0.1,
+          0,
+          0.05
+        ],
+        "卡肉": [
+          0.03,
+          0.03,
+          0,
+          0.07
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "16.1%",
-          "削韧": 12,
-          "卡肉": "0.030s"
-        }
+          "Charged Attack DMG": "16.1%"
+        },
+        "id": 1050102,
+        "削韧": [
+          12
+        ],
+        "卡肉": [
+          0.03
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%",
-          "削韧": 33
-        }
+          "Plunge DMG": "51.0%"
+        },
+        "id": 1010103,
+        "削韧": [
+          33
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%",
-          "削韧": 33,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "51.0%"
+        },
+        "id": 1010104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -1507,6 +2905,43 @@
     "加成": {
       "暴伤": 0.625
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Decoration": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Decoration": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Decoration": 8
+      }
+    ],
     "熔炼": [
       "CRIT Damage +62.5%. When dealing damage with this weapon, increases Damage Dealt by 9.0%, with an additional 9.0% increase per Combo Level.",
       "CRIT Damage +75.0%. When dealing damage with this weapon, increases Damage Dealt by 10.8%, with an additional 10.8% increase per Combo Level.",
@@ -1523,36 +2958,60 @@
           "1-Hit DMG": "20.0%×3",
           "2-Hit DMG": "30.0%×4",
           "3-Hit DMG": "40.0%×2+45.0%",
-          "4-Hit DMG": "85.0%",
-          "削韧": 15,
-          "卡肉": "0.030s"
-        }
+          "4-Hit DMG": "85.0%"
+        },
+        "id": 1060101,
+        "削韧": [
+          15,
+          20,
+          25,
+          50
+        ],
+        "卡肉": [
+          0,
+          0,
+          0.03,
+          0.03
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "10.0%×9",
-          "削韧": 8,
-          "卡肉": "0.030s"
-        }
+          "Charged Attack DMG": "10.0%×9"
+        },
+        "id": 1060102,
+        "削韧": [
+          8
+        ],
+        "卡肉": [
+          0.03
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%",
-          "削韧": 33
-        }
+          "Plunge DMG": "51.0%"
+        },
+        "id": 1060103,
+        "削韧": [
+          33
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%",
-          "削韧": 33,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "51.0%"
+        },
+        "id": 1060104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -1574,6 +3033,43 @@
     "加成": {
       "技能范围": 0.36
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Decoration": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Decoration": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Decoration": 8
+      }
+    ],
     "熔炼": [
       "Skill Range +36.0%.",
       "Skill Range +43.2%.",
@@ -1590,36 +3086,60 @@
           "1-Hit DMG": "20.0%×3",
           "2-Hit DMG": "30.0%×4",
           "3-Hit DMG": "40.0%×2+45.0%",
-          "4-Hit DMG": "85.0%",
-          "削韧": 15,
-          "卡肉": "0.030s"
-        }
+          "4-Hit DMG": "85.0%"
+        },
+        "id": 1060101,
+        "削韧": [
+          15,
+          20,
+          25,
+          50
+        ],
+        "卡肉": [
+          0,
+          0,
+          0.03,
+          0.03
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "10.0%×9",
-          "削韧": 8,
-          "卡肉": "0.030s"
-        }
+          "Charged Attack DMG": "10.0%×9"
+        },
+        "id": 1060102,
+        "削韧": [
+          8
+        ],
+        "卡肉": [
+          0.03
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%",
-          "削韧": 33
-        }
+          "Plunge DMG": "51.0%"
+        },
+        "id": 1060103,
+        "削韧": [
+          33
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%",
-          "削韧": 33,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "51.0%"
+        },
+        "id": 1060104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -1641,6 +3161,43 @@
     "加成": {
       "攻击": 0.5
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Decoration": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Decoration": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Decoration": 8
+      }
+    ],
     "熔炼": [
       "Character ATK +50.0%. Charged Attacks with this weapon grant +75.0% CRIT Damage for 6.0s. Effect is removed when switching weapons.",
       "Character ATK +60.0%. Charged Attacks with this weapon grant +90.0% CRIT Damage for 6.0s. Effect is removed when switching weapons.",
@@ -1657,36 +3214,60 @@
           "1-Hit DMG": "20.0%×3",
           "2-Hit DMG": "30.0%×4",
           "3-Hit DMG": "40.0%×2+45.0%",
-          "4-Hit DMG": "85.0%",
-          "削韧": 15,
-          "卡肉": "0.030s"
-        }
+          "4-Hit DMG": "85.0%"
+        },
+        "id": 1060101,
+        "削韧": [
+          15,
+          20,
+          25,
+          50
+        ],
+        "卡肉": [
+          0,
+          0,
+          0.03,
+          0.03
+        ]
       },
       {
         "名称": "蓄力攻击",
         "类型": "武器伤害",
         "字段": {
-          "Charged Attack DMG": "10.0%×9",
-          "削韧": 8,
-          "卡肉": "0.030s"
-        }
+          "Charged Attack DMG": "10.0%×9"
+        },
+        "id": 1060102,
+        "削韧": [
+          8
+        ],
+        "卡肉": [
+          0.03
+        ]
       },
       {
         "名称": "下落攻击",
         "类型": "武器伤害",
         "字段": {
-          "Plunge DMG": "51.0%",
-          "削韧": 33
-        }
+          "Plunge DMG": "51.0%"
+        },
+        "id": 1060103,
+        "削韧": [
+          33
+        ]
       },
       {
         "名称": "滑行攻击",
         "类型": "武器伤害",
         "字段": {
-          "Sliding Attack DMG": "51.0%",
-          "削韧": 33,
-          "卡肉": "0.100s"
-        }
+          "Sliding Attack DMG": "51.0%"
+        },
+        "id": 1060104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
       }
     ]
   },
@@ -1712,6 +3293,43 @@
     "加成": {
       "触发": 0.75
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Barrel": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Barrel": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Barrel": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Barrel": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Barrel": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
     "熔炼": [
       "Trigger Probability +75.0%. Each shot with this weapon has a chance (based on its Weapon Trigger Probability) to fire an extra projectile at no Ammo cost, dealing AoE Damage equal to 50.0% of its ATK.",
       "Trigger Probability +90.0%. Each shot with this weapon has a chance (based on its Weapon Trigger Probability) to fire an extra projectile at no Ammo cost, dealing AoE Damage equal to 60.0% of its ATK.",
@@ -1726,9 +3344,14 @@
         "类型": "武器伤害",
         "字段": {
           "Projectile DMG": "71.0%",
-          "Explosion Radius": "3.0m",
-          "削韧": 12
-        }
+          "Explosion DMG": "50.0%",
+          "Explosion Radius": "3.0m"
+        },
+        "id": 2010101,
+        "削韧": [
+          12,
+          20
+        ]
       }
     ]
   },
@@ -1754,6 +3377,43 @@
     "加成": {
       "攻击": 0.6
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Barrel": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Barrel": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Barrel": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Barrel": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Barrel": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
     "熔炼": [
       "Character ATK ‍+60.0%.",
       "Character ATK ‍+72.0%.",
@@ -1767,9 +3427,12 @@
         "名称": "射击",
         "类型": "武器伤害",
         "字段": {
-          "Projectile DMG": "71.0%",
-          "削韧": 12
-        }
+          "Projectile DMG": "71.0%"
+        },
+        "id": 2019901,
+        "削韧": [
+          12
+        ]
       }
     ]
   },
@@ -1795,6 +3458,43 @@
     "加成": {
       "多重": 0.375
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Barrel": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Barrel": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Barrel": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Barrel": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Barrel": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
     "熔炼": [
       "Multishot +37.5%. When this weapon triggers a bonus effect on hit, increases Melee Weapon DMG by 35.0% for 12.0s.",
       "Multishot +45.0%. When this weapon triggers a bonus effect on hit, increases Melee Weapon DMG by 42.0% for 12.0s.",
@@ -1808,9 +3508,12 @@
         "名称": "射击",
         "类型": "武器伤害",
         "字段": {
-          "Projectile DMG": "71.0%",
-          "削韧": 12
-        }
+          "Projectile DMG": "71.0%"
+        },
+        "id": 2019901,
+        "削韧": [
+          12
+        ]
       }
     ]
   },
@@ -1836,22 +3539,62 @@
     "加成": {
       "技能威力": 0.24
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Barrel": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Barrel": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Barrel": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Barrel": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Barrel": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
     "熔炼": [
-      "Skill Intensity +24.0%.",
-      "Skill Intensity +28.8%.",
-      "Skill Intensity +33.6%.",
-      "Skill Intensity +38.4%.",
-      "Skill Intensity +43.2%.",
-      "Skill Intensity +48.0%."
+      "Skill Damage +24.0%.",
+      "Skill Damage +28.8%.",
+      "Skill Damage +33.6%.",
+      "Skill Damage +38.4%.",
+      "Skill Damage +43.2%.",
+      "Skill Damage +48.0%."
     ],
     "技能": [
       {
         "名称": "射击",
         "类型": "武器伤害",
         "字段": {
-          "Projectile DMG": "47.0%",
-          "削韧": 8
-        }
+          "Projectile DMG": "47.0%"
+        },
+        "id": 2020101,
+        "削韧": [
+          8
+        ]
       }
     ]
   },
@@ -1877,6 +3620,43 @@
     "加成": {
       "技能耐久": 0.15
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Barrel": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Barrel": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Barrel": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Barrel": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Barrel": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
     "熔炼": [
       "Skill Duration +15.0%. When its projectiles hit enemies or the environment, they bounce once. When dealing damage with this weapon, increases Dual Pistols Damage by 45.0% for 15.0s.",
       "Skill Duration +18.0%. When its projectiles hit enemies or the environment, they bounce once. When dealing damage with this weapon, increases Dual Pistols Damage by 54.0% for 18.0s.",
@@ -1891,9 +3671,13 @@
         "类型": "武器伤害",
         "字段": {
           "Projectile DMG": "47.0%",
-          "Ricochet DMG": "47.0%",
-          "削韧": 8
-        }
+          "Ricochet DMG": "47.0%"
+        },
+        "id": 2020301,
+        "削韧": [
+          8,
+          8
+        ]
       }
     ]
   },
@@ -1919,6 +3703,43 @@
     "加成": {
       "暴击": 0.5
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Barrel": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Barrel": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Barrel": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Barrel": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Barrel": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
     "熔炼": [
       "CRIT Chance +50.0%. Dealing CRIT Damage with this weapon grants +6.2% Multishot for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
       "CRIT Chance +60.0%. Dealing CRIT Damage with this weapon grants +7.5% Multishot for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
@@ -1932,9 +3753,12 @@
         "名称": "射击",
         "类型": "武器伤害",
         "字段": {
-          "Projectile DMG": "47.0%",
-          "削韧": 8
-        }
+          "Projectile DMG": "47.0%"
+        },
+        "id": 2020101,
+        "削韧": [
+          8
+        ]
       }
     ]
   },
@@ -1960,6 +3784,43 @@
     "加成": {
       "子弹爆炸范围": 25
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Frame": 4,
+        "Basic Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Frame": 3,
+        "Intermediate Weapon Component: Bolt": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Frame": 6,
+        "Advanced Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Frame": 10,
+        "Advanced Weapon Component: Bolt": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Frame": 20,
+        "Advanced Weapon Component: Bolt": 8
+      }
+    ],
     "熔炼": [
       "Explosion Range +0.2. When its projectiles explode, they split into 6 additional projectiles that explode and deal damage. When defeating a target with this weapon, grants 1 stack that increases CRIT Damage by 8.8% for 15.0s, up to 10.0 stacks.\nThis effect is removed when switching to another weapon.",
       "Explosion Range +0.3. When its projectiles explode, they split into 6 additional projectiles that explode and deal damage. When defeating a target with this weapon, grants 1 stack that increases CRIT Damage by 10.5% for 15.0s, up to 10.0 stacks.\nThis effect is removed when switching to another weapon.",
@@ -1976,9 +3837,13 @@
           "Explosion DMG": "80.0%",
           "Explosion DMG - Phase 2": "15.0%",
           "Explosion Radius": "3.0m",
-          "2-Hit Explosion Radius": "3.0m",
-          "削韧": 30
-        }
+          "2-Hit Explosion Radius": "3.0m"
+        },
+        "id": 2030201,
+        "削韧": [
+          30,
+          8
+        ]
       }
     ]
   },
@@ -2004,13 +3869,50 @@
     "加成": {
       "多重": 0.375
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Frame": 4,
+        "Basic Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Frame": 3,
+        "Intermediate Weapon Component: Bolt": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Frame": 6,
+        "Advanced Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Frame": 10,
+        "Advanced Weapon Component: Bolt": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Frame": 20,
+        "Advanced Weapon Component: Bolt": 8
+      }
+    ],
     "熔炼": [
-      "Multishot +37.5%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill DMG and Ranged Weapon DMG by 12.0% for 12.0s, up to 4.0 stacks.",
-      "Multishot +45.0%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill DMG and Ranged Weapon DMG by 14.4% for 12.0s, up to 4.0 stacks.",
-      "Multishot +52.5%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill DMG and Ranged Weapon DMG by 16.8% for 12.0s, up to 4.0 stacks.",
-      "Multishot +60.0%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill DMG and Ranged Weapon DMG by 19.2% for 12.0s, up to 4.0 stacks.",
-      "Multishot +67.5%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill DMG and Ranged Weapon DMG by 21.6% for 12.0s, up to 4.0 stacks.",
-      "Multishot +75.0%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill DMG and Ranged Weapon DMG by 24.0% for 12.0s, up to 4.0 stacks."
+      "Multishot +37.5%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill Damage and Ranged Weapon Damage by 12.0% for 12.0s, up to 4.0 stacks.",
+      "Multishot +45.0%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill Damage and Ranged Weapon Damage by 14.4% for 12.0s, up to 4.0 stacks.",
+      "Multishot +52.5%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill Damage and Ranged Weapon Damage by 16.8% for 12.0s, up to 4.0 stacks.",
+      "Multishot +60.0%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill Damage and Ranged Weapon Damage by 19.2% for 12.0s, up to 4.0 stacks.",
+      "Multishot +67.5%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill Damage and Ranged Weapon Damage by 21.6% for 12.0s, up to 4.0 stacks.",
+      "Multishot +75.0%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill Damage and Ranged Weapon Damage by 24.0% for 12.0s, up to 4.0 stacks."
     ],
     "技能": [
       {
@@ -2022,9 +3924,12 @@
           "Explosion DMG - Phase 3": "32.0%",
           "Explosion Radius": "3.0m",
           "2-Hit Explosion Radius": "3.0m",
-          "3-Hit Explosion Radius": "3.0m",
-          "削韧": 12
-        }
+          "3-Hit Explosion Radius": "3.0m"
+        },
+        "id": 2030301,
+        "削韧": [
+          12
+        ]
       }
     ]
   },
@@ -2050,6 +3955,43 @@
     "加成": {
       "技能范围": 0.36
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Frame": 4,
+        "Basic Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Frame": 3,
+        "Intermediate Weapon Component: Bolt": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Frame": 6,
+        "Advanced Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Frame": 10,
+        "Advanced Weapon Component: Bolt": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Frame": 20,
+        "Advanced Weapon Component: Bolt": 8
+      }
+    ],
     "熔炼": [
       "Skill Range +36.0%.",
       "Skill Range +43.2%.",
@@ -2064,9 +4006,12 @@
         "类型": "武器伤害",
         "字段": {
           "Explosion DMG": "95.0%",
-          "Explosion Radius": "3.0m",
-          "削韧": 40
-        }
+          "Explosion Radius": "3.0m"
+        },
+        "id": 2030101,
+        "削韧": [
+          40
+        ]
       }
     ]
   },
@@ -2092,6 +4037,43 @@
     "加成": {
       "暴伤": 0.625
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Frame": 4,
+        "Basic Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Frame": 3,
+        "Intermediate Weapon Component: Bolt": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Frame": 6,
+        "Advanced Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Frame": 10,
+        "Advanced Weapon Component: Bolt": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Frame": 20,
+        "Advanced Weapon Component: Bolt": 8
+      }
+    ],
     "熔炼": [
       "CRIT Damage +62.5%. When its projectiles hit enemies or the environment, they split into 2 additional projectiles that continue to travel. After switching to this weapon, increases Multishot by 38.0%, which decreases over time. This effect can only be triggered once every 10s and is removed when switching to another weapon.",
       "CRIT Damage +75.0%. When its projectiles hit enemies or the environment, they split into 2 additional projectiles that continue to travel. After switching to this weapon, increases Multishot by 45.0%, which decreases over time. This effect can only be triggered once every 10s and is removed when switching to another weapon.",
@@ -2109,9 +4091,14 @@
           "DoT": "4.0%",
           "Explosion DMG - Phase 2": "8.0%",
           "Explosion Radius": "3.0m",
-          "2-Hit Explosion Radius": "3.0m",
-          "削韧": 1
-        }
+          "2-Hit Explosion Radius": "3.0m"
+        },
+        "id": 2030401,
+        "削韧": [
+          1,
+          1,
+          1
+        ]
       }
     ]
   },
@@ -2137,6 +4124,43 @@
     "加成": {
       "攻速": 0.25
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Frame": 4,
+        "Basic Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Frame": 3,
+        "Intermediate Weapon Component: Bolt": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Frame": 6,
+        "Advanced Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Frame": 10,
+        "Advanced Weapon Component: Bolt": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Frame": 20,
+        "Advanced Weapon Component: Bolt": 8
+      }
+    ],
     "熔炼": [
       "ATK Speed +25.0%. When this weapon triggers a bonus effect on hit, grants +5.0% ATK Speed for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
       "ATK Speed +30.0%. When this weapon triggers a bonus effect on hit, grants +6.0% ATK Speed for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
@@ -2154,9 +4178,12 @@
           "Firing Interval": "0.3shots/s",
           "Firing Interval - Phase 2": "0.2shots/s",
           "Firing Interval - Phase 3": "0.1shots/s",
-          "Firing Interval - Phase 4": "0.1shots/s",
-          "削韧": 2
-        }
+          "Firing Interval - Phase 4": "0.1shots/s"
+        },
+        "id": 2030501,
+        "削韧": [
+          2
+        ]
       }
     ]
   },
@@ -2182,6 +4209,43 @@
     "加成": {
       "技能耐久": 0.18
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Barrel": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Barrel": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Barrel": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Barrel": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Barrel": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
     "熔炼": [
       "Skill Duration +18.0%.",
       "Skill Duration +21.6%.",
@@ -2196,9 +4260,12 @@
         "类型": "武器伤害",
         "字段": {
           "Projectile DMG": "30.0%",
-          "Number of Projectiles": "5.0",
-          "削韧": 2
-        }
+          "Number of Projectiles": "5.0"
+        },
+        "id": 2040101,
+        "削韧": [
+          2
+        ]
       }
     ]
   },
@@ -2212,6 +4279,8 @@
       "远程",
       "霰弹枪"
     ],
+    "射速": 1.0,
+    "装填": 2.33333,
     "伤害类型": "震荡",
     "攻击": 16,
     "暴击": 0.16,
@@ -2224,6 +4293,43 @@
     "加成": {
       "暴击": 0.5
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Barrel": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Barrel": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Barrel": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Barrel": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Barrel": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
     "熔炼": [
       "CRIT Chance +50.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 217.0%/383.0%/592.0% of the original damage.",
       "CRIT Chance +60.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 225.0%/399.0%/615.0% of the original damage.",
@@ -2244,9 +4350,15 @@
           "Explosion Radius": "2.0m",
           "2-Hit Explosion Radius": "3.0m",
           "3-Hit Explosion Radius": "4.0m",
-          "4-Hit Explosion Radius": "5.0m",
-          "削韧": 50
-        }
+          "4-Hit Explosion Radius": "5.0m"
+        },
+        "id": 2040201,
+        "削韧": [
+          50,
+          100,
+          150,
+          200
+        ]
       }
     ]
   },
@@ -2260,6 +4372,7 @@
       "远程",
       "霰弹枪"
     ],
+    "装填": 2.0,
     "伤害类型": "切割",
     "攻击": 17,
     "暴击": 0.2,
@@ -2272,6 +4385,43 @@
     "加成": {
       "暴伤": 0.625
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Barrel": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Barrel": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Barrel": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Barrel": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Barrel": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
     "熔炼": [
       "CRIT Damage +62.5%. Fired projectiles track the crosshair. When dealing damage with this weapon, the farther the target, the higher the damage, up to a maximum increase of 45.0%.",
       "CRIT Damage +75.0%. Fired projectiles track the crosshair. When dealing damage with this weapon, the farther the target, the higher the damage, up to a maximum increase of 54.0%.",
@@ -2286,9 +4436,12 @@
         "类型": "武器伤害",
         "字段": {
           "Explosion DMG": "139.0%",
-          "Explosion Radius": "3.0m",
-          "削韧": 25
-        }
+          "Explosion Radius": "3.0m"
+        },
+        "id": 2040301,
+        "削韧": [
+          25
+        ]
       }
     ]
   },
@@ -2302,6 +4455,7 @@
       "远程",
       "霰弹枪"
     ],
+    "装填": 2.33333,
     "伤害类型": "震荡",
     "攻击": 15,
     "暴击": 0.15,
@@ -2314,6 +4468,43 @@
     "加成": {
       "攻击": 0.5
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Barrel": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Barrel": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Barrel": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Barrel": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Barrel": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
     "熔炼": [
       "Character ATK +50.0%. Charging fires a special bullet that travels slowly and explodes after a short delay, dealing AoE damage. Tap-firing bullets can trigger its early detonation on contact. When an Umbro character casts their Ultimate, grants +20.0% Skill Efficiency for 15.0s.",
       "Character ATK +60.0%. Charging fires a special bullet that travels slowly and explodes after a short delay, dealing AoE damage. Tap-firing bullets can trigger its early detonation on contact. When an Umbro character casts their Ultimate, grants +24.0% Skill Efficiency for 15.0s.",
@@ -2331,7 +4522,12 @@
           "Explosion DMG": "200.0%",
           "Projectile Calibre": "2.8m",
           "Explosion Radius": "10.0m"
-        }
+        },
+        "id": 2040501,
+        "削韧": [
+          12,
+          80
+        ]
       }
     ]
   },
@@ -2357,6 +4553,43 @@
     "加成": {
       "技能耐久": 0.18
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Bolt": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Bolt": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Bolt": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Bolt": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Bolt": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
     "熔炼": [
       "Skill Duration +18.0%.",
       "Skill Duration +21.6%.",
@@ -2371,9 +4604,12 @@
         "类型": "武器伤害",
         "字段": {
           "Projectile DMG": "16.0%",
-          "Firing Interval": "0.1shots/s",
-          "削韧": 4
-        }
+          "Firing Interval": "0.1shots/s"
+        },
+        "id": 2050101,
+        "削韧": [
+          4
+        ]
       }
     ]
   },
@@ -2399,6 +4635,43 @@
     "加成": {
       "触发": 0.75
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Bolt": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Bolt": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Bolt": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Bolt": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Bolt": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
     "熔炼": [
       "Trigger Probability +75.0%. Fires a Beam Attack that ricochets off the target and hits up to 4 enemies within range. When an Electro character triggers bonus effects with this weapon, the user gains +45.0% Weapon Damage for 10.0s.",
       "Trigger Probability +90.0%. Fires a Beam Attack that ricochets off the target and hits up to 4 enemies within range. When an Electro character triggers bonus effects with this weapon, the user gains +54.0% Weapon Damage for 10.0s.",
@@ -2414,9 +4687,13 @@
         "字段": {
           "Beam DMG": "17.6%",
           "Ricochet DMG": "17.6%",
-          "Firing Interval": "0.1shots/s",
-          "削韧": 4
-        }
+          "Firing Interval": "0.1shots/s"
+        },
+        "id": 2050201,
+        "削韧": [
+          4,
+          4
+        ]
       }
     ]
   },
@@ -2442,6 +4719,43 @@
     "加成": {
       "触发": 0.75
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Bolt": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Bolt": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Bolt": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Bolt": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Bolt": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
     "熔炼": [
       "Trigger Probability +75.0%. When this weapon triggers a bonus effect on hit, there is a 30.0% chance to reload 1 projectile.",
       "Trigger Probability +90.0%. When this weapon triggers a bonus effect on hit, there is a 36.0% chance to reload 1 projectile.",
@@ -2456,9 +4770,12 @@
         "类型": "武器伤害",
         "字段": {
           "Beam DMG": "20.0%",
-          "Firing Interval": "0.1shots/s",
-          "削韧": 4
-        }
+          "Firing Interval": "0.1shots/s"
+        },
+        "id": 2050301,
+        "削韧": [
+          4
+        ]
       }
     ]
   },
@@ -2484,6 +4801,43 @@
     "加成": {
       "多重": 0.375
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Bolt": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Bolt": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Bolt": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Bolt": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Bolt": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
     "熔炼": [
       "Multishot +37.5%. When dealing damage with this weapon, the lower the remaining Ammo percentage, the higher the damage dealt, up to a maximum increase of 45.0%, with full effect when the Ammo count is below 20.0%.",
       "Multishot +45.0%. When dealing damage with this weapon, the lower the remaining Ammo percentage, the higher the damage dealt, up to a maximum increase of 54.0%, with full effect when the Ammo count is below 20.0%.",
@@ -2502,9 +4856,14 @@
           "Beam DMG - Phase 3": "37.0%",
           "Firing Interval": "0.5shots/s",
           "Firing Interval - Phase 2": "0.3shots/s",
-          "Firing Interval - Phase 3": "0.1shots/s",
-          "削韧": 3
-        }
+          "Firing Interval - Phase 3": "0.1shots/s"
+        },
+        "id": 2050401,
+        "削韧": [
+          3,
+          4,
+          5
+        ]
       }
     ]
   },
@@ -2530,6 +4889,43 @@
     "加成": {
       "弹匣": 0.3
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Bolt": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Bolt": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Bolt": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Bolt": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Bolt": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
     "熔炼": [
       "Mag Capacity +30.0%. On a CRIT with this weapon, grants 1 stack of +5.0% ATK Speed for 6.0s, stacking up to 10.0 times. The effect is removed when switching weapons.",
       "Mag Capacity +36.0%. On a CRIT with this weapon, grants 1 stack of +6.0% ATK Speed for 6.0s, stacking up to 10.0 times. The effect is removed when switching weapons.",
@@ -2544,9 +4940,12 @@
         "类型": "武器伤害",
         "字段": {
           "Projectile DMG": "4.1%",
-          "Firing Interval": "0.1shots/s",
-          "削韧": 3
-        }
+          "Firing Interval": "0.1shots/s"
+        },
+        "id": 2050601,
+        "削韧": [
+          3
+        ]
       }
     ]
   },
@@ -2572,6 +4971,43 @@
     "加成": {
       "暴伤": 0.625
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Bolt": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Bolt": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Bolt": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Bolt": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Bolt": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
     "熔炼": [
       "CRIT Damage +62.5%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. For each additional Ammo count gained, the damage dealt by this weapon is increased by 4.5%, up to a maximum increase of 45.0%.",
       "CRIT Damage +75.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. For each additional Ammo count gained, the damage dealt by this weapon is increased by 5.4%, up to a maximum increase of 54.0%.",
@@ -2586,9 +5022,12 @@
         "类型": "武器伤害",
         "字段": {
           "Projectile DMG": "6.0%",
-          "Firing Interval": "0.1shots/s",
-          "削韧": 1
-        }
+          "Firing Interval": "0.1shots/s"
+        },
+        "id": 2050701,
+        "削韧": [
+          1
+        ]
       }
     ]
   },
@@ -2614,6 +5053,43 @@
     "加成": {
       "技能范围": 0.3
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Bolt": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Bolt": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Bolt": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Bolt": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Bolt": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
     "熔炼": [
       "Skill Range +30.0%. When a Lumino character deals additional damage, there is a 30.0% chance to grant allies +9.0% ATK for 15.0s (up to 10.0 stacks).",
       "Skill Range +36.0%. When a Lumino character deals additional damage, there is a 30.0% chance to grant allies +10.8% ATK for 15.0s (up to 10.0 stacks).",
@@ -2628,9 +5104,12 @@
         "类型": "武器伤害",
         "字段": {
           "Beam DMG": "20.0%",
-          "Firing Interval": "0.1shots/s",
-          "削韧": 4
-        }
+          "Firing Interval": "0.1shots/s"
+        },
+        "id": 2050301,
+        "削韧": [
+          4
+        ]
       }
     ]
   },
@@ -2656,6 +5135,43 @@
     "加成": {
       "技能耐久": 0.15
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Bolt": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Bolt": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Bolt": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Bolt": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Bolt": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
     "熔炼": [
       "Skill Duration +15.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. When a Lumino character triggers Bonus Effect, grants 1 stack that increases ATK by 17.5% for 24.0s, up to 9.0 stacks. Using an Ultimate Skill refreshes the duration of all stacks to 24.0s.",
       "Skill Duration +18.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. When a Lumino character triggers Bonus Effect, grants 1 stack that increases ATK by 21.0% for 24.0s, up to 9.0 stacks. Using an Ultimate Skill refreshes the duration of all stacks to 24.0s.",
@@ -2670,9 +5186,12 @@
         "类型": "武器伤害",
         "字段": {
           "Projectile DMG": "6.0%",
-          "Firing Interval": "0.1shots/s",
-          "削韧": 1
-        }
+          "Firing Interval": "0.1shots/s"
+        },
+        "id": 2051001,
+        "削韧": [
+          1
+        ]
       }
     ]
   },
@@ -2699,6 +5218,43 @@
     "加成": {
       "攻速": 0.25
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Frame": 4,
+        "Basic Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Frame": 3,
+        "Intermediate Weapon Component: Barrel": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Frame": 6,
+        "Advanced Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Frame": 10,
+        "Advanced Weapon Component: Barrel": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Frame": 20,
+        "Advanced Weapon Component: Barrel": 8
+      }
+    ],
     "熔炼": [
       "ATK Speed +25.0%‍. Each enemy struck by a single arrow increases the arrow's damage by 9.0%, with a maximum increase of 45.0%.",
       "ATK Speed +30.0%‍. Each enemy struck by a single arrow increases the arrow's damage by 10.8%, with a maximum increase of 54.0%.",
@@ -2717,9 +5273,14 @@
           "Projectile DMG - Phase 3": "143.0%",
           "Projectile Calibre": "0.2m",
           "Projectile Calibre - Phase 2": "1.0m",
-          "Projectile Calibre - Phase 3": "1.0m",
-          "削韧": 8
-        }
+          "Projectile Calibre - Phase 3": "1.0m"
+        },
+        "id": 2060101,
+        "削韧": [
+          8,
+          10,
+          20
+        ]
       }
     ]
   },
@@ -2746,13 +5307,50 @@
     "加成": {
       "技能耐久": 0.15
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Frame": 4,
+        "Basic Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Frame": 3,
+        "Intermediate Weapon Component: Barrel": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Frame": 6,
+        "Advanced Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Frame": 10,
+        "Advanced Weapon Component: Barrel": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Frame": 20,
+        "Advanced Weapon Component: Barrel": 8
+      }
+    ],
     "熔炼": [
-      "Skill Duration +15.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +10.0% ATK, +10.0% DEF, +7.5% Skill Intensity, or +10.0% Skill Duration.",
-      "Skill Duration +18.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +12.0% ATK, +12.0% DEF, +9.0% Skill Intensity, or +12.0% Skill Duration.",
-      "Skill Duration +21.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +14.0% ATK, +14.0% DEF, +10.5% Skill Intensity, or +14.0% Skill Duration.",
-      "Skill Duration +24.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +16.0% ATK, +16.0% DEF, +12.0% Skill Intensity, or +16.0% Skill Duration.",
-      "Skill Duration +27.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +18.0% ATK, +18.0% DEF, +13.5% Skill Intensity, or +18.0% Skill Duration.",
-      "Skill Duration +30.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +20.0% ATK, +20.0% DEF, +15.0% Skill Intensity, or +20.0% Skill Duration."
+      "Skill Duration +15.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +10.0% ATK, +10.0% DEF, +7.5% Skill Damage, or +10.0% Skill Duration.",
+      "Skill Duration +18.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +12.0% ATK, +12.0% DEF, +9.0% Skill Damage, or +12.0% Skill Duration.",
+      "Skill Duration +21.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +14.0% ATK, +14.0% DEF, +10.5% Skill Damage, or +14.0% Skill Duration.",
+      "Skill Duration +24.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +16.0% ATK, +16.0% DEF, +12.0% Skill Damage, or +16.0% Skill Duration.",
+      "Skill Duration +27.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +18.0% ATK, +18.0% DEF, +13.5% Skill Damage, or +18.0% Skill Duration.",
+      "Skill Duration +30.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +20.0% ATK, +20.0% DEF, +15.0% Skill Damage, or +20.0% Skill Duration."
     ],
     "技能": [
       {
@@ -2760,9 +5358,12 @@
         "类型": "武器伤害",
         "字段": {
           "Projectile DMG": "6.3%",
-          "Number of Projectiles": "7.0",
-          "削韧": 3
-        }
+          "Number of Projectiles": "7.0"
+        },
+        "id": 2060201,
+        "削韧": [
+          3
+        ]
       }
     ]
   },
@@ -2789,13 +5390,50 @@
     "加成": {
       "技能范围": 0.3
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Frame": 4,
+        "Basic Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Frame": 3,
+        "Intermediate Weapon Component: Barrel": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Frame": 6,
+        "Advanced Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Frame": 10,
+        "Advanced Weapon Component: Barrel": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Frame": 20,
+        "Advanced Weapon Component: Barrel": 8
+      }
+    ],
     "熔炼": [
-      "Skill Range +30.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill DMG, grants +35.0% Skill DMG for 6.0s.",
-      "Skill Range +36.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill DMG, grants +42.0% Skill DMG for 6.0s.",
-      "Skill Range +42.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill DMG, grants +49.0% Skill DMG for 6.0s.",
-      "Skill Range +48.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill DMG, grants +56.0% Skill DMG for 6.0s.",
-      "Skill Range +54.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill DMG, grants +63.0% Skill DMG for 6.0s.",
-      "Skill Range +60.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill DMG, grants +70.0% Skill DMG for 6.0s."
+      "Skill Range +30.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill Damage, grants +35.0% Skill DMG for 6.0s.",
+      "Skill Range +36.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill Damage, grants +42.0% Skill DMG for 6.0s.",
+      "Skill Range +42.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill Damage, grants +49.0% Skill DMG for 6.0s.",
+      "Skill Range +48.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill Damage, grants +56.0% Skill DMG for 6.0s.",
+      "Skill Range +54.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill Damage, grants +63.0% Skill DMG for 6.0s.",
+      "Skill Range +60.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill Damage, grants +70.0% Skill DMG for 6.0s."
     ],
     "技能": [
       {
@@ -2803,9 +5441,12 @@
         "类型": "武器伤害",
         "字段": {
           "Projectile DMG": "18.0%",
-          "Projectile Calibre": "0.2m",
-          "削韧": 3
-        }
+          "Projectile Calibre": "0.2m"
+        },
+        "id": 2060301,
+        "削韧": [
+          3
+        ]
       }
     ]
   },
@@ -2832,6 +5473,43 @@
     "加成": {
       "技能范围": 0.36
     },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Frame": 4,
+        "Basic Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Frame": 3,
+        "Intermediate Weapon Component: Barrel": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Frame": 6,
+        "Advanced Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Frame": 10,
+        "Advanced Weapon Component: Barrel": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Frame": 20,
+        "Advanced Weapon Component: Barrel": 8
+      }
+    ],
     "熔炼": [
       "Skill Range +36.0%.",
       "Skill Range +43.2%.",
@@ -2846,9 +5524,12 @@
         "类型": "武器伤害",
         "字段": {
           "Projectile DMG": "6.3%",
-          "Number of Projectiles": "7.0",
-          "削韧": 3
-        }
+          "Number of Projectiles": "7.0"
+        },
+        "id": 2060201,
+        "削韧": [
+          3
+        ]
       }
     ]
   }

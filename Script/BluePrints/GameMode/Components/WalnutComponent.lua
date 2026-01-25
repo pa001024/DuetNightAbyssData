@@ -1,0 +1,275 @@
+require("UnLua")
+require("Const")
+local WalnutComponent = {}
+
+function WalnutComponent:IsWalnutDungeon()
+  if self.IsDungeonTypeWalnut == nil then
+    local DungeonInfo = DataMgr.Dungeon[self.DungeonId]
+    if DungeonInfo then
+      self.IsDungeonTypeWalnut = DungeonInfo.IsWalnutDungeon == true
+    end
+  end
+  return self.IsDungeonTypeWalnut
+end
+
+function WalnutComponent:TriggerShowWalnutReward()
+  DebugPrint("WalnutComponent:TriggerShowWalnutReward")
+  if IsStandAlone(self) then
+    self:AddDungeonEvent("ShowWalnutReward")
+  elseif IsDedicatedServer(self) then
+    self:KickPlayerNotInGame()
+    if self:IsAllPlayerNotChoosedNextWalnut() then
+      DebugPrint("WalnutComponent: 所有玩家都没装备核桃")
+      self:ExecuteNextStepOfWalnutReward()
+      return
+    end
+    self:InitWalnutRewardPlayerMap()
+    local WalnutRewardSelectTime = DataMgr.GlobalConstant.WalnutRewardSelectTime.ConstantValue or 15
+    self:BpAddTimer("ShowWalnutReward", WalnutRewardSelectTime, true, Const.GameModeEventServerClient)
+    self:ShowWalnutDebugTimer(WalnutRewardSelectTime, "ShowWalnutRewardDebug")
+  end
+  EventManager:AddEvent(EventID.OnSelectWalnutReward, self, self.OnClientSelectedWalnutReward)
+  self:NotifyLogicServerOpenWalnut()
+  self:SetGamePaused("WalnutReward", true)
+end
+
+function WalnutComponent:OnClientSelectedWalnutReward(AvatarEidStr)
+  DebugPrint("WalnutComponent:OnClientSelectedWalnutReward, AvatarEidStr", AvatarEidStr)
+  if IsStandAlone(self) then
+    self:OnClientSelectedWalnutReward_StandAlone(AvatarEidStr)
+  elseif IsDedicatedServer(self) then
+    self:OnClientSelectedWalnutReward_DedicatedServer(AvatarEidStr)
+  end
+end
+
+function WalnutComponent:OnClientSelectedWalnutReward_StandAlone(AvatarEidStr)
+  self:RemoveDungeonEvent("ShowWalnutReward")
+  self:ExecuteNextStepOfWalnutReward()
+end
+
+function WalnutComponent:OnClientSelectedWalnutReward_DedicatedServer(AvatarEidStr)
+  if self.EMGameState.WalnutRewardPlayer:Find(AvatarEidStr) ~= nil then
+    self.EMGameState.WalnutRewardPlayer:Add(AvatarEidStr, true)
+    UE.UMapSyncHelper.SyncMap(self.EMGameState, "WalnutRewardPlayer")
+    local NotSelectedPlayers = self:GetWalnutRewardNotSelectedPlayers()
+    if 0 == #NotSelectedPlayers then
+      self:OnPlayerSelectWalnutReward()
+    end
+  else
+    self.EMGameState:ShowDungeonError("WalnutComponent:一个不存在的AvatarEidStr选择了奖励 AvatarEidStr " .. (AvatarEidStr or "nil"), Const.DungeonErrorType.DungeonGame, Const.DungeonErrorTitle.ServerData)
+  end
+end
+
+function WalnutComponent:GetWalnutRewardNotSelectedPlayers()
+  local Res = {}
+  for AvatarEidStr, IsSelected in pairs(self.EMGameState.WalnutRewardPlayer) do
+    if not IsSelected then
+      table.insert(Res, AvatarEidStr)
+    end
+  end
+  return Res
+end
+
+function WalnutComponent:InitWalnutRewardPlayerMap()
+  self.EMGameState.WalnutRewardPlayer:Clear()
+  for _, Player in pairs(self:GetAllPlayer()) do
+    local AvatarEidStr = Player:GetOwner().AvatarEidStr
+    local LastChooseWalnutId = self:GetLastChooseWalnutId(AvatarEidStr)
+    local IsAlreadySelect = -1 == LastChooseWalnutId or 0 == LastChooseWalnutId or nil == LastChooseWalnutId
+    self.EMGameState.WalnutRewardPlayer:Add(AvatarEidStr, IsAlreadySelect)
+    DebugPrint("WalnutComponent: InitWalnutRewardPlayerMap, AvatarEidStr", AvatarEidStr, "LastChooseWalnutId", LastChooseWalnutId)
+  end
+  UE.UMapSyncHelper.SyncMap(self.EMGameState, "WalnutRewardPlayer")
+end
+
+function WalnutComponent:GetLastChooseWalnutId(AvatarEidStr)
+  if 0 == self.EMGameState.NextWalnutPlayer:Length() then
+    if not self.AvatarInfos[AvatarEidStr] then
+      return nil
+    end
+    return self.AvatarInfos[AvatarEidStr].PlayerInfo.Walnuts.WalnutId
+  else
+    return self.EMGameState.NextWalnutPlayer:Find(AvatarEidStr)
+  end
+end
+
+function WalnutComponent:IsAllPlayerNotChoosedNextWalnut()
+  if 0 == self.EMGameState.NextWalnutPlayer:Length() then
+    PrintTable(self.AvatarInfos, 10)
+    for _, v in pairs(self.AvatarInfos) do
+      if -1 ~= v.PlayerInfo.Walnuts.WalnutId then
+        return false
+      end
+    end
+    return true
+  else
+    for _, WalnutId in pairs(self.EMGameState.NextWalnutPlayer) do
+      if -1 ~= WalnutId and 0 ~= WalnutId then
+        return false
+      end
+    end
+    return true
+  end
+end
+
+function WalnutComponent:NotifyLogicServerOpenWalnut()
+  local Entity
+  if IsStandAlone(self) then
+    Entity = GWorld:GetAvatar()
+  else
+    Entity = GWorld:GetDSEntity()
+  end
+  Entity:OpenWalnut()
+end
+
+function WalnutComponent:BpOnTimerEnd_ShowWalnutReward()
+  DebugPrint("WalnutComponent:BpOnTimerEnd_ShowWalnutReward")
+  local DSEntity = GWorld:GetDSEntity()
+  local NotSelectedPlayers = self:GetWalnutRewardNotSelectedPlayers()
+  PrintTable(NotSelectedPlayers, 2)
+  DSEntity:SelectWalnutReward(NotSelectedPlayers, 1)
+  self:ExecuteNextStepOfWalnutReward()
+end
+
+function WalnutComponent:OnPlayerSelectWalnutReward()
+  DebugPrint("WalnutComponent:OnPlayerSelectWalnutReward")
+  self:BpDelTimer("ShowWalnutReward", true, Const.GameModeEventServerClient)
+  self:ExecuteNextStepOfWalnutReward()
+end
+
+function WalnutComponent:ExecuteNextStepOfWalnutReward()
+  self:RemoveTimer("ShowWalnutRewardDebug")
+  EventManager:RemoveEvent(EventID.OnSelectWalnutReward, self)
+  self:SetGamePaused("WalnutReward", false)
+  DebugPrint("WalnutComponent:ExecuteNextStepOfWalnutReward 是无尽副本吗", self:IsEndlessDungeon())
+  if not self:IsEndlessDungeon() then
+    self:TriggerRealDungeFinish(true)
+  else
+    self:ExecuteLogicStartDungeonVote()
+  end
+end
+
+function WalnutComponent:ExecuteWalutLogicOnEnd()
+  self:TriggerShowWalnutReward()
+end
+
+function WalnutComponent:KickPlayerNotInGame()
+  local KickedAvatarEids = {}
+  for _, Player in pairs(self:GetAllPlayer()) do
+    local AvatarEidStr = Player:GetOwner().AvatarEidStr
+    local PlayerState = Player.PlayerState
+    if PlayerState and not PlayerState:IsInGame() then
+      table.insert(KickedAvatarEids, AvatarEidStr)
+      DebugPrint("WalnutComponent:KickPlayerNotInGame, 踢掉未连进来的玩家 AvatarEidStr", AvatarEidStr)
+    end
+  end
+  if #KickedAvatarEids > 0 then
+    self:ForceFinishPlayerByFailed(KickedAvatarEids)
+  end
+end
+
+function WalnutComponent:TriggerShowNextWalnut()
+  DebugPrint("WalnutComponent:TriggerShowNextWalnut")
+  EventManager:AddEvent(EventID.OnSelectWalnut, self, self.OnClinetChooseNextWalnut)
+  if IsStandAlone(self) then
+    self:AddDungeonEvent("NextWalnut")
+  elseif IsDedicatedServer(self) then
+    local WalnutSelectTime = DataMgr.GlobalConstant.WalnutSelectTime.ConstantValue or 15
+    self:BpAddTimer("NextWalnut", WalnutSelectTime, true, Const.GameModeEventServerClient)
+    self:InitNextWalnutPlayerMap()
+    self.IsNextStepTriggered = false
+    self:ShowWalnutDebugTimer(WalnutSelectTime, "ShowNextWalnutDebug")
+  end
+end
+
+function WalnutComponent:InitNextWalnutPlayerMap()
+  self.EMGameState.NextWalnutPlayer:Clear()
+  for _, Player in pairs(self:GetAllPlayer()) do
+    local AvatarEidStr = Player:GetOwner().AvatarEidStr
+    self.EMGameState.NextWalnutPlayer:Add(AvatarEidStr, 0)
+    DebugPrint("WalnutComponent: InitNextWalnutPlayerMap, AvatarEidStr", AvatarEidStr)
+  end
+  UE.UMapSyncHelper.SyncMap(self.EMGameState, "NextWalnutPlayer")
+end
+
+function WalnutComponent:OnClinetChooseNextWalnut(AvatarEidStr, WalnutId)
+  DebugPrint("WalnutComponent:OnClinetChooseNextWalnut, AvatarEidStr", AvatarEidStr, "WalnutId", WalnutId)
+  if IsStandAlone(self) then
+    self:OnClinetChooseNextWalnut_StandAlone(AvatarEidStr, WalnutId)
+  elseif IsDedicatedServer(self) then
+    self:OnClinetChooseNextWalnut_DedicatedServer(AvatarEidStr, WalnutId)
+  end
+end
+
+function WalnutComponent:OnClinetChooseNextWalnut_StandAlone(AvatarEidStr, WalnutId)
+  DebugPrint("WalnutComponent:ExecuteNextStepOfChooseWalnu_StandAlone")
+  EventManager:RemoveEvent(EventID.OnSelectWalnut, self)
+  self:RemoveDungeonEvent("NextWalnut")
+  self:TriggerActiveGameModeState(Const.StateBattleProgress)
+end
+
+function WalnutComponent:OnClinetChooseNextWalnut_DedicatedServer(AvatarEidStr, WalnutId)
+  if self.EMGameState.NextWalnutPlayer:Find(AvatarEidStr) ~= nil then
+    self.EMGameState.NextWalnutPlayer:Add(AvatarEidStr, WalnutId)
+    UE.UMapSyncHelper.SyncMap(self.EMGameState, "NextWalnutPlayer")
+    if self.IsNextStepTriggered then
+      DebugPrint("WalnutComponent: 倒计时后才收到的skynet事件 AvatarEidStr", AvatarEidStr, "WalnutId", WalnutId)
+      return
+    end
+    local NotChoosedPlayers = self:GetNextWalnutNotChoosedPlayers()
+    if 0 == #NotChoosedPlayers then
+      self:OnPlayerChoosedNextWalnut()
+    end
+  end
+end
+
+function WalnutComponent:OnPlayerChoosedNextWalnut()
+  DebugPrint("WalnutComponent:OnPlayerChoosedNextWalnut")
+  self:BpDelTimer("NextWalnut", true, Const.GameModeEventServerClient)
+  self:ExecuteWalnutReadyCountDown()
+end
+
+function WalnutComponent:BpOnTimerEnd_NextWalnut()
+  DebugPrint("WalnutComponent:BpOnTimerEnd_NextWalnut")
+  self:ExecuteWalnutReadyCountDown()
+end
+
+function WalnutComponent:ExecuteWalnutReadyCountDown()
+  self:RemoveTimer("ShowNextWalnutDebug")
+  self.IsNextStepTriggered = true
+  DebugPrint("WalnutComponent:ExecuteWalnutReadyCountDown")
+  local WalnutDungeonReadyTime = DataMgr.GlobalConstant.WalnutDungeonReadyTime.ConstantValue or 15
+  self:BpAddTimer("WalnutReady", WalnutDungeonReadyTime, true, Const.GameModeEventServerClient)
+  self:ShowWalnutDebugTimer(WalnutDungeonReadyTime, "ShowWalnutReadyDebug")
+end
+
+function WalnutComponent:BpOnTimerEnd_WalnutReady()
+  DebugPrint("WalnutComponent:BpOnTimerEnd_WalnutReady")
+  EventManager:RemoveEvent(EventID.OnSelectWalnut, self)
+  PrintTable(self.EMGameState.NextWalnutPlayer:ToTable())
+  self:RemoveTimer("ShowWalnutReadyDebug")
+  self:TriggerActiveGameModeState(Const.StateBattleProgress)
+end
+
+function WalnutComponent:GetNextWalnutNotChoosedPlayers()
+  local Res = {}
+  for AvatarEidStr, WalnutId in pairs(self.EMGameState.NextWalnutPlayer) do
+    if 0 == WalnutId then
+      table.insert(Res, AvatarEidStr)
+    end
+  end
+  return Res
+end
+
+function WalnutComponent:ShowWalnutDebugTimer(TotalTime, Handle)
+  local count = TotalTime
+  self:AddTimer(1, function()
+    DebugPrint("WalnutComponent:" .. Handle .. " remaintime:", count)
+    count = count - 1
+    if count <= 0 then
+      self:RemoveTimer(Handle)
+    end
+  end, true, 0, Handle, true)
+end
+
+return WalnutComponent

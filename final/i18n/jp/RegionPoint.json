@@ -1,0 +1,559 @@
+[
+  {
+    "id": 2001,
+    "name": "屋敷",
+    "icon": "T_Gp_Homebase",
+    "pos": [
+      -5221,
+      6000
+    ],
+    "subRegion": 101101,
+    "targetSubRegion": [
+      210101
+    ],
+    "telepointId": 1011,
+    "teleportPointPos": 15,
+    "teleportSubRegion": 101101,
+    "unlockConditionId": 311,
+    "manualItemId": 1199997,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2002,
+    "name": "「アスフォデロス」",
+    "icon": "T_Gp_Tavern",
+    "pos": [
+      -3172,
+      -5484
+    ],
+    "subRegion": 101101,
+    "targetSubRegion": [
+      101107
+    ],
+    "telepointId": 1011,
+    "teleportPointPos": 16,
+    "teleportSubRegion": 101101,
+    "unlockConditionId": 31,
+    "manualItemId": 1199999,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2003,
+    "name": "「ヒュプノスの家」",
+    "icon": "T_Gp_Sanatorium",
+    "pos": [
+      -2360,
+      13561
+    ],
+    "subRegion": 101101,
+    "targetSubRegion": [
+      101106
+    ],
+    "telepointId": 1012,
+    "teleportPointPos": 17,
+    "teleportSubRegion": 101101,
+    "unlockConditionId": 310,
+    "manualItemId": 1199996,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2004,
+    "name": "アウトサイダーの家",
+    "icon": "T_Gp_OutsidersHome",
+    "pos": [
+      -1768,
+      -12190
+    ],
+    "subRegion": 101101,
+    "targetSubRegion": [
+      101105
+    ],
+    "telepointId": 1011,
+    "teleportPointPos": 18,
+    "teleportSubRegion": 101101,
+    "unlockConditionId": 313,
+    "manualItemId": 1199998,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2005,
+    "name": "グルビューム廃坑",
+    "icon": "T_Gp_Kuangkeng",
+    "pos": [
+      -32320,
+      -14330
+    ],
+    "subRegion": 101103,
+    "targetSubRegion": [
+      101301,
+      101302,
+      101303,
+      101304
+    ],
+    "telepointId": 1014,
+    "teleportPointPos": 15,
+    "teleportSubRegion": 101103,
+    "unlockConditionId": 314,
+    "manualItemId": 1189999,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2006,
+    "name": "アイスレイク城‐下水道",
+    "icon": "T_Gp_Sew",
+    "pos": [
+      -8372,
+      -675
+    ],
+    "subRegion": 101101,
+    "targetSubRegion": [
+      101701,
+      101702,
+      101703
+    ],
+    "telepointId": 1011,
+    "teleportPointPos": 19,
+    "teleportSubRegion": 101101,
+    "unlockConditionId": 312,
+    "manualItemId": 1199995,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2007,
+    "name": "アイスレイク城‐下水道",
+    "icon": "T_Gp_Sew",
+    "pos": [
+      100,
+      -7250
+    ],
+    "subRegion": 101101,
+    "targetSubRegion": [
+      101701,
+      101702,
+      101703
+    ],
+    "telepointId": 1011,
+    "teleportPointPos": 20,
+    "teleportSubRegion": 101101,
+    "unlockConditionId": 320,
+    "manualItemId": 1193001,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2008,
+    "name": "フィッシャーの秘密基地",
+    "icon": "T_Gp_Secr",
+    "pos": [
+      -39499,
+      2240
+    ],
+    "subRegion": 101103,
+    "targetSubRegion": [
+      101108
+    ],
+    "telepointId": 1010,
+    "teleportPointPos": 16,
+    "teleportSubRegion": 101103,
+    "unlockConditionId": 315,
+    "manualItemId": 118001,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2009,
+    "name": "ガレア劇場",
+    "icon": "T_Gp_Thea",
+    "pos": [
+      699,
+      5940
+    ],
+    "subRegion": 101101,
+    "targetSubRegion": [
+      101901
+    ],
+    "telepointId": 1011,
+    "teleportPointPos": 21,
+    "teleportSubRegion": 101101,
+    "unlockConditionId": 317,
+    "manualItemId": 119004,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2011,
+    "name": "フローリスト・リメンブランス",
+    "icon": "T_Gp_Flow",
+    "pos": [
+      -8023,
+      -7696
+    ],
+    "subRegion": 101101,
+    "targetSubRegion": [
+      101111
+    ],
+    "telepointId": 1011,
+    "teleportPointPos": 22,
+    "teleportSubRegion": 101101,
+    "unlockConditionId": 31,
+    "manualItemId": 119002,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2012,
+    "name": "フィッシャーの秘密基地",
+    "icon": "T_Gp_Secr",
+    "pos": [
+      -39990,
+      6541
+    ],
+    "subRegion": 101103,
+    "targetSubRegion": [
+      101108
+    ],
+    "telepointId": 1010,
+    "teleportPointPos": 38,
+    "teleportSubRegion": 101103,
+    "unlockConditionId": 321,
+    "manualItemId": 118003,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2013,
+    "name": "潜龍居",
+    "icon": "T_Gp_Office",
+    "pos": [
+      -25203,
+      6819
+    ],
+    "subRegion": 104109,
+    "targetSubRegion": [
+      104901
+    ],
+    "telepointId": 1105,
+    "teleportPointPos": 2,
+    "teleportSubRegion": 104109,
+    "unlockConditionId": 323,
+    "manualItemId": 210001,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2014,
+    "name": "燭陰祭壇",
+    "icon": "T_Gp_Leave",
+    "pos": [
+      -9753,
+      -36781
+    ],
+    "subRegion": 104105,
+    "targetSubRegion": [
+      105701
+    ],
+    "telepointId": 1107,
+    "teleportPointPos": 3,
+    "teleportSubRegion": 104105,
+    "unlockConditionId": 324,
+    "manualItemId": 206001,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2612,
+    "name": "ルーナエッグのフィーリングショップ",
+    "icon": "T_Gp_Shop",
+    "pos": [
+      -1185,
+      -4530
+    ],
+    "subRegion": 101101,
+    "targetSubRegion": [],
+    "telepointId": 1011,
+    "teleportPointPos": 23,
+    "teleportSubRegion": 101101,
+    "unlockConditionId": 101103,
+    "manualItemId": null,
+    "staticId": 1190177,
+    "singleCreate": false
+  },
+  {
+    "id": 2613,
+    "name": "ルーナ族の探検家の贈物",
+    "icon": "T_Gp_Shop",
+    "pos": [
+      44,
+      -2924
+    ],
+    "subRegion": 101101,
+    "targetSubRegion": [],
+    "telepointId": 1011,
+    "teleportPointPos": 24,
+    "teleportSubRegion": 101101,
+    "unlockConditionId": 10101001,
+    "manualItemId": null,
+    "staticId": 1190879,
+    "singleCreate": false
+  },
+  {
+    "id": 2614,
+    "name": "アイスレイク城漁業協会",
+    "icon": "T_Gp_Shop",
+    "pos": [
+      -5184,
+      -621
+    ],
+    "subRegion": 101101,
+    "targetSubRegion": [],
+    "telepointId": 1011,
+    "teleportPointPos": 25,
+    "teleportSubRegion": 101101,
+    "unlockConditionId": 20021501,
+    "manualItemId": null,
+    "staticId": 1190986,
+    "singleCreate": false
+  },
+  {
+    "id": 2814,
+    "name": "パーガトリー島の釣り場",
+    "icon": "T_Gp_Angling",
+    "pos": [
+      -4222,
+      11076
+    ],
+    "subRegion": 100101,
+    "targetSubRegion": [],
+    "telepointId": 1001,
+    "teleportPointPos": 7,
+    "teleportSubRegion": 100101,
+    "unlockConditionId": 20021502,
+    "manualItemId": 159001,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2815,
+    "name": "アイスレイクの釣り場",
+    "icon": "T_Gp_Angling",
+    "pos": [
+      -31071,
+      25822
+    ],
+    "subRegion": 101103,
+    "targetSubRegion": [],
+    "telepointId": 1017,
+    "teleportPointPos": 17,
+    "teleportSubRegion": 101103,
+    "unlockConditionId": 20021503,
+    "manualItemId": 124020,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2816,
+    "name": "下水道の釣り場",
+    "icon": "T_Gp_Angling",
+    "pos": [
+      -28245,
+      -18056
+    ],
+    "subRegion": 101702,
+    "targetSubRegion": [],
+    "telepointId": 1032,
+    "teleportPointPos": 8,
+    "teleportSubRegion": 101702,
+    "unlockConditionId": 20021504,
+    "manualItemId": 173077,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2817,
+    "name": "異郷の来訪者",
+    "icon": "T_Gp_Zhiliu",
+    "pos": [
+      -3172,
+      -5484
+    ],
+    "subRegion": 101101,
+    "targetSubRegion": [
+      101107
+    ],
+    "telepointId": 1011,
+    "teleportPointPos": 2,
+    "teleportSubRegion": 101107,
+    "unlockConditionId": null,
+    "manualItemId": 1199999,
+    "staticId": null,
+    "singleCreate": true
+  },
+  {
+    "id": 2818,
+    "name": "浮星埠の釣り場",
+    "icon": "T_Gp_Angling",
+    "pos": [
+      30373,
+      61000
+    ],
+    "subRegion": 104108,
+    "targetSubRegion": [],
+    "telepointId": 1100,
+    "teleportPointPos": 6,
+    "teleportSubRegion": 104108,
+    "unlockConditionId": 20021505,
+    "manualItemId": 209001,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2819,
+    "name": "百年春・釣り場",
+    "icon": "T_Gp_Angling",
+    "pos": [
+      29404,
+      1702
+    ],
+    "subRegion": 104110,
+    "targetSubRegion": [],
+    "telepointId": 1102,
+    "teleportPointPos": 5,
+    "teleportSubRegion": 104110,
+    "unlockConditionId": 20021506,
+    "manualItemId": 209002,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2820,
+    "name": "潮声岩穴钓鱼点",
+    "icon": "T_Gp_Angling",
+    "pos": [
+      -5619,
+      31992
+    ],
+    "subRegion": 104103,
+    "targetSubRegion": [],
+    "telepointId": 1104,
+    "teleportPointPos": 2,
+    "teleportSubRegion": 104103,
+    "unlockConditionId": 20021507,
+    "manualItemId": 209003,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2821,
+    "name": "枯栄閣・釣り場",
+    "icon": "T_Gp_Angling",
+    "pos": [
+      14677,
+      -13509
+    ],
+    "subRegion": 104106,
+    "targetSubRegion": [],
+    "telepointId": 1110,
+    "teleportPointPos": 3,
+    "teleportSubRegion": 104106,
+    "unlockConditionId": 20021508,
+    "manualItemId": 209004,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2822,
+    "name": "微茫市・釣り場",
+    "icon": "T_Gp_Angling",
+    "pos": [
+      -22464,
+      11542
+    ],
+    "subRegion": 104109,
+    "targetSubRegion": [],
+    "telepointId": 1105,
+    "teleportPointPos": 4,
+    "teleportSubRegion": 104109,
+    "unlockConditionId": 20021509,
+    "manualItemId": 209005,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2823,
+    "name": "ルーナ族の探検家の贈物",
+    "icon": "T_Gp_Shop",
+    "pos": [
+      -16004,
+      8005
+    ],
+    "subRegion": 104109,
+    "targetSubRegion": [],
+    "telepointId": 1105,
+    "teleportPointPos": 5,
+    "teleportSubRegion": 104109,
+    "unlockConditionId": 10101001,
+    "manualItemId": null,
+    "staticId": 2100256,
+    "singleCreate": false
+  },
+  {
+    "id": 2824,
+    "name": "皓京漁業協会",
+    "icon": "T_Gp_Shop",
+    "pos": [
+      31820,
+      48650
+    ],
+    "subRegion": 104108,
+    "targetSubRegion": [],
+    "telepointId": 1100,
+    "teleportPointPos": 8,
+    "teleportSubRegion": 104108,
+    "unlockConditionId": 20021501,
+    "manualItemId": null,
+    "staticId": 2090755,
+    "singleCreate": false
+  },
+  {
+    "id": 2825,
+    "name": "ニシキのラッキーエッグ屋",
+    "icon": "T_Gp_Shop",
+    "pos": [
+      26370,
+      -5100
+    ],
+    "subRegion": 104110,
+    "targetSubRegion": [],
+    "telepointId": 1102,
+    "teleportPointPos": 6,
+    "teleportSubRegion": 104110,
+    "unlockConditionId": 12010203,
+    "manualItemId": null,
+    "staticId": 2110173,
+    "singleCreate": false
+  },
+  {
+    "id": 2826,
+    "name": "ルーナエッグのフィーリングショップ",
+    "icon": "T_Gp_Shop",
+    "pos": [
+      32634,
+      -7003
+    ],
+    "subRegion": 104110,
+    "targetSubRegion": [],
+    "telepointId": 1102,
+    "teleportPointPos": 7,
+    "teleportSubRegion": 104110,
+    "unlockConditionId": 101103,
+    "manualItemId": null,
+    "staticId": 2110174,
+    "singleCreate": false
+  }
+]

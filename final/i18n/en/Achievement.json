@@ -3093,7 +3093,7 @@
     "名称": "Treasure Hunter: Purgatorio Island",
     "分类": "Wish List",
     "品质": 1,
-    "描述": "Collect all Lost Sheets in Purgatorio Island",
+    "描述": "Collect all Lost Sheets in Icelake Environs",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -3104,7 +3104,7 @@
     "名称": "Treasure Hunter: Icelake",
     "分类": "Wish List",
     "品质": 1,
-    "描述": "Collect all Lost Sheets around Icelake",
+    "描述": "Collect all Lost Sheets in Icelake",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -3320,7 +3320,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1,
-      "Title: Scholar": 1
+      "Title: scholar": 1
     }
   },
   {
@@ -3547,7 +3547,7 @@
     "名称": "Warrior's Blade Ⅰ",
     "分类": "To the Top",
     "品质": 3,
-    "描述": "Have 1 Lv. 60 weapons",
+    "描述": "Have 1 Lv. 40 weapons",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -3558,7 +3558,7 @@
     "名称": "Hero's Blade Ⅱ",
     "分类": "To the Top",
     "品质": 2,
-    "描述": "Have 5 Lv. 60 weapons",
+    "描述": "Have 5 Lv. 40 weapons",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -3569,7 +3569,7 @@
     "名称": "Hero's Blade Ⅲ",
     "分类": "To the Top",
     "品质": 1,
-    "描述": "Have 10 Lv. 60 weapons",
+    "描述": "Have 10 Lv. 40 weapons",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -3580,7 +3580,7 @@
     "名称": "Thoroughly Tempered Ⅰ",
     "分类": "To the Top",
     "品质": 3,
-    "描述": "Have 1 weapons that have reached Ascension Phase 6",
+    "描述": "Have 1 weapons that have reached Ascension Phase 1",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -3591,7 +3591,7 @@
     "名称": "Thoroughly Tempered Ⅱ",
     "分类": "To the Top",
     "品质": 2,
-    "描述": "Have 5 weapons that have reached Ascension Phase 6",
+    "描述": "Have 5 weapons that have reached Ascension Phase 1",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -3602,7 +3602,7 @@
     "名称": "Thoroughly Tempered Ⅲ",
     "分类": "To the Top",
     "品质": 1,
-    "描述": "Have 10 weapons that have reached Ascension Phase 6",
+    "描述": "Have 10 weapons that have reached Ascension Phase 1",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
@@ -3614,7 +3614,7 @@
     "名称": "Turn Stone Into Gold Ⅰ",
     "分类": "To the Top",
     "品质": 3,
-    "描述": "Upgrade a total of 1 weapons' Smelting Level to Lv. 5",
+    "描述": "Upgrade a total of 1 4★ weapons' Smelting Level to Lv. 5",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -3625,7 +3625,7 @@
     "名称": "Turn Stone Into Gold Ⅱ",
     "分类": "To the Top",
     "品质": 2,
-    "描述": "Upgrade a total of 5 weapons' Smelting Level to Lv. 5",
+    "描述": "Upgrade a total of 5 4★ weapons' Smelting Level to Lv. 5",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -3636,7 +3636,7 @@
     "名称": "Turn Stone Into Gold Ⅲ",
     "分类": "To the Top",
     "品质": 1,
-    "描述": "Upgrade a total of 10 weapons' Smelting Level to Lv. 5",
+    "描述": "Upgrade a total of 10 4★ weapons' Smelting Level to Lv. 5",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -4743,8 +4743,7 @@
     "版本": "1.0",
     "奖励": {
       "Coin": 5000,
-      "Title: Lively": 1,
-      "Title: Friend": 1
+      "Title: Lively": 1
     }
   },
   {
@@ -4890,8 +4889,7 @@
     "描述": "Make a total of 20 Weave pulls",
     "版本": "1.0",
     "奖励": {
-      "Coin": 5000,
-      "Title: Dazzling": 1
+      "Coin": 2000
     }
   },
   {
@@ -4913,10 +4911,7 @@
     "描述": "Make a total of 100 Weave pulls",
     "版本": "1.0",
     "奖励": {
-      "Secret Letter Clue": 2,
-      "Title: Winsome and Awesome": 1,
-      "Title: Mother": 1,
-      "Title: Father": 1
+      "Secret Letter Clue": 2
     }
   },
   {
@@ -5723,8 +5718,7 @@
     "描述": "Unlock 75 Atlasium entries",
     "版本": "1.0",
     "奖励": {
-      "Coin": 5000,
-      "Title: Erudite": 1
+      "Secret Letter Clue": 2
     }
   },
   {
