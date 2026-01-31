@@ -1,0 +1,6826 @@
+[
+  {
+    "id": 100101,
+    "name": "연옥도 탈출",
+    "chapterName": "밤의 항해편",
+    "chapterNumber": "프롤로그",
+    "episode": "모래 바다를 건넌 그대",
+    "ifAutoStart": 1,
+    "isDefaultTrack": 1,
+    "questChainType": 1,
+    "reward": [
+      50500
+    ],
+    "questReward": {
+      "10010102": 300301
+    },
+    "icon": "T_Chapter_Icon01",
+    "quests": {
+      "10010101": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100103,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 100104,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 10010102,
+        "nextQuestIds": {
+          "Success": 10010102
+        }
+      },
+      "10010102": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10010103,
+        "nextQuestIds": {
+          "Success": 10010103
+        }
+      },
+      "10010103": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10010104,
+        "nextQuestIds": {
+          "Success": 10010104
+        }
+      },
+      "10010104": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10010105,
+        "nextQuestIds": {
+          "Success": 10010105
+        }
+      },
+      "10010105": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100101,
+        "nextQuestId": 10010106,
+        "nextQuestIds": {
+          "Success": 10010106
+        }
+      },
+      "10010106": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10010107,
+        "nextQuestIds": {
+          "Success": 10010107
+        }
+      },
+      "10010107": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10010108,
+        "nextQuestIds": {
+          "Success": 10010108
+        }
+      },
+      "10010108": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100101,
+        "nextQuestId": 10010109,
+        "nextQuestIds": {
+          "Success": 10010109
+        }
+      },
+      "10010109": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100101,
+        "nextQuestId": 10010110,
+        "nextQuestIds": {
+          "Success": 10010110
+        }
+      },
+      "10010110": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100101,
+        "nextQuestId": 10010111,
+        "nextQuestIds": {
+          "Success": 10010111
+        }
+      },
+      "10010111": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100101,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 100102,
+    "name": "세월에 묻힌 땅",
+    "chapterName": "밤의 항해편",
+    "chapterNumber": "프롤로그",
+    "episode": "모래 바다를 건넌 그대",
+    "ifAutoStart": 1,
+    "questChainType": 1,
+    "reward": [
+      50501
+    ],
+    "showCondition": 100101,
+    "unlockCondition": 100101,
+    "icon": "T_Chapter_Icon01",
+    "quests": {
+      "10010201": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10010203,
+        "nextQuestIds": {
+          "Success": 10010203
+        }
+      },
+      "10010203": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100101,
+        "nextQuestId": 10010204,
+        "nextQuestIds": {
+          "Success": 10010204
+        }
+      },
+      "10010204": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100101,
+        "nextQuestId": 10010205,
+        "nextQuestIds": {
+          "Success": 10010205
+        }
+      },
+      "10010205": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10010206,
+        "nextQuestIds": {
+          "Success": 10010206
+        }
+      },
+      "10010206": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100102,
+        "nextQuestId": 10010207,
+        "nextQuestIds": {
+          "Success": 10010207
+        }
+      },
+      "10010207": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100102,
+        "nextQuestId": 10010208,
+        "nextQuestIds": {
+          "Success": 10010208
+        }
+      },
+      "10010208": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100102,
+        "nextQuestId": 10010209,
+        "nextQuestIds": {
+          "Success": 10010209
+        }
+      },
+      "10010209": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100102,
+        "nextQuestId": 10010210,
+        "nextQuestIds": {
+          "Success": 10010210
+        }
+      },
+      "10010210": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100102,
+        "nextQuestId": 10010212,
+        "nextQuestIds": {
+          "Success": 10010212
+        }
+      },
+      "10010212": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100102,
+        "nextQuestId": 10010213,
+        "nextQuestIds": {
+          "Success": 10010213
+        }
+      },
+      "10010213": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100102,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 100103,
+    "name": "모래의 메아리",
+    "chapterName": "밤의 항해편",
+    "chapterNumber": "프롤로그",
+    "episode": "모래 바다를 건넌 그대",
+    "ifAutoStart": 1,
+    "questChainType": 1,
+    "reward": [
+      50502
+    ],
+    "showCondition": 100102,
+    "unlockCondition": 100102,
+    "icon": "T_Chapter_Icon01",
+    "quests": {
+      "10010301": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10010302,
+        "nextQuestIds": {
+          "Success": 10010302
+        }
+      },
+      "10010302": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100103,
+        "nextQuestId": 10010303,
+        "nextQuestIds": {
+          "Success": 10010303
+        }
+      },
+      "10010303": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100103,
+        "nextQuestId": 10010304,
+        "nextQuestIds": {
+          "Success": 10010304
+        }
+      },
+      "10010304": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100103,
+        "nextQuestId": 10010305,
+        "nextQuestIds": {
+          "Success": 10010305
+        }
+      },
+      "10010305": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10010306,
+        "nextQuestIds": {
+          "Success": 10010306
+        }
+      },
+      "10010306": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100103,
+        "nextQuestId": 10010310,
+        "nextQuestIds": {
+          "Success": 10010310
+        }
+      },
+      "10010307": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101107,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 10010308,
+        "nextQuestIds": {
+          "Success": 10010308
+        }
+      },
+      "10010308": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      },
+      "10010310": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10010307,
+        "nextQuestIds": {
+          "Success": 10010307
+        }
+      },
+      "10010311": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10010312,
+        "nextQuestIds": {
+          "Success": 10010312
+        }
+      },
+      "10010312": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10010301,
+        "nextQuestIds": {
+          "Success": 10010301
+        }
+      }
+    }
+  },
+  {
+    "id": 100201,
+    "name": "두 번째 탄생",
+    "chapterName": "밤의 항해편",
+    "chapterNumber": "제1장",
+    "episode": "흑철백화",
+    "ifAutoStart": 1,
+    "isMainStory": 1,
+    "questChainType": 1,
+    "reward": [
+      50503
+    ],
+    "showCondition": 100103,
+    "unlockCondition": 100103,
+    "icon": "T_Chapter_Icon01",
+    "loginPlayerTransform": {
+      "10020102": "P100203Nvzhu1",
+      "10020103": "P100203Nvzhu1",
+      "10020104": "QuestPoint_10020106"
+    },
+    "quests": {
+      "10020101": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020102,
+        "nextQuestIds": {
+          "Success": 10020102
+        }
+      },
+      "10020102": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020103,
+        "nextQuestIds": {
+          "Success": 10020103
+        }
+      },
+      "10020103": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 10020104,
+        "nextQuestIds": {
+          "Success": 10020104
+        }
+      },
+      "10020104": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 10020105,
+        "nextQuestIds": {
+          "Success": 10020105
+        }
+      },
+      "10020105": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020106,
+        "nextQuestIds": {
+          "Success": 10020106
+        }
+      },
+      "10020106": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020107,
+        "nextQuestIds": {
+          "Success": 10020107
+        }
+      },
+      "10020107": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020108,
+        "nextQuestIds": {
+          "Success": 10020108
+        }
+      },
+      "10020108": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020111,
+        "nextQuestIds": {
+          "Success": 10020111
+        }
+      },
+      "10020111": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020112,
+        "nextQuestIds": {
+          "Success": 10020112
+        }
+      },
+      "10020112": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 100202,
+    "name": "생존의 길",
+    "chapterName": "밤의 항해편",
+    "chapterNumber": "제1장",
+    "episode": "흑철백화",
+    "ifAutoStart": 1,
+    "isMainStory": 1,
+    "questChainType": 1,
+    "reward": [
+      50504
+    ],
+    "questReward": {
+      "10020215": 4000008,
+      "10020223": 50531
+    },
+    "showCondition": 100201,
+    "unlockCondition": 200101,
+    "icon": "T_Chapter_Icon01",
+    "loginPlayerTransform": {
+      "10020215": "TargetPoint_Sew02_01"
+    },
+    "lockShowSubRegionId": 101101,
+    "lockShowTeleportPointName": "UI_TELEPORTPOINT_NAME_101101_1",
+    "quests": {
+      "10020201": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020202,
+        "nextQuestIds": {
+          "Success": 10020202
+        }
+      },
+      "10020202": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020203,
+        "nextQuestIds": {
+          "Success": 10020203
+        }
+      },
+      "10020203": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020204,
+        "nextQuestIds": {
+          "Success": 10020204
+        }
+      },
+      "10020204": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020205,
+        "nextQuestIds": {
+          "Success": 10020205
+        }
+      },
+      "10020205": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020206,
+        "nextQuestIds": {
+          "Success": 10020206
+        }
+      },
+      "10020206": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020207,
+        "nextQuestIds": {
+          "Success": 10020207
+        }
+      },
+      "10020207": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020208,
+        "nextQuestIds": {
+          "Success": 10020208
+        }
+      },
+      "10020208": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020209,
+        "nextQuestIds": {
+          "Success": 10020209
+        }
+      },
+      "10020209": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020210,
+        "nextQuestIds": {
+          "Success": 10020210
+        }
+      },
+      "10020210": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020211,
+        "nextQuestIds": {
+          "Success": 10020211
+        }
+      },
+      "10020211": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020215,
+        "nextQuestIds": {
+          "Success": 10020215
+        }
+      },
+      "10020215": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101702,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101107,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 10020221,
+        "nextQuestIds": {
+          "Success": 10020221
+        }
+      },
+      "10020221": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101107,
+        "nextQuestId": 10020222,
+        "nextQuestIds": {
+          "Success": 10020222
+        }
+      },
+      "10020222": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020223,
+        "nextQuestIds": {
+          "Success": 10020223
+        }
+      },
+      "10020223": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101107,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 100203,
+    "name": "반짝이는 수정",
+    "chapterName": "밤의 항해편",
+    "chapterNumber": "제1장",
+    "episode": "흑철백화",
+    "ifAutoStart": 1,
+    "isMainStory": 1,
+    "questChainType": 1,
+    "reward": [
+      50508
+    ],
+    "showCondition": 100202,
+    "unlockCondition": 10020201,
+    "icon": "T_Chapter_Icon01",
+    "loginPlayerTransform": {
+      "10020305": "P_10020305Player"
+    },
+    "lockShowSubRegionId": 101101,
+    "lockShowTeleportPointName": "UI_TELEPORTPOINT_NAME_101101_1",
+    "quests": {
+      "10020301": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020302,
+        "nextQuestIds": {
+          "Success": 10020302
+        }
+      },
+      "10020302": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020303,
+        "nextQuestIds": {
+          "Success": 10020303
+        }
+      },
+      "10020303": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020304,
+        "nextQuestIds": {
+          "Success": 10020304
+        }
+      },
+      "10020304": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020305,
+        "nextQuestIds": {
+          "Success": 10020305
+        }
+      },
+      "10020305": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101301,
+        "nextQuestId": 10020308,
+        "nextQuestIds": {
+          "Success": 10020308
+        }
+      },
+      "10020308": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101305,
+        "nextQuestId": 10020310,
+        "nextQuestIds": {
+          "Success": 10020310
+        }
+      },
+      "10020310": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020311,
+        "nextQuestIds": {
+          "Success": 10020311
+        }
+      },
+      "10020311": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101303,
+        "nextQuestId": 10020312,
+        "nextQuestIds": {
+          "Success": 10020312
+        }
+      },
+      "10020312": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101304,
+        "nextQuestId": 10020313,
+        "nextQuestIds": {
+          "Success": 10020313
+        }
+      },
+      "10020313": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020314,
+        "nextQuestIds": {
+          "Success": 10020314
+        }
+      },
+      "10020314": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101304,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101103,
+          "IsWhite": false,
+          "StartIndex": 14
+        },
+        "nextQuestId": 10020316,
+        "nextQuestIds": {
+          "Success": 10020316
+        }
+      },
+      "10020316": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 100204,
+    "name": "문 뒤의 비밀",
+    "chapterName": "밤의 항해편",
+    "chapterNumber": "제1장",
+    "episode": "흑철백화",
+    "ifAutoStart": 1,
+    "isMainStory": 1,
+    "questChainType": 1,
+    "reward": [
+      50509
+    ],
+    "questReward": {
+      "10020407": 4000005
+    },
+    "showCondition": 100203,
+    "unlockCondition": 100203,
+    "icon": "T_Chapter_Icon01",
+    "quests": {
+      "10020401": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020402,
+        "nextQuestIds": {
+          "Success": 10020402
+        }
+      },
+      "10020402": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020403,
+        "nextQuestIds": {
+          "Success": 10020403
+        }
+      },
+      "10020403": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020404,
+        "nextQuestIds": {
+          "Success": 10020404
+        }
+      },
+      "10020404": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 10020405,
+        "nextQuestIds": {
+          "Success": 10020405
+        }
+      },
+      "10020405": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020406,
+        "nextQuestIds": {
+          "Success": 10020406
+        }
+      },
+      "10020406": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020407,
+        "nextQuestIds": {
+          "Success": 10020407
+        }
+      },
+      "10020407": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020408,
+        "nextQuestIds": {
+          "Success": 10020408
+        }
+      },
+      "10020408": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020409,
+        "nextQuestIds": {
+          "Success": 10020409
+        }
+      },
+      "10020409": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020410,
+        "nextQuestIds": {
+          "Success": 10020410
+        }
+      },
+      "10020410": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101101,
+          "IsWhite": false,
+          "StartIndex": 8
+        },
+        "nextQuestId": 10020412,
+        "nextQuestIds": {
+          "Success": 10020412
+        }
+      },
+      "10020412": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 100205,
+    "name": "사냥감과 사냥꾼",
+    "chapterName": "밤의 항해편",
+    "chapterNumber": "제1장",
+    "episode": "흑철백화",
+    "ifAutoStart": 1,
+    "isMainStory": 1,
+    "questChainType": 1,
+    "reward": [
+      50510
+    ],
+    "questReward": {
+      "10020505": 4000010
+    },
+    "showCondition": 100204,
+    "unlockCondition": 100204,
+    "icon": "T_Chapter_Icon01",
+    "quests": {
+      "10020501": {
+        "IsMultiQuest": false,
+        "TargetMode": {
+          "TargetCount": 1,
+          "TargetId": 10020301
+        },
+        "nextQuestId": 10020502,
+        "nextQuestIds": {
+          "Success": 10020502
+        }
+      },
+      "10020502": {
+        "IsMultiQuest": false,
+        "StartQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101103,
+          "IsWhite": false,
+          "StartIndex": 8
+        },
+        "SubRegionId": 0,
+        "nextQuestId": 10020503,
+        "nextQuestIds": {
+          "Success": 10020503
+        }
+      },
+      "10020503": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020504,
+        "nextQuestIds": {
+          "Success": 10020504
+        }
+      },
+      "10020504": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 10020505,
+        "nextQuestIds": {
+          "Success": 10020505
+        }
+      },
+      "10020505": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 10020506,
+        "nextQuestIds": {
+          "Success": 10020506
+        }
+      },
+      "10020506": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020507,
+        "nextQuestIds": {
+          "Success": 10020507
+        }
+      },
+      "10020507": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 100206,
+    "name": "긴 겨울 속에서",
+    "chapterName": "밤의 항해편",
+    "chapterNumber": "제1장",
+    "episode": "흑철백화",
+    "ifAutoStart": 1,
+    "isMainStory": 1,
+    "questChainType": 1,
+    "reward": [
+      50512
+    ],
+    "showCondition": 100205,
+    "unlockCondition": 10020501,
+    "icon": "T_Chapter_Icon01",
+    "loginPlayerTransform": {
+      "10020608": "QuestPoint_SaiqiWalkReset",
+      "10020611": "QuestPoint_SaiqiWalkReset2"
+    },
+    "lockShowSubRegionId": 101101,
+    "lockShowTeleportPointName": "UI_TELEPORTPOINT_NAME_101101_1",
+    "quests": {
+      "10020602": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020603,
+        "nextQuestIds": {
+          "Success": 10020603
+        }
+      },
+      "10020603": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020604,
+        "nextQuestIds": {
+          "Success": 10020604
+        }
+      },
+      "10020604": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020605,
+        "nextQuestIds": {
+          "Success": 10020605
+        }
+      },
+      "10020605": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020606,
+        "nextQuestIds": {
+          "Success": 10020606
+        }
+      },
+      "10020606": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020607,
+        "nextQuestIds": {
+          "Success": 10020607
+        }
+      },
+      "10020607": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020608,
+        "nextQuestIds": {
+          "Success": 10020608
+        }
+      },
+      "10020608": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 10020611,
+        "nextQuestIds": {
+          "Success": 10020611
+        }
+      },
+      "10020611": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 10020612,
+        "nextQuestIds": {
+          "Success": 10020612
+        }
+      },
+      "10020612": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020613,
+        "nextQuestIds": {
+          "Success": 10020613
+        }
+      },
+      "10020613": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 10020615,
+        "nextQuestIds": {
+          "Success": 10020615
+        }
+      },
+      "10020615": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      },
+      "10020651": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020652,
+        "nextQuestIds": {
+          "Success": 10020652
+        }
+      },
+      "10020652": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 10020602,
+        "nextQuestIds": {
+          "Success": 10020602
+        }
+      }
+    }
+  },
+  {
+    "id": 100207,
+    "name": "소녀에게 바치는 꽃다발",
+    "chapterName": "밤의 항해편",
+    "chapterNumber": "제1장",
+    "episode": "흑철백화",
+    "ifAutoStart": 1,
+    "isMainStory": 1,
+    "questChainType": 1,
+    "reward": [
+      50513
+    ],
+    "showCondition": 100206,
+    "unlockCondition": 10020601,
+    "icon": "T_Chapter_Icon01",
+    "loginPlayerTransform": {
+      "10020706": "P_FindSaiqi1Fail",
+      "10020707": "P_FindSaiqi2",
+      "10020708": "QuestPoint_SaiqiBossBattleFail4",
+      "10020709": "QuestPoint_SaiqiBossBattleFail2",
+      "10020710": "TargetPoint_Saiqi7"
+    },
+    "lockShowSubRegionId": 101101,
+    "lockShowTeleportPointName": "UI_TELEPORTPOINT_NAME_101101_1",
+    "quests": {
+      "10020701": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020702,
+        "nextQuestIds": {
+          "Success": 10020702
+        }
+      },
+      "10020702": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020703,
+        "nextQuestIds": {
+          "Success": 10020703
+        }
+      },
+      "10020703": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020704,
+        "nextQuestIds": {
+          "Success": 10020704
+        }
+      },
+      "10020704": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020705,
+        "nextQuestIds": {
+          "Success": 10020705
+        }
+      },
+      "10020705": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020706,
+        "nextQuestIds": {
+          "Success": 10020706
+        }
+      },
+      "10020706": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 10020707,
+        "nextQuestIds": {
+          "Success": 10020707
+        }
+      },
+      "10020707": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 10020710,
+        "nextQuestIds": {
+          "Success": 10020710
+        }
+      },
+      "10020708": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 10020709,
+        "nextQuestIds": {
+          "Success": 10020709
+        }
+      },
+      "10020709": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101401,
+          "IsWhite": true,
+          "StartIndex": 1
+        },
+        "nextQuestIds": {}
+      },
+      "10020710": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 10020708,
+        "nextQuestIds": {
+          "Success": 10020708
+        }
+      }
+    }
+  },
+  {
+    "id": 100208,
+    "name": "부드러운 바람을 타고",
+    "chapterName": "밤의 항해편",
+    "chapterNumber": "제1장",
+    "episode": "흑철백화",
+    "ifAutoStart": 1,
+    "isMainStory": 1,
+    "questChainType": 1,
+    "reward": [
+      50514
+    ],
+    "showCondition": 100207,
+    "unlockCondition": 100207,
+    "icon": "T_Chapter_Icon01",
+    "quests": {
+      "10020801": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101401,
+          "IsWhite": false,
+          "StartIndex": 2
+        },
+        "nextQuestId": 10020802,
+        "nextQuestIds": {
+          "Success": 10020802
+        }
+      },
+      "10020802": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020803,
+        "nextQuestIds": {
+          "Success": 10020803
+        }
+      },
+      "10020803": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101402,
+          "IsWhite": false,
+          "StartIndex": 2
+        },
+        "nextQuestId": 10020804,
+        "nextQuestIds": {
+          "Success": 10020804
+        }
+      },
+      "10020804": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101103,
+          "IsWhite": false,
+          "StartIndex": 2
+        },
+        "nextQuestId": 10020806,
+        "nextQuestIds": {
+          "Success": 10020806
+        }
+      },
+      "10020806": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020807,
+        "nextQuestIds": {
+          "Success": 10020807
+        }
+      },
+      "10020807": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 10020808,
+        "nextQuestIds": {
+          "Success": 10020808
+        }
+      },
+      "10020808": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10020809,
+        "nextQuestIds": {
+          "Success": 10020809
+        }
+      },
+      "10020809": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 100104,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 10020810,
+        "nextQuestIds": {
+          "Success": 10020810
+        }
+      },
+      "10020810": {
+        "IsMultiQuest": false,
+        "StartQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 100104,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "SubRegionId": 0,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 210101,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 100301,
+    "name": "길 잃은 아이",
+    "chapterName": "밤의 항해편",
+    "chapterNumber": "제2장",
+    "episode": "설국의 아이",
+    "ifAutoStart": 1,
+    "isOpenReasoning": 1,
+    "isMainStory": 1,
+    "questChainType": 1,
+    "reward": [
+      50521
+    ],
+    "questReward": {
+      "10030110": 4000014
+    },
+    "showCondition": 110109,
+    "unlockCondition": 11010901,
+    "icon": "T_Chapter_Icon01",
+    "lockShowSubRegionId": 210101,
+    "quests": {
+      "10030101": {
+        "IsMultiQuest": false,
+        "SubRegionId": 210101,
+        "nextQuestId": 10030103,
+        "nextQuestIds": {
+          "Success": 10030103
+        }
+      },
+      "10030103": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030104,
+        "nextQuestIds": {
+          "Success": 10030104
+        }
+      },
+      "10030104": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030105,
+        "nextQuestIds": {
+          "Success": 10030105
+        }
+      },
+      "10030105": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030106,
+        "nextQuestIds": {
+          "Success": 10030106
+        }
+      },
+      "10030106": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030107,
+        "nextQuestIds": {
+          "Success": 10030107
+        }
+      },
+      "10030107": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030198,
+        "nextQuestIds": {
+          "Success": 10030198
+        }
+      },
+      "10030108": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030109,
+        "nextQuestIds": {
+          "Success": 10030109
+        }
+      },
+      "10030109": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030110,
+        "nextQuestIds": {
+          "Success": 10030110
+        }
+      },
+      "10030110": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030111,
+        "nextQuestIds": {
+          "Success": 10030111
+        }
+      },
+      "10030111": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030112,
+        "nextQuestIds": {
+          "Success": 10030112
+        }
+      },
+      "10030112": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030113,
+        "nextQuestIds": {
+          "Success": 10030113
+        }
+      },
+      "10030113": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030114,
+        "nextQuestIds": {
+          "Success": 10030114
+        }
+      },
+      "10030114": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030115,
+        "nextQuestIds": {
+          "Success": 10030115
+        }
+      },
+      "10030115": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030116,
+        "nextQuestIds": {
+          "Success": 10030116
+        }
+      },
+      "10030116": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      },
+      "10030197": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 10030108,
+        "nextQuestIds": {
+          "Success": 10030108
+        }
+      },
+      "10030198": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 10030197,
+        "nextQuestIds": {
+          "Success": 10030197
+        }
+      }
+    }
+  },
+  {
+    "id": 100302,
+    "name": "불길한 그림자",
+    "chapterName": "밤의 항해편",
+    "chapterNumber": "제2장",
+    "episode": "설국의 아이",
+    "ifAutoStart": 1,
+    "isOpenReasoning": 1,
+    "isMainStory": 1,
+    "questChainType": 1,
+    "reward": [
+      50522
+    ],
+    "questReward": {
+      "10030219": 4000015
+    },
+    "showCondition": 100301,
+    "unlockCondition": 100301,
+    "icon": "T_Chapter_Icon01",
+    "loginPlayerTransform": {
+      "10030203": "cp2sew1passivefailpoint1",
+      "10030206": "cp2sew1passivefailpoint2",
+      "10030209": "cp2sew1passivefailpoint3"
+    },
+    "quests": {
+      "10030201": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030202,
+        "nextQuestIds": {
+          "Success": 10030202
+        }
+      },
+      "10030202": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030203,
+        "nextQuestIds": {
+          "Success": 10030203
+        }
+      },
+      "10030203": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030205,
+        "nextQuestIds": {
+          "Success": 10030205
+        }
+      },
+      "10030205": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030206,
+        "nextQuestIds": {
+          "Success": 10030206
+        }
+      },
+      "10030206": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101701,
+        "nextQuestId": 10030207,
+        "nextQuestIds": {
+          "Success": 10030207
+        }
+      },
+      "10030207": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030208,
+        "nextQuestIds": {
+          "Success": 10030208
+        }
+      },
+      "10030208": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030209,
+        "nextQuestIds": {
+          "Success": 10030209
+        }
+      },
+      "10030209": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030214,
+        "nextQuestIds": {
+          "Success": 10030214
+        }
+      },
+      "10030214": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101101,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestIds": {}
+      },
+      "10030299": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030201,
+        "nextQuestIds": {
+          "Success": 10030201
+        }
+      }
+    }
+  },
+  {
+    "id": 100303,
+    "name": "우리의 시대",
+    "chapterName": "밤의 항해편",
+    "chapterNumber": "제2장",
+    "episode": "설국의 아이",
+    "ifAutoStart": 1,
+    "isOpenReasoning": 1,
+    "isMainStory": 1,
+    "questChainType": 1,
+    "reward": [
+      50523
+    ],
+    "showCondition": 100302,
+    "unlockCondition": 100302,
+    "icon": "T_Chapter_Icon01",
+    "loginPlayerTransform": {
+      "10030302": "cp2fixsimple34_liseMove",
+      "10030303": "TargetPoint_Sew1_2_IcelakeCity"
+    },
+    "quests": {
+      "10030301": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      },
+      "10030394": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101108,
+        "nextQuestId": 10030301,
+        "nextQuestIds": {
+          "Success": 10030301
+        }
+      },
+      "10030395": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030394,
+        "nextQuestIds": {
+          "Success": 10030394
+        }
+      },
+      "10030396": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030395,
+        "nextQuestIds": {
+          "Success": 10030395
+        }
+      },
+      "10030397": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030396,
+        "nextQuestIds": {
+          "Success": 10030396
+        }
+      },
+      "10030398": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101110,
+        "nextQuestId": 10030397,
+        "nextQuestIds": {
+          "Success": 10030397
+        }
+      },
+      "10030399": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 10030398,
+        "nextQuestIds": {
+          "Success": 10030398
+        }
+      }
+    }
+  },
+  {
+    "id": 100304,
+    "name": "다가오는 겨울",
+    "chapterName": "밤의 항해편",
+    "chapterNumber": "제2장",
+    "episode": "설국의 아이",
+    "ifAutoStart": 1,
+    "isOpenReasoning": 1,
+    "isMainStory": 1,
+    "questChainType": 1,
+    "reward": [
+      50524
+    ],
+    "questReward": {
+      "10030404": 4000016
+    },
+    "showCondition": 100303,
+    "unlockCondition": 100303,
+    "icon": "T_Chapter_Icon01",
+    "loginPlayerTransform": {
+      "10030405": "lise_50_ditou"
+    },
+    "quests": {
+      "10030401": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 10030402,
+        "nextQuestIds": {
+          "Success": 10030402
+        }
+      },
+      "10030402": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030403,
+        "nextQuestIds": {
+          "Success": 10030403
+        }
+      },
+      "10030403": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030404,
+        "nextQuestIds": {
+          "Success": 10030404
+        }
+      },
+      "10030404": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030405,
+        "nextQuestIds": {
+          "Success": 10030405
+        }
+      },
+      "10030405": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 103201,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestIds": {}
+      },
+      "10030498": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 10030499,
+        "nextQuestIds": {
+          "Success": 10030499
+        }
+      },
+      "10030499": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101101,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 10030401,
+        "nextQuestIds": {
+          "Success": 10030401
+        }
+      }
+    }
+  },
+  {
+    "id": 100305,
+    "name": "주홍빛 대지",
+    "chapterName": "밤의 항해편",
+    "chapterNumber": "제2장",
+    "episode": "설국의 아이",
+    "ifAutoStart": 1,
+    "isOpenReasoning": 1,
+    "isMainStory": 1,
+    "questChainType": 1,
+    "reward": [
+      50525
+    ],
+    "showCondition": 100304,
+    "unlockCondition": 100304,
+    "icon": "T_Chapter_Icon01",
+    "loginPlayerTransform": {
+      "10030501": "alchSpawnPoint",
+      "10030502": "PlayerSpawnPoint3",
+      "10030503": "alchSpawnPoint",
+      "10030504": "alchSpawnPoint",
+      "10030505": "alchSpawnPoint",
+      "10030506": "BuluEscapePoint1",
+      "10030507": "bulu_chusheng02"
+    },
+    "quests": {
+      "10030501": {
+        "IsMultiQuest": false,
+        "SubRegionId": 103201,
+        "nextQuestId": 10030502,
+        "nextQuestIds": {
+          "Success": 10030502
+        }
+      },
+      "10030502": {
+        "IsMultiQuest": false,
+        "SubRegionId": 103201,
+        "nextQuestId": 10030503,
+        "nextQuestIds": {
+          "Success": 10030503
+        }
+      },
+      "10030503": {
+        "IsMultiQuest": false,
+        "SubRegionId": 103201,
+        "nextQuestId": 10030504,
+        "nextQuestIds": {
+          "Success": 10030504
+        }
+      },
+      "10030504": {
+        "IsMultiQuest": false,
+        "SubRegionId": 103201,
+        "nextQuestId": 10030505,
+        "nextQuestIds": {
+          "Success": 10030505
+        }
+      },
+      "10030505": {
+        "IsMultiQuest": false,
+        "SubRegionId": 103201,
+        "nextQuestId": 10030506,
+        "nextQuestIds": {
+          "Success": 10030506
+        }
+      },
+      "10030506": {
+        "IsMultiQuest": false,
+        "SubRegionId": 103201,
+        "nextQuestId": 10030507,
+        "nextQuestIds": {
+          "Success": 10030507
+        }
+      },
+      "10030507": {
+        "IsMultiQuest": false,
+        "SubRegionId": 103201,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101703,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 10030508,
+        "nextQuestIds": {
+          "Success": 10030508
+        }
+      },
+      "10030508": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101703,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101103,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 10030509,
+        "nextQuestIds": {
+          "Success": 10030509
+        }
+      },
+      "10030509": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 10030510,
+        "nextQuestIds": {
+          "Success": 10030510
+        }
+      },
+      "10030510": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101901,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 10030511,
+        "nextQuestIds": {
+          "Success": 10030511
+        }
+      },
+      "10030511": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101901,
+        "nextQuestId": 10030512,
+        "nextQuestIds": {
+          "Success": 10030512
+        }
+      },
+      "10030512": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101901,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 100306,
+    "name": "그 맑은 마음",
+    "chapterName": "밤의 항해편",
+    "chapterNumber": "제2장",
+    "episode": "설국의 아이",
+    "ifAutoStart": 1,
+    "isOpenReasoning": 1,
+    "isMainStory": 1,
+    "questChainType": 1,
+    "reward": [
+      50526
+    ],
+    "showCondition": 100305,
+    "unlockCondition": 100305,
+    "icon": "T_Chapter_Icon01",
+    "loginPlayerTransform": {
+      "10030602": "cp2finalthea",
+      "10030603": "TargetPointbaobiao"
+    },
+    "quests": {
+      "10030601": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101901,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101101,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 100307,
+    "name": "이름 없는 아이에게",
+    "chapterName": "밤의 항해편",
+    "chapterNumber": "제2장",
+    "episode": "설국의 아이",
+    "ifAutoStart": 1,
+    "isOpenReasoning": 1,
+    "isMainStory": 1,
+    "questChainType": 1,
+    "reward": [
+      50527
+    ],
+    "showCondition": 100306,
+    "unlockCondition": 100306,
+    "icon": "T_Chapter_Icon01",
+    "quests": {
+      "10030701": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 10030702,
+        "nextQuestIds": {
+          "Success": 10030702
+        }
+      },
+      "10030702": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101101,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 110101,
+    "name": "모래 저편",
+    "chapterName": "황혼의 정박편",
+    "chapterNumber": "제1장",
+    "episode": "상위자의 게임",
+    "ifAutoStart": 1,
+    "isMainStory": 2,
+    "questChainType": 1,
+    "reward": [
+      50515
+    ],
+    "showCondition": 100208,
+    "unlockCondition": 20010401,
+    "icon": "T_Chapter_Icon02",
+    "loginPlayerTransform": {
+      "11010107": "pDafu11010301"
+    },
+    "lockShowSubRegionId": 210101,
+    "quests": {
+      "11010101": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100104,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 102101,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 11010104,
+        "nextQuestIds": {
+          "Success": 11010104
+        }
+      },
+      "11010103": {
+        "IsMultiQuest": false,
+        "SubRegionId": 210101,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 100104,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 11010101,
+        "nextQuestIds": {
+          "Success": 11010101
+        }
+      },
+      "11010104": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestId": 11010106,
+        "nextQuestIds": {
+          "Success": 11010106
+        }
+      },
+      "11010106": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestId": 11010107,
+        "nextQuestIds": {
+          "Success": 11010107
+        }
+      },
+      "11010107": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestId": 11010108,
+        "nextQuestIds": {
+          "Success": 11010108
+        }
+      },
+      "11010108": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestId": 11010109,
+        "nextQuestIds": {
+          "Success": 11010109
+        }
+      },
+      "11010109": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 110103,
+    "name": "동력의 심장",
+    "chapterName": "황혼의 정박편",
+    "chapterNumber": "제1장",
+    "episode": "상위자의 게임",
+    "ifAutoStart": 1,
+    "isMainStory": 2,
+    "questChainType": 1,
+    "reward": [
+      50516
+    ],
+    "showCondition": 110101,
+    "unlockCondition": 110101,
+    "icon": "T_Chapter_Icon02",
+    "loginPlayerTransform": {
+      "11010305": "BP_StopPowerRE",
+      "11010306": "BP_NengyuanSPQuest",
+      "11010311": "BP_SmallBattleRE"
+    },
+    "quests": {
+      "11010301": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestId": 11010311,
+        "nextQuestIds": {
+          "Success": 11010311
+        }
+      },
+      "11010303": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestId": 11010312,
+        "nextQuestIds": {
+          "Success": 11010312
+        }
+      },
+      "11010305": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestId": 11010306,
+        "nextQuestIds": {
+          "Success": 11010306
+        }
+      },
+      "11010306": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestId": 11010309,
+        "nextQuestIds": {
+          "Success": 11010309
+        }
+      },
+      "11010307": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestId": 11010303,
+        "nextQuestIds": {
+          "Success": 11010303
+        }
+      },
+      "11010308": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestIds": {}
+      },
+      "11010309": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestId": 11010308,
+        "nextQuestIds": {
+          "Success": 11010308
+        }
+      },
+      "11010311": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestId": 11010314,
+        "nextQuestIds": {
+          "Success": 11010314
+        }
+      },
+      "11010312": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestId": 11010313,
+        "nextQuestIds": {
+          "Success": 11010313
+        }
+      },
+      "11010313": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestId": 11010305,
+        "nextQuestIds": {
+          "Success": 11010305
+        }
+      },
+      "11010314": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestId": 11010307,
+        "nextQuestIds": {
+          "Success": 11010307
+        }
+      }
+    }
+  },
+  {
+    "id": 110105,
+    "name": "총포와 기생식물",
+    "chapterName": "황혼의 정박편",
+    "chapterNumber": "제1장",
+    "episode": "상위자의 게임",
+    "ifAutoStart": 1,
+    "isMainStory": 2,
+    "questChainType": 1,
+    "reward": [
+      50517
+    ],
+    "showCondition": 110103,
+    "unlockCondition": 110103,
+    "icon": "T_Chapter_Icon02",
+    "loginPlayerTransform": {
+      "11010502": "BP_GuiDaoRE",
+      "11010512": "BP_TuiCheRE",
+      "11010513": "BP_PaoJiRE",
+      "11010516": "pNpcmove1541"
+    },
+    "quests": {
+      "11010501": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestId": 11010525,
+        "nextQuestIds": {
+          "Success": 11010525
+        }
+      },
+      "11010502": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestId": 11010520,
+        "nextQuestIds": {
+          "Success": 11010520
+        }
+      },
+      "11010505": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestId": 11010518,
+        "nextQuestIds": {
+          "Success": 11010518
+        }
+      },
+      "11010507": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010509,
+        "nextQuestIds": {
+          "Success": 11010509
+        }
+      },
+      "11010509": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010510,
+        "nextQuestIds": {
+          "Success": 11010510
+        }
+      },
+      "11010510": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010521,
+        "nextQuestIds": {
+          "Success": 11010521
+        }
+      },
+      "11010511": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010528,
+        "nextQuestIds": {
+          "Success": 11010528
+        }
+      },
+      "11010512": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010513,
+        "nextQuestIds": {
+          "Success": 11010513
+        }
+      },
+      "11010513": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010514,
+        "nextQuestIds": {
+          "Success": 11010514
+        }
+      },
+      "11010514": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010519,
+        "nextQuestIds": {
+          "Success": 11010519
+        }
+      },
+      "11010515": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010516,
+        "nextQuestIds": {
+          "Success": 11010516
+        }
+      },
+      "11010516": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestIds": {}
+      },
+      "11010518": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestId": 11010524,
+        "nextQuestIds": {
+          "Success": 11010524
+        }
+      },
+      "11010519": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010515,
+        "nextQuestIds": {
+          "Success": 11010515
+        }
+      },
+      "11010520": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestId": 11010507,
+        "nextQuestIds": {
+          "Success": 11010507
+        }
+      },
+      "11010521": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010522,
+        "nextQuestIds": {
+          "Success": 11010522
+        }
+      },
+      "11010522": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010523,
+        "nextQuestIds": {
+          "Success": 11010523
+        }
+      },
+      "11010523": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010526,
+        "nextQuestIds": {
+          "Success": 11010526
+        }
+      },
+      "11010524": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestId": 11010502,
+        "nextQuestIds": {
+          "Success": 11010502
+        }
+      },
+      "11010525": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102101,
+        "nextQuestId": 11010505,
+        "nextQuestIds": {
+          "Success": 11010505
+        }
+      },
+      "11010526": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010511,
+        "nextQuestIds": {
+          "Success": 11010511
+        }
+      },
+      "11010527": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010529,
+        "nextQuestIds": {
+          "Success": 11010529
+        }
+      },
+      "11010528": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010527,
+        "nextQuestIds": {
+          "Success": 11010527
+        }
+      },
+      "11010529": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 11010512,
+        "nextQuestIds": {
+          "Success": 11010512
+        }
+      }
+    }
+  },
+  {
+    "id": 110107,
+    "name": "상위자들",
+    "chapterName": "황혼의 정박편",
+    "chapterNumber": "제1장",
+    "episode": "상위자의 게임",
+    "ifAutoStart": 1,
+    "isMainStory": 2,
+    "questChainType": 1,
+    "reward": [
+      50518
+    ],
+    "questReward": {
+      "11010706": 4000011
+    },
+    "showCondition": 110105,
+    "unlockCondition": 110105,
+    "icon": "T_Chapter_Icon02",
+    "loginPlayerTransform": {
+      "11010702": "QuestPoint_Elevator_Escape",
+      "11010705": "BP_ZhongKongRE",
+      "11010706": "pAwamove18"
+    },
+    "quests": {
+      "11010702": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010705,
+        "nextQuestIds": {
+          "Success": 11010705
+        }
+      },
+      "11010704": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010706,
+        "nextQuestIds": {
+          "Success": 11010706
+        }
+      },
+      "11010705": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010704,
+        "nextQuestIds": {
+          "Success": 11010704
+        }
+      },
+      "11010706": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 110108,
+    "name": "죽음과 삶",
+    "chapterName": "황혼의 정박편",
+    "chapterNumber": "제1장",
+    "episode": "상위자의 게임",
+    "ifAutoStart": 1,
+    "isMainStory": 2,
+    "questChainType": 1,
+    "reward": [
+      50519
+    ],
+    "showCondition": 110107,
+    "unlockCondition": 110107,
+    "icon": "T_Chapter_Icon02",
+    "loginPlayerTransform": {
+      "11010801": "REStartPoint",
+      "11010802": "BP_SewwarmRE",
+      "11010810": "BP_MaiFuRE"
+    },
+    "quests": {
+      "11010801": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102103,
+        "nextQuestId": 11010802,
+        "nextQuestIds": {
+          "Success": 11010802
+        }
+      },
+      "11010802": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102103,
+        "nextQuestId": 11010804,
+        "nextQuestIds": {
+          "Success": 11010804
+        }
+      },
+      "11010804": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102103,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 102104,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 11010816,
+        "nextQuestIds": {
+          "Success": 11010816
+        }
+      },
+      "11010808": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010809,
+        "nextQuestIds": {
+          "Success": 11010809
+        }
+      },
+      "11010809": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010815,
+        "nextQuestIds": {
+          "Success": 11010815
+        }
+      },
+      "11010810": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010813,
+        "nextQuestIds": {
+          "Success": 11010813
+        }
+      },
+      "11010812": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010814,
+        "nextQuestIds": {
+          "Success": 11010814
+        }
+      },
+      "11010813": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010812,
+        "nextQuestIds": {
+          "Success": 11010812
+        }
+      },
+      "11010814": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 102103,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 11010801,
+        "nextQuestIds": {
+          "Success": 11010801
+        }
+      },
+      "11010815": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102102,
+        "nextQuestId": 11010810,
+        "nextQuestIds": {
+          "Success": 11010810
+        }
+      },
+      "11010816": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102104,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 110109,
+    "name": "심판의 날",
+    "chapterName": "황혼의 정박편",
+    "chapterNumber": "제1장",
+    "episode": "상위자의 게임",
+    "ifAutoStart": 1,
+    "isMainStory": 2,
+    "questChainType": 1,
+    "reward": [
+      50520
+    ],
+    "showCondition": 110108,
+    "unlockCondition": 110108,
+    "icon": "T_Chapter_Icon02",
+    "loginPlayerTransform": {
+      "11010902": "TargetPoint_Jail",
+      "11010907": "BP_Shenpan02RE",
+      "11010908": "BP_Shenpan3RE"
+    },
+    "quests": {
+      "11010902": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102104,
+        "nextQuestId": 11010907,
+        "nextQuestIds": {
+          "Success": 11010907
+        }
+      },
+      "11010903": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102104,
+        "nextQuestId": 11010904,
+        "nextQuestIds": {
+          "Success": 11010904
+        }
+      },
+      "11010904": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102104,
+        "nextQuestId": 11010910,
+        "nextQuestIds": {
+          "Success": 11010910
+        }
+      },
+      "11010905": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102104,
+        "nextQuestId": 11010906,
+        "nextQuestIds": {
+          "Success": 11010906
+        }
+      },
+      "11010906": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102104,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101901,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 11010909,
+        "nextQuestIds": {
+          "Success": 11010909
+        }
+      },
+      "11010907": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102104,
+        "nextQuestId": 11010908,
+        "nextQuestIds": {
+          "Success": 11010908
+        }
+      },
+      "11010908": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102104,
+        "nextQuestId": 11010903,
+        "nextQuestIds": {
+          "Success": 11010903
+        }
+      },
+      "11010909": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101901,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 210101,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestIds": {}
+      },
+      "11010910": {
+        "IsMultiQuest": false,
+        "SubRegionId": 102104,
+        "nextQuestId": 11010905,
+        "nextQuestIds": {
+          "Success": 11010905
+        }
+      }
+    }
+  },
+  {
+    "id": 120001,
+    "name": "튠튠타운",
+    "chapterName": "세계 기행",
+    "chapterNumber": "화서",
+    "episode": "안개 낀 나루터의 향기",
+    "ifAutoStart": 1,
+    "questChainType": 6,
+    "reward": [
+      50528
+    ],
+    "showCondition": 100307,
+    "unlockCondition": 10030701,
+    "icon": "T_Chapter_Icon03",
+    "startTime": 1765159200,
+    "endTime": 8204788800,
+    "quests": {
+      "12000101": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101107,
+        "nextQuestId": 12000102,
+        "nextQuestIds": {
+          "Success": 12000102
+        }
+      },
+      "12000102": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 12000103,
+        "nextQuestIds": {
+          "Success": 12000103
+        }
+      },
+      "12000103": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 12000104,
+        "nextQuestIds": {
+          "Success": 12000104
+        }
+      },
+      "12000104": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 120002,
+    "name": "타향에서 온 손님",
+    "chapterName": "세계 기행",
+    "chapterNumber": "화서",
+    "episode": "안개 낀 나루터의 향기",
+    "ifAutoStart": 1,
+    "questChainType": 6,
+    "reward": [
+      50529
+    ],
+    "showCondition": 120001,
+    "unlockCondition": 120001,
+    "icon": "T_Chapter_Icon03",
+    "startTime": 1765159200,
+    "endTime": 8204788800,
+    "quests": {
+      "12000201": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101901,
+        "nextQuestId": 12000202,
+        "nextQuestIds": {
+          "Success": 12000202
+        }
+      },
+      "12000202": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101901,
+        "nextQuestId": 12000203,
+        "nextQuestIds": {
+          "Success": 12000203
+        }
+      },
+      "12000203": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101901,
+        "nextQuestId": 12000204,
+        "nextQuestIds": {
+          "Success": 12000204
+        }
+      },
+      "12000204": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101901,
+        "nextQuestId": 12000205,
+        "nextQuestIds": {
+          "Success": 12000205
+        }
+      },
+      "12000205": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101901,
+        "nextQuestId": 12000206,
+        "nextQuestIds": {
+          "Success": 12000206
+        }
+      },
+      "12000206": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101901,
+        "nextQuestId": 12000207,
+        "nextQuestIds": {
+          "Success": 12000207
+        }
+      },
+      "12000207": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 12000208,
+        "nextQuestIds": {
+          "Success": 12000208
+        }
+      },
+      "12000208": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 12000209,
+        "nextQuestIds": {
+          "Success": 12000209
+        }
+      },
+      "12000209": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101107,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 120003,
+    "name": "《寻物启事》",
+    "chapterName": "세계 기행",
+    "chapterNumber": "화서",
+    "episode": "안개 낀 나루터의 향기",
+    "ifAutoStart": 1,
+    "questChainType": 6,
+    "reward": [
+      50530
+    ],
+    "showCondition": 120002,
+    "unlockCondition": 12000201,
+    "icon": "T_Chapter_Icon03",
+    "startTime": 1766455200,
+    "endTime": 8204788800,
+    "quests": {
+      "12000301": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101107,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 210101,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 12000302,
+        "nextQuestIds": {
+          "Success": 12000302
+        }
+      },
+      "12000302": {
+        "IsMultiQuest": false,
+        "SubRegionId": 210101,
+        "nextQuestId": 12000303,
+        "nextQuestIds": {
+          "Success": 12000303
+        }
+      },
+      "12000303": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 12000304,
+        "nextQuestIds": {
+          "Success": 12000304
+        }
+      },
+      "12000304": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 12000305,
+        "nextQuestIds": {
+          "Success": 12000305
+        }
+      },
+      "12000305": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 12000306,
+        "nextQuestIds": {
+          "Success": 12000306
+        }
+      },
+      "12000306": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 12000307,
+        "nextQuestIds": {
+          "Success": 12000307
+        }
+      },
+      "12000307": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 12000308,
+        "nextQuestIds": {
+          "Success": 12000308
+        }
+      },
+      "12000308": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 104108,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 120101,
+    "name": "화서 초입",
+    "chapterName": "세계 기행",
+    "chapterNumber": "화서",
+    "episode": "안개 낀 나루터의 향기",
+    "ifAutoStart": 1,
+    "questChainType": 1,
+    "reward": [
+      50532
+    ],
+    "showCondition": 120100,
+    "unlockCondition": 12010001,
+    "icon": "T_Chapter_Icon03",
+    "quests": {
+      "12010101": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 12010102,
+        "nextQuestIds": {
+          "Success": 12010102
+        }
+      },
+      "12010102": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 12010103,
+        "nextQuestIds": {
+          "Success": 12010103
+        }
+      },
+      "12010103": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 12010104,
+        "nextQuestIds": {
+          "Success": 12010104
+        }
+      },
+      "12010104": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 12010105,
+        "nextQuestIds": {
+          "Success": 12010105
+        }
+      },
+      "12010105": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 12010106,
+        "nextQuestIds": {
+          "Success": 12010106
+        }
+      },
+      "12010106": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 12010107,
+        "nextQuestIds": {
+          "Success": 12010107
+        }
+      },
+      "12010107": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 12010108,
+        "nextQuestIds": {
+          "Success": 12010108
+        }
+      },
+      "12010108": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 12010109,
+        "nextQuestIds": {
+          "Success": 12010109
+        }
+      },
+      "12010109": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 12010110,
+        "nextQuestIds": {
+          "Success": 12010110
+        }
+      },
+      "12010110": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 12010111,
+        "nextQuestIds": {
+          "Success": 12010111
+        }
+      },
+      "12010111": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 12010112,
+        "nextQuestIds": {
+          "Success": 12010112
+        }
+      },
+      "12010112": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 120102,
+    "name": "하늘에 닿은 파도",
+    "chapterName": "세계 기행",
+    "chapterNumber": "화서",
+    "episode": "안개 낀 나루터의 향기",
+    "ifAutoStart": 1,
+    "questChainType": 1,
+    "reward": [
+      50533
+    ],
+    "showCondition": 120101,
+    "unlockCondition": 120101,
+    "icon": "T_Chapter_Icon03",
+    "quests": {
+      "12010201": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 12010203,
+        "nextQuestIds": {
+          "Success": 12010203
+        }
+      },
+      "12010203": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 12010204,
+        "nextQuestIds": {
+          "Success": 12010204
+        }
+      },
+      "12010204": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 12010205,
+        "nextQuestIds": {
+          "Success": 12010205
+        }
+      },
+      "12010205": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 12010206,
+        "nextQuestIds": {
+          "Success": 12010206
+        }
+      },
+      "12010206": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 12010250,
+        "nextQuestIds": {
+          "Success": 12010250
+        }
+      },
+      "12010207": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 12010208,
+        "nextQuestIds": {
+          "Success": 12010208
+        }
+      },
+      "12010208": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104103,
+        "nextQuestId": 12010253,
+        "nextQuestIds": {
+          "Success": 12010253
+        }
+      },
+      "12010209": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104103,
+        "nextQuestId": 12010252,
+        "nextQuestIds": {
+          "Success": 12010252
+        }
+      },
+      "12010210": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104103,
+        "nextQuestId": 12010211,
+        "nextQuestIds": {
+          "Success": 12010211
+        }
+      },
+      "12010211": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104103,
+        "nextQuestId": 12010212,
+        "nextQuestIds": {
+          "Success": 12010212
+        }
+      },
+      "12010212": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104103,
+        "nextQuestId": 12010213,
+        "nextQuestIds": {
+          "Success": 12010213
+        }
+      },
+      "12010213": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104103,
+        "nextQuestId": 12010214,
+        "nextQuestIds": {
+          "Success": 12010214
+        }
+      },
+      "12010214": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      },
+      "12010250": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 12010254,
+        "nextQuestIds": {
+          "Success": 12010254
+        }
+      },
+      "12010251": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104103,
+        "nextQuestId": 12010210,
+        "nextQuestIds": {
+          "Success": 12010210
+        }
+      },
+      "12010252": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104103,
+        "nextQuestId": 12010251,
+        "nextQuestIds": {
+          "Success": 12010251
+        }
+      },
+      "12010253": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104103,
+        "nextQuestId": 12010209,
+        "nextQuestIds": {
+          "Success": 12010209
+        }
+      },
+      "12010254": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104107,
+        "nextQuestId": 12010207,
+        "nextQuestIds": {
+          "Success": 12010207
+        }
+      }
+    }
+  },
+  {
+    "id": 120103,
+    "name": "수많은 포효",
+    "chapterName": "세계 기행",
+    "chapterNumber": "화서",
+    "episode": "안개 낀 나루터의 향기",
+    "ifAutoStart": 1,
+    "questChainType": 1,
+    "reward": [
+      50534
+    ],
+    "questReward": {
+      "12010306": 4000017
+    },
+    "showCondition": 120102,
+    "unlockCondition": 120102,
+    "icon": "T_Chapter_Icon03",
+    "quests": {
+      "12010301": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104109,
+        "nextQuestId": 12010302,
+        "nextQuestIds": {
+          "Success": 12010302
+        }
+      },
+      "12010302": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104109,
+        "nextQuestId": 12010303,
+        "nextQuestIds": {
+          "Success": 12010303
+        }
+      },
+      "12010303": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104109,
+        "nextQuestId": 12010304,
+        "nextQuestIds": {
+          "Success": 12010304
+        }
+      },
+      "12010304": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104109,
+        "nextQuestId": 12010306,
+        "nextQuestIds": {
+          "Success": 12010306
+        }
+      },
+      "12010306": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 12010307,
+        "nextQuestIds": {
+          "Success": 12010307
+        }
+      },
+      "12010307": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104109,
+        "nextQuestId": 12010308,
+        "nextQuestIds": {
+          "Success": 12010308
+        }
+      },
+      "12010308": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104109,
+        "nextQuestId": 12010322,
+        "nextQuestIds": {
+          "Success": 12010322
+        }
+      },
+      "12010309": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104105,
+        "nextQuestId": 12010351,
+        "nextQuestIds": {
+          "Success": 12010351
+        }
+      },
+      "12010310": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104105,
+        "nextQuestId": 12010311,
+        "nextQuestIds": {
+          "Success": 12010311
+        }
+      },
+      "12010311": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104105,
+        "nextQuestId": 12010312,
+        "nextQuestIds": {
+          "Success": 12010312
+        }
+      },
+      "12010312": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104105,
+        "nextQuestId": 12010313,
+        "nextQuestIds": {
+          "Success": 12010313
+        }
+      },
+      "12010313": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104107,
+        "nextQuestId": 12010314,
+        "nextQuestIds": {
+          "Success": 12010314
+        }
+      },
+      "12010314": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 12010320,
+        "nextQuestIds": {
+          "Success": 12010320
+        }
+      },
+      "12010315": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 12010316,
+        "nextQuestIds": {
+          "Success": 12010316
+        }
+      },
+      "12010316": {
+        "IsMultiQuest": true,
+        "SubRegionId": 104110,
+        "nextQuestId": 12010317,
+        "nextQuestIds": {
+          "扶疏": 12010317,
+          "虬先生": 12010318
+        }
+      },
+      "12010317": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestIds": {}
+      },
+      "12010318": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestIds": {}
+      },
+      "12010320": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 12010315,
+        "nextQuestIds": {
+          "Success": 12010315
+        }
+      },
+      "12010322": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104109,
+        "nextQuestId": 12010309,
+        "nextQuestIds": {
+          "Success": 12010309
+        }
+      },
+      "12010351": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104105,
+        "nextQuestId": 12010352,
+        "nextQuestIds": {
+          "Success": 12010352
+        }
+      },
+      "12010352": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104105,
+        "nextQuestId": 12010310,
+        "nextQuestIds": {
+          "Success": 12010310
+        }
+      }
+    }
+  },
+  {
+    "id": 120104,
+    "name": "망각의 강 그림자",
+    "chapterName": "세계 기행",
+    "chapterNumber": "화서",
+    "episode": "안개 낀 나루터의 향기",
+    "ifAutoStart": 1,
+    "questChainType": 1,
+    "reward": [
+      50535
+    ],
+    "showCondition": 12010301,
+    "unlockCondition": 12010301,
+    "icon": "T_Chapter_Icon03",
+    "quests": {
+      "12010401": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104106,
+        "nextQuestId": 12010402,
+        "nextQuestIds": {
+          "Success": 12010402
+        }
+      },
+      "12010402": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104106,
+        "nextQuestId": 12010403,
+        "nextQuestIds": {
+          "Success": 12010403
+        }
+      },
+      "12010403": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104106,
+        "nextQuestId": 12010404,
+        "nextQuestIds": {
+          "Success": 12010404
+        }
+      },
+      "12010404": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104106,
+        "nextQuestId": 12010405,
+        "nextQuestIds": {
+          "Success": 12010405
+        }
+      },
+      "12010405": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104104,
+        "nextQuestId": 12010406,
+        "nextQuestIds": {
+          "Success": 12010406
+        }
+      },
+      "12010406": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104104,
+        "nextQuestId": 12010407,
+        "nextQuestIds": {
+          "Success": 12010407
+        }
+      },
+      "12010407": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104104,
+        "nextQuestId": 12010408,
+        "nextQuestIds": {
+          "Success": 12010408
+        }
+      },
+      "12010408": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104104,
+        "nextQuestId": 12010409,
+        "nextQuestIds": {
+          "Success": 12010409
+        }
+      },
+      "12010409": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104104,
+        "nextQuestId": 12010411,
+        "nextQuestIds": {
+          "Success": 12010411
+        }
+      },
+      "12010411": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104104,
+        "nextQuestId": 12010412,
+        "nextQuestIds": {
+          "Success": 12010412
+        }
+      },
+      "12010412": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104104,
+        "nextQuestId": 12010413,
+        "nextQuestIds": {
+          "Success": 12010413
+        }
+      },
+      "12010413": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104104,
+        "nextQuestId": 12010414,
+        "nextQuestIds": {
+          "Success": 12010414
+        }
+      },
+      "12010414": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104104,
+        "nextQuestId": 12010415,
+        "nextQuestIds": {
+          "Success": 12010415
+        }
+      },
+      "12010415": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104104,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 104301,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 12010416,
+        "nextQuestIds": {
+          "Success": 12010416
+        }
+      },
+      "12010416": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 104401,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 12010417,
+        "nextQuestIds": {
+          "Success": 12010417
+        }
+      },
+      "12010417": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 105001,
+          "IsWhite": true,
+          "StartIndex": 1
+        },
+        "nextQuestId": 12010418,
+        "nextQuestIds": {
+          "Success": 12010418
+        }
+      },
+      "12010418": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 104104,
+          "IsWhite": true,
+          "StartIndex": 1
+        },
+        "nextQuestId": 12010419,
+        "nextQuestIds": {
+          "Success": 12010419
+        }
+      },
+      "12010419": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 12010420,
+        "nextQuestIds": {
+          "Success": 12010420
+        }
+      },
+      "12010420": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104104,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 120105,
+    "name": "기괴한 평원의 까마귀",
+    "chapterName": "세계 기행",
+    "chapterNumber": "화서",
+    "episode": "안개 낀 나루터의 향기",
+    "ifAutoStart": 1,
+    "questChainType": 1,
+    "reward": [
+      50536
+    ],
+    "showCondition": 12010302,
+    "unlockCondition": 12010302,
+    "icon": "T_Chapter_Icon03",
+    "quests": {
+      "12010501": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 12010502,
+        "nextQuestIds": {
+          "Success": 12010502
+        }
+      },
+      "12010502": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104109,
+        "nextQuestId": 12010503,
+        "nextQuestIds": {
+          "Success": 12010503
+        }
+      },
+      "12010503": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104102,
+        "nextQuestId": 12010504,
+        "nextQuestIds": {
+          "Success": 12010504
+        }
+      },
+      "12010504": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104102,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 104201,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 12010517,
+        "nextQuestIds": {
+          "Success": 12010517
+        }
+      },
+      "12010513": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104102,
+        "nextQuestId": 12010514,
+        "nextQuestIds": {
+          "Success": 12010514
+        }
+      },
+      "12010514": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104102,
+        "nextQuestId": 12010515,
+        "nextQuestIds": {
+          "Success": 12010515
+        }
+      },
+      "12010515": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104102,
+        "nextQuestId": 12010516,
+        "nextQuestIds": {
+          "Success": 12010516
+        }
+      },
+      "12010516": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104102,
+        "nextQuestIds": {}
+      },
+      "12010517": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 104601,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 12010518,
+        "nextQuestIds": {
+          "Success": 12010518
+        }
+      },
+      "12010518": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 104701,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 12010519,
+        "nextQuestIds": {
+          "Success": 12010519
+        }
+      },
+      "12010519": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 104102,
+          "IsWhite": true,
+          "StartIndex": 1
+        },
+        "nextQuestId": 12010513,
+        "nextQuestIds": {
+          "Success": 12010513
+        }
+      }
+    }
+  },
+  {
+    "id": 120106,
+    "name": "신성 모독",
+    "chapterName": "세계 기행",
+    "chapterNumber": "화서",
+    "episode": "안개 낀 나루터의 향기",
+    "ifAutoStart": 1,
+    "questChainType": 1,
+    "reward": [
+      50537
+    ],
+    "showCondition": 12010601,
+    "unlockCondition": 12010601,
+    "icon": "T_Chapter_Icon03",
+    "quests": {
+      "12010601": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 12010602,
+        "nextQuestIds": {
+          "Success": 12010602
+        }
+      },
+      "12010602": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104105,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 105701,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 12010603,
+        "nextQuestIds": {
+          "Success": 12010603
+        }
+      },
+      "12010603": {
+        "IsMultiQuest": false,
+        "SubRegionId": 105701,
+        "nextQuestId": 12010604,
+        "nextQuestIds": {
+          "Success": 12010604
+        }
+      },
+      "12010604": {
+        "IsMultiQuest": false,
+        "SubRegionId": 105701,
+        "nextQuestId": 12010605,
+        "nextQuestIds": {
+          "Success": 12010605
+        }
+      },
+      "12010605": {
+        "IsMultiQuest": false,
+        "SubRegionId": 105701,
+        "nextQuestId": 12010606,
+        "nextQuestIds": {
+          "Success": 12010606
+        }
+      },
+      "12010606": {
+        "IsMultiQuest": false,
+        "SubRegionId": 105701,
+        "nextQuestId": 12010607,
+        "nextQuestIds": {
+          "Success": 12010607
+        }
+      },
+      "12010607": {
+        "IsMultiQuest": false,
+        "SubRegionId": 105701,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 104105,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 12010608,
+        "nextQuestIds": {
+          "Success": 12010608
+        }
+      },
+      "12010608": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104105,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 120111,
+    "name": "가자, 책에서 본 세계 밖으로",
+    "chapterName": "세계 기행",
+    "chapterNumber": "휘페르보레아",
+    "episode": "나이팅게일의 꿈",
+    "ifAutoStart": 1,
+    "questChainType": 6,
+    "reward": [
+      50592
+    ],
+    "showCondition": 120110,
+    "unlockCondition": 120110,
+    "icon": "T_Chapter_Icon03",
+    "startTime": 1764036000,
+    "quests": {
+      "12011101": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101105,
+        "nextQuestId": 12011102,
+        "nextQuestIds": {
+          "Success": 12011102
+        }
+      },
+      "12011102": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 12011103,
+        "nextQuestIds": {
+          "Success": 12011103
+        }
+      },
+      "12011103": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 12011105,
+        "nextQuestIds": {
+          "Success": 12011105
+        }
+      },
+      "12011105": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 12011106,
+        "nextQuestIds": {
+          "Success": 12011106
+        }
+      },
+      "12011106": {
+        "IsMultiQuest": true,
+        "SubRegionId": 101101,
+        "nextQuestId": 12011107,
+        "nextQuestIds": {
+          "完成副本": 12011107,
+          "未完成副本": 12011110
+        }
+      },
+      "12011107": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 12011108,
+        "nextQuestIds": {
+          "Success": 12011108
+        }
+      },
+      "12011108": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 12011109,
+        "nextQuestIds": {
+          "Success": 12011109
+        }
+      },
+      "12011109": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101105,
+        "nextQuestIds": {}
+      },
+      "12011110": {
+        "IsMultiQuest": false,
+        "TargetMode": {
+          "TargetCount": 1,
+          "TargetId": 70151
+        },
+        "nextQuestId": 12011107,
+        "nextQuestIds": {
+          "Success": 12011107
+        }
+      },
+      "12011150": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101105,
+        "nextQuestId": 12011101,
+        "nextQuestIds": {
+          "Success": 12011101
+        }
+      }
+    }
+  },
+  {
+    "id": 120112,
+    "name": "옛 친구, 새로운 이야기",
+    "chapterName": "세계 기행",
+    "chapterNumber": "휘페르보레아",
+    "episode": "나이팅게일의 꿈",
+    "ifAutoStart": 1,
+    "questChainType": 6,
+    "reward": [
+      50593
+    ],
+    "showCondition": 120111,
+    "unlockCondition": 120111,
+    "icon": "T_Chapter_Icon03",
+    "startTime": 1764122400,
+    "quests": {
+      "12011201": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101105,
+        "nextQuestId": 12011202,
+        "nextQuestIds": {
+          "Success": 12011202
+        }
+      },
+      "12011202": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 12011203,
+        "nextQuestIds": {
+          "Success": 12011203
+        }
+      },
+      "12011203": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 12011204,
+        "nextQuestIds": {
+          "Success": 12011204
+        }
+      },
+      "12011204": {
+        "IsMultiQuest": true,
+        "SubRegionId": 101101,
+        "nextQuestId": 12011205,
+        "nextQuestIds": {
+          "完成副本": 12011205,
+          "未完成副本": 12011210
+        }
+      },
+      "12011205": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 12011206,
+        "nextQuestIds": {
+          "Success": 12011206
+        }
+      },
+      "12011206": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 12011207,
+        "nextQuestIds": {
+          "Success": 12011207
+        }
+      },
+      "12011207": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101105,
+        "nextQuestIds": {}
+      },
+      "12011210": {
+        "IsMultiQuest": false,
+        "TargetMode": {
+          "TargetCount": 1,
+          "TargetId": 70152
+        },
+        "nextQuestId": 12011205,
+        "nextQuestIds": {
+          "Success": 12011205
+        }
+      },
+      "12011250": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101105,
+        "nextQuestId": 12011201,
+        "nextQuestIds": {
+          "Success": 12011201
+        }
+      }
+    }
+  },
+  {
+    "id": 120113,
+    "name": "우연한 특별 의뢰",
+    "chapterName": "세계 기행",
+    "chapterNumber": "휘페르보레아",
+    "episode": "나이팅게일의 꿈",
+    "ifAutoStart": 1,
+    "questChainType": 6,
+    "reward": [
+      50594
+    ],
+    "showCondition": 120112,
+    "unlockCondition": 120112,
+    "icon": "T_Chapter_Icon03",
+    "startTime": 1764208800,
+    "quests": {
+      "12011301": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101105,
+        "nextQuestId": 12011302,
+        "nextQuestIds": {
+          "Success": 12011302
+        }
+      },
+      "12011302": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 12011303,
+        "nextQuestIds": {
+          "Success": 12011303
+        }
+      },
+      "12011303": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101105,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 12011305,
+        "nextQuestIds": {
+          "Success": 12011305
+        }
+      },
+      "12011305": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101105,
+        "nextQuestId": 12011306,
+        "nextQuestIds": {
+          "Success": 12011306
+        }
+      },
+      "12011306": {
+        "IsMultiQuest": true,
+        "SubRegionId": 101105,
+        "nextQuestId": 12011308,
+        "nextQuestIds": {
+          "完成副本": 12011308,
+          "未完成副本": 12011307
+        }
+      },
+      "12011307": {
+        "IsMultiQuest": false,
+        "TargetMode": {
+          "TargetCount": 1,
+          "TargetId": 70153
+        },
+        "nextQuestId": 12011308,
+        "nextQuestIds": {
+          "Success": 12011308
+        }
+      },
+      "12011308": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101105,
+        "nextQuestIds": {}
+      },
+      "12011350": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101105,
+        "nextQuestId": 12011301,
+        "nextQuestIds": {
+          "Success": 12011301
+        }
+      }
+    }
+  },
+  {
+    "id": 120114,
+    "name": "나이팅게일아, 내일을 향해 날아가렴",
+    "chapterName": "세계 기행",
+    "chapterNumber": "휘페르보레아",
+    "episode": "나이팅게일의 꿈",
+    "ifAutoStart": 1,
+    "questChainType": 6,
+    "reward": [
+      50595
+    ],
+    "showCondition": 120113,
+    "unlockCondition": 120113,
+    "icon": "T_Chapter_Icon03",
+    "startTime": 1764295200,
+    "quests": {
+      "12011401": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101105,
+        "nextQuestId": 12011403,
+        "nextQuestIds": {
+          "Success": 12011403
+        }
+      },
+      "12011403": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101105,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 12011404,
+        "nextQuestIds": {
+          "Success": 12011404
+        }
+      },
+      "12011404": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101105,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101101,
+          "IsWhite": false,
+          "StartIndex": 4
+        },
+        "nextQuestId": 12011405,
+        "nextQuestIds": {
+          "Success": 12011405
+        }
+      },
+      "12011405": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 12011406,
+        "nextQuestIds": {
+          "Success": 12011406
+        }
+      },
+      "12011406": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 12011407,
+        "nextQuestIds": {
+          "Success": 12011407
+        }
+      },
+      "12011407": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 12011408,
+        "nextQuestIds": {
+          "Success": 12011408
+        }
+      },
+      "12011408": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 12011409,
+        "nextQuestIds": {
+          "Success": 12011409
+        }
+      },
+      "12011409": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 12011410,
+        "nextQuestIds": {
+          "Success": 12011410
+        }
+      },
+      "12011410": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 12011411,
+        "nextQuestIds": {
+          "Success": 12011411
+        }
+      },
+      "12011411": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101105,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101101,
+          "IsWhite": false,
+          "StartIndex": 4
+        },
+        "nextQuestId": 12011415,
+        "nextQuestIds": {
+          "Success": 12011415
+        }
+      },
+      "12011412": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101105,
+        "nextQuestId": 12011413,
+        "nextQuestIds": {
+          "Success": 12011413
+        }
+      },
+      "12011413": {
+        "IsMultiQuest": true,
+        "SubRegionId": 101105,
+        "nextQuestId": 12011414,
+        "nextQuestIds": {
+          "完成副本": 12011414,
+          "未完成副本": 12011420
+        }
+      },
+      "12011414": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101105,
+        "nextQuestIds": {}
+      },
+      "12011415": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101105,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 12011412,
+        "nextQuestIds": {
+          "Success": 12011412
+        }
+      },
+      "12011420": {
+        "IsMultiQuest": false,
+        "TargetMode": {
+          "TargetCount": 1,
+          "TargetId": 70154
+        },
+        "nextQuestId": 12011414,
+        "nextQuestIds": {
+          "Success": 12011414
+        }
+      },
+      "12011450": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101105,
+        "nextQuestId": 12011401,
+        "nextQuestIds": {
+          "Success": 12011401
+        }
+      }
+    }
+  },
+  {
+    "id": 200101,
+    "name": "유랑하는 루나",
+    "chapterName": "밤의 항해편",
+    "episode": "유랑하는 루나",
+    "ifAutoStart": 1,
+    "questChainType": 4,
+    "reward": [
+      50550
+    ],
+    "questReward": {
+      "20010102": 4000018
+    },
+    "showCondition": 100201,
+    "unlockCondition": 100201,
+    "quests": {
+      "20010101": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20010102,
+        "nextQuestIds": {
+          "Success": 20010102
+        }
+      },
+      "20010102": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20010103,
+        "nextQuestIds": {
+          "Success": 20010103
+        }
+      },
+      "20010103": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20010104,
+        "nextQuestIds": {
+          "Success": 20010104
+        }
+      },
+      "20010104": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20010105,
+        "nextQuestIds": {
+          "Success": 20010105
+        }
+      },
+      "20010105": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200102,
+    "name": "오지 않은 봄",
+    "chapterName": "밤의 항해편",
+    "episode": "오지 않은 봄",
+    "ifAutoStart": 1,
+    "isMainStory": 1,
+    "questChainType": 1,
+    "reward": [
+      50551
+    ],
+    "showCondition": 100204,
+    "unlockCondition": 100204,
+    "quests": {
+      "20010201": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20010202,
+        "nextQuestIds": {
+          "Success": 20010202
+        }
+      },
+      "20010202": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20010203,
+        "nextQuestIds": {
+          "Success": 20010203
+        }
+      },
+      "20010203": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20010204,
+        "nextQuestIds": {
+          "Success": 20010204
+        }
+      },
+      "20010204": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20010205,
+        "nextQuestIds": {
+          "Success": 20010205
+        }
+      },
+      "20010205": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200103,
+    "name": "마령아 마령아",
+    "chapterName": "밤의 항해편",
+    "episode": "마령아 마령아",
+    "ifAutoStart": 1,
+    "questChainType": 4,
+    "reward": [
+      50577
+    ],
+    "showCondition": 10020202,
+    "unlockCondition": 10020202,
+    "quests": {
+      "20010301": {
+        "IsMultiQuest": false,
+        "SubRegionId": 210101,
+        "nextQuestId": 20010302,
+        "nextQuestIds": {
+          "Success": 20010302
+        }
+      },
+      "20010302": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20010303,
+        "nextQuestIds": {
+          "Success": 20010303
+        }
+      },
+      "20010303": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20010304,
+        "nextQuestIds": {
+          "Success": 20010304
+        }
+      },
+      "20010304": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20010305,
+        "nextQuestIds": {
+          "Success": 20010305
+        }
+      },
+      "20010305": {
+        "IsMultiQuest": false,
+        "TargetMode": {
+          "TargetCount": 1,
+          "TargetId": 1400401
+        },
+        "nextQuestId": 20010306,
+        "nextQuestIds": {
+          "Success": 20010306
+        }
+      },
+      "20010306": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200104,
+    "name": "키워도 될까",
+    "chapterName": "밤의 항해편",
+    "episode": "키워도 될까",
+    "ifAutoStart": 1,
+    "questChainType": 4,
+    "reward": [
+      50578
+    ],
+    "showCondition": 10020803,
+    "unlockCondition": 10020803,
+    "quests": {
+      "20010401": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101107,
+        "nextQuestId": 20010409,
+        "nextQuestIds": {
+          "Success": 20010409
+        }
+      },
+      "20010402": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101107,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 20010403,
+        "nextQuestIds": {
+          "Success": 20010403
+        }
+      },
+      "20010403": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101107,
+        "nextQuestId": 20010404,
+        "nextQuestIds": {
+          "Success": 20010404
+        }
+      },
+      "20010404": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20010405,
+        "nextQuestIds": {
+          "Success": 20010405
+        }
+      },
+      "20010405": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101702,
+        "nextQuestId": 20010406,
+        "nextQuestIds": {
+          "Success": 20010406
+        }
+      },
+      "20010406": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101702,
+        "nextQuestId": 20010407,
+        "nextQuestIds": {
+          "Success": 20010407
+        }
+      },
+      "20010407": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101702,
+        "nextQuestId": 20010410,
+        "nextQuestIds": {
+          "Success": 20010410
+        }
+      },
+      "20010408": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101107,
+        "nextQuestIds": {}
+      },
+      "20010409": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20010402,
+        "nextQuestIds": {
+          "Success": 20010402
+        }
+      },
+      "20010410": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101702,
+        "nextQuestId": 20010415,
+        "nextQuestIds": {
+          "Success": 20010415
+        }
+      },
+      "20010415": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101702,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 101107,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 20010408,
+        "nextQuestIds": {
+          "Success": 20010408
+        }
+      }
+    }
+  },
+  {
+    "id": 200201,
+    "name": "돌아온 자",
+    "chapterName": "밤의 항해편",
+    "episode": "돌아온 자",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50552
+    ],
+    "desc": "샐리가 말하는 '부인'에 대해 주의 기울이기",
+    "detail": "샐리 아주머니는 어떤 부인의 일로 고민하는 것 같다. 그 부인을 만나게 된면 주의 깊게 살펴보자.",
+    "showCondition": 100203,
+    "unlockCondition": 100203,
+    "questNpcId": 700020,
+    "quests": {
+      "20020100": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020102,
+        "nextQuestIds": {
+          "Success": 20020102
+        }
+      },
+      "20020102": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20020104,
+        "nextQuestIds": {
+          "Success": 20020104
+        }
+      },
+      "20020104": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20020105,
+        "nextQuestIds": {
+          "Success": 20020105
+        }
+      },
+      "20020105": {
+        "IsMultiQuest": true,
+        "SubRegionId": 0,
+        "nextQuestId": 20020106,
+        "nextQuestIds": {
+          "【分支2.1】（隐瞒在矿坑中得到的日记）": 20020106,
+          "【分支2.2】（交出在矿坑中得到的日记）": 20020107
+        }
+      },
+      "20020106": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      },
+      "20020107": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200203,
+    "name": "사라진 소녀",
+    "chapterName": "밤의 항해편",
+    "episode": "사라진 소녀",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50554
+    ],
+    "desc": "엘사를 도와 딸 애니 찾기",
+    "detail": "엘사의 외동딸 애니가 실종되었다.\n아이스레이크 시티를 돌아다니면서 애니로 의심되는 사람이 있는지 살펴보자.",
+    "showCondition": 100201,
+    "unlockCondition": 100201,
+    "questNpcId": 700006,
+    "quests": {
+      "20020300": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020312,
+        "nextQuestIds": {
+          "Success": 20020312
+        }
+      },
+      "20020302": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020314,
+        "nextQuestIds": {
+          "Success": 20020314
+        }
+      },
+      "20020303": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20020305,
+        "nextQuestIds": {
+          "Success": 20020305
+        }
+      },
+      "20020305": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20020306,
+        "nextQuestIds": {
+          "Success": 20020306
+        }
+      },
+      "20020306": {
+        "IsMultiQuest": true,
+        "SubRegionId": 0,
+        "nextQuestId": 20020319,
+        "nextQuestIds": {
+          "（不展示爱丽丝的日记）222": 20020319,
+          "（展示爱丽丝的日记）111": 20020320
+        }
+      },
+      "20020309": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      },
+      "20020310": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestIds": {}
+      },
+      "20020312": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020313,
+        "nextQuestIds": {
+          "Success": 20020313
+        }
+      },
+      "20020313": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020302,
+        "nextQuestIds": {
+          "Success": 20020302
+        }
+      },
+      "20020314": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020303,
+        "nextQuestIds": {
+          "Success": 20020303
+        }
+      },
+      "20020319": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020309,
+        "nextQuestIds": {
+          "Success": 20020309
+        }
+      },
+      "20020320": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020310,
+        "nextQuestIds": {
+          "Success": 20020310
+        }
+      }
+    }
+  },
+  {
+    "id": 200204,
+    "name": "멈춘 시계",
+    "chapterName": "밤의 항해편",
+    "episode": "멈춘 시계",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50555
+    ],
+    "desc": "임의의 월석 사냥꾼 의뢰 완료하기-의뢰 화면에서 수령 가능",
+    "detail": "웨일즈의 초대에 응했다.\n웨일즈와 함께 의뢰를 수행하자.",
+    "showCondition": 100204,
+    "unlockCondition": 100204,
+    "questNpcId": 200015,
+    "quests": {
+      "20020400": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 101107,
+        "nextQuestId": 20020403,
+        "nextQuestIds": {
+          "Success": 20020403
+        }
+      },
+      "20020403": {
+        "IsMultiQuest": false,
+        "TargetMode": {
+          "TargetCount": 1,
+          "TargetId": 20020401
+        },
+        "nextQuestId": 20020404,
+        "nextQuestIds": {
+          "Success": 20020404
+        }
+      },
+      "20020404": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101107,
+        "nextQuestId": 20020405,
+        "nextQuestIds": {
+          "Success": 20020405
+        }
+      },
+      "20020405": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101107,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200205,
+    "name": "바다의 저편",
+    "chapterName": "밤의 항해편",
+    "episode": "바다의 저편",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50556
+    ],
+    "desc": "연옥도로 가기",
+    "detail": "대화를 나누며, 브루네토가 연옥도 출신이라는 사실을 알게 되었다. 젊은 시절 그는 바깥세상에 대한 갈망과 호기심에 이끌려 어선을 타고 제국으로 건너왔지만, 한 번의 실수로 고향으로 돌아갈 기회를 영원히 잃고 말았다. 결국 그는 사기를 치며 생계를 이어갈 수밖에 없었다.\n연옥도에서 벌어진 변고를 전하자, 그의 마음속에 깊은 향수가 일었다. 기회가 된다면 연옥도로 돌아가 그의 옛집을 찾아보고, 고향의 물건을 가져다주자.",
+    "showCondition": 200215,
+    "unlockCondition": 200215,
+    "questNpcId": 700048,
+    "quests": {
+      "20020501": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020503,
+        "nextQuestIds": {
+          "Success": 20020503
+        }
+      },
+      "20020503": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100101,
+        "nextQuestId": 20020504,
+        "nextQuestIds": {
+          "Success": 20020504
+        }
+      },
+      "20020504": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100101,
+        "nextQuestId": 20020505,
+        "nextQuestIds": {
+          "Success": 20020505
+        }
+      },
+      "20020505": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100101,
+        "nextQuestId": 20020507,
+        "nextQuestIds": {
+          "Success": 20020507
+        }
+      },
+      "20020506": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestIds": {}
+      },
+      "20020507": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100101,
+        "nextQuestId": 20020508,
+        "nextQuestIds": {
+          "Success": 20020508
+        }
+      },
+      "20020508": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100101,
+        "nextQuestId": 20020512,
+        "nextQuestIds": {
+          "Success": 20020512
+        }
+      },
+      "20020509": {
+        "IsMultiQuest": false,
+        "SubRegionId": 100101,
+        "nextQuestId": 20020510,
+        "nextQuestIds": {
+          "Success": 20020510
+        }
+      },
+      "20020510": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020506,
+        "nextQuestIds": {
+          "Success": 20020506
+        }
+      },
+      "20020512": {
+        "IsMultiQuest": false,
+        "TargetMode": {
+          "TargetCount": 1,
+          "TargetId": 10119
+        },
+        "nextQuestId": 20020509,
+        "nextQuestIds": {
+          "Success": 20020509
+        }
+      }
+    }
+  },
+  {
+    "id": 200206,
+    "name": "영감 도둑",
+    "chapterName": "밤의 항해편",
+    "episode": "영감 도둑",
+    "ifAutoStart": 1,
+    "isOpenReasoning": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50557
+    ],
+    "desc": "바크와 대화하기",
+    "detail": "극작가 바크 씨는 말 한마디 한마디가 다양한 수사와 미사여구로 가득하며, 전문 극작가의 문학적 소양을 마음껏 드러낸다.\n하지만 지금 바크 씨에게 더 시급한 건 전문 통역사 같다. 가서 그가 무슨 말을 하고 있는지 들어보자.",
+    "showCondition": 100202,
+    "unlockCondition": 100202,
+    "questNpcId": 200003,
+    "quests": {
+      "20020600": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 101107,
+        "nextQuestId": 20020603,
+        "nextQuestIds": {
+          "Success": 20020603
+        }
+      },
+      "20020603": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101107,
+        "nextQuestId": 20020605,
+        "nextQuestIds": {
+          "Success": 20020605
+        }
+      },
+      "20020605": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020609,
+        "nextQuestIds": {
+          "Success": 20020609
+        }
+      },
+      "20020606": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020607,
+        "nextQuestIds": {
+          "Success": 20020607
+        }
+      },
+      "20020607": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020608,
+        "nextQuestIds": {
+          "Success": 20020608
+        }
+      },
+      "20020608": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101107,
+        "nextQuestIds": {}
+      },
+      "20020609": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020606,
+        "nextQuestIds": {
+          "Success": 20020606
+        }
+      }
+    }
+  },
+  {
+    "id": 200207,
+    "name": "당신이 걱정하는 것",
+    "chapterName": "밤의 항해편",
+    "episode": "당신이 걱정하는 것",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50558
+    ],
+    "desc": "엠마와 대화하기",
+    "detail": "기념비에 꽃을 바치는 학생인 엠마가 계속 다른 생각을 하는 것 같다. 지금 엠마가 혼자 있는 틈을 타서 무슨 일이 있었는지 물어보자.",
+    "showCondition": 100203,
+    "unlockCondition": 100203,
+    "questNpcId": 700086,
+    "quests": {
+      "20020700": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020702,
+        "nextQuestIds": {
+          "Success": 20020702
+        }
+      },
+      "20020702": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020703,
+        "nextQuestIds": {
+          "Success": 20020703
+        }
+      },
+      "20020703": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020704,
+        "nextQuestIds": {
+          "Success": 20020704
+        }
+      },
+      "20020704": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020705,
+        "nextQuestIds": {
+          "Success": 20020705
+        }
+      },
+      "20020705": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101305,
+        "nextQuestId": 20020707,
+        "nextQuestIds": {
+          "Success": 20020707
+        }
+      },
+      "20020706": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestIds": {}
+      },
+      "20020707": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101305,
+        "nextQuestId": 20020706,
+        "nextQuestIds": {
+          "Success": 20020706
+        }
+      }
+    }
+  },
+  {
+    "id": 200208,
+    "name": "마지막 계약",
+    "chapterName": "밤의 항해편",
+    "episode": "안녕, 아이스레이크 시티",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50559
+    ],
+    "showCondition": 20021301,
+    "unlockCondition": 20021301,
+    "quests": {
+      "20020802": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101106,
+        "nextQuestId": 20020803,
+        "nextQuestIds": {
+          "Success": 20020803
+        }
+      },
+      "20020803": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101106,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200209,
+    "name": "위험한 처방전",
+    "chapterName": "밤의 항해편",
+    "episode": "안녕, 아이스레이크 시티",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50560
+    ],
+    "showCondition": 20021301,
+    "unlockCondition": 20021301,
+    "quests": {
+      "20020901": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020902,
+        "nextQuestIds": {
+          "Success": 20020902
+        }
+      },
+      "20020902": {
+        "IsMultiQuest": true,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020903,
+        "nextQuestIds": {
+          "选项12": 20020903,
+          "选项3": 20020904
+        }
+      },
+      "20020903": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020905,
+        "nextQuestIds": {
+          "Success": 20020905
+        }
+      },
+      "20020904": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20020905,
+        "nextQuestIds": {
+          "Success": 20020905
+        }
+      },
+      "20020905": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101106,
+        "nextQuestId": 20020906,
+        "nextQuestIds": {
+          "Success": 20020906
+        }
+      },
+      "20020906": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200210,
+    "name": "하수도의 고목",
+    "chapterName": "밤의 항해편",
+    "episode": "하수도의 고목",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50561
+    ],
+    "showCondition": 100206,
+    "unlockCondition": 100206,
+    "quests": {
+      "20021001": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101702,
+        "nextQuestId": 20021002,
+        "nextQuestIds": {
+          "Success": 20021002
+        }
+      },
+      "20021002": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20021003,
+        "nextQuestIds": {
+          "Success": 20021003
+        }
+      },
+      "20021003": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20021004,
+        "nextQuestIds": {
+          "Success": 20021004
+        }
+      },
+      "20021004": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestIds": {}
+      },
+      "20021007": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101702,
+        "nextQuestId": 20021001,
+        "nextQuestIds": {
+          "Success": 20021001
+        }
+      }
+    }
+  },
+  {
+    "id": 200211,
+    "name": "보이지 않는 뿔",
+    "chapterName": "밤의 항해편",
+    "episode": "보이지 않는 뿔",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50562
+    ],
+    "desc": "페이와 대화하기",
+    "detail": "아이스레이크 시티에 자신을 카론이라고 착각하는 솔라 여자아이가 있다. 가서 무슨 일인지 알아보자.",
+    "showCondition": 10020802,
+    "unlockCondition": 10020802,
+    "questNpcId": 700012,
+    "quests": {
+      "20021100": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 101101,
+        "nextQuestId": 20021101,
+        "nextQuestIds": {
+          "Success": 20021101
+        }
+      },
+      "20021101": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20021102,
+        "nextQuestIds": {
+          "Success": 20021102
+        }
+      },
+      "20021102": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20021103,
+        "nextQuestIds": {
+          "Success": 20021103
+        }
+      },
+      "20021103": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20021104,
+        "nextQuestIds": {
+          "Success": 20021104
+        }
+      },
+      "20021104": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20021105,
+        "nextQuestIds": {
+          "Success": 20021105
+        }
+      },
+      "20021105": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200212,
+    "name": "피 묻은 월석",
+    "chapterName": "밤의 항해편",
+    "episode": "피 묻은 월석",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50563
+    ],
+    "desc": "케빈에게 보고하기",
+    "detail": "아이스레이크 시티 근처에서 긴장한 기색이 역력한 광부 한 명을 발견했다. 그의 곁에는 광석이 가득 찬 마대에 수상한 핏자국 같은 것이 묻어 있었다.\n무언가 이상한 것 같다. 이 일은 아이스레이크 시티 입구에 있는 방위대 대원 케빈에게 보고하는 것이 좋을 것 같다.",
+    "showCondition": 10020802,
+    "unlockCondition": 10020802,
+    "questNpcId": 700113,
+    "quests": {
+      "20021200": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 101101,
+        "nextQuestId": 20021205,
+        "nextQuestIds": {
+          "Success": 20021205
+        }
+      },
+      "20021202": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20021203,
+        "nextQuestIds": {
+          "Success": 20021203
+        }
+      },
+      "20021203": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestIds": {}
+      },
+      "20021205": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20021206,
+        "nextQuestIds": {
+          "Success": 20021206
+        }
+      },
+      "20021206": {
+        "IsMultiQuest": true,
+        "SubRegionId": 101103,
+        "nextQuestId": 20021207,
+        "nextQuestIds": {
+          "分支1": 20021207,
+          "分支2": 20021202
+        }
+      },
+      "20021207": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200213,
+    "name": "안녕, 아이스레이크 시티",
+    "chapterName": "밤의 항해편",
+    "episode": "안녕, 아이스레이크 시티",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50564
+    ],
+    "questReward": {
+      "20021300": 4000001
+    },
+    "desc": "마르제의 '보물' 3개의 배후 이야기 조사하기",
+    "detail": "마르제의 말처럼 가장 값어치가 없는 물건이 사실 가장 귀중한 물건일 때가 있듯, 거리마다 널려 있는 이런 쓰레기통에도 많은 이야기가 숨겨져 있는 것 같다.\n마르젤이 건넨 '처방전 1장', '종이별 1상자', '열쇠 1개'는 각각의 종점을 가리키는 이정표처럼 보인다. 빨리 이 단서들의 흔적을 따라 배후의 이야기를 조사해 보자!",
+    "showCondition": 10020802,
+    "unlockCondition": 10020802,
+    "questNpcId": 700115,
+    "quests": {
+      "20021300": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 101101,
+        "nextQuestId": 20021301,
+        "nextQuestIds": {
+          "Success": 20021301
+        }
+      },
+      "20021301": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20021302,
+        "nextQuestIds": {
+          "Success": 20021302
+        }
+      },
+      "20021302": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20021303,
+        "nextQuestIds": {
+          "Success": 20021303
+        }
+      },
+      "20021303": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20021304,
+        "nextQuestIds": {
+          "Success": 20021304
+        }
+      },
+      "20021304": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200215,
+    "name": "말단 요리사",
+    "chapterName": "밤의 항해편",
+    "episode": "말단 요리사",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 4,
+    "reward": [
+      50566
+    ],
+    "questReward": {
+      "20021501": 4000009
+    },
+    "desc": "낚시하러 가기",
+    "detail": "월야어 한 마리를 낚아 마커스에게 전하자. 더 명확한 목표가 생겼으니 이번에야말로 요리에 성공할 수 있지 않을까?",
+    "showCondition": 100204,
+    "unlockCondition": 100204,
+    "questNpcId": 700116,
+    "quests": {
+      "20021500": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 101103,
+        "nextQuestId": 20021501,
+        "nextQuestIds": {
+          "Success": 20021501
+        }
+      },
+      "20021501": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20021510,
+        "nextQuestIds": {
+          "Success": 20021510
+        }
+      },
+      "20021502": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20021503,
+        "nextQuestIds": {
+          "Success": 20021503
+        }
+      },
+      "20021503": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20021504,
+        "nextQuestIds": {
+          "Success": 20021504
+        }
+      },
+      "20021504": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20021509,
+        "nextQuestIds": {
+          "Success": 20021509
+        }
+      },
+      "20021506": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20021507,
+        "nextQuestIds": {
+          "Success": 20021507
+        }
+      },
+      "20021507": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20021508,
+        "nextQuestIds": {
+          "Success": 20021508
+        }
+      },
+      "20021508": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestIds": {}
+      },
+      "20021509": {
+        "IsMultiQuest": false,
+        "TargetMode": {
+          "TargetCount": 1,
+          "TargetId": 10115
+        },
+        "nextQuestId": 20021506,
+        "nextQuestIds": {
+          "Success": 20021506
+        }
+      },
+      "20021510": {
+        "IsMultiQuest": false,
+        "TargetMode": {
+          "TargetCount": 1,
+          "TargetId": 10118
+        },
+        "nextQuestId": 20021502,
+        "nextQuestIds": {
+          "Success": 20021502
+        }
+      }
+    }
+  },
+  {
+    "id": 200216,
+    "name": "제국 삼 형제",
+    "chapterName": "밤의 항해편",
+    "episode": "제국 삼 형제",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50567
+    ],
+    "showCondition": 20021602,
+    "unlockCondition": 100203,
+    "quests": {
+      "20021601": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20021602,
+        "nextQuestIds": {
+          "Success": 20021602
+        }
+      },
+      "20021602": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20021603,
+        "nextQuestIds": {
+          "Success": 20021603
+        }
+      },
+      "20021603": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20021604,
+        "nextQuestIds": {
+          "Success": 20021604
+        }
+      },
+      "20021604": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200219,
+    "name": "꿈을 숨긴 별",
+    "chapterName": "밤의 항해편",
+    "episode": "안녕, 아이스레이크 시티",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50570
+    ],
+    "showCondition": 20021301,
+    "unlockCondition": 20021301,
+    "quests": {
+      "20021901": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20021902,
+        "nextQuestIds": {
+          "Success": 20021902
+        }
+      },
+      "20021902": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20021903,
+        "nextQuestIds": {
+          "Success": 20021903
+        }
+      },
+      "20021903": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20021905,
+        "nextQuestIds": {
+          "Success": 20021905
+        }
+      },
+      "20021904": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20021901,
+        "nextQuestIds": {
+          "Success": 20021901
+        }
+      },
+      "20021905": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20021906,
+        "nextQuestIds": {
+          "Success": 20021906
+        }
+      },
+      "20021906": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200220,
+    "name": "파티 이름 몇 글자",
+    "chapterName": "밤의 항해편",
+    "episode": "파티 이름 몇 글자",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 4,
+    "reward": [
+      50571
+    ],
+    "showCondition": 100205,
+    "unlockCondition": 100205,
+    "quests": {
+      "20022002": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101107,
+        "nextQuestId": 20022004,
+        "nextQuestIds": {
+          "Success": 20022004
+        }
+      },
+      "20022004": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20022005,
+        "nextQuestIds": {
+          "Success": 20022005
+        }
+      },
+      "20022005": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20022006,
+        "nextQuestIds": {
+          "Success": 20022006
+        }
+      },
+      "20022006": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20022007,
+        "nextQuestIds": {
+          "Success": 20022007
+        }
+      },
+      "20022007": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20022008,
+        "nextQuestIds": {
+          "Success": 20022008
+        }
+      },
+      "20022008": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20022009,
+        "nextQuestIds": {
+          "Success": 20022009
+        }
+      },
+      "20022009": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200221,
+    "name": "욕망과 고고학",
+    "chapterName": "밤의 항해편",
+    "episode": "욕망과 고고학",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50572
+    ],
+    "showCondition": 100202,
+    "unlockCondition": 100202,
+    "quests": {
+      "20022101": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20022102,
+        "nextQuestIds": {
+          "Success": 20022102
+        }
+      },
+      "20022102": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20022103,
+        "nextQuestIds": {
+          "Success": 20022103
+        }
+      },
+      "20022103": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20022104,
+        "nextQuestIds": {
+          "Success": 20022104
+        }
+      },
+      "20022104": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      },
+      "20022105": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20022101,
+        "nextQuestIds": {
+          "Success": 20022101
+        }
+      }
+    }
+  },
+  {
+    "id": 200222,
+    "name": "하수도 카니발",
+    "chapterName": "밤의 항해편",
+    "episode": "하수도 카니발",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50573
+    ],
+    "desc": "하수도로 가서 달튼과 이야기하기",
+    "detail": "아이스레이크 시티 하수도에 건설된 무료 유흥시설. 미더워 보이진 않지만, 앞에 있는 달튼이라는 남자는 자신감이 넘쳐 보인다. 무료이니 이 남자가 대체 무슨 엉뚱한 일을 벌였는지 가 보는 것도 나쁘지 않을 듯하다.",
+    "showCondition": 100202,
+    "unlockCondition": 100202,
+    "questNpcId": 700069,
+    "quests": {
+      "20022200": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 101101,
+        "nextQuestId": 20022202,
+        "nextQuestIds": {
+          "Success": 20022202
+        }
+      },
+      "20022202": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101701,
+        "nextQuestId": 20022203,
+        "nextQuestIds": {
+          "Success": 20022203
+        }
+      },
+      "20022203": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101701,
+        "nextQuestId": 20022204,
+        "nextQuestIds": {
+          "Success": 20022204
+        }
+      },
+      "20022204": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101701,
+        "nextQuestId": 20022205,
+        "nextQuestIds": {
+          "Success": 20022205
+        }
+      },
+      "20022205": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101701,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200223,
+    "name": "새내기 연구자",
+    "chapterName": "밤의 항해편",
+    "episode": "새내기 연구자",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50574
+    ],
+    "desc": "테오와 이야기하기",
+    "detail": "이 젊은 연구자(자칭) 테오는 카론의 모든 면을 알고 싶어하며, 당신은 그가 선택한 첫 번째 실험 대상이다.",
+    "showCondition": 100202,
+    "unlockCondition": 100202,
+    "questNpcId": 700011,
+    "quests": {
+      "20022300": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 101101,
+        "nextQuestId": 20022301,
+        "nextQuestIds": {
+          "Success": 20022301
+        }
+      },
+      "20022301": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200224,
+    "name": "새내기 연구자",
+    "chapterName": "밤의 항해편",
+    "episode": "새내기 연구자",
+    "ifAutoStart": 1,
+    "questChainType": 3,
+    "reward": [
+      50575
+    ],
+    "desc": "테오와 이야기하기",
+    "detail": "얼마 후 하수도 입구에서 테오와 다시 만났다. 그와 이야기하며 이번에는 무엇에 호기심을 갖고 있는지 알아보자.",
+    "showCondition": 200223,
+    "unlockCondition": 20022301,
+    "quests": {
+      "20022401": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20022402,
+        "nextQuestIds": {
+          "Success": 20022402
+        }
+      },
+      "20022402": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20022403,
+        "nextQuestIds": {
+          "Success": 20022403
+        }
+      },
+      "20022403": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101701,
+        "nextQuestId": 20022404,
+        "nextQuestIds": {
+          "Success": 20022404
+        }
+      },
+      "20022404": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200225,
+    "name": "새내기 연구자",
+    "chapterName": "밤의 항해편",
+    "episode": "새내기 연구자",
+    "ifAutoStart": 1,
+    "questChainType": 3,
+    "reward": [
+      50576
+    ],
+    "desc": "테오와 이야기하기",
+    "detail": "얼마 후 히프노스의 집에서 테오와 다시 만났다. 그와 이야기를 나누고 이번에는 어떤 것에 흥미를 갖고 있는지 알아보자.",
+    "showCondition": 200224,
+    "unlockCondition": 20022401,
+    "quests": {
+      "20022501": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20022502,
+        "nextQuestIds": {
+          "Success": 20022502
+        }
+      },
+      "20022502": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20022503,
+        "nextQuestIds": {
+          "Success": 20022503
+        }
+      },
+      "20022503": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20022504,
+        "nextQuestIds": {
+          "Success": 20022504
+        }
+      },
+      "20022504": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200227,
+    "name": "새로운 연극",
+    "chapterName": "밤의 항해편",
+    "episode": "새로운 연극",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 4,
+    "reward": [
+      50580
+    ],
+    "desc": "열정적인 극단원과 대화하기",
+    "showCondition": 110109,
+    "unlockCondition": 110109,
+    "quests": {
+      "20022701": {
+        "IsMultiQuest": true,
+        "SubRegionId": 101101,
+        "nextQuestId": 20022703,
+        "nextQuestIds": {
+          "选项1": 20022703,
+          "选项2": 20022702
+        }
+      },
+      "20022702": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestIds": {}
+      },
+      "20022703": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200228,
+    "name": "다시 목격한 시작",
+    "chapterName": "밤의 항해편",
+    "episode": "다시 목격한 시작",
+    "ifAutoStart": 1,
+    "questChainType": 4,
+    "desc": "대장장이 루나가 당신을 찾는 것 같다",
+    "showCondition": 99,
+    "unlockCondition": 99,
+    "quests": {
+      "20022801": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20022802,
+        "nextQuestIds": {
+          "Success": 20022802
+        }
+      },
+      "20022802": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20022803,
+        "nextQuestIds": {
+          "Success": 20022803
+        }
+      },
+      "20022803": {
+        "IsMultiQuest": false,
+        "TargetMode": {
+          "TargetCount": 1,
+          "TargetId": 20022803
+        },
+        "nextQuestId": 20022804,
+        "nextQuestIds": {
+          "Success": 20022804
+        }
+      },
+      "20022804": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200229,
+    "name": "아트라시아 미학 대가",
+    "chapterName": "밤의 항해편",
+    "episode": "아트라시아 미학 대가",
+    "ifAutoStart": 1,
+    "questChainType": 4,
+    "reward": [
+      50582
+    ],
+    "questReward": {
+      "20022901": 4000013
+    },
+    "desc": "외침 소리의 출처 찾기",
+    "showCondition": 100206,
+    "unlockCondition": 100206,
+    "quests": {
+      "20022901": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20022902,
+        "nextQuestIds": {
+          "Success": 20022902
+        }
+      },
+      "20022902": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20022903,
+        "nextQuestIds": {
+          "Success": 20022903
+        }
+      },
+      "20022903": {
+        "IsMultiQuest": false,
+        "TargetMode": {
+          "TargetCount": 1,
+          "TargetId": 2000101
+        },
+        "nextQuestId": 20022904,
+        "nextQuestIds": {
+          "Success": 20022904
+        }
+      },
+      "20022904": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200230,
+    "name": "'천의 얼굴'의 우울",
+    "chapterName": "밤의 항해편",
+    "episode": "'천의 얼굴'의 우울",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50583
+    ],
+    "desc": "페온과 함께 그의 '선생님' 만나기",
+    "detail": "과장된 언행의 한 남자가 당신을 막아서며 '선생님'이 당신을 기다리고 있다고 한다. 따라가서 무슨 일인지 확인해 보자.",
+    "showCondition": 100307,
+    "unlockCondition": 100307,
+    "questNpcId": 700306,
+    "quests": {
+      "20023000": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 101101,
+        "nextQuestId": 20023001,
+        "nextQuestIds": {
+          "Success": 20023001
+        }
+      },
+      "20023001": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20023002,
+        "nextQuestIds": {
+          "Success": 20023002
+        }
+      },
+      "20023002": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20023003,
+        "nextQuestIds": {
+          "Success": 20023003
+        }
+      },
+      "20023003": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20023004,
+        "nextQuestIds": {
+          "Success": 20023004
+        }
+      },
+      "20023004": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20023006,
+        "nextQuestIds": {
+          "Success": 20023006
+        }
+      },
+      "20023006": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20023007,
+        "nextQuestIds": {
+          "Success": 20023007
+        }
+      },
+      "20023007": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200231,
+    "name": "아물지 않는 옛 상처",
+    "chapterName": "밤의 항해편",
+    "episode": "아물지 않는 옛 상처",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50584
+    ],
+    "desc": "라스의 도움 요청에 응답하기",
+    "detail": "라스라는 소년이 당신에게 도움을 요청한다. 소년의 말을 들어보자.",
+    "showCondition": 100307,
+    "unlockCondition": 100307,
+    "loginPlayerTransform": {
+      "20023105": "NvzhuPoint_20023106"
+    },
+    "questNpcId": 700303,
+    "quests": {
+      "20023100": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 101101,
+        "nextQuestId": 20023101,
+        "nextQuestIds": {
+          "Success": 20023101
+        }
+      },
+      "20023101": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20023102,
+        "nextQuestIds": {
+          "Success": 20023102
+        }
+      },
+      "20023102": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20023103,
+        "nextQuestIds": {
+          "Success": 20023103
+        }
+      },
+      "20023103": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20023105,
+        "nextQuestIds": {
+          "Success": 20023105
+        }
+      },
+      "20023105": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101301,
+        "nextQuestId": 20023108,
+        "nextQuestIds": {
+          "Success": 20023108
+        }
+      },
+      "20023108": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200232,
+    "name": "상자 아가씨의 고민",
+    "chapterName": "밤의 항해편",
+    "episode": "상자 아가씨의 고민",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50585
+    ],
+    "desc": "이상한 노랫소리의 근원 찾기",
+    "detail": "길모퉁이에서 기묘한 노랫소리가 들려온다. 용기를 내어 그 소리의 출처를 찾아보기로 한다.",
+    "showCondition": 100307,
+    "unlockCondition": 100307,
+    "questNpcId": 700309,
+    "quests": {
+      "20023201": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20023202,
+        "nextQuestIds": {
+          "Success": 20023202
+        }
+      },
+      "20023202": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20023203,
+        "nextQuestIds": {
+          "Success": 20023203
+        }
+      },
+      "20023203": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20023204,
+        "nextQuestIds": {
+          "Success": 20023204
+        }
+      },
+      "20023204": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101107,
+        "nextQuestId": 20023205,
+        "nextQuestIds": {
+          "Success": 20023205
+        }
+      },
+      "20023205": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200233,
+    "name": "잠 못 이루는 밤의 항해",
+    "chapterName": "밤의 항해편",
+    "episode": "잠 못 이루는 밤의 항해",
+    "ifAutoStart": 1,
+    "questChainType": 3,
+    "reward": [
+      50586
+    ],
+    "desc": "사건 사이의 연관성을 떠올리고 숨겨진 진실 찾기",
+    "detail": "최근 겪은 사건들은 16년 전의 유괴 방화 사건과 연결되는 듯하다. 직감 상 복잡한 연관이 있을 것으로 느껴진다. 알고 있는 단서를 바탕으로 현재 상황을 정리해 보자.",
+    "showCondition": 20023300,
+    "unlockCondition": 20023300,
+    "quests": {
+      "20023301": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20023302,
+        "nextQuestIds": {
+          "Success": 20023302
+        }
+      },
+      "20023302": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 20023304,
+        "nextQuestIds": {
+          "Success": 20023304
+        }
+      },
+      "20023304": {
+        "IsMultiQuest": true,
+        "SubRegionId": 101101,
+        "nextQuestId": 20023305,
+        "nextQuestIds": {
+          "不揭发": 20023305,
+          "揭发": 20023306
+        }
+      },
+      "20023305": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestIds": {}
+      },
+      "20023306": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200234,
+    "name": "은혜 갚는 고양이",
+    "chapterName": "밤의 항해편",
+    "episode": "은혜 갚는 고양이",
+    "ifAutoStart": 1,
+    "questChainType": 4,
+    "reward": [
+      50589
+    ],
+    "desc": "외로운 길고양이 보러 가기",
+    "detail": "광장 근처를 배회하는 길고양이와 재회했다. 당신을 알아본 걸까? 고양이가 멀리서부터 야옹거리기 시작한다.",
+    "showCondition": 800061,
+    "unlockCondition": 800061,
+    "quests": {
+      "20023401": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 20023402,
+        "nextQuestIds": {
+          "Success": 20023402
+        }
+      },
+      "20023402": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200235,
+    "name": "월석 사냥꾼의 첫 걸음",
+    "chapterName": "밤의 항해편",
+    "episode": "월석 사냥꾼의 첫 걸음",
+    "ifAutoStart": 1,
+    "questChainType": 4,
+    "reward": [
+      50590
+    ],
+    "desc": "의뢰를 시작하자. 생존이 좋을 듯하다.",
+    "detail": "생존 의뢰 1회 완료",
+    "showCondition": 100202,
+    "unlockCondition": 100202,
+    "quests": {
+      "20023501": {
+        "IsMultiQuest": false,
+        "TargetMode": {
+          "TargetCount": 1,
+          "TargetId": 50906
+        },
+        "nextQuestId": 20023502,
+        "nextQuestIds": {
+          "Success": 20023502
+        }
+      },
+      "20023502": {
+        "IsMultiQuest": false,
+        "TargetMode": {
+          "TargetCount": 1,
+          "TargetId": 200235
+        },
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200236,
+    "name": "튜토리얼 퀘스트: 의뢰 편지",
+    "chapterName": "밤의 항해편",
+    "episode": "튜토리얼 퀘스트: 의뢰 편지",
+    "ifAutoStart": 1,
+    "questChainType": 4,
+    "reward": [
+      50591
+    ],
+    "desc": "의뢰 편지·트러플과 헤이즐넛 완료",
+    "detail": "트러플과 헤이즐넛의 해당 의뢰 편지를 완료하고, 트러플과 헤이즐넛 아이디어 조각 획득",
+    "showCondition": 4340,
+    "unlockCondition": 4340,
+    "quests": {
+      "20023601": {
+        "IsMultiQuest": false,
+        "TargetMode": {
+          "TargetCount": 1,
+          "TargetId": 20023601
+        },
+        "nextQuestId": 20023603,
+        "nextQuestIds": {
+          "Success": 20023603
+        }
+      },
+      "20023602": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      },
+      "20023603": {
+        "IsMultiQuest": true,
+        "SubRegionId": 0,
+        "nextQuestId": 20023604,
+        "nextQuestIds": {
+          "已合成": 20023604,
+          "未合成": 20023602
+        }
+      },
+      "20023604": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200301,
+    "name": "신께서 굽어살피시니",
+    "chapterName": "세계 기행",
+    "episode": "신께서 굽어살피시니",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50596
+    ],
+    "desc": "낙진의 바다로 가기",
+    "detail": "이상한 노인의 부름에 발걸음을 멈춘다. 그는 이해하기 힘든 말을 중얼거리며 당신에게 의뢰를 맡긴다.",
+    "showCondition": 120106,
+    "unlockCondition": 120106,
+    "quests": {
+      "20030100": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104109,
+        "nextQuestId": 20030101,
+        "nextQuestIds": {
+          "Success": 20030101
+        }
+      },
+      "20030101": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104105,
+        "nextQuestId": 20030104,
+        "nextQuestIds": {
+          "Success": 20030104
+        }
+      },
+      "20030103": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104105,
+        "nextQuestId": 20030106,
+        "nextQuestIds": {
+          "Success": 20030106
+        }
+      },
+      "20030104": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104105,
+        "nextQuestId": 20030103,
+        "nextQuestIds": {
+          "Success": 20030103
+        }
+      },
+      "20030106": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104105,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200302,
+    "name": "별무리가 빛나는 시간",
+    "chapterName": "세계 기행",
+    "episode": "별무리가 빛나는 시간",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50597
+    ],
+    "desc": "조겸과 함께 물건 받기",
+    "detail": "백년춘을 지나던 중, 먼 곳에서 두 사람의 격렬한 대화 소리가 들린다. 별을 잇는 자가 화서에서 하던 장사가 촉룡의 재앙의 영향을 받아 위험해진 모양이다. 시간이 된다면 상인을 도와주는 게 어떨까?",
+    "showCondition": 120106,
+    "unlockCondition": 120106,
+    "questNpcId": 700321,
+    "quests": {
+      "20030200": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 104110,
+        "nextQuestId": 20030201,
+        "nextQuestIds": {
+          "Success": 20030201
+        }
+      },
+      "20030201": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104107,
+        "nextQuestId": 20030202,
+        "nextQuestIds": {
+          "Success": 20030202
+        }
+      },
+      "20030202": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 20030203,
+        "nextQuestIds": {
+          "Success": 20030203
+        }
+      },
+      "20030203": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 20030204,
+        "nextQuestIds": {
+          "Success": 20030204
+        }
+      },
+      "20030204": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200303,
+    "name": "대풍구장의 틈새",
+    "chapterName": "세계 기행",
+    "episode": "대풍구장의 틈새",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50598
+    ],
+    "desc": "침몰선 근처에서 '보물' 찾기",
+    "detail": "암시장에서 이상한 사람이 당신을 막아선다. 상대방은 당신의 머릿속에 떠오른 목소리의 정체를 아는 듯하다. 그의 말부터 들어보자.",
+    "showCondition": 120106,
+    "unlockCondition": 120106,
+    "questNpcId": 700322,
+    "quests": {
+      "20030300": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 104109,
+        "nextQuestId": 20030301,
+        "nextQuestIds": {
+          "Success": 20030301
+        }
+      },
+      "20030301": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104109,
+        "nextQuestId": 20030302,
+        "nextQuestIds": {
+          "Success": 20030302
+        }
+      },
+      "20030302": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104105,
+        "nextQuestId": 20030303,
+        "nextQuestIds": {
+          "Success": 20030303
+        }
+      },
+      "20030303": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104105,
+        "nextQuestId": 20030304,
+        "nextQuestIds": {
+          "Success": 20030304
+        }
+      },
+      "20030304": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104105,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200304,
+    "name": "계화는 돌아갈 곳 없고",
+    "chapterName": "세계 기행",
+    "episode": "계화는 돌아갈 곳 없고",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50599
+    ],
+    "desc": "계화는 돌아갈 곳 없고",
+    "detail": "스노우가 연진 나루터 부두 근처에 맛있는 정통 계화떡 노점이 있다고 한다. 스노우와 함께 노점에 가보자.",
+    "showCondition": 20030401,
+    "unlockCondition": 20030401,
+    "questNpcId": 700324,
+    "quests": {
+      "20030400": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 104108,
+        "nextQuestId": 20030401,
+        "nextQuestIds": {
+          "Success": 20030401
+        }
+      },
+      "20030401": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 20030402,
+        "nextQuestIds": {
+          "Success": 20030402
+        }
+      },
+      "20030402": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 20030403,
+        "nextQuestIds": {
+          "Success": 20030403
+        }
+      },
+      "20030403": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 20030404,
+        "nextQuestIds": {
+          "Success": 20030404
+        }
+      },
+      "20030404": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 20030405,
+        "nextQuestIds": {
+          "Success": 20030405
+        }
+      },
+      "20030405": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 20030406,
+        "nextQuestIds": {
+          "Success": 20030406
+        }
+      },
+      "20030406": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 20030407,
+        "nextQuestIds": {
+          "Success": 20030407
+        }
+      },
+      "20030407": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 20030408,
+        "nextQuestIds": {
+          "Success": 20030408
+        }
+      },
+      "20030408": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 20030409,
+        "nextQuestIds": {
+          "Success": 20030409
+        }
+      },
+      "20030409": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200306,
+    "name": "오묘한 기추의 세계",
+    "chapterName": "세계 기행",
+    "episode": "오묘한 기추의 세계",
+    "ifAutoStart": 1,
+    "questChainType": 3,
+    "reward": [
+      50601
+    ],
+    "desc": "견기방추가 이끄는 곳으로 가기",
+    "detail": "품 속의 견기방추에서 이상한 움직임이 전해진다. 어떤 방향을 가리키고 있는 듯한데... 이렇게 된 이상, 직접 확인해 보자.",
+    "showCondition": 12010306,
+    "unlockCondition": 12010306,
+    "questNpcId": 700323,
+    "quests": {
+      "20030600": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 104107,
+        "nextQuestId": 20030601,
+        "nextQuestIds": {
+          "Success": 20030601
+        }
+      },
+      "20030601": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104107,
+        "nextQuestId": 20030602,
+        "nextQuestIds": {
+          "Success": 20030602
+        }
+      },
+      "20030602": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104107,
+        "nextQuestId": 20030603,
+        "nextQuestIds": {
+          "Success": 20030603
+        }
+      },
+      "20030603": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104107,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200309,
+    "name": "우직한 미련",
+    "chapterName": "세계 기행",
+    "episode": "우직한 미련",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50604
+    ],
+    "desc": "유명 계곡에 무슨 일이 일어났는지 확인하러 가자.",
+    "detail": "최근 유명 계곡을 지날 때마다 오싹한 기분이 든다고 하는 화서 사람들이 있다. 무유생의 소행이 틀림없을 것이다. 시간이 되면 스노우와 함께 어떻게 된 일인지 알아보자.",
+    "showCondition": 120106,
+    "unlockCondition": 120106,
+    "quests": {
+      "20030901": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104104,
+        "nextQuestId": 20030902,
+        "nextQuestIds": {
+          "Success": 20030902
+        }
+      },
+      "20030902": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104106,
+        "nextQuestId": 20030903,
+        "nextQuestIds": {
+          "Success": 20030903
+        }
+      },
+      "20030903": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104106,
+        "nextQuestId": 20030906,
+        "nextQuestIds": {
+          "Success": 20030906
+        }
+      },
+      "20030904": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104106,
+        "nextQuestId": 20030905,
+        "nextQuestIds": {
+          "Success": 20030905
+        }
+      },
+      "20030905": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104104,
+        "nextQuestIds": {}
+      },
+      "20030906": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104106,
+        "nextQuestId": 20030904,
+        "nextQuestIds": {
+          "Success": 20030904
+        }
+      }
+    }
+  },
+  {
+    "id": 400101,
+    "name": "사냥 의뢰 Ⅰ",
+    "chapterName": "세계 기행",
+    "chapterNumber": "화서",
+    "episode": "안개 낀 나루터의 향기",
+    "ifAutoStart": 1,
+    "questChainType": 5,
+    "reward": [
+      110002
+    ],
+    "showCondition": 120002,
+    "unlockCondition": 120002,
+    "icon": "T_Chapter_Icon03",
+    "startTime": 1765159200,
+    "endTime": 1766437200,
+    "quests": {
+      "4001011": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 400102,
+    "name": "사냥 의뢰 Ⅱ",
+    "chapterName": "세계 기행",
+    "chapterNumber": "화서",
+    "episode": "안개 낀 나루터의 향기",
+    "ifAutoStart": 1,
+    "questChainType": 5,
+    "reward": [
+      110004
+    ],
+    "showCondition": 120002,
+    "unlockCondition": 120002,
+    "icon": "T_Chapter_Icon03",
+    "startTime": 1765227600,
+    "endTime": 1766437200,
+    "quests": {
+      "4001021": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 400103,
+    "name": "사냥 의뢰 Ⅲ",
+    "chapterName": "세계 기행",
+    "chapterNumber": "화서",
+    "episode": "안개 낀 나루터의 향기",
+    "ifAutoStart": 1,
+    "questChainType": 5,
+    "reward": [
+      110006
+    ],
+    "showCondition": 120002,
+    "unlockCondition": 120002,
+    "icon": "T_Chapter_Icon03",
+    "startTime": 1765314000,
+    "endTime": 1766437200,
+    "quests": {
+      "4001031": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 400104,
+    "name": "사냥 의뢰 Ⅳ",
+    "chapterName": "세계 기행",
+    "chapterNumber": "화서",
+    "episode": "안개 낀 나루터의 향기",
+    "ifAutoStart": 1,
+    "questChainType": 5,
+    "reward": [
+      110008
+    ],
+    "showCondition": 120002,
+    "unlockCondition": 120002,
+    "icon": "T_Chapter_Icon03",
+    "startTime": 1765400400,
+    "endTime": 1766437200,
+    "quests": {
+      "4001041": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 400105,
+    "name": "사냥 의뢰 Ⅴ",
+    "chapterName": "세계 기행",
+    "chapterNumber": "화서",
+    "episode": "안개 낀 나루터의 향기",
+    "ifAutoStart": 1,
+    "questChainType": 5,
+    "reward": [
+      110010
+    ],
+    "showCondition": 120002,
+    "unlockCondition": 120002,
+    "icon": "T_Chapter_Icon03",
+    "startTime": 1765486800,
+    "endTime": 1766437200,
+    "quests": {
+      "4001051": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 400106,
+    "name": "사냥 의뢰 Ⅵ",
+    "chapterName": "세계 기행",
+    "chapterNumber": "화서",
+    "episode": "안개 낀 나루터의 향기",
+    "ifAutoStart": 1,
+    "questChainType": 5,
+    "reward": [
+      110012
+    ],
+    "showCondition": 120002,
+    "unlockCondition": 120002,
+    "icon": "T_Chapter_Icon03",
+    "startTime": 1765573200,
+    "endTime": 1766437200,
+    "quests": {
+      "4001061": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 400107,
+    "name": "사냥 의뢰 Ⅶ",
+    "chapterName": "세계 기행",
+    "chapterNumber": "화서",
+    "episode": "안개 낀 나루터의 향기",
+    "ifAutoStart": 1,
+    "questChainType": 5,
+    "reward": [
+      110014
+    ],
+    "showCondition": 120002,
+    "unlockCondition": 120002,
+    "icon": "T_Chapter_Icon03",
+    "startTime": 1765659600,
+    "endTime": 1766437200,
+    "quests": {
+      "4001071": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 400111,
+    "name": "루나의 스페셜 극장",
+    "chapterName": "세계 기행",
+    "episode": "루나의 스페셜 극장",
+    "ifAutoStart": 1,
+    "questChainType": 5,
+    "reward": [
+      50603
+    ],
+    "showCondition": 100307,
+    "unlockCondition": 100307,
+    "icon": "T_Chapter_Icon03",
+    "startTime": 1766628000,
+    "endTime": 1768856400,
+    "quests": {
+      "40011101": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101107,
+        "nextQuestId": 40011102,
+        "nextQuestIds": {
+          "Success": 40011102
+        }
+      },
+      "40011102": {
+        "IsMultiQuest": false,
+        "SubRegionId": 210101,
+        "nextQuestId": 40011103,
+        "nextQuestIds": {
+          "Success": 40011103
+        }
+      },
+      "40011103": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 40011104,
+        "nextQuestIds": {
+          "Success": 40011104
+        }
+      },
+      "40011104": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 40011105,
+        "nextQuestIds": {
+          "Success": 40011105
+        }
+      },
+      "40011105": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101103,
+        "nextQuestId": 40011106,
+        "nextQuestIds": {
+          "Success": 40011106
+        }
+      },
+      "40011106": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101101,
+        "nextQuestId": 40011107,
+        "nextQuestIds": {
+          "Success": 40011107
+        }
+      },
+      "40011107": {
+        "IsMultiQuest": false,
+        "SubRegionId": 101901,
+        "nextQuestIds": {}
+      }
+    }
+  }
+]

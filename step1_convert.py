@@ -324,6 +324,95 @@ def parse_lua_file(file_path):
         except Exception as e:
             print(f"处理文件 {file_path} 中的局部变量T时出错: {e}")
 
+        # 5. 尝试处理局部变量Data（如Dialogue_TextMapContent.lua中的格式）
+        print(f"在文件 {file_path} 中尝试处理局部变量Data")
+        try:
+            # 创建一个新的Lua运行时实例
+            new_lua = LuaRuntime(unpack_returned_tuples=True)
+            # 定义ReadOnly函数
+            new_lua.execute("local ReadOnly = function(name, data) return data end")
+            # 定义模拟的DataMgr对象，避免执行Loader函数时出错
+            new_lua.execute("DataMgr = { RegisterDialogueTextMap = function() end }")
+            # 修改代码，将局部变量Data转换为全局变量以便访问
+            modified_code = lua_code.replace("local Data = {}", "Data = {}")
+            # 执行修改后的Lua代码
+            new_lua.execute(modified_code)
+            # 获取全局变量Data
+            data = new_lua.globals().Data
+            if data is not None:
+                print(f"在文件 {file_path} 中找到全局变量Data")
+                return convert_lua_data(data)
+        except Exception as e:
+            print(f"处理文件 {file_path} 中的局部变量Data时出错: {e}")
+
+        # 6. 尝试直接提取Data表定义，避免执行Loader函数
+        print(f"在文件 {file_path} 中尝试直接提取Data表定义")
+        try:
+            import re
+
+            # 使用正则表达式提取Data表定义
+            data_pattern = r"local Data = ({.*?})"  # 注意：这可能无法处理复杂的嵌套结构
+            data_match = re.search(data_pattern, lua_code, re.DOTALL)
+
+            if data_match:
+                # 提取Data表定义
+                data_def = data_match.group(1)
+                # 构建完整的Lua代码，定义Data变量
+                lua_code_snippet = f"Data = {data_def}"
+                # 创建一个新的Lua运行时实例
+                new_lua = LuaRuntime(unpack_returned_tuples=True)
+                # 执行Lua代码
+                new_lua.execute(lua_code_snippet)
+                # 获取Data变量
+                data = new_lua.globals().Data
+                if data is not None:
+                    print(f"在文件 {file_path} 中直接提取到Data表")
+                    return convert_lua_data(data)
+        except Exception as e:
+            print(f"直接提取文件 {file_path} 中的Data表时出错: {e}")
+
+        # 7. 尝试专门处理Dialogue_TextMapContent.lua格式的文件
+        print(f"在文件 {file_path} 中尝试专门处理Dialogue_TextMapContent格式")
+        try:
+            # 创建一个新的Lua运行时实例
+            new_lua = LuaRuntime(unpack_returned_tuples=True)
+
+            # 模拟DataMgr对象，使其能够返回我们需要的数据
+            new_lua.execute(
+                """
+                DataMgr = {
+                    QueryTable = function(key, tableName, data)
+                        -- 直接返回nil，避免执行复杂的查询逻辑
+                        return nil
+                    end,
+                    GetPartitionData = function(minKey, data)
+                        -- 直接返回nil，避免执行复杂的查询逻辑
+                        return nil
+                    end
+                }
+            """
+            )
+
+            # 执行Lua代码，定义局部变量Data
+            new_lua.execute(lua_code)
+
+            # 尝试获取局部变量Data
+            # 注意：由于Data是局部变量，我们无法直接访问它
+            # 所以我们需要修改代码，将Data转换为全局变量
+
+            # 修改代码，将局部变量Data转换为全局变量
+            modified_code = lua_code.replace("local Data = ", "Data = ")
+            # 执行修改后的代码
+            new_lua.execute(modified_code)
+
+            # 获取全局变量Data
+            data = new_lua.globals().Data
+            if data is not None:
+                print(f"在文件 {file_path} 中找到全局变量Data")
+                return convert_lua_data(data)
+        except Exception as e:
+            print(f"处理文件 {file_path} 中的Dialogue_TextMapContent格式时出错: {e}")
+
         # 如果所有方法都失败
         print(f"在文件 {file_path} 中未找到可解析的数据")
         return None
@@ -338,6 +427,8 @@ def main():
     for root, dirs, files in os.walk(datas_dir):
         for file in files:
             if file.endswith(".lua"):
+                # if file != "Dialogue_TextMapContent.lua":
+                #     continue
                 file_path = os.path.join(root, file)
                 print(f"\n正在处理文件: {file_path}")
 

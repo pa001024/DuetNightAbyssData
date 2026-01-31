@@ -17,6 +17,7 @@ from processor.fish_processor import FishProcessor
 from processor.fishing_spot_processor import FishingSpotProcessor
 from processor.resource_processor import ResourceProcessor
 from processor.dyn_quest_processor import DynQuestProcessor
+from processor.quest_chain_processor import QuestChainProcessor
 from processor.region_processor import RegionProcessor
 from processor.sub_region_processor import SubRegionProcessor
 from processor.region_point_processor import RegionPointProcessor
@@ -211,6 +212,7 @@ class FinalProcessor:
             "FishingSpot": FishingSpotProcessor,
             "Resource": ResourceProcessor,
             "DynQuest": DynQuestProcessor,
+            "QuestChain": QuestChainProcessor,
             "Region": RegionProcessor,
             "SubRegion": SubRegionProcessor,
             "RegionPoint": RegionPointProcessor,
@@ -334,6 +336,7 @@ if __name__ == "__main__":
         "FishingSpot",
         "Resource",
         "DynQuest",
+        "QuestChain",
         "Region",
         "SubRegion",
         "RegionPoint",

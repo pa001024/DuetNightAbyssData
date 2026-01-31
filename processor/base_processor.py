@@ -142,6 +142,48 @@ class BaseProcessor:
             content = content.replace("{空格}", " ")
         return content or text_key
 
+    def get_translated_dialogue(self, dialogue_key, language=""):
+        """获取翻译后的对话文本
+
+        Args:
+            dialogue_key: 对话键
+            language: 语言类型
+
+        Returns:
+            str: 翻译后的对话文本
+        """
+        # 获取当前语言
+        language = language if language else self.data_loader.language
+
+        # 语言映射：cn->TextMapContent, en->ContentEN, jp->ContentJP, kr->ContentKR, fr->ContentFR, tc->ContentTC
+        language_field_map = {
+            "cn": "TextMapContent",
+            "en": "ContentEN",
+            "jp": "ContentJP",
+            "kr": "ContentKR",
+            "fr": "ContentFR",
+            "es": "ContentES",
+            "tc": "ContentTC",
+        }
+
+        # 获取对应语言字段
+        field = language_field_map.get(language, "TextMapContent")
+
+        # 构建文件名
+        filename = f"Dialogue_{field}.json"
+
+        try:
+            # 加载对话数据
+            dialogue_data = self.data_loader.load_json(filename)
+            # 查找对话键
+            if dialogue_key in dialogue_data:
+                return dialogue_data[dialogue_key]
+            else:
+                return dialogue_key
+        except Exception as e:
+            print(f"加载对话数据失败: {e}")
+            return dialogue_key
+
     def round_value(self, value):
         """四舍五入到最多3位小数，等效于JS的 +num.toFixed(3)"""
         # 先四舍五入到3位小数
@@ -632,6 +674,62 @@ class BaseProcessor:
                 return "0.0"
 
         return value
+
+    def get_translated_dialogue(self, dialogue_key, language=""):
+        """获取翻译后的对话文本
+
+        Args:
+            dialogue_key: 对话键值
+            language: 语言代码，如 "cn", "en", "jp", "kr", "fr", "es", "tc"
+
+        Returns:
+            翻译后的对话文本，如果未找到则返回原键值
+        """
+        # 获取当前语言
+        language = language if language else self.data_loader.language
+
+        # 语言映射：cn->Dialogue_TextMapContent, en->Dialogue_ContentEN, jp->Dialogue_ContentJP, kr->Dialogue_ContentKR, fr->Dialogue_ContentFR, tc->Dialogue_ContentTC
+        language_file_map = {
+            "cn": "Dialogue_TextMapContent",
+            "en": "Dialogue_ContentEN",
+            "jp": "Dialogue_ContentJP",
+            "kr": "Dialogue_ContentKR",
+            "fr": "Dialogue_ContentFR",
+            "es": "Dialogue_ContentES",
+            "tc": "Dialogue_ContentTC",
+        }
+
+        # 获取对应语言文件
+        file_name = language_file_map.get(language, "Dialogue_TextMapContent")
+
+        try:
+            # 加载对话文件
+            dialogue_data = self.data_loader.load_json(f"{file_name}.json")
+
+            # 查找对话键值
+            if dialogue_key in dialogue_data:
+                # 对于Dialogue_TextMapContent.json，直接返回对应值
+                if file_name == "Dialogue_TextMapContent":
+                    return dialogue_data[dialogue_key]
+                # 对于其他语言文件，返回对应值
+                else:
+                    return dialogue_data.get(dialogue_key, dialogue_key)
+            else:
+                # 如果当前语言未找到，尝试使用中文作为 fallback
+                if language != "cn":
+                    try:
+                        cn_dialogue_data = self.data_loader.load_json(
+                            "Dialogue_TextMapContent.json"
+                        )
+                        if dialogue_key in cn_dialogue_data:
+                            return cn_dialogue_data[dialogue_key]
+                    except Exception:
+                        pass
+                return dialogue_key
+        except Exception as e:
+            # 如果加载文件失败，返回原键值
+            print(f"加载对话文件失败: {e}", flush=True)
+            return dialogue_key
 
     def _calc_attr_by_level(self, attr, table_id, level):
         """根据等级计算属性值（基类方法，子类可以覆盖）"""
