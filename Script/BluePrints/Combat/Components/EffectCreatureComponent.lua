@@ -109,7 +109,7 @@ function Component:AsyncCreateEffectCreatureById(EffectCreatureId, CreateEffectI
             Effect:K2_AttachToActor(self, "", UE4.EAttachmentRule.SnapToTarget, UE4.EAttachmentRule.SnapToTarget, ScaleRule)
           end
           Effect.CustomTimeDilation = self.CustomTimeDilation
-          if Transform and Transform.Translation ~= Const.ZeroVector and Transform.Rotation:ToRotator() ~= Const.ZeroRotator then
+          if Transform and (Transform.Translation ~= Const.ZeroVector or Transform.Rotation:ToRotator() ~= Const.ZeroRotator or Transform.Scale3D ~= Const.OneVector) then
             Effect:K2_AddActorLocalTransform(Transform, false, nil, false)
           end
         end
@@ -186,7 +186,7 @@ function Component:CreateEffectCreatureById(EffectCreatureId, CreateEffectInfo)
         Effect:K2_AttachToActor(self, "", UE4.EAttachmentRule.SnapToTarget, UE4.EAttachmentRule.SnapToTarget, ScaleRule)
       end
       Effect.CustomTimeDilation = self.CustomTimeDilation
-      if Transform and Transform.Translation ~= Const.ZeroVector and Transform.Rotation:ToRotator() ~= Const.ZeroRotator then
+      if Transform and (Transform.Translation ~= Const.ZeroVector or Transform.Rotation:ToRotator() ~= Const.ZeroRotator or Transform.Scale3D ~= Const.OneVector) then
         Effect:K2_AddActorLocalTransform(Transform, false, nil, false)
       end
     end
@@ -483,7 +483,45 @@ function Component:HideAllEffectCreature(HideTag, IsHide)
   end
 end
 
+function Component:SkillFeatureHideAllEffectCreature(HideTag, IsHide)
+  self:InitEffectCreatureComponent()
+  if not self.SkillFeatureEffectCreatureHideTags then
+    self.SkillFeatureEffectCreatureHideTags = {}
+  end
+  if not HideTag then
+    return
+  end
+  if IsHide then
+    self.SkillFeatureEffectCreatureHideTags[HideTag] = true
+  else
+    self.SkillFeatureEffectCreatureHideTags[HideTag] = nil
+  end
+  for CreatureId, EffectCreatures in pairs(self.EffectCreatures) do
+    local EffectCreatureData = DataMgr.EffectCreature[CreatureId]
+    if EffectCreatureData and EffectCreatureData.HideOnSkillFeature then
+      for i = 1, #EffectCreatures do
+        local EffectCreature = EffectCreatures[i]
+        if IsValid(EffectCreature) then
+          EffectCreature:HideEffectCreatureByTag(HideTag, IsHide)
+        end
+      end
+    end
+  end
+end
+
 function Component:HideEffectCreatureByTags(EffectCreature)
+  if not IsValid(EffectCreature) then
+    return
+  end
+  if self.SkillFeatureEffectCreatureHideTags then
+    local CreatureId = EffectCreature.EffectCreatureId
+    local Cfg = CreatureId and DataMgr.EffectCreature[CreatureId]
+    if Cfg and Cfg.HideOnSkillFeature then
+      for SkillFeatureHideTag, _ in pairs(self.SkillFeatureEffectCreatureHideTags) do
+        EffectCreature:HideEffectCreatureByTag(SkillFeatureHideTag, true)
+      end
+    end
+  end
   if not self.EffectCreatureHideTags then
     return
   end

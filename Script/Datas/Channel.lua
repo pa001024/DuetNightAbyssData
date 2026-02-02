@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -70,7 +73,7 @@ return ReadOnly("Channel", {
   [6] = {
     ChannelType = 6,
     Des = "UI_Channel_Notice_5",
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Chat/T_ChatChannel_Friend",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Chat/T_Chatchannel_Result",
     IsNotice = true,
     JoinOption = 1,
     MessageCD = 0,
@@ -78,6 +81,6 @@ return ReadOnly("Channel", {
     Name = "UI_Channel_Name_7",
     PlayerMax = 4,
     Remark = "临时小队频道",
-    SIcon = "/Game/UI/Texture/Dynamic/Atlas/Chat/T_Chat_ChannelFriend_B"
+    SIcon = "/Game/UI/Texture/Dynamic/Atlas/Chat/T_Chatchannel_Result_B"
   }
 })

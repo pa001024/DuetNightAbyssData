@@ -9,6 +9,7 @@ CommonChar.__Props__ = {
   CharId = prop.prop("Int", "client save"),
   Count = prop.prop("Int", "client save", 1),
   OwnedSkins = prop.prop("Appearance.SkinDict", "client save"),
+  OwnedHairs = prop.prop("Appearance.SkinDict", "client save"),
   SkinIds = prop.getter("Data", "SkinId"),
   RegainCharItemId = prop.getter("Data", "RegainCharItemId"),
   RegainCharItemNum = prop.getter("Data", "RegainCharItemNum"),
@@ -24,6 +25,10 @@ function CommonChar:Init(CharId)
   local CharInfo = DataMgr.Char[CharId] or DataMgr.BattleChar[self.CharId]
   if CharInfo.DefaultSkinId then
     self.OwnedSkins:GetNewSkin(CharInfo.DefaultSkinId, CommonConst.SkinType.Char)
+  end
+  local CharInfo = DataMgr.Char[CharId] or DataMgr.BattleChar[self.CharId]
+  if CharInfo.DefaultHairId then
+    self.OwnedHairs:GetNewSkin(CharInfo.DefaultHairId, CommonConst.SkinType.Hair)
   end
 end
 
@@ -41,6 +46,14 @@ end
 
 function CommonChar:RemoveSkin(SkinId)
   self.OwnedSkins[SkinId] = nil
+end
+
+function CommonChar:AddHair(HairId)
+  self.OwnedHairs:GetNewSkin(HairId, CommonConst.SkinType.Hair)
+end
+
+function CommonChar:GetHair(HairId)
+  return self.OwnedHairs:GetSkin(HairId)
 end
 
 function CommonChar:AddOne()

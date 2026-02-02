@@ -19,6 +19,9 @@ function BP_NetworkManager_C:LogoutEvent()
   if ACESubsystem then
     ACESubsystem:Logout()
   end
+  if GWorld.GameInstance and GWorld.GameInstance.ClearKeyListRecord then
+    GWorld.GameInstance:ClearKeyListRecord()
+  end
 end
 
 function BP_NetworkManager_C:DisconnectAndShowUI(info)
@@ -26,6 +29,9 @@ function BP_NetworkManager_C:DisconnectAndShowUI(info)
   local Avatar = GWorld:GetAvatar()
   if Avatar then
     Uid = Avatar.Uid
+  end
+  if "Error" == Uid and info and type(info) == "table" and info.Uid then
+    Uid = info.Uid
   end
   self:Disconnect()
   self:LogoutEvent()
@@ -61,7 +67,7 @@ function BP_NetworkManager_C:DisconnectAndShowUI(info)
     end
     
     local EnumBanReason = GetEnumBanReason(BanReason)
-    ShortText = string.format(GText("UI_COMMONPOP_TEXT_100052"), info.Uid or 0, EnumBanReason, os.date("%Y-%m-%d %H:%M:%S", BanTime))
+    local ShortText = string.format(GText("UI_COMMONPOP_TEXT_100052"), tonumber(Uid) or 0, EnumBanReason, os.date("%Y-%m-%d %H:%M:%S", BanTime))
     local Params = {
       ShortText = ShortText,
       LeftCallbackObj = self,
@@ -79,7 +85,7 @@ function BP_NetworkManager_C:DisconnectAndShowUI(info)
       LeftCallbackFunction = self.TryToGoToLoginScene,
       RightCallbackObj = self,
       RightCallbackFunction = self.TryToGoToLoginScene,
-      ShortText = string.format(GText("UI_COMMONPOP_TEXT_100073"), tostring(Uid))
+      ShortText = string.format(GText("UI_COMMONPOP_TEXT_100073"), tonumber(Uid) or 0)
     }
     UIManager(self):ShowDisconnectUIConfirm(100073, true, Params)
   elseif not BanTime or not BanReason then
@@ -106,7 +112,7 @@ function BP_NetworkManager_C:DisconnectAndShowUI(info)
     elseif info.ErrorCode == ErrorCode.RET_LOGIN_BY_LIMIT_DEVICE then
       ShortText = string.format(GText("UI_Forbidden_Equipment"), os.date("%Y-%m-%d %H:%M:%S", BanTime))
     else
-      ShortText = string.format(GText("UI_COMMONPOP_TEXT_100051"), info.Uid or 0, os.date("%Y-%m-%d %H:%M:%S", BanTime))
+      ShortText = string.format(GText("UI_COMMONPOP_TEXT_100051"), tonumber(Uid) or 0, os.date("%Y-%m-%d %H:%M:%S", BanTime))
     end
     local Params = {
       ShortText = ShortText,
@@ -224,7 +230,10 @@ function BP_NetworkManager_C:StartShowReConnectUI()
   local UIManager = GWorld.GameInstance:GetGameUIManager()
   self.bUIReConnecting = true
   if UIManager then
-    UIManager:LoadUINew("LoadingReconnect")
+    local ReconnectUI = UIManager:GetUIObj("LoadingReconnect")
+    if not ReconnectUI then
+      UIManager:LoadUINew("LoadingReconnect")
+    end
   end
 end
 

@@ -180,6 +180,9 @@ T.RT_47 = {
 T.RT_48 = {
   Resource = T.RT_47
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

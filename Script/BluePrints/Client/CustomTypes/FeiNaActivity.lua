@@ -101,7 +101,7 @@ function FeiNaDict:NewFeiNa(FeiNaId)
 end
 
 function FeiNaDict:GetNewFeiNa(FeiNaId)
-  if not self:GetFeiNa() then
+  if not self:GetFeiNa(FeiNaId) then
     self[FeiNaId] = self:NewFeiNa(FeiNaId)
   end
   return self[FeiNaId]

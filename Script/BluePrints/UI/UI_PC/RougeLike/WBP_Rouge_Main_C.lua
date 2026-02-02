@@ -220,6 +220,7 @@ end
 
 function WBP_Rouge_Main_C:InitSelectTab()
   self.TabConfigData = {
+    TitleName = GText("MAIN_UI_ROUGE"),
     DynamicNode = {
       "Back",
       "ResourceBar",
@@ -259,6 +260,7 @@ end
 
 function WBP_Rouge_Main_C:InitNormalTab()
   self.TabConfigData = {
+    TitleName = GText("MAIN_UI_ROUGE"),
     DynamicNode = {
       "Back",
       "ResourceBar",
@@ -401,6 +403,7 @@ function WBP_Rouge_Main_C:InitTable(JumpType)
   self:SetJumpType(JumpType)
   self.IsClosing = false
   self.TabConfigData = {
+    TitleName = GText("MAIN_UI_ROUGE"),
     DynamicNode = {
       "Back",
       "ResourceBar",

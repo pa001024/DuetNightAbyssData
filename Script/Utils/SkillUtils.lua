@@ -59,7 +59,7 @@ function SkillUtils.SplitEval(Str, Rep, Args)
 end
 
 function SkillUtils.CalcSkillDescValue(Desc, SkillLevel, Args)
-  local Str = SkillUtils.CalcSkillDesc(Desc, SkillLevel, Args)
+  local Str = SkillUtils.CalcSkillDesc(Desc, SkillLevel, Args, true)
   local NewStr = tonumber(Str)
   if NewStr then
     return NewStr
@@ -67,14 +67,24 @@ function SkillUtils.CalcSkillDescValue(Desc, SkillLevel, Args)
   return Str
 end
 
-function SkillUtils.CalcSkillDesc(Desc, SkillLevel, Args)
+function SkillUtils.CalcSkillDesc(Desc, SkillLevel, Args, ...)
   local NewDesc = string.gsub(Desc, "#", "SkillUtils.NewGrowDesc(" .. SkillLevel .. ").")
+  local IgnoreFranch = (...)
+  if not IgnoreFranch then
+    local index = string.find(NewDesc, "%%", 1)
+    if index and CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
+      NewDesc = string.gsub(NewDesc, "%%", " %%")
+    end
+  end
   local ok, ret = pcall(SkillUtils.SplitEval, NewDesc, "$", Args)
   if not ok then
     if GWorld.GameInstance then
       Battle(GWorld.GameInstance):ShowBattleError("识别技能描述【" .. tostring(Desc) .. "】失败!实际描述为【" .. tostring(NewDesc) .. "】请策划检查表格填写\nError:" .. tostring(ret))
     end
     return NewDesc
+  end
+  if not IgnoreFranch then
+    ret = CommonUtils.FormatNumInFrench(ret)
   end
   return ret
 end
@@ -100,7 +110,7 @@ function SkillUtils.GetSkillAllDesc(SkillId, SkillLevel, SkillGrade, Avatar, Tar
         local AttrConfigIdList = SkillData.SkillDescHints and SkillData.SkillDescHints[Index] or {}
         local AttrDesc = GText(DescKey)
         local Args = {Attrs = Attrs, ImpactAttrs = AttrConfigIdList}
-        local ValueStr = SkillUtils.CalcSkillDesc(SkillData.SkillDescValues[Index], SkillLevel, Args)
+        local ValueStr = SkillUtils.CalcSkillDesc(SkillData.SkillDescValues[Index], SkillLevel, Args, true)
         ValueStr = SkillUtils.FormatDescValue2(ValueStr)
         local AttrHint = ""
         local Caesura = GText("Caesura")
@@ -145,16 +155,18 @@ function SkillUtils.GetSkillDesc(SkillId, SkillLevel, ExpectLevel, SkillGrade)
           local ValStr = ""
           
           local function SkillGrowDesc(DescValue, BaseLevel, ExpectLevel, Percent)
-            local OldValStr = SkillUtils.CalcSkillDesc(DescValue, BaseLevel) .. Percent
-            local NewValStr = SkillUtils.CalcSkillDesc(DescValue, ExpectLevel) .. Percent
+            local Ret
+            local OldValStr = SkillUtils.CalcSkillDesc(DescValue, BaseLevel, nil, true) .. Percent
+            local NewValStr = SkillUtils.CalcSkillDesc(DescValue, ExpectLevel, nil, true) .. Percent
             if OldValStr ~= NewValStr then
               OldValStr = SkillUtils.FormatDescValue1(OldValStr, CastTo)
               NewValStr = SkillUtils.FormatDescValue1(NewValStr, CastTo)
-              return OldValStr .. " -> " .. string.format("<H>%s</>", NewValStr) or NewValStr
+              Ret = OldValStr .. " -> " .. string.format("<H>%s</>", NewValStr) or NewValStr
             else
               NewValStr = SkillUtils.FormatDescValue1(NewValStr, CastTo)
-              return NewValStr
+              Ret = NewValStr
             end
+            return Ret
           end
           
           ValStr = "" == ValStr and SkillGrowDesc(DescValue, SkillLevel, ExpectLevel, Percent) or ValStr
@@ -443,10 +455,10 @@ function SkillUtils.CalcWeaponPassiveEffectsDesc(WeaponData, GradeLevel, Compare
       local CastTo
       for i, value in ipairs(data.PassiveEffectsDescValues) do
         SkillDesc, CastTo = SkillUtils.ReplaceDescValueTypeCast(SkillDesc, i)
-        local valueStr = SkillUtils.CalcSkillDesc(value, math.min(DataMgr.DataConst.MaxSkillLevel, (GradeLevel or WeaponData.GradeLevel or 0) + 1))
+        local valueStr = SkillUtils.CalcSkillDesc(value, math.min(DataMgr.DataConst.MaxSkillLevel, (GradeLevel or WeaponData.GradeLevel or 0) + 1), nil, true)
         valueStr = SkillUtils.FormatDescValue1(valueStr, CastTo)
         if ComparedGradeLevel then
-          local ComparedValueStr = SkillUtils.CalcSkillDesc(value, math.min(DataMgr.DataConst.MaxSkillLevel, (ComparedGradeLevel or 0) + 1))
+          local ComparedValueStr = SkillUtils.CalcSkillDesc(value, math.min(DataMgr.DataConst.MaxSkillLevel, (ComparedGradeLevel or 0) + 1), nil, true)
           ComparedValueStr = SkillUtils.FormatDescValue1(ComparedValueStr, CastTo)
           if valueStr ~= ComparedValueStr then
             valueStr = valueStr .. "->" .. ComparedValueStr
@@ -539,8 +551,13 @@ function SkillUtils.FormatDescValue1(str, bToInt)
   end
   local index = string.find(Res, "%%", 1)
   if index then
-    Res = Res .. "%"
+    if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
+      Res = string.gsub(Res, "%%", " %%%%")
+    else
+      Res = Res .. "%"
+    end
   end
+  Res = CommonUtils.FormatNumInFrench(Res)
   return Res
 end
 
@@ -551,6 +568,7 @@ function SkillUtils.FormatDescValue2(str)
     num = math.floor(num * 100 + 0.5) / 100
     str = string.sub(str, 1, _start - 1) .. num .. string.sub(str, _end + 1, #str)
   end
+  str = CommonUtils.FormatNumInFrench(str)
   return str
 end
 

@@ -2205,6 +2205,22 @@
     ]
   },
   {
+    "id": 210205,
+    "name": "山体坍塌",
+    "level": [
+      60,
+      65
+    ],
+    "regionId": 1041,
+    "subRegionId": 104105,
+    "chance": 5,
+    "completeNum": -1,
+    "dayLimit": false,
+    "reward": [
+      51003
+    ]
+  },
+  {
     "id": 301802,
     "name": "暴力巡逻",
     "level": [
@@ -2800,8 +2816,8 @@
     "id": 308314,
     "name": "非常大脑",
     "level": [
-      40,
-      49
+      50,
+      59
     ],
     "regionId": 1041,
     "subRegionId": 104108,
@@ -2816,8 +2832,8 @@
     "id": 308315,
     "name": "非常大脑",
     "level": [
-      50,
-      59
+      60,
+      65
     ],
     "regionId": 1041,
     "subRegionId": 104108,
@@ -2832,8 +2848,8 @@
     "id": 308334,
     "name": "非常大脑",
     "level": [
-      40,
-      49
+      50,
+      59
     ],
     "regionId": 1041,
     "subRegionId": 104108,
@@ -2848,8 +2864,8 @@
     "id": 308335,
     "name": "非常大脑",
     "level": [
-      50,
-      59
+      60,
+      65
     ],
     "regionId": 1041,
     "subRegionId": 104108,
@@ -2885,6 +2901,22 @@
     ],
     "regionId": 1041,
     "subRegionId": 104107,
+    "chance": 5,
+    "completeNum": -1,
+    "dayLimit": false,
+    "reward": [
+      51003
+    ]
+  },
+  {
+    "id": 310305,
+    "name": "茂盛的山瑚",
+    "level": [
+      60,
+      65
+    ],
+    "regionId": 1041,
+    "subRegionId": 104103,
     "chance": 5,
     "completeNum": -1,
     "dayLimit": false,

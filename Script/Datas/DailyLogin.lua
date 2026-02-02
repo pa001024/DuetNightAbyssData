@@ -8,6 +8,16 @@ T.RT_1 = {
   1010012,
   1010014
 }
+T.RT_2 = {
+  1010041,
+  1010042,
+  1010043,
+  1010044,
+  1010045
+}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -32,19 +42,30 @@ return ReadOnly("DailyLogin", {
   },
   [101004] = {
     EventId = 101004,
-    EventReward = {
-      1010041,
-      1010042,
-      1010043,
-      1010044,
-      1010045
-    },
+    EventReward = T.RT_2,
     LoginDuration = 5
   },
   [101005] = {
     EventId = 101005,
     EventReward = T.RT_1,
     LoginDuration = 7,
-    RewardBannerBP = "/Game/UI/WBP/Activity/Widget/SevenDay/Baiheng/WBP_Activity_SevenDayItems.WBP_Activity_SevenDayItems"
+    RewardBannerBP = "/Game/UI/WBP/Activity/Widget/SevenDay/FeiNa/WBP_Activity_SevenDayItems.WBP_Activity_SevenDayItems"
+  },
+  [101006] = {
+    EventId = 101006,
+    EventReward = T.RT_1,
+    LoginDuration = 7,
+    RewardBannerBP = "/Game/UI/WBP/Activity/Widget/SevenDay/Zhiliu/WBP_Activity_SevenDayItems.WBP_Activity_SevenDayItems"
+  },
+  [101007] = {
+    EventId = 101007,
+    EventReward = T.RT_1,
+    LoginDuration = 7,
+    RewardBannerBP = "/Game/UI/WBP/Activity/Widget/SevenDay/Yuming/WBP_Activity_SevenDayItems.WBP_Activity_SevenDayItems"
+  },
+  [101008] = {
+    EventId = 101008,
+    EventReward = T.RT_2,
+    LoginDuration = 5
   }
 })

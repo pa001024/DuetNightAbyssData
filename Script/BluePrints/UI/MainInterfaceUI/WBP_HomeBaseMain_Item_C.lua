@@ -31,18 +31,12 @@ function WBP_HomeBaseMain_Item_C:RefreshNewClueUI()
   if not self.IsBtnTask then
     return
   end
-  local HasNewQuestionOrClue = ReasoningUtils:IsHasNewQuestionOrClue()
-  if 2 == HasNewQuestionOrClue then
-    self.NewClue = UIManager(self):_CreateWidgetNew("CommonHudBubble")
-    local ConfigData = {
-      IconPath = "",
-      Text = "Minigame_Textmap_100319",
-      ColorType = 3,
-      Arrow = 10
-    }
-    self.NewClue:Init(ConfigData)
-    self.NewClue:PlayInAnimation()
+  if ReasoningUtils:IsAllClueHasNewClue() then
+    if not self.NewClue then
+      self.NewClue = UIManager(self):_CreateWidgetNew("ReasoningBubble")
+    end
     if self.NewClue then
+      self.NewClue:ShowInfo()
       self.Pos_Bubble_L:AddChild(self.NewClue)
     end
   elseif self.NewClue then
@@ -51,11 +45,26 @@ function WBP_HomeBaseMain_Item_C:RefreshNewClueUI()
 end
 
 function WBP_HomeBaseMain_Item_C:RefreshNewTheaterUI()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local ConditionId = 8029
+  local PreQuestId = 400111
+  local QuestChain = Avatar.QuestChains[PreQuestId]
+  if not QuestChain then
+    DebugPrint("ayff 剧院tips配置了一个不存在的任务")
+    return
+  end
+  local isUnlock = ConditionUtils.CheckCondition(Avatar, ConditionId)
+  if not isUnlock or not QuestChain:IsFinish() then
+    return
+  end
   self.NewTheaterBubble = UIManager(self):_CreateWidgetNew("CommonHudBubble")
   self.Pos_Bubble_L:AddChild(self.NewTheaterBubble)
   local ConfigData = {
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_TheaterOnline.T_Interactive_TheaterOnline",
-    Text = "即将开始",
+    Text = "UI_Theater_Waiting",
     ColorType = 0,
     Arrow = 1
   }
@@ -506,6 +515,49 @@ end
 
 function WBP_HomeBaseMain_Item_C:OnHomeBaseeBtnShowNewClue(UIName)
   self:RefreshNewClueUI()
+end
+
+function WBP_HomeBaseMain_Item_C:InitInterface(IconPath, KeyText, Name)
+  self.Common_Item_Subsize_New_PC:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Reddot:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Reddot_Num:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  local ImageResource
+  if IconPath then
+    ImageResource = LoadObject(IconPath)
+  end
+  local VSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(self.VerticalBox_0)
+  local Anchors = FAnchors()
+  VSlot:SetAlignment(FVector2D(0.5, 0))
+  Anchors.Minimum = FVector2D(0.5, 1)
+  Anchors.Maximum = FVector2D(0.5, 1)
+  VSlot:SetAnchors(Anchors)
+  if nil ~= ImageResource then
+    self:SetButtonStyle(ImageResource)
+  end
+  self.Switcher:SetActiveWidgetIndex(0)
+  if KeyText then
+    self.IsHaveKey = true
+    self.Common_Key_Hud_PC:CreateCommonKey({
+      KeyInfoList = {
+        {Type = "Text", Text = KeyText}
+      }
+    })
+    self.Common_Key_Hud_PC:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.IsHaveKey = false
+    self.Common_Key_Hud_PC:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  if Name then
+    self.Name:SetText(GText(Name))
+    self.Name:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.Name:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  local Platform = CommonUtils.GetDeviceTypeByPlatformName(self)
+  if "Mobile" == Platform then
+    self.Common_Key_Hud_PC:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  self.Switcher:SetVisibility(UE4.ESlateVisibility.Collapsed)
 end
 
 AssembleComponents(WBP_HomeBaseMain_Item_C)

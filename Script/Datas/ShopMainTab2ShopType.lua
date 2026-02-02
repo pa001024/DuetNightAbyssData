@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -21,5 +24,9 @@ return ReadOnly("ShopMainTab2ShopType", {
   [10002] = "Rouge",
   [10003] = "WeeklyDungeonShop",
   [10004] = "RaidShopSeason01",
-  [10005] = "HuaxuExploreShop"
+  [10005] = "HuaxuExploreShop",
+  [10006] = "AutoChessShop",
+  [90001] = "GiftShop",
+  [90002] = "GiftShop",
+  [90003] = "GiftShop"
 })

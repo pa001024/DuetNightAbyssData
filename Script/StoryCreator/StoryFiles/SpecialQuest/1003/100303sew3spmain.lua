@@ -367,6 +367,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -969,6 +970,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1041,6 +1043,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1242,6 +1245,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1314,6 +1318,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1382,6 +1387,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1558,6 +1564,7 @@ return {
             pos = {x = 1297.0833333333333, y = 287.41666666666674},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_1740103"
             }
@@ -1569,6 +1576,7 @@ return {
             pos = {x = 1810.6060606060603, y = 290.8560606060606},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_1740103"
             }
@@ -1580,6 +1588,7 @@ return {
             pos = {x = 1296.8560606060603, y = 474.6060606060605},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_1740104"
             }
@@ -1591,6 +1600,7 @@ return {
             pos = {x = 1814.35606060606, y = 482.1060606060605},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_1740104"
             }
@@ -1602,6 +1612,7 @@ return {
             pos = {x = 1822.0163170163169, y = 633.5483682983681},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_1740105"
             }
@@ -1613,6 +1624,7 @@ return {
             pos = {x = 1552.3452643847374, y = 797.7150349650348},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_1740105"
             }
@@ -1738,6 +1750,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2944,6 +2957,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -3074,6 +3088,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -3237,6 +3252,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",

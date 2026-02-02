@@ -3,15 +3,14 @@ local DEV_CDN_URL = {
   "https://pan01-1-dev.oss-cn-hangzhou.aliyuncs.com"
 }
 local PUB_CDN_URL_ROOT_CN = {
+  "http://pan01-1-eo.shyxhy.com",
   "http://pan01-cdn-dna-ali.shyxhy.com",
-  "http://pan01-cdn-dna-huawei.shyxhy.com",
-  "http://pan01-1-hs.shyxhy.com",
-  "http://pan01-1-eo.shyxhy.com"
+  "http://pan01-1-hs.shyxhy.com"
 }
 local PUB_CDN_URL_ROOT_GLOBAL = {
+  "http://pan01-cdn-eo-jp.dna-panstudio.com",
   "http://pan01-cdn-ali-jp.dna-panstudio.com",
   "http://pan01-cdn-aws-jp.dna-panstudio.com",
-  "http://pan01-cdn-akm-jp.dna-panstudio.com",
   "http://pan01-cdn-hs-jp.dna-panstudio.com"
 }
 
@@ -33,6 +32,9 @@ function M:CdnUrl(Hostnum)
         return PUB_CDN_URL_ROOT_GLOBAL
       end
     end
+    return DEV_CDN_URL
+  end
+  if IsDev() then
     return DEV_CDN_URL
   end
   if false == IsChina() then

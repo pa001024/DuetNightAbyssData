@@ -73,6 +73,9 @@ T.RT_18 = {
 T.RT_19 = {SocketA = "Root", SocketB = "hook_arm_r"}
 T.RT_20 = {SocketA = "Root", SocketB = "hook_arm_l"}
 T.RT_21 = {SocketA = "Root", SocketB = "Root"}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -132,7 +135,6 @@ return ReadOnly("BodyAccessory", {
     LandEffectId = 700011,
     ModelPath = "/Game/Asset/Char/Monster/JT_Ranger/Mesh/JT_Ranger_Part02_SM.JT_Ranger_Part02_SM",
     MoveDirect = T.RT_16,
-    PreAccessories = {700005},
     Speed = T.RT_6
   },
   [700005] = {

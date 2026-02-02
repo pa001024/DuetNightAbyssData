@@ -81,14 +81,16 @@ function M:ChangeChooseClickCallback(bSelectState, ChooseInfo)
     end
     self.Owner:ForbidRightBtn(false)
     local ResourceName = DataMgr.Resource[self.CurrentChooseInfo.ResourceId].ResourceName
-    self.Owner:HideDialogTip(1, false)
-    self.Owner:ShowDialogTip(2)
     local Funds = {}
     Funds[1] = {}
     Funds[1].FundId = self.ResourceId
     Funds[1].FundNeed = 1
     Funds[1].CostText = GText("UI_Armory_Trace_Cost")
-    self:BroadcastDialogEvent("UpdateFunds", {Funds = Funds})
+    self:AddDelayFrameFunc(function()
+      self:BroadcastDialogEvent("UpdateFunds", {Funds = Funds})
+      self.Owner:HideDialogTip(1, false)
+      self.Owner:ShowDialogTip(2)
+    end, 1)
   else
     self.CurrentChooseWidget = nil
     self.Owner:ForbidRightBtn(true)

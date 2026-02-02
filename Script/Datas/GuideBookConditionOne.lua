@@ -19,6 +19,27 @@ T.RT_3 = {
   MechanismTag = "Petal",
   RewardId = 7000
 }
+T.RT_4 = {
+  CompleteUIGuideId = 95,
+  FinishQuest = 12010309,
+  GuideId = 95,
+  GuideNoteId = 120,
+  GuideNoteTab = 3,
+  MechanismTag = "MoInteractive",
+  RewardId = 7000
+}
+T.RT_5 = {
+  CompleteUIGuideId = 94,
+  FinishQuest = 12010309,
+  GuideId = 94,
+  GuideNoteId = 119,
+  GuideNoteTab = 3,
+  MechanismTag = "GravityBall",
+  RewardId = 7000
+}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -259,22 +280,8 @@ return ReadOnly("GuideBookConditionOne", {
         GuideNoteTab = 3,
         RewardId = 7000
       },
-      [5] = {
-        CompleteUIGuideId = 94,
-        FinishQuest = 12010309,
-        GuideId = 94,
-        GuideNoteId = 119,
-        GuideNoteTab = 3,
-        RewardId = 7000
-      },
-      [6] = {
-        CompleteUIGuideId = 95,
-        FinishQuest = 12010309,
-        GuideId = 95,
-        GuideNoteId = 120,
-        GuideNoteTab = 3,
-        RewardId = 7000
-      },
+      [5] = T.RT_5,
+      [6] = T.RT_4,
       [7] = T.RT_3
     },
     [12010310] = {
@@ -473,6 +480,15 @@ return ReadOnly("GuideBookConditionOne", {
         RewardId = 7000
       }
     },
+    Mount = {
+      [1] = {
+        FunctionId = "Mount",
+        GuideId = 119,
+        GuideNoteId = 136,
+        GuideNoteTab = 5,
+        RewardId = 7000
+      }
+    },
     Pet = {
       [1] = {
         FunctionId = "Pet",
@@ -494,6 +510,15 @@ return ReadOnly("GuideBookConditionOne", {
         FunctionId = "Quest",
         GuideId = 62,
         GuideNoteId = 77,
+        GuideNoteTab = 5,
+        RewardId = 7000
+      }
+    },
+    RegionReputation = {
+      [1] = {
+        FunctionId = "RegionReputation",
+        GuideId = 117,
+        GuideNoteId = 135,
         GuideNoteTab = 5,
         RewardId = 7000
       }
@@ -557,6 +582,9 @@ return ReadOnly("GuideBookConditionOne", {
         RewardId = 7000
       }
     },
+    GravityBall = {
+      [1] = T.RT_5
+    },
     HuaRui = {
       [1] = {
         CompleteUIGuideId = 109,
@@ -595,6 +623,9 @@ return ReadOnly("GuideBookConditionOne", {
         MechanismTag = "MirrorPuzzle",
         RewardId = 7000
       }
+    },
+    MoInteractive = {
+      [1] = T.RT_4
     },
     Petal = {
       [1] = T.RT_3

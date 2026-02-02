@@ -138,6 +138,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "QuestPoint_Balcony2",
               CameraLookAtTartgetPoint = "QuestPoint_Balcony1",

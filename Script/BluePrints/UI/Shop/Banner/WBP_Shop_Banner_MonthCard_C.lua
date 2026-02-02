@@ -9,13 +9,20 @@ function M:Construct()
   M.Super.Construct(self)
 end
 
-function M:InitBannerPage(BannerId)
+function M:InitBannerPage(BannerId, ParentWidget)
   self.WBP_Shop_MonthCard:InitBannerPage(BannerId)
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
   self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
   if IsValid(self.GameInputModeSubsystem) then
     self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
   end
+  self.Parent = ParentWidget
+  self.Parent:StopVideoBGWithDelay(0.5)
+  self.Parent:SetHasVideo(false)
+  self.Parent.Group_BG:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Parent:SetCameraToPreviewActor()
+  local ItemData = {ItemType = "Background"}
+  self.Parent:UpdatePreviewActor(ItemData)
 end
 
 function M:PlayAnimationIn()

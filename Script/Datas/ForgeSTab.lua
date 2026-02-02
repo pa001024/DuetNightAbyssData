@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -137,5 +140,13 @@ return ReadOnly("ForgeSTab", {
     TabDefaultSlot = 999,
     TabId = 7,
     TabName = "UI_Dress_Back"
+  },
+  [19] = {
+    Id = 19,
+    ProductType = "Accessory_Tail",
+    Sequence = 40,
+    TabDefaultSlot = 999,
+    TabId = 7,
+    TabName = "UI_Dress_Tail"
   }
 })

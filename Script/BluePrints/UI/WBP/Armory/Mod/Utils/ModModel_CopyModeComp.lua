@@ -152,8 +152,9 @@ function Component:GenerateModSuitInfoMsg()
   return ChatCommon.ModSuitCopyHeader .. json.encode(Table)
 end
 
-function Component:CreateDummyAvatarForCopyMode(ModSuitInfo)
+function Component:CreateDummyAvatarForCopyMode(ModSuitInfo, SenderName)
   self.DummyAvatar_CopyMode = {}
+  self.CopyModeSenderName = SenderName
   local TargetType = ModSuitInfo.TargetInfo[1]
   local TargetId = ModSuitInfo.TargetInfo[2]
   local Level = ModSuitInfo.TargetInfo[3]

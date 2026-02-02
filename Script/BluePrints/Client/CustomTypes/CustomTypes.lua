@@ -836,6 +836,9 @@ function Int2IntListDict:NewIntList()
   return IntList()
 end
 
+local Int2StrDict = Class("Int2StrDict", CustomDict)
+Int2StrDict.KeyType = BaseTypes.Int
+Int2StrDict.ValueType = BaseTypes.Str
 local Str2StrListDict = Class("Str2StrListDict", CustomDict)
 Str2StrListDict.KeyType = BaseTypes.Str
 Str2StrListDict.ValueType = StrList
@@ -969,6 +972,7 @@ local CustomTypes = {
   Int2StrSetDict = Int2StrSetDict,
   Str2StrSetDict = Str2StrSetDict,
   IntSet = IntSet,
-  StrSet = StrSet
+  StrSet = StrSet,
+  Int2StrDict = Int2StrDict
 }
 return CustomTypes

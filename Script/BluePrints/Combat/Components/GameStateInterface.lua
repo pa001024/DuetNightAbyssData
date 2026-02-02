@@ -1,5 +1,6 @@
 local TimeUtils = require("Utils.TimeUtils")
 local MiscUtils = require("Utils.MiscUtils")
+local GameFlowUtils = require("Utils.GameFlowUtils")
 local Component = Class({
   "BluePrints.Common.TimerMgr"
 })
@@ -230,6 +231,13 @@ function Component:OnInit_Lua()
   self:LoadDungeonUI()
   self:InitFbdRule()
   self:TriggerClientEvent("OnClientInit")
+  if self.GameModeType == "SoloRaid" then
+    self.SoloRaidHistoryMaxScore = 0
+    local Avatar = GWorld:GetAvatar()
+    if Avatar and Avatar.RaidSeasons and Avatar.CurrentRaidSeasonId and Avatar.RaidSeasons[Avatar.CurrentRaidSeasonId] then
+      self.SoloRaidHistoryMaxScore = Avatar.RaidSeasons[Avatar.CurrentRaidSeasonId]:GetMaxRaidScore()
+    end
+  end
 end
 
 function Component:RemoveOnInit_Lua()
@@ -411,10 +419,28 @@ end
 function Component:OnRep_ExitInfo()
   local ExitMechanismArray = self.MechanismMap:FindRef("ExitTrigger")
   local ExitMechanism
-  if ExitMechanismArray then
+  if ExitMechanismArray and ExitMechanismArray.Array then
     ExitMechanism = ExitMechanismArray.Array:ToTable()[1]
   end
   local bIsWaiting = ExitMechanism and ExitMechanism:IsPlayerWaiting(UE4.UGameplayStatics.GetPlayerController(self, 0).Character)
+  if not ExitMechanism then
+    local PlayerCharacter = UE4.UGameplayStatics.GetPlayerController(self, 0).Character
+    local PCs = self:GetAllPlayerCharacters()
+    local MinDist = math.huge
+    local PlayerCharacterDist = math.huge
+    for _, Actor in pairs(PCs or {}) do
+      if PlayerCharacter == Actor:Cast(UE4.APlayerCharacter) then
+        PlayerCharacterDist = self:GetDistanceToPlayerComponent(PlayerCharacter) or math.huge
+        MinDist = math.min(PlayerCharacterDist, MinDist)
+      else
+        local Dist = self:GetDistanceToPlayerComponent(Actor) or math.huge
+        MinDist = math.min(Dist, MinDist)
+      end
+    end
+    if PlayerCharacterDist ~= math.huge and PlayerCharacterDist == MinDist then
+      bIsWaiting = true
+    end
+  end
   DebugPrint("GameState:OnRep_ExitInfo", ExitMechanism, bIsWaiting)
   PrintTable(self.ExitInfo)
   if self.GameModeType == "Party" then
@@ -422,6 +448,58 @@ function Component:OnRep_ExitInfo()
   else
     self:OnRepDungeonExitInfo(self.ExitInfo, bIsWaiting)
   end
+end
+
+function Component:GetDistanceToPlayerComponent(PlayerCharacter)
+  local World = self.GetWorld and self:GetWorld() or UE4.UGameplayStatics.GetWorld(self)
+  if not World then
+    return nil
+  end
+  local BPClass = UE4.UClass.Load("/Game/BluePrints/Common/Triggers/BP_ExitTriggerBoxMechanism.BP_ExitTriggerBoxMechanism_C")
+  DebugPrint("BPClass: ", BPClass)
+  local Actors = UE4.UGameplayStatics.GetAllActorsOfClass(World, UE4.BP_ExitTriggerBoxMechanism_C)
+  local BP_ExitTriggerBoxMechanism
+  if Actors and Actors:Length() > 0 then
+    BP_ExitTriggerBoxMechanism = Actors:GetRef(1)
+  else
+    return nil
+  end
+  if not (PlayerCharacter and PlayerCharacter.CapsuleComponent) or not BP_ExitTriggerBoxMechanism.CollisionComponent then
+    return nil
+  end
+  local dist = self:GetComponentDistance(PlayerCharacter.CapsuleComponent, BP_ExitTriggerBoxMechanism.CollisionComponent)
+  return dist
+end
+
+function Component:GetAllPlayerCharacters()
+  local World = self.GetWorld and self:GetWorld() or UE4.UGameplayStatics.GetWorld(self)
+  if not World then
+    return {}
+  end
+  local PCs = {}
+  local Actors = UE4.UGameplayStatics.GetAllActorsOfClass(World, UE4.APlayerCharacter)
+  if Actors then
+    for i = 1, Actors:Length() do
+      local Actor = Actors:GetRef(i)
+      if Actor then
+        table.insert(PCs, Actor)
+      end
+    end
+  end
+  return PCs
+end
+
+function Component:GetComponentDistance(CompA, CompB)
+  if not CompA or not CompB then
+    return math.huge
+  end
+  local LocA = CompA:K2_GetComponentLocation()
+  local LocB = CompB:K2_GetComponentLocation()
+  if not LocA or not LocB then
+    return math.huge
+  end
+  local Delta = LocA - LocB
+  return Delta:Size()
 end
 
 function Component:SurvivalValueFinished_Lua()
@@ -522,7 +600,7 @@ function Component:InitFbdRule()
   end
   if Player then
     if FbdRule.NoSkill and 0 ~= FbdRule.NoSkill then
-      Player:ForbidAllSkills(true)
+      Player:ForbidAllSkillsByBuff(true)
     end
     if FbdRule.NoMelee and 0 ~= FbdRule.NoMelee then
       Player:ForbidMeleeSkills(true)
@@ -549,7 +627,7 @@ function Component:ResetFbdRule()
   end
   if Player then
     if FbdRule.NoSkill and 0 ~= FbdRule.NoSkill then
-      Player:ForbidAllSkills(false)
+      Player:ForbidAllSkillsByBuff(false)
     end
     if FbdRule.NoMelee and 0 ~= FbdRule.NoMelee then
       Player:ForbidMeleeSkills(false)
@@ -681,6 +759,16 @@ function Component:LoadDungeonUIEMWdiget(GameModeType)
     ScreenPrint("LoadDungoenUI加载对应副本WidgetUI失败，没有填写默认值！GameModeType " .. GameModeType)
     return
   end
+  if type(WidgetUIName) == "table" then
+    for _, UIName in pairs(WidgetUIName) do
+      self:RealLoadDungeonUIEMWdiget(UIName)
+    end
+  else
+    self:RealLoadDungeonUIEMWdiget(WidgetUIName)
+  end
+end
+
+function Component:RealLoadDungeonUIEMWdiget(WidgetUIName)
   local EMDungeonWidget = UIManager(self):_CreateWidgetNew(WidgetUIName)
   if not EMDungeonWidget then
     ScreenPrint("LoadDungoenUI加载对应副本WidgetUI失败，创建Widget失败！WidgetUIName " .. WidgetUIName)
@@ -782,15 +870,15 @@ function Component:TryShowDungeonFirstGuide(GameModeType)
     return false
   end
   if DataMgr.DungeonTypeToId[GameModeType] then
-    local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-    local Flow = FlowManager:CreateFlow("GuideMain")
-    Flow.OnBegin:Add(Flow, function()
-      local UIStateAsyncActionBase = UE4.UUIStateAsyncActionBase.ShowGuideUI(self, DataMgr.DungeonTypeToId[GameModeType].GuideId)
-      UIStateAsyncActionBase.OnGuideEnd:Add(self, function()
-        FlowManager:RemoveFlow(Flow)
-      end)
-    end)
-    FlowManager:AddFlow(Flow)
+    GameFlowUtils:AddFlow("GuideMain", {
+      GWorld.GameInstance,
+      function(_, Flow)
+        local UIStateAsyncActionBase = UE4.UUIStateAsyncActionBase.ShowGuideUI(self, DataMgr.DungeonTypeToId[GameModeType].GuideId)
+        UIStateAsyncActionBase.OnGuideEnd:Add(self, function()
+          GameFlowUtils:RemoveFlow(Flow)
+        end)
+      end
+    })
   end
   return true
 end
@@ -870,6 +958,57 @@ function Component:HideCountDownUI_Lua(TextMap)
   if CountDownUI and CountDownUI.KeyToHideSelf == TextMap then
     UIManager:UnLoadUINew("DungeonCaptureFloat")
   end
+end
+
+function Component:ShowRankStarUI_Lua(TextMapTitle, TextMapStar3, TextMapStar2, TextMapStar1, TimerHandle, TimerStar3, TimeStar2, TimeStar1)
+  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+  local UIManager = GameInstance:GetGameUIManager()
+  if nil == UIManager then
+    return
+  end
+  local BattleMainUI = UIManager:GetUIObj("BattleMain")
+  if not BattleMainUI then
+    DebugPrint("zzwwkk ShowRankStarUI_Lua BattleMainUI is nil")
+    return
+  end
+  self.RankStarUI = UIManager:_CreateWidgetNew("DungeonCommonRankStar")
+  self.RankStarUI:InitWidgetUI(TextMapTitle, TextMapStar3, TextMapStar2, TextMapStar1, TimerHandle, TimerStar3, TimeStar2, TimeStar1)
+  BattleMainUI.Group_Temple:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  BattleMainUI.Pos_TempleRight:ClearChildren()
+  BattleMainUI.Pos_TempleRight:AddChildToOverlay(self.RankStarUI)
+end
+
+function Component:UnShowRankStarUI_Lua()
+  if self.RankStarUI then
+    self.RankStarUI:RemoveFromParent()
+    local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+    local UIManager = GameInstance:GetGameUIManager()
+    if nil == UIManager then
+      return
+    end
+    local BattleMainUI = UIManager:GetUIObj("BattleMain")
+    if BattleMainUI then
+      BattleMainUI.Group_Temple:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+  end
+end
+
+function Component:ShowRankStarScoreUI_Lua(TextMapTitle, TextMapStar3, TextMapStar2, TextMapStar1, ScoreStar3, ScoreStar2, ScoreStar1, InitScore)
+  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+  local UIManager = GameInstance:GetGameUIManager()
+  if nil == UIManager then
+    return
+  end
+  local BattleMainUI = UIManager:GetUIObj("BattleMain")
+  if not BattleMainUI then
+    DebugPrint("zzwwkk ShowRankStarUI_Lua BattleMainUI is nil")
+    return
+  end
+  self.RankStarUI = UIManager:_CreateWidgetNew("DungeonCommonRankStar")
+  self.RankStarUI:InitWidgetUIScore(TextMapTitle, TextMapStar3, TextMapStar2, TextMapStar1, ScoreStar3, ScoreStar2, ScoreStar1, InitScore)
+  BattleMainUI.Group_Temple:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  BattleMainUI.Pos_TempleRight:ClearChildren()
+  BattleMainUI.Pos_TempleRight:AddChildToOverlay(self.RankStarUI)
 end
 
 function Component:ShowBuffInfo_Lua(PathIconList, TextMapList, Duration)
@@ -1031,8 +1170,6 @@ function Component:TryEndLoading(Reason)
           SubSystem:SetRegionInitState(ERegionInitState.AllReady)
         end
       end
-      print(_G.LogTag, "SetSyncLoaderOptimization True")
-      GWorld.GameInstance:SetSyncLoaderOptimization(true)
     else
       self.EndLoadingSuccess = false
     end
@@ -1087,6 +1224,20 @@ function Component:PreloadGameAssets()
   end
   local UnitBudgetSystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UE4.UUnitBudgetAllocatorSubsystem)
   if UnitBudgetSystem then
+    if self:IsInDungeon() then
+      local DungeonId = GWorld.GameInstance:GetCurrentDungeonId()
+      local DungeonInfo = DataMgr.Dungeon[DungeonId]
+      if DungeonInfo and DungeonInfo.DungeonType == "AutoChess" then
+        print(_G.LogTag, "wzj- 自走棋跳过EnableAnimBudget")
+        UnitBudgetSystem:SetEnableAnimBudget(false)
+      else
+        print(_G.LogTag, "wzj- 打开EnableAnimBudget")
+        UnitBudgetSystem:SetEnableAnimBudget(true)
+      end
+    else
+      print(_G.LogTag, "wzj- 打开EnableAnimBudget")
+      UnitBudgetSystem:SetEnableAnimBudget(true)
+    end
     local bSkip = false
     if IsClient(self) then
       bSkip = true
@@ -1124,9 +1275,11 @@ function Component:PreloadGameAssets()
   end
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   local PhantomTable = Player and Player:GetPhantomTeammates(false, false):ToTable() or {}
-  PreloadSystem:ReleaseAllCacheBeforeChangeScene({
-    Player and Player.CurrentRoleId or 0
-  })
+  local SkipPlayerId = Player and Player.CurrentRoleId or 0
+  if Player.GetCharPreloadComp and Player:GetCharPreloadComp() and Player:GetCharPreloadComp():GetPlayerCacheLoadId() > 0 then
+    SkipPlayerId = Player:GetCharPreloadComp():GetPlayerCacheLoadId()
+  end
+  PreloadSystem:ReleaseAllCacheBeforeChangeScene({SkipPlayerId})
   PreloadSystem:ReleaseAllCacheObj(false)
   PreloadSystem:PreloadScatteredAsset_All()
   if Player and true == Player.DelayCacheLoadPlayerAssets then
@@ -1141,6 +1294,13 @@ function Component:PreloadGameAssets()
   if self:IsInDungeon() then
     PreloadSystem:PreloadScatteredAsset_Dungeon(DungeonId or 0)
   elseif self:IsInRegion() then
+    if IsStandAlone(self) and UEMGameInstance.IsLowMemoryDevice() then
+      local AnimCacheSys = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UAnimOptGameInstanceSubsystem)
+      if AnimCacheSys then
+        print(_G.LogTag, "@gulinan- 区域资源预加载前打开移动端被关闭的动画缓存")
+        AnimCacheSys.SystemEnableState = 1
+      end
+    end
     PreloadSystem:PreloadScatteredAsset_Region()
   end
   if nil == DungeonId or -1 == DungeonId then
@@ -1150,6 +1310,23 @@ function Component:PreloadGameAssets()
     return
   end
   print(_G.LogTag, "wzj- 副本资源预加载 Start", UE4.UGameplayStatics.GetTimeSeconds(self), DungeonId)
+  if IsStandAlone(self) and UEMGameInstance.IsLowMemoryDevice() then
+    local DungeonId = GWorld.GameInstance:GetCurrentDungeonId()
+    local DungeonInfo = DataMgr.Dungeon[DungeonId]
+    if DungeonInfo.DungeonType == "Synthesis" then
+      local AnimCacheSys = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UAnimOptGameInstanceSubsystem)
+      if AnimCacheSys then
+        print(_G.LogTag, "@gulinan- 副本资源预加载前关闭低内存机型竞逐本动画缓存", DungeonId)
+        AnimCacheSys.SystemEnableState = 0
+      end
+    else
+      local AnimCacheSys = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UAnimOptGameInstanceSubsystem)
+      if AnimCacheSys then
+        print(_G.LogTag, "@gulinan- 副本资源预加载前开启非低内存机型或非竞逐本动画缓存", DungeonId)
+        AnimCacheSys.SystemEnableState = 1
+      end
+    end
+  end
   self.bPreloadAssetsReady = false
   self.bAssetsPreloading = true
   local Res = PreloadSystem:CacheDungeonGameAssetsOuter({
@@ -1255,7 +1432,10 @@ function Component:PetCaputreDefenceWidgetShow()
   if IsValid(DefenceCore) and DefenceCore.PetCaptureDefense then
     self:PetCaputreDefenceWidgetUpdateByDefenceCore(DefenceCore)
     DefenceCore.PetCaptureDefense:SetHiddenInGame(false)
-    DefenceCore.PetCaptureDefense.PetRoot = DefenceCore.PetRoot
+    self.PetDefenceCore = DefenceCore
+    if not self:IsExistTimer("PetCaptureWidget") then
+      self:AddTimer(0.02, self.UpdatePetWidgetRotation, true, 0, "PetCaptureWidget")
+    end
   end
 end
 
@@ -1264,7 +1444,32 @@ function Component:PetCaputreDefenceWidgetHide()
   if IsValid(DefenceCore) and DefenceCore.PetCaptureDefense then
     local Widget = DefenceCore.PetCaptureDefense:GetWidget()
     Widget:PlayAnimation(Widget.Out)
-    DefenceCore.PetCaptureDefense.PetRoot = nil
+    self.PetDefenceCore = nil
+    self:RemoveTimer("PetCaptureWidget")
+  end
+end
+
+function Component:UpdatePetWidgetRotation()
+  if IsValid(self.PetDefenceCore) and self.PetDefenceCore.PetCaptureDefense and self.PetDefenceCore.PetRoot then
+    local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+    local PlayerLocation = Player:K2_GetActorLocation()
+    local SelfLocation = self.PetDefenceCore:K2_GetActorLocation()
+    PlayerLocation.Z = 0
+    SelfLocation.Z = 0
+    local Dir = PlayerLocation - SelfLocation
+    local Forward = self.PetDefenceCore:GetActorForwardVector()
+    Forward.Z = 0
+    Dir:Normalize()
+    Forward:Normalize()
+    local Angle = Dir:Dot(Forward)
+    local Cross = Dir:Cross(Forward)
+    local OnRight = Cross.Z < 0
+    local Degree = UE.UKismetMathLibrary.DegAcos(Angle)
+    if false == OnRight then
+      Degree = 360 - Degree
+    end
+    self.PetDefenceCore.PetRoot:K2_SetRelativeRotation(FRotator(0, Degree, 0), false, nil, true)
+    self.PetDefenceCore:UpdatePetFXRotation(Degree)
   end
 end
 
@@ -1460,7 +1665,10 @@ end
 function Component:NextWalnut_Lua()
   DebugPrint("DungeonWalnutChoice NextWalnut_Lua")
   if not UIManager(self):GetUIObj("WalnutChoice") then
-    UIManager(self):LoadUINew("WalnutChoice", CommonConst.WalnutUser.Dungeon)
+    local WalnutChoiceUI = UIManager(self):LoadUINew("WalnutChoice", CommonConst.WalnutUser.Dungeon)
+    local WalnutUtils = require("BluePrints.UI.WBP.Walnut.WalnutChoice.WalnutUtils")
+    local WalnutId = WalnutUtils:GetWalnutCacheIdByDungeonId(self.DungeonId)
+    WalnutChoiceUI:SelectWalnutById(WalnutId)
   end
 end
 
@@ -1635,6 +1843,12 @@ function Component:RemoveSynthesisDestruction_Lua()
     SynthesisUI:Close()
   end
   self:ShowSynthesisSuccessEffect()
+end
+
+function Component:RemoveMonsterRush_Wuyou_Lua()
+  if self.RankStarUI then
+    self.RankStarUI:OnTimerDel()
+  end
 end
 
 function Component:OnRep_RageValue()

@@ -239,6 +239,7 @@ function Component:OnRegionPointClick(Id, IgnoreCheckSelect)
     self.LevelMap_Convey_Widget_PC.Btn_Go_Track.Img_Convey_1:SetBrushTintColor(UE4.UUIFunctionLibrary.StringToSlateColor("BD4545"))
   end
   self:MoveMapToRegionPoint(Id)
+  self.CurrentSelectPoint:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
 end
 
 function Component:OnRegionPointTeleportClicked()
@@ -292,6 +293,7 @@ function Component:OnConveyGoTrace()
       EventManager:FireEvent(EventID.OnCommonTrack, CommonConst.RegionMapTrackingType.RegionPoint, self.CurrentConveyId, true)
       self.CurrentSelectPoint:PlayAnimation(self.CurrentSelectPoint.Loop, 0, 0)
       self:CreateTrackIndicator(self.CurrentSelectPoint)
+      self:TryToastNotInSameRegion()
     else
       EventManager:FireEvent(EventID.OnCommonTrack, CommonConst.RegionMapTrackingType.RegionPoint, self.CurrentConveyId, false)
       self.CurrentSelectPoint:StopAllAnimations()

@@ -1,4 +1,5 @@
 require("UnLua")
+local LuaConst = require("EMLuaConst")
 local BP_PenalizeInteractiveComponent_C = Class({
   "BluePrints.Story.Interactive.InteractiveComponent.BP_InteractiveBaseComponent_C",
   "BluePrints.Common.TimerMgr"
@@ -9,11 +10,15 @@ end
 
 function BP_PenalizeInteractiveComponent_C:IsCanInteractive(PlayerActor)
   local Owner = self:GetOwner()
-  self.CanBePenalize = Owner:GetEnableBeCondemned()
-  if self:GetInteractiveName() ~= "" and self.DistanceCheckComponent(self, PlayerActor, self.InteractiveDistance, false) and self.CFaceToACheckComponent(self, PlayerActor, self.InteractiveFaceAngle, false) and self.AFaceToCCheckComponent(PlayerActor, self, self.InteractiveAngle, false) and self.CanBePenalize then
-    return true
+  if not Owner then
+    return
   end
-  return false
+  self.CanBePenalize = Owner:GetEnableBeCondemned()
+  if LuaConst.OpenComputeInteractive then
+    return self:GetInteractiveName() ~= "" and self:GetDistanceCheckResult() and self.CFaceToACheckComponent(self, PlayerActor, self.InteractiveFaceAngle, false) and self.AFaceToCCheckComponent(PlayerActor, self, self.InteractiveAngle, false) and self.CanBePenalize
+  else
+    return self:GetInteractiveName() ~= "" and self.DistanceCheckComponent(self, PlayerActor, self.InteractiveDistance, false) and self.CFaceToACheckComponent(self, PlayerActor, self.InteractiveFaceAngle, false) and self.AFaceToCCheckComponent(PlayerActor, self, self.InteractiveAngle, false) and self.CanBePenalize
+  end
 end
 
 function BP_PenalizeInteractiveComponent_C:IsForbidden(PlayerActor)
@@ -87,7 +92,7 @@ function BP_PenalizeInteractiveComponent_C:DisplayInteractiveBtn(PlayerActor)
     local UIManager = GameInstance:GetGameUIManager()
     local DefeatedUI = UIManager:GetUIObj("DefeatedInteract")
     if DefeatedUI then
-      DefeatedUI:ChangeUIDefeatedState(true)
+      DefeatedUI:ChangeUIDefeatedState(self:GetOwner(), true)
       self:SetBtnDisplayed(PlayerActor, true)
     end
   end
@@ -96,6 +101,18 @@ end
 
 function BP_PenalizeInteractiveComponent_C:NotDisplayInteractiveBtn(PlayerActor)
   self:SetBtnDisplayed(PlayerActor, false)
+  if self:GetOwner().AutoSyncProp and self:GetOwner().AutoSyncProp.CharacterTag == "Defeated" then
+    local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+    local UIManager = GameInstance:GetGameUIManager()
+    local DefeatedUI = UIManager:GetUIObj("DefeatedInteract")
+    if DefeatedUI then
+      if self.CanBePenalize then
+        DefeatedUI:ChangeUIDefeatedState(self:GetOwner(), false)
+      else
+        DefeatedUI:RemoveExecuteItem(self:GetOwner(), "Press")
+      end
+    end
+  end
   self.IsDisPlayBtn = false
 end
 

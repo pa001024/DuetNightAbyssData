@@ -330,40 +330,28 @@ function Component:GMStartQuest(QuestChainId, QuestId)
   self:CallServerMethod("GMStartQuest", QuestChainId, QuestId)
 end
 
-function Component:CompleteQuestSuccess(QuestChainId, QuestId, ManualTrigger, TargetId, Count, STLData, RegionQuestDatas, NextId, QuestCoordinate, QuestCommonDatas, SelectRes)
-  local QuestChain = self.QuestChains[QuestChainId]
+function Component:CompleteQuestSuccess(ServerParamTable)
+  local QuestChain = self.QuestChains[ServerParamTable.QuestChainId]
   if QuestChain then
     if QuestChain:IsFinish() then
       local Message = "任务链已经完成" .. [[
 
-QuestChainId:]] .. QuestChainId .. [[
+QuestChainId:]] .. ServerParamTable.QuestChainId .. [[
 
-QuestId:]] .. QuestId
+QuestId:]] .. ServerParamTable.QuestId
       UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, UE.EStoryLogType.Quest, "任务链已经完成", Message)
       return
-    elseif QuestChain:CheckQuestIdComplete(QuestId) then
+    elseif QuestChain:CheckQuestIdComplete(ServerParamTable.QuestId) then
       local Message = "任务已经完成" .. [[
 
-QuestChainId:]] .. QuestChainId .. [[
+QuestChainId:]] .. ServerParamTable.QuestChainId .. [[
 
-QuestId:]] .. QuestId
+QuestId:]] .. ServerParamTable.QuestId
       UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, UE.EStoryLogType.Quest, "任务已经完成", Message)
       return
     end
   end
-  local ServerParamTable = {}
-  ServerParamTable.QuestChainId = QuestChainId
-  ServerParamTable.QuestId = QuestId
-  ServerParamTable.TriggerType = CommonConst.QuestState.Success
-  ServerParamTable.TargetId = TargetId
-  ServerParamTable.TargetCount = Count
-  ServerParamTable.STLData = STLData or {}
-  ServerParamTable.RegionQuestDatas = RegionQuestDatas or {}
-  ServerParamTable.NextId = NextId
-  ServerParamTable.QuestCoordinate = QuestCoordinate or {}
-  ServerParamTable.QuestCommonDatas = QuestCommonDatas or {}
-  ServerParamTable.SelectRes = SelectRes
-  self:OnQuestTrigger(ServerParamTable, ManualTrigger)
+  self:OnQuestTrigger(ServerParamTable, ServerParamTable.ManualTrigger)
 end
 
 function Component:HandleClientQuestCompleteEvent(Ret, ManualTrigger, QuestId, QuestChainId, TargetCompleteQuestIds, ClientVarParams)
@@ -430,6 +418,7 @@ function Component:OnQuestTrigger(ServerParamTable, ManualTrigger)
   end
   
   if ServerParamTable.QuestChainId > 0 and ServerParamTable.QuestId > 0 then
+    self:HandleAddBlackScreenOnDelivery(ServerParamTable.bIsPlayBlackScreenOnComplete, ServerParamTable.QuestChainId, ServerParamTable.QuestId)
     self:CallServer("OnQuestTrigger", callback, ServerParamTable)
   end
 end
@@ -439,6 +428,7 @@ function Component:HandleServerQuestComplete(Ret, Reward, ServerParamTable, Manu
   if next(Reward) and TaskChainConfig.QuestReward and TaskChainConfig.QuestReward[ServerParamTable.QuestId] and nil ~= Reward and next(Reward) ~= nil and not Reward.bEmpty then
     UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, Reward)
   end
+  self:HandleRemoveBlackScreenOnDelivery(ServerParamTable.bIsPlayBlackScreenOnComplete, ServerParamTable.QuestChainId, ServerParamTable.QuestId)
   self.logger.debug("ZJT_ OnQuestTrigger ServerCallClient ", ServerParamTable.TriggerType, ServerParamTable.QuestChainId, ServerParamTable.QuestId, Ret, ClientVarParams)
   self:HandleClientQuestCompleteEvent(Ret, ManualTrigger, ServerParamTable.QuestId, ServerParamTable.QuestChainId, nil, ClientVarParams)
   local EventNames = DataMgr.MSDKUploadConvert.QuestSuccessInfo[ServerParamTable.QuestId]
@@ -844,6 +834,9 @@ end
 
 function Component:UpdateStoryVariable(StoryVariableName, StoryVariableValue)
   local function Callback(Ret)
+    if ErrorCode:Check(Ret) then
+      EventManager:FireEvent(EventID.OnStoryVarUpdated, StoryVariableName, StoryVariableValue)
+    end
     self.logger.debug("ZJT_ UpdateStoryVariable ", Ret, StoryVariableName, StoryVariableValue)
   end
   
@@ -893,6 +886,7 @@ function Component:HandleQuestChainDoing_QuestComplete(ServerParamTable)
   end
   
   local function CallBack(Ret, RewardBox)
+    self:HandleRemoveBlackScreenOnDelivery(ServerParamTable.bIsPlayBlackScreenOnComplete, ServerParamTable.QuestChainId, ServerParamTable.QuestId)
     UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText("UI_Quest_GetQuestSuccess"))
     self.logger.debug("ZJT_ HandleQuestChainDoing_QuestComplete ", Ret)
     local TaslBar = TaskUtils:GetTaskBarWidget()
@@ -911,6 +905,7 @@ function Component:HandleQuestChainDoing_QuestComplete(ServerParamTable)
     end
   end
   
+  self:HandleAddBlackScreenOnDelivery(ServerParamTable.bIsPlayBlackScreenOnComplete, ServerParamTable.QuestChainId, ServerParamTable.QuestId)
   self:CallServer("HandleQuestChainDoing_QuestComplete", CallBack, ServerParamTable)
 end
 
@@ -920,15 +915,10 @@ function Component:NotifyActiveQuestChainEnd(QuestChainId)
     DebugPrint("LHQ@@@NotifyActiveQuestChainEnd:", Avatar.TrackingQuestChainId)
   end
   self.logger.debug("ZJT_ ServerCallClient NotifyActiveQuestChainEnd ", QuestChainId)
-  if self.InSpecialQuest then
-    local SpecialQuestIds = DataMgr.SpecialQuestId2QuestChainId[QuestChainId]
-    if SpecialQuestIds then
-      local SpecialQuestEvent = ClientEventUtils:GetCurrentEvent()
-      for _, SpecialQuestId in pairs(SpecialQuestIds) do
-        if SpecialQuestEvent and SpecialQuestEvent.SpecialQuestId == SpecialQuestId then
-          SpecialQuestEvent:SpecialQuestEventFinishAndStopDirectly("QuestChainEnd")
-        end
-      end
+  local SpecialQuestIds = DataMgr.SpecialQuestId2QuestChainId[QuestChainId]
+  if SpecialQuestIds then
+    for _, SpecialQuestId in pairs(SpecialQuestIds) do
+      ClientEventUtils:TryInterruptSpecialQuestEvent(SpecialQuestId, "ServerNotifyEnd")
     end
   end
   local QuestChain = self.QuestChains[QuestChainId]
@@ -949,6 +939,41 @@ function Component:NotifyActiveQuestChainEnd(QuestChainId)
         Indicator:CloseIndicator()
       end
     end
+  end
+end
+
+function Component:CheckHaveSuccQuestDeliver(QuestChain, QuestId)
+  local QuestChainInfo = DataMgr.STLExportQuestChain[QuestChain]
+  local QuestInfo = QuestChainInfo.Quests[QuestId]
+  local QuestDeliverInfo = QuestInfo.SuccQuestDeliver
+  if not QuestInfo.SuccQuestDeliver then
+    return false
+  end
+  if 1 == QuestDeliverInfo.DeliverType then
+    if not self:CheckSubRegionId(QuestDeliverInfo.Id) then
+      return false
+    end
+  elseif 2 == QuestDeliverInfo.DeliverType then
+    if not self:DungeonIdCheck(QuestDeliverInfo.Id) then
+      return false
+    end
+  else
+    return false
+  end
+  return true
+end
+
+function Component:HandleAddBlackScreenOnDelivery(bIsPlayBlackScreenOnComplete, QuestChain, QuestId)
+  if bIsPlayBlackScreenOnComplete and self:CheckHaveSuccQuestDeliver(QuestChain, QuestId) then
+    DebugPrint("gyy@HandleAddBlackScreenOnDelivery ", QuestChain, QuestId)
+    GWorld.StoryMgr:AddStoryBlackScreenOnDelivery()
+  end
+end
+
+function Component:HandleRemoveBlackScreenOnDelivery(bIsPlayBlackScreenOnComplete, QuestChain, QuestId)
+  if bIsPlayBlackScreenOnComplete and self:CheckHaveSuccQuestDeliver(QuestChain, QuestId) then
+    DebugPrint("gyy@HandleRemoveBlackScreenOnDelivery ", QuestChain, QuestId)
+    GWorld.StoryMgr:RemoveStoryBlackScreenOnDelivery()
   end
 end
 

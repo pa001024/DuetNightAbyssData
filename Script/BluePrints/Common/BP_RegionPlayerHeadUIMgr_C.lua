@@ -1,7 +1,8 @@
 require("UnLua")
 local TeamCommon = require("BluePrints.UI.WBP.Team.TeamCommon")
+local ChatCommon = require("BluePrints.UI.WBP.Chat.ChatCommon")
 local PlayerHeadWidgetUtils = require("Utils.PlayerHeadWidgetUtils")
-local M = Class()
+local M = Class("BluePrints.Common.TimerMgr")
 
 function M:OnInitialize()
   EventManager:AddEvent(EventID.OnlineAddOtherPlayer, self, self.OnAddRegionOtherPlayer)
@@ -11,6 +12,9 @@ function M:OnInitialize()
   self.bRegisterTeamEvent = false
   self.EIdUIdMap = {}
   self.EIdObjIdMap = {}
+  self.UIdEIdMap = {}
+  self.EmojiTimer = {}
+  self.EmojiDuration = 5
 end
 
 function M:OnDeinitialize()
@@ -41,6 +45,12 @@ function M:RegisterTeamEvent()
       self:RefreshMember(Member.Uid)
     elseif ListenEvent[EventId] then
       self:RefreshTeamIndex()
+    end
+  end)
+  ChatController:RegisterEvent(self, function(self, EventId, ...)
+    if EventId == ChatCommon.EventID.RecvStickerInPubChannels then
+      local Uid, EmojiPath = ...
+      self:OnShowPlayerEmoji(Uid, EmojiPath)
     end
   end)
 end
@@ -117,6 +127,7 @@ function M:UnRegisterTeamEvent()
   end
   self.bRegisterTeamEvent = false
   TeamController:UnRegisterEvent(self)
+  ChatController:UnRegisterEvent(self)
 end
 
 function M:HideCharacterHideUI(PlayerCharacter, bHide)
@@ -138,6 +149,8 @@ function M:OnAddRegionOtherPlayer(Eid, Uid, Player, ObjId)
   self:RegisterTeamEvent()
   local GameInstance = GWorld.GameInstance
   local RegionSyncSubsys = UE4.URegionSyncSubsystem.GetInstance(self)
+  self.EIdUIdMap[Eid] = Uid
+  self.EIdObjIdMap[Eid] = ObjId
   if RegionSyncSubsys then
     local WidgetComp = RegionSyncSubsys:GetPlayerHeadWidgetComp(CommonUtils.ObjId2Str(ObjId))
     if WidgetComp then
@@ -150,8 +163,6 @@ function M:OnAddRegionOtherPlayer(Eid, Uid, Player, ObjId)
     end
     return
   end
-  self.EIdUIdMap[Eid] = Uid
-  self.EIdObjIdMap[Eid] = ObjId
   if not Player then
     return
   end
@@ -225,6 +236,63 @@ function M:OnRemoveRegionOtherPlayer(Eid, Uid)
     return
   end
   self:RemoveRegionPlayer(Player)
+end
+
+function M:PlayEmoji(ObjId, Eid, EmojiPath)
+  local RegionSyncSubsys = UE4.URegionSyncSubsystem.GetInstance(self)
+  if RegionSyncSubsys then
+    PlayerHeadWidgetUtils:PlayEmoji(RegionSyncSubsys:GetPlayerHeadWidgetComp(CommonUtils.ObjId2Str(ObjId)), EmojiPath)
+    return
+  end
+  local Battle = Battle(self)
+  local Player = Eid and Battle:GetEntity(Eid)
+  if Player then
+    Player:PlayEmoji(EmojiPath)
+  end
+end
+
+function M:StopEmoji(ObjId, Eid)
+  local RegionSyncSubsys = UE4.URegionSyncSubsystem.GetInstance(self)
+  if RegionSyncSubsys then
+    PlayerHeadWidgetUtils:StopEmoji(RegionSyncSubsys:GetPlayerHeadWidgetComp(CommonUtils.ObjId2Str(ObjId)))
+    return
+  end
+  local Battle = Battle(self)
+  local Player = Eid and Battle:GetEntity(Eid)
+  if Player then
+    Player:StopEmoji()
+  end
+end
+
+function M:OnShowPlayerEmoji(Uid, EmojiPath)
+  local GameInstance = GWorld.GameInstance
+  if not GameInstance then
+    return
+  end
+  local ScenceManager = GameInstance:GetSceneManager()
+  if not ScenceManager then
+    return
+  end
+  local RegionOnlineCharacterInfo = ScenceManager.RegionOnlineCharacterInfo
+  if not RegionOnlineCharacterInfo then
+    return
+  end
+  local Eid = RegionOnlineCharacterInfo[Uid]
+  local ObjId = self.EIdObjIdMap[Eid]
+  if not ObjId then
+    return
+  end
+  local Timer = self.EmojiTimer[ObjId]
+  if Timer then
+    self:RemoveTimer(Timer)
+  end
+  self:StopEmoji(ObjId, Eid, EmojiPath)
+  self:PlayEmoji(ObjId, Eid, EmojiPath)
+  Timer = self:AddTimer(self.EmojiDuration, function()
+    self.EmojiTimer[ObjId] = nil
+    self:StopEmoji(ObjId, Eid)
+  end)
+  self.EmojiTimer[ObjId] = Timer
 end
 
 return M

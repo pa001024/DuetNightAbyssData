@@ -394,6 +394,24 @@ return {
             startPort = "Out",
             endQuest = "17574294551061232",
             endPort = "In"
+          },
+          {
+            startQuest = "17574075767725105585",
+            startPort = "Out",
+            endQuest = "17447256377121633056",
+            endPort = "In"
+          },
+          {
+            startQuest = "17574075767725105585",
+            startPort = "Out",
+            endQuest = "1744727809896548329",
+            endPort = "In"
+          },
+          {
+            startQuest = "17574075767725105585",
+            startPort = "Out",
+            endQuest = "1744727811842548391",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -838,6 +856,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -968,6 +987,7 @@ return {
             pos = {x = 2422.801703377965, y = 952.9604977516082},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_steabox3_1191160"
             }
@@ -979,6 +999,7 @@ return {
             pos = {x = 2419.2672206193447, y = 1326.4059000504587},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_steathendbox_1191158"
             }
@@ -990,6 +1011,7 @@ return {
             pos = {x = 2403.4527044903125, y = 1144.9059000504587},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_steathbox4_1191161"
             }
@@ -1001,6 +1023,7 @@ return {
             pos = {x = 2673.4247266275165, y = 1166.6203368395893},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_steabox3_1191160"
             }
@@ -1012,6 +1035,7 @@ return {
             pos = {x = 2752.3341030588454, y = 1333.2558795995187},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_steathbox4_1191161"
             }
@@ -1023,6 +1047,7 @@ return {
             pos = {x = 2635.366361123361, y = 1516.6994279866153},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_steathendbox_1191158"
             }
@@ -1034,6 +1059,7 @@ return {
             pos = {x = 2934.9276255665322, y = 1340.7494771558715},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_steabox3_1191160"
             }
@@ -1045,6 +1071,7 @@ return {
             pos = {x = 2734.0727868568542, y = 1537.3543158655489},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_steathbox4_1191161"
             }
@@ -1053,9 +1080,10 @@ return {
             key = "1744727811842548391",
             type = "ShowOrHideTaskIndicatorNode",
             name = "隐藏任务指引点",
-            pos = {x = 2870.44375459879, y = 1559.088186833291},
+            pos = {x = 2862.586611741647, y = 1552.6596154047197},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_steabox3_1191160"
             }

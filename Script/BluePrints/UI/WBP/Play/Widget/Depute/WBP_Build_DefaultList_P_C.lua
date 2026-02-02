@@ -47,10 +47,13 @@ function M:OnSpecialRightUp()
   if Parent.GetName then
     DebugPrint("OnSpecialRightUp Parent", Parent:GetName())
   end
-  local hasFocusFn = type(Parent.IsFocusList) == "function"
-  local isFocus = hasFocusFn and Parent:IsFocusList() and true or false
-  local doOpen = not self.IsShow and (not hasFocusFn or not isFocus)
-  local doClose = self.IsShow and (not hasFocusFn or not isFocus)
+  local hasFocusListFn = type(Parent.IsFocusList) == "function"
+  local isFocusList = hasFocusListFn and Parent:IsFocusList() or false
+  local hasAutoNextFn = "function" == type(Parent.IsFocusAutoNextRound)
+  local isAutoNext = hasAutoNextFn and Parent:IsFocusAutoNextRound() or false
+  local allowToggle = not isFocusList and not isAutoNext
+  local doOpen = not self.IsShow and allowToggle
+  local doClose = self.IsShow and allowToggle
   if doOpen then
     self:OnOpenSquadGamepad()
     Parent.CurrentFocusType = "DefaultList"
@@ -339,7 +342,7 @@ function M:OnOpenSquadGamepad()
   self.Preview.Parent = self
   self.Preview:OnClicked()
   if 0 == self.CurrentSquad then
-    self:BlockAllUIInput(true)
+    self:BlockAllUIInput(true, "SP_DisplayOnly")
     self:AddTimer(0.1, function()
       self:BlockAllUIInput(false)
       self.Team_Armory:SetFocus()

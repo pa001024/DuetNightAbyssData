@@ -278,64 +278,69 @@ function CommonUtils.TableToString(Targets, Deep)
     Targets = {Targets}
   end
   Deep = Deep or 10
-  local StrUtils = {}
-  
-  function StrUtils.IsObjId(str)
-    if type(str) ~= "string" then
-      return false
-    end
-    if 14 == #str and 0 == string.byte(string.sub(str, 1, 1)) then
-      return true
-    end
-    return false
+  local indents = {
+    ["0"] = ""
+  }
+  for i = 1, Deep + 2 do
+    indents[tostring(i)] = (indents[tostring(i - 1)] or "") .. "\t"
   end
   
-  function StrUtils.ObjId2Str2(ObjId)
-    local ret = ""
+  local function IsObjId(str)
+    return type(str) == "string" and 14 == #str and 0 == string.byte(str, 1)
+  end
+  
+  local function ObjId2Str(ObjId)
     if nil == ObjId then
       return ""
     end
-    for index = 3, #ObjId do
-      ret = ret .. string.format("%02X", string.byte(string.sub(ObjId, index, index)))
+    local bytes = {}
+    for i = 3, #ObjId do
+      bytes[#bytes + 1] = string.format("%02X", string.byte(ObjId, i))
     end
-    return ret
+    return "ObjectId('" .. table.concat(bytes) .. "')"
   end
   
-  function StrUtils.ObjId2Str(ObjId)
-    local ret = StrUtils.ObjId2Str2(ObjId)
-    return "ObjectId('" .. ret .. "')"
+  local out = {}
+  
+  local function push(...)
+    local n = select("#", ...)
+    for i = 1, n do
+      out[#out + 1] = select(i, ...)
+    end
+  end
+  
+  local visited = {}
+  
+  local function val_str(x)
+    if type(x) == "string" and IsObjId(x) then
+      return ObjId2Str(x)
+    end
+    return tostring(x)
   end
   
   local function get_table_str(t, step)
-    local s = ""
+    if visited[t] then
+      push(indents[tostring(step)], "<cycle> (table)\n")
+      return
+    end
+    visited[t] = true
+    local indent = indents[tostring(step)] or ""
     for k, v in pairs(t) do
-      for i = 1, step do
-        s = s .. "\t"
-      end
-      local k_str, v_str
-      if type(k) == "string" and StrUtils.IsObjId(k) then
-        k_str = StrUtils.ObjId2Str(k)
-      else
-        k_str = tostring(k)
-      end
-      if type(v) == "string" and StrUtils.IsObjId(v) then
-        v_str = StrUtils.ObjId2Str(v)
-      else
-        v_str = tostring(v)
-      end
-      s = s .. k_str .. " (" .. tostring(type(k)) .. ")" .. ": " .. v_str .. " (" .. tostring(type(v)) .. ")" .. "\n"
+      local kstr = type(k) == "string" and IsObjId(k) and ObjId2Str(k) or tostring(k)
+      local vstr = val_str(v)
+      push(indent, kstr, " (", type(k), ")", ": ", vstr, " (", type(v), ")\n")
       if type(v) == "table" and step < Deep then
-        s = s .. get_table_str(v, step + 1)
+        get_table_str(v, step + 1)
       end
     end
-    return s
+    visited[t] = nil
   end
   
-  local ret = "PrintTable: " .. tostring(Targets) .. "\n"
+  push("PrintTable: ", tostring(Targets), "\n")
   if Targets and type(Targets) == "table" then
-    ret = ret .. get_table_str(Targets, 1)
+    get_table_str(Targets, 1)
   end
-  return ret
+  return table.concat(out)
 end
 
 function CommonUtils.TraverseFromTheMiddleOfTheArrayToBothSides(arr, start_index, func)
@@ -432,7 +437,11 @@ function CommonUtils.AttrValueToString(AttrConfig, Value, IsRate, NotFormat)
   local percent = ""
   if AttrConfig.IsPercent or IsRate then
     Value = Value * 100
-    percent = "%"
+    if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
+      percent = " %"
+    else
+      percent = "%"
+    end
   end
   if NotFormat then
     return tostring(Value) .. percent
@@ -454,6 +463,7 @@ function CommonUtils.AttrValueToString(AttrConfig, Value, IsRate, NotFormat)
       break
     end
   end
+  str = CommonUtils.FormatNumInFrench(str)
   return str .. percent
 end
 
@@ -602,7 +612,8 @@ function CommonUtils.GetEliteLocation(FormationId, Source, Loc, CloseFloor)
   return URuntimeCommonFunctionLibrary.GetValidLocationBySimulateMovement(Source:K2_GetActorLocation(), Loc, HalfHeight, Radius, StepHeight, WalkableFloorAngle, false, MaxLength, MaxWidth, CloseFloor)
 end
 
-CommonUtils.GetDeviceTypeByPlatformName = GetDeviceTypeByPlatformName
+CommonUtils.GetDeviceTypeByPlatformName = _G.GetDeviceTypeByPlatformName
+CommonUtils.GetRuntimePlatform = _G.GetRuntimePlatform
 
 function CommonUtils.GetCurrentInputType()
   local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(GWorld.GameInstance)
@@ -865,28 +876,6 @@ CommonUtils.AttrConvert = {
   MaxSp = CommonUtils.Round,
   BulletNum = CommonUtils.Round
 }
-
-function CommonUtils:GetMonsterExp(ExtraInfo)
-  local MonsterId = ExtraInfo.UnitId
-  local MonsterLevel = ExtraInfo.Level
-  local IsElite = ExtraInfo.IsEliteMonster
-  local MonsterInfo = DataMgr.Monster[MonsterId]
-  if not MonsterInfo then
-    return 0
-  end
-  if not DataMgr.LevelUp[MonsterLevel] then
-    return 0
-  end
-  local ExpBasic = MonsterInfo.ExpBasic
-  if not ExpBasic then
-    return 0
-  end
-  if IsElite then
-    return ExpBasic * (DataMgr.LevelUp[MonsterLevel].ExpElite or 0)
-  else
-    return ExpBasic * (DataMgr.LevelUp[MonsterLevel].ExpMon or 0)
-  end
-end
 
 function CommonUtils:ShouldDisplayAttr(AttrId, Value, OwnerType, OwnerTag, OwnerId)
   local Data = DataMgr.AttrConfig[AttrId]
@@ -1703,6 +1692,154 @@ function CommonUtils.IsCurrentVersionNewRealease(TableName, Id)
     return
   end
   return DataMgr.GlobalConstant.CurrentVersion.ConstantValue == Data.ReleaseVersion
+end
+
+function CommonUtils.IsCurrentTimeRealease(TableName, Id)
+  local Data = DataMgr[TableName] and DataMgr[TableName][Id]
+  if not Data then
+    return
+  end
+  if Data.BeginTime then
+    local Time = TimeUtils.NowTime()
+    if Time < Data.BeginTime:GetTime() then
+      return false
+    end
+  end
+  return true
+end
+
+function CommonUtils.UnSerializeAccessoryCustomParams(CustomParams, AccessoryType)
+  if not CustomParams then
+    return
+  end
+  local Params = SerializeUtils:UnSerialize(CustomParams)
+  local Position = FVector(0, 0, 0)
+  if Params.Position then
+    Position.X = Params.Position.X or 0
+    Position.Y = Params.Position.Y or 0
+    Position.Z = Params.Position.Z or 0
+  end
+  local Rotation = FRotator(0, 0, 0)
+  if Params.Rotation then
+    Rotation.Pitch = Params.Rotation.Pitch or 0
+    Rotation.Yaw = Params.Rotation.Yaw or 0
+    Rotation.Roll = Params.Rotation.Roll or 0
+  end
+  local Scale = FVector(1, 1, 1)
+  if Params.Scale then
+    Scale.X = Params.Scale
+    Scale.Y = Params.Scale
+    Scale.Z = Params.Scale
+  end
+  if AccessoryType then
+    local Data = DataMgr.CustomOffset[AccessoryType]
+    if Data then
+      if Data.LocationLimit then
+        math.clamp(Position.X, Data.LocationLimit[1], Data.LocationLimit[2])
+        math.clamp(Position.Y, Data.LocationLimit[1], Data.LocationLimit[2])
+        math.clamp(Position.Z, Data.LocationLimit[1], Data.LocationLimit[2])
+      end
+      if Data.RotationLimit then
+        math.clamp(Rotation.Pitch, Data.RotationLimit[1], Data.RotationLimit[2])
+        math.clamp(Rotation.Pitch, Data.RotationLimit[1], Data.RotationLimit[2])
+        math.clamp(Rotation.Roll, Data.RotationLimit[1], Data.RotationLimit[2])
+      end
+      if Data.ScaleLimit then
+        math.clamp(Scale.X, Data.ScaleLimit[1], Data.ScaleLimit[2])
+        math.clamp(Scale.Y, Data.ScaleLimit[1], Data.ScaleLimit[2])
+        math.clamp(Scale.Z, Data.ScaleLimit[1], Data.ScaleLimit[2])
+      end
+    end
+  end
+  return FTransform(Rotation:ToQuat(), Position, Scale)
+end
+
+function CommonUtils.DeepEqual(t1, t2, seen)
+  if t1 == t2 then
+    return true
+  end
+  seen = seen or {}
+  local key = tostring(t1) .. ":" .. tostring(t2)
+  if seen[key] then
+    return true
+  end
+  seen[key] = true
+  if type(t1) ~= type(t2) then
+    return false
+  end
+  if type(t1) ~= "table" then
+    return t1 == t2
+  end
+  local count1, count2 = 0, 0
+  for _ in pairs(t1) do
+    count1 = count1 + 1
+  end
+  for _ in pairs(t2) do
+    count2 = count2 + 1
+  end
+  if count1 ~= count2 then
+    return false
+  end
+  for k, v1 in pairs(t1) do
+    local v2 = t2[k]
+    if not CommonUtils.DeepEqual(v1, v2, seen) then
+      return false
+    end
+  end
+  for k, v2 in pairs(t2) do
+    local v1 = t1[k]
+    if nil == v1 then
+      return false
+    end
+  end
+  return true
+end
+
+local function AddThousandsSeparator(text)
+  local function formatNumber(numberStr)
+    local integerPart, decimalPart = numberStr:match("^(%-?%d*)(%.?%d*)$")
+    
+    if not integerPart or "" == integerPart then
+      return numberStr
+    end
+    local sign = ""
+    if integerPart:sub(1, 1) == "-" then
+      sign = "-"
+      integerPart = integerPart:sub(2)
+    end
+    local result = ""
+    local len = #integerPart
+    for i = 1, len do
+      local digit = integerPart:sub(len - i + 1, len - i + 1)
+      if i > 1 and 1 == i % 3 then
+        result = digit .. " " .. result
+      else
+        result = digit .. result
+      end
+    end
+    return sign .. result .. decimalPart
+  end
+  
+  return text:gsub("[-]?%d+%.?%d*", function(match)
+    return formatNumber(match)
+  end)
+end
+
+function CommonUtils.FormatNumInFrench(ret)
+  if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
+    local CommaIdx = string.find(ret, ",", 1)
+    if CommaIdx then
+      ret = string.gsub(ret, ",", " ")
+    end
+    local PeriodIdx = string.find(ret, "%.", 1)
+    if PeriodIdx then
+      ret = string.gsub(ret, "%.", ",")
+    end
+    DebugPrint("CommonUtils.FormatNumInFrench Before", ret)
+    ret = AddThousandsSeparator(ret)
+  end
+  DebugPrint("CommonUtils.FormatNumInFrench After", ret)
+  return ret
 end
 
 return CommonUtils

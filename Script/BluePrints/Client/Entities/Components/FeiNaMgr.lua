@@ -1,5 +1,9 @@
 local Component = {}
 
+function Component:EnterWorld()
+  UIUtils.RefreshFeinaRewardReddot()
+end
+
 function Component:GetFeiNaProgressRewerd(InCallBack, FeiNaId, Index)
   local function Callback(Ret, Rewards)
     self.logger.debug("ZJT_ GetFeiNaProgressRewerd ", Ret, Rewards)

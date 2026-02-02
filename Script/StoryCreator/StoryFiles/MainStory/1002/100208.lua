@@ -341,6 +341,7 @@ return {
               ModeType = 1,
               Id = 101401,
               StartIndex = 2,
+              LoadingId = 0,
               IsWhite = false
             }
           },
@@ -434,6 +435,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -531,6 +533,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -697,6 +700,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -734,6 +738,7 @@ return {
             pos = {x = -475.68827177320446, y = 416.4384694016628},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "NPC_Boss_Saiqi_1240129"
             }
@@ -745,6 +750,7 @@ return {
             pos = {x = 232.76069578846898, y = 8.033296987869718},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "NPC_Boss_Saiqi_1240129"
             }
@@ -1017,6 +1023,7 @@ return {
               ModeType = 1,
               Id = 101402,
               StartIndex = 2,
+              LoadingId = 0,
               IsWhite = false
             }
           },
@@ -1151,6 +1158,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1253,6 +1261,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1309,6 +1318,7 @@ return {
             pos = {x = -1359.701278743745, y = 673.9285714285714},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "NPC_Boss_Saiqi_1240129"
             }
@@ -1320,6 +1330,7 @@ return {
             pos = {x = -935.415564458031, y = 339.57142857142856},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "NPC_Boss_Saiqi_1240129"
             }
@@ -1565,6 +1576,7 @@ return {
               ModeType = 1,
               Id = 101103,
               StartIndex = 2,
+              LoadingId = 0,
               IsWhite = false
             }
           },
@@ -1607,6 +1619,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1668,6 +1681,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1826,6 +1840,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1890,6 +1905,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2005,6 +2021,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2068,6 +2085,7 @@ return {
             pos = {x = -2831.980499522966, y = 713.2987012987013},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "NPC_Boss_Saiqi_1240129"
             }
@@ -2079,6 +2097,7 @@ return {
             pos = {x = -2296.980499522965, y = 347.90909090909093},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "NPC_Boss_Saiqi_1240129"
             }
@@ -2220,6 +2239,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2505,6 +2525,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2572,6 +2593,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2612,6 +2634,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2805,6 +2828,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -3005,6 +3029,7 @@ return {
               ModeType = 1,
               Id = 100104,
               StartIndex = 1,
+              LoadingId = 0,
               IsWhite = false
             }
           },
@@ -3017,6 +3042,7 @@ return {
               ModeType = 1,
               Id = 210101,
               StartIndex = 1,
+              LoadingId = 0,
               IsWhite = false
             }
           },
@@ -3069,6 +3095,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -3161,6 +3188,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "QuestTarget_Void",
@@ -3547,6 +3575,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -3621,6 +3650,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "QuestPoint_Bury",
               CameraLookAtTartgetPoint = "",
@@ -4124,6 +4154,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -4234,6 +4265,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -4361,6 +4393,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -4391,6 +4424,7 @@ return {
             pos = {x = 83.00797290923035, y = 562.1225761927025},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "NPC_Boss_Saiqi_1240129"
             }
@@ -4402,6 +4436,7 @@ return {
             pos = {x = 643.1039888147834, y = -160.1676063067368},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "NPC_Boss_Saiqi_1240129"
             }
@@ -4567,6 +4602,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -4829,6 +4865,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -5198,6 +5235,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "P_101259LookAtPoint",
               EndNewTargetPointName = "P_101259Nvzhu0",
               CameraLookAtTartgetPoint = "",
@@ -5639,6 +5677,7 @@ return {
               ModeType = 1,
               Id = 100104,
               StartIndex = 1,
+              LoadingId = 0,
               IsWhite = false
             }
           },
@@ -5675,6 +5714,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",

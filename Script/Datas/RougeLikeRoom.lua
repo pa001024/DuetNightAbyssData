@@ -22,6 +22,9 @@ T.RT_20 = {5021}
 T.RT_21 = {5022}
 T.RT_22 = {5023}
 T.RT_23 = {5071}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

@@ -27,7 +27,7 @@ function Component:ReddotTreePlugIn(BtnConf, Type)
         DebugPrint(LXYTag, "副本和boss战中，强制不显示esc红点")
         
         self.bForceInvisible = true
-        self:EMShowReddot(false, EReddotType.New, 0)
+        self:EMShowReddot(false, EReddotType.New)
       end
     end
     
@@ -71,7 +71,6 @@ function Component:ReddotTreePlugIn(BtnConf, Type)
       self:_AddReddotListener(ChildNodes)
     end
   else
-    ReadBtnConfFunc(BtnConf, Type)
   end
   if table.isempty(UnlockRuleNames) then
     local ChildNodes = self:_TrySeekChildNodesOfBattleMainMenu(BtnConf.EnterId)
@@ -188,38 +187,28 @@ function Component:InitReddotData_ActivityMain()
 end
 
 function Component:InitReddotData_DayAndNight()
+  DebugPrint("InitReddotData_DayAndNight")
   local ReddotNode = ReddotManager.GetTreeNode("DayAndNight") or ReddotManager.AddNodeEx("DayAndNight")
   local ReddotNodeDetailed = ReddotManager.GetLeafNodeCacheDetail("DayAndNight")
-  if ReddotNodeDetailed then
-    if ReddotNodeDetailed.HasCreated == nil then
-      ReddotNodeDetailed.HasCreated = true
-      ReddotManager.ClearLeafNodeCount("DayAndNight")
-      ReddotManager.IncreaseLeafNodeCount("DayAndNight")
-      if self.Button_Area and self.Button_Area.OnClicked then
-        self.Button_Area.OnClicked:Add(self, function()
-          ReddotManager.ClearLeafNodeCount("DayAndNight")
-        end)
-      end
-    elseif ReddotNodeDetailed.HasCreated == true and ReddotNode.Count > 0 and self.Button_Area and self.Button_Area.OnClicked then
-      self.Button_Area.OnClicked:Add(self, function()
-        ReddotManager.ClearLeafNodeCount("DayAndNight")
-      end)
-    end
+  if ReddotNodeDetailed and ReddotNodeDetailed.HasCreated == nil then
+    ReddotNodeDetailed.HasCreated = true
+    ReddotManager.ClearLeafNodeCount("DayAndNight")
+    ReddotManager.IncreaseLeafNodeCount("DayAndNight")
   end
 end
 
 function Component:InitReddotData_AnnouncementMain()
   local ret = AnnouncementUtils:UpdateAnnouncementDataInGame()
   if ret then
-    self:EMShowReddot(true, EReddotType.New, 1)
+    self:EMShowReddot(true, EReddotType.New)
   else
-    self:EMShowReddot(false, EReddotType.New, 0)
+    self:EMShowReddot(false, EReddotType.New)
   end
 end
 
 function Component:OnReddotUpdate_BattleMainMenu(ReddotType, Count)
   if self.bForceInvisible then
-    self:EMShowReddot(false, EReddotType.New, 0)
+    self:EMShowReddot(false, EReddotType.New)
     return
   end
   self:EMShowReddot(Count > 0, ReddotType, Count)

@@ -8,11 +8,145 @@ M._components = {
 }
 
 function M:Construct()
-  EventManager:AddEvent(EventID.MountsItemOnClick, self, self.MountsItemOnClick)
+  self:AddDispatcher(EventID.OnGetLicense, self, self.OnGetLicense)
+  self:AddDispatcher(EventID.MountsItemOnClick, self, self.MountsItemOnClick)
   if not self.IsBind then
     self.IsBind = true
     self.Image_Click.OnMouseButtonDownEvent:Bind(self, self.On_Image_Click_MouseButtonDown)
   end
+  self.Mounts_License.Btn_Area.OnClicked:Add(self, self.OnLicenseBtn_OnClicked)
+  local PCState = {
+    Enter = function()
+      self:EnterPCState()
+    end,
+    Leave = function()
+      self:LeavePCState()
+    end
+  }
+  local MainState = {
+    Enter = function()
+      self:EnterMainState()
+    end,
+    Leave = function()
+      self:LeaveMainState()
+    end
+  }
+  local SortState = {
+    Enter = function()
+      self:EnterSortState()
+    end,
+    Leave = function()
+      self:LeaveSortState()
+    end
+  }
+  local ItemState = {
+    Enter = function()
+      self:EnterItemState()
+    end,
+    Leave = function()
+      self:LeaveItemState()
+    end,
+    CanReach = function()
+      return self:CanReachItemState()
+    end
+  }
+  self.States = {
+    PC = PCState,
+    Main = MainState,
+    Sort = SortState,
+    Item = ItemState
+  }
+end
+
+function M:EnterPCState()
+  self.WBP_MountsMain_Item02.Key_Method:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Mounts_License.Key_License:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self:InitMountBottomTab()
+end
+
+function M:LeavePCState()
+end
+
+function M:EnterMainState()
+  self.ListView_Items:SetFocus()
+  self:InitMountBottomTab()
+  if UIUtils.IsGamepadInput() then
+    self.Mounts_License.Key_License:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    if not self.AllMethodSubWidgetList or #self.AllMethodSubWidgetList <= 0 then
+      self.WBP_MountsMain_Item02.Key_Method:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    else
+      self.WBP_MountsMain_Item02.Key_Method:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
+  end
+end
+
+function M:LeaveMainState()
+  self.Mounts_License.Key_License:SetVisibility(UIConst.VisibilityOp.Collapsed)
+end
+
+function M:EnterSortState()
+  self.Common_Sort_List:SetFocus()
+end
+
+function M:LeaveSortState()
+end
+
+function M:EnterItemState()
+  self.AllMethodSubWidgetList[1]:SetFocus()
+  self.Common_Sort_List:SetControllerKeyHidden(true)
+  if UIUtils.IsGamepadInput() then
+    self.WBP_MountsMain_Item02.Key_Method:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self:InitItemDetailAccessTab()
+  end
+end
+
+function M:LeaveItemState()
+  self.Common_Sort_List:SetControllerKeyHidden(false)
+end
+
+function M:CanReachItemState()
+  if not self.AllMethodSubWidgetList or #self.AllMethodSubWidgetList <= 0 then
+    return false
+  end
+  return true
+end
+
+function M:UpdateCurState(StateType)
+  if not self.States[StateType] then
+    return
+  end
+  if self.StateType == StateType then
+    return
+  end
+  local NextState = self.States[StateType]
+  local Res = true
+  if NextState.CanReach then
+    Res = NextState:CanReach()
+  end
+  if not Res then
+    return
+  end
+  if self.StateType and self.States[self.StateType] then
+    self.States[self.StateType]:Leave()
+  end
+  self.StateType = StateType
+  NextState:Enter()
+end
+
+function M:OnUpdateUIStyleByInputTypeChange()
+  if UIUtils.IsGamepadInput() then
+    self:UpdateCurState("Main")
+  else
+    self:UpdateCurState("PC")
+  end
+end
+
+function M:OnGetLicense()
+  self:InitLicenseRedDot()
+end
+
+function M:OnLicenseBtn_OnClicked()
+  UIManager(self):LoadUINew("MountLicense")
 end
 
 function M:MountsItemOnClick(SelectMountId)
@@ -28,31 +162,33 @@ function M:GetDisplayMountId()
   return self.DisplayMountId
 end
 
-function M:SetFocus_Lua()
-  if self.IsFocusItemDetail then
-    self.WBP_MountsMain_Item02.WBP_Com_Tips_AccessItem:SetFocus()
-  elseif self.IsFocusSortList then
-    self.Common_Sort_List:SetFocus()
-  else
-    self.ListView_Items:SetFocus()
+function M:ReceiveEnterState(StackAction)
+  self:StopAnimation(self.Out)
+  self:PlayAnimation(self.In)
+  self.Super.ReceiveEnterState(self, StackAction)
+end
+
+function M:ReceiveExitState(StackAction)
+  if 0 == StackAction then
+    self:StopAnimation(self.In)
+    self:PlayAnimation(self.Out)
   end
+  self.Super.ReceiveExitState(self, StackAction)
 end
 
-function M:OnFocusReceived(MyGeometry, InFocusEvent)
-  self:RefreshMountMainFocus()
-  return UIUtils.Handle
-end
-
-function M:OnLoaded(...)
+function M:OnLoaded(SelectMountId)
   self.bSelfHidden = false
-  self.IsFocusSortList = false
-  self.IsRiderMount = false
+  self.IsRiderMount = true
+  if self.WBP_MountsMainBtn then
+    self.WBP_MountsMainBtn.Btn_Riding:ChangeMountIcon(not self.IsRiderMount)
+  end
   self.IsPlayOut = false
+  self.DisplayMountId = SelectMountId
   self:InitCommonTab()
   self:InitMountsList()
   self:CreateMount()
   self:InitMountInfoUI()
-  self:PlayAnimation(self.In)
+  AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "MountsMain", nil)
   if self.WBP_MountsMainBtn then
     self.WBP_MountsMainBtn.Btn_Hide:BindEvents(self, {
       OnClicked = self.HideMountUI
@@ -61,7 +197,11 @@ function M:OnLoaded(...)
       OnClicked = self.RiderMount
     })
   end
-  self:RefreshMountMainFocus(true)
+  if UIUtils.IsGamepadInput() then
+    self:UpdateCurState("Main")
+  else
+    self:UpdateCurState("PC")
+  end
   self:OnUpdateUIStyleByInputTypeChange()
 end
 
@@ -74,14 +214,19 @@ function M:InitCommonTab()
     OwnerPanel = self,
     BackCallback = self.CloseSelf
   })
-  self.Key_Method:CreateCommonKey({
-    KeyInfoList = {
-      {Type = "Img", ImgShortPath = "A"}
-    }
-  })
   self.WBP_MountsMain_Item02.Key_Method:CreateCommonKey({
     KeyInfoList = {
+      {Type = "Img", ImgShortPath = "Menu"}
+    }
+  })
+  self.WBP_MountsMain_Item02.Key_MountsDeco:CreateCommonKey({
+    KeyInfoList = {
       {Type = "Img", ImgShortPath = "Right"}
+    }
+  })
+  self.Mounts_License.Key_License:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = "Y"}
     }
   })
 end
@@ -110,105 +255,94 @@ function M:InitItemDetailAccessTab()
 end
 
 function M:InitMountBottomTab()
-  self.Com_Tab:UpdateBottomKeyInfo({
-    {
-      KeyInfoList = {
-        {
-          Type = "Img",
-          ImgShortPath = "R",
-          ClickCallback = self.RiderMount,
-          Owner = self
-        }
-      },
-      GamePadInfoList = {
-        {Type = "Img", ImgShortPath = "RS"}
-      },
-      Desc = GText("骑乘/离开")
-    },
-    {
-      KeyInfoList = {
-        {
-          Type = "Text",
-          Text = CommonUtils:GetKeyText("U"),
-          ClickCallback = self.HideMountUI,
-          Owner = self
-        }
-      },
-      GamePadInfoList = {
-        {Type = "Img", ImgShortPath = "X"}
-      },
-      Desc = GText("UI_Dye_HideUI")
-    },
-    {
-      KeyInfoList = {
-        {
-          Type = "Text",
-          Text = CommonUtils:GetKeyText("Mouse_Button"),
-          Owner = self
-        }
-      },
-      GamePadInfoList = {
-        {
-          Type = "Or",
-          ImgShortPath = "RT",
-          Owner = self
-        },
-        GamePadSubKeyInfoList = {
+  if self.Com_Tab.UpdateBottomKeyInfo then
+    self.Com_Tab:UpdateBottomKeyInfo({
+      {
+        KeyInfoList = {
           {
-            Type = "Img",
-            ImgShortPath = "LT",
-            Owner = self
-          },
-          {
-            Type = "Img",
-            ImgShortPath = "RT",
+            Type = "Text",
+            ImgShortPath = "R",
+            ClickCallback = self.RiderMount,
             Owner = self
           }
-        }
+        },
+        GamePadInfoList = {
+          {Type = "Img", ImgShortPath = "RS"}
+        },
+        Desc = GText("UI_CTL_Ride")
       },
-      Desc = GText("UI_Dye_Zoom")
-    },
-    {
-      GamePadInfoList = {
-        {Type = "Img", ImgShortPath = "RH"}
+      {
+        KeyInfoList = {
+          {
+            Type = "Text",
+            Text = CommonUtils:GetKeyText("U"),
+            ClickCallback = self.HideMountUI,
+            Owner = self
+          }
+        },
+        GamePadInfoList = {
+          {Type = "Img", ImgShortPath = "X"}
+        },
+        Desc = GText("UI_Dye_HideUI")
       },
-      Desc = GText("UI_CTL_RotatePreview")
-    },
-    {
-      KeyInfoList = {
-        {
-          Type = "Text",
-          Text = "Esc",
-          ClickCallback = self.CloseSelf,
-          Owner = self
-        }
+      {
+        KeyInfoList = {
+          {
+            Type = "Text",
+            Text = CommonUtils:GetKeyText("Mouse_Button"),
+            Owner = self
+          }
+        },
+        GamePadInfoList = {
+          {
+            Type = "Or",
+            ImgShortPath = "RT",
+            Owner = self
+          },
+          GamePadSubKeyInfoList = {
+            {
+              Type = "Img",
+              ImgShortPath = "LT",
+              Owner = self
+            },
+            {
+              Type = "Img",
+              ImgShortPath = "RT",
+              Owner = self
+            }
+          }
+        },
+        Desc = GText("UI_Dye_Zoom")
       },
-      GamePadInfoList = {
-        {Type = "Img", ImgShortPath = "B"}
+      {
+        GamePadInfoList = {
+          {Type = "Img", ImgShortPath = "RH"}
+        },
+        Desc = GText("UI_CTL_RotatePreview")
       },
-      Desc = GText("UI_BACK")
-    }
-  })
-end
-
-function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
-  local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
-  local IsGamePad = GameInputModeSubsystem and GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad
-  if IsGamePad then
-    self.Key_Method:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.WBP_MountsMain_Item02.Key_Method:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  else
-    self.Key_Method:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.WBP_MountsMain_Item02.Key_Method:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      {
+        KeyInfoList = {
+          {
+            Type = "Text",
+            Text = "Esc",
+            ClickCallback = self.CloseSelf,
+            Owner = self
+          }
+        },
+        GamePadInfoList = {
+          {Type = "Img", ImgShortPath = "B"}
+        },
+        Desc = GText("UI_BACK")
+      }
+    })
   end
 end
 
 function M:RiderMount()
   self.IsRiderMount = not self.IsRiderMount
-  if self.IsRiderMount then
-    self.ActorController:HidePlayerOnMount(false)
-  else
-    self.ActorController:HidePlayerOnMount(true)
+  self.ActorController:HidePlayerOnMount(not self.IsRiderMount)
+  if self.WBP_MountsMainBtn then
+    self.WBP_MountsMainBtn.Btn_Riding:ChangeMountIcon(not self.IsRiderMount)
   end
 end
 
@@ -216,17 +350,15 @@ function M:HideMountUI()
   self.bSelfHidden = not self.bSelfHidden
   if self.bSelfHidden then
     self.Image_Click.Slot:SetZOrder(10)
-    self:SetFocus()
+    self.Image_Click:SetFocus()
     self:SetRenderOpacity(0)
   else
     self.Image_Click.Slot:SetZOrder(-1)
     self:SetRenderOpacity(1)
-    if self.IsFocusItemDetail then
-      self.WBP_MountsMain_Item02.WBP_Com_Tips_AccessItem:SetFocus()
-    elseif self.IsFocusSortList then
-      self.Common_Sort_List:SetFocus()
-    else
+    if self.StateType == "Main" then
       self.ListView_Items:SetFocus()
+    elseif self.StateType == "Sort" then
+      self.Common_Sort_List:SetFocus()
     end
   end
 end
@@ -293,13 +425,11 @@ function M:SortMountListForRarity(SortType)
       return not MountA.HasMount
     end)
   end
-  self:RefreshMountList()
 end
 
 function M:InitMountsList()
   self.ListView_Items:ClearListItems()
   self.MountContents = nil
-  self.DisplayMountId = nil
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
@@ -320,7 +450,7 @@ function M:InitMountsList()
   end
   self.MountContents = MountContents
   self:SortMountListForNormal()
-  self.DisplayMountId = MountContents[1].MountId
+  self.DisplayMountId = self.DisplayMountId or MountContents[1].MountId
   self:RefreshMountList()
   self.SortByFunction = {
     [1] = self.SortMountListForNormal,
@@ -331,8 +461,7 @@ function M:InitMountsList()
     GText("UI_Select_Unique")
   }, CommonConst.DESC, {
     OnGetBackFocusWidget = function()
-      self.IsFocusSortList = false
-      return self.ListView_Items
+      self:UpdateCurState("Main")
     end
   })
   self.Common_Sort_List:BindEventOnSelectionsChanged(self, self.MountsMainOnSelectionsChanged)
@@ -341,16 +470,24 @@ end
 
 function M:RefreshMountList()
   self.ListView_Items:ClearListItems()
+  local MountSelectIndex
   for Index, MountContent in ipairs(self.MountContents) do
     MountContent.ItemIndex = Index
     MountContent.MountsMain = self
     self.ListView_Items:AddItem(MountContent)
+    if MountContent.MountId == self.DisplayMountId and not MountSelectIndex then
+      MountSelectIndex = Index
+    end
+  end
+  if MountSelectIndex then
+    self.ListView_Items:NavigateToIndex(MountSelectIndex - 1)
   end
   self.ListView_Items.OnCreateEmptyContent:Bind(self, function(self)
     local Obj = NewObject(UIUtils.GetCommonItemContentClass())
     Obj.IsEmpty = true
     return Obj
   end)
+  self.ListView_Items:RequestFillEmptyContent()
 end
 
 function M:MountsMainOnSelectionsChanged(SortBy, SortType)
@@ -378,8 +515,9 @@ function M:CreateMount()
   })
   self.ActorController:OnOpened()
   self.ActorController:SetArmoryCameraTag(CommonConst.ArmoryType.Char)
-  self.ActorController:HidePlayerOnMount(true)
+  self.ActorController:HidePlayerOnMount(not self.IsRiderMount)
   self.ActorController:CreateMount(self.DisplayMountId)
+  self.ArmoryRotation = self.ActorController:GetArmoryPlayerRotation()
 end
 
 function M:RefreshMountModel()
@@ -390,6 +528,8 @@ function M:RefreshMountModel()
   if not Avatar then
     return
   end
+  self.ActorController:SetArmoryPlayerRotation(self.ArmoryRotation)
+  self.ActorController:HidePlayerOnMount(not self.IsRiderMount)
   self.ActorController:DestroyMount()
   self.ActorController:CreateMount(self.DisplayMountId)
 end
@@ -398,70 +538,158 @@ function M:InitMountInfoUI()
   if not self.DisplayMountId then
     return
   end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local HasMount = Avatar:HasMountById(self.DisplayMountId)
   local MountConfig = DataMgr.Mount[self.DisplayMountId]
   self.Tag_Quality:Init(MountConfig.MountRarity)
   self.Text_SkinName:SetText(GText(MountConfig.MountName))
+  local SkinNameFont = {
+    nil,
+    nil,
+    "Font_Blue",
+    "Font_Purple",
+    "Font_Gold",
+    "Font_Red"
+  }
+  if MountConfig.MountRarity and SkinNameFont[MountConfig.MountRarity] and self[SkinNameFont[MountConfig.MountRarity]] then
+    self.Text_SkinName:SetFont(self[SkinNameFont[MountConfig.MountRarity]])
+  end
   self.Text_Info:SetText(GText(MountConfig.MountDes))
+  self.WBP_MountsMain_Item02.HB_Method:SetVisibility((not MountConfig.AccessKey or HasMount) and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.WBP_MountsMain_Item02.Method:SetVisibility((not MountConfig.AccessKey or HasMount) and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.WBP_MountsMain_Item02.Panel_Message:SetVisibility(not MountConfig.UseLimitDes and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.WBP_MountsMain_Item02.Text_Message:SetVisibility(not MountConfig.UseLimitDes and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
   self.WBP_MountsMain_Item02.Text_Message:SetText(GText(MountConfig.UseLimitDes))
+  self.WBP_MountsMain_Item02.Text_Method:SetText(GText("UI_Tips_Obtining"))
   self.WBP_MountsMain_Item02.Method:ClearChildren()
   if MountConfig.AccessKey then
     for _, Access in pairs(MountConfig.AccessKey) do
-      PageJumpUtils:GetItemAccess(self.WBP_MountsMain_Item02, self.DisplayMountId, "Resource", Access, "MountsMain", function()
-        self:RefreshItemDetailFocus()
-      end)
+      PageJumpUtils:GetItemAccess(self.WBP_MountsMain_Item02, self.DisplayMountId, "Mount", Access, "MountsMain")
     end
   end
   PageJumpUtils:SortAccessItem(self.WBP_MountsMain_Item02.Method)
+  local Method = self.WBP_MountsMain_Item02.Method
+  local ChildrenCount = Method:GetChildrenCount()
+  local IsHideMethod = 0 == ChildrenCount or not MountConfig.AccessKey
+  self.WBP_MountsMain_Item02.Text_Method:SetVisibility(IsHideMethod and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.AllMethodSubWidgetList = {}
+  for i = 1, ChildrenCount do
+    local TestWidget = Method:GetChildAt(i - 1)
+    if TestWidget and not TestWidget.IsText then
+      TestWidget:SetNavigationRuleCustom(EUINavigation.Left, {
+        self,
+        function()
+          return TestWidget
+        end
+      })
+      TestWidget:SetNavigationRuleCustom(EUINavigation.Right, {
+        self,
+        function()
+          return TestWidget
+        end
+      })
+      table.insert(self.AllMethodSubWidgetList, TestWidget)
+    end
+  end
+  self.Mounts_License.Text_License:SetText(GText("UI_Mount_FlyLicense"))
+  self.Mounts_License.Text_Area:SetText(GText("UI_Mount_FlyLicense_Activated"))
+  self.Mounts_License.Num_Now:SetText(CommonUtils.TableLength(Avatar.MountFlyLicenses))
+  local Count = 0
+  for i, v in pairs(DataMgr.FlyLicense) do
+    Count = Count + 1
+  end
+  self.Mounts_License.Num_Total:SetText(Count)
+  self.WBP_MountsMain_Item02.Btn_Dye:SetText(not HasMount and GText("UI_CharPreview_Cannot_Dye") or GText("UI_Skin_Gotodye"))
+  self.WBP_MountsMain_Item02.Text_MountsDeco:SetText(GText("UI_SHOP_MAINTAB_SKIN"))
+  if not HasMount then
+    self.WBP_MountsMain_Item02.Btn_Dye:PlayButtonForbidAnim()
+  end
+  self.WBP_MountsMain_Item02.Btn_Dye:ForbidBtn(not HasMount)
+  self.WBP_MountsMain_Item02.Btn_Dye:SetGamePadImg("X")
+  self.WBP_MountsMain_Item02.MountId = self.DisplayMountId
+  self.WBP_MountsMain_Item02.MountsMain = self
+  self.WBP_MountsMain_Item02.MountsDeco:OnListItemObjectSet({
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Fashion_MountHead.T_Tab_Fashion_MountHead",
+    IsNoneIcon = true
+  })
+  self.WBP_MountsMain_Item02.MountsDeco_1:OnListItemObjectSet({
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Fashion_MountTail.T_Tab_Fashion_MountTail",
+    IsNoneIcon = true
+  })
+  self:InitLicenseRedDot()
+  if UIUtils.IsGamepadInput() and self.StateType == "Main" then
+    if self.AllMethodSubWidgetList and #self.AllMethodSubWidgetList > 0 then
+      self.WBP_MountsMain_Item02.Key_Method:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    else
+      self.WBP_MountsMain_Item02.Key_Method:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+  end
+end
+
+function M:InitLicenseRedDot()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local Count = 0
+  for i, v in pairs(DataMgr.FlyLicense) do
+    Count = Count + 1
+  end
+  self.Mounts_License.Num_Now:SetText(CommonUtils.TableLength(Avatar.MountFlyLicenses))
+  self.Mounts_License.Num_Total:SetText(Count)
+  local RedDot = ReddotManager.GetTreeNode("MountLicense_Item")
+  self.Mounts_License.Reddot:SetVisibility(RedDot and RedDot.Count > 0 and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
 end
 
 function M:Destruct()
+  self.DisplayMountId = nil
   if self.ActorController then
     self.ActorController:DestroyMount()
     self.ActorController:OnDestruct()
     self.ActorController = nil
   end
-  EventManager:RemoveEvent(EventID.MountsItemOnClick, self)
   self.Super.Destruct(self)
 end
 
-function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
-  if CommonUtils:IfExistSystemGuideUI(self) then
-    return UE4.UWidgetBlueprintLibrary.Handled()
-  end
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  local IsHandled = false
-  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) and "Gamepad_DPad_Right" == InKeyName then
-    self:RefreshItemDetailFocus()
-    IsHandled = true
-  end
-  if IsHandled then
-    return UE4.UWidgetBlueprintLibrary.Handled()
-  end
-  return UE4.UWidgetBlueprintLibrary.Unhandled()
-end
-
-function M:RefreshMountMainFocus(IsInit)
-  if self.bSelfHidden then
+function M:HandleGamepadInput(InKeyName, InAnalogInputEvent)
+  if self.StateType == "Item" then
+    if "Gamepad_FaceButton_Right" == InKeyName then
+      self:UpdateCurState("Main")
+    end
     return
   end
-  if not self.IsFocusItemDetail and not IsInit then
-    return
+  if "Gamepad_FaceButton_Left" == InKeyName then
+    self:HideMountUI()
+  elseif "Gamepad_LeftThumbstick" == InKeyName then
+    self:UpdateCurState("Sort")
+  elseif "Gamepad_FaceButton_Top" == InKeyName then
+    self:OnLicenseBtn_OnClicked()
+  elseif "Gamepad_FaceButton_Right" == InKeyName then
+    if self.StateType == "Main" then
+      self:CloseSelf()
+    else
+      self:UpdateCurState("Main")
+    end
+  elseif "Gamepad_RightThumbstick" == InKeyName then
+    self:RiderMount()
+  elseif "Gamepad_Special_Right" == InKeyName then
+    self:UpdateCurState("Item")
+  elseif InKeyName == UIConst.GamePadKey.LeftTriggerThreshold then
+    self:OnCameraScrollBackwardKeyDown()
+    return true
+  elseif InKeyName == UIConst.GamePadKey.RightTriggerThreshold then
+    self:OnCameraScrollForwardKeyDown()
+    return true
+  elseif "Gamepad_RightX" == InKeyName then
+    if self.ActorController then
+      local DeltaX = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 10
+      self.ActorController:OnDragging({X = DeltaX})
+    end
+    return true
   end
-  self.IsFocusItemDetail = false
-  self.ListView_Items:SetFocus()
-  self:InitMountBottomTab()
-  self.WBP_MountsMain_Item02.Key_Method:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-end
-
-function M:RefreshItemDetailFocus()
-  if self.IsFocusItemDetail or 0 == self.WBP_MountsMain_Item02.Method:GetChildrenCount() then
-    return
-  end
-  self.WBP_MountsMain_Item02.WBP_Com_Tips_AccessItem:SetFocus()
-  self.WBP_MountsMain_Item02.Key_Method:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  self:InitItemDetailAccessTab()
-  self.IsFocusItemDetail = true
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
@@ -471,21 +699,10 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
     self:CloseSelf()
   elseif "R" == InKeyName then
     self:RiderMount()
-  elseif "Gamepad_RightThumbstick" == InKeyName and not self.IsFocusItemDetail then
-    self:RiderMount()
-  elseif "Gamepad_FaceButton_Right" == InKeyName then
-    if self.IsFocusItemDetail then
-      self:RefreshMountMainFocus()
-    else
-      self:CloseSelf()
-    end
   elseif "U" == InKeyName then
     self:HideMountUI()
-  elseif "Gamepad_FaceButton_Left" == InKeyName and not self.IsFocusItemDetail then
-    self:HideMountUI()
-  elseif "Gamepad_LeftThumbstick" == InKeyName and not self.IsFocusItemDetail then
-    self.Common_Sort_List:SetFocus()
-    self.IsFocusSortList = true
+  else
+    self:HandleGamepadInput(InKeyName)
   end
   return UE4.UWidgetBlueprintLibrary.Handled()
 end
@@ -494,21 +711,23 @@ function M:OnRepeatKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   local IsEventHandled = false
-  if InKeyName == UIConst.GamePadKey.LeftTriggerThreshold and not self.IsFocusItemDetail then
-    self:OnCameraScrollBackwardKeyDown()
-    IsEventHandled = true
-  elseif InKeyName == UIConst.GamePadKey.RightTriggerThreshold and not self.IsFocusItemDetail then
-    self:OnCameraScrollForwardKeyDown()
+  local Res = self:HandleGamepadInput(InKeyName)
+  if Res then
     IsEventHandled = true
   end
   return IsEventHandled
 end
 
 function M:OnAnimationFinished(Animation)
-  if Animation == self.Out then
+  if Animation == self.Out and self.IsPlayOut then
     self:Close()
     self.IsPlayOut = false
   end
+end
+
+function M:Close()
+  AudioManager(self):SetEventSoundParam(self, "MountsMain", {ToEnd = 1})
+  self.Super.Close(self)
 end
 
 function M:CloseSelf()
@@ -556,11 +775,8 @@ end
 function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if "Gamepad_RightX" == InKeyName and not self.IsFocusItemDetail then
-    if self.ActorController then
-      local DeltaX = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 10
-      self.ActorController:OnDragging({X = DeltaX})
-    end
+  local Res = self:HandleGamepadInput(InKeyName, InAnalogInputEvent)
+  if Res then
     return UIUtils.Handled
   end
   return UIUtils.Unhandled

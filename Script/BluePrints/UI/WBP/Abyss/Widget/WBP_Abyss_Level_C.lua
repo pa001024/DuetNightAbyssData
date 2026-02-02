@@ -66,6 +66,19 @@ function WBP_Abyss_Level:OnListItemObjectSet(Content)
     self:PlayAnimation(self.In)
   end
   if self.IsJumpTip then
+    local Level
+    if self.Content.JumpIndex then
+      local InfiniteNode = DataMgr.AbyssSeason[self.AbyssId].InfiniteNode
+      for _, InfiniteNodeInfo in pairs(InfiniteNode) do
+        if InfiniteNodeInfo[2] == self.Content.JumpIndex then
+          Level = InfiniteNodeInfo[1]
+          break
+        end
+      end
+    end
+    if Level then
+      self.Text_Skip:SetText(string.format(GText("Abyss_InfiniteNode_Tips02"), Level, self.Content.JumpIndex))
+    end
     self.WS_Type:SetActiveWidgetIndex(1)
     return
   else
@@ -74,7 +87,7 @@ function WBP_Abyss_Level:OnListItemObjectSet(Content)
   if self.Content.PlayNodeLevelUnlockAnimation then
     self:PlayAnimation(self.Unlock)
     local EMCache = require("EMCache.EMCache")
-    EMCache:Set("LastUnlockNodeLevel", self.Index)
+    EMCache:Set("NodeLevelUnlockAnimationPlayed", true, true)
     self.Content.PlayNodeLevelUnlockAnimation = false
   end
   if self.Content.IsLastNormalLevel then
@@ -85,7 +98,7 @@ function WBP_Abyss_Level:OnListItemObjectSet(Content)
     })
   elseif self.Content.IsNodeLevel then
     self.Panel_Node:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.Text_Node:SetText(string.format(GText("Abyss_InfiniteNode"), tostring(self.Content.NodeIndex)))
+    self.Text_Node:SetText(GText("Abyss_InfiniteNode"))
     self:SetNavigationRuleCustom(EUINavigation.Up, {
       self,
       self.NavigateToLastNormalLevel

@@ -2,23 +2,14 @@ local Component = {}
 local HeroUSDKUtils = require("Utils.HeroUSDKUtils")
 local MiscUtils = require("Utils.MiscUtils")
 local AnnouncementUtils = require("BluePrints.UI.WBP.Announcement.AnnounceUtils")
+local Decorator = require("BluePrints.Client.Wrapper.Decorator")
+Decorator:ApplyDecorator(Component)
 
 function Component:EnterWorld()
   self:InitPortraitReddotNode()
   self:InitPortraitFrameReddotNode()
   self:InitEscPortraitReddotNode()
   self:InitEditBtnReddotNode()
-  self.ServerInfo = {}
-  if GWorld.IsDev then
-    for k, v in MiscUtils.PairsByKeys(require("BluePrints.UI.GameLogin.DevServerList")) do
-      self.ServerInfo.HostId = v.hostnum
-      self.ServerInfo.Area = v.area
-      self.ServerInfo.Name = v.name
-      self.ServerInfo.IP = v.ip
-      self.ServerInfo.Port = v.port
-      break
-    end
-  end
 end
 
 function Component:InitEscPortraitReddotNode()
@@ -39,7 +30,7 @@ function Component:InitPortraitReddotNode()
     for UniqueId, CacheData in pairs(CacheDetail) do
       local Find = false
       for index, value in ipairs(Avatar.HeadIconList) do
-        if tostring(value) == UniqueId then
+        if value == UniqueId then
           Find = true
         end
       end
@@ -49,11 +40,18 @@ function Component:InitPortraitReddotNode()
     end
     for _, Value in pairs(Avatar.HeadIconList or {}) do
       local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("Portrait")
-      if CacheDetail[tostring(Value)] then
+      if CacheDetail[Value] then
         ReddotManager.IncreaseLeafNodeCount("Portrait")
+      elseif nil == CacheDetail[Value] then
+        CacheDetail[Value] = false
       end
     end
   end
+end
+
+function Component:NotifyAutoSetCharAccessory(CharUuid, AppearanceIndex, AccessoryId)
+  self.logger.info("NotifyAutoSetCharAccessory", CharUuid, AppearanceIndex, AccessoryId)
+  self:UseHeadResource(CharUuid, AppearanceIndex, AccessoryId)
 end
 
 function Component:InitPortraitFrameReddotNode()
@@ -66,7 +64,7 @@ function Component:InitPortraitFrameReddotNode()
     for UniqueId, CacheData in pairs(CacheDetail) do
       local Find = false
       for index, value in ipairs(Avatar.HeadFrameList) do
-        if tostring(value) == UniqueId then
+        if value == UniqueId then
           Find = true
         end
       end
@@ -76,8 +74,10 @@ function Component:InitPortraitFrameReddotNode()
     end
     for _, Value in pairs(Avatar.HeadFrameList or {}) do
       local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("PortraitFrame")
-      if CacheDetail[tostring(Value)] then
+      if CacheDetail[Value] then
         ReddotManager.IncreaseLeafNodeCount("PortraitFrame")
+      elseif nil == CacheDetail[Value] then
+        CacheDetail[Value] = false
       end
     end
   end
@@ -110,9 +110,9 @@ end
 
 function Component:NotifyDiscoverNewGameUICtrl()
   self.logger.info("NotifyDiscoverNewGameUICtrl")
-  if self.ServerInfo.HostId then
+  if self.Hostnum then
     local CdnTool = require("BluePrints/UI/GameLogin/CdnTool")
-    CdnTool:GetCdnHideData(self.ServerInfo.HostId)
+    CdnTool:GetCdnHideData(self.Hostnum)
   else
     DebugPrint("@ljh,刷新Cdn配置失败，未找到合法的HostId")
   end
@@ -151,10 +151,10 @@ end
 
 function Component:_OnPropChangeHeadIconList()
   for _, Value in ipairs(self.HeadIconList) do
-    local CacheKey = tostring(Value)
+    local CacheKey = Value
     local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("Portrait")
-    if nil == CacheDetail[CacheKey] and "10001" ~= CacheKey then
-      UIUtils.TryAddReddotCacheDetail(CacheKey, "Portrait")
+    if nil == CacheDetail[CacheKey] and 10001 ~= CacheKey then
+      UIUtils.TryAddReddotCacheDetailNumber(CacheKey, "Portrait")
     end
   end
 end
@@ -166,10 +166,10 @@ end
 
 function Component:_OnPropChangeHeadFrameList()
   for _, Value in ipairs(self.HeadFrameList) do
-    local CacheKey = tostring(Value)
+    local CacheKey = Value
     local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("PortraitFrame")
-    if nil == CacheDetail[CacheKey] and "-1" ~= CacheKey then
-      UIUtils.TryAddReddotCacheDetail(CacheKey, "PortraitFrame")
+    if nil == CacheDetail[CacheKey] and -1 ~= CacheKey then
+      UIUtils.TryAddReddotCacheDetailNumber(CacheKey, "PortraitFrame")
     end
   end
 end
@@ -333,10 +333,10 @@ function Component:SetAvatarNickname(NickName, Callback)
   
   local function Cb(ErrCode)
     DebugPrint("[SetAvatarNickname] ErrCode:", ErrorCode:Name(ErrCode))
-    if 0 == ErrCode then
+    if ErrorCode:Check(ErrCode) then
       EventManager:FireEvent(EventID.OnChangeNickName, NickName)
+      Callback()
     end
-    Callback()
   end
   
   self:CallServer("SetAvatarNickname", Cb, NickName)
@@ -406,6 +406,8 @@ function Component:NotifyAvatarLevelUpdate(LevelInfo)
   end
 end
 
+Component:BlockAllUIInput("FilterStringSensitiveWord")
+
 function Component:FilterStringSensitiveWord(Str, callback)
   local function Cb(ErrCode, Str)
     DebugPrint("FilterStringSensitiveWord Cb:", ErrCode, Str)
@@ -456,6 +458,18 @@ function Component:GetAvatarLevelRewards(Callback, Level)
   end
   
   self:CallServer("GetAvatarLevelRewards", cb, Level)
+end
+
+function Component:GetInviteActivityInfo(Callback)
+  local function cb(ret, ...)
+    ScreenPrint("GetInviteActivityInfo cb", ret)
+    
+    if Callback then
+      Callback(ret, ...)
+    end
+  end
+  
+  self:CallServer("GetInviteActivityInfo", cb)
 end
 
 function Component:OnHourlyRefresh(ServerTime)

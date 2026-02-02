@@ -1,16 +1,62 @@
 local T = {}
 T.RT_1 = {
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Body_SM",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Face_SM",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Hair_SM",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Hat_SM",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Part01_SM",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Part02_SM",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Part03_SM",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Piaodai_SM",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_SM",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Summon02_Skeleton",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Summon02_SM",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Summon_Skeleton",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Summon_SM",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_TP02_Part01_SM",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_TP02_SM",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/BaihengNew_SM",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part04",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part04A",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part05",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part05A",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part06",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part07",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part07A",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part07B",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part08",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part09",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part10",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part11",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part12",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part13",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part14",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part15",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part16",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part17",
+  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part18"
+}
+T.RT_2 = {
+  "/Game/Asset/Char/Player/Char020_Lise/Mesh/Lise_Body_SM",
   "/Game/Asset/Char/Player/Char020_Lise/Mesh/Lise_Cloak_SM",
+  "/Game/Asset/Char/Player/Char020_Lise/Mesh/Lise_Face_SM",
+  "/Game/Asset/Char/Player/Char020_Lise/Mesh/Lise_Hair_SM",
+  "/Game/Asset/Char/Player/Char020_Lise/Mesh/Lise_Hat_SM",
   "/Game/Asset/Char/Player/Char020_Lise/Mesh/Lise_Part01_SM",
   "/Game/Asset/Char/Player/Char020_Lise/Mesh/Lise_Part02_SM",
   "/Game/Asset/Char/Player/Char020_Lise/Mesh/Lise_SM",
-  "/Game/Asset/Char/Player/Char020_Lise/Mesh/Lise_TP01_SM"
+  "/Game/Asset/Char/Player/Char020_Lise/Mesh/Lise_TP01_Hat_SM",
+  "/Game/Asset/Char/Player/Char020_Lise/Mesh/Lise_TP01_SM",
+  "/Game/Asset/Char/Player/Char020_Lise/Mesh/Lise_TP02_SM"
 }
-T.RT_2 = {
+T.RT_3 = {
   "/Game/Asset/Char/Player/Common/Weapon/Katana/Katana_Feiqie/Mesh/Katana_Feiqie_Accessary_SM",
   "/Game/Asset/Char/Player/Common/Weapon/Katana/Katana_Feiqie/Mesh/Katana_Feiqie_SM"
 }
-T.RT_3 = {
+T.RT_4 = {
+  "/Game/Asset/Char/Player/Char019_Feina/Mesh/Feina_Body_SM",
+  "/Game/Asset/Char/Player/Char019_Feina/Mesh/Feina_Face_SM",
+  "/Game/Asset/Char/Player/Char019_Feina/Mesh/Feina_Hair_SM",
   "/Game/Asset/Char/Player/Char019_Feina/Mesh/Feina_Part01_SM",
   "/Game/Asset/Char/Player/Char019_Feina/Mesh/Feina_Part02_SM",
   "/Game/Asset/Char/Player/Char019_Feina/Mesh/Feina_SM",
@@ -18,17 +64,20 @@ T.RT_3 = {
   "/Game/Asset/Char/Player/Char019_Feina/Mesh/Feina_Sum01_SM",
   "/Game/Asset/Char/Player/Char019_Feina/Mesh/Feina_Sum02_Skeleton",
   "/Game/Asset/Char/Player/Char019_Feina/Mesh/Feina_Sum02_SM",
+  "/Game/Asset/Char/Player/Char019_Feina/Mesh/Feina_Sum02_SM_Physics",
   "/Game/Asset/Char/Player/Char019_Feina/Mesh/Feina_Sum03_Skeleton",
   "/Game/Asset/Char/Player/Char019_Feina/Mesh/Feina_Sum03_SM",
   "/Game/Asset/Char/Player/Char019_Feina/Mesh/Feina_Sum04_Skeleton",
   "/Game/Asset/Char/Player/Char019_Feina/Mesh/Feina_Sum04_SM",
-  "/Game/Asset/Char/Player/Char019_Feina/Mesh/Feina_TP01_SM"
+  "/Game/Asset/Char/Player/Char019_Feina/Mesh/Feina_TP01_SM",
+  "/Game/Asset/Char/Player/Char019_Feina/Mesh/Feina_TP02_SM",
+  "/Game/Asset/Char/Player/Char019_Feina/Mesh/PhysicsAsset_Feina_Sum"
 }
-T.RT_4 = {
+T.RT_5 = {
   "/Game/Asset/Char/Player/NPC005_WeitaM/Mesh/WeitaM_Cloak_SM",
   "/Game/Asset/Char/Player/NPC005_WeitaM/Mesh/WeitaM_SM"
 }
-T.RT_5 = {
+T.RT_6 = {
   "/Game/Asset/Char/Monster/JT_Pizhuo/Mesh/JT_Pizhuo_Physics",
   "/Game/Asset/Char/Monster/JT_Pizhuo/Mesh/JT_Pizhuo_Physics_Lite",
   "/Game/Asset/Char/Monster/JT_Pizhuo/Mesh/JT_Pizhuo_Physics_Minimal",
@@ -39,16 +88,21 @@ T.RT_5 = {
   "/Game/Asset/Char/Monster/JT_Pizhuo/Mesh/JT_Pizhuo_WP_SM",
   "/Game/Asset/Char/Monster/JT_Pizhuo/Mesh/JT_Pizhuo_WP_SM_Physics"
 }
-T.RT_6 = {
+T.RT_7 = {
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Mesh/Heitao_Body_SM",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Mesh/Heitao_Cloak_Physics",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Mesh/Heitao_Cloak_SM",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Mesh/Heitao_Face_SM",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Mesh/Heitao_Hair_SM",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Mesh/Heitao_Part_SM",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Mesh/Heitao_Physics",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Mesh/Heitao_SM",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Mesh/Heitao_TP01_SM",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Mesh/Heitao_TP02_SM",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Mesh/Heitao_WP01_SM",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Mesh/Heitao_WP02_SM"
 }
-T.RT_7 = {
+T.RT_8 = {
   "/Game/Asset/Char/Monster/Boss01_Saiqi01/Mesh/Boss_Saiqi02_Common",
   "/Game/Asset/Char/Monster/Boss01_Saiqi01/Mesh/BossSaiqi_Lwing01_SM",
   "/Game/Asset/Char/Monster/Boss01_Saiqi01/Mesh/BossSaiqi_Lwing01_SM_Physics",
@@ -66,18 +120,23 @@ T.RT_7 = {
   "/Game/Asset/Char/Monster/Boss01_Saiqi01/Mesh/BossSaiqi_SM",
   "/Game/Asset/Char/Monster/Boss01_Saiqi01/Mesh/BossSaiqi_WP_SM"
 }
-T.RT_8 = {
+T.RT_9 = {
+  "/Game/Asset/Char/Player/Char011_Linen/Mesh/Linen_Body_SM",
+  "/Game/Asset/Char/Player/Char011_Linen/Mesh/Linen_Face_SM",
+  "/Game/Asset/Char/Player/Char011_Linen/Mesh/Linen_Hair_SM",
+  "/Game/Asset/Char/Player/Char011_Linen/Mesh/Linen_Hat_SM",
   "/Game/Asset/Char/Player/Char011_Linen/Mesh/Linen_Part01_Physics",
   "/Game/Asset/Char/Player/Char011_Linen/Mesh/Linen_Part01_Skeleton",
   "/Game/Asset/Char/Player/Char011_Linen/Mesh/Linen_Part01_SM",
   "/Game/Asset/Char/Player/Char011_Linen/Mesh/Linen_Part02_SM",
   "/Game/Asset/Char/Player/Char011_Linen/Mesh/Linen_SM",
+  "/Game/Asset/Char/Player/Char011_Linen/Mesh/Linen_TP01_Hat_SM",
   "/Game/Asset/Char/Player/Char011_Linen/Mesh/Linen_TP01_SM",
   "/Game/Asset/Char/Player/Char011_Linen/Mesh/Linen_TP02_SM",
   "/Game/Asset/Char/Player/Char011_Linen/Mesh/Linen_WP01_SM",
   "/Game/Asset/Char/Player/Char011_Linen/Mesh/Linen_WP02_SM"
 }
-T.RT_9 = {
+T.RT_10 = {
   "/Game/Asset/Char/Player/Char023_Xier/Mesh/Phyx_Xier",
   "/Game/Asset/Char/Player/Char023_Xier/Mesh/Xier_Part01_Physics",
   "/Game/Asset/Char/Player/Char023_Xier/Mesh/Xier_Part01_Skeleton",
@@ -94,15 +153,21 @@ T.RT_9 = {
   "/Game/Asset/Char/Player/Char023_Xier/Mesh/Xier_WP03_Physics",
   "/Game/Asset/Char/Player/Char023_Xier/Mesh/Xier_WP03_SM"
 }
-T.RT_10 = {
+T.RT_11 = {
+  "/Game/Asset/Char/Player/Char017_Yeer/Mesh/Yeer_Body_SM",
+  "/Game/Asset/Char/Player/Char017_Yeer/Mesh/Yeer_Face_SM",
+  "/Game/Asset/Char/Player/Char017_Yeer/Mesh/Yeer_Hair_SM",
+  "/Game/Asset/Char/Player/Char017_Yeer/Mesh/Yeer_Hat_SM",
   "/Game/Asset/Char/Player/Char017_Yeer/Mesh/Yeer_SM",
   "/Game/Asset/Char/Player/Char017_Yeer/Mesh/Yeer_Sum02_SM",
   "/Game/Asset/Char/Player/Char017_Yeer/Mesh/Yeer_Sum_Physics",
   "/Game/Asset/Char/Player/Char017_Yeer/Mesh/Yeer_Sum_Skeleton",
   "/Game/Asset/Char/Player/Char017_Yeer/Mesh/Yeer_Sum_SM",
-  "/Game/Asset/Char/Player/Char017_Yeer/Mesh/Yeer_TP01_SM"
+  "/Game/Asset/Char/Player/Char017_Yeer/Mesh/Yeer_TP01_Hat_SM",
+  "/Game/Asset/Char/Player/Char017_Yeer/Mesh/Yeer_TP01_SM",
+  "/Game/Asset/Char/Player/Char017_Yeer/Mesh/Yeer_TP02_SM"
 }
-T.RT_11 = {
+T.RT_12 = {
   "/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/Combat/Hit/JT_Pizhuo_Die_Montage",
   "/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/Combat/Hit/JT_Pizhuo_GetUpBack_Montage",
   "/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/Combat/Hit/JT_Pizhuo_GetUpFront_Montage",
@@ -118,7 +183,7 @@ T.RT_11 = {
   "/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/Combat/Hit/JT_Pizhuo_StunParalysis_Montage",
   "/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/Combat/Hit/JT_Pizhuo_WaitForCaught_Montage"
 }
-T.RT_12 = {
+T.RT_13 = {
   "/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/Combat/Skill/JT_Pizhuo_Alarm01_Montage",
   "/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/Combat/Skill/JT_Pizhuo_Attack01_Montage",
   "/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/Combat/Skill/JT_Pizhuo_Attack02_Montage",
@@ -131,16 +196,16 @@ T.RT_12 = {
   "/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/Combat/Skill/JT_Pizhuo_Skill02_Montage",
   "/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/Combat/Skill/JT_Pizhuo_Skill03_Montage"
 }
-T.RT_13 = {
+T.RT_14 = {
   "/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/Locomotion/JT_Pizhuo_Rotation_Montage"
 }
-T.RT_14 = {
+T.RT_15 = {
   "/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/SpecialIdle/JT_Pizhuo_SpecialAlert_Montage",
   "/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/SpecialIdle/JT_Pizhuo_SpecialIdle01_End_Montage",
   "/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/SpecialIdle/JT_Pizhuo_SpecialIdle01_Montage",
   "/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/SpecialIdle/JT_Pizhuo_SpecialIdle02_Montage"
 }
-T.RT_15 = {
+T.RT_16 = {
   "/Game/Asset/Char/Monster/JH_Shenfu/Mesh/JH_Shenfu_Physics",
   "/Game/Asset/Char/Monster/JH_Shenfu/Mesh/JH_Shenfu_Physics_Lite",
   "/Game/Asset/Char/Monster/JH_Shenfu/Mesh/JH_Shenfu_Physics_Minimal",
@@ -150,7 +215,7 @@ T.RT_15 = {
   "/Game/Asset/Char/Monster/JH_Shenfu/Mesh/JH_Shenfu_WP_Physics",
   "/Game/Asset/Char/Monster/JH_Shenfu/Mesh/JH_Shenfu_WP_SM"
 }
-T.RT_16 = {
+T.RT_17 = {
   "/Game/Asset/Char/Monster/SQ_Wanju/Mesh/SQ_Wanju_Physics",
   "/Game/Asset/Char/Monster/SQ_Wanju/Mesh/SQ_Wanju_Physics_Lite",
   "/Game/Asset/Char/Monster/SQ_Wanju/Mesh/SQ_Wanju_Physics_Minimal",
@@ -159,7 +224,7 @@ T.RT_16 = {
   "/Game/Asset/Char/Monster/SQ_Wanju/Mesh/SQ_Wanju_Sum01_Skeleton",
   "/Game/Asset/Char/Monster/SQ_Wanju/Mesh/SQ_Wanju_Sum01_SM"
 }
-T.RT_17 = {
+T.RT_18 = {
   "/Game/Asset/Char/Monster/SQ_Wanju/Animation/Montage/Combat/Hit/SQ_Wanju_Die_Montage",
   "/Game/Asset/Char/Monster/SQ_Wanju/Animation/Montage/Combat/Hit/SQ_Wanju_GetUpBack_Montage",
   "/Game/Asset/Char/Monster/SQ_Wanju/Animation/Montage/Combat/Hit/SQ_Wanju_GetUpFront_Montage",
@@ -181,7 +246,7 @@ T.RT_17 = {
   "/Game/Asset/Char/Monster/SQ_Wanju/Animation/Montage/Combat/Hit/SQ_Wanju_Sum01_StunFire_Montage",
   "/Game/Asset/Char/Monster/SQ_Wanju/Animation/Montage/Combat/Hit/SQ_Wanju_Sum01_StunParalysis_Montage"
 }
-T.RT_18 = {
+T.RT_19 = {
   "/Game/Asset/Char/Monster/SQ_Wanju/Animation/Montage/Combat/Skill/SQ_Wanju_Alarm01_Montage",
   "/Game/Asset/Char/Monster/SQ_Wanju/Animation/Montage/Combat/Skill/SQ_Wanju_Attack01_Montage",
   "/Game/Asset/Char/Monster/SQ_Wanju/Animation/Montage/Combat/Skill/SQ_Wanju_Attack02_Montage",
@@ -191,29 +256,34 @@ T.RT_18 = {
   "/Game/Asset/Char/Monster/SQ_Wanju/Animation/Montage/Combat/Skill/SQ_Wanju_Sum01_Attack01_Montage",
   "/Game/Asset/Char/Monster/SQ_Wanju/Animation/Montage/Combat/Skill/SQ_Wanju_Sum01_Skill01_Montage"
 }
-T.RT_19 = {
+T.RT_20 = {
   "/Game/Asset/Char/Monster/SQ_Wanju/Animation/Montage/Locomotion/SQ_Wanju_Rotation_Montage"
 }
-T.RT_20 = {
+T.RT_21 = {
   "/Game/Asset/Char/Monster/SQ_Wanju/Animation/Montage/SpecialIdle/SQ_Wanju_SpecialAlert_Montage",
   "/Game/Asset/Char/Monster/SQ_Wanju/Animation/Montage/SpecialIdle/SQ_Wanju_SpecialIdle01_Montage"
 }
-T.RT_21 = {
+T.RT_22 = {
+  "/Game/Asset/Char/Player/Char005_Shuimu/Mesh/Shuimu_Body_SM",
   "/Game/Asset/Char/Player/Char005_Shuimu/Mesh/Shuimu_Cloak_SM",
+  "/Game/Asset/Char/Player/Char005_Shuimu/Mesh/Shuimu_Face_SM",
+  "/Game/Asset/Char/Player/Char005_Shuimu/Mesh/Shuimu_Hair_SM",
+  "/Game/Asset/Char/Player/Char005_Shuimu/Mesh/Shuimu_Hat_SM",
   "/Game/Asset/Char/Player/Char005_Shuimu/Mesh/Shuimu_Part01_SM",
   "/Game/Asset/Char/Player/Char005_Shuimu/Mesh/Shuimu_Part02_SM",
   "/Game/Asset/Char/Player/Char005_Shuimu/Mesh/Shuimu_SM",
   "/Game/Asset/Char/Player/Char005_Shuimu/Mesh/Shuimu_Summon_SM",
-  "/Game/Asset/Char/Player/Char005_Shuimu/Mesh/Shuimu_TP01_SM"
+  "/Game/Asset/Char/Player/Char005_Shuimu/Mesh/Shuimu_TP01_SM",
+  "/Game/Asset/Char/Player/Char005_Shuimu/Mesh/Shuimu_TP02_SM"
 }
-T.RT_22 = {
+T.RT_23 = {
   "/Game/Asset/Char/Monster/Boss05_Lianhuo/Mesh/Boss05_Lianhuo_Part01_SM",
   "/Game/Asset/Char/Monster/Boss05_Lianhuo/Mesh/Boss05_Lianhuo_SM",
   "/Game/Asset/Char/Monster/Boss05_Lianhuo/Mesh/Boss05_Lianhuo_SM_Physics",
   "/Game/Asset/Char/Monster/Boss05_Lianhuo/Mesh/Boss05_Lianhuo_SM_Skeleton",
   "/Game/Asset/Char/Monster/Boss05_Lianhuo/Mesh/Boss05_Lianhuo_WP_SM"
 }
-T.RT_23 = {
+T.RT_24 = {
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Hit/Heitao_Die_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Hit/Heitao_GrabHit_Lianhuo_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Hit/Heitao_GrabHit_Shijingzhe_Montage",
@@ -226,7 +296,7 @@ T.RT_23 = {
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Hit/Heitao_Recover_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Hit/Heitao_StunCommon_Montage"
 }
-T.RT_24 = {
+T.RT_25 = {
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Skill/Falu_Skill01_Off_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Skill/Falu_Skill01_On_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Skill/Falu_Skill02_Montage",
@@ -240,7 +310,7 @@ T.RT_24 = {
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Skill/Heitao_Skill02_Off_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Skill/Heitao_Skill02_On_Montage"
 }
-T.RT_25 = {
+T.RT_26 = {
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Locomotion/Heitao_Climb_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Locomotion/Heitao_Dodge_End_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Locomotion/Heitao_Dodge_InAir_Montage",
@@ -257,7 +327,12 @@ T.RT_25 = {
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Locomotion/Heitao_WallJump_LU_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Locomotion/Heitao_WallJump_RU_Montage"
 }
-T.RT_26 = {
+T.RT_27 = {
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Bow/Heitao_Bow01_Shooting_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Bow/Heitao_Bow02_Shooting_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Bow/Heitao_Bow_HeavyShooting_Montage"
+}
+T.RT_28 = {
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Katana/Heitao_Katana_FallAttack_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Katana/Heitao_Katana_HeavyAttack_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Katana/Heitao_Katana_Mod01_HeavyAttack_01_Montage",
@@ -269,7 +344,7 @@ T.RT_26 = {
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Katana/Heitao_Katana_RunAttack_04_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Katana/Heitao_Katana_SlideAttack_Montage"
 }
-T.RT_27 = {
+T.RT_29 = {
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Claymore/Heitao_Claymore_FallAttack_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Claymore/Heitao_Claymore_HeavyAttack_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Claymore/Heitao_Claymore_Mod01_HeavyAttack_Montage",
@@ -286,31 +361,21 @@ T.RT_27 = {
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Claymore/Heitao_Claymore_RunAttack_04_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Claymore/Heitao_Claymore_SlideAttack_Montage"
 }
-T.RT_28 = {
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_FallAttack_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_HeavyAttack_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_Mod01_HeavyAttack_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_Mod01_RunAttack_01_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_Mod01_RunAttack_02_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_Mod01_RunAttack_03_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_Mod01_RunAttack_04_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_Mod02_HeavyAttack_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_RunAttack_01_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_RunAttack_02_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_RunAttack_03_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_RunAttack_04_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_SlideAttack_Montage"
-}
-T.RT_29 = {
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Pistol/Heitao_Pistol01_Reload_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Pistol/Heitao_Pistol01_Shooting_Montage"
-}
 T.RT_30 = {
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Swordwhip/Heitao_Swordwhip_HeavyAttack_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Swordwhip/Heitao_Swordwhip_RunAttack_01_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Swordwhip/Heitao_Swordwhip_RunAttack_02_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Swordwhip/Heitao_Swordwhip_RunAttack_03_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Swordwhip/Heitao_Swordwhip_RunAttack_04_Montage"
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_FallAttack_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_HeavyAttack_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_Mod01_HeavyAttack_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_Mod01_RunAttack_01_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_Mod01_RunAttack_02_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_Mod01_RunAttack_03_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_Mod01_RunAttack_04_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_Mod01_SlideAttack_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_RunAttack_01_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_RunAttack_02_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_RunAttack_03_EffectCreature_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_RunAttack_03_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_RunAttack_04_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_SlideAttack_Montage"
 }
 T.RT_31 = {
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Shotgun/Heitao_Shotgun01_Reload_Montage",
@@ -319,6 +384,7 @@ T.RT_31 = {
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Shotgun/Heitao_Shotgun02_Shooting_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Shotgun/Heitao_Shotgun03_Reload_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Shotgun/Heitao_Shotgun03_Shooting_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Shotgun/Heitao_Shotgun04_Shooting_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Shotgun/Heitao_Shotgun05_Reload_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Shotgun/Heitao_Shotgun06_Reload_Montage"
 }
@@ -341,6 +407,28 @@ T.RT_32 = {
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Polearm/Heitao_Polearm_SlideAttack_Montage"
 }
 T.RT_33 = {
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Cannon/Heitao_Cannon01_Reload_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Cannon/Heitao_Cannon01_Shooting_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Cannon/Heitao_Cannon02_Reload_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Cannon/Heitao_Cannon02_Shooting_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Cannon/Heitao_Cannon03_Shooting_Montage"
+}
+T.RT_34 = {
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_FallAttack_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_HeavyAttack_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_Mod01_HeavyAttack_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_Mod01_RunAttack_01_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_Mod01_RunAttack_02_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_Mod01_RunAttack_03_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_Mod01_RunAttack_04_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_Mod02_HeavyAttack_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_RunAttack_01_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_RunAttack_02_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_RunAttack_03_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_RunAttack_04_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Sword/Heitao_Sword_SlideAttack_Montage"
+}
+T.RT_35 = {
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Machinegun/Heitao_Machinegun01_Reload_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Machinegun/Heitao_Machinegun01_Shooting_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Machinegun/Heitao_Machinegun02_Reload_Montage",
@@ -352,43 +440,26 @@ T.RT_33 = {
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Machinegun/Heitao_Machinegun06_Shooting_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Machinegun/Heitao_Machinegun_Paotai_Shooting_Montage"
 }
-T.RT_34 = {
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Bow/Heitao_Bow01_Shooting_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Bow/Heitao_Bow02_Shooting_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Bow/Heitao_Bow_HeavyShooting_Montage"
-}
-T.RT_35 = {
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_FallAttack_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_HeavyAttack_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_Mod01_HeavyAttack_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_Mod01_RunAttack_01_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_Mod01_RunAttack_02_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_Mod01_RunAttack_03_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_Mod01_RunAttack_04_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_Mod01_SlideAttack_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_RunAttack_01_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_RunAttack_02_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_RunAttack_03_EffectCreature_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_RunAttack_03_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_RunAttack_04_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Dualblade/Heitao_Dualblade_SlideAttack_Montage"
-}
 T.RT_36 = {
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Pistol/Heitao_Pistol01_Reload_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Pistol/Heitao_Pistol01_Shooting_Montage"
+}
+T.RT_37 = {
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Crossbow/Heitao_Crossbow01_Reload_Montage",
   "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Crossbow/Heitao_Crossbow01_Shooting_Montage"
 }
-T.RT_37 = {
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Cannon/Heitao_Cannon01_Reload_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Cannon/Heitao_Cannon01_Shooting_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Cannon/Heitao_Cannon02_Reload_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Cannon/Heitao_Cannon02_Shooting_Montage",
-  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Cannon/Heitao_Cannon03_Shooting_Montage"
-}
 T.RT_38 = {
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Swordwhip/Heitao_Swordwhip_HeavyAttack_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Swordwhip/Heitao_Swordwhip_RunAttack_01_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Swordwhip/Heitao_Swordwhip_RunAttack_02_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Swordwhip/Heitao_Swordwhip_RunAttack_03_Montage",
+  "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Weapon/Swordwhip/Heitao_Swordwhip_RunAttack_04_Montage"
+}
+T.RT_39 = {
   "/Game/Asset/Char/Monster/Boss00_Xibi/Mesh/Boss_Xibi_SM",
   "/Game/Asset/Char/Monster/Boss00_Xibi/Mesh/Boss_Xibi_WP_SM"
 }
-T.RT_39 = {
+T.RT_40 = {
   "/Game/Asset/Char/Monster/NE_Villiger/Mesh/NE_Villiger01_SM",
   "/Game/Asset/Char/Monster/NE_Villiger/Mesh/NE_Villiger01_WP_Physics",
   "/Game/Asset/Char/Monster/NE_Villiger/Mesh/NE_Villiger01_WP_SM",
@@ -399,7 +470,7 @@ T.RT_39 = {
   "/Game/Asset/Char/Monster/NE_Villiger/Mesh/NE_Villiger06_SM",
   "/Game/Asset/Char/Monster/NE_Villiger/Mesh/NE_Villiger_Physics"
 }
-T.RT_40 = {
+T.RT_41 = {
   "/Game/Asset/Char/Monster/NE_Villiger/Animation/Montage/Combat/Hit/NE_Villiger_Die_Montage",
   "/Game/Asset/Char/Monster/NE_Villiger/Animation/Montage/Combat/Hit/NE_Villiger_GetUpBack_Montage",
   "/Game/Asset/Char/Monster/NE_Villiger/Animation/Montage/Combat/Hit/NE_Villiger_GetUpFront_Montage",
@@ -416,7 +487,7 @@ T.RT_40 = {
   "/Game/Asset/Char/Monster/NE_Villiger/Animation/Montage/Combat/Hit/NE_Villiger_StunParalysis_Montage",
   "/Game/Asset/Char/Monster/NE_Villiger/Animation/Montage/Combat/Hit/NE_Villiger_WaitForCaught_Montage"
 }
-T.RT_41 = {
+T.RT_42 = {
   "/Game/Asset/Char/Monster/NE_Villiger/Animation/Montage/Combat/Skill/NE_Villiger_Attack01_Montage",
   "/Game/Asset/Char/Monster/NE_Villiger/Animation/Montage/Combat/Skill/NE_Villiger_Attack02_Montage",
   "/Game/Asset/Char/Monster/NE_Villiger/Animation/Montage/Combat/Skill/NE_Villiger_Skill01_Montage",
@@ -426,57 +497,50 @@ T.RT_41 = {
   "/Game/Asset/Char/Monster/NE_Villiger/Animation/Montage/Combat/Skill/NE_Villiger_SpecialAlert_Montage",
   "/Game/Asset/Char/Monster/NE_Villiger/Animation/Montage/Combat/Skill/NE_Villiger_SpecialIdle01_Montage"
 }
-T.RT_42 = {
-  "/Game/Asset/Char/Monster/NE_Villiger/Animation/Montage/Locomotion/NE_Villiger_Rotation_Montage"
-}
 T.RT_43 = {
-  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Part01_SM",
-  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Part02_SM",
-  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Part03_SM",
-  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_SM",
-  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Summon02_Skeleton",
-  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Summon02_SM",
-  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Summon_Skeleton",
-  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/Baiheng_Summon_SM",
-  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/BaihengNew_SM",
-  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part04",
-  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part04A",
-  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part05",
-  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part06",
-  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part07",
-  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part08",
-  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part09",
-  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part10",
-  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part11",
-  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part12",
-  "/Game/Asset/Char/Player/Char015_Baiheng/Mesh/SM_Baiheng_Part13"
+  "/Game/Asset/Char/Monster/NE_Villiger/Animation/Montage/Locomotion/NE_Villiger_Rotation_Montage"
 }
 T.RT_44 = {
   "/Game/Asset/Char/Player/NPC004_WeitaF/Mesh/WeitaF_Cloak_SM",
   "/Game/Asset/Char/Player/NPC004_WeitaF/Mesh/WeitaF_SM"
 }
 T.RT_45 = {
+  "/Game/Asset/Char/Player/Char008_Yuming/Mesh/Yuming_Body_SM",
+  "/Game/Asset/Char/Player/Char008_Yuming/Mesh/Yuming_Face_SM",
+  "/Game/Asset/Char/Player/Char008_Yuming/Mesh/Yuming_Hair_SM",
   "/Game/Asset/Char/Player/Char008_Yuming/Mesh/Yuming_Part01_SM",
+  "/Game/Asset/Char/Player/Char008_Yuming/Mesh/Yuming_Part02_SM",
   "/Game/Asset/Char/Player/Char008_Yuming/Mesh/Yuming_SM",
   "/Game/Asset/Char/Player/Char008_Yuming/Mesh/Yuming_Summon_Skeleton",
   "/Game/Asset/Char/Player/Char008_Yuming/Mesh/Yuming_Summon_SM",
   "/Game/Asset/Char/Player/Char008_Yuming/Mesh/Yuming_TP01_SM"
 }
 T.RT_46 = {
-  "/Game/Asset/Char/Player/Char012_Landi/Mesh/landi",
+  "/Game/Asset/Char/Player/Char012_Landi/Mesh/Landi_Body_SM",
+  "/Game/Asset/Char/Player/Char012_Landi/Mesh/Landi_Face_SM",
+  "/Game/Asset/Char/Player/Char012_Landi/Mesh/Landi_Hair_SM",
   "/Game/Asset/Char/Player/Char012_Landi/Mesh/Landi_Part01_SM",
   "/Game/Asset/Char/Player/Char012_Landi/Mesh/Landi_Part02_SM",
   "/Game/Asset/Char/Player/Char012_Landi/Mesh/Landi_Part03_SM",
   "/Game/Asset/Char/Player/Char012_Landi/Mesh/Landi_Part04_SM",
   "/Game/Asset/Char/Player/Char012_Landi/Mesh/Landi_SM",
   "/Game/Asset/Char/Player/Char012_Landi/Mesh/Landi_TP01_SM",
+  "/Game/Asset/Char/Player/Char012_Landi/Mesh/Landi_TP02_SM",
   "/Game/Asset/Char/Player/Char012_Landi/Mesh/Phyx_Landi"
 }
 T.RT_47 = {
+  "/Game/Asset/Char/Player/Char024_Maer/Mesh/Maer_Body_SM",
+  "/Game/Asset/Char/Player/Char024_Maer/Mesh/Maer_Face_SM",
+  "/Game/Asset/Char/Player/Char024_Maer/Mesh/Maer_Hair_Part_SM",
+  "/Game/Asset/Char/Player/Char024_Maer/Mesh/Maer_Hair_SM",
+  "/Game/Asset/Char/Player/Char024_Maer/Mesh/Maer_Hat_SM",
   "/Game/Asset/Char/Player/Char024_Maer/Mesh/Maer_Part01_SM",
   "/Game/Asset/Char/Player/Char024_Maer/Mesh/Maer_Part02_SM",
   "/Game/Asset/Char/Player/Char024_Maer/Mesh/Maer_SM",
-  "/Game/Asset/Char/Player/Char024_Maer/Mesh/Maer_TP01_SM"
+  "/Game/Asset/Char/Player/Char024_Maer/Mesh/Maer_TP01_Hair_Part_SM",
+  "/Game/Asset/Char/Player/Char024_Maer/Mesh/Maer_TP01_Hat_SM",
+  "/Game/Asset/Char/Player/Char024_Maer/Mesh/Maer_TP01_SM",
+  "/Game/Asset/Char/Player/Char024_Maer/Mesh/Maer_TP02_SM"
 }
 T.RT_48 = {
   "/Game/Asset/Char/Monster/Animal06_Cuiping/Mesh/Mon_CuipingA_SM",
@@ -543,6 +607,9 @@ T.RT_55 = {
   "/Game/Asset/Char/Monster/GR_Youji/Mesh/GR_Youji_WP_SM"
 }
 T.RT_56 = {
+  "/Game/Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Jinshu/Mesh/Crossbow_Jinshu_L_SM"
+}
+T.RT_57 = {
   "/Game/Asset/Char/Monster/JT_Ranger/Mesh/JT_Ranger_Part01_Physics",
   "/Game/Asset/Char/Monster/JT_Ranger/Mesh/JT_Ranger_Part01_SM",
   "/Game/Asset/Char/Monster/JT_Ranger/Mesh/JT_Ranger_Part02_Physics",
@@ -558,15 +625,21 @@ T.RT_56 = {
   "/Game/Asset/Char/Monster/JT_Ranger/Mesh/JT_Ranger_WP_SM",
   "/Game/Asset/Char/Monster/JT_Ranger/Mesh/JT_Ranger_WP_Static"
 }
-T.RT_57 = {
-  "/Game/Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Jinshu/Mesh/Crossbow_Jinshu_L_SM"
-}
 T.RT_58 = {
   "/Game/Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Lanse/Mesh/Crossbow_Lanse_L_SM",
   "/Game/Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Lanse/Mesh/Crossbow_Lanse_R_SM"
 }
 T.RT_59 = {
+  "/Game/Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Chixing/Mesh/Crossbow_Chixing_L_SM",
+  "/Game/Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Chixing/Mesh/Crossbow_Chixing_R_SM"
+}
+T.RT_60 = {
   "/Game/Asset/Char/Player/Char021_Songlu/Mesh/Phyx_Songlu",
+  "/Game/Asset/Char/Player/Char021_Songlu/Mesh/Songlu_Body_SM",
+  "/Game/Asset/Char/Player/Char021_Songlu/Mesh/Songlu_Face_SM",
+  "/Game/Asset/Char/Player/Char021_Songlu/Mesh/Songlu_Hair_Part_SM",
+  "/Game/Asset/Char/Player/Char021_Songlu/Mesh/Songlu_Hair_SM",
+  "/Game/Asset/Char/Player/Char021_Songlu/Mesh/Songlu_Hat_SM",
   "/Game/Asset/Char/Player/Char021_Songlu/Mesh/Songlu_Part01_SM",
   "/Game/Asset/Char/Player/Char021_Songlu/Mesh/Songlu_Part02_SM",
   "/Game/Asset/Char/Player/Char021_Songlu/Mesh/Songlu_Part03_SM",
@@ -574,12 +647,10 @@ T.RT_59 = {
   "/Game/Asset/Char/Player/Char021_Songlu/Mesh/Songlu_SM",
   "/Game/Asset/Char/Player/Char021_Songlu/Mesh/Songlu_Summon_Physics",
   "/Game/Asset/Char/Player/Char021_Songlu/Mesh/Songlu_Summon_SM",
+  "/Game/Asset/Char/Player/Char021_Songlu/Mesh/Songlu_TP01_Hair_Part_SM",
+  "/Game/Asset/Char/Player/Char021_Songlu/Mesh/Songlu_TP01_Hat_SM",
   "/Game/Asset/Char/Player/Char021_Songlu/Mesh/Songlu_TP01_SM",
   "/Game/Asset/Char/Player/Char021_Songlu/Mesh/Songlu_TP02_SM"
-}
-T.RT_60 = {
-  "/Game/Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Chixing/Mesh/Crossbow_Chixing_L_SM",
-  "/Game/Asset/Char/Player/Common/Weapon/Crossbow/Crossbow_Chixing/Mesh/Crossbow_Chixing_R_SM"
 }
 T.RT_61 = {
   "/Game/Asset/Char/Player/Common/Weapon/Katana/Katana_Jinshu/Mesh/Katana_Jinshu_Accessary_SM",
@@ -617,10 +688,16 @@ T.RT_65 = {
   "/Game/Asset/Char/Monster/Animal02_Hongjiaolu/Animation/Montage/Combat/Skill/Mon_Hongjiaolu_Skill06_Montage"
 }
 T.RT_66 = {
+  "/Game/Asset/Char/Player/Char010_Saiqi/Mesh/Saiqi_Body_SM",
+  "/Game/Asset/Char/Player/Char010_Saiqi/Mesh/Saiqi_Face_SM",
+  "/Game/Asset/Char/Player/Char010_Saiqi/Mesh/Saiqi_Hair_SM",
+  "/Game/Asset/Char/Player/Char010_Saiqi/Mesh/Saiqi_Hat_SM",
   "/Game/Asset/Char/Player/Char010_Saiqi/Mesh/Saiqi_Part01_SM",
   "/Game/Asset/Char/Player/Char010_Saiqi/Mesh/Saiqi_Part02_Skeleton",
   "/Game/Asset/Char/Player/Char010_Saiqi/Mesh/Saiqi_Part02_SM",
+  "/Game/Asset/Char/Player/Char010_Saiqi/Mesh/Saiqi_Part03_SM",
   "/Game/Asset/Char/Player/Char010_Saiqi/Mesh/Saiqi_SM",
+  "/Game/Asset/Char/Player/Char010_Saiqi/Mesh/Saiqi_TP01_Part_SM",
   "/Game/Asset/Char/Player/Char010_Saiqi/Mesh/Saiqi_TP01_SM",
   "/Game/Asset/Char/Player/Char010_Saiqi/Mesh/Saiqi_TP02_SM"
 }
@@ -635,6 +712,38 @@ T.RT_67 = {
   "/Game/Asset/Char/Monster/JT_Juji/Mesh/JT_Juji_WP_SM"
 }
 T.RT_68 = {
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Mesh/Boss_Lizhan_SM",
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Mesh/Boss_Lizhan_SM_Physics",
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Mesh/Boss_Lizhan_SM_Skeleton",
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Mesh/Boss_Lizhan_WP_01_Physics",
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Mesh/Boss_Lizhan_WP_01_SM",
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Mesh/Boss_Lizhan_WP_02_Physics",
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Mesh/Boss_Lizhan_WP_02_SM"
+}
+T.RT_69 = {
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Hit/Boss_Lizhan_Condemn_Montage",
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Hit/Boss_Lizhan_CondemnDie_Montage",
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Hit/Boss_Lizhan_CondemnEnd_Montage",
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Hit/Boss_Lizhan_CondemnStart_Montage",
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Hit/Boss_Lizhan_Die_Montage",
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Hit/Boss_Lizhan_HitLight_Montage"
+}
+T.RT_70 = {
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/Boss_Lizhan_Skill01_Montage",
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/Boss_Lizhan_Skill02_Montage",
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/Boss_Lizhan_Skill03_Montage",
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/Boss_Lizhan_Skill04_1_Montage",
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/Boss_Lizhan_Skill04_2_Montage",
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/Boss_Lizhan_Skill05_Montage",
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/Boss_Lizhan_Skill07_Montage",
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/Boss_Lizhan_Skill10_Montage",
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/Boss_Lizhan_Skill11_Montage",
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/Boss_Lizhan_Skill13_Montage"
+}
+T.RT_71 = {
+  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Locomotion/Boss_Lizhan_Rotation_Montage"
+}
+T.RT_72 = {
   "/Game/Asset/Char/Monster/JH_Xianfeng/Mesh/JH_Xianfeng_Physics",
   "/Game/Asset/Char/Monster/JH_Xianfeng/Mesh/JH_Xianfeng_Physics_Lite",
   "/Game/Asset/Char/Monster/JH_Xianfeng/Mesh/JH_Xianfeng_Physics_Minimal",
@@ -642,15 +751,7 @@ T.RT_68 = {
   "/Game/Asset/Char/Monster/JH_Xianfeng/Mesh/JH_Xianfeng_WP_Physics",
   "/Game/Asset/Char/Monster/JH_Xianfeng/Mesh/JH_Xianfeng_WP_SM"
 }
-T.RT_69 = {
-  "/Game/Asset/Char/Monster/JH_Zhishi/Mesh/JH_Zhishi_Physics",
-  "/Game/Asset/Char/Monster/JH_Zhishi/Mesh/JH_Zhishi_Physics_Lite",
-  "/Game/Asset/Char/Monster/JH_Zhishi/Mesh/JH_Zhishi_Physics_Minimal",
-  "/Game/Asset/Char/Monster/JH_Zhishi/Mesh/JH_Zhishi_SM",
-  "/Game/Asset/Char/Monster/JH_Zhishi/Mesh/JH_Zhishi_WP_Physics",
-  "/Game/Asset/Char/Monster/JH_Zhishi/Mesh/JH_Zhishi_WP_SM"
-}
-T.RT_70 = {
+T.RT_73 = {
   "/Game/Asset/Char/Monster/Animal03_Yinbeishu/Mesh/Mon_Yinbeishu_SM",
   "/Game/Asset/Char/Monster/Animal03_Yinbeishu/Mesh/Mon_Yinbeishu_SM_Physics",
   "/Game/Asset/Char/Monster/Animal03_Yinbeishu/Mesh/Mon_Yinbeishu_SM_Physics_Lite",
@@ -660,7 +761,7 @@ T.RT_70 = {
   "/Game/Asset/Char/Monster/Animal03_Yinbeishu/Mesh/Mon_YinbeishuB_SM_Physics_Lite",
   "/Game/Asset/Char/Monster/Animal03_Yinbeishu/Mesh/Mon_YinbeishuB_SM_Physics_Minimal"
 }
-T.RT_71 = {
+T.RT_74 = {
   "/Game/Asset/Char/Monster/Animal03_Yinbeishu/Animation/Montage/Combat/Hit/Mon_Yinbeishu_Die_Montage",
   "/Game/Asset/Char/Monster/Animal03_Yinbeishu/Animation/Montage/Combat/Hit/Mon_Yinbeishu_GetUpBack_Montage",
   "/Game/Asset/Char/Monster/Animal03_Yinbeishu/Animation/Montage/Combat/Hit/Mon_Yinbeishu_GetUpFront_Montage",
@@ -673,74 +774,68 @@ T.RT_71 = {
   "/Game/Asset/Char/Monster/Animal03_Yinbeishu/Animation/Montage/Combat/Hit/Mon_Yinbeishu_StunBound_Montage",
   "/Game/Asset/Char/Monster/Animal03_Yinbeishu/Animation/Montage/Combat/Hit/Mon_Yinbeishu_StunParalysis_Montage"
 }
-T.RT_72 = {
+T.RT_75 = {
   "/Game/Asset/Char/Monster/Animal03_Yinbeishu/Animation/Montage/Combat/Skill/Mon_Yinbeishu_Attack_Montage",
   "/Game/Asset/Char/Monster/Animal03_Yinbeishu/Animation/Montage/Combat/Skill/Mon_Yinbeishu_Skill01_Montage",
   "/Game/Asset/Char/Monster/Animal03_Yinbeishu/Animation/Montage/Combat/Skill/Mon_YinbeishuB_Skill01_Montage"
 }
-T.RT_73 = {
+T.RT_76 = {
   "/Game/Asset/Char/Monster/Animal03_Yinbeishu/Animation/Montage/SpecialIdle/Mon_Yinbeishu_SpecialAlarm_Montage",
   "/Game/Asset/Char/Monster/Animal03_Yinbeishu/Animation/Montage/SpecialIdle/Mon_Yinbeishu_SpecialIdle01_End_Montage",
   "/Game/Asset/Char/Monster/Animal03_Yinbeishu/Animation/Montage/SpecialIdle/Mon_Yinbeishu_SpecialIdle01_Montage",
   "/Game/Asset/Char/Monster/Animal03_Yinbeishu/Animation/Montage/SpecialIdle/Mon_Yinbeishu_SpecialIdle02_End_Montage",
   "/Game/Asset/Char/Monster/Animal03_Yinbeishu/Animation/Montage/SpecialIdle/Mon_Yinbeishu_SpecialIdle02_Montage"
 }
-T.RT_74 = {
-  "/Game/Asset/Char/Monster/JT_BlastRobot/Mesh/JT_BlastRobot_Physics",
-  "/Game/Asset/Char/Monster/JT_BlastRobot/Mesh/JT_BlastRobot_SM"
-}
-T.RT_75 = {
-  "/Game/Asset/Char/Monster/JT_BlastRobot/Animation/Montage/Combat/Hit/JT_BlastRobot_Die_Montage",
-  "/Game/Asset/Char/Monster/JT_BlastRobot/Animation/Montage/Combat/Hit/JT_BlastRobot_LightHit1_Montage",
-  "/Game/Asset/Char/Monster/JT_BlastRobot/Animation/Montage/Combat/Hit/JT_BlastRobot_StunBlind_Montage",
-  "/Game/Asset/Char/Monster/JT_BlastRobot/Animation/Montage/Combat/Hit/JT_BlastRobot_StunBound_Montage",
-  "/Game/Asset/Char/Monster/JT_BlastRobot/Animation/Montage/Combat/Hit/JT_BlastRobot_StunFire_Montage",
-  "/Game/Asset/Char/Monster/JT_BlastRobot/Animation/Montage/Combat/Hit/JT_BlastRobot_StunParalysis_Montage"
-}
-T.RT_76 = {
-  "/Game/Asset/Char/Monster/JT_BlastRobot/Animation/Montage/Combat/Skill/JT_BlastRobot_Skill01_Montage",
-  "/Game/Asset/Char/Monster/JT_BlastRobot/Animation/Montage/Combat/Skill/JT_BlastRobot_Skill02_Montage"
-}
 T.RT_77 = {
-  "/Game/Asset/Char/Player/Char004_Zhangyu/Mesh/Phyx_Zhangyu",
-  "/Game/Asset/Char/Player/Char004_Zhangyu/Mesh/Zhangyu_Cloak_SM",
-  "/Game/Asset/Char/Player/Char004_Zhangyu/Mesh/Zhangyu_Part03_SM",
-  "/Game/Asset/Char/Player/Char004_Zhangyu/Mesh/Zhangyu_SM",
-  "/Game/Asset/Char/Player/Char004_Zhangyu/Mesh/Zhangyu_TP01_SM"
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_Die_Montage",
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_GetUpBack_Montage",
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_GetUpFront_Montage",
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_HeavyHit_Montage",
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_HitFly_Montage",
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_HitFlyDie_Montage",
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_LightHit1_Montage",
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_LightHit2_Montage",
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_LightHitRanged_Montage",
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_StunBlind_Montage",
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_StunBound_Montage",
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_StunFire_Montage",
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_StunParalysis_Montage"
 }
 T.RT_78 = {
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Mesh/Boss_Lizhan_SM",
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Mesh/Boss_Lizhan_SM_Physics",
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Mesh/Boss_Lizhan_SM_Skeleton",
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Mesh/Boss_Lizhan_WP_01_Physics",
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Mesh/Boss_Lizhan_WP_01_SM",
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Mesh/Boss_Lizhan_WP_02_Physics",
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Mesh/Boss_Lizhan_WP_02_SM"
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Skill/JT_Tuji_Alarm01_Montage",
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Skill/JT_Tuji_Attack01_Montage",
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Skill/JT_Tuji_C01_Attack01_Montage",
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Skill/JT_Tuji_C01_Skill01_Montage",
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Skill/JT_Tuji_Skill01_Montage",
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Skill/JT_Tuji_Skill02_Montage"
 }
 T.RT_79 = {
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Hit/Boss_Lizhan_Condemn_Montage",
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Hit/Boss_Lizhan_CondemnDie_Montage",
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Hit/Boss_Lizhan_CondemnEnd_Montage",
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Hit/Boss_Lizhan_CondemnStart_Montage",
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Hit/Boss_Lizhan_Die_Montage",
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Hit/Boss_Lizhan_HitLight_Montage"
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Locomotion/JT_Tuji_Rotation_Montage"
 }
 T.RT_80 = {
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/Boss_Lizhan_Skill01_Montage",
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/Boss_Lizhan_Skill02_Montage",
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/Boss_Lizhan_Skill03_Montage",
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/Boss_Lizhan_Skill04_1_Montage",
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/Boss_Lizhan_Skill04_2_Montage",
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/Boss_Lizhan_Skill05_Montage",
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/Boss_Lizhan_Skill07_Montage",
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/Boss_Lizhan_Skill10_Montage",
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/Boss_Lizhan_Skill11_Montage",
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/Boss_Lizhan_Skill13_Montage"
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/SpecialIdle/JT_Tuji_SpecialAlert_Montage",
+  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/SpecialIdle/JT_Tuji_SpecialIdle01_Montage"
 }
 T.RT_81 = {
-  "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Locomotion/Boss_Lizhan_Rotation_Montage"
+  "/Game/Asset/Char/Player/Char004_Zhangyu/Mesh/Phyx_Zhangyu",
+  "/Game/Asset/Char/Player/Char004_Zhangyu/Mesh/Zhangyu_Body_SM",
+  "/Game/Asset/Char/Player/Char004_Zhangyu/Mesh/Zhangyu_Cloak_SM",
+  "/Game/Asset/Char/Player/Char004_Zhangyu/Mesh/Zhangyu_Face_SM",
+  "/Game/Asset/Char/Player/Char004_Zhangyu/Mesh/Zhangyu_Hair_SM",
+  "/Game/Asset/Char/Player/Char004_Zhangyu/Mesh/Zhangyu_Part03_SM",
+  "/Game/Asset/Char/Player/Char004_Zhangyu/Mesh/Zhangyu_SM",
+  "/Game/Asset/Char/Player/Char004_Zhangyu/Mesh/Zhangyu_TP01_SM",
+  "/Game/Asset/Char/Player/Char004_Zhangyu/Mesh/Zhangyu_TP02_SM"
 }
 T.RT_82 = {
+  "/Game/Asset/Char/Monster/JH_Zhishi/Mesh/JH_Zhishi_Physics",
+  "/Game/Asset/Char/Monster/JH_Zhishi/Mesh/JH_Zhishi_Physics_Lite",
+  "/Game/Asset/Char/Monster/JH_Zhishi/Mesh/JH_Zhishi_Physics_Minimal",
+  "/Game/Asset/Char/Monster/JH_Zhishi/Mesh/JH_Zhishi_SM",
+  "/Game/Asset/Char/Monster/JH_Zhishi/Mesh/JH_Zhishi_WP_Physics",
+  "/Game/Asset/Char/Monster/JH_Zhishi/Mesh/JH_Zhishi_WP_SM"
+}
+T.RT_83 = {
   "/Game/Asset/Char/Monster/Boss04_Saiqi02/Mesh/Boss_Saiqi02_Part01_SM",
   "/Game/Asset/Char/Monster/Boss04_Saiqi02/Mesh/Boss_Saiqi02_SM",
   "/Game/Asset/Char/Monster/Boss04_Saiqi02/Mesh/BossSaiqi02_Shield_Inner_SM",
@@ -749,10 +844,10 @@ T.RT_82 = {
   "/Game/Asset/Char/Monster/Boss04_Saiqi02/Mesh/Shieldout",
   "/Game/Asset/Char/Monster/Boss04_Saiqi02/Mesh/SM_BossSaiqi02_Shield"
 }
-T.RT_83 = {
+T.RT_84 = {
   "/Game/Asset/Char/Monster/Boss04_Saiqi02/Animation/Montage/Combat/Hit/Boss_Saiqi02_Die_Montage"
 }
-T.RT_84 = {
+T.RT_85 = {
   "/Game/Asset/Char/Monster/Boss04_Saiqi02/Animation/Montage/Combat/Skill/Boss_Saiqi02_Skill01_Montage",
   "/Game/Asset/Char/Monster/Boss04_Saiqi02/Animation/Montage/Combat/Skill/Boss_Saiqi02_Skill02_Montage",
   "/Game/Asset/Char/Monster/Boss04_Saiqi02/Animation/Montage/Combat/Skill/Boss_Saiqi02_Skill03_Montage",
@@ -780,42 +875,28 @@ T.RT_84 = {
   "/Game/Asset/Char/Monster/Boss04_Saiqi02/Animation/Montage/Combat/Skill/Boss_Saiqi02_Skill27_Montage",
   "/Game/Asset/Char/Monster/Boss04_Saiqi02/Animation/Montage/Combat/Skill/Boss_Saiqi02_Skill28_Montage"
 }
-T.RT_85 = {
+T.RT_86 = {
+  "/Game/Asset/Char/Monster/JT_BlastRobot/Mesh/JT_BlastRobot_Physics",
+  "/Game/Asset/Char/Monster/JT_BlastRobot/Mesh/JT_BlastRobot_SM"
+}
+T.RT_87 = {
+  "/Game/Asset/Char/Monster/JT_BlastRobot/Animation/Montage/Combat/Hit/JT_BlastRobot_Die_Montage",
+  "/Game/Asset/Char/Monster/JT_BlastRobot/Animation/Montage/Combat/Hit/JT_BlastRobot_LightHit1_Montage",
+  "/Game/Asset/Char/Monster/JT_BlastRobot/Animation/Montage/Combat/Hit/JT_BlastRobot_StunBlind_Montage",
+  "/Game/Asset/Char/Monster/JT_BlastRobot/Animation/Montage/Combat/Hit/JT_BlastRobot_StunBound_Montage",
+  "/Game/Asset/Char/Monster/JT_BlastRobot/Animation/Montage/Combat/Hit/JT_BlastRobot_StunFire_Montage",
+  "/Game/Asset/Char/Monster/JT_BlastRobot/Animation/Montage/Combat/Hit/JT_BlastRobot_StunParalysis_Montage"
+}
+T.RT_88 = {
+  "/Game/Asset/Char/Monster/JT_BlastRobot/Animation/Montage/Combat/Skill/JT_BlastRobot_Skill01_Montage",
+  "/Game/Asset/Char/Monster/JT_BlastRobot/Animation/Montage/Combat/Skill/JT_BlastRobot_Skill02_Montage"
+}
+T.RT_89 = {
   "/Game/Asset/Char/Monster/Animal02_Hongjiaolu/Mesh/Mon_HongjiaoluA_SM",
   "/Game/Asset/Char/Monster/Animal02_Hongjiaolu/Mesh/Mon_HongjiaoluA_SM_Physics",
   "/Game/Asset/Char/Monster/Animal02_Hongjiaolu/Mesh/Mon_HongjiaoluA_SM_Physics_Lite",
   "/Game/Asset/Char/Monster/Animal02_Hongjiaolu/Mesh/Mon_HongjiaoluA_SM_Physics_Minimal",
   "/Game/Asset/Char/Monster/Animal02_Hongjiaolu/Mesh/Mon_HongjiaoluB_SM"
-}
-T.RT_86 = {
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_Die_Montage",
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_GetUpBack_Montage",
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_GetUpFront_Montage",
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_HeavyHit_Montage",
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_HitFly_Montage",
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_HitFlyDie_Montage",
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_LightHit1_Montage",
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_LightHit2_Montage",
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_LightHitRanged_Montage",
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_StunBlind_Montage",
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_StunBound_Montage",
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_StunFire_Montage",
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Hit/JT_Tuji_StunParalysis_Montage"
-}
-T.RT_87 = {
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Skill/JT_Tuji_Alarm01_Montage",
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Skill/JT_Tuji_Attack01_Montage",
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Skill/JT_Tuji_C01_Attack01_Montage",
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Skill/JT_Tuji_C01_Skill01_Montage",
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Skill/JT_Tuji_Skill01_Montage",
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Skill/JT_Tuji_Skill02_Montage"
-}
-T.RT_88 = {
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Locomotion/JT_Tuji_Rotation_Montage"
-}
-T.RT_89 = {
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/SpecialIdle/JT_Tuji_SpecialAlert_Montage",
-  "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/SpecialIdle/JT_Tuji_SpecialIdle01_Montage"
 }
 T.RT_90 = {
   "/Game/Asset/Char/Monster/JT_Tuji/Mesh/JT_Tuji_Physics",
@@ -830,6 +911,201 @@ T.RT_90 = {
   "/Game/Asset/Char/Monster/JT_Tuji/Mesh/JT_Tuji_WP_Shield_SM"
 }
 local AssetPath = {
+  [240101] = {
+    Mesh = {
+      All = T.RT_1
+    },
+    Montage = {
+      Hit = {
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Summon/Montage/Combat/Hit/Baiheng_Summon_Die_Montage"
+      },
+      Skill = {
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Summon/Montage/Combat/Skill/Baiheng01_Summon_Skill01_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Summon/Montage/Combat/Skill/Baiheng_Summon_Skill01_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Summon/Montage/Combat/Skill/Baiheng_Summon_Skill02_Buff_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Summon/Montage/Combat/Skill/Baiheng_Summon_Skill02_EffectCreature01_Montage"
+      }
+    }
+  },
+  [240199] = {
+    Mesh = {
+      All = {
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Mesh/Baiheng_SP01_Body_SM",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Mesh/Baiheng_SP01_Face_SM",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Mesh/Baiheng_SP01_Hair_SM",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Mesh/Baiheng_SP01_Part01_SM",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Mesh/Baiheng_SP01_SM"
+      }
+    },
+    Montage = {
+      Hit = {
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Hit/Baiheng01_Die_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Hit/Baiheng01_GrabHit_Lianhuo_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Hit/Baiheng01_GrabHit_Shijingzhe_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Hit/Baiheng01_HitFly_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Hit/Baiheng01_LightHit1_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Hit/Baiheng01_LightHit2_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Hit/Baiheng01_LightHit_B_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Hit/Baiheng01_LightHit_L_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Hit/Baiheng01_LightHit_R_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Hit/Baiheng01_Recover_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Hit/Baiheng01_StunCommon_Montage"
+      },
+      Skill = {
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Skill/Baiheng01_Condemn_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Skill/Baiheng01_Skill01_Loop_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Skill/Baiheng01_Skill01_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Skill/Baiheng01_Skill02_Montage"
+      },
+      Locomotion = {
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Locomotion/Baiheng01_Climb_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Locomotion/Baiheng01_Dodge_End_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Locomotion/Baiheng01_Dodge_InAir_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Locomotion/Baiheng01_Dodge_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Locomotion/Baiheng01_DodgeBack_InAir_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Locomotion/Baiheng01_DodgeBack_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Locomotion/Baiheng01_FlipEaves_End_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Locomotion/Baiheng01_Rotation_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Locomotion/Baiheng01_TurnBack_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Locomotion/Baiheng01_WallJump_LeanLeft_LU_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Locomotion/Baiheng01_WallJump_LeanLeft_RU_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Locomotion/Baiheng01_WallJump_LeanRight_LU_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Locomotion/Baiheng01_WallJump_LeanRight_RU_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Locomotion/Baiheng01_WallJump_LU_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Locomotion/Baiheng01_WallJump_RU_Montage"
+      }
+    },
+    Weapon = {
+      Bow = {
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Bow/Baiheng01_Bow01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Bow/Baiheng01_Bow02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Bow/Baiheng01_Bow_HeavyShooting_Montage"
+      },
+      Katana = {
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Katana/Baiheng01_Katana_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Katana/Baiheng01_Katana_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Katana/Baiheng01_Katana_Mod01_HeavyAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Katana/Baiheng01_Katana_Mod01_HeavyAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Katana/Baiheng01_Katana_Mod01_HeavyAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Katana/Baiheng01_Katana_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Katana/Baiheng01_Katana_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Katana/Baiheng01_Katana_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Katana/Baiheng01_Katana_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Katana/Baiheng01_Katana_SlideAttack_Montage"
+      },
+      Claymore = {
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Claymore/Baiheng01_Claymore_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Claymore/Baiheng01_Claymore_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Claymore/Baiheng01_Claymore_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Claymore/Baiheng01_Claymore_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Claymore/Baiheng01_Claymore_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Claymore/Baiheng01_Claymore_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Claymore/Baiheng01_Claymore_Mod02_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Claymore/Baiheng01_Claymore_Mod02_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Claymore/Baiheng01_Claymore_Mod02_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Claymore/Baiheng01_Claymore_Mod02_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Claymore/Baiheng01_Claymore_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Claymore/Baiheng01_Claymore_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Claymore/Baiheng01_Claymore_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Claymore/Baiheng01_Claymore_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Claymore/Baiheng01_Claymore_SlideAttack_Montage"
+      },
+      Dualblade = {
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Dualblade/Baiheng01_Dualblade_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Dualblade/Baiheng01_Dualblade_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Dualblade/Baiheng01_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Dualblade/Baiheng01_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Dualblade/Baiheng01_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Dualblade/Baiheng01_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Dualblade/Baiheng01_Dualblade_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Dualblade/Baiheng01_Dualblade_Mod01_SlideAttack_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Dualblade/Baiheng01_Dualblade_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Dualblade/Baiheng01_Dualblade_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Dualblade/Baiheng01_Dualblade_RunAttack_03_EffectCreature_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Dualblade/Baiheng01_Dualblade_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Dualblade/Baiheng01_Dualblade_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Dualblade/Baiheng01_Dualblade_SlideAttack_Montage"
+      },
+      Shotgun = {
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Shotgun/Baiheng01_Shotgun01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Shotgun/Baiheng01_Shotgun01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Shotgun/Baiheng01_Shotgun02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Shotgun/Baiheng01_Shotgun02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Shotgun/Baiheng01_Shotgun03_Reload_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Shotgun/Baiheng01_Shotgun03_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Shotgun/Baiheng01_Shotgun04_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Shotgun/Baiheng01_Shotgun05_Reload_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Shotgun/Baiheng01_Shotgun06_Reload_Montage"
+      },
+      Polearm = {
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Polearm/Baiheng01_Polearm_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Polearm/Baiheng01_Polearm_HeavyAttack_Callback_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Polearm/Baiheng01_Polearm_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Polearm/Baiheng01_Polearm_Mod01_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Polearm/Baiheng01_Polearm_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Polearm/Baiheng01_Polearm_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Polearm/Baiheng01_Polearm_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Polearm/Baiheng01_Polearm_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Polearm/Baiheng01_Polearm_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Polearm/Baiheng01_Polearm_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Polearm/Baiheng01_Polearm_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Polearm/Baiheng01_Polearm_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Polearm/Baiheng01_Polearm_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Polearm/Baiheng01_Polearm_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Polearm/Baiheng01_Polearm_RunAttack_05_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Polearm/Baiheng01_Polearm_SlideAttack_Montage"
+      },
+      Cannon = {
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Cannon/Baiheng01_Cannon01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Cannon/Baiheng01_Cannon01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Cannon/Baiheng01_Cannon02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Cannon/Baiheng01_Cannon02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Cannon/Baiheng01_Cannon03_Shooting_Montage"
+      },
+      Sword = {
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Sword/Baiheng01_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Sword/Baiheng01_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Sword/Baiheng01_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Sword/Baiheng01_Sword_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Sword/Baiheng01_Sword_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Sword/Baiheng01_Sword_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Sword/Baiheng01_Sword_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Sword/Baiheng01_Sword_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Sword/Baiheng01_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Sword/Baiheng01_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Sword/Baiheng01_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Sword/Baiheng01_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Sword/Baiheng01_Sword_SlideAttack_Montage"
+      },
+      Machinegun = {
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Machinegun/Baiheng01_Machinegun01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Machinegun/Baiheng01_Machinegun01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Machinegun/Baiheng01_Machinegun02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Machinegun/Baiheng01_Machinegun02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Machinegun/Baiheng01_Machinegun03_Reload_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Machinegun/Baiheng01_Machinegun04_Reload_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Machinegun/Baiheng01_Machinegun04_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Machinegun/Baiheng01_Machinegun05_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Machinegun/Baiheng01_Machinegun06_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Machinegun/Baiheng01_Machinegun_Paotai_Shooting_Montage"
+      },
+      Pistol = {
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Pistol/Baiheng01_Pistol01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Pistol/Baiheng01_Pistol01_Shooting_Montage"
+      },
+      Crossbow = {
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Crossbow/Baiheng01_Crossbow01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Crossbow/Baiheng01_Crossbow01_Shooting_Montage"
+      },
+      Swordwhip = {
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Swordwhip/Baiheng01_Swordwhip_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Swordwhip/Baiheng01_Swordwhip_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Swordwhip/Baiheng01_Swordwhip_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Swordwhip/Baiheng01_Swordwhip_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char096_Baiheng01/Animation/Montage/Combat/Weapon/Swordwhip/Baiheng01_Swordwhip_RunAttack_04_Montage"
+      }
+    }
+  },
   [601601] = {
     Mesh = {
       All = {
@@ -874,7 +1150,7 @@ local AssetPath = {
   },
   [4101] = {
     Mesh = {
-      All = T.RT_1
+      All = T.RT_2
     },
     Montage = {
       Hit = {
@@ -914,6 +1190,11 @@ local AssetPath = {
       }
     },
     Weapon = {
+      Bow = {
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Bow/Lise_Bow01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Bow/Lise_Bow02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Bow/Lise_Bow_HeavyShooting_Montage"
+      },
       Katana = {
         "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Katana/Lise_Katana_FallAttack_Montage",
         "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Katana/Lise_Katana_HeavyAttack_Montage",
@@ -943,30 +1224,21 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Claymore/Lise_Claymore_RunAttack_04_Montage",
         "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Claymore/Lise_Claymore_SlideAttack_Montage"
       },
-      Sword = {
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_SlideAttack_Montage"
-      },
-      Pistol = {
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Pistol/Lise_Pistol01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Pistol/Lise_Pistol01_Shooting_Montage"
-      },
-      Swordwhip = {
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Swordwhip/Lise_Swordwhip_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Swordwhip/Lise_Swordwhip_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Swordwhip/Lise_Swordwhip_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Swordwhip/Lise_Swordwhip_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Swordwhip/Lise_Swordwhip_RunAttack_04_Montage"
+      Dualblade = {
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_Mod01_SlideAttack_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_RunAttack_03_EffectCreature_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_SlideAttack_Montage"
       },
       Shotgun = {
         "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Shotgun/Lise_Shotgun01_Reload_Montage",
@@ -975,6 +1247,7 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Shotgun/Lise_Shotgun02_Shooting_Montage",
         "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Shotgun/Lise_Shotgun03_Reload_Montage",
         "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Shotgun/Lise_Shotgun03_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Shotgun/Lise_Shotgun04_Shooting_Montage",
         "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Shotgun/Lise_Shotgun05_Reload_Montage",
         "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Shotgun/Lise_Shotgun06_Reload_Montage"
       },
@@ -996,6 +1269,28 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Polearm/Lise_Polearm_RunAttack_05_Montage",
         "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Polearm/Lise_Polearm_SlideAttack_Montage"
       },
+      Cannon = {
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Cannon/Lise_Cannon01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Cannon/Lise_Cannon01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Cannon/Lise_Cannon02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Cannon/Lise_Cannon02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Cannon/Lise_Cannon03_Shooting_Montage"
+      },
+      Sword = {
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Sword/Lise_Sword_SlideAttack_Montage"
+      },
       Machinegun = {
         "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Machinegun/Lise_Machinegun01_Reload_Montage",
         "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Machinegun/Lise_Machinegun01_Shooting_Montage",
@@ -1008,48 +1303,31 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Machinegun/Lise_Machinegun06_Shooting_Montage",
         "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Machinegun/Lise_Machinegun_Paotai_Shooting_Montage"
       },
-      Bow = {
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Bow/Lise_Bow01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Bow/Lise_Bow02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Bow/Lise_Bow_HeavyShooting_Montage"
-      },
-      Dualblade = {
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_Mod01_SlideAttack_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_RunAttack_03_EffectCreature_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Dualblade/Lise_Dualblade_SlideAttack_Montage"
+      Pistol = {
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Pistol/Lise_Pistol01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Pistol/Lise_Pistol01_Shooting_Montage"
       },
       Crossbow = {
         "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Crossbow/Lise_Crossbow01_Reload_Montage",
         "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Crossbow/Lise_Crossbow01_Shooting_Montage"
       },
-      Cannon = {
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Cannon/Lise_Cannon01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Cannon/Lise_Cannon01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Cannon/Lise_Cannon02_Reload_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Cannon/Lise_Cannon02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Cannon/Lise_Cannon03_Shooting_Montage"
+      Swordwhip = {
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Swordwhip/Lise_Swordwhip_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Swordwhip/Lise_Swordwhip_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Swordwhip/Lise_Swordwhip_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Swordwhip/Lise_Swordwhip_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char020_Lise/Animation/Montage/Combat/Weapon/Swordwhip/Lise_Swordwhip_RunAttack_04_Montage"
       }
     }
   },
   [1060102] = {
     Mesh = {
-      All = T.RT_2
+      All = T.RT_3
     }
   },
   [1801] = {
     Mesh = {
-      All = T.RT_3
+      All = T.RT_4
     },
     Montage = {
       Hit = {
@@ -1090,6 +1368,11 @@ local AssetPath = {
       }
     },
     Weapon = {
+      Bow = {
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Bow/Feina_Bow01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Bow/Feina_Bow02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Bow/Feina_Bow_HeavyShooting_Montage"
+      },
       Katana = {
         "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Katana/Feina_Katana_FallAttack_Montage",
         "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Katana/Feina_Katana_HeavyAttack_Montage",
@@ -1119,30 +1402,21 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Claymore/Feina_Claymore_RunAttack_04_Montage",
         "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Claymore/Feina_Claymore_SlideAttack_Montage"
       },
-      Sword = {
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_SlideAttack_Montage"
-      },
-      Pistol = {
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Pistol/Feina_Pistol01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Pistol/Feina_Pistol01_Shooting_Montage"
-      },
-      Swordwhip = {
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Swordwhip/Feina_Swordwhip_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Swordwhip/Feina_Swordwhip_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Swordwhip/Feina_Swordwhip_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Swordwhip/Feina_Swordwhip_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Swordwhip/Feina_Swordwhip_RunAttack_04_Montage"
+      Dualblade = {
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_Mod01_SlideAttack_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_RunAttack_03_EffectCreature_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_SlideAttack_Montage"
       },
       Shotgun = {
         "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Shotgun/Feina_Shotgun01_Reload_Montage",
@@ -1151,6 +1425,7 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Shotgun/Feina_Shotgun02_Shooting_Montage",
         "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Shotgun/Feina_Shotgun03_Reload_Montage",
         "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Shotgun/Feina_Shotgun03_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Shotgun/Feina_Shotgun04_Shooting_Montage",
         "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Shotgun/Feina_Shotgun05_Reload_Montage",
         "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Shotgun/Feina_Shotgun06_Reload_Montage"
       },
@@ -1172,6 +1447,28 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Polearm/Feina_Polearm_RunAttack_05_Montage",
         "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Polearm/Feina_Polearm_SlideAttack_Montage"
       },
+      Cannon = {
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Cannon/Feina_Cannon01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Cannon/Feina_Cannon01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Cannon/Feina_Cannon02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Cannon/Feina_Cannon02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Cannon/Feina_Cannon03_Shooting_Montage"
+      },
+      Sword = {
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Sword/Feina_Sword_SlideAttack_Montage"
+      },
       Machinegun = {
         "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Machinegun/Feina_Machinegun01_Reload_Montage",
         "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Machinegun/Feina_Machinegun01_Shooting_Montage",
@@ -1184,43 +1481,26 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Machinegun/Feina_Machinegun06_Shooting_Montage",
         "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Machinegun/Feina_Machinegun_Paotai_Shooting_Montage"
       },
-      Bow = {
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Bow/Feina_Bow01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Bow/Feina_Bow02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Bow/Feina_Bow_HeavyShooting_Montage"
-      },
-      Dualblade = {
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_Mod01_SlideAttack_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_RunAttack_03_EffectCreature_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Dualblade/Feina_Dualblade_SlideAttack_Montage"
+      Pistol = {
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Pistol/Feina_Pistol01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Pistol/Feina_Pistol01_Shooting_Montage"
       },
       Crossbow = {
         "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Crossbow/Feina_Crossbow01_Reload_Montage",
         "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Crossbow/Feina_Crossbow01_Shooting_Montage"
       },
-      Cannon = {
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Cannon/Feina_Cannon01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Cannon/Feina_Cannon01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Cannon/Feina_Cannon02_Reload_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Cannon/Feina_Cannon02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Cannon/Feina_Cannon03_Shooting_Montage"
+      Swordwhip = {
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Swordwhip/Feina_Swordwhip_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Swordwhip/Feina_Swordwhip_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Swordwhip/Feina_Swordwhip_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Swordwhip/Feina_Swordwhip_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char019_Feina/Animation/Montage/Combat/Weapon/Swordwhip/Feina_Swordwhip_RunAttack_04_Montage"
       }
     }
   },
   [850701] = {
     Mesh = {
-      All = T.RT_4
+      All = T.RT_5
     },
     Montage = {
       Hit = {
@@ -1241,22 +1521,201 @@ local AssetPath = {
   },
   [701201] = {
     Mesh = {
-      All = T.RT_5
+      All = T.RT_6
     }
   },
   [110101] = {
     Mesh = {
-      All = T.RT_6
+      All = T.RT_7
     }
   },
   [110102] = {
     Mesh = {
-      All = T.RT_6
+      All = T.RT_7
+    }
+  },
+  [210199] = {
+    Mesh = {
+      All = {
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Mesh/Shuimu_SP01_Body_SM",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Mesh/Shuimu_SP01_Face_SM",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Mesh/Shuimu_SP01_Hair_SM",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Mesh/Shuimu_SP01_Hat_SM",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Mesh/Shuimu_SP01_SM"
+      }
+    },
+    Montage = {
+      Hit = {
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Hit/Shuimu_Die_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Hit/Shuimu_GrabHit_Lianhuo_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Hit/Shuimu_GrabHit_Shijingzhe_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Hit/Shuimu_HitFly_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Hit/Shuimu_LightHit1_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Hit/Shuimu_LightHit2_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Hit/Shuimu_LightHit_B_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Hit/Shuimu_LightHit_L_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Hit/Shuimu_LightHit_R_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Hit/Shuimu_Recover_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Hit/Shuimu_StunCommon_Montage"
+      },
+      Skill = {
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Skill/Shuimu_Condemn_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Skill/Shuimu_Skill01_Loop_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Skill/Shuimu_Skill01_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Skill/Shuimu_Skill02_Montage"
+      },
+      Locomotion = {
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Locomotion/Shuimu_Climb_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Locomotion/Shuimu_Dodge_End_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Locomotion/Shuimu_Dodge_InAir_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Locomotion/Shuimu_Dodge_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Locomotion/Shuimu_DodgeBack_InAir_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Locomotion/Shuimu_DodgeBack_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Locomotion/Shuimu_FlipEaves_End_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Locomotion/Shuimu_Rotation_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Locomotion/Shuimu_TurnBack_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Locomotion/Shuimu_WallJump_LeanLeft_LU_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Locomotion/Shuimu_WallJump_LeanLeft_RU_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Locomotion/Shuimu_WallJump_LeanRight_LU_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Locomotion/Shuimu_WallJump_LeanRight_RU_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Locomotion/Shuimu_WallJump_LU_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Locomotion/Shuimu_WallJump_RU_Montage"
+      }
+    },
+    Weapon = {
+      Bow = {
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Bow/Shuimu_Bow01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Bow/Shuimu_Bow02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Bow/Shuimu_Bow_HeavyShooting_Montage"
+      },
+      Katana = {
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Katana/Shuimu_Katana_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Katana/Shuimu_Katana_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Katana/Shuimu_Katana_Mod01_HeavyAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Katana/Shuimu_Katana_Mod01_HeavyAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Katana/Shuimu_Katana_Mod01_HeavyAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Katana/Shuimu_Katana_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Katana/Shuimu_Katana_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Katana/Shuimu_Katana_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Katana/Shuimu_Katana_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Katana/Shuimu_Katana_SlideAttack_Montage"
+      },
+      Claymore = {
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Claymore/Shuimu_Claymore_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Claymore/Shuimu_Claymore_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Claymore/Shuimu_Claymore_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Claymore/Shuimu_Claymore_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Claymore/Shuimu_Claymore_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Claymore/Shuimu_Claymore_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Claymore/Shuimu_Claymore_Mod02_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Claymore/Shuimu_Claymore_Mod02_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Claymore/Shuimu_Claymore_Mod02_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Claymore/Shuimu_Claymore_Mod02_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Claymore/Shuimu_Claymore_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Claymore/Shuimu_Claymore_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Claymore/Shuimu_Claymore_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Claymore/Shuimu_Claymore_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Claymore/Shuimu_Claymore_SlideAttack_Montage"
+      },
+      Dualblade = {
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_Mod01_SlideAttack_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_RunAttack_03_EffectCreature_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_SlideAttack_Montage"
+      },
+      Shotgun = {
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Shotgun/Shuimu_Shotgun01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Shotgun/Shuimu_Shotgun01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Shotgun/Shuimu_Shotgun02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Shotgun/Shuimu_Shotgun02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Shotgun/Shuimu_Shotgun03_Reload_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Shotgun/Shuimu_Shotgun03_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Shotgun/Shuimu_Shotgun04_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Shotgun/Shuimu_Shotgun05_Reload_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Shotgun/Shuimu_Shotgun06_Reload_Montage"
+      },
+      Polearm = {
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Polearm/Shuimu_Polearm_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Polearm/Shuimu_Polearm_HeavyAttack_Callback_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Polearm/Shuimu_Polearm_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Polearm/Shuimu_Polearm_Mod01_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Polearm/Shuimu_Polearm_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Polearm/Shuimu_Polearm_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Polearm/Shuimu_Polearm_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Polearm/Shuimu_Polearm_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Polearm/Shuimu_Polearm_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Polearm/Shuimu_Polearm_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Polearm/Shuimu_Polearm_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Polearm/Shuimu_Polearm_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Polearm/Shuimu_Polearm_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Polearm/Shuimu_Polearm_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Polearm/Shuimu_Polearm_RunAttack_05_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Polearm/Shuimu_Polearm_SlideAttack_Montage"
+      },
+      Cannon = {
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Cannon/Shuimu_Cannon01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Cannon/Shuimu_Cannon01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Cannon/Shuimu_Cannon02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Cannon/Shuimu_Cannon02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Cannon/Shuimu_Cannon03_Shooting_Montage"
+      },
+      Sword = {
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_SlideAttack_Montage"
+      },
+      Machinegun = {
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Machinegun/Shuimu_Machinegun01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Machinegun/Shuimu_Machinegun01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Machinegun/Shuimu_Machinegun02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Machinegun/Shuimu_Machinegun02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Machinegun/Shuimu_Machinegun03_Reload_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Machinegun/Shuimu_Machinegun04_Reload_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Machinegun/Shuimu_Machinegun04_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Machinegun/Shuimu_Machinegun05_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Machinegun/Shuimu_Machinegun06_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Machinegun/Shuimu_Machinegun_Paotai_Shooting_Montage"
+      },
+      Pistol = {
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Pistol/Shuimu_Pistol01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Pistol/Shuimu_Pistol01_Shooting_Montage"
+      },
+      Crossbow = {
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Crossbow/Shuimu_Crossbow01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Crossbow/Shuimu_Crossbow01_Shooting_Montage"
+      },
+      Swordwhip = {
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Swordwhip/Shuimu_Swordwhip_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Swordwhip/Shuimu_Swordwhip_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Swordwhip/Shuimu_Swordwhip_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Swordwhip/Shuimu_Swordwhip_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char097_Shuimu01/Animation/Montage/Combat/Weapon/Swordwhip/Shuimu_Swordwhip_RunAttack_04_Montage"
+      }
     }
   },
   [850201] = {
     Mesh = {
-      All = T.RT_7
+      All = T.RT_8
     },
     Montage = {
       Hit = {
@@ -1299,12 +1758,12 @@ local AssetPath = {
   },
   [850202] = {
     Mesh = {
-      All = T.RT_7
+      All = T.RT_8
     }
   },
   [3101] = {
     Mesh = {
-      All = T.RT_8
+      All = T.RT_9
     },
     Montage = {
       Hit = {
@@ -1357,6 +1816,11 @@ local AssetPath = {
       }
     },
     Weapon = {
+      Bow = {
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Bow/Linen_Bow01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Bow/Linen_Bow02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Bow/Linen_Bow_HeavyShooting_Montage"
+      },
       Katana = {
         "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Katana/Linen_Katana_FallAttack_Montage",
         "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Katana/Linen_Katana_HeavyAttack_Montage",
@@ -1386,30 +1850,21 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Claymore/Linen_Claymore_RunAttack_04_Montage",
         "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Claymore/Linen_Claymore_SlideAttack_Montage"
       },
-      Sword = {
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_SlideAttack_Montage"
-      },
-      Pistol = {
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Pistol/Linen_Pistol01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Pistol/Linen_Pistol01_Shooting_Montage"
-      },
-      Swordwhip = {
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Swordwhip/Linen_Swordwhip_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Swordwhip/Linen_Swordwhip_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Swordwhip/Linen_Swordwhip_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Swordwhip/Linen_Swordwhip_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Swordwhip/Linen_Swordwhip_RunAttack_04_Montage"
+      Dualblade = {
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_Mod01_SlideAttack_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_RunAttack_03_EffectCreature_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_SlideAttack_Montage"
       },
       Shotgun = {
         "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Shotgun/Linen_Shotgun01_Reload_Montage",
@@ -1418,6 +1873,7 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Shotgun/Linen_Shotgun02_Shooting_Montage",
         "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Shotgun/Linen_Shotgun03_Reload_Montage",
         "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Shotgun/Linen_Shotgun03_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Shotgun/Linen_Shotgun04_Shooting_Montage",
         "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Shotgun/Linen_Shotgun05_Reload_Montage",
         "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Shotgun/Linen_Shotgun06_Reload_Montage"
       },
@@ -1439,6 +1895,28 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Polearm/Linen_Polearm_RunAttack_05_Montage",
         "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Polearm/Linen_Polearm_SlideAttack_Montage"
       },
+      Cannon = {
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Cannon/Linen_Cannon01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Cannon/Linen_Cannon01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Cannon/Linen_Cannon02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Cannon/Linen_Cannon02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Cannon/Linen_Cannon03_Shooting_Montage"
+      },
+      Sword = {
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Sword/Linen_Sword_SlideAttack_Montage"
+      },
       Machinegun = {
         "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Machinegun/Linen_Machinegun01_Reload_Montage",
         "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Machinegun/Linen_Machinegun01_Shooting_Montage",
@@ -1451,43 +1929,26 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Machinegun/Linen_Machinegun06_Shooting_Montage",
         "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Machinegun/Linen_Machinegun_Paotai_Shooting_Montage"
       },
-      Bow = {
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Bow/Linen_Bow01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Bow/Linen_Bow02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Bow/Linen_Bow_HeavyShooting_Montage"
-      },
-      Dualblade = {
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_Mod01_SlideAttack_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_RunAttack_03_EffectCreature_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Dualblade/Linen_Dualblade_SlideAttack_Montage"
+      Pistol = {
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Pistol/Linen_Pistol01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Pistol/Linen_Pistol01_Shooting_Montage"
       },
       Crossbow = {
         "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Crossbow/Linen_Crossbow01_Reload_Montage",
         "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Crossbow/Linen_Crossbow01_Shooting_Montage"
       },
-      Cannon = {
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Cannon/Linen_Cannon01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Cannon/Linen_Cannon01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Cannon/Linen_Cannon02_Reload_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Cannon/Linen_Cannon02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Cannon/Linen_Cannon03_Shooting_Montage"
+      Swordwhip = {
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Swordwhip/Linen_Swordwhip_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Swordwhip/Linen_Swordwhip_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Swordwhip/Linen_Swordwhip_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Swordwhip/Linen_Swordwhip_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Weapon/Swordwhip/Linen_Swordwhip_RunAttack_04_Montage"
       }
     }
   },
   [3102] = {
     Mesh = {
-      All = T.RT_9
+      All = T.RT_10
     },
     Montage = {
       Hit = {
@@ -1527,6 +1988,11 @@ local AssetPath = {
       }
     },
     Weapon = {
+      Bow = {
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Bow/Xier_Bow01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Bow/Xier_Bow02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Bow/Xier_Bow_HeavyShooting_Montage"
+      },
       Katana = {
         "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Katana/Xier_Katana_FallAttack_Montage",
         "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Katana/Xier_Katana_HeavyAttack_Montage",
@@ -1556,30 +2022,21 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Claymore/Xier_Claymore_RunAttack_04_Montage",
         "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Claymore/Xier_Claymore_SlideAttack_Montage"
       },
-      Sword = {
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_SlideAttack_Montage"
-      },
-      Pistol = {
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Pistol/Xier_Pistol01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Pistol/Xier_Pistol01_Shooting_Montage"
-      },
-      Swordwhip = {
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Swordwhip/Xier_Swordwhip_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Swordwhip/Xier_Swordwhip_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Swordwhip/Xier_Swordwhip_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Swordwhip/Xier_Swordwhip_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Swordwhip/Xier_Swordwhip_RunAttack_04_Montage"
+      Dualblade = {
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_Mod01_SlideAttack_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_RunAttack_03_EffectCreature_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_SlideAttack_Montage"
       },
       Shotgun = {
         "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Shotgun/Xier_Shotgun01_Reload_Montage",
@@ -1588,6 +2045,7 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Shotgun/Xier_Shotgun02_Shooting_Montage",
         "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Shotgun/Xier_Shotgun03_Reload_Montage",
         "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Shotgun/Xier_Shotgun03_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Shotgun/Xier_Shotgun04_Shooting_Montage",
         "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Shotgun/Xier_Shotgun05_Reload_Montage",
         "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Shotgun/Xier_Shotgun06_Reload_Montage"
       },
@@ -1609,6 +2067,28 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Polearm/Xier_Polearm_RunAttack_05_Montage",
         "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Polearm/Xier_Polearm_SlideAttack_Montage"
       },
+      Cannon = {
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Cannon/Xier_Cannon01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Cannon/Xier_Cannon01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Cannon/Xier_Cannon02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Cannon/Xier_Cannon02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Cannon/Xier_Cannon03_Shooting_Montage"
+      },
+      Sword = {
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Sword/Xier_Sword_SlideAttack_Montage"
+      },
       Machinegun = {
         "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Machinegun/Xier_Machinegun01_Reload_Montage",
         "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Machinegun/Xier_Machinegun01_Shooting_Montage",
@@ -1621,43 +2101,26 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Machinegun/Xier_Machinegun06_Shooting_Montage",
         "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Machinegun/Xier_Machinegun_Paotai_Shooting_Montage"
       },
-      Bow = {
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Bow/Xier_Bow01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Bow/Xier_Bow02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Bow/Xier_Bow_HeavyShooting_Montage"
-      },
-      Dualblade = {
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_Mod01_SlideAttack_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_RunAttack_03_EffectCreature_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Dualblade/Xier_Dualblade_SlideAttack_Montage"
+      Pistol = {
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Pistol/Xier_Pistol01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Pistol/Xier_Pistol01_Shooting_Montage"
       },
       Crossbow = {
         "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Crossbow/Xier_Crossbow01_Reload_Montage",
         "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Crossbow/Xier_Crossbow01_Shooting_Montage"
       },
-      Cannon = {
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Cannon/Xier_Cannon01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Cannon/Xier_Cannon01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Cannon/Xier_Cannon02_Reload_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Cannon/Xier_Cannon02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Cannon/Xier_Cannon03_Shooting_Montage"
+      Swordwhip = {
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Swordwhip/Xier_Swordwhip_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Swordwhip/Xier_Swordwhip_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Swordwhip/Xier_Swordwhip_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Swordwhip/Xier_Swordwhip_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Combat/Weapon/Swordwhip/Xier_Swordwhip_RunAttack_04_Montage"
       }
     }
   },
   [3103] = {
     Mesh = {
-      All = T.RT_10
+      All = T.RT_11
     },
     Montage = {
       Hit = {
@@ -1698,6 +2161,11 @@ local AssetPath = {
       }
     },
     Weapon = {
+      Bow = {
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Bow/Yeer_Bow01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Bow/Yeer_Bow02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Bow/Yeer_Bow_HeavyShooting_Montage"
+      },
       Katana = {
         "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Katana/Yeer_Katana_FallAttack_Montage",
         "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Katana/Yeer_Katana_HeavyAttack_Montage",
@@ -1727,30 +2195,21 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Claymore/Yeer_Claymore_RunAttack_04_Montage",
         "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Claymore/Yeer_Claymore_SlideAttack_Montage"
       },
-      Sword = {
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_SlideAttack_Montage"
-      },
-      Pistol = {
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Pistol/Yeer_Pistol01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Pistol/Yeer_Pistol01_Shooting_Montage"
-      },
-      Swordwhip = {
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Swordwhip/Yeer_Swordwhip_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Swordwhip/Yeer_Swordwhip_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Swordwhip/Yeer_Swordwhip_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Swordwhip/Yeer_Swordwhip_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Swordwhip/Yeer_Swordwhip_RunAttack_04_Montage"
+      Dualblade = {
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_Mod01_SlideAttack_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_RunAttack_03_EffectCreature_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_SlideAttack_Montage"
       },
       Shotgun = {
         "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Shotgun/Yeer_Shotgun01_Reload_Montage",
@@ -1759,6 +2218,7 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Shotgun/Yeer_Shotgun02_Shooting_Montage",
         "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Shotgun/Yeer_Shotgun03_Reload_Montage",
         "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Shotgun/Yeer_Shotgun03_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Shotgun/Yeer_Shotgun04_Shooting_Montage",
         "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Shotgun/Yeer_Shotgun05_Reload_Montage",
         "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Shotgun/Yeer_Shotgun06_Reload_Montage"
       },
@@ -1780,6 +2240,28 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Polearm/Yeer_Polearm_RunAttack_05_Montage",
         "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Polearm/Yeer_Polearm_SlideAttack_Montage"
       },
+      Cannon = {
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Cannon/Yeer_Cannon01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Cannon/Yeer_Cannon01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Cannon/Yeer_Cannon02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Cannon/Yeer_Cannon02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Cannon/Yeer_Cannon03_Shooting_Montage"
+      },
+      Sword = {
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Sword/Yeer_Sword_SlideAttack_Montage"
+      },
       Machinegun = {
         "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Machinegun/Yeer_Machinegun01_Reload_Montage",
         "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Machinegun/Yeer_Machinegun01_Shooting_Montage",
@@ -1792,43 +2274,26 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Machinegun/Yeer_Machinegun06_Shooting_Montage",
         "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Machinegun/Yeer_Machinegun_Paotai_Shooting_Montage"
       },
-      Bow = {
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Bow/Yeer_Bow01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Bow/Yeer_Bow02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Bow/Yeer_Bow_HeavyShooting_Montage"
-      },
-      Dualblade = {
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_Mod01_SlideAttack_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_RunAttack_03_EffectCreature_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Dualblade/Yeer_Dualblade_SlideAttack_Montage"
+      Pistol = {
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Pistol/Yeer_Pistol01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Pistol/Yeer_Pistol01_Shooting_Montage"
       },
       Crossbow = {
         "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Crossbow/Yeer_Crossbow01_Reload_Montage",
         "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Crossbow/Yeer_Crossbow01_Shooting_Montage"
       },
-      Cannon = {
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Cannon/Yeer_Cannon01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Cannon/Yeer_Cannon01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Cannon/Yeer_Cannon02_Reload_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Cannon/Yeer_Cannon02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Cannon/Yeer_Cannon03_Shooting_Montage"
+      Swordwhip = {
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Swordwhip/Yeer_Swordwhip_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Swordwhip/Yeer_Swordwhip_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Swordwhip/Yeer_Swordwhip_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Swordwhip/Yeer_Swordwhip_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Weapon/Swordwhip/Yeer_Swordwhip_RunAttack_04_Montage"
       }
     }
   },
   [310304] = {
     Mesh = {
-      All = T.RT_10
+      All = T.RT_11
     }
   },
   [2029601] = {},
@@ -1877,34 +2342,34 @@ local AssetPath = {
   },
   [700201] = {
     Mesh = {
-      All = T.RT_5
+      All = T.RT_6
     },
     Montage = {
-      Hit = T.RT_11,
-      Skill = T.RT_12,
-      Locomotion = T.RT_13,
-      SpecialIdle = T.RT_14
+      Hit = T.RT_12,
+      Skill = T.RT_13,
+      Locomotion = T.RT_14,
+      SpecialIdle = T.RT_15
     }
   },
   [700202] = {
     Mesh = {
-      All = T.RT_5
+      All = T.RT_6
     }
   },
   [700203] = {
     Mesh = {
-      All = T.RT_5
+      All = T.RT_6
     },
     Montage = {
-      Hit = T.RT_11,
-      Skill = T.RT_12,
-      Locomotion = T.RT_13,
-      SpecialIdle = T.RT_14
+      Hit = T.RT_12,
+      Skill = T.RT_13,
+      Locomotion = T.RT_14,
+      SpecialIdle = T.RT_15
     }
   },
   [800301] = {
     Mesh = {
-      All = T.RT_15
+      All = T.RT_16
     },
     Montage = {
       Hit = {
@@ -1936,23 +2401,23 @@ local AssetPath = {
   },
   [800302] = {
     Mesh = {
-      All = T.RT_15
+      All = T.RT_16
     }
   },
   [900401] = {
     Mesh = {
-      All = T.RT_16
+      All = T.RT_17
     },
     Montage = {
-      Hit = T.RT_17,
-      Skill = T.RT_18,
-      Locomotion = T.RT_19,
-      SpecialIdle = T.RT_20
+      Hit = T.RT_18,
+      Skill = T.RT_19,
+      Locomotion = T.RT_20,
+      SpecialIdle = T.RT_21
     }
   },
   [2101] = {
     Mesh = {
-      All = T.RT_21
+      All = T.RT_22
     },
     Montage = {
       Hit = {
@@ -1993,6 +2458,11 @@ local AssetPath = {
       }
     },
     Weapon = {
+      Bow = {
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Bow/Shuimu_Bow01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Bow/Shuimu_Bow02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Bow/Shuimu_Bow_HeavyShooting_Montage"
+      },
       Katana = {
         "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Katana/Shuimu_Katana_FallAttack_Montage",
         "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Katana/Shuimu_Katana_HeavyAttack_Montage",
@@ -2022,30 +2492,21 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Claymore/Shuimu_Claymore_RunAttack_04_Montage",
         "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Claymore/Shuimu_Claymore_SlideAttack_Montage"
       },
-      Sword = {
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_SlideAttack_Montage"
-      },
-      Pistol = {
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Pistol/Shuimu_Pistol01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Pistol/Shuimu_Pistol01_Shooting_Montage"
-      },
-      Swordwhip = {
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Swordwhip/Shuimu_Swordwhip_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Swordwhip/Shuimu_Swordwhip_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Swordwhip/Shuimu_Swordwhip_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Swordwhip/Shuimu_Swordwhip_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Swordwhip/Shuimu_Swordwhip_RunAttack_04_Montage"
+      Dualblade = {
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_Mod01_SlideAttack_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_RunAttack_03_EffectCreature_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_SlideAttack_Montage"
       },
       Shotgun = {
         "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Shotgun/Shuimu_Shotgun01_Reload_Montage",
@@ -2054,6 +2515,7 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Shotgun/Shuimu_Shotgun02_Shooting_Montage",
         "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Shotgun/Shuimu_Shotgun03_Reload_Montage",
         "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Shotgun/Shuimu_Shotgun03_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Shotgun/Shuimu_Shotgun04_Shooting_Montage",
         "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Shotgun/Shuimu_Shotgun05_Reload_Montage",
         "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Shotgun/Shuimu_Shotgun06_Reload_Montage"
       },
@@ -2075,6 +2537,28 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Polearm/Shuimu_Polearm_RunAttack_05_Montage",
         "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Polearm/Shuimu_Polearm_SlideAttack_Montage"
       },
+      Cannon = {
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Cannon/Shuimu_Cannon01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Cannon/Shuimu_Cannon01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Cannon/Shuimu_Cannon02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Cannon/Shuimu_Cannon02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Cannon/Shuimu_Cannon03_Shooting_Montage"
+      },
+      Sword = {
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Sword/Shuimu_Sword_SlideAttack_Montage"
+      },
       Machinegun = {
         "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Machinegun/Shuimu_Machinegun01_Reload_Montage",
         "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Machinegun/Shuimu_Machinegun01_Shooting_Montage",
@@ -2087,37 +2571,20 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Machinegun/Shuimu_Machinegun06_Shooting_Montage",
         "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Machinegun/Shuimu_Machinegun_Paotai_Shooting_Montage"
       },
-      Bow = {
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Bow/Shuimu_Bow01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Bow/Shuimu_Bow02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Bow/Shuimu_Bow_HeavyShooting_Montage"
-      },
-      Dualblade = {
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_Mod01_SlideAttack_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_RunAttack_03_EffectCreature_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Dualblade/Shuimu_Dualblade_SlideAttack_Montage"
+      Pistol = {
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Pistol/Shuimu_Pistol01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Pistol/Shuimu_Pistol01_Shooting_Montage"
       },
       Crossbow = {
         "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Crossbow/Shuimu_Crossbow01_Reload_Montage",
         "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Crossbow/Shuimu_Crossbow01_Shooting_Montage"
       },
-      Cannon = {
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Cannon/Shuimu_Cannon01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Cannon/Shuimu_Cannon01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Cannon/Shuimu_Cannon02_Reload_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Cannon/Shuimu_Cannon02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Cannon/Shuimu_Cannon03_Shooting_Montage"
+      Swordwhip = {
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Swordwhip/Shuimu_Swordwhip_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Swordwhip/Shuimu_Swordwhip_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Swordwhip/Shuimu_Swordwhip_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Swordwhip/Shuimu_Swordwhip_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char005_Shuimu/Animation/Montage/Combat/Weapon/Swordwhip/Shuimu_Swordwhip_RunAttack_04_Montage"
       }
     }
   },
@@ -2146,7 +2613,7 @@ local AssetPath = {
   },
   [850501] = {
     Mesh = {
-      All = T.RT_22
+      All = T.RT_23
     },
     Montage = {
       Hit = {
@@ -2187,31 +2654,31 @@ local AssetPath = {
   },
   [850502] = {
     Mesh = {
-      All = T.RT_22
+      All = T.RT_23
     }
   },
   [1101] = {
     Mesh = {
-      All = T.RT_6
+      All = T.RT_7
     },
     Montage = {
-      Hit = T.RT_23,
-      Skill = T.RT_24,
-      Locomotion = T.RT_25
+      Hit = T.RT_24,
+      Skill = T.RT_25,
+      Locomotion = T.RT_26
     },
     Weapon = {
-      Katana = T.RT_26,
-      Claymore = T.RT_27,
-      Sword = T.RT_28,
-      Pistol = T.RT_29,
-      Swordwhip = T.RT_30,
+      Bow = T.RT_27,
+      Katana = T.RT_28,
+      Claymore = T.RT_29,
+      Dualblade = T.RT_30,
       Shotgun = T.RT_31,
       Polearm = T.RT_32,
-      Machinegun = T.RT_33,
-      Bow = T.RT_34,
-      Dualblade = T.RT_35,
-      Crossbow = T.RT_36,
-      Cannon = T.RT_37
+      Cannon = T.RT_33,
+      Sword = T.RT_34,
+      Machinegun = T.RT_35,
+      Pistol = T.RT_36,
+      Crossbow = T.RT_37,
+      Swordwhip = T.RT_38
     }
   },
   [1102] = {
@@ -2223,23 +2690,23 @@ local AssetPath = {
       }
     },
     Montage = {
-      Hit = T.RT_23,
-      Skill = T.RT_24,
-      Locomotion = T.RT_25
+      Hit = T.RT_24,
+      Skill = T.RT_25,
+      Locomotion = T.RT_26
     },
     Weapon = {
-      Katana = T.RT_26,
-      Claymore = T.RT_27,
-      Sword = T.RT_28,
-      Pistol = T.RT_29,
-      Swordwhip = T.RT_30,
+      Bow = T.RT_27,
+      Katana = T.RT_28,
+      Claymore = T.RT_29,
+      Dualblade = T.RT_30,
       Shotgun = T.RT_31,
       Polearm = T.RT_32,
-      Machinegun = T.RT_33,
-      Bow = T.RT_34,
-      Dualblade = T.RT_35,
-      Crossbow = T.RT_36,
-      Cannon = T.RT_37
+      Cannon = T.RT_33,
+      Sword = T.RT_34,
+      Machinegun = T.RT_35,
+      Pistol = T.RT_36,
+      Crossbow = T.RT_37,
+      Swordwhip = T.RT_38
     }
   },
   [600401] = {
@@ -2285,32 +2752,32 @@ local AssetPath = {
   },
   [850002] = {
     Mesh = {
-      All = T.RT_38
+      All = T.RT_39
     }
   },
   [310101] = {
     Mesh = {
-      All = T.RT_8
+      All = T.RT_9
     }
   },
   [310102] = {
     Mesh = {
-      All = T.RT_8
+      All = T.RT_9
     }
   },
   [310103] = {
     Mesh = {
-      All = T.RT_8
+      All = T.RT_9
     }
   },
   [950104] = {
     Mesh = {
-      All = T.RT_39
+      All = T.RT_40
     },
     Montage = {
-      Hit = T.RT_40,
-      Skill = T.RT_41,
-      Locomotion = T.RT_42
+      Hit = T.RT_41,
+      Skill = T.RT_42,
+      Locomotion = T.RT_43
     }
   },
   [2039901] = {
@@ -2322,7 +2789,7 @@ local AssetPath = {
   },
   [2401] = {
     Mesh = {
-      All = T.RT_43
+      All = T.RT_1
     },
     Montage = {
       Hit = {
@@ -2363,6 +2830,11 @@ local AssetPath = {
       }
     },
     Weapon = {
+      Bow = {
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Bow/Baiheng_Bow01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Bow/Baiheng_Bow02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Bow/Baiheng_Bow_HeavyShooting_Montage"
+      },
       Katana = {
         "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Katana/Baiheng_Katana_FallAttack_Montage",
         "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Katana/Baiheng_Katana_HeavyAttack_Montage",
@@ -2392,30 +2864,21 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Claymore/Baiheng_Claymore_RunAttack_04_Montage",
         "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Claymore/Baiheng_Claymore_SlideAttack_Montage"
       },
-      Sword = {
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_SlideAttack_Montage"
-      },
-      Pistol = {
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Pistol/Baiheng_Pistol01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Pistol/Baiheng_Pistol01_Shooting_Montage"
-      },
-      Swordwhip = {
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Swordwhip/Baiheng_Swordwhip_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Swordwhip/Baiheng_Swordwhip_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Swordwhip/Baiheng_Swordwhip_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Swordwhip/Baiheng_Swordwhip_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Swordwhip/Baiheng_Swordwhip_RunAttack_04_Montage"
+      Dualblade = {
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_Mod01_SlideAttack_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_RunAttack_03_EffectCreature_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_SlideAttack_Montage"
       },
       Shotgun = {
         "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Shotgun/Baiheng_Shotgun01_Reload_Montage",
@@ -2424,6 +2887,7 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Shotgun/Baiheng_Shotgun02_Shooting_Montage",
         "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Shotgun/Baiheng_Shotgun03_Reload_Montage",
         "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Shotgun/Baiheng_Shotgun03_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Shotgun/Baiheng_Shotgun04_Shooting_Montage",
         "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Shotgun/Baiheng_Shotgun05_Reload_Montage",
         "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Shotgun/Baiheng_Shotgun06_Reload_Montage"
       },
@@ -2445,6 +2909,28 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Polearm/Baiheng_Polearm_RunAttack_05_Montage",
         "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Polearm/Baiheng_Polearm_SlideAttack_Montage"
       },
+      Cannon = {
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Cannon/Baiheng_Cannon01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Cannon/Baiheng_Cannon01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Cannon/Baiheng_Cannon02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Cannon/Baiheng_Cannon02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Cannon/Baiheng_Cannon03_Shooting_Montage"
+      },
+      Sword = {
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Sword/Baiheng_Sword_SlideAttack_Montage"
+      },
       Machinegun = {
         "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Machinegun/Baiheng_Machinegun01_Reload_Montage",
         "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Machinegun/Baiheng_Machinegun01_Shooting_Montage",
@@ -2457,46 +2943,38 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Machinegun/Baiheng_Machinegun06_Shooting_Montage",
         "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Machinegun/Baiheng_Machinegun_Paotai_Shooting_Montage"
       },
-      Bow = {
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Bow/Baiheng_Bow01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Bow/Baiheng_Bow02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Bow/Baiheng_Bow_HeavyShooting_Montage"
-      },
-      Dualblade = {
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_Mod01_SlideAttack_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_RunAttack_03_EffectCreature_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Dualblade/Baiheng_Dualblade_SlideAttack_Montage"
+      Pistol = {
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Pistol/Baiheng_Pistol01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Pistol/Baiheng_Pistol01_Shooting_Montage"
       },
       Crossbow = {
         "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Crossbow/Baiheng_Crossbow01_Reload_Montage",
         "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Crossbow/Baiheng_Crossbow01_Shooting_Montage"
       },
-      Cannon = {
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Cannon/Baiheng_Cannon01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Cannon/Baiheng_Cannon01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Cannon/Baiheng_Cannon02_Reload_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Cannon/Baiheng_Cannon02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Cannon/Baiheng_Cannon03_Shooting_Montage"
+      Swordwhip = {
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Swordwhip/Baiheng_Swordwhip_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Swordwhip/Baiheng_Swordwhip_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Swordwhip/Baiheng_Swordwhip_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Swordwhip/Baiheng_Swordwhip_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Montage/Combat/Weapon/Swordwhip/Baiheng_Swordwhip_RunAttack_04_Montage"
       }
     }
   },
   [101] = {
     Mesh = {
       All = {
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu02_Part01_SM",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu02_SM",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu02_Sum01_SM",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu_Body_SM",
         "/Game/Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu_Cloak_SM",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu_Expre_SM",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu_Face_SM",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu_Hair_SM",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu_Part01_SM",
         "/Game/Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu_SM",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu_TP01_SM"
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu_TP01_SM",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu_TP02_SM"
       }
     },
     Montage = {
@@ -2543,6 +3021,11 @@ local AssetPath = {
       }
     },
     Weapon = {
+      Bow = {
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Bow/Nvzhu_Bow01_Shooting_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Bow/Nvzhu_Bow02_Shooting_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Bow/Nvzhu_Bow_HeavyShooting_Montage"
+      },
       Katana = {
         "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Katana/Nvzhu_Katana_FallAttack_Montage",
         "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Katana/Nvzhu_Katana_HeavyAttack_Montage",
@@ -2572,30 +3055,21 @@ local AssetPath = {
         "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Claymore/Nvzhu_Claymore_RunAttack_04_Montage",
         "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Claymore/Nvzhu_Claymore_SlideAttack_Montage"
       },
-      Sword = {
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_FallAttack_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_SlideAttack_Montage"
-      },
-      Pistol = {
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Pistol/Nvzhu_Pistol01_Reload_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Pistol/Nvzhu_Pistol01_Shooting_Montage"
-      },
-      Swordwhip = {
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Swordwhip/Nvzhu_Swordwhip_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Swordwhip/Nvzhu_Swordwhip_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Swordwhip/Nvzhu_Swordwhip_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Swordwhip/Nvzhu_Swordwhip_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Swordwhip/Nvzhu_Swordwhip_RunAttack_04_Montage"
+      Dualblade = {
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_FallAttack_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_Mod01_SlideAttack_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_RunAttack_03_EffectCreature_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_SlideAttack_Montage"
       },
       Shotgun = {
         "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Shotgun/Nvzhu_Shotgun01_Reload_Montage",
@@ -2604,6 +3078,7 @@ local AssetPath = {
         "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Shotgun/Nvzhu_Shotgun02_Shooting_Montage",
         "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Shotgun/Nvzhu_Shotgun03_Reload_Montage",
         "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Shotgun/Nvzhu_Shotgun03_Shooting_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Shotgun/Nvzhu_Shotgun04_Shooting_Montage",
         "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Shotgun/Nvzhu_Shotgun05_Reload_Montage",
         "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Shotgun/Nvzhu_Shotgun06_Reload_Montage"
       },
@@ -2625,6 +3100,28 @@ local AssetPath = {
         "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Polearm/Nvzhu_Polearm_RunAttack_05_Montage",
         "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Polearm/Nvzhu_Polearm_SlideAttack_Montage"
       },
+      Cannon = {
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Cannon/Nvzhu_Cannon01_Reload_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Cannon/Nvzhu_Cannon01_Shooting_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Cannon/Nvzhu_Cannon02_Reload_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Cannon/Nvzhu_Cannon02_Shooting_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Cannon/Nvzhu_Cannon03_Shooting_Montage"
+      },
+      Sword = {
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Sword/Nvzhu_Sword_SlideAttack_Montage"
+      },
       Machinegun = {
         "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Machinegun/Nvzhu_Machinegun01_Reload_Montage",
         "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Machinegun/Nvzhu_Machinegun01_Shooting_Montage",
@@ -2637,44 +3134,35 @@ local AssetPath = {
         "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Machinegun/Nvzhu_Machinegun06_Shooting_Montage",
         "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Machinegun/Nvzhu_Machinegun_Paotai_Shooting_Montage"
       },
-      Bow = {
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Bow/Nvzhu_Bow01_Shooting_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Bow/Nvzhu_Bow02_Shooting_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Bow/Nvzhu_Bow_HeavyShooting_Montage"
-      },
-      Dualblade = {
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_FallAttack_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_Mod01_SlideAttack_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_RunAttack_03_EffectCreature_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Dualblade/Nvzhu_Dualblade_SlideAttack_Montage"
+      Pistol = {
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Pistol/Nvzhu_Pistol01_Reload_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Pistol/Nvzhu_Pistol01_Shooting_Montage"
       },
       Crossbow = {
         "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Crossbow/Nvzhu_Crossbow01_Reload_Montage",
         "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Crossbow/Nvzhu_Crossbow01_Shooting_Montage"
       },
-      Cannon = {
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Cannon/Nvzhu_Cannon01_Reload_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Cannon/Nvzhu_Cannon01_Shooting_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Cannon/Nvzhu_Cannon02_Reload_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Cannon/Nvzhu_Cannon02_Shooting_Montage",
-        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Cannon/Nvzhu_Cannon03_Shooting_Montage"
+      Swordwhip = {
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Swordwhip/Nvzhu_Swordwhip_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Swordwhip/Nvzhu_Swordwhip_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Swordwhip/Nvzhu_Swordwhip_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Swordwhip/Nvzhu_Swordwhip_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Weapon/Swordwhip/Nvzhu_Swordwhip_RunAttack_04_Montage"
       }
     }
   },
   [102] = {
     Mesh = {
       All = {
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Mesh/Nanzhu02_Part01_SM",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Mesh/Nanzhu02_SM",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Mesh/Nanzhu02_Sum01_SM",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Mesh/Nanzhu_Body_SM",
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Mesh/Nanzhu_Cloak_SM",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Mesh/Nanzhu_Expre_SM",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Mesh/Nanzhu_Face_SM",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Mesh/Nanzhu_Hair_Part_SM",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Mesh/Nanzhu_Hair_SM",
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Mesh/Nanzhu_SM",
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Mesh/Nanzhu_TP01_SM",
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Mesh/Nanzhu_TP02_SM"
@@ -2722,6 +3210,11 @@ local AssetPath = {
       }
     },
     Weapon = {
+      Bow = {
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Bow/Nanzhu_Bow01_Shooting_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Bow/Nanzhu_Bow02_Shooting_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Bow/Nanzhu_Bow_HeavyShooting_Montage"
+      },
       Katana = {
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Katana/Nanzhu_Katana_FallAttack_Montage",
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Katana/Nanzhu_Katana_HeavyAttack_Montage",
@@ -2751,30 +3244,21 @@ local AssetPath = {
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Claymore/Nanzhu_Claymore_RunAttack_04_Montage",
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Claymore/Nanzhu_Claymore_SlideAttack_Montage"
       },
-      Sword = {
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_FallAttack_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_SlideAttack_Montage"
-      },
-      Pistol = {
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Pistol/Nanzhu_Pistol01_Reload_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Pistol/Nanzhu_Pistol01_Shooting_Montage"
-      },
-      Swordwhip = {
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Swordwhip/Nanzhu_Swordwhip_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Swordwhip/Nanzhu_Swordwhip_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Swordwhip/Nanzhu_Swordwhip_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Swordwhip/Nanzhu_Swordwhip_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Swordwhip/Nanzhu_Swordwhip_RunAttack_04_Montage"
+      Dualblade = {
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_FallAttack_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_Mod01_SlideAttack_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_RunAttack_03_EffectCreature_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_SlideAttack_Montage"
       },
       Shotgun = {
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Shotgun/Nanzhu_Shotgun01_Reload_Montage",
@@ -2783,6 +3267,7 @@ local AssetPath = {
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Shotgun/Nanzhu_Shotgun02_Shooting_Montage",
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Shotgun/Nanzhu_Shotgun03_Reload_Montage",
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Shotgun/Nanzhu_Shotgun03_Shooting_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Shotgun/Nanzhu_Shotgun04_Shooting_Montage",
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Shotgun/Nanzhu_Shotgun05_Reload_Montage",
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Shotgun/Nanzhu_Shotgun06_Reload_Montage"
       },
@@ -2804,6 +3289,28 @@ local AssetPath = {
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Polearm/Nanzhu_Polearm_RunAttack_05_Montage",
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Polearm/Nanzhu_Polearm_SlideAttack_Montage"
       },
+      Cannon = {
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Cannon/Nanzhu_Cannon01_Reload_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Cannon/Nanzhu_Cannon01_Shooting_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Cannon/Nanzhu_Cannon02_Reload_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Cannon/Nanzhu_Cannon02_Shooting_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Cannon/Nanzhu_Cannon03_Shooting_Montage"
+      },
+      Sword = {
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Sword/Nanzhu_Sword_SlideAttack_Montage"
+      },
       Machinegun = {
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Machinegun/Nanzhu_Machinegun01_Reload_Montage",
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Machinegun/Nanzhu_Machinegun01_Shooting_Montage",
@@ -2816,37 +3323,20 @@ local AssetPath = {
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Machinegun/Nanzhu_Machinegun06_Shooting_Montage",
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Machinegun/Nanzhu_Machinegun_Paotai_Shooting_Montage"
       },
-      Bow = {
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Bow/Nanzhu_Bow01_Shooting_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Bow/Nanzhu_Bow02_Shooting_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Bow/Nanzhu_Bow_HeavyShooting_Montage"
-      },
-      Dualblade = {
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_FallAttack_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_Mod01_SlideAttack_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_RunAttack_03_EffectCreature_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Dualblade/Nanzhu_Dualblade_SlideAttack_Montage"
+      Pistol = {
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Pistol/Nanzhu_Pistol01_Reload_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Pistol/Nanzhu_Pistol01_Shooting_Montage"
       },
       Crossbow = {
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Crossbow/Nanzhu_Crossbow01_Reload_Montage",
         "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Crossbow/Nanzhu_Crossbow01_Shooting_Montage"
       },
-      Cannon = {
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Cannon/Nanzhu_Cannon01_Reload_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Cannon/Nanzhu_Cannon01_Shooting_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Cannon/Nanzhu_Cannon02_Reload_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Cannon/Nanzhu_Cannon02_Shooting_Montage",
-        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Cannon/Nanzhu_Cannon03_Shooting_Montage"
+      Swordwhip = {
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Swordwhip/Nanzhu_Swordwhip_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Swordwhip/Nanzhu_Swordwhip_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Swordwhip/Nanzhu_Swordwhip_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Swordwhip/Nanzhu_Swordwhip_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/NPC002_Nanzhu/Animation/Montage/Combat/Weapon/Swordwhip/Nanzhu_Swordwhip_RunAttack_04_Montage"
       }
     }
   },
@@ -2892,15 +3382,12 @@ local AssetPath = {
       }
     },
     Weapon = {
-      Sword = {
-        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Sword/WeitaF_Sword_FallAttack_Montage",
-        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Sword/WeitaF_Sword_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Sword/WeitaF_Sword_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Sword/WeitaF_Sword_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Sword/WeitaF_Sword_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Sword/WeitaF_Sword_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Sword/WeitaF_Sword_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Sword/WeitaF_Sword_SlideAttack_Montage"
+      Dualblade = {
+        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Dualblade/WeitaF_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Dualblade/WeitaF_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Dualblade/WeitaF_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Dualblade/WeitaF_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Dualblade/WeitaF_Dualblade_Mod01_RunAttack_04_Montage"
       },
       Shotgun = {
         "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Shotgun/WeitaF_Shotgun01_Reload_Montage",
@@ -2912,6 +3399,16 @@ local AssetPath = {
         "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Shotgun/WeitaF_Shotgun05_Reload_Montage",
         "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Shotgun/WeitaF_Shotgun06_Reload_Montage"
       },
+      Sword = {
+        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Sword/WeitaF_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Sword/WeitaF_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Sword/WeitaF_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Sword/WeitaF_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Sword/WeitaF_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Sword/WeitaF_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Sword/WeitaF_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Sword/WeitaF_Sword_SlideAttack_Montage"
+      },
       Machinegun = {
         "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Machinegun/WeitaF_Machinegun01_Reload_Montage",
         "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Machinegun/WeitaF_Machinegun01_Shooting_Montage",
@@ -2922,19 +3419,12 @@ local AssetPath = {
         "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Machinegun/WeitaF_Machinegun05_Shooting_Montage",
         "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Machinegun/WeitaF_Machinegun06_Shooting_Montage",
         "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Machinegun/WeitaF_Machinegun_Paotai_Shooting_Montage"
-      },
-      Dualblade = {
-        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Dualblade/WeitaF_Dualblade_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Dualblade/WeitaF_Dualblade_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Dualblade/WeitaF_Dualblade_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Dualblade/WeitaF_Dualblade_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/NPC004_WeitaF/Animation/Montage/Combat/Weapon/Dualblade/WeitaF_Dualblade_Mod01_RunAttack_04_Montage"
       }
     }
   },
   [104] = {
     Mesh = {
-      All = T.RT_4
+      All = T.RT_5
     },
     Montage = {
       Hit = {
@@ -2972,15 +3462,12 @@ local AssetPath = {
       }
     },
     Weapon = {
-      Sword = {
-        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Sword/WeitaM_Sword_FallAttack_Montage",
-        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Sword/WeitaM_Sword_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Sword/WeitaM_Sword_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Sword/WeitaM_Sword_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Sword/WeitaM_Sword_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Sword/WeitaM_Sword_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Sword/WeitaM_Sword_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Sword/WeitaM_Sword_SlideAttack_Montage"
+      Dualblade = {
+        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Dualblade/WeitaM_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Dualblade/WeitaM_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Dualblade/WeitaM_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Dualblade/WeitaM_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Dualblade/WeitaM_Dualblade_Mod01_RunAttack_04_Montage"
       },
       Shotgun = {
         "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Shotgun/WeitaM_Shotgun01_Reload_Montage",
@@ -2992,6 +3479,16 @@ local AssetPath = {
         "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Shotgun/WeitaM_Shotgun05_Reload_Montage",
         "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Shotgun/WeitaM_Shotgun06_Reload_Montage"
       },
+      Sword = {
+        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Sword/WeitaM_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Sword/WeitaM_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Sword/WeitaM_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Sword/WeitaM_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Sword/WeitaM_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Sword/WeitaM_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Sword/WeitaM_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Sword/WeitaM_Sword_SlideAttack_Montage"
+      },
       Machinegun = {
         "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Machinegun/WeitaM_Machinegun01_Reload_Montage",
         "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Machinegun/WeitaM_Machinegun01_Shooting_Montage",
@@ -3002,13 +3499,6 @@ local AssetPath = {
         "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Machinegun/WeitaM_Machinegun05_Shooting_Montage",
         "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Machinegun/WeitaM_Machinegun06_Shooting_Montage",
         "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Machinegun/WeitaM_Machinegun_Paotai_Shooting_Montage"
-      },
-      Dualblade = {
-        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Dualblade/WeitaM_Dualblade_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Dualblade/WeitaM_Dualblade_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Dualblade/WeitaM_Dualblade_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Dualblade/WeitaM_Dualblade_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/NPC005_WeitaM/Animation/Montage/Combat/Weapon/Dualblade/WeitaM_Dualblade_Mod01_RunAttack_04_Montage"
       }
     }
   },
@@ -3055,6 +3545,11 @@ local AssetPath = {
       }
     },
     Weapon = {
+      Bow = {
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Bow/Yuming_Bow01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Bow/Yuming_Bow02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Bow/Yuming_Bow_HeavyShooting_Montage"
+      },
       Katana = {
         "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Katana/Yuming_Katana_FallAttack_Montage",
         "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Katana/Yuming_Katana_HeavyAttack_Montage",
@@ -3084,30 +3579,21 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Claymore/Yuming_Claymore_RunAttack_04_Montage",
         "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Claymore/Yuming_Claymore_SlideAttack_Montage"
       },
-      Sword = {
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_SlideAttack_Montage"
-      },
-      Pistol = {
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Pistol/Yuming_Pistol01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Pistol/Yuming_Pistol01_Shooting_Montage"
-      },
-      Swordwhip = {
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Swordwhip/Yuming_Swordwhip_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Swordwhip/Yuming_Swordwhip_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Swordwhip/Yuming_Swordwhip_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Swordwhip/Yuming_Swordwhip_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Swordwhip/Yuming_Swordwhip_RunAttack_04_Montage"
+      Dualblade = {
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_Mod01_SlideAttack_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_RunAttack_03_EffectCreature_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_SlideAttack_Montage"
       },
       Shotgun = {
         "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Shotgun/Yuming_Shotgun01_Reload_Montage",
@@ -3116,6 +3602,7 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Shotgun/Yuming_Shotgun02_Shooting_Montage",
         "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Shotgun/Yuming_Shotgun03_Reload_Montage",
         "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Shotgun/Yuming_Shotgun03_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Shotgun/Yuming_Shotgun04_Shooting_Montage",
         "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Shotgun/Yuming_Shotgun05_Reload_Montage",
         "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Shotgun/Yuming_Shotgun06_Reload_Montage"
       },
@@ -3137,6 +3624,28 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Polearm/Yuming_Polearm_RunAttack_05_Montage",
         "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Polearm/Yuming_Polearm_SlideAttack_Montage"
       },
+      Cannon = {
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Cannon/Yuming_Cannon01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Cannon/Yuming_Cannon01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Cannon/Yuming_Cannon02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Cannon/Yuming_Cannon02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Cannon/Yuming_Cannon03_Shooting_Montage"
+      },
+      Sword = {
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Sword/Yuming_Sword_SlideAttack_Montage"
+      },
       Machinegun = {
         "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Machinegun/Yuming_Machinegun01_Reload_Montage",
         "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Machinegun/Yuming_Machinegun01_Shooting_Montage",
@@ -3149,37 +3658,20 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Machinegun/Yuming_Machinegun06_Shooting_Montage",
         "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Machinegun/Yuming_Machinegun_Paotai_Shooting_Montage"
       },
-      Bow = {
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Bow/Yuming_Bow01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Bow/Yuming_Bow02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Bow/Yuming_Bow_HeavyShooting_Montage"
-      },
-      Dualblade = {
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_Mod01_SlideAttack_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_RunAttack_03_EffectCreature_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Dualblade/Yuming_Dualblade_SlideAttack_Montage"
+      Pistol = {
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Pistol/Yuming_Pistol01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Pistol/Yuming_Pistol01_Shooting_Montage"
       },
       Crossbow = {
         "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Crossbow/Yuming_Crossbow01_Reload_Montage",
         "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Crossbow/Yuming_Crossbow01_Shooting_Montage"
       },
-      Cannon = {
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Cannon/Yuming_Cannon01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Cannon/Yuming_Cannon01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Cannon/Yuming_Cannon02_Reload_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Cannon/Yuming_Cannon02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Cannon/Yuming_Cannon03_Shooting_Montage"
+      Swordwhip = {
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Swordwhip/Yuming_Swordwhip_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Swordwhip/Yuming_Swordwhip_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Swordwhip/Yuming_Swordwhip_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Swordwhip/Yuming_Swordwhip_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char008_Yuming/Animation/Montage/Combat/Weapon/Swordwhip/Yuming_Swordwhip_RunAttack_04_Montage"
       }
     }
   },
@@ -3226,6 +3718,11 @@ local AssetPath = {
       }
     },
     Weapon = {
+      Bow = {
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Bow/Landi_Bow01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Bow/Landi_Bow02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Bow/Landi_Bow_HeavyShooting_Montage"
+      },
       Katana = {
         "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Katana/Landi_Katana_FallAttack_Montage",
         "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Katana/Landi_Katana_HeavyAttack_Montage",
@@ -3255,30 +3752,21 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Claymore/Landi_Claymore_RunAttack_04_Montage",
         "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Claymore/Landi_Claymore_SlideAttack_Montage"
       },
-      Sword = {
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_SlideAttack_Montage"
-      },
-      Pistol = {
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Pistol/Landi_Pistol01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Pistol/Landi_Pistol01_Shooting_Montage"
-      },
-      Swordwhip = {
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Swordwhip/Landi_Swordwhip_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Swordwhip/Landi_Swordwhip_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Swordwhip/Landi_Swordwhip_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Swordwhip/Landi_Swordwhip_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Swordwhip/Landi_Swordwhip_RunAttack_04_Montage"
+      Dualblade = {
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_Mod01_SlideAttack_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_RunAttack_03_EffectCreature_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_SlideAttack_Montage"
       },
       Shotgun = {
         "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Shotgun/Landi_Shotgun01_Reload_Montage",
@@ -3287,6 +3775,7 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Shotgun/Landi_Shotgun02_Shooting_Montage",
         "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Shotgun/Landi_Shotgun03_Reload_Montage",
         "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Shotgun/Landi_Shotgun03_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Shotgun/Landi_Shotgun04_Shooting_Montage",
         "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Shotgun/Landi_Shotgun05_Reload_Montage",
         "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Shotgun/Landi_Shotgun06_Reload_Montage"
       },
@@ -3308,6 +3797,28 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Polearm/Landi_Polearm_RunAttack_05_Montage",
         "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Polearm/Landi_Polearm_SlideAttack_Montage"
       },
+      Cannon = {
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Cannon/Landi_Cannon01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Cannon/Landi_Cannon01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Cannon/Landi_Cannon02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Cannon/Landi_Cannon02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Cannon/Landi_Cannon03_Shooting_Montage"
+      },
+      Sword = {
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Sword/Landi_Sword_SlideAttack_Montage"
+      },
       Machinegun = {
         "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Machinegun/Landi_Machinegun01_Reload_Montage",
         "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Machinegun/Landi_Machinegun01_Shooting_Montage",
@@ -3320,37 +3831,20 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Machinegun/Landi_Machinegun06_Shooting_Montage",
         "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Machinegun/Landi_Machinegun_Paotai_Shooting_Montage"
       },
-      Bow = {
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Bow/Landi_Bow01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Bow/Landi_Bow02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Bow/Landi_Bow_HeavyShooting_Montage"
-      },
-      Dualblade = {
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_Mod01_SlideAttack_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_RunAttack_03_EffectCreature_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Dualblade/Landi_Dualblade_SlideAttack_Montage"
+      Pistol = {
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Pistol/Landi_Pistol01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Pistol/Landi_Pistol01_Shooting_Montage"
       },
       Crossbow = {
         "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Crossbow/Landi_Crossbow01_Reload_Montage",
         "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Crossbow/Landi_Crossbow01_Shooting_Montage"
       },
-      Cannon = {
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Cannon/Landi_Cannon01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Cannon/Landi_Cannon01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Cannon/Landi_Cannon02_Reload_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Cannon/Landi_Cannon02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Cannon/Landi_Cannon03_Shooting_Montage"
+      Swordwhip = {
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Swordwhip/Landi_Swordwhip_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Swordwhip/Landi_Swordwhip_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Swordwhip/Landi_Swordwhip_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Swordwhip/Landi_Swordwhip_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char012_Landi/Animation/Montage/Combat/Weapon/Swordwhip/Landi_Swordwhip_RunAttack_04_Montage"
       }
     }
   },
@@ -3359,6 +3853,7 @@ local AssetPath = {
       All = T.RT_46
     }
   },
+  [2069901] = {},
   [1000301] = {
     Mesh = {
       All = {
@@ -3418,7 +3913,6 @@ local AssetPath = {
       }
     }
   },
-  [2069901] = {},
   [2069801] = {
     Mesh = {
       All = {
@@ -3454,11 +3948,6 @@ local AssetPath = {
       }
     }
   },
-  [330101] = {
-    Mesh = {
-      All = T.RT_47
-    }
-  },
   [2050701] = {
     Mesh = {
       All = {
@@ -3473,11 +3962,29 @@ local AssetPath = {
       }
     }
   },
+  [330101] = {
+    Mesh = {
+      All = T.RT_47
+    }
+  },
   [2050301] = {
     Mesh = {
       All = {
-        "/Game/Asset/Char/Player/Common/Weapon/Machinegun/Machinegun_Qiqing/Mesh/1111",
         "/Game/Asset/Char/Player/Common/Weapon/Machinegun/Machinegun_Qiqing/Mesh/Machinegun_Qiqing_SM"
+      }
+    }
+  },
+  [2050201] = {
+    Mesh = {
+      All = {
+        "/Game/Asset/Char/Player/Common/Weapon/Machinegun/Machinegun_Fangzhu/Mesh/Machinegun_Fangzhu_SM"
+      }
+    }
+  },
+  [2050101] = {
+    Mesh = {
+      All = {
+        "/Game/Asset/Char/Player/Common/Weapon/Machinegun/Machinegun_Chixing/Mesh/Machinegun_Chixing_SM"
       }
     }
   },
@@ -3497,17 +4004,17 @@ local AssetPath = {
       Hit = T.RT_49
     }
   },
-  [2050201] = {
+  [2049901] = {
     Mesh = {
       All = {
-        "/Game/Asset/Char/Player/Common/Weapon/Machinegun/Machinegun_Fangzhu/Mesh/Machinegun_Fangzhu_SM"
+        "/Game/Asset/Char/Player/Common/Weapon/Shotgun/Shotgun_Jinshu/Mesh/Shotgun_Jinshu_SM"
       }
     }
   },
-  [2050101] = {
+  [2049801] = {
     Mesh = {
       All = {
-        "/Game/Asset/Char/Player/Common/Weapon/Machinegun/Machinegun_Chixing/Mesh/Machinegun_Chixing_SM"
+        "/Game/Asset/Char/Player/Common/Weapon/Shotgun/Shotgun_Liandu/Mesh/Shotgun_Liandu_SM"
       }
     }
   },
@@ -3565,20 +4072,6 @@ local AssetPath = {
       }
     }
   },
-  [2049901] = {
-    Mesh = {
-      All = {
-        "/Game/Asset/Char/Player/Common/Weapon/Shotgun/Shotgun_Jinshu/Mesh/Shotgun_Jinshu_SM"
-      }
-    }
-  },
-  [2049801] = {
-    Mesh = {
-      All = {
-        "/Game/Asset/Char/Player/Common/Weapon/Shotgun/Shotgun_Liandu/Mesh/Shotgun_Liandu_SM"
-      }
-    }
-  },
   [2040401] = {
     Mesh = {
       All = {
@@ -3587,14 +4080,33 @@ local AssetPath = {
       }
     }
   },
+  [2040301] = {
+    Mesh = {
+      All = {
+        "/Game/Asset/Char/Player/Common/Weapon/Shotgun/Shotgun_Shengcai/Mesh/Shotgun_Shengcai_SM"
+      }
+    }
+  },
+  [2040201] = {
+    Mesh = {
+      All = {
+        "/Game/Asset/Char/Player/Common/Weapon/Shotgun/Shotgun_Banzi/Mesh/Shotgun_Banzi_SM"
+      }
+    }
+  },
   [3201] = {
     Mesh = {
       All = {
+        "/Game/Asset/Char/Player/Char006_Haier/Mesh/Haier_Body_SM",
         "/Game/Asset/Char/Player/Char006_Haier/Mesh/Haier_Cloak_SM",
+        "/Game/Asset/Char/Player/Char006_Haier/Mesh/Haier_Face_SM",
+        "/Game/Asset/Char/Player/Char006_Haier/Mesh/Haier_Hair_SM",
         "/Game/Asset/Char/Player/Char006_Haier/Mesh/Haier_Part02_SM",
         "/Game/Asset/Char/Player/Char006_Haier/Mesh/Haier_SM",
         "/Game/Asset/Char/Player/Char006_Haier/Mesh/Haier_TP01_Part01_SM",
         "/Game/Asset/Char/Player/Char006_Haier/Mesh/Haier_TP01_SM",
+        "/Game/Asset/Char/Player/Char006_Haier/Mesh/Haier_TP02_Part01_SM",
+        "/Game/Asset/Char/Player/Char006_Haier/Mesh/Haier_TP02_SM",
         "/Game/Asset/Char/Player/Char006_Haier/Mesh/Phyx_Haier"
       }
     },
@@ -3636,6 +4148,11 @@ local AssetPath = {
       }
     },
     Weapon = {
+      Bow = {
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Bow/Haier_Bow01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Bow/Haier_Bow02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Bow/Haier_Bow_HeavyShooting_Montage"
+      },
       Katana = {
         "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Katana/Haier_Katana_FallAttack_Montage",
         "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Katana/Haier_Katana_HeavyAttack_Montage",
@@ -3665,30 +4182,21 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Claymore/Haier_Claymore_RunAttack_04_Montage",
         "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Claymore/Haier_Claymore_SlideAttack_Montage"
       },
-      Sword = {
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_SlideAttack_Montage"
-      },
-      Pistol = {
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Pistol/Haier_Pistol01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Pistol/Haier_Pistol01_Shooting_Montage"
-      },
-      Swordwhip = {
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Swordwhip/Haier_Swordwhip_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Swordwhip/Haier_Swordwhip_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Swordwhip/Haier_Swordwhip_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Swordwhip/Haier_Swordwhip_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Swordwhip/Haier_Swordwhip_RunAttack_04_Montage"
+      Dualblade = {
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_Mod01_SlideAttack_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_RunAttack_03_EffectCreature_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_SlideAttack_Montage"
       },
       Shotgun = {
         "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Shotgun/Haier_Shotgun01_Reload_Montage",
@@ -3697,6 +4205,7 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Shotgun/Haier_Shotgun02_Shooting_Montage",
         "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Shotgun/Haier_Shotgun03_Reload_Montage",
         "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Shotgun/Haier_Shotgun03_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Shotgun/Haier_Shotgun04_Shooting_Montage",
         "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Shotgun/Haier_Shotgun05_Reload_Montage",
         "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Shotgun/Haier_Shotgun06_Reload_Montage"
       },
@@ -3718,6 +4227,28 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Polearm/Haier_Polearm_RunAttack_05_Montage",
         "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Polearm/Haier_Polearm_SlideAttack_Montage"
       },
+      Cannon = {
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Cannon/Haier_Cannon01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Cannon/Haier_Cannon01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Cannon/Haier_Cannon02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Cannon/Haier_Cannon02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Cannon/Haier_Cannon03_Shooting_Montage"
+      },
+      Sword = {
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Sword/Haier_Sword_SlideAttack_Montage"
+      },
       Machinegun = {
         "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Machinegun/Haier_Machinegun01_Reload_Montage",
         "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Machinegun/Haier_Machinegun01_Shooting_Montage",
@@ -3730,37 +4261,20 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Machinegun/Haier_Machinegun06_Shooting_Montage",
         "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Machinegun/Haier_Machinegun_Paotai_Shooting_Montage"
       },
-      Bow = {
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Bow/Haier_Bow01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Bow/Haier_Bow02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Bow/Haier_Bow_HeavyShooting_Montage"
-      },
-      Dualblade = {
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_Mod01_SlideAttack_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_RunAttack_03_EffectCreature_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Dualblade/Haier_Dualblade_SlideAttack_Montage"
+      Pistol = {
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Pistol/Haier_Pistol01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Pistol/Haier_Pistol01_Shooting_Montage"
       },
       Crossbow = {
         "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Crossbow/Haier_Crossbow01_Reload_Montage",
         "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Crossbow/Haier_Crossbow01_Shooting_Montage"
       },
-      Cannon = {
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Cannon/Haier_Cannon01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Cannon/Haier_Cannon01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Cannon/Haier_Cannon02_Reload_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Cannon/Haier_Cannon02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Cannon/Haier_Cannon03_Shooting_Montage"
+      Swordwhip = {
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Swordwhip/Haier_Swordwhip_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Swordwhip/Haier_Swordwhip_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Swordwhip/Haier_Swordwhip_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Swordwhip/Haier_Swordwhip_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char006_Haier/Animation/Montage/Combat/Weapon/Swordwhip/Haier_Swordwhip_RunAttack_04_Montage"
       }
     }
   },
@@ -3774,16 +4288,16 @@ local AssetPath = {
       All = T.RT_50
     }
   },
-  [2040301] = {
+  [2040101] = {
     Mesh = {
       All = {
-        "/Game/Asset/Char/Player/Common/Weapon/Shotgun/Shotgun_Shengcai/Mesh/Shotgun_Shengcai_SM"
+        "/Game/Asset/Char/Player/Common/Weapon/Shotgun/Shotgun_Chixing/Mesh/Shotgun_Chixing_SM"
       }
     }
   },
   [180101] = {
     Mesh = {
-      All = T.RT_3
+      All = T.RT_4
     }
   },
   [980102] = {
@@ -3796,17 +4310,17 @@ local AssetPath = {
       Locomotion = T.RT_54
     }
   },
-  [2040201] = {
+  [2039801] = {
     Mesh = {
       All = {
-        "/Game/Asset/Char/Player/Common/Weapon/Shotgun/Shotgun_Banzi/Mesh/Shotgun_Banzi_SM"
+        "/Game/Asset/Char/Player/Common/Weapon/Cannon/Cannon_Liandu/Mesh/Cannon_Liandu_SM"
       }
     }
   },
-  [2040101] = {
+  [2030301] = {
     Mesh = {
       All = {
-        "/Game/Asset/Char/Player/Common/Weapon/Shotgun/Shotgun_Chixing/Mesh/Shotgun_Chixing_SM"
+        "/Game/Asset/Char/Player/Common/Weapon/Cannon/Cannon_Chixing/Mesh/Cannon_Chixing_SM"
       }
     }
   },
@@ -3855,23 +4369,21 @@ local AssetPath = {
       All = T.RT_55
     }
   },
-  [2039801] = {
+  [2030101] = {
     Mesh = {
       All = {
-        "/Game/Asset/Char/Player/Common/Weapon/Cannon/Cannon_Liandu/Mesh/Cannon_Liandu_SM"
+        "/Game/Asset/Char/Player/Common/Weapon/Cannon/Cannon_Qunxing/Mesh/Cannon_Qunxing_SM"
       }
     }
   },
-  [2030301] = {
+  [2029901] = {
     Mesh = {
-      All = {
-        "/Game/Asset/Char/Player/Common/Weapon/Cannon/Cannon_Chixing/Mesh/Cannon_Chixing_SM"
-      }
+      All = T.RT_56
     }
   },
   [700301] = {
     Mesh = {
-      All = T.RT_56
+      All = T.RT_57
     },
     Montage = {
       Hit = {
@@ -3914,24 +4426,12 @@ local AssetPath = {
   },
   [700302] = {
     Mesh = {
-      All = T.RT_56
-    }
-  },
-  [2030101] = {
-    Mesh = {
-      All = {
-        "/Game/Asset/Char/Player/Common/Weapon/Cannon/Cannon_Qunxing/Mesh/Cannon_Qunxing_SM"
-      }
-    }
-  },
-  [2029901] = {
-    Mesh = {
       All = T.RT_57
     }
   },
   [2029801] = {
     Mesh = {
-      All = T.RT_57
+      All = T.RT_56
     }
   },
   [2029701] = {},
@@ -3945,9 +4445,19 @@ local AssetPath = {
       All = T.RT_58
     }
   },
-  [510101] = {
+  [2020201] = {
     Mesh = {
       All = T.RT_59
+    }
+  },
+  [2020101] = {
+    Mesh = {
+      All = T.RT_59
+    }
+  },
+  [510101] = {
+    Mesh = {
+      All = T.RT_60
     },
     Montage = {
       Hit = {
@@ -3961,50 +4471,41 @@ local AssetPath = {
       }
     }
   },
-  [2020201] = {
-    Mesh = {
-      All = T.RT_60
-    }
-  },
-  [2020101] = {
-    Mesh = {
-      All = T.RT_60
-    }
-  },
   [2010101] = {
     Mesh = {
       All = {
-        "/Game/Asset/Char/Player/Common/Weapon/Pistol/Pistol_Wuxu/Mesh/1111",
-        "/Game/Asset/Char/Player/Common/Weapon/Pistol/Pistol_Wuxu/Mesh/1111_PhysicsAsset",
-        "/Game/Asset/Char/Player/Common/Weapon/Pistol/Pistol_Wuxu/Mesh/1111_Skeleton",
-        "/Game/Asset/Char/Player/Common/Weapon/Pistol/Pistol_Wuxu/Mesh/MI_Crossbow_Leyuan",
-        "/Game/Asset/Char/Player/Common/Weapon/Pistol/Pistol_Wuxu/Mesh/Pistol_Wuxu_SM",
-        "/Game/Asset/Char/Player/Common/Weapon/Pistol/Pistol_Wuxu/Mesh/T_Crossbow_Leyuan_D",
-        "/Game/Asset/Char/Player/Common/Weapon/Pistol/Pistol_Wuxu/Mesh/T_Crossbow_Leyuan_E",
-        "/Game/Asset/Char/Player/Common/Weapon/Pistol/Pistol_Wuxu/Mesh/T_Crossbow_Leyuan_ID",
-        "/Game/Asset/Char/Player/Common/Weapon/Pistol/Pistol_Wuxu/Mesh/T_Crossbow_Leyuan_M",
-        "/Game/Asset/Char/Player/Common/Weapon/Pistol/Pistol_Wuxu/Mesh/T_Crossbow_Leyuan_N"
+        "/Game/Asset/Char/Player/Common/Weapon/Pistol/Pistol_Wuxu/Mesh/Pistol_Wuxu_SM"
       }
+    }
+  },
+  [1069902] = {
+    Mesh = {
+      All = T.RT_61
+    }
+  },
+  [1069901] = {
+    Mesh = {
+      All = T.RT_61
     }
   },
   [180121] = {
     Mesh = {
-      All = T.RT_3
+      All = T.RT_4
     }
   },
   [180122] = {
     Mesh = {
-      All = T.RT_3
+      All = T.RT_4
     }
   },
   [180123] = {
     Mesh = {
-      All = T.RT_3
+      All = T.RT_4
     }
   },
   [180124] = {
     Mesh = {
-      All = T.RT_3
+      All = T.RT_4
     }
   },
   [601501] = {
@@ -4043,16 +4544,6 @@ local AssetPath = {
       }
     }
   },
-  [1069902] = {
-    Mesh = {
-      All = T.RT_61
-    }
-  },
-  [1069901] = {
-    Mesh = {
-      All = T.RT_61
-    }
-  },
   [1069802] = {
     Mesh = {
       All = T.RT_62
@@ -4065,21 +4556,13 @@ local AssetPath = {
   },
   [1060101] = {
     Mesh = {
-      All = T.RT_2
+      All = T.RT_3
     }
   },
   [1050101] = {
     Mesh = {
       All = {
-        "/Game/Asset/Char/Player/Common/Weapon/Swordwhip/Swordwhip_Buyu/Mesh/1111",
-        "/Game/Asset/Char/Player/Common/Weapon/Swordwhip/Swordwhip_Buyu/Mesh/1111_PhysicsAsset",
-        "/Game/Asset/Char/Player/Common/Weapon/Swordwhip/Swordwhip_Buyu/Mesh/1111_Skeleton",
-        "/Game/Asset/Char/Player/Common/Weapon/Swordwhip/Swordwhip_Buyu/Mesh/MI_Swordwhip_Liandu",
-        "/Game/Asset/Char/Player/Common/Weapon/Swordwhip/Swordwhip_Buyu/Mesh/Swordwhip_Buyu_SM",
-        "/Game/Asset/Char/Player/Common/Weapon/Swordwhip/Swordwhip_Buyu/Mesh/T_Swordwhip_Liandu_D",
-        "/Game/Asset/Char/Player/Common/Weapon/Swordwhip/Swordwhip_Buyu/Mesh/T_Swordwhip_Liandu_ID",
-        "/Game/Asset/Char/Player/Common/Weapon/Swordwhip/Swordwhip_Buyu/Mesh/T_Swordwhip_Liandu_M",
-        "/Game/Asset/Char/Player/Common/Weapon/Swordwhip/Swordwhip_Buyu/Mesh/T_Swordwhip_Liandu_N"
+        "/Game/Asset/Char/Player/Common/Weapon/Swordwhip/Swordwhip_Buyu/Mesh/Swordwhip_Buyu_SM"
       }
     }
   },
@@ -4087,6 +4570,20 @@ local AssetPath = {
     Mesh = {
       All = {
         "/Game/Asset/Char/Player/Common/Weapon/Claymore/Claymore_Jinshu/Mesh/Claymore_Jinshu_SM"
+      }
+    }
+  },
+  [1039801] = {
+    Mesh = {
+      All = {
+        "/Game/Asset/Char/Player/Common/Weapon/Claymore/Claymore_Liandu/Mesh/Claymore_Liandu_SM"
+      }
+    }
+  },
+  [1030101] = {
+    Mesh = {
+      All = {
+        "/Game/Asset/Char/Player/Common/Weapon/Claymore/Claymore_Chengjie/Mesh/Claymore_Chengjie_SM"
       }
     }
   },
@@ -4108,20 +4605,14 @@ local AssetPath = {
       Skill = T.RT_65
     }
   },
-  [1039801] = {
+  [1029901] = {
     Mesh = {
       All = {
-        "/Game/Asset/Char/Player/Common/Weapon/Claymore/Claymore_Liandu/Mesh/Claymore_Liandu_SM"
+        "/Game/Asset/Char/Player/Common/Weapon/Polearm/Polearm_Jinshu/Mesh/Polearm_Jinshu01_SM"
       }
     }
   },
-  [1030101] = {
-    Mesh = {
-      All = {
-        "/Game/Asset/Char/Player/Common/Weapon/Claymore/Claymore_Chengjie/Mesh/Claymore_Chengjie_SM"
-      }
-    }
-  },
+  [1029801] = {},
   [850601] = {
     Mesh = {
       All = T.RT_44
@@ -4143,14 +4634,6 @@ local AssetPath = {
       }
     }
   },
-  [1029901] = {
-    Mesh = {
-      All = {
-        "/Game/Asset/Char/Player/Common/Weapon/Polearm/Polearm_Jinshu/Mesh/Polearm_Jinshu01_SM"
-      }
-    }
-  },
-  [1029801] = {},
   [1020901] = {
     Mesh = {
       All = {
@@ -4186,6 +4669,20 @@ local AssetPath = {
       }
     }
   },
+  [1020401] = {
+    Mesh = {
+      All = {
+        "/Game/Asset/Char/Player/Common/Weapon/Polearm/Polearm_Xiji/Mesh/Polearm_Xiji_SM"
+      }
+    }
+  },
+  [1020301] = {
+    Mesh = {
+      All = {
+        "/Game/Asset/Char/Player/Common/Weapon/Polearm/Polearm_Zuiqian/Mesh/Polearm_Zuiqian_SM"
+      }
+    }
+  },
   [980401] = {
     Mesh = {
       All = {
@@ -4203,20 +4700,6 @@ local AssetPath = {
       }
     }
   },
-  [1020401] = {
-    Mesh = {
-      All = {
-        "/Game/Asset/Char/Player/Common/Weapon/Polearm/Polearm_Xiji/Mesh/Polearm_Xiji_SM"
-      }
-    }
-  },
-  [1020301] = {
-    Mesh = {
-      All = {
-        "/Game/Asset/Char/Player/Common/Weapon/Polearm/Polearm_Zuiqian/Mesh/Polearm_Zuiqian_SM"
-      }
-    }
-  },
   [1020201] = {
     Mesh = {
       All = {
@@ -4224,6 +4707,14 @@ local AssetPath = {
       }
     }
   },
+  [1020101] = {
+    Mesh = {
+      All = {
+        "/Game/Asset/Char/Player/Common/Weapon/Polearm/Polearm_Sairen/Mesh/Polearm_Sairen_SM"
+      }
+    }
+  },
+  [1019801] = {},
   [5301] = {
     Mesh = {
       All = T.RT_66
@@ -4270,6 +4761,11 @@ local AssetPath = {
       }
     },
     Weapon = {
+      Bow = {
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Bow/Saiqi_Bow01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Bow/Saiqi_Bow02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Bow/Saiqi_Bow_HeavyShooting_Montage"
+      },
       Katana = {
         "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Katana/Saiqi_Katana_FallAttack_Montage",
         "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Katana/Saiqi_Katana_HeavyAttack_Montage",
@@ -4299,30 +4795,21 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Claymore/Saiqi_Claymore_RunAttack_04_Montage",
         "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Claymore/Saiqi_Claymore_SlideAttack_Montage"
       },
-      Sword = {
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_SlideAttack_Montage"
-      },
-      Pistol = {
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Pistol/Saiqi_Pistol01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Pistol/Saiqi_Pistol01_Shooting_Montage"
-      },
-      Swordwhip = {
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Swordwhip/Saiqi_Swordwhip_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Swordwhip/Saiqi_Swordwhip_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Swordwhip/Saiqi_Swordwhip_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Swordwhip/Saiqi_Swordwhip_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Swordwhip/Saiqi_Swordwhip_RunAttack_04_Montage"
+      Dualblade = {
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_Mod01_SlideAttack_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_RunAttack_03_EffectCreature_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_SlideAttack_Montage"
       },
       Shotgun = {
         "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Shotgun/Saiqi_Shotgun01_Reload_Montage",
@@ -4331,6 +4818,7 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Shotgun/Saiqi_Shotgun02_Shooting_Montage",
         "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Shotgun/Saiqi_Shotgun03_Reload_Montage",
         "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Shotgun/Saiqi_Shotgun03_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Shotgun/Saiqi_Shotgun04_Shooting_Montage",
         "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Shotgun/Saiqi_Shotgun05_Reload_Montage",
         "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Shotgun/Saiqi_Shotgun06_Reload_Montage"
       },
@@ -4352,6 +4840,28 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Polearm/Saiqi_Polearm_RunAttack_05_Montage",
         "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Polearm/Saiqi_Polearm_SlideAttack_Montage"
       },
+      Cannon = {
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Cannon/Saiqi_Cannon01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Cannon/Saiqi_Cannon01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Cannon/Saiqi_Cannon02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Cannon/Saiqi_Cannon02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Cannon/Saiqi_Cannon03_Shooting_Montage"
+      },
+      Sword = {
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_SlideAttack_Montage"
+      },
       Machinegun = {
         "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Machinegun/Saiqi_Machinegun01_Reload_Montage",
         "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Machinegun/Saiqi_Machinegun01_Shooting_Montage",
@@ -4364,37 +4874,20 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Machinegun/Saiqi_Machinegun06_Shooting_Montage",
         "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Machinegun/Saiqi_Machinegun_Paotai_Shooting_Montage"
       },
-      Bow = {
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Bow/Saiqi_Bow01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Bow/Saiqi_Bow02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Bow/Saiqi_Bow_HeavyShooting_Montage"
-      },
-      Dualblade = {
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_Mod01_SlideAttack_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_RunAttack_03_EffectCreature_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_SlideAttack_Montage"
+      Pistol = {
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Pistol/Saiqi_Pistol01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Pistol/Saiqi_Pistol01_Shooting_Montage"
       },
       Crossbow = {
         "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Crossbow/Saiqi_Crossbow01_Reload_Montage",
         "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Crossbow/Saiqi_Crossbow01_Shooting_Montage"
       },
-      Cannon = {
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Cannon/Saiqi_Cannon01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Cannon/Saiqi_Cannon01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Cannon/Saiqi_Cannon02_Reload_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Cannon/Saiqi_Cannon02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Cannon/Saiqi_Cannon03_Shooting_Montage"
+      Swordwhip = {
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Swordwhip/Saiqi_Swordwhip_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Swordwhip/Saiqi_Swordwhip_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Swordwhip/Saiqi_Swordwhip_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Swordwhip/Saiqi_Swordwhip_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Combat/Weapon/Swordwhip/Saiqi_Swordwhip_RunAttack_04_Montage"
       }
     }
   },
@@ -4403,59 +4896,51 @@ local AssetPath = {
       All = T.RT_66
     }
   },
-  [1020101] = {
-    Mesh = {
-      All = {
-        "/Game/Asset/Char/Player/Common/Weapon/Polearm/Polearm_Sairen/Mesh/Polearm_Sairen_SM"
-      }
-    }
-  },
-  [1019801] = {},
-  [310201] = {
-    Mesh = {
-      All = T.RT_9
-    }
-  },
-  [310202] = {
-    Mesh = {
-      All = T.RT_9
-    }
-  },
-  [310203] = {
-    Mesh = {
-      All = T.RT_9
-    }
-  },
-  [310204] = {
-    Mesh = {
-      All = T.RT_9
-    }
-  },
-  [310205] = {
-    Mesh = {
-      All = T.RT_9
-    }
-  },
-  [310206] = {
-    Mesh = {
-      All = T.RT_9
-    }
-  },
-  [310207] = {
-    Mesh = {
-      All = T.RT_9
-    }
-  },
-  [310208] = {
-    Mesh = {
-      All = T.RT_9
-    }
-  },
   [1010501] = {
     Mesh = {
       All = {
         "/Game/Asset/Char/Player/Common/Weapon/Sword/Sword_Liulang/Mesh/Sword_Liulang_SM"
       }
+    }
+  },
+  [310201] = {
+    Mesh = {
+      All = T.RT_10
+    }
+  },
+  [310202] = {
+    Mesh = {
+      All = T.RT_10
+    }
+  },
+  [310203] = {
+    Mesh = {
+      All = T.RT_10
+    }
+  },
+  [310204] = {
+    Mesh = {
+      All = T.RT_10
+    }
+  },
+  [310205] = {
+    Mesh = {
+      All = T.RT_10
+    }
+  },
+  [310206] = {
+    Mesh = {
+      All = T.RT_10
+    }
+  },
+  [310207] = {
+    Mesh = {
+      All = T.RT_10
+    }
+  },
+  [310208] = {
+    Mesh = {
+      All = T.RT_10
     }
   },
   [1010401] = {
@@ -4469,6 +4954,20 @@ local AssetPath = {
     Mesh = {
       All = {
         "/Game/Asset/Char/Player/Common/Weapon/Sword/Sword_Zhuiyi/Mesh/Sword_Zhuiyi_SM"
+      }
+    }
+  },
+  [1010201] = {
+    Mesh = {
+      All = {
+        "/Game/Asset/Char/Player/Common/Weapon/Sword/Sword_Guzi/Mesh/Sword_Guzi_SM"
+      }
+    }
+  },
+  [1010101] = {
+    Mesh = {
+      All = {
+        "/Game/Asset/Char/Player/Common/Weapon/Sword/Sword_Huipo/Mesh/Sword_Huipo_SM"
       }
     }
   },
@@ -4521,23 +5020,36 @@ local AssetPath = {
       All = T.RT_67
     }
   },
-  [1010201] = {
+  [850102] = {
     Mesh = {
-      All = {
-        "/Game/Asset/Char/Player/Common/Weapon/Sword/Sword_Guzi/Mesh/Sword_Guzi_SM"
-      }
+      All = T.RT_68
+    },
+    Montage = {
+      Hit = T.RT_69,
+      Skill = T.RT_70,
+      Locomotion = T.RT_71
     }
   },
-  [1010101] = {
+  [980501] = {
     Mesh = {
       All = {
-        "/Game/Asset/Char/Player/Common/Weapon/Sword/Sword_Huipo/Mesh/Sword_Huipo_SM"
+        "/Game/Asset/Char/Monster/Animal05_Suoweng/Mesh/Mon_Suoweng_SM"
+      }
+    },
+    Montage = {
+      Hit = {
+        "/Game/Asset/Char/Monster/Animal05_Suoweng/Animation/Montage/Combat/Hit/Mon_Suoweng_Die_Montage",
+        "/Game/Asset/Char/Monster/Animal05_Suoweng/Animation/Montage/Combat/Hit/Mon_Suoweng_DieFly_Montage"
+      },
+      Skill = {
+        "/Game/Asset/Char/Monster/Animal05_Suoweng/Animation/Montage/Combat/Skill/Mon_Suoweng_Skill01_Montage",
+        "/Game/Asset/Char/Monster/Animal05_Suoweng/Animation/Montage/Combat/Skill/Mon_Suoweng_Skill02_Montage"
       }
     }
   },
   [800201] = {
     Mesh = {
-      All = T.RT_68
+      All = T.RT_72
     },
     Montage = {
       Hit = {
@@ -4579,37 +5091,39 @@ local AssetPath = {
   },
   [800202] = {
     Mesh = {
-      All = T.RT_68
+      All = T.RT_72
     }
   },
-  [800102] = {
+  [980302] = {
     Mesh = {
-      All = T.RT_69
-    }
-  },
-  [980501] = {
-    Mesh = {
-      All = {
-        "/Game/Asset/Char/Monster/Animal05_Suoweng/Mesh/Mon_Suoweng_SM"
-      }
+      All = T.RT_73
     },
     Montage = {
-      Hit = {
-        "/Game/Asset/Char/Monster/Animal05_Suoweng/Animation/Montage/Combat/Hit/Mon_Suoweng_Die_Montage",
-        "/Game/Asset/Char/Monster/Animal05_Suoweng/Animation/Montage/Combat/Hit/Mon_Suoweng_DieFly_Montage"
-      },
-      Skill = {
-        "/Game/Asset/Char/Monster/Animal05_Suoweng/Animation/Montage/Combat/Skill/Mon_Suoweng_Skill01_Montage",
-        "/Game/Asset/Char/Monster/Animal05_Suoweng/Animation/Montage/Combat/Skill/Mon_Suoweng_Skill02_Montage"
-      }
+      Hit = T.RT_74,
+      Skill = T.RT_75,
+      SpecialIdle = T.RT_76
+    }
+  },
+  [980301] = {
+    Mesh = {
+      All = T.RT_73
+    },
+    Montage = {
+      Hit = T.RT_74,
+      Skill = T.RT_75,
+      SpecialIdle = T.RT_76
     }
   },
   [4301] = {
     Mesh = {
       All = {
+        "/Game/Asset/Char/Player/Char009_Xibi/Mesh/Xibi_Body_SM",
+        "/Game/Asset/Char/Player/Char009_Xibi/Mesh/Xibi_Face_SM",
+        "/Game/Asset/Char/Player/Char009_Xibi/Mesh/Xibi_Hair_SM",
         "/Game/Asset/Char/Player/Char009_Xibi/Mesh/Xibi_Part01_SM",
         "/Game/Asset/Char/Player/Char009_Xibi/Mesh/Xibi_SM",
-        "/Game/Asset/Char/Player/Char009_Xibi/Mesh/Xibi_TP01_SM"
+        "/Game/Asset/Char/Player/Char009_Xibi/Mesh/Xibi_TP01_SM",
+        "/Game/Asset/Char/Player/Char009_Xibi/Mesh/Xibi_TP02_SM"
       }
     },
     Montage = {
@@ -4650,6 +5164,11 @@ local AssetPath = {
       }
     },
     Weapon = {
+      Bow = {
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Bow/Xibi_Bow01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Bow/Xibi_Bow02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Bow/Xibi_Bow_HeavyShooting_Montage"
+      },
       Katana = {
         "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Katana/Xibi_Katana_FallAttack_Montage",
         "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Katana/Xibi_Katana_HeavyAttack_Montage",
@@ -4679,30 +5198,21 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Claymore/Xibi_Claymore_RunAttack_04_Montage",
         "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Claymore/Xibi_Claymore_SlideAttack_Montage"
       },
-      Sword = {
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_SlideAttack_Montage"
-      },
-      Pistol = {
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Pistol/Xibi_Pistol01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Pistol/Xibi_Pistol01_Shooting_Montage"
-      },
-      Swordwhip = {
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Swordwhip/Xibi_Swordwhip_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Swordwhip/Xibi_Swordwhip_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Swordwhip/Xibi_Swordwhip_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Swordwhip/Xibi_Swordwhip_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Swordwhip/Xibi_Swordwhip_RunAttack_04_Montage"
+      Dualblade = {
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_Mod01_SlideAttack_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_RunAttack_03_EffectCreature_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_SlideAttack_Montage"
       },
       Shotgun = {
         "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Shotgun/Xibi_Shotgun01_Reload_Montage",
@@ -4711,6 +5221,7 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Shotgun/Xibi_Shotgun02_Shooting_Montage",
         "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Shotgun/Xibi_Shotgun03_Reload_Montage",
         "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Shotgun/Xibi_Shotgun03_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Shotgun/Xibi_Shotgun04_Shooting_Montage",
         "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Shotgun/Xibi_Shotgun05_Reload_Montage",
         "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Shotgun/Xibi_Shotgun06_Reload_Montage"
       },
@@ -4732,6 +5243,28 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Polearm/Xibi_Polearm_RunAttack_05_Montage",
         "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Polearm/Xibi_Polearm_SlideAttack_Montage"
       },
+      Cannon = {
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Cannon/Xibi_Cannon01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Cannon/Xibi_Cannon01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Cannon/Xibi_Cannon02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Cannon/Xibi_Cannon02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Cannon/Xibi_Cannon03_Shooting_Montage"
+      },
+      Sword = {
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Sword/Xibi_Sword_SlideAttack_Montage"
+      },
       Machinegun = {
         "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Machinegun/Xibi_Machinegun01_Reload_Montage",
         "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Machinegun/Xibi_Machinegun01_Shooting_Montage",
@@ -4744,93 +5277,34 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Machinegun/Xibi_Machinegun06_Shooting_Montage",
         "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Machinegun/Xibi_Machinegun_Paotai_Shooting_Montage"
       },
-      Bow = {
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Bow/Xibi_Bow01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Bow/Xibi_Bow02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Bow/Xibi_Bow_HeavyShooting_Montage"
-      },
-      Dualblade = {
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_Mod01_SlideAttack_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_RunAttack_03_EffectCreature_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Dualblade/Xibi_Dualblade_SlideAttack_Montage"
+      Pistol = {
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Pistol/Xibi_Pistol01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Pistol/Xibi_Pistol01_Shooting_Montage"
       },
       Crossbow = {
         "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Crossbow/Xibi_Crossbow01_Reload_Montage",
         "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Crossbow/Xibi_Crossbow01_Shooting_Montage"
       },
-      Cannon = {
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Cannon/Xibi_Cannon01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Cannon/Xibi_Cannon01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Cannon/Xibi_Cannon02_Reload_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Cannon/Xibi_Cannon02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Cannon/Xibi_Cannon03_Shooting_Montage"
+      Swordwhip = {
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Swordwhip/Xibi_Swordwhip_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Swordwhip/Xibi_Swordwhip_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Swordwhip/Xibi_Swordwhip_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Swordwhip/Xibi_Swordwhip_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Combat/Weapon/Swordwhip/Xibi_Swordwhip_RunAttack_04_Montage"
       }
     }
   },
-  [980302] = {
-    Mesh = {
-      All = T.RT_70
-    },
-    Montage = {
-      Hit = T.RT_71,
-      Skill = T.RT_72,
-      SpecialIdle = T.RT_73
-    }
-  },
-  [980301] = {
-    Mesh = {
-      All = T.RT_70
-    },
-    Montage = {
-      Hit = T.RT_71,
-      Skill = T.RT_72,
-      SpecialIdle = T.RT_73
-    }
-  },
-  [700601] = {
+  [700405] = {
     Mesh = {
       All = {
-        "/Game/Asset/Char/Monster/JT_HealRobot/Mesh/JT_HealRobot_Physics",
-        "/Game/Asset/Char/Monster/JT_HealRobot/Mesh/JT_HealRobot_SM"
+        "/Game/Asset/Char/Monster/NE_Kaiwen/Mesh/NE_Kaiwen_SM"
       }
     },
     Montage = {
-      Hit = {
-        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_Die_Montage",
-        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_GetUpBack_Montage",
-        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_GetUpFront_Montage",
-        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_HitFly_Montage",
-        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_HitFlyDie_Montage",
-        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_LightHit1_Montage",
-        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_LightHit2_Montage",
-        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_StunBlind_Montage",
-        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_StunBound_Montage",
-        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_StunFire_Montage",
-        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_StunParalysis_Montage"
-      },
-      Skill = {
-        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Skill/JT_HealRobot_Skill01_Montage"
-      }
-    }
-  },
-  [700701] = {
-    Mesh = {
-      All = T.RT_74
-    },
-    Montage = {
-      Hit = T.RT_75,
-      Skill = T.RT_76
+      Hit = T.RT_77,
+      Skill = T.RT_78,
+      Locomotion = T.RT_79,
+      SpecialIdle = T.RT_80
     }
   },
   [980101] = {
@@ -4845,42 +5319,27 @@ local AssetPath = {
   },
   [950103] = {
     Mesh = {
-      All = T.RT_39
+      All = T.RT_40
     },
     Montage = {
-      Hit = T.RT_40,
-      Skill = T.RT_41,
-      Locomotion = T.RT_42
+      Hit = T.RT_41,
+      Skill = T.RT_42,
+      Locomotion = T.RT_43
     }
   },
   [950102] = {
     Mesh = {
-      All = T.RT_39
-    }
-  },
-  [230101] = {
-    Mesh = {
-      All = T.RT_77
-    },
-    Montage = {
-      Hit = {
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Tentacle/Montage/Combat/Hit/Zhangyu_Tentacle_Birth_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Tentacle/Montage/Combat/Hit/Zhangyu_Tentacle_Die_Montage"
-      },
-      Skill = {
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Tentacle/Montage/Combat/Skill/Zhangyu_Tentacle_Attack01_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Tentacle/Montage/Combat/Skill/Zhangyu_Tentacle_Attack02_Montage"
-      }
+      All = T.RT_40
     }
   },
   [950101] = {
     Mesh = {
-      All = T.RT_39
+      All = T.RT_40
     },
     Montage = {
-      Hit = T.RT_40,
-      Skill = T.RT_41,
-      Locomotion = T.RT_42
+      Hit = T.RT_41,
+      Skill = T.RT_42,
+      Locomotion = T.RT_43
     }
   },
   [950001] = {
@@ -4912,10 +5371,26 @@ local AssetPath = {
         "/Game/Asset/Char/Monster/NE_Dajie/Animation/Montage/Combat/Skill/NE_Dajie_Skill02_Montage",
         "/Game/Asset/Char/Monster/NE_Dajie/Animation/Montage/Combat/Skill/NE_Dajie_Skill03_Montage",
         "/Game/Asset/Char/Monster/NE_Dajie/Animation/Montage/Combat/Skill/NE_Dajie_Skill04_Montage",
-        "/Game/Asset/Char/Monster/NE_Dajie/Animation/Montage/Combat/Skill/NE_Dajie_Skill05_Montage"
+        "/Game/Asset/Char/Monster/NE_Dajie/Animation/Montage/Combat/Skill/NE_Dajie_Skill05_Montage",
+        "/Game/Asset/Char/Monster/NE_Dajie/Animation/Montage/Combat/Skill/NE_Dajie_Skill06_Montage"
       },
       Locomotion = {
         "/Game/Asset/Char/Monster/NE_Dajie/Animation/Montage/Locomotion/NE_Dajie_Rotation_Montage"
+      }
+    }
+  },
+  [230101] = {
+    Mesh = {
+      All = T.RT_81
+    },
+    Montage = {
+      Hit = {
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Tentacle/Montage/Combat/Hit/Zhangyu_Tentacle_Birth_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Tentacle/Montage/Combat/Hit/Zhangyu_Tentacle_Die_Montage"
+      },
+      Skill = {
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Tentacle/Montage/Combat/Skill/Zhangyu_Tentacle_Attack01_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Tentacle/Montage/Combat/Skill/Zhangyu_Tentacle_Attack02_Montage"
       }
     }
   },
@@ -4968,13 +5443,13 @@ local AssetPath = {
   },
   [900301] = {
     Mesh = {
-      All = T.RT_16
+      All = T.RT_17
     },
     Montage = {
-      Hit = T.RT_17,
-      Skill = T.RT_18,
-      Locomotion = T.RT_19,
-      SpecialIdle = T.RT_20
+      Hit = T.RT_18,
+      Skill = T.RT_19,
+      Locomotion = T.RT_20,
+      SpecialIdle = T.RT_21
     }
   },
   [900101] = {
@@ -4989,9 +5464,48 @@ local AssetPath = {
       }
     }
   },
+  [700801] = {
+    Mesh = {
+      All = T.RT_50
+    },
+    Montage = {
+      Hit = {
+        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Hit/JT_Zhihui_Die_Montage",
+        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Hit/JT_Zhihui_GetUpBack_Montage",
+        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Hit/JT_Zhihui_GetUpFront_Montage",
+        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Hit/JT_Zhihui_HeavyHit_Montage",
+        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Hit/JT_Zhihui_HitFly_Montage",
+        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Hit/JT_Zhihui_HitFlyDie_Montage",
+        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Hit/JT_Zhihui_LightHit1_Montage",
+        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Hit/JT_Zhihui_LightHit2_Montage"
+      },
+      Skill = {
+        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Skill/JT_Zhihui_Reload_Montage",
+        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Skill/JT_Zhihui_Skill01_Montage",
+        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Skill/JT_Zhihui_Skill02_Montage",
+        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Skill/JT_Zhihui_Skill03_Montage",
+        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Skill/JT_Zhihui_Skill04_Montage",
+        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Skill/JT_Zhihui_Skill05_Montage",
+        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Skill/JT_Zhihui_Skill06_Montage",
+        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Skill/JT_Zhihui_Skill07_Montage"
+      },
+      Locomotion = {
+        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Locomotion/JT_Zhihui_Rotation_Montage"
+      },
+      SpecialIdle = {
+        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/SpecialIdle/JT_Zhihui_SpecialAlert_Montage",
+        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/SpecialIdle/JT_Zhihui_SpecialIdle01_Montage"
+      }
+    }
+  },
+  [701301] = {
+    Mesh = {
+      All = T.RT_57
+    }
+  },
   [800101] = {
     Mesh = {
-      All = T.RT_69
+      All = T.RT_82
     },
     Montage = {
       Hit = {
@@ -5044,9 +5558,19 @@ local AssetPath = {
       }
     }
   },
+  [850101] = {
+    Mesh = {
+      All = T.RT_68
+    },
+    Montage = {
+      Hit = T.RT_69,
+      Skill = T.RT_70,
+      Locomotion = T.RT_71
+    }
+  },
   [850001] = {
     Mesh = {
-      All = T.RT_38
+      All = T.RT_39
     },
     Montage = {
       Hit = {
@@ -5086,52 +5610,41 @@ local AssetPath = {
       }
     }
   },
-  [850102] = {
+  [800102] = {
     Mesh = {
-      All = T.RT_78
-    },
-    Montage = {
-      Hit = T.RT_79,
-      Skill = T.RT_80,
-      Locomotion = T.RT_81
-    }
-  },
-  [850101] = {
-    Mesh = {
-      All = T.RT_78
-    },
-    Montage = {
-      Hit = T.RT_79,
-      Skill = T.RT_80,
-      Locomotion = T.RT_81
+      All = T.RT_82
     }
   },
   [850401] = {
     Mesh = {
-      All = T.RT_82
+      All = T.RT_83
     },
     Montage = {
-      Hit = T.RT_83,
-      Skill = T.RT_84
+      Hit = T.RT_84,
+      Skill = T.RT_85
     }
   },
   [850402] = {
     Mesh = {
-      All = T.RT_7
+      All = T.RT_8
     }
   },
   [850403] = {
     Mesh = {
-      All = T.RT_82
+      All = T.RT_83
     },
     Montage = {
-      Hit = T.RT_83,
-      Skill = T.RT_84
+      Hit = T.RT_84,
+      Skill = T.RT_85
     }
   },
-  [701301] = {
+  [700702] = {
     Mesh = {
-      All = T.RT_56
+      All = T.RT_86
+    },
+    Montage = {
+      Hit = T.RT_87,
+      Skill = T.RT_88
     }
   },
   [3301] = {
@@ -5177,6 +5690,11 @@ local AssetPath = {
       }
     },
     Weapon = {
+      Bow = {
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Bow/Maer_Bow01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Bow/Maer_Bow02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Bow/Maer_Bow_HeavyShooting_Montage"
+      },
       Katana = {
         "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Katana/Maer_Katana_FallAttack_Montage",
         "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Katana/Maer_Katana_HeavyAttack_Montage",
@@ -5206,30 +5724,21 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Claymore/Maer_Claymore_RunAttack_04_Montage",
         "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Claymore/Maer_Claymore_SlideAttack_Montage"
       },
-      Sword = {
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_SlideAttack_Montage"
-      },
-      Pistol = {
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Pistol/Maer_Pistol01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Pistol/Maer_Pistol01_Shooting_Montage"
-      },
-      Swordwhip = {
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Swordwhip/Maer_Swordwhip_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Swordwhip/Maer_Swordwhip_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Swordwhip/Maer_Swordwhip_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Swordwhip/Maer_Swordwhip_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Swordwhip/Maer_Swordwhip_RunAttack_04_Montage"
+      Dualblade = {
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_Mod01_SlideAttack_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_RunAttack_03_EffectCreature_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_SlideAttack_Montage"
       },
       Shotgun = {
         "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Shotgun/Maer_Shotgun01_Reload_Montage",
@@ -5238,6 +5747,7 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Shotgun/Maer_Shotgun02_Shooting_Montage",
         "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Shotgun/Maer_Shotgun03_Reload_Montage",
         "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Shotgun/Maer_Shotgun03_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Shotgun/Maer_Shotgun04_Shooting_Montage",
         "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Shotgun/Maer_Shotgun05_Reload_Montage",
         "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Shotgun/Maer_Shotgun06_Reload_Montage"
       },
@@ -5259,6 +5769,28 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Polearm/Maer_Polearm_RunAttack_05_Montage",
         "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Polearm/Maer_Polearm_SlideAttack_Montage"
       },
+      Cannon = {
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Cannon/Maer_Cannon01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Cannon/Maer_Cannon01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Cannon/Maer_Cannon02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Cannon/Maer_Cannon02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Cannon/Maer_Cannon03_Shooting_Montage"
+      },
+      Sword = {
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Sword/Maer_Sword_SlideAttack_Montage"
+      },
       Machinegun = {
         "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Machinegun/Maer_Machinegun01_Reload_Montage",
         "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Machinegun/Maer_Machinegun01_Shooting_Montage",
@@ -5271,91 +5803,66 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Machinegun/Maer_Machinegun06_Shooting_Montage",
         "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Machinegun/Maer_Machinegun_Paotai_Shooting_Montage"
       },
-      Bow = {
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Bow/Maer_Bow01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Bow/Maer_Bow02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Bow/Maer_Bow_HeavyShooting_Montage"
-      },
-      Dualblade = {
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_Mod01_SlideAttack_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_RunAttack_03_EffectCreature_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Dualblade/Maer_Dualblade_SlideAttack_Montage"
+      Pistol = {
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Pistol/Maer_Pistol01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Pistol/Maer_Pistol01_Shooting_Montage"
       },
       Crossbow = {
         "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Crossbow/Maer_Crossbow01_Reload_Montage",
         "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Crossbow/Maer_Crossbow01_Shooting_Montage"
       },
-      Cannon = {
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Cannon/Maer_Cannon01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Cannon/Maer_Cannon01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Cannon/Maer_Cannon02_Reload_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Cannon/Maer_Cannon02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Cannon/Maer_Cannon03_Shooting_Montage"
+      Swordwhip = {
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Swordwhip/Maer_Swordwhip_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Swordwhip/Maer_Swordwhip_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Swordwhip/Maer_Swordwhip_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Swordwhip/Maer_Swordwhip_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char024_Maer/Animation/Montage/Combat/Weapon/Swordwhip/Maer_Swordwhip_RunAttack_04_Montage"
       }
     }
   },
   [240102] = {
     Mesh = {
-      All = T.RT_43
+      All = T.RT_1
     }
   },
-  [700801] = {
+  [700701] = {
     Mesh = {
-      All = T.RT_50
+      All = T.RT_86
+    },
+    Montage = {
+      Hit = T.RT_87,
+      Skill = T.RT_88
+    }
+  },
+  [700601] = {
+    Mesh = {
+      All = {
+        "/Game/Asset/Char/Monster/JT_HealRobot/Mesh/JT_HealRobot_Physics",
+        "/Game/Asset/Char/Monster/JT_HealRobot/Mesh/JT_HealRobot_SM"
+      }
     },
     Montage = {
       Hit = {
-        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Hit/JT_Zhihui_Die_Montage",
-        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Hit/JT_Zhihui_GetUpBack_Montage",
-        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Hit/JT_Zhihui_GetUpFront_Montage",
-        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Hit/JT_Zhihui_HeavyHit_Montage",
-        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Hit/JT_Zhihui_HitFly_Montage",
-        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Hit/JT_Zhihui_HitFlyDie_Montage",
-        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Hit/JT_Zhihui_LightHit1_Montage",
-        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Hit/JT_Zhihui_LightHit2_Montage"
+        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_Die_Montage",
+        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_GetUpBack_Montage",
+        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_GetUpFront_Montage",
+        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_HitFly_Montage",
+        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_HitFlyDie_Montage",
+        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_LightHit1_Montage",
+        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_LightHit2_Montage",
+        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_StunBlind_Montage",
+        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_StunBound_Montage",
+        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_StunFire_Montage",
+        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Hit/JT_HealRobot_StunParalysis_Montage"
       },
       Skill = {
-        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Skill/JT_Zhihui_Reload_Montage",
-        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Skill/JT_Zhihui_Skill01_Montage",
-        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Skill/JT_Zhihui_Skill02_Montage",
-        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Skill/JT_Zhihui_Skill03_Montage",
-        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Skill/JT_Zhihui_Skill04_Montage",
-        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Skill/JT_Zhihui_Skill05_Montage",
-        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Skill/JT_Zhihui_Skill06_Montage",
-        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Combat/Skill/JT_Zhihui_Skill07_Montage"
-      },
-      Locomotion = {
-        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/Locomotion/JT_Zhihui_Rotation_Montage"
-      },
-      SpecialIdle = {
-        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/SpecialIdle/JT_Zhihui_SpecialAlert_Montage",
-        "/Game/Asset/Char/Monster/JT_Zhihui/Animation/Montage/SpecialIdle/JT_Zhihui_SpecialIdle01_Montage"
+        "/Game/Asset/Char/Monster/JT_HealRobot/Animation/Montage/Combat/Skill/JT_HealRobot_Skill01_Montage"
       }
-    }
-  },
-  [700702] = {
-    Mesh = {
-      All = T.RT_74
-    },
-    Montage = {
-      Hit = T.RT_75,
-      Skill = T.RT_76
     }
   },
   [980201] = {
     Mesh = {
-      All = T.RT_85
+      All = T.RT_89
     },
     Montage = {
       Hit = T.RT_64,
@@ -5364,24 +5871,195 @@ local AssetPath = {
   },
   [980202] = {
     Mesh = {
-      All = T.RT_85
+      All = T.RT_89
     },
     Montage = {
       Hit = T.RT_64,
       Skill = T.RT_65
     }
   },
-  [700405] = {
+  [530199] = {
     Mesh = {
       All = {
-        "/Game/Asset/Char/Monster/NE_Kaiwen/Mesh/NE_Kaiwen_SM"
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Mesh/Saiqi_SP01_Body_SM",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Mesh/Saiqi_SP01_Face_SM",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Mesh/Saiqi_SP01_Hair_SM",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Mesh/Saiqi_SP01_Hat_SM",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Mesh/Saiqi_SP01_Part01_SM",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Mesh/Saiqi_SP01_Part02_SM",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Mesh/Saiqi_SP01_Part02Trans_SM",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Mesh/Saiqi_SP01_Part03_SM",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Mesh/Saiqi_SP01_SM"
       }
     },
     Montage = {
-      Hit = T.RT_86,
-      Skill = T.RT_87,
-      Locomotion = T.RT_88,
-      SpecialIdle = T.RT_89
+      Hit = {
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Hit/Saiqi_Die_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Hit/Saiqi_GrabHit_Lianhuo_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Hit/Saiqi_GrabHit_Shijingzhe_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Hit/Saiqi_HitFly_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Hit/Saiqi_LightHit1_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Hit/Saiqi_LightHit2_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Hit/Saiqi_LightHit_B_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Hit/Saiqi_LightHit_L_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Hit/Saiqi_LightHit_R_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Hit/Saiqi_Recover_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Hit/Saiqi_StunCommon_Montage"
+      },
+      Skill = {
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Skill/Saiqi_Condemn02_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Skill/Saiqi_Condemn_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Skill/Saiqi_Skill02_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Skill/Saiqi_Skill02_Off_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Skill/Saiqi_Skill02_On_Montage"
+      },
+      Locomotion = {
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Locomotion/Saiqi_Climb_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Locomotion/Saiqi_Dodge_End_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Locomotion/Saiqi_Dodge_InAir_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Locomotion/Saiqi_Dodge_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Locomotion/Saiqi_DodgeBack_InAir_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Locomotion/Saiqi_DodgeBack_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Locomotion/Saiqi_FlipEaves_End_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Locomotion/Saiqi_Rotation_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Locomotion/Saiqi_TurnBack_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Locomotion/Saiqi_WallJump_LeanLeft_LU_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Locomotion/Saiqi_WallJump_LeanLeft_RU_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Locomotion/Saiqi_WallJump_LeanRight_LU_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Locomotion/Saiqi_WallJump_LeanRight_RU_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Locomotion/Saiqi_WallJump_LU_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Locomotion/Saiqi_WallJump_RU_Montage"
+      }
+    },
+    Weapon = {
+      Bow = {
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Bow/Saiqi_Bow01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Bow/Saiqi_Bow02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Bow/Saiqi_Bow_HeavyShooting_Montage"
+      },
+      Katana = {
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Katana/Saiqi_Katana_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Katana/Saiqi_Katana_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Katana/Saiqi_Katana_Mod01_HeavyAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Katana/Saiqi_Katana_Mod01_HeavyAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Katana/Saiqi_Katana_Mod01_HeavyAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Katana/Saiqi_Katana_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Katana/Saiqi_Katana_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Katana/Saiqi_Katana_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Katana/Saiqi_Katana_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Katana/Saiqi_Katana_SlideAttack_Montage"
+      },
+      Claymore = {
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Claymore/Saiqi_Claymore_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Claymore/Saiqi_Claymore_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Claymore/Saiqi_Claymore_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Claymore/Saiqi_Claymore_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Claymore/Saiqi_Claymore_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Claymore/Saiqi_Claymore_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Claymore/Saiqi_Claymore_Mod02_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Claymore/Saiqi_Claymore_Mod02_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Claymore/Saiqi_Claymore_Mod02_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Claymore/Saiqi_Claymore_Mod02_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Claymore/Saiqi_Claymore_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Claymore/Saiqi_Claymore_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Claymore/Saiqi_Claymore_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Claymore/Saiqi_Claymore_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Claymore/Saiqi_Claymore_SlideAttack_Montage"
+      },
+      Dualblade = {
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_Mod01_SlideAttack_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_RunAttack_03_EffectCreature_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Dualblade/Saiqi_Dualblade_SlideAttack_Montage"
+      },
+      Shotgun = {
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Shotgun/Saiqi_Shotgun01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Shotgun/Saiqi_Shotgun01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Shotgun/Saiqi_Shotgun02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Shotgun/Saiqi_Shotgun02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Shotgun/Saiqi_Shotgun03_Reload_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Shotgun/Saiqi_Shotgun03_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Shotgun/Saiqi_Shotgun04_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Shotgun/Saiqi_Shotgun05_Reload_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Shotgun/Saiqi_Shotgun06_Reload_Montage"
+      },
+      Polearm = {
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Polearm/Saiqi_Polearm_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Polearm/Saiqi_Polearm_HeavyAttack_Callback_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Polearm/Saiqi_Polearm_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Polearm/Saiqi_Polearm_Mod01_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Polearm/Saiqi_Polearm_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Polearm/Saiqi_Polearm_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Polearm/Saiqi_Polearm_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Polearm/Saiqi_Polearm_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Polearm/Saiqi_Polearm_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Polearm/Saiqi_Polearm_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Polearm/Saiqi_Polearm_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Polearm/Saiqi_Polearm_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Polearm/Saiqi_Polearm_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Polearm/Saiqi_Polearm_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Polearm/Saiqi_Polearm_RunAttack_05_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Polearm/Saiqi_Polearm_SlideAttack_Montage"
+      },
+      Cannon = {
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Cannon/Saiqi_Cannon01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Cannon/Saiqi_Cannon01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Cannon/Saiqi_Cannon02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Cannon/Saiqi_Cannon02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Cannon/Saiqi_Cannon03_Shooting_Montage"
+      },
+      Sword = {
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Sword/Saiqi_Sword_SlideAttack_Montage"
+      },
+      Machinegun = {
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Machinegun/Saiqi_Machinegun01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Machinegun/Saiqi_Machinegun01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Machinegun/Saiqi_Machinegun02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Machinegun/Saiqi_Machinegun02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Machinegun/Saiqi_Machinegun03_Reload_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Machinegun/Saiqi_Machinegun04_Reload_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Machinegun/Saiqi_Machinegun04_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Machinegun/Saiqi_Machinegun05_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Machinegun/Saiqi_Machinegun06_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Machinegun/Saiqi_Machinegun_Paotai_Shooting_Montage"
+      },
+      Pistol = {
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Pistol/Saiqi_Pistol01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Pistol/Saiqi_Pistol01_Shooting_Montage"
+      },
+      Crossbow = {
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Crossbow/Saiqi_Crossbow01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Crossbow/Saiqi_Crossbow01_Shooting_Montage"
+      },
+      Swordwhip = {
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Swordwhip/Saiqi_Swordwhip_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Swordwhip/Saiqi_Swordwhip_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Swordwhip/Saiqi_Swordwhip_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Swordwhip/Saiqi_Swordwhip_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char098_Saiqi01/Animation/Montage/Combat/Weapon/Swordwhip/Saiqi_Swordwhip_RunAttack_04_Montage"
+      }
     }
   },
   [600301] = {
@@ -5427,7 +6105,7 @@ local AssetPath = {
   },
   [5101] = {
     Mesh = {
-      All = T.RT_59
+      All = T.RT_60
     },
     Montage = {
       Hit = {
@@ -5474,6 +6152,11 @@ local AssetPath = {
       }
     },
     Weapon = {
+      Bow = {
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Bow/Songlu_Bow01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Bow/Songlu_Bow02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Bow/Songlu_Bow_HeavyShooting_Montage"
+      },
       Katana = {
         "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Katana/Songlu_Katana_FallAttack_Montage",
         "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Katana/Songlu_Katana_HeavyAttack_Montage",
@@ -5503,30 +6186,21 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Claymore/Songlu_Claymore_RunAttack_04_Montage",
         "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Claymore/Songlu_Claymore_SlideAttack_Montage"
       },
-      Sword = {
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_SlideAttack_Montage"
-      },
-      Pistol = {
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Pistol/Songlu_Pistol01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Pistol/Songlu_Pistol01_Shooting_Montage"
-      },
-      Swordwhip = {
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Swordwhip/Songlu_Swordwhip_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Swordwhip/Songlu_Swordwhip_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Swordwhip/Songlu_Swordwhip_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Swordwhip/Songlu_Swordwhip_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Swordwhip/Songlu_Swordwhip_RunAttack_04_Montage"
+      Dualblade = {
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_Mod01_SlideAttack_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_RunAttack_03_EffectCreature_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_SlideAttack_Montage"
       },
       Shotgun = {
         "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Shotgun/Songlu_Shotgun01_Reload_Montage",
@@ -5535,6 +6209,7 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Shotgun/Songlu_Shotgun02_Shooting_Montage",
         "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Shotgun/Songlu_Shotgun03_Reload_Montage",
         "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Shotgun/Songlu_Shotgun03_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Shotgun/Songlu_Shotgun04_Shooting_Montage",
         "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Shotgun/Songlu_Shotgun05_Reload_Montage",
         "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Shotgun/Songlu_Shotgun06_Reload_Montage"
       },
@@ -5556,6 +6231,28 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Polearm/Songlu_Polearm_RunAttack_05_Montage",
         "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Polearm/Songlu_Polearm_SlideAttack_Montage"
       },
+      Cannon = {
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Cannon/Songlu_Cannon01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Cannon/Songlu_Cannon01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Cannon/Songlu_Cannon02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Cannon/Songlu_Cannon02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Cannon/Songlu_Cannon03_Shooting_Montage"
+      },
+      Sword = {
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_SlideAttack_Montage"
+      },
       Machinegun = {
         "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Machinegun/Songlu_Machinegun01_Reload_Montage",
         "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Machinegun/Songlu_Machinegun01_Shooting_Montage",
@@ -5568,37 +6265,20 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Machinegun/Songlu_Machinegun06_Shooting_Montage",
         "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Machinegun/Songlu_Machinegun_Paotai_Shooting_Montage"
       },
-      Bow = {
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Bow/Songlu_Bow01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Bow/Songlu_Bow02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Bow/Songlu_Bow_HeavyShooting_Montage"
-      },
-      Dualblade = {
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_Mod01_SlideAttack_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_RunAttack_03_EffectCreature_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_SlideAttack_Montage"
+      Pistol = {
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Pistol/Songlu_Pistol01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Pistol/Songlu_Pistol01_Shooting_Montage"
       },
       Crossbow = {
         "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Crossbow/Songlu_Crossbow01_Reload_Montage",
         "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Crossbow/Songlu_Crossbow01_Shooting_Montage"
       },
-      Cannon = {
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Cannon/Songlu_Cannon01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Cannon/Songlu_Cannon01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Cannon/Songlu_Cannon02_Reload_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Cannon/Songlu_Cannon02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Cannon/Songlu_Cannon03_Shooting_Montage"
+      Swordwhip = {
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Swordwhip/Songlu_Swordwhip_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Swordwhip/Songlu_Swordwhip_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Swordwhip/Songlu_Swordwhip_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Swordwhip/Songlu_Swordwhip_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char021_Songlu/Animation/Montage/Combat/Weapon/Swordwhip/Songlu_Swordwhip_RunAttack_04_Montage"
       }
     }
   },
@@ -5647,6 +6327,13 @@ local AssetPath = {
       }
     }
   },
+  [700001] = {
+    Mesh = {
+      All = {
+        "/Game/Asset/Char/Monster/Common/Weapon/Single/JT_Disarm/Mesh/JT_Disarm_WP_SM"
+      }
+    }
+  },
   [601701] = {
     Mesh = {
       All = {
@@ -5687,22 +6374,15 @@ local AssetPath = {
       }
     }
   },
-  [700001] = {
-    Mesh = {
-      All = {
-        "/Game/Asset/Char/Monster/Common/Weapon/Single/JT_Disarm/Mesh/JT_Disarm_WP_SM"
-      }
-    }
-  },
   [700401] = {
     Mesh = {
       All = T.RT_90
     },
     Montage = {
-      Hit = T.RT_86,
-      Skill = T.RT_87,
-      Locomotion = T.RT_88,
-      SpecialIdle = T.RT_89
+      Hit = T.RT_77,
+      Skill = T.RT_78,
+      Locomotion = T.RT_79,
+      SpecialIdle = T.RT_80
     }
   },
   [700402] = {
@@ -5722,7 +6402,195 @@ local AssetPath = {
   },
   [410101] = {
     Mesh = {
-      All = T.RT_1
+      All = T.RT_2
+    }
+  },
+  [510199] = {
+    Mesh = {
+      All = {
+        "/Game/Asset/Char/Player/Char099_Songlu01/Mesh/Songlu_Part05_SM",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Mesh/Songlu_SP01_Body_SM",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Mesh/Songlu_SP01_Face_SM",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Mesh/Songlu_SP01_Hair_SM",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Mesh/Songlu_SP01_Hat02_SM",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Mesh/Songlu_SP01_Hat_SM",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Mesh/Songlu_SP01_SM",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Mesh/Songlu_SP01_Sum_SM"
+      }
+    },
+    Montage = {
+      Hit = {
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Hit/Songlu_Die_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Hit/Songlu_GrabHit_Lianhuo_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Hit/Songlu_GrabHit_Shijingzhe_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Hit/Songlu_HitFly_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Hit/Songlu_LightHit1_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Hit/Songlu_LightHit2_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Hit/Songlu_LightHit_B_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Hit/Songlu_LightHit_L_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Hit/Songlu_LightHit_R_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Hit/Songlu_Recover_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Hit/Songlu_StunCommon_Montage"
+      },
+      Skill = {
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Skill/Songlu_Condemn02_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Skill/Songlu_Condemn_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Skill/Songlu_Skill01_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Skill/Songlu_Skill01_Ride_HitWall_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Skill/Songlu_Skill01_Ride_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Skill/Songlu_Skill02_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Skill/Songlu_Skill02_Off_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Skill/Songlu_Skill02_On_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Skill/Songlu_Skill02_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Skill/Songlu_Skill02_RunAttack_02_Montage"
+      },
+      Locomotion = {
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Locomotion/Songlu_Climb_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Locomotion/Songlu_Dodge_End_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Locomotion/Songlu_Dodge_InAir_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Locomotion/Songlu_Dodge_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Locomotion/Songlu_DodgeBack_InAir_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Locomotion/Songlu_DodgeBack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Locomotion/Songlu_FlipEaves_End_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Locomotion/Songlu_Rotation_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Locomotion/Songlu_TurnBack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Locomotion/Songlu_WallJump_LeanLeft_LU_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Locomotion/Songlu_WallJump_LeanLeft_RU_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Locomotion/Songlu_WallJump_LeanRight_LU_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Locomotion/Songlu_WallJump_LeanRight_RU_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Locomotion/Songlu_WallJump_LU_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Locomotion/Songlu_WallJump_RU_Montage"
+      }
+    },
+    Weapon = {
+      Bow = {
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Bow/Songlu_Bow01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Bow/Songlu_Bow02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Bow/Songlu_Bow_HeavyShooting_Montage"
+      },
+      Katana = {
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Katana/Songlu_Katana_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Katana/Songlu_Katana_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Katana/Songlu_Katana_Mod01_HeavyAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Katana/Songlu_Katana_Mod01_HeavyAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Katana/Songlu_Katana_Mod01_HeavyAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Katana/Songlu_Katana_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Katana/Songlu_Katana_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Katana/Songlu_Katana_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Katana/Songlu_Katana_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Katana/Songlu_Katana_SlideAttack_Montage"
+      },
+      Claymore = {
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Claymore/Songlu_Claymore_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Claymore/Songlu_Claymore_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Claymore/Songlu_Claymore_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Claymore/Songlu_Claymore_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Claymore/Songlu_Claymore_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Claymore/Songlu_Claymore_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Claymore/Songlu_Claymore_Mod02_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Claymore/Songlu_Claymore_Mod02_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Claymore/Songlu_Claymore_Mod02_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Claymore/Songlu_Claymore_Mod02_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Claymore/Songlu_Claymore_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Claymore/Songlu_Claymore_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Claymore/Songlu_Claymore_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Claymore/Songlu_Claymore_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Claymore/Songlu_Claymore_SlideAttack_Montage"
+      },
+      Dualblade = {
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_Mod01_SlideAttack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_RunAttack_03_EffectCreature_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Dualblade/Songlu_Dualblade_SlideAttack_Montage"
+      },
+      Shotgun = {
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Shotgun/Songlu_Shotgun01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Shotgun/Songlu_Shotgun01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Shotgun/Songlu_Shotgun02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Shotgun/Songlu_Shotgun02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Shotgun/Songlu_Shotgun03_Reload_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Shotgun/Songlu_Shotgun03_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Shotgun/Songlu_Shotgun04_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Shotgun/Songlu_Shotgun05_Reload_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Shotgun/Songlu_Shotgun06_Reload_Montage"
+      },
+      Polearm = {
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Polearm/Songlu_Polearm_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Polearm/Songlu_Polearm_HeavyAttack_Callback_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Polearm/Songlu_Polearm_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Polearm/Songlu_Polearm_Mod01_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Polearm/Songlu_Polearm_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Polearm/Songlu_Polearm_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Polearm/Songlu_Polearm_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Polearm/Songlu_Polearm_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Polearm/Songlu_Polearm_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Polearm/Songlu_Polearm_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Polearm/Songlu_Polearm_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Polearm/Songlu_Polearm_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Polearm/Songlu_Polearm_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Polearm/Songlu_Polearm_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Polearm/Songlu_Polearm_RunAttack_05_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Polearm/Songlu_Polearm_SlideAttack_Montage"
+      },
+      Cannon = {
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Cannon/Songlu_Cannon01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Cannon/Songlu_Cannon01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Cannon/Songlu_Cannon02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Cannon/Songlu_Cannon02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Cannon/Songlu_Cannon03_Shooting_Montage"
+      },
+      Sword = {
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Sword/Songlu_Sword_SlideAttack_Montage"
+      },
+      Machinegun = {
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Machinegun/Songlu_Machinegun01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Machinegun/Songlu_Machinegun01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Machinegun/Songlu_Machinegun02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Machinegun/Songlu_Machinegun02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Machinegun/Songlu_Machinegun03_Reload_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Machinegun/Songlu_Machinegun04_Reload_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Machinegun/Songlu_Machinegun04_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Machinegun/Songlu_Machinegun05_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Machinegun/Songlu_Machinegun06_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Machinegun/Songlu_Machinegun_Paotai_Shooting_Montage"
+      },
+      Pistol = {
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Pistol/Songlu_Pistol01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Pistol/Songlu_Pistol01_Shooting_Montage"
+      },
+      Crossbow = {
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Crossbow/Songlu_Crossbow01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Crossbow/Songlu_Crossbow01_Shooting_Montage"
+      },
+      Swordwhip = {
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Swordwhip/Songlu_Swordwhip_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Swordwhip/Songlu_Swordwhip_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Swordwhip/Songlu_Swordwhip_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Swordwhip/Songlu_Swordwhip_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char099_Songlu01/Animation/Montage/Combat/Weapon/Swordwhip/Songlu_Swordwhip_RunAttack_04_Montage"
+      }
     }
   },
   [420202] = {
@@ -5791,12 +6659,12 @@ local AssetPath = {
   },
   [310303] = {
     Mesh = {
-      All = T.RT_10
+      All = T.RT_11
     }
   },
   [310301] = {
     Mesh = {
-      All = T.RT_10
+      All = T.RT_11
     },
     Montage = {
       Hit = {
@@ -5812,7 +6680,7 @@ local AssetPath = {
   },
   [2301] = {
     Mesh = {
-      All = T.RT_77
+      All = T.RT_81
     },
     Montage = {
       Hit = {
@@ -5852,6 +6720,11 @@ local AssetPath = {
       }
     },
     Weapon = {
+      Bow = {
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Bow/Zhangyu_Bow01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Bow/Zhangyu_Bow02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Bow/Zhangyu_Bow_HeavyShooting_Montage"
+      },
       Katana = {
         "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Katana/Zhangyu_Katana_FallAttack_Montage",
         "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Katana/Zhangyu_Katana_HeavyAttack_Montage",
@@ -5881,30 +6754,21 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Claymore/Zhangyu_Claymore_RunAttack_04_Montage",
         "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Claymore/Zhangyu_Claymore_SlideAttack_Montage"
       },
-      Sword = {
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_SlideAttack_Montage"
-      },
-      Pistol = {
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Pistol/Zhangyu_Pistol01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Pistol/Zhangyu_Pistol01_Shooting_Montage"
-      },
-      Swordwhip = {
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Swordwhip/Zhangyu_Swordwhip_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Swordwhip/Zhangyu_Swordwhip_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Swordwhip/Zhangyu_Swordwhip_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Swordwhip/Zhangyu_Swordwhip_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Swordwhip/Zhangyu_Swordwhip_RunAttack_04_Montage"
+      Dualblade = {
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_Mod01_SlideAttack_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_RunAttack_03_EffectCreature_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_SlideAttack_Montage"
       },
       Shotgun = {
         "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Shotgun/Zhangyu_Shotgun01_Reload_Montage",
@@ -5913,6 +6777,7 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Shotgun/Zhangyu_Shotgun02_Shooting_Montage",
         "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Shotgun/Zhangyu_Shotgun03_Reload_Montage",
         "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Shotgun/Zhangyu_Shotgun03_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Shotgun/Zhangyu_Shotgun04_Shooting_Montage",
         "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Shotgun/Zhangyu_Shotgun05_Reload_Montage",
         "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Shotgun/Zhangyu_Shotgun06_Reload_Montage"
       },
@@ -5934,6 +6799,28 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Polearm/Zhangyu_Polearm_RunAttack_05_Montage",
         "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Polearm/Zhangyu_Polearm_SlideAttack_Montage"
       },
+      Cannon = {
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Cannon/Zhangyu_Cannon01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Cannon/Zhangyu_Cannon01_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Cannon/Zhangyu_Cannon02_Reload_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Cannon/Zhangyu_Cannon02_Shooting_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Cannon/Zhangyu_Cannon03_Shooting_Montage"
+      },
+      Sword = {
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_FallAttack_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_Mod01_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_Mod01_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_Mod01_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_Mod01_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_Mod01_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_Mod02_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_RunAttack_04_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Sword/Zhangyu_Sword_SlideAttack_Montage"
+      },
       Machinegun = {
         "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Machinegun/Zhangyu_Machinegun01_Reload_Montage",
         "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Machinegun/Zhangyu_Machinegun01_Shooting_Montage",
@@ -5946,59 +6833,26 @@ local AssetPath = {
         "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Machinegun/Zhangyu_Machinegun06_Shooting_Montage",
         "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Machinegun/Zhangyu_Machinegun_Paotai_Shooting_Montage"
       },
-      Bow = {
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Bow/Zhangyu_Bow01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Bow/Zhangyu_Bow02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Bow/Zhangyu_Bow_HeavyShooting_Montage"
-      },
-      Dualblade = {
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_FallAttack_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_Mod01_HeavyAttack_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_Mod01_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_Mod01_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_Mod01_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_Mod01_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_Mod01_SlideAttack_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_RunAttack_01_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_RunAttack_02_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_RunAttack_03_EffectCreature_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_RunAttack_03_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_RunAttack_04_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Dualblade/Zhangyu_Dualblade_SlideAttack_Montage"
+      Pistol = {
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Pistol/Zhangyu_Pistol01_Reload_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Pistol/Zhangyu_Pistol01_Shooting_Montage"
       },
       Crossbow = {
         "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Crossbow/Zhangyu_Crossbow01_Reload_Montage",
         "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Crossbow/Zhangyu_Crossbow01_Shooting_Montage"
       },
-      Cannon = {
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Cannon/Zhangyu_Cannon01_Reload_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Cannon/Zhangyu_Cannon01_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Cannon/Zhangyu_Cannon02_Reload_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Cannon/Zhangyu_Cannon02_Shooting_Montage",
-        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Cannon/Zhangyu_Cannon03_Shooting_Montage"
-      }
-    }
-  },
-  [240101] = {
-    Mesh = {
-      All = T.RT_43
-    },
-    Montage = {
-      Hit = {
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Summon/Montage/Combat/Hit/Baiheng_Summon_Die_Montage"
-      },
-      Skill = {
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Summon/Montage/Combat/Skill/Baiheng01_Summon_Skill01_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Summon/Montage/Combat/Skill/Baiheng_Summon_Skill01_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Summon/Montage/Combat/Skill/Baiheng_Summon_Skill02_Buff_Montage",
-        "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Summon/Montage/Combat/Skill/Baiheng_Summon_Skill02_EffectCreature01_Montage"
+      Swordwhip = {
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Swordwhip/Zhangyu_Swordwhip_HeavyAttack_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Swordwhip/Zhangyu_Swordwhip_RunAttack_01_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Swordwhip/Zhangyu_Swordwhip_RunAttack_02_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Swordwhip/Zhangyu_Swordwhip_RunAttack_03_Montage",
+        "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Weapon/Swordwhip/Zhangyu_Swordwhip_RunAttack_04_Montage"
       }
     }
   },
   [210101] = {
     Mesh = {
-      All = T.RT_21
+      All = T.RT_22
     },
     Montage = {
       Hit = {

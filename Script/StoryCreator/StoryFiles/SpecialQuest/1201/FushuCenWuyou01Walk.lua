@@ -224,6 +224,7 @@ return {
             pos = {x = 1651.4627258375888, y = -488.8219298313363},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "Npc_BTWuyousheng01_2050051"
             }
@@ -235,6 +236,7 @@ return {
             pos = {x = 1951.1552743881098, y = -483.5911037688539},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "Npc_BTWuyousheng03_2050052"
             }

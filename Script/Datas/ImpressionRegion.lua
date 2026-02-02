@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -19,6 +22,7 @@ return ReadOnly("ImpressionRegion", {
       1031,
       1032
     },
+    RegionName = "ImpressionRegionName_1011",
     RegionPointId = 2612,
     UIName = "DimensionGraph_Hyper"
   },
@@ -28,9 +32,18 @@ return ReadOnly("ImpressionRegion", {
     RegionId = {
       1041,
       1049,
-      1057
+      1057,
+      1045,
+      1048,
+      1051,
+      1052,
+      1053,
+      1054,
+      1055,
+      1056
     },
-    RegionPointId = 2612,
+    RegionName = "ImpressionRegionName_1041",
+    RegionPointId = 2826,
     UIName = "DimensionGraph_East"
   }
 })

@@ -1,6 +1,7 @@
 local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
 local ClientEventUtils = require("BluePrints.Common.ClientEvent.ClientEventUtils")
 local EMCache = require("EMCache.EMCache")
+local ReasoningUtils = require("BluePrints.UI.WBP.DetectiveMinigame.ReasoningUtils")
 local M = Class("BluePrints.UI.BP_UIState_C")
 local QuestState = {Unlock = 1, Doing = 2}
 local DisplayDungeonProgress = {
@@ -35,7 +36,6 @@ function M:Construct()
   end
   EventManager:AddEvent(EventID.OnReceiveTask, self, self.SetTaskIconAndName)
   EventManager:AddEvent(EventID.StartRougeCanonMiniGame, self, self.SetRougeCanonInfo)
-  EventManager:AddEvent(EventID.EndRougeCanonMiniGame, self, self.RemoveRougeCanonInfo)
   EventManager:AddEvent(EventID.QuestChainFinished, self, self.QuestChainFinished)
   EventManager:AddEvent(EventID.OnUpdateQuestChain, self, self.UpdateQuestChain)
   EventManager:AddEvent(EventID.OnDungeonTaskProgress, self, self.OnDungeonTaskProgress)
@@ -57,7 +57,6 @@ function M:Destruct()
   self.Super.Destruct(self)
   EventManager:RemoveEvent(EventID.OnReceiveTask, self)
   EventManager:RemoveEvent(EventID.StartRougeCanonMiniGame, self)
-  EventManager:RemoveEvent(EventID.EndRougeCanonMiniGame, self)
   EventManager:RemoveEvent(EventID.QuestChainFinished, self)
   EventManager:RemoveEvent(EventID.OnUpdateQuestChain, self)
   EventManager:RemoveEvent(EventID.OnDungeonTaskProgress, self)
@@ -1139,7 +1138,8 @@ function M:OnClickedButtonArea()
     return
   end
   if self.NeedOpenDetectiveGame then
-    UIManager(GWorld.GameInstance):LoadUINew("DetectiveMinigame")
+    local NeedOpenQuestionId = ReasoningUtils:GetNeedOpenQuestionIdByIds(self.NeedOpenDetectiveAnswerIds, self.NeedOpenDetectiveResultIds)
+    UIManager(GWorld.GameInstance):LoadUINew("DetectiveMinigame", nil, NeedOpenQuestionId)
     return
   end
   if self:IsAnimationPlaying(self.Press) then
@@ -1296,20 +1296,6 @@ function M:SetRougeCanonInfo()
   self.Text_TaskName:SetText(GText("RougePaotaiMiniGameName"))
   self.Text_TaskContent:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Text_TaskContent:SetText(GText("RougePaotaiMiniGameDescribe"))
-  self.VBox_SubTasks:ClearChildren()
-  self.VBox_SubTasks:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  local CurrentEventId = GWorld.RougeLikeManager.EventId
-  local MiniGameScoreId = DataMgr.RougeLikeEventSelect[CurrentEventId].MiniGameScoreId
-  local Info = DataMgr.RougeLikeMiniGameScore[MiniGameScoreId]
-  for Index, Score in ipairs(Info.MiniGameScore) do
-    local Widget = self:CreateWidgetNew("RougeGameTarget")
-    self.VBox_SubTasks:AddChild(Widget)
-    Widget:Init(EventID.OnRougeLikeCanonScoreAdd, Index, Score)
-  end
-end
-
-function M:RemoveRougeCanonInfo()
-  self.VBox_SubTasks:ClearChildren()
   self.VBox_SubTasks:SetVisibility(ESlateVisibility.Collapsed)
 end
 
@@ -1405,7 +1391,11 @@ function M:SetTeleportBubble(IsShow)
     self.Key_Tips03:PlayAnimation(self.Key_Tips03.Normal)
     self.Key_Controller_Tips03:PlayAnimation(self.Key_Controller_Tips03.Normal)
   end
-  self.Text_Tips03:SetText(GText("DUNGEON_TELEPORT_TIPS"))
+  local ConfigData = {
+    IconPath = "",
+    Text = "DUNGEON_TELEPORT_TIPS"
+  }
+  self.Bubble:Init(ConfigData)
   if self.TeleportTipsTimer then
     self:RemoveTimer(self.TeleportTipsTimer)
     self.TeleportTipsTimer = nil

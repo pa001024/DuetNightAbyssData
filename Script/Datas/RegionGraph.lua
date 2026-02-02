@@ -157,6 +157,9 @@ T.RT_32 = {
 T.RT_33 = {
   RegionTarget = T.RT_32
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

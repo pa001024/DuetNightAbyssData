@@ -1,0 +1,80 @@
+local Class = _G.TypeClass
+local BaseTypes = require("BluePrints.Client.CustomTypes.BaseTypes")
+local CustomTypes = require("BluePrints.Client.CustomTypes.CustomTypes")
+local prop = require("NetworkEngine.Common.Prop")
+local FormatProperties = require("NetworkEngine.Common.Assemble").FormatProperties
+local AutoChessCard = Class("AutoChessCard", CustomTypes.CustomAttr)
+AutoChessCard.__Props__ = {
+  Equips = prop.prop("IntList", "client save")
+}
+
+function AutoChessCard:AddEquip(EquipId)
+  if self.Equips:Length() >= 2 then
+    return false
+  end
+  self.Equips:Append(EquipId)
+  return true
+end
+
+function AutoChessCard:ReplaceEquip(Idx, EquipId)
+  self.Equips[Idx] = EquipId
+end
+
+FormatProperties(AutoChessCard)
+local AutoChessCardDict = Class("AutoChessCardDict", CustomTypes.CustomDict)
+AutoChessCardDict.KeyType = BaseTypes.Int
+AutoChessCardDict.ValueType = AutoChessCard
+local AutoChessSquadList = Class("AutoChessSquadList", CustomTypes.CustomList)
+AutoChessSquadList.ValueType = CustomTypes.Int2IntDict
+local AutoChess = Class("AutoChess", CustomTypes.CustomAttr)
+AutoChess.__Props__ = {
+  EventId = prop.prop("Int", "client save", 0),
+  RankLevel = prop.prop("Int", "client save", 1),
+  RankScore = prop.prop("Int", "client save", 0),
+  UnlockedCards = prop.prop("AutoChessCardDict", "client save"),
+  UnlockedEquips = prop.prop("IntList", "client save"),
+  Squads = prop.prop("AutoChessSquadList", "client save"),
+  RefreshCount = prop.prop("Int", "client save", 0),
+  RandomMissionId = prop.prop("Int", "client save", 0),
+  RandomFactor = prop.prop("Int", "client save", 0),
+  RandomBuffList = prop.prop("IntList", "client save")
+}
+
+function AutoChess:ClearRandomMission()
+  self.RandomMissionId = 0
+  self.RandomFactor = 0
+  self.RandomBuffList = {}
+end
+
+function AutoChess:ClearEventData()
+  self.EventId = 0
+  self.RankLevel = 1
+  self.RankScore = 0
+  self.UnlockedCards = {}
+  self.UnlockedEquips = {}
+  self:ClearRandomMission()
+  self.Squads = {}
+  for i = 1, DataMgr.GlobalConstant.AUTO_CHESS_SQUAD_MAX.ConstantValue do
+    self.Squads:Append({})
+  end
+end
+
+function AutoChess:IsEquipUnlocked(EquipId)
+  return self.UnlockedEquips:HasValue(EquipId)
+end
+
+function AutoChess:UnlockCard(CardId)
+  self.UnlockedCards:AddValue(CardId, AutoChessCard())
+end
+
+function AutoChess:UnlockEquip(EquipId)
+  self.UnlockedEquips:Append(EquipId)
+end
+
+FormatProperties(AutoChess)
+return {
+  AutoChessCard = AutoChessCard,
+  AutoChessCardDict = AutoChessCardDict,
+  AutoChessSquadList = AutoChessSquadList,
+  AutoChess = AutoChess
+}

@@ -149,6 +149,9 @@ T.RT_30 = {
   [2] = 20014,
   [3] = 10003
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -257,59 +260,6 @@ return ReadOnly("CharBreak", {
       CollectRewardExp = 1600,
       ItemId = T.RT_6,
       ItemNum = T.RT_15
-    }
-  },
-  [1104] = {
-    [1] = {
-      CharBreakLevel = 20,
-      CharBreakNum = 1,
-      CharId = 1104,
-      CollectRewardExp = 50,
-      ItemId = T.RT_1,
-      ItemNum = T.RT_2
-    },
-    [2] = {
-      CharBreakLevel = 30,
-      CharBreakNum = 2,
-      CharId = 1104,
-      CollectReward = 61001,
-      CollectRewardExp = 100,
-      ItemId = T.RT_3,
-      ItemNum = T.RT_4
-    },
-    [3] = {
-      CharBreakLevel = 40,
-      CharBreakNum = 3,
-      CharId = 1104,
-      CollectRewardExp = 200,
-      ItemId = T.RT_3,
-      ItemNum = T.RT_5
-    },
-    [4] = {
-      CharBreakLevel = 50,
-      CharBreakNum = 4,
-      CharId = 1104,
-      CollectReward = 61002,
-      CollectRewardExp = 400,
-      ItemId = T.RT_6,
-      ItemNum = T.RT_7
-    },
-    [5] = {
-      CharBreakLevel = 60,
-      CharBreakNum = 5,
-      CharId = 1104,
-      CollectRewardExp = 800,
-      ItemId = T.RT_6,
-      ItemNum = T.RT_8
-    },
-    [6] = {
-      CharBreakLevel = 70,
-      CharBreakNum = 6,
-      CharId = 1104,
-      CollectReward = 61003,
-      CollectRewardExp = 1600,
-      ItemId = T.RT_6,
-      ItemNum = T.RT_9
     }
   },
   [1501] = {
@@ -465,6 +415,59 @@ return ReadOnly("CharBreak", {
       CharBreakLevel = 70,
       CharBreakNum = 6,
       CharId = 1503,
+      CollectReward = 61003,
+      CollectRewardExp = 1600,
+      ItemId = T.RT_18,
+      ItemNum = T.RT_15
+    }
+  },
+  [1504] = {
+    [1] = {
+      CharBreakLevel = 20,
+      CharBreakNum = 1,
+      CharId = 1504,
+      CollectRewardExp = 50,
+      ItemId = T.RT_16,
+      ItemNum = T.RT_10
+    },
+    [2] = {
+      CharBreakLevel = 30,
+      CharBreakNum = 2,
+      CharId = 1504,
+      CollectReward = 61001,
+      CollectRewardExp = 100,
+      ItemId = T.RT_17,
+      ItemNum = T.RT_11
+    },
+    [3] = {
+      CharBreakLevel = 40,
+      CharBreakNum = 3,
+      CharId = 1504,
+      CollectRewardExp = 200,
+      ItemId = T.RT_17,
+      ItemNum = T.RT_12
+    },
+    [4] = {
+      CharBreakLevel = 50,
+      CharBreakNum = 4,
+      CharId = 1504,
+      CollectReward = 61002,
+      CollectRewardExp = 400,
+      ItemId = T.RT_18,
+      ItemNum = T.RT_13
+    },
+    [5] = {
+      CharBreakLevel = 60,
+      CharBreakNum = 5,
+      CharId = 1504,
+      CollectRewardExp = 800,
+      ItemId = T.RT_18,
+      ItemNum = T.RT_14
+    },
+    [6] = {
+      CharBreakLevel = 70,
+      CharBreakNum = 6,
+      CharId = 1504,
       CollectReward = 61003,
       CollectRewardExp = 1600,
       ItemId = T.RT_18,

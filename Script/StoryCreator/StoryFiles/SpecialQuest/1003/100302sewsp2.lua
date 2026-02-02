@@ -768,6 +768,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -792,6 +793,7 @@ return {
             pos = {x = -2523.347826086956, y = -143.0434782608695},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "Quest_100302sewp2"
             }
@@ -803,6 +805,7 @@ return {
             pos = {x = -751.1086956521729, y = -311.3043478260869},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "Quest_100302sewp2"
             }

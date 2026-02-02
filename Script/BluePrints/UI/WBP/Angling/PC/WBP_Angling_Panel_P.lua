@@ -138,6 +138,16 @@ function M:UpdateFishingRodModelId(DisplayRodId)
         local MaterialPath = FishingRodData.MaterialPath
         local MaterialParam = FishingRodData.MaterialParam
         Player:UpdateEffectCreatureModel(Id, ModelId)
+        local EffectId = FishingRodData.EffectId
+        Creature.FXComponent:StopEffectByID(Creature.FishingRodEffectId, true)
+        if EffectId then
+          Creature.FishingRodEffectId = EffectId
+          local RodEffect = Creature.FXComponent:PlayEffectByID(EffectId)
+          local EffectParam = FishingRodData.EffectParam
+          if EffectParam then
+            RodEffect:SetNiagaraVariableInt("ColorNum", EffectParam)
+          end
+        end
         self:UpdateFishingRodMaterial(Player, Id, MaterialPath, MaterialParam)
       end
     end

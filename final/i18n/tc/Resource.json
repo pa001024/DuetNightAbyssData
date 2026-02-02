@@ -85,7 +85,22 @@
     "icon": "T_Coin_WeeklyDungeon"
   },
   {
+    "id": 217,
+    "name": "小隊邀請函",
+    "icon": "T_Resource_Raid_Ticket"
+  },
+  {
     "id": 218,
+    "name": "狩月紀念幣",
+    "icon": "T_Resource_Raid_Coin01"
+  },
+  {
+    "id": 219,
+    "name": "齿轮",
+    "icon": "T_Activity_Autochess_Coin01"
+  },
+  {
+    "id": 220,
     "name": "狩月紀念幣",
     "icon": "T_Resource_Raid_Coin01"
   },
@@ -168,6 +183,11 @@
     "id": 3007,
     "name": "妙妙乳飲",
     "icon": "T_Resource_PetBreak"
+  },
+  {
+    "id": 3015,
+    "name": "天工竿·薄荷",
+    "icon": "T_FishingRod_East02"
   },
   {
     "id": 3016,
@@ -831,17 +851,17 @@
   },
   {
     "id": 12076,
-    "name": "銀白勒令的槍機",
+    "name": "銀白敕令的槍機",
     "icon": "T_Range_Weapon_Part02"
   },
   {
     "id": 12077,
-    "name": "銀白勒令的槍身",
+    "name": "銀白敕令的槍身",
     "icon": "T_Range_Weapon_Part03"
   },
   {
     "id": 12078,
-    "name": "銀白勒令的槍管",
+    "name": "銀白敕令的槍管",
     "icon": "T_Range_Weapon_Part01"
   },
   {
@@ -941,12 +961,12 @@
   },
   {
     "id": 12098,
-    "name": "告諭聖言的槍身",
+    "name": "告諭聖音的槍身",
     "icon": "T_Range_Weapon_Part03"
   },
   {
     "id": 12099,
-    "name": "告諭聖言的槍管",
+    "name": "告諭聖音的槍管",
     "icon": "T_Range_Weapon_Part01"
   },
   {
@@ -1121,17 +1141,47 @@
   },
   {
     "id": 12135,
-    "name": "雀舞云屏的枪机",
+    "name": "雀舞雲屏的槍機",
     "icon": "T_Range_Weapon_Part02"
   },
   {
     "id": 12136,
-    "name": "雀舞云屏的枪身",
+    "name": "雀舞雲屏的槍身",
     "icon": "T_Range_Weapon_Part03"
   },
   {
     "id": 12137,
-    "name": "雀舞云屏的枪管",
+    "name": "雀舞雲屏的槍管",
+    "icon": "T_Range_Weapon_Part01"
+  },
+  {
+    "id": 12138,
+    "name": "風雲決的握柄",
+    "icon": "T_Melee_Weapon_Part01"
+  },
+  {
+    "id": 12139,
+    "name": "風雲決的左刀刃",
+    "icon": "T_Melee_Weapon_Part02"
+  },
+  {
+    "id": 12140,
+    "name": "風雲決的右刀刃",
+    "icon": "T_Melee_Weapon_Part02"
+  },
+  {
+    "id": 12141,
+    "name": "三角繆斯的槍機",
+    "icon": "T_Range_Weapon_Part02"
+  },
+  {
+    "id": 12142,
+    "name": "三角繆斯的槍身",
+    "icon": "T_Range_Weapon_Part03"
+  },
+  {
+    "id": 12143,
+    "name": "三角繆斯的槍管",
     "icon": "T_Range_Weapon_Part01"
   },
   {
@@ -1325,6 +1375,11 @@
     "icon": "T_Dye_09"
   },
   {
+    "id": 30112,
+    "name": "虹彩染劑",
+    "icon": "T_Dye_12"
+  },
+  {
     "id": 40001,
     "name": "嗅鹽·一",
     "icon": "T_Hp_Full"
@@ -1356,7 +1411,7 @@
   },
   {
     "id": 41002,
-    "name": "箱中之貓",
+    "name": "箱中之貓·本色",
     "icon": "T_Resource_Gesture_Zhixiang"
   },
   {
@@ -1381,7 +1436,7 @@
   },
   {
     "id": 41014,
-    "name": "極速定格・本色",
+    "name": "極速定格·本色",
     "icon": "T_Resource_Gesture_CarBlack"
   },
   {
@@ -1396,12 +1451,12 @@
   },
   {
     "id": 41017,
-    "name": "極速定格・白櫻",
+    "name": "極速定格·白櫻",
     "icon": "T_Resource_Gesture_CarPink"
   },
   {
     "id": 41018,
-    "name": "極速定格・鎏金",
+    "name": "極速定格·鎏金",
     "icon": "T_Resource_Gesture_Car"
   },
   {
@@ -1421,8 +1476,68 @@
   },
   {
     "id": 41022,
-    "name": "悠遊水岸·黛藍",
+    "name": "悠遊水岸·絳紫",
     "icon": "T_Resource_Gesture_BeachBlue"
+  },
+  {
+    "id": 41028,
+    "name": "戰術錯亂步",
+    "icon": "T_Resource_Gesture_SkillGomoku"
+  },
+  {
+    "id": 41031,
+    "name": "承露",
+    "icon": "T_Resource_Gesture_06"
+  },
+  {
+    "id": 41032,
+    "name": "睥睨山河·鎏金",
+    "icon": "T_Resource_DragonThrone_Golden"
+  },
+  {
+    "id": 41037,
+    "name": "怦然心動·鎏金",
+    "icon": "T_Resource_Gesture_0401"
+  },
+  {
+    "id": 41038,
+    "name": "怦然心動·黛藍",
+    "icon": "T_Resource_Gesture_0403"
+  },
+  {
+    "id": 41039,
+    "name": "怦然心動·白櫻",
+    "icon": "T_Resource_Gesture_0402"
+  },
+  {
+    "id": 41040,
+    "name": "睥睨山河·鉛灰",
+    "icon": "T_Resource_DragonThrone_Grey"
+  },
+  {
+    "id": 41041,
+    "name": "睥睨山河·絳紫",
+    "icon": "T_Resource_DragonThrone_Purple"
+  },
+  {
+    "id": 41042,
+    "name": "千絲雨·鎏金",
+    "icon": "T_Resource_Gesture_0501"
+  },
+  {
+    "id": 41043,
+    "name": "千絲雨·杏黃",
+    "icon": "T_Resource_Gesture_0502"
+  },
+  {
+    "id": 41044,
+    "name": "千絲雨·黛藍",
+    "icon": "T_Resource_Gesture_0503"
+  },
+  {
+    "id": 41045,
+    "name": "垂天彩簾",
+    "icon": "T_Resource_Gesture_03"
   },
   {
     "id": 110006,
@@ -1431,8 +1546,18 @@
   },
   {
     "id": 110012,
-    "name": "闻香自选形象礼箱·墨玉",
+    "name": "聞香自選形象禮箱·墨玉",
     "icon": "T_Pack_Common02"
+  },
+  {
+    "id": 110015,
+    "name": "流年自選形象禮箱·匆匆",
+    "icon": "T_Pack_JKSkin"
+  },
+  {
+    "id": 110016,
+    "name": "流年自選形象禮箱·冬日",
+    "icon": "T_Pack_SnowmanSkin"
   },
   {
     "id": 1001101,
@@ -1503,6 +1628,16 @@
     "id": 1004101,
     "name": "思緒片段·黎瑟",
     "icon": "T_CharPiece_Lise"
+  },
+  {
+    "id": 1004102,
+    "name": "思緒片段·止流",
+    "icon": "T_CharPiece_Zhiliu"
+  },
+  {
+    "id": 1004201,
+    "name": "思緒片段·煜明",
+    "icon": "T_CharPiece_Yuming"
   },
   {
     "id": 1004202,
@@ -1678,6 +1813,16 @@
     "id": 5110500,
     "name": "大師魚竿",
     "icon": "T_FishingRod_Normal_5"
+  },
+  {
+    "id": 5110601,
+    "name": "天工竿·銹紅",
+    "icon": "T_FishingRod_East01"
+  },
+  {
+    "id": 5110602,
+    "name": "天工竿·絳紫",
+    "icon": "T_FishingRod_East03"
   },
   {
     "id": 5210100,

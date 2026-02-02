@@ -8,6 +8,7 @@ function M:OnListItemObjectSet(Content)
   self.Content = Content
   self.Content.UI = self
   self.List_SubTask:ClearListItems()
+  self.Index = Content.Index
   for index, Question in ipairs(Content.ChildrenQuestions) do
     local SubContent = NewObject(UIUtils.GetCommonItemContentClass())
     SubContent.Question = Question
@@ -18,13 +19,20 @@ function M:OnListItemObjectSet(Content)
   end
   self:InitUIInfo()
   ReddotManager.AddListener("DetectiveAnswer", self, self.RefreshReddotAndSolvedUI, nil, true)
-  self:SetNavigationRule()
   self.IsMainQuestion = true
   if 0 == Content.Index then
     self:OnClickButton()
     self:SetFocus()
     self.BG:OnCellClicked()
   end
+  if Content.ChildrenQuestions and #Content.ChildrenQuestions > 0 then
+    self.Panel_Arrow:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+    self:SetArrowRotation(0)
+  else
+    self.Panel_Arrow:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  self.IsExpansion = true
+  self:SetNavigationRule()
 end
 
 function M:InitUIInfo()
@@ -40,6 +48,7 @@ function M:InitUIInfo()
   end
   self:RefreshReddotAndSolvedUI()
   self.Text_Clue:SetText(GText("Minigame_Textmap_100303"))
+  self.Text_Clue_1:SetText(GText("Minigame_Textmap_100340"))
 end
 
 function M:Construct()
@@ -51,6 +60,12 @@ function M:OnHoverButton()
   if self.Content.ParentUI.CurInputDeviceType == ECommonInputType.Gamepad then
     self:OnClickButton()
     self.BG:SelectCell()
+    if 0 == self.List_SubTask:GetNumItems() then
+      self.Content.ParentUI.Book.Controller_01:SetVisibility(ESlateVisibility.Collapsed)
+    else
+      self.Content.ParentUI.Book.Controller_01:SetVisibility(ESlateVisibility.Visible)
+    end
+    self:SetNavigationRule()
   end
 end
 
@@ -59,6 +74,11 @@ function M:Destruct()
 end
 
 function M:OnClickButton()
+  if UIUtils.UtilsGetCurrentInputType() ~= ECommonInputType.Gamepad then
+    self:ExpandQuestion()
+  end
+  self:PlayAnimation(self.Text_Select)
+  self.IsSelect = true
   if self.Content.ParentUI.CurerntQuestionId == self.Content.ParentQuestion then
     return
   end
@@ -70,7 +90,7 @@ function M:OnClickButton()
     CurrentSelectQuestionUI.BG:OnCellUnSelect()
     CurrentSelectQuestionUI:StopAllAnimations()
     CurrentSelectQuestionUI.IsSelect = false
-    if CurrentSelectQuestionUI.Content.IsSolved and CurrentSelectQuestionUI.IsMainQuestion ~= true then
+    if CurrentSelectQuestionUI.Content.IsSolved and true ~= CurrentSelectQuestionUI.IsMainQuestion then
       CurrentSelectQuestionUI:PlayAnimation(CurrentSelectQuestionUI.Text_Forbidden)
     else
       CurrentSelectQuestionUI:PlayAnimation(CurrentSelectQuestionUI.Text_Normal)
@@ -85,49 +105,111 @@ function M:OnClickButton()
   end
   self:RefreshReddotAndSolvedUI()
   self:StopAllAnimations()
-  self:PlayAnimation(self.Text_Select)
-  self.IsSelect = true
+end
+
+function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  local IsHandled = false
+  if "Gamepad_FaceButton_Left" == InKeyName then
+    if not self.BG:HasFocusedDescendants() and not self.BG:HasAnyUserFocus() then
+      return UE4.UWidgetBlueprintLibrary.Unhandled()
+    end
+    self:ExpandQuestion()
+    IsHandled = true
+  end
+  if IsHandled then
+    return UE4.UWidgetBlueprintLibrary.Handled()
+  end
+  return UE4.UWidgetBlueprintLibrary.Unhandled()
+end
+
+function M:SetArrowRotation(Angle)
+  if self.Arrow then
+    self.Arrow:SetRenderTransformAngle(Angle)
+  end
+end
+
+function M:ExpandQuestion()
+  if 0 == self.List_SubTask:GetNumItems() then
+    return
+  end
+  if not self.IsExpansion then
+    self.List_SubTask:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.IsExpansion = true
+    self:SetArrowRotation(0)
+  else
+    self.List_SubTask:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.IsExpansion = false
+    self:SetArrowRotation(180)
+  end
+  self:SetNavigationRule()
 end
 
 function M:RefreshReddotAndSolvedUI()
+  self.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Panel_Clue:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Panel_Reason:SetVisibility(UE4.ESlateVisibility.Collapsed)
   if self.Content.IsSolved then
     self:StopAllAnimations()
     if self.IsSelect == false and 0 ~= self.Content.Index then
       self:PlayAnimation(self.Text_Normal)
     end
     self.Panel_Finish:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.Panel_Clue:SetVisibility(UE4.ESlateVisibility.Collapsed)
   else
     self.Panel_Finish:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    local CacheKey = self.Content.ParentQuestion
-    if not ReddotManager.GetTreeNode("DetectiveQuestion") then
-      ReddotManager.AddNode("DetectiveQuestion")
-    end
-    local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("DetectiveQuestion")
-    if CacheDetail then
-      self.Panel_Clue:SetVisibility(UE4.ESlateVisibility.Collapsed)
-      if nil == CacheDetail[CacheKey] then
-        CacheDetail[CacheKey] = true
-        ReddotManager.IncreaseLeafNodeCount("DetectiveQuestion")
-        self.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-      elseif CacheDetail[CacheKey] then
-        self.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-      else
-        self.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
-        if ReasoningUtils:IsQuestionHasNewClue(self.Content.ParentQuestion) then
-          self.Panel_Clue:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-        end
-      end
+    local QuestionId = self.Content.ParentQuestion
+    local IsReasoningState = ReasoningUtils:IsQuestionReasoningState(QuestionId)
+    local Result = ReasoningUtils:IsHasNewQuestionOrClue(QuestionId)
+    local IsNewQuestion = 1 == Result
+    local IsNewClue = 2 == Result
+    if IsNewClue then
+      self.Panel_Clue:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    elseif IsNewQuestion then
+      self.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    elseif IsReasoningState then
+      self.Panel_Reason:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     end
   end
 end
 
 function M:SetNavigationRule()
-  if 0 ~= self.List_SubTask:GetNumItems() then
+  local TaskUI = self.List_SubTask:GetItemAt(0)
+  local NextQuestionUI = self.Content.ParentUI.Book.List_Question:GetItemAt(self.Index + 1)
+  if 0 ~= self.List_SubTask:GetNumItems() and self.IsExpansion then
     self.BG:SetNavigationRuleExplicit(EUINavigation.Down, self.List_SubTask)
+    if NextQuestionUI and NextQuestionUI.UI then
+      self.List_SubTask:SetNavigationRuleExplicit(EUINavigation.Down, NextQuestionUI.UI.BG)
+    else
+      self.List_SubTask:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
+    end
+  elseif NextQuestionUI and NextQuestionUI.UI then
+    self.BG:SetNavigationRuleExplicit(EUINavigation.Down, NextQuestionUI.UI.BG)
+  else
+    self.BG:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
   end
-  self.List_SubTask:SetNavigationRuleExplicit(EUINavigation.Up, self.BG)
+  local PrevQuestionUI = self.Content.ParentUI.Book.List_Question:GetItemAt(self.Index - 1)
+  if PrevQuestionUI then
+    local FocusItem
+    if PrevQuestionUI.UI.IsExpansion then
+      local Num = PrevQuestionUI.UI.List_SubTask:GetNumItems()
+      if Num > 0 then
+        local LastSubTask = PrevQuestionUI.UI.List_SubTask:GetItemAt(Num - 1)
+        if LastSubTask and LastSubTask.UI then
+          FocusItem = LastSubTask.UI.BG
+        end
+      end
+      if FocusItem then
+        self.BG:SetNavigationRuleExplicit(EUINavigation.Up, FocusItem)
+      else
+        self.BG:SetNavigationRuleExplicit(EUINavigation.Up, PrevQuestionUI.UI.BG)
+      end
+    else
+      self.BG:SetNavigationRuleExplicit(EUINavigation.Up, PrevQuestionUI.UI.BG)
+    end
+  else
+    self.BG:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
+  end
 end
 
 return M

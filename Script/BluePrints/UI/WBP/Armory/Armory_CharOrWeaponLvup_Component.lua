@@ -361,7 +361,6 @@ function Component:UpdateLevelUpInfo(Level, ComparedLevel)
     self:UpdateLvUpResourceItems(Res.ResourceUse)
   end
   if not self.CanUpgrade then
-    UIManager(self):ShowUITip("CommonToastMain", GText(self.ErrorText))
   end
   self.Level = Level
   self.ComparedLevel = ComparedLevel
@@ -528,7 +527,7 @@ function Component:OnTargetLevelUp(Ret, Uuid, Level, NewLevel)
       elseif self.Type == "Weapon" then
         self.ErrorText = "Weapon_LevelUp_Success"
       end
-      self:BlockAllUIInput(true)
+      self:BlockAllUIInput(true, "SP_DisplayOnly")
       self.CurrentSubUI:OnLevelUpSuccess()
       self.CurrentSubUI.Num_LevelUp:SetText(NewLevel)
       self.Btn_Upgrade:ForbidBtn(true)

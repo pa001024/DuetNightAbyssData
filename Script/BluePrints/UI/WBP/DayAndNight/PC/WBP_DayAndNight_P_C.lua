@@ -6,7 +6,6 @@ M._components = {
 local Unhandled = UE4.UWidgetBlueprintLibrary.Handled()
 
 function M:Construct()
-  ScreenPrint("WBP_DayAndNight_P_C:Construct")
   self:InitTab()
   self.AnalogControlSpeed = 20
   self.AnalogControlProgress = 0
@@ -165,13 +164,11 @@ function M:GamepadFocusRight()
 end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
-  ScreenPrint("WBP_DayAndNight_P_C:RefreshOpInfoByInputDevice")
   self.CurInputDevice = CurInputDevice
   self:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
 end
 
 function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
-  ScreenPrint("WBP_DayAndNight_P_C:OnUpdateUIStyleByInputTypeChange")
   if CurInputDevice == ECommonInputType.Gamepad then
     self:InitGamepadView()
   elseif CurInputDevice == ECommonInputType.MouseAndKeyboard then

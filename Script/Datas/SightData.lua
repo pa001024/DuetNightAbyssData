@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -71,5 +74,10 @@ return ReadOnly("SightData", {
     SightAngle = 0,
     SightId = 9802001,
     SightRadius = 0
+  },
+  [9810001] = {
+    SightAngle = 360,
+    SightId = 9810001,
+    SightRadius = 500
   }
 })

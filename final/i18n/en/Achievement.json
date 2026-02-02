@@ -753,6 +753,72 @@
     }
   },
   {
+    "id": 200901,
+    "名称": "Scourge of Huaxu (Ⅰ)",
+    "分类": "Beyond Numbers",
+    "品质": 3,
+    "描述": "Defeat a total of 500 enemies in Huaxu",
+    "版本": "1.2",
+    "奖励": {
+      "Coin": 2000
+    }
+  },
+  {
+    "id": 200902,
+    "名称": "Scourge of Huaxu (Ⅱ)",
+    "分类": "Beyond Numbers",
+    "品质": 2,
+    "描述": "Defeat a total of 1500 enemies in Huaxu",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1
+    }
+  },
+  {
+    "id": 200903,
+    "名称": "Scourge of Huaxu (Ⅲ)",
+    "分类": "Beyond Numbers",
+    "品质": 1,
+    "描述": "Defeat a total of 3000 enemies in Huaxu",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 2
+    }
+  },
+  {
+    "id": 201001,
+    "名称": "Save the Environment: Huaxu (Ⅰ)",
+    "分类": "Beyond Numbers",
+    "品质": 3,
+    "描述": "Defeat a total of 500 Filthoids under the effects of incense",
+    "版本": "1.2",
+    "奖励": {
+      "Coin": 2000
+    }
+  },
+  {
+    "id": 201002,
+    "名称": "Save the Environment: Huaxu (Ⅱ)",
+    "分类": "Beyond Numbers",
+    "品质": 2,
+    "描述": "Defeat a total of 1500 Filthoids under the effects of incense",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1
+    }
+  },
+  {
+    "id": 201003,
+    "名称": "Save the Environment: Huaxu (Ⅲ)",
+    "分类": "Beyond Numbers",
+    "品质": 1,
+    "描述": "Defeat a total of 3000 Filthoids under the effects of incense",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 2
+    }
+  },
+  {
     "id": 201101,
     "名称": "It Said, Do It Ⅰ",
     "分类": "Beyond Numbers",
@@ -3093,7 +3159,7 @@
     "名称": "Treasure Hunter: Purgatorio Island",
     "分类": "Wish List",
     "品质": 1,
-    "描述": "Collect all Lost Sheets in Icelake Environs",
+    "描述": "Collect all Lost Sheets in Purgatorio Island",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -3104,7 +3170,7 @@
     "名称": "Treasure Hunter: Icelake",
     "分类": "Wish List",
     "品质": 1,
-    "描述": "Collect all Lost Sheets in Icelake",
+    "描述": "Collect all Lost Sheets around Icelake",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -3126,7 +3192,7 @@
     "名称": "Memory Archive",
     "分类": "Wish List",
     "品质": 2,
-    "描述": "Collect all ten chapters of the Silvercandle Hymn throughout Icelake",
+    "描述": "Collect all ten chapters of the Silvercandle Hymn within Icelake Environs",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -3137,7 +3203,7 @@
     "名称": "Tales of the Redleaf",
     "分类": "Wish List",
     "品质": 2,
-    "描述": "Collect all four chapters of Redleaf: A Chronicle of Rebellion at Galea Theatre",
+    "描述": "Collect all four chapters of Redleaf: A Chronicle of Rebellion within Galea Theatre",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -3320,7 +3386,7 @@
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1,
-      "Title: scholar": 1
+      "Title: Scholar": 1
     }
   },
   {
@@ -3547,7 +3613,7 @@
     "名称": "Warrior's Blade Ⅰ",
     "分类": "To the Top",
     "品质": 3,
-    "描述": "Have 1 Lv. 40 weapons",
+    "描述": "Have 1 Lv. 60 weapons",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -3558,7 +3624,7 @@
     "名称": "Hero's Blade Ⅱ",
     "分类": "To the Top",
     "品质": 2,
-    "描述": "Have 5 Lv. 40 weapons",
+    "描述": "Have 5 Lv. 60 weapons",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -3569,7 +3635,7 @@
     "名称": "Hero's Blade Ⅲ",
     "分类": "To the Top",
     "品质": 1,
-    "描述": "Have 10 Lv. 40 weapons",
+    "描述": "Have 10 Lv. 60 weapons",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -3580,7 +3646,7 @@
     "名称": "Thoroughly Tempered Ⅰ",
     "分类": "To the Top",
     "品质": 3,
-    "描述": "Have 1 weapons that have reached Ascension Phase 1",
+    "描述": "Have 1 weapons that have reached Ascension Phase 6",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -3591,7 +3657,7 @@
     "名称": "Thoroughly Tempered Ⅱ",
     "分类": "To the Top",
     "品质": 2,
-    "描述": "Have 5 weapons that have reached Ascension Phase 1",
+    "描述": "Have 5 weapons that have reached Ascension Phase 6",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -3602,7 +3668,7 @@
     "名称": "Thoroughly Tempered Ⅲ",
     "分类": "To the Top",
     "品质": 1,
-    "描述": "Have 10 weapons that have reached Ascension Phase 1",
+    "描述": "Have 10 weapons that have reached Ascension Phase 6",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2,
@@ -3614,7 +3680,7 @@
     "名称": "Turn Stone Into Gold Ⅰ",
     "分类": "To the Top",
     "品质": 3,
-    "描述": "Upgrade a total of 1 4★ weapons' Smelting Level to Lv. 5",
+    "描述": "Upgrade a total of 1 weapons' Smelting Level to Lv. 5",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -3625,7 +3691,7 @@
     "名称": "Turn Stone Into Gold Ⅱ",
     "分类": "To the Top",
     "品质": 2,
-    "描述": "Upgrade a total of 5 4★ weapons' Smelting Level to Lv. 5",
+    "描述": "Upgrade a total of 5 weapons' Smelting Level to Lv. 5",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -3636,7 +3702,7 @@
     "名称": "Turn Stone Into Gold Ⅲ",
     "分类": "To the Top",
     "品质": 1,
-    "描述": "Upgrade a total of 10 4★ weapons' Smelting Level to Lv. 5",
+    "描述": "Upgrade a total of 10 weapons' Smelting Level to Lv. 5",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 2
@@ -4597,6 +4663,18 @@
     }
   },
   {
+    "id": 7012801,
+    "名称": "Captain, Don't Shoot Me!",
+    "分类": "Between the Shores",
+    "品质": 3,
+    "描述": "Complete Side Quest: Spotlight",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Villain": 1
+    }
+  },
+  {
     "id": 7013101,
     "名称": "Yesterday No More",
     "分类": "Between the Shores",
@@ -4743,7 +4821,8 @@
     "版本": "1.0",
     "奖励": {
       "Coin": 5000,
-      "Title: Lively": 1
+      "Title: Lively": 1,
+      "Title: Friend": 1
     }
   },
   {
@@ -4889,7 +4968,8 @@
     "描述": "Make a total of 20 Weave pulls",
     "版本": "1.0",
     "奖励": {
-      "Coin": 2000
+      "Coin": 5000,
+      "Title: Dazzling": 1
     }
   },
   {
@@ -4911,7 +4991,10 @@
     "描述": "Make a total of 100 Weave pulls",
     "版本": "1.0",
     "奖励": {
-      "Secret Letter Clue": 2
+      "Secret Letter Clue": 2,
+      "Title: Winsome and Awesome": 1,
+      "Title: Mother": 1,
+      "Title: Father": 1
     }
   },
   {
@@ -5000,6 +5083,502 @@
     "版本": "1.1",
     "奖励": {
       "Secret Letter Clue": 1
+    }
+  },
+  {
+    "id": 17002001,
+    "名称": "A Quiet Sojourn: Berenica",
+    "分类": "Joyful Days",
+    "品质": 1,
+    "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Berenica",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Berenica's": 1
+    }
+  },
+  {
+    "id": 17002002,
+    "名称": "A Quiet Sojourn: Phantasio",
+    "分类": "Joyful Days",
+    "品质": 1,
+    "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Phantasio",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Phantasio's": 1
+    }
+  },
+  {
+    "id": 17002004,
+    "名称": "A Quiet Sojourn: Lady Nifle",
+    "分类": "Joyful Days",
+    "品质": 1,
+    "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Lady Nifle",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Lady Nifle's": 1
+    }
+  },
+  {
+    "id": 17002005,
+    "名称": "A Quiet Sojourn: Kezhou",
+    "分类": "Joyful Days",
+    "品质": 1,
+    "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Kezhou",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Kezhou's": 1
+    }
+  },
+  {
+    "id": 17002007,
+    "名称": "A Quiet Sojourn: Fina",
+    "分类": "Joyful Days",
+    "品质": 1,
+    "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Fina",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Fina's": 1
+    }
+  },
+  {
+    "id": 17002008,
+    "名称": "A Quiet Sojourn: Rebecca",
+    "分类": "Joyful Days",
+    "品质": 1,
+    "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Rebecca",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Rebecca's": 1
+    }
+  },
+  {
+    "id": 17002010,
+    "名称": "A Quiet Sojourn: Tabethe",
+    "分类": "Joyful Days",
+    "品质": 1,
+    "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Tabethe",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Tabethe's": 1
+    }
+  },
+  {
+    "id": 17002011,
+    "名称": "A Quiet Sojourn: Fushu",
+    "分类": "Joyful Days",
+    "品质": 1,
+    "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Fushu",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Fushu's": 1
+    }
+  },
+  {
+    "id": 17002012,
+    "名称": "A Quiet Sojourn: Lynn",
+    "分类": "Joyful Days",
+    "品质": 1,
+    "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Lynn",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Lynn's": 1
+    }
+  },
+  {
+    "id": 17002014,
+    "名称": "A Quiet Sojourn: Yale and Oliver",
+    "分类": "Joyful Days",
+    "品质": 1,
+    "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Yale and Oliver",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Yale's": 1,
+      "Title: Oliver's": 1
+    }
+  },
+  {
+    "id": 17002015,
+    "名称": "A Quiet Sojourn: Hellfire",
+    "分类": "Joyful Days",
+    "品质": 1,
+    "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Hellfire",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Hellfire's": 1
+    }
+  },
+  {
+    "id": 17002017,
+    "名称": "A Quiet Sojourn: Margie",
+    "分类": "Joyful Days",
+    "品质": 1,
+    "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Margie",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Margie's": 1
+    }
+  },
+  {
+    "id": 17002018,
+    "名称": "A Quiet Sojourn: Rhythm",
+    "分类": "Joyful Days",
+    "品质": 1,
+    "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Rhythm",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Rhythm's": 1
+    }
+  },
+  {
+    "id": 17002021,
+    "名称": "A Quiet Sojourn: Randy",
+    "分类": "Joyful Days",
+    "品质": 1,
+    "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Randy",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Randy's": 1
+    }
+  },
+  {
+    "id": 17002022,
+    "名称": "A Quiet Sojourn: Sibylle",
+    "分类": "Joyful Days",
+    "品质": 1,
+    "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Sibylle",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Sibylle's": 1
+    }
+  },
+  {
+    "id": 17002023,
+    "名称": "A Quiet Sojourn: Truffle and Filbert",
+    "分类": "Joyful Days",
+    "品质": 1,
+    "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Truffle and Filbert",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Truffle's": 1,
+      "Title: Filbert's": 1
+    }
+  },
+  {
+    "id": 17002024,
+    "名称": "A Quiet Sojourn: Outsider",
+    "分类": "Joyful Days",
+    "品质": 1,
+    "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Outsider",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Outsider's": 1
+    }
+  },
+  {
+    "id": 17002025,
+    "名称": "A Quiet Sojourn: Psyche",
+    "分类": "Joyful Days",
+    "品质": 1,
+    "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Psyche",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Psyche's": 1
+    }
+  },
+  {
+    "id": 17002026,
+    "名称": "A Quiet Sojourn: Daphne",
+    "分类": "Joyful Days",
+    "品质": 1,
+    "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Daphne",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Daphne's": 1
+    }
+  },
+  {
+    "id": 17003001,
+    "名称": "A Little Get-Together: Berenica",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Berenica to the Sanctuary and talk to her once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Berenica": 1
+    }
+  },
+  {
+    "id": 17003002,
+    "名称": "A Little Get-Together: Phantasio",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Phantasio to the Sanctuary and talk to him once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Phantasio": 1
+    }
+  },
+  {
+    "id": 17003003,
+    "名称": "A Little Get-Together: Lisbell",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Lisbell to the Sanctuary and talk to her once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Lisbell": 1
+    }
+  },
+  {
+    "id": 17003004,
+    "名称": "A Little Get-Together: Lady Nifle",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Lady Nifle to the Sanctuary and talk to her once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Lady Nifle": 1
+    }
+  },
+  {
+    "id": 17003005,
+    "名称": "A Little Get-Together: Kezhou",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Kezhou to the Sanctuary and talk to him once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Kezhou": 1
+    }
+  },
+  {
+    "id": 17003007,
+    "名称": "A Little Get-Together: Fina",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Fina to the Sanctuary and talk to her once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Fina": 1
+    }
+  },
+  {
+    "id": 17003008,
+    "名称": "A Little Get-Together: Rebecca",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Rebecca to the Sanctuary and talk to her once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Rebecca": 1
+    }
+  },
+  {
+    "id": 17003010,
+    "名称": "A Little Get-Together: Tabethe",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Tabethe to the Sanctuary and talk to her once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Tabethe": 1
+    }
+  },
+  {
+    "id": 17003011,
+    "名称": "A Little Get-Together: Fushu",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Fushu to the Sanctuary and talk to her once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Fushu": 1
+    }
+  },
+  {
+    "id": 17003012,
+    "名称": "A Little Get-Together: Lynn",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Lynn to the Sanctuary and talk to her once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Lynn": 1
+    }
+  },
+  {
+    "id": 17003014,
+    "名称": "A Little Get-Together: Yale and Oliver",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Yale and Oliver to the Sanctuary and talk to them once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Yale": 1,
+      "Title: Oliver": 1
+    }
+  },
+  {
+    "id": 17003015,
+    "名称": "A Little Get-Together: Hellfire",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Hellfire to the Sanctuary and talk to her once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Hellfire": 1
+    }
+  },
+  {
+    "id": 17003017,
+    "名称": "A Little Get-Together: Margie",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Margie to the Sanctuary and talk to her once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Margie": 1
+    }
+  },
+  {
+    "id": 17003018,
+    "名称": "A Little Get-Together: Rhythm",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Rhythm to the Sanctuary and talk to her once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Rhythm": 1
+    }
+  },
+  {
+    "id": 17003019,
+    "名称": "A Little Get-Together: Zhiliu",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Zhiliu to the Sanctuary and talk to her once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Zhiliu": 1
+    }
+  },
+  {
+    "id": 17003020,
+    "名称": "A Little Get-Together: Yuming",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Yuming to the Sanctuary and talk to him once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Yuming": 1
+    }
+  },
+  {
+    "id": 17003021,
+    "名称": "A Little Get-Together: Randy",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Randy to the Sanctuary and talk to him once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Randy": 1
+    }
+  },
+  {
+    "id": 17003022,
+    "名称": "A Little Get-Together: Sibylle",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Sibylle to the Sanctuary and talk to her once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Sibylle": 1
+    }
+  },
+  {
+    "id": 17003023,
+    "名称": "A Little Get-Together: Truffle and Filbert",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Truffle and Filbert to the Sanctuary and talk to them once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Truffle": 1,
+      "Title: Filbert": 1
+    }
+  },
+  {
+    "id": 17003024,
+    "名称": "A Little Get-Together: Outsider",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Outsider to the Sanctuary and talk to him once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Outsider": 1
+    }
+  },
+  {
+    "id": 17003025,
+    "名称": "A Little Get-Together: Psyche",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Psyche to the Sanctuary and talk to her once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Psyche": 1
+    }
+  },
+  {
+    "id": 17003026,
+    "名称": "A Little Get-Together: Daphne",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Daphne to the Sanctuary and talk to her once",
+    "版本": "1.2",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Daphne": 1
     }
   },
   {
@@ -5718,7 +6297,8 @@
     "描述": "Unlock 75 Atlasium entries",
     "版本": "1.0",
     "奖励": {
-      "Secret Letter Clue": 2
+      "Coin": 5000,
+      "Title: Erudite": 1
     }
   },
   {

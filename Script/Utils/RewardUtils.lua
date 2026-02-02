@@ -313,15 +313,15 @@ end
 
 function RewardUtils:GetRewardViewInfoById(RewardViewId)
   local RewardInfo = {}
-  local RewardData = DataMgr.RewardView[RewardViewId]
+  local RewardData = DataMgr.RewardView[RewardViewId] or DataMgr.Reward[RewardViewId]
   if not RewardData then
     return RewardInfo
   end
   local RewardTypes = RewardData.Type
   local RewardIds = RewardData.Id
   local RewardQuantitys
-  if RewardData.Quantity then
-    RewardQuantitys = RewardData.Quantity
+  if RewardData.Quantity or RewardData.Count then
+    RewardQuantitys = RewardData.Quantity or RewardData.Count
   end
   local RewardDropTypes
   if RewardData.DropType then

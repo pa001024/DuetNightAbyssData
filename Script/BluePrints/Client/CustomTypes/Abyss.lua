@@ -236,6 +236,7 @@ Abyss.__Props__ = {
   }),
   AlreadyJumpLevelTimes = prop.prop("Int", "client save", 0),
   FastestTeamList = prop.prop("AbyssTeamList", "client save"),
+  AttributeType = prop.prop("Str", "client save"),
   AbyssSeasonId = prop.getter("Data", "AbyssSeasonId"),
   DifficultyLock = prop.getter("Data", "DifficultyLock"),
   AbyssType = prop.getter("Data", "AbyssType"),

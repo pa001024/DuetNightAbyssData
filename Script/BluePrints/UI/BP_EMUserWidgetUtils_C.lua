@@ -165,4 +165,16 @@ function M:Destruct()
   DebugPrint("BP_EMUserWidgetUtils_C Destruct, 父类Destruct逻辑已经迁移, 子类可以不需要再调用Super方法 UIName is", self.WidgetName or self:GetName())
 end
 
+function M:CreateWidgetNew(UIName, ...)
+  return UIManager(self):_CreateWidgetNew(UIName)
+end
+
+function M:CreateWidgetAsync(UIName, CoroutineOrCBFunc, ...)
+  return UIManager(self):CreateWidgetAsync(UIName, CoroutineOrCBFunc, ...)
+end
+
+function M:LoadUINew(UIName, ...)
+  return UIManager(self):LoadUINew(UIName, ...)
+end
+
 return M

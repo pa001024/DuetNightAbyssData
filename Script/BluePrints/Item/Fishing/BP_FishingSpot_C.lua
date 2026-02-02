@@ -3,6 +3,7 @@ local M = Class("BluePrints/Item/MiniGame/BP_OpenUIMechanism_C")
 
 function M:CommonInitInfo(Info)
   M.Super.CommonInitInfo(self, Info)
+  self.DefaultInteractiveComponent.MergeName = "Angling"
   self.UIName = "AnglingMain"
   if not self.BpBorn then
     self.FishingSpotId = self.UnitParams.FishingSpotId
@@ -38,6 +39,12 @@ function M:OpenUI(PlayerId, NextStateId)
   Player:SetInvincible(true, "Fishing")
   Player:SetSuperArmor(true, "Fishing")
   Player:SetStealth(true, "Fishing")
+  local Rot = self.Arrow:K2_GetComponentRotation()
+  Player:K2_SetActorRotation(Rot, false, nil, false)
+  Player:GetMovementComponent():SetMovementMode(1)
+  Player.CharSpringArmComponent.bArmCollision = false
+  self.CameraProbeSize = Player.CharSpringArmComponent.CameraProbeSize
+  Player.CharSpringArmComponent.CameraProbeSize = 2
   local Controller = UE4.UGameplayStatics.GetPlayerController(self, 0)
   self.Camera:SetAspectRatio(Player.CharCameraComponent.AspectRatio)
   self.Camera:SetFieldOfView(Player.CharCameraComponent.FieldOfView)
@@ -48,31 +55,7 @@ function M:OpenUI(PlayerId, NextStateId)
   for i, Weapon in pairs(Player.Weapons) do
     Weapon:SetActorHideTag("Fishing", true, false, false)
   end
-  local EnterPointLoc = self.PlayerPoint:K2_GetComponentLocation()
-  local RealZ = EnterPointLoc.Z + Player.CapsuleComponent.CapsuleHalfHeight + Player:GetFloorInfo().FloorDist
-  local Loc = FVector(EnterPointLoc.X, EnterPointLoc.Y, RealZ)
-  local Rot = self.PlayerPoint:K2_GetComponentRotation()
-  Player:DisableInput(Controller)
-  local handle = UE4.ULTweenBPLibrary.Vector3To(self, {
-    self,
-    function(_, value)
-      Player.MoveInput = FVector(0, 0, 0)
-      Player.MoveInputCache = FVector(0, 0, 0)
-      Player:K2_SetActorLocationAndRotation(value, Rot, false, nil, false)
-    end
-  }, Player:K2_GetActorLocation(), Loc, 0.1, 0)
-  handle:OnComplete({
-    self,
-    function()
-      Player:K2_SetActorLocationAndRotation(Loc, Rot, false, nil, false)
-      Player:GetMovementComponent():SetMovementMode(1)
-      Player.CharSpringArmComponent.bArmCollision = false
-      self.CameraProbeSize = Player.CharSpringArmComponent.CameraProbeSize
-      Player.CharSpringArmComponent.CameraProbeSize = 2
-      Player:EnableInput(Controller)
-      self:RealOpenUI(PlayerId, NextStateId)
-    end
-  })
+  self:RealOpenUI(PlayerId, NextStateId)
   MissionIndicatorManager:TriggerAllIndicatorVisible(false)
 end
 
@@ -125,7 +108,8 @@ function M:CheckCanInteractive(Player)
 end
 
 function M:RetrieveCameraViewInfo(CameraInfo, Time, Exp)
-  local AnchorTrans = self:GetTransform()
+  local Player = UGameplayStatics.GetPlayerCharacter(self, 0)
+  local AnchorTrans = Player.Mesh:K2_GetComponentToWorld()
   local List = Split(CameraInfo, ",")
   local Loc = FVector(tonumber(List[1]), tonumber(List[2]), tonumber(List[3]))
   local Rot = FRotator(tonumber(List[5]), tonumber(List[6]), tonumber(List[4]))
@@ -189,6 +173,14 @@ end
 
 function M:CheckMontageInteractive()
   return true
+end
+
+function M:SetFishingSpotLocation(Player)
+  local FishPointRelativeTransform = self.FishPoint.RelativeLocation
+  local PlayerTransform = Player.Mesh:K2_GetComponentToWorld()
+  local NewLoc = UKismetMathLibrary.TransformLocation(PlayerTransform, FishPointRelativeTransform)
+  local GameState = UGameplayStatics.GetGameState(self)
+  UDataSetFunctionLibrary.SetVector_ByEid(GameState.Battle, Player.Eid, "FishPoint_Location", NewLoc)
 end
 
 return M

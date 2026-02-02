@@ -63,6 +63,49 @@ function Component:CheckCharAccessoryEnough(CheckData)
   return true
 end
 
+function Component:CheckHairEnough(CheckData)
+  for CharHairId, Count in pairs(CheckData) do
+    local HairInfo = DataMgr.Hair[CharHairId]
+    if not HairInfo or not HairInfo.CharId then
+      return false
+    end
+    local CharId = HairInfo.CharId
+    local CommonChar = self.CommonChars[CharId]
+    if CommonChar then
+      if CommonChar.OwnedHairs[CharHairId] == nil then
+        return false
+      end
+    else
+      local OtherCharHair = self.OtherCharHairs[CharId]
+      if not OtherCharHair then
+        return false
+      end
+      if not OtherCharHair:HasValue(CharHairId) then
+        return false
+      end
+    end
+  end
+  return true
+end
+
+function Component:GetCharAccessoryCustomParams(CharUuid, AppearanceIndex, AccessoryId)
+  if not CharUuid then
+    return
+  end
+  local Char = self.Chars[CharUuid]
+  if not Char then
+    return
+  end
+  local AppearanceSuit = Char:GetAppearance(AppearanceIndex)
+  if not AppearanceSuit then
+    return
+  end
+  if AppearanceSuit.AccessoryCustomParams and AppearanceSuit.AccessoryCustomParams[AccessoryId] then
+    return SerializeUtils:UnSerialize(AppearanceSuit.AccessoryCustomParams[AccessoryId])
+  end
+  return nil
+end
+
 function Component:AddNewCharAppearance()
   local function Callback(Ret)
     DebugPrint("ZJT_ AddNewCharAppearance ", Ret)
@@ -82,16 +125,17 @@ function Component:SwitchCurrentCharAppearance(CharUuid, AppearanceIndex)
   self:CallServer("SwitchCurrentCharAppearance", Callback, CharUuid, AppearanceIndex)
 end
 
-function Component:SetCharAppearanceAccessory(CharUuid, AppearanceIndex, AccessoryId)
-  DebugPrint("ZJT_ SetCharAppearanceAccessory ", CharUuid, AppearanceIndex, AccessoryId)
+function Component:SetCharAppearanceAccessory(CharUuid, AppearanceIndex, AccessoryId, CustomParams)
+  DebugPrint("ZJT_ SetCharAppearanceAccessory Begin", CharUuid, AppearanceIndex, AccessoryId, CustomParams)
   CharUuid = CharUuid or self.CurrentChar
+  CustomParams = CustomParams or {}
   
   local function Callback(Ret)
-    DebugPrint("ZJT_ OnSetCharAppearanceAccessory ", Ret)
-    EventManager:FireEvent(EventID.OnCharAccessorySetted, Ret, CharUuid, AppearanceIndex, AccessoryId)
+    DebugPrint("ZJT_ OnSetCharAppearanceAccessory Callback ", Ret)
+    EventManager:FireEvent(EventID.OnCharAccessorySetted, Ret, CharUuid, AppearanceIndex, AccessoryId, CustomParams)
   end
   
-  self:CallServer("SetCharAppearanceAccessory", Callback, CharUuid, AppearanceIndex, AccessoryId)
+  self:CallServer("SetCharAppearanceAccessory", Callback, CharUuid, AppearanceIndex, AccessoryId, CustomParams)
 end
 
 function Component:RemoveCharAppearanceAccessory(CharUuid, AppearanceIndex, AccessoryId)
@@ -138,10 +182,9 @@ function Component:SetCharCornerVisibility(CharUuid, AppearancIndex, IsVisible)
 end
 
 function Component:ChangeWeaponAppearanceAccessory(WeaponUuid, AccessoryId)
-  self.logger.debug("ZJT_ ChangeWeaponAppearanceAccessory Start", CommonUtils.ObjId2Str(WeaponUuid), AccessoryId)
-  
   local function callback(Ret)
     self.logger.debug("ZJT_ OnChangeWeaponAppearanceAccessory callback", Ret, AccessoryId)
+    
     EventManager:FireEvent(EventID.OnWeaponAccessoryChanged, Ret, WeaponUuid, AccessoryId)
   end
   
@@ -229,11 +272,44 @@ function Component:ChangeCharSkinColors(SkinId, NewColorWithPart, PlanIndex)
   end
   
   local function Callback(Ret)
-    self.logger.debug("ChangeCharSkinColors, Ret", Ret, SkinId, NewColorWithPart)
+    self.logger.debug("ChangeCharSkinColors, Ret", Ret, SkinId, NewColorWithPart, PlanIndex)
     EventManager:FireEvent(EventID.OnCharColorsChanged, Ret, SkinId, NewColorWithPart)
   end
   
   self:CallServer("ChangeCharSkinColors", Callback, SkinId, PlanIndex, NewColorWithPart)
+end
+
+function Component:ChangeCharAppearanceHair(CharUuid, AppearanceIndex, NewHairId)
+  self.logger.debug("ChangeCharAppearanceHair Start", CommonUtils.ObjId2Str(CharUuid), NewHairId)
+  
+  local function Callback(Ret)
+    self.logger.debug("ChangeCharAppearanceHair Callback", Ret, AppearanceIndex, NewHairId)
+    EventManager:FireEvent(EventID.OnCharHairChanged, Ret, CharUuid, AppearanceIndex, NewHairId)
+  end
+  
+  self:CallServer("ChangeCharAppearanceHair", Callback, CharUuid, AppearanceIndex, NewHairId)
+end
+
+function Component:SwitchCurrentCharHairColorPlan(HairId, NewPlanIndex)
+  self.logger.debug("SwitchCurrentCharHairColorPlan Start", HairId, NewPlanIndex)
+  
+  local function Callback(Ret)
+    self.logger.debug("SwitchCurrentCharHairColorPlan Callback", Ret, HairId, NewPlanIndex)
+    EventManager:FireEvent(EventID.OnCharHairColorPlanChanged, Ret, HairId, NewPlanIndex)
+  end
+  
+  self:CallServer("SwitchCurrentCharHairColorPlan", Callback, HairId, NewPlanIndex)
+end
+
+function Component:ChangeCharHairColors(HairId, NewColorWithPart, PlanIndex)
+  self.logger.debug("ChangeCharHairColors Start", HairId, NewColorWithPart, PlanIndex)
+  
+  local function Callback(Ret)
+    self.logger.debug("ChangeCharHairColors Callback", Ret, HairId, NewColorWithPart, PlanIndex)
+    EventManager:FireEvent(EventID.OnCharHairColorsChanged, Ret, NewColorWithPart, PlanIndex)
+  end
+  
+  self:CallServer("ChangeCharHairColors", Callback, HairId, PlanIndex, NewColorWithPart)
 end
 
 return Component

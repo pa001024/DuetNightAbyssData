@@ -1,6 +1,9 @@
 require("UnLua")
 local UIUtils = require("Utils.UIUtils")
-local M = Class("BluePrints.UI.BP_UIState_C")
+local M = Class({
+  "BluePrints.UI.BP_EMUserWidget_C",
+  "BluePrints.UI.BP_EMUserWidgetUtils_C"
+})
 local IconPathFiltered = "/Game/UI/UI_PNG_Static/Atlas/Common/Common_Filter02.Common_Filter02"
 local IconPathUnFiltered = "/Game/UI/UI_PNG_Static/Atlas/Common/Common_Filter.Common_Filter"
 
@@ -76,7 +79,6 @@ function M:UpdateFilterInfos()
 end
 
 function M:Construct()
-  M.Super.Construct(self)
   self:AddDispatcher(EventID.OnMenuClose, self, self.OnListClosed)
   self.Button_FIiliter_List:BindEventOnClicked(self, self.ListOpenBtnClicked)
   self.Button_FIiliter_List:BindEventOnHover(self, self.OnBtn_Filter_List_Hovered)
@@ -89,10 +91,6 @@ function M:Construct()
   self.SiftModelId = nil
   self.SiftPreviewWidget = self.SiftPreview_Middle
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
-  self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
-  if IsValid(self.GameInputModeSubsystem) then
-    self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
-  end
   self.FocusKeyName = "LS"
   self:SetGamepadKey(self.FocusKeyName)
   self:InitNavigationRules()
@@ -119,7 +117,6 @@ function M:Destruct()
   self.SiftBox = nil
   self.Event_OnSelectionsChanged = nil
   self.Obj_OnSelectionsChanged = nil
-  M.Super.Destruct(self)
 end
 
 function M:OnBtn_Filter_List_Hovered()
@@ -167,7 +164,7 @@ function M:OnSiftBoxConfirmed(ItemUI, SelectedItems, ItemDatas)
     self:PreViewDelete(true)
   end
   self:AddTimer(0.2, function()
-    if self.CurInputDeviceType == ECommonInputType.Gamepad then
+    if self.CurInputDeviceType == ECommonInputType.Gamepad and not self.bNotAutoFocus then
       self.Button_FIiliter_List:SetFocus()
     end
   end)
@@ -190,10 +187,10 @@ end
 
 function M:AfterSiftBoxClosed()
   self:AddTimer(0.3, function()
-    if self.CurInputDeviceType == ECommonInputType.Gamepad then
-      self.Button_FIiliter_List:SetFocus()
+    if self.CurInputDeviceType ~= ECommonInputType.Gamepad then
     end
-  end)
+    self.Button_FIiliter_List:SetFocus()
+  end, false, 0, "Common_Sift_AutoFocusTimer", true)
 end
 
 function M:OpenSiftBox(SiftModelId)
@@ -314,6 +311,7 @@ end
 
 function M:UpdateGamepadKeyState()
   self.CurInputDeviceType = UIUtils.UtilsGetCurrentInputType()
+  DebugPrint("UpdateGamepadKeyState", self.CurInputDeviceType)
   if self.CurInputDeviceType == ECommonInputType.Gamepad then
     if self.IsInFocusPath or IsValid(self.ListWidget) and self.ListWidget.IsInFocusPath or self.ListWidgetOpening then
       self.Controller_L:SetRenderOpacity(0)
@@ -330,14 +328,13 @@ function M:InitNavigationRules()
   self.Button_FIiliter_List:SetNavigationRuleExplicit(EUINavigation.Up, self.SiftPreviewWidget)
 end
 
-function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
+function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
   local IsUseKeyAndMouse = CurInputDevice == ECommonInputType.MouseAndKeyboard
   local ActiveWidgetIndex = IsUseKeyAndMouse and 0 or 1
   if IsUseKeyAndMouse then
   else
   end
   self:UpdateGamepadKeyState()
-  self.Super.RefreshOpInfoByInputDevice(self, CurInputDevice, CurGamepadName)
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
@@ -396,7 +393,7 @@ function M:Close()
   if IsValid(self.SiftBox) then
     self.SiftBox:Close()
   end
-  M.Super.Close(self)
+  self:ClearScriptRegister()
 end
 
 return M

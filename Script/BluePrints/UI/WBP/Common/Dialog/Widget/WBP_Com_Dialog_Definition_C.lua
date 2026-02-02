@@ -32,6 +32,9 @@ function M:InitContent(Params, PopupData, Owner)
     Widget:OnListItemObjectSet(Content)
   end
   if Params and Params.CurrentItemIndex then
+    if Params.CurrentItemIndex > #Contents - 1 or #Contents <= 1 then
+      return
+    end
     self:SetHighLightItem(Params.CurrentItemIndex)
   end
   self:AddTimer(0.1, function()

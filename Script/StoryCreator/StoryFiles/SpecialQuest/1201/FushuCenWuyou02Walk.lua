@@ -328,6 +328,7 @@ return {
             pos = {x = 2069.972194914036, y = -276.5975324977144},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_QuestTrigger_2050023"
             }
@@ -346,6 +347,7 @@ return {
             pos = {x = 2348.2956760306215, y = -276.2873245064718},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_QuestTrigger_2050023"
             }
@@ -357,6 +359,7 @@ return {
             pos = {x = 1651.0798640648102, y = -763.0095467286941},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "Npc_BTWuyousheng03_2050052"
             }
@@ -368,6 +371,7 @@ return {
             pos = {x = 2533.486726809908, y = -546.1860173169293},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "Npc_BTWuyousheng03_2050052"
             }

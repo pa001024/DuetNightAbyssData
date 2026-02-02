@@ -128,8 +128,6 @@ function M:Init(Avatar)
     end
   end
   MappingReward(self, Avatar)
-  EventManager:AddEvent(EventID.OnNewWeaponAccessoryObtained, self, self.OnNewWeaponAccessoryObtained)
-  EventManager:AddEvent(EventID.OnNewWeaponSkinObtained, self, self.OnNewWeaponSkinObtained)
   try({
     exec = function()
       ArmoryUtils:CreateReddotInfos(CommonConst.DataType.Weapon)
@@ -286,6 +284,9 @@ function M:OnNewWeaponAccessoryObtained(AccessoryId)
     return
   end
   _WeaponAccessoryMap[AccessoryId] = true
+  if not CommonUtils.IsCurrentVersionRealease(CommonConst.DataType.WeaponAccessory, AccessoryId) then
+    return
+  end
   ArmoryUtils:TryAddNewWeaponAccessoryReddot(AccessoryId)
 end
 
@@ -294,6 +295,9 @@ function M:OnNewWeaponSkinObtained(SkinId)
     return
   end
   _WeaponSkinMap[SkinId] = true
+  if not CommonUtils.IsCurrentVersionRealease(CommonConst.DataType.WeaponSkin, SkinId) then
+    return
+  end
   ArmoryUtils:TryAddNewWeaponSkinReddot(SkinId)
 end
 
@@ -302,8 +306,6 @@ function M:Destory()
   _WeaponSkinMap = {}
   _WeaponAccessoryMap = {}
   _WeaponId2Uuid = {}
-  EventManager:RemoveEvent(EventID.OnNewWeaponSkinObtained, self)
-  EventManager:RemoveEvent(EventID.OnNewWeaponAccessoryObtained, self)
 end
 
 return M

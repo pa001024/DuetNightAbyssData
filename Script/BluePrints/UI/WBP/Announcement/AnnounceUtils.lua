@@ -4,17 +4,9 @@ local Utils = require("Utils")
 local CdnTool = require("BluePrints/UI/GameLogin/CdnTool")
 local MiscUtils = require("Utils.MiscUtils")
 local M = Class()
-local SubReddotKeys = {
-  "SystemAnnouncement",
-  "ActivityAnnouncement",
-  "NewsAnnouncement"
-}
 
 function M:Init(GameInstance)
   GameInstance = GameInstance or GWorld.GameInstance
-  if AnnounceCommon.bUseWeb then
-    M.GetAnnouncementDataAsync = M.GetAnnouncementDataAsync_UseWeb
-  end
   if not Utils then
     Utils = require("Utils")
   end
@@ -28,6 +20,7 @@ function M:Init(GameInstance)
   M.HasNewAdd = false
   M.bFontLoading = false
   M._AnnouncementDirty = true
+  M.OldReddotCache = {}
   M:LoadResource(true)
 end
 
@@ -313,9 +306,27 @@ function M:_ResetReddot()
   if not ReddotManager.GetTreeNode(DataMgr.ReddotNode.AnnouncementItems.Name) then
     ReddotManager.AddNode(DataMgr.ReddotNode.AnnouncementItems.Name)
   end
-  ReddotManager.ClearLeafNodeCount("ActivityAnnouncement")
-  ReddotManager.ClearLeafNodeCount("SystemAnnouncement")
-  ReddotManager.ClearLeafNodeCount("NewsAnnouncement")
+  local Nodes = {
+    "ActivityAnnouncement",
+    "SystemAnnouncement",
+    "NewsAnnouncement"
+  }
+  for _, NodeName in ipairs(Nodes) do
+    if not M.OldReddotCache[NodeName] then
+      M.OldReddotCache[NodeName] = CommonUtils.DeepCopy(ReddotManager.GetLeafNodeCacheDetail(NodeName))
+    end
+    ReddotManager.ClearLeafNodeCount(NodeName)
+    local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
+    local DelKeys = {}
+    for Key, Value in pairs(CacheDetail) do
+      if Value then
+        table.insert(DelKeys, Key)
+      end
+    end
+    for _, DelKey in ipairs(DelKeys) do
+      CacheDetail[DelKey] = nil
+    end
+  end
   ReddotManager.ClearLeafNodeCount("AnnouncementDirty")
 end
 
@@ -325,7 +336,9 @@ function M:_TryAddReddotCacheDetail(Conf)
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(ReddotName)
   if CacheDetail and nil == CacheDetail[CacheKey] then
     CacheDetail[CacheKey] = true
-    M.HasNewAdd = true
+    if not M.OldReddotCache[ReddotName][CacheKey] then
+      M.HasNewAdd = true
+    end
   end
   if CacheDetail[CacheKey] then
     ReddotManager.IncreaseLeafNodeCount(ReddotName)
@@ -350,7 +363,6 @@ function M:TrySubReddotCacheDetail(Conf)
     CacheDetail[CacheKey] = false
     ReddotManager.DecreaseLeafNodeCount(ReddotName)
   end
-  M:_UpdateAnnouncementReddotState()
 end
 
 function M:_SyncReddotCache()
@@ -374,168 +386,6 @@ function M:_RealSyncReddotCache(CacheDetail, ExistConf, ReddotName)
   end
 end
 
-function M:_UpdateAnnouncementReddotState()
-  local Ret = false
-  for _, ReddotKey in ipairs(SubReddotKeys) do
-    local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(ReddotKey)
-    for _, value in pairs(CacheDetail or {}) do
-      if true == value then
-        Ret = true
-        break
-      end
-    end
-    if Ret then
-      break
-    end
-  end
-  if Ret then
-    ReddotManager.IncreaseLeafNodeCount("AnnouncementDirty")
-  else
-    ReddotManager.ClearLeafNodeCount("AnnouncementDirty")
-  end
-  return Ret
-end
-
-function M:_GetLocalAnnouncement()
-  if not DataMgr.SystemNotice then
-    return
-  end
-  for _, Conf in pairs(DataMgr.SystemNotice) do
-    local NoticeDateParts = Conf.NoticeDate and Split(Conf.NoticeDate, "-")
-    local StartTimestamp = NoticeDateParts and os.time({
-      year = NoticeDateParts[1],
-      month = NoticeDateParts[2],
-      day = NoticeDateParts[3]
-    }) or os.time()
-    local EndDateParts = Conf.EndDate and Split(Conf.EndDate, "-")
-    local EndTimestamp = EndDateParts and os.time({
-      year = EndDateParts[1],
-      month = EndDateParts[2],
-      day = EndDateParts[3]
-    })
-    Conf = {
-      NoticeID = Conf.NoticeID,
-      NoticeTitle = GText(Conf.NoticeTitle),
-      NoticeContent = GText(Conf.NoticeContent),
-      NoticeStyle = Conf.NoticeStyle,
-      NoticeTag = Conf.NoticeTag,
-      NoticeBanner = Conf.NoticeBanner,
-      NoticeDate = Conf.NoticeDate and Conf.NoticeDate .. " (UTC+8)",
-      EndDate = Conf.EndDate and Conf.EndDate .. " (UTC+8)",
-      StartTimestamp = StartTimestamp,
-      EndTimestamp = EndTimestamp,
-      Sort = Conf.NoticeID,
-      Local = 1
-    }
-    M:_TryAddReddotCacheDetail(Conf)
-    table.insert(M.Confs, Conf)
-  end
-end
-
-function M:GetAnnouncementDataAsync(ShowTag, Coroutine, HostId)
-  if GWorld:GetAvatar() then
-    if not M._AnnouncementDirty then
-      return
-    end
-    M:MarkDirty(false)
-  end
-  if nil == HostId then
-    local PlayerAvatar = GWorld:GetAvatar()
-    if PlayerAvatar and PlayerAvatar.Hostnum then
-      HostId = tonumber(PlayerAvatar.Hostnum)
-    else
-      Utils.Traceback(ErrorTag, LXYTag .. "HostId不存在，不知道你选了什么服...")
-      return
-    end
-  end
-  ForceStopAsyncTask(M, "PendingCo")
-  M.PendingCo = Coroutine
-  M:_CacheLastConf()
-  M.Confs = {}
-  M.bInit = true
-  if 0 ~= DataMgr.GlobalConstant.UseLocalSystemNotice.ConstantValue then
-    M:_GetLocalAnnouncement()
-  end
-  M:_ResetReddot()
-  DebugPrint("[Laixiaoyang] M:GetAnnoucementDataAsync 拉取后台游戏公告数据...")
-  CdnTool:GetGameNotice(HostId, function(Infos)
-    try({
-      exec = function()
-        if IsEmptyTable(Infos) then
-          DebugPrint(WarningTag, LXYTag, "公告Json解析不出内容")
-          return
-        end
-        for Key, Info in pairs(Infos) do
-          DebugPrint(LogTag, LXYTag, "解析公告", Info.UniqueId)
-          local Conf = {
-            NoticeID = Info.UniqueId,
-            StartTimestamp = Info.StartTimestamp or os.time(),
-            EndTimestamp = Info.EndTimestamp or nil,
-            NoticeBanner = Info.ClientOnly.BannerPath or "",
-            NoticeStyle = tonumber(Info.ClientOnly.UIStyle) or 1,
-            NoticeTag = tonumber(Info.ClientOnly.TypeTag) or 1,
-            Sort = tonumber(Info.ClientOnly.notice_sort or "0"),
-            TabTag = tonumber(Info.ClientOnly.TypeTag) or AnnounceCommon.TabTag.System,
-            ShowTags = {},
-            Local = 0
-          }
-          M:_ParseShowTag(Conf, Info)
-          if not Conf.ShowTags[ShowTag] then
-            DebugPrint(LXYTag, Info.UniqueId .. "公告不在这个场合显示")
-          elseif not M:CheckChannel(Info) then
-            DebugPrint(LXYTag, Info.UniqueId .. " 公告渠道检测不通过")
-          else
-            if not M:CheckSubChannel(Info) then
-              DebugPrint(LXYTag, Info.UniqueId .. " 公告子渠道检测不通过")
-              return
-            end
-            if M:IsExpired(Conf) then
-              DebugPrint(LXYTag, Info.UniqueId .. " 公告已过期")
-            else
-              local timeZoneOffset = CommonUtils.GetTimeZone()
-              local TimeZonePostfix = " (UTC+" .. timeZoneOffset .. ")"
-              Conf.NoticeDate = GDate_YMD_Timestamp(math.floor(Conf.StartTimestamp + 0.5)) .. TimeZonePostfix
-              Conf.EndDate = Conf.EndTimestamp and GDate_YMD_Timestamp(math.floor(Conf.EndTimestamp + 0.5)) .. TimeZonePostfix
-              Conf.NoticeTitle, Conf.NoticeContent = "", ""
-              for _, Text in pairs(Info.Content or {}) do
-                if CommonConst.SystemLanguage ~= CommonConst.SystemLanguages[Text.language] then
-                  DebugPrint(LXYTag, Info.UniqueId .. " 公告语言对不上 跳过" .. Text.title)
-                else
-                  Conf.NoticeTitle = Text.title or ""
-                  Conf.NoticeContent = Text.body or ""
-                  Conf.NoticeContent = string.gsub(Conf.NoticeContent, "<n>", "\n")
-                  Conf.NoticeBanner = Text.BannerPath
-                  break
-                end
-              end
-              if "" == Conf.NoticeTitle or "" == Conf.NoticeContent then
-                print(_G.LogTag, Info.UniqueId .. " 公告当前语言的文本为空！！当前语言：" .. CommonConst.SystemLanguage)
-              else
-                M:_TryAddReddotCacheDetail(Conf)
-                table.insert(M.Confs, Conf)
-              end
-            end
-          end
-        end
-      end,
-      catch = function(e)
-        print(ErrorTag, e .. "\n" .. debug.traceback())
-      end,
-      final = function()
-        self:_SortConfs()
-        self:_SyncReddotCache()
-        if M.PendingCo then
-          coroutine.resume(M.PendingCo)
-          M.PendingCo = nil
-        end
-      end
-    })
-  end)
-  if M.PendingCo then
-    coroutine.yield()
-  end
-end
-
 function M:MarkDirty(bDirty)
   M._AnnouncementDirty = bDirty
   if bDirty then
@@ -545,11 +395,16 @@ end
 
 function M:UpdateAnnouncementDataInGame()
   local Avatar = GWorld:GetAvatar()
+  local Node = ReddotManager.GetTreeNode(DataMgr.ReddotNode.AnnouncementItems.Name)
+  local OldCount = Node and Node.Count or 0
   if Avatar then
-    M:GetAnnouncementDataAsync_UseWeb(AnnounceCommon.ShowTag.InGame, nil, Avatar.Hostnum)
+    M:GetAnnouncementDataAsync(AnnounceCommon.ShowTag.InGame, nil, Avatar.Hostnum)
   end
   M:_ActivateScheduledNotices()
-  return M:_UpdateAnnouncementReddotState()
+  local NewCount = Node and Node.Count or 0
+  if OldCount < NewCount then
+    ReddotManager.IncreaseLeafNodeCount("AnnouncementDirty")
+  end
 end
 
 function M:_CacheLastConf()
@@ -575,7 +430,7 @@ function M:_SortConfs()
   table.sort(M.Confs, SortFunc)
 end
 
-function M:GetAnnouncementDataAsync_UseWeb(ShowTag, Coroutine, HostId)
+function M:GetAnnouncementDataAsync(ShowTag, Coroutine, HostId)
   if GWorld:GetAvatar() then
     if not M._AnnouncementDirty then
       return
@@ -653,12 +508,15 @@ function M:_AddNewConf(Info, ShowTag)
     DebugPrint(LXYTag, Info.UniqueId .. "公告不在这个场合显示, 当前游戏场合：" .. ShowTag)
     return
   end
+  if not M:CheckPakInfos(Info) then
+    DebugPrint(LXYTag, Info.UniqueId .. "公告渠道检测不通过|PakInfo")
+  end
   if not M:CheckChannel(Info) then
-    DebugPrint(LXYTag, Info.UniqueId .. " 公告渠道检测不通过")
+    DebugPrint(LXYTag, Info.UniqueId .. " 公告渠道检测不通过|Channel")
     return
   end
   if not M:CheckSubChannel(Info) then
-    DebugPrint(LXYTag, Info.UniqueId .. " 公告子渠道检测不通过")
+    DebugPrint(LXYTag, Info.UniqueId .. " 公告子渠道检测不通过|SubChannel")
     return
   end
   if M:IsExpired(Conf) then
@@ -749,20 +607,20 @@ M.bIndepChannel = false
 function M:CheckChannel(Info)
   local ChannelId = Utils.HeroUSDKSubsystem():GetChannelId()
   if not ChannelId then
-    DebugPrint(ErrorTag, "本包没有ChannelId，跳过公告渠道检测")
+    DebugPrint(WarningTag, "本包没有ChannelId，跳过公告渠道检测")
     return true
   end
   if not DataMgr.ChannelInfo[ChannelId] then
-    DebugPrint(ErrorTag, string.format("ChannelInfo表里没有定义这种ChannelId:%s, 跳过公告渠道检测", ChannelId))
+    DebugPrint(WarningTag, string.format("ChannelInfo表里没有定义这种ChannelId:%s, 跳过公告渠道检测", ChannelId))
     return true
   end
   local Provider = -1 ~= ChannelId and DataMgr.ChannelInfo[ChannelId].Provider
   if Info.Channels and type(Info.Channels) ~= "table" then
-    DebugPrint(ErrorTag, "AnnounceUtils:CheckChannel  Info.Channels 后台传来的类型非法！！！不是Table !!!!!", Info.Channels)
+    DebugPrint(WarningTag, "AnnounceUtils:CheckChannel  Info.Channels 后台传来的类型非法！！！不是Table !!!!!", Info.Channels)
     return true
   end
   if table.isempty(Info.Channels) then
-    DebugPrint(ErrorTag, "#Info.Channels 是空的 !!!!")
+    DebugPrint(WarningTag, "#Info.Channels 是空的 !!!!")
     return true
   end
   DebugPrint(TXTTag, "看看这个包的SdkChannelId：" .. ChannelId .. " 和平台：" .. AnnounceCommon.PlatformName)
@@ -788,6 +646,23 @@ function M:ResetConf()
   M.AddedConfIds = {}
 end
 
+function M:CheckPakInfos(Info)
+  if table.isempty(Info.pakInfos) then
+    DebugPrint(WarningTag, "Info.packInfos是空的")
+    return true
+  end
+  local DummyInfo = {
+    Channels = {},
+    img_channel_id = {}
+  }
+  for _, pakInfo in ipairs(Info.pakInfos) do
+    local EInfo = DataMgr.ExamineInfo[pakInfo.code]
+    table.insert(DummyInfo.Channels, EInfo.ChannelID)
+    table.insert(DummyInfo.img_channel_id, EInfo.MirrorChannelID)
+  end
+  return M:CheckChannel(DummyInfo) or M:CheckSubChannel(DummyInfo)
+end
+
 function M:CheckSubChannel(Info)
   if M.bIndepChannel then
     DebugPrint("独立渠道忽略子渠道检测...")
@@ -797,11 +672,11 @@ function M:CheckSubChannel(Info)
   local SubChannelId = Utils.HeroUSDKSubsystem():GetMirrorChannelId()
   local Provider = -1 ~= SubChannelId and DataMgr.ImgChannelInfo[SubChannelId].Provider
   if Info.img_channel_id and type(Info.img_channel_id) ~= "table" then
-    DebugPrint(ErrorTag, "AnnounceUtils:CheckSubChannel Info.img_channel_id 后台传来的类型非法！！！不是Table !!!!!", Info.img_channel_id)
+    DebugPrint(WarningTag, "AnnounceUtils:CheckSubChannel Info.img_channel_id 后台传来的类型非法！！！不是Table !!!!!", Info.img_channel_id)
     return true
   end
   if table.isempty(Info.img_channel_id) then
-    DebugPrint(ErrorTag, "Info.img_channel_id 是空的 !!!!!")
+    DebugPrint(WarningTag, "Info.img_channel_id 是空的 !!!!!")
     return true
   end
   DebugPrint(TXTTag, "看看这个包的(Sub)MirrorChannelId：" .. SubChannelId)
@@ -918,6 +793,7 @@ function M:OpenAnnouncementMain(ShowTag, bNeedRequest, HostId, ParentWidget, Cor
       ChildWidgetBPPath = "WidgetBlueprint'/Game/UI/WBP/Announcement/Widget/WBP_Announcement_TabItem.WBP_Announcement_TabItem'"
     }
   }
+  ReddotManager.ClearLeafNodeCount("AnnouncementDirty")
   M.AnnounceMainUI = UIManager(GWorld.GameInstance):ShowCommonPopupUI(100134, Params, ParentWidget, Coroutine)
 end
 

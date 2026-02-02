@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -282,6 +285,7 @@ return ReadOnly("GuideBookConditionTwo", {
         GuideId = 94,
         GuideNoteId = 119,
         GuideNoteTab = 3,
+        MechanismTag = "GravityBall",
         RewardId = 7000
       }
     },
@@ -292,6 +296,7 @@ return ReadOnly("GuideBookConditionTwo", {
         GuideId = 95,
         GuideNoteId = 120,
         GuideNoteTab = 3,
+        MechanismTag = "MoInteractive",
         RewardId = 7000
       }
     },

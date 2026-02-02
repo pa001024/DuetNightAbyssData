@@ -26,6 +26,7 @@ function BP_SynthesisComponent_C:InitSynthesisComponent()
   self.CurMission = ""
   self.OccupateGuide = {}
   DebugPrint("SynthesisComponent: InitSynthesisComponent")
+  GWorld:DSBLog("Info", "SynthesisComponent: InitSynthesisComponent", "GameMode")
 end
 
 function BP_SynthesisComponent_C:InitSynthesisBaseInfo()
@@ -72,6 +73,9 @@ function BP_SynthesisComponent_C:OnDefenceCoreActive(DefenceCore)
 end
 
 function BP_SynthesisComponent_C:SetMission(NewMission)
+  if self.CurMission == NewMission then
+    return
+  end
   local InitfuncName = "Init" .. NewMission .. "Mission"
   if not self[InitfuncName] then
     GameState(self):ShowDungeonError("SynthesisComponent:SetMission 传入不存在的任务名！请检查 " .. self.GameMode.DungeonId .. " 传入任务名: " .. NewMission, Const.DungeonErrorType.DungeonGame, Const.DungeonErrorTitle.Config)
@@ -80,6 +84,7 @@ function BP_SynthesisComponent_C:SetMission(NewMission)
   self.CurMission = NewMission
   self[InitfuncName](self)
   DebugPrint("SynthesisComponent: SetMission", self.CurMission)
+  GWorld:DSBLog("Info", "SynthesisComponent: SetMission  " .. self.CurMission, "GameMode")
 end
 
 function BP_SynthesisComponent_C:GetDungeonJsonAttr()
@@ -96,6 +101,7 @@ function BP_SynthesisComponent_C:InitDestructionMission()
   self.SupervisorInfo = {}
   self.SupervisorDeadCount = 0
   self.SupervisorGuideNum = 0
+  self.IsDestructionFinishEventTriggered = false
   self:InitCreatorIdToLevelNameMap()
   for _, CreatorId in pairs(self.SupervisorCreatorIds) do
     local LevelName = self.CreatorIdToLevelName[CreatorId]
@@ -132,12 +138,18 @@ function BP_SynthesisComponent_C:OnUnitDeadEvent_Destruction(MonsterCharacter)
   self:AddRageValue(self.MonAddRage)
   if self.SupervisorInfo[MonsterCharacter.Eid] and self.SupervisorInfo[MonsterCharacter.Eid].IsAlive then
     DebugPrint("SynthesisComponent: SupervisorDead", MonsterCharacter.Eid)
+    GWorld:DSBLog("Info", "SynthesisComponent: SupervisorDead Eid " .. MonsterCharacter.Eid, "GameMode")
     self.SupervisorInfo[MonsterCharacter.Eid].IsAlive = false
     self.SupervisorDeadCount = self.SupervisorDeadCount + 1
     self.GameMode.EMGameState.DeadSupervisorEids:Add(MonsterCharacter.Eid)
     self.GameMode.EMGameState:MarkDeadSupervisorEidsAsDirtyData()
+    if self.IsDestructionFinishEventTriggered then
+      return
+    end
     if self.SupervisorDeadCount >= #self.SupervisorCreatorIds then
       DebugPrint("SynthesisComponent: 所有主管死亡")
+      GWorld:DSBLog("Info", "SynthesisComponent: All Supervisor Dead. Send Event!  ", "GameMode")
+      self.IsDestructionFinishEventTriggered = true
       self.GameMode:RemoveDungeonEvent("SynthesisDestruction")
       self.GameMode:TriggerGameModeEvent("Event_OnAllSupervisorDead")
       self.GameMode:NotifyClientShowDungeonToast("DUNGEON_SYNTHESIS_103", 2, EToastType.Success)
@@ -164,6 +176,7 @@ end
 
 function BP_SynthesisComponent_C:OnStaticCreatorEvent_Destruction(EventName, Eid, UnitId, UnitType)
   if "DestructionSupervisor" == EventName then
+    GWorld:DSBLog("Info", "SynthesisComponent: SupervisorCreated Eid " .. Eid .. " UnitId " .. UnitId, "GameMode")
     self.SupervisorInfo[Eid] = {}
     self.SupervisorInfo[Eid].IsAlive = true
   end
@@ -242,6 +255,8 @@ function BP_SynthesisComponent_C:TryAddGuideForSupervisor()
 end
 
 function BP_SynthesisComponent_C:InitOccupationMission()
+  self.IsOccupationFinishEventTriggered = false
+  self.FinishedOccupationMechanism = {}
   self:SetOccupationFinishNum(0)
   self.GameMode:NotifyClientShowDungeonTaskNew(self.IconPathYellow, self.TextTitle, "DUNGEON_SYNTHESIS_115")
   self.GameMode:AddDungeonEvent("SynthesisOccupation")
@@ -302,24 +317,39 @@ function BP_SynthesisComponent_C:OnPlayerLeaveOccupation(Player, OccupationMecha
 end
 
 function BP_SynthesisComponent_C:OnOneOccupationSucceed(OccupationMechanism)
+  if not IsValid(OccupationMechanism) then
+    return
+  end
+  if self.FinishedOccupationMechanism[OccupationMechanism.Eid] then
+    return
+  end
+  self.FinishedOccupationMechanism[OccupationMechanism.Eid] = true
   self:SetOccupationFinishNum(self:GetOccupationFinishNum() + 1)
   DebugPrint("SynthesisComponent: OnOneOccupationSucceed ", self:GetOccupationFinishNum())
+  GWorld:DSBLog("Info", "SynthesisComponent: OnOneOccupationSucceed Num:" .. self:GetOccupationFinishNum(), "GameMode")
   self.GameMode:TriggerGameModeEvent("Event_OnOneOccupationSucceed")
   for _, Player in pairs(self.GameMode:GetAllPlayer()) do
-    local Table = self.OccupateGuide[Player.Eid]
-    if Table.CurrentOccupationEid == OccupationMechanism.Eid then
-      Table.CurrentOccupationEid = 0
-      for Eid, State in pairs(Table.List) do
+    local OccupateGuideTable = self.OccupateGuide[Player.Eid]
+    if OccupateGuideTable and OccupateGuideTable.CurrentOccupationEid == OccupationMechanism.Eid then
+      OccupateGuideTable.CurrentOccupationEid = 0
+      for Eid, State in pairs(OccupateGuideTable.List) do
         if Eid ~= OccupationMechanism.Eid then
           self.GameMode.EMGameState:AddGuideEid(Eid, Player.Eid)
         end
       end
     end
     self.GameMode.EMGameState:RemoveGuideEid(OccupationMechanism.Eid, Player.Eid)
-    Table[OccupationMechanism.Eid] = nil
+    if OccupateGuideTable then
+      OccupateGuideTable[OccupationMechanism.Eid] = nil
+    end
+  end
+  if self.IsOccupationFinishEventTriggered then
+    return
   end
   if self:GetOccupationFinishNum() >= self.OccupationTargetNum then
     DebugPrint("SynthesisComponent: OnOccupationFinished")
+    GWorld:DSBLog("Info", "SynthesisComponent: OccupationFinished. Send Event!", "GameMode")
+    self.IsOccupationFinishEventTriggered = true
     self.GameMode:RemoveDungeonEvent("SynthesisOccupation")
     self.GameMode:TriggerGameModeEvent("Event_OnOccupationFinished")
     self.GameMode:NotifyClientShowDungeonToast("DUNGEON_SYNTHESIS_111", 2, EToastType.Success)
@@ -335,8 +365,13 @@ function BP_SynthesisComponent_C:GetOccupationFinishNum()
 end
 
 function BP_SynthesisComponent_C:InitCrackMission()
+  self.IsCrackFinishEventTriggered = false
   self:SetKeySubmitNum(0)
   self.GameMode:NotifyClientShowDungeonTaskNew(self.IconPathYellow, self.TextTitle, "DUNGEON_SYNTHESIS_116")
+  local LevelLoader = self.GameMode:GetLevelLoader()
+  if LevelLoader and IsStandAlone(self) then
+    LevelLoader:StartSynthesisLevelKeepAlive()
+  end
 end
 
 function BP_SynthesisComponent_C:OnExplosionMonTimer()
@@ -352,9 +387,15 @@ end
 function BP_SynthesisComponent_C:OnKeyDelivered(CrackMechanism)
   self:SetKeySubmitNum(self:GetKeySubmitNum() + 1)
   DebugPrint("SynthesisComponent: OnKeyDelivered", self:GetKeySubmitNum())
+  GWorld:DSBLog("Info", "SynthesisComponent: OnKeyDelivered " .. self:GetKeySubmitNum(), "GameMode")
   self.GameMode:TriggerGameModeEvent("Event_OnKeyDelivered", self:GetKeySubmitNum())
+  if self.IsCrackFinishEventTriggered then
+    return
+  end
   if self:GetKeySubmitNum() >= self.KeyNeedNum then
     DebugPrint("SynthesisComponent: CrackMissionFinish")
+    GWorld:DSBLog("Info", "SynthesisComponent: CrackMissionFinish. Send Event!", "GameMode")
+    self.IsCrackFinishEventTriggered = true
     self.GameMode:RemoveDungeonEvent("SynthesisCrack")
     self.GameMode:TriggerGameModeEvent("Event_OnCrackFinished")
     self.GameMode:NotifyClientShowDungeonTaskNew("", self.TextTitle, "DUNGEON_SYNTHESIS_118")
@@ -368,6 +409,13 @@ function BP_SynthesisComponent_C:OnDefenceCoreActive_Crack(DefenceCore)
   self.GameMode:AddDungeonEvent("SynthesisCrack")
   self.GameMode:NotifyClientShowDungeonTaskNew(self.IconPathYellow, self.TextTitle, "DUNGEON_SYNTHESIS_117")
   self.GameMode.EMGameState:SetDungeonUIState(Const.EDungeonUIState.OnTarget)
+end
+
+function BP_SynthesisComponent_C:OnStaticCreatorEvent_Crack(EventName, Eid, UnitId, UnitType)
+  if "CrackChest" == EventName then
+    DebugPrint("SynthesisComponent: CrackChestCreated", Eid, UnitId)
+    GWorld:DSBLog("Info", "SynthesisComponent: CrackChestCreated Eid " .. Eid .. " UnitId " .. UnitId, "GameMode")
+  end
 end
 
 function BP_SynthesisComponent_C:SetKeySubmitNum(Num)

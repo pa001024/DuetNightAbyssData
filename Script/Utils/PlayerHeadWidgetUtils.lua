@@ -58,4 +58,12 @@ function PlayerHeadWidgetUtils:RefreshTitle(WidgetComp, PrefixId, SuffixId, Titl
   self:EnableTitle(WidgetComp, PrefixId, SuffixId, TitleFrameId)
 end
 
+function PlayerHeadWidgetUtils:PlayEmoji(WidgetComp, EmojiPath)
+  self:EnableHeadWidget(WidgetComp, "Bubble_Emoji", true, EmojiPath)
+end
+
+function PlayerHeadWidgetUtils:StopEmoji(WidgetComp)
+  self:EnableHeadWidget(WidgetComp, "Bubble_Emoji", false)
+end
+
 return PlayerHeadWidgetUtils

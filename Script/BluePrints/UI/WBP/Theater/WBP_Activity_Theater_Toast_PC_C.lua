@@ -2,6 +2,7 @@ require("UnLua")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
+local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
 
 function M:Initialize(Initializer)
   self.RewardList = {}
@@ -14,6 +15,8 @@ function M:Initialize(Initializer)
   self.CurrentSelectedEntry = nil
   self.CurrentGameRound = 0
   self.CurrentRoundState = false
+  self.EnablePerform = true
+  self.ReStartPerform = false
 end
 
 function M:Construct()
@@ -21,6 +24,11 @@ function M:Construct()
   self:PlayTalk(DataMgr.TheaterConstant.StartGameTalkConfigId.ConstantValue, TargetNpc)
   self:InitItemInfo()
   self:InitListenEvent()
+  self.Panel_Title:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.ProgressBar_Title:SetPercent(0)
+  self:PlayAnimation(self.Open_In)
+  self.Text_open:SetText(GText("TheaterOnline_Game_Start01"))
+  self.Text_open2:SetText(GText("TheaterOnline_Game_Start02"))
   AudioManager(self):PlayUISound(self, "event:/ui/common/toast_positive", nil, nil)
 end
 
@@ -71,25 +79,75 @@ function M:InitItemInfo()
     }
   end
   self.ListView_Title:ClearListItems()
+  local StartTime = TimeUtils.NowTime()
   for Index, Level in pairs(self.LevelList) do
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
     Content.LevelId = Level.LevelId
     Content.LevelName = Level.LevelName
     Content.Time = self.StepInfo[Index * 2 + 1].Time - self.StepInfo[Index * 2].Time
+    Content.StartTime = StartTime + self.StepInfo[Index * 2].Time
+    Content.EndTime = StartTime + self.StepInfo[Index * 2 + 1].Time
     Content.Index = Index
     Content.ParentWidget = self
     self.ListView_Title:AddItem(Content)
     self.LevelId2Index[Level.LevelId] = Index
   end
+  self.ListView_Title:RequestRefresh()
+end
+
+function M:ResetPerformedRound()
+  local PassedTime = TimeUtils.NowTime() - self.ActivityStartTime
+  local CurStage
+  local ProgressPercent = 0
+  self:AddDelayFrameFunc(function()
+    for i = 2, 11 do
+      local StageStartTime = self.StepInfo[i].Time
+      local NextStageStartTime = self.StepInfo[i + 1] and self.StepInfo[i + 1].Time or math.huge
+      if NextStageStartTime < PassedTime then
+        if 0 == i % 2 then
+          local Index = math.tointeger(i / 2)
+          ProgressPercent = (Index - 1) * 0.25
+          local Item = self.ListView_Title:GetItemAt(Index - 1)
+          if Item.SelfWidget then
+            local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+            if GameInstance.TheaterPerformState and GameInstance.TheaterPerformState[Index] == true then
+              Item.SelfWidget:PlayAnimation(Item.SelfWidget.Success)
+            else
+              Item.SelfWidget:PlayAnimation(Item.SelfWidget.Fail)
+            end
+            Item.SelfWidget.Image_Time:SetVisibility(UE4.ESlateVisibility.Collapsed)
+          end
+          local Percent = (Index - 1) * 0.25
+          self.ProgressBar_Title:SetPercent(Percent)
+        end
+      else
+        if 0 ~= i % 2 then
+          do
+            local Percent = (PassedTime - StageStartTime) / (NextStageStartTime - StageStartTime) * 0.25
+            self.ProgressBar_Title:SetPercent(ProgressPercent + Percent)
+          end
+          break
+        end
+        do
+          local Index = math.tointeger(i / 2)
+          local Item = self.ListView_Title:GetItemAt(Index - 1)
+          if Item.SelfWidget then
+            Item.SelfWidget:PlayAnimation(Item.SelfWidget.Fail)
+            Item.SelfWidget.Image_Time:SetVisibility(UE4.ESlateVisibility.Collapsed)
+            self.InterruptedRound = Index
+          end
+          local Percent = (Index - 1) * 0.25
+          self.ProgressBar_Title:SetPercent(Percent)
+        end
+        break
+      end
+    end
+    self:StartStageTimer()
+  end, 5)
 end
 
 function M:OnLoaded(...)
   self.Super.OnLoaded(self, ...)
-  self.Panel_Title:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  self.ProgressBar_Title:SetPercent(0)
-  self:PlayAnimation(self.Open_In)
-  self.Text_open:SetText(GText("TheaterOnline_Game_Start01"))
-  self.Text_open2:SetText(GText("TheaterOnline_Game_Start02"))
 end
 
 function M:UpdatePerformList(PerformList)
@@ -104,6 +162,10 @@ end
 function M:TheaterPerform(PerformId)
   DebugPrint("ayff test Perform :", PerformId)
   if self.CurrentRoundState == true then
+    return
+  end
+  if not self.EnablePerform then
+    DebugPrint("ayff 当前不允许表演，忽略此次请求")
     return
   end
   local Avatar = GWorld:GetAvatar()
@@ -136,6 +198,11 @@ function M:TheaterPerformCallback(ErrCode, Ret)
       self.CurrentSelectedEntry:SetSuccess(true)
       self.CurrentRoundState = true
     end
+    local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+    if not GameInstance.TheaterPerformState then
+      GameInstance.TheaterPerformState = {}
+    end
+    GameInstance.TheaterPerformState[self.CurLevelIndex] = true
   else
   end
 end
@@ -145,38 +212,46 @@ function M:OnAnimationFinished(InAnimation)
     self:PlayAnimation(self.Open_Out)
     self:OnActivityStart()
   elseif InAnimation == self.Tips_Success then
-    self:PlayAnimation(self.Tips_Out)
   end
 end
 
 function M:OnActivityStart()
   self.Panel_Title:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self:PlayAnimation(self.Title_In)
-  self.ActivityStartTime = TimeUtils.NowTime()
+  if self.ReStartPerform then
+    local NowTime = TimeUtils.NowTime()
+    local PassedTime = NowTime % 1800
+    self.ActivityStartTime = NowTime - PassedTime
+    self:ResetPerformedRound()
+  else
+    self.ActivityStartTime = TimeUtils.NowTime()
+    self:StartStageTimer()
+  end
   DebugPrint("ayff 剧院活动开始时间:", self.ActivityStartTime)
-  self:StartStageTimer()
 end
 
 function M:OnLevelStart(LevelId)
   local Index = self.LevelId2Index[LevelId]
-  local EntryWidget = UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.ListView_Title, Index - 1)
+  local Item = self.ListView_Title:GetItemAt(Index - 1)
+  local EntryWidget = Item.SelfWidget
   self.CurrentSelectedEntry = EntryWidget
   self.CurrentRoundState = false
   local TextLevel = string.format(GText("TheaterOnline_Game_Round"), Index)
   self.Text_Level:SetText(TextLevel)
   local PerformId = self.LevelList[Index].PerformId
-  local Name
-  if DataMgr.Pet[PerformId] then
-    local PetName = GText(DataMgr.Pet[PerformId].Name)
-    Name = string.format(GText("TheaterOnline_Game_Match"), PetName)
-  else
-    local GestureName = GText(DataMgr.Resource[PerformId].ResourceName)
-    Name = string.format(GText("TheaterOnline_Game_Motion"), GestureName)
-  end
+  local PerformData = DataMgr.TheaterRandom[PerformId]
+  local TalkConfigId = PerformData.TalkConfigId
+  local Name = TalkUtils:DialogueIdToContent(TalkConfigId)
   self.Text_Message:SetText(Name)
   if EntryWidget then
-    EntryWidget:OnLevelStart()
-    EntryWidget:PlayAnimation(EntryWidget.Normal)
+    if self.InterruptedRound and self.InterruptedRound == Index then
+    else
+      EntryWidget:OnLevelStart()
+      EntryWidget:PlayAnimation(EntryWidget.Normal)
+    end
+  else
+    Item.IsNotDisplay = true
+    DebugPrint("ayff 未找到对应的EntryWidget，Index:", Index)
   end
   self:PlayAnimation(self.Tips_In)
   self:UpdateProgress(Index)
@@ -204,10 +279,14 @@ function M:FindTargetNpc()
   local NowTime = TimeUtils.NowTime()
   local ValidNpcId
   for NpcId, NpcData in pairs(DataMgr.TheaterNpc) do
-    if NpcData.StartTime and NpcData.EndTime and NowTime >= NpcData.StartTime and NowTime < NpcData.EndTime then
-      ValidNpcId = NpcId
-      DebugPrint("JLY Found valid TheaterNpc, NpcId:", NpcId, "StartTime:", NpcData.StartTime, "EndTime:", NpcData.EndTime, "NowTime:", NowTime)
-      break
+    if NpcData.StartTime and NpcData.EndTime then
+      local StartTime = NpcData.StartTime:GetTime()
+      local EndTime = NpcData.EndTime:GetTime()
+      if NowTime >= StartTime and NowTime < EndTime then
+        ValidNpcId = NpcId
+        DebugPrint("JLY Found valid TheaterNpc, NpcId:", NpcId, "StartTime:", StartTime, "EndTime:", EndTime, "NowTime:", NowTime)
+        break
+      end
     end
   end
   if not ValidNpcId then
@@ -326,7 +405,7 @@ function M:CheckCurrentStage()
   end
   local RegionId = Avatar.CurrentRegionId
   local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
-  if not GameState:IsInRegion() or 101901 ~= RegionId then
+  if not GameState:IsInRegion() or Avatar:IsInHardBoss() or 101901 ~= RegionId then
     DebugPrint("ayff 离开剧院区域，关闭剧院活动UI regionid:", RegionId)
     self:Close()
   end
@@ -365,8 +444,10 @@ function M:ExecuteStage(Stage, ElapsedTime)
   elseif 3 == Stage or 5 == Stage or 7 == Stage or 9 == Stage then
     local LevelId = self.LevelList[math.floor((Stage + 1) / 2)].LevelId
     self:OnRestStart(LevelId)
+    self:ClearPerformAction()
   elseif 11 == Stage then
     self:OnEndingStart()
+    self:ClearPerformAction()
   elseif 12 == Stage then
     self:TheaterPerformGameEnd()
     if self.StageCheckTimer then
@@ -378,7 +459,8 @@ end
 
 function M:OnOpeningStart(LevelId)
   local Index = self.LevelId2Index[LevelId]
-  local EntryWidget = UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.ListView_Title, Index - 1)
+  local Item = self.ListView_Title:GetItemAt(Index - 1)
+  local EntryWidget = Item.SelfWidget
   if EntryWidget then
     EntryWidget:PlayAnimation(EntryWidget.Normal_Loop)
     self.PlayLoopSoundTimer = self:AddTimer(1, function()
@@ -389,7 +471,8 @@ end
 
 function M:OnRestStart(LevelId)
   local Index = self.LevelId2Index[LevelId]
-  local EntryWidget = UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.ListView_Title, Index - 1)
+  local Item = self.ListView_Title:GetItemAt(Index - 1)
+  local EntryWidget = Item.SelfWidget
   if EntryWidget then
     EntryWidget:PlayAnimation(EntryWidget.Normal_Loop)
   end
@@ -413,8 +496,12 @@ end
 function M:TheaterPerformGameEnd()
   DebugPrint("ayff 剧院活动结束 start close ui")
   UIManager(self):ShowUITip("CommonToastMain", GText("TheaterOnline_Game_Finish"), 3)
+  local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
+  GameState:ShowSynthesisSuccessEffect(0)
   local TargetNpc = self:FindTargetNpc()
   self:PlayTalk(DataMgr.TheaterConstant.EndGameTalkConfigId.ConstantValue, TargetNpc)
+  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+  GameInstance.TheaterPerformState = nil
   self:Close()
 end
 
@@ -428,6 +515,7 @@ function M:Close()
     self.ParentWidget.Pos_Rouge_CountDown:ClearChildren()
     self.ParentWidget.Pos_Rouge_CountDown:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
+  self.IsInit = true
   self.Super.Close(self)
 end
 

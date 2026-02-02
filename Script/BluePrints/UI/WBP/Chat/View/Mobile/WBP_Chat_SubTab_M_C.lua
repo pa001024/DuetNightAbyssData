@@ -79,7 +79,11 @@ end
 function M:SetReddotNum(RedNum)
   if nil ~= RedNum and RedNum > 0 then
     self.Reddot_Num:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.Reddot_Num:SetNum(RedNum)
+    if RedNum > ChatCommon.ReddotMaxCount then
+      self.Reddot_Num:SetNum(ChatCommon.ReddotMaxCount .. "+")
+    else
+      self.Reddot_Num:SetNum(RedNum)
+    end
   else
     self.Reddot_Num:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end

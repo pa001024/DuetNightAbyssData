@@ -265,14 +265,20 @@ end
 function M:GetTraceDesc()
   if DataMgr.BattleChar[self.CharId].CharGradeDescription and DataMgr.BattleChar[self.CharId].CharGradeDescription[self.SelectTraceId] then
     local CharGradeDescription = GText(DataMgr.BattleChar[self.CharId].CharGradeDescription[self.SelectTraceId])
-    for Index, value in pairs(DataMgr.BattleChar[self.CharId].CharGradeParameter) do
-      local CharGradeParameter = value
-      local Parameter = SkillUtils.CalcSkillDesc(CharGradeParameter, self.SelectTraceId)
+    local ReversedParameters = {}
+    for index, value in pairs(DataMgr.BattleChar[self.CharId].CharGradeParameter) do
+      table.insert(ReversedParameters, {Index = index, Value = value})
+    end
+    table.sort(ReversedParameters, function(a, b)
+      return tonumber(a.Index) > tonumber(b.Index)
+    end)
+    for _, param in ipairs(ReversedParameters) do
+      local Parameter = SkillUtils.CalcSkillDesc(param.Value, 1)
       local SignIndex = string.find(Parameter, "%%", 1)
       if SignIndex then
         Parameter = Parameter .. "%"
       end
-      CharGradeDescription = string.gsub(CharGradeDescription, "#" .. Index, Parameter)
+      CharGradeDescription = string.gsub(CharGradeDescription, "#" .. param.Index, Parameter)
     end
     return CharGradeDescription
   end

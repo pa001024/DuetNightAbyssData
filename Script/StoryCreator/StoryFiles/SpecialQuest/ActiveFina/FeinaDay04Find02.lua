@@ -108,12 +108,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "175491519285911497",
-            startPort = "Out",
-            endQuest = "175491519285911498",
-            endPort = "In"
-          },
-          {
             startQuest = "17544754076107295775",
             startPort = "Out",
             endQuest = "17546208197791216304",
@@ -341,22 +335,12 @@ return {
             key = "175491519285911497",
             type = "CreatePhantomNode",
             name = "召唤女主魅影",
-            pos = {x = 1233.6252702894317, y = -633.1309152113461},
+            pos = {x = 1233.6252702894317, y = -673.1309152113461},
             propsData = {
               IsCreate = true,
               IsClearOtherPhantom = false,
               IsSync = true,
               StaticCreatorIdList = {1241102}
-            }
-          },
-          ["175491519285911498"] = {
-            key = "175491519285911498",
-            type = "SetVarNode",
-            name = "打开队友特效",
-            pos = {x = 1502.6052467425568, y = -694.4934481703701},
-            propsData = {
-              VarName = "TeammateEffects",
-              VarValue = 1
             }
           },
           ["175758215096040245519"] = {
@@ -490,7 +474,7 @@ return {
             key = "175758210030339626654",
             name = "Input Commment...",
             position = {x = 1179.043970219667, y = -813.3622291021672},
-            size = {width = 594, height = 310.5}
+            size = {width = 314.956029780333, height = 303.36222910216725}
           },
           ["175758212021639627335"] = {
             key = "175758212021639627335",

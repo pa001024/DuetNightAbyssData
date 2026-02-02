@@ -33,6 +33,7 @@ function HeroUSDKSubSystem_C:BindDelegates()
   self.HeroSDKSwitchAccountDelegate:Bind(self, self.OnSwitchAccount)
   self.HeroSDKLoginInvalidDelegate:Bind(self, self.OnLoginInvalid)
   self.HeroSDKPayDelegate:Bind(self, self.PayCallBack)
+  self.HeroSDKExternalPayDelegate:Bind(self, self.OnExternalPay)
   self.HeroSDKExitDelegate:Bind(self, self.OnExit)
   self.HeroSDKAccountCancallationDelegate:Bind(self, self.OnAccountCancallation)
   if self.HeroMarketConversionDataSuccessDelegate then
@@ -136,6 +137,24 @@ function HeroUSDKSubSystem_C:PayCallBack(Result, PaymentOrder, Msg)
     }, self)
   end
   EventManager:FireEvent(EventID.OnPayCallBack, Result, PaymentOrder, Msg)
+end
+
+function HeroUSDKSubSystem_C:OnExternalPay(Type, GoodsId, Amount)
+  DebugPrint("USDK OnExternalPay: Msg:", Type, GoodsId, Amount)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  Avatar:RequestPay(GoodsId, function(ret, OrderId, CallbackUrl)
+    if not ErrorCode:Check(ret) then
+      return
+    end
+    local PaymentParameters = FHeroUPaymentParameters()
+    PaymentParameters.goodsId = GoodsId
+    PaymentParameters.cpOrder = OrderId
+    PaymentParameters.callbackUrl = CallbackUrl
+    HeroUSDKSubsystem():RedeemExternalPay(Type, PaymentParameters)
+  end)
 end
 
 function HeroUSDKSubSystem_C:OnLoginInvalid(KickOffType)

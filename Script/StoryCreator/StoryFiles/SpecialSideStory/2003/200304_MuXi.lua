@@ -206,6 +206,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -460,11 +461,11 @@ return {
           {
             startQuest = "17526690222653617",
             startPort = "QuestStart",
-            endQuest = "1764856941117955759",
+            endQuest = "1764860167108351039",
             endPort = "In"
           },
           {
-            startQuest = "1764856941117955759",
+            startQuest = "1764860167108351039",
             startPort = "Out",
             endQuest = "1753340702521333162",
             endPort = "In"
@@ -475,7 +476,7 @@ return {
             key = "17526690222653617",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 535.6216216216217, y = 412.81081081081084},
+            pos = {x = 427.62162162162167, y = 390.81081081081084},
             propsData = {ModeType = 0}
           },
           ["17526690222653620"] = {
@@ -489,7 +490,7 @@ return {
             key = "17526690222653623",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 1603.75, y = 595},
+            pos = {x = 1619.5652173913043, y = 574.7826086956521},
             propsData = {}
           },
           ["17528323122291288661"] = {
@@ -528,11 +529,11 @@ return {
             pos = {x = 1212.148212728858, y = 407.93548387096774},
             propsData = {SpecialConfigId = 20030401, BlackScreenImmediately = false}
           },
-          ["1764856941117955759"] = {
-            key = "1764856941117955759",
+          ["1764860167108351039"] = {
+            key = "1764860167108351039",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 846, y = 422},
+            pos = {x = 796, y = 404},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 2090244,
@@ -656,6 +657,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -748,6 +750,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -951,11 +954,11 @@ return {
           {
             startQuest = "17526690329524170",
             startPort = "QuestStart",
-            endQuest = "17648569123001387",
+            endQuest = "1764860180046351530",
             endPort = "In"
           },
           {
-            startQuest = "17648569123001387",
+            startQuest = "1764860180046351530",
             startPort = "Out",
             endQuest = "17533592253513473",
             endPort = "In"
@@ -966,7 +969,7 @@ return {
             key = "17526690329524170",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 973.304347826087, y = 280.95652173913044},
+            pos = {x = 856, y = 288},
             propsData = {ModeType = 0}
           },
           ["17526690329524173"] = {
@@ -980,7 +983,7 @@ return {
             key = "17526690329524176",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2021.25, y = 463.75},
+            pos = {x = 2027.5, y = 491.5},
             propsData = {}
           },
           ["17533434897425290871"] = {
@@ -997,11 +1000,11 @@ return {
             pos = {x = 1618.0769230769226, y = 297.9230769230768},
             propsData = {SpecialConfigId = 20030402, BlackScreenImmediately = false}
           },
-          ["17648569123001387"] = {
-            key = "17648569123001387",
+          ["1764860180046351530"] = {
+            key = "1764860180046351530",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 1283.3913043478258, y = 285.7608695652173},
+            pos = {x = 1216, y = 291.99999999999994},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 2090245,
@@ -1113,6 +1116,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1137,7 +1141,7 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = true
+                  TalkActorVisible = false
                 }
               },
               OptionType = "normal",
@@ -1286,6 +1290,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1534,6 +1539,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1580,14 +1586,15 @@ return {
       key = "17527196648361260299",
       type = "PreStoryNode",
       name = "交互对话",
-      pos = {x = 964.6961705490519, y = 376.2627567650531},
+      pos = {x = 965.8961705490519, y = 377.2627567650531},
       propsData = {
         QuestId = 20030400,
         QuestDescriptionComment = "",
         SubRegionId = 104108,
         StoryGuideType = "Npc",
         StoryGuidePointName = "Npc_White_2090157",
-        bIsPlayBlackScreenOnComplete = false
+        bIsPlayBlackScreenOnComplete = false,
+        SubRegionIdList = {}
       },
       questNodeData = {
         lineData = {
@@ -1705,6 +1712,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",

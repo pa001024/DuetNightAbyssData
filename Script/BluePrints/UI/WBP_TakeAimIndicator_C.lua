@@ -125,6 +125,21 @@ function WBP_TakeAimIndicator_C:UpdateWeaponInfo(Owner, LastWeapon, NewWeapon)
   if self.OwnerPlayer ~= Owner then
     return
   end
+  if not NewWeapon then
+    local IgnoreWeaponChangeSkillIds = {"150401", "150411"}
+    local CurSkill
+    if IsValid(self.OwnerPlayer) then
+      CurSkill = self.OwnerPlayer:GetCurrentSkill()
+    end
+    if CurSkill and CurSkill.SkillId then
+      local Sid = tostring(CurSkill.SkillId)
+      for i = 1, #IgnoreWeaponChangeSkillIds do
+        if Sid == IgnoreWeaponChangeSkillIds[i] then
+          return
+        end
+      end
+    end
+  end
   if not IsValid(NewWeapon) and IsValid(self.OwnerPlayer) then
     NewWeapon = self.OwnerPlayer:GetCurrentWeapon()
   end
@@ -143,7 +158,7 @@ function WBP_TakeAimIndicator_C:RealUpdateWeaponInfo(NewWeapon, NewMagazineCapac
     if self.SightUI ~= NewSightUI then
       self.SightUI = NewSightUI
       local NewWeaponStyleNode = self:GetWeaponStyleNode(NewSightUI)
-      if self.CurWeaponStyleNode ~= NewWeaponStyleNode then
+      if NewWeaponStyleNode and self.CurWeaponStyleNode ~= NewWeaponStyleNode then
         self.CurWeaponStyleNode = NewWeaponStyleNode
         self.CurWeaponStyle = self:GetWeaponStyle(self.CurWeaponStyleNode)
         self:SwitchAimStar()

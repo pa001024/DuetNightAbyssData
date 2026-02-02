@@ -52,6 +52,31 @@ function WBP_Build_Slot_P_C:PlayRefreshAnimation()
   end
 end
 
+function WBP_Build_Slot_P_C:CheckUuidIsVaild()
+  if self.IsEmpty then
+    return true
+  end
+  local Avatar = GWorld:GetAvatar()
+  local IsValid = false
+  if Avatar then
+    if self.Type == "Char" then
+      IsValid = Avatar.Chars[self.Uuid] and true
+    elseif self.Type == "Pet" then
+      IsValid = Avatar.Pets[self.Uuid] and true
+    elseif self.Type == "Melee" then
+      IsValid = Avatar.Weapons[self.Uuid] and true
+    elseif self.Type == "Ranged" then
+      IsValid = Avatar.Weapons[self.Uuid] and true
+    end
+    if not IsValid then
+      self:ClearSlot()
+    end
+  else
+    self:ClearSlot()
+  end
+  return IsValid
+end
+
 function WBP_Build_Slot_P_C:AddDelelteIcon()
   if self.Uuid and self.Id and self.Owner.IsInEditor then
     self.Minus.Btn_Minus.Button_Area.OnClicked:Clear()
@@ -70,7 +95,6 @@ function WBP_Build_Slot_P_C:CheckIsColorfulPet()
   end
   if self.Type == "Pet" then
     local Premium = DataMgr.Pet[self.Id].Premium
-    DebugPrint("thy   CheckIsColorfulPet: Premium", Premium)
     if Premium and 1 == Premium then
       self.Item.VX_Colorful:SetVisibility(ESlateVisibility.Visible)
     else

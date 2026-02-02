@@ -78,7 +78,7 @@ function M:Init(...)
   self.bSingle = #self.RewardLst == GachaCommon.GachaOneResult
   self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self:SetIsDealWithVirtualAccept(false)
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   AudioManager(self):PlayUISound(self, "event:/ui/common/gacha_result_show", nil, nil)
   self:PlayAnimation(self.In)
   local GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem(self)
@@ -276,7 +276,7 @@ function M:RefreshResourceBar()
       HandleMouseDown = true
     })
     ItemList[i] = ResourceBarWidget
-    ResourceBarWidget:SetResourceId(CoinId)
+    ResourceBarWidget:SetItemId(CoinId)
     self.HB_ResourceBar:AddChild(ResourceBarWidget)
     ResourceBarWidget:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
     ResourceBarWidget:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
@@ -498,7 +498,7 @@ function M:PlayOutAnim()
   if self:IsAnimationPlaying(self.Out) then
     return
   end
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   if self.OnClosedFun then
     self.OnClosedFun(self.Parent)
   end

@@ -1,9 +1,21 @@
 require("UnLua")
 local EMCache = require("EMCache.EMCache")
+local EDetectTargetMethods = {
+  ProjectToScreen = 1,
+  LineTrace = 2,
+  ProjectToScreenAndLineTrace = 3
+}
 local M = Class("BluePrints.UI.BP_UIState_C")
 local Rotation = FRotator()
 local Position = FVector()
 local HitResult = FHitResult()
+
+function M:ReceiveEnterState(StackAction)
+  M.Super.ReceiveEnterState(self, StackAction)
+  if IsValid(self.ScreenshotWidget) and self.ScreenshotWidget:IsVisible() then
+    self.ScreenshotWidget:SetFocus()
+  end
+end
 
 function M:Construct()
   M.Super.Construct(self)
@@ -133,8 +145,14 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
       self.Btn_Pause:PlayAnimation(self.Btn_Pause.Open_Normal)
     end
   end
+  if self.InitParams.IsAprilFoolsDayActivity then
+    local FoolsDaySubsystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UFoolsDaySubsystem)
+    if FoolsDaySubsystem then
+      FoolsDaySubsystem:OnCameraPanelOpened(self.InitParams.AFDTransformID)
+    end
+  end
   self.Main:SetVisibility(UIConst.VisibilityOp.Visible)
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:ResetCamera()
   self.bHasAnyOperation = false
   self.PlayerController = self:GetOwningPlayer()
@@ -158,6 +176,7 @@ function M:SetInitParams(Params)
   self.Text_TargetFound = Params.Text_TargetFound
   self.Text_TargetNotFound = Params.Text_TargetNotFound
   self.LookAtTargetName = Params.LookAtTargetName
+  self.DetectTargetMethod = Params.DetectTargetMethod or EDetectTargetMethods.ProjectToScreen
   self.TargetActors = nil
   if self.TargetPointNames then
     self.TargetActors = {}
@@ -168,7 +187,13 @@ function M:SetInitParams(Params)
       end
     end
   end
-  if self.TargetActors and next(self.TargetActors) then
+  if Params.TargetActors then
+    self.TargetActors = self.TargetActors or {}
+    for key, value in pairs(Params.TargetActors) do
+      self.TargetActors[key] = value
+    end
+  end
+  if self.TargetActors and next(self.TargetActors) and not Params.IsLargeRange then
     self.Panel_FindTarget:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.Border_FindTarget:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   else
@@ -224,7 +249,7 @@ function M:OnLoaded(...)
   M.Super.OnLoaded(self, ...)
   self:BlockAllUIInput(false)
   self.bHasAnyOperation = false
-  EventManager:AddEvent(EventID.OnTeamRecoveryStateChange, self, function(self, Eid, Type, PrevType)
+  self:AddDispatcher(EventID.OnTeamRecoveryStateChange, self, function(self, Eid, Type, PrevType)
     if Eid == self.Player:GetEid() then
       if Type == UE4.ETeamRecoveryState.Dying then
         self.IsNeedCloseWorldMenu = true
@@ -233,6 +258,10 @@ function M:OnLoaded(...)
       local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
       local UIManager = GameInstance:GetGameUIManager()
       if UIManager then
+        local AprilFoolDayHUD = UIManager:GetUI("AprilFoolDayHUD")
+        if AprilFoolDayHUD then
+          AprilFoolDayHUD.CloseByChild = true
+        end
         local MenuWorld = UIManager:GetUI("MenuWorld")
         if MenuWorld then
           MenuWorld.CloseByChild = true
@@ -304,24 +333,61 @@ function M:Tick(MyGeometry, InDeltaTime)
 end
 
 local ScreenPos = FVector2D()
+local HitResult = FHitResult()
 
 function M:TickFindTargets()
   if self.IsShotTargetSucceeded then
     return
   end
   if self.TargetActors then
-    local ViewPortScale = UWidgetLayoutLibrary.GetViewportScale(self)
-    local Geo = self.Border_FindTarget:GetTickSpaceGeometry()
-    local LeftTop = USlateBlueprintLibrary.GetLocalTopLeft(Geo) * ViewPortScale
-    local Size = USlateBlueprintLibrary.GetLocalSize(Geo) * ViewPortScale
     self.bFindTarget = false
-    for key, value in pairs(self.TargetActors) do
-      UGameplayStatics.ProjectWorldToScreen(self.PlayerController, value:K2_GetActorLocation(), ScreenPos, false)
-      if ScreenPos.X > LeftTop.X and ScreenPos.Y > LeftTop.Y and ScreenPos.X < LeftTop.X + Size.X and ScreenPos.Y < LeftTop.Y + Size.Y then
-        self.bFindTarget = true
-      else
-        self.bFindTarget = false
-        break
+    local ContinueFindTarget = true
+    local TargetsLoc = {}
+    
+    local function GetTargetLoc(Actor)
+      if not TargetsLoc[Actor] then
+        if Actor.AFDTransformStaticMeshComponent then
+          TargetsLoc[Actor] = Actor.AFDTransformStaticMeshComponent:K2_GetComponentLocation()
+        else
+          TargetsLoc[Actor] = Actor:K2_GetActorLocation()
+          if Actor.CapsuleComponent then
+            TargetsLoc[Actor].Z = TargetsLoc[Actor].Z - Actor.CapsuleComponent:GetScaledCapsuleHalfHeight()
+          end
+        end
+      end
+      return TargetsLoc[Actor]
+    end
+    
+    if 0 ~= EDetectTargetMethods.ProjectToScreen & self.DetectTargetMethod then
+      local ViewPortScale = UWidgetLayoutLibrary.GetViewportScale(self)
+      local RangeWidget = self.Border_FindTarget
+      if self.InitParams.IsLargeRange then
+        RangeWidget = self
+      end
+      local Geo = RangeWidget:GetTickSpaceGeometry()
+      local LeftTop = USlateBlueprintLibrary.GetLocalTopLeft(Geo) * ViewPortScale
+      local Size = USlateBlueprintLibrary.GetLocalSize(Geo) * ViewPortScale
+      for key, value in pairs(self.TargetActors) do
+        UGameplayStatics.ProjectWorldToScreen(self.PlayerController, GetTargetLoc(value), ScreenPos, false)
+        if ScreenPos.X > LeftTop.X and ScreenPos.Y > LeftTop.Y and ScreenPos.X < LeftTop.X + Size.X and ScreenPos.Y < LeftTop.Y + Size.Y then
+          self.bFindTarget = true
+        else
+          self.bFindTarget = false
+          break
+        end
+      end
+      ContinueFindTarget = self.bFindTarget
+    end
+    if ContinueFindTarget and 0 ~= EDetectTargetMethods.LineTrace & self.DetectTargetMethod and self.CameraManager then
+      local CameraLocation = self.CameraManager:GetCameraLocation()
+      for key, value in pairs(self.TargetActors) do
+        local bHit = UE4.UKismetSystemLibrary.LineTraceSingle(self, CameraLocation, GetTargetLoc(value), 0, false, nil, 0, HitResult, true)
+        if bHit and HitResult.Actor == value and not HitResult.Actor.bHidden then
+          self.bFindTarget = true
+        else
+          self.bFindTarget = false
+          break
+        end
       end
     end
     if self.bFindTarget then
@@ -332,6 +398,10 @@ function M:TickFindTargets()
         self.Panel_FailToast:SetVisibility(UIConst.VisibilityOp.Collapsed)
         self.Panel_SuccessToast:SetVisibility(UIConst.VisibilityOp.Visible)
         self.bHasFoundTargets = true
+        if self.InitParams.IsAprilFoolsDayActivity then
+          self.bHasPlayedFoundSound = true
+          self.bHasPlayedNotFoundSound = true
+        end
         if not self.bHasPlayedFoundSound then
           AudioManager(self):PlayUISound(self, "event:/ui/common/task_target_detect", "Camera_Target_Found", nil)
           self.bHasPlayedFoundSound = true
@@ -663,7 +733,9 @@ function M:Screenshot()
     self.IsShotTargetSucceeded = self.bHasFoundTargets
   end
   if self.IsShotTargetSucceeded then
-    UIManager(self):ShowUITip("CommonTopTips", string.format(GText("UI_CameraSystem_QuestFinished_Default")))
+    if not self.InitParams.IsAprilFoolsDayActivity then
+      UIManager(self):ShowUITip("CommonTopTips", string.format(GText("UI_CameraSystem_QuestFinished_Default")))
+    end
     self.Text_FindTarget:SetText(GText("UI_CameraSystem_QuestFinished_Default"))
     self.Panel_FailToast:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Panel_SuccessToast:SetVisibility(UIConst.VisibilityOp.Visible)
@@ -688,15 +760,22 @@ function M:Screenshot()
     Width = 1080
     Height = math.floor(Width / AspectRatio)
   end
-  Width = math.floor(Width * CacheValue)
-  Height = math.floor(Height * CacheValue)
-  DebugPrint("Final Screenshot Resolution: " .. Width .. "x" .. Height)
-  local Action = UE4.UAsyncHighResScreenshotAction.HighResScreenshotToColors(self, Width, Height)
-  Action.ToColors:Add(self, self.OnScreenshotEnd)
+  if self.bNeedCaptureActors then
+    self:SetSceneCaptureComponent(self.Camera.SceneCaptureComponent2D)
+  else
+    self:SetSceneCaptureComponent(nil)
+  end
+  self:ScreenshotCPP(Width, Height, CacheValue)
 end
 
-function M:OnScreenshotEnd(Width, Height, Colors)
-  local Image = ULowEntryExtendedStandardLibrary.PixelsToTexture2D(Width, Height, Colors)
+function M:GetCameraComponent()
+  return self.Camera:GetActiveCamera()
+end
+
+function M:BP_OnSceneCapturedTest(RT1, RT2)
+end
+
+function M:BP_OnScreenshotFinished(Image)
   if not IsValid(Image) then
     return
   end
@@ -711,10 +790,13 @@ end
 
 function M:ShowScreenshotWidget(Image)
   if not IsValid(self.ScreenshotWidget) then
-    local Widget = UIManager(self):CreateWidget(UIConst.ScreenshotWidget)
-    self.ScreenshotWidget = Widget
-    self.Main:AddChild(Widget)
-    local CanvasSlot = UWidgetLayoutLibrary.SlotAsCanvasSlot(Widget)
+    if self.InitParams and self.InitParams.IsAprilFoolsDayActivity then
+      self.ScreenshotWidget = UIManager(self):CreateWidget(UIConst.ScreenshotWidget_AprilFools)
+    else
+      self.ScreenshotWidget = UIManager(self):CreateWidget(UIConst.ScreenshotWidget)
+    end
+    self.Main:AddChild(self.ScreenshotWidget)
+    local CanvasSlot = UWidgetLayoutLibrary.SlotAsCanvasSlot(self.ScreenshotWidget)
     local Anchors = FAnchors()
     Anchors.Minimum = FVector2D(0, 0)
     Anchors.Maximum = FVector2D(1, 1)
@@ -722,8 +804,18 @@ function M:ShowScreenshotWidget(Image)
     CanvasSlot:SetOffsets(FMargin(0, 0, 0, 0))
   end
   if IsValid(self.ScreenshotWidget) then
-    self.ScreenshotWidget:Init(Image, self, self.OnScreenshotWidgetHidden)
+    local Params = {
+      Image = Image,
+      Parent = self,
+      OnHiddenCallback = self.OnScreenshotWidgetHidden,
+      EventId = self.InitParams.EventId,
+      EventParams = self.InitParams.EventParams,
+      bHasFoundTargets = self.bHasFoundTargets,
+      bAprilFoolsDayActivity = self.InitParams.IsAprilFoolsDayActivity
+    }
+    self.ScreenshotWidget:Init(Params)
     self.bScreenshotWidgetShow = true
+    self.ScreenshotWidget:SetFocus()
   end
 end
 
@@ -733,6 +825,9 @@ function M:OnScreenshotWidgetHidden(bSaved)
   end
   self.bScreenshotWidgetShow = false
   self:SetFocus()
+  if self.InitParams and self.InitParams.IsAprilFoolsDayActivity then
+    self.IsShotTargetSucceeded = false
+  end
 end
 
 function M:MoveCamera(X, Y, Z)

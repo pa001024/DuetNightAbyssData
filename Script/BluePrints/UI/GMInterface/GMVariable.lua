@@ -46,6 +46,7 @@ VariableForGM.EnableDebugLights = true
 VariableForGM.EnableUseLightingScenario = true
 VariableForGM.EnableRecordePlayerRoute = false
 VariableForGM.EnableShowAchievement = true
+VariableForGM.IgnoreGiftShopFriendLimit = false
 VariableForGM.PrintPickupTriggerTick = false
 VariableForGM.HideEntertainmentUI = false
 VariableForGM.HideEntertainmentUIObj = {}

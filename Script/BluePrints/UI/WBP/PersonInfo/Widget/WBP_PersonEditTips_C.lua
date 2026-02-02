@@ -127,7 +127,7 @@ function M:OnModSelected(index)
 end
 
 function M:SetTitle(NameId)
-  self.Text_Title:SetText(GText("nameid"))
+  self.Text_Title:SetText(GText(NameId))
 end
 
 function M:FreshModText(uuid)
@@ -173,7 +173,7 @@ function M:FreahWeaponView(Name, Rarity, Uuid, SelectModId, IsCharSound)
   end
   UIUtils:SetTextColorInMaterialByRarity(self, self.Text_Title, Rarity)
   self.Text_Title:SetText(GText(Name))
-  self.Text_FashionTypeTitle:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Panel_Fashion:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.HB_FashionType:SetVisibility(UIConst.VisibilityOp.Collapsed)
   local currentSize = self.Group_Tips.Slot:GetSize()
   self.Group_Tips.Slot:SetSize(FVector2D(currentSize.X, self.Group_TipsSize_Weapon))
@@ -199,7 +199,7 @@ function M:FreahCharView(Name, Rarity, SelectFashionId, SelectModId, Uuid)
   end
   local currentSize = self.Group_Tips.Slot:GetSize()
   self.Group_Tips.Slot:SetSize(FVector2D(currentSize.X, self.Group_TipsSize_Avatar))
-  self.Text_FashionTypeTitle:SetVisibility(UIConst.VisibilityOp.Visible)
+  self.Panel_Fashion:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   self.HB_FashionType:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self:FreshModText(Uuid)
 end

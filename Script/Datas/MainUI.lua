@@ -3,6 +3,9 @@ T.RT_1 = {2}
 T.RT_2 = {2, 5}
 T.RT_3 = {1}
 T.RT_4 = {1, 5}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -12,6 +15,7 @@ return ReadOnly("MainUI", {
     EnterId = 1,
     EscShowCondition = {4},
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Armory.T_Entrance_Armory",
+    IsReddotToEsc = true,
     Name = "MAIN_UI_ARMORY",
     ReddotNode = "ArmoryMainMenu",
     Sequence = 10,
@@ -43,6 +47,7 @@ return ReadOnly("MainUI", {
     EnterId = 4,
     EscShowCondition = T.RT_1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Store.T_Entrance_Store",
+    IsReddotToEsc = true,
     Name = "MAIN_UI_SHOP",
     ReddotNode = "Shop",
     Sequence = 90,
@@ -54,6 +59,7 @@ return ReadOnly("MainUI", {
     EnterId = 5,
     EscShowCondition = T.RT_1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Gacha.T_Entrance_Gacha",
+    IsReddotToEsc = true,
     Name = "MAIN_UI_GACHA",
     ReddotNode = "Gacha",
     Sequence = 80,
@@ -66,6 +72,7 @@ return ReadOnly("MainUI", {
     EnterId = 6,
     EscShowCondition = T.RT_1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Forging.T_Entrance_Forging",
+    IsReddotToEsc = true,
     Name = "MAIN_UI_FORGE",
     ReddotNode = "ForgeEntry",
     Sequence = 70,
@@ -77,6 +84,7 @@ return ReadOnly("MainUI", {
     EnterId = 7,
     EscShowCondition = T.RT_1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Achievement.T_Entrance_Achievement",
+    IsReddotToEsc = true,
     Name = "MAIN_UI_ACHIEVEMENT",
     ReddotNode = "AchieveMain",
     Sequence = 30,
@@ -88,6 +96,7 @@ return ReadOnly("MainUI", {
     EnterId = 8,
     EscShowCondition = T.RT_1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Pve.T_Entrance_Pve",
+    IsReddotToEsc = true,
     Name = "MAIN_UI_PLAY",
     ReddotNode = "Play",
     Sequence = 50,
@@ -100,6 +109,7 @@ return ReadOnly("MainUI", {
     EnterId = 9,
     EscShowCondition = T.RT_1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Task.T_Entrance_Task",
+    IsReddotToEsc = true,
     Name = "MAIN_UI_QUEST",
     ReddotNode = "Quest",
     Sequence = 40,
@@ -111,6 +121,7 @@ return ReadOnly("MainUI", {
     EscShowCondition = T.RT_1,
     EscShowType = 1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Mail.T_Entrance_Mail",
+    IsReddotToEsc = true,
     Name = "MAIN_UI_MAIL",
     ReddotNode = "NormalMail",
     Sequence = 100,
@@ -130,6 +141,7 @@ return ReadOnly("MainUI", {
     EscShowCondition = T.RT_1,
     EscShowType = 1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Announcement.T_Entrance_Announcement",
+    IsReddotToEsc = true,
     Name = "MAIN_UI_NOTICE",
     ReddotNode = "AnnouncementItems",
     Sequence = 110,
@@ -141,6 +153,7 @@ return ReadOnly("MainUI", {
     EnterId = 13,
     EscShowCondition = T.RT_1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_GuideBook.T_Entrance_GuideBook",
+    IsReddotToEsc = true,
     Name = "MAIN_UI_GUIDEBOOK",
     ReddotNode = "NewGuideNote",
     Sequence = 120,
@@ -151,6 +164,7 @@ return ReadOnly("MainUI", {
     EnterId = 14,
     EscShowCondition = T.RT_1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Friend.T_Entrance_Friend",
+    IsReddotToEsc = true,
     Name = "MAIN_UI_FRIEND",
     ReddotNode = "NewFriendRequest",
     Sequence = 130,
@@ -158,6 +172,7 @@ return ReadOnly("MainUI", {
     UIUnlockRuleName = "FriendMain"
   },
   [15] = {
+    ActionName = "OpenCamera",
     EnterId = 15,
     EscShowCondition = T.RT_1,
     EscShowType = 1,
@@ -192,6 +207,7 @@ return ReadOnly("MainUI", {
     EnterId = 18,
     EscShowCondition = T.RT_1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_BattlePass.T_Entrance_BattlePass",
+    IsReddotToEsc = true,
     Name = "MAIN_UI_BATTLEPASS",
     ReddotNode = "BattlePassMain",
     Sequence = 160,
@@ -204,6 +220,7 @@ return ReadOnly("MainUI", {
     EnterId = 19,
     EscShowCondition = T.RT_1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Activity.T_Entrance_Activity",
+    IsReddotToEsc = true,
     Name = "MAIN_UI_GAMEEVENT",
     ReddotNode = "ActivityHub",
     Sequence = 170,
@@ -216,6 +233,7 @@ return ReadOnly("MainUI", {
     EnterId = 20,
     EscShowCondition = T.RT_1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Map.T_Entrance_Map",
+    IsReddotToEsc = true,
     Name = "MAIN_UI_MAP",
     ReddotNode = "Map",
     Sequence = 180,
@@ -226,6 +244,7 @@ return ReadOnly("MainUI", {
     EnterId = 21,
     EscShowCondition = T.RT_3,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Entertainment",
+    IsReddotToEsc = true,
     Name = "MAIN_UI_ENTERTAINMENT",
     ReddotNode = "Entertainment",
     Sequence = 190,
@@ -237,6 +256,7 @@ return ReadOnly("MainUI", {
     EnterId = 22,
     EscShowCondition = T.RT_1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Wiki",
+    IsReddotToEsc = true,
     Name = "MAIN_UI_WIKI",
     ReddotNode = "WikiReward",
     Sequence = 200,
@@ -247,6 +267,7 @@ return ReadOnly("MainUI", {
     EnterId = 23,
     EscShowCondition = T.RT_1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Walnut.T_Entrance_Walnut",
+    IsReddotToEsc = true,
     Name = "MAIN_UI_WALNUTBAG",
     ReddotNode = "WalnutBagItems",
     Sequence = 210,
@@ -257,6 +278,7 @@ return ReadOnly("MainUI", {
     EnterId = 24,
     EscShowCondition = T.RT_1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Archive.T_Entrance_Archive",
+    IsReddotToEsc = true,
     Name = "MAIN_UI_ARCHIVE",
     ReddotNode = "Archive",
     Sequence = 220,
@@ -267,6 +289,7 @@ return ReadOnly("MainUI", {
     EnterId = 25,
     EscShowCondition = T.RT_1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_ModArchive.T_Entrance_ModArchive",
+    IsReddotToEsc = true,
     Name = "MAIN_UI_MODGUIDEBOOK",
     ReddotNode = "ModArchive",
     Sequence = 171,
@@ -283,6 +306,7 @@ return ReadOnly("MainUI", {
     EscShowCondition = T.RT_1,
     EscShowType = 1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Set.T_Entrance_Set",
+    IsReddotToEsc = true,
     Name = "UI_Esc_CommonSet",
     ReddotNode = "Setting_Root",
     Sequence = 230,
@@ -302,7 +326,9 @@ return ReadOnly("MainUI", {
     EscShowCondition = T.RT_1,
     EscShowType = 1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_TrainingLevel.T_Entrance_TrainingLevel",
+    IsReddotToEsc = true,
     Name = "MAIN_UI_PlayLevel",
+    ReddotNode = "ExperienceMain",
     Sequence = 95,
     SystemUIName = "ExperienceMain",
     UIUnlockRuleName = "PlayerLevel"
@@ -326,5 +352,27 @@ return ReadOnly("MainUI", {
     Name = "UI_OPTION_CloudGame",
     Sequence = 221,
     SystemUIName = "GlobalWebBrowser"
+  },
+  [31] = {
+    EnterId = 31,
+    EscShowCondition = T.RT_1,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Mount.T_Entrance_Mount",
+    IsReddotToEsc = true,
+    Name = "UI_Mount",
+    ReddotNode = "Mounts_Root",
+    Sequence = 185,
+    SystemUIName = "MountsMain",
+    UIUnlockRuleName = "Mount"
+  },
+  [32] = {
+    EnterId = 32,
+    EscShowCondition = T.RT_1,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Fame.T_Entrance_Fame",
+    IsReddotToEsc = true,
+    Name = "MAIN_UI_FAME",
+    ReddotNode = "Fame",
+    Sequence = 186,
+    SystemUIName = "FameMain",
+    UIUnlockRuleName = "RegionReputation"
   }
 })

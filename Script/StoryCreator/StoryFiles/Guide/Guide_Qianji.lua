@@ -47,7 +47,7 @@ return {
       key = "1763605375660119",
       type = "StoryNode",
       name = "任务节点",
-      pos = {x = 1182, y = 304.48484850820137},
+      pos = {x = 1184, y = 304},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
@@ -168,14 +168,14 @@ return {
             key = "1763605375660127",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2339.4440227198866, y = 819.1042389783846},
+            pos = {x = 2395.4440227198866, y = 737.1042389783846},
             propsData = {ModeType = 0}
           },
           ["1763605375661134"] = {
             key = "1763605375661134",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2978, y = 708},
+            pos = {x = 2800, y = 700},
             propsData = {}
           },
           ["1763605790694674355"] = {
@@ -250,7 +250,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "Left",
+              MessageLoc = "DownLeft",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },
@@ -280,7 +280,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "Left",
+              MessageLoc = "DownLeft",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },

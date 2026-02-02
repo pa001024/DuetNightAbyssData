@@ -17,6 +17,7 @@ local bStatusInPreloading = false
 function DSEntity:Init(eid)
   DSEntity.Super.Init(self, eid)
   self.bClientEntity = false
+  self.bStartSuccess = false
 end
 
 function DSEntity:InitFromDict(attrs)
@@ -74,9 +75,19 @@ function DSEntity:StartSuccess()
   local DSVersion = MiscUtils.GetGameCofingSettings("DSVersion") or 0
   local LogPath = GameInstance:LogPath()
   local DSType = GameInstance.DSType
+  if GameInstance.DSType ~= CommonConst.DSType.Root then
+    local DungeonId = GameInstance.TargetDungeonId
+    if not DungeonId then
+      error("DungeonId is nil")
+    end
+    if WorldTravelSubsystem():GetCurrentSceneId() ~= DungeonId then
+      self:ChangeMap(DungeonId)
+    else
+      GameInstance:UpdateNetDriverInfo()
+    end
+  end
   local Ip = GameInstance.LastUploadIp
   local Port = GameInstance.LastUploadPort
-  ServerPrint("Ip, Port, PID, PPID, DSVersion, LogPath", Ip, Port, Pid, PPid, DSVersion, LogPath)
   local DSInfo = {
     Ip = Ip,
     Port = Port,
@@ -87,18 +98,10 @@ function DSEntity:StartSuccess()
     DSVersion = DSVersion,
     LogPath = LogPath,
     bDynamic = GameInstance.bDynamicNode,
-    LocalUser = UE.UKismetSystemLibrary:GetPlatformUserName()
+    LocalUser = UE.UKismetSystemLibrary:GetPlatformUserName(),
+    DungeonId = GameInstance.TargetDungeonId
   }
-  if GameInstance.DSType ~= CommonConst.DSType.Root then
-    local DungeonId = GameInstance.TargetDungeonId
-    if not DungeonId then
-      error("DungeonId is nil")
-    end
-    DSInfo.DungeonId = DungeonId
-    if WorldTravelSubsystem():GetCurrentSceneId() ~= DungeonId then
-      self:ChangeMap(DungeonId)
-    end
-  end
+  ServerPrint("Ip, Port, PID, PPID, DSVersion, LogPath", Ip, Port, Pid, PPid, DSVersion, LogPath)
   
   local function callback(ret, LogParam)
     if 0 ~= DSVersion and DSType == CommonConst.DSType.Root then
@@ -117,9 +120,13 @@ function DSEntity:StartSuccess()
   else
     self:CallServer("StartSuccess", callback, DSInfo)
   end
+  self.bStartSuccess = true
 end
 
 function DSEntity:UpdateNetDriverInfo(ip, port)
+  if not self.bStartSuccess then
+    return
+  end
   if ip and port then
     self:CallServerMethod("UpdateNetDriverInfo", ip, port)
   end
@@ -143,19 +150,14 @@ end
 function DSEntity:ChangeMap(DungeonId)
   ServerPrint("Change to Map: ", DungeonId)
   self.HasLeaveAvatars = {}
+  self.bBlock = false
   GWorld.GameInstance:ChangeMapAsDedicatedServer(DungeonId)
-end
-
-function DSEntity:SetNeedWaitForOthers(NeedToWaitForOthers)
-  self.logger.info("Set NeedToWaitForOthers: ", NeedToWaitForOthers)
-  local GameMode = GWorld.GameInstance:GetCurrentGameMode()
-  GameMode.NeedToWaitForOthers = NeedToWaitForOthers
-  GameMode:TryTriggerOnInitWithoutParams()
 end
 
 function DSEntity:SystemRequireGameModeInitWithoutAnyPlayer()
   bHookGameModeReadyForInitNext = true
-  self:SetNeedWaitForOthers(false)
+  local GameMode = GWorld.GameInstance:GetCurrentGameMode()
+  GameMode:SetGameStartType(0)
 end
 
 function DSEntity:HookGameModeReady(GameMode)
@@ -208,7 +210,7 @@ function DSEntity:HotUpdate()
 end
 
 function DSEntity:HotPatch(bNeedRestart)
-  GWorld.GameInstance:QuickRestartProcess(bNeedRestart)
+  GWorld.GameInstance:QuickRestartProcess(bNeedRestart, false)
 end
 
 function DSEntity:UpdateDSLogSetting(LogParam)

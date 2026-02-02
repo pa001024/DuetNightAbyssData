@@ -75,7 +75,7 @@ function WBP_Rouge_GameSettlement_C:OnExitButtonClicked()
     self.IsShowTips = false
     return
   end
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:BindToAnimationFinished(self.Out, {
     self,
     self.OnOutAnimFinished

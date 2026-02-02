@@ -1,4 +1,4 @@
-local M = Class()
+local M = Class("BluePrints.Common.TimerMgr")
 
 function M:OnObjectSpawned_Lua(Object)
   if Object.ForceClearActorHideTag then
@@ -18,6 +18,15 @@ function M:OnObjectSpawned_Lua(Object)
   if Object:Cast(ACharacterBase) then
     Object:HandleModelFashion()
     Object.Overridden.ReceiveBeginPlay(Object)
+    self:AddTimer(0.01, function()
+      if Object.ModelId and DataMgr.Model[Object.ModelId] and DataMgr.Model[Object.ModelId].PartModelsId then
+        local Array = TArray(0)
+        for _, Id in pairs(DataMgr.Model[Object.ModelId].PartModelsId) do
+          Array:Add(Id)
+        end
+        Object:InitPartMeshComp(Array)
+      end
+    end)
   end
 end
 

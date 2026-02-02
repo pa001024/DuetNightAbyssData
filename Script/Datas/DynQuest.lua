@@ -95,6 +95,9 @@ T.RT_30 = {
   [71006510] = 1221,
   [71006515] = 1223
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -2384,6 +2387,22 @@ return ReadOnly("DynQuest", {
     TriggerBoxID = 2070045,
     UnlockCondition = 80088
   },
+  [210205] = {
+    Chance = 5,
+    CompleteNum = -1,
+    DayLimit = false,
+    DynCD = T.RT_1,
+    DynName = "DynQuest_ClearRock_Title",
+    DynQuestId = 210205,
+    FailTriggerBoxID = 292060361,
+    PlayerLevel = T.RT_14,
+    RegionId = 1041,
+    Reward = T.RT_3,
+    StoryPath = "DynStory/East/ClearRock.story",
+    SubRegionId = 104105,
+    TriggerBoxID = 292060360,
+    UnlockCondition = 80102
+  },
   [301802] = {
     Chance = 5,
     CompleteNum = -1,
@@ -3005,7 +3024,7 @@ return ReadOnly("DynQuest", {
     DynName = "DynQuest_Dati_Title",
     DynQuestId = 308314,
     FailTriggerBoxID = 2090135,
-    PlayerLevel = T.RT_5,
+    PlayerLevel = T.RT_6,
     RegionId = 1041,
     Reward = T.RT_9,
     StoryPath = "DynStory/East/Dati.story",
@@ -3022,7 +3041,7 @@ return ReadOnly("DynQuest", {
     DynName = "DynQuest_Dati_Title",
     DynQuestId = 308315,
     FailTriggerBoxID = 2090135,
-    PlayerLevel = T.RT_6,
+    PlayerLevel = T.RT_14,
     RegionId = 1041,
     Reward = T.RT_9,
     StoryPath = "DynStory/East/Dati.story",
@@ -3039,7 +3058,7 @@ return ReadOnly("DynQuest", {
     DynName = "DynQuest_Dati_Title",
     DynQuestId = 308334,
     FailTriggerBoxID = 2090135,
-    PlayerLevel = T.RT_5,
+    PlayerLevel = T.RT_6,
     RegionId = 1041,
     Reward = T.RT_9,
     StoryPath = "DynStory/East/Dati.story",
@@ -3056,7 +3075,7 @@ return ReadOnly("DynQuest", {
     DynName = "DynQuest_Dati_Title",
     DynQuestId = 308335,
     FailTriggerBoxID = 2090135,
-    PlayerLevel = T.RT_6,
+    PlayerLevel = T.RT_14,
     RegionId = 1041,
     Reward = T.RT_9,
     StoryPath = "DynStory/East/Dati.story",
@@ -3099,5 +3118,21 @@ return ReadOnly("DynQuest", {
     SubRegionId = 104107,
     TriggerBoxID = 2080045,
     UnlockCondition = 80084
+  },
+  [310305] = {
+    Chance = 5,
+    CompleteNum = -1,
+    DayLimit = false,
+    DynCD = T.RT_1,
+    DynName = "DynQuest_CollectShanhu_Title",
+    DynQuestId = 310305,
+    FailTriggerBoxID = 292040154,
+    PlayerLevel = T.RT_14,
+    RegionId = 1041,
+    Reward = T.RT_3,
+    StoryPath = "DynStory/East/CollectShanhu.story",
+    SubRegionId = 104103,
+    TriggerBoxID = 292040153,
+    UnlockCondition = 80103
   }
 })

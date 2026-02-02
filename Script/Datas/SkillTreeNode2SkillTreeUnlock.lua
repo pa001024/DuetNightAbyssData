@@ -251,6 +251,9 @@ T.RT_50 = {
   [3] = 10103,
   [4] = 10100
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

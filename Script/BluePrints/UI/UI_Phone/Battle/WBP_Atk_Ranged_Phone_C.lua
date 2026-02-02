@@ -14,7 +14,7 @@ function M:Initialize(Initializer)
   self.YawRotateSpeed = 30
   self.BtnHoldCD = 3
   self.OccupiedTag = "Right"
-  self.EdgeWidth = self.DefaultEdgeWidth
+  self.EdgeWidth = 60
 end
 
 function M:Construct()
@@ -30,7 +30,7 @@ function M:Construct()
 end
 
 function M:Tick(MyGeometry, InDeltaTime)
-  if self.AutoYawRotate then
+  if self.AutoYawRotate and self.YawDirection then
     local YawSpeed = self.YawRotateSpeed
     if self.YawDirection < 0 then
       YawSpeed = -self.YawRotateSpeed
@@ -105,7 +105,6 @@ function M.ButtonFireUp(Battle_Button_Phone, Index, WidgetLocalPos, LastWidgetTo
   local FireBtn = Battle_Button_Phone.AtkRanged
   if FireBtn.OwnerPanel.FireOccupied == FireBtn.OccupiedTag then
     FireBtn.OwnerPanel.FireOccupied = nil
-    FireBtn.OwnerPanel:TryToStopTargetCommand("Fire", true)
     if FireBtn.LockShooting and FireBtn.OwnerPlayer:CharacterInTag("Shooting") and not FireBtn.HasHeavyShooting then
       FireBtn.CurrentTime = UE4.UGameplayStatics.GetRealTimeSeconds(FireBtn)
       if FireBtn.CurrentTime - FireBtn.StartTime > FireBtn.BtnHoldCD then
@@ -113,6 +112,7 @@ function M.ButtonFireUp(Battle_Button_Phone, Index, WidgetLocalPos, LastWidgetTo
         return
       end
     end
+    FireBtn.OwnerPanel:TryToStopTargetCommand("Fire", true)
   end
   FireBtn.AutoYawRotate = false
   FireBtn.IsFireDown = false

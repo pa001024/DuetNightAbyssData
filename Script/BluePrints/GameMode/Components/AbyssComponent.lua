@@ -205,4 +205,22 @@ function AbyssComponent:OnAbyssRoomTimeUp()
   self:TriggerDungeonFailed()
 end
 
+function AbyssComponent:GetCurAbyssDungeonWeaknessType()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return UE4.EWeaknessType.Default
+  end
+  local AbyssId = self.LevelGameMode:TriggerDungeonComponentFun("GetAbyssId")
+  local CurAttrTypeRawName = Avatar:GetAbyssAttrType(AbyssId)
+  if not CurAttrTypeRawName then
+    return UE4.EWeaknessType.Default
+  end
+  local WeaknessTypeRawName = DataMgr.CounterType2Attribute[CurAttrTypeRawName]
+  if not WeaknessTypeRawName then
+    return UE4.EWeaknessType.Default
+  end
+  local WeaknessType = DataMgr.DamageType[WeaknessTypeRawName] and DataMgr.DamageType[WeaknessTypeRawName].WeaknessTypeID or UE4.EWeaknessType.Default
+  return WeaknessType
+end
+
 return AbyssComponent

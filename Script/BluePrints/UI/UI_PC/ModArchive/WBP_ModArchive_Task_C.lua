@@ -9,19 +9,20 @@ function WBP_ModArchive_Task_C:OnSelected(Params)
   if Params then
     self.Owner = Params.Owner
   end
+  self.Avatar = GWorld:GetAvatar()
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
   self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
   self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
   self.CurInputDeviceType = self.GameInputModeSubsystem:GetCurrentInputType()
   self:UpdateOnInputDeviceTypeChange()
   self:SetFocus()
+  self.LastFocusItem = nil
   self.HasSelected = true
   self.MaxPhase = #DataMgr.ModTaskPhase
-  self.Avatar = GWorld:GetAvatar()
   if not self.CurPhaseId then
-    self.CurPhaseId = 1
+    self:CheckFirstPhaseId()
   end
-  if self.Flag or self.Flag == nil then
+  if self.Flag or nil == self.Flag then
     self.Flag = true
   else
     self.Flag = false
@@ -456,6 +457,9 @@ function WBP_ModArchive_Task_C:RefreshLRBtnState()
       end
     end
   end
+  if not self.Avatar then
+    return
+  end
   local AllComplete = true
   local HasGetReward = self.Avatar.ModBookQuestPhaseRewardsGot[self.CurPhaseId]
   local CompleteNum = 0
@@ -732,6 +736,33 @@ function WBP_ModArchive_Task_C:RefreshTabReddot()
   end
 end
 
+function WBP_ModArchive_Task_C:CheckFirstPhaseId()
+  self.CurPhaseId = 1
+  local Avatar = GWorld:GetAvatar()
+  for i = 1, self.MaxPhase do
+    local Tasks = {}
+    for _, k in pairs(DataMgr.ModGuideBookTask) do
+      if k.QuestPhaseId == i then
+        table.insert(Tasks, k)
+      end
+    end
+    local AllRewardHasGot = true
+    for _, v in pairs(Tasks) do
+      local ModBookQuest = Avatar.ModBookQuests:GetModBookQuest(v.TaskId)
+      if not ModBookQuest.RewardsGot then
+        AllRewardHasGot = false
+        break
+      end
+    end
+    local PhaseHasGetReward = Avatar.ModBookQuestPhaseRewardsGot[i]
+    if not AllRewardHasGot or not PhaseHasGetReward then
+      self.CurPhaseId = i
+      break
+    end
+    self.CurPhaseId = i
+  end
+end
+
 function WBP_ModArchive_Task_C:OnKeyDown(MyGeometry, InKeyEvent)
   local IsEventHandled = false
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
@@ -901,10 +932,18 @@ function WBP_ModArchive_Task_C:UpdateOnInputDeviceTypeChange()
     self.Btn_Reward:SetVisibility(ESlateVisibility.HitTestInvisible)
     self.Btn_Reward:SetGamePadVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.TitleItem.Com_PageTurner:SetVisibility(ESlateVisibility.HitTestInvisible)
+    if self.TitleItem.WS_Right and self.TitleItem.WS_Left then
+      self.TitleItem.WS_Right:SetActiveWidgetIndex(1)
+      self.TitleItem.WS_Left:SetActiveWidgetIndex(1)
+    end
   else
     self.Btn_Reward:SetGamePadVisibility(ESlateVisibility.Collapsed)
     self.Btn_Reward:SetVisibility(ESlateVisibility.Visible)
     self.TitleItem.Com_PageTurner:SetVisibility(ESlateVisibility.Visible)
+    if self.TitleItem.WS_Right and self.TitleItem.WS_Left then
+      self.TitleItem.WS_Right:SetActiveWidgetIndex(0)
+      self.TitleItem.WS_Left:SetActiveWidgetIndex(0)
+    end
     if self.TitleItem.IsHovering then
       self.TitleItem:PlayAnimation(self.TitleItem.Unhover)
     end
@@ -913,6 +952,7 @@ function WBP_ModArchive_Task_C:UpdateOnInputDeviceTypeChange()
     else
       self.Owner:SwitchComKeyTipsState(1)
     end
+    self.LastFocusItem = self.List_Task:BP_GetSelectedItem()
   end
 end
 
@@ -925,6 +965,23 @@ function WBP_ModArchive_Task_C:OnNavigateRight()
     SelectItem.SelfWidget:SetFocus()
     SelectItem.SelfWidget:RefreshInputDeviceType()
     SelectItem.SelfWidget:OnFocusNew()
+  end
+end
+
+function WBP_ModArchive_Task_C:OnSwitchToGamepad()
+  if self.LastFocusItem and self.LastFocusItem.SelfWidget then
+    self.List_Task:SetFocus()
+    self.List_Task:SetSelectedIndex(self.LastFocusItem.Index - 1)
+    self.LastFocusItem.SelfWidget:OnFocusNew()
+  else
+    self.List_Task:SetFocus()
+    self.List_Task:SetSelectedIndex(0)
+    self:AddDelayFrameFunc(function()
+      local FirstItem = self.List_Task:GetItemAt(0)
+      if FirstItem and FirstItem.SelfWidget then
+        FirstItem.SelfWidget:OnFocusNew()
+      end
+    end, 2, "DelayReturnFocusFirstItem")
   end
 end
 

@@ -431,6 +431,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -581,6 +582,7 @@ return {
             pos = {x = 535.8888888888889, y = -289.6527777777778},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1201/120105/12019801.12019801'",
               TalkType = "FixSimple",
@@ -604,6 +606,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1008,6 +1011,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1146,15 +1150,27 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17571486501331297954",
+            startQuest = "17501517483393111779",
+            startPort = "QuestStart",
+            endQuest = "17658823596761136",
+            endPort = "In"
+          },
+          {
+            startQuest = "17658823596761136",
             startPort = "Out",
-            endQuest = "176346150023218890380",
+            endQuest = "17658823925041734",
+            endPort = "In"
+          },
+          {
+            startQuest = "17658823925041734",
+            startPort = "Out",
+            endQuest = "17658824063481987",
             endPort = "In"
           },
           {
             startQuest = "17501517483393111779",
             startPort = "QuestStart",
-            endQuest = "176346146984018889842",
+            endQuest = "1765960367960971101",
             endPort = "In"
           }
         },
@@ -1180,18 +1196,6 @@ return {
             pos = {x = 4407.952647352647, y = 571.2016733266731},
             propsData = {}
           },
-          ["17501517483393111782"] = {
-            key = "17501517483393111782",
-            type = "GoToNode",
-            name = "GOTO - 触发离开幻境",
-            pos = {x = 3653.1331809951575, y = 140.92599561039165},
-            propsData = {
-              GuideUIEnable = true,
-              StaticCreatorId = 2260031,
-              GuideType = "M",
-              GuidePointName = "Mechanism_QuestTrigger_2260031"
-            }
-          },
           ["17501517483393111783"] = {
             key = "17501517483393111783",
             type = "SpecialQuestSuccessNode",
@@ -1203,7 +1207,7 @@ return {
             key = "17501517483393111784",
             type = "WaitingSpecialQuestFailNode",
             name = "等待特殊任务失败",
-            pos = {x = 3855.4398972136373, y = 577.5208732921715},
+            pos = {x = 3839.4398972136373, y = 579.5208732921715},
             propsData = {}
           },
           ["17501517483393111785"] = {
@@ -1217,14 +1221,14 @@ return {
             key = "17501517483393111786",
             type = "RestoreRoleNode",
             name = "恢复角色",
-            pos = {x = 4403.135652078432, y = 390.8998894922544},
+            pos = {x = 4400.278509221289, y = 399.47131806368293},
             propsData = {}
           },
           ["17571486501331297953"] = {
             key = "17571486501331297953",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 3853.017140702434, y = 424.8635097358781},
+            pos = {x = 3843.017140702434, y = 423.43493830730665},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -1238,7 +1242,7 @@ return {
             key = "17571486501331297954",
             type = "PickUpNode",
             name = "拾取物品",
-            pos = {x = 4122.443697478991, y = 385.7483082706767},
+            pos = {x = 4112.443697478991, y = 404.3197368421053},
             propsData = {
               bActiveEnable = true,
               StaticCreatorIdList = {},
@@ -1255,22 +1259,68 @@ return {
             key = "176346146984018889842",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 3835.668016194331, y = 250.93778280542992},
+            pos = {x = 3954.2394447657593, y = -109.06221719457008},
             propsData = {
               IsShow = true,
-              GuideType = "M",
-              GuideName = "Mechanism_QuestTrigger_2260029"
+              bOpenRangeEffect = false,
+              GuideType = "P",
+              GuideName = "QuestPoint_LeaveBatt03"
             }
           },
-          ["176346150023218890380"] = {
-            key = "176346150023218890380",
+          ["17658823596761136"] = {
+            key = "17658823596761136",
+            type = "ChangeStaticCreatorNode",
+            name = "生成/销毁节点",
+            pos = {x = 3834.6334033613443, y = 64.7373949579832},
+            propsData = {
+              ActiveEnable = true,
+              EnableBlackScreenSync = false,
+              EnableFadeIn = false,
+              EnableFadeOut = false,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {2260042}
+            }
+          },
+          ["17658823925041734"] = {
+            key = "17658823925041734",
+            type = "WaitOfTimeNode",
+            name = "延迟等待",
+            pos = {x = 4109.204831932774, y = 46.7373949579832},
+            propsData = {WaitTime = 2.5}
+          },
+          ["17658824063481987"] = {
+            key = "17658824063481987",
+            type = "SwitchMechanismStateNode",
+            name = "切换机关状态",
+            pos = {x = 4379.204831932773, y = 53.880252100840366},
+            propsData = {
+              StaticCreatorIdList = {2260042},
+              ManualItemIdList = {},
+              StateId = 1310151,
+              QuestId = 0
+            }
+          },
+          ["17658834376431282673"] = {
+            key = "17658834376431282673",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 4256.763157894737, y = 193.8831269349846},
+            pos = {x = 4217.776260504203, y = -131.8340336134454},
             propsData = {
               IsShow = false,
-              GuideType = "M",
-              GuideName = "Mechanism_QuestTrigger_2260029"
+              bOpenRangeEffect = false,
+              GuideType = "P",
+              GuideName = "QuestPoint_LeaveBatt03"
+            }
+          },
+          ["1765960367960971101"] = {
+            key = "1765960367960971101",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 3836, y = 248},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "AfterBossTreasure",
+              UnitId = -1
             }
           }
         },

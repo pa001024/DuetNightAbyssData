@@ -32,7 +32,7 @@ function M:OnLoaded(...)
   end
   self.InFinished = false
   self.IsInOutAnim = false
-  self.Parent.Parent:BlockAllUIInput(true)
+  self.Parent.Parent:BlockAllUIInput(true, "SP_DisplayOnly")
   self:BindToAnimationFinished(self.Detail_In, {
     self,
     self.OnInAnimFinished
@@ -140,7 +140,7 @@ function M:OnCloseBtnClicked()
     self,
     self.OnOutAnimFinished
   })
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:PlayAnimation(self.Detail_Out)
   if self.Armory_Inron["InronItem_" .. self.SelectTraceId] and self.CurInputDeviceType ~= ECommonInputType.GamePad then
     self.Armory_Inron["InronItem_" .. self.SelectTraceId].IsClick = false

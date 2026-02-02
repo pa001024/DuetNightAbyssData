@@ -1,4 +1,5 @@
 require("UnLua")
+local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.UI.WBP.Activity.Widget.ConditionRewardActivity.ConditionRewardActiviyBase"
@@ -35,6 +36,7 @@ function M:InitUI()
     self.TenTimesReward_Item.Text_BtnGet:SetText(GText("UI_GameEvent_HasClaimed"))
   end
   self:UpdateUIByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType())
+  ActivityUtils.SetUpJustifyOfJap(self.WBP_Activity_TenTimesReward_Title.Text_ActivityDesc)
 end
 
 function M:GetCurFocusWidgetInfo()

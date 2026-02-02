@@ -8,6 +8,7 @@ local SkillUtils = require("Utils.SkillUtils")
 local Utils = require("Utils")
 local MiscUtils = require("Utils.MiscUtils")
 local BagCommon = require("BluePrints.UI.WBP.Bag.BagCommon")
+local GameFlowUtils = require("Utils.GameFlowUtils")
 local Deque = StrLib.Deque
 local UIUtils = Class()
 UIUtils._components = {
@@ -104,8 +105,17 @@ end
 function UIUtils.ShowHudReward(TitleText, RewardInfoList)
   local GameInstance = GWorld.GameInstance
   local UIManager = GameInstance:GetGameUIManager()
-  local RewardUI = UIManager:LoadUINew("CommonHudReward", TitleText, RewardInfoList)
-  RewardUI:InitRewardInfo(TitleText, RewardInfoList)
+  local RewardUI
+  GameFlowUtils:AddFlow("ShowHudReward", {
+    GWorld.GameInstance,
+    function(_, Flow)
+      RewardUI = UIManager:LoadUINew("CommonHudReward", TitleText, RewardInfoList)
+      if RewardUI then
+        RewardUI:InitRewardInfo(TitleText, RewardInfoList)
+        UIManager:AddFlow("CommonHudReward", Flow)
+      end
+    end
+  })
   return RewardUI
 end
 
@@ -131,15 +141,15 @@ function UIUtils.ShowHudRewardConvert(TitleText, Rewards)
 end
 
 function UIUtils.ShowGetItemPage(ItemType, ItemId, Count, PurchaseRewards, bSpecial, func, ParentWidget, IsReAttachFocusToPage, bOnlyItemPage, bIsNew, ToastText)
-  local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-  local Flow = FlowManager:CreateFlow("GetItemPage")
-  local UIManager = GWorld.GameInstance:GetGameUIManager()
-  Flow.OnBegin:Add(Flow, function()
-    local UIName = bSpecial and "GetItemPageSP" or "GetItemPage"
-    UIUtils.ShowGetItemPageInternal(ItemType, ItemId, Count, PurchaseRewards, bSpecial, func, ParentWidget, IsReAttachFocusToPage, bOnlyItemPage, bIsNew, ToastText)
-    UIManager:AddFlow(UIName, Flow)
-  end)
-  FlowManager:AddFlow(Flow)
+  GameFlowUtils:AddFlow("GetItemPage", {
+    GWorld.GameInstance,
+    function(_, Flow)
+      local UIName = bSpecial and "GetItemPageSP" or "GetItemPage"
+      UIUtils.ShowGetItemPageInternal(ItemType, ItemId, Count, PurchaseRewards, bSpecial, func, ParentWidget, IsReAttachFocusToPage, bOnlyItemPage, bIsNew, ToastText)
+      local UIManager = GWorld.GameInstance:GetGameUIManager()
+      UIManager:AddFlow(UIName, Flow)
+    end
+  })
 end
 
 function UIUtils.ShowGetItemPageInternal(ItemType, ItemId, Count, PurchaseRewards, bSpecial, func, ParentWidget, IsReAttachFocusToPage, bOnlyItemPage, bIsNew, ToastText)
@@ -1389,20 +1399,20 @@ function UIUtils.FinalOpenSystem(SystemUIName, IsEscMenu, NeedAnimation, ...)
   if "AnnouncementMain" == SystemUIName then
     UIUtils.FinalOpenSystemInternal(SystemUIName, IsEscMenu, NeedAnimation, table.unpack(Params))
   else
-    local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-    local Flow = FlowManager:CreateFlow("OpenSystemUI")
-    local UIManager = GWorld.GameInstance:GetGameUIManager()
-    Flow.OnBegin:Add(Flow, function()
-      local ExistUIObj = UIManager:GetUI(SystemUIName)
-      if IsValid(ExistUIObj) then
-        DebugPrint("JLY 系统ui重复打开，请检查逻辑, Name is ", SystemUIName)
-        FlowManager:RemoveFlow(Flow)
-      else
-        UIUtils.FinalOpenSystemInternal(SystemUIName, IsEscMenu, NeedAnimation, table.unpack(Params))
-        UIManager:AddFlow(SystemUIName, Flow)
+    GameFlowUtils:AddFlow("OpenSystemUI", {
+      GWorld.GameInstance,
+      function(_, Flow)
+        local UIManager = GWorld.GameInstance:GetGameUIManager()
+        local ExistUIObj = UIManager:GetUI(SystemUIName)
+        if IsValid(ExistUIObj) then
+          DebugPrint("JLY 系统ui重复打开，请检查逻辑, Name is ", SystemUIName)
+          GameFlowUtils:RemoveFlow(Flow)
+        else
+          UIUtils.FinalOpenSystemInternal(SystemUIName, IsEscMenu, NeedAnimation, table.unpack(Params))
+          UIManager:AddFlow(SystemUIName, Flow)
+        end
       end
-    end)
-    FlowManager:AddFlow(Flow)
+    })
   end
 end
 
@@ -1502,14 +1512,6 @@ function UIUtils.CheckAndPlayBattleMainInAnim(UIName)
   if nil ~= BattleMainUI then
     BattleMainUI:UnLoadSystem(UIName)
   end
-end
-
-function UIUtils.CheckIsShouldHandleAnalogInput(AnalogInputValue)
-  local GamepadName = UIUtils.UtilsGetCurrentGamepadName()
-  if "PS" == GamepadName then
-    return math.abs(AnalogInputValue) > 0.015
-  end
-  return true
 end
 
 function UIUtils.PlayCommonBtnSe(context)
@@ -1800,6 +1802,12 @@ function UIUtils.GenRougeTalentDesc(TalentId)
 end
 
 function UIUtils.GetLeftTimeStrStyle1(EndTime, StartTime)
+  if EndTime and type(EndTime) == "table" then
+    EndTime = EndTime.GetTime()
+  end
+  if StartTime and type(StartTime) == "table" then
+    StartTime = StartTime.GetTime()
+  end
   if EndTime <= TimeUtils.NowTime() then
     return "TimeOut"
   end
@@ -1828,14 +1836,20 @@ function UIUtils.GetLeftTimeStrStyle1(EndTime, StartTime)
 end
 
 function UIUtils.GetLeftTimeStrStyle2(EndTime, StartTime)
+  if EndTime and type(EndTime) == "table" then
+    EndTime = EndTime.GetTime()
+  end
+  if StartTime and type(StartTime) == "table" then
+    StartTime = StartTime.GetTime()
+  end
   if nil == EndTime or EndTime <= TimeUtils.NowTime() then
     return {
       {TimeType = "Min", TimeValue = 0},
       {TimeType = "Sec", TimeValue = 0}
     }, 0
   end
-  local FixEndTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(EndTime)
-  local FixStartTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(StartTime or TimeUtils.NowTime())
+  local FixEndTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(EndTime + 0)
+  local FixStartTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(StartTime and StartTime + 0 or TimeUtils.NowTime())
   local RemainTime = UKismetMathLibrary.Subtract_DateTimeDateTime(FixEndTime, FixStartTime)
   local RemainTimeDict = {}
   local TimeCount = 0
@@ -1890,10 +1904,44 @@ function UIUtils.GetCharName(Character)
   if Character:IsPlayer() then
     return Character:GetNickName()
   elseif Character:IsPhantom() then
-    local CurRoleId = Character.CurrentRoleId
-    return GText(DataMgr.BattleChar[CurRoleId].CharName)
+    return UIUtils.GetPhantomName(Character)
   end
   return "nil"
+end
+
+function UIUtils.GetPhantomName(Character)
+  if not Character or not Character:IsPhantom() then
+    return "nil"
+  end
+  local ShowName = ""
+  local NameKey = DataMgr.BattleChar[Character.CurrentRoleId].CharName
+  if string.find(DataMgr.TextMap_ContentEN[NameKey].ContentEN, "{nickname") and not IsStandAlone(Character) then
+    local PhantomState = GameState(Character):GetPhantomState(Character.Eid)
+    if not PhantomState then
+      local PhantomOwner = Character.PhantomOwner
+      if PhantomOwner then
+        local OwnerState = GameState(Character):GetPlayerState(PhantomOwner.Eid)
+        if OwnerState and OwnerState.PlayerName then
+          ShowName = OwnerState.PlayerName
+        end
+      end
+    else
+      local PhantomOwnerEid = PhantomState.OwnerEid
+      if PhantomOwnerEid then
+        local OwnerState = GameState(Character):GetPlayerState(PhantomOwnerEid)
+        if OwnerState and OwnerState.PlayerName then
+          ShowName = OwnerState.PlayerName
+        else
+          ShowName = GText(NameKey)
+        end
+      else
+        ShowName = "<ERROR>"
+      end
+    end
+  else
+    ShowName = GText(NameKey)
+  end
+  return ShowName
 end
 
 function UIUtils.UtilsGetCurrentInputType()
@@ -2327,8 +2375,13 @@ function UIUtils.LoadPreviewSkillDetails(Parent, Params)
   local WeaponInfos = {}
   local MeleeWeaponInfo, RangedWeaponInfo, InitInfo
   if not IsStandAlone(Player) then
-    InitInfo = Player.BornInfo
-    CharInfo = CommonUtils.CopyTable(Player.BornInfo)
+    local Avatar = GWorld:GetAvatar()
+    for _, Value in pairs(Avatar.Chars) do
+      if Value.CharId == Player.CurrentRoleId then
+        CharInfo = AvatarUtils:GetCharBattleInfo(Avatar, Value, Value.ModSuitIndex).RoleInfo
+        break
+      end
+    end
   else
     InitInfo = Player.InfoForInit
     CharInfo = CommonUtils.CopyTable(Player.InfoForInit)
@@ -2483,6 +2536,9 @@ function UIUtils.InitDefinitionTextWidget(TargetWidget, TargetTextWidget, TermsS
     end)
   end
   TargetWidget:AddDelayFrameFunc(function()
+    if TargetWidget and TargetWidget.bSkipDefinitionAutoInit then
+      return
+    end
     UIUtils.SetDefinitionText(TargetTextWidget, TargetWidget[TermsStr])
   end, 2, "UpdateTargetTextFunc")
 end
@@ -2574,6 +2630,9 @@ function UIUtils.CalculateHoleTitle(TitleBefore, TitleAfter)
   TitleBeforeText = TitleBeforeText and (GText(TitleBeforeText) or "")
   TitleAfterText = TitleAfterText and (GText(TitleAfterText) or "")
   local WholeTitle = (TitleBeforeText or "") .. (TitleAfterText or "")
+  if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
+    WholeTitle = (TitleAfterText or " ") .. (TitleBeforeText and string.format(" %s", TitleBeforeText) or " ")
+  end
   return WholeTitle
 end
 
@@ -2697,15 +2756,50 @@ function UIUtils.GetDynamicRewardInfo(DynamicRewardId, Timestamp)
   if not DynamicRewardData then
     return
   end
-  for StartTime, Info in pairs(DynamicRewardData) do
-    if StartTime <= Timestamp then
-      for EndTime, RewardInfo in pairs(Info) do
-        if EndTime >= Timestamp then
-          return RewardInfo
-        end
-      end
+  for Index, RewardInfo in pairs(DynamicRewardData) do
+    if Timestamp >= RewardInfo.StartTime and Timestamp <= RewardInfo.EndTime then
+      return RewardInfo
     end
   end
+end
+
+function UIUtils.GetRemainingTimeByTimestamp(EndTimestamp, bUseCharFormat)
+  local NextRefreshTime = EndTimestamp
+  local CurrentTime = TimeUtils.NowTime()
+  local RemainRefreshTime = NextRefreshTime - CurrentTime
+  if RemainRefreshTime < 0 then
+    RemainRefreshTime = 0
+  end
+  local RemainTimeStr = ""
+  local CharFormat = "%02d:"
+  local TimeCount = 0
+  if RemainRefreshTime > 86400 then
+    TimeCount = TimeCount + 1
+    local Str = bUseCharFormat and CharFormat or "UI_Time_Day_NotHighlight"
+    RemainTimeStr = RemainTimeStr .. string.format(GText(Str), math.floor(RemainRefreshTime / 86400))
+    RemainRefreshTime = RemainRefreshTime % 86400
+  end
+  if RemainRefreshTime > 3600 or 1 == TimeCount then
+    TimeCount = TimeCount + 1
+    local Str = bUseCharFormat and CharFormat or "UI_Time_Hour_NotHighlight"
+    RemainTimeStr = RemainTimeStr .. string.format(GText(Str), math.floor(RemainRefreshTime / 3600))
+    RemainRefreshTime = RemainRefreshTime % 3600
+  end
+  if RemainRefreshTime > 60 and TimeCount < 2 or 0 == TimeCount then
+    TimeCount = TimeCount + 1
+    local Str = bUseCharFormat and CharFormat or "UI_Time_Minute_NotHighlight"
+    RemainTimeStr = RemainTimeStr .. string.format(GText(Str), math.floor(RemainRefreshTime / 60))
+    RemainRefreshTime = RemainRefreshTime % 60
+  end
+  if RemainRefreshTime > 0 and TimeCount < 2 or 1 == TimeCount then
+    TimeCount = TimeCount + 1
+    local Str = bUseCharFormat and CharFormat or "UI_Time_Second_NotHighlight"
+    RemainTimeStr = RemainTimeStr .. string.format(GText(Str), RemainRefreshTime)
+  end
+  if bUseCharFormat then
+    RemainTimeStr = string.sub(RemainTimeStr, 1, -2)
+  end
+  return RemainTimeStr
 end
 
 function UIUtils:LongPressKey(KeyWidget, func, Speed)
@@ -2715,7 +2809,6 @@ function UIUtils:LongPressKey(KeyWidget, func, Speed)
   AudioManager(KeyWidget):PlayUISound(KeyWidget, "event:/ui/common/btn_press", "LongPress", nil)
   KeyWidget:UnbindAllFromAnimationFinished(KeyWidget.LongPress)
   KeyWidget:BindToAnimationFinished(KeyWidget.LongPress, function()
-    ScreenPrint("LongPressKey")
     if not KeyWidget.IsLongPressing then
       return
     end
@@ -2776,6 +2869,21 @@ function UIUtils.SetFocusSecretly(Widget)
   end, nil, nil, nil, true, UE4.ETickingGroup.TG_EndPhysics)
 end
 
+function UIUtils.HideNavigateWidgetTemporarily(HideTime)
+  if not HideTime or HideTime <= 0 then
+    return
+  end
+  local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(GWorld.GameInstance)
+  if not GameInputModeSubsystem then
+    return
+  end
+  GameInputModeSubsystem:SetNavigateWidgetOpacity(0)
+  local StageTimerMgr = require("BluePrints.Common.StageTimerMgr")
+  StageTimerMgr.AddTimer(GWorld.GameInstance, HideTime, function()
+    GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
+  end, false, HideTime, "UIUtils_HideNavigateWidgetTemporarily", true, UE4.ETickingGroup.TG_EndPhysics)
+end
+
 function UIUtils.GetRelativePositionInParent(SubWidget, ScreenPosition, TouchPointLocalOffset)
   local RootLayoutWidget = SubWidget:GetParent() or SubWidget
   local WidgetGeometry = RootLayoutWidget:GetCachedGeometry()
@@ -2786,20 +2894,43 @@ function UIUtils.GetRelativePositionInParent(SubWidget, ScreenPosition, TouchPoi
     local WidgetPositionInParent = FVector2D(Slot:GetPosition().X, Slot:GetPosition().Y)
     local LocalOffsetValue
     local SubWidgetGeometry = SubWidget:GetCachedGeometry()
+    local RenderLocalScale = SubWidget and SubWidget.RenderTransform.Scale.X or 1.0
     local LocalSubWidgetSize = UE4.USlateBlueprintLibrary.GetLocalSize(SubWidgetGeometry)
     local SubWidgetAnchors = SubWidget.Slot:GetAnchors()
     local SubWidgetAligment = SubWidget.Slot:GetAlignment()
     if nil == TouchPointLocalOffset then
-      LocalOffsetValue = FVector2D(LocalSubWidgetSize.X * (SubWidgetAligment.X - 0.5), LocalSubWidgetSize.Y * (SubWidgetAligment.Y - 0.5))
-    else
-      LocalOffsetValue = FVector2D(LocalSubWidgetSize.X * (SubWidgetAligment.X - TouchPointLocalOffset.X / LocalSubWidgetSize.X), LocalSubWidgetSize.Y * (SubWidgetAligment.Y - TouchPointLocalOffset.Y / LocalSubWidgetSize.Y))
+      TouchPointLocalOffset = FVector2D(LocalSubWidgetSize.X / 2, LocalSubWidgetSize.Y / 2)
     end
+    local DeltaWidthX = LocalSubWidgetSize.X * (1 - RenderLocalScale) * (TouchPointLocalOffset.X / LocalSubWidgetSize.X - 0.5)
+    local DeltaWidthY = LocalSubWidgetSize.Y * (1 - RenderLocalScale) * (TouchPointLocalOffset.Y / LocalSubWidgetSize.Y - 0.5)
+    LocalOffsetValue = FVector2D(LocalSubWidgetSize.X * (SubWidgetAligment.X - TouchPointLocalOffset.X / LocalSubWidgetSize.X), LocalSubWidgetSize.Y * (SubWidgetAligment.Y - TouchPointLocalOffset.Y / LocalSubWidgetSize.Y))
     local CacluAnchors_X = math.max(SubWidgetAnchors.Maximum.X, SubWidgetAnchors.Minimum.X)
     local CacluAnchors_Y = math.max(SubWidgetAnchors.Maximum.Y, SubWidgetAnchors.Minimum.Y)
-    local RelativePosInParent = FVector2D(WidgetPositionInParent.X + LocalPosInWidget.X - LocalWidgetSize.X * CacluAnchors_X + LocalOffsetValue.X, WidgetPositionInParent.Y + LocalPosInWidget.Y - LocalWidgetSize.Y * CacluAnchors_Y + LocalOffsetValue.Y)
+    local RelativePosInParent = FVector2D(WidgetPositionInParent.X + LocalPosInWidget.X - LocalWidgetSize.X * CacluAnchors_X + LocalOffsetValue.X + DeltaWidthX, WidgetPositionInParent.Y + LocalPosInWidget.Y - LocalWidgetSize.Y * CacluAnchors_Y + LocalOffsetValue.Y + DeltaWidthY)
     return RelativePosInParent
   end
   return LocalPosInWidget
+end
+
+function UIUtils.ConvertScreenToChildLocalPosition(WorldContextObject, SubWidget, ScreenPosition, TouchPointLocalOffset)
+  local RootLayoutWidget = SubWidget:GetParent() or SubWidget
+  local LayoutWidgetGeometry = RootLayoutWidget:GetCachedGeometry()
+  local ScreenLocalPosInWidget = UE4.USlateBlueprintLibrary.AbsoluteToLocal(LayoutWidgetGeometry, ScreenPosition)
+  local Slot = SubWidget.Slot
+  if Slot then
+    local LocalWidgetPositionInParent = FVector2D(Slot:GetPosition().X, Slot:GetPosition().Y)
+    local SubWidgetAbsolutePosition = UIManager(WorldContextObject):GetWorldPosition(SubWidget)
+    local SubWidgetGeometry = SubWidget:GetCachedGeometry()
+    local SubWidgetAbsoluteSize = UE4.USlateBlueprintLibrary.GetAbsoluteSize(SubWidgetGeometry)
+    local SubWidgetLocalSize = UE4.USlateBlueprintLibrary.GetLocalSize(SubWidgetGeometry)
+    local TouchPointAbsolutePos = FVector2D(SubWidgetAbsolutePosition.X + SubWidgetAbsoluteSize.X * (TouchPointLocalOffset.X / SubWidgetLocalSize.X), SubWidgetAbsolutePosition.Y + SubWidgetAbsoluteSize.Y * (TouchPointLocalOffset.Y / SubWidgetLocalSize.Y))
+    local TouchPointLocalPosInWidget = UE4.USlateBlueprintLibrary.AbsoluteToLocal(LayoutWidgetGeometry, TouchPointAbsolutePos)
+    local DeltaValueX = ScreenLocalPosInWidget.X - TouchPointLocalPosInWidget.X
+    local DeltaValueY = ScreenLocalPosInWidget.Y - TouchPointLocalPosInWidget.Y
+    local RelativePosInParent = FVector2D(LocalWidgetPositionInParent.X + DeltaValueX, LocalWidgetPositionInParent.Y + DeltaValueY)
+    return RelativePosInParent
+  end
+  return ScreenLocalPosInWidget
 end
 
 function UIUtils.RefreshFeinaRewardReddot()
@@ -2846,6 +2977,32 @@ function UIUtils.RefreshFeinaRewardReddot()
       CacheDetail[Id] = nil
     end
   end
+end
+
+function UIUtils.TryWarpTextInJap(TextBlock1, TextBlock2)
+  if CommonConst.SystemLanguage == CommonConst.SystemLanguages.JP then
+    if TextBlock1 then
+      TextBlock1:SetJustification(ETextJustify.Left)
+    end
+    if TextBlock2 then
+      TextBlock2:SetJustification(ETextJustify.Left)
+    end
+  end
+end
+
+function UIUtils.ShouldDisplayItem(DataType, Id)
+  return CommonUtils.IsCurrentTimeRealease(DataType, Id) and CommonUtils.IsCurrentVersionRealease(DataType, Id)
+end
+
+function UIUtils.CanOpenSkinPreview(ItemType, TypeId)
+  if UIConst.SkinPreviewItemTypes[ItemType] then
+    return true
+  end
+  if "Resource" == ItemType then
+    local ResData = DataMgr.Resource[TypeId]
+    return ResData and ResData.ResourceSType == "GestureItem" and not UIConst.LimitPreviewResource[ResData.ResourceId]
+  end
+  return false
 end
 
 AssembleComponents(UIUtils)

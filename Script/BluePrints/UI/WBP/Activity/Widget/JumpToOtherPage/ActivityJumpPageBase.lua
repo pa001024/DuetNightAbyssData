@@ -90,6 +90,10 @@ function M:ViewInfoBtnClick()
 end
 
 function M:GoToTargetPageClick()
+  if self.ParentWidget and type(self.ParentWidget.CheckIsInCloseSelfState) == "function" and self.ParentWidget:CheckIsInCloseSelfState() then
+    DebugPrint("CommonActivityJump= GoToTargetPageClick, ParentWidget is in close self state, So return")
+    return
+  end
   local PageConfigData = DataMgr.EventPortal[self.CurActivityId]
   if PageConfigData.JumpUIId then
     PageJumpUtils:JumpToTargetPageByJumpId(PageConfigData.JumpUIId)
@@ -105,6 +109,10 @@ function M:GoToTargetPageClick()
 end
 
 function M:GoToShopClick()
+  if self.ParentWidget and type(self.ParentWidget.CheckIsInCloseSelfState) == "function" and self.ParentWidget:CheckIsInCloseSelfState() then
+    DebugPrint("CommonActivityJump= GoToShopClick, ParentWidget is in close self state, So return")
+    return
+  end
   local PageConfigData = DataMgr.EventPortal[self.CurActivityId]
   if not PageConfigData.EventShop then
     return
@@ -337,8 +345,8 @@ function M:GoToMoreClick()
       end
     }
     local TabTypes = {
-      "低级奖励",
-      "高级奖励"
+      GText("UI_Theater_CommonReward"),
+      GText("UI_Theater_PremiumReward")
     }
     local DataMap = {}
     for i = 1, #TabTypes do

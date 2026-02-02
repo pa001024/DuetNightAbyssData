@@ -246,7 +246,8 @@ function BP_WeaponSelect_C:SetWeaponEffectBox()
 end
 
 function BP_WeaponSelect_C:TraceWeaponMobile(InKeyEvent)
-  if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+  local IsCloudGamePC = UE4.UUCloudGameInstanceSubsystem.IsCloudGame(self) and CommonUtils.GetDeviceTypeByPlatformName(self) == "PC"
+  if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" and not UE4.UUCloudGameInstanceSubsystem.IsCloudGame(self) then
     return
   end
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
@@ -255,6 +256,18 @@ function BP_WeaponSelect_C:TraceWeaponMobile(InKeyEvent)
   local Results = UE4.TArray(UE4.FHitResult)
   if UE4.URuntimeCommonFunctionLibrary.IsPlayInEditor(self) then
     PlayerController:GetHitResultsUnderCursorForObjects(ObjectTypes, true, Results)
+  elseif IsCloudGamePC then
+    DebugPrint("jly    TraceWeaponMobile CloudGamePC")
+    local MousePosition = UE4.UKismetInputLibrary.PointerEvent_GetScreenSpacePosition(InKeyEvent)
+    DebugPrint("MousePosition before scale:", MousePosition)
+    local ViewportScale = UE4.UWidgetLayoutLibrary.GetViewportScale(self)
+    DebugPrint("ViewportScale:", ViewportScale)
+    if ViewportScale and 1.0 ~= ViewportScale then
+      MousePosition.X = MousePosition.X * ViewportScale
+      MousePosition.Y = MousePosition.Y * ViewportScale
+      DebugPrint("MousePosition after scale:", MousePosition)
+    end
+    Results = PlayerController:GetHitResultsAtScreenPosition(MousePosition, ObjectTypes, true)
   else
     local MousePosition = UE4.UKismetInputLibrary.PointerEvent_GetScreenSpacePosition(InKeyEvent)
     DebugPrint("MousePosition:", MousePosition)

@@ -35,6 +35,8 @@ function M:Init(ConfigData)
   self.EnableMiniBtn = ConfigData.EnableMiniBtn or false
   self.EnableMaxBtn = ConfigData.EnableMaxBtn or false
   self.ClickInterval = ConfigData.ClickInterval or 1
+  rawset(self, "MiniBtnGamePadKey", self.EnableMiniBtn and (ConfigData.MiniBtnGamePadKey or "DPadLeft") or nil)
+  rawset(self, "MaxBtnGamePadKey", self.EnableMaxBtn and (ConfigData.MaxBtnGamePadKey or "DPadRight") or nil)
   self.MinusBtnCallback = ConfigData.MinusBtnCallback
   self.AddBtnCallback = ConfigData.AddBtnCallback
   self.MaxBtnCallback = ConfigData.MaxBtnCallback
@@ -47,7 +49,13 @@ function M:Init(ConfigData)
   self.bDisableAutoHandleInputDeviceChange = ConfigData.bDisableAutoHandleInputDeviceChange or false
   self.bForbidPressAccelerate = ConfigData.bForbidPressAccelerate or false
   self.bUseDefaultKeyInit = ConfigData.bUseDefaultKeyInit or true
-  self:InitWidgetInfoInGamePad()
+  rawset(self, "bEnableMinusSpecificBtn", ConfigData.bEnableMinusSpecificBtn or false)
+  rawset(self, "bEnableAddSpecificBtn", ConfigData.bEnableAddSpecificBtn or false)
+  rawset(self, "SpecificChangeCount", ConfigData.SpecificChangeCount or 1)
+  rawset(self, "MinusSpecificBtnGamePadKey", self.bEnableMinusSpecificBtn and (ConfigData.MinusSpecificBtnGamePadKey or "DPadLeft") or nil)
+  rawset(self, "AddSpecificBtnGamePadKey", self.bEnableAddSpecificBtn and (ConfigData.AddSpecificBtnGamePadKey or "DPadRight") or nil)
+  rawset(self, "GamePadMinKeyPath", self.GamePadMinKeyPath and self.GamePadMinKeyPath or "LT")
+  rawset(self, "GamePadAddKeyPath", self.GamePadAddKeyPath and self.GamePadAddKeyPath or "RT")
   self:AddTimer(0.01, function()
     self:BindAllClickAction()
     self:RefreshBaseInfo()
@@ -72,20 +80,6 @@ function M:RefreshBaseInfo()
     self.Slider:SetLocked(false)
     self.Slider_Controller:SetLocked(false)
   end
-  if self.WS_Mini then
-    if self.EnableMiniBtn then
-      self.WS_Mini:SetVisibility(UE4.ESlateVisibility.Visible)
-    else
-      self.WS_Mini:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    end
-  end
-  if self.WS_Max then
-    if self.EnableMaxBtn then
-      self.WS_Max:SetVisibility(UE4.ESlateVisibility.Visible)
-    else
-      self.WS_Max:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    end
-  end
   if self.Key_Add and self.Key_Min then
     if not self.ForbidGamePadLTRTKey then
       self.Key_Add:SetVisibility(UE4.ESlateVisibility.Visible)
@@ -93,6 +87,32 @@ function M:RefreshBaseInfo()
     else
       self.Key_Add:SetVisibility(UE4.ESlateVisibility.Hidden)
       self.Key_Min:SetVisibility(UE4.ESlateVisibility.Hidden)
+    end
+  end
+  if self.Btn_NumLeft then
+    if self.bEnableMinusSpecificBtn then
+      self.Btn_NumLeft:SetVisibility(UE4.ESlateVisibility.Visible)
+      local Config = {}
+      Config.OwnerPanel = self
+      Config.ClickedCallback = self.MinusSpecificBtnClicked
+      Config.SpecificChangeCount = string.format("-%d", self.SpecificChangeCount)
+      Config.GamePadKey = self.MinusSpecificBtnGamePadKey
+      self.Btn_NumLeft:Init(Config)
+    else
+      self.Btn_NumLeft:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+  end
+  if self.Btn_NumRight then
+    if self.bEnableAddSpecificBtn then
+      self.Btn_NumRight:SetVisibility(UE4.ESlateVisibility.Visible)
+      local Config = {}
+      Config.OwnerPanel = self
+      Config.ClickedCallback = self.AddSpecificBtnClicked
+      Config.SpecificChangeCount = string.format("+%d", self.SpecificChangeCount)
+      Config.GamePadKey = self.AddSpecificBtnGamePadKey
+      self.Btn_NumRight:Init(Config)
+    else
+      self.Btn_NumRight:SetVisibility(UE4.ESlateVisibility.Collapsed)
     end
   end
   self:ForbidAddOperation(self.CurrentCount + self.ClickInterval > self.MaxValue)
@@ -104,37 +124,65 @@ function M:RefreshBaseInfo()
       self.ParentContainer:SetVisibility(ESlateVisibility.Visible)
     end
   end
+  if self.Text_Mini then
+    self.Text_Mini:SetText(GText("UI_SHOP_MIN"))
+  end
+  if self.Text_Max then
+    self.Text_Max:SetText(GText("UI_SHOP_MAX"))
+  end
 end
 
-function M:InitWidgetInfoInGamePad()
+function M:InitWidgetInfoInGamePad(IsUseGamePad)
+  if not IsUseGamePad or self.GamePadKeyInited then
+    return
+  end
   self.MinusPressed = false
   self.AddPressed = false
-  self.Key_Min:CreateCommonKey({
-    KeyInfoList = {
-      {Type = "Img", ImgShortPath = "LT"}
-    },
-    bDisableResetWhenChangeDevice = true
-  })
-  self.Key_Add:CreateCommonKey({
-    KeyInfoList = {
-      {Type = "Img", ImgShortPath = "RT"}
-    },
-    bDisableResetWhenChangeDevice = true
-  })
-  self.Key_Mini:CreateCommonKey({
-    KeyInfoList = {
-      {Type = "Img", ImgShortPath = "Left"}
-    },
-    bDisableResetWhenChangeDevice = true
-  })
-  self.Key_Max:CreateCommonKey({
-    KeyInfoList = {
-      {Type = "Img", ImgShortPath = "Right"}
-    },
-    bDisableResetWhenChangeDevice = true
-  })
-  self.Text_Mini:SetText(GText("UI_SHOP_MIN"))
-  self.Text_Max:SetText(GText("UI_SHOP_MAX"))
+  if self.Key_Min then
+    self.Key_Min:CreateCommonKey({
+      KeyInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = self.GamePadMinKeyPath
+        }
+      },
+      bDisableResetWhenChangeDevice = true
+    })
+  end
+  if self.Key_Add then
+    self.Key_Add:CreateCommonKey({
+      KeyInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = self.GamePadAddKeyPath
+        }
+      },
+      bDisableResetWhenChangeDevice = true
+    })
+  end
+  if self.Key_Mini then
+    self.Key_Mini:CreateCommonKey({
+      KeyInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = UIConst.GamePadImgKey[self.MiniBtnGamePadKey]
+        }
+      },
+      bDisableResetWhenChangeDevice = true
+    })
+  end
+  if self.Key_Max then
+    self.Key_Max:CreateCommonKey({
+      KeyInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = UIConst.GamePadImgKey[self.MaxBtnGamePadKey]
+        }
+      },
+      bDisableResetWhenChangeDevice = true
+    })
+  end
+  rawset(self, "GamePadKeyInited", true)
 end
 
 function M:InitListenEvent()
@@ -162,6 +210,7 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
 end
 
 function M:UpdateUIStyleInPlatform(IsUseGamePad, CurGamepadName)
+  self:InitWidgetInfoInGamePad(IsUseGamePad)
   self:ButonUseGamePadStyle(IsUseGamePad)
   self:SliderUseGamePadStyle(IsUseGamePad)
   self:MiniMaxUseGamePadStyle(IsUseGamePad)
@@ -174,9 +223,33 @@ function M:UpdateUIStyleInPlatform(IsUseGamePad, CurGamepadName)
 end
 
 function M:MiniMaxUseGamePadStyle(UseGamePadStyle)
+  if self.WS_Mini and UseGamePadStyle then
+    if self.MiniBtnGamePadKey ~= nil and self.MiniBtnGamePadKey ~= self.MinusSpecificBtnGamePadKey then
+      self.WS_Mini:SetVisibility(UE4.ESlateVisibility.Visible)
+    else
+      self.WS_Mini:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+  elseif self.EnableMiniBtn then
+    self.WS_Mini:SetVisibility(UE4.ESlateVisibility.Visible)
+  else
+    self.WS_Mini:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  if self.WS_Max and UseGamePadStyle then
+    if nil ~= self.MaxBtnGamePadKey and self.MaxBtnGamePadKey ~= self.AddSpecificBtnGamePadKey then
+      self.WS_Max:SetVisibility(UE4.ESlateVisibility.Visible)
+    else
+      self.WS_Max:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+  elseif self.EnableMaxBtn then
+    self.WS_Max:SetVisibility(UE4.ESlateVisibility.Visible)
+  else
+    self.WS_Max:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
   local ActiveWidgetIndex = UseGamePadStyle and 1 or 0
   self.WS_Mini:SetActiveWidgetIndex(ActiveWidgetIndex)
   self.WS_Max:SetActiveWidgetIndex(ActiveWidgetIndex)
+  self.Btn_NumLeft:ChangeUIStyleForCurPlatform(not UseGamePadStyle)
+  self.Btn_NumRight:ChangeUIStyleForCurPlatform(not UseGamePadStyle)
 end
 
 function M:ButonUseGamePadStyle(UseGamePadStyle)
@@ -241,6 +314,62 @@ function M:GetChangeCount()
   StepCount = math.floor(StepCount + 0.5)
   local FinalCount = math.floor(math.max(1, math.min(StepCount, self.MaxValue)))
   return FinalCount
+end
+
+function M:MinusSpecificBtnClicked()
+  local FinalCount = self.SpecificChangeCount
+  if FinalCount > self.CurrentCount - self.MinValue then
+    FinalCount = self.CurrentCount - self.MinValue
+  end
+  if FinalCount <= 0 then
+    return
+  end
+  if self.CurrentCount - FinalCount < self.MinValue then
+    if not self.ForbidMin then
+      self:ForbidMinOperation(true)
+    end
+    return
+  end
+  local OldNumberValue = self.CurrentCount
+  self.CurrentCount = self.CurrentCount - FinalCount
+  self:UpdateSliderAndProgress()
+  if self.ForbidAdd then
+    self:ForbidAddOperation(false)
+  end
+  self:ForbidMinOperation(self.CurrentCount - self.ClickInterval < self.MinValue)
+  if type(self.MinusBtnCallback) == "function" then
+    self.MinusBtnCallback(self.OwnerPanel, self.CurrentCount, OldNumberValue)
+  end
+  local EventSoundPath = self.SoundResPath.Minus or "event:/ui/common/click_btn_minus"
+  AudioManager(self):PlayUISound(self.Btn_Min, EventSoundPath, nil, nil)
+end
+
+function M:AddSpecificBtnClicked()
+  local FinalCount = self.SpecificChangeCount
+  if FinalCount > self.MaxValue - self.CurrentCount then
+    FinalCount = self.MaxValue - self.CurrentCount
+  end
+  if FinalCount <= 0 then
+    return
+  end
+  if self.CurrentCount + FinalCount > self.MaxValue then
+    if not self.ForbidAdd then
+      self:ForbidAddOperation(true)
+    end
+    return
+  end
+  local OldNumberValue = self.CurrentCount
+  self.CurrentCount = self.CurrentCount + FinalCount
+  self:UpdateSliderAndProgress()
+  if self.ForbidMin then
+    self:ForbidMinOperation(false)
+  end
+  self:ForbidAddOperation(self.CurrentCount + self.ClickInterval > self.MaxValue)
+  if type(self.AddBtnCallback) == "function" then
+    self.AddBtnCallback(self.OwnerPanel, self.CurrentCount, OldNumberValue)
+  end
+  local EventSoundPath = self.SoundResPath.Add or "event:/ui/common/click_btn_add"
+  AudioManager(self):PlayUISound(self.Btn_Add, EventSoundPath, nil, nil)
 end
 
 function M:OnClickToMinus()
@@ -362,6 +491,9 @@ function M:ForbidMinOperation(Forbidden)
   self.Btn_Mini:ForbidBtn(Forbidden)
   self.Key_Mini:SetForbidKey(Forbidden)
   self.Text_Mini:SetOpacity(Forbidden and 0.6 or 1)
+  if self.Btn_NumLeft then
+    self.Btn_NumLeft:SetForbid(Forbidden)
+  end
 end
 
 function M:ForbidAddOperation(Forbidden)
@@ -374,6 +506,9 @@ function M:ForbidAddOperation(Forbidden)
   self.Btn_Max:ForbidBtn(Forbidden)
   self.Key_Max:SetForbidKey(Forbidden)
   self.Text_Max:SetOpacity(Forbidden and 0.6 or 1)
+  if self.Btn_NumRight then
+    self.Btn_NumRight:SetForbid(Forbidden)
+  end
 end
 
 function M:UpdateSliderValue()
@@ -540,9 +675,13 @@ function M:Handle_KeyDownEventOnGamePad(InKeyName)
       self:OnMinusKeyDown()
       self.MinusPressed = true
     end
-  elseif self.EnableMiniBtn and self.InGamePadMode and InKeyName == UIConst.GamePadKey.DPadLeft then
+  elseif self.bEnableMinusSpecificBtn and self.InGamePadMode and InKeyName == UIConst.GamePadKey[self.MinusSpecificBtnGamePadKey] then
+    self:MinusSpecificBtnClicked()
+  elseif self.bEnableAddSpecificBtn and self.InGamePadMode and InKeyName == UIConst.GamePadKey[self.AddSpecificBtnGamePadKey] then
+    self:AddSpecificBtnClicked()
+  elseif self.EnableMiniBtn and self.InGamePadMode and InKeyName == UIConst.GamePadKey[self.MiniBtnGamePadKey] then
     self:OnMiniKeyDown()
-  elseif self.EnableMaxBtn and self.InGamePadMode and InKeyName == UIConst.GamePadKey.DPadRight then
+  elseif self.EnableMaxBtn and self.InGamePadMode and InKeyName == UIConst.GamePadKey[self.MaxBtnGamePadKey] then
     self:OnMaxKeyDown()
   else
     IsEventHandled = false

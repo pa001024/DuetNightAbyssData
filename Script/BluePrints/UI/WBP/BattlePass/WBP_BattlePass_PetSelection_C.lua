@@ -29,9 +29,9 @@ function WBP_BattlePass_PetSelection_C:SwitchIn(...)
   self:PlayInAnim()
   self:InitUI()
   self.Parent:HidePlayerActor("PetSelection", true)
-  self.Parent:HidePetActor("PetSelection", true)
   self.Parent:HidePlayerFXAccessory(true)
   self.Parent:RemoveRefreshPetTimer()
+  BattlePassController:GetModelData("ActorController"):SetArmoryCameraTag("BattlePass", "", "", "Pet")
   AudioManager(self):PlayUISound(self, "event:/ui/common/battle_pass_page_award_in", nil, nil)
 end
 
@@ -43,6 +43,7 @@ function WBP_BattlePass_PetSelection_C:InitUI()
   else
     self.Text_Show:SetText(GText("UI_BattlePass_PetClaimDetail"))
   end
+  self.Text_Check:SetText(GText("UI_Controller_CheckDetails"))
   self:InitPetList()
   self:InitBtn()
   self:InitLeftTime()
@@ -119,6 +120,12 @@ function WBP_BattlePass_PetSelection_C:InitBtn()
     end
   end
   self.Btn_Reward.Button_Area.OnClicked:Add(self, self.OnClaimBtnClicked)
+  self.Btn_Check:BindEventOnClicked(self, self.OnBtnChecked)
+  self.Key_Check:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = "View"}
+    }
+  })
 end
 
 function WBP_BattlePass_PetSelection_C:InitLeftTime()
@@ -188,7 +195,14 @@ function WBP_BattlePass_PetSelection_C:SelectItem(PetId, PetName, Item)
   end
   self.CurrentSelectId = PetId
   self.CurrentSelectName = PetName
+  self.Text_ShowTitle:SetText(PetName)
   self.CurrentSelectItem = Item
+  self:AddDelayFrameFunc(function()
+    if self.Parent.CurSelectPetId ~= PetId then
+      self.Parent:ChangePetActor({Type = "BattlePass", PetId = PetId})
+    end
+    self.Parent.CurSelectPetId = PetId
+  end, 2)
   for i = 0, self.WB_Pet:GetChildrenCount() - 1 do
     local PetItem = self.WB_Pet:GetChildAt(i)
     if PetItem.PetId ~= PetId then
@@ -229,40 +243,55 @@ end
 
 function WBP_BattlePass_PetSelection_C:InitGamepadView()
   DebugPrint("@zyh InitGamepadView Pet")
-  for i = 0, self.WB_Pet:GetChildrenCount() - 1 do
-    local PetItem = self.WB_Pet:GetChildAt(i)
-    PetItem.Key_Detail:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  end
+  self.WS_Check:SetActiveWidgetIndex(1)
   self.Btn_Reward.Img_GamePad:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.WB_Pet:GetChildAt(0).Button_Area:SetFocus()
 end
 
 function WBP_BattlePass_PetSelection_C:InitKeyboardView()
-  for i = 0, self.WB_Pet:GetChildrenCount() - 1 do
-    local PetItem = self.WB_Pet:GetChildAt(i)
-    PetItem.Key_Detail:SetVisibility(ESlateVisibility.Collapsed)
-  end
+  self.WS_Check:SetActiveWidgetIndex(0)
   self.Btn_Reward.Img_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 function WBP_BattlePass_PetSelection_C:BP_GetDesiredFocusTarget()
+  if self.CurrentSelectItem and self.CurrentSelectItem.Button_Area then
+    return self.CurrentSelectItem.Button_Area
+  end
   return self.WB_Pet:GetChildAt(0).Button_Area
 end
 
 function WBP_BattlePass_PetSelection_C:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if InKeyName == Const.GamepadFaceButtonLeft and self.CurrentSelectItem then
-    self.CurrentSelectItem:OnBtnChecked()
+  if InKeyName == Const.GamepadSpecialLeft then
+    self:OnBtnChecked()
   end
   return UE4.UWidgetBlueprintLibrary.UnHandled()
 end
 
+function WBP_BattlePass_PetSelection_C:OnBtnChecked()
+  local PetList = CommonUtils.CopyTable(BattlePassController:GetModelData("PetList"))
+  if self.CurrentSelectId and PetList then
+    for Index, PetId in ipairs(PetList) do
+      if PetId == self.CurrentSelectId then
+        table.remove(PetList, Index)
+        table.insert(PetList, 1, self.CurrentSelectId)
+        break
+      end
+    end
+  end
+  UIManager(self):LoadUINew("ArmoryDetail", {
+    PreviewPetIds = PetList,
+    EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon
+  })
+end
+
 function WBP_BattlePass_PetSelection_C:SwitchOut(...)
+  self.Parent.CurSelectPetId = nil
   self.Parent:HidePlayerActor("PetSelection", false)
-  self.Parent:HidePetActor("PetSelection", false)
   self.Parent:HidePlayerFXAccessory(false)
   self.Parent:AddRefreshPetTimer()
+  self.Parent:SetCameraAnim()
   self:PlayOutAnim()
 end
 

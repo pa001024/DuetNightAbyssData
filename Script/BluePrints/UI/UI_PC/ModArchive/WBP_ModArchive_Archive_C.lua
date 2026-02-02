@@ -857,4 +857,22 @@ function WBP_ModArchive_Archive_C:UpdateOnInputDeviceTypeChange()
   end
 end
 
+function WBP_ModArchive_Archive_C:OnSwitchToGamepad()
+  if self.CurGroupIndex and self.CurSelectedItemIndex then
+    self.List_ModArchive:SetSelectedIndex(self.CurGroupIndex - 1)
+    self.List_ModArchive:ScrollIndexIntoView(self.CurGroupIndex - 1)
+    self:AddDelayFrameFunc(function()
+      self.Widgets[self.CurGroupIndex]:SetItemSelected(self.CurSelectedItemIndex)
+      self.Widgets[self.CurGroupIndex].Mods[self.CurSelectedItemIndex]:SetFocus()
+    end, 2, "DelayReturnFocusCurItem")
+  else
+    self.List_ModArchive:SetSelectedIndex(0)
+    self.List_ModArchive:ScrollIndexIntoView(0)
+    self:AddDelayFrameFunc(function()
+      self.Widgets[1]:SetItemSelected(1)
+      self.Widgets[1].Mods[1]:SetFocus()
+    end, 2, "DelayReturnFocusCurItem")
+  end
+end
+
 return WBP_ModArchive_Archive_C

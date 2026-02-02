@@ -1,4 +1,5 @@
 local MonsterUtils = require("Utils.MonsterUtils")
+local GameFlowUtils = require("Utils.GameFlowUtils")
 local Component = {}
 
 function Component:Initialize()
@@ -45,6 +46,12 @@ function Component:ShowCommonPanel(UnitId)
   if not Monster then
     return
   end
+  if not Monster.GalleryRuleId then
+    return
+  end
+  if DataMgr.GalleryRule[Monster.GalleryRuleId].DisableArchive then
+    return
+  end
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
   if not GameInstance then
     return
@@ -55,6 +62,9 @@ function Component:ShowCommonPanel(UnitId)
   end
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
+    return
+  end
+  if not Avatar:CheckFirstMonster(Monster.GalleryRuleId, true) then
     return
   end
   local IsInEditor = false
@@ -112,22 +122,17 @@ function Component:ShowMonsterStrongPanel(UnitGuideId, UnitId)
     return
   end
   local Avatar = GWorld:GetAvatar()
-  local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-  local Flow = FlowManager:CreateFlow("GuideMain")
-  Flow.OnBegin:Add(Flow, function()
-    local UIStateAsyncActionBase = UE4.UUIStateAsyncActionBase.ShowGuideUI(self, UnitGuideId)
-    UIStateAsyncActionBase.OnGuideEnd:Add(self, function()
-      local bShow = self:CheckMonsterGalleryRuleId(UnitId)
-      local MonsterInfo = DataMgr.Monster[UnitId]
-      local GalleryRuleId = MonsterInfo.GalleryRuleId
-      local DisableArchive = DataMgr.GalleryRule[GalleryRuleId].DisableArchive
-      if not bShow and not DisableArchive then
+  Avatar:CheckStrongGuideFirstMonster(UnitGuideId, true)
+  GameFlowUtils:AddFlow("GuideMain", {
+    GWorld.GameInstance,
+    function(_, Flow)
+      local UIStateAsyncActionBase = UE4.UUIStateAsyncActionBase.ShowGuideUI(self, UnitGuideId)
+      UIStateAsyncActionBase.OnGuideEnd:Add(self, function()
         self:ShowCommonPanel(UnitId)
-      end
-      FlowManager:RemoveFlow(Flow)
-    end)
-  end)
-  FlowManager:AddFlow(Flow)
+        GameFlowUtils:RemoveFlow(Flow)
+      end)
+    end
+  })
 end
 
 return Component

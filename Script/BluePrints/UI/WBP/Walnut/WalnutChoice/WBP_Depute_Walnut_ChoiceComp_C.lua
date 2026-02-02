@@ -32,6 +32,28 @@ function Component:OnClickButtonYes()
   if nil == WalnutId then
     WalnutId = -1
   end
+  local Content = self.CurrentSelectContent
+  if Content and 0 == Content.Count and Content.ActionType then
+    if Content.ActionType == "Purchase" then
+      local ShopType = Content.ShopType or "Shop"
+      ShopUtils:ShowPurchaseDialog("Walnut", WalnutId, ShopType, self.UIName)
+      return
+    elseif Content.ActionType == "Jump" then
+      if self.Btn_Yes.IsForbidden then
+        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Walnut_Toast_CanNotGet"))
+        return
+      end
+      local WalnutData = DataMgr.Walnut[WalnutId]
+      if WalnutData and WalnutData.AccessKey then
+        for _, AccessKey in pairs(WalnutData.AccessKey) do
+          if PageJumpUtils:ExecuteJumpByAccessKey(WalnutId, "Walnut", AccessKey, self.UIName) then
+            return
+          end
+        end
+      end
+      return
+    end
+  end
   local Avatar = GWorld:GetAvatar()
   Avatar:SelectWalnut(self:ShowChooseSuccessToast(self.CurrentSelectContent), self.CurrentDungeonId, WalnutId)
   self.SelectYes = true
@@ -113,19 +135,6 @@ function Component:SetDefaultSelect(TeamHead, AllTeamHead)
   local WalnutIcon = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Forbid.T_Armory_Forbid"
   self:ChangeStateIcon(AllTeamHead.Item_Walnut, false, WalnutIcon)
   AllTeamHead.Text_State:SetText(GText("UI_Walnut_Not_Select"))
-end
-
-function Component:WalnutSelectComplete()
-  for Uid, WalnutId in pairs(self.Uid2WalnutMap) do
-    if -1 == WalnutId then
-      local AllTeamHead = self.TeamHeadTable[Uid]
-      local TeamHead = AllTeamHead.Team_Head
-      self:SetDefaultSelect(TeamHead, AllTeamHead)
-    end
-  end
-  self.Panel_Yes:SetVisibility(ESlateVisibility.Collapsed)
-  self:RemoveTimer("WalnutSelectCountDown")
-  self:PlayWalnutReady()
 end
 
 function Component:ReceiveTeammateChoose(Uid, WalnutId)

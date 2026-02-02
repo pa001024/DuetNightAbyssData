@@ -54,6 +54,8 @@ function M:Init(Content)
 end
 
 function M:SetState(TempleId)
+  TempleId = TempleId or self.TempleId
+  self.State = "Received"
   local TempleLevelConf = DataMgr.TempleEventLevel[TempleId]
   local PreDungeon = TempleLevelConf.PreDungeon
   if not TempleLevelConf then

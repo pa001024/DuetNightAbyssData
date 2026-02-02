@@ -55,6 +55,7 @@ function BP_PlayerCharacter_C:ReceiveBeginPlay()
     self:UpdateOpenHelperAim(self.IsOpenHelperAim)
     self:InitGameSkillFaceTo()
     self:SetEnableFallAtkDir()
+    self:SetVirtualJoystickEnableMoveLockFromCache()
     self:SetRegionOnlineState()
     local ShowPlayerNameOption = EMCache:Get("ShowPlayerName") or EMainPlayerNameWidgetOption.EOnlyInRegionOnline
     self:ChangeNameWidgetOption(ShowPlayerNameOption, true)
@@ -62,27 +63,31 @@ function BP_PlayerCharacter_C:ReceiveBeginPlay()
   self:SetUpAllTimer()
   self:SetGamepadFromCache()
   self:SetMobileRotationFromCache()
-  self:InitLockHpCache()
   self:BindControllerChangedDelegate()
   local Controller = self:GetController()
   if Controller then
     Controller:ShowFlags("VisualizeSkyVisibilityLightmap", false)
     Controller:ShowFlags("VisualizeBouncedSkyVisibilityLightmap", false)
   end
-end
-
-function BP_PlayerCharacter_C:InitLockHpCache()
-  if self.BuffManager then
-    self.CachedLockHPRate = self.BuffManager.LockHpRate
-    self.CachedLockHPValue = self.BuffManager.LockHpValue
-  else
-    self.CachedLockHPRate = 0
-    self.CachedLockHPValue = 0
+  if self.CharFSMComp then
+    self.CharFSMComp.OnAfterTagChanged:Add(self, self.OnTagChange)
   end
 end
 
-function BP_PlayerCharacter_C:GetDropDistance()
-  self:CalcAttr("DropDistance")
+function BP_PlayerCharacter_C:OnTagChange(Eid, OldTag, NewTag)
+  if "GrabHit" == NewTag and not self.GrabHitCheckTimer then
+    self.GrabHitCheckTimer = self:AddTimer(1, function()
+      if self:CharacterInTag("GrabHit") then
+        self:OnGrabHitLanded()
+      elseif self.GrabHitCheckTimer then
+        self:RemoveTimer(self.GrabHitCheckTimer)
+        self.GrabHitCheckTimer = nil
+      end
+    end, true, 0, "GrabHitCheckTimer")
+  elseif self.GrabHitCheckTimer then
+    self:RemoveTimer(self.GrabHitCheckTimer)
+    self.GrabHitCheckTimer = nil
+  end
 end
 
 function BP_PlayerCharacter_C:BindControllerChangedDelegate()
@@ -162,7 +167,7 @@ function BP_PlayerCharacter_C:InitGameSkillFaceTo()
   local DefaultValue
   if nil == GameSkillFaceTo then
     local OptionInfo = DataMgr.Option[OptionName]
-    if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" and OptionInfo.DefaultValueM then
+    if CommonUtils.GetRuntimePlatform(self) == "Mobile" and OptionInfo.DefaultValueM then
       DefaultValue = OptionInfo.DefaultValueM
     else
       DefaultValue = OptionInfo.DefaultValue
@@ -183,32 +188,6 @@ function BP_PlayerCharacter_C:SetUpAllTimer()
     local Avatar = GWorld:GetAvatar()
     if Avatar and Avatar:IsInBigWorld() then
       self:AddTimer(0.5, self.CalcCurrentPlayerRegionId, true)
-    end
-    self:AddTimer(0.5, self.CheckHPRate, true, 0, "CheckLockHpRate")
-  end
-end
-
-function BP_PlayerCharacter_C:CheckHPRate()
-  local Avatar = GWorld:GetAvatar()
-  if not self.BuffManager or not Avatar then
-    return
-  end
-  local IsShippingPackage = UE4.URuntimeCommonFunctionLibrary.IsDistribution()
-  if self.CachedLockHPRate ~= self.BuffManager.LockHpRate or self.CachedLockHPValue ~= self.BuffManager.LockHpValue then
-    self.CachedLockHPRate = self.BuffManager.LockHpRate
-    self.CachedLockHPValue = self.BuffManager.LockHpValue
-    if 0 ~= self.CachedLockHPRate or 0 ~= self.CachedLockHPValue then
-      local HasBuffModify = false
-      for _, Buff in pairs(self.BuffManager.Buffs) do
-        local BuffData = DataMgr.Buff[Buff.BuffId]
-        if BuffData and BuffData.LockHp then
-          HasBuffModify = true
-          break
-        end
-      end
-      if not HasBuffModify and (IsShippingPackage or EMLuaConst.OpenCheckHPLock) then
-        UE4.URuntimeCommonFunctionLibrary.SendCheatMsgToServer(self:GetWorld(), ECheatType.HoneyJar, "反外挂检测，非法修改了LockHpRate或LockHpValue")
-      end
     end
   end
 end
@@ -575,6 +554,20 @@ function BP_PlayerCharacter_C:InitSceneStartUI()
     local ExceptUIName = TSet(FName)
     UIManager:HideAllUI_EX(ExceptUIName, false, "RegionResurgence")
   end
+  local bIsInAutoChessDungeon = GWorld.GameInstance:CheckInAutoChessDungeon()
+  local BattleMain = UIManager:GetUI("BattleMain") or UIManager:GetUI("HomeBaseMain")
+  if BattleMain then
+    if bIsInAutoChessDungeon then
+      BattleMain:Hide("AutoChess")
+    else
+      BattleMain:Show("AutoChess")
+    end
+  end
+  if not bIsInAutoChessDungeon then
+    UE4.UMainBar.SetIsForceShowBloodUI(false)
+    local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
+    GameInputModeSubsystem:DisableInputMode(CommonConst.AutoChess.InputMode)
+  end
   self:UpdatePlayerTaskInfo()
   if not GameInstance:GetLoadingUI() then
     self:RefreshCharUIByPlatform()
@@ -805,7 +798,7 @@ function BP_PlayerCharacter_C:TriggerFallingCallable(GameMode, DefaultTransform,
     DebugPrint("OtherActor is player, but from other world  ActorName:", self:GetName())
     return
   end
-  if not self:IsMainPlayer() then
+  if not IsDedicatedServer(self) and not self:IsMainPlayer() then
     DebugPrint("OtherActor is player, but not main player  ActorName:", self:GetName())
     return
   end
@@ -868,6 +861,16 @@ function BP_PlayerCharacter_C:TriggerFallingCallable(GameMode, DefaultTransform,
   end
   self:GetController():SetControlRotation(self:K2_GetActorRotation())
   self:Landed()
+  local Mount = self.CurMount
+  if Mount and Mount.EMAnimInstance then
+    local MountAnim = Mount.EMAnimInstance
+    if MountAnim.OnMountStopRideFly then
+      MountAnim:OnMountStopRideFly()
+    end
+  end
+  if self.FlyMount then
+    self:StartRideFly()
+  end
 end
 
 function BP_PlayerCharacter_C:TriggerWaterFallingCallable(GameMode, DefaultTransform, MaxDis, DefaultEnable)
@@ -981,7 +984,9 @@ function BP_PlayerCharacter_C:PressFire()
   end
   if self:CheckSkillOccupiedByProp(ESkillName.HeavyShooting) then
     self.PropHoldShootTimer = self:AddTimer(0.2, function()
-      self.PropEffectComponent.CurrentPropEffect:OnHoldShoot()
+      if self.PropEffectComponent and self.PropEffectComponent.CurrentPropEffect then
+        self.PropEffectComponent.CurrentPropEffect:OnHoldShoot()
+      end
       self.PropHoldShootTimer = nil
     end, false, 0, "PropHoldShoot")
   end
@@ -1021,7 +1026,6 @@ function BP_PlayerCharacter_C:StartFire(FireType)
   if not self:CheckCanShoot(false) then
     return
   end
-  print(_G.LogTag, "StartFireStartFireStartFire", FireType)
   if self.PlayerAnimInstance then
     self.PlayerAnimInstance.bPressedFire = true
   end
@@ -1031,7 +1035,6 @@ function BP_PlayerCharacter_C:StartFire(FireType)
   else
     SkillId = self:GetSkillByType(UE.ESkillType.HeavyShooting)
   end
-  print(_G.LogTag, "StartFireStartFireStartFireStartFire", SkillId)
   local FireSuccess = self:UseSkill(SkillId, 0)
   if not FireSuccess then
     return false
@@ -1057,7 +1060,7 @@ function BP_PlayerCharacter_C:RemoveHoldShootingTimer()
   self.HoldShootingTimer = nil
 end
 
-function BP_PlayerCharacter_C:ReleaseFire()
+function BP_PlayerCharacter_C:ReleasePropEffectFire()
   if self:CheckSkillOccupiedByProp(ESkillName.HeavyShooting) and self.PropHoldShootTimer then
     self:RemoveTimer("PropHoldShoot")
     self.PropHoldShootTimer = nil
@@ -1066,6 +1069,10 @@ function BP_PlayerCharacter_C:ReleaseFire()
     self.PropEffectComponent.CurrentPropEffect:OnShootReleased()
     return
   end
+end
+
+function BP_PlayerCharacter_C:ReleaseFire()
+  self:ReleasePropEffectFire()
   if not self.bHoldingShooting and self.HoldShootingTimer then
     self:SetInputCache("Fire")
     self:StartFire("Fire")
@@ -1189,7 +1196,7 @@ function BP_PlayerCharacter_C:AllowRenderMainCamera()
 end
 
 function BP_PlayerCharacter_C:CheckNeedFootprint()
-  if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
+  if CommonUtils.GetRuntimePlatform(self) == "Mobile" then
     return false
   end
   if IsStandAlone(self) or MiscUtils.IsAutonomousProxy(self) then
@@ -1236,11 +1243,18 @@ end
 function BP_PlayerCharacter_C:Recovery(...)
   BP_PlayerCharacter_C.Super.Recovery(self, ...)
   if self:IsInRideMove() then
-    self:DisableBattleMount(true)
+    self:ServerResourceDisableBattleMount(true)
   end
   if IsClient(self) or IsStandAlone(self) then
     self:UseSkill(Const.PlayerRecoverySkill, 0)
   end
+end
+
+function BP_PlayerCharacter_C:QuickRecovery(NotRecoverAttr)
+  if self:IsInRideMove() then
+    self:ServerResourceDisableBattleMount(true)
+  end
+  self.Super.QuickRecovery(self, NotRecoverAttr)
 end
 
 function BP_PlayerCharacter_C:OnRealEnterDying()
@@ -1482,7 +1496,7 @@ end
 
 function BP_PlayerCharacter_C:ReceiveEndPlay(Reason)
   if self.ArmoryHelper then
-    self.ArmoryHelper:K2_DestroyActor()
+    self.ArmoryHelper:DestroySelf()
   end
   self:TryCloseAllSkillUI()
   self:RefreshTeamMemberInfo("ReceiveEndPlay")
@@ -1652,7 +1666,7 @@ function BP_PlayerCharacter_C:UpdateBulletNumUI()
         end
       end
     end
-  end, 2, "UpdateBulletNumFunc")
+  end)
 end
 
 function BP_PlayerCharacter_C:UpdateSkillUIInfo(ChangedSkills)
@@ -1859,20 +1873,49 @@ function BP_PlayerCharacter_C:GetEndPointInfo()
   return self.EndPointSeqEnable, self.EndPointLocation, self.EndPointRotation
 end
 
-function BP_PlayerCharacter_C:OnDungeonSettlement(IsWin, Index, SettlementData)
-  local PathExist = true
-  if IsWin then
-    local WeaponType = GWorld.GameInstance.ScenePlayers[Index].CurrentWeaponType or "Armory"
+function BP_PlayerCharacter_C:OnPreDungeonSettlement()
+  self:OnRecoverDissolve()
+  local BattleResurgenceUI = UIManager(self):GetUI(self:GetCurRecoveryUIName())
+  if BattleResurgenceUI then
+    BattleResurgenceUI:ShowBattleMainUI()
+  end
+end
+
+function BP_PlayerCharacter_C:GetDungeonSettlementWinMont(ScenePlayerIndex, WeaponMeleeOrRanged, SettlementData)
+  local WinMont = "LevelFinish_Armory_Montage"
+  local SkinData = DataMgr.Skin[self.CurrentSkinId]
+  local ModelId
+  if nil ~= SkinData then
+    ModelId = SkinData.SkinModelId
+  end
+  local ModelWinMont = "LevelFinish_Armory_" .. ModelId .. "_Montage"
+  local PathExist = false
+  DebugPrint("BP_PlayerCharacter_C:GetDungeonSettlementWinMont SkinId: ", self.CurrentSkinId, "ModelId: ", ModelId, "ModelWinMont", ModelWinMont)
+  if ModelId and self:CheckLevelFinishMontagePath(ModelWinMont) then
+    WinMont = ModelWinMont
+    PathExist = true
+  else
+    local WeaponType = GWorld.GameInstance.ScenePlayers[ScenePlayerIndex].CurrentWeaponType or "Armory"
     if SettlementData and SettlementData.UseDefaultMontage then
       WeaponType = "Armory"
     end
-    local WeaponMeleeOrRanged = GWorld.GameInstance.ScenePlayers[Index].CurrentWeaponMeleeOrRanged
-    DebugPrint("BP_PlayerCharacter_C:OnDungeonSettlement WeaponType: ", WeaponType, "WeaponMeleeOrRanged: ", WeaponMeleeOrRanged)
-    local WinMont = "LevelFinish_" .. WeaponType .. "_Montage"
-    PathExist = self:CheckLevelFinishMontagePath(WinMont)
-    if not PathExist then
-      WinMont = "LevelFinish_Armory_Montage"
+    local WeaponWinMont = "LevelFinish_" .. WeaponType .. "_Montage"
+    if self:CheckLevelFinishMontagePath(WeaponWinMont) then
+      WinMont = WeaponWinMont
+      PathExist = true
     end
+    DebugPrint("BP_PlayerCharacter_C:GetDungeonSettlementWinMont WeaponType: ", WeaponType, "WeaponMeleeOrRanged: ", WeaponMeleeOrRanged, "WeaponWinMont", WeaponWinMont)
+  end
+  DebugPrint("BP_PlayerCharacter_C:GetDungeonSettlementWinMont WinMont: ", WinMont)
+  return WinMont, PathExist
+end
+
+function BP_PlayerCharacter_C:OnDungeonSettlement(IsWin, Index, SettlementData)
+  local PathExist = false
+  if IsWin then
+    local WeaponMeleeOrRanged = GWorld.GameInstance.ScenePlayers[Index].CurrentWeaponMeleeOrRanged
+    local WinMont, PathExistResult = self:GetDungeonSettlementWinMont(Index, SettlementData)
+    PathExist = PathExistResult
     local BattleCharTag = self:GetBattleCharBodyType()
     local CameraParam = FVector(0, 0, 0)
     if SettlementData and SettlementData.CameraParam then
@@ -1908,26 +1951,25 @@ function BP_PlayerCharacter_C:OnDungeonSettlement(IsWin, Index, SettlementData)
       self:BindWeaponToHand()
     end
   end
-  self:OnRecoverDissolve()
-  local BattleResurgenceUI = UIManager(self):GetUI(self:GetCurRecoveryUIName())
-  if BattleResurgenceUI then
-    BattleResurgenceUI:ShowBattleMainUI()
-  end
 end
 
-function BP_PlayerCharacter_C:PlayDungeonSettlementFailDeadMontage()
-  local MontageFolder, MontagePrefix = self:GetHitMontageFolderAndPrefix()
-  if nil ~= MontageFolder then
-    local HitMontage = MontageFolder .. "Combat/Hit/" .. MontagePrefix .. "Die" .. Const.MontageSuffix .. "." .. MontagePrefix .. "Die" .. Const.MontageSuffix
-    local AnimationAsset = LoadObject(HitMontage)
-    if not AnimationAsset then
-      DebugPrint("Error: Load Montage Failed!!!", HitMontage)
-      return
-    end
-    self.Mesh:SetHiddenInGame(true)
-    self.PartsMesh:SetHiddenInGame(true)
-    self.PlayerAnimInstance:Montage_Play(AnimationAsset, 1.0, UE4.EMontagePlayReturnType.Duration, 3, true)
+function BP_PlayerCharacter_C:PlayDungeonSettlementMVPMontage(FileName)
+  DebugPrint("PlayDungeonSettlementMVPMontage FileName", FileName)
+  self:PlayActionMontage("Interactive/MVPShow", FileName, {})
+  self:SetCharacterTag("LevelFinish")
+end
+
+function BP_PlayerCharacter_C:PlayDungeonSettlementMVPSequence(FolderPath)
+  local SequencePath = "/Game/Asset/Char/Player/Common/MVPShow/" .. FolderPath .. "/Sequence/" .. FolderPath .. "_MVPShow_Cam." .. FolderPath .. "_MVPShow_Cam"
+  self:PlayMVPSequence(SequencePath)
+end
+
+function BP_PlayerCharacter_C:OnMVPSequenceFinish()
+  local MVPUI = UIManager(self):GetUIObj("SettlementMVP")
+  if MVPUI then
+    MVPUI:OnSequenceFinish()
   end
+  EventManager:FireEvent(EventID.OnMVPSequenceFinish)
 end
 
 function BP_PlayerCharacter_C:CheckLevelFinishMontagePath(MontageSuffix)
@@ -1950,16 +1992,8 @@ function BP_PlayerCharacter_C:CheckLevelFinishMontagePath(MontageSuffix)
 end
 
 function BP_PlayerCharacter_C:OnDungeonSettlementByIndex(Index, CurrentWeaponType, CurrentWeaponMeleeOrRanged, SettlementData)
-  local WeaponType = CurrentWeaponType or "Armory"
-  if SettlementData and SettlementData.UseDefaultMontage then
-    WeaponType = "Armory"
-  end
   local WeaponMeleeOrRanged = CurrentWeaponMeleeOrRanged
-  local WinMont = "LevelFinish_" .. WeaponType .. "_Montage"
-  local PathExist = self:CheckLevelFinishMontagePath(WinMont)
-  if not PathExist then
-    WinMont = "LevelFinish_Armory_Montage"
-  end
+  local WinMont, PathExist = self:GetDungeonSettlementWinMont(Index, WeaponMeleeOrRanged, SettlementData)
   self:PlayActionMontage("Interactive/LevelFinish", WinMont, {})
   self:SetEndPointOffset(Index, SettlementData)
   DebugPrint("BP_PlayerCharacter_C:OnDungeonSettlementByIndex PlayActionMontage: ", WinMont)
@@ -2612,6 +2646,38 @@ function BP_PlayerCharacter_C:ForbidActiveSkills(bForbid)
   self:ForbidSkills(bForbid, Skills)
 end
 
+function BP_PlayerCharacter_C:ForbidAllSkillsByBuff(bForbid)
+  local DisableSkillsBuffId = 311
+  local BuffData = DataMgr.Buff[DisableSkillsBuffId]
+  if not BuffData then
+    return
+  end
+  local DisableSkills = BuffData.DisableSkills
+  local Skills = {}
+  for i, Skill in pairs(DisableSkills) do
+    Skills[i] = ESkillName[Skill]
+  end
+  if bForbid then
+    Battle(self):AddBuffToTarget(self, self, DisableSkillsBuffId, -1, nil, nil)
+  else
+    Battle(self):RemoveBuffFromTarget(self, self, DisableSkillsBuffId, false, -1)
+  end
+  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+  local UIManger = GameInstance:GetGameUIManager()
+  local Widget = UIManger:GetUIObj("BattleMain")
+  if not Widget then
+    return
+  end
+  local SkillWidget = Widget.Char_Skill
+  local StateName = bForbid and "Ban" or "UnBan"
+  if not SkillWidget then
+    return
+  end
+  for _, Skill in pairs(Skills) do
+    SkillWidget:ChangeSkillButtonState(Skill, StateName)
+  end
+end
+
 function BP_PlayerCharacter_C:ForbidAllSkills(bForbid)
   local Skills = {
     ESkillName.Skill1,
@@ -2669,60 +2735,57 @@ function BP_PlayerCharacter_C:AfterLoading(Eid)
   if Avatar and Avatar:CheckSubRegionType(nil, CommonConst.SubRegionType.Home) then
     self:CheckDraftCanProduce()
   end
+  self.IsInDeliver = false
   self:SetActorHideTag("DeliveryMontage", false)
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-  if GameInstance and Eid and Eid == self.Eid then
-    if GameInstance.ShouldPlayDeliveryEndMontage then
-      local function NotifyBegin()
-        DebugPrint("zwk OnDeliveryAfterLoadingMontageNotifyBegin")
-        
-        self:RemoveDisableInputTag("DeliverMontage")
-      end
+  if GameInstance and Eid and Eid == self.Eid and GameInstance.ShouldPlayDeliveryEndMontage then
+    local function NotifyBegin()
+      DebugPrint("zwk OnDeliveryAfterLoadingMontageNotifyBegin")
       
-      local function Interrupted()
-        DebugPrint("zwk OnDeliveryAfterLoadingInterrupted", GameInstance.ShouldPlayDeliveryEndMontage)
-        self:RemoveDisableInputTag("DeliverMontage")
-        GameInstance.ShouldPlayDeliveryEndMontage = false
-      end
-      
-      local function Completed()
-        DebugPrint("zwk OnDeliveryAfterLoadingMontageCompleted", GameInstance.ShouldPlayDeliveryEndMontage)
-        GameInstance.ShouldPlayDeliveryEndMontage = false
-      end
-      
-      local AllCallback = {
-        OnNotifyBegin = NotifyBegin,
-        OnInterrupted = Interrupted,
-        OnCompleted = Completed
-      }
-      DebugPrint("zwk OnDeliveryAfterLoadingMontageBegin")
-      if Avatar and Avatar.IsInRegionOnline and Avatar.CurrentOnlineType then
-        self:ForceReSyncLocation()
-        Avatar:SwitchOnlineState(Avatar.CurrentOnlineType, CommonConst.OnlineState.Normal)
-      end
-      self:ResetIdle()
-      self:AddDisableInputTag("DeliverMontage")
-      self:PlayTeleportAction(AllCallback, false, true, false)
-      self.Mesh:GetAnimInstance():Montage_JumpToSection("End")
-      
-      local function RemoveDeliverTag()
-        if self.DisableInputTags:Find("DeliverMontage") then
-          DebugPrint("zwk RemoveDeliverTag")
-        end
-        self:RemoveDisableInputTag("DeliverMontage")
-        self:SetActorHideTag("DeliveryMontage", false)
-      end
-      
-      self:AddTimer(2, RemoveDeliverTag, false, 0)
+      self:RemoveDisableInputTag("DeliverMontage")
     end
-    if GameInstance.ShouldStopHookInDungeonDelivery then
-      GameInstance.ShouldStopHookInDungeonDelivery = false
+    
+    local function Interrupted()
+      DebugPrint("zwk OnDeliveryAfterLoadingInterrupted", GameInstance.ShouldPlayDeliveryEndMontage)
+      self:RemoveDisableInputTag("DeliverMontage")
+      GameInstance.ShouldPlayDeliveryEndMontage = false
     end
+    
+    local function Completed()
+      DebugPrint("zwk OnDeliveryAfterLoadingMontageCompleted", GameInstance.ShouldPlayDeliveryEndMontage)
+      GameInstance.ShouldPlayDeliveryEndMontage = false
+    end
+    
+    local AllCallback = {
+      OnNotifyBegin = NotifyBegin,
+      OnInterrupted = Interrupted,
+      OnCompleted = Completed
+    }
+    DebugPrint("zwk OnDeliveryAfterLoadingMontageBegin")
+    if Avatar and Avatar.IsInRegionOnline and Avatar.CurrentOnlineType then
+      self:ForceReSyncLocation()
+      Avatar:SwitchOnlineState(Avatar.CurrentOnlineType, CommonConst.OnlineState.Normal)
+    end
+    self:ResetIdle()
+    self:AddDisableInputTag("DeliverMontage")
+    self:PlayTeleportAction(AllCallback, false, true, false)
+    self.Mesh:GetAnimInstance():Montage_JumpToSection("End")
+    
+    local function RemoveDeliverTag()
+      if self.DisableInputTags:Find("DeliverMontage") then
+        DebugPrint("zwk RemoveDeliverTag")
+      end
+      self:RemoveDisableInputTag("DeliverMontage")
+      self:SetActorHideTag("DeliveryMontage", false)
+    end
+    
+    self:AddTimer(2, RemoveDeliverTag, false, 0)
   end
   self.AfterLoadingDone = true
   self:AddTimer(1, function()
     self.AfterLoadingDone = false
   end)
+  self:UpdateTeammateGesture()
 end
 
 function BP_PlayerCharacter_C:GetIsInDelivery()
@@ -2730,7 +2793,7 @@ function BP_PlayerCharacter_C:GetIsInDelivery()
   local LoadingUI = GameInstance:GetLoadingUI()
   local bIsInLoading = LoadingUI and LoadingUI.bIsInLoading
   local bIsInBlackScreen = UIManager(self):GetUIObj("BlackScreenXiaobai")
-  return bIsInLoading or bIsInBlackScreen or GameInstance.ShouldPlayDeliveryEndMontage
+  return bIsInLoading or bIsInBlackScreen or GameInstance.ShouldPlayDeliveryEndMontage or self.IsInDeliver
 end
 
 function BP_PlayerCharacter_C:LoadHitDirection(HitDirectionsObject, Attacker)
@@ -2993,7 +3056,7 @@ function BP_PlayerCharacter_C:SetEnableFallAtkDir()
   if nil == bEnableFallAtkDir then
     local OptionInfo = DataMgr.Option.FallAttackDirection
     local DefaultValue = OptionInfo.DefaultValue
-    if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" and OptionInfo.DefaultValueM then
+    if (CommonUtils.GetRuntimePlatform(self) == "Mobile" or GWorld.GameInstance and GWorld.GameInstance:GetUseMapPhoneInPC()) and OptionInfo.DefaultValueM then
       DefaultValue = OptionInfo.DefaultValueM
     end
     bEnableFallAtkDir = true
@@ -3041,7 +3104,7 @@ function BP_PlayerCharacter_C:SetRegionOnlineState()
   if nil == bAutoJoin then
     local OptionInfo = DataMgr.Option.AutoJoin
     local DefaultValue = OptionInfo.DefaultValue
-    if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" and OptionInfo.DefaultValueM then
+    if CommonUtils.GetRuntimePlatform(self) == "Mobile" and OptionInfo.DefaultValueM then
       DefaultValue = OptionInfo.DefaultValueM
     end
     bAutoJoin = true
@@ -3145,12 +3208,6 @@ function BP_PlayerCharacter_C:EnableNameWidget()
     self:OnChangeNickName(Avatar.Nickname)
     self:OnChangeTitle(Avatar.TitleBefore, Avatar.TitleAfter, Avatar.TitleFrame)
   end
-  if self.HeadWidgetComponent then
-    local Widget = self.HeadWidgetComponent:GetWidget()
-    if Widget then
-      Widget:SetUIVisibilityTag("MainPlayerDisableNameWidget", false)
-    end
-  end
 end
 
 function BP_PlayerCharacter_C:DisableNameWidget()
@@ -3159,12 +3216,35 @@ function BP_PlayerCharacter_C:DisableNameWidget()
   end
   EventManager:RemoveEvent(EventID.OnChangeNickName, self)
   EventManager:RemoveEvent(EventID.OnChangeTitle, self)
-  if self.HeadWidgetComponent then
-    local Widget = self.HeadWidgetComponent:GetWidget()
-    if Widget then
-      Widget:SetUIVisibilityTag("MainPlayerDisableNameWidget", true)
+  self:EnableHeadWidget("Name", false)
+  self:EnableHeadWidget("Title", false)
+end
+
+function BP_PlayerCharacter_C:SetVirtualJoystickEnableMoveLockFromCache()
+  local CachedVirtualJoystickEnableMoveLock = EMCache:Get("VirtualJoystickMoveLock")
+  if nil == CachedVirtualJoystickEnableMoveLock then
+    local DefaultValue = true
+    local DefaultValueString
+    local OptionInfo = DataMgr.Option.MoveLock
+    if CommonUtils.GetRuntimePlatform(self) == "Mobile" and OptionInfo and OptionInfo.DefaultValueM then
+      DefaultValueString = OptionInfo.DefaultValueM
+    else
+      DefaultValueString = OptionInfo.DefaultValue
     end
+    if "False" == DefaultValueString then
+      DefaultValue = false
+    elseif "True" == DefaultValueString then
+      DefaultValue = true
+    end
+    EMCache:Set("VirtualJoystickMoveLock", DefaultValue)
+    CachedVirtualJoystickEnableMoveLock = DefaultValue
   end
+  UIManager(self):SetVirtualJoystickEnableMoveLock(CachedVirtualJoystickEnableMoveLock)
+end
+
+function BP_PlayerCharacter_C:UpdateVirtualJoystickEnableMoveLock(bEnable)
+  EMCache:Set("VirtualJoystickMoveLock", bEnable)
+  UIManager(self):SetVirtualJoystickEnableMoveLock(bEnable)
 end
 
 AssembleComponents(BP_PlayerCharacter_C, {

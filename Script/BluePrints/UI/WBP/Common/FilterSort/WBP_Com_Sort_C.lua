@@ -117,7 +117,8 @@ function M:ListOpenBtnClicked()
       UIManager(self):UnLoadUI("ComSortFullScreen")
     end
     rawset(self, "ListWidgetOpening", true)
-    self.ListWidget = UIManager(self):LoadUI(nil, "ComSortFullScreen", self.Parent:GetZOrder(), self, self.SortBy_List, self.CurSortType)
+    local BpClassPath = self.FullScreenBpPath
+    self.ListWidget = UIManager(self):LoadUI(BpClassPath, "ComSortFullScreen", self.Parent:GetZOrder(), self, self.SortBy_List, self.CurSortType)
     self.Parent.SortListWidget = self.ListWidget
     rawset(self, "ListWidgetOpening", false)
   end

@@ -437,8 +437,9 @@ function WBP_BattleMap_C:OnClickOpen(Geometry, InputEvent)
   if not self.Player:GetController():IsA(APlayerController) then
     return
   end
-  local Size = USlateBlueprintLibrary.GetAbsoluteSize(Geometry)
-  local Position = USlateBlueprintLibrary.LocalToAbsolute(Geometry, FVector2D(0, 0))
+  local TargetGeometry = self.RetainerBox_101:GetCachedGeometry()
+  local Size = USlateBlueprintLibrary.GetAbsoluteSize(TargetGeometry)
+  local Position = USlateBlueprintLibrary.LocalToAbsolute(TargetGeometry, FVector2D(0, 0))
   FVector2D.Div(Size, 2)
   FVector2D.Add(Position, Size)
   local MousePosition = UKismetInputLibrary.PointerEvent_GetScreenSpacePosition(InputEvent)

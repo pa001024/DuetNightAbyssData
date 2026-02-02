@@ -1,4 +1,5 @@
 require("UnLua")
+local GameFlowUtils = require("Utils.GameFlowUtils")
 local FEntertainmentUtils = require("BluePrints.UI.WBP.Entertainment.EntertainmentUtils")
 local EEntertainmentState = FEntertainmentUtils.EEntertainmentState
 local EBlendFuncMap = {
@@ -201,8 +202,7 @@ function M:Construct()
     local EnvironmentManager = UE4.UGameplayStatics.GetActorOfClass(self, UE4.AEnvironmentManager:StaticClass())
     self.EnvironmentManager = EnvironmentManager
     if IsValid(EnvironmentManager) then
-      self.UseGameTime = EnvironmentManager and EnvironmentManager.bEnableTimeElapse
-      EnvironmentManager:SetEnableTimeElapse(false)
+      EnvironmentManager:SetEnableTimeElapse(false, "Entertainment")
     end
   end
 end
@@ -213,14 +213,11 @@ function M:Destruct()
     self.TalkContext:TurnAllCharPointLights(true)
   end
   if IsValid(self.EnvironmentManager) then
-    self.EnvironmentManager:SetEnableTimeElapse(self.UseGameTime)
+    self.EnvironmentManager:RevertEnableTimeElapse("Entertainment")
   end
   self:OnDestruct()
   M.Super.Destruct(self)
-  local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-  if FlowManager then
-    FlowManager:RemoveFlow(self.Flow)
-  end
+  GameFlowUtils:RemoveFlow(self.Flow)
   local TS = TalkSubsystem()
   if TS then
     TS:ResumeLightTalkTask(self.WidgetName)

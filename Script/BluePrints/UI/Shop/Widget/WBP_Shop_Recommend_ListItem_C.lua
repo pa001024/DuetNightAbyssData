@@ -77,6 +77,9 @@ function M:OnItemHovered()
   if self.bSelected then
     return
   end
+  if UIUtils.IsMobileInput() then
+    return
+  end
   self:StopAllAnimations()
   self:PlayAnimation(self.Hover)
   if UIUtils.IsGamepadInput() then
@@ -88,12 +91,18 @@ function M:OnItemUnhovered()
   if self.bSelected then
     return
   end
+  if UIUtils.IsMobileInput() then
+    return
+  end
   self:StopAllAnimations()
   self:PlayAnimation(self.Unhover)
 end
 
 function M:OnItemOnPressed()
   if self.bSelected then
+    return
+  end
+  if UIUtils.IsMobileInput() then
     return
   end
   self:StopAllAnimations()

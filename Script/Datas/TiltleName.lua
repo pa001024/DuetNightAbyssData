@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -338,6 +341,122 @@ return ReadOnly("TiltleName", {
     TextMapContent = "礼貌的",
     TextMapId = "Title_10084"
   },
+  [10085] = {
+    TextMapContent = "贝蕾妮卡的",
+    TextMapId = "Title_10085"
+  },
+  [10086] = {
+    TextMapContent = "幻景的",
+    TextMapId = "Title_10086"
+  },
+  [10087] = {
+    TextMapContent = "莉兹贝尔的",
+    TextMapId = "Title_10087"
+  },
+  [10088] = {
+    TextMapContent = "妮弗尔夫人的",
+    TextMapId = "Title_10088"
+  },
+  [10089] = {
+    TextMapContent = "刻舟的",
+    TextMapId = "Title_10089"
+  },
+  [10090] = {
+    TextMapContent = "苏乙的",
+    TextMapId = "Title_10090"
+  },
+  [10091] = {
+    TextMapContent = "菲娜的",
+    TextMapId = "Title_10091"
+  },
+  [10092] = {
+    TextMapContent = "丽蓓卡的",
+    TextMapId = "Title_10092"
+  },
+  [10093] = {
+    TextMapContent = "伊薇的",
+    TextMapId = "Title_10093"
+  },
+  [10094] = {
+    TextMapContent = "塔比瑟的",
+    TextMapId = "Title_10094"
+  },
+  [10095] = {
+    TextMapContent = "扶疏的",
+    TextMapId = "Title_10095"
+  },
+  [10096] = {
+    TextMapContent = "琳恩的",
+    TextMapId = "Title_10096"
+  },
+  [10097] = {
+    TextMapContent = "希尔妲的",
+    TextMapId = "Title_10097"
+  },
+  [10098] = {
+    TextMapContent = "耶尔的",
+    TextMapId = "Title_10098"
+  },
+  [10099] = {
+    TextMapContent = "奥利弗的",
+    TextMapId = "Title_10099"
+  },
+  [10100] = {
+    TextMapContent = "海尔法的",
+    TextMapId = "Title_10100"
+  },
+  [10101] = {
+    TextMapContent = "卡米拉的",
+    TextMapId = "Title_10101"
+  },
+  [10102] = {
+    TextMapContent = "玛尔洁的",
+    TextMapId = "Title_10102"
+  },
+  [10103] = {
+    TextMapContent = "黎瑟的",
+    TextMapId = "Title_10103"
+  },
+  [10104] = {
+    TextMapContent = "止流的",
+    TextMapId = "Title_10104"
+  },
+  [10105] = {
+    TextMapContent = "煜明的",
+    TextMapId = "Title_10105"
+  },
+  [10106] = {
+    TextMapContent = "兰迪的",
+    TextMapId = "Title_10106"
+  },
+  [10107] = {
+    TextMapContent = "西比尔的",
+    TextMapId = "Title_10107"
+  },
+  [10108] = {
+    TextMapContent = "松露的",
+    TextMapId = "Title_10108"
+  },
+  [10109] = {
+    TextMapContent = "榛子的",
+    TextMapId = "Title_10109"
+  },
+  [10110] = {
+    TextMapContent = "奥特赛德的",
+    TextMapId = "Title_10110"
+  },
+  [10111] = {
+    TextMapContent = "赛琪的",
+    TextMapId = "Title_10111"
+  },
+  [10112] = {
+    TextMapContent = "达芙涅的",
+    TextMapId = "Title_10112"
+  },
+  [10113] = {
+    TextMapContent = "机枢派的",
+    TextMapId = "Title_10113"
+  },
   [20001] = {
     TextMapContent = "力量",
     TextMapId = "Title_20001"
@@ -609,5 +728,121 @@ return ReadOnly("TiltleName", {
   [20068] = {
     TextMapContent = "魔王",
     TextMapId = "Title_20068"
+  },
+  [20069] = {
+    TextMapContent = "贝蕾妮卡",
+    TextMapId = "Title_20069"
+  },
+  [20070] = {
+    TextMapContent = "幻景",
+    TextMapId = "Title_20070"
+  },
+  [20071] = {
+    TextMapContent = "莉兹贝尔",
+    TextMapId = "Title_20071"
+  },
+  [20072] = {
+    TextMapContent = "妮弗尔夫人",
+    TextMapId = "Title_20072"
+  },
+  [20073] = {
+    TextMapContent = "刻舟",
+    TextMapId = "Title_20073"
+  },
+  [20074] = {
+    TextMapContent = "苏乙",
+    TextMapId = "Title_20074"
+  },
+  [20075] = {
+    TextMapContent = "菲娜",
+    TextMapId = "Title_20075"
+  },
+  [20076] = {
+    TextMapContent = "丽蓓卡",
+    TextMapId = "Title_20076"
+  },
+  [20077] = {
+    TextMapContent = "伊薇",
+    TextMapId = "Title_20077"
+  },
+  [20078] = {
+    TextMapContent = "塔比瑟",
+    TextMapId = "Title_20078"
+  },
+  [20079] = {
+    TextMapContent = "扶疏",
+    TextMapId = "Title_20079"
+  },
+  [20080] = {
+    TextMapContent = "琳恩",
+    TextMapId = "Title_20080"
+  },
+  [20081] = {
+    TextMapContent = "希尔妲",
+    TextMapId = "Title_20081"
+  },
+  [20082] = {
+    TextMapContent = "耶尔",
+    TextMapId = "Title_20082"
+  },
+  [20083] = {
+    TextMapContent = "奥利弗",
+    TextMapId = "Title_20083"
+  },
+  [20084] = {
+    TextMapContent = "海尔法",
+    TextMapId = "Title_20084"
+  },
+  [20085] = {
+    TextMapContent = "卡米拉",
+    TextMapId = "Title_20085"
+  },
+  [20086] = {
+    TextMapContent = "玛尔洁",
+    TextMapId = "Title_20086"
+  },
+  [20087] = {
+    TextMapContent = "黎瑟",
+    TextMapId = "Title_20087"
+  },
+  [20088] = {
+    TextMapContent = "止流",
+    TextMapId = "Title_20088"
+  },
+  [20089] = {
+    TextMapContent = "煜明",
+    TextMapId = "Title_20089"
+  },
+  [20090] = {
+    TextMapContent = "兰迪",
+    TextMapId = "Title_20090"
+  },
+  [20091] = {
+    TextMapContent = "西比尔",
+    TextMapId = "Title_20091"
+  },
+  [20092] = {
+    TextMapContent = "松露",
+    TextMapId = "Title_20092"
+  },
+  [20093] = {
+    TextMapContent = "榛子",
+    TextMapId = "Title_20093"
+  },
+  [20094] = {
+    TextMapContent = "奥特赛德",
+    TextMapId = "Title_20094"
+  },
+  [20095] = {
+    TextMapContent = "赛琪",
+    TextMapId = "Title_20095"
+  },
+  [20096] = {
+    TextMapContent = "达芙涅",
+    TextMapId = "Title_20096"
+  },
+  [20097] = {
+    TextMapContent = "神之一手",
+    TextMapId = "Title_20097"
   }
 })

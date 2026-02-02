@@ -328,6 +328,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -469,6 +470,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -698,7 +700,7 @@ return {
             key = "1764933025563984",
             type = "PlayOrStopBGMNode",
             name = "BGM节点音效",
-            pos = {x = 999.2499999999998, y = 18.92045454545456},
+            pos = {x = 993.2499999999998, y = 20.92045454545456},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,
@@ -707,7 +709,7 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {},
-              ClientRelatedRegionId = {104105, 104107},
+              ClientRelatedRegionId = {104110, 104107},
               bStoreToServer = false
             }
           },

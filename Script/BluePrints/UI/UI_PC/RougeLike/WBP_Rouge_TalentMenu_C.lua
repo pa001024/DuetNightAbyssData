@@ -11,6 +11,8 @@ function WBP_Rouge_TalentMenu_P_C:Construct()
   local RetainerBoxMargin = RetainerBoxCanvasSlot:GetOffsets()
   local EMScrollBoxMargin = EMScrollBoxCanvasSlot:GetOffsets()
   self.OffsetX = RetainerBoxMargin.Left + RetainerBoxMargin.Right + EMScrollBoxMargin.Left + EMScrollBoxMargin.Right
+  local RetainerBoxAnchors = RetainerBoxCanvasSlot:GetAnchors()
+  self.OffsetAnchors = RetainerBoxAnchors.Minimum.X + (1 - RetainerBoxAnchors.Maximum.X)
   local Avatar = GWorld:GetAvatar()
   self.Com_Cost:InitContent({
     ResourceId = Avatar and Avatar:GetCurrentRougeLikeTalentId(),
@@ -197,7 +199,7 @@ end
 function WBP_Rouge_TalentMenu_P_C:ScrollToPoint(Id)
   local ViewportSize = UWidgetLayoutLibrary.GetViewportSize(self)
   local ViewportScale = UWidgetLayoutLibrary.GetViewportScale(self)
-  local SizeX = ViewportSize.X / ViewportScale - self.OffsetX
+  local SizeX = ViewportSize.X / ViewportScale * (1 - self.OffsetAnchors) - self.OffsetX
   local FullSizeX = self.TalentTree:GetFullSizeX()
   local BottomOffset = FullSizeX - SizeX
   if BottomOffset <= 0 then

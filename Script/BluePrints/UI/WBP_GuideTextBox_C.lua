@@ -2,6 +2,7 @@ require("UnLua")
 require("DataMgr")
 local ExpressionComp_C = require("BluePrints.Story.Talk.Controller.ExpressionComp")
 local WBP_GuideTextBox_C = Class("BluePrints.UI.BP_UIState_C")
+local EMCache = require("EMCache.EMCache")
 
 function WBP_GuideTextBox_C:Initialize(Initializer)
   WBP_GuideTextBox_C.Super.Initialize(self, Initializer)
@@ -17,6 +18,7 @@ function WBP_GuideTextBox_C:Construct()
   for i = 0, 10 do
     self:AddTimer(0.05 * i, self.SetKeyboardFocus)
   end
+  self:InitGamePadKeyButton()
   WBP_GuideTextBox_C.Super.Construct(self)
   self.IsDestroied = false
   self:InitListenEvent()
@@ -37,6 +39,37 @@ function WBP_GuideTextBox_C:Destruct()
   if PlayerCharacter then
     PlayerCharacter:RemoveDisableInputTag("ResetPlayerState")
   end
+end
+
+function WBP_GuideTextBox_C:OpenWindow()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/special_content_01_click", nil, nil)
+  if self.Controller_Skip then
+    self.Controller_Skip:PlayAnimation(self.Controller_Skip.Normal)
+  end
+  local GuideSkip = EMCache:Get("GuideSkip", true)
+  if GuideSkip then
+    self:SkipGuide()
+    return
+  end
+  self.bOpenWindow = true
+  local Params = {}
+  Params.RightCallbackObj = self
+  
+  function Params.RightCallbackFunction(_, Data, PopupUI)
+    self:SkipGuide()
+    self:UpdateSelectedInfo(Data)
+  end
+  
+  function Params.OnCloseCallbackFunction(_, Data, PopupUI)
+    self.bOpenWindow = false
+  end
+  
+  UIManager(self):ShowCommonPopupUI(100291, Params, self, nil, 105)
+end
+
+function WBP_GuideTextBox_C:UpdateSelectedInfo(Data)
+  local IsSelected = Data.SelectHint.IsSelected
+  EMCache:Set("GuideSkip", IsSelected, true)
 end
 
 function WBP_GuideTextBox_C:GuideUIInit_TextGuide(UIKey, MessageId, GuidemanHead, GuideManPosEnum, Time, ExecuteLogic, IsTimeDilation, IsForceClick, IsResetPlayer, IsForbidInAnim, IsForbidOutAnim)
@@ -119,6 +152,7 @@ function WBP_GuideTextBox_C:AddGuideMessage(UIKey, MessageId, IsTimePause, Guide
   end
   self.Btn_Confirm:SetText(GText("UI_LOGIN_ENSURE"))
   self.Btn_Confirm:BindEventOnClicked(self, self.PlayOutAnimation)
+  self.Btn_Skip.OnClicked:Add(self, self.OpenWindow)
   DebugPrint("WBP_GuideTextBox_C:GuideUIInit_TextGuide: GuideManPosEnum", GuideManPosEnum)
   self:SetGuideCanvasRelativePosition(GuideManPosEnum)
   self:PlayTextGuide(GuidemanHead)
@@ -130,6 +164,21 @@ function WBP_GuideTextBox_C:AddGuideMessage(UIKey, MessageId, IsTimePause, Guide
     if PlayerCharacter:CharacterInTag("Idle") == false or false == Battle:CheckConditionNew(11, PlayerCharacter, nil, TraceInfo) then
       self:BlackScreenUIFadeIn()
     end
+  end
+  self:InitGamePadKeyButton()
+  self.bSkip = 0
+  if -1 ~= SystemGuideManager.RunningId then
+    self.bSkip = DataMgr.SystemGuide[SystemGuideManager.RunningId].GuideSkip
+  end
+  if 1 == self.bSkip then
+    self.Text_Skip:SetText(GText("UI_SkipGuide"))
+    self.Panel_Skip:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.Panel_Skip:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  local bIsGamepad = UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad
+  if bIsGamepad and 1 == self.bSkip then
+    self.Controller_Skip:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
   end
 end
 
@@ -382,19 +431,51 @@ function WBP_GuideTextBox_C:Close()
   self.IsDestroied = true
 end
 
-function WBP_GuideTextBox_C:OnKeyDown(MyGeometry, InKeyEvent)
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  return UE4.UWidgetBlueprintLibrary.Handled()
+function WBP_GuideTextBox_C:SkipGuide()
+  local Path = DataMgr.SystemGuide[SystemGuideManager.RunningId].GuideStoryline
+  GWorld.StoryMgr:StopStoryline(Path, false)
+  self:Close()
 end
 
-function WBP_GuideTextBox_C:OnPreviewKeyDown(MyGeometry, InKeyEvent)
+function WBP_GuideTextBox_C:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   if "Gamepad_FaceButton_Bottom" == InKeyName then
     self:PlayOutAnimation()
+  elseif "Gamepad_Special_Right" == InKeyName and 1 == self.bSkip then
+    self.Controller_Skip:OnButtonPressed()
   end
   return UE4.UWidgetBlueprintLibrary.Handled()
+end
+
+function WBP_GuideTextBox_C:OnKeyUp(MyGeometry, InKeyEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if "Gamepad_Special_Right" == InKeyName then
+    self.Controller_Skip:OnButtonReleased()
+  end
+  return UE4.UWidgetBlueprintLibrary.Handled()
+end
+
+function WBP_GuideTextBox_C:OnPreviewKeyDown(MyGeometry, InKeyEvent)
+end
+
+function WBP_GuideTextBox_C:InitKeyButton()
+  self.Key_Skip:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Text", Text = "Esc"}
+    }
+  })
+end
+
+function WBP_GuideTextBox_C:InitGamePadKeyButton()
+  self.Controller_Skip:CreateCommonKey({
+    KeyInfoList = {
+      {ImgShortPath = "Menu", Type = "Img"}
+    },
+    bLongPress = true
+  })
+  self.Controller_Skip:AddExecuteLogic(self, self.OpenWindow)
 end
 
 function WBP_GuideTextBox_C:InitListenEvent()
@@ -417,9 +498,17 @@ function WBP_GuideTextBox_C:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepa
   end
   local IsUseKeyAndMouse = CurInputDevice == ECommonInputType.MouseAndKeyboard
   if IsUseKeyAndMouse then
+    if 1 == self.bSkip then
+      self.Controller_Skip:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
   else
+    if 1 == self.bSkip then
+      self.Controller_Skip:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+    end
     self:AddTimer(0.01, function()
-      self.GameInputModeSubsystem:SetTargetUIFocusWidget(self)
+      if not self.bOpenWindow then
+        self.GameInputModeSubsystem:SetTargetUIFocusWidget(self)
+      end
     end)
   end
 end

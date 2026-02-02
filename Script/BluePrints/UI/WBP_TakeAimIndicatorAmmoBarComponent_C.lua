@@ -137,12 +137,12 @@ end
 function Component:GetAmmoBarStyle(WeaponStyleNode, MagazineCapacity, SightUI)
   if SightUI and self.SightUI2AmmoBarStyle[SightUI] then
     return self.SightUI2AmmoBarStyle[SightUI]
-  elseif "Melee" == WeaponStyleNode or "Bow" == WeaponStyleNode or "Archer" == WeaponStyleNode or "TrackingBow" == WeaponStyleNode or "AimStarButterfly" == WeaponStyleNode then
+  elseif "Melee" == WeaponStyleNode or "Bow" == WeaponStyleNode or "Archer" == WeaponStyleNode or "TrackingBow" == WeaponStyleNode or "AimStarButterfly" == WeaponStyleNode or "Suyi" == WeaponStyleNode then
     return nil
   elseif "Funnel" == WeaponStyleNode then
     return "BarFunnel"
   elseif "Cannon" == WeaponStyleNode then
-    if MagazineCapacity > self.MaxSingleMagazine then
+    if MagazineCapacity and self.MaxSingleMagazine and MagazineCapacity > self.MaxSingleMagazine then
       return "UnlimitedSingle"
     else
       return "Single"

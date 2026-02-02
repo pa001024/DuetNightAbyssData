@@ -17,7 +17,7 @@ function M:GetExactTimeOfDay()
   local HalfHourSeconds = DataMgr.GlobalConstant.TODUnitTime.ConstantValue / 2
   local RemainHalfHourTime = EnvironmentManager:GetRemainTODHalfHourTime()
   if HalfHourSeconds and RemainHalfHourTime then
-    self.ExactHour = EnvironmentManager:GetTimeOfDay() + (HalfHourSeconds - RemainHalfHourTime) / (HalfHourSeconds * 2)
+    self.ExactHour = EnvironmentManager:GetTimeOfDay()
     local Text = self:GetTextFormHour(self.ExactHour)
     return Text, self.ExactHour
   else

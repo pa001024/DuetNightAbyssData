@@ -273,10 +273,6 @@ function M:RecvTeamBeAgreed(Uid)
   if not TimerKey then
     return
   end
-  local Nickname = FriendController:GetModel():GetNicknameByUid(Uid)
-  if Nickname then
-    self:ShowToast(string.format(GText("UI_Chat_SbJoin"), Nickname))
-  end
   AudioManager(self):PlayUISound(self, "event:/ui/common/team_accept_invite", nil, nil)
   self:StopTimer(TimerKey)
   TeamModel:DelSentInvite(Uid)
@@ -285,6 +281,10 @@ end
 
 function M:RecvTeamOnAddPlayer(MemberInfo)
   TeamModel:AddTeamMember(MemberInfo)
+  local Nickname = MemberInfo.Nickname
+  if Nickname then
+    self:ShowToast(string.format(GText("UI_Chat_SbJoin"), Nickname))
+  end
   self:NotifyEvent(TeamCommon.EventId.TeamOnAddPlayer, MemberInfo)
   ChatController:SendMemberChangeTipsToTeam(MemberInfo, TeamCommon.EventId.TeamOnAddPlayer)
 end
@@ -294,7 +294,7 @@ function M:RecvTeamOnDelPlayer(Uid, LeaveReason)
   if Member and not Member.bDsData then
     local Text = ""
     if Uid == self:GetAvatar().Uid and TeamModel:GetTeam() then
-      self:RecvTeamLeave(ErrorCode.RET_SUCCESS, true)
+      self:RecvTeamLeave(ErrorCode.RET_SUCCESS, false)
       return
     end
     if LeaveReason == CommonConst.LeaveTeamReason.Willing then
@@ -340,7 +340,9 @@ function M:RecvTeamOnChangeLeader(Uid)
   local OldLeaderId = TeamModel:GetTeamLeaderId()
   if NewLeader and not NewLeader.bDsData then
     if Uid == self:GetAvatar().Uid then
-      self:ShowToast(GText("UI_Team_YouBecomeLeader"))
+      if #TeamModel:GetTeam().Members > 1 then
+        self:ShowToast(GText("UI_Team_YouBecomeLeader"))
+      end
     else
       self:ShowToast(string.format(GText("UI_Team_SomeOneBecomeLeader"), NewLeader.Nickname))
     end

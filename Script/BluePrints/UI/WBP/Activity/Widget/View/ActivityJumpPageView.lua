@@ -5,6 +5,9 @@ local M = {}
 local NotNeedShowButtonActivityId = {
   [103011] = true
 }
+local NeedShowButtonActivityIdByTabName = {
+  [103016] = true
+}
 
 function M:PlayFadeIn()
   self:PlayAnimation(self.In)
@@ -140,14 +143,15 @@ function M:RefreshPageStaticView(ActivityConfigData, PageConfigData, InfoClickFu
     if TaskWidget and TaskWidget:IsNeedShow() then
       self.Group_Task:AddChildToOverlay(TaskWidget)
     else
-      local TaskProcessWidget = UIManager(self):CreateWidget(PageConfigData.SubBPPath2)
-      if TaskProcessWidget then
-        if type(TaskProcessWidget.InitPage) == "function" then
-          TaskProcessWidget:InitPage(ActivityConfigData.EventId)
+      self.TaskProcessWidget = UIManager(self):CreateWidget(PageConfigData.SubBPPath2)
+      if self.TaskProcessWidget then
+        self.TaskProcessWidget.ParentWidget = self
+        if type(self.TaskProcessWidget.InitPage) == "function" then
+          self.TaskProcessWidget:InitPage(ActivityConfigData.EventId)
         else
-          TaskProcessWidget:Init(ActivityConfigData, PageConfigData, PlayerAvatar)
+          self.TaskProcessWidget:Init(ActivityConfigData, PageConfigData, PlayerAvatar)
         end
-        self.Group_TaskProgress:AddChildToOverlay(TaskProcessWidget)
+        self.Group_TaskProgress:AddChildToOverlay(self.TaskProcessWidget)
       end
     end
   elseif PageConfigData.SubBPPath2 then
@@ -177,7 +181,7 @@ function M:RefreshPageStaticView(ActivityConfigData, PageConfigData, InfoClickFu
     end
   end
   self.RewardWidget = UIManager(self):CreateWidget(PageConfigData.RewardBPPath)
-  if PageConfigData.RewardBPPath and not ActivityUtils.CheckIsPermanentEvent(ActivityConfigData.EventId) then
+  if PageConfigData.RewardBPPath and not ActivityUtils.CheckIsPermanentEvent(ActivityConfigData.EventId) and not IsLock then
     if self.RewardWidget.Init then
       self.RewardWidget.ParentWidget = self
       self.RewardWidget:Init(ActivityConfigData, PageConfigData, PlayerAvatar)
@@ -197,14 +201,16 @@ function M:RefreshPageStaticView(ActivityConfigData, PageConfigData, InfoClickFu
       local Node = ReddotManager.GetTreeNode(RdName)
       if RdType == EReddotType.Normal then
         local bShowRed = Node.bImplemented and 1 == ActivityUtils.GetReddotCachInfoByKey("Red", self.CurActivityId) or Count > 0
-        self.Btn_Confirm:EMShowReddot(bShowRed, EReddotType.Normal, 0)
+        self.Btn_Confirm:EMShowReddot(bShowRed, EReddotType.Normal)
       elseif RdType == EReddotType.New then
         local bShowNew = Node.bImplemented and 1 == ActivityUtils.GetReddotCachInfoByKey("New", self.CurActivityId) or Count > 0
-        self.Btn_Confirm:EMShowReddot(bShowNew, EReddotType.New, 0)
+        self.Btn_Confirm:EMShowReddot(bShowNew, EReddotType.New)
       end
     end
   }
-  if not self.NotNeedShowButtonActivityId[self.CurActivityId] then
+  if NeedShowButtonActivityIdByTabName[self.CurActivityId] then
+    ActivityReddotHelper.AddReddotListenByTabId(self.ParentTabId, CallbackInfo)
+  elseif not self.NotNeedShowButtonActivityId[self.CurActivityId] then
     ActivityReddotHelper.RemoveReddotListenByEventId(self.CurActivityId, self)
     ActivityReddotHelper.AddReddotListenByEventId(self.CurActivityId, CallbackInfo)
   end
@@ -287,6 +293,9 @@ function M:UpdatePageDynamicView()
   end
   if self.SpecialWidget and self.SpecialWidget.Update then
     self.SpecialWidget:Update()
+  end
+  if self.TaskProcessWidget and self.TaskProcessWidget.Update then
+    self.TaskProcessWidget:Update()
   end
 end
 

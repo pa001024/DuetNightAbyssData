@@ -87,37 +87,21 @@ function M:OnListItemObjectSet(Content)
   self.Content.Entry = self
   self:ItemIconRefresh()
   self.List_UnlockItem:ClearListItems()
-  if Content.Type == "Walnut" then
+  if Content.Type == "Walnut" and Content.SortedItemInfos then
     self.Switch_Content:SetActiveWidgetIndex(1)
-    local ShopItem = DataMgr.ShopItem
-    local Ids = Content.Content.Id or {}
-    local IncludIds = {}
-    for Index, Id in pairs(Ids) do
-      IncludIds[Id] = 1
-    end
-    local Walnut = DataMgr.Walnut
-    local SortedItemInfos = {}
-    for ItemId, Info in pairs(ShopItem) do
-      if "Walnut" == Info.ItemType and Info.UnlockLevel == Content.Level and Walnut[Info.TypeId] and IncludIds[Walnut[Info.TypeId].WalnutType] then
-        table.insert(SortedItemInfos, Info)
-      end
-    end
-    table.sort(SortedItemInfos, function(a, b)
-      return a.ItemId > b.ItemId
-    end)
-    for _, Info in pairs(SortedItemInfos) do
-      local Content = NewObject(UIUtils.GetCommonItemContentClass())
-      Content.UIName = "ExperienceMain"
-      Content.IsShowDetails = true
-      Content.Id = Info.TypeId
-      Content.Icon = ItemUtils.GetItemIconPath(Info.TypeId, Info.ItemType)
-      Content.Rarity = ItemUtils.GetItemRarity(Info.TypeId, Info.ItemType)
-      Content.ItemType = Info.ItemType
-      Content.OnMenuOpenChangedEvents = {
+    for _, Info in pairs(Content.SortedItemInfos) do
+      local WalnutContent = NewObject(UIUtils.GetCommonItemContentClass())
+      WalnutContent.UIName = "ExperienceMain"
+      WalnutContent.IsShowDetails = true
+      WalnutContent.Id = Info.TypeId
+      WalnutContent.Icon = ItemUtils.GetItemIconPath(Info.TypeId, Info.ItemType)
+      WalnutContent.Rarity = ItemUtils.GetItemRarity(Info.TypeId, Info.ItemType)
+      WalnutContent.ItemType = Info.ItemType
+      WalnutContent.OnMenuOpenChangedEvents = {
         Obj = self,
         Callback = self.MenuOpenChangedEvent
       }
-      self.List_UnlockItem:AddItem(Content)
+      self.List_UnlockItem:AddItem(WalnutContent)
     end
     self:AddTimer(0.01, function()
       self.List_UnlockItem:RequestFillEmptyContent()

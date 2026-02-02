@@ -10,6 +10,7 @@ function M:InitNormalReward(Index, ConfigData, ParentWidget)
   self.ActivityId = ConfigData.ActivityId
   self.RewardType = "NormalReward"
   self.ParentWidget = ParentWidget
+  self.bComeBackEvent = ConfigData.bComeBackEvent or false
   self.Text_ItemIndex:SetText(string.format("%02d", Index))
   local RewardInfo = DataMgr.Reward[ConfigData.RewardId]
   if RewardInfo then
@@ -141,7 +142,12 @@ function M:OnReceiveRewardClicked()
   if not PlayerAvatar then
     return
   end
-  PlayerAvatar:DailyLoginGetReward(self.ActivityId, self.Index)
+  if self.bComeBackEvent then
+    PlayerAvatar:ComeBackGetLoginReward(nil, self.ParentWidget, self.ParentWidget.AllValidIndex)
+    AudioManager(self):PlayUISound(self, "event:/ui/activity/feina_tab_btn_click", nil, nil)
+  else
+    PlayerAvatar:DailyLoginGetReward(self.ActivityId, self.Index)
+  end
 end
 
 function M:RefreshRewardByState(RewardState)

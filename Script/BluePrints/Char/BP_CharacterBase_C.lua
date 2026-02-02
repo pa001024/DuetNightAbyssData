@@ -329,6 +329,15 @@ function BP_CharacterBase_C:CommonRecoveryImpl()
     local CharacterFashion = self.CharacterFashion
     if CharacterFashion then
       self:InitAppearanceSuit(CharacterFashion.AppearanceSuitInfo)
+      local AdditionalFXID = DataMgr.Model[self.ModelId].AdditionalFXID
+      if AdditionalFXID then
+        CharacterFashion.NiagaraGroup:Clear()
+        for _, v in pairs(AdditionalFXID) do
+          local FxObject = self.FXComponent:PlayEffectByID(v)
+          CharacterFashion.NiagaraGroup:Add(v, FxObject)
+        end
+        CharacterFashion:InitColorsWithInfo()
+      end
     end
     if MiscUtils.IsAutonomousProxy(self) or IsStandAlone(self) then
       self.DodgeCount = 0
@@ -534,6 +543,17 @@ function BP_CharacterBase_C:ResetJumpState(KeepJumpCount)
   self:SetCurrentJumpState(Const.NormalState)
 end
 
+function BP_CharacterBase_C:CheckMountCanFly()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return true
+  end
+  if not self.CurrentMountId then
+    return false
+  end
+  return Avatar:CheckMountCanFly(self.CurrentMountId)
+end
+
 function BP_CharacterBase_C:EnterStunFloatTag()
   self:SetRagdollFloating(true)
 end
@@ -586,14 +606,11 @@ function BP_CharacterBase_C:UpdateRecovererInfo(Eid, RecoverySpeed)
   end
 end
 
-function BP_CharacterBase_C:DestroyActorOnDead(bNormalDeath, DeathReason)
-  self:DestroyActorOnDead_CPP(bNormalDeath, DeathReason)
-end
-
 function BP_CharacterBase_C:ClearCharacterBattleInfo(NormalDeath, DeathReason)
   self.BornInfo = nil
   self:DestroyActorOnDead_CPP(NormalDeath, DeathReason)
   self:RemoveAllEffectCreature(NormalDeath)
+  self:CancelAFDTransform()
 end
 
 function BP_CharacterBase_C:StopFire(bStillHoldFire, OnlyReleaseFire)
@@ -650,7 +667,7 @@ end
 function BP_CharacterBase_C:OnTriggerFallingCallable()
   self:ResetIdle()
   self:FinishGather()
-  self:HandleDestroyCreatureOnFalling()
+  self:DestroyAllCreatures(ECreatureDeathWithCreator.Failing, EDeathReason.CreatureNotDelay)
   self:HandleRemoveBuff(self.Eid, 1)
   self:GetGrabLogicComponent():ReleaseAllGrabTargets()
   if self.CurrentSkillId then
@@ -950,19 +967,20 @@ function BP_CharacterBase_C:CanLeaveTag_Lua(TagName)
 end
 
 function BP_CharacterBase_C:EnableTeleport_Lua(State)
-  local Player = UGameplayStatics.GetPlayerCharacter(self, 0)
-  local PlayerState = Player and Player.PlayerState
-  if -1 == PlayerState.ActivatedDungeonDeliveryPointId then
-    return false
-  end
-  local Tag = self:GetCharacterTag()
-  if "Hook" == Tag or "HitFly" == Tag then
-    if false == State then
-      EventManager:FireEvent(EventID.OnTeleportReady, true)
-      DebugPrint("ayff test  : stop teleport due to tag ", Tag)
-    elseif true == State then
-      EventManager:FireEvent(EventID.OnTeleportReady, false)
-      DebugPrint("ayff test  : enable teleport due to tag ", Tag)
+  if self:IsMainPlayer() then
+    local PlayerState = self.PlayerState
+    if not PlayerState or -1 == PlayerState.ActivatedDungeonDeliveryPointId then
+      return false
+    end
+    local Tag = self:GetCharacterTag()
+    if "Hook" == Tag or "HitFly" == Tag then
+      if false == State then
+        EventManager:FireEvent(EventID.OnTeleportReady, true)
+        DebugPrint("ayff test  : stop teleport due to tag ", Tag)
+      elseif true == State then
+        EventManager:FireEvent(EventID.OnTeleportReady, false)
+        DebugPrint("ayff test  : enable teleport due to tag ", Tag)
+      end
     end
   end
   return false
@@ -1294,7 +1312,15 @@ function BP_CharacterBase_C:GetTalkActionPath(PrePath, ActionName)
   if nil == ActionName then
     return MontagePath
   end
-  local ModelData = DataMgr.Model[self.ModelId]
+  local ModelId = self.ModelId
+  if self:IsNPC() and DataMgr.Npc[self.UnitId] then
+    ModelId = DataMgr.Npc[self.UnitId].ModelId
+  end
+  local ModelData = DataMgr.Model[ModelId]
+  if nil == ModelData then
+    ScreenPrint("Model数据为空, 获取动作路径失败, 请检查Model表, ModelId:" .. tostring(self.ModelId) .. " Obj:", self:GetName())
+    return ""
+  end
   if nil == PrePath or "" == PrePath then
     return string.format("%sInteractive/%s%s_Montage", ModelData.MontageFolder, ModelData.MontagePrefix, ActionName)
   else
@@ -1477,6 +1503,22 @@ function BP_CharacterBase_C:OnLeaveGesture01_Idle()
     for i, v in pairs(UniqueIdList.Array) do
       Avatar:RequestDeadRegionOnlineItem(Avatar.CurrentOnlineType, Avatar.Eid, v)
     end
+  end
+end
+
+function BP_CharacterBase_C:CheckCanMountInCurrentRegion()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return true
+  end
+  if DataMgr.SubRegion[Avatar.CurrentRegionId] == nil then
+    return false
+  end
+  local FlyLicense = DataMgr.SubRegion[Avatar.CurrentRegionId].FlyLicense
+  if not FlyLicense or -1 == FlyLicense then
+    return false
+  else
+    return true
   end
 end
 

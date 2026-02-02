@@ -2758,7 +2758,7 @@ return {
     ["1240833"] = {
       CreatorId = 1240833,
       UnitType = "Pet",
-      UnitId = 4121
+      UnitId = 4128
     },
     ["1190444"] = {
       CreatorId = 1190444,
@@ -3234,6 +3234,11 @@ return {
       CreatorId = 1241162,
       UnitType = "Drop",
       UnitId = 11052
+    },
+    ["1241181"] = {
+      CreatorId = 1241181,
+      UnitType = "Pet",
+      UnitId = 4128
     },
     ["1190668"] = {
       CreatorId = 1190668,

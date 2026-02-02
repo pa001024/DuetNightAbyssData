@@ -185,13 +185,16 @@ function M:ChangeCharModel(Info, bIfNoDelay, bNoCharVoice, bForceChange, IsProta
   local CharId
   local AvatarBattleInfo = {}
   local GameMode = UE4.UGameplayStatics.GetGameMode(PlayCharacter)
-  PlayCharacter:ClearWeapon()
   if Char and GameMode then
     CharId = Char.CharId
     AvatarBattleInfo = AvatarUtils:GetDefaultBattleInfo(Avatar, {Char = Char})
     AvatarBattleInfo = {AvatarInfo = AvatarBattleInfo}
     AvatarBattleInfo = GameMode:SimplifyInfoForInit(AvatarBattleInfo)
     AvatarBattleInfo.FromArmory = true
+    if AvatarBattleInfo.AvatarInfo then
+      AvatarBattleInfo.AvatarInfo.MeleeWeapon = nil
+      AvatarBattleInfo.AvatarInfo.RangedWeapon = nil
+    end
     PlayCharacter:InitCharacterInfo(AvatarBattleInfo)
   else
     CharId = Info.CharId
@@ -199,10 +202,8 @@ function M:ChangeCharModel(Info, bIfNoDelay, bNoCharVoice, bForceChange, IsProta
     AvatarBattleInfo.FromArmory = true
     PlayCharacter:ChangeRole(CharId, AvatarBattleInfo)
   end
+  PlayCharacter:ClearWeapon()
   PlayCharacter:SetCharacterTag("Interactive")
-  if PlayCharacter.MeleeWeapon then
-    PlayCharacter.MeleeWeapon:SetActorHideTag(self.UIName, true)
-  end
   if IsProtagonist then
     self.IsProtagonist = true
     self.bWaitForNotifyToChangePet = true
@@ -300,7 +301,6 @@ function M:CreatePlayerActor()
     self.ArmoryPlayer.PlayerAnimInstance:SetKawiiLayerState(EKawaiiLayerState.EKLS_Armory)
   end
   self.ArmoryPlayer:SetCharacterTag("Interactive")
-  self.ArmoryPlayer.IsInArmory = true
   self.ArmoryPlayer:K2_SetActorTransform(Player:GetTransform(), false, nil, false)
   self.ArmoryHelper:SetPlayer(self.ArmoryPlayer)
   self.ArmoryHelper:SetViewActor(self.ArmoryPlayer)
@@ -353,17 +353,6 @@ function M:HidePlayerActor(Tag, IsHidden, bDontSaveTag)
   self.ArmoryPlayer:HideAllEffectCreature(Tag, IsHidden)
 end
 
-function M:HidePlayerActorOnDisplayMount(Tag, IsHidden, bDontSaveTag)
-  if not IsValid(self.ArmoryPlayer) then
-    return
-  end
-  if not bDontSaveTag then
-    self.PlayerActorHideTags[Tag] = IsHidden
-  end
-  self.ArmoryPlayer:SetActorHideTag(Tag, IsHidden, true, false)
-  self.ArmoryPlayer:HideAllEffectCreature(Tag, IsHidden)
-end
-
 function M:ClearPlayerHideTag()
   if not IsValid(self.ArmoryPlayer) then
     return
@@ -398,6 +387,7 @@ function M:StopPlayerMontage()
   self.PlayerMontageTimerKeys = {}
   local Player = self:GetPlayerActor()
   Player:StopMontage()
+  self:StopMVPSequence()
   self.CurMontageTag = "None"
 end
 
@@ -413,7 +403,7 @@ function M:Component_OnClosed()
   self:HidePlayerActor(self.UIName, true)
 end
 
-function M:Component_OnDestruct()
+function M:Component_DestroyActors()
   self.CurrentCharInfo = nil
   for Tag, bIsHidden in pairs(self.PlayerActorHideTags) do
     if bIsHidden then

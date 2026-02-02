@@ -138,13 +138,13 @@ function Component:GM_GetOrSetPlayerWeaponAttr(Eid, WeaponId, Name, Value)
   end
 end
 
-function Component:GM_CreateMonster(Eid, UnitId, Num, Level, CreatorType)
+function Component:GM_CreateMonster(Eid, UnitId, Num, Level, CreatorType, ForceLOD)
   Num = Num or 1
   PrintTable({
     CreateMonster = {UnitId = UnitId, Num = Num}
   }, 2)
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-  GameMode.EMGameState.EventMgr:GMCreateMonster(Eid, UnitId, Num, Level, CreatorType)
+  GameMode.EMGameState.EventMgr:GMCreateMonster(Eid, UnitId, Num, Level, CreatorType, ForceLOD)
 end
 
 function Component:GM_CutToughnessValue(Eid, Value)

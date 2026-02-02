@@ -76,6 +76,7 @@ function M:OpenMechanism(PlayerActorEid)
     Player:EnableInput(Controller)
     self:ClientPlayAnim(Player.Eid, 0, self.Eid)
     EventManager:FireEvent(EventID.OnOpenMechanism, self.Eid)
+    UTalkFunctionLibrary.EnterHeadUIState(Player, EHeadWidgetLocationState.SpecialAction)
   else
     Player:GetMovementComponent().bForbidBalanceTick = true
     Player:SetTickEnabled(ETickCtrlType.DontNeedTick, ETickObjectFlag.FLAG_CHARMOVEMENTCOMPONENT, false)
@@ -85,9 +86,11 @@ function M:OpenMechanism(PlayerActorEid)
     self.PlayerMeshTrans = Player.Mesh:GetRelativeTransform()
     local PointTransform = Point:K2_GetComponentToWorld()
     Player.Mesh:K2_SetWorldTransform(PointTransform, false, nil, false)
+    print(_G.LogTag, "lxz OpenMechanism other", Player.Mesh:GetRelativeTransform())
     Player:GetMovementComponent():SetMovementMode(1)
     self:SetSittingParam(Player, Point, EnterPoint)
     self:ClientPlayAnim(Player.Eid, 0, self.Eid)
+    UTalkFunctionLibrary.EnterHeadUIState(Player, EHeadWidgetLocationState.SpecialAction)
   end
 end
 
@@ -101,11 +104,13 @@ function M:CloseMechanism(PlayerActorEid, IsSuccess)
   if IsValid(Player) then
     Player:GetMovementComponent().bForbidBalanceTick = false
     Player:SetTickEnabled(ETickCtrlType.DontNeedTick, ETickObjectFlag.FLAG_CHARMOVEMENTCOMPONENT, true)
-    Player.OnInteractiveDelegate:Remove(self.ChestInteractiveComponent, self.ChestInteractiveComponent.EndInteractive)
+    print(_G.LogTag, "LXZ CloseMechanism", self.PlayerMeshTrans, Player:GetName(), Player.OnInteractiveDelegate)
+    if IsMainPlayer then
+      Player.OnInteractiveDelegate:Remove(self.ChestInteractiveComponent, self.ChestInteractiveComponent.EndInteractive)
+      Player.CharSpringArmComponent.bArmCollision = true
+      Player.CharSpringArmComponent.CameraProbeSize = self.CameraProbeSize
+    end
     Player:GetMovementComponent().bAllowPhysicsRotationDuringAnimRootMotion = true
-    Player.CharSpringArmComponent.bArmCollision = true
-    Player.CharSpringArmComponent.CameraProbeSize = self.CameraProbeSize
-    print(_G.LogTag, "LXZ CloseMechanism", self.PlayerMeshTrans)
     Player.Mesh:K2_SetRelativeTransform(self.PlayerMeshTrans, false, nil, false)
     local EnterPoint = self:GetLeavingPoint(Player)
     if EnterPoint then
@@ -113,6 +118,7 @@ function M:CloseMechanism(PlayerActorEid, IsSuccess)
       self:SetLeavingParam(Player, self.PlayerAndSeat[PlayerActorEid], EnterPoint)
       self:ClientPlayAnim(PlayerActorEid, 2, self.Eid)
     end
+    UTalkFunctionLibrary.LeaveHeadUIState(Player, EHeadWidgetLocationState.SpecialAction)
   end
   if self.PlayerAndSeat[PlayerActorEid] then
     self.PlayerAndSeat[PlayerActorEid].IsUsed = false
@@ -125,6 +131,7 @@ function M:ForceCloseMechanism(PlayerActorEid, IsSuccess)
     return
   end
   local Player = Battle(self):GetEntity(PlayerActorEid)
+  print(_G.LogTag, "LXZ ForceCloseMechanism", Player:GetName(), Player.OnInteractiveDelegate)
   Player.OnInteractiveDelegate:Remove(self.ChestInteractiveComponent, self.ChestInteractiveComponent.EndInteractive)
   Player.CapsuleComponent:SetCollisionResponseToChannel(ECollisionChannel.ECC_WorldStatic, ECollisionResponse.ECR_Block)
   Player:GetMovementComponent().bAllowPhysicsRotationDuringAnimRootMotion = true
@@ -145,6 +152,8 @@ function M:PlayAnim(PlayerId, InteractiveState, MechanismEid)
   if 1 == InteractiveState then
   end
   if 2 == InteractiveState then
+    print(_G.LogTag, "LXZ EndInteractive PlayAnim")
+    Traceback()
     self.ChestInteractiveComponent:OnEndInteractive(Battle(self):GetEntity(PlayerId), self.ChestInteractiveComponent.MontageName, MechanismEid)
     Player:StopMontage()
     Player:GetMovementComponent().RootMotionZScale = 1
@@ -219,10 +228,11 @@ function M:GetCanOpen(PlayerEid)
   end
 end
 
-function M:IsLocked(Player)
+function M:IsForbidden(Player)
   local PointIndex = self:GetValidPoint()
+  local CurrentName = self.ChestInteractiveComponent.InteractiveName
   for i, v in pairs(PointIndex) do
-    if v then
+    if v.Valid or v.Eid == Player.Eid then
       local Data = DataMgr.CommonUIConfirm[self.ChestInteractiveComponent.CommonUIConfirmID]
       self.ChestInteractiveComponent.InteractiveName = GText(Data.ConfirmText)
       return false

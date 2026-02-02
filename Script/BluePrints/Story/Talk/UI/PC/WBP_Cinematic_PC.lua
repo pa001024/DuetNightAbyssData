@@ -25,6 +25,11 @@ function WBP_Cinematic_PC:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadN
   self.WBP_Story_PlayKey_P:UpdateKeyImg(IsGamePad)
 end
 
+function WBP_Cinematic_PC:PreExitTalkTask(TalkTask, TalkData, OnPreExitTalkTaskFinished)
+  WBP_Cinematic_PC.Super.PreExitTalkTask(self, TalkTask, TalkData, OnPreExitTalkTaskFinished)
+  self.WBP_Story_PlayKey_P:StopAllAnimations()
+end
+
 function WBP_Cinematic_PC:OnPlayKeyActive()
   self.WBP_Story_PlayKey_P:OnActive()
 end

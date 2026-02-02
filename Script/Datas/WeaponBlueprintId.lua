@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -109,6 +112,10 @@ return ReadOnly("WeaponBlueprintId", {
   ["/Game/AssetDesign/Weapon/Shotgun/BP_Shotgun_Baopo"] = {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Shotgun/BP_Shotgun_Baopo",
     WeaponBlueprintId = 20405
+  },
+  ["/Game/AssetDesign/Weapon/Shotgun/BP_Shotgun_Guchu"] = {
+    WeaponBlueprint = "/Game/AssetDesign/Weapon/Shotgun/BP_Shotgun_Guchu",
+    WeaponBlueprintId = 20407
   },
   ["/Game/AssetDesign/Weapon/Shotgun/BP_Shotgun_Qiege"] = {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Shotgun/BP_Shotgun_Qiege",

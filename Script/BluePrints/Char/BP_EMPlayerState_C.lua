@@ -47,6 +47,7 @@ function BP_EMPlayerState_C:RegisterOldBattleInfo(BattleInfo, PlayerInfo)
 end
 
 function BP_EMPlayerState_C:OnRep_PlayerGuideEids()
+  DebugPrint("DebugGuideEid OnRep_PlayerGuideEids")
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
   local SceneMgrComponent = GameInstance:GetSceneManager()
   if IsValid(SceneMgrComponent) then

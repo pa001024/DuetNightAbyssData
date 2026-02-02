@@ -377,7 +377,7 @@ function M:SetPartyTopic(CharacterData)
     local PartyTopicData = self.PartyTopicDataArray[i]
     if PartyTopicData then
       TopicTab:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-      TopicTab:EnableReddot(PartyTopicData.State == EPartyTopicState.CanUnlockPartyTopic or PartyTopicData.State == EPartyTopicState.CanStartPartyTopic)
+      TopicTab:EnableReddot(PartyTopicData.State == EPartyTopicState.CanUnlockPartyTopic or PartyTopicData.State == EPartyTopicState.CanStartPartyTopic or PartyTopicData.State == EPartyTopicState.RedeemResource)
     else
       TopicTab:SetVisibility(ESlateVisibility.Collapsed)
     end
@@ -639,7 +639,7 @@ function M:HandleOnPartyTopicUnlocked(Ret, PartyTopicData)
     return
   end
   local TopicTab = self.TopicTabArray[self.CurrentTabIndex]
-  TopicTab:EnableReddot(PartyTopicData.State == EPartyTopicState.CanUnlockPartyTopic or PartyTopicData.State == EPartyTopicState.CanStartPartyTopic)
+  TopicTab:EnableReddot(PartyTopicData.State == EPartyTopicState.CanUnlockPartyTopic or PartyTopicData.State == EPartyTopicState.CanStartPartyTopic or PartyTopicData.State == EPartyTopicState.RedeemResource)
   self:RefreshPartyTopic()
   EventManager:FireEvent(EventID.OnGotTopicReward)
   self:ExecuteOnGotReward()
@@ -665,6 +665,7 @@ function M:HandleOnOutAnimationFinished()
 end
 
 function M:SetState(State)
+  self.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
   if State == EPartyTopicState.None then
     UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, InviteLogType, "设置状态失败", "设置状态失败，状态无效。")
   elseif State == EPartyTopicState.NotMeetLastPartyTopic then
@@ -680,14 +681,17 @@ function M:SetState(State)
     self.Switch_Type:SetActiveWidgetIndex(1)
     self.Text_Continue:SetText(self.RedeemResourceText)
     self.EnableButton = self.Btn_Continue
+    self.Reddot:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   elseif State == EPartyTopicState.CanUnlockPartyTopic then
     self.Switch_Type:SetActiveWidgetIndex(2)
     self.Text_Unlock:SetText(self.UnlockPartyTopicText)
     self.EnableButton = self.Btn_Unlock
+    self.Reddot:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   elseif State == EPartyTopicState.CanStartPartyTopic then
     self.Switch_Type:SetActiveWidgetIndex(2)
     self.Text_Unlock:SetText(self.StartPartyTopicText)
     self.EnableButton = self.Btn_Unlock
+    self.Reddot:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   elseif State == EPartyTopicState.CanReviewPartyTopic then
     self.Switch_Type:SetActiveWidgetIndex(1)
     self.Text_Continue:SetText(self.ReviewPartyTopicText)

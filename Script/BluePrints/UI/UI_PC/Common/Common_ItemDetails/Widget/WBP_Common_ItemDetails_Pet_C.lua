@@ -39,7 +39,7 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
   self.Pet_AttTips_List02.TextItem:ClearChildren()
   self.ParentWidget.Text_WeaponLevel02:SetText(Level)
   self.ParentWidget.Text_PetAlive:SetText(GText("Pet_ResourcePet"))
-  if 1 == PetData.PetType then
+  if 1 == PetData.PetType or 3 == PetData.PetType then
     self.ParentWidget.Text_PetAlive:SetText(GText("Pet_BattlePet"))
     self.ParentWidget.Star:SetVisibility(ESlateVisibility.Visible)
     for _, v in pairs(DataMgr.PetBreak[ItemId]) do

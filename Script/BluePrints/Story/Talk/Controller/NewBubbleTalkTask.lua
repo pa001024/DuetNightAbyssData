@@ -9,10 +9,7 @@ local EBubblePlayType = {
 }
 local WaitItemUniqueTag = TalkUtils:GetPlayDialogueWaitItemTags()
 local TalkLogType = UE.EStoryLogType.Talk
-local M = Class("BluePrints.Story.Talk.Controller.LightTalkTask")
-
-function M:InitUI()
-end
+local M = Class("BluePrints.Story.Talk.Controller.TalkTaskBase")
 
 function M:Start(TalkTaskData, NodeFinished_Callback)
   if TalkTaskData.TalkActors then
@@ -20,27 +17,35 @@ function M:Start(TalkTaskData, NodeFinished_Callback)
   end
   self:PlaySnapShot()
   self:InitData(TalkTaskData, NodeFinished_Callback)
-  self:InitUI()
   EventManager:AddEvent(EventID.InLoading, self, self.InLoading)
   self:StartPlayDialogue()
 end
 
-function M:Clear(bIsPaused)
+function M:Clear()
   if self.TalkTaskData.TalkActors then
     self.TalkContext:DestoryTalkActors(self, self.TalkTaskData.TalkActors)
   end
-  self:RemoveDialogueEffectSound()
+  self:ClearUI()
   self:ClearWaitTag()
   self:ClearAudio()
   self:ClearAllTimers()
-  if self.TalkContext then
-    self.TalkContext.TalkActionManager:StopAllLookAt(self)
-  end
+  self.TalkActionManager:StopAllLookAt(self)
   self:StopDSL()
-  if not bIsPaused then
-    self:ClearUI()
-    self:ClearEvents()
-  end
+  EventManager:RemoveEvent(EventID.InLoading, self)
+end
+
+function M:InLoading()
+  DebugPrint("BubbleTalkTask:InLoading", self)
+  TalkSubsystem():ForceInterruptTalkTaskData(function(Data)
+    return Data.FirstDialogueId == self.TalkTaskData.FirstDialogueId
+  end)
+end
+
+function M:InitData(TalkTaskData, NodeFinished_Callback)
+  self.NodeFinished_Callback = NodeFinished_Callback
+  self.TalkActionManager = self.TalkContext.TalkActionManager
+  self.TalkTimerManager = self.TalkContext.TalkTimerManager
+  self.WaitQueueManager = self.TalkContext.WaitQueueManager
 end
 
 function M:CheckBubbleInCd()
@@ -72,29 +77,29 @@ function M:PlayDialogue(bPauseResume)
   if NodeType == EDialogueNodeType.Dialogue then
     local Dialogue = self.DialogueIterationComponent:GetDialogue()
     if not Dialogue then
-      DebugPrint("lhr@Dialogue Iteration Error: Dialogue为空")
+      DebugPrint("BubbleTalkTask@Dialogue Iteration Error: Dialogue为空")
       return
     end
-    DebugPrint("M:PlayDialogue:", self.TalkTaskData.TalkNodeId, Dialogue.DialogueId)
+    DebugPrint("BubbleTalkTask:PlayDialogue:", self.TalkTaskData.TalkNodeId, Dialogue.DialogueId)
     self:DisableBubbleUI()
     local DialogueData = self:GetDialogueDataWithCheck(Dialogue)
     if not self:CheckDialogueData(DialogueData, Dialogue.DialogueId) then
-      self:OnTaskPlayDialogueFinished()
+      self:IterateDialogue()
       return
     end
     self:OnPlayingDialogue(Dialogue)
-    self:ConstructWaitTag(DialogueData, self, self.OnTaskPlayDialogueFinished)
+    self:ConstructWaitTag(DialogueData, self, self.IterateDialogue)
     self:ProcessWaitTag_PlayScript(DialogueData, self.WaitQueue)
     self:ProcessWaitTag_UIPlayDialogue(DialogueData, self.WaitQueue)
-    self:ProcessWaitTag_PlayAudio(DialogueData, bPauseResume, true, true, self.WaitQueue)
+    self:ProcessWaitTag_PlayAudio(DialogueData, bPauseResume, true, self.WaitQueue)
   else
-    DebugPrint("lhr@Dialogue Iteration Error: NodeType", NodeType, "不合法")
+    DebugPrint("BubbleTalkTask@Dialogue Iteration Error: NodeType", NodeType, "不合法")
     return
   end
 end
 
 function M:EndDialogue()
-  DebugPrint("lhr@BubbleTalk end")
+  DebugPrint("BubbleTalkTask: End")
   if self.TalkTaskData.BubblePlayType == EBubblePlayType.Once then
     self:Finish(ETalkNodeFinishType.Out)
   elseif self.TalkTaskData.BubblePlayType == EBubblePlayType.StayOnLast then
@@ -104,6 +109,17 @@ function M:EndDialogue()
     self.TalkTimerManager:AddTimer(self, self.TalkTaskData.BubbleDelayLoopSeconds, false, nil, self, function()
       self.DialogueIterationComponent:Start()
     end)
+  end
+end
+
+function M:Finish(TalkNodeFinishType)
+  DebugPrint("BubbleTalkTask:Finish:", self.TalkTaskData.TalkNodeId, self.TalkTaskData.TalkNodeName, self.NodeFinished_Callback)
+  self:TryEndFlowGraph()
+  self:Clear()
+  if self.NodeFinished_Callback and self.NodeFinished_Callback[2] then
+    local NodeFinished_Obj = self.NodeFinished_Callback[1]
+    local NodeFinished_Func = self.NodeFinished_Callback[2]
+    NodeFinished_Func(NodeFinished_Obj, self, TalkNodeFinishType)
   end
 end
 
@@ -124,6 +140,12 @@ function M:ConstructWaitTag(DialogueData, Obj, Func)
   }, Obj, Func)
 end
 
+function M:ProcessWaitTag_PlayScript(DialogueData, WaitQueuePointer)
+  self:RunDSL(DialogueData, function()
+    WaitQueuePointer:CompleteWaitItem(WaitItemUniqueTag.PlayScript)
+  end)
+end
+
 function M:ProcessWaitTag_UIPlayDialogue(DialogueData, WaitQueuePointer)
   DebugPrint("NewBubbleTalkTask ProcessWaitTag_UIPlayDialogue", DialogueData)
   self:RecordDialogueData(DialogueData)
@@ -131,6 +153,25 @@ function M:ProcessWaitTag_UIPlayDialogue(DialogueData, WaitQueuePointer)
   self.TalkTimerManager:AddTimer(self, DialogueData.Duration, false, nil, nil, function()
     WaitQueuePointer:CompleteWaitItem(WaitItemUniqueTag.UIPlayDialogue)
   end)
+end
+
+function M:ProcessWaitTag_PlayAudio(DialogueData, bPauseResume, bIsAttachActor, WaitQueuePointer, bNoWait)
+  if not self.TalkAudioComp then
+    WaitQueuePointer:CompleteWaitItem(WaitItemUniqueTag.PlayAudio)
+    return
+  end
+  if bPauseResume and self.bAudioFinished then
+    WaitQueuePointer:CompleteWaitItem(WaitItemUniqueTag.PlayAudio)
+    return
+  end
+  DebugPrint("NewBubbleTalkTask:ProcessWaitTag_PlayAudio", DialogueData, bPauseResume, self.bAudioFinishe, bNoWait)
+  self.bAudioFinished = false
+  self:PlayAudio(DialogueData, function(bUnFinished)
+    if not bUnFinished then
+      self.bAudioFinished = true
+    end
+    WaitQueuePointer:CompleteWaitItem(WaitItemUniqueTag.PlayAudio)
+  end, bIsAttachActor, bPauseResume, bNoWait)
 end
 
 function M:EnableBubbleUI(DialogueData)
@@ -174,26 +215,55 @@ end
 
 function M:ClearAudio()
   if self.TalkAudioComp then
-    self.TalkAudioComp:Clear(self, self.TalkActor)
+    self.TalkAudioComp:Clear()
   end
+end
+
+function M:OnExceptionInterruptedBySTL()
+  DebugPrint("NewBubbleTalkTask:OnExceptionInterruptedBySTL")
+  TalkUtils:RemovePlayerInvincible()
+  self.NodeFinished_Callback = nil
+end
+
+function M:OnInterrupted()
+  DebugPrint("NewBubbleTalkTask:OnInterrupted")
+  self.bHasInterrupted = true
+  self:Clear()
 end
 
 function M:OnPaused()
-  M.Super.OnPaused(self)
+  DebugPrint("NewBubbleTalkTask:对话被暂停", self)
+  self:ClearWaitTag()
+  self:PauseAllTimers(true)
+  if not self.bAudioFinished then
+    self:PauseAudio()
+  end
+  self:StopDSL()
   self:DisableBubbleUI()
 end
 
-function M:PauseAudio()
-  self:PauseSnapShot()
-  if self.TalkAudioComp then
-    self.TalkAudioComp:OnPaused(self, self.TalkActor)
+function M:OnPauseResumed()
+  if self.bHasInterrupted then
+    return
+  end
+  DebugPrint("NewBubbleTalkTask:对话暂停恢复", self)
+  self:PauseAllTimers(false)
+  self.DialogueIterationComponent:Resume()
+  if not self.bAudioFinished then
+    self:ResumePauseAudio()
   end
 end
 
-function M:ResumePauseAudio()
-  if self.TalkAudioComp then
-    self.TalkAudioComp:OnPauseResumed(self, self.TalkActor)
+function M:CreateComponents()
+  M.Super.CreateComponents(self)
+  if not self.TaskData then
+    return
   end
+  self.TalkTaskData = self.TaskData
+  self.TalkContext = self.TaskData.TalkContext
+  self:CreateDialogueIteratorComponent()
+  self:CreateTalkAudioComponent()
+  self:CreateExpressionComponent()
 end
 
 function M:CheckDialogueData(DialogueData, DialogueId)

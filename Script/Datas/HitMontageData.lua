@@ -13,6 +13,9 @@ T.RT_9 = {"HeavyHit1", "HeavyHit2"}
 T.RT_10 = {"LightHit1"}
 T.RT_11 = {KillSelf = 0}
 T.RT_12 = {"HeavyHit4"}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -53,6 +56,13 @@ return ReadOnly("HitMontageData", {
     HitMontageId = "BossFuer",
     LightHitMontage = T.RT_8
   },
+  BossHengmeng = {
+    DeadDissolveTime = 1,
+    DeadMontage = T.RT_2,
+    HitAddtiveDuration = 0.3,
+    HitMontageId = "BossHengmeng",
+    LightHitMontage = T.RT_8
+  },
   BossJishi = {
     DeadDissolveTime = 1,
     DeadMontage = T.RT_2,
@@ -71,6 +81,13 @@ return ReadOnly("HitMontageData", {
     HitAddtiveDuration = 0.3,
     HitMontageId = "BossJuque",
     LightHitMontage = T.RT_6
+  },
+  BossJuqueStage2 = {
+    DeadDissolveTime = 1,
+    DeadMontage = {"Die01"},
+    HitAddtiveDirection = 1,
+    HitAddtiveDuration = 0.3,
+    HitMontageId = "BossJuqueStage2"
   },
   BossJushi = {
     DeadDissolveTime = 1,

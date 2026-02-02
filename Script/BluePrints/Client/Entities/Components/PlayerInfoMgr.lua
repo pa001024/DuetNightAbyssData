@@ -138,7 +138,7 @@ end
 
 function Component:CheckFirstMonster(UnitId, bUpdate)
   local IsFirstMonster = not self.FirstMonsters:HasValue(UnitId)
-  if IsFirstMonster and false == bUpdate then
+  if bUpdate then
     self:CallServerMethod("UpdateFirstMonster", UnitId)
   end
   return IsFirstMonster
@@ -146,7 +146,7 @@ end
 
 function Component:CheckStrongGuideFirstMonster(UnitId, bUpdate)
   local IsStrongGuideFirstMonster = not self.FirstStrongMonsters:HasValue(UnitId)
-  if IsStrongGuideFirstMonster and 0 ~= UnitId then
+  if bUpdate then
     self:CallServerMethod("UpdateStrongGuideFirstMonster", UnitId)
   end
   return IsStrongGuideFirstMonster

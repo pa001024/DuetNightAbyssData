@@ -17,33 +17,32 @@ end
 
 function Component:GetNPCServerSkinIdByUnitId(NpcId)
   if not NpcId or not DataMgr.Npc[NpcId] then
-    return
+    return 0
   end
   local NpcInfo = DataMgr.Npc[NpcId]
-  if NpcInfo.NpcType ~= "Show" or not NpcInfo.CharId then
-    return
-  end
-  local CharId = NpcInfo.CharId
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
-    return
-  end
-  local SkinId
-  for key, Char in pairs(Avatar.Chars) do
-    if Char.CharId == CharId then
-      local Appearance = Char.AppearanceSuits[Char.CurrentAppearanceIndex]
-      SkinId = Appearance.SkinId
-      break
+  if NpcInfo.PlayerInfo and NpcInfo.CharId ~= nil or NpcInfo.NpcType == "Show" and NpcInfo.CharId ~= nil then
+    local CharId = NpcInfo.CharId
+    local Avatar = GWorld:GetAvatar()
+    if not Avatar then
+      return 0
     end
+    local SkinId
+    for key, Char in pairs(Avatar.Chars) do
+      if Char.CharId == CharId then
+        local Appearance = Char.AppearanceSuits[Char.CurrentAppearanceIndex]
+        SkinId = Appearance.SkinId
+        break
+      end
+    end
+    local CommonChar = Avatar.CommonChars[CharId]
+    local Skin = CommonChar.OwnedSkins[SkinId]
+    local SkinInfo = DataMgr.Skin[SkinId]
+    if not SkinInfo or not SkinInfo.NpcSkinModelId then
+      return 0
+    end
+    return SkinInfo.NpcSkinModelId
   end
-  local CommonChar = Avatar.CommonChars[CharId]
-  local Skin = CommonChar.OwnedSkins[SkinId]
-  local SkinInfo = DataMgr.Skin[SkinId]
-  if not SkinInfo or not SkinInfo.NpcSkinModelId then
-    return
-  end
-  local ModelId = SkinInfo.NpcSkinModelId
-  return ModelId
+  return 0
 end
 
 function Component:GetRotationMontagePath()

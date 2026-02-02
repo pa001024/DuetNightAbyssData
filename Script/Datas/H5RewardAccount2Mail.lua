@@ -6670,6 +6670,9 @@ T.RT_1514 = {
   MailID = T.RT_1513,
   ServerId = 10001
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

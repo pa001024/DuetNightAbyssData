@@ -307,6 +307,15 @@ function BP_TempleEnergySupply_C:OutRecover_Lua(Monster)
         self:OnFxObjectCreated(FXObject)
         UE4.UNiagaraFunctionLibrary.OverrideSystemUserVariableSkeletalMeshComponent(FXObject, "Skeletal Mesh", Monster.Mesh)
         FXObject:SetNiagaraVariableVec3("AttarctionPosition", self.AttarctionPosition:K2_GetComponentLocation())
+        if self.AttarctionStrength then
+          FXObject:SetNiagaraVariableFloat("AttarctionStrength", self.AttarctionStrength)
+        end
+        if self.ParticleNumberMul then
+          FXObject:SetNiagaraVariableFloat("ParticleNumberMul", self.ParticleNumberMul)
+        end
+        if self.ParticleSizeScale then
+          FXObject:SetNiagaraVariableFloat("ParticleSizeScale", self.ParticleSizeScale)
+        end
       end
     end
     Monster.EnergySupplyCheck = -1

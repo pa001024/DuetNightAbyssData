@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -8,6 +11,13 @@ return ReadOnly("Shop", {
     ShopName = "Abyss_ExchangeStore",
     ShopUIName = "ShopActivity",
     SystemName = "AbyssShop"
+  },
+  AutoChessShop = {
+    MainTabId = {10006},
+    ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AutoChess/WBP_Activity_AutoChess_OverViewBG.WBP_Activity_AutoChess_OverViewBG'",
+    ShopName = "UI_AutoChess_ShopName",
+    ShopUIName = "ShopActivity",
+    SystemName = "AutoChessShop"
   },
   ExploreBadgeShop = {
     MainTabId = {
@@ -30,6 +40,18 @@ return ReadOnly("Shop", {
     ShopUIName = "ShopActivity",
     SpawnNPCId = 900010,
     SystemName = "FishingShop"
+  },
+  GiftShop = {
+    MainTabId = {
+      90001,
+      90002,
+      90003
+    },
+    PlaySystemUIBGM = "event:/bgm/1_0/0083_system_shop_normal",
+    ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/BG/WBP_Shop_BG_Normal.WBP_Shop_BG_Normal'",
+    ShopName = "MAIN_UI_SHOP",
+    ShopUIName = "ShopMain",
+    SystemName = "GiftShop"
   },
   HuaxuEventShop = {
     MainTabId = {10001},

@@ -10,8 +10,15 @@ function M:OnListItemObjectSet(Content)
   self.DungeonData = Content.DungeonData
   self.DungeonIds = Content.DungeonIds
   self.Parent = Content.Parent
+  Content.SelfWidget = self
   self:InitItemContent()
   self.ScrollBox_List:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Wrap)
+end
+
+function M:BP_OnEntryReleased()
+  if self.Content then
+    self.Content.SelfWidget = nil
+  end
 end
 
 function M:SetWalnutTitleMatColor(WalnutType)

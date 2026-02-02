@@ -5,6 +5,7 @@ local Stack = StrLib.Stack
 local EMCache = require("EMCache.EMCache")
 local GMVariable = require("BluePrints.UI.GMInterface.GMVariable")
 local CommonUtils = require("Utils.CommonUtils")
+local GameFlowUtils = require("Utils.GameFlowUtils")
 local BP_UIManagerComponent_C = Class({
   "BluePrints.Common.TimerMgr"
 })
@@ -82,7 +83,10 @@ function BP_UIManagerComponent_C:InitUIStates()
     end
   elseif SceneManager then
     local UInputSettings = UE4.UInputSettings.GetInputSettings()
-    if UInputSettings.GetInputSettings().bUseMouseForTouch then
+    local bPCCloudGame = UE4.UUCloudGameInstanceSubsystem.IsPCCloudGame()
+    if bPCCloudGame then
+      SceneManager:UpdateUIDPIStandValue(UIConst.DPIBaseOnSize.PC.X, UIConst.DPIBaseOnSize.PC.Y)
+    elseif UInputSettings.GetInputSettings().bUseMouseForTouch then
       SceneManager:UpdateUIDPIStandValue(UIConst.DPIBaseOnSize.Mobile.X, UIConst.DPIBaseOnSize.Mobile.Y)
     else
       SceneManager:UpdateUIDPIStandValue(UIConst.DPIBaseOnSize.PC.X, UIConst.DPIBaseOnSize.PC.Y)
@@ -477,6 +481,30 @@ function BP_UIManagerComponent_C:PopCurrentModeStateTag(ModeStateTag)
   return Result
 end
 
+function BP_UIManagerComponent_C:GetTopUIWidgetInAnimEndTime()
+  local TopUIState = UIManager(self):GetCurrentState()
+  if TopUIState and TopUIState.In then
+    if type(TopUIState.In) == "userdata" and type(TopUIState.In.GetEndTime) == "function" then
+      return TopUIState.In:GetEndTime() or UIConst.AnimWithJumpConfig.Normal.InAnimWithJumpTime
+    elseif "userdata" == type(TopUIState.Auto_In) and "function" == type(TopUIState.Auto_In.GetEndTime) then
+      return TopUIState.Auto_In:GetEndTime() or UIConst.AnimWithJumpConfig.Normal.InAnimWithJumpTime
+    end
+  end
+  return UIConst.AnimWithJumpConfig.Normal.InAnimWithJumpTime
+end
+
+function BP_UIManagerComponent_C:GetTopUIWidgetOutAnimEndTime()
+  local TopUIState = UIManager(self):GetCurrentState()
+  if TopUIState and TopUIState.Out then
+    if type(TopUIState.Out) == "userdata" and type(TopUIState.Out.GetEndTime) == "function" then
+      return TopUIState.Out:GetEndTime() or UIConst.AnimWithJumpConfig.Normal.OutAnimWithJumpTime
+    elseif "userdata" == type(TopUIState.Auto_Out) and "function" == type(TopUIState.Auto_Out.GetEndTime) then
+      return TopUIState.Auto_Out:GetEndTime() or UIConst.AnimWithJumpConfig.Normal.OutAnimWithJumpTime
+    end
+  end
+  return UIConst.AnimWithJumpConfig.Normal.OutAnimWithJumpTime
+end
+
 function BP_UIManagerComponent_C:PlaceJumpUIToTop(JumpUIObj, JumpUIName)
   self:PlaceItemToQueueBack(JumpUIObj)
   self:PlaceUIStateToTop(JumpUIName)
@@ -486,7 +514,11 @@ function BP_UIManagerComponent_C:PrintJumpPageDequeInfo()
   local DequeSize = self.UIJumpToDeque:Size()
   for i = 1, DequeSize do
     local CurrentFirstUIObj = self.UIJumpToDeque:Get(i)
-    DebugPrint("BP_UIManagerComponent_C: PrintJumpPageDequeInfo, The Info is: ", CurrentFirstUIObj:GetName(), CurrentFirstUIObj:GetCameraViewCurrentTarget():GetName())
+    if type(CurrentFirstUIObj.GetCameraViewCurrentTarget) == "function" then
+      DebugPrint("BP_UIManagerComponent_C: PrintJumpPageDequeInfo, The Info is: ", CurrentFirstUIObj:GetName(), CurrentFirstUIObj:GetCameraViewCurrentTarget():GetName())
+    else
+      DebugPrint("BP_UIManagerComponent_C: PrintJumpPageDequeInfo, The Info is: ", CurrentFirstUIObj:GetName(), "Has No CameraViewTarget")
+    end
   end
 end
 
@@ -498,6 +530,7 @@ function BP_UIManagerComponent_C:AddToJumpPageDeque(UIObj)
   if DequeSize >= 3 then
     local FirstUIObj = self.UIJumpToDeque:PopFront()
     if IsValid(FirstUIObj) then
+      FirstUIObj.IsNeedSearchInStack = true
       if type(FirstUIObj.Close) == "function" then
         FirstUIObj:Close()
       else
@@ -1254,9 +1287,9 @@ function BP_UIManagerComponent_C:UnLoadUI(UIConfigName, UIName)
   if UIObj and UIObj.IsAddInDeque then
     self:RemoveToJumpPageDeque(UIObj)
   end
-  self:SetEntitiesVisibility(UIName, UIConfig.IsHideBattleUnit == UIConst.EnumHideBattleUnitStyle.NormalShowAndHideAll, UIConfig.IsHideBattleUnit == UIConst.EnumHideBattleUnitStyle.NormalShowAndHideAllExceptSelf, false)
+  self:SetEntitiesVisibility(UIConfigName, UIConfig.IsHideBattleUnit == UIConst.EnumHideBattleUnitStyle.NormalShowAndHideAll, UIConfig.IsHideBattleUnit == UIConst.EnumHideBattleUnitStyle.NormalShowAndHideAllExceptSelf, false)
   if UIConfig.IsHideDrop then
-    self:SetAllBattleEntityHidden(false, UIName, "Drop")
+    self:SetAllBattleEntityHidden(false, UIConfigName, "Drop")
   end
   if UIConfig.PauseAfterLoadingState and UIObj then
     self:TryResumeAfterLoadingMgr(UIConfig.PauseAfterLoadingState)
@@ -1268,17 +1301,16 @@ function BP_UIManagerComponent_C:UnLoadUI(UIConfigName, UIName)
     local bIsRemoveInStack = not not UIConfig.addtostack
     self:UnLoadUI_CPP(UIName, bIsRemoveInStack, UIObj and UIObj.IsNeedSearchInStack)
   end
-  if self.AsyncLoadHandlers[UIName] then
-    self.AsyncUnloadFlags[UIName] = true
+  if self.AsyncLoadHandlers[UIConfigName] then
+    self.AsyncUnloadFlags[UIConfigName] = true
   end
+  EventManager:FireEvent(EventID.UnLoadUI, UIName)
   if self.FlowList[UIName] then
     local flow = self.FlowList[UIName]
     self.FlowList[UIName] = nil
-    local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-    FlowManager:RemoveFlow(flow)
+    GameFlowUtils:RemoveFlow(flow)
     DebugPrint("WXT UIManagerComponent_C:RemoveFlow", UIName)
   end
-  EventManager:FireEvent(EventID.UnLoadUI, UIName)
 end
 
 function BP_UIManagerComponent_C:DealWithOtherWidgetsVisibilityByUIHide(UIConfigName, UIName, UIStatetag)
@@ -1448,8 +1480,26 @@ function BP_UIManagerComponent_C:GetLogMask()
   return _G.LogTag
 end
 
+function BP_UIManagerComponent_C:CheckIsExistPopUpWidget()
+  local bIsExistPopUp = false
+  for key, value in pairs(self.PopUpUIWidgetRecord) do
+    local CheckUIWidget = self:GetUIObj(key)
+    if CheckUIWidget and not CheckUIWidget:IsBeingRemoveState() then
+      if not CheckUIWidget:IsHide() then
+        bIsExistPopUp = true
+        break
+      elseif CheckUIWidget:IsOnlyHideWithDesireTag(UIConst.CommonHideTagName.UIStackChange) then
+        bIsExistPopUp = true
+        break
+      end
+    end
+  end
+  return bIsExistPopUp
+end
+
 function BP_UIManagerComponent_C:CloseResidentUI(PopUIName)
-  if not IsEmptyTable(self.PopUpUIWidgetRecord) then
+  DebugPrint("HY@ UIManagerComponent CloseResidentUI:", PopUIName)
+  if self:CheckIsExistPopUpWidget() then
     if nil ~= PopUIName then
       self.PopUpUIWidgetRecord[PopUIName] = 1
     end
@@ -1496,10 +1546,11 @@ function BP_UIManagerComponent_C:CloseResidentUI(PopUIName)
 end
 
 function BP_UIManagerComponent_C:OpenResidentUI(PopUIName)
+  DebugPrint("HY@ UIManagerComponent OpenResidentUI:", PopUIName)
   if nil ~= PopUIName then
     self.PopUpUIWidgetRecord[PopUIName] = nil
   end
-  if not IsEmptyTable(self.PopUpUIWidgetRecord) then
+  if self:CheckIsExistPopUpWidget() then
     return
   end
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
@@ -1623,7 +1674,35 @@ function BP_UIManagerComponent_C:ShowDisconnectUIConfirm(PopupId, IsStopGame, Pa
   return PopupUI
 end
 
-function BP_UIManagerComponent_C:ShowCommonPopupUI(PopupId, Params, ParentWidget, Coroutine)
+function BP_UIManagerComponent_C:_BlockAllUIInput(bBlock, Reason)
+  local LoadingReconnectUi = self:GetUIObj("LoadingReconnect")
+  if false == bBlock then
+    if LoadingReconnectUi and LoadingReconnectUi.bDisplayOnly then
+      LoadingReconnectUi:Close()
+    end
+    if self:IsExistTimer(self.ReconnectUITimer) then
+      self:RemoveTimer(self.ReconnectUITimer)
+    end
+    self.BlockingReasons[Reason] = nil
+  else
+    if not LoadingReconnectUi and "SP_DisplayOnly" ~= Reason then
+      if self:IsExistTimer(self.ReconnectUITimer) then
+        self:RemoveTimer(self.ReconnectUITimer)
+      end
+      local _, TimerKey = self:AddTimer(UIConst.BlockingTime, function()
+        if not self:GetUIObj("LoadingReconnect") then
+          self:LoadUINew("LoadingReconnect", true)
+        end
+      end)
+      self.ReconnectUITimer = TimerKey
+    end
+    self.BlockingReasons[Reason] = 1
+  end
+  DebugPrint(WarningTag, string.format("BP_UIManagerComponent_C:_BlockAllUIInput(%s, %s)", bBlock, Reason))
+  self:BlockAllUIInput(bBlock, Reason)
+end
+
+function BP_UIManagerComponent_C:ShowCommonPopupUI(PopupId, Params, ParentWidget, Coroutine, ZOrderOverride)
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
   if not GameInstance:CheckCanShowPopup() then
     GameInstance:RequestShowPopup(PopupId, Params, ParentWidget)
@@ -1632,10 +1711,14 @@ function BP_UIManagerComponent_C:ShowCommonPopupUI(PopupId, Params, ParentWidget
   local PopupData = DataMgr.CommonPopupUIContext[PopupId]
   local PopupStyle = DataMgr.CommonPopupUIStyle[PopupData.Style]
   local PopupUI
+  local SystemUIConfig = DataMgr.SystemUI.CommonDialog
+  local Param = {}
   if Coroutine then
-    PopupUI = self:LoadUIAsync("CommonDialog", Coroutine, Params, ParentWidget)
+    table.insert(Param, Coroutine)
+    table.insert(Param, "Async")
+    PopupUI = self:LoadUI(UIConst.LoadInConfig, "CommonDialog", ZOrderOverride or SystemUIConfig.ZOrder, table.unpack(Param))
   else
-    PopupUI = self:LoadUINew("CommonDialog", PopupId, Params, ParentWidget)
+    PopupUI = self:LoadUI(UIConst.LoadInConfig, "CommonDialog", ZOrderOverride or SystemUIConfig.ZOrder, table.unpack(Param))
   end
   PopupUI:ShowPopup(PopupId, Params, ParentWidget)
   if Params and Params.BindScript and PopupUI.Script then
@@ -2020,8 +2103,10 @@ function BP_UIManagerComponent_C:CreateOrGetArmoryPlayerActor(Char, InAvatar)
       end
       actor:ForceClearActorHideTag()
       actor.CapsuleComponent:SetCollisionEnabled(ECollisionEnabled.NoCollision)
+      actor.CameraFadeCapsule:SetCollisionEnabled(ECollisionEnabled.NoCollision)
       actor.Mesh:SetCollisionEnabled(ECollisionEnabled.NoCollision)
       actor.Mesh:SetTickableWhenPaused(true)
+      actor.Mesh.bComponentUseFixedSkelBounds = false
       actor.DitherDisabled = true
     end
     self.ArmoryPlayer = actor
@@ -2356,6 +2441,15 @@ function BP_UIManagerComponent_C:SwitchUINpcCamera(bNpcCamera, UIName, NpcId, Pa
       UINpcActorForCreate.BaiBox:SetHiddenInGame(false, false)
     end
   end
+  if SpawnNpcConfig.UseXFOV then
+    if bNpcCamera then
+      DebugPrint("SwitchFixedCamera：固定镜头锁X轴向")
+      UE.UUIFunctionLibrary.StartHorizontalFOV()
+    else
+      DebugPrint("SwitchFixedCamera：固定镜头锁恢复轴向")
+      UE.UUIFunctionLibrary.StopHorizontalFOV()
+    end
+  end
   Params = Params or {}
   local RecoverTime, IsHaveInOutAnim = Params.RecoverTime, Params.IsHaveInOutAnim
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
@@ -2480,6 +2574,11 @@ function BP_UIManagerComponent_C:SwitchFixedCamera(bInOut, NpcId, Hidetag, Origi
     if PlayerCharacter and Hidetag then
       PlayerCharacter:SetActorHideTag(Hidetag, true)
     end
+    if SpawnNpcConfig.UseXFOV then
+      DebugPrint("SwitchFixedCamera：固定镜头锁X轴向")
+      UE.UUIFunctionLibrary.StartHorizontalFOV()
+    end
+    DebugPrint("SwitchFixedCamera:切换到固定镜头：" .. (cameraPath or "cameraPath为空"))
   else
     if IsValid(OriginSelf.CameraHandle) then
       ULTweenBPLibrary.KillIfIsTweening(OriginSelf, OriginSelf.CameraHandle)
@@ -2493,6 +2592,10 @@ function BP_UIManagerComponent_C:SwitchFixedCamera(bInOut, NpcId, Hidetag, Origi
     end
     if PlayerCharacter and Hidetag then
       PlayerCharacter:SetActorHideTag(Hidetag, false)
+    end
+    if SpawnNpcConfig.UseXFOV then
+      DebugPrint("SwitchFixedCamera：固定镜头锁恢复轴向")
+      UE.UUIFunctionLibrary.StopHorizontalFOV()
     end
   end
 end
@@ -2823,6 +2926,7 @@ function BP_UIManagerComponent_C:LaunchAfterLoadingMgr()
   self:DestroyAfterLoadingMgr()
   local AfterLoadingMgr = require("BluePrints.UI.Common.AfterLoadingMgr")
   self.AfterLoadingMgr = AfterLoadingMgr.New()
+  EventManager:RemoveEvent(EventID.OnGuideEnd, self)
   EventManager:AddEvent(EventID.OnGuideEnd, self.AfterLoadingMgr, function(_, GuidId)
     self.AfterLoadingMgr.bGuideEndPending = true
     self:TryResumeAfterLoadingMgr({
@@ -2831,7 +2935,19 @@ function BP_UIManagerComponent_C:LaunchAfterLoadingMgr()
       "DynamicQuest"
     })
   end)
+  self.BlockingReasons = {}
+  EventManager:RemoveEvent(EventID.OnNetDisconnect, self)
+  EventManager:AddEvent(EventID.OnNetDisconnect, self, self.ResetAllBlockReasons)
+  EventManager:RemoveEvent(EventID.OnConnectSuccess, self)
+  EventManager:AddEvent(EventID.OnConnectSuccess, self, self.ResetAllBlockReasons)
   self.AfterLoadingMgr:Continue()
+end
+
+function BP_UIManagerComponent_C:ResetAllBlockReasons()
+  for BlockReason, _ in ipairs(self.BlockingReasons) do
+    self:_BlockAllUIInput(false, BlockReason)
+  end
+  self.BlockingReasons = {}
 end
 
 function BP_UIManagerComponent_C:DestroyAfterLoadingMgr()

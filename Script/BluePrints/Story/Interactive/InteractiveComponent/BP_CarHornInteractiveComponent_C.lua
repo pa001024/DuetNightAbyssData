@@ -11,14 +11,9 @@ function BP_CarHornInteractiveComponent_C:IsCanInteractive(PlayerActor)
   if not self.Owner then
     return
   end
-  local Components = TArray(USceneComponent)
-  local Root = self.Owner:K2_GetRootComponent()
-  Root:GetChildrenComponents(true, Components)
-  for i = 1, Components:Length() do
-    local Component = Components:GetRef(i)
-    if Component.IsUsed then
-      return true
-    end
+  local MainPlayer = UGameplayStatics.GetPlayerCharacter(self, 0)
+  if self.Owner.PlayerAndSeat[MainPlayer.Eid] then
+    return true
   end
   return false
 end

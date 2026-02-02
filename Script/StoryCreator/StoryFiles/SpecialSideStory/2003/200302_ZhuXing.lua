@@ -185,6 +185,7 @@ return {
             pos = {x = 1517.6666666666667, y = 86},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/SpecialSideStory/2003/200302/20030203.20030203'",
               TalkType = "Guide",
@@ -242,6 +243,7 @@ return {
             pos = {x = 2175.393589743589, y = 355.134188034188},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/SpecialSideStory/2003/200302/20030204.20030204'",
               TalkType = "Guide",
@@ -261,7 +263,7 @@ return {
       key = "17503349595987038897",
       type = "StoryNode",
       name = "任务节点",
-      pos = {x = 2072.8661718398566, y = 287.12986270022884},
+      pos = {x = 2075.3661718398566, y = 287.12986270022884},
       propsData = {
         QuestId = 20030202,
         QuestDescriptionComment = "",
@@ -354,9 +356,10 @@ return {
             key = "17503350133667039481",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1755.25, y = 388},
+            pos = {x = 1755.25, y = 386.75},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/SpecialSideStory/2003/200302/20030205.20030205'",
               TalkType = "FixSimple",
@@ -380,6 +383,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -507,6 +511,7 @@ return {
             pos = {x = 1814, y = 398},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/SpecialSideStory/2003/200302/20030206.20030206'",
               TalkType = "FixSimple",
@@ -530,6 +535,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -561,7 +567,7 @@ return {
       key = "17503351070927041125",
       type = "StoryNode",
       name = "任务节点",
-      pos = {x = 2696.853070175439, y = 315.42543859649123},
+      pos = {x = 2699.353070175439, y = 315.42543859649123},
       propsData = {
         QuestId = 20030204,
         QuestDescriptionComment = "",
@@ -687,6 +693,7 @@ return {
             pos = {x = 1444, y = 67.6},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/SpecialSideStory/2003/200302/20030208.20030208'",
               TalkType = "Guide",
@@ -716,6 +723,7 @@ return {
             pos = {x = 2378.4827586206898, y = 338.3724137931035},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/SpecialSideStory/2003/200302/20030207.20030207'",
               TalkType = "QuestImpression",
@@ -739,6 +747,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -806,7 +815,7 @@ return {
             key = "17632068821251006699",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 2366.133064516129, y = 165.00403225806443},
+            pos = {x = 2373.875, y = 168.87499999999991},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "SetTOD_0",
@@ -829,7 +838,8 @@ return {
         SubRegionId = 104110,
         StoryGuideType = "Npc",
         StoryGuidePointName = "Npc_ZhaoQian_2110111",
-        bIsPlayBlackScreenOnComplete = false
+        bIsPlayBlackScreenOnComplete = false,
+        SubRegionIdList = {}
       },
       questNodeData = {
         lineData = {
@@ -911,6 +921,7 @@ return {
             pos = {x = 1276.041666666666, y = 618.3068181818182},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/SpecialSideStory/2003/200302/20030201.20030201'",
               TalkType = "QuestImpression",
@@ -933,6 +944,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -974,6 +986,7 @@ return {
             pos = {x = 1965.567028985508, y = 538.5301383399209},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/SpecialSideStory/2003/200302/20030202.20030202'",
               TalkType = "QuestImpression",
@@ -997,6 +1010,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",

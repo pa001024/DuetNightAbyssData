@@ -104,6 +104,12 @@ function Common_Dialog_ContentBase:ShowGamepadShortcut(Index)
   end
 end
 
+function Common_Dialog_ContentBase:ShowAllGamepadShortcut()
+  if self.Owner and self.Owner.ShowAllGamepadShortcut then
+    self.Owner:ShowAllGamepadShortcut()
+  end
+end
+
 function Common_Dialog_ContentBase:ShowGamepadCloseBtn(bShow)
   if self.Owner then
     self.Owner:ShowGamepadCloseBtn(bShow)

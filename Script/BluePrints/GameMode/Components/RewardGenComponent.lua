@@ -70,6 +70,9 @@ function Component:TriggerRewardEvent(UnitId, Reason, Transform, ExtraInfo, Call
   ExtraInfo = ExtraInfo or {}
   local AvatarEid = self:GetAvatarEidByBattleEid(rawget(ExtraInfo, "SourceEid"))
   ExtraInfo.Avatar = AvatarEid
+  if Reason == CommonConst.RewardReason.MonsterDead and not AvatarEid then
+    ExtraInfo.Avatar = -1
+  end
   return self:AddCacheGenUnitReward(UnitId, Reason, Transform, ExtraInfo, Callback)
 end
 
@@ -246,7 +249,7 @@ function Component:HandleRewardDrop(Drops, Reason, Transform, ExtraInfo, OtherPa
   end
 end
 
-function Component:TriggerGenerateRewardForMonsterDeath(UnitId, Transform, UniqueSign, KillerEid, bKilledByPlayer, WeaponType, Level, IsEliteMonster, IsSummonMonster, MonEid, DamageCauserLocation)
+function Component:TriggerGenerateRewardForMonsterDeath(UnitId, Transform, UniqueSign, KillerEid, bKilledByPlayer, WeaponType, Level, IsSummonMonster, MonEid, DamageCauserLocation)
   Transform = UE4.FTransform(Transform.Rotation, Transform.Translation)
   if "" == WeaponType then
     WeaponType = nil
@@ -257,7 +260,6 @@ function Component:TriggerGenerateRewardForMonsterDeath(UnitId, Transform, Uniqu
     bKilledByPlayer = bKilledByPlayer,
     WeaponType = WeaponType,
     Level = Level,
-    IsEliteMonster = IsEliteMonster,
     IsSummonMonster = IsSummonMonster
   }
   

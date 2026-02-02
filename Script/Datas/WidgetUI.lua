@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -43,6 +46,11 @@ return ReadOnly("WidgetUI", {
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Fort/WBP_Activity_Fort_Battle.WBP_Activity_Fort_Battle'",
     UIName = "ActivityFortBattle"
   },
+  ActivityReturnTabSubItem01 = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Return/Tab/WBP_Activity_ReturnTabSubItem01.WBP_Activity_ReturnTabSubItem01'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Return/Tab/WBP_Activity_ReturnTabSubItem01.WBP_Activity_ReturnTabSubItem01'",
+    UIName = "ActivityReturnTabSubItem01"
+  },
   ActivityTryOutAvatarNeed = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/TryOut/WBP_Activity_TryOut_AvatarNeed.WBP_Activity_TryOut_AvatarNeed'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/TryOut/WBP_Activity_TryOut_AvatarNeed.WBP_Activity_TryOut_AvatarNeed'",
@@ -55,7 +63,7 @@ return ReadOnly("WidgetUI", {
   },
   ActivityWuyoushengTeamBuild = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/Wuyousheng/WBP_Activity_Wuyousheng_TeamBuild_P.WBP_Activity_Wuyousheng_TeamBuild_P'",
-    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/Wuyousheng/WBP_Activity_Wuyousheng_Main_M.WBP_Activity_Wuyousheng_Main_M'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/Wuyousheng/WBP_Activity_Wuyousheng_TeamBuild_M.WBP_Activity_Wuyousheng_TeamBuild_M'",
     UIName = "ActivityWuyoushengTeamBuild"
   },
   AddFriend = {
@@ -71,11 +79,6 @@ return ReadOnly("WidgetUI", {
   AimLockedPhone = {
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_AimLocked_M.WBP_Battle_AimLocked_M'",
     UIName = "AimLockedPhone"
-  },
-  AnnouncementDefaultContent = {
-    BPPath = "WidgetBlueprint'/Game/UI/WBP/Announcement/Widget/WBP_Announcement_DefaultContent.WBP_Announcement_DefaultContent'",
-    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Announcement/Widget/WBP_Announcement_DefaultContent.WBP_Announcement_DefaultContent'",
-    UIName = "AnnouncementDefaultContent"
   },
   ArchiveShowItem = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Archive/Widget/WBP_Archive_ShowItem.WBP_Archive_ShowItem'",
@@ -123,6 +126,11 @@ return ReadOnly("WidgetUI", {
   ArmoryPetAttribute = {
     UIName = "ArmoryPetAttribute"
   },
+  ArmoryUnlockDialog = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Unit/WBP_Armory_UnlockDialog.WBP_Armory_UnlockDialog'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Unit/WBP_Armory_UnlockDialog.WBP_Armory_UnlockDialog'",
+    UIName = "ArmoryUnlockDialog"
+  },
   ArmoryWeaponAttribute = {
     UIName = "ArmoryWeaponAttribute"
   },
@@ -137,6 +145,55 @@ return ReadOnly("WidgetUI", {
   AtkRangedPhone = {
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_AtkRanged_M.WBP_Battle_AtkRanged_M'",
     UIName = "AtkRangedPhone"
+  },
+  AutoChessBattleInfoItem = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AutoChess/Settlement/WBP_Activity_AutoChess_SettlementStatistics_Item.WBP_Activity_AutoChess_SettlementStatistics_Item'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AutoChess/Settlement/WBP_Activity_AutoChess_SettlementStatistics_Item.WBP_Activity_AutoChess_SettlementStatistics_Item'",
+    UIName = "AutoChessBattleInfoItem"
+  },
+  AutoChessEquipsPage = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/AutoChess/WBP_Activity_AutoChess_Overview_Equipment_P.WBP_Activity_AutoChess_Overview_Equipment_P'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/AutoChess/WBP_Activity_AutoChess_Overview_Equipment_M.WBP_Activity_AutoChess_Overview_Equipment_M'",
+    UIName = "AutoChessEquipsPage"
+  },
+  AutoChessItem = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AutoChess/Battle_Statistics/WBP_Activity_AutoChess_BattleStatisticsTips_Item.WBP_Activity_AutoChess_BattleStatisticsTips_Item'",
+    UIName = "AutoChessItem"
+  },
+  AutoChessLevelSelectPage = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/AutoChess/WBP_Activity_AutoChess_LevelSelectPage_P.WBP_Activity_AutoChess_LevelSelectPage_P'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/AutoChess/WBP_Activity_AutoChess_LevelSelectPage_M.WBP_Activity_AutoChess_LevelSelectPage_M'",
+    UIName = "AutoChessLevelSelectPage"
+  },
+  AutoChessLinearLevel = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AutoChess/LevelSelect/WBP_Activity_AutoChess_Level_Linear.WBP_Activity_AutoChess_Level_Linear'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AutoChess/LevelSelect/WBP_Activity_AutoChess_Level_Linear.WBP_Activity_AutoChess_Level_Linear'",
+    UIName = "AutoChessLinearLevel"
+  },
+  AutoChessMainPage = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/AutoChess/WBP_Activity_AutoChess_MainPage_P.WBP_Activity_AutoChess_MainPage_P'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/AutoChess/WBP_Activity_AutoChess_MainPage_M.WBP_Activity_AutoChess_MainPage_M'",
+    UIName = "AutoChessMainPage"
+  },
+  AutoChessMonstersPage = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/AutoChess/WBP_Activity_AutoChess_Overview_Chess_P.WBP_Activity_AutoChess_Overview_Chess_P'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/AutoChess/WBP_Activity_AutoChess_Overview_Chess_M.WBP_Activity_AutoChess_Overview_Chess_M'",
+    UIName = "AutoChessMonstersPage"
+  },
+  AutoChessSettlement = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/AutoChess/WBP_Activity_AutoChess_Settlement_P.WBP_Activity_AutoChess_Settlement_P'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/AutoChess/WBP_Activity_AutoChess_Settlement_M.WBP_Activity_AutoChess_Settlement_M'",
+    UIName = "AutoChessSettlement"
+  },
+  AutoChessSettlementStatistics = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AutoChess/Settlement/WBP_Activity_AutoChess_SettlementStatistics.WBP_Activity_AutoChess_SettlementStatistics'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AutoChess/Settlement/WBP_Activity_AutoChess_SettlementStatistics.WBP_Activity_AutoChess_SettlementStatistics'",
+    UIName = "AutoChessSettlementStatistics"
+  },
+  BagGameDragUIItem = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/BagGame/WBP_Activity_BagGame_PlayItem04.WBP_Activity_BagGame_PlayItem04'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/BagGame/WBP_Activity_BagGame_PlayItem04.WBP_Activity_BagGame_PlayItem04'",
+    UIName = "BagGameDragUIItem"
   },
   BattleAimAimStarButterfly = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Aim/WBP_Battle_Aim_Butterfly.WBP_Battle_Aim_Butterfly'",
@@ -178,6 +235,11 @@ return ReadOnly("WidgetUI", {
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Aim/WBP_Battle_Aim_ShotGun.WBP_Battle_Aim_ShotGun'",
     UIName = "BattleAimShotgun"
   },
+  BattleAimSuyi = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Aim/WBP_Battle_Aim_Suyi.WBP_Battle_Aim_Suyi'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Aim/WBP_Battle_Aim_Suyi.WBP_Battle_Aim_Suyi'",
+    UIName = "BattleAimSuyi"
+  },
   BattleAimThunder = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Aim/WBP_Battle_Aim_Thunder.WBP_Battle_Aim_Thunder'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Aim/WBP_Battle_Aim_Thunder.WBP_Battle_Aim_Thunder'",
@@ -207,6 +269,11 @@ return ReadOnly("WidgetUI", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/WBP_Battle_Entry.WBP_Battle_Entry'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/WBP_Battle_Entry.WBP_Battle_Entry'",
     UIName = "BattleEntry"
+  },
+  BattleEntryItem = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/WBP_Battle_EntryItem.WBP_Battle_EntryItem'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/WBP_Battle_EntryItem.WBP_Battle_EntryItem'",
+    UIName = "BattleEntryItem"
   },
   BattleFortBloodUI = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/WBP_Battle_FortBloodBar.WBP_Battle_FortBloodBar'",
@@ -359,6 +426,11 @@ return ReadOnly("WidgetUI", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Item/Widget/WBP_Com_Item_Conflict.WBP_Com_Item_Conflict'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Item/Widget/WBP_Com_Item_Conflict.WBP_Com_Item_Conflict'",
     UIName = "ComItemConflict"
+  },
+  ComItemCustomTag = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Item/Widget/WBP_Com_Item_CustomTag.WBP_Com_Item_CustomTag'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Item/Widget/WBP_Com_Item_CustomTag.WBP_Com_Item_CustomTag'",
+    UIName = "ComItemCustomTag"
   },
   ComItemGroup = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Item/Widget/WBP_Com_Item_Group.WBP_Com_Item_Group'",
@@ -739,6 +811,11 @@ return ReadOnly("WidgetUI", {
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Tips/Widget/WBP_Com_Tips_Draft.WBP_Com_Tips_Draft'",
     UIName = "DraftItemDetails"
   },
+  DungeonCommonRankStar = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Dungeon/Common/WBP_Dungeon_Common_Score_Rank_Star.WBP_Dungeon_Common_Score_Rank_Star'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Dungeon/Common/WBP_Dungeon_Common_Score_Rank_Star.WBP_Dungeon_Common_Score_Rank_Star'",
+    UIName = "DungeonCommonRankStar"
+  },
   DungeonMapSelectMobile = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Play/Mobile/Depute/WBP_Play_Depute_Root_M.WBP_Play_Depute_Root_M'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Play/Mobile/Depute/WBP_Play_Depute_Root_M.WBP_Play_Depute_Root_M'",
@@ -798,6 +875,10 @@ return ReadOnly("WidgetUI", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Menu/Widget/WBP_Menu_FunctionBtn.WBP_Menu_FunctionBtn'",
     UIName = "EscSystemItem"
   },
+  ExecuteItem = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/PC/Execute/WBP_Battle_Execute_Item_P.WBP_Battle_Execute_Item_P'",
+    UIName = "ExecuteItem"
+  },
   ExecutePhone = {
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_Execute_M.WBP_Battle_Execute_M'",
     UIName = "ExecutePhone"
@@ -812,10 +893,33 @@ return ReadOnly("WidgetUI", {
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Experience/Widget/WBP_Experience_Main_BuffItem.WBP_Experience_Main_BuffItem'",
     UIName = "ExperienceMainBuffItem"
   },
+  ExtractionTreasureDetails = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Tips/Widget/WBP_Com_Tips_SoloTreasure.WBP_Com_Tips_SoloTreasure'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Tips/Widget/WBP_Com_Tips_SoloTreasure.WBP_Com_Tips_SoloTreasure'",
+    UIName = "ExtractionTreasureDetails"
+  },
   FeinaEventToast = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/FeinaEvent/WBP_Activity_FeinaEvent_Toast.WBP_Activity_FeinaEvent_Toast'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/FeinaEvent/WBP_Activity_FeinaEvent_Toast.WBP_Activity_FeinaEvent_Toast'",
     UIName = "FeinaEventToast"
+  },
+  FoolsDayFind = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Fool/Find/WBP_Activity_Fool_Find.WBP_Activity_Fool_Find'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Fool/Find/WBP_Activity_Fool_Find.WBP_Activity_Fool_Find'",
+    NeedShowInWindow = true,
+    UIName = "FoolsDayFind"
+  },
+  FoolsDayFindBegin = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Fool/Find/WBP_Activity_Fool_FindBegin.WBP_Activity_Fool_FindBegin'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Fool/Find/WBP_Activity_Fool_FindBegin.WBP_Activity_Fool_FindBegin'",
+    NeedShowInWindow = true,
+    UIName = "FoolsDayFindBegin"
+  },
+  FoolsDaySettlement = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Fool/Settlement/WBP_Activity_Fool_Settlement.WBP_Activity_Fool_Settlement'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Fool/Settlement/WBP_Activity_Fool_Settlement.WBP_Activity_Fool_Settlement'",
+    NeedShowInWindow = true,
+    UIName = "FoolsDaySettlement"
   },
   FortBackKey = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/PC/WBP_Battle_FortBackKey.WBP_Battle_FortBackKey'",
@@ -1009,6 +1113,11 @@ return ReadOnly("WidgetUI", {
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Item/Widget/Show/WBP_Item_Show_CheckBtn.WBP_Item_Show_CheckBtn'",
     UIName = "ItemShowCheckBtn"
   },
+  ItemShowEmpty = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Item/Widget/Show/WBP_Item_Show_EmptyName.WBP_Item_Show_EmptyName'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Item/Widget/Show/WBP_Item_Show_EmptyName.WBP_Item_Show_EmptyName'",
+    UIName = "ItemShowEmpty"
+  },
   ItemShowIntron = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Item/Widget/Show/WBP_Item_Show_Intron.WBP_Item_Show_Intron'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Item/Widget/Show/WBP_Item_Show_Intron.WBP_Item_Show_Intron'",
@@ -1028,6 +1137,16 @@ return ReadOnly("WidgetUI", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Item/Widget/Show/WBP_Item_Show_Star.WBP_Item_Show_Star'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Item/Widget/Show/WBP_Item_Show_Star.WBP_Item_Show_Star'",
     UIName = "ItemShowStar"
+  },
+  ItemStarSlotNormal = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Dungeon/Common/Star/WBP_Dungeon_Common_Score_Rank_Star_ItemStarSlot_Normal.WBP_Dungeon_Common_Score_Rank_Star_ItemStarSlot_Normal'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Dungeon/Common/Star/WBP_Dungeon_Common_Score_Rank_Star_ItemStarSlot_Normal.WBP_Dungeon_Common_Score_Rank_Star_ItemStarSlot_Normal'",
+    UIName = "ItemStarSlotNormal"
+  },
+  ItemStarSlotWuyousheng = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Dungeon/Common/Star/WBP_Dungeon_Common_Score_Rank_Star_ItemStaSlot_Wuyousheng.WBP_Dungeon_Common_Score_Rank_Star_ItemStaSlot_Wuyousheng'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Dungeon/Common/Star/WBP_Dungeon_Common_Score_Rank_Star_ItemStaSlot_Wuyousheng.WBP_Dungeon_Common_Score_Rank_Star_ItemStaSlot_Wuyousheng'",
+    UIName = "ItemStarSlotWuyousheng"
   },
   ItemWalnutNum = {
     BPPath = "WidgetBlueprint'/Game/UI/UI_PC/Common/Item_Subsize_Widget/Common_Item_Subsize_WalnutNum.Common_Item_Subsize_WalnutNum'",
@@ -1153,6 +1272,10 @@ return ReadOnly("WidgetUI", {
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/MiniGame/Widget/Mima/WBP_MiniGame_Mima_Clue.WBP_MiniGame_Mima_Clue'",
     UIName = "MorseClue"
   },
+  MountLicenseItem = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Mounts/Widget/WBP_Mounts_License_DialogItem.WBP_Mounts_License_DialogItem'",
+    UIName = "MountLicenseItem"
+  },
   MyFriend = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Friend/Widget/WBP_Friend_MyList.WBP_Friend_MyList'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Friend/Widget/WBP_Friend_MyList.WBP_Friend_MyList'",
@@ -1272,6 +1395,11 @@ return ReadOnly("WidgetUI", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Task_Process/WBP_Battle_ProcessOngoing.WBP_Battle_ProcessOngoing'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Task_Process/WBP_Battle_ProcessOngoing.WBP_Battle_ProcessOngoing'",
     UIName = "ProcessOngoing"
+  },
+  ReasoningBubble = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Reasoning/Widget/WBP_Reasoning_Bubble.WBP_Reasoning_Bubble'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Reasoning/Widget/WBP_Reasoning_Bubble.WBP_Reasoning_Bubble'",
+    UIName = "ReasoningBubble"
   },
   RecentMatch = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Friend/Widget/WBP_Friend_RecentList.WBP_Friend_RecentList'",
@@ -1473,6 +1601,11 @@ return ReadOnly("WidgetUI", {
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/GuildWar/WBP_BattleHUD_Score.WBP_BattleHUD_Score'",
     UIName = "SoloRaidScore"
   },
+  SoloTreasureScoreAndBag = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/SoloTreasure/Widget/WBP_SoloTreasure_HudScore.WBP_SoloTreasure_HudScore'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/SoloTreasure/Widget/WBP_SoloTreasure_HudScore.WBP_SoloTreasure_HudScore'",
+    UIName = "SoloTreasureScoreAndBag"
+  },
   SpecialItemBonus = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Tag/WBP_Com_QualityTag.WBP_Com_QualityTag'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Tag/WBP_Com_QualityTag.WBP_Com_QualityTag'",
@@ -1516,6 +1649,12 @@ return ReadOnly("WidgetUI", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Story/Widget/WBP_Story_InteractiveItem.WBP_Story_InteractiveItem'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Story/Widget/WBP_Story_InteractiveItem.WBP_Story_InteractiveItem'",
     UIName = "StoryInteractiveItem"
+  },
+  StorylineCountdown = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Story/Widget/WBP_Story_CaptureTime.WBP_Story_CaptureTime'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Story/Widget/WBP_Story_CaptureTime.WBP_Story_CaptureTime'",
+    NeedShowInWindow = true,
+    UIName = "StorylineCountdown"
   },
   SubOptionClick = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Set/Widget/SubOption/WBP_Set_SubOptionClick.WBP_Set_SubOptionClick'",
@@ -1722,6 +1861,16 @@ return ReadOnly("WidgetUI", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/WorldMap/WBP_Map_WorldSelect_Controller.WBP_Map_WorldSelect_Controller'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/WorldMap/WBP_Map_WorldSelect_Controller.WBP_Map_WorldSelect_Controller'",
     UIName = "WorldMapSelectControllerItem"
+  },
+  WuyoushengProgressHud = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Wuyousheng/HUD/WBP_Activity_Wuyousheng_HUD_ProgressContent.WBP_Activity_Wuyousheng_HUD_ProgressContent'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Wuyousheng/HUD/WBP_Activity_Wuyousheng_HUD_ProgressContent.WBP_Activity_Wuyousheng_HUD_ProgressContent'",
+    UIName = "WuyoushengProgressHud"
+  },
+  WuyoushengTopContent = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Wuyousheng/HUD/WBP_Activity_Wuyousheng_HUD_TipsContent.WBP_Activity_Wuyousheng_HUD_TipsContent'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Wuyousheng/HUD/WBP_Activity_Wuyousheng_HUD_TipsContent.WBP_Activity_Wuyousheng_HUD_TipsContent'",
+    UIName = "WuyoushengTopContent"
   },
   Wuyousheng_Build_Item_TryOut = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Wuyousheng/Build/WBP_Activity_Wuyousheng_Build_Item_TryOut.WBP_Activity_Wuyousheng_Build_Item_TryOut'",

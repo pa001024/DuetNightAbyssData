@@ -39,6 +39,7 @@ function M:Init(ConfigData)
   self.MinValue = ConfigData.MinValue or 1
   self.MaxValue = ConfigData.MaxValue or 999
   self.ClickInterval = ConfigData.ClickInterval or 1
+  self.SpecificNumInterval = ConfigData.SpecificNumInterval
   self.MinusBtnCallback = ConfigData.MinusBtnCallback
   self.MinusBtnForbidCallback = ConfigData.MinusBtnForbidCallback
   self.AddBtnCallback = ConfigData.AddBtnCallback
@@ -47,6 +48,8 @@ function M:Init(ConfigData)
   self.MinBtnForbidCallback = ConfigData.MinBtnForbidCallback
   self.MaxBtnCallback = ConfigData.MaxBtnCallback
   self.MaxBtnForbidCallback = ConfigData.MaxBtnForbidCallback
+  self.SpecificNumMinusCallback = ConfigData.SpecificNumMinusCallback
+  self.SpecificNumAddCallback = ConfigData.SpecificNumAddCallback
   self.InputCallback = ConfigData.InputCallback
   self.SoundResPath = ConfigData.SoundResPath or {}
   self.IsNotAllowTextFieldInput = ConfigData.IsNotAllowTextFieldInput
@@ -55,12 +58,26 @@ function M:Init(ConfigData)
   self.OwnerPanel = ConfigData.OwnerPanel
   self.bForbidPressAccelerate = ConfigData.bForbidPressAccelerate or false
   self.ViewGamePad = ConfigData.ViewGamePad or "SpecialLeft"
+  self.SpecificNumAddGamePad = ConfigData.SpecificNumAddGamePad or "RightShoulder"
+  self.SpecificNumMinusGamePad = ConfigData.SpecificNumMinusGamePad or "LeftShoulder"
   self:BindAllClickAction()
   self:RefreshBaseInfo()
   self:InitListenEvent()
 end
 
 function M:BindAllClickAction()
+  self.Btn_NumRight:Init({
+    OwnerPanel = self,
+    ClickedCallback = self.OnClickToSpecialNumAdd,
+    SpecificChangeCount = string.format("+%d", self.SpecificNumInterval or 1),
+    GamePadKey = self.SpecificNumAddGamePad
+  })
+  self.Btn_NumLeft:Init({
+    OwnerPanel = self,
+    ClickedCallback = self.OnClickToSpecialNumMinus,
+    SpecificChangeCount = string.format("-%d", self.SpecificNumInterval or 1),
+    GamePadKey = self.SpecificNumMinusGamePad
+  })
   self.Btn_Min:BindEventOnPressed(self, self.OnMinusKeyDown)
   self.Btn_Min:BindEventOnReleased(self, self.OnMinusKeyUp)
   self.Btn_Min:BindForbidStateExecuteEvent(self, self.OnClickToMinusInForbidState)
@@ -125,6 +142,13 @@ function M:RefreshBaseInfo()
     self.Group_View:SetVisibility(UIConst.VisibilityOp.Collapsed)
   else
     self.Text_Input:SetVisibility(UIConst.VisibilityOp.Visible)
+  end
+  if self.SpecificNumInterval then
+    self.Btn_NumRight:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Btn_NumLeft:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  else
+    self.Btn_NumRight:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Btn_NumLeft:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   self:InitWidgetInfoInGamePad()
 end
@@ -293,6 +317,8 @@ function M:UpdateUIStyleInPlatform(IsUseKeyAndMouse, CurGamepadName)
   local ActiveWidgetIndex = IsUseKeyAndMouse and 0 or 1
   self.WS_Left:SetActiveWidgetIndex(ActiveWidgetIndex)
   self.WS_Right:SetActiveWidgetIndex(ActiveWidgetIndex)
+  self.Btn_NumLeft:ChangeUIStyleForCurPlatform(IsUseKeyAndMouse)
+  self.Btn_NumRight:ChangeUIStyleForCurPlatform(IsUseKeyAndMouse)
   if IsUseKeyAndMouse then
     self.Group_View:SetVisibility(UIConst.VisibilityOp.Collapsed)
   else
@@ -329,6 +355,8 @@ function M:RefreshBtnState()
   self.Btn_Max:ForbidBtn(self.CurInputNumber + self.ClickInterval > self.MaxValue)
   self.Btn_Min:ForbidBtn(self.CurInputNumber - self.ClickInterval < self.MinValue)
   self.Btn_Mini:ForbidBtn(self.CurInputNumber - self.ClickInterval < self.MinValue)
+  self.Btn_NumRight:SetForbid(self.CurInputNumber + self.ClickInterval > self.MaxValue)
+  self.Btn_NumLeft:SetForbid(self.CurInputNumber - self.ClickInterval < self.MinValue)
 end
 
 function M:ExecOnTextOnPressed()
@@ -345,6 +373,8 @@ function M:ExecOnTextCommintted(InText, CommitType)
   self.Btn_Max:ForbidBtn(self.CurInputNumber + self.ClickInterval > self.MaxValue)
   self.Btn_Min:ForbidBtn(self.CurInputNumber - self.ClickInterval < self.MinValue)
   self.Btn_Mini:ForbidBtn(self.CurInputNumber - self.ClickInterval < self.MinValue)
+  self.Btn_NumRight:SetForbid(self.CurInputNumber + self.ClickInterval > self.MaxValue)
+  self.Btn_NumLeft:SetForbid(self.CurInputNumber - self.ClickInterval < self.MinValue)
   self.Text_Num:SetText(tostring(self.CurInputNumber))
   self.Text_Input:SetRenderOpacity(0.0)
   self.Text_Num:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -385,6 +415,62 @@ function M:EditOnTextFocusLost()
   self:AddTimer(0.1, self.OnReturnFocusToWidget, false, 0, "OnReturnFocusToWidget", true)
 end
 
+function M:OnClickToSpecialNumMinus()
+  local NeedChangeCount = self.SpecificNumInterval
+  if self.CurInputNumber - self.SpecificNumInterval < self.MinValue then
+    NeedChangeCount = self.CurInputNumber - self.MinValue
+  end
+  if NeedChangeCount <= 0 then
+    return
+  end
+  local OldNumberValue = self.CurInputNumber
+  self.CurInputNumber = self.CurInputNumber - NeedChangeCount
+  self.Text_Num:SetText(tostring(self.CurInputNumber))
+  if self.Btn_Add.IsForbidden then
+    self.Btn_Add:ForbidBtn(false)
+  end
+  if self.Btn_Max.IsForbidden then
+    self.Btn_Max:ForbidBtn(false)
+  end
+  if self.Btn_NumRight:IsInForbidState() then
+    self.Btn_NumRight:SetForbid(false)
+  end
+  self.Btn_Min:ForbidBtn(self.CurInputNumber - self.ClickInterval < self.MinValue)
+  self.Btn_Mini:ForbidBtn(self.CurInputNumber - self.ClickInterval < self.MinValue)
+  self.Btn_NumLeft:SetForbid(self.CurInputNumber - self.ClickInterval < self.MinValue)
+  if type(self.SpecificNumMinusCallback) == "function" then
+    self.SpecificNumMinusCallback(self.OwnerPanel, self.CurInputNumber, OldNumberValue)
+  end
+end
+
+function M:OnClickToSpecialNumAdd()
+  local NeedChangeCount = self.SpecificNumInterval
+  if self.CurInputNumber + self.SpecificNumInterval > self.MaxValue then
+    NeedChangeCount = self.MaxValue - self.CurInputNumber
+  end
+  if NeedChangeCount <= 0 then
+    return
+  end
+  local OldNumberValue = self.CurInputNumber
+  self.CurInputNumber = self.CurInputNumber + NeedChangeCount
+  self.Text_Num:SetText(tostring(self.CurInputNumber))
+  if self.Btn_Min.IsForbidden then
+    self.Btn_Min:ForbidBtn(false)
+  end
+  if self.Btn_Mini.IsForbidden then
+    self.Btn_Mini:ForbidBtn(false)
+  end
+  if self.Btn_NumLeft:IsInForbidState() then
+    self.Btn_NumLeft:SetForbid(false)
+  end
+  self.Btn_Add:ForbidBtn(self.CurInputNumber + self.ClickInterval > self.MaxValue)
+  self.Btn_Max:ForbidBtn(self.CurInputNumber + self.ClickInterval > self.MaxValue)
+  self.Btn_NumRight:SetForbid(self.CurInputNumber + self.ClickInterval > self.MaxValue)
+  if type(self.SpecificNumAddCallback) == "function" then
+    self.SpecificNumAddCallback(self.OwnerPanel, self.CurInputNumber, OldNumberValue)
+  end
+end
+
 function M:OnClickToMinus()
   self.MinTime = self.MinTime + LongPressInterval
   local FinalCount = self:GetChangeCount()
@@ -402,6 +488,9 @@ function M:OnClickToMinus()
     if not self.Btn_Mini.IsForbidden then
       self.Btn_Mini:ForbidBtn(true)
     end
+    if not self.Btn_NumLeft:IsInForbidState() then
+      self.Btn_NumLeft:SetForbid(true)
+    end
     return
   end
   local OldNumberValue = self.CurInputNumber
@@ -413,8 +502,12 @@ function M:OnClickToMinus()
   if self.Btn_Max.IsForbidden then
     self.Btn_Max:ForbidBtn(false)
   end
+  if self.Btn_NumRight:IsInForbidState() then
+    self.Btn_NumRight:SetForbid(false)
+  end
   self.Btn_Min:ForbidBtn(self.CurInputNumber - self.ClickInterval < self.MinValue)
   self.Btn_Mini:ForbidBtn(self.CurInputNumber - self.ClickInterval < self.MinValue)
+  self.Btn_NumLeft:SetForbid(self.CurInputNumber - self.ClickInterval < self.MinValue)
   if type(self.MinusBtnCallback) == "function" then
     self.MinusBtnCallback(self.OwnerPanel, self.CurInputNumber, OldNumberValue)
   end
@@ -443,6 +536,9 @@ function M:OnClickToAdd()
     if not self.Btn_Max.IsForbidden then
       self.Btn_Max:ForbidBtn(true)
     end
+    if not self.Btn_NumRight:IsInForbidState() then
+      self.Btn_NumRight:SetForbid(true)
+    end
     return
   end
   local OldNumberValue = self.CurInputNumber
@@ -454,8 +550,12 @@ function M:OnClickToAdd()
   if self.Btn_Mini.IsForbidden then
     self.Btn_Mini:ForbidBtn(false)
   end
+  if self.Btn_NumLeft:IsInForbidState() then
+    self.Btn_NumLeft:SetForbid(false)
+  end
   self.Btn_Add:ForbidBtn(self.CurInputNumber + self.ClickInterval > self.MaxValue)
   self.Btn_Max:ForbidBtn(self.CurInputNumber + self.ClickInterval > self.MaxValue)
+  self.Btn_NumRight:SetForbid(self.CurInputNumber + self.ClickInterval > self.MaxValue)
   if type(self.AddBtnCallback) == "function" then
     self.AddBtnCallback(self.OwnerPanel, self.CurInputNumber, OldNumberValue)
   end
@@ -477,8 +577,12 @@ function M:OnClickToMax()
   if self.Btn_Mini.IsForbidden then
     self.Btn_Mini:ForbidBtn(self.CurInputNumber - self.ClickInterval < self.MinValue)
   end
+  if self.Btn_NumLeft:IsInForbidState() then
+    self.Btn_NumLeft:SetForbid(self.CurInputNumber - self.ClickInterval < self.MinValue)
+  end
   self.Btn_Add:ForbidBtn(true)
   self.Btn_Max:ForbidBtn(true)
+  self.Btn_NumRight:SetForbid(true)
   if type(self.MaxBtnCallback) == "function" then
     self.MaxBtnCallback(self.OwnerPanel, self.CurInputNumber, OldNumberValue)
   end
@@ -500,8 +604,12 @@ function M:OnClickToMin()
   if self.Btn_Max.IsForbidden then
     self.Btn_Max:ForbidBtn(self.CurInputNumber + self.ClickInterval > self.MaxValue)
   end
+  if self.Btn_NumRight:IsInForbidState() then
+    self.Btn_NumRight:SetForbid(self.CurInputNumber + self.ClickInterval > self.MaxValue)
+  end
   self.Btn_Min:ForbidBtn(true)
   self.Btn_Mini:ForbidBtn(true)
+  self.Btn_NumLeft:SetForbid(true)
   if type(self.MinBtnCallback) == "function" then
     self.MinBtnCallback(self.OwnerPanel, self.CurInputNumber, OldNumberValue)
   end
@@ -597,6 +705,18 @@ function M:Handle_KeyEventOnGamePad(InKeyName)
     local EventSoundPath = self.SoundResPath.Max or "event:/ui/common/click_btn_addMulti"
     AudioManager(self):PlayUISound(self.Btn_Max, EventSoundPath, nil, nil)
     self:OnClickToMax()
+  elseif InKeyName == UIConst.GamePadKey[self.SpecificNumMinusGamePad] then
+    if nil ~= self.SpecificNumInterval then
+      IsEventHandled = true
+      local EventSoundPath = self.SoundResPath.SpecificMinus or "event:/ui/common/click_btn_minus"
+      AudioManager(self):PlayUISound(self.Btn_NumLeft, EventSoundPath, nil, nil)
+      self:OnClickToSpecialNumMinus()
+    end
+  elseif InKeyName == UIConst.GamePadKey[self.SpecificNumAddGamePad] and nil ~= self.SpecificNumInterval then
+    IsEventHandled = true
+    local EventSoundPath = self.SoundResPath.SpecificAdd or "event:/ui/common/click_btn_add"
+    AudioManager(self):PlayUISound(self.Btn_NumRight, EventSoundPath, nil, nil)
+    self:OnClickToSpecialNumAdd()
   end
   return IsEventHandled
 end

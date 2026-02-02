@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -236,6 +239,100 @@ return ReadOnly("EventSettlementPage", {
     PCBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/Temple/Solo/Settlement/WBP_Activity_Temple_Solo_Settlement_Red_P.WBP_Activity_Temple_Solo_Settlement_Red_P'",
     WinSound = "event:/ui/activity/lingniao_level_success"
   },
+  [20] = {
+    DungeonId = 22001,
+    EventId = 110001,
+    FailSound = "event:/ui/activity/lingniao_level_fail",
+    Id = 20,
+    IsShowCondition = true,
+    IsShowScore = true,
+    IsShowTitle = true,
+    MobileBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/Wuyousheng/WBP_Activity_Wuyousheng_Settlement_M.WBP_Activity_Wuyousheng_Settlement_M'",
+    PCBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/Wuyousheng/WBP_Activity_Wuyousheng_Settlement_P.WBP_Activity_Wuyousheng_Settlement_P'",
+    WinSound = "event:/ui/activity/lingniao_level_success"
+  },
+  [21] = {
+    DungeonId = 22002,
+    EventId = 110001,
+    FailSound = "event:/ui/activity/lingniao_level_fail",
+    Id = 21,
+    IsShowCondition = true,
+    IsShowScore = true,
+    IsShowTitle = true,
+    MobileBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/Wuyousheng/WBP_Activity_Wuyousheng_Settlement_M.WBP_Activity_Wuyousheng_Settlement_M'",
+    PCBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/Wuyousheng/WBP_Activity_Wuyousheng_Settlement_P.WBP_Activity_Wuyousheng_Settlement_P'",
+    WinSound = "event:/ui/activity/lingniao_level_success"
+  },
+  [22] = {
+    DungeonId = 22003,
+    EventId = 110001,
+    FailSound = "event:/ui/activity/lingniao_level_fail",
+    Id = 22,
+    IsShowCondition = true,
+    IsShowScore = true,
+    IsShowTitle = true,
+    MobileBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/Wuyousheng/WBP_Activity_Wuyousheng_Settlement_M.WBP_Activity_Wuyousheng_Settlement_M'",
+    PCBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/Wuyousheng/WBP_Activity_Wuyousheng_Settlement_P.WBP_Activity_Wuyousheng_Settlement_P'",
+    WinSound = "event:/ui/activity/lingniao_level_success"
+  },
+  [23] = {
+    DungeonId = 22004,
+    EventId = 110001,
+    FailSound = "event:/ui/activity/lingniao_level_fail",
+    Id = 23,
+    IsShowCondition = true,
+    IsShowScore = true,
+    IsShowTitle = true,
+    MobileBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/Wuyousheng/WBP_Activity_Wuyousheng_Settlement_M.WBP_Activity_Wuyousheng_Settlement_M'",
+    PCBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/Wuyousheng/WBP_Activity_Wuyousheng_Settlement_P.WBP_Activity_Wuyousheng_Settlement_P'",
+    WinSound = "event:/ui/activity/lingniao_level_success"
+  },
+  [24] = {
+    DungeonId = 22005,
+    EventId = 110001,
+    FailSound = "event:/ui/activity/lingniao_level_fail",
+    Id = 24,
+    IsShowCondition = true,
+    IsShowScore = true,
+    IsShowTitle = true,
+    MobileBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/Wuyousheng/WBP_Activity_Wuyousheng_Settlement_M.WBP_Activity_Wuyousheng_Settlement_M'",
+    PCBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/Wuyousheng/WBP_Activity_Wuyousheng_Settlement_P.WBP_Activity_Wuyousheng_Settlement_P'",
+    WinSound = "event:/ui/activity/lingniao_level_success"
+  },
+  [25] = {
+    DungeonId = 22006,
+    EventId = 110001,
+    FailSound = "event:/ui/activity/lingniao_level_fail",
+    Id = 25,
+    IsShowCondition = true,
+    IsShowScore = true,
+    IsShowTitle = true,
+    MobileBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/Wuyousheng/WBP_Activity_Wuyousheng_Settlement_M.WBP_Activity_Wuyousheng_Settlement_M'",
+    PCBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/Wuyousheng/WBP_Activity_Wuyousheng_Settlement_P.WBP_Activity_Wuyousheng_Settlement_P'",
+    WinSound = "event:/ui/activity/lingniao_level_success"
+  },
+  [26] = {
+    DungeonId = 22007,
+    EventId = 110001,
+    FailSound = "event:/ui/activity/lingniao_level_fail",
+    Id = 26,
+    IsShowCondition = true,
+    IsShowScore = true,
+    IsShowTitle = true,
+    MobileBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/Wuyousheng/WBP_Activity_Wuyousheng_Settlement_M.WBP_Activity_Wuyousheng_Settlement_M'",
+    PCBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/Wuyousheng/WBP_Activity_Wuyousheng_Settlement_P.WBP_Activity_Wuyousheng_Settlement_P'",
+    WinSound = "event:/ui/activity/lingniao_level_success"
+  },
+  [30] = {
+    EventId = 103016,
+    FailSound = "event:/ui/activity/auto_chess_level_fail",
+    Id = 30,
+    IsShowReward = true,
+    IsShowTitle = true,
+    MobileBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/AutoChess/WBP_Activity_AutoChess_Settlement_M.WBP_Activity_AutoChess_Settlement_M'",
+    PCBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/AutoChess/WBP_Activity_AutoChess_Settlement_P.WBP_Activity_AutoChess_Settlement_P'",
+    WinSound = "event:/ui/activity/auto_chess_level_success"
+  },
   [1001] = {
     DungeonId = 21001,
     EventId = 111001,
@@ -306,6 +403,84 @@ return ReadOnly("EventSettlementPage", {
     EventId = 111001,
     FailSound = "event:/ui/activity/gerengonghuizhan_level_fail ",
     Id = 1006,
+    IsShowReward = true,
+    IsShowScore = true,
+    IsShowTitle = true,
+    MobileBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/GuildWar/WBP_Activity_GuildWar_Settlement_M.WBP_Activity_GuildWar_Settlement_M'",
+    NewRecordSound = "event:/ui/activity/gerengonghuizhan_level_success_new_record",
+    PCBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/GuildWar/WBP_Activity_GuildWar_Settlement_P.WBP_Activity_GuildWar_Settlement_P'",
+    WinSound = "event:/ui/activity/gerengonghuizhan_level_success"
+  },
+  [1007] = {
+    DungeonId = 21201,
+    EventId = 111002,
+    FailSound = "event:/ui/activity/gerengonghuizhan_level_fail ",
+    Id = 1007,
+    IsShowReward = true,
+    IsShowScore = true,
+    IsShowTitle = true,
+    MobileBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/GuildWar/WBP_Activity_GuildWar_Settlement_M.WBP_Activity_GuildWar_Settlement_M'",
+    NewRecordSound = "event:/ui/activity/gerengonghuizhan_level_success_new_record",
+    PCBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/GuildWar/WBP_Activity_GuildWar_Settlement_P.WBP_Activity_GuildWar_Settlement_P'",
+    WinSound = "event:/ui/activity/gerengonghuizhan_level_success"
+  },
+  [1008] = {
+    DungeonId = 21202,
+    EventId = 111002,
+    FailSound = "event:/ui/activity/gerengonghuizhan_level_fail ",
+    Id = 1008,
+    IsShowReward = true,
+    IsShowScore = true,
+    IsShowTitle = true,
+    MobileBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/GuildWar/WBP_Activity_GuildWar_Settlement_M.WBP_Activity_GuildWar_Settlement_M'",
+    NewRecordSound = "event:/ui/activity/gerengonghuizhan_level_success_new_record",
+    PCBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/GuildWar/WBP_Activity_GuildWar_Settlement_P.WBP_Activity_GuildWar_Settlement_P'",
+    WinSound = "event:/ui/activity/gerengonghuizhan_level_success"
+  },
+  [1009] = {
+    DungeonId = 21203,
+    EventId = 111002,
+    FailSound = "event:/ui/activity/gerengonghuizhan_level_fail ",
+    Id = 1009,
+    IsShowReward = true,
+    IsShowScore = true,
+    IsShowTitle = true,
+    MobileBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/GuildWar/WBP_Activity_GuildWar_Settlement_M.WBP_Activity_GuildWar_Settlement_M'",
+    NewRecordSound = "event:/ui/activity/gerengonghuizhan_level_success_new_record",
+    PCBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/GuildWar/WBP_Activity_GuildWar_Settlement_P.WBP_Activity_GuildWar_Settlement_P'",
+    WinSound = "event:/ui/activity/gerengonghuizhan_level_success"
+  },
+  [1010] = {
+    DungeonId = 21211,
+    EventId = 111002,
+    FailSound = "event:/ui/activity/gerengonghuizhan_level_fail ",
+    Id = 1010,
+    IsShowReward = true,
+    IsShowScore = true,
+    IsShowTitle = true,
+    MobileBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/GuildWar/WBP_Activity_GuildWar_Settlement_M.WBP_Activity_GuildWar_Settlement_M'",
+    NewRecordSound = "event:/ui/activity/gerengonghuizhan_level_success_new_record",
+    PCBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/GuildWar/WBP_Activity_GuildWar_Settlement_P.WBP_Activity_GuildWar_Settlement_P'",
+    WinSound = "event:/ui/activity/gerengonghuizhan_level_success"
+  },
+  [1011] = {
+    DungeonId = 21212,
+    EventId = 111002,
+    FailSound = "event:/ui/activity/gerengonghuizhan_level_fail ",
+    Id = 1011,
+    IsShowReward = true,
+    IsShowScore = true,
+    IsShowTitle = true,
+    MobileBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/GuildWar/WBP_Activity_GuildWar_Settlement_M.WBP_Activity_GuildWar_Settlement_M'",
+    NewRecordSound = "event:/ui/activity/gerengonghuizhan_level_success_new_record",
+    PCBluePrint = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/GuildWar/WBP_Activity_GuildWar_Settlement_P.WBP_Activity_GuildWar_Settlement_P'",
+    WinSound = "event:/ui/activity/gerengonghuizhan_level_success"
+  },
+  [1012] = {
+    DungeonId = 21213,
+    EventId = 111002,
+    FailSound = "event:/ui/activity/gerengonghuizhan_level_fail ",
+    Id = 1012,
     IsShowReward = true,
     IsShowScore = true,
     IsShowTitle = true,

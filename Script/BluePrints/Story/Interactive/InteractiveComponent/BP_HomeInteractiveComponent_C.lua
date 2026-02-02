@@ -1,5 +1,6 @@
 require("UnLua")
 local UIUtils = require("Utils.UIUtils")
+local LuaConst = require("EMLuaConst")
 local BP_HomeInteractiveComponent_C = Class("BluePrints.Story.Interactive.InteractiveComponent.BP_InteractiveBaseComponent_C")
 
 function BP_HomeInteractiveComponent_C:IsCanInteractive(PlayerActor)
@@ -7,7 +8,11 @@ function BP_HomeInteractiveComponent_C:IsCanInteractive(PlayerActor)
     return false
   end
   local Owner = self:GetOwner()
-  return self.DistanceCheck(Owner, PlayerActor, self.InteractiveDistance) and self.BFaceToACheck(Owner, PlayerActor, self.InteractiveFaceAngle) and not Owner.bHidden
+  if LuaConst.OpenComputeInteractive then
+    return self:GetDistanceCheckResult() and self.BFaceToACheck(Owner, PlayerActor, self.InteractiveFaceAngle) and not Owner.bHidden
+  else
+    return self.DistanceCheck(Owner, PlayerActor, self.InteractiveDistance) and self.BFaceToACheck(Owner, PlayerActor, self.InteractiveFaceAngle) and not Owner.bHidden
+  end
 end
 
 function BP_HomeInteractiveComponent_C:BtnClicked(PlayerActor, InPressTimeSeconds)

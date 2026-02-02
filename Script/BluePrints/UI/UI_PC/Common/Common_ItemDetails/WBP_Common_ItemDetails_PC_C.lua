@@ -92,7 +92,7 @@ function M:RefreshItemInfo(Content, bNotFocus, bInitLockedEvent)
       }
     end
     self.Text_Hold01:SetText(GText("UI_Bag_Sellconfirm_Hold"))
-    local Rarity = ItemInfo.Rarity or ItemInfo[self.Type .. "Rarity"]
+    local Rarity = ItemInfo.Rarity or ItemInfo[self.Type .. "Rarity"] or ItemInfo.TreasureRarity
     if 6 == Rarity then
       self.OutLine_Quality:SetBrushFromTexture(self.Img_Line_6)
     elseif 5 == Rarity then
@@ -183,7 +183,7 @@ function M:InitItemDetails(ItemType, ItemId, Uuid)
     else
       self.Img_Aura:SetVisibility(ESlateVisibility.Collapsed)
     end
-  elseif "Tips" == ItemType or "Resource" == ItemType or "CharAccessory" == ItemType or "WeaponAccessory" == ItemType or "CharPartMesh" == ItemType or "RougeLikeBlessing" == ItemType or "RougeLikeTreasure" == ItemType or "HeadSculpture" == ItemType or "HeadFrame" == ItemType or "Skin" == ItemType or "WeaponSkin" == ItemType or "Title" == ItemType or "TitleFrame" == ItemType then
+  elseif "Tips" == ItemType or "Resource" == ItemType or "CharAccessory" == ItemType or "WeaponAccessory" == ItemType or "CharPartMesh" == ItemType or "RougeLikeBlessing" == ItemType or "RougeLikeTreasure" == ItemType or "HeadSculpture" == ItemType or "HeadFrame" == ItemType or "Skin" == ItemType or "WeaponSkin" == ItemType or "Title" == ItemType or "TitleFrame" == ItemType or "Mount" == ItemType then
     if Avatar.Resources[ItemId] and Avatar.Resources[ItemId]:IsInfiniteBattleItem() and self:IsHasChar(ItemId) then
       self.Switch_Show:SetActiveWidgetIndex(1)
       ItemInfoWidget = self:CreateWidgetNew("PhantomItemDetails")
@@ -221,6 +221,9 @@ function M:InitItemDetails(ItemType, ItemId, Uuid)
     ItemInfoWidget.Text_Describe:SetText(GText(DataMgr.TreasureGroup[ItemId].GroupEffectDesc))
     self.VerticalBox_Info:AddChild(ItemInfoWidget)
     return
+  elseif "ExtractionTreasure" == ItemType then
+    self.Panel_Hold:SetVisibility(ESlateVisibility.Collapsed)
+    ItemInfoWidget = self:CreateWidgetNew("ExtractionTreasureDetails")
   elseif self.Parent then
     self.Parent:Close()
     return

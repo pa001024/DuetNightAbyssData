@@ -291,6 +291,7 @@ return {
             pos = {x = 704.2038301726217, y = 292.5843353483289},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_1650401"
             }
@@ -302,6 +303,7 @@ return {
             pos = {x = 875.2171591142117, y = 21.19441439971225},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_1650401"
             }
@@ -313,6 +315,7 @@ return {
             pos = {x = 2016.003830172622, y = 278.1271924911861},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_1650401"
             }
@@ -331,6 +334,7 @@ return {
             pos = {x = 2534.6609730297646, y = 290.12719249118595},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_1650401"
             }

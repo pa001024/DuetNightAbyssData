@@ -8,6 +8,9 @@ T.RT_1 = {
   6,
   7
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -24,7 +27,6 @@ return ReadOnly("DungeonRandomEvent", {
       90801,
       90802,
       90803,
-      90804,
       90805,
       90806,
       90807

@@ -878,7 +878,7 @@ function M:PlayInAnim()
     self,
     self.OnInAnimationFinished
   })
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:PlayAnimation(self.Detail_In)
   self:SetVisibility(UIConst.VisibilityOp.Visible)
   AudioManager(self):PlayUISound(self, "event:/ui/common/skill_panel_expand", "SkillPanel", nil)

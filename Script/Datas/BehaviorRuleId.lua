@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -147,6 +150,7 @@ return ReadOnly("BehaviorRuleId", {
     OutBattleList = {9501001},
     RuleId = 9501
   },
+  [9510] = {DefaultAlert = 9510100, RuleId = 9510},
   [9801] = {
     DefaultAlert = 9801100,
     OutBattleList = {9801001, 9801003},

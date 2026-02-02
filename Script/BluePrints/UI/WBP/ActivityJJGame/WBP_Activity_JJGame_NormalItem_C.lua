@@ -12,6 +12,7 @@ local M = Class({
 
 function M:Construct()
   self.MidTermConst = DataMgr.MidTermGoalConstant
+  self.MidTermGoalEventId = self.MidTermConst.MidTermGoalEventId.ConstantValue
   self.List_Task:SetAllowOverscroll(false)
   self.List_Task:DisAbleScroll(true)
 end
@@ -26,6 +27,7 @@ function M:Init(TaskConfig)
   self.TaskConfig = TaskConfig
   self.Owner = TaskConfig.Owner
   self.JJGameBase = self.Owner.Owner
+  self.EventDay = TaskConfig.EventDay
   self.YesterdayRewardGot = TaskConfig.YesterdayRewardGot
   self.Text_Title:SetText(GText(TaskConfig.Name))
   self._Avatar = GWorld:GetAvatar()
@@ -47,7 +49,9 @@ end
 function M:UpdateTaskList()
   self.List_Task:ClearListItems()
   self.TaskContentList = {}
-  local SortedTaskList = self:SortTaskList(self._Avatar.MidTermTasks)
+  self.MidTermGoals = self._Avatar.MidTermGoals[self.MidTermGoalEventId] or {}
+  local MidTermTasks = self.MidTermGoals.Tasks or {}
+  local SortedTaskList = self:SortTaskList(MidTermTasks)
   for i, Task in pairs(SortedTaskList) do
     local TaskData = DataMgr.MidTermTask[Task.UniqueID]
     if not TaskData then
@@ -56,21 +60,24 @@ function M:UpdateTaskList()
     else
       local TaskItem
       if type(self.TaskConfig.TaskType) == "table" then
-        if TaskData.TaskType == self.TaskConfig.TaskType[1] then
-          TaskItem = self:NewItemContent(TaskData.TaskType, TaskData.TaskId, self.MidTermConst.DailyRewardPoint_1.ConstantValue, TaskData.TaskDes)
-        elseif TaskData.TaskType == self.TaskConfig.TaskType[2] then
-          TaskItem = self:NewItemContent(TaskData.TaskType, TaskData.TaskId, self.MidTermConst.DailyRewardPoint_2.ConstantValue, TaskData.TaskDes)
+        if TaskData.EnableDay ~= self.EventDay then
+        else
+          if TaskData.TaskType == self.TaskConfig.TaskType[1] then
+            TaskItem = self:NewItemContent(TaskData.TaskType, TaskData.TaskId, self.MidTermConst.DailyRewardPoint_1.ConstantValue, TaskData.TaskDes)
+          elseif TaskData.TaskType == self.TaskConfig.TaskType[2] then
+            TaskItem = self:NewItemContent(TaskData.TaskType, TaskData.TaskId, self.MidTermConst.DailyRewardPoint_2.ConstantValue, TaskData.TaskDes)
+          end
+          elseif TaskData.TaskType == self.TaskConfig.TaskType then
+            TaskItem = self:NewItemContent(TaskData.TaskType, TaskData.TaskId, self.MidTermConst.CycleRewardPoint.ConstantValue, TaskData.TaskDes)
+            TaskItem.MidTermTasksRecord = self._Avatar.MidTermTasksRecord[Task.UniqueID]
+          end
+          if TaskItem then
+            TaskItem.TaskProp = Task.Props
+            TaskItem.TaskConfig = TaskData
+            table.insert(self.TaskContentList, TaskItem)
+            self.List_Task:AddItem(TaskItem)
+          end
         end
-      elseif TaskData.TaskType == self.TaskConfig.TaskType then
-        TaskItem = self:NewItemContent(TaskData.TaskType, TaskData.TaskId, self.MidTermConst.CycleRewardPoint.ConstantValue, TaskData.TaskDes)
-        TaskItem.MidTermTasksRecord = self._Avatar.MidTermTasksRecord[Task.UniqueID]
-      end
-      if TaskItem then
-        TaskItem.TaskProp = Task
-        TaskItem.TaskConfig = TaskData
-        table.insert(self.TaskContentList, TaskItem)
-        self.List_Task:AddItem(TaskItem)
-      end
     end
   end
   self.List_Task:RequestPlayEntriesAnim()
@@ -137,17 +144,14 @@ end
 
 function M:TryIncreaceNormalTaskNewReddot()
   for _, TaskItem in pairs(self.TaskContentList) do
-    if not self.YesterdayRewardGot and (TaskItem.TaskConfig.TaskType == TaskType.Daily[1] or TaskItem.TaskConfig.TaskType == TaskType.Daily[2]) then
-    else
-      local CacheKey = TaskItem.TaskProp.UniqueID
-      local CacheData = ReddotManager.GetLeafNodeCacheDetail(NormalTaskNewReddotName)
-      if CacheData and nil == CacheData[CacheKey] then
-        CacheData[CacheKey] = true
-        ReddotManager.IncreaseLeafNodeCount(NormalTaskNewReddotName)
-      end
-      if CacheData and true == CacheData[CacheKey] then
-        self.HasNewTask = true
-      end
+    local CacheKey = TaskItem.TaskProp.UniqueID
+    local CacheData = ReddotManager.GetLeafNodeCacheDetail(NormalTaskNewReddotName)
+    if CacheData and nil == CacheData[CacheKey] then
+      CacheData[CacheKey] = true
+      ReddotManager.IncreaseLeafNodeCount(NormalTaskNewReddotName)
+    end
+    if CacheData and true == CacheData[CacheKey] then
+      self.HasNewTask = true
     end
   end
 end

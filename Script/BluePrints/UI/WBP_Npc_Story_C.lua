@@ -97,10 +97,8 @@ function BP_Npc_Story_C:ChangePlayerInputable(Inputable)
       local CenterPos = UE4.UWidgetLayoutLibrary.GetViewportSize(self)
       PlayerController:SetMouseLocation(math.floor(CenterPos.X / 2), math.floor(CenterPos.Y / 2))
     end
-    UE4.UGameplayStatics.SetGlobalTimeDilation(self, 0)
   else
     self:SetInputUIOnly(false)
-    UE4.UGameplayStatics.SetGlobalTimeDilation(self, 1.0)
   end
 end
 

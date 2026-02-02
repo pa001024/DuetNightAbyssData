@@ -4,6 +4,7 @@ function WBP_Guide_ChapterBegin_C:Construct()
   WBP_Guide_ChapterBegin_C.Super.Construct(self)
   EventManager:AddEvent(EventID.OnLevelDeliverBlackCurtainStart, self, self.OnTipRealEnd)
   EventManager:AddEvent(EventID.InLoading, self, self.OnTipRealEnd)
+  EventManager:AddEvent(EventID.CloseLoading, self, self.OnCloseLoading)
 end
 
 function WBP_Guide_ChapterBegin_C:OnLoaded(...)
@@ -81,6 +82,10 @@ function WBP_Guide_ChapterBegin_C:OnClose()
   self:OnTipRealEnd()
 end
 
+function WBP_Guide_ChapterBegin_C:OnCloseLoading()
+  self:OnTipEnd()
+end
+
 function WBP_Guide_ChapterBegin_C:OnTipBegin()
   if self.In then
     self:UnbindAllFromAnimationFinished(self.In)
@@ -144,6 +149,7 @@ end
 function WBP_Guide_ChapterBegin_C:Destruct()
   EventManager:RemoveEvent(EventID.OnLevelDeliverBlackCurtainStart, self)
   EventManager:RemoveEvent(EventID.InLoading, self)
+  EventManager:RemoveEvent(EventID.CloseLoading, self)
   self:RemoveTimer("TryToClose")
   self:RemoveTimer("PlayOut")
   self:RemoveTimer("CheckBattleMain")

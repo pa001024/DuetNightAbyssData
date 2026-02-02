@@ -82,7 +82,7 @@ function M:TryFindPlayer(Player)
   local bHitHead = UE4.UKismetSystemLibrary.LineTraceSingle(self, EyeLcoation, EndPositionHead, ETraceTypeQuery.TraceScene, false, nil, 0, HitResultHead, true)
   local HitResultFoot = FHitResult()
   local bHitFoot = UE4.UKismetSystemLibrary.LineTraceSingle(self, EyeLcoation, EndPositionFoot, ETraceTypeQuery.TraceScene, false, nil, 0, HitResultFoot, true)
-  if not bHitHead or not bHitFoot then
+  if (not bHitHead or not bHitFoot) and not self:CheckPlayerInBox(Player) then
     self.FoundPlayer = true
     self.RotateFinish = false
     self.OtherFound = false

@@ -113,7 +113,7 @@ function M:EnterStuffViewMode()
 end
 
 function M:LeaveStuffViewMode()
-  if self.FocusWidgetName == nil then
+  if self.FocusWidgetName == nil or self.FocusWidgetName == "BackToPageWithJump" then
     return false
   end
   self.FocusWidgetName = nil
@@ -195,6 +195,7 @@ function M:Handle_KeyDownOnGamePad(InKeyName)
       if self.ParentWidget then
         self.ParentWidget:UpdateActivityKeyTips(self.FocusWidgetName, self.FocusWidgetWidget)
       end
+      self.IsFocusInSpecialLeft = true
     end
   elseif InKeyName == UIConst.GamePadKey.FaceButtonLeft then
     local PageConfigData = DataMgr.EventPortal[self.CurActivityId]
@@ -238,6 +239,7 @@ function M:Handle_KeyDownOnGamePad(InKeyName)
         self.ParentWidget:UpdateActivityKeyTips()
         self.ParentWidget:SetFocus()
       end
+      self.IsFocusInSpecialLeft = false
     else
       IsEventHandled = self:LeaveStuffViewMode()
     end
@@ -276,8 +278,13 @@ function M:Destruct()
 end
 
 function M:ReceiveEnterStateSelf(StackAction)
-  if 1 == StackAction and self.FocusWidgetName ~= nil and self.FocusWidgetWidget == self.List_Reward then
-    self:EnterStuffViewMode()
+  if 1 == StackAction then
+    if self.FocusWidgetName ~= nil and self.FocusWidgetWidget == self.List_Reward then
+      self:EnterStuffViewMode()
+    end
+    if self.IsFocusInSpecialLeft then
+      self.FocusWidgetWidget:SetFocus()
+    end
   end
 end
 

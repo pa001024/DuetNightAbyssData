@@ -5,6 +5,9 @@ T.RT_1 = {
   Skill = "Combat/Skill/",
   SpecialIdle = "SpecialIdle/"
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -183,6 +186,12 @@ return ReadOnly("AssetPathSplitRules", {
     ModelId = 210101,
     MontageSuffixList = T.RT_1
   },
+  [210199] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 210199,
+    MontageSuffixList = T.RT_1
+  },
   [230101] = {
     IsPreloadMesh = true,
     IsPreloadWeapon = true,
@@ -199,6 +208,12 @@ return ReadOnly("AssetPathSplitRules", {
     IsPreloadMesh = true,
     IsPreloadWeapon = true,
     ModelId = 240102,
+    MontageSuffixList = T.RT_1
+  },
+  [240199] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 240199,
     MontageSuffixList = T.RT_1
   },
   [310101] = {
@@ -333,6 +348,12 @@ return ReadOnly("AssetPathSplitRules", {
     ModelId = 510101,
     MontageSuffixList = T.RT_1
   },
+  [510199] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 510199,
+    MontageSuffixList = T.RT_1
+  },
   [530101] = {
     IsPreloadMesh = true,
     IsPreloadWeapon = true,
@@ -343,6 +364,12 @@ return ReadOnly("AssetPathSplitRules", {
     IsPreloadMesh = true,
     IsPreloadWeapon = true,
     ModelId = 530102,
+    MontageSuffixList = T.RT_1
+  },
+  [530199] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 530199,
     MontageSuffixList = T.RT_1
   },
   [600101] = {

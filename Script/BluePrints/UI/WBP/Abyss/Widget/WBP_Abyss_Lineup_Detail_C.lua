@@ -45,8 +45,8 @@ function WBP_Abyss_Lineup_Detail:Construct()
   self.CurSlotName = ESlotName.Null
   self.Btn_Clear:SetText(GText("ModFilter_ClearAll"))
   self.Btn_Mod:SetText(GText("UI_SHOP_SUBTAB_NAME_MOD"))
-  self.Text_Phantom01:SetText(GText("UI_STAT_Sigil") .. " 1")
-  self.Text_Phantom02:SetText(GText("UI_STAT_Sigil") .. " 2")
+  self.Text_Phantom01:SetText(GText("UI_STAT_Sigil"))
+  self.Text_Phantom02:SetText(GText("UI_STAT_Sigil"))
   self.Btn_Entry = self.Entry_Tip.Btn_Entry
   self.List_Entry = self.Entry_Tip.List_Entry
   self:BindPanelBtns()
@@ -113,6 +113,7 @@ function WBP_Abyss_Lineup_Detail:SetProgressAndAttribute()
     DebugPrint("lhr@WBP_Abyss_Select_C:InitLevelInfo, AbyssId", AbyssId, "对应的赛季不存在")
     return
   end
+  self.IsEndLess = AbyssInfo:IsLoopAbyss()
   local LevelInfo = AbyssInfo.AbyssLevelList[LevelIndex]
   if not LevelInfo then
     DebugPrint("lhr@WBP_Abyss_Select_C:InitLevelInfo, LevelIndex", LevelIndex, "对应的关卡不存在")
@@ -127,7 +128,12 @@ function WBP_Abyss_Lineup_Detail:SetProgressAndAttribute()
   end
   self.Text_Now:SetText(Now)
   self.Text_All:SetText(All)
-  local AttributeType = DataMgr.AbyssLevel[LevelInfo.AbyssLevelId]["AttributeType" .. self.DungeonIndex]
+  local AttributeType
+  if not self.IsEndLess then
+    AttributeType = DataMgr.AbyssLevel[LevelInfo.AbyssLevelId]["AttributeType" .. self.DungeonIndex]
+  else
+    AttributeType = Avatar:GetAbyssAttrType(self.AbyssId)
+  end
   local Attributes = {}
   if AttributeType then
     Attributes = string.split(AttributeType, ",")
@@ -137,12 +143,9 @@ function WBP_Abyss_Lineup_Detail:SetProgressAndAttribute()
   end
   self.List_Attribute_Expand:ClearListItems()
   self.List_Attribute_Fold:ClearListItems()
-  local FoldPath = "/Game/UI/Texture/Dynamic/Atlas/Armory/"
-  local Prefix = "T_Armory_"
   for _, Attribute in pairs(Attributes) do
     local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-    local AttributeName = Prefix .. Attribute
-    Obj.IconPath = FoldPath .. AttributeName .. "." .. AttributeName
+    Obj.IconPath = DataMgr.Attribute[Attribute].Icon
     self.List_Attribute_Expand:AddItem(Obj)
     self.List_Attribute_Fold:AddItem(Obj)
   end
@@ -356,8 +359,8 @@ end
 
 local SlotOrder = {
   [1] = "Char",
-  [2] = "MeleeWeapon",
-  [3] = "RangedWeapon",
+  [2] = "Melee",
+  [3] = "Ranged",
   [4] = "Phantom1",
   [5] = "PhantomWeapon1",
   [6] = "Phantom2",
@@ -379,11 +382,6 @@ function WBP_Abyss_Lineup_Detail:OnModBtnClicked()
     if Slot and not Slot.IsEmpty then
       if EName == self.LineupPage.CurSlotName then
         Tag = SlotName
-        if "MeleeWeapon" == Tag then
-          Tag = "Melee"
-        elseif "RangedWeapon" == Tag then
-          Tag = "Ranged"
-        end
       end
       table.insert(Uuids, Slot.Uuid)
       if "Char" == SlotName then
@@ -415,11 +413,6 @@ function WBP_Abyss_Lineup_Detail:OnModBtnClicked()
       local Slot = self.Slots[EName]
       if Slot and not Slot.IsEmpty then
         Tag = SlotName
-        if "MeleeWeapon" == Tag then
-          Tag = "Melee"
-        elseif "RangedWeapon" == Tag then
-          Tag = "Ranged"
-        end
         Type = self.LineupPage:GetModType(EName)
         break
       end

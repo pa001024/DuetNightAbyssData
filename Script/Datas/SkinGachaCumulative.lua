@@ -13,6 +13,9 @@ T.RT_2 = {
   [4] = 80,
   [5] = 100
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -24,6 +27,11 @@ return ReadOnly("SkinGachaCumulative", {
   },
   [9003] = {
     GachaId = 9003,
+    RewardId = T.RT_1,
+    RewardTarget = T.RT_2
+  },
+  [9004] = {
+    GachaId = 9004,
     RewardId = T.RT_1,
     RewardTarget = T.RT_2
   }

@@ -1284,6 +1284,15 @@ return {
         UnitId = 70118,
         RarelyId = 7050026
       }
+    },
+    ["7050027"] = {
+      AutoReset = 0,
+      ["2060360"] = {
+        CreatorId = 2060360,
+        UnitType = "Drop",
+        UnitId = 90021,
+        RarelyId = 7050027
+      }
     }
   },
   RandomRule = {

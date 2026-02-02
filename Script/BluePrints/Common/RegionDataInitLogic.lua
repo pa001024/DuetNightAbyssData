@@ -83,7 +83,7 @@ function M:InitSSDataFromServer(RegionBaseData)
   if RegionBaseData.ManualItemId ~= nil and RegionBaseData.ManualItemId > 0 then
     return
   end
-  if RegionBaseData.IsDead then
+  if RegionBaseData.IsDead and self:CheckRegionDataNeedDead(RegionBaseData) then
     self.DataLibrary:SetUnitRegionCacheData(RegionBaseData.RegionDataType, RegionBaseData.SubRegionId, RegionBaseData.LevelName, RegionBaseData.WorldRegionEid, RegionBaseData)
     return
   end
@@ -121,6 +121,23 @@ function M:InitSSDataFromServer(RegionBaseData)
     local Rotation = FRotator(RegionBaseData.Rotation.Pitch, RegionBaseData.Rotation.Yaw, RegionBaseData.Rotation.Roll)
     self:InitSSDataFromServer_Raw(RegionBaseData.WorldRegionEid, RegionBaseData.LevelName, RegionBaseData.UnitType, RegionBaseData.UnitId, Location, Rotation, RegionBaseData.RegionDataType)
   end
+end
+
+function M:CheckRegionDataNeedDead(RegionBaseData)
+  if 1 == RegionBaseData.RegionDataType and RegionBaseData.UnitType == "Mechanism" and RegionBaseData.UnitId then
+    if not self.MechanismNoDeadType then
+      self.MechanismNoDeadType = {
+        "HardBossOpenMechanism",
+        "TeleportMechanism",
+        "Delivery"
+      }
+    end
+    local Data = DataMgr.Mechanism[RegionBaseData.UnitId]
+    if Data then
+      return not CommonUtils.HasValue(self.MechanismNoDeadType, Data.UnitRealType)
+    end
+  end
+  return true
 end
 
 function M:InitStaticCreatorParams(CreatorId, QuestChainId, SpecialQuestId, DynQuestId)

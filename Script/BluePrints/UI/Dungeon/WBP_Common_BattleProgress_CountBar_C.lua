@@ -4,7 +4,8 @@ local StyleToVisibility = {
   EStandard = {true, false},
   ELeftOnly = {true, true},
   EClassic = {true, true},
-  EClassicTime = {false, false}
+  EClassicTime = {false, false},
+  ELeftOnlyNumber = {true, false}
 }
 
 function M:InitListenEvent()

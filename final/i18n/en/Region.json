@@ -257,7 +257,7 @@
     "id": 1045,
     "name": "Haojing",
     "type": "Main",
-    "mapId": null,
+    "mapId": 500,
     "mapImage": "/Game/UI/WBP/Map/Widget/RegionMap/WBP_Map_Reg_Chapter01.WBP_Map_Reg_Chapter01",
     "mapCenter": [
       20000,
@@ -371,7 +371,9 @@
       1.25
     ],
     "isRandom": [
-      105101
+      105101,
+      105102,
+      105103
     ],
     "alertDisable": false
   },
@@ -379,7 +381,7 @@
     "id": 1052,
     "name": "Outer Peaks",
     "type": "Main",
-    "mapId": null,
+    "mapId": 501,
     "mapImage": "/Game/UI/WBP/Map/Widget/RegionMap/WBP_Map_Reg_Chapter01_KK.WBP_Map_Reg_Chapter01_KK",
     "mapCenter": [],
     "mapScale": [
@@ -395,7 +397,7 @@
     "id": 1053,
     "name": "Taixu Mausoleum",
     "type": "Main",
-    "mapId": null,
+    "mapId": 502,
     "mapImage": "/Game/UI/WBP/Map/Widget/RegionMap/WBP_Map_Reg_Chapter01_Sew.WBP_Map_Reg_Chapter01_Sew",
     "mapCenter": [
       0,
@@ -406,7 +408,8 @@
       1.25
     ],
     "isRandom": [
-      105301
+      105301,
+      105302
     ],
     "alertDisable": true
   },
@@ -430,7 +433,7 @@
     "id": 1055,
     "name": "Youlai Alley",
     "type": "Main",
-    "mapId": null,
+    "mapId": 503,
     "mapImage": "/Game/UI/WBP/Map/Widget/RegionMap/WBP_Map_Reg_EXChapter01.WBP_Map_Reg_EXChapter01",
     "mapCenter": [
       20000,
@@ -494,6 +497,22 @@
     ],
     "isRandom": [
       105801
+    ],
+    "alertDisable": false
+  },
+  {
+    "id": 1059,
+    "name": "UI_REGION_NAME_1059",
+    "type": "Main",
+    "mapId": null,
+    "mapImage": "",
+    "mapCenter": [],
+    "mapScale": [
+      0.5,
+      1.25
+    ],
+    "isRandom": [
+      105901
     ],
     "alertDisable": false
   },

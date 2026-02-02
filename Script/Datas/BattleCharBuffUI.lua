@@ -1,16 +1,19 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("BattleCharBuffUI", {
   [1102] = {
     BuffId = {
-      [0] = 110232,
-      [1] = 110232,
-      [2] = 110232,
-      [3] = 110232,
-      [4] = 110232,
-      [5] = 110232,
-      [6] = 110232
+      [0] = 110231,
+      [1] = 110231,
+      [2] = 110231,
+      [3] = 110231,
+      [4] = 110231,
+      [5] = 110231,
+      [6] = 110231
     },
     ElementAttr = "Dark",
     ID = 1102,

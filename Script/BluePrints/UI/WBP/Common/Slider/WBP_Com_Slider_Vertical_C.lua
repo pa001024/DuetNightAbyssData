@@ -8,21 +8,10 @@ function M:Construct()
   M.Super.Construct(self)
 end
 
-function M:InitWidgetInfoInGamePad()
-  self.GamepadLTPressed = false
-  self.GamepadRTPressed = false
-  if self.bUseDefaultKeyInit then
-    self.Key_Min:CreateCommonKey({
-      KeyInfoList = {
-        {Type = "Img", ImgShortPath = "Up"}
-      }
-    })
-    self.Key_Add:CreateCommonKey({
-      KeyInfoList = {
-        {Type = "Img", ImgShortPath = "Down"}
-      }
-    })
-  end
+function M:Init(ConfigData)
+  rawset(self, "GamePadMinKeyPath", "Down")
+  rawset(self, "GamePadAddKeyPath", "Up")
+  M.Super.Init(self, ConfigData)
 end
 
 function M:MiniMaxUseGamePadStyle(UseGamePadStyle)

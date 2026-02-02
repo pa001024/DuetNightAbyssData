@@ -34,10 +34,19 @@ function M:ResetPauseState(UIName)
   Player.CharSpringArmComponent:SetTickableWhenPaused(false)
 end
 
-function M:GetCanOpen()
+function M:GetCanOpen(PlayerEid)
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     self.CanOpen = true
+    return
+  end
+  local Battle = Battle(self)
+  if not Battle then
+    return
+  end
+  local Player = Battle:GetEntity(PlayerEid)
+  if Player and Player:IsDead() then
+    self.CanOpen = false
     return
   end
   self.CanOpen = not Avatar:IsInHardBoss()
@@ -50,6 +59,10 @@ function M:HideMechanism(NeedCallBack, Reason, AlwaysShow)
   end
   if not AlwaysShow then
     self:SetActorHideTag(Reason, true)
+    local MeshCompArray = self:K2_GetComponentsByClass(UMeshComponent:StaticClass())
+    for i, v in pairs(MeshCompArray) do
+      v:SetCollisionEnabled(0)
+    end
   end
   if NeedCallBack then
     EventManager:AddEvent(EventID.ConditionComplete, self, self.ShowMechanismWithCondition)
@@ -62,6 +75,10 @@ function M:ShowMechanismWithCondition(ShowConditionId)
   end
   local CompArray = self:K2_GetComponentsByClass(UShapeComponent:StaticClass())
   for i, v in pairs(CompArray) do
+    v:SetCollisionEnabled(1)
+  end
+  local MeshCompArray = self:K2_GetComponentsByClass(UMeshComponent:StaticClass())
+  for i, v in pairs(MeshCompArray) do
     v:SetCollisionEnabled(1)
   end
   EventManager:RemoveEvent(EventID.ConditionComplete, self)

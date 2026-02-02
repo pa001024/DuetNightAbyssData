@@ -109,6 +109,10 @@ function M:InitCompView()
   self:SetName(GText(Content.UnitName))
 end
 
+function M:ShowName(Name)
+  self:SetName(Name)
+end
+
 function M:OnRemovedFromFocusPath(InFocusEvent)
   if self._OnRemovedFromFocusPathEvent then
     self._OnRemovedFromFocusPathEvent(self.ParentWidget, self)

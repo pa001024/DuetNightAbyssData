@@ -4,13 +4,17 @@ local M = Class()
 
 function M:Initialize_Lua()
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-  local IsTakeRecorder = GameInstance.IsTakeRecorderCapturing or GameInstance.IsTakeRecorderRendering
+  local IsTakeRecorder
+  if GameInstance then
+    IsTakeRecorder = GameInstance.IsTakeRecorderCapturing or GameInstance.IsTakeRecorderRendering
+  end
   if true == IsTakeRecorder then
     self.bEnableFXScalabilityOpt = false
     self.bEnableFXPool = false
   else
     self.bEnableFXScalabilityOpt = true
     self.bEnableFXMaxNumOpt = true
+    self.bEnableMaxNumAtLocationOpt = true
     self.bEnableClientOpt = true
     self.bOnlyDungeon = true
     self.EnableRenderThreadBundget = true

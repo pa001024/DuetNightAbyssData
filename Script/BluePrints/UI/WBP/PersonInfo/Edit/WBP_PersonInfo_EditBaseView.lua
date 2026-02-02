@@ -21,11 +21,11 @@ function M:Initialize()
   self.bHaveChange = false
   self.bIsTipsopen = false
   self.TempBoxItem = {}
-  EditModel:InitEditData(self)
-  self:InitEditData()
 end
 
 function M:Construct()
+  EditModel:InitEditData(self)
+  self:InitEditData()
   self.TileView_Select_Role.BP_OnItemClicked:Clear()
   self.TileView_Select_Role.BP_OnItemClicked:Add(self, self.OnListItemClicked)
   self.TileView_Select_Role.BP_OnEntryInitialized:Clear()
@@ -293,6 +293,12 @@ function M:CancelSelectItem(Uuid)
 end
 
 function M:ReallySaveModelData()
+  if self.Btn_Confirm and self.Btn_Confirm.IsBtnForbidden and self.Btn_Confirm:IsBtnForbidden() then
+    return
+  end
+  if not self.bHaveChange then
+    return
+  end
   self.bHaveChange = false
   PersonInfoModel:SaveShowPlan(self.TempCharShowPlan, self.TempWeaponShowPlan)
   UIManager(self):ShowUITip("CommonToastMain", GText("UI_PersonInfo_Saved"))

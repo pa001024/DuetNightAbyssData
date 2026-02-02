@@ -240,6 +240,11 @@ return {
       UnitType = "Drop",
       UnitId = 11077
     },
+    ["2050162"] = {
+      CreatorId = 2050162,
+      UnitType = "Mechanism",
+      UnitId = 91006
+    },
     ["1930112"] = {
       CreatorId = 1930112,
       UnitType = "Npc",
@@ -643,6 +648,15 @@ return {
         UnitType = "Drop",
         UnitId = 29004,
         RarelyId = 7049006
+      }
+    },
+    ["7049007"] = {
+      AutoReset = 0,
+      ["2050163"] = {
+        CreatorId = 2050163,
+        UnitType = "Drop",
+        UnitId = 90022,
+        RarelyId = 7049007
       }
     }
   },

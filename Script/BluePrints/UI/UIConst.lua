@@ -76,6 +76,7 @@ UIConst.PROLOGUEENDLOGO = "/Game/UI/WBP/ChapterStart/Widget/WBP_Chapter_Transiti
 UIConst.TASKPANEL = "/Game/UI/UI_PC/Task/Task_Main_PC.Task_Main_PC"
 UIConst.PORTRAIT = "/Game/UI/UI_PC/Menu/Widget/Menu_Portrait_List.Menu_Portrait_List_C"
 UIConst.ScreenshotWidget = "/Game/UI/WBP/Camera/Widget/WBP_Camera_Screenshot.WBP_Camera_Screenshot_C"
+UIConst.ScreenshotWidget_AprilFools = "/Game/UI/WBP/Activity/Widget/Fool/Camera/WBP_Actvity_Fool_Camera_Screenshot.WBP_Actvity_Fool_Camera_Screenshot"
 UIConst.DUNGEONTRAININGFLOAT = "/Game/UI/UI_PC/Training_Ground/Training_Ground_KillNum_PC.Training_Ground_KillNum_PC_C"
 UIConst.DUNGEONCHARACTERINTRO = "/Game/UI/UI_PC/Training_Ground/Training_Ground_PC.Training_Ground_PC"
 UIConst.DUNGEONCOMRIGHTKEYTEXTDESCDATA = "/Game/UI/WBP/Common/Key/Com_RightKeyTextDesc_Data_PC.Com_RightKeyTextDesc_Data_PC_C"
@@ -335,11 +336,6 @@ UIConst.AllUIConfig = {
     addtostack = false,
     allowmulti = false,
     resource = UIConst.BOSSBLOOD
-  },
-  DungenonExcavation = {
-    popup = false,
-    addtostack = true,
-    resource = UIConst.DUNGEONEXCAVATION
   },
   GachaMain = {
     popup = true,
@@ -682,10 +678,25 @@ UIConst.CommonHideTagName = {
   GMShowUIOnly = "GMShowUIOnly"
 }
 UIConst.GameUIShowState = {HUD = 1, System = 2}
+UIConst.IsEnablePageJumpAnimEffect = true
 UIConst.AnimOutSpeedWithPageJump = {
   LittleFastSpeed = 3,
   NormalFastSpeed = 5,
-  MoreFastSpeed = 10
+  MoreFastSpeed = 10,
+  MaxSpeed = 60
+}
+UIConst.AnimWithJumpConfig = {
+  ShopMain = {InAnimWithJumpTime = 0.05, IsNeedFadeOut = false},
+  AutoChessMain = {IsNeedFadeOut = false},
+  FameMain = {IsNeedFadeOut = false, IsNeedFadeIn = true},
+  Normal = {
+    InAnimWithJumpTime = 0.3,
+    OutAnimWithJumpTime = 0.1,
+    IsNeedFadeOut = true,
+    EndFadeOutValue = 0.75,
+    IsNeedFadeIn = false,
+    IsNeedMatchAnimTime = false
+  }
 }
 UIConst.DungeonIndicatorShowWidgets = {"BattleFort"}
 UIConst.RedDotType = {
@@ -795,20 +806,24 @@ UIConst.FXAccessoryTypes = {
   FX_Teleport = true,
   FX_Footprint = true,
   FX_PlungingATK = true,
-  FX_HelixLeap = true
+  FX_HelixLeap = true,
+  MVP = true
 }
 UIConst.HidePlayerAccessoryTypes = {FX_Dead = true, FX_Footprint = true}
 UIConst.AccessoryTypeTextMap = {
+  Hat = "UI_SkinPreview_Accessory_Hat",
   Head = "UI_SkinPreview_Accessory_Head",
   Face = "UI_SkinPreview_Accessory_Face",
   Waist = "UI_SkinPreview_Accessory_Waist",
   Back = "UI_SkinPreview_Accessory_Back",
+  Tail = "UI_SkinPreview_Accessory_Tail",
   FX_Dead = "UI_SkinPreview_Accessory_FX_Dead",
   FX_Teleport = "UI_SkinPreview_Accessory_FX_Teleport",
   FX_Footprint = "UI_SkinPreview_Accessory_FX_Footprint",
   FX_Body = "UI_SkinPreview_Accessory_FX_Body",
   FX_PlungingATK = "UI_SkinPreview_Accessory_FX_PlungingATK",
   FX_HelixLeap = "UI_SkinPreview_Accessory_FX_HelixLeap",
+  MVP = "UI_SkinPreview_Accessory_MVP",
   WeaponAccessory = "UI_SkinPreview_Accessory_Weapon"
 }
 UIConst.ErrorCategory = {
@@ -872,4 +887,28 @@ UIConst.MouseButton = {
   MouseY = true,
   MouseWheelAxis = true
 }
+UIConst.MVPSkipShowTime = 0.6
+UIConst.InputNumMode = {
+  ENABLE_PWD = 1,
+  VERIFY_PWD = 2,
+  NUMBER = 3
+}
+UIConst.SkinPreviewItemTypes = {
+  Skin = true,
+  WeaponSkin = true,
+  CharAccessory = true,
+  WeaponAccessory = true,
+  Mount = true
+}
+UIConst.LimitPreviewResource = {
+  [41037] = true,
+  [41038] = true,
+  [41039] = true,
+  [41042] = true,
+  [41043] = true,
+  [41044] = true,
+  [41045] = true
+}
+UIConst.BlockingTime = 3
+UIConst.MaxBlockTime = 10
 return UIConst

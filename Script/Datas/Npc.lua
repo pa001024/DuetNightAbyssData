@@ -53,57 +53,64 @@ T.RT_24 = {
 T.RT_25 = {"None"}
 T.RT_26 = {500016}
 T.RT_27 = {
-  "Talk01_Loop"
+  "Idle_Speak01"
 }
 T.RT_28 = {
+  "Talk01_Loop"
+}
+T.RT_29 = {
   "Angry01_Loop"
 }
-T.RT_29 = {101201}
-T.RT_30 = {500027}
-T.RT_31 = {102401}
-T.RT_32 = {"Sit_Loop"}
-T.RT_33 = {"Beg_Loop"}
-T.RT_34 = {950014}
-T.RT_35 = {
-  Normal = T.RT_34
-}
+T.RT_30 = {101201}
+T.RT_31 = {500027}
+T.RT_32 = {102401}
+T.RT_33 = {"Sit_Loop"}
+T.RT_34 = {"Beg_Loop"}
+T.RT_35 = {950014}
 T.RT_36 = {
+  Normal = T.RT_35
+}
+T.RT_37 = {
   "Lilikou_Story_Playlyre_Loop"
 }
-T.RT_37 = {"Pray_Loop"}
-T.RT_38 = {
+T.RT_38 = {"Pray_Loop"}
+T.RT_39 = {
   "Salute_Loop"
 }
-T.RT_39 = {
+T.RT_40 = {
   "WuYou_Atp_Idle",
   "Wuyou_Atp_random1",
   "Wuyou_Atp_random2",
   "Wuyou_Atp_Born02",
   "Wuyou_Atp_Afraid"
 }
-T.RT_40 = {
+T.RT_41 = {
   "Tentacle_Idle01"
 }
-T.RT_41 = {
+T.RT_42 = {
   "Tentacle_Idle02"
 }
-T.RT_42 = {
+T.RT_43 = {
   "Nvzhu_Story_LieDown"
 }
-T.RT_43 = {
+T.RT_44 = {
   "Sit",
   "Sit",
   "Pose"
 }
-T.RT_44 = {"Shop"}
-T.RT_45 = {ImpressionShop = 100002}
-T.RT_46 = {FishingShop = 100002}
-T.RT_47 = {"Bai_Idle"}
-T.RT_48 = {RLBShop = 60000, RLTShop = 60001}
-T.RT_49 = {
+T.RT_45 = {"Shop"}
+T.RT_46 = {ExploreBadgeShop = 100002}
+T.RT_47 = {ImpressionShop = 100002}
+T.RT_48 = {FishingShop = 100002}
+T.RT_49 = {"Bai_Idle"}
+T.RT_50 = {RLBShop = 60000, RLTShop = 60001}
+T.RT_51 = {
   "Entertainment"
 }
-T.RT_50 = {"Sit03_Idle"}
+T.RT_52 = {"Sit03_Idle"}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -160,7 +167,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10003",
     NpcType = "Show",
     RelatedTalks = {900301},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     SpecialSit = "Sit02",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Heitao/BP_NPC_Heitao",
     UnitId = 81101,
@@ -176,7 +183,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10027",
     NpcType = "Show",
     RelatedTalks = {9023012, 9023011},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     SpecialSit = "Sit02",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Tuosi/BP_NPC_Tuosi01",
     UnitId = 81103,
@@ -192,7 +199,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10008",
     NpcType = "Show",
     RelatedTalks = {902901},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     SpecialSit = "Sit02",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Baonu/BP_NPC_Baonu",
     UnitId = 81501,
@@ -208,7 +215,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10030",
     NpcType = "Show",
     RelatedTalks = {902501},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     SpecialSit = "Sit02",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Nifu/BP_NPC_Nifu",
     UnitId = 81502,
@@ -224,7 +231,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10026",
     NpcType = "Show",
     RelatedTalks = {902701},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Kezhou/BP_NPC_Kezhou",
     UnitId = 81503,
     UnitName = "UI_CHAR_NAME_1503"
@@ -239,7 +246,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10010",
     NpcType = "Show",
     RelatedTalks = {901501},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     SpecialSit = "Sit02",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Feena/BP_NPC_Feina",
     UnitId = 81801,
@@ -255,7 +262,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10011",
     NpcType = "Show",
     RelatedTalks = {900401},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     SpecialSit = "Sit02",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Shuimu/BP_NPC_Shuimu",
     UnitId = 82101,
@@ -271,7 +278,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10012",
     NpcType = "Show",
     RelatedTalks = {900501},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     SpecialSit = "Sit02",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Zhangyu/BP_NPC_Zhangyu",
     UnitId = 82301,
@@ -287,7 +294,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10023",
     NpcType = "Show",
     RelatedTalks = {901101},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     SpecialSit = "Sit02",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Baiheng/BP_NPC_Baiheng",
     UnitId = 82401,
@@ -303,7 +310,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10013",
     NpcType = "Show",
     RelatedTalks = {901301},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     SpecialSit = "Sit02",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Linen/BP_NPC_Linen",
     UnitId = 83101,
@@ -319,7 +326,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10014",
     NpcType = "Show",
     RelatedTalks = {901401},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     SpecialSit = "Sit02",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Xier/BP_NPC_Xier",
     UnitId = 83102,
@@ -335,7 +342,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10028",
     NpcType = "Show",
     RelatedTalks = {901801},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     SpecialSit = "Sit02",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Yeer/BP_NPC_Yeer",
     UnitId = 83103,
@@ -351,7 +358,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10019",
     NpcType = "Show",
     RelatedTalks = {900601},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Haier/BP_NPC_Haier",
     UnitId = 83201,
     UnitName = "UI_CHAR_NAME_3201"
@@ -366,7 +373,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10029",
     NpcType = "Show",
     RelatedTalks = {901701},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     SpecialSit = "Sit02",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Maerjie/BP_NPC_Maer",
     UnitId = 83301,
@@ -382,7 +389,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10022",
     NpcType = "Show",
     RelatedTalks = {9024012, 9024011},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     SpecialSit = "Sit02",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Lise/BP_NPC_Lise",
     UnitId = 84101,
@@ -398,7 +405,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10024",
     NpcType = "Show",
     RelatedTalks = {902601},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     SpecialSit = "Sit02",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Zhiliu/BP_NPC_Zhiliu",
     UnitId = 84102,
@@ -414,7 +421,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10025",
     NpcType = "Show",
     RelatedTalks = {900701},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     SpecialSit = "Sit02",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Yuming/BP_NPC_Yuming",
     UnitId = 84201,
@@ -430,7 +437,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10005",
     NpcType = "Show",
     RelatedTalks = {900801},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     SpecialSit = "Sit02",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Landi/BP_NPC_Landi",
     UnitId = 84202,
@@ -447,7 +454,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10004",
     NpcType = "Show",
     RelatedTalks = {900901},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     SpecialSit = "Sit02",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Xibi/BP_NPC_Xibi",
     UnitId = 84301,
@@ -463,7 +470,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10017",
     NpcType = "Show",
     RelatedTalks = {901201},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Songlu/BP_NPC_Songlu",
     UnitId = 85101,
     UnitName = "UI_Npc_Name_Songlu"
@@ -478,7 +485,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10009",
     NpcType = "Show",
     RelatedTalks = {901601},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     SpecialSit = "Sit02",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/OutSide/BP_NPC_Aote",
     UnitId = 85102,
@@ -494,7 +501,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10008",
     NpcType = "Show",
     RelatedTalks = {901001},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     SpecialSit = "Sit02",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Saiqi/BP_NPC_Saiqi",
     UnitId = 85301,
@@ -510,7 +517,7 @@ return ReadOnly("Npc", {
     MouthProfile = "LipSync_10021",
     NpcType = "Show",
     RelatedTalks = {9022012, 9022011},
-    ShowAnimationId = T.RT_43,
+    ShowAnimationId = T.RT_44,
     SpecialSit = "Sit02",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Dafu/BP_NPC_Dafu",
     UnitId = 85401,
@@ -522,7 +529,7 @@ return ReadOnly("Npc", {
     CharId = 1101,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 51101,
     MouthProfile = "LipSync_10003",
     NpcType = "Normal",
@@ -535,7 +542,7 @@ return ReadOnly("Npc", {
     CharId = 1103,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 51103,
     MouthProfile = "LipSync_10027",
     NpcType = "Normal",
@@ -548,7 +555,7 @@ return ReadOnly("Npc", {
     CharId = 1501,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 81501,
     MouthProfile = "LipSync_10008",
     NpcType = "Normal",
@@ -561,7 +568,7 @@ return ReadOnly("Npc", {
     CharId = 1502,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 81502,
     MouthProfile = "LipSync_10030",
     NpcType = "Normal",
@@ -574,7 +581,7 @@ return ReadOnly("Npc", {
     CharId = 1503,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 81503,
     MouthProfile = "LipSync_10026",
     NpcType = "Normal",
@@ -587,7 +594,7 @@ return ReadOnly("Npc", {
     CharId = 1801,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 81801,
     MouthProfile = "LipSync_10010",
     NpcType = "Normal",
@@ -600,7 +607,7 @@ return ReadOnly("Npc", {
     CharId = 2101,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 52101,
     MouthProfile = "LipSync_10011",
     NpcType = "Normal",
@@ -613,7 +620,7 @@ return ReadOnly("Npc", {
     CharId = 2301,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 82301,
     MouthProfile = "LipSync_10012",
     NpcType = "Normal",
@@ -626,7 +633,7 @@ return ReadOnly("Npc", {
     CharId = 2401,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 82401,
     MouthProfile = "LipSync_10023",
     NpcType = "Normal",
@@ -639,7 +646,7 @@ return ReadOnly("Npc", {
     CharId = 3101,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 83101,
     MouthProfile = "LipSync_10013",
     NpcType = "Normal",
@@ -652,7 +659,7 @@ return ReadOnly("Npc", {
     CharId = 3102,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 83102,
     MouthProfile = "LipSync_10014",
     NpcType = "Normal",
@@ -665,7 +672,7 @@ return ReadOnly("Npc", {
     CharId = 3103,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 83103,
     MouthProfile = "LipSync_10028",
     NpcType = "Normal",
@@ -678,7 +685,7 @@ return ReadOnly("Npc", {
     CharId = 3201,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 53201,
     MouthProfile = "LipSync_10019",
     NpcType = "Normal",
@@ -691,7 +698,7 @@ return ReadOnly("Npc", {
     CharId = 3301,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 83301,
     MouthProfile = "LipSync_10029",
     NpcType = "Normal",
@@ -704,7 +711,7 @@ return ReadOnly("Npc", {
     CharId = 4101,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 84101,
     MouthProfile = "LipSync_10022",
     NpcType = "Normal",
@@ -717,7 +724,7 @@ return ReadOnly("Npc", {
     CharId = 4102,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 54102,
     MouthProfile = "LipSync_10024",
     NpcType = "Normal",
@@ -730,7 +737,7 @@ return ReadOnly("Npc", {
     CharId = 4201,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 84201,
     MouthProfile = "LipSync_10025",
     NpcType = "Normal",
@@ -743,7 +750,7 @@ return ReadOnly("Npc", {
     CharId = 4202,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 84202,
     MouthProfile = "LipSync_10005",
     NpcType = "Normal",
@@ -756,7 +763,7 @@ return ReadOnly("Npc", {
     CharId = 4301,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     GuideHeadId = "Xibi_Idle",
     ModelId = 84301,
     MouthProfile = "LipSync_10004",
@@ -770,7 +777,7 @@ return ReadOnly("Npc", {
     CharId = 5101,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 85101,
     MouthProfile = "LipSync_10017",
     NpcType = "Normal",
@@ -783,7 +790,7 @@ return ReadOnly("Npc", {
     CharId = 5102,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 55102,
     MouthProfile = "LipSync_10009",
     NpcType = "Normal",
@@ -796,7 +803,7 @@ return ReadOnly("Npc", {
     CharId = 5301,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 85301,
     MouthProfile = "LipSync_10008",
     NpcType = "Normal",
@@ -809,7 +816,7 @@ return ReadOnly("Npc", {
     CharId = 5401,
     CollisionLevel = 999,
     DefaultAction = T.RT_11,
-    GlobalGameUITagList = T.RT_49,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 55401,
     MouthProfile = "LipSync_10021",
     NpcType = "Normal",
@@ -1628,6 +1635,7 @@ return ReadOnly("Npc", {
     CollisionLevel = 999,
     ModelId = 3102,
     MouthProfile = "LipSync_10014",
+    UnitBPPath = "Game/AssetDesign/Char/Npc/CharacterNpc/Xier/BP_NPC_Xier",
     UnitId = 100403,
     UnitName = "UI_Npc_Name_Xier"
   },
@@ -1638,88 +1646,33 @@ return ReadOnly("Npc", {
     UnitName = "UI_Npc_Name_Fuluo"
   },
   [100405] = {
-    Camp = "NPC",
     CollisionLevel = 999,
-    DefaultExpression = T.RT_1,
-    ModelId = 30006,
-    NpcType = "Normal",
-    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/MainStory03/BP_QNM_Shoupiao",
+    ModelId = 10006,
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/BaiNpc/BaiTX/BP_BaiTX",
     UnitId = 100405,
-    UnitName = "UI_Npc_Name_CheZhanJianPiao"
+    UnitName = "UI_Npc_Name_BaiDu"
   },
   [100406] = {
-    Camp = "NPC",
     CollisionLevel = 999,
-    DefaultExpression = T.RT_1,
-    ModelId = 30007,
-    NpcType = "Normal",
-    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/MainStory03/BP_QNF_YouhaoGuizu",
+    ModelId = 30006,
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/MainStory03/BP_QNM_Shoupiao",
     UnitId = 100406,
-    UnitName = "UI_CMNpc_Name_YouHaoGuiZu"
+    UnitName = "UI_Npc_Name_Shoupiao01"
   },
   [100407] = {
-    Camp = "NPC",
     CollisionLevel = 999,
-    DefaultExpression = T.RT_1,
-    ModelId = 30007,
-    NpcType = "Normal",
-    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/MainStory03/BP_QNF_YibanShaonv",
-    UnitId = 100407,
-    UnitName = "UI_CMNpc_Name_YiBanShaoNv"
-  },
-  [100408] = {
-    Camp = "NPC",
-    CollisionLevel = 999,
-    DefaultExpression = T.RT_1,
-    ModelId = 30006,
-    NpcType = "Normal",
-    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/MainStory03/BP_QNM_ShendaoPingmin",
-    UnitId = 100408,
-    UnitName = "UI_CMNpc_Name_ShenDaoPingMin"
-  },
-  [100409] = {
-    Camp = "NPC",
-    CollisionLevel = 999,
-    DefaultExpression = T.RT_1,
     ModelId = 30004,
-    NpcType = "Normal",
-    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/MainStory03/BP_ZNM_CenzhanZhanzhang",
-    UnitId = 100409,
-    UnitName = "UI_CMNpc_Name_ZhanZhang"
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/MainStory03/BP_ZNM_ChezhanGongtou",
+    UnitId = 100407,
+    UnitName = "UI_Npc_Name_ChezhanGongtou"
   },
-  [100410] = {
-    Camp = "NPC",
-    CollisionLevel = 999,
-    DefaultExpression = T.RT_1,
-    ModelId = 30003,
-    NpcType = "Normal",
-    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/MainStory03/BP_LNF_XierdaNvpu",
-    UnitId = 100410,
-    UnitName = "UI_CMNpc_Name_LaoNvPuXiEr"
-  },
-  [100411] = {
-    Camp = "NPC",
-    CollisionLevel = 999,
-    ModelId = 30014,
-    NpcType = "Normal",
-    UnitId = 100411,
-    UnitName = "UI_CMNpc_Name_CheZhanAnBaoDuiZhang"
-  },
-  [100412] = {
-    CollisionLevel = 999,
-    UnitId = 100412,
-    UnitName = "UI_CMNpc_CheZhanName_XiuLLiGong"
-  },
-  [100413] = {
-    CollisionLevel = 999,
-    UnitId = 100413,
-    UnitName = "UI_CMNpc_Name_CheZhanQingJieYuan"
-  },
-  [100414] = {
-    CollisionLevel = 999,
-    UnitId = 100414,
-    UnitName = "UI_CMNpc_Name_CheZhanBaoShi"
-  },
+  [100408] = {UnitId = 100408},
+  [100409] = {UnitId = 100409},
+  [100410] = {UnitId = 100410},
+  [100411] = {UnitId = 100411},
+  [100412] = {UnitId = 100412},
+  [100413] = {UnitId = 100413},
+  [100414] = {UnitId = 100414},
   [100415] = {CollisionLevel = 999, UnitId = 100415},
   [100416] = {CollisionLevel = 999, UnitId = 100416},
   [100417] = {CollisionLevel = 999, UnitId = 100417},
@@ -2324,6 +2277,177 @@ return ReadOnly("Npc", {
     UnitId = 110057,
     UnitName = "UI_Npc_Hurtsoldier"
   },
+  [111001] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 10010,
+    MouthProfile = "LipSync_10010",
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Feena/BP_NPC_Feina",
+    UnitId = 111001,
+    UnitName = "UI_Npc_Name_Ada"
+  },
+  [111002] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 10010,
+    MouthProfile = "LipSync_10010",
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Feena/BP_NPC_Feina",
+    UnitId = 111002,
+    UnitName = "UI_Npc_Name_Eve"
+  },
+  [111110] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 10002,
+    MouthProfile = "LipSync_10003",
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Heitao/BP_NPC_Heitao",
+    UnitId = 111110,
+    UnitName = "UI_Npc_Name_Falu"
+  },
+  [111120] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    GuideHeadId = "Fuer_Idle",
+    ModelId = 10034,
+    MouthProfile = "LipSync_10009",
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Fuer/BP_NPC_Fuer",
+    UnitId = 111120,
+    UnitName = "UI_Npc_Name_Fuer"
+  },
+  [111121] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30022,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/NPC_Wuyou/Wuyou02/BP_NPC_Wuyou02",
+    UnitId = 111121,
+    UnitName = "UI_Npc_Name_Elf"
+  },
+  [111122] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 10010,
+    MouthProfile = "LipSync_10010",
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Feena/BP_NPC_Feina",
+    UnitId = 111122,
+    UnitName = "UI_Npc_Name_Ada"
+  },
+  [111123] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 10037,
+    MouthProfile = "LipSync_10027",
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Weiji/BP_NPC_Weiji",
+    UnitId = 111123,
+    UnitName = "UI_Npc_Name_Weijier"
+  },
+  [111124] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    GuideHeadId = "Awa_Idle",
+    ModelId = 10033,
+    MouthProfile = "LipSync_10009",
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Awa/BP_NPC_Awa",
+    UnitId = 111124,
+    UnitName = "UI_CMNpc_Name_Cunzhang"
+  },
+  [111150] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/EX02/BP_Goushu",
+    UnitId = 111150,
+    UnitName = "UI_CMNpc_Name_Goushu"
+  },
+  [111151] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30007,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/EX02/BP_Niaojie",
+    UnitId = 111151,
+    UnitName = "UI_CMNpc_Name_Niaojie"
+  },
+  [111152] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/EX02/BP_Zhuge",
+    UnitId = 111152,
+    UnitName = "UI_CMNpc_Name_Zhuge"
+  },
+  [111153] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/EX02/BP_Langshu",
+    UnitId = 111153,
+    UnitName = "UI_CMNpc_Name_Langshu"
+  },
+  [111154] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30006,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/EX02/BP_JiaojiQNM",
+    UnitId = 111154,
+    UnitName = "UI_CMNpc_Name_JiaojiQNM"
+  },
+  [111155] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30005,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/EX02/BP_ReqingZNF",
+    UnitId = 111155,
+    UnitName = "UI_CMNpc_Name_ReqingZNF"
+  },
+  [111156] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30002,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/EX02/BP_JidongLNM",
+    UnitId = 111156,
+    UnitName = "UI_CMNpc_Name_JidongLNM"
+  },
+  [111157] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30008,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/EX02/BP_ChongjingYNM",
+    UnitId = 111157,
+    UnitName = "UI_CMNpc_Name_ChongjingYNM"
+  },
+  [111158] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/EX02/BP_JiduZNM",
+    UnitId = 111158,
+    UnitName = "UI_CMNpc_Name_JiduZNM"
+  },
+  [111159] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/EX02/BP_HuangzhangZNM",
+    UnitId = 111159,
+    UnitName = "UI_CMNpc_Name_HuangzhangZNM"
+  },
   [120001] = {
     Camp = "NPC",
     CollisionLevel = 999,
@@ -2354,10 +2478,8 @@ return ReadOnly("Npc", {
     UnitName = "UI_Npc_Name_Bai"
   },
   [200003] = {
-    BT = "BehaviorTree'/Game/AssetDesign/AI/Npc/Kami/BT_Npc_Kami.BT_Npc_Kami'",
     Camp = "NPC",
     CollisionLevel = 999,
-    GuideCanMove = 1,
     ModelId = 10012,
     MouthProfile = "LipSync_10007",
     NpcType = "Normal",
@@ -3327,7 +3449,7 @@ return ReadOnly("Npc", {
     CollisionLevel = 999,
     DefaultAction = T.RT_21,
     DefaultExpression = T.RT_22,
-    ModelId = 84201,
+    ModelId = 10091,
     MouthProfile = "LipSync_10025",
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Yuming/BP_NPC_Yuming",
@@ -3387,7 +3509,7 @@ return ReadOnly("Npc", {
     CollisionLevel = 999,
     GuideHeadId = "Qiu_Idle",
     ModelId = 10084,
-    MouthProfile = "Lipsync_10009",
+    MouthProfile = "LipSync_10009",
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Qiu/BP_NPC_Qiu",
     UnitId = 210012,
@@ -4449,7 +4571,7 @@ return ReadOnly("Npc", {
     CollisionLevel = 999,
     DefaultAction = T.RT_21,
     DefaultExpression = T.RT_22,
-    ModelId = 84201,
+    ModelId = 10091,
     MouthProfile = "LipSync_10025",
     NpcType = "Normal",
     RelatedTalks = {120256},
@@ -4476,7 +4598,7 @@ return ReadOnly("Npc", {
     DefaultAction = T.RT_5,
     GuideHeadId = "Qiu_Idle",
     ModelId = 10084,
-    MouthProfile = "Lipsync_10009",
+    MouthProfile = "LipSync_10009",
     NpcType = "Normal",
     RelatedTalks = {120258},
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Qiu/BP_NPC_Qiu",
@@ -4637,6 +4759,17 @@ return ReadOnly("Npc", {
     UnitBPPath = "/Game/AssetDesign/Char/Npc/BP_EmptyNpcActor",
     UnitId = 210133,
     UnitName = "UI_MECHANISM_118004"
+  },
+  [210134] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30007,
+    MouthProfile = "LipSync_10008",
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East01/BP_Yusheng",
+    UnitId = 210134,
+    UnitName = "UI_Npc_CMName_LuGuoXingShang"
   },
   [211001] = {
     Camp = "NPC",
@@ -5057,6 +5190,17 @@ return ReadOnly("Npc", {
     UnitId = 211042,
     UnitName = "UI_FNNpc_Name_Sevio"
   },
+  [211043] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ForbidenMoveComp = true,
+    IgnoreFixLocation = true,
+    NpcType = "Normal",
+    RelatedTalks = {200013},
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/BP_EmptyNpcActor_MrBird",
+    UnitId = 211043,
+    UnitName = "UI_FNNpc_Name_MrBird"
+  },
   [220003] = {
     Camp = "NPC",
     CollisionLevel = 999,
@@ -5214,7 +5358,7 @@ return ReadOnly("Npc", {
   [220026] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    ModelId = 10013,
+    ModelId = 30013,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/TalkMonster/MainStoryEast00/BP_NPC_JT_GateSoldier2",
     UnitId = 220026,
@@ -5522,7 +5666,7 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CollisionLevel = 999,
     DefaultExpression = T.RT_1,
-    ModelId = 30006,
+    ModelId = 30005,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Xiangke",
     UnitId = 240008,
@@ -5542,7 +5686,7 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CollisionLevel = 999,
     DefaultExpression = T.RT_1,
-    ModelId = 30006,
+    ModelId = 30004,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Xingfen",
     UnitId = 240010,
@@ -5552,7 +5696,7 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CollisionLevel = 999,
     DefaultExpression = T.RT_1,
-    ModelId = 30006,
+    ModelId = 30004,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Xuanyao",
     UnitId = 240011,
@@ -5562,7 +5706,7 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CollisionLevel = 999,
     DefaultExpression = T.RT_1,
-    ModelId = 30006,
+    ModelId = 30004,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Wenzou",
     UnitId = 240012,
@@ -5582,9 +5726,9 @@ return ReadOnly("Npc", {
   [240014] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    ModelId = 10020,
+    ModelId = 1000201,
     NpcType = "Normal",
-    UnitBPPath = "/Game/AssetDesign/Char/Npc/TalkMonster/MainStoryChapter01/BP_Kevin",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/TalkMonster/Monster/Tianwei/BP_NPC_Tianwei",
     UnitId = 240014,
     UnitName = "UI_Npc_Name_240014"
   },
@@ -5677,14 +5821,18 @@ return ReadOnly("Npc", {
   [240024] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    ModelId = 30032,
     NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/TalkMonster/Monster/Heilong/BP_NPC_Heilong",
     UnitId = 240024,
     UnitName = "UI_Npc_Name_240024"
   },
   [240025] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    ModelId = 30032,
     NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/TalkMonster/Monster/Heilong/BP_NPC_Heilong",
     UnitId = 240025,
     UnitName = "UI_Npc_Name_240025"
   },
@@ -5767,7 +5915,7 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CollisionLevel = 999,
     DefaultExpression = T.RT_1,
-    ModelId = 30006,
+    ModelId = 30008,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Zhupiao",
     UnitId = 240034,
@@ -5787,7 +5935,7 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CollisionLevel = 999,
     DefaultExpression = T.RT_1,
-    ModelId = 30006,
+    ModelId = 30007,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_PiaolingB",
     UnitId = 240036,
@@ -5836,7 +5984,10 @@ return ReadOnly("Npc", {
   [240041] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30004,
     NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Gongji",
     UnitId = 240041,
     UnitName = "UI_Npc_Name_240041"
   },
@@ -5873,7 +6024,9 @@ return ReadOnly("Npc", {
   [240045] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    ModelId = 30031,
     NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/TalkMonster/Monster/BiAn/BP_NPC_BiAnB",
     UnitId = 240045,
     UnitName = "UI_Npc_Name_240045"
   },
@@ -5921,7 +6074,7 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CollisionLevel = 999,
     DefaultExpression = T.RT_1,
-    ModelId = 30002,
+    ModelId = 30004,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_JU",
     UnitId = 240050,
@@ -5931,7 +6084,7 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CollisionLevel = 999,
     DefaultExpression = T.RT_1,
-    ModelId = 30003,
+    ModelId = 30005,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Yang",
     UnitId = 240051,
@@ -5941,10 +6094,691 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CollisionLevel = 999,
     DefaultExpression = T.RT_1,
-    ModelId = 30006,
+    ModelId = 30004,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Xuhong",
-    UnitId = 240052
+    UnitId = 240052,
+    UnitName = "UI_Npc_Name_240052"
+  },
+  [240053] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30031,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/TalkMonster/Monster/BiAn/BP_NPC_BiAnB",
+    UnitId = 240053,
+    UnitName = "UI_Npc_Name_240045"
+  },
+  [240054] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30031,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/TalkMonster/Monster/BiAn/BP_NPC_BiAnW",
+    UnitId = 240054,
+    UnitName = "UI_Npc_Name_240045"
+  },
+  [240055] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30006,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_ShiminA",
+    UnitId = 240055
+  },
+  [240056] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30005,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_ShiminB",
+    UnitId = 240056
+  },
+  [240057] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30003,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_ShiminC",
+    UnitId = 240057
+  },
+  [240058] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Jishu01",
+    UnitId = 240058
+  },
+  [240059] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30005,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Xuanhen01",
+    UnitId = 240059
+  },
+  [240060] = {
+    BT = "/Game/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu",
+    Camp = "NPC",
+    CollisionLevel = 999,
+    Gender = 1,
+    GuideHeadId = "Nvzhu_Idle",
+    ModelId = 10001,
+    MouthProfile = "LipSync_10001",
+    NpcType = "Normal",
+    PlayerInfo = true,
+    RelateNpcId = 100002,
+    SpecialSit = "Sit_Idle_Start",
+    SwitchPlayer = "Player",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/ZhujueNpc/Nvzhu/BP_Nvzhu",
+    UnitId = 240060
+  },
+  [240061] = {
+    BT = "/Game/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu",
+    Camp = "NPC",
+    CollisionLevel = 999,
+    Gender = 0,
+    GuideHeadId = "Nanzhu_Idle",
+    ModelId = 10004,
+    MouthProfile = "LipSync_10002",
+    NpcType = "Normal",
+    PlayerInfo = true,
+    RelateNpcId = 100001,
+    SpecialSit = "Sit_Idle_Start",
+    SwitchPlayer = "Player",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/ZhujueNpc/Nanzhu/BP_NPC_Nanzhu",
+    UnitId = 240061
+  },
+  [240062] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 1000201,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/TalkMonster/Monster/Tianwei/BP_NPC_Tianwei",
+    UnitId = 240062
+  },
+  [240063] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 1000201,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/TalkMonster/Monster/Tianwei/BP_NPC_Tianwei",
+    UnitId = 240063
+  },
+  [240064] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 1000201,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/TalkMonster/Monster/Tianwei/BP_NPC_Tianwei",
+    UnitId = 240064
+  },
+  [240065] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 1000201,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/TalkMonster/Monster/Tianwei/BP_NPC_Tianwei",
+    UnitId = 240065
+  },
+  [240066] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Guzhi",
+    UnitId = 240066,
+    UnitName = "UI_Npc_Name_240066"
+  },
+  [240067] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30006,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Haipanan",
+    UnitId = 240067,
+    UnitName = "UI_Npc_Name_240067"
+  },
+  [240068] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30007,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Fadou",
+    UnitId = 240068,
+    UnitName = "UI_Npc_Name_240068"
+  },
+  [240069] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30007,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Shiluo",
+    UnitId = 240069,
+    UnitName = "UI_Npc_Name_240069"
+  },
+  [240070] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30021,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/NPC_Wuyou/Wuyou03/BP_NPC_Wuyou03",
+    UnitId = 240070,
+    UnitName = "UI_Npc_Name_240070"
+  },
+  [240071] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30005,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Xianren01",
+    UnitId = 240071,
+    UnitName = "UI_Npc_Name_240071"
+  },
+  [240072] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Xianren03",
+    UnitId = 240072,
+    UnitName = "UI_Npc_Name_240072"
+  },
+  [240073] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Xianren04",
+    UnitId = 240073,
+    UnitName = "UI_Npc_Name_240073"
+  },
+  [240074] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30005,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Xianren02",
+    UnitId = 240074,
+    UnitName = "UI_Npc_Name_240074"
+  },
+  [240075] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Xianren05",
+    UnitId = 240075,
+    UnitName = "UI_Npc_Name_240075"
+  },
+  [240076] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30007,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Fankangjun01",
+    UnitId = 240076
+  },
+  [240077] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30007,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Fankangjun02",
+    UnitId = 240077
+  },
+  [240078] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30006,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Fankangjun03",
+    UnitId = 240078
+  },
+  [240079] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30006,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Fankangjun04",
+    UnitId = 240079
+  },
+  [240080] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30006,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Fankangjun05",
+    UnitId = 240080
+  },
+  [240081] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30006,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Fankangjun06",
+    UnitId = 240081
+  },
+  [240082] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30006,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Fankangjun07",
+    UnitId = 240082
+  },
+  [240083] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30006,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Fankangjun08",
+    UnitId = 240083
+  },
+  [240084] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30007,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_YoungGirl",
+    UnitId = 240084
+  },
+  [240085] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Hawker",
+    UnitId = 240085
+  },
+  [240086] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30013,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_NPC_JT_GateSoldier2",
+    UnitId = 240086
+  },
+  [240087] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Zhongniannan01",
+    UnitId = 240087
+  },
+  [240088] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Zhongniannan02",
+    UnitId = 240088
+  },
+  [240089] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30008,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Youniannan",
+    UnitId = 240089
+  },
+  [240090] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30007,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Qinniannv",
+    UnitId = 240090
+  },
+  [240091] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_HeishiZhongniannan",
+    UnitId = 240091
+  },
+  [240092] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30006,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_ZeshengC",
+    UnitId = 240092
+  },
+  [240093] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30007,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_ZeshengD",
+    UnitId = 240093
+  },
+  [240094] = {
+    BT = "/Game/AssetDesign/AI/Npc/Bai/BT_Npc_Bai02",
+    Camp = "NPC",
+    CollisionLevel = 999,
+    GuideCanMove = 1,
+    GuideHeadId = "Bai_Idle",
+    ModelId = 10006,
+    MouthProfile = "LipSync_10006",
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/BaiNpc/BaiTX/BP_BaiTX",
+    UnitId = 240094,
+    UnitName = "UI_Npc_Name_Bai"
+  },
+  [240095] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30031,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_NPC_BiAnB",
+    UnitId = 240095
+  },
+  [240096] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30031,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_NPC_BiAnB",
+    UnitId = 240096
+  },
+  [240097] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30031,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_NPC_BiAnB",
+    UnitId = 240097
+  },
+  [240098] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30009,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Youniannv",
+    UnitId = 240098
+  },
+  [240099] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 84201,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_NPC_Yuming",
+    UnitId = 240099
+  },
+  [250001] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 82401,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Baiheng/BP_NPC_Baiheng",
+    UnitId = 250001,
+    UnitName = "UI_Npc_Name_250001"
+  },
+  [250002] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 10052,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Zhiliu/BP_NPC_Zhiliu",
+    UnitId = 250002,
+    UnitName = "UI_Npc_Name_250002"
+  },
+  [250003] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 10090,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Suyi/BP_NPC_Suyi",
+    UnitId = 250003,
+    UnitName = "UI_Npc_Name_250003"
+  },
+  [250004] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 10052,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Zhiliu/BP_NPC_Zhiliu",
+    UnitId = 250004,
+    UnitName = "UI_Npc_Name_250004"
+  },
+  [250005] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 84201,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Yuming/BP_NPC_Yuming",
+    UnitId = 250005,
+    UnitName = "UI_Npc_Name_250005"
+  },
+  [250006] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 82301,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Zhangyu/BP_NPC_Zhangyu",
+    UnitId = 250006,
+    UnitName = "UI_Npc_Name_250006"
+  },
+  [250007] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East03/BP_Shuoshu",
+    UnitId = 250007,
+    UnitName = "UI_Npc_Name_250007"
+  },
+  [250008] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30002,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East03/BP_Laoban",
+    UnitId = 250008,
+    UnitName = "UI_Npc_Name_250008"
+  },
+  [250009] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East03/BP_Jia",
+    UnitId = 250009,
+    UnitName = "UI_Npc_Name_250009"
+  },
+  [250010] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30005,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East03/BP_Yi",
+    UnitId = 250010,
+    UnitName = "UI_Npc_Name_250010"
+  },
+  [250011] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30005,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East03/BP_Gongzuo",
+    UnitId = 250011,
+    UnitName = "UI_Npc_Name_250011"
+  },
+  [250012] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30002,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East03/BP_Bing",
+    UnitId = 250012,
+    UnitName = "UI_Npc_Name_250012"
+  },
+  [250013] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30005,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East03/BP_Ding",
+    UnitId = 250013,
+    UnitName = "UI_Npc_Name_250013"
+  },
+  [250014] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30008,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East03/BP_Tingshu",
+    UnitId = 250014,
+    UnitName = "UI_Npc_Name_250014"
+  },
+  [250015] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East03/BP_Huaiyuan",
+    UnitId = 250015,
+    UnitName = "UI_Npc_Name_250015"
+  },
+  [250016] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East03/BP_Goutui",
+    UnitId = 250016,
+    UnitName = "UI_Npc_Name_250016"
+  },
+  [250017] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30008,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East03/BP_Xiaoan",
+    UnitId = 250017,
+    UnitName = "UI_Npc_Name_250017"
+  },
+  [250018] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30005,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East03/BP_Xiaoxiang",
+    UnitId = 250018,
+    UnitName = "UI_Npc_Name_250018"
+  },
+  [250019] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30005,
+    NpcType = "Normal",
+    UnitId = 250019,
+    UnitName = "UI_Npc_Name_250019"
+  },
+  [250020] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitId = 250020,
+    UnitName = "UI_Npc_Name_250020"
+  },
+  [250021] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30006,
+    NpcType = "Normal",
+    UnitId = 250021,
+    UnitName = "UI_Npc_Name_250021"
+  },
+  [250022] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30005,
+    NpcType = "Normal",
+    UnitId = 250022,
+    UnitName = "UI_Npc_Name_250022"
+  },
+  [250023] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 1000201,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/TalkMonster/Monster/Tianwei/BP_NPC_Tianwei",
+    UnitId = 250023,
+    UnitName = "UI_Npc_Name_250023"
+  },
+  [250024] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Tangshu",
+    UnitId = 250024,
+    UnitName = "UI_Npc_Name_250024"
+  },
+  [250025] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30009,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East03/BP_Xiaonv",
+    UnitId = 250025,
+    UnitName = "UI_Npc_Name_250025"
+  },
+  [250026] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30007,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East03/BP_Wangchun",
+    UnitId = 250026,
+    UnitName = "UI_Npc_Name_250026"
+  },
+  [250027] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East03/BP_Kanshou",
+    UnitId = 250027,
+    UnitName = "UI_Npc_Name_250027"
   },
   [700002] = {
     Camp = "NPC",
@@ -6216,9 +7050,7 @@ return ReadOnly("Npc", {
   [700024] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = {
-      "Idle_Speak01"
-    },
+    DefaultAction = T.RT_27,
     DefaultExpression = T.RT_1,
     ModelId = 30004,
     NpcType = "Normal",
@@ -6394,7 +7226,7 @@ return ReadOnly("Npc", {
   [700041] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_27,
+    DefaultAction = T.RT_28,
     DefaultExpression = T.RT_1,
     ModelId = 30006,
     NpcType = "Normal",
@@ -6434,7 +7266,7 @@ return ReadOnly("Npc", {
   [700045] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_28,
+    DefaultAction = T.RT_29,
     DefaultExpression = T.RT_1,
     ModelId = 30006,
     NpcType = "Normal",
@@ -6444,7 +7276,7 @@ return ReadOnly("Npc", {
   [700046] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_27,
+    DefaultAction = T.RT_28,
     DefaultExpression = T.RT_1,
     ModelId = 30004,
     NpcType = "Normal",
@@ -6689,9 +7521,9 @@ return ReadOnly("Npc", {
     CollisionLevel = 999,
     DefaultExpression = T.RT_1,
     ModelId = 30004,
-    NpcBiographyId = T.RT_29,
+    NpcBiographyId = T.RT_30,
     NpcType = "Normal",
-    RelatedBubble = T.RT_30,
+    RelatedBubble = T.RT_31,
     RelatedTalks = {500058},
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/IceLakeCity/People/BP_Dadun",
     UnitId = 700069,
@@ -7199,7 +8031,7 @@ return ReadOnly("Npc", {
     CollisionLevel = 999,
     DefaultExpression = T.RT_1,
     ModelId = 30004,
-    NpcBiographyId = T.RT_31,
+    NpcBiographyId = T.RT_32,
     NpcType = "Normal",
     RelatedBubble = {500049},
     RelatedTalks = {5100531},
@@ -7212,7 +8044,7 @@ return ReadOnly("Npc", {
     CollisionLevel = 999,
     DefaultExpression = T.RT_1,
     ModelId = 30004,
-    NpcBiographyId = T.RT_31,
+    NpcBiographyId = T.RT_32,
     NpcType = "Normal",
     RelatedTalks = {5100551},
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/IceLakeCity/People/BP_Makusi",
@@ -7252,7 +8084,7 @@ return ReadOnly("Npc", {
     DefaultExpression = T.RT_1,
     IsSit = 1,
     ModelId = 30004,
-    NpcBiographyId = T.RT_31,
+    NpcBiographyId = T.RT_32,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/IceLakeCity/People/BP_Makusi",
     UnitId = 700121,
@@ -7456,7 +8288,7 @@ return ReadOnly("Npc", {
   [700141] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_27,
+    DefaultAction = T.RT_28,
     DefaultExpression = T.RT_1,
     ModelId = 30006,
     NpcType = "Normal",
@@ -7623,9 +8455,9 @@ return ReadOnly("Npc", {
     CollisionLevel = 999,
     DefaultExpression = T.RT_1,
     ModelId = 30004,
-    NpcBiographyId = T.RT_29,
+    NpcBiographyId = T.RT_30,
     NpcType = "Normal",
-    RelatedBubble = T.RT_30,
+    RelatedBubble = T.RT_31,
     RelatedTalks = {510080},
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/IceLakeCity/People/BP_Dadun",
     UnitId = 700192,
@@ -7802,7 +8634,7 @@ return ReadOnly("Npc", {
   [700210] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_32,
+    DefaultAction = T.RT_33,
     Gender = 1,
     ModelId = 10001,
     MouthProfile = "LipSync_10001",
@@ -8211,7 +9043,7 @@ return ReadOnly("Npc", {
   [700260] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_33,
+    DefaultAction = T.RT_34,
     DefaultExpression = T.RT_1,
     ModelId = 30002,
     NpcType = "Normal",
@@ -8494,7 +9326,7 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CollisionLevel = 999,
     IsRepeatable = 1,
-    ModelId = 84201,
+    ModelId = 10091,
     MouthProfile = "LipSync_10025",
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Yuming/BP_NPC_Yuming",
@@ -8676,10 +9508,10 @@ return ReadOnly("Npc", {
     UnitName = "UI_CMNpc_Name_Miya"
   },
   [700342] = {
-    AccessoryIds = T.RT_35,
+    AccessoryIds = T.RT_36,
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_36,
+    DefaultAction = T.RT_37,
     IsSit = 3,
     ModelId = 30030,
     MouthProfile = "LipSync_10008",
@@ -8723,10 +9555,10 @@ return ReadOnly("Npc", {
     UnitName = "UI_CMNpc_Name_Lingling"
   },
   [700345] = {
-    AccessoryIds = T.RT_35,
+    AccessoryIds = T.RT_36,
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_36,
+    DefaultAction = T.RT_37,
     IsSit = 2,
     ModelId = 30030,
     MouthProfile = "LipSync_10008",
@@ -8968,6 +9800,7 @@ return ReadOnly("Npc", {
     DefaultExpression = T.RT_1,
     ModelId = 30007,
     NpcType = "Normal",
+    RelatedBubble = {511511},
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East01/BP_ZLSecretary",
     UnitId = 700370,
     UnitName = "UI_CMNpc_Name_ZLSecretary"
@@ -9011,7 +9844,7 @@ return ReadOnly("Npc", {
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/NPC_Wuyou/Wuyou03/BP_NPC_Wuyou03",
     UnitId = 700375,
-    UnitName = "UI_CMNpc_Name_HengSheng"
+    UnitName = "UI_CMNpc_Name_HengSheng2"
   },
   [700376] = {
     Camp = "NPC",
@@ -9025,12 +9858,11 @@ return ReadOnly("Npc", {
   [700377] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    ForbidenMoveComp = true,
-    IgnoreFixLocation = true,
-    ModelId = 405,
+    ModelId = 64051,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Pet/Yaoye/BP_Yaoye",
-    UnitId = 700377
+    UnitId = 700377,
+    UnitName = "UI_Moling_Name_Yaoye"
   },
   [700378] = {
     BT = "/Game/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.BT_Npc_Bai",
@@ -9062,6 +9894,24 @@ return ReadOnly("Npc", {
     UnitBPPath = "/Game/AssetDesign/Char/Npc/BaiNpc/BaiTX/BP_BaiTX",
     UnitId = 700380,
     UnitName = "UI_Npc_Name_Bai"
+  },
+  [700381] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30006,
+    NpcType = "Normal",
+    UnitBPPath = "Blueprint'/Game/AssetDesign/Char/Npc/Custom/East01/BP_Qunyan.BP_Qunyan'",
+    UnitId = 700381,
+    UnitName = "UI_CMNpc_Name_QunYan"
+  },
+  [700382] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30006,
+    NpcType = "Normal",
+    UnitBPPath = "Blueprint'/Game/AssetDesign/Char/Npc/Custom/East01/BP_Qunyan.BP_Qunyan'",
+    UnitId = 700382,
+    UnitName = "UI_CMNpc_Name_QunYan"
   },
   [701001] = {
     Camp = "NPC",
@@ -9213,13 +10063,10 @@ return ReadOnly("Npc", {
   [701015] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultAction = T.RT_3,
     ModelId = 30004,
     NpcType = "Normal",
-    RelatedTalks = {
-      510132,
-      51013201,
-      510149
-    },
+    RelatedTalks = {51014901},
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East01/Impression_Dialogue/BP_CMNpc_Yanjindu_Yang",
     UnitId = 701015,
     UnitName = "UI_CMNpc_Yanjindu_Name_Yang"
@@ -9227,6 +10074,7 @@ return ReadOnly("Npc", {
   [701016] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultAction = T.RT_4,
     ModelId = 30008,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East01/Impression_Dialogue/BP_CMNpc_Yanjindu_YangJR",
@@ -9236,6 +10084,7 @@ return ReadOnly("Npc", {
   [701017] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultAction = T.RT_5,
     ModelId = 30004,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East01/Impression_Dialogue/BP_CMNpc_Yanjindu_Zhang",
@@ -9245,6 +10094,7 @@ return ReadOnly("Npc", {
   [701018] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultAction = T.RT_13,
     ModelId = 30008,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East01/Impression_Dialogue/BP_CMNpc_Yanjindu_ZhangJR",
@@ -9306,7 +10156,6 @@ return ReadOnly("Npc", {
     CollisionLevel = 999,
     ModelId = 30009,
     NpcType = "Normal",
-    RelatedTalks = {510136, 51013602},
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East01/Impression_Dialogue/BP_CMNpc_Yanjindu_QingQing",
     UnitId = 701024,
     UnitName = "UI_CMNpc_Yanjindu_Name_QingQing"
@@ -9316,7 +10165,6 @@ return ReadOnly("Npc", {
     CollisionLevel = 999,
     ModelId = 30006,
     NpcType = "Normal",
-    RelatedTalks = {51013601},
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East01/Impression_Dialogue/BP_CMNpc_Yanjindu_PresentMan",
     UnitId = 701025,
     UnitName = "UI_CMNpc_Yanjindu_Name_PresentMan"
@@ -9409,7 +10257,7 @@ return ReadOnly("Npc", {
   [701034] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_27,
+    DefaultAction = T.RT_28,
     ModelId = 30004,
     NpcType = "Normal",
     RelatedTalks = {511252},
@@ -9531,7 +10379,7 @@ return ReadOnly("Npc", {
   [701045] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_37,
+    DefaultAction = T.RT_38,
     ModelId = 30009,
     NpcType = "Normal",
     RelatedBubble = {501040},
@@ -9543,7 +10391,7 @@ return ReadOnly("Npc", {
   [701046] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_28,
+    DefaultAction = T.RT_29,
     ModelId = 30006,
     NpcType = "Normal",
     RelatedBubble = {501041},
@@ -9577,7 +10425,7 @@ return ReadOnly("Npc", {
   [701049] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_27,
+    DefaultAction = T.RT_28,
     ModelId = 30008,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East01/Show/BP_East01_Agui_Sce",
@@ -9623,7 +10471,7 @@ return ReadOnly("Npc", {
   [701053] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_27,
+    DefaultAction = T.RT_28,
     ModelId = 30005,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East01/Show/BP_East01_Qiaofeng_Sce",
@@ -9644,7 +10492,7 @@ return ReadOnly("Npc", {
   [701055] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_38,
+    DefaultAction = T.RT_39,
     ModelId = 30002,
     NpcType = "Normal",
     RelatedBubble = {501059},
@@ -9656,7 +10504,7 @@ return ReadOnly("Npc", {
   [701056] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_38,
+    DefaultAction = T.RT_39,
     ModelId = 30002,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East01/Show/BP_East01_Longlaoban_Sce",
@@ -9666,7 +10514,7 @@ return ReadOnly("Npc", {
   [701057] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_28,
+    DefaultAction = T.RT_29,
     ModelId = 30004,
     NpcType = "Normal",
     RelatedBubble = {501047},
@@ -9699,7 +10547,7 @@ return ReadOnly("Npc", {
   [701060] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_37,
+    DefaultAction = T.RT_38,
     ModelId = 30005,
     NpcType = "Normal",
     RelatedBubble = {501049},
@@ -9711,7 +10559,7 @@ return ReadOnly("Npc", {
   [701061] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_37,
+    DefaultAction = T.RT_38,
     ModelId = 30006,
     NpcType = "Normal",
     RelatedBubble = {501050},
@@ -9839,7 +10687,7 @@ return ReadOnly("Npc", {
   [701072] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_28,
+    DefaultAction = T.RT_29,
     ModelId = 30007,
     NpcType = "Normal",
     RelatedBubble = {501056},
@@ -9851,7 +10699,7 @@ return ReadOnly("Npc", {
   [701073] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_37,
+    DefaultAction = T.RT_38,
     ModelId = 30006,
     NpcType = "Normal",
     RelatedBubble = {501057},
@@ -9883,7 +10731,7 @@ return ReadOnly("Npc", {
   [701076] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_39,
+    DefaultAction = T.RT_40,
     ForbidenMoveComp = true,
     IgnoreFixLocation = true,
     IsRepeatable = 1,
@@ -9895,7 +10743,7 @@ return ReadOnly("Npc", {
   [701077] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_39,
+    DefaultAction = T.RT_40,
     ForbidenMoveComp = true,
     IgnoreFixLocation = true,
     IsRepeatable = 1,
@@ -9907,7 +10755,7 @@ return ReadOnly("Npc", {
   [701078] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_39,
+    DefaultAction = T.RT_40,
     ForbidenMoveComp = true,
     IgnoreFixLocation = true,
     IsRepeatable = 1,
@@ -9919,7 +10767,7 @@ return ReadOnly("Npc", {
   [701079] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_39,
+    DefaultAction = T.RT_40,
     ForbidenMoveComp = true,
     IgnoreFixLocation = true,
     IsRepeatable = 1,
@@ -9931,7 +10779,7 @@ return ReadOnly("Npc", {
   [701080] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_39,
+    DefaultAction = T.RT_40,
     ForbidenMoveComp = true,
     IgnoreFixLocation = true,
     IsRepeatable = 1,
@@ -9987,6 +10835,142 @@ return ReadOnly("Npc", {
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East01/Show/BP_East01_Qiaofeng_Sce",
     UnitId = 701086
+  },
+  [701087] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 10006,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/BaiNpc/BaiTX/BP_BaiTX",
+    UnitId = 701087,
+    UnitName = "UI_Npc_Name_Bai"
+  },
+  [701088] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30004,
+    MouthProfile = "LipSync_10009",
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East01/BP_Hawker",
+    UnitId = 701088,
+    UnitName = "UI_CMNpc_Name_Zhongniannan"
+  },
+  [701089] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 10052,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Zhiliu/BP_NPC_Zhiliu",
+    UnitId = 701089,
+    UnitName = "UI_Npc_Name_Zhiliu"
+  },
+  [701090] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30004,
+    MouthProfile = "LipSync_10009",
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East01/Side/HuaChaDeWeiDao/BP_ChaTanLaoBan",
+    UnitId = 701090,
+    UnitName = "UI_CMNpc_Name_Chatanlaoban"
+  },
+  [701091] = {
+    BT = "BehaviorTree'/Game/AssetDesign/AI/Npc/ChenBaiSha/BT_Npc_Chenbaisha.BT_Npc_Chenbaisha'",
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30004,
+    MouthProfile = "LipSync_10009",
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East01/Side/HuaChaDeWeiDao/BP_ChenBaiSha",
+    UnitId = 701091,
+    UnitName = "UI_CMNpc_Name_Chenbaisha"
+  },
+  [701092] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30004,
+    MouthProfile = "LipSync_10009",
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East01/Side/HuaChaDeWeiDao/BP_HuLaoBan",
+    UnitId = 701092,
+    UnitName = "UI_CMNpc_Name_Hulaoban"
+  },
+  [701093] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East01/BP_Zhixian_Weiji_Heishishangren",
+    UnitId = 701093,
+    UnitName = "UI_Npc_Name_Badshangren"
+  },
+  [701094] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East01/BP_Zhixian_Weiji_Heishishangren",
+    UnitId = 701094,
+    UnitName = "UI_Npc_Name_Badshangren"
+  },
+  [701095] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultAction = T.RT_27,
+    ModelId = 30004,
+    NpcType = "Normal",
+    RelatedBubble = {511550},
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East01/BP_Zhixian_Weiji_Heishishangren",
+    UnitId = 701095,
+    UnitName = "UI_Npc_Name_Badshangren"
+  },
+  [701096] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultAction = T.RT_5,
+    GuideHeadId = "Qiu_Idle",
+    ModelId = 10084,
+    MouthProfile = "LipSync_10009",
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Qiu/BP_NPC_Qiu",
+    UnitId = 701096,
+    UnitName = "UI_Npc_Name_MrQiu"
+  },
+  [701097] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30035,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Animal/BP_NPC_Mnt_BiAn",
+    UnitId = 701097,
+    UnitName = "UI_CMNpc_Name_BiAnB"
+  },
+  [701098] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30004,
+    MouthProfile = "LipSync_10009",
+    NpcType = "Normal",
+    RelatedBubble = {511530},
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East01/Side/HuaChaDeWeiDao/BP_ChenBaiSha",
+    UnitId = 701098,
+    UnitName = "UI_CMNpc_Name_Chenbaisha"
+  },
+  [701099] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30002,
+    NpcType = "Normal",
+    RelatedBubble = {511531},
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_Cunzhang",
+    UnitId = 701099,
+    UnitName = "UI_CMNpc_Name_ChenLaoDie"
   },
   [790001] = {
     Camp = "NPC",
@@ -10331,7 +11315,7 @@ return ReadOnly("Npc", {
   [790033] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_32,
+    DefaultAction = T.RT_33,
     DefaultExpression = T.RT_1,
     ForbidenMoveComp = true,
     IgnoreFixLocation = true,
@@ -10345,7 +11329,7 @@ return ReadOnly("Npc", {
   [790034] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_32,
+    DefaultAction = T.RT_33,
     DefaultExpression = T.RT_1,
     ForbidenMoveComp = true,
     IgnoreFixLocation = true,
@@ -10359,7 +11343,7 @@ return ReadOnly("Npc", {
   [790035] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_32,
+    DefaultAction = T.RT_33,
     DefaultExpression = T.RT_1,
     ForbidenMoveComp = true,
     IgnoreFixLocation = true,
@@ -10416,7 +11400,7 @@ return ReadOnly("Npc", {
   [790040] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_32,
+    DefaultAction = T.RT_33,
     DefaultExpression = T.RT_1,
     ForbidenMoveComp = true,
     IgnoreFixLocation = true,
@@ -10480,7 +11464,7 @@ return ReadOnly("Npc", {
   [790046] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_40,
+    DefaultAction = T.RT_41,
     DefaultExpression = T.RT_25,
     ModelId = 230101,
     NpcType = "Normal",
@@ -10491,7 +11475,7 @@ return ReadOnly("Npc", {
   [790047] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_41,
+    DefaultAction = T.RT_42,
     DefaultExpression = T.RT_25,
     ModelId = 230101,
     NpcType = "Normal",
@@ -10528,7 +11512,7 @@ return ReadOnly("Npc", {
   [790050] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_40,
+    DefaultAction = T.RT_41,
     DefaultExpression = T.RT_25,
     ModelId = 230101,
     NpcType = "Normal",
@@ -10539,7 +11523,7 @@ return ReadOnly("Npc", {
   [790051] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_41,
+    DefaultAction = T.RT_42,
     DefaultExpression = T.RT_25,
     ModelId = 230101,
     NpcType = "Normal",
@@ -10679,7 +11663,7 @@ return ReadOnly("Npc", {
   [790064] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_42,
+    DefaultAction = T.RT_43,
     DefaultExpression = T.RT_18,
     ForbidenMoveComp = true,
     Gender = 1,
@@ -10689,7 +11673,7 @@ return ReadOnly("Npc", {
     NpcType = "Normal",
     PlayerInfo = true,
     RelateNpcId = 7900641,
-    ShowAnimationId = T.RT_42,
+    ShowAnimationId = T.RT_43,
     SwitchPlayer = "Player",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/ZhujueNpc/Nvzhu/BP_Nvzhu",
     UnitId = 790064,
@@ -11738,7 +12722,7 @@ return ReadOnly("Npc", {
   [818091] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_33,
+    DefaultAction = T.RT_34,
     IsRepeatable = 1,
     ModelId = 30002,
     NpcType = "Normal",
@@ -11823,7 +12807,8 @@ return ReadOnly("Npc", {
     RelatedTalks = {900102},
     UnitBPPath = "/Game/AssetDesign/Char/Npc/BaiNpc/Bai_Duanzao/BP_BaiDZ",
     UnitId = 900001,
-    UnitName = "UI_Npc_Name_Duanzao"
+    UnitName = "UI_Npc_Name_Duanzao",
+    bForbiddenNpcFace = true
   },
   [900002] = {
     AccessoryIds = {
@@ -11831,7 +12816,7 @@ return ReadOnly("Npc", {
     },
     Camp = "NPC",
     CollisionLevel = 999,
-    GlobalGameUITagList = T.RT_44,
+    GlobalGameUITagList = T.RT_45,
     HeadIconPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Shop",
     InteractiveInfo = {Shop = 100002},
     ModelId = 90002,
@@ -11840,7 +12825,8 @@ return ReadOnly("Npc", {
     RelatedTalks = {900202},
     UnitBPPath = "/Game/AssetDesign/Char/Npc/BaiNpc/BaiSD/BP_BaiSD",
     UnitId = 900002,
-    UnitName = "UI_Npc_Name_Shangdian"
+    UnitName = "UI_Npc_Name_Shangdian",
+    bForbiddenNpcFace = true
   },
   [900003] = {
     Camp = "NPC",
@@ -11855,7 +12841,8 @@ return ReadOnly("Npc", {
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/BaiNpc/Bai_Ditu/BP_Bai_Ditu",
     UnitId = 900003,
-    UnitName = "UI_Npc_Name_Bai"
+    UnitName = "UI_Npc_Name_Bai",
+    bForbiddenNpcFace = true
   },
   [900004] = {
     Camp = "NPC",
@@ -11886,10 +12873,10 @@ return ReadOnly("Npc", {
   [900007] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    GlobalGameUITagList = T.RT_44,
+    GlobalGameUITagList = T.RT_45,
     GuideHeadId = "Beibao_Idle",
     HeadIconPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Shop",
-    InteractiveInfo = {ExploreBadgeShop = 100002},
+    InteractiveInfo = T.RT_46,
     ModelId = 90004,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/BaiNpc/Bai_Beibao/BP_NPC_SSS_BaiBB",
@@ -11899,9 +12886,9 @@ return ReadOnly("Npc", {
   [900008] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    GlobalGameUITagList = T.RT_44,
+    GlobalGameUITagList = T.RT_45,
     HeadIconPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Shop",
-    InteractiveInfo = T.RT_45,
+    InteractiveInfo = T.RT_47,
     ModelId = 30010,
     NpcType = "Normal",
     RelatedBubble = {500040},
@@ -11912,9 +12899,9 @@ return ReadOnly("Npc", {
   [900010] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    GlobalGameUITagList = T.RT_44,
+    GlobalGameUITagList = T.RT_45,
     HeadIconPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Shop",
-    InteractiveInfo = T.RT_46,
+    InteractiveInfo = T.RT_48,
     ModelId = 30019,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/BaiNpc/BaiJT/BP_BaiJT",
@@ -11925,10 +12912,10 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CollisionLevel = 999,
     ForbidenMoveComp = true,
-    GlobalGameUITagList = T.RT_44,
+    GlobalGameUITagList = T.RT_45,
     HeadIconPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Shop",
     IgnoreFixLocation = true,
-    InteractiveInfo = T.RT_45,
+    InteractiveInfo = T.RT_47,
     ModelId = 30010,
     NpcType = "Normal",
     RelatedTalks = {511514},
@@ -11939,7 +12926,7 @@ return ReadOnly("Npc", {
   [900012] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    GlobalGameUITagList = T.RT_44,
+    GlobalGameUITagList = T.RT_45,
     GuideHeadId = "Beibao_Idle",
     HeadIconPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Shop",
     InteractiveInfo = {HuaxuExploreShop = 100002},
@@ -11967,7 +12954,7 @@ return ReadOnly("Npc", {
   [900014] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_47,
+    DefaultAction = T.RT_49,
     DefaultExpression = T.RT_25,
     ModelId = 10006,
     NpcType = "Normal",
@@ -11978,7 +12965,7 @@ return ReadOnly("Npc", {
   [900015] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_47,
+    DefaultAction = T.RT_49,
     DefaultExpression = T.RT_25,
     MailHead = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_ShizheJJ.T_Head_ShizheJJ'",
     ModelId = 30033,
@@ -11990,7 +12977,7 @@ return ReadOnly("Npc", {
   [900016] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_47,
+    DefaultAction = T.RT_49,
     DefaultExpression = T.RT_25,
     MailHead = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_TieJiangJJ.T_Head_TieJiangJJ'",
     ModelId = 10011,
@@ -12002,7 +12989,7 @@ return ReadOnly("Npc", {
   [900017] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_47,
+    DefaultAction = T.RT_49,
     DefaultExpression = T.RT_25,
     MailHead = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_SadJJ.T_Head_SadJJ'",
     ModelId = 30019,
@@ -12014,7 +13001,7 @@ return ReadOnly("Npc", {
   [900018] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_47,
+    DefaultAction = T.RT_49,
     DefaultExpression = T.RT_25,
     MailHead = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_TanxianJJ.T_Head_TanxianJJ'",
     ModelId = 90004,
@@ -12026,7 +13013,7 @@ return ReadOnly("Npc", {
   [900019] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_47,
+    DefaultAction = T.RT_49,
     DefaultExpression = T.RT_25,
     MailHead = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_FangzhiJJ.T_Head_FangzhiJJ'",
     ModelId = 10088,
@@ -12276,16 +13263,31 @@ return ReadOnly("Npc", {
     UnitId = 900049
   },
   [900050] = {
+    AddonInteract = 802,
     Camp = "NPC",
     CollisionLevel = 999,
-    GlobalGameUITagList = T.RT_44,
+    GlobalGameUITagList = T.RT_45,
     HeadIconPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Shop",
-    InteractiveInfo = T.RT_46,
+    InteractiveInfo = T.RT_48,
     ModelId = 10088,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/BaiNpc/BaiHX/BP_BaiHX.BP_BaiHX",
     UnitId = 900050,
     UnitName = "UI_Npc_Name_FishingShop_East"
+  },
+  [900051] = {
+    AddonInteract = 704,
+    Camp = "NPC",
+    CollisionLevel = 999,
+    GlobalGameUITagList = T.RT_45,
+    GuideHeadId = "Beibao_Idle",
+    HeadIconPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Shop",
+    InteractiveInfo = T.RT_46,
+    ModelId = 90004,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/BaiNpc/Bai_Beibao/BP_NPC_SSS_BaiBB",
+    UnitId = 900051,
+    UnitName = "UI_Npc_Name_Tanxianjiaojiao"
   },
   [910001] = {
     Camp = "NPC",
@@ -12346,7 +13348,7 @@ return ReadOnly("Npc", {
   [910101] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    InteractiveInfo = T.RT_48,
+    InteractiveInfo = T.RT_50,
     ModelId = 30029,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/NPC_Shali/BP_NPC_Shali.BP_NPC_Shali",
@@ -12356,7 +13358,7 @@ return ReadOnly("Npc", {
   [910102] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    InteractiveInfo = T.RT_48,
+    InteractiveInfo = T.RT_50,
     ModelId = 30029,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/NPC_Shali/BP_NPC_Shali.BP_NPC_Shali",
@@ -12431,8 +13433,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 1101,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 51101,
     MouthProfile = "LipSync_10003",
     NpcType = "Normal",
@@ -12444,8 +13446,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 1103,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 51103,
     MouthProfile = "LipSync_10027",
     NpcType = "Normal",
@@ -12457,8 +13459,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 1501,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 81501,
     MouthProfile = "LipSync_10030",
     NpcType = "Normal",
@@ -12470,8 +13472,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 1502,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 81502,
     MouthProfile = "LipSync_10030",
     NpcType = "Normal",
@@ -12483,8 +13485,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 1503,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 81503,
     MouthProfile = "LipSync_10026",
     NpcType = "Normal",
@@ -12496,8 +13498,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 1801,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 81801,
     MouthProfile = "LipSync_10010",
     NpcType = "Normal",
@@ -12509,8 +13511,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 2101,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 52101,
     MouthProfile = "LipSync_10011",
     NpcType = "Normal",
@@ -12522,8 +13524,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 2301,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 82301,
     MouthProfile = "LipSync_10012",
     NpcType = "Normal",
@@ -12535,8 +13537,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 2401,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 82401,
     MouthProfile = "LipSync_10023",
     NpcType = "Normal",
@@ -12548,8 +13550,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 3101,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 83101,
     MouthProfile = "LipSync_10013",
     NpcType = "Normal",
@@ -12561,8 +13563,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 3102,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 83102,
     MouthProfile = "LipSync_10014",
     NpcType = "Normal",
@@ -12574,8 +13576,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 3103,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 83103,
     MouthProfile = "LipSync_10028",
     NpcType = "Normal",
@@ -12587,8 +13589,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 3201,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 53201,
     MouthProfile = "LipSync_10019",
     NpcType = "Normal",
@@ -12600,8 +13602,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 3301,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 83301,
     MouthProfile = "LipSync_10029",
     NpcType = "Normal",
@@ -12613,8 +13615,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 4101,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 84101,
     MouthProfile = "LipSync_10022",
     NpcType = "Normal",
@@ -12626,8 +13628,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 4102,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 54102,
     MouthProfile = "LipSync_10024",
     NpcType = "Normal",
@@ -12639,8 +13641,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 4201,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 84201,
     MouthProfile = "LipSync_10025",
     NpcType = "Normal",
@@ -12652,8 +13654,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 4202,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 84202,
     MouthProfile = "LipSync_10005",
     NpcType = "Normal",
@@ -12665,8 +13667,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 4301,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     GuideHeadId = "Xibi_Idle",
     ModelId = 84301,
     MouthProfile = "LipSync_10004",
@@ -12679,8 +13681,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 5101,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 85101,
     MouthProfile = "LipSync_10017",
     NpcType = "Normal",
@@ -12692,8 +13694,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 5102,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 55102,
     MouthProfile = "LipSync_10009",
     NpcType = "Normal",
@@ -12705,8 +13707,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 5301,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 85301,
     MouthProfile = "LipSync_10008",
     NpcType = "Normal",
@@ -12718,8 +13720,8 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 5401,
     CollisionLevel = 999,
-    DefaultAction = T.RT_50,
-    GlobalGameUITagList = T.RT_49,
+    DefaultAction = T.RT_52,
+    GlobalGameUITagList = T.RT_51,
     ModelId = 55401,
     MouthProfile = "LipSync_10021",
     NpcType = "Normal",
@@ -12951,7 +13953,7 @@ return ReadOnly("Npc", {
   [7002101] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_32,
+    DefaultAction = T.RT_33,
     Gender = 0,
     ModelId = 10004,
     NpcType = "Normal",
@@ -12979,7 +13981,7 @@ return ReadOnly("Npc", {
   [7900641] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    DefaultAction = T.RT_42,
+    DefaultAction = T.RT_43,
     DefaultExpression = T.RT_18,
     ForbidenMoveComp = true,
     Gender = 0,
@@ -12989,7 +13991,7 @@ return ReadOnly("Npc", {
     NpcType = "Normal",
     PlayerInfo = true,
     RelateNpcId = 790064,
-    ShowAnimationId = T.RT_42,
+    ShowAnimationId = T.RT_43,
     SwitchPlayer = "Player",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/ZhujueNpc/Nanzhu/BP_NPC_Nanzhu",
     UnitId = 7900641,

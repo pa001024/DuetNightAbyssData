@@ -366,7 +366,7 @@ end
 function WBP_MiniGame_Tiaopin_P_C:CompleteGame()
   for key, value in pairs(self.TiaoPinList) do
     value:PlayAnimation(value.Success_Out)
-    self:BlockAllUIInput(true)
+    self:BlockAllUIInput(true, "SP_DisplayOnly")
   end
   self.IsWin = true
   self:BindToAnimationFinished(self.Success_Out, {
@@ -380,7 +380,7 @@ end
 
 function WBP_MiniGame_Tiaopin_P_C:PlaySuccessAnimation()
   self:PlayAnimation(self.Success_Out)
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self.MiniGame_Text.Switcher_Tip:SetActiveWidgetIndex(0)
   self:RemoveTimer("Success_Out")
 end
@@ -397,7 +397,7 @@ function WBP_MiniGame_Tiaopin_P_C:TimeOut()
   })
   self:RemoveTimer(self.TimeHandleName)
   self:PlayAnimation(self.Fail_Out)
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self.MiniGame_Text.Switcher_Tip:SetActiveWidgetIndex(1)
   AudioManager(self):PlayUISound(self, "event:/ui/minigame/tiaopin_fail", "TiaoPinFail", nil)
 end

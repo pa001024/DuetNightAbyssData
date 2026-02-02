@@ -167,7 +167,7 @@ function WBP_Simple_Common:PlayDialogue(TalkTask, DialogueData, TaskData, bSkip)
         self:SetTipImageHidden(true)
         self:SetTextBorderHidden(true)
         self:SwitchEnableTalkClick(false)
-        self.WholeDialogueTypingFinished_Delegate:Fire(true, true)
+        self.WholeDialogueTypingFinished_Delegate:Fire(true)
       else
         self:SetTipImageHidden(false)
         self:SetTextBorderHidden(false)
@@ -179,7 +179,7 @@ function WBP_Simple_Common:PlayDialogue(TalkTask, DialogueData, TaskData, bSkip)
       self:SetTipImageHidden(true)
       self:SetTextBorderHidden(true)
       self:SwitchEnableTalkClick(false)
-      self.WholeDialogueTypingFinished_Delegate:Fire(true, true)
+      self.WholeDialogueTypingFinished_Delegate:Fire(true)
     end
   end
   

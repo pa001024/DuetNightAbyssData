@@ -33,6 +33,9 @@ T.RT_10 = {
 }
 T.RT_11 = {"CRD"}
 T.RT_12 = {"CRI"}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

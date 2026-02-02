@@ -64,7 +64,7 @@ end
 function M:InitDescription(WalnutId)
   local WalnutData = DataMgr.Walnut[WalnutId]
   local WalnutTypeData = DataMgr.WalnutType[WalnutData.WalnutType]
-  self.Text_Title:SetText(GText(WalnutData.Name))
+  self.Text_Title:SetText(GText("UI_Walnut_Detail"))
   self.Text_Hold:SetText(GText("UI_Bag_Sellconfirm_Hold"))
   local Avatar = GWorld:GetAvatar()
   local Count = 0

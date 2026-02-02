@@ -63,14 +63,16 @@ function Model:FilterItemsForMonsterGallery(TabIdx, OnlyUnlocked)
   for Id, Info in pairs(DataMgr.GalleryRule) do
     local MonsterId = Info.PreferredMonsterId
     if not self:CheckMonsterInCamp(MonsterId, MonsterCampOption) or not MonsterUtils.CheckGallerRuleByMonsterRelease(Info) then
-    elseif Info.DisableTrainingGround ~= true and (not (OnlyUnlocked and Avatar) or not Avatar:CheckFirstMonster(Info.PreferredMonsterId, true)) then
-      local IsLocked = Avatar:CheckFirstMonster(Info.PreferredMonsterId, true)
-      table.insert(MonsterGalleryData, {
-        Id = Id,
-        Info = Info,
-        IsLocked = IsLocked,
-        Priority = Info.Priority or 99999
-      })
+    else
+      local IsRuleUnlocked = self:CheckIsRuleIdUnlocked(Id)
+      if Info.DisableTrainingGround ~= true and (not OnlyUnlocked or IsRuleUnlocked) then
+        table.insert(MonsterGalleryData, {
+          Id = Id,
+          Info = Info,
+          IsLocked = not IsRuleUnlocked,
+          Priority = Info.Priority or 99999
+        })
+      end
     end
   end
   table.sort(MonsterGalleryData, function(RuleA, RuleB)
@@ -116,6 +118,14 @@ function Model:CheckMonsterInCamp(MonsterId, CampOption)
     end
   end
   return CampOption == self.TabId2MonsterCampOption[#self.TabId2MonsterCampOption]
+end
+
+function Model:CheckIsRuleIdUnlocked(RuleId)
+  local Avatar = GWorld:GetAvatar()
+  if Avatar.Archives[1006].ArchiveList[RuleId] then
+    return true
+  end
+  return false
 end
 
 return Model

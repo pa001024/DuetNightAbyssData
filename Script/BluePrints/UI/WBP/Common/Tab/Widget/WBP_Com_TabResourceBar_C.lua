@@ -23,6 +23,7 @@ function M:Construct()
   self:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
   self:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
   EventManager:AddEvent(EventID.OnResourcesChanged, self, self.OnResourcesChanged)
+  EventManager:AddEvent(EventID.OnUpdateWalnutItem, self, self.OnUpdateWalnutItem)
   self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self:GetOwningPlayer())
   if IsValid(self.GameInputModeSubsystem) then
     self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
@@ -32,11 +33,18 @@ end
 
 function M:Destruct()
   EventManager:RemoveEvent(EventID.OnResourcesChanged, self)
+  EventManager:RemoveEvent(EventID.OnUpdateWalnutItem, self)
 end
 
 function M:OnResourcesChanged(ResourceId)
-  if self.RId and self.RId == ResourceId then
-    self:RefreshResourceInfo()
+  if self.Id and self.Id == ResourceId and self.ItemType == "Resource" then
+    self:RefreshItemInfo()
+  end
+end
+
+function M:OnUpdateWalnutItem()
+  if self.Id and self.ItemType == "Walnut" then
+    self:RefreshItemInfo()
   end
 end
 
@@ -44,10 +52,11 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   self.IsGamePad = CurInputDevice == ECommonInputType.Gamepad
 end
 
-function M:SetResourceId(ResourceId)
+function M:SetItemId(ItemId, Type)
   self.Panel_Resource:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  self.RId = ResourceId
-  self:RefreshResourceInfo()
+  self.Id = ItemId
+  self.ItemType = Type or "Resource"
+  self:RefreshItemInfo()
 end
 
 function M:SetAddVisibilty(bIsVisible)
@@ -83,10 +92,10 @@ function M:HideBubble()
   self.HudBubbleWidget = nil
 end
 
-function M:RefreshResourceInfo()
-  if self.RId then
+function M:RefreshItemInfo()
+  if self.Id then
     local Avatar = GWorld:GetAvatar()
-    local FormData = DataMgr.CurrencyForm[self.RId]
+    local FormData = DataMgr.CurrencyForm[self.Id]
     if FormData and FormData.IfAdd then
       self.Btn_Add:SetVisibility(UIConst.VisibilityOp.Visible)
       self.SizeBox_Add:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -94,24 +103,32 @@ function M:RefreshResourceInfo()
       self.Btn_Add:SetVisibility(UIConst.VisibilityOp.Collapsed)
       self.SizeBox_Add:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
-    local Data = DataMgr.Resource[self.RId]
+    local Data
+    if self.ItemType == "Walnut" then
+      Data = DataMgr.Walnut[self.Id]
+    else
+      Data = DataMgr.Resource[self.Id]
+    end
     if Avatar and Data then
-      local Resource
-      if self.RId == CommonConst.ActionPoint then
-        Resource = {
+      local Item
+      if self.ItemType == "Walnut" then
+        local Count = Avatar.Walnuts.WalnutBag[self.Id] or 0
+        self.Text_Num:SetText(Count)
+      elseif self.Id == CommonConst.ActionPoint then
+        Item = {
           Count = Avatar.ActionPoint or 0
         }
         if FormData and FormData.IfMax then
           self.WidgetSwitcher_Num:SetActiveWidgetIndex(1)
-          self.Num_AP_Now:SetText(Resource.Count)
+          self.Num_AP_Now:SetText(Item.Count)
           self.Num_AP_Total:SetText(DataMgr.GlobalConstant.CostRecoveryMax.ConstantValue)
         else
           self.WidgetSwitcher_Num:SetActiveWidgetIndex(0)
-          self.Text_Num:SetText(Resource.Count)
+          self.Text_Num:SetText(Item.Count)
         end
       else
-        Resource = Avatar.Resources[self.RId] or {Count = 0}
-        self.Text_Num:SetText(Resource.Count)
+        Item = Avatar.Resources[self.Id] or {Count = 0}
+        self.Text_Num:SetText(Item.Count)
       end
       self.Panel_Resource:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       return
@@ -130,11 +147,11 @@ function M:OnBtnClicked()
   if self.Event_OnClick then
     self.Event_OnClick(self.Obj_OnClick)
   end
-  if self.RId == CommonConst.PhysicalStrengthId then
+  if self.Id == CommonConst.PhysicalStrengthId then
     AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
     local GameInstance = self:GetGameInstance()
     local UIManager = GameInstance:GetGameUIManager()
-  elseif self.RId == CommonConst.Coins.Coin1 then
+  elseif self.Id == CommonConst.Coins.Coin1 then
     local GameInstance = self:GetGameInstance()
     local UIManager = GameInstance:GetGameUIManager()
     local MaxValue = 0

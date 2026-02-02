@@ -34,15 +34,17 @@ function FSwitchToMasterComponent:Execute()
     GWorld.logger.error("FSwitchToMasterComponent@没有正常登录")
     Avatar = {Sex = 0, WeitaSex = 1}
   end
-  local MasterGender, MasterRoleId
+  local RealMasterType, MasterGender, MasterRoleId
   if self.MasterType == "Player" then
     MasterGender = Avatar.Sex
+    RealMasterType = "PlayerLight"
   else
     MasterGender = Avatar.WeitaSex
   end
-  local MasterInfo = DataMgr.Player2RoleId[self.MasterType]
+  RealMasterType = RealMasterType or self.MasterType
+  local MasterInfo = DataMgr.Player2RoleId[RealMasterType]
   if not MasterInfo then
-    GWorld.logger.error("FSwitchToMasterComponent@没有找到对应的主角信息，请检查导表" .. self.MasterType)
+    GWorld.logger.error("FSwitchToMasterComponent@没有找到对应的主角信息，请检查导表" .. RealMasterType)
     return
   end
   local GenderInfo = MasterInfo[MasterGender]
@@ -51,8 +53,7 @@ function FSwitchToMasterComponent:Execute()
     return
   end
   MasterRoleId = GenderInfo
-  local ExtractInfo = {UseMasterRole = 1}
-  print(_G.LogTag, "FSwitchToMasterComponent@ChangeToMaster", MasterRoleId, ExtractInfo.UseMasterRole, MasterGender)
+  print(_G.LogTag, "FSwitchToMasterComponent@ChangeToMaster", MasterRoleId, MasterGender)
   Player.HeroTempInfo = {
     RoleInfo = {
       PlayerHp = Player:GetAttr("Hp"),
@@ -73,9 +74,9 @@ function FSwitchToMasterComponent:Execute()
     self.PlayerController:Possess(Player)
   end
   Player:EnableRimLightModel(false)
-  Player:ChangeRole(MasterRoleId)
+  local AvatarInfo = {}
+  Player:ChangeRole(MasterRoleId, AvatarInfo)
   Player:RealChangeUsingWeapon(nil)
-  Player:ClearAllSuitItem()
   Player:BanSkills()
   Player:ChangeRoleEffect()
   local BodyType = Player:GetBattleCharBodyType()
@@ -88,6 +89,20 @@ function FSwitchToMasterComponent:Execute()
     self.TalkAIController:Possess(Player)
     self.TalkAIController, self.PlayerController, self.TalkPawn = nil, nil, nil
   end
+end
+
+function FSwitchToMasterComponent:GetServerAppearanceSuitByCharId(CharId)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return nil
+  end
+  for key, Char in pairs(Avatar.Chars) do
+    if Char.CharId == CharId then
+      local AppearanceSuit = Char:DumpAppearanceSuit(Avatar)
+      return AppearanceSuit
+    end
+  end
+  return nil
 end
 
 function FSwitchToMasterComponent:Resume()

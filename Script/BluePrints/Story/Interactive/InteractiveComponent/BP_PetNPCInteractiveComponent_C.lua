@@ -1,7 +1,12 @@
+local LuaConst = require("EMLuaConst")
 local BP_PetNPCInteractiveComponent_C = Class("BluePrints.Story.Interactive.InteractiveComponent.BP_InteractiveBaseComponent_C")
 
 function BP_PetNPCInteractiveComponent_C:IsCanInteractive(PlayerActor)
-  return self.Owner and self.Owner:CheckCanInteractive() and self.DistanceCheck(self.Owner, PlayerActor, self.InteractiveDistance) and not self.Owner.bHidden
+  if LuaConst.OpenComputeInteractive then
+    return self.Owner and self.Owner:CheckCanInteractive() and self:GetDistanceCheckResult() and not self.Owner.bHidden
+  else
+    return self.Owner and self.Owner:CheckCanInteractive() and self.DistanceCheck(self.Owner, PlayerActor, self.InteractiveDistance) and not self.Owner.bHidden
+  end
 end
 
 function BP_PetNPCInteractiveComponent_C:BtnClicked(PlayerActor, InPressTimeSeconds)

@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -66,6 +69,17 @@ return ReadOnly("MultiplayerChallenge", {
     TeleportId = 8005,
     TeleportName = "UI_TELEPORTPOINT_NAME_SURVIVALMINIPRO",
     TitleName = "UI_TELEPORTPOINT_NAME_104101_14",
+    UnlockCondition = 120106
+  },
+  [7] = {
+    ChallengeDes = "UI_DUNGEON_CONTENT_TESTING_1",
+    ChallengeId = 7,
+    ChallengeName = "UI_DUNGEON_DES_TESTING_1",
+    DungeonId = {91136},
+    ImgPath = "/Game/UI/Texture/Static/Image/AreaCoop/T_AreaCoop_06.T_AreaCoop_06",
+    TeleportId = 8006,
+    TeleportName = "UI_TELEPORTPOINT_NAME_EXTERNPRO",
+    TitleName = "UI_TELEPORTPOINT_NAME_104301_1",
     UnlockCondition = 120106
   }
 })

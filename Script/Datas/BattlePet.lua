@@ -33,6 +33,9 @@ T.RT_15 = {
 T.RT_16 = {
   [1] = T.RT_9
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -265,6 +268,12 @@ return ReadOnly("BattlePet", {
     PetType = "Pet",
     SupportSkillId = 416
   },
+  [417] = {
+    EffectCreatureId = 4171,
+    PetId = 417,
+    PetType = "Pet",
+    SupportSkillId = 417
+  },
   [421] = {
     AddAttrs = T.RT_10,
     AddModMultiplier = {Dark = "#2"},
@@ -375,27 +384,38 @@ return ReadOnly("BattlePet", {
   },
   [601] = {
     EffectCreatureId = 6011,
+    PassiveEffectDesc = "PET_601_WUYOU_PASSIVE",
     PetId = 601,
     PetType = "Pet",
     SupportSkillId = 601
   },
   [602] = {
     EffectCreatureId = 6021,
+    PassiveEffectDesc = "PET_602_WUYOU_PASSIVE",
     PetId = 602,
     PetType = "Pet",
     SupportSkillId = 602
   },
   [603] = {
     EffectCreatureId = 6031,
+    PassiveEffectDesc = "PET_603_WUYOU_PASSIVE",
     PetId = 603,
     PetType = "Pet",
     SupportSkillId = 603
   },
   [604] = {
     EffectCreatureId = 6041,
+    PassiveEffectDesc = "PET_604_WUYOU_PASSIVE",
     PetId = 604,
     PetType = "Pet",
     SupportSkillId = 604
+  },
+  [605] = {
+    AutoReleaseSkill = true,
+    EffectCreatureId = 6051,
+    PetId = 605,
+    PetType = "Pet",
+    SupportSkillId = 417
   },
   [901] = {
     EffectCreatureId = 9011,
@@ -593,6 +613,12 @@ return ReadOnly("BattlePet", {
     CanAutoFishing = true,
     PassiveEffectDesc = "AFFIX_1017_DESC",
     PetId = 1017,
+    PetType = "Affix"
+  },
+  [1018] = {
+    AutoReleaseSkill = true,
+    PassiveEffectDesc = "AFFIX_1018_DESC",
+    PetId = 1018,
     PetType = "Affix"
   }
 })

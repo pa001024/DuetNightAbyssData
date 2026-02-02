@@ -32,6 +32,13 @@ function M:CheckIsCanCloseSelf()
   return true
 end
 
+function M:CheckIsInCloseSelfState()
+  if self:IsAnimationPlaying(self.Out) then
+    return true
+  end
+  return false
+end
+
 function M:CreateEmptyContent()
   local Obj = NewObject(UIUtils.GetCommonItemContentClass())
   Obj.IsEmpty = true
@@ -43,7 +50,6 @@ function M:InitTabView(TopTabInfo, SubTabInfo, BtnClickFunction, VirtualClickCal
   self.List_Tab:ClearListItems()
   local LimitStartIndex, NormalStartIndex = 1, 1
   local LimitCount, UnLimitCount = 0, 0
-  self.LastIndex = #SubTabInfo.Tabs
   for _, TabInfo in ipairs(SubTabInfo.Tabs) do
     local ItemObject = NewObject(UIUtils.GetCommonItemContentClass())
     ItemObject.TabId = TabInfo.TabId
@@ -70,6 +76,9 @@ function M:InitTabView(TopTabInfo, SubTabInfo, BtnClickFunction, VirtualClickCal
     if ItemObject.IsSelected then
       self:AddTimer(0.1, function()
         self.List_Tab:BP_ScrollItemIntoView(ItemObject)
+        self.LastIndex = self.List_Tab:GetNumItems()
+        local DisplayedWidgets = self.List_Tab:GetDisplayedEntryWidgets():ToTable()
+        self.DisplayedWidgetsCount = #DisplayedWidgets
       end)
     end
   end
@@ -233,6 +242,11 @@ function M:RefreshViewAfterPageDataSet(ActivityConfigData, PageConfigData)
     if NewBgWidget.InitUI then
       NewBgWidget:InitUI(ActivityConfigData, PageConfigData)
     end
+    if NewBgWidget.PlayBGVideo then
+      self:AddTimer(0.01, function()
+        NewBgWidget:PlayBGVideo(ActivityConfigData, PageConfigData)
+      end)
+    end
     if nil ~= NewBgWidget then
       local NeedHideNodeList = PageConfigData.HideBPNode
       if NeedHideNodeList then
@@ -260,7 +274,7 @@ function M:RefreshViewAfterPageDataSet(ActivityConfigData, PageConfigData)
       end
     end
     self.WidgetBGAnchor:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  elseif PageConfigData.EventBg then
+  elseif PageConfigData and PageConfigData.EventBg then
     self.WidgetBGAnchor:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Image_MainBG:SetBrushResourceObject(LoadObject(PageConfigData.EventBg))
     self.Image_MainBG:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)

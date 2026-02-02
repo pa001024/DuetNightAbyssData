@@ -45,16 +45,16 @@ function BP_ChestInteractiveComponent_C:InitInteractiveComponent(InteractiveId)
   self.InteractiveName = self:GetInteractiveName()
 end
 
-function BP_ChestInteractiveComponent_C:IsLocked()
-  local Owner = self:GetOwner()
-  if IsValid(Owner) and Owner.IsLocked then
-    return Owner:IsLocked()
-  end
-end
-
 function BP_ChestInteractiveComponent_C:IsForbidden(PlayerActor)
   if not IsValid(PlayerActor) then
     return false
+  end
+  local Owner = self:GetOwner()
+  if Owner and Owner.IsForbidden then
+    local Res = Owner:IsForbidden(PlayerActor)
+    if Res then
+      return true
+    end
   end
   return not self:CheckInteractiveSucc(PlayerActor.Eid)
 end
@@ -254,6 +254,22 @@ function BP_ChestInteractiveComponent_C:GetInteractiveIcon(PlayerActor)
     return nil
   end
   return Data.Icon
+end
+
+function BP_ChestInteractiveComponent_C:GetInteractiveName()
+  local Owner = self:GetOwner()
+  if not Owner then
+    return nil
+  end
+  local PlayerActor = UGameplayStatics.GetPlayerCharacter(self, 0)
+  if not PlayerActor then
+    return GText(self.InteractiveName)
+  end
+  if not Owner.UsePlayerId and self:IsForbidden(PlayerActor) and Owner.IsForbidden then
+    return GText(self.InteractiveName)
+  end
+  local Name = BP_ChestInteractiveComponent_C.Super.GetInteractiveName(self)
+  return Name
 end
 
 function BP_ChestInteractiveComponent_C:OverrideInteractiveIcon(OverrideIcon)

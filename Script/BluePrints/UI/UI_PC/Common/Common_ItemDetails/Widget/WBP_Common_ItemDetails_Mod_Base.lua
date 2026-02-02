@@ -38,8 +38,11 @@ function M:InitItemInfo(ItemType, ItemId, UnitId)
     if type(UnitId) == "string" and CommonUtils.IsObjIdStr(UnitId) then
       UnitId = CommonUtils.Str2ObjId(UnitId)
     end
-    ModServerData = PlayerAvatar.Mods[UnitId]
-    assert(ModServerData)
+    ModServerData = ModModel:GetMod(UnitId)
+    if not ModServerData then
+      DebugPrint(WarningTag, "Wbp_common_itemdetails_mod_base,,InitItemInfo , ModServerdata is nil, unitId:", UnitId)
+      return
+    end
     if ModModel:IsBugMod(UnitId) then
       if self.ParentWidget then
         self.ParentWidget.ParentWidget:CloseItemDetailsWidget()
@@ -77,7 +80,8 @@ function M:InitItemInfo(ItemType, ItemId, UnitId)
     self.Text_Tag:SetVisibility(UIConst.VisibilityOp.Visible)
     local AppTypeTexts = {}
     for i, TagText in ipairs(DataMgr.ModTag[ModInfo.ApplicationType].ModTagText) do
-      table.insert(AppTypeTexts, GText(TagText))
+      local Text = GText(TagText)
+      table.insert(AppTypeTexts, Text)
     end
     local AppTypeText = GText("UI_Tips_ModApplicationType") .. table.concat(AppTypeTexts, ", ")
     self.Text_Tag:SetText(AppTypeText)
@@ -95,6 +99,78 @@ function M:InitItemInfo(ItemType, ItemId, UnitId)
     end
   end
   self:OnInitItemInfo(ModInfo, ModServerData)
+end
+
+function M:InitItemInfoInBag(ItemType, ItemId, UnitId)
+  self.EffectDetails:ClearChildren()
+  local ModInfo = DataMgr.Mod[ItemId]
+  if ModInfo and ModInfo.FunctionDes then
+    self.Text_Describe:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Text_Describe:SetText(GText(ModInfo.FunctionDes))
+  else
+    self.Text_Describe:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  self.Text_Polarity01:SetText(GText("UI_Tips_Polarity_Cost"))
+  if ModInfo.Polarity ~= CommonConst.NonePolarity then
+    self.Text_Polarity:SetVisibility(UIConst.VisibilityOp.Visible)
+    local PolarityText = ModModel:GetPolarityText(ModInfo.Polarity)
+    self.Text_Polarity:SetText(PolarityText)
+  else
+    self.Text_Polarity:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  self.Text_MaxLevel:SetText(ModInfo.MaxLevel)
+  local ModLevel, ModCost, ModServerData
+  local ModCardLvel = 0
+  local Count = 0
+  local PlayerAvatar = ModController:GetAvatar()
+  if PlayerAvatar and ItemId and PlayerAvatar.GetModCount2ModId then
+    Count = PlayerAvatar:GetModCount2ModId(ItemId)
+  end
+  if UnitId then
+    if type(UnitId) == "string" and CommonUtils.IsObjIdStr(UnitId) then
+      UnitId = CommonUtils.Str2ObjId(UnitId)
+    end
+    ModServerData = PlayerAvatar.Mods[UnitId]
+    if not ModServerData then
+      DebugPrint(WarningTag, "Wbp_common_itemdetails_mod_base, InitItemInfoInBag, ModServerdata is nil, unitId:", UnitId)
+      return
+    end
+    if ModModel:IsBugMod(UnitId) then
+      DebugPrint(WarningTag, "Wbp_common_itemdetails_mod_base, InitItemInfoInBag, ModServerdata is BugMod, unitId:", UnitId)
+      return
+    end
+    ModLevel = ModServerData.Level
+    ModCost = ModServerData.CostMod
+    ModCardLvel = ModServerData.CurrentModCardLevel or 0
+  else
+    ModLevel = ModInfo.MaxLevel
+    ModCost = ModInfo.Cost + ModInfo.MaxLevel * ModInfo.CostChange
+  end
+  self.Text_Level:SetText(ModLevel)
+  if ModLevel >= ModInfo.MaxLevel then
+    local MatPath = "/Game/UI/UI_PC/Common/UIVX/Material/MI_Word_Wavenew.MI_Word_Wavenew"
+    UResourceLibrary.LoadObjectAsync(self, MatPath, {
+      self,
+      function(self, Mat)
+        self.Text_Level.Font.FontMaterial = Mat
+        self.Text_Level:SetColorAndOpacity(UUIFunctionLibrary.StringToSlateColor("FFFFFFFF"))
+        self.Text_Plus.Font.FontMaterial = Mat
+        self.Text_Plus:SetColorAndOpacity(UUIFunctionLibrary.StringToSlateColor("FFFFFFFF"))
+      end
+    })
+  end
+  self.Text_Polarity02:SetText(ModCost)
+  self:UpdataEffectDetails(ModInfo, ModLevel, ModServerData)
+  if self.Text_Tag then
+    self.Text_Tag:SetVisibility(UIConst.VisibilityOp.Visible)
+    local AppTypeTexts = {}
+    for i, TagText in ipairs(DataMgr.ModTag[ModInfo.ApplicationType].ModTagText) do
+      local Text = GText(TagText)
+      table.insert(AppTypeTexts, Text)
+    end
+    local AppTypeText = GText("UI_Tips_ModApplicationType") .. table.concat(AppTypeTexts, ", ")
+    self.Text_Tag:SetText(AppTypeText)
+  end
 end
 
 function M:ShowModStarLevel(Target)

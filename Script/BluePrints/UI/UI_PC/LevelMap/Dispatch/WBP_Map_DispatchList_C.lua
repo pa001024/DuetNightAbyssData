@@ -698,8 +698,6 @@ function M:OnAddedToFocusPath(InFocusEvent)
 end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
-  DebugPrint("levelmap==============================================")
-  Traceback()
   return UWidgetBlueprintLibrary.Unhandle
 end
 

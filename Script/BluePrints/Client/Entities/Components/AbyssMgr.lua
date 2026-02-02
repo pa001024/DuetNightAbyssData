@@ -35,16 +35,45 @@ function Component:GetAbyssSeasonBestAbyssId(SeasonId)
   end
   local Infinite = SeasonData.Abyss.Infinite
   local AbyssInfinite = self.Abysses[Infinite]
-  if AbyssInfinite and (AbyssInfinite.MaxAbyssProgress[1] > 1 or 1 == AbyssInfinite.MaxAbyssProgress[1] and AbyssInfinite.MaxAbyssProgress[2] > 0) then
+  if AbyssInfinite and AbyssInfinite:GetAllPassRoomCount() > 0 then
     return Infinite
   else
     local Rotate = SeasonData.Abyss.Rotate
     local AbyssRotate = self.Abysses[Rotate]
-    if AbyssRotate and AbyssRotate.FastestTeamList then
+    if AbyssRotate and AbyssRotate:GetAllPassRoomCount() > 0 then
       return Rotate
     end
   end
   return nil
+end
+
+function Component:GetJumpLevelIndex(AbyssId)
+  local Abyss = self.Abysses[AbyssId]
+  if not AbyssId or not Abyss then
+    return
+  end
+  if not Abyss:IsLoopAbyss() then
+    return
+  end
+  local SeasonInfo = Abyss:Data()
+  if not SeasonInfo.LastInfinite then
+    return
+  end
+  if not SeasonInfo.InfiniteNode then
+    return
+  end
+  local LastInfinite = self.Abysses[SeasonInfo.LastInfinite]
+  if not LastInfinite then
+    return
+  end
+  local LastMaxProgress = LastInfinite.MaxAbyssProgress[1] - 1
+  local JumpIndex
+  for _, InfiniteNode in pairs(SeasonInfo.InfiniteNode) do
+    if LastMaxProgress >= InfiniteNode[1] and (not JumpIndex or JumpIndex < InfiniteNode[2]) then
+      JumpIndex = InfiniteNode[2]
+    end
+  end
+  return JumpIndex
 end
 
 function Component:CheckAbyssCanJump(AbyssId, AbyssLevelId)
@@ -278,7 +307,7 @@ function Component:_OnPropChangeCurrentAbyssSeasonId(Keys)
   self:ClearEntryNode("AbyssEntry1")
   self:ClearEntryNode("AbyssEntry2")
   self:RefreshAbyssRewardReddot()
-  EMCache:Remove("LastUnlockNodeLevel")
+  EMCache:Remove("NodeLevelUnlockAnimationPlayed", true)
   EventManager:FireEvent(EventID.OnCurrentAbyssSeasonIdChange)
 end
 
@@ -310,6 +339,31 @@ function Component:RefreshAbyssRewardReddot()
   if IncreaceNum > 0 then
     ReddotManager.IncreaseLeafNodeCount("AbyssReward", IncreaceNum)
   end
+end
+
+function Component:ChooseAbyssAttrType(AbyssId, AttrType)
+  self.logger.debug("ChooseAbyssAttrType Begin", AbyssId, AttrType)
+  
+  local function Callback(Ret)
+    self.logger.debug("ChooseAbyssAttrType Callback", Ret, AbyssId, AttrType)
+  end
+  
+  self:CallServer("ChooseAbyssAttrType", Callback, AbyssId, AttrType)
+end
+
+function Component:GetAbyssAttrType(AbyssId)
+  if not AbyssId or not self.Abysses[AbyssId] then
+    return nil
+  end
+  local Abyss = self.Abysses[AbyssId]
+  if not Abyss:IsLoopAbyss() then
+    return nil
+  end
+  local AttrType = Abyss.AttributeType
+  if not AttrType or not DataMgr.Attribute[AttrType] then
+    return nil
+  end
+  return AttrType
 end
 
 return Component

@@ -45,6 +45,7 @@ function Component:EnterDungeonAgain(OtherCallback, TicketId, CustomParams)
   
   local function callback(Ret, ...)
     self.logger.debug(string.format("EnterDungeonAgain callback, Ret is %s", Ret))
+    ErrorCode:Check(Ret)
     if OtherCallback then
       OtherCallback(Ret, ...)
     end
@@ -145,9 +146,9 @@ function Component:NotifyUnCostItems(Items)
   end
 end
 
-function Component:UpdateDungeonProgress()
+function Component:UpdateDungeonProgress(DataTable)
   print(_G.LogTag, "Avatar UpdateDungeonProgress")
-  self:CallServerMethod("UpdateDungeonProgress")
+  self:CallServerMethod("UpdateDungeonProgress", self:GetSerializedProgressData(DataTable))
 end
 
 function Component:ContinueDungeonSettlement(BattleInfo, Callback, TicketId, SquadId)
@@ -226,7 +227,7 @@ function Component:CheckMoveToTempScene(CurrentDungeonId, IsWin)
         GWorld.GameInstance:CachePlayerCharacterInfo(EndPointSeqEnable, EndPointLocation, EndPointRotation)
       end
     end
-    if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
+    if CommonUtils.GetRuntimePlatform(self) == "Mobile" then
       local tempPath = string.gsub(MapFile, "/Maps/", "/Maps_Phone/")
       if UResourceLibrary.CheckResourceExistOnDisk(tempPath) then
         MapFile = tempPath
@@ -252,10 +253,16 @@ end
 
 function Component:SaveProgressData(DataTable)
   print(_G.LogTag, "SaveProgressData")
+  self:CallServerMethod("SaveProgressData", self:GetSerializedProgressData(DataTable))
+end
+
+function Component:GetSerializedProgressData(DataTable)
+  if not DataTable then
+    return ""
+  end
   local Character = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
   DataTable.AvatarInitData = Character:GetBattleExtraInfo()
-  local SerializedString = SerializeUtils:Serialize(DataTable)
-  self:CallServerMethod("SaveProgressData", SerializedString)
+  return SerializeUtils:Serialize(DataTable)
 end
 
 function Component:RecoverSingleDungeon(AvatarBattleInfo, DataString, PlayerSlice, DungeonId, bEnter, CurrentRewards)
@@ -285,6 +292,10 @@ end
 
 function Component:SetDungeonDoubleCost(bDoubleCost)
   self:CallServerMethod("SetDungeonDoubleCost", bDoubleCost)
+end
+
+function Component:SetDungeonAutoProgress(DungeonId, AutoProgress)
+  self:CallServerMethod("SetDungeonAutoProgress", DungeonId, AutoProgress)
 end
 
 function Component:SelectTicket(Callback, DungeonId, TicketId)

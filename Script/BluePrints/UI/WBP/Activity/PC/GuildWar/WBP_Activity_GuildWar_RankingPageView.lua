@@ -71,6 +71,7 @@ function M:InitPreviewScene(TopNInfo)
       ViewUI = self,
       IsPreviewMode = true,
       Char = CharModel,
+      Avatar = DummyAvatar,
       EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon
     })
     local _, Weapon = next(DummyAvatar.Weapons)
@@ -138,7 +139,7 @@ function M:InitRankInfoTopN(TopNInfo)
   self.List_Ranking:ClearListItems()
   local RankCount = 0
   for _, RankInfo in pairs(TopNInfo or {}) do
-    if 1 ~= RankInfo.BanState then
+    if 0 == RankInfo.BanState then
       RankCount = RankCount + 1
       local ItemObj = NewObject(UIUtils.GetCommonItemContentClass())
       ItemObj.RankInfo = RankInfo
@@ -185,6 +186,7 @@ function M:InitRankInfoSelf(SelfRankInfo)
   self.Ranking_Myself:OnListItemObjectSet(ItemData)
   self.Ranking_Myself.Button_Myself.OnPressed:Add(self, self.OnMyselfButtonPressed)
   self.Ranking_Myself.Button_Myself.OnClicked:Add(self, self.OnMyselfButtonClicked)
+  self.Ranking_Myself.Button_Myself.OnHovered:Add(self, self.OnMyselfButtonHovered)
 end
 
 function M:GetMaxScoreSquad(SquadSnapShot)
@@ -251,6 +253,11 @@ function M:OnMyselfButtonPressed()
   self.Ranking_Myself:PlayAnimation(self.Ranking_Myself.Press)
 end
 
+function M:OnMyselfButtonHovered()
+  self.Ranking_Myself:StopAnimation(self.Ranking_Myself.UnHover)
+  self.Ranking_Myself:PlayAnimation(self.Ranking_Myself.Hover)
+end
+
 function M:OnListRankItemIsHoveredChanged(Item, IsHovered)
   if self.IsGamePad then
     return
@@ -310,13 +317,6 @@ function M:OnListRankItemClicked(Item)
     end
   end
   self.LastClickedItem = Item
-end
-
-function M:OnFocusReceived()
-  local LastItem = self.LastClickedItem
-  if LastItem and LastItem.SelfWidget then
-    self.List_Ranking:NavigateToIndex(LastItem.RankInfo.RankNum - 1)
-  end
 end
 
 return M

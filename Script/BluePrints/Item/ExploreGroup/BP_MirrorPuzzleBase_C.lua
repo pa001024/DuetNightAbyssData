@@ -37,17 +37,18 @@ function M:LineTrace()
   ActorsToIgnore:Add(PlayerCharacter)
   local TraceObjectTypes = TArray(EObjectTypeQuery)
   TraceObjectTypes:Add(EObjectTypeQuery.WorldStatic)
-  local bHit = UE4.UKismetSystemLibrary.LineTraceSingleForObjects(self, Start, End, TraceObjectTypes, false, ActorsToIgnore, 0, HitResult, false, Color, nil, 3)
+  local bHit = UE4.UKismetSystemLibrary.LineTraceSingleForObjects(self, Start, End, TraceObjectTypes, false, ActorsToIgnore, 1, HitResult, false, Color, nil, 3)
   if 0 == self.Type then
     self.LineSource.PathPointArray:Add(self.LineStart)
     self.LineSource.MirrorArray:Add(self)
   end
-  print(_G.LogTag, "LXZ LineTrace00", self:GetName(), bHit)
   if bHit and HitResult.Actor:Cast(UE4.ACombatItemBase) and HitResult.Actor:IsCombatItemBase() then
     print(_G.LogTag, "LXZ LineTrace", self:GetName(), HitResult.Actor:GetName())
     if HitResult.Actor.OnLineHit then
       HitResult.Actor:OnLineHit(self, HitResult)
     end
+  else
+    self.LineSource.PathPointArray:Add(End)
   end
   if 0 == self.Type then
     self:OnPathCreate(self.IsEnd)

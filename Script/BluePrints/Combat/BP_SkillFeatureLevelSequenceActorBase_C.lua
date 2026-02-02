@@ -26,6 +26,7 @@ function M:StartSkillFeature()
     EventManager:AddEvent(EventID.OnCreatedEnergySupplyWidget, self, self.OnCreatedEnergySupplyWidget)
   end
   self.Overridden.StartSkillFeature(self)
+  self.OwnerCharacter:SkillFeatureHideAllEffectCreature("StartSkillFeature", true)
 end
 
 function M:StartSkillFeatureCD()
@@ -48,6 +49,13 @@ function M:EndSkillFeature()
     EventManager:RemoveEvent(EventID.OnCreatedEnergySupplyWidget, self)
   end
   self.Overridden.EndSkillFeature(self)
+  self.OwnerCharacter:SkillFeatureHideAllEffectCreature("StartSkillFeature", false)
+end
+
+function M:ReceiveTick(DeltaSeconds)
+  if self.NewCamera and self.CineCameraActor then
+    self.NewCamera.CameraComponent:SetCurrentFocalLength(self.CineCameraActor.CameraComponent.CurrentFocalLength)
+  end
 end
 
 function M:SetInstanceData()

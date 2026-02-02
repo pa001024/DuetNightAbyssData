@@ -144,12 +144,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17632944219613284366",
-            startPort = "QuestStart",
-            endQuest = "17649331186421275446",
-            endPort = "In"
-          },
-          {
             startQuest = "176345996519515523220",
             startPort = "Out",
             endQuest = "17649331239801275650",
@@ -165,6 +159,12 @@ return {
             startQuest = "17632944219613284366",
             startPort = "QuestStart",
             endQuest = "17649332319901912270",
+            endPort = "In"
+          },
+          {
+            startQuest = "17632944219613284366",
+            startPort = "QuestStart",
+            endQuest = "17659769233961282451",
             endPort = "In"
           }
         },
@@ -198,7 +198,7 @@ return {
             key = "17632942520992012407",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = 1234.720839452801, y = -25.67242991058598},
+            pos = {x = 1212.970839452801, y = 31.702570089414024},
             propsData = {
               NewDescription = "Description_120103_11_3",
               NewDetail = "Content_120103_11_3",
@@ -330,23 +330,6 @@ return {
               }
             }
           },
-          ["17649331186421275446"] = {
-            key = "17649331186421275446",
-            type = "PlayOrStopBGMNode",
-            name = "BGM节点音效",
-            pos = {x = 1219.9999999999998, y = 94.00000000000006},
-            propsData = {
-              SoundStateType = 0,
-              SoundPriority = 0,
-              SoundType = 1,
-              SoundPath = "event:/ambience/common/pad_noise_rain_plain_heavy",
-              ParamKey = "",
-              ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {104105},
-              bStoreToServer = false
-            }
-          },
           ["17649331239801275650"] = {
             key = "17649331239801275650",
             type = "PlayOrStopBGMNode",
@@ -362,11 +345,28 @@ return {
             key = "17649332319901912270",
             type = "SendMessageNode",
             name = "发送消息-天气",
-            pos = {x = 1214, y = -199.1260103583768},
+            pos = {x = 1215.875, y = -152.2510103583768},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "SprFightEnvStart",
               UnitId = -1
+            }
+          },
+          ["17659769233961282451"] = {
+            key = "17659769233961282451",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点音效",
+            pos = {x = 1212, y = -314.8235294117647},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 1,
+              SoundPath = "event:/ambience/common/pad_noise_rain_plain_heavy",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {104110, 104107},
+              bStoreToServer = false
             }
           }
         },

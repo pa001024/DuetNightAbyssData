@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -38,6 +41,26 @@ return ReadOnly("CommonQuestPhase", {
     RewardPreview = 1020011,
     SplineBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/East/Season01/Spine/WBP_Activity_East_Season01_Spine_04.WBP_Activity_East_Season01_Spine_04'"
   },
+  [1201] = {
+    EventId = 112001,
+    Index = 1,
+    QuestPhaseId = 1201
+  },
+  [1401] = {
+    EventId = 114001,
+    Index = 1,
+    QuestPhaseId = 1401
+  },
+  [1402] = {
+    EventId = 114001,
+    Index = 2,
+    QuestPhaseId = 1402
+  },
+  [1403] = {
+    EventId = 114001,
+    Index = 3,
+    QuestPhaseId = 1403
+  },
   [2001] = {
     EventId = 111001,
     Index = 1,
@@ -49,5 +72,40 @@ return ReadOnly("CommonQuestPhase", {
     Index = 2,
     QuestPhaseId = 2002,
     QuestPhaseName = "RaidDungeon_PreRaid_Rank"
+  },
+  [2003] = {
+    EventId = 111002,
+    Index = 1,
+    QuestPhaseId = 2003,
+    QuestPhaseName = "RaidDungeon_Raid_Rank"
+  },
+  [2004] = {
+    EventId = 111002,
+    Index = 2,
+    QuestPhaseId = 2004,
+    QuestPhaseName = "RaidDungeon_PreRaid_Rank"
+  },
+  [3001] = {
+    EventId = 103016,
+    Index = 1,
+    QuestPhaseId = 3001,
+    QuestPhaseName = "AutoChess_Phase_1"
+  },
+  [3002] = {
+    EventId = 103016,
+    Index = 2,
+    QuestPhaseId = 3002,
+    QuestPhaseName = "AutoChess_Phase_2"
+  },
+  [3003] = {
+    EventId = 103018,
+    Index = 1,
+    QuestPhaseId = 3003
+  },
+  [3004] = {
+    EventId = 103016,
+    Index = 3,
+    QuestPhaseId = 3004,
+    QuestPhaseName = "AutoChess_Phase_3"
   }
 })

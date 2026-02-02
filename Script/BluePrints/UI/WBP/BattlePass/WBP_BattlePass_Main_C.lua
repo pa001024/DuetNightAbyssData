@@ -375,7 +375,7 @@ function WBP_BattlePass_Main_C:PlayOutAnim()
     return
   end
   AudioManager(self):SetEventSoundParam(self, "SystemOpenSound", {ToEnd = 1})
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:BindToAnimationFinished(self.Out, {
     self,
     self.Close
@@ -503,7 +503,7 @@ function WBP_BattlePass_Main_C:AddRefreshPetTimer()
       }
       self:AddTimer(0.1, function()
         self:RealAddRefreshPetTimer()
-      end, false, 0, nil, true)
+      end, false, 0, "PreRefreshPetTimer", true)
     end
   end
 end
@@ -525,10 +525,22 @@ function WBP_BattlePass_Main_C:RealAddRefreshPetTimer()
 end
 
 function WBP_BattlePass_Main_C:RemoveRefreshPetTimer()
+  self:RemoveTimer("PreRefreshPetTimer")
   self:RemoveTimer("RefreshPetTimer")
   if BattlePassController:GetModelData("ActorController") then
     BattlePassController:GetModelData("ActorController"):DestroyPetEffectCreature()
   end
+end
+
+function WBP_BattlePass_Main_C:ChangePetActor(PetInfo)
+  if not BattlePassController:GetModelData("ActorController") then
+    return
+  end
+  BattlePassController:GetModelData("ActorController"):ChangePetModel(PetInfo, nil, {
+    Rotation = FRotator(0, -10, 0),
+    Location = FVector(0, 0, -40),
+    Scale = FVector(2.68, 2.68, 2.68)
+  })
 end
 
 function WBP_BattlePass_Main_C:HidePlayerActor(Tag, IsHidden)
@@ -609,6 +621,12 @@ function WBP_BattlePass_Main_C:ReceiveEnterState(StackAction)
     self:HidePlayerActor("PetSelection", true)
     self:HidePetActor("PetSelection", true)
     self:HidePlayerFXAccessory(true)
+    if self.CurSelectPetId then
+      self:ChangePetActor({
+        Type = "BattlePass",
+        PetId = self.CurSelectPetId
+      })
+    end
   end
 end
 

@@ -133,6 +133,12 @@ function GameModeRegionMgr:CloseCurUI()
       if "TalkGuideUI" == Name then
         UnloadCheck = false
       end
+      if "TheaterTaskTime" == Name then
+        UnloadCheck = false
+      end
+      if "TheaterToast" == Name then
+        UnloadCheck = false
+      end
       if UnloadCheck then
         DebugPrint("HandleLevelDeliverBlackCurtainEnd Systemui Close:", Name)
         SystemUI:Close()
@@ -353,10 +359,12 @@ function GameModeRegionMgr:HandleLevelDeliver(ModeType, Id, StartIndex, IsWhite,
       end
     else
       local function RegionDeliver()
+        if PlayerCharacter then
+          PlayerCharacter.IsInDeliver = true
+        end
         if LevelLoader.IsWorldLoader then
           if CurrentRegionFile == TergetRegionFile then
             local LevelId = LevelLoader:GetLevelIdByRegionId(Id)
-            
             if not self:CheckSkipRegionByStartIndex(LevelId, StartIndex) then
               return false
             end

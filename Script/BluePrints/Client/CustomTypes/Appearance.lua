@@ -33,17 +33,27 @@ end
 function Skin:InitColor()
   self.CurrentPlanIndex = 1
   local MaxPart, MaxPlan, DefaultColor
-  if 0 == self.SkinType then
+  if self.SkinType == CommonConst.SkinType.Char then
     MaxPart = DataMgr.GlobalConstant.CharColorPart.ConstantValue
     MaxPlan = DataMgr.GlobalConstant.CharColorPlan.ConstantValue
     DefaultColor = DataMgr.GlobalConstant.CharDefaultColor.ConstantValue
-  elseif 1 == self.SkinType then
+  elseif self.SkinType == CommonConst.SkinType.Weapon then
     MaxPart = DataMgr.GlobalConstant.WeaponColorPart.ConstantValue
     MaxPlan = DataMgr.GlobalConstant.WeaponColorPlan.ConstantValue
     DefaultColor = DataMgr.GlobalConstant.WeaponDefaultColor.ConstantValue
     for i = 1, MaxPlan do
       self.SpecialColor[i] = DefaultColor
     end
+  elseif self.SkinType == CommonConst.SkinType.Mount then
+    MaxPart = DataMgr.GlobalConstant.MountColorPart.ConstantValue
+    MaxPlan = DataMgr.GlobalConstant.MountColorPlan.ConstantValue
+    DefaultColor = DataMgr.GlobalConstant.MountDefaultColor.ConstantValue
+  elseif self.SkinType == CommonConst.SkinType.Hair then
+    MaxPart = DataMgr.GlobalConstant.HairColorPart.ConstantValue
+    MaxPlan = DataMgr.GlobalConstant.HairColorPlan.ConstantValue
+    DefaultColor = DataMgr.GlobalConstant.HairDefaultColor.ConstantValue
+  else
+    return
   end
   for i = 1, MaxPlan do
     self.Colors[i] = {}
@@ -96,9 +106,11 @@ Appearance.__Props__ = {
   TargetId = prop.prop("Int", "client save"),
   TargetType = prop.prop("Int", "client save"),
   SkinId = prop.prop("Int", "client save"),
+  HairId = prop.prop("Int", "client save"),
   Accessory = prop.prop("IntList", "client save"),
   IsCornerVisible = prop.prop("Bool", "client save"),
-  AppearanceName = prop.prop("Str", "client save", "")
+  AppearanceName = prop.prop("Str", "client save", ""),
+  AccessoryCustomParams = prop.prop("Int2StrDict", "client save")
 }
 
 function Appearance:Init(TargetId, TargetType)
@@ -106,6 +118,7 @@ function Appearance:Init(TargetId, TargetType)
   self.TargetType = TargetType
   self:InitDefaultSkin()
   self:InitAccessory()
+  self:InitDefaultCharHair()
 end
 
 function Appearance:InitDefaultSkin()
@@ -115,9 +128,20 @@ function Appearance:InitDefaultSkin()
     self.IsCornerVisible = true
   elseif self.TargetType == CommonConst.SkinType.Weapon then
     self.SkinId = self.TargetId
+  elseif self.TargetType == CommonConst.SkinType.Mount then
+    self.SkinId = self.TargetId
   end
   if TargetInfo and TargetInfo.DefaultSkinId then
     self.SkinId = TargetInfo.DefaultSkinId
+  end
+end
+
+function Appearance:InitDefaultCharHair()
+  if self.TargetType == CommonConst.SkinType.Char then
+    local CharInfo = DataMgr.Char[self.TargetId]
+    if CharInfo and CharInfo.DefaultHairId then
+      self.HairId = CharInfo.DefaultHairId
+    end
   end
 end
 
@@ -142,6 +166,10 @@ function Appearance:InitAccessory()
     self.IsShowPartMesh = true
   elseif 1 == self.TargetType then
     self.Accessory:Append(-1)
+  elseif 2 == self.TargetType then
+    for i = 1, 2 do
+      self.Accessory:Append(-1)
+    end
   end
 end
 
@@ -160,6 +188,10 @@ end
 
 function AppearanceList:AddWeaponAppearance(TargetId)
   self:Append(self:NewAppearance(TargetId, CommonConst.SkinType.Weapon))
+end
+
+function AppearanceList:AddMountAppearance(TargetId)
+  self:Append(self:NewAppearance(TargetId, CommonConst.SkinType.Mount))
 end
 
 return {

@@ -173,6 +173,7 @@ return {
             pos = {x = 1205.9380341880342, y = 155.96581196581195},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_Side_TongBi"
             }
@@ -244,6 +245,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -299,6 +301,7 @@ return {
             pos = {x = 1877.6000000000001, y = 56},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_Side_TongBi"
             }
@@ -496,6 +499,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -591,6 +595,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -811,6 +816,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1290,6 +1296,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1395,7 +1402,8 @@ return {
         SubRegionId = 104109,
         StoryGuideType = "Npc",
         StoryGuidePointName = "Npc_RenWu_2100064",
-        bIsPlayBlackScreenOnComplete = false
+        bIsPlayBlackScreenOnComplete = false,
+        SubRegionIdList = {}
       },
       questNodeData = {
         lineData = {
@@ -1488,6 +1496,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1567,6 +1576,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",

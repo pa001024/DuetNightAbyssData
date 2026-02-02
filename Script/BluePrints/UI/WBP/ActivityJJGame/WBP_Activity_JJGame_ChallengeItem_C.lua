@@ -31,12 +31,13 @@ function M:OnListItemObjectSet(Content)
   self.JJGameBase = self.Owner.Owner
   self.Content = Content
   self.TaskId = Content.TaskId
-  self.TaskProp = self.Avatar.MidTermTasks[self.TaskId]
+  self.TaskProp = Content.TaskProp
   self.TaskConfig = Content.TaskConfig
   Content.SelfWidget = self
   self.Text_RewardNum:SetText(Content.Point)
   self.Text_Desc:SetText(GText(Content.Desc))
-  if self.TaskProp.Progress >= self.TaskProp.Target then
+  local Progress = self.TaskProp.Progress or 0
+  if Progress >= self.TaskProp.Target then
     if self.TaskProp.RewardsGot then
       self.WS_Btn:SetActiveWidgetIndex(3)
       if self.Owner and self.Owner.TrySubChallengeTaskRewardReddot then
@@ -78,7 +79,7 @@ end
 
 function M:UpdateGetRewardNum()
   local Avatar = GWorld:GetAvatar()
-  local TaskProp = Avatar.MidTermTasks[self.TaskId]
+  local TaskProp = self.TaskProp
   local Num = tostring(TaskProp.Progress) .. "/" .. tostring(TaskProp.Target)
   self.Text_GetRewardNum:SetText(Num)
   self.Text_DoingNum:SetText(Num)
@@ -99,6 +100,17 @@ function M:OnJumpClicked()
 end
 
 function M:TryIncreaceChallengeRewardReddot(Key)
+  local allRewardsClaimed = true
+  local MidTermAchvProgressRewarded = self.MidTermGoals.AchvProgressRewarded or {}
+  for _, v in pairs(MidTermAchvProgressRewarded) do
+    if 0 == v then
+      allRewardsClaimed = false
+      break
+    end
+  end
+  if allRewardsClaimed then
+    return
+  end
   local CacheKey = ChallengeRewardReddotName .. Key
   local CacheData = ReddotManager.GetLeafNodeCacheDetail(ChallengeRewardReddotName)
   if CacheData and nil == CacheData[CacheKey] then

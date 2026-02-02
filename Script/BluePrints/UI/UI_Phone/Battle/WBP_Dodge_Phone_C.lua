@@ -6,7 +6,7 @@ M._components = {
 
 function M:Construct()
   self.Button_Area.OnPressed:Add(self, self.OnPressed)
-  self.Button_Area_1.OnPressed:Add(self, self.OnPressed)
+  self.Button_Area.OnReleased:Add(self, self.OnReleased)
   self.OwnerPlayer = UGameplayStatics.GetPlayerCharacter(self, 0)
   self.MaxAvoidTimes = self.OwnerPlayer:GetAttr("MaxAvoidExecuteTimes")
   self.DodgeCD = self.OwnerPlayer:GetAttr("AvoidChargeCd") or 0
@@ -14,23 +14,39 @@ function M:Construct()
   local AvoidRemainTimes = math.max(0, self.MaxAvoidTimes - DodgeCount)
   self.AvoidRemainTimes = AvoidRemainTimes
   self.CDMat = self.ProgressBar_CD:GetDynamicMaterial()
-  self.CDMat_1 = self.ProgressBar_CD_1:GetDynamicMaterial()
   self.Text_Times:SetText(self.AvoidRemainTimes)
-  self.Text_Times_1:SetText(self.AvoidRemainTimes)
   self.IsForbidden = false
   if self.OwnerPlayer:CheckSkillInActive(UE4.ESkillName.Avoid) then
     self.CurButtonState = "InActive"
   else
     self.CurButtonState = "Active"
   end
+  local IconMat = self.Image_Main:GetDynamicMaterial()
+  IconMat:SetTextureParameterValue("IconMap", self.Icon_Dodge)
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.MountFly_Out)
 end
 
 function M:OnPressed()
   self:OnPressed_Presentation()
-  self.OwnerPanel:TryToPlayTargetCommand("Avoid", true)
+  if self.OwnerPlayer.CurMount and self.OwnerPlayer:IsFlying() then
+    self.OwnerPanel:TryToPlayTargetCommand("Slide", true)
+  else
+    self.OwnerPanel:TryToPlayTargetCommand("Avoid", true)
+  end
+end
+
+function M:OnReleased()
+  self:OnReleased_Presentation()
+  if self.OwnerPlayer.CurMount and self.OwnerPlayer:IsFlying() then
+    self.OwnerPanel:TryToStopTargetCommand("Slide", true)
+  end
 end
 
 function M:OnPressed_Presentation()
+  if self.OwnerPlayer.CurMount and self.OwnerPlayer:IsFlying() then
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Press)
+    return
+  end
   if self.CurButtonState == "InActive" then
     return
   end
@@ -40,6 +56,12 @@ function M:OnPressed_Presentation()
     end
   elseif not EMUIAnimationSubsystem:EMAnimationIsPlaying(self, self.Disable) then
     EMUIAnimationSubsystem:EMPlayAnimation(self, self.Disable)
+  end
+end
+
+function M:OnReleased_Presentation()
+  if self.OwnerPlayer.CurMount and self.OwnerPlayer:IsFlying() then
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Press, EUMGSequencePlayMode.Reverse)
   end
 end
 
@@ -56,16 +78,13 @@ function M:UpdateButtonInTimer()
     self.DodgeChargeTimeRemain = self.OwnerPlayer:GetDodgeChargeRemainTime()
     local Percent = self.DodgeChargeTimeRemain / self.DodgeCD
     self.CDMat:SetScalarParameterValue("Percent", 1 - Percent)
-    self.CDMat_1:SetScalarParameterValue("Percent", 1 - Percent)
   else
     self.DodgeChargeTimeRemain = 0
     self.CDMat:SetScalarParameterValue("Percent", 0)
-    self.CDMat_1:SetScalarParameterValue("Percent", 1)
   end
   if self.AvoidRemainTimes ~= AvoidRemainTimes then
     print(_G.LogTag, "DodgeCount changed, AvoidRemainTimes:", AvoidRemainTimes, Now)
     self.Text_Times:SetText(AvoidRemainTimes)
-    self.Text_Times_1:SetText(AvoidRemainTimes)
   end
   self.AvoidRemainTimes = AvoidRemainTimes
   if 0 == self.AvoidRemainTimes and self.IsForbidden == false then
@@ -79,6 +98,19 @@ function M:UpdateButtonInTimer()
       EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
     end
   end
+end
+
+function M:OnStartMountFly()
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.MountFly_In)
+  local IconMat = self.Image_Main:GetDynamicMaterial()
+  IconMat:SetTextureParameterValue("IconMap", self.Icon_MountDown)
+end
+
+function M:OnStopMountFly()
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.Press, EUMGSequencePlayMode.Reverse)
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.MountFly_Out)
+  local IconMat = self.Image_Main:GetDynamicMaterial()
+  IconMat:SetTextureParameterValue("IconMap", self.Icon_Dodge)
 end
 
 AssembleComponents(M)

@@ -16,7 +16,6 @@ function M:InitContent(Params, PopupData, Owner)
   self.OKCallbackObj = Params.RightCallbackObj
   self.CurrencyGamepadKey = Params.CurrencyGamepadKey
   self:InitGamepadView()
-  self.bIsFocusable = true
   self:BindDialogEvent(DialogEvent.OnCurrencyItemSelected, self.Focus2CurrencyItem)
 end
 
@@ -57,7 +56,6 @@ end
 
 function M:OnNumChanged(Value)
   if Value > self.MaxLevel or Value < self.MinLevel then
-    DebugPrint("gmy@WBP_BattlePass_PurchaseDialog_C M:OnNumChanged", Value, self.CurrentCount, debug.traceback())
     return
   end
   if Value ~= self.CurrentCount then
@@ -86,13 +84,25 @@ function M:SetRewardList(StartLevel, EndLevel)
   DebugPrint("gmy@WBP_BattlePass_PurchaseDialog_C M:GetRewardList", StartLevel, EndLevel)
   local NowVersion = self.Avatar.BattlePassVersion
   local BattlePassRewardData = BattlePassUtils:GetBattlePassReward(NowVersion)
+  local BattlePassMain = NowVersion and DataMgr.BattlePassMain[NowVersion] or nil
+  local LoopRewardPeriod = BattlePassMain and BattlePassMain.LoopRewardPeriod or 0
   local Rewards = {}
   for Level = StartLevel, EndLevel do
-    if BattlePassRewardData and BattlePassRewardData[Level] then
+    if Level <= BattlePassUtils:GetMaxLevel() and BattlePassRewardData and BattlePassRewardData[Level] then
       local RewardInfo = BattlePassRewardData[Level]
       table.insert(Rewards, RewardInfo.Rank1Reward)
       if self.Avatar.BattlePassUnlockRank2 then
         table.insert(Rewards, RewardInfo.Rank2Reward)
+      end
+    elseif Level <= BattlePassUtils:GetCurLoopMaxLevel() then
+      local LoopLevel = Level - BattlePassUtils:GetMaxLevel()
+      local LoopLevel = LoopLevel % LoopRewardPeriod
+      if 0 == LoopLevel then
+        LoopLevel = LoopRewardPeriod
+      end
+      table.insert(Rewards, BattlePassMain.LoopFreeRewardId[LoopLevel])
+      if self.Avatar.BattlePassUnlockRank2 then
+        table.insert(Rewards, BattlePassMain.LoopPaidRewardId[LoopLevel])
       end
     else
       DebugPrint("gmy@WBP_BattlePass_PurchaseDialog_C M:GetRewardList", Level)
@@ -295,7 +305,7 @@ function M:OnGamePadUp(InKeyName)
       IsEventHandled = self:HandleCancel()
     end
   elseif InKeyName == Const.GamepadFaceButtonDown then
-    if self.FocusState == STATE_GAMEPAD_FOCUS.FOCUS_DIALOG and self.bCanBuy then
+    if self.FocusState == STATE_GAMEPAD_FOCUS.FOCUS_DIALOG then
       self.OKCallback(self.OKCallbackObj, {
         BattlePass = self:PackageData()
       })
@@ -307,7 +317,6 @@ function M:OnGamePadUp(InKeyName)
 end
 
 function M:Change2State(State)
-  DebugPrint("gmy@WBP_BattlePass_PurchaseDialog_C M:RefreshFocusState", State, debug.traceback())
   self.FocusState = State
   if State == STATE_GAMEPAD_FOCUS.FOCUS_DIALOG then
     self.GameInputModeSubsystem:SetNavigateWidgetVisibility(false)

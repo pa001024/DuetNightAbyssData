@@ -81,7 +81,7 @@ end
 function M:InitBuffReddotAndNew(BuffId)
   if BuffId then
     self.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    ShowNew = self:CheckShowNew()
+    local ShowNew = self:CheckShowNew()
     if ShowNew then
       self.New:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     else

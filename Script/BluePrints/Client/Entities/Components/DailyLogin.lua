@@ -39,7 +39,7 @@ function Component:GMResetDailyLoginTime(EventID)
   self:CallServer("GMResetDailyLoginTime", EventID)
 end
 
-function Component:FlushActivity(ActivityTimeOpen)
+function Component:GetTimeOpenActivityCb(ActivityTimeOpen)
   self.ActivityTimeOpen = ActivityTimeOpen
 end
 

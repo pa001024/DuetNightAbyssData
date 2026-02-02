@@ -32,18 +32,32 @@ local function GetSequence(SequencePath)
   return nil
 end
 
-local function AddExternTalkactors(TalkNodeData, ExternTalkActors)
+local function AddExternTalkactors(TalkNodeData, ExternTalkActors, bUseExternActors)
   local TalkActors = {}
   local NativeTalkActors = {}
-  if TalkNodeData.TalkActors then
-    for _, TalkActor in pairs(TalkNodeData.TalkActors) do
+  if bUseExternActors then
+    for _, TalkActor in pairs(ExternTalkActors) do
       NativeTalkActors[TalkActor.TalkActorId] = true
       table.insert(TalkActors, TalkActor)
     end
-  end
-  for _, TalkActor in pairs(ExternTalkActors) do
-    if not NativeTalkActors[TalkActor.TalkActorId] then
-      table.insert(TalkActors, TalkActor)
+    if TalkNodeData.TalkActors then
+      for _, TalkActor in pairs(TalkNodeData.TalkActors) do
+        if not NativeTalkActors[TalkActor.TalkActorId] then
+          table.insert(TalkActors, TalkActor)
+        end
+      end
+    end
+  else
+    if TalkNodeData.TalkActors then
+      for _, TalkActor in pairs(TalkNodeData.TalkActors) do
+        NativeTalkActors[TalkActor.TalkActorId] = true
+        table.insert(TalkActors, TalkActor)
+      end
+    end
+    for _, TalkActor in pairs(ExternTalkActors) do
+      if not NativeTalkActors[TalkActor.TalkActorId] then
+        table.insert(TalkActors, TalkActor)
+      end
     end
   end
   TalkNodeData.TalkActors = TalkActors
@@ -84,7 +98,6 @@ function CommonTalkTaskData_C.New(TalkNodeData)
   Obj.bDisableMonsterAI = TalkNodeData.DisableMonsterAI
   Obj.bDisableNPCAI = TalkNodeData.DisableNPCAI
   Obj.bHideAllBattleEntity = TalkNodeData.HideAllBattleEntity
-  Obj.bDisableMonsterAIForSimpleTalk = TalkNodeData.DisableMonsterAIForSimpleTalk
   Obj.bFreezeWorldComposition = TalkNodeData.FreezeWorldComposition
   Obj.bTravelFullLoadWorldComposition = TalkNodeData.bTravelFullLoadWorldComposition
   Obj.SwitchToMasterType = TalkNodeData.SwitchToMaster
@@ -128,6 +141,7 @@ function CommonTalkTaskData_C.New(TalkNodeData)
       local Message = "找不到Sequence资源" .. "\nSequence路径:" .. Obj.SequencePath .. "\n对话节点:" .. tostring(TalkNodeData.Name)
       UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, UE.EStoryLogType.Talk, "Seqeuence资源缺失/配置错误", Message)
     else
+      UE4.UMovieSceneSequenceExtensions.SetClockSource(Sequence, UE4.EUpdateClockSource.Platform)
       SequenceActor:SetSequence(Sequence)
       Obj.Sequence = Sequence
     end
@@ -148,7 +162,7 @@ function CommonTalkTaskData_C.New(TalkNodeData)
       Obj.FlowAsset = TS:CreateFlowTalkTask(TalkNodeData.FlowAssetPath, UE4.LoadObject(TalkNodeData.FlowAssetPath))
       Obj.FirstDialogueId = Obj.FlowAsset:GetFirstDialogueId()
       local TalkActors = Obj.FlowAsset:GetTalkActorData()
-      AddExternTalkactors(Obj, TalkActors)
+      AddExternTalkactors(Obj, TalkActors, Obj.bUseFlowAssetActors)
     end
   end
   if Obj.BasicTalkType == "Black" then

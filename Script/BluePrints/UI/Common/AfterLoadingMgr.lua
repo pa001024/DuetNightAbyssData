@@ -28,7 +28,7 @@ local State = {
       try({
         exec = FuncTable.OnEnter,
         catch = function(err)
-          DebugPrint(Traceback(ErrorTag, "AfterLoading流程出错了,看日志有trace,出错状态：%s", AfterLoadingMgr.FSM:Current()))
+          DebugPrint(ErrorTag, string.format("AfterLoading有流程出错了,出错状态：%s, 请根据日志报错的行去找人", AfterLoadingMgr.FSM:Current()))
           LogError(Traceback(ErrorTag, err, true))
           UIManager():DestroyAfterLoadingMgr()
         end
@@ -61,7 +61,6 @@ StateImpl.BeginState = State:New("BeginState", {
     if PlayerCharacter then
       PlayerCharacter:SetCanInteractiveTrigger(true, "Loading")
     end
-    EventManager:FireEvent(EventID.OnCloseLoadingEnableStory)
   end,
   GetNextState = function(self)
     return DataMgr.AfterLoadingFSM[self.StateName].NextState
@@ -109,6 +108,13 @@ StateImpl.JumpToRogueMain = State:New("JumpToRogueMain", {
         elseif ExitDungeonInfo.Type == "Temple" then
           local CurTabIndex = ExitDungeonInfo.CurTabIndex
           PageJumpUtils:JumpToTempleSolo(CurTabIndex)
+        elseif ExitDungeonInfo.Type == "MonsterRush" then
+          local CurTabIndex = ExitDungeonInfo.CurTabIndex
+          local EventId = ExitDungeonInfo.EventId
+          local DungeonId = ExitDungeonInfo.DungeonId
+          PageJumpUtils:JumpToMonsterRush(CurTabIndex, EventId, DungeonId)
+        elseif ExitDungeonInfo.Type == "AutoChess" then
+          PageJumpUtils:JumpToAutoChessMain()
         end
       end
     end
@@ -128,6 +134,25 @@ StateImpl.SystemUnlock = State:New("SystemUnlock", {
     if Avatar then
       Avatar:HandleCloseLoadingEvent_WhileSystemUnlock()
     end
+  end
+})
+StateImpl.Entertainment = State:New("Entertainment", {
+  OnEnter = function(AfterLoadingMgr)
+    local SojournsGameInstanceSubsystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, USojournsGameInstanceSubsystem)
+    if SojournsGameInstanceSubsystem then
+      SojournsGameInstanceSubsystem:OnEnterOtherRegion()
+    end
+  end,
+  GetNextState = function(self, AfterLoadingMgr)
+    local NextStateName = DataMgr.AfterLoadingFSM[self.StateName].NextState
+    local SojournsGameInstanceSubsystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, USojournsGameInstanceSubsystem)
+    if not SojournsGameInstanceSubsystem then
+      return NextStateName
+    end
+    if SojournsGameInstanceSubsystem:IsNeedBlockAfterLoading() then
+      return self.StateName
+    end
+    return NextStateName
   end
 })
 StateImpl.TriggerGuide = State:New("TriggerGuide", {
@@ -175,7 +200,11 @@ StateImpl.OpenForcePopup = State:New("OpenForcePopup", {
     end
     local Avatar = GWorld:GetAvatar()
     if Avatar then
-      MonthCardController:TryDisplayMonthCardPop()
+      if ReturnActivityController and ReturnActivityController.DisplayReturnWelcomBannerCache then
+        ReturnActivityController.DisplayReturnWelcomBannerCache = nil
+        ReturnActivityController:TryDisplayReturnWelcomBanner()
+      end
+      MonthCardController:TryPopUpCacheReward()
       UIManager(PlayerCharacter):TryShowPlayerLevelUpInfo({
         CurLevel = Avatar.Level,
         ShowProgresBar = false

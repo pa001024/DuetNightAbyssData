@@ -300,6 +300,7 @@ function Component:OnConveyTrace()
       EventManager:FireEvent(EventID.OnCommonTrack, CommonConst.RegionMapTrackingType.TeleportPoint, self.CurrentConveyId, true)
       self.CurrentSelectPoint:PlayAnimation(self.CurrentSelectPoint.Loop, 0, 0)
       self:CreateTrackIndicator(self.CurrentSelectPoint)
+      self:TryToastNotInSameRegion()
     else
       EventManager:FireEvent(EventID.OnCommonTrack, CommonConst.RegionMapTrackingType.TeleportPoint, self.CurrentConveyId, false)
       self.CurrentSelectPoint:StopAllAnimations()
@@ -324,7 +325,7 @@ end
 
 function Component:ShowHardBoss(bShow)
   for Id, _ in pairs(self.TeleportIdToHardBossId) do
-    self.TeleportPoints[Id]:SetVisibility(bShow and ESlateVisibility.SelfHitTestInvisible or ESlateVisibility.Collapsed)
+    self.TeleportPoints[Id]:SetPointVisibility("HardBoss", bShow, true)
   end
 end
 

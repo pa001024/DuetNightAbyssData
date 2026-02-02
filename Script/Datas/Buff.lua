@@ -327,416 +327,457 @@ T.RT_113 = {
   [1] = T.RT_112
 }
 T.RT_114 = {201}
-T.RT_115 = {110302}
+T.RT_115 = {
+  DotDelay = 2,
+  Interval = 1,
+  Type = "SpChange",
+  Value = -20
+}
 T.RT_116 = {
-  AttrName = "AttackSpeedModifierRate",
+  [1] = T.RT_115
+}
+T.RT_117 = {110203}
+T.RT_118 = {110302}
+T.RT_119 = {HitFly = "HeavyHit"}
+T.RT_120 = {
+  AttrName = "WeaponCRDModifierRate",
   DamageTag = "Melee",
-  Value = 0.04
+  Value = 0.1
 }
-T.RT_117 = {
-  [1] = T.RT_116
+T.RT_121 = {
+  [1] = T.RT_120
 }
-T.RT_118 = {
+T.RT_122 = {70, 72}
+T.RT_123 = {
   "TuosiSkill02",
   "0.8",
   "50"
 }
-T.RT_119 = {
+T.RT_124 = {
   "EBulletJump"
 }
-T.RT_120 = {
+T.RT_125 = {
   AttrName = "ATK",
   BaseUseValue = 1,
   Rate = "#1",
   SupLimitValue = 315
 }
-T.RT_121 = {
+T.RT_126 = {
   AttrName = "WalkSpeedModifier",
   Value = 0.5
 }
-T.RT_122 = {
+T.RT_127 = {
   AttrName = "JumpVelocityModifier",
   Value = 0.1
 }
-T.RT_123 = {Value = -0.25}
-T.RT_124 = {AttrName = "SkillRange", Rate = 0.3}
-T.RT_125 = {1005}
-T.RT_126 = {AttrName = "SkillSpeed", Rate = 0.3}
-T.RT_127 = {
-  AttrName = "DarkDamagedRate",
-  Value = 0.5
+T.RT_128 = {Value = -0.25}
+T.RT_129 = {AttrName = "SkillRange", Rate = 0.3}
+T.RT_130 = {1005}
+T.RT_131 = {AttrName = "SkillSpeed", Rate = 0.3}
+T.RT_132 = {11, 110401}
+T.RT_133 = {160122}
+T.RT_134 = {1001}
+T.RT_135 = {AttrName = "ATK", Rate = 1}
+T.RT_136 = {
+  [1] = T.RT_135
 }
-T.RT_128 = {
-  [1] = T.RT_127
+T.RT_137 = {AttrName = "Def", Rate = "#1"}
+T.RT_138 = {
+  [1] = T.RT_137
 }
-T.RT_129 = {
-  AttrName = "SkillIntensity",
-  Rate = 0.33,
-  Stackable = 1
+T.RT_139 = {
+  [1] = T.RT_126
 }
-T.RT_130 = {
-  [1] = T.RT_129
-}
-T.RT_131 = {AttrName = "Def", Rate = "#1"}
-T.RT_132 = {
-  [1] = T.RT_131
-}
-T.RT_133 = {
-  [1] = T.RT_121
-}
-T.RT_134 = {
+T.RT_140 = {
   "ESecondJump",
   "EWallJump",
   "EBulletJump",
   "Eclimb",
   "EFlipEaves"
 }
-T.RT_135 = {"Invincible"}
-T.RT_136 = {
+T.RT_141 = {"Invincible"}
+T.RT_142 = {
   AttrName = "DamageRate",
   RateZone = "Normal",
   Value = "#1"
 }
-T.RT_137 = {
-  [1] = T.RT_136
+T.RT_143 = {
+  [1] = T.RT_142
 }
-T.RT_138 = {6000206}
-T.RT_139 = {
+T.RT_144 = {6000206}
+T.RT_145 = {
   AttrName = "SkillSustain",
   Rate = "#1"
-}
-T.RT_140 = {
-  [1] = T.RT_139
-}
-T.RT_141 = {Value = -0.3}
-T.RT_142 = {206}
-T.RT_143 = {150103}
-T.RT_144 = {Default = 50}
-T.RT_145 = {
-  AttrName = "MoveSpeedAddRate",
-  Value = -0.3
 }
 T.RT_146 = {
   [1] = T.RT_145
 }
-T.RT_147 = {20, 42}
-T.RT_148 = {20}
-T.RT_149 = {
+T.RT_147 = {Value = -0.3}
+T.RT_148 = {206}
+T.RT_149 = {150103}
+T.RT_150 = {Default = 50}
+T.RT_151 = {AttrName = "ATK", Rate = 0.35}
+T.RT_152 = {
+  [1] = T.RT_151
+}
+T.RT_153 = {
+  AttrName = "MoveSpeedAddRate",
+  Value = -0.3
+}
+T.RT_154 = {
+  [1] = T.RT_153
+}
+T.RT_155 = {20, 42}
+T.RT_156 = {20}
+T.RT_157 = {
   AttrName = "DamageRate",
   DamageTag = "Melee",
   RateZone = "Normal",
   Stackable = 1,
   Value = "#1"
 }
-T.RT_150 = {
+T.RT_158 = {
   AttrName = "TriggerProbModifierRate",
   Stackable = 1,
   Type = "Melee",
   Value = "#2"
 }
-T.RT_151 = {
-  [1] = T.RT_149,
-  [2] = T.RT_150
+T.RT_159 = {
+  [1] = T.RT_157,
+  [2] = T.RT_158
 }
-T.RT_152 = {
-  [150302] = T.RT_141
+T.RT_160 = {
+  [150302] = T.RT_147
 }
-T.RT_153 = {
+T.RT_161 = {
   [100] = 150305
 }
-T.RT_154 = {
+T.RT_162 = {
   AttrName = "DamageRate",
   DamageTag = "Ranged",
   RateZone = "Normal",
   Stackable = 1,
   Value = "#1"
 }
-T.RT_155 = {
+T.RT_163 = {
   AttrName = "TriggerProbModifierRate",
   Stackable = 1,
   Type = "Ranged",
   Value = "#2"
 }
-T.RT_156 = {
-  [1] = T.RT_154,
-  [2] = T.RT_155
+T.RT_164 = {
+  [1] = T.RT_162,
+  [2] = T.RT_163
 }
-T.RT_157 = {
-  [150321] = T.RT_141
+T.RT_165 = {
+  [150321] = T.RT_147
 }
-T.RT_158 = {
+T.RT_166 = {
   [100] = 150306
 }
-T.RT_159 = {Value = -30}
-T.RT_160 = {
+T.RT_167 = {Value = -30}
+T.RT_168 = {
   AttrName = "AttackSpeedModifierRate",
   Type = "Ranged",
   Value = "#1"
 }
-T.RT_161 = {
-  [1] = T.RT_160
+T.RT_169 = {
+  [1] = T.RT_168
 }
-T.RT_162 = {150311}
-T.RT_163 = {150312}
-T.RT_164 = {
-  150327,
-  150328,
-  150329
-}
-T.RT_165 = {
+T.RT_170 = {150311}
+T.RT_171 = {150312}
+T.RT_172 = {
   AttrName = "DamageRate",
   RateZone = "Normal",
   Value = 0.9
 }
-T.RT_166 = {
-  [1] = T.RT_165
+T.RT_173 = {
+  [1] = T.RT_172
 }
-T.RT_167 = {1000}
-T.RT_168 = {
+T.RT_174 = {1000}
+T.RT_175 = {
   "IncrementDefault",
   "0.5",
   "50"
 }
-T.RT_169 = {
-  "LandHeavy",
-  "Crouch",
-  "Slide",
-  "Interactive",
-  "Seating"
+T.RT_176 = {
+  AttrName = "StrongValue",
+  Value = 1
 }
-T.RT_170 = {
-  AttrName = "AttackSpeedModifierRate",
-  Value = 0.1
-}
-T.RT_171 = {150409}
-T.RT_172 = {
-  AttrName = "MoveSpeedAddRate",
-  Value = -0.95
-}
-T.RT_173 = {
-  [1] = T.RT_172
-}
-T.RT_174 = {"Move", "Hit"}
-T.RT_175 = {160122}
-T.RT_176 = {Value = 1}
 T.RT_177 = {
+  [1] = T.RT_176
+}
+T.RT_178 = {150409}
+T.RT_179 = {
+  Interval = 0.2,
+  Type = "SecondSpChange",
+  Value = -1
+}
+T.RT_180 = {
+  [1] = T.RT_179
+}
+T.RT_181 = {"Move", "Hit"}
+T.RT_182 = {Value = 1}
+T.RT_183 = {
   AttrName = "DamageRate",
   DamageTag = "Weapon",
   RateZone = "Normal",
   Value = "#1"
 }
-T.RT_178 = {
-  [1] = T.RT_177
+T.RT_184 = {
+  [1] = T.RT_183
 }
-T.RT_179 = {160121}
-T.RT_180 = {
+T.RT_185 = {160121}
+T.RT_186 = {
   AttrName = "MoveSpeedAddRate",
   Value = -0.5
 }
-T.RT_181 = {
-  [1] = T.RT_180
+T.RT_187 = {
+  [1] = T.RT_186
 }
-T.RT_182 = {160101}
-T.RT_183 = {
+T.RT_188 = {160101}
+T.RT_189 = {
   AllowSkillIntensity = 1,
   AttrName = "BonusDamage",
   Stackable = 1,
   Type = "Light",
   Value = "#1"
 }
-T.RT_184 = {
-  [1] = T.RT_183
+T.RT_190 = {
+  [1] = T.RT_189
 }
-T.RT_185 = {180102}
-T.RT_186 = {11, 180101}
-T.RT_187 = {
+T.RT_191 = {180102}
+T.RT_192 = {11, 180101}
+T.RT_193 = {
   0.0068,
   0.0492,
   0.2,
   0
 }
-T.RT_188 = {Default = 0.4}
-T.RT_189 = {Default = 130}
-T.RT_190 = {
-  FresnelColor = T.RT_187,
-  FresnelColorRange = T.RT_188,
-  FresnelColorStrength = T.RT_189
-}
-T.RT_191 = {180101}
-T.RT_192 = {2031}
-T.RT_193 = {180120}
-T.RT_194 = {21, 180121}
-T.RT_195 = {"Dot", "Skill"}
+T.RT_194 = {Default = 0.4}
+T.RT_195 = {Default = 130}
 T.RT_196 = {
+  FresnelColor = T.RT_193,
+  FresnelColorRange = T.RT_194,
+  FresnelColorStrength = T.RT_195
+}
+T.RT_197 = {180101}
+T.RT_198 = {2031}
+T.RT_199 = {180120}
+T.RT_200 = {21, 180121}
+T.RT_201 = {"Dot", "Skill"}
+T.RT_202 = {
   AllowSkillIntensity = 1,
-  DamageTag = T.RT_195,
+  DamageTag = T.RT_201,
   DamageType = "Fire",
   Immediately = 1,
   Interval = 2,
   Rate = "#1",
   Type = "Dot"
 }
-T.RT_197 = {
-  [1] = T.RT_196
+T.RT_203 = {
+  [1] = T.RT_202
 }
-T.RT_198 = {
+T.RT_204 = {
   AllowSkillIntensity = 1,
-  DamageTag = T.RT_195,
+  DamageTag = T.RT_201,
   DamageType = "Thunder",
   Immediately = 1,
   Interval = 2,
   Rate = "#1",
   Type = "Dot"
 }
-T.RT_199 = {
-  [1] = T.RT_198
+T.RT_205 = {
+  [1] = T.RT_204
 }
-T.RT_200 = {
+T.RT_206 = {
   AllowSkillIntensity = 1,
-  DamageTag = T.RT_195,
+  DamageTag = T.RT_201,
   DamageType = "Wind",
   Immediately = 1,
   Interval = 2,
   Rate = "#1",
   Type = "Dot"
 }
-T.RT_201 = {
-  [1] = T.RT_200
+T.RT_207 = {
+  [1] = T.RT_206
 }
-T.RT_202 = {
+T.RT_208 = {
   AttrName = "BonusDamage",
   Type = "Water",
   Value = "#1"
 }
-T.RT_203 = {202}
-T.RT_204 = {1041}
-T.RT_205 = {
+T.RT_209 = {202}
+T.RT_210 = {1041}
+T.RT_211 = {
   AttrName = "BonusDamage",
   Type = "Fire",
   Value = "#1"
 }
-T.RT_206 = {203}
-T.RT_207 = {1042}
-T.RT_208 = {
+T.RT_212 = {203}
+T.RT_213 = {1042}
+T.RT_214 = {
   AttrName = "BonusDamage",
   Type = "Thunder",
   Value = "#1"
 }
-T.RT_209 = {204}
-T.RT_210 = {1044}
-T.RT_211 = {
+T.RT_215 = {204}
+T.RT_216 = {1044}
+T.RT_217 = {
   AttrName = "BonusDamage",
   Type = "Wind",
   Value = "#1"
 }
-T.RT_212 = {
-  [1] = T.RT_211
+T.RT_218 = {
+  [1] = T.RT_217
 }
-T.RT_213 = {205}
-T.RT_214 = {1043}
-T.RT_215 = {
+T.RT_219 = {205}
+T.RT_220 = {1043}
+T.RT_221 = {
   AttrName = "DamageRate",
   RateZone = "Almighty",
   Value = 0.06
 }
-T.RT_216 = {10, 180130}
-T.RT_217 = {180131}
-T.RT_218 = {180132}
-T.RT_219 = {180133}
-T.RT_220 = {180134}
-T.RT_221 = {
+T.RT_222 = {10, 180130}
+T.RT_223 = {180131}
+T.RT_224 = {180132}
+T.RT_225 = {180133}
+T.RT_226 = {180134}
+T.RT_227 = {
   20,
   41,
   49
 }
-T.RT_222 = {Rate = 0.5}
-T.RT_223 = {
+T.RT_228 = {Rate = 0.5}
+T.RT_229 = {
   1,
   0.2,
   0,
   0
 }
-T.RT_224 = {Default = 0.65}
-T.RT_225 = {Default = 20, FresnelColor = 20}
-T.RT_226 = {
-  FresnelColor = T.RT_223,
-  FresnelColorRange = T.RT_224,
-  FresnelColorStrength = T.RT_225
+T.RT_230 = {Default = 0.65}
+T.RT_231 = {Default = 20, FresnelColor = 20}
+T.RT_232 = {
+  FresnelColor = T.RT_229,
+  FresnelColorRange = T.RT_230,
+  FresnelColorStrength = T.RT_231
 }
-T.RT_227 = {
+T.RT_233 = {
   "InvincibleUI"
 }
-T.RT_228 = {2002}
-T.RT_229 = {
+T.RT_234 = {2002}
+T.RT_235 = {
   AttrName = "WaterDamagedRate",
   Value = 4
 }
-T.RT_230 = {
-  AttrName = "LightDamagedRate",
-  Value = 4
+T.RT_236 = {
+  AttrName = "FireDamagedRate",
+  Value = -0.5
 }
-T.RT_231 = {
+T.RT_237 = {
+  AttrName = "ThunderDamagedRate",
+  Value = -0.5
+}
+T.RT_238 = {
   AttrName = "WindDamagedRate",
-  Value = 4
+  Value = -0.5
 }
-T.RT_232 = {
+T.RT_239 = {
   AttrName = "FireDamagedRate",
   Value = 4
 }
-T.RT_233 = {
+T.RT_240 = {
+  AttrName = "WaterDamagedRate",
+  Value = -0.5
+}
+T.RT_241 = {
+  AttrName = "ThunderDamagedRate",
+  Value = 4
+}
+T.RT_242 = {
+  AttrName = "WindDamagedRate",
+  Value = 4
+}
+T.RT_243 = {
+  AttrName = "LightDamagedRate",
+  Value = 4
+}
+T.RT_244 = {
+  AttrName = "DarkDamagedRate",
+  Value = -0.5
+}
+T.RT_245 = {
   AttrName = "DarkDamagedRate",
   Value = 4
 }
-T.RT_234 = {
+T.RT_246 = {
+  AttrName = "LightDamagedRate",
+  Value = -0.5
+}
+T.RT_247 = {
   AuraRange = 2000,
   BuffId = 2010102,
   Camp = "OtherFriend"
 }
-T.RT_235 = {
-  [1] = T.RT_234
+T.RT_248 = {
+  [1] = T.RT_247
 }
-T.RT_236 = {Value = -0.02}
-T.RT_237 = {
+T.RT_249 = {Value = -0.02}
+T.RT_250 = {Value = -0.04}
+T.RT_251 = {
+  AttrName = "DamageRate",
+  DamageTag = "Melee",
+  RateZone = "Normal",
+  Value = "#1"
+}
+T.RT_252 = {
+  [1] = T.RT_251
+}
+T.RT_253 = {
   [5] = 2010004
 }
-T.RT_238 = {
+T.RT_254 = {
   AttrName = "SkillIntensity",
   Rate = 1
 }
-T.RT_239 = {
-  [1] = T.RT_238
+T.RT_255 = {
+  [1] = T.RT_254
 }
-T.RT_240 = {
+T.RT_256 = {
+  AttrName = "DamageRate",
+  IndividualRateZone = 1,
+  Value = -0.12
+}
+T.RT_257 = {
   AttrName = "WeaponCRIModifierRate",
   Value = 1
 }
-T.RT_241 = {
+T.RT_258 = {
   AttrName = "DamageRate",
   RateZone = "Rouge",
   Value = 0.75
 }
-T.RT_242 = {
-  [1] = T.RT_241
+T.RT_259 = {
+  [1] = T.RT_258
 }
-T.RT_243 = {
+T.RT_260 = {
   AttrName = "MultiShootModifierRate",
   Stackable = 1,
   Value = "#1"
 }
-T.RT_244 = {
-  [1] = T.RT_243
+T.RT_261 = {
+  [1] = T.RT_260
 }
-T.RT_245 = {1023}
-T.RT_246 = {600012}
-T.RT_247 = {1001}
-T.RT_248 = {1004}
-T.RT_249 = {20, 41}
-T.RT_250 = {20, 22}
-T.RT_251 = {210102}
-T.RT_252 = {20, 210101}
-T.RT_253 = {
+T.RT_262 = {1023}
+T.RT_263 = {600012}
+T.RT_264 = {1004}
+T.RT_265 = {20, 41}
+T.RT_266 = {20, 22}
+T.RT_267 = {210102}
+T.RT_268 = {20, 210101}
+T.RT_269 = {
   AllowSkillIntensity = 1,
-  DamageTag = T.RT_195,
+  DamageTag = T.RT_201,
   DamageType = "Water",
   Immediately = 1,
   Interval = 2,
@@ -745,258 +786,384 @@ T.RT_253 = {
   Stackable = 1,
   Type = "Dot"
 }
-T.RT_254 = {
-  [1] = T.RT_253
+T.RT_270 = {
+  [1] = T.RT_269
 }
-T.RT_255 = {ParamType = "ShuimuDot"}
-T.RT_256 = {1024}
-T.RT_257 = {Default = 30, FresnelColor = 30}
-T.RT_258 = {1022}
-T.RT_259 = {
+T.RT_271 = {ParamType = "ShuimuDot"}
+T.RT_272 = {1024}
+T.RT_273 = {Default = 30, FresnelColor = 30}
+T.RT_274 = {1022}
+T.RT_275 = {
+  AttrName = "WalkSpeedModifier",
+  Value = "#1"
+}
+T.RT_276 = {
   AttrName = "SkillIntensity",
   RateUseValue = 1,
   SupLimitRate = 1.2
 }
-T.RT_260 = {
-  [1] = T.RT_259
+T.RT_277 = {
+  [1] = T.RT_276
 }
-T.RT_261 = {240121}
-T.RT_262 = {
+T.RT_278 = {240121}
+T.RT_279 = {
   0.7,
   0.95,
   1,
   1
 }
-T.RT_263 = {Default = 3, FresnelColor = 3}
-T.RT_264 = {
-  FresnelColor = T.RT_262,
+T.RT_280 = {Default = 3, FresnelColor = 3}
+T.RT_281 = {
+  FresnelColor = T.RT_279,
   FresnelColorRange = T.RT_108,
-  FresnelColorStrength = T.RT_263
+  FresnelColorStrength = T.RT_280
 }
-T.RT_265 = {
+T.RT_282 = {
   3001,
   240122,
   240123
 }
-T.RT_266 = {
+T.RT_283 = {
   AttrName = "SkillSpeed",
   Rate = "#1",
   Stackable = 1
 }
-T.RT_267 = {240133}
-T.RT_268 = {11, 60}
-T.RT_269 = {41}
-T.RT_270 = {11, 61}
-T.RT_271 = {11, 62}
-T.RT_272 = {30, 30401}
-T.RT_273 = {30402, 30407}
-T.RT_274 = {304000001}
-T.RT_275 = {30, 30402}
-T.RT_276 = {30401, 30407}
-T.RT_277 = {304000002}
-T.RT_278 = {
+T.RT_284 = {240133}
+T.RT_285 = {11, 60}
+T.RT_286 = {41}
+T.RT_287 = {11, 61}
+T.RT_288 = {11, 62}
+T.RT_289 = {30, 30401}
+T.RT_290 = {30402, 30407}
+T.RT_291 = {304000001}
+T.RT_292 = {30, 30402}
+T.RT_293 = {30401, 30407}
+T.RT_294 = {304000002}
+T.RT_295 = {
   "BossMapSkill",
   "1",
   "999"
 }
-T.RT_279 = {30, 30407}
-T.RT_280 = {30401, 30402}
-T.RT_281 = {304000004}
-T.RT_282 = {30}
-T.RT_283 = {Rate = 0.2}
-T.RT_284 = {
+T.RT_296 = {30, 30407}
+T.RT_297 = {30401, 30402}
+T.RT_298 = {304000004}
+T.RT_299 = {30}
+T.RT_300 = {Rate = 0.2}
+T.RT_301 = {
   [1010101] = 1019801
 }
-T.RT_285 = {310111}
-T.RT_286 = {21, 310111}
-T.RT_287 = {310101}
-T.RT_288 = {
+T.RT_302 = {310111}
+T.RT_303 = {21, 310111}
+T.RT_304 = {310101}
+T.RT_305 = {
   [310101] = 310111,
   [310102] = 310121
 }
-T.RT_289 = {
+T.RT_306 = {
   "Attack",
   "FallAttack",
   "HeavyAttack",
   "SlideAttack"
 }
-T.RT_290 = {
+T.RT_307 = {
   DotDelay = 1.5,
   Interval = 1,
   Type = "SpChange",
   Value = -20
 }
-T.RT_291 = {
-  [1] = T.RT_290
+T.RT_308 = {
+  [1] = T.RT_307
 }
-T.RT_292 = {Attack = "Fire"}
-T.RT_293 = {1007}
-T.RT_294 = {
+T.RT_309 = {Attack = "Fire"}
+T.RT_310 = {1007}
+T.RT_311 = {
   DotDelay = 0.5,
   Interval = 1,
   Type = "SpChange",
   Value = -15
 }
-T.RT_295 = {
-  [1] = T.RT_294
+T.RT_312 = {
+  [1] = T.RT_311
 }
-T.RT_296 = {
-  AttrName = "DamageRate",
-  RateZone = "Almighty",
-  Value = 0.55
-}
-T.RT_297 = {
-  [1] = T.RT_296
-}
-T.RT_298 = {
+T.RT_313 = {
   AttrName = "MaxAvoidExecuteTimes",
   Value = 2
 }
-T.RT_299 = {Default = 1.5, FresnelColor = 1.5}
-T.RT_300 = {
+T.RT_314 = {Default = 1.5, FresnelColor = 1.5}
+T.RT_315 = {
   AttrName = "MoveSpeedAddRate",
   Value = -0.6
 }
-T.RT_301 = {
-  [1] = T.RT_300
+T.RT_316 = {
+  [1] = T.RT_315
 }
-T.RT_302 = {21, 42}
-T.RT_303 = {310321}
-T.RT_304 = {"HotUI"}
-T.RT_305 = {320102}
-T.RT_306 = {
+T.RT_317 = {21, 42}
+T.RT_318 = {310321}
+T.RT_319 = {"HotUI"}
+T.RT_320 = {320102}
+T.RT_321 = {
+  AttrName = "DamageRate",
+  RateZone = "Almighty",
+  Value = 0.5
+}
+T.RT_322 = {
+  [1] = T.RT_321
+}
+T.RT_323 = {AttrName = "ATK", Rate = 0.45}
+T.RT_324 = {
+  [1] = T.RT_323
+}
+T.RT_325 = {
   AttrName = "MultiShootModifierRate",
   Value = "#1"
 }
-T.RT_307 = {
-  [1] = T.RT_306
+T.RT_326 = {
+  [1] = T.RT_325
 }
-T.RT_308 = {AttrName = "SkillSpeed", Rate = 0.5}
-T.RT_309 = {
-  [1] = T.RT_308
-}
-T.RT_310 = {AttrName = "FakeHpRate", Value = 0.01}
-T.RT_311 = {
+T.RT_327 = {AttrName = "FakeHpRate", Value = 0.01}
+T.RT_328 = {
   AttrName = "DamagedRate",
   RateZone = "Level",
   Value = 0.5
 }
-T.RT_312 = {
-  [1] = T.RT_311
+T.RT_329 = {
+  [1] = T.RT_328
 }
-T.RT_313 = {600000901}
-T.RT_314 = {
-  AttrName = "WalkSpeedModifier",
-  Value = 0.25
-}
-T.RT_315 = {
-  AttrName = "SlideVelocityModifier",
-  Value = 0.25
-}
-T.RT_316 = {
-  AttrName = "BulletJumpVelocityModifier",
-  Value = 0.25
-}
-T.RT_317 = {
-  AttrName = "JumpVelocityModifier",
-  Value = 0.25
-}
-T.RT_318 = {
-  [1] = T.RT_314,
-  [2] = T.RT_315,
-  [3] = T.RT_316,
-  [4] = T.RT_317
-}
-T.RT_319 = {
-  Interval = 1,
-  Type = "SpChange",
-  Value = -6
-}
-T.RT_320 = {
-  [1] = T.RT_319
-}
-T.RT_321 = {AttrName = "DEF", Rate = "#1"}
-T.RT_322 = {
-  [1] = T.RT_321
-}
-T.RT_323 = {
-  Interval = 3,
-  Type = "SpChange",
-  Value = 1
-}
-T.RT_324 = {
-  [1] = T.RT_323
-}
-T.RT_325 = {2000}
-T.RT_326 = {5000010}
-T.RT_327 = {Rate = 1}
-T.RT_328 = {2105}
-T.RT_329 = {"Controlled"}
-T.RT_330 = {
-  "Dot",
-  "PhantomAvoid"
-}
+T.RT_330 = {600000901}
 T.RT_331 = {
-  DamageTag = T.RT_330,
-  Interval = 1,
-  Rate = 0.8,
-  Type = "Dot"
+  AttrName = "MaxHp",
+  Rate = 0.3,
+  Stackable = 1
 }
 T.RT_332 = {
   [1] = T.RT_331
 }
-T.RT_333 = {600503}
+T.RT_333 = {
+  AttrName = "DEF",
+  Rate = 0.45,
+  Stackable = 1
+}
 T.RT_334 = {
+  AttrName = "ATK",
+  Rate = 0.3,
+  Stackable = 1
+}
+T.RT_335 = {
+  [1] = T.RT_334
+}
+T.RT_336 = {
+  AttrName = "MaxES",
+  Rate = 0.4,
+  Stackable = 1
+}
+T.RT_337 = {6000101}
+T.RT_338 = {
+  Char = "Mon_Strong_Single"
+}
+T.RT_339 = {6000102}
+T.RT_340 = {6000103}
+T.RT_341 = {6000104}
+T.RT_342 = {6000105}
+T.RT_343 = {6000106}
+T.RT_344 = {6000107}
+T.RT_345 = {6000108}
+T.RT_346 = {6000109}
+T.RT_347 = {6000110}
+T.RT_348 = {6000111}
+T.RT_349 = {6000112}
+T.RT_350 = {6000113}
+T.RT_351 = {
+  AttrName = "DEF",
+  Rate = 0.25,
+  Stackable = 1
+}
+T.RT_352 = {
+  AttrName = "ATK",
+  Rate = 0.25,
+  Stackable = 1
+}
+T.RT_353 = {
+  AttrName = "DEF",
+  Rate = 0.2,
+  Stackable = 1
+}
+T.RT_354 = {
+  [1] = T.RT_112,
+  [2] = T.RT_353
+}
+T.RT_355 = {
+  AttrName = "ATK",
+  Rate = 0.45,
+  Stackable = 1
+}
+T.RT_356 = {
+  [1] = T.RT_355
+}
+T.RT_357 = {
+  AttrName = "MaxHp",
+  Rate = 0.9,
+  Stackable = 1
+}
+T.RT_358 = {
+  [1] = T.RT_357
+}
+T.RT_359 = {
+  AttrName = "DEF",
+  Rate = 0.3,
+  Stackable = 1
+}
+T.RT_360 = {
+  AttrName = "ATK",
+  Rate = 0.5,
+  Stackable = 1
+}
+T.RT_361 = {
+  AttrName = "ATK",
+  Rate = 1,
+  Stackable = 1
+}
+T.RT_362 = {
+  AttrName = "DEF",
+  Rate = 1,
+  Stackable = 1
+}
+T.RT_363 = {
+  AttrName = "MaxHp",
+  Rate = 1,
+  Stackable = 1
+}
+T.RT_364 = {
+  AttrName = "MaxES",
+  Rate = 1,
+  Stackable = 1
+}
+T.RT_365 = {
+  [1] = T.RT_361,
+  [2] = T.RT_362,
+  [3] = T.RT_363,
+  [4] = T.RT_364
+}
+T.RT_366 = {
+  AttrName = "ATK",
+  Rate = 1.5,
+  Stackable = 1
+}
+T.RT_367 = {
+  [1] = T.RT_366
+}
+T.RT_368 = {
+  AttrName = "WalkSpeedModifier",
+  Value = 0.25
+}
+T.RT_369 = {
+  AttrName = "SlideVelocityModifier",
+  Value = 0.25
+}
+T.RT_370 = {
+  AttrName = "BulletJumpVelocityModifier",
+  Value = 0.25
+}
+T.RT_371 = {
+  AttrName = "JumpVelocityModifier",
+  Value = 0.25
+}
+T.RT_372 = {
+  [1] = T.RT_368,
+  [2] = T.RT_369,
+  [3] = T.RT_370,
+  [4] = T.RT_371
+}
+T.RT_373 = {
+  Interval = 1,
+  Type = "SpChange",
+  Value = -6
+}
+T.RT_374 = {
+  [1] = T.RT_373
+}
+T.RT_375 = {AttrName = "DEF", Rate = "#1"}
+T.RT_376 = {
+  [1] = T.RT_375
+}
+T.RT_377 = {420102}
+T.RT_378 = {
+  Interval = 3,
+  Type = "SpChange",
+  Value = 1
+}
+T.RT_379 = {
+  [1] = T.RT_378
+}
+T.RT_380 = {2000}
+T.RT_381 = {5000010}
+T.RT_382 = {Rate = 1}
+T.RT_383 = {2105}
+T.RT_384 = {"Controlled"}
+T.RT_385 = {
+  "Dot",
+  "PhantomAvoid"
+}
+T.RT_386 = {
+  DamageTag = T.RT_385,
+  Interval = 1,
+  Rate = 0.8,
+  Type = "Dot"
+}
+T.RT_387 = {
+  [1] = T.RT_386
+}
+T.RT_388 = {600503}
+T.RT_389 = {
   AttrName = "SlideVelocityModifier",
   Value = 0.5
 }
-T.RT_335 = {
+T.RT_390 = {
   AttrName = "BulletJumpVelocityModifier",
   Value = 0.5
 }
-T.RT_336 = {
+T.RT_391 = {
   AttrName = "JumpVelocityModifier",
   Value = 0.5
 }
-T.RT_337 = {
-  [1] = T.RT_121,
-  [2] = T.RT_334,
-  [3] = T.RT_335,
-  [4] = T.RT_336
+T.RT_392 = {
+  [1] = T.RT_126,
+  [2] = T.RT_389,
+  [3] = T.RT_390,
+  [4] = T.RT_391
 }
-T.RT_338 = {6000}
-T.RT_339 = {
+T.RT_393 = {6000}
+T.RT_394 = {
   AttrName = "BulletJumpVelocityModifier",
   Value = 1.5
 }
-T.RT_340 = {
-  [1] = T.RT_121,
-  [2] = T.RT_334,
-  [3] = T.RT_339,
-  [4] = T.RT_336
+T.RT_395 = {
+  [1] = T.RT_126,
+  [2] = T.RT_389,
+  [3] = T.RT_394,
+  [4] = T.RT_391
 }
-T.RT_341 = {
+T.RT_396 = {
   40,
   41,
   42,
   43,
   44
 }
-T.RT_342 = {600000802}
-T.RT_343 = {Value = "#2"}
-T.RT_344 = {10, 510103}
-T.RT_345 = {
+T.RT_397 = {600000802}
+T.RT_398 = {Value = "#2"}
+T.RT_399 = {10, 510103}
+T.RT_400 = {
   10.88886,
   2.91666,
   20,
   0
 }
-T.RT_346 = {
-  FresnelColor = T.RT_345,
-  FresnelColorRange = T.RT_188,
-  FresnelColorStrength = T.RT_299
+T.RT_401 = {
+  FresnelColor = T.RT_400,
+  FresnelColorRange = T.RT_194,
+  FresnelColorStrength = T.RT_314
 }
-T.RT_347 = {
+T.RT_402 = {
   510106,
   510108,
   510109,
@@ -1004,38 +1171,38 @@ T.RT_347 = {
   510111,
   510112
 }
-T.RT_348 = {
+T.RT_403 = {
   "Stealth",
   "Translucency"
 }
-T.RT_349 = {10, 510221}
-T.RT_350 = {510201}
-T.RT_351 = {
+T.RT_404 = {10, 510221}
+T.RT_405 = {510201}
+T.RT_406 = {
   "FallAttack",
   "HeavyAttack",
   "SlideAttack",
   "Attack"
 }
-T.RT_352 = {530121}
-T.RT_353 = {530102}
-T.RT_354 = {11, 540101}
-T.RT_355 = {
+T.RT_407 = {530121}
+T.RT_408 = {530102}
+T.RT_409 = {11, 540101}
+T.RT_410 = {
   EffectId = 540112,
   Immediately = 1,
   Interval = 1,
   Type = "SkillEffect"
 }
-T.RT_356 = {
-  [1] = T.RT_355
+T.RT_411 = {
+  [1] = T.RT_410
 }
-T.RT_357 = {
+T.RT_412 = {
   AllowSkillRange = 1,
   AuraRange = 600,
   BuffId = 540112,
   Camp = "Enemy"
 }
-T.RT_358 = {540111}
-T.RT_359 = {
+T.RT_413 = {540111}
+T.RT_414 = {
   AllowSkillIntensity = 1,
   Condition = 2,
   DamageTag = T.RT_61,
@@ -1046,93 +1213,86 @@ T.RT_359 = {
   Type = "Hot",
   Value = 3
 }
-T.RT_360 = {
-  [1] = T.RT_359
+T.RT_415 = {
+  [1] = T.RT_414
 }
-T.RT_361 = {540121}
-T.RT_362 = {540123}
-T.RT_363 = {
+T.RT_416 = {540121}
+T.RT_417 = {540123}
+T.RT_418 = {
   DamageTag = T.RT_61,
   DefaultHealFX = 0,
   Interval = 1,
   Rate = 0.025,
   Type = "Hot"
 }
-T.RT_364 = {
-  [1] = T.RT_363
+T.RT_419 = {
+  [1] = T.RT_418
 }
-T.RT_365 = {600000103}
-T.RT_366 = {600010}
-T.RT_367 = {AttrName = "SkillSpeed", Rate = 0.4}
-T.RT_368 = {
-  Char = "Mon_Strong_Single"
-}
-T.RT_369 = {
+T.RT_420 = {600000103}
+T.RT_421 = {600010}
+T.RT_422 = {AttrName = "SkillSpeed", Rate = 0.4}
+T.RT_423 = {
   Char = "Mon_Strong_Double"
 }
-T.RT_370 = {
+T.RT_424 = {
   Char = "Mon_Strong_Tripple"
 }
-T.RT_371 = {
+T.RT_425 = {
   41,
   42,
   43,
   44
 }
-T.RT_372 = {2102}
-T.RT_373 = {11, 1000}
-T.RT_374 = {
-  [1] = T.RT_240
+T.RT_426 = {2102}
+T.RT_427 = {11, 1000}
+T.RT_428 = {
+  [1] = T.RT_257
 }
-T.RT_375 = {AttrName = "ATK", Rate = 1}
-T.RT_376 = {
-  [1] = T.RT_375
-}
-T.RT_377 = {
+T.RT_429 = {
   AttrName = "MoveSpeedAddRate",
   Value = 0.5
 }
-T.RT_378 = {
+T.RT_430 = {
   50,
   7.0434,
   2.06,
   1
 }
-T.RT_379 = {
-  DMMIColor = T.RT_378,
+T.RT_431 = {
+  DMMIColor = T.RT_430,
   DMMILineWidth = 0.5
 }
-T.RT_380 = {
+T.RT_432 = {
   ParamType = "Invisibility",
   Priority = 1
 }
-T.RT_381 = {800201}
-T.RT_382 = {AttrName = "MaxES", Rate = "#1"}
-T.RT_383 = {AttrName = "DEF", Rate = "#2"}
-T.RT_384 = {AttrName = "MaxHp", Rate = "#3"}
-T.RT_385 = {40, 41}
-T.RT_386 = {Rate = 0.01}
-T.RT_387 = {
+T.RT_433 = {800201}
+T.RT_434 = {AttrName = "MaxES", Rate = "#1"}
+T.RT_435 = {AttrName = "DEF", Rate = "#2"}
+T.RT_436 = {AttrName = "MaxHp", Rate = "#3"}
+T.RT_437 = {40, 41}
+T.RT_438 = {Rate = 0.01}
+T.RT_439 = {
   "BossMapSkill",
   "0.5",
   "999"
 }
-T.RT_388 = {
+T.RT_440 = {
   41,
   42,
   43
 }
-T.RT_389 = {
+T.RT_441 = {
   "BossLinenDefault",
   "0.5",
   "5"
 }
-T.RT_390 = {
+T.RT_442 = {
   "BossMapSkill",
   "2",
   "999"
 }
-T.RT_391 = {
+T.RT_443 = {
   "FallAttack",
   "HeavyAttack",
   "SlideAttack",
@@ -1140,6 +1300,9 @@ T.RT_391 = {
   "Skill2",
   "Reload"
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -1172,11 +1335,11 @@ return ReadOnly("Buff", {
         0
       },
       FresnelColorRange = T.RT_108,
-      FresnelColorStrength = T.RT_144
+      FresnelColorStrength = T.RT_150
     },
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    SpecialEffect = T.RT_135
+    SpecialEffect = T.RT_141
   },
   [4] = {
     BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_CommonBulletJump.BP_Buff_CommonBulletJump",
@@ -1185,10 +1348,16 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [5] = {
-    AddAttrs = T.RT_133,
+    AddAttrs = T.RT_139,
     AddPassiveEffect = {1},
     BuffId = 5,
     DisableEmoIdle = true,
+    ForbidenJumpState = {
+      "EWallJump",
+      "EBulletJump",
+      "Eclimb",
+      "EFlipEaves"
+    },
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     NotEnterCharacterTagType = {
@@ -1202,6 +1371,17 @@ return ReadOnly("Buff", {
       "Slide"
     }
   },
+  [6] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "RideMoveFlySpeedModifier",
+        Value = 0.5
+      }
+    },
+    BuffId = 6,
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
   [11] = {
     AddAttrs = T.RT_17,
     BuffId = 11,
@@ -1212,7 +1392,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [12] = {
-    AddAttrs = T.RT_132,
+    AddAttrs = T.RT_138,
     BuffId = 12,
     BuffType = T.RT_103,
     BuffTypeImgPath = "Def_Up",
@@ -1230,7 +1410,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [14] = {
-    AddAttrs = T.RT_140,
+    AddAttrs = T.RT_146,
     BuffId = 14,
     BuffType = T.RT_103,
     BuffTypeImgPath = "Skill_Sustain_Up",
@@ -1241,16 +1421,16 @@ return ReadOnly("Buff", {
   [21] = {
     AddAttrs = T.RT_17,
     BuffId = 21,
-    BuffType = T.RT_250,
+    BuffType = T.RT_266,
     BuffTypeImgPath = "Atk_Down",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [22] = {
-    AddAttrs = T.RT_132,
+    AddAttrs = T.RT_138,
     BuffId = 22,
-    BuffType = T.RT_250,
+    BuffType = T.RT_266,
     BuffTypeImgPath = "Def_Down",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
@@ -1264,7 +1444,7 @@ return ReadOnly("Buff", {
       }
     },
     BuffId = 23,
-    BuffType = T.RT_250,
+    BuffType = T.RT_266,
     BuffTypeImgPath = "Slowdown",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
@@ -1300,7 +1480,7 @@ return ReadOnly("Buff", {
   },
   [52] = {
     BuffId = 52,
-    BuffType = T.RT_250,
+    BuffType = T.RT_266,
     BuffTypeImgPath = "Def_Down",
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
@@ -1310,11 +1490,11 @@ return ReadOnly("Buff", {
     BuffId = 95,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_175
+    VisualEffects = T.RT_133
   },
   [96] = {
     AddAttrs = T.RT_30,
-    BuffDamagedRate = T.RT_141,
+    BuffDamagedRate = T.RT_147,
     BuffId = 96,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Atk_Up",
@@ -1523,7 +1703,7 @@ return ReadOnly("Buff", {
   },
   [201] = {
     BuffId = 201,
-    BuffType = T.RT_221,
+    BuffType = T.RT_227,
     BuffTypeImgPath = "Stun",
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
@@ -1533,7 +1713,7 @@ return ReadOnly("Buff", {
   },
   [202] = {
     BuffId = 202,
-    BuffType = T.RT_221,
+    BuffType = T.RT_227,
     BuffTypeImgPath = "Stun",
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
@@ -1557,11 +1737,11 @@ return ReadOnly("Buff", {
     Priority = 100,
     SetCharacterTag = "Stun",
     StunType = "StunParalysis",
-    VisualEffects = T.RT_246
+    VisualEffects = T.RT_263
   },
   [204] = {
     BuffId = 204,
-    BuffType = T.RT_221,
+    BuffType = T.RT_227,
     BuffTypeImgPath = "Stun",
     EnterFloating = true,
     IsShowInBillboard = true,
@@ -1585,9 +1765,9 @@ return ReadOnly("Buff", {
         Value = -0.8
       }
     },
-    BuffEffects = T.RT_192,
+    BuffEffects = T.RT_198,
     BuffId = 206,
-    BuffType = T.RT_147,
+    BuffType = T.RT_155,
     BuffTypeImgPath = "Slowdown",
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
@@ -1595,7 +1775,7 @@ return ReadOnly("Buff", {
   },
   [207] = {
     BuffId = 207,
-    BuffType = T.RT_249,
+    BuffType = T.RT_265,
     BuffTypeImgPath = "Stun",
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
@@ -1605,21 +1785,21 @@ return ReadOnly("Buff", {
   },
   [301] = {
     BuffId = 301,
-    BuffType = T.RT_268,
+    BuffType = T.RT_285,
     BuffTypeImgPath = "Invincible",
-    ForbidBuffType = T.RT_269,
-    FresnelParams = T.RT_226,
+    ForbidBuffType = T.RT_286,
+    FresnelParams = T.RT_232,
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     NotEnterCharacterTagType = T.RT_27,
     Priority = 1000,
-    SpecialEffect = T.RT_135,
-    UISpecialEffect = T.RT_227
+    SpecialEffect = T.RT_141,
+    UISpecialEffect = T.RT_233
   },
   [302] = {
     BuffId = 302,
-    BuffType = T.RT_270,
+    BuffType = T.RT_287,
     BuffTypeImgPath = "Common_Buff",
     DMMIParams = {
       DMMIColor = {
@@ -1640,9 +1820,9 @@ return ReadOnly("Buff", {
   },
   [303] = {
     AddAttrs = T.RT_88,
-    BuffEffects = T.RT_167,
+    BuffEffects = T.RT_174,
     BuffId = 303,
-    BuffType = T.RT_271,
+    BuffType = T.RT_288,
     BuffTypeImgPath = "Boost",
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
@@ -1652,7 +1832,7 @@ return ReadOnly("Buff", {
     BuffId = 304,
     DeadNotRemove = true,
     IsAvatarBuff = 1,
-    LockHp = T.RT_176,
+    LockHp = T.RT_182,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -1683,12 +1863,12 @@ return ReadOnly("Buff", {
   },
   [307] = {
     BuffId = 307,
-    BuffType = T.RT_268,
-    ForbidBuffType = T.RT_269,
+    BuffType = T.RT_285,
+    ForbidBuffType = T.RT_286,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     NotEnterCharacterTagType = T.RT_27,
-    SpecialEffect = T.RT_135
+    SpecialEffect = T.RT_141
   },
   [308] = {
     BuffId = 308,
@@ -1697,14 +1877,14 @@ return ReadOnly("Buff", {
       60,
       61
     },
-    ForbidBuffType = T.RT_269,
+    ForbidBuffType = T.RT_286,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     NotEnterCharacterTagType = T.RT_27,
     SpecialEffect = {"Invincible", "Stealth"}
   },
   [309] = {
-    ActivateSkills = T.RT_284,
+    ActivateSkills = T.RT_301,
     BuffId = 309,
     DeadNotRemove = true,
     IsAvatarBuff = 1,
@@ -1712,7 +1892,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [310] = {
-    ActivateSkills = T.RT_284,
+    ActivateSkills = T.RT_301,
     BuffId = 310,
     DeadNotRemove = true,
     MergeRule1 = "Personal",
@@ -1720,11 +1900,13 @@ return ReadOnly("Buff", {
   },
   [311] = {
     BuffId = 311,
-    BuffType = T.RT_3,
-    DisableSkills = {"Skill1", "Skill2"},
+    DisableSkills = {
+      "Skill1",
+      "Skill2",
+      "Support"
+    },
     MergeRule1 = "Personal",
-    MergeRule2 = "Merge",
-    NotEnterCharacterTagType = {"Skill"}
+    MergeRule2 = "Merge"
   },
   [402] = {
     AddAttrs = T.RT_17,
@@ -1739,7 +1921,7 @@ return ReadOnly("Buff", {
   [406] = {
     BuffDamageRate = T.RT_23,
     BuffId = 406,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Damage_Down",
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
@@ -1766,9 +1948,9 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [411] = {
-    AddAttrs = T.RT_322,
+    AddAttrs = T.RT_376,
     BuffId = 411,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Def_Down",
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
@@ -1785,7 +1967,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [413] = {
-    AddAttrs = T.RT_140,
+    AddAttrs = T.RT_146,
     BuffId = 413,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Skill_Sustain_Up",
@@ -1794,7 +1976,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [415] = {
-    AddAttrs = T.RT_322,
+    AddAttrs = T.RT_376,
     BuffEffects = {4152},
     BuffId = 415,
     BuffType = T.RT_19,
@@ -1813,7 +1995,7 @@ return ReadOnly("Buff", {
       }
     },
     BuffId = 416,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Def_Down",
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
@@ -1848,7 +2030,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [423] = {
-    AddAttrs = T.RT_307,
+    AddAttrs = T.RT_326,
     BuffEffects = {4232},
     BuffId = 423,
     BuffType = T.RT_19,
@@ -1885,7 +2067,7 @@ return ReadOnly("Buff", {
         Value = "#1"
       }
     },
-    AddPassiveEffect = T.RT_142,
+    AddPassiveEffect = T.RT_148,
     BuffEffects = {4262},
     BuffId = 426,
     BuffType = T.RT_19,
@@ -1896,7 +2078,7 @@ return ReadOnly("Buff", {
   },
   [801] = {
     AddAttrs = {
-      [1] = T.RT_382
+      [1] = T.RT_434
     },
     BuffId = 801,
     CombatConditionId = 502,
@@ -1906,8 +2088,8 @@ return ReadOnly("Buff", {
   },
   [802] = {
     AddAttrs = {
-      [1] = T.RT_383,
-      [2] = T.RT_382
+      [1] = T.RT_435,
+      [2] = T.RT_434
     },
     BuffId = 802,
     CombatConditionId = 502,
@@ -1917,9 +2099,9 @@ return ReadOnly("Buff", {
   },
   [803] = {
     AddAttrs = {
-      [1] = T.RT_384,
-      [2] = T.RT_383,
-      [3] = T.RT_382
+      [1] = T.RT_436,
+      [2] = T.RT_435,
+      [3] = T.RT_434
     },
     BuffId = 803,
     CombatConditionId = 502,
@@ -1930,9 +2112,9 @@ return ReadOnly("Buff", {
   [804] = {
     AddAttrs = {
       [1] = {AttrName = "ATK", Rate = "#4"},
-      [2] = T.RT_384,
-      [3] = T.RT_383,
-      [4] = T.RT_382
+      [2] = T.RT_436,
+      [3] = T.RT_435,
+      [4] = T.RT_434
     },
     BuffId = 804,
     CombatConditionId = 502,
@@ -1956,7 +2138,7 @@ return ReadOnly("Buff", {
     AllowSkillSustainModify = true,
     BuffId = 903,
     DeadNotRemove = true,
-    LockHp = T.RT_176,
+    LockHp = T.RT_182,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -1986,7 +2168,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [1313] = {
-    AddAttrs = T.RT_137,
+    AddAttrs = T.RT_143,
     BuffId = 1313,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Damage_Up",
@@ -1995,7 +2177,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [1314] = {
-    AddAttrs = T.RT_137,
+    AddAttrs = T.RT_143,
     BuffId = 1314,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Damage_Up",
@@ -2013,7 +2195,7 @@ return ReadOnly("Buff", {
       }
     },
     BuffId = 1315,
-    BuffType = T.RT_138,
+    BuffType = T.RT_144,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
@@ -2050,7 +2232,7 @@ return ReadOnly("Buff", {
   },
   [1523] = {
     BuffId = 1523,
-    LockHp = T.RT_176,
+    LockHp = T.RT_182,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -2069,7 +2251,7 @@ return ReadOnly("Buff", {
     NotEnterCharacterTagType = T.RT_27
   },
   [1800] = {
-    AddAttrs = T.RT_137,
+    AddAttrs = T.RT_143,
     BuffId = 1800,
     MaxLayer = 3,
     MergeRule1 = "Personal",
@@ -2172,7 +2354,7 @@ return ReadOnly("Buff", {
       }
     },
     AddPassiveEffect = T.RT_73,
-    BuffEffects = T.RT_256,
+    BuffEffects = T.RT_272,
     BuffId = 2301,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Cri_Up",
@@ -2190,7 +2372,7 @@ return ReadOnly("Buff", {
       }
     },
     AddPassiveEffect = T.RT_73,
-    BuffEffects = T.RT_258,
+    BuffEffects = T.RT_274,
     BuffId = 2302,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Weapon_Trigger_Up",
@@ -2213,10 +2395,7 @@ return ReadOnly("Buff", {
   },
   [2312] = {
     AddAttrs = {
-      [1] = {
-        AttrName = "WalkSpeedModifier",
-        Value = "#1"
-      }
+      [1] = T.RT_275
     },
     BuffId = 2312,
     BuffType = T.RT_19,
@@ -2271,10 +2450,29 @@ return ReadOnly("Buff", {
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
+  [3312] = {
+    AddAttrs = {
+      [1] = T.RT_275,
+      [2] = {
+        AttrName = "SlideVelocityModifier",
+        Value = "#1"
+      },
+      [3] = {
+        AttrName = "BulletJumpVelocityModifier",
+        Value = "#1"
+      }
+    },
+    BuffId = 3312,
+    BuffType = T.RT_19,
+    BuffTypeImgPath = "Boost",
+    IsShowInBillboard = true,
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
   [3321] = {
     AddAttrs = T.RT_99,
     AddPassiveEffect = T.RT_73,
-    BuffEffects = T.RT_258,
+    BuffEffects = T.RT_274,
     BuffId = 3321,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Weapon_Trigger_Up",
@@ -2284,9 +2482,9 @@ return ReadOnly("Buff", {
     MergeRule2 = "NewFree"
   },
   [3331] = {
-    AddAttrs = T.RT_307,
+    AddAttrs = T.RT_326,
     AddPassiveEffect = T.RT_73,
-    BuffEffects = T.RT_245,
+    BuffEffects = T.RT_262,
     BuffId = 3331,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Weapon_Multishoot_Up",
@@ -2294,6 +2492,38 @@ return ReadOnly("Buff", {
     MaxLayer = 5,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree"
+  },
+  [3342] = {
+    AddAttrs = T.RT_252,
+    BuffEffects = T.RT_78,
+    BuffId = 3342,
+    BuffType = T.RT_19,
+    BuffTypeImgPath = "Damage_Up",
+    IsShowInBillboard = true,
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
+  [3703] = {
+    AllowSkillSustainModify = true,
+    BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_3703.BP_Buff_3703",
+    BuffId = 3703,
+    BuffType = {
+      21,
+      41,
+      3703
+    },
+    ForbidBuffType = {3703},
+    HitReplace = T.RT_119,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    SetCharacterTag = "StunFloat",
+    SpecialEffect = {"Breakable"}
+  },
+  [4205] = {
+    BuffId = 4205,
+    MaxLayer = 6,
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
   },
   [6111] = {
     AddAttrs = {
@@ -2321,13 +2551,13 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [6114] = {
-    AddAttrs = T.RT_374,
+    AddAttrs = T.RT_428,
     BuffId = 6114,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [6121] = {
-    AddAttrs = T.RT_376,
+    AddAttrs = T.RT_136,
     BuffId = 6121,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
@@ -2345,13 +2575,13 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [6124] = {
-    AddAttrs = T.RT_239,
+    AddAttrs = T.RT_255,
     BuffId = 6124,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [6131] = {
-    AddAttrs = T.RT_376,
+    AddAttrs = T.RT_136,
     BuffId = 6131,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
@@ -2369,7 +2599,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [6134] = {
-    AddAttrs = T.RT_239,
+    AddAttrs = T.RT_255,
     BuffId = 6134,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
@@ -2393,7 +2623,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [6144] = {
-    AddAttrs = T.RT_68,
+    AddAttrs = T.RT_49,
     BuffId = 6144,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
@@ -2423,14 +2653,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [6161] = {
-    AddAttrs = {
-      [1] = {
-        AttrName = "BonusDamage",
-        Type = "Light",
-        Value = 1
-      }
-    },
-    AddPassiveEffect = T.RT_142,
+    AddAttrs = T.RT_177,
     BuffId = 6161,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
@@ -2448,7 +2671,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [6164] = {
-    AddAttrs = T.RT_374,
+    AddAttrs = T.RT_428,
     BuffId = 6164,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
@@ -2481,9 +2704,10 @@ return ReadOnly("Buff", {
     BuffId = 10203,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Damage_Up",
+    CombatConditionId = 1004,
     IsShowInBillboard = true,
-    MaxLayer = 3,
-    MergeRule1 = "Personal",
+    MaxLayer = 5,
+    MergeRule1 = "Global",
     MergeRule2 = "NewFree"
   },
   [10204] = {
@@ -2587,14 +2811,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [20103] = {
-    AddAttrs = {
-      [1] = {
-        AttrName = "DamageRate",
-        DamageTag = "Melee",
-        RateZone = "Normal",
-        Value = "#1"
-      }
-    },
+    AddAttrs = T.RT_252,
     BuffEffects = T.RT_78,
     BuffId = 20103,
     BuffType = T.RT_19,
@@ -2623,9 +2840,9 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [20205] = {
-    AddAttrs = T.RT_244,
+    AddAttrs = T.RT_261,
     AddPassiveEffect = T.RT_73,
-    BuffEffects = T.RT_245,
+    BuffEffects = T.RT_262,
     BuffId = 20205,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Weapon_Multishoot_Up",
@@ -2661,7 +2878,7 @@ return ReadOnly("Buff", {
         Stackable = 1,
         Value = "#1"
       },
-      [2] = T.RT_154
+      [2] = T.RT_162
     },
     BuffId = 20302,
     BuffType = T.RT_19,
@@ -2674,7 +2891,7 @@ return ReadOnly("Buff", {
   [20303] = {
     AddAttrs = T.RT_35,
     AddPassiveEffect = T.RT_73,
-    BuffEffects = T.RT_247,
+    BuffEffects = T.RT_134,
     BuffId = 20303,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Atk_Up",
@@ -2684,9 +2901,9 @@ return ReadOnly("Buff", {
     MergeRule2 = "NewFree"
   },
   [20304] = {
-    AddAttrs = T.RT_244,
+    AddAttrs = T.RT_261,
     AddPassiveEffect = T.RT_73,
-    BuffEffects = T.RT_245,
+    BuffEffects = T.RT_262,
     BuffId = 20304,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Weapon_Multishoot_Up",
@@ -2714,7 +2931,7 @@ return ReadOnly("Buff", {
         Rate = "#1"
       }
     },
-    BuffEffects = T.RT_248,
+    BuffEffects = T.RT_264,
     BuffId = 20405,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Skill_Effi_Up",
@@ -2723,7 +2940,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [20502] = {
-    AddAttrs = T.RT_178,
+    AddAttrs = T.RT_184,
     BuffEffects = T.RT_78,
     BuffId = 20502,
     BuffType = T.RT_19,
@@ -2746,7 +2963,7 @@ return ReadOnly("Buff", {
   },
   [20509] = {
     AddAttrs = T.RT_35,
-    BuffEffects = T.RT_247,
+    BuffEffects = T.RT_134,
     BuffId = 20509,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Atk_Up",
@@ -2757,7 +2974,7 @@ return ReadOnly("Buff", {
   },
   [20510] = {
     AddAttrs = T.RT_35,
-    BuffEffects = T.RT_247,
+    BuffEffects = T.RT_134,
     BuffId = 20510,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Atk_Up",
@@ -3023,21 +3240,7 @@ return ReadOnly("Buff", {
       "0.5",
       "3"
     },
-    DotDatas = {
-      [1] = {
-        Condition = 110201,
-        DotDelay = 2,
-        Interval = 1,
-        Type = "SpChange",
-        Value = -20
-      },
-      [2] = {
-        DotDelay = 2,
-        EffectId = 110223,
-        Interval = 1,
-        Type = "SkillEffect"
-      }
-    },
+    DotDatas = T.RT_116,
     ForbidCatch = true,
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
@@ -3045,23 +3248,29 @@ return ReadOnly("Buff", {
     NotEnterCharacterTagType = T.RT_27
   },
   [110203] = {
-    AddPassiveEffect = {110203},
+    AddPassiveEffect = T.RT_117,
     AllowSkillSustainModify = true,
     BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_110203.BP_Buff_110203",
-    BuffEffects = T.RT_115,
+    BuffEffects = T.RT_118,
     BuffId = 110203,
-    BuffType = T.RT_86,
-    HitReplace = {HitFly = "HeavyHit"},
+    BuffType = {
+      21,
+      41,
+      49,
+      110203
+    },
+    ForbidBuffType = T.RT_117,
+    HitReplace = T.RT_119,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     SetCharacterTag = "StunFloat"
   },
   [110204] = {
-    AddAttrs = T.RT_117,
+    AddAttrs = T.RT_121,
     AllowSkillSustainModify = true,
     BuffId = 110204,
     BuffType = T.RT_19,
-    BuffTypeImgPath = "Weapon_Spd_Up",
+    BuffTypeImgPath = "Crd_Up",
     IsShowInBillboard = true,
     MaxLayer = 6,
     MergeRule1 = "Personal",
@@ -3071,6 +3280,21 @@ return ReadOnly("Buff", {
     BuffId = 110205,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Hot_Up",
+    DotDatas = {
+      [1] = {
+        Condition = 2,
+        DamageTag = T.RT_61,
+        DefaultHealFX = 0,
+        Interval = 1,
+        Rate = 0.02,
+        Type = "Hot"
+      },
+      [2] = {
+        Interval = 1,
+        Type = "SpChange",
+        Value = 3
+      }
+    },
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
@@ -3095,21 +3319,20 @@ return ReadOnly("Buff", {
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
-  [110232] = {
+  [110231] = {
     AllowSkillSustainModify = true,
-    BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_110232.BP_Buff_110232",
-    BuffId = 110232,
+    BuffId = 110231,
     BuffType = T.RT_3,
     MaxLayer = 42,
     MergeRule1 = "Global",
     MergeRule2 = "NewFree"
   },
   [110241] = {
-    AddAttrs = T.RT_117,
+    AddAttrs = T.RT_121,
     AllowSkillSustainModify = true,
     BuffId = 110241,
     BuffType = T.RT_19,
-    BuffTypeImgPath = "Weapon_Spd_Up",
+    BuffTypeImgPath = "Crd_Up",
     IsShowInBillboard = true,
     MaxLayer = 12,
     MergeRule1 = "Personal",
@@ -3136,8 +3359,8 @@ return ReadOnly("Buff", {
     AllowSkillSustainModify = true,
     BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_110302.BP_Buff_110302",
     BuffId = 110302,
-    BuffType = T.RT_106,
-    CameraParam = T.RT_118,
+    BuffType = T.RT_122,
+    CameraParam = T.RT_123,
     ChangeModel = 110301,
     DisableEmoIdle = true,
     DisableSkills = {
@@ -3159,7 +3382,7 @@ return ReadOnly("Buff", {
         Type = "SkillEffect"
       }
     },
-    ForbidenJumpState = T.RT_119,
+    ForbidenJumpState = T.RT_124,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     NotEnterCharacterTagType = {
@@ -3173,9 +3396,9 @@ return ReadOnly("Buff", {
   },
   [110303] = {
     AddAttrs = {
-      [1] = T.RT_120,
-      [2] = T.RT_121,
-      [3] = T.RT_122
+      [1] = T.RT_125,
+      [2] = T.RT_126,
+      [3] = T.RT_127
     },
     BuffId = 110303,
     BuffType = T.RT_3,
@@ -3183,18 +3406,18 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [110304] = {
-    BuffDamagedRate = T.RT_123,
+    BuffDamagedRate = T.RT_128,
     BuffId = 110304,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
   [110311] = {
     AddAttrs = {
-      [1] = T.RT_124
+      [1] = T.RT_129
     },
     AllowSkillSustainModify = true,
     BuffId = 110311,
-    BuffInitEffects = T.RT_125,
+    BuffInitEffects = T.RT_130,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Skill_Range_Up",
     ForbidCatch = true,
@@ -3212,10 +3435,10 @@ return ReadOnly("Buff", {
   },
   [110331] = {
     AddAttrs = {
-      [1] = T.RT_120,
-      [2] = T.RT_126
+      [1] = T.RT_125,
+      [2] = T.RT_131
     },
-    BuffEffects = T.RT_115,
+    BuffEffects = T.RT_118,
     BuffId = 110331,
     EnableRimLightModel = true,
     FresnelParams = {
@@ -3239,7 +3462,7 @@ return ReadOnly("Buff", {
   },
   [110341] = {
     AddAttrs = {
-      [1] = T.RT_124,
+      [1] = T.RT_129,
       [2] = {
         AttrName = "StrongValue",
         Value = 0.9
@@ -3257,19 +3480,19 @@ return ReadOnly("Buff", {
   },
   [110399] = {
     AddAttrs = {
-      [1] = T.RT_121,
-      [2] = T.RT_122
+      [1] = T.RT_126,
+      [2] = T.RT_127
     },
     BuffId = 110399,
-    BuffType = T.RT_106,
-    CameraParam = T.RT_118,
+    BuffType = T.RT_122,
+    CameraParam = T.RT_123,
     DisableEmoIdle = true,
     DisableSkills = {
       "HeavyAttack",
       "SlideAttack",
       "Skill2"
     },
-    ForbidenJumpState = T.RT_119,
+    ForbidenJumpState = T.RT_124,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     NotEnterCharacterTagType = {
@@ -3280,55 +3503,65 @@ return ReadOnly("Buff", {
     UseSummonWeapon = 1
   },
   [110401] = {
+    ActivateSkills = {
+      [110401] = 110421
+    },
     BuffId = 110401,
-    MaxLayer = 10,
+    BuffType = T.RT_132,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
-  [110421] = {
+  [110402] = {
     ActivateSkills = {
-      [110401] = 110412
+      [110401] = 110441
     },
-    BuffId = 110421,
-    MaxLayer = 10,
+    BuffId = 110402,
+    BuffType = T.RT_132,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
-  [110422] = {
-    ActivateSkills = {
-      [110401] = 110413
-    },
-    BuffId = 110422,
-    MaxLayer = 10,
+  [110411] = {
+    BuffId = 110411,
+    BuffType = T.RT_3,
+    BuffTypeImgPath = "Common_Buff",
+    IsShowInBillboard = true,
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge",
+    VisualEffects = T.RT_133
+  },
+  [110412] = {
+    BuffEffects = T.RT_134,
+    BuffId = 110412,
+    BuffType = T.RT_19,
+    BuffTypeImgPath = "Atk_Up",
+    IsShowInBillboard = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
-  [110423] = {
-    ActivateSkills = {
-      [110401] = 110414
-    },
-    BuffId = 110423,
-    MaxLayer = 10,
+  [110413] = {
+    BuffEffects = {1040},
+    BuffId = 110413,
+    BuffType = T.RT_19,
+    BuffTypeImgPath = "Damage_Up",
+    IsShowInBillboard = true,
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
+  [110414] = {
+    BuffEffects = {1031},
+    BuffId = 110414,
+    BuffType = T.RT_19,
+    BuffTypeImgPath = "Weapon_Spd_Up",
+    IsShowInBillboard = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
   [110431] = {
-    AddAttrs = T.RT_128,
+    AddAttrs = T.RT_136,
     BuffId = 110431,
-    BuffType = T.RT_19,
-    BuffTypeImgPath = "Damaged_Up",
+    BuffType = T.RT_3,
+    BuffTypeImgPath = "Atk_Up",
     IsShowInBillboard = true,
-    MergeRule1 = "Global",
-    MergeRule2 = "Merge",
-    WeaknessType = "Dark"
-  },
-  [110441] = {
-    AddAttrs = T.RT_130,
-    BuffId = 110441,
-    BuffType = T.RT_19,
-    BuffTypeImgPath = "Skill_Inten_Up",
-    IsShowInBillboard = true,
-    MaxLayer = 4,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -3363,7 +3596,7 @@ return ReadOnly("Buff", {
       [120202] = 120221,
       Attack = "SlideAttack"
     },
-    AddAttrs = T.RT_133,
+    AddAttrs = T.RT_139,
     AllowSkillSustainModify = true,
     BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_120211.BP_Buff_120211",
     BuffId = 120211,
@@ -3386,7 +3619,7 @@ return ReadOnly("Buff", {
       }
     },
     EnableFreeRun = true,
-    ForbidenJumpState = T.RT_134,
+    ForbidenJumpState = T.RT_140,
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
@@ -3399,7 +3632,7 @@ return ReadOnly("Buff", {
       "Seating"
     },
     RemoveWhenSpZero = true,
-    SpecialEffect = T.RT_135
+    SpecialEffect = T.RT_141
   },
   [120231] = {
     BuffId = 120231,
@@ -3506,7 +3739,7 @@ return ReadOnly("Buff", {
   },
   [150103] = {
     AllowSkillSustainModify = true,
-    BuffDamagedRate = T.RT_141,
+    BuffDamagedRate = T.RT_147,
     BuffId = 150103,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Baonu",
@@ -3525,7 +3758,7 @@ return ReadOnly("Buff", {
         Value = 0.3
       }
     },
-    AddPassiveEffect = T.RT_142,
+    AddPassiveEffect = T.RT_148,
     BuffId = 150104,
     BuffType = T.RT_3,
     BuffTypeImgPath = "BonusDmg_Light",
@@ -3538,11 +3771,10 @@ return ReadOnly("Buff", {
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     SetSeParam = {BaonuState = 1},
-    VisualEffects = T.RT_143
+    VisualEffects = T.RT_149
   },
   [150121] = {
     BuffId = 150121,
-    EnableRimLightModel = true,
     FresnelParams = {
       FresnelColor = {
         1,
@@ -3551,15 +3783,13 @@ return ReadOnly("Buff", {
         1
       },
       FresnelColorRange = {Default = 0.6},
-      FresnelColorStrength = T.RT_144
+      FresnelColorStrength = T.RT_150
     },
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
   [150141] = {
-    AddAttrs = {
-      [1] = {AttrName = "ATK", Rate = 0.35}
-    },
+    AddAttrs = T.RT_152,
     BuffId = 150141,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Atk_Up",
@@ -3602,9 +3832,9 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [150214] = {
-    AddAttrs = T.RT_146,
+    AddAttrs = T.RT_154,
     BuffId = 150214,
-    BuffType = T.RT_147,
+    BuffType = T.RT_155,
     BuffTypeImgPath = "Slowdown",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
@@ -3615,7 +3845,7 @@ return ReadOnly("Buff", {
       [1] = {AttrName = "ATK", Rate = -0.25}
     },
     BuffId = 150215,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Atk_Down",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
@@ -3640,7 +3870,6 @@ return ReadOnly("Buff", {
     BuffId = 150221,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Damage_Up",
-    EnableRimLightModel = true,
     FresnelParams = {
       FresnelColor = {
         0.031026,
@@ -3684,19 +3913,19 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [150301] = {
-    AddAttrs = T.RT_151,
+    AddAttrs = T.RT_159,
     BuffId = 150301,
-    BuffSpModify = T.RT_152,
-    LayerExtraBuff = T.RT_153,
+    BuffSpModify = T.RT_160,
+    LayerExtraBuff = T.RT_161,
     MaxLayer = 100,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree"
   },
   [150302] = {
-    AddAttrs = T.RT_156,
+    AddAttrs = T.RT_164,
     BuffId = 150302,
-    BuffSpModify = T.RT_157,
-    LayerExtraBuff = T.RT_158,
+    BuffSpModify = T.RT_165,
+    LayerExtraBuff = T.RT_166,
     MaxLayer = 100,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree"
@@ -3704,7 +3933,7 @@ return ReadOnly("Buff", {
   [150305] = {
     BuffId = 150305,
     BuffSpModify = {
-      [150302] = T.RT_159
+      [150302] = T.RT_167
     },
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
@@ -3712,42 +3941,42 @@ return ReadOnly("Buff", {
   [150306] = {
     BuffId = 150306,
     BuffSpModify = {
-      [150321] = T.RT_159
+      [150321] = T.RT_167
     },
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
   [150307] = {
-    AddAttrs = T.RT_151,
+    AddAttrs = T.RT_159,
     BuffId = 150307,
-    BuffSpModify = T.RT_152,
-    LayerExtraBuff = T.RT_153,
+    BuffSpModify = T.RT_160,
+    LayerExtraBuff = T.RT_161,
     MaxLayer = 100,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree"
   },
   [150308] = {
-    AddAttrs = T.RT_156,
+    AddAttrs = T.RT_164,
     BuffId = 150308,
-    BuffSpModify = T.RT_157,
-    LayerExtraBuff = T.RT_158,
+    BuffSpModify = T.RT_165,
+    LayerExtraBuff = T.RT_166,
     MaxLayer = 100,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree"
   },
   [150311] = {
-    AddAttrs = T.RT_161,
+    AddAttrs = T.RT_169,
     BuffId = 150311,
-    BuffType = T.RT_162,
-    DisperseBuffType = T.RT_163,
+    BuffType = T.RT_170,
+    DisperseBuffType = T.RT_171,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
   [150312] = {
     AddAttrs = T.RT_66,
     BuffId = 150312,
-    BuffType = T.RT_163,
-    DisperseBuffType = T.RT_162,
+    BuffType = T.RT_171,
+    DisperseBuffType = T.RT_170,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -3836,7 +4065,6 @@ return ReadOnly("Buff", {
       "0.5",
       "6"
     },
-    EnableRimLightModel = true,
     FresnelParams = {
       FresnelColor = {
         0,
@@ -3849,10 +4077,14 @@ return ReadOnly("Buff", {
     },
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_164
+    VisualEffects = {
+      150327,
+      150328,
+      150329
+    }
   },
   [150326] = {
-    AddAttrs = T.RT_166,
+    AddAttrs = T.RT_173,
     BuffEffects = T.RT_78,
     BuffId = 150326,
     BuffType = T.RT_19,
@@ -3862,7 +4094,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [150327] = {
-    BuffDamagedRate = T.RT_123,
+    BuffDamagedRate = T.RT_128,
     BuffId = 150327,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Damaged_Down",
@@ -3883,7 +4115,7 @@ return ReadOnly("Buff", {
       }
     },
     BuffId = 150328,
-    BuffInitEffects = T.RT_167,
+    BuffInitEffects = T.RT_174,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Damage_Ignore",
     IconPriority = 99,
@@ -4069,28 +4301,28 @@ return ReadOnly("Buff", {
     }
   },
   [150371] = {
-    AddAttrs = T.RT_151,
+    AddAttrs = T.RT_159,
     BuffId = 150371,
     MaxLayer = 100,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree"
   },
   [150372] = {
-    AddAttrs = T.RT_156,
+    AddAttrs = T.RT_164,
     BuffId = 150372,
     MaxLayer = 100,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree"
   },
   [150373] = {
-    AddAttrs = T.RT_151,
+    AddAttrs = T.RT_159,
     BuffId = 150373,
     MaxLayer = 100,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree"
   },
   [150374] = {
-    AddAttrs = T.RT_156,
+    AddAttrs = T.RT_164,
     BuffId = 150374,
     MaxLayer = 100,
     MergeRule1 = "Personal",
@@ -4107,25 +4339,40 @@ return ReadOnly("Buff", {
       }
     },
     BuffId = 150401,
-    CameraParam = T.RT_168,
+    BuffType = T.RT_3,
+    CameraParam = T.RT_175,
     DisableSkills = T.RT_75,
+    DotDatas = {
+      [1] = {
+        Condition = 150406,
+        EffectId = 150472,
+        Interval = 5,
+        Type = "SkillEffect"
+      },
+      [2] = {
+        Condition = 150405,
+        EffectId = 150472,
+        Interval = 2,
+        Type = "SkillEffect"
+      }
+    },
     EnableAnimFly = true,
-    ForbidenJumpState = T.RT_134,
+    ForbidCatch = true,
+    ForbidenJumpState = T.RT_140,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    NotEnterCharacterTagType = T.RT_169,
-    VisualEffects = T.RT_164
+    NotEnterCharacterTagType = T.RT_27
   },
   [150402] = {
     BuffId = 150402,
+    BuffType = T.RT_3,
     MaxLayer = 600,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree"
   },
   [150403] = {
-    AddAttrs = {
-      [1] = T.RT_170
-    },
+    AddAttrs = T.RT_177,
+    AllowSkillSustainModify = true,
     BuffId = 150403,
     BuffTypeImgPath = "Weapon_Spd_Up",
     IsShowInBillboard = true,
@@ -4144,74 +4391,48 @@ return ReadOnly("Buff", {
       [150422] = 150431
     },
     BuffId = 150405,
-    ForbidCatch = true,
     MergeRule1 = "Personal",
-    MergeRule2 = "Merge",
-    NotEnterCharacterTagType = T.RT_27
-  },
-  [150406] = {
-    BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_150406.BP_Buff_150406",
-    BuffId = 150406,
-    BuffType = T.RT_3,
-    ForbidCatch = true,
-    HpLink = 1,
-    MergeRule1 = "Personal",
-    MergeRule2 = "Merge",
-    NotEnterCharacterTagType = T.RT_27
+    MergeRule2 = "Merge"
   },
   [150407] = {
     ActivateSkills = {
       [150401] = 150411
     },
     BuffId = 150407,
-    BuffType = {150407},
+    BuffType = {11, 150407},
     CameraParam = {
       "SuyiSkill01JetRush",
       "0.2",
       "50"
     },
-    DisperseBuffType = T.RT_171,
-    DotDatas = {
-      [1] = {
-        Interval = 0.1,
-        Type = "SecondSpChange",
-        Value = -1.5
-      }
-    },
+    DisperseBuffType = T.RT_178,
+    DotDatas = T.RT_180,
     ForbidCatch = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     NotEnterCharacterTagType = T.RT_27,
-    VisualEffects = {
-      510103,
-      510104,
-      240121
-    }
+    VisualEffects = {150481}
   },
   [150408] = {
     BuffId = 150408,
-    BuffType = {150408},
-    DisperseBuffType = T.RT_171,
-    DotDatas = {
-      [1] = {
-        Interval = 0.1,
-        Type = "SecondSpChange",
-        Value = -1
-      }
-    },
-    ForbidenJumpState = T.RT_134,
+    BuffType = {11, 150408},
+    DisperseBuffType = T.RT_178,
+    DotDatas = T.RT_180,
+    ForbidenJumpState = T.RT_140,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    NotEnterCharacterTagType = T.RT_169,
-    VisualEffects = {
-      510103,
-      510104,
-      410124
-    }
+    NotEnterCharacterTagType = {
+      "LandHeavy",
+      "Crouch",
+      "Slide",
+      "Interactive",
+      "Seating"
+    },
+    VisualEffects = {150477}
   },
   [150409] = {
     BuffId = 150409,
-    BuffType = T.RT_171,
+    BuffType = {11, 150409},
     DisperseBuffType = {150407, 150408},
     DotDatas = {
       [1] = {
@@ -4226,12 +4447,19 @@ return ReadOnly("Buff", {
   },
   [150421] = {
     BuffId = 150421,
+    BuffType = T.RT_3,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
   [150422] = {
-    AddAttrs = T.RT_173,
+    AddAttrs = {
+      [1] = {
+        AttrName = "MoveSpeedAddRate",
+        Value = 0
+      }
+    },
     BuffId = 150422,
+    BuffType = T.RT_3,
     CameraParam = {
       "SuyiSkill02Attack",
       "1",
@@ -4240,21 +4468,6 @@ return ReadOnly("Buff", {
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
-  [150461] = {
-    BuffId = 150461,
-    LayerExtraBuff = {
-      [2] = 150462
-    },
-    MaxLayer = 2,
-    MergeRule1 = "Personal",
-    MergeRule2 = "NewFree"
-  },
-  [150462] = {
-    BuffId = 150462,
-    MergeRule1 = "Personal",
-    MergeRule2 = "Merge",
-    VisualEffects = {150451}
-  },
   [150501] = {
     ActivateSkills = {
       [150501] = 150513
@@ -4262,14 +4475,14 @@ return ReadOnly("Buff", {
     BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_150501.BP_Buff_150501",
     BuffId = 150501,
     BuffType = T.RT_106,
-    CameraParam = T.RT_168,
+    CameraParam = T.RT_175,
     DisableSkills = {
       "FallAttack",
       "SlideAttack"
     },
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    NotEnterCharacterTagType = T.RT_174,
+    NotEnterCharacterTagType = T.RT_181,
     SetIdleTag = "SkillIdle",
     UseSummonWeapon = 1
   },
@@ -4295,7 +4508,7 @@ return ReadOnly("Buff", {
     MaxLayer = 2,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree",
-    VisualEffects = T.RT_143
+    VisualEffects = T.RT_149
   },
   [150521] = {
     ActivateSkills = {
@@ -4304,7 +4517,7 @@ return ReadOnly("Buff", {
     BuffId = 150521,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_175
+    VisualEffects = T.RT_133
   },
   [150531] = {
     BuffId = 150531,
@@ -4313,22 +4526,22 @@ return ReadOnly("Buff", {
     VisualEffects = T.RT_109
   },
   [160101] = {
-    AddAttrs = T.RT_178,
+    AddAttrs = T.RT_184,
     AllowSkillSustainModify = true,
-    BuffEffects = T.RT_179,
+    BuffEffects = T.RT_185,
     BuffId = 160101,
     BuffType = {10, 160101},
     BuffTypeImgPath = "Damage_Up",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_175
+    VisualEffects = T.RT_133
   },
   [160102] = {
-    AddAttrs = T.RT_181,
+    AddAttrs = T.RT_187,
     AllowSkillSustainModify = true,
     BuffId = 160102,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Slowdown",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
@@ -4357,19 +4570,19 @@ return ReadOnly("Buff", {
         AttrName = "WeaponCRIModifierRate",
         Value = 0.54
       },
-      [2] = T.RT_177
+      [2] = T.RT_183
     },
     AllowSkillSustainModify = true,
-    BuffEffects = T.RT_179,
+    BuffEffects = T.RT_185,
     BuffId = 160104,
     BuffType = {10, 160104},
     BuffTypeImgPath = "Damage_Up",
-    DisperseBuffType = T.RT_182,
-    ForbidBuffType = T.RT_182,
+    DisperseBuffType = T.RT_188,
+    ForbidBuffType = T.RT_188,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_175
+    VisualEffects = T.RT_133
   },
   [160105] = {
     AddAttrs = {
@@ -4395,7 +4608,7 @@ return ReadOnly("Buff", {
         Value = "#1"
       }
     },
-    AddPassiveEffect = T.RT_142,
+    AddPassiveEffect = T.RT_148,
     BuffId = 180101,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
@@ -4419,43 +4632,41 @@ return ReadOnly("Buff", {
     RemoveWhenSpZero = true
   },
   [180111] = {
-    AddAttrs = T.RT_184,
+    AddAttrs = T.RT_190,
     AllowSkillSustainModify = true,
     BuffId = 180111,
-    BuffInitEffects = T.RT_185,
-    BuffType = T.RT_186,
+    BuffInitEffects = T.RT_191,
+    BuffType = T.RT_192,
     BuffTypeImgPath = "BonusDmg_Light",
-    EnableRimLightModel = true,
-    FresnelParams = T.RT_190,
+    FresnelParams = T.RT_196,
     IconPriority = 8,
     IsShowInBillboard = true,
     MaxLayer = 30,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree",
-    VisualEffects = T.RT_191
+    VisualEffects = T.RT_197
   },
   [180112] = {
-    AddAttrs = T.RT_184,
+    AddAttrs = T.RT_190,
     AllowSkillSustainModify = true,
     BuffId = 180112,
-    BuffInitEffects = T.RT_185,
-    BuffType = T.RT_186,
+    BuffInitEffects = T.RT_191,
+    BuffType = T.RT_192,
     BuffTypeImgPath = "BonusDmg_Light",
-    EnableRimLightModel = true,
-    FresnelParams = T.RT_190,
+    FresnelParams = T.RT_196,
     IconPriority = 8,
     IsShowInBillboard = true,
     MaxLayer = 45,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree",
-    VisualEffects = T.RT_191
+    VisualEffects = T.RT_197
   },
   [180113] = {
     AddAttrs = T.RT_85,
     AllowSkillSustainModify = true,
     BuffId = 180113,
-    BuffInitEffects = T.RT_192,
-    BuffType = T.RT_147,
+    BuffInitEffects = T.RT_198,
+    BuffType = T.RT_155,
     BuffTypeImgPath = "Slowdown",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
@@ -4463,7 +4674,7 @@ return ReadOnly("Buff", {
   },
   [180114] = {
     AddAttrs = {
-      [1] = T.RT_183,
+      [1] = T.RT_189,
       [2] = {
         AttrName = "SkillIntensity",
         Rate = 0.02,
@@ -4477,21 +4688,20 @@ return ReadOnly("Buff", {
     },
     AllowSkillSustainModify = true,
     BuffId = 180114,
-    BuffInitEffects = T.RT_185,
-    BuffType = T.RT_186,
+    BuffInitEffects = T.RT_191,
+    BuffType = T.RT_192,
     BuffTypeImgPath = "BonusDmg_Light",
-    EnableRimLightModel = true,
-    FresnelParams = T.RT_190,
+    FresnelParams = T.RT_196,
     IconPriority = 8,
     IsShowInBillboard = true,
     MaxLayer = 45,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree",
-    VisualEffects = T.RT_191
+    VisualEffects = T.RT_197
   },
   [180121] = {
     BuffId = 180121,
-    BuffType = T.RT_193,
+    BuffType = T.RT_199,
     HaloDatas = {
       [1] = {
         AllowSkillRange = 1,
@@ -4505,12 +4715,12 @@ return ReadOnly("Buff", {
   },
   [180122] = {
     BuffId = 180122,
-    BuffType = T.RT_194,
+    BuffType = T.RT_200,
     BuffTypeImgPath = "Dot_Water",
     DotDatas = {
       [1] = {
         AllowSkillIntensity = 1,
-        DamageTag = T.RT_195,
+        DamageTag = T.RT_201,
         DamageType = "Water",
         Immediately = 1,
         Interval = 2,
@@ -4525,7 +4735,7 @@ return ReadOnly("Buff", {
   },
   [180123] = {
     BuffId = 180123,
-    BuffType = T.RT_193,
+    BuffType = T.RT_199,
     HaloDatas = {
       [1] = {
         AllowSkillRange = 1,
@@ -4539,9 +4749,9 @@ return ReadOnly("Buff", {
   },
   [180124] = {
     BuffId = 180124,
-    BuffType = T.RT_194,
+    BuffType = T.RT_200,
     BuffTypeImgPath = "Dot_Fire",
-    DotDatas = T.RT_197,
+    DotDatas = T.RT_203,
     FXMID = T.RT_83,
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
@@ -4549,7 +4759,7 @@ return ReadOnly("Buff", {
   },
   [180125] = {
     BuffId = 180125,
-    BuffType = T.RT_193,
+    BuffType = T.RT_199,
     HaloDatas = {
       [1] = {
         AllowSkillRange = 1,
@@ -4563,9 +4773,9 @@ return ReadOnly("Buff", {
   },
   [180126] = {
     BuffId = 180126,
-    BuffType = T.RT_194,
+    BuffType = T.RT_200,
     BuffTypeImgPath = "Dot_Thunder",
-    DotDatas = T.RT_199,
+    DotDatas = T.RT_205,
     FXMID = T.RT_90,
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
@@ -4573,7 +4783,7 @@ return ReadOnly("Buff", {
   },
   [180127] = {
     BuffId = 180127,
-    BuffType = T.RT_193,
+    BuffType = T.RT_199,
     HaloDatas = {
       [1] = {
         AllowSkillRange = 1,
@@ -4587,9 +4797,9 @@ return ReadOnly("Buff", {
   },
   [180128] = {
     BuffId = 180128,
-    BuffType = T.RT_194,
+    BuffType = T.RT_200,
     BuffTypeImgPath = "Dot_Wind",
-    DotDatas = T.RT_201,
+    DotDatas = T.RT_207,
     FXMID = T.RT_91,
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
@@ -4597,11 +4807,11 @@ return ReadOnly("Buff", {
   },
   [180131] = {
     AddAttrs = {
-      [1] = T.RT_202
+      [1] = T.RT_208
     },
-    AddPassiveEffect = T.RT_203,
+    AddPassiveEffect = T.RT_209,
     AllowSkillSustainModify = true,
-    BuffEffects = T.RT_204,
+    BuffEffects = T.RT_210,
     BuffId = 180131,
     BuffType = {
       10,
@@ -4617,11 +4827,11 @@ return ReadOnly("Buff", {
   },
   [180132] = {
     AddAttrs = {
-      [1] = T.RT_205
+      [1] = T.RT_211
     },
-    AddPassiveEffect = T.RT_206,
+    AddPassiveEffect = T.RT_212,
     AllowSkillSustainModify = true,
-    BuffEffects = T.RT_207,
+    BuffEffects = T.RT_213,
     BuffId = 180132,
     BuffType = {
       10,
@@ -4637,11 +4847,11 @@ return ReadOnly("Buff", {
   },
   [180133] = {
     AddAttrs = {
-      [1] = T.RT_208
+      [1] = T.RT_214
     },
-    AddPassiveEffect = T.RT_209,
+    AddPassiveEffect = T.RT_215,
     AllowSkillSustainModify = true,
-    BuffEffects = T.RT_210,
+    BuffEffects = T.RT_216,
     BuffId = 180133,
     BuffType = {
       10,
@@ -4656,10 +4866,10 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [180134] = {
-    AddAttrs = T.RT_212,
-    AddPassiveEffect = T.RT_213,
+    AddAttrs = T.RT_218,
+    AddPassiveEffect = T.RT_219,
     AllowSkillSustainModify = true,
-    BuffEffects = T.RT_214,
+    BuffEffects = T.RT_220,
     BuffId = 180134,
     BuffType = {
       10,
@@ -4675,17 +4885,17 @@ return ReadOnly("Buff", {
   },
   [180135] = {
     AddAttrs = {
-      [1] = T.RT_202,
-      [2] = T.RT_215
+      [1] = T.RT_208,
+      [2] = T.RT_221
     },
-    AddPassiveEffect = T.RT_203,
+    AddPassiveEffect = T.RT_209,
     AllowSkillSustainModify = true,
-    BuffEffects = T.RT_204,
+    BuffEffects = T.RT_210,
     BuffId = 180135,
-    BuffType = T.RT_216,
+    BuffType = T.RT_222,
     BuffTypeImgPath = "BonusDmg_Water",
-    DisperseBuffType = T.RT_217,
-    ForbidBuffType = T.RT_217,
+    DisperseBuffType = T.RT_223,
+    ForbidBuffType = T.RT_223,
     IconPriority = 23,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
@@ -4693,17 +4903,17 @@ return ReadOnly("Buff", {
   },
   [180136] = {
     AddAttrs = {
-      [1] = T.RT_205,
-      [2] = T.RT_215
+      [1] = T.RT_211,
+      [2] = T.RT_221
     },
-    AddPassiveEffect = T.RT_206,
+    AddPassiveEffect = T.RT_212,
     AllowSkillSustainModify = true,
-    BuffEffects = T.RT_207,
+    BuffEffects = T.RT_213,
     BuffId = 180136,
-    BuffType = T.RT_216,
+    BuffType = T.RT_222,
     BuffTypeImgPath = "BonusDmg_Fire",
-    DisperseBuffType = T.RT_218,
-    ForbidBuffType = T.RT_218,
+    DisperseBuffType = T.RT_224,
+    ForbidBuffType = T.RT_224,
     IconPriority = 22,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
@@ -4711,17 +4921,17 @@ return ReadOnly("Buff", {
   },
   [180137] = {
     AddAttrs = {
-      [1] = T.RT_208,
-      [2] = T.RT_215
+      [1] = T.RT_214,
+      [2] = T.RT_221
     },
-    AddPassiveEffect = T.RT_209,
+    AddPassiveEffect = T.RT_215,
     AllowSkillSustainModify = true,
-    BuffEffects = T.RT_210,
+    BuffEffects = T.RT_216,
     BuffId = 180137,
-    BuffType = T.RT_216,
+    BuffType = T.RT_222,
     BuffTypeImgPath = "BonusDmg_Thunder",
-    DisperseBuffType = T.RT_219,
-    ForbidBuffType = T.RT_219,
+    DisperseBuffType = T.RT_225,
+    ForbidBuffType = T.RT_225,
     IconPriority = 21,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
@@ -4729,17 +4939,17 @@ return ReadOnly("Buff", {
   },
   [180138] = {
     AddAttrs = {
-      [1] = T.RT_211,
-      [2] = T.RT_215
+      [1] = T.RT_217,
+      [2] = T.RT_221
     },
-    AddPassiveEffect = T.RT_213,
+    AddPassiveEffect = T.RT_219,
     AllowSkillSustainModify = true,
-    BuffEffects = T.RT_214,
+    BuffEffects = T.RT_220,
     BuffId = 180138,
-    BuffType = T.RT_216,
+    BuffType = T.RT_222,
     BuffTypeImgPath = "BonusDmg_Wind",
-    DisperseBuffType = T.RT_220,
-    ForbidBuffType = T.RT_220,
+    DisperseBuffType = T.RT_226,
+    ForbidBuffType = T.RT_226,
     IconPriority = 20,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
@@ -4796,9 +5006,9 @@ return ReadOnly("Buff", {
     AddAttrs = {
       [1] = {AttrName = "DEF", Rate = -0.5}
     },
-    BuffEffects = T.RT_228,
+    BuffEffects = T.RT_234,
     BuffId = 201001,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -4849,7 +5059,7 @@ return ReadOnly("Buff", {
       }
     },
     BuffId = 201022,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Dot_Fire",
     DotDatas = {
       [1] = {
@@ -4907,36 +5117,36 @@ return ReadOnly("Buff", {
     MergeRule2 = "NewFree"
   },
   [210101] = {
-    AddPassiveEffect = T.RT_251,
+    AddPassiveEffect = T.RT_267,
     AllowSkillSustainModify = true,
     BuffId = 210101,
-    BuffType = T.RT_252,
+    BuffType = T.RT_268,
     BuffTypeImgPath = "Dot_Common",
-    DotDatas = T.RT_254,
+    DotDatas = T.RT_270,
     DotDeathSe = 210102,
-    FXMID = T.RT_255,
+    FXMID = T.RT_271,
     IsShowInBillboard = true,
     MaxLayer = 6,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree",
     Priority = 999,
-    VisualEffects = T.RT_251
+    VisualEffects = T.RT_267
   },
   [210103] = {
-    AddPassiveEffect = T.RT_251,
+    AddPassiveEffect = T.RT_267,
     AllowSkillSustainModify = true,
     BuffId = 210103,
-    BuffType = T.RT_252,
+    BuffType = T.RT_268,
     BuffTypeImgPath = "Dot_Common",
-    DotDatas = T.RT_254,
+    DotDatas = T.RT_270,
     DotDeathSe = 210102,
-    FXMID = T.RT_255,
+    FXMID = T.RT_271,
     IsShowInBillboard = true,
     MaxLayer = 8,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree",
     Priority = 999,
-    VisualEffects = T.RT_251
+    VisualEffects = T.RT_267
   },
   [210121] = {
     AddAttrs = {
@@ -5036,7 +5246,7 @@ return ReadOnly("Buff", {
         1
       },
       FresnelColorRange = T.RT_108,
-      FresnelColorStrength = T.RT_257
+      FresnelColorStrength = T.RT_273
     },
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
@@ -5050,7 +5260,7 @@ return ReadOnly("Buff", {
       }
     },
     AllowSkillSustainModify = true,
-    BuffEffects = T.RT_256,
+    BuffEffects = T.RT_272,
     BuffId = 230103,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Cri_Up",
@@ -5073,7 +5283,7 @@ return ReadOnly("Buff", {
         Value = 0.02
       }
     },
-    BuffEffects = T.RT_256,
+    BuffEffects = T.RT_272,
     BuffId = 230121,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Cri_Up",
@@ -5087,7 +5297,7 @@ return ReadOnly("Buff", {
     BuffType = {21, 41},
     DotDatas = {
       [1] = {
-        DamageTag = T.RT_195,
+        DamageTag = T.RT_201,
         DamageType = "Water",
         Immediately = 1,
         Interval = 2,
@@ -5099,7 +5309,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [240121] = {
-    AddAttrs = T.RT_260,
+    AddAttrs = T.RT_277,
     AllowSkillSustainModify = true,
     BuffId = 240121,
     BuffType = {10, 240121},
@@ -5110,24 +5320,24 @@ return ReadOnly("Buff", {
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     SpawnECOnlyPlayer = true,
-    VisualEffects = T.RT_261
+    VisualEffects = T.RT_278
   },
   [240122] = {
-    AddAttrs = T.RT_260,
+    AddAttrs = T.RT_277,
     AddPassiveEffect = {240104},
     AllowSkillSustainModify = true,
     BuffId = 240122,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Skill_Inten_Up",
-    DisperseBuffType = T.RT_261,
+    DisperseBuffType = T.RT_278,
     EffectCreatureID = 240118,
-    ForbidBuffType = T.RT_261,
+    ForbidBuffType = T.RT_278,
     IconPriority = 15,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     SpawnECOnlyPlayer = true,
-    VisualEffects = T.RT_261
+    VisualEffects = T.RT_278
   },
   [240123] = {
     AddAttrs = T.RT_100,
@@ -5135,12 +5345,11 @@ return ReadOnly("Buff", {
     BuffId = 240123,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Weapon_Spd_Up",
-    EnableRimLightModel = true,
-    FresnelParams = T.RT_264,
+    FresnelParams = T.RT_281,
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_265
+    VisualEffects = T.RT_282
   },
   [240124] = {
     AddAttrs = {
@@ -5156,12 +5365,11 @@ return ReadOnly("Buff", {
     BuffId = 240124,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Weapon_Spd_Up",
-    EnableRimLightModel = true,
-    FresnelParams = T.RT_264,
+    FresnelParams = T.RT_281,
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_265
+    VisualEffects = T.RT_282
   },
   [240131] = {
     BuffId = 240131,
@@ -5183,7 +5391,7 @@ return ReadOnly("Buff", {
   },
   [240133] = {
     AddAttrs = {
-      [1] = T.RT_266
+      [1] = T.RT_283
     },
     AllowSkillSustainModify = true,
     BuffId = 240133,
@@ -5196,7 +5404,7 @@ return ReadOnly("Buff", {
   },
   [240134] = {
     AddAttrs = {
-      [1] = T.RT_266,
+      [1] = T.RT_283,
       [2] = {
         AttrName = "StrongValue",
         Stackable = 1,
@@ -5207,15 +5415,21 @@ return ReadOnly("Buff", {
     BuffId = 240134,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Skill_Spd_Up",
-    DisperseBuffType = T.RT_267,
-    ForbidBuffType = T.RT_267,
+    DisperseBuffType = T.RT_284,
+    ForbidBuffType = T.RT_284,
     IsShowInBillboard = true,
     MaxLayer = 3,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [240141] = {
-    AddAttrs = T.RT_130,
+    AddAttrs = {
+      [1] = {
+        AttrName = "SkillIntensity",
+        Rate = 0.33,
+        Stackable = 1
+      }
+    },
     BuffId = 240141,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Skill_Inten_Up",
@@ -5312,57 +5526,57 @@ return ReadOnly("Buff", {
     MergeRule2 = "NewFree"
   },
   [310111] = {
-    AddPassiveEffect = T.RT_285,
+    AddPassiveEffect = T.RT_302,
     BuffId = 310111,
-    BuffType = T.RT_286,
+    BuffType = T.RT_303,
     BuffTypeImgPath = "Char_Linen_02",
-    ForbidBuffType = T.RT_285,
+    ForbidBuffType = T.RT_302,
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_287
+    VisualEffects = T.RT_304
   },
   [310112] = {
     AddPassiveEffect = {310112},
     BuffId = 310112,
-    BuffType = T.RT_286,
+    BuffType = T.RT_303,
     BuffTypeImgPath = "Char_Linen_02",
-    ForbidBuffType = T.RT_285,
+    ForbidBuffType = T.RT_302,
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_287
+    VisualEffects = T.RT_304
   },
   [310120] = {
-    ActivateSkills = T.RT_288,
+    ActivateSkills = T.RT_305,
     AllowSkillSustainModify = true,
     BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_310120.BP_Buff_310120",
     BuffId = 310120,
-    BuffType = T.RT_106,
-    CameraParam = T.RT_168,
-    DisableSkills = T.RT_289,
-    DotDatas = T.RT_291,
+    BuffType = T.RT_122,
+    CameraParam = T.RT_175,
+    DisableSkills = T.RT_306,
+    DotDatas = T.RT_308,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    NotEnterCharacterTagType = T.RT_174,
-    ReplaceActions = T.RT_292,
+    NotEnterCharacterTagType = T.RT_181,
+    ReplaceActions = T.RT_309,
     SetIdleTag = "SkillIdle",
     UseSummonWeapon = 1
   },
   [310121] = {
-    ActivateSkills = T.RT_288,
+    ActivateSkills = T.RT_305,
     AllowSkillSustainModify = true,
     BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_310120.BP_Buff_310120",
-    BuffDamagedRate = T.RT_141,
+    BuffDamagedRate = T.RT_147,
     BuffId = 310121,
-    BuffType = T.RT_106,
-    CameraParam = T.RT_168,
-    DisableSkills = T.RT_289,
-    DotDatas = T.RT_291,
+    BuffType = T.RT_122,
+    CameraParam = T.RT_175,
+    DisableSkills = T.RT_306,
+    DotDatas = T.RT_308,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    NotEnterCharacterTagType = T.RT_174,
-    ReplaceActions = T.RT_292,
+    NotEnterCharacterTagType = T.RT_181,
+    ReplaceActions = T.RT_309,
     SetIdleTag = "SkillIdle",
     UseSummonWeapon = 1
   },
@@ -5371,7 +5585,7 @@ return ReadOnly("Buff", {
     FresnelParams = {
       FresnelColor = T.RT_107,
       FresnelColorRange = T.RT_108,
-      FresnelColorStrength = T.RT_257
+      FresnelColorStrength = T.RT_273
     },
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
@@ -5439,7 +5653,7 @@ return ReadOnly("Buff", {
         Value = 0.35
       }
     },
-    BuffEffects = T.RT_293,
+    BuffEffects = T.RT_310,
     BuffId = 310141,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Morale",
@@ -5450,7 +5664,7 @@ return ReadOnly("Buff", {
   [310203] = {
     BuffId = 310203,
     BuffInitEffects = T.RT_50,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Damaged_Up",
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
@@ -5462,33 +5676,39 @@ return ReadOnly("Buff", {
     },
     AllowSkillSustainModify = true,
     BuffId = 310204,
-    DotDatas = T.RT_295,
+    DotDatas = T.RT_312,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     RemoveWhenSpZero = true
   },
   [310205] = {
-    BuffDamageRate = T.RT_123,
+    BuffDamageRate = T.RT_128,
     BuffId = 310205,
-    BuffInitEffects = T.RT_228,
-    BuffType = T.RT_148,
+    BuffInitEffects = T.RT_234,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Damage_Down",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [310206] = {
-    AddAttrs = T.RT_297,
+    AddAttrs = {
+      [1] = {
+        AttrName = "DamageRate",
+        RateZone = "Almighty",
+        Value = 0.55
+      }
+    },
     AllowSkillSustainModify = true,
     BuffId = 310206,
-    DotDatas = T.RT_295,
+    DotDatas = T.RT_312,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     RemoveWhenSpZero = true
   },
   [310211] = {
     AddAttrs = {
-      [1] = T.RT_298
+      [1] = T.RT_313
     },
     BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_310201.BP_Buff_310201",
     BuffId = 310211,
@@ -5496,7 +5716,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [310212] = {
-    AddAttrs = T.RT_161,
+    AddAttrs = T.RT_169,
     AllowSkillSustainModify = true,
     BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_310201.BP_Buff_310201",
     BuffId = 310212,
@@ -5507,7 +5727,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [310213] = {
-    AddAttrs = T.RT_161,
+    AddAttrs = T.RT_169,
     AllowSkillSustainModify = true,
     BuffId = 310213,
     BuffType = T.RT_19,
@@ -5530,8 +5750,8 @@ return ReadOnly("Buff", {
         0,
         0
       },
-      FresnelColorRange = T.RT_188,
-      FresnelColorStrength = T.RT_299
+      FresnelColorRange = T.RT_194,
+      FresnelColorStrength = T.RT_314
     },
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
@@ -5561,7 +5781,7 @@ return ReadOnly("Buff", {
     AddAttrs = T.RT_111,
     AllowSkillSustainModify = true,
     BuffId = 310304,
-    BuffInitEffects = T.RT_248,
+    BuffInitEffects = T.RT_264,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Skill_Effi_Up",
     IsShowInBillboard = true,
@@ -5596,7 +5816,7 @@ return ReadOnly("Buff", {
   [310321] = {
     AddAttrs = T.RT_85,
     BuffId = 310321,
-    BuffInitEffects = T.RT_192,
+    BuffInitEffects = T.RT_198,
     BuffType = {
       21,
       42,
@@ -5608,13 +5828,13 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [310323] = {
-    AddAttrs = T.RT_301,
+    AddAttrs = T.RT_316,
     BuffId = 310323,
-    BuffInitEffects = T.RT_192,
-    BuffType = T.RT_302,
+    BuffInitEffects = T.RT_198,
+    BuffType = T.RT_317,
     BuffTypeImgPath = "Slowdown",
-    DisperseBuffType = T.RT_303,
-    ForbidBuffType = T.RT_303,
+    DisperseBuffType = T.RT_318,
+    ForbidBuffType = T.RT_318,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
@@ -5638,7 +5858,7 @@ return ReadOnly("Buff", {
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    UISpecialEffect = T.RT_304
+    UISpecialEffect = T.RT_319
   },
   [320101] = {
     AddAttrs = T.RT_93,
@@ -5659,7 +5879,7 @@ return ReadOnly("Buff", {
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    UISpecialEffect = T.RT_304
+    UISpecialEffect = T.RT_319
   },
   [320102] = {
     BuffId = 320102,
@@ -5680,7 +5900,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [320111] = {
-    AddPassiveEffect = T.RT_305,
+    AddPassiveEffect = T.RT_320,
     AllowSkillSustainModify = true,
     BuffId = 320111,
     BuffTypeImgPath = "Common_Debuff_Aura",
@@ -5708,11 +5928,11 @@ return ReadOnly("Buff", {
     BuffId = 320112,
     BuffType = T.RT_11,
     BuffTypeImgPath = "Dot_Common",
-    DotDatas = T.RT_197,
+    DotDatas = T.RT_203,
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_305
+    VisualEffects = T.RT_320
   },
   [320122] = {
     BuffId = 320122,
@@ -5728,7 +5948,7 @@ return ReadOnly("Buff", {
     IsShowInBillboard = true,
     MaxLayer = 20,
     MergeRule1 = "Personal",
-    MergeRule2 = "Merge",
+    MergeRule2 = "NewFree",
     VisualEffects = {320201}
   },
   [320203] = {
@@ -5751,14 +5971,7 @@ return ReadOnly("Buff", {
     },
     MaxLayer = 10,
     MergeRule1 = "Personal",
-    MergeRule2 = "Merge"
-  },
-  [320204] = {
-    BuffDamagedRate = {Value = -0.03},
-    BuffId = 320204,
-    MaxLayer = 10,
-    MergeRule1 = "Personal",
-    MergeRule2 = "Merge"
+    MergeRule2 = "NewFree"
   },
   [320205] = {
     BuffId = 320205,
@@ -5770,11 +5983,41 @@ return ReadOnly("Buff", {
     },
     MaxLayer = 20,
     MergeRule1 = "Personal",
-    MergeRule2 = "Merge"
+    MergeRule2 = "NewFree"
   },
   [320206] = {
-    AddPassiveEffect = {320204},
     BuffId = 320206,
+    DotDatas = {
+      [1] = {
+        EffectId = 320241,
+        Immediately = 1,
+        Interval = -1,
+        Type = "SkillEffect"
+      }
+    },
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
+  [320211] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "DamageRate",
+        RateZone = "Normal",
+        Value = 0.3
+      }
+    },
+    BuffDamagedRate = T.RT_147,
+    BuffId = 320211,
+    BuffType = T.RT_19,
+    BuffTypeImgPath = "Damage_Up",
+    IsShowInBillboard = true,
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
+  [320212] = {
+    AddAttrs = T.RT_322,
+    BuffId = 320212,
+    BuffType = T.RT_19,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -5798,7 +6041,7 @@ return ReadOnly("Buff", {
   [330121] = {
     BuffId = 330121,
     BuffInitEffects = T.RT_50,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Damaged_Up",
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
@@ -5835,11 +6078,9 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [330142] = {
-    AddAttrs = {
-      [1] = {AttrName = "ATK", Rate = 0.45}
-    },
+    AddAttrs = T.RT_324,
     BuffId = 330142,
-    BuffInitEffects = T.RT_247,
+    BuffInitEffects = T.RT_134,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Atk_Up",
     IsShowInBillboard = true,
@@ -5892,7 +6133,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [410102] = {
-    AddAttrs = T.RT_166,
+    AddAttrs = T.RT_173,
     AllowSkillSustainModify = true,
     BuffEffects = T.RT_78,
     BuffId = 410102,
@@ -5909,14 +6150,7 @@ return ReadOnly("Buff", {
     AddPassiveEffect = {410103},
     AllowSkillSustainModify = true,
     BuffId = 410111,
-    DotDatas = {
-      [1] = {
-        DotDelay = 2,
-        Interval = 1,
-        Type = "SpChange",
-        Value = -20
-      }
-    },
+    DotDatas = T.RT_116,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     RemoveWhenSpZero = true
@@ -5935,7 +6169,7 @@ return ReadOnly("Buff", {
     AddPassiveEffect = {410104},
     AllowSkillSustainModify = true,
     BuffId = 410121,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Common_Debuff",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
@@ -5946,7 +6180,7 @@ return ReadOnly("Buff", {
     AddPassiveEffect = {410105},
     AllowSkillSustainModify = true,
     BuffId = 410122,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Common_Debuff",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
@@ -5954,11 +6188,10 @@ return ReadOnly("Buff", {
     VisualEffects = {410102}
   },
   [410123] = {
-    AddAttrs = T.RT_318,
+    AddAttrs = T.RT_372,
     BuffId = 410123,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Boost",
-    EnableRimLightModel = true,
     FresnelParams = {
       FresnelColor = {
         0,
@@ -5983,7 +6216,7 @@ return ReadOnly("Buff", {
     VisualEffects = {410124, 410129}
   },
   [410124] = {
-    AddAttrs = T.RT_318,
+    AddAttrs = T.RT_372,
     BuffId = 410124,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Boost",
@@ -5994,7 +6227,7 @@ return ReadOnly("Buff", {
   },
   [410125] = {
     BuffId = 410125,
-    BuffType = T.RT_269,
+    BuffType = T.RT_286,
     BuffTypeImgPath = "Stun",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
@@ -6041,11 +6274,11 @@ return ReadOnly("Buff", {
     AddAttrs = {
       [1] = {
         AttrName = "StrongValue",
-        Value = 0.04
+        Value = 0.015
       }
     },
     AllowSkillSustainModify = true,
-    BuffEffects = T.RT_293,
+    BuffEffects = T.RT_310,
     BuffId = 410214,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Morale",
@@ -6096,17 +6329,30 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [410241] = {
-    AddAttrs = T.RT_30,
-    BuffEffects = T.RT_247,
+    AddAttrs = {
+      [1] = {
+        AttrName = "ATK",
+        Rate = 0.16,
+        Stackable = 1
+      }
+    },
+    BuffEffects = T.RT_134,
     BuffId = 410241,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Atk_Up",
     IsShowInBillboard = true,
+    MaxLayer = 5,
     MergeRule1 = "Global",
-    MergeRule2 = "Merge"
+    MergeRule2 = "NewFree"
   },
   [410242] = {
-    AddAttrs = T.RT_297,
+    AddAttrs = {
+      [1] = {
+        AttrName = "DamageRate",
+        RateZone = "Almighty",
+        Value = 0.4
+      }
+    },
     BuffId = 410242,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
@@ -6114,7 +6360,7 @@ return ReadOnly("Buff", {
   [410243] = {
     BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_410243.BP_Buff_410243",
     BuffId = 410243,
-    DotDatas = T.RT_320,
+    DotDatas = T.RT_374,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     RemoveWhenSpZero = true
@@ -6126,7 +6372,7 @@ return ReadOnly("Buff", {
     VisualEffects = {410203}
   },
   [410252] = {
-    AddAttrs = T.RT_301,
+    AddAttrs = T.RT_316,
     BuffId = 410252,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
@@ -6153,10 +6399,10 @@ return ReadOnly("Buff", {
     BuffId = 420111,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    VisualEffects = {420102}
+    VisualEffects = T.RT_377
   },
   [420112] = {
-    AddAttrs = T.RT_137,
+    AddAttrs = T.RT_143,
     AllowSkillSustainModify = true,
     BuffEffects = T.RT_89,
     BuffId = 420112,
@@ -6168,13 +6414,13 @@ return ReadOnly("Buff", {
   },
   [420113] = {
     AddAttrs = {
-      [1] = T.RT_124,
+      [1] = T.RT_129,
       [2] = {
         AttrName = "AttackRangeModifierValue",
         Value = 60
       }
     },
-    BuffEffects = T.RT_125,
+    BuffEffects = T.RT_130,
     BuffId = 420113,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Skill_Range_Up",
@@ -6188,15 +6434,9 @@ return ReadOnly("Buff", {
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
-  [420115] = {
-    ActivateSkills = {Attack = 420101},
-    BuffId = 420115,
-    MergeRule1 = "Personal",
-    MergeRule2 = "Merge"
-  },
   [420121] = {
     BuffId = 420121,
-    BuffType = T.RT_3,
+    BuffType = {11, 420121},
     BuffTypeImgPath = "Char_Yuming_01",
     EmissiveIntensity = {Body = 12.782403},
     ForbidBuffType = T.RT_26,
@@ -6215,6 +6455,7 @@ return ReadOnly("Buff", {
   },
   [420123] = {
     BuffId = 420123,
+    BuffType = T.RT_377,
     HaloDatas = {
       [1] = {
         AuraRange = -1,
@@ -6222,7 +6463,8 @@ return ReadOnly("Buff", {
         Camp = "Friend"
       },
       [2] = {
-        AuraRange = -1,
+        AllowSkillRange = 1,
+        AuraRange = 2000,
         BuffId = 420131,
         Camp = "Enemy"
       }
@@ -6231,6 +6473,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [420124] = {
+    AddAttrs = T.RT_143,
     AddPassiveEffect = {420103},
     BuffId = 420124,
     BuffTypeImgPath = "Damage_Thunder_Up",
@@ -6241,20 +6484,26 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [420131] = {
-    AddAttrs = {
-      [1] = {
-        AttrName = "ThunderDamagedRate",
-        Value = "#1"
-      }
-    },
-    AllowSkillSustainModify = true,
     BuffId = 420131,
     BuffInitEffects = T.RT_50,
-    BuffType = T.RT_148,
-    BuffTypeImgPath = "Damaged_Thunder_Down",
+    BuffType = T.RT_156,
+    BuffTypeImgPath = "Char_Yuming_01",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
-    MergeRule2 = "NewFree"
+    MergeRule2 = "Merge"
+  },
+  [420141] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "DamageRate",
+        RateZone = "Almighty",
+        Value = 0.25
+      }
+    },
+    BuffId = 420141,
+    BuffType = T.RT_377,
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
   },
   [420191] = {
     BuffId = 420191,
@@ -6317,8 +6566,8 @@ return ReadOnly("Buff", {
     },
     AllowSkillSustainModify = true,
     BuffId = 420211,
-    BuffType = T.RT_106,
-    DisableSkills = T.RT_289,
+    BuffType = T.RT_122,
+    DisableSkills = T.RT_306,
     DotDatas = {
       [1] = {
         DotDelay = 2,
@@ -6349,7 +6598,7 @@ return ReadOnly("Buff", {
     BuffId = 420213,
     BuffType = T.RT_11,
     BuffTypeImgPath = "Dot_Thunder",
-    DotDatas = T.RT_199,
+    DotDatas = T.RT_205,
     IsShowInBillboard = true,
     MaxLayer = 2,
     MergeRule1 = "Personal",
@@ -6420,7 +6669,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "NewFree"
   },
   [510101] = {
-    AddAttrs = T.RT_137,
+    AddAttrs = T.RT_143,
     AllowSkillSustainModify = true,
     BuffEffects = T.RT_78,
     BuffId = 510101,
@@ -6433,24 +6682,23 @@ return ReadOnly("Buff", {
   [510102] = {
     BuffAnimInstance = "Ride",
     BuffId = 510102,
-    BuffType = T.RT_106,
+    BuffType = T.RT_122,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
   [510103] = {
-    AddAttrs = T.RT_137,
+    AddAttrs = T.RT_143,
     AllowSkillSustainModify = true,
-    BuffDamagedRate = T.RT_343,
+    BuffDamagedRate = T.RT_398,
     BuffId = 510103,
-    BuffType = T.RT_344,
+    BuffType = T.RT_399,
     BuffTypeImgPath = "Songlu",
-    EnableRimLightModel = true,
-    FresnelParams = T.RT_346,
+    FresnelParams = T.RT_401,
     IsShowInBillboard = true,
     MaxLayer = 10,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree",
-    VisualEffects = T.RT_347
+    VisualEffects = T.RT_402
   },
   [510104] = {
     AddAttrs = {
@@ -6461,7 +6709,7 @@ return ReadOnly("Buff", {
       }
     },
     BuffId = 510104,
-    BuffInitEffects = T.RT_247,
+    BuffInitEffects = T.RT_134,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Atk_Up",
     IsShowInBillboard = true,
@@ -6502,7 +6750,7 @@ return ReadOnly("Buff", {
     },
     AddPassiveEffect = {510102},
     BuffId = 510121,
-    BuffType = T.RT_106,
+    BuffType = T.RT_122,
     CameraParam = {
       "SongluSkill02",
       "0.2",
@@ -6515,7 +6763,7 @@ return ReadOnly("Buff", {
       "HeavyShooting",
       "Reload"
     },
-    ForbidenJumpState = T.RT_134,
+    ForbidenJumpState = T.RT_140,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     NotEnterCharacterTagType = {
@@ -6531,9 +6779,9 @@ return ReadOnly("Buff", {
   },
   [510122] = {
     BuffId = 510122,
-    BuffType = T.RT_106,
+    BuffType = T.RT_122,
     DisableSkills = {"Attack", "FallAttack"},
-    DotDatas = T.RT_320,
+    DotDatas = T.RT_374,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     VisualEffects = {
@@ -6543,19 +6791,18 @@ return ReadOnly("Buff", {
     }
   },
   [510131] = {
-    AddAttrs = T.RT_137,
+    AddAttrs = T.RT_143,
     AllowSkillSustainModify = true,
-    BuffDamagedRate = T.RT_343,
+    BuffDamagedRate = T.RT_398,
     BuffId = 510131,
-    BuffType = T.RT_344,
+    BuffType = T.RT_399,
     BuffTypeImgPath = "Songlu",
-    EnableRimLightModel = true,
-    FresnelParams = T.RT_346,
+    FresnelParams = T.RT_401,
     IsShowInBillboard = true,
     MaxLayer = 20,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree",
-    VisualEffects = T.RT_347
+    VisualEffects = T.RT_402
   },
   [510191] = {
     BuffId = 510191,
@@ -6595,7 +6842,7 @@ return ReadOnly("Buff", {
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    SpecialEffect = T.RT_348
+    SpecialEffect = T.RT_403
   },
   [510212] = {
     AddAttrs = {
@@ -6624,7 +6871,7 @@ return ReadOnly("Buff", {
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    SpecialEffect = T.RT_348
+    SpecialEffect = T.RT_403
   },
   [510213] = {
     AddAttrs = {
@@ -6644,7 +6891,7 @@ return ReadOnly("Buff", {
     AddAttrs = T.RT_81,
     AllowSkillSustainModify = true,
     BuffId = 510221,
-    BuffType = T.RT_349,
+    BuffType = T.RT_404,
     BuffTypeImgPath = "Weapon_Spd_Up",
     CannotBeHitted = true,
     ForbidCatch = true,
@@ -6652,7 +6899,7 @@ return ReadOnly("Buff", {
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     NotEnterCharacterTagType = T.RT_27,
-    VisualEffects = T.RT_350
+    VisualEffects = T.RT_405
   },
   [510222] = {
     AddAttrs = {
@@ -6664,10 +6911,10 @@ return ReadOnly("Buff", {
         Value = 0.2
       }
     },
-    AddPassiveEffect = T.RT_213,
+    AddPassiveEffect = T.RT_219,
     AllowSkillSustainModify = true,
     BuffId = 510222,
-    BuffType = T.RT_349,
+    BuffType = T.RT_404,
     BuffTypeImgPath = "Weapon_Spd_Up",
     CannotBeHitted = true,
     ForbidCatch = true,
@@ -6675,12 +6922,12 @@ return ReadOnly("Buff", {
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     NotEnterCharacterTagType = T.RT_27,
-    VisualEffects = T.RT_350
+    VisualEffects = T.RT_405
   },
   [510231] = {
     AllowSkillSustainModify = true,
     BuffId = 510231,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Damaged_Up",
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
@@ -6695,8 +6942,8 @@ return ReadOnly("Buff", {
     AllowSkillSustainModify = true,
     BuffId = 530100,
     BuffType = {70, 530102},
-    CameraParam = T.RT_168,
-    DisableSkills = T.RT_351,
+    CameraParam = T.RT_175,
+    DisableSkills = T.RT_406,
     DotDatas = {
       [1] = {
         Condition = 530122,
@@ -6716,7 +6963,7 @@ return ReadOnly("Buff", {
     EnableFlight = 1,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    ReplaceActions = T.RT_292,
+    ReplaceActions = T.RT_309,
     UseSummonWeapon = 1
   },
   [530101] = {
@@ -6724,7 +6971,7 @@ return ReadOnly("Buff", {
     BuffId = 530101,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_352
+    VisualEffects = T.RT_407
   },
   [530102] = {
     AllowSkillSustainModify = true,
@@ -6745,7 +6992,7 @@ return ReadOnly("Buff", {
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    OverrideAttrs = T.RT_310
+    OverrideAttrs = T.RT_327
   },
   [530111] = {
     BuffId = 530111,
@@ -6759,7 +7006,7 @@ return ReadOnly("Buff", {
         Value = 1500
       }
     },
-    BuffDamagedRate = T.RT_123,
+    BuffDamagedRate = T.RT_128,
     BuffId = 530112,
     BuffType = {11, 530102},
     BuffTypeImgPath = "Damaged_Down",
@@ -6771,15 +7018,9 @@ return ReadOnly("Buff", {
     NotEnterCharacterTagType = T.RT_27
   },
   [530113] = {
-    AddAttrs = {
-      [1] = {
-        AttrName = "DamageRate",
-        RateZone = "Almighty",
-        Value = 0.5
-      }
-    },
+    AddAttrs = T.RT_322,
     BuffId = 530113,
-    BuffType = T.RT_353,
+    BuffType = T.RT_408,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -6800,7 +7041,7 @@ return ReadOnly("Buff", {
   },
   [530122] = {
     BuffId = 530122,
-    BuffType = T.RT_353,
+    BuffType = T.RT_408,
     DotDatas = {
       [1] = {
         DotDelay = 2.7,
@@ -6827,7 +7068,7 @@ return ReadOnly("Buff", {
     AddAttrs = T.RT_17,
     AllowSkillSustainModify = true,
     BuffId = 530132,
-    BuffInitEffects = T.RT_247,
+    BuffInitEffects = T.RT_134,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Atk_Up",
     IsShowInBillboard = true,
@@ -6862,22 +7103,22 @@ return ReadOnly("Buff", {
   [540101] = {
     AllowSkillSustainModify = true,
     BuffId = 540101,
-    BuffType = T.RT_354,
+    BuffType = T.RT_409,
     BuffTypeImgPath = "Common_Buff_Aura",
-    DotDatas = T.RT_356,
+    DotDatas = T.RT_411,
     HaloDatas = {
       [1] = {
         AuraRange = -1,
         BuffId = 540111,
         Camp = "Friend"
       },
-      [2] = T.RT_357
+      [2] = T.RT_412
     },
     IconPriority = 1,
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_358
+    VisualEffects = T.RT_413
   },
   [540102] = {
     AddAttrs = {
@@ -6885,9 +7126,9 @@ return ReadOnly("Buff", {
     },
     AllowSkillSustainModify = true,
     BuffId = 540102,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Atk_Down",
-    DotDatas = T.RT_201,
+    DotDatas = T.RT_207,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
@@ -6896,7 +7137,7 @@ return ReadOnly("Buff", {
   [540103] = {
     AddAttrs = T.RT_43,
     BuffId = 540103,
-    BuffInitEffects = T.RT_258,
+    BuffInitEffects = T.RT_274,
     BuffTypeImgPath = "Weapon_Trigger_Up",
     IconPriority = 99,
     IsShowInBillboard = true,
@@ -6918,16 +7159,16 @@ return ReadOnly("Buff", {
     BuffId = 540111,
     BuffType = {11, 540111},
     BuffTypeImgPath = "Hot_Up",
-    DotDatas = T.RT_360,
+    DotDatas = T.RT_415,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [540112] = {
-    AddAttrs = T.RT_146,
+    AddAttrs = T.RT_154,
     BuffId = 540112,
-    BuffInitEffects = T.RT_192,
-    BuffType = T.RT_302,
+    BuffInitEffects = T.RT_198,
+    BuffType = T.RT_317,
     BuffTypeImgPath = "Slowdown",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
@@ -6937,22 +7178,22 @@ return ReadOnly("Buff", {
   [540113] = {
     AllowSkillSustainModify = true,
     BuffId = 540113,
-    BuffType = T.RT_354,
+    BuffType = T.RT_409,
     BuffTypeImgPath = "Common_Buff_Aura",
-    DotDatas = T.RT_356,
+    DotDatas = T.RT_411,
     HaloDatas = {
       [1] = {
         AuraRange = -1,
         BuffId = 540114,
         Camp = "Friend"
       },
-      [2] = T.RT_357
+      [2] = T.RT_412
     },
     IconPriority = 1,
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_358
+    VisualEffects = T.RT_413
   },
   [540114] = {
     AddAttrs = {
@@ -6965,40 +7206,40 @@ return ReadOnly("Buff", {
     BuffId = 540114,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Hot_Up",
-    DisperseBuffType = T.RT_358,
-    DotDatas = T.RT_360,
-    ForbidBuffType = T.RT_358,
+    DisperseBuffType = T.RT_413,
+    DotDatas = T.RT_415,
+    ForbidBuffType = T.RT_413,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [540121] = {
-    AddAttrs = T.RT_212,
-    AddPassiveEffect = T.RT_213,
+    AddAttrs = T.RT_218,
+    AddPassiveEffect = T.RT_219,
     AllowSkillSustainModify = true,
-    BuffEffects = T.RT_361,
+    BuffEffects = T.RT_416,
     BuffId = 540121,
     BuffType = {10, 540121},
     BuffTypeImgPath = "BonusDmg_Wind",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_362
+    VisualEffects = T.RT_417
   },
   [540122] = {
-    AddAttrs = T.RT_212,
+    AddAttrs = T.RT_218,
     AddPassiveEffect = {205, 540102},
     AllowSkillSustainModify = true,
-    BuffEffects = T.RT_361,
+    BuffEffects = T.RT_416,
     BuffId = 540122,
     BuffType = T.RT_19,
     BuffTypeImgPath = "BonusDmg_Wind",
-    DisperseBuffType = T.RT_361,
-    ForbidBuffType = T.RT_361,
+    DisperseBuffType = T.RT_416,
+    ForbidBuffType = T.RT_416,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_362
+    VisualEffects = T.RT_417
   },
   [540123] = {
     AddAttrs = {
@@ -7020,7 +7261,7 @@ return ReadOnly("Buff", {
   [540124] = {
     AllowSkillSustainModify = true,
     BuffId = 540124,
-    BuffType = T.RT_221,
+    BuffType = T.RT_227,
     BuffTypeImgPath = "Stun",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
@@ -7057,7 +7298,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [540204] = {
-    BuffEffects = T.RT_167,
+    BuffEffects = T.RT_174,
     BuffId = 540204,
     MaxLayer = 3,
     MergeRule1 = "Personal",
@@ -7077,7 +7318,7 @@ return ReadOnly("Buff", {
   },
   [540211] = {
     BuffId = 540211,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Damaged_Up",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
@@ -7139,14 +7380,14 @@ return ReadOnly("Buff", {
     BuffId = 540242,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Hot_Up",
-    DotDatas = T.RT_364,
+    DotDatas = T.RT_419,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [600101] = {
     BuffId = 600101,
-    BuffType = T.RT_302,
+    BuffType = T.RT_317,
     BuffTypeImgPath = "Weapon_Spd_Down",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
@@ -7155,13 +7396,13 @@ return ReadOnly("Buff", {
   },
   [600501] = {
     BuffId = 600501,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Dot_Common",
-    DotDatas = T.RT_332,
+    DotDatas = T.RT_387,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_333
+    VisualEffects = T.RT_388
   },
   [600502] = {
     BuffId = 600502,
@@ -7170,11 +7411,11 @@ return ReadOnly("Buff", {
       60,
       600502
     },
-    ForbidBuffType = T.RT_269,
+    ForbidBuffType = T.RT_286,
     ForbidCatch = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    SpecialEffect = T.RT_135,
+    SpecialEffect = T.RT_141,
     VisualEffects = {600505}
   },
   [700221] = {
@@ -7193,7 +7434,7 @@ return ReadOnly("Buff", {
   },
   [700501] = {
     AddAttrs = {
-      [1] = T.RT_377,
+      [1] = T.RT_429,
       [2] = T.RT_104,
       [3] = {
         AttrName = "DamagedRate",
@@ -7211,7 +7452,7 @@ return ReadOnly("Buff", {
   },
   [700502] = {
     BuffId = 700502,
-    BuffType = T.RT_282,
+    BuffType = T.RT_299,
     BuffTypeImgPath = "Team_Caster",
     HaloDatas = {
       [1] = {
@@ -7248,7 +7489,7 @@ return ReadOnly("Buff", {
   },
   [700602] = {
     AddAttrs = {
-      [1] = T.RT_377,
+      [1] = T.RT_429,
       [2] = T.RT_104
     },
     BuffId = 700602,
@@ -7279,12 +7520,12 @@ return ReadOnly("Buff", {
     Priority = 100,
     SetCharacterTag = "Stun",
     StunType = "StunParalysis",
-    VisualEffects = T.RT_246
+    VisualEffects = T.RT_263
   },
   [700801] = {
     BuffId = 700801,
     BuffType = T.RT_3,
-    DMMIParams = T.RT_379,
+    DMMIParams = T.RT_431,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     Priority = 100,
@@ -7296,7 +7537,7 @@ return ReadOnly("Buff", {
     BuffId = 701101,
     BuffType = {11, 302},
     BuffTypeImgPath = "Common_Buff",
-    FXMID = T.RT_380,
+    FXMID = T.RT_432,
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
@@ -7312,11 +7553,11 @@ return ReadOnly("Buff", {
   [701501] = {
     BuffId = 701501,
     BuffType = T.RT_3,
-    DMMIParams = T.RT_379,
+    DMMIParams = T.RT_431,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     Priority = 100,
-    VisualEffects = T.RT_381
+    VisualEffects = T.RT_433
   },
   [701601] = {
     BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff.BP_Buff",
@@ -7349,7 +7590,7 @@ return ReadOnly("Buff", {
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     Priority = 100,
-    VisualEffects = T.RT_381
+    VisualEffects = T.RT_433
   },
   [800202] = {
     BuffId = 800202,
@@ -7372,14 +7613,14 @@ return ReadOnly("Buff", {
     BuffId = 800301,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Hot_Up",
-    DotDatas = T.RT_364,
+    DotDatas = T.RT_419,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [850001] = {
     BuffId = 850001,
-    LockHp = T.RT_222,
+    LockHp = T.RT_228,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -7387,10 +7628,10 @@ return ReadOnly("Buff", {
     BuffId = 850002,
     CannotBeCutTN = true,
     CannotBeHitted = true,
-    ForbidBuffType = T.RT_385,
+    ForbidBuffType = T.RT_437,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    SpecialEffect = T.RT_135
+    SpecialEffect = T.RT_141
   },
   [850201] = {
     BuffId = 850201,
@@ -7411,8 +7652,8 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [850204] = {
-    AddAttrs = T.RT_181,
-    BuffEffects = T.RT_192,
+    AddAttrs = T.RT_187,
+    BuffEffects = T.RT_198,
     BuffId = 850204,
     BuffType = {42},
     MergeRule1 = "Global",
@@ -7473,7 +7714,7 @@ return ReadOnly("Buff", {
   [850302] = {
     BuffId = 850302,
     ForbidBuffType = {40},
-    LockHp = T.RT_327,
+    LockHp = T.RT_382,
     LockHpUI = 1,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
@@ -7498,7 +7739,7 @@ return ReadOnly("Buff", {
   },
   [850306] = {
     BuffId = 850306,
-    LockHp = T.RT_327,
+    LockHp = T.RT_382,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -7523,12 +7764,12 @@ return ReadOnly("Buff", {
     BuffId = 850309,
     CannotBeCutTN = true,
     CannotBeHitted = true,
-    ForbidBuffType = T.RT_385,
-    LockHp = T.RT_327,
+    ForbidBuffType = T.RT_437,
+    LockHp = T.RT_382,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     NotEnterTarget = true,
-    SpecialEffect = T.RT_135
+    SpecialEffect = T.RT_141
   },
   [850310] = {
     BuffId = 850310,
@@ -7546,7 +7787,7 @@ return ReadOnly("Buff", {
     BuffId = 850311,
     CannotBeCutTN = true,
     CannotBeHitted = true,
-    LockHp = T.RT_386,
+    LockHp = T.RT_438,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -7554,12 +7795,12 @@ return ReadOnly("Buff", {
     BuffId = 850312,
     BuffTypeImgPath = "Invincible",
     CannotBeCutTN = true,
-    ForbidBuffType = T.RT_269,
+    ForbidBuffType = T.RT_286,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     NotEnterTarget = true,
-    SpecialEffect = T.RT_135
+    SpecialEffect = T.RT_141
   },
   [850313] = {
     BuffId = 850313,
@@ -7609,8 +7850,8 @@ return ReadOnly("Buff", {
     },
     BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_530101.BP_Buff_530101",
     BuffId = 850405,
-    CameraParam = T.RT_168,
-    DisableSkills = T.RT_351,
+    CameraParam = T.RT_175,
+    DisableSkills = T.RT_406,
     DotDatas = {
       [1] = {
         Interval = 1,
@@ -7621,9 +7862,9 @@ return ReadOnly("Buff", {
     EnableFlight = 1,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    ReplaceActions = T.RT_292,
+    ReplaceActions = T.RT_309,
     UseSummonWeapon = 1,
-    VisualEffects = T.RT_352
+    VisualEffects = T.RT_407
   },
   [850406] = {
     BuffId = 850406,
@@ -7631,7 +7872,7 @@ return ReadOnly("Buff", {
     BuffTypeImgPath = "Dot_Common",
     DotDatas = {
       [1] = {
-        DamageTag = T.RT_330,
+        DamageTag = T.RT_385,
         Interval = 0.5,
         Rate = 0.3,
         Type = "Dot"
@@ -7640,7 +7881,7 @@ return ReadOnly("Buff", {
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_366
+    VisualEffects = T.RT_421
   },
   [850501] = {
     AddPassiveEffect = {850501},
@@ -7663,7 +7904,7 @@ return ReadOnly("Buff", {
     },
     BuffId = 850502,
     BuffType = T.RT_3,
-    CameraParam = T.RT_387,
+    CameraParam = T.RT_439,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -7699,20 +7940,20 @@ return ReadOnly("Buff", {
   },
   [850901] = {
     BuffId = 850901,
-    LockHp = T.RT_222,
+    LockHp = T.RT_228,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
   [850902] = {
     BuffId = 850902,
-    LockHp = T.RT_386,
+    LockHp = T.RT_438,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
   [851001] = {
     BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_851001.BP_Buff_851001",
     BuffId = 851001,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Dot_Common",
     DotDatas = {
       [1] = {
@@ -7726,13 +7967,13 @@ return ReadOnly("Buff", {
     MaxLayer = 5,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_372
+    VisualEffects = T.RT_426
   },
   [851002] = {
     AllowSkillSustainModify = true,
     BuffId = 851002,
     DeadNotRemove = true,
-    LockHp = T.RT_176,
+    LockHp = T.RT_182,
     LockHpUI = 0,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
@@ -7742,13 +7983,13 @@ return ReadOnly("Buff", {
     BossSpCamera = {
       ArmRate = 0,
       BaseArmLength = 1200,
-      BasePitch = 35,
+      BasePitch = 25,
       PitchRate = 0,
       UseSaveLoc = "BossMapSkill"
     },
     BuffId = 851003,
     BuffType = T.RT_3,
-    CameraParam = T.RT_387,
+    CameraParam = T.RT_439,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -7776,14 +8017,14 @@ return ReadOnly("Buff", {
   [851101] = {
     BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_851101.BP_Buff_851101",
     BuffId = 851101,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Slowdown",
     IsShowInBillboard = true,
     MaxLayer = 5,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     TimeDilation = 0.9,
-    VisualEffects = T.RT_365
+    VisualEffects = T.RT_420
   },
   [851201] = {
     BuffId = 851201,
@@ -7799,18 +8040,18 @@ return ReadOnly("Buff", {
     BuffType = T.RT_3,
     CannotBeCutTN = true,
     CannotBeHitted = true,
-    ForbidBuffType = T.RT_388,
+    ForbidBuffType = T.RT_440,
     ForbidCatch = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    NotEnterCharacterTagType = T.RT_329
+    NotEnterCharacterTagType = T.RT_384
   },
   [851203] = {
     BuffId = 851203,
     BuffType = T.RT_3,
     CannotBeCutTN = true,
     CannotBeHitted = true,
-    ForbidBuffType = T.RT_385,
+    ForbidBuffType = T.RT_437,
     LockHp = {Rate = 0.61},
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
@@ -7838,14 +8079,14 @@ return ReadOnly("Buff", {
   [851207] = {
     BuffId = 851207,
     BuffType = T.RT_3,
-    CameraParam = T.RT_389,
+    CameraParam = T.RT_441,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
   [851208] = {
     BuffId = 851208,
     BuffType = T.RT_3,
-    CameraParam = T.RT_389,
+    CameraParam = T.RT_441,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -7857,7 +8098,7 @@ return ReadOnly("Buff", {
   },
   [851210] = {
     BuffId = 851210,
-    LockHp = T.RT_283,
+    LockHp = T.RT_300,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -7881,7 +8122,7 @@ return ReadOnly("Buff", {
     BuffType = T.RT_3,
     CannotBeCutTN = true,
     CannotBeHitted = true,
-    ForbidBuffType = T.RT_385,
+    ForbidBuffType = T.RT_437,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -7890,15 +8131,15 @@ return ReadOnly("Buff", {
     BuffType = T.RT_3,
     CannotBeCutTN = true,
     CannotBeHitted = true,
-    ForbidBuffType = T.RT_385,
+    ForbidBuffType = T.RT_437,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     NotEnterTarget = true,
-    SpecialEffect = T.RT_135
+    SpecialEffect = T.RT_141
   },
   [851501] = {
     BuffId = 851501,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Dot_Common",
     DotDatas = {
       [1] = {
@@ -7918,9 +8159,20 @@ return ReadOnly("Buff", {
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
+  [851801] = {
+    BuffId = 851801,
+    BuffType = T.RT_3,
+    CameraParam = {
+      "BossJuqueDefault",
+      "0.5",
+      "5"
+    },
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
   [851901] = {
     BuffId = 851901,
-    LockHp = T.RT_386,
+    LockHp = T.RT_438,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -7934,7 +8186,7 @@ return ReadOnly("Buff", {
     },
     BuffId = 851902,
     BuffType = T.RT_3,
-    CameraParam = T.RT_387,
+    CameraParam = T.RT_439,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -7948,7 +8200,7 @@ return ReadOnly("Buff", {
     },
     BuffId = 851903,
     BuffType = T.RT_3,
-    CameraParam = T.RT_278,
+    CameraParam = T.RT_295,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -7962,7 +8214,7 @@ return ReadOnly("Buff", {
     },
     BuffId = 851904,
     BuffType = T.RT_3,
-    CameraParam = T.RT_390,
+    CameraParam = T.RT_442,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -7976,7 +8228,7 @@ return ReadOnly("Buff", {
     },
     BuffId = 851905,
     BuffType = T.RT_3,
-    CameraParam = T.RT_390,
+    CameraParam = T.RT_442,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -7990,7 +8242,7 @@ return ReadOnly("Buff", {
     },
     BuffId = 851906,
     BuffType = T.RT_3,
-    CameraParam = T.RT_390,
+    CameraParam = T.RT_442,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -8004,7 +8256,7 @@ return ReadOnly("Buff", {
     },
     BuffId = 851907,
     BuffType = T.RT_3,
-    CameraParam = T.RT_390,
+    CameraParam = T.RT_442,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -8018,7 +8270,7 @@ return ReadOnly("Buff", {
     },
     BuffId = 852001,
     BuffType = T.RT_3,
-    CameraParam = T.RT_278,
+    CameraParam = T.RT_295,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -8032,7 +8284,7 @@ return ReadOnly("Buff", {
     },
     BuffId = 852003,
     BuffType = T.RT_3,
-    CameraParam = T.RT_278,
+    CameraParam = T.RT_295,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -8046,7 +8298,7 @@ return ReadOnly("Buff", {
     },
     BuffId = 852004,
     BuffType = T.RT_3,
-    CameraParam = T.RT_278,
+    CameraParam = T.RT_295,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -8060,13 +8312,13 @@ return ReadOnly("Buff", {
     },
     BuffId = 852005,
     BuffType = T.RT_3,
-    CameraParam = T.RT_278,
+    CameraParam = T.RT_295,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
   [852201] = {
     BuffId = 852201,
-    BuffType = T.RT_249,
+    BuffType = T.RT_265,
     BuffTypeImgPath = "Stun",
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
@@ -8075,10 +8327,46 @@ return ReadOnly("Buff", {
     StunType = "StunCommon",
     VisualEffects = {852202}
   },
+  [852401] = {
+    BuffId = 852401,
+    BuffType = T.RT_155,
+    BuffTypeImgPath = "Dot_Common",
+    DotDatas = {
+      [1] = {
+        DamageTag = T.RT_7,
+        Interval = 0.5,
+        Rate = 1,
+        Type = "Dot"
+      }
+    },
+    IsShowInBillboard = true,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    TimeDilation = 0.5,
+    VisualEffects = T.RT_330
+  },
+  [859900] = {
+    BuffId = 859900,
+    BuffType = T.RT_11,
+    DisableSkills = {
+      "FallAttack",
+      "HeavyAttack",
+      "SlideAttack",
+      "Attack",
+      "Skill2",
+      "Skill1",
+      "Shooting",
+      "HeavyShooting",
+      "Reload",
+      "Support"
+    },
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
   [900003] = {
-    BuffEffects = T.RT_325,
+    BuffEffects = T.RT_380,
     BuffId = 900003,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Dot_Common",
     DotDatas = {
       [1] = {
@@ -8112,10 +8400,10 @@ return ReadOnly("Buff", {
         AttrName = "MoveSpeedAddRate",
         Value = 0.3
       },
-      [2] = T.RT_126
+      [2] = T.RT_131
     },
     BuffId = 900302,
-    BuffType = T.RT_271,
+    BuffType = T.RT_288,
     BuffTypeImgPath = "Boost",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
@@ -8142,9 +8430,9 @@ return ReadOnly("Buff", {
   },
   [900601] = {
     BuffId = 900601,
-    BuffType = T.RT_270,
+    BuffType = T.RT_287,
     EffectCreatureID = 900601,
-    FXMID = T.RT_380,
+    FXMID = T.RT_432,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     Priority = 1000
@@ -8169,17 +8457,17 @@ return ReadOnly("Buff", {
       },
       DMMILineWidth = 0.3
     },
-    FXMID = T.RT_380,
+    FXMID = T.RT_432,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     Priority = 1000
   },
   [950001] = {
     AddAttrs = {
-      [1] = T.RT_377
+      [1] = T.RT_429
     },
     BuffId = 950001,
-    BuffType = T.RT_271,
+    BuffType = T.RT_288,
     BuffTypeImgPath = "Boost",
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
@@ -8188,13 +8476,20 @@ return ReadOnly("Buff", {
   [950002] = {
     AddPassiveEffect = {950004},
     BuffId = 950002,
-    BuffType = T.RT_282,
+    BuffType = T.RT_299,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
+  [950003] = {
+    BuffId = 950003,
+    BuffType = T.RT_299,
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge",
+    VisualEffects = {950006}
+  },
   [950101] = {
     AddAttrs = {
-      [1] = T.RT_367
+      [1] = T.RT_422
     },
     BuffId = 950101,
     BuffType = T.RT_3,
@@ -8203,7 +8498,7 @@ return ReadOnly("Buff", {
   },
   [950401] = {
     BuffId = 950401,
-    ForbidBuffType = T.RT_388,
+    ForbidBuffType = T.RT_440,
     ForbidCatch = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
@@ -8220,7 +8515,7 @@ return ReadOnly("Buff", {
   },
   [950403] = {
     BuffId = 950403,
-    LockHp = T.RT_386,
+    LockHp = T.RT_438,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -8375,7 +8670,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [1440001] = {
-    AddAttrs = T.RT_137,
+    AddAttrs = T.RT_143,
     BuffId = 1440001,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
@@ -8392,7 +8687,7 @@ return ReadOnly("Buff", {
   [2010001] = {
     BuffId = 2010001,
     BuffType = T.RT_3,
-    LockHp = T.RT_222,
+    LockHp = T.RT_228,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
@@ -8401,13 +8696,13 @@ return ReadOnly("Buff", {
     BuffType = T.RT_3,
     CannotBeCutTN = true,
     CannotBeHitted = true,
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     NotEnterTarget = true,
     Priority = 1000,
-    SpecialEffect = T.RT_135,
-    UISpecialEffect = T.RT_227
+    SpecialEffect = T.RT_141,
+    UISpecialEffect = T.RT_233
   },
   [2010003] = {
     AddAttrs = {
@@ -8440,6 +8735,7 @@ return ReadOnly("Buff", {
   },
   [2010005] = {
     BuffId = 2010005,
+    BuffType = T.RT_11,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     OverrideAttrs = {
@@ -8461,39 +8757,159 @@ return ReadOnly("Buff", {
     MergeRule1 = "Global",
     MergeRule2 = "NewFree"
   },
+  [2010012] = {
+    AddAttrs = {
+      [1] = T.RT_235,
+      [2] = T.RT_236,
+      [3] = T.RT_237,
+      [4] = T.RT_238
+    },
+    BuffId = 2010012,
+    BuffType = T.RT_11,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    WeaknessType = "Water"
+  },
+  [2010013] = {
+    AddAttrs = {
+      [1] = T.RT_239,
+      [2] = T.RT_240,
+      [3] = T.RT_237,
+      [4] = T.RT_238
+    },
+    BuffId = 2010013,
+    BuffType = T.RT_11,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    WeaknessType = "Fire"
+  },
+  [2010014] = {
+    AddAttrs = {
+      [1] = T.RT_241,
+      [2] = T.RT_240,
+      [3] = T.RT_236,
+      [4] = T.RT_238
+    },
+    BuffId = 2010014,
+    BuffType = T.RT_11,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    WeaknessType = "Thunder"
+  },
+  [2010015] = {
+    AddAttrs = {
+      [1] = T.RT_242,
+      [2] = T.RT_240,
+      [3] = T.RT_236,
+      [4] = T.RT_237
+    },
+    BuffId = 2010015,
+    BuffType = T.RT_11,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    WeaknessType = "Wind"
+  },
+  [2010016] = {
+    AddAttrs = {
+      [1] = T.RT_243,
+      [2] = T.RT_244
+    },
+    BuffId = 2010016,
+    BuffType = T.RT_11,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    WeaknessType = "Light"
+  },
+  [2010017] = {
+    AddAttrs = {
+      [1] = T.RT_245,
+      [2] = T.RT_246
+    },
+    BuffId = 2010017,
+    BuffType = T.RT_11,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    WeaknessType = "Dark"
+  },
+  [2010018] = {
+    AddAttrs = {
+      [1] = T.RT_246,
+      [2] = T.RT_244
+    },
+    BuffId = 2010018,
+    BuffType = T.RT_11,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [2010019] = {
+    AddAttrs = {
+      [1] = T.RT_240,
+      [2] = T.RT_236,
+      [3] = T.RT_237,
+      [4] = T.RT_238
+    },
+    BuffId = 2010019,
+    BuffType = T.RT_11,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
   [2010020] = {
     AddAttrs = {
-      [1] = T.RT_229,
-      [2] = T.RT_230
+      [1] = T.RT_235,
+      [2] = T.RT_243
     },
     BuffId = 2010020,
+    BuffType = T.RT_11,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [2010025] = {
     AddAttrs = {
-      [1] = T.RT_229,
-      [2] = T.RT_231
+      [1] = T.RT_235,
+      [2] = T.RT_242
     },
     BuffId = 2010025,
+    BuffType = T.RT_11,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [2010034] = {
+    AddAttrs = {
+      [1] = T.RT_239,
+      [2] = T.RT_241
+    },
+    BuffId = 2010034,
+    BuffType = T.RT_11,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [2010035] = {
     AddAttrs = {
-      [1] = T.RT_232,
-      [2] = T.RT_231
+      [1] = T.RT_239,
+      [2] = T.RT_242
     },
     BuffId = 2010035,
+    BuffType = T.RT_11,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [2010040] = {
+    AddAttrs = {
+      [1] = T.RT_241,
+      [2] = T.RT_243
+    },
+    BuffId = 2010040,
+    BuffType = T.RT_11,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [2010051] = {
     AddAttrs = {
-      [1] = T.RT_231,
-      [2] = T.RT_233
+      [1] = T.RT_242,
+      [2] = T.RT_245
     },
     BuffId = 2010051,
+    BuffType = T.RT_11,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
@@ -8501,14 +8917,14 @@ return ReadOnly("Buff", {
     BuffId = 2010101,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Common_Buff_Aura",
-    HaloDatas = T.RT_235,
+    HaloDatas = T.RT_248,
     IconPriority = 1,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [2010102] = {
-    BuffDamagedRate = T.RT_123,
+    BuffDamagedRate = T.RT_128,
     BuffId = 2010102,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Mon_Roused",
@@ -8528,7 +8944,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [2010202] = {
-    BuffDamagedRate = T.RT_236,
+    BuffDamagedRate = T.RT_249,
     BuffId = 2010202,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Damaged_Down",
@@ -8539,7 +8955,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [2010203] = {
-    BuffDamagedRate = T.RT_236,
+    BuffDamagedRate = T.RT_249,
     BuffId = 2010203,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Damaged_Down",
@@ -8550,7 +8966,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [2010204] = {
-    BuffDamagedRate = T.RT_236,
+    BuffDamagedRate = T.RT_249,
     BuffId = 2010204,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Damaged_Down",
@@ -8561,7 +8977,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [2010205] = {
-    BuffDamagedRate = {Value = -0.04},
+    BuffDamagedRate = T.RT_250,
     BuffId = 2010205,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Damaged_Down",
@@ -8579,6 +8995,17 @@ return ReadOnly("Buff", {
     IconPriority = 200,
     IsShowInBillboard = true,
     MaxLayer = 10,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [2010207] = {
+    BuffDamagedRate = T.RT_250,
+    BuffId = 2010207,
+    BuffType = T.RT_3,
+    BuffTypeImgPath = "Damaged_Down",
+    IconPriority = 200,
+    IsShowInBillboard = true,
+    MaxLayer = 20,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
@@ -8639,12 +9066,12 @@ return ReadOnly("Buff", {
         Rate = 0.2
       }
     },
-    BuffDamagedRate = T.RT_236,
+    BuffDamagedRate = T.RT_249,
     BuffId = 2010304,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Skill_Inten_Up",
     IsShowInBillboard = true,
-    LayerExtraBuff = T.RT_237,
+    LayerExtraBuff = T.RT_253,
     MaxLayer = 5,
     MergeRule1 = "Global",
     MergeRule2 = "NewFree"
@@ -8684,7 +9111,7 @@ return ReadOnly("Buff", {
     BuffId = 2011111,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Damaged_Down",
-    HaloDatas = T.RT_235,
+    HaloDatas = T.RT_248,
     IconPriority = 200,
     IsShowInBillboard = true,
     MaxLayer = 6,
@@ -8693,7 +9120,10 @@ return ReadOnly("Buff", {
   },
   [2011113] = {
     AddAttrs = {
-      [1] = T.RT_170,
+      [1] = {
+        AttrName = "AttackSpeedModifierRate",
+        Value = 0.1
+      },
       [2] = {AttrName = "SkillSpeed", Rate = 0.05}
     },
     BuffId = 2011113,
@@ -8742,7 +9172,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [2011211] = {
-    AddAttrs = T.RT_239,
+    AddAttrs = T.RT_255,
     BuffId = 2011211,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Skill_Inten_Up",
@@ -8787,7 +9217,7 @@ return ReadOnly("Buff", {
     ForbidCatch = true,
     IconPriority = 1,
     IsShowInBillboard = true,
-    LayerExtraBuff = T.RT_237,
+    LayerExtraBuff = T.RT_253,
     MaxLayer = 5,
     MergeRule1 = "Global",
     MergeRule2 = "NewFree",
@@ -8795,17 +9225,94 @@ return ReadOnly("Buff", {
   },
   [2011222] = {
     AddAttrs = {
-      [1] = {
-        AttrName = "DamageRate",
-        DamageTag = "Skill",
-        IndividualRateZone = 1,
-        Value = -0.5
-      },
-      [2] = T.RT_240
+      [1] = T.RT_256,
+      [2] = T.RT_257
     },
     BuffId = 2011222,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
+  },
+  [2012111] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "StrongValue",
+        Value = 0.6
+      }
+    },
+    BuffId = 2012111,
+    BuffType = T.RT_3,
+    BuffTypeImgPath = "Cri_Up",
+    IconPriority = 1,
+    IsShowInBillboard = true,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [2012112] = {
+    AddAttrs = {
+      [1] = T.RT_256,
+      [2] = {
+        AttrName = "DamageRate",
+        DamageTag = "Weapon",
+        RateZone = "Abyss",
+        Value = 0.5
+      }
+    },
+    BuffId = 2012112,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [2012121] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "DamageRate",
+        DamageTag = "Skill",
+        RateZone = "Abyss",
+        Value = 0.1
+      }
+    },
+    BuffId = 2012121,
+    BuffType = T.RT_3,
+    BuffTypeImgPath = "Damage_Up",
+    IconPriority = 1,
+    IsShowInBillboard = true,
+    LayerExtraBuff = {
+      [9] = 2010004
+    },
+    MaxLayer = 9,
+    MergeRule1 = "Global",
+    MergeRule2 = "NewFree"
+  },
+  [2012211] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "SkillIntensity",
+        Rate = 0.5
+      }
+    },
+    BuffId = 2012211,
+    BuffType = T.RT_3,
+    BuffTypeImgPath = "Skill_Inten_Up",
+    IconPriority = 1,
+    IsShowInBillboard = true,
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
+  [2012221] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "DamageRate",
+        RateZone = "Abyss",
+        Value = 0.1
+      }
+    },
+    BuffId = 2012221,
+    BuffType = T.RT_3,
+    BuffTypeImgPath = "Cri_Up",
+    IconPriority = 1,
+    IsShowInBillboard = true,
+    MaxLayer = 9,
+    MergeRule1 = "Global",
+    MergeRule2 = "NewFree"
   },
   [2050501] = {
     BuffId = 2050501,
@@ -8821,7 +9328,8 @@ return ReadOnly("Buff", {
   },
   [3010001] = {
     AddAttrs = {
-      [1] = {AttrName = "MaxHp", Rate = 5}
+      [1] = {AttrName = "MaxHp", Rate = 5},
+      [2] = {AttrName = "MaxES", Rate = 5}
     },
     BuffId = 3010001,
     MergeRule1 = "Global",
@@ -8831,7 +9339,7 @@ return ReadOnly("Buff", {
     AddAttrs = {
       [1] = {
         AttrName = "SkillIntensity",
-        Rate = 0.5
+        Rate = 1.5
       }
     },
     BuffId = 4010001,
@@ -8848,7 +9356,7 @@ return ReadOnly("Buff", {
         AttrName = "DamageRate",
         DamageTag = "Skill",
         RateZone = "Normal",
-        Value = 0.5
+        Value = 0.9
       }
     },
     BuffId = 4010002,
@@ -8863,7 +9371,7 @@ return ReadOnly("Buff", {
     AddAttrs = {
       [1] = {
         AttrName = "MultiShootModifierRate",
-        Value = 1
+        Value = 0.75
       }
     },
     BuffId = 4010003,
@@ -8879,7 +9387,7 @@ return ReadOnly("Buff", {
       [1] = {
         AttrName = "AttackSpeedModifierRate",
         Type = "Ranged",
-        Value = 1
+        Value = 0.9
       }
     },
     BuffId = 4010004,
@@ -8896,7 +9404,7 @@ return ReadOnly("Buff", {
         AttrName = "DamageRate",
         DamageTag = "Weapon",
         RateZone = "Normal",
-        Value = 1
+        Value = 1.35
       }
     },
     BuffId = 4010005,
@@ -8912,7 +9420,7 @@ return ReadOnly("Buff", {
       [1] = {
         AttrName = "AttackSpeedModifierRate",
         Type = "Melee",
-        Value = 1
+        Value = 0.9
       }
     },
     BuffId = 4010006,
@@ -8926,7 +9434,7 @@ return ReadOnly("Buff", {
   [4010007] = {
     AddAttrs = {
       [1] = {
-        AttrName = "SkillEfficiency",
+        AttrName = "SkillSustain",
         Rate = 1
       },
       [2] = {AttrName = "SkillRange", Rate = 1}
@@ -8944,7 +9452,7 @@ return ReadOnly("Buff", {
       [1] = {
         AttrName = "DamageRate",
         RateZone = "Normal",
-        Value = 1
+        Value = 5
       }
     },
     BuffId = 4010008,
@@ -8981,9 +9489,7 @@ return ReadOnly("Buff", {
   [4010012] = {
     AddAttrs = {
       [1] = {
-        AttrName = "DamageRate",
-        DamageTag = "Meele",
-        RateZone = "Normal",
+        AttrName = "StrongValue",
         Stackable = 1,
         Value = 0.02
       }
@@ -8998,15 +9504,17 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [4010013] = {
-    AddAttrs = T.RT_309,
+    AddAttrs = {
+      [1] = T.RT_131
+    },
     BuffId = 4010013,
     BuffType = T.RT_19,
     BuffTypeImgPath = "Hot_Energy",
     DotDatas = {
       [1] = {
+        EffectId = 60105,
         Interval = 1,
-        Type = "SpChange",
-        Value = 30
+        Type = "SkillEffect"
       }
     },
     IsShowInBillboard = true,
@@ -9018,7 +9526,7 @@ return ReadOnly("Buff", {
     AddAttrs = {
       [1] = {
         AttrName = "EnmityValue",
-        Value = 0.1
+        Value = 0.3
       }
     },
     BuffId = 4010014,
@@ -9027,7 +9535,7 @@ return ReadOnly("Buff", {
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    OverrideAttrs = T.RT_310
+    OverrideAttrs = T.RT_327
   },
   [4010015] = {
     AddAttrs = {
@@ -9035,7 +9543,7 @@ return ReadOnly("Buff", {
         AttrName = "DamageRate",
         DamageTag = "HeavyAttack",
         RateZone = "Normal",
-        Value = 0.5
+        Value = 0.9
       }
     },
     BuffId = 4010015,
@@ -9045,7 +9553,7 @@ return ReadOnly("Buff", {
       [1] = {
         Interval = 1,
         Type = "AddComboCount",
-        Value = 20
+        Value = 40
       }
     },
     IsShowInBillboard = true,
@@ -9054,7 +9562,9 @@ return ReadOnly("Buff", {
     VisualEffects = {6032}
   },
   [4010016] = {
-    AddAttrs = T.RT_309,
+    AddAttrs = {
+      [1] = {AttrName = "SkillSpeed", Rate = 0.8}
+    },
     BuffEffects = {6042},
     BuffId = 4010016,
     BuffType = T.RT_19,
@@ -9063,8 +9573,756 @@ return ReadOnly("Buff", {
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
+  [4020101] = {
+    AddAttrs = T.RT_332,
+    BuffId = 4020101,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020102] = {
+    AddAttrs = {
+      [1] = T.RT_333
+    },
+    BuffId = 4020102,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020103] = {
+    AddAttrs = T.RT_335,
+    BuffId = 4020103,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020104] = {
+    AddAttrs = {
+      [1] = T.RT_336
+    },
+    BuffId = 4020104,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020105] = {
+    AddAttrs = {
+      [1] = T.RT_331,
+      [2] = T.RT_333
+    },
+    BuffId = 4020105,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020106] = {
+    AddAttrs = {
+      [1] = T.RT_334,
+      [2] = T.RT_333
+    },
+    BuffId = 4020106,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020107] = {
+    AddAttrs = {
+      [1] = T.RT_334,
+      [2] = T.RT_331
+    },
+    BuffId = 4020107,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020108] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "MaxES",
+        Rate = 0.6,
+        Stackable = 1
+      },
+      [2] = {
+        AttrName = "MaxHp",
+        Rate = 0.65,
+        Stackable = 1
+      }
+    },
+    BuffId = 4020108,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020109] = {
+    AddAttrs = {
+      [1] = T.RT_334,
+      [2] = T.RT_336
+    },
+    BuffId = 4020109,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020201] = {
+    AddPassiveEffect = {4020101},
+    BuffId = 4020201,
+    BuffType = T.RT_3,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020202] = {
+    AddPassiveEffect = {4020102},
+    BuffId = 4020202,
+    BuffType = T.RT_3,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020203] = {
+    AddPassiveEffect = {4020103},
+    BuffId = 4020203,
+    BuffType = T.RT_3,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020204] = {
+    AddPassiveEffect = {4020104},
+    BuffId = 4020204,
+    BuffType = T.RT_3,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020205] = {
+    AddPassiveEffect = {4020105},
+    BuffId = 4020205,
+    BuffType = T.RT_3,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020206] = {
+    AddPassiveEffect = {4020106},
+    BuffId = 4020206,
+    BuffType = T.RT_3,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020207] = {
+    AddPassiveEffect = {4020107},
+    BuffId = 4020207,
+    BuffType = T.RT_3,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020208] = {
+    AddPassiveEffect = {4020108},
+    BuffId = 4020208,
+    BuffType = T.RT_3,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020209] = {
+    AddPassiveEffect = {4020109},
+    BuffId = 4020209,
+    BuffType = T.RT_3,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020210] = {
+    AddPassiveEffect = {4020110},
+    BuffId = 4020210,
+    BuffType = T.RT_3,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020211] = {
+    AddPassiveEffect = {4020111},
+    BuffId = 4020211,
+    BuffType = T.RT_3,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020212] = {
+    AddPassiveEffect = {4020112},
+    BuffId = 4020212,
+    BuffType = T.RT_3,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020213] = {
+    AddPassiveEffect = {4020113},
+    BuffId = 4020213,
+    BuffType = T.RT_3,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020214] = {
+    AddPassiveEffect = {4020114},
+    BuffId = 4020214,
+    BuffType = T.RT_3,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020301] = {
+    AddPassiveEffect = T.RT_337,
+    BuffId = 4020301,
+    BuffType = T.RT_3,
+    FresnelParams = T.RT_232,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    NextPassParams = T.RT_338
+  },
+  [4020302] = {
+    AddPassiveEffect = T.RT_339,
+    BuffId = 4020302,
+    BuffType = T.RT_3,
+    FresnelParams = T.RT_232,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    NextPassParams = T.RT_338
+  },
+  [4020303] = {
+    AddPassiveEffect = T.RT_340,
+    BuffId = 4020303,
+    BuffType = T.RT_3,
+    FresnelParams = T.RT_232,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    NextPassParams = T.RT_338
+  },
+  [4020304] = {
+    AddPassiveEffect = T.RT_341,
+    BuffId = 4020304,
+    BuffType = T.RT_3,
+    FresnelParams = T.RT_232,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    NextPassParams = T.RT_338
+  },
+  [4020305] = {
+    AddPassiveEffect = T.RT_342,
+    BuffId = 4020305,
+    BuffType = T.RT_3,
+    FresnelParams = T.RT_232,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    NextPassParams = T.RT_338
+  },
+  [4020306] = {
+    AddPassiveEffect = T.RT_343,
+    BuffId = 4020306,
+    BuffType = T.RT_3,
+    FresnelParams = T.RT_232,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    NextPassParams = T.RT_338
+  },
+  [4020307] = {
+    AddPassiveEffect = T.RT_344,
+    BuffId = 4020307,
+    BuffType = T.RT_3,
+    FresnelParams = T.RT_232,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    NextPassParams = T.RT_338
+  },
+  [4020308] = {
+    AddPassiveEffect = T.RT_345,
+    BuffId = 4020308,
+    BuffType = T.RT_3,
+    FresnelParams = T.RT_232,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    NextPassParams = T.RT_338
+  },
+  [4020309] = {
+    AddPassiveEffect = T.RT_346,
+    BuffId = 4020309,
+    BuffType = T.RT_3,
+    FresnelParams = T.RT_232,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    NextPassParams = T.RT_338
+  },
+  [4020310] = {
+    AddPassiveEffect = T.RT_347,
+    BuffId = 4020310,
+    BuffType = T.RT_3,
+    FresnelParams = T.RT_232,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    NextPassParams = T.RT_338
+  },
+  [4020311] = {
+    AddPassiveEffect = T.RT_348,
+    BuffId = 4020311,
+    BuffType = T.RT_3,
+    FresnelParams = T.RT_232,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    NextPassParams = T.RT_338
+  },
+  [4020312] = {
+    AddPassiveEffect = T.RT_349,
+    BuffId = 4020312,
+    BuffType = T.RT_3,
+    FresnelParams = T.RT_232,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    NextPassParams = T.RT_338
+  },
+  [4020313] = {
+    AddPassiveEffect = T.RT_350,
+    BuffId = 4020313,
+    BuffType = T.RT_3,
+    FresnelParams = T.RT_232,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    NextPassParams = T.RT_338
+  },
+  [4020401] = {
+    AddAttrs = {
+      [1] = {AttrName = "DEF", Rate = -0.45}
+    },
+    BuffId = 4020401,
+    BuffType = T.RT_3,
+    BuffTypeImgPath = "Def_Down",
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020402] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "DEF",
+        Rate = -0.2,
+        Stackable = 1
+      }
+    },
+    BuffId = 4020402,
+    BuffType = T.RT_3,
+    BuffTypeImgPath = "Def_Down",
+    MaxLayer = 3,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020403] = {
+    AddAttrs = {
+      [1] = T.RT_351
+    },
+    BuffId = 4020403,
+    BuffType = T.RT_3,
+    BuffTypeImgPath = "Def_Up",
+    MaxLayer = 3,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020404] = {
+    AddAttrs = {
+      [1] = T.RT_352
+    },
+    BuffId = 4020404,
+    BuffType = T.RT_3,
+    BuffTypeImgPath = "Atk_Up",
+    MaxLayer = 3,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020405] = {
+    AddAttrs = {
+      [1] = {AttrName = "DEF", Rate = 0.45}
+    },
+    BuffId = 4020405,
+    BuffType = T.RT_3,
+    BuffTypeImgPath = "Def_Up",
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020406] = {
+    AddAttrs = T.RT_152,
+    BuffId = 4020406,
+    BuffType = T.RT_3,
+    BuffTypeImgPath = "Atk_Up",
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020407] = {
+    AddAttrs = T.RT_324,
+    BuffId = 4020407,
+    BuffType = T.RT_3,
+    BuffTypeImgPath = "Atk_Up",
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020408] = {
+    AddAttrs = T.RT_354,
+    BuffId = 4020408,
+    BuffType = T.RT_3,
+    BuffTypeImgPath = "Atk_Up",
+    MaxLayer = 3,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020409] = {
+    AddAttrs = T.RT_354,
+    BuffId = 4020409,
+    BuffType = T.RT_3,
+    BuffTypeImgPath = "Atk_Up",
+    MaxLayer = 3,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020410] = {
+    BuffId = 4020410,
+    BuffType = T.RT_3,
+    BuffTypeImgPath = "Hot_Up",
+    DotDatas = {
+      [1] = {
+        BaseAttr = "MaxHp",
+        DamageTag = T.RT_61,
+        DefaultHealFX = 1,
+        Interval = 1,
+        Rate = 0.075,
+        Type = "Hot"
+      }
+    },
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020411] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "ATK",
+        Rate = 0.15,
+        Stackable = 1
+      }
+    },
+    BuffId = 4020411,
+    BuffType = T.RT_3,
+    BuffTypeImgPath = "Atk_Up",
+    MaxLayer = 4,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020412] = {
+    AddAttrs = {
+      [1] = T.RT_353
+    },
+    BuffId = 4020412,
+    BuffType = T.RT_3,
+    BuffTypeImgPath = "Def_Up",
+    MaxLayer = 4,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020501] = {
+    AddAttrs = T.RT_335,
+    BuffId = 4020501,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020502] = {
+    AddAttrs = T.RT_356,
+    BuffId = 4020502,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020503] = {
+    AddAttrs = T.RT_358,
+    BuffId = 4020503,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020504] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "MaxES",
+        Rate = 0.9,
+        Stackable = 1
+      }
+    },
+    BuffId = 4020504,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020505] = {
+    AddAttrs = T.RT_356,
+    BuffId = 4020505,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020506] = {
+    AddAttrs = T.RT_356,
+    BuffId = 4020506,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020507] = {
+    AddAttrs = T.RT_356,
+    BuffId = 4020507,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020508] = {
+    AddAttrs = {
+      [1] = T.RT_359
+    },
+    BuffId = 4020508,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020509] = {
+    AddAttrs = T.RT_113,
+    BuffId = 4020509,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020510] = {
+    AddAttrs = T.RT_358,
+    BuffId = 4020510,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020511] = {
+    AddAttrs = T.RT_358,
+    BuffId = 4020511,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020512] = {
+    AddAttrs = T.RT_358,
+    BuffId = 4020512,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020513] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "ATK",
+        Rate = 0.55,
+        Stackable = 1
+      }
+    },
+    BuffId = 4020513,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020514] = {
+    AddAttrs = {
+      [1] = T.RT_360
+    },
+    BuffId = 4020514,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020601] = {
+    AddAttrs = T.RT_365,
+    BuffId = 4020601,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020602] = {
+    AddAttrs = T.RT_365,
+    BuffId = 4020602,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020603] = {
+    AddAttrs = {
+      [1] = T.RT_360,
+      [2] = {
+        AttrName = "DEF",
+        Rate = 0.5,
+        Stackable = 1
+      },
+      [3] = {
+        AttrName = "MaxHp",
+        Rate = 0.5,
+        Stackable = 1
+      },
+      [4] = {
+        AttrName = "MaxES",
+        Rate = 0.5,
+        Stackable = 1
+      }
+    },
+    BuffId = 4020603,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020604] = {
+    AddAttrs = T.RT_365,
+    BuffId = 4020604,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020605] = {
+    AddAttrs = T.RT_365,
+    BuffId = 4020605,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020606] = {
+    AddAttrs = T.RT_365,
+    BuffId = 4020606,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020607] = {
+    AddAttrs = {
+      [1] = T.RT_334,
+      [2] = T.RT_359,
+      [3] = T.RT_331,
+      [4] = {
+        AttrName = "MaxES",
+        Rate = 0.3,
+        Stackable = 1
+      }
+    },
+    BuffId = 4020607,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020608] = {
+    AddAttrs = T.RT_367,
+    BuffId = 4020608,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020609] = {
+    AddAttrs = {
+      [1] = T.RT_352,
+      [2] = T.RT_351,
+      [3] = {
+        AttrName = "MaxHp",
+        Rate = 0.25,
+        Stackable = 1
+      },
+      [4] = {
+        AttrName = "MaxES",
+        Rate = 0.25,
+        Stackable = 1
+      }
+    },
+    BuffId = 4020609,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020610] = {
+    AddAttrs = T.RT_365,
+    BuffId = 4020610,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020611] = {
+    AddAttrs = T.RT_367,
+    BuffId = 4020611,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020612] = {
+    AddAttrs = T.RT_365,
+    BuffId = 4020612,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020613] = {
+    AddAttrs = T.RT_365,
+    BuffId = 4020613,
+    BuffType = T.RT_3,
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020701] = {
+    BuffId = 4020701,
+    BuffType = T.RT_3,
+    BuffTypeImgPath = "Dot_Common",
+    DotDatas = {
+      [1] = {
+        BaseAttr = "MaxHp",
+        DamageTag = T.RT_7,
+        DamageType = "TrueDamage",
+        Interval = 1,
+        Rate = 0.1,
+        Type = "Dot"
+      }
+    },
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [4020702] = {
+    AddAttrs = {
+      [1] = {AttrName = "ATK", Rate = 4}
+    },
+    BuffId = 4020702,
+    BuffType = T.RT_3,
+    BuffTypeImgPath = "Atk_Up",
+    MaxLayer = 2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
   [5000001] = {
-    BuffEffects = T.RT_192,
+    BuffEffects = T.RT_198,
     BuffId = 5000001,
     BuffTypeImgPath = "Weapon_Spd_Down",
     DeadNotRemove = true,
@@ -9081,7 +10339,7 @@ return ReadOnly("Buff", {
         Value = 0.2
       }
     },
-    BuffEffects = T.RT_256,
+    BuffEffects = T.RT_272,
     BuffId = 5000002,
     BuffTypeImgPath = "Cri_Up",
     DeadNotRemove = true,
@@ -9091,11 +10349,11 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [5000003] = {
-    BuffEffects = T.RT_167,
+    BuffEffects = T.RT_174,
     BuffId = 5000003,
     BuffTypeImgPath = "Hot_Energy",
     DeadNotRemove = true,
-    DotDatas = T.RT_324,
+    DotDatas = T.RT_379,
     IsShowInBillboard = true,
     MaxLayer = 5,
     MergeRule1 = "Global",
@@ -9119,14 +10377,8 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [5000005] = {
-    AddAttrs = {
-      [1] = {
-        AttrName = "MaxHp",
-        Rate = 0.3,
-        Stackable = 1
-      }
-    },
-    BuffEffects = T.RT_167,
+    AddAttrs = T.RT_332,
+    BuffEffects = T.RT_174,
     BuffId = 5000005,
     BuffTypeImgPath = "Hot_Up",
     DeadNotRemove = true,
@@ -9145,7 +10397,7 @@ return ReadOnly("Buff", {
     MaxLayer = 10,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    UISpecialEffect = T.RT_304
+    UISpecialEffect = T.RT_319
   },
   [5000006] = {
     BuffId = 5000006,
@@ -9163,7 +10415,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [5000007] = {
-    BuffEffects = T.RT_325,
+    BuffEffects = T.RT_380,
     BuffId = 5000007,
     BuffTypeImgPath = "Dot_Common",
     DeadNotRemove = true,
@@ -9181,7 +10433,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [5000008] = {
-    BuffEffects = T.RT_325,
+    BuffEffects = T.RT_380,
     BuffId = 5000008,
     BuffTypeImgPath = "Dot_Common",
     DeadNotRemove = true,
@@ -9205,7 +10457,7 @@ return ReadOnly("Buff", {
         Value = 0.2
       }
     },
-    BuffEffects = T.RT_256,
+    BuffEffects = T.RT_272,
     BuffId = 5000011,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Cri_Up",
@@ -9216,7 +10468,7 @@ return ReadOnly("Buff", {
   },
   [5000012] = {
     BuffId = 5000012,
-    BuffType = T.RT_326,
+    BuffType = T.RT_381,
     HaloDatas = {
       [1] = {
         AuraRange = 4000,
@@ -9229,11 +10481,11 @@ return ReadOnly("Buff", {
     MergeRule2 = "NewFree"
   },
   [5000013] = {
-    BuffEffects = T.RT_167,
+    BuffEffects = T.RT_174,
     BuffId = 5000013,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Hot_Energy",
-    DotDatas = T.RT_324,
+    DotDatas = T.RT_379,
     IsShowInBillboard = true,
     MaxLayer = 5,
     MergeRule1 = "Global",
@@ -9241,7 +10493,7 @@ return ReadOnly("Buff", {
   },
   [5000014] = {
     BuffId = 5000014,
-    BuffType = T.RT_326,
+    BuffType = T.RT_381,
     HaloDatas = {
       [1] = {
         AuraRange = 4000,
@@ -9254,7 +10506,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "NewFree"
   },
   [5000015] = {
-    BuffEffects = T.RT_167,
+    BuffEffects = T.RT_174,
     BuffId = 5000015,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Common_Buff",
@@ -9265,7 +10517,7 @@ return ReadOnly("Buff", {
   },
   [5000016] = {
     BuffId = 5000016,
-    BuffType = T.RT_326,
+    BuffType = T.RT_381,
     HaloDatas = {
       [1] = {
         AuraRange = 4000,
@@ -9279,7 +10531,7 @@ return ReadOnly("Buff", {
   },
   [5000017] = {
     BuffId = 5000017,
-    LockHp = T.RT_327,
+    LockHp = T.RT_382,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -9299,7 +10551,7 @@ return ReadOnly("Buff", {
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_328
+    VisualEffects = T.RT_383
   },
   [5000019] = {
     BuffId = 5000019,
@@ -9317,7 +10569,7 @@ return ReadOnly("Buff", {
     IsShowInBillboard = true,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_328
+    VisualEffects = T.RT_383
   },
   [5000020] = {
     BuffId = 5000020,
@@ -9331,11 +10583,16 @@ return ReadOnly("Buff", {
     ForbidCatch = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NotEnterCharacterTagType = T.RT_329,
+    NotEnterCharacterTagType = T.RT_384,
     VisualEffects = {900064}
   },
   [5000021] = {
-    AddAttrs = T.RT_173,
+    AddAttrs = {
+      [1] = {
+        AttrName = "MoveSpeedAddRate",
+        Value = -0.95
+      }
+    },
     BuffId = 5000021,
     BuffType = T.RT_11,
     BuffTypeImgPath = "Slowdown",
@@ -9346,36 +10603,36 @@ return ReadOnly("Buff", {
   },
   [5000022] = {
     BuffId = 5000022,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Dot_Common",
-    DotDatas = T.RT_332,
+    DotDatas = T.RT_387,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_333
+    VisualEffects = T.RT_388
   },
   [5000100] = {
-    AddAttrs = T.RT_337,
+    AddAttrs = T.RT_392,
     BuffId = 5000100,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Boost",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "NewFree",
-    VisualEffects = T.RT_338
+    VisualEffects = T.RT_393
   },
   [5000101] = {
-    AddAttrs = T.RT_340,
+    AddAttrs = T.RT_395,
     BuffId = 5000101,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Boost",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "NewFree",
-    VisualEffects = T.RT_338
+    VisualEffects = T.RT_393
   },
   [5000102] = {
-    AddAttrs = T.RT_340,
+    AddAttrs = T.RT_395,
     BuffEffects = {10301004},
     BuffId = 5000102,
     BuffType = T.RT_3,
@@ -9402,7 +10659,7 @@ return ReadOnly("Buff", {
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_328
+    VisualEffects = T.RT_383
   },
   [5000104] = {
     AddAttrs = {
@@ -9412,13 +10669,21 @@ return ReadOnly("Buff", {
     BuffType = T.RT_19,
     BuffTypeImgPath = "Def_Up",
     CannotBeHitted = true,
-    ForbidBuffType = T.RT_341,
+    ForbidBuffType = T.RT_396,
     ForbidCatch = true,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NotEnterCharacterTagType = T.RT_329,
-    VisualEffects = T.RT_342
+    NotEnterCharacterTagType = T.RT_384,
+    VisualEffects = T.RT_397
+  },
+  [5000105] = {
+    BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_5000105.BP_Buff_5000105",
+    BuffId = 5000105,
+    BuffType = T.RT_299,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge",
+    SetCharacterTag = "LightHit"
   },
   [5000201] = {
     BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_5000201.BP_Buff_5000201",
@@ -9430,7 +10695,7 @@ return ReadOnly("Buff", {
   [5000202] = {
     BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_Paoku_Common.BP_Buff_Paoku_Common",
     BuffId = 5000202,
-    BuffType = T.RT_249,
+    BuffType = T.RT_265,
     BuffTypeImgPath = "Stun",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
@@ -9442,7 +10707,7 @@ return ReadOnly("Buff", {
   [5000203] = {
     BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_5000203.BP_Buff_5000203",
     BuffId = 5000203,
-    BuffType = T.RT_106,
+    BuffType = T.RT_122,
     DisableSkills = {
       "FallAttack",
       "HeavyAttack",
@@ -9484,7 +10749,7 @@ return ReadOnly("Buff", {
   [5000205] = {
     BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_Paoku_Common.BP_Buff_Paoku_Common",
     BuffId = 5000205,
-    BuffType = T.RT_249,
+    BuffType = T.RT_265,
     BuffTypeImgPath = "Stun",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
@@ -9494,7 +10759,7 @@ return ReadOnly("Buff", {
     StunType = "StunCommon"
   },
   [5000206] = {
-    AddAttrs = T.RT_337,
+    AddAttrs = T.RT_392,
     BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_Paoku_Common.BP_Buff_Paoku_Common",
     BuffId = 5000206,
     BuffType = T.RT_3,
@@ -9507,20 +10772,20 @@ return ReadOnly("Buff", {
   [5000207] = {
     BPPath = "/Game/BluePrints/Combat/Buff/BPBuffs/BP_Buff_Paoku_Common.BP_Buff_Paoku_Common",
     BuffId = 5000207,
-    BuffType = T.RT_268,
+    BuffType = T.RT_285,
     BuffTypeImgPath = "Invincible",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     NotEnterCharacterTagType = {"Hit", "Controlled"},
     Priority = 1000,
-    SpecialEffect = T.RT_135,
-    UISpecialEffect = T.RT_227,
+    SpecialEffect = T.RT_141,
+    UISpecialEffect = T.RT_233,
     VisualEffects = {245}
   },
   [5000208] = {
     AddAttrs = {
-      [1] = T.RT_298,
+      [1] = T.RT_313,
       [2] = {
         AttrName = "AvoidChargeCd",
         Rate = -0.5
@@ -9546,9 +10811,9 @@ return ReadOnly("Buff", {
         AttrName = "WalkSpeedModifier",
         Value = 0.2
       },
-      [2] = T.RT_334,
-      [3] = T.RT_335,
-      [4] = T.RT_336
+      [2] = T.RT_389,
+      [3] = T.RT_390,
+      [4] = T.RT_391
     },
     BuffId = 5000301,
     BuffType = T.RT_3,
@@ -9647,7 +10912,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [6000004] = {
-    AddAttrs = T.RT_312,
+    AddAttrs = T.RT_329,
     BuffId = 6000004,
     BuffType = T.RT_11,
     BuffTypeImgPath = "Damaged_Up",
@@ -9717,10 +10982,7 @@ return ReadOnly("Buff", {
   },
   [6000011] = {
     AddAttrs = {
-      [1] = {
-        AttrName = "WaterDamagedRate",
-        Value = -0.5
-      }
+      [1] = T.RT_240
     },
     BuffId = 6000011,
     BuffType = T.RT_3,
@@ -9756,7 +11018,7 @@ return ReadOnly("Buff", {
   },
   [6000014] = {
     AddAttrs = {
-      [1] = T.RT_229
+      [1] = T.RT_235
     },
     BuffId = 6000014,
     BuffType = T.RT_11,
@@ -9766,10 +11028,7 @@ return ReadOnly("Buff", {
   },
   [6000021] = {
     AddAttrs = {
-      [1] = {
-        AttrName = "FireDamagedRate",
-        Value = -0.5
-      }
+      [1] = T.RT_236
     },
     BuffId = 6000021,
     BuffType = T.RT_3,
@@ -9805,7 +11064,7 @@ return ReadOnly("Buff", {
   },
   [6000024] = {
     AddAttrs = {
-      [1] = T.RT_232
+      [1] = T.RT_239
     },
     BuffId = 6000024,
     BuffType = T.RT_11,
@@ -9815,10 +11074,7 @@ return ReadOnly("Buff", {
   },
   [6000031] = {
     AddAttrs = {
-      [1] = {
-        AttrName = "ThunderDamagedRate",
-        Value = -0.5
-      }
+      [1] = T.RT_237
     },
     BuffId = 6000031,
     BuffType = T.RT_3,
@@ -9854,10 +11110,7 @@ return ReadOnly("Buff", {
   },
   [6000034] = {
     AddAttrs = {
-      [1] = {
-        AttrName = "ThunderDamagedRate",
-        Value = 4
-      }
+      [1] = T.RT_241
     },
     BuffId = 6000034,
     BuffType = T.RT_11,
@@ -9867,10 +11120,7 @@ return ReadOnly("Buff", {
   },
   [6000041] = {
     AddAttrs = {
-      [1] = {
-        AttrName = "WindDamagedRate",
-        Value = -0.5
-      }
+      [1] = T.RT_238
     },
     BuffId = 6000041,
     BuffType = T.RT_3,
@@ -9906,7 +11156,7 @@ return ReadOnly("Buff", {
   },
   [6000044] = {
     AddAttrs = {
-      [1] = T.RT_231
+      [1] = T.RT_242
     },
     BuffId = 6000044,
     BuffType = T.RT_11,
@@ -9916,10 +11166,7 @@ return ReadOnly("Buff", {
   },
   [6000051] = {
     AddAttrs = {
-      [1] = {
-        AttrName = "DarkDamagedRate",
-        Value = -0.5
-      }
+      [1] = T.RT_244
     },
     BuffId = 6000051,
     BuffType = T.RT_3,
@@ -9939,7 +11186,12 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [6000053] = {
-    AddAttrs = T.RT_128,
+    AddAttrs = {
+      [1] = {
+        AttrName = "DarkDamagedRate",
+        Value = 0.5
+      }
+    },
     BuffId = 6000053,
     BuffType = T.RT_11,
     MergeRule1 = "Global",
@@ -9948,7 +11200,7 @@ return ReadOnly("Buff", {
   },
   [6000054] = {
     AddAttrs = {
-      [1] = T.RT_233
+      [1] = T.RT_245
     },
     BuffId = 6000054,
     BuffType = T.RT_11,
@@ -9958,10 +11210,7 @@ return ReadOnly("Buff", {
   },
   [6000061] = {
     AddAttrs = {
-      [1] = {
-        AttrName = "LightDamagedRate",
-        Value = -0.5
-      }
+      [1] = T.RT_246
     },
     BuffId = 6000061,
     BuffType = T.RT_3,
@@ -9995,7 +11244,7 @@ return ReadOnly("Buff", {
   },
   [6000064] = {
     AddAttrs = {
-      [1] = T.RT_230
+      [1] = T.RT_243
     },
     BuffId = 6000064,
     BuffType = T.RT_11,
@@ -10077,18 +11326,18 @@ return ReadOnly("Buff", {
   },
   [6000102] = {
     BuffId = 6000102,
-    BuffType = T.RT_302,
+    BuffType = T.RT_317,
     BuffTypeImgPath = "Slowdown",
     IsShowInBillboard = true,
     MaxLayer = 5,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     TimeDilation = 0.96,
-    VisualEffects = T.RT_365
+    VisualEffects = T.RT_420
   },
   [6000103] = {
     BuffId = 6000103,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Dot_Common",
     DotDatas = {
       [1] = {
@@ -10145,7 +11394,7 @@ return ReadOnly("Buff", {
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_366
+    VisualEffects = T.RT_421
   },
   [6000111] = {
     BuffId = 6000111,
@@ -10168,7 +11417,7 @@ return ReadOnly("Buff", {
     AddAttrs = {
       [1] = {AttrName = "DEF", Rate = 0.5},
       [2] = T.RT_104,
-      [3] = T.RT_367,
+      [3] = T.RT_422,
       [4] = {
         AttrName = "MoveSpeedAddRate",
         Value = 0.4
@@ -10181,11 +11430,11 @@ return ReadOnly("Buff", {
     MaxLayer = 3,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    VisualEffects = T.RT_342
+    VisualEffects = T.RT_397
   },
   [6000113] = {
     BuffId = 6000113,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Slowdown",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
@@ -10195,23 +11444,23 @@ return ReadOnly("Buff", {
   },
   [6000114] = {
     BuffId = 6000114,
-    BuffType = T.RT_148,
+    BuffType = T.RT_156,
     BuffTypeImgPath = "Slowdown",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     TimeDilation = 0.7,
-    VisualEffects = T.RT_246
+    VisualEffects = T.RT_263
   },
   [6000115] = {
     BuffId = 6000115,
-    BuffType = T.RT_147,
+    BuffType = T.RT_155,
     BuffTypeImgPath = "Slowdown",
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     TimeDilation = 0.5,
-    VisualEffects = T.RT_313
+    VisualEffects = T.RT_330
   },
   [6000116] = {
     BuffId = 6000116,
@@ -10245,47 +11494,47 @@ return ReadOnly("Buff", {
   [6000118] = {
     BuffId = 6000118,
     BuffType = T.RT_3,
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_368,
+    NextPassParams = T.RT_338,
     Priority = 1000
   },
   [6000119] = {
     BuffId = 6000119,
     BuffType = T.RT_3,
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_369,
+    NextPassParams = T.RT_423,
     Priority = 1000
   },
   [6000120] = {
     BuffId = 6000120,
     BuffType = T.RT_3,
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_370,
+    NextPassParams = T.RT_424,
     Priority = 1000
   },
   [6000200] = {
     BuffId = 6000200,
-    ForbidBuffType = T.RT_371,
+    ForbidBuffType = T.RT_425,
     ForbidCatch = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NotEnterCharacterTagType = T.RT_329
+    NotEnterCharacterTagType = T.RT_384
   },
   [6000201] = {
     BuffId = 6000201,
     BuffTypeImgPath = "Common_Buff",
-    ForbidBuffType = T.RT_371,
+    ForbidBuffType = T.RT_425,
     ForbidCatch = true,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NotEnterCharacterTagType = T.RT_329
+    NotEnterCharacterTagType = T.RT_384
   },
   [6000202] = {
     BuffId = 6000202,
@@ -10294,7 +11543,7 @@ return ReadOnly("Buff", {
     ForbidCatch = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NotEnterCharacterTagType = T.RT_329
+    NotEnterCharacterTagType = T.RT_384
   },
   [6000203] = {
     BuffId = 6000203,
@@ -10305,26 +11554,26 @@ return ReadOnly("Buff", {
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NotEnterCharacterTagType = T.RT_329
+    NotEnterCharacterTagType = T.RT_384
   },
   [6000204] = {
     BuffId = 6000204,
     CannotBeCutTN = true,
-    ForbidBuffType = T.RT_269,
+    ForbidBuffType = T.RT_286,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    SpecialEffect = T.RT_135
+    SpecialEffect = T.RT_141
   },
   [6000205] = {
     BuffId = 6000205,
     BuffTypeImgPath = "Invincible",
     CannotBeCutTN = true,
-    ForbidBuffType = T.RT_269,
+    ForbidBuffType = T.RT_286,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     NotEnterTarget = true,
-    SpecialEffect = T.RT_135
+    SpecialEffect = T.RT_141
   },
   [6000206] = {
     AddAttrs = {
@@ -10366,15 +11615,15 @@ return ReadOnly("Buff", {
   [6000210] = {
     BuffId = 6000210,
     CannotBeHitted = true,
-    ForbidBuffType = T.RT_341,
+    ForbidBuffType = T.RT_396,
     ForbidCatch = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NotEnterCharacterTagType = T.RT_329
+    NotEnterCharacterTagType = T.RT_384
   },
   [6000211] = {
     BuffId = 6000211,
-    LockHp = T.RT_176,
+    LockHp = T.RT_182,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -10396,181 +11645,181 @@ return ReadOnly("Buff", {
     MaxLayer = 6,
     MergeRule1 = "Global",
     MergeRule2 = "NewFree",
-    VisualEffects = T.RT_372
+    VisualEffects = T.RT_426
   },
   [6000401] = {
-    AddPassiveEffect = {6000101},
+    AddPassiveEffect = T.RT_337,
     BuffId = 6000401,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Frozen",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99915,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_368,
+    NextPassParams = T.RT_338,
     Priority = 1000
   },
   [6000402] = {
-    AddPassiveEffect = {6000102},
+    AddPassiveEffect = T.RT_339,
     BuffId = 6000402,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Burst",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99929,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_368,
+    NextPassParams = T.RT_338,
     Priority = 1000
   },
   [6000403] = {
-    AddPassiveEffect = {6000103},
+    AddPassiveEffect = T.RT_340,
     BuffId = 6000403,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Poison",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99949,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_368,
+    NextPassParams = T.RT_338,
     Priority = 1000
   },
   [6000404] = {
-    AddPassiveEffect = {6000104},
+    AddPassiveEffect = T.RT_341,
     BuffId = 6000404,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Thunder",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99958,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_368,
+    NextPassParams = T.RT_338,
     Priority = 1000
   },
   [6000405] = {
-    AddPassiveEffect = {6000105},
+    AddPassiveEffect = T.RT_342,
     BuffId = 6000405,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Blood",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99939,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_368,
+    NextPassParams = T.RT_338,
     Priority = 1000
   },
   [6000406] = {
-    AddPassiveEffect = {6000106},
+    AddPassiveEffect = T.RT_343,
     BuffId = 6000406,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Fade",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99938,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_368,
+    NextPassParams = T.RT_338,
     Priority = 1000
   },
   [6000407] = {
-    AddPassiveEffect = {6000107},
+    AddPassiveEffect = T.RT_344,
     BuffId = 6000407,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Shield",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99914,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_368,
+    NextPassParams = T.RT_338,
     Priority = 1000
   },
   [6000408] = {
-    AddPassiveEffect = {6000108},
+    AddPassiveEffect = T.RT_345,
     BuffId = 6000408,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Revenge",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99935,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_368,
+    NextPassParams = T.RT_338,
     Priority = 1000
   },
   [6000409] = {
-    AddPassiveEffect = {6000109},
+    AddPassiveEffect = T.RT_346,
     BuffId = 6000409,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_IceOrb",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99919,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_368,
+    NextPassParams = T.RT_338,
     Priority = 1000
   },
   [6000410] = {
-    AddPassiveEffect = {6000110},
+    AddPassiveEffect = T.RT_347,
     BuffId = 6000410,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Reflect",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99925,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_368,
+    NextPassParams = T.RT_338,
     Priority = 1000
   },
   [6000411] = {
-    AddPassiveEffect = {6000111},
+    AddPassiveEffect = T.RT_348,
     BuffId = 6000411,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Kamikaze",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99945,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_368,
+    NextPassParams = T.RT_338,
     Priority = 1000
   },
   [6000412] = {
-    AddPassiveEffect = {6000112},
+    AddPassiveEffect = T.RT_349,
     BuffId = 6000412,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_ThunderLaser",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99959,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_368,
+    NextPassParams = T.RT_338,
     Priority = 1000
   },
   [6000413] = {
-    AddPassiveEffect = {6000113},
+    AddPassiveEffect = T.RT_350,
     BuffId = 6000413,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Vampire",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99969,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_368,
+    NextPassParams = T.RT_338,
     Priority = 1000
   },
   [6000414] = {
     AddPassiveEffect = {6000114},
     BuffId = 6000414,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Threefold",
     IconPriority = 99968,
     IsShowInBillboard = true,
@@ -10581,176 +11830,176 @@ return ReadOnly("Buff", {
   [6000501] = {
     AddPassiveEffect = {6000201},
     BuffId = 6000501,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Frozen",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99915,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_369,
+    NextPassParams = T.RT_423,
     Priority = 1000
   },
   [6000502] = {
     AddPassiveEffect = {6000202},
     BuffId = 6000502,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Burst",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99929,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_369,
+    NextPassParams = T.RT_423,
     Priority = 1000
   },
   [6000503] = {
     AddPassiveEffect = {6000203},
     BuffId = 6000503,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Poison",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99949,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_369,
+    NextPassParams = T.RT_423,
     Priority = 1000
   },
   [6000504] = {
     AddPassiveEffect = {6000204},
     BuffId = 6000504,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Thunder",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99958,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_369,
+    NextPassParams = T.RT_423,
     Priority = 1000
   },
   [6000505] = {
     AddPassiveEffect = {6000205},
     BuffId = 6000505,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Blood",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99939,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_369,
+    NextPassParams = T.RT_423,
     Priority = 1000
   },
   [6000506] = {
-    AddPassiveEffect = T.RT_138,
+    AddPassiveEffect = T.RT_144,
     BuffId = 6000506,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Fade",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99938,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_369,
+    NextPassParams = T.RT_423,
     Priority = 1000
   },
   [6000507] = {
     AddPassiveEffect = {6000207},
     BuffId = 6000507,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Shield",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99914,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_369,
+    NextPassParams = T.RT_423,
     Priority = 1000
   },
   [6000508] = {
     AddPassiveEffect = {6000208},
     BuffId = 6000508,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Revenge",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99935,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_369,
+    NextPassParams = T.RT_423,
     Priority = 1000
   },
   [6000509] = {
     AddPassiveEffect = {6000209},
     BuffId = 6000509,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_IceOrb",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99919,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_369,
+    NextPassParams = T.RT_423,
     Priority = 1000
   },
   [6000510] = {
     AddPassiveEffect = {6000210},
     BuffId = 6000510,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Reflect",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99925,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_369,
+    NextPassParams = T.RT_423,
     Priority = 1000
   },
   [6000511] = {
     AddPassiveEffect = {6000211},
     BuffId = 6000511,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Kamikaze",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99945,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_369,
+    NextPassParams = T.RT_423,
     Priority = 1000
   },
   [6000512] = {
     AddPassiveEffect = {6000212},
     BuffId = 6000512,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_ThunderLaser",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99959,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_369,
+    NextPassParams = T.RT_423,
     Priority = 1000
   },
   [6000513] = {
     AddPassiveEffect = {6000213},
     BuffId = 6000513,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Vampire",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99969,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_369,
+    NextPassParams = T.RT_423,
     Priority = 1000
   },
   [6000514] = {
     AddPassiveEffect = {6000214},
     BuffId = 6000514,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Threefold",
     IconPriority = 99968,
     IsShowInBillboard = true,
@@ -10761,176 +12010,176 @@ return ReadOnly("Buff", {
   [6000601] = {
     AddPassiveEffect = {6000301},
     BuffId = 6000601,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Frozen",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99915,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_370,
+    NextPassParams = T.RT_424,
     Priority = 1000
   },
   [6000602] = {
     AddPassiveEffect = {6000302},
     BuffId = 6000602,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Burst",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99929,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_370,
+    NextPassParams = T.RT_424,
     Priority = 1000
   },
   [6000603] = {
     AddPassiveEffect = {6000303},
     BuffId = 6000603,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Poison",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99949,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_370,
+    NextPassParams = T.RT_424,
     Priority = 1000
   },
   [6000604] = {
     AddPassiveEffect = {6000304},
     BuffId = 6000604,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Thunder",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99958,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_370,
+    NextPassParams = T.RT_424,
     Priority = 1000
   },
   [6000605] = {
     AddPassiveEffect = {6000305},
     BuffId = 6000605,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Blood",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99939,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_370,
+    NextPassParams = T.RT_424,
     Priority = 1000
   },
   [6000606] = {
     AddPassiveEffect = {6000306},
     BuffId = 6000606,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Fade",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99938,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_370,
+    NextPassParams = T.RT_424,
     Priority = 1000
   },
   [6000607] = {
     AddPassiveEffect = {6000307},
     BuffId = 6000607,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Shield",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99914,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_370,
+    NextPassParams = T.RT_424,
     Priority = 1000
   },
   [6000608] = {
     AddPassiveEffect = {6000308},
     BuffId = 6000608,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Revenge",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99935,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_370,
+    NextPassParams = T.RT_424,
     Priority = 1000
   },
   [6000609] = {
     AddPassiveEffect = {6000309},
     BuffId = 6000609,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_IceOrb",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99919,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_370,
+    NextPassParams = T.RT_424,
     Priority = 1000
   },
   [6000610] = {
     AddPassiveEffect = {6000310},
     BuffId = 6000610,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Reflect",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99925,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_370,
+    NextPassParams = T.RT_424,
     Priority = 1000
   },
   [6000611] = {
     AddPassiveEffect = {6000311},
     BuffId = 6000611,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Kamikaze",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99945,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_370,
+    NextPassParams = T.RT_424,
     Priority = 1000
   },
   [6000612] = {
     AddPassiveEffect = {6000312},
     BuffId = 6000612,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_ThunderLaser",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99959,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_370,
+    NextPassParams = T.RT_424,
     Priority = 1000
   },
   [6000613] = {
     AddPassiveEffect = {6000313},
     BuffId = 6000613,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Vampire",
-    FresnelParams = T.RT_226,
+    FresnelParams = T.RT_232,
     IconPriority = 99969,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    NextPassParams = T.RT_370,
+    NextPassParams = T.RT_424,
     Priority = 1000
   },
   [6000614] = {
     AddPassiveEffect = {6000314},
     BuffId = 6000614,
-    BuffType = T.RT_373,
+    BuffType = T.RT_427,
     BuffTypeImgPath = "Elite_Threefold",
     IconPriority = 99968,
     IsShowInBillboard = true,
@@ -10945,8 +12194,8 @@ return ReadOnly("Buff", {
       Shooting = 90002
     },
     BuffId = 9000101,
-    BuffType = T.RT_106,
-    DisableSkills = T.RT_391,
+    BuffType = T.RT_122,
+    DisableSkills = T.RT_443,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -10957,8 +12206,8 @@ return ReadOnly("Buff", {
       Shooting = 90012
     },
     BuffId = 9000102,
-    BuffType = T.RT_106,
-    DisableSkills = T.RT_391,
+    BuffType = T.RT_122,
+    DisableSkills = T.RT_443,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -10969,8 +12218,8 @@ return ReadOnly("Buff", {
       Shooting = 4010101
     },
     BuffId = 9000103,
-    BuffType = T.RT_106,
-    DisableSkills = T.RT_391,
+    BuffType = T.RT_122,
+    DisableSkills = T.RT_443,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -10981,8 +12230,8 @@ return ReadOnly("Buff", {
       Shooting = 4010201
     },
     BuffId = 9000104,
-    BuffType = T.RT_106,
-    DisableSkills = T.RT_391,
+    BuffType = T.RT_122,
+    DisableSkills = T.RT_443,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -11886,7 +13135,7 @@ return ReadOnly("Buff", {
     NotEnterCharacterTagType = T.RT_27
   },
   [20116001] = {
-    BuffDamagedRate = T.RT_141,
+    BuffDamagedRate = T.RT_147,
     BuffId = 20116001,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Damaged_Down",
@@ -11945,7 +13194,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [20152001] = {
-    AddAttrs = T.RT_242,
+    AddAttrs = T.RT_259,
     BuffId = 20152001,
     BuffType = T.RT_28,
     DeadNotRemove = true,
@@ -11953,7 +13202,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [20153001] = {
-    AddAttrs = T.RT_242,
+    AddAttrs = T.RT_259,
     BuffId = 20153001,
     BuffType = T.RT_28,
     DeadNotRemove = true,
@@ -12006,7 +13255,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [20161001] = {
-    BuffDamagedRate = T.RT_141,
+    BuffDamagedRate = T.RT_147,
     BuffId = 20161001,
     BuffType = T.RT_3,
     BuffTypeImgPath = "Damaged_Down",
@@ -12096,9 +13345,9 @@ return ReadOnly("Buff", {
   [30400001] = {
     AddPassiveEffect = {30424},
     BuffId = 30400001,
-    BuffType = T.RT_272,
+    BuffType = T.RT_289,
     BuffTypeImgPath = "Elite_Threefold",
-    DisperseBuffType = T.RT_273,
+    DisperseBuffType = T.RT_290,
     EmissiveParams = {
       EmissiveColor = {
         0,
@@ -12113,14 +13362,14 @@ return ReadOnly("Buff", {
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     Priority = 1000,
-    VisualEffects = T.RT_274
+    VisualEffects = T.RT_291
   },
   [30400002] = {
     AddPassiveEffect = {30425},
     BuffId = 30400002,
-    BuffType = T.RT_275,
+    BuffType = T.RT_292,
     BuffTypeImgPath = "Elite_Vampire",
-    DisperseBuffType = T.RT_276,
+    DisperseBuffType = T.RT_293,
     EmissiveParams = {
       EmissiveColor = {
         9.8,
@@ -12135,7 +13384,7 @@ return ReadOnly("Buff", {
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     Priority = 1000,
-    VisualEffects = T.RT_277
+    VisualEffects = T.RT_294
   },
   [30400003] = {
     AddAttrs = {
@@ -12160,7 +13409,7 @@ return ReadOnly("Buff", {
     },
     BuffId = 30400004,
     BuffType = T.RT_3,
-    CameraParam = T.RT_278,
+    CameraParam = T.RT_295,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -12186,9 +13435,9 @@ return ReadOnly("Buff", {
   [30400007] = {
     AddPassiveEffect = {30426},
     BuffId = 30400007,
-    BuffType = T.RT_279,
+    BuffType = T.RT_296,
     BuffTypeImgPath = "Elite_Vampire",
-    DisperseBuffType = T.RT_280,
+    DisperseBuffType = T.RT_297,
     EmissiveParams = {
       EmissiveColor = {
         10,
@@ -12203,50 +13452,50 @@ return ReadOnly("Buff", {
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     Priority = 1000,
-    VisualEffects = T.RT_281
+    VisualEffects = T.RT_298
   },
   [30400008] = {
     BuffId = 30400008,
-    BuffType = T.RT_272,
+    BuffType = T.RT_289,
     BuffTypeImgPath = "Elite_Threefold",
     DeadNotRemove = true,
-    DisperseBuffType = T.RT_273,
+    DisperseBuffType = T.RT_290,
     IconPriority = 99935,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     Priority = 1000,
-    VisualEffects = T.RT_274
+    VisualEffects = T.RT_291
   },
   [30400009] = {
     BuffId = 30400009,
-    BuffType = T.RT_275,
+    BuffType = T.RT_292,
     BuffTypeImgPath = "Elite_Vampire",
     DeadNotRemove = true,
-    DisperseBuffType = T.RT_276,
+    DisperseBuffType = T.RT_293,
     IconPriority = 99919,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     Priority = 1000,
-    VisualEffects = T.RT_277
+    VisualEffects = T.RT_294
   },
   [30400010] = {
     BuffId = 30400010,
-    BuffType = T.RT_279,
+    BuffType = T.RT_296,
     BuffTypeImgPath = "Elite_Vampire",
     DeadNotRemove = true,
-    DisperseBuffType = T.RT_280,
+    DisperseBuffType = T.RT_297,
     IconPriority = 99925,
     IsShowInBillboard = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     Priority = 1000,
-    VisualEffects = T.RT_281
+    VisualEffects = T.RT_298
   },
   [30400011] = {
     BuffId = 30400011,
-    BuffType = T.RT_282,
+    BuffType = T.RT_299,
     BuffTypeImgPath = "Elite_Vampire",
     EmissiveParams = {
       EmissiveColor = {
@@ -12265,7 +13514,7 @@ return ReadOnly("Buff", {
   },
   [30400012] = {
     BuffId = 30400012,
-    BuffType = T.RT_282,
+    BuffType = T.RT_299,
     BuffTypeImgPath = "Elite_Vampire",
     IconPriority = 99959,
     IsShowInBillboard = true,
@@ -12275,14 +13524,14 @@ return ReadOnly("Buff", {
   },
   [30400013] = {
     BuffId = 30400013,
-    LockHp = T.RT_283,
+    LockHp = T.RT_300,
     LockHpUI = 0,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [30400014] = {
     BuffId = 30400014,
-    BuffType = T.RT_282,
+    BuffType = T.RT_299,
     BuffTypeImgPath = "Elite_Vampire",
     IconPriority = 99968,
     IsShowInBillboard = true,
@@ -12292,7 +13541,7 @@ return ReadOnly("Buff", {
   },
   [30400015] = {
     BuffId = 30400015,
-    BuffType = T.RT_282,
+    BuffType = T.RT_299,
     BuffTypeImgPath = "Elite_Vampire",
     IconPriority = 99915,
     IsShowInBillboard = true,
@@ -12302,7 +13551,7 @@ return ReadOnly("Buff", {
   },
   [30400016] = {
     BuffId = 30400016,
-    BuffType = T.RT_282,
+    BuffType = T.RT_299,
     BuffTypeImgPath = "Elite_Vampire",
     IconPriority = 99929,
     IsShowInBillboard = true,
@@ -12359,7 +13608,7 @@ return ReadOnly("Buff", {
     MergeRule2 = "Merge"
   },
   [40101006] = {
-    AddAttrs = T.RT_312,
+    AddAttrs = T.RT_329,
     BuffId = 40101006,
     BuffType = T.RT_3,
     DeadNotRemove = true,
@@ -12438,7 +13687,7 @@ return ReadOnly("Buff", {
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     TimeDilation = 0.3,
-    VisualEffects = T.RT_313
+    VisualEffects = T.RT_330
   },
   [40101017] = {
     BuffDamagedRate = {Value = 0.15},
@@ -12466,7 +13715,7 @@ return ReadOnly("Buff", {
     VisualEffects = {40101006}
   },
   [99999999] = {
-    AddAttrs = T.RT_181,
+    AddAttrs = T.RT_187,
     BuffId = 99999999,
     MaxLayer = 2,
     MergeRule1 = "Global",

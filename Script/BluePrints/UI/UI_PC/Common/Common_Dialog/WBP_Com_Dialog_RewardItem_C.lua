@@ -16,6 +16,9 @@ function M:OnListItemObjectSet(Content)
   if not self.GameInputModeSubsystem then
     self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
   end
+  if Content.ConfigData.ReceiveBtnPath then
+    self.Btn_Reward.AudioEventPath = ConfigData.PackingInfo.ReceiveBtnSoundPath
+  end
   self.Owner = Content.Owner
   self:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Content = Content
@@ -73,6 +76,7 @@ function M:OnListItemObjectSet(Content)
   if not Content.ConfigData.ShowIcon then
     self.Icon:SetVisibility(UIConst.VisibilityOp.Collapsed)
   else
+    self.Icon:SetVisibility(UIConst.VisibilityOp.Visible)
     self:SetIcon(Content.ConfigData.IconPath)
   end
   self.Text_Num:SetText(Content.ConfigData.SourceNum)
@@ -83,6 +87,14 @@ function M:OnListItemObjectSet(Content)
   end
   self.IsListened = true
   self:InitRewards(Content.ConfigData)
+  if Content.ConfigData.NeedSwitchType then
+    if self.WS_Type then
+      self.WS_Type:SetActiveWidgetIndex(1)
+      self.Text_Abyss:SetText(GText(Content.ConfigData.EmptyHint))
+    end
+  elseif self.WS_Type then
+    self.WS_Type:SetActiveWidgetIndex(0)
+  end
 end
 
 function M:SetIcon(IconPath)
@@ -182,9 +194,18 @@ function M:InitRewards(Config)
   end, false, 0, nil, true)
 end
 
-function M:RefreshBtn(IsGot)
+function M:RefreshBtn(IsGot, CanReceive)
   if IsGot then
     self.WS_State:SetActiveWidgetIndex(1)
+    if self.Content.ConfigData.HideProgressAfterGot then
+      self.Text_Progress:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+  elseif not CanReceive then
+    self.WS_State:SetActiveWidgetIndex(2)
+  elseif self.Content.ConfigData.HasGoto then
+    self.WS_State:SetActiveWidgetIndex(3)
+  else
+    self.WS_State:SetActiveWidgetIndex(0)
   end
 end
 
@@ -362,6 +383,9 @@ function M:OnNavigateUp()
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
+  if self.Content.ConfigData.NeedSwitchType then
+    return
+  end
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   local IsEventHandled = false

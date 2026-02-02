@@ -604,6 +604,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -693,6 +694,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -898,6 +900,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1021,6 +1024,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1119,6 +1123,7 @@ return {
             pos = {x = 1991.2981283422455, y = 1382.8538324420679},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_Cp2Won_1969974"
             }
@@ -1143,6 +1148,7 @@ return {
             pos = {x = 1986.592245989304, y = 1752.8538324420676},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_Cp2Won_1969974"
             }
@@ -1216,6 +1222,7 @@ return {
             pos = {x = 2464.8380867498527, y = 1371.0086155674396},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_Cp2Won_1969975"
             }
@@ -1240,6 +1247,7 @@ return {
             pos = {x = 2840.132204396911, y = 1211.0086155674394},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_Cp2Won_1969975"
             }
@@ -1355,6 +1363,7 @@ return {
             pos = {x = 1936.8372069107368, y = -94.55108780108795},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_Cp2Won_1969976"
             }
@@ -1379,6 +1388,7 @@ return {
             pos = {x = 1934.4842657342656, y = 267.3719891219888},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_Cp2Won_1969976"
             }
@@ -2138,6 +2148,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2181,6 +2192,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2481,6 +2493,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",

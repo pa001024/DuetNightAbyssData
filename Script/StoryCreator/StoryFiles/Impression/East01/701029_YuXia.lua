@@ -47,7 +47,7 @@ return {
       key = "176241567185312510817",
       type = "StoryNode",
       name = "任务节点",
-      pos = {x = 1390.7967032967035, y = 321.1487484289904},
+      pos = {x = 1389.6428571428573, y = 321.1487484289904},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
@@ -122,7 +122,7 @@ return {
             key = "176241567185312510821",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1186.503105590062, y = 312.08695652173907},
+            pos = {x = 1188.503105590062, y = 312.08695652173907},
             propsData = {
               IsNpcNode = false,
               IsPlayerTurnToNPC = true,
@@ -149,6 +149,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",

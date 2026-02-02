@@ -432,7 +432,7 @@ end
 
 function RougeLikeComponent:AddCanonScore(Score)
   self.CanonScore = (self.CanonScore or 0) + Score
-  EventManager:FireEvent(EventID.OnRougeLikeCanonScoreAdd, self.CanonScore, Score)
+  EventManager:FireEvent(EventID.UpdateRankStarScore, self.CanonScore, Score)
   DebugPrint("RougeLikeComponent:AddCanonScore Score", Score, "CurrentScore:", self.CanonScore)
 end
 
@@ -442,6 +442,15 @@ end
 
 function RougeLikeComponent:StartRougeCanonMiniGame(MiniGameId)
   self:OnWaveStart()
+  local CurrentEventId = GWorld.RougeLikeManager.EventId
+  local MiniGameScoreId = DataMgr.RougeLikeEventSelect[CurrentEventId].MiniGameScoreId
+  local Info = DataMgr.RougeLikeMiniGameScore[MiniGameScoreId]
+  local ScoreTable = {}
+  for Index, Score in ipairs(Info.MiniGameScore) do
+    ScoreTable[Index] = Score
+  end
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  GameMode:NotifyClientShowRankStarScoreUI(GText("RougeMiniGamePoints"), GText("RougeMiniGamePointsLv3") .. ScoreTable[3], GText("RougeMiniGamePointsLv2") .. ScoreTable[2], GText("RougeMiniGamePointsLv1") .. ScoreTable[1], ScoreTable[3], ScoreTable[2], ScoreTable[1])
   EventManager:FireEvent(EventID.StartRougeCanonMiniGame)
 end
 
@@ -449,17 +458,25 @@ function RougeLikeComponent:EndRougeCanonMiniGame(IsWin)
   self:EndInteractive()
   self:RemoveTimer("RougeCanonStartCountDown")
   self:RemoveTimer("RougeCanonShowToast")
-  self:RemoveTimer("RougeCanonTimer")
+  if CommonUtils.HasClientTimerStruct("RougeCanonTimer") then
+    self:BpDelTimer("RougeCanonTimer")
+  end
+  self:RemoveRougeCanonTimer_Lua()
   local GuideCountDownFloat = UIManager(self):GetUIObj("GuideCountDown")
   if GuideCountDownFloat then
     GuideCountDownFloat:OnCountDownEnd()
-    GuideCountDownFloat:Close()
   end
   local WaveStartBP = self:GetWaveStartBP()
   if WaveStartBP then
-    WaveStartBP:Close()
+    if WaveStartBP:GetParent() then
+      WaveStartBP:OnOutAnimationEnd()
+    else
+      WaveStartBP:Close()
+    end
   end
   EventManager:FireEvent(EventID.EndRougeCanonMiniGame)
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  GameMode:NotifyClientUnShowRankStarUI()
   local FinialScore = self:GetCanonScore()
   self:TriggerRougeLikePassEvent("Canon", FinialScore, IsWin)
   self:PostCustomEvent("CanonGameEnd")
@@ -471,27 +488,26 @@ function RougeLikeComponent:RealStartRougeCanon()
 end
 
 function RougeLikeComponent:StartRougeCanonTimer()
-  local BattleMain = UIManager(self):GetUIObj("BattleMain")
-  if IsValid(BattleMain) then
-    BattleMain:StartRougeCanonCountDown()
+  self:BpAddTimer("RougeCanonTimer", self.TotalTime, false)
+  self:RougeCanonTimer_Lua()
+end
+
+function RougeLikeComponent:BpOnTimerEnd_RougeCanonTimer()
+  self:EndRougeCanonMiniGame(true)
+end
+
+function RougeLikeComponent:RougeCanonTimer_Lua()
+  local CommonClientTimerUI = UIManager(self):GetUIObj("DungeonCaptureFloat")
+  CommonClientTimerUI = CommonClientTimerUI or UIManager(self):LoadUINew("DungeonCaptureFloat")
+  CommonClientTimerUI:InitClientTimerByHandleName("RougeCanonTimer", "UI_HUD_Countdown", -1)
+end
+
+function RougeLikeComponent:RemoveRougeCanonTimer_Lua()
+  local CommonClientTimerUI = UIManager(self):GetUIObj("DungeonCaptureFloat")
+  if not CommonClientTimerUI then
+    return
   end
-  self.RougeCanonTime = self.TotalTime
-  
-  local function RougeCanonTimer()
-    self.RougeCanonTime = self.RougeCanonTime - 0.1
-    if self.RougeCanonTime < 0 then
-      self.RougeCanonTime = 0
-    end
-    if IsValid(BattleMain) then
-      BattleMain:RefreshRougeGameCountDown(self.RougeCanonTime)
-    end
-    if 0 == self.RougeCanonTime then
-      self:EndRougeCanonMiniGame(true)
-      self:RemoveTimer("RougeCanonTimer")
-    end
-  end
-  
-  self:AddTimer(0.1, RougeCanonTimer, true, 0, "RougeCanonTimer")
+  CommonClientTimerUI:CloseClientTimerByHandleName()
 end
 
 function RougeLikeComponent:EndInteractive()

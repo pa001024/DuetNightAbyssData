@@ -6,6 +6,7 @@ local WBP_Archive_PageItem_C = Class({
 WBP_Archive_PageItem_C._components = {
   "BluePrints.UI.UI_PC.Common.HorizontalListViewResizeComp"
 }
+local ActorController = require("BluePrints.UI.WBP.Armory.ActorController.Armory_ActorController")
 
 function WBP_Archive_PageItem_C:Construct()
   self.Super.Construct(self)
@@ -38,13 +39,16 @@ function WBP_Archive_PageItem_C:Construct()
 end
 
 function WBP_Archive_PageItem_C:Destruct()
-  self.Super.Destruct(self)
+  if self.ActorController then
+    self.ActorController:OnDestruct()
+  end
   self.List_Item.BP_OnEntryInitialized:Remove(self, self.OnObjectSetFinished)
   self:HorizontalListViewResize_TearDown()
   self:ClearListenEvent()
   if self.NodeName then
     ReddotManager.RemoveListener(self.NodeName, self)
   end
+  self.Super.Destruct(self)
 end
 
 function WBP_Archive_PageItem_C:OnLoaded(...)
@@ -75,6 +79,14 @@ function WBP_Archive_PageItem_C:OnLoaded(...)
     end
     ReddotManager.AddListener(self.NodeName, self, self.RefreshReddot)
   end
+  self.ActorController = ActorController:New({
+    ViewUI = self,
+    IsPreviewMode = true,
+    IsCharacterTrialMode = false,
+    EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewArmory,
+    bNeedEndCamera = false
+  })
+  self.ActorController:OnOpened()
 end
 
 function WBP_Archive_PageItem_C:InitBtn()
@@ -194,6 +206,7 @@ function WBP_Archive_PageItem_C:RefreshList(bAnimation)
   self:OnListFillWith()
   self:AddTimer(0.01, function()
     self.List_Item:RequestFillEmptyContent()
+    self.List_Item:RequestPlayEntriesAnim()
   end, false, 0, nil, true)
 end
 
@@ -644,7 +657,7 @@ function WBP_Archive_PageItem_C:PlayOutAnim()
     return
   end
   AudioManager(self):SetEventSoundParam(self, "ArchivePageItemOpenSound", {ToEnd = 1})
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:BindToAnimationFinished(self.Out, {
     self,
     self.Close
@@ -653,6 +666,10 @@ function WBP_Archive_PageItem_C:PlayOutAnim()
 end
 
 function WBP_Archive_PageItem_C:Close()
+  self.List_Item:ClearListItems()
+  if self.ActorController then
+    self.ActorController:OnClosed()
+  end
   self.Super.Close(self)
 end
 
@@ -707,12 +724,11 @@ end
 function WBP_Archive_PageItem_C:RefreshDetail()
   local Icon = LoadObject(self.CurSelectContent.IconPath)
   self.Icon_Item:SetBrushFromTexture(Icon)
-  if self.CurSelectContent.Rarity and self["Img_Quality_" .. self.CurSelectContent.Rarity] then
-    self.Quality_Item:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.Quality_Item:SetBrushFromTexture(self["Img_Quality_" .. self.CurSelectContent.Rarity])
+  local FontMaterial = self.Text_Name:GetDynamicFontMaterial()
+  if self.CurSelectContent.Rarity and self["Quality_" .. self.CurSelectContent.Rarity] then
+    FontMaterial:SetTextureParameterValue("IconTex", self["Quality_" .. self.CurSelectContent.Rarity])
   else
-    self.Quality_Item:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.Quality_Item:SetBrushFromTexture(self.Img_Quality_1)
+    FontMaterial:SetTextureParameterValue("IconTex", self.Quality_0)
   end
   self.Text_Type:SetText(GText(self.CurSelectContent.FunctionDes))
   self.Text_Name:SetText(GText(self.CurSelectContent.Name))
@@ -736,6 +752,7 @@ function WBP_Archive_PageItem_C:RefreshDetail()
     end
   else
     self.Switch_Type:SetActiveWidgetIndex(0)
+    self.Text_Describe01:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   end
   self:AddDelayFrameFunc(function()
     if UIUtils.CheckScrollBoxCanScroll(self.EMScrollBox_359) then
@@ -785,7 +802,7 @@ function WBP_Archive_PageItem_C:RefreshDetail()
       self:UpdatePageTab(BottomKeyInfo)
     end
     self.EMScrollBox_359:SetScrollOffset(0)
-  end, 2)
+  end, 3)
 end
 
 function WBP_Archive_PageItem_C:RefreshBtn()

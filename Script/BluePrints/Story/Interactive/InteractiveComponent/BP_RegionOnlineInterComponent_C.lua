@@ -33,6 +33,16 @@ function BP_RegionOnlineInterComponent_C:DisplayInteractiveBtn(PlayerActor)
   InteractiveUI:AddInteractiveItem(self)
   self:SetBtnDisplayed(PlayerActor, true)
   self:RefreshInteractiveBtn(PlayerActor)
+  local Owner = self:GetOwner()
+  if Owner.RegionInterAddFriendComp then
+    Owner.RegionInterAddFriendComp.CanOpen = true
+  end
+  if Owner.RegionInterInviteTeamComp then
+    Owner.RegionInterInviteTeamComp.CanOpen = true
+  end
+  if Owner.RegionInterPersonInfoComp then
+    Owner.RegionInterPersonInfoComp.CanOpen = true
+  end
 end
 
 function BP_RegionOnlineInterComponent_C:RefreshInteractiveBtn(PlayerActor)
@@ -151,7 +161,7 @@ function BP_RegionOnlineInterComponent_C:InitCommonUIConfirmID(CommonUIConfirmID
   if not Data then
     return
   end
-  self.InteractiveDistance = Data.InteractiveRadius or self.InteractiveDistance
+  self:SetInteractiveDistance(Data.InteractiveRadius or self.InteractiveDistance)
   self.InteractiveAngle = Data.InteractiveAngle or self.InteractiveAngle
   self.InteractiveFaceAngle = Data.PlayerFaceAngle or self.InteractiveFaceAngle
   self.ListPriority = Data.InteractivePriority or 0

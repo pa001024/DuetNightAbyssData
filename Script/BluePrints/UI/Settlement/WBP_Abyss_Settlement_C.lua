@@ -5,37 +5,34 @@ local WBP_Abyss_Settle_P_C = Class("BluePrints.UI.BP_UIState_C")
 
 function WBP_Abyss_Settle_P_C:Destruct()
   WBP_Abyss_Settle_P_C.Super.Destruct(self)
-  for i = 1, 5 do
-    self:RemoveTimer("AddItemInListView" .. i)
-  end
 end
 
 function WBP_Abyss_Settle_P_C:InitAllAbyssInfo()
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
-    DebugPrint("thy      AbyssSettlement can not get Avatar!!!")
+    DebugPrint("WBP_Abyss_Settle_P_C:AbyssSettlement can not get Avatar!!!")
     return
   end
   self.AbyssName = GText(DataMgr.AbyssSeason[self.AbyssId].AbyssIdName)
   self.AbyssInfo = Avatar.Abysses[self.AbyssId]
   if not self.AbyssInfo then
-    DebugPrint("thy     self.AbyssInfo is nil")
+    DebugPrint("WBP_Abyss_Settle_P_C:self.AbyssInfo is nil")
     return
   end
   self.AbyssLevelInfo = self.AbyssInfo.AbyssLevelList[self.AbyssLevelId]
   if not self.AbyssLevelInfo then
-    DebugPrint("thy      self.AbyssLevelInfo is nil")
+    DebugPrint("WBP_Abyss_Settle_P_C:self.AbyssLevelInfo is nil")
     return
   end
   self.AbyssLevelType = self.AbyssLevelInfo.AbyssType
   self.AbyssProgress = self.AbyssLevelInfo.AbyssLevelProgress
   self.PassARoomNum = self.AbyssProgress[1] or 0
   self.PassBRoomNum = self.AbyssProgress[2] or 0
-  DebugPrint("thy    self.PassARoomNum", self.PassARoomNum)
-  DebugPrint("thy    self.PassBRoomNum", self.PassBRoomNum)
+  DebugPrint("WBP_Abyss_Settle_P_C:self.PassARoomNum", self.PassARoomNum)
+  DebugPrint("WBP_Abyss_Settle_P_C:self.PassBRoomNum", self.PassBRoomNum)
   self.PreAbyssLevelProgress = GWorld.GameInstance.PreAbyssLevelProgress or 0
   self.MaxAbyssLevelProgress = self.AbyssLevelInfo.MaxAbyssLevelProgress
-  DebugPrint("thy    self.MaxAbyssLevelProgress", self.MaxAbyssLevelProgress)
+  DebugPrint("WBP_Abyss_Settle_P_C:self.MaxAbyssLevelProgress", self.MaxAbyssLevelProgress)
   self.MaxLockedTeamProgress = self.AbyssLevelInfo.MaxLockedTeamProgress
   self.MaxPassARoomNumInCurLocked = self.MaxLockedTeamProgress[1] or 0
   self.MaxPassBRoomNumInCurLocked = self.MaxLockedTeamProgress[2] or 0
@@ -106,7 +103,7 @@ function WBP_Abyss_Settle_P_C:InitRoomStartListInAnimation()
       Content.RoomIndex = i
       Content.CountDown = CountDown
       Content.ItemIndex = i
-      self:AddTimer(self.StarAnimationTickTime * i, self.AddItemInListView, false, 0, "AddItemInListView" .. i, true, Content)
+      self:AddTimer(self.StarAnimationTickTime * i, self.AddItemInListView, false, 0, nil, true, Content)
       CountDown = CountDown - 1
     end
     return
@@ -120,7 +117,7 @@ function WBP_Abyss_Settle_P_C:InitRoomStartListInAnimation()
       Content.RoomIndex = i
       Content.CountDown = CountDown
       Content.ItemIndex = i
-      self:AddTimer(self.StarAnimationTickTime * i, self.AddItemInListView, false, 0, "AddItemInListView" .. i, true, Content)
+      self:AddTimer(self.StarAnimationTickTime * i, self.AddItemInListView, false, 0, nil, true, Content)
       CountDown = CountDown - 1
     end
   else
@@ -132,7 +129,7 @@ function WBP_Abyss_Settle_P_C:InitRoomStartListInAnimation()
       Content.RoomIndex = i
       Content.CountDown = CountDown
       Content.ItemIndex = i
-      self:AddTimer(self.StarAnimationTickTime * i, self.AddItemInListView, false, 0, "AddItemInListView" .. i, true, Content)
+      self:AddTimer(self.StarAnimationTickTime * i, self.AddItemInListView, false, 0, nil, true, Content)
       CountDown = CountDown - 1
     end
   end
@@ -147,7 +144,6 @@ function WBP_Abyss_Settle_P_C:AddItemInListView(Content)
   else
     self.List_Progress_R:AddItem(Content)
   end
-  DebugPrint("thy   AddItemInListView : ", Content.ItemIndex)
 end
 
 function WBP_Abyss_Settle_P_C:InitTeamListView(TeamMemberIconPath, ListViewWidget, IsPlayerInfo)
@@ -200,7 +196,7 @@ function WBP_Abyss_Settle_P_C:InitTeamListInfo(TeamInfo)
   local WeaponInfo = DataMgr.Weapon
   local PetInfo = DataMgr.Pet
   if not (CharInfo and WeaponInfo) or not PetInfo then
-    DebugPrint("thy   CharInfo or WeaponInfo or PetInfo is nil")
+    DebugPrint("WBP_Abyss_Settle_P_C:CharInfo or WeaponInfo or PetInfo is nil")
     return
   end
   local PlayerIconPathArr = {}
@@ -324,7 +320,7 @@ local TeamErrorCodes = {
 function WBP_Abyss_Settle_P_C:EnterDungeon()
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
-    DebugPrint("thy     关卡详情界面进入关卡失败，Avatar获取失败")
+    DebugPrint("WBP_Abyss_Settle_P_C:关卡详情界面进入关卡失败，Avatar获取失败")
     return
   end
   
@@ -397,7 +393,7 @@ function WBP_Abyss_Settle_P_C:UpdateBtnVisbleOnSeasonEnd()
 end
 
 function WBP_Abyss_Settle_P_C:AddStarNum()
-  DebugPrint("thy    self.PreAbyssLevelProgress", self.PreAbyssLevelProgress)
+  DebugPrint("WBP_Abyss_Settle_P_C:self.PreAbyssLevelProgress", self.PreAbyssLevelProgress)
   self.PreAbyssLevelProgress = self.PreAbyssLevelProgress + 1
   if not (self.PreAbyssLevelProgress > self.MaxAbyssLevelProgress) then
     AudioManager(self):PlayUISound(nil, "event:/ui/activity/drama_challenge_finish_star_add", nil, nil)
@@ -412,7 +408,7 @@ function WBP_Abyss_Settle_P_C:IncreasingStarNum()
 end
 
 function WBP_Abyss_Settle_P_C:CheckPlayBreakAnimationCondition()
-  DebugPrint("thy    CheckPlayBreakAnimationCondition", self.IsNeedPlayBreak)
+  DebugPrint("WBP_Abyss_Settle_P_C:CheckPlayBreakAnimationCondition", self.IsNeedPlayBreak)
   if self.IsNeedPlayBreak then
     self:PlayAnimation(self.Break)
   end
@@ -478,8 +474,7 @@ function WBP_Abyss_Settle_P_C:InitJumpUI()
     self.Panel_UnlockNode:SetVisibility(ESlateVisibility.Collapsed)
     return
   end
-  self.CanJump = Avatar:CheckAbyssCanJump(self.AbyssId, self.AbyssLevelId)
-  if self.CanJump then
+  if false then
     self.Key_Controller_Node:CreateCommonKey({
       KeyInfoList = {
         {Type = "Img", ImgShortPath = "Menu"}
@@ -494,7 +489,6 @@ function WBP_Abyss_Settle_P_C:InitJumpUI()
     self.Text_Tier_Name:SetText(Name)
     self.Panel_UnlockNode:SetVisibility(ESlateVisibility.Visible)
     self:PlayAnimation(self.Unlock)
-    self.Btn_Node.OnClicked:Add(self, self.JumpToDungeon)
   else
     self.Panel_UnlockNode:SetVisibility(ESlateVisibility.Collapsed)
   end
@@ -506,8 +500,6 @@ function WBP_Abyss_Settle_P_C:JumpToDungeon()
   self.NextLevelIndex = self.AbyssLevelId + AddLevel
   self.BeginDungeonId = 1
   self.NameEditDialog = UIManager(self):ShowCommonPopupUI(100189, {
-    RightCallbackObj = self,
-    RightCallbackFunction = self.EnterDungeon,
     LeftCallbackObj = self,
     LeftCallbackFunction = function()
       self:PlayAnimation(self.Normal_Cancel)
@@ -519,17 +511,15 @@ end
 function WBP_Abyss_Settle_P_C:OnLoaded(...)
   local PlayerController = UGameplayStatics.GetPlayerController(self, 0)
   if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
-    DebugPrint("thy    show")
     PlayerController.bShowMouseCursor = true
   else
-    DebugPrint("thy    hide")
     PlayerController.bShowMouseCursor = false
   end
   self:InitDeviceInfo()
   self:InitListenEvent()
   local LogicServerInfo = (...)
   self.IsWin, self.AbyssId, self.AbyssLevelId, self.AbyssDungeonIndex, self.PassTime = table.unpack(LogicServerInfo)
-  DebugPrint("thy    OnLoaded AbyssSettlement", self.IsWin, self.AbyssId, self.AbyssLevelId, self.AbyssDungeonIndex, self.PassTime)
+  DebugPrint("WBP_Abyss_Settle_P_C:OnLoaded AbyssSettlement", self.IsWin, self.AbyssId, self.AbyssLevelId, self.AbyssDungeonIndex, self.PassTime)
   self:InitAllAbyssInfo()
   self:BindToAnimationFinished(self.Break, {
     self,
@@ -538,6 +528,24 @@ function WBP_Abyss_Settle_P_C:OnLoaded(...)
   self:InitUIConcent()
   self:UpdateDungeonProgress()
   if self.IsWin then
+    self:UnbindAllFromAnimationFinished(self.Victory_In)
+    self:BindToAnimationFinished(self.Victory_In, {
+      self,
+      function()
+        local Avatar = GWorld:GetAvatar()
+        if Avatar then
+          local JumeLevelIndex = Avatar:GetJumpLevelIndex(self.AbyssId)
+          DebugPrint("WBP_Abyss_Settle_P_C:AbyssSettle", JumeLevelIndex, self.AbyssLevelId, self.MaxAbyssLevelProgress, self.PreAbyssLevelProgress, self.ARoomNum, self.MaxLockedTeamProgress[1])
+          if JumeLevelIndex and JumeLevelIndex == self.AbyssLevelId and self.PreAbyssLevelProgress < self.ARoomNum and self.MaxLockedTeamProgress[1] == self.ARoomNum then
+            self.NameEditDialog = UIManager(self):ShowCommonPopupUI(100189, {
+              ShortTextParams = {
+                string.format("%d", self.ARoomNum * JumeLevelIndex)
+              }
+            }, self)
+          end
+        end
+      end
+    })
     self:PlayAnimation(self.Victory_In)
     AudioManager(self):PlayUISound(nil, "event:/ui/activity/drama_challenge_finish_fx", nil, nil)
   else
@@ -553,7 +561,6 @@ function WBP_Abyss_Settle_P_C:InitListenEventMgr()
 end
 
 function WBP_Abyss_Settle_P_C:Exit()
-  DebugPrint("DungeonSettlement: ClickExitButton")
   self:BlockAllUIInput(true)
   local Avatar = GWorld:GetAvatar()
   Avatar:ExitDungeonSettlement()
@@ -561,7 +568,6 @@ function WBP_Abyss_Settle_P_C:Exit()
 end
 
 function WBP_Abyss_Settle_P_C:DefaultExit()
-  DebugPrint("DungeonSettlement: ExitCallBack")
   EventManager:RemoveEvent(EventID.OnExitDungeon, self)
   self:BlockAllUIInput(false)
   self:Close()
@@ -716,11 +722,11 @@ function WBP_Abyss_Settle_P_C:SetPhantomAttrsDetails()
   local PhantomNum = self.CombatData.PhantomNum
   local Battle = GWorld.Battle
   if not Battle then
-    DebugPrint("[THY]  Battle为nil")
+    DebugPrint("WBP_Abyss_Settle_P_C:Battle为nil")
     return
   end
   if 0 == PhantomNum then
-    DebugPrint("[THY]  没有魅影")
+    DebugPrint("WBP_Abyss_Settle_P_C:没有魅影")
     return
   end
   local PhantomDetails = {}
@@ -850,8 +856,6 @@ function WBP_Abyss_Settle_P_C:InitListenEvent()
 end
 
 function WBP_Abyss_Settle_P_C:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
-  DebugPrint("thy     CurGamepadName", CurGamepadName)
-  DebugPrint("thy     CurInputDevice", CurInputDevice)
   self.CurInputDeviceType = CurInputDevice
   self.CurGamepadName = CurGamepadName
   self:UpdateBtnUI()
@@ -904,7 +908,6 @@ function WBP_Abyss_Settle_P_C:InitBtnUI()
 end
 
 function WBP_Abyss_Settle_P_C:Handle_OnPCDown(InKeyName)
-  DebugPrint("thy   Handle_OnPCDown", InKeyName)
   if "Escape" == InKeyName then
     return true
   end
@@ -928,15 +931,6 @@ function WBP_Abyss_Settle_P_C:Handle_OnGamePadDown(InKeyName)
     self:ReturnLevelInfoUI()
     return true
   elseif "Gamepad_Special_Right" == InKeyName then
-    if self.CanJump then
-      if not self.NameEditDialog then
-        self.Btn_Node:SlateHandleClicked()
-        self:JumpToDungeon()
-      elseif self.NameEditDialog.IsClosing then
-        self.Btn_Node:SlateHandleClicked()
-        self:JumpToDungeon()
-      end
-    end
     return true
   elseif "Gamepad_Special_Left" == InKeyName then
     self:OnBtnChangePanelClicked()
@@ -949,10 +943,10 @@ function WBP_Abyss_Settle_P_C:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
-    DebugPrint("thy    Key_IsGamepadKey", InKeyName)
+    DebugPrint("WBP_Abyss_Settle_P_C:Key_IsGamepadKey", InKeyName)
     IsEventHandled = self:Handle_OnGamePadDown(InKeyName)
   else
-    DebugPrint("thy    Key_IsPC", InKeyName)
+    DebugPrint("WBP_Abyss_Settle_P_C:Key_IsPC", InKeyName)
     IsEventHandled = self:Handle_OnPCDown(InKeyName)
   end
   if IsEventHandled then

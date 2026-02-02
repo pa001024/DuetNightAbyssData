@@ -34,32 +34,68 @@ function M:InitResourceBar(Info, bShowBubble)
   self.Info = Info
   if nil ~= Info then
     self:ClearChildren()
-    for i, CoinId in ipairs(Info) do
-      local ResourceBarWidget = self.ResourceBarWidget[CoinId]
-      if not IsValid(ResourceBarWidget) then
-        ResourceBarWidget = UIManager(self):_CreateWidgetNew("ResourceBar")
-        ResourceBarWidget:BindNavigationEvents(self, {
-          OnNavigationToBoundary = self.OnResourceNavigationToBoundary,
-          OnAddedToFocusPath = self.OnResourceAddedToFocusPath
+    for i, v in ipairs(Info) do
+      if type(v) == "table" and v.Type == "Walnut" then
+        local WalnutId = v.WalnutId
+        local ResourceBarWidget = self.ResourceBarWidget[WalnutId]
+        if not IsValid(ResourceBarWidget) then
+          ResourceBarWidget = UIManager(self):_CreateWidgetNew("ResourceBar")
+          ResourceBarWidget:BindNavigationEvents(self, {
+            OnNavigationToBoundary = self.OnResourceNavigationToBoundary,
+            OnAddedToFocusPath = self.OnResourceAddedToFocusPath
+          })
+          ResourceBarWidget:BindEventOnMenuOpenChanged(self, self.OnMenuOpenChanged)
+          self.ResourceBarWidget[WalnutId] = ResourceBarWidget
+        end
+        local WalnutIcon = LoadObject(DataMgr.Walnut[WalnutId].Icon)
+        ResourceBarWidget.Common_Item_Icon:Init({
+          UIName = "BagMain",
+          IsShowDetails = true,
+          IsCantItemSelection = true,
+          MenuPlacement = EMenuPlacement.MenuPlacement_MenuRight,
+          Id = WalnutId,
+          Icon = WalnutIcon,
+          ItemType = "Walnut",
+          HandleMouseDown = true
         })
-        ResourceBarWidget:BindEventOnMenuOpenChanged(self, self.OnMenuOpenChanged)
-        self.ResourceBarWidget[CoinId] = ResourceBarWidget
-      end
-      local CoinIcon = LoadObject(DataMgr.Resource[CoinId].Icon)
-      ResourceBarWidget.Common_Item_Icon:Init({
-        UIName = "BagMain",
-        IsShowDetails = true,
-        IsCantItemSelection = true,
-        MenuPlacement = EMenuPlacement.MenuPlacement_MenuRight,
-        Id = CoinId,
-        Icon = CoinIcon,
-        ItemType = "Resource",
-        HandleMouseDown = true
-      })
-      ResourceBarWidget:SetResourceId(CoinId)
-      self.Panel_ResourceBar:AddChild(ResourceBarWidget)
-      if bShowBubble then
-        self:CheckAndShowLimitedResourceBubble(CoinId, ResourceBarWidget)
+        ResourceBarWidget:SetItemId(WalnutId, "Walnut")
+        self.Panel_ResourceBar:AddChild(ResourceBarWidget)
+        if bShowBubble then
+          self:CheckAndShowLimitedResourceBubble(WalnutId, ResourceBarWidget)
+        end
+      else
+        local CoinId
+        if type(v) == "table" and v.Type == "Resource" then
+          CoinId = v.CoinId
+        else
+          CoinId = v
+        end
+        local ResourceBarWidget = self.ResourceBarWidget[CoinId]
+        if not IsValid(ResourceBarWidget) then
+          ResourceBarWidget = UIManager(self):_CreateWidgetNew("ResourceBar")
+          ResourceBarWidget:BindNavigationEvents(self, {
+            OnNavigationToBoundary = self.OnResourceNavigationToBoundary,
+            OnAddedToFocusPath = self.OnResourceAddedToFocusPath
+          })
+          ResourceBarWidget:BindEventOnMenuOpenChanged(self, self.OnMenuOpenChanged)
+          self.ResourceBarWidget[CoinId] = ResourceBarWidget
+        end
+        local CoinIcon = LoadObject(DataMgr.Resource[CoinId].Icon)
+        ResourceBarWidget.Common_Item_Icon:Init({
+          UIName = "BagMain",
+          IsShowDetails = true,
+          IsCantItemSelection = true,
+          MenuPlacement = EMenuPlacement.MenuPlacement_MenuRight,
+          Id = CoinId,
+          Icon = CoinIcon,
+          ItemType = "Resource",
+          HandleMouseDown = true
+        })
+        ResourceBarWidget:SetItemId(CoinId, "Resource")
+        self.Panel_ResourceBar:AddChild(ResourceBarWidget)
+        if bShowBubble then
+          self:CheckAndShowLimitedResourceBubble(CoinId, ResourceBarWidget)
+        end
       end
     end
     self.Panel_ResourceBar:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -107,7 +143,7 @@ function M:HideLimitedResourceBubbleAfterDelay(ResourceBarWidget, DelayTime)
   if not self.BubbleTimers then
     self.BubbleTimers = {}
   end
-  local TimerId = "LimitedResourceBubble_" .. tostring(ResourceBarWidget.RId)
+  local TimerId = "LimitedResourceBubble_" .. tostring(ResourceBarWidget.Id)
   if self:IsExistTimer(TimerId) then
     self:RemoveTimer(TimerId)
   end
@@ -157,6 +193,10 @@ function M:HideGamePadKey(bHide)
   else
     self.KeyImg_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
+end
+
+function M:CreateCommonKey(...)
+  self.KeyImg_GamePad:CreateCommonKey(...)
 end
 
 function M:SetGamePadKeyImgByPath(Path)
@@ -211,14 +251,14 @@ end
 function M:UpdateResource()
   for k, v in pairs(self.ResourceBarWidget) do
     if IsValid(v) then
-      v:RefreshResourceInfo()
+      v:RefreshItemInfo()
     end
   end
 end
 
 function M:OnPropSetResources(ResourceId, OldValue)
   if self.ResourceBarWidget and self.ResourceBarWidget[ResourceId] then
-    self.ResourceBarWidget[ResourceId]:RefreshResourceInfo()
+    self.ResourceBarWidget[ResourceId]:RefreshItemInfo()
   end
 end
 

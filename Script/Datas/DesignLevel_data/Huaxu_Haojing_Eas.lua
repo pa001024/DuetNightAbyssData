@@ -1,5 +1,10 @@
 return {
   StaticCreator = {
+    ["242010087"] = {
+      CreatorId = 242010087,
+      UnitType = "Drop",
+      UnitId = 11201
+    },
     ["2010001"] = {
       CreatorId = 2010001,
       UnitType = "Mechanism",
@@ -10,8 +15,18 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
+    ["242010088"] = {
+      CreatorId = 242010088,
+      UnitType = "Mechanism",
+      UnitId = 39046
+    },
     ["2010007"] = {
       CreatorId = 2010007,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["2010078"] = {
+      CreatorId = 2010078,
       UnitType = "Mechanism",
       UnitId = 1
     },
@@ -25,13 +40,33 @@ return {
       UnitType = "Mechanism",
       UnitId = 39046
     },
+    ["132010079"] = {
+      CreatorId = 132010079,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["132010080"] = {
+      CreatorId = 132010080,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["132010081"] = {
+      CreatorId = 132010081,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["132010083"] = {
+      CreatorId = 132010083,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["132010084"] = {
+      CreatorId = 132010084,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
     ["2010067"] = {
       CreatorId = 2010067,
-      UnitType = "Mechanism",
-      UnitId = 90100
-    },
-    ["2010068"] = {
-      CreatorId = 2010068,
       UnitType = "Mechanism",
       UnitId = 90100
     },
@@ -40,13 +75,33 @@ return {
       UnitType = "Mechanism",
       UnitId = 90100
     },
-    ["2010077"] = {
-      CreatorId = 2010077,
+    ["132010082"] = {
+      CreatorId = 132010082,
+      UnitType = "Npc",
+      UnitId = 250006
+    },
+    ["132010085"] = {
+      CreatorId = 132010085,
+      UnitType = "Npc",
+      UnitId = 250003
+    },
+    ["242010089"] = {
+      CreatorId = 242010089,
       UnitType = "Mechanism",
       UnitId = 1
     },
-    ["2010078"] = {
-      CreatorId = 2010078,
+    ["242010090"] = {
+      CreatorId = 242010090,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["242010091"] = {
+      CreatorId = 242010091,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["242010093"] = {
+      CreatorId = 242010093,
       UnitType = "Mechanism",
       UnitId = 1
     },
@@ -64,11 +119,6 @@ return {
       CreatorId = 2010034,
       UnitType = "Npc",
       UnitId = 220014
-    },
-    ["2010004"] = {
-      CreatorId = 2010004,
-      UnitType = "Npc",
-      UnitId = 200003
     },
     ["2010036"] = {
       CreatorId = 2010036,

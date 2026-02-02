@@ -715,7 +715,7 @@ function M:ReceiveEnterState(StackAction)
       self:PlayAnimation(self.BG_BackFirst)
     end
   else
-    self:BlockAllUIInput(true)
+    self:BlockAllUIInput(true, "SP_DisplayOnly")
   end
   self.ReceiveEnterStateNoAnim = false
 end
@@ -801,7 +801,7 @@ function M:Close()
   self.bRealClosed = false
   self:ModifyWaitForCloseEventCount(true)
   M.Super.Close(self)
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   if self.IsPreviewMode then
     self:ModifyWaitForCloseEventCount(true)
     self:BindToAnimationFinished(self.Auto_Out, {
@@ -827,6 +827,13 @@ function M:Close()
     self.ActorController:OnClosed()
   end
   self:ModifyWaitForCloseEventCount(false)
+  if self.OnCloseEvents then
+    for Obj, Func in pairs(self.OnCloseEvents) do
+      if IsValid(Obj) then
+        Func(Obj)
+      end
+    end
+  end
 end
 
 function M:Component_BeforeClose()
@@ -862,6 +869,16 @@ function M:RealClose()
   end
 end
 
+function M:BindEventOnDestruct(Obj, Func)
+  self.OnDestructEvents = self.OnDestructEvents or {}
+  self.OnDestructEvents[Obj] = Func
+end
+
+function M:BindEventOnClose(Obj, Func)
+  self.OnCloseEvents = self.OnCloseEvents or {}
+  self.OnCloseEvents[Obj] = Func
+end
+
 function M:Destruct()
   M.Super.Destruct(self)
   if self.ActorController then
@@ -874,6 +891,13 @@ function M:Destruct()
   end
   if GWorld.GameInstance then
     GWorld.GameInstance:SetHighFrequencyMemoryCheckGCEnabled(false, "ArmoryMain")
+  end
+  if self.OnDestructEvents then
+    for Obj, Func in pairs(self.OnDestructEvents) do
+      if IsValid(Obj) then
+        Func(Obj)
+      end
+    end
   end
 end
 

@@ -208,9 +208,30 @@ function ForgeDataModel:InitReddotTree()
   end
   ReddotManager.PrintNodeTree(ForgeConst.NewdotNodeName.Root)
   ReddotManager.PrintNodeTree(ForgeConst.ReddotNodeName.Root)
+  ReddotManager.AddNodeEx("ForgeConvert", nil, 1, UE4.EReddotType.New)
+  local ForgeConvertReddotNode = ReddotManager.GetTreeNode("ForgeConvert")
+  local ConvertReddotDetails = ForgeConvertReddotNode.Cache.Detail
+  local ConvertData = DataMgr.Convert
+  if ConvertData then
+    for Id, _ in pairs(ConvertData) do
+      local bIsNew = true
+      for _, Details in pairs(ConvertReddotDetails) do
+        if Id == Details.Id then
+          bIsNew = false
+          break
+        end
+      end
+      if bIsNew then
+        table.insert(ConvertReddotDetails, {Id = Id, IsClicked = false})
+        ReddotManager.IncreaseLeafNodeCount("ForgeConvert")
+      end
+    end
+  end
+  DebugPrint("Yihan@ 111111111111111111", #ConvertReddotDetails)
   ReddotManager.AddNodeEx("ForgeEntry", {
     [ForgeConst.NewdotNodeName.Root] = {},
-    [ForgeConst.ReddotNodeName.Root] = {}
+    [ForgeConst.ReddotNodeName.Root] = {},
+    ForgeConvert = {}
   }, 1)
   ReddotManager.PrintNodeTree("ForgeEntry")
 end
@@ -594,13 +615,20 @@ end
 function ForgeDataModel:GetDatasByFilter(Filter, SubFilter, CommonFilter)
   self:UpdateData()
   local FilterResult = {HasFilterItem = false, HasSubFilterItem = false}
+  local GlobalReleaseVersion = DataMgr.GlobalConstant.CurrentVersion.ConstantValue
   local FiltedDrafts = {}
   for _, Item in pairs(self.Drafts) do
-    local FilterItemResult = self:IsFilteredItem(Item, Filter, SubFilter, CommonFilter)
+    local ReleaseVersion = DataMgr.Draft[Item.Id].ReleaseVersion
     local IsValidItem = true
-    for k, v in pairs(FilterItemResult) do
-      IsValidItem = IsValidItem and v
-      FilterResult[k] = FilterResult[k] or v
+    if ReleaseVersion and GlobalReleaseVersion < ReleaseVersion then
+      IsValidItem = false
+    end
+    if IsValidItem then
+      local FilterItemResult = self:IsFilteredItem(Item, Filter, SubFilter, CommonFilter)
+      for k, v in pairs(FilterItemResult) do
+        IsValidItem = IsValidItem and v
+        FilterResult[k] = FilterResult[k] or v
+      end
     end
     if IsValidItem then
       table.insert(FiltedDrafts, Item)
@@ -922,7 +950,8 @@ function ForgeDataModel:Filter_CharAccessory(Item, SubFilter)
   return {HasFilterItem = true, HasSubFilterItem = true}
 end
 
-function ForgeDataModel:ChooseCostItems(DraftId)
+function ForgeDataModel:ChooseCostItems(DraftId, Count)
+  Count = Count or 1
   local CostItemList = {}
   local DraftInfo = DataMgr.Draft[DraftId]
   local PlayerAvatar = GWorld:GetAvatar()
@@ -944,8 +973,8 @@ function ForgeDataModel:ChooseCostItems(DraftId)
       local TotalChoosedNum = 0
       for _, Mod in ipairs(Mods) do
         local ChoosedNum = 0
-        if Mod.Count >= ResInfo.Num - TotalChoosedNum then
-          ChoosedNum = ResInfo.Num - TotalChoosedNum
+        if Mod.Count >= ResInfo.Num * Count - TotalChoosedNum then
+          ChoosedNum = ResInfo.Num * Count - TotalChoosedNum
         else
           ChoosedNum = Mod.Count
         end
@@ -960,7 +989,7 @@ function ForgeDataModel:ChooseCostItems(DraftId)
           Instance = Mod
         })
         TotalChoosedNum = TotalChoosedNum + ChoosedNum
-        if TotalChoosedNum >= ResInfo.Num then
+        if TotalChoosedNum >= ResInfo.Num * Count then
           break
         end
       end
@@ -992,6 +1021,17 @@ function ForgeDataModel:ClearNewRedDots()
     if TreeNode:IsLeaf() then
       ReddotManager.ClearLeafNodeCount(NodeName, true)
     end
+  end
+end
+
+function ForgeDataModel:ClearConvertNewRedDots()
+  local ForgeConvertReddotNode = ReddotManager.GetTreeNode("ForgeConvert")
+  local ConvertReddotDetails = ForgeConvertReddotNode.Cache.Detail
+  for _, Details in pairs(ConvertReddotDetails) do
+    Details.IsClicked = true
+  end
+  if ForgeConvertReddotNode:IsLeaf() then
+    ReddotManager.ClearLeafNodeCount("ForgeConvert", false)
   end
 end
 

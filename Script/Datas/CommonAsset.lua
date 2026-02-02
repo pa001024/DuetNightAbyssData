@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -31,6 +34,12 @@ return ReadOnly("CommonAsset", {
       [8] = {
         Path = "WidgetBlueprint'/Game/UI/WBP/Common/Toast/Mobile/WBP_Com_ToastList_M.WBP_Com_ToastList_M_C'",
         PlatformName = "Mobile"
+      },
+      [9] = {
+        Path = "PhysicsAsset'/Game/Asset/Char/Player/Common/AssetPhysics/PHYS_Player_Culling.PHYS_Player_Culling'"
+      },
+      [10] = {
+        Path = "PhysicsAsset'/Game/Asset/Char/Player/Common/AssetPhysics/PHYS_Player_CapsuleShadow.PHYS_Player_CapsuleShadow'"
       }
     },
     Type = "All"

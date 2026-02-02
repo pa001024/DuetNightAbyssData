@@ -2,47 +2,41 @@ local DailyTalkController = require("BluePrints.UI.WBP.DailyTalk.DailyTalkContro
 local DailyTalkCommon = require("BluePrints.UI.WBP.DailyTalk.DailyTalkCommon")
 local Decorator = require("BluePrints.Client.Wrapper.Decorator")
 local Component = {}
-for key, value in pairs(Decorator) do
-  Component[key] = value
+Decorator:ApplyDecorator(Component)
+
+function Component:_OnLoginSuccess()
+  DailyTalkController:Init()
+  local bUnlocked = self:CheckUIUnlocked("DailyGoal")
+  if not bUnlocked then
+    self.UnlockKey = self:BindOnUIFirstTimeUnlock("DailyGoal", function()
+      self:TryAddDailyTaskReddot()
+    end)
+  else
+    self:TryAddDailyTaskReddot()
+  end
 end
 
-function Component:EnterWorld()
-  DailyTalkController:Init()
-  local PlayerAvatar = GWorld:GetAvatar()
-  if not PlayerAvatar then
-    return
+function Component:TryAddDailyTaskReddot()
+  if not ReddotManager.GetTreeNode("DailyMain") then
+    ReddotManager.AddNode("DailyMain")
   end
-  self.UnlockKey = PlayerAvatar:BindOnUIFirstTimeUnlock("DailyGoal", function()
-    local bUnlocked = PlayerAvatar:CheckUIUnlocked("DailyGoal")
-    if not bUnlocked then
-      return
+  if self:HasClaimableTaskReward() and not self:HasClaimableProgressReward() then
+    local reddot = ReddotManager.GetTreeNode("DailyMain")
+    if reddot.Count <= 0 then
+      ReddotManager.IncreaseLeafNodeCount("DailyMain", 1)
     end
-    if not ReddotManager.GetTreeNode("DailyMain") then
-      ReddotManager.AddNode("DailyMain")
-    end
-    if self:HasClaimableTaskReward() and not self:HasClaimableProgressReward() then
-      local reddot = ReddotManager.GetTreeNode("DailyMain")
-      if reddot.Count <= 0 then
-        ReddotManager.IncreaseLeafNodeCount("DailyMain", 1)
-      end
-    else
-      ReddotManager.ClearLeafNodeCount("DailyMain", false)
-    end
-  end)
+  else
+    ReddotManager.ClearLeafNodeCount("DailyMain", false)
+  end
 end
 
 function Component:LeaveWorld()
   DailyTalkController:Destory()
-  local PlayerAvatar = GWorld:GetAvatar()
-  if not PlayerAvatar then
-    return
-  end
   if self.UnlockKey then
-    PlayerAvatar:UnBindOnUIFirstTimeUnlock("DailyGoal", self.UnlockKey)
+    self:UnBindOnUIFirstTimeUnlock("DailyGoal", self.UnlockKey)
   end
 end
 
-setmetatable(Component, getmetatable(Decorator))
 Component:LimitCall(1)
 
 function Component:GetDailyTaskReward(DailyTaskId)
@@ -153,17 +147,7 @@ function Component:DailyTaskChange(Keys)
   if not PlayerAvatar:CheckUIUnlocked("DailyGoal") then
     return
   end
-  if not ReddotManager.GetTreeNode("DailyMain") then
-    ReddotManager.AddNode("DailyMain")
-  end
-  if self:HasClaimableTaskReward() and not self:HasClaimableProgressReward() then
-    local reddot = ReddotManager.GetTreeNode("DailyMain")
-    if reddot.Count <= 0 then
-      ReddotManager.IncreaseLeafNodeCount("DailyMain", 1)
-    end
-  else
-    ReddotManager.ClearLeafNodeCount("DailyMain", false)
-  end
+  self:TryAddDailyTaskReddot()
 end
 
 function Component:HasClaimableTaskReward()

@@ -13,36 +13,7 @@ function WBP_Activity_FeinaEvent_Reward_C:Construct()
 end
 
 function WBP_Activity_FeinaEvent_Reward_C:UpdateFeinaEventRewardReddot()
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
-    return
-  end
-  for Id, Info in pairs(DataMgr.FeinaEvent) do
-    for _, DungeonId in pairs(Info.DungeonId) do
-      local RewardsGot = Avatar:GetFeinaRewardInfo(DungeonId)
-      if RewardsGot then
-        for RewardIndex, State in pairs(RewardsGot) do
-          if 1 == State then
-            local Node = ReddotManager.GetTreeNode("FeinaEventReward")
-            if not Node then
-              ReddotManager.AddNode("FeinaEventReward")
-            end
-            local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("FeinaEventReward")
-            if not CacheDetail[Id] then
-              CacheDetail[Id] = {}
-            end
-            if not CacheDetail[Id][DungeonId] then
-              CacheDetail[Id][DungeonId] = {}
-            end
-            if not CacheDetail[Id][DungeonId][RewardIndex] then
-              CacheDetail[Id][DungeonId][RewardIndex] = 1
-              ReddotManager.IncreaseLeafNodeCount("FeinaEventReward")
-            end
-          end
-        end
-      end
-    end
-  end
+  UIUtils.RefreshFeinaRewardReddot()
 end
 
 function WBP_Activity_FeinaEvent_Reward_C:Destruct()

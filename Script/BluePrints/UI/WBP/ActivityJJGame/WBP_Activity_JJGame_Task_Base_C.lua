@@ -61,15 +61,17 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
 end
 
 function M:InitTaskData()
-  self.MidTermTasks = self._Avatar.MidTermTasks
-  self.MidTermTasksRecord = self._Avatar.MidTermTasksRecord
-  self.MidTermAchvProgressRewarded = self._Avatar.MidTermAchvProgressRewarded
-  self.MidTermScores = self._Avatar.MidTermScores
-  self.MidTermScoresRewards = self._Avatar.MidTermScoresRewards
   self.MidTermConst = DataMgr.MidTermGoalConstant
   self.MidTermGoalEventId = self.MidTermConst.MidTermGoalEventId.ConstantValue
   self.EventStartTime = DataMgr.EventMain[self.MidTermGoalEventId].EventStartTime
   self.EventEndTime = DataMgr.EventMain[self.MidTermGoalEventId].EventEndTime
+  self.MidTermGoals = self._Avatar.MidTermGoals[self.MidTermGoalEventId] or {}
+  self.MidTermAchvScores = self.MidTermGoals.AchvScores or 0
+  self.MidTermTasks = self.MidTermGoals.Tasks
+  self.MidTermTasksRecord = self.MidTermGoals.TaskFinishCount
+  self.MidTermAchvProgressRewarded = self.MidTermGoals.AchvProgressRewarded or {}
+  self.MidTermScores = self.MidTermGoals.Scores or 0
+  self.MidTermScoresRewards = self.MidTermGoals.ScoresRewards or {}
   self.remainDays, self.remainHours = self:UpdateEventDay()
 end
 
@@ -217,7 +219,8 @@ function M:UpdateTabNewReddot()
   local HasNewChallengeTask = false
   local HasNormalReward = false
   local HasChallengeReward = false
-  for TaskId, Task in pairs(self._Avatar.MidTermTasks) do
+  local MidTermTasks = self.MidTermGoals.Tasks or {}
+  for TaskId, Task in pairs(MidTermTasks) do
     local TaskData = DataMgr.MidTermTask[Task.UniqueID]
     if not TaskData then
       Utils.ScreenPrint("MidTermTask表中不存在UniqueID为" .. Task.UniqueID .. "的任务，请检查配置")
@@ -242,7 +245,7 @@ function M:UpdateTabNewReddot()
       HasNormalReward = true
     end
     if not HasNormalReward then
-      for TaskId, Task in pairs(self._Avatar.MidTermTasks) do
+      for TaskId, Task in pairs(MidTermTasks) do
         local TaskData = DataMgr.MidTermTask[Task.UniqueID]
         if not TaskData then
           Utils.ScreenPrint("MidTermTask表中不存在UniqueID为" .. Task.UniqueID .. "的任务，请检查配置")
@@ -349,6 +352,16 @@ function M:TryIncreaceNormalRewardReddot(TaskId)
 end
 
 function M:TryIncreaceChallengeTaskRewardReddot(TaskId)
+  local allRewardsClaimed = true
+  for _, v in pairs(self.MidTermAchvProgressRewarded) do
+    if 0 == v then
+      allRewardsClaimed = false
+      break
+    end
+  end
+  if allRewardsClaimed then
+    return
+  end
   local CacheKey = ChallengeRewardReddotName .. TaskId
   local CacheData = ReddotManager.GetLeafNodeCacheDetail(ChallengeRewardReddotName)
   if CacheData and nil == CacheData[CacheKey] then
@@ -364,7 +377,10 @@ function M:OnAchvFinished(TaskId)
   if self.ChallengeTaskWidget and self.ChallengeTaskWidget.OnAchvFinished then
     self.ChallengeTaskWidget:OnAchvFinished(TaskId)
   end
-  local Task = self._Avatar.MidTermTasks[TaskId]
+  local Avatar = GWorld:GetAvatar()
+  local MidTermGoals = Avatar.MidTermGoals[self.MidTermGoalEventId] or {}
+  local MidTermTasks = MidTermGoals.Tasks or {}
+  local Task = MidTermTasks[TaskId]
   if Task then
     local TaskData = DataMgr.MidTermTask[Task.UniqueID]
     if TaskData and TaskData.TaskType == TaskType.Achievement then

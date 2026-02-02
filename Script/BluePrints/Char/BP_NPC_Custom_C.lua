@@ -34,6 +34,9 @@ function M:ReceiveBeginPlay()
 end
 
 function M:ResetLocation()
+  if self.bInteractiveState == false then
+    return
+  end
   local SpawnPos = self:K2_GetActorLocation()
   local HalfHeight = self.CapsuleComponent:GetScaledCapsuleHalfHeight()
   local MeshOffsetZ = -self.Mesh.RelativeLocation.Z
@@ -97,8 +100,10 @@ function M:SetCustomNpcFlexibShowOrHide()
   local function SetNpcShowOrHide(IsShow)
     if IsShow then
       self:SetCustomNpcHideTag("Flexible", false)
+      self:SetCollisionDisableTag("Flexible", false)
     else
       self:SetCustomNpcHideTag("Flexible", true)
+      self:SetCollisionDisableTag("Flexible", true)
     end
   end
   
@@ -189,6 +194,7 @@ function M:ActiveSetCustomNpcHideByAvatarSuitData()
       for Tag, Value in pairs(SubSuitData) do
         if self.AtmosphereTagArray:Contains(Tag) then
           self:SetCustomNpcHideTag(Tag, Value)
+          self:SetCollisionDisableTag(Tag, Value)
         end
       end
     end
@@ -196,7 +202,7 @@ function M:ActiveSetCustomNpcHideByAvatarSuitData()
 end
 
 function M:InitHeadWidgetComponent()
-  if self.HeadWidgetComponent then
+  if IsValid(self.HeadWidgetComponent) then
     return
   end
   local HeadUISubsystem = UNpcHeadUISubsystem.GetHeadUISubsystem(self)
@@ -210,7 +216,7 @@ function M:EnableHeadWidget(WidgetName, bEnable, ...)
   if bEnable then
     self:InitHeadWidgetComponent()
   end
-  if self.HeadWidgetComponent then
+  if IsValid(self.HeadWidgetComponent) then
     if bEnable then
       if self.HeadWidgetComponent:NeedForceInit() then
         self.HeadWidgetComponent:AdjustSelfTransform()

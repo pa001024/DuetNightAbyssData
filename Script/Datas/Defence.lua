@@ -17,6 +17,9 @@ T.RT_8 = {0.9, 0.1}
 T.RT_9 = {0.6, 0.2}
 T.RT_10 = {100302}
 T.RT_11 = {100304}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -208,6 +211,32 @@ return ReadOnly("Defence", {
     MonsterSpawnId = T.RT_7,
     MonsterTotalBaseNum = 15
   },
+  [91134] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 2,
+    ButcherMonsterSpawnProbability = T.RT_8,
+    DungeonId = 91134,
+    EnsureGuideTime = -1,
+    MonsterSpawnId = {
+      [1] = T.RT_10,
+      [2] = T.RT_11,
+      [3] = {100306, 91134}
+    },
+    MonsterTotalBaseNum = 15
+  },
+  [91135] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 2,
+    ButcherMonsterSpawnProbability = T.RT_8,
+    DungeonId = 91135,
+    EnsureGuideTime = -1,
+    MonsterSpawnId = {
+      [1] = T.RT_10,
+      [2] = T.RT_11,
+      [3] = {100306, 91135}
+    },
+    MonsterTotalBaseNum = 15
+  },
   [91146] = {
     ButcherMonsterId = 8501002,
     ButcherMonsterSpawnMinWave = 2,
@@ -239,25 +268,83 @@ return ReadOnly("Defence", {
     ButcherMonsterSpawnMinWave = 2,
     ButcherMonsterSpawnProbability = T.RT_8,
     DungeonId = 91183,
-    EnsureGuideTime = -1,
+    EnsureGuideTime = 60,
     MonsterSpawnId = {
-      [1] = T.RT_10,
-      [2] = T.RT_11,
-      [3] = {100306, 91183}
+      [1] = {
+        100309,
+        91183,
+        911831
+      },
+      [2] = {
+        100310,
+        91183,
+        911831
+      },
+      [3] = {100311, 911830}
     },
-    MonsterTotalBaseNum = 15
+    MonsterTotalBaseNum = 80
   },
   [91184] = {
     ButcherMonsterId = 8501002,
     ButcherMonsterSpawnMinWave = 2,
     ButcherMonsterSpawnProbability = T.RT_8,
     DungeonId = 91184,
-    EnsureGuideTime = -1,
+    EnsureGuideTime = 60,
     MonsterSpawnId = {
-      [1] = T.RT_10,
-      [2] = T.RT_11,
-      [3] = {100306, 91184}
+      [1] = {
+        100309,
+        91184,
+        911841
+      },
+      [2] = {
+        100310,
+        91184,
+        911841
+      },
+      [3] = {100311, 911840}
     },
-    MonsterTotalBaseNum = 15
+    MonsterTotalBaseNum = 80
+  },
+  [91208] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 2,
+    ButcherMonsterSpawnProbability = T.RT_8,
+    DungeonId = 91208,
+    EnsureGuideTime = 60,
+    MonsterSpawnId = {
+      [1] = {
+        100309,
+        91208,
+        912081
+      },
+      [2] = {
+        100310,
+        91208,
+        912081
+      },
+      [3] = {100311, 912080}
+    },
+    MonsterTotalBaseNum = 80
+  },
+  [91209] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 2,
+    ButcherMonsterSpawnProbability = T.RT_8,
+    DungeonId = 91209,
+    EnsureGuideTime = 60,
+    MonsterSpawnId = {
+      [1] = {
+        100309,
+        91209,
+        912091
+      },
+      [2] = {
+        100310,
+        91209,
+        912091
+      },
+      [3] = {100311, 912090}
+    },
+    MonsterTotalBaseNum = 80
   }
 })

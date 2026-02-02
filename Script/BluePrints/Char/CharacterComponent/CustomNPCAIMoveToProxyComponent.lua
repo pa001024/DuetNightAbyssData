@@ -6,6 +6,7 @@ end
 
 function M:OnBeginPlayInLua()
   EventManager:AddEvent(EventID.OnLevelDeliverBlackCurtainEnd, self, self.OnPlayerDeliverEnd)
+  self:SetComponentTickInterval(0)
 end
 
 function M:OnPlayerDeliverEnd()

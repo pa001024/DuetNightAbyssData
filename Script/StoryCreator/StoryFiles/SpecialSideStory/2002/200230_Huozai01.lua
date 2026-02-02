@@ -258,6 +258,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -589,6 +590,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -639,7 +641,7 @@ return {
             key = "17479680532951744501",
             type = "ChangeStaticCreatorNode",
             name = "生成录音机",
-            pos = {x = 1709.7906486655456, y = 659.2292323828125},
+            pos = {x = 1709.7906486655456, y = 660.448744547677},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -653,7 +655,7 @@ return {
             key = "1753084042312650056",
             type = "SwitchMechanismStateNode",
             name = "切换机关状态",
-            pos = {x = 2273.3861538250712, y = 292.40383310834375},
+            pos = {x = 2274.605665989936, y = 292.40383310834375},
             propsData = {
               StaticCreatorIdList = {1191512},
               ManualItemIdList = {},
@@ -842,6 +844,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -960,6 +963,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1198,6 +1202,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1457,6 +1462,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1610,6 +1616,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1713,7 +1720,7 @@ return {
       key = "17479782656819670653",
       type = "StoryNode",
       name = "小游戏-调频",
-      pos = {x = 1667.2172028038333, y = 300.5934501171638},
+      pos = {x = 1670.1583791790908, y = 301.5738422422496},
       propsData = {
         QuestId = 20023003,
         QuestDescriptionComment = "",
@@ -1744,16 +1751,40 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "17479782656819670658",
-            startPort = "QuestStart",
-            endQuest = "17506629570585666",
-            endPort = "In"
-          },
-          {
             startQuest = "17506629570585666",
             startPort = "Out",
             endQuest = "17479782656819670659",
             endPort = "Success"
+          },
+          {
+            startQuest = "17479782656819670658",
+            startPort = "QuestStart",
+            endQuest = "17674942670283069",
+            endPort = "In"
+          },
+          {
+            startQuest = "17674942670283069",
+            startPort = "Fail",
+            endQuest = "17674943932304157",
+            endPort = "In"
+          },
+          {
+            startQuest = "17674943932304157",
+            startPort = "Out",
+            endQuest = "17674944031424466",
+            endPort = "In"
+          },
+          {
+            startQuest = "17674944031424466",
+            startPort = "Out",
+            endQuest = "17506629570585666",
+            endPort = "In"
+          },
+          {
+            startQuest = "17674942670283069",
+            startPort = "Success",
+            endQuest = "17506629570585666",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1761,21 +1792,21 @@ return {
             key = "17479782656819670658",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 800, y = 300},
+            pos = {x = 696.9696985576945, y = 293.9393940328056},
             propsData = {ModeType = 0}
           },
           ["17479782656819670659"] = {
             key = "17479782656819670659",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 1517.6410239146724, y = 312.71794874720894},
+            pos = {x = 2134.307681076706, y = 300.59673681282004},
             propsData = {ModeType = 0}
           },
           ["17479782656819670660"] = {
             key = "17479782656819670660",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 1678, y = 548},
+            pos = {x = 1834.0606036552567, y = 643.4545439833123},
             propsData = {}
           },
           ["17479782656819670661"] = {
@@ -1794,13 +1825,46 @@ return {
             key = "17506629570585666",
             type = "WaitingMechanismEnterStateNode",
             name = "等待机关进入状态",
-            pos = {x = 1172, y = 324},
+            pos = {x = 1790.1818086538324, y = 311.8787880656111},
             propsData = {
               CreateType = "StaticCreator",
               CreateId = 1191512,
               StateId = 604,
               IsGuideEnable = true,
               GuidePointName = "Mechanism_Minigame_SSS_1191512"
+            }
+          },
+          ["17674942670283069"] = {
+            key = "17674942670283069",
+            type = "ConditionNode",
+            name = "条件节点",
+            pos = {x = 1009.6969863475919, y = 312.1818179015834},
+            propsData = {ConditionId = 20023001}
+          },
+          ["17674943932304157"] = {
+            key = "17674943932304157",
+            type = "ChangeStaticCreatorNode",
+            name = "生成小游戏",
+            pos = {x = 1285.454556313647, y = 406.1212080811594},
+            propsData = {
+              ActiveEnable = true,
+              EnableBlackScreenSync = false,
+              EnableFadeIn = false,
+              EnableFadeOut = false,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {1191512}
+            }
+          },
+          ["17674944031424466"] = {
+            key = "17674944031424466",
+            type = "SwitchMechanismStateNode",
+            name = "切换机关状态",
+            pos = {x = 1524.848492017827, y = 404.60605658936083},
+            propsData = {
+              StaticCreatorIdList = {1191512},
+              ManualItemIdList = {},
+              StateId = 602,
+              QuestId = 0
             }
           }
         },
@@ -1819,7 +1883,8 @@ return {
         SubRegionId = 101101,
         StoryGuideType = "Npc",
         StoryGuidePointName = "Npc_Fane_SSS_1191504",
-        bIsPlayBlackScreenOnComplete = true
+        bIsPlayBlackScreenOnComplete = true,
+        SubRegionIdList = {}
       },
       questNodeData = {
         lineData = {
@@ -1930,6 +1995,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2007,6 +2073,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2071,6 +2138,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",

@@ -1,16 +1,12 @@
 local WeaponModel = require("BluePrints.Common.MVC.Model.WeaponModel")
 local Component = {}
 
-function Component:EnterWorld()
+function Component:_OnLoginSuccess()
   WeaponModel:Init(self)
 end
 
 function Component:LeaveWorld()
   WeaponModel:Destory()
-end
-
-function Component:RefreshWeapon()
-  WeaponModel:Init(self)
 end
 
 function Component:CheckWeaponEnough(CheckData)
@@ -69,15 +65,21 @@ end
 
 function Component:_OnPropChangeWeaponAccessorys()
   for _, AccessoryId in pairs(self.WeaponAccessorys) do
-    if not WeaponModel:IsWeaponAccessoryExist(AccessoryId) then
+    if not self:IsWeaponAccessoryExist(AccessoryId) then
+      WeaponModel:OnNewWeaponAccessoryObtained(AccessoryId)
       EventManager:FireEvent(EventID.OnNewWeaponAccessoryObtained, AccessoryId)
     end
   end
 end
 
+function Component:IsWeaponAccessoryExist(AccessoryId)
+  return WeaponModel:IsWeaponAccessoryExist(AccessoryId)
+end
+
 function Component:_OnPropChangeOwnedWeaponSkins()
   for SkinId, _ in pairs(self.OwnedWeaponSkins) do
     if not WeaponModel:IsWeaponSkinExist(SkinId) then
+      WeaponModel:OnNewWeaponSkinObtained(SkinId)
       EventManager:FireEvent(EventID.OnNewWeaponSkinObtained, SkinId)
     end
   end

@@ -6,14 +6,7 @@ local M = Class("BluePrints.UI.BP_UIState_C")
 function M:Construct()
   M.Super.Construct(self)
   FriendController:RegisterEvent(self, function(self, EventId, ...)
-    if EventId == FriendCommon.EventId.BlockUI then
-      local Dialog = FriendController:GetDialog(self)
-      if IsValid(Dialog) then
-        Dialog:BlockAllUIInput(true)
-      else
-        self:BlockAllUIInput(true)
-      end
-    elseif EventId == FriendCommon.EventId.UnblockUI then
+    if EventId == FriendCommon.EventId.UnblockUI then
       local Dialog = FriendController:GetDialog(self)
       if IsValid(Dialog) then
         Dialog:BlockAllUIInput(false)

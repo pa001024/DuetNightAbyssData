@@ -14,6 +14,9 @@ function M:Construct()
   self.Slider_Time.OnMouseCaptureBegin:Add(self, self.OnMouseCaptureBegin)
   self.Slider_Time.OnMouseCaptureEnd:Add(self, self.OnMouseCaptureEnd)
   self.CurrentValue = 0
+  self.PlatformName = CommonUtils.GetDeviceTypeByPlatformName(self)
+  self.IsMobile = self.PlatformName == "Mobile"
+  self.IsPC = self.PlatformName == "PC"
 end
 
 function M:BindScroolEvent(obj, callback, speed)
@@ -48,7 +51,12 @@ function M:OnMouseWheel(MyGeometry, MouseEvent)
 end
 
 function M:OnValueChanged(Value)
-  if self.DragStart then
+  if self.IsMobile then
+    if self.DragStart then
+      self.DragEvent(self.ScroolEventObj, (Value - self.CurrentValue) * self.DragSpeed)
+      self.CurrentValue = Value
+    end
+  elseif self.DragStart then
     self.CurrentValue = Value
     self.DragStart = false
   else
@@ -58,15 +66,19 @@ function M:OnValueChanged(Value)
 end
 
 function M:OnMouseCaptureBegin()
-  ScreenPrint("DayAndNight_TimeSlider_C:OnMouseCaptureBegin")
-  self.DragStart = true
+  DebugPrint("DayAndNight_TimeSlider_C:OnMouseCaptureBegin")
+  if self.DragStart == false then
+    self.CurrentValue = self.Slider_Time:GetValue()
+    self.DragStart = true
+  end
 end
 
 function M:OnMouseCaptureEnd()
-  ScreenPrint("DayAndNight_TimeSlider_C:OnMouseCaptureEnd")
+  DebugPrint("DayAndNight_TimeSlider_C:OnMouseCaptureEnd")
   if self.DragEndEvent then
     self.DragEndEvent(self.DragEndEventObj, self.bIsDay)
   end
+  self.DragStart = false
 end
 
 return M

@@ -1,5 +1,8 @@
 local T = {}
 T.RT_1 = {"CharTitle"}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -36,6 +39,28 @@ return ReadOnly("CharTrialEvent", {
     TrialReward = 20000,
     TrialType = "Char",
     WalnutId = 1004
+  },
+  [105101016] = {
+    CharId = 4102,
+    CharTrialId = 101021,
+    ColorVarName = "Type_Thunder",
+    Eventld = 105101016,
+    HideBPNode = T.RT_1,
+    InterfaceJumpId = 57,
+    TrialReward = 20000,
+    TrialType = "Char",
+    WalnutId = 1016
+  },
+  [105101017] = {
+    CharId = 4201,
+    CharTrialId = 101022,
+    ColorVarName = "Type_Thunder",
+    Eventld = 105101017,
+    HideBPNode = T.RT_1,
+    InterfaceJumpId = 57,
+    TrialReward = 20000,
+    TrialType = "Char",
+    WalnutId = 1017
   },
   [105102011] = {
     CharId = 5301,
@@ -78,6 +103,17 @@ return ReadOnly("CharTrialEvent", {
     GachaTabId = 3,
     HideBPNode = T.RT_1,
     SkinId = 240101,
+    TrialReward = 20000,
+    TrialType = "Skin"
+  },
+  [105102015] = {
+    CharId = 4102,
+    CharTrialId = 101020,
+    ColorVarName = "Type_Light",
+    Eventld = 105102015,
+    GachaTabId = 4,
+    HideBPNode = T.RT_1,
+    SkinId = 410201,
     TrialReward = 20000,
     TrialType = "Skin"
   }

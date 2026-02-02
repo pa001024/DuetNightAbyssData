@@ -1,7 +1,8 @@
 require("UnLua")
 local EMCache = require("EMCache.EMCache")
 local M = Class({
-  "BluePrints.UI.BP_UIState_C"
+  "BluePrints.UI.BP_EMUserWidget_C",
+  "BluePrints.UI.BP_EMUserWidgetUtils_C"
 })
 M._components = {
   "BluePrints.UI.WBP.Play.Widget.Depute.DoubleModDropView"
@@ -17,7 +18,6 @@ local TypeSort = {
 }
 
 function M:Construct()
-  M.Super.Construct(self)
   self.IsPC = CommonUtils.GetDeviceTypeByPlatformName(self) == "PC"
   self.IsMobile = CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile"
   self.bFocusList_Reward = false
@@ -62,7 +62,6 @@ function M:Construct()
 end
 
 function M:Destruct()
-  M.Super.Destruct(self)
   self:PlayAnimation(self.Out)
 end
 
@@ -98,6 +97,9 @@ function M:RefreshData()
     local UsedTimes = IsElite and self.DoubleModDropInfo.EliteRushTimes or self.DoubleModDropInfo.DropTimes
     UsedTimes = tonumber(UsedTimes) or 0
     local Remaining = math.floor(ConfigValue - UsedTimes)
+    if not IsElite then
+      self.DropRemaining = Remaining
+    end
     local TextValue = Remaining <= 0 and "<Warning>0</>" .. "/" .. ConfigValue or Remaining .. "/" .. ConfigValue
     self.Text_Times:SetText(TextValue)
     self.Text_ModUpNum:SetVisibility(IsElite and UE4.ESlateVisibility.Collapsed or UE4.ESlateVisibility.SelfHitTestInvisible)

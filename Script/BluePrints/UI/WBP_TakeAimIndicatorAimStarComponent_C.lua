@@ -16,7 +16,7 @@ function Component:SwitchAimStar(StyleNode)
   if self.LastPanel then
     if self.LastPanel.SwitchOut then
       self.LastPanel:SwitchOut()
-    else
+    elseif self.LastPanel ~= self.CurPanel then
       self.LastPanel:SetVisibility(UE4.ESlateVisibility.Collapsed)
       if self.LastPanel == self.Panel_Aim_BulletReload then
         EMUIAnimationSubsystem:EMStopAnimation(self, self.Reload)
@@ -50,6 +50,10 @@ function Component:RefreshAimStar()
 end
 
 function Component:PlayHitFeedbackAnim()
+  if self.CurPanel and self.CurPanel.PlayHitFeedbackAnim then
+    self.CurPanel:PlayHitFeedbackAnim()
+    return
+  end
   if self.CurPanel and self.CurPanel.CurActorRelation == "Enemy" and not EMUIAnimationSubsystem:EMAnimationIsPlaying(self, self.Aim_Critical) then
     EMUIAnimationSubsystem:EMStopAnimation(self, self.Aim_Hit)
     EMUIAnimationSubsystem:EMPlayAnimation(self, self.Aim_Critical)

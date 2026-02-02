@@ -3,22 +3,22 @@ return {
   storyDescription = "",
   lineData = {
     {
-      startStory = "176180726897312612982",
+      startStory = "1767772785451444948",
       startPort = "StoryStart",
-      endStory = "176180726897312612984",
+      endStory = "1767772785451444950",
       endPort = "In"
     },
     {
-      startStory = "176180726897312612984",
+      startStory = "1767772785451444950",
       startPort = "Success",
-      endStory = "176180726897312612983",
+      endStory = "1767772785451444949",
       endPort = "StoryEnd"
     }
   },
   storyNodeData = {
-    ["176180726897312612982"] = {
+    ["1767772785451444948"] = {
       isStoryNode = true,
-      key = "176180726897312612982",
+      key = "1767772785451444948",
       type = "StoryStartNode",
       name = "StoryStart",
       pos = {x = 800, y = 300},
@@ -29,9 +29,9 @@ return {
         commentData = {}
       }
     },
-    ["176180726897312612983"] = {
+    ["1767772785451444949"] = {
       isStoryNode = true,
-      key = "176180726897312612983",
+      key = "1767772785451444949",
       type = "StoryEndNode",
       name = "StoryEnd",
       pos = {x = 1778, y = 312},
@@ -42,9 +42,9 @@ return {
         commentData = {}
       }
     },
-    ["176180726897312612984"] = {
+    ["1767772785451444950"] = {
       isStoryNode = true,
-      key = "176180726897312612984",
+      key = "1767772785451444950",
       type = "StoryNode",
       name = "任务节点",
       pos = {x = 1224, y = 310},
@@ -78,42 +78,42 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "176180726897312612985",
+            startQuest = "1767772785451444951",
             startPort = "QuestStart",
-            endQuest = "176180726897312612988",
+            endQuest = "1767772785451444954",
             endPort = "In"
           },
           {
-            startQuest = "176180726897312612988",
+            startQuest = "1767772785451444954",
             startPort = "Out",
-            endQuest = "176180726897312612986",
+            endQuest = "1767772785451444952",
             endPort = "Success"
           }
         },
         nodeData = {
-          ["176180726897312612985"] = {
-            key = "176180726897312612985",
+          ["1767772785451444951"] = {
+            key = "1767772785451444951",
             type = "QuestStartNode",
             name = "QuestStart",
             pos = {x = 800, y = 300},
             propsData = {ModeType = 0}
           },
-          ["176180726897312612986"] = {
-            key = "176180726897312612986",
+          ["1767772785451444952"] = {
+            key = "1767772785451444952",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
             pos = {x = 2800, y = 300},
             propsData = {ModeType = 0}
           },
-          ["176180726897312612987"] = {
-            key = "176180726897312612987",
+          ["1767772785451444953"] = {
+            key = "1767772785451444953",
             type = "QuestFailNode",
             name = "QuestFail",
             pos = {x = 2800, y = 700},
             propsData = {}
           },
-          ["176180726897312612988"] = {
-            key = "176180726897312612988",
+          ["1767772785451444954"] = {
+            key = "1767772785451444954",
             type = "TalkNode",
             name = "对话节点",
             pos = {x = 1406, y = 288},

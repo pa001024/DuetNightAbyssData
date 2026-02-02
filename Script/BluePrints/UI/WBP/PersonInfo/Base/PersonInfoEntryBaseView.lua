@@ -52,7 +52,6 @@ end
 function M:OnLoaded(...)
   self.Super.OnLoaded(self, ...)
   self.Platform = CommonUtils.GetDeviceTypeByPlatformName(self)
-  AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "MailMain", nil)
   self:AddTimer(self.StartDelay or 0, function()
     if self.HideBegin then
       self:SetRenderOpacity(1)

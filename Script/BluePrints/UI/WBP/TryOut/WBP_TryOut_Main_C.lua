@@ -11,7 +11,7 @@ end
 function M:OnLoaded(...)
   self.Super.OnLoaded(self, ...)
   self.Text_Title:SetText(GText("UI_CharTrial_CharIntro"))
-  self.Btn_Close.OnClicked:Add(self, self.CloseSelf)
+  self.Btn_Close:BindEventOnClicked(self, self.CloseSelf)
   self.Btn_FullScreen.OnClicked:Add(self, self.CloseSelf)
   if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile" then
     self.Switcher_Text:SetVisibility(UIConst.VisibilityOp.Visible)
@@ -45,26 +45,35 @@ function M:InitItems()
       CharId = Player.PlayerState.CharId
     end
   end
-  local Char = DataMgr.BattleChar[CharId]
-  local BigIcon = DataMgr.Char[CharId].BigIcon
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  local Char = DataMgr.BattleChar[CharId]
+  local BigIcon = DataMgr.Char[CharId].GachaIcon
   if GameMode and GameMode.PreInitInfo.CharTrialId then
-    local QuestRoleId = DataMgr.CharTrial[GameMode.PreInitInfo.CharTrialId].QuestRoleId
-    if QuestRoleId then
-      local CharTemplateId = DataMgr.QuestRoleInfo[QuestRoleId].CharTemplateRuleId
-      if CharTemplateId then
-        local CharCostumeId = DataMgr.CharTemplate[CharTemplateId].CharCostumeId
-        if CharCostumeId then
-          local SkinId = DataMgr.CharCostumeTemplate[CharCostumeId].SkinId
-          BigIcon = DataMgr.Skin[SkinId].BigIcon
+    local TrialType
+    for _, Data in pairs(DataMgr.CharTrialEvent) do
+      if Data.CharTrialId == GameMode.PreInitInfo.CharTrialId then
+        TrialType = Data.TrialType
+        break
+      end
+    end
+    if "Skin" == TrialType then
+      local QuestRoleId = DataMgr.CharTrial[GameMode.PreInitInfo.CharTrialId].QuestRoleId
+      if QuestRoleId then
+        local CharTemplateId = DataMgr.QuestRoleInfo[QuestRoleId].CharTemplateRuleId
+        if CharTemplateId then
+          local CharCostumeId = DataMgr.CharTemplate[CharTemplateId].CharCostumeId
+          if CharCostumeId then
+            local SkinId = DataMgr.CharCostumeTemplate[CharCostumeId].SkinId
+            BigIcon = DataMgr.Skin[SkinId].LongIcon
+          else
+            DebugPrint("ljh@试玩Icon读取失败，CharCostumeId为空,CharTrialId为:" .. tostring(GameMode.PreInitInfo.CharTrialId))
+          end
         else
-          DebugPrint("ljh@试玩Icon读取失败，CharCostumeId为空,CharTrialId为:" .. tostring(GameMode.PreInitInfo.CharTrialId))
+          DebugPrint("ljh@试玩Icon读取失败，CharTemplateId为空,CharTrialId为:" .. tostring(GameMode.PreInitInfo.CharTrialId))
         end
       else
-        DebugPrint("ljh@试玩Icon读取失败，CharTemplateId为空,CharTrialId为:" .. tostring(GameMode.PreInitInfo.CharTrialId))
+        DebugPrint("ljh@试玩Icon读取失败，QuestRoleId为空,CharTrialId为:" .. tostring(GameMode.PreInitInfo.CharTrialId))
       end
-    else
-      DebugPrint("ljh@试玩Icon读取失败，QuestRoleId为空,CharTrialId为:" .. tostring(GameMode.PreInitInfo.CharTrialId))
     end
   else
     DebugPrint("ljh@试玩Icon读取失败，CharTrialId为空")
@@ -81,12 +90,6 @@ function M:InitItems()
       local OffsetV = DataMgr.CharTrial[CharTrialId].VOffset
       local DynamicMaterial = self.Img_Role:GetDynamicMaterial()
       DynamicMaterial:SetTextureParameterValue("MainTex", BigIconObj)
-      if OffsetU then
-        DynamicMaterial:SetScalarParameterValue("Main_U_Offset", OffsetU)
-      end
-      if OffsetV then
-        DynamicMaterial:SetScalarParameterValue("Main_V_Offset", OffsetV)
-      end
     end
   else
     DebugPrint("ljh@试玩Icon读取失败IconPath为空")
@@ -108,6 +111,7 @@ function M:InitItems()
 end
 
 function M:CloseSelf()
+  self.Btn_Close:UnBindEventOnClicked(self, self.CloseSelf)
   AudioManager(self):SetEventSoundParam(nil, "TrialCharacterSkills", {ToEnd = 1})
   self:Close()
 end

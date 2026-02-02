@@ -595,6 +595,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -657,6 +658,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -758,6 +760,8 @@ return {
                 "P101099PhotoGuidePoint2",
                 "P101099PhotoGuidePoint"
               },
+              EventId = 0,
+              EventParams = {},
               Text_TargetFound = "QuestName_SaiqiPicSucc",
               Text_TargetNotFound = "QuestName_SaiqiPicFail",
               ForceMaxLodStaticPointList = {},
@@ -837,6 +841,7 @@ return {
             pos = {x = 577.5451987967639, y = 738.5592217552846},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "P101099PhotoPoint"
             }
@@ -848,6 +853,7 @@ return {
             pos = {x = 912.8255823698303, y = 1042.8765033896393},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "P101099PhotoPoint"
             }
@@ -986,6 +992,8 @@ return {
               TargetPointList = {
                 "P101099PhotoGuidePoint1"
               },
+              EventId = 0,
+              EventParams = {},
               Text_TargetFound = "QuestName_SaiqiPicSucc",
               Text_TargetNotFound = "QuestName_SaiqiPicFail",
               ForceMaxLodStaticPointList = {1241172},

@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -204,7 +207,7 @@ return ReadOnly("NpcBiography", {
   },
   [102001] = {
     ConditionId = 1033,
-    DispConditionId = 200213,
+    DispConditionId = 1033,
     NpcAge = "29",
     NpcBiographyId = 102001,
     NpcInformation = "NpcBiography_Information_Luna",
@@ -514,7 +517,7 @@ return ReadOnly("NpcBiography", {
   [105301] = {
     ConditionId = 1144,
     DispConditionId = 1144,
-    NpcAge = "50.0",
+    NpcAge = "50",
     NpcBiographyId = 105301,
     NpcInformation = "NpcBiography_Information_JiuPiaoZi",
     NpcName = "UI_CMNpc_Yanjindu_Name_JiuPiaoZi",
@@ -523,7 +526,7 @@ return ReadOnly("NpcBiography", {
   [105401] = {
     ConditionId = 1145,
     DispConditionId = 1145,
-    NpcAge = "29.0",
+    NpcAge = "29",
     NpcBiographyId = 105401,
     NpcInformation = "NpcBiography_Information_FengDeng",
     NpcName = "UI_CMNpc_Yanjindu_Name_FengDeng",

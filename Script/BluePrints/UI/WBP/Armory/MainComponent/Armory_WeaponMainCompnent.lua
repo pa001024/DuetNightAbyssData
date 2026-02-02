@@ -126,6 +126,7 @@ function M:WeaponMain_Init()
     self:WeaponMain_PreprocessContents(self.WeaponTag)
   end
   if self.WeaponTag == CommonConst.ArmoryTag.UWeapon then
+    self.Panel_SubTab:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self:UpdateWeaponInfos()
     self:CreateAndSelectSubTab()
   else

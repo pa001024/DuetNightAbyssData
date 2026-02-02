@@ -64,11 +64,20 @@ function M:GetCurrentDyePlanInfo()
   local CurrentSkin = Parent.CurrentSkin
   local CurrentPlan = Parent.CurrentPlan or 1
   if Parent.Type == CommonConst.ArmoryType.Char then
-    DyePlanInfo.SkinType = "Char"
-    DyePlanInfo.SkinId = CurrentSkin.SkinId
-    local SkinData = DataMgr.Skin[CurrentSkin.SkinId]
-    if SkinData then
-      DyePlanInfo.TargetName = GText(SkinData.SkinName)
+    if Parent.SkinType == CommonConst.DataType.Hair then
+      DyePlanInfo.SkinType = Parent.SkinType
+      DyePlanInfo.SkinId = CurrentSkin.SkinId
+      local HairData = DataMgr.Hair[CurrentSkin.SkinId]
+      if HairData then
+        DyePlanInfo.TargetName = GText(HairData.Name)
+      end
+    else
+      DyePlanInfo.SkinType = "Char"
+      DyePlanInfo.SkinId = CurrentSkin.SkinId
+      local SkinData = DataMgr.Skin[CurrentSkin.SkinId]
+      if SkinData then
+        DyePlanInfo.TargetName = GText(SkinData.SkinName)
+      end
     end
   else
     DyePlanInfo.SkinType = "Weapon"

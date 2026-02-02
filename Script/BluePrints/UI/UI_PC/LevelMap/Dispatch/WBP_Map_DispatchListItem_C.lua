@@ -67,11 +67,13 @@ function M:OnListItemObjectSet(Content)
     return
   end
   self:StopAllAnimations()
+  self.BG:StopAllAnimations()
   if self.Content.IsClick == true then
     self.Owner.Owner.DispatchItem = self
-    self:PlayAnimation(self.Click)
+    DebugPrint("lkkkkkkkkkkkkkkclick", self.DispatchId)
+    self.BG:PlayAnimation(self.BG.Click)
   else
-    self:PlayAnimation(self.Normal)
+    self.BG:OnCellReleased()
   end
   self:SetDispatchState(self.Dispatch)
   self:SetDispatchDetail()
@@ -210,27 +212,54 @@ end
 
 function M:SetDispatchRarity(DispatchRarity)
   if 1 == DispatchRarity then
-    local Icon = LoadObject("/Game/UI/Texture/Dynamic/Atlas/Map/T_Map_ListQuality_Green.T_Map_ListQuality_Green")
-    self.Quality_Line:SetBrushResourceObject(Icon)
+    local IconDynaMaterial = self.Icon_Type:GetDynamicMaterial()
+    if IconDynaMaterial then
+      IconDynaMaterial:SetTextureParameterValue("MainTex", self.Img_Color_2)
+    end
+    local FontMaterial = self.Text_Name:GetDynamicFontMaterial()
+    if FontMaterial then
+      FontMaterial:SetTextureParameterValue("DecalTex", self.Img_Color_2)
+    end
   elseif 2 == DispatchRarity then
-    local Icon = LoadObject("/Game/UI/Texture/Dynamic/Atlas/Map/T_Map_ListQuality_Blue.T_Map_ListQuality_Blue")
-    self.Quality_Line:SetBrushResourceObject(Icon)
+    local IconDynaMaterial = self.Icon_Type:GetDynamicMaterial()
+    if IconDynaMaterial then
+      IconDynaMaterial:SetTextureParameterValue("MainTex", self.Img_Color_3)
+    end
+    local FontMaterial = self.Text_Name:GetDynamicFontMaterial()
+    if FontMaterial then
+      FontMaterial:SetTextureParameterValue("DecalTex", self.Img_Color_3)
+    end
   elseif 3 == DispatchRarity then
-    local Icon = LoadObject("/Game/UI/Texture/Dynamic/Atlas/Map/T_Map_ListQuality_Purple.T_Map_ListQuality_Purple")
-    self.Quality_Line:SetBrushResourceObject(Icon)
+    local IconDynaMaterial = self.Icon_Type:GetDynamicMaterial()
+    if IconDynaMaterial then
+      IconDynaMaterial:SetTextureParameterValue("MainTex", self.Img_Color_4)
+    end
+    local FontMaterial = self.Text_Name:GetDynamicFontMaterial()
+    if FontMaterial then
+      FontMaterial:SetTextureParameterValue("DecalTex", self.Img_Color_4)
+    end
   end
 end
 
 function M:SetDispatchType(DispatchType)
   if "Battle" == DispatchType then
     local Icon = LoadObject("/Game/UI/Texture/Dynamic/Atlas/Map/T_Map_IconBattle.T_Map_IconBattle")
-    self.Icon_Type:SetBrushResourceObject(Icon)
+    local IconDynaMaterial = self.Icon_Type:GetDynamicMaterial()
+    if IconDynaMaterial then
+      IconDynaMaterial:SetTextureParameterValue("Mask", Icon)
+    end
   elseif "Collect" == DispatchType then
     local Icon = LoadObject("/Game/UI/Texture/Dynamic/Atlas/Map/T_Map_IconProduce.T_Map_IconProduce")
-    self.Icon_Type:SetBrushResourceObject(Icon)
+    local IconDynaMaterial = self.Icon_Type:GetDynamicMaterial()
+    if IconDynaMaterial then
+      IconDynaMaterial:SetTextureParameterValue("Mask", Icon)
+    end
   elseif "Social" == DispatchType then
     local Icon = LoadObject("/Game/UI/Texture/Dynamic/Atlas/Map/T_Map_IconSocial.T_Map_IconSocial")
-    self.Icon_Type:SetBrushResourceObject(Icon)
+    local IconDynaMaterial = self.Icon_Type:GetDynamicMaterial()
+    if IconDynaMaterial then
+      IconDynaMaterial:SetTextureParameterValue("Mask", Icon)
+    end
   end
 end
 
@@ -252,7 +281,8 @@ function M:OnDispatchItemClick()
   self.Owner.Owner.DispatchId = self.DispatchId
   self.Owner.Owner.DispatchItem = self
   self:AddTimer(0.01, function()
-    self:PlayAnimation(self.Click)
+    DebugPrint("lkkkkkkkkkkkkOnDispatchItemClick", self.DispatchId)
+    self.BG:PlayAnimation(self.BG.Click)
   end)
   self.Owner.Owner:CreateOrRefreshDispatchDetail(self.Dispatch)
   self.Owner.Owner.RealWildMap:RefreshDispatchMap(self.Dispatch.RegionId, self.DispatchId)
@@ -260,7 +290,7 @@ end
 
 function M:OnPressed()
   if self.Content.IsClick == false then
-    self:PlayAnimation(self.Press)
+    self.BG:OnCellPressed()
   end
 end
 
@@ -270,7 +300,7 @@ function M:OnHovered()
     return
   end
   if self.Content.IsClick == false then
-    self:PlayAnimation(self.Hover)
+    self.BG:OnCellHovered()
     if self.Owner and self.Owner.UsingGamepad then
       self:OnDispatchItemClick()
     end
@@ -279,18 +309,19 @@ end
 
 function M:OnUnhovered()
   if self.Content.IsClick == false then
-    self:PlayAnimation(self.Unhover)
+    self.BG:OnCellUnhovered()
   end
 end
 
 function M:OnReleased()
   if self.Content.IsClick == false then
-    self:PlayAnimation(self.Normal)
+    self.BG:OnCellReleased()
   end
 end
 
 function M:PlayNormal()
-  self:PlayAnimation(self.Normal)
+  self.BG:StopAllAnimations()
+  self.BG:OnCellReleased()
 end
 
 function M:GetIdByUuid(Uuid)

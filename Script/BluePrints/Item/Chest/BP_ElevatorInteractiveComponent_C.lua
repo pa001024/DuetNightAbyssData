@@ -1,4 +1,5 @@
 require("UnLua")
+local LuaConst = require("EMLuaConst")
 local BP_ElevatorInteractiveComponent_C = Class("BluePrints.Story.Interactive.InteractiveComponent.BP_InteractiveBaseComponent_C")
 
 function BP_ElevatorInteractiveComponent_C:IsCanInteractive(PlayerActor)
@@ -33,7 +34,11 @@ function BP_ElevatorInteractiveComponent_C:IsCanInteractive(PlayerActor)
   if -1 == Eid then
     return false
   end
-  return self.DistanceCheckComponent(self, PlayerActor, self.InteractiveDistance) and self.CFaceToACheckComponent(self, PlayerActor, self.InteractiveFaceAngle) and self.AFaceToCCheckComponent(PlayerActor, self, self.InteractiveAngle) and not OpenState and not self:InteractiveStateCheck()
+  if LuaConst.OpenComputeInteractive then
+    return self:GetDistanceCheckResult() and self.CFaceToACheckComponent(self, PlayerActor, self.InteractiveFaceAngle) and self.AFaceToCCheckComponent(PlayerActor, self, self.InteractiveAngle) and not OpenState and not self:InteractiveStateCheck()
+  else
+    return self.DistanceCheckComponent(self, PlayerActor, self.InteractiveDistance) and self.CFaceToACheckComponent(self, PlayerActor, self.InteractiveFaceAngle) and self.AFaceToCCheckComponent(PlayerActor, self, self.InteractiveAngle) and not OpenState and not self:InteractiveStateCheck()
+  end
 end
 
 function BP_ElevatorInteractiveComponent_C:StartInteractive(PlayerActor)

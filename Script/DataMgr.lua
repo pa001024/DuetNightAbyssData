@@ -1,8 +1,89 @@
 DataMgr = setmetatable({}, {
   __index = function(t, key)
-    return require("Datas." .. key)
+    local OK, Table = pcall(require, "Datas." .. key)
+    if not OK then
+      Table = nil
+    end
+    return Table
   end
 })
+
+function DataMgr.LocalTimeProxy(_value)
+  return setmetatable({
+    __Time = true,
+    RawTable = true,
+    GetTime = function()
+      return TimeUtils.TimestampToServerTimestamp(_value)
+    end
+  }, {
+    __add = function(a, b)
+      if type(a) == "table" and a.__Time then
+        a = a.GetTime()
+      end
+      if type(b) == "table" and b.__Time then
+        b = b.GetTime()
+      end
+      return a + b
+    end,
+    __sub = function(a, b)
+      if type(a) == "table" and a.__Time then
+        a = a.GetTime()
+      end
+      if type(b) == "table" and b.__Time then
+        b = b.GetTime()
+      end
+      return a - b
+    end,
+    __mul = function(a, b)
+      if type(a) == "table" and a.__Time then
+        a = a.GetTime()
+      end
+      if type(b) == "table" and b.__Time then
+        b = b.GetTime()
+      end
+      return a * b
+    end,
+    __div = function(a, b)
+      if type(a) == "table" and a.__Time then
+        a = a.GetTime()
+      end
+      if type(b) == "table" and b.__Time then
+        b = b.GetTime()
+      end
+      return a / b
+    end,
+    __lt = function(a, b)
+      if type(a) == "table" and a.__Time then
+        a = a.GetTime()
+      end
+      if type(b) == "table" and b.__Time then
+        b = b.GetTime()
+      end
+      return a < b
+    end,
+    __le = function(a, b)
+      if type(a) == "table" and a.__Time then
+        a = a.GetTime()
+      end
+      if type(b) == "table" and b.__Time then
+        b = b.GetTime()
+      end
+      return a <= b
+    end,
+    __eq = function(a, b)
+      if type(a) == "table" and a.__Time then
+        a = a.GetTime()
+      end
+      if type(b) == "table" and b.__Time then
+        b = b.GetTime()
+      end
+      return a == b
+    end,
+    __tostring = function(t)
+      return tostring(t.GetTime())
+    end
+  })
+end
 
 function DataMgr.Print_t(t)
   local print_r_cache = {}
@@ -225,7 +306,7 @@ function read_only(name, tbl)
     end
     all_tables[tbl] = proxy
     for k, v in pairs(tbl) do
-      if type(v) == "table" then
+      if type(v) == "table" and not rawget(v, "RawTable") then
         tbl[k] = read_only(name, v)
       end
     end

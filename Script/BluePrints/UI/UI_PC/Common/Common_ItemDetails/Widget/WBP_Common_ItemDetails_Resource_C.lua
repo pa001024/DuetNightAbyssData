@@ -7,6 +7,7 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
   self.JumpReturnCallBack = Content and Content.JumpReturnCallBack
   self.GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem()
   self.Panel_TimeLimit:SetVisibility(ESlateVisibility.Collapsed)
+  self.Panel_Title:SetVisibility(ESlateVisibility.Collapsed)
   if "Tips" == ItemType then
     self:InitTipsInfo(self.ParentWidget.Content)
     return
@@ -36,6 +37,21 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
     else
       self.Text_Describe:SetText(GText(CharPartMeshInfo.Des))
     end
+    if "TitleFrame" == ItemType then
+      self.Panel_Title:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      local Widget = UIManager(self):LoadTitleFrameWidget(ItemId)
+      if Widget then
+        self.Pos_Title:AddChild(Widget)
+        local Avatar = GWorld:GetAvatar()
+        if not Avatar then
+          return
+        end
+        local TitleBefore = Avatar.TitleBefore
+        local TitleAfter = Avatar.TitleAfter
+        local TitleText = UIUtils.CalculateHoleTitle(TitleBefore, TitleAfter)
+        Widget.Text_Title:SetText(TitleText)
+      end
+    end
     self.Text_LongDescribe:SetVisibility(ESlateVisibility.Collapsed)
     return
   end
@@ -54,7 +70,7 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
     if not self.ParentWidget.Content.bCustomStype then
       local CallBack = {
         ButtonClickCallBack = function()
-          if self.ParentWidget and self.ParentWidget.Content and self.ParentWidget.Content.UIName and DataMgr.SystemUI[self.ParentWidget.Content.UIName].IsBanAccess then
+          if self.ParentWidget and self.ParentWidget.Content and self.ParentWidget.Content.UIName and DataMgr.SystemUI[self.ParentWidget.Content.UIName] and DataMgr.SystemUI[self.ParentWidget.Content.UIName].IsBanAccess then
             UIManager(self):ShowUITip("CommonToastMain", GText("UI_COMMONPOP_TITLE_100059"))
           else
             PageJumpUtils:CloseFrontDialog()
@@ -70,6 +86,14 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
       }
       self.ParentWidget:InitButtonEvent(CallBack)
     end
+    return
+  end
+  if "Mount" == ItemType then
+    assert(DataMgr[ItemType][ItemId], "未找到对应坐骑信息：", ItemType, ItemId)
+    local MountInfo = DataMgr[ItemType][ItemId]
+    self.ParentWidget.Panel_Hold:SetVisibility(ESlateVisibility.Collapsed)
+    self.Text_Describe:SetVisibility(ESlateVisibility.Collapsed)
+    self.Text_LongDescribe:SetText(GText(MountInfo.MountDes))
     return
   end
   if "HeadSculpture" == ItemType or "HeadFrame" == ItemType then
@@ -109,17 +133,17 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
   if "Resource" == ItemType and DataMgr.LimitedTimeResource[ItemId] then
     local LimitedData = ItemUtils.GetItemLimitedInfo(ItemId)
     if LimitedData then
-      local diff = os.difftime(LimitedData.EndTime, TimeUtils.NowTime())
+      local diff = os.difftime(LimitedData.EndTime.GetTime(), TimeUtils.NowTime())
       if diff < 86400 then
         self.BG_TimeLimit:SetColorAndOpacity(self.Color_Red)
       else
         self.BG_TimeLimit:SetColorAndOpacity(self.Color_Orange)
       end
       self.Panel_TimeLimit:SetVisibility(ESlateVisibility.Visible)
-      local RemainTimeDict, TimeCount = UIUtils.GetLeftTimeStrStyle2(LimitedData.EndTime, TimeUtils.NowTime())
+      local RemainTimeDict, TimeCount = UIUtils.GetLeftTimeStrStyle2(LimitedData.EndTime.GetTime(), TimeUtils.NowTime())
       self.Time_CountDown:SetTimeText(nil, RemainTimeDict)
       self.Text_Expiration:SetText(GText("UI_Date_End"))
-      self.Time_Expiration:SetTimeText(LimitedData.EndTime, UIConst.EnumTimeStyleType.YMDAndHMS)
+      self.Time_Expiration:SetTimeText(LimitedData.EndTime.GetTime(), UIConst.EnumTimeStyleType.YMDAndHMS)
     end
   end
   if Content.ResourceSType == "MountItem" then
@@ -137,6 +161,29 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
       end,
       ButtonClickText = "UI_BAG_Read",
       ButtonIcon = 1
+    }
+    self.ParentWidget:InitButtonEvent(Content)
+  end
+  if ResourceInfo.ResourceSType == "GestureItem" and not UIConst.LimitPreviewResource[ResourceInfo.ResourceId] then
+    local Content = {
+      ButtonClickCallBack = function()
+        if self.ParentWidget and self.ParentWidget.Content and self.ParentWidget.Content.UIName and DataMgr.SystemUI[self.ParentWidget.Content.UIName].IsBanAccess then
+          UIManager(self):ShowUITip("CommonToastMain", GText("UI_COMMONPOP_TITLE_100059"))
+        else
+          local CommonDialog = UIManager(self):GetUI("CommonDialog")
+          if CommonDialog then
+            CommonDialog:Close()
+          end
+          local ItemData = {}
+          ItemData.ItemType = "Resource"
+          ItemData.TypeId = ItemId
+          ItemData.SinglePreview = true
+          ItemData.HidePurchase = true
+          UIManager(self):LoadUINew("SkinPreview", ItemData, self)
+        end
+      end,
+      ButtonClickText = "UI_Preview_Title",
+      ButtonIcon = 0
     }
     self.ParentWidget:InitButtonEvent(Content)
   end
@@ -166,6 +213,193 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
     Count = Avatar.ActionPoint
   end
   self.ParentWidget.Text_Hold02:SetText(Count)
+end
+
+function M:InitItemInfoInBag(ItemType, ItemId, UnitId, Content)
+  Content = Content or {}
+  self.JumpReturnCallBack = Content and Content.JumpReturnCallBack
+  self.GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem()
+  self.Panel_TimeLimit:SetVisibility(ESlateVisibility.Collapsed)
+  self.Panel_Title:SetVisibility(ESlateVisibility.Collapsed)
+  if "Tips" == ItemType then
+    self:InitTipsInfo(Content)
+    return
+  end
+  if "TreasureGroup" == ItemType then
+    local TreasureGroupInfo = DataMgr[ItemType][ItemId]
+    if not Content.bGuide then
+      if Content.bActive then
+        self.Text_Describe:SetText(GText("已激活"))
+      else
+        self.Text_Describe:SetText(GText("未激活"))
+      end
+    else
+      self.Text_Describe:SetVisibility(ESlateVisibility.Collapsed)
+    end
+    self.Text_LongDescribe:SetText(GText(TreasureGroupInfo.GroupEffectDesc))
+    return
+  end
+  if "CharPartMesh" == ItemType or "Skin" == ItemType or "WeaponSkin" == ItemType or "Title" == ItemType or "TitleFrame" == ItemType then
+    assert(DataMgr[ItemType][ItemId], "未找到对应CharPartMesh信息：", ItemType, ItemId)
+    local CharPartMeshInfo = DataMgr[ItemType][ItemId]
+    if "WeaponSkin" == ItemType then
+      self.Text_Describe:SetText(GText(CharPartMeshInfo.Dec))
+    else
+      self.Text_Describe:SetText(GText(CharPartMeshInfo.Des))
+    end
+    if "TitleFrame" == ItemType then
+      self.Panel_Title:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      local Widget = UIManager(self):LoadTitleFrameWidget(ItemId)
+      if Widget then
+        self.Pos_Title:AddChild(Widget)
+        local Avatar = GWorld:GetAvatar()
+        if not Avatar then
+          return
+        end
+        local TitleBefore = Avatar.TitleBefore
+        local TitleAfter = Avatar.TitleAfter
+        local TitleText = UIUtils.CalculateHoleTitle(TitleBefore, TitleAfter)
+        Widget.Text_Title:SetText(TitleText)
+      end
+    end
+    self.Text_LongDescribe:SetVisibility(ESlateVisibility.Collapsed)
+    return
+  end
+  if "CharAccessory" == ItemType or "WeaponAccessory" == ItemType then
+    assert(DataMgr[ItemType][ItemId], "未找到对应配饰信息：", ItemType, ItemId)
+    local CharAccessoryInfo = DataMgr[ItemType][ItemId]
+    if CharAccessoryInfo.AccessoryType then
+      assert(UIConst.AccessoryTypeTextMap[CharAccessoryInfo.AccessoryType], "未知的配饰部位：" .. CharAccessoryInfo.AccessoryType)
+      self.Text_Describe:SetText(GText(UIConst.AccessoryTypeTextMap[CharAccessoryInfo.AccessoryType]))
+      self.Text_Describe:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    else
+      self.Text_Describe:SetVisibility(ESlateVisibility.Collapsed)
+    end
+    self.Text_LongDescribe:SetText(GText(CharAccessoryInfo.Des))
+    if not Content.bCustomStype then
+      local CallBack = {
+        ButtonClickCallBack = function()
+          if self.ParentWidget and Content.UIName and DataMgr.SystemUI[Content.UIName].IsBanAccess then
+            UIManager(self):ShowUITip("CommonToastMain", GText("UI_COMMONPOP_TITLE_100059"))
+          else
+            PageJumpUtils:CloseFrontDialog()
+            UIManager(self):LoadUINew("ArmorySkin", {
+              Type = string.sub(ItemType, 1, string.find(ItemType, "Accessory") - 1),
+              AccessoryId = ItemId,
+              OnCloseCallback = self.JumpReturnCallBack and self.JumpReturnCallBack.CallBack
+            })
+          end
+        end,
+        ButtonClickText = "UI_Preview_Title",
+        ButtonIcon = 1
+      }
+    end
+    return
+  end
+  if "Mount" == ItemType then
+    assert(DataMgr[ItemType][ItemId], "未找到对应坐骑信息：", ItemType, ItemId)
+    local MountInfo = DataMgr[ItemType][ItemId]
+    self.Text_Describe:SetVisibility(ESlateVisibility.Collapsed)
+    self.Text_LongDescribe:SetText(GText(MountInfo.MountDes))
+    return
+  end
+  if "HeadSculpture" == ItemType or "HeadFrame" == ItemType then
+    assert(DataMgr[ItemType][ItemId], "未找到对应配饰信息：", ItemType, ItemId)
+    local HeadInfo = DataMgr[ItemType][ItemId]
+    if "HeadSculpture" == ItemType then
+      self.Text_Describe:SetText(GText("UI_HeadFrame_Head"))
+    else
+      self.Text_Describe:SetText(GText("UI_HeadFrame_Frame"))
+    end
+    self.Text_LongDescribe:SetText(GText(HeadInfo.Des))
+    return
+  end
+  if "RougeLikeBlessing" == ItemType or "RougeLikeTreasure" == ItemType then
+    self.ParentWidget.Panel_Hold:SetVisibility(ESlateVisibility.Collapsed)
+    local Desc
+    if "RougeLikeBlessing" == ItemType then
+      if ItemId then
+        local RougeLikeManager = GWorld.RougeLikeManager
+        local Level = math.max(RougeLikeManager:GetBlessingLevel(ItemId) - 1, 0)
+        Desc = UIUtils.GenRougeBlessingDesc(ItemId, Level)
+      else
+        Desc = "RLBlessingGroup_Desc_unknown"
+      end
+    elseif "RougeLikeTreasure" == ItemType then
+      if ItemId then
+        Desc = UIUtils.GenRougeTreasureDesc(ItemId)
+      else
+        Desc = "RLTreasure_Desc_Unknown"
+      end
+    end
+    self.Text_Describe:SetText(GText(Desc))
+    self.Text_LongDescribe:SetVisibility(ESlateVisibility.Collapsed)
+    return
+  end
+  if "Resource" == ItemType and DataMgr.LimitedTimeResource[ItemId] then
+    local LimitedData = ItemUtils.GetItemLimitedInfo(ItemId)
+    if LimitedData then
+      local diff = os.difftime(LimitedData.EndTime.GetTime(), TimeUtils.NowTime())
+      if diff < 86400 then
+        self.BG_TimeLimit:SetColorAndOpacity(self.Color_Red)
+      else
+        self.BG_TimeLimit:SetColorAndOpacity(self.Color_Orange)
+      end
+      self.Panel_TimeLimit:SetVisibility(ESlateVisibility.Visible)
+      local RemainTimeDict, TimeCount = UIUtils.GetLeftTimeStrStyle2(LimitedData.EndTime.GetTime(), TimeUtils.NowTime())
+      self.Time_CountDown:SetTimeText(nil, RemainTimeDict)
+      self.Text_Expiration:SetText(GText("UI_Date_End"))
+      self.Time_Expiration:SetTimeText(LimitedData.EndTime.GetTime(), UIConst.EnumTimeStyleType.YMDAndHMS)
+    end
+  end
+  if Content.ResourceSType == "MountItem" then
+    self:FreshMountInfo(ItemId)
+  end
+  local ResourceInfo = DataMgr.Resource[ItemId]
+  if ResourceInfo.Type == "Read" then
+    local Content = {
+      ButtonClickCallBack = function()
+        local CommonDialog = UIManager(self):GetUI("CommonDialog")
+        if CommonDialog then
+          CommonDialog:Close()
+        end
+        UIManager(self):LoadUINew("ItemInformation", ItemId, "Read", self)
+      end,
+      ButtonClickText = "UI_BAG_Read",
+      ButtonIcon = 1
+    }
+  end
+  if ResourceInfo.ResourceSType == "GestureItem" and not UIConst.LimitPreviewResource[ResourceInfo.ResourceId] then
+    local Content = {
+      ButtonClickCallBack = function()
+        if self.ParentWidget and self.ParentWidget.Content and self.ParentWidget.Content.UIName and DataMgr.SystemUI[self.ParentWidget.Content.UIName].IsBanAccess then
+          UIManager(self):ShowUITip("CommonToastMain", GText("UI_COMMONPOP_TITLE_100059"))
+        else
+          local CommonDialog = UIManager(self):GetUI("CommonDialog")
+          if CommonDialog then
+            CommonDialog:Close()
+          end
+          local ItemData = {}
+          ItemData.ItemType = "Resource"
+          ItemData.TypeId = ItemId
+          ItemData.SinglePreview = true
+          ItemData.HidePurchase = true
+          UIManager(self):LoadUINew("SkinPreview", ItemData, self)
+        end
+      end,
+      ButtonClickText = "UI_Preview_Title",
+      ButtonIcon = 0
+    }
+  end
+  local PlayerAvatar = GWorld:GetAvatar()
+  if type(ItemId) == "string" then
+    ItemId = math.tointeger(ItemId)
+  end
+  local ResourceServerData = PlayerAvatar.Resources[ItemId]
+  self.Text_Describe:SetVisibility(ResourceInfo.FunctionDes == nil and ESlateVisibility.Collapsed or ESlateVisibility.Visible)
+  self.Text_LongDescribe:SetVisibility(nil == ResourceInfo.DetailDes and ESlateVisibility.Collapsed or ESlateVisibility.Visible)
+  self.Text_Describe:SetText(GText(ResourceInfo.FunctionDes))
+  self.Text_LongDescribe:SetText(GText(ResourceInfo.DetailDes))
 end
 
 function M:InitTipsInfo(ItemInfo)
@@ -204,9 +438,9 @@ function M:FreshMountInfo(ItemId)
     ScreenPrint("没找到对应坐骑物品 ItemId:" .. tostring(ItemId))
     return
   end
-  local MountId = DataMgr.Resource[5].FunctionVars and DataMgr.Resource[5].FunctionVars.Id
+  local MountId = DataMgr.Resource[ItemId].FunctionVars and DataMgr.Resource[ItemId].FunctionVars.Id
   if not MountId then
-    ScreenPrint("没找到坐骑物品对应的坐骑Id,检查FunctionVars是否填入的ID这一项 ItemId:" .. tostring(ItemId) .. "  FunctionVars:" .. CommonUtils:ToStringEx(DataMgr.Resource[5].FunctionVars))
+    ScreenPrint("没找到坐骑物品对应的坐骑Id,检查FunctionVars是否填入的ID这一项 ItemId:" .. tostring(ItemId) .. "  FunctionVars:" .. CommonUtils:ToStringEx(DataMgr.Resource[ItemId].FunctionVars))
   end
   local MountInfo = DataMgr.Mount[MountId]
   if not MountInfo then

@@ -33,11 +33,12 @@ end
 
 function M:SetStuffStyleByStateTag(Content)
   local StateTagInfo = Content.StateTagInfo
+  self.Content.StateTagInfo = StateTagInfo
   if nil == StateTagInfo then
     self:RefreshItemsViewWithStateTag({Name = "Normal"}, Content)
     return
   end
-  if nil ~= self.Content and nil ~= self.Content.StateTagInfo then
+  if self.Content ~= nil and self.Content.StateTagInfo ~= nil then
     if self.Content.StateTagInfo.Name == "IsToChoose" then
       self:CheckAndSetVisibility(self.SelectWidget, UIConst.VisibilityOp.Collapsed)
       self:CheckAndSetVisibility(self.SelectCountWidget, UIConst.VisibilityOp.Collapsed)

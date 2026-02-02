@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -300,6 +303,12 @@ return ReadOnly("BossSkillToast", {
     Duration = 13,
     ID = 8520010,
     TextMapKey = "去往最高处，躲避陨石！（待包装）",
+    TipsStyle = "Common"
+  },
+  [8524001] = {
+    Duration = 3,
+    ID = 8524001,
+    TextMapKey = "黑潮涌现（待包装）",
     TipsStyle = "Common"
   }
 })

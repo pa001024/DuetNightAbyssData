@@ -3,7 +3,8 @@ local M = Class({
   "BluePrints.UI.UI_PC.Common.Common_Item.WBP_Com_Item_Base_C"
 })
 M._components = {
-  "BluePrints.UI.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_TimeTag_Comp"
+  "BluePrints.UI.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_TimeTag_Comp",
+  "BluePrints.UI.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_CustomTag_Comp"
 }
 
 function M:InitData(Content)
@@ -24,7 +25,6 @@ end
 
 function M:InitCompView()
   self.Super.InitCompView(self)
-  self:SetTimeTag(self.Content.TimeTagList)
   self:SetCount(self.Count, self.NeedCount, self.MaxCount, self.NotCountFormat, self.bShowNotHaveStyle)
   self:SetBonus(self.BonusType, self.ExtraBonusText)
   self:SetName(self.ItemName)
@@ -41,6 +41,8 @@ function M:InitCompView()
   self:SetIsGot(self.bHasGot)
   self:SetRareTag(self.bRare)
   self:SetTimeLimitData(self.TimeLimitData)
+  self:SetTimeTag(self.Content.TimeTagList)
+  self:SetCustomTag(self.Content.bAllowCustom)
   self:SetRedDot(self.RedDotType)
 end
 

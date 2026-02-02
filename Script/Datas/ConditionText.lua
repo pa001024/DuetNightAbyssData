@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -11,6 +14,7 @@ return ReadOnly("ConditionText", {
     ConditionLogic = "S",
     ConditionType = "AvatarStatus"
   },
+  BuyGoods = {ConditionLogic = "S", ConditionType = "BuyGoods"},
   CharEquipRarityLevelModCount = {
     AutoTrigger = true,
     ConditionLogic = "S",
@@ -76,11 +80,13 @@ return ReadOnly("ConditionText", {
     ConditionLogic = "S",
     ConditionType = "FollowCommunityComplete"
   },
+  GachaCount = {ConditionLogic = "S", ConditionType = "GachaCount"},
   HardBossComplete = {
     AutoTrigger = true,
     ConditionLogic = "S",
     ConditionType = "HardBossComplete"
   },
+  HaveItem = {ConditionLogic = "S", ConditionType = "HaveItem"},
   HaveResource = {
     AutoTrigger = true,
     ConditionLogic = "S",
@@ -239,6 +245,11 @@ return ReadOnly("ConditionText", {
     ConditionLogic = "S",
     ConditionName = "UI_QUEST_CONDITION_FINISHQUEST",
     ConditionType = "TrueQuestChain"
+  },
+  UnlockMountId = {
+    AutoTrigger = true,
+    ConditionLogic = "S",
+    ConditionType = "UnlockMountId"
   },
   VarEqual = {ConditionLogic = "S", ConditionType = "VarEqual"}
 })

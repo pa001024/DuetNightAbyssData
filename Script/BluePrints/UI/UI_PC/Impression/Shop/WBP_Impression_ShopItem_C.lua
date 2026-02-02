@@ -50,7 +50,12 @@ function M:InitCommonItem(ShopItemData)
   ItemContent.ShopItemId = ShopItemData.ItemId
   ItemContent.Icon = ItemUtils.GetItemIconPath(ShopItemData.ItemId, ShopItemData.ItemType)
   ItemContent.Rarity = DataMgr[ShopItemData.ItemType][ShopItemData.ItemId].Rarity or DataMgr[ShopItemData.ItemType][ShopItemData.ItemId][ShopItemData.ItemType .. "Rarity"]
+  ItemContent.ItemType = ShopItemData.ItemType
   self.Com_Item_Shop:Init(ItemContent)
+  self.WS_Name:SetActiveWidgetIndex(0)
+  if not ItemContent.Rarity then
+    self.WS_Name:SetActiveWidgetIndex(1)
+  end
 end
 
 function M:InitColor()
@@ -94,6 +99,7 @@ function M:InitItemName(ShopItemData)
     ItemName = ItemName .. " x" .. ShopItemData.TypeNum
   end
   self.Text_Name:SetText(ItemName)
+  self.Text_Name_NoQuality:SetText(ItemName)
 end
 
 function M:InitItemPrice(ShopItemData)
@@ -275,6 +281,9 @@ function M:ShowItemDetail()
   self:SwitchSetPopupUIRightButton(Params)
   local CommonPopupUIID = self:SwitchCommonPopupUIId()
   self.PopupUI = UIManager(self):ShowCommonPopupUI(CommonPopupUIID, Params, self.ShopUI)
+  if IsValid(self.ShopUI) then
+    self.ShopUI.SelectItemId = self.ShopItemData.ImpressionShopId
+  end
   self:InitPopupKeys()
   self:InitListenEvent()
   local ItemWidget = self.PopupUI:GetContentWidgetByName("ItemSubsize")
@@ -288,6 +297,13 @@ function M:ShowItemDetail()
       Item.bIsFocusable = false
       Item.NotInteractive = UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad
     end
+  end
+end
+
+function M:CloseItemDetail()
+  self:OnPopUIEnd()
+  if IsValid(self.ShopUI) then
+    self.ShopUI.SelectItemId = nil
   end
 end
 

@@ -32,7 +32,7 @@ function M:CollisionEndOverlap(Component, OtherActor)
   if OtherActor.DongguoLandNum and OtherActor.DongguoLandNum > 0 then
     OtherActor.DongguoLandNum = OtherActor.DongguoLandNum - 1
   end
-  if OtherActor.DongguoLandNum > 0 then
+  if not OtherActor.DongguoLandNum or OtherActor.DongguoLandNum > 0 then
     return
   end
   OtherActor:SetBool("Baiheng_Mijing_Dot", false)

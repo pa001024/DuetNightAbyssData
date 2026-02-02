@@ -51,47 +51,11 @@ function M:RemoveInputMethodChangedListen()
 end
 
 function M:UpdatePage()
-  self.IsShow = self:IsPrerequisiteSatisfied()
-  if self.IsShow then
-    self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-  else
-    self:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  end
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return false
   end
   self.Text_Reward:SetText(GText("UI_TempleEvent_RewardProgress"))
-end
-
-function M:IsPrerequisiteSatisfied()
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
-    return false
-  end
-  local DoubleModEventInfo = DataMgr.EventMain[self.EventId]
-  if not DoubleModEventInfo then
-    ScreenPrint("EventMain表中找不到神庙活动相关信息！读取的EventId:" .. self.EventId)
-    return false
-  end
-  local PrerequisiteQuestId = {}
-  if DoubleModEventInfo.PretextTasks1 then
-    table.insert(PrerequisiteQuestId, DoubleModEventInfo.PretextTasks1)
-  end
-  for _, QuestId in pairs(DoubleModEventInfo.PretextTasks2 or {}) do
-    table.insert(PrerequisiteQuestId, QuestId)
-  end
-  for _, QuestId in pairs(PrerequisiteQuestId) do
-    local QuestChain = Avatar.QuestChains[QuestId]
-    if not QuestChain then
-      ScreenPrint("神庙活动 配置了一个不存在的任务链Id！请策划检查！Id:" .. QuestId)
-      return false
-    end
-    if not QuestChain:IsFinish() then
-      return false
-    end
-  end
-  return true
 end
 
 function M:OnClicked()

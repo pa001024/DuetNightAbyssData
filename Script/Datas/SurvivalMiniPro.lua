@@ -6,6 +6,9 @@ T.RT_4 = {612}
 T.RT_5 = {100601}
 T.RT_6 = {200602}
 T.RT_7 = {200601}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -124,6 +127,18 @@ return ReadOnly("SurvivalMiniPro", {
     SpMonsterSpawnId = {613},
     SpMonsterSpawnTime = 40
   },
+  [91132] = {
+    DungeonId = 91132,
+    MonsterSpawnId = T.RT_7,
+    SpMonsterSpawnId = {91132},
+    SpMonsterSpawnTime = 1
+  },
+  [91133] = {
+    DungeonId = 91133,
+    MonsterSpawnId = T.RT_6,
+    SpMonsterSpawnId = {91133},
+    SpMonsterSpawnTime = 1
+  },
   [91144] = {
     DungeonId = 91144,
     MonsterSpawnId = T.RT_7,
@@ -138,14 +153,26 @@ return ReadOnly("SurvivalMiniPro", {
   },
   [91181] = {
     DungeonId = 91181,
-    MonsterSpawnId = T.RT_7,
+    MonsterSpawnId = {200601, 911810},
     SpMonsterSpawnId = {91181},
     SpMonsterSpawnTime = 1
   },
   [91182] = {
     DungeonId = 91182,
-    MonsterSpawnId = T.RT_6,
+    MonsterSpawnId = {200602, 911820},
     SpMonsterSpawnId = {91182},
+    SpMonsterSpawnTime = 1
+  },
+  [91206] = {
+    DungeonId = 91206,
+    MonsterSpawnId = {200601, 912060},
+    SpMonsterSpawnId = {91206},
+    SpMonsterSpawnTime = 1
+  },
+  [91207] = {
+    DungeonId = 91207,
+    MonsterSpawnId = {200602, 912070},
+    SpMonsterSpawnId = {91207},
     SpMonsterSpawnTime = 1
   }
 })

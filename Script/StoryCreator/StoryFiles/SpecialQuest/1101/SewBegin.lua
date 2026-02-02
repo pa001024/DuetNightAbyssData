@@ -288,6 +288,7 @@ return {
             pos = {x = 468.79602381622607, y = -8.419915765349387},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "Mechanism_1670004_Point"
             }
@@ -299,6 +300,7 @@ return {
             pos = {x = 473.79602381622607, y = 267.2050842346506},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "Mechanism_1670004_Point"
             }

@@ -30,27 +30,30 @@ function M:CreatePreviewTargetData(Params)
   local Avatar = GWorld:GetAvatar()
   if Params.Type == "Char" then
     local Char = Avatar.Chars[Avatar.CurrentChar]
-    local SkinId = Params.SkinId
-    if SkinId then
-      local SkinData = DataMgr.Skin[SkinId]
-      if SkinData.CharId ~= Char.CharId or Params.SystemType == "BattlePass" then
-        local DummyAvatar = ArmoryUtils:CreateNewDummyAvatar(ArmoryUtils.PreviewTargetStates.Prime, {
-          CharIds = {
-            SkinData.CharId
-          }
-        })
-        self._DummyAvatar = DummyAvatar
-        if self.ActorController then
-          self.ActorController:SetAvatar(self._DummyAvatar)
-        end
-        local _, temp = next(DummyAvatar.Chars)
-        Char = temp
-        Char:GetAppearance().SkinId = SkinId
-        if Params.Accessory then
-          local AppearanceSuit = Char:GetAppearance()
-          for k, v in pairs(Params.Accessory) do
-            AppearanceSuit.Accessory[k] = v
-          end
+    local SkinData
+    if Params.SkinId then
+      SkinData = DataMgr.Skin[Params.SkinId]
+    elseif Params.HairId then
+      SkinData = DataMgr.Hair[Params.HairId]
+    end
+    if SkinData and (SkinData.CharId ~= Char.CharId or Params.SystemType == "BattlePass" or Char:GetAppearance().SkinId ~= SkinId) then
+      local DummyAvatar = ArmoryUtils:CreateNewDummyAvatar(ArmoryUtils.PreviewTargetStates.Prime, {
+        CharIds = {
+          SkinData.CharId
+        }
+      })
+      self._DummyAvatar = DummyAvatar
+      if self.ActorController then
+        self.ActorController:SetAvatar(self._DummyAvatar)
+      end
+      local _, temp = next(DummyAvatar.Chars)
+      Char = temp
+      Char:GetAppearance().SkinId = Params.SkinId or Char:GetAppearance().SkinId
+      Char:GetAppearance().HairId = Params.HairId or Char:GetAppearance().HairId
+      if Params.Accessory then
+        local AppearanceSuit = Char:GetAppearance()
+        for k, v in pairs(Params.Accessory) do
+          AppearanceSuit.Accessory[k] = v
         end
       end
     end
@@ -114,10 +117,10 @@ function M:UpdateAccessoryCamera(AccessoryId, AccessoryType)
     if not _AccessoryType then
       local Data = DataMgr.CharAccessory[AccessoryId]
       if Data then
-        _AccessoryType = Data.AccessoryType
+        _AccessoryType = Data and Data.AccessoryType
       else
         Data = DataMgr.CharPartMesh[AccessoryId]
-        _AccessoryType = Data.AccessoryType
+        _AccessoryType = Data and Data.AccessoryType
       end
     end
     self.ActorController.CameraOffsetAccessoryId = AccessoryId
@@ -151,24 +154,21 @@ function M:SwitchWeaponAccessoryPreview(TabIdx)
 end
 
 function M:ClearCharAccessoryPreview()
-  local Avatar = GWorld:GetAvatar()
+  local Avatar = self.ActorController:GetAvatar()
   if not Avatar then
     return
   end
   self.ActorController:StopPlayerFX()
   self.ActorController:DestoryCreature(CommonConst.CharAccessoryTypes.FX_Dead)
   self.ActorController:DestoryCreature(CommonConst.CharAccessoryTypes.FX_Body)
+  self.ActorController:StopPlayerMontage()
+  self.ActorController:DestoryPlayerMeleeWeapon()
   if self.ActorController.ArmoryPlayer then
     self.ActorController.ArmoryPlayer:RemoveAllEffectCreature()
   end
-  local Char = Avatar.Chars[Avatar.CurrentChar]
-  local CharSkinId = Char.AppearanceSuits[Char.CurrentAppearanceIndex].SkinId
-  local AppearanceInfo = {
-    CharId = Char.CharId,
-    SkinId = CharSkinId,
-    AccessorySuit = {}
-  }
-  self.ActorController:ChangeCharAppearance(AppearanceInfo)
+  self.ActorController.CurrentAppearanceInfo = self.ActorController.CurrentAppearanceInfo or {}
+  self.ActorController.CurrentAppearanceInfo.AccessorySuit = {}
+  self.ActorController:ChangeCharAppearance(self.ActorController.CurrentAppearanceInfo)
 end
 
 function M:Destruct()

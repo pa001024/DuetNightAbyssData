@@ -441,23 +441,43 @@ function M:InitSubTabs()
   local subTabs = self[self.CurrentTopTabType .. "Tabs"] or {}
   self.List_Tab:ClearListItems()
   self.List_Tab:SetVisibility(UIConst.VisibilityOp.Visible)
+  local CharDataTarget
+  if self.CurrentTopTabType == RecordTag then
+    CharDataTarget = DataMgr.CharacterDataTarget[self.Char.CharId]
+  end
+  local firstValidIdx
   for i, subTab in ipairs(subTabs) do
-    local Item = NewObject(UIUtils.GetCommonItemContentClass())
-    Item.Idx = i
-    Item.Text = subTab.Text
-    Item.Parent = self
-    Item.OnClicked = self.OnSubTabClicked
-    Item.OnAddedToFocusPath = {
-      Obj = self,
-      Callback = self.OnSubTabAddedToFocusPath,
-      Params = Item
-    }
-    Item.IconPath = SubItemIconPath[subTab.Type][i]
-    Item.Info = subTab
-    Item.IsSelected = 1 == i
-    Item.TabType = self.CurrentTopTabType
-    Item.CharId = self.Char.CharId
-    self.List_Tab:AddItem(Item)
+    local shouldAdd = true
+    if self.CurrentTopTabType == RecordTag then
+      shouldAdd = false
+      if CharDataTarget then
+        for _, Data in pairs(CharDataTarget) do
+          if Data.CharDataType == i then
+            shouldAdd = true
+            break
+          end
+        end
+      end
+    end
+    if shouldAdd then
+      firstValidIdx = firstValidIdx or i
+      local Item = NewObject(UIUtils.GetCommonItemContentClass())
+      Item.Idx = i
+      Item.Text = subTab.Text
+      Item.Parent = self
+      Item.OnClicked = self.OnSubTabClicked
+      Item.OnAddedToFocusPath = {
+        Obj = self,
+        Callback = self.OnSubTabAddedToFocusPath,
+        Params = Item
+      }
+      Item.IconPath = SubItemIconPath[subTab.Type][i]
+      Item.Info = subTab
+      Item.IsSelected = i == firstValidIdx
+      Item.TabType = self.CurrentTopTabType
+      Item.CharId = self.Char.CharId
+      self.List_Tab:AddItem(Item)
+    end
   end
   self.List_Tab:RegenerateAllEntries()
   if not self.IsFirstOpen then

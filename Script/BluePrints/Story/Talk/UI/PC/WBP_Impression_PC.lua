@@ -252,6 +252,7 @@ end
 
 function WBP_Impression_PC:PreExitTalkTask(TalkTask, TalkData, OnPreExitTalkTaskFinished, OutType, OutTime)
   WBP_Impression_PC.Super.PreExitTalkTask(self, TalkTask, TalkData, OnPreExitTalkTaskFinished, OutType, OutTime)
+  self.WBP_Story_PlayKey_P:StopAllAnimations()
   self:RemoveFocusTarget("Menu")
 end
 

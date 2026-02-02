@@ -1,5 +1,6 @@
 require("UnLua")
 local MonsterUtils = require("Utils.MonsterUtils")
+local ActivityController = require("BluePrints.UI.WBP.Activity.ActivityController")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
@@ -40,6 +41,9 @@ function M:Construct()
 end
 
 function M:OnListRewardMouseMove(MyGeometry, PointerEvent)
+  if not self.List_Reward:HasMouseCapture() then
+    return
+  end
   local MouseSpeed = 0.015
   if not self.ListRewardMouseBeginPos then
     self.ListRewardMouseBeginPos = UE4.UKismetInputLibrary.PointerEvent_GetScreenSpacePosition(PointerEvent)
@@ -114,7 +118,8 @@ function M:InitItemContent()
     self.Btn_DoubleMod.Text_Button:SetText(GText("UI_GameEvent_Goto"))
     if self.DoubleMod then
       local IsDoubleModDungeon = false
-      local DoubleModDrop = DataMgr.DoubleModDrop and DataMgr.DoubleModDrop[CommonConst.DoubleModDropEventID]
+      local EventId = GWorld.GameInstance.DoubleModDropEventID
+      local DoubleModDrop = DataMgr.DoubleModDrop and DataMgr.DoubleModDrop[EventId]
       local ModDungeonIds = DoubleModDrop and DoubleModDrop.ModDungeonId
       if ModDungeonIds and self.MonRewardData and self.MonRewardData.DungeonList then
         local DungeonId = self.MonRewardData.DungeonList[1]
@@ -133,7 +138,7 @@ function M:InitItemContent()
         self.WS_Btn:SetActiveWidgetIndex(1)
         self.VX_EffectBG:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
       elseif IsDoubleModDungeon then
-        self.Group_DoubleModSign:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+        self.Group_DoubleModSign:SetVisibility(self.Parent.DropRemaining <= 0 and UE4.ESlateVisibility.Collapsed or UE4.ESlateVisibility.SelfHitTestInvisible)
         self.WS_Btn:SetActiveWidgetIndex(0)
         self.VX_EffectBG:SetVisibility(ESlateVisibility.Collapsed)
       else

@@ -35,6 +35,11 @@ local CommonConst = {
   AddCollectorTime = 0.5,
   UpdateCollectorTime = 0.5,
   DeadCollectorTime = 0.5,
+  FoolsDayPhotoType = {
+    Large = "Large",
+    Small = "Small",
+    Pixel = "Pixel"
+  },
   RewardReason = {
     MonsterDead = "MonsterDead",
     Chest = "Chest",
@@ -116,10 +121,17 @@ local CommonConst = {
     MultiDestroy = "RegionMultiDestroyProgress",
     CoDefence = "RegionCoDefenceProgress",
     HardBossDg = "Disable",
-    SoloRaid = "WidgetUI"
+    SoloRaid = "WidgetUI",
+    MonsterRush = "WidgetUI",
+    AutoChess = "Disable",
+    SoloTreasure = "SoloTreasureCountDownTip"
   },
   DungeonEMWidgetUINameMap = {
-    SoloRaid = "SoloRaidScore"
+    SoloRaid = "SoloRaidScore",
+    MonsterRush = {
+      "WuyoushengProgressHud",
+      "WuyoushengTopContent"
+    }
   },
   DungeonType = {
     Survival = "Survival",
@@ -136,7 +148,8 @@ local CommonConst = {
     FeiNa = "FeinaEvent",
     MonsterRush = "MonsterRush",
     HardBossDg = "HardBossDg",
-    SoloRaid = "SoloRaid"
+    SoloRaid = "SoloRaid",
+    AutoChess = "AutoChess"
   },
   SubRegionType = {Field = "field", Home = "home"},
   AvatarStatus = {
@@ -177,6 +190,7 @@ local CommonConst = {
     Resource = "Resource",
     Skin = "Skin",
     WeaponSkin = "WeaponSkin",
+    Hair = "Hair",
     CharAccessory = "CharAccessory",
     WeaponAccessory = "WeaponAccessory",
     Pet = "Pet"
@@ -378,6 +392,7 @@ local CommonConst = {
   TargetTypeTotalLoginDays = 10002,
   TargetTypeConsecutiveLoginDays = 10003,
   TargetTypeConsumeActionPoint = 10004,
+  TargetTypeLoginDay = 10005,
   TargetTypeAccumulatedNumberOfFriendsAdded = 10801,
   TargetTypeGetReource = 10101,
   TargetTypeCostResource = 10102,
@@ -438,6 +453,8 @@ local CommonConst = {
   TargetTypeImpressionCheckCount = 12001,
   TargetTypeImpressionValue = 12002,
   TargetTypeCharAccessoryCount = 13001,
+  TargetTypeGetCharSkin = 13002,
+  TargetTypeGetWeaponSkin = 13003,
   TargetTypeAllImpressionValue = 12003,
   TargetTypeImpressionShop = 12004,
   TargetTypeTalkTriggerComplete = 12005,
@@ -447,11 +464,15 @@ local CommonConst = {
   TargetPetCaptureSuccessCount = 14001,
   TargetPetBreakCount = 14002,
   TargetPetBreaknumCount = 14003,
+  TargetGetWeapon = 14008,
   TargetTakePhotoCount = 21001,
   TargetTypePassAbyssTypeTimes = 15001,
   TargetTypeWikiEntryUnlockCount = 16001,
   TargetTypeStarterQuestPhaseFinish = 18001,
   TargetTypePartyTopicUnlockCount = 17001,
+  TargetTypeCompletePartyTopic = 17002,
+  TargetTypeCompleteNpcTalkRepeat = 17003,
+  TargetTypeCompleteNpcTalkNoRepeat = 17004,
   TargetTypeTryPetCaptureCreatorId = 14004,
   TargetTypeZhiliuCompleteCount = 22003,
   TargetTypeWalnutType = 19001,
@@ -462,8 +483,21 @@ local CommonConst = {
   TargetTypeCommonQuestFinish = 22004,
   TargetTypeCollectFeiNaCount = 22005,
   TargetTypeMidTermScoreGet = 22006,
+  TargetTypeAutoChessRankLevel = 22013,
+  TargetTypeAutoChessPassRandomMission = 22014,
+  TargetTypeAutoChessCostSum = 22015,
+  TargetTypeAutoChessPerCostLess = 22016,
+  TargetTypeAutoChessPerCostMore = 22017,
+  TargetTypeAutoChessUnlockEquip = 22018,
+  TargetTypeAutoChessUnlockCard = 22019,
   TargetTypeOnlineDruation = 10802,
   TargetTypePassHardBoss = 23001,
+  TargetTypeFoolsDayTransformUnlockCount = 22007,
+  TargetTypeFoolsDayUseTransformCount = 22008,
+  TargetTypeFoolsDayUploadPhotoCount = 22009,
+  TargetTypeFoolsDayLikeCount = 22010,
+  TargetTypeFoolsDayMiniGameCount = 22011,
+  TargetTypeFoolsDayCompleteMiniGameCount = 22012,
   MaxGradeLevel = 6,
   MailMaxDueTime = 9999,
   GMMailTimeLimit = 30,
@@ -474,6 +508,7 @@ local CommonConst = {
   TheaterEventId = 103011,
   ZhiliuEventId = 103005,
   RaidEventId = 111001,
+  AutoChessEventId = 103016,
   TargetCheckAll = {
     9001,
     9002,
@@ -506,7 +541,8 @@ local CommonConst = {
     23001,
     22005,
     10704,
-    10802
+    10802,
+    22013
   },
   TargetCheckFirst = {
     10001,
@@ -544,7 +580,13 @@ local CommonConst = {
     20001,
     22004,
     12004,
-    10805
+    10805,
+    17002,
+    17003,
+    17004,
+    13002,
+    13003,
+    14008
   },
   TargetCheckFisrtAndLess = {10503, 10507},
   TargetCheckFisrtAndMore = {
@@ -560,6 +602,8 @@ local CommonConst = {
     15001,
     22001
   },
+  TargetCheckLess = {22016},
+  TargetCheckMore = {22017},
   SystemLanguages = {
     Default = "TextMapContent",
     CN = "TextMapContent",
@@ -691,7 +735,8 @@ local CommonConst = {
     Trace = "Trace",
     Grade = "Grade",
     Mod = "Mod",
-    Pet = "Pet"
+    Pet = "Pet",
+    Mount = "Mount"
   },
   ArmoryTag = {
     Char = "Char",
@@ -712,13 +757,15 @@ local CommonConst = {
     PreviewArmory = 1,
     PersonInfo = 2,
     BattlePass = 3,
-    PreviewCommon = 4
+    PreviewCommon = 4,
+    PreviewMVP = 5
   },
   PreviewScenePaths = {
     "/Game/UI/LevelMap/Armory_BGSkySphere.Armory_BGSkySphere",
     "/Game/UI/LevelMap/Map_Preview.Map_Preview'",
     "/Game/UI/LevelMap/Map_BattleOrder.Map_BattleOrder",
-    "/Game/UI/LevelMap/UI_Background_Art.UI_Background_Art"
+    "/Game/UI/LevelMap/UI_Background_Art.UI_Background_Art",
+    "/Game/UI/LevelMap/MVPShow_BGSkySphere.MVPShow_BGSkySphere"
   },
   NonePolarity = -1,
   ModSlotUnequipped = "",
@@ -727,15 +774,16 @@ local CommonConst = {
     Head = "Head",
     Waist = "Waist",
     Face = "Face",
-    Ear = "Ear",
     Fx = "Fx",
-    Special = "Special",
     FX_Body = "FX_Body",
     FX_Footprint = "FX_Footprint",
     FX_Teleport = "FX_Teleport",
     FX_Dead = "FX_Dead",
     FX_PlungingATK = "FX_PlungingATK",
-    FX_HelixLeap = "FX_HelixLeap"
+    FX_HelixLeap = "FX_HelixLeap",
+    Hat = "Hat",
+    MVP = "MVP",
+    Tail = "Tail"
   },
   NewCharAccessoryTypes = {
     Back = 1,
@@ -749,14 +797,18 @@ local CommonConst = {
     FX_Dead = 9,
     FX_PlungingATK = 10,
     FX_HelixLeap = 11,
-    Special = 12,
-    Ear = 13
+    Hat = 12,
+    Tail = 13,
+    MVP = 14
   },
+  WeaponAccessoryType = {Head = "Head", Waist = "Waist"},
+  WeaponAccessoryTypeIndex = {Head = 1, Waist = 2},
   ActionAccessoryTypes = {
     FX_Dead = "FX_Dead",
     FX_Teleport = "FX_Teleport",
     FX_PlungingATK = "FX_PlungingATK",
-    FX_HelixLeap = "FX_HelixLeap"
+    FX_HelixLeap = "FX_HelixLeap",
+    MVP = "MVP"
   },
   RobberMonsterDungeonType = {
     Sabotage = "Sabotage",
@@ -920,7 +972,12 @@ local CommonConst = {
     Doing = 1,
     Complete = 2
   },
-  SkinType = {Char = 0, Weapon = 1},
+  SkinType = {
+    Char = 0,
+    Weapon = 1,
+    Mount = 2,
+    Hair = 3
+  },
   QuestState = {
     Start = 1,
     Success = 2,
@@ -943,6 +1000,23 @@ local CommonConst = {
     doing = 2,
     finish = 3,
     preQuest = 4
+  },
+  RecurringTaskState = {
+    NotAccept = 0,
+    Doing = 1,
+    AlreadyClaimed = 2,
+    CanClaim = 3
+  },
+  FameRewardState = {
+    NotClaimable = 0,
+    ReadyClaim = 1,
+    AlreadyClaimed = 2
+  },
+  RegionFameState = {
+    Normal = 0,
+    MaxLevel = 1,
+    WeeklyFameLimit = 2,
+    DoingOtherRegionFameTask = 3
   },
   MESSAGE_TYPE_SELF = 0,
   MESSAGE_TYPE_WORLD = 1,
@@ -974,7 +1048,9 @@ local CommonConst = {
     "UI_COMMONPOP_TEXT_100090_7",
     "UI_COMMONPOP_TEXT_100090_8",
     "UI_COMMONPOP_TEXT_100090_9",
-    "UI_COMMONPOP_TEXT_100090_10"
+    "UI_COMMONPOP_TEXT_100090_10",
+    "UI_COMMONPOP_TEXT_100090_12",
+    "UI_COMMONPOP_TEXT_100090_13"
   },
   AvatarInfoProps = {
     "Account",
@@ -995,6 +1071,9 @@ local CommonConst = {
     "TitleAfter",
     "TitleFrame"
   },
+  RMN2GiftQuota = 10,
+  GIFT_MAIL_CONTENT_MAX_LEN = 500,
+  GiftMinFriendDuration = 1209600,
   FriendShortInfoProps = {
     "Account",
     "Eid",
@@ -1097,6 +1176,14 @@ local CommonConst = {
     "role_logout",
     "charge_info"
   },
+  SaLogCloudAppMsgTrack = {
+    "user_login",
+    "create_role",
+    "role_login",
+    "role_logout",
+    "charge_info",
+    "role_online_time"
+  },
   SaLogTrackProperties = {
     "#channel_id",
     "#app_channel_id",
@@ -1158,6 +1245,7 @@ local CommonConst = {
   SaLogReportOnlineTime = 2,
   PetAutoLockBreakNum = 3,
   PetAutoLockRarity = 5,
+  PetEntryAutoLockRarity = 5,
   ResourceType = {
     Mod = "Mod",
     Weapon = "Weapon",
@@ -1242,9 +1330,6 @@ local CommonConst = {
     OnUseCreateMount = "OnUseCreateMount",
     OnChangeRegionOnlineMount = "OnChangeRegionOnlineMount"
   },
-  ForwardOnlineInterval = 0.1,
-  ForwardOnlineNumForLow = 200,
-  ForwardOnlineNumForMiddle = 200,
   OnlineState = {
     Normal = 1,
     UseWheel = 2,
@@ -1270,7 +1355,31 @@ local CommonConst = {
     FriendOnly = 2,
     Self = 3
   },
-  DeliveryAnchorMechanismUnitId = 90100
+  DeliveryAnchorMechanismUnitId = 90100,
+  AutoChess = {
+    CubeState = {
+      CanPutin = "CanPutin",
+      CanChange = "CanChange",
+      Hover = "Hover",
+      UnHover = "UnHover",
+      Forbid = "Forbid",
+      InitEffect = "InitEffect",
+      Xuanzhong = "Xuanzhong",
+      BanEnemy = "BanEnemy"
+    },
+    DeployState = {Place = 1, Move = 2},
+    InputMode = "WBP_AutoChessBattlePage_Deploying",
+    GamepadFocusState = {
+      Focus1 = 1,
+      Focus2 = 2,
+      Focus3 = 3
+    },
+    BoardWidth = 6,
+    BoardHeight = 4,
+    MaxChessNum = 24,
+    GamepadMoveMinDeltaTime = 0.3,
+    JoystickThreshold = 0.5
+  }
 }
 CommonConst.IndependentModMultiplier = {"Normal"}
 CommonConst.CONFIG = {
@@ -1321,6 +1430,7 @@ CommonConst.SERVER_AREA_TO_TIMEZONE = {
 CommonConst.UnrestrictedPayMoney2CoinNum = {TWD = 1.818, USD = 59.46181704}
 CommonConst.WeaponCardLevelResourceId = 1006
 CommonConst.TemplePassNeedStar = 1
+CommonConst.WysPassNeedStar = 1
 CommonConst.RegionMapTrackingType = {
   TeleportPoint = 1,
   RegionPoint = 2,
@@ -1343,7 +1453,8 @@ CommonConst.MonitorCheatType = {
   GatheringMonster = 7,
   Mouse = 8,
   Keyboard = 9,
-  Raid = 11
+  Raid = 11,
+  DungeonReward = 12
 }
 CommonConst.MonitorReportPeriod = 1
 CommonConst.MonitorCheatPeriod = {
@@ -1380,5 +1491,12 @@ CommonConst.TheaterPerformGameState = {
   Settle = 3
 }
 CommonConst.RankType = {PreRaidRank = 1, RaidRank = 2}
+CommonConst.CommonQuestType = {Normal = 1, Daily = 2}
 CommonConst.TheaterDonationRefreshCD = 3
+CommonConst.PlayerTag = {
+  New = 1,
+  Active = 2,
+  ComeBack = 3
+}
+CommonConst.DailyProgressNeed = 200
 return CommonConst

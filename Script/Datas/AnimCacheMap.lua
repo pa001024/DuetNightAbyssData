@@ -135,6 +135,9 @@ T.RT_20 = {
 T.RT_21 = {
   [4] = "AnimMontage'/Game/Asset/Char/Monster/Animal06_Cuiping/Animation/Montage/Combat/Hit/Mon_Cuiping_Die_Montage.Mon_Cuiping_Die_Montage'"
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

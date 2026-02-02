@@ -23,10 +23,13 @@ end
 
 function StoryMgr:EnableStory()
   self.bEnableStory = true
+  EventManager:FireEvent(EventID.OnEnableStory)
+  EventManager:AddEvent(EventID.InLoading, self, self.HandleInLoading)
 end
 
 function StoryMgr:DisableStory()
   self.bEnableStory = false
+  EventManager:RemoveEvent(EventID.InLoading, self)
 end
 
 function StoryMgr:HandleInLoading()
@@ -53,23 +56,21 @@ function StoryMgr:RunStory(StoryPath, QuestId, NodeId, EndCallback, StopCallback
     DebugPrint("StoryMgr:RunStory:Already Exit", StoryPath, QuestId, NodeId, EndCallback, StopCallback, Payload)
     return
   end
-  return self:RunStoryInternal(StorylineUtils.BuildStoryline(StoryPath, EndCallback, StopCallback, Payload), StoryPath, QuestId, NodeId, EndCallback, StopCallback, Payload)
-end
-
-function StoryMgr:RunStoryInternal(Storyline, FileName, QuestId, NodeId, EndCallback, StopCallback, Payload)
+  local Storyline = StorylineUtils.BuildStoryline(StoryPath, EndCallback, StopCallback, Payload)
   if self.bEnableStory == false then
     local Title = "STL 已禁用"
-    local Message = string.format("试图在禁用时运行新的 STL %s", FileName)
+    local Message = string.format("试图在禁用时运行新的 STL %s", StoryPath)
     UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, STLogType, Title, Message)
   end
   if not Storyline then
     local Message = "Story不存在" .. [[
 
-FileName:]] .. FileName
+FileName:]] .. StoryPath
     UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, STLogType, "Story不存在", Message)
+    return
   end
-  DebugPrint("StoryMgr:RunStory", FileName, QuestId, NodeId, EndCallback, StopCallback, Payload)
-  self.Storylines[FileName] = Storyline
+  DebugPrint("StoryMgr:RunStory", StoryPath, QuestId, NodeId, EndCallback, StopCallback, Payload)
+  self.Storylines[StoryPath] = Storyline
   Storyline:StartStory(tonumber(QuestId), NodeId)
   return Storyline.FilePath
 end
@@ -523,6 +524,18 @@ end
 function StoryMgr:RemoveStoryBlackScreenOnSucc()
   local HandleName = "StoryBlackScreenOnSucc"
   self:RemoveWaitingQuest()
+  self:RemoveStoryBlackScreen(HandleName)
+end
+
+function StoryMgr:AddStoryBlackScreenOnDelivery()
+  local ExtralInfo = {
+    HandleName = "StoryBlackScreenOnDelivery"
+  }
+  self:AddStoryBlackScreen(ExtralInfo)
+end
+
+function StoryMgr:RemoveStoryBlackScreenOnDelivery()
+  local HandleName = "StoryBlackScreenOnDelivery"
   self:RemoveStoryBlackScreen(HandleName)
 end
 

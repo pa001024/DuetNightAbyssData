@@ -141,13 +141,26 @@ function ServerListMgr:GetServers()
   end
 end
 
-function ServerListMgr:GetChanelProvider()
+function ServerListMgr:GetExamineKey()
   local ChannelId = HeroUSDKSubsystem(GWorld.GameInstance):GetChannelId()
-  if DataMgr.ChannelInfo[ChannelId] then
-    local ChannelProvider = DataMgr.ChannelInfo[ChannelId].Provider
-    return ChannelProvider
+  local MirrorChannelId = HeroUSDKSubsystem(GWorld.GameInstance):GetMirrorChannelId()
+  local ExamineKey
+  for _, v in pairs(DataMgr.ExamineInfo) do
+    if v.ChannelID and v.ChannelID == ChannelId then
+      if v.MirrorChannelID then
+        if v.MirrorChannelID == MirrorChannelId then
+          ExamineKey = v.ExamineKey
+          break
+        end
+      else
+        ExamineKey = v.ExamineKey
+      end
+    end
+  end
+  if ExamineKey then
+    return ExamineKey
   else
-    print("执行GetCdnHideData出错，当前ChannelId:" .. tostring(ChannelId) .. "中没有对应的Provider")
+    print("执行GetCdnHideData出错，当前ChannelId:" .. tostring(ChannelId) .. "当前MirrorChannelId:" .. tostring(MirrorChannelId) .. "ExamineInfo中没有对应的ChannelId")
   end
 end
 

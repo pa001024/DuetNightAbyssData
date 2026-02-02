@@ -28,7 +28,8 @@ ChatCommon.EventID = {
   EmotionRemoved = "EmotionRemoved",
   SelectPlayerToChat = "SelectPlayerToChat",
   SendCDTimerUpdate = "SendCDTimerUpdate",
-  OnChatBtnListOpen = "OnChatBtnListOpen"
+  OnChatBtnListOpen = "OnChatBtnListOpen",
+  RecvStickerInPubChannels = "RecvStickerInPubChannels"
 }
 ChatCommon.MsgType = {
   Other = 0,
@@ -53,6 +54,7 @@ ChatCommon.ReddotName = "ChatMainMenu"
 ChatCommon.Spliter = ": "
 ChatCommon.ModSuitCopyHeader = "ModSuitInfo:"
 ChatCommon.DyePlanCopyHeader = "DyePlanInfo:"
+ChatCommon.GiftCopyHeader = "ChatGift:"
 ChatCommon.ChatFocusType = {
   Default = 0,
   PlayerList = 1,

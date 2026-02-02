@@ -24,8 +24,11 @@ function M:RemoveAutoCloseTimer()
 end
 
 function M:OnLoaded(...)
-  local Link = (...)
+  local Link, bCustomUrl, Param1, Param2, Param3 = ...
   local Url = GLink(Link)
+  if bCustomUrl then
+    Url = Url .. Param1 .. Param2 .. Param3
+  end
   if Url then
     self.Browser:LoadUrl(Url)
   end

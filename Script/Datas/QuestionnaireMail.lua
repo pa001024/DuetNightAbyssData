@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -137,5 +140,10 @@ return ReadOnly("QuestionnaireMail", {
   [333716833] = {MailId = 10017, QuestionnaireId = 333716833},
   [333716861] = {MailId = 10017, QuestionnaireId = 333716861},
   [333717124] = {MailId = 10017, QuestionnaireId = 333717124},
-  [333717203] = {MailId = 10017, QuestionnaireId = 333717203}
+  [333717203] = {MailId = 10017, QuestionnaireId = 333717203},
+  [347719915] = {MailId = 10017, QuestionnaireId = 347719915},
+  [347738312] = {MailId = 10017, QuestionnaireId = 347738312},
+  [347738343] = {MailId = 10017, QuestionnaireId = 347738343},
+  [347739940] = {MailId = 10017, QuestionnaireId = 347739940},
+  [347739962] = {MailId = 10017, QuestionnaireId = 347739962}
 })

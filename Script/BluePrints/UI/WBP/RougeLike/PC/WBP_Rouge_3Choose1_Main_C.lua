@@ -661,8 +661,9 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
       end
       self:ShowOtherGamepadKey(false)
     else
-      if self.CurrentSelectItem then
+      if self.CurrentSelectItem and self.CurrentSelectItem.Rouge_SuitSign and self.CurrentSelectItem.Rouge_SuitSign.Com_BtnQa and self.CurrentSelectItem.Rouge_SuitSign:IsVisible() then
         self.CurrentSelectItem.Rouge_SuitSign.Com_BtnQa:OnViewInfoClick()
+        self.CurrentDesiredFocusTarget = self.CurrentSelectItem.Button_Select
       end
       self:HideTreasureSuitGamePadKey()
     end
@@ -690,6 +691,12 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
     self:ShowOtherGamepadKey(true)
   end
   return UE4.UWidgetBlueprintLibrary.Handled()
+end
+
+function M:BP_GetDesiredFocusTarget()
+  if self.CurrentDesiredFocusTarget and IsValid(self.CurrentDesiredFocusTarget) then
+    return self.CurrentDesiredFocusTarget
+  end
 end
 
 function M:ShowOtherGamepadKey(bShow)

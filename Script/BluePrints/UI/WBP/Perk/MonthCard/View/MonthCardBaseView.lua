@@ -26,6 +26,9 @@ function M:InitBaseView()
   })
   self.Btn_Buy.OnClicked:Add(self, self.OnBuyBtnClicked)
   self.Btn_Buy.OnHovered:Add(self, self.OnBuyBtnHovered)
+  if not MonthCardController.bInited then
+    MonthCardController:Init()
+  end
   MonthCardController:OnShopMonthCardOpen()
   MonthCardController:RegisterEvent(self)
   self:AddInputMethodChangedListen()

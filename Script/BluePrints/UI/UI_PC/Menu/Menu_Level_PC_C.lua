@@ -32,7 +32,8 @@ function Menu_Level_PC_C:Initialize(Initializer)
     UI_DUNGEON_DES_TRAINING_28 = "/Game/UI/Texture/Dynamic/Atlas/Menu/T_Menu_Exit.T_Menu_Exit",
     UI_SpecialQuest_GiveUp = "/Game/UI/Texture/Dynamic/Atlas/Menu/T_Menu_Exit.T_Menu_Exit",
     UI_CharTrial_LeaveTitle = "/Game/UI/Texture/Dynamic/Atlas/Menu/T_Menu_Exit.T_Menu_Exit",
-    FeinaEvent_Exit_Title = "/Game/UI/Texture/Dynamic/Atlas/Menu/T_Menu_Exit.T_Menu_Exit"
+    FeinaEvent_Exit_Title = "/Game/UI/Texture/Dynamic/Atlas/Menu/T_Menu_Exit.T_Menu_Exit",
+    UI_Esc_ExitTemple = "/Game/UI/Texture/Dynamic/Atlas/Menu/T_Menu_Exit.T_Menu_Exit"
   }
   self.BtnIdx = 0
   self.CloseBySelf = false
@@ -127,11 +128,28 @@ function Menu_Level_PC_C:InitByType()
     elseif GameState.GameModeType == "Paotai" then
       self:InitPaotaiEvent()
       self.InPaotaiEvent = true
+    elseif GameState.GameModeType == "SoloTreasure" then
+      self:InitSoloTreasure()
+      self.InSoloTreasure = true
+    elseif GameState.GameModeType == "MonsterRush" then
+      self:InitMonsterRush()
+      self.InMonsterRush = true
+    elseif GameState.GameModeType == "AutoChess" then
+      self:InitAutoChess()
+      self.IsInAutoChess = true
+      return
     end
   end
   self.IsInCommonDungeon = true
   table.insert(self.BtnName, "UI_HardBoss_TabName_2")
   table.insert(self.ClickFunction, "OnClickExitGame")
+end
+
+function Menu_Level_PC_C:InitSoloTreasure()
+  self.WidgetSwitcher_Type:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.WidgetSwitcher_Show:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  table.remove(self.BtnName, 3)
+  table.remove(self.ClickFunction, 3)
 end
 
 function Menu_Level_PC_C:InitFeinaEvent()
@@ -140,6 +158,22 @@ function Menu_Level_PC_C:InitFeinaEvent()
   table.remove(self.BtnName, 3)
   table.remove(self.ClickFunction, 3)
   table.insert(self.BtnName, "FeinaEvent_Exit_Title")
+  table.insert(self.ClickFunction, "OnClickExitGame")
+end
+
+function Menu_Level_PC_C:InitMonsterRush()
+  self.WidgetSwitcher_Type:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.WidgetSwitcher_Show:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  table.remove(self.BtnName, 3)
+  table.remove(self.ClickFunction, 3)
+end
+
+function Menu_Level_PC_C:InitAutoChess()
+  self.WidgetSwitcher_Type:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.WidgetSwitcher_Show:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  table.remove(self.BtnName, 3)
+  table.remove(self.ClickFunction, 3)
+  table.insert(self.BtnName, "UI_HardBoss_TabName_2")
   table.insert(self.ClickFunction, "OnClickExitGame")
 end
 
@@ -155,7 +189,7 @@ end
 function Menu_Level_PC_C:InitTemple()
   self.WidgetSwitcher_Type:SetActiveWidgetIndex(3)
   table.insert(self.BtnName, "UI_TEMPLE_RESTART")
-  table.insert(self.BtnName, "UI_Rouge_ESC_EndOut")
+  table.insert(self.BtnName, "UI_Esc_ExitTemple")
   table.insert(self.ClickFunction, "TempleRestart")
   table.insert(self.ClickFunction, "OnClickExitGame")
   local GameState = UE4.UGameplayStatics.GetGameState(self)
@@ -227,7 +261,7 @@ end
 
 function Menu_Level_PC_C:InitParty()
   self.WidgetSwitcher_Type:SetActiveWidgetIndex(3)
-  table.insert(self.BtnName, "UI_Rouge_ESC_EndOut")
+  table.insert(self.BtnName, "UI_Esc_ExitTemple")
   table.insert(self.ClickFunction, "OnClickExitGame")
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   local PartyInfo = DataMgr.Party[GameState.DungeonId]
@@ -1110,7 +1144,7 @@ function Menu_Level_PC_C:OnClickExitGame()
       end
     end
   end
-  if self.InFeinaEvent then
+  if self.InFeinaEvent or self.InSoloTreasure then
     PopupId = 100229
   end
   if self.InRougeLike then
@@ -1130,9 +1164,15 @@ function Menu_Level_PC_C:OnClickExitGame()
     Params.RightCallbackFunction = self.ExitPaotaiEvent
     PopupId = 100226
   end
+  if self.InMonsterRush then
+    PopupId = 100096
+  end
   local Avatar = GWorld:GetAvatar()
   if Avatar and Avatar:IsInTeam() then
     PopupId = 100105
+  end
+  if self.IsInAutoChess then
+    PopupId = 100096
   end
   UIManager(self):ShowCommonPopupUI(PopupId, Params, self)
 end
@@ -1234,6 +1274,7 @@ function Menu_Level_PC_C:ExitPaotaiEvent()
 end
 
 function Menu_Level_PC_C:CloseSelf()
+  EventManager:FireEvent(EventID.OnDungeonEscClose)
   if self:IsAnimationPlaying(self.In) then
     return
   end

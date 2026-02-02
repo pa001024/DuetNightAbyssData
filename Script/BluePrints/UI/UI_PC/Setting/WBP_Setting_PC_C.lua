@@ -190,6 +190,25 @@ function WBP_Setting_PC_C:FocusToOptionFirstWidget()
   end
 end
 
+function WBP_Setting_PC_C:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if InKeyName == UIConst.GamePadKey.RightAnalogX and 2 == self.MultiPlateIndex and self.Tab_MultiPlate and self.Tab_MultiPlate:GetVisibility() ~= UE4.ESlateVisibility.Collapsed then
+    local DeltaOffset = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 20
+    local CurrentOffset = self.SC_Combination:GetScrollOffset()
+    local NextOffset = math.clamp(CurrentOffset + DeltaOffset, 0, self.SC_Combination:GetScrollOffsetOfEnd())
+    if NextOffset < self.SC_Combination:GetScrollOffsetOfEnd() and self.SC_Combination:GetScrollOffsetOfEnd() - NextOffset < 1 then
+      NextOffset = self.SC_Combination:GetScrollOffsetOfEnd()
+    elseif NextOffset < 1 then
+      NextOffset = 0
+    end
+    self.SC_Combination:SetScrollOffset(NextOffset)
+    self:OnScrollBoxTaskScrolled()
+    return UIUtils.Handled
+  end
+  return UIUtils.Unhandled
+end
+
 function WBP_Setting_PC_C:OnGamepadFocusPanelTitle()
   self:UpdateBottomKey({
     {
@@ -206,6 +225,12 @@ end
 function WBP_Setting_PC_C:UpdateBottomKey(Params)
   if UIUtils.IsGamepadInput() then
     local FinalParams = {}
+    if UIUtils.IsGamepadInput() and 2 == self.MultiPlateIndex and self.Tab_MultiPlate and self.Tab_MultiPlate:GetVisibility() ~= UE4.ESlateVisibility.Collapsed then
+      table.insert(FinalParams, {
+        "RH",
+        GText("UI_Controller_Slide")
+      })
+    end
     if self.HasBeenChanged then
       table.insert(FinalParams, {
         UIConst.GamePadImgKey.FaceButtonTop,
@@ -338,8 +363,20 @@ function WBP_Setting_PC_C:InitCommonTab(TabId, DontPlayInAnim)
       })
     end
     self:RefreshAllGamePadOperator(self.OptionUnfold_Prefrence.NowOptionId)
+    self.SC_Combination.OnUserScrolled:Remove(self, self.OnScrollBoxTaskScrolled)
+    self.SC_Combination.OnUserScrolled:Add(self, self.OnScrollBoxTaskScrolled)
+    self:OnScrollBoxTaskScrolled()
   end
   self:InitLayoutPlantUI()
+end
+
+function WBP_Setting_PC_C:OnScrollBoxTaskScrolled()
+  if not self.SC_Combination then
+    return
+  end
+  self:AddDelayFrameFunc(function()
+    UIUtils.UpdateScrollBoxArrow(self.SC_Combination, self.Btn_L, self.Btn_R)
+  end, 2)
 end
 
 function WBP_Setting_PC_C:InitLayoutPlantUI()
@@ -495,6 +532,8 @@ function WBP_Setting_PC_C:ShowFightGamepadBottomContent()
   self.IsTabLClick = true
   self.GamepadBottomContent = "Combo1"
   self:RefreshGamepadOperationSystemBottom(self.OptionUnfold_Prefrence.NowOptionId)
+  self.SC_Combination:SetScrollOffset(0)
+  self:OnScrollBoxTaskScrolled()
 end
 
 function WBP_Setting_PC_C:ShowSystemGamepadBottomContent()
@@ -506,6 +545,8 @@ function WBP_Setting_PC_C:ShowSystemGamepadBottomContent()
   self.IsTabLClick = false
   self.GamepadBottomContent = "Combo2"
   self:RefreshGamepadOperationSystemBottom(self.OptionUnfold_Prefrence.NowOptionId)
+  self.SC_Combination:SetScrollOffset(0)
+  self:OnScrollBoxTaskScrolled()
 end
 
 function WBP_Setting_PC_C:OnMultiPlateTabSelected(TabWidget)
@@ -583,6 +624,7 @@ function WBP_Setting_PC_C:OnMultiPlateTabSelected(TabWidget)
     end
     self:FocusToOptionFirstWidget()
   end
+  self:OnScrollBoxTaskScrolled()
 end
 
 function WBP_Setting_PC_C:RefreshAllGamePadOperator(PreferenceId)
@@ -686,6 +728,7 @@ function WBP_Setting_PC_C:RefreshGamepadOperationSystemBottom(PreferenceId)
       Type = "Add"
     }
     Widget.Key_Combination_1:CreateSubKeyDesc(KeyData)
+    Widget.Key_Combination_1:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     if ComboList[Index + 1] then
       KeyInfoList = {}
       for j = 1, #ComboList[Index + 1] do
@@ -700,6 +743,7 @@ function WBP_Setting_PC_C:RefreshGamepadOperationSystemBottom(PreferenceId)
         Type = "Add"
       }
       Widget.Key_Combination_2:CreateSubKeyDesc(KeyData)
+      Widget.Key_Combination_2:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     else
       Widget.Key_Combination_2:SetVisibility(UE4.ESlateVisibility.Collapsed)
     end
@@ -776,10 +820,12 @@ function WBP_Setting_PC_C:CheckOptionSpecialHide(OptionId, SpecialHide)
     local OptionData = Avatar.CdnHideData.option
     if OptionData then
       for _, Data in pairs(OptionData) do
-        for __, CtrlOptionId in pairs(Data.gameCtrlOption) do
-          if CtrlOptionId == OptionId then
-            SpecialHide = Data.config
-            return SpecialHide
+        if Data.gameCtrlOption and type(Data.gameCtrlOption) == "table" then
+          for __, CtrlOptionId in pairs(Data.gameCtrlOption) do
+            if CtrlOptionId == OptionId then
+              SpecialHide = Data.config
+              return SpecialHide
+            end
           end
         end
       end
@@ -847,10 +893,6 @@ function WBP_Setting_PC_C:CheckIsExamineDistribution(OptionId)
   if OptionList[OptionId] and AHotUpdateGameMode.IsExamineDistribution() then
     return true
   elseif "CustomerService" == OptionId then
-    if HeroUSDKSubsystem(self):IsBilibili() then
-      return true
-    end
-  elseif "LogOffAccount" == OptionId then
     if HeroUSDKSubsystem(self):IsBilibili() then
       return true
     end
@@ -1016,6 +1058,7 @@ function WBP_Setting_PC_C:UpdateEmptyGridCount()
     local ListView = self.SettingUIs[self.CurrentTab][1].List_Options
     local ItemUIs = ListView:GetDisplayedEntryWidgets()
     if 0 == ItemUIs:Length() then
+      self.EmptySettingUI:SetVisibility(ESlateVisibility.Collapsed)
       return
     end
     local ItemSize = UIManager(self):GetWidgetRenderSize(ItemUIs:GetRef(1).WidgetTree.RootWidget)
@@ -1412,7 +1455,7 @@ function WBP_Setting_PC_C:CloseSelf()
   if self.OptionUnfold_Prefrence and self.OptionUnfold_Prefrence.IsListOpen then
     self.OptionUnfold_Prefrence:OnClickSubOptionList()
   end
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:StopAnimation(self.In)
   self:PlayAnimation(self.Out)
   AudioManager(self):SetEventSoundParam(self, "OpenShopSetting", {ToEnd = 1})

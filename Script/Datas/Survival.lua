@@ -15,6 +15,9 @@ T.RT_8 = {
   [6] = T.RT_7
 }
 T.RT_9 = {1, 0.2}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

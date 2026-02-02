@@ -82,13 +82,19 @@ function M:OpenEditView(TabName, BoxIndex)
 end
 
 function M:OpenDataView()
+  if self.DataPage and self.DataPage.IsClosing then
+    DebugPrint("数据统计界面正在关闭中")
+    return
+  end
   self.CurPage = M.PageEnum.DataPage
   self:ExitMainPageWithoutTab()
   PersonInfoDataModel:Init(PersonInfoModel.OtherPersonInfo)
   self:CreatDataPage()
   self.DataPage.Root = self.MainPage
   self.DataPage:InitBaseView()
-  self.MainPage.PersonInfoMainPage.ActorController:SetMontageAndCamera("Char", nil, "Personal", "Data")
+  local ActorController = self.MainPage.PersonInfoMainPage.ActorController
+  local t1, t2, t3, t4 = ActorController:CalcArmoryCameraTag("Char", nil, "Personal", "Data")
+  ActorController:SetArmoryCameraTag(t1, t2, t3, t4)
   if self.MainPage.Com_BtnVisible then
     self.MainPage.Com_BtnVisible:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
@@ -139,6 +145,7 @@ function M:ReallyCloseDateView(Page)
   else
     DebugPrint("没有编辑界面，应该是打开时失败")
   end
+  self.DataPage = nil
 end
 
 function M:CloseEditView()

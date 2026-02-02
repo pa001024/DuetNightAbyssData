@@ -11,19 +11,7 @@ function M:Destruct()
 end
 
 function M:Init(PhantomState)
-  local level = 0
-  DebugPrint("PhantomState.CharLevel Data Error  " .. PhantomState.CharLevel .. " level = " .. (Battle(self):GetEntity(PhantomState.Eid):GetAttr("Level") or "nil"))
-  if PhantomState.CharLevel and 0 ~= PhantomState.CharLevel then
-    level = PhantomState.CharLevel
-  else
-    local PhantomCharacter = Battle(self):GetEntity(PhantomState.Eid)
-    if Battle(self):GetEntity(PhantomState.Eid) then
-      level = PhantomCharacter:GetAttr("Level") or 1
-      DebugPrint("PhantomState没有同步对应等级信息 PhantomState.CharLevel Data Error  " .. PhantomState.CharLevel .. " level = " .. (level or "nil"))
-    else
-      DebugPrint("确实找不到正确的魅影等级")
-    end
-  end
+  local level = PhantomState.CharLevel
   self.Text_Level:SetText(level)
   local HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mini/"
   local HeadImg = DataMgr.BattleChar[PhantomState.CharId].GuideIconImg

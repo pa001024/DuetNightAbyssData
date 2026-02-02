@@ -52,6 +52,15 @@ function M:OnCreatOnlineAction(UniqueId)
     DebugPrint("角色已停止联机动作")
     return false
   end
+  if not OnlineActionCommon.UseSyncNearbyPlayers then
+    DebugPrint("关闭多线程查找附近玩家，在Lua层寻找")
+    OnlineActionModel:FindPlayerAroundOld()
+  else
+    local Sync = UE4.URegionSyncSubsystem.GetInstance(GWorld.GameInstance)
+    if Sync then
+      Sync:StartNearbyQuery()
+    end
+  end
   self.OpenReason = 1
   self:ChangeAction(UniqueId)
   self:ShowBtn(1)
@@ -68,6 +77,12 @@ function M:OnRequestDeadRegionOnlineItem()
 end
 
 function M:OnEndOnlineAction()
+  if OnlineActionCommon.UseSyncNearbyPlayers then
+    local Sync = UE4.URegionSyncSubsystem.GetInstance(GWorld.GameInstance)
+    if Sync then
+      Sync:StopNearbyQuery()
+    end
+  end
   OnlineActionModel:ClearAllApply()
   if 1 == self.OpenReason then
     if OnlineActionModel:HaveOtherInvitation() then
@@ -84,7 +99,6 @@ function M:IsShowingBtn()
 end
 
 function M:ShowBtn(Reason)
-  OnlineActionModel:Init()
   self.OpenReason = Reason
   local BattleMain = UIManager(self):GetUIObj("BattleMain")
   if not BattleMain then
@@ -139,7 +153,6 @@ function M:OpenView(PlayerInfo, ForceServerData)
     OnlineActionModel:FindPlayerAround()
   end
   AudioManager(self):PlayUISound(self.OnlineActionBtn, "event:/ui/common/online_invite_interact_panel_expand", "OnlineActionPageOpen", nil)
-  OnlineActionModel:Init()
   self.MainPage = M.Super.OpenView(self, nil, OnlineActionCommon.UIName)
   self.MainPage:InitBaseView(self.OpenReason)
   return self.MainPage
@@ -179,7 +192,6 @@ function M:NotifyTick(InDeltaTime)
   OnlineActionModel:NotifyTick(InDeltaTime)
   if self.MainPage then
     self.MainPage:NotifyTick(InDeltaTime)
-  else
   end
 end
 
@@ -202,31 +214,36 @@ function M:RejectAllApplications()
 end
 
 function M:SendAcceptApplication(ApplyInfo)
+  local applicant = OnlineActionModel:GetPlayerActor(ApplyInfo.Eid)
+  if applicant and applicant.IsInRideMove and applicant:IsInRideMove() then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_RegionOnline_TargetCannotInteract"))
+    OnlineActionModel:RemoveApplyInfo(ApplyInfo)
+    return
+  end
   DebugPrint("OnlineAction:SendAcceptApplication", ApplyInfo)
   local toReject = {}
   local applyInfos = OnlineActionModel:GetApplyInfos()
   if applyInfos then
     for _, otherApplyInfo in ipairs(applyInfos) do
       if otherApplyInfo.InteractiveId == ApplyInfo.InteractiveId and otherApplyInfo.Eid ~= ApplyInfo.Eid then
-        ScreenPrint(otherApplyInfo.InteractiveId .. " " .. otherApplyInfo.Eid .. " " .. ApplyInfo.InteractiveId .. " " .. ApplyInfo.Eid)
+        DebugPrint("拒绝其他申请加入" .. otherApplyInfo.InteractiveId .. " " .. otherApplyInfo.Eid .. " " .. ApplyInfo.InteractiveId .. " " .. ApplyInfo.Eid)
         table.insert(toReject, otherApplyInfo)
       end
     end
+  end
+  local CanSit = self:CheckCanSit(ApplyInfo.UniqueId, ApplyInfo.Eid, true)
+  OnlineActionModel:RemoveApplyInfo(ApplyInfo)
+  if true ~= CanSit then
+    return
   end
   if OnlineActionModel._Avatar and ApplyInfo.UniqueId then
     OnlineActionModel._Avatar:OnRequestUseOwnerRegionOnlineItem(ApplyInfo.Eid, true, OnlineActionModel:GetActionUniqueId(), ApplyInfo.InteractiveId)
   else
     DebugPrint("缺少了UniqueId，应该是加假数据OnlineAction:OnReceivedRejectApply")
   end
-  OnlineActionModel:RemoveApplyInfo(ApplyInfo)
   for _, rejectInfo in ipairs(toReject) do
     self:SendRejectApplication(rejectInfo)
     OnlineActionModel:RemoveApplyInfo(rejectInfo)
-  end
-  local CanSit = self:CheckCanSit(ApplyInfo.UniqueId, ApplyInfo.Eid, true)
-  if not CanSit then
-    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_RegionOnline_Apply_Invalid"))
-    return
   end
   local Player = GWorld:GetAvatar():GetBornedChar(ApplyInfo.Eid)
   local GameState = UE4.UGameplayStatics.GetGameState(Player)
@@ -266,16 +283,19 @@ function M:SendInvitation(InvitationInfo, Index)
     DebugPrint("缺少了UniqueId，应该是加假数据OnlineAction:OnReceivedRejectApply")
     return
   end
-  local ret = OnlineActionModel:CheckNearbyInfoVaild(InvitationInfo)
+  local ret = OnlineActionModel:CheckNearbyInfoVaild(InvitationInfo, Index)
   if -1 == ret then
-    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_RegionOnline_Invite_Invalid"))
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_RegionOnline_Invite_State"))
     return
   end
   if -2 == ret then
     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_RegionOnline_Invite_Sitting"))
     return
   end
-  UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_RegionOnline_Invitation_Sent"))
+  if -3 == ret then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_RegionOnline_SitOccupied"))
+    return
+  end
   DebugPrint("OnlineAction:SendInvitation", InvitationInfo)
   if OnlineActionModel._Avatar then
     local interactiveId0 = math.max(0, (Index or 1) - 1)
@@ -302,15 +322,21 @@ function M:SendAcceptInvitation(InvitationInfo)
     DebugPrint("缺少了UniqueId，应该是假数据OnlineAction:OnReceivedRejectApply")
     return
   end
+  local player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+  if player and player.IsInRideMove and player:IsInRideMove() then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_RegionOnline_CannotInteract"))
+    return
+  end
+  local SelfEid = OnlineActionModel:GetAvatar().Eid
+  local CanSit = self:CheckCanSit(InvitationInfo.UniqueId, SelfEid, InvitationInfo.InteractiveId, true)
+  if not CanSit then
+    OnlineActionModel:RemoveInvitationInfo(InvitationInfo)
+    return
+  end
   if OnlineActionModel._Avatar then
     OnlineActionModel._Avatar:OnRequestOtherUserRegionOnlineItem(InvitationInfo.Eid, true, InvitationInfo.UniqueId, InvitationInfo.InteractiveId or 0)
   end
   self:RejectAllInvitations()
-  local CanSit = self:CheckCanSit(InvitationInfo.UniqueId, InvitationInfo.Eid, InvitationInfo.InteractiveId, true)
-  if CanSit then
-  else
-    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_RegionOnline_Invitation_Invalid"))
-  end
 end
 
 function M:CheckSeatFree(InteractiveId, UniqueId)
@@ -329,26 +355,13 @@ function M:CheckSeatFree(InteractiveId, UniqueId)
 end
 
 function M:CheckCanSit(UniqueId, PlayerEid, InteractiveId, bInvite)
-  local CanSit = true
-  if not OnlineActionModel:CheckPlayerVaild(PlayerEid) then
-    CanSit = false
-    ScreenPrint("交互失败：玩家ID无效")
+  local code = OnlineActionModel:CheckJoinValid(PlayerEid, UniqueId, InteractiveId)
+  if 0 ~= code then
+    local tipKey = bInvite and "UI_RegionOnline_Invitation_Invalid" or "UI_RegionOnline_Apply_Invalid"
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText(tipKey))
+    return false
   end
-  if bInvite then
-    if not OnlineActionModel:CheckIsInvitationValid(PlayerEid) then
-      CanSit = false
-      ScreenPrint("交互失败：邀请已过期")
-    end
-  elseif not OnlineActionModel:CheckIsApplyValid(PlayerEid) then
-    CanSit = false
-    ScreenPrint("交互失败：目标角色不存在或者正在做动作")
-  end
-  if not self:CheckSeatFree(InteractiveId, UniqueId) then
-    CanSit = false
-  end
-  if CanSit then
-    return true
-  end
+  return true
 end
 
 function M:RealSit(UniqueId, PlayerEid, InteractiveId)
@@ -380,6 +393,15 @@ end
 
 function M:OnReceiveApplyInfo(OwnerEid, UniqueId, InteractiveId)
   AudioManager(self):PlayUISound(self.OnlineActionBtn, "event:/ui/common/online_invite_interact_request", "OnlineActionReceived", nil)
+  if OnlineActionModel:GetAutoAcceptOnlineAction() == true then
+    local ApplyInfo = {
+      Eid = OwnerEid,
+      UniqueId = UniqueId,
+      InteractiveId = InteractiveId
+    }
+    self:SendAcceptApplication(ApplyInfo)
+    return
+  end
   ScreenPrint("联机动作收到申请" .. OwnerEid .. UniqueId .. InteractiveId)
   ReddotManager.IncreaseLeafNodeCount("OnlineActionBtn", 1)
   DebugPrint("OnlineAction:OnReceiveApplyInfo", OwnerEid, UniqueId, InteractiveId)
@@ -396,10 +418,6 @@ end
 
 function M:OnReceivedRejectInvitation(RequestEid, UniqueId, InteractiveId)
   DebugPrint("OnlineAction:OnReceivedRejectInvitation", RequestEid, UniqueId, InteractiveId)
-  local PlayerName = OnlineActionModel:GetPlayerName(RequestEid)
-  local Text = string.format(GText("UI_RegionOnline_Invitation_Refused"), PlayerName)
-  AudioManager(self):PlayUISound(self.OnlineActionBtn, "event:/ui/common/online_invite_interact_reject", "OnlineActionRejected", nil)
-  UIManager(self):ShowUITip(UIConst.Tip_CommonToast, Text)
 end
 
 function M:OnReceivedRejectApply(OwnerEid, UniqueId, InteractiveId)
@@ -416,6 +434,16 @@ end
 
 function M:OnReceivedOnlineActionInvitationAgree(RequestEid, UniqueId, InteractiveId)
   AudioManager(self):PlayUISound(self.OnlineActionBtn, "event:/ui/common/online_invite_interact_accept", "OnlineActionAgreed", nil)
+end
+
+function M:ShowToastByErrorCode(IsInvite, ErrorCode)
+  local Text = ""
+  if IsInvite then
+    Text = GText("UI_RegionOnline_Invitation_Invalid")
+  else
+    Text = GText("UI_RegionOnline_Apply_Invalid")
+  end
+  UIManager(self):ShowUITip(UIConst.Tip_CommonToast, Text)
 end
 
 function M:Destory()

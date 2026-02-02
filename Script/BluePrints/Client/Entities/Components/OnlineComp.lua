@@ -27,7 +27,8 @@ local MessageTypeToFunc = {
   UseGouSuo = "HandleUseGouSuo",
   SwitchOnlineState = "HandleSwitchOnlineState",
   HeadFrame = "HandleHeadFrame",
-  HeadIcon = "HandleHeadIcon"
+  HeadIcon = "HandleHeadIcon",
+  TransformAFDay = "HandleTransformAFDay"
 }
 local Component = {}
 
@@ -44,6 +45,10 @@ function Component:RequestEnterOnline(online_type, ShowWeapon, CurrentState, Pla
   self.PreEnterSubRegionId = online_type
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
   local RegionPlayerInfo = {
+    MountInfo = {
+      MountId = Player.CurrentMountId,
+      MountState = 0
+    },
     WeaponInfo = {
       ShowWeapon = ShowWeapon or CommonConst.OnlineShowWeapon.Melee
     },
@@ -71,7 +76,7 @@ function Component:OnRequestEnterOnline(online_type, ret, others, GlobalRegionIt
   end
   PrintTable({OnRequestEnterOnline_others = others, GlobalRegionItemCache = GlobalRegionItemCache}, 10)
   for i, v in pairs(others) do
-    self:AddRoleToCreate(i, v)
+    self:RegionSyncAddRoleToCreate(i, v)
     self:InitOnlineStateData(i, v)
   end
   self:InitMechanismUser(GlobalRegionItemCache)
@@ -180,7 +185,7 @@ end
 
 function Component:HandleEnterRegionOnline(message)
   PrintTable({HandleEnterRegionOnline = message}, 10)
-  self:AddRoleToCreate(message.Sender, message)
+  self:RegionSyncAddRoleToCreate(message.Sender, message)
   self:InitOnlineStateData(message.Sender, message)
   self.RegionAvatars[message.Sender] = {
     CharInfo = message.CharInfo,
@@ -195,27 +200,30 @@ end
 function Component:HandleLeaveRegionOnline(message)
   PrintTable({HandleLeaveRegionOnline = message}, 10)
   self:HandleLeaveRegionMechanism(message)
-  self:RemoveRoleInfoAndDestroy(message.Sender, message)
+  self:RegionSyncRemoveRoleAndDestroy(message.Sender, message)
   self.RegionAvatars[message.Sender] = nil
+  if self.DeliveryStates then
+    self.DeliveryStates[message.Sender] = nil
+  end
 end
 
 function Component:HandleSwitchMeleeWeapon(message)
   PrintTable({HandleSwitchMeleeWeapon = message}, 10)
-  self:HandleSwitchWeapon(message.Sender, message, "Melee")
+  self:RegionSyncChangeWeaponInfo(message.Sender, message, "Melee")
 end
 
 function Component:HandleSwitchRangedWeapon(message)
   PrintTable({HandleSwitchRangedWeapon = message}, 10)
-  self:HandleSwitchWeapon(message.Sender, message, "Ranged")
+  self:RegionSyncChangeWeaponInfo(message.Sender, message, "Ranged")
 end
 
 function Component:HandleSwitchShowWeapon(message)
   PrintTable({HandleSwitchShowWeapon = message}, 10)
-  self:HandleChangeUsingWeaponType(message.Sender, message)
+  self:RegionSyncChangeUsingWeaponType(message.Sender, message)
 end
 
 function Component:InitOnlineStateData(ObjId, RoleInfo)
-  DebugPrint("gmy@OnlineComp Component:InitOnlineStateData", ObjId, RoleInfo)
+  DebugPrint("gmy@OnlineComp Component:InitOnlineStateData", ObjId, RoleInfo, RoleInfo.AFDayTransformId)
   self.RoleUseTargetParam = self.RoleUseTargetParam or {}
   self.RoleUseTargetParam[ObjId] = RoleInfo.UseTargetParam
   self.DeliveryStates = self.DeliveryStates or {}
@@ -224,6 +232,7 @@ function Component:InitOnlineStateData(ObjId, RoleInfo)
   else
     self.DeliveryStates[ObjId] = false
   end
+  self.AFDayTransformId = RoleInfo.AFDayTransformId or -1
 end
 
 function Component:HandleSwitchOnlineState(Message)
@@ -231,6 +240,11 @@ function Component:HandleSwitchOnlineState(Message)
   local TempRoleInfo = self:GetRoleInfo(Message.Sender)
   if TempRoleInfo then
     TempRoleInfo.IsCrouching = false
+  end
+  local Player = self:GetBornedChar(ObjId)
+  if Player then
+    Player.OtherWorldCrouching = false
+    Player:SetCrouch(false)
   end
   self:HandleGestureState(Message, false)
   self:HandleFish(Message)
@@ -245,8 +259,17 @@ function Component:InitOnlineStateAfterBorn(ObjId, RoleInfo)
     if TempRoleInfo then
       TempRoleInfo.IsCrouching = false
     end
+    local Player = self:GetBornedChar(ObjId)
+    if Player then
+      Player.OtherWorldCrouching = false
+      Player:SetCrouch(false)
+    end
     self:HandleGestureState({Sender = ObjId, UseTargetParam = UseTargetParam}, true)
     self:HandleFish({Sender = ObjId, UseTargetParam = UseTargetParam})
+    self:HandleTransformAFDay({
+      Sender = ObjId,
+      TransformID = self.AFDayTransformId or -1
+    })
   end
   self:HandleMechanism(self.RegionAvatars, self.GlobalRegionItemCache, ObjId)
   self:TryPlayEndDelivery(ObjId, RoleInfo)
@@ -258,58 +281,66 @@ function Component:HandleGestureState(Message, bIsInit)
     local ResourceId = Message.UseTargetParam.ResourceId
     local Player = self:GetBornedChar(Message.Sender)
     DebugPrint("gmy@OnlineComp Component:HandleGestureState2", ResourceId, Player, Player and Player:GetName(), Player and Player.CurResourceId, Message.Sender, Message.State, Message.UseTargetParam)
+    if bIsInit then
+      local ResourceInfo = DataMgr.Resource[ResourceId]
+      local ResourceIsMountId
+      if ResourceInfo then
+        ResourceIsMountId = self:ResourceIsMount(ResourceInfo)
+      end
+      if ResourceIsMountId then
+        return
+      end
+    end
     if Player then
       local ResourceInfo = DataMgr.Resource[ResourceId]
       if ResourceInfo then
         DebugPrint("gmy@OnlineComp Component:HandleGestureState3", ResourceId, Player.CurResourceId)
-        if ResourceId ~= Player.CurResourceId then
-          local ActionBaseInfo = Message.ActionBaseInfo
-          if ActionBaseInfo then
-            local Loc = ActionBaseInfo.Location
-            local Rot = ActionBaseInfo.Rotation
-            PrintTable({
-              HandleGestureState = {Loc = Loc, Rot = Rot}
-            }, 10)
-            Player:K2_SetActorLocationAndRotation(FVector(Loc.X, Loc.Y, Loc.Z), FRotator(Rot.Pitch, Rot.Yaw, Rot.Roll), false, nil, false)
-          end
-          local ArmoryActionId = ResourceInfo.PlayArmoryAnim
-          if ArmoryActionId then
-            local ActionName = Const.ArmoryActionIdToArmoryTag[ArmoryActionId]
-            if ActionName == Const.Melee then
-              local WeaponInfo = Player.WeaponInfo and Player.WeaponInfo.MeleeWeapon
-              if WeaponInfo then
-                local WeaponId = WeaponInfo.WeaponId
-                if Player.MeleeWeapon and Player.MeleeWeapon.WeaponId ~= WeaponId then
-                  Player.Weapons:Remove(WeaponId)
-                  Player.MeleeWeapon:Destroy()
-                  Player.MeleeWeapon = nil
-                end
-                if Player.MeleeWeapon == nil then
-                  Player.MeleeWeapon = Player:SpawnShowWeapon(WeaponId, nil, nil, nil, WeaponInfo)
-                  Player:RawAddWeapon(Player.MeleeWeapon)
-                end
+        local ActionBaseInfo = Message.ActionBaseInfo
+        if ActionBaseInfo then
+          local Loc = ActionBaseInfo.Location
+          local Rot = ActionBaseInfo.Rotation
+          PrintTable({
+            HandleGestureState = {Loc = Loc, Rot = Rot}
+          }, 10)
+          Player:K2_SetActorLocationAndRotation(FVector(Loc.X, Loc.Y, Loc.Z), FRotator(Rot.Pitch, Rot.Yaw, Rot.Roll), false, nil, false)
+        end
+        local ArmoryActionId = ResourceInfo.PlayArmoryAnim
+        if ArmoryActionId then
+          local ActionName = Const.ArmoryActionIdToArmoryTag[ArmoryActionId]
+          if ActionName == Const.Melee then
+            local WeaponInfo = Player.WeaponInfo and Player.WeaponInfo.MeleeWeapon
+            if WeaponInfo then
+              local WeaponId = WeaponInfo.WeaponId
+              if Player.MeleeWeapon and Player.MeleeWeapon.WeaponId ~= WeaponId then
+                Player.Weapons:Remove(WeaponId)
+                Player.MeleeWeapon:Destroy()
+                Player.MeleeWeapon = nil
               end
-            elseif ActionName == Const.Ranged then
-              local WeaponInfo = Player.WeaponInfo and Player.WeaponInfo.RangedWeapon
-              if WeaponInfo then
-                local WeaponId = WeaponInfo.WeaponId
-                if Player.RangedWeapon and Player.RangedWeapon.WeaponId ~= WeaponId then
-                  Player.Weapons:Remove(WeaponId)
-                  Player.RangedWeapon:Destroy()
-                  Player.RangedWeapon = nil
-                end
-                if nil == Player.RangedWeapon then
-                  Player.RangedWeapon = Player:SpawnShowWeapon(WeaponId, nil, nil, nil, WeaponInfo)
-                  Player:RawAddWeapon(Player.RangedWeapon)
-                end
+              if Player.MeleeWeapon == nil then
+                Player.MeleeWeapon = Player:SpawnShowWeapon(WeaponId, nil, nil, nil, WeaponInfo)
+                Player:RawAddWeapon(Player.MeleeWeapon)
+              end
+            end
+          elseif ActionName == Const.Ranged then
+            local WeaponInfo = Player.WeaponInfo and Player.WeaponInfo.RangedWeapon
+            if WeaponInfo then
+              local WeaponId = WeaponInfo.WeaponId
+              if Player.RangedWeapon and Player.RangedWeapon.WeaponId ~= WeaponId then
+                Player.Weapons:Remove(WeaponId)
+                Player.RangedWeapon:Destroy()
+                Player.RangedWeapon = nil
+              end
+              if nil == Player.RangedWeapon then
+                Player.RangedWeapon = Player:SpawnShowWeapon(WeaponId, nil, nil, nil, WeaponInfo)
+                Player:RawAddWeapon(Player.RangedWeapon)
               end
             end
           end
-          if bIsInit then
-            Player:InitShowResourceBPFunction(ResourceId)
-          else
-            Player:InvokeResourceBPFunction(ResourceId)
-          end
+        end
+        if bIsInit then
+          Player:InitShowResourceBPFunction(ResourceId)
+        else
+          Player:InvokeResourceBPFunction(ResourceId)
         end
       else
         DebugPrint("gmy@OnlineComp Component:HandleGestureState ResetIdleTag", Player.PlayerAnimInstance)
@@ -328,7 +359,7 @@ function Component:HandleMove(message)
     sender_info.CurResourceId = 0
     sender_info.WeaponInfo = nil
   end
-  self:HandleMovePack(message.Sender, message)
+  self:RegionSyncUpdateMoveInfo(message.Sender, message)
 end
 
 function Component:HandleAction(message)
@@ -365,6 +396,23 @@ function Component:HandleHeadIcon(message)
   end
 end
 
+function Component:HandleTransformAFDay(message)
+  DebugPrint("gmy@OnlineComp Component:HandleTransformAFDay", message.Sender, message.TransformID)
+  PrintTable({HandleTransformAFDay_Msg = message}, 5)
+  local Eid = message.Sender
+  local Player = self:GetBornedChar(Eid)
+  if nil == Player then
+    DebugPrint("gmy@OnlineComp Component:HandleTransformAFDay", "Player is nil for Eid:", message.Sender)
+    return
+  end
+  local TransformID = message.TransformID
+  if TransformID <= 0 then
+    Player:CancelAFDTransform()
+  else
+    Player:ApplyAFDTransform(TransformID)
+  end
+end
+
 function Component:HandleLevelChange(message)
   local SenderInfo = self.RegionAvatars[message.Sender]
   if SenderInfo then
@@ -387,7 +435,7 @@ function Component:HandleCharInfoChange(message)
   if SenderInfo then
     SenderInfo.CharInfo = message.CharInfo
   end
-  self:HandChangeRoleInfo(message.Sender, message)
+  self:RegionSyncChangeRoleInfo(message.Sender, message)
 end
 
 function Component:HandleTitleChange(message)
@@ -551,8 +599,7 @@ function Component:HandleFish(message)
               FishingSpot = GameState.ManualActiveCombat:Find(CreatorId)
             end
             if FishingSpot then
-              local FishPointVector = FishingSpot.FishPoint:K2_GetComponentLocation()
-              UDataSetFunctionLibrary.SetVector_ByEid(GameState.Battle, Player.Eid, "FishPoint_Location", FishPointVector)
+              FishingSpot:SetFishingSpotLocation(Player)
             end
           end
           Player:AsyncCreateEffectCreature(30101, FTransform(), true, nil)
@@ -602,6 +649,12 @@ function Component:UpdateFishingRodModelId(Player, FishingRodId)
         local MaterialPath = FishingRodData.MaterialPath
         local MaterialParam = FishingRodData.MaterialParam
         Player:UpdateEffectCreatureModel(Id, ModelId)
+        local EffectId = FishingRodData.EffectId
+        if Creature.FishingRodEffectId ~= EffectId then
+          Creature.FXComponent:StopEffectByID(Creature.FishingRodEffectId, true)
+          Creature.FishingRodEffectId = EffectId
+          Creature.FXComponent:PlayEffectByID(EffectId)
+        end
         self:UpdateFishingRodMaterial(Player, Id, MaterialPath, MaterialParam)
       end
     end
@@ -685,7 +738,7 @@ function Component:RequestDeadRegionOnlineItem(online_type, SenderEid, UniqueId)
   print(_G.LogTag, "LXZ RequestDeadRegionOnlineItem2222")
   
   local function Callback(Ret)
-    self.logger.debug("ZJT_ RequestDeadRegionOnlineItem ", Ret, online_type, ExpressionId)
+    self.logger.debug("ZJT_ RequestDeadRegionOnlineItem ", Ret, online_type, UniqueId)
     if 0 == Ret then
       self:RealDeadRegionOnlineItem(UniqueId, SenderEid, false)
     end
@@ -727,7 +780,6 @@ function Component:RequestChangeRegionOnlineItemState(online_type, UniqueId, Own
 end
 
 function Component:RequestLeaveRegionOnlineItem(online_type, UniqueId, OwnerEid, InteractiveId)
-  Traceback()
   self.logger.debug("ZJT_ RequestLeaveRegionOnlineItem ", online_type, UniqueId, CommonUtils.ObjId2Str(OwnerEid), InteractiveId, CommonUtils.ObjId2Str(OwnerEid))
   
   local function Callback(Ret)
@@ -757,6 +809,10 @@ function Component:OnRequestUseOwnerRegionOnlineItem(RequestEid, RequestRes, Uni
   local function Callback(Ret, RequestEid, RequestRes, UniqueId, InteractiveId)
     ScreenPrint("回复申请 OnRequestUseOwnerRegionOnlineItem 服务端返回结果 Ret：" .. tostring(Ret) .. " ，UniqueId：" .. tostring(UniqueId) .. " ，InteractiveId：" .. tostring(InteractiveId))
     self.logger.debug("ZJT_ OnRequestUseOwnerRegionOnlineItem ", Ret, self.CurrentOnlineType, RequestRes, UniqueId, InteractiveId)
+    if 0 ~= Ret then
+      local OnlineActionController = require("BluePrints.UI.WBP.BattleOnlineAction.OnlineActionController")
+      OnlineActionController:ShowToastByErrorCode(Ret, false)
+    end
   end
   
   self:CallServer("OnRequestUseOwnerRegionOnlineItem", Callback, self.CurrentOnlineType, RequestEid, RequestRes, UniqueId, InteractiveId)
@@ -840,6 +896,11 @@ function Component:HandleUseGouSuo(Message)
 end
 
 function Component:RequestUseCreateMount(online_type, ResourceId, MountId, UseState)
+  local function Callback(Ret)
+    self.logger.debug("ZJT_ RequestUseCreateMount ", Ret)
+  end
+  
+  self:CallServer("RequestUseCreateMount", Callback, online_type, ResourceId, MountId, UseState)
 end
 
 function Component:RequestHostInvitationOther(InvitationEid, UniqueId, InteractiveId, NewState)
@@ -877,8 +938,11 @@ function Component:OnRequestOtherUserRegionOnlineItem(InviterEid, RequestRes, Un
         IsGlobalOnlineItem = false
       }
       self:RealInteractive(message)
+      EventManager:FireEvent(EventID.OnReceivedOnlineActionInvitationAgree, InviterEid, UniqueId, InteractiveId)
+    else
+      local OnlineActionController = require("BluePrints.UI.WBP.BattleOnlineAction.OnlineActionController")
+      OnlineActionController:ShowToastByErrorCode(Ret, true)
     end
-    EventManager:FireEvent(EventID.OnReceivedOnlineActionInvitationAgree, InviterEid, UniqueId, InteractiveId)
   end
   
   self:CallServer("OnRequestOtherUserOnlineItem", Callback, self.CurrentOnlineType, InviterEid, RequestRes, UniqueId, InteractiveId)
@@ -909,13 +973,27 @@ function Component:HandleOnChangeRegionOnlineMount(Message)
   PrintTable({OnChangeRegionOnlineMount = Message}, 10)
 end
 
+function Component:RequestSendSuccess(Type)
+  self.logger.debug("ZJT_ 请求发送成功 ", Type)
+  if "OtherUser" == Type then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_RegionOnline_Invitation_Sent"))
+    return
+  end
+  if "UseOwner" == Type then
+    return
+  end
+end
+
 function Component:HandleShareMountDatasChange(Message)
+  PrintTable({ShareMountDatasChange = Message}, 10)
 end
 
 function Component:HandleOnDeadRegionOnlineMount(Message)
+  PrintTable({OnDeadRegionOnlineMount = Message}, 10)
 end
 
 function Component:HandleOnUseCreateMount(Message)
+  PrintTable({OnUseCreateMount = Message}, 10)
 end
 
 function Component:HandleOnLeaveRegionOnlineItem(message)
@@ -934,7 +1012,6 @@ function Component:HandleOnUseRegionOnlineItem(message)
 end
 
 function Component:HandleOnChangeRegionOnlineItemState(message)
-  self.logger.debug("ZJT_ HandleOnChangeRegionOnlineItemState " .. CommonUtils.ObjId2Str(self.Eid))
   PrintTable({message = message}, 10)
   if message.Sender == self.Eid then
     return
@@ -1010,7 +1087,7 @@ function Component:RealDeInteractive(message)
     Player = UGameplayStatics.GetPlayerCharacter(GameState, 0)
   end
   local Mechanism = GameState.RegionOnlineMechanismMap:Find(message.UniqueId)
-  print(_G.LogTag, "LXZ HandleOnLeaveRegionOnlineItem RealDeInteractive", message.UniqueId, Mechanism:GetName())
+  print(_G.LogTag, "LXZ HandleOnLeaveRegionOnlineItem RealDeInteractive", message.UniqueId)
   if not Player then
     return
   end
@@ -1066,6 +1143,19 @@ end
 
 function Component:UpdateTotatlOnlineTime()
   self.logger.debug("ZJT_ UpdateTotatlOnlineTime ", self.TotalRegionOnlineTime)
+end
+
+function Component:RegionOnlineTransformAFDay(TransformId)
+  DebugPrint("gmy@OnlineComp Component:RegionOnlineTransformAFDay", TransformId)
+  if not self.IsInRegionOnline then
+    return
+  end
+  
+  local function Callback(Ret)
+    DebugPrint("gmy@OnlineComp Callback", Ret)
+  end
+  
+  self:CallServer("RegionOnlineTransformAFDay", Callback, TransformId)
 end
 
 return Component

@@ -169,6 +169,7 @@ function Menu_Function_Button_PC_C:InitButton(Owner, IsForbid, ForbidToast)
       end
       
       self.Button_Area:SetForbidden(true)
+      self:SetRedDot(false)
       self.Button_Area.OnClicked:Add(self, func)
     end
     return

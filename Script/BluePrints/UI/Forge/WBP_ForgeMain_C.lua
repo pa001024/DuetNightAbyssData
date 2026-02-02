@@ -106,7 +106,7 @@ function WBP_ForgeMain_C:OnLoaded(...)
       OnEnter = self.OnEnterState_NormalPage_NoFocus
     },
     [ForgeConst.ControllerFSMStates.NormalPage_FocusItem] = {
-      OnEnter = self.OnEnterSttae_NormalPage_FocusItem
+      OnEnter = self.OnEnterState_NormalPage_FocusItem
     },
     [ForgeConst.ControllerFSMStates.NormalPage_ShowItem] = {
       OnEnter = self.OnEnterState_NormalPage_ShowItem,
@@ -115,6 +115,10 @@ function WBP_ForgeMain_C:OnLoaded(...)
     [ForgeConst.ControllerFSMStates.NormalPage_FocusSort] = {
       OnEnter = self.OnEnterState_NormalPage_FocusSort,
       OnLeave = self.OnLeaveState_NormalPage_FocusSort
+    },
+    [ForgeConst.ControllerFSMStates.NormalPage_FocusCompendium] = {
+      OnEnter = self.OnEnterState_NormalPage_FocusCompendium,
+      OnLeave = self.OnLeaveState_NormalPage_FocusCompendium
     },
     [ForgeConst.ControllerFSMStates.PathPage_Normal] = {
       OnEnter = self.OnEnterState_PathPage_Normal,
@@ -191,6 +195,7 @@ function WBP_ForgeMain_C:OnLoaded(...)
   self.Tab:PlayInAnim()
   self.Forging_Path_PC.HasPreInit = false
   self.Entrance_Compendium:Init(self, self.OnCompendiumClicked)
+  self.Entrance_Convert:Init(self, self.OnConvertClicked)
   self.CurInputDeviceType = UIUtils.UtilsGetCurrentInputType()
   self.CurGamepadName = UIUtils.UtilsGetCurrentGamepadName()
   self:InitViewByDeviceType()
@@ -258,6 +263,7 @@ function WBP_ForgeMain_C:InitKeyboardView()
       ForgeConst.BottomKeyTypes.BottomKey_Keyboard_Esc
     })
   end
+  self.Controller:SetVisibility(UE4.ESlateVisibility.Collapsed)
 end
 
 function WBP_ForgeMain_C:InitMobileView()
@@ -266,6 +272,10 @@ end
 
 function WBP_ForgeMain_C:InitGamepadView()
   self.Btn_Receive:SetGamePadIconVisible(true)
+  if self.Controller then
+    self.Controller:CreateGamepadKey(UIConst.GamePadImgKey.SpecialRight)
+    self.Controller:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+  end
 end
 
 function WBP_ForgeMain_C:InitNormalPageState()
@@ -308,7 +318,7 @@ function WBP_ForgeMain_C:NavigateToFirstEntry()
   end
 end
 
-function WBP_ForgeMain_C:OnEnterSttae_NormalPage_FocusItem()
+function WBP_ForgeMain_C:OnEnterState_NormalPage_FocusItem()
   self:UpdateGamepadBottomKeyInfo({
     ForgeConst.BottomKeyTypes.BottomKey_ShowItem,
     ForgeConst.BottomKeyTypes.BottomKey_Back
@@ -345,7 +355,7 @@ function WBP_ForgeMain_C:OnEnterState_NormalPage_FocusSort()
   self.Sort:SetFocus()
   self.Sort:SetControllerKeyHidden(true)
   self.Tab.WBP_Com_Tab_ResourceBar:HideGamePadKey(true)
-  self.Entrance_Compendium:HideGamepadKeyTip(true)
+  self.Controller:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
   self.Btn_Receive:SetGamePadIconVisible(false)
   self:UpdateGamepadBottomKeyInfo({
     ForgeConst.BottomKeyTypes.BottomKey_Confirm,
@@ -356,8 +366,27 @@ end
 function WBP_ForgeMain_C:OnLeaveState_NormalPage_FocusSort(NewStateName)
   self.Sort:SetControllerKeyHidden(false)
   self.Tab.WBP_Com_Tab_ResourceBar:HideGamePadKey(false)
-  self.Entrance_Compendium:HideGamepadKeyTip(false)
+  self.Controller:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Btn_Receive:SetGamePadIconVisible(true)
+end
+
+function WBP_ForgeMain_C:OnEnterState_NormalPage_FocusCompendium()
+  self.Entrance_Compendium:SetFocus()
+  self.Sort:SetControllerKeyHidden(true)
+  self.Tab.WBP_Com_Tab_ResourceBar:HideGamePadKey(true)
+  self.Btn_Receive:SetGamePadIconVisible(false)
+  self.Controller:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self:UpdateGamepadBottomKeyInfo({
+    ForgeConst.BottomKeyTypes.BottomKey_Confirm,
+    ForgeConst.BottomKeyTypes.BottomKey_Back
+  })
+end
+
+function WBP_ForgeMain_C:OnLeaveState_NormalPage_FocusCompendium()
+  self.Sort:SetControllerKeyHidden(false)
+  self.Tab.WBP_Com_Tab_ResourceBar:HideGamePadKey(false)
+  self.Btn_Receive:SetGamePadIconVisible(true)
+  self.Controller:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
 end
 
 function WBP_ForgeMain_C:OnEnterState_NormalPage_NoFocus()
@@ -464,7 +493,7 @@ function WBP_ForgeMain_C:OnMenuOpenChanged(bIsOpen)
     self.SubTab_List:UpdateUIStyleInPlatform(not bIsOpen)
     self.Sort:SetControllerKeyHidden(bIsOpen)
     self.Btn_Receive:SetGamePadIconVisible(not bIsOpen)
-    self.Entrance_Compendium:HideGamepadKeyTip(bIsOpen)
+    self.Controller:SetVisibility(bIsOpen and UE4.ESlateVisibility.HitTestInvisible or UE4.ESlateVisibility.Collapsed)
   end
 end
 
@@ -515,7 +544,7 @@ function WBP_ForgeMain_C:ReceiveEnterState(StackAction)
   end
   if self.ControllerFSM then
     local Current = self.ControllerFSM:Current()
-    if Current == ForgeConst.ControllerFSMStates.NormalPage_ShowItem then
+    if Current == ForgeConst.ControllerFSMStates.NormalPage_ShowItem or Current == ForgeConst.ControllerFSMStates.NormalPage_FocusCompendium then
       self.ControllerFSM:Enter(ForgeConst.ControllerFSMStates.NormalPage_FocusItem)
     end
   end
@@ -764,7 +793,8 @@ function WBP_ForgeMain_C:Handle_KeyDownOnGamePad(InKeyName)
       self.ControllerFSM:Enter(ForgeConst.ControllerFSMStates.NormalPage_FocusSort)
       IsEventHandled = true
     elseif InKeyName == Const.GamepadSpecialRight then
-      self:OnCompendiumClicked()
+      self.ControllerFSM:Enter(ForgeConst.ControllerFSMStates.NormalPage_FocusCompendium)
+      self.Entrance_Compendium:SetFocus()
       IsEventHandled = true
     elseif InKeyName == Const.GamepadFaceButtonUp then
       self:HandleGamepadBatchComplete()
@@ -776,6 +806,12 @@ function WBP_ForgeMain_C:Handle_KeyDownOnGamePad(InKeyName)
       self.ForgeContent:SetFocus()
       IsEventHandled = true
     elseif InKeyName == Const.GamepadRightThumbstick then
+      IsEventHandled = true
+    end
+  elseif CurrentState == ForgeConst.ControllerFSMStates.NormalPage_FocusCompendium then
+    if InKeyName == Const.GamepadFaceButtonRight then
+      self.ControllerFSM:Enter(ForgeConst.ControllerFSMStates.NormalPage_FocusItem)
+      self.ForgeContent:SetFocus()
       IsEventHandled = true
     end
   elseif CurrentState == ForgeConst.ControllerFSMStates.PathPage_Normal and InKeyName == Const.GamepadFaceButtonUp then
@@ -838,6 +874,9 @@ function WBP_ForgeMain_C:BindReddotTreeEvents()
       self:UpdateTabReddot(TabIdx)
     end)
   end
+  ReddotManager.AddListenerEx("ForgeConvert", self, function()
+    self:UpdateConvertReddot()
+  end)
 end
 
 function WBP_ForgeMain_C:UnBindReddotTreeEvents()
@@ -847,6 +886,7 @@ function WBP_ForgeMain_C:UnBindReddotTreeEvents()
   for _, NodeName in pairs(ForgeConst.NewdotNodeName) do
     ReddotManager.RemoveListener(NodeName, self)
   end
+  ReddotManager.RemoveListener("ForgeConvert", self)
 end
 
 function WBP_ForgeMain_C:UpdateNewReddotState()
@@ -879,6 +919,16 @@ function WBP_ForgeMain_C:UpdateSubTabReddot(TabIdx, SubTabIdx)
   local ShowNormalReddot = SubTabReddotNode.Count > 0
   local ShowNewReddot = SubTabNewdotNode.Count > 0
   self.SubTab_List:ShowTabRedDot(SubTabIdx, ShowNewReddot and not ShowNormalReddot, ShowNormalReddot)
+end
+
+function WBP_ForgeMain_C:UpdateConvertReddot()
+  local ConvertReddotNode = ReddotManager.GetTreeNode("ForgeConvert")
+  local ShowConvertReddot = ConvertReddotNode.Count > 0
+  if ShowConvertReddot then
+    self.Entrance_Convert.New:SetVisibility(UE4.ESlateVisibility.Visible)
+  else
+    self.Entrance_Convert.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
 end
 
 function WBP_ForgeMain_C:InitTabContent()
@@ -1034,6 +1084,9 @@ function WBP_ForgeMain_C:CheckScrollbarVisibility(ItemNum)
 end
 
 function WBP_ForgeMain_C:CheckShouldAddEmptyItem()
+  if self:IsDelayAddingForgeContentItem() then
+    return
+  end
   local ItemsNum = self.ForgeContent:GetNumItems()
   local MaxItemNumPerPanel = self:GetMaxItemNumPerPanel()
   while ItemsNum < MaxItemNumPerPanel do
@@ -1221,16 +1274,7 @@ function WBP_ForgeMain_C:OnDraftBtnStartClicked(DraftId)
   if DraftInfo then
     if DraftInfo.State == ForgeConst.DraftState.NotStarted then
       if DraftInfo.CanProduce then
-        local CostItemList
-        if DraftInfo.ModAsMaterial then
-          CostItemList = ForgeModel:ChooseCostItems(DraftId)
-          if nil == CostItemList then
-            DebugPrint(ErrorTag, "CostModList is nil, there must be something wrong!")
-            return
-          end
-        end
-        self:ShowStartProduceConfirmWindowWithItem(DraftId, CostItemList)
-      else
+        self:ShowStartProduceConfirmWindowWithItem(DraftId, DraftInfo.ModAsMaterial)
       end
     elseif DraftInfo.State == ForgeConst.DraftState.InProgress then
       self:ShowAccerateProduceConfirmWindow(DraftId)
@@ -1337,7 +1381,7 @@ function WBP_ForgeMain_C:ContinueCoroutine(co, ...)
   end
 end
 
-function WBP_ForgeMain_C:ShowStartProduceConfirmWindow(DraftId, HasEquipedMod, co)
+function WBP_ForgeMain_C:ShowStartProduceConfirmWindow(DraftId, HasEquipedMod, Count, co)
   local CommonDialogParams = {}
   local DraftData = DataMgr.Draft[DraftId]
   local PopupData = DataMgr.CommonPopupUIContext[Const.Popup_StartProduce]
@@ -1346,7 +1390,7 @@ function WBP_ForgeMain_C:ShowStartProduceConfirmWindow(DraftId, HasEquipedMod, c
   if DraftData.ProductNum and DraftData.ProductNum > 1 then
     ProductName = ProductName .. " x" .. tostring(DraftData.ProductNum)
   end
-  CommonDialogParams.ShortText = string.format(GText(PopoverText), ProductName)
+  CommonDialogParams.ShortText = string.format(GText(PopoverText), ProductName, Count or 1)
   CommonDialogParams.HideItemTips = not HasEquipedMod
   
   function CommonDialogParams.RightCallbackFunction()
@@ -1387,14 +1431,13 @@ function WBP_ForgeMain_C:ShowStartBatchProduceConfirmWindow(DraftId, co)
   self:ShowConfirmWindow(Const.Popup_BatchStartProduce, CommonDialogParams, self)
 end
 
-function WBP_ForgeMain_C:ShowStartProduceConfirmWindowWithItem(DraftId, CostItemList)
-  CostItemList = CostItemList or {}
+function WBP_ForgeMain_C:HandleShowModConfirmWindow(DraftId, Count, CostItemList)
+  local co = coroutine.running()
   local ImportantModList = {}
-  local UseModAsMaterial = false
   local HasLockedMod = false
   local HasUpgradedMod = false
   local HasEquipedMod = false
-  local ShouldShowBatchProduceWindow = DataMgr.Draft[DraftId].Batch
+  local UseModAsMaterial = false
   for _, Item in ipairs(CostItemList) do
     local IsImportant = false
     if Item.Type == "Mod" then
@@ -1415,37 +1458,47 @@ function WBP_ForgeMain_C:ShowStartProduceConfirmWindowWithItem(DraftId, CostItem
       end
     end
   end
+  table.sort(ImportantModList, function(a, b)
+    if a.IsLock ~= b.IsLock then
+      return a.IsLock == true
+    end
+    return false
+  end)
+  if UseModAsMaterial then
+    if HasLockedMod then
+      self:ShowHasLockedModConfirmWindow(DraftId, ImportantModList, HasEquipedMod, co)
+      return coroutine.yield()
+    elseif HasUpgradedMod then
+      self:ShowHasUpgradedModConfirmWindow(DraftId, ImportantModList, HasEquipedMod, co)
+      return coroutine.yield()
+    else
+      self:ShowStartProduceConfirmWindow(DraftId, HasEquipedMod, Count, co)
+      return coroutine.yield()
+    end
+  end
+end
+
+function WBP_ForgeMain_C:ShowStartProduceConfirmWindowWithItem(DraftId, UseModAsMaterial)
+  local ShouldShowBatchProduceWindow = DataMgr.Draft[DraftId].Batch
   local AsyncFunc = coroutine.create(function()
     local co = coroutine.running()
-    local Succeed, Count
-    if UseModAsMaterial then
-      if HasLockedMod then
-        self:ShowHasLockedModConfirmWindow(DraftId, ImportantModList, HasEquipedMod, co)
-        Succeed, Count = coroutine.yield()
-        if false == Succeed then
-          return
-        end
-      elseif HasUpgradedMod then
-        self:ShowHasUpgradedModConfirmWindow(DraftId, ImportantModList, HasEquipedMod, co)
-        Succeed, Count = coroutine.yield()
-        if false == Succeed then
-          return
-        end
-      else
-        self:ShowStartProduceConfirmWindow(DraftId, HasEquipedMod, co)
-        Succeed, Count = coroutine.yield()
-        if false == Succeed then
-          return
-        end
-      end
-    elseif ShouldShowBatchProduceWindow then
+    local Succeed, Count = nil, 1
+    local CostItemList = {}
+    if ShouldShowBatchProduceWindow then
       self:ShowStartBatchProduceConfirmWindow(DraftId, co)
       Succeed, Count = coroutine.yield()
       if false == Succeed then
         return
       end
+      if UseModAsMaterial then
+        CostItemList = ForgeModel:ChooseCostItems(DraftId, Count)
+        local Succeed = self:HandleShowModConfirmWindow(DraftId, Count, CostItemList)
+        if not Succeed then
+          return
+        end
+      end
     else
-      self:ShowStartProduceConfirmWindow(DraftId, false, co)
+      self:ShowStartProduceConfirmWindow(DraftId, false, 1, co)
       Succeed = coroutine.yield()
       if false == Succeed then
         return
@@ -1883,6 +1936,19 @@ end
 
 function WBP_ForgeMain_C:OnCompendiumClicked()
   local UI = UIManager(self):LoadUINew("ForgeCompenduim", self:GetCurrentTabType())
+end
+
+function WBP_ForgeMain_C:OnConvertClicked()
+  DebugPrint("Yihan@ OnConvertClicked")
+  local GameInstance = GWorld.GameInstance
+  local UIManager = GameInstance:GetGameUIManager()
+  local ForgeConvertPage = UIManager:GetUIObj("ForgeConvertMain")
+  if ForgeConvertPage then
+    UIManager:PlaceJumpUIToTop(ForgeConvertPage, "ForgeConvertMain")
+    ForgeConvertPage:InitUsedByJumpPage()
+  else
+    local UI = UIManager:LoadUINew("ForgeConvertMain")
+  end
 end
 
 AssembleComponents(WBP_ForgeMain_C)

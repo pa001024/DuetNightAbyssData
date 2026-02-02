@@ -7,6 +7,9 @@ T.RT_3 = {Name = "AltStart", Value = 1}
 T.RT_4 = {
   [1] = T.RT_3
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -376,6 +379,15 @@ return ReadOnly("QuestSetVariable", {
         }
       },
       QuestId = 20030304,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [20031505] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ120315", Value = 1}
+      },
+      QuestId = 20031505,
       QuestStartorSuccess = "Success"
     }
   }

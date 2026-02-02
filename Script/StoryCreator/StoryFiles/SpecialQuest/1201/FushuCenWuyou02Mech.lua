@@ -376,6 +376,7 @@ return {
             pos = {x = 3013.482305706073, y = -621.6582482469446},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "MechanismPoint_Plant01_02"
             }
@@ -387,6 +388,7 @@ return {
             pos = {x = 3013.2994622337555, y = -468.86604045473666},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "MechanismPoint_Plant01_03"
             }
@@ -398,6 +400,7 @@ return {
             pos = {x = 3008.0559557402485, y = -767.4537027923992},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "MechanismPoint_Plant01_01"
             }
@@ -409,6 +412,7 @@ return {
             pos = {x = 3531.4019153362087, y = -634.285412749109},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "MechanismPoint_Plant01_02"
             }
@@ -420,6 +424,7 @@ return {
             pos = {x = 3524.0344910937847, y = -467.1660043797007},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "MechanismPoint_Plant01_03"
             }
@@ -431,6 +436,7 @@ return {
             pos = {x = 3531.1457825800762, y = -787.1948644085608},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "MechanismPoint_Plant01_01"
             }

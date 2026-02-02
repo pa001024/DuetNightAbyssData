@@ -28,12 +28,23 @@ function FDialogueFlowGraphComponent:OnTalkEnd()
   if self.EndCallback then
     self.EndCallback()
   end
+  if self.TaskData.FlowAsset then
+    local TS = TalkSubsystem()
+    if IsValid(TS) then
+      TS:UnRegisterFlowTalkTask(self.TaskData.FlowAssetPath)
+    end
+  end
 end
 
 function FDialogueFlowGraphComponent:Execute()
   local TS = TalkSubsystem()
   self.bStartDialogue = false
   TS:StartFlowTalkTask(self.FlowAsset)
+  if self.FlowAsset and self.FlowAsset.RestartDialogueId then
+    self.FlowAsset:SetSkipInRestartTag(true)
+    self:SkipToEnd()
+    self.FlowAsset:SetSkipInRestartTag(nil)
+  end
 end
 
 function FDialogueFlowGraphComponent:Pause()
@@ -68,6 +79,8 @@ function FDialogueFlowGraphComponent:SkipToEnd()
   self.TalkTask.UI:ToPageEnd()
   if self.Options then
     self:PlayOptions(self.Options, self.SelectOptions, self.OptionCallback, self.OptionNode)
+  elseif self.FlowDialogueData then
+    self:PlayDialogue(self.FlowDialogueData)
   elseif not self.bFinish then
     local TalkTask = self.TalkTask
     if IsValid(TalkTask.UI) then

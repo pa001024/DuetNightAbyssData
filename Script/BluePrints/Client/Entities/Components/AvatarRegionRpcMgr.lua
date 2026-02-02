@@ -3,10 +3,7 @@ local LevelBaseDataAttrDict = require("BluePrints.Client.CustomTypes.Region").Le
 local utf8ok, utf8 = pcall(require, "utf8")
 local Decorator = require("BluePrints.Client.Wrapper.Decorator")
 local Component = {}
-for key, value in pairs(Decorator) do
-  Component[key] = value
-end
-setmetatable(Component, getmetatable(Decorator))
+Decorator:ApplyDecorator(Component)
 
 function Component:ReceiveSynchronizedDataFromServer(RegionDatas)
   local RegionId = self:GetSubRegionId2RegionId()
@@ -603,6 +600,16 @@ Traceback:
   return not ErrorMsg
 end
 
+function Component:ReportRemoveLocalDataOnce(Data)
+  local ct = {
+    "RegionData RemoveLocalDataOnce:\n"
+  }
+  self:GetTableStr(ct, Data, 1, 3)
+  local FinalMsg = table.concat(ct)
+  self:RegionReportToSentry(FinalMsg)
+  DebugPrint(FinalMsg)
+end
+
 function Component:GetTableStr(ct, t, step, deep, PrettyFormat)
   if type(t) ~= "table" then
     ct[#ct + 1] = tostring(t)
@@ -648,7 +655,7 @@ function Component:GetTableStr(ct, t, step, deep, PrettyFormat)
       ct[#ct + 1] = "\n"
     end
     if type(v) == "table" and step < deep then
-      self:GetStrTable(ct, v, step + 1, deep, PrettyFormat)
+      self:GetTableStr(ct, v, step + 1, deep, PrettyFormat)
     end
   end
   

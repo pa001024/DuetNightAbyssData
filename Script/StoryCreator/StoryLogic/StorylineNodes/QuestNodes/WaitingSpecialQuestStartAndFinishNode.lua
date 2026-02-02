@@ -14,7 +14,7 @@ end
 
 function WaitingSpecialQuestStartAndFinishNode:Clear()
   if ClientEventUtils then
-    ClientEventUtils:CheckWhenNodeClear(self.SpecialConfigId)
+    ClientEventUtils:TryInterruptSpecialQuestEvent(self.SpecialConfigId, "NodeClear")
   end
 end
 

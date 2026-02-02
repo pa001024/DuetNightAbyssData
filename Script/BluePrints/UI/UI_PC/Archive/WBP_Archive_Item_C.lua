@@ -1,6 +1,6 @@
 require("UnLua")
 local M = Class({
-  "BluePrints.UI.BP_UIState_C"
+  "BluePrints.UI.BP_EMUserWidget_C"
 })
 
 function M:BP_OnEntryReleased()
@@ -83,17 +83,22 @@ end
 
 function M:SetRarity(Rarity)
   local TempRarity = Rarity
-  if not TempRarity or TempRarity < 1 or TempRarity > 5 then
-    TempRarity = 1
+  if not TempRarity or TempRarity < 0 or TempRarity > 5 then
+    TempRarity = 0
   end
-  self.BG:SetBrushResourceObject(self["Img_" .. TempRarity])
+  local FontMaterial = self.Text_Name:GetDynamicFontMaterial()
+  if TempRarity and self["Quality_" .. TempRarity] then
+    FontMaterial:SetTextureParameterValue("IconTex", self["Quality_" .. TempRarity])
+  else
+    FontMaterial:SetTextureParameterValue("IconTex", self.Quality_0)
+  end
 end
 
 function M:SetLock(IsLock)
   if IsLock then
-    self.Panel_Lock:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    self:PlayAnimation(self.Lock)
   else
-    self.Panel_Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self:PlayAnimation(self.Unlock)
   end
 end
 
@@ -237,7 +242,7 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
       Callback(Obj)
     end
   end
-  return M.Super.OnFocusReceived(self, MyGeometry, InFocusEvent)
+  return UIUtils.Handled
 end
 
 function M:OnAddedToFocusPath(InFocusEvent)

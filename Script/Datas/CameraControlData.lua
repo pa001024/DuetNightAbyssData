@@ -34,6 +34,9 @@ T.RT_7 = {
   0,
   0
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -86,6 +89,21 @@ return ReadOnly("CameraControlData", {
     ProbeSize = 12,
     SocketOffset = {
       3000,
+      0,
+      200
+    },
+    TimelineFloatCurve = "CameraCurve",
+    bIncrementArmLength = false,
+    bIncrementArmPos = false,
+    bIncrementSocketOffset = true
+  },
+  BossJuqueDefault = {
+    ArmLength = 4500,
+    ArmPos = T.RT_3,
+    CameraName = "BossJuqueDefault",
+    ProbeSize = 12,
+    SocketOffset = {
+      3600,
       0,
       200
     },
@@ -232,6 +250,21 @@ return ReadOnly("CameraControlData", {
     bIncrementArmLength = true,
     bIncrementArmPos = true,
     bIncrementSocketOffset = true
+  },
+  StoryCamera01 = {
+    ArmLength = 0,
+    ArmPos = T.RT_1,
+    CameraName = "StoryCamera01",
+    ProbeSize = 12,
+    SocketOffset = {
+      15,
+      0,
+      25
+    },
+    TimelineFloatCurve = "CameraCurve",
+    bIncrementArmLength = false,
+    bIncrementArmPos = false,
+    bIncrementSocketOffset = false
   },
   StoryCamera03 = {
     ArmLength = 140,

@@ -35,7 +35,9 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   self:AddKeyDownEvent(UIConst.GamePadKey.FaceButtonTop, self.OnFaceButtonTopKeyDown)
   self:AddKeyDownEvent(UIConst.GamePadKey.FaceButtonLeft, self.OnFaceButtonLeftKeyDown)
   self:AddKeyUpEvent(UIConst.GamePadKey.FaceButtonTop, self.OnFaceButtonTopKeyUp)
-  self:AddLongPressEvent(UIConst.GamePadKey.FaceButtonTop, 1, self.OnGamepad_FaceButton_Top_LongPressStart, self.OnGamepad_FaceButton_Top_LongPressCancel, self.OnGamepad_FaceButton_Top_LongPressEnd)
+  if self.UnlockBtnParams and self.UnlockBtnParams.bShowCoin then
+    self:AddLongPressEvent(UIConst.GamePadKey.FaceButtonTop, 1, self.OnGamepad_FaceButton_Top_LongPressStart, self.OnGamepad_FaceButton_Top_LongPressCancel, self.OnGamepad_FaceButton_Top_LongPressEnd)
+  end
 end
 
 function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
@@ -134,7 +136,7 @@ function M:OnFaceButtonLeftKeyDown()
 end
 
 function M:OnFaceButtonTopKeyUp()
-  if 1 == self.WidgetSwitcher_State:GetActiveWidgetIndex() and self.Btn_Unlock:IsVisible() then
+  if 1 == self.WidgetSwitcher_State:GetActiveWidgetIndex() and self.Btn_Unlock:IsVisible() and not UIUtils.HasAnyFocus(self.Btn_Unlock) then
     self:OnUnlockBtnClicked()
     return UIUtils.Handled, true
   end

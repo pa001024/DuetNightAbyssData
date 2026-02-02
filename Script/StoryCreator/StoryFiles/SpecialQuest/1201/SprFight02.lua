@@ -152,13 +152,13 @@ return {
           {
             startQuest = "1763293292174114",
             startPort = "QuestStart",
-            endQuest = "1764933093194638807",
+            endQuest = "17649333912923185496",
             endPort = "In"
           },
           {
             startQuest = "1763293292174114",
             startPort = "QuestStart",
-            endQuest = "17649333912923185496",
+            endQuest = "1765976903507642269",
             endPort = "In"
           }
         },
@@ -388,23 +388,6 @@ return {
               StaticCreatorIdList = {2110050}
             }
           },
-          ["1764933093194638807"] = {
-            key = "1764933093194638807",
-            type = "PlayOrStopBGMNode",
-            name = "BGM节点音效",
-            pos = {x = 1272.7609649122805, y = -9.664473684210492},
-            propsData = {
-              SoundStateType = 0,
-              SoundPriority = 0,
-              SoundType = 1,
-              SoundPath = "event:/ambience/common/pad_noise_rain_plain_heavy",
-              ParamKey = "",
-              ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {104105},
-              bStoreToServer = false
-            }
-          },
           ["17649333912923185496"] = {
             key = "17649333912923185496",
             type = "SendMessageNode",
@@ -414,6 +397,23 @@ return {
               MessageType = "GameMode",
               MessageContent = "SprFightEnvStart",
               UnitId = -1
+            }
+          },
+          ["1765976903507642269"] = {
+            key = "1765976903507642269",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点音效",
+            pos = {x = 1264, y = 512},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 1,
+              SoundPath = "event:/ambience/common/pad_noise_rain_plain_heavy",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {104110, 104107},
+              bStoreToServer = false
             }
           }
         },

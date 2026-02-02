@@ -198,9 +198,7 @@ function M:ResortEventData(EventInfo)
       self.SeriesList[Data.Data.RLArchiveSeriesId].UnlockNum = (self.SeriesList[Data.Data.RLArchiveSeriesId].UnlockNum or 0) + 1
     end
     self.SeriesList[Data.Data.RLArchiveSeriesId].TotalNum = (self.SeriesList[Data.Data.RLArchiveSeriesId].TotalNum or 0) + 1
-    if Data.IsNew then
-      self.SeriesList[Data.Data.RLArchiveSeriesId].IsNew = true
-    end
+    self.SeriesList[Data.Data.RLArchiveSeriesId].IsNew = Data.IsNew
     if not self.SeriesList[Data.Data.RLArchiveSeriesId].SubItems then
       self.SeriesList[Data.Data.RLArchiveSeriesId].SubItems = {}
     end
@@ -213,6 +211,7 @@ function M:ResortEventData(EventInfo)
     end
     table.insert(self.SeriesList[Data.Data.RLArchiveSeriesId].SubItems, {
       EventId = RoomId,
+      ArchiveId = Data.Data.RLArchiveSubId,
       IsUnlocked = Data.IsUnlocked,
       IsNew = Data.IsNew,
       Name = Data.Data.Name or Data.Data.EventName,

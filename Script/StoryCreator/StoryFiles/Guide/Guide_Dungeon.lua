@@ -150,12 +150,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1720336421379431050",
-            startPort = "Out",
-            endQuest = "17466882291168181",
-            endPort = "In"
-          },
-          {
             startQuest = "17507664087241972109",
             startPort = "Out",
             endQuest = "17563696431933180660",
@@ -183,6 +177,18 @@ return {
             startQuest = "17581026465841858526",
             startPort = "Out",
             endQuest = "1715589607749139244",
+            endPort = "In"
+          },
+          {
+            startQuest = "1720336421379431050",
+            startPort = "Out",
+            endQuest = "17683746948345098175",
+            endPort = "In"
+          },
+          {
+            startQuest = "17683746948345098175",
+            startPort = "Out",
+            endQuest = "170117530804028774",
             endPort = "In"
           }
         },
@@ -250,7 +256,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "Left",
+              MessageLoc = "DownLeft",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },
@@ -348,7 +354,7 @@ return {
             key = "1720336421379431050",
             type = "ShowGuideButtonNode",
             name = "区域右上角UI",
-            pos = {x = 1111.5072519138937, y = 543.2359452504587},
+            pos = {x = 1109.5072519138937, y = 541.2359452504587},
             propsData = {
               ShowEnable = true,
               MessageId = 300801,
@@ -370,7 +376,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "Left",
+              MessageLoc = "DownLeft",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },
@@ -394,7 +400,7 @@ return {
             key = "17466882291168181",
             type = "ShowGuideButtonNode",
             name = "Button显示/隐藏信息",
-            pos = {x = 1457.0644419777389, y = 397.1110945720997},
+            pos = {x = 1501.0644419777389, y = 251.11109457209972},
             propsData = {
               ShowEnable = true,
               MessageId = 300813,
@@ -416,7 +422,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "Right",
+              MessageLoc = "Down",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },
@@ -669,6 +675,36 @@ return {
             pos = {x = 148, y = 268},
             propsData = {
               EventName = "task_training_end"
+            }
+          },
+          ["17683746948345098175"] = {
+            key = "17683746948345098175",
+            type = "ShowGuideButtonNode",
+            name = "Button显示/隐藏信息",
+            pos = {x = 1464.5860329329566, y = 483.9433251559396},
+            propsData = {
+              ShowEnable = true,
+              MessageId = 300813,
+              MessageNote = "",
+              DelayTime = 0,
+              IsForceClick = true,
+              IsControlPlayer = false,
+              IsTimePause = true,
+              IsShowCursor = true,
+              HighLightUIPath = "StyleOfPlay.ComTab.EMScrollBox_TabItem:2",
+              UICompName = "Btn",
+              GamePadWidgetName = "",
+              IsAutoClick = false,
+              IsAutoClickByGamepad = false,
+              UIShape = "Square",
+              IsResetPlayer = false,
+              IsForbidInAnim = true,
+              IsForbidOutAnim = true,
+              UICompSizeOffset = {X = 0, Y = 0},
+              UICompLocOffset = {X = 0, Y = 0},
+              MessageParentLoc = "HighLightUI",
+              MessageLoc = "Right",
+              MessageLocOffset = {X = 0, Y = 0}
             }
           }
         },

@@ -19,6 +19,7 @@ function M:InitUIInfo()
   self:PlaySelectAnimation()
   self:RefreshProgress()
   self.Text_Clue:SetText(GText("Minigame_Textmap_100303"))
+  self.Text_Clue_1:SetText(GText("Minigame_Textmap_100340"))
 end
 
 function M:RefreshProgress()
@@ -41,6 +42,7 @@ function M:OnHoverButton()
   if self.Content.ParentUI.CurInputDeviceType == ECommonInputType.Gamepad then
     self:OnClickButton()
     self.BG:SelectCell()
+    self.Content.ParentUI.Book.Controller_01:SetVisibility(ESlateVisibility.Collapsed)
   end
 end
 
@@ -86,32 +88,25 @@ function M:PlaySelectAnimation()
 end
 
 function M:RefreshReddotAndSolvedUI()
+  self.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Panel_Clue:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Panel_Reason:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self:RefreshProgress()
   if self.Content.IsSolved then
     self.WS_Type:SetActiveWidgetIndex(1)
-    self.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.Panel_Clue:SetVisibility(UE4.ESlateVisibility.Collapsed)
   else
     self.WS_Type:SetActiveWidgetIndex(0)
-    local CacheKey = self.Content.Question
-    if not ReddotManager.GetTreeNode("DetectiveQuestion") then
-      ReddotManager.AddNode("DetectiveQuestion")
-    end
-    local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("DetectiveQuestion")
-    if CacheDetail then
-      self.Panel_Clue:SetVisibility(UE4.ESlateVisibility.Collapsed)
-      if nil == CacheDetail[CacheKey] then
-        CacheDetail[CacheKey] = true
-        ReddotManager.IncreaseLeafNodeCount("DetectiveQuestion")
-        self.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-      elseif CacheDetail[CacheKey] then
-        self.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-      else
-        self.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
-        if ReasoningUtils:IsQuestionHasNewClue(self.Content.Question) then
-          self.Panel_Clue:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-        end
-      end
+    local QuestionId = self.Content.Question
+    local IsReasoningState = ReasoningUtils:IsQuestionReasoningState(QuestionId)
+    local Result = ReasoningUtils:IsHasNewQuestionOrClue(QuestionId)
+    local IsNewQuestion = 1 == Result
+    local IsNewClue = 2 == Result
+    if IsNewClue then
+      self.Panel_Clue:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    elseif IsNewQuestion then
+      self.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    elseif IsReasoningState then
+      self.Panel_Reason:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     end
   end
 end

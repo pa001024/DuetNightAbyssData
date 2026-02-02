@@ -193,6 +193,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -328,6 +329,8 @@ return {
               TargetPointList = {
                 "BP_ShotPoint_Xiao01"
               },
+              EventId = 0,
+              EventParams = {},
               Text_TargetFound = "",
               Text_TargetNotFound = "",
               ForceMaxLodStaticPointList = {},
@@ -405,6 +408,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -444,6 +448,7 @@ return {
             pos = {x = 962.5454545454545, y = 239.0478468899521},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_ShotPoint_Xiao01"
             }
@@ -455,6 +460,7 @@ return {
             pos = {x = 2098, y = 253.68421052631578},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_ShotPoint_Xiao01"
             }
@@ -565,6 +571,8 @@ return {
               TargetPointList = {
                 "BP_ShotPoint_Xiao02"
               },
+              EventId = 0,
+              EventParams = {},
               Text_TargetFound = "",
               Text_TargetNotFound = "",
               ForceMaxLodStaticPointList = {},
@@ -642,6 +650,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -681,6 +690,7 @@ return {
             pos = {x = 1039.7949948796722, y = 267.2433135783387},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_ShotPoint_Xiao02"
             }
@@ -692,6 +702,7 @@ return {
             pos = {x = 1874.2235663082438, y = 257.97073558162265},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_ShotPoint_Xiao02"
             }
@@ -839,6 +850,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",

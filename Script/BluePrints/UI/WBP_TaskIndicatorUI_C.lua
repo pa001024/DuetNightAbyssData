@@ -99,11 +99,13 @@ function WBP_TaskIndicatorUI_C:SetGuideInfo(PointType, PointName, MapKey, QuestN
   if self.GuideInfoCache.PointOrStaticCreatorName == nil or GuidePointLocData[self.GuideInfoCache.PointOrStaticCreatorName] == nil or 0 == GuidePointLocData[self.GuideInfoCache.PointOrStaticCreatorName].SubRegionId then
     if self.GuideInfoCache.PointName ~= nil and GuidePointLocData[self.GuideInfoCache.PointName] and 0 ~= GuidePointLocData[self.GuideInfoCache.PointName].SubRegionId then
       self.TaskRegionId = GuidePointLocData[self.GuideInfoCache.PointName].SubRegionId
+      self.CurrentFloorLevelId = GuidePointLocData[self.GuideInfoCache.PointName].FloorId
     elseif Const.EnableTaskPrintError then
       ScreenPrint(string.format("指引点所在区域不存在，请检查导出数据是否正确！QuestChainId:" .. tostring(GuidePointChainId) .. ", STL节点Key:" .. tostring(QuestNode.Key) .. ", 指引点名称:" .. tostring(self.GuideInfoCache.PointName)))
     end
   else
     self.TaskRegionId = GuidePointLocData[self.GuideInfoCache.PointOrStaticCreatorName].SubRegionId
+    self.CurrentFloorLevelId = GuidePointLocData[self.GuideInfoCache.PointOrStaticCreatorName].FloorId
   end
   local TrackingQuestChainId = Avatar.TrackingQuestChainId
   self:SetSmarPointInfoByQuestRegionId()
@@ -124,11 +126,6 @@ function WBP_TaskIndicatorUI_C:SetGuideInfo(PointType, PointName, MapKey, QuestN
     local BattleMain = UIManager(self):GetUIObj("BattleMain")
     if BattleMain.Battle_Map then
       BattleMain.Battle_Map.WildMap:EnterOrExitTaskRegion(self.GuideInfoCache.PointOrStaticCreatorName, false)
-    end
-  elseif GuidePointLocData[self.GuideInfoCache.PointOrStaticCreatorName] and GuidePointLocData[self.GuideInfoCache.PointOrStaticCreatorName].R and GuidePointLocData[self.GuideInfoCache.PointOrStaticCreatorName].R > 0 and self:CheckPlayerIsIn() then
-    local BattleMain = UIManager(self):GetUIObj("BattleMain")
-    if BattleMain.Battle_Map then
-      BattleMain.Battle_Map.WildMap:EnterOrExitTaskRegion(self:GetName(), true)
     end
   end
 end
@@ -407,23 +404,6 @@ function WBP_TaskIndicatorUI_C:ChengeIsNeedCollapsedByRangeStyle()
   end
   self.IsRangeOrPoint = false
   return
-end
-
-function WBP_TaskIndicatorUI_C:CheckPlayerIsIn()
-  local Key = self.GuideInfoCache.PointOrStaticCreatorName
-  if nil == GuidePointLocData[Key] or nil == GuidePointLocData[Key].R or not IsValid(self.PlayerCharacter) then
-    return false
-  end
-  local RealRadius
-  if GuidePointLocData[Key] and GuidePointLocData[Key].R and GuidePointLocData[Key].R > 0 then
-    RealRadius = (GuidePointLocData[Key].R + 5) / 100
-  end
-  local PointLoc = FVector(GuidePointLocData[Key].X, GuidePointLocData[Key].Y, GuidePointLocData[Key].Z)
-  local Distance = UKismetMathLibrary.Vector_Distance2D(self.PlayerCharacter.CurrentLocation, PointLoc) / 100.0
-  if nil == RealRadius then
-    return false
-  end
-  return RealRadius > Distance
 end
 
 function WBP_TaskIndicatorUI_C:TriggerQuestHint()

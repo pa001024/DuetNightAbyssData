@@ -12,12 +12,17 @@ function M:InitSurvivalMiniProComponent()
   self.MonsterSpawnId = SurvivalMiniProInfo.MonsterSpawnId or {}
   self.SpMonsterSpawnId = SurvivalMiniProInfo.SpMonsterSpawnId or {}
   self.SpMonsterSpawnTime = SurvivalMiniProInfo.SpMonsterSpawnTime or 20
+  self.IsCycleSpawn = SurvivalMiniProInfo.IsCycleSpawn or false
+  self.CurCycleIndex = 0
 end
 
 function M:InitSurvivalMiniProBaseInfo()
 end
 
 function M:StartRound()
+  if self.IsRoundBegin then
+    return
+  end
   M.Super.StartRound(self)
   local Interval = DataMgr.GlobalConstant.SurvivalCostRate.ConstantValue
   
@@ -49,8 +54,38 @@ function M:SpawnSpMonsters()
   if not self.IsRoundBegin then
     return
   end
-  self.GameMode:TriggerCreateMonsterSpawn(self:TableToTArray(self.SpMonsterSpawnId))
+  if self.IsCycleSpawn then
+    self:DoCycleSpawn()
+  else
+    self.GameMode:TriggerCreateMonsterSpawn(self:TableToTArray(self.SpMonsterSpawnId))
+    self.GameMode:TriggerGameModeEvent("Event_OnSpawnSpMonsters")
+  end
+end
+
+function M:DoCycleSpawn()
+  self.CurCycleIndex = self.CurCycleIndex + 1
+  if self.CurCycleIndex > #self.SpMonsterSpawnId then
+    return
+  end
+  local CurCycleSpawnId = self.SpMonsterSpawnId[self.CurCycleIndex]
+  local SpawnIdArray = TArray(0)
+  SpawnIdArray:Add(CurCycleSpawnId)
+  self.GameMode:TriggerCreateMonsterSpawn(SpawnIdArray)
   self.GameMode:TriggerGameModeEvent("Event_OnSpawnSpMonsters")
+end
+
+function M:OnMonsterSpawnDestroy(MonsterSpawnId)
+  if not self.IsCycleSpawn then
+    return
+  end
+  if self.CurCycleIndex > #self.SpMonsterSpawnId then
+    return
+  end
+  local CurCycleSpawnId = self.SpMonsterSpawnId[self.CurCycleIndex]
+  if CurCycleSpawnId == MonsterSpawnId then
+    self:SpawnSpMonstersAlarm()
+    self:AddTimer(2, self.DoCycleSpawn)
+  end
 end
 
 return M

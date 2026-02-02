@@ -5,7 +5,8 @@ BagCommon.BagSellPageZOrder = 56
 BagCommon.StuffType = {
   Weapon = "Weapon",
   Mod = "Mod",
-  Resource = "Resource"
+  Resource = "Resource",
+  Draft = "Draft"
 }
 BagCommon.ItemTypeToTabId = {
   MeleeWeapon = 101,
@@ -15,7 +16,19 @@ BagCommon.ItemTypeToTabId = {
   TaskItem = 4,
   ReadItem = 5,
   FishItem = 6,
-  ConsumableItem = 7
+  ConsumableItem = 7,
+  Draft = 9
+}
+BagCommon.TabIdToStuffType = {
+  [BagCommon.ItemTypeToTabId.MeleeWeapon] = BagCommon.StuffType.Weapon,
+  [BagCommon.ItemTypeToTabId.RangedWeapon] = BagCommon.StuffType.Weapon,
+  [BagCommon.ItemTypeToTabId.Mod] = BagCommon.StuffType.Mod,
+  [BagCommon.ItemTypeToTabId.Resource] = BagCommon.StuffType.Resource,
+  [BagCommon.ItemTypeToTabId.TaskItem] = BagCommon.StuffType.Resource,
+  [BagCommon.ItemTypeToTabId.ReadItem] = BagCommon.StuffType.Resource,
+  [BagCommon.ItemTypeToTabId.FishItem] = BagCommon.StuffType.Resource,
+  [BagCommon.ItemTypeToTabId.ConsumableItem] = BagCommon.StuffType.Resource,
+  [BagCommon.ItemTypeToTabId.Draft] = BagCommon.StuffType.Draft
 }
 BagCommon.ConsumableItemTypeSortWeight = {
   ResourcePack = 1,
@@ -63,6 +76,10 @@ BagCommon.SortFilters = {
   },
   [BagCommon.ItemTypeToTabId.ConsumableItem] = {
     "UI_Select_Unique"
+  },
+  [BagCommon.ItemTypeToTabId.Draft] = {
+    "UI_Select_Kind",
+    "UI_Select_Unique"
   }
 }
 BagCommon.DefaultSelectTabId = BagCommon.ItemTypeToTabId.Resource
@@ -79,6 +96,8 @@ BagCommon.BagItemSelectOpMode = {
   ResolveMode = "ResolveMode",
   SellMode = "SellMode"
 }
+BagCommon.MountTypeInResource = "MountItem"
+BagCommon.MountJumpId = 78
 BagCommon.RarityColorInfo = {
   Grey = 1,
   Green = 2,

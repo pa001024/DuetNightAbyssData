@@ -99,14 +99,16 @@ function BP_TalkContext_C:ReceiveTick(DeltaTime)
   self.TalkActionManager:ReceiveTick(DeltaTime)
 end
 
-function BP_TalkContext_C:CreateTalkActors(TalkTask, CreateInfos, Callback, TalkStage, bOnlyFindActor)
+function BP_TalkContext_C:CreateTalkActors(TalkTask, CreateInfos, DefaultCreateLocation, Callback, bOnlyFindActor)
+  DefaultCreateLocation = DefaultCreateLocation or UE4.FVector(0, 0, 0)
   Callback = Callback or function()
   end
-  if -1 == TalkTask.TalkTaskData.BlendInTime then
+  if not CreateInfos or 0 == #CreateInfos then
     Callback()
     return
   end
-  if not CreateInfos or 0 == #CreateInfos then
+  local GameState = UE4.URuntimeCommonFunctionLibrary.GetCurrentGameState(self)
+  if not GameState:IsA(UE4.AEMGameState) then
     Callback()
     return
   end
@@ -115,71 +117,39 @@ function BP_TalkContext_C:CreateTalkActors(TalkTask, CreateInfos, Callback, Talk
       Callback()
     end
   })
-  local StageInfos = self:CreateStageInfos(TalkStage)
-  local DefaultLoc, DefaultRot
-  if IsValid(TalkStage) then
-    DefaultLoc, DefaultRot = TalkStage:K2_GetActorLocation(), TalkStage:K2_GetActorRotation()
-  elseif IsValid(self.Player) then
-    DefaultLoc, DefaultRot = self.Player:K2_GetActorLocation(), UE4.FRotator(0, 0, 0)
-  else
-    DefaultLoc, DefaultRot = UE4.FVector(0, 0, 0), UE4.FRotator(0, 0, 0)
-  end
   for _, CreateInfo in ipairs(CreateInfos) do
-    local ActorId = CreateInfo.TalkActorId
-    local ActorType = CreateInfo.TalkActorType
-    local bVisible = CreateInfo.TalkActorVisible
-    local StageInfo = StageInfos[ActorId]
-    
-    local function OnGotActor(Actor, bExternal)
-      if not IsValid(Actor) then
-        local Message = string.format("对话创建Actor失败，ActorId: %d, ActorType: %s", ActorId, ActorType)
-        UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, TalkLogType, "对话创建Actor失败", Message)
-        return
-      end
-      if StageInfo then
-        local StaticCreateActor = StageInfo.StaticCreateActor
-        local Loc = StageInfo.Loc
-        local Rot = StageInfo.Rot
-        local ForcedLodModel = StageInfo.ForcedLodModel
-        self:CacheNpcTransform(TalkTask, ActorId, Actor)
-        if type(Actor.SetStagePoint) == "function" then
-          Actor:SetStagePoint(StaticCreateActor)
-        end
-        if IsValid(Actor.CapsuleComponent) and Actor.UnitId and DataMgr.Npc[Actor.UnitId] and (DataMgr.Npc[Actor.UnitId].IsSit == nil or 2 ~= DataMgr.Npc[Actor.UnitId].IsSit) then
-          local HalfUpVector = Actor:GetActorUpVector()
-          local HalfHeight = Actor.CapsuleComponent.CapsuleHalfHeight
-          Loc = Loc + UKismetMathLibrary.Multiply_VectorFloat(HalfUpVector, HalfHeight)
-          Actor:K2_SetActorLocationAndRotation(Loc, Rot, false, nil, false)
-        end
-        if "function" == type(Actor.ResetLocation) and Actor.UnitId and DataMgr.Npc[Actor.UnitId] and (DataMgr.Npc[Actor.UnitId].IsSit == nil or 2 ~= DataMgr.Npc[Actor.UnitId].IsSit) then
-          Actor:ResetLocation()
-        end
-        if IsValid(Actor.Mesh) and "function" == type(Actor.Mesh.SetForcedLOD) and ForcedLodModel then
-          Actor.Mesh:SetForcedLOD(ForcedLodModel)
-        end
-      end
-      self:RecordInShowActorVisibility(Actor, bVisible)
-      self:AddTalkActor(TalkTask, ActorType, ActorId, Actor, bExternal)
+    if CreateInfo.TalkActorType == "Player" then
+      self:RecordInShowActorVisibility(self.Player, CreateInfo.TalkActorVisible)
+      self:AddTalkActor(TalkTask, CreateInfo.TalkActorType, CreateInfo.TalkActorId, self.Player, true)
       CountTrigger:CountIncrement()
-    end
-    
-    if "Player" == CreateInfo.TalkActorType then
-      OnGotActor(self.Player, true)
     elseif CreateInfo.TalkActorType == "Npc" then
-      self:GetNPCAsync(CreateInfo.TalkActorId, function(NPC)
-        if IsValid(NPC) then
-          OnGotActor(NPC, true)
+      GameState:GetNpcInfoAsync(CreateInfo.TalkActorId, function(Npc)
+        if IsValid(Npc) then
+          self:RecordInShowActorVisibility(Npc, CreateInfo.TalkActorVisible)
+          self:AddTalkActor(TalkTask, CreateInfo.TalkActorType, CreateInfo.TalkActorId, Npc, true)
+          CountTrigger:CountIncrement()
         elseif bOnlyFindActor then
-          local Message = string.format("气泡对话查找Actor失败，请检查是对话演员是否在场上，ActorId: %d, ActorType: %s", ActorId, ActorType)
+          local Message = string.format("气泡对话查找Actor失败，请检查是对话演员是否在场上，ActorId: %d, ActorType: %s", CreateInfo.TalkActorId, "Npc")
           UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, TalkLogType, "对话查找Actor失败", Message)
         else
-          StageInfo = StageInfo or {Loc = DefaultLoc, Rot = DefaultRot}
-          self:CreateTalkActorInternal(ActorId, ActorType, StageInfo.Loc, StageInfo.Rot, function(Unit)
-            OnGotActor(Unit, false)
+          local Context = UE4.AEventMgr.CreateUnitContext()
+          Context.UnitType = CreateInfo.TalkActorType
+          Context.UnitId = CreateInfo.TalkActorId
+          Context.Loc = DefaultCreateLocation
+          Context.IntParams:Add("Level", GameState.GameModeLevel)
+          Context.BoolParams:Add("InStory", true)
+          Context.IntParams:Add("RegionDataType", 0)
+          Context.OnUnitInitCreateReadyDynamic:Add(self, function(_, NewNpc)
+            self:RecordInShowActorVisibility(NewNpc, CreateInfo.TalkActorVisible)
+            self:AddTalkActor(TalkTask, CreateInfo.TalkActorType, CreateInfo.TalkActorId, NewNpc, false)
+            CountTrigger:CountIncrement()
           end)
+          GameState.EventMgr:CreateUnitNew(Context, true)
         end
       end)
     else
+      local Message = string.format("对话创建Actor失败，位置的 Actor Id：%s ，未知的 Actor Type：%s", CreateInfo.TalkActorId, CreateInfo.TalkActorType)
+      UE4.UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, TalkLogType, "对话创建Actor失败", Message)
       CountTrigger:CountIncrement()
     end
   end
@@ -188,38 +158,8 @@ end
 function BP_TalkContext_C:DestoryTalkActors(TalkTask, TalkActors)
   for _, TalkActorData in ipairs(TalkActors) do
     local UnitId = TalkActorData.TalkActorId
-    self:ResetNpcTransform(TalkTask, UnitId)
     self:RemoveTalkActor(TalkTask, UnitId)
   end
-end
-
-function BP_TalkContext_C:CacheNpcTransform(TalkTask, NpcId, Npc)
-  if not IsValid(Npc) then
-    return
-  end
-  self.CachedNpcTransforms = self.CachedNpcTransforms or {}
-  self.CachedNpcTransforms[TalkTask] = self.CachedNpcTransforms[TalkTask] or {}
-  self.CachedNpcTransforms[TalkTask][NpcId] = {
-    Npc = Npc,
-    Transform = Npc:GetTransform()
-  }
-end
-
-function BP_TalkContext_C:ResetNpcTransform(TalkTask, NpcId)
-  self.CachedNpcTransforms = self.CachedNpcTransforms or {}
-  if not self.CachedNpcTransforms[TalkTask] then
-    return
-  end
-  local NpcData = self.CachedNpcTransforms[TalkTask][NpcId]
-  if not NpcData then
-    return
-  end
-  local Npc = NpcData.Npc
-  if not IsValid(Npc) then
-    return
-  end
-  local Transform = NpcData.Transform
-  Npc:K2_SetActorTransform(Transform, false, nil, true)
 end
 
 function BP_TalkContext_C:NPCPlayDefaultAction(TalkTask, TalkActorInfos)
@@ -316,44 +256,6 @@ end
 
 function BP_TalkContext_C:GetTalkActionData(ActorId, AnimationId)
   return CreateTalkActionData(ActorId, AnimationId)
-end
-
-function BP_TalkContext_C:CreateTalkActorInternal(UnitId, UnitType, Loc, Rot, OnCreated)
-  DebugPrint("CreateTalkActor", UnitId, UnitType, type(UnitId))
-  local GameState = UE4.URuntimeCommonFunctionLibrary.GetCurrentGameState(self)
-  local Level = GameState.GameModeLevel + 0
-  
-  local function NewLoadFinishCallback(_, Unit)
-    OnCreated(Unit)
-  end
-  
-  local Context = AEventMgr.CreateUnitContext()
-  Context.UnitType = UnitType
-  Context.UnitId = UnitId
-  Context.Loc = Loc
-  Context.Rotation = Rot
-  Context.IntParams:Add("Level", Level)
-  Context.BoolParams:Add("InStory", true)
-  Context.IntParams:Add("RegionDataType", 0)
-  Context.OnUnitInitCreateReadyDynamic:Add(self, NewLoadFinishCallback)
-  GameState.EventMgr:CreateUnitNew(Context, true)
-end
-
-function BP_TalkContext_C:GetNPCAsync(NPCId, OnGotNPC)
-  local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
-  if not GameState then
-    DebugPrint("Async get or create NPC failed, game state is nil.", GameState)
-    OnGotNPC(nil)
-    return
-  end
-  if not GameState.GetNpcInfoAsync then
-    DebugPrint("Async get or create NPC failed, game state get npc info async is nil.")
-    OnGotNPC(nil)
-    return
-  end
-  GameState:GetNpcInfoAsync(NPCId, function(NPC)
-    OnGotNPC(NPC)
-  end)
 end
 
 function BP_TalkContext_C:SnapshotAttachesVisibleState(Actor)
@@ -478,33 +380,6 @@ function BP_TalkContext_C:ConditionalRecoverCharacterShadowSetting(TalkTaskData)
   end
 end
 
-function BP_TalkContext_C:CreateStageInfos(Stage)
-  if not Stage then
-    return {}
-  end
-  local StageInfos = {}
-  local StaticCreateActors = Stage.StaticCreateActors
-  for i = 1, StaticCreateActors:Length() do
-    local StaticCreateActor = StaticCreateActors:GetRef(i)
-    if IsValid(StaticCreateActor) then
-      local Trans = StaticCreateActor:GetTransform()
-      local Loc, Rot = UE.UKismetMathLibrary.BreakTransform(Trans)
-      local UnitId = StaticCreateActor.UnitId
-      local ForcedLodModel = StaticCreateActor.ForcedLodModel
-      StageInfos[UnitId] = {
-        StaticCreateActor = StaticCreateActor,
-        Loc = Loc,
-        Rot = Rot,
-        ForcedLodModel = ForcedLodModel
-      }
-    else
-      local Message = string.format("舞台（%s）配置的第 %d 个刷新点是空的，若非意外删除，则移除该数据。", Stage:GetName(), i)
-      UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, TalkLogType, "静态刷新点是空的", Message)
-    end
-  end
-  return StageInfos
-end
-
 function BP_TalkContext_C:TryFireCallback(Callback)
   if Callback and Callback.Func then
     Callback.Func(Callback.Obj, table.unpack(Callback.Params or {}))
@@ -577,16 +452,14 @@ function BP_TalkContext_C:StartTalk(TalkTriggerId, OverridenStoryLinePath, Overr
   }
   local InteractiveActorId
   if IsValid(InteractiveActor) then
-    local InteractiveActorUnitType = InteractiveActor.UnitType
-    if "NPC" == InteractiveActorUnitType then
-      InteractiveActorUnitType = "Npc"
-    end
     InteractiveActorId = InteractiveActor.UnitId or InteractiveActor.NpcId
-    table.insert(TalkActors, {
-      TalkActorType = InteractiveActorUnitType,
-      TalkActorId = InteractiveActorId,
-      TalkActorVisible = true
-    })
+    if InteractiveActor.UnitType == "NPC" or InteractiveActor.UnitType == "Npc" then
+      table.insert(TalkActors, {
+        TalkActorType = "Npc",
+        TalkActorId = InteractiveActorId,
+        TalkActorVisible = true
+      })
+    end
   end
   if RelatedNpcIds then
     for _, NpcId in pairs(RelatedNpcIds) do
@@ -687,7 +560,6 @@ function BP_TalkContext_C:GenDummyTalkNode(InTalkId, InTalkTypeStr)
     ShowAutoPlayButton = nil,
     PauseGameGlobal = nil,
     DisableMonsterAI = nil,
-    DisableMonsterAIForSimpleTalk = nil,
     DisableNPCAI = nil,
     HideAllBattleEntity = nil,
     HideElseCharacter = nil,

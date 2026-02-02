@@ -4,6 +4,7 @@ local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local M = Class()
 
 function M:GenerateAllDataInfo()
+  EventManager:FireEvent(EventID.RefreshWuyoushengLevelReddot)
   ActivityUtils.RefreshActivityReddotNode()
   local SubTabItems = self:GenerateCurrentSubTabItems()
   local TopTabInfo = self:GetTopTabInfo()
@@ -330,11 +331,20 @@ function M:SetDescTextAlign(ActivityPage)
     if JumpPageBG and JumpPageBG.DescText_IsLeft and 1 == JumpPageBG.DescText_IsLeft then
       index = ETextJustify.Right
     end
+    if CommonConst.SystemLanguage == CommonConst.SystemLanguages.JP then
+      index = ETextJustify.Left
+    end
     if ActivityPage.Text_Desc ~= nil then
       ActivityPage.Text_Desc:SetJustification(index)
     end
     if nil ~= ActivityPage.Text_Desc_White then
       ActivityPage.Text_Desc_White:SetJustification(index)
+    end
+    if nil ~= ActivityPage.Text_ActivityDesc then
+      ActivityPage.Text_ActivityDesc:SetJustification(index)
+    end
+    if nil ~= ActivityPage.Text_ActivityDesc_White then
+      ActivityPage.Text_ActivityDesc_White:SetJustification(index)
     end
   end
 end
@@ -752,8 +762,7 @@ function M:OnSelectActivityPageChanged(SelectActivityItem, bIsSelect)
     end
   end
   if self.LastIndex == SelectActivityItem.Index then
-    local TotalItems = self.List_Tab:GetNumItems()
-    if TotalItems > 0 and TotalItems <= self.LastIndex then
+    if self.DisplayedWidgetsCount > 0 and self.LastIndex >= self.DisplayedWidgetsCount then
       self:AddTimer(0.3, function()
         local NextOffset = self.List_Tab:GetScrollOffsetOfEnd()
         self.List_Tab:SetScrollOffset(NextOffset)
@@ -807,7 +816,8 @@ function M:GetListViewContentMaxCount()
   end
   local ItemWidget
   for _, Widget in pairs(self.List_Tab:GetDisplayedEntryWidgets()) do
-    if Widget and Widget.IsTabSelected == false and Widget.Index > 1 then
+    local index = Widget.Index or 0
+    if Widget and Widget.IsTabSelected == false and index > 1 then
       ItemWidget = Widget
       break
     end

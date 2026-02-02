@@ -45,6 +45,27 @@ function M:OnLoaded(...)
   EventManager:AddEvent(EventID.OnLeaveActivityEntry, self, self.OnLeaveActivityEntry)
   EventManager:AddEvent(EventID.OnActivityEntryShowVisible, self, self.OnActivityEntryShowVisible)
   EventManager:AddEvent(EventID.OnActivityComplete, self, self.OnActivityComplete)
+  local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
+  self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
+  if IsValid(self.GameInputModeSubsystem) then
+    self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
+    self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
+  end
+end
+
+function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
+  self.CurInputDevice = CurInputDevice
+  self.CurGamepadName = CurGamepadName
+  if CurInputDevice == ECommonInputType.Gamepad then
+    if not self:HasFocusedDescendants() and not self:HasAnyUserFocus() then
+      return
+    end
+    if self.CurFocusWidgetItem then
+      self.CurFocusWidgetItem:SetFocus()
+    else
+      self.List_Tab:SetFocus()
+    end
+  end
 end
 
 function M:InitListenEvent()

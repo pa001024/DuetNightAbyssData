@@ -52,6 +52,9 @@ T.RT_8 = {
   "Battle",
   "Workaholic"
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -71,6 +74,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 1101,
     DefaultSkinId = 1101,
     DispatchTag = T.RT_4,
     DispatchUnlock = T.RT_5,
@@ -93,7 +97,9 @@ return ReadOnly("Char", {
     SkinId = {
       1101,
       11010010,
-      11010011
+      11010011,
+      11010121,
+      11010122
     },
     SortPriority = 4006,
     Sound = "SOUND_ITEM_NORMAL",
@@ -121,6 +127,7 @@ return ReadOnly("Char", {
       FX_Teleport = 60001,
       Face = 20026
     },
+    DefaultHairId = 1103,
     DefaultSkinId = 1103,
     DispatchTag = {
       "Battle",
@@ -147,7 +154,9 @@ return ReadOnly("Char", {
     SkinId = {
       1103,
       11030010,
-      11030011
+      11030011,
+      11030121,
+      11030122
     },
     SortPriority = 4006,
     Sound = "SOUND_ITEM_NORMAL",
@@ -169,6 +178,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 1501,
     DefaultSkinId = 1501,
     DispatchTag = {
       "Battle",
@@ -195,7 +205,9 @@ return ReadOnly("Char", {
     SkinId = {
       1501,
       15010010,
-      15010011
+      15010011,
+      15010121,
+      15010122
     },
     SortPriority = 5010,
     Sound = "SOUND_ITEM_NORMAL",
@@ -217,6 +229,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 1502,
     DefaultSkinId = 1502,
     DispatchTag = {
       "Empathy",
@@ -243,7 +256,9 @@ return ReadOnly("Char", {
     SkinId = {
       1502,
       15020010,
-      15020011
+      15020011,
+      15020121,
+      15020122
     },
     SortPriority = 5011,
     Sound = "SOUND_ITEM_NORMAL",
@@ -264,6 +279,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 1503,
     DefaultSkinId = 1503,
     DispatchTag = {
       "Battle",
@@ -287,7 +303,12 @@ return ReadOnly("Char", {
     RegainCharItemNum = 30,
     ReleaseVersion = 110,
     RoleId = 1503,
-    SkinId = {1503, 15030011},
+    SkinId = {
+      1503,
+      15030011,
+      15030121,
+      15030122
+    },
     SortPriority = 5012,
     Sound = "SOUND_ITEM_NORMAL",
     SpineBp = "WBP_Get_Avatar_WidgetKezhou",
@@ -303,6 +324,7 @@ return ReadOnly("Char", {
     ArmoryCameraRotation = T.RT_2,
     BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Avatar/T_Bust_Suyi",
     Camp = "Dongguo",
+    CharColorVar = "Green",
     CharId = 1504,
     CharMaxLevel = 80,
     CharName = "UI_CHAR_NAME_1504",
@@ -311,7 +333,15 @@ return ReadOnly("Char", {
     CharSubtitle = "UI_CHAR_SUBTITLE_1504",
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
-    DefaultAccessory = T.RT_3,
+    DefaultAccessory = {
+      Back = 40013,
+      FX_Dead = 50001,
+      FX_HelixLeap = 21001,
+      FX_PlungingATK = 11001,
+      FX_Teleport = 60001,
+      Face = 20044
+    },
+    DefaultHairId = 1504,
     DefaultSkinId = 1504,
     DispatchTag = T.RT_8,
     DispatchUnlock = T.RT_5,
@@ -331,7 +361,7 @@ return ReadOnly("Char", {
     RegainCharItemNum = 30,
     ReleaseVersion = 130,
     RoleId = 1504,
-    SkinId = {1504},
+    SkinId = {1504, 150401},
     SortPriority = 5013,
     Sound = "SOUND_ITEM_NORMAL",
     SpineBp = "WBP_Get_Avatar_WidgetKezhou",
@@ -351,6 +381,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 0,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 1601,
     DefaultSkinId = 1601,
     DispatchTag = T.RT_8,
     DispatchUnlock = T.RT_5,
@@ -374,7 +405,9 @@ return ReadOnly("Char", {
     SkinId = {
       1601,
       16010010,
-      16010011
+      16010011,
+      16010121,
+      16010122
     },
     SortPriority = 5014,
     Sound = "SOUND_ITEM_NORMAL",
@@ -395,6 +428,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 1801,
     DefaultSkinId = 1801,
     DispatchTag = {
       "Empathy",
@@ -421,7 +455,9 @@ return ReadOnly("Char", {
     SkinId = {
       1801,
       18010010,
-      18010011
+      18010011,
+      18010121,
+      18010122
     },
     SortPriority = 5009,
     Sound = "SOUND_ITEM_NORMAL",
@@ -442,6 +478,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 2101,
     DefaultSkinId = 2101,
     DispatchTag = {
       "Fish",
@@ -469,7 +506,9 @@ return ReadOnly("Char", {
       2101,
       210102,
       21010010,
-      21010011
+      21010011,
+      21010121,
+      21010122
     },
     SortPriority = 5004,
     Sound = "SOUND_ITEM_NORMAL",
@@ -490,6 +529,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 2102,
     DefaultSkinId = 2102,
     DispatchTag = {
       "Morality",
@@ -533,6 +573,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 2301,
     DefaultSkinId = 2301,
     DispatchTag = {
       "Fish",
@@ -559,7 +600,9 @@ return ReadOnly("Char", {
     SkinId = {
       2301,
       23010010,
-      23010011
+      23010011,
+      23010121,
+      23010122
     },
     SortPriority = 4007,
     Sound = "SOUND_ITEM_NORMAL",
@@ -580,6 +623,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 2401,
     DefaultSkinId = 2401,
     DispatchTag = {
       "Morality",
@@ -606,7 +650,9 @@ return ReadOnly("Char", {
     SkinId = {
       2401,
       240101,
-      24010011
+      24010011,
+      24010121,
+      24010122
     },
     SortPriority = 5007,
     Sound = "SOUND_ITEM_NORMAL",
@@ -627,6 +673,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 3101,
     DefaultSkinId = 3101,
     DispatchTag = {
       "Chaos",
@@ -653,7 +700,9 @@ return ReadOnly("Char", {
     SkinId = {
       3101,
       31010010,
-      31010011
+      31010011,
+      31010121,
+      31010122
     },
     SortPriority = 5003,
     Sound = "SOUND_ITEM_NORMAL",
@@ -675,6 +724,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 3102,
     DefaultSkinId = 3102,
     DispatchTag = {
       "Pet",
@@ -718,6 +768,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 3103,
     DefaultSkinId = 3103,
     DispatchTag = {
       "Pet",
@@ -744,7 +795,9 @@ return ReadOnly("Char", {
     SkinId = {
       3103,
       31030010,
-      31030011
+      31030011,
+      31030121,
+      31030122
     },
     SortPriority = 4003,
     Sound = "SOUND_ITEM_NORMAL",
@@ -765,6 +818,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 3201,
     DefaultSkinId = 3201,
     DispatchTag = {
       "Mine",
@@ -791,7 +845,9 @@ return ReadOnly("Char", {
     SkinId = {
       3201,
       32010010,
-      32010011
+      32010011,
+      32010121,
+      32010122
     },
     SortPriority = 4004,
     Sound = "SOUND_ITEM_NORMAL",
@@ -811,6 +867,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 3202,
     DefaultSkinId = 3202,
     DispatchTag = {
       "Benefit",
@@ -858,6 +915,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 3301,
     DefaultSkinId = 3301,
     DispatchTag = {
       "Collect",
@@ -884,7 +942,9 @@ return ReadOnly("Char", {
     SkinId = {
       3301,
       33010010,
-      33010011
+      33010011,
+      33010121,
+      33010122
     },
     SortPriority = 4005,
     Sound = "SOUND_ITEM_NORMAL",
@@ -905,6 +965,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 4101,
     DefaultSkinId = 4101,
     DispatchTag = T.RT_4,
     DispatchUnlock = T.RT_5,
@@ -927,7 +988,9 @@ return ReadOnly("Char", {
     SkinId = {
       4101,
       41010010,
-      41010011
+      41010011,
+      41010121,
+      41010122
     },
     SortPriority = 4001,
     Sound = "SOUND_ITEM_NORMAL",
@@ -948,10 +1011,11 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 4102,
     DefaultSkinId = 4102,
     DispatchTag = {
       "Wisdom",
-      "Wisdom",
+      "Collect",
       "Skilled"
     },
     DispatchUnlock = T.RT_5,
@@ -971,7 +1035,12 @@ return ReadOnly("Char", {
     RegainCharItemNum = 30,
     ReleaseVersion = 120,
     RoleId = 4102,
-    SkinId = {4102},
+    SkinId = {
+      4102,
+      410201,
+      41020121,
+      41020122
+    },
     SortPriority = 5001,
     Sound = "SOUND_ITEM_NORMAL",
     SpineBp = "WBP_Get_Avatar_WidgetZhiliu"
@@ -991,11 +1060,12 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 4201,
     DefaultSkinId = 4201,
     DispatchTag = {
       "Morality",
       "Workaholic",
-      "Workaholic"
+      "Collect"
     },
     DispatchUnlock = T.RT_5,
     EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Yuming",
@@ -1014,7 +1084,11 @@ return ReadOnly("Char", {
     RegainCharItemNum = 30,
     ReleaseVersion = 120,
     RoleId = 4201,
-    SkinId = {4201},
+    SkinId = {
+      4201,
+      42010121,
+      42010122
+    },
     SortPriority = 5002,
     Sound = "SOUND_ITEM_NORMAL",
     SpineBp = "WBP_Get_Avatar_WidgetYuming"
@@ -1034,6 +1108,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 4202,
     DefaultSkinId = 4202,
     DispatchTag = {
       "Battle",
@@ -1060,7 +1135,9 @@ return ReadOnly("Char", {
     SkinId = {
       4202,
       42020010,
-      42020011
+      42020011,
+      42020121,
+      42020122
     },
     SortPriority = 4001,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1081,6 +1158,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 4301,
     DefaultSkinId = 4301,
     DispatchTag = {
       "Fish",
@@ -1107,7 +1185,9 @@ return ReadOnly("Char", {
     SkinId = {
       4301,
       43010010,
-      43010011
+      43010011,
+      43010121,
+      43010122
     },
     SortPriority = 5001,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1128,6 +1208,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 5101,
     DefaultSkinId = 5101,
     DispatchTag = {
       "Empathy",
@@ -1155,7 +1236,9 @@ return ReadOnly("Char", {
       5101,
       510101,
       51010010,
-      51010011
+      51010011,
+      51010121,
+      51010122
     },
     SortPriority = 5006,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1177,6 +1260,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 5102,
     DefaultSkinId = 5102,
     DispatchTag = {
       "Fish",
@@ -1203,7 +1287,9 @@ return ReadOnly("Char", {
     SkinId = {
       5102,
       51020010,
-      51020011
+      51020011,
+      51020121,
+      51020122
     },
     SortPriority = 4002,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1224,6 +1310,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 5301,
     DefaultSkinId = 5301,
     DispatchTag = {
       "Empathy",
@@ -1251,7 +1338,9 @@ return ReadOnly("Char", {
       5301,
       530101,
       53010010,
-      53010011
+      53010011,
+      53010121,
+      53010122
     },
     SortPriority = 5008,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1273,6 +1362,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 5401,
     DefaultSkinId = 5401,
     DispatchTag = {
       "Mine",
@@ -1299,7 +1389,9 @@ return ReadOnly("Char", {
     SkinId = {
       5401,
       54010010,
-      54010011
+      54010011,
+      54010121,
+      54010122
     },
     SortPriority = 4002,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1319,6 +1411,7 @@ return ReadOnly("Char", {
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 0,
     DefaultAccessory = T.RT_3,
+    DefaultHairId = 160101,
     DefaultSkinId = 160101,
     DispatchTag = T.RT_8,
     DispatchUnlock = T.RT_5,
@@ -1342,7 +1435,9 @@ return ReadOnly("Char", {
     SkinId = {
       160101,
       16010110,
-      16010111
+      16010111,
+      16010221,
+      16010222
     },
     SortPriority = 5015,
     Sound = "SOUND_ITEM_NORMAL",

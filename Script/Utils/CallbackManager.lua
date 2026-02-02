@@ -22,7 +22,10 @@ end
 
 function Handle:Call()
   if self.Callback then
-    pcall(self.Callback)
+    local ok, err = xpcall(self.Callback, debug.traceback)
+    if not ok then
+      skynet.error("CallbackManager callback error", self.FuncName, err)
+    end
   end
   self.Callback = nil
 end
@@ -43,11 +46,6 @@ function CallbackManager:Init(Tag)
   self.CurrentTimer = nil
   self.Tag = Tag
   self.TickCallback = CommonUtils.Bind(self, self.Tick)
-  self.HandlePool = {}
-end
-
-function CallbackManager:AddToHandlePool(Handle)
-  self.HandlePool[#self.HandlePool + 1] = Handle
 end
 
 function CallbackManager:AddCallback(Time, Callback, FuncName)
@@ -58,12 +56,7 @@ function CallbackManager:AddCallback(Time, Callback, FuncName)
   FuncName = FuncName or " "
   local Now = skynet.now()
   local EndTime = Now + math.ceil(Time * 100)
-  local _Handle = table.remove(self.HandlePool)
-  if _Handle then
-    _Handle:Init(Callback, EndTime, FuncName)
-  else
-    _Handle = Handle:New(Callback, EndTime, FuncName)
-  end
+  local _Handle = Handle:New(Callback, EndTime, FuncName)
   Heap.HeapPush(self.Handles, _Handle)
   self:UpdateTick(Now)
   return _Handle
@@ -96,7 +89,6 @@ function CallbackManager:Tick()
   while self.Handles and #self.Handles > 0 and Now >= self.Handles[1].EndTime do
     local _Handle = Heap.HeapPop(self.Handles)
     _Handle:Call()
-    self:AddToHandlePool(_Handle)
   end
   self.LastCallbackTime = 0
   self.CurrentTimer = nil

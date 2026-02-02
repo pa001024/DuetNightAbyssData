@@ -8,13 +8,14 @@ function Component:EnterWorld()
   DebugPrint("dispatch111111111111111")
   if not ReddotManager.GetTreeNode(DataMgr.ReddotNode.Dispatch.Name) then
     ReddotManager.AddNode(DataMgr.ReddotNode.Dispatch.Name)
-    for Id, Info in pairs(DataMgr.Dispatch) do
-      local Dispatch = Avatar.Dispatches[Id]
-      local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(DataMgr.ReddotNode.Dispatch.Name)
-      if CacheDetail and CacheDetail[Id] and (Dispatch.State ~= CommonConst.DispatchState.Perfect or Dispatch.State ~= CommonConst.DispatchState.Success or Dispatch.State ~= CommonConst.DispatchState.Qualified or Dispatch.State ~= CommonConst.DispatchState.Disqualified) then
-        CacheDetail[Id] = nil
-        ReddotManager.DecreaseLeafNodeCount(DataMgr.ReddotNode.Dispatch.Name, 1)
-      end
+  end
+  ReddotManager.ClearLeafNodeCount(DataMgr.ReddotNode.Dispatch.Name, true)
+  for Id, Info in pairs(DataMgr.Dispatch) do
+    local Dispatch = Avatar.Dispatches[Id]
+    local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(DataMgr.ReddotNode.Dispatch.Name)
+    if CacheDetail and Dispatch and (Dispatch.State == CommonConst.DispatchState.Perfect or Dispatch.State == CommonConst.DispatchState.Success or Dispatch.State == CommonConst.DispatchState.Qualified or Dispatch.State == CommonConst.DispatchState.Disqualified) then
+      CacheDetail[Id] = true
+      ReddotManager.IncreaseLeafNodeCount(DataMgr.ReddotNode.Dispatch.Name, 1)
     end
   end
 end

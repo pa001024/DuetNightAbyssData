@@ -1,19 +1,23 @@
 require("UnLua")
 local M = Class("BluePrints.UI.BP_UIState_C")
 local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
+local ClientEventUtils = require("BluePrints.Common.ClientEvent.ClientEventUtils")
 
 function M:Initialize(Initializer)
   self.Super.Initialize(self)
   self.TargetNodeKey = ""
   self.SourceGText = ""
+  self.bPlayArrive = false
 end
 
 function M:Construct()
   self.Super.Construct(self)
+  EventManager:AddEvent(EventID.OnMissiongIndicatorFloorLevelChange, self, self.SetFloorStyle)
 end
 
 function M:Destruct()
   self.Super.Destruct(self)
+  EventManager:RemoveEvent(EventID.OnMissiongIndicatorFloorLevelChange, self)
 end
 
 function M:SetBranchInfo(InKey, InGText)
@@ -21,8 +25,21 @@ function M:SetBranchInfo(InKey, InGText)
   self.SourceGText = InGText
 end
 
+function M:PlayArrive()
+  self.bPlayArrive = true
+  self:PlayAnimation(self.TargetArea)
+end
+
+function M:StopArrive()
+  self.bPlayArrive = false
+  self:PlayAnimation(self.TargetArea_Normal)
+end
+
 function M:CheckIsEqualKey(InKey)
   return self.TargetNodeKey == InKey
+end
+
+function M:SetFloorStyle(InUIName)
 end
 
 function M:SetABCImg(Index, InContent)

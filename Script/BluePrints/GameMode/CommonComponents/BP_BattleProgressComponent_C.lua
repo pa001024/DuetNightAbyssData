@@ -3,7 +3,8 @@ local StyleToFunction = {
   EStandard = true,
   ELeftOnly = false,
   EClassic = true,
-  EClassicTime = true
+  EClassicTime = true,
+  ELeftOnlyNumber = false
 }
 
 function M:StartBattleProgress(Style, TotalTime, IsRealTime, MaxProgressNum, DisPlayText)
@@ -25,6 +26,25 @@ function M:StartBattleProgress(Style, TotalTime, IsRealTime, MaxProgressNum, Dis
   else
     self.GameMode:AddDungeonEvent(Const.BattleProgressTimerHandle)
   end
+end
+
+function M:ResetBattleProgress(MaxProgressNum, DisPlayText)
+  if not self.GameState then
+    return
+  end
+  if not self.IsStarted then
+    return
+  end
+  local NewTextArray = TArray(FString)
+  for index, Text in pairs(self.GameState.BattleProgressInfo.DisplayText) do
+    if 1 == index then
+      NewTextArray:Add(DisPlayText)
+    else
+      NewTextArray:Add(Text)
+    end
+  end
+  self.GameState:SetBattleProgressInfo(self.GameState.BattleProgressInfo.Style, MaxProgressNum, NewTextArray)
+  self.GameState:SetBattleProgressNum(0)
 end
 
 function M:ClearBattleProgress()

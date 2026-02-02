@@ -111,16 +111,11 @@ function BP_ElevatorInCharacter_C:PlayEffect()
     return
   end
   AudioManager(self):PlayFMODSound(self, nil, self.SoundEvent, "soundKey_lift_fast_running", nil, nil, false, false, nil, true)
-  self.FXStartInteractive:Activate(true)
   if self.IsNormalElevator then
     self:RemoveTimer("ExitTimeOneTick")
     
     local function func()
-      if self.FXLock:IsActive() then
-        self.FXLock:Deactivate()
-      end
       SelfParentActor:SetChildActorRunningEffect()
-      self.FXRunning:Activate(true)
       self:StartEmissiv()
     end
     
@@ -196,11 +191,20 @@ function BP_ElevatorInCharacter_C:ElevatorStopDown_Lua()
       self:EndEmissiv()
     end
   end
+  self.Overridden.ElevatorStopDown_Lua(self)
   if not IsValid(GameMode) then
     return
   end
   GameMode:ElevatorStopDown(self:GetSelfParentActor())
   self:TriggerStoryNodeCallback("StopDown")
+  local Players = TArray(APlayerCharacter)
+  self.SM_Quarry_Elevator:GetOverlappingActors(Players, APlayerCharacter:StaticClass())
+  for _, Player in pairs(Players:ToTable()) do
+    if Player:IsMainPlayer() and Player.CurrentLocation.Z < self.SM_Quarry_Elevator:K2_GetComponentLocation().Z then
+      local TargetLoc = FVector(Player.CurrentLocation.X, Player.CurrentLocation.Y, self.SM_Quarry_Elevator:K2_GetComponentLocation().Z)
+      URuntimeCommonFunctionLibrary.ResetCharacterBaseLocation(Player, TargetLoc, true)
+    end
+  end
 end
 
 function BP_ElevatorInCharacter_C:TriggerStoryNodeCallback(StateName)

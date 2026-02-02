@@ -584,4 +584,16 @@ function M:HandleKeyDown(MyGeometry, InKeyEvent)
   return IsEventHandled
 end
 
+function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  local AddOffset = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent)
+  if "Gamepad_RightY" == InKeyName then
+    local CurrentOffset = self.List_Item:GetScrollOffset()
+    local ScrollOffset = math.clamp(CurrentOffset - AddOffset, 0, self.List_Item:GetScrollOffsetOfEnd())
+    self.List_Item:SetScrollOffset(ScrollOffset)
+  end
+  return UE4.UWidgetBlueprintLibrary.UnHandled()
+end
+
 return M

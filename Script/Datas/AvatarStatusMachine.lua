@@ -18,6 +18,9 @@ T.RT_1 = {
   [16] = false,
   [17] = false
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -554,7 +557,7 @@ return ReadOnly("AvatarStatusMachine", {
       [7] = true,
       [8] = true,
       [9] = true,
-      [10] = false,
+      [10] = true,
       [11] = true,
       [12] = true,
       [13] = true,

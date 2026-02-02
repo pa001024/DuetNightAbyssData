@@ -136,7 +136,6 @@ end
 
 function M:Close()
   local BattleMain = UIManager(self):GetUIObj("BattleMain")
-  Traceback("哪里调用了Close")
   BattleMain:PlayAnimation(BattleMain.Team_In)
   local PlayerChar = GWorld:GetMainPlayer()
   if GWorld:IsStandAlone() then

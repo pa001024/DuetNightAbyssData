@@ -49,7 +49,8 @@ function Component:SyncLocation_Lua(ActorLoc, ActorRot, CurVel, Acceleration, Mo
     return
   end
   SyncInfo.TimeStamp = TimeUtils:NowTime()
-  Avatar:SendSyncInfo(SyncInfo)
+  local ActionBaseInfo = self:GetPlayerLocationAndRotation()
+  Avatar:SendSyncInfo(SyncInfo, ActionBaseInfo)
 end
 
 function Component:PackSyncInfo(MoveInfo, MainPlayer)
@@ -89,8 +90,10 @@ function Component:UpdateCharacterMoveInfo(MoveInfo)
     MovementComp.MaxAcceleration = MoveInfo.MaxAcceleration
     CachedMaxAcc = MoveInfo.MaxAcceleration
   end
-  self.OtherWorldCrouching = MoveInfo.IsCrouching or false
-  self:SetCrouch(self.OtherWorldCrouching)
+  if not self:CharacterInTag("Slide") then
+    self.OtherWorldCrouching = MoveInfo.IsCrouching or false
+    self:SetCrouch(self.OtherWorldCrouching)
+  end
   self:SetMaxSpeedAndAcc(CachedMaxSpeed, CachedMaxAcc)
   self:PackSyncInfo_Cpp(ActorLoc, ActorRot, CurVel, Acceleration, MovementMode, 0)
   if MoveInfo.ForceReSyncLocation and MovementComp then
@@ -206,12 +209,19 @@ function Component:SendVisibleMessage(ShouldHide)
   if Avatar.CurrentOnlineType < 0 then
     return
   end
-  Avatar:SendSyncInfo(SyncInfo)
+  ActionBaseInfo = self:GetPlayerLocationAndRotation()
+  Avatar:SendSyncInfo(SyncInfo, ActionBaseInfo)
 end
 
 function Component:ReceiveHideInfo_Lua(MoveInfo)
   local ActorVisible = MoveInfo.ActorVisible
   print(_G.LogTag, "ReceiveHideInfo_Lua", MoveInfo.ActorVisible)
+  if not self:CharacterInTag("Slide") and MoveInfo.ActionBaseInfo then
+    local CrouchInt = MoveInfo.ActionBaseInfo.IsCrouching
+    local IsCrouching = nil ~= CrouchInt and CrouchInt > 0.1
+    self.OtherWorldCrouching = IsCrouching or false
+    self:SetCrouch(self.OtherWorldCrouching)
+  end
   self:ReceiveVisibleMessage(ActorVisible)
 end
 
@@ -222,6 +232,12 @@ function Component:ReceivePrepareInfo_Lua(MoveInfo)
     local FeatureClass
     if UE4["U" .. ClassName] then
       FeatureClass = UE4["U" .. ClassName]:StaticClass()
+    end
+    if not self:CharacterInTag("Slide") and MoveInfo.ActionBaseInfo then
+      local CrouchInt = MoveInfo.ActionBaseInfo.IsCrouching
+      local IsCrouching = nil ~= CrouchInt and CrouchInt > 0.1
+      self.OtherWorldCrouching = IsCrouching or false
+      self:SetCrouch(self.OtherWorldCrouching)
     end
     self:ReceivePrepareInfoNew(FeatureClass, MoveInfo)
     return
@@ -324,6 +340,12 @@ function Component:ReceiveStopActionInfo_Lua(MoveInfo)
   local FeatureClass
   if UE4["U" .. ClassName] then
     FeatureClass = UE4["U" .. ClassName]:StaticClass()
+  end
+  if not self:CharacterInTag("Slide") and MoveInfo.ActionBaseInfo then
+    local CrouchInt = MoveInfo.ActionBaseInfo.IsCrouching
+    local IsCrouching = nil ~= CrouchInt and CrouchInt > 0.1
+    self.OtherWorldCrouching = IsCrouching or false
+    self:SetCrouch(self.OtherWorldCrouching)
   end
   self:ReceiveStopActionInfo(FeatureClass)
 end

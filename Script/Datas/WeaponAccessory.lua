@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -13,7 +16,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 1,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10001
   },
   [10002] = {
@@ -28,7 +31,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 2,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10002
   },
   [10003] = {
@@ -43,7 +46,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 3,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10003
   },
   [10004] = {
@@ -58,7 +61,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 4,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10004
   },
   [10005] = {
@@ -72,7 +75,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 5,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10005
   },
   [10006] = {
@@ -87,7 +90,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 6,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10006
   },
   [10007] = {
@@ -102,7 +105,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 7,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10007
   },
   [10008] = {
@@ -117,7 +120,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 8,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10008
   },
   [10009] = {
@@ -131,7 +134,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 9,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10009
   },
   [10010] = {
@@ -146,7 +149,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 10,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10010
   },
   [10011] = {
@@ -161,7 +164,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 11,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10011
   },
   [10012] = {
@@ -176,7 +179,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 12,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10012
   },
   [10013] = {
@@ -190,7 +193,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 13,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10013
   },
   [10014] = {
@@ -205,7 +208,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 14,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10014
   },
   [10015] = {
@@ -220,7 +223,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 15,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10015
   },
   [10016] = {
@@ -235,7 +238,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 16,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10016
   },
   [10017] = {
@@ -249,7 +252,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 17,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Impression",
     WeaponAccessoryId = 10017
   },
   [10018] = {
@@ -264,7 +267,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 18,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_RegionReputation",
     WeaponAccessoryId = 10018
   },
   [10019] = {
@@ -279,7 +282,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 19,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10019
   },
   [10020] = {
@@ -294,7 +297,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 20,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_RegionReputation",
     WeaponAccessoryId = 10020
   },
   [10021] = {
@@ -308,7 +311,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 21,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Impression",
     WeaponAccessoryId = 10021
   },
   [10022] = {
@@ -322,7 +325,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 22,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Impression",
     WeaponAccessoryId = 10022
   },
   [10023] = {
@@ -336,7 +339,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 23,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10023
   },
   [10024] = {
@@ -350,7 +353,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 23,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10024
   },
   [10025] = {
@@ -365,7 +368,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 23,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10025
   },
   [10026] = {
@@ -380,7 +383,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 23,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10026
   },
   [10027] = {
@@ -394,7 +397,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 23,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10027
   },
   [10028] = {
@@ -409,7 +412,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 23,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10028
   },
   [10029] = {
@@ -424,7 +427,95 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 23,
     Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Shop",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10029
+  },
+  [10030] = {
+    AccessorySocket = "Wp_Accessory",
+    Des = "UI_WeaponAccessory_Desc_10030",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Weapon34_01.T_Fashion_Weapon34_01'",
+    ModelPath = "/Game/Asset/Char/Player/Common/Part/Weapon/Mesh/Player_WP_Part11_SM",
+    Name = "UI_WeaponAccessory_Name_10030",
+    Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
+    SortPriority = 24,
+    Sound = "SOUND_ITEM_CUTE",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
+    WeaponAccessoryId = 10030
+  },
+  [10031] = {
+    AccessorySocket = "Wp_Accessory",
+    ChangeColor = 2,
+    Des = "UI_WeaponAccessory_Desc_10030",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Weapon34_02.T_Fashion_Weapon34_02'",
+    ModelPath = "/Game/Asset/Char/Player/Common/Part/Weapon/Mesh/Player_WP_Part11_SM",
+    Name = "UI_WeaponAccessory_Name_10031",
+    Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
+    SortPriority = 24,
+    Sound = "SOUND_ITEM_CUTE",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
+    WeaponAccessoryId = 10031
+  },
+  [10032] = {
+    AccessorySocket = "Wp_Accessory",
+    ChangeColor = 3,
+    Des = "UI_WeaponAccessory_Desc_10030",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Weapon34.T_Fashion_Weapon34'",
+    ModelPath = "/Game/Asset/Char/Player/Common/Part/Weapon/Mesh/Player_WP_Part11_SM",
+    Name = "UI_WeaponAccessory_Name_10032",
+    Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
+    SortPriority = 24,
+    Sound = "SOUND_ITEM_CUTE",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
+    WeaponAccessoryId = 10032
+  },
+  [10033] = {
+    AccessorySocket = "Wp_Accessory",
+    Des = "UI_WeaponAccessory_Desc_10033",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Weapon35_01.T_Fashion_Weapon35_01'",
+    ModelPath = "/Game/Asset/Char/Player/Common/Part/Weapon/Mesh/Player_WP_Part12_SM",
+    Name = "UI_WeaponAccessory_Name_10033",
+    Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
+    SortPriority = 24,
+    Sound = "SOUND_ITEM_CUTE",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
+    WeaponAccessoryId = 10033
+  },
+  [10034] = {
+    AccessorySocket = "Wp_Accessory",
+    ChangeColor = 2,
+    Des = "UI_WeaponAccessory_Desc_10033",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Weapon35_02.T_Fashion_Weapon35_02'",
+    ModelPath = "/Game/Asset/Char/Player/Common/Part/Weapon/Mesh/Player_WP_Part12_SM",
+    Name = "UI_WeaponAccessory_Name_10034",
+    Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
+    SortPriority = 24,
+    Sound = "SOUND_ITEM_CUTE",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
+    WeaponAccessoryId = 10034
+  },
+  [10035] = {
+    AccessorySocket = "Wp_Accessory",
+    ChangeColor = 3,
+    Des = "UI_WeaponAccessory_Desc_10033",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Weapon35.T_Fashion_Weapon35'",
+    ModelPath = "/Game/Asset/Char/Player/Common/Part/Weapon/Mesh/Player_WP_Part12_SM",
+    Name = "UI_WeaponAccessory_Name_10035",
+    Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
+    SortPriority = 24,
+    Sound = "SOUND_ITEM_CUTE",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
+    WeaponAccessoryId = 10035
   }
 })

@@ -9,17 +9,23 @@ T.RT_3 = {
   [1] = "/Game/AssetDesign/AI/Player/Kezhou/BT_Phantom_Kezhou.BT_Phantom_Kezhou"
 }
 T.RT_4 = {
-  [1] = "/Game/AssetDesign/AI/Player/Nvzhu/BT_Phantom_Nvzhu_Light.BT_Phantom_Nvzhu_Light"
+  [1] = "/Game/AssetDesign/AI/Player/Suyi/BT_Phantom_Suyi.BT_Phantom_Suyi"
 }
 T.RT_5 = {
-  [1] = "/Game/AssetDesign/AI/Player/Lise/BT_Phantom_Lise.BT_Phantom_Lise"
+  [1] = "/Game/AssetDesign/AI/Player/Nvzhu/BT_Phantom_Nvzhu_Light.BT_Phantom_Nvzhu_Light"
 }
 T.RT_6 = {
-  [1] = "/Game/AssetDesign/AI/Player/Yuming/BT_Phantom_Yuming.BT_Phantom_Yuming"
+  [1] = "/Game/AssetDesign/AI/Player/Lise/BT_Phantom_Lise.BT_Phantom_Lise"
 }
 T.RT_7 = {
+  [1] = "/Game/AssetDesign/AI/Player/Yuming/BT_Phantom_Yuming.BT_Phantom_Yuming"
+}
+T.RT_8 = {
   [1] = "/Game/AssetDesign/AI/Player/Baiheng/BT_Phantom_Baiheng.BT_Phantom_Baiheng"
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -204,7 +210,7 @@ return ReadOnly("Phantom", {
     WearMeleeWeapon = 1
   },
   [207] = {
-    BT = T.RT_5,
+    BT = T.RT_6,
     BattleRoleId = 207,
     Camp = "Player",
     GuideIconAni = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Phantom.Guide_Icon_Phantom",
@@ -216,7 +222,7 @@ return ReadOnly("Phantom", {
     WearMeleeWeapon = 1
   },
   [210] = {
-    BT = T.RT_6,
+    BT = T.RT_7,
     BattleRoleId = 4201,
     Camp = "Player",
     GuideIconAni = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Phantom.Guide_Icon_Phantom",
@@ -228,7 +234,7 @@ return ReadOnly("Phantom", {
     WearMeleeWeapon = 1
   },
   [211] = {
-    BT = T.RT_7,
+    BT = T.RT_8,
     BattleRoleId = 2401,
     Camp = "Player",
     GuideIconAni = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Phantom.Guide_Icon_Phantom",
@@ -250,6 +256,18 @@ return ReadOnly("Phantom", {
     UnitId = 212,
     UnitName = "NPC-东国-刻舟魅影",
     WearMeleeWeapon = 1
+  },
+  [214] = {
+    BT = T.RT_4,
+    BattleRoleId = 1504,
+    Camp = "Player",
+    GuideIconAni = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Phantom.Guide_Icon_Phantom",
+    HatredRatio = 0,
+    IsNPCPhantom = true,
+    UnitBPPath = "/Game/BluePrints/Char/BP_Phantom/BP_NPCPhantom.BP_NPCPhantom",
+    UnitId = 214,
+    UnitName = "NPC-东国-苏乙魅影",
+    WearRangedWeapon = 1
   },
   [1101] = {
     AutoRespawn = 5,
@@ -322,9 +340,22 @@ return ReadOnly("Phantom", {
     UnitName = "刻舟-魅影",
     WearRangedWeapon = 1
   },
-  [1601] = {
+  [1504] = {
     AutoRespawn = 5,
     BT = T.RT_4,
+    BattleRoleId = 1504,
+    Camp = "Player",
+    GuideIconAni = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Phantom.Guide_Icon_Phantom",
+    HatredRatio = 0.5,
+    RespawnUI = 20001,
+    UnitBPPath = "/Game/BluePrints/Char/BP_Phantom/BP_PhantomCharacter.BP_PhantomCharacter",
+    UnitId = 1504,
+    UnitName = "苏乙-魅影",
+    WearRangedWeapon = 1
+  },
+  [1601] = {
+    AutoRespawn = 5,
+    BT = T.RT_5,
     BattleRoleId = 1601,
     Camp = "Player",
     GuideIconAni = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Phantom.Guide_Icon_Phantom",
@@ -383,7 +414,7 @@ return ReadOnly("Phantom", {
   },
   [2401] = {
     AutoRespawn = 5,
-    BT = T.RT_7,
+    BT = T.RT_8,
     BattleRoleId = 2401,
     Camp = "Player",
     GuideIconAni = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Phantom.Guide_Icon_Phantom",
@@ -471,7 +502,7 @@ return ReadOnly("Phantom", {
   },
   [4101] = {
     AutoRespawn = 5,
-    BT = T.RT_5,
+    BT = T.RT_6,
     BattleRoleId = 4101,
     Camp = "Player",
     GuideIconAni = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Phantom.Guide_Icon_Phantom",
@@ -499,7 +530,7 @@ return ReadOnly("Phantom", {
   },
   [4201] = {
     AutoRespawn = 5,
-    BT = T.RT_6,
+    BT = T.RT_7,
     BattleRoleId = 4201,
     Camp = "Player",
     GuideIconAni = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Phantom.Guide_Icon_Phantom",
@@ -603,7 +634,7 @@ return ReadOnly("Phantom", {
   },
   [160101] = {
     AutoRespawn = 5,
-    BT = T.RT_4,
+    BT = T.RT_5,
     BattleRoleId = 160101,
     Camp = "Player",
     GuideIconAni = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Phantom.Guide_Icon_Phantom",

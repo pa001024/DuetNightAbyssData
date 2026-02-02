@@ -20,26 +20,28 @@ end
 
 function M:InitContent(Params, PopupData, Owner)
   self.Super.InitContent(self, Params, PopupData, Owner)
+  self:ShowGamepadABtn(true)
   for Index, RewardId in ipairs(Params.RewardList) do
     if 1 == Index then
-      self:SetRewardItem(DispatchLevelEnum.Perfect, RewardId)
+      self:SetRewardItem(DispatchLevelEnum.Perfect, RewardId, self)
     elseif 2 == Index then
-      self:SetRewardItem(DispatchLevelEnum.BigSuccess, RewardId)
+      self:SetRewardItem(DispatchLevelEnum.BigSuccess, RewardId, self)
     elseif 3 == Index then
-      self:SetRewardItem(DispatchLevelEnum.Success, RewardId)
+      self:SetRewardItem(DispatchLevelEnum.Success, RewardId, self)
     else
-      self:SetRewardItem(DispatchLevelEnum.Fail, RewardId)
+      self:SetRewardItem(DispatchLevelEnum.Fail, RewardId, self)
     end
   end
   self.List_Reward:SetFocus()
   self.List_Reward:NavigateToIndex(0)
 end
 
-function M:SetRewardItem(Level, RewardId)
+function M:SetRewardItem(Level, RewardId, Owner)
   local Content = NewObject(UIUtils.GetCommonItemContentClass())
   Content.Level = Level
   Content.RewardId = RewardId
   Content.UI = nil
+  Content.Owner = Owner
   self.List_Reward:AddItem(Content)
 end
 
@@ -69,6 +71,22 @@ function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
     local a = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 10
   end
   return UWidgetBlueprintLibrary.Unhandled()
+end
+
+function M:ShowGamepadABtn(bIsShow)
+  if bIsShow then
+    self.GamepadCheckItemKeyInfo = self.GamepadCheckItemKeyInfo or self:ShowGamepadShortcutBtn({
+      KeyInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = UIConst.GamePadImgKey.FaceButtonBottom
+        }
+      },
+      Desc = GText("UI_Controller_CheckDetails")
+    })
+  elseif self.GamepadCheckItemKeyInfo then
+    self.GamepadCheckItemKeyInfo = nil
+  end
 end
 
 return M

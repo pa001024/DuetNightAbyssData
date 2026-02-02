@@ -56,59 +56,28 @@ function Component:InitTeamSelect(Slots, List_Select, Sort, EMListView_Filter, I
   self.CurSlotType = ""
   self.CurWeaponType = "Melee"
   self.Uuid2SlotMap = {}
-  self.Saved = true
   self.bListEmpty = false
   self.SelectedContent = nil
+  self.DungeonIndex = 1
   self:InitSelectiveList()
   self:BindSlotEvents()
   self:BindListEvents()
-  self.CurDungeonPanel = {
-    DungeonIndex = 1,
-    UpdateSlot = function(_, SlotName, Content)
-      local SlotWidget = self.Slots[SlotName]
-      if SlotWidget and SlotWidget.Update then
-        SlotWidget:Update(Content)
-      end
-    end,
-    GetCurrentUuid = function(_, SlotName)
-      local SlotWidget = self.Slots[SlotName]
-      if SlotWidget then
-        return SlotWidget.Uuid
-      end
-      return nil
-    end,
-    GetWeaponType = function(_, SlotName)
-      local SlotWidget = self.Slots[SlotName]
-      if SlotWidget then
-        return SlotWidget.WeaponType or "Melee"
-      end
-      return "Melee"
-    end,
-    ClearSlot = function(_, SlotName)
-      local SlotWidget = self.Slots[SlotName]
-      if SlotWidget and SlotWidget.Clear then
-        SlotWidget:Clear()
-      end
-    end
-  }
 end
 
 function Component:BindSlotEvents()
   for SlotName, SlotWidget in pairs(self.Slots) do
     if SlotWidget then
       SlotWidget:Init(SlotName, self)
-      local Btn
-      if SlotWidget.Btn_Click then
-        Btn = SlotWidget.Btn_Click
-      elseif SlotWidget.Item and SlotWidget.Item.Btn_Click then
-        Btn = SlotWidget.Item.Btn_Click
-      elseif SlotWidget.Button then
-        Btn = SlotWidget.Button
-      end
-      if Btn and Btn.OnClicked then
-        Btn.OnClicked:Add(self, function()
-          self:OnSlotClicked(SlotName)
-        end)
+      if SlotName == Component.ESlotName.Phantom1 then
+        SlotWidget.WeaponSlot = self.Slots[Component.ESlotName.PhantomWeapon1]
+      elseif SlotName == Component.ESlotName.Phantom2 then
+        SlotWidget.WeaponSlot = self.Slots[Component.ESlotName.PhantomWeapon2]
+      elseif SlotName == Component.ESlotName.PhantomWeapon1 or SlotName == Component.ESlotName.PhantomWeapon2 then
+        local PhantomSlotName = SlotName == Component.ESlotName.PhantomWeapon1 and Component.ESlotName.Phantom1 or Component.ESlotName.Phantom2
+        local PhantomSlot = self.Slots[PhantomSlotName]
+        if PhantomSlot and PhantomSlot.IsEmpty then
+          SlotWidget:SetForbidden(true)
+        end
       end
     end
   end
@@ -122,9 +91,6 @@ function Component:BindListEvents()
     end
     if self.List_Select.BP_OnItemIsHoveredChanged then
       self.List_Select.BP_OnItemIsHoveredChanged:Add(self, self.OnItemIsHoverChanged)
-    end
-    if self.List_Select.BP_OnEntryInitialized then
-      self.List_Select.BP_OnEntryInitialized:Add(self, self.OnListItemInited)
     end
   end
   if self.Sort then
@@ -160,28 +126,44 @@ function Component:OnSlotClicked(SlotName)
     if self.Slots[self.CurSlotName] and self.Slots[self.CurSlotName].SetIsChecked then
       self.Slots[self.CurSlotName]:SetIsChecked(true)
     end
+    self:ChangeEmptyTextBySlotType(CurSlotType)
     if "Weapon" == CurSlotType then
-      if self.Tab_Primary then
-        self.Tab_Primary:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-      end
+      self.Tab_Primary:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      self.IsTabPrimaryVisible = true
       local WeaponType = "Melee"
       if self.Slots[self.CurSlotName] and self.Slots[self.CurSlotName].WeaponType then
         WeaponType = self.Slots[self.CurSlotName].WeaponType
       end
       self:PhantomWeaponTypeChanged(WeaponType, false, true)
+      if self.UpdateListSelect then
+        self:UpdateListSelect(self.CurSlotName)
+      end
       return
-    elseif self.Tab_Primary then
+    else
       self.Tab_Primary:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      self.IsTabPrimaryVisible = false
     end
     self.CurSlotType = CurSlotType
     self:ReInitListItems()
+  end
+  if self.UpdateListSelect then
+    self:UpdateListSelect(self.CurSlotName)
+  end
+end
+
+function Component:ChangeEmptyTextBySlotType(SlotType)
+  if "Char" == SlotType then
+    self.Text_Empty:SetText(GText("UI_Armory_Char_Empty"))
+  elseif "Pet" == SlotType then
+    self.Text_Empty:SetText(GText("UI_Armory_Pet_Empty"))
+  elseif "Weapon" == SlotType or "Melee" == SlotType or "Ranged" == SlotType then
+    self.Text_Empty:SetText(GText("UI_Armory_Weapon_Empty"))
   end
 end
 
 function Component:InitSelectiveList()
   self.OrderByDisplayNames = {
-    "UI_LEVEL_SELECT",
-    "UI_RARITY_NAME"
+    "UI_LEVEL_SELECT"
   }
   self.OrderByAttrNames = {
     "Level",
@@ -220,7 +202,6 @@ function Component:InitWidget()
   self.CurSlotType = ""
   self.CurSlotName = Component.ESlotName.Null
   self.CurWeaponType = self.CurWeaponType or "Melee"
-  self.Saved = true
   self.bListEmpty = false
   self.SelectedContent = nil
   self:CharMain_InitWidget()
@@ -259,7 +240,6 @@ function Component:CharMain_Init()
   if not self.CharItemContentsMap then
     self:CharMain_CreateItemContents()
   end
-  self:SetContentIsChosen(self.CharMain_CurContent, false)
   self:CharMain_InitListView()
 end
 
@@ -267,6 +247,7 @@ function Component:CharMain_InitWidget()
   self.CharItemContentsMap = nil
   self.CharItemContentsArray = nil
   self.CurrentCharUuid = nil
+  self.BP_CharItemContents:Clear()
   self.CharMain_CurContent = nil
 end
 
@@ -274,11 +255,13 @@ function Component:CharMain_CreateItemContents()
   local Avatar = GWorld:GetAvatar()
   self.CharItemContentsMap = {}
   self.CharItemContentsArray = {}
+  self.BP_CharItemContents:Clear()
   local Obj
   if self.TrialData.ShowOwned.Chars then
     for Uuid, Char in pairs(Avatar.Chars) do
       Obj = self:NewItemContent(Char, CommonConst.ArmoryType.Char, CommonConst.ArmoryTag.Char)
       self.CharItemContentsMap[Uuid] = Obj
+      self.BP_CharItemContents:Add(Obj)
       table.insert(self.CharItemContentsArray, Obj)
     end
   end
@@ -287,8 +270,8 @@ function Component:CharMain_CreateItemContents()
       if RuleId and DataMgr.CharTemplate[RuleId] then
         Obj = self:NewTrialCharContent(RuleId)
         if Obj then
-          local TrialUuid = "TrialChar_" .. RuleId
-          self.CharItemContentsMap[TrialUuid] = Obj
+          self.CharItemContentsMap[RuleId] = Obj
+          self.BP_CharItemContents:Add(Obj)
           table.insert(self.CharItemContentsArray, Obj)
         end
       end
@@ -299,49 +282,34 @@ end
 function Component:CharMain_InitListView()
   self:CharMain_InitContentState()
   self:CharMain_SortItemContents()
+  self:UpdateCharConflict()
 end
 
 function Component:CharMain_InitContentState()
-  if self.CharMain_CurContent then
-    self.CharMain_CurContent = nil
-  end
-  if self.CurrentCharUuid then
-    self.CharMain_CurContent = self.CharItemContentsMap[self.CurrentCharUuid]
-    if self.CharMain_CurContent then
-      self.CharMain_CurContent.IsSelected = true
+  if self.CurrentCharUuid and self.CharItemContentsMap then
+    local CurContent = self.CharItemContentsMap[self.CurrentCharUuid]
+    if CurContent then
+      CurContent.IsSelected = true
     end
   end
 end
 
 function Component:CharMain_SortItemContents()
+  local CurContent
+  if self.CurrentCharUuid and self.CharItemContentsMap then
+    CurContent = self.CharItemContentsMap[self.CurrentCharUuid]
+  end
   ArmoryUtils:SortItemContents(self.CharItemContentsArray, {
     "Level",
     "Rarity",
     "SortPriority",
     "UnitId"
-  }, CommonConst.DESC, self.CharMain_CurContent)
+  }, CommonConst.DESC, CurContent, Component.IsTryoutCmpFunc)
 end
 
 function Component:CharMain_OnListItemClicked(Content)
-  if self.CharMain_CurContent == Content then
-    self.CharMain_CurContent = nil
-    return
-  end
-  self.CurrentCharUuid = Content.Uuid
   if self.CurSlotType == "Char" then
-    self:CharMain_SelectListItem(Content)
-  end
-end
-
-function Component:CharMain_SelectListItem(Content)
-  if Content then
-    Content.TeamIdx = self.CurDungeonPanel.DungeonIndex
-  end
-  self:SetContentIsChosen(self.CharMain_CurContent, false)
-  self:SetContentIsChosen(Content, true)
-  self.CharMain_CurContent = Content
-  if self.CurDungeonPanel then
-    self.CurDungeonPanel:UpdateSlot(self.CurSlotName, Content)
+    self.CurrentCharUuid = Content.Uuid
   end
 end
 
@@ -349,7 +317,6 @@ function Component:PetMain_Init()
   if not self.PetItemContentsArray then
     self:PetMain_CreateItemContents()
   end
-  self:SetContentIsChosen(self.PetMain_CurContent, false)
   self:PetMain_InitListView()
 end
 
@@ -357,6 +324,7 @@ function Component:PetMain_InitWidget()
   self.PetItemContentsMap = nil
   self.PetItemContentsArray = nil
   self.CurrentPetUuid = nil
+  self.BP_PetItemContents:Clear()
   self.PetMain_CurContent = nil
 end
 
@@ -364,12 +332,14 @@ function Component:PetMain_CreateItemContents()
   local Avatar = GWorld:GetAvatar()
   self.PetItemContentsMap = {}
   self.PetItemContentsArray = {}
+  self.BP_PetItemContents:Clear()
   local Obj
   if self.TrialData.ShowOwned.Pets then
     for UniqueId, Pet in pairs(Avatar.Pets) do
       if self:CheckPetType(Pet.PetId) then
         Obj = self:NewPetItemContent(Pet)
         self.PetItemContentsMap[UniqueId] = Obj
+        self.BP_PetItemContents:Add(Obj)
         table.insert(self.PetItemContentsArray, Obj)
       end
     end
@@ -379,8 +349,8 @@ function Component:PetMain_CreateItemContents()
       if PetId and DataMgr.Pet[PetId] then
         Obj = self:NewTrialPetContent(PetId)
         if Obj then
-          local TrialUniqueId = "TrialPet_" .. PetId
-          self.PetItemContentsMap[TrialUniqueId] = Obj
+          self.PetItemContentsMap[PetId] = Obj
+          self.BP_PetItemContents:Add(Obj)
           table.insert(self.PetItemContentsArray, Obj)
         end
       end
@@ -393,13 +363,11 @@ function Component:CheckPetType(PetId)
 end
 
 function Component:PetMain_InitListView()
-  if self.PetMain_CurContent then
-    self.PetMain_CurContent = nil
-  end
-  if self.CurrentPetUuid then
-    self.PetMain_CurContent = self.PetItemContentsMap[self.CurrentPetUuid]
-    if self.PetMain_CurContent then
-      self.PetMain_CurContent.IsSelected = true
+  local CurContent
+  if self.CurrentPetUuid and self.PetItemContentsMap then
+    CurContent = self.PetItemContentsMap[self.CurrentPetUuid]
+    if CurContent then
+      CurContent.IsSelected = true
     end
   end
   ArmoryUtils:SortItemContents(self.PetItemContentsArray, {
@@ -408,29 +376,12 @@ function Component:PetMain_InitListView()
     "Rarity",
     "SortPriority",
     "UnitId"
-  }, CommonConst.DESC, self.PetMain_CurContent)
+  }, CommonConst.DESC, CurContent, Component.IsTryoutCmpFunc)
 end
 
 function Component:PetMain_OnListItemClicked(Content)
-  if self.PetMain_CurContent == Content then
-    self.PetMain_CurContent = nil
-    return
-  end
-  self.CurrentPetUuid = Content.Uuid
   if self.CurSlotType == "Pet" then
-    self:PetMain_SelectListItem(Content)
-  end
-end
-
-function Component:PetMain_SelectListItem(Content)
-  if Content then
-    Content.TeamIdx = self.CurDungeonPanel.DungeonIndex
-  end
-  self:SetContentIsChosen(self.PetMain_CurContent, false)
-  self:SetContentIsChosen(Content, true)
-  self.PetMain_CurContent = Content
-  if self.CurDungeonPanel then
-    self.CurDungeonPanel:UpdateSlot(self.CurSlotName, Content)
+    self.CurrentPetUuid = Content.Uuid
   end
 end
 
@@ -444,6 +395,7 @@ function Component:WeaponMain_InitWidget()
     CommonConst.ArmoryTag.Ranged
   }
   for _, Tag in pairs(WeaponTags) do
+    self["BP_" .. Tag .. "ItemContents"]:Clear()
     self[Tag .. "ItemContentsMap"] = nil
     self[Tag .. "ItemContentsArray"] = nil
     self[Tag .. "Main_CurContent"] = nil
@@ -466,9 +418,6 @@ function Component:WeaponMain_Init()
   if not self[self.WeaponTag .. "ItemContentsMap"] then
     self:WeaponMain_CreateItemContents()
   end
-  if self.CurContentName then
-    self:SetContentIsChosen(self[self.CurContentName], false)
-  end
   self:SwitchContentsArray()
   self:WeaponMain_InitListView()
 end
@@ -479,11 +428,13 @@ function Component:WeaponMain_CreateItemContents()
   self[self.WeaponTag .. "ItemContentsArray"] = {}
   local ItemContentsMap = self[self.WeaponTag .. "ItemContentsMap"]
   local ItemContentsArray = self[self.WeaponTag .. "ItemContentsArray"]
+  self["BP_" .. self.WeaponTag .. "ItemContents"]:Clear()
   local Obj
   if self.TrialData.ShowOwned.Weapons then
     for Uuid, Weapon in pairs(Avatar.Weapons) do
       if Weapon:HasTag(self.WeaponTag) then
         Obj = self:NewItemContent(Weapon, CommonConst.ArmoryType.Weapon, self.WeaponTag)
+        self["BP_" .. self.WeaponTag .. "ItemContents"]:Add(Obj)
         table.insert(ItemContentsArray, Obj)
         ItemContentsMap[Uuid] = Obj
       end
@@ -500,9 +451,9 @@ function Component:WeaponMain_CreateItemContents()
       if RuleId and DataMgr.WeaponTemplate[RuleId] then
         Obj = self:NewTrialWeaponContent(RuleId, self.WeaponTag)
         if Obj then
-          local TrialUuid = "TrialWeapon_" .. RuleId
+          self["BP_" .. self.WeaponTag .. "ItemContents"]:Add(Obj)
           table.insert(ItemContentsArray, Obj)
-          ItemContentsMap[TrialUuid] = Obj
+          ItemContentsMap[RuleId] = Obj
         end
       end
     end
@@ -516,55 +467,31 @@ end
 
 function Component:WeaponMain_InitListView()
   self:WeaponMain_InitContentState()
+  local CurContent
+  if self[self.CurrentWeaponUuidName] and self.WeaponItemContentsMap then
+    CurContent = self.WeaponItemContentsMap[self[self.CurrentWeaponUuidName]]
+  end
   ArmoryUtils:SortItemContents(self.WeaponItemContentsArray, {
     "Level",
     "Rarity",
     "SortPriority",
     "UnitId"
-  }, CommonConst.DESC, self[self.CurContentName])
+  }, CommonConst.DESC, CurContent, Component.IsTryoutCmpFunc)
 end
 
 function Component:WeaponMain_InitContentState()
   self.CurContentName = self.WeaponTag .. "Main_CurContent"
-  if self[self.CurContentName] then
-    self[self.CurContentName] = nil
-  end
-  if self[self.CurrentWeaponUuidName] then
-    self[self.CurContentName] = self.WeaponItemContentsMap[self[self.CurrentWeaponUuidName]]
-    if self[self.CurContentName] then
-      self[self.CurContentName].IsSelected = true
+  if self[self.CurrentWeaponUuidName] and self.WeaponItemContentsMap then
+    local CurContent = self.WeaponItemContentsMap[self[self.CurrentWeaponUuidName]]
+    if CurContent then
+      CurContent.IsSelected = true
     end
   end
 end
 
 function Component:WeaponMain_OnListItemClicked(Content)
-  if self[self.CurContentName] == Content then
-    self[self.CurContentName] = nil
-    return
-  end
-  self[self.CurrentWeaponUuidName] = Content.Uuid
   if self.CurSlotType == self.WeaponTag then
-    self:WeaponMain_SelectListItem(Content)
-  end
-end
-
-function Component:WeaponMain_SelectListItem(Content)
-  if Content then
-    Content.TeamIdx = self.CurDungeonPanel.DungeonIndex
-    if self.CurSlotName == Component.ESlotName.PhantomWeapon1 or self.CurSlotName == Component.ESlotName.PhantomWeapon2 then
-      local PhantomUuid = self.CurDungeonPanel:GetCurrentUuid(self.CurSlotName - 1)
-      if PhantomUuid and self.CharItemContentsMap and self.CharItemContentsMap[PhantomUuid] then
-        Content.TeamCharId = self.CharItemContentsMap[PhantomUuid].UnitId
-      end
-    else
-      Content.TeamCharId = nil
-    end
-  end
-  self:SetContentIsChosen(self[self.CurContentName], false)
-  self:SetContentIsChosen(Content, true)
-  self[self.CurContentName] = Content
-  if self.CurDungeonPanel then
-    self.CurDungeonPanel:UpdateSlot(self.CurSlotName, Content)
+    self[self.CurrentWeaponUuidName] = Content.Uuid
   end
 end
 
@@ -591,7 +518,7 @@ function Component:FillSelectiveList()
       local FilterContentObj_All = NewObject(UIUtils.GetCommonItemContentClass())
       FilterContentObj_All.IsSelected = true
       FilterContentObj_All.Index = 0
-      FilterContentObj_All.Icon = "/Game/UI/Texture/Static/Atlas/Armory/T_Armory_Select.T_Armory_Select"
+      FilterContentObj_All.Icon = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Wuyousheng_All.T_Tab_Wuyousheng_All"
       self.EMListView_Filter:AddItem(FilterContentObj_All)
       self.FilterContentObj_All = FilterContentObj_All
       for Index, FilterTag in ipairs(Filters) do
@@ -617,9 +544,7 @@ function Component:FillSelectiveList()
   end
   if ItemContentsArray then
     for index, value in ipairs(ItemContentsArray) do
-      if value then
-        table.insert(self.FilteredContents, value)
-      end
+      table.insert(self.FilteredContents, value)
     end
   end
   self:FillListView()
@@ -631,10 +556,9 @@ function Component:FillListView()
   end
   self.List_Select:ClearListItems()
   for _, Content in ipairs(self.FilteredContents) do
-    if Content then
-      self.List_Select:AddItem(Content)
-    end
+    self.List_Select:AddItem(Content)
   end
+  self.List_Select:RequestFillEmptyContent()
   local bListEmpty = #self.FilteredContents <= 0
   self.bListEmpty = bListEmpty
   if self.Empty then
@@ -644,32 +568,9 @@ function Component:FillListView()
     else
       self.Empty:SetVisibility(UIConst.VisibilityOp.Collapsed)
       self.List_Select:SetVisibility(UIConst.VisibilityOp.Visible)
-      self:AddTimer(0.01, function()
-        local ItemUIs = self.List_Select:GetDisplayedEntryWidgets()
-        local XCount, YCount = UIUtils.GetTileViewContentMaxCount(self.List_Select, "XY")
-        local ItemLen = ItemUIs:Length()
-        local RestCount = XCount * YCount - ItemLen
-        if RestCount <= 0 then
-          RestCount = XCount - #self.FilteredContents % XCount
-        end
-        self:FillEmptyItems(RestCount)
-        self.List_Select:RegenerateAllEntries()
-        self.List_Select:ScrollToTop()
-      end, false, 0, "DelayAddEmptyItem", true)
     end
   end
   self:OnListInited(bListEmpty)
-end
-
-function Component:FillEmptyItems(Count)
-  if not self.List_Select then
-    return
-  end
-  for i = 1, Count do
-    local EmptyContent = NewObject(UIUtils.GetCommonItemContentClass())
-    EmptyContent.IsEmpty = true
-    self.List_Select:AddItem(EmptyContent)
-  end
 end
 
 function Component:CreateFilters(InTags, InTexts, InIcons)
@@ -706,132 +607,150 @@ function Component:PhantomWeaponTypeChanged(Type, IsPlaySound, bSlotChanged)
   self.CurWeaponType = Type
   self.CurSlotType = self.CurWeaponType
   self:ReInitListItems()
-  if bSlotChanged and self.DelaySetFocusTarget then
-    self:DelaySetFocusTarget(bSlotChanged)
-  end
 end
 
 function Component:OnListItemClicked(Content)
   if not Content or not Content.Uuid then
     return
   end
-  if self.Saved and self.OnSavedStateChanged then
-    self.OnSavedStateChanged(self, false)
+  if Content.UI then
+    Content.UI:OnItemClick()
   end
-  self.Saved = false
-  if not self.UsingGamepad and self.ItemDetailWidget then
+  if not self.IsUseGamePad and self.ItemDetailWidget then
     self:ShowItemDetails(not self:IsChar(), Content)
   end
   local CurSlotWidget = self.Slots[self.CurSlotName]
   if not CurSlotWidget then
     return
   end
-  if Content.TeamIdx then
-    local CurrentUuid = CurSlotWidget.Uuid
-    if Content.Uuid == CurrentUuid then
-      if CurSlotWidget.Clear then
-        CurSlotWidget:Clear()
+  if Content.IsConflict then
+    UIManager():ShowUITip(UIConst.Tip_CommonToast, GText("UI_Wuyousheng_Toast_OnlyOneChar"))
+    return
+  end
+  local Type = Component.SlotName2Type[self.CurSlotName]
+  local CurContent = CurSlotWidget.Content
+  if "Weapon" == Type then
+    if CurContent and CurContent.Tag then
+      Type = CurContent.Tag
+    else
+      Type = CurSlotWidget.WeaponType or "Melee"
+    end
+  end
+  if Content.bSelectTag and CurContent and Content.Uuid == CurContent.Uuid then
+    self:ClearSlot(self.CurSlotName)
+    self:SetContentIsChosen(Content, false)
+    self:UpdateCurrentUuid(Type, nil)
+    if "Char" == Type then
+      self:UpdateCharConflict()
+    end
+    if self.OnLeftItemContentChanged then
+      self:OnLeftItemContentChanged()
+    end
+    return
+  end
+  if Content.bSelectTag then
+    local OtherSlotInfo = self.Uuid2SlotMap[Content.Uuid]
+    if OtherSlotInfo and self.Slots[OtherSlotInfo.SlotName] then
+      local OtherSlotWidget = self.Slots[OtherSlotInfo.SlotName]
+      if CurContent then
+        self:SetContentIsChosen(CurContent, false)
       end
-      self:SetContentIsChosen(Content, false)
-      if not self.UsingGamepad then
-        self:SetContentIsSelected(Content, true)
+      if OtherSlotWidget then
+        self:SetContentIsChosen(Content, false)
+      end
+      self:UpdateSlot(self.CurSlotName, Content)
+      self:SetContentIsChosen(Content, true)
+      if CurContent then
+        self:UpdateSlot(OtherSlotInfo.SlotName, CurContent)
+        self:SetContentIsChosen(CurContent, true)
+      else
+        self:ClearSlot(OtherSlotInfo.SlotName)
+        local OtherSlotType = Component.SlotName2Type[OtherSlotInfo.SlotName]
+        self:UpdateCurrentUuid(OtherSlotType, nil)
+        if "Char" == OtherSlotType then
+          self:UpdateCharConflict()
+        end
+        if self.OnLeftItemContentChanged then
+          self:OnLeftItemContentChanged()
+        end
+      end
+      self:UpdateCurrentUuid(Type, Content.Uuid)
+      if "Char" == Type then
+        self:UpdateCharConflict()
+      end
+      if self.OnLeftItemContentChanged then
+        self:OnLeftItemContentChanged()
       end
       return
-    else
-      local OtherSlotInfo = self.Uuid2SlotMap[Content.Uuid]
-      local Type = Component.SlotName2Type[self.CurSlotName]
-      if "Weapon" == Type then
-        Type = CurSlotWidget.WeaponType or "Melee"
-      end
-      local CurrentUuid = CurSlotWidget.Uuid
-      if CurrentUuid and self[Type .. "ItemContentsMap"] then
-        local CurContent = self[Type .. "ItemContentsMap"][CurrentUuid]
-        local ContentTeamIdx = Content.TeamIdx
-        local ContentTeamCharId = Content.TeamCharId
-        local CurContentTeamIdx = CurContent and CurContent.TeamIdx
-        local CurContentTeamCharId = CurContent and CurContent.TeamCharId
-        if CurSlotWidget.Update then
-          CurSlotWidget:Update(Content)
+    end
+  end
+  if CurContent then
+    self:SetContentIsChosen(CurContent, false)
+  end
+  self:UpdateSlot(self.CurSlotName, Content)
+  self:SetContentIsChosen(Content, true)
+  self:UpdateCurrentUuid(Type, Content.Uuid)
+  if "Char" == Type then
+    self:UpdateCharConflict()
+  end
+  if self.OnLeftItemContentChanged then
+    self:OnLeftItemContentChanged()
+  end
+end
+
+function Component:UpdateCharConflict()
+  if not self.CharItemContentsArray then
+    return
+  end
+  local EquippedCharInfo = {}
+  for SlotName, SlotWidget in pairs(self.Slots) do
+    if SlotWidget and SlotWidget.Content then
+      local SlotType = Component.SlotName2Type[SlotName]
+      if "Char" == SlotType then
+        local Content = SlotWidget.Content
+        if Content and Content.CharId then
+          EquippedCharInfo[Content.CharId] = SlotName
         end
-        if OtherSlotInfo and self.Slots[OtherSlotInfo.SlotName] then
-          local OtherSlotWidget = self.Slots[OtherSlotInfo.SlotName]
-          if OtherSlotWidget.Update then
-            OtherSlotWidget:Update(CurContent)
-          end
-        end
-        local FuncName
-        if "Melee" == self.CurSlotType or self.CurSlotType == "Ranged" then
-          FuncName = "WeaponMain_OnListItemClicked"
-        else
-          FuncName = self.CurSlotType .. "Main_OnListItemClicked"
-        end
-        if self[FuncName] then
-          self[FuncName](self, Content)
-        end
-        if ContentTeamIdx then
-          Content.TeamIdx = ContentTeamIdx
-        end
-        if CurContent and CurContentTeamIdx then
-          CurContent.TeamIdx = CurContentTeamIdx
-          CurContent.TeamCharId = CurContentTeamCharId
-        end
-        if CurContent and CurContent.SelfWidget then
-          local PreIndex = Content.TeamIdx
-          local PreChar = Content.TeamCharId
-          CurContent.TeamIdx = PreIndex
-          CurContent.TeamCharId = PreChar
-          if CurContent.SelfWidget.SetTeamIcon then
-            CurContent.SelfWidget:SetTeamIcon(PreIndex, PreChar)
-          end
-        end
-        if self.List_Select then
-          self.List_Select:RegenerateAllEntries()
-        end
-        if self.SlotName2TextMap then
-          UIManager(GWorld.GameInstance):ShowUITip(UIConst.Tip_CommonToast, GText(Content.UnitName) .. GText("Abyss_Party_Replaced") .. "<Highlight>" .. self.SlotName2TextMap[self.CurSlotName] .. "</>")
-        end
-        return
       end
     end
   end
-  local FuncName
-  if "Melee" == self.CurSlotType or self.CurSlotType == "Ranged" then
-    FuncName = "WeaponMain_OnListItemClicked"
-  else
-    FuncName = self.CurSlotType .. "Main_OnListItemClicked"
+  local CurSlotName = self.CurSlotName or Component.ESlotName.Null
+  for _, Content in ipairs(self.CharItemContentsArray) do
+    if Content and Content.CharId then
+      local IsConflict = false
+      local EquippedSlotName = EquippedCharInfo[Content.CharId]
+      if EquippedSlotName and EquippedSlotName ~= CurSlotName then
+        IsConflict = true
+      end
+      if Content.bSelectTag then
+        IsConflict = false
+      end
+      Content.IsConflict = IsConflict
+      if Content.UI and Content.UI.SetConflict then
+        Content.UI:SetConflict()
+      end
+    end
   end
-  self:CallFunctionByName(FuncName, Content)
+end
+
+function Component:UpdateCurrentUuid(Type, Uuid)
+  if "Char" == Type then
+    self.CurrentCharUuid = Uuid
+  elseif "Pet" == Type then
+    self.CurrentPetUuid = Uuid
+  elseif "Melee" == Type or "Ranged" == Type then
+    self["Current" .. Type .. "Uuid"] = Uuid
+  end
 end
 
 function Component:SetContentIsChosen(Content, IsChosen)
   if not Content then
     return
   end
+  Content.bSelectTag = IsChosen
   if Content.SelfWidget then
-    self:SetContentIsSelected(Content, IsChosen)
-    if Content.SelfWidget.SetTeamIcon then
-      Content.SelfWidget:SetTeamIcon(IsChosen and Content.TeamIdx, Content.TeamCharId)
-    end
+    Content.SelfWidget:SetItemSelect(IsChosen)
     self:PlaySelectSound(IsChosen, Content.Type)
-  elseif not IsChosen then
-    Content.TeamIdx = nil
-    Content.TeamCharId = nil
-  end
-end
-
-function Component:SetContentIsSelected(Content, IsSelected)
-  if not Content then
-    return
-  end
-  Content.IsSelect = IsSelected
-  if Content.SelfWidget and Content.SelfWidget.SetSelected then
-    Content.SelfWidget:SetSelected(IsSelected)
-  end
-  if IsSelected then
-    self:SetContentIsSelected(self.SelectedContent, false)
-    self.SelectedContent = Content
-  elseif self.SelectedContent == Content then
-    self.SelectedContent = nil
   end
 end
 
@@ -856,8 +775,19 @@ function Component:PlaySelectSound(IsSelected, Type)
   end
 end
 
+function Component.IsTryoutCmpFunc(a, b)
+  if a.IsTryout ~= b.IsTryout then
+    if a.IsTryout then
+      return true
+    else
+      return false
+    end
+  end
+  return nil
+end
+
 function Component:SortItemContents(InOutContentArray, SortByIdx, SortType)
-  local FirstContent = self[self.CurSlotType .. "Main_CurContent"] or self[self.CurSlotType .. "Main_CmpContent"]
+  local FirstContent = self:GetCurrentContentForSort()
   local OrderByAttrNames
   if self.CurSlotType == "Pet" then
     OrderByAttrNames = self.PetOrderByAttrNames
@@ -875,7 +805,25 @@ function Component:SortItemContents(InOutContentArray, SortByIdx, SortType)
       table.insert(SortByAttrNames, value)
     end
   end
-  ArmoryUtils:SortItemContents(InOutContentArray, SortByAttrNames, SortType, FirstContent)
+  ArmoryUtils:SortItemContents(InOutContentArray, SortByAttrNames, SortType, FirstContent, Component.IsTryoutCmpFunc)
+end
+
+function Component:GetCurrentContentForSort()
+  if self.CurSlotType == "Char" then
+    if self.CurrentCharUuid and self.CharItemContentsMap then
+      return self.CharItemContentsMap[self.CurrentCharUuid]
+    end
+  elseif self.CurSlotType == "Pet" then
+    if self.CurrentPetUuid and self.PetItemContentsMap then
+      return self.PetItemContentsMap[self.CurrentPetUuid]
+    end
+  elseif self.CurSlotType == "Melee" or self.CurSlotType == "Ranged" then
+    local CurrentUuidName = "Current" .. self.CurSlotType .. "Uuid"
+    if self[CurrentUuidName] and self[self.CurSlotType .. "ItemContentsMap"] then
+      return self[self.CurSlotType .. "ItemContentsMap"][self[CurrentUuidName]]
+    end
+  end
+  return nil
 end
 
 function Component:FilterItemContents(InContentArray, FilterIdxes)
@@ -890,16 +838,26 @@ function Component:FilterItemContents(InContentArray, FilterIdxes)
   end
   if "Char" == DataType then
     function FilterFunc(FilterTag, Content)
-      local Data = DataMgr.BattleChar[Content.UnitId]
-      
-      return FilterTag == Data.Attribute
+      return FilterTag == Content.Attribute
     end
   elseif "Weapon" == DataType then
     local Avatar = GWorld:GetAvatar()
     
     function FilterFunc(FilterTag, Content)
-      local Weapon = Avatar.Weapons[Content.Uuid]
-      return Weapon and Weapon:HasTag(FilterTag)
+      if Content.IsTryout then
+        local WeaponInfo = DataMgr.BattleWeapon[Content.WeaponId]
+        if WeaponInfo then
+          for _, Tag in ipairs(WeaponInfo.WeaponTag) do
+            if Tag == FilterTag then
+              return true
+            end
+          end
+        end
+        return false
+      else
+        local Weapon = Avatar.Weapons[Content.Uuid]
+        return Weapon and Weapon:HasTag(FilterTag)
+      end
     end
   elseif "Pet" == DataType then
     function FilterFunc()
@@ -907,17 +865,13 @@ function Component:FilterItemContents(InContentArray, FilterIdxes)
     end
   end
   if FilterFunc and FilterTags then
-    local AddedContents = {}
     for _, Content in ipairs(InContentArray) do
       if Content then
         local ContentKey = Content.Uuid or tostring(Content)
-        if not AddedContents[ContentKey] then
-          for _, Idx in ipairs(FilterIdxes) do
-            if FilterTags[Idx] and FilterFunc(FilterTags[Idx], Content) then
-              table.insert(FilteredItems, Content)
-              AddedContents[ContentKey] = true
-              break
-            end
+        for _, Idx in ipairs(FilterIdxes) do
+          if FilterTags[Idx] and FilterFunc(FilterTags[Idx], Content) then
+            table.insert(FilteredItems, Content)
+            break
           end
         end
       end
@@ -930,7 +884,7 @@ function Component:OnItemIsHoverChanged(ItemContent, bHovered)
   if not ItemContent or not ItemContent.Uuid then
     return
   end
-  if self.UsingGamepad then
+  if self.IsUseGamePad then
     self:ShowItemDetails(bHovered and ItemContent.Type ~= "Char", ItemContent)
   end
 end
@@ -964,6 +918,7 @@ function Component:OnFilterListItemClicked(Content)
   if Content.IsSelected then
     return
   end
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_sort_tab", nil, nil)
   if self.SelectedFilterContents then
     for Tag, Value in pairs(self.SelectedFilterContents) do
       if Value ~= Content then
@@ -1031,19 +986,10 @@ function Component:SetFilterContentIsSelected(Content, IsSelected)
   end
 end
 
-function Component:OnListItemInited(Content, EntryUI)
-  if Content and EntryUI then
-    Content.SelfWidget = EntryUI
-    if Content.TeamIdx then
-      self:SetContentIsChosen(Content, true)
-    end
-  end
-end
-
 function Component:OnFilterListItemInited(Content, EntryUI)
   if Content and EntryUI then
     Content.UI = EntryUI
-    if Content.IsSelected and EntryUI.SetIsSelected then
+    if Content.IsSelected then
       EntryUI:SetIsSelected(true)
     end
   end
@@ -1054,8 +1000,10 @@ function Component:OnListInited(bListEmpty)
   if self.bItemDetailsShowed then
     self:ShowItemDetails(false)
   end
-  self:SetContentIsSelected(self.SelectedContent, false)
   self:UpdateTeamIcons()
+  if self.InitNavigation then
+    self:InitNavigation()
+  end
 end
 
 function Component:ShowItemDetails(bShow, Content)
@@ -1084,28 +1032,6 @@ function Component:ShowItemDetails(bShow, Content)
   self.ItemDetailsContent = Content
 end
 
-function Component:InitItemDetailWidget()
-  if not self.ItemDetailWidget then
-    return
-  end
-  self.ItemDetailWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  if self.ItemDetailWidget.Key_Confirm then
-    self.ItemDetailWidget.Key_Confirm:CreateCommonKey({
-      KeyInfoList = {
-        {Type = "Img", ImgShortPath = "A"}
-      },
-      Desc = GText("UI_Add")
-    })
-    self.ItemDetailWidget.Key_Confirm:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-  end
-  if self.ItemDetailWidget.Key_Back then
-    self.ItemDetailWidget.Key_Back:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  end
-  self.ItemDetailWidget.bIsFocusable = false
-  self.bItemDetailsShowed = false
-  self.ItemDetailsContent = nil
-end
-
 function Component:AttachTipsWidget(Widget)
   if self.Pos_Tip then
     self.Pos_Tip:AddChild(Widget)
@@ -1118,26 +1044,23 @@ function Component:NewItemContent(Target, Type, Tag)
   Obj.Type = Type
   Obj.Tag = Tag
   Obj.UnitId = Target[Type .. "Id"]
+  Obj.CharId = Obj.UnitId
   Obj.UnitName = Target[Type .. "Name"]
   Obj.Rarity = Target[Type .. "Rarity"]
   Obj.Icon = Target:Data().Icon
   Obj.GachaIcon = Target:Data().GachaIcon
   Obj.Level = Target.Level
   Obj.GradeLevel = Target.GradeLevel
-  Obj.AnimNameWithCreate = "In_OnlyOpacity"
   Obj.IsTryout = false
+  Obj.bIsHoverState = true
+  Obj.ConfirmDesc = "UI_CTL_Add/Remove"
+  Obj.Attribute = DataMgr["Battle" .. Type][Obj.UnitId].Attribute
   local Element = DataMgr["Battle" .. Type][Obj.UnitId].Attribute
   if Element then
     local IconName = "Armory_" .. Element
     Obj.AttrIcon = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_" .. IconName .. ".T_" .. IconName
   end
   Obj.SortPriority = Target:Data().SortPriority or 0
-  Obj.OnMouseButtonUpEvents = {
-    Obj = self,
-    Callback = function()
-      self:OnListItemClicked(Obj)
-    end
-  }
   return Obj
 end
 
@@ -1154,13 +1077,9 @@ function Component:NewPetItemContent(Target)
   Obj.Level = Target.Level
   Obj.BreakNum = Target.BreakNum
   Obj.IsTryout = false
+  Obj.bIsHoverState = true
+  Obj.ConfirmDesc = "UI_CTL_Add/Remove"
   Obj.SortPriority = Data.SortPriority or 0
-  Obj.OnMouseButtonUpEvents = {
-    Obj = self,
-    Callback = function()
-      self:OnListItemClicked(Obj)
-    end
-  }
   return Obj
 end
 
@@ -1182,31 +1101,27 @@ function Component:NewTrialCharContent(RuleId)
     return nil
   end
   local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-  Obj.Uuid = "TrialChar_" .. RuleId
+  Obj.Uuid = RuleId
   Obj.Type = CommonConst.ArmoryType.Char
   Obj.Tag = CommonConst.ArmoryTag.Char
-  Obj.UnitId = CharId
+  Obj.UnitId = RuleId
+  Obj.CharId = CharId
   Obj.UnitName = CharData.CharName or BattleCharData.CharName
   Obj.Rarity = CharData.CharRarity or BattleCharData.Rarity
   Obj.Icon = CharData.Icon
   Obj.GachaIcon = CharData.GachaIcon
   Obj.Level = Template.CharLevel or 1
   Obj.GradeLevel = 0
-  Obj.AnimNameWithCreate = "In_OnlyOpacity"
-  Obj.IsTrial = true
   Obj.IsTryout = true
+  Obj.bIsHoverState = true
+  Obj.ConfirmDesc = "UI_CTL_Add/Remove"
+  Obj.Attribute = BattleCharData.Attribute
   local Element = BattleCharData.Attribute
   if Element then
     local IconName = "Armory_" .. Element
     Obj.AttrIcon = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_" .. IconName .. ".T_" .. IconName
   end
   Obj.SortPriority = CharData.SortPriority or 0
-  Obj.OnMouseButtonUpEvents = {
-    Obj = self,
-    Callback = function()
-      self:OnListItemClicked(Obj)
-    end
-  }
   return Obj
 end
 
@@ -1228,31 +1143,27 @@ function Component:NewTrialWeaponContent(RuleId, WeaponTag)
     return nil
   end
   local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-  Obj.Uuid = "TrialWeapon_" .. RuleId
+  Obj.Uuid = RuleId
   Obj.Type = CommonConst.ArmoryType.Weapon
   Obj.Tag = WeaponTag
-  Obj.UnitId = WeaponId
+  Obj.UnitId = RuleId
   Obj.UnitName = WeaponData.WeaponName or BattleWeaponData.Name
   Obj.Rarity = WeaponData.WeaponRarity or BattleWeaponData.Rarity
   Obj.Icon = WeaponData.Icon
   Obj.GachaIcon = WeaponData.GachaIcon
   Obj.Level = Template.WeaponLevel or 1
   Obj.GradeLevel = 0
-  Obj.AnimNameWithCreate = "In_OnlyOpacity"
-  Obj.IsTrial = true
+  Obj.WeaponId = WeaponId
   Obj.IsTryout = true
+  Obj.bIsHoverState = true
+  Obj.ConfirmDesc = "UI_CTL_Add/Remove"
+  Obj.ItemId = WeaponId
   local Element = BattleWeaponData.Attribute
   if Element then
     local IconName = "Armory_" .. Element
     Obj.AttrIcon = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_" .. IconName .. ".T_" .. IconName
   end
   Obj.SortPriority = WeaponData.SortPriority or 0
-  Obj.OnMouseButtonUpEvents = {
-    Obj = self,
-    Callback = function()
-      self:OnListItemClicked(Obj)
-    end
-  }
   return Obj
 end
 
@@ -1262,7 +1173,7 @@ function Component:NewTrialPetContent(PetId)
   end
   local PetData = DataMgr.Pet[PetId]
   local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-  Obj.Uuid = "TrialPet_" .. PetId
+  Obj.Uuid = PetId
   Obj.Type = CommonConst.ArmoryType.Pet
   Obj.Tag = CommonConst.ArmoryType.Pet
   Obj.UnitId = PetId
@@ -1271,16 +1182,10 @@ function Component:NewTrialPetContent(PetId)
   Obj.Icon = PetData.Icon
   Obj.Level = 1
   Obj.BreakNum = 0
-  Obj.AnimNameWithCreate = "In_OnlyOpacity"
-  Obj.IsTrial = true
   Obj.IsTryout = true
+  Obj.bIsHoverState = true
+  Obj.ConfirmDesc = "UI_CTL_Add/Remove"
   Obj.SortPriority = PetData.SortPriority or 0
-  Obj.OnMouseButtonUpEvents = {
-    Obj = self,
-    Callback = function()
-      self:OnListItemClicked(Obj)
-    end
-  }
   return Obj
 end
 
@@ -1291,7 +1196,7 @@ function Component:CallFunctionByName(FunctionName, ...)
 end
 
 function Component:GetCurrentContent()
-  return self[self.CurSlotType .. "Main_CurContent"]
+  return self:GetCurrentContentForSort()
 end
 
 function Component:IsChar()
@@ -1342,114 +1247,131 @@ function Component:UpdateTeamIcons()
         else
           IsPhantomWeapon = true
           elseif Type ~= self.CurSlotType then
-            goto lbl_73
+            goto lbl_52
           end
           if self[Type .. "ItemContentsMap"] then
             local Content = self[Type .. "ItemContentsMap"][SlotWidget.Uuid]
-            if Content then
-              Content.TeamIdx = 1
-              if IsPhantomWeapon then
-                local PhantomSlotName = SlotName - 1
-                local PhantomSlotWidget = self.Slots[PhantomSlotName]
-                if PhantomSlotWidget and PhantomSlotWidget.Uuid and self.CharItemContentsMap then
-                  Content.TeamCharId = self.CharItemContentsMap[PhantomSlotWidget.Uuid].UnitId
-                end
-              end
-              if Content.SelfWidget then
-                self:SetContentIsChosen(Content, true)
-              end
+            if Content and IsPhantomWeapon then
+              local PhantomSlotName = SlotName - 1
+              local PhantomSlotWidget = self.Slots[PhantomSlotName]
             end
           end
         end
     end
-    ::lbl_73::
+    ::lbl_52::
   end
-end
-
-function Component:RemoveTeamIcons()
-  for SlotName, SlotWidget in pairs(self.Slots) do
-    if SlotWidget and SlotWidget.Uuid and not SlotWidget.IsEmpty then
-      local Type = Component.SlotName2Type[SlotName]
-      if "Weapon" == Type then
-        Type = SlotWidget.WeaponType or "Melee"
-      end
-      self[Type .. "Main_CurContent"] = nil
-      if self[Type .. "ItemContentsMap"] then
-        local Content = self[Type .. "ItemContentsMap"][SlotWidget.Uuid]
-        if Content then
-          Content.TeamIdx = nil
-          self:SetContentIsChosen(Content, false)
-        end
-      end
-    end
-  end
-end
-
-function Component:UpdateSingleTeamIcon(Uuid, bVisible, Type)
-  local Type = Type or self.CurSlotType
-  if not self[Type .. "ItemContentsMap"] then
-    return
-  end
-  local Content = self[Type .. "ItemContentsMap"][Uuid]
-  if not Content then
-    return
-  end
-  Content.TeamIdx = bVisible and Content.TeamIdx or nil
-end
-
-function Component:CheckUnit(UnitId)
-  if type(UnitId) == "number" then
-    return UnitId ~= NullUnitId
-  else
-    return UnitId ~= NullUUid
-  end
-end
-
-function Component:IsTrialItem(Uuid)
-  if not Uuid then
-    return false
-  end
-  return string.match(Uuid, "^TrialChar_") ~= nil or nil ~= string.match(Uuid, "^TrialWeapon_") or nil ~= string.match(Uuid, "^TrialPet_")
 end
 
 function Component:ClearAllSlots()
-  self:RemoveTeamIcons()
+  if not self.Slots then
+    return
+  end
+  for SlotName, SlotWidget in pairs(self.Slots) do
+    if SlotWidget and SlotWidget.Content then
+      self:SetContentIsChosen(SlotWidget.Content, false)
+    end
+  end
   for SlotName, SlotWidget in pairs(self.Slots) do
     if SlotWidget and SlotWidget.Clear then
       SlotWidget:Clear()
     end
   end
-  self:SetContentIsSelected(self.SelectedContent, false)
-  if self.CharMain_CurContent then
-    self.CharMain_CurContent = nil
-  end
-  if self.PetMain_CurContent then
-    self.PetMain_CurContent = nil
-  end
+  self.CurrentCharUuid = nil
+  self.CurrentPetUuid = nil
   local WeaponTags = {
     CommonConst.ArmoryTag.Melee,
     CommonConst.ArmoryTag.Ranged
   }
   for _, Tag in pairs(WeaponTags) do
-    if self[Tag .. "Main_CurContent"] then
-      self[Tag .. "Main_CurContent"] = nil
-    end
+    self["Current" .. Tag .. "Uuid"] = nil
   end
-  self.Saved = false
-  if self.OnSavedStateChanged then
-    self.OnSavedStateChanged(self, false)
-  end
-end
-
-function Component:SetOnSavedStateChangedCallback(Callback)
-  self.OnSavedStateChanged = Callback
+  self:UpdateCharConflict()
 end
 
 function Component:OnBackgroundClicked()
   if self.bItemDetailsShowed then
     self:ShowItemDetails(false)
   end
-  self:SetContentIsSelected(self.SelectedContent, false)
+end
+
+function Component:UpdateSlot(SlotName, Content)
+  local SlotWidget = self.Slots[SlotName]
+  if SlotWidget and SlotWidget.Update then
+    SlotWidget:Update(Content)
+    SlotWidget.Content = Content
+    Content.bSelectTag = true
+  end
+end
+
+function Component:GetCurrentUuid(SlotName)
+  local SlotWidget = self.Slots[SlotName]
+  if SlotWidget then
+    return SlotWidget.Uuid
+  end
+  return nil
+end
+
+function Component:GetWeaponType(SlotName)
+  local SlotWidget = self.Slots[SlotName]
+  if SlotWidget then
+    return SlotWidget.WeaponType or "Melee"
+  end
+  return "Melee"
+end
+
+function Component:ClearSlot(SlotName)
+  local SlotWidget = self.Slots[SlotName]
+  if SlotWidget and SlotWidget.Clear then
+    local SlotType = Component.SlotName2Type[SlotName]
+    SlotWidget:Clear()
+    if "Char" == SlotType then
+      self:UpdateCharConflict()
+    end
+  end
+end
+
+function Component:ShowItemDetails(bShow, Content)
+  if bShow then
+    if self.bListEmpty then
+      return
+    end
+    if Content.Type == "Char" then
+      return
+    end
+    if self.ItemDetailsContent ~= Content then
+      self.ItemDetailsWidget:RefreshItemInfo(Content, true)
+    end
+    self.ItemDetailsWidget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.ItemDetailsWidget:StopAnimation(self.ItemDetailsWidget.Out)
+    self.ItemDetailsWidget:PlayAnimation(self.ItemDetailsWidget.In)
+    self.bItemDetailsShowed = true
+  elseif self.ItemDetailsWidget then
+    self.bItemDetailsShowed = false
+    self.ItemDetailsWidget:StopAnimation(self.ItemDetailsWidget.In)
+    self.ItemDetailsWidget:PlayAnimation(self.ItemDetailsWidget.Out)
+  end
+  self.ItemDetailsContent = Content
+end
+
+function Component:InitItemDetailWidget()
+  if self.ItemDetailsWidget then
+    self.ItemDetailsWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.ItemDetailsWidget:DestroyObject()
+  end
+  self.ItemDetailsWidget = UIManager(self):_CreateWidgetNew("ItemDetailsMain")
+  self:AttachTipsWidget(self.ItemDetailsWidget)
+  self.ItemDetailsWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.ItemDetailsWidget.Key_Confirm:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = "A"}
+    },
+    Desc = GText("UI_CTL_Add/Remove")
+  })
+  self.ItemDetailsWidget.Key_Confirm:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.ItemDetailsWidget.Key_Back:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.ItemDetailsWidget.bIsFocusable = false
+  self.bItemDetailsShowed = false
+  self.ItemDetailsContent = nil
 end
 
 return Component

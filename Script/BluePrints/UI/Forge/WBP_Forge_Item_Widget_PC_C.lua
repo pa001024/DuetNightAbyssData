@@ -455,6 +455,24 @@ function WBP_ForgeItemWidget:UpdatePercent()
     self.LastTime:SetTimeText("", RemainTimeDict)
     self.Bar_Produce:SetPercent(DurationPercent)
     self:UpdateProgressVXPosition()
+  else
+    local DraftId = self.Content.Id
+    self.ErrorRestTimeMap = self.ErrorRestTimeMap or {}
+    if not self.ErrorRestTimeMap[DraftId] then
+      local Battle = GWorld.Battle
+      if Battle then
+        local ErrorStr = string.format("Forge@ RestTime <= 0, CurrentTime: %d, DurationTime: %d, RestTime: %d, osTime: %d", CurrentTime, DurationTime, RestTime, os.time())
+        local DataModel = self.Content.GetDataModel()
+        if DataModel then
+          local DraftInfo = DataModel:CheckState(DraftId)
+          if DraftInfo then
+            ErrorStr = ErrorStr .. string.format(", State: %d, StartTime: %d, DoingNum: %d, CompleteNum: %d", DraftInfo.State, DraftInfo.StartTime, DraftInfo.DraftDoingNum, DraftInfo.DraftCompleteNum)
+          end
+        end
+        Battle:StandardShowBattleErrorLua(UE.EShowBattleErrorType.Other, ErrorStr)
+      end
+      self.ErrorRestTimeMap[DraftId] = true
+    end
   end
   local Str = string.format("(<Highlight>%d</>/%d)", self.Content.DraftCompleteNum, self.Content.DraftDoingNum + self.Content.DraftCompleteNum)
   self.Text_BatchProduce:SetText(Str)
@@ -514,7 +532,6 @@ function WBP_ForgeItemWidget:UpdateFoundry(DraftId)
 end
 
 function WBP_ForgeItemWidget:SwitchToMaterialView(IsImmediately)
-  self:StopAllAnimations()
   if IsImmediately then
     self.Material:SetRenderOpacity(1)
     self.ProduceProgress:SetRenderOpacity(0)
@@ -525,7 +542,6 @@ function WBP_ForgeItemWidget:SwitchToMaterialView(IsImmediately)
 end
 
 function WBP_ForgeItemWidget:SwitchToProgressView(IsImmediately)
-  self:StopAllAnimations()
   if IsImmediately then
     self.Material:SetRenderOpacity(0)
     self.ProduceProgress:SetRenderOpacity(1)

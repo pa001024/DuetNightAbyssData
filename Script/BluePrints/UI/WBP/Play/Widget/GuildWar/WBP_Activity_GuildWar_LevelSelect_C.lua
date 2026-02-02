@@ -61,6 +61,8 @@ function M:Construct()
   self.Panel_Details_Buff:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Btn_Start:SetText(GText("DUNGEONSINGLE"))
   self.Text_Title_Score:SetText(GText("RaidDungeon_Base_Point"))
+  self.Text_Consume:SetText(GText("UI_Armory_Trace_Cost"))
+  self.Text_Details_Buff:SetText(GText("UI_Dungeon_More"))
 end
 
 function M:OnLoaded(...)
@@ -211,7 +213,7 @@ function M:InitLevelList(DungeonList)
     self.Btn_Shop.Text_Name:SetText(GText("RaidDungeon_Shop_Name"))
     self.Consume:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Btn_Ranking:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    if 0 == self.RaidSeasons.MaxPreRaidScore then
+    if 0 == self.RaidSeasons.MaxPreRaidScore or 1 == self.RaidSeasons.BanState then
       self.Btn_Ranking:ForbidBtn(true)
       self.Btn_Ranking:BindForbidStateExecuteEvent(self, function()
         UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("RaidDungeon_PreRaid_Abandon_Toast"))
@@ -469,11 +471,6 @@ function M:InitListCellInfo(DungeonId)
   else
     self.DefaultList:SetVisibility(ESlateVisibility.Collapsed)
   end
-  local CfgDrop = DataMgr.DoubleModDrop and DataMgr.DoubleModDrop[CommonConst.DoubleModDropEventID]
-  if not CfgDrop then
-    self.Group_TimeTips:SetVisibility(ESlateVisibility.Collapsed)
-    return
-  end
 end
 
 function M:RefreshLevelCellContent(DungeonId)
@@ -517,7 +514,6 @@ function M:TryOpenRankTopN()
   if self.RankInfo and self.TopNInfo and self.OpenRankTag then
     self.OpenRankTag = nil
     UIManager():LoadUINew("GuildWarRank", self.RankInfo, self.TopNInfo)
-    self:BlockAllUIInput(false)
   end
 end
 
@@ -528,14 +524,17 @@ function M:OpenGuildWarRank()
     return
   end
   self.OpenRankTag = true
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "RaidSeasonGetRaidRankinfo")
   Avatar:RaidSeasonGetRaidRankInfo(function(ErrCode)
+    self:BlockAllUIInput(false, "RaidSeasonGetRaidRankinfo")
     if not ErrorCode:Check(ErrCode) and self then
       self.RankInfo = {}
       self:TryOpenRankTopN()
     end
   end)
+  self:BlockAllUIInput(true, "RaidSeasonGetRaidRankTopN")
   Avatar:RaidSeasonGetRaidRankTopN(function(ErrCode)
+    self:BlockAllUIInput(false, "RaidSeasonGetRaidRankTopN")
     if not ErrorCode:Check(ErrCode) and self then
       self.TopNInfo = {}
       self:TryOpenRankTopN()
@@ -672,18 +671,14 @@ function M:RefreshRewardInfoList(DungeonId)
 end
 
 function M:IsInTimeRange(dungeonId)
-  local nowTimestamp = os.time()
+  local nowTimestamp = TimeUtils.NowTime()
   local dungeonConfig = DataMgr.EventDungeonReward[dungeonId]
   if not dungeonConfig then
     return false
   end
-  for startTime, endTable in pairs(dungeonConfig) do
-    if type(endTable) == "table" then
-      for endTime, config in pairs(endTable) do
-        if startTime <= nowTimestamp and endTime >= nowTimestamp then
-          return true, config
-        end
-      end
+  for _, config in pairs(dungeonConfig) do
+    if type(config) == "table" and nowTimestamp >= config.StartDate and nowTimestamp <= config.EndDate then
+      return true, config
     end
   end
   return false
@@ -822,7 +817,6 @@ function M:OnReturnKeyDown()
   if not self:IsAnimationPlaying(self.Out) and not self:IsAnimationPlaying(self.In) then
     self:SetVisibility(ESlateVisibility.HitTestInvisible)
     self:PlayAnimation(self.Out)
-    EventManager:FireEvent(EventID.OnReturnToActivityEntry)
     EventManager:FireEvent(EventID.OnActivityEntryShowVisible)
   end
 end
@@ -1015,7 +1009,7 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   elseif "Escape" == InKeyName then
     IsEventHandled = true
     if self.DisableEsc and self.DisableEsc == true then
-      return IsEventHandled
+      return UWidgetBlueprintLibrary.Handled()
     end
     if self.DefaultList:GetVisibility() == ESlateVisibility.SelfHitTestInvisible and self.DefaultList.IsShow then
       self.DefaultList:OnCloseSquadGamepad()
@@ -1031,7 +1025,11 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
     self.Tab_Info:TabToRight()
     IsEventHandled = true
   end
-  return IsEventHandled
+  if IsEventHandled then
+    return UWidgetBlueprintLibrary.Handled()
+  else
+    return UWidgetBlueprintLibrary.UnHandled()
+  end
 end
 
 function M:OnGamePadDown(InKeyName)

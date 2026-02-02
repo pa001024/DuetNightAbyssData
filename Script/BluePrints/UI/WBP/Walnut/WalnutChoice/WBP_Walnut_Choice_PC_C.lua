@@ -11,13 +11,22 @@ local EWalnutChoiceGamepadState = {
   WalnutRewardDetail = 5,
   Access = 6
 }
+local WalnutUtils = require("BluePrints.UI.WBP.Walnut.WalnutChoice.WalnutUtils")
+local EMCache = require("EMCache.EMCache")
 
 function M:Construct()
   self:CommonConstruct()
+  self.UIName = "WalnutChoice"
+  self.List_WalnutItem.OnCreateEmptyContent:Bind(self, function(self)
+    local Content = NewObject(UIUtils.GetCommonItemContentClass())
+    Content.Id = nil
+    return Content
+  end)
 end
 
 function M:Destruct()
   TeamController:UnRegisterEvent(self)
+  self.List_WalnutItem.OnCreateEmptyContent:Unbind()
 end
 
 function M:OnLoaded(...)
@@ -29,6 +38,7 @@ function M:OnLoaded(...)
 end
 
 function M:Init(User, ...)
+  self.User = User
   if not User or "" == User then
     return
   end
@@ -90,6 +100,8 @@ function M:CommonConstruct()
       self:Close()
     end
   end)
+  self:AddDispatcher(EventID.OnPurchaseShopItem, self, self.OnPurchaseShopItem)
+  self:CheckIsAutoMode()
 end
 
 function M:StandaloneConstruct()
@@ -120,38 +132,41 @@ function M:InitWalnuts()
   local CurrentCount = 1
   local WalnutItemsToAdd = {}
   self.WalnutsInBag = Avatar.Walnuts.WalnutBag
-  for WalnutId, Number in pairs(self.WalnutsInBag) do
-    if Number > 0 then
-      local WalnutData = DataMgr.Walnut[WalnutId]
-      if WalnutData then
-        local WalnutSelectDungeonData = DataMgr.WalnutSelectDungeon[WalnutData.WalnutType]
+  for WalnutId, WalnutData in pairs(DataMgr.Walnut) do
+    if WalnutData then
+      local WalnutSelectDungeonData = DataMgr.WalnutSelectDungeon[WalnutData.WalnutType]
+      if WalnutSelectDungeonData then
         local CanSelectDungeonId = WalnutSelectDungeonData.DungeonId
+        local IsMatchDungeon = false
         for _, DungeonId in pairs(CanSelectDungeonId) do
           if DungeonId == self.CurrentDungeonId then
-            table.insert(WalnutItemsToAdd, {
-              WalnutId = WalnutId,
-              Number = Number,
-              WalnutData = WalnutData
-            })
+            IsMatchDungeon = true
             break
           end
+        end
+        if IsMatchDungeon then
+          local Number = self.WalnutsInBag[WalnutId] or 0
+          table.insert(WalnutItemsToAdd, {
+            WalnutId = WalnutId,
+            Number = Number,
+            WalnutData = WalnutData
+          })
         end
       end
     end
   end
   table.sort(WalnutItemsToAdd, function(A, B)
+    local AHasNumber = A.Number and A.Number > 0 and 1 or 0
+    local BHasNumber = B.Number and B.Number > 0 and 1 or 0
+    if AHasNumber ~= BHasNumber then
+      return AHasNumber > BHasNumber
+    end
     return A.WalnutId < B.WalnutId
   end)
   for _, WalnutInfo in ipairs(WalnutItemsToAdd) do
     self:CreateAndAddWalnutItem(WalnutInfo.WalnutId, WalnutInfo.Number)
   end
-  self:AddTimer(0.01, function()
-    local WalnutItemUIs = self.List_WalnutItem:GetDisplayedEntryWidgets()
-    local RestCount = UIUtils.GetListViewContentMaxCount(self.List_WalnutItem, WalnutItemUIs, true) - WalnutItemUIs:Length()
-    for i = 1, RestCount do
-      self:CreateAndAddEmptyItem()
-    end
-  end, false, 0, "PaddingWalnutListView")
+  self.List_WalnutItem:RequestFillEmptyContent()
 end
 
 function M:ShowChooseSuccessToast(SelectContent)
@@ -182,14 +197,33 @@ function M:SetWalnutContentRealChoice(Content, IsRealChoice)
   end
 end
 
+function M:OnPurchaseShopItem(Ret, ShopItemId, Count)
+  if 0 == Ret then
+    self.List_WalnutItem:ClearListItems()
+    self:InitWalnuts()
+    local WalnutId = WalnutUtils:GetWalnutCacheIdByDungeonId(self.CurrentDungeonId)
+    self:SelectWalnutById(WalnutId)
+  end
+end
+
 function M:OnListItemClicked(Content)
-  if Content.IsEmpty then
+  if self.CheckIsAutoModeTimer and self.CurrentSelectContent then
+    self:RemoveTimer(self.CheckIsAutoModeTimer)
+    self.CheckIsAutoModeTimer = nil
+    self.Btn_Yes:SetText(GText("UI_CONFIRM_SELECTION"))
+    DebugPrint("ayff test interrupt auto mode because of manual click")
+  end
+  if Content.IsEmpty or not Content.Id then
     return
   end
   if self.RealChoice == Content and self.HasSelect then
     self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
   else
-    self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
+    local GameState = UGameplayStatics.GetGameState(self)
+    if self.HasSelect and GameState:IsInDungeon() then
+    else
+      self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
+    end
   end
   if self.CurrentSelectContent == Content then
     return
@@ -216,6 +250,41 @@ function M:OnListItemClicked(Content)
     self.WalnutPlate:SetNoWalnut(true)
   else
     self.WalnutPlate:SetWalnutContent(Content.Id, true)
+    local WalnutType = self.WalnutType
+    if WalnutType then
+      local CacheKey = "WalnutIDType" .. WalnutType
+      EMCache:Set(CacheKey, Content.Id, true)
+    end
+  end
+  if 0 == Content.Count then
+    local CanPurchase, ShopType = WalnutUtils:CheckWalnutCanPurchase(Content.Id)
+    if CanPurchase then
+      self.Btn_Yes:SetText(GText("UI_SHOP_PURCHASE"))
+      Content.ActionType = "Purchase"
+      Content.ShopType = ShopType
+      self.Btn_Yes:ForbidBtn(false)
+    else
+      self.Btn_Yes:SetText(GText("UI_Access_Goto"))
+      Content.ActionType = "Jump"
+      local WalnutData = DataMgr.Walnut[Content.Id]
+      local bCanJump = false
+      if WalnutData and WalnutData.AccessKey then
+        for _, AccessKey in pairs(WalnutData.AccessKey) do
+          if PageJumpUtils:CanJumpByAccessKey(Content.Id, "Walnut", AccessKey, self.UIName) then
+            bCanJump = true
+            break
+          end
+        end
+      end
+      self.Btn_Yes:ForbidBtn(not bCanJump)
+      if self.User == CommonConst.WalnutUser.Dungeon or self.User == CommonConst.WalnutUser.Settlement then
+        self.Btn_Yes:ForbidBtn(true)
+      end
+    end
+  else
+    self.Btn_Yes:SetText(GText("UI_CONFIRM_SELECTION"))
+    Content.ActionType = "Select"
+    self.Btn_Yes:ForbidBtn(false)
   end
 end
 
@@ -241,15 +310,11 @@ end
 function M:CreateAndAddForbidItem()
   local Content = NewObject(UIUtils.GetCommonItemContentClass())
   Content.Icon = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Forbid.T_Armory_Forbid"
-  Content.IsSelect = true
   Content.Id = -1
   Content.ItemName = GText("UI_Walnut_Not_Select")
   Content.IsForbid = true
   Content.bDisableCommonClick = true
   self.List_WalnutItem:AddItem(Content)
-  self.CurrentSelectContent = Content
-  self.RealChoice = self.CurrentSelectContent
-  self:OnListItemClicked(Content)
 end
 
 function M:CreateAndAddEmptyItem()
@@ -264,6 +329,12 @@ function M:CreateAndAddWalnutItem(WalnutId, Number)
   local WalnutData = DataMgr.Walnut[WalnutId]
   local WalnutType = WalnutData.WalnutType
   local WalnutTypeData = DataMgr.WalnutType[WalnutType]
+  local ReleaseVersion = WalnutData.ReleaseVersion
+  local CurrentVersion = DataMgr.GlobalConstant.CurrentVersion.ConstantValue
+  if ReleaseVersion and CurrentVersion and ReleaseVersion > CurrentVersion then
+    DebugPrint("WalnutId: ", WalnutId, " is not released yet. ReleaseVersion: ", ReleaseVersion, " CurrentVersion: ", CurrentVersion)
+    return
+  end
   Content.Rarity = WalnutData.Rarity or 1
   Content.Icon = WalnutTypeData.Icon
   Content.Parent = self
@@ -271,6 +342,7 @@ function M:CreateAndAddWalnutItem(WalnutId, Number)
   Content.Id = WalnutId
   Content.ItemType = "Walnut"
   Content.bDisableCommonClick = true
+  self.WalnutType = WalnutTypeData.WalnutType
   self.List_WalnutItem:AddItem(Content)
 end
 
@@ -337,19 +409,72 @@ function M:OnClickButtonYes()
   if nil == WalnutId then
     WalnutId = -1
   end
+  local Content = self.CurrentSelectContent
+  if Content and 0 == Content.Count and Content.ActionType then
+    if Content.ActionType == "Purchase" then
+      local ShopType = Content.ShopType or "Shop"
+      ShopUtils:ShowPurchaseDialog("Walnut", WalnutId, ShopType, self.UIName)
+      return
+    elseif Content.ActionType == "Jump" then
+      if self.Btn_Yes.IsForbidden then
+        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Walnut_Toast_CanNotGet"))
+        return
+      end
+      local WalnutData = DataMgr.Walnut[WalnutId]
+      if WalnutData and WalnutData.AccessKey then
+        for _, AccessKey in pairs(WalnutData.AccessKey) do
+          if PageJumpUtils:ExecuteJumpByAccessKey(WalnutId, "Walnut", AccessKey, self.UIName) then
+            return
+          end
+        end
+      end
+      return
+    end
+  end
   local Avatar = GWorld:GetAvatar()
   Avatar:SelectWalnut(self:ShowChooseSuccessToast(self.CurrentSelectContent), self.CurrentDungeonId, WalnutId)
 end
 
 function M:SelectWalnutById(WalnutId)
   local WalnutItems = self.List_WalnutItem:GetListItems()
+  if not WalnutId then
+    local Content = WalnutItems:Get(1)
+    self:OnListItemClicked(Content)
+    self.List_WalnutItem:ScrollIndexIntoView(0)
+    return false
+  end
   for i = 1, WalnutItems:Length() do
     local Content = WalnutItems:Get(i)
     if Content and Content.Id and Content.Id == WalnutId then
-      self.List_WalnutItem:SetSelectedIndex(i - 1)
-      self:OnListItemClicked(Content)
-      self.List_WalnutItem:ScrollIndexIntoView(i - 1)
-      return true
+      local Avatar = GWorld:GetAvatar()
+      if not Avatar then
+        return
+      end
+      local DungeonId = self.CurrentDungeonId
+      if not DungeonId then
+        return
+      end
+      local IsAutoMode = Avatar.Dungeons[DungeonId] and Avatar.Dungeons[DungeonId].AutoProgress
+      if IsAutoMode and 0 == Content.Count then
+        local FirstWalnutContent = WalnutItems:Get(2)
+        if FirstWalnutContent and FirstWalnutContent.Count > 0 then
+          self.List_WalnutItem:SetSelectedIndex(1)
+          self:OnListItemClicked(FirstWalnutContent)
+          self.List_WalnutItem:ScrollIndexIntoView(1)
+          return true
+        else
+          self.List_WalnutItem:SetSelectedIndex(0)
+          local WalnutContent = WalnutItems:Get(1)
+          self:OnListItemClicked(WalnutContent)
+          self.List_WalnutItem:ScrollIndexIntoView(0)
+          return true
+        end
+      else
+        self.List_WalnutItem:SetSelectedIndex(i - 1)
+        self:OnListItemClicked(Content)
+        self.List_WalnutItem:ScrollIndexIntoView(i - 1)
+        return true
+      end
     end
   end
   return false
@@ -456,7 +581,13 @@ function M:PCToGamepad()
   end
   if 0 == self.State then
     if self.IsStandAlone then
-      self:UpdateCommonKeys("LS", GText("UI_Controller_CheckReward"))
+      if self.CurrentSelectContent and -1 == self.CurrentSelectContent.Id then
+        self:UpdateCommonKeys()
+      else
+        self:UpdateCommonKeys("LS", GText("UI_Controller_CheckReward"))
+      end
+    elseif self.CurrentSelectContent and -1 == self.CurrentSelectContent.Id then
+      self:UpdateCommonKeys("RS", GText("UI_Controller_CheckTeam"))
     else
       self:UpdateCommonKeys("LS", GText("UI_Controller_CheckReward"), "RS", GText("UI_Controller_CheckTeam"))
     end
@@ -584,10 +715,13 @@ function M:FocusOnWalnut()
       else
         self:UpdateCommonKeys("RS", GText("UI_Controller_CheckTeam"))
       end
-    elseif self.IsStandAlone == true then
-      self:UpdateCommonKeys("LS", GText("UI_Controller_CheckReward"))
     else
-      self:UpdateCommonKeys("LS", GText("UI_Controller_CheckReward"), "RS", GText("UI_Controller_CheckTeam"))
+      if self.IsStandAlone == true then
+        self:UpdateCommonKeys("LS", GText("UI_Controller_CheckReward"))
+      else
+        self:UpdateCommonKeys("LS", GText("UI_Controller_CheckReward"), "RS", GText("UI_Controller_CheckTeam"))
+      end
+      self.State = 0
     end
   end
 end
@@ -680,6 +814,39 @@ function M:NavigateP4Left()
     self:UpdateCommonKeys("A", GText("UI_Controller_CheckPlayer"), "B", GText("UI_Tips_Close"))
   end
   return true
+end
+
+function M:CheckIsAutoMode()
+  local Avatar = GWorld:GetAvatar()
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if not Avatar then
+    return
+  end
+  local DungeonId = GWorld.GameInstance:GetCurrentDungeonId()
+  if not DungeonId then
+    return
+  end
+  local IsInSettlement = GWorld.GameInstance:IsInTempScene()
+  local IsAutoMode = not IsInSettlement and Avatar.Dungeons[DungeonId] and Avatar.Dungeons[DungeonId].AutoProgress
+  local Progress = GameState.DungeonProgress or 0
+  if IsAutoMode and Progress <= IsAutoMode + 1 and 0 ~= IsAutoMode then
+    self.CheckIsAutoModeTimer = nil
+    local AutoCheckTime
+    if DataMgr.GlobalConstant.AutoRoundsCheckTime then
+      AutoCheckTime = DataMgr.GlobalConstant.AutoRoundsCheckTime.ConstantValue
+    else
+      AutoCheckTime = 5
+    end
+    self.CheckIsAutoModeTimer = self:AddTimer(1, function()
+      self.Btn_Yes:SetText(string.format(GText("UI_Auto_Round_TicketConfirm_Time"), AutoCheckTime))
+      if AutoCheckTime <= 0 then
+        self:RemoveTimer(self.CheckIsAutoModeTimer)
+        self:OnClickButtonYes()
+        return
+      end
+      AutoCheckTime = AutoCheckTime - 1
+    end, true, 0, "CheckIsAutoModeTimer")
+  end
 end
 
 return M

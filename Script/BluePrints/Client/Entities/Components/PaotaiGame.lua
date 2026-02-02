@@ -1,13 +1,12 @@
 local Component = {}
 
 function Component:EnterWorld()
+  EventManager:AddEvent(EventID.OnLoginSuccess, self, self.OnLoginSuccess)
   EventManager:AddEvent(EventID.OnActivityTimeOpen, self, self.TryRefreshPaotaiGameNewLevelOnActivityTimeOpen)
-  self:RefreshPaotaiEventNewLevelReddot()
-  self:RefreshPaotaiEventNewBuffReddot()
-  self:RefreshPaotaiEventRewardReddot()
 end
 
 function Component:LeaveWorld()
+  EventManager:RemoveEvent(EventID.OnLoginSuccess, self)
   EventManager:RemoveEvent(EventID.OnActivityTimeOpen, self)
 end
 
@@ -179,6 +178,9 @@ function Component:_TryAddPaotaiGameNewLevelReddot(EventId)
 end
 
 function Component:OnDailyRefreshPaotaiGameNewLevel()
+  if TimeUtils.ServerTimeZone == nil then
+    return
+  end
   local EventId = DataMgr.PaotaiEventConstant.PaotaiGameEventId.ConstantValue
   self:_TryAddPaotaiGameNewLevelReddot(EventId)
 end
@@ -250,6 +252,12 @@ function Component:_TryAddPaotaiGameNewBuffReddot(EventId)
   if IncreaseNum > 0 then
     ReddotManager.IncreaseLeafNodeCount("PaotaiEventNewBuff", IncreaseNum)
   end
+end
+
+function Component:OnLoginSuccess()
+  self:RefreshPaotaiEventNewLevelReddot()
+  self:RefreshPaotaiEventNewBuffReddot()
+  self:RefreshPaotaiEventRewardReddot()
 end
 
 return Component

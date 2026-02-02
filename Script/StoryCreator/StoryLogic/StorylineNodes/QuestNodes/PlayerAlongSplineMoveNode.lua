@@ -37,22 +37,31 @@ function PlayerAlongSplineMoveNode:Execute(Callback)
   self.CinemaMoveSpline.IsTriggerable = self.IsTriggerable
   self.CinemaMoveSpline.bCanExit = self.CanExitSpline
   self.CinemaMoveSpline.Player = self.Player
-  self.CinemaMoveSpline.EndPointOverlapBox.OnComponentBeginOverlap:Add(self.Player, function(Obj, Comp, OtherActor)
-    if OtherActor == self.Player then
+  self.CinemaMoveSpline.EndPointOverlapBox.OnComponentBeginOverlap:Add(self.Player, function(Obj, Comp, OtherActor, OtherComp)
+    if not IsValid(self.Player) then
+      return
+    end
+    if OtherComp == self.Player.CapsuleComponent then
       Callback()
     end
   end)
   if self.IsTriggerable then
-    if self.CinemaMoveSpline.StartPointOverlapBox:IsOverlappingActor(self.Player) then
+    if self.CinemaMoveSpline.StartPointOverlapBox:IsOverlappingComponent(self.Player.CapsuleComponent) then
       self:OnStartBoxOverlap(true)
     end
-    self.CinemaMoveSpline.StartPointOverlapBox.OnComponentBeginOverlap:Add(self.Player, function(Obj, Comp, OtherActor)
-      if OtherActor == self.Player then
+    self.CinemaMoveSpline.StartPointOverlapBox.OnComponentBeginOverlap:Add(self.Player, function(Obj, Comp, OtherActor, OtherComp)
+      if not IsValid(self.Player) then
+        return
+      end
+      if OtherComp == self.Player.CapsuleComponent then
         self:OnStartBoxOverlap(true)
       end
     end)
-    self.CinemaMoveSpline.StartPointOverlapBox.OnComponentEndOverlap:Add(self.Player, function(Obj, Comp, OtherActor)
-      if OtherActor == self.Player then
+    self.CinemaMoveSpline.StartPointOverlapBox.OnComponentEndOverlap:Add(self.Player, function(Obj, Comp, OtherActor, OtherComp)
+      if not IsValid(self.Player) then
+        return
+      end
+      if OtherComp == self.Player.CapsuleComponent then
         self:OnStartBoxOverlap(false)
       end
     end)

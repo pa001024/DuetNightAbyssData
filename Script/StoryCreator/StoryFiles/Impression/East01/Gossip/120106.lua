@@ -3,22 +3,22 @@ return {
   storyDescription = "",
   lineData = {
     {
-      startStory = "1761827815091419898",
+      startStory = "1761827815091419711",
       startPort = "StoryStart",
-      endStory = "1761827815091419900",
+      endStory = "1761827815091419713",
       endPort = "In"
     },
     {
-      startStory = "1761827815091419900",
+      startStory = "1761827815091419713",
       startPort = "Success",
-      endStory = "1761827815091419899",
+      endStory = "1761827815091419712",
       endPort = "StoryEnd"
     }
   },
   storyNodeData = {
-    ["1761827815091419898"] = {
+    ["1761827815091419711"] = {
       isStoryNode = true,
-      key = "1761827815091419898",
+      key = "1761827815091419711",
       type = "StoryStartNode",
       name = "StoryStart",
       pos = {x = 800, y = 300},
@@ -29,9 +29,9 @@ return {
         commentData = {}
       }
     },
-    ["1761827815091419899"] = {
+    ["1761827815091419712"] = {
       isStoryNode = true,
-      key = "1761827815091419899",
+      key = "1761827815091419712",
       type = "StoryEndNode",
       name = "StoryEnd",
       pos = {x = 1659.857142857143, y = 180.14285714285714},
@@ -42,12 +42,12 @@ return {
         commentData = {}
       }
     },
-    ["1761827815091419900"] = {
+    ["1761827815091419713"] = {
       isStoryNode = true,
-      key = "1761827815091419900",
+      key = "1761827815091419713",
       type = "StoryNode",
       name = "任务节点",
-      pos = {x = 1228.6140648567118, y = 279.62727223756656},
+      pos = {x = 1226.6140648567118, y = 279.62727223756656},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
@@ -78,45 +78,45 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "1761827815091419901",
+            startQuest = "1761827815091419714",
             startPort = "QuestStart",
-            endQuest = "1761827815091419904",
+            endQuest = "1761827815091419717",
             endPort = "In"
           },
           {
-            startQuest = "1761827815091419904",
+            startQuest = "1761827815091419717",
             startPort = "Out",
-            endQuest = "1761827815091419902",
+            endQuest = "1761827815091419715",
             endPort = "Success"
           }
         },
         nodeData = {
-          ["1761827815091419901"] = {
-            key = "1761827815091419901",
+          ["1761827815091419714"] = {
+            key = "1761827815091419714",
             type = "QuestStartNode",
             name = "QuestStart",
             pos = {x = 891.6923076923077, y = 391.38461538461536},
             propsData = {ModeType = 0}
           },
-          ["1761827815091419902"] = {
-            key = "1761827815091419902",
+          ["1761827815091419715"] = {
+            key = "1761827815091419715",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
             pos = {x = 2056, y = 274},
             propsData = {ModeType = 0}
           },
-          ["1761827815091419903"] = {
-            key = "1761827815091419903",
+          ["1761827815091419716"] = {
+            key = "1761827815091419716",
             type = "QuestFailNode",
             name = "QuestFail",
             pos = {x = 1973.2, y = 557.6000000000001},
             propsData = {}
           },
-          ["1761827815091419904"] = {
-            key = "1761827815091419904",
+          ["1761827815091419717"] = {
+            key = "1761827815091419717",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1308.0077231121281, y = 395.41561784897016},
+            pos = {x = 1306.0077231121281, y = 393.41561784897016},
             propsData = {
               IsNpcNode = false,
               IsPlayerTurnToNPC = true,
@@ -142,6 +142,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",

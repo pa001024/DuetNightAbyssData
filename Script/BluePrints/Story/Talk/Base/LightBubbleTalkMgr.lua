@@ -3,120 +3,7 @@ local M = Class({
   "BluePrints.Common.TimerMgr"
 })
 local TimeUtil = require("Utils.TimeUtils")
-local FSoundOralComponent = require("BluePrints.Story.Talk.Component.SoundOralComponent").FSoundOralComponent
-local LightBubbleTalkAudioComp = {}
-
-function LightBubbleTalkAudioComp.New(Context)
-  local Obj = setmetatable({}, {__index = LightBubbleTalkAudioComp})
-  Obj.SoundOralComponent = FSoundOralComponent.New()
-  Obj.RecordPlayedAudio = nil
-  Obj.Context = Context
-  return Obj
-end
-
-function LightBubbleTalkAudioComp:GetEventKey()
-  return "TalkAudio_LightBubble"
-end
-
-function LightBubbleTalkAudioComp:StopVOSound(Actor)
-  AudioManager(self.Context):StopSound(Actor, self:GetEventKey())
-end
-
-function LightBubbleTalkAudioComp:ClearPlayAudioProxy()
-  if self.PlayAudioProxy then
-    self.PlayAudioProxy.bIsValid = false
-  end
-end
-
-function LightBubbleTalkAudioComp:StartTalkTimer(Callback)
-  self:ClearTimer()
-  local TalkTimer
-  TalkTimer = self.Context:AddTimer(0.1, function()
-    if self:CheckSoundIsStopped(Callback) then
-      self.Context:RemoveTimer(TalkTimer)
-    end
-  end, true, 0.1)
-  self.TalkTimer = TalkTimer
-end
-
-function LightBubbleTalkAudioComp:ClearTimer()
-  self.Context:RemoveTimer(self.TalkTimer)
-  self.TalkTimer = nil
-end
-
-function LightBubbleTalkAudioComp:CheckSoundIsStopped(Callback)
-  if not self.sound_event_instance or AudioManager(self.Context):IsSoundStoped_CPP(self.sound_event_instance) then
-    if Callback then
-      Callback()
-    end
-    return true
-  end
-end
-
-function LightBubbleTalkAudioComp:PlayDialogue(DialogueId, LightTalkTask, Callback, Actor)
-  local AudioManager = AudioManager(self.Context)
-  local DialogueData = DataMgr.Dialogue[DialogueId]
-  if not DialogueData.VoiceName then
-    self:StopVOSound(Actor)
-    if Callback then
-      Callback()
-    end
-    return
-  end
-  if DialogueData and DialogueData.SnapShot then
-    AudioManager:SetEventSoundParam(nil, Const.DialogueEffectSoundKey, {
-      voice_effect_type = Const.DialogueSnapShot[DialogueData.SnapShot]
-    })
-  else
-    AudioManager:SetEventSoundParam(nil, Const.DialogueEffectSoundKey, {voice_effect_type = 0})
-  end
-  local AssetPaths = self.SoundOralComponent:GetAssetPaths(AudioManager, DialogueData.VoiceName, DialogueData.ExStoryInfo)
-  if not AssetPaths or 0 == #AssetPaths then
-    self:StopVOSound(Actor)
-    DebugPrint(string.format("Error:DialogueData.DialogueId: %d 的音频资源不存在", DialogueId))
-    if Callback then
-      Callback()
-    end
-    return
-  end
-  self:ClearPlayAudioProxy()
-  local PlayAudioProxy = {bIsValid = true}
-  self.PlayAudioProxy = PlayAudioProxy
-  local LoadedCount = 0
-  local TotalToLoad = #AssetPaths
-  for _, Path in pairs(AssetPaths) do
-    UResourceLibrary.LoadObjectAsync(self.Context, Path, {
-      self.Context,
-      function(_, Asset)
-        LoadedCount = LoadedCount + 1
-        if LoadedCount < TotalToLoad then
-          return
-        end
-        if PlayAudioProxy.bIsValid == false then
-          if Callback then
-            Callback()
-          end
-          return
-        end
-        self:StopVOSound(self.AttachActor)
-        self.AttachActor = Actor
-        local AttachActor = Actor
-        self.RecordPlayedAudio = DialogueData.VoiceName
-        local SoundEventInstance = self.SoundOralComponent:PlaySoundWithOral(AudioManager, DialogueData.VoiceName, AttachActor, true, DialogueData.ExStoryInfo, self:GetEventKey())
-        self.sound_event_instance = SoundEventInstance
-        self:StartTalkTimer(Callback)
-      end
-    })
-  end
-end
-
-function LightBubbleTalkAudioComp:StopAndClear()
-  self:StopVOSound(self.AttachActor)
-  self:ClearTimer()
-  self:ClearPlayAudioProxy()
-  self.AttachActor = nil
-end
-
+local TalkAudioComp_C = require("BluePrints.Story.Talk.Controller.TalkAudioComp")
 local LightBubbleTalkTask = {}
 
 function LightBubbleTalkTask.New(Character, TalkSetting, FinishCallback, Context)
@@ -129,7 +16,7 @@ function LightBubbleTalkTask.New(Character, TalkSetting, FinishCallback, Context
   NewTable.BubbleStartDelay = TalkSetting.BubbleStartDelay
   NewTable.FinishCallback = FinishCallback
   NewTable.Context = Context
-  NewTable.TalkAudioComp = LightBubbleTalkAudioComp.New(Context)
+  NewTable.TalkAudioComp = TalkAudioComp_C.New()
   return NewTable
 end
 
@@ -163,17 +50,17 @@ function LightBubbleTalkTask:PlayDialogue()
       self:OnDialogueEnd()
     end
   end)
-  self.TalkAudioComp:PlayDialogue(self.NowDialogueId, self, function()
+  self.TalkAudioComp:PlayAudio(DialogueData.VoiceName, self.TalkActor, function()
     bAudioFInish = true
     if bTimerFinish and bAudioFInish then
       self:OnDialogueEnd()
     end
-  end, self.TalkActor)
+  end, DialogueData, true, "LightBubble")
 end
 
 function LightBubbleTalkTask:OnDialogueEnd()
   local DialogueData = DataMgr.Dialogue[self.NowDialogueId]
-  self.TalkAudioComp:StopAndClear()
+  self.TalkAudioComp:Clear()
   if not DialogueData or not DialogueData.NextDialogue then
     if self.BubbleType == UE4.ELightBubbleType.StayOnLast then
       return
@@ -224,7 +111,7 @@ function LightBubbleTalkTask:ClearTalkTask()
     self.Context:RemoveTimer(self.StartTimer)
     self.StartTimer = nil
   end
-  self.TalkAudioComp:StopAndClear()
+  self.TalkAudioComp:Clear()
 end
 
 function M:InitTalkMgr()

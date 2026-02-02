@@ -72,6 +72,9 @@ T.RT_16 = {
   [5] = T.RT_4,
   [6] = T.RT_4
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -443,7 +446,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_1013",
     Param = T.RT_6,
     Rarity = 5,
-    ReleaseVersion = 149,
+    ReleaseVersion = 140,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -551,7 +554,7 @@ return ReadOnly("Walnut", {
     Name = "UI_Name_Walnut_1017",
     Param = T.RT_6,
     Rarity = 5,
-    ReleaseVersion = 125,
+    ReleaseVersion = 120,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -1915,7 +1918,7 @@ return ReadOnly("Walnut", {
   [2045] = {
     AccessKey = T.RT_9,
     Count = T.RT_16,
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/T_Walnut_Weapon.T_Walnut_Weapon",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Melee/T_Walnut_Polearm_Zuiqian.T_Walnut_Polearm_Zuiqian",
     Id = {
       [1] = 910203,
       [2] = 12024,
@@ -1942,7 +1945,7 @@ return ReadOnly("Walnut", {
   [2046] = {
     AccessKey = T.RT_9,
     Count = T.RT_16,
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/T_Walnut_Weapon.T_Walnut_Weapon",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Melee/T_Walnut_Claymore_Wangu.T_Walnut_Claymore_Wangu",
     Id = {
       [1] = 910304,
       [2] = 12055,
@@ -2124,6 +2127,60 @@ return ReadOnly("Walnut", {
     Sound = "SOUND_ITEM_MIHAN",
     Type = T.RT_15,
     WalnutId = 2052,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 2
+  },
+  [2053] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_16,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Melee/T_Walnut_Dualblade_Fengyun.T_Walnut_Dualblade_Fengyun",
+    Id = {
+      [1] = 910404,
+      [2] = 12138,
+      [3] = 30002,
+      [4] = 12139,
+      [5] = 12140,
+      [6] = 211
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_2053",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 120,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 2053,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 2
+  },
+  [2054] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_16,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Range/T_Walnut_Machinegun_Sanjiao.T_Walnut_Machinegun_Sanjiao",
+    Id = {
+      [1] = 920505,
+      [2] = 12141,
+      [3] = 30002,
+      [4] = 12142,
+      [5] = 12143,
+      [6] = 211
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_2054",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 120,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 2054,
     WalnutIndex = "A",
     WalnutNumber = 1,
     WalnutType = 2
@@ -3694,6 +3751,60 @@ return ReadOnly("Walnut", {
     WalnutNumber = 1,
     WalnutType = 3
   },
+  [151745] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_14,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_FeatheredSnake01_Purple",
+    Id = {
+      [1] = 151745,
+      [2] = 102,
+      [3] = 102,
+      [4] = 102,
+      [5] = 102,
+      [6] = 102
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_151745",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 120,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 151745,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 3
+  },
+  [151746] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_14,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_FeatheredSnake01_Purple",
+    Id = {
+      [1] = 151746,
+      [2] = 102,
+      [3] = 102,
+      [4] = 102,
+      [5] = 102,
+      [6] = 102
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_151746",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 120,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 151746,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 3
+  },
   [151751] = {
     AccessKey = T.RT_9,
     Count = T.RT_14,
@@ -4203,6 +4314,60 @@ return ReadOnly("Walnut", {
     Sound = "SOUND_ITEM_MIHAN",
     Type = T.RT_15,
     WalnutId = 151962,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 3
+  },
+  [153011] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_14,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Lilith01",
+    Id = {
+      [1] = 153011,
+      [2] = 102,
+      [3] = 102,
+      [4] = 102,
+      [5] = 102,
+      [6] = 102
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_153011",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 120,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 153011,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 3
+  },
+  [153013] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_14,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_Lilith01",
+    Id = {
+      [1] = 153013,
+      [2] = 102,
+      [3] = 102,
+      [4] = 102,
+      [5] = 102,
+      [6] = 102
+    },
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_153013",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 120,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 153013,
     WalnutIndex = "A",
     WalnutNumber = 1,
     WalnutType = 3

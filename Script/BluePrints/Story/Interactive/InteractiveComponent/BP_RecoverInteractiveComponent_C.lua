@@ -1,3 +1,4 @@
+local LuaConst = require("EMLuaConst")
 require("UnLua")
 local BP_RecoverInteractiveComponent_C = Class({
   "BluePrints.Story.Interactive.InteractiveComponent.BP_InteractiveBaseComponent_C",
@@ -9,7 +10,7 @@ function BP_RecoverInteractiveComponent_C:ReceiveBeginPlay()
   self.InteractStartTimer = 0
   self.Priority = "Normal"
   self.IsBeginRecoverOther = false
-  self.InteractiveDistance = 200
+  self:SetInteractiveDistance(200)
   local RecoveryData = DataMgr.PlayerRotationRates
   self.RecoverySpeed = RecoveryData.RecoverySpeed.ParamentValue[1] or 0
   self.CommonUIConfirmID = 20001
@@ -53,10 +54,11 @@ function BP_RecoverInteractiveComponent_C:IsCanInteractive(PlayerActor)
   if Owner:IsPhantom() and not Owner.IsHostage and Owner.PhantomOwner.Eid ~= PlayerActor.Eid then
     return false
   end
-  if self:DistanceCheckComponent(PlayerActor, self.InteractiveDistance) then
-    return true
+  if LuaConst.OpenComputeInteractive then
+    return self:GetDistanceCheckResult()
+  else
+    return self:DistanceCheckComponent(PlayerActor, self.InteractiveDistance)
   end
-  return false
 end
 
 function BP_RecoverInteractiveComponent_C:DisplayInteractiveBtn(PlayerActor)

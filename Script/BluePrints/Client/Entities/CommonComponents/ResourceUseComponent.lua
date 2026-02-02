@@ -59,9 +59,40 @@ function Component:RequestUseGestureOnline(PlayerCharacter, GestureResourceId)
   if not ResourceInfo then
     return
   end
+  local ResourceIsMountId = self:ResourceIsMount(ResourceInfo)
+  if ResourceIsMountId then
+    self:SendMountRequest(PlayerCharacter, GestureResourceId, ResourceIsMountId)
+  end
   local bIsUpdateState = not ResourceInfo.bIsNoLoopAction
   PlayerCharacter.CurResourceId = GestureResourceId
   self:SwitchOnlineState(self.CurrentOnlineType, CommonConst.OnlineState.UseWheel, {ResourceId = GestureResourceId}, bIsUpdateState)
+end
+
+function Component:SendMountRequest(PlayerCharacter, GestureResourceId, ResourceIsMountId)
+  if 0 ~= PlayerCharacter.CurrentMountId then
+    self:RequestUseCreateMount(self.CurrentOnlineType, GestureResourceId, ResourceIsMountId, 0)
+  else
+    self:RequestDeadRegionOnlineMount(self.CurrentOnlineType, 0)
+  end
+end
+
+function Component:ResourceIsMount(ResourceInfo)
+  if not ResourceInfo then
+    return nil
+  end
+  if not ResourceInfo.UseBPFunction then
+    return nil
+  end
+  if ResourceInfo.UseBPFunction ~= "MountOn" then
+    return nil
+  end
+  if not ResourceInfo.FunctionVars then
+    return nil
+  end
+  if not ResourceInfo.FunctionVars.Id then
+    return nil
+  end
+  return ResourceInfo.FunctionVars.Id
 end
 
 function Component:RequestCancelGestureOnline(PlayerCharacter)
@@ -104,9 +135,6 @@ function Component:ResourceUseEffectAddHPValue(ResourceInfo, PlayerCharacter, In
   Drops[CommonConst.ResourceUseEffectDrop[ResourceInfo.UseEffectType]] = DropCountTable
   local LocTransform = PlayerCharacter:GetTransform()
   GameMode:HandleRewardDrop(Drops, Reason, LocTransform, nil, nil)
-end
-
-function Component:ResourceUseEffectCallMount(ResourceInfo, PlayerCharacter, Info, Reason)
 end
 
 function Component:ResourceUseEffectAddAmmo(ResourceInfo, PlayerCharacter, Info, Reason)
@@ -156,6 +184,9 @@ end
 
 function Component:ResourceUseEffectCreateMechanism(ResourceInfo, PlayerCharacter, Info, Reason)
   print(_G.LogTag, "LXZ ResourceUseEffectCreateMechanism", ResourceInfo.UseParam)
+  if not self.IsInRegionOnline or not self.CurrentOnlineType then
+    return
+  end
   if not ResourceInfo.UseParam then
     return
   end
@@ -186,6 +217,36 @@ end
 function Component:DSSetRefreshRobberMonster(NewValue)
   self.logger.debug("ZJT_ DSSetRefreshRobberMonster ", NewValue)
   self:Multicast("SetRefreshRobberMonster", NewValue)
+end
+
+function Component:UseHeadResource(CharUuid, AppearanceIndex, AccessoryId)
+  local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+  if not PlayerCharacter then
+    return
+  end
+  if not PlayerCharacter.CharacterFashion then
+    return
+  end
+  local CharFashion = PlayerCharacter.CharacterFashion
+  if not CharFashion.Type2Id then
+    self.logger.debug("Player Not Init Yet")
+    return
+  end
+  if not DataMgr.CharAccessory then
+    self.logger.error("DataMgr.CharAccessory Not Init Yet")
+    return
+  end
+  if not DataMgr.CharAccessory[AccessoryId] then
+    self.logger.error("Doesn't has this AccessoryId", AccessoryId)
+    return
+  end
+  local AccessoryType = DataMgr.CharAccessory[AccessoryId].AccessoryType
+  CharFashion:ChangeAccessory(AccessoryId, AccessoryType)
+end
+
+function Component:ResourceUseEffectUseAFDGesture(ResourceInfo, PlayerCharacter, Info, Reason)
+  DebugPrint("gmy@ResourceUseComponent Component:ResourceUseEffectUseAFDGesture", ResourceInfo, PlayerCharacter, Info, Reason, ResourceInfo and ResourceInfo.UseParam)
+  UIManager():LoadUINew("AprilFoolDayRandomTrans")
 end
 
 return Component

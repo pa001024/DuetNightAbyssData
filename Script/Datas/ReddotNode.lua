@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -44,6 +47,39 @@ return ReadOnly("ReddotNode", {
     NodeModuleName = "Activity.Abyss",
     Type = 0
   },
+  Acti_AprilFoolDay = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_AprilFoolDay",
+    NodeModuleName = "Activity.ActivityBase",
+    Type = 1
+  },
+  Acti_AprilFoolDayTab = {
+    Childs = {
+      "Acti_AprilFoolDay",
+      "AprilFoolDayReward",
+      "AprilFoolDayTransformResource",
+      "AprilFoolDayRewardNew"
+    },
+    Name = "Acti_AprilFoolDayTab",
+    bInvokeEveryTime = true
+  },
+  Acti_AutoChess = {
+    Childs = {
+      "AutoChessMonster",
+      "AutoChessEquip",
+      "AutoChessReward",
+      "AutoChessLinear"
+    },
+    Name = "Acti_AutoChess"
+  },
+  Acti_AutoChessActivity = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_AutoChessActivity",
+    NodeModuleName = "AutoChess.Activity",
+    Type = 1
+  },
   Acti_BetaAward = {
     CacheType = 1,
     IsLeaf = true,
@@ -51,11 +87,26 @@ return ReadOnly("ReddotNode", {
     NodeModuleName = "Activity.ConditionReward",
     Type = 0
   },
+  Acti_CameraGame = {
+    CacheType = -1,
+    IsLeaf = true,
+    Name = "Acti_CameraGame",
+    NodeModuleName = "Activity.ActivityBase",
+    Type = 0,
+    bInvokeEveryTime = true
+  },
   Acti_ChallengeLevel = {
     CacheType = 1,
     IsLeaf = true,
     Name = "Acti_ChallengeLevel",
     NodeModuleName = "Activity.ChallengeLevel",
+    Type = 0
+  },
+  Acti_ComeBackTab = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_ComeBackTab",
+    NodeModuleName = "Activity.ComeBack",
     Type = 0
   },
   Acti_Community = {
@@ -146,6 +197,13 @@ return ReadOnly("ReddotNode", {
     NodeModuleName = "Activity.ConditionReward",
     Type = 0
   },
+  Acti_OnlineTime = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_OnlineTime",
+    NodeModuleName = "Activity.AccumulateTarget",
+    Type = 0
+  },
   Acti_PaoTai = {
     CacheType = 1,
     IsLeaf = true,
@@ -176,13 +234,6 @@ return ReadOnly("ReddotNode", {
     NodeModuleName = "Activity.Rouge",
     Type = 0
   },
-  Acti_SignIn11 = {
-    CacheType = 1,
-    IsLeaf = true,
-    Name = "Acti_SignIn11",
-    NodeModuleName = "Activity.DailySignIn",
-    Type = 0
-  },
   Acti_SignInFeina = {
     CacheType = 1,
     IsLeaf = true,
@@ -211,6 +262,27 @@ return ReadOnly("ReddotNode", {
     NodeModuleName = "Activity.DailySignIn",
     Type = 0
   },
+  Acti_SignInYuming = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_SignInYuming",
+    NodeModuleName = "Activity.DailySignIn",
+    Type = 0
+  },
+  Acti_SignInYure = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_SignInYure",
+    NodeModuleName = "Activity.DailySignIn",
+    Type = 0
+  },
+  Acti_SignInZhiliu = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_SignInZhiliu",
+    NodeModuleName = "Activity.DailySignIn",
+    Type = 0
+  },
   Acti_SoloRaid = {
     Childs = {
       "RaidReward",
@@ -231,7 +303,7 @@ return ReadOnly("ReddotNode", {
     IsLeaf = true,
     Name = "Acti_Temple",
     NodeModuleName = "Activity.ActivityBase",
-    Type = 1
+    Type = 0
   },
   Acti_TempleTab = {
     Childs = {
@@ -247,6 +319,13 @@ return ReadOnly("ReddotNode", {
     IsLeaf = true,
     Name = "Acti_Theater",
     NodeModuleName = "Activity.Theater",
+    Type = 0
+  },
+  Acti_TotalRecharge = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_TotalRecharge",
+    NodeModuleName = "Activity.TotalRecharge",
     Type = 0
   },
   Acti_TrailFeinaChar = {
@@ -307,12 +386,49 @@ return ReadOnly("ReddotNode", {
     NodeModuleName = "Activity.TrialChar",
     Type = 1
   },
+  Acti_TrailYumingChar = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_TrailYumingChar",
+    NodeModuleName = "Activity.TrialChar",
+    Type = 1
+  },
+  Acti_TrailZhiliuChar = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_TrailZhiliuChar",
+    NodeModuleName = "Activity.TrialChar",
+    Type = 1
+  },
+  Acti_TrailZhiliuSkin01 = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_TrailZhiliuSkin01",
+    NodeModuleName = "Activity.TrialChar",
+    Type = 1
+  },
   Acti_WebJumpEvent01 = {
     CacheType = 1,
     IsLeaf = true,
     Name = "Acti_WebJumpEvent01",
     NodeModuleName = "Activity.WebJumpEvent",
     Type = 0
+  },
+  Acti_Wuyousheng = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_Wuyousheng",
+    NodeModuleName = "Activity.Wuyousheng",
+    Type = 0
+  },
+  Acti_WuyoushengTab = {
+    Childs = {
+      "Acti_Wuyousheng",
+      "WuyoushengReward",
+      "WuyoushengLevel"
+    },
+    Name = "Acti_WuyoushengTab",
+    bInvokeEveryTime = true
   },
   Acti_ZhiliuEvent = {
     CacheType = 1,
@@ -353,6 +469,29 @@ return ReadOnly("ReddotNode", {
       "AnnouncementDirty"
     },
     Name = "AnnouncementItems"
+  },
+  AprilFoolDayReward = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "AprilFoolDayReward",
+    Type = 0,
+    bInvokeEveryTime = true
+  },
+  AprilFoolDayRewardNew = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "AprilFoolDayRewardNew",
+    NodeModuleName = "AprilFoolDay",
+    Type = 1,
+    bInvokeEveryTime = true
+  },
+  AprilFoolDayTransformResource = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "AprilFoolDayTransformResource",
+    NodeModuleName = "AprilFoolDay",
+    Type = 0,
+    bInvokeEveryTime = true
   },
   Archive = {
     Childs = {
@@ -434,24 +573,60 @@ return ReadOnly("ReddotNode", {
     },
     Name = "ArmoryReward"
   },
+  AutoChessEquip = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "AutoChessEquip",
+    NodeModuleName = "AutoChess.Equip",
+    Type = 1
+  },
+  AutoChessLinear = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "AutoChessLinear",
+    Type = 1,
+    bInvokeEveryTime = true
+  },
+  AutoChessMonster = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "AutoChessMonster",
+    NodeModuleName = "AutoChess.Monster",
+    Type = 1
+  },
+  AutoChessReward = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "AutoChessReward",
+    Type = 0,
+    bInvokeEveryTime = true
+  },
   BattleMainMenu = {
     Childs = {
-      "AnnouncementItems",
-      "ArmoryMainMenu",
-      "NormalMail",
-      "NewFriendRequest",
-      "NewGuideNote",
-      "ActivityHub",
       "EscPortrait",
-      "Map",
       "ExperienceMain",
+      "ArmoryMainMenu",
       "Shop",
-      "Quest",
-      "ModArchive",
       "Gacha",
+      "ForgeEntry",
       "AchieveMain",
+      "Play",
+      "Quest",
+      "NormalMail",
+      "AnnouncementItems",
+      "NewGuideNote",
+      "NewFriendRequest",
+      "BattlePassMain",
+      "ActivityHub",
+      "Map",
+      "Entertainment",
+      "WikiReward",
+      "WalnutBagItems",
+      "Archive",
+      "ModArchive",
       "Setting_Root",
-      "ForgeEntry"
+      "Mounts_Root",
+      "Fame"
     },
     Name = "BattleMainMenu",
     NodeModuleName = "BattleMainMenu"
@@ -499,8 +674,48 @@ return ReadOnly("ReddotNode", {
   ChatMainMenu = {
     Name = "ChatMainMenu"
   },
-  DailyMain = {
+  ComeBackReward = {
+    CacheType = -1,
+    IsLeaf = true,
+    Name = "ComeBackReward",
+    Type = 0
+  },
+  ComeBackSignIn = {
+    CacheType = -1,
+    IsLeaf = true,
+    Name = "ComeBackSignIn",
+    Type = 0,
+    bInvokeEveryTime = true
+  },
+  ComeBackTask = {
+    Childs = {
+      "ComeBackTaskQuest",
+      "ComeBackTaskReward",
+      "ComeBackTaskNew"
+    },
+    Name = "ComeBackTask"
+  },
+  ComeBackTaskNew = {
     CacheType = 1,
+    IsLeaf = true,
+    Name = "ComeBackTaskNew",
+    Type = 1,
+    bInvokeEveryTime = true
+  },
+  ComeBackTaskQuest = {
+    CacheType = -1,
+    IsLeaf = true,
+    Name = "ComeBackTaskQuest",
+    Type = 0
+  },
+  ComeBackTaskReward = {
+    CacheType = -1,
+    IsLeaf = true,
+    Name = "ComeBackTaskReward",
+    Type = 0
+  },
+  DailyMain = {
+    CacheType = -1,
     IsLeaf = true,
     Name = "DailyMain",
     Type = 0
@@ -560,6 +775,7 @@ return ReadOnly("ReddotNode", {
     IsLeaf = true,
     Name = "ExperienceItem",
     NodeModuleName = "Experience",
+    RuleId = "PlayerLevel",
     Type = 0,
     bInvokeEveryTime = true
   },
@@ -568,6 +784,19 @@ return ReadOnly("ReddotNode", {
       "ExperienceItem"
     },
     Name = "ExperienceMain"
+  },
+  Fame = {
+    Childs = {
+      "FameMain",
+      "RecurringFameTask"
+    },
+    Name = "Fame"
+  },
+  FameMain = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "FameMain",
+    Type = 0
   },
   FeinaEventReward = {
     CacheType = 1,
@@ -581,6 +810,7 @@ return ReadOnly("ReddotNode", {
       "Gacha_Normal",
       "Gacha_Special",
       "Gacha_Special_2",
+      "Gacha_Special_3",
       "Gacha_New"
     },
     Name = "Gacha"
@@ -610,6 +840,13 @@ return ReadOnly("ReddotNode", {
     CacheType = 0,
     IsLeaf = true,
     Name = "Gacha_Special_2",
+    NodeModuleName = "Gacha",
+    Type = 0
+  },
+  Gacha_Special_3 = {
+    CacheType = 0,
+    IsLeaf = true,
+    Name = "Gacha_Special_3",
     NodeModuleName = "Gacha",
     Type = 0
   },
@@ -719,6 +956,25 @@ return ReadOnly("ReddotNode", {
     Name = "ModArchive_Task",
     NodeModuleName = "ModArchive",
     Type = 1
+  },
+  MountLicense_Item = {
+    CacheType = -1,
+    IsLeaf = true,
+    Name = "MountLicense_Item",
+    Type = 0
+  },
+  Mount_Item = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Mount_Item",
+    Type = 1
+  },
+  Mounts_Root = {
+    Childs = {
+      "Mount_Item",
+      "MountLicense_Item"
+    },
+    Name = "Mounts_Root"
   },
   NewChar = {
     CacheType = 1,
@@ -848,6 +1104,12 @@ return ReadOnly("ReddotNode", {
     Name = "RangedReward",
     Type = 0
   },
+  RecurringFameTask = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "RecurringFameTask",
+    Type = 0
+  },
   RougeArchiveBlessing = {
     CacheType = 1,
     IsLeaf = true,
@@ -870,8 +1132,8 @@ return ReadOnly("ReddotNode", {
     Childs = {
       "RougeArchiveTreasure",
       "RougeArchiveBlessing",
-      "RougeArchiveRoom",
-      "RougeArchiveStory"
+      "RougeArchiveStory",
+      "RougeArchiveEvent"
     },
     Name = "RougeArchiveNew"
   },
@@ -1059,9 +1321,49 @@ return ReadOnly("ReddotNode", {
       "Shop_Skin_Back",
       "Shop_Skin_Weapon",
       "Shop_Skin_Suit",
-      "Shop_Skin_Effect"
+      "Shop_Skin_Effect",
+      "Shop_Skin_1",
+      "Shop_Skin_2",
+      "Shop_Skin_3",
+      "Shop_Skin_4",
+      "Shop_Skin_5"
     },
     Name = "Shop_Skin"
+  },
+  Shop_Skin_1 = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Shop_Skin_1",
+    NodeModuleName = "Shop",
+    Type = 1
+  },
+  Shop_Skin_2 = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Shop_Skin_2",
+    NodeModuleName = "Shop",
+    Type = 1
+  },
+  Shop_Skin_3 = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Shop_Skin_3",
+    NodeModuleName = "Shop",
+    Type = 1
+  },
+  Shop_Skin_4 = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Shop_Skin_4",
+    NodeModuleName = "Shop",
+    Type = 1
+  },
+  Shop_Skin_5 = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Shop_Skin_5",
+    NodeModuleName = "Shop",
+    Type = 1
   },
   Shop_Skin_Back = {
     CacheType = 1,
@@ -1145,7 +1447,7 @@ return ReadOnly("ReddotNode", {
     Type = 1
   },
   StarterQuest = {
-    CacheType = 1,
+    CacheType = -1,
     IsLeaf = true,
     Name = "StarterQuest",
     Type = 0
@@ -1277,5 +1579,27 @@ return ReadOnly("ReddotNode", {
     IsLeaf = true,
     Name = "WikiReward",
     Type = 0
+  },
+  WuyoushengLevel = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "WuyoushengLevel",
+    NodeModuleName = "Activity.ActivityBase",
+    Type = 1,
+    bInvokeEveryTime = true
+  },
+  WuyoushengReward = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "WuyoushengReward",
+    Type = 0,
+    bInvokeEveryTime = true
+  },
+  WuyoushengTryoutItem = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "WuyoushengTryoutItem",
+    Type = 0,
+    bInvokeEveryTime = true
   }
 })

@@ -1,4 +1,5 @@
 require("UnLua")
+local GameFlowUtils = require("Utils.GameFlowUtils")
 local GMCommandConfig = require("BluePrints.UI.GMInterface.GMCommandConfig")
 local GMVariable = require("BluePrints.UI.GMInterface.GMVariable")
 local GMFunctionLibrary = require("BluePrints.UI.GMInterface.GMFunctionLibrary")
@@ -14,18 +15,73 @@ function WBP_GM_C:Initialize(Initializer)
   self.GMKeys = GMKeys:ToTable()
 end
 
-function WBP_GM_C:RegisterFlow()
-  local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-  if FlowManager then
-    self.Flow = FlowManager:CreateFlow("OpenSystemUI")
-    FlowManager:AddFlow(self.Flow)
+function WBP_GM_C:Construct()
+  WBP_GM_C.Super.Construct(self)
+  self.Input_GM:SetText("")
+  self.Input_Search:SetText("")
+  self.Input_GM.OnTextCommitted:Add(self, self.ExecuteGMCommand)
+  self.Btn_Clear.OnClicked:Add(self, self.ExecuteGMCommand)
+  self.Input_Search.OnTextCommitted:Add(self, self.OnSearchGM)
+  self.Btn_Search.OnPressed:Add(self, self.OnSearchBtn)
+  self.HorizontalBox_0:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.SearchResTitle:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Text_Search:SetText("搜索")
+end
+
+function WBP_GM_C:OnSearchBtn()
+  local BtnText = self.Text_Search:GetText()
+  if "搜索" == BtnText then
+    self:ExecuteSearchGM()
+  elseif "清空" == BtnText then
+    self.Input_Search:SetText("")
+    self:OnSearchTextChange("")
   end
 end
 
+function WBP_GM_C:OnSearchTextChange(Text)
+  if not self.IsInit then
+    return
+  end
+  if "" == Text then
+    self.List_Tab_Top:SetSelectedIndex(LastGMTabIndex)
+    self.HorizontalBox_0:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.SearchResTitle:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Text_Search:SetText("搜索")
+  end
+end
+
+function WBP_GM_C:ExecuteSearchGM()
+  local SearchText = self.Input_Search:GetText()
+  if string.isempty(SearchText) then
+    return
+  end
+  local AllContentArray = TArray(UObject)
+  for _, Command in pairs(self.GMPanelObj.Commands) do
+    AllContentArray:Append(Command.Commands)
+  end
+  self:SearchCommandByName(SearchText, {Commands = AllContentArray})
+  self.HorizontalBox_0:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.SearchResTitle:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.SearchResTitle:SetText(string.format("\"%s\"的搜索结果(%s个)", SearchText, self.List:GetNumItems()))
+end
+
+function WBP_GM_C:OnSearchGM()
+  self:ExecuteSearchGM()
+  local SearchText = self.Input_Search:GetText()
+  if not string.isempty(SearchText) then
+    self.Text_Search:SetText("清空")
+  else
+    self:OnSearchTextChange("")
+  end
+end
+
+function WBP_GM_C:RegisterFlow()
+  self.Flow = GameFlowUtils:AddFlow("OpenSystemUI")
+end
+
 function WBP_GM_C:UnregisterFlow()
-  local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-  if FlowManager and IsValid(self.Flow) then
-    FlowManager:RemoveFlow(self.Flow)
+  if self.Flow then
+    GameFlowUtils:RemoveFlow(self.Flow)
   end
   self.Flow = nil
 end
@@ -33,17 +89,13 @@ end
 function WBP_GM_C:OnLoaded(...)
   self.Super.OnLoaded(self, ...)
   self:RegisterFlow()
-  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-  self.AllCommands = GameInstance.GMPanelObj
-  if not IsValid(self.AllCommands) then
+  if not IsValid(self.GMPanelObj) then
     self:TryToGetCommandList()
-    assert(self.AllCommands, "GM指令列表读取失败,请检查格式或路径！")
+    assert(self.GMPanelObj, "GM指令列表读取失败,请检查格式或路径！")
     self.List_Tab_Top:ClearListItems()
-    for k, v in pairs(self.AllCommands.Commands) do
+    for k, v in pairs(self.GMPanelObj.Commands) do
       self.List_Tab_Top:AddItem(v)
     end
-    self.List_Tab_Top:SetSelectedIndex(0)
-  else
     self.List_Tab_Top:SetSelectedIndex(LastGMTabIndex)
   end
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
@@ -83,31 +135,30 @@ function WBP_GM_C:OnLoaded(...)
 end
 
 function WBP_GM_C:TryToGetCommandList()
-  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-  GameInstance.GMPanelObj = GMObjectUtils.NewCommandObject(GMCommandConfig, self.CommandContentClass)
-  self.AllCommands = GameInstance.GMPanelObj
-  if IsValid(self.AllCommands) then
-    local len1 = self.AllCommands.Commands:Length()
+  self.GMPanelObj = GMObjectUtils.NewCommandObject(GMCommandConfig, self.CommandContentClass)
+  if IsValid(self.GMPanelObj) then
+    local len1 = self.GMPanelObj.Commands:Length()
     for i = 1, len1 do
-      self.AllCommands.Commands[i].ParentWidget = self
-      local len2 = self.AllCommands.Commands[i].Commands:Length()
+      self.GMPanelObj.Commands[i].ParentWidget = self
+      local len2 = self.GMPanelObj.Commands[i].Commands:Length()
       for j = 1, len2 do
-        self.AllCommands.Commands[i].Commands[j].ParentWidget = self
+        self.GMPanelObj.Commands[i].Commands[j].ParentWidget = self
       end
     end
   end
-  GMVariable.AllCommands = self.AllCommands
+  GMVariable.AllCommands = self.GMPanelObj
 end
 
 function WBP_GM_C:SearchCommandByName(text, Command)
-  if nil == text or not IsValid(Command) then
+  if not (nil ~= text and Command) or type(Command) == "userdata" and not IsValid(Command) then
     return
   end
   UE4.UWidgetBlueprintLibrary.DismissAllMenus()
   local commands = Command.Commands
   self.List:ClearListItems()
   for _, v in pairs(commands) do
-    if nil ~= v.Text and nil ~= string.find(v.Text, text) then
+    local FindRes = UKismetStringLibrary.FindSubstring(v.Text, text, false)
+    if nil ~= v.Text and (-1 ~= FindRes or "" == text) then
       self.List:AddItem(v)
       self.List:BP_SetItemSelection(v, v.IsEnable)
     end
@@ -116,6 +167,8 @@ end
 
 function WBP_GM_C:ExecuteGMCommand()
   GMFunctionLibrary.ExecConsoleCommand(self, self.Input_GM:GetText())
+  self.Input_GM:SetText("")
+  self.Input_GM:SetHintText("请输入指令")
 end
 
 function WBP_GM_C:UIData()
@@ -155,14 +208,14 @@ end
 
 function WBP_GM_C:CloseAllMenus()
   UE4.UWidgetBlueprintLibrary.DismissAllMenus()
-  if IsValid(self.AllCommands) then
-    local len1 = self.AllCommands.Commands:Length()
+  if IsValid(self.GMPanelObj) then
+    local len1 = self.GMPanelObj.Commands:Length()
     for i = 1, len1 do
-      local len2 = self.AllCommands.Commands[i].Commands:Length()
+      local len2 = self.GMPanelObj.Commands[i].Commands:Length()
       for j = 1, len2 do
-        local len3 = self.AllCommands.Commands[i].Commands[j].Commands:Length()
+        local len3 = self.GMPanelObj.Commands[i].Commands[j].Commands:Length()
         for k = 1, len3 do
-          self:CloseAllMenusDfs(self.AllCommands.Commands[i].Commands[j].Commands[k])
+          self:CloseAllMenusDfs(self.GMPanelObj.Commands[i].Commands[j].Commands[k])
         end
       end
     end

@@ -1,5 +1,95 @@
 [
   {
+    "id": 601,
+    "名称": "Talisman-Wielding Wishen",
+    "icon": "Wuyou01",
+    "品质": 5,
+    "类型": 3,
+    "最大等级": 1,
+    "捕获经验": 0,
+    "经验": 70,
+    "主动": {
+      "描述": "Deals damage equal to {%} of the main character's ATK to enemies in front within 10 m. Restores {} Sanity per second and increases Skill Speed by {%} for {}s.",
+      "值": [
+        60,
+        15,
+        0.3,
+        4
+      ]
+    },
+    "被动": {
+      "描述": "Defeat 30 enemies: Damage increases to 12000% of the main character's ATK.\nDefeat 60 enemies: Skill Intensity +150%.\nDefeat 90 enemies: Support Skill cooldown -50%.\nDefeat 120 enemies: Skill DMG +90%.",
+      "值": []
+    }
+  },
+  {
+    "id": 602,
+    "名称": "Ascetic Wishen",
+    "icon": "Wuyou03",
+    "品质": 5,
+    "类型": 3,
+    "最大等级": 1,
+    "捕获经验": 0,
+    "经验": 70,
+    "主动": {
+      "描述": "Fires 16 homing projectiles, each dealing damage equal to {%} of the main character's ATK to enemies hit. Increases Resolve by {%}, and for {}s the Wishen's HP percentage is treated as 1% when calculating Morale and Resolve.",
+      "值": [
+        5,
+        0.3,
+        4
+      ]
+    },
+    "被动": {
+      "描述": "Defeat 30 enemies: Damage increases to 1000% of the main character's ATK.\nDefeat 60 enemies: Multishot +75%.\nDefeat 90 enemies: Support Skill cooldown -50%.\nDefeat 120 enemies: Ranged Weapon Attack Speed +90%.",
+      "值": []
+    }
+  },
+  {
+    "id": 603,
+    "名称": "Bladeborne Wishen",
+    "icon": "Wuyou02",
+    "品质": 5,
+    "类型": 3,
+    "最大等级": 1,
+    "捕获经验": 0,
+    "经验": 70,
+    "主动": {
+      "描述": "Generates 3 rotating blades around the main character, dealing damage equal to {%} of the main character's ATK to enemies hit. Restores {} Combo Points per second and increases Charged Attack DMG by {%} for {}s.",
+      "值": [
+        5,
+        40,
+        0.9,
+        4
+      ]
+    },
+    "被动": {
+      "描述": "Defeat 30 enemies: Generates 3 additional blades.\nDefeat 60 enemies: Weapon DMG +135%.\nDefeat 90 enemies: Support Skill cooldown -50%.\nDefeat 120 enemies: Melee Weapon Attack Speed +90%.",
+      "值": []
+    }
+  },
+  {
+    "id": 604,
+    "名称": "Meadow-Walking Wishen",
+    "icon": "Wuyou04",
+    "品质": 5,
+    "类型": 3,
+    "最大等级": 1,
+    "捕获经验": 0,
+    "经验": 70,
+    "主动": {
+      "描述": "Deals damage equal to {%} of the main character's ATK to enemies within 6 m. Increases all summons' Attack Speed by {%} for {}s.",
+      "值": [
+        60,
+        0.8,
+        4
+      ]
+    },
+    "被动": {
+      "描述": "Defeat 30 enemies: Damage increases to 12000% of the main character's ATK.\nDefeat 60 enemies: Skill Range +100%; Skill Duration +100%.\nDefeat 90 enemies: Support Skill cooldown -50%.\nDefeat 120 enemies: Damage dealt by summons +500%.",
+      "值": []
+    }
+  },
+  {
     "id": 4011,
     "uid": 4011,
     "名称": "Miraculous Equinex",
@@ -256,7 +346,7 @@
     "捕获经验": 100,
     "经验": 70,
     "主动": {
-      "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Damage, or +{%} Skill Duration.",
+      "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
       "值": [
         10,
         120,
@@ -285,7 +375,7 @@
     "捕获经验": 100,
     "经验": 70,
     "主动": {
-      "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Damage, or +{%} Skill Duration.",
+      "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
       "值": [
         10,
         120,
@@ -314,7 +404,7 @@
     "捕获经验": 100,
     "经验": 70,
     "主动": {
-      "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Damage, or +{%} Skill Duration.",
+      "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
       "值": [
         10,
         120,
@@ -343,7 +433,7 @@
     "捕获经验": 100,
     "经验": 70,
     "主动": {
-      "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Damage, or +{%} Skill Duration.",
+      "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
       "值": [
         10,
         120,
@@ -414,6 +504,30 @@
     "uid": 4053,
     "名称": "Shiny Shroomie",
     "icon": "Yaoye03",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Heals self and allies by {%} of the main character's Max HP.",
+      "值": [
+        0.15
+      ]
+    },
+    "被动": {
+      "描述": "The main character and Combat Partners gain:\nAnemo ATK +{%}, Max HP +{%}",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4059,
+    "uid": 4051,
+    "名称": "Miraculous Shroomie",
+    "icon": "Yaoye01",
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
@@ -921,6 +1035,31 @@
     }
   },
   {
+    "id": 4128,
+    "uid": 4121,
+    "名称": "Miraculous Bunniva",
+    "icon": "Tangshuang01",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Increases ATK of all allied [Summons] by {%} for {}s.",
+      "值": [
+        0.09,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Increases Hydro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
     "id": 4131,
     "uid": 4131,
     "名称": "Miraculous Pyrootail",
@@ -1159,7 +1298,7 @@
     "捕获经验": 100,
     "经验": 100,
     "主动": {
-      "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill Damage taken by them by {%} for {}s.",
+      "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill DMG taken by them by {%} for {}s.",
       "值": [
         5.85,
         0.036,
@@ -1185,7 +1324,7 @@
     "捕获经验": 100,
     "经验": 100,
     "主动": {
-      "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill Damage taken by them by {%} for {}s.",
+      "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill DMG taken by them by {%} for {}s.",
       "值": [
         5.85,
         0.036,
@@ -1211,7 +1350,7 @@
     "捕获经验": 100,
     "经验": 100,
     "主动": {
-      "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill Damage taken by them by {%} for {}s.",
+      "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill DMG taken by them by {%} for {}s.",
       "值": [
         5.85,
         0.036,

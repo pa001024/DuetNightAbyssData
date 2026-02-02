@@ -9,12 +9,13 @@ function M:Init(Hook)
     self:BindToAnimationFinished(self.Out, {
       self,
       function()
-        print(_G.LogTag, "LXZ OutFinish")
+        self.bAnimEnd = true
         self:SetVisibility(ESlateVisibility.Collapsed)
       end
     })
     self.bInit = true
   end
+  self.bAnimEnd = true
   self:Open(Hook)
 end
 
@@ -26,8 +27,11 @@ function M:OnClickButton()
 end
 
 function M:Open(Hook)
-  if self.bOpen then
+  if self.bOpen or not self.bAnimEnd then
     return
+  end
+  if self:IsAnimationPlaying(self.Out) then
+    self:StopAnimation(self.Out)
   end
   self.bOpen = true
   self:SetVisibility(ESlateVisibility.Visible)
@@ -38,6 +42,7 @@ function M:Close(Hook)
   if not self.bOpen then
     return
   end
+  self.bAnimEnd = false
   self:PlayAnimation(self.Out)
   self.Hook = nil
   self.HookComp = nil

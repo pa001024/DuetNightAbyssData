@@ -161,7 +161,7 @@ function WBP_Cinematic_Common:PlayDialogue(TalkTask, DialogueData, TaskData)
       self:SetVisibility(ESlateVisibility.Collapsed)
       self:SetTipImageHidden(true)
       self:SetTextBorderHidden(true)
-      self.WholeDialogueTypingFinished_Delegate:Fire(true, true)
+      self.WholeDialogueTypingFinished_Delegate:Fire(true)
     end
   end
 end

@@ -109,13 +109,12 @@ function WBP_ModArchive_Archive_Item_C:InitListMod()
       Callback = self.OnClickItem,
       Params = {ModInfo, i}
     }
+    local HasThisMod = self.Owner.HasMod[Content.Id]
+    if HasThisMod then
+      self.HasModNum = self.HasModNum + 1
+    end
     if 1 == self.LockState then
-      local HasThisMod = self.Owner.HasMod[Content.Id]
-      DebugPrint("zw123 ", HasThisMod, self.HasModNum)
       Content.bShadow = not HasThisMod
-      if HasThisMod then
-        self.HasModNum = self.HasModNum + 1
-      end
     elseif 2 == self.LockState then
       Content.bShadow = true
       Content.ItemName = nil
@@ -125,21 +124,19 @@ function WBP_ModArchive_Archive_Item_C:InitListMod()
     end
     self.List_Item:AddItem(Content)
   end
+  self.Text_ArchiveSuitNum:SetColorAndOpacity(self.Color_Normal)
+  self.Text_ArchiveSuitNum:SetText(self.HasModNum .. "/" .. #self.Info.ModList)
   if 1 ~= self.LockState then
-    self.Image_Lock:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    self.Text_ArchiveSuitNum:SetColorAndOpacity(self.Color_Lock)
+    self.Group_Lock:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     if 2 == self.LockState then
-      DebugPrint("未揭晓")
       local Text = DataMgr.Condition[self.Info.ShowCondition].ConditionText
-      self.Text_ArchiveSuitNum:SetText(GText(Text))
+      self.Text_ArchiveSuitLock:SetText(GText(Text))
     elseif 3 == self.LockState then
       local Text = DataMgr.Condition[self.Info.UnlockCondition].ConditionText
-      self.Text_ArchiveSuitNum:SetText(GText(Text))
+      self.Text_ArchiveSuitLock:SetText(GText(Text))
     end
   else
-    self.Image_Lock:SetVisibility(ESlateVisibility.Collapsed)
-    self.Text_ArchiveSuitNum:SetColorAndOpacity(self.Color_Normal)
-    self.Text_ArchiveSuitNum:SetText(self.HasModNum .. "/" .. #self.Info.ModList)
+    self.Group_Lock:SetVisibility(ESlateVisibility.Collapsed)
   end
 end
 

@@ -1,15 +1,19 @@
 local T = {}
-T.RT_1 = {"FX_Dead"}
-T.RT_2 = {"Fish"}
+T.RT_1 = {"Fish"}
+T.RT_2 = {"Back"}
 T.RT_3 = {"Prop"}
 T.RT_4 = {
   0,
   0,
   -5
 }
-T.RT_5 = {
+T.RT_5 = {"FX_Dead"}
+T.RT_6 = {
   "FX_Footprint"
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -48,6 +52,10 @@ return ReadOnly("EffectCreature", {
     EffectCreatureId = 400,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Pet/BP_EffectCreature_BattlePet.BP_EffectCreature_BattlePet",
     SocketName = "Root"
+  },
+  [3703] = {
+    EffectCreatureId = 3703,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Mod/BP_EffectCreature_3703.BP_EffectCreature_3703"
   },
   [4011] = {
     EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Pet/Pet006_Zisha/Animation/Montage/Pet_Zisha_Skill01_Montage.Pet_Zisha_Skill01_Montage",
@@ -364,6 +372,13 @@ return ReadOnly("EffectCreature", {
     MeshResourceId = 466,
     SocketName = "Root"
   },
+  [4171] = {
+    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Pet/Pet027_QingLuan/Animation/Montage/Combat/Pet_QingLuan_Skill01_Montage.Pet_QingLuan_Skill01_Montage",
+    EffectCreatureId = 4171,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Pet/BP_EffectCreature_BattlePet_New.BP_EffectCreature_BattlePet_New",
+    MeshResourceId = 417,
+    SocketName = "Root"
+  },
   [4211] = {
     EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Pet/Pet024_Heiyao/Animation/Montage/Combat/Pet_Heiyao_Skill01_Montage.Pet_Heiyao_Skill01_Montage",
     EffectCreatureId = 4211,
@@ -505,6 +520,13 @@ return ReadOnly("EffectCreature", {
     EffectCreatureId = 6041,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Pet/BP_EffectCreature_BattlePet_New.BP_EffectCreature_BattlePet_New",
     MeshResourceId = 474,
+    SocketName = "Root"
+  },
+  [6051] = {
+    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Pet/Pet027_QingLuan/Animation/Montage/Combat/Pet_QingLuan_Skill02_Montage.Pet_QingLuan_Skill02_Montage",
+    EffectCreatureId = 6051,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Pet/BP_EffectCreature_BattlePet_New.BP_EffectCreature_BattlePet_New",
+    MeshResourceId = 417,
     SocketName = "Root"
   },
   [9011] = {
@@ -1062,14 +1084,82 @@ return ReadOnly("EffectCreature", {
     SocketName = "hook_arm_r"
   },
   [11501] = {
+    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Part/Show/Animation/Montage/Show_Chenglu_Girl_Montage.Show_Chenglu_Girl_Montage",
     EffectCreatureId = 11501,
+    MeshResourceId = 312,
+    SocketName = "root"
+  },
+  [11502] = {
+    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Part/Show/Animation/Montage/Show_Chenglu_Loli_Montage.Show_Chenglu_Loli_Montage",
+    EffectCreatureId = 11502,
+    MeshResourceId = 312,
+    SocketName = "root"
+  },
+  [11503] = {
+    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Part/Show/Animation/Montage/Show_Chenglu_Man_Montage.Show_Chenglu_Man_Montage",
+    EffectCreatureId = 11503,
+    MeshResourceId = 312,
+    SocketName = "root"
+  },
+  [11504] = {
+    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Part/Show/Animation/Montage/Show_Chenglu_Woman_Montage.Show_Chenglu_Woman_Montage",
+    EffectCreatureId = 11504,
+    MeshResourceId = 312,
+    SocketName = "root"
+  },
+  [11505] = {
+    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Part/Show/Animation/Montage/Show_Chenglu_Boy_Montage.Show_Chenglu_Boy_Montage",
+    EffectCreatureId = 11505,
+    MeshResourceId = 312,
+    SocketName = "root"
+  },
+  [11506] = {
+    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Part/Show/Animation/Montage/Show_Chenglu_NewWoman_Montage.Show_Chenglu_NewWoman_Montage",
+    EffectCreatureId = 11506,
     MeshResourceId = 312,
     SocketName = "root"
   },
   [11601] = {
     EffectCreatureId = 11601,
-    MeshResourceId = 313,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Gesture/BP_EffectCreature_Gesture_LungChair01.BP_EffectCreature_Gesture_LungChair01",
+    NotScaledByParent = true,
     SocketName = "root"
+  },
+  [11602] = {
+    EffectCreatureId = 11602,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Gesture/BP_EffectCreature_Gesture_LungChair02.BP_EffectCreature_Gesture_LungChair02",
+    NotScaledByParent = true,
+    SocketName = "root"
+  },
+  [11603] = {
+    EffectCreatureId = 11603,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Gesture/BP_EffectCreature_Gesture_LungChair03.BP_EffectCreature_Gesture_LungChair03",
+    NotScaledByParent = true,
+    SocketName = "root"
+  },
+  [11611] = {
+    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Part/Show/Animation/Sequence/Show_Pini_Shanzi_Girl_A.Show_Pini_Shanzi_Girl_A",
+    EffectCreatureId = 11611,
+    MeshResourceId = 317,
+    SocketName = "hook_arm_r"
+  },
+  [11612] = {
+    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Part/Show/Animation/Sequence/Show_Pini_Shanzi_Girl_C.Show_Pini_Shanzi_Girl_C",
+    EffectCreatureId = 11612,
+    MeshResourceId = 317,
+    SocketName = "hook_arm_r"
+  },
+  [11621] = {
+    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Part/Show/Animation/Sequence/Show_Pini_Shanzi_Man_A.Show_Pini_Shanzi_Man_A",
+    EffectCreatureId = 11621,
+    MeshResourceId = 317,
+    SocketName = "hook_arm_r"
+  },
+  [11622] = {
+    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Part/Show/Animation/Sequence/Show_Pini_Shanzi_Man_C.Show_Pini_Shanzi_Man_C",
+    EffectCreatureId = 11622,
+    MeshResourceId = 317,
+    SocketName = "hook_arm_r"
   },
   [11701] = {
     EffectCreatureId = 11701,
@@ -1086,25 +1176,53 @@ return ReadOnly("EffectCreature", {
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Gesture/BP_EffectCreature_Gesture_Tree02.BP_EffectCreature_Gesture_Tree02",
     SocketName = "root"
   },
-  [14001] = {
-    EffectCreatureId = 14001,
-    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/DeadFx/BP_EffectCreature_Dead_Default.BP_EffectCreature_Dead_Default",
-    EffectCreatureTag = T.RT_1
+  [12001] = {
+    EffectCreatureId = 12001,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Gesture/BP_EffectCreature_Gesture_Yanhua01_01_Spawn.BP_EffectCreature_Gesture_Yanhua01_01_Spawn",
+    SocketName = "root"
   },
-  [14002] = {
-    EffectCreatureId = 14002,
-    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/DeadFx/BP_EffectCreature_Dead_01.BP_EffectCreature_Dead_01",
-    EffectCreatureTag = T.RT_1
+  [12002] = {
+    EffectCreatureId = 12002,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Gesture/BP_EffectCreature_Gesture_Yanhua01_02_Spawn.BP_EffectCreature_Gesture_Yanhua01_02_Spawn",
+    SocketName = "root"
   },
-  [14003] = {
-    EffectCreatureId = 14003,
-    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/DeadFx/BP_EffectCreature_Dead_02.BP_EffectCreature_Dead_02",
-    EffectCreatureTag = T.RT_1
+  [12003] = {
+    EffectCreatureId = 12003,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Gesture/BP_EffectCreature_Gesture_Yanhua01_03_Spawn.BP_EffectCreature_Gesture_Yanhua01_03_Spawn",
+    SocketName = "root"
   },
-  [14004] = {
-    EffectCreatureId = 14004,
-    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/DeadFx/BP_EffectCreature_Dead_03.BP_EffectCreature_Dead_03",
-    EffectCreatureTag = T.RT_1
+  [12101] = {
+    EffectCreatureId = 12101,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Gesture/BP_EffectCreature_Gesture_Yanhua02_01_Spawn.BP_EffectCreature_Gesture_Yanhua02_01_Spawn",
+    SocketName = "root",
+    SoundId = 3601
+  },
+  [12102] = {
+    EffectCreatureId = 12102,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Gesture/BP_EffectCreature_Gesture_Yanhua02_02_Spawn.BP_EffectCreature_Gesture_Yanhua02_02_Spawn",
+    SocketName = "root",
+    SoundId = 3601
+  },
+  [12103] = {
+    EffectCreatureId = 12103,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Gesture/BP_EffectCreature_Gesture_Yanhua02_03_Spawn.BP_EffectCreature_Gesture_Yanhua02_03_Spawn",
+    SocketName = "root",
+    SoundId = 3601
+  },
+  [12201] = {
+    EffectCreatureId = 12201,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Gesture/BP_EffectCreature_Gesture_Yanhua03_Spawn.BP_EffectCreature_Gesture_Yanhua03_Spawn",
+    SocketName = "root"
+  },
+  [12301] = {
+    EffectCreatureId = 12301,
+    MeshResourceId = 315,
+    SocketName = "hook_arm_r"
+  },
+  [12401] = {
+    EffectCreatureId = 12401,
+    MeshResourceId = 316,
+    SocketName = "hook_arm_r"
   },
   [18011] = {
     EffectCreatureId = 18011,
@@ -1115,39 +1233,49 @@ return ReadOnly("EffectCreature", {
     MeshResourceId = 700803,
     SocketName = "lowerarmpendant_left01_a"
   },
+  [30020] = {
+    EffectCreatureId = 30020,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Part/BP_EffectCreature_Waist_Part17.BP_EffectCreature_Waist_Part17",
+    EffectCreatureTag = {"Waist"}
+  },
   [30101] = {
+    DontResetAnim = true,
     EffectCreatureId = 30101,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Others/BP_EffectCreature_Fish.BP_EffectCreature_Fish",
-    EffectCreatureTag = T.RT_2,
+    EffectCreatureTag = T.RT_1,
     MeshResourceId = 299,
     ReplaceByFish = true,
     SocketName = "hook_arm_r"
   },
   [30102] = {
+    DontResetAnim = true,
     EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Part/Show/Animation/Montage/Fish_Girl_Fishing_Start_Montage.Fish_Girl_Fishing_Start_Montage",
     EffectCreatureId = 30102,
-    EffectCreatureTag = T.RT_2,
+    EffectCreatureTag = T.RT_1,
     MeshResourceId = 299,
     SocketName = "hook_arm_r"
   },
   [30112] = {
+    DontResetAnim = true,
     EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Part/Show/Animation/Montage/Fish_Loli_Fishing_Start_Montage.Fish_Loli_Fishing_Start_Montage",
     EffectCreatureId = 30112,
-    EffectCreatureTag = T.RT_2,
+    EffectCreatureTag = T.RT_1,
     MeshResourceId = 299,
     SocketName = "hook_arm_r"
   },
   [30122] = {
+    DontResetAnim = true,
     EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Part/Show/Animation/Montage/Fish_Woman_Fishing_Start_Montage.Fish_Woman_Fishing_Start_Montage",
     EffectCreatureId = 30122,
-    EffectCreatureTag = T.RT_2,
+    EffectCreatureTag = T.RT_1,
     MeshResourceId = 299,
     SocketName = "hook_arm_r"
   },
   [30132] = {
+    DontResetAnim = true,
     EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Part/Show/Animation/Montage/Fish_Boy_Fishing_Start_Montage.Fish_Boy_Fishing_Start_Montage",
     EffectCreatureId = 30132,
-    EffectCreatureTag = T.RT_2,
+    EffectCreatureTag = T.RT_1,
     MeshResourceId = 299,
     SocketName = "hook_arm_r"
   },
@@ -1155,6 +1283,26 @@ return ReadOnly("EffectCreature", {
     EffectCreatureId = 30140,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Others/BP_EffectCreature_Hook_Effect.BP_EffectCreature_Hook_Effect",
     SocketName = "hook_arm_l"
+  },
+  [40014] = {
+    EffectCreatureId = 40014,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Part/BP_EffectCreature_Back_Part11.BP_EffectCreature_Back_Part11",
+    EffectCreatureTag = T.RT_2
+  },
+  [40015] = {
+    EffectCreatureId = 40015,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Part/BP_EffectCreature_Back_Part20.BP_EffectCreature_Back_Part20",
+    EffectCreatureTag = {"Tail"}
+  },
+  [40029] = {
+    EffectCreatureId = 40029,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Part/BP_EffectCreature_Back_Part14.BP_EffectCreature_Back_Part14",
+    EffectCreatureTag = T.RT_2
+  },
+  [40044] = {
+    EffectCreatureId = 40044,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Part/BP_EffectCreature_Back_Part16.BP_EffectCreature_Back_Part16",
+    EffectCreatureTag = T.RT_2
   },
   [42001] = {
     EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Pet/SPet001_Qianji/Animation/Montage/SPet_Qianji_Idle_Montage.SPet_Qianji_Idle_Montage",
@@ -1172,60 +1320,132 @@ return ReadOnly("EffectCreature", {
     MeshResourceId = 42002,
     SocketName = "Root"
   },
+  [49998] = {
+    EffectCreatureId = 49998,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Part/BP_EffectCreature_PosePart.BP_EffectCreature_PosePart",
+    EffectCreatureTag = T.RT_2
+  },
+  [49999] = {
+    EffectCreatureId = 49999,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Part/BP_EffectCreature_PartBase.BP_EffectCreature_PartBase",
+    EffectCreatureTag = T.RT_2
+  },
+  [50001] = {
+    EffectCreatureId = 50001,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/DeadFx/BP_EffectCreature_Dead_Default.BP_EffectCreature_Dead_Default",
+    EffectCreatureTag = T.RT_5
+  },
+  [50002] = {
+    EffectCreatureId = 50002,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/DeadFx/BP_EffectCreature_Dead_01.BP_EffectCreature_Dead_01",
+    EffectCreatureTag = T.RT_5
+  },
+  [50003] = {
+    EffectCreatureId = 50003,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/DeadFx/BP_EffectCreature_Dead_02.BP_EffectCreature_Dead_02",
+    EffectCreatureTag = T.RT_5,
+    SoundId = 3502
+  },
+  [50004] = {
+    EffectCreatureId = 50004,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/DeadFx/BP_EffectCreature_Dead_03.BP_EffectCreature_Dead_03",
+    EffectCreatureTag = T.RT_5
+  },
   [70001] = {
     EffectCreatureId = 70001,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/FootFx/BP_EffectCreature_FootFx_01.BP_EffectCreature_FootFx_01",
-    EffectCreatureTag = T.RT_5,
+    EffectCreatureTag = T.RT_6,
     IsDestroyWithOwner = true
   },
   [70002] = {
     EffectCreatureId = 70002,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/FootFx/BP_EffectCreature_FootFx_02.BP_EffectCreature_FootFx_02",
-    EffectCreatureTag = T.RT_5,
+    EffectCreatureTag = T.RT_6,
+    IsDestroyWithOwner = true
+  },
+  [70003] = {
+    EffectCreatureId = 70003,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/FootFx/BP_EffectCreature_FootFx_03.BP_EffectCreature_FootFx_03",
+    EffectCreatureTag = T.RT_6,
+    IsDestroyWithOwner = true
+  },
+  [70004] = {
+    EffectCreatureId = 70004,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/FootFx/BP_EffectCreature_FootFx_04.BP_EffectCreature_FootFx_04",
+    EffectCreatureTag = T.RT_6,
     IsDestroyWithOwner = true
   },
   [70011] = {
     EffectCreatureId = 70011,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/FootFx/BP_EffectCreature_FootFx_01_01.BP_EffectCreature_FootFx_01_01",
-    EffectCreatureTag = T.RT_5,
+    EffectCreatureTag = T.RT_6,
     IsDestroyWithOwner = true
   },
   [70012] = {
     EffectCreatureId = 70012,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/FootFx/BP_EffectCreature_FootFx_01_02.BP_EffectCreature_FootFx_01_02",
-    EffectCreatureTag = T.RT_5,
+    EffectCreatureTag = T.RT_6,
     IsDestroyWithOwner = true
   },
   [70013] = {
     EffectCreatureId = 70013,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/FootFx/BP_EffectCreature_FootFx_01_03.BP_EffectCreature_FootFx_01_03",
-    EffectCreatureTag = T.RT_5,
+    EffectCreatureTag = T.RT_6,
     IsDestroyWithOwner = true
   },
   [70021] = {
     EffectCreatureId = 70021,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/FootFx/BP_EffectCreature_FootFx_02_01.BP_EffectCreature_FootFx_02_01",
-    EffectCreatureTag = T.RT_5,
+    EffectCreatureTag = T.RT_6,
     IsDestroyWithOwner = true
   },
   [70022] = {
     EffectCreatureId = 70022,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/FootFx/BP_EffectCreature_FootFx_02_02.BP_EffectCreature_FootFx_02_02",
-    EffectCreatureTag = T.RT_5,
+    EffectCreatureTag = T.RT_6,
     IsDestroyWithOwner = true
   },
   [70023] = {
     EffectCreatureId = 70023,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/FootFx/BP_EffectCreature_FootFx_02_03.BP_EffectCreature_FootFx_02_03",
-    EffectCreatureTag = T.RT_5,
+    EffectCreatureTag = T.RT_6,
     IsDestroyWithOwner = true
   },
-  [80003] = {
-    EffectCreatureId = 80003,
-    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/BodyFx/BP_EffectCreature_BodyFx_03.BP_EffectCreature_BodyFx_03",
-    EffectCreatureTag = {"FX_Body"},
-    IsDestroyWithOwner = true,
-    SocketName = "Root"
+  [70031] = {
+    EffectCreatureId = 70031,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/FootFx/BP_EffectCreature_FootFx_03_01.BP_EffectCreature_FootFx_03_01",
+    EffectCreatureTag = T.RT_6,
+    IsDestroyWithOwner = true
+  },
+  [70032] = {
+    EffectCreatureId = 70032,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/FootFx/BP_EffectCreature_FootFx_03_02.BP_EffectCreature_FootFx_03_02",
+    EffectCreatureTag = T.RT_6,
+    IsDestroyWithOwner = true
+  },
+  [70033] = {
+    EffectCreatureId = 70033,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/FootFx/BP_EffectCreature_FootFx_03_03.BP_EffectCreature_FootFx_03_03",
+    EffectCreatureTag = T.RT_6,
+    IsDestroyWithOwner = true
+  },
+  [70041] = {
+    EffectCreatureId = 70041,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/FootFx/BP_EffectCreature_FootFx_04_01.BP_EffectCreature_FootFx_04_01",
+    EffectCreatureTag = T.RT_6,
+    IsDestroyWithOwner = true
+  },
+  [70042] = {
+    EffectCreatureId = 70042,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/FootFx/BP_EffectCreature_FootFx_04_02.BP_EffectCreature_FootFx_04_02",
+    EffectCreatureTag = T.RT_6,
+    IsDestroyWithOwner = true
+  },
+  [70043] = {
+    EffectCreatureId = 70043,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/FootFx/BP_EffectCreature_FootFx_04_03.BP_EffectCreature_FootFx_04_03",
+    EffectCreatureTag = T.RT_6,
+    IsDestroyWithOwner = true
   },
   [110101] = {
     EffectCreatureId = 110101,
@@ -1269,6 +1489,7 @@ return ReadOnly("EffectCreature", {
   [110202] = {
     EffectCreatureAnimPath = "/Game/Asset/Char/Player/Char016_Fuluo/Animation/Summon/Montage/Fuluo_Sum_Attack_Montage.Fuluo_Sum_Attack_Montage",
     EffectCreatureId = 110202,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Skill/BP_EffectCreature_Fuluo_Attack.BP_EffectCreature_Fuluo_Attack",
     MeshResourceId = 110201
   },
   [110221] = {
@@ -1312,10 +1533,8 @@ return ReadOnly("EffectCreature", {
     SocketName = "Root"
   },
   [110301] = {
-    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Char025_Tuosi/Animation/Sequence/Combat/Skill/Tuosi_Skill02.Tuosi_Skill02",
     EffectCreatureId = 110301,
-    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Skill/BP_EffectCreature_Tuosi_Skill2.BP_EffectCreature_Tuosi_Skill2",
-    MeshResourceId = 1103
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Skill/BP_EffectCreature_Tuosi_Skill2.BP_EffectCreature_Tuosi_Skill2"
   },
   [110302] = {EffectCreatureId = 110302, MeshResourceId = 110311},
   [110312] = {
@@ -1618,9 +1837,6 @@ return ReadOnly("EffectCreature", {
     EffectCreatureId = 240105,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Common/BP_EffectCreature_CustomDepth1.BP_EffectCreature_CustomDepth1",
     MeshResourceId = 240101,
-    ReplaceBySkin = {
-      [240199] = 240135
-    },
     SocketName = "Root"
   },
   [240107] = {
@@ -1707,13 +1923,6 @@ return ReadOnly("EffectCreature", {
     EffectCreatureId = 240121,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Pet/BP_EffectCreature_BattlePet.BP_EffectCreature_BattlePet",
     MeshResourceId = 416,
-    SocketName = "Root"
-  },
-  [240135] = {
-    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Char015_Baiheng/Animation/Summon/Sequnence/Baiheng_Emo_IdleShow_01_Summon.Baiheng_Emo_IdleShow_01_Summon",
-    EffectCreatureId = 240135,
-    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Skill/BP_EffectCreature_CustomDepth_Baiheng01.BP_EffectCreature_CustomDepth_Baiheng01",
-    MeshResourceId = 240101,
     SocketName = "Root"
   },
   [240142] = {
@@ -1824,6 +2033,7 @@ return ReadOnly("EffectCreature", {
     EffectCreatureAnimPath = "/Game/Asset/Char/Player/Char014_Kami/Animation/Part/Montage/Kami_Skill02_Part01_01.Kami_Skill02_Part01_01",
     EffectCreatureId = 320201,
     EnterPool = true,
+    HideOnSkillFeature = true,
     MeshResourceId = 320201,
     SocketName = "Root"
   },
@@ -1923,11 +2133,17 @@ return ReadOnly("EffectCreature", {
   },
   [410201] = {
     EffectCreatureId = 410201,
-    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Skill/BP_EffectCreature_Zhiliu_Skill02_DD.BP_EffectCreature_Zhiliu_Skill02_DD"
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Skill/BP_EffectCreature_Zhiliu_Skill02_DD.BP_EffectCreature_Zhiliu_Skill02_DD",
+    ReplaceBySkin = {
+      [410299] = 410241
+    }
   },
   [410202] = {
     EffectCreatureId = 410202,
-    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Skill/BP_EffectCreature_Zhiliu_Skill02_DD_Out.BP_EffectCreature_Zhiliu_Skill02_DD_Out"
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Skill/BP_EffectCreature_Zhiliu_Skill02_DD_Out.BP_EffectCreature_Zhiliu_Skill02_DD_Out",
+    ReplaceBySkin = {
+      [410299] = 410242
+    }
   },
   [410211] = {
     EffectCreatureId = 410211,
@@ -1935,22 +2151,58 @@ return ReadOnly("EffectCreature", {
   },
   [410212] = {
     EffectCreatureId = 410212,
-    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/EmoIdle/BP_EffectCreatur_Zhiliu_Idle_02.BP_EffectCreatur_Zhiliu_Idle_02"
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/EmoIdle/BP_EffectCreatur_Zhiliu_Idle_02.BP_EffectCreatur_Zhiliu_Idle_02",
+    ReplaceBySkin = {
+      [410299] = 410252
+    }
   },
   [410221] = {
     EffectCreatureId = 410221,
-    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Armory/BP_EffectCreature_Zhiliu_Skill02_Armory.BP_EffectCreature_Zhiliu_Skill02_Armory"
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Armory/BP_EffectCreature_Zhiliu_Armory.BP_EffectCreature_Zhiliu_Armory",
+    ReplaceBySkin = {
+      [410299] = 410261
+    }
   },
-  [410222] = {
-    EffectCreatureId = 410222,
-    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Armory/BP_EffectCreature_Zhiliu_Skill02_Armory_Loop.BP_EffectCreature_Zhiliu_Skill02_Armory_Loop"
+  [410223] = {
+    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Char029_Zhiliu/Animation/Part/Montage/Zhiliu_Part_Interactive_Sit02_Montage.Zhiliu_Part_Interactive_Sit02_Montage",
+    EffectCreatureId = 410223,
+    MeshResourceId = 410202,
+    ReplaceBySkin = {
+      [410299] = 410263
+    }
+  },
+  [410224] = {
+    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Char029_Zhiliu/Animation/Part/Montage/Zhiliu_Part_Interactive_Sit03_Montage.Zhiliu_Part_Interactive_Sit03_Montage",
+    EffectCreatureId = 410224,
+    MeshResourceId = 410202
+  },
+  [410241] = {
+    EffectCreatureId = 410241,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Skill/BP_EffectCreature_Zhiliu01_Skill02_DD.BP_EffectCreature_Zhiliu01_Skill02_DD"
+  },
+  [410242] = {
+    EffectCreatureId = 410242,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Skill/BP_EffectCreature_Zhiliu01_Skill02_DD_Out.BP_EffectCreature_Zhiliu01_Skill02_DD_Out"
+  },
+  [410252] = {
+    EffectCreatureId = 410252,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/EmoIdle/BP_EffectCreatur_Zhiliu01_Idle_02.BP_EffectCreatur_Zhiliu01_Idle_02"
+  },
+  [410261] = {
+    EffectCreatureId = 410261,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Armory/BP_EffectCreature_Zhiliu01_Armory.BP_EffectCreature_Zhiliu01_Armory"
+  },
+  [410263] = {
+    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Char029_Zhiliu/Animation/Part/Montage/Zhiliu_Part_Interactive_Sit02_Montage.Zhiliu_Part_Interactive_Sit02_Montage",
+    EffectCreatureId = 410263,
+    MeshResourceId = 410298
   },
   [420103] = {
     EffectCreatureId = 420103,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Armory/BP_EffectCreature_Yuming_Armory.BP_EffectCreature_Yuming_Armory"
   },
   [420104] = {
-    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Char008_Yuming/Animation/Summon/Sequnence/Yuming_Part_Interactive_Sit02.Yuming_Part_Interactive_Sit02",
+    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Char008_Yuming/Animation/Summon/Montage/Interactive/Yuming_Part_Interactive_Sit02_Montage.Yuming_Part_Interactive_Sit02_Montage",
     EffectCreatureId = 420104,
     MeshResourceId = 420102
   },

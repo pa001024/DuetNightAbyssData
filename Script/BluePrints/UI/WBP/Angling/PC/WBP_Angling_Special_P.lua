@@ -6,19 +6,8 @@ local M = Class({
 
 function M:Init(RootPage, FishingSpotId)
   self.RootPage = RootPage
-  self.Btn_Quit.OnClicked:Add(self, self.OnClickQuit)
   self.Btn_Angling.OnClicked:Add(self, self.OnClickAngling)
   if self.RootPage.RootPage.DeviceInPc then
-    self.Com_Key_Esc:CreateCommonKey({
-      KeyInfoList = {
-        {Type = "Text", Text = "Esc"}
-      }
-    })
-    self.Key_Esc_GamePad:CreateCommonKey({
-      KeyInfoList = {
-        {Type = "Img", ImgShortPath = "B"}
-      }
-    })
     self.KeyText_E:CreateCommonKey({
       KeyInfoList = {
         {Type = "Text", Text = "E"}
@@ -30,7 +19,6 @@ function M:Init(RootPage, FishingSpotId)
       }
     })
   else
-    self.Com_Key_Esc:SetVisibility(ESlateVisibility.Collapsed)
     self.KeyText_E:SetVisibility(ESlateVisibility.Collapsed)
   end
   self.Text_Tips:SetText(GText("UI_Fishing_SmallToBigChance"))
@@ -45,11 +33,11 @@ function M:OnCanSpecialFishing()
   if self.RootPage.DeviceInPc then
     self.RootPage.WidgetSwitcher_MP:SetVisibility(ESlateVisibility.Collapsed)
   end
-  self:AddTimer(1, self.CountDown, true, 0, "SpecialFishing")
+  self:AddTimer(1, self.SpecialFishingCountDown, true, 0, "SpecialFishing")
   AudioManager(self):PlayUISound(self, "event:/ui/minigame/fish_one_more_start", nil, nil)
 end
 
-function M:CountDown()
+function M:SpecialFishingCountDown()
   self:PlayAnimation(self.Countdown)
   self.CountTime = self.CountTime - 1
   self.Text_Time:SetText(self.CountTime)
@@ -90,10 +78,8 @@ end
 function M:RefreshInfoByInputTypeChange(CurInputDevice, CurGamepadName)
   if CurInputDevice == ECommonInputType.MouseAndKeyboard and self.RootPage.RootPage.DeviceInPc then
     self.WidgetSwitcher_E:SetActiveWidgetIndex(0)
-    self.WidgetSwitcher_Esc:SetActiveWidgetIndex(0)
   elseif CurInputDevice == ECommonInputType.Gamepad and self.RootPage.RootPage.DeviceInPc then
     self.WidgetSwitcher_E:SetActiveWidgetIndex(1)
-    self.WidgetSwitcher_Esc:SetActiveWidgetIndex(1)
   elseif CurInputDevice == ECommonInputType.Touch then
   end
 end

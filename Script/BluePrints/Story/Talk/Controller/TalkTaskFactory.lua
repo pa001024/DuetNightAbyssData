@@ -102,11 +102,6 @@ function TalkTaskFactory:AttachCompsToTask(TalkTask, TalkTaskData, TalkType)
     local TalkComp_HideElseCharacter = TalkComp_HideElseCharacter_C.New(TalkTaskData.TalkContext, TalkTaskData.TalkActors)
     self:AttachCompToTask(TalkTask, TalkComp_HideElseCharacter)
   end
-  if TalkTaskData.bDisableMonsterAIForSimpleTalk then
-    local TalkComp_DisableAndHideMonster_C = require("BluePrints.Story.Talk.Controller.TalkComps").TalkComp_DisableAndHideMonster_C
-    local TalkComp_DisableAndHideMonster = TalkComp_DisableAndHideMonster_C.New(TalkTaskData.TalkContext)
-    self:AttachCompToTask(TalkTask, TalkComp_DisableAndHideMonster)
-  end
   if TalkTaskData.bDisableGameInput then
     local SoundEffect = TalkComps.TalkComp_SoundEffect_C.New(TalkTaskData.TalkContext)
     self:AttachCompToTask(TalkTask, SoundEffect)

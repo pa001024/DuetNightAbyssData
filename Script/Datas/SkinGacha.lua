@@ -5,6 +5,9 @@ T.RT_1 = {
   1003
 }
 T.RT_2 = {1004, 1003}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -23,12 +26,12 @@ return ReadOnly("SkinGacha", {
     GachaDes = "SkinGacha_Des_Normal",
     GachaDisplayPath = "FileMediaSource'/Game/Asset/UIVideo/Gacha/Gacha_Pool_SongluShuimu01.Gacha_Pool_SongluShuimu01'",
     GachaDisplayType = 1,
-    GachaEndTime = 2209003200,
+    GachaEndTime = LocalTimeProxy(2209003200),
     GachaHistoryType = 2,
     GachaId = 9001,
     GachaName = "SkinGacha_Name_Normal_1",
     GachaNameBp = "WidgetBlueprint'/Game/UI/WBP/GachaNew/Widget/Title/WBP_Gacha_PoolTitle_Normal.WBP_Gacha_PoolTitle_Normal'",
-    GachaStartTime = 1704081600,
+    GachaStartTime = LocalTimeProxy(1704081600),
     GachaTimes = 1,
     GachaType = "GACHA_SKIN_TYPE_NORMAL",
     GachaWarning = "SkinGacha_Warning_Normal",
@@ -53,12 +56,12 @@ return ReadOnly("SkinGacha", {
     GachaDes = "SkinGacha_Des_Special",
     GachaDisplayPath = "FileMediaSource'/Game/Asset/UIVideo/Gacha/Gacha_Pool_Saiqi01.Gacha_Pool_Saiqi01'",
     GachaDisplayType = 1,
-    GachaEndTime = 1766394000,
+    GachaEndTime = LocalTimeProxy(1766394000),
     GachaHistoryType = 2,
     GachaId = 9002,
     GachaName = "SkinGacha_Name_Special_1",
     GachaNameBp = "WidgetBlueprint'/Game/UI/WBP/GachaNew/Widget/Title/WBP_Gacha_PoolTitle_Saiqi01.WBP_Gacha_PoolTitle_Saiqi01'",
-    GachaStartTime = 1704081600,
+    GachaStartTime = LocalTimeProxy(1704081600),
     GachaTimes = 1,
     GachaType = "GACHA_SKIN_TYPE_SPECIAL",
     GachaWarning = "SkinGacha_Warning_Special",
@@ -70,6 +73,7 @@ return ReadOnly("SkinGacha", {
     TabId = 2
   },
   [9003] = {
+    BgBGM = "event:/bgm/1_1/0133_fushu_skin",
     BgMusic = "event:/ui/btc/gacha_pool_fushu_skin01",
     BubbleShowGoods = {
       140227,
@@ -85,12 +89,12 @@ return ReadOnly("SkinGacha", {
     GachaDes = "SkinGacha_Des_Special",
     GachaDisplayPath = "FileMediaSource'/Game/Asset/UIVideo/Gacha/Gacha_Pool_Baiheng01.Gacha_Pool_Baiheng01'",
     GachaDisplayType = 1,
-    GachaEndTime = 1770667200,
+    GachaEndTime = LocalTimeProxy(1770667200),
     GachaHistoryType = 2,
     GachaId = 9003,
     GachaName = "SkinGacha_Name_Special_2",
     GachaNameBp = "WidgetBlueprint'/Game/UI/WBP/GachaNew/Widget/Title/WBP_Gacha_PoolTitle_Baiheng01.WBP_Gacha_PoolTitle_Baiheng01'",
-    GachaStartTime = 1766408400,
+    GachaStartTime = LocalTimeProxy(1766408400),
     GachaTimes = 1,
     GachaType = "GACHA_SKIN_TYPE_SPECIAL_2",
     GachaWarning = "SkinGacha_Warning_Special_2",
@@ -100,5 +104,37 @@ return ReadOnly("SkinGacha", {
     Star4ItemId = 99972,
     Star5ItemId = 99971,
     TabId = 3
+  },
+  [9004] = {
+    BubbleShowGoods = {
+      140270,
+      140271,
+      140272,
+      140273
+    },
+    ConditionId = 4041,
+    DisplayCostRes = T.RT_1,
+    GachaCoreDes = "UI_SkinGacha_Core_GoldSkin",
+    GachaCoreDesColor = 5,
+    GachaCostNum10 = 10,
+    GachaCostRes = T.RT_2,
+    GachaDes = "SkinGacha_Des_Special",
+    GachaDisplayPath = "FileMediaSource'/Game/Asset/UIVideo/Gacha/Gacha_Pool_Zhiliu01.Gacha_Pool_Zhiliu01'",
+    GachaDisplayType = 1,
+    GachaEndTime = LocalTimeProxy(1775466000),
+    GachaHistoryType = 2,
+    GachaId = 9004,
+    GachaName = "SkinGacha_Name_Special_3",
+    GachaNameBp = "WidgetBlueprint'/Game/UI/WBP/GachaNew/Widget/Title/WBP_Gacha_PoolTitle_Zhiliu01.WBP_Gacha_PoolTitle_Zhiliu01'",
+    GachaStartTime = LocalTimeProxy(1768356000),
+    GachaTimes = 1,
+    GachaType = "GACHA_SKIN_TYPE_SPECIAL_3",
+    GachaWarning = "SkinGacha_Warning_Special_3",
+    ProbabilityId = 1001,
+    Sequence = 3,
+    Star3ItemId = 99963,
+    Star4ItemId = 99962,
+    Star5ItemId = 99961,
+    TabId = 4
   }
 })

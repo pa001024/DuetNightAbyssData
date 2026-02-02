@@ -41,6 +41,9 @@ local MessageWrap = {
       elseif string.startswith(Content, ChatCommon.DyePlanCopyHeader) then
         local JsonStr = string.sub(Content, #ChatCommon.DyePlanCopyHeader + 1)
         self.DyePlanInfo = json.decode(JsonStr)
+      elseif string.startswith(Content, ChatCommon.GiftCopyHeader) then
+        local JsonStr = string.sub(Content, #ChatCommon.GiftCopyHeader + 1)
+        self.GiftInfo = json.decode(JsonStr)
       end
     end,
     IsSticker = function(self)

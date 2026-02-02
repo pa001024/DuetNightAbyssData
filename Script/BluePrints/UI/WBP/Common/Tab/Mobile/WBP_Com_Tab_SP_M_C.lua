@@ -112,7 +112,7 @@ function M:ResetDynamicNode()
             ItemType = "Resource",
             HandleMouseDown = true
           })
-          ResourceBar:SetResourceId(CoinId)
+          ResourceBar:SetItemId(CoinId)
           if self.bShowBubble then
             self:CheckAndShowLimitedResourceBubble(CoinId, ResourceBar)
           end
@@ -137,7 +137,7 @@ end
 function M:UpdateResource()
   for k, v in pairs(self.ResourceBar) do
     if IsValid(v) then
-      v:RefreshResourceInfo()
+      v:RefreshItemInfo()
     end
   end
 end
@@ -361,7 +361,7 @@ end
 
 function M:OnPropSetResources(ResourceId)
   if self.ResourceBar and self.ResourceBar[ResourceId] then
-    self.ResourceBar[ResourceId]:RefreshResourceInfo()
+    self.ResourceBar[ResourceId]:RefreshItemInfo()
   end
 end
 
@@ -433,7 +433,7 @@ function M:HideLimitedResourceBubbleAfterDelay(ResourceBar, DelayTime)
   if not self.BubbleTimers then
     self.BubbleTimers = {}
   end
-  local TimerId = "LimitedResourceBubble_" .. tostring(ResourceBar.RId)
+  local TimerId = "LimitedResourceBubble_" .. tostring(ResourceBar.Id)
   if self:IsExistTimer(TimerId) then
     self:RemoveTimer(TimerId)
   end

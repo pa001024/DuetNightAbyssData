@@ -177,7 +177,7 @@ function BP_InteractiveBaseComponent_C:InitCommonUIConfirmID(CommonUIConfirmID)
   if not Data then
     return
   end
-  self.InteractiveDistance = Data.InteractiveRadius or self.InteractiveDistance
+  self:SetInteractiveDistance(Data.InteractiveRadius or self.InteractiveDistance)
   self.InteractiveAngle = Data.InteractiveAngle or self.InteractiveAngle
   self.InteractiveFaceAngle = Data.PlayerFaceAngle or self.InteractiveFaceAngle
   self.ListPriority = Data.InteractivePriority or 0

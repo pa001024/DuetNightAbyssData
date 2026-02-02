@@ -156,30 +156,23 @@ end
 function Component:TheaterPerformGameReward(TotalRewardsBox)
   self.logger.info("TheaterPerformGameReward")
   local RewardList = {}
-  local RewardId
-  for Id, State in pairs(TotalRewardsBox.OriginRewardIds) do
-    if 1 == State then
-      RewardId = Id
-      break
-    end
-  end
-  local RewardInfo = DataMgr.Reward[RewardId]
-  if RewardInfo then
-    local RewardIds = RewardInfo.Id or {}
-    local RewardCounts = RewardInfo.Count or {}
-    local RewardTypes = RewardInfo.Type or {}
-    for i = 1, #RewardIds do
-      local ItemId = RewardIds[i]
-      local Count = RewardUtils:GetCount(RewardCounts[i])
-      local Rarity = ItemUtils.GetItemRarity(ItemId, RewardTypes[i])
-      local ItemType = RewardTypes[i]
-      local RewardContent = {
-        ItemId = ItemId,
-        ItemType = ItemType,
-        Count = Count,
-        Rarity = Rarity
-      }
-      table.insert(RewardList, RewardContent)
+  local AllRewardType = DataMgr.RewardType
+  for Type, _ in pairs(AllRewardType) do
+    local CurRewards = TotalRewardsBox[Type .. "s"]
+    if not IsEmptyTable(CurRewards) then
+      for Id, Count in pairs(CurRewards) do
+        local ItemId = Id
+        local ItemCount = Count["1"]
+        local ItemRarity = ItemUtils.GetItemRarity(ItemId, Type)
+        local ItemType = Type
+        local RewardContent = {
+          ItemType = ItemType,
+          ItemId = ItemId,
+          Count = ItemCount,
+          Rarity = ItemRarity
+        }
+        table.insert(RewardList, RewardContent)
+      end
     end
   end
   UIUtils.ShowHudReward(GText("UI_COMMON_REWARD"), RewardList)

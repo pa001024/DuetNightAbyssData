@@ -105,6 +105,17 @@ function Component:CheckShopItemUnlockRaidPoint(ShopItemId)
   return true
 end
 
+function Component:CheckShopItemCondition(ShopItemId)
+  if not ShopItemId then
+    return false
+  end
+  local ShopItemData = DataMgr.ShopItem[ShopItemId]
+  if ShopItemData.ItemCondition and not self:CheckCondition(ShopItemData.ItemCondition) then
+    return false
+  end
+  return true
+end
+
 function Component:CheckShopItemCanPurchase(ShopItemId, Count)
   local ShopItem = self.ShopItems[ShopItemId]
   local ShopItemData = DataMgr.ShopItem[ShopItemId]
@@ -119,6 +130,9 @@ function Component:CheckShopItemCanPurchase(ShopItemId, Count)
     return false
   end
   if not self:CheckIsEffective(ShopItemId) then
+    return false
+  end
+  if not self:CheckShopItemCondition(ShopItemId) then
     return false
   end
   if self:CheckShopItemHasRequire(ShopItemId) then

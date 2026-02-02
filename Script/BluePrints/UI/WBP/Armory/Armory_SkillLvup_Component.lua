@@ -158,7 +158,7 @@ function Component:OnCharSkillLevelUp(Ret, SkillId, Level, NewLevel)
       end
     end
     
-    self.Owner:BlockAllUIInput(true)
+    self.Owner:BlockAllUIInput(true, "SP_DisplayOnly")
     UIManager:LoadUI(nil, "UpgradePrompt", self.Owner:GetZOrder(), "LevelUp", "Skill", Level, NewLevel, self.Attrs, self.ComparedAttrs, self, Callback)
   else
     UIManager:ShowError(Ret, 1.5)

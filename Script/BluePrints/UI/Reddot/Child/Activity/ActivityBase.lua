@@ -78,6 +78,7 @@ function ReddotTreeNode_ActivityBase:OnDecreaseCount(SubValue, CacheDetailChange
     CacheDetail.New = 0
     CacheDetail.Red = 0
     CacheDetail.bClose = true
+    CacheDetail.CurrentEventId = CacheDetailChangedParams.EventId
   end
   self:JudgeReddotType(CacheDetail)
 end

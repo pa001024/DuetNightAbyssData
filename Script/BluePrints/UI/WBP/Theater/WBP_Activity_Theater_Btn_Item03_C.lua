@@ -14,7 +14,17 @@ function M:Init(Content)
   self.CountDownTime = Content.Time
   self.Index = Content.Index
   self.Switch_item:SetActiveWidgetIndex(0)
-  self:PlayAnimation(self.Normal)
+  if Content.IsNotDisplay then
+    if self.ParentWidget.CurLevelIndex and self.ParentWidget.CurLevelIndex == self.Index then
+      self.CountDownTime = Content.EndTime - TimeUtils.NowTime()
+      self:OnLevelStart()
+    else
+      self:PlayAnimation(self.Fail)
+      self.Image_Time:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+  else
+    self:PlayAnimation(self.Normal)
+  end
 end
 
 function M:OnLevelStart()
@@ -48,7 +58,6 @@ function M:OnLevelStart()
 end
 
 function M:OnCountDownFinished()
-  self.ParentWidget:ClearPerformAction()
   if self.SuccessPerform == true then
     if not self.IsFinished then
       self:PlayAnimation(self.Success)

@@ -2,10 +2,13 @@ local ETaskState = require("BluePrints.Story.Talk.Base.ETaskState")
 local ETalkType = require("BluePrints.Story.Talk.Base.ETalkType")
 local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
 local FHideAllMonstersComponent = require("BluePrints.Story.Components.HideAllMonstersComponent")
+local FDialogueIterationComponent = require("BluePrints.Story.Components.DialogueIterationComponent")
 local FDialogueRecordComponent = require("BluePrints.Story.Components.DialogueRecordComponent")
 local FDialogueFlowGraphComponent = require("BluePrints.Story.Components.DialogueFlowGraphComponent")
 local FHideAllNpcsComponent = require("BluePrints.Story.Components.HideAllNpcsComponent")
 local FExecutionFlowUtils = require("BluePrints.Story.ExecutionFlow.ExecutionFlowUtils")
+local ExpressionComp_C = require("BluePrints.Story.Talk.Controller.ExpressionComp")
+local TalkAudioComp_C = require("BluePrints.Story.Talk.Controller.TalkAudioComp")
 local TalkTaskBase_C = Class()
 
 function TalkTaskBase_C:New(TaskData, TalkType)
@@ -96,6 +99,12 @@ function TalkTaskBase_C:OnPlayingDialogue(DialogueData)
     AudioManager(GWorld.GameInstance):UpdateTalkSnapShotParam(Const.DialogueSnapShot[RawData.SnapShot])
   else
     AudioManager(GWorld.GameInstance):UpdateTalkSnapShotParam(0)
+  end
+end
+
+function TalkTaskBase_C:StartPlayDialogue()
+  if self.DialogueIterationComponent then
+    self.DialogueIterationComponent:Start()
   end
 end
 
@@ -265,7 +274,7 @@ end
 function TalkTaskBase_C:PauseAudio()
   self:PauseSnapShot()
   if self.TalkAudioComp then
-    self.TalkAudioComp:OnPaused(self)
+    self.TalkAudioComp:OnPaused()
   end
 end
 
@@ -293,17 +302,51 @@ end
 function TalkTaskBase_C:HideUI()
 end
 
+function TalkTaskBase_C:CreateExpressionComponent()
+  self.ExpressionComp = ExpressionComp_C.New()
+end
+
+function TalkTaskBase_C:CreateTalkAudioComponent()
+  self.TalkAudioComp = TalkAudioComp_C.New()
+end
+
+function TalkTaskBase_C:PlayAudio(DialogueData, Callback, bIsAttachActor, bPauseResume, bNoWait, OverrideAttachActor)
+  if self.TalkAudioComp then
+    local VoiceName = DialogueData.VoiceName
+    local SoundHandle = self.TalkTaskData.BasicTalkType
+    local DialogueId = DialogueData.DialogueId
+    local ExtraDialogueInfo = DataMgr.Dialogue[DialogueId]
+    if ExtraDialogueInfo and ExtraDialogueInfo.bTurnOffVoice and AudioManager(GWorld.GameInstance).bTurnOffTalkVoice then
+      if Callback then
+        Callback()
+      end
+      return
+    end
+    local TalkActorData = DialogueData.TalkActorData
+    local SrcActor = TalkActorData and TalkActorData.TalkActor
+    self.TalkAudioComp:PlayAudio(VoiceName, SrcActor, Callback, ExtraDialogueInfo, bIsAttachActor, SoundHandle, OverrideAttachActor, bPauseResume, bNoWait)
+  end
+end
+
 function TalkTaskBase_C:ResumePauseAudio()
   if self.TalkAudioComp then
-    self.TalkAudioComp:OnPauseResumed(self)
+    self.TalkAudioComp:OnPauseResumed()
   end
 end
 
 function TalkTaskBase_C:ClearAudio()
   if self.TalkAudioComp then
-    self.TalkAudioComp:Clear(self)
+    self.TalkAudioComp:Clear()
   end
   self:RemoveDialogueEffectSound()
+end
+
+function TalkTaskBase_C:ClearAllTimers()
+  DebugPrint("TalkTaskBase_C:ClearAllTimers")
+  if self.TalkTimerManager then
+    self.TalkTimerManager:ClearTimer(self)
+    self.TalkTimerManager:ClearTimer(self.dsl)
+  end
 end
 
 function TalkTaskBase_C:SkipDialogue()
@@ -449,6 +492,12 @@ function TalkTaskBase_C:SwitchHideDialoguePanel(bHide)
   end
 end
 
+function TalkTaskBase_C:CreateDialogueIteratorComponent()
+  if self.TalkTaskData then
+    self.DialogueIterationComponent = FDialogueIterationComponent:New(DataMgr.Dialogue, self.TalkTaskData.FirstDialogueId, self)
+  end
+end
+
 function TalkTaskBase_C:CreateDialogueRecordComponent()
   self.DialogueRecordComponent = FDialogueRecordComponent:New(self, self.TaskData)
 end
@@ -505,9 +554,6 @@ function TalkTaskBase_C:ProcessShowHide(bIsBegin)
   self:SwitchEnableComponent(self.HideAllEffectComponent, bIsBegin)
   self:SwitchEnableComponent(self.HideMechanismsFXComponent, bIsBegin)
   if bIsBegin then
-    if self.HideEffectComponent then
-      self.HideEffectComponent:HideEffect(true)
-    end
     if self.HideAllMonstersComponent then
       self.HideAllMonstersComponent:DoHide()
     end
@@ -524,9 +570,6 @@ function TalkTaskBase_C:ProcessShowHide(bIsBegin)
     end
     if self.HideAllNpcsComponent then
       self.HideAllNpcsComponent:ResumeHide()
-    end
-    if self.HideEffectComponent then
-      self.HideEffectComponent:HideEffect(false)
     end
   end
 end

@@ -2,6 +2,9 @@ local T = {}
 T.RT_1 = {1101}
 T.RT_2 = {2101}
 T.RT_3 = {2301}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -9,6 +12,7 @@ return ReadOnly("CharPartMesh", {
   [90001] = {
     AccessoryId = 90001,
     AccessoryType = "Back",
+    CharPartId = 110103,
     Des = "UI_Accessory_Desc_90001",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Cloak_Heitao",
     Name = "UI_Accessory_Name_90001",
@@ -20,6 +24,7 @@ return ReadOnly("CharPartMesh", {
   [90002] = {
     AccessoryId = 90002,
     AccessoryType = "Back",
+    CharPartId = 210103,
     Des = "UI_Accessory_Desc_90002",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Back06.T_Fashion_Back06'",
     Name = "UI_Accessory_Name_90002",
@@ -31,6 +36,7 @@ return ReadOnly("CharPartMesh", {
   [90003] = {
     AccessoryId = 90003,
     AccessoryType = "Back",
+    CharPartId = 230103,
     Des = "UI_Accessory_Desc_90003",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Back01.T_Fashion_Back01'",
     Name = "UI_Accessory_Name_90003",
@@ -42,6 +48,7 @@ return ReadOnly("CharPartMesh", {
   [90004] = {
     AccessoryId = 90004,
     AccessoryType = "Back",
+    CharPartId = 320103,
     Des = "UI_Accessory_Desc_90004",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Back10.T_Fashion_Back10'",
     Name = "UI_Accessory_Name_90004",
@@ -53,6 +60,7 @@ return ReadOnly("CharPartMesh", {
   [90005] = {
     AccessoryId = 90005,
     AccessoryType = "Back",
+    CharPartId = 410203,
     Des = "UI_Accessory_Desc_90005",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Back14.T_Fashion_Back14'",
     Name = "UI_Accessory_Name_90005",
@@ -64,6 +72,7 @@ return ReadOnly("CharPartMesh", {
   [90006] = {
     AccessoryId = 90006,
     AccessoryType = "Back",
+    CharPartId = 540103,
     Des = "UI_Accessory_Desc_90006",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Back09.T_Fashion_Back09'",
     Name = "UI_Accessory_Name_90006",
@@ -75,6 +84,7 @@ return ReadOnly("CharPartMesh", {
   [90007] = {
     AccessoryId = 90007,
     AccessoryType = "Back",
+    CharPartId = 510203,
     Des = "UI_Accessory_Desc_90007",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Back08.T_Fashion_Back08'",
     Name = "UI_Accessory_Name_90007",
@@ -86,6 +96,7 @@ return ReadOnly("CharPartMesh", {
   [90008] = {
     AccessoryId = 90008,
     AccessoryType = "Back",
+    CharPartId = 110303,
     Des = "UI_Accessory_Desc_90008",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Back11.T_Fashion_Back11'",
     Name = "UI_Accessory_Name_90008",
@@ -97,6 +108,7 @@ return ReadOnly("CharPartMesh", {
   [90009] = {
     AccessoryId = 90009,
     AccessoryType = "Back",
+    CharPartId = 150303,
     Des = "UI_Accessory_Desc_90009",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Back04.T_Fashion_Back04'",
     Name = "UI_Accessory_Name_90009",
@@ -108,6 +120,7 @@ return ReadOnly("CharPartMesh", {
   [90011] = {
     AccessoryId = 90011,
     AccessoryType = "Back",
+    CharPartId = 410103,
     Des = "UI_Accessory_Desc_90011",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Cloak_Lise.T_Fashion_Cloak_Lise'",
     Name = "UI_Accessory_Name_90011",
@@ -119,6 +132,7 @@ return ReadOnly("CharPartMesh", {
   [90012] = {
     AccessoryId = 90012,
     AccessoryType = "Back",
+    CharPartId = 160103,
     Des = "UI_Accessory_Desc_90012",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Part_Cloak_Nuzhu.T_Part_Cloak_Nuzhu'",
     Name = "UI_Accessory_Name_90012",
@@ -130,6 +144,7 @@ return ReadOnly("CharPartMesh", {
   [90013] = {
     AccessoryId = 90013,
     AccessoryType = "Back",
+    CharPartId = 160108,
     Des = "UI_Accessory_Desc_90012",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Part_Cloak_Nanzhu.T_Part_Cloak_Nanzhu'",
     Name = "UI_Accessory_Name_90012",
@@ -141,6 +156,7 @@ return ReadOnly("CharPartMesh", {
   [90014] = {
     AccessoryId = 90014,
     AccessoryType = "Back",
+    CharPartId = 320203,
     Des = "UI_Accessory_Desc_90014",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Cloak_Kami.T_Fashion_Cloak_Kami'",
     Name = "UI_Accessory_Name_90014",
@@ -238,5 +254,15 @@ return ReadOnly("CharPartMesh", {
     PartName = "Horn",
     Rarity = 5,
     Skin = {3101}
+  },
+  [410293] = {
+    AccessoryId = 410293,
+    AccessoryType = "Back",
+    CharPartId = 410293,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Hair027_01.T_Fashion_Hair027_01'",
+    PartName = "PartMesh",
+    Rarity = 5,
+    Skin = {410201},
+    Sound = "SOUND_ITEM_CLOTH"
   }
 })

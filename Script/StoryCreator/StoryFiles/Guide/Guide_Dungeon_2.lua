@@ -860,7 +860,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "Right",
+              MessageLoc = "Down",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },

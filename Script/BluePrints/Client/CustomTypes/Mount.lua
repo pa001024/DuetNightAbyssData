@@ -6,13 +6,34 @@ local FormatProperties = require("NetworkEngine.Common.Assemble").FormatProperti
 local Mount = Class("Mount", CustomTypes.CustomAttr)
 Mount.__Props__ = {
   MountId = prop.prop("Int", "client save"),
-  BattleMountId = prop.getter("BattleChar", "BattleMountId"),
+  BattleMountId = prop.getter("Data", "BattleMountId"),
   MountRarity = prop.getter("Data", "MountRarity"),
-  ResourceId = prop.getter("Data", "ResourceId")
+  ResourceId = prop.getter("Data", "ResourceId"),
+  UsedSkins = prop.prop("Appearance.SkinDict", "client save"),
+  CurrentAppearanceIndex = prop.prop("Int", "client save", 1),
+  AppearanceSuits = prop.prop("Appearance.AppearanceList", "client save")
 }
 
 function Mount:Init(MountId)
   self.MountId = MountId
+  self:InitAppearance()
+end
+
+function Mount:InitAppearance()
+  self.AppearanceSuits:AddMountAppearance(self.MountId)
+  self.UsedSkins:GetNewSkin(self.MountId, CommonConst.SkinType.Mount)
+end
+
+function Mount:GetAppearance()
+  return self.AppearanceSuits[self.CurrentAppearanceIndex]
+end
+
+function Mount:AddSkin(SkinId)
+  return self.UsedSkins:GetNewSkin(SkinId, CommonConst.SkinType.Mount)
+end
+
+function Mount:GetSkin(SkinId)
+  return self.UsedSkins:GetSkin(SkinId)
 end
 
 function Mount:Data()
@@ -29,9 +50,6 @@ MountShareData.__Props__ = {
 
 function MountShareData:Data()
   return DataMgr.MountLevel[self.LevelId]
-end
-
-function MountShareData:IsUnlock()
 end
 
 FormatProperties(MountShareData)

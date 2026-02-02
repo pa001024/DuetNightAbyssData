@@ -21,9 +21,8 @@ function TalkCameraManager_C.New(TalkContext, Player, PlayerController)
   Obj.Player = Player
   Obj.PlayerController = PlayerController
   Obj.AIControllerForPlayer = nil
-  Obj.CineCameras = {}
-  Obj.CurrentCineCameraIdx = 1
   Obj.TalkPawn = nil
+  Obj.CineCamera = nil
   Obj.CurrentCamera = nil
   Obj.InteractiveActor = nil
   Obj.BlendRunTime = 0
@@ -205,24 +204,6 @@ function TalkCameraManager_C:GetActiveCameraComponent(Target, CameraClass)
     end
   end
   return RtnCameraComponent
-end
-
-function TalkCameraManager_C:DialogueBlendCamera(CameraInfo, CameraBlendTime, CameraTransform, FinalCameraInfo, CameraBlendCurve, ToFinalCameraBlendTime, TalkStage, Instigator, Callback)
-  if not CameraInfo then
-    if Callback then
-      Callback()
-    end
-    return
-  end
-  local FixedCamera = self:GetFixedCamera(CameraInfo, TalkStage)
-  self:CameraBlendToNew(Instigator, FixedCamera, CameraBlendTime, nil, {
-    Func = function()
-      if Callback then
-        Callback()
-      end
-      self:StartCameraBreathe(FixedCamera, CameraTransform, CameraInfo, FinalCameraInfo, CameraBlendCurve, ToFinalCameraBlendTime, TalkStage)
-    end
-  })
 end
 
 function TalkCameraManager_C:_StartCameraBreathe_FinalCameraConfig(CameraInfo, FinalCameraInfo, BlendDuration, Stage, CameraBlendCurve, FinalCameraBlendCallback)
@@ -466,7 +447,8 @@ function TalkCameraManager_C:GetTalkPawnNew(bUseProceduralCamera, ProceduralCame
       AngleThreshold = ProceduralCameraData.BlockRange,
       AngleAfterBlock = ProceduralCameraData.IfBlockThenRot,
       CameraHeight = ProceduralCameraData.CameraHeight,
-      PivotOffset = ProceduralCameraData.PivotOffset
+      PivotOffset = ProceduralCameraData.PivotOffset,
+      MinCameraDis = ProceduralCameraData.MinCameraDistance
     }
   end
   local Loc, Rot = self:CalculateTalkPawnTrans((ProceduralParams or {}).PivotOffset)
@@ -480,6 +462,11 @@ function TalkCameraManager_C:GetTalkPawnNew(bUseProceduralCamera, ProceduralCame
     self.TalkContext:FreeSimpleProceduralCamera(CameraActor, self.TalkPawn, self.Player, self.InteractiveActor, ProceduralParams.PushX, ProceduralParams.PullX, ProceduralParams.AngleThreshold, ProceduralParams.AngleAfterBlock, ProceduralParams.CameraHeight)
     if ProceduralParams.CameraControl == nil or ProceduralParams.CameraControl == false then
       self.TalkPawn:SetDisableRotation(true)
+    end
+    local PlayerToOrigin = UE4.UKismetMathLibrary.VSize(self.Player:K2_GetActorLocation() - Loc)
+    local MinSpringArmLength = PlayerToOrigin + ProceduralParams.MinCameraDis
+    if MinSpringArmLength > self.TalkPawn.TalkSpringArm.BaseTargetArmLength then
+      self.TalkPawn.TalkSpringArm.BaseTargetArmLength = MinSpringArmLength
     end
   end
   return self.TalkPawn
@@ -525,21 +512,25 @@ function TalkCameraManager_C:GetCurrentCameraInfo()
 end
 
 function TalkCameraManager_C:GetCineCamera()
-  local CameraIdx = self:GetCineCameraIdx()
-  local CineCamera = self.CineCameras[CameraIdx]
-  if not CineCamera then
-    self.CineCameras[CameraIdx] = self.TalkContext:GetWorld():SpawnActor(ACineCameraActor:StaticClass(), UE4.UKismetMathLibrary.MakeTransform(FVector(1), FRotator(0, 0, 0), FVector(1)), UE4.ESpawnActorCollisionHandlingMethod.AlwaysSpawn)
-    local CameraComp = self:GetCameraComponent(self.CineCameras[CameraIdx])
-    self:MarkCameraIsConfigured(CameraComp, false)
-    self:RecordCameraConfig(CameraComp, nil)
-    CameraComp:SetConstraintAspectRatio(false)
-    return self.CineCameras[CameraIdx]
-  else
+  if not self.CineCamera then
+    local CineCamera = self.TalkContext:GetWorld():SpawnActor(ACineCameraActor:StaticClass(), UE4.UKismetMathLibrary.MakeTransform(FVector(1), FRotator(0, 0, 0), FVector(1)), UE4.ESpawnActorCollisionHandlingMethod.AlwaysSpawn)
     local CameraComp = self:GetCameraComponent(CineCamera)
     self:MarkCameraIsConfigured(CameraComp, false)
     self:RecordCameraConfig(CameraComp, nil)
-    return CineCamera
+    CameraComp:SetConstraintAspectRatio(false)
+    self.CineCamera = CineCamera
   end
+  return self.CineCamera
+end
+
+function TalkCameraManager_C:ClearCineCamera()
+  if IsValid(self.CineCamera) then
+    local CameraComp = self:GetCameraComponent(self.CineCamera)
+    self:MarkCameraIsConfigured(CameraComp, false)
+    self:RecordCameraConfig(CameraComp, nil)
+    self.CineCamera:K2_DestroyActor()
+  end
+  self.CineCamera = nil
 end
 
 local function Split(str, p)
@@ -708,12 +699,6 @@ function TalkCameraManager_C:PasteConfigToCamera(Camera, Config)
   end
 end
 
-function TalkCameraManager_C:GetCineCameraIdx()
-  local CurrentCineCameraIdx = self.CurrentCineCameraIdx
-  self.CurrentCineCameraIdx = self.CurrentCineCameraIdx % 3 + 1
-  return CurrentCineCameraIdx
-end
-
 function TalkCameraManager_C:FixAndReturnFOV(CameraComponent, Config, NewAspectRatio)
   local InitFOV = Config.FOV
   if not InitFOV then
@@ -846,6 +831,12 @@ function TalkCameraManager_C:ClearSingleCameraPP(CameraComponent)
   if CameraComponent.MaterialInstDynamicMaps then
     CameraComponent.MaterialInstDynamicMaps:Clear()
   end
+end
+
+function TalkCameraManager_C:ClearTalkCamera()
+  self.CurrentCamera = nil
+  self:ClearCineCamera()
+  self:ClearPostProcess()
 end
 
 return TalkCameraManager_C

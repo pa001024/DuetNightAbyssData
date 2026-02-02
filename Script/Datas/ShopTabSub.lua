@@ -4,6 +4,9 @@ T.RT_2 = {215}
 T.RT_3 = {99, 100}
 T.RT_4 = {99}
 T.RT_5 = {211}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -15,51 +18,43 @@ return ReadOnly("ShopTabSub", {
     TabCoin = T.RT_3,
     TabType = "Pay"
   },
-  [1201] = {
+  [1208] = {
     MainTabId = 120,
-    ReddotNode = "Shop_Skin_Suit",
+    ReddotNode = "Shop_Skin_1",
     SubName = "UI_SHOP_SUBTAB_SKIN",
-    SubTabId = 1201,
+    SubTabId = 1208,
     TabCoin = T.RT_3,
     TabType = "Skin"
   },
-  [1202] = {
+  [1209] = {
     MainTabId = 120,
-    ReddotNode = "Shop_Skin_Head",
+    ReddotNode = "Shop_Skin_2",
+    SubName = "UI_Mount",
+    SubTabId = 1209,
+    TabCoin = T.RT_3,
+    TabType = "Normal"
+  },
+  [1210] = {
+    MainTabId = 120,
+    ReddotNode = "Shop_Skin_3",
     SubName = "UI_SHOP_MAINTAB_ACCESSORY_Head",
-    SubTabId = 1202,
+    SubTabId = 1210,
     TabCoin = T.RT_3,
     TabType = "Skin"
   },
-  [1203] = {
+  [1211] = {
     MainTabId = 120,
-    ReddotNode = "Shop_Skin_Face",
-    SubName = "UI_SHOP_MAINTAB_ACCESSORY_Face",
-    SubTabId = 1203,
+    ReddotNode = "Shop_Skin_4",
+    SubName = "UI_SHOP_MAINTAB_ACCESSORY_Body",
+    SubTabId = 1211,
     TabCoin = T.RT_3,
     TabType = "Skin"
   },
-  [1204] = {
+  [1212] = {
     MainTabId = 120,
-    ReddotNode = "Shop_Skin_Waist",
-    SubName = "UI_SHOP_MAINTAB_ACCESSORY_Waist",
-    SubTabId = 1204,
-    TabCoin = T.RT_3,
-    TabType = "Skin"
-  },
-  [1205] = {
-    MainTabId = 120,
-    ReddotNode = "Shop_Skin_Back",
-    SubName = "UI_SHOP_MAINTAB_ACCESSORY_Back",
-    SubTabId = 1205,
-    TabCoin = T.RT_3,
-    TabType = "Skin"
-  },
-  [1207] = {
-    MainTabId = 120,
-    ReddotNode = "Shop_Skin_Effect",
+    ReddotNode = "Shop_Skin_5",
     SubName = "UI_SHOP_MAINTAB_ACCESSORY_EFFECT",
-    SubTabId = 1207,
+    SubTabId = 1212,
     TabCoin = T.RT_3,
     TabType = "Skin"
   },
@@ -185,7 +180,7 @@ return ReadOnly("ShopTabSub", {
     TabType = "Complex"
   },
   [2002] = {
-    ConditionId = "TimeRewardShopTab",
+    ConditionId = "Rouge",
     MainTabId = 200,
     SubName = "UI_SHOP_MAINTAB_COMPLEX_2",
     SubTabId = 2002,
@@ -319,7 +314,7 @@ return ReadOnly("ShopTabSub", {
     MainTabId = 10004,
     SubName = "RaidDungeon_Shop_Name",
     SubTabId = 100041,
-    TabCoin = {218},
+    TabCoin = {220},
     TabType = "Normal"
   },
   [100051] = {
@@ -328,5 +323,33 @@ return ReadOnly("ShopTabSub", {
     SubTabId = 100051,
     TabCoin = {29005},
     TabType = "Normal"
+  },
+  [100061] = {
+    MainTabId = 10006,
+    SubName = "AutoChessShop",
+    SubTabId = 100061,
+    TabCoin = {219},
+    TabType = "Normal"
+  },
+  [900011] = {
+    MainTabId = 90001,
+    SubName = "UI_SHOP_SUBTAB_SKIN",
+    SubTabId = 900011,
+    TabCoin = T.RT_3,
+    TabType = "Skin"
+  },
+  [900012] = {
+    MainTabId = 90002,
+    SubName = "UI_SHOP_MAINTAB_ACCESSORY_Head",
+    SubTabId = 900012,
+    TabCoin = T.RT_3,
+    TabType = "Skin"
+  },
+  [900013] = {
+    MainTabId = 90003,
+    SubName = "UI_SHOP_MAINTAB_ACCESSORY_Body",
+    SubTabId = 900013,
+    TabCoin = T.RT_3,
+    TabType = "Skin"
   }
 })

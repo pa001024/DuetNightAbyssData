@@ -45,6 +45,15 @@ T.RT_10 = {
   [1] = T.RT_8,
   [2] = T.RT_9
 }
+T.RT_11 = {120, 9999}
+T.RT_12 = {
+  AlertRange = T.RT_11,
+  AlertRangeDownSpeed = 0,
+  AlertRangeUpSpeed = 0
+}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -391,7 +400,7 @@ return ReadOnly("AlertData", {
     },
     AlertResetChange = 0,
     BroadCastAlertValue = 40,
-    BroadCastDis = 1000,
+    BroadCastDis = 0,
     CanBroadCastAlert = true,
     CommonAlertHearId = 2,
     CommonAlertSetValue = 99,
@@ -434,7 +443,7 @@ return ReadOnly("AlertData", {
     },
     AlertResetChange = 0,
     BroadCastAlertValue = 40,
-    BroadCastDis = 1000,
+    BroadCastDis = 0,
     CanBroadCastAlert = true,
     CommonAlertHearId = 2,
     CommonAlertSetValue = 99,
@@ -527,11 +536,7 @@ return ReadOnly("AlertData", {
         AlertRangeSightId = 9800001,
         AlertRangeUpSpeed = 240
       },
-      [2] = {
-        AlertRange = {120, 9999},
-        AlertRangeDownSpeed = 0,
-        AlertRangeUpSpeed = 0
-      }
+      [2] = T.RT_12
     },
     AlertResetChange = 0,
     BroadCastDis = 0,
@@ -551,5 +556,20 @@ return ReadOnly("AlertData", {
     AlertResetChange = 0,
     BroadCastDis = 0,
     MaxAlertValue = 240
+  },
+  [9810001] = {
+    AlertId = 9810001,
+    AlertRanges = {
+      [1] = {
+        AlertRange = T.RT_1,
+        AlertRangeDownSpeed = 0,
+        AlertRangeHearId = 1,
+        AlertRangeSightId = 9810001,
+        AlertRangeUpSpeed = 240
+      },
+      [2] = T.RT_12
+    },
+    AlertResetChange = 0,
+    MaxAlertValue = 9999
   }
 })

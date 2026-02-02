@@ -280,11 +280,14 @@ function Component:OnKeyDownComp(MyGeometry, InKeyName)
   elseif InKeyName == UIConst.GamePadKey.DPadRight then
     self.LevelUpWidget.Btn_Max.Btn.OnClicked:Broadcast()
     return true
-  elseif InKeyName == UIConst.GamePadKey.RightThumb then
+  elseif InKeyName == UIConst.GamePadKey.LeftThumb then
     self.IsFocusInItem = true
     self.Item_1:SetFocus()
     self.Key_Consume:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self:ShowCheckBtn(true)
+    return true
+  elseif InKeyName == UIConst.GamePadKey.RightThumb then
+    self.Tab_Intensify:Handle_KeyEventOnGamePad(InKeyName, "KeyDown")
     return true
   end
   return false

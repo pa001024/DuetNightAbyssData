@@ -277,6 +277,7 @@ function BP_EMGameState_C:OnRep_GameModeState_Lua()
 end
 
 function BP_EMGameState_C:OnRep_GuideEids()
+  DebugPrint("DebugGuideEid OnRep_GuideEids")
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
   local SceneMgrComponent = GameInstance:GetSceneManager()
   if IsValid(SceneMgrComponent) then
@@ -294,6 +295,10 @@ end
 
 function BP_EMGameState_C:RealShowLargeCountDownUI(Count, bShowZeroText)
   EventManager:FireEvent(EventID.OnNotifyShowLargeCountDown, Count, bShowZeroText)
+end
+
+function BP_EMGameState_C:RealCommonCountDownUI(Count, bShowZeroText, CountDownSound, LastCountDownSound)
+  EventManager:FireEvent(EventID.OnNotifyCommonCountDown, Count, bShowZeroText, CountDownSound, LastCountDownSound)
 end
 
 function BP_EMGameState_C:GetSurvivalValue()
@@ -1171,8 +1176,8 @@ end
 function BP_EMGameState_C:DungeonSafePlayTalk_Lua(TalkId)
   local LoadingUI = GWorld.GameInstance:GetLoadingUI()
   if LoadingUI then
-    EventManager:AddEvent(EventID.OnCloseLoadingEnableStory, self, function()
-      EventManager:RemoveEvent(EventID.OnCloseLoadingEnableStory, self)
+    EventManager:AddEvent(EventID.OnEnableStory, self, function()
+      EventManager:RemoveEvent(EventID.OnEnableStory, self)
       UE4.UPlayTalkAsyncAction.PlayTalk(self, TalkId, nil)
     end)
   else
@@ -1183,8 +1188,8 @@ end
 function BP_EMGameState_C:ClientSafeRunStory(StorylinePath, QuestId, STLCallback)
   local LoadingUI = GWorld.GameInstance:GetLoadingUI()
   if LoadingUI then
-    EventManager:AddEvent(EventID.OnCloseLoadingEnableStory, self, function()
-      EventManager:RemoveEvent(EventID.OnCloseLoadingEnableStory, self)
+    EventManager:AddEvent(EventID.OnEnableStory, self, function()
+      EventManager:RemoveEvent(EventID.OnEnableStory, self)
       GWorld.StoryMgr:RunStory(StorylinePath, QuestId, nil, STLCallback, STLCallback)
     end)
   else

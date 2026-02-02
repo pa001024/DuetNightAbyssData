@@ -67,7 +67,7 @@ function WBP_ModArchive_Recommend_C:SortRecommends()
     local aInfo = {}
     aInfo.Id = RecommendInfoA.BuildId
     aInfo.HasThis = false
-    if RecommendInfoA.TargetType == "Char" then
+    if RecommendInfoA.TargetType and string.find(RecommendInfoA.TargetType, "Char") then
       local Info = DataMgr.Char[RecommendInfoA.TargetId]
       aInfo.Rarity = Info.CharRarity
       for _, Char in pairs(self.Avatar.Chars) do
@@ -76,7 +76,7 @@ function WBP_ModArchive_Recommend_C:SortRecommends()
           break
         end
       end
-    elseif RecommendInfoA.TargetType == "Weapon" then
+    elseif RecommendInfoA.TargetType and string.find(RecommendInfoA.TargetType, "Weapon") then
       local Info = DataMgr.Weapon[RecommendInfoA.TargetId]
       aInfo.Rarity = Info.WeaponRarity
       for _, Weapon in pairs(self.Avatar.Weapons) do
@@ -90,7 +90,7 @@ function WBP_ModArchive_Recommend_C:SortRecommends()
     local bInfo = {}
     bInfo.Id = RecommendInfoB.BuildId
     bInfo.HasThis = false
-    if RecommendInfoB.TargetType == "Char" then
+    if RecommendInfoB.TargetType and string.find(RecommendInfoB.TargetType, "Char") then
       local Info = DataMgr.Char[RecommendInfoB.TargetId]
       bInfo.Rarity = Info.CharRarity
       for _, Char in pairs(self.Avatar.Chars) do
@@ -99,7 +99,7 @@ function WBP_ModArchive_Recommend_C:SortRecommends()
           break
         end
       end
-    elseif RecommendInfoB.TargetType == "Weapon" then
+    elseif RecommendInfoB.TargetType and string.find(RecommendInfoB.TargetType, "Weapon") then
       local Info = DataMgr.Weapon[RecommendInfoB.TargetId]
       bInfo.Rarity = Info.WeaponRarity
       for _, Weapon in pairs(self.Avatar.Weapons) do
@@ -137,14 +137,14 @@ function WBP_ModArchive_Recommend_C:InitRecommends()
     local RecommendInfo = self.Recommends[v]
     if RecommendInfo.TabId == self.CurTab then
       local HasThis = false
-      if RecommendInfo.TargetType == "Char" then
+      if RecommendInfo.TargetType and string.find(RecommendInfo.TargetType, "Char") then
         for _, Char in pairs(self.Avatar.Chars) do
           if Char.CharId == RecommendInfo.TargetId then
             HasThis = true
             break
           end
         end
-      elseif RecommendInfo.TargetType == "Weapon" then
+      elseif RecommendInfo.TargetType and string.find(RecommendInfo.TargetType, "Weapon") then
         for _, Weapon in pairs(self.Avatar.Weapons) do
           if Weapon.WeaponId == RecommendInfo.TargetId then
             HasThis = true

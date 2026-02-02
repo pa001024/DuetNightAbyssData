@@ -104,6 +104,12 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
     WidgetName = "Squat",
     InnerActiveSlateName = "Button_Area",
     MaskNodeName = "Image_SquatPos"
+  },
+  WalkPos = {
+    WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_Walk_M.WBP_Battle_Walk_M_C'",
+    WidgetName = "Walk",
+    InnerActiveSlateName = "Button_Area",
+    MaskNodeName = "Image_WalkPos"
   }
 }
 BattleHUDCommonConst.LayOutSettingConfig = {

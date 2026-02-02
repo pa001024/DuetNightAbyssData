@@ -720,13 +720,6 @@ function Component:SetUpParameters(Unit)
     Unit:SetActorHideTag("Flexible", true)
     Unit:SetCollisionDisableTag("Flexible", true)
   end
-  if IsValid(Unit) and false == self.DefaultShowEnable and self.UnitType == "Npc" then
-    local bHas = Unit.NoneCollisionTags:Contains("Flexible")
-    if bHas then
-      Unit.NoneCollisionTags:Remove("Flexible")
-      Unit:SetCollisionDisableTag("Flexible", true)
-    end
-  end
   self:SetNpcShowHideByFlexible_Lua(Unit)
 end
 

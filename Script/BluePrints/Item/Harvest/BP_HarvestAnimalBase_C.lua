@@ -5,4 +5,8 @@ function M:GetCanOpen(PlayerEid)
   self.Overridden.GetCanOpen(self, PlayerEid)
 end
 
+function M:Escape()
+  self.Overridden.Escape(self)
+end
+
 return M

@@ -104,6 +104,7 @@ function M:PressedSelectAction()
     end
   elseif 2 == self.Owner.CurStage then
     self.InPress = true
+    self.Owner:LongPressEnter()
   end
 end
 
@@ -115,6 +116,9 @@ function M:ReleasedSelectAction()
     return
   end
   self.InPress = false
+  if 2 == self.Owner.CurStage then
+    self.Owner:LongPressLeave()
+  end
 end
 
 function M:SetBarPercent(Percent)

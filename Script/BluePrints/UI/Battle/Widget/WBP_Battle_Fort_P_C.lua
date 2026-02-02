@@ -58,34 +58,6 @@ function WBP_Battle_Fort_P_C:RefreshSkillButtonKey(Index, IsGamepadMode)
   end
 end
 
-function WBP_Battle_Fort_P_C:InitFortBackKey(FortBackKey)
-  self.FortBackKey = FortBackKey
-  local KeyName = CommonUtils:GetActionMappingKeyName("LeaveCannon")
-  local SkillIcons = UIUtils.GetIconListByActionName("LeaveCannon")
-  local SkillIcon
-  if SkillIcons then
-    SkillIcon = SkillIcons[2]
-    SkillIcon = SkillIcon or SkillIcons[1]
-  end
-  self.BottomKeyInfo = {
-    Keyboard = {
-      KeyInfoList = {
-        {
-          Type = "Text",
-          Text = CommonUtils:GetKeyText(KeyName)
-        }
-      },
-      Desc = GText("UI_Mechanism_ExitPaotai")
-    },
-    Gamepad = {
-      KeyInfoList = {
-        {Type = "Img", ImgShortPath = SkillIcon}
-      },
-      Desc = GText("UI_Mechanism_ExitPaotai")
-    }
-  }
-end
-
 function WBP_Battle_Fort_P_C:RefreshExitButtonKey(IsGamepadMode)
   if IsGamepadMode then
     self.WidgetSwitcher_MP:SetActiveWidgetIndex(1)
@@ -131,14 +103,12 @@ function WBP_Battle_Fort_P_C:InitGamepadView()
   for i = 1, 2 do
     self:RefreshSkillButtonKey(i, true)
   end
-  self.FortBackKey:CreateCommonKey(self.BottomKeyInfo.Gamepad)
 end
 
 function WBP_Battle_Fort_P_C:InitKeyboardView()
   for i = 1, 2 do
     self:RefreshSkillButtonKey(i, false)
   end
-  self.FortBackKey:CreateCommonKey(self.BottomKeyInfo.Keyboard)
 end
 
 function WBP_Battle_Fort_P_C:HideSelf(IsHide)

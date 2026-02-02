@@ -1,5 +1,6 @@
 require("UnLua")
 require("DataMgr")
+local LuaConst = require("EMLuaConst")
 local BP_TheaOnlineInteract_C = Class("BluePrints.Story.Interactive.InteractiveComponent.BP_InteractiveBaseComponent_C")
 
 function BP_TheaOnlineInteract_C:ReceiveBeginPlay()
@@ -18,7 +19,7 @@ function BP_TheaOnlineInteract_C:IsCanInteractive(PlayerActor)
   end
   
   local function Cb(ErrCode, Ret)
-    if Ret.IsJoin == false then
+    if Ret and Ret.IsJoin == false then
       self.bIsAccept = false
     else
       self.bIsAccept = true
@@ -26,10 +27,11 @@ function BP_TheaOnlineInteract_C:IsCanInteractive(PlayerActor)
   end
   
   Avatar:TheaterPerformStateGet(Cb)
-  if self.DistanceCheckComponent(self, PlayerActor, self.InteractiveDistance, false) and self.CFaceToACheckComponent(self, PlayerActor, self.InteractiveFaceAngle, false) and not self.bIsAccept then
-    return true
+  if LuaConst.OpenComputeInteractive then
+    return self:GetDistanceCheckResult() and self.CFaceToACheckComponent(self, PlayerActor, self.InteractiveFaceAngle, false) and not self.bIsAccept
+  else
+    return self.DistanceCheckComponent(self, PlayerActor, self.InteractiveDistance, false) and self.CFaceToACheckComponent(self, PlayerActor, self.InteractiveFaceAngle, false) and not self.bIsAccept
   end
-  return false
 end
 
 function BP_TheaOnlineInteract_C:StartInteractive(PlayerActor)
@@ -46,8 +48,11 @@ function BP_TheaOnlineInteract_C:StartInteractive(PlayerActor)
       self.bIsAccept = true
       EventManager:FireEvent(EventID.OnTheaterJoinPerformGame)
       return
+    elseif ErrCode == ErrorCode.RET_THEATER_PERFORMGAME_NOT_JOIN_TIME then
+      UIManager(self):ShowUITip("CommonToastMain", GText("TheaterOnline_Game_Sign_Fail"), 3)
+      EventManager:FireEvent(EventID.OnTheaterJoinPerformGameFail)
     else
-      UIManager(self):ShowUITip("CommonToastMain", GText("TheaterOnline_Game_Sign_Fail") .. ErrorContent, 3)
+      UIManager(self):ShowUITip("CommonToastMain", GText("TheaterOnline_Game_Sign_Fail"), 3)
     end
   end
   

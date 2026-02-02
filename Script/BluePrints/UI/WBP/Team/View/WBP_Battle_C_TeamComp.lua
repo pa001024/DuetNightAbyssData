@@ -104,16 +104,17 @@ function Component:RefreshTeamWhenEnterGame(bMultiGame)
     self.TeamBloodBars, self.TeamBloodBarCount = {}, 0
   end
   if bMultiGame then
-    local AddedPhantom = {}
     if #TeamModel:GetTeam().Members <= 1 then
       self:_ShowTeamPart(false)
+      local Player = GWorld:GetMainPlayer(0)
       for _, PhantomState in pairs(GameState(self).PhantomArray) do
-        AddedPhantom[PhantomState.Eid] = 1
+        if PhantomState.OwnerEid == Player.Eid then
+          self:AddTeammateUI(PhantomState.Eid, false)
+        end
       end
     else
       self:_ShowTeamPart(true)
       for i, Member in ipairs(TeamModel:GetTeam().Members) do
-        local Player = Battle(self):GetEntity(Member.Uid)
         DebugPrint(LXYTag, "TeamSyncDebug WBP_Battle_C::RefreshTeam.......PlayerArray Exist， Eid:", Member.Uid)
         local bSelfCharacter = false
         if TeamModel:IsYourself(Member.Uid) and self.Platform == "PC" then
@@ -122,19 +123,11 @@ function Component:RefreshTeamWhenEnterGame(bMultiGame)
         else
           self:AddTeammateUI(Member.Uid, true)
         end
-        if Player then
-          for i, Phantom in pairs(Player:GetAllTeammates()) do
-            if Phantom.PhantomOwner and Phantom.PhantomOwner.Eid == Player.Eid then
-              self:AddTeammateUI(Phantom.Eid, false)
-              AddedPhantom[Phantom.Eid] = 1
-            end
+        for _, PhantomState in pairs(GameState(self).PhantomArray) do
+          if PhantomState.OwnerEid == Member.Uid then
+            self:AddTeammateUI(PhantomState.Eid, false)
           end
         end
-      end
-    end
-    for _, PhantomState in pairs(GameState(self).PhantomArray) do
-      if not AddedPhantom[PhantomState.Eid] then
-        self:AddTeammateUI(PhantomState.Eid, false)
       end
     end
   elseif TeamModel:GetTeam() then
@@ -217,7 +210,6 @@ function Component:AddBattleTeamBloodBar(Eid, bIsPlayer, Entity)
     return true
   end
   Entity = Entity or Battle(self):GetEntity(Eid)
-  Utils.Traceback(LXYTag, "TeamSyncDebug 组队流程时序， EventID::ShowTeammateBloodUI, WBP_Battle_C::AddTeammateUI,  WBP_Battle_C_TeamComp::AddBattleTeamBloodBar")
   DebugPrint(DebugTag, LXYTag, "TeamSyncDebug 队 WBP_Battle_C::AddBattleTeamBloodBar, Eid, PlayerCount, bIsPlayer", Eid, GameState(self).PlayerArray:Num(), bIsPlayer)
   local PlayerEid, PhantomEid = Eid, Eid
   if not bIsPlayer then

@@ -103,8 +103,9 @@ function EMCache:_GetCacheName(bUseUUID)
       return
     end
     Tag = tostring(Avatar.Account)
-    if Avatar.Hostnum then
-      Tag = tostring(Avatar.Hostnum) .. "_" .. Tag
+    if Avatar.Uid then
+      local Hostnum = tonumber(Avatar.Uid) // 10000000 // 10
+      Tag = tostring(Hostnum) .. "_" .. Tag
     end
     return FileNamePart .. "_" .. Tag
   end

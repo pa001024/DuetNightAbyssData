@@ -253,8 +253,10 @@ function S:SetCustomerServiceKeyText()
 end
 
 function S:OnCustomerServiceClicked()
+  local Avatar = GWorld:GetAvatar()
   HeroUSDKSubsystem(self):OpenService()
   ReddotManager.ClearLeafNodeCount("Setting_Service")
+  Avatar:ClearCustomerServiceRedDot()
 end
 
 function S:SetLogUpdateKeyText()
@@ -308,6 +310,20 @@ function S:OnLogCleanClicked()
   if EnhanceLogSubsystem then
     EnhanceLogSubsystem:DeleteAllLogFiles()
   end
+end
+
+function S:SetAutoRepairKeyText()
+  local KeyText = self.DefaultValue
+  self.Key_State:SetActiveWidgetIndex(1)
+  self.Text_Fixed:SetText(GText(KeyText))
+end
+
+function S:OnAutoRepairClicked()
+  local Params = {
+    Parent = self,
+    Data = {}
+  }
+  UIManager(self):ShowCommonPopupUI(100304, Params, self)
 end
 
 function S:SetExchangeCodeKeyText()

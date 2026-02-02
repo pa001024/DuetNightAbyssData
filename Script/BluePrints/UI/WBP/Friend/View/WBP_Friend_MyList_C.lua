@@ -197,6 +197,7 @@ function M:SetupListContent(Uid, NewContent)
   local FriendData = Dict[Uid]
   NewContent.Data = FriendData
   NewContent.Type = FriendCommon.FriendTabType.MyFriend
+  NewContent.bShowGift = true
 end
 
 function M:InitWidget(Parent)

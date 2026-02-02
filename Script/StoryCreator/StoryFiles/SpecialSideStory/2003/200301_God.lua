@@ -161,6 +161,7 @@ return {
             pos = {x = 1045.3954545454544, y = -15.977272727272776},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/SpecialSideStory/2003/200301/20030102.20030102'",
               TalkType = "Guide",
@@ -236,7 +237,8 @@ return {
         SubRegionId = 104109,
         StoryGuideType = "Npc",
         StoryGuidePointName = "Npc_Side_LaoZhe_2100066",
-        bIsPlayBlackScreenOnComplete = false
+        bIsPlayBlackScreenOnComplete = false,
+        SubRegionIdList = {}
       },
       questNodeData = {
         lineData = {
@@ -318,6 +320,7 @@ return {
               GuideType = "N",
               GuidePointName = "Npc_Side_LaoZhe_2100066",
               DelayShowGuideTime = 0,
+              bUseFlowAssetActors = false,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
               FirstDialogueId = 0,
@@ -342,6 +345,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -499,6 +503,7 @@ return {
             pos = {x = 1920.7671170163092, y = 105.73254239163424},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/SpecialSideStory/2003/200301/20030104.20030104'",
               TalkType = "Guide",
@@ -645,6 +650,7 @@ return {
               GuideType = "N",
               GuidePointName = "Npc_Side_LaoZhe_2060082",
               DelayShowGuideTime = 0,
+              bUseFlowAssetActors = false,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
               FirstDialogueId = 0,
@@ -669,6 +675,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -742,6 +749,7 @@ return {
             pos = {x = 1509.8555956276855, y = 328.2024032146753},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
               FirstDialogueId = 0,
@@ -766,6 +774,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -868,6 +877,7 @@ return {
             pos = {x = 2450.7138467939385, y = 354.15007227707446},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 51100104,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/SpecialSideStory/2003/200301/20030105.20030105'",
               TalkType = "QuestImpression",
@@ -891,6 +901,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1033,6 +1044,7 @@ return {
               GuideType = "N",
               GuidePointName = "Npc_Side_LaoZhe_2100066",
               DelayShowGuideTime = 0,
+              bUseFlowAssetActors = false,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
               FirstDialogueId = 0,
@@ -1056,6 +1068,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",

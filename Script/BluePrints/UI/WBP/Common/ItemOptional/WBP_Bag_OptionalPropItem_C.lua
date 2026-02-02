@@ -72,6 +72,7 @@ end
 
 function M:InitComInput()
   if self.bIsInited then
+    self.Com_NumInput:OverrideValueLimit(self.ChooseDataInfo.ConsumeCount, self.MaxLimit, 0, true)
     return
   end
   self.Com_NumInput:Init({

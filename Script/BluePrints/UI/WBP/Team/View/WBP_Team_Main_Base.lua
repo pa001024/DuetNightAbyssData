@@ -49,7 +49,6 @@ function M:ProcessAddQueue()
   end
   self.bAddQueueProcessing = true
   local Member = self.AddQueue:PopBack()
-  Utils.Traceback(LXYTag, "组队头像加人Uid " .. Member.Uid .. " Name " .. Member.Nickname)
   self:AddTimer(self.Normal:GetEndTime(), function()
     self:AddTeammateUI(Member, true, nil, Member.Index)
   end)
@@ -75,7 +74,6 @@ function M:ProcessDelQueue()
   end
   self.bDelQueueProcessing = true
   local Uid = self.DelQueue:PopBack()
-  Utils.Traceback(LXYTag, "组队头像减人Uid " .. Uid)
   self:AddTimer(self.Normal:GetEndTime(), function()
     self:DelTeammateUI(Uid)
   end)

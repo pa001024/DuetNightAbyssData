@@ -187,7 +187,6 @@ function BP_WeaponBase_C:AddWeaponSkill()
         self.Owner.SkillsComponent:ServerAddSkillInfo(SkillId, SkillLevel, SkillGrade, 0, self)
       end
     end
-    self.BornInfo.SkillInfos = self.SkillInfos
   else
     local SkillLevel = 1
     local SkillGrade = 0
@@ -232,18 +231,21 @@ function BP_WeaponBase_C:ActivateSkills()
   end
   self:SetIsActivated(true)
   local ChangedSkills = TMap(0, 0)
-  if self.BornInfo.SkillInfos then
-    for SkillId, _ in pairs(self.BornInfo.SkillInfos) do
-      local Skill = self.Owner:GetSkill(SkillId)
-      if Skill then
-        local SkillType = Skill:GetSkillType()
-        local OldSkillId = self.Owner.Type_2_Skills:Find(SkillType)
-        if OldSkillId and OldSkillId ~= SkillId then
-          self.Owner.WeaponReplaceSkills:Add(SkillId, OldSkillId)
-          ChangedSkills:Add(OldSkillId, SkillId)
+  if self.Owner.SkillsComponent and self.Owner.SkillsComponent.SkillInfos then
+    for _, Data in pairs(self.Owner.SkillsComponent.SkillInfos) do
+      if Data.Weapon and Data.Weapon == self and not Data.IsSubSkill then
+        local SkillId = Data.SkillId
+        local Skill = self.Owner:GetSkill(SkillId)
+        if Skill then
+          local SkillType = Skill:GetSkillType()
+          local OldSkillId = self.Owner.Type_2_Skills:Find(SkillType)
+          if OldSkillId and OldSkillId ~= SkillId then
+            self.Owner.WeaponReplaceSkills:Add(SkillId, OldSkillId)
+            ChangedSkills:Add(OldSkillId, SkillId)
+          end
         end
+        self.Owner:ActivateSkill(SkillId)
       end
-      self.Owner:ActivateSkill(SkillId)
     end
   else
     local SkillList = self.Data.WeaponSkillList
@@ -276,9 +278,12 @@ function BP_WeaponBase_C:DeactivateSkills()
     return
   end
   self:SetIsActivated(false)
-  if self.BornInfo.SkillInfos then
-    for SkillId, _ in pairs(self.BornInfo.SkillInfos) do
-      self.Owner:DeactivateSkill(SkillId)
+  if self.Owner.SkillsComponent and self.Owner.SkillsComponent.SkillInfos then
+    for _, Data in pairs(self.Owner.SkillsComponent.SkillInfos) do
+      if Data.Weapon and Data.Weapon == self and not Data.IsSubSkill then
+        local SkillId = Data.SkillId
+        self.Owner:DeactivateSkill(SkillId)
+      end
     end
   else
     local SkillList = self.Data.WeaponSkillList
@@ -291,20 +296,23 @@ function BP_WeaponBase_C:DeactivateSkills()
 end
 
 function BP_WeaponBase_C:GetSkills()
-  local SKills = {}
-  if self.BornInfo.SkillInfos then
-    for SkillId, _ in pairs(self.BornInfo.SkillInfos) do
-      table.insert(SKills, SkillId)
+  local Skills = {}
+  if self.Owner.SkillsComponent and self.Owner.SkillsComponent.SkillInfos then
+    for _, Data in pairs(self.Owner.SkillsComponent.SkillInfos) do
+      if Data.Weapon and Data.Weapon == self then
+        local SkillId = Data.SkillId
+        table.insert(Skills, SkillId)
+      end
     end
   else
     local SkillList = self.Data.WeaponSkillList
     if nil ~= SkillList then
       for _, v in pairs(SkillList) do
-        table.insert(SKills, v)
+        table.insert(Skills, v)
       end
     end
   end
-  return SKills
+  return Skills
 end
 
 function BP_WeaponBase_C:OnLeave(DontPlayDissolve)

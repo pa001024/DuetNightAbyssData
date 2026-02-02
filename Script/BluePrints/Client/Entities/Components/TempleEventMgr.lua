@@ -2,6 +2,14 @@ local Component = {}
 local EventId = 108001
 
 function Component:EnterWorld()
+  EventManager:AddEvent(EventID.OnLoginSuccess, self, self.OnLoginSuccess)
+end
+
+function Component:LeaveWorld()
+  EventManager:RemoveEvent(EventID.OnLoginSuccess, self)
+end
+
+function Component:OnLoginSuccess()
   self:RefreshTempleSoloNewLevelReddot()
   self:RefreshTempleSoloEventRewardReddot()
 end

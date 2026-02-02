@@ -224,12 +224,19 @@ function M:UnbindEventOnSwitchOff()
 end
 
 function M:RefreshReddot(IsNew, Upgradeable, OtherReddot)
+  self:AddDelayFrameFunc(function()
+    if self and self.Content and self.Content.ParentWidget and self.Content.ParentWidget.EventTypeTab then
+      self.Content.ParentWidget.EventTypeTab:UpdateEventTypeTabReddot()
+    end
+  end, 2)
   self.IsNew = IsNew
   self.Upgradeable = Upgradeable
   self.OtherReddot = OtherReddot
   if IsNew then
     self.New:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Content.ShowRedDot = false
+    self.Content.IsNew = IsNew
     return
   end
   self.New:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -250,11 +257,6 @@ function M:RefreshReddot(IsNew, Upgradeable, OtherReddot)
   else
     self.Content.ShowRedDot = false
   end
-  self:AddDelayFrameFunc(function()
-    if self.Content and self.Content.ParentWidget and self.Content.ParentWidget.EventTypeTab then
-      self.Content.ParentWidget.EventTypeTab:UpdateEventTypeTabReddot()
-    end
-  end, 2)
 end
 
 return M

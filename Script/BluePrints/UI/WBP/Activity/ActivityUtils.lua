@@ -61,7 +61,7 @@ function ActivityUtils.CheckEventIsInActiveTime(EventID, EventMainExcel)
   else
     local RealEndTime = nil == EventMainExcel.RewardEndTime and EventMainExcel.EventEndTime or EventMainExcel.RewardEndTime
     local StartTime = EventMainExcel.EventStartTime or 0
-    if RealEndTime and NowTime >= RealEndTime or StartTime and NowTime < StartTime then
+    if RealEndTime and NowTime >= RealEndTime:GetTime() or StartTime and NowTime < StartTime:GetTime() then
       return false
     elseif EventMainExcel.EventEndCondition and ConditionUtils.CheckCondition(Avatar, EventMainExcel.EventEndCondition) then
       return false
@@ -112,7 +112,7 @@ function ActivityUtils.CheckEventIsOpen(EventID, EventMainExcel, IsUseRewardTime
     if bEventIsInActiveTime and not EventMainExcel.EventEndTime and not EventMainExcel.PermanenEventTime then
       IsNotEventEndTimeAndNotPermanenEventTime = true
     end
-    if IsUseRewardTime and EventMainExcel.EventEndTime and NowTime > EventMainExcel.EventEndTime and EventMainExcel.RewardEndTime and NowTime < EventMainExcel.RewardEndTime then
+    if IsUseRewardTime and EventMainExcel.EventEndTime and NowTime > EventMainExcel.EventEndTime:GetTime() and EventMainExcel.RewardEndTime and NowTime < EventMainExcel.RewardEndTime:GetTime() then
       IsActivityOpenAndInRewardTime = true
     end
     if bEventIsInActiveTime then
@@ -127,9 +127,6 @@ function ActivityUtils.CheckEventIsOpen(EventID, EventMainExcel, IsUseRewardTime
     return false
   end
   if ConditionUtils.CheckCondition(Avatar, EventMainExcel.EventUnlockCondition) == false then
-    return false
-  end
-  if nil ~= UnlockRuleName and not Avatar:CheckSystemUICanOpen(UnlockRuleName) then
     return false
   end
   if EventID == DataMgr.EventConstant.FollowCommunityEvent.ConstantValue and ActivityUtils.IsBilibiliServer() then
@@ -178,27 +175,48 @@ function ActivityUtils.GetCurQuestState(QuestServerData, PlayerPhaseId)
   end
 end
 
+function ActivityUtils.IsComeBackEvent(EventID)
+  return EventID == DataMgr.ComeBackEventConstant.CurrentEventId.ConstantValue
+end
+
+function ActivityUtils.CheckComeBackEventIsOpen(EventID)
+  local Avatar = GWorld:GetAvatar()
+  local EventMainExcel = DataMgr.EventMain[EventID]
+  if ConditionUtils.CheckCondition(Avatar, EventMainExcel.EventUnlockCondition) == false then
+    return false
+  end
+  local NowTime = TimeUtils.NowTime()
+  if Avatar and Avatar.ComeBacks[EventID] and Avatar.ComeBackExpireTime and NowTime < Avatar.ComeBackExpireTime then
+    return true
+  end
+  return false
+end
+
 function ActivityUtils.GetCurrentAllActivity()
   local AllActivityTabIdx, InvaildEventIdList = {}, {}
   for key, TabConfigInfo in pairs(DataMgr.EventTab) do
     if type(TabConfigInfo.EventId) == "table" then
       local EventConfigData = DataMgr.EventMain[TabConfigInfo.EventId[1]]
-      if ActivityUtils.CheckEventIsOpen(TabConfigInfo.EventId[1], EventConfigData, true, "GameEvent") then
+      if ActivityUtils.IsComeBackEvent(TabConfigInfo.EventId[1]) then
+        if ActivityUtils.CheckComeBackEventIsOpen(TabConfigInfo.EventId[1]) then
+          table.insert(AllActivityTabIdx, TabConfigInfo.EventTabId)
+        else
+          for _, InvalidEventId in ipairs(TabConfigInfo.EventId) do
+            table.insert(InvaildEventIdList, InvalidEventId)
+          end
+        end
+      elseif ActivityUtils.CheckEventIsOpen(TabConfigInfo.EventId[1], EventConfigData, true, "GameEvent") then
         table.insert(AllActivityTabIdx, TabConfigInfo.EventTabId)
       else
         for _, InvalidEventId in ipairs(TabConfigInfo.EventId) do
-          local ActivityConfigData = DataMgr.EventMain[InvalidEventId]
-          local IsInActiveTime = ActivityUtils.CheckEventIsInActiveTime(InvalidEventId, ActivityConfigData)
-          if not IsInActiveTime then
-            table.insert(InvaildEventIdList, InvalidEventId)
-          end
+          table.insert(InvaildEventIdList, InvalidEventId)
         end
       end
     else
       local EventConfigData = DataMgr.EventMain[TabConfigInfo.EventId]
       if ActivityUtils.CheckEventIsOpen(TabConfigInfo.EventId, EventConfigData, true, "GameEvent") then
         table.insert(AllActivityTabIdx, TabConfigInfo.EventTabId)
-      elseif not ActivityUtils.CheckEventIsInActiveTime(TabConfigInfo.EventId, EventConfigData) then
+      else
         table.insert(InvaildEventIdList, TabConfigInfo.EventId)
       end
     end
@@ -222,7 +240,6 @@ function ActivityUtils.GetCurrentAllActivity()
     end
   end
   for index, InvalidCheckEventId in ipairs(InvaildEventIdList) do
-    DebugPrint("ActivityUtils.GetCurrentAllActivity TryClearActivityReddotCommon== InvalidCheckEventId is ", InvalidCheckEventId)
     ActivityUtils.TryClearActivityReddotCommon(InvalidCheckEventId)
   end
   return AllActivityID, AllActivityTabIdx
@@ -233,7 +250,11 @@ function ActivityUtils.GetCurrentAllActivityWithoutSystemCheck()
   for key, TabConfigInfo in pairs(DataMgr.EventTab) do
     if type(TabConfigInfo.EventId) == "table" then
       local EventConfigData = DataMgr.EventMain[TabConfigInfo.EventId[1]]
-      if ActivityUtils.CheckEventIsOpen(TabConfigInfo.EventId[1], EventConfigData, true, nil) then
+      if ActivityUtils.IsComeBackEvent(TabConfigInfo.EventId[1]) then
+        if ActivityUtils.CheckComeBackEventIsOpen(TabConfigInfo.EventId[1]) then
+          table.insert(AllActivityTabIdx, TabConfigInfo.EventTabId)
+        end
+      elseif ActivityUtils.CheckEventIsOpen(TabConfigInfo.EventId[1], EventConfigData, true, nil) then
         table.insert(AllActivityTabIdx, TabConfigInfo.EventTabId)
       end
     else
@@ -378,17 +399,17 @@ function ActivityUtils:CheckStarterQuestIsNeedShowReddot()
 end
 
 function ActivityUtils.ChangeStarterQuestReddot()
-  local IsNeedShowRed = ActivityUtils.CheckStarterQuestIsNeedShowReddot()
   if not ReddotManager.GetTreeNode("StarterQuest") then
     ReddotManager.AddNode("StarterQuest")
   end
+  local IsNeedShowRed = ActivityUtils.CheckStarterQuestIsNeedShowReddot()
   if IsNeedShowRed then
-    local reddot = ReddotManager.GetTreeNode("StarterQuest")
-    if reddot.Count <= 0 then
+    local Node = ReddotManager.GetTreeNode("StarterQuest")
+    if Node.Count <= 0 then
       ReddotManager.IncreaseLeafNodeCount("StarterQuest", 1)
     end
   else
-    ReddotManager.ClearLeafNodeCount("StarterQuest", false)
+    ReddotManager.ClearLeafNodeCount("StarterQuest", true)
   end
 end
 
@@ -431,7 +452,11 @@ end
 function ActivityUtils.OpenActivitySettlement(ActivityId, DungeonId, Params)
   local EventSettlementConfigData = DataMgr.EventSettlementPage[1]
   for Id, ConfigData in pairs(DataMgr.EventSettlementPage) do
-    if ConfigData.EventId == ActivityId and ConfigData.DungeonId == DungeonId then
+    if DungeonId then
+      if ConfigData.EventId == ActivityId and ConfigData.DungeonId == DungeonId then
+        EventSettlementConfigData = ConfigData
+      end
+    elseif ConfigData.EventId == ActivityId then
       EventSettlementConfigData = ConfigData
     end
   end
@@ -464,11 +489,16 @@ function ActivityUtils.CheckIsPermanentEvent(ActivityId)
   return bPermanentEvent
 end
 
-function ActivityUtils.RefreshLeftTime(TargetUI, TargetTimeUI, bCheckNextDayFiveStamp)
+function ActivityUtils.RefreshLeftTime(TargetUI, TargetTimeUI, bCheckNextDayFiveStamp, OverrideEventEndTime)
   if not TargetUI or not TargetTimeUI then
     return
   end
-  local ActivityEndTime = DataMgr.EventMain[TargetUI.CurActivityId].EventEndTime
+  local ActivityEndTime
+  if OverrideEventEndTime then
+    ActivityEndTime = OverrideEventEndTime
+  else
+    ActivityEndTime = DataMgr.EventMain[TargetUI.CurActivityId].EventEndTime
+  end
   local RewardEndTime = DataMgr.EventMain[TargetUI.CurActivityId].RewardEndTime
   local PermanenEventTime = DataMgr.EventMain[TargetUI.CurActivityId].PermanenEventTime
   local NowTime = TimeUtils.NowTime()
@@ -515,6 +545,10 @@ function ActivityUtils.RefreshLeftTime(TargetUI, TargetTimeUI, bCheckNextDayFive
     TargetUI.ParentWidget.NormalStateCurActivityId = nil
     TargetUI.ParentWidget.LimitStateCurActivityId = nil
     TargetUI.ParentWidget:GenerateAllDataInfo()
+    return
+  end
+  if bActuallyEnd and TargetUI and TargetUI.ParentTabId and TargetUI.CloseSelf then
+    TargetUI:CloseSelf()
   end
 end
 
@@ -547,6 +581,17 @@ function ActivityUtils.IsTabIdValid(TabId)
     end
   end
   return false
+end
+
+function ActivityUtils.SetUpJustifyOfJap(TextBlock1, TextBlock2)
+  if CommonConst.SystemLanguage == CommonConst.SystemLanguages.JP then
+    if TextBlock1 then
+      TextBlock1:SetJustification(ETextJustify.Left)
+    end
+    if TextBlock2 then
+      TextBlock2:SetJustification(ETextJustify.Left)
+    end
+  end
 end
 
 return ActivityUtils

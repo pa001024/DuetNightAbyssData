@@ -698,7 +698,7 @@ end
 
 function WBP_Abyss_Lineup_C:OnFocusReceived(MyGeometry, InFocusEvent)
   self:SetFocusTarget()
-  return UIUtils.Handle
+  return UIUtils.Handled
 end
 
 function WBP_Abyss_Lineup_C:SortItemContents(InOutContentArray, SortByIdx, SortType)
@@ -1047,12 +1047,12 @@ function WBP_Abyss_Lineup_C:OnKeyDown(MyGeometry, InKeyEvent)
       IsHandled = false
     end
   elseif "Escape" == InKeyName then
-  elseif "Q" == InKeyName then
-    if self.bInList and (self.CurSlotName == self.ESlotName.PhantomWeapon1 or self.CurSlotName == self.ESlotName.PhantomWeapon2) then
+  elseif "A" == InKeyName then
+    if self.CurSlotName == self.ESlotName.PhantomWeapon1 or self.CurSlotName == self.ESlotName.PhantomWeapon2 then
       self:PhantomWeaponTypeChanged("Melee", true)
     end
-  elseif "E" == InKeyName then
-    if self.bInList and (self.CurSlotName == self.ESlotName.PhantomWeapon1 or self.CurSlotName == self.ESlotName.PhantomWeapon2) then
+  elseif "D" == InKeyName then
+    if self.CurSlotName == self.ESlotName.PhantomWeapon1 or self.CurSlotName == self.ESlotName.PhantomWeapon2 then
       self:PhantomWeaponTypeChanged("Ranged", true)
     end
   else

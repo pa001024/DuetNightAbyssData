@@ -34,6 +34,11 @@ function M:Init(SlotName, LineupPage)
   end
   self:SetEmptyIcon()
   self:SetIsChecked(false)
+  if SlotName == TeamSelectComponent.ESlotName.Pet then
+    self.VX_Pet_Up:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.VX_OutGlow:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self:PlayAnimation(self.Pet_Loop)
+  end
 end
 
 function M:Update(Content)
@@ -46,15 +51,10 @@ function M:Update(Content)
     return
   end
   self.Uuid = Content.Uuid
+  self.UnitId = Content.UnitId
+  self.IsTryout = Content.IsTryout or false
+  self.Type = Content.Type
   if self.LineupPage and self.LineupPage.Uuid2SlotMap then
-    local OldSlotInfo = self.LineupPage.Uuid2SlotMap[self.Uuid]
-    if OldSlotInfo and OldSlotInfo.SlotName and OldSlotInfo.SlotName ~= self.SlotName then
-      local OldSlotWidget = self.LineupPage.Slots and self.LineupPage.Slots[OldSlotInfo.SlotName]
-      if OldSlotWidget and OldSlotWidget.Uuid == self.Uuid and OldSlotWidget.Clear then
-        self.LineupPage.Uuid2SlotMap[self.Uuid] = nil
-        OldSlotWidget:Clear()
-      end
-    end
     self.LineupPage.Uuid2SlotMap[self.Uuid] = {
       SlotName = self.SlotName
     }
@@ -63,6 +63,9 @@ function M:Update(Content)
     self.IsEmpty = false
     if self.Icon_Empty then
       self.Icon_Empty:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+    if self.WeaponSlot then
+      self.WeaponSlot:SetForbidden(false)
     end
   end
   self:SetSoundPath(Content.Type)
@@ -75,6 +78,14 @@ function M:Update(Content)
   end
   self:SetIcon(IconPath)
   self:PlayRefreshAnim()
+  if Content.IsTryout and Content.Tag ~= "Pet" then
+    self.Text_TryOut:SetText(GText("UI_Wuyousheng_ArmoryTrial"))
+    self.Text_TryOut:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.SizeBox_TryOut:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  else
+    self.Text_TryOut:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.SizeBox_TryOut:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
 end
 
 function M:IsContentCompatible(Content)
@@ -150,10 +161,14 @@ function M:SetEmptyIcon()
   if not self.Icon_Item then
     return
   end
+  self.SizeBox_TryOut:SetVisibility(UIConst.VisibilityOp.Collapsed)
   local IconDynaMaterial = self.Icon_Item:GetDynamicMaterial()
   if IconDynaMaterial then
     IconDynaMaterial:SetScalarParameterValue("IconMapOpacity", 0)
     IconDynaMaterial:SetScalarParameterValue("BGLightHeight", 1)
+  end
+  if not self.Select then
+    self:PlayAnimation(self.Normal)
   end
 end
 
@@ -167,12 +182,21 @@ function M:Clear()
   end
   self.Uuid = nil
   self.WeaponType = "Melee"
+  self.Content.bSelectTag = false
+  self.Content = nil
   self:SetEmptyIcon()
   if self.Icon_Empty then
     self.Icon_Empty:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   end
   if self.Img_Quality then
     self.Img_Quality:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  if self.WeaponSlot then
+    if self.WeaponSlot.Uuid and self.LineupPage and self.LineupPage.UpdateSingleTeamIcon then
+      self.LineupPage:UpdateSingleTeamIcon(self.WeaponSlot.Uuid, false, self.WeaponSlot.WeaponType)
+    end
+    self.WeaponSlot:Clear()
+    self.WeaponSlot:SetForbidden(true)
   end
   self:PlayRemindAnim()
   return true
@@ -198,6 +222,7 @@ function M:SetForbidden(IsForbid)
     return
   end
   self.IsForbidden = IsForbid
+  self.Btn_Click:SetForbidden(IsForbid)
   if IsForbid then
     self:PlayButtonForbidAnim()
   else
@@ -206,8 +231,17 @@ function M:SetForbidden(IsForbid)
 end
 
 function M:OnClicked(bNotToList)
-  if self.LineupPage and self.LineupPage.OnSlotClicked then
-    self.LineupPage:OnSlotClicked(self.SlotName)
+  if self.LineupPage then
+    if self.LineupPage.OnSlotClicked then
+      self.LineupPage:OnSlotClicked(self.SlotName)
+    end
+    if self.LineupPage.IsUseGamePad then
+      self.LineupPage:ChangeFocusMode(2)
+      self.LineupPage.FocusWidget = self
+      self.LineupPage:AddTimer(0.1, function()
+        self.LineupPage.List_Select:SetFocus()
+      end)
+    end
   end
 end
 
@@ -248,12 +282,6 @@ function M:SwitchNormalAnimation()
   if self.Normal then
     self:PlayAnimation(self.Normal)
   end
-  if self.Item then
-    self.Item:StopAllAnimations()
-    if self.Item.Normal then
-      self.Item:PlayAnimation(self.Item.Normal)
-    end
-  end
 end
 
 function M:PlayButtonClickSound()
@@ -265,11 +293,9 @@ function M:PlayButtonClickSound()
 end
 
 function M:PlayButtonClickAnimation()
-  if self.Item then
-    self.Item:StopAllAnimations()
-    if self.Item.Click then
-      self.Item:PlayAnimation(self.Item.Click)
-    end
+  self:StopAllAnimations()
+  if self.Click then
+    self:PlayAnimation(self.Click)
   end
 end
 
@@ -291,11 +317,9 @@ function M:OnBtnClicked(bNotPlaySound, bNotToList)
 end
 
 function M:PlayButtonPressAnim()
-  if self.Item then
-    self.Item:StopAllAnimations()
-    if self.Item.Press then
-      self.Item:PlayAnimation(self.Item.Press)
-    end
+  self:StopAllAnimations()
+  if self.Press then
+    self:PlayAnimation(self.Press)
   end
 end
 
@@ -313,11 +337,9 @@ function M:OnBtnPressed()
 end
 
 function M:PlayButtonHoverAnim()
-  if self.Item then
-    self.Item:StopAllAnimations()
-    if self.Item.Hover then
-      self.Item:PlayAnimation(self.Item.Hover)
-    end
+  self:StopAllAnimations()
+  if self.Hover then
+    self:PlayAnimation(self.Hover)
   end
 end
 
@@ -392,11 +414,9 @@ function M:PlayButtonUnForbidAnim()
 end
 
 function M:PlayButtonSelectAnim()
-  if self.Item then
-    self.Item:StopAllAnimations()
-    if self.Item.Select then
-      self.Item:PlayAnimation(self.Item.Select)
-    end
+  self:StopAllAnimations()
+  if self.Select then
+    self:PlayAnimation(self.Select)
   end
 end
 
@@ -407,11 +427,9 @@ function M:PlayRemindAnim()
 end
 
 function M:PlayRefreshAnim()
-  if self.Item then
-    self.Item:StopAllAnimations()
-    if self.Item.Refresh then
-      self.Item:PlayAnimation(self.Item.Refresh)
-    end
+  self:StopAllAnimations()
+  if self.Refresh then
+    self:PlayAnimation(self.Refresh)
   end
 end
 

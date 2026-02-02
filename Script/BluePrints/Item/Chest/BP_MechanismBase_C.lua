@@ -40,6 +40,7 @@ function BP_MechanismBase_C:SetRewardID()
 end
 
 function BP_MechanismBase_C:CreateReward(PlayerId)
+  print(_G.LogTag, "LXZ CheckAutoCreateReward CreateReward FALSE", self:CheckAutoCreateReward())
   if not self:CheckAutoCreateReward() then
     print(_G.LogTag, "LXZ CheckAutoCreateReward FALSE")
     return

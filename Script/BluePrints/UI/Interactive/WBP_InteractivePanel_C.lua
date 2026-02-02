@@ -156,6 +156,9 @@ function WBP_InteractivePanel_C:RemoveBattleInteractiveItem(InItem)
           self,
           function()
             self.WidgetSwitcher:SetActiveWidget(self.Panel_Interactive)
+            self.bPressed = false
+            self.Panel_Capture:ClearChildren()
+            self:Close()
           end
         })
         CapturePanel:PlayAnimation(CapturePanel.Out)
@@ -827,6 +830,7 @@ function WBP_InteractivePanel_C:InitCapturePanel()
       CapturePanel.Text_Progress:SetText(GText("CAPTURE_LONGPRESS"))
       CapturePanel.Text_Percent:SetVisibility(ESlateVisibility.Collapsed)
     end
+    self.bPressed = false
     self.Panel_Capture:AddChild(CapturePanel)
   end
   if not CapturePanel then

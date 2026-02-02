@@ -37,7 +37,7 @@ function WBP_ServerSelect_C:TryToGetServerList()
   self:AddTimer(0.5, self.VerifyListViewCallBack, false, 0, "VerifyListView")
   AllServers = {}
   for k, v in pairs(DevServerList) do
-    if k < 1000 then
+    if k < 1000 or k >= 7000 and k <= 7100 or k >= 8000 and k <= 8100 then
       AllServers[k] = v
     end
   end

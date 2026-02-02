@@ -14,6 +14,9 @@ T.RT_12 = {14}
 T.RT_13 = {10}
 T.RT_14 = {250}
 T.RT_15 = {200}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

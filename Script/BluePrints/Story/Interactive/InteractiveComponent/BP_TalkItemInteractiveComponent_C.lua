@@ -1,9 +1,10 @@
 require("UnLua")
+local LuaConst = require("EMLuaConst")
 local BP_TalkItemInteractiveComponent_C = Class("BluePrints.Story.Interactive.InteractiveComponent.BP_InteractiveBaseComponent_C")
 
 function BP_TalkItemInteractiveComponent_C:SetInteractiveInfo(Info)
   self.Info = Info
-  self.InteractiveDistance = Info.InteractiveDistance
+  self:SetInteractiveDistance(Info.InteractiveDistance)
   self.PlayerFaceAngle = Info.PlayerFaceAngle
   self.TalkItemFaceAngle = Info.TalkItemFaceAngle
   self:InitCommonUIConfirmID(Info.InteractiveId)
@@ -24,7 +25,11 @@ end
 
 function BP_TalkItemInteractiveComponent_C:IsCanInteractive(PlayerActor)
   local bRes = true
-  if self.bEnableDistanceCheck and bRes then
+  if LuaConst.OpenComputeInteractive then
+    if self.bEnableDistanceCheck and bRes then
+      bRes = self:GetDistanceCheckResult()
+    end
+  elseif self.bEnableDistanceCheck and bRes then
     bRes = self.DistanceCheck(self.Owner, PlayerActor, self.InteractiveDistance)
   end
   if self.bEnableItemFaceCheck and bRes then

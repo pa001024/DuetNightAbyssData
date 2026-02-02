@@ -45,8 +45,6 @@ function M:Construct()
     self.Btn_Replace
   }
   self:AddDispatcher(EventID.OnResourcesChanged, self, self.OnResourcesChanged)
-  self:AddDispatcher(EventID.OnUnlockCharUsePiece, self, self.OnUnlockCharUsePiece)
-  self:AddDispatcher(EventID.OnPurchaseShopItem, self, self.OnPurchaseShopItem)
   self:AddDispatcher(EventID.OnCharRewardStateChanged, self, self.UpdateCharRewardReddot)
   self:AddDispatcher(EventID.OnWeaponRewardStateChanged, self, self.UpdateWeaponRewardReddot)
 end
@@ -129,6 +127,7 @@ function M:UpdateButtonStyle(StyleParams)
   else
     self.Btn_Intensify:SetVisibility(StyleParams[1].Visibility)
   end
+  self:UpdateLevelUpBtn(self.Target, self.Type, self.Tag)
 end
 
 function M:Init(Params)
@@ -227,7 +226,6 @@ function M:UpdateTargetInfo(Target, Type, Tag)
       self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
       self.UnlockHintText = nil
       self.Panel_Hint:SetVisibility(UIConst.VisibilityOp.Collapsed)
-      self:UpdateLevelUpBtn(Target, Type, Tag)
     end
   end
 end
@@ -245,8 +243,10 @@ function M:UpdateUnlockBtn(Target, Type, Tag)
   local ResourcesData = DataMgr.Resource
   local Text
   local ShowReddot = false
+  local Id
   if "Char" == Type then
     Text = GText("UI_Char_Unlock")
+    Id = Target.CharId
     local Data = DataMgr.Char[Target.CharId]
     local Rid = Data.CharPieceId
     local Resource = Avatar.Resources[Rid] or {Count = 0}
@@ -276,6 +276,7 @@ function M:UpdateUnlockBtn(Target, Type, Tag)
     end
     ShowReddot = ArmoryUtils:TryAddUnlockableCharReddot(Target.CharId)
   elseif "Weapon" == Type then
+    Id = Target.WeaponId
     Text = GText("UI_Weapon_Unlock")
     local ShopItemId, ShopItemData = ShopUtils:GetShopItemDataById(Target.WeaponId, CommonConst.DataType.Weapon, true)
     if ShopItemData then
@@ -303,6 +304,9 @@ function M:UpdateUnlockBtn(Target, Type, Tag)
     Resources[1].Count = Resources[1].NeedCount
   end
   rawset(self, "UnlockBtnParams", {
+    bShowCoin = "Char" == Type,
+    Type = Type,
+    Id = Id,
     Owner = self,
     ShowReddot = ShowReddot,
     Resources = Resources,
@@ -630,95 +634,45 @@ function M:OnUnlockBtnClicked()
   if rawget(self, "UnlockBtnParams") == nil then
     return
   end
-  local Resource1 = self.UnlockBtnParams.Resources[1] or {}
-  local Resource2 = self.UnlockBtnParams.Resources[2]
-  if Resource1.Count < Resource1.NeedCount then
-    if Resource1.Id == CommonConst.Coins.Coin4 then
-      UIManager(self):ShowCommonPopupUI(100248, {
-        RightCallbackFunction = function()
-          PageJumpUtils:JumpToShopPage(CommonConst.GachaJumpToShopMainTabId, nil, nil, "Shop")
-        end
-      }, self)
-      return
-    end
-    local Avatar = GWorld:GetAvatar()
-    local Resource2Data
-    if Resource2 then
-      Resource2Data = Avatar.Resources[Resource2 and Resource2.Id] or {Count = 0}
-    end
-    if nil == Resource2Data then
-      local Data = DataMgr.Resource[Resource1.Id]
-      UIManager(self):ShowUITip("CommonToastMain", string.format(GText("UI_Armory_LackUnlcokResource"), GText(Data and Data.ResourceName or "")))
+  if self.Type == "Char" then
+    local Resource1 = self.UnlockBtnParams.Resources[1] or {}
+    if Resource1.Count < Resource1.NeedCount then
+      if not self.UnlockBtnParams.Resources[2] then
+        local TypeName = Resource1.ItemType or ""
+        local Data = DataMgr[TypeName]
+        local Resource1Data = Data and Data[Resource1.Id]
+        local Resource1Name = Resource1Data and Resource1Data[TypeName .. "Name"]
+        Resource1Name = GText(Resource1Name) or ""
+        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, string.format(GText("UI_Armory_LackUnlcokResource"), Resource1Name))
+        return
+      end
+      self:LoadUnlockDialog()
     else
-      local R1Data = DataMgr.Resource[Resource1.Id]
-      local BuyCount = Resource1.NeedCount - Resource1.Count
-      local Params = {
-        LeftItems = {
-          {
-            ItemId = Resource2.Id,
-            ItemType = Resource2.ItemType,
-            Count = Resource2.NeedCount
-          }
-        },
-        RightItems = {
-          {
-            ItemId = Resource1.Id,
-            ItemType = Resource2.ItemType,
-            Count = BuyCount
-          }
-        },
-        ShortTextParams = {
-          Resource2.NeedCount,
-          BuyCount,
-          GText(R1Data.ResourceName)
-        },
-        RightCallbackFunction = function()
-          if Resource2.Id == CommonConst.Coins.Coin4 and Resource2Data.Count < Resource2.NeedCount then
-            UIManager(self):ShowCommonPopupUI(100248, {
-              RightCallbackFunction = function()
-                PageJumpUtils:JumpToShopPage(CommonConst.GachaJumpToShopMainTabId, nil, nil, "Shop")
-              end
-            }, self)
-            return
-          end
-          self.Parent:BlockAllUIInput(true)
-          self.IsWatingForBuyResource = true
-          Avatar:PurchaseShopItem(Resource1.ShopItemId, BuyCount, true)
-        end
-      }
-      UIManager(self):ShowCommonPopupUI(100247, Params, self)
+      self:OnUnlockBtnConfirm()
     end
-  else
-    self:OnUnlockBtnConfirm()
+  elseif self.Type == "Weapon" then
+    self:LoadUnlockDialog()
   end
 end
 
-function M:OnPurchaseShopItem(Ret)
-  if not self.IsWatingForBuyResource and not self.IsWatingForBuyWeapon then
-    return
-  end
-  self.Parent:BlockAllUIInput(false)
-  if not ErrorCode:Check(Ret) then
-    return
-  end
-  if self.IsWatingForBuyResource then
-    self.IsWatingForBuyResource = false
-    self:OnUnlockBtnConfirm()
-  elseif self.IsWatingForBuyWeapon then
-    self.IsWatingForBuyWeapon = false
-    local Data = DataMgr.ShopItem[self.UnlockBtnParams.Resources[1].ShopItemId]
-    local ShowWeaponParams = {
-      TargetIdList = {
-        Data.TypeId
-      },
-      CallbackObj = self,
-      CallbackFunc = function()
+function M:LoadUnlockDialog()
+  local Widget = UIManager(self):_CreateWidgetNew("ArmoryUnlockDialog")
+  rawset(self, "UnlockDialog", Widget)
+  if Widget then
+    Widget:AddToViewport(self.Parent:GetZOrder())
+    Widget:Init({
+      Type = self.Type,
+      TargetId = self.Target.CharId or self.Target.WeaponId,
+      EscapeArmoryCharID = self.EscapeArmoryCharID,
+      Parent = self.Parent,
+      OnClose = function()
+        rawset(self, "UnlockDialog", nil)
+        if IsValid(self.Parent) then
+          self.Parent:SetFocus()
+        end
       end
-    }
-    if self.Parent.ActorController then
-      self.Parent.ActorController:StopPlayerSound()
-    end
-    UIManager(self):LoadUINew("GetWeaponPage", ShowWeaponParams)
+    })
+    Widget:SetFocus()
   end
 end
 
@@ -726,51 +680,16 @@ function M:OnUnlockBtnConfirm()
   if not self.IsTargetUnowned then
     return
   end
-  local Avatar = GWorld:GetAvatar()
-  if self.Type == "Char" then
-    self.Parent:BlockAllUIInput(true)
-    Avatar:UnlockCharUsePiece(self.Target.CharId)
-  elseif self.Type == "Weapon" then
-    local ResourceData = DataMgr.Resource[self.UnlockBtnParams.Resources[1].Id]
-    local WeaponData = self.Target:Data()
-    if not ResourceData or not WeaponData then
-      return
-    end
-    local Str1 = tostring(self.UnlockBtnParams.Resources[1].NeedCount or "")
-    local Str2 = GText(WeaponData.WeaponName or "")
-    local Params = {
-      ShortTextParams = {Str1, Str2},
-      RightCallbackFunction = function()
-        self.Parent:BlockAllUIInput(true)
-        self.IsWatingForBuyWeapon = true
-        Avatar:PurchaseShopItem(self.UnlockBtnParams.Resources[1].ShopItemId, 1, true)
-      end
-    }
-    UIManager(self):ShowCommonPopupUI(100262, Params, self)
-  end
-end
-
-function M:OnUnlockCharUsePiece(Ret, CharId)
-  self.Parent:BlockAllUIInput(false)
-  if not ErrorCode:Check(Ret) then
+  if self.Type ~= "Char" then
     return
   end
-  local CallbackFunc
-  if self.EscapeArmoryCharID then
-    function CallbackFunc()
-      if CharId == self.EscapeArmoryCharID then
-        self.Parent:OnBackBtnClicked()
-      end
-    end
-  end
-  if self.Parent.ActorController then
-    self.Parent.ActorController:StopPlayerSound()
-  end
-  UIUtils.ShowGetCharWeaponPage({
-    Chars = {
-      [CharId] = 1
-    }
-  }, CallbackFunc, self, nil)
+  local Avatar = GWorld:GetAvatar()
+  self.Parent:BlockAllUIInput(true)
+  Avatar:UnlockCharUsePiece(self.Target.CharId, function(Ret, CharId)
+    ArmoryUtils:OnUnlockCharUsePiece(Ret, CharId, self.EscapeArmoryCharID, function()
+      self.Parent:BlockAllUIInput(false)
+    end)
+  end)
 end
 
 function M:CheckShowUWeaponTitleUI()
@@ -781,6 +700,9 @@ function M:CheckShowUWeaponTitleUI()
     if Data and Data.ArmoryTitleUIPath then
       self:FrestUWeaponTitleUI(Data)
     else
+      if self.Parent and self.Parent.TextBlock_Name then
+        self.Parent.Panel_SubTab:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      end
       self:HideUWeaponTitleUI()
     end
   else
@@ -801,7 +723,6 @@ function M:FrestUWeaponTitleUI(Data)
     UWeaponTitle.Text_Name:SetText(GText(WeaponName))
     UWeaponTitle:PlayAnimation(UWeaponTitle.In)
     UWeaponTitle:PlayAnimation(UWeaponTitle.Loop)
-    self.Parent.Panel_SubTab:SetVisibility(UIConst.VisibilityOp.Collapsed)
   else
     ScreenPrint("创建UWeaponTitle UI失败，请检查路径是否正确" .. (Data.ArmoryTitleUIPath or "空"))
     self:HideUWeaponTitleUI()
@@ -816,8 +737,7 @@ function M:FrestUWeaponTitleUI(Data)
 end
 
 function M:HideUWeaponTitleUI()
-  if self.Parent and self.Parent.TextBlock_Name then
-    self.Parent.Panel_SubTab:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  if not self.Parent or self.Parent.TextBlock_Name then
   end
   self.Node_Consonance:ClearChildren()
 end

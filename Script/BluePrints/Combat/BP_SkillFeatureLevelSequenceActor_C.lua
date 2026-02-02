@@ -1,5 +1,6 @@
 require("UnLua")
 local MiscUtils = require("Utils.MiscUtils")
+local GameFlowUtils = require("Utils.GameFlowUtils")
 local M = Class("BluePrints.Combat.BP_SkillFeatureLevelSequenceActorBase_C")
 
 function M:IsCanPlay()
@@ -56,30 +57,29 @@ function M:HidePlayerBattlePet(IsHide)
 end
 
 function M:StartSkillFeature()
-  local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-  self.Flow = FlowManager:CreateFlow("SkillFeature")
-  self.Flow.OnBegin:Add(self.Flow, function()
-    local PlayerCameraManager = UGameplayStatics.GetPlayerCameraManager(self, 0)
-    PlayerCameraManager:StopAllCameraShakes(true)
-    self:RecordPlayerCamera()
-    self.CacheControlRotation = self.OwnerCharacter:GetControlRotation()
-    self:StartSkillFeatureCD()
-    M.Super.StartSkillFeature(self)
-    self:SetSkillFeatureTimeDilation()
-    if self.OwnerCharacter.Controller.AddDisableRotationInputTag then
-      self.OwnerCharacter.Controller:AddDisableRotationInputTag("SkillFeature")
+  self.Flow = GameFlowUtils:AddFlow("SkillFeature", {
+    self,
+    function()
+      local PlayerCameraManager = UGameplayStatics.GetPlayerCameraManager(self, 0)
+      PlayerCameraManager:StopAllCameraShakes(true)
+      self:RecordPlayerCamera()
+      self.CacheControlRotation = self.OwnerCharacter:GetControlRotation()
+      self:StartSkillFeatureCD()
+      M.Super.StartSkillFeature(self)
+      self:SetSkillFeatureTimeDilation()
+      if self.OwnerCharacter.Controller.AddDisableRotationInputTag then
+        self.OwnerCharacter.Controller:AddDisableRotationInputTag("SkillFeature")
+      end
+      if self.bIsSkill then
+        self:HidePlayerBattlePet(true)
+      end
     end
-    if self.bIsSkill then
-      self:HidePlayerBattlePet(true)
-    end
-  end)
-  FlowManager:AddFlow(self.Flow)
+  })
 end
 
 function M:EndSkillFeature()
   if self.Flow then
-    local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-    FlowManager:RemoveFlow(self.Flow)
+    GameFlowUtils:RemoveFlow(self.Flow)
     self.Flow = nil
   end
   self.OwnerCharacter.SkillFeature = false

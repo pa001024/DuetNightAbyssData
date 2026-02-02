@@ -188,6 +188,9 @@ function Component:AddFinishAvatar(ExtraInfo, AvatarEid, RealFinishAvatar, Avata
   self.CacheRewards[AvatarStr] = nil
   self.PersistenceRewards[AvatarStr] = nil
   self.ImmediateResources[AvatarStr] = nil
+  self.AvatarInfos[AvatarStr] = nil
+  self.PersistPlayerInfos[AvatarStr] = nil
+  GameMode.AvatarInfos[AvatarStr] = nil
   RealFinishAvatar[#RealFinishAvatar + 1] = AvatarStr
   AvatarArr:Add(AvatarStr)
 end

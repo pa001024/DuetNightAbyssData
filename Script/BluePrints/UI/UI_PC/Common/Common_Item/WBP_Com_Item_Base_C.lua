@@ -3,7 +3,8 @@ local TimeUtils = require("Utils.TimeUtils")
 local StrLib = require("BluePrints.Common.DataStructure")
 local Deque = StrLib.Deque
 local M = Class({
-  "BluePrints.UI.BP_UIState_C",
+  "BluePrints.UI.BP_EMUserWidget_C",
+  "BluePrints.UI.BP_EMUserWidgetUtils_C",
   "BluePrints.Common.DelayFrameComponent"
 })
 
@@ -17,6 +18,7 @@ function M:OnListItemObjectSet(Content)
   self:RemoveAllEvent()
   self:InitData(Content)
   self:InitCompView()
+  self:InitNavigationRule()
   if self.AfterInitCallback then
     self.AfterInitCallback(self)
   end
@@ -59,6 +61,7 @@ function M:InitData(Content)
   self.Item.ItemDetails_MenuAnchor.ParentWidget = self
   self.ItemDetailKeyDownEvent = Content.ItemDetailKeyDownEvent
   self.ItemDetailHandleKeyDown = Content.ItemDetailHandleKeyDown
+  self.bNoJumpPreview = Content.bNoJumpPreview
   self.Content.IsShowTips = false
   self.RedDotType = Content.RedDotType
   self.bHasGot = Content.bHasGot
@@ -101,13 +104,18 @@ function M:InitData(Content)
   end
 end
 
+function M:InitNavigationRule()
+  if self.NavigationRule then
+    self.NavigationRule.UINavigationRuleFunc(self.Content.SelfWidget, self.NavigationRule.UINavigation, self.NavigationRule.FocusWidget)
+  end
+end
+
 function M:InitCommonView()
   self:ClearBackGroundHeight()
   if self.Item.ItemDetails_MenuAnchor then
     self.Item.ItemDetails_MenuAnchor:CloseItemDetailsWidget()
   end
   self:SetOutline(false)
-  self:SetRarity(self.Rarity)
   if self.bAdd then
     self:SetAdd(self.bAdd)
     return
@@ -119,6 +127,7 @@ function M:InitCommonView()
     self.Item.WidgetSwitcher_State:SetActiveWidgetIndex(0)
   end
   self:SetIcon(self.Icon)
+  self:SetRarity(self.Rarity)
   self:SetSelected(self.Content.IsSelect)
   self:SetDraftType(self.ItemType == "Draft")
   if self.bPlayInAnim then
@@ -130,6 +139,9 @@ function M:SetIcon(IconPath)
   if self.ItemType == "Walnut" then
     IconPath = DataMgr.Walnut[self.Id].Icon
     self:SetWalnutNum(self.Id)
+  end
+  if self.Item.SetBgMaterialByItemType then
+    self.Item:SetBgMaterialByItemType(self.ItemType, "HeadSculpture")
   end
   if self.bAsyncLoadIcon then
     self:LoadTextureAsync(IconPath, function(Texture)
@@ -309,13 +321,17 @@ function M:OnMouseButtonUp(MyGeometry, MouseEvent)
     return UWidgetBlueprintLibrary.Unhandled()
   end
   self.bMouseButtonDown = false
-  AudioManager(self):PlayItemSound(self, self.Id, "Click", self.ItemType)
+  if self.ItemType == CommonConst.ArmoryType.Mod then
+    AudioManager(self):PlayItemSound(self, self.Content.UnitId or self.Id, "Click", self.ItemType)
+  else
+    AudioManager(self):PlayItemSound(self, self.Id, "Click", self.ItemType)
+  end
   if not self.bDisableCommonClick then
     if self.ItemType == "Walnut" then
-      UIManager(self):LoadUINew("WalnutRewardDialog", self.Id, self.UIName)
+      self:OpenWalnutRewardDialog()
       return UWidgetBlueprintLibrary.Handled()
     end
-    if self.ItemType == "Skin" or self.ItemType == "WeaponSkin" then
+    if (self.ItemType == "Skin" or self.ItemType == "WeaponSkin" or self.ItemType == "Mount") and not self.bNoJumpPreview then
       if DataMgr.SystemUI[self.UIName] and DataMgr.SystemUI[self.UIName].IsBanAccess then
         UIManager(self):ShowUITip("CommonToastMain", GText("UI_COMMONPOP_TITLE_100059"))
         return UWidgetBlueprintLibrary.Handled()
@@ -391,7 +407,7 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
     local Callback = self.OnFocusReceivedEvent.Callback
     Callback(Obj)
   end
-  return M.Super.OnFocusReceived(self, MyGeometry, InFocusEvent)
+  return UIUtils.Handled
 end
 
 function M:OnAddedToFocusPath(InFocusEvent)
@@ -413,7 +429,6 @@ function M:OnRemovedFromFocusPath(InFocusEvent)
 end
 
 function M:Construct()
-  M.Super.Construct(self)
   self.WidgetMap = {}
   self.Item.ItemDetails_MenuAnchor.ItemDetailsMenuAnchor.OnMenuOpenChanged:Add(self, self.OnMenuOpenChanged)
 end
@@ -425,7 +440,6 @@ function M:Destruct()
   end
   self.ComItemAsyncTasks = nil
   self.bMaxHeight = nil
-  M.Super.Destruct(self)
 end
 
 function M:OnMenuOpenChanged(bIsOpen)
@@ -534,6 +548,7 @@ function M:OpenItemMenu()
     return
   end
   local Content = {
+    Type = self.Content.Type,
     ItemType = self.ItemType,
     ItemId = self.Id,
     Uuid = self.Uuid,
@@ -552,6 +567,10 @@ function M:OpenItemMenu()
     self.Item.ItemDetails_MenuAnchor.CommonItemDetails:InitButton01Event(self.ItemDetailsButton01EventInfo)
     self.Item.ItemDetails_MenuAnchor.CommonItemDetails:InitLockedEvent(self.ItemDetailsLockEventInfo)
   end
+end
+
+function M:OpenWalnutRewardDialog()
+  UIManager(self):LoadUINew("WalnutRewardDialog", self.Id, self.UIName)
 end
 
 function M:PlayInAnimation()
@@ -796,7 +815,7 @@ function M:SetRedDot(RedDotType)
       if not self.ComItemReddot then
         self.ComItemReddot = self:CreateWidgetAsync("ComItemReddot", CoroutineObj)
       end
-      self.ComItemReddot:EMShowReddot(true, EReddotType.Gray, 0)
+      self.ComItemReddot:EMShowReddot(true, EReddotType.Gray)
       self:AddWidgetToNode(self.ComItemReddot)
       self:CheckWidgetIsTop(self.ComItemReddot)
     end
@@ -805,13 +824,14 @@ end
 
 function M:SetShadow(bShadow)
   self:AsyncLoadWidgetCommon(nil, "SetShadowTask", function(CoroutineObj)
+    if self.WidgetMap[self.ShadowWidget] then
+      self:RemoveWidgetFromNode(self.ShadowWidget, true)
+    end
     if bShadow then
       if not self.WidgetMap[self.ShadowWidget] then
         self.ShadowWidget = self:CreateWidgetAsync("ComItemShadow", CoroutineObj)
       end
       self:AddWidgetToNode(self.ShadowWidget)
-    elseif self.WidgetMap[self.ShadowWidget] then
-      self:RemoveWidgetFromNode(self.ShadowWidget)
     end
   end)
 end
@@ -978,16 +998,22 @@ function M:SetItemMinus(bMinus)
   end
 end
 
-function M:SetItemMoney(CurrencyId, CurrencyNum, bShowAfterLoadComplete)
+function M:SetItemMoney(CurrencyId, CurrencyNum, bShowAfterLoadComplete, CurrencyIcon)
   local function Callback(CoroutineObj)
-    if CurrencyId and CurrencyNum then
+    if (CurrencyId or CurrencyIcon) and CurrencyNum then
       self.MoneyWidget = self:GetOrCreateGroupWidget("ComItemMoney", CoroutineObj)
       
       if bShowAfterLoadComplete then
         self.MoneyWidget.Img_Coin:SetVisibility(ESlateVisibility.Collapsed)
         self.MoneyWidget.Text_Cost:SetVisibility(ESlateVisibility.Collapsed)
       end
-      self:LoadTextureAsync(DataMgr.Resource[CurrencyId].Icon, function(Texture)
+      local IconPath
+      if CurrencyIcon then
+        IconPath = CurrencyIcon
+      else
+        IconPath = DataMgr.Resource[CurrencyId].Icon
+      end
+      self:LoadTextureAsync(IconPath, function(Texture)
         self.MoneyWidget.Img_Coin:SetBrushResourceObject(Texture)
         self.MoneyWidget.Text_Cost:SetText(CurrencyNum)
         if bShowAfterLoadComplete then
@@ -1333,7 +1359,7 @@ end
 
 function M:SetItemPolarity(Polarity, PolarityNum)
   local function Callback(CoroutineObj)
-    if Polarity then
+    if Polarity and (Polarity ~= CommonConst.NonePolarity or PolarityNum) then
       if not self.WidgetMap[self.PolarityWidget] then
         self.PolarityWidget = self:CreateWidgetAsync("ComItemPolarity", CoroutineObj)
       end
@@ -1409,6 +1435,10 @@ function M:SetTimeLimitData(TimeLimitData)
         self:RemoveWidgetFromNode(self.TimeLimitWidget)
         return
       end
+      local EndTime = LimitedData.EndTime
+      if type(EndTime) == "table" and EndTime.GetTime then
+        EndTime = EndTime.GetTime()
+      end
       local NowTime = TimeUtils.NowTime()
       if not self.WidgetMap[self.TimeLimitWidget] then
         self.TimeLimitWidget = self:CreateWidgetAsync("ComItemTimeLimit", CoroutineObj)
@@ -1419,7 +1449,7 @@ function M:SetTimeLimitData(TimeLimitData)
       else
         self.TimeLimitWidget.Text_Time:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
       end
-      local diff = os.difftime(LimitedData.EndTime, NowTime)
+      local diff = os.difftime(EndTime, NowTime)
       if diff < 86400 then
         self.TimeLimitWidget.BG:SetColorAndOpacity(self.TimeLimitWidget.Color_Red)
       else
@@ -1472,10 +1502,7 @@ function M:AdjustBackGroundHeight(TextWidget, Reason)
   self:DefaultBackGroundHeight()
   local Layout = TextWidget:GetDesireWidget()
   Layout:ForceLayoutPrePass()
-  local Interval = self.Content and self.Content.AdjustBackGroundHeightDelay or 0.05
-  if self.Content then
-    self.Content.AdjustBackGroundHeightDelay = nil
-  end
+  local Interval = 0.05
   local _, TimerKey = self:AddTimer(Interval, function()
     if not IsValid(TextWidget) then
       return

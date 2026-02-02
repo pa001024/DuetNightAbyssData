@@ -12,6 +12,38 @@ M.State = {
 }
 
 function M:Initialize(Initializer)
+  self.ForbiddenAnimLookup = {}
+  if self.Forbidden_Normal then
+    self.ForbiddenAnimLookup[self.Forbidden_Normal] = 1
+  end
+  if self.Forbidden_Click then
+    self.ForbiddenAnimLookup[self.Forbidden_Click] = 1
+  end
+  if self.Forbidden_Hover then
+    self.ForbiddenAnimLookup[self.Forbidden_Hover] = 1
+  end
+  if self.Forbidden_Press then
+    self.ForbiddenAnimLookup[self.Forbidden_Press] = 1
+  end
+  if self.Forbidden_UnHover then
+    self.ForbiddenAnimLookup[self.Forbidden_UnHover] = 1
+  end
+  self.LockAnimLookup = {}
+  if self.Lock_Normal then
+    self.LockAnimLookup[self.Lock_Normal] = 1
+  end
+  if self.Lock_Click then
+    self.LockAnimLookup[self.Lock_Click] = 1
+  end
+  if self.Lock_Hover then
+    self.LockAnimLookup[self.Lock_Hover] = 1
+  end
+  if self.Lock_Press then
+    self.LockAnimLookup[self.Lock_Press] = 1
+  end
+  if self.Lock_UnHover then
+    self.LockAnimLookup[self.Lock_UnHover] = 1
+  end
 end
 
 function M:BindOnItemClicked(ExecuteCallback)
@@ -145,6 +177,13 @@ function M:OnInteractiveItemUnhovered()
 end
 
 function M:OnAnimationStarted(InAnimation)
+  if self.ForbiddenAnimLookup[InAnimation] then
+    self.Text_Interactive:SetColorAndOpacity(self.ForbiddenColor)
+  elseif self.LockAnimLookup[InAnimation] then
+    self.Text_Interactive:SetColorAndOpacity(self.LockColor)
+  else
+    self.Text_Interactive:SetColorAndOpacity(self.NormalColor)
+  end
 end
 
 function M:OnAnimationFinished(InAnimation)

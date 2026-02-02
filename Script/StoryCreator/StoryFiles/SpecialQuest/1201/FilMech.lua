@@ -479,28 +479,44 @@ return {
             type = "CalculateVarCountNode",
             name = "变量计数节点",
             pos = {x = 3283.3968262664607, y = 296.4444441652171},
-            propsData = {VarName = "FilRune1", VarValue = 1}
+            propsData = {
+              VarName = "FilRune1",
+              VarValue = 1,
+              IsOpen = true
+            }
           },
           ["1763368410830677515"] = {
             key = "1763368410830677515",
             type = "CalculateVarCountNode",
             name = "变量计数节点",
             pos = {x = 3281.968254045678, y = 465.0158672214758},
-            propsData = {VarName = "FilRune2", VarValue = 1}
+            propsData = {
+              VarName = "FilRune2",
+              VarValue = 1,
+              IsOpen = true
+            }
           },
           ["1763368410830677516"] = {
             key = "1763368410830677516",
             type = "CalculateVarCountNode",
             name = "变量计数节点",
             pos = {x = 3291.682539837814, y = 658.4444355360085},
-            propsData = {VarName = "FilRune3", VarValue = 1}
+            propsData = {
+              VarName = "FilRune3",
+              VarValue = 1,
+              IsOpen = true
+            }
           },
           ["1763368410830677517"] = {
             key = "1763368410830677517",
             type = "CalculateVarCountNode",
             name = "变量计数节点",
             pos = {x = 3280.5396820980995, y = 869.3015757981193},
-            propsData = {VarName = "FilRune4", VarValue = 1}
+            propsData = {
+              VarName = "FilRune4",
+              VarValue = 1,
+              IsOpen = true
+            }
           },
           ["1763368410830677518"] = {
             key = "1763368410830677518",
@@ -577,6 +593,7 @@ return {
             pos = {x = 2396.0180713116383, y = 1958.6283603858715},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_Fil_01"
             }
@@ -588,6 +605,7 @@ return {
             pos = {x = 2870.7188521262856, y = 2017.4522553195695},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_Fil_01"
             }
@@ -628,6 +646,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -714,6 +733,7 @@ return {
             pos = {x = 2984.5072309760235, y = 288.10567878624005},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_Fil_Rune_1"
             }
@@ -725,6 +745,7 @@ return {
             pos = {x = 2981.1701882200355, y = 483.37819816222725},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_Fil_Rune_2"
             }
@@ -736,6 +757,7 @@ return {
             pos = {x = 2971.492769023977, y = 655.9588404919355},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_Fil_Rune_3"
             }
@@ -747,6 +769,7 @@ return {
             pos = {x = 2979.5572850206922, y = 847.89432121376},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_Fil_Rune_4"
             }
@@ -758,6 +781,7 @@ return {
             pos = {x = 3610.9632931880838, y = 277.58065094354055},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_Fil_Rune_1"
             }
@@ -769,6 +793,7 @@ return {
             pos = {x = 3603.0367068119162, y = 462.4393774126354},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_Fil_Rune_2"
             }
@@ -780,6 +805,7 @@ return {
             pos = {x = 3592.4471627532653, y = 678.096771533978},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_Fil_Rune_3"
             }
@@ -791,6 +817,7 @@ return {
             pos = {x = 3586.1245819493247, y = 866.4193490564595},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_Fil_Rune_4"
             }
@@ -1026,30 +1053,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1763368410862677684",
-            startPort = "Out",
-            endQuest = "1763368410862677681",
-            endPort = "In"
-          },
-          {
-            startQuest = "1763368410862677685",
-            startPort = "Out",
-            endQuest = "1763368410862677682",
-            endPort = "In"
-          },
-          {
-            startQuest = "1763368410862677686",
-            startPort = "Out",
-            endQuest = "1763368410862677683",
-            endPort = "In"
-          },
-          {
-            startQuest = "1763368410859677669",
-            startPort = "Out",
-            endQuest = "1763368410861677676",
-            endPort = "In"
-          },
-          {
             startQuest = "1763368410859677670",
             startPort = "Out",
             endQuest = "1763368410863677687",
@@ -1078,12 +1081,6 @@ return {
             startPort = "QuestStart",
             endQuest = "17633719132502034399",
             endPort = "In"
-          },
-          {
-            startQuest = "17633719132502034399",
-            startPort = "Out",
-            endQuest = "1763368410859677668",
-            endPort = "Fail"
           },
           {
             startQuest = "17633721341402035862",
@@ -1140,12 +1137,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1763368410863677687",
-            startPort = "Out",
-            endQuest = "17649377110871280822",
-            endPort = "In"
-          },
-          {
             startQuest = "17649377110871280822",
             startPort = "Success",
             endQuest = "1763368410863677692",
@@ -1156,12 +1147,6 @@ return {
             startPort = "Success",
             endQuest = "1763368410859677671",
             endPort = "Branch_1"
-          },
-          {
-            startQuest = "1763368410863677688",
-            startPort = "Out",
-            endQuest = "17649377273121281203",
-            endPort = "In"
           },
           {
             startQuest = "17649377273121281203",
@@ -1176,12 +1161,6 @@ return {
             endPort = "Branch_2"
           },
           {
-            startQuest = "1763368410863677689",
-            startPort = "Out",
-            endQuest = "17649377420561281475",
-            endPort = "In"
-          },
-          {
             startQuest = "17649377420561281475",
             startPort = "Success",
             endQuest = "1763368410863677690",
@@ -1192,6 +1171,108 @@ return {
             startPort = "Success",
             endQuest = "1763368410859677671",
             endPort = "Branch_3"
+          },
+          {
+            startQuest = "17633719132502034399",
+            startPort = "Out",
+            endQuest = "1763368410859677668",
+            endPort = "Fail"
+          },
+          {
+            startQuest = "17667197739732572531",
+            startPort = "Fail",
+            endQuest = "17667197739722572528",
+            endPort = "In"
+          },
+          {
+            startQuest = "17667197739732572532",
+            startPort = "Fail",
+            endQuest = "17667197739732572529",
+            endPort = "In"
+          },
+          {
+            startQuest = "17667197739732572533",
+            startPort = "Fail",
+            endQuest = "17667197739732572530",
+            endPort = "In"
+          },
+          {
+            startQuest = "1763368410859677669",
+            startPort = "Out",
+            endQuest = "17667197739732572531",
+            endPort = "In"
+          },
+          {
+            startQuest = "1763368410859677669",
+            startPort = "Out",
+            endQuest = "17667197739732572532",
+            endPort = "In"
+          },
+          {
+            startQuest = "1763368410859677669",
+            startPort = "Out",
+            endQuest = "17667197739732572533",
+            endPort = "In"
+          },
+          {
+            startQuest = "17667197739732572531",
+            startPort = "Success",
+            endQuest = "17667197358812571498",
+            endPort = "Input_1"
+          },
+          {
+            startQuest = "17667197739732572532",
+            startPort = "Success",
+            endQuest = "17667197358812571498",
+            endPort = "Input_2"
+          },
+          {
+            startQuest = "17667197739732572533",
+            startPort = "Success",
+            endQuest = "17667197358812571498",
+            endPort = "Input_3"
+          },
+          {
+            startQuest = "17667197739722572528",
+            startPort = "Out",
+            endQuest = "17667197358812571498",
+            endPort = "Input_1"
+          },
+          {
+            startQuest = "17667197739732572529",
+            startPort = "Out",
+            endQuest = "17667197358812571498",
+            endPort = "Input_2"
+          },
+          {
+            startQuest = "17667197739732572530",
+            startPort = "Out",
+            endQuest = "17667197358812571498",
+            endPort = "Input_3"
+          },
+          {
+            startQuest = "1763368410863677687",
+            startPort = "Out",
+            endQuest = "17649377110871280822",
+            endPort = "In"
+          },
+          {
+            startQuest = "1763368410863677688",
+            startPort = "Out",
+            endQuest = "17649377273121281203",
+            endPort = "In"
+          },
+          {
+            startQuest = "1763368410863677689",
+            startPort = "Out",
+            endQuest = "17649377420561281475",
+            endPort = "In"
+          },
+          {
+            startQuest = "17667197358812571498",
+            startPort = "Out",
+            endQuest = "1763368410861677676",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1213,14 +1294,14 @@ return {
             key = "1763368410859677668",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 1881.4048605327175, y = 1764.9932454654045},
+            pos = {x = 2030.442731631461, y = 1773.214845256583},
             propsData = {}
           },
           ["1763368410859677669"] = {
             key = "1763368410859677669",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 1290.4980159472896, y = 73.58786902366231},
+            pos = {x = 183.0906137552205, y = -807.8936083064797},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "ActiveTaskJinggou",
@@ -1284,7 +1365,7 @@ return {
             key = "1763368410859677671",
             type = "CheckBranchQuestFinishedNode",
             name = "子任务结束节点",
-            pos = {x = 3835.9841173995947, y = 358.0510445208887},
+            pos = {x = 4319.984117399595, y = 374.0510445208887},
             propsData = {
               InputBranchQuestNumber = 3,
               BranchQuestFinishOptions = {
@@ -1298,30 +1379,33 @@ return {
             key = "1763368410860677672",
             type = "CalculateVarCountNode",
             name = "变量计数节点",
-            pos = {x = 3020.1050388035624, y = -816.117924359539},
+            pos = {x = 2996.030964842865, y = -1156.8586634955602},
             propsData = {
               VarName = "FilJingGou1",
-              VarValue = 1
+              VarValue = 1,
+              IsOpen = true
             }
           },
           ["1763368410860677673"] = {
             key = "1763368410860677673",
             type = "CalculateVarCountNode",
             name = "变量计数节点",
-            pos = {x = 3017.767374854478, y = -611.4858960151789},
+            pos = {x = 2993.693300893781, y = -952.2266351512002},
             propsData = {
               VarName = "FilJingGou2",
-              VarValue = 1
+              VarValue = 1,
+              IsOpen = true
             }
           },
           ["1763368410860677674"] = {
             key = "1763368410860677674",
             type = "CalculateVarCountNode",
             name = "变量计数节点",
-            pos = {x = 3016.5119636302115, y = -372.057328046512},
+            pos = {x = 3018.4378896695143, y = -816.7980671825333},
             propsData = {
               VarName = "FilJingGou3",
-              VarValue = 1
+              VarValue = 1,
+              IsOpen = true
             }
           },
           ["1763368410861677675"] = {
@@ -1354,6 +1438,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1407,9 +1492,10 @@ return {
             key = "1763368410861677677",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 2219.1015199249946, y = 2092.871257475066},
+            pos = {x = 2437.1015199249946, y = 2400.871257475066},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_Fil_03"
             }
@@ -1421,6 +1507,7 @@ return {
             pos = {x = 2793.1776479197656, y = 2103.867847184357},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_Fil_03"
             }
@@ -1443,7 +1530,7 @@ return {
             key = "1763368410862677681",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = 2279.9016696884332, y = -819.3416169292234},
+            pos = {x = 3540.0378727423385, y = -1176.3045785249337},
             propsData = {
               VarName = "FilJingGou1",
               VarValue = 1
@@ -1453,7 +1540,7 @@ return {
             key = "1763368410862677682",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = 2300.615953079127, y = -572.7701913189344},
+            pos = {x = 4408.6159530791265, y = 689.2298086810656},
             propsData = {
               VarName = "FilJingGou2",
               VarValue = 1
@@ -1463,7 +1550,7 @@ return {
             key = "1763368410862677683",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = 2271.691712187886, y = -376.26803028088483},
+            pos = {x = 4379.691712187886, y = 885.7319697191151},
             propsData = {
               VarName = "FilJingGou3",
               VarValue = 1
@@ -1473,7 +1560,7 @@ return {
             key = "1763368410862677684",
             type = "WaitingMechanismEnterStateNode",
             name = "等待机关进入状态",
-            pos = {x = 1787.5221622357958, y = -823.4677021725764},
+            pos = {x = 2565.299936350627, y = -958.6528867211066},
             propsData = {
               CreateType = "StaticCreator",
               CreateId = 2060176,
@@ -1486,7 +1573,7 @@ return {
             key = "1763368410862677685",
             type = "WaitingMechanismEnterStateNode",
             name = "等待机关进入状态",
-            pos = {x = 1772.8554942745468, y = -596.2555820682144},
+            pos = {x = 2550.633268389378, y = -731.4407666167446},
             propsData = {
               CreateType = "StaticCreator",
               CreateId = 2060160,
@@ -1499,7 +1586,7 @@ return {
             key = "1763368410862677686",
             type = "WaitingMechanismEnterStateNode",
             name = "等待机关进入状态",
-            pos = {x = 1781.4615547273097, y = -386.13437320623655},
+            pos = {x = 2559.5710945847886, y = -1197.4578230249854},
             propsData = {
               CreateType = "StaticCreator",
               CreateId = 2060162,
@@ -1512,9 +1599,10 @@ return {
             key = "1763368410863677687",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 2696.330794053697, y = 177.7039073657317},
+            pos = {x = 2770.330794053697, y = -86.29609263426829},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_Fil_JingGou_3"
             }
@@ -1523,9 +1611,10 @@ return {
             key = "1763368410863677688",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 2691.2195121648647, y = 409.1933391827117},
+            pos = {x = 2709.2195121648647, y = 271.1933391827117},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_Fil_JingGou_1"
             }
@@ -1537,6 +1626,7 @@ return {
             pos = {x = 2706.7804878351353, y = 636.2960926342682},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_Fil_JingGou_2"
             }
@@ -1545,9 +1635,10 @@ return {
             key = "1763368410863677690",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 3459.84109380233, y = 649.0233650112474},
+            pos = {x = 4095.84109380233, y = 655.0233650112474},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_Fil_JingGou_2"
             }
@@ -1556,9 +1647,10 @@ return {
             key = "1763368410863677691",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 3438.2195121648647, y = 395.1933391827117},
+            pos = {x = 4182.219512164865, y = 233.1933391725392},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_Fil_JingGou_1"
             }
@@ -1567,9 +1659,10 @@ return {
             key = "1763368410863677692",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 3441.330794053697, y = 161.70390736573177},
+            pos = {x = 4147.330793768866, y = -52.29609256306057},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_Fil_JingGou_3"
             }
@@ -1578,14 +1671,14 @@ return {
             key = "17633719132502034399",
             type = "WaitingSpecialQuestFailNode",
             name = "等待特殊任务失败",
-            pos = {x = 1489.1284432077935, y = 1732.7469099042814},
+            pos = {x = 1353.998007698455, y = 1730.8338664278283},
             propsData = {}
           },
           ["17633721341402035862"] = {
             key = "17633721341402035862",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = 4218.218165380928, y = 385.0228256614894},
+            pos = {x = 4702.218165380928, y = 401.0228256614894},
             propsData = {VarName = "FilMech", VarValue = 2}
           },
           ["17633722165262037335"] = {
@@ -1606,7 +1699,7 @@ return {
             key = "17634466700452086",
             type = "ChangeStaticCreatorNode",
             name = "生成公尚师傅",
-            pos = {x = 981.1455720925937, y = 74.90110090463375},
+            pos = {x = -126.26183009947533, y = -806.5803764255082},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -1638,21 +1731,144 @@ return {
             key = "17649377110871280822",
             type = "AsyncConditionNode",
             name = "异步等待条件完成",
-            pos = {x = 3064.1799213734375, y = 184.4595304962134},
+            pos = {x = 3778.179921210677, y = -33.540469503786596},
             propsData = {ConditionId = 1201035101}
           },
           ["17649377273121281203"] = {
             key = "17649377273121281203",
             type = "AsyncConditionNode",
             name = "异步等待条件完成",
-            pos = {x = 3069.401602454942, y = 418.64816054524647},
+            pos = {x = 3713.9533266231124, y = 314.2343680768251},
             propsData = {ConditionId = 1201035102}
           },
           ["17649377420561281475"] = {
             key = "17649377420561281475",
             type = "AsyncConditionNode",
             name = "异步等待条件完成",
-            pos = {x = 3065.245758449653, y = 665.2715326636328},
+            pos = {x = 3663.245758449653, y = 663.2715326636328},
+            propsData = {ConditionId = 1201035103}
+          },
+          ["176666900580115610"] = {
+            key = "176666900580115610",
+            type = "ExecuteBlueprintFunctionCheckVarNode",
+            name = "变量=1",
+            pos = {x = 863.7249928562364, y = 1810.79239512579},
+            propsData = {
+              FunctionName = "Equal",
+              VarName = "FilJingGou1",
+              Duration = 0,
+              VarInfos = {
+                {VarName = "Value", VarValue = "1"}
+              }
+            }
+          },
+          ["176666900680815655"] = {
+            key = "176666900680815655",
+            type = "ExecuteBlueprintFunctionCheckVarNode",
+            name = "变量=1",
+            pos = {x = 861.0934138384207, y = 2112.5167104731704},
+            propsData = {
+              FunctionName = "Equal",
+              VarName = "FilJingGou2",
+              Duration = 0,
+              VarInfos = {
+                {VarName = "Value", VarValue = "1"}
+              }
+            }
+          },
+          ["176666900768415689"] = {
+            key = "176666900768415689",
+            type = "ExecuteBlueprintFunctionCheckVarNode",
+            name = "变量=1",
+            pos = {x = 828.0407816348638, y = 2375.950299527547},
+            propsData = {
+              FunctionName = "Equal",
+              VarName = "FilJingGou3",
+              Duration = 0,
+              VarInfos = {
+                {VarName = "Value", VarValue = "1"}
+              }
+            }
+          },
+          ["176666913335519176"] = {
+            key = "176666913335519176",
+            type = "SetVarNode",
+            name = "设置变量值",
+            pos = {x = 3544.648984809152, y = -998.065309998343},
+            propsData = {
+              VarName = "FilJingGou2",
+              VarValue = 1
+            }
+          },
+          ["176666913454819228"] = {
+            key = "176666913454819228",
+            type = "SetVarNode",
+            name = "设置变量值",
+            pos = {x = 3601.029937339324, y = -830.0653085233266},
+            propsData = {
+              VarName = "FilJingGou3",
+              VarValue = 1
+            }
+          },
+          ["17667197358812571498"] = {
+            key = "17667197358812571498",
+            type = "WaitQuestFinishedNode",
+            name = "等待任务完成",
+            pos = {x = 1430.5819006943173, y = -807.1017221516255},
+            propsData = {ListenCount = 3, NeedFinishCount = 3}
+          },
+          ["17667197739722572528"] = {
+            key = "17667197739722572528",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 914.8699721246127, y = -946.0647293397209},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "ResetJinggouPet",
+              UnitId = -1
+            }
+          },
+          ["17667197739732572529"] = {
+            key = "17667197739732572529",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 966.9409369066904, y = -704.2289775583367},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "ResetJinggouChest1",
+              UnitId = -1
+            }
+          },
+          ["17667197739732572530"] = {
+            key = "17667197739732572530",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 949.5269772867985, y = -427.45924998917485},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "ResetJinggouChest2",
+              UnitId = -1
+            }
+          },
+          ["17667197739732572531"] = {
+            key = "17667197739732572531",
+            type = "ConditionNode",
+            name = "条件节点",
+            pos = {x = 686.9170779617232, y = -1170.0775291387522},
+            propsData = {ConditionId = 1201035101}
+          },
+          ["17667197739732572532"] = {
+            key = "17667197739732572532",
+            type = "ConditionNode",
+            name = "条件节点",
+            pos = {x = 683.3308713070862, y = -827.9498160884785},
+            propsData = {ConditionId = 1201035102}
+          },
+          ["17667197739732572533"] = {
+            key = "17667197739732572533",
+            type = "ConditionNode",
+            name = "条件节点",
+            pos = {x = 690.9170779617232, y = -506.2256772956217},
             propsData = {ConditionId = 1201035103}
           }
         },
@@ -1785,8 +2001,26 @@ return {
             endPort = "In"
           },
           {
+            startQuest = "1763368410885677796",
+            startPort = "Out",
+            endQuest = "17666613316761286092",
+            endPort = "In"
+          },
+          {
             startQuest = "17652499256662629",
             startPort = "Success",
+            endQuest = "17666617389852568518",
+            endPort = "Input_1"
+          },
+          {
+            startQuest = "17666613316761286092",
+            startPort = "Out",
+            endQuest = "17666617389852568518",
+            endPort = "Input_2"
+          },
+          {
+            startQuest = "17666617389852568518",
+            startPort = "Out",
             endQuest = "1763368410885677797",
             endPort = "In"
           }
@@ -1867,6 +2101,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1923,6 +2158,7 @@ return {
             pos = {x = 2348.56370581327, y = 130.47876573863448},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_Fil_04"
             }
@@ -1931,9 +2167,10 @@ return {
             key = "1763368410885677797",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 2944.5719050464386, y = 107.36704398844907},
+            pos = {x = 3211.7496002659695, y = 195.90362768928318},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_Fil_04"
             }
@@ -1950,7 +2187,11 @@ return {
             type = "CalculateVarCountNode",
             name = "变量计数节点",
             pos = {x = 2493.609409875902, y = -771.3030056537818},
-            propsData = {VarName = "FilFan", VarValue = 1}
+            propsData = {
+              VarName = "FilFan",
+              VarValue = 1,
+              IsOpen = true
+            }
           },
           ["17633760600332713540"] = {
             key = "17633760600332713540",
@@ -1970,7 +2211,7 @@ return {
             key = "17633760600332713541",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = 3337.7405108432577, y = 143.11842519484725},
+            pos = {x = 3563.4547924573926, y = 223.11842374162927},
             propsData = {VarName = "FilMech", VarValue = 3}
           },
           ["17633760600332713542"] = {
@@ -1984,7 +2225,7 @@ return {
             key = "17633792800284738718",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 2406.0842295282546, y = 622.8454976181457},
+            pos = {x = 2471.9378864309424, y = 700.8942761694793},
             propsData = {}
           },
           ["17634467011323059"] = {
@@ -2023,8 +2264,28 @@ return {
             key = "17652499256662629",
             type = "AsyncConditionNode",
             name = "异步等待条件完成",
-            pos = {x = 2668.2955517994624, y = 122.61083473101168},
+            pos = {x = 2631.7101868535246, y = 0.6596182445529735},
             propsData = {ConditionId = 1201035104}
+          },
+          ["17666613316761286092"] = {
+            key = "17666613316761286092",
+            type = "WaitingMechanismEnterStateNode",
+            name = "等待机关进入状态",
+            pos = {x = 2649.1598451901154, y = 316.9985520970149},
+            propsData = {
+              CreateType = "StaticCreator",
+              CreateId = 2060359,
+              StateId = 701002,
+              IsGuideEnable = false,
+              GuidePointName = ""
+            }
+          },
+          ["17666617389852568518"] = {
+            key = "17666617389852568518",
+            type = "WaitQuestFinishedNode",
+            name = "等待任务完成",
+            pos = {x = 2938.9364831552725, y = 169.8645128800812},
+            propsData = {ListenCount = 2, NeedFinishCount = 1}
           }
         },
         commentData = {}

@@ -1,5 +1,6 @@
 require("UnLua")
 require("DataMgr")
+local LuaConst = require("EMLuaConst")
 local BP_NpcTalkInteractiveComponent_C = Class("BluePrints.Story.Interactive.InteractiveComponent.BP_InteractiveBaseComponent_C")
 local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
 local DailyTalkController = require("BluePrints.UI.WBP.DailyTalk.DailyTalkController")
@@ -172,7 +173,11 @@ function BP_NpcTalkInteractiveComponent_C:IsCanInteractive(PlayerActor)
   local Owner = self.Owner
   local NPCAnimInstance = Owner.NPCAnimInstance
   local bIsRotating = NPCAnimInstance and NPCAnimInstance.IsRotating
-  return self.bIsInit and not PlayerActor:IsSeating() and self.NpcState ~= "Hide" and self.DistanceCheck(self.Owner, PlayerActor, self.InteractiveDistance) and self.BFaceToACheck(self.Owner, PlayerActor, self.InteractiveFaceAngle) and StoryInterActiveModel:HasAnyInteractive(self.Owner.NpcId) and not self.Owner.bHidden and not bIsRotating
+  if LuaConst.OpenComputeInteractive then
+    return self.bIsInit and not PlayerActor:IsSeating() and self.NpcState ~= "Hide" and self:GetDistanceCheckResult() and self.BFaceToACheck(self.Owner, PlayerActor, self.InteractiveFaceAngle) and StoryInterActiveModel:HasAnyInteractive(self.Owner.NpcId) and not self.Owner.bHidden and not bIsRotating
+  else
+    return self.bIsInit and not PlayerActor:IsSeating() and self.NpcState ~= "Hide" and self.DistanceCheck(self.Owner, PlayerActor, self.InteractiveDistance) and self.BFaceToACheck(self.Owner, PlayerActor, self.InteractiveFaceAngle) and StoryInterActiveModel:HasAnyInteractive(self.Owner.NpcId) and not self.Owner.bHidden and not bIsRotating
+  end
 end
 
 function BP_NpcTalkInteractiveComponent_C:CheckForbiddenBySpecialQuest()

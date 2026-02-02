@@ -85,7 +85,22 @@
     "icon": "T_Coin_WeeklyDungeon"
   },
   {
+    "id": 217,
+    "name": "Team Pass",
+    "icon": "T_Resource_Raid_Ticket"
+  },
+  {
     "id": 218,
+    "name": "Phoxcoin",
+    "icon": "T_Resource_Raid_Coin01"
+  },
+  {
+    "id": 219,
+    "name": "齿轮",
+    "icon": "T_Activity_Autochess_Coin01"
+  },
+  {
+    "id": 220,
     "name": "Phoxcoin",
     "icon": "T_Resource_Raid_Coin01"
   },
@@ -168,6 +183,11 @@
     "id": 3007,
     "name": "Yum-Yum Milk",
     "icon": "T_Resource_PetBreak"
+  },
+  {
+    "id": 3015,
+    "name": "Artificer Rod: Mint",
+    "icon": "T_FishingRod_East02"
   },
   {
     "id": 3016,
@@ -1135,6 +1155,36 @@
     "icon": "T_Range_Weapon_Part01"
   },
   {
+    "id": 12138,
+    "name": "Skyfall Duality: Grip",
+    "icon": "T_Melee_Weapon_Part01"
+  },
+  {
+    "id": 12139,
+    "name": "Skyfall Duality: Blade (Left)",
+    "icon": "T_Melee_Weapon_Part02"
+  },
+  {
+    "id": 12140,
+    "name": "Skyfall Duality: Blade (Right)",
+    "icon": "T_Melee_Weapon_Part02"
+  },
+  {
+    "id": 12141,
+    "name": "Trigon Muse: Bolt",
+    "icon": "T_Range_Weapon_Part02"
+  },
+  {
+    "id": 12142,
+    "name": "Trigon Muse: Frame",
+    "icon": "T_Range_Weapon_Part03"
+  },
+  {
+    "id": 12143,
+    "name": "Trigon Muse: Barrel",
+    "icon": "T_Range_Weapon_Part01"
+  },
+  {
     "id": 20002,
     "name": "Damaged Sal Volatile",
     "icon": "T_Resource_Normal02"
@@ -1325,6 +1375,11 @@
     "icon": "T_Dye_09"
   },
   {
+    "id": 30112,
+    "name": "Iridescent Dye",
+    "icon": "T_Dye_12"
+  },
+  {
     "id": 40001,
     "name": "Sal Volatile Ⅰ",
     "icon": "T_Hp_Full"
@@ -1421,8 +1476,68 @@
   },
   {
     "id": 41022,
-    "name": "Shore Leisure: Dark Blue",
+    "name": "Shore Leisure: Violet",
     "icon": "T_Resource_Gesture_BeachBlue"
+  },
+  {
+    "id": 41028,
+    "name": "Goofy Groove",
+    "icon": "T_Resource_Gesture_SkillGomoku"
+  },
+  {
+    "id": 41031,
+    "name": "Dewbearer",
+    "icon": "T_Resource_Gesture_06"
+  },
+  {
+    "id": 41032,
+    "name": "Throne Above All: Gilt",
+    "icon": "T_Resource_DragonThrone_Golden"
+  },
+  {
+    "id": 41037,
+    "name": "Blazing Heartbeat: Glit",
+    "icon": "T_Resource_Gesture_0401"
+  },
+  {
+    "id": 41038,
+    "name": "Blazing Heartbeat: Azure",
+    "icon": "T_Resource_Gesture_0403"
+  },
+  {
+    "id": 41039,
+    "name": "Blazing Heartbeat: White Sakura",
+    "icon": "T_Resource_Gesture_0402"
+  },
+  {
+    "id": 41040,
+    "name": "Throne Above All: Leaden Grey",
+    "icon": "T_Resource_DragonThrone_Grey"
+  },
+  {
+    "id": 41041,
+    "name": "Throne Above All: Violet",
+    "icon": "T_Resource_DragonThrone_Purple"
+  },
+  {
+    "id": 41042,
+    "name": "Silkrain: Glit",
+    "icon": "T_Resource_Gesture_0501"
+  },
+  {
+    "id": 41043,
+    "name": "Silkrain: Apricot",
+    "icon": "T_Resource_Gesture_0502"
+  },
+  {
+    "id": 41044,
+    "name": "Silkrain: Azure",
+    "icon": "T_Resource_Gesture_0503"
+  },
+  {
+    "id": 41045,
+    "name": "Heavenfall Drape",
+    "icon": "T_Resource_Gesture_03"
   },
   {
     "id": 110006,
@@ -1433,6 +1548,16 @@
     "id": 110012,
     "name": "Serenity Character Skin Selection – Dark Jade",
     "icon": "T_Pack_Common02"
+  },
+  {
+    "id": 110015,
+    "name": "Glimmer Character Skin Selection – Fleeting Traces",
+    "icon": "T_Pack_JKSkin"
+  },
+  {
+    "id": 110016,
+    "name": "Glimmer Character Skin Selection – Frosty",
+    "icon": "T_Pack_SnowmanSkin"
   },
   {
     "id": 1001101,
@@ -1503,6 +1628,16 @@
     "id": 1004101,
     "name": "Thought: Rhythm",
     "icon": "T_CharPiece_Lise"
+  },
+  {
+    "id": 1004102,
+    "name": "Thought: Zhiliu",
+    "icon": "T_CharPiece_Zhiliu"
+  },
+  {
+    "id": 1004201,
+    "name": "Thought: Yuming",
+    "icon": "T_CharPiece_Yuming"
   },
   {
     "id": 1004202,
@@ -1678,6 +1813,16 @@
     "id": 5110500,
     "name": "Grandmaster Rod",
     "icon": "T_FishingRod_Normal_5"
+  },
+  {
+    "id": 5110601,
+    "name": "Artificer Rod: Rust Red",
+    "icon": "T_FishingRod_East01"
+  },
+  {
+    "id": 5110602,
+    "name": "Artificer Rod: Violet",
+    "icon": "T_FishingRod_East03"
   },
   {
     "id": 5210100,

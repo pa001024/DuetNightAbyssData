@@ -1,10 +1,5 @@
 require("UnLua")
-local Decorator = require("BluePrints.Client.Wrapper.Decorator")
 local M = Class("BluePrints.UI.BP_UIState_C")
-for key, value in pairs(Decorator) do
-  M[key] = value
-end
-setmetatable(M, getmetatable(Decorator))
 
 function M:Init(Type, RootPage)
   self.VoteMain = RootPage
@@ -180,8 +175,6 @@ function M:OnPressContinue()
   self:PlayAnimation(self.Press)
 end
 
-M:LimitCall(1)
-
 function M:OnClickContinue()
   if self.bClick or not self.VoteMain.AutoInEnd then
     return
@@ -243,8 +236,6 @@ function M:OnPressLeave()
   self.bPress = true
   self:PlayAnimation(self.Press)
 end
-
-M:LimitCall(1)
 
 function M:OnClickLeave()
   if self.bClick or not self.VoteMain.AutoInEnd then

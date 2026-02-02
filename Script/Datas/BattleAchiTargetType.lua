@@ -13,6 +13,9 @@ T.RT_6 = {
 }
 T.RT_7 = {LimitTime = 3}
 T.RT_8 = {AllPhantom = 1}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -203,6 +206,20 @@ return ReadOnly("BattleAchiTargetType", {
       }
     },
     Id = 2008,
+    TargetType = "OnTargetKilled"
+  },
+  [2009] = {
+    Args = {
+      Tag = {"Mon.Hx"}
+    },
+    Id = 2009,
+    TargetType = "OnTargetKilled"
+  },
+  [2010] = {
+    Args = {
+      Tag = {"Mon.HxGr"}
+    },
+    Id = 2010,
     TargetType = "OnTargetKilled"
   },
   [2011] = {

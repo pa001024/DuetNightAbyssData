@@ -61,18 +61,12 @@ function WBP_Teammate_PC_C:InitConfig(Owner)
 end
 
 function WBP_Teammate_PC_C:InitWithOutCharacter(PlayerState)
-  if PlayerState:IsA(AEMPlayerState) then
-    self.Text_Name:SetText(PlayerState.PlayerName)
-    self:SetNameMaterial(self.NameMaterial_Player)
-  elseif PlayerState:IsA(APhantomState) then
-    self.Text_Name:SetText(GText(DataMgr.BattleChar[PlayerState.CharId].CharName))
-    self:SetNameMaterial(self.NameMaterial_Phantom)
-  end
   self.RoleId = PlayerState.CharId
   self.Eid = PlayerState.Eid
   self.MaxShield = 1
+  self:SetName(PlayerState)
   self:SetImage(PlayerState.TeamRecoveryState ~= ETeamRecoveryState.Alive)
-  local Player = Battle(self):GetEntity(PlayerState.Eid)
+  local Player = Battle(self):GetEntity(self.Eid)
   if not IsValid(Player) then
     self:AddBloodState(self.Eid, BloodBarUtils.AllBloodState.OverReach)
   else
@@ -205,44 +199,73 @@ function WBP_Teammate_PC_C:CheckAndLoadShieldBar()
   self.ShieldBar = BloodBarUtils.LoadSubWidget(self, self.Group_ShieldRoot, "ShieldBar", 0, 0)
 end
 
-function WBP_Teammate_PC_C:SetName()
+function WBP_Teammate_PC_C:SetName(PlayerState)
   self.Text_Name:SetText("")
-  if self.Owner:IsPhantom() then
-    local NameKey = DataMgr.BattleChar[self.RoleId].CharName
-    if string.find(DataMgr.TextMap_ContentEN[NameKey].ContentEN, "{nickname") and not IsStandAlone(self) then
-      local PhantomState = GameState(self):GetPhantomState(self.Owner.Eid)
-      if not PhantomState then
-        local PhantomOwner = self.Owner.PhantomOwner
-        if PhantomOwner then
-          local OwnerState = GameState(self):GetPlayerState(PhantomOwner.Eid)
+  if self.Owner then
+    if self.Owner:IsPhantom() then
+      self:SetNameMaterial(self.NameMaterial_Phantom)
+      local NameKey = DataMgr.BattleChar[self.RoleId].CharName
+      if string.find(DataMgr.TextMap_ContentEN[NameKey].ContentEN, "{nickname") and not IsStandAlone(self) then
+        local PhantomState = GameState(self):GetPhantomState(self.Owner.Eid)
+        if not PhantomState then
+          local PhantomOwner = self.Owner.PhantomOwner
+          if PhantomOwner then
+            local OwnerState = GameState(self):GetPlayerState(PhantomOwner.Eid)
+            if OwnerState and OwnerState.PlayerName then
+              self.Text_Name:SetText(OwnerState.PlayerName)
+            end
+          end
+          self.bPendingPhantomSetName = true
+          return
+        end
+        local PhantomOwnerEid = PhantomState.OwnerEid
+        if PhantomOwnerEid then
+          local OwnerState = GameState(self):GetPlayerState(PhantomOwnerEid)
           if OwnerState and OwnerState.PlayerName then
             self.Text_Name:SetText(OwnerState.PlayerName)
+          else
+            self.Text_Name:SetText(GText(NameKey))
+            self.bPendingPhantomSetName = true
+            DebugPrint(ErrorTag, "WBP_Teammate_PC_C:SetName  主角魅影找不到它的OwnerPlayerName")
           end
-        end
-        self.bPendingPhantomSetName = true
-        return
-      end
-      local PhantomOwnerEid = PhantomState.OwnerEid
-      if PhantomOwnerEid then
-        local OwnerState = GameState(self):GetPlayerState(PhantomOwnerEid)
-        if OwnerState and OwnerState.PlayerName then
-          self.Text_Name:SetText(OwnerState.PlayerName)
         else
-          self.Text_Name:SetText(GText(NameKey))
-          self.bPendingPhantomSetName = true
-          DebugPrint(ErrorTag, "WBP_Teammate_PC_C:SetName  主角魅影找不到它的OwnerPlayerName")
+          DebugPrint(ErrorTag, "WBP_Teammate_PC_C:SetName  主角魅影找不到它的Owner， 无法赋予名称")
+          self.Text_Name:SetText("<ERROR>")
         end
       else
-        DebugPrint(ErrorTag, "WBP_Teammate_PC_C:SetName  主角魅影找不到它的Owner， 无法赋予名称")
-        self.Text_Name:SetText("<ERROR>")
+        self.Text_Name:SetText(GText(NameKey))
       end
-    else
-      self.Text_Name:SetText(GText(NameKey))
+    elseif self.Owner:IsPlayer() and self.Owner.GetNickName then
+      self.Text_Name:SetText(self.Owner:GetNickName())
+      self:SetNameMaterial(self.NameMaterial_Player)
     end
-    self:SetNameMaterial(self.NameMaterial_Phantom)
-  elseif self.Owner:IsPlayer() and self.Owner.GetNickName then
-    self.Text_Name:SetText(self.Owner:GetNickName())
-    self:SetNameMaterial(self.NameMaterial_Player)
+  elseif PlayerState then
+    if PlayerState:IsA(AEMPlayerState) then
+      self.Text_Name:SetText(PlayerState.PlayerName)
+      self:SetNameMaterial(self.NameMaterial_Player)
+    elseif PlayerState:IsA(APhantomState) then
+      self:SetNameMaterial(self.NameMaterial_Phantom)
+      local NameKey = DataMgr.BattleChar[self.RoleId].CharName
+      if string.find(DataMgr.TextMap_ContentEN[NameKey].ContentEN, "{nickname") and not IsStandAlone(self) then
+        local PhantomState = PlayerState
+        local PhantomOwnerEid = PhantomState.OwnerEid
+        if PhantomOwnerEid then
+          local OwnerState = GameState(self):GetPlayerState(PhantomOwnerEid)
+          if OwnerState and OwnerState.PlayerName then
+            self.Text_Name:SetText(OwnerState.PlayerName)
+          else
+            self.Text_Name:SetText(GText(NameKey))
+            self.bPendingPhantomSetName = true
+            DebugPrint(ErrorTag, "WBP_Teammate_PC_C:SetName  主角魅影找不到它的OwnerPlayerName")
+          end
+        else
+          DebugPrint(ErrorTag, "WBP_Teammate_PC_C:SetName  主角魅影找不到它的Owner， 无法赋予名称")
+          self.Text_Name:SetText("<ERROR>")
+        end
+      else
+        self.Text_Name:SetText(GText(NameKey))
+      end
+    end
   end
 end
 

@@ -1,5 +1,10 @@
 return {
   StaticCreator = {
+    ["2350034"] = {
+      CreatorId = 2350034,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
     ["2350033"] = {
       CreatorId = 2350033,
       UnitType = "Mechanism",
@@ -15,13 +20,8 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
-    ["2010023"] = {
-      CreatorId = 2010023,
-      UnitType = "Npc",
-      UnitId = 240016
-    },
-    ["2350034"] = {
-      CreatorId = 2350034,
+    ["2350036"] = {
+      CreatorId = 2350036,
       UnitType = "Mechanism",
       UnitId = 1
     },
@@ -30,59 +30,29 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
-    ["2350036"] = {
-      CreatorId = 2350036,
+    ["162350038"] = {
+      CreatorId = 162350038,
       UnitType = "Mechanism",
-      UnitId = 1
+      UnitId = 49006217
+    },
+    ["2350012"] = {
+      CreatorId = 2350012,
+      UnitType = "Mechanism",
+      UnitId = 39029
+    },
+    ["2350014"] = {
+      CreatorId = 2350014,
+      UnitType = "Mechanism",
+      UnitId = 39029
+    },
+    ["242350039"] = {
+      CreatorId = 242350039,
+      UnitType = "Drop",
+      UnitId = 11210
     }
   },
   ManualItem = {},
   Explore = {
-    ["7065007"] = {
-      AutoReset = 0,
-      ["2350025"] = {
-        CreatorId = 2350025,
-        UnitType = "Mechanism",
-        UnitId = 121030,
-        RarelyId = 7065007
-      },
-      ["2350026"] = {
-        CreatorId = 2350026,
-        UnitType = "Mechanism",
-        UnitId = 121028,
-        RarelyId = 7065007
-      }
-    },
-    ["7065010"] = {
-      AutoReset = 0,
-      ["2350031"] = {
-        CreatorId = 2350031,
-        UnitType = "Mechanism",
-        UnitId = 121031,
-        RarelyId = 7065010
-      },
-      ["2350032"] = {
-        CreatorId = 2350032,
-        UnitType = "Mechanism",
-        UnitId = 121028,
-        RarelyId = 7065010
-      }
-    },
-    ["7065008"] = {
-      AutoReset = 0,
-      ["2350028"] = {
-        CreatorId = 2350028,
-        UnitType = "Mechanism",
-        UnitId = 121030,
-        RarelyId = 7065008
-      },
-      ["2350029"] = {
-        CreatorId = 2350029,
-        UnitType = "Mechanism",
-        UnitId = 121028,
-        RarelyId = 7065008
-      }
-    },
     ["7065004"] = {
       AutoReset = 0,
       ["2350017"] = {

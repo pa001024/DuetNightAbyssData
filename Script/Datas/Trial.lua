@@ -4,6 +4,9 @@ T.RT_1 = {
   2,
   3
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -66,6 +69,18 @@ return ReadOnly("Trial", {
   },
   [101019] = {
     CharTrialId = 101019,
+    Tasks = T.RT_1
+  },
+  [101020] = {
+    CharTrialId = 101020,
+    Tasks = T.RT_1
+  },
+  [101021] = {
+    CharTrialId = 101021,
+    Tasks = T.RT_1
+  },
+  [101022] = {
+    CharTrialId = 101022,
     Tasks = T.RT_1
   }
 })

@@ -5,7 +5,9 @@ function M:ReceiveBeginPlay()
   self.Overridden.ReceiveBeginPlay(self)
   self.PlayEndSequence = {}
   local GameMode = UGameplayStatics.GetGameMode(self)
-  GameMode.LevelSequenceStateRecorders:Add(self.SubRegionId, self)
+  if GameMode then
+    GameMode.LevelSequenceStateRecorders:Add(self.SubRegionId, self)
+  end
   self:ClearBinding()
 end
 

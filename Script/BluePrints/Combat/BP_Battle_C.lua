@@ -310,6 +310,8 @@ Traceback:
   Ret = table.concat(Ct)
   if UE4.URuntimeCommonFunctionLibrary.IsPlayInEditor(self) then
     ScreenPrint("战斗报错(StandardShowBattleError):\n" .. Ret)
+  else
+    DebugPrint("战斗报错(StandardShowBattleError):\n" .. Ret)
   end
   if not GWorld.ErrorDict then
     GWorld.ErrorDict = {}
@@ -807,6 +809,8 @@ Traceback:
   Ret = table.concat(Ct)
   if UE4.URuntimeCommonFunctionLibrary.IsPlayInEditor(self) then
     ScreenPrint("战斗报错:\n" .. Ret)
+  else
+    DebugPrint("战斗报错(ShowBattleError):\n" .. Ret)
   end
   if not GWorld.ErrorDict then
     GWorld.ErrorDict = {}

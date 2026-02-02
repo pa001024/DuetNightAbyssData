@@ -195,7 +195,7 @@ end
 function Component:MonsterWaitForCapture(KillMineRoleEid, KillMineSkillId, DeathReason)
   self:WaitForCapture()
   self:StopSkill(UE.ESkillStopReason.Death)
-  self:HandleDestroyCreature()
+  self:DestroyAllCreatures(ECreatureDeathWithCreator.Normal, EDeathReason.CreatureNotDelay)
   self:HandleRemoveBuff()
   self:ClearSummons(false)
   local KillMineRole = Battle(self):GetEntity(KillMineRoleEid)

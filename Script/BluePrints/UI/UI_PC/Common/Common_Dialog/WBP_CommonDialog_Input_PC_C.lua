@@ -45,6 +45,18 @@ function Component:OnClickExchangeCode()
         self:ShowTips(GText("UI_Exchange_WrongChannel"), self.RedTip)
         AudioManager(self):PlayUISound(self, "event:/ui/common/input_err", "", nil)
         return
+      elseif Ret == ErrorCode.RET_CDK_USED_BY_MINE then
+        self:ShowTips(GText("UI_Exchange_Used_Self"), self.RedTip)
+        AudioManager(self):PlayUISound(self, "event:/ui/common/input_err", "", nil)
+        return
+      elseif Ret == ErrorCode.RET_CDK_USE_LIMIT then
+        self:ShowTips(GText("UI_Exchange_Max"), self.RedTip)
+        AudioManager(self):PlayUISound(self, "event:/ui/common/input_err", "", nil)
+        return
+      elseif Ret == ErrorCode.RET_CDK_USED_BY_OTHER then
+        self:ShowTips(GText("UI_Exchange_Used_Other"), self.RedTip)
+        AudioManager(self):PlayUISound(self, "event:/ui/common/input_err", "", nil)
+        return
       else
         self:ShowTips(GText("UI_Exchange_Invalidity"), self.RedTip)
         AudioManager(self):PlayUISound(self, "event:/ui/common/input_err", "", nil)

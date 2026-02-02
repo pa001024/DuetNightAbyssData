@@ -1,5 +1,6 @@
 local CommonUtils = require("Utils.CommonUtils")
 local Component = {}
+local TemplateDumpUtils = require("BluePrints.Client.TemplateDumpUtils")
 
 function Component:GMAddChar(CharId, Level, Reason, NotLog, NeedEnhance)
   local info = DataMgr.Char[CharId] or DataMgr.BattleChar[CharId]
@@ -11,6 +12,90 @@ end
 
 function Component:AddChar(CharId, Level, Reason, GiveNotOpen, NotLog, NeedEnhance)
   return self:AddCharCommon(CharId, Level, Reason, GiveNotOpen, NotLog, NeedEnhance)
+end
+
+function Component:DelChar(CharId, Reason)
+  self.logger.info("DelChar", CharId)
+  local DelChars = {}
+  for eid, char in pairs(self.Chars) do
+    if char.CharId == CharId then
+      table.insert(DelChars, eid)
+    end
+  end
+  for index, eid in ipairs(DelChars) do
+    self:DelCharByUuid(eid)
+  end
+end
+
+function Component:DelCharByUuid(CharUuid, Reason)
+  self.logger.debug("DelCharByUuid", CommonUtils.ObjId2Str(CharUuid))
+  local Char = self.Chars[CharUuid]
+  if not Char then
+    return
+  end
+  local CountReduce = Char.GradeLevel + 1
+  for i, v in ipairs(Char.UWeaponEids) do
+    local UWeapon = self.UWeapons[v]
+    if UWeapon then
+      self:UploadWeaponMod(UWeapon)
+      self.UWeapons[v] = nil
+    end
+  end
+  self:UploadCharMod(Char)
+  local CharId = Char.CharId
+  self.Chars[CharUuid] = nil
+  local common_char = self.CommonChars[CharId]
+  if common_char then
+    common_char.Count = 0
+    self.CommonChars[CharId] = common_char
+  end
+end
+
+function Component:UploadCharMod(Char)
+  if not Char then
+    return false
+  end
+  self:HandleUploadTargetMod("Char", Char.ModSuit_1, Char.Uuid)
+  self:HandleUploadTargetMod("Char", Char.ModSuit_2, Char.Uuid)
+  self:HandleUploadTargetMod("Char", Char.ModSuit_3, Char.Uuid)
+  return true
+end
+
+function Component:UploadWeaponMod(Weapon)
+  if not Weapon then
+    return false
+  end
+  self:HandleUploadTargetMod("Weapon", Weapon.ModSuit_1, Weapon.Uuid)
+  self:HandleUploadTargetMod("Weapon", Weapon.ModSuit_2, Weapon.Uuid)
+  self:HandleUploadTargetMod("Weapon", Weapon.ModSuit_3, Weapon.Uuid)
+  return true
+end
+
+function Component:HandleUploadTargetMod(Tag, ModSuit, CharUuid)
+  for ModSlotId = 1, ModSuit:Length() do
+    local ModSlotEid = ModSuit[ModSlotId]
+    local Mod = self.Mods[ModSlotEid]
+    self:RemoveTargetModUuid(Tag, Mod, ModSlotEid)
+    if not Mod and ModSlotEid ~= CommonConst.ModSlotUnequipped then
+      self.logger.error("ZJT_ HandleUploadCharMod 不存在的Mod被引用 请检测 ", Tag, ModSlotId, CharUuid)
+    end
+    ModSuit[ModSlotId] = CommonConst.ModSlotUnequipped
+  end
+end
+
+function Component:RemoveTargetModUuid(Tag, Mod, Uuid)
+  if not Mod then
+    return
+  end
+  if "Weapon" == Tag then
+    Mod:RemoveWeaponUuid(Uuid)
+  elseif "Char" == Tag then
+    Mod:RemoveCharUuid(Uuid)
+  else
+    self.logger.error("ZJT_ 未知目标 不能移除引用 ", Tag, Mod, Uuid)
+    return
+  end
+  self.Mods[Mod.Uuid] = Mod
 end
 
 function Component:AddCharCommon(CharId, Level, Reason, GiveNotOpen, NotLog, NeedEnhance)
@@ -128,6 +213,41 @@ function Component:AddOtherCharSkin(CharId, SkinId, Reason)
   end
   OtherCharSkin:Append(SkinId)
   self.OtherCharSkins[CharId] = OtherCharSkin
+end
+
+function Component:RealSetCharGradeLevel(CharUuid, TargetLevel)
+  local Char = self.Chars[CharUuid]
+  if not Char then
+    return
+  end
+  if type(TargetLevel) ~= "number" then
+    return
+  end
+  local CharOldGradeKLevel = Char.GradeLevel
+  Char:SetGradeLevel(TargetLevel)
+  local UpgradeSkillExtraLevel = DataMgr.BattleChar[Char.CharId].UpgradeSkillExtraLevel
+  local IsUpExtraLevel = false
+  if nil ~= UpgradeSkillExtraLevel then
+    for key, value in pairs(UpgradeSkillExtraLevel) do
+      local skill = Char:GetSkill(value.SkillId)
+      if CharOldGradeKLevel < value.Grade and TargetLevel >= value.Grade and skill then
+        IsUpExtraLevel = true
+        skill:AddExtraLevel(tonumber(value.ExtraLv))
+        self:ProminentWeaponSkillLevelInheritCharSkillLevel(Char, skill)
+      end
+    end
+  end
+  self.Chars[CharUuid] = Char
+  for i, v in ipairs(Char.UWeaponEids) do
+    local UWeapon = self.UWeapons[v]
+    if UWeapon then
+      UWeapon:SetGradeLevel(true, TargetLevel)
+    end
+  end
+end
+
+function Component:ProminentWeaponSkillLevelInheritCharSkillLevel(Char, Skill)
+  TemplateDumpUtils:HandleWeaponSkillLevelInheritCharSkillLevel(Char, self, Skill)
 end
 
 return Component

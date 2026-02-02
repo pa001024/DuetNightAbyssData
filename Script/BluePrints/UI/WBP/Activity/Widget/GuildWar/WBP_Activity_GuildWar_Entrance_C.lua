@@ -17,7 +17,7 @@ function M:Construct()
   end
   if not self.AddListenerFinish then
     self.AddListenerFinish = true
-    ReddotManager.AddListener(GuildWarUtils.ReddotNodeKey, self, self.RefreshReddot)
+    ReddotManager.AddListener(GuildWarUtils.ReddotNodeKey, self, self.RefreshEntranceReddot)
     ReddotManager.AddListener(GuildWarUtils.ReddotRewardKey, self, self.RefreshQuestReddot)
   end
 end
@@ -46,7 +46,7 @@ function M:Init(ActivityConfigData, PageConfigData, PlayerAvatar)
   if CurEventData then
     self.Entrance_Shop:SetTimeText(CurEventData.EventEndTime)
   end
-  self.CoinId = self:GetCoinIdByShop(RaidSeasons.Shop)
+  self.CoinId = GuildWarUtils.GetCoinId(RaidSeasons.Shop)
   self:RefreshShopCoinQuantity()
   self.Entrance_Shop:SetCoinIconByShop(self.CoinId)
   self.ParentWidget.Group_BtnBuy:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -54,7 +54,8 @@ function M:Init(ActivityConfigData, PageConfigData, PlayerAvatar)
   if self.ParentWidget and self.ParentWidget.NotNeedShowButtonActivityId then
     self.ParentWidget.NotNeedShowButtonActivityId[self.EventId] = true
   end
-  self:RefreshReddot()
+  self:RefreshEntranceReddot()
+  self:RefreshShopReddot()
 end
 
 function M:ShowRankingButton()
@@ -71,18 +72,9 @@ function M:ShowRankingButton()
   end
 end
 
-function M:RefreshReddot()
-  self:RefreshShopReddot()
-  self:RefreshEntranceReddot()
-end
-
 function M:RefreshShopReddot()
-  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(GuildWarUtils.ReddotNodeKey)
-  if not CacheDetail or not CacheDetail[self.EventId] then
-    self.Entrance_Shop:SetReddotVisibility("Collapsed")
-    return
-  end
-  if CacheDetail[self.EventId][GuildWarUtils.ShopCacheKey] then
+  local ShowReddot = GuildWarUtils.HasShopReddot()
+  if ShowReddot then
     self.Entrance_Shop:SetReddotVisibility("SelfHitTestInvisible")
   else
     self.Entrance_Shop:SetReddotVisibility("Collapsed")
@@ -117,38 +109,19 @@ function M:RefreshEntranceReddot()
   end
 end
 
-function M:GetCoinIdByShop(ShopKey)
-  local SubTabId
-  for _, ShopData in pairs(DataMgr.ShopItem2ShopSubId.Resource[ShopKey] or {}) do
-    local ShopIDData = ShopData[1]
-    if ShopIDData then
-      SubTabId = ShopIDData.SubTabId
-    end
-    break
-  end
-  if not SubTabId then
-    return
-  end
-  local CoinId = DataMgr.ShopTabSub[SubTabId].TabCoin[1]
-  return CoinId
-end
-
 function M:RefreshShopCoinQuantity(ResourceId)
   if ResourceId and ResourceId ~= self.CoinId then
     return
   end
   local Quantity = self.Avatar:GetResourceNum(self.CoinId)
   self.Entrance_Shop:SetCoinQuantity(Quantity)
-  GuildWarUtils.RefreshShopReddot()
+  self:RefreshShopReddot()
 end
 
 function M:TryOpenRankTopN()
   if self.RankInfo and self.TopNInfo and self.OpenRankTag then
     self.OpenRankTag = nil
     UIManager():LoadUINew("GuildWarRank", self.RankInfo, self.TopNInfo)
-    if self.RootWidget and self.RootWidget.BlockAllUIInput then
-      self.RootWidget:BlockAllUIInput(false)
-    end
   end
 end
 
@@ -171,17 +144,21 @@ function M:OnRankBtnClicked()
     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("RaidDungeon_PreRaid_Abandon_Toast"))
     return
   end
-  self.OpenRankTag = true
-  if self.RootWidget and self.RootWidget.BlockAllUIInput then
-    self.RootWidget:BlockAllUIInput(true)
+  if not self.RootWidget or not self.RootWidget.BlockAllUIInput then
+    return
   end
+  self.OpenRankTag = true
+  self.RootWidget:BlockAllUIInput(true, "RaidSeasonGetRaidRankInfo")
   self.Avatar:RaidSeasonGetRaidRankInfo(function(ErrCode)
+    self.RootWidget:BlockAllUIInput(false, "RaidSeasonGetRaidRankInfo")
     if not ErrorCode:Check(ErrCode) and self then
       self.RankInfo = {}
       self:TryOpenRankTopN()
     end
   end)
+  self.RootWidget:BlockAllUIInput(true, "RaidSeasonGetRaidRankTopN")
   self.Avatar:RaidSeasonGetRaidRankTopN(function(ErrCode)
+    self.RootWidget:BlockAllUIInput(false, "RaidSeasonGetRaidRankTopN")
     if not ErrorCode:Check(ErrCode) and self then
       self.TopNInfo = {}
       self:TryOpenRankTopN()
@@ -189,17 +166,12 @@ function M:OnRankBtnClicked()
   end)
 end
 
-function M:OnShopClose()
-  self:RefreshShopCoinQuantity()
-  GuildWarUtils.RefreshShopReddot()
-end
-
 function M:GoToShopClick()
   local PageConfigData = DataMgr.EventPortal[self.EventId]
   if not PageConfigData.EventShop then
     return
   end
-  PageJumpUtils:JumpToTargetPageByJumpId(PageConfigData.EventShop, self.OnShopClose, self)
+  PageJumpUtils:JumpToTargetPageByJumpId(PageConfigData.EventShop)
 end
 
 function M:OnQuestDialogClose()
@@ -229,6 +201,15 @@ function M:MakeRaidRewardData(EventId)
   Params.ConfigData.Datas = {}
   local SortedRaidInfo = {}
   for QuestPhaseId, PhaseConfig in pairs(DataMgr.CommonQuestPhase) do
+    if PhaseConfig.EventId == EventId then
+      table.insert(SortedRaidInfo, PhaseConfig)
+    end
+  end
+  table.sort(SortedRaidInfo, function(a, b)
+    return a.Index < b.Index
+  end)
+  for _, PhaseConfig in pairs(SortedRaidInfo) do
+    local QuestPhaseId = PhaseConfig.QuestPhaseId
     local TabIndex = 1
     if PhaseConfig.EventId == EventId then
       local TabItem = {}
@@ -298,6 +279,9 @@ function M:MakeRaidRewardData(EventId)
           table.insert(Items, Item)
         end
       end
+      table.sort(Items, function(a, b)
+        return a.Num < b.Num
+      end)
       RewardData.Items = Items
       Params.ConfigData.Datas[QuestPhaseId] = RewardData
     end

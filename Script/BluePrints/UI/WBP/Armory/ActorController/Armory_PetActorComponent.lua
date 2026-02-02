@@ -14,7 +14,7 @@ function M:ChangePetModel(Info, PlayCharacter, Params)
     local AudioManager = AudioManager(self.ViewUI)
     if Info and Info.PetId then
       if Info.Type == "BattlePass" then
-        self:CreatePetEffectCreature(Info.PetId, Params)
+        self:CreatePetEffectCreature(Info.PetId, Params, true)
       else
         self.WaitForServerSetBattlePet = true
         PlayCharacter:ServerSetBattlePet(Info.PetId, Info.BattlePetLevel, false)
@@ -120,12 +120,12 @@ function M:RemovePetFresnel(Player)
   end
 end
 
-function M:CreatePetEffectCreature(PetId, Params)
+function M:CreatePetEffectCreature(PetId, Params, bForceCreate)
   Params = Params or {}
   local PetData = DataMgr.Pet[PetId]
-  if self.EffectCreatureId and self.EffectCreatureId == PetData.EffectCreatureId then
+  if self.EffectCreatureId and self.EffectCreatureId == PetData.EffectCreatureId and not bForceCreate then
     return
-  elseif self.EffectCreatureId and self.EffectCreatureId ~= PetData.EffectCreatureId and self.EffectCreature then
+  elseif self.EffectCreatureId and (self.EffectCreatureId ~= PetData.EffectCreatureId or bForceCreate) and self.EffectCreature then
     self.EffectCreature:SetActorHiddenInGame(true)
     self._Player:RemoveEffectCreature(self.EffectCreatureId)
   end
@@ -137,9 +137,16 @@ function M:CreatePetEffectCreature(PetId, Params)
   self.EffectCreature:UpdateTickableWhenPaused()
   if not self.ActorTransform then
     self.ActorTransform = self.ArmoryPlayer:GetTransform()
+    self.EffectCreature:K2_SetActorTransform(FTransform(self.ActorTransform.Rotation, self.ActorTransform.Translation, self.ActorTransform.Scale3D), false, nil, false)
   end
-  self.EffectCreature:K2_SetActorTransform(FTransform(self.ActorTransform.Rotation, self.ActorTransform.Translation, self.ActorTransform.Scale3D), false, nil, false)
-  self.EffectCreature.SkeletalMesh:K2_AddRelativeLocation(Params.Location or FVector(0, -40, 25), false, nil, false)
+  local Location = self.ActorTransform.Translation
+  Location = UE4.UKismetMathLibrary.TransformLocation(self.ActorTransform, Params.Location or FVector(0, -40, 25))
+  local Scale = Params.Scale or self.ActorTransform.Scale3D
+  local Rotation = self.ActorTransform.Rotation
+  if Params.Rotation then
+    Rotation = UE4.UKismetMathLibrary.TransformRotation(self.ActorTransform, Params.Rotation):ToQuat()
+  end
+  self.EffectCreature:K2_SetActorTransform(FTransform(Rotation, Location, Scale), false, nil, false)
   self.EffectCreature:SetActorHiddenInGame(false)
   self.EffectCreature.SkeletalMesh:SetTickableWhenPaused(true)
 end
@@ -177,10 +184,13 @@ function M:Component_OnClosed()
 end
 
 function M:Component_OnDestruct()
-  self.CurrentPetInfo = nil
-  self:DestroyPetEffectCreature()
   EventManager:RemoveEvent(EventID.OnArmoryShowPet, self)
   EventManager:RemoveEvent(EventID.OnPetEffectCreatureCreated, self)
+end
+
+function M:Component_DestroyActors()
+  self.CurrentPetInfo = nil
+  self:DestroyPetEffectCreature()
 end
 
 return M

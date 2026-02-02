@@ -1,7 +1,18 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("GlobalConstant", {
+  AUTO_CHESS_MAX_REFRESH = {
+    ConstantName = "AUTO_CHESS_MAX_REFRESH",
+    ConstantValue = 5
+  },
+  AUTO_CHESS_SQUAD_MAX = {
+    ConstantName = "AUTO_CHESS_SQUAD_MAX",
+    ConstantValue = 3
+  },
   AbroadActicityMailId = {
     ConstantName = "AbroadActicityMailId",
     ConstantValue = 10058
@@ -77,6 +88,10 @@ return ReadOnly("GlobalConstant", {
   AutoRejectTime = {
     ConstantName = "AutoRejectTime",
     ConstantValue = 25
+  },
+  AutoRoundsCheckTime = {
+    ConstantName = "AutoRoundsCheckTime",
+    ConstantValue = 10
   },
   BackToHomeBaseCondition = {
     ConstantName = "BackToHomeBaseCondition",
@@ -188,7 +203,7 @@ return ReadOnly("GlobalConstant", {
   },
   CharAccessoryNum = {
     ConstantName = "CharAccessoryNum",
-    ConstantValue = 11
+    ConstantValue = 14
   },
   CharCardLevelMax = {
     ConstantName = "CharCardLevelMax",
@@ -264,7 +279,7 @@ return ReadOnly("GlobalConstant", {
   },
   CurrentVersion = {
     ConstantName = "CurrentVersion",
-    ConstantValue = 110
+    ConstantValue = 120
   },
   Daily_Goal_RandomTaskNum = {
     ConstantName = "Daily_Goal_RandomTaskNum",
@@ -402,6 +417,14 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "ExterminateGuideInterval",
     ConstantValue = 5
   },
+  FORBIDDEN_INVALID_REWARD_IN_DUNGEON = {
+    ConstantName = "FORBIDDEN_INVALID_REWARD_IN_DUNGEON",
+    ConstantValue = 0
+  },
+  FishingExtraRewardWeeklyLimit = {
+    ConstantName = "FishingExtraRewardWeeklyLimit",
+    ConstantValue = 30
+  },
   FishingGameInitialProgress = {
     ConstantName = "FishingGameInitialProgress",
     ConstantValue = 0.2
@@ -490,6 +513,18 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "GuideGachaId",
     ConstantValue = 9998
   },
+  HairColorPart = {
+    ConstantName = "HairColorPart",
+    ConstantValue = 6
+  },
+  HairColorPlan = {
+    ConstantName = "HairColorPlan",
+    ConstantValue = 3
+  },
+  HairDefaultColor = {
+    ConstantName = "HairDefaultColor",
+    ConstantValue = -1
+  },
   HaveCostMax = {
     ConstantName = "HaveCostMax",
     ConstantValue = 999
@@ -529,6 +564,10 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "InvitateBubbleWaitTime",
     ConstantValue = 10
   },
+  InvitationActivityEventId = {
+    ConstantName = "InvitationActivityEventId",
+    ConstantValue = 103019
+  },
   InvitationGuideId = {
     ConstantName = "InvitationGuideId",
     ConstantValue = 2058
@@ -565,6 +604,10 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "ItemIDPetFoodLV3",
     ConstantValue = 3008
   },
+  JJJShopMailId = {
+    ConstantName = "JJJShopMailId",
+    ConstantValue = 10018
+  },
   LeaveBuffTime = {
     ConstantName = "LeaveBuffTime",
     ConstantValue = 3
@@ -577,9 +620,13 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "MailMaxSave",
     ConstantValue = 999
   },
+  MaxAutoRounds = {
+    ConstantName = "MaxAutoRounds",
+    ConstantValue = 99
+  },
   MaxMapMarkIcon = {
     ConstantName = "MaxMapMarkIcon",
-    ConstantValue = 99
+    ConstantValue = 199
   },
   MaxMessageCount = {
     ConstantName = "MaxMessageCount",
@@ -641,9 +688,25 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "MonthlyCardHoldMax",
     ConstantValue = 90
   },
+  MountColorPart = {
+    ConstantName = "MountColorPart",
+    ConstantValue = 4
+  },
+  MountColorPlan = {
+    ConstantName = "MountColorPlan",
+    ConstantValue = 1
+  },
+  MountDefaultColor = {
+    ConstantName = "MountDefaultColor",
+    ConstantValue = -1
+  },
   NearbyPlayerDistance = {
     ConstantName = "NearbyPlayerDistance",
     ConstantValue = 1000
+  },
+  NewPlayerTagTime = {
+    ConstantName = "NewPlayerTagTime",
+    ConstantValue = 1770652800
   },
   NicknameMaxLen = {
     ConstantName = "NicknameMaxLen",
@@ -685,6 +748,14 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "PartyRewardPlyerNumberRatio_4",
     ConstantValue = 2.5
   },
+  PaymentPunishMail1 = {
+    ConstantName = "PaymentPunishMail1",
+    ConstantValue = 10069
+  },
+  PaymentPunishMail2 = {
+    ConstantName = "PaymentPunishMail2",
+    ConstantValue = 10070
+  },
   PerfectModPolarity = {
     ConstantName = "PerfectModPolarity",
     ConstantValue = 0.5
@@ -700,6 +771,10 @@ return ReadOnly("GlobalConstant", {
   PetGuaranteeRatePerFailed = {
     ConstantName = "PetGuaranteeRatePerFailed",
     ConstantValue = 1.1
+  },
+  PetIDCaptureMustSuccess = {
+    ConstantName = "PetIDCaptureMustSuccess",
+    ConstantValue = 4128
   },
   PetLevelCurrency1 = {
     ConstantName = "PetLevelCurrency1",
@@ -797,6 +872,10 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "RegionOnlineShowLow",
     ConstantValue = 10
   },
+  RegionOnlineShowMemory = {
+    ConstantName = "RegionOnlineShowMemory",
+    ConstantValue = 5
+  },
   RegionOnlineShowMiddle = {
     ConstantName = "RegionOnlineShowMiddle",
     ConstantValue = 20
@@ -820,6 +899,22 @@ return ReadOnly("GlobalConstant", {
   ReviewDialogueMax = {
     ConstantName = "ReviewDialogueMax",
     ConstantValue = 50
+  },
+  SecondaryPasswordAllowPasswordWrongTime = {
+    ConstantName = "SecondaryPasswordAllowPasswordWrongTime",
+    ConstantValue = 5
+  },
+  SecondaryPasswordFreezeTime = {
+    ConstantName = "SecondaryPasswordFreezeTime",
+    ConstantValue = 1
+  },
+  SecondaryPasswordMaxPWLen = {
+    ConstantName = "SecondaryPasswordMaxPWLen",
+    ConstantValue = 6
+  },
+  SecondaryPasswordMinPWLen = {
+    ConstantName = "SecondaryPasswordMinPWLen",
+    ConstantValue = 6
   },
   SignatureMaxLen = {
     ConstantName = "SignatureMaxLen",
@@ -900,7 +995,11 @@ return ReadOnly("GlobalConstant", {
   },
   TODUnitTime = {
     ConstantName = "TODUnitTime",
-    ConstantValue = 120
+    ConstantValue = 300
+  },
+  TalkWaitForNewPage = {
+    ConstantName = "TalkWaitForNewPage",
+    ConstantValue = 1.3
   },
   TaskWarningLevel = {
     ConstantName = "TaskWarningLevel",

@@ -195,6 +195,36 @@ return {
       UnitType = "Npc",
       UnitId = 210004
     },
+    ["2110235"] = {
+      CreatorId = 2110235,
+      UnitType = "Npc",
+      UnitId = 701015
+    },
+    ["2110237"] = {
+      CreatorId = 2110237,
+      UnitType = "Npc",
+      UnitId = 701017
+    },
+    ["2110236"] = {
+      CreatorId = 2110236,
+      UnitType = "Npc",
+      UnitId = 701016
+    },
+    ["2110238"] = {
+      CreatorId = 2110238,
+      UnitType = "Npc",
+      UnitId = 701018
+    },
+    ["2110240"] = {
+      CreatorId = 2110240,
+      UnitType = "Npc",
+      UnitId = 701024
+    },
+    ["2110241"] = {
+      CreatorId = 2110241,
+      UnitType = "Npc",
+      UnitId = 701025
+    },
     ["2110263"] = {
       CreatorId = 2110263,
       UnitType = "Mechanism",
@@ -214,6 +244,151 @@ return {
       CreatorId = 2110266,
       UnitType = "Mechanism",
       UnitId = 1
+    },
+    ["2110312"] = {
+      CreatorId = 2110312,
+      UnitType = "Drop",
+      UnitId = 11073
+    },
+    ["2110316"] = {
+      CreatorId = 2110316,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["2110317"] = {
+      CreatorId = 2110317,
+      UnitType = "Drop",
+      UnitId = 11074
+    },
+    ["2110318"] = {
+      CreatorId = 2110318,
+      UnitType = "Npc",
+      UnitId = 701088
+    },
+    ["2110319"] = {
+      CreatorId = 2110319,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["2110328"] = {
+      CreatorId = 2110328,
+      UnitType = "Mechanism",
+      UnitId = 38
+    },
+    ["2110329"] = {
+      CreatorId = 2110329,
+      UnitType = "Drop",
+      UnitId = 11066
+    },
+    ["2110333"] = {
+      CreatorId = 2110333,
+      UnitType = "Npc",
+      UnitId = 700329
+    },
+    ["2110336"] = {
+      CreatorId = 2110336,
+      UnitType = "Drop",
+      UnitId = 20030503
+    },
+    ["2110335"] = {
+      CreatorId = 2110335,
+      UnitType = "Drop",
+      UnitId = 20030502
+    },
+    ["2110337"] = {
+      CreatorId = 2110337,
+      UnitType = "Drop",
+      UnitId = 20030501
+    },
+    ["2110338"] = {
+      CreatorId = 2110338,
+      UnitType = "Drop",
+      UnitId = 20030504
+    },
+    ["2110339"] = {
+      CreatorId = 2110339,
+      UnitType = "Drop",
+      UnitId = 20030507
+    },
+    ["2110342"] = {
+      CreatorId = 2110342,
+      UnitType = "Npc",
+      UnitId = 700331
+    },
+    ["2110343"] = {
+      CreatorId = 2110343,
+      UnitType = "Drop",
+      UnitId = 20030506
+    },
+    ["2110345"] = {
+      CreatorId = 2110345,
+      UnitType = "Drop",
+      UnitId = 11078
+    },
+    ["2110346"] = {
+      CreatorId = 2110346,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["2110350"] = {
+      CreatorId = 2110350,
+      UnitType = "Pet",
+      UnitId = 4059
+    },
+    ["2110351"] = {
+      CreatorId = 2110351,
+      UnitType = "Npc",
+      UnitId = 100001
+    },
+    ["2110352"] = {
+      CreatorId = 2110352,
+      UnitType = "Npc",
+      UnitId = 100001
+    },
+    ["2110353"] = {
+      CreatorId = 2110353,
+      UnitType = "Npc",
+      UnitId = 701091
+    },
+    ["2110354"] = {
+      CreatorId = 2110354,
+      UnitType = "Npc",
+      UnitId = 701092
+    },
+    ["2110355"] = {
+      CreatorId = 2110355,
+      UnitType = "Npc",
+      UnitId = 100001
+    },
+    ["2110356"] = {
+      CreatorId = 2110356,
+      UnitType = "Drop",
+      UnitId = 11079
+    },
+    ["2110358"] = {
+      CreatorId = 2110358,
+      UnitType = "Drop",
+      UnitId = 11222
+    },
+    ["2110359"] = {
+      CreatorId = 2110359,
+      UnitType = "Npc",
+      UnitId = 100001
+    },
+    ["2110362"] = {
+      CreatorId = 2110362,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["2110364"] = {
+      CreatorId = 2110364,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["2110365"] = {
+      CreatorId = 2110365,
+      UnitType = "Drop",
+      UnitId = 11223
     },
     ["2110027"] = {
       CreatorId = 2110027,
@@ -675,6 +850,51 @@ return {
       UnitType = "Monster",
       UnitId = 9509052
     },
+    ["2110313"] = {
+      CreatorId = 2110313,
+      UnitType = "Npc",
+      UnitId = 100001
+    },
+    ["2110314"] = {
+      CreatorId = 2110314,
+      UnitType = "Npc",
+      UnitId = 700370
+    },
+    ["2110315"] = {
+      CreatorId = 2110315,
+      UnitType = "Npc",
+      UnitId = 700371
+    },
+    ["2110332"] = {
+      CreatorId = 2110332,
+      UnitType = "Npc",
+      UnitId = 700373
+    },
+    ["2110331"] = {
+      CreatorId = 2110331,
+      UnitType = "Npc",
+      UnitId = 100001
+    },
+    ["2110330"] = {
+      CreatorId = 2110330,
+      UnitType = "Npc",
+      UnitId = 200002
+    },
+    ["2110348"] = {
+      CreatorId = 2110348,
+      UnitType = "Npc",
+      UnitId = 100001
+    },
+    ["2110347"] = {
+      CreatorId = 2110347,
+      UnitType = "Npc",
+      UnitId = 200002
+    },
+    ["2110349"] = {
+      CreatorId = 2110349,
+      UnitType = "Npc",
+      UnitId = 700377
+    },
     ["2110069"] = {
       CreatorId = 2110069,
       UnitType = "Monster",
@@ -830,10 +1050,20 @@ return {
         UnitId = 2000090,
         RarelyId = 7055018
       }
+    },
+    ["7055020"] = {
+      AutoReset = 0,
+      ["2110363"] = {
+        CreatorId = 2110363,
+        UnitType = "Drop",
+        UnitId = 90018,
+        RarelyId = 7055020
+      }
     }
   },
   RandomRule = {
     ["9040401"] = {RandomRuleId = 9040401},
-    ["8012011"] = {RandomRuleId = 8012011}
+    ["8012011"] = {RandomRuleId = 8012011},
+    ["7040001"] = {RandomRuleId = 7040001}
   }
 }

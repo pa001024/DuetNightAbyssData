@@ -8,6 +8,7 @@ function BP_MonsterRushComponent_C:InitMonsterRushComponent()
   self.Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   self:InitData(self.GameMode.DungeonId)
   self:InitSceneCaptureComponent()
+  self.FinishTime = 0
 end
 
 function BP_MonsterRushComponent_C:InitSceneCaptureComponent()
@@ -44,7 +45,6 @@ function BP_MonsterRushComponent_C:InitData(LevelId)
   end
   self.Description = self.LevelInfo.Description
   self.GlobalPassiveList = self.LevelInfo.GlobalPassiveList
-  self.BattlePetList = self.LevelInfo.BattlePetList
   self.MonsterList = self.LevelInfo.MonsterList
   self.StaticCreatorList = self.LevelInfo.StaticCreatorList
   self.TargetNum = self.LevelInfo.TargetNum
@@ -86,14 +86,6 @@ function BP_MonsterRushComponent_C:MonsterRushTeleport(Location, Rotation)
   PlayerCharacter:K2_TeleportTo(Location, Rotation, false, nil, false)
 end
 
-function BP_MonsterRushComponent_C:InitBattlePetArr()
-  if self.BattlePetList then
-    for index, value in ipairs(self.BattlePetList) do
-      self.BattlePetId:Add(value)
-    end
-  end
-end
-
 function BP_MonsterRushComponent_C:InitStaticCreatorIdArr()
   if self.StaticCreatorList then
     for index, value in ipairs(self.StaticCreatorList) do
@@ -116,6 +108,14 @@ function BP_MonsterRushComponent_C:AddMonsterRushKilledNum(Num)
   self:CheckTargetNum()
 end
 
+function BP_MonsterRushComponent_C:UpdateLevelProgressHud(Progress, MaxProgress, Level)
+  EventManager:FireEvent(EventID.OnWuyoushengLevelProgress, Progress, MaxProgress, Level)
+end
+
+function BP_MonsterRushComponent_C:ShowLevelUpTipsHud(Level)
+  EventManager:FireEvent(EventID.OnWuyoushengLevelUp, Level)
+end
+
 function BP_MonsterRushComponent_C:UpdateUI()
 end
 
@@ -123,6 +123,72 @@ function BP_MonsterRushComponent_C:CheckTargetNum()
   if self.MonsterRushKilledNum >= self.TargetNum then
     DebugPrint("thy    OnTargetNumSuccess")
     self.GameMode:TriggerGameModeEvent("OnTargetNumSuccess", self)
+  end
+end
+
+function BP_MonsterRushComponent_C:CustomFinishInfo(AvatarStr, IsWin)
+  local TimerHandleName = self.GameMode.TimerHandleName
+  if CommonUtils.HasClientTimerStruct(TimerHandleName) then
+    self.FinishTime = math.floor(CommonUtils.GetClientTimerStructPassedTime(TimerHandleName))
+  end
+  if IsWin then
+    local DungeonId = self.GameMode and self.GameMode.DungeonId
+    if not DungeonId then
+      return {Star = 0}
+    end
+    local LevelData = DataMgr.WuyoushengEventLevel[DungeonId]
+    if not LevelData or not LevelData.LevelGoalRequiredTime1 then
+      return {Star = 0}
+    end
+    local TimeThresholds = LevelData.LevelGoalRequiredTime1
+    local Star2Threshold = TimeThresholds[2] or 240
+    local Star3Threshold = TimeThresholds[3] or 180
+    local Star = 1
+    if Star3Threshold > self.FinishTime then
+      Star = 3
+    elseif Star2Threshold > self.FinishTime then
+      Star = 2
+    else
+      Star = 1
+    end
+    return {Star = Star}
+  else
+    return {Star = 0}
+  end
+end
+
+function BP_MonsterRushComponent_C:ShowTopContent(Text, MaxNum)
+  self.TopTextPrefix = Text
+  self.TopMaxMum = MaxNum
+  self.TopCurNum = 0
+  self.TopVisibility = true
+  EventManager:FireEvent(EventID.OnShowWuyoushengTop, self.TopTextPrefix, self.TopVisibility)
+  EventManager:FireEvent(EventID.OnRepWuyoushengTop, self.TopCurNum, self.TopMaxMum)
+end
+
+function BP_MonsterRushComponent_C:HideTopContent()
+  self.TopVisibility = false
+  EventManager:FireEvent(EventID.OnShowWuyoushengTop, self.TopTextPrefix, self.TopVisibility)
+end
+
+function BP_MonsterRushComponent_C:AddTopContentCount(Num)
+  self.TopCurNum = self.TopCurNum + Num
+  EventManager:FireEvent(EventID.OnRepWuyoushengTop, self.TopCurNum, self.TopMaxMum)
+end
+
+function BP_MonsterRushComponent_C:GetTopContent()
+  return self.TopTextPrefix or "", self.TopCurNum or 0, self.TopMaxMum or 1, self.TopVisibility or false
+end
+
+function BP_MonsterRushComponent_C:GetFinishTime()
+  return self.FinishTime
+end
+
+function BP_MonsterRushComponent_C:BpOnTimerDel_MonsterRush_Wuyou()
+  DebugPrint("jly    BpOnTimerDel_MonsterRushTimer")
+  local TimerHandleName = self.GameMode.TimerHandleName
+  if CommonUtils.HasClientTimerStruct(TimerHandleName) then
+    self.FinishTime = math.floor(CommonUtils.GetClientTimerStructPassedTime(TimerHandleName))
   end
 end
 

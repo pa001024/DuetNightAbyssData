@@ -2,7 +2,7 @@ local Component = {}
 
 function Component:SetTimeTag(TimeTagList)
   local function Callback(TimeTagUI)
-    self.TimeTag = FWeakObjectPtr(TimeTagUI)
+    self.TimeTag = UE.FWeakObjectPtr(TimeTagUI)
     
     self:AddWidgetToNode(nil, self.TimeTag)
     TimeTagUI:SetUpTimeTag(TimeTagList)

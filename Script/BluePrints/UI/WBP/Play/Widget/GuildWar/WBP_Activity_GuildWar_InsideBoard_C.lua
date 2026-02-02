@@ -75,38 +75,61 @@ function M:UpdateShow()
   self.WS_Rank:SetActiveWidgetIndex(0)
   local RankIcon
   if Season:IsPreRaidTime() then
-    self.Text_Tip01:SetVisibility(ESlateVisibility.Collapsed)
-    if 0 == Season.MaxPreRaidScore or 1 == Season.BanState then
-      self.WS_Rank:SetActiveWidgetIndex(1)
-      self.WS_Row01:SetVisibility(ESlateVisibility.Collapsed)
+    if 1 == Season.BanState then
+      self.Panel_Tip01:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Panel_Ban:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.WS_Rank:SetActiveWidgetIndex(2)
+      self.Text_Ban:SetText(GText("RaidDungeon_Rank_Ban"))
+      self.Text_Tip01:SetText(GText("RaidDungeon_Rank_Empty"))
+      self.Panel_RewardBtn:SetVisibility(ESlateVisibility.Collapsed)
     else
-      self.WS_Rank:SetActiveWidgetIndex(0)
-      if 1 == self.RankInfo.PreRaidGroupId then
+      self.Panel_Tip01:SetVisibility(ESlateVisibility.Collapsed)
+      self.Panel_Ban:SetVisibility(ESlateVisibility.Collapsed)
+      self.Panel_RewardBtn:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      if 0 == Season.MaxPreRaidScore then
+        self.WS_Rank:SetActiveWidgetIndex(1)
         self.WS_Row01:SetVisibility(ESlateVisibility.Collapsed)
       else
-        self.WS_Row01:SetActiveWidgetIndex(0)
-        self.Text_Num:SetText(self.RankInfo and self.RankInfo.NextScore or 0)
-        self.WS_Row01:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+        self.WS_Rank:SetActiveWidgetIndex(0)
+        if 1 == self.RankInfo.PreRaidGroupId then
+          self.WS_Row01:SetVisibility(ESlateVisibility.Collapsed)
+        else
+          self.WS_Row01:SetActiveWidgetIndex(0)
+          self.Text_Num:SetText(self.RankInfo and self.RankInfo.NextScore or 0)
+          self.WS_Row01:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+        end
       end
     end
     RankIcon = self["Rank_" .. self.RankInfo.PreRaidGroupId]
   elseif Season:IsRaidTime() then
-    if 0 == Season.MaxPreRaidScore or 1 == Season.BanState then
-      self.Text_Tip01:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-      self.WS_Rank:SetActiveWidgetIndex(1)
+    if 1 == Season.BanState then
+      self.Panel_Tip01:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Panel_Ban:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.WS_Rank:SetActiveWidgetIndex(2)
       self.WS_Row01:SetActiveWidgetIndex(1)
       self.WS_Row02:SetActiveWidgetIndex(0)
-      self.Text_Tip01:SetText(GText("RaidDungeon_PreRaid_Abandon"))
+      self.Text_Ban:SetText(GText("RaidDungeon_Rank_Ban"))
+      self.Text_Tip01:SetText(GText("RaidDungeon_Rank_Empty"))
       self.Text_Tip02:SetText(GText("RaidDungeon_PreRaid_Reward"))
     else
-      self.Text_Tip01:SetVisibility(ESlateVisibility.Collapsed)
-      self.WS_Row01:SetActiveWidgetIndex(0)
-      self.WS_Row02:SetActiveWidgetIndex(0)
-      self.Text_Num:SetText(self.Rank or GText("UI_CHAR_FORCE_1101"))
-      self.WS_Rank:SetActiveWidgetIndex(0)
-      if self.bAnimation then
-        AudioManager(self):PlayUISound(self, "event:/ui/activity/gerengonghuizhan_add_rank", nil, nil)
-        self:PlayAnimation(self.Ranking_Up)
+      self.Panel_Ban:SetVisibility(ESlateVisibility.Collapsed)
+      if 0 == Season.MaxPreRaidScore then
+        self.Panel_Tip01:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+        self.WS_Rank:SetActiveWidgetIndex(1)
+        self.WS_Row01:SetActiveWidgetIndex(1)
+        self.WS_Row02:SetActiveWidgetIndex(0)
+        self.Text_Tip01:SetText(GText("RaidDungeon_PreRaid_Abandon"))
+        self.Text_Tip02:SetText(GText("RaidDungeon_PreRaid_Reward"))
+      else
+        self.Panel_Tip01:SetVisibility(ESlateVisibility.Collapsed)
+        self.WS_Row01:SetActiveWidgetIndex(0)
+        self.WS_Row02:SetActiveWidgetIndex(0)
+        self.Text_Num:SetText(self.Rank or GText("UI_CHAR_FORCE_1101"))
+        self.WS_Rank:SetActiveWidgetIndex(0)
+        if self.bAnimation then
+          AudioManager(self):PlayUISound(self, "event:/ui/activity/gerengonghuizhan_add_rank", nil, nil)
+          self:PlayAnimation(self.Ranking_Up)
+        end
       end
     end
     DebugPrint("Season.PreRaidGroupId  " .. Season.PreRaidGroupId)

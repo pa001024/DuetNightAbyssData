@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -45,6 +48,13 @@ return ReadOnly("BagTab", {
     TabDefaultSlot = 999,
     TabId = 7,
     TabName = "UI_BAG_SUBTAB_NAME_CONSUMABLE"
+  },
+  [9] = {
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Draft.T_Tab_Draft",
+    Sequence = 40,
+    TabDefaultSlot = 999,
+    TabId = 9,
+    TabName = "UI_BAG_SUBTAB_NAME_DRAFT"
   },
   [101] = {
     HideSell = true,

@@ -484,6 +484,11 @@ GMCommandConfig.commands["战斗"].commands = {
     }
   },
   {
+    text = "显示所有怪物Eid",
+    mode = "switch",
+    callback = "ShowMonsterEids"
+  },
+  {
     text = "打印玩家当前buff",
     mode = "button",
     callback = "PrintPlayerBuff"
@@ -1442,6 +1447,51 @@ GMCommandConfig.commands["系统"].commands = {
     mode = "button",
     callback = "ExecConsoleCommand",
     parameters = {"sgm aahf"}
+  },
+  {
+    text = "打开送礼商店",
+    mode = "button",
+    callback = "ExecConsoleCommand",
+    parameters = {
+      "gm GiftController:OpenGiftShopMainGM()"
+    }
+  },
+  {
+    text = "设置送礼额度",
+    mode = "menu",
+    widget_path = TipsPaths.MultiInput,
+    commands = {
+      {
+        text = "额度",
+        mode = "edit",
+        callback = "SetGiftQuota"
+      },
+      {
+        text = "执行",
+        mode = "button",
+        callback = "SetGiftQuota"
+      }
+    }
+  },
+  {
+    text = "能给谁送礼（仅自己）",
+    mode = "menu",
+    data_func = "GetFriendCmdObjs",
+    widget_path = TipsPaths.Common
+  },
+  {
+    text = "刷新送礼次数",
+    mode = "button",
+    callback = "ExecConsoleCommand",
+    parameters = {
+      "sgm OnMonthlyRefreshGift"
+    }
+  },
+  {
+    text = "送礼商店忽略好友限制",
+    mode = "switch",
+    var_name = "IgnoreGiftShopFriendLimit",
+    callback = "SwitchIgnoreGiftShopFriendLimit"
   }
 }
 GMCommandConfig.commands["任务"].commands = {}
@@ -2122,6 +2172,32 @@ GMCommandConfig.commands["其他"].commands = {
     mode = "switch",
     var_name = "PrintPickupTriggerTick",
     callback = "PrintPickupTriggerTick"
+  },
+  {
+    text = "开关GPDebug",
+    mode = "button",
+    callback = "ExecConsoleCommand",
+    parameters = {"EnableGDT"}
+  },
+  {
+    text = "GPDebug.AI",
+    mode = "button",
+    callback = "ExecConsoleCommand",
+    parameters = {"gm GDTAI"}
+  },
+  {
+    text = "GPDebug.EMBT",
+    mode = "button",
+    callback = "ExecConsoleCommand",
+    parameters = {"gm GDTEMBT"}
+  },
+  {
+    text = "GPDebug.AnimCache",
+    mode = "button",
+    callback = "ExecConsoleCommand",
+    parameters = {
+      "gm GDTAnimCache"
+    }
   }
 }
 GMCommandConfig.commands["自定义"].commands = {}

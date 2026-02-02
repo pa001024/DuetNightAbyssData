@@ -205,8 +205,12 @@ function BP_ExterminateBaseComponent_C:UpdateNearestMonsterGuide(PlayerEid)
   if nil ~= MonsterEid and MonsterEid > 0 then
     self.NowGuideEids[PlayerEid] = MonsterEid
     self:AddDelayFrameFunc(function()
-      self.GameMode.EMGameState:AddGuideEid(MonsterEid, PlayerEid)
-      DebugPrint("ExterminateBaseComponent: 已成功添加指引点 指引点Eid: " .. MonsterEid .. "  Player Eid: " .. PlayerEid)
+      if self.NowGuideEids[PlayerEid] == MonsterEid then
+        self.GameMode.EMGameState:AddGuideEid(MonsterEid, PlayerEid)
+        DebugPrint("ExterminateBaseComponent: 已成功添加指引点 指引点Eid: " .. MonsterEid .. "  Player Eid: " .. PlayerEid)
+      else
+        DebugPrint("ExterminateBaseComponent: 延迟添加指引点时, self.NowGuideEids已发生变化. 原本准备添加的指引点Eid: " .. MonsterEid .. "  Player Eid: " .. PlayerEid)
+      end
     end, 2)
   else
     DebugPrint("ExterminateBaseComponent: Error  歼灭玩法当前场上找不到怪物!")

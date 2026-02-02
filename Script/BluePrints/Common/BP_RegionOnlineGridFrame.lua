@@ -70,15 +70,25 @@ function M:EnterTrigger()
   end
 end
 
+function M:CheckInLoading(PlayerCharacter)
+  local LoadingUI = GWorld.GameInstance:GetLoadingUI()
+  local bIsInLoading = LoadingUI and LoadingUI.bIsInLoading
+  local bIsInBlackScreen = UIManager(self):GetUIObj("BlackScreenXiaobai")
+  return bIsInLoading or bIsInBlackScreen or PlayerCharacter.IsInDeliver
+end
+
 function M:CheckIdleTag()
   local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   if not self.bShouldEndDeliveryMontage then
     self.bShouldEndDeliveryMontage = GWorld.GameInstance.ShouldPlayDeliveryEndMontage
   end
-  local LoadingUI = GWorld.GameInstance:GetLoadingUI()
-  local bIsInLoading = LoadingUI and LoadingUI.bIsInLoading
-  local bIsInBlackScreen = UIManager(self):GetUIObj("BlackScreenXiaobai")
-  if PlayerCharacter:GetCharacterTag() == "Idle" and not bIsInLoading and not bIsInBlackScreen then
+  if 0 ~= PlayerCharacter.CurrentMountId then
+    if (PlayerCharacter:GetCharacterTag() == "Falling" or PlayerCharacter:GetCharacterTag() == "Idle") and not self:CheckInLoading(PlayerCharacter) then
+      self.bIsIdle = true
+      PlayerCharacter:AddRegionOnline(self)
+      return true
+    end
+  elseif PlayerCharacter:GetCharacterTag() == "Idle" and not self:CheckInLoading(PlayerCharacter) then
     self.bIsIdle = true
     PlayerCharacter:AddRegionOnline(self)
     return true
@@ -212,6 +222,7 @@ function M:EndRegionOnline()
     TimeUI:Close()
   end
   self.bIsIdle = false
+  self.bShouldEndDeliveryMontage = GWorld.GameInstance.ShouldPlayDeliveryEndMontage
   Avatar:RequestLeaveOnline(self.SubRegionId)
   local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   if PlayerCharacter then

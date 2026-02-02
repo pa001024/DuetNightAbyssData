@@ -75,6 +75,15 @@ function M:OnPatchFinished(bFrist)
     if EMLuaConst then
       EMLuaConst:RefreshVars()
     end
+    local SubSystems = UE4.URuntimeCommonFunctionLibrary.GetAllGameInstanceSubSystemImplementUnlua()
+    if SubSystems then
+      for _, SubSystem in pairs(SubSystems) do
+        local InitLuaFunc = SubSystem.Initialize_Lua
+        if InitLuaFunc and type(InitLuaFunc) == "function" then
+          InitLuaFunc(SubSystem)
+        end
+      end
+    end
   end
   local LoginMainPage = GWorld.GameInstance:GetGameUIManager():GetUIObj("LoginMainPage")
   if LoginMainPage then
@@ -126,6 +135,47 @@ function M:GetCustomSystemVoiceOptionalSign()
     "VoiceJP",
     "VoiceKR"
   }
+end
+
+function M:ClearCompilePSOFlag()
+  EMCache:Set("SkipCompilePSO", false)
+  EMCache:SaveCommon()
+end
+
+function M:ShouldCompilePSO_Inner()
+  return not EMCache:Get("SkipCompilePSO")
+end
+
+function M:ClearCompilePSONumCache()
+  EMCache:Set("LastCompiledPSONum", nil)
+  EMCache:Set("CompiledPSONum", nil)
+  EMCache:SaveCommon()
+end
+
+function M:CancelCompilePSO_Lua(bFirstPatch)
+  EMCache:Set("SkipCompilePSO", true)
+  EMCache:SaveCommon()
+  self:CancelCompilePSO(bFirstPatch, true)
+end
+
+function M:TryShowPSOCompileDialog(bFirstPatch)
+  local LastCompiledPSONum = EMCache:Get("LastCompiledPSONum") or -100
+  local CompiledPSONum = EMCache:Get("CompiledPSONum") or -100
+  if LastCompiledPSONum >= 0 and LastCompiledPSONum == CompiledPSONum then
+    local Params = {}
+    
+    function Params.RightCallbackFunction()
+      self:CancelCompilePSO_Lua(bFirstPatch)
+    end
+    
+    function Params.LeftCallbackFunction()
+      self:EnsureCompilePSO(bFirstPatch)
+    end
+    
+    UIManager(self):ShowCommonPopupUI(100308, Params, self)
+  else
+    self:EnsureCompilePSO(bFirstPatch)
+  end
 end
 
 return M

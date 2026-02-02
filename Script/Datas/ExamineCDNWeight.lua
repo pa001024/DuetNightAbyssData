@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -12,8 +15,8 @@ return ReadOnly("ExamineCDNWeight", {
     IsGlobal = false,
     Weight = 25
   },
-  ["http://pan01-1-examine.shyxhy.com//Patches/FinalPatch/"] = {
-    CDNPath = "http://pan01-1-examine.shyxhy.com//Patches/FinalPatch/",
+  ["http://pan01-1-examine.shyxhy.com/Patches/FinalPatch/"] = {
+    CDNPath = "http://pan01-1-examine.shyxhy.com/Patches/FinalPatch/",
     IsGlobal = false,
     Weight = 100
   },

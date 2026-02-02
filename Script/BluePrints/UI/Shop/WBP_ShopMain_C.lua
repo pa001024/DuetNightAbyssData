@@ -100,6 +100,9 @@ function M:ReceiveEnterState(StackAction)
     end
   end
   if 1 == StackAction and self:IsHasVideo() then
+    if self.bPlayVideoBG then
+      self:StopVideoBG()
+    end
     self:PlayVideoBG()
   end
 end
@@ -107,8 +110,9 @@ end
 function M:ReceiveExitState(StackAction)
   M.Super.ReceiveExitState(self, StackAction)
   if 0 == StackAction and self:IsHasVideo() and self.bPlayVideoBG then
-    self:StopVideoBG()
+    self:StopVideoBGWithDelay(0.5)
   end
+  self:HideAllPreviewActor()
 end
 
 function M:Construct()
@@ -140,6 +144,20 @@ function M:Construct()
     self.Common_Tab.WBP_Com_Tab_ResourceBar:SetLastFocusWidget(self.List_Item)
   end
   self.ScrollBox_Recommend.OnUserScrolled:Add(self, self.OnUserScrolled)
+  self.ScrollBox_Recommend.OnMouseButtonDown:Add(self, function(self, Geo, MouseEvent)
+    local BannerGeo = self.Shop_RecommendBanner:GetCachedGeometry()
+    local MousePos = UE4.UKismetInputLibrary.PointerEvent_GetScreenSpacePosition(MouseEvent)
+    if UE4.USlateBlueprintLibrary.IsUnderLocation(BannerGeo, MousePos) then
+      self.Shop_RecommendBanner:OnScrollBoxMouseButtonDown(BannerGeo, MouseEvent)
+    end
+  end)
+  self.ScrollBox_Recommend.OnMouseButtonUp:Add(self, function(self, Geo, MouseEvent)
+    local BannerGeo = self.Shop_RecommendBanner:GetCachedGeometry()
+    local MousePos = UE4.UKismetInputLibrary.PointerEvent_GetScreenSpacePosition(MouseEvent)
+    if UE4.USlateBlueprintLibrary.IsUnderLocation(BannerGeo, MousePos) then
+      self.Shop_RecommendBanner:OnScrollBoxMouseButtonUp(BannerGeo, MouseEvent)
+    end
+  end)
   self:AddDispatcher(EventID.OnRechargeFinished, self, self.OnRechargeFinished)
   self:AddDispatcher(EventID.RefreshShop, self, self.RefreshShop)
   if self.Btn_Shop_Visible and self.Btn_Shop_Visible.Btn_Click then
@@ -398,6 +416,7 @@ function M:RefreshSubTabData(SubTabData)
     self:SetAllowedToShowHideUI(false)
     self:SetShowModel(false)
     self:SetHasVideo(false)
+    self:SetCameraToDefault()
     self:DestroyPreviewActor()
     if self.Common_Tab and self.Common_Tab.WBP_Com_Tab_ResourceBar then
       self.Common_Tab.WBP_Com_Tab_ResourceBar:SetGetReplyOnBack(nil)
@@ -503,9 +522,9 @@ function M:InitRechargePage(SubTabData)
     self.Common_Tab.WBP_Com_Tab_ResourceBar:SetLastFocusWidget(Widget)
   end
   local RechargeContent = {}
-  for _, ShopData in pairs(DataMgr.ShopItem) do
-    if ShopData.SubTabId == SubTabData.SubTabId then
-      table.insert(RechargeContent, ShopData)
+  for _, ShopItemId in ipairs(Const.ReChargeLst) do
+    if DataMgr.ShopItem[ShopItemId] then
+      table.insert(RechargeContent, DataMgr.ShopItem[ShopItemId])
     end
   end
   table.sort(RechargeContent, function(a, b)
@@ -684,15 +703,15 @@ function M:ChangeBanner(BannerId, bSwitch, bRight)
     else
       self.BannerIdMap[self.LastSelectBannerId]:SetVisibility(ESlateVisibility.Collapsed)
     end
-    if self.BannerIdMap[self.LastSelectBannerId].ExitBanner then
-      self.BannerIdMap[self.LastSelectBannerId]:ExitBanner()
-    end
+    self:SetAllowedToShowHideUI(false)
+    self:SetShowModel(false)
+    self:SetHasVideo(false)
   end
   if self.LastWidgetContent and self.LastWidgetContent.SelfWidget then
     self.LastWidgetContent.SelfWidget:UnSelect()
   end
   local BannerData = DataMgr.ShopBannerTab[BannerId]
-  if BannerData and BannerData.Bp and BannerData.Bp ~= "WBP_Shop_Recommend_Common" then
+  if BannerData and BannerData.Bp and BannerData.Bp ~= "WBP_Shop_Recommend_Common" and BannerData.Bp ~= "WBP_Shop_Banner_MonthCard" and BannerData.Bp ~= "WBP_Shop_Recommend_PageGift" then
     self:SetCameraToDefault()
     self:StopActorSound()
     self.Group_BG:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
@@ -833,12 +852,13 @@ function M:Close()
   end
   self:ClearSubTabReddot()
   self:RemoveTabReddotListen()
+  self:CloseMVPSequence()
   self.Super.Close(self)
 end
 
 function M:OnAnimationFinished(InAnimation)
   if InAnimation == self.Out then
-    self:BlockAllUIInput(true)
+    self:BlockAllUIInput(true, "SP_DisplayOnly")
     self:Close()
   elseif InAnimation == self.In then
     self:BlockAllUIInput(false)
@@ -868,6 +888,7 @@ function M:Destruct()
   if GWorld.GameInstance then
     GWorld.GameInstance:SetHighFrequencyMemoryCheckGCEnabled(false, "ShopMain")
   end
+  self:DestroyPreviewActor()
   self.Super.Destruct(self)
 end
 
@@ -1435,6 +1456,9 @@ function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   if "Gamepad_RightX" == InKeyName then
     if self.ActorController then
+      if self.EnableDrag == false then
+        return UIUtils.Unhandled
+      end
       local DeltaX = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 10
       self.ActorController:OnDragging({X = DeltaX})
     end
@@ -1677,6 +1701,15 @@ function M:PlayVideoBG()
   self.Group_BG:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.VideoPlayer:SetLooping(true)
   self.VideoPlayer:Play()
+end
+
+function M:StopVideoBGWithDelay(Time)
+  self:AddTimer(Time, function()
+    if self then
+      self:StopVideoBG()
+      self.Group_BG:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+  end)
 end
 
 function M:StopVideoBG()

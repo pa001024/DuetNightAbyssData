@@ -133,11 +133,9 @@ function M:PlayDialogue(bPauseResume, bSkipping)
   local WaitQueuePointer = self.WaitQueue
   self.UI:SetTextBorderHidden(false)
   self.UI:PlayDialogue(self, DialogueData, self.TalkTaskData)
-  self.TalkAudioComp:PlayDialogue(DialogueData, self.TalkTaskData, self, {
-    Func = function()
-      WaitQueuePointer:CompleteWaitItem(WaitItemUniqueTag.PlayAudio)
-    end
-  }, true)
+  self:PlayAudio(DialogueData, function()
+    WaitQueuePointer:CompleteWaitItem(WaitItemUniqueTag.PlayAudio)
+  end)
   self.TalkContext.TalkTimerManager:AddTimer(self, DialogueData.Duration, nil, nil, self, function()
     WaitQueuePointer:CompleteWaitItem(WaitItemUniqueTag.DelayTime)
   end)

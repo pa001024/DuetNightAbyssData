@@ -20,6 +20,7 @@ function BP_Fault_Black_UINew_C:Construct()
   self.BackGround:SetRenderOpacity(0)
   AudioManager(self):PlayUISound(self, "event:/snapshot/ui/filter_fade_ui", "FaultBlackUI", nil)
   self:SetStoryInputModeEnabled(true)
+  self:RefreshBaseInfo()
 end
 
 function BP_Fault_Black_UINew_C:Destruct()

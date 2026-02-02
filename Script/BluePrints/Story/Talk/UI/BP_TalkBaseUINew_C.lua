@@ -65,7 +65,7 @@ function BP_TalkBaseUINew_C:SetStoryInputModeEnabled(bIsEnable)
       local Params = FGameInputModeParams()
       Params.WidgetToFocus = self
       Params.MouseLockMode = EMouseLockMode.LockOnCapture
-      Params.bHideCursorDuringCapture = true
+      Params.bHideCursorDuringCapture = false
       Params.bShowMouseCursor = true
       Subsystem:EnableInputMode(self.GameInputModeTag, EGameInputMode.GameAndUI, Params)
       UIManager(self):SetUIInputEnable(false, self.GameInputModeTag)
@@ -170,7 +170,8 @@ end
 
 function BP_TalkBaseUINew_C:OnTalkClickReleased()
   DebugPrint("OnTalkClickReleased", self.LongPressTimer)
-  if self.LongPressTimer < Const.ShortPressThreshold then
+  if self.LongPressTimer and self.LongPressTimer < Const.ShortPressThreshold then
+    self.LongPressTimer = nil
     if self.WBP_Story_PlayKey_P then
       self.WBP_Story_PlayKey_P:OnConfirmKeyReleased()
     end
@@ -179,11 +180,16 @@ function BP_TalkBaseUINew_C:OnTalkClickReleased()
 end
 
 function BP_TalkBaseUINew_C:SkipDialogueTyping()
-  if not self:HasPageTypingFinished() then
+  local TypingFinished = false
+  if self:HasWholeDialogueTypingFinished() then
+    self:SkipNextPageTimer()
+    TypingFinished = true
+  elseif not self:HasPageTypingFinished() then
     self:ToPageEnd()
-  elseif not self:HasWholeDialogueTypingFinished() then
+  else
     self:NextPage()
   end
+  return TypingFinished
 end
 
 function BP_TalkBaseUINew_C:SwitchEnableSkipButton(bEnable)
@@ -566,12 +572,10 @@ end
 function BP_TalkBaseUINew_C:NextPage()
   self:RemoveTimer("NextPage")
   self.TypingText:NextPage()
-  self:SetTipImageHidden(true)
 end
 
 function BP_TalkBaseUINew_C:InitDialogueData(DialogueData)
   self.DialogueData = DialogueData
-  self.DialogueDuration = DialogueData.Duration
 end
 
 function BP_TalkBaseUINew_C:TryPlayNextPage()
@@ -581,14 +585,31 @@ function BP_TalkBaseUINew_C:TryPlayNextPage()
 end
 
 function BP_TalkBaseUINew_C:OnWholeDialogueTypingFinished(FinishOrPageEnd)
-  DebugPrint("BP_TalkBaseUINew_C:OnWholeDialogueTypingFinished", FinishOrPageEnd, self:IsAutoPlay(), self.DialogueDuration)
+  DebugPrint("BP_TalkBaseUINew_C:OnWholeDialogueTypingFinished", FinishOrPageEnd, self:IsAutoPlay())
   if FinishOrPageEnd then
-    self.WholeDialogueTypingFinished_Delegate:Fire(FinishOrPageEnd)
+    if self:IsRealAutoPlay() then
+      self:AddNextPageTimer()
+    else
+      self.WholeDialogueTypingFinished_Delegate:Fire(true)
+    end
   else
     self:SetTipImageHidden(false)
     if self:IsAutoPlay() then
-      self:AddTimer(self.DialogueDuration, self.NextPage, false, 0, "NextPage", true)
+      self:AddTimer(DataMgr.GlobalConstant.TalkWaitForNewPage.ConstantValue, self.NextPage, false, 0, "NextPage", true)
     end
+  end
+end
+
+function BP_TalkBaseUINew_C:AddNextPageTimer()
+  self:AddTimer(DataMgr.GlobalConstant.TalkWaitForNewPage.ConstantValue, function()
+    self.WholeDialogueTypingFinished_Delegate:Fire(true)
+  end, false, 0, "TypeFinish", true)
+end
+
+function BP_TalkBaseUINew_C:SkipNextPageTimer()
+  if self:IsExistTimer("TypeFinish") then
+    self:RemoveTimer("TypeFinish")
+    self.WholeDialogueTypingFinished_Delegate:Fire(true)
   end
 end
 
@@ -709,7 +730,13 @@ end
 function BP_TalkBaseUINew_C:IsAutoPlay()
   if self.DialogueData and (self.DialogueData.DialoguePanelType == "None" or self.DialogueData.DialoguePanelType == "AllHide") then
     return true
-  elseif not self.bDefaultShowAutoPlayButton then
+  else
+    return self:IsRealAutoPlay()
+  end
+end
+
+function BP_TalkBaseUINew_C:IsRealAutoPlay()
+  if not self.bDefaultShowAutoPlayButton then
     return false
   else
     return GWorld.GameInstance.bGlobalAutoPlay
@@ -741,6 +768,7 @@ function BP_TalkBaseUINew_C:OnPaused()
     self.WasAutoPlay = true
     self:RemoveTimer("NextPage")
   end
+  self:SetIsEnabled(false)
 end
 
 function BP_TalkBaseUINew_C:OnPauseResumed()
@@ -756,6 +784,7 @@ function BP_TalkBaseUINew_C:OnPauseResumed()
     self.WasAutoPlay = nil
     self:TryPlayNextPage()
   end
+  self:SetIsEnabled(true)
 end
 
 function BP_TalkBaseUINew_C:RefreshBaseInfo()

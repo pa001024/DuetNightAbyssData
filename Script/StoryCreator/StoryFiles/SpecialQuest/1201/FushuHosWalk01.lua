@@ -518,19 +518,19 @@ return {
               Function = "HideUIInScreen",
               UIParam = "EnergySkill",
               ActionParam = "None",
-              ShowOrHide = true
+              ShowOrHide = false
             }
           },
           ["17636374373496046"] = {
             key = "17636374373496046",
             type = "ShowOrHideUINode",
             name = "显示或隐藏UI",
-            pos = {x = 2709.570980250511, y = 464.2645608929897},
+            pos = {x = 2729.570980250511, y = 462.2645608929897},
             propsData = {
               Function = "HideUIInScreen",
               UIParam = "BloodBar",
               ActionParam = "None",
-              ShowOrHide = true
+              ShowOrHide = false
             }
           },
           ["17636374627066985"] = {
@@ -579,24 +579,24 @@ return {
             key = "17636374627066989",
             type = "ShowOrHideUINode",
             name = "显示或隐藏UI",
-            pos = {x = 2530.4052993484297, y = 1695.9560287481634},
+            pos = {x = 2514.4052993484297, y = 1697.9560287481634},
             propsData = {
               Function = "HideUIInScreen",
               UIParam = "EnergySkill",
               ActionParam = "None",
-              ShowOrHide = true
+              ShowOrHide = false
             }
           },
           ["17636374627066990"] = {
             key = "17636374627066990",
             type = "ShowOrHideUINode",
             name = "显示或隐藏UI",
-            pos = {x = 2539.920066866995, y = 1546.2635014133764},
+            pos = {x = 2509.920066866995, y = 1546.2635014133764},
             propsData = {
               Function = "HideUIInScreen",
               UIParam = "BloodBar",
               ActionParam = "None",
-              ShowOrHide = true
+              ShowOrHide = false
             }
           },
           ["17638137222051371064"] = {

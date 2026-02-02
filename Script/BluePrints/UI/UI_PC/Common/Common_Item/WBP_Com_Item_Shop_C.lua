@@ -4,6 +4,7 @@ local M = Class({
 })
 
 function M:Init(Content)
+  self.ItemType = Content.ItemType
   self:OnListItemObjectSet(Content)
 end
 
@@ -22,6 +23,7 @@ function M:SetIcon(IconPath)
     IconPath = DataMgr.Walnut[self.Id].Icon
     self:SetWalnutNum(self.Id)
   end
+  self:SetBgMaterialByItemType(self.ItemType, "HeadSculpture")
   if self.bAsyncLoadIcon then
     self:LoadTextureAsync(IconPath, function(Texture)
       if not Texture then

@@ -38,6 +38,9 @@ T.RT_36 = {31971}
 T.RT_37 = {32491}
 T.RT_38 = {42173}
 T.RT_39 = {42491}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

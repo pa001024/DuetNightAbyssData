@@ -1,11 +1,12 @@
 require("UnLua")
+local LuaConst = require("EMLuaConst")
 local BP_TalkObjectInteractiveComponent_C = Class("BluePrints.Story.Interactive.InteractiveComponent.BP_InteractiveBaseComponent_C")
 local StoryInteractiveController = require("BluePrints.UI.WBP.StoryInteractive.StoryInteractiveController")
 local StoryInterActiveModel = require("BluePrints.UI.WBP.StoryInteractive.StoryInteractiveModel")
 
 function BP_TalkObjectInteractiveComponent_C:SetInteractiveInfo(Info)
   self.Info = Info
-  self.InteractiveDistance = Info.InteractiveDistance
+  self:SetInteractiveDistance(Info.InteractiveDistance)
   self.Owner = self:GetOwner()
   self:SetInteractiveName(Info.InteractiveId)
   self:ProcessRawInfo()
@@ -58,7 +59,11 @@ end
 function BP_TalkObjectInteractiveComponent_C:IsCanInteractive(PlayerActor)
   local bRes = true
   local Exist = StoryInterActiveModel:HasAnyInteractive(self.Owner.NpcId)
-  bRes = self.bEnableDistanceCheck and bRes and self.DistanceCheck(self.Owner, PlayerActor, self.InteractiveDistance) and Exist
+  if LuaConst.OpenComputeInteractive then
+    bRes = self.bEnableDistanceCheck and bRes and self:GetDistanceCheckResult() and Exist
+  else
+    bRes = self.bEnableDistanceCheck and bRes and self.DistanceCheck(self.Owner, PlayerActor, self.InteractiveDistance) and Exist
+  end
   return bRes
 end
 

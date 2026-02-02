@@ -34,6 +34,7 @@ function M:InitKeySetting()
   self.GlobalGamePauseGamepad = Const.GamepadRightThumbstick
   self.MoveCloseGamepad = Const.GamepadLeftTrigger
   self.MoveFarGamepad = Const.GamepadRightTrigger
+  self.FastCloseCamera = CommonUtils:GetActionMappingKeyName("OpenCamera")
   self.KeyDownEvent = {}
   self.KeyDownEvent[self.TabLeftKey] = self.OnTabLeftKeyDown
   self.KeyDownEvent[self.TabRightKey] = self.OnTabRightKeyDown
@@ -64,6 +65,7 @@ function M:InitKeySetting()
   self.KeyDownEvent[self.GlobalGamePauseGamepad] = self.OnGlobalGamePause
   self.KeyDownEvent[self.MoveCloseGamepad] = self.OnMoveCloseKeyDown
   self.KeyDownEvent[self.MoveFarGamepad] = self.OnMoveFarKeyDown
+  self.KeyDownEvent[self.FastCloseCamera] = self.OnFastCloseCameraKeyDown
   self.KeyUpEvent = {}
   self.KeyUpEvent[self.CameraMoveLeftKey] = self.OnCameraMoveLeftKeyUp
   self.KeyUpEvent[self.CameraMoveRightKey] = self.OnCameraMoveRightKeyUp
@@ -426,6 +428,13 @@ function M:OnMoveFarKeyUp()
   self.bCameraMoveFarKeyDown = false
 end
 
+function M:OnFastCloseCameraKeyDown()
+  if self.bShowHideCharacterWidget then
+    self:ToggleShowHideCharacterWidget()
+  end
+  self:CheckHasAnyOperationOrClose()
+end
+
 function M:OnMouseButtonDown(MyGeometry, MouseEvent)
   if self.bScreenshotWidgetShow then
     return Unhandle
@@ -485,6 +494,23 @@ function M:OnKeyUp(MyGeometry, InKeyEvent)
     return Unhandle
   end
   return Unhandle
+end
+
+function M:OnRepeatKeyDown(MyGeometry, InKeyEvent)
+  local GamepadName = UIUtils.UtilsGetCurrentGamepadName()
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if "PS" ~= GamepadName or Const.GamepadDPadUp ~= InKeyName and Const.GamepadDPadDown ~= InKeyName and Const.GamepadDPadLeft ~= InKeyName and Const.GamepadDPadRight ~= InKeyName then
+    return UIUtils.Unhandled
+  end
+  if self.bScreenshotWidgetShow then
+    self.ScreenshotWidget:OnKeyDown(MyGeometry, InKeyEvent)
+    return UIUtils.Handled
+  end
+  if self.KeyDownEvent[InKeyName] then
+    self.KeyDownEvent[InKeyName](self)
+  end
+  return UIUtils.Handled
 end
 
 function M:OnTabLeftKeyDown()
@@ -865,6 +891,10 @@ end
 
 function M:TickFindTargets()
   M.Super.TickFindTargets(self)
+  if self.InitParams and self.InitParams.IsAprilFoolsDayActivity then
+    self.WBP_Camera_Shoot_P:StopLoopRemind()
+    return
+  end
   if self.bScreenshotWidgetShow or self.IsShotTargetSucceeded then
     self.WBP_Camera_Shoot_P:StopLoopRemind()
     return
@@ -1019,6 +1049,7 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputType, CurGamepadName)
     if self.bShowHideCharacterWidget then
       self.GameInputModeSubsystem:SetTargetUIFocusWidget(self.Hide_Role.Btn_Click)
     elseif self.ScreenshotWidget then
+      self.ScreenshotWidget:SetFocus()
     end
   end
   if self.bScreenshotWidgetShow and self.ScreenshotWidget then

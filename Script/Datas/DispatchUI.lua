@@ -50,6 +50,9 @@ T.RT_48 = {24583, 31221}
 T.RT_49 = {-33523, -16357}
 T.RT_50 = {40401, 64009}
 T.RT_51 = {14254, 32223}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -1278,6 +1281,15 @@ return ReadOnly("DispatchUI", {
     TeleportPointPos = 2,
     UIPos = T.RT_37
   },
+  [210205] = {
+    DispatchDes = "DynQuest_ClearRock_Des",
+    DispatchName = "DynQuest_ClearRock_Title",
+    DispatchSubRegionId = 104105,
+    DispatchUIId = 210205,
+    FloorId = 0,
+    TeleportPointPos = 4,
+    UIPos = {-20935, -20068}
+  },
   [301802] = {
     DispatchDes = "DynQuest_IcelakeCityTuiyixunluo_Des",
     DispatchName = "DynQuest_IcelakeCityTuiyixunluo_Title",
@@ -1664,5 +1676,14 @@ return ReadOnly("DispatchUI", {
     FloorId = 0,
     TeleportPointPos = 5,
     UIPos = T.RT_51
+  },
+  [310305] = {
+    DispatchDes = "DynQuest_CollectShanhu_Des",
+    DispatchName = "DynQuest_CollectShanhu_Title",
+    DispatchSubRegionId = 104103,
+    DispatchUIId = 310305,
+    FloorId = -1,
+    TeleportPointPos = 4,
+    UIPos = {-3675, 20192}
   }
 })

@@ -560,7 +560,6 @@ function WBP_DungeonSurviveFloat_C:StartSpecialMonsterGuideLoop()
     return
   end
   self:AddTimer(5, self.ShowSpecialMonsterGuideLoop, true, 0, "SpecialMonsterGuideLoop", false)
-  GameState(self):ShowDungeonToast_Lua("", 2, EToastType.SabotageAlarm)
 end
 
 function WBP_DungeonSurviveFloat_C:ShowSpecialMonsterGuideLoop()

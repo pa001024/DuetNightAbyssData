@@ -27,6 +27,10 @@ function M:InitUIInfo(Name, bInUIMode, EventList, ...)
   if CurMode == ECommonInputType.Gamepad then
     ShortPath = "RB"
     self.bIsGamepad = true
+    local NavigateWidget = self.GameInputModeSubsystem:GetNavigateWidget(false)
+    if NavigateWidget then
+      self.OriginalNavigateWidgetOpacity = NavigateWidget:GetRenderOpacity()
+    end
     self.GameInputModeSubsystem:SetNavigateWidgetVisibility(true)
     self.GameInputModeSubsystem:SetNavigateWidgetOpacity(0)
     KeyInfoList = {
@@ -43,6 +47,17 @@ function M:InitUIInfo(Name, bInUIMode, EventList, ...)
   end
   self.QuestBattleWheelID = (...)
   self.Battle_Menu:InitQuestBattleWheel(self.QuestBattleWheelID)
+  if self.Btn_Close then
+    self.Btn_Close.OnClicked:Add(self, function()
+      if not self then
+        return
+      end
+      local PlayerCharacter = GWorld:GetMainPlayer()
+      if PlayerCharacter and not self.Battle_Menu.bIsClosing then
+        PlayerCharacter:CloseBattleWheel()
+      end
+    end)
+  end
 end
 
 function M:OnLoaded()
@@ -86,7 +101,7 @@ function M:HandleKeyReleased(Key)
   local BattleWheelKey = CommonUtils:GetKeyName("OpenBattleWheel")
   if SWITCH_BTN_KEYBOARD == Key.KeyName or SWITCH_BTN_GAMEPAD == Key.KeyName then
     self.Battle_Menu:OnChangeDisplayWheel()
-  elseif Key.KeyName == BattleWheelKey then
+  elseif Key.KeyName == BattleWheelKey or Key.KeyName == Const.GamepadLeftTrigger or Key.KeyName == Const.GamepadFaceButtonRight then
     self:AddTimer(2, function()
       DebugPrint("gmy@WBP_Battle_Menu_P_C M:HandleKeyReleased11111", self.Battle_Menu.bIsClosing)
       local PlayerCharacter = GWorld:GetMainPlayer()
@@ -130,7 +145,9 @@ end
 
 function M:Close()
   M.Super.Close(self)
-  self.GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
+  if self.bIsGamepad and self.OriginalNavigateWidgetOpacity then
+    self.GameInputModeSubsystem:SetNavigateWidgetOpacity(self.OriginalNavigateWidgetOpacity)
+  end
 end
 
 return M

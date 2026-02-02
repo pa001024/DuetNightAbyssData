@@ -446,7 +446,7 @@ function M:Pet_GetSortAttrNames(SortIdx)
     if 2 == SortIdx then
       SortAttrNames = {"Rarity"}
       for index, value in ipairs(OrderByAttrNames) do
-        if index ~= SortIdx then
+        if value ~= SortAttrNames[1] then
           table.insert(SortAttrNames, value)
         end
       end
@@ -460,7 +460,7 @@ function M:Pet_GetSortAttrNames(SortIdx)
       "_PetEntryId"
     }
     for index, value in ipairs(self.ResourcePetOrderByAttrNames) do
-      if index ~= SortIdx then
+      if value ~= SortAttrNames[1] then
         table.insert(SortAttrNames, value)
       end
     end
@@ -656,6 +656,10 @@ end
 
 function M:GetDesiredFocusTargetInfo(Info)
   if self.IsListExpanded then
+    if self.CurrentSubUI and self.CurrentSubUI.UnlockDialog then
+      Info.Widget = self.CurrentSubUI.UnlockDialog
+      return
+    end
     Info.Widget = self.Selective_Listing
   end
 end

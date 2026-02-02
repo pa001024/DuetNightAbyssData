@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -5,7 +8,7 @@ return ReadOnly("ExternalCDNWeight", {
   ["http://pan01-1-eo.shyxhy.com/Patches/FinalPatch/"] = {
     CDNPath = "http://pan01-1-eo.shyxhy.com/Patches/FinalPatch/",
     IsGlobal = false,
-    Weight = 60
+    Weight = 90
   },
   ["http://pan01-1-hs.shyxhy.com/Patches/FinalPatch/"] = {
     CDNPath = "http://pan01-1-hs.shyxhy.com/Patches/FinalPatch/",
@@ -30,7 +33,7 @@ return ReadOnly("ExternalCDNWeight", {
   ["http://pan01-cdn-eo-jp.dna-panstudio.com/Patches/FinalPatch/"] = {
     CDNPath = "http://pan01-cdn-eo-jp.dna-panstudio.com/Patches/FinalPatch/",
     IsGlobal = true,
-    Weight = 60
+    Weight = 90
   },
   ["http://pan01-cdn-hs-jp.dna-panstudio.com/Patches/FinalPatch/"] = {
     CDNPath = "http://pan01-cdn-hs-jp.dna-panstudio.com/Patches/FinalPatch/",

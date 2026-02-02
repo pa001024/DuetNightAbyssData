@@ -327,19 +327,8 @@ function M:FreshCamera()
   if not self.ActorController then
     return
   end
-  self.ActorController:SetMontageAndCamera("Char", "Char", "Char", nil)
-  if self.SelectWeaponIndex > 0 then
-    local WeaponData = PersonInfoModel:GetShowWeaponData(self.SelectWeaponIndex)
-    if WeaponData then
-      if WeaponData:HasTag("Melee") then
-        self.ActorController:SetMontageAndCamera("Weapon", "Melee", "Melee", nil)
-      else
-        self.ActorController:SetMontageAndCamera("Weapon", "Ranged", "Ranged", nil)
-      end
-    end
-  else
-    self.ActorController:SetMontageAndCamera("Char", "Char", "Char", nil)
-  end
+  local t1, t2, t3, t4 = self.ActorController:CalcArmoryCameraTag("Char", "Char", "Char", nil)
+  self.ActorController:SetArmoryCameraTag(t1, t2, t3, t4)
 end
 
 function M:ForbidenWeaponBox()

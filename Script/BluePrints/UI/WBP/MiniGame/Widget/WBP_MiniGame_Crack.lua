@@ -34,6 +34,7 @@ function M:InitCrackButton()
       {Type = "Text", Text = "F"}
     }
   })
+  self.Btn_Crack:SetVisibility(ESlateVisibility.Visible)
   self.Btn_Crack.OnClicked:Add(self, self.OnClickCrackButton)
   self.Btn_Crack.OnHovered:Add(self, self.OnHoverCrackButton)
   self.Btn_Crack.OnUnhovered:Add(self, self.OnUnhovereCrackButton)
@@ -42,10 +43,12 @@ function M:InitCrackButton()
 end
 
 function M:OnClickCrackButton()
-  if not self.NeedCrack then
+  if not self.NeedCrack or self.bClicked then
     return
   end
+  self.bClicked = true
   self.SuccCallBack(self.RootPage)
+  self.Btn_Crack:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
 end
 
 function M:OnHoverCrackButton()

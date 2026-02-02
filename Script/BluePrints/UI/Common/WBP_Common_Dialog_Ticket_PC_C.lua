@@ -30,12 +30,13 @@ function M:InitContent(Params, PopupData, Owner)
   DebugPrint("gmy@WBP_Common_Dialog_Ticket_PC_C M:InitContent", Avatar:IsInMultiSettlement(), Avatar:IsInTeam())
   self.bIsInTeam = Avatar:IsInMultiSettlement() or Avatar:IsInTeam()
   self.bIsInMultiDungeon = Avatar:IsInMultiDungeon()
+  self.bIsInTempScene = GWorld.GameInstance:IsInTempScene()
   if self.bIsInTeam then
     self:BindDialogEvent("OnRightBtnClicked", self.OnRightBtnClicked)
     self.VB_CountDown:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.CountdownSeconds = DataMgr.GlobalConstant.TicketSelectTime.ConstantValue
     self:StartSelectCountDown()
-  elseif self.bIsInMultiDungeon then
+  elseif self.bIsInMultiDungeon and not self.bIsInTempScene then
     self:BindDialogEvent("OnRightBtnClicked", self.OnRightBtnClicked)
     self.VB_CountDown:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.CountdownSeconds = DataMgr.GlobalConstant.TicketSelectTime.ConstantValue

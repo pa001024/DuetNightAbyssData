@@ -151,7 +151,9 @@ function Component:TriggerRewardEvent(LogicRewards)
       UpValues = RewardsArr.UpValues,
       Count = PlayerCount
     }
-    self:SendAvatar(AvatarEid, "DSGetRewardInDungeon", RewardsArr.Rewards, true, self.RewardCallbackId)
+    if -1 ~= AvatarEid then
+      self:SendAvatar(AvatarEid, "DSGetRewardInDungeon", RewardsArr.Rewards, true, self.RewardCallbackId)
+    end
     self:ServerConditionalMulticast({
       [AvatarEid] = false
     }, "DSGetRewardInDungeon", RewardsArr.Rewards, false, self.RewardCallbackId)

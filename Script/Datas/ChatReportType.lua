@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -41,5 +44,15 @@ return ReadOnly("ChatReportType", {
     Id = "HateSpeech",
     Index = 8,
     Text = "UI_COMMONPOP_TEXT_100090_10"
+  },
+  [9] = {
+    Id = "IllegalPhoto",
+    Index = 9,
+    Text = "UI_COMMONPOP_TEXT_100090_12"
+  },
+  [10] = {
+    Id = "NegativeAttitude",
+    Index = 10,
+    Text = "UI_COMMONPOP_TEXT_100090_13"
   }
 })

@@ -1,8 +1,9 @@
 require("DataMgr")
 require("UnLua")
 local MiscUtils = require("Utils.MiscUtils")
-local FSoundOralComponent = require("BluePrints.Story.Talk.Component.SoundOralComponent").FSoundOralComponent
+local TalkAudioComp_C = require("BluePrints.Story.Talk.Controller.TalkAudioComp")
 local StoryPlayableUtils = require("BluePrints.Story.StoryPlayableUtils").StoryPlayableUtils
+local ClientEventUtils = require("BluePrints.Common.ClientEvent.ClientEventUtils")
 local BP_NPC_C = Class({
   "BluePrints.Char.BP_NpcCharacterBase_C"
 })
@@ -22,14 +23,6 @@ function BP_NPC_C:ReceiveBeginPlay()
   self.IsShowSideIndicator = false
   self.IsInSpecialQuest = false
   self.IsNeedCollapsedOtherBubble = false
-  if not IsAuthority(self) then
-    self.InitTags:Add("WaitForInitComponent", false)
-    self:AddTimer(0.01, self.RemoveWaitInitTagInitComponent, false, 0.01, "RemoveWaitInitTagInitComponent")
-  end
-end
-
-function BP_NPC_C:RemoveWaitInitTagInitComponent()
-  self:TryInitCharacterInfo("WaitForInitComponent")
 end
 
 function BP_NPC_C:OnBattleReady_TryInitCharacterInfo(_Battle)
@@ -98,18 +91,13 @@ function BP_NPC_C:ReceiveEndPlay()
   self.IsDestroied = true
 end
 
-function BP_NPC_C:ForceResetDynamics(bTempForce)
-  if self.Mesh and self.EnableResetPhysic then
-    if bTempForce then
-      self.Mesh:ResetAnimInstanceDynamics(ETeleportType.ResetPhysics)
-      return
-    end
-    local LastFloorResultLoc = self.LastFloorResultLoc
-    local RelativeLocation = self.RootComponent.RelativeLocation
-    local SquaredDis = UE4.UKismetMathLibrary.Vector_DistanceSquared(LastFloorResultLoc, RelativeLocation)
-    if SquaredDis >= 100 then
-      self.Mesh:ResetAnimInstanceDynamics(ETeleportType.ResetPhysics)
-    end
+function BP_NPC_C:CallFromCPPDelegete(Type)
+  DebugPrint("NPC:CallFromCPPDelegete", Type)
+end
+
+function BP_NPC_C:ForceResetDynamics()
+  if self.Mesh then
+    self.Mesh:ResetAnimInstanceDynamics(ETeleportType.ResetPhysics)
   end
 end
 
@@ -152,8 +140,8 @@ function BP_NPC_C:StopOral(VoiceName)
 end
 
 function BP_NPC_C:StartSequentialDialogueLipSync(StartDialogueId)
-  if not self.SoundOralComponent then
-    self.SoundOralComponent = FSoundOralComponent.New()
+  if not self.TalkAudioComp then
+    self.TalkAudioComp = TalkAudioComp_C.New()
   end
   self.CurrentDialogueSequentialId = StartDialogueId
   self.LipSyncComponent.OnBlendStop:Add(self, self.DialogueNextLipSync)
@@ -176,8 +164,7 @@ function BP_NPC_C:DialogueNextLipSync()
   if not DisableMouth then
     NPC = self
   end
-  local AudioManager = AudioManager(self)
-  self.SoundOralComponent:PlaySoundWithOral(AudioManager, VoiceName, NPC)
+  self.TalkAudioComp:PlayAudio(VoiceName, NPC, nil, DialogueInfo)
   self.CurrentDialogueSequentialId = self.CurrentDialogueSequentialId + 1
 end
 
@@ -227,7 +214,7 @@ function BP_NPC_C:SetSitPoseInteractive(CallBackFunc, IsImmediately)
   end
 end
 
-function BP_NPC_C:SetSitPoseWithoutInteractive(CallBackFunc, IsImmediately)
+function BP_NPC_C:SetSitPoseWithoutInteractive(CallBackFunc, IsImmediately, MontageObj)
   if self.IsSitting == true then
     EventManager:FireEvent(EventID.OnNpcPoseChange)
     return
@@ -255,12 +242,12 @@ function BP_NPC_C:SetSitPoseWithoutInteractive(CallBackFunc, IsImmediately)
       AllNeedIgnoreActor:Add(Actor)
     end
   end
-  self:GetMovementComponent():LockMovementMode(true, EMovementMode.Move_NavWalking)
   if self:GetMovementComponent() then
     self:GetMovementComponent().GravityScale = 0
     if not self:GetMovementComponent():IsComponentTickEnabled() then
       self:GetMovementComponent():SetComponentTickEnabled(true)
     end
+    self:GetMovementComponent():OnNpcSeatingBegin()
   end
   self:ResetLocation(AllNeedIgnoreActor)
   if self.NpcAnimInstance then
@@ -274,6 +261,24 @@ function BP_NPC_C:SetSitPoseWithoutInteractive(CallBackFunc, IsImmediately)
   if self.UnitId and DataMgr.Npc[self.UnitId] and DataMgr.Npc[self.UnitId].SpecialSit then
     DefaultMontageName = DataMgr.Npc[self.UnitId].SpecialSit
   end
+  if MontageObj then
+    UE4.UPlayMontageCallbackProxy.CreateProxyObjectForPlayMontage(self.Mesh, MontageObj, 1, 0)
+    EventManager:FireEvent(EventID.OnNpcPoseChange)
+    if CallBackFunc then
+      CallBackFunc()
+    end
+    self:AddTimer(3, function()
+      local HasSection = self.Mesh:GetAnimInstance():IsPlayingMontagesContainsSection("Loop") or self.Mesh:GetAnimInstance():IsPlayingMontagesContainsSection("SitLoop")
+      if HasSection then
+        if self:GetMovementComponent() and self:GetMovementComponent().OnNpcSeatingEnd then
+          self:GetMovementComponent():OnNpcSeatingEnd(EMovementMode.MOVE_NavWalking)
+        end
+        self:RemoveTimer("DelayCloseNpcMovementTickBySit")
+      end
+      self:SetNpcMovementTickEnable(false)
+    end, true, 0, "DelayCloseNpcMovementTickBySit")
+    return
+  end
   if nil == IsImmediately or false == IsImmediately then
     self:PlayTalkAction(DefaultMontageName, {
       self,
@@ -283,6 +288,9 @@ function BP_NPC_C:SetSitPoseWithoutInteractive(CallBackFunc, IsImmediately)
         end
         self:AddTimer(3, function()
           local HasSection = self.Mesh:GetAnimInstance():IsPlayingMontagesContainsSection("Loop") or self.Mesh:GetAnimInstance():IsPlayingMontagesContainsSection("SitLoop")
+          if self:GetMovementComponent() and self:GetMovementComponent().OnNpcSeatingEnd then
+            self:GetMovementComponent():OnNpcSeatingEnd(EMovementMode.MOVE_NavWalking)
+          end
           if HasSection then
             self:SetNpcMovementTickEnable(false)
             self:RemoveTimer("DelayCloseNpcMovementTickBySit")
@@ -316,10 +324,13 @@ function BP_NPC_C:SetSitPoseWithoutInteractive(CallBackFunc, IsImmediately)
         end
         self:AddTimer(3, function()
           local HasSection = self.Mesh:GetAnimInstance():IsPlayingMontagesContainsSection("Loop") or self.Mesh:GetAnimInstance():IsPlayingMontagesContainsSection("SitLoop")
+          if self:GetMovementComponent() and self:GetMovementComponent().OnNpcSeatingEnd then
+            self:GetMovementComponent():OnNpcSeatingEnd(EMovementMode.MOVE_NavWalking)
+          end
           if HasSection then
-            self:SetNpcMovementTickEnable(false)
             self:RemoveTimer("DelayCloseNpcMovementTickBySit")
           end
+          self:SetNpcMovementTickEnable(false)
         end, true, 0, "DelayCloseNpcMovementTickBySit")
       end
     })
@@ -427,6 +438,27 @@ function BP_NPC_C:RealSetSitPoseWithInteractiveAndNoDown(CallBackFunc)
   })
 end
 
+function BP_NPC_C:GetStandNearlyStaticMeshAndMechanism()
+  local AllActor = TArray(AActor)
+  local StaticMeshResult = TArray(AActor)
+  local MeshClass = UE4.AStaticMeshActor
+  UE4.UKismetSystemLibrary.BoxOverlapActors(self, self.RootComponent:K2_GetComponentLocation(), FVector(80, 80, 30), nil, MeshClass, nil, StaticMeshResult)
+  for _, Actor in pairs(StaticMeshResult) do
+    if Actor then
+      AllActor:Add(Actor)
+    end
+  end
+  local MechanismResult = TArray(AActor)
+  local MechanismClass = UE4.AMechanismBase
+  UE4.UKismetSystemLibrary.BoxOverlapActors(self, self.RootComponent:K2_GetComponentLocation(), FVector(80, 80, 30), nil, MechanismClass, nil, MechanismResult)
+  for _, Actor in pairs(MechanismResult) do
+    if Actor then
+      AllActor:Add(Actor)
+    end
+  end
+  return AllActor
+end
+
 function BP_NPC_C:GetNpcTalkActionPath(InActionId)
   local TalkActionData = DataMgr.TalkAction[InActionId]
   if nil == TalkActionData then
@@ -476,12 +508,17 @@ function BP_NPC_C:SetIdlePose(NeedMontage, Callback)
   end
 end
 
-function BP_NPC_C:RealSetIdlePoseBySpecialSit(Callback, IsImmediately)
+function BP_NPC_C:RealSetIdlePoseBySpecialSit(Callback, IsImmediately, Montage)
   if self.IsSitting == true then
     self.IsSitting = false
   end
   self:GetMovementComponent().bAllowPhysicsRotationDuringAnimRootMotion = true
-  if nil == IsImmediately or false == IsImmediately then
+  if Montage then
+    UE4.UPlayMontageCallbackProxy.CreateProxyObjectForPlayMontage(self.Mesh, Montage, 1, 0)
+    if Callback then
+      Callback()
+    end
+  elseif nil == IsImmediately or false == IsImmediately then
     if self.NpcAnimInstance then
       if self.NpcAnimInstance:IsPlayingMontagesSection("End") then
         self.Mesh:GetAnimInstance():Montage_JumpToSection("End")
@@ -522,7 +559,7 @@ function BP_NPC_C:InitNpcInteractiveComponent()
   end
   if NpcData.InteractiveInfo then
     for InteractiveType, CommonUIConfirmID in pairs(NpcData.InteractiveInfo) do
-      if DataMgr.InteractiveInfo[InteractiveType].BPPath then
+      if DataMgr.InteractiveInfo[InteractiveType].BPPath and self[InteractiveType .. "Component"] == nil then
         UResourceLibrary.LoadClassAsync(self, DataMgr.InteractiveInfo[InteractiveType].BPPath, {
           self,
           function(_, ClassObject)
@@ -534,12 +571,14 @@ function BP_NPC_C:InitNpcInteractiveComponent()
   end
   if NpcData.NpcBiographyId then
     local BiographyData = DataMgr.NpcBiography[NpcData.NpcBiographyId]
-    UResourceLibrary.LoadClassAsync(self, DataMgr.InteractiveInfo.Biography.BPPath, {
-      self,
-      function(_, ClassObject)
-        self:OnInteractiveComponentClassLoaded(ClassObject, 100011, "Biography")
-      end
-    })
+    if nil == self.BiographyComponent then
+      UResourceLibrary.LoadClassAsync(self, DataMgr.InteractiveInfo.Biography.BPPath, {
+        self,
+        function(_, ClassObject)
+          self:OnInteractiveComponentClassLoaded(ClassObject, 100011, "Biography")
+        end
+      })
+    end
   end
 end
 
@@ -652,6 +691,19 @@ function BP_NPC_C:GetStartOrEndAnimtionName(AnimName, Postfix)
   else
     return ""
   end
+end
+
+function BP_NPC_C:CleanAllTimer()
+  local NpcData = DataMgr[self.UnitType][self.UnitId]
+  if NpcData and NpcData.InteractiveInfo then
+    for InteractiveType, CommonUIConfirmID in pairs(NpcData.InteractiveInfo) do
+      if DataMgr.InteractiveInfo[InteractiveType].BPPath then
+        self[InteractiveType .. "Component"] = nil
+      end
+    end
+  end
+  self.BiographyComponent = nil
+  self.Overridden.CleanAllTimer(self)
 end
 
 function BP_NPC_C:OnInteractiveComponentClassLoaded(ClassObject, CommonUIConfirmID, InteractiveType)
@@ -796,6 +848,12 @@ function BP_NPC_C:TickActorGlobalTimeDilation()
   end
 end
 
+function BP_NPC_C:TriggerFaceBlend(bOpen)
+  if self.NpcAnimInstance then
+    self.NpcAnimInstance.bForbiddenFaceByActionData = bOpen
+  end
+end
+
 function BP_NPC_C:SetActorsImmunePause(TargetActors, bImmune)
   if not TargetActors then
     return
@@ -894,6 +952,10 @@ function BP_NPC_C:PreExitStory(OnFinished, bStartBT)
   if bStartBT and self.RestartBT then
     self:RestartBT()
   end
+  local Controller = self:GetController()
+  if Controller and Controller.BrainComponent and Controller.BrainComponent:IsRunning() then
+    self:SwitchEnableAnimInstanceIK(false)
+  end
   local MaterialArray = TArray(UMaterialInterface)
   self.CharacterFashion:UncacheMeshMaterials(self.Mesh, MaterialArray)
   self.CharacterFashion:SetMeshMaterials(self.Mesh, MaterialArray)
@@ -916,6 +978,9 @@ function BP_NPC_C:InitNpcAccessories(CharId)
     for _, Char in pairs(Avatar.Chars) do
       if Char.CharId == CharId then
         local AppearanceSuit = Char:DumpAppearanceSuit(Avatar)
+        if self.CurrentCompositeMesh then
+          self.CurrentCompositeMesh = nil
+        end
         self:InitAppearanceSuit(AppearanceSuit)
         break
       end
@@ -923,10 +988,18 @@ function BP_NPC_C:InitNpcAccessories(CharId)
   end
 end
 
+function BP_NPC_C:InitNpcAccessoriesInStory(CharId)
+  self:InitNpcAccessories(CharId)
+end
+
 function BP_NPC_C:RefreshNpcAccessories(Char)
   local Avatar = GWorld:GetAvatar()
   if Avatar then
     local AppearanceSuit = Char:DumpAppearanceSuit(Avatar)
+    if self.CurrentCompositeMesh then
+      self.CurrentCompositeMesh = nil
+    end
+    self:LoadCurrentModel()
     self:InitAppearanceSuit(AppearanceSuit)
   end
 end
@@ -939,6 +1012,9 @@ function BP_NPC_C:OnEMActorDestroy_Lua(DestroyReason)
   local GameMode = UGameplayStatics.GetGameMode(self)
   if IsValid(self.CurrentSeat) then
     self.CurrentSeat:CloseMechanismNpcSpecial(self)
+  end
+  if self.UnitId == 818054 then
+    self:RemoveTimer("TempSetMoveMode")
   end
   if GameMode then
     GameMode:GetRegionDataMgrSubSystem():DeadRegionActorData(self, DestroyReason, GameMode:GetActorLevelName(self))

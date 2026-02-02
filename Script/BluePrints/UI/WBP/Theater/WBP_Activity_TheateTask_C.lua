@@ -5,7 +5,6 @@ local M = Class({
 
 function M:Construct()
   self.RegionId = nil
-  self:InitUI()
 end
 
 function M:InitUI()
@@ -18,6 +17,18 @@ function M:InitUI()
   self.Text_Progress:SetText(GText("TheaterOnline_Game_Waiting"))
   local CurrentTime = TimeUtils.NowTime()
   local RemainTime = self:CalculateRemainTimeToNextHour()
+  local TargetTime = CurrentTime + RemainTime
+  local RemainTimeDict, TimeCount = UIUtils.GetLeftTimeStrStyle2(TargetTime)
+  self.WBP_Com_Time:SetTimeText("", RemainTimeDict)
+  self:StartCountdownTimer()
+end
+
+function M:InitFailUI()
+  self.JoinCountDown = true
+  self.Text_Title:SetText(GText("TheaterOnline_Game_Name"))
+  self.Text_Progress:SetText(GText("TheaterOnline_Game_Sign_Waiting"))
+  local CurrentTime = TimeUtils.NowTime()
+  local RemainTime = self:CalculateRemainTimeToAvailableJoin()
   local TargetTime = CurrentTime + RemainTime
   local RemainTimeDict, TimeCount = UIUtils.GetLeftTimeStrStyle2(TargetTime)
   self.WBP_Com_Time:SetTimeText("", RemainTimeDict)
@@ -39,6 +50,15 @@ function M:CalculateRemainTimeToNextHour()
   return NextTargetSeconds - CurrentTotalSeconds
 end
 
+function M:CalculateRemainTimeToAvailableJoin()
+  local NpcInteractON = DataMgr.TheaterConstant.NpcInteractON.ConstantValue
+  local CurrentTime = TimeUtils.NowTime()
+  if NpcInteractON >= CurrentTime % 1800 then
+    return NpcInteractON - CurrentTime % 1800
+  end
+  return 0
+end
+
 function M:StartCountdownTimer()
   if self.CountdownTimer then
     self:RemoveTimer(self.CountdownTimer)
@@ -50,7 +70,12 @@ end
 
 function M:UpdateCountdown()
   local CurrentTime = TimeUtils.NowTime()
-  local RemainTime = self:CalculateRemainTimeToNextHour()
+  local RemainTime
+  if self.JoinCountDown then
+    RemainTime = self:CalculateRemainTimeToAvailableJoin()
+  else
+    RemainTime = self:CalculateRemainTimeToNextHour()
+  end
   if RemainTime <= 0 then
     if self.CountdownTimer then
       self:RemoveTimer(self.CountdownTimer)
@@ -69,7 +94,8 @@ function M:UpdateCountdown()
   local RegionId = Avatar.CurrentRegionId
   local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
   if not GameState:IsInRegion() or 101901 ~= RegionId then
-    DebugPrint("ayff 离开剧院区域，关闭剧院活动倒计时 regionid:", RegionId)
+    self:Close()
+  elseif Avatar:IsInHardBoss() then
     self:SetVisibility(UE4.ESlateVisibility.Collapsed)
   else
     self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
@@ -77,6 +103,11 @@ function M:UpdateCountdown()
 end
 
 function M:Close()
+  local BattleMain = UIManager(self):GetUI("BattleMain")
+  if BattleMain and BattleMain.TheaterCheckTimer then
+    BattleMain:RemoveTimer(BattleMain.TheaterCheckTimer)
+    BattleMain.TheaterCheckTimer = nil
+  end
   if self.CountdownTimer then
     self:RemoveTimer(self.CountdownTimer)
     self.CountdownTimer = nil

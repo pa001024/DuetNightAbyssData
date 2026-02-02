@@ -31,6 +31,20 @@ function M:InitUI()
   end
   self.Text_Desc:SetText(GText(self.Content.StarterQuestDes))
   self:UpdateListItemState()
+  self:RefreshRewardItem()
+  if self.Key_Reward then
+    self.Key_Reward:CreateCommonKey({
+      KeyInfoList = {
+        {Type = "Img", ImgShortPath = "LS"}
+      }
+    })
+  end
+  self.Btn_Goto.Text_Button:SetText(GText("UI_GameEvent_Goto"))
+  self.Btn_Reward:SetText(GText("UI_GameEvent_ClaimReward"))
+  self.Text_Progressing:SetText(GText("UI_GameEvent_ToBeFinished"))
+end
+
+function M:RefreshRewardItem()
   self.List_Item:ClearListItems()
   local RewardInfo = DataMgr.Reward[self.Content.QuestReward[1]]
   if RewardInfo then
@@ -57,16 +71,6 @@ function M:InitUI()
       self.List_Item:AddItem(Content)
     end
   end
-  if self.Key_Reward then
-    self.Key_Reward:CreateCommonKey({
-      KeyInfoList = {
-        {Type = "Img", ImgShortPath = "LS"}
-      }
-    })
-  end
-  self.Btn_Goto.Text_Button:SetText(GText("UI_GameEvent_Goto"))
-  self.Btn_Reward:SetText(GText("UI_GameEvent_ClaimReward"))
-  self.Text_Progressing:SetText(GText("UI_GameEvent_ToBeFinished"))
 end
 
 function M:UpdateQuestCompletionState()
@@ -88,6 +92,7 @@ end
 function M:UpdateQuestProgressAndRewardState()
   if self.IsGetReward then
     self.Switch_Btn:SetActiveWidgetIndex(2)
+    self:RefreshRewardItem()
   elseif self.IsCanGetReward then
     self.Switch_Btn:SetActiveWidgetIndex(1)
   else

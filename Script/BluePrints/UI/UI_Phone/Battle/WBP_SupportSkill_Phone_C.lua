@@ -36,12 +36,16 @@ function SupportSkill_Phone_C:RefreshSupportSkillIcon()
   end
   self.IsInit = true
   self.SkillId = DataMgr.BattlePet[BattlePet.BattlePetId].SupportSkillId
+  self:RefreshButtonStyle()
+  if not self.OwnerPlayer:CheckSkillInActive(ESkillName.Skill3) then
+    DebugPrint("RefreshSupportSkillIcon时Skill3被禁用!!!")
+    return
+  end
   if self.bSupportSkillUnlock then
     self:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   else
     self:SetVisibility(ESlateVisibility.Collapsed)
   end
-  self:RefreshButtonStyle()
   self.CurButtonState = "Normal"
   self:PlayButtonStateAnimation()
 end

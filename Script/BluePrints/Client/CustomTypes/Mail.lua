@@ -38,7 +38,9 @@ Mail.__Props__ = {
   MailContent = prop.prop("Str2StrDict", "client save"),
   MailSender = prop.prop("Int", "client save"),
   CtxId = prop.prop("Str", "client save"),
-  FormatText = prop.prop("Str2StrDict", "client save")
+  FormatText = prop.prop("Str2StrDict", "client save"),
+  Nickname = prop.prop("Str", "client save"),
+  HeadIconId = prop.prop("Int", "client save")
 }
 
 function Mail:Init(MailDate, MailId, MailTitle, MailContent, Items, MailSender)
@@ -99,16 +101,9 @@ function MailDict:NewCustomRewardMail(MailId, MailDate, Items)
 end
 
 function MailDict:NewTextMail(MailDate, Title, Content)
-  local Language = {
-    "CN",
-    "TC",
-    "JP",
-    "KR",
-    "EN"
-  }
   local RealContent = {}
   local RealTitle = {}
-  for _, lang in ipairs(Language) do
+  for lang, v in pairs(CommonConst.SystemLanguages) do
     RealContent[lang] = Content or ""
     RealTitle[lang] = Title or ""
   end

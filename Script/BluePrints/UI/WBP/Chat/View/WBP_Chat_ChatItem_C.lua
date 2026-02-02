@@ -78,6 +78,7 @@ function M:OnListItemObjectSet_Other(Content)
   self.ImageBg = self.Image_LeftDialogBG
   self.Switcher = self.WidgetSwitcher_Bubble_L
   self.ModPlan = self.Bubble_ModPlan_L
+  self.GiftItem = self.Chat_GiftItemLeft
   self.TitleWidget = self.TitleLeft
   self:InitSelectMask(self.Image_LeftControllerLight)
   self:_SetUpChatContent(self.MsgWrap)
@@ -104,6 +105,7 @@ function M:OnListItemObjectSet_Self(Content)
   self.ImageBg = self.Image_RightDialogBG
   self.Switcher = self.WidgetSwitcher_Bubble_R
   self.ModPlan = self.Bubble_ModPlan_R
+  self.GiftItem = self.Chat_GiftItemRight
   self.TitleWidget = self.TitleRight
   self:InitSelectMask(self.Image_RightControllerLight)
   self:_SetUpChatContent(self.MsgWrap)
@@ -220,14 +222,19 @@ function M:_ParseModSuitInfo(MsgWrap)
   self.Switcher:SetActiveWidgetIndex(0)
   local ModSuitInfo = MsgWrap.ModSuitInfo
   local DyePlanInfo = MsgWrap.DyePlanInfo
+  local GiftInfo = MsgWrap.GiftInfo
   if ModSuitInfo then
     self.Switcher:SetActiveWidgetIndex(1)
     local bSelfMsg = self.MsgWrap.MsgType == ChatCommon.MsgType.Self
-    self.ModPlan:InitMod(ModSuitInfo, bSelfMsg)
+    self.ModPlan:InitMod(ModSuitInfo, bSelfMsg, MsgWrap.Message.Sender.Nickname)
   elseif DyePlanInfo then
     self.Switcher:SetActiveWidgetIndex(1)
     local bSelfMsg = self.MsgWrap.MsgType == ChatCommon.MsgType.Self
     self.ModPlan:InitDye(DyePlanInfo, bSelfMsg)
+  elseif MsgWrap.GiftInfo then
+    self.Switcher:SetActiveWidgetIndex(2)
+    local bSelfMsg = self.MsgWrap.MsgType == ChatCommon.MsgType.Self
+    self.GiftItem:InitChatGiftItem(GiftInfo, bSelfMsg)
   end
 end
 

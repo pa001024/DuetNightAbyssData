@@ -59,7 +59,13 @@ end
 
 function BP_EffectCreature_C:ReplaceSkeletalMesh(EffectCreatureMesh, ModelId)
   if EffectCreatureMesh then
-    self.SkeletalMesh:SetSkeletalMesh(EffectCreatureMesh)
+    local RealEffectCreatureId = self.ReplaceSkinEffectCreatureId and self.ReplaceSkinEffectCreatureId or self.EffectCreatureId
+    local EffectCreatureConfig = DataMgr.EffectCreature[RealEffectCreatureId]
+    local IsResetAnim = true
+    if EffectCreatureConfig.DontResetAnim then
+      IsResetAnim = false
+    end
+    self.SkeletalMesh:SetSkeletalMesh(EffectCreatureMesh, IsResetAnim)
   end
   if ModelId then
     if DataMgr.Model[ModelId].ModelScale then

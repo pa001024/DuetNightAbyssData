@@ -97,6 +97,38 @@ end
 
 function M:UpdateOnInputDeviceTypeChange()
   if self.CurInputDeviceType == ECommonInputType.Gamepad then
+    if self.InFocus then
+      self.Key_TaskRewardTitle:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    end
+    if self.Key_TitleLeft and self.Key_TitleRight and self.InFocus then
+      self.Key_TitleLeft:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Key_TitleRight:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    end
+    if self.Owner and self.Owner.CurPhaseId and self.Owner.MaxPhase then
+      local CurPhaseId = self.Owner.CurPhaseId
+      if 1 == CurPhaseId and self.Key_TitleLeft then
+        self.Key_TitleLeft:SetForbidKey(false)
+        self.Key_TitleLeft:SetForbidKey(true)
+      end
+      if CurPhaseId == self.Owner.MaxPhase then
+        if self.Key_TitleRight then
+          self.Key_TitleRight:SetForbidKey(false)
+          self.Key_TitleRight:SetForbidKey(true)
+        end
+      else
+        local NextPhase = CurPhaseId + 1
+        local Avatar = GWorld:GetAvatar()
+        if DataMgr.ModTaskPhase and DataMgr.ModTaskPhase[NextPhase] and DataMgr.ModTaskPhase[NextPhase].Condition and not ConditionUtils.CheckCondition(Avatar, DataMgr.ModTaskPhase[NextPhase].Condition) then
+          if self.Key_TitleRight then
+            self.Key_TitleRight:SetForbidKey(false)
+            self.Key_TitleRight:SetForbidKey(true)
+          end
+        elseif self.Key_TitleRight then
+          self.Key_TitleRight:SetForbidKey(true)
+          self.Key_TitleRight:SetForbidKey(false)
+        end
+      end
+    end
   else
     self.Key_TaskRewardTitle:SetVisibility(ESlateVisibility.Collapsed)
     if self.Key_TitleLeft and self.Key_TitleRight then

@@ -1,2 +1,2 @@
-local Version = 1.04
+local Version = 1.07
 return Version

@@ -27,9 +27,27 @@ function M:InitPayGiftItemInfo(ShopItemData)
   self.NowPayGiftItem = nil
   self.Lock:SetVisibility(ESlateVisibility.Collapsed)
   self.Group_SoldOut:SetVisibility(ESlateVisibility.Collapsed)
-  if ShopItemData.UnlockLevel and Avatar.Level < ShopItemData.UnlockLevel then
+  self.IsLockState = ShopUtils:CheckShopItemCondition(ShopItemData)
+  if self.IsLockState then
+    if ShopItemData.ItemConditionDisplay and ShopItemData.ItemCondition then
+      self.Lock.Text_Lock:SetText(GText(DataMgr.Condition[ShopItemData.ItemCondition[1]] and DataMgr.Condition[ShopItemData.ItemCondition[1]].ConditionText or ""))
+    else
+      self.Lock.Text_Lock:SetText(GText("UI_Shop_ItemUnlock"))
+    end
+    self.Lock:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  elseif ShopItemData.UnlockLevel and Avatar.Level < ShopItemData.UnlockLevel then
     self.Lock.Text_Lock:SetText(GText("UI_Player_Level") .. ShopItemData.UnlockLevel)
     self.Lock:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  elseif GiftController:IsInGiftShop() then
+    local giftMain = GiftController:GetGiftMainPage()
+    local Uid = giftMain and giftMain.FriendUid or nil
+    local PurchaseLimit = ShopUtils:GetGiftItemPurchaseLimit(ShopItemData.ItemId, Uid)
+    if PurchaseLimit and PurchaseLimit > -1 and 0 == PurchaseLimit then
+      self.PayGift_PurpleItem.Group_More:SetVisibility(ESlateVisibility.Collapsed)
+      self.PayGift_YellowItem.Group_More:SetVisibility(ESlateVisibility.Collapsed)
+      self.Text_SoldOut:SetText(GText("UI_SendGift_SendGiftLimit"))
+      self.Group_SoldOut:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    end
   elseif Avatar:CheckShopItemSoldOutDisplay(ShopItemData.ItemId) then
     self.PayGift_PurpleItem.Group_More:SetVisibility(ESlateVisibility.Collapsed)
     self.PayGift_YellowItem.Group_More:SetVisibility(ESlateVisibility.Collapsed)
@@ -64,25 +82,30 @@ function M:InitPayGiftItemInfo(ShopItemData)
     ClearRdCb = self.OnClearReddot
   })
   self.ShopId = ShopItemData.ItemId
-  self:EMShowReddot(false, EReddotType.New, 0)
+  self:EMShowReddot(false, EReddotType.New)
   local ShopTabConf = DataMgr.ShopTabSub[ShopItemData.SubTabId]
   local NodeName = ShopTabConf and ShopTabConf.ReddotNode
   if NodeName then
     local Node = ReddotManager.GetTreeNode(NodeName)
     local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
-    if CacheDetail[self.ShopId] and CacheDetail[self.ShopId] ~= Const.ShopCacheReason.Read then
-      self:EMShowReddot(true, Node.ReddotType, 0)
-    elseif not CacheDetail[self.ShopId] and ReddotManager.IncreaseLeafNodeCount(NodeName, 1, {
-      ShopItemId = self.ShopId,
-      Reason = Const.ShopCacheReason.Persistent
-    }) then
-      self:EMShowReddot(true, EReddotType.New, 0)
+    if CacheDetail and CacheDetail[self.ShopId] and CacheDetail[self.ShopId] ~= Const.ShopCacheReason.Read then
+      if Node then
+        self:EMShowReddot(true, Node.ReddotType)
+      else
+        self:EMShowReddot(true, EReddotType.New)
+      end
+    elseif not CacheDetail[self.ShopId] then
+      local NowTime = TimeUtils.NowTime()
+      Node:_RefreshAShopItem(self.ShopId, Node.Cache, NowTime)
+      if Node.Cache.Count > Node.Count then
+        ReddotManager.IncreaseLeafNodeCount(NodeName, DeltaCount)
+      end
     end
   end
 end
 
 function M:OnClearReddot()
-  self:EMShowReddot(false, EReddotType.New, 0)
+  self:EMShowReddot(false, EReddotType.New)
 end
 
 function M:OnSubItemClick()
@@ -91,7 +114,7 @@ function M:OnSubItemClick()
   if NodeName and ReddotManager.DecreaseLeafNodeCount(ShopTabConf.ReddotNode, 1, {
     ShopItemId = self.ShopId
   }) then
-    self:EMShowReddot(false, EReddotType.New, 0)
+    self:EMShowReddot(false, EReddotType.New)
   end
 end
 

@@ -1,10 +1,6 @@
 local Component = {}
 
 function Component:GetAttr(AttrName)
-  local AttributeSet = self:K2_GetAttributesSet()
-  if AttributeSet and AttributeSet.DirtyAttrs:Contains(AttrName) then
-    self:CalcAttr(AttrName)
-  end
   local IntValue = 0
   local IsInt = false
   local FloatValue = 0.0

@@ -105,10 +105,11 @@ function WBP_Play_Entry_C:OnLoaded(...)
   AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "SystemOpenSound", nil)
   self:PlayBaiAnim()
   self:PlayInAnim()
-  self:OpenSubUI(self.DefaultSubUIName)
-  local IsCallShowFunction = (...)
-  if IsCallShowFunction then
-    self:Show()
+  local DefaultSubUIName = (...)
+  if DefaultSubUIName then
+    self:OpenSubUI(DefaultSubUIName)
+  elseif self.DefaultSubUIName then
+    self:OpenSubUI(self.DefaultSubUIName)
   end
   local AttachWidget = self:GetAttachWidget()
   if not self.TeamHeadUI then
@@ -778,18 +779,20 @@ function WBP_Play_Entry_C:PlayOutAnim()
     return
   end
   AudioManager(self):SetEventSoundParam(self, "SystemOpenSound", {ToEnd = 1})
-  self:BlockAllUIInput(true)
-  if self.CurSubUI.RetainerBox and self.CurSubUI.Panel_Level then
-    self.CurSubUI.Panel_Level:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
-  end
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:BindToAnimationFinished(self.Out, {
     self,
     self.Close
   })
-  if self.CurSubUI:IsAnyAnimationPlaying() then
-    self.CurSubUI:StopAllAnimations()
+  if self.CurSubUI then
+    if self.CurSubUI.RetainerBox and self.CurSubUI.Panel_Level then
+      self.CurSubUI.Panel_Level:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+    end
+    if self.CurSubUI:IsAnyAnimationPlaying() then
+      self.CurSubUI:StopAllAnimations()
+    end
+    self.CurSubUI:PlayAnimationForward(self.CurSubUI.Out)
   end
-  self.CurSubUI:PlayAnimationForward(self.CurSubUI.Out)
   if self.IsAddInDeque then
     self:PlayAnimationForward(self.Out, UIConst.AnimOutSpeedWithPageJump.NormalFastSpeed)
   else
@@ -809,6 +812,7 @@ function WBP_Play_Entry_C:PlayOutAnim()
     DebugPrint("JLY 上一个栈的UI是:", PreviousUIName)
     if "ActivityMain" == PreviousUIName then
       EventManager:FireEvent(EventID.OnReturnToActivityEntry)
+      EventManager:FireEvent(EventID.OnActivityEntryShowVisible)
     end
   end
 end
@@ -841,6 +845,10 @@ function WBP_Play_Entry_C:BP_GetDesiredFocusTarget()
   else
     return self
   end
+end
+
+function WBP_Play_Entry_C:GetCurSubUI()
+  return self.CurSubUI
 end
 
 return WBP_Play_Entry_C

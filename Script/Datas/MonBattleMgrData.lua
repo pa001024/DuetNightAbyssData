@@ -4,6 +4,9 @@ T.RT_1 = {
   SkillCd = 5,
   SkillId = 600404
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

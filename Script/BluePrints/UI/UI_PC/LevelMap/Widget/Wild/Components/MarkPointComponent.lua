@@ -121,11 +121,14 @@ function Component:ChangeMarkType(TypeId, ImagePath)
   local image = LoadObject(ImagePath)
   mark.Img_Point:SetBrushFromTexture(image)
   mark.Data.ImagePath = ImagePath
-  self.CurrentMarkData.Type = TypeId
   if mark == self.TrackTarget then
     self.TrackIndicator:SetIcon(image)
   end
+  if mark == self.TempMark then
+    self.CurrentMarkData.Type = TypeId
+  end
   if mark == self.CurrentMark and self.CurrentMarkData.Type ~= TypeId then
+    self.CurrentMarkData.Type = TypeId
     local Avatar = GWorld:GetAvatar()
     Avatar:UpdateMarkPoint(self.RegionID, self.CurrentMarkUuid, self.CurrentMarkData)
   end
@@ -349,6 +352,7 @@ function Component:OnMarkTrack()
       EventManager:FireEvent(EventID.OnCommonTrack, CommonConst.RegionMapTrackingType.MarkPoint, self.CurrentMarkUuid, true)
       self.CurrentMark:PlayAnimation(self.CurrentMark.Loop, 0, 0)
       self:CreateTrackIndicator(self.CurrentMark)
+      self:TryToastNotInSameRegion()
     else
       EventManager:FireEvent(EventID.OnCommonTrack, CommonConst.RegionMapTrackingType.MarkPoint, self.CurrentMarkUuid, false)
       self.CurrentMark:StopAllAnimations()

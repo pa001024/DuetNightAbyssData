@@ -74,6 +74,11 @@ function WBP_Simple_PC:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
   return UIUtils.Handled
 end
 
+function WBP_Simple_PC:PreExitTalkTask(TalkTask, TalkData, OnPreExitTalkTaskFinished)
+  WBP_Simple_PC.Super.PreExitTalkTask(self, TalkTask, TalkData, OnPreExitTalkTaskFinished)
+  self.WBP_Story_PlayKey_P:StopAllAnimations()
+end
+
 function WBP_Simple_PC:CreateCDTimer()
   self.CdTimer = self:AddTimer(0.2, function()
     self.CdTimer = nil

@@ -12,6 +12,7 @@ function BP_RescueComponent_C:InitRescueComponent()
   self.RescueAlarmTarget = nil
   self.IsHostageRescued = false
   self.IsRescueCountDownTriggered = false
+  self.IsHostageSpawned = false
 end
 
 function BP_RescueComponent_C:GetHostageEid()
@@ -39,6 +40,10 @@ function BP_RescueComponent_C:InitRescueBaseInfo()
 end
 
 function BP_RescueComponent_C:TriggerSpawnHostage(Player)
+  if self.IsHostageSpawned then
+    return
+  end
+  self.IsHostageSpawned = true
   self:StopRescueCountDown()
   self:RemoveHostageDoorIndicator()
   local Creator = self.GameMode.EMGameState:GetStaticCreatorInfo(self.HostageStaticId)

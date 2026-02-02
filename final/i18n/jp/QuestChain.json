@@ -2472,7 +2472,7 @@
   },
   {
     "id": 110109,
-    "name": "裁きの日",
+    "name": "審判の日",
     "chapterName": "「黄昏の碇泊」篇",
     "chapterNumber": "第1章",
     "episode": "俯瞰者の遊戯",
@@ -2712,7 +2712,7 @@
   },
   {
     "id": 120003,
-    "name": "《寻物启事》",
+    "name": "《捜し物広告》",
     "chapterName": "ワールドジャーニー",
     "chapterNumber": "華胥",
     "episode": "煙津に影掠れ香塵を覆う",
@@ -2819,7 +2819,7 @@
     "quests": {
       "12010101": {
         "IsMultiQuest": false,
-        "SubRegionId": 104108,
+        "SubRegionId": 0,
         "nextQuestId": 12010102,
         "nextQuestIds": {
           "Success": 12010102
@@ -3392,7 +3392,7 @@
         "SuccQuestDeliver": {
           "DeliverType": 1,
           "Id": 104401,
-          "IsWhite": false,
+          "IsWhite": true,
           "StartIndex": 1
         },
         "nextQuestId": 12010417,
@@ -4264,10 +4264,7 @@
       },
       "20010305": {
         "IsMultiQuest": false,
-        "TargetMode": {
-          "TargetCount": 1,
-          "TargetId": 1400401
-        },
+        "SubRegionId": 101103,
         "nextQuestId": 20010306,
         "nextQuestIds": {
           "Success": 20010306
@@ -6388,7 +6385,7 @@
       50599
     ],
     "desc": "金木犀には還れぬ道",
-    "detail": "スノウが噂で聞いた絶品の<Default sb=\"text:グイホアガオ\">桂花菓子</>の屋台が、<Default sb=\"text:えんしんと\">煙津渡</>の<Default sb=\"text:さんばし\">桟橋</>にあるという。一緒に見に行こう。",
+    "detail": "スノウが噂で聞いた絶品の桂花菓子（グイホアガオ）の屋台が、煙津渡の桟橋にあるという。一緒に見に行こう。",
     "showCondition": 20030401,
     "unlockCondition": 20030401,
     "questNpcId": 700324,
@@ -6474,6 +6471,100 @@
     }
   },
   {
+    "id": 200305,
+    "name": "すれ違いの果てに",
+    "chapterName": "ワールドジャーニー",
+    "episode": "すれ違いの果てに",
+    "ifAutoStart": 1,
+    "questChainType": 3,
+    "reward": [
+      50600
+    ],
+    "desc": "リンリンと話す",
+    "detail": "少女が震えながら白龍様に祈っている。助けてあげよう。",
+    "showCondition": 120104,
+    "unlockCondition": 120104,
+    "quests": {
+      "20030500": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 20030501,
+        "nextQuestIds": {
+          "Success": 20030501
+        }
+      },
+      "20030501": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 20030509,
+        "nextQuestIds": {
+          "Success": 20030509
+        }
+      },
+      "20030502": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 20030503,
+        "nextQuestIds": {
+          "Success": 20030503
+        }
+      },
+      "20030503": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104106,
+        "nextQuestId": 20030504,
+        "nextQuestIds": {
+          "Success": 20030504
+        }
+      },
+      "20030504": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104106,
+        "nextQuestId": 20030505,
+        "nextQuestIds": {
+          "Success": 20030505
+        }
+      },
+      "20030505": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104106,
+        "nextQuestId": 20030506,
+        "nextQuestIds": {
+          "Success": 20030506
+        }
+      },
+      "20030506": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 20030507,
+        "nextQuestIds": {
+          "Success": 20030507
+        }
+      },
+      "20030507": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 20030508,
+        "nextQuestIds": {
+          "Success": 20030508
+        }
+      },
+      "20030508": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestIds": {}
+      },
+      "20030509": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 20030502,
+        "nextQuestIds": {
+          "Success": 20030502
+        }
+      }
+    }
+  },
+  {
     "id": 200306,
     "name": "時のからくり",
     "chapterName": "ワールドジャーニー",
@@ -6522,10 +6613,113 @@
     }
   },
   {
-    "id": 200309,
-    "name": "オショウ",
+    "id": 200307,
+    "name": "輝かしき瞬間",
     "chapterName": "ワールドジャーニー",
-    "episode": "オショウ",
+    "episode": "輝かしき瞬間",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50602
+    ],
+    "desc": "撮影協力",
+    "detail": "主演の欠席で、目の前の監督はずっと頭を抱えていた。監督に何度も頼まれたが、煙津渡での数シーンの撮影を手伝ってあげようかな？",
+    "showCondition": 120103,
+    "unlockCondition": 120103,
+    "questNpcId": 700365,
+    "quests": {
+      "20030700": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 104107,
+        "nextQuestId": 20030701,
+        "nextQuestIds": {
+          "Success": 20030701
+        }
+      },
+      "20030701": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104107,
+        "nextQuestId": 20030702,
+        "nextQuestIds": {
+          "Success": 20030702
+        }
+      },
+      "20030702": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104107,
+        "nextQuestId": 20030703,
+        "nextQuestIds": {
+          "Success": 20030703
+        }
+      },
+      "20030703": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104107,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200308,
+    "name": "幽霊騒ぎ",
+    "chapterName": "ワールドジャーニー",
+    "episode": "幽霊騒ぎ",
+    "ifAutoStart": 1,
+    "questChainType": 3,
+    "reward": [
+      50605
+    ],
+    "desc": "「幽霊が出る」の倉庫を見に行く",
+    "detail": "百年春の片隅にある誰も寄りつかない倉庫で、なぜか最近「幽霊が出る」という噂が立っている。夜更けに、スノウと一緒に見に行こう。",
+    "showCondition": 120106,
+    "unlockCondition": 120106,
+    "questNpcId": 700372,
+    "quests": {
+      "20030800": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 104108,
+        "nextQuestId": 20030801,
+        "nextQuestIds": {
+          "Success": 20030801
+        }
+      },
+      "20030801": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 20030802,
+        "nextQuestIds": {
+          "Success": 20030802
+        }
+      },
+      "20030802": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "SuccQuestDeliver": {
+          "DeliverType": 1,
+          "Id": 104110,
+          "IsWhite": false,
+          "StartIndex": 1
+        },
+        "nextQuestId": 20030803,
+        "nextQuestIds": {
+          "Success": 20030803
+        }
+      },
+      "20030803": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200309,
+    "name": "一蓮托生",
+    "chapterName": "ワールドジャーニー",
+    "episode": "一蓮托生",
     "ifAutoStart": 1,
     "isShowWindow": 1,
     "questChainType": 3,
@@ -6581,6 +6775,309 @@
         "nextQuestIds": {
           "Success": 20030904
         }
+      }
+    }
+  },
+  {
+    "id": 200310,
+    "name": "香塵に帰す",
+    "chapterName": "ワールドジャーニー",
+    "episode": "香塵に帰す",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50606
+    ],
+    "desc": "香火归尘任务面板1",
+    "detail": "近くから、誰かのすすり泣く声が聞こえる。急いで様子を見に行こう。",
+    "showCondition": 120103,
+    "unlockCondition": 120103,
+    "questNpcId": 701087,
+    "quests": {
+      "20031001": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 104107,
+        "nextQuestId": 20031003,
+        "nextQuestIds": {
+          "Success": 20031003
+        }
+      },
+      "20031003": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104107,
+        "nextQuestId": 20031004,
+        "nextQuestIds": {
+          "Success": 20031004
+        }
+      },
+      "20031004": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104107,
+        "nextQuestId": 20031005,
+        "nextQuestIds": {
+          "Success": 20031005
+        }
+      },
+      "20031005": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104107,
+        "nextQuestId": 20031006,
+        "nextQuestIds": {
+          "Success": 20031006
+        }
+      },
+      "20031006": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200311,
+    "name": "梨と贈り物",
+    "chapterName": "ワールドジャーニー",
+    "episode": "梨と贈り物",
+    "ifAutoStart": 1,
+    "questChainType": 3,
+    "reward": [
+      50607
+    ],
+    "desc": "ヨウの父と話す",
+    "detail": "子どもを連れた父親が何か頼みたいようだ。話を聞いてみよう。",
+    "showCondition": 120106,
+    "unlockCondition": 120106,
+    "quests": {
+      "20031100": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 20031101,
+        "nextQuestIds": {
+          "Success": 20031101
+        }
+      },
+      "20031101": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 20031103,
+        "nextQuestIds": {
+          "Success": 20031103
+        }
+      },
+      "20031102": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestIds": {}
+      },
+      "20031103": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 20031102,
+        "nextQuestIds": {
+          "Success": 20031102
+        }
+      }
+    }
+  },
+  {
+    "id": 200312,
+    "name": "柳の色は昔のまま",
+    "chapterName": "ワールドジャーニー",
+    "episode": "柳の色は昔のまま",
+    "ifAutoStart": 1,
+    "questChainType": 3,
+    "reward": [
+      50608
+    ],
+    "desc": "小さな女の子の様子を確認する",
+    "detail": "軒下の小さな女の子は、立ったまま眠ってしまいそうだ。様子を見てみよう。",
+    "showCondition": 120106,
+    "unlockCondition": 120106,
+    "quests": {
+      "20031200": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 20031201,
+        "nextQuestIds": {
+          "Success": 20031201
+        }
+      },
+      "20031201": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 20031204,
+        "nextQuestIds": {
+          "Success": 20031204
+        }
+      },
+      "20031202": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 20031203,
+        "nextQuestIds": {
+          "Success": 20031203
+        }
+      },
+      "20031203": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestIds": {}
+      },
+      "20031204": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 20031202,
+        "nextQuestIds": {
+          "Success": 20031202
+        }
+      }
+    }
+  },
+  {
+    "id": 200313,
+    "name": "花茶の味",
+    "chapterName": "ワールドジャーニー",
+    "episode": "花茶の味",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50609
+    ],
+    "desc": "なし",
+    "detail": "浮星の埠からほど近い茶屋のそばで、人だかりの声が聞こえてきた。どうやら言い争っているようだ。また面白い騒ぎに出くわしたらしい。行ってみよう。",
+    "showCondition": 120003,
+    "unlockCondition": 120003,
+    "questNpcId": 701091,
+    "quests": {
+      "20031301": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 104108,
+        "nextQuestId": 20031302,
+        "nextQuestIds": {
+          "Success": 20031302
+        }
+      },
+      "20031302": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104108,
+        "nextQuestId": 20031303,
+        "nextQuestIds": {
+          "Success": 20031303
+        }
+      },
+      "20031303": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestId": 20031304,
+        "nextQuestIds": {
+          "Success": 20031304
+        }
+      },
+      "20031304": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104107,
+        "nextQuestId": 20031305,
+        "nextQuestIds": {
+          "Success": 20031305
+        }
+      },
+      "20031305": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104110,
+        "nextQuestId": 20031306,
+        "nextQuestIds": {
+          "Success": 20031306
+        }
+      },
+      "20031306": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104107,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200314,
+    "name": "キョウンの投資",
+    "chapterName": "ワールドジャーニー",
+    "episode": "キョウンの投資",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 4,
+    "reward": [
+      50610
+    ],
+    "desc": "キョウンと話す",
+    "detail": "キョウンは意味深な笑みを浮かべてあなたを見つめている。まだ何か言いたいことがあるようだ。彼が何を企んでいるのか、確かめに行こう。",
+    "showCondition": 12010306,
+    "unlockCondition": 12010306,
+    "questNpcId": 701096,
+    "quests": {
+      "20031401": {
+        "IsMultiQuest": false,
+        "SubRegionId": 0,
+        "nextQuestIds": {}
+      }
+    }
+  },
+  {
+    "id": 200315,
+    "name": "煙津渡最大の危機！",
+    "chapterName": "ワールドジャーニー",
+    "episode": "煙津渡最大の危機！",
+    "ifAutoStart": 1,
+    "isShowWindow": 1,
+    "questChainType": 3,
+    "reward": [
+      50611
+    ],
+    "desc": "スノウと話す",
+    "detail": "まさか微芒市で危険な「グレートグローリー」が公然と売られているとは。事態が悪化する前に、彼らを止めなければならない。",
+    "showCondition": 120106,
+    "unlockCondition": 120106,
+    "questNpcId": 701095,
+    "quests": {
+      "20031500": {
+        "IsMultiQuest": false,
+        "IsPreQuest": true,
+        "SubRegionId": 104109,
+        "nextQuestId": 20031502,
+        "nextQuestIds": {
+          "Success": 20031502
+        }
+      },
+      "20031502": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104109,
+        "nextQuestId": 20031503,
+        "nextQuestIds": {
+          "Success": 20031503
+        }
+      },
+      "20031503": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104109,
+        "nextQuestId": 20031504,
+        "nextQuestIds": {
+          "Success": 20031504
+        }
+      },
+      "20031504": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104109,
+        "nextQuestId": 20031505,
+        "nextQuestIds": {
+          "Success": 20031505
+        }
+      },
+      "20031505": {
+        "IsMultiQuest": false,
+        "SubRegionId": 104109,
+        "nextQuestIds": {}
       }
     }
   },

@@ -246,6 +246,11 @@ function TemplateDumpUtils:CreateTemplate_InternalChar(Avatar, CharTemInfo, Char
     self:HandleWeaponSkillLevelInheritCharSkillLevel(char, Avatar, skill)
   end
   self:CreateTemplate_CharCostumeId(CharTemInfo, char, Avatar)
+  if CharTemInfo.Grade then
+    local grade = pcall(tonumber, CharTemInfo.Grade) and tonumber(CharTemInfo.Grade) or 0
+    grade = math.max(math.min(grade, 6), 0)
+    Avatar:RealSetCharGradeLevel(char_eid, grade)
+  end
   Avatar.Chars[char_eid] = char
   return true, char_eid
 end

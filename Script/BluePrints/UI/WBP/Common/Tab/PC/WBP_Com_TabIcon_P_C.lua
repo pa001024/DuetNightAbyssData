@@ -272,12 +272,15 @@ function M:SetReddot(IsNew, Upgradeable, OtherReddot)
 end
 
 function M:SetReddotNum(RedNum)
-  if nil ~= RedNum and RedNum > 0 then
-    self.Reddot_Num:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.Reddot_Num:SetNum(RedNum)
-  else
-    self.Reddot_Num:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  if nil ~= RedNum then
+    RedNum = tostring(RedNum)
+    if not string.isempty(RedNum) and "0" ~= RedNum then
+      self.Reddot_Num:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      self.Reddot_Num:SetNum(RedNum)
+      return
+    end
   end
+  self.Reddot_Num:SetVisibility(UE4.ESlateVisibility.Collapsed)
 end
 
 return M

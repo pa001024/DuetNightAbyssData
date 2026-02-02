@@ -181,7 +181,7 @@ function M:OnListItemObjectSet(Content)
   self.CompleteMask:SetVisibility(ESlateVisibility.Collapsed)
   if locked then
     self.Change:SetActiveWidgetIndex(0)
-  elseif not achieve:IsFinished() then
+  elseif not achieve:IsFinished() and achieve:CanRecvReward() then
     self.Change:SetActiveWidgetIndex(1)
     if achieve:IsIndividual() and not data.ShowTargetProgress then
       self.ing_Progress:SetText("(" .. achieve.CurrentValue .. "/" .. achieve.CompletionValue .. ")")
@@ -190,10 +190,10 @@ function M:OnListItemObjectSet(Content)
     end
   elseif achieve:CanRecvReward() then
     self.Change:SetActiveWidgetIndex(2)
-    self.Complete_Date:SetTimeText(achieve.Time, UIConst.EnumTimeStyleType.YMD, nil, nil, nil, nil, true)
+    self.Complete_Date:SetTimeText(0 ~= achieve.Time and achieve.Time or nil, UIConst.EnumTimeStyleType.YMD, nil, nil, nil, nil, true)
   else
     self.Change:SetActiveWidgetIndex(3)
-    self.Complete_Date_1:SetTimeText(achieve.Time, UIConst.EnumTimeStyleType.YMD, nil, nil, nil, nil, true)
+    self.Complete_Date_1:SetTimeText(0 ~= achieve.Time and achieve.Time or nil, UIConst.EnumTimeStyleType.YMD, nil, nil, nil, nil, true)
     self.CompleteMask:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     for i = 0, self.List_ItemRewards:GetNumItems() - 1 do
       local Item = self.List_ItemRewards:GetItemAt(i)

@@ -113,15 +113,15 @@ function Component:OnScaleChange_Component(Percent)
 end
 
 function Component:FreshOrCreatTips(ChallengeId)
+  ScreenPrint("FreshOrCreatTips")
   if not self.ChanllengeTips or not IsValid(self.ChanllengeTips) then
     self.ChanllengeTips = UIManager(self):CreateWidgetAsync(nil, self.CoroutineInitObj, TipsBpPath)
     if not self.ChanllengeTips then
       ScreenPrint("创建多人传送点详情失败")
       return
     end
-    self.MainMap.Convey_AreaCoop:AddChild(self.ChanllengeTips)
+    self.MainMap.Convey_Area_Coop:AddChild(self.ChanllengeTips)
     self.ChanllengeTips:SetVisibility(ESlateVisibility.Collapsed)
-    self.ChanllengeTips.Parent = self
   end
   if self.ChanllengeTips then
     local wasVisible = self.ChanllengeTips:GetVisibility() == ESlateVisibility.SelfHitTestInvisible

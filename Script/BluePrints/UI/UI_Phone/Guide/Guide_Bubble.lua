@@ -2,6 +2,7 @@ require("UnLua")
 local Guide_Bubble = Class({
   "BluePrints.UI.BP_UIState_C"
 })
+local EMCache = require("EMCache.EMCache")
 
 function Guide_Bubble:Construct()
   self.bIsStretch = false
@@ -11,9 +12,9 @@ function Guide_Bubble:Construct()
   self.VisibilityType = self:GetVisibility()
 end
 
-function Guide_Bubble:InitUIInfo(Name, IsInUIMode, EventList, MessageContent, MessageLoc, GamePadKey)
-  self.Super.InitUIInfo(self, Name, IsInUIMode, EventList, MessageContent, MessageLoc)
-  self:InitMessage(MessageContent, MessageLoc, GamePadKey)
+function Guide_Bubble:InitUIInfo(Name, IsInUIMode, EventList, MessageContent, MessageLoc, GamePadKey, bSkip, Owner)
+  self.Super.InitUIInfo(self, Name, IsInUIMode, EventList, MessageContent, MessageLoc, GamePadKey, bSkip, Owner)
+  self:InitMessage(MessageContent, MessageLoc, GamePadKey, bSkip, Owner)
 end
 
 function Guide_Bubble:OnLoaded()
@@ -22,7 +23,10 @@ function Guide_Bubble:OnLoaded()
   end)
 end
 
-function Guide_Bubble:InitMessage(MessageContent, MessageLoc, GamePadKey)
+function Guide_Bubble:InitMessage(MessageContent, MessageLoc, GamePadKey, bSkip, Owner)
+  self.Owner = Owner
+  self.CanvasPanel_23:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self:InitGamePadKeyButton()
   if MessageContent then
     self:SetText(MessageContent)
   end
@@ -35,9 +39,65 @@ function Guide_Bubble:InitMessage(MessageContent, MessageLoc, GamePadKey)
   else
     self.WS_Type:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
+  if 1 == bSkip then
+    self.Btn_Skip.OnClicked:Add(self, self.OpenWindow)
+    self.Text_Skip:SetText(GText("UI_SkipGuide"))
+    self.Panel_Skip:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.Panel_Skip:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
   self:AddTimer(0.02 * UE4.UGameplayStatics.GetGlobalTimeDilation(self), function()
     self:SetWidgetOpacity(1)
   end)
+end
+
+function Guide_Bubble:OpenWindow()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/special_content_01_click", nil, nil)
+  if self.Controller_Skip then
+    self.Controller_Skip:PlayAnimation(self.Controller_Skip.Normal)
+  end
+  local GuideSkip = EMCache:Get("GuideSkip", true)
+  if GuideSkip then
+    self.Owner:GuideSkip()
+    return
+  end
+  self.Owner.bOpenWindow = true
+  local Params = {}
+  Params.RightCallbackObj = self.Owner
+  
+  function Params.RightCallbackFunction(_, Data, PopupUI)
+    self.Owner:GuideSkip()
+    self:UpdateSelectedInfo(Data)
+  end
+  
+  function Params.OnCloseCallbackFunction(_, Data, PopupUI)
+    self.Owner.bOpenWindow = false
+  end
+  
+  UIManager(self):ShowCommonPopupUI(100291, Params, self, nil, 105)
+end
+
+function Guide_Bubble:UpdateSelectedInfo(Data)
+  local IsSelected = Data.SelectHint.IsSelected
+  EMCache:Set("GuideSkip", IsSelected, true)
+end
+
+function Guide_Bubble:InitKeyButton()
+  self.Key_Skip:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Text", Text = "Esc"}
+    }
+  })
+end
+
+function Guide_Bubble:InitGamePadKeyButton()
+  self.Controller_Skip:CreateCommonKey({
+    KeyInfoList = {
+      {ImgShortPath = "Menu", Type = "Img"}
+    },
+    bLongPress = true
+  })
+  self.Controller_Skip:AddExecuteLogic(self, self.OpenWindow)
 end
 
 function Guide_Bubble:SetText(Text)

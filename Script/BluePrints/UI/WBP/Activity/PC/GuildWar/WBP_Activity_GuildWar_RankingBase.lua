@@ -24,7 +24,7 @@ function M:CloseSelf()
     return
   end
   self:PlayAnimation(self.Out)
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:AddTimer(0.2, function()
     self:Close()
   end)

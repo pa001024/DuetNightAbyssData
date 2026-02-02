@@ -706,6 +706,10 @@ function BP_TempleComponent_C:OnTempleEnergyToZero()
   self.GameMode:TriggerGameModeEvent("OnTempleEnergyComplete")
 end
 
+function BP_TempleComponent_C:OnCageMonsterDead(Monster, CageId)
+  self.GameMode:TriggerGameModeEvent("OnTempleCageKillMonster", Monster, CageId)
+end
+
 function BP_TempleComponent_C:TempleForbid(ForbidRule, IsForbid)
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
   if not Player then
@@ -716,7 +720,7 @@ function BP_TempleComponent_C:TempleForbid(ForbidRule, IsForbid)
   elseif ForbidRule == ETempleForbidRule.Ranged then
     Player:ForbidRangedSkills(IsForbid)
   elseif ForbidRule == ETempleForbidRule.Skill then
-    Player:ForbidAllSkills(IsForbid)
+    Player:ForbidAllSkillsByBuff(IsForbid)
   elseif ForbidRule == ETempleForbidRule.BattleWheel then
     if IsForbid then
       Player:DisableBattleWheel()
@@ -816,6 +820,30 @@ function BP_TempleComponent_C:ReceiveEndPlay(EndPlayReason)
   if self.TempleRecoverMobiel then
     LuaConst.MobileInterativeTickCount = self.TempleRecoverMobiel
   end
+end
+
+function BP_TempleComponent_C:ShowNearestMonsterGuide(bFirstHighLight)
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+  if not Player then
+    return
+  end
+  local NearestMonsterEid = self.GameMode:GetMonsterEidNearestToPlayer(Player)
+  if NearestMonsterEid > 0 then
+    if bFirstHighLight then
+      local ScenceManager = GWorld.GameInstance:GetSceneManager()
+      ScenceManager.PlayLoopGuideIcons:Add(NearestMonsterEid)
+    end
+    self.GameMode.EMGameState:AddGuideEid(NearestMonsterEid)
+  end
+end
+
+function BP_TempleComponent_C:ShowTempleTipButton(IsShow)
+  EventManager:FireEvent(EventID.OnTempleTipButtonShow, IsShow)
+end
+
+function BP_TempleComponent_C:OnClickShowTips()
+  self.GameMode:TriggerGameModeEvent("OnShowTempleTip")
+  EventManager:FireEvent(EventID.OnTempleTipButtonShow, false)
 end
 
 return BP_TempleComponent_C

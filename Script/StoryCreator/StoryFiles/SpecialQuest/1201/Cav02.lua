@@ -160,6 +160,12 @@ return {
             startPort = "Out",
             endQuest = "17623552240231373486",
             endPort = "In"
+          },
+          {
+            startQuest = "173960682489152",
+            startPort = "QuestStart",
+            endQuest = "17654451375861481",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -222,7 +228,7 @@ return {
             key = "173960682489260",
             type = "GoToRegionNode",
             name = "进入东国区域检测",
-            pos = {x = 3945.0698923881637, y = 386.7338095719877},
+            pos = {x = 3238.1948923881637, y = 229.2338095719877},
             propsData = {
               RegionType = 1,
               IsEnter = "Enter",
@@ -236,7 +242,7 @@ return {
             key = "173968224552714631398",
             type = "TalkNode",
             name = "开车 -和煜明交谈",
-            pos = {x = 4417.345473830583, y = 505.8525108792135},
+            pos = {x = 4218.595473830583, y = 586.4775108792135},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 12011901,
@@ -275,7 +281,7 @@ return {
             key = "175101606958112567064",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "异步设置玩家位置旋转",
-            pos = {x = 3703.794117647057, y = 547.266253869969},
+            pos = {x = 2996.919117647057, y = 389.766253869969},
             propsData = {
               UnitId = 0,
               NewTargetPointName = "SpecialQuestPoint_SQ02Start",
@@ -290,7 +296,7 @@ return {
             key = "17512753791521417",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 3952.662409700722, y = 206.4280185758513},
+            pos = {x = 3245.787409700722, y = 48.9280185758513},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 2040044,
@@ -390,6 +396,23 @@ return {
               MessageType = "GameMode",
               MessageContent = "East01CavSQDestoryMonster",
               UnitId = -1
+            }
+          },
+          ["17654451375861481"] = {
+            key = "17654451375861481",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 3849.686182367684, y = 555.2027679492851},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_1/0107_story_zhuyinzhizai_full",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {104103},
+              bStoreToServer = false
             }
           }
         },

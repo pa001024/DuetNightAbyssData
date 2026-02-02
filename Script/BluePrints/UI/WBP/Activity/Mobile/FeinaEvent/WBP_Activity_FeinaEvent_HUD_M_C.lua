@@ -42,6 +42,7 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
   self:InitButtons()
   self:AddDispatcher(EventID.OnRepFeinaStar, self, self.OnCollectFeinaStar)
   self:AddDispatcher(EventID.CloseLoading, self, self.OnCloseLoading)
+  self:AddDispatcher(EventID.OnMobileHookShow, self, self.OnMobileHookShow)
 end
 
 function M:InitDungeonInfo()
@@ -240,6 +241,11 @@ function M:TryToStopTargetCommand(KeyName, IsAddInputCache)
   elseif "Fire" == KeyName then
     self.Player:ActionCallback("Fire", EInputEvent.IE_Released)
   end
+end
+
+function M:OnMobileHookShow(Hook)
+  Hook.InteractiveUI = self.HookLock
+  Hook.InteractiveUI:Init(Hook)
 end
 
 AssembleComponents(M)

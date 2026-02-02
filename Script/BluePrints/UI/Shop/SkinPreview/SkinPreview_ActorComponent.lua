@@ -2,6 +2,9 @@ local M = {
   "BluePrints.Common.DelayFrameComponent"
 }
 
+function M:Construct()
+end
+
 function M:UpdatePreviewActor(ItemData, WeaponCameraOffset)
   self.Avatar = GWorld:GetAvatar()
   if not self.Avatar then
@@ -9,27 +12,51 @@ function M:UpdatePreviewActor(ItemData, WeaponCameraOffset)
   end
   self.UIName = self:GetUIConfigName()
   self.WeaponCameraOffset = WeaponCameraOffset or FVector(0, 0, 0)
-  self:BlockAllUIInput(true)
+  self.IsRiderMount = true
+  self.EnableDrag = true
+  self.EnableMouseWheel = true
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:AddDelayFrameFunc(function()
     self:BlockAllUIInput(false)
   end, 31)
+  local Index = 0
+  if ItemData.ItemType == "Resource" then
+    local ResEntry = DataMgr.Resource[ItemData.TypeId]
+    if ResEntry and ResEntry.SkyBoxIndex ~= nil then
+      Index = ResEntry.SkyBoxIndex
+    end
+  end
+  if ItemData.ItemType == "Resource" then
+    local ResourceData = DataMgr.Resource[ItemData.TypeId]
+    if not ResourceData then
+      return
+    end
+    if ResourceData.ResourceSType ~= "GestureItem" and ResourceData.ResourceSType ~= "MountItem" then
+      return
+    end
+    ItemData.ResourceSType = ResourceData.ResourceSType
+  end
   self.Params = self:GenerateActorParams(ItemData)
   if not self.Params then
     return
   end
-  self.Params.Target = self:CreatePreviewTargetData(self.Params)
   if not self.ActorController then
+    self.Params.Target = self:CreatePreviewTargetData(self.Params)
     self:InitializePreviewActor(ItemData)
+    self:NotifySkyBox(Index)
   else
     self:HideAllPreviewActor()
     self:StopActorSound()
     self:UpdateExistingPreviewActor(ItemData)
+    self:NotifySkyBox(Index)
   end
 end
 
 function M:GenerateActorParams(ItemData)
   local itemType = ItemData.ItemType
-  if "Char" == itemType then
+  if "Background" == itemType then
+    return self:_GenerateBackgroundParams(ItemData, self.Avatar)
+  elseif "Char" == itemType then
     return {
       Type = "Char",
       SkinId = ItemData.TypeId
@@ -41,6 +68,11 @@ function M:GenerateActorParams(ItemData)
     }
   elseif "Skin" == itemType then
     return self:_GenerateSkinParams(ItemData)
+  elseif "Hair" == itemType then
+    return {
+      Type = "Char",
+      HairId = ItemData.TypeId
+    }
   elseif "GeneralSkin" == itemType then
     return self:_GenerateSkinSeriesParams(ItemData, self.Avatar)
   elseif "WeaponSkin" == itemType then
@@ -50,9 +82,22 @@ function M:GenerateActorParams(ItemData)
   elseif "WeaponAccessory" == itemType then
     return self:_GenerateWeaponAccessoryParams(ItemData, self.Avatar)
   elseif "Resource" == itemType then
-    return self:_GenerateCharGestureParams(ItemData, self.Avatar)
+    if ItemData.ResourceSType == "GestureItem" then
+      return self:_GenerateCharGestureParams(ItemData, self.Avatar)
+    end
+  elseif "Mount" == itemType then
+    return self:_GenerateCharMountsParams(ItemData, self.Avatar)
   end
   return nil
+end
+
+function M:_GenerateBackgroundParams(ItemData, Avatar)
+  local Char = Avatar.Chars[Avatar.CurrentChar]
+  ItemData.TypeId = Char.AppearanceSuits[Char.CurrentAppearanceIndex].SkinId
+  return {
+    Type = "Char",
+    SkinId = ItemData.TypeId
+  }
 end
 
 function M:_GenerateSkinParams(ItemData)
@@ -75,9 +120,15 @@ function M:_GenerateSkinSeriesParams(ItemData, Avatar)
   for SkinId, Info in pairs(SkinInfo) do
     if Info.SkinSeries == ItemData.SkinSeries and Info.CharId == CharId then
       Params = {Type = "Char", SkinId = SkinId}
+      if DataMgr.Hair[SkinId] then
+        Params.HairId = SkinId
+      end
       break
     elseif Info.SkinSeries == ItemData.SkinSeries and Info.CharId == PlayerCharId then
       Params = {Type = "Char", SkinId = SkinId}
+      if DataMgr.Hair[SkinId] then
+        Params.HairId = SkinId
+      end
     end
   end
   if not Params then
@@ -145,6 +196,13 @@ function M:_GenerateCharGestureParams(ItemData, Avatar)
     Type = "Char",
     SkinId = Char.AppearanceSuits[Char.CurrentAppearanceIndex].SkinId
   }
+  local Res = DataMgr.Resource[ItemData.TypeId]
+  Params.SkyBoxIndex = Res and Res.SkyBoxIndex or 0
+  return Params
+end
+
+function M:_GenerateCharMountsParams(ItemData, Avatar)
+  local Params = {Type = "Char"}
   return Params
 end
 
@@ -156,16 +214,24 @@ function M:InitializePreviewActor(ItemData)
   end
   self.ActorController:OnOpened()
   self.ActorController.bPlayRoleChangedSound = false
-  if "Char" == itemType then
+  if "Background" == itemType then
+    self:SetupInitialBackgroundPreview()
+  elseif "Char" == itemType then
     self:SetupInitialCharPreview(ItemData)
   elseif "Weapon" == itemType then
     self:SetupInitialWeaponPreview(ItemData)
   elseif "Skin" == itemType then
     self:SetupInitialSkinPreview(ItemData)
+  elseif "Hair" == itemType then
+    self:SetupInitialHairPreview(ItemData)
   elseif "WeaponSkin" == itemType then
     self:SetupInitialWeaponSkinPreview(ItemData)
   elseif "Resource" == itemType then
-    self:SetupInitialResourcePreview(ItemData)
+    if ItemData.ResourceSType == "GestureItem" then
+      self:SetupInitialGesturePreview(ItemData)
+    end
+  elseif "Mount" == itemType then
+    self:SetupInitialMountsPreview(ItemData)
   elseif "CharAccessory" == itemType or "WeaponAccessory" == itemType then
     self:ApplyAccessoryPreview(itemType)
   end
@@ -174,12 +240,16 @@ end
 function M:UpdateExistingPreviewActor(ItemData)
   self:CleanupPreviousPreviewEffects()
   local itemType = ItemData.ItemType
-  if "Char" == itemType then
+  if "Background" == itemType then
+    self:UpdateToBackgroundPreview(ItemData)
+  elseif "Char" == itemType then
     self:UpdateToCharPreview(ItemData)
   elseif "Weapon" == itemType then
     self:UpdateToWeaponPreview(ItemData)
   elseif "Skin" == itemType then
     self:UpdateToSkinPreview(ItemData)
+  elseif "Hair" == itemType then
+    self:UpdateToHairPreview(ItemData)
   elseif "WeaponSkin" == itemType then
     self:UpdateToWeaponSkinPreview(ItemData)
   elseif "CharAccessory" == itemType then
@@ -187,7 +257,11 @@ function M:UpdateExistingPreviewActor(ItemData)
   elseif "WeaponAccessory" == itemType then
     self:UpdateToWeaponAccessoryPreview(ItemData)
   elseif "Resource" == itemType then
-    self:UpdateToResourcePreview(ItemData)
+    if ItemData.ResourceSType == "GestureItem" then
+      self:UpdateToGesturePreview(ItemData)
+    end
+  elseif "Mount" == itemType then
+    self:UpdateToMountsPreview(ItemData)
   end
 end
 
@@ -197,6 +271,15 @@ function M:CleanupPreviousPreviewEffects()
   self.ActorController:DestoryCreature(CommonConst.CharAccessoryTypes.FX_Body)
   if self.ActorController.ArmoryPlayer then
     self.ActorController.ArmoryPlayer:RemoveAllEffectCreature()
+  end
+  self.ActorController:HidePlayerActor("ActorController_HidePlayerBeforeMount", false)
+  self.ActorController:HidePlayerOnMount(false)
+  self.ActorController:DestroyMount()
+  self.ActorController:StopMVPSequence()
+  self.ActorController:ViewTarget()
+  local Player = self.ActorController:GetPlayerActor()
+  if Player then
+    Player:SetActorScale3D(Const.OneVector)
   end
 end
 
@@ -218,6 +301,15 @@ function M:SetupDefaultCharacterModel()
   }
   self.ActorController:ChangeCharAppearance(AppearanceInfo)
   self.ActorController.ArmoryHelper:SetPlayer(self.ActorController.ArmoryPlayer)
+  if self.ActorController.ArmoryPlayer and self.ActorController.ArmoryPlayer.MeleeWeapon then
+    self.ActorController.ArmoryPlayer.MeleeWeapon:SetActorHideTag(self.UIName, true)
+  end
+end
+
+function M:SetupInitialBackgroundPreview()
+  self.ActorController:SetMontageAndCamera("Char", nil, nil)
+  self.ActorController:HidePlayerActor(self.UIName, true)
+  self.ActorController.ArmoryHelper.EnableCameraScrolling = false
 end
 
 function M:SetupInitialCharPreview(ItemData)
@@ -246,6 +338,21 @@ function M:SetupInitialSkinPreview(ItemData)
     SkinId = CharSkinId,
     AccessorySuit = {}
   }
+  if ItemData.SkinSeries and DataMgr.Hair[ItemData.TypeId] then
+    AppearanceInfo.HairId = ItemData.TypeId
+  end
+  self.ActorController:ChangeCharAppearance(AppearanceInfo)
+  self.ActorController:SetMontageAndCamera("Char", nil, nil)
+end
+
+function M:SetupInitialHairPreview(ItemData)
+  local CharId = DataMgr.Hair[ItemData.TypeId].CharId
+  local CharHairId = ItemData.TypeId
+  local AppearanceInfo = {
+    CharId = CharId,
+    HairId = CharHairId,
+    AccessorySuit = {}
+  }
   self.ActorController:ChangeCharAppearance(AppearanceInfo)
   self.ActorController:SetMontageAndCamera("Char", nil, nil)
 end
@@ -257,26 +364,30 @@ function M:SetupInitialWeaponSkinPreview(ItemData)
   self.ActorController.ArmoryHelper.EnableCameraScrolling = false
 end
 
-function M:SetupInitialResourcePreview(ItemData)
+function M:SetupInitialGesturePreview(ItemData)
   local ResourceData = DataMgr.Resource[ItemData.TypeId]
   if ResourceData then
-    if ResourceData.ResourceSType == "GestureItem" then
-      self:ClearCharAccessory()
-      self.ActorController:ChangeWeaponModel(self.Avatar.Weapons[self.Avatar.MeleeWeapon])
-      self.ActorController:ChangeWeaponModel(self.Avatar.Weapons[self.Avatar.RangedWeapon])
-      self.EffectCreatureHideTags = {}
-      if self.ActorController.ArmoryPlayer.EffectCreatureHideTags then
-        for k, v in pairs(self.ActorController.ArmoryPlayer.EffectCreatureHideTags) do
-          self.EffectCreatureHideTags[k] = v
-          self.ActorController.ArmoryPlayer:HideAllEffectCreature(k, false)
-        end
+    self:ClearCharAccessory()
+    self.ActorController:ChangeWeaponModel(self.Avatar.Weapons[self.Avatar.MeleeWeapon])
+    self.ActorController:ChangeWeaponModel(self.Avatar.Weapons[self.Avatar.RangedWeapon])
+    self.EffectCreatureHideTags = {}
+    if self.ActorController.ArmoryPlayer.EffectCreatureHideTags then
+      for k, v in pairs(self.ActorController.ArmoryPlayer.EffectCreatureHideTags) do
+        self.EffectCreatureHideTags[k] = v
+        self.ActorController.ArmoryPlayer:HideAllEffectCreature(k, false)
       end
-      self.ActorController:SetArmoryMontageTag(self.ActorController.ArmoryPlayer, "Armory")
-      self.ActorController:SetArmoryCameraTag(ResourceData.CameraName or "Char", "", "")
-      self.ActorController.ArmoryPlayer:InvokeResourceBPFunction(ItemData.TypeId)
-    elseif ResourceData.ResourceSType == "MountItem" then
     end
+    self.ActorController:SetArmoryMontageTag(self.ActorController.ArmoryPlayer, "Armory")
+    self.ActorController:SetArmoryCameraTag(ResourceData.CameraName or "Char", "", "")
+    self.ActorController.ArmoryPlayer:InvokeResourceBPFunction(ItemData.TypeId)
   end
+end
+
+function M:SetupInitialMountsPreview(ItemData)
+  local MountData = DataMgr.Mount[ItemData.TypeId]
+  self.ActorController:SetArmoryCameraTag(MountData.CameraName or CommonConst.ArmoryType.Char, "", "")
+  self.ActorController:HidePlayerOnMount(false)
+  self.ActorController:CreateMount(ItemData.TypeId)
 end
 
 function M:ApplyAccessoryPreview(itemType)
@@ -285,18 +396,35 @@ function M:ApplyAccessoryPreview(itemType)
   if "CharAccessory" == itemType then
     self.ActorController:StopPlayerMontage()
     self:ClearCharAccessory()
+    if self.Params.AccessoryType == CommonConst.CharAccessoryTypes.MVP then
+      self.EnableDrag = false
+      self.EnableMouseWheel = false
+    end
     if UIConst.FXAccessoryTypes[self.Params.AccessoryType] then
       self.ActorController:ShowPlayerFXAccessory(self.Params.AccessoryId, self.Params.AccessoryType)
       if UIConst.HidePlayerAccessoryTypes[self.Params.AccessoryType] then
         self.ActorController:HidePlayerActor(self.UIName, true)
       end
     else
-      self.ActorController:ChangeCharAccessory(self.Params.AccessoryId, self.Params.AccessoryType)
+      self.ActorController:ChangeCharAccessory(self.Params.AccessoryId, self.Params.AccessoryType, self.Params.CustomParams)
     end
   else
     self.ActorController:ChangeWeaponAccessory(self.Params.AccessoryId)
     self.ActorController.ArmoryHelper.EnableCameraScrolling = false
   end
+end
+
+function M:UpdateToBackgroundPreview(ItemData)
+  self:HidePlayerWeapon(true)
+  self:HideSingleWeapon(true)
+  local CharSkinId = ItemData.TypeId
+  self.Params.Target = self:CreatePreviewTargetData({Type = "Char", SkinId = CharSkinId})
+  self.ActorController.ArmoryHelper:SetOriginalRotation(FRotator(0, 90, 0))
+  self.ActorController.ExCameraOffset = FVector(0, 0, 0)
+  self.ActorController:ChangeCharModel(self.Params.Target, true, true)
+  self.ActorController:SetMontageAndCamera("Char", nil, nil)
+  self.ActorController:HidePlayerActor(self.UIName, true)
+  self.ActorController.ArmoryHelper.EnableCameraScrolling = false
 end
 
 function M:UpdateToCharPreview(ItemData)
@@ -324,13 +452,17 @@ end
 function M:UpdateToWeaponPreview(ItemData)
   self.ActorController:HidePlayerActor(self.UIName, true)
   self:HidePlayerWeapon(true)
-  local WeaponData = self:CreatePreviewTargetData({
+  self.Params.Target = self:CreatePreviewTargetData({
     Type = "Weapon",
     SkinId = ItemData.TypeId
   })
   self.ActorController.bStandaloneWeapon = true
   self.ActorController.ExCameraOffset = self.WeaponCameraOffset
-  self.ActorController:ChangeSingleWeapon(WeaponData)
+  self.ActorController:ChangeSingleWeapon(self.Params.Target)
+  local AppearanceInfo = {
+    SkinId = ItemData.TypeId
+  }
+  self.ActorController:ChangeWeaponAppearance(AppearanceInfo)
   self.ActorController.ArmoryHelper.EnableCameraScrolling = false
 end
 
@@ -345,7 +477,33 @@ function M:UpdateToSkinPreview(ItemData)
     SkinId = CharSkinId,
     AccessorySuit = {}
   }
+  if ItemData.SkinSeries and DataMgr.Hair[ItemData.TypeId] then
+    AppearanceInfo.HairId = ItemData.TypeId
+  end
   self.Params.Target = self:CreatePreviewTargetData({Type = "Char", SkinId = CharSkinId})
+  self.ActorController.bStandaloneWeapon = false
+  self.ActorController.ArmoryHelper:SetOriginalRotation(FRotator(0, 90, 0))
+  self.ActorController.ExCameraOffset = FVector(0, 0, 0)
+  self.ActorController:ChangeCharModel(self.Params.Target, true, true)
+  self.ActorController.ArmoryHelper:SetPlayer(self.ActorController.ArmoryPlayer)
+  self.ActorController:ChangeCharAppearance(AppearanceInfo)
+  self.ActorController.DelayFrame = 30
+  self.ActorController.bPlaySameMontage = true
+  self.ActorController:SetMontageAndCamera("Char", nil, nil)
+end
+
+function M:UpdateToHairPreview(ItemData)
+  self.ActorController:HidePlayerActor(self.UIName, false)
+  self:HidePlayerWeapon(true)
+  self:HideSingleWeapon(true)
+  local CharId = DataMgr.Hair[ItemData.TypeId].CharId
+  local CharHairId = ItemData.TypeId
+  local AppearanceInfo = {
+    CharId = CharId,
+    HairId = CharHairId,
+    AccessorySuit = {}
+  }
+  self.Params.Target = self:CreatePreviewTargetData({Type = "Char", HairId = CharHairId})
   self.ActorController.bStandaloneWeapon = false
   self.ActorController.ArmoryHelper:SetOriginalRotation(FRotator(0, 90, 0))
   self.ActorController.ExCameraOffset = FVector(0, 0, 0)
@@ -360,14 +518,17 @@ end
 function M:UpdateToWeaponSkinPreview(ItemData)
   self.ActorController:HidePlayerActor(self.UIName, true)
   self:HidePlayerWeapon(true)
-  local WeaponData = self:CreatePreviewTargetData({
+  self.Params.Target = self:CreatePreviewTargetData({
     Type = "Weapon",
     SkinId = ItemData.TypeId
   })
   self.ActorController.bStandaloneWeapon = true
   self.ActorController.ExCameraOffset = self.WeaponCameraOffset
-  self.ActorController:ChangeSingleWeapon(WeaponData)
-  self.ActorController:ChangeWeaponSkin(ItemData.TypeId)
+  self.ActorController:ChangeSingleWeapon(self.Params.Target)
+  local AppearanceInfo = {
+    SkinId = ItemData.TypeId
+  }
+  self.ActorController:ChangeWeaponAppearance(AppearanceInfo)
   self.ActorController.ArmoryHelper.EnableCameraScrolling = false
 end
 
@@ -395,12 +556,25 @@ function M:UpdateToWeaponAccessoryPreview(ItemData)
   self.ActorController.ArmoryHelper.EnableCameraScrolling = false
 end
 
-function M:UpdateToResourcePreview(ItemData)
+function M:UpdateToGesturePreview(ItemData)
   self:SetupDefaultCharacterModel()
   self.ActorController:SetArmoryMontageTag(self.ActorController.ArmoryPlayer, "Armory")
   self.ActorController.ArmoryPlayer:InvokeResourceBPFunction(ItemData.TypeId)
   local GestureData = DataMgr.Resource[ItemData.TypeId]
-  self.ActorController:SetArmoryCameraTag(GestureData.CameraName or "Char", "", "")
+  if GestureData then
+    self.ActorController:SetArmoryCameraTag(GestureData.CameraName or "Char", "", "")
+  end
+end
+
+function M:UpdateToMountsPreview(ItemData)
+  self:SetupDefaultCharacterModel()
+  self.IsRiderMount = true
+  self.ActorController:DestroyMount()
+  self.ActorController:HidePlayerOnMount(false)
+  self.ActorController:CreateMount(ItemData.TypeId)
+  local MountData = DataMgr.Mount[ItemData.TypeId]
+  self.ActorController:SetArmoryCameraTag(MountData.CameraName or CommonConst.ArmoryType.Char, "", "")
+  self.ActorController.ArmoryHelper:SetViewActor(self.ActorController.ArmoryPlayer)
 end
 
 function M:ClearCharAccessory()
@@ -530,10 +704,11 @@ function M:RevertToCharAccessoryPreview(ItemData)
     SkinId = Char.AppearanceSuits[Char.CurrentAppearanceIndex].SkinId
   }
   local Data = self:CreatePreviewTargetData(Params)
+  local CustomParams = Char:DumpAccessoryCustomParams(Char.AppearanceSuits) or {}
   self.ActorController:ChangeCharModel(Data, true, true)
   self:UpdateAccessoryCamera(AccessoryData.AccessoryId, AccessoryData.AccessoryType)
   self.ActorController:StopPlayerMontage()
-  self.ActorController:ChangeCharAccessory(AccessoryData.AccessoryId, AccessoryData.AccessoryType)
+  self.ActorController:ChangeCharAccessory(AccessoryData.AccessoryId, AccessoryData.AccessoryType, CustomParams[AccessoryData.AccessoryId])
   self:HideZoomKey(false)
 end
 
@@ -589,6 +764,35 @@ function M:ReplayGesture(ResourceTypeId)
   end
 end
 
+function M:RiderMount()
+  self.IsRiderMount = not self.IsRiderMount
+  if self.IsRiderMount then
+    self.ActorController:HidePlayerOnMount(false)
+  else
+    self.ActorController:HidePlayerOnMount(true)
+  end
+end
+
+function M:NotifySkyBox(Index)
+  if not self.ActorController or not self.ActorController.ArmoryHelper then
+    return
+  end
+  local NewIndex = nil ~= Index and Index or 0
+  self.ActorController.ArmoryHelper.SkyBoxIndex = NewIndex
+  if self.ActorController.ArmoryHelper.OnSkyBoxIndexChange and self.ActorController.DoSomethingWithScene then
+    local function _CallSkyBoxChanged(...)
+      local bSuccess = self.ActorController:WaitForPreviewSceneLoadFinished()
+      
+      if not bSuccess then
+        return
+      end
+      self.ActorController.ArmoryHelper:OnSkyBoxIndexChange(NewIndex)
+    end
+    
+    self.ActorController:DoSomethingWithScene("OnSkyBoxIndexChange", _CallSkyBoxChanged)
+  end
+end
+
 function M:HidePlayerWeapon(IsHidden)
   if not self.ActorController:GetPlayerWeaponActor() then
     return
@@ -627,6 +831,7 @@ function M:SetCameraToDefault()
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   local PreviewController = self.ActorController
   if Controller and Player and PreviewController then
+    self:CloseMVPSequence()
     Controller:SetViewTargetWithBlend(Player)
     self.CurrentCameraState = "Default"
   end
@@ -647,6 +852,12 @@ function M:SetCameraToPreviewActor()
   end
 end
 
+function M:CloseMVPSequence()
+  if self.ActorController then
+    self.ActorController:StopMVPSequence()
+  end
+end
+
 function M:DestroyPreviewActor()
   if self.ActorController then
     self.ActorController:DestroyMount()
@@ -656,13 +867,10 @@ function M:DestroyPreviewActor()
 end
 
 function M:ClosePreview()
-  if self.ActorController then
-    if self.EffectCreatureHideTags then
-      for k, v in pairs(self.EffectCreatureHideTags) do
-        self.ActorController.ArmoryPlayer:HideAllEffectCreature(k, v)
-      end
+  if self.ActorController and self.EffectCreatureHideTags then
+    for k, v in pairs(self.EffectCreatureHideTags) do
+      self.ActorController.ArmoryPlayer:HideAllEffectCreature(k, v)
     end
-    self.ActorController:OnClosed()
   end
 end
 

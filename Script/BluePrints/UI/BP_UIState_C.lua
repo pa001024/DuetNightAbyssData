@@ -14,7 +14,7 @@ function BP_UIState_C:Initialize(Initializer)
   rawset(self, "ListenEvent", {})
   rawset(self, "IsAllowEscape", false)
   rawset(self, "IsBeginToClose", false)
-  rawset(self, "IsMarkToUnload", false)
+  rawset(self, "IsMarkToRemove", false)
   rawset(self, "IsGlobalUI", false)
   rawset(self, "IsDestroied", false)
   rawset(self, "IsSetEntitysVisibilityWithAnim", false)
@@ -23,18 +23,6 @@ end
 
 function BP_UIState_C:Construct()
   self.Overridden.Construct(self)
-end
-
-function BP_UIState_C:CreateWidgetNew(UIName, ...)
-  return UIManager(self):_CreateWidgetNew(UIName)
-end
-
-function BP_UIState_C:CreateWidgetAsync(UIName, CoroutineOrCBFunc, ...)
-  return UIManager(self):CreateWidgetAsync(UIName, CoroutineOrCBFunc, ...)
-end
-
-function BP_UIState_C:LoadUINew(UIName, ...)
-  return UIManager(self):LoadUINew(UIName, ...)
 end
 
 function BP_UIState_C:SetBaseName(Name)
@@ -56,6 +44,8 @@ end
 function BP_UIState_C:SetUIStateTag(StateTag)
   self.UIStateTag = StateTag
 end
+
+local NEW_BlockAllUIInput = true
 
 function BP_UIState_C:UpdateArgs(Args)
   self.ExtraArgs = self.ExtraArgs or {}
@@ -96,6 +86,12 @@ function BP_UIState_C:InitUIInfo(Name, IsInUIMode, EventList, ...)
       end
     end
   end
+  self:AddDispatcher(EventID.OnNetDisconnect, self, self._ClearBlockUIInputTags)
+  self:AddDispatcher(EventID.OnConnectSuccess, self, self._ClearBlockUIInputTags)
+end
+
+function BP_UIState_C:_ClearBlockUIInputTags()
+  self:ClearBlockUIInputTags()
 end
 
 function BP_UIState_C:BindInOutAnimationWithConfigParam()
@@ -147,7 +143,7 @@ end
 function BP_UIState_C:OnLoaded(...)
 end
 
-function BP_UIState_C:SetUIVisibilityTag(VisibiltyTag, Invisible)
+function BP_UIState_C:SetUIVisibilityTag(VisibiltyTag, Invisible, EDesireVisibilty)
   local IsVisibilityChange = false
   if not IsValid(self) then
     return IsVisibilityChange
@@ -162,25 +158,78 @@ function BP_UIState_C:SetUIVisibilityTag(VisibiltyTag, Invisible)
   end
   local IsHide = not IsEmptyTable(self.HideTags)
   if IsHide then
-    if self:GetVisibility() ~= ESlateVisibility.Collapsed then
+    EDesireVisibilty = EDesireVisibilty or UE4.ESlateVisibility.Collapsed
+    if self:GetVisibility() ~= EDesireVisibilty then
       if self.bIsActive then
         self:DeactivateWidget()
+      elseif self:CheckIsNeedTransitionFade(VisibiltyTag, true) then
+        self:DealWithUIWidgetWhenStackChange(true, EDesireVisibilty)
       else
-        self:SetVisibility(UE4.ESlateVisibility.Collapsed)
+        self:SetVisibility(EDesireVisibilty)
       end
       SystemGuideManager:HideUIEvent(self.WidgetName)
       IsVisibilityChange = true
     end
-  elseif self:GetVisibility() ~= UE4.ESlateVisibility.SelfHitTestInvisible then
-    if self.bIsActive then
-      self:ActivateWidget()
-    else
-      self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    EDesireVisibilty = EDesireVisibilty or UE4.ESlateVisibility.SelfHitTestInvisible
+    if self:GetVisibility() ~= EDesireVisibilty then
+      if self.bIsActive then
+        self:ActivateWidget()
+      elseif self:CheckIsNeedTransitionFade(VisibiltyTag, false) then
+        self:DealWithUIWidgetWhenStackChange(false, EDesireVisibilty)
+      else
+        self:SetVisibility(EDesireVisibilty)
+      end
+      SystemGuideManager:ShowUIEvent(self.WidgetName)
+      IsVisibilityChange = true
     end
-    SystemGuideManager:ShowUIEvent(self.WidgetName)
-    IsVisibilityChange = true
   end
   return IsVisibilityChange
+end
+
+function BP_UIState_C:CheckIsNeedTransitionFade(VisibiltyTag, bIsHide)
+  if not UIConst.IsEnablePageJumpAnimEffect then
+    return false
+  end
+  if VisibiltyTag ~= UIConst.CommonHideTagName.UIStackChange then
+    return false
+  end
+  if self:GetUIConfigName() ~= nil and nil == UIConst.AnimWithJumpConfig[self:GetUIConfigName()] then
+    return false
+  end
+  if bIsHide and self:IsAnimationPlaying(self.Out) then
+    return false
+  end
+  if not bIsHide and self:IsAnimationPlaying(self.In) then
+    return false
+  end
+  if self.IsMarkToRemove then
+    return false
+  end
+  return true
+end
+
+function BP_UIState_C:IsOnlyHideWithDesireTag(DesireTag)
+  if self.HideTags == nil then
+    return false
+  end
+  local FirstKey, FirstValue = next(self.HideTags)
+  if nil == FirstKey then
+    return false
+  end
+  if FirstKey ~= DesireTag then
+    return false
+  end
+  local SecondKey, SecondValue = next(self.HideTags, FirstKey)
+  return nil == SecondKey
+end
+
+function BP_UIState_C:IsHideWithDesireTag(DesireTag)
+  if self.HideTags == nil then
+    return false
+  end
+  local IsHide = self.HideTags[DesireTag] ~= nil
+  return IsHide
 end
 
 function BP_UIState_C:IsHide()
@@ -193,6 +242,47 @@ end
 
 function BP_UIState_C:ClearAllHideTags()
   self.HideTags = {}
+end
+
+function BP_UIState_C:DealWithUIWidgetWhenStackChange(IsHide, DesireVisibilty)
+  if IsHide then
+    local SelfWidgetRenderOpacityBeforeJump = self:GetRenderOpacity() or 1.0
+    local JumpConfigData = UIConst.AnimWithJumpConfig[self:GetUIConfigName()]
+    if JumpConfigData then
+      local TweenEndTime = JumpConfigData.InAnimWithJumpTime or UIManager(self):GetTopUIWidgetInAnimEndTime()
+      local TweenFinalOpacity = JumpConfigData.IsNeedFadeOut and JumpConfigData.EndFadeOutValue or SelfWidgetRenderOpacityBeforeJump
+      self:DoTweenOutWhenSystemStackChange(TweenEndTime, SelfWidgetRenderOpacityBeforeJump, TweenFinalOpacity, EaseType.Linear)
+    else
+      local TweenEndTime = math.min(UIConst.AnimWithJumpConfig.Normal.InAnimWithJumpTime, UIManager(self):GetTopUIWidgetInAnimEndTime())
+      local TweenFinalOpacity = UIConst.AnimWithJumpConfig.Normal.IsNeedFadeOut and UIConst.AnimWithJumpConfig.Normal.EndFadeOutValue or SelfWidgetRenderOpacityBeforeJump
+      self:DoTweenOutWhenSystemStackChange(TweenEndTime, SelfWidgetRenderOpacityBeforeJump, TweenFinalOpacity, EaseType.Linear)
+    end
+    self.SelfWidgetParamForStackChange = {RenderOpacityBeforeJump = SelfWidgetRenderOpacityBeforeJump, DesireVisibilty = DesireVisibilty}
+  else
+    self:CancelTweenOutSystemStackChange()
+    self:SetVisibility(DesireVisibilty)
+  end
+end
+
+function BP_UIState_C:BeginAnimOutToExitWithInStack(bIsForce)
+  if not self.IsAddInDeque and not bIsForce then
+    return
+  end
+  local PreviousUI = UIManager(self):GetUnderState()
+  if PreviousUI then
+    local JumpConfigData = UIConst.AnimWithJumpConfig[PreviousUI:GetUIConfigName()]
+    if JumpConfigData and PreviousUI.In then
+      local bIsNeedMatchAnimTime = JumpConfigData.bIsNeedMatchAnimTime == nil and UIConst.AnimWithJumpConfig.Normal.IsNeedMatchAnimTime or JumpConfigData.bIsNeedMatchAnimTime
+      if bIsNeedMatchAnimTime then
+        local ExitAnimNeedTime = JumpConfigData.OutAnimWithJumpTime or UIManager(self):GetTopUIWidgetOutAnimEndTime()
+        local PreviousUIInAnimTime = PreviousUI.In:GetEndTime()
+        PreviousUI:PlayAnimationForward(PreviousUI.In, PreviousUIInAnimTime / ExitAnimNeedTime)
+      else
+        PreviousUI:PlayAnimationForward(PreviousUI.In)
+      end
+      PreviousUI:SetUIVisibilityTag(UIConst.CommonHideTagName.UIStackChange, false, UE4.ESlateVisibility.HitTestInvisible)
+    end
+  end
 end
 
 function BP_UIState_C:ListenForInputAction(ActionName, EventType, bConsume, Callback)
@@ -261,7 +351,7 @@ end
 
 function BP_UIState_C:CameraToViewTarget(ViewTarget)
   local Controller = self:GetOwningPlayer()
-  if Controller and Controller:GetViewTarget() ~= ViewTarget then
+  if Controller and IsValid(ViewTarget) and Controller:GetViewTarget() ~= ViewTarget then
     Controller:SetViewTargetWithBlend(ViewTarget, 0, UE4.EViewTargetBlendFunction.VTBlend_Linear, 0, false)
   end
 end
@@ -394,13 +484,13 @@ function BP_UIState_C:SetInputUIOnly(IsUIOnly)
   end
   CurMode = self.GameInputModeSubsystem:GetCurrentInputMode()
   if PreMode ~= CurMode then
-    DebugPrint("InputModeChange => PreMode:" .. PreMode .. "," .. "CurMode:" .. CurMode .. " The Reason UIName is " .. UINameText)
+    DebugPrint("UIState Hy@= InputModeChange => PreMode:" .. PreMode .. "," .. "CurMode:" .. CurMode .. " The Reason UIName is " .. UINameText)
     EventManager:FireEvent(EventID.SetInputMode, IsUIOnly)
   end
 end
 
 function BP_UIState_C:Hide(HideTag)
-  if self.IsMarkToUnload then
+  if self.IsMarkToRemove then
     DebugPrint("Hy@==UIState型界面移除当帧需要Hide，直接忽略", self:GetUIConfigName())
     return
   end
@@ -436,7 +526,7 @@ function BP_UIState_C:OnHide(HideTag)
 end
 
 function BP_UIState_C:Show(ShowTag)
-  if self.IsMarkToUnload then
+  if self.IsMarkToRemove then
     DebugPrint("Hy@==UIState型界面移除当帧需要Show，直接忽略", self:GetUIConfigName())
     return
   end
@@ -493,6 +583,30 @@ function BP_UIState_C:OnOutAnimationFinished()
   self:DealWithBattleUnitVisibility(SystemUIConfig.IsHideBattleUnit, false, "AnimFinished")
 end
 
+function BP_UIState_C:OnUpdateWhenSystemJump(CurValue)
+  DebugPrint("Hy@ UIState型界面系统跳转过程中回调 OnUpdateWhenSystemJump，名称：", self:GetUIConfigName(), " CurValue:", CurValue)
+  self:SetRenderOpacity(CurValue)
+end
+
+function BP_UIState_C:OnCompleteAfterSystemJump(EndValue)
+  DebugPrint("Hy@ UIState型界面系统跳转完成后回调 OnCompleteAfterSystemJump，名称：", self:GetUIConfigName(), " EndValue:", EndValue)
+  self:SetRenderOpacity(EndValue)
+  if self.SelfWidgetParamForStackChange then
+    self:SetVisibility(self.SelfWidgetParamForStackChange.DesireVisibilty or UE4.ESlateVisibility.Collapsed)
+  else
+    self:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+end
+
+function BP_UIState_C:OnCancelWhenSystemJump()
+  DebugPrint("Hy@ UIState型界面系统跳转取消后回调 OnCancelWhenSystemJump，名称：", self:GetUIConfigName())
+  if self.SelfWidgetParamForStackChange then
+    self:SetRenderOpacity(self.SelfWidgetParamForStackChange.RenderOpacityBeforeJump or 1.0)
+  else
+    self:SetRenderOpacity(1.0)
+  end
+end
+
 function BP_UIState_C:DealWithBattleUnitVisibility(HideBattleUnitType, bHideOrShow, AnimType)
   self.IsSetEntitysVisibilityWithAnim = bHideOrShow
   if HideBattleUnitType == UIConst.EnumHideBattleUnitStyle.DelayHideAll or HideBattleUnitType == UIConst.EnumHideBattleUnitStyle.DelayHideAllExceptSelf then
@@ -504,15 +618,29 @@ function BP_UIState_C:DealWithBattleUnitVisibility(HideBattleUnitType, bHideOrSh
   end
 end
 
+function BP_UIState_C:MarkToRemove(bIsNeedBlockInput)
+  self.IsMarkToRemove = true
+  if bIsNeedBlockInput then
+    self:BlockAllUIInput(true, "SP_DisplayOnly")
+  end
+end
+
+function BP_UIState_C:IsBeingRemoveState()
+  if self.IsMarkToRemove or self.IsBeginToClose then
+    return true
+  end
+  return false
+end
+
 function BP_UIState_C:Close()
   if not self or not IsValid(self) then
     return
   end
-  DebugPrint("Hy@ UIState型界面关闭 Close，名称：", self:GetUIConfigName())
   if not self.IsInit then
     DebugPrint(ErrorTag, "::Error::  BP_UIState_C=Close 有系统界面移除异常，可能没有关闭成功，需要检查一下，系统名称：", self:GetUIConfigName())
     return
   end
+  DebugPrint("Hy@ UIState型界面关闭 Close，名称：", self:GetUIConfigName())
   self.IsBeginToClose = true
   if self.Auto_Out then
     self:BindToAnimationFinished(self.Auto_Out, {
@@ -526,7 +654,7 @@ function BP_UIState_C:Close()
 end
 
 function BP_UIState_C:RealClose()
-  self.IsMarkToUnload = true
+  self.IsMarkToRemove = true
   if self.GamePausedHandle then
     self:RemoveTimer(self.GamePausedHandle)
     self.GamePausedHandle = nil
@@ -542,12 +670,13 @@ function BP_UIState_C:RealClose()
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self) or GWorld.GameInstance
   local UIManager = GameInstance:GetGameUIManager()
   if nil ~= UIManager then
+    self.IsNeedSearchInStack = UIManager:GetCurrentState() ~= self
     UIManager:UnLoadUI(self.ConfigName, self.WidgetName)
   end
-  self:OnClose()
+  self:OnEndClose()
 end
 
-function BP_UIState_C:OnClose()
+function BP_UIState_C:OnEndClose()
 end
 
 function BP_UIState_C:DestroyObject()
@@ -612,6 +741,35 @@ function BP_UIState_C:UISetGamePaused(UIName, IsPause)
 end
 
 function BP_UIState_C:BlockAllUIInput(bBlock, Reason)
+  if NEW_BlockAllUIInput then
+    if self.WidgetName == "LoadingReconnect" then
+      return
+    end
+    local LoadingReconnectUi = UIManager():GetUIObj("LoadingReconnect")
+    if not bBlock then
+      if LoadingReconnectUi and LoadingReconnectUi.bDisplayOnly then
+        LoadingReconnectUi:Close()
+      end
+      if self:IsExistTimer(self.ReconnectUITimer) then
+        self:RemoveTimer(self.ReconnectUITimer)
+      end
+    elseif "SP_DisplayOnly" ~= Reason and not LoadingReconnectUi then
+      if self:IsExistTimer(self.ReconnectUITimer) then
+        self:RemoveTimer(self.ReconnectUITimer)
+      end
+      local _, TimerKey = self:AddTimer(UIConst.BlockingTime, function()
+        if not UIManager():GetUIObj("LoadingReconnect") then
+          UIManager():LoadUINew("LoadingReconnect", true)
+        end
+      end)
+      self.ReconnectUITimer = TimerKey
+    end
+  end
+  if "SP_DisplayOnly" == Reason then
+    Reason = nil
+  end
+  Reason = Reason or self.WidgetName
+  DebugPrint(WarningTag, string.format("%s:BlockAllUIInput(%s, %s)", self.WidgetName, bBlock, Reason))
   self:BlockAllUIInput_CPP(bBlock, Reason or self.WidgetName)
 end
 

@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -88,50 +91,6 @@ return ReadOnly("CharCardLevelUp", {
       ResourceId1 = 1001103,
       ResourceNum1 = 30,
       RoleId = 1103
-    }
-  },
-  [1104] = {
-    [0] = {
-      CardLevel = 0,
-      CollectRewardExp = 250,
-      ResourceId1 = 1001104,
-      ResourceNum1 = 30,
-      RoleId = 1104
-    },
-    [1] = {
-      CardLevel = 1,
-      CollectRewardExp = 250,
-      ResourceId1 = 1001104,
-      ResourceNum1 = 30,
-      RoleId = 1104
-    },
-    [2] = {
-      CardLevel = 2,
-      CollectRewardExp = 250,
-      ResourceId1 = 1001104,
-      ResourceNum1 = 30,
-      RoleId = 1104
-    },
-    [3] = {
-      CardLevel = 3,
-      CollectRewardExp = 250,
-      ResourceId1 = 1001104,
-      ResourceNum1 = 30,
-      RoleId = 1104
-    },
-    [4] = {
-      CardLevel = 4,
-      CollectRewardExp = 250,
-      ResourceId1 = 1001104,
-      ResourceNum1 = 30,
-      RoleId = 1104
-    },
-    [5] = {
-      CardLevel = 5,
-      CollectRewardExp = 250,
-      ResourceId1 = 1001104,
-      ResourceNum1 = 30,
-      RoleId = 1104
     }
   },
   [1501] = {

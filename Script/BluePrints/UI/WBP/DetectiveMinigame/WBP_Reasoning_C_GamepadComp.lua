@@ -6,6 +6,9 @@ function Component:OnGamepadKeyDown(InKeyName)
       return
     end
     self.Book:OnClickButton()
+    self:AddTimer(0.1, function()
+      self:SetDefaultFocus()
+    end)
     self.Btn_Associate.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
   elseif "Gamepad_FaceButton_Left" == InKeyName then
     if not self.Book:GetIsClueUi() then
@@ -14,10 +17,11 @@ function Component:OnGamepadKeyDown(InKeyName)
     self:OnClickButtonAssociate()
   elseif "Gamepad_FaceButton_Right" == InKeyName then
     if self.Book:GetIsClueUi() then
-      self.Book:OnClickButton()
-      self.Btn_Associate.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    else
       self:OnClickBackButton()
+    else
+      self.Book:OnClickClose()
+      self:SetDefaultFocus()
+      self.Btn_Associate.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Visible)
     end
   end
   self:AddTimer(0.1, function()
@@ -49,10 +53,8 @@ function Component:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   self.CurGamepadName = CurGamepadName
   self.IsSwitchDevice = true
   if self.CurInputDeviceType == ECommonInputType.MouseAndKeyboard then
-    DebugPrint("thy   IsPC")
     self:SwitchMainUIToPCOrMoble()
   elseif self.CurInputDeviceType == ECommonInputType.Gamepad then
-    DebugPrint("thy   IsGamePad")
     self:SwitchMainUIToGamePad()
     self:SetDefaultFocus()
   end
@@ -82,10 +84,16 @@ function Component:SwitchMainUIToGamePad()
     self.Btn_Associate.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Visible)
   end
   self.Book.Btn_QaBook.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Visible)
+  if self.Book.WS_Controller then
+    self.Book.WS_Controller:SetActiveWidgetIndex(1)
+  end
   self:RefreshTabGamepadIcon()
 end
 
 function Component:SwitchMainUIToPCOrMoble()
+  if self.Book.WS_Controller then
+    self.Book.WS_Controller:SetActiveWidgetIndex(0)
+  end
   self.Btn_Associate.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Book.Btn_QaBook.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end

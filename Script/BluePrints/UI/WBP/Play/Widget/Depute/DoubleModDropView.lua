@@ -1,4 +1,5 @@
 require("UnLua")
+local ActivityController = require("BluePrints.UI.WBP.Activity.ActivityController")
 local M = {}
 
 function M:GetDoubleModDropData()
@@ -6,8 +7,9 @@ function M:GetDoubleModDropData()
   if not Avatar then
     return nil
   end
+  local curEventId = ActivityController:GetDoubleModDropEventID()
   local defaultData = {
-    EventId = CommonConst.DoubleModDropEventID,
+    EventId = curEventId,
     DropTimes = 0,
     EliteRushTimes = 0
   }
@@ -15,26 +17,19 @@ function M:GetDoubleModDropData()
   if not self.DoubleModDrop then
     return defaultData
   end
-  local result = {}
-  local keyMap = {
-    EventId = "EventId",
-    DropTimes = "DropTimes",
-    EliteRushTimes = "EliteRushTimes"
-  }
+  local result
   for _, value in pairs(self.DoubleModDrop) do
-    if value.Props then
-      for name, id in pairs(value.Props) do
-        if keyMap[name] then
-          result[keyMap[name]] = id
-        end
-      end
+    local props = value.Props
+    if props and props.EventId == curEventId then
+      result = {
+        EventId = props.EventId or curEventId,
+        DropTimes = props.DropTimes or 0,
+        EliteRushTimes = props.EliteRushTimes or 0
+      }
+      break
     end
   end
-  for k, v in pairs(defaultData) do
-    if nil == result[k] then
-      result[k] = v
-    end
-  end
+  result = result or defaultData
   return result
 end
 
@@ -46,7 +41,8 @@ function M:IsDoubleMod()
   if not self:IsPrerequisiteSatisfied() then
     return false
   end
-  if Avatar.ActivityTimeOpen and Avatar.ActivityTimeOpen[CommonConst.DoubleModDropEventID] then
+  local EventId = ActivityController:GetDoubleModDropEventID()
+  if Avatar.ActivityTimeOpen and Avatar.ActivityTimeOpen[EventId] then
     return true
   end
   return false
@@ -57,7 +53,8 @@ function M:IsPrerequisiteSatisfied()
   if not Avatar then
     return false
   end
-  local DoubleModEventInfo = DataMgr.EventMain[CommonConst.DoubleModDropEventID]
+  local EventId = ActivityController:GetDoubleModDropEventID()
+  local DoubleModEventInfo = DataMgr.EventMain[EventId]
   if not DoubleModEventInfo then
     return false
   end
@@ -69,12 +66,9 @@ function M:IsPrerequisiteSatisfied()
     table.insert(PrerequisiteQuestId, QuestId)
   end
   for _, QuestId in pairs(PrerequisiteQuestId) do
-    local QuestChain = Avatar.QuestChains[QuestId]
-    if not QuestChain then
-      ScreenPrint("魔之楔 配置了一个不存在的任务链Id！请策划检查！Id:" .. QuestId)
-      return false
-    end
-    if not QuestChain:IsFinish() then
+    local IsQuestFinished = Avatar:IsQuestFinished(QuestId)
+    local IsQuestAssumeFinished = Avatar:IsQuestAssumeFinished(QuestId)
+    if not IsQuestFinished and not IsQuestAssumeFinished then
       return false
     end
   end

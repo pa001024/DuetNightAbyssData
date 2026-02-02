@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -14,6 +17,7 @@ return ReadOnly("ReasonType", {
     ReasonId = 21008,
     ReasonName = "ACTIONPOINT_REWRD"
   },
+  AFDAY = {ReasonId = 21017, ReasonName = "AFDAY"},
   ARCHIVE_COLLECT_REWARD = {
     ReasonId = 26001,
     ReasonName = "ARCHIVE_COLLECT_REWARD"
@@ -37,6 +41,14 @@ return ReadOnly("ReasonType", {
   BLUE_CANCEL = {
     ReasonId = 10003,
     ReasonName = "BLUE_CANCEL"
+  },
+  BLUE_CONVERT_CONSUME = {
+    ReasonId = 10006,
+    ReasonName = "BLUE_CONVERT_CONSUME"
+  },
+  BLUE_CONVERT_GET = {
+    ReasonId = 10007,
+    ReasonName = "BLUE_CONVERT_GET"
   },
   BLUE_PRODUCT = {
     ReasonId = 10002,
@@ -80,6 +92,26 @@ return ReadOnly("ReasonType", {
     ReasonId = 21009,
     ReasonName = "COLLECT_REWARD_EXP"
   },
+  COMEBACK_BACK_REWARD = {
+    ReasonId = 43002,
+    ReasonName = "COMEBACK_BACK_REWARD"
+  },
+  COMEBACK_INVITE_REWARD = {
+    ReasonId = 43004,
+    ReasonName = "COMEBACK_INVITE_REWARD"
+  },
+  COMEBACK_LOGIN_REWARD = {
+    ReasonId = 43001,
+    ReasonName = "COMEBACK_LOGIN_REWARD"
+  },
+  COMEBACK_PROGRESS_REWARD = {
+    ReasonId = 43003,
+    ReasonName = "COMEBACK_PROGRESS_REWARD"
+  },
+  COMMONQUEST_FINISH_REWARD = {
+    ReasonId = 40005,
+    ReasonName = "COMMONQUEST_FINISH_REWARD"
+  },
   COMMON_QUEST_REWARD = {
     ReasonId = 40001,
     ReasonName = "COMMON_QUEST_REWARD"
@@ -91,6 +123,10 @@ return ReadOnly("ReasonType", {
   CONDITIONAL_REWRD = {
     ReasonId = 21007,
     ReasonName = "CONDITIONAL_REWRD"
+  },
+  CUMULATIVE_RECHARGE = {
+    ReasonId = 42001,
+    ReasonName = "CUMULATIVE_RECHARGE"
   },
   DAILY_PACK_BUY = {
     ReasonId = 38001,
@@ -181,6 +217,11 @@ return ReadOnly("ReasonType", {
   GACHA_PROLOGUE = {
     ReasonId = 22003,
     ReasonName = "GACHA_PROLOGUE"
+  },
+  GIFT = {ReasonId = 21016, ReasonName = "GIFT"},
+  GIFT_CONSUME = {
+    ReasonId = 21015,
+    ReasonName = "GIFT_CONSUME"
   },
   GM = {ReasonId = 0, ReasonName = "GM"},
   GM_CONSUME = {ReasonId = 1, ReasonName = "GM_CONSUME"},
@@ -311,6 +352,10 @@ return ReadOnly("ReasonType", {
     ReasonId = 18001,
     ReasonName = "PHASE_QUEST"
   },
+  PHOTO_QUEST_REWARD = {
+    ReasonId = 44001,
+    ReasonName = "PHOTO_QUEST_REWARD"
+  },
   PLAYER_LEVEL_EVENT = {
     ReasonId = 21012,
     ReasonName = "PLAYER_LEVEL_EVENT"
@@ -350,6 +395,14 @@ return ReadOnly("ReasonType", {
   RAID_DUNGEON_REWARD = {
     ReasonId = 14008,
     ReasonName = "RAID_DUNGEON_REWARD"
+  },
+  REGION_REPUTATION_QUEST_CONSUME = {
+    ReasonId = 41002,
+    ReasonName = "REGION_REPUTATION_QUEST_CONSUME"
+  },
+  REGION_REPUTATION_REWARD_GET = {
+    ReasonId = 41001,
+    ReasonName = "REGION_REPUTATION_REWARD_GET"
   },
   REPEAT_CHAR_ACCESSORY_TRANSFORM_RESOURCE_GET = {
     ReasonId = 4015,
@@ -555,5 +608,9 @@ return ReadOnly("ReasonType", {
     ReasonId = 21010,
     ReasonName = "WECHAT_SMALL_APP"
   },
-  WIKI_ENTRY = {ReasonId = 16001, ReasonName = "WIKI_ENTRY"}
+  WIKI_ENTRY = {ReasonId = 16001, ReasonName = "WIKI_ENTRY"},
+  WYS_REWARD_GET = {
+    ReasonId = 40004,
+    ReasonName = "WYS_REWARD_GET"
+  }
 })

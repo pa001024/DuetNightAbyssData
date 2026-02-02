@@ -34,6 +34,11 @@ function M:OnButonClicked()
     self:PlayAnimation(self.Click)
   end
   if self.CallBackObj and self.CallBack then
+    local RootWidget = self.CallBackObj.RootWidget
+    if RootWidget and type(RootWidget.CheckIsInCloseSelfState) == "function" and RootWidget:CheckIsInCloseSelfState() then
+      DebugPrint("GuildWar_EntranceItem OnButonClicked, RootWidget is in close self state, So return")
+      return
+    end
     AudioManager(self):PlayUISound(self, "event:/ui/activity/gerengonghuizhan_small_btn_click", "", nil)
     self.CallBack(self.CallBackObj)
   end

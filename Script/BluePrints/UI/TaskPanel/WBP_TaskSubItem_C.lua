@@ -28,6 +28,16 @@ function WBP_TaskSubItem_C:Initialize(Initializer)
   self.IsDoingQuest = false
 end
 
+function WBP_TaskSubItem_C:OnAnimationStarted(Anim)
+  if Anim == self.Text_Normal then
+    self.Text_TaskName:SetColorAndOpacity(self.Text_TaskName_NormalColor)
+    self.Text_TaskPosition:SetColorAndOpacity(self.Text_TaskPos_NormalColor)
+  elseif Anim == self.Text_Select then
+    self.Text_TaskName:SetColorAndOpacity(self.Text_TaskName_SelectColor)
+    self.Text_TaskPosition:SetColorAndOpacity(self.Text_TaskPos_SelectColor)
+  end
+end
+
 function WBP_TaskSubItem_C:Construct()
   EventManager:AddEvent(EventID.OnSelectQuestSubItem, self, self.OnQuestSelectedToStopAnimation)
   self.IsDestroied = false

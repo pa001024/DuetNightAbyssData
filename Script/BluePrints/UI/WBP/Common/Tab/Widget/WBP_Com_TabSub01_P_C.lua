@@ -57,14 +57,14 @@ function M:UpdateTabs(Tabs)
     Child:BindSoundFunc(self.SoundFunc, self.SoundFuncReceiver)
     Child:BindHoverSoundFunc(self.HoverSoundFunc, self.SoundFuncReceiver)
   end
-  if self.DeviceTypeByPlatformName == CommonConst.CLIENT_DEVICE_TYPE.PC then
-    if #Tabs <= 1 then
-      self.Key_Left:SetVisibility(UIConst.VisibilityOp.Collapsed)
-      self.Key_Right:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    else
+  if #Tabs <= 1 then
+    self:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  else
+    if self.DeviceTypeByPlatformName == CommonConst.CLIENT_DEVICE_TYPE.PC then
       self.Key_Left:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       self.Key_Right:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     end
+    self:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end
 end
 

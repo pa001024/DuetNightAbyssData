@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -9,6 +12,15 @@ return ReadOnly("PolicyLink", {
   CloudGame = {
     Cache = "CloudGame",
     ChinaCN = "https://dna.yingxiong.com/cloud/download?source=game"
+  },
+  InviteCode = {
+    AbroadCN = "https://duetnightabyss.dna-panstudio.com/atlasiacalling/",
+    AbroadEN = "https://duetnightabyss.dna-panstudio.com/atlasiacalling/en",
+    AbroadJP = "https://duetnightabyss.dna-panstudio.com/atlasiacalling/jp",
+    AbroadKR = "https://duetnightabyss.dna-panstudio.com/atlasiacalling/ko",
+    AbroadTC = "https://duetnightabyss.dna-panstudio.com/atlasiacalling/zh-tw",
+    Cache = "InviteCode",
+    ChinaCN = "https://dna.yingxiong.com/gyatlxy?source=game"
   },
   PaymentPolicyJP = {
     AbroadCN = "https://duetnightabyss.dna-panstudio.com/ja/#/news/content?id=8567",

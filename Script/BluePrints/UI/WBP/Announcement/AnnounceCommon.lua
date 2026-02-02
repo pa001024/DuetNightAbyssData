@@ -14,13 +14,13 @@ local AnnounceCommon = {
   PlatformName = string.lower(UE4.UUIFunctionLibrary.GetDevicePlatformName(GWorld.GameInstance)),
   AnnounceWeb = UEMPathFunctionLibrary.GetProjectSavedDirectory() .. "AnnounceWeb/",
   FontTypeMap = {
-    [CommonConst.SystemLanguages.CN] = "otf",
-    [CommonConst.SystemLanguages.EN] = "otf",
-    [CommonConst.SystemLanguages.KR] = "otf",
-    [CommonConst.SystemLanguages.TC] = "ttf",
-    [CommonConst.SystemLanguages.JP] = "ttf"
+    [CommonConst.SystemLanguages.CN] = "woff",
+    [CommonConst.SystemLanguages.EN] = "woff",
+    [CommonConst.SystemLanguages.KR] = "woff",
+    [CommonConst.SystemLanguages.TC] = "woff",
+    [CommonConst.SystemLanguages.JP] = "woff",
+    [CommonConst.SystemLanguages.FR] = "woff"
   },
-  bUseWeb = true,
   LongYMDHMFormat = "(%d+)-(%d+)-(%d+)%s*(%d+)%s*:%s*(%d+)%s*~%s*(%d+)-(%d+)-(%d+)%s*(%d+)%s*:%s*(%d+)",
   LongTimeFormat = "(%[%s*%d+-%d+-%d+%s*%d+%s*:%s*%d+%s*~%s*%d+-%d+-%d+%s*%d+%s*:%s*%d+%s*%])",
   ShortYMDHMFormat = "(%d+)-(%d+)-(%d+)%s*(%d+)%s*:%s*(%d+)%s*~%s*(%d+)%s*:%s*(%d+)",
@@ -31,12 +31,6 @@ local AnnounceCommon = {
   FontScale = 1.13,
   TableTagFormat = "(</?table>)"
 }
-if not AnnounceCommon.bUseWeb then
-  AnnounceCommon.StyleToContent = {
-    [AnnounceCommon.ContentUIStyle.ImageOnly] = "ImageOnly",
-    [AnnounceCommon.ContentUIStyle.Default] = "AnnouncementDefaultContent"
-  }
-end
 AnnounceCommon.Version = CodeVersion
 AnnounceCommon.HtmlBody1 = string.format(HtmlCode.HtmlBody1, "%s", "%s", CodeVersion, CodeVersion, "%s")
 AnnounceCommon.ImageOnlyContent = HtmlCode.ImageOnlyContent

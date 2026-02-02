@@ -56,7 +56,7 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   if CurInputDevice == ECommonInputType.Touch then
     return
   end
-  if self.Item_Reward_1:HasAnyFocus() or self.Item_Reward_2:HasAnyFocus() then
+  if UIUtils.HasAnyFocus(self.Item_Reward_1) or UIUtils.HasAnyFocus(self.Item_Reward_2) then
     self:UpdatKeyDisplay("RewardWidget")
   end
   local IsUseKeyAndMouse = CurInputDevice == ECommonInputType.MouseAndKeyboard

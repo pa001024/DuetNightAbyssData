@@ -1,14 +1,9 @@
 require("UnLua")
 local M = Class({
-  "BluePrints.UI.BP_EMUserWidget_C",
-  "BluePrints.Common.TimerMgr"
+  "BluePrints.UI.BP_EMUserWidget_C"
 })
-local FSoundOralComponent = require("BluePrints.Story.Talk.Component.SoundOralComponent").FSoundOralComponent
 
 function M:Construct()
-  if not self.SoundOralComponent then
-    self.SoundOralComponent = FSoundOralComponent.New()
-  end
   self.BtnState = ""
   self:BindToAnimationFinished(self.Press_Fold, {
     self,
@@ -18,8 +13,36 @@ end
 
 function M:Destruct()
   self.OthersItem = nil
-  self:RemoveTimer(self.TalkTimer)
   self:PauseTalkAudio()
+end
+
+function M:PlaySoundWithTalk(AudioManager, VoiceName, ExStoryInfo, SnapShot)
+  local AttachedActor = UE4.UGameplayStatics.GetPlayerController(AudioManager, 0)
+  local RealEventPath, SelectKey = AudioManager:GetEventData(VoiceName, ExStoryInfo)
+  local PlayStruct = FPlayFMODSoundStruct()
+  PlayStruct.FMODEvent = AudioManager:GetFMODEventByPath_Sync(RealEventPath)
+  PlayStruct.EventKey = Const.ReviewSoundKey
+  PlayStruct.bStopWhenAttachedToDestoryed = true
+  PlayStruct.bPlayAs2D = true
+  PlayStruct.SelectKey = SelectKey
+  PlayStruct.DynamicSoundStop = {
+    GWorld.GameInstance,
+    function()
+      self.AudioState = "Stop"
+      self:StopAnimation(self.Click_Sound_Loop)
+      self:PlayAnimation(self.Normal_Sound)
+    end
+  }
+  PlayStruct = UE4.UAudioManager.SetObjectToFPlayFMODSoundStruct(PlayStruct, AttachedActor)
+  local SoundEventInstance = AudioManager:PlayFMODSound_Sync(PlayStruct)
+  if SnapShot then
+    AudioManager:SetEventSoundParam(nil, Const.DialogueEffectSoundKey, {
+      voice_effect_type = Const.DialogueSnapShot[SnapShot]
+    })
+  else
+    AudioManager:SetEventSoundParam(nil, Const.DialogueEffectSoundKey, {voice_effect_type = 0})
+  end
+  return SoundEventInstance
 end
 
 function M:InitVoiceBtn(DialogueId)
@@ -101,19 +124,8 @@ end
 function M:PlayTalkAudio()
   self.AudioState = "IsPlaying"
   local DialogueConfig = DataMgr.Dialogue[self.DialogueId]
-  local AudioInstance = self.SoundOralComponent:PlaySoundWithTalk(AudioManager(self), DialogueConfig.VoiceName, DialogueConfig.ExStoryInfo, DialogueConfig.SnapShot)
+  local AudioInstance = self:PlaySoundWithTalk(AudioManager(self), DialogueConfig.VoiceName, DialogueConfig.ExStoryInfo, DialogueConfig.SnapShot)
   self:PlayAnimation(self.Click_Sound_Loop, 0, 0, 0, 1, true)
-  if self.TalkTimer then
-    self:RemoveTimer(self.TalkTimer)
-  end
-  self.TalkTimer = self:AddTimer(0.1, function()
-    if AudioManager(self):IsSoundStoped_CPP(AudioInstance) then
-      self.AudioState = "Stop"
-      self:RemoveTimer(self.TalkTimer)
-      self:StopAnimation(self.Click_Sound_Loop)
-      self:PlayAnimation(self.Normal_Sound)
-    end
-  end, true, nil, nil, true)
 end
 
 function M:InvokeClick()

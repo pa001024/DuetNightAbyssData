@@ -26,7 +26,6 @@ function S:Init(Parent, CacheName, CacheInfo)
   self:SetOldValue()
   self:SetHoverVisibility()
   self:PlaySwitchAnimation(self.OldValue)
-  self.NowValue = self.OldValue
   self.Text_Close:SetText(GText(self.CacheInfo.SwitchText[1]))
   self.Text_Open:SetText(GText(self.CacheInfo.SwitchText[2]))
 end
@@ -91,6 +90,7 @@ function S:SetOldValue()
   else
     self.OldValue = self.DefaultValue
   end
+  self.NowValue = self.OldValue
   if self.EMCacheName == "GameUserSettings" or self.EMCacheName == "ConsoleVariable" then
     self["Save" .. self.CacheName .. "OptionSetting"](self)
   end
@@ -159,15 +159,19 @@ function S:OnClickChangeMiniOption(SelectOptionId)
   self.NowMiniOptionId = SelectOptionId
 end
 
-function S:RestoreDefaultOptionSet()
-  local NowValue = self.NowValue
+function S:RestoreDefaultOptionValue()
   self.OldValue = self.DefaultValue
   self.NowValue = self.OldValue
+end
+
+function S:RestoreDefaultOptionSet()
+  local PreNowValue = self.NowValue
+  self:RestoreDefaultOptionValue()
   if self["RestoreDefault" .. self.CacheName .. "OptionSet"] then
     self["RestoreDefault" .. self.CacheName .. "OptionSet"](self)
   end
-  if NowValue ~= self.DefaultValue then
-    self:PlaySwitchAnimation(self.OldValue)
+  if PreNowValue ~= self.NowValue then
+    self:PlaySwitchAnimation(self.NowValue)
   end
 end
 
@@ -772,6 +776,19 @@ function S:SaveHideBackWeaponsOptionSetting()
   SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.NowValue)
 end
 
+function S:SetSkipMVPOldValue()
+  self.OldValue = SettingUtils.GetEMCache(self.EMCacheName, self.EMCacheKey, self.DefaultValue)
+end
+
+function S:RestoreDefaultSkipMVPOptionSet()
+  self:SaveSkipMVPOptionSetting()
+end
+
+function S:SaveSkipMVPOptionSetting()
+  SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.NowValue)
+  self.OldValue = self.NowValue
+end
+
 function S:SetLeftShootShowOldValue()
   self.OldValue = SettingUtils.GetEMCache(self.EMCacheName, self.EMCacheKey, self.DefaultValue)
 end
@@ -845,6 +862,54 @@ function S:SaveAntiAliasingMobileOptionSetting()
     
     UIManager(self):ShowCommonPopupUI(100283, Params, self.Parent)
   end
+end
+
+function S:SetMoveLockOldValue()
+  self.OldValue = SettingUtils.GetEMCache(self.EMCacheName, self.EMCacheKey, self.DefaultValue)
+end
+
+function S:RestoreDefaultMoveLockOptionSet()
+  self:SaveMoveLockOptionSetting()
+end
+
+function S:SaveMoveLockOptionSetting()
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+  if not IsValid(Player) then
+    return
+  end
+  Player:UpdateVirtualJoystickEnableMoveLock(self.NowValue)
+  self.OldValue = self.NowValue
+end
+
+function S:SetVoiceGuideOldValue()
+  if not self.EMCacheName then
+    return
+  end
+  self.OldValue = SettingUtils.GetEMCache(self.EMCacheName, self.EMCacheKey, self.DefaultValue)
+end
+
+function S:RestoreDefaultVoiceGuideOptionSet()
+  self:SaveVoiceGuideOptionSetting()
+end
+
+function S:SaveVoiceGuideOptionSetting()
+  SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.NowValue)
+  AudioManager(self):SetTalkVoiceTurnOff(not self.NowValue)
+end
+
+function S:SetAutoApproveOldValue()
+  if not self.EMCacheName then
+    return
+  end
+  self.OldValue = SettingUtils.GetEMCache(self.EMCacheName, self.EMCacheKey, self.DefaultValue)
+end
+
+function S:RestoreDefaultAutoApproveOptionSet()
+  self:SaveAutoApproveOptionSetting()
+end
+
+function S:SaveAutoApproveOptionSetting()
+  SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.NowValue)
 end
 
 return S

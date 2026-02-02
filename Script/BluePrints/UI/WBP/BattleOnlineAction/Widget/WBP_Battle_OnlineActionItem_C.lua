@@ -227,7 +227,7 @@ function M:ShowPositionUI()
   for i = 1, 4 do
     if i <= self.MaxPlayerNum then
       self["Option_" .. i]:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-      if SeatVaildInfo[i - 1] then
+      if SeatVaildInfo[i - 1] and SeatVaildInfo[i - 1].Valid ~= false then
         self["Option_" .. i].Btn_Area:SetForbidden(false)
       else
         self["Option_" .. i].Btn_Area:SetForbidden(true)

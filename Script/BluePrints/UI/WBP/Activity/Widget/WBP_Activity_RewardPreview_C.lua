@@ -14,6 +14,7 @@ function M:InitContent(Params, PopupData, Owner)
   self.CurActivityId = Params.ActivityId
   self.IsZhiliuQuest = self.CurActivityId == DataMgr.EventConstant.ZhiLiuEntrustEventID.ConstantValue
   self.IsMidTermGoalQuest = self.CurActivityId == DataMgr.MidTermGoalConstant.MidTermGoalEventId.ConstantValue
+  self.IsComeBackEvent = self.CurActivityId == DataMgr.ComeBackEventConstant.CurrentEventId.ConstantValue
   self.List_Reward:ClearListItems()
   for StartIndex, PhaseId in ipairs(self.AllQuestPhaseIdValue) do
     local ItemObject = NewObject(UIUtils.GetCommonItemContentClass())
@@ -51,6 +52,20 @@ function M:InitContent(Params, PopupData, Owner)
       ItemObject.RewardPreview = DataMgr.MidTermGoalConstant[RewardKey].ConstantValue
       self.List_Reward:AddItem(ItemObject)
     end
+  end
+  if self.IsComeBackEvent then
+    self.List_Reward:ClearListItems()
+    local EventOneTimeReward = Params.EventOneTimeReward
+    if not EventOneTimeReward then
+      return
+    end
+    local Reward = DataMgr.Reward[EventOneTimeReward]
+    local ItemObject = NewObject(UIUtils.GetCommonItemContentClass())
+    ItemObject.Index = 0
+    ItemObject.Parent = self
+    ItemObject.IsComeBackEvent = true
+    ItemObject.RewardPreview = EventOneTimeReward
+    self.List_Reward:AddItem(ItemObject)
   end
   self.List_Reward:NavigateToIndex(0)
 end

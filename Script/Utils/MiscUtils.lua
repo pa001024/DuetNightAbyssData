@@ -692,7 +692,7 @@ function Utils:InitializeSettings()
   if IsPIE then
     UE4.UKismetSystemLibrary.ExecuteConsoleCommand(WorldContext, "Editor.OverrideDPIBasedEditorViewportScaling 1", nil)
   end
-  if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
+  if CommonUtils.GetRuntimePlatform(self) == "Mobile" then
     UE4.UKismetSystemLibrary.ExecuteConsoleCommand(WorldContext, "r.ReflectionCaptureGPUArrayCopy 0", nil)
   end
   UE4.UKismetSystemLibrary.ExecuteConsoleCommand(WorldContext, "Slate.EnableRetainedRenderingWithLocalTransform 0", nil)
@@ -848,6 +848,23 @@ function Utils.ByteArrayToString(ByteArray)
     Chars[i] = string.char(ByteArray:Get(i))
   end
   return table.concat(Chars)
+end
+
+function Utils.GetGameReviewPlatform()
+  local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
+  if "IOS" == PlatformName then
+    return "IOS"
+  end
+  local ImgChannelId = HeroUSDKSubsystem():GetMirrorChannelId()
+  local ImgChannelInfo = DataMgr.ImgChannelInfo[ImgChannelId]
+  if ImgChannelInfo and ImgChannelInfo.Provider == "TapTap" then
+    return "TapTap"
+  end
+  local ChannelId = HeroUSDKSubsystem():GetChannelId()
+  if 160 == ChannelId then
+    return "Google"
+  end
+  return ""
 end
 
 return Utils

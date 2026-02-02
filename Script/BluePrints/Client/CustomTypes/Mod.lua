@@ -380,6 +380,17 @@ function Mod:IsValid()
   return self.Count > 0
 end
 
+function Mod:GetConvert()
+  local ModConvert = DataMgr.Mod[self.ModId].ModConvert
+  if ModConvert then
+    if ModConvert[1] then
+      return 1, ModConvert[1]
+    elseif ModConvert[2] then
+      return 2, ModConvert[2]
+    end
+  end
+end
+
 FormatProperties(Mod)
 local ModDict = Class("ModDict", CustomTypes.CustomDict)
 ModDict.KeyType = BaseTypes.ObjId

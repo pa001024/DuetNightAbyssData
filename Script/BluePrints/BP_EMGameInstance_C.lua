@@ -1,6 +1,7 @@
 require("UnLua")
 require("DataMgr")
 local EMCache = require("EMCache.EMCache")
+local EMLuaConst = require("EMLuaConst")
 local TimeUtils = require("Utils.TimeUtils")
 local ReddotManager = require("BluePrints.UI.Reddot.ReddotManager")
 local CdnTool = require("BluePrints.UI.GameLogin.CdnTool")
@@ -34,7 +35,6 @@ function BP_EMGameInstance_C:OnLoginSuccess()
   if Const.OpenVerifyArray then
     self:InitVerifyArray()
   end
-  self.KeyListRecord = {}
 end
 
 function BP_EMGameInstance_C:GetInt(TableName, VarName)
@@ -282,8 +282,9 @@ function BP_EMGameInstance_C:OnPlayerControllerGameEnd(IsWin, BattleInfo, SceneP
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   local SceneManager = self:GetSceneManager()
   if nil ~= SceneManager then
-    SceneManager:OnDungeonEnd_ToSceneManager(IsWin, BattleInfo, GameState.GameModeType)
+    SceneManager:OnDungeonEnd_ToSceneManager(IsWin, BattleInfo, GameState.GameModeType, GameState.DungeonId)
   end
+  self.IsDSOnDungeonFinish = nil
   if GameState.GameModeType == "Training" or GameState.GameModeType == "Trial" then
     DebugPrint("DungeonSettlement: 训练场或角色试玩玩法，直接退出副本")
     local Avatar = GWorld:GetAvatar()
@@ -354,7 +355,13 @@ function BP_EMGameInstance_C:OnPlayerControllerGameEnd_Internal(IsWin, BattleInf
 end
 
 function BP_EMGameInstance_C:RecordCombatData()
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   self.CombatData = {}
+  self.CombatData.AutoChessBattleInfo = GameMode and GameMode:TriggerDungeonComponentFun("GetAutoChessBattleInfo")
+  local EMGameState = UE4.UGameplayStatics.GetGameState(self)
+  if EMGameState then
+    self.CombatData.MVPFactor = EMGameState.MVPFactor
+  end
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   if Player then
     self.CombatData.TakeDamagePercentage = Player.PlayerState.TakeDamagePercentage
@@ -451,8 +458,11 @@ function BP_EMGameInstance_C:RecordCombatData()
         self.CombatData.MaxScore = Avatar.PaotaiGame[EventId][DungeonId].MaxScore
       end
     end
-    if GameMode and GameState and GameState.GameModeType == "SoloRaid" then
-      self.CombatData.MaxScore = GameMode:TriggerDungeonComponentFun("GetHistoryMaxScore") or 0
+    if GameState and GameState.GameModeType == "SoloRaid" then
+      self.CombatData.MaxScore = GameState.SoloRaidHistoryMaxScore or 0
+    end
+    if GameState and GameState.GameModeType == "MonsterRush" then
+      self.CombatData.FinishTime = GameMode:TriggerDungeonComponentFun("GetFinishTime") or 0
     end
     local Avatar = GWorld:GetAvatar()
     self.CombatData.IsInOnlineDungeon = Avatar:IsInMultiDungeon()
@@ -469,6 +479,152 @@ function BP_EMGameInstance_C:RecordCombatData()
     self:FillTempTeamInfo(GameState, Player)
   end
   PrintTable(self.CombatData, 5)
+end
+
+function BP_EMGameInstance_C:CalculateMVP()
+  local ScenePlayers = self.ScenePlayers
+  local PhantomsData = self.CombatData.PhantomAttrInfos
+  local TeammateData = self.CombatData.TeammateDamageInfos or {}
+  local CurTeammateNum = 0
+  local RealPlayerNum = 0
+  for _, Player in ipairs(ScenePlayers) do
+    if Player.IsMainPlayer or not Player.IsPhantom then
+      RealPlayerNum = RealPlayerNum + 1
+    end
+  end
+  local IsInOnlineDungeon = false
+  if RealPlayerNum > 1 then
+    IsInOnlineDungeon = true
+  else
+    IsInOnlineDungeon = false
+  end
+  self.MVPInfo = {}
+  local ScenePlayers = self.ScenePlayers
+  local MVPFactor = 0
+  if self.CombatData and self.CombatData.MVPFactor then
+    MVPFactor = self.CombatData.MVPFactor
+  end
+  DebugPrint("CalculateMVP MVPFactor:", MVPFactor)
+  local TeamTotalDamage = 0
+  local DamageTable = {}
+  if not IsInOnlineDungeon then
+    for _, Player in ipairs(ScenePlayers) do
+      local Damage = 0
+      if Player.IsMainPlayer then
+        Damage = self.CombatData.TotalDamage
+      elseif PhantomsData and #PhantomsData > 0 then
+        local PhantomData
+        for _, value in pairs(PhantomsData) do
+          local PlayerRoleId
+          if Player.RoleId then
+            PlayerRoleId = Player.RoleId
+          elseif Player.RoleInfo and Player.RoleInfo.RoleId then
+            PlayerRoleId = Player.RoleInfo.RoleId
+          end
+          if PlayerRoleId == value.PhantomRoleId then
+            PhantomData = value
+          end
+        end
+        if PhantomData then
+          Damage = PhantomData.FinalDamage
+        end
+      end
+      TeamTotalDamage = TeamTotalDamage + Damage
+      table.insert(DamageTable, Damage)
+    end
+  else
+    for _, Player in ipairs(ScenePlayers) do
+      local Damage = 0
+      if Player.IsMainPlayer then
+        Damage = self.CombatData.TotalDamage
+      elseif not Player.IsPhantom then
+        CurTeammateNum = CurTeammateNum + 1
+        local Teammate = TeammateData[CurTeammateNum]
+        if Teammate then
+          Damage = Teammate.FinalDamage
+        end
+      else
+        local PhantomData
+        DebugPrint("CalculateMVP Player.IsMainPlayerPhantom", Player.IsMainPlayerPhantom)
+        if Player.IsMainPlayerPhantom then
+          for _, value in pairs(PhantomsData) do
+            local PlayerRoleId
+            if Player.RoleId then
+              PlayerRoleId = Player.RoleId
+            elseif Player.RoleInfo and Player.RoleInfo.RoleId then
+              PlayerRoleId = Player.RoleInfo.RoleId
+            end
+            if PlayerRoleId == value.PhantomRoleId then
+              PhantomData = value
+            end
+          end
+          if PhantomData then
+            Damage = PhantomData.FinalDamage
+          else
+            DebugPrint("Error CalculateMVP PhantomData is nil", Player.RoleId)
+          end
+        else
+          local TeammatePhantomData = TeammateData[1] and TeammateData[1].PhantomAttrInfo
+          if TeammatePhantomData then
+            Damage = TeammatePhantomData.FinalDamage
+          else
+            DebugPrint("Error CalculateMVP TeammatePhantomData is nil", Player.RoleId)
+          end
+        end
+      end
+      TeamTotalDamage = TeamTotalDamage + Damage
+      table.insert(DamageTable, Damage)
+    end
+  end
+  for i, Damage in ipairs(DamageTable) do
+    local DamageRatio = 0
+    if TeamTotalDamage > 0 then
+      DamageRatio = Damage / TeamTotalDamage
+    end
+    local Player = ScenePlayers[i]
+    local CurScore = 0
+    local PlayerRoleId
+    if Player.RoleId then
+      PlayerRoleId = Player.RoleId
+    elseif Player.RoleInfo and Player.RoleInfo.RoleId then
+      PlayerRoleId = Player.RoleInfo.RoleId
+    end
+    local BattleCharInfo = DataMgr.BattleChar[PlayerRoleId]
+    if BattleCharInfo then
+      local BaseMVPScore = BattleCharInfo.BaseMVPScore or 0
+      CurScore = DamageRatio * (BaseMVPScore + MVPFactor)
+    end
+    local IsCurrentMVP = false
+    if self.MVPInfo.MVPScore == nil or CurScore > self.MVPInfo.MVPScore then
+      IsCurrentMVP = true
+    elseif CurScore == self.MVPInfo.MVPScore then
+      if Player.IsPhantom and self.MVPInfo.IsPhantom or not Player.IsPhantom and not self.MVPInfo.IsPhantom then
+        if PlayerRoleId < self.MVPInfo.RoleId then
+          IsCurrentMVP = true
+        end
+      elseif not Player.IsPhantom then
+        IsCurrentMVP = true
+      end
+    end
+    if IsCurrentMVP then
+      self.MVPInfo.MVPScore = CurScore
+      self.MVPInfo.MVPDamage = Damage
+      self.MVPInfo.MVPIndex = i
+      self.MVPInfo.MVPName = Player.ScenePlayerName
+      self.MVPInfo.IsPhantom = Player.IsPhantom
+      self.MVPInfo.RoleId = PlayerRoleId
+      local MVPFolder, MVPMontage
+      if Player.MVPId then
+        local Data = DataMgr.CharAccessory[Player.MVPId]
+        MVPFolder = Data and Data.MVPKey
+        MVPMontage = Data and Data.Montage
+      end
+      self.MVPInfo.MVPFolder = MVPFolder
+      self.MVPInfo.MVPMontage = MVPMontage
+    end
+    DebugPrint("CalculateMVP PlayerIndex: ", i, "PlayerName: ", Player.ScenePlayerName, "PlayerDamage: ", Damage, "PlayerScore: ", CurScore)
+  end
+  DebugPrint("CalculateMVP MVPScore: ", self.MVPInfo.MVPScore, "MVPIndex", self.MVPInfo.MVPIndex, "MVPName", self.MVPInfo.MVPName)
 end
 
 function BP_EMGameInstance_C:FillTempTeamInfo(GameState, Player)
@@ -521,6 +677,13 @@ function BP_EMGameInstance_C:OnSettlementPlayerCharacterBeginPlay()
   DebugPrint("DungeonSettlement: OnSettlementPlayerCharacterBeginPlay")
   local BlackUI = self:CreateDungeonBlackScreen(false)
   self.GameEndInfo = nil
+  self.SettlemetnLevelLoader = self:GetSceneManager():GetLevelLoader()
+  if not self.SettlemetnLevelLoader then
+    local EMLevelLoaderClass = LoadClass("/Game/BluePrints/Common/Level/BP_SettlementLevelLoader.BP_SettlementLevelLoader")
+    if EMLevelLoaderClass then
+      self.SettlemetnLevelLoader = self:GetWorld():SpawnActor(EMLevelLoaderClass, FTransform())
+    end
+  end
 end
 
 function BP_EMGameInstance_C:OnSettlementPhantomInitReady()
@@ -564,7 +727,7 @@ end
 function BP_EMGameInstance_C:TryDungeonSettlement()
   DebugPrint("DungeonSettlement: TryDungeonSettlement", self.bPlayerCharacterInitReady, self.LogicServerCallbackInfo)
   if self.bPlayerCharacterInitReady and self.LogicServerCallbackInfo then
-    if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile" then
+    if CommonUtils.GetRuntimePlatform(self) ~= "Mobile" then
       local PostProcessVolumeActor = UGameplayStatics.GetActorOfClass(self, APostProcessVolume:StaticClass())
       local RVTVolumeActor = UGameplayStatics.GetActorOfClass(self, ARuntimeVirtualTextureVolume:StaticClass())
       if PostProcessVolumeActor and not RVTVolumeActor then
@@ -595,15 +758,49 @@ function BP_EMGameInstance_C:TryDungeonSettlement()
     local CurDungeonType = WorldTravelSubsystem():GetCurrentDungeonType()
     local LogicServerInfo = CommonUtils.DeepCopy(self.LogicServerCallbackInfo)
     self.LogicServerCallbackInfo = nil
+    local IsWin = table.unpack(LogicServerInfo)
+    local DungeonId = self:GetCurrentDungeonId()
+    local DungeonData = DataMgr.Dungeon[DungeonId]
+    local ForcePlayWinMontage = IsWin
+    if DungeonData and DungeonData.ForcePlayWinMontage then
+      ForcePlayWinMontage = true
+    end
+    local DoMvp = IsWin and (not Avatar or not Avatar:IsInRougeLike()) and (not CurDungeonType or CurDungeonType ~= CommonConst.DungeonType.Abyss and CurDungeonType ~= CommonConst.DungeonType.Party) and (not DataMgr.Dungeon[CurrentDungeonId] or not DataMgr.Dungeon[CurrentDungeonId].IsGameEventDungeon)
+    self:CalculateMVP()
+    if DoMvp and nil == self.MVPInfo.MVPFolder then
+      DoMvp = false
+    end
     local UIManager = GWorld.GameInstance:GetGameUIManager()
     
-    local function OnBlackOutFinished()
-      self.IsInSettlementScene = nil
-      local GameState = UE4.UGameplayStatics.GetGameState(self)
-      if GameState then
-        GameState.IsInSettlementScene = true
-      end
-      if Avatar and Avatar:IsInRougeLike() then
+    local function OnMVPFinished()
+      local Params = {}
+      Params.BlackScreenHandle = "BlackScreenMVP"
+      if DoMvp then
+        UIManager:ShowCommonBlackScreen(Params)
+        if self.SettlemetnLevelLoader then
+          self.SettlemetnLevelLoader:UnloadPreviewLevel(self.PreviewLevelName)
+        end
+        if self.MVPInfo.MVPCharacter then
+          self.MVPInfo.MVPCharacter:StopMVPSequence()
+          self.MVPInfo.MVPCharacter:K2_SetActorLocation(self.MVPInfo.MVPCharacterOriginLoc, false, nil, true)
+          self.MVPInfo.MVPCharacter:K2_SetActorRotation(self.MVPInfo.MVPCharacterOriginRot, false, nil, true)
+        end
+        self:AddTimer(0.5, function()
+          UIManager:HideCommonBlackScreen("BlackScreenMVP")
+          self:PlayerDungeonSettlement(ForcePlayWinMontage)
+          if Avatar and Avatar:IsInRougeLike() then
+            UIManager:LoadUINew("RougeSettlement", LogicServerInfo)
+          elseif CurDungeonType and CurDungeonType == CommonConst.DungeonType.Abyss then
+            UIManager:LoadUINew("AbyssSettlement", LogicServerInfo)
+          elseif DataMgr.Dungeon[CurrentDungeonId] and DataMgr.Dungeon[CurrentDungeonId].IsGameEventDungeon then
+            self:LoadGameEventSettlementUI(CurrentDungeonId, CurDungeonType, LogicServerInfo)
+          elseif 80401 == CurrentDungeonId then
+            self:LoadGameEventSettlementUI(CurrentDungeonId, CurDungeonType, LogicServerInfo)
+          else
+            UIManager:LoadUINew("DungeonSettlement", LogicServerInfo, self.DungeonIdCache, self.CombatData)
+          end
+        end)
+      elseif Avatar and Avatar:IsInRougeLike() then
         UIManager:LoadUINew("RougeSettlement", LogicServerInfo)
       elseif CurDungeonType and CurDungeonType == CommonConst.DungeonType.Abyss then
         UIManager:LoadUINew("AbyssSettlement", LogicServerInfo)
@@ -616,12 +813,27 @@ function BP_EMGameInstance_C:TryDungeonSettlement()
       end
     end
     
+    local function OnBlackOutFinished()
+      self.IsInSettlementScene = nil
+      local GameState = UE4.UGameplayStatics.GetGameState(self)
+      if GameState then
+        GameState.IsInSettlementScene = true
+      end
+      if not DoMvp then
+        OnMVPFinished()
+      else
+        UIManager:LoadUINew("SettlementMVP", OnMVPFinished, self.MVPInfo.MVPDamage, self.MVPInfo.MVPName, self:GetPlayerMVPDataByIndex(self.MVPInfo.MVPIndex))
+      end
+    end
+    
     local bSkipOutAnim = false
     if DataMgr.Dungeon[CurrentDungeonId] and DataMgr.Dungeon[CurrentDungeonId].IsGameEventDungeon then
       bSkipOutAnim = true
     end
     local BlackUI = UIManager:GetUI("DungeonBlackScreen")
-    BlackUI:FadeOut(OnBlackOutFinished, bSkipOutAnim)
+    if not DoMvp then
+      BlackUI:FadeOut(OnBlackOutFinished, bSkipOutAnim)
+    end
     if Avatar and Avatar:IsInRougeLike() then
       return
     end
@@ -635,18 +847,39 @@ function BP_EMGameInstance_C:TryDungeonSettlement()
       self.UseExitLevel = false
     end
     PlayerCharacter:SetCanInteractiveTrigger(false)
-    local IsWin = table.unpack(LogicServerInfo)
     if IsWin then
       local GameState = UE4.UGameplayStatics.GetGameState(self)
       if GameState then
         GameState:OnWCDungeonSettlement()
       end
     end
-    self:PlayerDungeonSettlement(IsWin)
+    self:PrePlayerDungeonSettlement(ForcePlayWinMontage)
+    if not DoMvp then
+      self:PlayerDungeonSettlement(ForcePlayWinMontage)
+    else
+      local PreviewSceneType = CommonConst.EPreviewSceneType.PreviewMVP
+      local Path = CommonConst.PreviewScenePaths[PreviewSceneType]
+      self.PreviewLevelName = "PreviewLevel" .. PreviewSceneType
+      local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+      self.SettlemetnLevelLoader:LoadPreviewLevel(self.PreviewLevelName, Path, function()
+        BlackUI:FadeOut(OnBlackOutFinished, bSkipOutAnim)
+        if self.MVPInfo.MVPCharacter then
+          self.MVPInfo.MVPCharacterOriginLoc = self.MVPInfo.MVPCharacter:K2_GetActorLocation()
+          self.MVPInfo.MVPCharacterOriginRot = self.MVPInfo.MVPCharacter:K2_GetActorRotation()
+          self.MVPInfo.MVPCharacter:K2_SetActorLocation(FVector(200000, 200000, 200000), false, nil, true)
+          self.MVPInfo.MVPCharacter:K2_SetActorRotation(FRotator(0, 0, 0), false, nil, true)
+          self.MVPInfo.MVPCharacter:PlayDungeonSettlementMVPMontage(self.MVPInfo.MVPMontage)
+          self.MVPInfo.MVPCharacter:PlayDungeonSettlementMVPSequence(self.MVPInfo.MVPFolder)
+        end
+      end, FVector(200000, 200000, 200000), FRotator(0, 0, 0))
+    end
   end
 end
 
 function BP_EMGameInstance_C:IsInTempScene()
+  if self.IsDSOnDungeonFinish then
+    return true
+  end
   if self.IsInSettlementScene then
     return true
   end
@@ -657,34 +890,35 @@ function BP_EMGameInstance_C:IsInTempScene()
   return false
 end
 
-function BP_EMGameInstance_C:PlayerDungeonSettlement(IsWin)
+function BP_EMGameInstance_C:PrePlayerDungeonSettlement(PlayWinMontage)
+  self.DungeonSettlementCharacter = {}
+  self.DungeonSettlementData = nil
   local EMGameState = UE4.UGameplayStatics.GetGameState(self)
   if EMGameState then
     EMGameState.SettlementCharacters:Clear()
   end
   local IsInDungeon = EMGameState and EMGameState:IsInDungeon()
-  if self.ScenePlayers ~= nil then
-    local SettlementData
+  if nil ~= self.ScenePlayers then
     local Avatar = GWorld:GetAvatar()
     if Avatar then
       if Avatar:IsInHardBoss() and not IsInDungeon then
         local HardBossId = Avatar.HardBossInfo.HardBossId
-        DebugPrint("BP_EMGameInstance_C:PlayerDungeonSettlement HardBossId:", HardBossId)
-        SettlementData = DataMgr.HardBossMain[HardBossId]
-        if nil == SettlementData then
-          EMGameState:ShowDungeonError("PlayerDungeonSettlement 梦魇SettlementData为空，请检查配表数据 HardBossId: " .. HardBossId, Const.DungeonErrorType.Settlement, Const.DungeonErrorTitle.Config)
+        DebugPrint("BP_EMGameInstance_C:PrePlayerDungeonSettlement HardBossId:", HardBossId)
+        self.DungeonSettlementData = DataMgr.HardBossMain[HardBossId]
+        if self.DungeonSettlementData == nil then
+          EMGameState:ShowDungeonError("PrePlayerDungeonSettlement 梦魇SettlementData为空，请检查配表数据 HardBossId: " .. HardBossId, Const.DungeonErrorType.Settlement, Const.DungeonErrorTitle.Config)
         end
       else
         local DungeonId = self:GetCurrentDungeonId()
-        DebugPrint("BP_EMGameInstance_C:PlayerDungeonSettlement DungeonId:", DungeonId)
-        SettlementData = DataMgr.Dungeon[DungeonId]
-        if nil == SettlementData then
-          EMGameState:ShowDungeonError("PlayerDungeonSettlement 副本SettlementData为空，请检查配表数据 DungeonId: " .. DungeonId, Const.DungeonErrorType.Settlement, Const.DungeonErrorTitle.Config)
+        DebugPrint("BP_EMGameInstance_C:PrePlayerDungeonSettlement DungeonId:", DungeonId)
+        self.DungeonSettlementData = DataMgr.Dungeon[DungeonId]
+        if self.DungeonSettlementData == nil then
+          EMGameState:ShowDungeonError("PrePlayerDungeonSettlement 副本SettlementData为空，请检查配表数据 DungeonId: " .. DungeonId, Const.DungeonErrorType.Settlement, Const.DungeonErrorTitle.Config)
         end
       end
     end
-    if nil == SettlementData then
-      DebugPrint("error: BP_EMGameInstance_C:PlayerDungeonSettlement SettlementData is nil!")
+    if self.DungeonSettlementData == nil then
+      DebugPrint("error: BP_EMGameInstance_C:PrePlayerDungeonSettlement SettlementData is nil!")
     end
     local OriginLoc, OriginRot = self:CalculateSettlementOriginLoc(self.IsMoveToTempScene)
     local OriginTransform = FTransform(OriginRot:ToQuat(), OriginLoc)
@@ -694,8 +928,12 @@ function BP_EMGameInstance_C:PlayerDungeonSettlement(IsWin)
         MainPlayer:InitCharacterInfo(self.ScenePlayers[i])
         MainPlayer:ResetOnSetEndPoint()
         MainPlayer:SetMainPlayerDungeonSettlementTransform(self.IsMoveToTempScene, OriginLoc, OriginRot)
-        if SettlementData then
-          MainPlayer:OnDungeonSettlement(IsWin, i, SettlementData)
+        MainPlayer:OnPreDungeonSettlement()
+        self.DungeonSettlementCharacter[i] = MainPlayer
+        if i ~= self.MVPInfo.MVPIndex then
+          MainPlayer:SetActorHideTag("SettlementMVP", true, false, true)
+        else
+          self.MVPInfo.MVPCharacter = MainPlayer
         end
         local Teammates = MainPlayer:GetAllTeammates()
         for _, Target in pairs(Teammates) do
@@ -707,16 +945,19 @@ function BP_EMGameInstance_C:PlayerDungeonSettlement(IsWin)
           TeamController:SendTeamLeave()
           TeamController:GetModel():SetTeam(nil)
         end
-      elseif not IsWin or SettlementData and SettlementData.NotShowTeammate then
+      elseif not PlayWinMontage or self.DungeonSettlementData and self.DungeonSettlementData.NotShowTeammate then
       else
         local CurrentCharacter = self:GetWorld():SpawnActor(LoadClass("/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C"), OriginTransform, UE4.ESpawnActorCollisionHandlingMethod.AlwaysSpawn)
         CurrentCharacter:InitCharacterInfo(self.ScenePlayers[i])
         CurrentCharacter:ResetOnSetEndPoint()
         CurrentCharacter:SetOtherPlayerDungeonSettlementTransform()
-        if SettlementData then
-          CurrentCharacter:OnDungeonSettlementByIndex(i, self.ScenePlayers[i].CurrentWeaponType, self.ScenePlayers[i].CurrentWeaponMeleeOrRanged, SettlementData)
-        end
         CurrentCharacter:SetActorHideTag("InGame", false)
+        self.DungeonSettlementCharacter[i] = CurrentCharacter
+        if i ~= self.MVPInfo.MVPIndex then
+          CurrentCharacter:SetActorHideTag("SettlementMVP", true, false, true)
+        else
+          self.MVPInfo.MVPCharacter = CurrentCharacter
+        end
         if EMGameState then
           EMGameState.SettlementCharacters:Add(CurrentCharacter)
         end
@@ -727,10 +968,32 @@ function BP_EMGameInstance_C:PlayerDungeonSettlement(IsWin)
     if Avatar then
       if Avatar:IsInHardBoss() and not IsInDungeon then
         local HardBossId = Avatar.HardBossInfo.HardBossId
-        EMGameState:ShowDungeonError("PlayerDungeonSettlement ScenePlayers为空，无法正常做结算表现 HardBossId: " .. HardBossId, Const.DungeonErrorType.Settlement, Const.DungeonErrorTitle.DataNil)
+        EMGameState:ShowDungeonError("PrePlayerDungeonSettlement ScenePlayers为空，无法正常做结算表现 HardBossId: " .. HardBossId, Const.DungeonErrorType.Settlement, Const.DungeonErrorTitle.DataNil)
       else
         local DungeonId = self:GetCurrentDungeonId()
-        EMGameState:ShowDungeonError("PlayerDungeonSettlement ScenePlayers为空，无法正常做结算表现 DungeonId: " .. DungeonId, Const.DungeonErrorType.Settlement, Const.DungeonErrorTitle.DataNil)
+        EMGameState:ShowDungeonError("PrePlayerDungeonSettlement ScenePlayers为空，无法正常做结算表现 DungeonId: " .. DungeonId, Const.DungeonErrorType.Settlement, Const.DungeonErrorTitle.DataNil)
+      end
+    end
+  end
+end
+
+function BP_EMGameInstance_C:PlayerDungeonSettlement(PlayWinMontage)
+  if self.ScenePlayers ~= nil then
+    for i = 1, #self.ScenePlayers do
+      if self.ScenePlayers[i].IsMainPlayer then
+        local Character = self.DungeonSettlementCharacter[i]
+        if self.DungeonSettlementData and Character then
+          Character:ResetIdle()
+          Character:OnDungeonSettlement(PlayWinMontage, i, self.DungeonSettlementData)
+          Character:SetActorHideTag("SettlementMVP", false, false, true)
+        end
+      elseif PlayWinMontage then
+        local Character = self.DungeonSettlementCharacter[i]
+        if self.DungeonSettlementData and Character then
+          Character:ResetIdle()
+          Character:OnDungeonSettlementByIndex(i, self.ScenePlayers[i].CurrentWeaponType, self.ScenePlayers[i].CurrentWeaponMeleeOrRanged, self.DungeonSettlementData)
+          Character:SetActorHideTag("SettlementMVP", false, false, true)
+        end
       end
     end
   end
@@ -844,22 +1107,15 @@ function BP_EMGameInstance_C:LoadGameEventSettlementUI(CurrentDungeonId, CurDung
         isFinish = CurScore >= DungeonInfo.Level[3]
       }
     }
-    local ShouldShowReward = false
-    if IsWin and Avatar.Dungeons[CurrentDungeonId] and Avatar.Dungeons[CurrentDungeonId].IsPass and self.CombatData and self.CombatData.NotPass then
-      Params.RewardIds = {
-        DungeonInfo.PassReward
-      }
-      ShouldShowReward = true
+    if DungeonRewards and next(DungeonRewards) ~= nil then
+      Params.RewardsInfo = DungeonRewards
     end
     
     function Params.ContinueCallback()
       Avatar:EnterDungeon(CurrentDungeonId)
     end
     
-    local SettlementUI = ActivityUtils.OpenActivitySettlement(DungeonInfo.SettlementId, CurrentDungeonId, Params)
-    if SettlementUI and not ShouldShowReward then
-      SettlementUI.Settlement_RewardItem:SetVisibility(ESlateVisibility.Collapsed)
-    end
+    ActivityUtils.OpenActivitySettlement(DungeonInfo.SettlementId, CurrentDungeonId, Params)
   elseif CurDungeonType and "Paotai" == CurDungeonType then
     local CurScore = 0
     local MaxScore = 0
@@ -1045,6 +1301,94 @@ function BP_EMGameInstance_C:LoadGameEventSettlementUI(CurrentDungeonId, CurDung
     end
     
     ActivityUtils.OpenActivitySettlement(108001, CurrentDungeonId, Params)
+  elseif CurDungeonType and "MonsterRush" == CurDungeonType then
+    local WuyoushengEventLevelData = DataMgr.WuyoushengEventLevel[CurrentDungeonId]
+    local FinishTime = math.floor(self.CombatData.FinishTime or 0)
+    local Params = {
+      LevelScore = string.format("%d:%02d", math.floor(FinishTime / 60), FinishTime % 60),
+      IsWin = IsWin,
+      Text_Title = "FeinaEvent_DungeonFinish_Title",
+      ActivityId = WuyoushengEventLevelData.EventId,
+      DungeonId = CurrentDungeonId,
+      Text_TotalScore = "UI_Wuyousheng_FinishTime"
+    }
+    Params.ScoreInfo = {}
+    for i = 1, 3 do
+      local LevelGoalRequiredTime1 = WuyoushengEventLevelData.LevelGoalRequiredTime1[i]
+      local GoalText
+      local IsFinish = false
+      if -1 == LevelGoalRequiredTime1 then
+        GoalText = GText("Wuyousheng_Target_FinishLevel")
+        IsFinish = IsWin
+      else
+        GoalText = string.format(GText("Wuyousheng_Target_LevelLimitTime"), LevelGoalRequiredTime1)
+        IsFinish = IsWin and FinishTime <= LevelGoalRequiredTime1
+      end
+      table.insert(Params.ScoreInfo, {text = GoalText, isFinish = IsFinish})
+    end
+    if DungeonRewards and next(DungeonRewards) ~= nil then
+      Params.RewardsInfo = DungeonRewards
+    end
+    
+    function Params.ContinueCallback()
+      Avatar:EnterEventDungeon(nil, CurrentDungeonId, nil, WuyoushengEventLevelData.EventId)
+    end
+    
+    ActivityUtils.OpenActivitySettlement(WuyoushengEventLevelData.EventId, CurrentDungeonId, Params)
+  elseif CurDungeonType and "AutoChess" == CurDungeonType then
+    local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+    local MissionType = 1
+    local MissionId = 1001
+    local AutoChessMissionInfo = DataMgr.AutoChessMission
+    if not AutoChessMissionInfo then
+      return
+    end
+    for Index, Info in pairs(AutoChessMissionInfo) do
+      if Info.DungeonId == CurrentDungeonId then
+        MissionType = Info.MissionType
+        MissionId = Info.MissionId
+      end
+    end
+    local Params = {
+      ActivityId = 103016,
+      MissionId = MissionId,
+      IsWin = IsWin,
+      Text_GetReward = "UI_AutoChess_WinReward",
+      DungeonType = "AutoChess",
+      ContinueCallback = function()
+        Avatar:EnterEventDungeon(nil, CurrentDungeonId, nil, Avatar.AutoChess.EventId, {MissionId = MissionId})
+      end,
+      BattleInfo = self.CombatData.AutoChessBattleInfo,
+      RewardsInfo = DungeonRewards,
+      MissionType = MissionType,
+      BattleInfoTextName = "UI_BATTLE_DATA"
+    }
+    if 2 == MissionType then
+      Params.PreRankLevel = self.PreRankLevel or 1
+      Params.PreRankScore = self.PreRankScore or 0
+      Params.RankLevel = Avatar.AutoChess.RankLevel
+      Params.RankScore = Avatar.AutoChess.RankScore
+      Params.Point = ClientRes.Point
+    end
+    if self.bAutoChessDeploying then
+      local Avatar = GWorld:GetAvatar()
+      if not Avatar then
+        return
+      end
+      self.bAutoChessDeploying = nil
+      self.AutoChessMissionId = MissionId
+      self.IsWin = IsWin
+      local ExitDungeonData = self:GetExitDungeonData()
+      if ExitDungeonData then
+        ExitDungeonData.Type = "AutoChess"
+      else
+        ExitDungeonData = {Type = "AutoChess"}
+      end
+      GWorld.GameInstance:SetExitDungeonData(ExitDungeonData)
+      Avatar:ExitDungeonSettlement()
+    else
+      ActivityUtils.OpenActivitySettlement(103016, nil, Params)
+    end
   else
     UIManager:LoadUINew("DungeonSettlement", LogicServerInfo, self.DungeonIdCache, self.CombatData)
   end
@@ -1057,52 +1401,13 @@ function BP_EMGameInstance_C:CheckMaintenanceInfo(RequestHotNum, Callback)
 end
 
 function BP_EMGameInstance_C:JumpToHomepage(RequestHotNum)
-  local function CheckCbChannel(ChannelId, ImgChannelId, Data)
-    if not Data then
-      return false
-    end
-    if -1 == ChannelId and -1 == ImgChannelId then
-      return true
-    end
-    if Data.medium then
-      for _, Id in ipairs(Data.medium) do
-        if ChannelId == tonumber(Id) then
-          return true
-        end
-      end
-    end
-    if Data.channel_ids then
-      local ChannelInfo = DataMgr.ChannelInfo[ChannelId]
-      local Provider = ChannelInfo and ChannelInfo.Provider
-      if Provider then
-        for _, ChannelInfo in ipairs(Data.channel_ids) do
-          if Provider == ChannelInfo or Provider == ChannelInfo.code then
-            return true
-          end
-        end
-      end
-    end
-    if Data.img_channel_id then
-      local ImgChannelInfo = DataMgr.ImgChannelInfo[ImgChannelId]
-      local Provider = ImgChannelInfo and ImgChannelInfo.Provider
-      if Provider then
-        for _, ChannelInfo in ipairs(Data.img_channel_id) do
-          if Provider == ChannelInfo or Provider == ChannelInfo.code then
-            return true
-          end
-        end
-      end
-    end
-    return false
-  end
-  
   CdnTool:GetMaintenanceInterceptUrl(RequestHotNum, function(InterceptUrl)
     local JumpURL
     if InterceptUrl and InterceptUrl.mediumList then
       local ChannelId = Utils.HeroUSDKSubsystem():GetChannelId()
       local ImgChannelId = Utils.HeroUSDKSubsystem():GetMirrorChannelId()
       for _, Data in ipairs(InterceptUrl.mediumList) do
-        if CheckCbChannel(ChannelId, ImgChannelId, Data) then
+        if self:CheckMaintenancePakInfos(ChannelId, ImgChannelId, Data.pakInfos) then
           JumpURL = Data.content and Data.content[1] and Data.content[1].url
           local SystemLanguage = EMCache:Get("SystemLanguage")
           for _, InfoContent in ipairs(Data.content) do
@@ -1121,13 +1426,32 @@ function BP_EMGameInstance_C:JumpToHomepage(RequestHotNum)
   end)
 end
 
+function BP_EMGameInstance_C:CheckMaintenancePakInfos(ChannelId, ImgChannelId, PakInfos)
+  if not PakInfos then
+    return false
+  end
+  if -1 == ChannelId and -1 == ImgChannelId then
+    return true
+  end
+  for _, PakInfo in ipairs(PakInfos) do
+    local Code = type(PakInfo) == "table" and PakInfo.code or PakInfo
+    local EInfo = Code and DataMgr.ExamineInfo[Code]
+    if EInfo and EInfo.ChannelID == ChannelId and EInfo.MirrorChannelID == ImgChannelId then
+      return true
+    end
+  end
+  return false
+end
+
 function BP_EMGameInstance_C:GetMaintenanceCb(RequestHotNum, Maintenances, Callback)
   local IsSuccess = true
   local bHasContent = false
   if Maintenances then
+    local ChannelId = Utils.HeroUSDKSubsystem():GetChannelId()
+    local ImgChannelId = Utils.HeroUSDKSubsystem():GetMirrorChannelId()
     local Now = TimeUtils.NowTime()
     for _, Info in pairs(Maintenances) do
-      if Info.Content and #Info.Content > 0 and Now > Info.StartTimestamp and Now < Info.EndTimestamp then
+      if Info.Content and #Info.Content > 0 and Now > Info.StartTimestamp and Now < Info.EndTimestamp and self:CheckMaintenancePakInfos(ChannelId, ImgChannelId, Info.pakInfos) then
         local Content
         local SystemLanguage = EMCache:Get("SystemLanguage")
         for _, InfoContent in ipairs(Info.Content) do
@@ -1347,8 +1671,10 @@ function BP_EMGameInstance_C:TriggerAllNpcPauseAndHide(NewTag)
       PlayHideActorEffect(CustomNpc)
     end
     CustomNpc:SetCustomNpcHideTag("GlobalTimeDilation", true)
+    CustomNpc:SetCollisionDisableTag("GlobalTimeDilation", true)
     if "None" == NewTag then
       CustomNpc:SetCustomNpcHideTag("GlobalTimeDilation", false)
+      CustomNpc:SetCollisionDisableTag("GlobalTimeDilation", false)
     end
     local NpcName = CustomNpc:GetName()
     local IsHidden = CustomNpc.bHidden
@@ -1392,6 +1718,36 @@ function BP_EMGameInstance_C:UnBindGamepadEvent()
   self.CurInputDeviceName = nil
 end
 
+function BP_EMGameInstance_C:LoadGMHyperLink()
+  self.GMHyperLink = ""
+  local Path = "/PakJumpUrl/PakJumpUrl.json"
+  CdnTool:GetGMUrlLink(Path, function(UrlLinkTable)
+    DebugPrint("ReceiveInit GetGMUrlLink enter callback")
+    if UrlLinkTable then
+      DebugPrint("ReceiveInit GetGMUrlLink enter callback UrlLinkTable valid")
+      for _, Info in pairs(UrlLinkTable) do
+        DebugPrint("ReceiveInit GetGMUrlLink enter callback print ChannelID: ", Info.ChannelId)
+        DebugPrint("ReceiveInit GetGMUrlLink enter callback print MirrorChannelId: ", Info.ImgChannelId)
+        if Info.ChannelId and Info.ChannelId == HeroUSDKSubsystem(self):GetChannelId() then
+          DebugPrint("ReceiveInit GetGMUrlLink enter callback ChannelID matched: ", Info.ChannelId)
+          local MirrorChannelID = Info.ImgChannelId
+          MirrorChannelID = MirrorChannelID or 0
+          local SDKMirrorChannelID = HeroUSDKSubsystem(self):GetMirrorChannelId()
+          if SDKMirrorChannelID <= 0 then
+            SDKMirrorChannelID = 0
+          end
+          if MirrorChannelID == SDKMirrorChannelID then
+            DebugPrint("ReceiveInit GetGMUrlLink enter callback MirrorChannelID matched: ", MirrorChannelID)
+            self.GMHyperLink = Info.JumpUrl or ""
+            DebugPrint("ReceiveInit GetGMUrlLink enter callback Info.JumpUrl: ", Info.JumpUrl)
+            break
+          end
+        end
+      end
+    end
+  end)
+end
+
 function BP_EMGameInstance_C:ReceiveInit()
   GWorld.GameInstance = self
   if IsDedicatedServer(self) then
@@ -1432,9 +1788,9 @@ function BP_EMGameInstance_C:ReceiveInit()
     UEMGameInstance.SetFriendFXQuality(NowContentPerformance <= 1 and 0 or 1)
   end
   self.CacheShowRewardUIParams = {}
-  self.ScriptDetectionCheckRecordNum = 0
   EventManager:AddEvent(EventID.TalkHiddenGameUI, self, self.OnTalkHiddenGameUIChange)
   EventManager:AddEvent(EventID.ConditionComplete, self, self.OnConditionComplete)
+  self:LoadGMHyperLink()
 end
 
 function BP_EMGameInstance_C:OnApplicationWillTerminate()
@@ -1452,10 +1808,7 @@ function BP_EMGameInstance_C:ReceiveShutdown()
   ReddotManager._Close()
   EMCache:SaveAll(true)
   if not URuntimeCommonFunctionLibrary.IsPlayInEditor(self) then
-    local Platform = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
-    if "Windows" == Platform and ShundownCount > 3 then
-      UEMGameInstance.ForceQuitGame()
-    end
+    UEMGameInstance.ForceQuitGame()
   end
 end
 
@@ -1466,6 +1819,23 @@ function BP_EMGameInstance_C:InitGameSetting()
   self:InitGameInterfaceMode()
   self:InitGameMuteBackstage()
   self:InitHideBackWeapons()
+  self:InitVoiceGuide()
+end
+
+function BP_EMGameInstance_C:InitVoiceGuide()
+  local OptionConfig = DataMgr.Option.VoiceGuide
+  if not OptionConfig then
+    return
+  end
+  local Value = EMCache:Get("VoiceGuide")
+  if nil == Value then
+    if CommonUtils.GetRuntimePlatform(self) == "Mobile" and OptionConfig.DefaultValueM then
+      Value = OptionConfig.DefaultValueM == "True"
+    else
+      Value = "True" == OptionConfig.DefaultValue
+    end
+  end
+  AudioManager(self):SetTalkVoiceTurnOff(not Value)
 end
 
 function BP_EMGameInstance_C:InitGameSystemLanguage()
@@ -1480,7 +1850,8 @@ function BP_EMGameInstance_C:InitGameSystemLanguage()
         zh = "CN",
         en = "EN",
         ko = "KR",
-        ja = "JP"
+        ja = "JP",
+        fr = "FR"
       }
       local ChineseLanguageMapping = {
         cn = "CN",
@@ -1537,6 +1908,9 @@ function BP_EMGameInstance_C:SetCurrentLanguage()
     EN = "en",
     KR = "ko",
     JP = "ja",
+    FR = "fr",
+    DE = "de",
+    ES = "es",
     TC = "zh-Hant-tw"
   }
   local SystemLanguage = EMCache:Get("SystemLanguage")
@@ -1550,7 +1924,8 @@ function BP_EMGameInstance_C:SetUsdkLanguage()
     TC = "HeroLanguageZhHant",
     EN = "HeroLanguageEn",
     JP = "HeroLanguageJa",
-    KR = "HeroLanguageKo"
+    KR = "HeroLanguageKo",
+    FR = "HeroLanguageFrench"
   }
   local SystemLanguage = EMCache:Get("SystemLanguage")
   local UsdkLanguage = UsdkLanguageMapping[SystemLanguage]
@@ -1596,7 +1971,7 @@ function BP_EMGameInstance_C:InitGameInterfaceMode()
     local DefaultMode = EWindowMode.WindowedFullscreen
     if OptionInfo then
       DefaultMode = InterfaceModeList[tonumber(OptionInfo.DefaultValue)]
-      if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" and OptionInfo.DefaultValueM then
+      if CommonUtils.GetRuntimePlatform(self) == "Mobile" and OptionInfo.DefaultValueM then
         DefaultMode = InterfaceModeList[tonumber(OptionInfo.DefaultValueM)]
       end
     end
@@ -1726,6 +2101,409 @@ function BP_EMGameInstance_C:GetDeviceTypeByPlatformName()
   return CommonUtils:GetDeviceTypeByPlatformName()
 end
 
+function BP_EMGameInstance_C:GetPlayerMVPDataByIndex(PlayerIndex)
+  local DungeonId = self:GetCurrentDungeonId()
+  local DungeonInfo = DataMgr.Dungeon[DungeonId]
+  if DungeonInfo and DungeonInfo.DungeonType and DungeonInfo.DungeonType == "Party" then
+    for i = 1, 4 do
+      self["Data0" .. i]:SetVisibility(ESlateVisibility.Collapsed)
+    end
+    local ScenePlayers = self.ScenePlayers
+    if ScenePlayers and #ScenePlayers <= 1 then
+      return
+    end
+    for CurPlayerIndex, Player in ipairs(ScenePlayers) do
+      if self["TempleData0" .. CurPlayerIndex] then
+        self["TempleData0" .. CurPlayerIndex]:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+        self["TempleData0" .. CurPlayerIndex].Text_Index:SetText(CurPlayerIndex)
+        if Player.IsMainPlayer then
+          self["TempleData0" .. CurPlayerIndex]:PlayAnimation(self["TempleData0" .. CurPlayerIndex].Player)
+        else
+          self["TempleData0" .. CurPlayerIndex]:PlayAnimation(self["TempleData0" .. CurPlayerIndex].Other)
+        end
+        if self.CombatData.PartyPlayerCompleteTime[CurPlayerIndex] then
+          self["TempleData0" .. CurPlayerIndex]:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+          self["TempleData0" .. CurPlayerIndex].Text_Time:SetText(self:GetTimeStr(self.CombatData.PartyPlayerCompleteTime[CurPlayerIndex]))
+        else
+          self["TempleData0" .. CurPlayerIndex].SizeBox_77:SetVisibility(ESlateVisibility.Collapsed)
+          self["TempleData0" .. CurPlayerIndex].Text_Time:SetText(GText("UI_PARTY_PARKOUR_UNFINISH"))
+        end
+        if 1 == CurPlayerIndex then
+          local Slot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(self["TempleData0" .. CurPlayerIndex].Text_Index)
+          local Pos = Slot:GetPosition()
+          Slot:SetPosition(FVector2D(Pos.X, self["TempleData0" .. CurPlayerIndex].TextPosY_No1))
+          local Font = self["TempleData0" .. CurPlayerIndex].Text_Index.Font
+          Font.Size = self["TempleData0" .. CurPlayerIndex].TextSize_No1
+          self["TempleData0" .. CurPlayerIndex].Text_Index:SetFont(Font)
+        else
+          local Slot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(self["TempleData0" .. CurPlayerIndex].Text_Index)
+          local Pos = Slot:GetPosition()
+          Slot:SetPosition(FVector2D(Pos.X, self["TempleData0" .. CurPlayerIndex].TextPosY_Other))
+          local Font = self["TempleData0" .. CurPlayerIndex].Text_Index.Font
+          Font.Size = self["TempleData0" .. CurPlayerIndex].TextSize_Other
+          self["TempleData0" .. CurPlayerIndex].Text_Index:SetFont(Font)
+        end
+      end
+    end
+    return
+  end
+  if not self.LevelDataPriority then
+    local LevelEnterData = DataMgr.LevelEnterData
+    self.LevelDataPriority = {}
+    for key, value in pairs(LevelEnterData) do
+      local LevelData = {}
+      LevelData.Name = key
+      LevelData.Priority = value.Priority
+      table.insert(self.LevelDataPriority, LevelData)
+    end
+  end
+  table.sort(self.LevelDataPriority, function(a, b)
+    return a.Priority < b.Priority
+  end)
+  local Players = {
+    [1] = {},
+    [2] = {},
+    [3] = {},
+    [4] = {}
+  }
+  local AllPlayerBattleData = {}
+  for index, value in ipairs(self.LevelDataPriority) do
+    table.insert(AllPlayerBattleData, {
+      [value.Name] = {}
+    })
+  end
+  local BattleNameByIndex = {}
+  for index, value in ipairs(self.LevelDataPriority) do
+    BattleNameByIndex[index] = value.Name
+  end
+  local TeamTotalDamage = 0
+  local TeamTotalTakedDamage = 0
+  local PlayerOrder = {
+    1,
+    2,
+    3,
+    4
+  }
+  local ScenePlayers = self.ScenePlayers
+  local PhantomsData = self.CombatData.PhantomAttrInfos
+  local TeammateData = self.CombatData.TeammateDamageInfos or {}
+  local TeammateNum = self.CombatData.TeammateNum or 0
+  local CurTeammateNum = 0
+  local DamageOffset = 0
+  TeamTotalDamage = self.CombatData.TotalDamage
+  TeamTotalTakedDamage = self.CombatData.TakedDamage
+  if PhantomsData then
+    for _, PhantomData in pairs(PhantomsData) do
+      if PhantomData then
+        TeamTotalDamage = TeamTotalDamage + PhantomData.FinalDamage
+        TeamTotalTakedDamage = TeamTotalTakedDamage + PhantomData.TakedDamage
+      end
+    end
+  end
+  if TeammateData then
+    for _, Teammate in pairs(TeammateData) do
+      if Teammate then
+        TeamTotalDamage = TeamTotalDamage + Teammate.FinalDamage
+        TeamTotalTakedDamage = TeamTotalTakedDamage + Teammate.TakedDamage
+        if Teammate.PhantomAttrInfo then
+          if Teammate.PhantomAttrInfo.FinalDamage > 0 then
+            TeamTotalDamage = TeamTotalDamage + Teammate.PhantomAttrInfo.FinalDamage
+          end
+          if Teammate.PhantomAttrInfo.TakedDamage > 0 then
+            TeamTotalTakedDamage = TeamTotalTakedDamage + Teammate.PhantomAttrInfo.TakedDamage
+          end
+        end
+      end
+    end
+  end
+  local RealPlayerNun = 0
+  for CurPlayerIndex, Player in ipairs(ScenePlayers) do
+    if Player.IsMainPlayer or not Player.IsPhantom then
+      RealPlayerNun = RealPlayerNun + 1
+    end
+  end
+  if RealPlayerNun > 1 then
+    self.CombatData.IsInOnlineDungeon = true
+  else
+    self.CombatData.IsInOnlineDungeon = false
+  end
+  if not self.CombatData.IsInOnlineDungeon then
+    for CurPlayerIndex, Player in ipairs(ScenePlayers) do
+      local PlayerIndex = PlayerOrder[CurPlayerIndex]
+      if not Player.IsNPCPhantom then
+        if Player.IsMainPlayer then
+          AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
+            PlayerIndex = PlayerIndex,
+            Value = 0 ~= TeamTotalDamage and math.floor(self.CombatData.TotalDamage / TeamTotalDamage * 100 + 0.5) or 0
+          }
+          AllPlayerBattleData[2].Kill[CurPlayerIndex] = {
+            PlayerIndex = PlayerIndex,
+            Value = self.CombatData.TotalKill
+          }
+          AllPlayerBattleData[3].Damaged[CurPlayerIndex] = {
+            PlayerIndex = PlayerIndex,
+            Value = 0 ~= TeamTotalTakedDamage and math.floor(self.CombatData.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
+          }
+          AllPlayerBattleData[4].Heal[CurPlayerIndex] = {
+            PlayerIndex = PlayerIndex,
+            Value = self.CombatData.GiveHealing
+          }
+          AllPlayerBattleData[5].DamageSingle[CurPlayerIndex] = {
+            PlayerIndex = PlayerIndex,
+            Value = self.CombatData.MaxDamage
+          }
+          AllPlayerBattleData[6].Destroy[CurPlayerIndex] = {
+            PlayerIndex = PlayerIndex,
+            Value = self.CombatData.BreakableItemCount
+          }
+          AllPlayerBattleData[7].HitCount[CurPlayerIndex] = {
+            PlayerIndex = PlayerIndex,
+            Value = self.CombatData.MaxComboCount
+          }
+        elseif PhantomsData and #PhantomsData > 0 then
+          local PhantomData = self:GetPhantomInfo(Player.RoleId, PhantomsData)
+          if PhantomData then
+            AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = 0 ~= TeamTotalDamage and math.floor(PhantomData.FinalDamage / TeamTotalDamage * 100 + 0.5) or 0
+            }
+            AllPlayerBattleData[2].Kill[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = PhantomData.TotalKillCount
+            }
+            AllPlayerBattleData[3].Damaged[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = 0 ~= TeamTotalTakedDamage and math.floor(PhantomData.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
+            }
+            AllPlayerBattleData[4].Heal[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = PhantomData.GiveHealing
+            }
+            AllPlayerBattleData[5].DamageSingle[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = PhantomData.MaxDamage
+            }
+          end
+        end
+      end
+    end
+  else
+    for CurPlayerIndex, Player in ipairs(ScenePlayers) do
+      local PlayerIndex = PlayerOrder[CurPlayerIndex]
+      if not Player.IsNPCPhantom then
+        if Player.IsMainPlayer then
+          AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
+            PlayerIndex = PlayerIndex,
+            Value = 0 ~= TeamTotalDamage and math.floor(self.CombatData.TotalDamage / TeamTotalDamage * 100 + 0.5) or 0
+          }
+          AllPlayerBattleData[2].Kill[CurPlayerIndex] = {
+            PlayerIndex = PlayerIndex,
+            Value = self.CombatData.TotalKill
+          }
+          AllPlayerBattleData[3].Damaged[CurPlayerIndex] = {
+            PlayerIndex = PlayerIndex,
+            Value = 0 ~= TeamTotalTakedDamage and math.floor(self.CombatData.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
+          }
+          AllPlayerBattleData[4].Heal[CurPlayerIndex] = {
+            PlayerIndex = PlayerIndex,
+            Value = self.CombatData.GiveHealing
+          }
+          AllPlayerBattleData[5].DamageSingle[CurPlayerIndex] = {
+            PlayerIndex = PlayerIndex,
+            Value = self.CombatData.MaxDamage
+          }
+          AllPlayerBattleData[6].Destroy[CurPlayerIndex] = {
+            PlayerIndex = PlayerIndex,
+            Value = self.CombatData.BreakableItemCount
+          }
+          AllPlayerBattleData[7].HitCount[CurPlayerIndex] = {
+            PlayerIndex = PlayerIndex,
+            Value = self.CombatData.MaxComboCount
+          }
+        elseif not Player.IsPhantom then
+          CurTeammateNum = CurTeammateNum + 1
+          local Teammate = TeammateData[CurTeammateNum]
+          if Teammate then
+            AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = 0 ~= TeamTotalDamage and math.floor(Teammate.FinalDamage / TeamTotalDamage * 100 + 0.5) or 0
+            }
+            AllPlayerBattleData[2].Kill[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = Teammate.TotalKillCount
+            }
+            AllPlayerBattleData[3].Damaged[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = 0 ~= TeamTotalTakedDamage and math.floor(Teammate.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
+            }
+            AllPlayerBattleData[4].Heal[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = Teammate.GiveHealing
+            }
+            AllPlayerBattleData[5].DamageSingle[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = Teammate.MaxDamage
+            }
+            AllPlayerBattleData[6].Destroy[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = Teammate.BreakableItemCount
+            }
+            AllPlayerBattleData[7].HitCount[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = Teammate.MaxComboCount
+            }
+          end
+        else
+          local Phantom = self:GetPhantomInfo(Player.RoleId, PhantomsData)
+          if Phantom then
+            AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = 0 ~= TeamTotalDamage and math.floor(Phantom.FinalDamage / TeamTotalDamage * 100 + 0.5) or 0
+            }
+            AllPlayerBattleData[2].Kill[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = Phantom.TotalKillCount
+            }
+            AllPlayerBattleData[3].Damaged[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = 0 ~= TeamTotalTakedDamage and math.floor(Phantom.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
+            }
+            AllPlayerBattleData[4].Heal[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = Phantom.GiveHealing
+            }
+            AllPlayerBattleData[5].DamageSingle[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = Phantom.MaxDamage
+            }
+          else
+            local TeammatePhantomData = TeammateData[1] and TeammateData[1].PhantomAttrInfo
+            if TeammatePhantomData then
+              AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
+                PlayerIndex = PlayerIndex,
+                Value = 0 ~= TeamTotalDamage and math.floor(TeammatePhantomData.FinalDamage / TeamTotalDamage * 100 + 0.5) or 0
+              }
+              AllPlayerBattleData[2].Kill[CurPlayerIndex] = {
+                PlayerIndex = PlayerIndex,
+                Value = TeammatePhantomData.TotalKillCount
+              }
+              AllPlayerBattleData[3].Damaged[CurPlayerIndex] = {
+                PlayerIndex = PlayerIndex,
+                Value = 0 ~= TeamTotalTakedDamage and math.floor(TeammatePhantomData.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
+              }
+              AllPlayerBattleData[4].Heal[CurPlayerIndex] = {
+                PlayerIndex = PlayerIndex,
+                Value = TeammatePhantomData.GiveHealing
+              }
+              AllPlayerBattleData[5].DamageSingle[CurPlayerIndex] = {
+                PlayerIndex = PlayerIndex,
+                Value = TeammatePhantomData.MaxDamage
+              }
+            end
+          end
+        end
+      end
+    end
+  end
+  for Index, Data in ipairs(AllPlayerBattleData) do
+    local key = BattleNameByIndex[Index]
+    local targetArray = Data[key]
+    if targetArray and #targetArray > 1 then
+      table.sort(targetArray, function(a, b)
+        if not a then
+          return false
+        end
+        if not b then
+          return true
+        end
+        return a.Value > b.Value
+      end)
+    end
+  end
+  for index, value in ipairs(AllPlayerBattleData[1].Damage) do
+    DamageOffset = DamageOffset + value.Value
+  end
+  if DamageOffset > 0 then
+    DamageOffset = 100 - DamageOffset
+    AllPlayerBattleData[1].Damage[1].Value = AllPlayerBattleData[1].Damage[1].Value + DamageOffset
+  end
+  local AlreadyRankedType = {
+    Damage = false,
+    Kill = false,
+    Damaged = false,
+    Heal = false,
+    DamageSingle = false,
+    Destroy = false,
+    HitCount = false
+  }
+  for i = 1, #ScenePlayers do
+    for Index, BattleData in ipairs(AllPlayerBattleData) do
+      local DataType = BattleNameByIndex[Index]
+      local PlayerData = BattleData[DataType][i]
+      if not AlreadyRankedType[DataType] and PlayerData and 0 ~= PlayerData.Value then
+        Players[PlayerData.PlayerIndex][#Players[PlayerData.PlayerIndex] + 1] = {
+          DataName = BattleNameByIndex[Index],
+          Value = PlayerData.Value
+        }
+        AlreadyRankedType[DataType] = true
+        DebugPrint("thy   PlayersCompensateTip", PlayerData.PlayerIndex, BattleNameByIndex[Index], PlayerData.Value)
+      end
+    end
+  end
+  for i = 1, #ScenePlayers do
+    if Players[PlayerOrder[i]] and 0 == #Players[PlayerOrder[i]] then
+      table.insert(Players[PlayerOrder[i]], {
+        DataName = "Damage",
+        Value = self:GetDamageData(PlayerOrder[i], AllPlayerBattleData[1].Damage)
+      })
+    end
+  end
+  local LevelEnterData = DataMgr.LevelEnterData
+  self.SwitchBattleDataTypeToText = {
+    Damage = LevelEnterData.Damage.HighLightName,
+    Kill = LevelEnterData.Kill.HighLightName,
+    Damaged = LevelEnterData.Damaged.HighLightName,
+    Heal = LevelEnterData.Heal.HighLightName,
+    DamageSingle = LevelEnterData.DamageSingle.HighLightName,
+    Destroy = LevelEnterData.Destroy.HighLightName,
+    HitCount = LevelEnterData.HitCount.HighLightName
+  }
+  if Players[PlayerIndex] then
+    local NumText = Players[PlayerIndex][1].Value
+    if NumText < 1000000000 then
+      NumText = Utils.FormatNumber(NumText, false)
+      if "Damage" == Players[PlayerIndex][1].DataName or "Damaged" == Players[PlayerIndex][1].DataName then
+        NumText = string.format("%s", NumText) .. "%"
+      end
+    else
+      NumText = Utils.FormatNumber(NumText, true)
+    end
+    return {
+      Textmap = self.SwitchBattleDataTypeToText[Players[PlayerIndex][1].DataName],
+      Value = NumText,
+      IsPercent = "Damage" == Players[PlayerIndex][1].DataName or "Damaged" == Players[PlayerIndex][1].DataName
+    }
+  end
+end
+
+function BP_EMGameInstance_C:GetPhantomInfo(PlayerRoleId, PhantomsData)
+  for _, value in pairs(PhantomsData) do
+    if PlayerRoleId == value.PhantomRoleId then
+      return value
+    end
+  end
+  return nil
+end
+
+function BP_EMGameInstance_C:GetDamageData(PlayerIndex, PlayerDamageData)
+  for Index, value in ipairs(PlayerDamageData) do
+    if PlayerIndex == value.PlayerIndex then
+      return value.Value
+    end
+  end
+  return 0
+end
+
 function BP_EMGameInstance_C:SimulateMovementDebugPlatform()
   if Const.SimulateMovementDebugPlatform == "Android" or Const.SimulateMovementDebugPlatform == "Windows" or Const.SimulateMovementDebugPlatform == "IOS" or Const.SimulateMovementDebugPlatform == "Mac" then
     return Const.SimulateMovementDebugPlatform
@@ -1834,110 +2612,8 @@ end
 
 function BP_EMGameInstance_C:CloseLoadingUI()
   UKismetSystemLibrary.ExecuteConsoleCommand(self, "r.Shadow.ForceCacheUpdate 1", nil)
+  UEMGameInstance.SaveDiskBinaryCache()
   self.Overridden.CloseLoadingUI(self)
-end
-
-function BP_EMGameInstance_C:SpawnOtherRole(ObjId, RoleInfo, MoveInfo)
-  local function LoadClassFinished(self, UnitBlueprint)
-    local Avatar = GWorld:GetAvatar()
-    
-    if Avatar and Avatar.OtherRoleInfo[ObjId].BornState == Const.ShouldDetory then
-      Avatar.OtherRoleInfo[ObjId] = nil
-      return
-    end
-    local Location = FVector(MoveInfo.Location.X, MoveInfo.Location.Y, MoveInfo.Location.Z)
-    local Rotation = FRotator(MoveInfo.Rotation.Pitch, MoveInfo.Rotation.Yaw, MoveInfo.Rotation.Roll):ToQuat()
-    local SpawnTransform = FTransform(Rotation, Location)
-    local CurrentCharacter = self:GetWorld():SpawnActor(UnitBlueprint, SpawnTransform, UE4.ESpawnActorCollisionHandlingMethod.AlwaysSpawn)
-    CurrentCharacter.FromOtherWorld = true
-    if CurrentCharacter and CurrentCharacter:GetMovementComponent() and CurrentCharacter:GetMovementComponent().EnableSmoothStep then
-      CurrentCharacter:GetMovementComponent().EnableSmoothStep = false
-    end
-    local Info = {}
-    local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-    Info.RoleId = RoleInfo.CharId
-    Info.SkinId = RoleInfo.SkinId
-    Info.FromOtherWorld = true
-    Info.AppearanceSuit = RoleInfo.AppearanceSuit
-    Info.RegionWeaponInfo = RoleInfo.RegionWeaponInfo
-    Info.ShowWeapon = RoleInfo.ShowWeapon
-    if self.RandomClientRegionPlayerRoleId then
-      local AllRoleId = {
-        1101,
-        1103,
-        1501,
-        1502,
-        1801,
-        2101,
-        2301,
-        3101,
-        3103,
-        3201,
-        3301,
-        4101,
-        4202,
-        4301,
-        5101,
-        5102,
-        5301,
-        5401
-      }
-      local RandomRoleId = AllRoleId[math.random(1, #AllRoleId)]
-      Info.RoleId = RandomRoleId
-      Info.SkinId = RandomRoleId
-      Info.AppearanceSuit.SkinId = RandomRoleId
-      RoleInfo.CharId = RandomRoleId
-      RoleInfo.SkinId = RandomRoleId
-      RoleInfo.AppearanceSuit.SkinId = RandomRoleId
-    end
-    
-    local function CharacterRead(Character)
-      print(_G.LogTag, "CharacterRead", Character:K2_GetActorLocation(), Character:K2_GetActorRotation())
-      local Avatar = GWorld:GetAvatar()
-      if Avatar then
-        if Avatar.OtherRoleInfo[ObjId].BornState == Const.ShouldDetory and Character then
-          Character:K2_DestroyActor()
-          Avatar.OtherRoleInfo[ObjId] = nil
-          return
-        end
-        Avatar.OtherRoleInfo[ObjId].BornState = Const.Bonred
-        Avatar.OtherRoleInfo[ObjId].CharEid = Character.Eid
-      end
-      Character:AddInteractiveComponent()
-      if Character.RegionInterComp then
-        Character.RegionInterComp:InitRegionInfo(Character.Eid, ObjId)
-      end
-      if Character.RegionInterAddFriendComp then
-        Character.RegionInterAddFriendComp:InitRegionInfo(Character.Eid, ObjId)
-      end
-      if Character.RegionInterInviteTeamComp then
-        Character.RegionInterInviteTeamComp:InitRegionInfo(Character.Eid, ObjId)
-      end
-      if Character.RegionInterPersonInfoComp then
-        Character.RegionInterPersonInfoComp:InitRegionInfo(Character.Eid, ObjId)
-      end
-      EventManager:FireEvent(EventID.OnlineAddOtherPlayer, CurrentCharacter.Eid, RoleInfo.Uid, Character, ObjId)
-    end
-    
-    Info.LoadFinishCallback = CharacterRead
-    CurrentCharacter:InitCharacterInfoForRegionPlayer(Info)
-    EventManager:FireEvent(EventID.AddRegionIndicatorInfo, CurrentCharacter.Eid, RoleInfo.Uid, CurrentCharacter:K2_GetActorLocation(), ObjId)
-    CurrentCharacter:RegisterOtherWorldPlayerCharacterToSubSystem()
-  end
-  
-  if not self.bRegionClientOnlyShowUI then
-    local Path = "/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C"
-    UE4.UResourceLibrary.LoadClassAsync(self, Path, {self, LoadClassFinished})
-  else
-    local Eid = self:AddPlayerHeadUI(FVector(MoveInfo.Location.X, MoveInfo.Location.Y, MoveInfo.Location.Z))
-    local Avatar = GWorld:GetAvatar()
-    if Eid > 0 and Avatar then
-      Avatar.OtherRoleInfo[ObjId].BornState = Const.Bonred
-      Avatar.OtherRoleInfo[ObjId].CharEid = Eid
-      EventManager:FireEvent(EventID.AddRegionIndicatorInfo, Eid, RoleInfo.Uid, FVector(MoveInfo.Location.X, MoveInfo.Location.Y, MoveInfo.Location.Z), ObjId)
-      EventManager:FireEvent(EventID.OnlineAddOtherPlayer, Eid, RoleInfo.Uid, nil, ObjId)
-    end
-  end
 end
 
 function BP_EMGameInstance_C:HeadUIReady(ObjIdStr, Eid, Location)
@@ -2227,6 +2903,26 @@ function BP_EMGameInstance_C:SetDynamicResolution(Tag, bEnable)
   else
     SettingUtils.ResetMobileResolution()
   end
+end
+
+function BP_EMGameInstance_C:CheckInAutoChessDungeon()
+  local CurrentDungeonId = self:GetCurrentDungeonId()
+  local DungeonInfo = DataMgr.Dungeon[CurrentDungeonId]
+  if DungeonInfo and DungeonInfo.DungeonType == CommonConst.DungeonType.AutoChess then
+    return true
+  end
+  return false
+end
+
+function BP_EMGameInstance_C:SetTicketId(TicketId)
+  self.TicketId = TicketId
+end
+
+function BP_EMGameInstance_C:GetTicketId()
+  if self.TicketId then
+    return self.TicketId
+  end
+  return -1
 end
 
 return BP_EMGameInstance_C

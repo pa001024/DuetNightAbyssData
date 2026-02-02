@@ -11,11 +11,14 @@ function PlayerSwitchWalkRunNode:Execute()
   if not self.ListenTarget then
     return
   end
+  local WalkType = UE4.EWalkType[self.Mode]
+  local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
+  local SwitchWalk = UE4.ESkillName.SwitchWalk
+  self.EnumSkillNameArray = TArray(0)
   local AnimInstance = self.ListenTarget.PlayerAnimInstance
   self.DefaultWalkState = AnimInstance.IsWalking
   self.DefaultWalkType = AnimInstance.WalkType
-  self.MoveRate = self.ListenTarget:GetMoveRate()
-  local WalkType = UE4.EWalkType[self.Mode]
+  self.SpeedRate = self.ListenTarget.SpeedRate
   if -1 ~= WalkType then
     self.ListenTarget:SetPlayerMaxMovingSpeed(self.Rate)
     AnimInstance.IsWalking = true
@@ -25,6 +28,10 @@ function PlayerSwitchWalkRunNode:Execute()
     else
       self.ListenTarget:SetEmoIdleEnabled(false, true)
     end
+    if PlayerController and not PlayerController:CheckSkillInActive(SwitchWalk) then
+      self.EnumSkillNameArray:Add(SwitchWalk)
+      PlayerController:InActiveSkills(self.EnumSkillNameArray, "Lock")
+    end
   elseif self.Mode == "ToRun" then
     self.ListenTarget:RecoverPlayerMovingSpeed()
     AnimInstance.IsWalking = false
@@ -33,12 +40,27 @@ function PlayerSwitchWalkRunNode:Execute()
     if AnimInstance.RootMotionMode ~= ERootMotionMode.RootMotionFromMontagesOnly then
       AnimInstance:SetRootMotionMode(ERootMotionMode.RootMotionFromMontagesOnly)
     end
+    if PlayerController and PlayerController:CheckSkillInActive(SwitchWalk) then
+      self.EnumSkillNameArray:Add(SwitchWalk)
+      PlayerController:ActiveSkills(self.EnumSkillNameArray, "UnLock")
+    end
   else
     error("PlayerSwitchWalkRunNode:Invalid mode")
   end
 end
 
 function PlayerSwitchWalkRunNode:OnQuestlineFail()
+  if self.EnumSkillNameArray and self.EnumSkillNameArray:Length() > 0 then
+    local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
+    if PlayerController then
+      local WalkType = UE4.EWalkType[self.Mode]
+      if -1 ~= WalkType then
+        PlayerController:ActiveSkills(self.EnumSkillNameArray, "UnLock")
+      elseif self.Mode == "ToRun" then
+        PlayerController:InActiveSkills(self.EnumSkillNameArray, "Lock")
+      end
+    end
+  end
   if not self.ListenTarget then
     return
   end
@@ -64,7 +86,7 @@ function PlayerSwitchWalkRunNode:OnQuestlineFail()
   else
     self.ListenTarget:SetEmoIdleEnabled(false, true)
   end
-  self.ListenTarget:SetPlayerMaxMovingSpeed(self.MoveRate)
+  self.ListenTarget:SetPlayerMaxMovingSpeed(self.SpeedRate)
 end
 
 return PlayerSwitchWalkRunNode

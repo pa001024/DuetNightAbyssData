@@ -2,6 +2,26 @@ local FTalkTriggerComponent = require("BluePrints.Story.Talk.Component.TalkTrigg
 local M = Class("BluePrints.Story.FlowGraph.FlowNode.TalkFlowNode.FlowNode_TalkNodeBase")
 local FlowLogType = UE.EStoryLogType.TalkFlow
 
+function M:K2_InitializeInstance()
+  self.Options = self.OptionData:ToTable()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local FlowExportBranchImpr = DataMgr.FlowExportBranchImpr
+  for _, OptionId in pairs(self.Options) do
+    local bSelected = false
+    if FlowExportBranchImpr[OptionId] then
+      for _, ImprOptionId in pairs(FlowExportBranchImpr[OptionId]) do
+        if Avatar:IsImpressionCheckFailure(OptionId) then
+          self.RestartTag = true
+          return
+        end
+      end
+    end
+  end
+end
+
 function M:GetConditionOptions()
   local Options = {}
   for _, OptionData in ipairs(self.Options) do
@@ -72,8 +92,7 @@ function M:IterForward()
 end
 
 function M:Start()
-  self.Options = self.OptionData:ToTable()
-  self.SelectOptions = {}
+  self.SelectOptions = self.SelectOptions or {}
   local DialogueFlowGraphComponent = self:TryGetFlowGraphComponent()
   if not DialogueFlowGraphComponent then
     local Message = string.format("当前Option节点，注册的Task不存在 DialogueFlowGraphComponent，请注册")
@@ -95,7 +114,6 @@ function M:Skip()
   for _, OptionId in ipairs(self:GetConditionOptions()) do
     if not self.SelectOptions[OptionId] then
       DialogueFlowGraphComponent:SelectOption(OptionId)
-      DialogueRecordComponent:OnOptionRecord(OptionId, self:GetRecordOptionData(OptionId))
       return
     end
   end
@@ -106,6 +124,14 @@ function M:Skip()
 end
 
 function M:CanSkip()
+  local FlowAsset = self:GetFlowAsset()
+  if FlowAsset and FlowAsset.bIsInRestartDialogueSkip then
+    if self.RestartTag then
+      return false
+    else
+      return true
+    end
+  end
   return not self.bForbidSkip
 end
 

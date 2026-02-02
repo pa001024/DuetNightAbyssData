@@ -11,7 +11,10 @@ function M:OnListItemObjectSet(Content)
   end
   if not Content or not Content.FrameId then
     self:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    self.WS_Item:SetActiveWidgetIndex(1)
     return
+  else
+    self.WS_Item:SetActiveWidgetIndex(0)
   end
   self.Content = Content
   Content.UI = self
@@ -26,6 +29,12 @@ function M:OnListItemObjectSet(Content)
   if Widget then
     Widget.Text_Title:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Title:AddChildToOverlay(Widget)
+    if Content.bOwned == false then
+      self.Btn_Area.NormalAnimName = "HaveNot"
+      self:PlayAnimation(self.HaveNot)
+    else
+      self.Btn_Area.NormalAnimName = "Normal"
+    end
   end
 end
 

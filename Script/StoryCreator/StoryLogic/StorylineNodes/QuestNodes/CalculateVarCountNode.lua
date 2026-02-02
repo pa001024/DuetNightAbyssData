@@ -35,7 +35,10 @@ function CalculateVarCountNode:CalculateVar(InKey, InOldValue, InNewValue)
   end
   self.CurVarValue = InNewValue
   local Avatar = GWorld:GetAvatar()
-  if Avatar then
+  if not Avatar then
+    return
+  end
+  if self.IsOpen then
     Avatar:DoRefreshTaskItemUIInfo("Modify", nil, {
       self.CurVarValue,
       self.VarValue,
@@ -43,6 +46,12 @@ function CalculateVarCountNode:CalculateVar(InKey, InOldValue, InNewValue)
       self.CurDoingQuestId,
       self
     })
+  else
+    local TaskInfo = {
+      TaskChainId = self.CurQuestChainId,
+      TaskId = self.CurDoingQuestId
+    }
+    Avatar:DoRefreshTaskItemUIInfo("Modify", TaskInfo, nil)
   end
   if self.CurVarValue == self.VarValue then
     self:FinishAction()
@@ -51,7 +60,10 @@ end
 
 function CalculateVarCountNode:OnChooseTrack()
   local Avatar = GWorld:GetAvatar()
-  if Avatar then
+  if not Avatar then
+    return
+  end
+  if self.IsOpen then
     Avatar:DoRefreshTaskItemUIInfo("Modify", nil, {
       self.CurVarValue,
       self.VarValue,
@@ -59,6 +71,12 @@ function CalculateVarCountNode:OnChooseTrack()
       self.CurDoingQuestId,
       self
     })
+  else
+    local TaskInfo = {
+      TaskChainId = self.CurQuestChainId,
+      TaskId = self.CurDoingQuestId
+    }
+    Avatar:DoRefreshTaskItemUIInfo("Modify", TaskInfo, nil)
   end
 end
 

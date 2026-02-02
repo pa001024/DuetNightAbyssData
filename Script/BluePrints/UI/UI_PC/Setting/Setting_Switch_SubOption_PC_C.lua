@@ -7,7 +7,8 @@ function M:InitSubOption(Parent, CacheName, CacheInfo, UpOption)
   rawset(self, "CacheName", CacheName)
   rawset(self, "CacheInfo", CacheInfo)
   rawset(self, "HasBeenForbidden", false)
-  rawset(self, "DefaultValue", UpOption and 2 == CacheInfo.SubOptionDefaultValue[UpOption:GetDefaultValue()] or false)
+  rawset(self, "UpOptionValue", UpOption:GetDefaultValue())
+  rawset(self, "DefaultValue", 2 == self:GetValue())
   rawset(self, "SubListOffset", 15)
   rawset(self, "NowValue", true)
   rawset(self, "OldValue", true)
@@ -23,16 +24,12 @@ function M:InitSubOption(Parent, CacheName, CacheInfo, UpOption)
   self.Text_Open:SetText(GText(self.CacheInfo.SwitchText[2]))
 end
 
-function M:GetOptionValueByUpOption()
-  return self.CacheInfo.SubOptionDefaultValue[self.UpOptionValue]
-end
-
 function M:IsCloseOption()
-  return 0 == self:GetOptionValueByUpOption()
+  return 0 == self:GetValue()
 end
 
 function M:RefreshSubOptionState()
-  if 0 == self:GetOptionValueByUpOption() then
+  if 0 == self:GetValue() then
     if not self.HasBeenForbidden then
       self:PlayAnimation(self.Forbidden)
       self.Button_Area:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -46,6 +43,29 @@ function M:RefreshSubOptionState()
     self.Bg_Set.Bg_Hover:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.Bg_Set.Bg_Outline:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.HasBeenForbidden = false
+  end
+end
+
+function M:GetValue()
+  local SubOptionDefaultValueTemp = self:GetSubOptionDefaultValue()
+  local Value = SubOptionDefaultValueTemp[SettingUtils.GetUpValueByValueType(self.UpOptionValue)]
+  return Value
+end
+
+function M:RestoreDefaultOptionValue()
+  local Value = self:GetValue()
+  self.NowValue = 2 == Value
+  self.OldValue = self.NowValue
+end
+
+function M:GetSubOptionDefaultValue()
+  if not self.CacheInfo.MobileSubOptionDefaultValue then
+    return self.CacheInfo.SubOptionDefaultValue
+  end
+  if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
+    return self.CacheInfo.MobileSubOptionDefaultValue
+  else
+    return self.CacheInfo.SubOptionDefaultValue
   end
 end
 

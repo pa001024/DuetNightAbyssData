@@ -1,4 +1,6 @@
 local bson = require("bson")
+local zlib = require("zlib")
+local bOpenCompress = false
 local SerializeUtils = {}
 
 local function IsObjId(str)
@@ -26,27 +28,59 @@ function SerializeUtils:ToStringEx(value)
   end
 end
 
+function SerializeUtils:IsArrayTable(t)
+  if not t or type(t) ~= "table" then
+    return false
+  end
+  local max_index = 0
+  local count = 0
+  for key, _ in pairs(t) do
+    if type(key) == "number" then
+      if key ~= math.floor(key) then
+        return false
+      end
+      if key <= 0 then
+        return false
+      end
+      if key > max_index then
+        max_index = key
+      end
+      count = count + 1
+    else
+      return false
+    end
+  end
+  if 0 == count then
+    return true
+  end
+  return max_index == count
+end
+
 function SerializeUtils:TableToStr(t)
   if nil == t then
     return ""
   end
   local retstr = "{"
-  local i = 1
-  for key, value in pairs(t) do
-    local signal = ","
-    if 1 == i then
-      signal = ""
+  if SerializeUtils:IsArrayTable(t) then
+    for i = 1, #t do
+      local signal = ","
+      if 1 == i then
+        signal = ""
+      end
+      retstr = retstr .. signal .. self:ToStringEx(t[i])
     end
-    if key == i then
-      retstr = retstr .. signal .. self:ToStringEx(value)
-    elseif type(key) == "number" or type(key) == "string" then
-      retstr = retstr .. signal .. "[" .. self:ToStringEx(key) .. "]=" .. self:ToStringEx(value)
-    elseif type(key) == "userdata" then
-      retstr = retstr .. signal .. "*s" .. self:TableToStr(getmetatable(key)) .. "*e" .. "=" .. self:ToStringEx(value)
-    else
-      retstr = retstr .. signal .. key .. ":" .. self:ToStringEx(value)
+  else
+    local signal = ""
+    for key, value in pairs(t) do
+      if type(key) == "number" or type(key) == "string" then
+        retstr = retstr .. signal .. "[" .. self:ToStringEx(key) .. "]=" .. self:ToStringEx(value)
+      elseif type(key) == "userdata" then
+        retstr = retstr .. signal .. "*s" .. self:TableToStr(getmetatable(key)) .. "*e" .. "=" .. self:ToStringEx(value)
+      else
+        retstr = retstr .. signal .. key .. ":" .. self:ToStringEx(value)
+      end
+      signal = ","
     end
-    i = i + 1
   end
   retstr = retstr .. "}"
   return retstr
@@ -57,12 +91,7 @@ function SerializeUtils:StrToTable(str)
   if nil == str or type(str) ~= "string" or "" == str then
     return {}
   end
-  local func, err = load("return " .. str)
-  if not func then
-    return {}
-  else
-    return func()
-  end
+  return load("return " .. str)()
 end
 
 local function DefaultSerializeUserdata(value)
@@ -110,12 +139,62 @@ function SerializeUtils:TransformTable(Table)
   return Table
 end
 
-function SerializeUtils:Serialize(Table)
-  return self:TableToStr(Table)
+function SerializeUtils:Serialize(Table, threshold)
+  threshold = threshold or 1024
+  local Serialized = self:TableToStr(Table)
+  if bOpenCompress and threshold < #Serialized then
+    return self:CompressString(Serialized)
+  else
+    return Serialized
+  end
 end
 
 function SerializeUtils:UnSerialize(TableStr)
+  if not TableStr or "" == TableStr then
+    return {}
+  end
+  TableStr = self:DecompressString(TableStr)
   return self:TransformTable(self:StrToTable(TableStr))
+end
+
+function SerializeUtils:CompressString(str)
+  if not str or "" == str then
+    return str
+  end
+  if #str < 100 then
+    return str
+  end
+  local ok, compressed = pcall(function()
+    local deflate = zlib.deflate()
+    return deflate(str, "finish")
+  end)
+  if not ok or not compressed then
+    print(_G.LogTag, "Compression failed: " .. tostring(compressed))
+    return str
+  end
+  if #compressed >= #str then
+    return str
+  end
+  local header = string.pack(">B", 90)
+  return header .. compressed
+end
+
+function SerializeUtils:DecompressString(Str)
+  if not Str or "" == Str then
+    return Str
+  end
+  if #Str <= 1 or 90 ~= Str:byte(1) then
+    return Str
+  end
+  local compressed_data = Str:sub(2)
+  local ok, decompressed = pcall(function()
+    local inflate = zlib.inflate()
+    return inflate(compressed_data, "finish")
+  end)
+  if not ok or not decompressed then
+    error("Decompression failed: " .. tostring(decompressed))
+  end
+  return decompressed
 end
 
 return SerializeUtils

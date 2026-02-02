@@ -96,12 +96,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17559627221173594",
-            startPort = "Out",
-            endQuest = "17559627221173595",
-            endPort = "In"
-          },
-          {
             startQuest = "175447819035411935170",
             startPort = "QuestStart",
             endQuest = "17559627221173594",
@@ -355,22 +349,12 @@ return {
             key = "17559627221173594",
             type = "CreatePhantomNode",
             name = "召唤女主魅影",
-            pos = {x = 1336.4107470675551, y = -892.7261028908669},
+            pos = {x = 1292.4107470675551, y = -918.7261028908669},
             propsData = {
               IsCreate = true,
               IsClearOtherPhantom = false,
               IsSync = true,
               StaticCreatorIdList = {1241103}
-            }
-          },
-          ["17559627221173595"] = {
-            key = "17559627221173595",
-            type = "SetVarNode",
-            name = "打开队友特效",
-            pos = {x = 1615.5892529324449, y = -976.9342240851851},
-            propsData = {
-              VarName = "TeammateEffects",
-              VarValue = 1
             }
           },
           ["17560153730094561"] = {
@@ -432,7 +416,7 @@ return {
             key = "17573118185194723120",
             type = "ShowGuideNode",
             name = "提示 - 二技能引导",
-            pos = {x = 1641.1667417350054, y = -1430.8273158045315},
+            pos = {x = 1581.1667417350054, y = -1404.8273158045315},
             propsData = {
               MessageId = 200009,
               SkillNameList = {"Skill2"},
@@ -457,7 +441,7 @@ return {
             key = "17573118185194723121",
             type = "ShowGuideNode",
             name = "提示 - 二技能引导",
-            pos = {x = 1646.0445276110117, y = -1282.7827258383304},
+            pos = {x = 1586.0445276110117, y = -1256.7827258383304},
             propsData = {
               MessageId = 200009,
               SkillNameList = {"Skill2"},
@@ -482,14 +466,14 @@ return {
             key = "17573118185194723122",
             type = "PlatformJudgmentNode",
             name = "PC/手机平台判断",
-            pos = {x = 1369.9434369334053, y = -1436.3010227609695},
+            pos = {x = 1309.9434369334053, y = -1410.3010227609695},
             propsData = {}
           },
           ["17573118185194723123"] = {
             key = "17573118185194723123",
             type = "HighlightButtonNode",
             name = "HighlightButton显示/隐藏信息",
-            pos = {x = 1622.3951590764336, y = -1544.1536724408102},
+            pos = {x = 1562.3951590764336, y = -1518.1536724408102},
             propsData = {ShowEnable = true, SkillType = "Skill2"}
           },
           ["17573134789504521"] = {
@@ -513,7 +497,7 @@ return {
             key = "1757432146005875",
             type = "HighlightButtonNode",
             name = "HighlightButton显示/隐藏信息",
-            pos = {x = 1925.6122232139064, y = -1445.3684729935471},
+            pos = {x = 1865.6122232139064, y = -1419.3684729935471},
             propsData = {ShowEnable = false, SkillType = "Skill2"}
           },
           ["175758273166542111142"] = {
@@ -616,8 +600,8 @@ return {
           ["175758268536242110184"] = {
             key = "175758268536242110184",
             name = "Input Commment...",
-            position = {x = 1308, y = -1058},
-            size = {width = 550, height = 334}
+            position = {x = 1260, y = -1058},
+            size = {width = 274, height = 320}
           },
           ["175758273540042111280"] = {
             key = "175758273540042111280",
@@ -628,7 +612,7 @@ return {
           ["175758275342542111870"] = {
             key = "175758275342542111870",
             name = "Input Commment...",
-            position = {x = 1312.356060606061, y = -1649.534090909091},
+            position = {x = 1252.356060606061, y = -1623.534090909091},
             size = {width = 902.7272727272725, height = 527.7272727272726}
           },
           ["175758278209742112872"] = {

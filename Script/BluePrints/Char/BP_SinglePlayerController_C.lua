@@ -355,11 +355,11 @@ function BP_SinglePlayerController_C:SetSkillButtonVisibility(SkillName, StateNa
     return
   end
   Widget = Widget.Char_Skill
-  if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
-    Widget:ChangeSkillButtonState(SkillName, StateName)
-  else
-    Widget:ChangeSkillButtonState(SkillName, StateName)
+  if not Widget then
+    print(_G.LogTag, "BattleMain上找不到Char_Skill这个控件")
+    return
   end
+  Widget:ChangeSkillButtonState(SkillName, StateName)
 end
 
 function BP_SinglePlayerController_C:K2_ClientWasKicked(Reason)
@@ -469,9 +469,11 @@ function BP_SinglePlayerController_C:NotifyClientToCloseLoading_Lua(bInActivePla
   Player:RemoveGravityModifier(UE4.EGravityModifierTag.LoadLevel)
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   if GameState then
-    DebugPrint("NotifyClientToCloseLoading 触发OnRep_DungeonEvent_Lua")
-    GameState.IsCanFreshDungeonEvent = true
-    GameState:OnRep_DungeonEvent_Lua()
+    DebugPrint("NotifyClientToCloseLoading 触发OnRep_DungeonEvent_Lua IsCanFreshDungeonEvent", GameState.IsCanFreshDungeonEvent)
+    if not GameState.IsCanFreshDungeonEvent then
+      GameState.IsCanFreshDungeonEvent = true
+      GameState:OnRep_DungeonEvent_Lua()
+    end
     GameState:OnRep_GuideEids()
     local LevelLoader = GameState:GetCurrentLevelLoader()
     if LevelLoader and LevelLoader.IsWorldLoader and IsClient(self) then
@@ -521,6 +523,7 @@ function BP_SinglePlayerController_C:NotifyClientGameEnd_Lua(IsWin, ScenePlayers
   local PlayerCharacter = self:GetMyPawn()
   PlayerCharacter:DisableInput(self)
   local MessageStr = ScenePlayers:GetBytes()
+  GWorld.GameInstance.IsDSOnDungeonFinish = true
   
   local function RealNotifyClientGameEnd_Lua()
     print(_G.LogTag, "DedicatedServer_OnDungeonFinish RealNotifyClientGameEnd_Lua  IsWin", IsWin, MessageStr)

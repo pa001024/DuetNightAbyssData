@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -60,7 +63,7 @@ return ReadOnly("QuestRoleInfo", {
   },
   [210] = {
     CharTemplateRuleId = 160101,
-    ExStroyInfo = "Player",
+    ExStroyInfo = "PlayerLight",
     MeleeWeaponRuleId = 10103001,
     PhantomId = 113,
     QuestRoleId = 210
@@ -76,6 +79,43 @@ return ReadOnly("QuestRoleInfo", {
     MeleeWeaponRuleId = 212,
     PhantomId = 212,
     QuestRoleId = 212
+  },
+  [213] = {
+    CharTemplateRuleId = 150301,
+    MeleeWeaponRuleId = 10202001,
+    PhantomId = 212,
+    QuestRoleId = 213
+  },
+  [214] = {
+    CharTemplateRuleId = 150401,
+    PhantomId = 214,
+    QuestRoleId = 214,
+    RangedWeaponRuleId = 20407001
+  },
+  [215] = {
+    CharTemplateRuleId = 150402,
+    PhantomId = 1504,
+    QuestRoleId = 215,
+    RangedWeaponRuleId = 20407002
+  },
+  [216] = {
+    CharTemplateRuleId = 160103,
+    ExStroyInfo = "PlayerLight",
+    PhantomId = 1601,
+    QuestRoleId = 216,
+    RangedWeaponRuleId = 20501002
+  },
+  [217] = {
+    CharTemplateRuleId = 420101,
+    MeleeWeaponRuleId = 10203001,
+    PhantomId = 4201,
+    QuestRoleId = 217
+  },
+  [218] = {
+    CharTemplateRuleId = 230101,
+    PhantomId = 2301,
+    QuestRoleId = 218,
+    RangedWeaponRuleId = 20602001
   },
   [1103] = {
     CharTemplateRuleId = 701103,
@@ -119,6 +159,18 @@ return ReadOnly("QuestRoleInfo", {
     QuestRoleId = 3101,
     RangedWeaponRuleId = 7020203
   },
+  [4102] = {
+    CharTemplateRuleId = 704102,
+    MeleeWeaponRuleId = 7010304,
+    QuestRoleId = 4102,
+    RangedWeaponRuleId = 7020201
+  },
+  [4201] = {
+    CharTemplateRuleId = 704201,
+    MeleeWeaponRuleId = 7010203,
+    QuestRoleId = 4201,
+    RangedWeaponRuleId = 7020201
+  },
   [4301] = {
     CharTemplateRuleId = 704301,
     MeleeWeaponRuleId = 7010501,
@@ -148,6 +200,12 @@ return ReadOnly("QuestRoleInfo", {
     MeleeWeaponRuleId = 7010502,
     QuestRoleId = 240101,
     RangedWeaponRuleId = 702050301
+  },
+  [410201] = {
+    CharTemplateRuleId = 70410201,
+    MeleeWeaponRuleId = 701030401,
+    QuestRoleId = 410201,
+    RangedWeaponRuleId = 7020201
   },
   [510101] = {
     CharTemplateRuleId = 70510101,
@@ -194,6 +252,51 @@ return ReadOnly("QuestRoleInfo", {
   },
   [11030103] = {CharTemplateRuleId = 110303, QuestRoleId = 11030103},
   [11030111] = {CharTemplateRuleId = 110311, QuestRoleId = 11030111},
+  [15030101] = {
+    CharTemplateRuleId = 150301,
+    MeleeWeaponRuleId = 10202001,
+    QuestRoleId = 15030101,
+    RangedWeaponRuleId = 20510001
+  },
+  [15040101] = {
+    CharTemplateRuleId = 150401,
+    MeleeWeaponRuleId = 10202001,
+    QuestRoleId = 15040101,
+    RangedWeaponRuleId = 20407001
+  },
+  [15040102] = {
+    CharTemplateRuleId = 150402,
+    MeleeWeaponRuleId = 10202002,
+    QuestRoleId = 15040102,
+    RangedWeaponRuleId = 20407002
+  },
+  [16010101] = {
+    CharTemplateRuleId = 160101,
+    ExStroyInfo = "PlayerLight",
+    MeleeWeaponRuleId = 10103001,
+    QuestRoleId = 16010101,
+    RangedWeaponRuleId = 20603001
+  },
+  [16010102] = {
+    CharTemplateRuleId = 160102,
+    ExStroyInfo = "PlayerRed",
+    MeleeWeaponRuleId = 10103001,
+    QuestRoleId = 16010102,
+    RangedWeaponRuleId = 20501001
+  },
+  [16010103] = {
+    CharTemplateRuleId = 160103,
+    ExStroyInfo = "PlayerLight",
+    MeleeWeaponRuleId = 10103002,
+    QuestRoleId = 16010103,
+    RangedWeaponRuleId = 20501002
+  },
+  [23010101] = {
+    CharTemplateRuleId = 230101,
+    MeleeWeaponRuleId = 10102001,
+    QuestRoleId = 23010101,
+    RangedWeaponRuleId = 20602001
+  },
   [24010101] = {
     CharTemplateRuleId = 240101,
     MeleeWeaponRuleId = 10502001,
@@ -202,12 +305,24 @@ return ReadOnly("QuestRoleInfo", {
   },
   [24010102] = {
     CharTemplateRuleId = 160101,
-    ExStroyInfo = "Player",
+    ExStroyInfo = "PlayerLight",
     MeleeWeaponRuleId = 10103001,
     QuestRoleId = 24010102,
     RangedWeaponRuleId = 20501001
   },
   [33010101] = {CharTemplateRuleId = 330101, QuestRoleId = 33010101},
+  [41020101] = {
+    CharTemplateRuleId = 410201,
+    MeleeWeaponRuleId = 10304001,
+    QuestRoleId = 41020101,
+    RangedWeaponRuleId = 20505001
+  },
+  [42010101] = {
+    CharTemplateRuleId = 420101,
+    MeleeWeaponRuleId = 10203001,
+    QuestRoleId = 42010101,
+    RangedWeaponRuleId = 20502002
+  },
   [53010101] = {
     CharTemplateRuleId = 530101,
     MeleeWeaponRuleId = 10204001,

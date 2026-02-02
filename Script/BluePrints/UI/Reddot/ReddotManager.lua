@@ -313,11 +313,15 @@ end
 function ReddotManager.ClearLeafNodeCount(NodeName, bClearCacheDetail, CacheDetailChangedParams)
   local LeafNode = ReddotManager.LeafNodes[NodeName]
   if not LeafNode then
-    GWorld.logger.error("ReddotManager.ClearLeafNodeCount: 该节点尚未创建，检查业务层是否有时序问题 " .. NodeName)
-    Traceback(ErrorTag)
-    return
+    if DataMgr.ReddotNode[NodeName] then
+      LeafNode = ReddotManager.AddNodeEx(NodeName)
+    else
+      GWorld.logger.error("ReddotManager.IncreaseLeafNodeCount: 该节点尚未创建，检查业务层是否有时序问题 " .. NodeName)
+      Traceback(ErrorTag)
+      return
+    end
   end
-  if LeafNode.Count > 0 and LeafNode:DecreaseCount(LeafNode.Count, CacheDetailChangedParams) then
+  if LeafNode.Count >= 0 and LeafNode:DecreaseCount(LeafNode.Count, CacheDetailChangedParams) then
     local NodeCache = ReddotManager._GetLeafNodeCache(NodeName)
     NodeCache.Count = 0
     if bClearCacheDetail then
@@ -329,9 +333,13 @@ end
 function ReddotManager.IncreaseLeafNodeCount(NodeName, AddValue, CacheDetailChangedParams)
   local LeafNode = ReddotManager.LeafNodes[NodeName]
   if not LeafNode then
-    GWorld.logger.error("ReddotManager.IncreaseLeafNodeCount: 该节点尚未创建，检查业务层是否有时序问题 " .. NodeName)
-    Traceback(ErrorTag)
-    return
+    if DataMgr.ReddotNode[NodeName] then
+      LeafNode = ReddotManager.AddNodeEx(NodeName)
+    else
+      GWorld.logger.error("ReddotManager.IncreaseLeafNodeCount: 该节点尚未创建，检查业务层是否有时序问题 " .. NodeName)
+      Traceback(ErrorTag)
+      return
+    end
   end
   if nil == AddValue then
     AddValue = 1
@@ -342,9 +350,13 @@ end
 function ReddotManager.DecreaseLeafNodeCount(NodeName, SubValue, CacheDetailChangedParams)
   local LeafNode = ReddotManager.LeafNodes[NodeName]
   if not LeafNode then
-    GWorld.logger.error("ReddotManager.DecreaseLeafNodeCount: 该节点尚未创建，检查业务层是否有时序问题 " .. NodeName)
-    Traceback(ErrorTag)
-    return
+    if DataMgr.ReddotNode[NodeName] then
+      LeafNode = ReddotManager.AddNodeEx(NodeName)
+    else
+      GWorld.logger.error("ReddotManager.IncreaseLeafNodeCount: 该节点尚未创建，检查业务层是否有时序问题 " .. NodeName)
+      Traceback(ErrorTag)
+      return
+    end
   end
   if nil == SubValue then
     SubValue = 1

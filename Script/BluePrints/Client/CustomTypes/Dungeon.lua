@@ -14,6 +14,7 @@ Dungeon.__Props__ = {
   MaxStar = prop.prop("Int", "client save", 0),
   DungeonSid = prop.prop("ObjId", "save"),
   PersistenceData = prop.prop("Str", "save"),
+  AutoProgress = prop.prop("Int", "client save", 0),
   DungeonName = prop.getter("Data", "DungeonName"),
   DungeonReward = prop.getter("Data", "DungeonReward"),
   DungeonType = prop.getter("Data", "DungeonType"),
@@ -72,6 +73,14 @@ DungeonDict.ValueType = Dungeon
 function DungeonDict:NewDungeon(DungeonId)
   local dungeon = Dungeon(DungeonId)
   return dungeon
+end
+
+function DungeonDict:IsPassed(DungeonId)
+  local Dungeon = self[DungeonId]
+  if not Dungeon then
+    return false
+  end
+  return Dungeon.IsPass
 end
 
 return {Dungeon = Dungeon, DungeonDict = DungeonDict}

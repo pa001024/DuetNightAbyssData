@@ -18,6 +18,7 @@ function Component:InitComp(DungeonId)
   if GWorld.GameInstance.IsInSettlementScene then
     self:SetVisibility(UE4.ESlateVisibility.Collapsed)
   else
+    self:BindToAnimationFinished(self.In, self.OnInAnimFinishedFunc)
     self:PlayAnimation(self.In)
   end
 end
@@ -182,6 +183,10 @@ function Component:WalnutReadyCountDown()
   if CurrentCountDown < 1 then
     self:RemoveTimer("WalnutReadyCountDown")
   end
+end
+
+function Component:OnInAnimFinishedFunc()
+  EventManager:FireEvent(EventID.OnDungeonWalnutChoiceUIOpen)
 end
 
 return Component

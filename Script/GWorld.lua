@@ -163,6 +163,16 @@ function UE4.UGameplayStatics.GetGameMode(...)
   return OldGetGameMode(...)
 end
 
+local Key_GetFName = UE4.UFormulaFunctionLibrary.Key_GetFName
+
+function UE4.UFormulaFunctionLibrary.Key_GetFName(Key)
+  local KeyName = Key_GetFName(Key)
+  if "^" == KeyName and UUIFunctionLibrary.IsFRKeyboard() then
+    return "RightBracket"
+  end
+  return KeyName
+end
+
 function GWorld:AddGameMode(GameMode)
   self.GameModeIndex = self.GameModeIndex + 1
   self.GameModes[self.GameModeIndex] = GameMode

@@ -484,7 +484,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "Left",
+              MessageLoc = "DownLeft",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },
@@ -537,7 +537,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "Left",
+              MessageLoc = "DownLeft",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },
@@ -844,7 +844,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "Left",
+              MessageLoc = "DownLeft",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },
@@ -921,7 +921,7 @@ return {
             key = "17482701435426996797",
             type = "ShowGuideButtonNode",
             name = "帮助",
-            pos = {x = 883.5223539248472, y = 837.0063200865632},
+            pos = {x = 882.0937825222261, y = 837.0063200865632},
             propsData = {
               ShowEnable = true,
               MessageId = 301608,
@@ -943,7 +943,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "Right",
+              MessageLoc = "DownRight",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },
@@ -951,7 +951,7 @@ return {
             key = "17482702705698147859",
             type = "ShowGuideButtonNode",
             name = "帮助",
-            pos = {x = 1120.060815463309, y = 692.775550855794},
+            pos = {x = 1120.060815463309, y = 694.204122258415},
             propsData = {
               ShowEnable = true,
               MessageId = 301608,
@@ -973,7 +973,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "Left",
+              MessageLoc = "DownLeft",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },

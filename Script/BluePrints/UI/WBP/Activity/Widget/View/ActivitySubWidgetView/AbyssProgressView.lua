@@ -48,6 +48,9 @@ function M:Init(ActivityConfigData, PageConfigData, PlayerAvatar)
 end
 
 function M:Update(PlayerAvatar)
+  if not PlayerAvatar then
+    return
+  end
   local AllInfo = self:GenerateServerData(PlayerAvatar)
   self.Text_Name:SetText(AllInfo.CurProcessStr)
   self.Text_Star:SetText(string.format("X%s", AllInfo.AllStarCount))

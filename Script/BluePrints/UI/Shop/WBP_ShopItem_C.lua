@@ -25,7 +25,7 @@ function M:InitShopItem(ShopItemId)
       __index = DataMgr.ShopItem[ShopItemId]
     })
   end
-  self:EMShowReddot(false, EReddotType.New, 0)
+  self:EMShowReddot(false, EReddotType.New)
   if not ShopItemData then
     local ItemContent = {}
     self.Group_Item:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -43,19 +43,19 @@ function M:InitShopItem(ShopItemId)
   end
   self.bNewShopItem = Avatar:CheckShopItemEnhanceRedDot(ShopItemId)
   if self.bNewShopItem then
-    self:EMShowReddot(true, EReddotType.New, 0)
+    self:EMShowReddot(true, EReddotType.New)
   end
   self.IsFree = ShopUtils:IsFree(ShopItemId)
   if self.IsFree then
-    self:EMShowReddot(true, EReddotType.Normal, 0)
+    self:EMShowReddot(true, EReddotType.Normal)
   end
   if not self.IsFree and not self.bNewShopItem then
     local ShopTabConf = DataMgr.ShopTabSub[self.ShopItemData.SubTabId]
     local NodeName = ShopTabConf and ShopTabConf.ReddotNode
     if NodeName then
       local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
-      if CacheDetail[self.ShopId] and CacheDetail[self.ShopId] ~= Const.ShopCacheReason.Read then
-        self:EMShowReddot(true, EReddotType.New, 0)
+      if CacheDetail and CacheDetail[self.ShopId] and CacheDetail[self.ShopId] ~= Const.ShopCacheReason.Read then
+        self:EMShowReddot(true, EReddotType.New)
       end
     end
   end
@@ -83,7 +83,6 @@ function M:InitShopItem(ShopItemId)
       self:UpdateCutoffTime(self.CutoffData.CutoffEndTime)
       self:AddTimer(1, self.UpdateCutoffTime, true, 0, "RefreshCutoffTimer", true, self.CutoffData.CutoffEndTime)
     else
-      self.Text_Undiscounted_Price:SetVisibility(UIConst.VisibilityOp.Collapsed)
       self.Text_Price:SetText(math.ceil(self.ShopItemData.Price))
       self.Panel_Time:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
@@ -120,7 +119,15 @@ function M:InitShopItem(ShopItemId)
     self.Text_Price:SetColorAndOpacity(UE4.UUIFunctionLibrary.StringToSlateColor("FFFFFF"))
   end
   self.Img_Currency:SetBrushResourceObject(ItemUtils.GetItemIcon(self.ShopItemData.PriceType, "Resource"))
-  if ShopItemData.UnlockLevel and Avatar.Level < ShopItemData.UnlockLevel then
+  self.IsLockState = ShopUtils:CheckShopItemCondition(self.ShopItemData)
+  if self.IsLockState then
+    if self.ShopItemData.ItemConditionDisplay and self.ShopItemData.ItemCondition then
+      self.Lock.Text_Lock:SetText(GText(DataMgr.Condition[self.ShopItemData.ItemCondition[1]] and DataMgr.Condition[self.ShopItemData.ItemCondition[1]].ConditionText or ""))
+    else
+      self.Lock.Text_Lock:SetText(GText("UI_Shop_ItemUnlock"))
+    end
+    self.Lock:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  elseif ShopItemData.UnlockLevel and Avatar.Level < ShopItemData.UnlockLevel then
     self.Lock.Text_Lock:SetText(GText("UI_Player_Level") .. ShopItemData.UnlockLevel)
     self.Lock:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   else
@@ -133,11 +140,13 @@ function M:InitShopItem(ShopItemId)
     local NodeName = ShopTabConf and ShopTabConf.ReddotNode
     if NodeName then
       local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
-      if not CacheDetail[self.ShopId] and ReddotManager.IncreaseLeafNodeCount(ShopTabConf.ReddotNode, 1, {
-        ShopItemId = self.ShopId,
-        Reason = Const.ShopCacheReason.Persistent
-      }) then
-        self:EMShowReddot(true, EReddotType.New, 0)
+      if not CacheDetail[self.ShopId] then
+        local Node = ReddotManager.GetTreeNode(NodeName)
+        local NowTime = TimeUtils.NowTime()
+        Node:_RefreshAShopItem(self.ShopId, Node.Cache, NowTime)
+        if Node.Cache.Count > Node.Count then
+          ReddotManager.IncreaseLeafNodeCount(NodeName, DeltaCount)
+        end
       end
     end
   end
@@ -153,6 +162,10 @@ end
 function M:RefreshSoldOutInfo()
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
+    return
+  end
+  if self.ShopType == "GiftShop" then
+    self:RefreshGiftSoldOutInfo()
     return
   end
   local PurchaseLimit = ShopUtils:GetShopItemPurchaseLimit(self.ShopItemData.ItemId)
@@ -177,6 +190,33 @@ function M:RefreshSoldOutInfo()
   end
 end
 
+function M:RefreshGiftSoldOutInfo()
+  local giftMain = GiftController:GetGiftMainPage()
+  local Uid = giftMain and giftMain.FriendUid or nil
+  local PurchaseLimit = ShopUtils:GetGiftItemPurchaseLimit(self.ShopItemData.ItemId, Uid)
+  local TotalLimit = ShopUtils:GetGiftItemPurchaseTotalLimit(self.ShopItemData.ItemId, Uid)
+  if PurchaseLimit > -1 then
+    self.Group_BuyLimit:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Text_Limit:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    if TotalLimit > -1 then
+      self.Text_Limit:SetText(GText("UI_SendGift_GiftItemMax") .. PurchaseLimit .. "/" .. TotalLimit)
+    else
+      self.Text_Limit:SetText(GText("UI_SendGift_GiftItemMax"))
+    end
+    if 0 == PurchaseLimit then
+      self.Text_SoldOut:SetText(GText("UI_SendGift_SendGiftLimit"))
+      self.Panel_Discount:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Panel_SoldOut:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    else
+      self.Panel_SoldOut:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+  else
+    self.Group_BuyLimit:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Text_Limit:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  return
+end
+
 function M:UpdateCutoffTime(EndTime)
   local CurrentTime = TimeUtils.NowTime()
   local RemainRefreshTime = EndTime - CurrentTime
@@ -195,7 +235,7 @@ function M:UpdateLimitTime()
     return
   end
   local StartTiem = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(TimeUtils.NowTime())
-  local EndTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(self.ShopItemData.EndTime)
+  local EndTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(self.ShopItemData.EndTime.GetTime())
   local RemainTime = UKismetMathLibrary.Subtract_DateTimeDateTime(EndTime, StartTiem)
   local RemainTimeStr = ""
   local TimeCount = 0
@@ -223,97 +263,9 @@ function M:UpdateShopItemRefreshTime(RefreshTime)
     self.Panel_RefreshTime:SetVisibility(UIConst.VisibilityOp.Collapsed)
   else
     self.Panel_RefreshTime:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self:RefreshShopRefreshTime(RefreshTime)
-    self:AddTimer(1, self.RefreshShopRefreshTime, true, 0, "RefreshTimeTimer", true, RefreshTime)
+    ShopUtils:RefreshShopRefreshTime(RefreshTime, self.Text_RefreshTime, self.ShopItemData.ItemId)
+    self:AddTimer(1, ShopUtils.RefreshShopRefreshTime, true, 0, "RefreshTimeTimer", true, RefreshTime, self.Text_RefreshTime, self.ShopItemData.ItemId)
   end
-end
-
-function M:IsLaterThanNow(Time, NowRealTime)
-  local CurrentYear = NowRealTime.year
-  local CurrentMonth = NowRealTime.month
-  local CurrentDay = NowRealTime.day
-  local CurrentHour = NowRealTime.hour
-  if CurrentYear > Time.year then
-    return false
-  elseif CurrentYear == Time.year then
-    if CurrentMonth > Time.month then
-      return false
-    elseif CurrentMonth == Time.month then
-      if CurrentDay > Time.day then
-        return false
-      elseif CurrentDay == Time.day and CurrentHour >= Time.hour then
-        return false
-      end
-    end
-  end
-  return true
-end
-
-function M:RefreshShopRefreshTime(RefreshTime)
-  local ShopRefreshBeginTime = CommonConst.ShopRefreshBeginTime
-  local StartTime = os.time({
-    year = ShopRefreshBeginTime[1],
-    month = ShopRefreshBeginTime[2],
-    day = ShopRefreshBeginTime[3],
-    hour = ShopRefreshBeginTime[4],
-    min = ShopRefreshBeginTime[5],
-    sec = ShopRefreshBeginTime[6]
-  })
-  local NextRefreshTimeTable = os.date("*t", StartTime)
-  local CurrentTime = TimeUtils.NowTime()
-  local Interval = 0
-  local timeDifference = 0
-  local RemainRefreshTime = 0
-  if RefreshTime.HOUR then
-    Interval = RefreshTime.HOUR * 60 * 60
-    timeDifference = CurrentTime - StartTime
-    RemainRefreshTime = Interval - timeDifference % Interval
-  elseif RefreshTime.DAY then
-    Interval = RefreshTime.DAY * 60 * 60 * 24
-    timeDifference = CurrentTime - StartTime
-    RemainRefreshTime = Interval - timeDifference % Interval
-  elseif RefreshTime.WEEK then
-    StartTime = StartTime - CommonConst.SECOND_IN_WEEKDAY
-    local refresh_hms = CommonConst.GAME_REFRESH_HMS
-    local LastRefreshTime = TimeUtils.NextWeeklyRefreshTime(StartTime, refresh_hms)
-    Interval = RefreshTime.WEEK * 7 * 60 * 60 * 24
-    timeDifference = CurrentTime - LastRefreshTime
-    RemainRefreshTime = Interval - timeDifference % Interval
-  elseif RefreshTime.MONTH then
-    local NowRealTime = os.date("*t", TimeUtils.NowTime())
-    while self:IsLaterThanNow(NextRefreshTimeTable, NowRealTime) == false do
-      if NextRefreshTimeTable.month + RefreshTime.MONTH > 12 then
-        NextRefreshTimeTable.year = NextRefreshTimeTable.year + 1
-        NextRefreshTimeTable.month = NextRefreshTimeTable.month + RefreshTime.MONTH - 12
-      else
-        NextRefreshTimeTable.month = NextRefreshTimeTable.month + RefreshTime.MONTH
-      end
-    end
-    local NextRefreshTime = os.time(NextRefreshTimeTable)
-    RemainRefreshTime = os.difftime(NextRefreshTime, TimeUtils.NowTime())
-  end
-  local RemainTimeStr = ""
-  local TimeCount = 0
-  if RemainRefreshTime > 86400 then
-    TimeCount = TimeCount + 1
-    RemainTimeStr = RemainTimeStr .. string.format(GText("UI_SHOP_REMAINTIME_DAY"), math.floor(RemainRefreshTime / 86400))
-    RemainRefreshTime = RemainRefreshTime % 86400
-  end
-  if RemainRefreshTime > 3600 or 1 == TimeCount then
-    TimeCount = TimeCount + 1
-    RemainTimeStr = RemainTimeStr .. string.format(GText("UI_SHOP_REMAINTIME_HOUR"), math.floor(RemainRefreshTime / 3600))
-    RemainRefreshTime = RemainRefreshTime % 3600
-  end
-  if RemainRefreshTime > 60 and TimeCount < 2 or 1 == TimeCount then
-    TimeCount = TimeCount + 1
-    RemainTimeStr = RemainTimeStr .. string.format(GText("UI_SHOP_REMAINTIME_MINUTE"), math.floor(RemainRefreshTime / 60))
-    RemainRefreshTime = RemainRefreshTime % 60
-  end
-  if RemainRefreshTime > 0 and TimeCount < 2 or 1 == TimeCount then
-    TimeCount = TimeCount + 1
-    RemainTimeStr = RemainTimeStr .. string.format(GText("UI_SHOP_REMAINTIME_SECOND"), RemainRefreshTime)
-  end
-  self.Text_RefreshTime:SetText(RemainTimeStr)
 end
 
 function M:ShowItemDetail()
@@ -323,7 +275,7 @@ function M:ShowItemDetail()
   end
   if Avatar:CheckShopItemEnhanceRedDot(self.ShopItemData.ItemId) then
     Avatar:CleanShopItemEnhanceRedDot(self.ShopId, function()
-      self:EMShowReddot(false, EReddotType.New, 0)
+      self:EMShowReddot(false, EReddotType.New)
     end)
   end
   local ShopMain = UIManager(GWorld.GameInstance):GetUIObj("ShopMain")
@@ -361,7 +313,7 @@ function M:ShowItemDetail()
     local ItemData = DataMgr[self.ShopItemData.ItemType][self.ShopItemData.TypeId]
     local bForbidden = not ShopUtils:CanPurchase(self.ShopItemData, self.ShopItemData.PriceType, ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId))
     local CommonPopupUIID
-    if self.ShopItemData.ItemType == "CharAccessory" or self.ShopItemData.ItemType == "WeaponAccessory" or self.ShopItemData.ItemType == "WeaponSkin" or self.ShopItemData.ItemType == "Skin" or self.ShopItemData.ItemType == "Resource" and DataMgr.Resource[self.ShopItemData.TypeId] and DataMgr.Resource[self.ShopItemData.TypeId].ResourceSType == "GestureItem" then
+    if UIUtils.CanOpenSkinPreview(self.ShopItemData.ItemType, self.ShopItemData.TypeId) then
       UIManager(self):LoadUINew("SkinPreview", self.ShopItemData, self)
     elseif self.ShopItemData.ItemType == "Reward" and (DataMgr.Reward[ItemData.RewardId].Mode == "Fixed" or DataMgr.Reward[ItemData.RewardId].Mode == "Once") then
       if 1 == self.ShopItemData.Bg then
@@ -389,6 +341,7 @@ function M:ShowItemDetail()
       ShopType = 0,
       Funds = Funds,
       ShowParentTabCoin = true,
+      UIName = ShopUIName,
       LeftCallbackObj = self,
       LeftCallbackFunction = function(Obj, PackageData)
         local Shop = UIManager(self):GetUIObj(ShopUIName)
@@ -415,6 +368,67 @@ function M:ShowItemDetail()
       ForbidRightBtn = not ShopUtils:CanPurchase(self.ShopItemData, Funds[1].FundId, Funds[1].FundNeed)
     }, UIManager(self):GetUIObj(ShopUIName))
   end
+end
+
+function M:ShowGiftItemDetail()
+  if not self.ShopItemData or not self.ShopItemData.ItemId then
+    return
+  end
+  AudioManager(self):PlayItemSound(self, self.ShopItemData.TypeId, "Click", self.ShopItemData.ItemType)
+  local ItemData = DataMgr[self.ShopItemData.ItemType][self.ShopItemData.TypeId]
+  if UIUtils.CanOpenSkinPreview(self.ShopItemData.ItemType, self.ShopItemData.TypeId) then
+    UIManager(self):LoadUINew("SkinPreview", self.ShopItemData, self)
+    return
+  end
+  local giftMain = GiftController:GetGiftMainPage()
+  local Uid = giftMain and giftMain.FriendUid or nil
+  local RemainTimes = ShopUtils:GetGiftItemPurchaseLimit(self.ShopItemData.ItemId, Uid)
+  local CommonPopupUIID
+  if 0 == RemainTimes then
+    CommonPopupUIID = 100042
+  else
+    CommonPopupUIID = 100041
+  end
+  if not CommonPopupUIID then
+    return
+  end
+  local Funds = {}
+  Funds[1] = {}
+  Funds[1].FundId = self.ShopItemData.PriceType
+  Funds[1].FundNeed = ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId)
+  local ShopUIName = DataMgr.Shop[self.ShopType].ShopUIName
+  local GiftController = require("BluePrints.UI.WBP.Gift.GiftController")
+  UIManager(self):ShowCommonPopupUI(CommonPopupUIID, {
+    ShopItemData = self.ShopItemData,
+    ShopType = 0,
+    Funds = Funds,
+    ShowParentTabCoin = true,
+    YesButtonText = GText("UI_SendGift_Send"),
+    LeftCallbackObj = self,
+    LeftCallbackFunction = function(Obj, PackageData)
+      local Shop = UIManager(self):GetUIObj(ShopUIName)
+      if Shop then
+        Shop:SetFocus()
+      end
+    end,
+    RightCallbackObj = self,
+    RightCallbackFunction = function(Obj, PackageData)
+      GiftController:OpenSelectFriendPopup(self.ShopItemData.ItemId)
+    end,
+    ForbiddenRightCallbackObj = self,
+    ForbiddenRightCallbackFunction = function(Obj, PackageData)
+      PackageData.Content_1.CallFunc(PackageData.Content_1.CallObj)
+    end,
+    DontFocusParentWidget = true,
+    CloseBtnCallbackObj = self,
+    CloseBtnCallbackFunction = function(Obj, PackageData)
+      local Shop = UIManager(self):GetUIObj(ShopUIName)
+      if Shop then
+        Shop:SetFocus()
+      end
+    end,
+    ForbidRightBtn = not ShopUtils:CanPurchase(self.ShopItemData, Funds[1].FundId, Funds[1].FundNeed)
+  }, UIManager(self):GetUIObj(ShopUIName))
 end
 
 function M:OnBtnHovered()
@@ -444,7 +458,7 @@ function M:OnBtnPressed()
   if NodeName and not self.IsFree and not self.bNewShopItem and ReddotManager.DecreaseLeafNodeCount(ShopTabConf.ReddotNode, 1, {
     ShopItemId = self.ShopId
   }) then
-    self:EMShowReddot(false, EReddotType.New, 0)
+    self:EMShowReddot(false, EReddotType.New)
   end
 end
 
@@ -465,7 +479,11 @@ function M:OnBtnClicked()
   end
   if not self.IsLongPress then
     self.Item_Shop:PlayAnimation(self.Item_Shop.Click)
-    self:ShowItemDetail()
+    if self.ShopType == "GiftShop" then
+      self:ShowGiftItemDetail()
+    else
+      self:ShowItemDetail()
+    end
   end
   self.IsLongPress = false
 end

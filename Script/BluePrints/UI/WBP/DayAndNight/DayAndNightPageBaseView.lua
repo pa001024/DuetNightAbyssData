@@ -47,7 +47,6 @@ function M:Construct()
   if not self.DayEnd then
     self.DayEnd = 18
   end
-  ScreenPrint("DayAndNightPageBaseView:Construct")
   self.Btn_Save.Button_Area.OnClicked:Add(self, self.OnClickChangeTime)
   self.Btn_Save:SetText(GText("UI_SetTime_Button_SetTime"))
   self.Text_TimeTitle:SetText(GText("UI_SetTime_CurrentTime"))
@@ -63,6 +62,8 @@ function M:OnLoaded()
   self:InitBaseView()
   self:PlayInAnimation()
   AudioManager(self):PlayUISound(self, "event:/ui/common/time_panel_open", "DayAndNightPage", nil)
+  local _ = ReddotManager.GetTreeNode("DayAndNight") or ReddotManager.AddNodeEx("DayAndNight")
+  ReddotManager.ClearLeafNodeCount("DayAndNight")
 end
 
 function M:InitBaseView()
@@ -90,16 +91,7 @@ end
 
 function M:GetExactTimeOfDay()
   local EnvironmentManager = self:GetEnvironmentManager()
-  local HalfHourSeconds = DataMgr.GlobalConstant.TODUnitTime.ConstantValue / 2
-  local RemainHalfHourTime = EnvironmentManager:GetRemainTODHalfHourTime()
-  if HalfHourSeconds and RemainHalfHourTime then
-    self.ExactHour = EnvironmentManager:GetTimeOfDay() + (HalfHourSeconds - RemainHalfHourTime) / (HalfHourSeconds * 2)
-    ScreenPrint("GetExactTimeOfDay:" .. self.ExactHour)
-    return self.ExactHour
-  else
-    ScreenPrint("GetExactTimeOfDay:Error")
-    return EnvironmentManager:GetTimeOfDay()
-  end
+  return EnvironmentManager:GetTimeOfDay()
 end
 
 function M:InitTime()
@@ -481,7 +473,7 @@ function M:OnClickChangeTime()
   self.Text_TimeAfter:SetText(CurrentText)
   self:PlayAnimation(Animation)
   AudioManager(self):PlayUISound(nil, "event:/ui/common/time_panel_time_change", "DayAndNightPageTimeChange", nil)
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:StartTimeFlow(self.CurrentHour, hourToSet, 1.0)
 end
 

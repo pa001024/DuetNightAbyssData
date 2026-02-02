@@ -134,7 +134,7 @@ function BP_EventMgr_C:GMCreatePet(UnitId, Num)
   end
 end
 
-function BP_EventMgr_C:GMCreateMonster(Eid, UnitId, Num, Level, CreatorType)
+function BP_EventMgr_C:GMCreateMonster(Eid, UnitId, Num, Level, CreatorType, ForceLOD)
   local Player = Battle(self):GetEntity(Eid)
   local Location = FVector(0, 0, 0)
   if IsValid(Player) then
@@ -147,6 +147,12 @@ function BP_EventMgr_C:GMCreateMonster(Eid, UnitId, Num, Level, CreatorType)
     MonsterSpawn = UE4.UGameplayStatics.GetGameMode(self).FixedMonsterSpawn
   end
   for i = 1, Num do
+    local function LoadFinishCallbackNew(_, Unit)
+      if nil ~= ForceLOD then
+        Unit.Mesh:SetForcedLOD(tonumber(ForceLOD))
+      end
+    end
+    
     local Context = AEventMgr.CreateUnitContext()
     Context.UnitId = tonumber(UnitId)
     Context.UnitType = "Monster"
@@ -155,6 +161,9 @@ function BP_EventMgr_C:GMCreateMonster(Eid, UnitId, Num, Level, CreatorType)
     Context.Creator = Creator
     Context.MonsterSpawn = MonsterSpawn
     Context.BoolParams:Add("FixLocation", true)
+    if nil ~= ForceLOD then
+      Context.OnUnitInitCreateReadyDynamic:Add(self, LoadFinishCallbackNew)
+    end
     self:CreateUnitNew(Context, false)
   end
 end

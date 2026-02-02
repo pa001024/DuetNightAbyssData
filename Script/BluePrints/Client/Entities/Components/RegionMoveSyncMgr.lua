@@ -6,88 +6,14 @@ function Component:InitMoveSyncMgr()
   self.OtherRoleInfo = {}
 end
 
-function Component:AddRoleToCreate(ObjId, RoleInfo)
-  if LuaConst.RegionSyncSubsysEnable then
-    self:RegionSyncAddRoleToCreate(ObjId, RoleInfo)
-    return
-  end
-  if not ObjId then
-    self.logger.debug("EnterWorldRole is Illegal ObjectId is nil")
-    return
-  end
-  local TempRoleInfo = self.OtherRoleInfo[ObjId]
-  if TempRoleInfo then
-    self.logger.debug("There alreay has same avatar in this region ", ObjId)
-    return
-  end
-  self.OtherRoleInfo[ObjId] = {}
-  self.RoleUseTargetParam[ObjId] = {}
-  local CharInfo = RoleInfo.CharInfo
-  TempRoleInfo.ObjectId = ObjId
-  TempRoleInfo.CharId = CharInfo.CharId
-  TempRoleInfo.BornState = Const.UnBorn
-  TempRoleInfo.Uid = RoleInfo.AvatarInfo.Uid
-  TempRoleInfo.AppearanceSuit = {}
-  local SuitTalble = TempRoleInfo.AppearanceSuit
-  SuitTalble.IsCornerVisible = CharInfo.IsCornerVisible
-  SuitTalble.IsShowPartMesh = CharInfo.IsShowPartMesh
-  SuitTalble.AccessorySuit = CharInfo.AccessorySuit
-  SuitTalble.Colors = CharInfo.Colors
-  SuitTalble.SkinId = CharInfo.SkinId
-  TempRoleInfo.RegionWeaponInfo = RoleInfo.WeaponInfo
-  TempRoleInfo.ShowWeapon = RoleInfo.ShowWeapon
-  print(_G.LogTag, " TempRoleInfo.AppearanceSuit", TempRoleInfo.AppearanceSuit)
-  PrintTable({AddRoleToCreate_RoleInfo = RoleInfo, AvatarId = ObjId}, 100)
-end
-
-function Component:RemoveRoleInfoAndDestroy(ObjId, RoleInfo)
-  if LuaConst.RegionSyncSubsysEnable then
-    self:RegionSyncRemoveRoleAndDestroy(ObjId, RoleInfo)
-    return
-  end
-  if not ObjId then
-    self.logger.debug("[RegionOnline] LeaveWorldRole is Illegal ObjectId is nil")
-    return
-  end
-  local TempRoleInfo = self.OtherRoleInfo[ObjId]
-  if not TempRoleInfo then
-    self.logger.debug("[RegionOnline] There is no avatar in this region ", ObjId)
-    return
-  end
-  if TempRoleInfo.CharEid then
-    local MainPlayer = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
-    if MainPlayer then
-      MainPlayer:RemovePlayerToInteract(TempRoleInfo.CharEid)
-    end
-  end
-  if TempRoleInfo.BornState == Const.UnBorn then
-    self.OtherRoleInfo[ObjId] = nil
-    return
-  end
-  TempRoleInfo.BornState = Const.ShouldDetory
-  if TempRoleInfo.BornState == Const.Borning then
-    return
-  end
-  if not TempRoleInfo.CharEid then
-    return
-  end
-  local Player = Battle(self):GetEntity(TempRoleInfo.CharEid)
-  EventManager:FireEvent(EventID.OnlineRemoveOtherPlayer, TempRoleInfo.Uid)
-  if Player then
-    Player:K2_DestroyActor()
-  end
-  self.OtherRoleInfo[ObjId] = nil
-  self.RoleUseTargetParam[ObjId] = nil
-  EventManager:FireEvent(EventID.RemoveRegionIndicatorInfo, TempRoleInfo.Uid)
-end
-
 function Component:DestoryAllOthers()
   if not self.OtherRoleInfo then
     return
   end
   for k, v in pairs(self.OtherRoleInfo) do
-    self:RemoveRoleInfoAndDestroy(v.ObjectId, v)
+    self:RegionSyncRemoveRoleAndDestroy(v.ObjectId, v)
   end
+  self.OtherRoleInfo = {}
 end
 
 function Component:NotifyCharacterStartSync(RegionOnlineId)
@@ -126,263 +52,48 @@ function Component:SendSyncInfo(SyncInfo, ActionBaseInfo)
   self:UploadPlayerMessage(self.CurrentOnlineType, SyncInfo)
 end
 
-function Component:HandChangeRoleInfo(ObjId, RoleInfo)
-  if LuaConst.RegionSyncSubsysEnable then
-    self:RegionSyncChangeRoleInfo(ObjId, RoleInfo)
-    return
-  end
-  if not ObjId then
-    self.logger.debug("[RegionOnline] HandChangeRoleInfo is Illegal ObjectId is nil")
-    return
-  end
-  local TempRoleInfo = self.OtherRoleInfo[ObjId]
-  if not TempRoleInfo then
-    self.logger.debug("[RegionOnline] There is no avatar in this region ", ObjId)
-    return
-  end
-  if not TempRoleInfo.BornState then
-    self.logger.error("[RegionOnline] Role Havent create yet ", ObjId)
-    return
-  end
-  if TempRoleInfo.BornState < Const.Borning then
-    return
-  end
-  if TempRoleInfo.BornState < Const.Bonred then
-    return
-  end
-  if not TempRoleInfo.CharEid then
-    self.logger.error("[RegionOnline] Role Havent create yet ", ObjId)
-    return
-  end
-  local Player = Battle(self):GetEntity(TempRoleInfo.CharEid)
-  if not Player then
-    self.logger.error("[RegionOnline] Role Doesn't exist In This World ", ObjId)
-    return
-  end
-  if not Player.InitCharacterInfo then
-    self.logger.error("[RegionOnline] It's not a character ", ObjId)
-    return
-  end
-  local CharInfo = RoleInfo.CharInfo
-  TempRoleInfo.CharId = CharInfo.CharId
-  TempRoleInfo.AppearanceSuit = {}
-  local SuitTalble = TempRoleInfo.AppearanceSuit
-  SuitTalble.IsCornerVisible = CharInfo.IsCornerVisible
-  SuitTalble.IsShowPartMesh = CharInfo.IsShowPartMesh
-  SuitTalble.AccessorySuit = CharInfo.AccessorySuit
-  SuitTalble.Colors = CharInfo.Colors
-  SuitTalble.SkinId = CharInfo.SkinId
-  local Info = {}
-  Info.RoleId = TempRoleInfo.CharId
-  Info.SkinId = TempRoleInfo.SkinId
-  Info.FromOtherWorld = true
-  Info.AppearanceSuit = TempRoleInfo.AppearanceSuit
-  print(_G.LogTag, " HandChangeRoleInfo", TempRoleInfo.AppearanceSuit)
-  Player:InitCharacterInfoForRegionPlayer(Info)
-  if Player.MeleeWeapon then
-    Player:ChangeUsingWeaponByType("Melee")
-  end
-end
-
-function Component:HandleSwitchWeapon(ObjId, Message, Type)
-  if LuaConst.RegionSyncSubsysEnable then
-    self:RegionSyncChangeWeaponInfo(ObjId, Message, Type)
-    return
-  end
-  if not ObjId then
-    self.logger.debug("[RegionOnline] HandleChangeUsingWeaponType is Illegal ObjectId is nil")
-    return
-  end
-  local TempRoleInfo = self.OtherRoleInfo[ObjId]
-  if not TempRoleInfo then
-    self.logger.debug("[RegionOnline] There is no avatar in this region ", ObjId)
-    return
-  end
-  if not TempRoleInfo.BornState then
-    self.logger.error("[RegionOnline] Role Havent create yet ", ObjId)
-    return
-  end
-  if TempRoleInfo.BornState < Const.Borning then
-    return
-  end
-  if TempRoleInfo.BornState < Const.Bonred then
-    return
-  end
-  if not TempRoleInfo.CharEid then
-    self.logger.error("[RegionOnline] Role Havent create yet ", ObjId)
-    return
-  end
-  local Player = Battle(self):GetEntity(TempRoleInfo.CharEid)
-  if not Player then
-    self.logger.error("[RegionOnline] Role Doesn't exist In This World ", ObjId)
-    return
-  end
-  if not Player.ServerSetUpWeapons then
-    self.logger.error("[RegionOnline] It's not a character ", ObjId)
-    return
-  end
-  if Player[Type .. "Weapon"] then
-    Player:RemoveWeaponWithId(Player[Type .. "Weapon"].WeaponId)
-  end
-  local TempWeaponInfo = {}
-  Utils.FormatWeaponInfo(TempWeaponInfo, Message.WeaponInfo)
-  print(_G.LogTag, " HandleChangeUsingWeaponType", "ServerSetUp" .. Type .. "Weapon", Player["ServerSetUp" .. Type .. "Weapon"])
-  Player["ServerSetUp" .. Type .. "Weapon"](Player, TempWeaponInfo)
-  Player:ChangeUsingWeaponByType("Melee")
-end
-
-function Component:HandleChangeUsingWeaponType(ObjId, RoleInfo)
-  if LuaConst.RegionSyncSubsysEnable then
-    self:RegionSyncChangeUsingWeaponType(ObjId, RoleInfo)
-    return
-  end
-  if not ObjId then
-    self.logger.debug("[RegionOnline] HandleChangeUsingWeaponType is Illegal ObjectId is nil")
-    return
-  end
-  local TempRoleInfo = self.OtherRoleInfo[ObjId]
-  if not TempRoleInfo then
-    self.logger.debug("[RegionOnline] There is no avatar in this region ", ObjId)
-    return
-  end
-  if not TempRoleInfo.BornState then
-    self.logger.error("[RegionOnline] Role Havent create yet ", ObjId)
-    return
-  end
-  if TempRoleInfo.BornState < Const.Borning then
-    return
-  end
-  if TempRoleInfo.BornState < Const.Bonred then
-    return
-  end
-  if not TempRoleInfo.CharEid then
-    self.logger.error("[RegionOnline] Role Havent create yet ", ObjId)
-    return
-  end
-  local Player = Battle(self):GetEntity(TempRoleInfo.CharEid)
-  if not Player then
-    self.logger.error("[RegionOnline] Role Doesn't exist In This World ", ObjId)
-    return
-  end
-  if not Player.ChangeUsingWeaponByType then
-    self.logger.error("[RegionOnline] It's not a character ", ObjId)
-    return
-  end
-  if RoleInfo.ShowWeapon and Player[RoleInfo.ShowWeapon .. "Weapon"] then
-    Player:ChangeUsingWeaponByType(RoleInfo.ShowWeapon)
-  end
-end
-
-function Component:HandleMovePack(ObjId, MoveInfo)
-  if LuaConst.RegionSyncSubsysEnable then
-    self:RegionSyncUpdateMoveInfo(ObjId, MoveInfo)
-    return
-  end
-  if not ObjId then
-    self.logger.debug("[RegionOnline] MovePack is Illegal ObjectId is nil")
-    return
-  end
-  local TempRoleInfo = self.OtherRoleInfo[ObjId]
-  if not TempRoleInfo then
-    self.logger.debug("[RegionOnline] There is no avatar in this region ", ObjId)
-    return
-  end
-  if not TempRoleInfo.BornState then
-    self.logger.error("[RegionOnline] Role Havent create yet ", ObjId)
-    return
-  end
-  if TempRoleInfo.BornState == Const.ShouldDetory then
-    return
-  end
-  if TempRoleInfo.BornState < Const.Borning then
-    self:SpawnOtherRole(ObjId, MoveInfo)
-    return
-  end
-  if TempRoleInfo.BornState < Const.Bonred then
-    return
-  end
-  local sender_info = self.RegionAvatars[ObjId]
-  local Player = Battle(self):GetEntity(TempRoleInfo.CharEid)
-  local GameInstance = GWorld.GameInstance
-  local MainPlayer = UE4.UGameplayStatics.GetPlayerCharacter(GameInstance, 0)
-  if Player then
-    Player:PackSyncInfo(MoveInfo, MainPlayer)
-    if Player.CurResourceId == MoveInfo.ExpressionId then
-      return
-    end
-    if MoveInfo.ExpressionId then
-      Player.CurResourceId = MoveInfo.ExpressionId
-    end
-  elseif GameInstance and GameInstance.bRegionClientOnlyShowUI then
-    GameInstance:SyncPlayerHeadUI(TempRoleInfo.CharEid, FVector(MoveInfo.Location.X, MoveInfo.Location.Y, MoveInfo.Location.Z))
-  end
-end
-
 function Component:HandleActionPack(ObjId, MoveInfo)
-  if LuaConst.RegionSyncSubsysEnable then
-    local RoleInfo = self:GetRoleInfo(ObjId)
-    if RoleInfo and MoveInfo.ActionBaseInfo then
-      local CrouchInt = MoveInfo.ActionBaseInfo.IsCrouching
-      RoleInfo.IsCrouching = nil ~= CrouchInt and CrouchInt > 0.1
-      print(_G.LogTag, "RegionPlayerInitInfo Spawn Other Player Character Success", RoleInfo.IsCrouching, CrouchInt)
-    end
-    local Player = self:GetBornedChar(ObjId)
-    if not Player then
-      return
-    end
-    print(_G.LogTag, " HandleActionPack", "IsCrouching", Player)
-    if MoveInfo.ActionBaseInfo then
-      Player:UpdateActionLocAndRot(MoveInfo)
-    end
-    local IsStateFeature = Player:IsStateFeature(MoveInfo)
-    Player:CacheAction("ReceivePrepareInfo_Lua", MoveInfo)
-    if Player:CanRegionSyncDoAction_Immeditately() or IsStateFeature then
-      print(_G.LogTag, "[RegionOnline] DoRegionCacheAction DoAction_Immeditately", IsStateFeature, MoveInfo.ClassName)
-      Player:DoRegionCacheAction()
-    else
-      print(_G.LogTag, "[RegionOnline] DoRegionCacheAction CacheAction", MoveInfo.ClassName)
-    end
+  local RoleInfo = self:GetRoleInfo(ObjId)
+  if RoleInfo and MoveInfo.ActionBaseInfo then
+    local CrouchInt = MoveInfo.ActionBaseInfo.IsCrouching
+    RoleInfo.IsCrouching = nil ~= CrouchInt and CrouchInt > 0.1
+    print(_G.LogTag, "RegionPlayerInitInfo Spawn Other Player Character Success", RoleInfo.IsCrouching, CrouchInt)
+  end
+  local Player = self:GetBornedChar(ObjId)
+  if not Player then
     return
+  end
+  print(_G.LogTag, " HandleActionPack", "IsCrouching", Player)
+  if MoveInfo.ActionBaseInfo then
+    Player:UpdateActionLocAndRot(MoveInfo)
+  end
+  local IsStateFeature = Player:IsStateFeature(MoveInfo)
+  Player:CacheAction("ReceivePrepareInfo_Lua", MoveInfo)
+  if Player:CanRegionSyncDoAction_Immeditately() or IsStateFeature then
+    print(_G.LogTag, "[RegionOnline] DoRegionCacheAction DoAction_Immeditately", IsStateFeature, MoveInfo.ClassName)
+    Player:DoRegionCacheAction()
+  else
+    print(_G.LogTag, "[RegionOnline] DoRegionCacheAction CacheAction", MoveInfo.ClassName)
   end
 end
 
 function Component:HandleHidePack(ObjId, MoveInfo)
-  if LuaConst.RegionSyncSubsysEnable then
-    print(_G.LogTag, "ReceiveHideInfo_LuaHandleHidePack", MoveInfo.ActorVisible)
-    local Player = self:GetBornedChar(ObjId)
-    if Player then
-      Player:ReceiveHideInfo_Lua(MoveInfo)
-    end
-    return
+  print(_G.LogTag, "ReceiveHideInfo_LuaHandleHidePack", MoveInfo.ActorVisible)
+  local Player = self:GetBornedChar(ObjId)
+  if Player then
+    Player:ReceiveHideInfo_Lua(MoveInfo)
   end
 end
 
 function Component:ReceiveStopActionPack(ObjId, SyncInfo)
-  if LuaConst.RegionSyncSubsysEnable then
-    local RoleInfo = self:GetRoleInfo(ObjId)
-    if RoleInfo and SyncInfo.ActionBaseInfo then
-      local CrouchInt = SyncInfo.ActionBaseInfo.IsCrouching
-      RoleInfo.IsCrouching = nil ~= CrouchInt and CrouchInt > 0.1
-    end
-    local Player = self:GetBornedChar(ObjId)
-    if Player then
-      Player:ReceiveStopActionInfo_Lua(SyncInfo)
-    end
-    return
+  local RoleInfo = self:GetRoleInfo(ObjId)
+  if RoleInfo and SyncInfo.ActionBaseInfo then
+    local CrouchInt = SyncInfo.ActionBaseInfo.IsCrouching
+    RoleInfo.IsCrouching = nil ~= CrouchInt and CrouchInt > 0.1
   end
-end
-
-function Component:SpawnOtherRole(ObjId, MoveInfo)
-  local TempRoleInfo = self.OtherRoleInfo[ObjId]
-  local GameInstance = GWorld.GameInstance
-  print(_G.LogTag, " SpawnOtherRole", GameInstance.OtherRoleCanCreatePerTick)
-  if GameInstance.OtherRoleCanCreatePerTick and GameInstance.OtherRoleCanCreatePerTick <= 0 then
-    return
-  end
-  TempRoleInfo.BornState = Const.Borning
-  GameInstance:SpawnOtherRole(ObjId, TempRoleInfo, MoveInfo)
-  if GameInstance.OtherRoleCanCreatePerTick then
-    GameInstance.OtherRoleCanCreatePerTick = GameInstance.OtherRoleCanCreatePerTick - 1
+  local Player = self:GetBornedChar(ObjId)
+  if Player then
+    Player:ReceiveStopActionInfo_Lua(SyncInfo)
   end
 end
 
@@ -450,6 +161,7 @@ function Component:RegionSyncAddRoleToCreate(ObjId, RoleInfo)
   TempRoleInfo.ObjectId = ObjId
   TempRoleInfo.RoleId = CharInfo.CharId
   TempRoleInfo.SkinId = CharInfo.SkinId
+  TempRoleInfo.HairId = CharInfo.HairId
   TempRoleInfo.Uid = RoleInfo.AvatarInfo.Uid
   TempRoleInfo.AppearanceSuit = {}
   TempRoleInfo.CurrentPet = RoleInfo.CurrentPet
@@ -459,12 +171,19 @@ function Component:RegionSyncAddRoleToCreate(ObjId, RoleInfo)
   local MountData = TempRoleInfo.MountDatas
   MountData.MountId = RoleInfo.MountDatas.MountId
   MountData.MountState = RoleInfo.MountDatas.MountState
+  local InResource = TempRoleInfo.CurResourceId and 0 ~= TempRoleInfo.CurResourceId
+  local InState = TempRoleInfo.CurrentState and 0 ~= TempRoleInfo.CurrentState
+  local InMount = TempRoleInfo.MountDatas and TempRoleInfo.MountDatas.MountId and 0 ~= TempRoleInfo.MountDatas.MountId
+  if InResource or InState or InMount then
+    TempRoleInfo.IsCrouching = false
+  end
   local SuitTalble = TempRoleInfo.AppearanceSuit
   SuitTalble.IsCornerVisible = CharInfo.IsCornerVisible
   SuitTalble.IsShowPartMesh = CharInfo.IsShowPartMesh
   SuitTalble.AccessorySuit = CharInfo.AccessorySuit
   SuitTalble.Colors = CharInfo.Colors
   SuitTalble.SkinId = CharInfo.SkinId
+  SuitTalble.HairId = CharInfo.HairId
   if RoleInfo.WeaponInfo then
     local MeleeWeapon = {}
     if RoleInfo.WeaponInfo.MeleeWeapon then
@@ -642,16 +361,14 @@ function Component:RegionSyncRemoveRoleAndDestroy(ObjId, RoleInfo)
   local GameInstance = GWorld.GameInstance
   local RegionSycnSubsys = UE4.URegionSyncSubsystem.GetInstance(GameInstance)
   local ObjIdStr = CommonUtils.ObjId2Str(ObjId)
-  if not RegionSycnSubsys:ObjIdValidation(ObjIdStr) then
-    self.logger.error("RegionSycnSubsys:ObjIdValidation is false")
-    return
+  if RegionSycnSubsys:ObjIdValidation(ObjIdStr) then
+    RegionSycnSubsys:RemoveRoleBornInfo(ObjIdStr, true)
   end
   local TempRoleInfo = self.OtherRoleInfo[ObjId]
   if TempRoleInfo then
     EventManager:FireEvent(EventID.OnlineRemoveOtherPlayer, TempRoleInfo.Uid)
     self.OtherRoleInfo[ObjId] = nil
   end
-  RegionSycnSubsys:RemoveRoleBornInfo(ObjIdStr, true)
   if TempRoleInfo then
     EventManager:FireEvent(EventID.RemoveRegionIndicatorInfo, TempRoleInfo.Uid)
   end

@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -98,6 +101,10 @@ return ReadOnly("CommonDialogContent", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Dialog/Widget/WBP_Com_Dialog_Btn_L.WBP_Com_Dialog_Btn_L'",
     ContentId = "Dialog_Button_L"
   },
+  Dialog_DungeonTicket = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Vote/Widget/WBP_Vote_Dialog_Ticket.WBP_Vote_Dialog_Ticket'",
+    ContentId = "Dialog_DungeonTicket"
+  },
   Dialog_Input_new = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Dialog/Widget/WBP_Com_Dialog_InputNew.WBP_Com_Dialog_InputNew'",
     ContentId = "Dialog_Input_new"
@@ -117,6 +124,10 @@ return ReadOnly("CommonDialogContent", {
   DispatchAbility = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/Dispatch/WBP_Map_DialogAbility.WBP_Map_DialogAbility'",
     ContentId = "DispatchAbility"
+  },
+  Dispatch_RewardPack = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/Dispatch/WBP_Map_DialogDispatchRewardPack'",
+    ContentId = "Dispatch_RewardPack"
   },
   EliteDrop = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/Depute/Dialog/WBP_Play_DeputeEliteDropDialog.WBP_Play_DeputeEliteDropDialog'",
@@ -141,6 +152,10 @@ return ReadOnly("CommonDialogContent", {
   Gacha_History = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Gacha/Widget/Detail/WBP_Gacha_DetailHistoryContent.WBP_Gacha_DetailHistoryContent'",
     ContentId = "Gacha_History"
+  },
+  Gift_NotEnough = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Gift/Widget/WBP_Gift_ShopTarget_PayContent.WBP_Gift_ShopTarget_PayContent'",
+    ContentId = "Gift_NotEnough"
   },
   Group_Tab = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Dialog/Widget/WBP_Com_Dialog_Tab.WBP_Com_Dialog_Tab'",
@@ -202,6 +217,10 @@ return ReadOnly("CommonDialogContent", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Dialog/Widget/WBP_Com_Dialog_Sift.WBP_Com_Dialog_Sift'",
     ContentId = "Multiple_selection_Button"
   },
+  RewardPack_Detail = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/Dispatch/WBP_Map_DialogDispatchPackDetail'",
+    ContentId = "RewardPack_Detail"
+  },
   RewardPreview_icon = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/Dispatch/WBP_Map_DialogDispatchReward.WBP_Map_DialogDispatchReward'",
     ContentId = "RewardPreview_icon"
@@ -254,6 +273,10 @@ return ReadOnly("CommonDialogContent", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Fort/WBP_Activity_BuffDialog.WBP_Activity_BuffDialog'",
     ContentId = "WBP_Activity_BuffDialog"
   },
+  WBP_Activity_TotalRecharge_DetailHistoryContent = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/TotalRecharge/WBP_Activity_TotalRecharge_DetailHistoryContent.WBP_Activity_TotalRecharge_DetailHistoryContent'",
+    ContentId = "WBP_Activity_TotalRecharge_DetailHistoryContent"
+  },
   WBP_Armory_AttrRestraintDialog = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Unit/WBP_Armory_AttrRestraintDialog.WBP_Armory_AttrRestraintDialog'",
     ContentId = "WBP_Armory_AttrRestraintDialog"
@@ -286,6 +309,10 @@ return ReadOnly("CommonDialogContent", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Experience/PC/WBP_Experience_EXDialog.WBP_Experience_EXDialog'",
     ContentId = "WBP_Experience_EXDialog"
   },
+  WBP_Forging_ExchangePart_Content = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Forging/Widget/Convert/WBP_Forging_ExchangePart.WBP_Forging_ExchangePart'",
+    ContentId = "WBP_Forging_ExchangePart_Content"
+  },
   WBP_Gacha_DetailContent_Skin = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/GachaNew/Widget/Detail/WBP_Gacha_DetailContent'",
     ContentId = "WBP_Gacha_DetailContent_Skin"
@@ -293,6 +320,18 @@ return ReadOnly("CommonDialogContent", {
   WBP_Gacha_DetailHistoryContent_Skin = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/GachaNew/Widget/Detail/WBP_Gacha_DetailHistoryContent'",
     ContentId = "WBP_Gacha_DetailHistoryContent_Skin"
+  },
+  WBP_Gift_Condition = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Gift/Widget/WBP_Gift_ShopTarget_ConditionContent'",
+    ContentId = "WBP_Gift_Condition"
+  },
+  WBP_Gift_ShopTarget = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Gift/Widget/WBP_Gift_ShopTarget_ChooseContent'",
+    ContentId = "WBP_Gift_ShopTarget"
+  },
+  WBP_Gift_ShopTarget_ChooseFriendContent = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Gift/Widget/WBP_Gift_ShopTarget_ChooseFriendContent'",
+    ContentId = "WBP_Gift_ShopTarget_ChooseFriendContent"
   },
   WBP_Login_OverSeaSeverContent = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Login/Widget/WBP_Login_OverSeaSeverContent.WBP_Login_OverSeaSeverContent'",
@@ -309,6 +348,10 @@ return ReadOnly("CommonDialogContent", {
   WBP_Set_MultipleLangContent = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Set/Widget/MultipleLang/WBP_Set_MultipleLangContent.WBP_Set_MultipleLangContent'",
     ContentId = "WBP_Set_MultipleLangContent"
+  },
+  WBP_Setting_EnhanceLog = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Set/Widget/WBP_Set_LogDialog.WBP_Set_LogDialog'",
+    ContentId = "WBP_Setting_EnhanceLog"
   },
   WBP_Shop_Brithday = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/OverSea/WBP_Shop_Brithday'",

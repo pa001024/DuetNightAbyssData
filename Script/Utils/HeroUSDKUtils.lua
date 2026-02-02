@@ -116,9 +116,15 @@ function HeroUSDKUtils.CheckStringSensitive(CallObject, Str, SensitiveCallBack, 
   local FirstSDKCheck = false
   local RealStr = string.gsub(Str, "%s", "")
   print(_G.LogTag, "LXZ SDK CheckStringSensitive")
+  if SkipServerCheck then
+    UIManager():_BlockAllUIInput(true, "CheckStringSensitive")
+  end
   HeroUSDKSubsystem():RequestRealTimeContentValidate(RealStr, {
     CallObject,
     function(CallObject, ResponseData)
+      if SkipServerCheck then
+        UIManager():_BlockAllUIInput(false, "CheckStringSensitive")
+      end
       print(_G.LogTag, "LXZ SDK CheckStringSensitive Callback", ServerFinished, ServerSucc, ServerFinished)
       SDKFinished = true
       if 0 == ResponseData.Data.Result then

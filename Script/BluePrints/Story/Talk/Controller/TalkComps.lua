@@ -199,66 +199,6 @@ function TalkComp_PauseGame_C:Resume()
   end
 end
 
-local TalkComp_DisableAndHideMonster_C = CreateTalkComp()
-
-function TalkComp_DisableAndHideMonster_C.New(TalkContext)
-  local Obj = setmetatable({}, {__index = TalkComp_DisableAndHideMonster_C})
-  Obj.TalkContext = TalkContext
-  Obj.MonsterHiddenMap = {}
-  return Obj
-end
-
-function TalkComp_DisableAndHideMonster_C:GetType()
-  return ETalkCompType.DisableAndHideMonster
-end
-
-function TalkComp_DisableAndHideMonster_C:Execute()
-  EventManager:FireEvent(EventID.TalkPauseGame)
-  self:SetMonsterBTDisableAndHidden(true)
-  self.TalkContext.TalkStateManager:SetTalkStateByTag(Const.TalkState_DisableMonsterSpawn, true, self)
-end
-
-function TalkComp_DisableAndHideMonster_C:Resume()
-  self:SetMonsterBTDisableAndHidden(false)
-  self.TalkContext.TalkStateManager:SetTalkStateByTag(Const.TalkState_DisableMonsterSpawn, false, self)
-  EventManager:FireEvent(EventID.TalkResumeGame)
-end
-
-function TalkComp_DisableAndHideMonster_C:SetMonsterBTDisableAndHidden(bDisable)
-  local GameState = UE4.UGameplayStatics.GetGameState(self.TalkContext)
-  local entities = GameState.MonsterMap:ToTable()
-  for _, entity in pairs(entities) do
-    if nil ~= entity and entity:GetController() and entity.IsMonster and entity:IsMonster() then
-      if bDisable then
-        self:SetMonsterHidden(entity, true)
-        entity:SetActorEnableCollision(false)
-        entity:SetTimeDilationByBattle(0, true)
-      else
-        self:SetMonsterHidden(entity, false)
-        entity:SetActorEnableCollision(true)
-        entity:SetTimeDilationByBattle(1, false)
-      end
-    end
-  end
-end
-
-function TalkComp_DisableAndHideMonster_C:SetMonsterHidden(Monster, bHidden)
-  DebugPrint("SetMonsterHidden", Monster, bHidden)
-  self.TalkContext:SetActorHidden(Monster, bHidden)
-  local SkeletalMeshComp = Monster:GetComponentByClass(USkeletalMeshComponent:StaticClass())
-  if IsValid(SkeletalMeshComp) then
-    SkeletalMeshComp:SetComponentTickEnabled(not bHidden)
-  end
-  Monster:SetActorTickEnabled(not bHidden)
-  if false == bHidden and Monster.HideTags and Monster.HideTags:Contains("TickLod") == true then
-    return
-  end
-  local MovementComp = Monster:GetComponentByClass(UE.UCharacterMovementComponent:StaticClass())
-  if IsValid(MovementComp) then
-    MovementComp:SetComponentTickEnabled(not bHidden)
-  end
-end
-
 local TalkComp_HideAllBattleEntity_C = CreateTalkComp()
 
 function TalkComp_HideAllBattleEntity_C.New(TalkContext)
@@ -378,7 +318,6 @@ return {
   TalkComp_PopMouse_C = TalkComp_PopMouse_C,
   TalkComp_StopPlayerAction_C = TalkComp_StopPlayerAction_C,
   TalkComp_PauseGame_C = TalkComp_PauseGame_C,
-  TalkComp_DisableAndHideMonster_C = TalkComp_DisableAndHideMonster_C,
   TalkComp_HideAllBattleEntity_C = TalkComp_HideAllBattleEntity_C,
   TalkComp_DisableInteractiveTrigger_C = TalkComp_DisableInteractiveTrigger_C,
   TalkComp_HideElseCharacter_C = TalkComp_HideElseCharacter_C,

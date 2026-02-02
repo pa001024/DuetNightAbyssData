@@ -451,15 +451,15 @@ function Component:Effect_SetSelfLoc(EffectStruct, ParamentsTable)
   end
 end
 
-function Component:CallBackSkillCreature(CallBackCreature, BindWeaponState, TargetEid, TargetSocket, TargetSocketLocation, MinDistance, IsFollowing, EventDistance, SetSpeed, TargetWeapon)
+function Component:CallBackSkillCreature(CallBackCreature, TargetEid, TargetSocket, TargetSocketLocation, MinDistance, IsFollowing, EventDistance, SetSpeed, TargetWeapon)
+  if not CallBackCreature then
+    return
+  end
   local SkillCreatureConfig = DataMgr.SkillCreature[CallBackCreature.CreatureId]
   if CallBackCreature.bReplicates and IsClient(self) then
     return
   end
-  if BindWeaponState then
-    CallBackCreature:SetBindWeaponState(BindWeaponState)
-  end
-  CallBackCreature:MultiCastSetCallBackLocation(TargetEid, TargetSocket, TargetSocketLocation, MinDistance, IsFollowing, EventDistance, TargetWeapon, SetSpeed)
+  CallBackCreature:MultiCastSetCallBackLocation(TargetEid, TargetSocket, TargetSocketLocation, MinDistance, IsFollowing, EventDistance, TargetWeapon, SetSpeed, CallBackCreature.DisableCallBack)
   if SkillCreatureConfig.RefreshTargetRule and 2 == SkillCreatureConfig.RefreshTargetRule then
     CallBackCreature.Targets:Clear()
   end
@@ -470,7 +470,6 @@ function Component:Effect_CallBackSkillCreature(EffectStruct, ParamentsTable)
   local CreatureId = ParamentsTable.CreatureId
   local TargetSocket = ParamentsTable.TargetSocket or ""
   local IsFollowing = ParamentsTable.IsFollowing
-  local BindWeaponState = ParamentsTable.BindWeapon
   local MinDistance = ParamentsTable.MinDistance or 0
   local EventDistance = ParamentsTable.EventDistance or 0
   local CallBackNum = ParamentsTable.CallBackNum or -1
@@ -485,7 +484,7 @@ function Component:Effect_CallBackSkillCreature(EffectStruct, ParamentsTable)
   local SetSpeed = ParamentsTable.SetSpeed or -1
   if BeCallBacked and 0 ~= EffectStruct.CreatureInfo.CreatureEid then
     local Creature = self:GetEntity(EffectStruct.CreatureInfo.CreatureEid)
-    self:CallBackSkillCreature(Creature, BindWeaponState, Source.Eid, TargetSocket, TargetSocketLocation, MinDistance, IsFollowing, EventDistance, SetSpeed, TargetWeapon)
+    self:CallBackSkillCreature(Creature, Source.Eid, TargetSocket, TargetSocketLocation, MinDistance, IsFollowing, EventDistance, SetSpeed, TargetWeapon)
   else
     local CreatureList = Source:GetCreatureList(CreatureId)
     if 0 == CreatureList:Num() then
@@ -494,7 +493,7 @@ function Component:Effect_CallBackSkillCreature(EffectStruct, ParamentsTable)
     CreatureList = CreatureList:ToTable()
     for i = 1, #CreatureList do
       local Creature = self:GetEntity(CreatureList[i])
-      self:CallBackSkillCreature(Creature, BindWeaponState, Source.Eid, TargetSocket, TargetSocketLocation, MinDistance, IsFollowing, EventDistance, SetSpeed, TargetWeapon)
+      self:CallBackSkillCreature(Creature, Source.Eid, TargetSocket, TargetSocketLocation, MinDistance, IsFollowing, EventDistance, SetSpeed, TargetWeapon)
       CallBackNum = CallBackNum - 1
       if 0 == CallBackNum then
         break

@@ -34,6 +34,10 @@ function M:StartMoveTo(MoveToData)
   end
   Character:ForbidFootStep(not Section.EnableFootStepFX)
   UAIBlueprintHelperLibrary.CreateMoveToProxyObject(Character, Character, TargetLocation, nil, Section.MoveAcceptRadius)
+  local CustomSequencePropertySystem = USubsystemBlueprintLibrary.GetWorldSubsystem(MoveToData.Character, UCustomSequencePropertySystem)
+  if IsValid(CustomSequencePropertySystem) then
+    CustomSequencePropertySystem:ForbiddenNpcTransform(MoveToData.Character, self)
+  end
 end
 
 return M

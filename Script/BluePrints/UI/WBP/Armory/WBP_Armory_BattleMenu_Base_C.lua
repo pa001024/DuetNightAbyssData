@@ -132,7 +132,7 @@ function M:Construct()
   self.Btn_Config:BindEventOnClicked(self, self.OnWeaponConfigBtnClicked)
   self.Filters = {
     {"All"},
-    {"BattleItem"},
+    {"BattleItem", "EventItem"},
     {
       "GestureItem"
     },
@@ -655,7 +655,7 @@ function M:Init(Params)
   self:ResetWheelPlanName()
   self.FilteredItems = {}
   self:InitFilters()
-  self:ResetListView()
+  self:ResetListView(true)
   self:EndWheelAnimation()
   self.CurWheelWidget:UpdateWheelConfig()
 end
@@ -814,7 +814,7 @@ function M:NewItemContent(ServerData)
   Obj.Id = ServerData.ResourceId
   Obj.UnitId = ServerData.ResourceId
   Obj.ResourceCount = 0
-  Obj.ResourceSType = ServerData.ResourceSType
+  Obj.ResourceSType = ServerData.ResourceSType or ""
   local Data = ServerData:Data()
   if Data.Type == "InfiniteBattleItem" then
     Obj.ResourceCount = ""
@@ -834,7 +834,7 @@ function M:NewItemContent(ServerData)
     else
       Obj.ItemName = GText("INFINITY_SYMBOL")
       Obj.ItemDetailsButton01EventInfo = self:CreateQuickEquipButtonEventInfo(Obj)
-      if Obj.ResourceSType == "GestureItem" then
+      if Obj.ResourceSType == "GestureItem" and not UIConst.LimitPreviewResource[Obj.Id] then
         Obj.ItemDetailsButton02EventInfo = self:CreatePreviewButtonEventInfo(Obj)
       end
     end
@@ -845,6 +845,7 @@ function M:NewItemContent(ServerData)
     end
     Obj.ItemDetailsButton01EventInfo = self:CreateQuickEquipButtonEventInfo(Obj)
   end
+  rawset(Obj, "IsEventItemt", Obj.ResourceSType == "EventItem")
   Obj.IsEquiped = false
   Obj.Rarity = Data.Rarity or 0
   Obj.Icon = Data.Icon
@@ -1037,10 +1038,10 @@ function M:CreateDragWidget(Content, Slot)
   return self._DragWidget
 end
 
-function M:ResetListView()
+function M:ResetListView(bAnim)
   self.FilteredItems = self:FilterContents(self.ContentArray)
   self:SortContents(self.FilteredItems)
-  self:InitListView()
+  self:InitListView(bAnim)
   if self.ItemtDetailContent and self.ContentMap[self.ItemtDetailContent.UnitId] then
     self.ItemtDetailContent = self.ContentMap[self.ItemtDetailContent.UnitId]
   end
@@ -1094,7 +1095,7 @@ function M:OnFilterWidgetClicked(Content)
   ArmoryUtils:SetContentIsSelected(self.CurFilterContent, false)
   self.CurFilterContent = Content
   ArmoryUtils:SetContentIsSelected(self.CurFilterContent, true)
-  self:ResetListView()
+  self:ResetListView(true)
 end
 
 function M:FilterContents(Contents)
@@ -1140,10 +1141,17 @@ function M:SortContents(InOutContents)
       table.insert(SortByAttrNames, value)
     end
   end
-  ArmoryUtils:SortItemContents(InOutContents, SortByAttrNames, SortType, self.CurWeaponContent)
+  ArmoryUtils:SortItemContents(InOutContents, SortByAttrNames, SortType, nil, function(a, b)
+    if a.IsEventItemt then
+      return true
+    end
+    if b.IsEventItemt then
+      return false
+    end
+  end)
 end
 
-function M:InitListView()
+function M:InitListView(bAnim)
   self.List_Item:ClearListItems()
   for index, Obj in ipairs(self.FilteredItems) do
     self.List_Item:AddItem(Obj)
@@ -1152,9 +1160,10 @@ function M:InitListView()
   if #self.FilteredItems <= 0 then
     self.List_Item:RegenerateAllEntries()
   end
-  self:AddTimer(0.01, function()
-    self.List_Item:RequestFillEmptyContent()
-  end)
+  self.List_Item:RequestFillEmptyContent()
+  if bAnim then
+    self.List_Item:RequestPlayEntriesAnim()
+  end
 end
 
 function M:OnListItemClicked(Content)
@@ -1275,7 +1284,7 @@ function M:ResetContentButtonInfo(Content)
     else
       Content.ItemDetailsButton01EventInfo = self:CreateQuickEquipButtonEventInfo(Content)
     end
-    if Content.ResourceSType == "GestureItem" then
+    if Content.ResourceSType == "GestureItem" and not UIConst.LimitPreviewResource[Content.Id] then
       Content.ItemDetailsButton02EventInfo = self:CreatePreviewButtonEventInfo(Content)
     else
       Content.ItemDetailsButton02EventInfo = nil
@@ -1352,6 +1361,8 @@ function M:UpdateItemDetails(Content)
   Content.bHideGamePad = true
   self.Tips_Item:RefreshItemInfo(Content, true)
   self:UpdateItemDetailsButton(Content)
+  self:StopAnimation(self.Tips_Out)
+  self:PlayAnimation(self.Tips_In)
 end
 
 function M:UpdateItemDetailsButton(Content)
@@ -1365,8 +1376,6 @@ end
 
 function M:ShowItemDetail()
   self:UpdateItemDetails(self.ItemtDetailContent)
-  self:StopAnimation(self.Tips_Out)
-  self:PlayAnimation(self.Tips_In)
   self.Tips_Item:SetVisibility(UIConst.VisibilityOp.Visible)
   if self.IsShowTips then
     return
@@ -1465,6 +1474,11 @@ function M:TryEquipContent(Content, WheelIdx, WheelSlotIdx, SuccessCallback)
     self.EquippedContentIndex = self.List_Item:GetIndexForItem(Content)
     Avatar:ChangeBattleWheel(self.CurrentWheelIndex, ServerSlotIdx, Content.UnitId)
   end
+end
+
+function M:TestFunc()
+  local Avatar = GWorld:GetAvatar()
+  Avatar:TakeOffAssisterWeapon(1011601)
 end
 
 function M:IsContentInWheelAndFull(Content)

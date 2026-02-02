@@ -69,8 +69,6 @@ function M:GetPhantomWeaponIds()
   end
   if Info and Info.RangedWeapon then
     table.insert(TmpWeaponIds, Info.RangedWeapon.WeaponId)
-  else
-    table.insert(TmpWeaponIds, self.Owner:GetRangedWeaponId())
   end
   if Info and Info.UltraWeapon then
     table.insert(TmpWeaponIds, Info.UltraWeapon.WeaponId)

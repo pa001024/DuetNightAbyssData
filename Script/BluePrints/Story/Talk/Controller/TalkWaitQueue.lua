@@ -40,13 +40,13 @@ function TalkWaitQueue_C:RegiserWaitItem(UniqueTag)
 end
 
 function TalkWaitQueue_C:CompleteWaitItem(UniqueTag)
-  DebugPrint("CompleteWaitItem", UniqueTag)
   if not self.TalkWaitQueueManager:CheckWaitQueueValid(self.GroupTag, self) then
     return self
   end
   if self.bClosed then
     return self
   end
+  DebugPrint("CompleteWaitItem", UniqueTag, self.Queue[UniqueTag])
   if self.Queue[UniqueTag] == false then
     self.Queue[UniqueTag] = true
     self.CompleteCount = self.CompleteCount + 1

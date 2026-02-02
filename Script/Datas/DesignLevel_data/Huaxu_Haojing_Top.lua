@@ -1,22 +1,28 @@
 return {
   StaticCreator = {
-    ["2010030"] = {
-      CreatorId = 2010030,
+    ["242440006"] = {
+      CreatorId = 242440006,
       UnitType = "Mechanism",
       UnitId = 1
     },
-    ["2010031"] = {
-      CreatorId = 2010031,
+    ["242440007"] = {
+      CreatorId = 242440007,
       UnitType = "Mechanism",
       UnitId = 1
-    },
-    ["2440008"] = {
-      CreatorId = 2440008,
-      UnitType = "Mechanism",
-      UnitId = 90100
     }
   },
-  ManualItem = {},
+  ManualItem = {
+    ["244001"] = {
+      ManualItemId = 244001,
+      UnitType = "Mechanism",
+      UnitId = 121025
+    },
+    ["244002"] = {
+      ManualItemId = 244002,
+      UnitType = "Mechanism",
+      UnitId = 121027
+    }
+  },
   Explore = {},
   RandomRule = {}
 }

@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -272,6 +275,18 @@ return ReadOnly("Access", {
     AccessKey = "Text_Monster",
     AccessText = "Access_Monster_Normal"
   },
+  Text_MountEvent = {
+    AccessKey = "Text_MountEvent",
+    AccessText = "Text_MountEvent"
+  },
+  Text_MountQuest01 = {
+    AccessKey = "Text_MountQuest01",
+    AccessText = "Text_MountQuest01"
+  },
+  Text_MountShop = {
+    AccessKey = "Text_MountShop",
+    AccessText = "Text_MountShop"
+  },
   Text_Raid_DungeonReward = {
     AccessKey = "Text_Raid_DungeonReward",
     AccessText = "Access_RaidDungeon"
@@ -280,11 +295,19 @@ return ReadOnly("Access", {
     AccessKey = "Text_Raid_Reward",
     AccessText = "Access_RaidReward"
   },
+  Text_ReputationTask = {
+    AccessKey = "Text_ReputationTask",
+    AccessText = "Text_ReputationTask"
+  },
   Text_Rouge = {
     AccessKey = "Text_Rouge",
     AccessParam = "13",
     AccessRule = "InterfaceJump",
     AccessText = "MAIN_UI_ROUGE"
+  },
+  Text_SHOP_MAINTAB_GACHA = {
+    AccessKey = "Text_SHOP_MAINTAB_GACHA",
+    AccessText = "Text_SHOP_MAINTAB_GACHA"
   },
   Text_SoldFish = {
     AccessKey = "Text_SoldFish",

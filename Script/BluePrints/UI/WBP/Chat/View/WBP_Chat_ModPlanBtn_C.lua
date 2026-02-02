@@ -30,7 +30,7 @@ function M:OnBtnClickInMod()
   else
     UIMode = ModCommon.MainUICase.CopyMode
   end
-  ModModel:CreateDummyAvatarForCopyMode(self.ModSuitInfo)
+  ModModel:CreateDummyAvatarForCopyMode(self.ModSuitInfo, self.SenderName)
   ModController:OpenView(ModCommon.ArmoryMod, self.TargetType, Tag, {1}, nil, {
     Func = function()
       ChatController:OpenView(nil, bBattle)
@@ -53,6 +53,7 @@ function M:OnBtnClickInSkin()
   UIManager(self):LoadUINew("ArmorySkin", {
     Type = self.SkinType,
     SkinId = self.SkinId,
+    HairId = self.HairId,
     OpenPreviewDyeFromChat = true,
     Colors = self.DyePlanInfo.Colors,
     OnCloseCallback = function()
@@ -62,12 +63,11 @@ function M:OnBtnClickInSkin()
 end
 
 function M:Destruct()
-  self.Button_Area.OnClicked:Remove(self, self.OnBtnClickInMod)
-  self.Button_Area.OnClicked:Remove(self, self.OnBtnClickInSkin)
 end
 
-function M:InitMod(ModSuitInfo, bSelfMsg)
+function M:InitMod(ModSuitInfo, bSelfMsg, SenderName)
   self.DyePlanInfo = nil
+  self.SenderName = nil
   self.ModSuitInfo = ModSuitInfo
   local ModSuitName = ModSuitInfo.TargetInfo[6]
   local TargetType = ModSuitInfo.TargetInfo[1]
@@ -78,7 +78,12 @@ function M:InitMod(ModSuitInfo, bSelfMsg)
   local Conf, Name = nil, "角色或武器被删除了!!!!"
   if "Char" == TargetType then
     Conf = DataMgr.Char[TargetId]
-    Name = Conf.CharName
+    if nil ~= Conf.GenderTag then
+      Name = SenderName
+      self.SenderName = SenderName
+    else
+      Name = Conf.CharName
+    end
   elseif "Weapon" == TargetType then
     Conf = DataMgr.Weapon[TargetId]
     Name = Conf.WeaponName
@@ -97,6 +102,7 @@ function M:InitMod(ModSuitInfo, bSelfMsg)
   end
   self.Text_Avatar:SetText(GText(Name))
   self.bSelfMsg = bSelfMsg
+  self.Button_Area.OnClicked:Clear()
   self.Button_Area.OnClicked:Add(self, self.OnBtnClickInMod)
 end
 
@@ -115,6 +121,10 @@ function M:InitDye(DyePlanInfo, bSelfMsg)
     Conf = DataMgr.Skin[SkinId]
   elseif "Weapon" == SkinType then
     Conf = DataMgr.WeaponSkin[SkinId] or DataMgr.Weapon[SkinId]
+  elseif "Hair" == SkinType then
+    Conf = DataMgr.Hair[SkinId]
+    self.SkinType = "Char"
+    self.HairId = SkinId
   end
   if Conf and Conf.Icon then
     UResourceLibrary.LoadObjectAsync(self, Conf.Icon, {
@@ -127,6 +137,7 @@ function M:InitDye(DyePlanInfo, bSelfMsg)
   end
   self.Text_Avatar:SetText(GText(SkinName))
   self.bSelfMsg = bSelfMsg
+  self.Button_Area.OnClicked:Clear()
   self.Button_Area.OnClicked:Add(self, self.OnBtnClickInSkin)
 end
 

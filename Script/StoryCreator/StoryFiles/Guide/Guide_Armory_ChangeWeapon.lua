@@ -891,7 +891,7 @@ return {
             key = "17561932674811269459",
             type = "ShowGuideButtonNode",
             name = "Button显示/隐藏信息",
-            pos = {x = 1150.606916869251, y = 494.4230064153227},
+            pos = {x = 1153.6372198528484, y = 495.9381579071213},
             propsData = {
               ShowEnable = true,
               MessageId = 300002,
@@ -913,7 +913,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "Left",
+              MessageLoc = "DownLeft",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },
@@ -921,7 +921,7 @@ return {
             key = "17561932674811269460",
             type = "ShowGuideButtonNode",
             name = "Button显示/隐藏信息",
-            pos = {x = 1269.913025793334, y = 125.2108535603274},
+            pos = {x = 1271.4281772851327, y = 125.2108535603274},
             propsData = {
               ShowEnable = true,
               MessageId = 300002,
@@ -943,7 +943,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "Left",
+              MessageLoc = "DownLeft",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },

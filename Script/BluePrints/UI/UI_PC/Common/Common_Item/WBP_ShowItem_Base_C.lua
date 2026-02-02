@@ -1,6 +1,7 @@
 require("UnLua")
 local M = Class({
-  "BluePrints.UI.BP_UIState_C"
+  "BluePrints.UI.BP_EMUserWidgetUtils_C",
+  "BluePrints.UI.BP_EMUserWidget_C"
 })
 
 function M:Construct()
@@ -177,7 +178,7 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
       Callback(Obj)
     end
   end
-  return M.Super.OnFocusReceived(self, MyGeometry, InFocusEvent)
+  return UIUtils.Handled
 end
 
 function M:OnAddedToFocusPath(InFocusEvent)

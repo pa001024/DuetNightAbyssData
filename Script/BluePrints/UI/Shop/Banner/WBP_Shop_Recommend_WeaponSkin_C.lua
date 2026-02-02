@@ -145,9 +145,6 @@ function M:InitBannerPage(BannerId, Parent)
   if not bQualityTag then
     self.Com_QualityTag:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
-  if self.WBP_Shop_Recommend_Common_TItle and self.WBP_Shop_Recommend_Common_TItle.Text_MainTitle and self.BannerTab.Text1 then
-    self.WBP_Shop_Recommend_Common_TItle.Text_MainTitle:SetText(GText(self.BannerTab.Text1))
-  end
   if self.WBP_Shop_Recommend_Common_TItle and self.WBP_Shop_Recommend_Common_TItle.Text_MainTitle and SkinRarity then
     local SkinNameFonts = {
       nil,
@@ -161,8 +158,17 @@ function M:InitBannerPage(BannerId, Parent)
       self.WBP_Shop_Recommend_Common_TItle.Text_MainTitle:SetFont(self.WBP_Shop_Recommend_Common_TItle[SkinNameFonts[SkinRarity]])
     end
   end
+  if self.WBP_Shop_Recommend_Common_TItle and self.WBP_Shop_Recommend_Common_TItle.Text_MainTitle and self.BannerTab.Text1 then
+    self.WBP_Shop_Recommend_Common_TItle:SetText(GText(self.BannerTab.Text1))
+  end
   if self.Text_ActivityDesc_White then
     self.Text_ActivityDesc_White:SetText(GText("UI_WeaponSkin_Preview"))
+  end
+  if self.Text_Detail and self.BannerTab.Text1Sub then
+    self.Text_Detail:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Text_Detail:SetText(GText(self.BannerTab.Text1Sub))
+  elseif self.Text_Detail then
+    self.Text_Detail:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
   self:InitActivity_TimeInfo()
   if not self:IsAnyAnimationPlaying() then
@@ -243,8 +249,8 @@ function M:InitActivity_TimeInfo()
   if self.BannerTab and self.BannerTab.EndTime then
     self:AddTimer(1.0, self.RefreshLeftTime, true, 0, "RefreshLeftTime", true)
     self:RefreshLeftTime()
-  elseif self.HB_Time then
-    self.HB_Time:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  elseif self.HB then
+    self.HB:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end
 

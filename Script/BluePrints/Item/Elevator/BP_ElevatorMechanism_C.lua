@@ -105,6 +105,7 @@ end
 
 function BP_ElevatorMechanism_C:CompleteNotify(TargetActor)
   if IsValid(TargetActor) then
+    DebugPrint("CompleteNotify", TargetActor == self.ElevatorBottomChildActor, self.ChildrenState[TargetActor].IsOpenDoor)
     self.ChildrenState[TargetActor].IsOpenDoor = not self.ChildrenState[TargetActor].IsOpenDoor
     self.ChildrenState[TargetActor].IsRun = false
     EventManager:FireEvent(EventID.ElevatorMechanismCompleteNotify, self)
@@ -113,8 +114,12 @@ function BP_ElevatorMechanism_C:CompleteNotify(TargetActor)
 end
 
 function BP_ElevatorMechanism_C:CloseAllDoor()
-  self:CloseBottomDoor(self.ElevatorBottomChildActor)
-  self:CloseTopDoor(self.ElevatorTopChildActor)
+  if not self.ElevatorBottomChildActor or self.ChildrenState[self.ElevatorBottomChildActor].IsOpenDoor then
+    self:CloseBottomDoor(self.ElevatorBottomChildActor)
+  end
+  if not self.ElevatorTopChildActor or self.ChildrenState[self.ElevatorTopChildActor].IsOpenDoor then
+    self:CloseTopDoor(self.ElevatorTopChildActor)
+  end
   self.ElevatorInCharacter:CloseDoor(self.ElevatorBottomChildActor)
   self.ElevatorInCharacter:CloseDoor(self.ElevatorTopChildActor)
 end
@@ -168,23 +173,9 @@ function BP_ElevatorMechanism_C:GetSelfChildActorState(SourceEid)
 end
 
 function BP_ElevatorMechanism_C:SetChildActorRunningEffect()
-  if IsValid(self.ElevatorInCharacter) then
-    if self.ElevatorInCharacter.FXLock:IsActive() then
-      self.ElevatorInCharacter.FXLock:Deactivate()
-    end
-    if not self.ElevatorInCharacter.FXRunning:IsActive() then
-      self.ElevatorInCharacter.FXRunning:Activate(true)
-    end
-  end
 end
 
 function BP_ElevatorMechanism_C:SetChildActorLockEffect()
-  if IsValid(self.ElevatorInCharacter) then
-    if self.ElevatorInCharacter.FXRunning:IsActive() then
-      self.ElevatorInCharacter.FXRunning:Deactivate()
-    end
-    self.ElevatorInCharacter.FXLock:Activate(true)
-  end
 end
 
 function BP_ElevatorMechanism_C:ClientInitInfo(Info)

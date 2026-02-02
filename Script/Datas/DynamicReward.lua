@@ -1,875 +1,1268 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("DynamicReward", {
   [1016] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1016,
-        EndTime = 1766437200,
-        RewardId = 1016,
-        RewardView = 1016,
-        StartTime = 1704081600
-      }
+    [1] = {
+      DynamicRewardId = 1016,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 1,
+      RewardId = 1016,
+      RewardView = 1016,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1016,
-        EndTime = 1768856400,
-        RewardId = 1016,
-        RewardView = 1016,
-        StartTime = 1766437201
-      }
+    [31] = {
+      DynamicRewardId = 1016,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 31,
+      RewardId = 1016,
+      RewardView = 1016,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1016,
-        EndTime = 1770670800,
-        RewardId = 1016,
-        RewardView = 1016,
-        StartTime = 1768856401
-      }
+    [61] = {
+      DynamicRewardId = 1016,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 61,
+      RewardId = 1016,
+      RewardView = 1016,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [91] = {
+      DynamicRewardId = 1016,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 91,
+      RewardId = 1016,
+      RewardView = 1016,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [121] = {
+      DynamicRewardId = 1016,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 121,
+      RewardId = 1016,
+      RewardView = 1016,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1017] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1017,
-        EndTime = 1766437200,
-        RewardId = 1017,
-        RewardView = 1017,
-        StartTime = 1704081600
-      }
+    [2] = {
+      DynamicRewardId = 1017,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 2,
+      RewardId = 1017,
+      RewardView = 1017,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1017,
-        EndTime = 1768856400,
-        RewardId = 1017,
-        RewardView = 1017,
-        StartTime = 1766437201
-      }
+    [32] = {
+      DynamicRewardId = 1017,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 32,
+      RewardId = 1017,
+      RewardView = 1017,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1017,
-        EndTime = 1770670800,
-        RewardId = 1017,
-        RewardView = 1017,
-        StartTime = 1768856401
-      }
+    [62] = {
+      DynamicRewardId = 1017,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 62,
+      RewardId = 1017,
+      RewardView = 1017,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [92] = {
+      DynamicRewardId = 1017,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 92,
+      RewardId = 1017,
+      RewardView = 1017,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [122] = {
+      DynamicRewardId = 1017,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 122,
+      RewardId = 1017,
+      RewardView = 1017,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1018] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1018,
-        EndTime = 1766437200,
-        RewardId = 1018,
-        RewardView = 1018,
-        StartTime = 1704081600
-      }
+    [3] = {
+      DynamicRewardId = 1018,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 3,
+      RewardId = 1018,
+      RewardView = 1018,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1018,
-        EndTime = 1768856400,
-        RewardId = 1018,
-        RewardView = 1018,
-        StartTime = 1766437201
-      }
+    [33] = {
+      DynamicRewardId = 1018,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 33,
+      RewardId = 1018,
+      RewardView = 1018,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1018,
-        EndTime = 1770670800,
-        RewardId = 1018,
-        RewardView = 1018,
-        StartTime = 1768856401
-      }
+    [63] = {
+      DynamicRewardId = 1018,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 63,
+      RewardId = 1018,
+      RewardView = 1018,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [93] = {
+      DynamicRewardId = 1018,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 93,
+      RewardId = 1018,
+      RewardView = 1018,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [123] = {
+      DynamicRewardId = 1018,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 123,
+      RewardId = 1018,
+      RewardView = 1018,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1019] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1019,
-        EndTime = 1766437200,
-        RewardId = 1019,
-        RewardView = 1019,
-        StartTime = 1704081600
-      }
+    [4] = {
+      DynamicRewardId = 1019,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 4,
+      RewardId = 1019,
+      RewardView = 1019,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1019,
-        EndTime = 1768856400,
-        RewardId = 1019,
-        RewardView = 1019,
-        StartTime = 1766437201
-      }
+    [34] = {
+      DynamicRewardId = 1019,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 34,
+      RewardId = 1019,
+      RewardView = 1019,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1019,
-        EndTime = 1770670800,
-        RewardId = 1019,
-        RewardView = 1019,
-        StartTime = 1768856401
-      }
+    [64] = {
+      DynamicRewardId = 1019,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 64,
+      RewardId = 1019,
+      RewardView = 1019,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [94] = {
+      DynamicRewardId = 1019,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 94,
+      RewardId = 1019,
+      RewardView = 1019,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [124] = {
+      DynamicRewardId = 1019,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 124,
+      RewardId = 1019,
+      RewardView = 1019,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1020] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1020,
-        EndTime = 1766437200,
-        RewardId = 1020,
-        RewardView = 1020,
-        StartTime = 1704081600
-      }
+    [5] = {
+      DynamicRewardId = 1020,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 5,
+      RewardId = 1020,
+      RewardView = 1020,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1020,
-        EndTime = 1768856400,
-        RewardId = 1020,
-        RewardView = 1020,
-        StartTime = 1766437201
-      }
+    [35] = {
+      DynamicRewardId = 1020,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 35,
+      RewardId = 1020,
+      RewardView = 1020,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1020,
-        EndTime = 1770670800,
-        RewardId = 1020,
-        RewardView = 1020,
-        StartTime = 1768856401
-      }
+    [65] = {
+      DynamicRewardId = 1020,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 65,
+      RewardId = 1020,
+      RewardView = 1020,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [95] = {
+      DynamicRewardId = 1020,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 95,
+      RewardId = 1020,
+      RewardView = 1020,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [125] = {
+      DynamicRewardId = 1020,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 125,
+      RewardId = 1020,
+      RewardView = 1020,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1021] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1021,
-        EndTime = 1766437200,
-        RewardId = 1021,
-        RewardView = 1021,
-        StartTime = 1704081600
-      }
+    [6] = {
+      DynamicRewardId = 1021,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 6,
+      RewardId = 1021,
+      RewardView = 1021,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1021,
-        EndTime = 1768856400,
-        RewardId = 1021,
-        RewardView = 1021,
-        StartTime = 1766437201
-      }
+    [36] = {
+      DynamicRewardId = 1021,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 36,
+      RewardId = 1021,
+      RewardView = 1021,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1021,
-        EndTime = 1770670800,
-        RewardId = 1021,
-        RewardView = 1021,
-        StartTime = 1768856401
-      }
+    [66] = {
+      DynamicRewardId = 1021,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 66,
+      RewardId = 1021,
+      RewardView = 1021,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [96] = {
+      DynamicRewardId = 1021,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 96,
+      RewardId = 1021,
+      RewardView = 1021,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [126] = {
+      DynamicRewardId = 1021,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 126,
+      RewardId = 1021,
+      RewardView = 1021,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1022] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1022,
-        EndTime = 1766437200,
-        RewardId = 1022,
-        RewardView = 1022,
-        StartTime = 1704081600
-      }
+    [7] = {
+      DynamicRewardId = 1022,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 7,
+      RewardId = 1022,
+      RewardView = 1022,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1022,
-        EndTime = 1768856400,
-        RewardId = 1022,
-        RewardView = 1022,
-        StartTime = 1766437201
-      }
+    [37] = {
+      DynamicRewardId = 1022,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 37,
+      RewardId = 1022,
+      RewardView = 1022,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1022,
-        EndTime = 1770670800,
-        RewardId = 1022,
-        RewardView = 1022,
-        StartTime = 1768856401
-      }
+    [67] = {
+      DynamicRewardId = 1022,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 67,
+      RewardId = 1022,
+      RewardView = 1022,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [97] = {
+      DynamicRewardId = 1022,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 97,
+      RewardId = 1022,
+      RewardView = 1022,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [127] = {
+      DynamicRewardId = 1022,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 127,
+      RewardId = 1022,
+      RewardView = 1022,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1023] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1023,
-        EndTime = 1766437200,
-        RewardId = 1023,
-        RewardView = 1023,
-        StartTime = 1704081600
-      }
+    [8] = {
+      DynamicRewardId = 1023,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 8,
+      RewardId = 1023,
+      RewardView = 1023,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1023,
-        EndTime = 1768856400,
-        RewardId = 1023,
-        RewardView = 1023,
-        StartTime = 1766437201
-      }
+    [38] = {
+      DynamicRewardId = 1023,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 38,
+      RewardId = 1023,
+      RewardView = 1023,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1023,
-        EndTime = 1770670800,
-        RewardId = 1111023,
-        RewardView = 1111023,
-        StartTime = 1768856401
-      }
+    [68] = {
+      DynamicRewardId = 1023,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 68,
+      RewardId = 1111023,
+      RewardView = 1111023,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [98] = {
+      DynamicRewardId = 1023,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 98,
+      RewardId = 1111023,
+      RewardView = 1111023,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [128] = {
+      DynamicRewardId = 1023,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 128,
+      RewardId = 1111023,
+      RewardView = 1111023,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1024] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1024,
-        EndTime = 1766437200,
-        RewardId = 1024,
-        RewardView = 1024,
-        StartTime = 1704081600
-      }
+    [9] = {
+      DynamicRewardId = 1024,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 9,
+      RewardId = 1024,
+      RewardView = 1024,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1024,
-        EndTime = 1768856400,
-        RewardId = 1024,
-        RewardView = 1024,
-        StartTime = 1766437201
-      }
+    [39] = {
+      DynamicRewardId = 1024,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 39,
+      RewardId = 1024,
+      RewardView = 1024,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1024,
-        EndTime = 1770670800,
-        RewardId = 1024,
-        RewardView = 1024,
-        StartTime = 1768856401
-      }
+    [69] = {
+      DynamicRewardId = 1024,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 69,
+      RewardId = 1024,
+      RewardView = 1024,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [99] = {
+      DynamicRewardId = 1024,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 99,
+      RewardId = 1024,
+      RewardView = 1024,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [129] = {
+      DynamicRewardId = 1024,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 129,
+      RewardId = 1024,
+      RewardView = 1024,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1025] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1025,
-        EndTime = 1766437200,
-        RewardId = 1025,
-        RewardView = 1025,
-        StartTime = 1704081600
-      }
+    [10] = {
+      DynamicRewardId = 1025,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 10,
+      RewardId = 1025,
+      RewardView = 1025,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1025,
-        EndTime = 1768856400,
-        RewardId = 1025,
-        RewardView = 1025,
-        StartTime = 1766437201
-      }
+    [40] = {
+      DynamicRewardId = 1025,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 40,
+      RewardId = 1025,
+      RewardView = 1025,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1025,
-        EndTime = 1770670800,
-        RewardId = 1025,
-        RewardView = 1025,
-        StartTime = 1768856401
-      }
+    [70] = {
+      DynamicRewardId = 1025,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 70,
+      RewardId = 1025,
+      RewardView = 1025,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [100] = {
+      DynamicRewardId = 1025,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 100,
+      RewardId = 1025,
+      RewardView = 1025,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [130] = {
+      DynamicRewardId = 1025,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 130,
+      RewardId = 1025,
+      RewardView = 1025,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1026] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1026,
-        EndTime = 1766437200,
-        RewardId = 1026,
-        RewardView = 1026,
-        StartTime = 1704081600
-      }
+    [11] = {
+      DynamicRewardId = 1026,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 11,
+      RewardId = 1026,
+      RewardView = 1026,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1026,
-        EndTime = 1768856400,
-        RewardId = 1026,
-        RewardView = 1026,
-        StartTime = 1766437201
-      }
+    [41] = {
+      DynamicRewardId = 1026,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 41,
+      RewardId = 1026,
+      RewardView = 1026,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1026,
-        EndTime = 1770670800,
-        RewardId = 1026,
-        RewardView = 1026,
-        StartTime = 1768856401
-      }
+    [71] = {
+      DynamicRewardId = 1026,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 71,
+      RewardId = 1026,
+      RewardView = 1026,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [101] = {
+      DynamicRewardId = 1026,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 101,
+      RewardId = 1026,
+      RewardView = 1026,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [131] = {
+      DynamicRewardId = 1026,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 131,
+      RewardId = 1026,
+      RewardView = 1026,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1027] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1027,
-        EndTime = 1766437200,
-        RewardId = 1027,
-        RewardView = 1027,
-        StartTime = 1704081600
-      }
+    [12] = {
+      DynamicRewardId = 1027,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 12,
+      RewardId = 1027,
+      RewardView = 1027,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1027,
-        EndTime = 1768856400,
-        RewardId = 1027,
-        RewardView = 1027,
-        StartTime = 1766437201
-      }
+    [42] = {
+      DynamicRewardId = 1027,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 42,
+      RewardId = 1027,
+      RewardView = 1027,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1027,
-        EndTime = 1770670800,
-        RewardId = 1027,
-        RewardView = 1027,
-        StartTime = 1768856401
-      }
+    [72] = {
+      DynamicRewardId = 1027,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 72,
+      RewardId = 1027,
+      RewardView = 1027,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [102] = {
+      DynamicRewardId = 1027,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 102,
+      RewardId = 1027,
+      RewardView = 1027,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [132] = {
+      DynamicRewardId = 1027,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 132,
+      RewardId = 1211027,
+      RewardView = 1211027,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1028] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1028,
-        EndTime = 1766437200,
-        RewardId = 1028,
-        RewardView = 1028,
-        StartTime = 1704081600
-      }
+    [13] = {
+      DynamicRewardId = 1028,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 13,
+      RewardId = 1028,
+      RewardView = 1028,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1028,
-        EndTime = 1768856400,
-        RewardId = 1028,
-        RewardView = 1028,
-        StartTime = 1766437201
-      }
+    [43] = {
+      DynamicRewardId = 1028,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 43,
+      RewardId = 1028,
+      RewardView = 1028,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1028,
-        EndTime = 1770670800,
-        RewardId = 1028,
-        RewardView = 1028,
-        StartTime = 1768856401
-      }
+    [73] = {
+      DynamicRewardId = 1028,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 73,
+      RewardId = 1028,
+      RewardView = 1028,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [103] = {
+      DynamicRewardId = 1028,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 103,
+      RewardId = 1028,
+      RewardView = 1028,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [133] = {
+      DynamicRewardId = 1028,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 133,
+      RewardId = 1028,
+      RewardView = 1028,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1029] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1029,
-        EndTime = 1766437200,
-        RewardId = 1029,
-        RewardView = 1029,
-        StartTime = 1704081600
-      }
+    [14] = {
+      DynamicRewardId = 1029,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 14,
+      RewardId = 1029,
+      RewardView = 1029,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1029,
-        EndTime = 1768856400,
-        RewardId = 1029,
-        RewardView = 1029,
-        StartTime = 1766437201
-      }
+    [44] = {
+      DynamicRewardId = 1029,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 44,
+      RewardId = 1029,
+      RewardView = 1029,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1029,
-        EndTime = 1770670800,
-        RewardId = 1029,
-        RewardView = 1029,
-        StartTime = 1768856401
-      }
+    [74] = {
+      DynamicRewardId = 1029,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 74,
+      RewardId = 1029,
+      RewardView = 1029,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [104] = {
+      DynamicRewardId = 1029,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 104,
+      RewardId = 1029,
+      RewardView = 1029,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [134] = {
+      DynamicRewardId = 1029,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 134,
+      RewardId = 1029,
+      RewardView = 1029,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1030] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1030,
-        EndTime = 1766437200,
-        RewardId = 1030,
-        RewardView = 1030,
-        StartTime = 1704081600
-      }
+    [15] = {
+      DynamicRewardId = 1030,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 15,
+      RewardId = 1030,
+      RewardView = 1030,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1030,
-        EndTime = 1768856400,
-        RewardId = 1030,
-        RewardView = 1030,
-        StartTime = 1766437201
-      }
+    [45] = {
+      DynamicRewardId = 1030,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 45,
+      RewardId = 1030,
+      RewardView = 1030,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1030,
-        EndTime = 1770670800,
-        RewardId = 1111030,
-        RewardView = 1111030,
-        StartTime = 1768856401
-      }
+    [75] = {
+      DynamicRewardId = 1030,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 75,
+      RewardId = 1111030,
+      RewardView = 1111030,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [105] = {
+      DynamicRewardId = 1030,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 105,
+      RewardId = 1111030,
+      RewardView = 1111030,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [135] = {
+      DynamicRewardId = 1030,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 135,
+      RewardId = 1111030,
+      RewardView = 1111030,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1031] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1031,
-        EndTime = 1766437200,
-        RewardId = 1031,
-        RewardView = 1031,
-        StartTime = 1704081600
-      }
+    [16] = {
+      DynamicRewardId = 1031,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 16,
+      RewardId = 1031,
+      RewardView = 1031,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1031,
-        EndTime = 1768856400,
-        RewardId = 1031,
-        RewardView = 1031,
-        StartTime = 1766437201
-      }
+    [46] = {
+      DynamicRewardId = 1031,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 46,
+      RewardId = 1031,
+      RewardView = 1031,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1031,
-        EndTime = 1770670800,
-        RewardId = 1031,
-        RewardView = 1031,
-        StartTime = 1768856401
-      }
+    [76] = {
+      DynamicRewardId = 1031,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 76,
+      RewardId = 1031,
+      RewardView = 1031,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [106] = {
+      DynamicRewardId = 1031,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 106,
+      RewardId = 1031,
+      RewardView = 1031,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [136] = {
+      DynamicRewardId = 1031,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 136,
+      RewardId = 1031,
+      RewardView = 1031,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1032] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1032,
-        EndTime = 1766437200,
-        RewardId = 1032,
-        RewardView = 1032,
-        StartTime = 1704081600
-      }
+    [17] = {
+      DynamicRewardId = 1032,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 17,
+      RewardId = 1032,
+      RewardView = 1032,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1032,
-        EndTime = 1768856400,
-        RewardId = 1032,
-        RewardView = 1032,
-        StartTime = 1766437201
-      }
+    [47] = {
+      DynamicRewardId = 1032,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 47,
+      RewardId = 1032,
+      RewardView = 1032,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1032,
-        EndTime = 1770670800,
-        RewardId = 1111032,
-        RewardView = 1111032,
-        StartTime = 1768856401
-      }
+    [77] = {
+      DynamicRewardId = 1032,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 77,
+      RewardId = 1111032,
+      RewardView = 1111032,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [107] = {
+      DynamicRewardId = 1032,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 107,
+      RewardId = 1111032,
+      RewardView = 1111032,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [137] = {
+      DynamicRewardId = 1032,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 137,
+      RewardId = 1111032,
+      RewardView = 1111032,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1033] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1033,
-        EndTime = 1766437200,
-        RewardId = 1033,
-        RewardView = 1033,
-        StartTime = 1704081600
-      }
+    [18] = {
+      DynamicRewardId = 1033,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 18,
+      RewardId = 1033,
+      RewardView = 1033,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1033,
-        EndTime = 1768856400,
-        RewardId = 1101033,
-        RewardView = 1101033,
-        StartTime = 1766437201
-      }
+    [48] = {
+      DynamicRewardId = 1033,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 48,
+      RewardId = 1101033,
+      RewardView = 1101033,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1033,
-        EndTime = 1770670800,
-        RewardId = 1101033,
-        RewardView = 1101033,
-        StartTime = 1768856401
-      }
+    [78] = {
+      DynamicRewardId = 1033,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 78,
+      RewardId = 1101033,
+      RewardView = 1101033,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [108] = {
+      DynamicRewardId = 1033,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 108,
+      RewardId = 1101033,
+      RewardView = 1101033,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [138] = {
+      DynamicRewardId = 1033,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 138,
+      RewardId = 1101033,
+      RewardView = 1101033,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1034] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1034,
-        EndTime = 1766437200,
-        RewardId = 1034,
-        RewardView = 1034,
-        StartTime = 1704081600
-      }
+    [19] = {
+      DynamicRewardId = 1034,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 19,
+      RewardId = 1034,
+      RewardView = 1034,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1034,
-        EndTime = 1768856400,
-        RewardId = 1034,
-        RewardView = 1034,
-        StartTime = 1766437201
-      }
+    [49] = {
+      DynamicRewardId = 1034,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 49,
+      RewardId = 1034,
+      RewardView = 1034,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1034,
-        EndTime = 1770670800,
-        RewardId = 1034,
-        RewardView = 1034,
-        StartTime = 1768856401
-      }
+    [79] = {
+      DynamicRewardId = 1034,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 79,
+      RewardId = 1034,
+      RewardView = 1034,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [109] = {
+      DynamicRewardId = 1034,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 109,
+      RewardId = 1034,
+      RewardView = 1034,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [139] = {
+      DynamicRewardId = 1034,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 139,
+      RewardId = 1034,
+      RewardView = 1034,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1035] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1035,
-        EndTime = 1766437200,
-        RewardId = 1035,
-        RewardView = 1035,
-        StartTime = 1704081600
-      }
+    [20] = {
+      DynamicRewardId = 1035,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 20,
+      RewardId = 1035,
+      RewardView = 1035,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1035,
-        EndTime = 1768856400,
-        RewardId = 1035,
-        RewardView = 1035,
-        StartTime = 1766437201
-      }
+    [50] = {
+      DynamicRewardId = 1035,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 50,
+      RewardId = 1035,
+      RewardView = 1035,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1035,
-        EndTime = 1770670800,
-        RewardId = 1035,
-        RewardView = 1035,
-        StartTime = 1768856401
-      }
+    [80] = {
+      DynamicRewardId = 1035,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 80,
+      RewardId = 1035,
+      RewardView = 1035,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [110] = {
+      DynamicRewardId = 1035,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 110,
+      RewardId = 1201035,
+      RewardView = 1201035,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [140] = {
+      DynamicRewardId = 1035,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 140,
+      RewardId = 1201035,
+      RewardView = 1201035,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1036] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1036,
-        EndTime = 1766437200,
-        RewardId = 1036,
-        RewardView = 1036,
-        StartTime = 1704081600
-      }
+    [21] = {
+      DynamicRewardId = 1036,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 21,
+      RewardId = 1036,
+      RewardView = 1036,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1036,
-        EndTime = 1768856400,
-        RewardId = 1036,
-        RewardView = 1036,
-        StartTime = 1766437201
-      }
+    [51] = {
+      DynamicRewardId = 1036,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 51,
+      RewardId = 1036,
+      RewardView = 1036,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1036,
-        EndTime = 1770670800,
-        RewardId = 1036,
-        RewardView = 1036,
-        StartTime = 1768856401
-      }
+    [81] = {
+      DynamicRewardId = 1036,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 81,
+      RewardId = 1036,
+      RewardView = 1036,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [111] = {
+      DynamicRewardId = 1036,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 111,
+      RewardId = 1201036,
+      RewardView = 1201036,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [141] = {
+      DynamicRewardId = 1036,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 141,
+      RewardId = 1201036,
+      RewardView = 1201036,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1037] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1037,
-        EndTime = 1766437200,
-        RewardId = 1037,
-        RewardView = 1037,
-        StartTime = 1704081600
-      }
+    [22] = {
+      DynamicRewardId = 1037,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 22,
+      RewardId = 1037,
+      RewardView = 1037,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1037,
-        EndTime = 1768856400,
-        RewardId = 1037,
-        RewardView = 1037,
-        StartTime = 1766437201
-      }
+    [52] = {
+      DynamicRewardId = 1037,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 52,
+      RewardId = 1037,
+      RewardView = 1037,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1037,
-        EndTime = 1770670800,
-        RewardId = 1037,
-        RewardView = 1037,
-        StartTime = 1768856401
-      }
+    [82] = {
+      DynamicRewardId = 1037,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 82,
+      RewardId = 1037,
+      RewardView = 1037,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [112] = {
+      DynamicRewardId = 1037,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 112,
+      RewardId = 1037,
+      RewardView = 1037,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [142] = {
+      DynamicRewardId = 1037,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 142,
+      RewardId = 1037,
+      RewardView = 1037,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1038] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1038,
-        EndTime = 1766437200,
-        RewardId = 1038,
-        RewardView = 1038,
-        StartTime = 1704081600
-      }
+    [23] = {
+      DynamicRewardId = 1038,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 23,
+      RewardId = 1038,
+      RewardView = 1038,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1038,
-        EndTime = 1768856400,
-        RewardId = 1101038,
-        RewardView = 1101038,
-        StartTime = 1766437201
-      }
+    [53] = {
+      DynamicRewardId = 1038,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 53,
+      RewardId = 1101038,
+      RewardView = 1101038,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1038,
-        EndTime = 1770670800,
-        RewardId = 1101038,
-        RewardView = 1101038,
-        StartTime = 1768856401
-      }
+    [83] = {
+      DynamicRewardId = 1038,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 83,
+      RewardId = 1101038,
+      RewardView = 1101038,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [113] = {
+      DynamicRewardId = 1038,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 113,
+      RewardId = 1101038,
+      RewardView = 1101038,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [143] = {
+      DynamicRewardId = 1038,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 143,
+      RewardId = 1101038,
+      RewardView = 1101038,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1039] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1039,
-        EndTime = 1766437200,
-        RewardId = 1039,
-        RewardView = 1039,
-        StartTime = 1704081600
-      }
+    [24] = {
+      DynamicRewardId = 1039,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 24,
+      RewardId = 1039,
+      RewardView = 1039,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1039,
-        EndTime = 1768856400,
-        RewardId = 1039,
-        RewardView = 1039,
-        StartTime = 1766437201
-      }
+    [54] = {
+      DynamicRewardId = 1039,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 54,
+      RewardId = 1039,
+      RewardView = 1039,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1039,
-        EndTime = 1770670800,
-        RewardId = 1039,
-        RewardView = 1039,
-        StartTime = 1768856401
-      }
+    [84] = {
+      DynamicRewardId = 1039,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 84,
+      RewardId = 1039,
+      RewardView = 1039,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [114] = {
+      DynamicRewardId = 1039,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 114,
+      RewardId = 1039,
+      RewardView = 1039,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [144] = {
+      DynamicRewardId = 1039,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 144,
+      RewardId = 1211039,
+      RewardView = 1211039,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1040] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1040,
-        EndTime = 1766437200,
-        RewardId = 1040,
-        RewardView = 1040,
-        StartTime = 1704081600
-      }
+    [25] = {
+      DynamicRewardId = 1040,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 25,
+      RewardId = 1040,
+      RewardView = 1040,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1040,
-        EndTime = 1768856400,
-        RewardId = 1040,
-        RewardView = 1040,
-        StartTime = 1766437201
-      }
+    [55] = {
+      DynamicRewardId = 1040,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 55,
+      RewardId = 1040,
+      RewardView = 1040,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1040,
-        EndTime = 1770670800,
-        RewardId = 1040,
-        RewardView = 1040,
-        StartTime = 1768856401
-      }
+    [85] = {
+      DynamicRewardId = 1040,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 85,
+      RewardId = 1040,
+      RewardView = 1040,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [115] = {
+      DynamicRewardId = 1040,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 115,
+      RewardId = 1040,
+      RewardView = 1040,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [145] = {
+      DynamicRewardId = 1040,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 145,
+      RewardId = 1040,
+      RewardView = 1040,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1041] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1041,
-        EndTime = 1766437200,
-        RewardId = 1041,
-        RewardView = 1041,
-        StartTime = 1704081600
-      }
+    [26] = {
+      DynamicRewardId = 1041,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 26,
+      RewardId = 1041,
+      RewardView = 1041,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1041,
-        EndTime = 1768856400,
-        RewardId = 1041,
-        RewardView = 1041,
-        StartTime = 1766437201
-      }
+    [56] = {
+      DynamicRewardId = 1041,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 56,
+      RewardId = 1041,
+      RewardView = 1041,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1041,
-        EndTime = 1770670800,
-        RewardId = 1041,
-        RewardView = 1041,
-        StartTime = 1768856401
-      }
+    [86] = {
+      DynamicRewardId = 1041,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 86,
+      RewardId = 1041,
+      RewardView = 1041,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [116] = {
+      DynamicRewardId = 1041,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 116,
+      RewardId = 1041,
+      RewardView = 1041,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [146] = {
+      DynamicRewardId = 1041,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 146,
+      RewardId = 1041,
+      RewardView = 1041,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1042] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1042,
-        EndTime = 1766437200,
-        RewardId = 1042,
-        RewardView = 1042,
-        StartTime = 1704081600
-      }
+    [27] = {
+      DynamicRewardId = 1042,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 27,
+      RewardId = 1042,
+      RewardView = 1042,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1042,
-        EndTime = 1768856400,
-        RewardId = 1101042,
-        RewardView = 1101042,
-        StartTime = 1766437201
-      }
+    [57] = {
+      DynamicRewardId = 1042,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 57,
+      RewardId = 1101042,
+      RewardView = 1101042,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1042,
-        EndTime = 1770670800,
-        RewardId = 1101042,
-        RewardView = 1101042,
-        StartTime = 1768856401
-      }
+    [87] = {
+      DynamicRewardId = 1042,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 87,
+      RewardId = 1101042,
+      RewardView = 1101042,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [117] = {
+      DynamicRewardId = 1042,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 117,
+      RewardId = 1101042,
+      RewardView = 1101042,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [147] = {
+      DynamicRewardId = 1042,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 147,
+      RewardId = 1101042,
+      RewardView = 1101042,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1043] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1043,
-        EndTime = 1766437200,
-        RewardId = 1043,
-        RewardView = 1043,
-        StartTime = 1704081600
-      }
+    [28] = {
+      DynamicRewardId = 1043,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 28,
+      RewardId = 1043,
+      RewardView = 1043,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1043,
-        EndTime = 1768856400,
-        RewardId = 1043,
-        RewardView = 1043,
-        StartTime = 1766437201
-      }
+    [58] = {
+      DynamicRewardId = 1043,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 58,
+      RewardId = 1043,
+      RewardView = 1043,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1043,
-        EndTime = 1770670800,
-        RewardId = 1043,
-        RewardView = 1043,
-        StartTime = 1768856401
-      }
+    [88] = {
+      DynamicRewardId = 1043,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 88,
+      RewardId = 1043,
+      RewardView = 1043,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [118] = {
+      DynamicRewardId = 1043,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 118,
+      RewardId = 1201043,
+      RewardView = 1201043,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [148] = {
+      DynamicRewardId = 1043,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 148,
+      RewardId = 1201043,
+      RewardView = 1201043,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1044] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1044,
-        EndTime = 1766437200,
-        RewardId = 1044,
-        RewardView = 1044,
-        StartTime = 1704081600
-      }
+    [29] = {
+      DynamicRewardId = 1044,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 29,
+      RewardId = 1044,
+      RewardView = 1044,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1044,
-        EndTime = 1768856400,
-        RewardId = 1044,
-        RewardView = 1044,
-        StartTime = 1766437201
-      }
+    [59] = {
+      DynamicRewardId = 1044,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 59,
+      RewardId = 1044,
+      RewardView = 1044,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1044,
-        EndTime = 1770670800,
-        RewardId = 1044,
-        RewardView = 1044,
-        StartTime = 1768856401
-      }
+    [89] = {
+      DynamicRewardId = 1044,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 89,
+      RewardId = 1044,
+      RewardView = 1044,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [119] = {
+      DynamicRewardId = 1044,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 119,
+      RewardId = 1044,
+      RewardView = 1044,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [149] = {
+      DynamicRewardId = 1044,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 149,
+      RewardId = 1211044,
+      RewardView = 1211044,
+      StartTime = LocalTimeProxy(1773090001)
     }
   },
   [1045] = {
-    [1704081600] = {
-      [1766437200] = {
-        DynamicRewardId = 1045,
-        EndTime = 1766437200,
-        RewardId = 1045,
-        RewardView = 1045,
-        StartTime = 1704081600
-      }
+    [30] = {
+      DynamicRewardId = 1045,
+      EndTime = LocalTimeProxy(1766437200),
+      Index = 30,
+      RewardId = 1045,
+      RewardView = 1045,
+      StartTime = LocalTimeProxy(1704081600)
     },
-    [1766437201] = {
-      [1768856400] = {
-        DynamicRewardId = 1045,
-        EndTime = 1768856400,
-        RewardId = 1045,
-        RewardView = 1045,
-        StartTime = 1766437201
-      }
+    [60] = {
+      DynamicRewardId = 1045,
+      EndTime = LocalTimeProxy(1768856400),
+      Index = 60,
+      RewardId = 1045,
+      RewardView = 1045,
+      StartTime = LocalTimeProxy(1766437201)
     },
-    [1768856401] = {
-      [1770670800] = {
-        DynamicRewardId = 1045,
-        EndTime = 1770670800,
-        RewardId = 1045,
-        RewardView = 1045,
-        StartTime = 1768856401
-      }
+    [90] = {
+      DynamicRewardId = 1045,
+      EndTime = LocalTimeProxy(1770670800),
+      Index = 90,
+      RewardId = 1045,
+      RewardView = 1045,
+      StartTime = LocalTimeProxy(1768856401)
+    },
+    [120] = {
+      DynamicRewardId = 1045,
+      EndTime = LocalTimeProxy(1773090000),
+      Index = 120,
+      RewardId = 1045,
+      RewardView = 1045,
+      StartTime = LocalTimeProxy(1770670801)
+    },
+    [150] = {
+      DynamicRewardId = 1045,
+      EndTime = LocalTimeProxy(1775509200),
+      Index = 150,
+      RewardId = 1045,
+      RewardView = 1045,
+      StartTime = LocalTimeProxy(1773090001)
     }
   }
 })

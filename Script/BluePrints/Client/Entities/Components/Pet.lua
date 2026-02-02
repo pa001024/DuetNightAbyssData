@@ -124,7 +124,7 @@ function Component:PetAddExpMulti(Callback, UniqueID, CostPetUniqueIDs, CostReso
   end
   
   CostResourceTable = CostResourceTable or {}
-  self:CallServer("PetAddExpMulti", Cb, UniqueID, CostPetUniqueIDs, CostResourceTable)
+  self:CallServer("PetAddExpMulti", Cb, UniqueID, CostPetUniqueIDs, CostResourceTable, "")
 end
 
 function Component:UpdatePlayerEquipPetLevel(PetLevel, UniqueID)
@@ -155,7 +155,7 @@ function Component:PetBreak(UniqueID, CostPetUniqueID)
     EventManager:FireEvent(EventID.OnPetBreakLevelUp, ErrCode, UniqueID, CostPetUniqueID, true, EventID.OnPetBreakLevelUp)
   end
   
-  self:CallServer("PetBreak", Cb, UniqueID, CostPetUniqueID)
+  self:CallServer("PetBreak", Cb, UniqueID, CostPetUniqueID, "")
 end
 
 function Component:TryCapturePetDungeon(ResourceId, xValue, PetId, CaptureCallBack)
@@ -195,7 +195,7 @@ function Component:UnLockPet(UniqueID)
     Cb(ErrorCode.RET_PET_NOT_EXIST)
     return
   end
-  self:CallServer("UnLockPet", Cb, UniqueID)
+  self:CallServer("UnLockPet", Cb, UniqueID, "")
 end
 
 function Component:PetSetName(UniqueID, Name)
@@ -220,7 +220,7 @@ function Component:PetEntryReplace(InCallBack, EntryReplacePetUniqueId, EntryRep
     EventManager:FireEvent(EventID.OnPetEntryReplace, ErrCode, EntryReplacePetUniqueId, EntryReplacePetEntryIndex, ConsumePetUniqueId, ConsumePetEntryIndex)
   end
   
-  self:CallServer("PetEntryReplace", Cb, EntryReplacePetUniqueId, EntryReplacePetEntryIndex, ConsumePetUniqueId, ConsumePetEntryIndex)
+  self:CallServer("PetEntryReplace", Cb, EntryReplacePetUniqueId, EntryReplacePetEntryIndex, ConsumePetUniqueId, ConsumePetEntryIndex, "")
 end
 
 function Component:TestPetEntryUp(EntryUpPetUniqueId, EntryIndex)
@@ -248,7 +248,7 @@ function Component:PetEntryUp(EntryUpPetUniqueId, EntryIndex, ConsumePetUniqueId
     end
   end
   
-  self:CallServer("PetEntryUp", Cb, EntryUpPetUniqueId, EntryIndex, ConsumePetUniqueIds)
+  self:CallServer("PetEntryUp", Cb, EntryUpPetUniqueId, EntryIndex, ConsumePetUniqueIds, "")
 end
 
 function Component:PetEntryLock(EntryId, IsLock, LockBagPet, InCallBack)

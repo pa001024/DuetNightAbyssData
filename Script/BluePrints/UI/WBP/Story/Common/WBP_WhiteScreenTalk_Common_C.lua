@@ -73,6 +73,10 @@ function M:PostEnterTalkTask(TalkTask, TaskData, OnPostEnterTalkTaskFinished)
 end
 
 function M:PreExitTalkTask(TalkTask, TaskData, OnPreExitTalkTaskFinished)
+  self:SwitchEnableWikiButton(false)
+  self:SwitchEnableSkipButton(false)
+  self:SwitchEnableReviewButton(false)
+  self:SwitchEnableAutoPlayButton(false)
   M.Super.PreExitTalkTask(self, TalkTask, TaskData, OnPreExitTalkTaskFinished)
 end
 

@@ -14,13 +14,8 @@ local M = Class({
 function M:Construct()
   M.Super.Construct(self)
   self:SetUpFixedText()
-  if AnnounceCommon.bUseWeb then
-    self.WebContent:SetVisibility(UIConst.VisibilityOp.Visible)
-    self.SizeBox_ContentRoot:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  else
-    self.WebContent:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.SizeBox_ContentRoot:SetVisibility(UIConst.VisibilityOp.Visible)
-  end
+  self.WebContent:SetVisibility(UIConst.VisibilityOp.Visible)
+  self.SizeBox_ContentRoot:SetVisibility(UIConst.VisibilityOp.Collapsed)
   if self.WebContent.BindUObject then
     self.WebContent:BindUObject("obj", self, true)
   end
@@ -282,27 +277,14 @@ function M:RealLoadWeb(Content)
 end
 
 function M:ChangeMainContent(Content, bForce)
-  if AnnounceCommon.bUseWeb then
-    if not self.CurContent or self.CurContent.Conf.NoticeID ~= Content.Conf.NoticeID or bForce then
-      self:RemoveTimer(self.GetHtmlHandle)
-      local _, key = self:AddTimer(0.1, function()
-        self:RealLoadWeb(Content)
-      end)
-      self.GetHtmlHandle = key
-    end
-    self.CurContent = Content
-  else
-    if self.CurrWidget then
-      self.CurrWidget:Close()
-    end
-    self.CurrWidget = self.StyleToContent[Content.Conf.NoticeStyle]
-    if not self.CurrWidget then
-      self.CurrWidget = self:CreateWidgetNew(AnnounceCommon.StyleToContent[Content.Conf.NoticeStyle])
-      self.CurrWidget:AddToParent(self.SizeBox_ContentRoot)
-      self.StyleToContent[Content.Conf.NoticeStyle] = self.CurrWidget
-    end
-    self.CurrWidget:Open(Content)
+  if not self.CurContent or self.CurContent.Conf.NoticeID ~= Content.Conf.NoticeID or bForce then
+    self:RemoveTimer(self.GetHtmlHandle)
+    local _, key = self:AddTimer(0.1, function()
+      self:RealLoadWeb(Content)
+    end)
+    self.GetHtmlHandle = key
   end
+  self.CurContent = Content
 end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)

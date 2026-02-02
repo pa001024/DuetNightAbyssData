@@ -1,9 +1,13 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("CharCostumeTemplate", {
   [210101] = {CharCostumeId = 210101, SkinId = 210102},
   [240101] = {CharCostumeId = 240101, SkinId = 240101},
+  [410201] = {CharCostumeId = 410201, SkinId = 410201},
   [510101] = {CharCostumeId = 510101, SkinId = 510101},
   [530100] = {
     BackAccessory = 40001,

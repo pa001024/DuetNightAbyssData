@@ -244,7 +244,7 @@ return {
               SoundStateType = 0,
               SoundPriority = 0,
               SoundType = 0,
-              SoundPath = "event:/bgm/1_1/0123_boss_juque",
+              SoundPath = "event:/bgm/1_1/0129_boss_yuming",
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {104102},

@@ -4,6 +4,9 @@ T.RT_2 = {25, 50}
 T.RT_3 = {50, 75}
 T.RT_4 = {75, 100}
 T.RT_5 = {100, 125}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

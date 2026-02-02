@@ -1,9 +1,15 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("ShopItem2PayGoods", {
   [99001] = "com.hero.dna.Pay_DailyCharaShards_fushu",
   [99002] = "com.hero.dna.Pay_DailyCharaShards_kezhou",
+  [99003] = "com.hero.dna.Pay_DailyCharaShards_zhiliu",
+  [99004] = "com.hero.dna.Pay_DailyCharaShards_yuming",
+  [99991] = "com.hero.dna.code.Special_001",
   [110101] = "com.hero.dna.Pay_101",
   [110102] = "com.hero.dna.Pay_102",
   [110103] = "com.hero.dna.Pay_103",
@@ -37,6 +43,30 @@ return ReadOnly("ShopItem2PayGoods", {
   [160123] = "com.hero.dna.Pay_CharaShards_kezhou2",
   [160124] = "com.hero.dna.Pay_CharaShards_kezhou3",
   [160125] = "com.hero.dna.Pay_CosmeticBundle",
+  [160126] = "com.hero.dna.Pay_HuayanWanhua1",
+  [160127] = "com.hero.dna.Pay_HuayanWanhua2",
+  [160128] = "com.hero.dna.Pay_HuayanWanhua3",
+  [160129] = "com.hero.dna.Pay_MingJinWanhua1",
+  [160130] = "com.hero.dna.Pay_MingJinWanhua2",
+  [160131] = "com.hero.dna.Pay_MingJinWanhua3",
+  [160132] = "com.hero.dna.Pay_ThemedSkinPack_dongri",
+  [160133] = "com.hero.dna.Pay_ThemedSkinPack_congcong",
+  [160134] = "com.hero.dna.Pay_CharaShards_zhiliu1",
+  [160135] = "com.hero.dna.Pay_CharaShards_zhiliu2",
+  [160136] = "com.hero.dna.Pay_CharaShards_zhiliu3",
+  [160137] = "com.hero.dna.Pay_CharaShards_yuming1",
+  [160138] = "com.hero.dna.Pay_CharaShards_yuming2",
+  [160139] = "com.hero.dna.Pay_CharaShards_yuming3",
+  [160140] = "com.hero.dna.Pay_MingJinWanhuaSupply1",
+  [160141] = "com.hero.dna.Pay_MingJinWanhuaSupply2",
+  [160142] = "com.hero.dna.Pay_MingJinWanhuaSupply3",
+  [160143] = "com.hero.dna.Pay_MingJinZhuangshiSupply1",
+  [160144] = "com.hero.dna.Pay_MingJinZhuangshiSupply2",
+  [160145] = "com.hero.dna.Pay_CosmeticBundle_caiyuan",
+  [160146] = "com.hero.dna.Pay_CosmeticBundle_congcong",
+  [160147] = "com.hero.dna.Pay_CosmeticBundle_dongri",
   [160316] = "com.hero.dna.Pay_ThemedSkinPack01",
-  [160317] = "com.hero.dna.Pay_ThemedSkinPack_qipao01"
+  [160317] = "com.hero.dna.Pay_ThemedSkinPack_qipao01",
+  [160318] = "com.hero.dna.Pay_ThemedSkinPack_dongri01",
+  [160319] = "com.hero.dna.Pay_ThemedSkinPack_congcong01"
 })

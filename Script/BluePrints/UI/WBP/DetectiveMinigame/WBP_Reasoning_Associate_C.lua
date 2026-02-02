@@ -72,10 +72,12 @@ function M:OnBtnCloseClick()
     local UIManager = GWorld.GameInstance:GetGameUIManager()
     local ReasoningUI = UIManager:GetUIObj("DetectiveMinigame")
     ReasoningUI:OnAssociteUIClose()
+    self:StopAllAnimations()
     self:Close()
   end
   DebugPrint("thy   self.CanClose JLy", self.CanClose)
-  if self.CanClose or ModController:IsMobile() then
+  if self.CanClose then
+    self.CanClose = false
     self:PlayAnimation(self.Succeed_Out)
   end
 end
@@ -110,9 +112,6 @@ function M:OnInAnimationFinished()
   elseif 1 == self.Type then
     self:PlayAnimation(self.Ratiocinate_Failure)
     AudioManager(self):PlayUISound(self, "event:/ui/common/tuili_clue_think_fail", nil, nil)
-    for _, clueWidget in ipairs(self.ClueWidgets) do
-      clueWidget:PlayAnimation(clueWidget.Failure)
-    end
   elseif 2 == self.Type then
     self:PlayAnimation(self.Succeed)
     DebugPrint("thy   self.CanClose succeedStart JLy", self.CanClose)
@@ -120,9 +119,12 @@ function M:OnInAnimationFinished()
   elseif 3 == self.Type then
     self:PlayAnimation(self.Failure)
     AudioManager(self):PlayUISound(self, "event:/ui/common/tuili_clue_think_fail", nil, nil)
-    for _, clueWidget in ipairs(self.ClueWidgets) do
-      clueWidget:PlayAnimation(clueWidget.Failure)
-    end
+  end
+end
+
+function M:Failure_In()
+  for _, clueWidget in ipairs(self.ClueWidgets) do
+    clueWidget:PlayAnimation(clueWidget.Failure)
   end
 end
 

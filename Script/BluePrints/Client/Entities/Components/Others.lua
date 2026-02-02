@@ -19,6 +19,11 @@ function Component:InitReddotTrees()
   if SettingUtils.IsShowRedDotForLayoutPlan() then
     ReddotManager.IncreaseLeafNodeCount("Setting_Layout", 1)
   end
+  ReddotManager.ClearLeafNodeCount("Setting_Service")
+  local HasCustomerServiceRedDot = self:CheckCustomerServiceRedDot()
+  if HasCustomerServiceRedDot then
+    ReddotManager.IncreaseLeafNodeCount("Setting_Service", 1)
+  end
 end
 
 function Component:InitGameSetting()
@@ -324,8 +329,25 @@ function Component:InitMobileHudPlan(PlanIndex)
 end
 
 function Component:OnReceiveCustomerServiceRedDot()
-  self.logger.debug("OnReceiveCustomerServiceRedDot")
+  self.logger.debug("OnReceiveCustomerServiceRedDot", self.DataStatistics.CustomerServiceRedDot)
   ReddotManager.IncreaseLeafNodeCount("Setting_Service", 1)
+end
+
+function Component:ClearCustomerServiceRedDot()
+  self.logger.debug("ClearCustomerServiceRedDot Begin", self.DataStatistics.CustomerServiceRedDot)
+  
+  local function Callback(Ret)
+    self.logger.debug("ClearCustomerServiceRedDot Callback", Ret, self.DataStatistics.CustomerServiceRedDot)
+  end
+  
+  self:CallServer("ClearCustomerServiceRedDot", Callback)
+end
+
+function Component:CheckCustomerServiceRedDot()
+  if self.DataStatistics.CustomerServiceRedDot then
+    return true
+  end
+  return false
 end
 
 return Component

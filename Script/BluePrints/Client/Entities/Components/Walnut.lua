@@ -9,6 +9,14 @@ function Component:LeaveWorld()
   WalnutBagController:Destory()
 end
 
+function Component:_OnPropChangeWalnut(keys)
+  DebugPrint(keys)
+end
+
+function Component:_OnPropChangeWalnutBag(keys)
+  DebugPrint(keys)
+end
+
 function Component:SelectWalnut(Callback, DungeonId, WalnutId)
   assert(DungeonId)
   assert(WalnutId)
@@ -40,6 +48,7 @@ function Component:OnRepWalnutBag(WalnutBag, ConsumeRecord)
       end
     end
   end
+  EventManager:FireEvent(EventID.OnUpdateWalnutItem, "WalnutBagItemChange")
 end
 
 function Component:CheckWalnutEnough(Walnuts)

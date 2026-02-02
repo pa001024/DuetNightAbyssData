@@ -9,6 +9,16 @@ return {
       CreatorId = 2280131,
       UnitType = "Mechanism",
       UnitId = 490073
+    },
+    ["2540001"] = {
+      CreatorId = 2540001,
+      UnitType = "Mechanism",
+      UnitId = 14
+    },
+    ["2530017"] = {
+      CreatorId = 2530017,
+      UnitType = "Mechanism",
+      UnitId = 1
     }
   },
   ManualItem = {

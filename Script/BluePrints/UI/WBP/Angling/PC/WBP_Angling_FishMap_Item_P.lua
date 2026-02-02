@@ -21,6 +21,7 @@ local RarityAnim = {
 function M:OnListItemObjectSet(Content)
   self.New:SetVisibility(ESlateVisibility.Collapsed)
   self.FishId = Content.FishId
+  self.ContentIdx = Content.ContentIdx
   self:InitWidget()
   self.IsNotLocked = self:SetIsNotLocked()
   if self.IsNotLocked then
@@ -28,6 +29,7 @@ function M:OnListItemObjectSet(Content)
   else
     self:InitLockWidget()
   end
+  self.Root:SetRenderOpacity(0)
   self:PlayAnimation(self.In)
 end
 

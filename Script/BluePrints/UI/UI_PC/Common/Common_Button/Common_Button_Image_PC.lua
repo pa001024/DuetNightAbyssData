@@ -114,4 +114,10 @@ function Common_Button_Image_PC:OnRemovedFromFocusPath(InFocusEvent)
   end
 end
 
+function Common_Button_Image_PC:OverriddenSoundFunc(SoundPath)
+  self:TryOverrideSoundFunc(function()
+    AudioManager(self):PlayUISound(self, SoundPath or "event:/ui/common/click_btn_small", "", nil)
+  end)
+end
+
 return Common_Button_Image_PC

@@ -36,11 +36,6 @@ function WBP_CommonChangeSceneBg_C:OnShowLoading()
   EMCache:SaveCommon()
   print(_G.LogTag, "SetSyncLoaderOptimization False")
   GWorld.GameInstance:SetSyncLoaderOptimization(false)
-  local SpecialQuestEvent = ClientEventUtils:GetCurrentEvent()
-  if SpecialQuestEvent then
-    SpecialQuestEvent:HandleInLoading()
-  end
-  GWorld.StoryMgr:HandleInLoading()
   local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   if PlayerCharacter then
     PlayerCharacter:SetCanInteractiveTrigger(false, "Loading")
@@ -406,6 +401,8 @@ function WBP_CommonChangeSceneBg_C:RealCloseLoading()
     UIManager(self):LaunchAfterLoadingMgr()
   end
   self:SetMouseCursorVisable(true)
+  print(_G.LogTag, "SetSyncLoaderOptimization True")
+  GWorld.GameInstance:SetSyncLoaderOptimization(true)
 end
 
 function WBP_CommonChangeSceneBg_C:Close()

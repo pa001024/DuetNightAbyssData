@@ -1,7 +1,18 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("DestroyReason", {
+  AutoChess = {
+    DestroyReason = "AutoChess",
+    IsClearGuide = true,
+    IsClearStaticCreatorRef = true,
+    IsMonClearBattleInfo = false,
+    IsTriggerDestroyEvent = true,
+    IsTriggrRelationSpawn = false
+  },
   Breakable = {
     DestroyReason = "Breakable",
     IsClearGuide = true,
@@ -28,6 +39,14 @@ return ReadOnly("DestroyReason", {
   },
   Dispatch = {
     DestroyReason = "Dispatch",
+    IsClearGuide = true,
+    IsClearStaticCreatorRef = true,
+    IsMonClearBattleInfo = true,
+    IsTriggerDestroyEvent = true,
+    IsTriggrRelationSpawn = false
+  },
+  DungeonNormal = {
+    DestroyReason = "DungeonNormal",
     IsClearGuide = true,
     IsClearStaticCreatorRef = true,
     IsMonClearBattleInfo = true,

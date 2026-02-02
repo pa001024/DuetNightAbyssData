@@ -5,6 +5,7 @@ M._components = {
 }
 
 function M:Construct()
+  self.ExecuteItems = {}
   self.Btn_Execute.OnClicked:Add(self, self.OnClick)
 end
 
@@ -12,14 +13,61 @@ function M:Tick(MyGeometry, InDeltaTime)
   self:RefreshPhoneExecuteBan()
 end
 
+function M:IsCanExecute()
+  if not self.Player then
+    return false
+  end
+  if not self.Player:DoCheckUseSkill(self.Player:GetSkillByType(UE.ESkillType.Condemn)) then
+    return false
+  end
+  for Widget, _ in pairs(self.ExecuteItems) do
+    if Widget.bCanExecute and Widget.DefeatedCharacter and Widget.DefeatedCharacter.PenalizeInteractiveComponent and Widget.DefeatedCharacter.PenalizeInteractiveComponent:IsCanInteractive(self.Player) then
+      return true
+    end
+  end
+  return false
+end
+
+function M:IsCanExecuteForSingleCharacter(Character)
+  if not self.Player then
+    return false
+  end
+  if not self.Player:DoCheckUseSkill(self.Player:GetSkillByType(UE.ESkillType.Condemn)) then
+    return false
+  end
+  for Widget, _ in pairs(self.ExecuteItems) do
+    if Widget.bCanExecute and Widget.DefeatedCharacter and Widget.DefeatedCharacter == Character and Widget.DefeatedCharacter.PenalizeInteractiveComponent and Widget.DefeatedCharacter.PenalizeInteractiveComponent:IsCanInteractive(self.Player) then
+      return true
+    end
+  end
+  return false
+end
+
+function M:PlayLoopAnimation(Widget)
+  if not self.PlayLoopWidget then
+    self.PlayLoopWidget = {}
+  end
+  if 0 == CommonUtils.TableLength(self.PlayLoopWidget) then
+    self:PlayAnimation(self.Loop, 0, 0, 0, 1, true)
+  end
+  self.PlayLoopWidget[Widget] = true
+end
+
+function M:StopLoopAnimation(Widget)
+  if not self.PlayLoopWidget then
+    self.PlayLoopWidget = {}
+  end
+  self.PlayLoopWidget[Widget] = nil
+  if 0 == CommonUtils.TableLength(self.PlayLoopWidget) then
+    self:StopAnimation(self.Loop)
+  end
+end
+
 function M:RefreshPhoneExecuteBan()
   if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile" then
     return
   end
-  if not self.Player or not self.DefeatedUI then
-    return
-  end
-  if self.Player:DoCheckUseSkill(self.Player:GetSkillByType(UE.ESkillType.Condemn)) and self.DefeatedUI.bCanExecute and self.DefeatedUI.DefeatedCharacter and self.DefeatedUI.DefeatedCharacter.PenalizeInteractiveComponent and self.DefeatedUI.DefeatedCharacter.PenalizeInteractiveComponent:IsCanInteractive(self.Player) then
+  if self:IsCanExecute() then
     if self.IsPlayBan then
       self:ShowBan(false)
     end
@@ -32,7 +80,8 @@ function M:RefreshPhoneExecuteBan()
   end
 end
 
-function M:Show()
+function M:Show(ExecuteItem)
+  self.ExecuteItems[ExecuteItem] = true
   if self.IsShow then
     return
   end
@@ -51,10 +100,20 @@ function M:Show()
   end
 end
 
-function M:Hide()
-  if self.IsShow == false then
+function M:Hide(ExecuteItem)
+  self.ExecuteItems[ExecuteItem] = nil
+  local IsZero = 0 == CommonUtils.TableLength(self.ExecuteItems)
+  if self.IsShow == false and IsZero then
     return
   end
+  self.IsShow = false
+  self.IsPlayBan = false
+  self:StopAllAnimations()
+  self:ShowBan(false)
+  self:PlayAnimation(self.Out)
+end
+
+function M:DirectlyClose()
   self.IsShow = false
   self.IsPlayBan = false
   self:StopAllAnimations()
@@ -66,14 +125,15 @@ function M:ShowBan(IsShow)
   if IsShow then
     self.Image_Ban:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Image_Icon:SetOpacity(0.5)
-    if self.DefeatedUI.MarkPlayLoop then
-      self:StopAnimation(self.Loop)
-    end
+    self:StopAnimation(self.Loop)
   else
     self.Image_Ban:SetVisibility(ESlateVisibility.Collapsed)
     self.Image_Icon:SetOpacity(1)
-    if self.DefeatedUI.MarkPlayLoop then
-      self:PlayAnimation(self.Loop, 0, 0, 0, 1, true)
+    for Widget, v in pairs(self.ExecuteItems) do
+      if Widget and Widget.MarkPlayLoop then
+        self:PlayAnimation(self.Loop, 0, 0, 0, 1, true)
+        break
+      end
     end
   end
 end

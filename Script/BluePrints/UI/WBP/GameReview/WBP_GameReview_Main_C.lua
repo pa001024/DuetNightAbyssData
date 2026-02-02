@@ -1,4 +1,5 @@
 require("UnLua")
+local MiscUtils = require("Utils.MiscUtils")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
@@ -12,20 +13,15 @@ function M:Destruct()
 end
 
 function M:InitPlatform()
-  local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
-  if "IOS" == PlatformName then
-    self:InitIOSContent()
+  local PlatformInitFuncs = {
+    IOS = self.InitIOSContent,
+    TapTap = self.InitTapTapContent,
+    Google = self.InitGoogleContent
+  }
+  local PlatformName = MiscUtils:GetGameReviewPlatform()
+  if PlatformInitFuncs[PlatformName] then
+    PlatformInitFuncs[PlatformName](self)
     return
-  end
-  local ImgChannelId = Utils.HeroUSDKSubsystem():GetMirrorChannelId()
-  local ImgChannelInfo = DataMgr.ImgChannelInfo[ImgChannelId]
-  if ImgChannelInfo and ImgChannelInfo.Provider == "TapTap" then
-    self:InitTapTapContent()
-    return
-  end
-  local ChannelId = Utils.HeroUSDKSubsystem():GetChannelId()
-  if 160 == ChannelId then
-    self:InitGoogleContent()
   end
   print("GameReview:: Init Error Platform.", PlatformName, ChannelId, ImgChannelId)
 end

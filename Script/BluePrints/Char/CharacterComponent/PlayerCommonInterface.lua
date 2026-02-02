@@ -134,25 +134,6 @@ function PlayerCommonInterface:AfterBeginPlay()
   self:InitPostProcessSettings()
 end
 
-function PlayerCommonInterface:SetupActionGroups()
-  self:AddToActionGroups("Battle", "Attack")
-  self:AddToActionGroups("Battle", "Jump")
-  self:AddToActionGroups("Battle", "Slide")
-  self:AddToActionGroups("Battle", "BulletJump")
-  self:AddToActionGroups("Battle", "Skill1")
-  self:AddToActionGroups("Battle", "Skill2")
-  self:AddToActionGroups("Battle", "Skill3")
-  self:AddToActionGroups("Battle", "Fire")
-  self:AddToActionGroups("Battle", "Reload")
-  self:AddToActionGroups("Battle", "ChargeBullet")
-  self:AddToActionGroups("Battle", "Avoid")
-  self:AddToActionGroups("Battle", "SwitchCrouch")
-  self:AddToActionGroups("Battle", "Locomotion")
-  self:AddToActionGroups("Region", "SwitchMaster")
-  self:AddToActionGroups("Flying", "BulletJump")
-  self:InitBattleWheelForbidGroup()
-end
-
 function PlayerCommonInterface:LoadFinished()
   print("LoadFinished")
 end
@@ -236,7 +217,8 @@ function PlayerCommonInterface:UpdatePlayerTaskInfo()
     if nil ~= TaskBarWidget then
       BattleMainUI.Pos_TaskBar:AddChildToOverlay(TaskBarWidget)
     end
-    if 0 == Avatar.TrackingQuestChainId or nil == Avatar.TrackingQuestChainId then
+    local QuestChain = Avatar.QuestChains[Avatar.TrackingQuestChainId]
+    if not QuestChain or QuestChain and QuestChain:IsFinish() then
       BattleMainUI.Pos_TaskBar:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
   elseif nil ~= BattleMainUI and nil ~= BattleMainUI.Pos_TaskBar then
@@ -499,6 +481,14 @@ end
 function PlayerCommonInterface:RefreshTitle(PrefixId, SuffixId, TitleFrameId)
   self:DisableTitle()
   self:EnableTitle(PrefixId, SuffixId, TitleFrameId)
+end
+
+function PlayerCommonInterface:PlayEmoji(EmojiPath)
+  self:EnableHeadWidget("Bubble_Emoji", true, EmojiPath)
+end
+
+function PlayerCommonInterface:StopEmoji()
+  self:EnableHeadWidget("Bubble_Emoji", false)
 end
 
 function PlayerCommonInterface:InitBattleWheelForbidGroup()

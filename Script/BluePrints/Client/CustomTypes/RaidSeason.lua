@@ -49,10 +49,16 @@ function RaidSeason:GetEventData()
 end
 
 function RaidSeason:GetStartTime()
+  if skynet then
+    return TimeUtils.EastEightToLocalTimestamp(self:GetEventData().EventStartTime)
+  end
   return self:GetEventData().EventStartTime
 end
 
 function RaidSeason:GetEndTime()
+  if skynet then
+    return TimeUtils.EastEightToLocalTimestamp(self:GetEventData().EventEndTime)
+  end
   return self:GetEventData().EventEndTime
 end
 

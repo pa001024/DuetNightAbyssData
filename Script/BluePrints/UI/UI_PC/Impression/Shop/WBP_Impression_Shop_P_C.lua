@@ -114,14 +114,14 @@ function M:InitImpressionShop(MainTabIdx, SubTabIdx, ShopItemId, bNotPlayBgBlend
   self:InitBg(bNotPlayBgBlend)
   self:InitSortList()
   self:InitShopTabInfo(MainTabIdx, SubTabIdx, 2)
+  self.SelectItemId = nil
   if ShopItemId then
     self.SelectItemId = ShopItemId
     if not self:IsAnimationPlaying(self.In) then
-      self:BlockAllUIInput(true)
+      self:BlockAllUIInput(true, "SP_DisplayOnly")
       self:AddTimer(0.1, function()
         self:BlockAllUIInput(false)
         self:ShowItemDetail()
-        self.SelectItemId = nil
       end, false, 0, "OpenShopItemDialog", true)
     end
   end
@@ -137,6 +137,17 @@ function M:ShowItemDetail()
     return
   end
   ShopItemContent.UI:ShowItemDetail()
+end
+
+function M:CloseItemDetail()
+  if not self.SelectItemId then
+    return
+  end
+  local ShopItemContent = self.ShopItemContentsMap[self.SelectItemId]
+  if not ShopItemContent or not IsValid(ShopItemContent.UI) then
+    return
+  end
+  ShopItemContent.UI:CloseItemDetail()
 end
 
 function M:InitRegionInfo(MainTabIdx)
@@ -474,11 +485,10 @@ function M:OnAnimationFinished(InAnimation)
   elseif InAnimation == self.In then
     self:BindButtonEvents()
     if self.SelectItemId then
-      self:BlockAllUIInput(true)
+      self:BlockAllUIInput(true, "SP_DisplayOnly")
       self:AddTimer(0.1, function()
         self:BlockAllUIInput(false)
         self:ShowItemDetail()
-        self.SelectItemId = nil
       end, false, 0, "OpenShopItemDialog", true)
     end
   end
@@ -489,6 +499,11 @@ function M:Close()
   self:HorizontalListViewResize_TearDown()
   self:PlayCloseAudio()
   M.Super.Close(self)
+end
+
+function M:ReceiveExitState(StackAction)
+  self:CloseItemDetail()
+  M.Super.ReceiveExitState(self, StackAction)
 end
 
 function M:IsShopItemUnlocked(ShopItemData)

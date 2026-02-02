@@ -66,10 +66,10 @@ function Component:DungeonInitCoroutine()
     self:SetVisibility(ESlateVisibility.HitTestInvisible)
     if self.MapImage then
       self.MapImage:SetRenderOpacity(self.BattleMapOpacity)
+      self.MapImage:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     end
     self.MiniMapRad = 320
     self.Panel_Point:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    self.MapImage:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.HideTrack = false
   else
   end

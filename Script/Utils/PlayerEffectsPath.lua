@@ -1,4 +1,20 @@
 local T = {}
+T.MainPlayer = {
+  "/Game/Asset/Effect/Niagara/Item/NS_Item_Base.NS_Item_Base",
+  "/Game/Asset/Effect/Niagara/Item/NS_Item_Base_Chara.NS_Item_Base_Chara",
+  "/Game/Asset/Effect/Niagara/Item/NS_Item_Base_Fly.NS_Item_Base_Fly",
+  "/Game/Asset/Effect/Niagara/Item/NS_Item_Base_Pro.NS_Item_Base_Pro",
+  "/Game/Asset/Effect/Niagara/Item/NS_Item_Pick_Base.NS_Item_Pick_Base",
+  "/Game/Asset/Effect/Niagara/Item/NS_Item_Pick_Base_Pro.NS_Item_Pick_Base_Pro",
+  "/Game/Asset/Effect/Niagara/Item/NS_Item_Restore.NS_Item_Restore",
+  "/Game/Asset/Effect/Niagara/Player/A_Common/NS_Char_BonusHit.NS_Char_BonusHit",
+  "/Game/Asset/Effect/Niagara/Common/Player/NS_hit_char_physics.NS_hit_char_physics",
+  "/Game/Asset/Effect/Niagara/Player/A_Common/NS_BulletJump.NS_BulletJump",
+  "/Game/Asset/Effect/Niagara/Player/A_Common/NS_Mod_Jump_Wind_Loop.NS_Mod_Jump_Wind_Loop",
+  "/Game/Asset/Effect/Niagara/Player/A_Common/NS_Common_Buff.NS_Common_Buff",
+  "/Game/Asset/Effect/Niagara/Player/A_Common/NS_Common_DeBuff.NS_Common_DeBuff",
+  "/Game/Asset/Effect/Niagara/Weapon/A_Common/NS_WeaponAppear.NS_WeaponAppear"
+}
 T.RT_1 = {
   "/Game/Asset/Effect/Niagara/Player/Zhangyu/zhangyu_skill_new/NS_Zhangyu_Skill02_Brust_xuli.NS_Zhangyu_Skill02_Brust_xuli",
   "/Game/Asset/Effect/Niagara/Player/Zhangyu/zhangyu_skill_new/NS_Zhangyu_Skill02_Eyes.NS_Zhangyu_Skill02_Eyes",
@@ -758,6 +774,7 @@ T.RT_42 = {
   "/Game/Asset/Effect/Niagara/Player/Heitao/NS_Heitao_Skill01_Rush_End.NS_Heitao_Skill01_Rush_End"
 }
 PlayerEffectsPath = {
+  MainPlayer = T.MainPlayer,
   [2301] = T.RT_1,
   [1601] = T.RT_2,
   [3202] = T.RT_3,

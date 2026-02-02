@@ -357,6 +357,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -477,6 +478,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -540,6 +542,7 @@ return {
             pos = {x = 607.2461787472379, y = 1208.4958573014694},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_ShenXunJIGUAN"
             }
@@ -582,6 +585,7 @@ return {
             pos = {x = 53.45072644037498, y = 1648.197817297861},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_ShenXunJIGUAN"
             }
@@ -1520,6 +1524,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1757,6 +1762,7 @@ return {
             pos = {x = 1598.44064674137, y = 212.60223569091028},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_XuanZeZUO"
             }
@@ -1768,6 +1774,7 @@ return {
             pos = {x = 1610.0338129138393, y = 609.9686980851401},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_XuanZeYOU"
             }
@@ -1779,6 +1786,7 @@ return {
             pos = {x = 2198.7910571678044, y = 434.9263594946141},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_XuanZeZUO"
             }
@@ -1790,6 +1798,7 @@ return {
             pos = {x = 2462.295775275784, y = 433.2972386154932},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_XuanZeYOU"
             }
@@ -2003,6 +2012,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2177,6 +2187,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2222,6 +2233,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2267,6 +2279,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2312,6 +2325,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2478,6 +2492,7 @@ return {
             pos = {x = -324.1806138137615, y = -1064.2794104704572},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_ShenXunJIGUAN"
             }
@@ -2526,6 +2541,7 @@ return {
             pos = {x = -294.5015333309832, y = -1314.0159708999413},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_ShenxunYizi"
             }
@@ -2568,6 +2584,7 @@ return {
             pos = {x = 654.8323427591516, y = -1214.8281913473706},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_ShenxunYizi"
             }
@@ -3456,6 +3473,7 @@ return {
             pos = {x = 1454.2198540950822, y = 561.2489699955219},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_XuanZeZUO"
             }
@@ -3467,6 +3485,7 @@ return {
             pos = {x = 2104.5696023606774, y = 642.90442474009},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_XuanZeZUO"
             }
@@ -3478,6 +3497,7 @@ return {
             pos = {x = 2351.860348632662, y = 633.5630521167702},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_XuanZeYOU"
             }
@@ -3489,6 +3509,7 @@ return {
             pos = {x = 1178.8948449567106, y = 739.5896999552172},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_XuanZeYOU"
             }
@@ -3548,6 +3569,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -3955,6 +3977,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",

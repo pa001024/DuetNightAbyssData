@@ -421,6 +421,15 @@ function M:DungeonSetPlayerTrans()
   end
 end
 
+function M:SetEnteredPlayerTrans(PlayerController)
+  if not self.startPoint then
+    self:GetRandStartPoint()
+  end
+  if self.startPoint then
+    self.startPoint:SetEnteredPlayerTrans(PlayerController)
+  end
+end
+
 function M:RealSetNewEnteredPlayerTrans(AvatarEidStr)
   if self.startPoint == nil then
     self:GetRandStartPoint()

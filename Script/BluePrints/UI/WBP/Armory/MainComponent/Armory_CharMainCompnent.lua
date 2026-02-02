@@ -8,14 +8,13 @@ function M:ComponentInitDispatcher()
   self:AddDispatcher(EventID.OnCharBreakLevelUp, self, self.OnCharUpgraded)
   self:AddDispatcher(EventID.OnCharGradeLevelUp, self, self.OnCharGradeLevelUp)
   self:AddDispatcher(EventID.OnCharSkillLevelUp, self, self.OnCharSkillLevelUp)
-  self:AddDispatcher(EventID.OnSwitchRole, self, self.OnSwitchRole)
+  self:AddDispatcher(EventID.OnSwitchCurrentChar, self, self.OnSwitchCurrentChar)
   self:AddDispatcher(EventID.OnNewCharObtained, self, self.OnNewCharObtained)
   self:AddDispatcher(EventID.OnCharCardLevelResourcesChanged, self, self.OnCharCardLevelResourcesChanged)
   self:AddDispatcher(EventID.OnCharRewardStateChanged, self, self.OnCharRewardStateChanged)
 end
 
 function M:CharMain_Close()
-  self:RemoveDispatcher(EventID.OnSwitchRole)
 end
 
 function M:CharMain_OnArmoryTargetStateChanged(NewAvatar)
@@ -646,8 +645,11 @@ function M:OnNewCharObtained(CharUuid)
   end
 end
 
-function M:OnSwitchRole(...)
+function M:OnSwitchCurrentChar(Ret)
   self:BlockAllUIInput(false)
+  if not ErrorCode:Check(Ret) then
+    return
+  end
   local Avatar = ArmoryUtils:GetAvatar()
   self.CurrentChar = Avatar.Chars[Avatar.CurrentChar]
   self.ComparedChar = self.CurrentChar

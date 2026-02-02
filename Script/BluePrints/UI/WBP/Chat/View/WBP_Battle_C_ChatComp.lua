@@ -369,7 +369,7 @@ end
 
 function Component:InitChatKeyTip()
   if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
-    local IsGamepad = self.CurInputDeviceType == UE4.ECommonInputType.Gamepad
+    local IsGamepad = UIUtils.UtilsGetCurrentInputType() == UE4.ECommonInputType.Gamepad
     self.Group_NormalKey:SetVisibility(IsGamepad and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed)
   end
 end

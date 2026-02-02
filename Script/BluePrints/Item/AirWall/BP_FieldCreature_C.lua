@@ -256,7 +256,7 @@ function BP_FieldCreature_C:ReceiveTick(DeltaSeconds)
     else
       local Hit, Res = self:LineTraceCheck(TargetSign.Target)
       if Res and UKismetMathLibrary.EqualEqual_ObjectObject(TargetSign.Target, Hit.Actor) and self.SkillEnter > 0 then
-        if not self:EndEnterEffect(Target) then
+        if not self:EndEnterEffect(TargetSign) then
           self.Super.PropUseSkill(self, self.SkillEnter, TargetSign.Target)
         end
         self.AllowPlayer[TargetSign.Target.Eid].IsCover = false

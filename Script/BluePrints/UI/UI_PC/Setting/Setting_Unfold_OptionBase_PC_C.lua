@@ -327,9 +327,7 @@ function S:SetSystemLanguageOldOptionId()
     [3] = "JP",
     [4] = "KR",
     [5] = "TC",
-    [6] = "DE",
-    [7] = "FR",
-    [8] = "ES"
+    [6] = "FR"
   }
   local NowSystemLanguage = SettingUtils.GetEMCache(self.EMCacheName, self.EMCacheKey, self.SystemLanguageList[tonumber(self.DefaultValue)])
   self.OldOptionId = self:SetOldOptionId(self.SystemLanguageList, NowSystemLanguage)
@@ -563,11 +561,10 @@ function S:SetDLSSOptionOldOptionId()
     [4] = 23,
     [5] = 31
   }
-  local NowDLSSFG = 1
-  if UStreamlineLibraryDLSSG then
-    NowDLSSFG = UStreamlineLibraryDLSSG.GetDLSSGMode()
+  local NowOptionId = EMCache:Get("DLSSFG")
+  if nil == NowOptionId then
+    NowOptionId = tonumber(self.DefaultValue)
   end
-  local NowOptionId = NowDLSSFG
   self.OldOptionId = self:SetOldOptionId(self.DLSSFGList, NowOptionId)
 end
 
@@ -578,7 +575,7 @@ end
 function S:SaveDLSSOptionOptionSetting()
   local MiniOptionCache = self.DLSSFGList[self.NowOptionId]
   EMCache:Set("DLSSFG", MiniOptionCache)
-  if UStreamlineLibraryDLSSG then
+  if UStreamlineLibraryDLSSG and UStreamlineLibraryDLSSG.IsDLSSGSupported() then
     UStreamlineLibraryDLSSG.SetDLSSGMode(MiniOptionCache)
   end
 end
@@ -1603,6 +1600,7 @@ function S:SaveRenderingOptionSetting()
   end
   UKismetSystemLibrary.ExecuteConsoleCommand(self, "r.ScreenPercentage " .. RenderingValue)
   SettingUtils.SaveEMCache(self.CacheName, self.EMCacheKey, self.NowOptionId)
+  SettingUtils.SaveEMCache("RenderingValue", nil, RenderingValue)
   if not self.RefreshByEvent then
     EventManager:FireEvent(EventID.OnSwitchRendering, self.NowOptionId)
   end

@@ -202,6 +202,14 @@ function M:SetDailyRewardCache(DailyReward)
   self.DailyRewardCache = DailyReward
 end
 
+function M:SetPurchaseRewardCache(PurchaseReward)
+  self.PurchaseRewardCache = PurchaseReward
+end
+
+function M:ClearPurchaseRewardCache()
+  self.PurchaseRewardCache = nil
+end
+
 function M:ClearDailyRewardCache()
   self.DailyRewardCache = nil
 end

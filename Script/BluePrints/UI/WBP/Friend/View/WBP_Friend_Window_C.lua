@@ -20,8 +20,20 @@ function M:Construct()
     self:RefreshList(bAnimation)
   end
   
+  local function AgreeAddFunc(bAnimation)
+    self:RefreshList(bAnimation)
+    self:AddTimer(0.35, function()
+      if self.ListDatas == nil or 0 == #self.ListDatas then
+        self:SetFocus()
+        self.Com_EmptyBg.bIsFocusable = true
+        self.Com_EmptyBg:SetVisibility(UIConst.VisibilityOp.Visible)
+        self.Com_EmptyBg:SetFocus()
+      end
+    end, false, 0, nil, true)
+  end
+  
   self.EventSwitch = {
-    [FriendCommon.EventId.AgreeAdd] = CommonFunc,
+    [FriendCommon.EventId.AgreeAdd] = AgreeAddFunc,
     [FriendCommon.EventId.RefuseAdd] = CommonFunc,
     [FriendCommon.EventId.CancelBlackList] = function(bAnimation)
       self:RefreshList(bAnimation)

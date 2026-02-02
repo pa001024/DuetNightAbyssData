@@ -2,9 +2,13 @@ require("UnLua")
 local DungeonDeliveryComponent = {}
 
 function DungeonDeliveryComponent:ActiveDungeonDeliveryPoint(DeliveryPointId)
+  if not IsDedicatedServer(self) then
+    return
+  end
   self.ActivatedDeliveryPointId = DeliveryPointId
   self:UpdateDeliveryInfo()
   self:AddTimer(Const.DunegonDeliveryPointUpdateInterval, self.UpdateDeliveryInfo, true, 0, Const.DunegonDeliveryPointUpdateTimerHandle)
+  GWorld:DSBLog("Info", "DungeonDeliveryComponent: Active DeliveryPoint " .. DeliveryPointId, "GameMode")
 end
 
 function DungeonDeliveryComponent:DeactiveDungeonDeliveryPoint()
@@ -15,6 +19,7 @@ function DungeonDeliveryComponent:DeactiveDungeonDeliveryPoint()
     PlayerState:SetActivatedDungeonDelivertPointId(-1)
   end
   self:RemoveTimer(Const.DunegonDeliveryPointUpdateTimerHandle)
+  GWorld:DSBLog("Info", "DungeonDeliveryComponent: Deactive DeliveryPoint ", "GameMode")
 end
 
 function DungeonDeliveryComponent:UpdateDeliveryInfo()
@@ -48,6 +53,7 @@ function DungeonDeliveryComponent:OnReceivePlayerDeliveryStart(PlayerEid)
   end
   self:SetPlayerInvincible(Player, true)
   LevelLoader:TeleportInDedicatedServer(Player, TargetLocation, TargetRotation)
+  GWorld:DSBLog("Info", "DungeonDeliveryComponent: Teleport player " .. Player.Eid, "GameMode")
 end
 
 function DungeonDeliveryComponent:OnDungeonPlayerDeliveryEnd(Player)

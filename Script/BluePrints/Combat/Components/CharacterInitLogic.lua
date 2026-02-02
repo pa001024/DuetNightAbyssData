@@ -124,6 +124,10 @@ function Component:RegionPlayerInitInfo(ObjId, EidOverride)
   EventManager:FireEvent(EventID.AddRegionIndicatorInfo, self.Eid, RoleInfo.Uid, self:K2_GetActorLocation(), LuaObjId)
   self:RegisterOtherWorldPlayerCharacterToSubSystem(ObjId)
   print(_G.LogTag, "RegionPlayerInitInfo Spawn Other Player Character Success Init", RoleInfo.IsCrouching)
+  if RoleInfo.MountDatas and 0 ~= RoleInfo.MountDatas.MountId then
+    RoleInfo.IsCrouching = false
+    self:EnableBattleMount(RoleInfo.MountDatas.MountId, 0, true)
+  end
   if RoleInfo.IsCrouching then
     self:SetCrouch(true)
   else
@@ -177,13 +181,14 @@ function Component:AuthorityPreInitInfo(Info)
   end
   self:SetDirectSource(Info.DirectSource and Info.DirectSource.Eid)
   self:RawRemoveAllBuff(true)
-  self:DestroyActorOnDead_CPP(false)
+  self:DestroyActorOnDead_CPP(false, EDeathReason.NoReason, true)
   self:ClearSkill()
   self:ClearAttrs()
+  self:ServerResourceDisableBattleMount(true)
 end
 
 function Component:ClientPreInitInfo(Info)
-  self:DestroyAllCreatures()
+  self:DestroyAllCreatures(ECreatureDeathWithCreator.Destroy, EDeathReason.CreatureRawDestroy)
 end
 
 function Component:UnpackAvatarInfoNew(Context)
@@ -413,6 +418,9 @@ function Component:CommonInitInfo(Info)
   end
   self.CurrentSkinId = Info.AppearanceSuit and Info.AppearanceSuit.SkinId or Info.SkinId
   self.ShadowModelId = Info.ShadowModelId or 0
+  if self.CurrentCompositeMesh then
+    self.CurrentCompositeMesh = nil
+  end
   self:LoadCurrentModel()
   self.EnableAnimGravity = 0
   self.UsingAnimGravity = false
@@ -495,7 +503,7 @@ function Component:GetAvatarBuffList()
       if not AvatarInfo then
         return
       end
-      AvatarBuffs = AvatarInfo.PlayerInfo.Buffs
+      AvatarBuffs = AvatarInfo.PlayerInfo.ServerBuffs
     end
   end
   return AvatarBuffs
@@ -625,7 +633,6 @@ function Component:OnCharacterReady(Info)
     end
     self:ServerSetUpWeapons(Info.MeleeWeapon, Info.RangedWeapon, Info.UltraWeapons)
     self:InitAllWeaponModifier(Info.ReplaceAttrs)
-    self:ServerSetUpAccessories()
     self:ServerSetUpDestructableBody()
     self:InitAvatarBuffs(Info)
     if Info.Pet and self:IsPlayer() then
@@ -703,11 +710,6 @@ function Component:OnCharacterReady(Info)
     end
   end
   if IsDedicatedServer(self) and IsAuthority(self) then
-    if self:IsPlayer() then
-      for Key, Value in pairs(self.InfoForInit) do
-        self.BornInfo[Key] = Value
-      end
-    end
     self.ServerBornInfo = self.BornInfo:ToEffectStruct()
   end
   self:ZeroComboCount(UE4.EClearComboReason.Timelimit)
@@ -906,7 +908,21 @@ function Component:InitAppearanceSuit(AppearanceSuit)
     end
   else
     self:ClearAllSuitItem()
+    self:InitPartMeshCompWithDefault()
   end
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    return
+  end
+  if not self.CharacterFashion then
+    return
+  end
+  if AppearanceSuit then
+    return
+  end
+  AppearanceSuit = {}
+  AppearanceSuit.AccessorySuit = self.CharacterFashion:GetDefaultAccessorySuit()
+  self.CharacterFashion:InitAppearanceSuit(AppearanceSuit)
 end
 
 function Component:SetStartLevelId()
@@ -937,7 +953,6 @@ function Component:JudgeIfPlayLevelEnter()
   elseif not PlayerState then
     DebugPrint("Tianyi@ PlayState is nullptr")
   end
-  local LevelName = UE4.UGameplayStatics.GetCurrentLevelName(self, true)
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
   if GameInstance.NeedPlayTempSceneMonstage then
     GameInstance.NeedPlayTempSceneMonstage = false
@@ -946,11 +961,6 @@ function Component:JudgeIfPlayLevelEnter()
   local CurrentDungeonId = GameInstance and GameInstance:GetCurrentDungeonId()
   if CurrentDungeonId and DataMgr.Dungeon[CurrentDungeonId] and DataMgr.Dungeon[CurrentDungeonId].IsPlayLevelEnter then
     return true
-  end
-  for i, v in pairs(DataMgr.Dungeon) do
-    if string.match(v.DungeonMapFile, LevelName) and v.IsPlayLevelEnter then
-      return true
-    end
   end
   return false
 end
@@ -977,10 +987,24 @@ function Component:SetInteractiveTriggerDistance(NewDropDistance)
 end
 
 function Component:CreatePhantomBySquad(AvatarEidStr, GameMode)
-  local PhantomInfo = GameMode.AvatarInfos[AvatarEidStr].PhantomInfo
+  if nil == GameMode or nil == AvatarEidStr then
+    DebugPrint("gmy@CharacterInitLogic Component:CreatePhantomBySquad", "invalid params", AvatarEidStr)
+    return
+  end
+  local AvatarInfos = GameMode.AvatarInfos
+  if nil == AvatarInfos then
+    DebugPrint("gmy@CharacterInitLogic Component:CreatePhantomBySquad", "invalid AvatarInfos", AvatarEidStr)
+    return
+  end
+  local AvatarInfo = AvatarInfos[AvatarEidStr]
+  if nil == AvatarInfo then
+    DebugPrint("gmy@CharacterInitLogic Component:CreatePhantomBySquad", "invalid AvatarInfo", AvatarEidStr)
+    return
+  end
+  local PhantomInfo = AvatarInfo.PhantomInfo
   if PhantomInfo then
     for Index, Data in ipairs(PhantomInfo) do
-      if next(Data.RoleInfo) then
+      if Data.RoleInfo and Data.RoleInfo.RoleId then
         self:CreatePhantom(Data.RoleInfo.RoleId, 1, Data, {IsSpawnBySquad = 1, TeamIndex = Index})
       end
     end

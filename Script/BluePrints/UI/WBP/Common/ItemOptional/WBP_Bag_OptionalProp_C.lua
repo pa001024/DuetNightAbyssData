@@ -240,7 +240,9 @@ function M:OnMenuOpenChangedEvents(bIsOpen)
   else
     self:ChangeGamePadMode("Default")
     self:AddTimer(0.01, function()
-      self.LastFocusWidget:SetFocus()
+      if self.LastFocusWidget then
+        self.LastFocusWidget:SetFocus()
+      end
     end)
   end
 end

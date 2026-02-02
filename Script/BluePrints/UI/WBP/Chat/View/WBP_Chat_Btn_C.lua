@@ -70,7 +70,6 @@ function M:SetForbidden()
   if self.bForbidden then
     return
   end
-  Utils.Traceback(LXYTag, "聊天按钮禁用")
   self.bForbidden = true
   self.Button_Area:SetForbidden(true)
 end
@@ -79,7 +78,6 @@ function M:SetNormal()
   if not self.bForbidden then
     return
   end
-  Utils.Traceback(LXYTag, "聊天按钮启用")
   self.bForbidden = false
   self.Button_Area:SetForbidden(false)
 end

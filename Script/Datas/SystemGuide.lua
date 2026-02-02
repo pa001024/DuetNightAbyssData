@@ -1,5 +1,8 @@
 local T = {}
 T.RT_1 = {SelectedTargetId = 3301}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -9,6 +12,7 @@ return ReadOnly("SystemGuide", {
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
     GuideInfo = {Disarm = 2},
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_PartialDamage.story",
     SysGuideId = 1001
@@ -17,6 +21,7 @@ return ReadOnly("SystemGuide", {
     EnterDungeon = 10,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_PartialDamage_Shijingzhe.story",
     SysGuideId = 1002
@@ -24,6 +29,7 @@ return ReadOnly("SystemGuide", {
   [2001] = {
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Delivery.story",
     IsInRegion = 1,
@@ -36,6 +42,7 @@ return ReadOnly("SystemGuide", {
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
     GuideInfo = T.RT_1,
+    GuideSkip = 0,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Armory_ChangeWeapon.story",
     IsInRegion = 1,
@@ -47,6 +54,7 @@ return ReadOnly("SystemGuide", {
     ConditionCheck = 4160,
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 1,
+    GuideSkip = 0,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Mod.story",
     IsInRegion = 1,
@@ -58,6 +66,7 @@ return ReadOnly("SystemGuide", {
   [2008] = {
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Dungeon.story",
     IsInRegion = 1,
@@ -69,6 +78,7 @@ return ReadOnly("SystemGuide", {
   [2009] = {
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Quest.story",
     IsInRegion = 1,
@@ -80,6 +90,7 @@ return ReadOnly("SystemGuide", {
   [2010] = {
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Forge.story",
     IsInRegion = 1,
@@ -91,6 +102,7 @@ return ReadOnly("SystemGuide", {
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
     GuideInfo = T.RT_1,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_BattleBag.story",
     IsInRegion = 1,
@@ -103,6 +115,7 @@ return ReadOnly("SystemGuide", {
   [2013] = {
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_ModTendency.story",
     IsInRegion = 1,
@@ -113,6 +126,7 @@ return ReadOnly("SystemGuide", {
   [2014] = {
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_HardBoss.story",
     IsInRegion = 1,
@@ -124,6 +138,7 @@ return ReadOnly("SystemGuide", {
   [2015] = {
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Impression.story",
     IsInRegion = 1,
@@ -133,6 +148,7 @@ return ReadOnly("SystemGuide", {
   [2016] = {
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_BattleBag_2.story",
     IsInRegion = 1,
@@ -144,6 +160,7 @@ return ReadOnly("SystemGuide", {
     EnterDungeon = 900001,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_TrainingGround_1.story",
     SysGuideId = 2019
@@ -151,6 +168,7 @@ return ReadOnly("SystemGuide", {
   [2020] = {
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_TrainingGround_2.story",
     OpenInterface = "TrainingGroundSetup",
@@ -159,6 +177,7 @@ return ReadOnly("SystemGuide", {
   [2021] = {
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_TrainingGround_3.story",
     PlayerInControl = 1,
@@ -168,6 +187,7 @@ return ReadOnly("SystemGuide", {
   [2022] = {
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Modlevelup.story",
     IsInRegion = 1,
@@ -177,6 +197,7 @@ return ReadOnly("SystemGuide", {
   [2023] = {
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Rouge.story",
     IsInRegion = 1,
@@ -189,6 +210,7 @@ return ReadOnly("SystemGuide", {
     ConditionCheck = 5057,
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Rouge_Lantern.story",
     OpenInterface = "RougeMain",
@@ -199,6 +221,7 @@ return ReadOnly("SystemGuide", {
     FinishQuest = 10020108,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Shop.story",
     OpenInterface = "ShopMain",
@@ -208,6 +231,7 @@ return ReadOnly("SystemGuide", {
     FinishQuestChain = 200209,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Maer_EmptyQuest_1.story",
     IsInRegion = 1,
@@ -218,6 +242,7 @@ return ReadOnly("SystemGuide", {
     FinishQuestChain = 200219,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Maer_EmptyQuest_2.story",
     IsInRegion = 1,
@@ -228,6 +253,7 @@ return ReadOnly("SystemGuide", {
     FinishQuestChain = 200208,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Maer_EmptyQuest_3.story",
     IsInRegion = 1,
@@ -237,6 +263,7 @@ return ReadOnly("SystemGuide", {
   [2031] = {
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 1,
+    GuideSkip = 0,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Pet2.story",
     IsInRegion = 1,
@@ -246,6 +273,7 @@ return ReadOnly("SystemGuide", {
   [2032] = {
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Rouge_3Choose1.story",
     OpenInterface = "Rouge_Blessing_3Choose1",
@@ -254,6 +282,7 @@ return ReadOnly("SystemGuide", {
   [2036] = {
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Temple.story",
     IsInRegion = 1,
@@ -265,6 +294,7 @@ return ReadOnly("SystemGuide", {
     FinishQuest = 10020101,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_SkillPress.story",
     IsInRegion = 1,
@@ -275,6 +305,7 @@ return ReadOnly("SystemGuide", {
   [2039] = {
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_GroupOnlineRule.story",
     IsInRegion = 1,
@@ -287,6 +318,7 @@ return ReadOnly("SystemGuide", {
     FinishQuest = 20021501,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Fish.story",
     IsInRegion = 1,
@@ -296,6 +328,7 @@ return ReadOnly("SystemGuide", {
   [2051] = {
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_DynStory.story",
     IsInRegion = 1,
@@ -306,6 +339,7 @@ return ReadOnly("SystemGuide", {
   [2052] = {
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Pan.story",
     IsInRegion = 1,
@@ -317,6 +351,7 @@ return ReadOnly("SystemGuide", {
     FinishQuest = 20022902,
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_ChangeColor.story",
     IsInRegion = 1,
@@ -327,6 +362,7 @@ return ReadOnly("SystemGuide", {
     FinishQuest = 10020105,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_WIKI.story",
     IsInRegion = 1,
@@ -337,6 +373,7 @@ return ReadOnly("SystemGuide", {
     EnterDungeon = 80201,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_SideWaysJump.story",
     SysGuideId = 2056
@@ -345,6 +382,7 @@ return ReadOnly("SystemGuide", {
     ConditionCheck = 4330,
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 1,
     GuideStoryline = "Guide/Guide_Dispatch.story",
     IsInRegion = 1,
@@ -356,6 +394,7 @@ return ReadOnly("SystemGuide", {
     ConditionCheck = 1,
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Sojourns.story",
     IsInRegion = 1,
@@ -367,6 +406,7 @@ return ReadOnly("SystemGuide", {
     ConditionCheck = 4320,
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_DailyGoalUI.story",
     IsInRegion = 1,
@@ -379,6 +419,7 @@ return ReadOnly("SystemGuide", {
     FinishQuest = 20023501,
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_ModArchiveUI.story",
     IsInRegion = 1,
@@ -390,6 +431,7 @@ return ReadOnly("SystemGuide", {
   [2062] = {
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_AbyssUI.story",
     IsInRegion = 1,
@@ -399,6 +441,7 @@ return ReadOnly("SystemGuide", {
   [2063] = {
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Rouge_UIGuide.story",
     PlayerInControl = 1,
@@ -408,6 +451,7 @@ return ReadOnly("SystemGuide", {
   [2064] = {
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Rouge_Settlement.story",
     OpenInterface = "RougeSettlement",
@@ -416,6 +460,7 @@ return ReadOnly("SystemGuide", {
   [2065] = {
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Rouge_Contract.story",
     OpenInterface = "RougeLikeContractPanel",
@@ -425,6 +470,7 @@ return ReadOnly("SystemGuide", {
     ConditionCheck = 6013,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Abyss.story",
     SysGuideId = 2066
@@ -433,6 +479,7 @@ return ReadOnly("SystemGuide", {
     FinishQuest = 10020101,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Tracking.story",
     IsInRegion = 1,
@@ -443,6 +490,7 @@ return ReadOnly("SystemGuide", {
     FinishQuestChain = 200103,
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_PetTrain.story",
     IsInRegion = 1,
@@ -453,6 +501,7 @@ return ReadOnly("SystemGuide", {
     FinishQuestChain = 200103,
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_DungeonSec.story",
     IsInRegion = 1,
@@ -467,6 +516,7 @@ return ReadOnly("SystemGuide", {
     FinishQuest = 10020502,
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Dungeon_2.story",
     IsInRegion = 1,
@@ -477,6 +527,7 @@ return ReadOnly("SystemGuide", {
     FinishQuest = 10020108,
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 1,
+    GuideSkip = 0,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Mail.story",
     IsInRegion = 1,
@@ -487,6 +538,7 @@ return ReadOnly("SystemGuide", {
   [2072] = {
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 1,
+    GuideSkip = 0,
     GuideStart = 1,
     GuideStoryline = "Guide/Guide_DungeonSec_2.story",
     PreSysGuideId = 2069,
@@ -495,6 +547,7 @@ return ReadOnly("SystemGuide", {
   [2073] = {
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_WalnutShop.story",
     IsInRegion = 1,
@@ -508,6 +561,7 @@ return ReadOnly("SystemGuide", {
     FinishQuestChain = 100208,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 1,
     GuideStoryline = "Guide/Guide_OnlineArea.story",
     IsInRegion = 1,
@@ -518,6 +572,7 @@ return ReadOnly("SystemGuide", {
     FinishQuestChain = 200104,
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_PetTraits.story",
     IsInRegion = 1,
@@ -530,6 +585,7 @@ return ReadOnly("SystemGuide", {
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
     GuideInfo = {SelectedTargetId = 5101},
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Intron.story",
     IsInRegion = 1,
@@ -541,6 +597,7 @@ return ReadOnly("SystemGuide", {
   [2077] = {
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_PetTraits_2.story",
     IsInRegion = 1,
@@ -552,6 +609,7 @@ return ReadOnly("SystemGuide", {
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
     GuideInfo = {SelectedTargetId = 2101},
+    GuideSkip = 0,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Mail_2.story",
     IsInRegion = 1,
@@ -564,6 +622,7 @@ return ReadOnly("SystemGuide", {
     FinishQuestChain = 200220,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Badge.story",
     IsInRegion = 1,
@@ -573,6 +632,7 @@ return ReadOnly("SystemGuide", {
   [2080] = {
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_TrialRank.story",
     IsInRegion = 1,
@@ -582,6 +642,7 @@ return ReadOnly("SystemGuide", {
   [2081] = {
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Detective.story",
     IsInRegion = 1,
@@ -592,6 +653,7 @@ return ReadOnly("SystemGuide", {
     FinishQuest = 12010309,
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Qianji.story",
     IsInRegion = 1,
@@ -603,6 +665,7 @@ return ReadOnly("SystemGuide", {
     ConditionCheck = 6023,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_FenZuSai.story",
     SysGuideId = 2083
@@ -611,6 +674,7 @@ return ReadOnly("SystemGuide", {
     ConditionCheck = 6024,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_DianFeng.story",
     SysGuideId = 2084
@@ -618,6 +682,7 @@ return ReadOnly("SystemGuide", {
   [2085] = {
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Zhouye.story",
     IsInRegion = 1,
@@ -630,11 +695,72 @@ return ReadOnly("SystemGuide", {
     FinishQuestChain = 400111,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_JuYuan.story",
     IsInRegion = 1,
     OpenInterface = "BattleMain",
     PlayerInControl = 1,
     SysGuideId = 2086
+  },
+  [2087] = {
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 0,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_AutoChess.story",
+    IsInRegion = 1,
+    OpenInterface = "AutoChessMain",
+    SysGuideId = 2087
+  },
+  [2088] = {
+    EnterDungeon = 40401,
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 0,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_AutoChess_Battle.story",
+    SysGuideId = 2088
+  },
+  [2089] = {
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 0,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_Wuyou.story",
+    IsInRegion = 1,
+    OpenInterface = "ActivityWuyoushengMain",
+    SysGuideId = 2089
+  },
+  [2090] = {
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_ShengMing.story",
+    IsInRegion = 1,
+    OpenInterface = "FameMain",
+    SysGuideId = 2090,
+    UIUnlockRule = "RegionReputation"
+  },
+  [2091] = {
+    EnterDungeon = 22001,
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_Wuyou_Battle.story",
+    SysGuideId = 2091
+  },
+  [2092] = {
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_ZuoQi.story",
+    IsInRegion = 1,
+    PlayerInControl = 1,
+    SysGuideId = 2092,
+    UIUnlockRule = "Mount"
   }
 })

@@ -101,8 +101,11 @@ end
 
 function BP_CircularElevator:RealCloseDoorLua(ElevatorId)
   self.OnDoorOpen = false
+  self.OtherElevator.OnDoorOpen = false
   self.OnDoorClose = true
+  self.OtherElevator.OnDoorClose = true
   self.HasDoorOpen = false
+  self.OtherElevator.HasDoorOpen = false
   self.Overridden.RealCloseDoorLua(self, ElevatorId)
   AudioManager(self):PlayFMODSound(self.Diban, nil, "event:/sfx/common/scene/lift_fast_door_close", "Elevator")
 end
@@ -229,7 +232,7 @@ function BP_CircularElevator:MoveElevatorUp(Elevator, DeltaSeconds, MovePlayer)
       self.stage1 = true
       Elevator:K2_SetWorldLocation(self.TopUp, false, nil, false)
       self.ElevatorQueue:Remove(1)
-      self:ChangeElevatorLoc(MovePlayer)
+      self:ChangeElevatorLoc(MovePlayer, Current)
       self:OnSpeedUniform()
       if IsAuthority(self) and MovePlayer then
         UE4.UGameplayStatics.GetGameMode(self):PostCustomEvent("ElevatorUniform")
@@ -447,7 +450,6 @@ function BP_CircularElevator:OpenDoorOnEndMove(MovePlayer)
   if IsAuthority(self) and MovePlayer then
     UE4.UGameplayStatics.GetGameMode(self):PostCustomEvent("ElevatorEndMove")
   end
-  self.Smoke:Activate()
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   self:OpenDoor(Player.Eid, self.Eid)
   self:UpdateRegionData("OpenState", false)
@@ -570,21 +572,9 @@ function BP_CircularElevator:RemoveStoryNodeCallback(StateName)
 end
 
 function BP_CircularElevator:PlayInteractiveEffects()
-  self.Diban.FXStartInteractive:Activate(true)
-  self.Diban.FXLock:Deactivate()
-  self.Diban.FXRunning:Activate(true)
-  self.OtherElevator.Diban.FXStartInteractive:Activate(true)
-  self.OtherElevator.Diban.FXLock:Deactivate()
-  self.OtherElevator.Diban.FXRunning:Activate(true)
 end
 
 function BP_CircularElevator:PlayStopEffects()
-  self.Diban.FXStartInteractive:Deactivate()
-  self.Diban.FXLock:Activate(true)
-  self.Diban.FXRunning:Deactivate()
-  self.OtherElevator.Diban.FXStartInteractive:Deactivate()
-  self.OtherElevator.Diban.FXLock:Activate(true)
-  self.OtherElevator.Diban.FXRunning:Deactivate()
 end
 
 function BP_CircularElevator:RegisterComponent(CompArray)

@@ -197,7 +197,6 @@ T.RT_40 = {
   ID = 27,
   ScaleNode = "Main",
   SkillGrade = T.RT_11,
-  TriggerBuffId = 150421,
   UIName = "UISkillLise"
 }
 T.RT_41 = {BuffId = 150101}
@@ -222,49 +221,64 @@ T.RT_45 = {
   TriggerBuffId = 530101,
   UIName = "UISkillSaqiUlti"
 }
-T.RT_46 = {EnhancedReloadBuffId = 310131, FirepowerSuppressionBuffId = 310132}
+T.RT_46 = {
+  ID = 30,
+  ScaleNode = "Main",
+  SkillGrade = T.RT_11,
+  UIName = "UISkillSuyi"
+}
 T.RT_47 = {
+  ID = 31,
+  SkillGrade = T.RT_11,
+  TriggerBuffId = 150404,
+  UIName = "UISkillSuyiUlti"
+}
+T.RT_48 = {EnhancedReloadBuffId = 310131, FirepowerSuppressionBuffId = 310132}
+T.RT_49 = {
   ID = 4,
-  Params = T.RT_46,
+  Params = T.RT_48,
   ScaleNode = "Main",
   SkillGrade = T.RT_11,
   UIName = "UISkillLinen"
 }
-T.RT_48 = {RideBuff = 510121, SummonerId = 510101}
-T.RT_49 = {
+T.RT_50 = {RideBuff = 510121, SummonerId = 510101}
+T.RT_51 = {
   ID = 5,
-  Params = T.RT_48,
+  Params = T.RT_50,
   ScaleNode = "Main",
   SkillGrade = T.RT_11,
   UIName = "UISkillSonglu"
 }
-T.RT_50 = {SummonerId = 420101}
-T.RT_51 = {
+T.RT_52 = {SummonerId = 420101}
+T.RT_53 = {
   ID = 6,
-  Params = T.RT_50,
+  Params = T.RT_52,
   ScaleNode = "Main",
   SkillGrade = T.RT_11,
   UIName = "UISkillHeilong"
 }
-T.RT_52 = {
+T.RT_54 = {
   ID = 7,
   ScaleNode = "Main",
   SkillGrade = T.RT_11,
   TriggerBuffId = 310122,
   UIName = "UISkill2Linen"
 }
-T.RT_53 = {
+T.RT_55 = {
   ID = 8,
   SkillGrade = T.RT_11,
   TriggerBuffId = 850405,
   UIName = "UISkillSaqiUlti"
 }
-T.RT_54 = {
+T.RT_56 = {
   ID = 9,
   SkillGrade = T.RT_11,
   TriggerBuffId = 310301,
   UIName = "UISkilYeerUlti"
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -297,15 +311,6 @@ return ReadOnly("BattleCharUI", {
     [6] = T.RT_45
   },
   [4] = {
-    [0] = T.RT_47,
-    [1] = T.RT_47,
-    [2] = T.RT_47,
-    [3] = T.RT_47,
-    [4] = T.RT_47,
-    [5] = T.RT_47,
-    [6] = T.RT_47
-  },
-  [5] = {
     [0] = T.RT_49,
     [1] = T.RT_49,
     [2] = T.RT_49,
@@ -314,7 +319,7 @@ return ReadOnly("BattleCharUI", {
     [5] = T.RT_49,
     [6] = T.RT_49
   },
-  [6] = {
+  [5] = {
     [0] = T.RT_51,
     [1] = T.RT_51,
     [2] = T.RT_51,
@@ -323,16 +328,7 @@ return ReadOnly("BattleCharUI", {
     [5] = T.RT_51,
     [6] = T.RT_51
   },
-  [7] = {
-    [0] = T.RT_52,
-    [1] = T.RT_52,
-    [2] = T.RT_52,
-    [3] = T.RT_52,
-    [4] = T.RT_52,
-    [5] = T.RT_52,
-    [6] = T.RT_52
-  },
-  [8] = {
+  [6] = {
     [0] = T.RT_53,
     [1] = T.RT_53,
     [2] = T.RT_53,
@@ -341,7 +337,7 @@ return ReadOnly("BattleCharUI", {
     [5] = T.RT_53,
     [6] = T.RT_53
   },
-  [9] = {
+  [7] = {
     [0] = T.RT_54,
     [1] = T.RT_54,
     [2] = T.RT_54,
@@ -349,6 +345,24 @@ return ReadOnly("BattleCharUI", {
     [4] = T.RT_54,
     [5] = T.RT_54,
     [6] = T.RT_54
+  },
+  [8] = {
+    [0] = T.RT_55,
+    [1] = T.RT_55,
+    [2] = T.RT_55,
+    [3] = T.RT_55,
+    [4] = T.RT_55,
+    [5] = T.RT_55,
+    [6] = T.RT_55
+  },
+  [9] = {
+    [0] = T.RT_56,
+    [1] = T.RT_56,
+    [2] = T.RT_56,
+    [3] = T.RT_56,
+    [4] = T.RT_56,
+    [5] = T.RT_56,
+    [6] = T.RT_56
   },
   [10] = {
     [0] = T.RT_8,
@@ -521,5 +535,23 @@ return ReadOnly("BattleCharUI", {
     [4] = T.RT_44,
     [5] = T.RT_44,
     [6] = T.RT_44
+  },
+  [30] = {
+    [0] = T.RT_46,
+    [1] = T.RT_46,
+    [2] = T.RT_46,
+    [3] = T.RT_46,
+    [4] = T.RT_46,
+    [5] = T.RT_46,
+    [6] = T.RT_46
+  },
+  [31] = {
+    [0] = T.RT_47,
+    [1] = T.RT_47,
+    [2] = T.RT_47,
+    [3] = T.RT_47,
+    [4] = T.RT_47,
+    [5] = T.RT_47,
+    [6] = T.RT_47
   }
 })

@@ -21,7 +21,7 @@ function M:DisableOptParams_TR()
 end
 
 function M:InitOptParams()
-  if CommonUtils.GetDeviceTypeByPlatformName(self) == CommonConst.CLIENT_DEVICE_TYPE.MOBILE then
+  if CommonUtils.GetRuntimePlatform(self) == CommonConst.CLIENT_DEVICE_TYPE.MOBILE then
     self.UnitBudgetTickFrameCounter = 15
   else
     self.UnitBudgetTickFrameCounter = 12
@@ -65,6 +65,10 @@ function M:InitOptParams()
   self.StaticCreatorUnitBudgetControlDist = 3000
   self.bEnableUnitHiddenOptimization = true
   self.bAutoCheckPlayerHighMeshLOD = true
+end
+
+function M:SetEnableAnimBudget(bEnable)
+  self.bEnableAnimBudget = bEnable
 end
 
 function M:GetPlayerHighMeshLODIDConfig()

@@ -34,7 +34,7 @@ function SettingUtils.InitAntiAliasingCache(GameOverallPerformance)
   if nil == GameOverallPerformance then
     GameOverallPerformance = -1
   end
-  if CommonUtils.GetDeviceTypeByPlatformName(GWorld.GameInstance) == "Mobile" then
+  if CommonUtils.GetRuntimePlatform() == "Mobile" then
     if AntiAliasingCache ~= CommonConst.AntiAliasingClose then
       AntiAliasingCache = 2
     end
@@ -122,7 +122,7 @@ function SettingUtils.InitGameMaxFPS()
     end
   else
     local DefaultFps
-    if CommonUtils.GetDeviceTypeByPlatformName(GWorld.GameInstance) == "Mobile" then
+    if CommonUtils.GetRuntimePlatform() == "Mobile" then
       DefaultFps = 30
       local NowGameOverallPerformance = GWorld.GameInstance:GetOverallScalabilityLevel()
       if NowGameOverallPerformance >= CommonConst.OverallPerformanceHigh then
@@ -374,7 +374,7 @@ function SettingUtils.InitRealtimeSunlight(GameOverallPerformance)
       GameCache = false
     end
   end
-  if CommonUtils.GetDeviceTypeByPlatformName(GWorld.GameInstance) == "Mobile" then
+  if CommonUtils.GetRuntimePlatform() == "Mobile" then
     if 0 == GameOverallPerformance then
       GameCache = false
     elseif GameOverallPerformance > 0 then

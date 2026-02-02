@@ -61,9 +61,22 @@ T.RT_34 = {
   HitFlyZ = 400,
   UseResourceDirection = "X"
 }
-T.RT_35 = {HitFlyXY = 50, HitFlyZ = 100}
-T.RT_36 = {MoveDis = 100, UseResourceDirection = "X"}
-T.RT_37 = {UseTargetDirection = 1}
+T.RT_35 = {
+  Angle = 270,
+  HitFlyXY = 200,
+  HitFlyZ = 500
+}
+T.RT_36 = {
+  Angle = 90,
+  HitFlyXY = 200,
+  HitFlyZ = 500
+}
+T.RT_37 = {HitFlyXY = 50, HitFlyZ = 100}
+T.RT_38 = {MoveDis = 100, UseResourceDirection = "X"}
+T.RT_39 = {UseTargetDirection = 1}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -253,6 +266,13 @@ return ReadOnly("HitPerformanceData", {
     CauseHitParam = T.RT_15,
     HitFlyComboParam = {HitFlyXY = 0, HitFlyZ = -500},
     HitId = "HitDown",
+    TNZeroHeavyHitParam = T.RT_13
+  },
+  HitDown02 = {
+    CauseHit = "HitFly",
+    CauseHitParam = {HitFlyXY = 0, HitFlyZ = -800},
+    HitFlyComboParam = {HitFlyXY = 0, HitFlyZ = -1200},
+    HitId = "HitDown02",
     TNZeroHeavyHitParam = T.RT_13
   },
   HitFly_Force_Common = {
@@ -546,33 +566,17 @@ return ReadOnly("HitPerformanceData", {
   },
   HitFly_XY800Z300A270 = {
     CauseHit = "HitFly",
-    CauseHitParam = {
-      Angle = 270,
-      HitFlyXY = 800,
-      HitFlyZ = 300
-    },
-    HitFlyComboParam = {
-      Angle = 270,
-      HitFlyXY = 800,
-      HitFlyZ = 200
-    },
+    CauseHitParam = T.RT_35,
+    HitFlyComboParam = T.RT_35,
     HitId = "HitFly_XY800Z300A270",
-    TNZeroHeavyHitParam = T.RT_18
+    TNZeroHeavyHitParam = T.RT_12
   },
   HitFly_XY800Z300A90 = {
     CauseHit = "HitFly",
-    CauseHitParam = {
-      Angle = 90,
-      HitFlyXY = 800,
-      HitFlyZ = 300
-    },
-    HitFlyComboParam = {
-      Angle = 90,
-      HitFlyXY = 800,
-      HitFlyZ = 200
-    },
+    CauseHitParam = T.RT_36,
+    HitFlyComboParam = T.RT_36,
     HitId = "HitFly_XY800Z300A90",
-    TNZeroHeavyHitParam = T.RT_18
+    TNZeroHeavyHitParam = T.RT_12
   },
   HitFly_XY800Z400 = {
     CauseHit = "HitFly",
@@ -613,7 +617,7 @@ return ReadOnly("HitPerformanceData", {
   },
   LightHit = {
     CauseHit = "LightHit",
-    HitFlyComboParam = T.RT_35,
+    HitFlyComboParam = T.RT_37,
     HitId = "LightHit"
   },
   LightHit_100 = {
@@ -630,7 +634,7 @@ return ReadOnly("HitPerformanceData", {
   },
   LightHit_100_F = {
     CauseHit = "LightHit",
-    CauseHitParam = T.RT_36,
+    CauseHitParam = T.RT_38,
     HitFlyComboParam = T.RT_29,
     HitId = "LightHit_100_F",
     TNZeroHeavyHitParam = T.RT_10
@@ -658,7 +662,7 @@ return ReadOnly("HitPerformanceData", {
   LightHit_150_Laser = {
     CauseHit = "LightHit",
     CauseHitParam = {MoveDis = 150, UseTargetDirection = 1},
-    HitFlyComboParam = T.RT_35,
+    HitFlyComboParam = T.RT_37,
     HitId = "LightHit_150_Laser"
   },
   LightHit_200 = {
@@ -713,18 +717,18 @@ return ReadOnly("HitPerformanceData", {
   },
   LightHit_IceBomb = {
     CauseHit = "LightHit",
-    CauseHitParam = T.RT_37,
+    CauseHitParam = T.RT_39,
     HitId = "LightHit_IceBomb"
   },
   LightHit_Laser = {
     CauseHit = "LightHit",
-    CauseHitParam = T.RT_37,
-    HitFlyComboParam = T.RT_35,
+    CauseHitParam = T.RT_39,
+    HitFlyComboParam = T.RT_37,
     HitId = "LightHit_Laser"
   },
   LightHit_Tuosi = {
     CauseHit = "LightHit",
-    CauseHitParam = T.RT_36,
+    CauseHitParam = T.RT_38,
     HitFlyComboParam = {
       HitFlyXY = 300,
       HitFlyZ = 80,
@@ -736,7 +740,7 @@ return ReadOnly("HitPerformanceData", {
   RangedWeapon_Common = {
     CauseHit = "LightHitRanged",
     FirstHit = "LightHit",
-    HitFlyComboParam = T.RT_35,
+    HitFlyComboParam = T.RT_37,
     HitId = "RangedWeapon_Common",
     TNZeroHeavyHitParam = T.RT_10
   },

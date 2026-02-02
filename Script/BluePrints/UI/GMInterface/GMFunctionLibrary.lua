@@ -111,9 +111,18 @@ function GMFunctionLibrary.MaxTriggerProbability(WorldContext, IsEnable)
   GMFunctionLibrary.ExecConsoleCommand(WorldContext, "gm MaxTriggerProbability")
 end
 
+function GMFunctionLibrary.ShowMonsterEids(WorldContext, IsEnable)
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(WorldContext, 0)
+  GMFunctionLibrary.ExecConsoleCommand(WorldContext, "gm Eids")
+end
+
 function GMFunctionLibrary.ShowDamageDetails(WorldContext, IsEnable)
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(WorldContext, 0)
   GMFunctionLibrary.ExecConsoleCommand(WorldContext, "gm ShowDamageDetails")
+end
+
+function GMFunctionLibrary.SwitchIgnoreGiftShopFriendLimit(WorldContext, IsEnable)
+  return IsEnable
 end
 
 function GMFunctionLibrary.ClearToughness(WorldContext, IsEnable)
@@ -212,13 +221,15 @@ function GMFunctionLibrary.SetTakeRecorderCapture(WorldContext, IsEnable)
   local player = UGameplayStatics.GetPlayerCharacter(GameInstance:GetGameUIManager(), 0)
   player.CapsuleComponent:SetHiddenInGame(IsEnable)
   player:HideMonsterCapsule(IsEnable)
-  local FXPriorityManager = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GameInstance, UE4.UFXPriorityManager)
-  if IsEnable then
-    FXPriorityManager.bEnableFXPool = false
-    FXPriorityManager.bEnableFXScalabilityOpt = false
-  else
-    FXPriorityManager.bEnableFXPool = true
-    FXPriorityManager.bEnableFXScalabilityOpt = true
+  local FXPriorityManager = USubsystemBlueprintLibrary.GetWorldSubsystem(player, UE4.UFXPriorityManager)
+  if FXPriorityManager then
+    if IsEnable then
+      FXPriorityManager.bEnableFXPool = false
+      FXPriorityManager.bEnableFXScalabilityOpt = false
+    else
+      FXPriorityManager.bEnableFXPool = true
+      FXPriorityManager.bEnableFXScalabilityOpt = true
+    end
   end
   local NiagaraActor = UGameplayStatics.GetActorOfClass(WorldContext, ATakeRecorderNiagaraActor.StaticClass())
   if not NiagaraActor then
@@ -905,6 +916,14 @@ end
 
 function GMFunctionLibrary.sawl(WorldContext, Level)
   GMFunctionLibrary.ExecConsoleCommand(WorldContext, "sgm sawl " .. Level)
+end
+
+function GMFunctionLibrary.SetGiftQuota(WorldContext, Quota)
+  GMFunctionLibrary.ExecConsoleCommand(WorldContext, "sgm SetGiftQuota " .. Quota)
+end
+
+function GMFunctionLibrary.CanSendFriendGift(WorldContext, Uid)
+  GMFunctionLibrary.ExecConsoleCommand(WorldContext, "sgm CanSendFriendGift " .. Uid)
 end
 
 function GMFunctionLibrary.GetAllPet(WorldContext)

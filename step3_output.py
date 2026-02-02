@@ -22,6 +22,7 @@ from processor.region_processor import RegionProcessor
 from processor.sub_region_processor import SubRegionProcessor
 from processor.region_point_processor import RegionPointProcessor
 from processor.shop_item_processor import ShopItemProcessor
+from processor.raid_buff_processor import RaidBuffProcessor
 
 
 class DataLoader:
@@ -217,6 +218,7 @@ class FinalProcessor:
             "SubRegion": SubRegionProcessor,
             "RegionPoint": RegionPointProcessor,
             "ShopItem": ShopItemProcessor,
+            "RaidBuff": RaidBuffProcessor,
             # Add other processor classes here as they are implemented
         }
 
@@ -341,6 +343,7 @@ if __name__ == "__main__":
         "SubRegion",
         "RegionPoint",
         "ShopItem",
+        "RaidBuff",
     ]
 
     # 使用命令行参数指定的文件类型，如果没有则使用默认列表

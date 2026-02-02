@@ -292,494 +292,505 @@ T.RT_129 = {11}
 T.RT_130 = {
   PlayerLevelMin = T.RT_31
 }
-T.RT_131 = {13}
-T.RT_132 = {510127, 1}
-T.RT_133 = {
-  T.RT_132
+T.RT_131 = {
+  PlayerLevelMin = T.RT_48,
+  QuestChain = T.RT_39
 }
+T.RT_132 = {13}
+T.RT_133 = {510127, 1}
 T.RT_134 = {
-  Impression = T.RT_133
+  T.RT_133
 }
-T.RT_135 = {14}
-T.RT_136 = {510139, 1}
-T.RT_137 = {
-  T.RT_136
+T.RT_135 = {
+  Impression = T.RT_134
 }
+T.RT_136 = {14}
+T.RT_137 = {510139, 1}
 T.RT_138 = {
-  Impression = T.RT_137
+  T.RT_137
 }
-T.RT_139 = {15}
-T.RT_140 = {
-  PlayerLevelMin = T.RT_139
+T.RT_139 = {
+  Impression = T.RT_138
 }
+T.RT_140 = {15}
 T.RT_141 = {
+  PlayerLevelMin = T.RT_140
+}
+T.RT_142 = {
   PlayerLevelMin = T.RT_43
 }
-T.RT_142 = {120002}
-T.RT_143 = {42}
-T.RT_144 = {120003}
-T.RT_145 = {
-  QuestChain = T.RT_144
+T.RT_143 = {120002}
+T.RT_144 = {42}
+T.RT_145 = {120003}
+T.RT_146 = {
+  QuestChain = T.RT_145
 }
-T.RT_146 = {12010101}
-T.RT_147 = {120102}
-T.RT_148 = {120103}
-T.RT_149 = {120105}
-T.RT_150 = {120104}
-T.RT_151 = {120106}
-T.RT_152 = {45}
-T.RT_153 = {21}
-T.RT_154 = {25}
-T.RT_155 = {
+T.RT_147 = {12010101}
+T.RT_148 = {120102}
+T.RT_149 = {120103}
+T.RT_150 = {120105}
+T.RT_151 = {120104}
+T.RT_152 = {
+  QuestChain = T.RT_150
+}
+T.RT_153 = {120106}
+T.RT_154 = {45}
+T.RT_155 = {120206}
+T.RT_156 = {21}
+T.RT_157 = {25}
+T.RT_158 = {
+  PlayerLevelMin = T.RT_157
+}
+T.RT_159 = {30}
+T.RT_160 = {
+  PlayerLevelMin = T.RT_159
+}
+T.RT_161 = {35}
+T.RT_162 = {
+  PlayerLevelMin = T.RT_161
+}
+T.RT_163 = {40}
+T.RT_164 = {
+  PlayerLevelMin = T.RT_163
+}
+T.RT_165 = {
   PlayerLevelMin = T.RT_154
 }
-T.RT_156 = {30}
-T.RT_157 = {
-  PlayerLevelMin = T.RT_156
+T.RT_166 = {50}
+T.RT_167 = {55}
+T.RT_168 = {
+  PlayerLevelMin = T.RT_167
 }
-T.RT_158 = {35}
-T.RT_159 = {
-  PlayerLevelMin = T.RT_158
+T.RT_169 = {200104}
+T.RT_170 = {
+  QuestChain = T.RT_169
 }
-T.RT_160 = {40}
-T.RT_161 = {
-  PlayerLevelMin = T.RT_160
+T.RT_171 = {200101}
+T.RT_172 = {1001, 1}
+T.RT_173 = {20021301}
+T.RT_174 = {200215}
+T.RT_175 = {200225}
+T.RT_176 = {"T"}
+T.RT_177 = {10010306}
+T.RT_178 = {20000601}
+T.RT_179 = {
+  DialogueHasRead = T.RT_178
 }
-T.RT_162 = {
-  PlayerLevelMin = T.RT_152
+T.RT_180 = {10110201}
+T.RT_181 = {
+  DialogueHasRead = T.RT_180
 }
-T.RT_163 = {50}
-T.RT_164 = {55}
-T.RT_165 = {
-  PlayerLevelMin = T.RT_164
+T.RT_182 = {10110801}
+T.RT_183 = {
+  DialogueHasRead = T.RT_182
 }
-T.RT_166 = {200104}
-T.RT_167 = {
-  QuestChain = T.RT_166
+T.RT_184 = {10101601}
+T.RT_185 = {
+  DialogueHasRead = T.RT_184
 }
-T.RT_168 = {200101}
-T.RT_169 = {1001, 1}
-T.RT_170 = {20021301}
-T.RT_171 = {200215}
-T.RT_172 = {200225}
-T.RT_173 = {"T"}
-T.RT_174 = {10010306}
-T.RT_175 = {20000601}
-T.RT_176 = {
-  DialogueHasRead = T.RT_175
+T.RT_186 = {10102601}
+T.RT_187 = {
+  DialogueHasRead = T.RT_186
 }
-T.RT_177 = {10110201}
-T.RT_178 = {
-  DialogueHasRead = T.RT_177
+T.RT_188 = {10105401}
+T.RT_189 = {
+  DialogueHasRead = T.RT_188
 }
-T.RT_179 = {10110801}
-T.RT_180 = {
-  DialogueHasRead = T.RT_179
+T.RT_190 = {12011414}
+T.RT_191 = {
+  Quest = T.RT_190
 }
-T.RT_181 = {10101601}
-T.RT_182 = {
-  DialogueHasRead = T.RT_181
+T.RT_192 = {10033953}
+T.RT_193 = {
+  DialogueHasRead = T.RT_192
 }
-T.RT_183 = {10102601}
-T.RT_184 = {
-  DialogueHasRead = T.RT_183
+T.RT_194 = {11012811}
+T.RT_195 = {
+  DialogueHasRead = T.RT_194
 }
-T.RT_185 = {10105401}
-T.RT_186 = {
-  DialogueHasRead = T.RT_185
+T.RT_196 = {11010904}
+T.RT_197 = {11010516}
+T.RT_198 = {11017001}
+T.RT_199 = {11010906}
+T.RT_200 = {
+  DialogueHasRead = T.RT_198,
+  Quest = T.RT_199
 }
-T.RT_187 = {12011414}
-T.RT_188 = {
-  Quest = T.RT_187
+T.RT_201 = {11015301}
+T.RT_202 = {
+  DialogueHasRead = T.RT_201
 }
-T.RT_189 = {10033953}
-T.RT_190 = {
-  DialogueHasRead = T.RT_189
+T.RT_203 = {11011501}
+T.RT_204 = {
+  DialogueHasRead = T.RT_203
 }
-T.RT_191 = {11012811}
-T.RT_192 = {
-  DialogueHasRead = T.RT_191
+T.RT_205 = {10033914}
+T.RT_206 = {
+  DialogueHasRead = T.RT_205
 }
-T.RT_193 = {11010904}
-T.RT_194 = {11010516}
-T.RT_195 = {11017001}
-T.RT_196 = {11010906}
-T.RT_197 = {
-  DialogueHasRead = T.RT_195,
-  Quest = T.RT_196
+T.RT_207 = {10032101}
+T.RT_208 = {
+  DialogueHasRead = T.RT_207
 }
-T.RT_198 = {11015301}
-T.RT_199 = {
-  DialogueHasRead = T.RT_198
+T.RT_209 = {10036801}
+T.RT_210 = {
+  DialogueHasRead = T.RT_209
 }
-T.RT_200 = {11011501}
-T.RT_201 = {
-  DialogueHasRead = T.RT_200
+T.RT_211 = {10030512}
+T.RT_212 = {
+  Quest = T.RT_211
 }
-T.RT_202 = {10033914}
-T.RT_203 = {
-  DialogueHasRead = T.RT_202
+T.RT_213 = {1011, 1}
+T.RT_214 = {1021, 1}
+T.RT_215 = {12000308}
+T.RT_216 = {
+  Quest = T.RT_215
 }
-T.RT_204 = {10032101}
-T.RT_205 = {
-  DialogueHasRead = T.RT_204
+T.RT_217 = {12010801}
+T.RT_218 = {
+  DialogueHasRead = T.RT_217
 }
-T.RT_206 = {10036801}
-T.RT_207 = {
-  DialogueHasRead = T.RT_206
+T.RT_219 = {12010201}
+T.RT_220 = {
+  DialogueHasRead = T.RT_219
 }
-T.RT_208 = {10030512}
-T.RT_209 = {
-  Quest = T.RT_208
+T.RT_221 = {12010429}
+T.RT_222 = {
+  DialogueHasRead = T.RT_221
 }
-T.RT_210 = {1011, 1}
-T.RT_211 = {1021, 1}
-T.RT_212 = {12000308}
-T.RT_213 = {
-  Quest = T.RT_212
+T.RT_223 = {12012001}
+T.RT_224 = {
+  DialogueHasRead = T.RT_223
 }
-T.RT_214 = {12010801}
-T.RT_215 = {
-  DialogueHasRead = T.RT_214
+T.RT_225 = {12013501}
+T.RT_226 = {
+  DialogueHasRead = T.RT_225
 }
-T.RT_216 = {12010201}
-T.RT_217 = {
-  DialogueHasRead = T.RT_216
-}
-T.RT_218 = {12010429}
-T.RT_219 = {
-  DialogueHasRead = T.RT_218
-}
-T.RT_220 = {12012001}
-T.RT_221 = {
-  DialogueHasRead = T.RT_220
-}
-T.RT_222 = {12013501}
-T.RT_223 = {
-  DialogueHasRead = T.RT_222
-}
-T.RT_224 = {12013101}
-T.RT_225 = {
-  DialogueHasRead = T.RT_224
-}
-T.RT_226 = {1031, 1}
-T.RT_227 = {10010102}
+T.RT_227 = {12013101}
 T.RT_228 = {
-  Quest = T.RT_227
+  DialogueHasRead = T.RT_227
 }
-T.RT_229 = {
-  Quest = T.RT_174
-}
-T.RT_230 = {1041, 1}
+T.RT_229 = {1031, 1}
+T.RT_230 = {10010102}
 T.RT_231 = {
-  QuestChain = T.RT_15
+  Quest = T.RT_230
 }
 T.RT_232 = {
+  Quest = T.RT_177
+}
+T.RT_233 = {1041, 1}
+T.RT_234 = {
+  QuestChain = T.RT_15
+}
+T.RT_235 = {
   PlayerLevelMin = T.RT_48,
   QuestChain = T.RT_33
 }
-T.RT_233 = {
+T.RT_236 = {
   PlayerLevelMin = T.RT_48,
   QuestChain = T.RT_30
 }
-T.RT_234 = {10020305}
-T.RT_235 = {10100401}
-T.RT_236 = {
-  DialogueHasRead = T.RT_235
+T.RT_237 = {10020305}
+T.RT_238 = {10100401}
+T.RT_239 = {
+  DialogueHasRead = T.RT_238
 }
-T.RT_237 = {10104001}
-T.RT_238 = {
-  DialogueHasRead = T.RT_237
+T.RT_240 = {10104001}
+T.RT_241 = {
+  DialogueHasRead = T.RT_240
 }
-T.RT_239 = {10020403}
-T.RT_240 = {12010310}
-T.RT_241 = {12014001}
-T.RT_242 = {
-  DialogueHasRead = T.RT_241
+T.RT_242 = {10020403}
+T.RT_243 = {12010310}
+T.RT_244 = {12014001}
+T.RT_245 = {
+  DialogueHasRead = T.RT_244
 }
-T.RT_243 = {
+T.RT_246 = {
   90103,
   1,
   1
 }
-T.RT_244 = {
-  T.RT_243
-}
-T.RT_245 = {
-  DungeonComplete = T.RT_244
-}
-T.RT_246 = {12010227}
 T.RT_247 = {
-  DialogueHasRead = T.RT_246
+  T.RT_246
 }
-T.RT_248 = {12010401}
-T.RT_249 = {
-  DialogueHasRead = T.RT_248
+T.RT_248 = {
+  DungeonComplete = T.RT_247
 }
-T.RT_250 = {12010508}
-T.RT_251 = {
-  DialogueHasRead = T.RT_250
+T.RT_249 = {12010227}
+T.RT_250 = {
+  DialogueHasRead = T.RT_249
 }
-T.RT_252 = {12010301}
-T.RT_253 = {
-  DialogueHasRead = T.RT_252
+T.RT_251 = {12010401}
+T.RT_252 = {
+  DialogueHasRead = T.RT_251
 }
-T.RT_254 = {12013201}
-T.RT_255 = {
-  DialogueHasRead = T.RT_254
+T.RT_253 = {12010508}
+T.RT_254 = {
+  DialogueHasRead = T.RT_253
 }
+T.RT_255 = {12010301}
 T.RT_256 = {
+  DialogueHasRead = T.RT_255
+}
+T.RT_257 = {12013201}
+T.RT_258 = {
+  DialogueHasRead = T.RT_257
+}
+T.RT_259 = {
   90305,
   1,
   1
 }
-T.RT_257 = {
+T.RT_260 = {
   90306,
   1,
   1
 }
-T.RT_258 = {
+T.RT_261 = {
   90307,
   1,
   1
 }
-T.RT_259 = {
+T.RT_262 = {
   ConstantBool = T.RT_4
 }
-T.RT_260 = {10010308}
-T.RT_261 = {10020101}
-T.RT_262 = {
+T.RT_263 = {10010308}
+T.RT_264 = {10020101}
+T.RT_265 = {
   PlayerLevelMin = T.RT_48,
-  Quest = T.RT_261
+  Quest = T.RT_264
 }
-T.RT_263 = {12010113}
-T.RT_264 = {
-  DialogueHasRead = T.RT_263
+T.RT_266 = {12010113}
+T.RT_267 = {
+  DialogueHasRead = T.RT_266
 }
-T.RT_265 = {12010601}
-T.RT_266 = {
-  DialogueHasRead = T.RT_265
+T.RT_268 = {12010601}
+T.RT_269 = {
+  DialogueHasRead = T.RT_268
 }
-T.RT_267 = {10010106}
-T.RT_268 = {
-  PlayerLevelMin = T.RT_48,
-  Quest = T.RT_267
-}
-T.RT_269 = {10020704}
-T.RT_270 = {10031210}
+T.RT_270 = {10010106}
 T.RT_271 = {
-  DialogueHasRead = T.RT_270
-}
-T.RT_272 = {12010001}
-T.RT_273 = {
-  DialogueHasRead = T.RT_272
-}
-T.RT_274 = {10020108}
-T.RT_275 = {
   PlayerLevelMin = T.RT_48,
-  Quest = T.RT_274
+  Quest = T.RT_270
 }
-T.RT_276 = {11017101}
-T.RT_277 = {
-  DialogueHasRead = T.RT_276
+T.RT_272 = {10020704}
+T.RT_273 = {10031210}
+T.RT_274 = {
+  DialogueHasRead = T.RT_273
 }
-T.RT_278 = {-1}
-T.RT_279 = {
-  EquipPetId = T.RT_278
+T.RT_275 = {12010001}
+T.RT_276 = {
+  DialogueHasRead = T.RT_275
 }
+T.RT_277 = {10020108}
+T.RT_278 = {
+  PlayerLevelMin = T.RT_48,
+  Quest = T.RT_277
+}
+T.RT_279 = {11017101}
 T.RT_280 = {
+  DialogueHasRead = T.RT_279
+}
+T.RT_281 = {-1}
+T.RT_282 = {
+  EquipPetId = T.RT_281
+}
+T.RT_283 = {
   PlayerLevelMin = T.RT_101,
   QuestChain = T.RT_30
 }
-T.RT_281 = {
+T.RT_284 = {200236}
+T.RT_285 = {
   PlayerLevelMin = T.RT_48,
-  QuestChain = T.RT_39
+  QuestChain = T.RT_284
 }
-T.RT_282 = {200236}
-T.RT_283 = {
-  PlayerLevelMin = T.RT_48,
-  QuestChain = T.RT_282
-}
-T.RT_284 = {
+T.RT_286 = {
   "Blessing",
   2,
   3
 }
-T.RT_285 = {
-  T.RT_284
+T.RT_287 = {
+  T.RT_286
 }
-T.RT_286 = {
-  RougeLikeGroupMin = T.RT_285
+T.RT_288 = {
+  RougeLikeGroupMin = T.RT_287
 }
-T.RT_287 = {"Blessing", 602}
-T.RT_288 = {"Blessing", 603}
-T.RT_289 = {
+T.RT_289 = {"Blessing", 602}
+T.RT_290 = {"Blessing", 603}
+T.RT_291 = {
   "Blessing",
   6,
   3
 }
-T.RT_290 = {
+T.RT_292 = {
   "Blessing",
   4,
   3
 }
-T.RT_291 = {103, "T"}
-T.RT_292 = {
-  T.RT_291
-}
-T.RT_293 = {104, "T"}
+T.RT_293 = {103, "T"}
 T.RT_294 = {
   T.RT_293
 }
-T.RT_295 = {
+T.RT_295 = {104, "T"}
+T.RT_296 = {
+  T.RT_295
+}
+T.RT_297 = {
   RougeLikePassRoom = T.RT_74
 }
-T.RT_296 = {
+T.RT_298 = {
   "Blessing",
   1,
   3
 }
-T.RT_297 = {105, "T"}
-T.RT_298 = {
-  T.RT_297
-}
-T.RT_299 = {101, "T"}
+T.RT_299 = {105, "T"}
 T.RT_300 = {
   T.RT_299
 }
-T.RT_301 = {
-  RougeLikeDifficulty = T.RT_300
+T.RT_301 = {101, "T"}
+T.RT_302 = {
+  T.RT_301
 }
-T.RT_302 = {102, "T"}
 T.RT_303 = {
+  RougeLikeDifficulty = T.RT_302
+}
+T.RT_304 = {102, "T"}
+T.RT_305 = {
   "Blessing",
   5,
   3
 }
-T.RT_304 = {
+T.RT_306 = {
   "Blessing",
   7,
   3
 }
-T.RT_305 = {
+T.RT_307 = {
   RougeLikePassRoom = T.RT_129
 }
-T.RT_306 = {
+T.RT_308 = {
   "Blessing",
   3,
   3
 }
-T.RT_307 = {101}
-T.RT_308 = {
-  RougeLikeComplete = T.RT_307
-}
-T.RT_309 = {106, "T"}
+T.RT_309 = {101}
 T.RT_310 = {
-  T.RT_309
+  RougeLikeComplete = T.RT_309
 }
-T.RT_311 = {106}
+T.RT_311 = {106, "T"}
 T.RT_312 = {
-  RougeLikeComplete = T.RT_311
+  T.RT_311
 }
-T.RT_313 = {
-  RougeLikePreRoom = T.RT_307
-}
+T.RT_313 = {106}
 T.RT_314 = {
+  RougeLikeComplete = T.RT_313
+}
+T.RT_315 = {
+  RougeLikePreRoom = T.RT_309
+}
+T.RT_316 = {
   100004,
   20000101,
   "F"
 }
-T.RT_315 = {
-  T.RT_314
-}
-T.RT_316 = {
-  RougeLikeManual = T.RT_315
-}
 T.RT_317 = {
-  RougeLikePassRoom = T.RT_94
+  T.RT_316
 }
 T.RT_318 = {
-  RougeLikePassRoom = T.RT_131
+  RougeLikeManual = T.RT_317
 }
-T.RT_319 = {1101}
+T.RT_319 = {
+  RougeLikePassRoom = T.RT_94
+}
 T.RT_320 = {
-  CurrentCharId = T.RT_319
+  RougeLikePassRoom = T.RT_132
 }
-T.RT_321 = {
-  PlayerLevelMin = T.RT_31,
-  QuestChain = T.RT_26
-}
+T.RT_321 = {1101}
 T.RT_322 = {
-  PlayerLevelMin = T.RT_31,
-  QuestChain = T.RT_30
+  CurrentCharId = T.RT_321
 }
 T.RT_323 = {
   PlayerLevelMin = T.RT_31,
-  QuestChain = T.RT_33
+  QuestChain = T.RT_26
 }
 T.RT_324 = {
   PlayerLevelMin = T.RT_31,
-  QuestChain = T.RT_120
+  QuestChain = T.RT_30
 }
-T.RT_325 = {100208, 200103}
+T.RT_325 = {
+  PlayerLevelMin = T.RT_31,
+  QuestChain = T.RT_33
+}
 T.RT_326 = {
   PlayerLevelMin = T.RT_31,
-  QuestChain = T.RT_325
+  QuestChain = T.RT_120
 }
-T.RT_327 = {100103, 200103}
-T.RT_328 = {110109, 200103}
-T.RT_329 = {100203, 200103}
-T.RT_330 = {
+T.RT_327 = {100208, 200103}
+T.RT_328 = {
   PlayerLevelMin = T.RT_31,
-  QuestChain = T.RT_329
+  QuestChain = T.RT_327
 }
-T.RT_331 = {100307, 200103}
+T.RT_329 = {100103, 200103}
+T.RT_330 = {110109, 200103}
+T.RT_331 = {100203, 200103}
 T.RT_332 = {
   PlayerLevelMin = T.RT_31,
-  QuestChain = T.RT_171
+  QuestChain = T.RT_331
 }
-T.RT_333 = {
+T.RT_333 = {100307, 200103}
+T.RT_334 = {
+  PlayerLevelMin = T.RT_31,
+  QuestChain = T.RT_174
+}
+T.RT_335 = {
   PlayerLevelMin = T.RT_31,
   QuestChain = T.RT_44
 }
-T.RT_334 = {
-  PlayerLevelMin = T.RT_31,
-  QuestChain = T.RT_151
-}
-T.RT_335 = {40011106}
 T.RT_336 = {
-  "2025-12-25 10:00:00"
+  PlayerLevelMin = T.RT_31,
+  QuestChain = T.RT_153
 }
 T.RT_337 = {
-  "2026-01-20 05:00:00"
+  PlayerLevelMin = T.RT_31,
+  QuestChain = T.RT_155
 }
-T.RT_338 = {400111}
+T.RT_338 = {40011106}
 T.RT_339 = {
-  QuestChain = T.RT_338,
-  TimeArrived = T.RT_336
+  "2025-12-25 10:00:00"
 }
 T.RT_340 = {
-  TimeArrived = T.RT_337
+  "2026-01-20 05:00:00"
 }
-T.RT_341 = {
-  "2025-12-30 04:55:00"
-}
+T.RT_341 = {400111}
 T.RT_342 = {
-  "2026-01-04 04:55:00"
+  QuestChain = T.RT_341,
+  TimeArrived = T.RT_339
 }
 T.RT_343 = {
-  "2026-01-09 04:55:00"
+  TimeArrived = T.RT_340
 }
 T.RT_344 = {
-  "2026-01-14 04:55:00"
+  "2025-12-30 04:55:00"
 }
 T.RT_345 = {
+  "2026-01-04 04:55:00"
+}
+T.RT_346 = {
+  "2026-01-09 04:55:00"
+}
+T.RT_347 = {
+  "2026-01-14 04:55:00"
+}
+T.RT_348 = {
   "2026-01-19 04:55:00"
 }
-T.RT_346 = {1, 1}
-T.RT_347 = {
-  T.RT_346
+T.RT_349 = {1, 1}
+T.RT_350 = {
+  T.RT_349
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -829,7 +840,7 @@ return ReadOnly("Condition", {
     ConditionId = 6,
     ConditionLogic = "AND",
     ConditionMap = {
-      InStoryMode = T.RT_173
+      InStoryMode = T.RT_176
     },
     Remark = "剧情模式显示"
   },
@@ -881,7 +892,7 @@ return ReadOnly("Condition", {
   [25] = {
     ConditionId = 25,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_231,
+    ConditionMap = T.RT_234,
     Remark = "区域地图回到据点按钮解锁条件"
   },
   [26] = {
@@ -893,7 +904,7 @@ return ReadOnly("Condition", {
   [27] = {
     ConditionId = 27,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_231,
+    ConditionMap = T.RT_234,
     Remark = "区域地图据点界面解锁"
   },
   [30] = {
@@ -914,21 +925,21 @@ return ReadOnly("Condition", {
   [33] = {
     ConditionId = 33,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_259,
+    ConditionMap = T.RT_262,
     Remark = "跳板解锁条件"
   },
   [98] = {
     ConditionId = 98,
     ConditionLogic = "AND",
     ConditionMap = {
-      ConstantBool = T.RT_173
+      ConstantBool = T.RT_176
     },
     Remark = "恒定真条件"
   },
   [99] = {
     ConditionId = 99,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_259,
+    ConditionMap = T.RT_262,
     Remark = "恒定假条件"
   },
   [101] = {
@@ -1037,7 +1048,7 @@ return ReadOnly("Condition", {
     ConditionId = 113,
     ConditionLogic = "AND",
     ConditionMap = {
-      PlayerLevelMin = T.RT_131
+      PlayerLevelMin = T.RT_132
     },
     ConditionText = "Condition_Toast_PlayerLv_13",
     Remark = "解锁玩家等级13"
@@ -1046,7 +1057,7 @@ return ReadOnly("Condition", {
     ConditionId = 114,
     ConditionLogic = "AND",
     ConditionMap = {
-      PlayerLevelMin = T.RT_135
+      PlayerLevelMin = T.RT_136
     },
     ConditionText = "Condition_Toast_PlayerLv_14",
     Remark = "解锁玩家等级14"
@@ -1054,7 +1065,7 @@ return ReadOnly("Condition", {
   [115] = {
     ConditionId = 115,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_140,
+    ConditionMap = T.RT_141,
     ConditionText = "Condition_Toast_PlayerLv_15",
     Remark = "解锁玩家等级15"
   },
@@ -1097,7 +1108,7 @@ return ReadOnly("Condition", {
   [120] = {
     ConditionId = 120,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_141,
+    ConditionMap = T.RT_142,
     ConditionText = "Condition_Toast_PlayerLv_20",
     Remark = "解锁玩家等级20"
   },
@@ -1105,7 +1116,7 @@ return ReadOnly("Condition", {
     ConditionId = 121,
     ConditionLogic = "AND",
     ConditionMap = {
-      PlayerLevelMin = T.RT_153
+      PlayerLevelMin = T.RT_156
     },
     ConditionText = "Condition_Toast_PlayerLv_21",
     Remark = "解锁玩家等级21"
@@ -1140,7 +1151,7 @@ return ReadOnly("Condition", {
   [125] = {
     ConditionId = 125,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_155,
+    ConditionMap = T.RT_158,
     ConditionText = "Condition_Toast_PlayerLv_25",
     Remark = "解锁玩家等级25"
   },
@@ -1183,7 +1194,7 @@ return ReadOnly("Condition", {
   [130] = {
     ConditionId = 130,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_157,
+    ConditionMap = T.RT_160,
     ConditionText = "Condition_Toast_PlayerLv_30",
     Remark = "解锁玩家等级30"
   },
@@ -1226,7 +1237,7 @@ return ReadOnly("Condition", {
   [135] = {
     ConditionId = 135,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_159,
+    ConditionMap = T.RT_162,
     ConditionText = "Condition_Toast_PlayerLv_35",
     Remark = "解锁玩家等级35"
   },
@@ -1269,7 +1280,7 @@ return ReadOnly("Condition", {
   [140] = {
     ConditionId = 140,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_161,
+    ConditionMap = T.RT_164,
     ConditionText = "Condition_Toast_PlayerLv_40",
     Remark = "解锁玩家等级40"
   },
@@ -1286,7 +1297,7 @@ return ReadOnly("Condition", {
     ConditionId = 142,
     ConditionLogic = "AND",
     ConditionMap = {
-      PlayerLevelMin = T.RT_143
+      PlayerLevelMin = T.RT_144
     },
     ConditionText = "Condition_Toast_PlayerLv_42",
     Remark = "解锁玩家等级42"
@@ -1312,7 +1323,7 @@ return ReadOnly("Condition", {
   [145] = {
     ConditionId = 145,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_162,
+    ConditionMap = T.RT_165,
     ConditionText = "Condition_Toast_PlayerLv_45",
     Remark = "解锁玩家等级45"
   },
@@ -1356,7 +1367,7 @@ return ReadOnly("Condition", {
     ConditionId = 150,
     ConditionLogic = "AND",
     ConditionMap = {
-      PlayerLevelMin = T.RT_163
+      PlayerLevelMin = T.RT_166
     },
     ConditionText = "Condition_Toast_PlayerLv_50",
     Remark = "解锁玩家等级50"
@@ -1400,7 +1411,7 @@ return ReadOnly("Condition", {
   [155] = {
     ConditionId = 155,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_165,
+    ConditionMap = T.RT_168,
     ConditionText = "Condition_Toast_PlayerLv_55",
     Remark = "解锁玩家等级55"
   },
@@ -1458,35 +1469,35 @@ return ReadOnly("Condition", {
   [220] = {
     ConditionId = 220,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_141,
+    ConditionMap = T.RT_142,
     ConditionText = "Condition_Toast_PlayerLv_ModGuideBook_20",
     Remark = "魔之楔手册揭晓等级20"
   },
   [225] = {
     ConditionId = 225,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_155,
+    ConditionMap = T.RT_158,
     ConditionText = "Condition_Toast_PlayerLv_ModGuideBook_25",
     Remark = "魔之楔手册揭晓等级25"
   },
   [230] = {
     ConditionId = 230,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_157,
+    ConditionMap = T.RT_160,
     ConditionText = "Condition_Toast_PlayerLv_ModGuideBook_30",
     Remark = "魔之楔手册揭晓等级30"
   },
   [235] = {
     ConditionId = 235,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_159,
+    ConditionMap = T.RT_162,
     ConditionText = "Condition_Toast_PlayerLv_ModGuideBook_35",
     Remark = "魔之楔手册揭晓等级35"
   },
   [240] = {
     ConditionId = 240,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_161,
+    ConditionMap = T.RT_164,
     ConditionText = "Condition_Toast_PlayerLv_ModGuideBook_40",
     Remark = "魔之楔手册揭晓等级40"
   },
@@ -1606,14 +1617,14 @@ return ReadOnly("Condition", {
   [325] = {
     ConditionId = 325,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_145,
+    ConditionMap = T.RT_146,
     Remark = "烟津渡解锁条件"
   },
   [350] = {
     ConditionId = 350,
     ConditionLogic = "AND",
     ConditionMap = {
-      PlayerLevelMax = T.RT_163
+      PlayerLevelMax = T.RT_166
     },
     Remark = "魔之楔手册隐藏条件等级小于50"
   },
@@ -1911,11 +1922,9 @@ return ReadOnly("Condition", {
     ConditionId = 1033,
     ConditionLogic = "AND",
     ConditionMap = {
-      Impression = {
-        {510049, 1}
-      }
+      Quest = {20020906}
     },
-    Remark = "印象系统-露娜"
+    Remark = "露娜-小传解锁"
   },
   [1034] = {
     ConditionId = 1034,
@@ -2967,13 +2976,13 @@ return ReadOnly("Condition", {
   [1130] = {
     ConditionId = 1130,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_134,
+    ConditionMap = T.RT_135,
     Remark = "程老头个人小传"
   },
   [1131] = {
     ConditionId = 1131,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_134,
+    ConditionMap = T.RT_135,
     Remark = "程夫人个人小传"
   },
   [1132] = {
@@ -3079,13 +3088,13 @@ return ReadOnly("Condition", {
   [1142] = {
     ConditionId = 1142,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_138,
+    ConditionMap = T.RT_139,
     Remark = "余下个人小传"
   },
   [1143] = {
     ConditionId = 1143,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_138,
+    ConditionMap = T.RT_139,
     Remark = "董筑个人小传"
   },
   [1144] = {
@@ -3121,7 +3130,7 @@ return ReadOnly("Condition", {
   [2001] = {
     ConditionId = 2001,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_167,
+    ConditionMap = T.RT_170,
     ConditionText = "Condition_Toast_HardBossUnlock",
     Remark = "梦魇残声-BossXibi难度1解锁"
   },
@@ -3137,7 +3146,7 @@ return ReadOnly("Condition", {
         }
       },
       HardBossComplete = {
-        T.RT_169
+        T.RT_172
       }
     },
     ConditionText = "Condition_Toast_HardBossUnlock",
@@ -3218,7 +3227,7 @@ return ReadOnly("Condition", {
   [2011] = {
     ConditionId = 2011,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_167,
+    ConditionMap = T.RT_170,
     ConditionText = "Condition_Toast_HardBossUnlock",
     Remark = "梦魇残声-BossShijingzhe难度1解锁"
   },
@@ -3234,7 +3243,7 @@ return ReadOnly("Condition", {
         }
       },
       HardBossComplete = {
-        T.RT_210
+        T.RT_213
       }
     },
     ConditionText = "Condition_Toast_HardBossUnlock",
@@ -3331,7 +3340,7 @@ return ReadOnly("Condition", {
         }
       },
       HardBossComplete = {
-        T.RT_211
+        T.RT_214
       }
     },
     ConditionText = "Condition_Toast_HardBossUnlock",
@@ -3435,7 +3444,7 @@ return ReadOnly("Condition", {
         }
       },
       HardBossComplete = {
-        T.RT_226
+        T.RT_229
       }
     },
     ConditionText = "Condition_Toast_HardBossUnlock",
@@ -3539,7 +3548,7 @@ return ReadOnly("Condition", {
         }
       },
       HardBossComplete = {
-        T.RT_230
+        T.RT_233
       }
     },
     ConditionText = "Condition_Toast_HardBossUnlock",
@@ -3629,11 +3638,11 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       HardBossComplete = {
-        T.RT_169,
-        T.RT_210,
-        T.RT_211,
-        T.RT_226,
-        T.RT_230
+        T.RT_172,
+        T.RT_213,
+        T.RT_214,
+        T.RT_229,
+        T.RT_233
       }
     },
     Remark = "梦魇残声-通过任意一次梦魇（埋点用）"
@@ -3641,21 +3650,21 @@ return ReadOnly("Condition", {
   [3001] = {
     ConditionId = 3001,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_232,
+    ConditionMap = T.RT_235,
     ConditionText = "UI_COMMONPOP_TITLE_100058",
     Remark = "高级副本入口解锁条件"
   },
   [3002] = {
     ConditionId = 3002,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_232,
+    ConditionMap = T.RT_235,
     ConditionText = "UI_COMMONPOP_TITLE_100058",
     Remark = "中级副本入口解锁条件"
   },
   [3003] = {
     ConditionId = 3003,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_233,
+    ConditionMap = T.RT_236,
     ConditionText = "UI_COMMONPOP_TITLE_100058",
     Remark = "低级副本入口解锁条件"
   },
@@ -3752,7 +3761,7 @@ return ReadOnly("Condition", {
   [3021] = {
     ConditionId = 3021,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_245,
+    ConditionMap = T.RT_248,
     ConditionText = "Condition_Toast_HardBossUnlock",
     Remark = "副本-扼守50级解锁条件"
   },
@@ -3871,7 +3880,7 @@ return ReadOnly("Condition", {
           1,
           1
         },
-        T.RT_256
+        T.RT_259
       }
     },
     ConditionText = "Condition_Toast_HardBossUnlock",
@@ -3882,8 +3891,8 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DungeonComplete = {
-        T.RT_257,
-        T.RT_258
+        T.RT_260,
+        T.RT_261
       }
     },
     ConditionText = "Condition_Toast_HardBossUnlock",
@@ -4314,7 +4323,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "AND",
     ConditionMap = {
       DungeonComplete = {
-        T.RT_256
+        T.RT_259
       }
     },
     ConditionText = "Condition_Toast_HardBossUnlock",
@@ -4325,7 +4334,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "AND",
     ConditionMap = {
       DungeonComplete = {
-        T.RT_257
+        T.RT_260
       }
     },
     ConditionText = "Condition_Toast_HardBossUnlock",
@@ -4336,7 +4345,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "AND",
     ConditionMap = {
       DungeonComplete = {
-        T.RT_258
+        T.RT_261
       }
     },
     ConditionText = "Condition_Toast_HardBossUnlock",
@@ -4405,7 +4414,7 @@ return ReadOnly("Condition", {
   [3111] = {
     ConditionId = 3111,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_245,
+    ConditionMap = T.RT_248,
     ConditionText = "Condition_Toast_HardBossUnlock",
     Remark = "副本-防御2时间-40级解锁条件"
   },
@@ -4844,7 +4853,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "AND",
     ConditionMap = {
       PlayerLevelMin = T.RT_48,
-      Quest = T.RT_260
+      Quest = T.RT_263
     },
     ConditionText = "UI_Locked_Des_Armory",
     Remark = "军械库解锁条件"
@@ -4861,34 +4870,34 @@ return ReadOnly("Condition", {
   [4030] = {
     ConditionId = 4030,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_262,
+    ConditionMap = T.RT_265,
     ConditionText = "UI_Locked_Des_Shop",
     Remark = "商城解锁条件"
   },
   [4040] = {
     ConditionId = 4040,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_262,
+    ConditionMap = T.RT_265,
     ConditionText = "UI_Locked_Des_Gacha",
     Remark = "抽卡系统解锁条件"
   },
   [4041] = {
     ConditionId = 4041,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_262,
+    ConditionMap = T.RT_265,
     Remark = "全部卡池解锁条件"
   },
   [4050] = {
     ConditionId = 4050,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_268,
+    ConditionMap = T.RT_271,
     ConditionText = "UI_Locked_Des_Map",
     Remark = "大地图与传送解锁条件"
   },
   [4060] = {
     ConditionId = 4060,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_275,
+    ConditionMap = T.RT_278,
     ConditionText = "UI_Locked_Des_Invite",
     Remark = "看板娘解锁条件"
   },
@@ -4912,28 +4921,28 @@ return ReadOnly("Condition", {
   [4090] = {
     ConditionId = 4090,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_279,
+    ConditionMap = T.RT_282,
     ConditionText = "UI_Locked_Des_SupportSkill",
     Remark = "宠物系统解锁条件"
   },
   [4100] = {
     ConditionId = 4100,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_275,
+    ConditionMap = T.RT_278,
     ConditionText = "UI_Locked_Des_Mail",
     Remark = "邮箱解锁条件"
   },
   [4110] = {
     ConditionId = 4110,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_275,
+    ConditionMap = T.RT_278,
     ConditionText = "UI_Locked_Des_Play",
     Remark = "玩法入口解锁条件"
   },
   [4120] = {
     ConditionId = 4120,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_167,
+    ConditionMap = T.RT_170,
     ConditionText = "UI_Locked_Des_HardBoss",
     Remark = "梦魇残声系统解锁-仅限前三个boss"
   },
@@ -4952,7 +4961,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "AND",
     ConditionMap = {
       PlayerLevelMin = T.RT_48,
-      QuestChain = T.RT_168
+      QuestChain = T.RT_171
     },
     ConditionText = "UI_Locked_Des_BattleWheel",
     Remark = "战斗轮盘解锁条件"
@@ -4960,27 +4969,27 @@ return ReadOnly("Condition", {
   [4150] = {
     ConditionId = 4150,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_275,
+    ConditionMap = T.RT_278,
     ConditionText = "UI_Locked_Des_Notice",
     Remark = "公告解锁条件"
   },
   [4160] = {
     ConditionId = 4160,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_280,
+    ConditionMap = T.RT_283,
     ConditionText = "UI_Locked_Des_Rouge",
     Remark = "MOD解锁条件"
   },
   [4170] = {
     ConditionId = 4170,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_281,
+    ConditionMap = T.RT_131,
     Remark = "肉鸽解锁条件"
   },
   [4180] = {
     ConditionId = 4180,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_268,
+    ConditionMap = T.RT_271,
     ConditionText = "UI_Locked_Des_GuideBook",
     Remark = "教学手册解锁条件"
   },
@@ -5004,7 +5013,7 @@ return ReadOnly("Condition", {
     ConditionId = 4210,
     ConditionLogic = "AND",
     ConditionMap = {
-      PlayerLevelMin = T.RT_154,
+      PlayerLevelMin = T.RT_157,
       QuestChain = T.RT_39
     },
     ConditionText = "UI_Locked_Des_Polarity",
@@ -5013,9 +5022,19 @@ return ReadOnly("Condition", {
   [4220] = {
     ConditionId = 4220,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_275,
+    ConditionMap = T.RT_278,
     ConditionText = "UI_Locked_Des_GameEvent",
     Remark = "活动系统解锁"
+  },
+  [4221] = {
+    ConditionId = 4221,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      PlayerLevelMin = T.RT_48,
+      Quest = T.RT_277,
+      QuestChain = T.RT_42
+    },
+    Remark = "无由生打怪活动系统解锁"
   },
   [4230] = {
     ConditionId = 4230,
@@ -5053,14 +5072,14 @@ return ReadOnly("Condition", {
   [4270] = {
     ConditionId = 4270,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_279,
+    ConditionMap = T.RT_282,
     ConditionText = "UI_Locked_Des_SwitchMaster",
     Remark = "换主角解锁条件"
   },
   [4280] = {
     ConditionId = 4280,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_275,
+    ConditionMap = T.RT_278,
     ConditionText = "UI_TOAST_FORGING_WARNING",
     Remark = "返回据点跳转功能解锁"
   },
@@ -5081,7 +5100,7 @@ return ReadOnly("Condition", {
   [4310] = {
     ConditionId = 4310,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_275,
+    ConditionMap = T.RT_278,
     ConditionText = "UI_Locked_Des_BattlePass",
     Remark = "战令解锁条件"
   },
@@ -5097,7 +5116,7 @@ return ReadOnly("Condition", {
   [4320] = {
     ConditionId = 4320,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_233,
+    ConditionMap = T.RT_236,
     ConditionText = "UI_Locked_Des_DailyGoal",
     Remark = "每日任务解锁条件"
   },
@@ -5123,31 +5142,31 @@ return ReadOnly("Condition", {
   [4341] = {
     ConditionId = 4341,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_283,
+    ConditionMap = T.RT_285,
     Remark = "委托密函分解系统解锁"
   },
   [4350] = {
     ConditionId = 4350,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_280,
+    ConditionMap = T.RT_283,
     Remark = "魔之楔手册解锁"
   },
   [4360] = {
     ConditionId = 4360,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_280,
+    ConditionMap = T.RT_283,
     Remark = "魔之楔委托/夜航手册解锁"
   },
   [4370] = {
     ConditionId = 4370,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_275,
+    ConditionMap = T.RT_278,
     Remark = "新手任务解锁"
   },
   [4380] = {
     ConditionId = 4380,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_275,
+    ConditionMap = T.RT_278,
     ConditionText = "UI_Locked_Des_PlayTaskRoot",
     Remark = "今日行程解锁"
   },
@@ -5155,7 +5174,7 @@ return ReadOnly("Condition", {
     ConditionId = 4390,
     ConditionLogic = "AND",
     ConditionMap = {
-      PlayerLevelMin = T.RT_156,
+      PlayerLevelMin = T.RT_159,
       QuestChain = T.RT_30
     },
     Remark = "预设队伍设置解锁"
@@ -5164,10 +5183,26 @@ return ReadOnly("Condition", {
     ConditionId = 4400,
     ConditionLogic = "AND",
     ConditionMap = {
-      PlayerLevelMin = T.RT_156,
-      QuestChain = T.RT_151
+      PlayerLevelMin = T.RT_159,
+      QuestChain = T.RT_153
     },
     Remark = "时间设置解锁"
+  },
+  [4410] = {
+    ConditionId = 4410,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      UnlockMountId = T.RT_281
+    },
+    ConditionText = "UI_Locked_Des_Mount",
+    Remark = "坐骑系统解锁条件"
+  },
+  [4420] = {
+    ConditionId = 4420,
+    ConditionLogic = "AND",
+    ConditionMap = T.RT_278,
+    ConditionText = "UI_Locked_Des_RegionReputation",
+    Remark = "区域声望入口解锁条件"
   },
   [5001] = {
     ConditionId = 5001,
@@ -5183,7 +5218,7 @@ return ReadOnly("Condition", {
   [5002] = {
     ConditionId = 5002,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_286,
+    ConditionMap = T.RT_288,
     Remark = "拥有祝福2组3枚"
   },
   [5003] = {
@@ -5192,8 +5227,8 @@ return ReadOnly("Condition", {
     ConditionMap = {
       RougeLikePreAward = {
         {"Blessing", 601},
-        T.RT_287,
-        T.RT_288
+        T.RT_289,
+        T.RT_290
       }
     },
     Remark = "拥有祝福601或602或603"
@@ -5203,7 +5238,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "AND",
     ConditionMap = {
       RougeLikePreAward = {
-        T.RT_287
+        T.RT_289
       }
     },
     Remark = "拥有祝福602"
@@ -5213,7 +5248,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "AND",
     ConditionMap = {
       RougeLikePreAward = {
-        T.RT_288
+        T.RT_290
       }
     },
     Remark = "拥有祝福603"
@@ -5223,7 +5258,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "AND",
     ConditionMap = {
       RougeLikeGroupMin = {
-        T.RT_289
+        T.RT_291
       }
     },
     Remark = "拥有祝福6组3枚"
@@ -5247,8 +5282,8 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       RougeLikeGroupMin = {
-        T.RT_290,
-        T.RT_289
+        T.RT_292,
+        T.RT_291
       }
     },
     Remark = "4组或6组已拿到大于等于三个"
@@ -5276,7 +5311,7 @@ return ReadOnly("Condition", {
     ConditionId = 5010,
     ConditionLogic = "AND",
     ConditionMap = {
-      RougeLikeDifficulty = T.RT_292,
+      RougeLikeDifficulty = T.RT_294,
       RougeLikePassRoom = T.RT_77
     },
     Remark = "肉鸽难度3且大于等于4层"
@@ -5285,7 +5320,7 @@ return ReadOnly("Condition", {
     ConditionId = 5011,
     ConditionLogic = "AND",
     ConditionMap = {
-      RougeLikeDifficulty = T.RT_292,
+      RougeLikeDifficulty = T.RT_294,
       RougeLikePassRoom = T.RT_98
     },
     Remark = "肉鸽难度3且大于等于8层"
@@ -5294,7 +5329,7 @@ return ReadOnly("Condition", {
     ConditionId = 5012,
     ConditionLogic = "AND",
     ConditionMap = {
-      RougeLikeDifficulty = T.RT_294,
+      RougeLikeDifficulty = T.RT_296,
       RougeLikePassRoom = T.RT_77
     },
     Remark = "肉鸽难度4且大于等于4层"
@@ -5303,7 +5338,7 @@ return ReadOnly("Condition", {
     ConditionId = 5013,
     ConditionLogic = "AND",
     ConditionMap = {
-      RougeLikeDifficulty = T.RT_294,
+      RougeLikeDifficulty = T.RT_296,
       RougeLikePassRoom = T.RT_31
     },
     Remark = "肉鸽难度4且大于等于12层"
@@ -5311,7 +5346,7 @@ return ReadOnly("Condition", {
   [5014] = {
     ConditionId = 5014,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_295,
+    ConditionMap = T.RT_297,
     Remark = "肉鸽大于等于3层"
   },
   [5015] = {
@@ -5319,8 +5354,8 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       RougeLikeGroupMin = {
-        T.RT_296,
-        T.RT_284
+        T.RT_298,
+        T.RT_286
       }
     },
     Remark = "1组或2组已拿到大于等于三个"
@@ -5348,7 +5383,7 @@ return ReadOnly("Condition", {
     ConditionId = 5017,
     ConditionLogic = "AND",
     ConditionMap = {
-      RougeLikeDifficulty = T.RT_298,
+      RougeLikeDifficulty = T.RT_300,
       RougeLikePassRoom = T.RT_77
     },
     Remark = "肉鸽难度5且大于等于4层"
@@ -5357,7 +5392,7 @@ return ReadOnly("Condition", {
     ConditionId = 5018,
     ConditionLogic = "AND",
     ConditionMap = {
-      RougeLikeDifficulty = T.RT_298,
+      RougeLikeDifficulty = T.RT_300,
       RougeLikePassRoom = T.RT_31
     },
     Remark = "肉鸽难度5且大于等于12层"
@@ -5365,7 +5400,7 @@ return ReadOnly("Condition", {
   [5019] = {
     ConditionId = 5019,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_301,
+    ConditionMap = T.RT_303,
     Remark = "肉鸽难度1"
   },
   [5020] = {
@@ -5373,7 +5408,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "AND",
     ConditionMap = {
       RougeLikeDifficulty = {
-        T.RT_302
+        T.RT_304
       }
     },
     Remark = "肉鸽难度2"
@@ -5382,7 +5417,7 @@ return ReadOnly("Condition", {
     ConditionId = 5021,
     ConditionLogic = "AND",
     ConditionMap = {
-      RougeLikeDifficulty = T.RT_292
+      RougeLikeDifficulty = T.RT_294
     },
     Remark = "肉鸽难度3"
   },
@@ -5390,7 +5425,7 @@ return ReadOnly("Condition", {
     ConditionId = 5022,
     ConditionLogic = "AND",
     ConditionMap = {
-      RougeLikeDifficulty = T.RT_294
+      RougeLikeDifficulty = T.RT_296
     },
     Remark = "肉鸽难度4"
   },
@@ -5398,7 +5433,7 @@ return ReadOnly("Condition", {
     ConditionId = 5023,
     ConditionLogic = "AND",
     ConditionMap = {
-      RougeLikeDifficulty = T.RT_298
+      RougeLikeDifficulty = T.RT_300
     },
     Remark = "肉鸽难度5"
   },
@@ -5407,7 +5442,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "AND",
     ConditionMap = {
       RougeLikeGroupMin = {
-        T.RT_296
+        T.RT_298
       }
     },
     Remark = "拥有祝福1组3枚"
@@ -5415,7 +5450,7 @@ return ReadOnly("Condition", {
   [5025] = {
     ConditionId = 5025,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_286,
+    ConditionMap = T.RT_288,
     Remark = "拥有祝福2组3枚"
   },
   [5026] = {
@@ -5423,7 +5458,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "AND",
     ConditionMap = {
       RougeLikeGroupMin = {
-        T.RT_303
+        T.RT_305
       }
     },
     Remark = "拥有祝福5组3枚"
@@ -5444,7 +5479,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "AND",
     ConditionMap = {
       RougeLikeGroupMin = {
-        T.RT_304
+        T.RT_306
       }
     },
     Remark = "拥有祝福7组3枚"
@@ -5476,7 +5511,7 @@ return ReadOnly("Condition", {
   [5032] = {
     ConditionId = 5032,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_305,
+    ConditionMap = T.RT_307,
     Remark = "肉鸽大于等于11层"
   },
   [5033] = {
@@ -5484,7 +5519,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "AND",
     ConditionMap = {
       RougeLikeGroupMin = {
-        T.RT_306
+        T.RT_308
       }
     },
     Remark = "拥有祝福3组3枚"
@@ -5522,7 +5557,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "AND",
     ConditionMap = {
       RougeLikeGroupMin = {
-        T.RT_290
+        T.RT_292
       }
     },
     Remark = "拥有祝福4组3枚"
@@ -5726,31 +5761,31 @@ return ReadOnly("Condition", {
   [5051] = {
     ConditionId = 5051,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_140,
+    ConditionMap = T.RT_141,
     Remark = "肉鸽解锁条件-达到历练15级"
   },
   [5052] = {
     ConditionId = 5052,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_155,
+    ConditionMap = T.RT_158,
     Remark = "肉鸽解锁条件-达到历练25级"
   },
   [5053] = {
     ConditionId = 5053,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_159,
+    ConditionMap = T.RT_162,
     Remark = "肉鸽解锁条件-达到历练35级"
   },
   [5054] = {
     ConditionId = 5054,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_162,
+    ConditionMap = T.RT_165,
     Remark = "肉鸽解锁条件-达到历练45级"
   },
   [5055] = {
     ConditionId = 5055,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_165,
+    ConditionMap = T.RT_168,
     Remark = "肉鸽解锁条件-达到历练55级"
   },
   [5056] = {
@@ -5762,7 +5797,7 @@ return ReadOnly("Condition", {
   [5057] = {
     ConditionId = 5057,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_308,
+    ConditionMap = T.RT_310,
     Remark = "肉鸽解锁条件-完成难度1"
   },
   [5058] = {
@@ -5793,7 +5828,7 @@ return ReadOnly("Condition", {
     ConditionId = 5061,
     ConditionLogic = "AND",
     ConditionMap = {
-      RougeLikePassRoom = T.RT_135
+      RougeLikePassRoom = T.RT_136
     },
     Remark = "肉鸽大于等于14层"
   },
@@ -5828,7 +5863,7 @@ return ReadOnly("Condition", {
   [5064] = {
     ConditionId = 5064,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_301,
+    ConditionMap = T.RT_303,
     IsNot = true,
     Remark = "肉鸽难度大于1"
   },
@@ -5837,8 +5872,8 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       RougeLikeDifficulty = {
-        T.RT_299,
-        T.RT_302
+        T.RT_301,
+        T.RT_304
       }
     },
     IsNot = true,
@@ -5849,9 +5884,9 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       RougeLikeDifficulty = {
-        T.RT_299,
-        T.RT_302,
-        T.RT_291
+        T.RT_301,
+        T.RT_304,
+        T.RT_293
       }
     },
     IsNot = true,
@@ -5861,7 +5896,7 @@ return ReadOnly("Condition", {
     ConditionId = 5067,
     ConditionLogic = "AND",
     ConditionMap = {
-      RougeLikeDifficulty = T.RT_310,
+      RougeLikeDifficulty = T.RT_312,
       RougeLikePassRoom = T.RT_77
     },
     Remark = "肉鸽难度6且大于等于4层"
@@ -5870,7 +5905,7 @@ return ReadOnly("Condition", {
     ConditionId = 5068,
     ConditionLogic = "AND",
     ConditionMap = {
-      RougeLikeDifficulty = T.RT_310,
+      RougeLikeDifficulty = T.RT_312,
       RougeLikePassRoom = T.RT_31
     },
     Remark = "肉鸽难度6且大于等于12层"
@@ -5886,21 +5921,21 @@ return ReadOnly("Condition", {
   [5070] = {
     ConditionId = 5070,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_312,
+    ConditionMap = T.RT_314,
     Remark = "肉鸽解锁条件-完成难度6"
   },
   [5071] = {
     ConditionId = 5071,
     ConditionLogic = "AND",
     ConditionMap = {
-      RougeLikeDifficulty = T.RT_310
+      RougeLikeDifficulty = T.RT_312
     },
     Remark = "肉鸽难度6"
   },
   [5072] = {
     ConditionId = 5072,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_165,
+    ConditionMap = T.RT_168,
     Remark = "肉鸽解锁条件-达到历练55级"
   },
   [5073] = {
@@ -5908,9 +5943,9 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       RougeLikeGroupMin = {
-        T.RT_306,
-        T.RT_303,
-        T.RT_304
+        T.RT_308,
+        T.RT_305,
+        T.RT_306
       }
     },
     Remark = "3、5或7组已拿到大于等于三个"
@@ -5942,7 +5977,7 @@ return ReadOnly("Condition", {
   [5075] = {
     ConditionId = 5075,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_295,
+    ConditionMap = T.RT_297,
     IsNot = true,
     Remark = "（剧情事件用）肉鸽尚未通过第3层"
   },
@@ -5958,7 +5993,7 @@ return ReadOnly("Condition", {
   [5077] = {
     ConditionId = 5077,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_305,
+    ConditionMap = T.RT_307,
     IsNot = true,
     Remark = "（剧情事件用）肉鸽尚未通过第11层"
   },
@@ -5975,7 +6010,7 @@ return ReadOnly("Condition", {
     ConditionId = 5079,
     ConditionLogic = "AND",
     ConditionMap = {
-      RougeLikePassRoom = T.RT_139
+      RougeLikePassRoom = T.RT_140
     },
     IsNot = true,
     Remark = "（剧情事件用）肉鸽尚未通过第15层"
@@ -5993,7 +6028,7 @@ return ReadOnly("Condition", {
     ConditionId = 5081,
     ConditionLogic = "AND",
     ConditionMap = {
-      RougeLikePassRoom = T.RT_153
+      RougeLikePassRoom = T.RT_156
     },
     IsNot = true,
     Remark = "（剧情事件用）肉鸽尚未通过第21层"
@@ -6268,13 +6303,13 @@ return ReadOnly("Condition", {
   [5161] = {
     ConditionId = 5161,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_313,
+    ConditionMap = T.RT_315,
     Remark = "通过101房间后解锁"
   },
   [5162] = {
     ConditionId = 5162,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_313,
+    ConditionMap = T.RT_315,
     IsNot = true,
     Remark = "通过101房间后上锁"
   },
@@ -6332,38 +6367,38 @@ return ReadOnly("Condition", {
   [5167] = {
     ConditionId = 5167,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_316,
+    ConditionMap = T.RT_318,
     Remark = "未解锁赛季1初见"
   },
   [5168] = {
     ConditionId = 5168,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_316,
+    ConditionMap = T.RT_318,
     Remark = "未解锁赛季1新一局开始（暂废弃）"
   },
   [5169] = {
     ConditionId = 5169,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_317,
+    ConditionMap = T.RT_319,
     Remark = "刷怪2阶段-肉鸽已通过6层"
   },
   [5170] = {
     ConditionId = 5170,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_317,
+    ConditionMap = T.RT_319,
     IsNot = true,
     Remark = "刷怪2阶段-肉鸽未通过6层"
   },
   [5171] = {
     ConditionId = 5171,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_318,
+    ConditionMap = T.RT_320,
     Remark = "刷怪3阶段-肉鸽已通过13层"
   },
   [5172] = {
     ConditionId = 5172,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_318,
+    ConditionMap = T.RT_320,
     IsNot = true,
     Remark = "刷怪3阶段-肉鸽未通过13层"
   },
@@ -6765,7 +6800,7 @@ return ReadOnly("Condition", {
   [6001] = {
     ConditionId = 6001,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_233,
+    ConditionMap = T.RT_236,
     Remark = "MOD引导任务解锁条件"
   },
   [6002] = {
@@ -6945,13 +6980,13 @@ return ReadOnly("Condition", {
   [6019] = {
     ConditionId = 6019,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_312,
+    ConditionMap = T.RT_314,
     Remark = "小暴怒活动下架条件-完成难度6"
   },
   [6020] = {
     ConditionId = 6020,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_283,
+    ConditionMap = T.RT_285,
     Remark = "送松露活动下架条件"
   },
   [6021] = {
@@ -6965,7 +7000,7 @@ return ReadOnly("Condition", {
   [6022] = {
     ConditionId = 6022,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_281,
+    ConditionMap = T.RT_131,
     Remark = "区域联机解锁活动领奖条件"
   },
   [6023] = {
@@ -7080,8 +7115,8 @@ return ReadOnly("Condition", {
     ConditionId = 8011,
     ConditionLogic = "AND",
     ConditionMap = {
-      Quest = T.RT_335,
-      TimeArrived = T.RT_336
+      Quest = T.RT_338,
+      TimeArrived = T.RT_339
     },
     Remark = "活动--剧院联机活动开启"
   },
@@ -7089,8 +7124,8 @@ return ReadOnly("Condition", {
     ConditionId = 8012,
     ConditionLogic = "AND",
     ConditionMap = {
-      Quest = T.RT_335,
-      TimeArrived = T.RT_337
+      Quest = T.RT_338,
+      TimeArrived = T.RT_340
     },
     Remark = "活动--剧院联机活动结束"
   },
@@ -7130,7 +7165,7 @@ return ReadOnly("Condition", {
     ConditionId = 8017,
     ConditionLogic = "AND",
     ConditionMap = {
-      FollowCommunityComplete = T.RT_278
+      FollowCommunityComplete = T.RT_281
     },
     Remark = "社区关注活动全部奖励领完"
   },
@@ -7146,26 +7181,26 @@ return ReadOnly("Condition", {
   [8029] = {
     ConditionId = 8029,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_339,
+    ConditionMap = T.RT_342,
     Remark = "活动--剧院联机活动匹配玩法报名NPC显示条件【临时】"
   },
   [8030] = {
     ConditionId = 8030,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_340,
+    ConditionMap = T.RT_343,
     Remark = "活动--剧院联机活动匹配玩法报名NPC隐藏条件【临时】"
   },
   [8031] = {
     ConditionId = 8031,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_339,
+    ConditionMap = T.RT_342,
     Remark = "活动--剧院联机活动匹配玩法表演NPC显示条件1【临时】"
   },
   [8032] = {
     ConditionId = 8032,
     ConditionLogic = "AND",
     ConditionMap = {
-      TimeArrived = T.RT_341
+      TimeArrived = T.RT_344
     },
     Remark = "活动--剧院联机活动匹配玩法表演NPC隐藏条件1【临时】"
   },
@@ -7173,8 +7208,8 @@ return ReadOnly("Condition", {
     ConditionId = 8033,
     ConditionLogic = "AND",
     ConditionMap = {
-      QuestChain = T.RT_338,
-      TimeArrived = T.RT_341
+      QuestChain = T.RT_341,
+      TimeArrived = T.RT_344
     },
     Remark = "活动--剧院联机活动匹配玩法表演NPC显示条件2【临时】"
   },
@@ -7182,7 +7217,7 @@ return ReadOnly("Condition", {
     ConditionId = 8034,
     ConditionLogic = "AND",
     ConditionMap = {
-      TimeArrived = T.RT_342
+      TimeArrived = T.RT_345
     },
     Remark = "活动--剧院联机活动匹配玩法表演NPC隐藏条件2【临时】"
   },
@@ -7190,8 +7225,8 @@ return ReadOnly("Condition", {
     ConditionId = 8035,
     ConditionLogic = "AND",
     ConditionMap = {
-      QuestChain = T.RT_338,
-      TimeArrived = T.RT_342
+      QuestChain = T.RT_341,
+      TimeArrived = T.RT_345
     },
     Remark = "活动--剧院联机活动匹配玩法表演NPC显示条件3【临时】"
   },
@@ -7199,7 +7234,7 @@ return ReadOnly("Condition", {
     ConditionId = 8036,
     ConditionLogic = "AND",
     ConditionMap = {
-      TimeArrived = T.RT_343
+      TimeArrived = T.RT_346
     },
     Remark = "活动--剧院联机活动匹配玩法表演NPC隐藏条件3【临时】"
   },
@@ -7207,8 +7242,8 @@ return ReadOnly("Condition", {
     ConditionId = 8037,
     ConditionLogic = "AND",
     ConditionMap = {
-      QuestChain = T.RT_338,
-      TimeArrived = T.RT_343
+      QuestChain = T.RT_341,
+      TimeArrived = T.RT_346
     },
     Remark = "活动--剧院联机活动匹配玩法表演NPC显示条件4【临时】"
   },
@@ -7216,7 +7251,7 @@ return ReadOnly("Condition", {
     ConditionId = 8038,
     ConditionLogic = "AND",
     ConditionMap = {
-      TimeArrived = T.RT_344
+      TimeArrived = T.RT_347
     },
     Remark = "活动--剧院联机活动匹配玩法表演NPC隐藏条件4【临时】"
   },
@@ -7224,8 +7259,8 @@ return ReadOnly("Condition", {
     ConditionId = 8039,
     ConditionLogic = "AND",
     ConditionMap = {
-      QuestChain = T.RT_338,
-      TimeArrived = T.RT_344
+      QuestChain = T.RT_341,
+      TimeArrived = T.RT_347
     },
     Remark = "活动--剧院联机活动匹配玩法表演NPC显示条件5【临时】"
   },
@@ -7233,7 +7268,7 @@ return ReadOnly("Condition", {
     ConditionId = 8040,
     ConditionLogic = "AND",
     ConditionMap = {
-      TimeArrived = T.RT_345
+      TimeArrived = T.RT_348
     },
     Remark = "活动--剧院联机活动匹配玩法表演NPC隐藏条件5【临时】"
   },
@@ -7241,15 +7276,15 @@ return ReadOnly("Condition", {
     ConditionId = 8041,
     ConditionLogic = "AND",
     ConditionMap = {
-      QuestChain = T.RT_338,
-      TimeArrived = T.RT_345
+      QuestChain = T.RT_341,
+      TimeArrived = T.RT_348
     },
     Remark = "活动--剧院联机活动匹配玩法表演NPC显示条件6【临时】"
   },
   [8042] = {
     ConditionId = 8042,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_340,
+    ConditionMap = T.RT_343,
     Remark = "活动--剧院联机活动匹配玩法表演NPC隐藏条件6【临时】"
   },
   [9001] = {
@@ -7305,43 +7340,43 @@ return ReadOnly("Condition", {
   [80001] = {
     ConditionId = 80001,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_321,
+    ConditionMap = T.RT_323,
     Remark = "动态事件解锁"
   },
   [80002] = {
     ConditionId = 80002,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_321,
+    ConditionMap = T.RT_323,
     Remark = "动态事件解锁"
   },
   [80003] = {
     ConditionId = 80003,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_321,
+    ConditionMap = T.RT_323,
     Remark = "动态事件解锁"
   },
   [80004] = {
     ConditionId = 80004,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_321,
+    ConditionMap = T.RT_323,
     Remark = "动态事件解锁"
   },
   [80005] = {
     ConditionId = 80005,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_321,
+    ConditionMap = T.RT_323,
     Remark = "动态事件解锁"
   },
   [80006] = {
     ConditionId = 80006,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80007] = {
     ConditionId = 80007,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80008] = {
@@ -7356,19 +7391,19 @@ return ReadOnly("Condition", {
   [80009] = {
     ConditionId = 80009,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80010] = {
     ConditionId = 80010,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80011] = {
     ConditionId = 80011,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80012] = {
@@ -7383,61 +7418,61 @@ return ReadOnly("Condition", {
   [80013] = {
     ConditionId = 80013,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80014] = {
     ConditionId = 80014,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_323,
+    ConditionMap = T.RT_325,
     Remark = "动态事件解锁"
   },
   [80015] = {
     ConditionId = 80015,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_321,
+    ConditionMap = T.RT_323,
     Remark = "动态事件解锁"
   },
   [80016] = {
     ConditionId = 80016,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_321,
+    ConditionMap = T.RT_323,
     Remark = "动态事件解锁"
   },
   [80017] = {
     ConditionId = 80017,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80018] = {
     ConditionId = 80018,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80020] = {
     ConditionId = 80020,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80021] = {
     ConditionId = 80021,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80022] = {
     ConditionId = 80022,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80023] = {
     ConditionId = 80023,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80024] = {
@@ -7445,7 +7480,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "AND",
     ConditionMap = {
       PlayerLevelMin = T.RT_31,
-      QuestChain = T.RT_172
+      QuestChain = T.RT_175
     },
     Remark = "动态事件解锁"
   },
@@ -7461,127 +7496,127 @@ return ReadOnly("Condition", {
   [80026] = {
     ConditionId = 80026,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80027] = {
     ConditionId = 80027,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80028] = {
     ConditionId = 80028,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80029] = {
     ConditionId = 80029,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80030] = {
     ConditionId = 80030,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80031] = {
     ConditionId = 80031,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80032] = {
     ConditionId = 80032,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80033] = {
     ConditionId = 80033,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80034] = {
     ConditionId = 80034,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_324,
+    ConditionMap = T.RT_326,
     Remark = "动态事件解锁"
   },
   [80035] = {
     ConditionId = 80035,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_324,
+    ConditionMap = T.RT_326,
     Remark = "动态事件解锁"
   },
   [80037] = {
     ConditionId = 80037,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80038] = {
     ConditionId = 80038,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_326,
+    ConditionMap = T.RT_328,
     Remark = "动态事件解锁"
   },
   [80040] = {
     ConditionId = 80040,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80044] = {
     ConditionId = 80044,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80045] = {
     ConditionId = 80045,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80046] = {
     ConditionId = 80046,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_324,
+    ConditionMap = T.RT_326,
     Remark = "动态事件解锁"
   },
   [80047] = {
     ConditionId = 80047,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80048] = {
     ConditionId = 80048,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_324,
+    ConditionMap = T.RT_326,
     Remark = "动态事件解锁"
   },
   [80050] = {
     ConditionId = 80050,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_321,
+    ConditionMap = T.RT_323,
     Remark = "动态事件解锁"
   },
   [80051] = {
     ConditionId = 80051,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_321,
+    ConditionMap = T.RT_323,
     Remark = "动态事件解锁"
   },
   [80052] = {
     ConditionId = 80052,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_321,
+    ConditionMap = T.RT_323,
     Remark = "动态事件解锁"
   },
   [80053] = {
@@ -7589,14 +7624,14 @@ return ReadOnly("Condition", {
     ConditionLogic = "AND",
     ConditionMap = {
       PlayerLevelMin = T.RT_31,
-      QuestChain = T.RT_327
+      QuestChain = T.RT_329
     },
     Remark = "动态事件解锁"
   },
   [80054] = {
     ConditionId = 80054,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_321,
+    ConditionMap = T.RT_323,
     Remark = "动态事件解锁"
   },
   [80055] = {
@@ -7604,50 +7639,50 @@ return ReadOnly("Condition", {
     ConditionLogic = "AND",
     ConditionMap = {
       PlayerLevelMin = T.RT_31,
-      QuestChain = T.RT_328
+      QuestChain = T.RT_330
     },
     Remark = "动态事件解锁"
   },
   [80056] = {
     ConditionId = 80056,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_324,
+    ConditionMap = T.RT_326,
     Remark = "动态事件解锁"
   },
   [80057] = {
     ConditionId = 80057,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_324,
+    ConditionMap = T.RT_326,
     Remark = "动态事件解锁"
   },
   [80058] = {
     ConditionId = 80058,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_324,
+    ConditionMap = T.RT_326,
     Remark = "动态事件解锁"
   },
   [80059] = {
     ConditionId = 80059,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80060] = {
     ConditionId = 80060,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80061] = {
     ConditionId = 80061,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_326,
+    ConditionMap = T.RT_328,
     Remark = "动态事件解锁"
   },
   [80062] = {
     ConditionId = 80062,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80063] = {
@@ -7662,25 +7697,25 @@ return ReadOnly("Condition", {
   [80064] = {
     ConditionId = 80064,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80065] = {
     ConditionId = 80065,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80066] = {
     ConditionId = 80066,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80067] = {
     ConditionId = 80067,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80068] = {
@@ -7695,37 +7730,37 @@ return ReadOnly("Condition", {
   [80069] = {
     ConditionId = 80069,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80070] = {
     ConditionId = 80070,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_322,
+    ConditionMap = T.RT_324,
     Remark = "动态事件解锁"
   },
   [80071] = {
     ConditionId = 80071,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_330,
+    ConditionMap = T.RT_332,
     Remark = "动态事件解锁"
   },
   [80072] = {
     ConditionId = 80072,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_323,
+    ConditionMap = T.RT_325,
     Remark = "动态事件解锁"
   },
   [80073] = {
     ConditionId = 80073,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_323,
+    ConditionMap = T.RT_325,
     Remark = "动态事件解锁"
   },
   [80074] = {
     ConditionId = 80074,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_330,
+    ConditionMap = T.RT_332,
     Remark = "动态事件解锁"
   },
   [80075] = {
@@ -7733,111 +7768,183 @@ return ReadOnly("Condition", {
     ConditionLogic = "AND",
     ConditionMap = {
       PlayerLevelMin = T.RT_31,
-      QuestChain = T.RT_331
+      QuestChain = T.RT_333
     },
     Remark = "动态事件解锁"
   },
   [80076] = {
     ConditionId = 80076,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_323,
+    ConditionMap = T.RT_325,
     Remark = "动态事件解锁"
   },
   [80077] = {
     ConditionId = 80077,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_332,
+    ConditionMap = T.RT_334,
     Remark = "动态事件解锁"
   },
   [80078] = {
     ConditionId = 80078,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_332,
+    ConditionMap = T.RT_334,
     Remark = "动态事件解锁"
   },
   [80079] = {
     ConditionId = 80079,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_333,
+    ConditionMap = T.RT_335,
     Remark = "动态事件解锁"
   },
   [80080] = {
     ConditionId = 80080,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_333,
+    ConditionMap = T.RT_335,
     Remark = "动态事件解锁"
   },
   [80081] = {
     ConditionId = 80081,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_333,
+    ConditionMap = T.RT_335,
     Remark = "动态事件解锁"
   },
   [80082] = {
     ConditionId = 80082,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_334,
+    ConditionMap = T.RT_336,
     Remark = "动态事件解锁"
   },
   [80083] = {
     ConditionId = 80083,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_334,
+    ConditionMap = T.RT_336,
     Remark = "动态事件解锁"
   },
   [80084] = {
     ConditionId = 80084,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_334,
+    ConditionMap = T.RT_336,
     Remark = "动态事件解锁"
   },
   [80085] = {
     ConditionId = 80085,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_334,
+    ConditionMap = T.RT_336,
     Remark = "动态事件解锁"
   },
   [80086] = {
     ConditionId = 80086,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_334,
+    ConditionMap = T.RT_336,
     Remark = "动态事件解锁"
   },
   [80087] = {
     ConditionId = 80087,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_334,
+    ConditionMap = T.RT_336,
     Remark = "动态事件解锁"
   },
   [80088] = {
     ConditionId = 80088,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_334,
+    ConditionMap = T.RT_336,
     Remark = "动态事件解锁"
   },
   [80089] = {
     ConditionId = 80089,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_334,
+    ConditionMap = T.RT_336,
     Remark = "动态事件解锁"
   },
   [80090] = {
     ConditionId = 80090,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_334,
+    ConditionMap = T.RT_336,
     Remark = "动态事件解锁"
   },
   [80091] = {
     ConditionId = 80091,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_334,
+    ConditionMap = T.RT_336,
+    Remark = "动态事件解锁"
+  },
+  [80092] = {
+    ConditionId = 80092,
+    ConditionLogic = "AND",
+    ConditionMap = T.RT_337,
+    Remark = "动态事件解锁"
+  },
+  [80093] = {
+    ConditionId = 80093,
+    ConditionLogic = "AND",
+    ConditionMap = T.RT_337,
+    Remark = "动态事件解锁"
+  },
+  [80094] = {
+    ConditionId = 80094,
+    ConditionLogic = "AND",
+    ConditionMap = T.RT_337,
+    Remark = "动态事件解锁"
+  },
+  [80095] = {
+    ConditionId = 80095,
+    ConditionLogic = "AND",
+    ConditionMap = T.RT_337,
+    Remark = "动态事件解锁"
+  },
+  [80096] = {
+    ConditionId = 80096,
+    ConditionLogic = "AND",
+    ConditionMap = T.RT_337,
+    Remark = "动态事件解锁"
+  },
+  [80097] = {
+    ConditionId = 80097,
+    ConditionLogic = "AND",
+    ConditionMap = T.RT_337,
+    Remark = "动态事件解锁"
+  },
+  [80098] = {
+    ConditionId = 80098,
+    ConditionLogic = "AND",
+    ConditionMap = T.RT_337,
+    Remark = "动态事件解锁"
+  },
+  [80099] = {
+    ConditionId = 80099,
+    ConditionLogic = "AND",
+    ConditionMap = T.RT_337,
+    Remark = "动态事件解锁"
+  },
+  [80100] = {
+    ConditionId = 80100,
+    ConditionLogic = "AND",
+    ConditionMap = T.RT_337,
+    Remark = "动态事件解锁"
+  },
+  [80101] = {
+    ConditionId = 80101,
+    ConditionLogic = "AND",
+    ConditionMap = T.RT_337,
+    Remark = "动态事件解锁"
+  },
+  [80102] = {
+    ConditionId = 80102,
+    ConditionLogic = "AND",
+    ConditionMap = T.RT_336,
+    Remark = "动态事件解锁"
+  },
+  [80103] = {
+    ConditionId = 80103,
+    ConditionLogic = "AND",
+    ConditionMap = T.RT_336,
     Remark = "动态事件解锁"
   },
   [81001] = {
     ConditionId = 81001,
     ConditionLogic = "AND",
     ConditionMap = {
-      QuestChain = T.RT_327
+      QuestChain = T.RT_329
     },
     Remark = "序章完成且宠物支线完成"
   },
@@ -7853,7 +7960,7 @@ return ReadOnly("Condition", {
     ConditionId = 81003,
     ConditionLogic = "AND",
     ConditionMap = {
-      QuestChain = T.RT_329
+      QuestChain = T.RT_331
     },
     Remark = "矿坑完成且宠物支线完成"
   },
@@ -7861,7 +7968,7 @@ return ReadOnly("Condition", {
     ConditionId = 81004,
     ConditionLogic = "AND",
     ConditionMap = {
-      QuestChain = T.RT_325
+      QuestChain = T.RT_327
     },
     Remark = "冰湖城第一章完成且宠物支线完成"
   },
@@ -7869,7 +7976,7 @@ return ReadOnly("Condition", {
     ConditionId = 81005,
     ConditionLogic = "AND",
     ConditionMap = {
-      QuestChain = T.RT_328
+      QuestChain = T.RT_330
     },
     Remark = "EX01完成且宠物支线完成"
   },
@@ -7877,7 +7984,7 @@ return ReadOnly("Condition", {
     ConditionId = 81006,
     ConditionLogic = "AND",
     ConditionMap = {
-      QuestChain = T.RT_331
+      QuestChain = T.RT_333
     },
     Remark = "第二章完成且宠物支线完成"
   },
@@ -7885,7 +7992,7 @@ return ReadOnly("Condition", {
     ConditionId = 82001,
     ConditionLogic = "AND",
     ConditionMap = {
-      QuestChain = T.RT_171
+      QuestChain = T.RT_174
     },
     Remark = "钓鱼支线完成"
   },
@@ -8823,6 +8930,132 @@ return ReadOnly("Condition", {
     },
     Remark = "可派遣前置条件"
   },
+  [89092] = {
+    ConditionId = 89092,
+    ConditionLogic = "OR",
+    ConditionMap = {
+      DynamicEventCompleteTimes = {
+        {109204, 1}
+      }
+    },
+    Remark = "可派遣前置条件"
+  },
+  [89093] = {
+    ConditionId = 89093,
+    ConditionLogic = "OR",
+    ConditionMap = {
+      DynamicEventCompleteTimes = {
+        {209304, 1}
+      }
+    },
+    Remark = "可派遣前置条件"
+  },
+  [89094] = {
+    ConditionId = 89094,
+    ConditionLogic = "OR",
+    ConditionMap = {
+      DynamicEventCompleteTimes = {
+        {309404, 1}
+      }
+    },
+    Remark = "可派遣前置条件"
+  },
+  [89095] = {
+    ConditionId = 89095,
+    ConditionLogic = "OR",
+    ConditionMap = {
+      DynamicEventCompleteTimes = {
+        {209504, 1}
+      }
+    },
+    Remark = "可派遣前置条件"
+  },
+  [89096] = {
+    ConditionId = 89096,
+    ConditionLogic = "OR",
+    ConditionMap = {
+      DynamicEventCompleteTimes = {
+        {209614, 1},
+        {209624, 1},
+        {209654, 1}
+      }
+    },
+    Remark = "可派遣前置条件"
+  },
+  [89097] = {
+    ConditionId = 89097,
+    ConditionLogic = "OR",
+    ConditionMap = {
+      DynamicEventCompleteTimes = {
+        {209714, 1},
+        {209724, 1},
+        {209744, 1}
+      }
+    },
+    Remark = "可派遣前置条件"
+  },
+  [89098] = {
+    ConditionId = 89098,
+    ConditionLogic = "OR",
+    ConditionMap = {
+      DynamicEventCompleteTimes = {
+        {109834, 1},
+        {109844, 1}
+      }
+    },
+    Remark = "可派遣前置条件"
+  },
+  [89099] = {
+    ConditionId = 89099,
+    ConditionLogic = "OR",
+    ConditionMap = {
+      DynamicEventCompleteTimes = {
+        {209934, 1},
+        {209954, 1}
+      }
+    },
+    Remark = "可派遣前置条件"
+  },
+  [89100] = {
+    ConditionId = 89100,
+    ConditionLogic = "OR",
+    ConditionMap = {
+      DynamicEventCompleteTimes = {
+        {110004, 1}
+      }
+    },
+    Remark = "可派遣前置条件"
+  },
+  [89101] = {
+    ConditionId = 89101,
+    ConditionLogic = "OR",
+    ConditionMap = {
+      DynamicEventCompleteTimes = {
+        {110104, 1}
+      }
+    },
+    Remark = "可派遣前置条件"
+  },
+  [89102] = {
+    ConditionId = 89102,
+    ConditionLogic = "OR",
+    ConditionMap = {
+      DynamicEventCompleteTimes = {
+        {210205, 1}
+      }
+    },
+    Remark = "可派遣前置条件"
+  },
+  [89103] = {
+    ConditionId = 89103,
+    ConditionLogic = "OR",
+    ConditionMap = {
+      DynamicEventCompleteTimes = {
+        {310305, 1}
+      }
+    },
+    Remark = "可派遣前置条件"
+  },
   [100101] = {
     ConditionId = 100101,
     ConditionLogic = "AND",
@@ -9026,6 +9259,12 @@ return ReadOnly("Condition", {
     ConditionMap = T.RT_121,
     Remark = "EX01任务完成"
   },
+  [112001] = {
+    ConditionId = 112001,
+    ConditionLogic = "AND",
+    ConditionMap = T.RT_131,
+    Remark = "累计联机时长活动解锁跳转按钮"
+  },
   [120001] = {
     ConditionId = 120001,
     ConditionLogic = "AND",
@@ -9038,20 +9277,20 @@ return ReadOnly("Condition", {
     ConditionId = 120002,
     ConditionLogic = "AND",
     ConditionMap = {
-      QuestChain = T.RT_142
+      QuestChain = T.RT_143
     },
     Remark = "东国引入任务2完成"
   },
   [120003] = {
     ConditionId = 120003,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_145,
+    ConditionMap = T.RT_146,
     Remark = "东国引入任务3完成"
   },
   [120100] = {
     ConditionId = 120100,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_145,
+    ConditionMap = T.RT_146,
     Remark = "东国一期的解锁条件"
   },
   [120101] = {
@@ -9066,7 +9305,7 @@ return ReadOnly("Condition", {
     ConditionId = 120102,
     ConditionLogic = "AND",
     ConditionMap = {
-      QuestChain = T.RT_147
+      QuestChain = T.RT_148
     },
     Remark = "东国一期任务完成"
   },
@@ -9074,7 +9313,7 @@ return ReadOnly("Condition", {
     ConditionId = 120103,
     ConditionLogic = "AND",
     ConditionMap = {
-      QuestChain = T.RT_148
+      QuestChain = T.RT_149
     },
     Remark = "东国一期任务完成"
   },
@@ -9082,15 +9321,21 @@ return ReadOnly("Condition", {
     ConditionId = 120104,
     ConditionLogic = "AND",
     ConditionMap = {
-      QuestChain = T.RT_150
+      QuestChain = T.RT_151
     },
+    Remark = "东国一期任务完成"
+  },
+  [120105] = {
+    ConditionId = 120105,
+    ConditionLogic = "AND",
+    ConditionMap = T.RT_152,
     Remark = "东国一期任务完成"
   },
   [120106] = {
     ConditionId = 120106,
     ConditionLogic = "AND",
     ConditionMap = {
-      QuestChain = T.RT_151
+      QuestChain = T.RT_153
     },
     Remark = "东国一期任务全部完成"
   },
@@ -9172,11 +9417,83 @@ return ReadOnly("Condition", {
     },
     Remark = "东国二期任务5完成"
   },
+  [120206] = {
+    ConditionId = 120206,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      QuestChain = T.RT_155
+    },
+    Remark = "东国二期任务6完成"
+  },
+  [120301] = {
+    ConditionId = 120301,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      QuestChain = {120301}
+    },
+    Remark = "奉香大典任务1完成"
+  },
+  [120302] = {
+    ConditionId = 120302,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      QuestChain = {120302}
+    },
+    Remark = "奉香大典任务2完成"
+  },
+  [120303] = {
+    ConditionId = 120303,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      QuestChain = {120303}
+    },
+    Remark = "奉香大典任务3完成"
+  },
+  [120304] = {
+    ConditionId = 120304,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      QuestChain = {120304}
+    },
+    Remark = "奉香大典任务4完成"
+  },
+  [120305] = {
+    ConditionId = 120305,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      QuestChain = {120305}
+    },
+    Remark = "奉香大典任务5完成"
+  },
+  [120306] = {
+    ConditionId = 120306,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      QuestChain = {120306}
+    },
+    Remark = "奉香大典任务6完成"
+  },
+  [120307] = {
+    ConditionId = 120307,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      QuestChain = {120307}
+    },
+    Remark = "奉香大典任务7完成"
+  },
+  [120308] = {
+    ConditionId = 120308,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      QuestChain = {120308}
+    },
+    Remark = "奉香大典任务8完成"
+  },
   [200101] = {
     ConditionId = 200101,
     ConditionLogic = "AND",
     ConditionMap = {
-      TrueQuestChain = T.RT_168
+      TrueQuestChain = T.RT_171
     },
     Remark = "支线任务完成"
   },
@@ -9191,7 +9508,7 @@ return ReadOnly("Condition", {
   [200104] = {
     ConditionId = 200104,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_167,
+    ConditionMap = T.RT_170,
     Remark = "魔灵支线下完成"
   },
   [200202] = {
@@ -9236,7 +9553,7 @@ return ReadOnly("Condition", {
     ConditionId = 200215,
     ConditionLogic = "AND",
     ConditionMap = {
-      TrueQuestChain = T.RT_171
+      TrueQuestChain = T.RT_174
     },
     Remark = "马库斯任务完成"
   },
@@ -9268,7 +9585,7 @@ return ReadOnly("Condition", {
     ConditionId = 200225,
     ConditionLogic = "AND",
     ConditionMap = {
-      QuestChain = T.RT_172
+      QuestChain = T.RT_175
     },
     Remark = "小小研究者三阶段结束"
   },
@@ -9276,7 +9593,7 @@ return ReadOnly("Condition", {
     ConditionId = 200700,
     ConditionLogic = "AND",
     ConditionMap = {
-      IsCurrentCharEquipMod = T.RT_173
+      IsCurrentCharEquipMod = T.RT_176
     },
     Remark = "当前角色装备了魔之楔"
   },
@@ -9311,7 +9628,7 @@ return ReadOnly("Condition", {
   [700001] = {
     ConditionId = 700001,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_320,
+    ConditionMap = T.RT_322,
     Remark = "【动态事件】黑桃的回忆"
   },
   [800061] = {
@@ -9368,7 +9685,7 @@ return ReadOnly("Condition", {
   [999992] = {
     ConditionId = 999992,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_320,
+    ConditionMap = T.RT_322,
     IsNot = true,
     Remark = "程序动态事件测试用"
   },
@@ -9386,14 +9703,14 @@ return ReadOnly("Condition", {
     ConditionId = 999994,
     ConditionLogic = "AND",
     ConditionMap = {
-      DynamicEventCompleteTimes = T.RT_347
+      DynamicEventCompleteTimes = T.RT_350
     },
     Remark = "程序动态事件测试用"
   },
   [999995] = {
     ConditionId = 999995,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_308,
+    ConditionMap = T.RT_310,
     Remark = "程序测试用"
   },
   [999996] = {
@@ -9419,7 +9736,7 @@ return ReadOnly("Condition", {
   [999998] = {
     ConditionId = 999998,
     ConditionLogic = "AND",
-    ConditionMap = T.RT_313,
+    ConditionMap = T.RT_315,
     IsNot = true,
     Remark = "程序测试用"
   },
@@ -9431,7 +9748,7 @@ return ReadOnly("Condition", {
         {999, 999},
         {998, 998}
       },
-      Impression = T.RT_347,
+      Impression = T.RT_350,
       MechanismState = {
         {
           1,
@@ -9864,6 +10181,14 @@ return ReadOnly("Condition", {
     ConditionId = 1000301,
     ConditionLogic = "OR",
     ConditionMap = {
+      InDungeon = {90607}
+    },
+    Remark = "成就-在最高难度探险"
+  },
+  [1000302] = {
+    ConditionId = 1000302,
+    ConditionLogic = "OR",
+    ConditionMap = {
       InDungeon = {
         90437,
         90438,
@@ -9872,14 +10197,6 @@ return ReadOnly("Condition", {
         90441,
         90442
       }
-    },
-    Remark = "成就-在最高难度探险"
-  },
-  [1000302] = {
-    ConditionId = 1000302,
-    ConditionLogic = "OR",
-    ConditionMap = {
-      InDungeon = {90607}
     },
     Remark = "成就-在最高难度探险无尽"
   },
@@ -10034,6 +10351,20 @@ return ReadOnly("Condition", {
     },
     Remark = "完成琳恩boss战后"
   },
+  [1000609] = {
+    ConditionId = 1000609,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      MechanismState = {
+        {
+          2080099,
+          0,
+          701001
+        }
+      }
+    },
+    Remark = "机枢支线宝箱C未开启"
+  },
   [1002121] = {
     ConditionId = 1002121,
     ConditionLogic = "AND",
@@ -10042,6 +10373,32 @@ return ReadOnly("Condition", {
       QuestChain = T.RT_39
     },
     Remark = "第一章任务完成"
+  },
+  [4030001] = {
+    ConditionId = 4030001,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      HaveItem = {
+        {
+          "Skin",
+          410201,
+          1
+        }
+      }
+    },
+    ConditionText = "UI_Locked_Des_4030001",
+    Remark = "获得止流皮肤"
+  },
+  [4030002] = {
+    ConditionId = 4030002,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      BuyGoods = {
+        {140269, 1}
+      }
+    },
+    ConditionText = "UI_Locked_Des_4030002",
+    Remark = "购买龙坐骑"
   },
   [10020106] = {
     ConditionId = 10020106,
@@ -10279,8 +10636,8 @@ return ReadOnly("Condition", {
     ConditionId = 12000201,
     ConditionLogic = "AND",
     ConditionMap = {
-      PlayerLevelMin = T.RT_143,
-      QuestChain = T.RT_142
+      PlayerLevelMin = T.RT_144,
+      QuestChain = T.RT_143
     },
     Remark = "东国引入任务2完成+42级"
   },
@@ -10288,8 +10645,8 @@ return ReadOnly("Condition", {
     ConditionId = 12010001,
     ConditionLogic = "AND",
     ConditionMap = {
-      PlayerLevelMin = T.RT_143,
-      QuestChain = T.RT_144
+      PlayerLevelMin = T.RT_144,
+      QuestChain = T.RT_145
     },
     Remark = "东国一期的解锁条件42级"
   },
@@ -10297,7 +10654,7 @@ return ReadOnly("Condition", {
     ConditionId = 12010101,
     ConditionLogic = "AND",
     ConditionMap = {
-      Quest = T.RT_146
+      Quest = T.RT_147
     },
     Remark = "东国印象商店解锁条件"
   },
@@ -10314,7 +10671,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       Quest = {12010317},
-      QuestChain = T.RT_149
+      QuestChain = T.RT_150
     },
     Remark = "东国一期（扶疏线）"
   },
@@ -10323,7 +10680,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       Quest = {12010318},
-      QuestChain = T.RT_150
+      QuestChain = T.RT_151
     },
     Remark = "东国一期（虬先生）"
   },
@@ -10332,7 +10689,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       Quest = {12010319},
-      QuestChain = T.RT_148
+      QuestChain = T.RT_149
     },
     Remark = "东国一期（煜明）"
   },
@@ -10364,8 +10721,8 @@ return ReadOnly("Condition", {
     ConditionId = 12010602,
     ConditionLogic = "AND",
     ConditionMap = {
-      PlayerLevelMin = T.RT_152,
-      QuestChain = T.RT_151
+      PlayerLevelMin = T.RT_154,
+      QuestChain = T.RT_153
     },
     Remark = "东国二期解锁条件-45+东一"
   },
@@ -10442,6 +10799,14 @@ return ReadOnly("Condition", {
     },
     Remark = "锻造一次"
   },
+  [20010305] = {
+    ConditionId = 20010305,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      RegionCapturePet = {1241181}
+    },
+    Remark = "魔灵支线1-抓捕魔灵"
+  },
   [20010401] = {
     ConditionId = 20010401,
     ConditionLogic = "AND",
@@ -10463,7 +10828,7 @@ return ReadOnly("Condition", {
     ConditionId = 20020801,
     ConditionLogic = "AND",
     ConditionMap = {
-      Quest = T.RT_170,
+      Quest = T.RT_173,
       QuestChain = T.RT_39
     },
     Remark = "莱娜支线解锁条件"
@@ -10488,7 +10853,7 @@ return ReadOnly("Condition", {
     ConditionId = 20021301,
     ConditionLogic = "AND",
     ConditionMap = {
-      TrueQuest = T.RT_170
+      TrueQuest = T.RT_173
     },
     Remark = "玛尔洁支线任务一阶段完成"
   },
@@ -10548,7 +10913,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "AND",
     ConditionMap = {
       Quest = T.RT_75,
-      QuestChain = T.RT_147,
+      QuestChain = T.RT_148,
       TeleportIsUnlock = {1104}
     },
     Remark = "马库斯第一环任务完成且潮声岩穴传送点解锁，且完成主线120102（进钓鱼区域的机关门在主线里打开，防止没完成主线就传进去）"
@@ -10601,6 +10966,20 @@ return ReadOnly("Condition", {
     },
     Remark = "小小研究者三阶段解锁"
   },
+  [20023001] = {
+    ConditionId = 20023001,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      MechanismState = {
+        {
+          1191512,
+          0,
+          602
+        }
+      }
+    },
+    Remark = "火灾案支线1-调频机关"
+  },
   [20023300] = {
     ConditionId = 20023300,
     ConditionLogic = "AND",
@@ -10626,10 +11005,16 @@ return ReadOnly("Condition", {
   [20030401] = {
     ConditionId = 20030401,
     ConditionLogic = "AND",
-    ConditionMap = {
-      QuestChain = T.RT_149
-    },
+    ConditionMap = T.RT_152,
     Remark = "煜明支线任务接取"
+  },
+  [20030803] = {
+    ConditionId = 20030803,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      RegionCapturePet = {2110350}
+    },
+    Remark = "闹鬼妙妙香-抓捕魔灵"
   },
   [20100101] = {
     ConditionId = 20100101,
@@ -10650,7 +11035,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DialogueHasRead = {10010204},
-      Quest = T.RT_174
+      Quest = T.RT_177
     },
     Remark = "西比尔"
   },
@@ -10677,7 +11062,7 @@ return ReadOnly("Condition", {
   [20100502] = {
     ConditionId = 20100502,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_176,
+    ConditionMap = T.RT_179,
     Remark = "白（追加1）"
   },
   [20100601] = {
@@ -10691,19 +11076,19 @@ return ReadOnly("Condition", {
   [20100602] = {
     ConditionId = 20100602,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_178,
+    ConditionMap = T.RT_181,
     Remark = "恩里克（追加1）"
   },
   [20100603] = {
     ConditionId = 20100603,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_180,
+    ConditionMap = T.RT_183,
     Remark = "恩里克（追加2）"
   },
   [20100701] = {
     ConditionId = 20100701,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_182,
+    ConditionMap = T.RT_185,
     Remark = "赛琪"
   },
   [20100702] = {
@@ -10725,13 +11110,13 @@ return ReadOnly("Condition", {
   [20100801] = {
     ConditionId = 20100801,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_184,
+    ConditionMap = T.RT_187,
     Remark = "玛尔洁"
   },
   [20100901] = {
     ConditionId = 20100901,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_186,
+    ConditionMap = T.RT_189,
     Remark = "奥特赛德"
   },
   [20101001] = {
@@ -10745,7 +11130,7 @@ return ReadOnly("Condition", {
   [20101002] = {
     ConditionId = 20101002,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_188,
+    ConditionMap = T.RT_191,
     Remark = "菲娜（追加1）"
   },
   [20101101] = {
@@ -10768,7 +11153,7 @@ return ReadOnly("Condition", {
   [20101103] = {
     ConditionId = 20101103,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_190,
+    ConditionMap = T.RT_193,
     Remark = "黎瑟（追加2）"
   },
   [20101104] = {
@@ -10824,7 +11209,7 @@ return ReadOnly("Condition", {
   [20101302] = {
     ConditionId = 20101302,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_192,
+    ConditionMap = T.RT_195,
     Remark = "阿瓦尔（追加1）"
   },
   [20101303] = {
@@ -10839,7 +11224,7 @@ return ReadOnly("Condition", {
     ConditionId = 20101304,
     ConditionLogic = "OR",
     ConditionMap = {
-      Quest = T.RT_193
+      Quest = T.RT_196
     },
     Remark = "阿瓦尔（追加3）"
   },
@@ -10874,7 +11259,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DialogueHasRead = {11012427},
-      Quest = T.RT_194
+      Quest = T.RT_197
     },
     Remark = "卡嘉（追加1）"
   },
@@ -10887,7 +11272,7 @@ return ReadOnly("Condition", {
   [20101602] = {
     ConditionId = 20101602,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_197,
+    ConditionMap = T.RT_200,
     Remark = "法露茜（追加1）"
   },
   [20101701] = {
@@ -10907,7 +11292,7 @@ return ReadOnly("Condition", {
   [20101901] = {
     ConditionId = 20101901,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_199,
+    ConditionMap = T.RT_202,
     Remark = "海尔法"
   },
   [20101902] = {
@@ -10923,14 +11308,14 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DialogueHasRead = {11016701},
-      Quest = T.RT_193
+      Quest = T.RT_196
     },
     Remark = "海尔法（追加2）"
   },
   [20102001] = {
     ConditionId = 20102001,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_197,
+    ConditionMap = T.RT_200,
     Remark = "维吉尔"
   },
   [20102002] = {
@@ -10944,19 +11329,19 @@ return ReadOnly("Condition", {
   [20102101] = {
     ConditionId = 20102101,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_201,
+    ConditionMap = T.RT_204,
     Remark = "迪斯一世"
   },
   [20102102] = {
     ConditionId = 20102102,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_203,
+    ConditionMap = T.RT_206,
     Remark = "迪斯一世（追加1）"
   },
   [20102201] = {
     ConditionId = 20102201,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_205,
+    ConditionMap = T.RT_208,
     Remark = "普奇"
   },
   [20102301] = {
@@ -10978,13 +11363,13 @@ return ReadOnly("Condition", {
   [20102401] = {
     ConditionId = 20102401,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_190,
+    ConditionMap = T.RT_193,
     Remark = "布鲁斯"
   },
   [20102402] = {
     ConditionId = 20102402,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_207,
+    ConditionMap = T.RT_210,
     Remark = "布鲁斯（追加1）"
   },
   [20102501] = {
@@ -10998,25 +11383,25 @@ return ReadOnly("Condition", {
   [20102601] = {
     ConditionId = 20102601,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_207,
+    ConditionMap = T.RT_210,
     Remark = "幻景"
   },
   [20102602] = {
     ConditionId = 20102602,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_209,
+    ConditionMap = T.RT_212,
     Remark = "幻景（追加1）"
   },
   [20102701] = {
     ConditionId = 20102701,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_188,
+    ConditionMap = T.RT_191,
     Remark = "卡珊德拉"
   },
   [20102801] = {
     ConditionId = 20102801,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_188,
+    ConditionMap = T.RT_191,
     Remark = "塞维欧"
   },
   [20300101] = {
@@ -11024,14 +11409,14 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DialogueHasRead = {12001123},
-      Quest = T.RT_212
+      Quest = T.RT_215
     },
     Remark = "止流"
   },
   [20300102] = {
     ConditionId = 20300102,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_213,
+    ConditionMap = T.RT_216,
     Remark = "止流（追加1）"
   },
   [20300103] = {
@@ -11046,7 +11431,7 @@ return ReadOnly("Condition", {
   [20300104] = {
     ConditionId = 20300104,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_215,
+    ConditionMap = T.RT_218,
     Remark = "止流（追加3）"
   },
   [20300105] = {
@@ -11060,19 +11445,19 @@ return ReadOnly("Condition", {
   [20300201] = {
     ConditionId = 20300201,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_217,
+    ConditionMap = T.RT_220,
     Remark = "锦鲤皎皎"
   },
   [20300301] = {
     ConditionId = 20300301,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_219,
+    ConditionMap = T.RT_222,
     Remark = "飏"
   },
   [20300401] = {
     ConditionId = 20300401,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_221,
+    ConditionMap = T.RT_224,
     Remark = "煜明"
   },
   [20300402] = {
@@ -11094,13 +11479,13 @@ return ReadOnly("Condition", {
   [20300502] = {
     ConditionId = 20300502,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_223,
+    ConditionMap = T.RT_226,
     Remark = "虬先生（追加1）"
   },
   [20300601] = {
     ConditionId = 20300601,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_225,
+    ConditionMap = T.RT_228,
     Remark = "扶疏"
   },
   [20300602] = {
@@ -11123,13 +11508,13 @@ return ReadOnly("Condition", {
   [20400101] = {
     ConditionId = 20400101,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_228,
+    ConditionMap = T.RT_231,
     Remark = "梦中的{性别2：少年|少女}"
   },
   [20400102] = {
     ConditionId = 20400102,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_229,
+    ConditionMap = T.RT_232,
     Remark = "梦中的{性别2：少年|少女}（追加1）"
   },
   [20400103] = {
@@ -11143,7 +11528,7 @@ return ReadOnly("Condition", {
   [20400104] = {
     ConditionId = 20400104,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_201,
+    ConditionMap = T.RT_204,
     Remark = "梦中的{性别2：少年|少女}（追加3）"
   },
   [20400105] = {
@@ -11151,7 +11536,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DialogueHasRead = {11012430},
-      Quest = T.RT_194
+      Quest = T.RT_197
     },
     Remark = "梦中的{性别2：少年|少女}（追加4）"
   },
@@ -11189,20 +11574,20 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DialogueHasRead = {10104303},
-      Quest = T.RT_234
+      Quest = T.RT_237
     },
     Remark = "维德弗尼尔山脉"
   },
   [30100301] = {
     ConditionId = 30100301,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_236,
+    ConditionMap = T.RT_239,
     Remark = "天之树"
   },
   [30100401] = {
     ConditionId = 30100401,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_238,
+    ConditionMap = T.RT_241,
     Remark = "群星绮晶"
   },
   [30100402] = {
@@ -11210,7 +11595,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DialogueHasRead = {10106310},
-      Quest = T.RT_239
+      Quest = T.RT_242
     },
     Remark = "群星绮晶（追加1）"
   },
@@ -11225,19 +11610,19 @@ return ReadOnly("Condition", {
   [30100501] = {
     ConditionId = 30100501,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_182,
+    ConditionMap = T.RT_185,
     Remark = "泪湖"
   },
   [30100601] = {
     ConditionId = 30100601,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_236,
+    ConditionMap = T.RT_239,
     Remark = "月石"
   },
   [30100701] = {
     ConditionId = 30100701,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_215,
+    ConditionMap = T.RT_218,
     Remark = "尘漠石海"
   },
   [30100801] = {
@@ -11245,14 +11630,14 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DialogueHasRead = {12013420},
-      Quest = T.RT_240
+      Quest = T.RT_243
     },
     Remark = "尘漠"
   },
   [30100901] = {
     ConditionId = 30100901,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_242,
+    ConditionMap = T.RT_245,
     Remark = "忘忧草"
   },
   [30300101] = {
@@ -11272,7 +11657,7 @@ return ReadOnly("Condition", {
   [30300202] = {
     ConditionId = 30300202,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_176,
+    ConditionMap = T.RT_179,
     Remark = "皎皎之民（追加1）"
   },
   [30300301] = {
@@ -11290,19 +11675,19 @@ return ReadOnly("Condition", {
   [30300303] = {
     ConditionId = 30300303,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_186,
+    ConditionMap = T.RT_189,
     Remark = "卡戎之民（追加2）"
   },
   [30300304] = {
     ConditionId = 30300304,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_178,
+    ConditionMap = T.RT_181,
     Remark = "卡戎之民（追加3）"
   },
   [30300305] = {
     ConditionId = 30300305,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_203,
+    ConditionMap = T.RT_206,
     Remark = "卡戎之民（追加4）"
   },
   [30300401] = {
@@ -11326,13 +11711,13 @@ return ReadOnly("Condition", {
   [30300501] = {
     ConditionId = 30300501,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_186,
+    ConditionMap = T.RT_189,
     Remark = "骸"
   },
   [30300601] = {
     ConditionId = 30300601,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_178,
+    ConditionMap = T.RT_181,
     Remark = "秽蚀"
   },
   [30300701] = {
@@ -11344,31 +11729,31 @@ return ReadOnly("Condition", {
   [30300801] = {
     ConditionId = 30300801,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_217,
+    ConditionMap = T.RT_220,
     Remark = "太皓"
   },
   [30300901] = {
     ConditionId = 30300901,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_247,
+    ConditionMap = T.RT_250,
     Remark = "狴犴"
   },
   [30300902] = {
     ConditionId = 30300902,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_249,
+    ConditionMap = T.RT_252,
     Remark = "狴犴（追加1）"
   },
   [30301001] = {
     ConditionId = 30301001,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_251,
+    ConditionMap = T.RT_254,
     Remark = "玄色狴犴"
   },
   [30301101] = {
     ConditionId = 30301101,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_215,
+    ConditionMap = T.RT_218,
     Remark = "烛阴"
   },
   [30301102] = {
@@ -11391,7 +11776,7 @@ return ReadOnly("Condition", {
   [30301201] = {
     ConditionId = 30301201,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_242,
+    ConditionMap = T.RT_245,
     Remark = "无由生"
   },
   [30301202] = {
@@ -11405,13 +11790,13 @@ return ReadOnly("Condition", {
   [30400101] = {
     ConditionId = 30400101,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_228,
+    ConditionMap = T.RT_231,
     Remark = "沙海之梦"
   },
   [30400201] = {
     ConditionId = 30400201,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_229,
+    ConditionMap = T.RT_232,
     Remark = "和鸣之力"
   },
   [30400202] = {
@@ -11433,13 +11818,13 @@ return ReadOnly("Condition", {
   [30400301] = {
     ConditionId = 30400301,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_247,
+    ConditionMap = T.RT_250,
     Remark = "大风九章"
   },
   [30400302] = {
     ConditionId = 30400302,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_219,
+    ConditionMap = T.RT_222,
     Remark = "大风九章（追加1）"
   },
   [30400303] = {
@@ -11454,19 +11839,19 @@ return ReadOnly("Condition", {
   [30400401] = {
     ConditionId = 30400401,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_253,
+    ConditionMap = T.RT_256,
     Remark = "烛阴之灾"
   },
   [30400501] = {
     ConditionId = 30400501,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_225,
+    ConditionMap = T.RT_228,
     Remark = "枯荣之法"
   },
   [30400502] = {
     ConditionId = 30400502,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_255,
+    ConditionMap = T.RT_258,
     Remark = "枯荣之法（追加1）"
   },
   [30400601] = {
@@ -11474,7 +11859,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DialogueHasRead = {12013418},
-      Quest = T.RT_240
+      Quest = T.RT_243
     },
     Remark = "太虚"
   },
@@ -11483,7 +11868,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DialogueHasRead = {12013419},
-      Quest = T.RT_240
+      Quest = T.RT_243
     },
     Remark = "太虚符文"
   },
@@ -11506,7 +11891,7 @@ return ReadOnly("Condition", {
   [40100201] = {
     ConditionId = 40100201,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_203,
+    ConditionMap = T.RT_206,
     Remark = "泪湖之夜"
   },
   [40100301] = {
@@ -11555,7 +11940,7 @@ return ReadOnly("Condition", {
   [40300201] = {
     ConditionId = 40300201,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_180,
+    ConditionMap = T.RT_183,
     Remark = "恩里克的研究"
   },
   [40300301] = {
@@ -11583,19 +11968,19 @@ return ReadOnly("Condition", {
   [40300501] = {
     ConditionId = 40300501,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_264,
+    ConditionMap = T.RT_267,
     Remark = "香"
   },
   [40300502] = {
     ConditionId = 40300502,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_251,
+    ConditionMap = T.RT_254,
     Remark = "香（追加1）"
   },
   [40300503] = {
     ConditionId = 40300503,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_266,
+    ConditionMap = T.RT_269,
     Remark = "香（追加2）"
   },
   [40300601] = {
@@ -11617,7 +12002,7 @@ return ReadOnly("Condition", {
   [40400101] = {
     ConditionId = 40400101,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_205,
+    ConditionMap = T.RT_208,
     Remark = "魔笛剧团"
   },
   [40400201] = {
@@ -11639,13 +12024,13 @@ return ReadOnly("Condition", {
   [40400203] = {
     ConditionId = 40400203,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_209,
+    ConditionMap = T.RT_212,
     Remark = "《雪国的孩子》（追加2）"
   },
   [40500101] = {
     ConditionId = 40500101,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_182,
+    ConditionMap = T.RT_185,
     Remark = "休憩之所"
   },
   [40500201] = {
@@ -11659,7 +12044,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DialogueHasRead = {10106314},
-      Quest = T.RT_239
+      Quest = T.RT_242
     },
     Remark = "修普诺斯之家（追加1）"
   },
@@ -11676,7 +12061,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DialogueHasRead = {10110818},
-      Quest = T.RT_269
+      Quest = T.RT_272
     },
     Remark = "修普诺斯之家（追加3）"
   },
@@ -11684,7 +12069,7 @@ return ReadOnly("Condition", {
     ConditionId = 40500205,
     ConditionLogic = "OR",
     ConditionMap = {
-      Quest = T.RT_269
+      Quest = T.RT_272
     },
     Remark = "恩里克之死"
   },
@@ -11697,7 +12082,7 @@ return ReadOnly("Condition", {
   [40500401] = {
     ConditionId = 40500401,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_184,
+    ConditionMap = T.RT_187,
     Remark = "狩月人"
   },
   [40500501] = {
@@ -11743,79 +12128,79 @@ return ReadOnly("Condition", {
   [40500506] = {
     ConditionId = 40500506,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_209,
+    ConditionMap = T.RT_212,
     Remark = "卡戎狩猎（追加5）"
   },
   [40500601] = {
     ConditionId = 40500601,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_271,
+    ConditionMap = T.RT_274,
     Remark = "银烛狂欢庆典"
   },
   [40500701] = {
     ConditionId = 40500701,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_273,
+    ConditionMap = T.RT_276,
     Remark = "织星客"
   },
   [40500801] = {
     ConditionId = 40500801,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_264,
+    ConditionMap = T.RT_267,
     Remark = "有龙氏"
   },
   [40500901] = {
     ConditionId = 40500901,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_249,
+    ConditionMap = T.RT_252,
     Remark = "诫碑"
   },
   [40500902] = {
     ConditionId = 40500902,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_219,
+    ConditionMap = T.RT_222,
     Remark = "诫碑（追加1）"
   },
   [40501001] = {
     ConditionId = 40501001,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_249,
+    ConditionMap = T.RT_252,
     Remark = "应天尉"
   },
   [40501002] = {
     ConditionId = 40501002,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_221,
+    ConditionMap = T.RT_224,
     Remark = "应天尉（追加1）"
   },
   [40501101] = {
     ConditionId = 40501101,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_251,
+    ConditionMap = T.RT_254,
     Remark = "白龙祠堂"
   },
   [40501201] = {
     ConditionId = 40501201,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_225,
+    ConditionMap = T.RT_228,
     Remark = "祝由"
   },
   [40501301] = {
     ConditionId = 40501301,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_255,
+    ConditionMap = T.RT_258,
     Remark = "枯荣阁"
   },
   [40600101] = {
     ConditionId = 40600101,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_238,
+    ConditionMap = T.RT_241,
     Remark = "格雷姆矿坑"
   },
   [40600201] = {
     ConditionId = 40600201,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_271,
+    ConditionMap = T.RT_274,
     Remark = "盖雷亚剧院"
   },
   [40600301] = {
@@ -11829,13 +12214,13 @@ return ReadOnly("Condition", {
   [40600401] = {
     ConditionId = 40600401,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_253,
+    ConditionMap = T.RT_256,
     Remark = "百年春"
   },
   [40600501] = {
     ConditionId = 40600501,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_223,
+    ConditionMap = T.RT_226,
     Remark = "格林威治考古协会"
   },
   [40700101] = {
@@ -11850,13 +12235,13 @@ return ReadOnly("Condition", {
   [40700201] = {
     ConditionId = 40700201,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_199,
+    ConditionMap = T.RT_202,
     Remark = "树刑"
   },
   [40700301] = {
     ConditionId = 40700301,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_192,
+    ConditionMap = T.RT_195,
     Remark = "桂冠卡戎"
   },
   [40700401] = {
@@ -11870,13 +12255,13 @@ return ReadOnly("Condition", {
   [40700501] = {
     ConditionId = 40700501,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_264,
+    ConditionMap = T.RT_267,
     Remark = "龙渊上卿"
   },
   [40700601] = {
     ConditionId = 40700601,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_266,
+    ConditionMap = T.RT_269,
     Remark = "悬衡派"
   },
   [40700701] = {
@@ -11892,7 +12277,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DialogueHasRead = {12013410},
-      Quest = T.RT_240
+      Quest = T.RT_243
     },
     Remark = "机枢派"
   },
@@ -11909,7 +12294,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DialogueHasRead = {10019401},
-      Quest = T.RT_260
+      Quest = T.RT_263
     },
     Remark = "科赛托斯行省"
   },
@@ -11923,7 +12308,7 @@ return ReadOnly("Condition", {
     ConditionId = 40800302,
     ConditionLogic = "OR",
     ConditionMap = {
-      Quest = T.RT_234
+      Quest = T.RT_237
     },
     Remark = "冰湖城（追加1）"
   },
@@ -11932,7 +12317,7 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DialogueHasRead = {10106322},
-      Quest = T.RT_239
+      Quest = T.RT_242
     },
     Remark = "冰湖城（追加2）"
   },
@@ -11967,7 +12352,7 @@ return ReadOnly("Condition", {
   [40800601] = {
     ConditionId = 40800601,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_178,
+    ConditionMap = T.RT_181,
     Remark = "红溪城"
   },
   [40800701] = {
@@ -11981,19 +12366,19 @@ return ReadOnly("Condition", {
   [40800801] = {
     ConditionId = 40800801,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_277,
+    ConditionMap = T.RT_280,
     Remark = "凯旋大道"
   },
   [40800901] = {
     ConditionId = 40800901,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_277,
+    ConditionMap = T.RT_280,
     Remark = "絮语河"
   },
   [40801001] = {
     ConditionId = 40801001,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_213,
+    ConditionMap = T.RT_216,
     Remark = "华胥"
   },
   [40801002] = {
@@ -12001,14 +12386,14 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DialogueHasRead = {12010014},
-      Quest = T.RT_146
+      Quest = T.RT_147
     },
     Remark = "华胥（追加1）"
   },
   [40801101] = {
     ConditionId = 40801101,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_273,
+    ConditionMap = T.RT_276,
     Remark = "烟津渡"
   },
   [40801201] = {
@@ -12022,7 +12407,7 @@ return ReadOnly("Condition", {
   [40801301] = {
     ConditionId = 40801301,
     ConditionLogic = "OR",
-    ConditionMap = T.RT_242,
+    ConditionMap = T.RT_245,
     Remark = "虞泉"
   },
   [40801401] = {
@@ -12081,7 +12466,7 @@ return ReadOnly("Condition", {
     ConditionMap = {
       ExploreGroup = {7050024}
     },
-    Remark = "东国一期-尘漠1完成"
+    Remark = "东国一期主线-尘漠1完成"
   },
   [1201035102] = {
     ConditionId = 1201035102,
@@ -12089,7 +12474,7 @@ return ReadOnly("Condition", {
     ConditionMap = {
       ExploreGroup = {7050017}
     },
-    Remark = "东国一期-尘漠2完成"
+    Remark = "东国一期主线-尘漠2完成"
   },
   [1201035103] = {
     ConditionId = 1201035103,
@@ -12097,7 +12482,7 @@ return ReadOnly("Condition", {
     ConditionMap = {
       ExploreGroup = {7050018}
     },
-    Remark = "东国一期-尘漠3完成"
+    Remark = "东国一期主线-尘漠3完成"
   },
   [1201035104] = {
     ConditionId = 1201035104,

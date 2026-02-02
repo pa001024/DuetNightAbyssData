@@ -32,6 +32,9 @@ T.RT_12 = {204}
 T.RT_13 = {205}
 T.RT_14 = {207}
 T.RT_15 = {206}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -446,6 +449,29 @@ return ReadOnly("Weapon", {
     WeaponId = 10403,
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10403",
+    WeaponRarity = 5,
+    WeaponToCoinType = 101,
+    WeaponValue = 10000
+  },
+  [10404] = {
+    BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Dualblade_Fengyun",
+    CollectRewardExp = 400,
+    DecomposeReward = 160004,
+    GUIPathVariableName = "Fengyun",
+    GUIPathVariableType = "Dualblade",
+    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Dualblade_Fengyun",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Dualblade_Fengyun",
+    ModSlot = T.RT_1,
+    ModSlotUnlock = T.RT_2,
+    OpenVersion = 12,
+    ReleaseVersion = 120,
+    SkinApplicationType = T.RT_6,
+    SortPriority = 10404,
+    Sound = "SOUND_ITEM_WEAPON",
+    WeaponDescribe = "UI_WEAPON_DESC_10404",
+    WeaponId = 10404,
+    WeaponMaxLevel = 80,
+    WeaponName = "UI_WEAPON_NAME_10404",
     WeaponRarity = 5,
     WeaponToCoinType = 101,
     WeaponValue = 10000
@@ -1044,6 +1070,29 @@ return ReadOnly("Weapon", {
     WeaponId = 20504,
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20504",
+    WeaponRarity = 5,
+    WeaponToCoinType = 101,
+    WeaponValue = 10000
+  },
+  [20505] = {
+    BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Machinegun_Sanjiao",
+    CollectRewardExp = 400,
+    DecomposeReward = 160004,
+    GUIPathVariableName = "Sanjiao",
+    GUIPathVariableType = "Machinegun",
+    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Machinegun_Sanjiao",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Machinegun_Sanjiao",
+    ModSlot = T.RT_1,
+    ModSlotUnlock = T.RT_2,
+    OpenVersion = 12,
+    ReleaseVersion = 120,
+    SkinApplicationType = T.RT_13,
+    SortPriority = 20505,
+    Sound = "SOUND_ITEM_WEAPON",
+    WeaponDescribe = "UI_WEAPON_DESC_20505",
+    WeaponId = 20505,
+    WeaponMaxLevel = 80,
+    WeaponName = "UI_WEAPON_NAME_20505",
     WeaponRarity = 5,
     WeaponToCoinType = 101,
     WeaponValue = 10000

@@ -150,7 +150,7 @@ function M:OnTopTabRightKeyDown()
 end
 
 function M:OnBackKeyDown()
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:Close()
 end
 
@@ -182,7 +182,7 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
     self.ArmoryHelper = ArmoryMain.ArmoryHelper
   end
   self:Init(self.Char)
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   if ArmoryUtils.FilesTabType[1] == self.InitTabName then
     self.Tab_Record:SelectTab(1)
   else

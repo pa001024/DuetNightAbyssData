@@ -26,8 +26,8 @@ function M:SetNoWalnut(bPlayAnimation)
   self.Panel_Ordinal:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Icon_Walnut:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_Bg:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  self.Text_Total:SetText(GText("UI_Walnut_CompleteCount"))
-  self.Num_Total:SetText(0)
+  self.Panel_Hint:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Text_Name:SetText(GText("UI_Walnut_NoWalnutReward"))
   if bPlayAnimation then
     self:PlayAnimation(self.Refresh)
   end
@@ -46,6 +46,7 @@ function M:SetWalnutContent(WalnutId, bPlayAnimation)
   self.Panel_Ordinal:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.Icon_Walnut:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.Panel_Bg:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.Panel_Hint:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   if bPlayAnimation then
     self:PlayAnimation(self.Refresh)
   end
@@ -61,6 +62,7 @@ function M:SetWalnutContent(WalnutId, bPlayAnimation)
   local Avatar = GWorld:GetAvatar()
   self.Text_Total:SetText(GText("UI_Walnut_CompleteCount"))
   self.Num_Total:SetText(Avatar.Walnuts.ConsumeRecord[WalnutId] or 0)
+  self.Text_Name:SetText(GText(WalnutData.Name))
   self.WalnutRewardList = {}
   for i = 1, 6 do
     local RewardUI = self.RewardUIList[i]

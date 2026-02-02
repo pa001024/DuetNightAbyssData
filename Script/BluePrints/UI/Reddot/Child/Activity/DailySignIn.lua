@@ -5,7 +5,7 @@ local ReddotTreeNode_DailySignIn = Class("BluePrints.UI.Reddot.Child.Activity.Ac
 function ReddotTreeNode_DailySignIn:_Judge(ActivityID)
   local PlayerAvatar = GWorld:GetAvatar()
   local AllSignServerData = PlayerAvatar.DailyLogin
-  if not self:CheckActivityIsValid() then
+  if not self:CheckActivityIsValid(ActivityID) then
     return false
   end
   for k, SignInfo in pairs(AllSignServerData) do
@@ -23,9 +23,9 @@ function ReddotTreeNode_DailySignIn:_Judge(ActivityID)
   return false
 end
 
-function ReddotTreeNode_DailySignIn:CheckActivityIsValid()
+function ReddotTreeNode_DailySignIn:CheckActivityIsValid(ActivityID)
   local CacheDetail = self.Cache.Detail
-  if CacheDetail.bClose then
+  if CacheDetail.bClose and CacheDetail.CurrentEventId == ActivityID then
     return false
   end
   return true

@@ -74,6 +74,7 @@ function M:UpdateDetails(Type, ItemId, ShopId, Price, IsSoldOut, IsCanLevelUp)
   local RougeLikeShop = UIManager(self):GetUIObj("RougeShop")
   assert(RougeLikeShop, "肉鸽商城不存在")
   EMUIAnimationSubsystem:EMPlayAnimation(RougeLikeShop, RougeLikeShop.Switch)
+  self.bSkipDefinitionAutoInit = true
   UIUtils.SetDefinitionText(self.Text_DetailDesc, self.ExplanationId)
   local CurInputDeviceType = UIUtils.UtilsGetCurrentInputType()
   local CurGamepadName = UIUtils.UtilsGetCurrentGamepadName()
@@ -207,6 +208,7 @@ function M:SetSuit()
       self.ShowSuitActive = true
       local SuitData = RougeUtils:GenSuitDetail(self.GroupId, Level, true)
       self.SuitDetail_SubItem:InitUIInfo(SuitData)
+      self.SuitDetail_SubItem.bSkipDefinitionAutoInit = true
       UIUtils.SetDefinitionText(self.SuitDetail_SubItem.Text_SuitDesc, SuitData.ExplanationId)
     end
   elseif self.Type == "Treasure" and DataMgr.TreasureGroup[self.GroupId] then

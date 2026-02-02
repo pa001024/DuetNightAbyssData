@@ -99,6 +99,26 @@ function Decorator:Rpc(args)
   end)
 end
 
+function Decorator:BlockAllUIInput(RPCName)
+  self:AddDecorator(function(FuncName, f)
+    local function NewFunc(obj, ...)
+      if obj.__Name__ == "Avatar" then
+        if not obj.BlockUIMarks then
+          obj.BlockUIMarks = {}
+        end
+        if not obj.BlockUIMarks[RPCName] then
+          obj.BlockUIMarks[RPCName] = 1
+          DebugPrint(LXYTag, "Decorator:BlockAllUIInput", RPCName)
+          UIManager(GWorld.GameInstance):_BlockAllUIInput(true, RPCName)
+        end
+      end
+      f(obj, ...)
+    end
+    
+    return NewFunc
+  end)
+end
+
 function Decorator:LimitCall(interval)
   self:AddDecorator(function(FuncName, f)
     local function NewFunc(obj, ...)
@@ -157,12 +177,11 @@ function Decorator:VersionControl(DataName, KeyIndex, ReplacedVersionKey)
         end
       end
       if not bValidVersion then
-        obj.logger.debug("The version is not valid to call function", FuncName, Version, DataMgr.GlobalConstant.CurrentVersion.ConstantValue)
-        local ok, ret = pcall(obj.AdvResourceGetMonitor, obj, DataName, ...)
-        if not ok then
-          obj.logger.debug("AdvResourceGetMonitor no ok", ret)
+        obj.logger.info("The version is not valid to call function", FuncName, Version, DataMgr.GlobalConstant.CurrentVersion.ConstantValue)
+        local ret = obj:OnInvalidVersionControlCallback(FuncName, DataName, ...)
+        if not ret then
+          return
         end
-        return
       end
       return f(obj, ...)
     end
@@ -216,4 +235,12 @@ Decorator = setmetatable(Decorator, {
     rawset(T, key, value)
   end
 })
+
+function Decorator:ApplyDecorator(Cls)
+  for key, value in pairs(self) do
+    Cls[key] = value
+  end
+  setmetatable(Cls, getmetatable(self))
+end
+
 return Decorator

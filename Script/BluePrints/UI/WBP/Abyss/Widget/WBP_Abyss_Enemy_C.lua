@@ -39,11 +39,6 @@ function M:SetBossInfo(Name, Icon)
   end
 end
 
-function M:SetRecLevel(RecLevel)
-  local RecLevel = RecLevel or ""
-  self.Text_Lv:SetText("<H>" .. RecLevel .. "</>")
-end
-
 function M:SwitchUIType(IsGamePad)
   if IsGamePad then
     self.WS_Type:SetActiveWidgetIndex(1)

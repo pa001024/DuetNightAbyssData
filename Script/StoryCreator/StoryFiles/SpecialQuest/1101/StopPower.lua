@@ -524,6 +524,7 @@ return {
             pos = {x = -533.143266756464, y = 249.92663476874023},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_NengyuanMech1"
             }
@@ -535,6 +536,7 @@ return {
             pos = {x = 212.7239227117233, y = 243.03721580165268},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_NengyuanMech1"
             }
@@ -557,6 +559,7 @@ return {
             pos = {x = -288.91732186269263, y = 597.9143724173705},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_ZhuZi01"
             }
@@ -568,6 +571,7 @@ return {
             pos = {x = -556.2387959677188, y = 1014.7442093469656},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_ZhuZi03"
             }
@@ -579,6 +583,7 @@ return {
             pos = {x = -562.5484729612059, y = 789.9380748636003},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_ZhuZi02"
             }
@@ -590,6 +595,7 @@ return {
             pos = {x = 292.6022789401714, y = 593.8721826072994},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_ZhuZi01"
             }
@@ -601,6 +607,7 @@ return {
             pos = {x = 18.58698658634836, y = 799.3085692216839},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_ZhuZi02"
             }
@@ -612,6 +619,7 @@ return {
             pos = {x = 33.868743784672205, y = 1010.4230687027127},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_ZhuZi03"
             }
@@ -713,6 +721,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -995,6 +1004,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1255,6 +1265,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",

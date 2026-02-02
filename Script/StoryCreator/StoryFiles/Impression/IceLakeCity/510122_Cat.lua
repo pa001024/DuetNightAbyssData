@@ -125,6 +125,7 @@ return {
             pos = {x = 1798, y = 556},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 51012201,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/SpecialSideStory/2002/200234/510122.510122'",
               TalkType = "FixSimple",
@@ -147,6 +148,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",

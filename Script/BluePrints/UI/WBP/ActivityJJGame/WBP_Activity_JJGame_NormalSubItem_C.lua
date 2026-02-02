@@ -24,6 +24,8 @@ function M:Construct()
   self.Btn_CanGet.Btn_GetReward.OnClicked:Add(self, self.OnCanGetClicked)
   self.Btn_Controller.OnClicked:Add(self, self.OnControllerClicked)
   self.Avatar = GWorld:GetAvatar()
+  self.MidTermConst = DataMgr.MidTermGoalConstant
+  self.MidTermGoalEventId = self.MidTermConst.MidTermGoalEventId.ConstantValue
   self:InitListenEvent()
   self:RefreshBaseInfo()
 end
@@ -40,13 +42,17 @@ function M:OnListItemObjectSet(Content)
   self.TaskId = Content.Id
   self.Owner = Content.Owner
   self.TaskConfig = Content.TaskConfig
-  self.TaskProp = self.Avatar.MidTermTasks[self.TaskId]
+  self.TaskProp = Content.TaskProp
   self.JJGameBase = self.Owner.JJGameBase
   self.YesterdayRewardGot = Content.YesterdayRewardGot
   Content.SelfWidget = self
+  self._Avatar = GWorld:GetAvatar()
   self.Text_RewardNum:SetText(Content.Point)
   self.Text_Desc:SetText(GText(Content.Desc))
-  if self.TaskProp.Progress >= self.TaskProp.Target then
+  self.MidTermGoals = self._Avatar.MidTermGoals[10300601]
+  self.TaskFinishCount = self.MidTermGoals.TaskFinishCount[self.TaskId] or 0
+  self.Progress = self.TaskProp.Progress or 0
+  if self.Progress >= self.TaskProp.Target then
     if self.TaskProp.RewardsGot then
       self.WS_Btn:SetActiveWidgetIndex(3)
     else
@@ -60,11 +66,12 @@ function M:OnListItemObjectSet(Content)
     self.WS_Btn:SetActiveWidgetIndex(0)
   end
   if Content.TaskType == TaskType.Cycle then
-    self.MidTermTasksRecord = self.Avatar.MidTermTasksRecord[self.TaskId] or nil
+    self.MidTermGoals = self._Avatar.MidTermGoals[self.MidTermGoalEventId]
+    local TaskFinishCount = self.MidTermGoals.TaskFinishCount[self.TaskId] or 0
     self.Text_InfinityNum:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Image_IconInfinity:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self:UpdateInfinityNum(self.MidTermTasksRecord.FinishCount)
-    if self.MidTermTasksRecord.FinishCount > 0 then
+    self:UpdateInfinityNum(TaskFinishCount)
+    if TaskFinishCount > 0 then
       self.Content.CanGet = true
       self.WS_Btn:SetActiveWidgetIndex(2)
       if not self.YesterdayRewardGot then
@@ -73,10 +80,6 @@ function M:OnListItemObjectSet(Content)
         self.Btn_CanGet.Btn_GetReward:SetForbidden(false)
       end
     end
-  elseif not self.YesterdayRewardGot then
-    self.WS_Btn:SetActiveWidgetIndex(4)
-    self.Text_RewardNum:SetText("?")
-    self.Text_Desc:SetText(GText("? ? ? ? ? ?"))
   else
     local PlayReminder = EMCache:Get("MidTermReminder_" .. self.TaskId, true)
     if not PlayReminder then
@@ -122,8 +125,10 @@ end
 
 function M:UpdateGetRewardNum()
   local Avatar = GWorld:GetAvatar()
-  local TaskProp = Avatar.MidTermTasks[self.TaskId]
-  local Num = tostring(TaskProp.Progress) .. "/" .. tostring(TaskProp.Target)
+  local TaskProp = self.TaskProp
+  local Progress = TaskProp.Progress or 0
+  local Target = TaskProp.Target or 0
+  local Num = tostring(Progress) .. "/" .. tostring(Target)
   self.Text_GetRewardNum:SetText(Num)
   self.Text_DoingNum:SetText(Num)
   self.Text_JumpNum:SetText(Num)
@@ -150,15 +155,6 @@ function M:OnAchvFinished(TaskId)
         self:UpdateInfinityNum(self.Avatar.MidTermTasksRecord[self.TaskId].FinishCount)
       end)
     end
-  end
-end
-
-function M:TryIncreaceNormalRewardReddot()
-  local CacheKey = NormalRewardReddotName
-  local CacheData = ReddotManager.GetLeafNodeCacheDetail(NormalRewardReddotName)
-  if CacheData and nil == CacheData[CacheKey] then
-    CacheData[CacheKey] = true
-    ReddotManager.IncreaseLeafNodeCount(NormalRewardReddotName)
   end
 end
 

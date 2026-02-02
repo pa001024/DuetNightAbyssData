@@ -1,3 +1,4 @@
+local GameFlowUtils = require("Utils.GameFlowUtils")
 local SystemGuideManager = {}
 SystemGuideManager.GuideDic = {}
 SystemGuideManager.GuideUnfinishedDic = {}
@@ -114,6 +115,8 @@ function SystemGuideManager:ClearSystemGuideData()
   self.GuideQueue = {}
   self.IsGuideStoryRunning = false
   self.RunningId = -1
+  local EMCache = require("EMCache.EMCache")
+  EMCache:Remove("GuideSkip", true)
 end
 
 function SystemGuideManager:InitSystemGuideData()
@@ -587,8 +590,10 @@ function SystemGuideManager:SystemUnlockWorkingEndEvent()
   local GuideIds = self:GetItemBySystemUnlockWorking()
   if #GuideIds > 0 then
     for i = 1, #GuideIds do
-      self.GuideDic[GuideIds[i]].FinishedSystemUnlockWorking = true
-      self:TryRunStoryByGuideId("SystemUnlockWorkingEndEvent:", GuideIds[i])
+      if self.GuideDic[GuideIds[i]].FinishedSystemUnlockWorking == false then
+        self.GuideDic[GuideIds[i]].FinishedSystemUnlockWorking = true
+        self:TryRunStoryByGuideId("SystemUnlockWorkingEndEvent:", GuideIds[i])
+      end
     end
   end
 end
@@ -848,52 +853,65 @@ function SystemGuideManager:RunStory(Data)
     DebugPrint("引导缺少通道配置", GuideId)
     return
   end
-  local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-  self.Flow = FlowManager:CreateFlow(GuideChannel)
-  self.Flow.OnBegin:Add(self.Flow, function()
-    EventManager:FireEvent(EventID.OnGuideStart, GuideId)
-    self.RunningId = GuideId
-    self.IsGuideStoryRunning = true
-    if 0 == FinishGuideType then
-      self:FinishSystemGuideEvent(GuideId)
-      
-      local function Callback()
-        self:RemoveFlow()
-        self.RunningId = -1
-        self.IsGuideStoryRunning = false
-        self:GuideQueueRemove(GuideId, "FinishSystemGuideEvent,FinishGuideType == 0")
-        EventManager:FireEvent(EventID.OnGuideEnd, GuideId)
-        self:SetFocusOnGamepad()
+  if GuideId == self.RunningId then
+    DebugPrint("lkkk引导重复触发", GuideId)
+    return
+  end
+  local GameFlow = GameFlowUtils:AddFlow(GuideChannel, {
+    GWorld.GameInstance,
+    function(_, Flow)
+      local Avatar = GWorld:GetAvatar()
+      if not Avatar then
+        return
       end
-      
-      GWorld.StoryMgr:RunStory(StoryLinePath, nil, nil, Callback, Callback)
-      DebugPrint("SystemGuideManagerRunStory", StoryLinePath, GuideId, FinishGuideType)
-    elseif 1 == FinishGuideType then
-      local function EndCallback()
-        self:RemoveFlow()
-        
-        self.RunningId = -1
-        self.IsGuideStoryRunning = false
-        self:GuideQueueRemove(GuideId, "FinishSystemGuideEvent,FinishGuideType == 1")
+      if Avatar.SystemGuides:GetSystemGuide(GuideId):IsFinished() then
+        self:RemoveFlow(Flow)
+        return
+      end
+      EventManager:FireEvent(EventID.OnGuideStart, GuideId)
+      self.RunningId = GuideId
+      self.IsGuideStoryRunning = true
+      if 0 == FinishGuideType then
         self:FinishSystemGuideEvent(GuideId)
-        EventManager:FireEvent(EventID.OnGuideEnd, GuideId)
-        self:SetFocusOnGamepad()
+        
+        local function Callback()
+          self:RemoveFlow(Flow)
+          self.RunningId = -1
+          self.IsGuideStoryRunning = false
+          self:GuideQueueRemove(GuideId, "FinishSystemGuideEvent,FinishGuideType == 0")
+          EventManager:FireEvent(EventID.OnGuideEnd, GuideId)
+          self:SetFocusOnGamepad()
+        end
+        
+        GWorld.StoryMgr:RunStory(StoryLinePath, nil, nil, Callback, Callback)
+        DebugPrint("SystemGuideManagerRunStory", StoryLinePath, GuideId, FinishGuideType)
+      elseif 1 == FinishGuideType then
+        local function EndCallback()
+          self:RemoveFlow(Flow)
+          
+          self.RunningId = -1
+          self.IsGuideStoryRunning = false
+          self:GuideQueueRemove(GuideId, "FinishSystemGuideEvent,FinishGuideType == 1")
+          self:FinishSystemGuideEvent(GuideId)
+          EventManager:FireEvent(EventID.OnGuideEnd, GuideId)
+          self:SetFocusOnGamepad()
+        end
+        
+        local function StopCallback()
+          self:RemoveFlow(Flow)
+          self.RunningId = -1
+          self.IsGuideStoryRunning = false
+          self:FinishSystemGuideEvent(GuideId)
+          self:GuideQueueRemove(GuideId, "FinishSystemGuideEvent,FinishGuideType == 1")
+          EventManager:FireEvent(EventID.OnGuideEnd, GuideId)
+          self:SetFocusOnGamepad()
+        end
+        
+        GWorld.StoryMgr:RunStory(StoryLinePath, nil, nil, EndCallback, StopCallback)
+        DebugPrint("SystemGuideManagerRunStory", StoryLinePath, GuideId, FinishGuideType)
       end
-      
-      local function StopCallback()
-        self:RemoveFlow()
-        self.RunningId = -1
-        self.IsGuideStoryRunning = false
-        self:GuideQueueRemove(GuideId, "FinishSystemGuideEvent,FinishGuideType == 1")
-        EventManager:FireEvent(EventID.OnGuideEnd, GuideId)
-        self:SetFocusOnGamepad()
-      end
-      
-      GWorld.StoryMgr:RunStory(StoryLinePath, nil, nil, EndCallback, StopCallback)
-      DebugPrint("SystemGuideManagerRunStory", StoryLinePath, GuideId, FinishGuideType)
     end
-  end)
-  FlowManager:AddFlow(self.Flow)
+  })
 end
 
 function SystemGuideManager:SetFocusOnGamepad()
@@ -907,12 +925,8 @@ function SystemGuideManager:SetFocusOnGamepad()
   end
 end
 
-function SystemGuideManager:RemoveFlow()
-  local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-  FlowManager:RemoveFlow(self.Flow)
-  local GuideChannel = DataMgr.SystemGuide[self.RunningId].GuideChannel
-  DebugPrint("lkkRemoveFlow", self.RunningId, GuideChannel)
-  self.Flow = nil
+function SystemGuideManager:RemoveFlow(Flow)
+  GameFlowUtils:RemoveFlow(Flow)
 end
 
 function SystemGuideManager:RemoveCurStl()

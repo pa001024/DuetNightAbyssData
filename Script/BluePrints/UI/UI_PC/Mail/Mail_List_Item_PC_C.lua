@@ -18,11 +18,16 @@ function M:OnListItemObjectSet(Content)
   self.Group_MailItemCommon:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.MailInfo = Content.ParentWidget:GetMailInfo(Content)
   local MailTitle = self.MailInfo.MailTitle
-  self.Text_Mail_NormalTitle:SetText(GText(MailTitle))
-  self.Text_Mail_SelectTitle:SetText(GText(MailTitle))
+  if self:IsGift(Content) then
+    self.Text_Mail_NormalTitle:SetText(GText("UI_SendGift_MailTitle"))
+    self.Text_Mail_SelectTitle:SetText(GText("UI_SendGift_MailTitle"))
+  else
+    self.Text_Mail_NormalTitle:SetText(GText(MailTitle))
+    self.Text_Mail_SelectTitle:SetText(GText(MailTitle))
+  end
   self:StopAnimation(self.List_Read)
   self:PlayAnimation(self.Normal)
-  self:SetMailSenderIcon()
+  self:SetMailSenderIcon(Content)
   self:SetMailRemainTime()
   if Content.IsStar then
     self.Group_MailStar:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
@@ -141,7 +146,7 @@ function M:SetMailDueTime(DueTime)
   end
 end
 
-function M:SetMailSenderIcon()
+function M:SetMailSenderIcon(Content)
   local Icon = "Bai_Idle"
   local NpcId = self.MailInfo.MailSenderId
   local Name = "Mail_Sender_Default"
@@ -158,7 +163,17 @@ function M:SetMailSenderIcon()
       end
     end
   end
-  local DynamicIcon = LoadObject(Icon)
+  local DynamicIcon
+  if self:IsGift(Content) then
+    local NickName = GiftController:GetSenderName(Content.UniqueId, Content.IsStar)
+    self.Text_MailFrom_Normal:SetText(GText(NickName))
+    self.Text_MailFrom_Select:SetText(GText(NickName))
+    DynamicIcon = LoadObject("Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_JJ.T_Head_JJ'")
+  else
+    self.Text_MailFrom_Normal:SetText(GText(Name))
+    self.Text_MailFrom_Select:SetText(GText(Name))
+    DynamicIcon = LoadObject(Icon)
+  end
   if DynamicIcon then
     self.OldMat:SetTextureParameterValue("IconMap", DynamicIcon)
     self.Common_Head_Small.Img_Item:SetBrushFromMaterial(self.OldMat)
@@ -167,8 +182,6 @@ function M:SetMailSenderIcon()
     UIUtils.SwitchGuideHead(Icon, self.HeadIcon)
   end
   self.Common_Head_Small:SetDisableAction(true)
-  self.Text_MailFrom_Normal:SetText(GText(Name))
-  self.Text_MailFrom_Select:SetText(GText(Name))
 end
 
 function M:ClearListItemObjectSelectState(Content)
@@ -185,6 +198,10 @@ function M:ClearListItemObjectSelectState(Content)
     self:StopAnimation(self.List_Read)
     self:PlayAnimation(self.Normal)
   end
+end
+
+function M:IsGift(Content)
+  return Content.HeadIconId and 0 ~= Content.HeadIconId
 end
 
 return M

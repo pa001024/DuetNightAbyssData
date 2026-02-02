@@ -194,6 +194,9 @@ function Common_Key_PC:_InitInternal(CreateInfo)
   end
   if self:_CanHandleButtonEvent(CreateInfo) and not self:IsDisableMouseKeyEvent(CreateInfo.KeyInfoList[1]) then
     self:_BindButtonEvent(self.Button_Key)
+    if self.bButton then
+      self.Button_Key:SetVisibility(UIConst.VisibilityOp.Visible)
+    end
   elseif self.bButton then
     self.Button_Key:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   end
@@ -416,6 +419,9 @@ function Common_Key_PC:_SetImage(Type, ImgShortPath, ImgLongPath, bLargeSize)
       end
     end
     local ReplaceKey = string.gsub(ImgShortPath, " ", "_")
+    if DataMgr.KeyboardText[ReplaceKey] then
+      ReplaceKey = DataMgr.KeyboardText[ReplaceKey].KeyText
+    end
     ImgPath = string.format(FixPath, ReplaceKey, ReplaceKey)
     Img = UE4.UResourceLibrary.LoadObjectAsync(self, ImgPath, {
       self,
@@ -477,6 +483,9 @@ function Common_Key_PC:_SetImageByInstruction(ImgShortPath, ImgLongPath)
   if ImgShortPath then
     local FixPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Instruction/T_Key_%s_L.T_Key_%s_L'"
     local ReplaceKey = string.gsub(ImgShortPath, " ", "_")
+    if DataMgr.KeyboardText[ReplaceKey] then
+      ReplaceKey = DataMgr.KeyboardText[ReplaceKey].KeyText
+    end
     ImgPath = string.format(FixPath, ReplaceKey, ReplaceKey)
     Img = LoadObject(ImgPath)
     if not IsValid(Img) then
@@ -636,6 +645,9 @@ function Common_Key_PC:OnButtonPressed(bChild, bSetTimeRange, StartAtTime, EndAt
     self.PressTimer = 0
     self.bHasTriggerLongPress = false
     self.bHasTriggerLongRelease = false
+    if self.UpdateTimer then
+      URuntimeCommonFunctionLibrary.K2_ClearAndInvalidateTimerHandle(self, self.UpdateTimer)
+    end
     self.UpdateTimer = URuntimeCommonFunctionLibrary.K2_SetTimerDelegate({
       self,
       function()
@@ -858,10 +870,6 @@ function Common_Key_PC:_Update(bSetTimeRange, StartAtTime, EndAtTime)
     end
     if not self.bHasTriggerLongRelease and self.PressTimer >= self.LongPressDuration then
       self.bHasTriggerLongRelease = true
-      if self.LongPress then
-        self:_ResetState(self.LongPress)
-      end
-      self:OnButtonReleased()
       self:_ResetWhenNotNeedUpdate()
       self:_ExecuteLogic()
     end

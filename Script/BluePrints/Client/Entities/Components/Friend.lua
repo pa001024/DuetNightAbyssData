@@ -1,7 +1,10 @@
 local FriendController = require("BluePrints.UI.WBP.Friend.FriendController")
 local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
 local FriendCommon = require("BluePrints.UI.WBP.Friend.FriendCommon")
+local GiftController = require("BluePrints.UI.WBP.Gift.GiftController")
+local Decorator = require("BluePrints.Client.Wrapper.Decorator")
 local Component = {}
+Decorator:ApplyDecorator(Component)
 
 function Component:EnterWorld()
   FriendController:Init()
@@ -47,6 +50,8 @@ function Component:RealUpdateFriendInfo(info)
   friend:Update(info)
   FriendController:RecvRealUpdateFriendInfo(info)
 end
+
+Component:BlockAllUIInput("FriendSendAddRequest")
 
 function Component:FriendSendAddRequest(Uid, Remark)
   self.logger.info("FriendSendAddRequest", Uid, Remark)
@@ -165,6 +170,8 @@ function Component:FriendCancleBlackList(Uid, Nickname)
   
   self:CallServer("FriendCancleBlacklist", Cb, Uid)
 end
+
+Component:BlockAllUIInput("FriendGenerateRecommendList")
 
 function Component:FriendGenerateRecommendList()
   self.logger.info("FriendGenerateRecommendList")

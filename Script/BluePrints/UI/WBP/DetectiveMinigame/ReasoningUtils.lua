@@ -252,29 +252,77 @@ function M:IsQuestionHasNewClue(QuestionId)
   return false
 end
 
+function M:IsQuestionReasoningState(QuestionId)
+  if self:IsQuestionSolved(QuestionId) then
+    return false
+  end
+  local inferAnswers = self:GetMissingInferAnswers(QuestionId)
+  if inferAnswers then
+    return true
+  end
+  local commitAnswers = self:GetCommitAnswers(QuestionId)
+  if commitAnswers then
+    return true
+  end
+  return false
+end
+
 function M:IsHasNewQuestionOrClue(QuestionId)
+  if nil == QuestionId then
+    return 0
+  end
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("DetectiveAnswer")
   if CacheDetail then
     for AnswerId, Value in pairs(CacheDetail) do
-      if nil ~= QuestionId then
-        local answerData = DataMgr.DetectiveAnswer[AnswerId]
-        if answerData and answerData.QuestionID ~= QuestionId and Value then
-          return 2
-        end
-      elseif Value then
+      local answerData = DataMgr.DetectiveAnswer[AnswerId]
+      if answerData and answerData.QuestionID == QuestionId and Value then
         return 2
       end
     end
   end
   CacheDetail = ReddotManager.GetLeafNodeCacheDetail("DetectiveQuestion")
+  if CacheDetail and CacheDetail[QuestionId] then
+    return 1
+  end
+  return 0
+end
+
+function M:IsAllQuestionReasoningState()
+  local Avatar = GWorld:GetAvatar()
+  local UnlockedQuestions = Avatar.DetectiveGameUnlockedQuestions
+  if not UnlockedQuestions then
+    return false
+  end
+  for QuestionId, _ in pairs(UnlockedQuestions) do
+    if self:IsQuestionReasoningState(QuestionId) then
+      return true
+    end
+  end
+  return false
+end
+
+function M:IsAllClueHasNewClue()
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("DetectiveAnswer")
   if CacheDetail then
-    for QuestionId, Value in pairs(CacheDetail) do
+    for AnswerId, Value in pairs(CacheDetail) do
       if Value then
-        return 1
+        return true
       end
     end
   end
-  return 0
+  return false
+end
+
+function M:IsAllQuestionHasNewQuestion()
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("DetectiveQuestion")
+  if CacheDetail then
+    for QuestionId, Value in pairs(CacheDetail) do
+      if Value then
+        return true
+      end
+    end
+  end
+  return false
 end
 
 function M:IsClueFromResult(AnswerId)
@@ -294,6 +342,33 @@ function M:ClearClueReddot(QuestionId)
       CacheDetail[CacheDetailKey] = false
     end
   end
+end
+
+function M:GetNeedOpenQuestionIdByIds(AnswerIds, ResultIds)
+  local Avatar = GWorld:GetAvatar()
+  local UnlockedAnswers = Avatar.DetectiveGameUnlockedAnswers
+  local UnlockedResults = Avatar.DetectiveGameUnlockedResults
+  if ResultIds then
+    for _, ResultId in pairs(ResultIds) do
+      if not UnlockedResults or not UnlockedResults[ResultId] then
+        local ResultData = DataMgr.DetectiveResult[ResultId]
+        if ResultData and ResultData.QuestionID then
+          return ResultData.QuestionID
+        end
+      end
+    end
+  end
+  if AnswerIds then
+    for _, AnswerId in pairs(AnswerIds) do
+      if not UnlockedAnswers or not UnlockedAnswers[AnswerId] then
+        local QuestionId = self:IsClueFromResult(AnswerId)
+        if QuestionId then
+          return QuestionId
+        end
+      end
+    end
+  end
+  return nil
 end
 
 function M:TableContains(tbl, val)

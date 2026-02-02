@@ -52,7 +52,7 @@ function Component:KickPlayer(AvatarEid)
 end
 
 function Component:GetDSLogPath()
-  local function cb(DSLogPath)
+  local function cb(ret, DSLogPath)
     print(_G.LogTag, "DSLogPath", DSLogPath)
   end
   
@@ -68,6 +68,7 @@ function Component:OnDisconnectDS()
   Avatar:ExitDungeon()
   GWorld.GameInstance.LogicServerCallbackInfo = nil
   GWorld.GameInstance.IsInSettlementScene = nil
+  GWorld.GameInstance.IsDSOnDungeonFinish = nil
   DebugPrint("TryDungeonSettlement: OnDisconnectDS ClearInfo")
 end
 

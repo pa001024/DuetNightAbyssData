@@ -47,7 +47,7 @@ return {
       key = "1754647102260148",
       type = "StoryNode",
       name = "任务节点",
-      pos = {x = 1174, y = 292},
+      pos = {x = 1176, y = 292},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
@@ -93,12 +93,6 @@ return {
             startQuest = "1754647102260149",
             startPort = "QuestStart",
             endQuest = "1754650244543601647",
-            endPort = "In"
-          },
-          {
-            startQuest = "1754967396491792",
-            startPort = "Out",
-            endQuest = "1754967396491793",
             endPort = "In"
           },
           {
@@ -306,6 +300,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -455,6 +450,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -545,16 +541,6 @@ return {
               StaticCreatorIdList = {1191635}
             }
           },
-          ["1754967396491793"] = {
-            key = "1754967396491793",
-            type = "SetVarNode",
-            name = "打开队友特效",
-            pos = {x = 1576.8809195991112, y = 196.5209394028409},
-            propsData = {
-              VarName = "TeammateEffects",
-              VarValue = 1
-            }
-          },
           ["17556131196407974287"] = {
             key = "17556131196407974287",
             type = "GoToNode",
@@ -574,6 +560,7 @@ return {
             pos = {x = 2770.1482875434363, y = 923.3620773144827},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "Npc_Cassandra_Feina03_1191609"
             }
@@ -585,6 +572,7 @@ return {
             pos = {x = 2404.3766245049833, y = 217.02998580777995},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "Npc_Cassandra_Feina03_1191609"
             }
@@ -719,7 +707,7 @@ return {
             key = "17575804276567450330",
             name = "Input Commment...",
             position = {x = 1239.028883358083, y = 122.11170751445331},
-            size = {width = 579.375, height = 204.375}
+            size = {width = 312.971116641917, height = 205.88829248554657}
           },
           ["17575804465127450944"] = {
             key = "17575804465127450944",

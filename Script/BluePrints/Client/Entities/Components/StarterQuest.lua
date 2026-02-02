@@ -5,6 +5,23 @@ function Component:GMPhaseQuestComplete(EventId, StarterQuestID)
   self:CallServerMethod("GMPhaseQuestComplete", EventId, StarterQuestID)
 end
 
+function Component:_OnLoginSuccess()
+  local bUnlocked = self:CheckUIUnlocked("StarterQuest")
+  if not bUnlocked then
+    self.StarterQuest_UnlockKey = self:BindOnUIFirstTimeUnlock("StarterQuest", function()
+      ActivityUtils.ChangeStarterQuestReddot()
+    end)
+  else
+    ActivityUtils.ChangeStarterQuestReddot()
+  end
+end
+
+function Component:LeaveWorld()
+  if self.StarterQuest_UnlockKey then
+    self:UnBindOnUIFirstTimeUnlock("StarterQuest", self.StarterQuest_UnlockKey)
+  end
+end
+
 function Component:StarterQuestGetReward(StarterQuestId)
   self.logger.info("StarterQuestGetReward", StarterQuestId)
   

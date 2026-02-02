@@ -1,6 +1,9 @@
 local T = {}
 T.RT_1 = {2, 0}
 T.RT_2 = {1, 0}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

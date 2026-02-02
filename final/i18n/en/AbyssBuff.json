@@ -11,7 +11,7 @@
     "id": 20,
     "icon": "Mon_Survive02",
     "n": "Bulwark Cadence: Trembling Paladin",
-    "d": "Enemy units take 80% less damage, but each time they take Skill Damage or Weapon Damage, the damage reduction decreases by 1%.",
+    "d": "Enemy units take 80% less damage, but each time they take damage, the damage reduction decreases by 1%.",
     "t": 2,
     "tip": "Takes effect when the Classic Repertoire Act Ⅲ challenge starts "
   },
@@ -31,10 +31,17 @@
     "t": 2
   },
   {
+    "id": 101,
+    "icon": "Exchange",
+    "n": "Verdict Cadence: Elemental Pact",
+    "d": "Enemy units are assigned the selected element. They take 400% more damage from advantaged elements, and 50% less damage from disadvantaged elements.",
+    "t": 1
+  },
+  {
     "id": 201,
     "icon": "Mon_Survive02",
     "n": "Bulwark Cadence: Trembling Paladin",
-    "d": "Enemy units take 80% less damage, but each time they take Skill Damage or Weapon Damage, the damage reduction decreases by 1%.",
+    "d": "Enemy units take 80% less damage, but each time they take damage, the damage reduction decreases by 1%.",
     "t": 2,
     "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   },
@@ -49,7 +56,7 @@
   {
     "id": 203,
     "icon": "Mon_Survive02",
-    "n": "Defence Variation: Sniper's Honour",
+    "n": "Bulwark Cadence: Sniper's Honour",
     "d": "Enemies take 80% less damage. This reduction diminishes by 2% each time they take damage from a ranged weapon.",
     "t": 2,
     "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
@@ -57,7 +64,7 @@
   {
     "id": 204,
     "icon": "Mon_Survive02",
-    "n": "Defence Variation: Braveheart",
+    "n": "Bulwark Cadence: Braveheart",
     "d": "Enemy units take 80% reduced damage. This reduction diminishes by 2% each time they take weapon damage.",
     "t": 2,
     "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
@@ -65,7 +72,7 @@
   {
     "id": 205,
     "icon": "Mon_Survive02",
-    "n": "Defence Variation: Swordsman's Honour",
+    "n": "Bulwark Cadence: Swordsman's Honour",
     "d": "Enemy units take 80% reduced damage. This reduction diminishes by 4% each time they take melee weapon damage.",
     "t": 2,
     "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
@@ -73,15 +80,23 @@
   {
     "id": 206,
     "icon": "Mon_Survive02",
-    "n": "Defence Variation: Endless Trial",
+    "n": "Bulwark Cadence: Endless Trial",
     "d": "Enemy units take 60% reduced damage. This reduction diminishes by 6% each time they take periodic damage.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 207,
+    "icon": "Mon_Survive02",
+    "n": "Defence Cadence: Tempered Mind",
+    "d": "Enemy units take 80% reduced damage. This reduction diminishes by 4% each time they take Skill DMG.",
     "t": 2,
     "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   },
   {
     "id": 211,
     "icon": "Mon_Survive02",
-    "n": "Shield Variation: Gloom of the Undying",
+    "n": "Aegis Cadence: Gloom of the Undying",
     "d": "Enemies regenerate 30% of their Max Shield every 3 seconds. Regeneration pauses while any elemental bonus effect is active.",
     "t": 2,
     "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
@@ -90,7 +105,7 @@
     "id": 301,
     "icon": "Skill",
     "n": "Andante Furioso: Ingenuity's Boon",
-    "d": "Every 5 instances of damage dealt by any ally grant 1 stack of 10% Skill Damage Increase, lasting 15 s and stacking up to 10 times.",
+    "d": "Every 5 instances of damage dealt by any ally grant 1 stack of 10% Skill Intensity Increase, lasting 15 s and stacking up to 10 times.",
     "t": 1,
     "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   },
@@ -114,7 +129,7 @@
     "id": 304,
     "icon": "Skill",
     "n": "Allegro Agitato: Rogue Archive",
-    "d": "For every 15 Sanity spent by all allies in total, grants 20% Skill Damage Increase for 15s, stacking up to 5 times. At max stacks, grants immunity to Hitstun.",
+    "d": "For every 15 Sanity spent by all allies in total, grants 20% Skill Intensity Increase for 15s, stacking up to 5 times. At max stacks, grants immunity to Hitstun.",
     "t": 1,
     "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   },
@@ -129,7 +144,7 @@
   {
     "id": 402,
     "icon": "Mon_Survive01",
-    "n": "Defence Variation: Uncrowned Arena",
+    "n": "Bulwark Cadence: Uncrowned Arena",
     "d": "Enemies take 50% less Melee Weapon DMG.",
     "t": 2,
     "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
@@ -146,14 +161,14 @@
     "id": 512,
     "icon": "Exchange",
     "n": "Coordinated Adagio: Soul Insight",
-    "d": "Allies lose 50% CRIT Damage. Skill damage has a 100% chance to trigger an elemental bonus effect.",
+    "d": "Allies lose 50% CRIT DMG. Skill DMG has a 100% chance to trigger an elemental bonus effect.",
     "t": 2,
     "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   },
   {
     "id": 905,
     "icon": "Mon_Survive01",
-    "n": "Defence Variation: Thoroughly Tempered",
+    "n": "Bulwark Cadence: Thoroughly Tempered",
     "d": "Damage taken by enemy units per hit is capped at 35% of their max HP.",
     "t": 2,
     "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
@@ -173,10 +188,24 @@
     "t": 1
   },
   {
+    "id": 934,
+    "icon": "Exchange",
+    "n": "Verdict Cadence: Ballad of Fire & Thunder",
+    "d": "Enemy units take 400% more Pyro and Electro Damage. All other elemental damage taken is reduced by 50%.",
+    "t": 1
+  },
+  {
     "id": 935,
     "icon": "Exchange",
     "n": "Verdict Cadence: Ballad of Fire & Wind",
     "d": "Enemy units take increased Pyro and Anemo Damage by 400%, and take reduced damage from other Attributes by 50%.",
+    "t": 1
+  },
+  {
+    "id": 940,
+    "icon": "Exchange",
+    "n": "Verdict Cadence: Ballad of Thunder & Light",
+    "d": "Enemy units take 400% more Electro and Lumino Damage. All other elemental damage taken is reduced by 50%.",
     "t": 1
   },
   {
@@ -189,57 +218,105 @@
   {
     "id": 11111,
     "icon": "Mon_Survive02",
-    "n": "Defence Variation: Brotherhood",
+    "n": "Bulwark Cadence: Brotherhood",
     "d": "Enemy units take 60.0% reduced damage. This reduction diminishes by 10% each time they take damage from a different ally to the previous one.",
-    "t": 2
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   },
   {
     "id": 11113,
     "icon": "Common",
     "n": "Andante Furioso: Avatar of Redemption",
     "d": "Allies gain 1 stack of +10% ATK Speed and +5% Skill Speed for 10s when healed by other allies, stacking up to 6 times. At max stacks, allies become immune to Hitstun.",
-    "t": 1
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   },
   {
     "id": 11121,
     "icon": "Range",
     "n": "Allegro Agitato: Bloodbound Crescendo",
     "d": "Each 4% of max HP an ally loses grants 1 stack of +10% CRIT Chance for 12s, stacking up to 10 times.",
-    "t": 1
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   },
   {
     "id": 11122,
     "icon": "Exchange",
     "n": "Coordinated Adagio: Shattered Blade",
     "d": "Allies lose 50% Weapon DMG and gain 100% CRIT Damage.",
-    "t": 2
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   },
   {
     "id": 11211,
     "icon": "Skill",
     "n": "Allegro Agitato: Giant's Hunt",
-    "d": "When an ally's HP is above 80%, their Skill Damage is increased by 100%, and they become immune to Hitstun.",
-    "t": 1
+    "d": "When an ally's HP is above 80%, their Skill Intensity is increased by 100%, and they become immune to Hitstun.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   },
   {
     "id": 11212,
     "icon": "Exchange",
     "n": "Coordinated Adagio: Fatal Alchemist",
     "d": "Allies lose 100% CRIT Damage and gain 50% periodic damage.",
-    "t": 2
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   },
   {
     "id": 11221,
     "icon": "Melee",
     "n": "Andante Furioso: Hero's Resolve",
     "d": "After using a melee attack, allies gain 1 stack of +10% weapon damage for 10s, stacking up to 5 times. At max stacks, allies become immune to Hitstun.",
-    "t": 1
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   },
   {
     "id": 11222,
     "icon": "Exchange",
     "n": "Coordinated Adagio: Overload Armour",
-    "d": "Allies lose 50% Skill DMG and gain 100% CRIT Chance.",
-    "t": 2
+    "d": "Allies lose 12% DMG and gain 100% CRIT Chance.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 12111,
+    "icon": "Melee",
+    "n": "Allegro Agitato: Years of Glory",
+    "d": "When an ally uses a Combat Skill or Ultimate Skill, gains +60% Morale for 18s.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 12112,
+    "icon": "Exchange",
+    "n": "Coordinated Adagio: Ireversible Farewell",
+    "d": "Allies lose 12% Damage Dealt and gain 50% Weapon DMG",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 12121,
+    "icon": "Skill",
+    "n": "Allegro Agitato: United We Stand",
+    "d": "When an ally uses a Combat Skill or Ultimate Skill, gains +10% Skill DMG for 15s, stacking up to 9 times. At max stacks, gains immunity to Hitstun.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 12211,
+    "icon": "Skill",
+    "n": "Allegro Agitato: Reunion",
+    "d": "When an ally uses a Combat Skill or Ultimate Skill, gains +50% Skill Intensity for 10s. This effect stacks across different allies.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 12221,
+    "icon": "Range",
+    "n": "Andante Furioso: The Courage to Defy",
+    "d": "For every 5 instances of damage dealt by any ally, gains 1 stack of +10% Damage Dealt for 15s, stacking up to 9 times.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   }
 ]

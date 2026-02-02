@@ -1,7 +1,4 @@
 local ETalkNodeFinishType = require("StoryCreator.StoryLogic.StorylineUtils").ETalkNodeFinishType
-local FDialogueIterationComponent = require("BluePrints.Story.Components.DialogueIterationComponent")
-local TalkAudioComp_C = require("BluePrints.Story.Talk.Controller.TalkAudioComp")
-local ExpressionComp_C = require("BluePrints.Story.Talk.Controller.ExpressionComp")
 local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
 local EDialogueNodeType = TalkUtils.EDialogueNodeType
 local LightTalkTask = Class({
@@ -51,8 +48,8 @@ function LightTalkTask:Finish(TalkNodeFinishType)
   end
 end
 
-function LightTalkTask:Clear(bIsPaused)
-  DebugPrint("LightTalkTask:Clear", bIsPaused)
+function LightTalkTask:Clear()
+  DebugPrint("LightTalkTask:Clear")
   AudioManager(GWorld.GameInstance):RemoveAuANotifyForbidTag(self.UnitKey)
   self:RemoveDialogueEffectSound()
   self:ClearWaitTag()
@@ -62,14 +59,8 @@ function LightTalkTask:Clear(bIsPaused)
     self.TalkContext.TalkActionManager:StopAllLookAt(self)
   end
   self:StopDSL()
-  if not bIsPaused then
-    self:ClearUI()
-    self:ClearEvents()
-  end
-end
-
-function LightTalkTask:StartPlayDialogue()
-  self.DialogueIterationComponent:Start()
+  self:ClearUI()
+  self:ClearEvents()
 end
 
 function LightTalkTask:PlayDialogue(bPauseResume)
@@ -90,7 +81,7 @@ function LightTalkTask:PlayDialogue(bPauseResume)
   self:ConstructWaitTag(self, self.OnTaskPlayDialogueFinished)
   self:ProcessDialogueData(DialogueData, bPauseResume)
   self:ProcessWaitTag_UIPlayDialogue(DialogueData, self.WaitQueue)
-  self:ProcessWaitTag_PlayAudio(DialogueData, bPauseResume, nil, nil, self.WaitQueue)
+  self:ProcessWaitTag_PlayAudio(DialogueData, bPauseResume, nil, self.WaitQueue)
   self:ProcessWaitTag_PlayScript(DialogueData, self.WaitQueue)
 end
 
@@ -141,7 +132,7 @@ function LightTalkTask:ProcessWaitTag_UIPlayDialogue(DialogueData, WaitQueuePoin
   end
 end
 
-function LightTalkTask:ProcessWaitTag_PlayAudio(DialogueData, bPauseResume, bForceWait, bIsAttachActor, WaitQueuePointer)
+function LightTalkTask:ProcessWaitTag_PlayAudio(DialogueData, bPauseResume, bIsAttachActor, WaitQueuePointer, bNoWait)
   if not self.TalkAudioComp then
     WaitQueuePointer:CompleteWaitItem(WaitItemUniqueTag.PlayAudio)
     return
@@ -150,16 +141,14 @@ function LightTalkTask:ProcessWaitTag_PlayAudio(DialogueData, bPauseResume, bFor
     WaitQueuePointer:CompleteWaitItem(WaitItemUniqueTag.PlayAudio)
     return
   end
-  DebugPrint("LightTalkTask:ProcessWaitTag_PlayAudio", DialogueData, bPauseResume, bForceWait)
+  DebugPrint("LightTalkTask:ProcessWaitTag_PlayAudio", DialogueData, bPauseResume, self.bAudioFinishe, bNoWait)
   self.bAudioFinished = false
-  self.TalkAudioComp:PlayDialogue(DialogueData, self.TalkTaskData, self, {
-    Func = function(Obj, bUnFinished)
-      if not bUnFinished then
-        self.bAudioFinished = true
-      end
-      WaitQueuePointer:CompleteWaitItem(WaitItemUniqueTag.PlayAudio)
+  self:PlayAudio(DialogueData, function(bUnFinished)
+    if not bUnFinished then
+      self.bAudioFinished = true
     end
-  }, bForceWait, nil, bIsAttachActor, bPauseResume)
+    WaitQueuePointer:CompleteWaitItem(WaitItemUniqueTag.PlayAudio)
+  end, bIsAttachActor, bPauseResume, bNoWait)
 end
 
 function LightTalkTask:ProcessWaitTag_PlayScript(DialogueData, WaitQueuePointer)
@@ -203,7 +192,7 @@ function LightTalkTask:OnPauseResumed()
   if self.bHasInterrupted then
     return
   end
-  DebugPrint("LightTalkTask:对话暂停恢复", self, self:GetTalkType(), self.bHasInterrupted)
+  DebugPrint("LightTalkTask:对话暂停恢复", self, self:GetTalkType())
   if IsValid(self.UI) and self.UI.OnPauseResumed then
     self.UI:OnPauseResumed()
   end
@@ -211,14 +200,6 @@ function LightTalkTask:OnPauseResumed()
   self.DialogueIterationComponent:Resume()
   if not self.bAudioFinished then
     self:ResumePauseAudio()
-  end
-end
-
-function LightTalkTask:ClearAllTimers()
-  DebugPrint("LightTalkTask:ClearAllTimers")
-  if self.TalkTimerManager then
-    self.TalkTimerManager:ClearTimer(self)
-    self.TalkTimerManager:ClearTimer(self.dsl)
   end
 end
 
@@ -253,7 +234,7 @@ end
 
 function LightTalkTask:ClearAudio()
   if self.TalkAudioComp then
-    self.TalkAudioComp:Clear(self)
+    self.TalkAudioComp:Clear()
   end
 end
 
@@ -267,18 +248,6 @@ function LightTalkTask:CreateComponents()
   self:CreateDialogueIteratorComponent()
   self:CreateTalkAudioComponent()
   self:CreateExpressionComponent()
-end
-
-function LightTalkTask:CreateDialogueIteratorComponent()
-  self.DialogueIterationComponent = FDialogueIterationComponent:New(DataMgr.Dialogue, self.TalkTaskData.FirstDialogueId, self)
-end
-
-function LightTalkTask:CreateTalkAudioComponent()
-  self.TalkAudioComp = TalkAudioComp_C.New()
-end
-
-function LightTalkTask:CreateExpressionComponent()
-  self.ExpressionComp = ExpressionComp_C.New()
 end
 
 return LightTalkTask

@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -292,6 +295,22 @@ return ReadOnly("GalleryRule", {
     PreferredMonsterId = 8509001,
     Priority = 9
   },
+  [8510001] = {
+    DescriptionDetail = "Mon_DesDetail_8510001",
+    DisableTrainingGround = true,
+    GalleryRuleId = 8510001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Boss_Heilong.T_Head_Boss_Heilong",
+    PreferredMonsterId = 8510001,
+    Priority = 10
+  },
+  [8511001] = {
+    DescriptionDetail = "Mon_DesDetail_8511001",
+    DisableTrainingGround = true,
+    GalleryRuleId = 8511001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Boss_Bailong.T_Head_Boss_Bailong",
+    PreferredMonsterId = 8511001,
+    Priority = 11
+  },
   [8512001] = {
     DescriptionDetail = "Mon_DesDetail_8512001",
     DisableTrainingGround = true,
@@ -330,7 +349,15 @@ return ReadOnly("GalleryRule", {
     GalleryRuleId = 8516001,
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Empty.T_Head_Empty",
     PreferredMonsterId = 8516001,
-    Priority = 15
+    Priority = 16
+  },
+  [8518001] = {
+    DescriptionDetail = "Mon_DesDetail_8518001",
+    DisableTrainingGround = true,
+    GalleryRuleId = 8518001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Boss_Juque.T_Head_Boss_Juque",
+    PreferredMonsterId = 8518001,
+    Priority = 18
   },
   [8519001] = {
     DescriptionDetail = "Mon_DesDetail_8519001",
@@ -363,6 +390,14 @@ return ReadOnly("GalleryRule", {
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Empty.T_Head_Empty",
     PreferredMonsterId = 8523001,
     Priority = 23
+  },
+  [8524001] = {
+    DescriptionDetail = "Mon_DesDetail_8524001",
+    DisableTrainingGround = true,
+    GalleryRuleId = 8524001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Empty.T_Head_Empty",
+    PreferredMonsterId = 8524001,
+    Priority = 24
   },
   [9001001] = {
     DescriptionDetail = "Mon_DesDetail_9001001",
@@ -518,6 +553,14 @@ return ReadOnly("GalleryRule", {
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Mon_Yunzong01.T_Head_Mon_Yunzong01",
     PreferredMonsterId = 9809002,
     Priority = 51092
+  },
+  [9810001] = {
+    DescriptionDetail = "Mon_DesDetail_9810001",
+    DisableTrainingGround = true,
+    GalleryRuleId = 9810001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_HX_Hainiao.T_Head_HX_Hainiao",
+    PreferredMonsterId = 9810001,
+    Priority = 51101
   },
   [10001001] = {
     DescriptionDetail = "Mon_DesDetail_10001001",

@@ -277,6 +277,23 @@ function WBP_Forging_Compendium_C:Handle_KeyDownOnGamePad(InKeyName)
   return IsEventHandled
 end
 
+function WBP_Forging_Compendium_C:NavigateToTargetDraft(DraftId)
+  local ListItems = self.List_Item:GetListItems()
+  local ListItemsNum = ListItems:Num()
+  self:AddTimer(0.5, function()
+    local TargetObject
+    for i = 1, ListItemsNum do
+      local ListItem = ListItems:GetRef(i)
+      if ListItem.Id == DraftId then
+        self.List_Item:ScrollIndexIntoView(i - 1)
+        self:SelectDraftItem(ListItem)
+        break
+      end
+    end
+    self:ShowDraftPath(DraftId)
+  end)
+end
+
 function WBP_Forging_Compendium_C:OnTabItemSelected(TabWidget)
   self.TabIndex = TabWidget.Idx
   local TabType = self.TabIdx2TabType[self.TabIndex]

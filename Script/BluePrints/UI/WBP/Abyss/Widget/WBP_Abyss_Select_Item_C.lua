@@ -68,9 +68,9 @@ function WBP_Abyss_Select_Item_C:Init(DungeonIndex, SelectPage, DungeonId)
   self:InitReddot()
   self:InitSlots()
   self:InitDungeonInfo(DungeonId)
-  self:InitBossInfo()
   self:InitListEntry()
   self:SetProgressAndAttribute()
+  self:InitBossInfo()
 end
 
 function WBP_Abyss_Select_Item_C:InitDungeonInfo(DungeonId)
@@ -86,6 +86,7 @@ function WBP_Abyss_Select_Item_C:InitBossInfo()
   if not self.DungeonInfo then
     return
   end
+  self.BossInfo = {}
   local DungeonMonster = self.DungeonInfo.DungeonMonsters
   for _, MonsterId in pairs(DungeonMonster) do
     local MonsterInfo = DataMgr.Monster[MonsterId]
@@ -97,11 +98,11 @@ function WBP_Abyss_Select_Item_C:InitBossInfo()
         local ImagePath = GalleryData and GalleryData.MonsterIcon
         MonsterIcon = LoadObject(string.format("Texture2D'%s'", ImagePath))
       end
-      self.Btn_Enemy:SetBossInfo(MonsterName, MonsterIcon)
+      self.Btn_Enemy:SetBossInfo(nil, MonsterIcon)
+      self.BossInfo = {BossName = MonsterName, BossIcon = MonsterIcon}
       break
     end
   end
-  self.Btn_Enemy:SetRecLevel(self.SelectPage:Data().RecLevel)
 end
 
 function WBP_Abyss_Select_Item_C:InitListEntry()
@@ -134,6 +135,7 @@ function WBP_Abyss_Select_Item_C:SetProgressAndAttribute()
     DebugPrint("lhr@WBP_Abyss_Select_Item_C:InitLevelInfo, AbyssId", AbyssId, "对应的赛季不存在")
     return
   end
+  self.IsEndLess = AbyssInfo:IsLoopAbyss()
   local LevelInfo = AbyssInfo.AbyssLevelList[LevelIndex]
   if not LevelInfo then
     DebugPrint("lhr@WBP_Abyss_Select_Item_C:InitLevelInfo, LevelIndex", LevelIndex, "对应的关卡不存在")
@@ -148,7 +150,50 @@ function WBP_Abyss_Select_Item_C:SetProgressAndAttribute()
   end
   self.Text_Get:SetText(Now)
   self.Text_All:SetText(All)
-  self.Recommend_Attribute:Init(LevelInfo.AbyssLevelId, self.DungeonIndex)
+  local AttributeType = DataMgr.AbyssLevel[self.LevelId]["AttributeType" .. self.DungeonIndex]
+  local Attributes = {}
+  if AttributeType then
+    Attributes = string.split(AttributeType, ",")
+  end
+  self.Attributes = Attributes
+  if not self.IsEndLess then
+    self.WorldText:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Btn_ChangeAttribute:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self:FillAttributeList(Attributes)
+  else
+    self.WorldText:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Btn_ChangeAttribute:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Btn_ChangeAttribute:Init(Attributes)
+    local ChosenAttr = Avatar:GetAbyssAttrType(self.AbyssId)
+    local RecAttr = ChosenAttr and DataMgr.Attribute[ChosenAttr].CounterType
+    self:FillAttributeList({RecAttr})
+    self:SwitchAttribute(ChosenAttr)
+  end
+end
+
+function WBP_Abyss_Select_Item_C:FillAttributeList(Attributes)
+  if not Attributes or not next(Attributes) then
+    self.Recommend_Attribute:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    return
+  end
+  self.Recommend_Attribute:FillAttrList(Attributes)
+  self.Recommend_Attribute:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+end
+
+function WBP_Abyss_Select_Item_C:SwitchAttribute(Attribute)
+  if not Attribute then
+    return
+  end
+  local NewIdx = self.Btn_ChangeAttribute:ChooseAttribute(Attribute)
+  if -1 ~= NewIdx then
+    local RecAttr = self.Attributes[NewIdx]
+    self:FillAttributeList({RecAttr})
+    self.Recommend_Attribute:PlayAnimation(self.Recommend_Attribute.Remind)
+  end
+end
+
+function WBP_Abyss_Select_Item_C:BindEventOnSwitchAttributeBtn(Event)
+  self.Btn_ChangeAttribute:BindEventOnClicked(Event, self)
 end
 
 function WBP_Abyss_Select_Item_C:ResetProgress()
@@ -218,7 +263,28 @@ function WBP_Abyss_Select_Item_C:ShowMonsterInfo()
   local UIManger = GameInstance:GetGameUIManager()
   if UIManger then
     local MonsterInfoPanel = UIManger:LoadUI(UIConst.LoadInConfig, "MonsterDetailInfo", self.SelectPage.Root:GetZOrder())
-    MonsterInfoPanel:InitPanel(nil, self.DungeonInfo)
+    if self.IsEndLess then
+      local AttrIdx = self.Btn_ChangeAttribute.CurrentAttrIdx
+      local AttrType = self.Attributes[AttrIdx]
+      
+      function self.SubBtnCallback()
+        MonsterInfoPanel:SetVisibility(ESlateVisibility.Collapsed)
+        self.SelectPage:ShowSwitchAttributePanel(self, self.Btn_ChangeAttribute.CurrentAttrIdx, function()
+          AttrIdx = self.Btn_ChangeAttribute.CurrentAttrIdx
+          AttrType = self.Attributes[AttrIdx]
+          MonsterInfoPanel:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+          MonsterInfoPanel:InitMonsterWeakness(AttrType)
+          MonsterInfoPanel:RefreshMonsterList()
+          MonsterInfoPanel:PlayOpenAnim()
+          MonsterInfoPanel:SetFocus()
+          MonsterInfoPanel:InitSubBtn(self.SubBtnCallback)
+        end)
+      end
+      
+      MonsterInfoPanel:InitPanel(nil, self.DungeonInfo, AttrType, self.SubBtnCallback)
+    else
+      MonsterInfoPanel:InitPanel(nil, self.DungeonInfo)
+    end
     MonsterInfoPanel.Parent = self.SelectPage
   end
 end
@@ -458,14 +524,14 @@ function WBP_Abyss_Select_Item_C:OnUpdateUIStyleByInputTypeChange(CurInputDevice
     end
     self.Entry_Tip.Controller_Entry:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Btn_Enemy:SwitchUIType(false)
-    self.Recommend_Attribute:SwitchUIType(false)
+    self.Btn_ChangeAttribute:SwitchUIType(false)
   else
     if self.SelectImg then
       self.SelectImg:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     end
     self.Entry_Tip.Controller_Entry:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.Btn_Enemy:SwitchUIType(true)
-    self.Recommend_Attribute:SwitchUIType(true)
+    self.Btn_ChangeAttribute:SwitchUIType(true)
   end
 end
 

@@ -7,7 +7,7 @@ function M:Received_Notify(MeshComp, Animation)
   end
   PlayerCharacter.SkillFeature = true
   if PlayerCharacter.AddTimer then
-    PlayerCharacter:AddTimer(self:GetSequenceDuration(), function(InPlayer)
+    PlayerCharacter:AddTimer(self:GetSequenceDuration(PlayerCharacter), function(InPlayer)
       InPlayer.SkillFeature = false
     end, false, 0, "SkillFeature")
   end

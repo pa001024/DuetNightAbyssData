@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -418,6 +421,20 @@ return ReadOnly("Message", {
     MessageType = "Guide",
     UICompName = "Battle_Skill_Squat.Img_Slide",
     UIShape = "Circle"
+  },
+  [200038] = {
+    MessageContentGamePad = "MESSAGE_SKILL3_GAMEPAD",
+    MessageContentPC = "MESSAGE_SKILL3_PC",
+    MessageContentPhone = "MESSAGE_SKILL3_PHONE",
+    MessageId = 200038,
+    MessageType = "Guide"
+  },
+  [200039] = {
+    MessageContentGamePad = "MESSAGE_CROUCH_PC",
+    MessageContentPC = "MESSAGE_CROUCH_PC",
+    MessageContentPhone = "MESSAGE_CROUCH_PHONE",
+    MessageId = 200039,
+    MessageType = "Guide"
   },
   [203001] = {
     MessageContentGamePad = "Message_Guide_Pet_01",
@@ -2378,6 +2395,202 @@ return ReadOnly("Message", {
     MessageContentPC = "Message_Guide_Qianji_3",
     MessageContentPhone = "Message_Guide_Qianji_3",
     MessageId = 303503,
+    MessageType = "Guide"
+  },
+  [303601] = {
+    MessageContentGamePad = "Message_Guide_WuYou_1",
+    MessageContentPC = "Message_Guide_WuYou_1",
+    MessageContentPhone = "Message_Guide_WuYou_1",
+    MessageId = 303601,
+    MessageType = "Guide"
+  },
+  [303602] = {
+    MessageContentGamePad = "Message_Guide_WuYou_2",
+    MessageContentPC = "Message_Guide_WuYou_2",
+    MessageContentPhone = "Message_Guide_WuYou_2",
+    MessageId = 303602,
+    MessageType = "Guide"
+  },
+  [303701] = {
+    MessageContentGamePad = "Message_Guide_ShengMing_1",
+    MessageContentPC = "Message_Guide_ShengMing_1",
+    MessageContentPhone = "Message_Guide_ShengMing_1",
+    MessageId = 303701,
+    MessageType = "Guide"
+  },
+  [303702] = {
+    MessageContentGamePad = "Message_Guide_ShengMing_2_Pad",
+    MessageContentPC = "Message_Guide_ShengMing_2",
+    MessageContentPhone = "Message_Guide_ShengMing_2",
+    MessageId = 303702,
+    MessageType = "Guide"
+  },
+  [303703] = {
+    MessageContentGamePad = "Message_Guide_ShengMing_3",
+    MessageContentPC = "Message_Guide_ShengMing_3",
+    MessageContentPhone = "Message_Guide_ShengMing_3",
+    MessageId = 303703,
+    MessageType = "Guide"
+  },
+  [303704] = {
+    MessageContentGamePad = "Message_Guide_ShengMing_4",
+    MessageContentPC = "Message_Guide_ShengMing_4",
+    MessageContentPhone = "Message_Guide_ShengMing_4",
+    MessageId = 303704,
+    MessageType = "Guide"
+  },
+  [303705] = {
+    MessageContentGamePad = "Message_Guide_ShengMing_5",
+    MessageContentPC = "Message_Guide_ShengMing_5",
+    MessageContentPhone = "Message_Guide_ShengMing_5",
+    MessageId = 303705,
+    MessageType = "Guide"
+  },
+  [303706] = {
+    MessageContentGamePad = "Message_Guide_ShengMing_6_Pad",
+    MessageContentPC = "Message_Guide_ShengMing_6",
+    MessageContentPhone = "Message_Guide_ShengMing_6",
+    MessageId = 303706,
+    MessageType = "Guide"
+  },
+  [303707] = {
+    MessageContentGamePad = "Message_Guide_ShengMing_7",
+    MessageContentPC = "Message_Guide_ShengMing_7",
+    MessageContentPhone = "Message_Guide_ShengMing_7",
+    MessageId = 303707,
+    MessageType = "Guide"
+  },
+  [303708] = {
+    MessageContentGamePad = "Message_Guide_ShengMing_8",
+    MessageContentPC = "Message_Guide_ShengMing_8",
+    MessageContentPhone = "Message_Guide_ShengMing_8",
+    MessageId = 303708,
+    MessageType = "Guide"
+  },
+  [303709] = {
+    MessageContentGamePad = "Message_Guide_ShengMing_9_Pad",
+    MessageContentPC = "Message_Guide_ShengMing_9",
+    MessageContentPhone = "Message_Guide_ShengMing_9",
+    MessageId = 303709,
+    MessageType = "Guide"
+  },
+  [303710] = {
+    MessageContentGamePad = "Message_Guide_ShengMing_10",
+    MessageContentPC = "Message_Guide_ShengMing_10",
+    MessageContentPhone = "Message_Guide_ShengMing_10",
+    MessageId = 303710,
+    MessageType = "Guide"
+  },
+  [303801] = {
+    MessageContentGamePad = "Message_Guide_AutoChess_1",
+    MessageContentPC = "Message_Guide_AutoChess_1",
+    MessageContentPhone = "Message_Guide_AutoChess_1",
+    MessageId = 303801,
+    MessageType = "Guide"
+  },
+  [303802] = {
+    MessageContentGamePad = "Message_Guide_AutoChess_2_Pad",
+    MessageContentPC = "Message_Guide_AutoChess_2",
+    MessageContentPhone = "Message_Guide_AutoChess_2",
+    MessageId = 303802,
+    MessageType = "Guide"
+  },
+  [303803] = {
+    MessageContentGamePad = "Message_Guide_AutoChess_3",
+    MessageContentPC = "Message_Guide_AutoChess_3",
+    MessageContentPhone = "Message_Guide_AutoChess_3",
+    MessageId = 303803,
+    MessageType = "Guide"
+  },
+  [303804] = {
+    MessageContentGamePad = "Message_Guide_AutoChess_4_Pad",
+    MessageContentPC = "Message_Guide_AutoChess_4",
+    MessageContentPhone = "Message_Guide_AutoChess_4",
+    MessageId = 303804,
+    MessageType = "Guide"
+  },
+  [303805] = {
+    MessageContentGamePad = "Message_Guide_AutoChess_5_Pad",
+    MessageContentPC = "Message_Guide_AutoChess_5",
+    MessageContentPhone = "Message_Guide_AutoChess_5",
+    MessageId = 303805,
+    MessageType = "Guide"
+  },
+  [303806] = {
+    MessageContentGamePad = "Message_Guide_AutoChess_6",
+    MessageContentPC = "Message_Guide_AutoChess_6",
+    MessageContentPhone = "Message_Guide_AutoChess_6",
+    MessageId = 303806,
+    MessageType = "Guide"
+  },
+  [303807] = {
+    MessageContentGamePad = "Message_Guide_AutoChess_7_Pad",
+    MessageContentPC = "Message_Guide_AutoChess_7",
+    MessageContentPhone = "Message_Guide_AutoChess_7",
+    MessageId = 303807,
+    MessageType = "Guide"
+  },
+  [303808] = {
+    MessageContentGamePad = "Message_Guide_AutoChess_8",
+    MessageContentPC = "Message_Guide_AutoChess_8",
+    MessageContentPhone = "Message_Guide_AutoChess_8",
+    MessageId = 303808,
+    MessageType = "Guide"
+  },
+  [303809] = {
+    MessageContentGamePad = "Message_Guide_AutoChess_9_Pad",
+    MessageContentPC = "Message_Guide_AutoChess_9",
+    MessageContentPhone = "Message_Guide_AutoChess_9",
+    MessageId = 303809,
+    MessageType = "Guide"
+  },
+  [303810] = {
+    MessageContentGamePad = "Message_Guide_AutoChess_10_Pad",
+    MessageContentPC = "Message_Guide_AutoChess_10",
+    MessageContentPhone = "Message_Guide_AutoChess_10",
+    MessageId = 303810,
+    MessageType = "Guide"
+  },
+  [303811] = {
+    MessageContentGamePad = "Message_Guide_AutoChess_11_Pad",
+    MessageContentPC = "Message_Guide_AutoChess_11",
+    MessageContentPhone = "Message_Guide_AutoChess_11",
+    MessageId = 303811,
+    MessageType = "Guide"
+  },
+  [303812] = {
+    MessageContentGamePad = "Message_Guide_AutoChess_12",
+    MessageContentPC = "Message_Guide_AutoChess_12",
+    MessageContentPhone = "Message_Guide_AutoChess_12",
+    MessageId = 303812,
+    MessageType = "Guide"
+  },
+  [303813] = {
+    MessageContentGamePad = "Message_Guide_AutoChess_13",
+    MessageContentPC = "Message_Guide_AutoChess_13",
+    MessageContentPhone = "Message_Guide_AutoChess_13",
+    MessageId = 303813,
+    MessageType = "Guide"
+  },
+  [303814] = {
+    MessageContentGamePad = "Message_Guide_AutoChess_14",
+    MessageContentPC = "Message_Guide_AutoChess_14",
+    MessageContentPhone = "Message_Guide_AutoChess_14",
+    MessageId = 303814,
+    MessageType = "Guide"
+  },
+  [303815] = {
+    MessageContentGamePad = "Message_Guide_AutoChess_15_Pad",
+    MessageContentPC = "Message_Guide_AutoChess_15",
+    MessageContentPhone = "Message_Guide_AutoChess_15",
+    MessageId = 303815,
+    MessageType = "Guide"
+  },
+  [303816] = {
+    MessageContentGamePad = "Message_Guide_AutoChess_16",
+    MessageContentPC = "Message_Guide_AutoChess_16",
+    MessageContentPhone = "Message_Guide_AutoChess_16",
+    MessageId = 303816,
     MessageType = "Guide"
   },
   [310001] = {

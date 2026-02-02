@@ -4560,6 +4560,126 @@
     "类型": 2
   },
   {
+    "id": 2053,
+    "名称": "Secret Letter: Dove of Tomorrow",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10404,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Skyfall Duality",
+        "d": 1
+      },
+      {
+        "id": 12138,
+        "type": "Resource",
+        "count": 1,
+        "name": "Skyfall Duality: Grip"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Precision Magnet"
+      },
+      {
+        "id": 12139,
+        "type": "Resource",
+        "count": 1,
+        "name": "Skyfall Duality: Blade (Left)"
+      },
+      {
+        "id": 12140,
+        "type": "Resource",
+        "count": 1,
+        "name": "Skyfall Duality: Blade (Right)"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Secret Letter Clue"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2054,
+    "名称": "Secret Letter: Obsidian Heart-Reaper",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20505,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Trigon Muse",
+        "d": 1
+      },
+      {
+        "id": 12141,
+        "type": "Resource",
+        "count": 1,
+        "name": "Trigon Muse: Bolt"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Precision Magnet"
+      },
+      {
+        "id": 12142,
+        "type": "Resource",
+        "count": 1,
+        "name": "Trigon Muse: Frame"
+      },
+      {
+        "id": 12143,
+        "type": "Resource",
+        "count": 1,
+        "name": "Trigon Muse: Barrel"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Secret Letter Clue"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
     "id": 151321,
     "名称": "Secret Letter: Griffin's Nihility – Wildfire",
     "获取途径": [
@@ -8040,6 +8160,126 @@
     "类型": 3
   },
   {
+    "id": 151745,
+    "名称": "Secret Letter: Feathered Serpent's Spectrum",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51745,
+        "type": "Mod",
+        "count": 1,
+        "name": "Spectrum",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Carmine Globule"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151746,
+    "名称": "Secret Letter: Feathered Serpent's Volition",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51746,
+        "type": "Mod",
+        "count": 1,
+        "name": "Volition",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Carmine Globule"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
     "id": 151751,
     "名称": "Secret Letter: Covenanter's Blaze – Standfast",
     "获取途径": [
@@ -9134,6 +9374,126 @@
         "type": "Mod",
         "count": 1,
         "name": "Gleam & Glimmer",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Carmine Globule"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 153011,
+    "名称": "Secret Letter: Lilith's Foldover· Dexterity",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 53011,
+        "type": "Mod",
+        "count": 1,
+        "name": "Foldover·Dexterity",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Carmine Globule"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 153013,
+    "名称": "Secret Letter: Lilith's Arrow· Abundance",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 53013,
+        "type": "Mod",
+        "count": 1,
+        "name": "Arrow·Abundance",
         "d": 1
       },
       {

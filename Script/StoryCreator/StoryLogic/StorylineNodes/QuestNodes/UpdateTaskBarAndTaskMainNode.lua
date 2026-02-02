@@ -54,7 +54,7 @@ function UpdateTaskBarAndTaskMainNode:OnChooseTrack()
   if Avatar.QuestChains[self.CurQuestChainId] then
     self.CurDoingQuestId = Avatar.QuestChains[self.CurQuestChainId].DoingQuestId
   end
-  if Avatar.TrackingQuestChainId == self.CurQuestChainId then
+  if Avatar.TrackingQuestChainId == self.CurQuestChainId and 0 ~= Avatar.TrackingQuestChainId and 0 ~= self.CurQuestChainId then
     IsTracking = true
   end
   if self.bIsDynamicEvent and self.NewDescription ~= "" then

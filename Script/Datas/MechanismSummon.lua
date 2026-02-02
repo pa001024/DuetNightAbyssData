@@ -13,6 +13,9 @@ T.RT_2 = {
 }
 T.RT_3 = {ActiveCommonUI = 0}
 T.RT_4 = {ActiveCommonUI = 1, HeightOffset = 100}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

@@ -1,7 +1,8 @@
 require("UnLua")
 local WBP_Build_List_C = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
-  "BluePrints.Common.TimerMgr"
+  "BluePrints.Common.TimerMgr",
+  "BluePrints.UI.BP_UIState_C"
 })
 WBP_Build_List_C._components = {
   "BluePrints.UI.UI_PC.Common.LSFocusComp",
@@ -331,6 +332,23 @@ end
 function WBP_Build_List_C:FillListView()
   self.List_Select:ClearListItems()
   for _, value in ipairs(self.FilteredContents) do
+    if 1 == _ % 3 then
+      value.NavigationRule = {
+        FocusWidget = self.EMListView_Filter,
+        UINavigation = EUINavigation.Left,
+        UINavigationRuleFunc = function(Item, UINavigation, FocusWidget)
+          Item:SetNavigationRuleExplicit(UINavigation, FocusWidget)
+        end
+      }
+    else
+      value.NavigationRule = {
+        FocusWidget = EUINavigationRule.Escape,
+        UINavigation = EUINavigation.Left,
+        UINavigationRuleFunc = function(Item, UINavigation, FocusWidget)
+          Item:SetNavigationRuleBase(UINavigation, FocusWidget)
+        end
+      }
+    end
     self.List_Select:AddItem(value)
   end
   if #self.FilteredContents <= 0 then

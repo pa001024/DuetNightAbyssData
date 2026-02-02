@@ -146,6 +146,13 @@ function ActionLogicComponent:PlayArmoryAction(ActionId, bHideUntilLoop)
   end
 end
 
+function ActionLogicComponent:IsArmoryIdleTag(IdleTag)
+  if self.PlayerAnimInstance then
+    return self.PlayerAnimInstance:IsArmoryIdleTag(IdleTag)
+  end
+  return false
+end
+
 function ActionLogicComponent:CanUseArmoryAction(ActionId)
   DebugPrint("gmy@ActionLogicComponent ActionLogicComponent:CanUseArmoryAction", ActionId)
   if 0 == ActionId then

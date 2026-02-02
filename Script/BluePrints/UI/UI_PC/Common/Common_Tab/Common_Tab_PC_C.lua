@@ -117,7 +117,7 @@ function M:ResetDynamicNode()
             ItemType = "Resource",
             HandleMouseDown = true
           })
-          ResourceBarWidget:SetResourceId(CoinId)
+          ResourceBarWidget:SetItemId(CoinId)
           self.Panel_ResourceBar:AddChild(ResourceBarWidget)
         end
         self.Panel_ResourceBar:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -179,7 +179,7 @@ end
 function M:UpdateResource()
   for k, v in pairs(self.ResourceBarWidget) do
     if IsValid(v) then
-      v:RefreshResourceInfo()
+      v:RefreshItemInfo()
     end
   end
 end
@@ -352,7 +352,7 @@ end
 
 function M:OnPropSetResources(ResourceId, OldValue)
   if self.ResourceBarWidget and self.ResourceBarWidget[ResourceId] then
-    self.ResourceBarWidget[ResourceId]:RefreshResourceInfo()
+    self.ResourceBarWidget[ResourceId]:RefreshItemInfo()
   end
 end
 

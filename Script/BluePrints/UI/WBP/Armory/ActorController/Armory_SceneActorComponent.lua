@@ -53,18 +53,31 @@ function M:GetPreviewSceneTrans()
   return self.PreviewSceneTrans
 end
 
-function M:TryLoadPreviewScene()
+local function GetLevelScriptActor(WorldLoader, PreviewLevelName)
+  local PreviewLevelStreaming = WorldLoader[PreviewLevelName]
+  if not PreviewLevelStreaming then
+    return
+  end
+  local PreviewLevel = PreviewLevelStreaming:GetLoadedLevel()
+  if not PreviewLevel then
+    return
+  end
+  return PreviewLevel.LevelScriptActor
+end
+
+function M:TryLoadPreviewScene(SceneType)
   if self.SmoothLoad then
     coroutine.yield()
   end
   if _HadAnyPreviewScene() then
     self.EPreviewSceneType = self.EPreviewSceneType or CommonConst.EPreviewSceneType.PreviewCommon
   end
-  local Path = self.EPreviewSceneType and CommonConst.PreviewScenePaths[self.EPreviewSceneType]
+  self.EPreviewSceneType = SceneType or self.EPreviewSceneType
+  local Path = CommonConst.PreviewScenePaths[self.EPreviewSceneType]
   if not Path then
     return
   end
-  self.PreviewSceneLocation = self.PreviewSceneLocation or FVector(100000, 100000, 100000)
+  self.PreviewSceneLocation = self.PreviewSceneLocation or FVector(200000, 200000, 200000)
   local PreviewLevelLocation = self.PreviewSceneLocation
   local GameMode = UE4.UGameplayStatics.GetGameMode(self.ViewUI)
   local WorldLoader = GameMode:GetLevelLoader()
@@ -73,12 +86,13 @@ function M:TryLoadPreviewScene()
     TargetTrans = FTransform()
     TargetTrans.Translation = PreviewLevelLocation
     TargetTrans.Rotation = FRotator(0, 0, 0):ToQuat()
+    self.PreviewSceneTrans = TargetTrans
     local PreviewLevelName = "PreviewLevel" .. self.EPreviewSceneType
     if not IsPreviewSceneHasRef(PreviewLevelName) then
       self.IsPreviewSceneLoading = true
       bSuccess = WorldLoader:LoadPreviewLevel(PreviewLevelName, Path, function()
         self.IsPreviewSceneLoading = false
-        self:SetPreviewLevelSkyBoxColor(WorldLoader, PreviewLevelName)
+        self.ArmoryHelper:SetPreviewLevelActor(GetLevelScriptActor(WorldLoader, PreviewLevelName))
         self:OnPreviewSceneLoaded()
       end, PreviewLevelLocation, FRotator(0, 0, 0))
       if bSuccess then
@@ -92,7 +106,9 @@ function M:TryLoadPreviewScene()
       IncreacePreviewSceneRefCount(PreviewLevelName)
       self.bPreviewSceneLoaded = true
       self.ViewUI:AddTimer(0.01, function()
-        self:SetPreviewLevelSkyBoxColor(WorldLoader, PreviewLevelName)
+        if IsValid(self.ArmoryHelper) then
+          self.ArmoryHelper:SetPreviewLevelActor(GetLevelScriptActor(WorldLoader, PreviewLevelName))
+        end
         self:OnPreviewSceneLoaded()
       end)
     end
@@ -100,22 +116,17 @@ function M:TryLoadPreviewScene()
   if self.SmoothLoad then
     coroutine.yield()
   end
-  if bSuccess then
-    self.PreviewSceneTrans = TargetTrans
+  if not bSuccess then
+    self.PreviewSceneTrans = nil
   end
 end
 
-function M:SetPreviewLevelSkyBoxColor(WorldLoader, PreviewLevelName)
+function M:SetPreviewLevelSkyBoxColor()
   if self.SkyBoxColor and self.EPreviewSceneType == CommonConst.EPreviewSceneType.BattlePass then
-    local PreviewLevelStreaming = WorldLoader[PreviewLevelName]
-    if not PreviewLevelStreaming then
-      return
+    local PreviewLevelScriptActor
+    if IsValid(self.ArmoryHelper) then
+      PreviewLevelScriptActor = self.ArmoryHelper:GetPreviewLevelActor()
     end
-    local PreviewLevel = PreviewLevelStreaming:GetLoadedLevel()
-    if not PreviewLevel then
-      return
-    end
-    local PreviewLevelScriptActor = PreviewLevel.LevelScriptActor
     if not PreviewLevelScriptActor then
       return
     end
@@ -142,12 +153,30 @@ function M:UnloadPreviewScene()
       local GameMode = UE4.UGameplayStatics.GetGameMode(self.ViewUI)
       local WorldLoader = GameMode:GetLevelLoader()
       if WorldLoader then
+        local EnvirSystemActor = self:GetEnvirSystemActor()
+        if EnvirSystemActor then
+          EnvirSystemActor.Disable = true
+        end
+        local Controller = UE4.UGameplayStatics.GetPlayerController(self.ArmoryHelper, 0)
+        if Controller then
+          UTalkSequenceFunctionLibrary.UpdatePlayerCameraManager(Controller)
+        end
         WorldLoader:UnloadPreviewLevel("PreviewLevel" .. self.EPreviewSceneType)
         if IsValid(self.ArmoryHelper) then
+          self.ArmoryHelper:SetPreviewLevelActor(nil)
           self.ArmoryHelper:OnPreviewSceneUnloaded()
         end
+        DebugPrint("CY@ OnPreviewSceneUnloaded")
       end
     end
+  end
+end
+
+function M:GetEnvirSystemActor()
+  if IsValid(self.ArmoryHelper) then
+    local PreviewLevelActor = self.ArmoryHelper:GetPreviewLevelActor()
+    local EnvirSystemActor = PreviewLevelActor and PreviewLevelActor.GetPreviewLevelActor and PreviewLevelActor:GetPreviewLevelActor()
+    return EnvirSystemActor
   end
 end
 
@@ -213,6 +242,14 @@ end
 
 function M:OnPreviewSceneLoaded()
   self.IsPreviewSceneLoading = false
+  self:SetPreviewLevelSkyBoxColor()
+  local PreviewLevelActor = self.ArmoryHelper:GetPreviewLevelActor()
+  if PreviewLevelActor and PreviewLevelActor.GetEnvirSystemActor then
+    local EnvirSystemActor = PreviewLevelActor:GetEnvirSystemActor()
+    if EnvirSystemActor then
+      EnvirSystemActor.Disable = false
+    end
+  end
   self:DoDeferedSceneBehavior()
   self:UpdateLighting()
 end
@@ -256,7 +293,7 @@ function M:TryNotifyHelperUpdateLighting()
   if self.bNotifyHelperUpdateLighting then
     return
   end
-  if IsValid(self.ArmoryHelper) and self.ArmoryHelper:GetViewActor() then
+  if IsValid(self.ArmoryHelper) then
     self.bNotifyHelperUpdateLighting = true
     self.ArmoryHelper:OnArmoryOpenOrClose(true)
     if self.bPreviewSceneLoaded then
@@ -275,9 +312,12 @@ function M:Component_OnClosed()
   self.ArmoryHelper:OnArmoryOpenOrClose(false)
 end
 
-function M:Component_OnDestruct()
+function M:Component_DestroyActors()
   self:UnloadPreviewScene()
-  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self.ViewUI, 0)
+end
+
+function M:Component_AfterDestroyActors()
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
   if Player then
     Player.CharCameraComponent:SetComponentTickEnabled(true)
     if self.EPreviewSceneType then

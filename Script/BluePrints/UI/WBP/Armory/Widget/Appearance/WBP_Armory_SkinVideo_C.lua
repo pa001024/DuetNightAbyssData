@@ -81,7 +81,8 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
     end
   end
   if Params.SoundPath then
-    AudioManager(self):PlayUISound(self, "event:/ui/btc/cg_saiqi_skin01", "SkinVideoSound", nil)
+    AudioManager(self):PlayUISound(self, "event:/ui/common/gacha_amb", "GachaAmb", nil)
+    AudioManager(self):PlayUISound(self, Params.SoundPath, "SkinVideoSound", nil)
   end
   self.VideoPlayer:Play()
 end
@@ -96,6 +97,7 @@ function M:Destruct()
   end
   rawset(self, "bDestructed", true)
   AudioManager(self):StopSound(self, "SkinVideoSound")
+  AudioManager(self):SetEventSoundParam(self, "GachaAmb", {ToEnd = 1})
   M.Super.Destruct(self)
   if rawget(self, "DestructCB") then
     self.DestructCB()

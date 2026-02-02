@@ -513,7 +513,7 @@ function WBP_TrueHardBoss_HardLevelChoose_C:Close(Flag, IsEsc)
   if IsEsc then
     AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "HardBossLevelChoose", nil)
   end
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
   local Player = PlayerController:GetMyPawn()
   local Eid = Player.MechanismEid

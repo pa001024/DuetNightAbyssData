@@ -1,6 +1,7 @@
 local TalkNode = Class("StoryCreator.StoryLogic.StorylineNodes.BaseAsynQuestNode")
 local ETalkType = require("BluePrints.Story.Talk.Base.ETalkType")
 local ETalkNodeFinishType = require("StoryCreator.StoryLogic.StorylineUtils").ETalkNodeFinishType
+local GameFlowUtils = require("Utils.GameFlowUtils")
 
 function TalkNode:Init()
   self.Options = nil
@@ -29,8 +30,7 @@ function TalkNode:Clear()
   self:HideGuide()
   GWorld.StoryMgr:UnbindNPCInteractiveTalk(self.NpcIdWithGender, self.BindId)
   if self.bIsImmersiveStory then
-    local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-    FlowManager:RemoveFlow(self.Flow)
+    GameFlowUtils:RemoveFlow(self.Flow)
     self.Flow = nil
   end
   if not self:IsNormalFinished() then
@@ -66,7 +66,6 @@ function TalkNode:CreateTalkNodeData()
     ShowWikiButton = self.ShowWikiButton,
     PauseGameGlobal = self.PauseGameGlobal,
     DisableMonsterAI = self.DisableMonsterAI,
-    DisableMonsterAIForSimpleTalk = self.DisableMonsterAIForSimpleTalk,
     DisableNPCAI = self.DisableNPCAI,
     HideAllBattleEntity = self.HideAllBattleEntity,
     HideElseCharacter = self.HideElseCharacter,
@@ -98,6 +97,7 @@ function TalkNode:CreateTalkNodeData()
     bHideMechanismsFX = self.HideMechanismsFX,
     DisableNpcOptimization = self.DisableNpcOptimization,
     DoNotReceiveCharacterShadow = self.DoNotReceiveCharacterShadow,
+    bPauseTimeElapse = self.PauseTimeElapse,
     FreezeWorldComposition = self.FreezeWorldComposition,
     bTravelFullLoadWorldComposition = self.bTravelFullLoadWorldComposition,
     SwitchToMasterType = self.SwitchToMaster,
@@ -117,7 +117,8 @@ function TalkNode:CreateTalkNodeData()
     FinishFadeInTime = self.FinishFadeInTime,
     PlayerSwitchEmoIdle = self.PlayerSwitchEmoIdle,
     bNpcActionKeepIn = self.bNpcActionKeepIn,
-    bNpcActionKeepOut = self.bNpcActionKeepOut
+    bNpcActionKeepOut = self.bNpcActionKeepOut,
+    bUseFlowAssetActors = self.bUseFlowAssetActors
   }
   local NativeTalkActors = {}
   for _, ActorData in pairs(self.TalkNodeData.TalkActors) do
@@ -187,38 +188,20 @@ function TalkNode:SwitchStart()
   end
 end
 
-function TalkNode:TryPrintNowFlows()
-  local IsShippingPackage = UE4.UKismetSystemLibrary.IsPackagedForDistribution()
-  if IsShippingPackage then
-    return
-  end
-  local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-  if not FlowManager then
-    return
-  end
-  local Flows = FlowManager.BeginningFlows:ToTable()
-  for Index, Flow in pairs(Flows) do
-    DebugPrint("WXT TalkNode:IsRunning Flow", Index, IsValid(Flow) and Flow.Channel)
-  end
-end
-
 function TalkNode:TalkNodeStartInternal(TalkTaskEndLambdaCallback)
   local BasicTalkType = DataMgr.TalkType[self.TalkType].BasicType
   self.bIsImmersiveStory = BasicTalkType == ETalkType.Cinematic or BasicTalkType == ETalkType.FreeSimple or BasicTalkType == ETalkType.FixSimple or BasicTalkType == ETalkType.Impression or BasicTalkType == ETalkType.Black
   if self.bIsImmersiveStory then
-    local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-    self.Flow = FlowManager:CreateFlow("ImmersiveStory")
-    DebugPrint("WXT TalkNode:TalkNodeStartInternal Try Start Flow")
-    self:TryPrintNowFlows()
-    self.Flow.OnBegin:Add(self.Flow, function()
-      DebugPrint("WXT TalkNode:TalkNodeStartInternal Real Start")
-      local TS = TalkSubsystem()
-      self.TalkTaskKey = TS:RegisterTalkData(self.TalkNodeData)
-      TS:RegisterTalkTask(self.TalkTaskKey, TalkTaskEndLambdaCallback, function()
-        self:TalkNodeFinishInternal()
-      end)
-    end)
-    FlowManager:AddFlow(self.Flow)
+    self.Flow = GameFlowUtils:AddFlow("ImmersiveStory", {
+      GWorld.GameInstance,
+      function(_, Flow)
+        local TS = TalkSubsystem()
+        self.TalkTaskKey = TS:RegisterTalkData(self.TalkNodeData)
+        TS:RegisterTalkTask(self.TalkTaskKey, TalkTaskEndLambdaCallback, function()
+          self:TalkNodeFinishInternal()
+        end)
+      end
+    })
   else
     local TS = TalkSubsystem()
     self.TalkTaskKey = TS:RegisterTalkData(self.TalkNodeData)
@@ -232,7 +215,7 @@ function TalkNode:TalkNodeFinishInternal(TalkNodeFinishType, OptionIndex)
   TalkNodeFinishType = TalkNodeFinishType or ETalkNodeFinishType.Out
   TalkSubsystem():UnregisterTalkData(self.TalkTaskKey)
   if self.TalkContext.TalkCameraManager then
-    self.TalkContext.TalkCameraManager:ClearPostProcess()
+    self.TalkContext.TalkCameraManager:ClearTalkCamera()
   end
   self.TalkTaskKey = nil
   if TalkNodeFinishType == ETalkNodeFinishType.Stop then

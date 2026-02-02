@@ -50,7 +50,7 @@ function M:FlushPendingData()
   if not Avatar or not SendACEToServer_Callback then
     return
   end
-  local Platform = CommonUtils.GetDeviceTypeByPlatformName(self)
+  local Platform = CommonUtils.GetRuntimePlatform(self)
   if "PC" == Platform then
     for k, PendingData in ipairs(ACEPendingData) do
       SendACEToServer_Callback(nil, PendingData)
@@ -73,7 +73,7 @@ function M:Init_ACE()
     return
   end
   self.bInitACE = true
-  local Platform = CommonUtils.GetDeviceTypeByPlatformName(self)
+  local Platform = CommonUtils.GetRuntimePlatform(self)
   if "PC" == Platform then
     self:Init_ACE_Windows(ACESubsystem)
   elseif "Mobile" == Platform then
@@ -112,7 +112,7 @@ function M:Login_ACE_Mobile()
 end
 
 function M:Login_ACE()
-  local Platform = CommonUtils.GetDeviceTypeByPlatformName(self)
+  local Platform = CommonUtils.GetRuntimePlatform(self)
   if "PC" == Platform then
     self:Login_ACE_Windows()
   elseif "Mobile" == Platform then

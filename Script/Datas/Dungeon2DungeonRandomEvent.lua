@@ -35,6 +35,9 @@ T.RT_11 = {
   [0] = T.RT_1,
   [1] = T.RT_5
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -123,7 +126,6 @@ return ReadOnly("Dungeon2DungeonRandomEvent", {
   [90801] = T.RT_2,
   [90802] = T.RT_2,
   [90803] = T.RT_2,
-  [90804] = T.RT_2,
   [90805] = T.RT_2,
   [90806] = T.RT_2,
   [90807] = T.RT_2

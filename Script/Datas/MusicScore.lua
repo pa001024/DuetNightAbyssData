@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -46,5 +49,15 @@ return ReadOnly("MusicScore", {
     MusicScoreId = 1009,
     MusicScoreName = "MusicScoreName_1009",
     MusicScorePic = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Piano/T_Piano_Music09.T_Piano_Music09'"
+  },
+  [1010] = {
+    MusicScoreId = 1010,
+    MusicScoreName = "MusicScoreName_1010",
+    MusicScorePic = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Piano/T_Piano_Music10.T_Piano_Music10'"
+  },
+  [1011] = {
+    MusicScoreId = 1011,
+    MusicScoreName = "MusicScoreName_1011",
+    MusicScorePic = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Piano/T_Piano_Music11.T_Piano_Music11'"
   }
 })

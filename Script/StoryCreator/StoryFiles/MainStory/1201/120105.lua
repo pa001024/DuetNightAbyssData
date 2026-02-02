@@ -150,12 +150,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17302876775582749664",
-            startPort = "Out",
-            endQuest = "17629519440334026933",
-            endPort = "In"
-          },
-          {
             startQuest = "17629519440334026933",
             startPort = "Out",
             endQuest = "1730277995070237",
@@ -172,6 +166,18 @@ return {
             startPort = "Out",
             endQuest = "17536974818962008182",
             endPort = "In"
+          },
+          {
+            startQuest = "17302876775582749664",
+            startPort = "Out",
+            endQuest = "17675177705348514",
+            endPort = "In"
+          },
+          {
+            startQuest = "17675177705348514",
+            startPort = "Out",
+            endQuest = "17629519440334026933",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -186,7 +192,7 @@ return {
             key = "1730277995070237",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2915.768390938332, y = 597.5308341046933},
+            pos = {x = 3202.435049504654, y = 567.5308349524038},
             propsData = {ModeType = 0}
           },
           ["1730277995070238"] = {
@@ -238,6 +244,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -307,7 +314,7 @@ return {
             key = "17629519440334026933",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 2641.9668069191207, y = 596.6617410275231},
+            pos = {x = 2928.633465485443, y = 566.6617418752336},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 12018501,
@@ -318,6 +325,20 @@ return {
               IsPlayStartSound = false,
               GuideTalkStyle = "Normal",
               OverrideFailBlend = false
+            }
+          },
+          ["17675177705348514"] = {
+            key = "17675177705348514",
+            type = "ChangeStaticCreatorNode",
+            name = "生成/销毁节点",
+            pos = {x = 2646.62009227346, y = 611.4416138966507},
+            propsData = {
+              ActiveEnable = false,
+              EnableBlackScreenSync = false,
+              EnableFadeIn = false,
+              EnableFadeOut = false,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {2270010}
             }
           }
         },
@@ -543,6 +564,7 @@ return {
               ModeType = 1,
               Id = 104201,
               StartIndex = 1,
+              LoadingId = 0,
               IsWhite = false
             }
           },
@@ -579,6 +601,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -638,6 +661,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -825,6 +849,7 @@ return {
             pos = {x = 2716.9703626607593, y = 448.96690404252286},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 12019901,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1201/120105/12019901.12019901'",
               TalkType = "FixSimple",
@@ -848,6 +873,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -911,6 +937,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1262,6 +1289,7 @@ return {
             pos = {x = 2489.7078361271842, y = 469.1418996384161},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 12020301,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1201/120105/12020301.12020301'",
               TalkType = "FixSimple",
@@ -1285,6 +1313,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1353,6 +1382,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1512,6 +1542,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1686,6 +1717,7 @@ return {
               ModeType = 1,
               Id = 104601,
               StartIndex = 1,
+              LoadingId = 0,
               IsWhite = false
             }
           },
@@ -1940,6 +1972,7 @@ return {
               ModeType = 1,
               Id = 104701,
               StartIndex = 1,
+              LoadingId = 0,
               IsWhite = false
             }
           },
@@ -2143,6 +2176,7 @@ return {
               ModeType = 1,
               Id = 104102,
               StartIndex = 1,
+              LoadingId = 0,
               IsWhite = true
             }
           },
@@ -2344,6 +2378,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",

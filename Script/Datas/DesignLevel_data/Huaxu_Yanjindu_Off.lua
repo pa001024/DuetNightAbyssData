@@ -49,6 +49,26 @@ return {
       CreatorId = 2270009,
       UnitType = "Mechanism",
       UnitId = 1
+    },
+    ["2270015"] = {
+      CreatorId = 2270015,
+      UnitType = "Npc",
+      UnitId = 701096
+    },
+    ["2270017"] = {
+      CreatorId = 2270017,
+      UnitType = "Npc",
+      UnitId = 100001
+    },
+    ["2270016"] = {
+      CreatorId = 2270016,
+      UnitType = "Npc",
+      UnitId = 200002
+    },
+    ["2270018"] = {
+      CreatorId = 2270018,
+      UnitType = "Npc",
+      UnitId = 701097
     }
   },
   ManualItem = {},

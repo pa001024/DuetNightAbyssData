@@ -230,6 +230,7 @@ return {
             pos = {x = 143.09608305285724, y = 34.17689015726128},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_NengyuanTarget1"
             }
@@ -509,6 +510,7 @@ return {
             pos = {x = 268.0960830528574, y = 591.1768901572606},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_NengyuanTarget2"
             }
@@ -672,6 +674,7 @@ return {
             pos = {x = 826.0960830528562, y = 816.1768901572601},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_NengyuanTarget3"
             }
@@ -885,6 +888,7 @@ return {
             pos = {x = 724.3688103255837, y = 876.904162884533},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_NengyuanTarget4"
             }
@@ -932,6 +936,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "pNanzhuEscape",
               CameraLookAtTartgetPoint = "",

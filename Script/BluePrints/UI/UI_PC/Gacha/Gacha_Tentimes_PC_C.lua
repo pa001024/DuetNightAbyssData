@@ -266,7 +266,7 @@ function G:RefreshResourceBar(GachaResourceId)
       ItemType = "Resource",
       HandleMouseDown = true
     })
-    ResourceBarWidget:SetResourceId(CoinId)
+    ResourceBarWidget:SetItemId(CoinId)
     self.HB_ResourceBar:AddChild(ResourceBarWidget)
   end
 end

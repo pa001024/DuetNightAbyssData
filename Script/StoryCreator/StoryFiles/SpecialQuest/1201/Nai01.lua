@@ -438,12 +438,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1750058340457585116",
-            startPort = "Out",
-            endQuest = "176528659331734667308",
-            endPort = "In"
-          },
-          {
             startQuest = "176528657503334667142",
             startPort = "Out",
             endQuest = "1750058340457585113",
@@ -472,6 +466,18 @@ return {
             startPort = "Out",
             endQuest = "1750058340457585112",
             endPort = "Success"
+          },
+          {
+            startQuest = "1750058340457585116",
+            startPort = "Out",
+            endQuest = "17660466574245141344",
+            endPort = "In"
+          },
+          {
+            startQuest = "17660466574245141344",
+            startPort = "Out",
+            endQuest = "176528659331734667308",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -632,6 +638,7 @@ return {
             pos = {x = 4952.947273926465, y = -325.45598911564053},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1201/120104/12016601.12016601'",
               TalkType = "FixSimple",
@@ -655,6 +662,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -996,6 +1004,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1077,6 +1086,7 @@ return {
             pos = {x = 3181.4536110062595, y = -907.1676880182234},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_WindBell01"
             }
@@ -1088,6 +1098,7 @@ return {
             pos = {x = 5467.08804562535, y = -1082.6231279909384},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_WindBell01"
             }
@@ -1099,6 +1110,7 @@ return {
             pos = {x = 5788.767002016918, y = -1114.351445465295},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_WindBell01"
             }
@@ -1107,7 +1119,7 @@ return {
             key = "176370976888339591158",
             type = "CameraControlNode",
             name = "镜头控制节点",
-            pos = {x = -1579.8079575297486, y = -366.23446562147046},
+            pos = {x = -1576.2785457650427, y = -366.23446562147046},
             propsData = {
               Duration = 4,
               CameraName = "StoryEast01Nai01",
@@ -1288,6 +1300,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1322,6 +1335,7 @@ return {
             pos = {x = 4448.237953839591, y = -961.3747921577481},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_WindBell01"
             }
@@ -1333,6 +1347,7 @@ return {
             pos = {x = 3634.4621242769954, y = -1023.1217755664961},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_WindBell01"
             }
@@ -1385,7 +1400,6 @@ return {
                 "Jump",
                 "Skill1",
                 "Skill2",
-                "Skill3",
                 "Fire"
               }
             }
@@ -1399,7 +1413,7 @@ return {
               PlayerId = 0,
               bActiveEnable = false,
               ActiveType = "Lock",
-              SkillNameList = {"BulletJump"}
+              SkillNameList = {"BulletJump", "Skill3"}
             }
           },
           ["17640006224894474198"] = {
@@ -1418,7 +1432,6 @@ return {
                 "Jump",
                 "Skill1",
                 "Skill2",
-                "Skill3",
                 "Fire"
               }
             }
@@ -1527,6 +1540,18 @@ return {
               VarInfos = {
                 {VarName = "Value", VarValue = "0"}
               }
+            }
+          },
+          ["17660466574245141344"] = {
+            key = "17660466574245141344",
+            type = "ActivePlayerSkillsNode",
+            name = "恢复 子弹跳",
+            pos = {x = -1251.49460598878, y = 3260.840318586269},
+            propsData = {
+              PlayerId = 0,
+              bActiveEnable = true,
+              ActiveType = "Lock",
+              SkillNameList = {"BulletJump", "Skill3"}
             }
           }
         },
@@ -1804,16 +1829,22 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "176525121451626286541",
-            startPort = "Out",
-            endQuest = "1750058340457585152",
-            endPort = "In"
-          },
-          {
             startQuest = "1750058340457585152",
             startPort = "Out",
             endQuest = "1750058340457585145",
             endPort = "Fail"
+          },
+          {
+            startQuest = "176525121451626286541",
+            startPort = "Out",
+            endQuest = "17660466784645141729",
+            endPort = "In"
+          },
+          {
+            startQuest = "17660466784645141729",
+            startPort = "Out",
+            endQuest = "1750058340457585152",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1876,6 +1907,7 @@ return {
             pos = {x = 4557.406102517726, y = 508.27841263719165},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1201/120104/12016901.12016901'",
               TalkType = "FixSimple",
@@ -1899,6 +1931,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2116,6 +2149,7 @@ return {
             pos = {x = 1386.362590095327, y = -315.81429538738723},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_Lantern_1990178"
             }
@@ -2127,6 +2161,7 @@ return {
             pos = {x = 1386.9473378284122, y = 93.88344932314519},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_Lantern_1990178"
             }
@@ -2198,6 +2233,7 @@ return {
             pos = {x = 4551.232481998416, y = 238.95863015478727},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_WindBell02"
             }
@@ -2209,6 +2245,7 @@ return {
             pos = {x = 4175.947511164297, y = 221.68092256825625},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_WindBell02"
             }
@@ -2295,6 +2332,18 @@ return {
               MessageType = "GameMode",
               MessageContent = "SaiqiAppearDestory",
               UnitId = -1
+            }
+          },
+          ["17660466784645141729"] = {
+            key = "17660466784645141729",
+            type = "ActivePlayerSkillsNode",
+            name = "恢复 子弹跳",
+            pos = {x = 1073.7933668620697, y = 1774.393028024607},
+            propsData = {
+              PlayerId = 0,
+              bActiveEnable = true,
+              ActiveType = "Lock",
+              SkillNameList = {"BulletJump", "Skill3"}
             }
           }
         },
@@ -2548,16 +2597,22 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1750058340457585180",
-            startPort = "Out",
-            endQuest = "176528691680435309950",
-            endPort = "In"
-          },
-          {
             startQuest = "176528691680435309950",
             startPort = "Out",
             endQuest = "1750058340457585164",
             endPort = "Fail"
+          },
+          {
+            startQuest = "1750058340457585180",
+            startPort = "Out",
+            endQuest = "17660466959935142372",
+            endPort = "In"
+          },
+          {
+            startQuest = "17660466959935142372",
+            startPort = "Out",
+            endQuest = "176528691680435309950",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -2902,6 +2957,18 @@ return {
               MessageContent = "ResetWinbell02",
               UnitId = -1
             }
+          },
+          ["17660466959935142372"] = {
+            key = "17660466959935142372",
+            type = "ActivePlayerSkillsNode",
+            name = "恢复 子弹跳",
+            pos = {x = 74, y = 1790.0000000000002},
+            propsData = {
+              PlayerId = 0,
+              bActiveEnable = true,
+              ActiveType = "Lock",
+              SkillNameList = {"BulletJump", "Skill3"}
+            }
           }
         },
         commentData = {
@@ -2909,7 +2976,7 @@ return {
             key = "176525130365026926048",
             name = "失败逻辑",
             position = {x = -963, y = 1522.5},
-            size = {width = 2216.243423243425, height = 207.70662670662682}
+            size = {width = 2197, height = 605.5}
           }
         }
       }

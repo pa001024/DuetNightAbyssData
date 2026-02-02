@@ -10,6 +10,11 @@ function ReddotTreeNode_JJGame:_Judge(ActivityID)
   if not Avatar then
     return false
   end
+  local MidTermGoals = Avatar.MidTermGoals[ActivityID]
+  if not MidTermGoals then
+    return false
+  end
+  local TaskFinishCounts = MidTermGoals.TaskFinishCount or {}
   local EventEndTime = DataMgr.EventMain[ActivityID].EventEndTime
   local RewardEndTime = DataMgr.EventMain[ActivityID].RewardEndTime
   if RewardEndTime < TimeUtils.NowTime() then
@@ -17,27 +22,33 @@ function ReddotTreeNode_JJGame:_Judge(ActivityID)
     return false
   end
   if EventEndTime < TimeUtils.NowTime() then
-    if CommonUtils.Size(Avatar.MidTermScoresRewards) > 0 then
+    if CommonUtils.Size(MidTermGoals.ScoresRewards) > 0 then
       return true
     else
       return false
     end
   end
-  if CommonUtils.Size(Avatar.MidTermScoresRewards) > 0 then
+  if CommonUtils.Size(MidTermGoals.ScoresRewards) > 0 then
     return true
   end
-  for _, v in pairs(Avatar.MidTermAchvProgressRewarded) do
+  local allRewardsClaimed = true
+  for _, v in pairs(MidTermGoals.AchvProgressRewarded) do
     if 0 == v then
+      allRewardsClaimed = false
       return true
     end
   end
-  for TaskId, Task in pairs(Avatar.MidTermTasks) do
-    local TaskData = DataMgr.MidTermTask[Task.UniqueID]
-    if Avatar.MidTermTasksRecord[TaskId] and Avatar.MidTermTasksRecord[TaskId].FinishCount and Avatar.MidTermTasksRecord[TaskId].FinishCount > 0 then
-      return true
-    end
-    if Task.Progress >= Task.Target and Task.RewardsGot == false and TaskData.EnableDay <= self:CalEventDay() then
-      return true
+  for TaskId, Task in pairs(MidTermGoals.Tasks) do
+    local TaskData = DataMgr.MidTermTask[TaskId]
+    local isAchievementTask = 4 == TaskData.TaskType
+    if isAchievementTask and allRewardsClaimed then
+    else
+      if TaskFinishCounts[TaskId] and TaskFinishCounts[TaskId] > 0 then
+        return true
+      end
+      if Task.Progress >= Task.Target and Task.RewardsGot == false and TaskData.EnableDay <= self:CalEventDay() then
+        return true
+      end
     end
   end
   return false

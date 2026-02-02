@@ -43,6 +43,7 @@ function M:OnTabSwitchOn(TabWidget)
       self.ScrollBox_Tab:GetChildAt(self.CurrentTab - 1):SetSwitchOn(false)
     end
     self.CurrentTab = TabWidget.Idx
+    self.ScrollBox_Tab:ScrollWidgetIntoView(TabWidget)
   end
   if self.EventTabSelected then
     self.EventTabSelected(self.ObjTabSelected, TabWidget)

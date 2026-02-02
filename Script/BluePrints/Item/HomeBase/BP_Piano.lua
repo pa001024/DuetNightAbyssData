@@ -37,4 +37,8 @@ function M:CloseMechanism(PlayerId, IsSuccess)
   self.UsingPlayerController:SetViewTargetWithBlend(Player, 0.6, 1, 3)
 end
 
+function M:GetCanOpen(PlayerEid)
+  self.CanOpen = true
+end
+
 return M

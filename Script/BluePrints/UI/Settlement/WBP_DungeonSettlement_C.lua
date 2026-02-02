@@ -2,10 +2,16 @@ local EMCache = require("EMCache.EMCache")
 local RewardBox = require("BluePrints.Client.CustomTypes.SimpleRewardBox")
 local TimeUtils = require("Utils.TimeUtils")
 local MiscUtils = require("Utils.MiscUtils")
+local ActivityController = require("BluePrints.UI.WBP.Activity.ActivityController")
 local M = Class("BluePrints.UI.BP_UIState_C")
 M._components = {
   "BluePrints.UI.Settlement.DungeonSettlementComponent"
 }
+
+function M:Construct()
+  self.GamePadPressingKeys = {}
+  self.CurrentFocusType = ""
+end
 
 function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
   self.Super.InitUIInfo(self, Name, IsInUIMode, EventList, ...)
@@ -13,7 +19,9 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
   self:AddDispatcher(EventID.TeamMatchTimingStart, self, self.OnTeamMatchTimingStart)
   self:AddDispatcher(EventID.TeamMatchTimingEnd, self, self.OnTeamMatchTimingEnd)
   local UIBattleMain = UIManager(self):GetUI("BattleMain")
-  UIBattleMain:HidePlayerDeadUI()
+  if UIBattleMain then
+    UIBattleMain:HidePlayerDeadUI()
+  end
   local LogicServerInfo, _DungeonId, _CombatData = ...
   self.IsWin, self.BattleInfo, self.Rewards, self.SpRewards, self.PlayerTime, self.GameTime = table.unpack(LogicServerInfo, 1, LogicServerInfo.n)
   self.DungeonId = _DungeonId
@@ -26,6 +34,7 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
   self:CheckIsPartyMode()
   self:CheckIsWalnutMode()
   self:CheckIsNoExpMode()
+  self:CheckIsAutoNextRoundMode()
   self.HideUITag = "DungeonSettlement"
   self.IsAllowPropInAnimation = true
   DebugPrint("DungeonSettlement: OnLoaded, IsWin", self.IsWin, "PlayerTime", self.PlayerTime, "GameTime", self.GameTime, "DungeonId", self.DungeonId)
@@ -86,6 +95,7 @@ function M:InitContent()
   self:InitRewardPanel()
   self:InitPlayersHighLightData()
   self:InitDoubleModInfo()
+  self:InitAutoNextRoundContent()
 end
 
 function M:InitRewardPanel()
@@ -106,7 +116,8 @@ function M:InitRewardPanel()
       self.Panel_Reward:SetVisibility(ESlateVisibility.Collapsed)
       self.Text_PropTitle:SetVisibility(ESlateVisibility.Collapsed)
     elseif #self.SpRewardsArray > 0 then
-      self.Panel_PropTitle:SetVisibility(ESlateVisibility.Collapsed)
+      self.Panel_Prop:SetVisibility(ESlateVisibility.Collapsed)
+      self.Panel_Reward:SetVisibility(ESlateVisibility.Visible)
       self.Text_RewardTitle:SetVisibility(ESlateVisibility.Collapsed)
     else
       self.Switcher:SetActiveWidgetIndex(1)
@@ -212,7 +223,7 @@ function M:InitPlayersHighLightData()
     4
   }
   local ScenePlayers = GWorld.GameInstance.ScenePlayers
-  local PhantomsData = self:FilterNpcInPhantoms(self.CombatData.PhantomAttrInfos)
+  local PhantomsData = self.CombatData.PhantomAttrInfos
   local TeammateData = self.CombatData.TeammateDamageInfos or {}
   local TeammateNum = self.CombatData.TeammateNum or 0
   DebugPrint("thy   ScenePlayers")
@@ -263,180 +274,184 @@ function M:InitPlayersHighLightData()
   if not self.CombatData.IsInOnlineDungeon then
     for CurPlayerIndex, Player in ipairs(ScenePlayers) do
       local PlayerIndex = PlayerOrder[CurPlayerIndex]
-      if Player.IsMainPlayer then
-        AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
-          PlayerIndex = PlayerIndex,
-          Value = 0 ~= TeamTotalDamage and math.floor(self.CombatData.TotalDamage / TeamTotalDamage * 100 + 0.5) or 0
-        }
-        AllPlayerBattleData[2].Kill[CurPlayerIndex] = {
-          PlayerIndex = PlayerIndex,
-          Value = self.CombatData.TotalKill
-        }
-        AllPlayerBattleData[3].Damaged[CurPlayerIndex] = {
-          PlayerIndex = PlayerIndex,
-          Value = 0 ~= TeamTotalTakedDamage and math.floor(self.CombatData.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
-        }
-        AllPlayerBattleData[4].Heal[CurPlayerIndex] = {
-          PlayerIndex = PlayerIndex,
-          Value = self.CombatData.GiveHealing
-        }
-        AllPlayerBattleData[5].DamageSingle[CurPlayerIndex] = {
-          PlayerIndex = PlayerIndex,
-          Value = self.CombatData.MaxDamage
-        }
-        AllPlayerBattleData[6].Destroy[CurPlayerIndex] = {
-          PlayerIndex = PlayerIndex,
-          Value = self.CombatData.BreakableItemCount
-        }
-        AllPlayerBattleData[7].HitCount[CurPlayerIndex] = {
-          PlayerIndex = PlayerIndex,
-          Value = self.CombatData.MaxComboCount
-        }
-      elseif PhantomsData and #PhantomsData > 0 then
-        local PhantomData = self:GetPhantomInfo(Player.RoleId, PhantomsData)
-        if PhantomData then
+      if not Player.IsNPCPhantom then
+        if Player.IsMainPlayer then
           AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
             PlayerIndex = PlayerIndex,
-            Value = 0 ~= TeamTotalDamage and math.floor(PhantomData.FinalDamage / TeamTotalDamage * 100 + 0.5) or 0
+            Value = 0 ~= TeamTotalDamage and math.floor(self.CombatData.TotalDamage / TeamTotalDamage * 100 + 0.5) or 0
           }
           AllPlayerBattleData[2].Kill[CurPlayerIndex] = {
             PlayerIndex = PlayerIndex,
-            Value = PhantomData.TotalKillCount
+            Value = self.CombatData.TotalKill
           }
           AllPlayerBattleData[3].Damaged[CurPlayerIndex] = {
             PlayerIndex = PlayerIndex,
-            Value = 0 ~= TeamTotalTakedDamage and math.floor(PhantomData.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
+            Value = 0 ~= TeamTotalTakedDamage and math.floor(self.CombatData.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
           }
           AllPlayerBattleData[4].Heal[CurPlayerIndex] = {
             PlayerIndex = PlayerIndex,
-            Value = PhantomData.GiveHealing
+            Value = self.CombatData.GiveHealing
           }
           AllPlayerBattleData[5].DamageSingle[CurPlayerIndex] = {
             PlayerIndex = PlayerIndex,
-            Value = PhantomData.MaxDamage
+            Value = self.CombatData.MaxDamage
           }
-        else
-          DebugPrint("thy   PhantomData is nil", Player.RoleId)
-          self:CloseHighLightDataShow()
-          return
+          AllPlayerBattleData[6].Destroy[CurPlayerIndex] = {
+            PlayerIndex = PlayerIndex,
+            Value = self.CombatData.BreakableItemCount
+          }
+          AllPlayerBattleData[7].HitCount[CurPlayerIndex] = {
+            PlayerIndex = PlayerIndex,
+            Value = self.CombatData.MaxComboCount
+          }
+        elseif PhantomsData and #PhantomsData > 0 then
+          local PhantomData = self:GetPhantomInfo(Player.RoleId, PhantomsData, Player.IsMainPlayerPhantom)
+          if PhantomData then
+            AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = 0 ~= TeamTotalDamage and math.floor(PhantomData.FinalDamage / TeamTotalDamage * 100 + 0.5) or 0
+            }
+            AllPlayerBattleData[2].Kill[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = PhantomData.TotalKillCount
+            }
+            AllPlayerBattleData[3].Damaged[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = 0 ~= TeamTotalTakedDamage and math.floor(PhantomData.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
+            }
+            AllPlayerBattleData[4].Heal[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = PhantomData.GiveHealing
+            }
+            AllPlayerBattleData[5].DamageSingle[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = PhantomData.MaxDamage
+            }
+          else
+            DebugPrint("thy   PhantomData is nil", Player.RoleId)
+            self:CloseHighLightDataShow()
+            return
+          end
         end
       end
     end
   else
     for CurPlayerIndex, Player in ipairs(ScenePlayers) do
       local PlayerIndex = PlayerOrder[CurPlayerIndex]
-      if Player.IsMainPlayer then
-        AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
-          PlayerIndex = PlayerIndex,
-          Value = 0 ~= TeamTotalDamage and math.floor(self.CombatData.TotalDamage / TeamTotalDamage * 100 + 0.5) or 0
-        }
-        AllPlayerBattleData[2].Kill[CurPlayerIndex] = {
-          PlayerIndex = PlayerIndex,
-          Value = self.CombatData.TotalKill
-        }
-        AllPlayerBattleData[3].Damaged[CurPlayerIndex] = {
-          PlayerIndex = PlayerIndex,
-          Value = 0 ~= TeamTotalTakedDamage and math.floor(self.CombatData.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
-        }
-        AllPlayerBattleData[4].Heal[CurPlayerIndex] = {
-          PlayerIndex = PlayerIndex,
-          Value = self.CombatData.GiveHealing
-        }
-        AllPlayerBattleData[5].DamageSingle[CurPlayerIndex] = {
-          PlayerIndex = PlayerIndex,
-          Value = self.CombatData.MaxDamage
-        }
-        AllPlayerBattleData[6].Destroy[CurPlayerIndex] = {
-          PlayerIndex = PlayerIndex,
-          Value = self.CombatData.BreakableItemCount
-        }
-        AllPlayerBattleData[7].HitCount[CurPlayerIndex] = {
-          PlayerIndex = PlayerIndex,
-          Value = self.CombatData.MaxComboCount
-        }
-      elseif not Player.IsPhantom then
-        CurTeammateNum = CurTeammateNum + 1
-        local Teammate = TeammateData[CurTeammateNum]
-        if Teammate then
+      if not Player.IsNPCPhantom then
+        if Player.IsMainPlayer then
           AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
             PlayerIndex = PlayerIndex,
-            Value = 0 ~= TeamTotalDamage and math.floor(Teammate.FinalDamage / TeamTotalDamage * 100 + 0.5) or 0
+            Value = 0 ~= TeamTotalDamage and math.floor(self.CombatData.TotalDamage / TeamTotalDamage * 100 + 0.5) or 0
           }
           AllPlayerBattleData[2].Kill[CurPlayerIndex] = {
             PlayerIndex = PlayerIndex,
-            Value = Teammate.TotalKillCount
+            Value = self.CombatData.TotalKill
           }
           AllPlayerBattleData[3].Damaged[CurPlayerIndex] = {
             PlayerIndex = PlayerIndex,
-            Value = 0 ~= TeamTotalTakedDamage and math.floor(Teammate.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
+            Value = 0 ~= TeamTotalTakedDamage and math.floor(self.CombatData.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
           }
           AllPlayerBattleData[4].Heal[CurPlayerIndex] = {
             PlayerIndex = PlayerIndex,
-            Value = Teammate.GiveHealing
+            Value = self.CombatData.GiveHealing
           }
           AllPlayerBattleData[5].DamageSingle[CurPlayerIndex] = {
             PlayerIndex = PlayerIndex,
-            Value = Teammate.MaxDamage
+            Value = self.CombatData.MaxDamage
           }
           AllPlayerBattleData[6].Destroy[CurPlayerIndex] = {
             PlayerIndex = PlayerIndex,
-            Value = Teammate.BreakableItemCount
+            Value = self.CombatData.BreakableItemCount
           }
           AllPlayerBattleData[7].HitCount[CurPlayerIndex] = {
             PlayerIndex = PlayerIndex,
-            Value = Teammate.MaxComboCount
+            Value = self.CombatData.MaxComboCount
           }
-        end
-      else
-        local Phantom = self:GetPhantomInfo(Player.RoleId, PhantomsData)
-        if Phantom then
-          AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
-            PlayerIndex = PlayerIndex,
-            Value = 0 ~= TeamTotalDamage and math.floor(Phantom.FinalDamage / TeamTotalDamage * 100 + 0.5) or 0
-          }
-          AllPlayerBattleData[2].Kill[CurPlayerIndex] = {
-            PlayerIndex = PlayerIndex,
-            Value = Phantom.TotalKillCount
-          }
-          AllPlayerBattleData[3].Damaged[CurPlayerIndex] = {
-            PlayerIndex = PlayerIndex,
-            Value = 0 ~= TeamTotalTakedDamage and math.floor(Phantom.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
-          }
-          AllPlayerBattleData[4].Heal[CurPlayerIndex] = {
-            PlayerIndex = PlayerIndex,
-            Value = Phantom.GiveHealing
-          }
-          AllPlayerBattleData[5].DamageSingle[CurPlayerIndex] = {
-            PlayerIndex = PlayerIndex,
-            Value = Phantom.MaxDamage
-          }
-        else
-          local TeammatePhantomData = TeammateData[1] and TeammateData[1].PhantomAttrInfo
-          if TeammatePhantomData then
+        elseif not Player.IsPhantom then
+          CurTeammateNum = CurTeammateNum + 1
+          local Teammate = TeammateData[CurTeammateNum]
+          if Teammate then
             AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
               PlayerIndex = PlayerIndex,
-              Value = 0 ~= TeamTotalDamage and math.floor(TeammatePhantomData.FinalDamage / TeamTotalDamage * 100 + 0.5) or 0
+              Value = 0 ~= TeamTotalDamage and math.floor(Teammate.FinalDamage / TeamTotalDamage * 100 + 0.5) or 0
             }
             AllPlayerBattleData[2].Kill[CurPlayerIndex] = {
               PlayerIndex = PlayerIndex,
-              Value = TeammatePhantomData.TotalKillCount
+              Value = Teammate.TotalKillCount
             }
             AllPlayerBattleData[3].Damaged[CurPlayerIndex] = {
               PlayerIndex = PlayerIndex,
-              Value = 0 ~= TeamTotalTakedDamage and math.floor(TeammatePhantomData.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
+              Value = 0 ~= TeamTotalTakedDamage and math.floor(Teammate.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
             }
             AllPlayerBattleData[4].Heal[CurPlayerIndex] = {
               PlayerIndex = PlayerIndex,
-              Value = TeammatePhantomData.GiveHealing
+              Value = Teammate.GiveHealing
             }
             AllPlayerBattleData[5].DamageSingle[CurPlayerIndex] = {
               PlayerIndex = PlayerIndex,
-              Value = TeammatePhantomData.MaxDamage
+              Value = Teammate.MaxDamage
+            }
+            AllPlayerBattleData[6].Destroy[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = Teammate.BreakableItemCount
+            }
+            AllPlayerBattleData[7].HitCount[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = Teammate.MaxComboCount
+            }
+          end
+        else
+          local Phantom = self:GetPhantomInfo(Player.RoleId, PhantomsData, Player.IsMainPlayerPhantom)
+          if Phantom then
+            AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = 0 ~= TeamTotalDamage and math.floor(Phantom.FinalDamage / TeamTotalDamage * 100 + 0.5) or 0
+            }
+            AllPlayerBattleData[2].Kill[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = Phantom.TotalKillCount
+            }
+            AllPlayerBattleData[3].Damaged[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = 0 ~= TeamTotalTakedDamage and math.floor(Phantom.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
+            }
+            AllPlayerBattleData[4].Heal[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = Phantom.GiveHealing
+            }
+            AllPlayerBattleData[5].DamageSingle[CurPlayerIndex] = {
+              PlayerIndex = PlayerIndex,
+              Value = Phantom.MaxDamage
             }
           else
-            DebugPrint("thy   TeammatePhantomData is nil", Player.RoleId)
-            self:CloseHighLightDataShow()
-            return
+            local TeammatePhantomData = TeammateData[1] and TeammateData[1].PhantomAttrInfo
+            if TeammatePhantomData then
+              AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
+                PlayerIndex = PlayerIndex,
+                Value = 0 ~= TeamTotalDamage and math.floor(TeammatePhantomData.FinalDamage / TeamTotalDamage * 100 + 0.5) or 0
+              }
+              AllPlayerBattleData[2].Kill[CurPlayerIndex] = {
+                PlayerIndex = PlayerIndex,
+                Value = TeammatePhantomData.TotalKillCount
+              }
+              AllPlayerBattleData[3].Damaged[CurPlayerIndex] = {
+                PlayerIndex = PlayerIndex,
+                Value = 0 ~= TeamTotalTakedDamage and math.floor(TeammatePhantomData.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
+              }
+              AllPlayerBattleData[4].Heal[CurPlayerIndex] = {
+                PlayerIndex = PlayerIndex,
+                Value = TeammatePhantomData.GiveHealing
+              }
+              AllPlayerBattleData[5].DamageSingle[CurPlayerIndex] = {
+                PlayerIndex = PlayerIndex,
+                Value = TeammatePhantomData.MaxDamage
+              }
+            else
+              DebugPrint("thy   TeammatePhantomData is nil", Player.RoleId)
+              self:CloseHighLightDataShow()
+              return
+            end
           end
         end
       end
@@ -518,20 +533,12 @@ function M:CloseHighLightDataShow()
   end
 end
 
-function M:FilterNpcInPhantoms(PhantomsDataTable)
-  local Phantoms = {}
-  for _, PhantomData in pairs(PhantomsDataTable) do
-    if PhantomData and PhantomData.PhantomRoleId > 999 then
-      table.insert(Phantoms, PhantomData)
-    end
-  end
-  return Phantoms
-end
-
-function M:GetPhantomInfo(PlayerRoleId, PhantomsData)
-  for _, value in pairs(PhantomsData) do
-    if PlayerRoleId == value.PhantomRoleId then
-      return value
+function M:GetPhantomInfo(PlayerRoleId, PhantomsData, IsMainPlayerPhantom)
+  if IsMainPlayerPhantom then
+    for _, value in pairs(PhantomsData) do
+      if PlayerRoleId == value.PhantomRoleId then
+        return value
+      end
     end
   end
   return nil
@@ -787,22 +794,23 @@ end
 
 function M:InitDoubleModInfo()
   local Avatar = GWorld:GetAvatar()
+  local CurDoubleModDropEventId = ActivityController:GetDoubleModDropEventID()
   if not Avatar then
     return false
   end
-  if Avatar.ActivityTimeOpen and Avatar.ActivityTimeOpen[CommonConst.DoubleModDropEventID] and Avatar.DoubleModDrop[CommonConst.DoubleModDropEventID] then
+  if Avatar.ActivityTimeOpen and Avatar.ActivityTimeOpen[CurDoubleModDropEventId] and Avatar.DoubleModDrop[CurDoubleModDropEventId] then
     local TotalTimes, RemainTimes
-    local IsDoubleMod, IsEliteRush = self:IsDoubleModDungeon(CommonConst.DoubleModDropEventID)
+    local IsDoubleMod, IsEliteRush = self:IsDoubleModDungeon(CurDoubleModDropEventId)
     if not IsDoubleMod and not IsEliteRush then
       return false
     end
     if IsDoubleMod then
       TotalTimes = DataMgr.ModDropConstant.DailyModDungeonAmount.ConstantValue
-      RemainTimes = TotalTimes - Avatar.DoubleModDrop[CommonConst.DoubleModDropEventID].DropTimes
+      RemainTimes = TotalTimes - Avatar.DoubleModDrop[CurDoubleModDropEventId].DropTimes
       self.Text_Times01:SetText(GText("UI_Event_ModDrop_DropRemain"))
     elseif IsEliteRush then
       TotalTimes = DataMgr.ModDropConstant.DailyFreeTicketAmount.ConstantValue
-      local DoubleModDropInfo = Avatar.DoubleModDrop[CommonConst.DoubleModDropEventID]
+      local DoubleModDropInfo = Avatar.DoubleModDrop[CurDoubleModDropEventId]
       local EliteRushTimes = DoubleModDropInfo and DoubleModDropInfo.EliteRushTimes
       if not EliteRushTimes then
         return false
@@ -820,6 +828,14 @@ function M:InitDoubleModInfo()
     end
     self.Text_Times02:SetText(RemainTimes)
     self.Text_Times04:SetText(TotalTimes)
+  else
+    local IsDoubleMod, IsEliteRush = self:IsDoubleModDungeon(CurDoubleModDropEventId)
+    if IsEliteRush then
+      self.Btn_Continue:ForbidBtn(true)
+      self.Btn_Continue:BindForbidStateExecuteEvent(self, function()
+        UIManager(self):ShowUITip("CommonToastMain", GText("UI_Event_ModDrop_Exhausted"))
+      end)
+    end
   end
 end
 
@@ -920,6 +936,7 @@ function M:OnInAnimationFinished()
     if self.CurInputDeviceType == ECommonInputType.Gamepad then
       self:AddTimer(1.5, function()
         self:SetFocusInGamePad()
+        self.bOpenBattleDataTip = true
       end)
     end
     self.IsFirstFocus = false
@@ -1000,6 +1017,10 @@ function M:DefaultContinue()
   if not Avatar then
     return
   end
+  if self.IsAutoNextRound then
+    DebugPrint("ljl@ DunegonSettlement AutoNextRound", self.AutoNextRound:GetSelectCount())
+    Avatar:SetDungeonAutoProgress(self.DungeonId, self.AutoNextRound:GetSelectCount())
+  end
   if not Avatar:IsInNarrowDungeon() then
     self:RequestServerContinue()
     return
@@ -1007,7 +1028,10 @@ function M:DefaultContinue()
   if self.IsWalnut and self:IsStandAloneSolo() then
     DebugPrint("ljl@WBP_DungeonSettlement_C M:DefaultContinue StandAloneSolo")
     self:AddDispatcher(EventID.SelectedWalnut, self, self.OnStandAloneSoloSelectedWalnut)
-    UIManager(self):LoadUINew("WalnutChoice", CommonConst.WalnutUser.Settlement, self.DungeonId, GWorld.GameInstance.CombatData.TempTeamInfo)
+    local WalnutChoiceUI = UIManager(self):LoadUINew("WalnutChoice", CommonConst.WalnutUser.Settlement, self.DungeonId, GWorld.GameInstance.CombatData.TempTeamInfo)
+    local WalnutUtils = require("BluePrints.UI.WBP.Walnut.WalnutChoice.WalnutUtils")
+    local WalnutId = WalnutUtils:GetWalnutCacheIdByDungeonId(self.DungeonId)
+    WalnutChoiceUI:SelectWalnutById(WalnutId)
   else
     DebugPrint("ljl@WBP_DungeonSettlement_C M:DefaultContinue Other")
     self:TryEnterDungeonAgain()
@@ -1045,7 +1069,7 @@ end
 
 function M:Exit()
   DebugPrint("DungeonSettlement: ClickExitButton")
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   local Avatar = GWorld:GetAvatar()
   Avatar:ExitDungeonSettlement()
   EventManager:AddEvent(EventID.OnExitDungeon, self, self.DefaultExit)
@@ -1081,6 +1105,7 @@ function M:OnCloseSettlementUI()
     AudioManager(self):StopSound(self, "WinSettlement")
   end
   self:SetCharDirLight(false)
+  ChatController:GetModel():ClearReddotCount(CommonConst.ChatChannel.SettlementOnline)
   self:Close()
 end
 
@@ -1792,8 +1817,8 @@ function M:UpdateSelectedInfo(Data)
 end
 
 function M:ShowCountDown()
-  self.RemainTime = 300
-  self.MaxAutoExitTime = 300
+  self.RemainTime = 120
+  self.MaxAutoExitTime = 120
   if not self.IsWin then
     self.RemainTime = 30
     self.MaxAutoExitTime = 30
@@ -1820,6 +1845,17 @@ end
 function M:SetProgressBar(Interval)
   self.CurrentTime = self.CurrentTime + Interval
   self.Bar_Click:SetPercent(self.CurrentTime / self.MaxAutoExitTime)
+end
+
+function M:CheckIsAutoNextRoundMode()
+  self.IsAutoNextRound = false
+  if not self:IsStandAloneSolo() then
+    return
+  end
+  local DungeonInfo = DataMgr.Dungeon[self.DungeonId]
+  if DungeonInfo then
+    self.IsAutoNextRound = DungeonInfo.AutoNextRound and DungeonInfo.DungeonWinMode == CommonConst.DungeonWinMode.Endless
+  end
 end
 
 function M:CheckIsNoExpMode()
@@ -2374,6 +2410,9 @@ function M:SetFocusInGamePad()
     DebugPrint("jly Set Focus In GamePad, but animation is playing")
     return
   end
+  if not self:HasFocusedDescendants() and not self:HasAnyUserFocus() then
+    return
+  end
   if self.IsTemple then
     if self.IsStarLevel then
       if self.TempleNeedFocusItemIndex then
@@ -2564,6 +2603,7 @@ function M:UpdateMainUIWithGamePad()
   if self.WBP_Chat_CommonEnter and self.WBP_Chat_CommonEnter.IsShowGamePad then
     self.WBP_Chat_CommonEnter:IsShowGamePad(true)
   end
+  self.AutoNextRound:UpdateUIStyleInPlatform(false)
 end
 
 function M:UpdateMainUIWithPCOrMoble()
@@ -2597,6 +2637,9 @@ function M:UpdateMainUIWithPCOrMoble()
   if self.WBP_Chat_CommonEnter and self.WBP_Chat_CommonEnter.IsShowGamePad then
     self.WBP_Chat_CommonEnter:IsShowGamePad(false)
   end
+  self.AutoNextRound:UpdateUIStyleInPlatform(true)
+  self.AutoNextRound:SetAutoNextRoundFocus(false)
+  self.CurrentFocusType = ""
   DebugPrint("thy     Update PC")
   self:InitHandleKeyInfo()
 end
@@ -2707,33 +2750,68 @@ function M:Handle_OnGamePadDown(InKeyName)
     end
     return false
   end
-  DebugPrint("thy    Handle_OnGamePadDown", InKeyName)
+  local IsDpadUp = true == self.GamePadPressingKeys[Const.GamepadDPadUp]
+  DebugPrint("thy    Handle_OnGamePadDown", InKeyName, "CurrentFocusType", self.CurrentFocusType, "IsDpadUp", IsDpadUp)
   if "Gamepad_FaceButton_Top" == InKeyName then
+    if self.CurrentFocusType == "AutoNextRound" then
+      return false
+    end
     self:OnBtnContinueClicked()
     return true
   elseif "Gamepad_Special_Right" == InKeyName then
     if UIManager(self):GetUIObj("CommonDialog") then
-      return
+      return false
+    end
+    if not self.bOpenBattleDataTip then
+      return false
+    end
+    if self.CurrentFocusType == "AutoNextRound" then
+      return false
     end
     self:OnBtnChangePanelClicked()
     return true
   elseif "Gamepad_RightThumbstick" == InKeyName then
-    if not self.IsWin then
-      if self.Refund:GetFocusState() then
-        self.IsInRefund = false
-        self.Refund:CancelItemListFocus()
-        self:SetFocusInGamePad()
-        self:SwitchMainUIPCToGamePad()
+    if IsDpadUp then
+      if self.IsAutoNextRound then
+        self.GamePadPressingKeys.Gamepad_DPad_Up = nil
+        self.GamePadPressingKeys.Gamepad_RightThumbstick = nil
+        self.AutoNextRound:SetAutoNextRoundFocus(true)
+        self.AutoNextRound:UpdateUIStyleInPlatform(true)
+        self:UpdateMainUIInGamePadClick()
+        self.CurrentFocusType = "AutoNextRound"
         return true
+      else
+        return false
       end
-      self.IsInRefund = true
-      self.NavigateWidget:SetVisibility(ESlateVisibility.Visible)
-      self.Refund:SetItemListFocus()
-      self:UpdateMainUIInGamePadClick()
-      self:UpdateBottomTabsInfo(GText("UI_Controller_CheckDetails"), GText("UI_Tips_Close"))
+    else
+      if self.CurrentFocusType == "AutoNextRound" then
+        return false
+      end
+      if not self.IsWin then
+        if self.Refund:GetFocusState() then
+          self.IsInRefund = false
+          self.Refund:CancelItemListFocus()
+          self:SetFocusInGamePad()
+          self:SwitchMainUIPCToGamePad()
+          return true
+        end
+        self.IsInRefund = true
+        self.NavigateWidget:SetVisibility(ESlateVisibility.Visible)
+        self.Refund:SetItemListFocus()
+        self:UpdateMainUIInGamePadClick()
+        self:UpdateBottomTabsInfo(GText("UI_Controller_CheckDetails"), GText("UI_Tips_Close"))
+      end
+      return true
     end
-    return true
   elseif "Gamepad_FaceButton_Right" == InKeyName then
+    if self.CurrentFocusType == "AutoNextRound" then
+      self.AutoNextRound:SetAutoNextRoundFocus(false)
+      self.AutoNextRound:UpdateUIStyleInPlatform(false)
+      self:SwitchMainUIPCToGamePad()
+      self.CurrentFocusType = ""
+      self:UpdateMainUI()
+      return true
+    end
     if not self.IsInRefund then
       self.Btn_Close:OnBtnClicked()
       return true
@@ -2747,16 +2825,23 @@ function M:Handle_OnGamePadDown(InKeyName)
     self:SwitchMainUIPCToGamePad()
     return true
   elseif "Gamepad_LeftThumbstick" == InKeyName then
-    self.Cost:OpenTip()
-    self:UpdateMainUIInGamePadClick()
+    if self.CurrentFocusType == "AutoNextRound" then
+      return false
+    end
     return true
   elseif "Gamepad_RightStick_Right" == InKeyName then
+    if self.CurrentFocusType == "AutoNextRound" then
+      return false
+    end
     if self.FailTipsNum then
       self.CurFailTipIndex = math.min(self.CurFailTipIndex + 1, self.FailTipsNum)
       self.FailTips.List_Tips:NavigateToIndex(self.CurFailTipIndex)
     end
     return true
   elseif "Gamepad_RightStick_Left" == InKeyName then
+    if self.CurrentFocusType == "AutoNextRound" then
+      return false
+    end
     if self.FailTipsNum then
       self.CurFailTipIndex = math.max(self.CurFailTipIndex - 1, 0)
       self.FailTips.List_Tips:NavigateToIndex(self.CurFailTipIndex)
@@ -2764,6 +2849,9 @@ function M:Handle_OnGamePadDown(InKeyName)
     return true
   end
   if InKeyName == Const.GamepadSpecialLeft then
+    if self.CurrentFocusType == "AutoNextRound" then
+      return false
+    end
     if self.WBP_Chat_CommonEnter then
       if self.WBP_Chat_CommonEnter.ControllerKeyImg then
         self.WBP_Chat_CommonEnter.ControllerKeyImg:OnButtonPressed()
@@ -2780,9 +2868,26 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
   local IsEventHandled = false
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
+    self.GamePadPressingKeys[InKeyName] = true
+  end
   if "Enter" == InKeyName and self.WBP_Chat_CommonEnter and self.WBP_Chat_CommonEnter.OnClick then
     self.WBP_Chat_CommonEnter:OnClick()
     IsEventHandled = true
+  end
+  if IsEventHandled then
+    return UE4.UWidgetBlueprintLibrary.Handled()
+  else
+    return UE4.UWidgetBlueprintLibrary.UnHandled()
+  end
+end
+
+function M:OnPreviewKeyUp(MyGeometry, InKeyEvent)
+  local IsEventHandled = false
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
+    self.GamePadPressingKeys[InKeyName] = false
   end
   if IsEventHandled then
     return UE4.UWidgetBlueprintLibrary.Handled()
@@ -2894,11 +2999,16 @@ function M:OpenTicketDialog(DungeonId)
     DungeonId = self.DungeonId,
     RightCallbackObj = self,
     RightCallbackFunction = function(Obj, PackageData)
+      local SelectedTicketId = PackageData.Content_1.TicketId
+      if self.IsAutoNextRound then
+        DebugPrint("ljl@WBP_DungeonSettlement_C M:OpenTicketDialog SetTicketId", SelectedTicketId)
+        GWorld.GameInstance:SetTicketId(SelectedTicketId)
+      end
       local Avatar = GWorld:GetAvatar()
       Avatar:EnterDungeonAgain(function(Ret)
         self:BlockAllUIInput(false)
         DebugPrint("gmy@WBP_DungeonSettlement_C M:OpenTicketDialog Callback", Ret)
-      end, PackageData.Content_1.TicketId)
+      end, SelectedTicketId)
       self:BlockAllUIInput(true)
       self:AddTimer(10, function()
         if self and self:IsAllUIInputBlocked() then
@@ -2913,10 +3023,23 @@ end
 
 function M:BP_GetDesiredFocusTarget()
   DebugPrint("ljl@ BP_GetDesiredFocusTarget")
-  if self.CurInputDeviceType == ECommonInputType.Gamepad then
-    self:SetFocusInGamePad()
+  if self:IsAnimationPlaying(self.Defeat_In) or self:IsAnimationPlaying(self.Victory_In) then
+    return self
   end
-  return
+  if self.IsTemple then
+    return self.WidgetRewards.List_Reward
+  end
+  if self.SpRewardsArray then
+    if 0 == #self.SpRewardsArray then
+      if 0 ~= #self.RewardsArray then
+        return self.TileView_Prop
+      else
+        return self
+      end
+    else
+      return self.TileView_Reward
+    end
+  end
 end
 
 function M:InitHandleKeyInfo()
@@ -2978,6 +3101,15 @@ function M:OnBtnContinueClicked()
     self.Btn_Continue.CurrentClickIsForbid = true
   end
   self.Btn_Continue:OnBtnClicked()
+end
+
+function M:InitAutoNextRoundContent()
+  if not self.IsAutoNextRound then
+    self.AutoNextRound:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    return
+  end
+  self.AutoNextRound:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.AutoNextRound:Init(DataMgr.Dungeon[self.DungeonId])
 end
 
 AssembleComponents(M)

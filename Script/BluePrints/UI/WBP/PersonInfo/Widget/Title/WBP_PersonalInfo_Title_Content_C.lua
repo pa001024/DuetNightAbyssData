@@ -41,14 +41,14 @@ function M:InitContent()
     self:LatenInit()
   end)
   self.Text_Empty:SetText(GText("UI_PersonalPage_Title_NoEquip"))
+  self.Com_Hint.WidgetSwitcher_State:SetActiveWidgetIndex(2)
 end
 
 function M:LoadData()
-  self.Avatar = GWorld:GetAvatar()
-  self.UsedFrameId = self.Avatar.TitleFrame
-  self.PrefixTitleId = self.Avatar.TitleBefore
-  self.SuffixTitleID = self.Avatar.TitleAfter
   local Avatar = GWorld:GetAvatar()
+  self.UsedFrameId = Avatar.TitleFrame
+  self.PrefixTitleId = Avatar.TitleBefore
+  self.SuffixTitleID = Avatar.TitleAfter
   local FrameId = Avatar.TitleFrame
   if FrameId then
     if DataMgr.TitleFrame and DataMgr.TitleFrame[FrameId] and DataMgr.TitleFrame[FrameId].Name then
@@ -175,6 +175,7 @@ function M:OnTitleContentPageSwitch()
   else
     self.WS:SetActiveWidgetIndex(0)
   end
+  self.WS_Btn:SetActiveWidgetIndex(0)
 end
 
 function M:OnTitleStylePageSwitch()
@@ -241,10 +242,25 @@ function M:FreshBtnStatebyFrame()
     self.Btn_Change.Text_Button:SetText(GText("UI_PersonalPage_Title_Equip"))
     self.Btn_Change:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end
+  if not Avatar.TitleFrames[self.CurrentTitleFrameID] then
+    self.WS_Btn:SetActiveWidgetIndex(1)
+    local TitleFrameData = DataMgr.TitleFrame[self.CurrentTitleFrameID]
+    if TitleFrameData then
+      self.Com_Hint.Text_Hint_Locked:SetText(GText(TitleFrameData.AccessText))
+      self.WS:SetActiveWidgetIndex(0)
+    end
+  else
+    if -1 == self.PrefixTitleId and -1 == self.SuffixTitleID then
+      self.WS:SetActiveWidgetIndex(1)
+    else
+      self.WS:SetActiveWidgetIndex(0)
+    end
+    self.WS_Btn:SetActiveWidgetIndex(0)
+  end
 end
 
 function M:IsCanChangeTitle()
-  return self.Btn_Change:IsBtnForbidden() == false and 0 == self.WS:GetActiveWidgetIndex()
+  return self.Btn_Change:IsBtnForbidden() == false and 0 == self.WS:GetActiveWidgetIndex() and 0 == self.WS_Btn:GetActiveWidgetIndex()
 end
 
 function M:IsRandomBtnCanClick()

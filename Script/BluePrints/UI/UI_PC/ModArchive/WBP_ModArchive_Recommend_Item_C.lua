@@ -1,4 +1,5 @@
 require("UnLua")
+local PageJumpFunctionLibrary = require("Utils.PageJumpFunctionConfig")
 local WBP_ModArchive_Recommend_Item_C = Class({
   "BluePrints.UI.BP_UIState_C",
   "BluePrints.Common.DelayFrameComponent"
@@ -33,7 +34,7 @@ end
 
 function WBP_ModArchive_Recommend_Item_C:InitGroupInfo()
   self.TargetInfo = {}
-  if self.Info.TargetType == "Char" then
+  if self.Info.TargetType and string.find(self.Info.TargetType, "Char") then
     self.Image_Head:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Image_Weapon:SetVisibility(ESlateVisibility.Collapsed)
     self.TargetInfo = DataMgr.Char[self.Info.TargetId]
@@ -43,7 +44,7 @@ function WBP_ModArchive_Recommend_Item_C:InitGroupInfo()
       IconDynaMaterial:SetTextureParameterValue("IconMap", LoadObject(Path))
     end
     self.Text_Title:SetText(GText(self.TargetInfo.CharName))
-  elseif self.Info.TargetType == "Weapon" then
+  elseif self.Info.TargetType and string.find(self.Info.TargetType, "Weapon") then
     self.Image_Head:SetVisibility(ESlateVisibility.Collapsed)
     self.Image_Weapon:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.TargetInfo = DataMgr.Weapon[self.Info.TargetId]
@@ -82,13 +83,17 @@ end
 
 function WBP_ModArchive_Recommend_Item_C:OnClickJumpTo()
   DebugPrint("zwkk 跳转？ ", self.Info.InterfaceJumpId)
-  PageJumpUtils:JumpToTargetPageByJumpId(self.Info.InterfaceJumpId)
+  if self.Info.InterfaceJumpId and self.Info.InterfaceJumpId > 0 then
+    PageJumpUtils:JumpToTargetPageByJumpId(self.Info.InterfaceJumpId)
+  else
+    PageJumpFunctionLibrary.JumpToArmory(self.Info.TargetType, "Mod", self.Info.TargetId)
+  end
 end
 
 function WBP_ModArchive_Recommend_Item_C:OnClickForbidden()
-  if self.Info.TargetType == "Char" then
+  if self.Info.TargetType and string.find(self.Info.TargetType, "Char") then
     UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText("没有当前角色111"))
-  elseif self.Info.TargetType == "Weapon" then
+  elseif self.Info.TargetType and string.find(self.Info.TargetType, "Weapon") then
     UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText("没有当前武器111"))
   end
 end

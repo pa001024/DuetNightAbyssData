@@ -22,11 +22,16 @@ function M:InitContent(Params, PopupData, Owner)
   self.Super.InitContent(self, Params, PopupData, Owner)
   self.GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem()
   self:AddInputMethodChangedListen()
+  self.Params = Params
   self.ShopItemData = setmetatable({}, {
     __index = Params.ShopItemData
   })
   self.ShopType = Params.ShopType
   self.ShopId = Params.ShopId
+  self.UIName = nil
+  if Params.UIName then
+    self.UIName = Params.UIName
+  end
   self.SingleItemNotInteractive = Params.SingleItemNotInteractive
   self.CurrentCount = 1
   local Avatar = GWorld:GetAvatar()
@@ -39,8 +44,10 @@ function M:InitContent(Params, PopupData, Owner)
   self.Com_Time_Refresh.Image_ClockIcon:SetVisibility(ESlateVisibility.Collapsed)
   self:InitUI(self.ShopType)
   self:AddTimer(0.1, function()
-    if self.ShopItemData.ItemType ~= "Walnut" and self.ScrollBox_0:GetScrollOffsetOfEnd() > 0 then
-      self:ShowGamepadScrollBtn(true)
+    if self.ShopItemData.ItemType ~= "Walnut" and self.ScrollBox_0:GetScrollOffsetOfEnd() > 0 and UIUtils.IsGamepadInput() then
+      self:ShowGamepadShortcut(self.GamepadScrollBtnIndex)
+    else
+      self:HideGamepadShortcut(self.GamepadScrollBtnIndex)
     end
     if 6 == self.ShopItemData.PurchaseFailRes then
       self:BroadcastDialogEvent("UpdateDialogTipText", {
@@ -82,6 +89,12 @@ function M:InitContent(Params, PopupData, Owner)
       {Type = "Img", ImgShortPath = "A"}
     },
     Desc = GText("UI_Tips_Ensure")
+  })
+  self.GamepadScrollBtnIndex = self:ShowGamepadShortcutBtn({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = "RV"}
+    },
+    Desc = GText("UI_Controller_Slide")
   })
   local Key_RewardDesc_Params = {
     KeyInfoList = {
@@ -133,7 +146,11 @@ function M:InitUI(ShopType)
     Content.Icon = ItemUtils.GetItemIconPath(self.ShopItemData.TypeId, self.ShopItemData.ItemType)
     Content.Rarity = ItemData.Rarity or ItemData[self.ShopItemData.ItemType .. "Rarity"] or 0
     Content.IsShowDetails = true
-    Content.UIName = "ShopMain"
+    if self.UIName then
+      Content.UIName = self.UIName
+    else
+      Content.UIName = "ShopMain"
+    end
     Content.NotInteractive = self.SingleItemNotInteractive
     if self.ShopItemData.ItemType == "Char" then
       Content.OnMouseButtonUpEvents = {
@@ -175,6 +192,8 @@ function M:InitUI(ShopType)
     if self.ShopItemData.ItemType == "Draft" then
       ItemDesc = "UI_DraftDes_General"
       ItemName = ItemUtils:GetDraftName(ItemData.DraftId)
+    elseif self.ShopItemData.ItemType == "Mount" then
+      ItemDesc = ItemData.MountDes
     end
     self.Text_Name:SetText(GText(ItemName))
     if self.ShopItemData.ItemType == "Resource" then
@@ -242,6 +261,11 @@ function M:InitUI(ShopType)
               Callback = self.ItemMenuAnchorChanged
             }
           }
+          if self.UIName then
+            Content.UIName = self.UIName
+          else
+            Content.UIName = "ShopMain"
+          end
           if self.TypeSort[i] then
             self.TypeSort[i]:Init(Content)
           end
@@ -273,8 +297,11 @@ function M:InitUI(ShopType)
     },
     OwnerPanel = self,
     PlatformName = "PC",
-    EnableMiniBtn = true,
-    EnableMaxBtn = true
+    bEnableMinusSpecificBtn = true,
+    bEnableAddSpecificBtn = true,
+    SpecificChangeCount = 10,
+    MinusSpecificBtnGamePadKey = "DPadLeft",
+    AddSpecificBtnGamePadKey = "DPadRight"
   }
   if 1 == self.ShopItemData.PurchaseLimit then
     self.VB_BottomInfo:SetVisibility(ESlateVisibility.Collapsed)
@@ -282,6 +309,38 @@ function M:InitUI(ShopType)
     self.VB_BottomInfo:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
   self.Com_Slider:Init(ConfigData)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  self.IsLockState = ShopUtils:CheckShopItemCondition(self.ShopItemData)
+  if self.IsLockState then
+    self.Owner:GetButtonBar().WS_Btn:SetActiveWidgetIndex(1)
+    self.Owner:GetButtonBar().Com_Hint:UnBindEventOnClickedByObj(self)
+    self.Owner:GetButtonBar().Com_Hint:BindEventOnClicked(self, function()
+      ShopUtils:OpenLockConditionPopup(self.ShopItemData)
+      self.Owner:OnClose()
+    end)
+    self.ConditionDisplay = self.ShopItemData.ItemConditionDisplay and self.ShopItemData.ItemCondition
+    if self.ConditionDisplay then
+      self.Owner:GetButtonBar().Com_Hint.IsForbidden = true
+      self.Owner:GetButtonBar().Com_Hint:SetText(GText(DataMgr.Condition[self.ShopItemData.ItemCondition[1]] and DataMgr.Condition[self.ShopItemData.ItemCondition[1]].ConditionText or ""))
+      self.Owner:GetButtonBar().Com_Hint.bAutoButtonChange = false
+      self.Owner:GetButtonBar().Com_Hint:SetIconPanelVisibility(ESlateVisibility.Collapsed)
+      self.Owner:GetButtonBar().Com_Hint:SetGamepadIconVisibility(false)
+      self.Owner:GetButtonBar().Com_Hint:SetGamePadVisibility(ESlateVisibility.Collapsed)
+      self.Owner:GetButtonBar().Com_Hint.Button_Area:SetIsEnabled(false)
+      self.Owner.DontCloseWhenRightBtnClicked = true
+    else
+      self.Owner:GetButtonBar().Com_Hint.IsForbidden = false
+      self.Owner:GetButtonBar().Com_Hint:SetText(GText("UI_Shop_ItemUnlock"))
+      self.Owner:GetButtonBar().Com_Hint.bAutoButtonChange = true
+      self.Owner:GetButtonBar().Com_Hint:SetIconPanelVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Owner:GetButtonBar().Com_Hint:SetGamepadIconVisibility(true)
+      self.Owner:GetButtonBar().Com_Hint.Button_Area:SetIsEnabled(true)
+      self.Owner.DontCloseWhenRightBtnClicked = false
+    end
+  end
 end
 
 function M:OpenCharDetails(CharId)
@@ -377,7 +436,7 @@ function M:UpdateLimitTime()
     return
   end
   local StartTiem = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(TimeUtils.NowTime())
-  local EndTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(EndTime)
+  local EndTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(EndTime and EndTime.GetTime())
   local RemainTime = UKismetMathLibrary.Subtract_DateTimeDateTime(EndTime, StartTiem)
   local RemainTimeStr = ""
   local TimeCount = 0
@@ -416,8 +475,8 @@ function M:UpdateShopItemRefreshTime(RefreshTime)
     self.Group_RefreshTime:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Com_Time_Refresh:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Group_TimeSpace:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    ShopUtils:RefreshShopRefreshTime(RefreshTime, self.Com_Time_Refresh.Text_TimeDesc)
-    self:AddTimer(1, ShopUtils.RefreshShopRefreshTime, true, 0, "RefreshTimeTimer", true, RefreshTime, self.Com_Time_Refresh.Text_TimeDesc)
+    ShopUtils:RefreshShopRefreshTime(RefreshTime, self.Com_Time_Refresh.Text_TimeDesc, self.ShopItemData.ItemId)
+    self:AddTimer(1, ShopUtils.RefreshShopRefreshTime, true, 0, "RefreshTimeTimer", true, RefreshTime, self.Com_Time_Refresh.Text_TimeDesc, self.ShopItemData.ItemId)
   end
 end
 
@@ -489,6 +548,14 @@ function M:UpdataModDetails(ModDataInfo, ModLevel)
 end
 
 function M:Purchase()
+  if self.IsLockState then
+    if self.ConditionDisplay then
+      return
+    else
+      ShopUtils:OpenLockConditionPopup(self.ShopItemData)
+      return
+    end
+  end
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
@@ -564,23 +631,26 @@ function M:Purchase()
       }
       self.PopupUI = UIManager(self):ShowCommonPopupUI(PopUpId, Params)
     elseif 5 == self.ShopItemData.PurchaseFailRes then
-      local function JumpToShop()
-        PageJumpUtils:JumpToShopPage(CommonConst.GachaJumpToShopMainTabId, nil, nil, "Shop")
+      local PopupId = 100290
+      local CachedParams = self.Params
+      local CachedUIName = self.UIName
+      local CachedCount = self.CurrentCount
+      
+      local function ReOpenPurchaseSingle()
+        local CommonPopupUIID = 100041
+        ShopUtils:CanPurchase(CachedParams.ShopItemData, CachedParams.ShopItemData.PriceType, CachedCount * ShopUtils:GetShopItemPrice(CachedParams.ShopItemData.ItemId))
+        UIManager(GWorld.GameInstance):ShowCommonPopupUI(CommonPopupUIID, CachedParams, UIManager(GWorld.GameInstance):GetUIObj(CachedUIName))
       end
       
-      local PopupId
-      if self.ShopItemData.PriceType == CommonConst.Coins.Coin1 then
-        PopupId = 100137
-      elseif self.ShopItemData.PriceType == CommonConst.Coins.Coin4 then
-        PopupId = 100263
-      end
-      if not PopupId then
-        return
-      end
+      ShopUtils:SetCloseGetItemPageCallback({CloseGetItemPageCallback = ReOpenPurchaseSingle})
       local Params = {}
-      Params.LeftCallbackObj = self
-      Params.RightCallbackObj = self
-      Params.RightCallbackFunction = JumpToShop
+      Params.ShopItemId = self.ShopItemData.ItemId
+      Params.Uid = Avatar.Uid
+      
+      function Params.CloseBtnCallbackFunction(Obj, PackageData)
+        ShopUtils:SetCloseGetItemPageCallback({CloseGetItemPageCallback = nil})
+      end
+      
       self.PopupUI = UIManager(self):ShowCommonPopupUI(PopupId, Params, self)
     end
     return
@@ -614,18 +684,47 @@ function M:OnAnimationFinished(Animation)
   end
 end
 
+function M:UpdateUIByCurrentState()
+  local isFocusOnSubItem = self.FocusOnSubItem
+  local isTipsOpen = self.bTipsOpen
+  local isGamePad = UIUtils.IsGamepadInput()
+  if isGamePad then
+    self:SetSliderState(not isFocusOnSubItem and not isTipsOpen)
+    self:SetGamepadBtnKeyVisibility(not isFocusOnSubItem and not isTipsOpen)
+    self:UpdateUIElementsVisibility(isGamePad, isFocusOnSubItem, isTipsOpen)
+  else
+    self:SetSliderState(true)
+    self:SetGamepadBtnKeyVisibility(false)
+    self:UpdateUIElementsVisibility(isGamePad, false, isTipsOpen)
+  end
+  if isTipsOpen then
+    self:SetGamepadButtonState(false, false, false)
+  elseif isFocusOnSubItem then
+    self:SetGamepadButtonState(true, true, false)
+  else
+    self:SetGamepadButtonState(false, false, not self.SingleItemNotInteractive)
+  end
+  if not isFocusOnSubItem and not isTipsOpen then
+    self:UpdatePricePanel()
+  end
+end
+
 function M:SetSliderState(enabled)
   self.Com_Slider:SetEnabled(enabled)
   self.Com_Slider:ForbidMinOperation(not enabled)
   self.Com_Slider:ForbidAddOperation(not enabled)
 end
 
-function M:UpdateUIElementsVisibility(isSubItemFocused, isTipsOpen)
-  local shouldShowScrollBtn = not isSubItemFocused and not isTipsOpen and self.ShopItemData.ItemType ~= "Walnut" and self.ScrollBox_0:GetScrollOffsetOfEnd() > 0
-  self:ShowGamepadScrollBtn(shouldShowScrollBtn)
+function M:UpdateUIElementsVisibility(isGamePad, isSubItemFocused, isTipsOpen)
+  local shouldShowScrollBtn = isGamePad and not isSubItemFocused and not isTipsOpen and self.ShopItemData.ItemType ~= "Walnut" and self.ScrollBox_0:GetScrollOffsetOfEnd() > 0
+  if shouldShowScrollBtn then
+    self:ShowGamepadShortcut(self.GamepadScrollBtnIndex)
+  else
+    self:HideGamepadShortcut(self.GamepadScrollBtnIndex)
+  end
   local keyRewardVisibility = ESlateVisibility.Collapsed
   local keyBtnDetailVisibility = ESlateVisibility.Collapsed
-  if not isTipsOpen and not isSubItemFocused then
+  if isGamePad and not isTipsOpen and not isSubItemFocused then
     keyRewardVisibility = ESlateVisibility.SelfHitTestInvisible
   end
   self.Key_RewardDesc:SetVisibility(keyRewardVisibility)
@@ -650,30 +749,9 @@ function M:SetGamepadButtonState(showA, showB, showTips)
   end
 end
 
-function M:UpdateUIByCurrentState()
-  local isFocusOnSubItem = self.FocusOnSubItem
-  local isTipsOpen = self.bTipsOpen
-  self:SetSliderState(not isFocusOnSubItem and not isTipsOpen)
-  self:SetGamepadBtnKeyVisibility(not isFocusOnSubItem and not isTipsOpen)
-  if isTipsOpen then
-    self:SetGamepadButtonState(false, false, false)
-  elseif isFocusOnSubItem then
-    self:SetGamepadButtonState(true, true, false)
-  else
-    self:SetGamepadButtonState(false, false, not self.SingleItemNotInteractive)
-  end
-  self:UpdateUIElementsVisibility(isFocusOnSubItem, isTipsOpen)
-  if not isFocusOnSubItem and not isTipsOpen then
-    self:UpdatePricePanel()
-  end
-end
-
 function M:ItemMenuAnchorChanged(bIsOpen)
   local wasOpen = self.bTipsOpen
   self.bTipsOpen = bIsOpen
-  if UIUtils.UtilsGetCurrentInputType() ~= ECommonInputType.Gamepad then
-    return
-  end
   if wasOpen and not bIsOpen and not self.FocusOnSubItem then
     self.Owner:SetFocus()
   end
@@ -704,8 +782,12 @@ end
 function M:OnGamePadDown(InKeyName)
   local IsEventHandled = self.Com_Slider:Handle_KeyDownEventOnGamePad(InKeyName)
   if InKeyName == UIConst.GamePadKey.LeftThumb then
-    if self.ShopItemData.ItemType ~= "WeaponSkin" and not self.SingleItemNotInteractive then
-      self.SingleItem:OpenItemMenu()
+    if not self.SingleItemNotInteractive then
+      if self.ShopItemData.ItemType == "Walnut" then
+        self.SingleItem:OpenWalnutRewardDialog()
+      elseif self.ShopItemData.ItemType ~= "WeaponSkin" then
+        self.SingleItem:OpenItemMenu()
+      end
     end
   elseif self.ShopItemData.ItemType == "Walnut" and InKeyName == UIConst.GamePadKey.SpecialLeft then
     self.TypeSort[1]:SetFocus()
@@ -758,8 +840,7 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
       self.Owner:SetFocus()
       self.FocusOnSubItem = false
     end
-    self.Key_RewardDesc:SetVisibility(ESlateVisibility.Collapsed)
-    self:UpdateUIElementsVisibility(false, self.bTipsOpen)
+    self:UpdateUIByCurrentState()
   end
 end
 

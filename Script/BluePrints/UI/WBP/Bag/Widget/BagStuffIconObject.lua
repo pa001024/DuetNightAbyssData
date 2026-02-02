@@ -1,6 +1,7 @@
 require("UnLua")
 local CommonUtils = require("Utils.CommonUtils")
 local BagCommon = require("BluePrints.UI.WBP.Bag.BagCommon")
+local ForgeConst = require("Blueprints.UI.Forge.ForgeConst")
 local StuffIconObject = {}
 
 function StuffIconObject:CreateBagItemContent(Content)
@@ -156,7 +157,7 @@ function StuffIconObject:GetItemStuffData(StuffServerData, ParentWidget, ClickCa
   end
   if not StuffServerData.FishInfo then
     StuffConfig.Uuid = tostring(ItemConfigData.ResourceId)
-    StuffConfig.Price = ItemConfigData.ResourceValue or 1
+    StuffConfig.Price = ItemConfigData.ResourceValue or -1
     StuffConfig.StuffCount = StuffServerData.Count
     StuffConfig.LockType = StuffServerData:IsLock() and 1 or 0
   else
@@ -177,6 +178,35 @@ function StuffIconObject:GetItemStuffData(StuffServerData, ParentWidget, ClickCa
   StuffConfig.CoinId = ItemConfigData.ResourceToCoinType
   StuffConfig.StuffIcon = ItemConfigData.Icon
   StuffConfig.IsPhantom = ItemConfigData.ResourceSType == "PhantomItem"
+  StuffConfig.ParentWidget = ParentWidget
+  return StuffConfig
+end
+
+function StuffIconObject:GetDraftsStuffData(StuffServerData, ParentWidget, ClickCallback)
+  local StuffConfig = {}
+  local DraftConfigData = StuffServerData:Data()
+  if nil == DraftConfigData then
+    return nil
+  end
+  StuffConfig.Uuid = tostring(DraftConfigData.DraftId)
+  StuffConfig.Price = DraftConfigData.ResourceValue or -1
+  StuffConfig.StuffCount = StuffServerData.Count
+  StuffConfig.LockType = 0
+  StuffConfig.StuffId = DraftConfigData.DraftId
+  StuffConfig.StuffType = BagCommon.StuffType.Draft
+  local ForgeTabConfig = DataMgr.ForgeTab[ForgeConst.ProductTypeToTabId[DraftConfigData.ProductType]]
+  if ForgeTabConfig then
+    StuffConfig.ApplicationType = ForgeTabConfig.Sequence
+  else
+    StuffConfig.ApplicationType = 0
+  end
+  DebugPrint("Tianyi@ GetDraftsStuffData ApplicationType:", StuffConfig.ApplicationType)
+  StuffConfig.StuffName = GText(DraftConfigData.ResourceName)
+  StuffConfig.ClickCallback = ClickCallback or "ClickStuffIcon"
+  StuffConfig.NeedRedPoint = false
+  StuffConfig.Rarity = DraftConfigData.Rarity or 1
+  StuffConfig.CoinId = DraftConfigData.ResourceToCoinType
+  StuffConfig.StuffIcon = DraftConfigData.Icon
   StuffConfig.ParentWidget = ParentWidget
   return StuffConfig
 end

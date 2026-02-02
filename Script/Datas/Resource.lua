@@ -88,42 +88,62 @@ T.RT_46 = {
   "Text_Monster"
 }
 T.RT_47 = {"Forging"}
-T.RT_48 = {"Text_Rouge"}
-T.RT_49 = {
+T.RT_48 = {
+  "Text_ReputationTask"
+}
+T.RT_49 = {"Text_Rouge"}
+T.RT_50 = {
+  "Text_Raid_Reward"
+}
+T.RT_51 = {
   "Text_HardMonster"
 }
-T.RT_50 = {"Text_Task", "Forging"}
-T.RT_51 = {
-  "Text_Collecting_Prologue01"
-}
 T.RT_52 = {
-  "Text_Collecting_Icelake03"
+  "Shop_Fishing"
 }
 T.RT_53 = {
-  "Text_Collecting_East03"
+  "Text_Collecting_Prologue01"
 }
 T.RT_54 = {
-  "Text_Collecting_East02"
+  "Text_Collecting_Icelake03"
 }
 T.RT_55 = {
+  "Text_Collecting_East03"
+}
+T.RT_56 = {
+  "Text_Collecting_East02"
+}
+T.RT_57 = {
   "Text_Collecting_Icelake04",
   "Text_Collecting_Kuangkeng"
 }
-T.RT_56 = {
+T.RT_58 = {
   [1] = 500,
   [2] = 67
 }
-T.RT_57 = {
+T.RT_59 = {
   [1] = "UI_DO_NOT_PASS_CONDITION",
   [2] = "UI_DO_NOT_PASS_CONDITION"
 }
-T.RT_58 = {
+T.RT_60 = {
   "Text_LevelReward"
 }
-T.RT_59 = {
-  "Shop_Fishing"
+T.RT_61 = {
+  [1] = 12
 }
-T.RT_60 = {"Text_Fish"}
+T.RT_62 = {
+  [1] = "UI_DO_NOT_PASS_CONDITION"
+}
+T.RT_63 = {
+  [1] = 507
+}
+T.RT_64 = {
+  [1] = "Mount_Lock_Toast"
+}
+T.RT_65 = {"Text_Fish"}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -131,6 +151,7 @@ return ReadOnly("Resource", {
   [99] = {
     DetailDes = "RESOURCE_DESC_99",
     FunctionDes = "RESOURCE_FUNCTION_RARECOIN",
+    GiftQuota = 1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Coin_Main_Lv1.T_Coin_Main_Lv1",
     IpDes = "RESOURCE_TEXT_99",
     Rarity = 5,
@@ -144,6 +165,7 @@ return ReadOnly("Resource", {
   [100] = {
     DetailDes = "RESOURCE_DESC_100",
     FunctionDes = "RESOURCE_FUNCTION_RARECOIN",
+    GiftQuota = 1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Coin_Main_Lv2.T_Coin_Main_Lv2",
     IpDes = "RESOURCE_TEXT_100",
     Rarity = 5,
@@ -405,7 +427,7 @@ return ReadOnly("Resource", {
     UseParam = 60
   },
   [205] = {
-    AccessKey = T.RT_48,
+    AccessKey = T.RT_49,
     DetailDes = "RESOURCE_DESC_205",
     FunctionDes = "RESOURCE_FUNCTION_TIANFUCOIN",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_TalentToken_01.T_Rouge_TalentToken_01",
@@ -439,7 +461,7 @@ return ReadOnly("Resource", {
     UseParam = 10000
   },
   [207] = {
-    AccessKey = T.RT_4,
+    AccessKey = T.RT_3,
     DetailDes = "RESOURCE_DESC_207",
     FunctionDes = "RESOURCE_FUNCTION_BONUSTICKET",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_Ticket02.T_Resource_Ticket02",
@@ -457,7 +479,7 @@ return ReadOnly("Resource", {
     UseParam = 20000
   },
   [208] = {
-    AccessKey = T.RT_4,
+    AccessKey = T.RT_3,
     DetailDes = "RESOURCE_DESC_208",
     FunctionDes = "RESOURCE_FUNCTION_BONUSTICKET",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_Ticket03.T_Resource_Ticket03",
@@ -475,7 +497,7 @@ return ReadOnly("Resource", {
     UseParam = 80000
   },
   [209] = {
-    AccessKey = T.RT_4,
+    AccessKey = T.RT_3,
     DetailDes = "RESOURCE_DESC_209",
     FunctionDes = "RESOURCE_FUNCTION_BONUSTICKET",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_Ticket04.T_Resource_Ticket04",
@@ -541,7 +563,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [215] = {
-    AccessKey = T.RT_48,
+    AccessKey = T.RT_49,
     DetailDes = "RESOURCE_DESC_215",
     FunctionDes = "RESOURCE_FUNCTION_ROUGECOIN",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_ShopToken.T_Rouge_ShopToken",
@@ -584,9 +606,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [218] = {
-    AccessKey = {
-      "Text_Raid_Reward"
-    },
+    AccessKey = T.RT_50,
     DetailDes = "RESOURCE_TEXT_218",
     FunctionDes = "RESOURCE_DESC_218",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_Raid_Coin01.T_Resource_Raid_Coin01",
@@ -595,6 +615,55 @@ return ReadOnly("Resource", {
     ResourceId = 218,
     ResourceName = "RESOURCE_NAME_218",
     ResourceSType = "Coin",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Rare"
+  },
+  [219] = {
+    FunctionDes = "RESOURCE_DESC_219",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Coin01.T_Activity_Autochess_Coin01'",
+    Rarity = 5,
+    ResourceId = 219,
+    ResourceName = "RESOURCE_NAME_219",
+    ResourceSType = "Coin",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Rare"
+  },
+  [220] = {
+    AccessKey = T.RT_50,
+    DetailDes = "RESOURCE_TEXT_218",
+    FunctionDes = "RESOURCE_DESC_218",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_Raid_Coin01.T_Resource_Raid_Coin01",
+    IpDes = "RESOURCE_TEXT_218",
+    Rarity = 4,
+    ResourceId = 220,
+    ResourceName = "RESOURCE_NAME_218",
+    ResourceSType = "Coin",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Rare"
+  },
+  [301] = {
+    DetailDes = "RESOURCE_DESC_301",
+    FunctionDes = "RESOURCE_FUNCTION_Reputation",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Fame/T_Fame_0101.T_Fame_0101",
+    IpDes = "RESOURCE_TEXT_Reputation",
+    Rarity = 4,
+    ResourceId = 301,
+    ResourceName = "RESOURCE_NAME_301",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Rare"
+  },
+  [302] = {
+    DetailDes = "RESOURCE_DESC_302",
+    FunctionDes = "RESOURCE_FUNCTION_Reputation",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Fame/T_Fame_0201.T_Fame_0201",
+    IpDes = "RESOURCE_TEXT_Reputation",
+    Rarity = 4,
+    ResourceId = 302,
+    ResourceName = "RESOURCE_NAME_302",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Rare"
@@ -674,6 +743,26 @@ return ReadOnly("Resource", {
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Rare",
     UseEffectType = "WeaponCardLevelUp"
+  },
+  [1007] = {
+    DetailDes = "RESOURCE_DESC_1007",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_ModRandomPurple.T_Icon_ModRandomPurple",
+    Rarity = 4,
+    ResourceId = 1007,
+    ResourceName = "RESOURCE_NAME_1007",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Rare"
+  },
+  [1008] = {
+    DetailDes = "RESOURCE_DESC_1007",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_ModRandomBlue.T_Icon_ModRandomBlue",
+    Rarity = 3,
+    ResourceId = 1008,
+    ResourceName = "RESOURCE_NAME_1008",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Rare"
   },
   [2000] = {
     AccessKey = T.RT_45,
@@ -762,6 +851,23 @@ return ReadOnly("Resource", {
     Type = "Ordinary",
     UsageMode = "AutoUseWhenAdd",
     UseEffectType = "AddBattlePassExpWithoutLimit",
+    UseParam = 1
+  },
+  [2005] = {
+    DetailDes = "RESOURCE_DESC_2005",
+    FunctionDes = "RESOURCE_FUNCTION_COMEBACKEVENTEXP",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Coin_ActivityReturn.T_Coin_ActivityReturn",
+    IpDes = "RESOURCE_TEXT_2005",
+    Rarity = 5,
+    ResourceId = 2005,
+    ResourceName = "RESOURCE_NAME_2005",
+    ResourceSType = "ComeBackEventExp",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AddComeBackQuestProgress",
     UseParam = 1
   },
   [2007] = {
@@ -916,8 +1022,42 @@ return ReadOnly("Resource", {
     UseEffectType = "AddCharExpItem",
     UseParam = 20000
   },
+  [2015] = {
+    AccessKey = T.RT_48,
+    DetailDes = "RESOURCE_DESC_2015",
+    FunctionDes = "RESOURCE_FUNCTION_ReputationExp",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Coin_Fame01.T_Coin_Fame01",
+    IpDes = "RESOURCE_TEXT_2015",
+    Rarity = 5,
+    ResourceId = 2015,
+    ResourceName = "RESOURCE_NAME_2015",
+    ResourceSType = "ReputationExp",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Rare",
+    UseEffectType = "AddReputationExpItem",
+    UseParam = 1
+  },
+  [2016] = {
+    AccessKey = T.RT_48,
+    DetailDes = "RESOURCE_DESC_2016",
+    FunctionDes = "RESOURCE_FUNCTION_ReputationExp",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Coin_Fame02.T_Coin_Fame02",
+    IpDes = "RESOURCE_TEXT_2016",
+    Rarity = 5,
+    ResourceId = 2016,
+    ResourceName = "RESOURCE_NAME_2016",
+    ResourceSType = "ReputationExp",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Rare",
+    UseEffectType = "AddReputationExpItem",
+    UseParam = 1
+  },
   [3001] = {
-    AccessKey = T.RT_50,
+    AccessKey = {"Text_Task", "Forging"},
     DetailDes = "RESOURCE_DESC_3001",
     FunctionDes = "RESOURCE_FUNCTION_IMPRESSION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Impression_Resouce_01.T_Impression_Resouce_01",
@@ -1129,22 +1269,22 @@ return ReadOnly("Resource", {
     UseParam = 3014
   },
   [3015] = {
-    AccessKey = T.RT_50,
-    DetailDes = "RESOURCE_DESC_3001",
-    FunctionDes = "RESOURCE_FUNCTION_IMPRESSION",
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Impression_Resouce_01.T_Impression_Resouce_01",
-    IpDes = "RESOURCE_TEXT_3001",
+    AccessKey = T.RT_52,
+    DetailDes = "RESOURCE_DESC_3015",
+    FunctionDes = "RESOURCE_FUNCTION_FISHINGROD",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_FishingRod_East02",
+    IpDes = "RESOURCE_TEXT_3015",
     ItemArchiveType = 1,
-    MaterialClassify = 3,
-    Rarity = 3,
+    MaterialClassify = 6,
+    Rarity = 5,
     ResourceId = 3015,
     ResourceName = "RESOURCE_NAME_3015",
-    ResourceSType = "Impression",
     ResourceValue = -1,
-    Sound = "SOUND_ITEM_JEWELRY",
+    Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary"
   },
   [3016] = {
+    AccessKey = T.RT_4,
     DetailDes = "RESOURCE_DESC_3016",
     FunctionDes = "RESOURCE_FUNCTION_MODITEM",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resourece_GeneralModLevelUpItem.T_Resourece_GeneralModLevelUpItem",
@@ -4411,6 +4551,102 @@ return ReadOnly("Resource", {
     Sound = "SOUND_ITEM_METAL",
     Type = "Rare"
   },
+  [12138] = {
+    AccessKey = T.RT_43,
+    DetailDes = "RESOURCE_DESC_12138",
+    FunctionDes = "RESOURCE_FUNCTION_FORGING",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Melee_Weapon_Part01.T_Melee_Weapon_Part01",
+    IpDes = "RESOURCE_TEXT_wobing",
+    MaterialClassify = 3,
+    Rarity = 5,
+    ResourceId = 12138,
+    ResourceName = "RESOURCE_NAME_12138",
+    ResourceSType = "Material",
+    ResourceToCoinType = 101,
+    ResourceValue = 2500,
+    Sound = "SOUND_ITEM_METAL",
+    Type = "Rare"
+  },
+  [12139] = {
+    AccessKey = T.RT_43,
+    DetailDes = "RESOURCE_DESC_12139",
+    FunctionDes = "RESOURCE_FUNCTION_FORGING",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Melee_Weapon_Part02.T_Melee_Weapon_Part02",
+    IpDes = "RESOURCE_TEXT_daoren",
+    MaterialClassify = 3,
+    Rarity = 5,
+    ResourceId = 12139,
+    ResourceName = "RESOURCE_NAME_12139",
+    ResourceSType = "Material",
+    ResourceToCoinType = 101,
+    ResourceValue = 2500,
+    Sound = "SOUND_ITEM_METAL",
+    Type = "Rare"
+  },
+  [12140] = {
+    AccessKey = T.RT_43,
+    DetailDes = "RESOURCE_DESC_12140",
+    FunctionDes = "RESOURCE_FUNCTION_FORGING",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Melee_Weapon_Part02.T_Melee_Weapon_Part02",
+    IpDes = "RESOURCE_TEXT_daoren",
+    MaterialClassify = 3,
+    Rarity = 5,
+    ResourceId = 12140,
+    ResourceName = "RESOURCE_NAME_12140",
+    ResourceSType = "Material",
+    ResourceToCoinType = 101,
+    ResourceValue = 2500,
+    Sound = "SOUND_ITEM_METAL",
+    Type = "Rare"
+  },
+  [12141] = {
+    AccessKey = T.RT_43,
+    DetailDes = "RESOURCE_DESC_12141",
+    FunctionDes = "RESOURCE_FUNCTION_FORGING",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Range_Weapon_Part02.T_Range_Weapon_Part02",
+    IpDes = "RESOURCE_TEXT_qiangji",
+    MaterialClassify = 3,
+    Rarity = 5,
+    ResourceId = 12141,
+    ResourceName = "RESOURCE_NAME_12141",
+    ResourceSType = "Material",
+    ResourceToCoinType = 101,
+    ResourceValue = 2500,
+    Sound = "SOUND_ITEM_METAL",
+    Type = "Rare"
+  },
+  [12142] = {
+    AccessKey = T.RT_43,
+    DetailDes = "RESOURCE_DESC_12142",
+    FunctionDes = "RESOURCE_FUNCTION_FORGING",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Range_Weapon_Part03.T_Range_Weapon_Part03",
+    IpDes = "RESOURCE_TEXT_qiangshen",
+    MaterialClassify = 3,
+    Rarity = 5,
+    ResourceId = 12142,
+    ResourceName = "RESOURCE_NAME_12142",
+    ResourceSType = "Material",
+    ResourceToCoinType = 101,
+    ResourceValue = 2500,
+    Sound = "SOUND_ITEM_METAL",
+    Type = "Rare"
+  },
+  [12143] = {
+    AccessKey = T.RT_43,
+    DetailDes = "RESOURCE_DESC_12143",
+    FunctionDes = "RESOURCE_FUNCTION_FORGING",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Range_Weapon_Part01.T_Range_Weapon_Part01",
+    IpDes = "RESOURCE_TEXT_qiangguan",
+    MaterialClassify = 3,
+    Rarity = 5,
+    ResourceId = 12143,
+    ResourceName = "RESOURCE_NAME_12143",
+    ResourceSType = "Material",
+    ResourceToCoinType = 101,
+    ResourceValue = 2500,
+    Sound = "SOUND_ITEM_METAL",
+    Type = "Rare"
+  },
   [19000] = {
     AccessKey = T.RT_44,
     DetailDes = "RESOURCE_DESC_19000",
@@ -5628,7 +5864,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [30001] = {
-    AccessKey = T.RT_49,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_30001",
     FunctionDes = "RESOURCE_FUNCTION_30001",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_PolarityPart01.T_Resource_PolarityPart01",
@@ -5645,7 +5881,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [30002] = {
-    AccessKey = T.RT_49,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_30002",
     FunctionDes = "RESOURCE_FUNCTION_30002",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_PolarityPart02.T_Resource_PolarityPart02",
@@ -5865,6 +6101,125 @@ return ReadOnly("Resource", {
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary"
   },
+  [30113] = {
+    AccessKey = T.RT_4,
+    DetailDes = "RESOURCE_DESC_30113",
+    FunctionDes = "RESOURCE_FUNCTION_DYE",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Dye_15.T_Dye_15'",
+    IpDes = "RESOURCE_TEXT_30113",
+    ItemArchiveType = 1,
+    MaterialClassify = 3,
+    Rarity = 5,
+    ResourceId = 30113,
+    ResourceName = "RESOURCE_NAME_30113",
+    ResourceSType = "Dyeing",
+    ResourceToCoinType = 101,
+    ResourceValue = 1000,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
+  [30114] = {
+    AccessKey = T.RT_4,
+    DetailDes = "RESOURCE_DESC_30114",
+    FunctionDes = "RESOURCE_FUNCTION_DYE",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Dye_15.T_Dye_15'",
+    IpDes = "RESOURCE_TEXT_30114",
+    ItemArchiveType = 1,
+    MaterialClassify = 3,
+    Rarity = 5,
+    ResourceId = 30114,
+    ResourceName = "RESOURCE_NAME_30114",
+    ResourceSType = "Dyeing",
+    ResourceToCoinType = 101,
+    ResourceValue = 1000,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
+  [30115] = {
+    AccessKey = T.RT_4,
+    DetailDes = "RESOURCE_DESC_30115",
+    FunctionDes = "RESOURCE_FUNCTION_DYE",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Dye_14.T_Dye_14'",
+    IpDes = "RESOURCE_TEXT_30115",
+    ItemArchiveType = 1,
+    MaterialClassify = 3,
+    Rarity = 5,
+    ResourceId = 30115,
+    ResourceName = "RESOURCE_NAME_30115",
+    ResourceSType = "Dyeing",
+    ResourceToCoinType = 101,
+    ResourceValue = 1000,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
+  [30116] = {
+    AccessKey = T.RT_4,
+    DetailDes = "RESOURCE_DESC_30116",
+    FunctionDes = "RESOURCE_FUNCTION_DYE",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Dye_14.T_Dye_15'",
+    IpDes = "RESOURCE_TEXT_30116",
+    ItemArchiveType = 1,
+    MaterialClassify = 3,
+    Rarity = 5,
+    ResourceId = 30116,
+    ResourceName = "RESOURCE_NAME_30116",
+    ResourceSType = "Dyeing",
+    ResourceToCoinType = 101,
+    ResourceValue = 1000,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
+  [30117] = {
+    AccessKey = T.RT_4,
+    DetailDes = "RESOURCE_DESC_30117",
+    FunctionDes = "RESOURCE_FUNCTION_DYE",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Dye_13.T_Dye_13'",
+    IpDes = "RESOURCE_TEXT_30117",
+    ItemArchiveType = 1,
+    MaterialClassify = 3,
+    Rarity = 5,
+    ResourceId = 30117,
+    ResourceName = "RESOURCE_NAME_30117",
+    ResourceSType = "Dyeing",
+    ResourceToCoinType = 101,
+    ResourceValue = 1000,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
+  [30118] = {
+    AccessKey = T.RT_4,
+    DetailDes = "RESOURCE_DESC_30118",
+    FunctionDes = "RESOURCE_FUNCTION_DYE",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Dye_12",
+    IpDes = "RESOURCE_TEXT_30118",
+    ItemArchiveType = 1,
+    MaterialClassify = 3,
+    Rarity = 4,
+    ResourceId = 30118,
+    ResourceName = "RESOURCE_NAME_30118",
+    ResourceSType = "Dyeing",
+    ResourceToCoinType = 101,
+    ResourceValue = 300,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
+  [30119] = {
+    AccessKey = T.RT_4,
+    DetailDes = "RESOURCE_DESC_30119",
+    FunctionDes = "RESOURCE_FUNCTION_DYE",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Dye_12",
+    IpDes = "RESOURCE_TEXT_30119",
+    ItemArchiveType = 1,
+    MaterialClassify = 3,
+    Rarity = 5,
+    ResourceId = 30119,
+    ResourceName = "RESOURCE_NAME_30119",
+    ResourceSType = "Dyeing",
+    ResourceToCoinType = 101,
+    ResourceValue = 1000,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
   [40001] = {
     AccessKey = T.RT_47,
     BattleItemLimit = 5,
@@ -5970,8 +6325,8 @@ return ReadOnly("Resource", {
   [41001] = {
     AccessKey = {"Text_Event"},
     CameraName = "Char_Kaorou",
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41001",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Kaorou.T_Resource_Gesture_Kaorou",
@@ -5989,8 +6344,8 @@ return ReadOnly("Resource", {
   [41002] = {
     AccessKey = T.RT_44,
     CameraName = "Char_Zhixiang_01",
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41002",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Zhixiang.T_Resource_Gesture_Zhixiang",
@@ -6005,10 +6360,10 @@ return ReadOnly("Resource", {
     UseBPFunction = "Gesture"
   },
   [41003] = {
-    AccessKey = T.RT_58,
+    AccessKey = T.RT_60,
     CameraName = "Char_Saoba",
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41003",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Saozhou.T_Resource_Gesture_Saozhou",
@@ -6023,10 +6378,10 @@ return ReadOnly("Resource", {
     UseBPFunction = "Gesture"
   },
   [41004] = {
-    AccessKey = T.RT_58,
+    AccessKey = T.RT_60,
     CameraName = "Char_Caocong",
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41004",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Caocong.T_Resource_Gesture_Caocong",
@@ -6044,8 +6399,8 @@ return ReadOnly("Resource", {
   [41005] = {
     AccessKey = T.RT_44,
     CameraName = "Char_Zhixiang_02",
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41005",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Zhixiang.T_Resource_Gesture_Zhixiang",
@@ -6062,8 +6417,8 @@ return ReadOnly("Resource", {
   [41006] = {
     AccessKey = T.RT_44,
     CameraName = "Char_Zhixiang_03",
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41006",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Zhixiang.T_Resource_Gesture_Zhixiang",
@@ -6107,8 +6462,8 @@ return ReadOnly("Resource", {
   [41008] = {
     AccessKey = T.RT_44,
     CameraName = "Char_RangeWeapon",
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41008",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_RangeWeapon.T_Resource_Gesture_RangeWeapon",
@@ -6123,8 +6478,8 @@ return ReadOnly("Resource", {
   },
   [41009] = {
     CameraName = "Char_Gesture_Idle",
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41009",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Idle.T_Resource_Gesture_Idle",
@@ -6138,10 +6493,10 @@ return ReadOnly("Resource", {
     Type = "InfiniteBattleItem"
   },
   [41010] = {
-    AccessKey = T.RT_58,
+    AccessKey = T.RT_60,
     CameraName = "Char_Yaoren",
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41010",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_BiteBox.T_Resource_Gesture_BiteBox",
@@ -6157,8 +6512,8 @@ return ReadOnly("Resource", {
   },
   [41011] = {
     CameraName = "Char_Bed",
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41011",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Bed.T_Resource_Gesture_Bed",
@@ -6175,8 +6530,8 @@ return ReadOnly("Resource", {
   [41012] = {
     AccessKey = T.RT_4,
     CameraName = "Char_Violin",
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41012",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_ViolinDarkIndigo.T_Resource_Gesture_ViolinDarkIndigo",
@@ -6191,10 +6546,10 @@ return ReadOnly("Resource", {
     UseBPFunction = "Gesture"
   },
   [41013] = {
-    AccessKey = T.RT_59,
+    AccessKey = T.RT_52,
     CameraName = "Char_Fishing",
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41013",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Angling.T_Resource_Gesture_Angling",
@@ -6212,8 +6567,8 @@ return ReadOnly("Resource", {
     AccessKey = T.RT_4,
     CameraName = "Char_Car_01",
     CharColorVar = "Skin01",
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41014",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Skin_SaiqiCar01.Shop_Skin_SaiqiCar01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -6238,8 +6593,8 @@ return ReadOnly("Resource", {
   [41015] = {
     AccessKey = T.RT_4,
     CameraName = "Char_Violin_02",
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41015",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_ViolinCaramel.T_Resource_Gesture_ViolinCaramel",
@@ -6256,8 +6611,8 @@ return ReadOnly("Resource", {
   [41016] = {
     AccessKey = T.RT_4,
     CameraName = "Char_Violin_03",
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41016",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Violin.T_Resource_Gesture_Violin",
@@ -6275,8 +6630,8 @@ return ReadOnly("Resource", {
     AccessKey = T.RT_4,
     CameraName = "Char_Car_02",
     CharColorVar = "Skin01",
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41017",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Skin_SaiqiCar01.Shop_Skin_SaiqiCar01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -6301,8 +6656,8 @@ return ReadOnly("Resource", {
     AccessKey = T.RT_4,
     CameraName = "Char_Car_03",
     CharColorVar = "Skin01",
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41018",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Skin_SaiqiCar01.Shop_Skin_SaiqiCar01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -6326,8 +6681,8 @@ return ReadOnly("Resource", {
   [41019] = {
     AccessKey = T.RT_4,
     CameraName = "Char_Bubblegun",
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41019",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Bubblegun.T_Resource_Gesture_Bubblegun",
@@ -6345,8 +6700,8 @@ return ReadOnly("Resource", {
     AccessKey = T.RT_4,
     CameraName = "Char_Beach_01",
     CharColorVar = "Skin01",
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41020",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Baiheng01.Shop_Action_Baiheng01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -6360,6 +6715,7 @@ return ReadOnly("Resource", {
     ResourceName = "RESOURCE_NAME_41020",
     ResourceSType = "GestureItem",
     ResourceValue = -1,
+    SkyBoxIndex = 1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "InfiniteBattleItem",
     UIDisplayTime = 14,
@@ -6371,8 +6727,8 @@ return ReadOnly("Resource", {
     AccessKey = T.RT_4,
     CameraName = "Char_Beach_02",
     CharColorVar = "Skin01",
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41021",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Baiheng01.Shop_Action_Baiheng01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -6386,6 +6742,7 @@ return ReadOnly("Resource", {
     ResourceName = "RESOURCE_NAME_41021",
     ResourceSType = "GestureItem",
     ResourceValue = -1,
+    SkyBoxIndex = 1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "InfiniteBattleItem",
     UIDisplayTime = 14,
@@ -6397,8 +6754,8 @@ return ReadOnly("Resource", {
     AccessKey = T.RT_4,
     CameraName = "Char_Beach_03",
     CharColorVar = "Skin01",
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41022",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Baiheng01.Shop_Action_Baiheng01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -6412,6 +6769,7 @@ return ReadOnly("Resource", {
     ResourceName = "RESOURCE_NAME_41022",
     ResourceSType = "GestureItem",
     ResourceValue = -1,
+    SkyBoxIndex = 1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "InfiniteBattleItem",
     UIDisplayTime = 14,
@@ -6421,8 +6779,8 @@ return ReadOnly("Resource", {
   },
   [41023] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41023",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Show.T_Resource_Gesture_Show",
@@ -6438,8 +6796,8 @@ return ReadOnly("Resource", {
   },
   [41024] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41024",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Hello.T_Resource_Gesture_Hello",
@@ -6455,8 +6813,8 @@ return ReadOnly("Resource", {
   },
   [41025] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41025",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Nice.T_Resource_Gesture_Nice",
@@ -6473,8 +6831,8 @@ return ReadOnly("Resource", {
   },
   [41026] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41026",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_NoNoNo.T_Resource_Gesture_NoNoNo",
@@ -6491,8 +6849,8 @@ return ReadOnly("Resource", {
   },
   [41027] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41027",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_WellDone.T_Resource_Gesture_WellDone",
@@ -6509,8 +6867,8 @@ return ReadOnly("Resource", {
   },
   [41028] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41028",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_SkillGomoku.T_Resource_Gesture_SkillGomoku",
@@ -6526,8 +6884,8 @@ return ReadOnly("Resource", {
   },
   [41029] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41029",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_PunchLeft.T_Resource_Gesture_PunchLeft",
@@ -6543,8 +6901,8 @@ return ReadOnly("Resource", {
   },
   [41030] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41030",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_PunchRight.T_Resource_Gesture_PunchRight",
@@ -6560,13 +6918,13 @@ return ReadOnly("Resource", {
   },
   [41031] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41031",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_San.T_Resource_Gesture_San",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_06.T_Resource_Gesture_06",
     PlayAnim = "Gesture_San",
-    Rarity = 4,
+    Rarity = 5,
     ResourceId = 41031,
     ResourceName = "RESOURCE_NAME_41031",
     ResourceSType = "GestureItem",
@@ -6577,25 +6935,35 @@ return ReadOnly("Resource", {
   },
   [41032] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CameraName = "Char_Longyi",
+    CharColorVar = "Skin01",
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41032",
+    DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Zhiliu01.Shop_Action_Zhiliu01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_LungChair.T_Resource_Gesture_LungChair",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_DragonThrone_Golden.T_Resource_DragonThrone_Golden",
+    IconAnimationBP = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Battle_Menu/WBP_BattleMenu_Prop_SpLungChair_Gold.WBP_BattleMenu_Prop_SpLungChair_Gold'",
+    InteractPlayerNum = 2,
     PlayAnim = "Gesture_LungChair",
-    Rarity = 4,
+    Rarity = 6,
     ResourceId = 41032,
     ResourceName = "RESOURCE_NAME_41032",
     ResourceSType = "GestureItem",
     ResourceValue = -1,
+    SkyBoxIndex = 1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "InfiniteBattleItem",
-    UseBPFunction = "Gesture"
+    UIDisplayTime = 12.5,
+    UseBPFunction = "Gesture",
+    UseEffectType = "CreateMechanism",
+    UseParam = 41032
   },
   [41033] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CameraName = "Char_Shu",
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41033",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Electronscreen.T_Resource_Gesture_Electronscreen",
@@ -6611,8 +6979,9 @@ return ReadOnly("Resource", {
   },
   [41034] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CameraName = "Char_Shu",
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41034",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_PeachBlossom.T_Resource_Gesture_PeachBlossom",
@@ -6628,8 +6997,8 @@ return ReadOnly("Resource", {
   },
   [41035] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_56,
-    CombatConditionToast = T.RT_57,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
     DetailDes = "RESOURCE_DESC_41035",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Ginkgo.T_Resource_Gesture_Ginkgo",
@@ -6643,9 +7012,226 @@ return ReadOnly("Resource", {
     Type = "InfiniteBattleItem",
     UseBPFunction = "Gesture"
   },
+  [41036] = {
+    AccessKey = T.RT_4,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
+    DetailDes = "RESOURCE_DESC_41036",
+    FunctionDes = "RESOURCE_FUNCTION_ACTION",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Youya.T_Resource_Gesture_Youya",
+    PlayAnim = "Gesture_Dance02",
+    Rarity = 4,
+    ResourceId = 41036,
+    ResourceName = "RESOURCE_NAME_41036",
+    ResourceSType = "GestureItem",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "InfiniteBattleItem",
+    UseBPFunction = "Gesture"
+  },
+  [41037] = {
+    AccessKey = T.RT_4,
+    BattleItemLimit = 10,
+    DetailDes = "RESOURCE_DESC_41037",
+    FunctionDes = "RESOURCE_FUNCTION_ACTION",
+    FunctionVars = {EffectCreatureId = 12101},
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_0401.T_Resource_Gesture_0401",
+    Rarity = 4,
+    ResourceId = 41037,
+    ResourceName = "RESOURCE_NAME_41037",
+    ResourceSType = "GestureItem",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "BattleItem",
+    UseBPFunction = "CreateEffectCreature"
+  },
+  [41038] = {
+    AccessKey = T.RT_4,
+    BattleItemLimit = 10,
+    DetailDes = "RESOURCE_DESC_41038",
+    FunctionDes = "RESOURCE_FUNCTION_ACTION",
+    FunctionVars = {EffectCreatureId = 12102},
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_0403.T_Resource_Gesture_0403",
+    Rarity = 4,
+    ResourceId = 41038,
+    ResourceName = "RESOURCE_NAME_41038",
+    ResourceSType = "GestureItem",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "BattleItem",
+    UseBPFunction = "CreateEffectCreature"
+  },
+  [41039] = {
+    AccessKey = T.RT_4,
+    BattleItemLimit = 10,
+    DetailDes = "RESOURCE_DESC_41039",
+    FunctionDes = "RESOURCE_FUNCTION_ACTION",
+    FunctionVars = {EffectCreatureId = 12103},
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_0402.T_Resource_Gesture_0402",
+    Rarity = 4,
+    ResourceId = 41039,
+    ResourceName = "RESOURCE_NAME_41039",
+    ResourceSType = "GestureItem",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "BattleItem",
+    UseBPFunction = "CreateEffectCreature"
+  },
+  [41040] = {
+    AccessKey = T.RT_4,
+    CameraName = "Char_Longyi",
+    CharColorVar = "Skin01",
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
+    DetailDes = "RESOURCE_DESC_41040",
+    DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Zhiliu01.Shop_Action_Zhiliu01'",
+    FunctionDes = "RESOURCE_FUNCTION_ACTION",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_DragonThrone_Grey.T_Resource_DragonThrone_Grey",
+    IconAnimationBP = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Battle_Menu/WBP_BattleMenu_Prop_SpLungChair_Gray.WBP_BattleMenu_Prop_SpLungChair_Gray'",
+    InteractPlayerNum = 2,
+    PlayAnim = "Gesture_LungChair_02",
+    Rarity = 6,
+    ResourceId = 41040,
+    ResourceName = "RESOURCE_NAME_41040",
+    ResourceSType = "GestureItem",
+    ResourceValue = -1,
+    SkyBoxIndex = 1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "InfiniteBattleItem",
+    UIDisplayTime = 12.5,
+    UseBPFunction = "Gesture",
+    UseEffectType = "CreateMechanism",
+    UseParam = 41032
+  },
+  [41041] = {
+    AccessKey = T.RT_4,
+    CameraName = "Char_Longyi",
+    CharColorVar = "Skin01",
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
+    DetailDes = "RESOURCE_DESC_41041",
+    DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Zhiliu01.Shop_Action_Zhiliu01'",
+    FunctionDes = "RESOURCE_FUNCTION_ACTION",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_DragonThrone_Purple.T_Resource_DragonThrone_Purple",
+    IconAnimationBP = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Battle_Menu/WBP_BattleMenu_Prop_SpLungChair_Purple.WBP_BattleMenu_Prop_SpLungChair_Purple'",
+    InteractPlayerNum = 2,
+    PlayAnim = "Gesture_LungChair_03",
+    Rarity = 6,
+    ResourceId = 41041,
+    ResourceName = "RESOURCE_NAME_41041",
+    ResourceSType = "GestureItem",
+    ResourceValue = -1,
+    SkyBoxIndex = 1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "InfiniteBattleItem",
+    UIDisplayTime = 12.5,
+    UseBPFunction = "Gesture",
+    UseEffectType = "CreateMechanism",
+    UseParam = 41032
+  },
+  [41042] = {
+    AccessKey = T.RT_4,
+    BattleItemLimit = 10,
+    DetailDes = "RESOURCE_DESC_41042",
+    FunctionDes = "RESOURCE_FUNCTION_ACTION",
+    FunctionVars = {EffectCreatureId = 12001},
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_0501.T_Resource_Gesture_0501",
+    Rarity = 4,
+    ResourceId = 41042,
+    ResourceName = "RESOURCE_NAME_41042",
+    ResourceSType = "GestureItem",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "BattleItem",
+    UseBPFunction = "CreateEffectCreature"
+  },
+  [41043] = {
+    AccessKey = T.RT_4,
+    BattleItemLimit = 10,
+    DetailDes = "RESOURCE_DESC_41043",
+    FunctionDes = "RESOURCE_FUNCTION_ACTION",
+    FunctionVars = {EffectCreatureId = 12002},
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_0502.T_Resource_Gesture_0502",
+    Rarity = 4,
+    ResourceId = 41043,
+    ResourceName = "RESOURCE_NAME_41043",
+    ResourceSType = "GestureItem",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "BattleItem",
+    UseBPFunction = "CreateEffectCreature"
+  },
+  [41044] = {
+    AccessKey = T.RT_4,
+    BattleItemLimit = 10,
+    DetailDes = "RESOURCE_DESC_41044",
+    FunctionDes = "RESOURCE_FUNCTION_ACTION",
+    FunctionVars = {EffectCreatureId = 12003},
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_0503.T_Resource_Gesture_0503",
+    Rarity = 4,
+    ResourceId = 41044,
+    ResourceName = "RESOURCE_NAME_41044",
+    ResourceSType = "GestureItem",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "BattleItem",
+    UseBPFunction = "CreateEffectCreature"
+  },
+  [41045] = {
+    AccessKey = T.RT_4,
+    BattleItemLimit = 10,
+    DetailDes = "RESOURCE_DESC_41045",
+    FunctionDes = "RESOURCE_FUNCTION_ACTION",
+    FunctionVars = {EffectCreatureId = 12201},
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_03.T_Resource_Gesture_03",
+    Rarity = 4,
+    ResourceId = 41045,
+    ResourceName = "RESOURCE_NAME_41045",
+    ResourceSType = "GestureItem",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "BattleItem",
+    UseBPFunction = "CreateEffectCreature"
+  },
+  [41046] = {
+    AccessKey = T.RT_4,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
+    DetailDes = "RESOURCE_DESC_41046",
+    FunctionDes = "RESOURCE_FUNCTION_ACTION",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_02.T_Resource_Gesture_02",
+    PlayAnim = "Gesture_Dance03",
+    Rarity = 4,
+    ResourceId = 41046,
+    ResourceName = "RESOURCE_NAME_41046",
+    ResourceSType = "GestureItem",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "InfiniteBattleItem",
+    UseBPFunction = "Gesture"
+  },
+  [41047] = {
+    AccessKey = T.RT_4,
+    CombatConditionID = T.RT_58,
+    CombatConditionToast = T.RT_59,
+    DetailDes = "RESOURCE_DESC_41047",
+    FunctionDes = "RESOURCE_FUNCTION_ACTION",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_01.T_Resource_Gesture_01",
+    PlayAnim = "Gesture_Saqian",
+    Rarity = 4,
+    ResourceId = 41047,
+    ResourceName = "RESOURCE_NAME_41047",
+    ResourceSType = "GestureItem",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "InfiniteBattleItem",
+    UseBPFunction = "Gesture"
+  },
   [42001] = {
+    CombatConditionID = T.RT_61,
+    CombatConditionToast = T.RT_62,
     FunctionDes = "RESOURCE_FUNCTION_EXPLORE",
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_CentralSquare_Equip.T_Icon_CentralSquare_Equip",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_CentralSquare_Equip01.T_Icon_CentralSquare_Equip01",
     Rarity = 4,
     ResourceId = 42001,
     ResourceName = "RESOURCE_NAME_42001",
@@ -6657,6 +7243,8 @@ return ReadOnly("Resource", {
     UseParam = 42001
   },
   [42002] = {
+    CombatConditionID = T.RT_61,
+    CombatConditionToast = T.RT_62,
     DetailDes = "RESOURCE_DESC_42002",
     FunctionDes = "RESOURCE_FUNCTION_EXPLORE",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_CentralSquare_Equip.T_Icon_CentralSquare_Equip",
@@ -6671,6 +7259,78 @@ return ReadOnly("Resource", {
     UseEffectType = "UseBattleProp",
     UseParam = 42002
   },
+  [49996] = {
+    CombatConditionID = T.RT_63,
+    CombatConditionToast = T.RT_64,
+    DetailDes = "RESOURCE_DESC_49996",
+    FunctionDes = "RESOURCE_FUNCTION_Mount",
+    FunctionVars = {Id = 1003, ResourceId = 49996},
+    Icon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_Gesture_0401.T_Mounts_Gesture_0401",
+    MaterialClassify = 3,
+    Rarity = 4,
+    ResourceId = 49996,
+    ResourceName = "RESOURCE_NAME_49996",
+    ResourceSType = "MountItem",
+    ResourceValue = -1,
+    SkyBoxIndex = 2,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "InfiniteBattleItem",
+    UseBPFunction = "MountOn"
+  },
+  [49997] = {
+    CombatConditionID = T.RT_63,
+    CombatConditionToast = T.RT_64,
+    DetailDes = "RESOURCE_DESC_49997",
+    FunctionDes = "RESOURCE_FUNCTION_Mount",
+    FunctionVars = {Id = 1002, ResourceId = 49997},
+    Icon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_Gesture_0301.T_Mounts_Gesture_0301",
+    MaterialClassify = 3,
+    Rarity = 5,
+    ResourceId = 49997,
+    ResourceName = "RESOURCE_NAME_49997",
+    ResourceSType = "MountItem",
+    ResourceValue = -1,
+    SkyBoxIndex = 2,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "InfiniteBattleItem",
+    UseBPFunction = "MountOn"
+  },
+  [49998] = {
+    CombatConditionID = T.RT_63,
+    CombatConditionToast = T.RT_64,
+    DetailDes = "RESOURCE_DESC_49998",
+    FunctionDes = "RESOURCE_FUNCTION_Mount",
+    FunctionVars = {Id = 1001, ResourceId = 49998},
+    Icon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_Gesture_0101.T_Mounts_Gesture_0101",
+    MaterialClassify = 3,
+    Rarity = 6,
+    ResourceId = 49998,
+    ResourceName = "RESOURCE_NAME_49998",
+    ResourceSType = "MountItem",
+    ResourceValue = -1,
+    SkyBoxIndex = 2,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "InfiniteBattleItem",
+    UseBPFunction = "MountOn"
+  },
+  [49999] = {
+    CombatConditionID = T.RT_63,
+    CombatConditionToast = T.RT_64,
+    DetailDes = "RESOURCE_DESC_49999",
+    FunctionDes = "RESOURCE_FUNCTION_Mount",
+    FunctionVars = {Id = 1000, ResourceId = 49999},
+    Icon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_Gesture_0201.T_Mounts_Gesture_0201",
+    MaterialClassify = 3,
+    Rarity = 4,
+    ResourceId = 49999,
+    ResourceName = "RESOURCE_NAME_49999",
+    ResourceSType = "MountItem",
+    ResourceValue = -1,
+    SkyBoxIndex = 2,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "InfiniteBattleItem",
+    UseBPFunction = "MountOn"
+  },
   [110001] = {
     DetailDes = "RESOURCE_DESC_OPTWEAPON_1",
     FunctionDes = "RESOURCE_FUNCTION_OPTWEAPON_1",
@@ -6684,6 +7344,20 @@ return ReadOnly("Resource", {
     Type = "Rare",
     UseEffectType = "SelectWeapon",
     UseParam = 1001
+  },
+  [110002] = {
+    DetailDes = "RESOURCE_DESC_OPTWEAPON_1",
+    FunctionDes = "RESOURCE_FUNCTION_OPTWEAPON_1",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_OptPack_Weapon01.T_OptPack_Weapon01",
+    MaterialClassify = 7,
+    Rarity = 5,
+    ResourceId = 110002,
+    ResourceName = "RESOURCE_NAME_110001",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Rare",
+    UseEffectType = "SelectCharAccessory",
+    UseParam = 5201
   },
   [110006] = {
     DetailDes = "RESOURCE_DESC_GENERALSKIN_1",
@@ -6740,6 +7414,34 @@ return ReadOnly("Resource", {
     Type = "Rare",
     UseEffectType = "SelectResource",
     UseParam = 4003
+  },
+  [110015] = {
+    DetailDes = "RESOURCE_DESC_GENERALSKIN_3",
+    FunctionDes = "RESOURCE_FUNCTION_GENERALSKIN_1",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_JKSkin.T_Pack_JKSkin'",
+    MaterialClassify = 7,
+    Rarity = 5,
+    ResourceId = 110015,
+    ResourceName = "RESOURCE_NAME_110015",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Rare",
+    UseEffectType = "SelectGeneralSkin",
+    UseParam = 5004
+  },
+  [110016] = {
+    DetailDes = "RESOURCE_DESC_GENERALSKIN_4",
+    FunctionDes = "RESOURCE_FUNCTION_GENERALSKIN_1",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_SnowmanSkin.T_Pack_SnowmanSkin'",
+    MaterialClassify = 7,
+    Rarity = 5,
+    ResourceId = 110016,
+    ResourceName = "RESOURCE_NAME_110016",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Rare",
+    UseEffectType = "SelectGeneralSkin",
+    UseParam = 5005
   },
   [1001101] = {
     AccessKey = T.RT_5,
@@ -9654,7 +10356,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4010007] = {
-    AccessKey = T.RT_51,
+    AccessKey = T.RT_53,
     DetailDes = "RESOURCE_DESC_4010007",
     FunctionDes = "RESOURCE_FUNCTION_FORGE",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pickup_Shell",
@@ -9670,7 +10372,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4010008] = {
-    AccessKey = T.RT_52,
+    AccessKey = T.RT_54,
     DetailDes = "RESOURCE_DESC_4010008",
     FunctionDes = "RESOURCE_FUNCTION_FORGE",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pickup_Grass01",
@@ -9802,7 +10504,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4010015] = {
-    AccessKey = T.RT_53,
+    AccessKey = T.RT_55,
     DetailDes = "RESOURCE_DESC_4010015",
     FunctionDes = "RESOURCE_FUNCTION_FORGE",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pickup_02.T_Pickup_02'",
@@ -9855,7 +10557,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4010018] = {
-    AccessKey = T.RT_54,
+    AccessKey = T.RT_56,
     DetailDes = "RESOURCE_DESC_4010018",
     FunctionDes = "RESOURCE_FUNCTION_FORGE",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pickup_Skink.T_Pickup_Skink'",
@@ -9892,7 +10594,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4010020] = {
-    AccessKey = T.RT_53,
+    AccessKey = T.RT_55,
     DetailDes = "RESOURCE_DESC_4010020",
     FunctionDes = "RESOURCE_FUNCTION_FORGE",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pickup_Butterfly03.T_Pickup_Butterfly03'",
@@ -9908,7 +10610,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4020001] = {
-    AccessKey = T.RT_51,
+    AccessKey = T.RT_53,
     DetailDes = "RESOURCE_DESC_4020001",
     FunctionDes = "RESOURCE_FUNCTION_FORGE",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pickup_Nut01",
@@ -9924,7 +10626,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4020002] = {
-    AccessKey = T.RT_51,
+    AccessKey = T.RT_53,
     DetailDes = "RESOURCE_DESC_4020002",
     FunctionDes = "RESOURCE_FUNCTION_FORGE",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pickup_Nut02",
@@ -9940,7 +10642,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4020003] = {
-    AccessKey = T.RT_55,
+    AccessKey = T.RT_57,
     DetailDes = "RESOURCE_DESC_4020003",
     FunctionDes = "RESOURCE_FUNCTION_FORGE",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pickup_Stone01",
@@ -9956,7 +10658,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4020004] = {
-    AccessKey = T.RT_55,
+    AccessKey = T.RT_57,
     DetailDes = "RESOURCE_DESC_4020004",
     FunctionDes = "RESOURCE_FUNCTION_FORGE",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pickup_Stone02",
@@ -9972,7 +10674,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4020005] = {
-    AccessKey = T.RT_52,
+    AccessKey = T.RT_54,
     DetailDes = "RESOURCE_DESC_4020005",
     FunctionDes = "RESOURCE_FUNCTION_FORGE",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pickup_Stomach",
@@ -9988,7 +10690,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4020006] = {
-    AccessKey = T.RT_54,
+    AccessKey = T.RT_56,
     DetailDes = "RESOURCE_DESC_4020006",
     FunctionDes = "RESOURCE_FUNCTION_FORGE",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pickup_03.T_Pickup_03'",
@@ -10088,7 +10790,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5011010] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5011010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_Normal_1",
@@ -10104,7 +10806,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5011011] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5011010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_Normal_1_1",
@@ -10120,7 +10822,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5011020] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5011020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_Normal_2",
@@ -10136,7 +10838,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5011021] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5011020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_Normal_2_1",
@@ -10152,7 +10854,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5011030] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5011030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_Normal_3",
@@ -10168,7 +10870,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5011031] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5011030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_Normal_3_1",
@@ -10184,7 +10886,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5012010] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5012010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_Normal_1",
@@ -10200,7 +10902,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5012011] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5012010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_Normal_1_1",
@@ -10216,7 +10918,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5012020] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5012020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_Normal_2",
@@ -10232,7 +10934,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5012021] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5012020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_Normal_2_1",
@@ -10248,7 +10950,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5012030] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5012030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_Normal_3",
@@ -10264,7 +10966,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5012031] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5012030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_Normal_3_1",
@@ -10280,7 +10982,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5013010] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5013010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_Normal_1",
@@ -10296,7 +10998,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5013011] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5013010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_Normal_1_1",
@@ -10312,7 +11014,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5013020] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5013020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_Normal_2",
@@ -10328,7 +11030,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5013021] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5013020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_Normal_2_1",
@@ -10344,7 +11046,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5013030] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5013030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_Normal_3",
@@ -10360,7 +11062,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5013031] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5013030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_Normal_3_1",
@@ -10376,7 +11078,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5021010] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5021010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_Village_1",
@@ -10392,7 +11094,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5021011] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5021010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_Village_1_1",
@@ -10408,7 +11110,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5021020] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5021020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_Village_2",
@@ -10424,7 +11126,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5021021] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5021020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_Village_2_1",
@@ -10440,7 +11142,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5021030] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5021030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_Village_4",
@@ -10456,7 +11158,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5021031] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5021030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_Village_4_1",
@@ -10472,7 +11174,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5021040] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5021040",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_Village_3",
@@ -10488,7 +11190,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5021041] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5021040",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_Village_3_1",
@@ -10504,7 +11206,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5021050] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5021050",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_Village_5",
@@ -10520,7 +11222,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5021051] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5021050",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_Village_5_1",
@@ -10536,7 +11238,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5022010] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5022010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_1",
@@ -10552,7 +11254,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5022011] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5022010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_1_1",
@@ -10568,7 +11270,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5022020] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5022020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_2",
@@ -10584,7 +11286,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5022021] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5022020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_2_1",
@@ -10600,7 +11302,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5022030] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5022030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_4",
@@ -10616,7 +11318,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5022031] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5022030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_4_1",
@@ -10632,7 +11334,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5022040] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5022040",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_3",
@@ -10648,7 +11350,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5022041] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5022040",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_3_1",
@@ -10664,7 +11366,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5022050] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5022050",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_5",
@@ -10680,7 +11382,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5022051] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5022050",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_5_1",
@@ -10696,7 +11398,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5023010] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5023010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_IceLake_3",
@@ -10712,7 +11414,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5023011] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5023010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_IceLake_3_1",
@@ -10728,7 +11430,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5023020] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5023020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_IceLake_2",
@@ -10744,7 +11446,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5023021] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5023020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_IceLake_2_1",
@@ -10760,7 +11462,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5023030] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5023030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_IceLake_4",
@@ -10776,7 +11478,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5023031] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5023030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_IceLake_4_1",
@@ -10792,7 +11494,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5023040] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5023040",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_IceLake_1",
@@ -10808,7 +11510,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5023041] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5023040",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_IceLake_1_1",
@@ -10824,7 +11526,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5023050] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5023050",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_IceLake_5",
@@ -10840,7 +11542,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5023051] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5023050",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_IceLake_5_1",
@@ -10856,7 +11558,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5024010] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5024010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_1",
@@ -10872,7 +11574,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5024011] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5024010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_1_1",
@@ -10888,7 +11590,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5024020] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5024020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_2",
@@ -10904,7 +11606,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5024021] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5024020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_2_1",
@@ -10920,7 +11622,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5024030] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5024030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_4",
@@ -10936,7 +11638,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5024031] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5024030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_4_1",
@@ -10952,7 +11654,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5024040] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5024040",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_3",
@@ -10968,7 +11670,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5024041] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5024040",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_3_1",
@@ -10984,7 +11686,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5024050] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5024050",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_5",
@@ -11000,7 +11702,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5024051] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5024050",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_5_1",
@@ -11016,7 +11718,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5025010] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5025010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_Sew_1",
@@ -11032,7 +11734,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5025011] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5025010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_Sew_1_1",
@@ -11048,7 +11750,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5025020] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5025020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_Sew_2",
@@ -11064,7 +11766,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5025021] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5025020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_Sew_2_1",
@@ -11080,7 +11782,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5025030] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5025030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_Sew_4",
@@ -11096,7 +11798,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5025031] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5025030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_Sew_4_1",
@@ -11112,7 +11814,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5025040] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5025040",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_Sew_3",
@@ -11128,7 +11830,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5025041] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5025040",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_Sew_3_1",
@@ -11144,7 +11846,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5025050] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5025050",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_Sew_5",
@@ -11160,7 +11862,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5025051] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5025050",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_Sew_5_1",
@@ -11176,7 +11878,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5026010] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5026010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_6",
@@ -11192,7 +11894,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5026011] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5026010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_6_1",
@@ -11208,7 +11910,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5026020] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5026020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_7",
@@ -11224,7 +11926,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5026021] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5026020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_7_1",
@@ -11240,7 +11942,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5026030] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5026030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_8",
@@ -11256,7 +11958,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5026031] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5026030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_8_1",
@@ -11272,7 +11974,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5026040] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5026040",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_9",
@@ -11288,7 +11990,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5026041] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5026040",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_9_1",
@@ -11304,7 +12006,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5026050] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5026050",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_10",
@@ -11320,7 +12022,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5026051] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5026050",
     FunctionDes = "RESOURCE_FUNCTION_FISH_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_10_1",
@@ -11336,7 +12038,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5027010] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5027010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_6",
@@ -11352,7 +12054,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5027011] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5027010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_6_1",
@@ -11368,7 +12070,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5027020] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5027020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_7",
@@ -11384,7 +12086,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5027021] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5027020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_7_1",
@@ -11400,7 +12102,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5027030] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5027030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_8",
@@ -11416,7 +12118,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5027031] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5027030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_8_1",
@@ -11432,7 +12134,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5027040] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5027040",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_9",
@@ -11448,7 +12150,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5027041] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5027040",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_9_1",
@@ -11464,7 +12166,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5027050] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5027050",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_10",
@@ -11480,7 +12182,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5027051] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5027050",
     FunctionDes = "RESOURCE_FUNCTION_FISH_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_10_1",
@@ -11496,7 +12198,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5028010] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5028010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_East_1",
@@ -11512,7 +12214,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5028011] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5028010",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_East_1_1",
@@ -11528,7 +12230,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5028020] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5028020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_East_2",
@@ -11544,7 +12246,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5028021] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5028020",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_East_2_1",
@@ -11560,7 +12262,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5028030] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5028030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_East_3",
@@ -11576,7 +12278,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5028031] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5028030",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_East_3_1",
@@ -11592,7 +12294,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5028040] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5028040",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_East_4",
@@ -11608,7 +12310,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5028041] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5028040",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_East_4_1",
@@ -11624,7 +12326,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5028050] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5028050",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_East_5",
@@ -11640,7 +12342,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5028051] = {
-    AccessKey = T.RT_60,
+    AccessKey = T.RT_65,
     DetailDes = "RESOURCE_DESC_5028050",
     FunctionDes = "RESOURCE_FUNCTION_FISH_3",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_East_5_1",
@@ -11656,7 +12358,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5110100] = {
-    AccessKey = T.RT_59,
+    AccessKey = T.RT_52,
     DetailDes = "RESOURCE_DESC_5110100",
     FunctionDes = "RESOURCE_FUNCTION_FISHINGROD",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_FishingRod_Normal_1",
@@ -11671,7 +12373,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5110200] = {
-    AccessKey = T.RT_59,
+    AccessKey = T.RT_52,
     DetailDes = "RESOURCE_DESC_5110200",
     FunctionDes = "RESOURCE_FUNCTION_FISHINGROD",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_FishingRod_Normal_2",
@@ -11686,7 +12388,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5110300] = {
-    AccessKey = T.RT_59,
+    AccessKey = T.RT_52,
     DetailDes = "RESOURCE_DESC_5110300",
     FunctionDes = "RESOURCE_FUNCTION_FISHINGROD",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_FishingRod_Normal_3",
@@ -11701,7 +12403,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5110400] = {
-    AccessKey = T.RT_59,
+    AccessKey = T.RT_52,
     DetailDes = "RESOURCE_DESC_5110400",
     FunctionDes = "RESOURCE_FUNCTION_FISHINGROD",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_FishingRod_Normal_4",
@@ -11716,7 +12418,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5110500] = {
-    AccessKey = T.RT_59,
+    AccessKey = T.RT_52,
     DetailDes = "RESOURCE_DESC_5110500",
     FunctionDes = "RESOURCE_FUNCTION_FISHINGROD",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_FishingRod_Normal_5",
@@ -11730,8 +12432,38 @@ return ReadOnly("Resource", {
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary"
   },
+  [5110601] = {
+    AccessKey = T.RT_52,
+    DetailDes = "RESOURCE_DESC_5110601",
+    FunctionDes = "RESOURCE_FUNCTION_FISHINGROD",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_FishingRod_East01",
+    IpDes = "RESOURCE_TEXT_5110601",
+    ItemArchiveType = 1,
+    MaterialClassify = 6,
+    Rarity = 5,
+    ResourceId = 5110601,
+    ResourceName = "RESOURCE_NAME_5110601",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
+  [5110602] = {
+    AccessKey = T.RT_52,
+    DetailDes = "RESOURCE_DESC_5110602",
+    FunctionDes = "RESOURCE_FUNCTION_FISHINGROD",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_FishingRod_East03",
+    IpDes = "RESOURCE_TEXT_5110602",
+    ItemArchiveType = 1,
+    MaterialClassify = 6,
+    Rarity = 5,
+    ResourceId = 5110602,
+    ResourceName = "RESOURCE_NAME_5110602",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
   [5210100] = {
-    AccessKey = T.RT_59,
+    AccessKey = T.RT_52,
     DetailDes = "RESOURCE_DESC_5210100",
     FunctionDes = "RESOURCE_FUNCTION_FISHINGLURE_1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_FishingLure_Normal",
@@ -11746,7 +12478,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5210200] = {
-    AccessKey = T.RT_59,
+    AccessKey = T.RT_52,
     DetailDes = "RESOURCE_DESC_5210200",
     FunctionDes = "RESOURCE_FUNCTION_FISHINGLURE_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_FishingLure_Special_3",
@@ -11761,7 +12493,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5210300] = {
-    AccessKey = T.RT_59,
+    AccessKey = T.RT_52,
     DetailDes = "RESOURCE_DESC_5210300",
     FunctionDes = "RESOURCE_FUNCTION_FISHINGLURE_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_FishingLure_Special_1",
@@ -11776,7 +12508,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5210400] = {
-    AccessKey = T.RT_59,
+    AccessKey = T.RT_52,
     DetailDes = "RESOURCE_DESC_5210400",
     FunctionDes = "RESOURCE_FUNCTION_FISHINGLURE_2",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_FishingLure_Special_2",
@@ -11802,6 +12534,837 @@ return ReadOnly("Resource", {
     Sound = "SOUND_ITEM_METAL",
     Type = "Rare"
   },
+  [6000002] = {
+    CombatConditionID = T.RT_61,
+    CombatConditionToast = T.RT_62,
+    DetailDes = "RESOURCE_DESC_6000002",
+    FunctionDes = "RESOURCE_FUNCTION_6000002",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_CoinActivityFool.T_Resource_CoinActivityFool",
+    Rarity = 5,
+    ResourceId = 6000002,
+    ResourceName = "RESOURCE_NAME_6000002",
+    ResourceSType = "EventItem",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "InfiniteBattleItem",
+    UseEffectType = "UseAFDGesture"
+  },
+  [6000003] = {
+    DetailDes = "UI_Accessory_Desc_10087",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head41.T_Fashion_Head41",
+    Rarity = 4,
+    ResourceId = 6000003,
+    ResourceName = "UI_Accessory_Name_10089",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AFDayAccessory",
+    UseParam = 10089
+  },
+  [6100001] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item02.T_Activity_Autochess_Item02'",
+    Rarity = 3,
+    ResourceId = 6100001,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_1",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
+  [6100002] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item02.T_Activity_Autochess_Item02'",
+    Rarity = 3,
+    ResourceId = 6100002,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_2",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
+  [6100003] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item01.T_Activity_Autochess_Item01'",
+    Rarity = 3,
+    ResourceId = 6100003,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_3",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
+  [6100004] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item02.T_Activity_Autochess_Item02'",
+    Rarity = 3,
+    ResourceId = 6100004,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_4",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
+  [6100005] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item02.T_Activity_Autochess_Item02'",
+    Rarity = 3,
+    ResourceId = 6100005,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_5",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 5
+  },
+  [6100006] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item01.T_Activity_Autochess_Item01'",
+    Rarity = 3,
+    ResourceId = 6100006,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_6",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 6
+  },
+  [6100007] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item01.T_Activity_Autochess_Item01'",
+    Rarity = 3,
+    ResourceId = 6100007,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_7",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 7
+  },
+  [6100008] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item02.T_Activity_Autochess_Item02'",
+    Rarity = 3,
+    ResourceId = 6100008,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_8",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 8
+  },
+  [6100009] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item01.T_Activity_Autochess_Item01'",
+    Rarity = 3,
+    ResourceId = 6100009,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_9",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 9
+  },
+  [6100010] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item03.T_Activity_Autochess_Item03'",
+    Rarity = 4,
+    ResourceId = 6100010,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_10",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 10
+  },
+  [6100011] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item03.T_Activity_Autochess_Item03'",
+    Rarity = 4,
+    ResourceId = 6100011,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_11",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 11
+  },
+  [6100012] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item03.T_Activity_Autochess_Item03'",
+    Rarity = 4,
+    ResourceId = 6100012,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_12",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 12
+  },
+  [6100013] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item03.T_Activity_Autochess_Item03'",
+    Rarity = 4,
+    ResourceId = 6100013,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_13",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 13
+  },
+  [6100014] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item04.T_Activity_Autochess_Item04'",
+    Rarity = 4,
+    ResourceId = 6100014,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_14",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 14
+  },
+  [6100015] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item04.T_Activity_Autochess_Item04'",
+    Rarity = 4,
+    ResourceId = 6100015,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_15",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 15
+  },
+  [6100016] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item04.T_Activity_Autochess_Item04'",
+    Rarity = 4,
+    ResourceId = 6100016,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_16",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 16
+  },
+  [6100017] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item04.T_Activity_Autochess_Item04'",
+    Rarity = 4,
+    ResourceId = 6100017,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_17",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 17
+  },
+  [6100018] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item03.T_Activity_Autochess_Item03'",
+    Rarity = 4,
+    ResourceId = 6100018,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_18",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 18
+  },
+  [6100019] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item04.T_Activity_Autochess_Item04'",
+    Rarity = 4,
+    ResourceId = 6100019,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_19",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 19
+  },
+  [6100020] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item03.T_Activity_Autochess_Item03'",
+    Rarity = 4,
+    ResourceId = 6100020,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_20",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 20
+  },
+  [6100021] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item04.T_Activity_Autochess_Item04'",
+    Rarity = 4,
+    ResourceId = 6100021,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_21",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 21
+  },
+  [6100022] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item03.T_Activity_Autochess_Item03'",
+    Rarity = 4,
+    ResourceId = 6100022,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_22",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 22
+  },
+  [6100023] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item03.T_Activity_Autochess_Item03'",
+    Rarity = 4,
+    ResourceId = 6100023,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_23",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 23
+  },
+  [6100024] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item06.T_Activity_Autochess_Item06'",
+    Rarity = 5,
+    ResourceId = 6100024,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_24",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
+  [6100025] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item05.T_Activity_Autochess_Item05'",
+    Rarity = 5,
+    ResourceId = 6100025,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_25",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 25
+  },
+  [6100026] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item06.T_Activity_Autochess_Item06'",
+    Rarity = 5,
+    ResourceId = 6100026,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_26",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 26
+  },
+  [6100027] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item05.T_Activity_Autochess_Item05'",
+    Rarity = 5,
+    ResourceId = 6100027,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_27",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 27
+  },
+  [6100028] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item05.T_Activity_Autochess_Item05'",
+    Rarity = 5,
+    ResourceId = 6100028,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_28",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 28
+  },
+  [6100029] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item05.T_Activity_Autochess_Item05'",
+    Rarity = 5,
+    ResourceId = 6100029,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_29",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 29
+  },
+  [6100030] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item06.T_Activity_Autochess_Item06'",
+    Rarity = 5,
+    ResourceId = 6100030,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_30",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
+  [6100031] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item06.T_Activity_Autochess_Item06'",
+    Rarity = 5,
+    ResourceId = 6100031,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_31",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 31
+  },
+  [6100032] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item06.T_Activity_Autochess_Item06'",
+    Rarity = 5,
+    ResourceId = 6100032,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_32",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
+  [6100033] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item05.T_Activity_Autochess_Item05'",
+    Rarity = 5,
+    ResourceId = 6100033,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_33",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 33
+  },
+  [6100034] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item05.T_Activity_Autochess_Item05'",
+    Rarity = 5,
+    ResourceId = 6100034,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_34",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 34
+  },
+  [6100035] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item05.T_Activity_Autochess_Item05'",
+    Rarity = 5,
+    ResourceId = 6100035,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_35",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
+  [6100036] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100001",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item05.T_Activity_Autochess_Item05'",
+    Rarity = 5,
+    ResourceId = 6100036,
+    ResourceName = "UI_WEAPON_NAME_AutoChess_36",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockWeapon",
+    UseParam = 36
+  },
+  [6100101] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100101",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Gr_Jichong.T_Head_Gr_Jichong",
+    ResourceId = 6100101,
+    ResourceName = "Mon_Name_AutoChess_1",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
+  [6100102] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100101",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Gr_Youji.T_Head_Gr_Youji",
+    ResourceId = 6100102,
+    ResourceName = "Mon_Name_AutoChess_2",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
+  [6100103] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100101",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Gr_Piaofu.T_Head_Gr_Piaofu",
+    ResourceId = 6100103,
+    ResourceName = "Mon_Name_AutoChess_3",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockMonster",
+    UseParam = 3
+  },
+  [6100104] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100101",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Gr_Baotu.T_Head_Gr_Baotu",
+    ResourceId = 6100104,
+    ResourceName = "Mon_Name_AutoChess_4",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockMonster",
+    UseParam = 4
+  },
+  [6100105] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100101",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_GR_Longcao.T_Head_GR_Longcao",
+    ResourceId = 6100105,
+    ResourceName = "Mon_Name_AutoChess_5",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockMonster",
+    UseParam = 5
+  },
+  [6100106] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100101",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Gr_Jichong_C01.T_Head_Gr_Jichong_C01",
+    ResourceId = 6100106,
+    ResourceName = "Mon_Name_AutoChess_6",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockMonster",
+    UseParam = 6
+  },
+  [6100107] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100101",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Gr_Youji_C01.T_Head_Gr_Youji_C01",
+    ResourceId = 6100107,
+    ResourceName = "Mon_Name_AutoChess_7",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockMonster",
+    UseParam = 7
+  },
+  [6100108] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100101",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Juji.T_Head_Jt_Juji",
+    ResourceId = 6100108,
+    ResourceName = "Mon_Name_AutoChess_8",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockMonster",
+    UseParam = 8
+  },
+  [6100109] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100101",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Pizhuo.T_Head_Jt_Pizhuo",
+    ResourceId = 6100109,
+    ResourceName = "Mon_Name_AutoChess_9",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
+  [6100110] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100101",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Ranger.T_Head_Jt_Ranger",
+    ResourceId = 6100110,
+    ResourceName = "Mon_Name_AutoChess_10",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
+  [6100111] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100101",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Zhihui.T_Head_Jt_Zhihui",
+    ResourceId = 6100111,
+    ResourceName = "Mon_Name_AutoChess_11",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockMonster",
+    UseParam = 11
+  },
+  [6100112] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100101",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Zhiren.T_Head_Jt_Zhiren",
+    ResourceId = 6100112,
+    ResourceName = "Mon_Name_AutoChess_12",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockMonster",
+    UseParam = 12
+  },
+  [6100113] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100101",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Ranger_C01.T_Head_Jt_Ranger_C01",
+    ResourceId = 6100113,
+    ResourceName = "Mon_Name_AutoChess_13",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockMonster",
+    UseParam = 13
+  },
+  [6100114] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100101",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Tuji_C01.T_Head_Jt_Tuji_C01",
+    ResourceId = 6100114,
+    ResourceName = "Mon_Name_AutoChess_14",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockMonster",
+    UseParam = 14
+  },
+  [6100115] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100101",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_JT_Jingjie.T_Head_JT_Jingjie",
+    ResourceId = 6100115,
+    ResourceName = "Mon_Name_AutoChess_15",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockMonster",
+    UseParam = 15
+  },
+  [6100116] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100101",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jh_Zhishi.T_Head_Jh_Zhishi",
+    ResourceId = 6100116,
+    ResourceName = "Mon_Name_AutoChess_16",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
+  [6100117] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100101",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jh_Xianfeng.T_Head_Jh_Xianfeng",
+    ResourceId = 6100117,
+    ResourceName = "Mon_Name_AutoChess_17",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
+  [6100118] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100101",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jh_Shenfu.T_Head_Jh_Shenfu",
+    ResourceId = 6100118,
+    ResourceName = "Mon_Name_AutoChess_18",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockMonster",
+    UseParam = 18
+  },
+  [6100119] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100101",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_SQ_Yinxie.T_Head_SQ_Yinxie",
+    ResourceId = 6100119,
+    ResourceName = "Mon_Name_AutoChess_19",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockMonster",
+    UseParam = 19
+  },
+  [6100120] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100101",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_SQ_Dufeng.T_Head_SQ_Dufeng",
+    ResourceId = 6100120,
+    ResourceName = "Mon_Name_AutoChess_20",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockMonster",
+    UseParam = 20
+  },
+  [6100121] = {
+    AccessKey = T.RT_45,
+    FunctionDes = "RESOURCE_DESC_6100101",
+    HoldDisplayRule = "Hide",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_SQ_Niaopao.T_Head_SQ_Niaopao",
+    ResourceId = 6100121,
+    ResourceName = "Mon_Name_AutoChess_21",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "AutoChessUnlockMonster",
+    UseParam = 21
+  },
+  [6100122] = {
+    FunctionDes = "RESOURCE_DESC_6100122",
+    HoldDisplayRule = "Hide",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Coin02.T_Activity_Autochess_Coin02'",
+    Rarity = 5,
+    ResourceId = 6100122,
+    ResourceName = "RESOURCE_NAME_6100122",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary"
+  },
   [31001001] = {
     DetailDes = "RESOURCE_DESC_MUSIC",
     FunctionDes = "RESOURCE_FUNCTION_MUSIC",
@@ -11810,6 +13373,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31001001,
     ResourceName = "RESOURCE_NAME_31001001",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -11825,6 +13389,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31001002,
     ResourceName = "RESOURCE_NAME_31001002",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -11840,6 +13405,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31001003,
     ResourceName = "RESOURCE_NAME_31001003",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -11855,6 +13421,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31001004,
     ResourceName = "RESOURCE_NAME_31001004",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -11870,6 +13437,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31001005,
     ResourceName = "RESOURCE_NAME_31001005",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -11885,6 +13453,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31001006,
     ResourceName = "RESOURCE_NAME_31001006",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -11900,6 +13469,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31002001,
     ResourceName = "RESOURCE_NAME_31002001",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -11915,6 +13485,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31002002,
     ResourceName = "RESOURCE_NAME_31002002",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -11930,6 +13501,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31002003,
     ResourceName = "RESOURCE_NAME_31002003",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -11945,6 +13517,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31003001,
     ResourceName = "RESOURCE_NAME_31003001",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -11960,6 +13533,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31003002,
     ResourceName = "RESOURCE_NAME_31003002",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -11975,6 +13549,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31003003,
     ResourceName = "RESOURCE_NAME_31003003",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -11990,6 +13565,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31003004,
     ResourceName = "RESOURCE_NAME_31003004",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12005,6 +13581,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31004001,
     ResourceName = "RESOURCE_NAME_31004001",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12020,6 +13597,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31004002,
     ResourceName = "RESOURCE_NAME_31004002",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12035,6 +13613,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31004003,
     ResourceName = "RESOURCE_NAME_31004003",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12050,6 +13629,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31004004,
     ResourceName = "RESOURCE_NAME_31004004",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12065,6 +13645,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31004005,
     ResourceName = "RESOURCE_NAME_31004005",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12080,6 +13661,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31004006,
     ResourceName = "RESOURCE_NAME_31004006",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12095,6 +13677,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31004007,
     ResourceName = "RESOURCE_NAME_31004007",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12110,6 +13693,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31004008,
     ResourceName = "RESOURCE_NAME_31004008",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12125,6 +13709,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31005001,
     ResourceName = "RESOURCE_NAME_31005001",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12140,6 +13725,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31005002,
     ResourceName = "RESOURCE_NAME_31005002",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12155,6 +13741,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31005003,
     ResourceName = "RESOURCE_NAME_31005003",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12170,6 +13757,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31005004,
     ResourceName = "RESOURCE_NAME_31005004",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12185,6 +13773,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31005005,
     ResourceName = "RESOURCE_NAME_31005005",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12200,6 +13789,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31005006,
     ResourceName = "RESOURCE_NAME_31005006",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12215,6 +13805,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31005007,
     ResourceName = "RESOURCE_NAME_31005007",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12230,6 +13821,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31005008,
     ResourceName = "RESOURCE_NAME_31005008",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12245,12 +13837,29 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31005009,
     ResourceName = "RESOURCE_NAME_31005009",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
     UsageMode = "AutoUseWhenAdd",
     UseEffectType = "UnlockBGM",
     UseParam = 1005009
+  },
+  [31005010] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31005010,
+    ResourceName = "RESOURCE_NAME_31005010",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1005010
   },
   [31006001] = {
     DetailDes = "RESOURCE_DESC_MUSIC",
@@ -12260,6 +13869,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31006001,
     ResourceName = "RESOURCE_NAME_31006001",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12275,6 +13885,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31006002,
     ResourceName = "RESOURCE_NAME_31006002",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12290,6 +13901,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31006003,
     ResourceName = "RESOURCE_NAME_31006003",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12305,6 +13917,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31006004,
     ResourceName = "RESOURCE_NAME_31006004",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12320,6 +13933,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31006005,
     ResourceName = "RESOURCE_NAME_31006005",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12335,6 +13949,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31006006,
     ResourceName = "RESOURCE_NAME_31006006",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12350,6 +13965,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31006007,
     ResourceName = "RESOURCE_NAME_31006007",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12365,6 +13981,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31006008,
     ResourceName = "RESOURCE_NAME_31006008",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12380,6 +13997,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31006009,
     ResourceName = "RESOURCE_NAME_31006009",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12395,6 +14013,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31006010,
     ResourceName = "RESOURCE_NAME_31006010",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12410,6 +14029,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31007001,
     ResourceName = "RESOURCE_NAME_31007001",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12425,6 +14045,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31007002,
     ResourceName = "RESOURCE_NAME_31007002",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12440,6 +14061,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31007003,
     ResourceName = "RESOURCE_NAME_31007003",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12455,6 +14077,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31007004,
     ResourceName = "RESOURCE_NAME_31007004",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12470,6 +14093,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31007005,
     ResourceName = "RESOURCE_NAME_31007005",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12485,6 +14109,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31007006,
     ResourceName = "RESOURCE_NAME_31007006",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12500,6 +14125,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31007007,
     ResourceName = "RESOURCE_NAME_31007007",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12515,6 +14141,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31007008,
     ResourceName = "RESOURCE_NAME_31007008",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12530,12 +14157,29 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31007009,
     ResourceName = "RESOURCE_NAME_31007009",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
     UsageMode = "AutoUseWhenAdd",
     UseEffectType = "UnlockBGM",
     UseParam = 1007009
+  },
+  [31007010] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31007010,
+    ResourceName = "RESOURCE_NAME_31007010",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1007010
   },
   [31008001] = {
     DetailDes = "RESOURCE_DESC_MUSIC",
@@ -12545,12 +14189,61 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31008001,
     ResourceName = "RESOURCE_NAME_31008001",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
     UsageMode = "AutoUseWhenAdd",
     UseEffectType = "UnlockBGM",
     UseParam = 1008001
+  },
+  [31008002] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31008002,
+    ResourceName = "RESOURCE_NAME_31008002",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1008002
+  },
+  [31008003] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31008003,
+    ResourceName = "RESOURCE_NAME_31008003",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1008003
+  },
+  [31008004] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31008004,
+    ResourceName = "RESOURCE_NAME_31008004",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1008004
   },
   [31009001] = {
     DetailDes = "RESOURCE_DESC_MUSIC",
@@ -12560,6 +14253,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31009001,
     ResourceName = "RESOURCE_NAME_31009001",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12575,6 +14269,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31009002,
     ResourceName = "RESOURCE_NAME_31009002",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12590,6 +14285,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31009003,
     ResourceName = "RESOURCE_NAME_31009003",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12605,6 +14301,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31009004,
     ResourceName = "RESOURCE_NAME_31009004",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12620,6 +14317,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31009005,
     ResourceName = "RESOURCE_NAME_31009005",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12635,6 +14333,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31009006,
     ResourceName = "RESOURCE_NAME_31009006",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12650,6 +14349,7 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31009007,
     ResourceName = "RESOURCE_NAME_31009007",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
@@ -12665,12 +14365,445 @@ return ReadOnly("Resource", {
     Rarity = 2,
     ResourceId = 31009008,
     ResourceName = "RESOURCE_NAME_31009008",
+    ResourceSType = "Music",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Ordinary",
     UsageMode = "AutoUseWhenAdd",
     UseEffectType = "UnlockBGM",
     UseParam = 1009008
+  },
+  [31010001] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31010001,
+    ResourceName = "RESOURCE_NAME_31010001",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1010001
+  },
+  [31010002] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31010002,
+    ResourceName = "RESOURCE_NAME_31010002",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1010002
+  },
+  [31010003] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31010003,
+    ResourceName = "RESOURCE_NAME_31010003",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1010003
+  },
+  [31010004] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31010004,
+    ResourceName = "RESOURCE_NAME_31010004",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1010004
+  },
+  [31010005] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31010005,
+    ResourceName = "RESOURCE_NAME_31010005",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1010005
+  },
+  [31010006] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31010006,
+    ResourceName = "RESOURCE_NAME_31010006",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1010006
+  },
+  [31010007] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31010007,
+    ResourceName = "RESOURCE_NAME_31010007",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1010007
+  },
+  [31010008] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31010008,
+    ResourceName = "RESOURCE_NAME_31010008",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1010008
+  },
+  [31010009] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31010009,
+    ResourceName = "RESOURCE_NAME_31010009",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1010009
+  },
+  [31010010] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31010010,
+    ResourceName = "RESOURCE_NAME_31010010",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1010010
+  },
+  [31010011] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31010011,
+    ResourceName = "RESOURCE_NAME_31010011",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1010011
+  },
+  [31010012] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31010012,
+    ResourceName = "RESOURCE_NAME_31010012",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1010012
+  },
+  [31010013] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31010013,
+    ResourceName = "RESOURCE_NAME_31010013",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1010013
+  },
+  [31010014] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31010014,
+    ResourceName = "RESOURCE_NAME_31010014",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1010014
+  },
+  [31010015] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31010015,
+    ResourceName = "RESOURCE_NAME_31010015",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1010015
+  },
+  [31010016] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31010016,
+    ResourceName = "RESOURCE_NAME_31010016",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1010016
+  },
+  [31010017] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31010017,
+    ResourceName = "RESOURCE_NAME_31010017",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1010017
+  },
+  [31010018] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31010018,
+    ResourceName = "RESOURCE_NAME_31010018",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1010018
+  },
+  [31010019] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31010019,
+    ResourceName = "RESOURCE_NAME_31010019",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1010019
+  },
+  [31010020] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31010020,
+    ResourceName = "RESOURCE_NAME_31010020",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1010020
+  },
+  [31011001] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31011001,
+    ResourceName = "RESOURCE_NAME_31011001",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1011001
+  },
+  [31011002] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31011002,
+    ResourceName = "RESOURCE_NAME_31011002",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1011002
+  },
+  [31011003] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31011003,
+    ResourceName = "RESOURCE_NAME_31011003",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1011003
+  },
+  [31011004] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31011004,
+    ResourceName = "RESOURCE_NAME_31011004",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1011004
+  },
+  [31011005] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31011005,
+    ResourceName = "RESOURCE_NAME_31011005",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1011005
+  },
+  [31011006] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31011006,
+    ResourceName = "RESOURCE_NAME_31011006",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1011006
+  },
+  [31011007] = {
+    DetailDes = "RESOURCE_DESC_MUSIC",
+    FunctionDes = "RESOURCE_FUNCTION_MUSIC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Piano_Shop2.T_Piano_Shop2",
+    IpDes = "RESOURCE_TEXT_MUSIC",
+    Rarity = 2,
+    ResourceId = 31011007,
+    ResourceName = "RESOURCE_NAME_31011007",
+    ResourceSType = "Music",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Ordinary",
+    UsageMode = "AutoUseWhenAdd",
+    UseEffectType = "UnlockBGM",
+    UseParam = 1011007
   },
   [101160101] = {
     CombatConditionID = T.RT_8,

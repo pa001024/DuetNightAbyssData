@@ -1,4 +1,5 @@
 local Component = {}
+local ReasoningUtils = require("BluePrints.UI.WBP.DetectiveMinigame.ReasoningUtils")
 
 function Component:DetectiveQuestionCommit(QuestionId, Answers, Callback)
   DebugPrint("DetectiveQuestionCommit", QuestionId, Answers)
@@ -64,8 +65,13 @@ function Component:DetectiveQuestionUnlockAnswer(Answer)
       local CacheKey = Answer
       local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("DetectiveAnswer")
       if CacheDetail and nil == CacheDetail[CacheKey] then
-        CacheDetail[CacheKey] = true
-        ReddotManager.IncreaseLeafNodeCount("DetectiveAnswer")
+        local QuestionId = DataMgr.DetectiveAnswer[Answer].QuestionID
+        if ReasoningUtils:IsQuestionSolved(QuestionId) then
+          CacheDetail[CacheKey] = false
+        else
+          CacheDetail[CacheKey] = true
+          ReddotManager.IncreaseLeafNodeCount("DetectiveAnswer")
+        end
       end
     end
   end

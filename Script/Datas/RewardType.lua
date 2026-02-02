@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -9,7 +12,7 @@ return ReadOnly("RewardType", {
     RewardType = "Char"
   },
   CharAccessory = {
-    DungeonRewardSeq = 70,
+    DungeonRewardSeq = 69,
     DungeonRewardType = true,
     OperationGM = true,
     Remark = "角色配饰",
@@ -24,6 +27,12 @@ return ReadOnly("RewardType", {
     RewardType = "Draft"
   },
   Drop = {RewardType = "Drop"},
+  Hair = {
+    DungeonRewardSeq = 71,
+    Remark = "发型",
+    RewardType = "Hair",
+    UniqueType = true
+  },
   HeadFrame = {
     DungeonRewardSeq = 53,
     OperationGM = true,
@@ -44,6 +53,13 @@ return ReadOnly("RewardType", {
     OperationGM = true,
     Remark = "魔之楔",
     RewardType = "Mod"
+  },
+  Mount = {
+    DungeonRewardSeq = 65,
+    OperationGM = true,
+    Remark = "坐骑",
+    RewardType = "Mount",
+    UniqueType = true
   },
   Pet = {
     DungeonRewardSeq = 51,
@@ -69,14 +85,14 @@ return ReadOnly("RewardType", {
   Title = {
     DungeonRewardSeq = 62,
     OperationGM = true,
-    Remark = "头像",
+    Remark = "称号",
     RewardType = "Title",
     UniqueType = true
   },
   TitleFrame = {
     DungeonRewardSeq = 63,
     OperationGM = true,
-    Remark = "头像框",
+    Remark = "称号框",
     RewardType = "TitleFrame",
     UniqueType = true
   },
@@ -102,7 +118,7 @@ return ReadOnly("RewardType", {
     UniqueType = true
   },
   WeaponSkin = {
-    DungeonRewardSeq = 71,
+    DungeonRewardSeq = 70,
     OperationGM = true,
     Remark = "武器皮肤",
     RewardType = "WeaponSkin",

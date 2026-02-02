@@ -86,6 +86,7 @@ function M:RefreshPageStaticView(ActivityConfigData, PageConfigData, InfoClickFu
   self.SevenDayItems:InitRewardInfo(PageConfigData, self)
   self:BindAllClickFunction(InfoClickFunction)
   self:AdjustWidgetByPlatform()
+  ActivityUtils.SetUpJustifyOfJap(TitleWidget.Text_ActivityDesc, TitleWidget.Text_ActivityDesc_White)
 end
 
 function M:AdjustWidgetByPlatform()

@@ -15,7 +15,7 @@ end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   self.IsGamePad = CurInputDevice == ECommonInputType.Gamepad
-  if self.IsGamePadIsGamePad then
+  if self.IsGamePad then
     self:SetFocus()
   end
   self.WBP_Story_PlayKey_P:UpdateKeyImg(self.IsGamePad)

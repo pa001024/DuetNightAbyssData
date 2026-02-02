@@ -43,6 +43,7 @@ function M:InitCompView()
   if self.ItemType == "EmptyGrid" then
     self:CheckAndSetVisibility(self.CountWidget, UIConst.VisibilityOp.Collapsed)
     self:CheckAndSetVisibility(self.LevelWidget, UIConst.VisibilityOp.Collapsed)
+    self:PlayFadeInAnim()
     return
   elseif self.ItemType == CommonConst.DataType.Weapon then
     self:CheckAndSetVisibility(self.CountWidget, UIConst.VisibilityOp.Collapsed)
@@ -69,6 +70,21 @@ function M:InitCompView()
       self:SetTreasureMapDigable(true, bDigable)
     end
   end
+  self:PlayFadeInAnim()
+end
+
+function M:PlayFadeInAnim()
+  if self.Content.AnimNameWithCreate and self[self.Content.AnimNameWithCreate] then
+    self.Root:SetRenderOpacity(0)
+    self:PlayAnimation(self[self.Content.AnimNameWithCreate])
+  end
+end
+
+function M:IsInAnimationPlaying()
+  if self.Content.AnimNameWithCreate and self[self.Content.AnimNameWithCreate] then
+    return self:IsAnimationPlaying(self[self.Content.AnimNameWithCreate])
+  end
+  return false
 end
 
 function M:IsInSaleOrResolveState()
@@ -90,6 +106,9 @@ function M:StopHoldTimers()
 end
 
 function M:OnPressed()
+  if self:IsInAnimationPlaying() then
+    return
+  end
   if self.ItemType == "EmptyGrid" then
     return
   end
@@ -187,9 +206,7 @@ function M:OnMouseMove(MyGeometry, MouseEvent)
   local dist2 = dx * dx + dy * dy
   if dist2 >= self.DragThreshold * self.DragThreshold then
     self.bIsDragging = true
-    self.bIsLongPress = false
-    self.bHasTriggeredHoldAction = false
-    self:StopHoldTimers()
+    self:CancelHold()
   end
   return UWidgetBlueprintLibrary.Unhandled()
 end
@@ -199,24 +216,13 @@ function M:OnLeaved()
   if not self:IsInSaleOrResolveState() then
     return
   end
-  if self.ParentWidget.HoldOwner == self then
-    self.ParentWidget.HoldGlobalToken = self.ParentWidget.HoldGlobalToken + 1
-    self.ParentWidget.HoldOwner = nil
-  end
-  self.bIsHolding = false
-  if self.HoldStartDelayHandle then
-    self:RemoveTimer(self.HoldStartDelayHandle)
-  end
-  if self.HoldLoopHandle then
-    self:RemoveTimer(self.HoldLoopHandle)
-  end
-  if self.HoldReduceHandle then
-    self:RemoveTimer(self.HoldReduceHandle)
-  end
-  self.HoldStartDelayHandle, self.HoldLoopHandle, self.HoldReduceHandle = nil, nil, nil
+  self:CancelHold()
 end
 
 function M:OnMouseLeave(MyGeometry, MouseEvent)
+  if self.bIsHolding or self.ParentWidget and self.ParentWidget.HoldOwner == self then
+    self:CancelHold()
+  end
   self.bIsDragging = false
   if not self.Content or self.NotInteractive or self.Content.IsShowTips or self:IsInAnimationPlaying() then
     return
@@ -230,6 +236,52 @@ function M:OnMouseLeave(MyGeometry, MouseEvent)
   self.bMouseButtonDown = false
   self.Item:StopAllAnimations()
   self.Item:PlayAnimation(self.Item.UnHover)
+end
+
+function M:OnTouchEnded(MyGeometry, TouchEvent)
+  if self:IsInSaleOrResolveState() then
+    DebugPrint("---------WBP_Bag_Item_C OnTouchEnded", self.Id)
+    if self.CancelHold then
+      self:CancelHold()
+    end
+    self:OnMouseButtonUp(MyGeometry, TouchEvent)
+    local Reply = UWidgetBlueprintLibrary.Handled()
+    return UWidgetBlueprintLibrary.ReleaseMouseCapture(Reply)
+  else
+    return self:OnMouseButtonUp(MyGeometry, TouchEvent)
+  end
+end
+
+function M:OnTouchStarted(MyGeometry, TouchEvent)
+  if self:IsInSaleOrResolveState() then
+    DebugPrint("---------WBP_Bag_Item_C OnTouchStarted", self.Id)
+    if self.ParentWidget and self.ParentWidget.HoldOwner and self.ParentWidget.HoldOwner ~= self then
+      local prev = self.ParentWidget.HoldOwner
+      if prev.CancelHold then
+        prev:CancelHold()
+      else
+        self.ParentWidget.HoldGlobalToken = (self.ParentWidget.HoldGlobalToken or 0) + 1
+        self.ParentWidget.HoldOwner = nil
+      end
+    end
+    self:OnMouseButtonDown(MyGeometry, TouchEvent)
+    local Reply = UWidgetBlueprintLibrary.Handled()
+    return UWidgetBlueprintLibrary.CaptureMouse(Reply, self)
+  else
+    return self:OnMouseButtonDown(MyGeometry, TouchEvent)
+  end
+end
+
+function M:CancelHold()
+  if self.ParentWidget and self.ParentWidget.HoldOwner == self then
+    self.ParentWidget.HoldGlobalToken = (self.ParentWidget.HoldGlobalToken or 0) + 1
+    self.ParentWidget.HoldOwner = nil
+  end
+  self.bIsHolding = false
+  self.bIsLongPress = false
+  self.bHasTriggeredHoldAction = false
+  self.bIsDragging = false
+  self:StopHoldTimers()
 end
 
 function M:TriggerClickCallback(Count)
@@ -517,17 +569,20 @@ function M:ShowModStar(Mod)
   end
 end
 
-function M:HideOrShowTimeLimitWidget(bHide)
-  if bHide then
-    if not self.WidgetMap[self.TimeLimitWidget] then
-      return
+function M:HideNotNeccessaryWidget(bHide)
+  local ChildrenCount = self.Node_Widget:GetChildrenCount()
+  if ChildrenCount < 1 then
+    return
+  end
+  for i = 0, ChildrenCount - 1 do
+    local ChildWidget = self.Node_Widget:GetChildAt(i)
+    if self.WidgetMap[ChildWidget] then
+      if bHide then
+        ChildWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      else
+        ChildWidget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      end
     end
-    self.TimeLimitWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  else
-    if self.WidgetMap[self.TimeLimitWidget] then
-      return
-    end
-    self.TimeLimitWidget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end
 end
 
@@ -543,6 +598,7 @@ function M:SetSelected(IsSelected)
   if self.Content then
     self.Content.IsSelect = IsSelected
   end
+  self.Root:SetRenderOpacity(1)
   if IsSelected then
     if not self.Item:IsAnimationPlaying(self.Item.Click) then
       self.Item:StopAllAnimations()
@@ -552,6 +608,18 @@ function M:SetSelected(IsSelected)
     self.Item:StopAllAnimations()
     self.Item:PlayAnimation(self.Item.Normal)
   end
+end
+
+function M:SetDraftType(IsDraftType)
+  local function Callback(CoroutineObj)
+    if IsDraftType then
+      self.DraftItemWidget = self:GetOrCreateGroupWidget("DraftCompendiumItem", CoroutineObj)
+    else
+      self:RemoveGroupWidget("DraftCompendiumItem")
+    end
+  end
+  
+  self:AsyncLoadWidgetCommon("DraftItemWidget", "SetDraftTypeTask", Callback)
 end
 
 return M

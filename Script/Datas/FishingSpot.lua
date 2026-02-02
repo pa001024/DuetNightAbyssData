@@ -87,17 +87,24 @@ T.RT_10 = {
   2804,
   2805
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("FishingSpot", {
   [101] = {
+    ExtraReward = 301000,
+    ExtraRewardProb = 1,
     FishCountLimit = 999,
     FishId = T.RT_1,
     FishWeight = T.RT_2,
     FishingSpotId = 101,
     FishingSpotName = "测试用钓鱼点",
     LimitDeviation = 0,
+    PetId = 4931,
+    PetProb = 0.5,
     RegionPointId = 2814,
     ReplenishDay = 1,
     ShowFishId = T.RT_3,
@@ -106,6 +113,8 @@ return ReadOnly("FishingSpot", {
   },
   [10010101] = {
     ConditionId = 20021501,
+    ExtraReward = 301001,
+    ExtraRewardProb = 0.1,
     FishCountLimit = 100,
     FishId = T.RT_1,
     FishWeight = T.RT_2,
@@ -114,6 +123,8 @@ return ReadOnly("FishingSpot", {
     IconId = 1,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Angling01.T_Tab_Angling01",
     LimitDeviation = 0,
+    PetId = 4931,
+    PetProb = 0.5,
     RegionPointId = 2814,
     ReplenishDay = 24,
     ShowFishId = T.RT_3,
@@ -148,6 +159,8 @@ return ReadOnly("FishingSpot", {
   },
   [10110301] = {
     ConditionId = 20021501,
+    ExtraReward = 301002,
+    ExtraRewardProb = 0.1,
     FishCountLimit = 100,
     FishId = T.RT_4,
     FishWeight = T.RT_2,
@@ -156,6 +169,8 @@ return ReadOnly("FishingSpot", {
     IconId = 2,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Angling02.T_Tab_Angling02",
     LimitDeviation = 0,
+    PetId = 4932,
+    PetProb = 0.5,
     RegionPointId = 2815,
     ReplenishDay = 24,
     ShowFishId = {
@@ -169,12 +184,16 @@ return ReadOnly("FishingSpot", {
     WaterType = 2
   },
   [10110391] = {
+    ExtraReward = 301002,
+    ExtraRewardProb = 0.1,
     FishCountLimit = 1,
     FishId = T.RT_4,
     FishWeight = T.RT_2,
     FishingSpotId = 10110391,
     FishingSpotName = "FishingSpot_Name_10110301",
     LimitDeviation = 0,
+    PetId = 4932,
+    PetProb = 0.5,
     RegionPointId = 2815,
     ReplenishDay = 1,
     ShowFishId = T.RT_5,
@@ -182,12 +201,16 @@ return ReadOnly("FishingSpot", {
     WaterType = 2
   },
   [10110392] = {
+    ExtraReward = 301002,
+    ExtraRewardProb = 0.1,
     FishCountLimit = 1,
     FishId = T.RT_4,
     FishWeight = T.RT_2,
     FishingSpotId = 10110392,
     FishingSpotName = "FishingSpot_Name_10110301",
     LimitDeviation = 0,
+    PetId = 4932,
+    PetProb = 0.5,
     RegionPointId = 2815,
     ReplenishDay = 1,
     ShowFishId = T.RT_5,
@@ -195,12 +218,16 @@ return ReadOnly("FishingSpot", {
     WaterType = 2
   },
   [10110393] = {
+    ExtraReward = 301002,
+    ExtraRewardProb = 0.1,
     FishCountLimit = 1,
     FishId = T.RT_4,
     FishWeight = T.RT_2,
     FishingSpotId = 10110393,
     FishingSpotName = "FishingSpot_Name_10110301",
     LimitDeviation = 0,
+    PetId = 4932,
+    PetProb = 0.5,
     RegionPointId = 2815,
     ReplenishDay = 1,
     ShowFishId = T.RT_5,
@@ -209,6 +236,8 @@ return ReadOnly("FishingSpot", {
   },
   [10170101] = {
     ConditionId = 20021501,
+    ExtraReward = 301003,
+    ExtraRewardProb = 0.1,
     FishCountLimit = 100,
     FishId = {
       [1] = 1301,
@@ -226,6 +255,8 @@ return ReadOnly("FishingSpot", {
     IconId = 3,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Angling03.T_Tab_Angling03",
     LimitDeviation = 0,
+    PetId = 4932,
+    PetProb = 0.5,
     RegionPointId = 2816,
     ReplenishDay = 24,
     ShowFishId = T.RT_5,
@@ -234,6 +265,8 @@ return ReadOnly("FishingSpot", {
   },
   [10410601] = {
     ConditionId = 20021501,
+    ExtraReward = 301007,
+    ExtraRewardProb = 0.1,
     FishCountLimit = 100,
     FishId = {
       [1] = 1201,
@@ -251,6 +284,8 @@ return ReadOnly("FishingSpot", {
     IconId = 7,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Angling07.T_Tab_Angling07",
     LimitDeviation = 0,
+    PetId = 4941,
+    PetProb = 0.5,
     RegionPointId = 2821,
     ReplenishDay = 24,
     ShowFishId = {
@@ -264,6 +299,8 @@ return ReadOnly("FishingSpot", {
     WaterType = 2
   },
   [10410691] = {
+    ExtraReward = 301004,
+    ExtraRewardProb = 0.1,
     FishCountLimit = 3,
     FishId = T.RT_6,
     FishWeight = {
@@ -279,6 +316,8 @@ return ReadOnly("FishingSpot", {
     FishingSpotId = 10410691,
     FishingSpotName = "FishingSpot_Name_10110301",
     LimitDeviation = 0,
+    PetId = 4941,
+    PetProb = 0.5,
     RegionPointId = 2815,
     ReplenishDay = 1,
     ShowFishId = T.RT_7,
@@ -286,12 +325,16 @@ return ReadOnly("FishingSpot", {
     WaterType = 2
   },
   [10410692] = {
+    ExtraReward = 301004,
+    ExtraRewardProb = 0.1,
     FishCountLimit = 3,
     FishId = T.RT_6,
     FishWeight = T.RT_8,
     FishingSpotId = 10410692,
     FishingSpotName = "FishingSpot_Name_10110301",
     LimitDeviation = 0,
+    PetId = 4941,
+    PetProb = 0.5,
     RegionPointId = 2815,
     ReplenishDay = 1,
     ShowFishId = T.RT_7,
@@ -299,6 +342,8 @@ return ReadOnly("FishingSpot", {
     WaterType = 2
   },
   [10410693] = {
+    ExtraReward = 301004,
+    ExtraRewardProb = 0.1,
     FishCountLimit = 3,
     FishId = {
       [1] = 1201,
@@ -314,6 +359,8 @@ return ReadOnly("FishingSpot", {
     FishingSpotId = 10410693,
     FishingSpotName = "FishingSpot_Name_10110301",
     LimitDeviation = 0,
+    PetId = 4941,
+    PetProb = 0.5,
     RegionPointId = 2815,
     ReplenishDay = 1,
     ShowFishId = T.RT_7,
@@ -322,6 +369,8 @@ return ReadOnly("FishingSpot", {
   },
   [10410701] = {
     ConditionId = 20021501,
+    ExtraReward = 301006,
+    ExtraRewardProb = 0.1,
     FishCountLimit = 100,
     FishId = T.RT_9,
     FishWeight = T.RT_2,
@@ -330,6 +379,8 @@ return ReadOnly("FishingSpot", {
     IconId = 6,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Angling06.T_Tab_Angling06",
     LimitDeviation = 0,
+    PetId = 4941,
+    PetProb = 0.5,
     RegionPointId = 2820,
     ReplenishDay = 24,
     ShowFishId = T.RT_10,
@@ -338,6 +389,8 @@ return ReadOnly("FishingSpot", {
   },
   [10410801] = {
     ConditionId = 20021501,
+    ExtraReward = 301004,
+    ExtraRewardProb = 0.1,
     FishCountLimit = 100,
     FishId = {
       [1] = 1101,
@@ -355,6 +408,8 @@ return ReadOnly("FishingSpot", {
     IconId = 4,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Angling04.T_Tab_Angling04",
     LimitDeviation = 0,
+    PetId = 4941,
+    PetProb = 0.5,
     RegionPointId = 2818,
     ReplenishDay = 24,
     ShowFishId = {
@@ -369,6 +424,8 @@ return ReadOnly("FishingSpot", {
   },
   [10410901] = {
     ConditionId = 20021501,
+    ExtraReward = 301008,
+    ExtraRewardProb = 0.1,
     FishCountLimit = 100,
     FishId = {
       [1] = 1101,
@@ -386,6 +443,8 @@ return ReadOnly("FishingSpot", {
     IconId = 8,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Angling08.T_Tab_Angling08",
     LimitDeviation = 0,
+    PetId = 4941,
+    PetProb = 0.5,
     RegionPointId = 2822,
     ReplenishDay = 24,
     ShowFishId = {
@@ -400,6 +459,8 @@ return ReadOnly("FishingSpot", {
   },
   [10411001] = {
     ConditionId = 20021501,
+    ExtraReward = 301005,
+    ExtraRewardProb = 0.1,
     FishCountLimit = 100,
     FishId = T.RT_6,
     FishWeight = T.RT_2,
@@ -408,6 +469,8 @@ return ReadOnly("FishingSpot", {
     IconId = 5,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Angling05.T_Tab_Angling05",
     LimitDeviation = 0,
+    PetId = 4941,
+    PetProb = 0.5,
     RegionPointId = 2819,
     ReplenishDay = 24,
     ShowFishId = T.RT_7,
@@ -415,15 +478,61 @@ return ReadOnly("FishingSpot", {
     WaterType = 2
   },
   [10420191] = {
+    ExtraReward = 301004,
+    ExtraRewardProb = 0.1,
     FishCountLimit = 3,
     FishId = T.RT_9,
     FishWeight = T.RT_2,
     FishingSpotId = 10420191,
     FishingSpotName = "FishingSpot_Name_10110301",
     LimitDeviation = 0,
+    PetId = 4941,
+    PetProb = 0.5,
     RegionPointId = 2815,
     ReplenishDay = 1,
     ShowFishId = T.RT_10,
+    ShowInFishMap = false,
+    WaterType = 2
+  },
+  [10490101] = {
+    ConditionId = 20021501,
+    ExtraReward = 301005,
+    ExtraRewardProb = 0.1,
+    FishCountLimit = 20,
+    FishId = {
+      [1] = 1201,
+      [2] = 1202,
+      [3] = 1203,
+      [4] = 2401,
+      [5] = 2402,
+      [6] = 2701,
+      [7] = 2702,
+      [8] = 2703
+    },
+    FishWeight = {
+      [1] = 40,
+      [2] = 40,
+      [3] = 40,
+      [4] = 15,
+      [5] = 15,
+      [6] = 15,
+      [7] = 15,
+      [8] = 10
+    },
+    FishingSpotId = 10490101,
+    FishingSpotName = "FishingSpot_Name_10490101",
+    LimitDeviation = 0,
+    PetId = 4941,
+    PetProb = 0.5,
+    RegionPointId = 2822,
+    ReplenishDay = 24,
+    ShowFishId = {
+      2401,
+      2402,
+      2701,
+      2702,
+      2703
+    },
     ShowInFishMap = false,
     WaterType = 2
   },

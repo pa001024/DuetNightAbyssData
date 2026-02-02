@@ -6,6 +6,26 @@ local FlowLogType = UE.EStoryLogType.TalkFlow
 function M:ReceiveBeginPlay()
 end
 
+function M:K2_InitializeInstance()
+  M.Super.K2_InitializeInstance(self)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  if not self.bRestartDialogueOnFail then
+    return
+  end
+  for _, OptionData in pairs(self.Options) do
+    if Avatar and Avatar:IsImpressionCheckFailure(OptionData.DialogueId) then
+      DebugPrint("印象检定失败对话尝试发生回退, 失败Id，回退Id： ", OptionData.DialogueId, self.RestartDialogueId)
+      local FlowAsset = self:GetFlowAsset()
+      if FlowAsset and FlowAsset:SetRestartDialogueId(self.RestartDialogueId) then
+        return
+      end
+    end
+  end
+end
+
 function M:GetLastCheckSuccessId()
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
@@ -38,10 +58,10 @@ end
 
 function M:Skip()
   local DialogueRecordComponent = self:TryGetRecordComponent()
+  local DialogueFlowGraphComponent = self:TryGetFlowGraphComponent()
   local LastCheck = self:GetLastCheckSuccessId()
   if LastCheck then
-    DialogueRecordComponent:OnOptionRecord(LastCheck, self:GetRecordOptionData(LastCheck))
-    self:SelectOption(LastCheck)
+    DialogueFlowGraphComponent:SelectOption(LastCheck)
   else
     local Message = string.format("当前Option节点不可以跳过, 不应该走过来")
     UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, FlowLogType, "Flow印象选项节点出错：Skip", Message)

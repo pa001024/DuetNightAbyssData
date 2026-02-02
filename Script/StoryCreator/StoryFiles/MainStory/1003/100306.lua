@@ -143,6 +143,7 @@ return {
               ModeType = 1,
               Id = 101101,
               StartIndex = 1,
+              LoadingId = 0,
               IsWhite = false
             }
           },

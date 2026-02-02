@@ -2,6 +2,9 @@ local T = {}
 T.RT_1 = {"10.0"}
 T.RT_2 = {"3.0"}
 T.RT_3 = {"1.0"}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -48,7 +51,7 @@ return ReadOnly("BattleCamera", {
   },
   TagAndTimeForResetSpringArm = {
     ParamentName = "TagAndTimeForResetSpringArm",
-    ParamentValue = {"Idle:1.5"}
+    ParamentValue = {"Idle:1.5", "Falling:1"}
   },
   TimeToResetPitchMaxSpeed = {
     ParamentName = "TimeToResetPitchMaxSpeed",

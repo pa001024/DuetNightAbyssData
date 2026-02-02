@@ -151,13 +151,8 @@ end
 function GameModeLogin:OnAvatarLogout(AvatarEidStr)
   ServerPrint("OnAvatarLogout", AvatarEidStr)
   if AvatarEidStr then
-    self.AvatarInfos[AvatarEidStr] = nil
     self.BattleAvatars[AvatarEidStr] = nil
-    local DSEntity = GWorld:GetDSEntity()
-    if DSEntity then
-      DSEntity.AvatarInfos[AvatarEidStr] = nil
-      DSEntity.PersistPlayerInfos[AvatarEidStr] = nil
-    end
+    EventManager:FireEvent(EventID.OnAvatarLogout, AvatarEidStr)
   end
   if GWorld.bDebugServer then
     return

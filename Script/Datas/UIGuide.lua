@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -620,6 +623,47 @@ return ReadOnly("UIGuide", {
     ChildGuideId = {11501, 11502},
     GuideId = 115,
     MainGuideTitle = "Mon_Guide_Title_115"
+  },
+  [116] = {
+    ChildGuideId = {
+      11601,
+      11602,
+      11603,
+      11604,
+      11605,
+      11606,
+      11607,
+      11608
+    },
+    GuideId = 116,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_JuYuan_1"
+  },
+  [117] = {
+    ChildGuideId = {
+      11701,
+      11702,
+      11703
+    },
+    GuideId = 117,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_ShengMing_1"
+  },
+  [118] = {
+    ChildGuideId = {
+      11801,
+      11802,
+      11803
+    },
+    GuideId = 118,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_WuYou_1"
+  },
+  [119] = {
+    ChildGuideId = {
+      11901,
+      11902,
+      11903
+    },
+    GuideId = 119,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_ZuoQi_1"
   },
   [1001] = {
     ChildGuideId = {

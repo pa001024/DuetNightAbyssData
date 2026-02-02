@@ -15,6 +15,7 @@ function M:OnListItemObjectSet(InObject)
   self.Text_ReportReason:SetText(GText(InObject.value))
   self.Owner = InObject.Owner
   self.Id = InObject.Id
+  self.Widget = self
   self.WBP_Com_CheckBox_RightText.Group_BG:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.WBP_Com_CheckBox_RightText:HideGamepadBackground(true)
   self.WBP_Com_CheckBox_RightText:SetKey("Img", "A", nil)

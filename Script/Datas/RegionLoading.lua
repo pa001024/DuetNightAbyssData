@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -14,7 +17,7 @@ return ReadOnly("RegionLoading", {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo08.LevelSelect_Bg_Dongguo08'",
     LoadingId = 10410201,
     MessageGroup = 10410201,
-    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle20_01.WBP_Com_ChangeScence_DongguoTitle20_01'",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle08_01.WBP_Com_ChangeScence_DongguoTitle08_01'",
     TitleTrans = "LoadingTitleTrans_Zhejisha",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
@@ -22,7 +25,7 @@ return ReadOnly("RegionLoading", {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo09.LevelSelect_Bg_Dongguo09'",
     LoadingId = 10410301,
     MessageGroup = 10410301,
-    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle20_01.WBP_Com_ChangeScence_DongguoTitle20_01'",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle09_01.WBP_Com_ChangeScence_DongguoTitle09_01'",
     TitleTrans = "LoadingTitleTrans_Cav",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
@@ -30,7 +33,7 @@ return ReadOnly("RegionLoading", {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo06.LevelSelect_Bg_Dongguo06'",
     LoadingId = 10410401,
     MessageGroup = 10410401,
-    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle20_01.WBP_Com_ChangeScence_DongguoTitle20_01'",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle06_01.WBP_Com_ChangeScence_DongguoTitle06_01'",
     TitleTrans = "LoadingTitleTrans_Cen",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
@@ -38,7 +41,7 @@ return ReadOnly("RegionLoading", {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo07.LevelSelect_Bg_Dongguo07'",
     LoadingId = 10410501,
     MessageGroup = 10410501,
-    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle20_01.WBP_Com_ChangeScence_DongguoTitle20_01'",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle07_01.WBP_Com_ChangeScence_DongguoTitle07_01'",
     TitleTrans = "LoadingTitleTrans_Fil",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
@@ -46,7 +49,7 @@ return ReadOnly("RegionLoading", {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo05.LevelSelect_Bg_Dongguo05'",
     LoadingId = 10410601,
     MessageGroup = 10410601,
-    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle20_01.WBP_Com_ChangeScence_DongguoTitle20_01'",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle05_01.WBP_Com_ChangeScence_DongguoTitle05_01'",
     TitleTrans = "LoadingTitleTrans_Hos",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
@@ -54,7 +57,7 @@ return ReadOnly("RegionLoading", {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo13.LevelSelect_Bg_Dongguo13'",
     LoadingId = 10410701,
     MessageGroup = 10410701,
-    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle20_01.WBP_Com_ChangeScence_DongguoTitle20_01'",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle11_01.WBP_Com_ChangeScence_DongguoTitle11_01'",
     TitleTrans = "LoadingTitleTrans_Jianjiapu",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
@@ -62,7 +65,7 @@ return ReadOnly("RegionLoading", {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo13.LevelSelect_Bg_Dongguo13'",
     LoadingId = 10410702,
     MessageGroup = 10410702,
-    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle20_01.WBP_Com_ChangeScence_DongguoTitle20_01'",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle11_01.WBP_Com_ChangeScence_DongguoTitle11_01'",
     TitleTrans = "LoadingTitleTrans_Jianjiapu",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
@@ -70,7 +73,7 @@ return ReadOnly("RegionLoading", {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo12.LevelSelect_Bg_Dongguo12'",
     LoadingId = 10410801,
     MessageGroup = 10410801,
-    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle20_01.WBP_Com_ChangeScence_DongguoTitle20_01'",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle1301_01.WBP_Com_ChangeScence_DongguoTitle1301_01'",
     TitleTrans = "LoadingTitleTrans_Jianjiapu",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
@@ -78,7 +81,7 @@ return ReadOnly("RegionLoading", {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo12_01.LevelSelect_Bg_Dongguo12_01'",
     LoadingId = 10410802,
     MessageGroup = 10410802,
-    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle20_01.WBP_Com_ChangeScence_DongguoTitle20_01'",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle1302_01.WBP_Com_ChangeScence_DongguoTitle1302_01'",
     TitleTrans = "LoadingTitleTrans_Jianjiapu",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
@@ -86,7 +89,7 @@ return ReadOnly("RegionLoading", {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo14.LevelSelect_Bg_Dongguo14'",
     LoadingId = 10410901,
     MessageGroup = 10410901,
-    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle20_01.WBP_Com_ChangeScence_DongguoTitle20_01'",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle08_01.WBP_Com_ChangeScence_DongguoTitle08_01'",
     TitleTrans = "LoadingTitleTrans_Zhejisha",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
@@ -94,7 +97,7 @@ return ReadOnly("RegionLoading", {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo10.LevelSelect_Bg_Dongguo10'",
     LoadingId = 10411001,
     MessageGroup = 10411001,
-    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle20_01.WBP_Com_ChangeScence_DongguoTitle20_01'",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle10_01.WBP_Com_ChangeScence_DongguoTitle10_01'",
     TitleTrans = "LoadingTitleTrans_Spr",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
@@ -102,7 +105,7 @@ return ReadOnly("RegionLoading", {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo04.LevelSelect_Bg_Dongguo04'",
     LoadingId = 10420101,
     MessageGroup = 10420101,
-    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle20_01.WBP_Com_ChangeScence_DongguoTitle20_01'",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle04_01.WBP_Com_ChangeScence_DongguoTitle04_01'",
     TitleTrans = "LoadingTitleTrans_Batt01",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
@@ -110,7 +113,7 @@ return ReadOnly("RegionLoading", {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo03.LevelSelect_Bg_Dongguo03'",
     LoadingId = 10430101,
     MessageGroup = 10430101,
-    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle20_01.WBP_Com_ChangeScence_DongguoTitle20_01'",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle03_01.WBP_Com_ChangeScence_DongguoTitle03_01'",
     TitleTrans = "LoadingTitleTrans_Nai01",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
@@ -118,7 +121,7 @@ return ReadOnly("RegionLoading", {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo03_01.LevelSelect_Bg_Dongguo03_01'",
     LoadingId = 10440101,
     MessageGroup = 10440101,
-    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle20_01.WBP_Com_ChangeScence_DongguoTitle20_01'",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle03_01.WBP_Com_ChangeScence_DongguoTitle03_01'",
     TitleTrans = "LoadingTitleTrans_Nai02",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
@@ -126,7 +129,7 @@ return ReadOnly("RegionLoading", {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo04_01.LevelSelect_Bg_Dongguo04_01'",
     LoadingId = 10460101,
     MessageGroup = 10460101,
-    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle20_01.WBP_Com_ChangeScence_DongguoTitle20_01'",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle04_01.WBP_Com_ChangeScence_DongguoTitle04_01'",
     TitleTrans = "LoadingTitleTrans_Batt02",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
@@ -134,7 +137,7 @@ return ReadOnly("RegionLoading", {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo04_02.LevelSelect_Bg_Dongguo04_02'",
     LoadingId = 10470101,
     MessageGroup = 10470101,
-    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle20_01.WBP_Com_ChangeScence_DongguoTitle20_01'",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle04_01.WBP_Com_ChangeScence_DongguoTitle04_01'",
     TitleTrans = "LoadingTitleTrans_Batt03",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
@@ -142,7 +145,7 @@ return ReadOnly("RegionLoading", {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo02.LevelSelect_Bg_Dongguo02'",
     LoadingId = 10490101,
     MessageGroup = 10490101,
-    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle20_01.WBP_Com_ChangeScence_DongguoTitle20_01'",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle02_01.WBP_Com_ChangeScence_DongguoTitle02_01'",
     TitleTrans = "LoadingTitleTrans_Off",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
@@ -150,7 +153,7 @@ return ReadOnly("RegionLoading", {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo03_02.LevelSelect_Bg_Dongguo03_02'",
     LoadingId = 10500101,
     MessageGroup = 10500101,
-    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle20_01.WBP_Com_ChangeScence_DongguoTitle20_01'",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle03_01.WBP_Com_ChangeScence_DongguoTitle03_01'",
     TitleTrans = "LoadingTitleTrans_Nai03",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
@@ -158,7 +161,7 @@ return ReadOnly("RegionLoading", {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo01.LevelSelect_Bg_Dongguo01'",
     LoadingId = 10570101,
     MessageGroup = 10570101,
-    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle20_01.WBP_Com_ChangeScence_DongguoTitle20_01'",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle01_01.WBP_Com_ChangeScence_DongguoTitle01_01'",
     TitleTrans = "LoadingTitleTrans_Alt",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   }

@@ -1,5 +1,6 @@
-local T = {}
-T.RT_1 = {WEEK = 4}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -41,7 +42,6 @@ return ReadOnly("ComplexTab", {
     CoinId = {214},
     EntrySort = 97,
     InterfaceJumpId = 28,
-    RefreshTime = T.RT_1,
     ShopEntryId = 4,
     ShopName = "Abyss_ExchangeStore",
     SubTabId = 2002
@@ -73,7 +73,7 @@ return ReadOnly("ComplexTab", {
     CoinId = {216},
     EntrySort = 94,
     InterfaceJumpId = 73,
-    RefreshTime = T.RT_1,
+    RefreshTime = {WEEK = 4},
     ShopEntryId = 7,
     ShopName = "WeeklyDungeonShop",
     SubTabId = 2002

@@ -57,22 +57,7 @@ function BP_HeadWidgetComponent_C:GetOrCreateWidget(WidgetName)
   Widget:SetAttachedWidget(self)
   Widget:SetWidgetInitBubble(self)
   self:UpdateUniformWidgetHide()
-  if not self.bIsRegionPlayerHeadUI then
-    self:OcclusionTestFuncWithoutAnim()
-  end
-  if self.bIsRegionPlayerHeadUI then
-    Widget:SetVisibility(ESlateVisibility.Collapsed)
-    self.RealVisibility = UIConst.VisibilityOp.Collapsed
-    
-    function self.BindFunc(selfWidget, Visibility)
-      if Widget.bTempHide then
-        return
-      end
-      self:SetWidgetHiddenByTag(Visibility == UIConst.VisibilityOp.Collapsed, "OutTag")
-    end
-    
-    Widget.OnVisibilityChanged:Add(self, self.BindFunc)
-  end
+  self:OcclusionTestFuncWithoutAnim()
   return Widget
 end
 
@@ -97,18 +82,14 @@ function BP_HeadWidgetComponent_C:TryReleaseWidgetInternal()
   self.HideTags.Occlusion = nil
   self:CleanTimer()
   local Widget = self:GetWidget()
+  local HeadUISubsystem = UNpcHeadUISubsystem.GetHeadUISubsystem(self)
+  if self:GetOwner() and HeadUISubsystem then
+    HeadUISubsystem:TryReleaseHeadWidget(self, Widget)
+  end
   if not IsValid(Widget) then
     return
   end
   Widget.HideTags = {}
-  local HeadUISubsystem = UNpcHeadUISubsystem.GetHeadUISubsystem(self)
-  if self:GetOwner() and HeadUISubsystem then
-    if self.BindFunc then
-      Widget.OnVisibilityChanged:Remove(self, self.BindFunc)
-      self.BindFunc = nil
-    end
-    HeadUISubsystem:TryReleaseHeadWidget(self, Widget)
-  end
   self:SetWidget(nil)
   Widget:UnsetAttachedWidget()
   self.ReleaseTimer = nil
@@ -148,13 +129,11 @@ function BP_HeadWidgetComponent_C:UpdateUniformWidgetHide()
   local bHidden = self:IsHidden()
   local Widget = self:GetWidget()
   if IsValid(Widget) then
-    Widget.bTempHide = true
     if bHidden then
       Widget:Hide()
     else
       Widget:Show()
     end
-    Widget.bTempHide = nil
   end
 end
 

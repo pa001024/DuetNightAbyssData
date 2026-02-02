@@ -104,4 +104,17 @@ function M:PlayInAndLoopAnimation()
   self:PlayAnimation(self.In)
 end
 
+function M:PlayHorizontalLoopAnimation()
+  self:StopAnimation(self.Out)
+  self:StopAnimation(self.Loop2)
+  self:UnbindAllFromAnimationFinished(self.In)
+  
+  local function OnInFinished()
+    self:PlayAnimation(self.Loop2, 0, 0)
+  end
+  
+  self:BindToAnimationFinished(self.In, OnInFinished)
+  self:PlayAnimation(self.In)
+end
+
 return M

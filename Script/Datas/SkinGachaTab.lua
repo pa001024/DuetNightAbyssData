@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -24,6 +27,14 @@ return ReadOnly("SkinGachaTab", {
     ReddotNode = "Gacha_Special_2",
     Sequence = 1,
     TabId = 3,
+    TabName = "UI_SkinGacha_Special"
+  },
+  [4] = {
+    GachaId = {9004},
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Banner/T_Gacha_PoolBanner_Zhiliu01.T_Gacha_PoolBanner_Zhiliu01'",
+    ReddotNode = "Gacha_Special_3",
+    Sequence = 1,
+    TabId = 4,
     TabName = "UI_SkinGacha_Special"
   }
 })

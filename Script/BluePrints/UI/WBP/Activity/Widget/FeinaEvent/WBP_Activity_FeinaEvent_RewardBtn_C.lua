@@ -70,6 +70,7 @@ end
 
 function M:Destruct()
   self:RemoveInputMethodChangedListen()
+  ReddotManager.RemoveListener("FeinaEventReward", self)
   self.Super.Destruct(self)
 end
 

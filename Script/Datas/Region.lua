@@ -1,5 +1,8 @@
 local T = {}
 T.RT_1 = {0.5, 1.25}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -209,6 +212,7 @@ return ReadOnly("Region", {
     },
     RegionId = 1045,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Main/Huaxu_Haojing_Main",
+    RegionMapId = 500,
     RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/WBP_Map_Reg_Chapter01.WBP_Map_Reg_Chapter01",
     RegionMapImageCenter = {20000, -20000},
     RegionMapWheelScale = T.RT_1,
@@ -258,7 +262,11 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1051] = {
-    IsRandom = {105101},
+    IsRandom = {
+      105101,
+      105102,
+      105103
+    },
     RegionId = 1051,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Int/Huaxu_Haojing_Int_Main",
     RegionMapWheelScale = T.RT_1,
@@ -269,6 +277,7 @@ return ReadOnly("Region", {
     IsRandom = {105201},
     RegionId = 1052,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Reb/Huaxu_Haojing_Reb_Main",
+    RegionMapId = 501,
     RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/WBP_Map_Reg_Chapter01_KK.WBP_Map_Reg_Chapter01_KK",
     RegionMapWheelScale = T.RT_1,
     RegionName = "UI_REGION_NAME_1052",
@@ -276,13 +285,15 @@ return ReadOnly("Region", {
   },
   [1053] = {
     AlertDisable = true,
-    IsRandom = {105301},
+    IsRandom = {105301, 105302},
     RegionId = 1053,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_TRLM/Huaxu_Haojing_TRLM_Main",
+    RegionMapId = 502,
     RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/WBP_Map_Reg_Chapter01_Sew.WBP_Map_Reg_Chapter01_Sew",
     RegionMapImageCenter = {0, 20000},
     RegionMapWheelScale = T.RT_1,
     RegionName = "UI_REGION_NAME_1053",
+    RegionRotation = 270,
     RegionType = "Main"
   },
   [1054] = {
@@ -297,6 +308,7 @@ return ReadOnly("Region", {
     IsRandom = {105501},
     RegionId = 1055,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_YLX/Huaxu_Haojing_YLX_Main",
+    RegionMapId = 503,
     RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/WBP_Map_Reg_EXChapter01.WBP_Map_Reg_EXChapter01",
     RegionMapImageCenter = {20000, 0},
     RegionMapWheelScale = T.RT_1,
@@ -329,6 +341,14 @@ return ReadOnly("Region", {
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Yanjindu_Stealth/Huaxu_Yanjindu_Stealth_Main",
     RegionMapWheelScale = T.RT_1,
     RegionName = "UI_REGION_NAME_1058",
+    RegionType = "Main"
+  },
+  [1059] = {
+    IsRandom = {105901},
+    RegionId = 1059,
+    RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_HaoJing_Batt04/Huaxu_Haojing_Batt04_Main",
+    RegionMapWheelScale = T.RT_1,
+    RegionName = "UI_REGION_NAME_1059",
     RegionType = "Main"
   },
   [1060] = {

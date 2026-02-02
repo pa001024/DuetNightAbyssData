@@ -54,7 +54,7 @@ end
 
 function M:AddRemainLimitTime(AddTime, MobileAddTime)
   local RealAddTime = AddTime
-  if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
+  if CommonUtils.GetRuntimePlatform(self) == "Mobile" then
     RealAddTime = MobileAddTime
   end
   if 0 == RealAddTime then
@@ -85,7 +85,7 @@ function M:ReceiveOnExploreGroupResetUI()
   else
     UIManager(self):UnLoadUI("DungeonCaptureFloat")
   end
-  if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+  if CommonUtils.GetRuntimePlatform(self) == "PC" then
     local BattleMain = UIManager(self):GetUIObj("BattleMain")
     if BattleMain then
       local DynamicEventUI = BattleMain:GetOrAddDynamicEventWidget()
@@ -127,7 +127,7 @@ function M:ReceiveOnExploreGroupResetUI()
           local TaskBarWidget = BattleMain.Pos_TaskBar:GetChildAt(0)
           if nil ~= TaskBarWidget then
             if 0 ~= TrackingQuestChain then
-              if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+              if CommonUtils.GetRuntimePlatform(self) == "PC" then
                 TaskBarWidget.Tips:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
               else
                 TaskBarWidget.Tips:SetVisibility(ESlateVisibility.Collapsed)
@@ -137,7 +137,7 @@ function M:ReceiveOnExploreGroupResetUI()
               end
             end
             TaskBarWidget.IsInExplore = false
-            if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+            if CommonUtils.GetRuntimePlatform(self) == "PC" then
               TaskBarWidget:PlayAnimation(TaskBarWidget.Tooltip_In)
             end
           end
@@ -231,7 +231,7 @@ function M:ReceiveOnExploreLimitStarted(Title, Des, TotalTargetNum)
   if TimeItem then
     TimeItem.TaskTitle:SetText(GText("UI_LIMITEXPLORE_TIME"))
     TimeItem:UIStateChange_OnTarget()
-    if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
+    if CommonUtils.GetRuntimePlatform(self) == "Mobile" then
       TimeItem.Group_BtnCancel:SetVisibility(ESlateVisibility.Visible)
       TimeItem.Btn_Cancel:BindEventOnClicked(self, self.OnPressQuitChallenge)
     end
@@ -269,7 +269,7 @@ function M:ReceiveOnExploreLimitStarted(Title, Des, TotalTargetNum)
           local TaskBarWidget = BattleMain.Pos_TaskBar:GetChildAt(0)
           if nil ~= TaskBarWidget then
             if 0 ~= TrackingQuestChain then
-              if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+              if CommonUtils.GetRuntimePlatform(self) == "PC" then
               else
                 TaskBarWidget.Tips:SetVisibility(ESlateVisibility.Collapsed)
               end
@@ -278,7 +278,7 @@ function M:ReceiveOnExploreLimitStarted(Title, Des, TotalTargetNum)
               end
             end
             TaskBarWidget.IsInExplore = true
-            if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+            if CommonUtils.GetRuntimePlatform(self) == "PC" then
               TaskBarWidget:PlayAnimation(TaskBarWidget.Tooltip_Out)
             end
           end
@@ -295,7 +295,7 @@ function M:ReceiveOnExploreLimitStarted(Title, Des, TotalTargetNum)
         DynamicEventUI.ExplorationChallenge.Text_Tips01:SetVisibility(ESlateVisibility.Collapsed)
         DynamicEventUI.ExplorationChallenge.Text_Tips02:SetText(GText("UI_Esc_Challenge"))
         DynamicEventUI.ExplorationChallenge.Text_Total:SetText(TotalTargetNum)
-        if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+        if CommonUtils.GetRuntimePlatform(self) == "PC" then
           DynamicEventUI:ListenForInputAction("QuitChallenge", EInputEvent.IE_Pressed, true, {
             self,
             self.OnPressQuitChallenge
@@ -317,7 +317,7 @@ function M:ReceiveOnExploreLimitStarted(Title, Des, TotalTargetNum)
             self.OnPadExploraChallengeQuitRelease
           })
         end
-        if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
+        if CommonUtils.GetRuntimePlatform(self) == "Mobile" then
           DynamicEventUI.ExplorationChallenge.Panel_Tips:SetVisibility(ESlateVisibility.Collapsed)
         end
         self:RemoveTimer("ShowExploreTaskPanelBindToTimer")
@@ -354,7 +354,7 @@ function M:OnPressQuitChallenge()
   local Params = {}
   
   function Params.RightCallbackFunction(Data)
-    if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+    if CommonUtils.GetRuntimePlatform(self) == "PC" then
       local BattleMain = UIManager(self):GetUIObj("BattleMain")
       if BattleMain then
         local DynamicEventUI = BattleMain:GetOrAddDynamicEventWidget()
@@ -374,7 +374,7 @@ function M:OnPadActiveGuidePress()
     local Params = {}
     
     function Params.RightCallbackFunction(Data)
-      if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+      if CommonUtils.GetRuntimePlatform(self) == "PC" then
         local BattleMain = UIManager(self):GetUIObj("BattleMain")
         if BattleMain then
           local DynamicEventUI = BattleMain:GetOrAddDynamicEventWidget()
@@ -394,7 +394,7 @@ function M:OnPadExploraChallengeQuitPress()
     local Params = {}
     
     function Params.RightCallbackFunction(Data)
-      if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+      if CommonUtils.GetRuntimePlatform(self) == "PC" then
         local BattleMain = UIManager(self):GetUIObj("BattleMain")
         if BattleMain then
           local DynamicEventUI = BattleMain:GetOrAddDynamicEventWidget()

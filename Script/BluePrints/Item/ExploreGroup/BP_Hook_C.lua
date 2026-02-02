@@ -27,7 +27,8 @@ function M:OpenMechanism(PlayerId)
   end
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
   local PlayerCharacter = Battle(self):GetEntity(PlayerId)
-  if GameInstance.ShouldPlayDeliveryEndMontage or GameInstance.ShouldStopHookInDungeonDelivery then
+  local GameState = UGameplayStatics.GetGameState(self)
+  if GameInstance.ShouldPlayDeliveryEndMontage or GameState.ShouldStopHookInDungeonDelivery then
     return
   end
   local MainPlayer = UGameplayStatics.GetPlayerCharacter(self, 0)
@@ -191,14 +192,7 @@ function M:RefreshInteractiveBtn(PlayerActor)
         self.InteractiveUI:Init(self)
       end
     else
-      local BattleMainUI = UIManager(self):GetUIObj("BattleMain")
-      if not (BattleMainUI and BattleMainUI.Char_Skill) or BattleMainUI.Char_Skill.Execute.IsShow then
-        BattleMainUI.Char_Skill.Switch_Type:SetActiveWidgetIndex(0)
-        return
-      end
-      BattleMainUI.Char_Skill.Switch_Type:SetActiveWidgetIndex(1)
-      self.InteractiveUI = BattleMainUI.Char_Skill.HookLock
-      self.InteractiveUI:Init(self)
+      EventManager:FireEvent(EventID.OnMobileHookShow, self)
     end
   end
   if IsValid(self.InteractiveUI) then
@@ -206,14 +200,7 @@ function M:RefreshInteractiveBtn(PlayerActor)
       self.InteractiveUI = UIManager(self):LoadUINew("HookInteractive")
       self.InteractiveUI:Init(self)
     elseif not self.DeviceInPc then
-      local BattleMainUI = UIManager(self):GetUIObj("BattleMain")
-      if not (BattleMainUI and BattleMainUI.Char_Skill) or BattleMainUI.Char_Skill.Execute.IsShow then
-        BattleMainUI.Char_Skill.Switch_Type:SetActiveWidgetIndex(0)
-        return
-      end
-      BattleMainUI.Char_Skill.Switch_Type:SetActiveWidgetIndex(1)
-      self.InteractiveUI = BattleMainUI.Char_Skill.HookLock
-      self.InteractiveUI:Init(self)
+      EventManager:FireEvent(EventID.OnMobileHookShow, self)
     end
   end
   if IsValid(self.InteractiveUI) and self.InteractiveUI.Hook and self.InteractiveUI.Hook ~= ValidHook then

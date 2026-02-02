@@ -20,23 +20,18 @@ T.RT_6 = {
   Text = "PlayerLevel_Growth_Unlock_Content"
 }
 T.RT_7 = {
-  [1] = "PlayerLevel_Growth_Unlock",
-  [2] = "PlayerLevel_HardBoss_Unlock"
-}
-T.RT_8 = {
-  [1] = "Text",
-  [2] = "Text"
-}
-T.RT_9 = {
   [1] = "UI_NewWalnut_Unlock",
   [2] = "PlayerLevel_Growth_Unlock",
   [3] = "PlayerLevel_HardBoss_Unlock"
 }
-T.RT_10 = {
+T.RT_8 = {
   [1] = "Walnut",
   [2] = "Text",
   [3] = "Text"
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -256,8 +251,9 @@ return ReadOnly("PlayerLevelUp", {
   [25] = {
     ModExtractMax = 2500,
     NodeContent = {
-      [1] = T.RT_6,
-      [2] = {
+      [1] = T.RT_2,
+      [2] = T.RT_6,
+      [3] = {
         Text = "PlayerLevel_HardBoss_Unlock_Content2"
       }
     },
@@ -365,8 +361,9 @@ return ReadOnly("PlayerLevelUp", {
   [35] = {
     ModExtractMax = 3000,
     NodeContent = {
-      [1] = T.RT_6,
-      [2] = {
+      [1] = T.RT_2,
+      [2] = T.RT_6,
+      [3] = {
         Text = "PlayerLevel_HardBoss_Unlock_Content3"
       }
     },
@@ -480,8 +477,8 @@ return ReadOnly("PlayerLevelUp", {
         Text = "PlayerLevel_HardBoss_Unlock_Content4"
       }
     },
-    NodeTitle = T.RT_9,
-    NodeType = T.RT_10,
+    NodeTitle = T.RT_7,
+    NodeType = T.RT_8,
     PlayerBuffId = 804,
     PlayerBuffLevel = 1,
     PlayerLevel = 45,
@@ -581,8 +578,9 @@ return ReadOnly("PlayerLevelUp", {
   [55] = {
     ModExtractMax = 4000,
     NodeContent = {
-      [1] = T.RT_6,
-      [2] = {
+      [1] = T.RT_2,
+      [2] = T.RT_6,
+      [3] = {
         Text = "PlayerLevel_HardBoss_Unlock_Content5"
       }
     },
@@ -647,8 +645,8 @@ return ReadOnly("PlayerLevelUp", {
         Text = "PlayerLevel_HardBoss_Unlock_Content6"
       }
     },
-    NodeTitle = T.RT_9,
-    NodeType = T.RT_10,
+    NodeTitle = T.RT_7,
+    NodeType = T.RT_8,
     PlayerBuffId = 804,
     PlayerBuffLevel = 12,
     PlayerLevel = 60,

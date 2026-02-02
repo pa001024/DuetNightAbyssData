@@ -13,6 +13,9 @@ T.RT_1 = {
   [11] = "/Game/Maps/Levels/Chapter01/Chapter01_Main/Navmesh_Data/Chapter01_Icelake_NavMesh_00027",
   [12] = "/Game/Maps/Levels/Chapter01/Chapter01_Main/Navmesh_Data/Chapter01_Icelake_NavMesh_00028"
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -258,6 +261,18 @@ return ReadOnly("ArtLevelControl_TaskVar2Data", {
       VarName = "IQ12010513_fu"
     }
   },
+  IQ120315 = {
+    [1041] = {
+      Id = 28,
+      InTime = 0,
+      LoadLevel = {
+        [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Yanjindu_Main/Task_Data/Huaxu_Yanjindu_IQ120315_Task.Huaxu_Yanjindu_IQ120315_Task"
+      },
+      OutTime = 0,
+      RegionId = 1041,
+      VarName = "IQ120315"
+    }
+  },
   LinshiNPC110101 = {
     [1021] = {
       Id = 7,
@@ -311,7 +326,7 @@ return ReadOnly("ArtLevelControl_TaskVar2Data", {
       Id = 22,
       InTime = 0,
       LoadLevel = {
-        [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_TRLM/Design_Data/DesignTask/Huaxu_TRLM_IQ12020515_DesignTask.Huaxu_TRLM_IQ12020515_DesignTask"
+        [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_TRLM/Design_Data/Huaxu_Haojing_TRLM_IQ12020515_DesignTask.Huaxu_Haojing_TRLM_IQ12020515_DesignTask"
       },
       OutTime = 0,
       RegionId = 1053,

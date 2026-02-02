@@ -251,4 +251,31 @@ function GMObjectUtils.GetCPCmdObjs()
   return Result
 end
 
+function GMObjectUtils.GetFriendCmdObjs()
+  local Result = {}
+  local Avatar = GWorld and GWorld:GetAvatar()
+  if not Avatar or not Avatar.Friends then
+    return Result
+  end
+  local Uids = {}
+  for Uid, _ in pairs(Avatar.Friends) do
+    table.insert(Uids, Uid)
+  end
+  table.sort(Uids)
+  local content = {
+    mode = "button",
+    callback = "CanSendFriendGift",
+    close_gm = false
+  }
+  for _, Uid in ipairs(Uids) do
+    local FriendInfo = Avatar.Friends[Uid]
+    local Name = FriendInfo and FriendInfo.Info and FriendInfo.Info.Nickname or ""
+    local obj = GMObjectUtils.NewCommandObject(content)
+    obj.Text = tostring(Uid) .. " " .. Name
+    obj.Parameters:Add(Uid)
+    table.insert(Result, obj)
+  end
+  return Result
+end
+
 return GMObjectUtils

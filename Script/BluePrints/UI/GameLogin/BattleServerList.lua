@@ -17,6 +17,24 @@ return {
     ip = "10.18.200.113",
     port = 8000
   },
+  [104] = {
+    area = "America",
+    hostnum = 104,
+    ip = "10.110.0.30",
+    port = 8000
+  },
+  [105] = {
+    area = "Europe",
+    hostnum = 105,
+    ip = "10.50.0.91",
+    port = 8000
+  },
+  [106] = {
+    area = "China",
+    hostnum = 106,
+    ip = "10.112.0.43",
+    port = 8000
+  },
   [201] = {
     area = "China",
     hostnum = 201,
@@ -35,10 +53,22 @@ return {
     ip = "10.112.0.31",
     port = 8000
   },
+  [204] = {
+    area = "China",
+    hostnum = 204,
+    ip = "10.112.0.251",
+    port = 8000
+  },
+  [205] = {
+    area = "China",
+    hostnum = 205,
+    ip = "10.112.0.32",
+    port = 8000
+  },
   [306] = {
     area = "China",
     hostnum = 306,
-    ip = "10.18.18.120",
+    ip = "10.18.18.91",
     port = 8000
   },
   [307] = {
@@ -75,6 +105,12 @@ return {
     area = "China",
     hostnum = 318,
     ip = "10.18.200.64",
+    port = 8000
+  },
+  [319] = {
+    area = "China",
+    hostnum = 319,
+    ip = "10.18.200.104",
     port = 8000
   },
   [399] = {
@@ -185,6 +221,18 @@ return {
     ip = "172.22.32.134",
     port = 8000
   },
+  [8003] = {
+    area = "America",
+    hostnum = 8003,
+    ip = "10.110.0.36",
+    port = 8000
+  },
+  [8004] = {
+    area = "Europe",
+    hostnum = 8004,
+    ip = "10.50.0.133",
+    port = 8000
+  },
   [10001] = {
     area = "China",
     hostnum = 10051,
@@ -247,6 +295,36 @@ return {
     area = "Europe",
     hostnum = 70004,
     ip = "10.50.0.84",
+    port = 8000
+  },
+  [80001] = {
+    area = "China",
+    hostnum = 80001,
+    ip = "10.112.0.42",
+    port = 8000
+  },
+  [80002] = {
+    area = "Asian",
+    hostnum = 80002,
+    ip = "10.10.0.141",
+    port = 8000
+  },
+  [80003] = {
+    area = "America",
+    hostnum = 80003,
+    ip = "10.110.5.171",
+    port = 8000
+  },
+  [90001] = {
+    area = "China",
+    hostnum = 90001,
+    ip = "10.112.0.175",
+    port = 8000
+  },
+  [90002] = {
+    area = "China",
+    hostnum = 90002,
+    ip = "10.112.0.179",
     port = 8000
   }
 }

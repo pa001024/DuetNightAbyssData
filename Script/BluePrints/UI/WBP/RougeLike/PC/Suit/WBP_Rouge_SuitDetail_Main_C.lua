@@ -287,16 +287,11 @@ end
 function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  local NowAnalogValue = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent)
-  if not UIUtils.CheckIsShouldHandleAnalogInput(NowAnalogValue) then
-    return UE4.UWidgetBlueprintLibrary.Handled()
-  end
-  local AddOffset = NowAnalogValue * 6
+  local AddOffset = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 6
   if "Gamepad_RightY" == InKeyName then
     local CurScrollOffset = self.ScrollBox_List:GetScrollOffset()
     local ScrollOffset = math.clamp(CurScrollOffset - AddOffset, 0, self.ScrollBox_List:GetScrollOffsetOfEnd())
     self.ScrollBox_List:SetScrollOffset(ScrollOffset)
-    return UE4.UWidgetBlueprintLibrary.Handled()
   end
   return UE4.UWidgetBlueprintLibrary.UnHandled()
 end

@@ -925,6 +925,7 @@ return {
             pos = {x = 266.8309503291158, y = 92.54817439369529},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_1660078"
             }
@@ -936,6 +937,7 @@ return {
             pos = {x = 3644.8427524562603, y = 496.7162759224444},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_1660114"
             }
@@ -947,6 +949,7 @@ return {
             pos = {x = 318.62718951043394, y = 350.2764503970923},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "BP_1660078"
             }

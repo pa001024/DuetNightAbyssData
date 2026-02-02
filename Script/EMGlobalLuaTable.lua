@@ -143,6 +143,10 @@ function EMGlobalLuaTable.GenerateEnhanceLogName()
 end
 
 function EMGlobalLuaTable.ShowEnhanceLogUploadTip(...)
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
+  if not UIManager then
+    return
+  end
   local Args = {
     ...
   }
@@ -150,14 +154,18 @@ function EMGlobalLuaTable.ShowEnhanceLogUploadTip(...)
   local FileName = Args[2]
   if Result == UE4.EUploadEnhanceLogResult.Success then
     local TipText = string.format(GText("UI_Opition_Log_Finish"), FileName)
-    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, TipText)
+    UIManager:ShowUITip(UIConst.Tip_CommonToast, TipText)
   else
-    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, string.format(GText("UI_Opition_Log_UpdateFail"), tostring(Result)))
+    UIManager:ShowUITip(UIConst.Tip_CommonToast, string.format(GText("UI_Opition_Log_UpdateFail"), tostring(Result)))
   end
 end
 
 function EMGlobalLuaTable.ShowClearLogTip()
-  UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Opition_Log_Cleand"))
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
+  if not UIManager then
+    return
+  end
+  UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("UI_Opition_Log_Cleand"))
 end
 
 function EMGlobalLuaTable.CustomNpcAtmosShow(AtmosphereTagArray)

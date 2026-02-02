@@ -6,16 +6,13 @@ local FormatProperties = require("NetworkEngine.Common.Assemble").FormatProperti
 local Wuyousheng = Class("Wuyousheng", CustomTypes.CustomAttr)
 Wuyousheng.__Props__ = {
   WuyoushengEventId = prop.prop("Int", "client save"),
-  TotalStars = prop.prop("Int", "client save"),
-  ProgressRewardsGot = prop.prop("Int2IntDict", "client save")
+  FinishStars = prop.prop("Int2IntDict", "client save"),
+  ProgressRewardsGot = prop.prop("Int2IntDict", "client save"),
+  SquadInfoMap = prop.prop("Int2StrDict", "client save", {})
 }
 
 function Wuyousheng:Init(WuyoushengEventId)
   self.WuyoushengEventId = WuyoushengEventId
-end
-
-function Wuyousheng:AddTotalStars(Num)
-  self.TotalStars = self.TotalStars + Num
 end
 
 function Wuyousheng:IsRewarded(RewardKey)
@@ -23,11 +20,41 @@ function Wuyousheng:IsRewarded(RewardKey)
 end
 
 function Wuyousheng:IsCompleted(RewardKey, RequiredNum)
-  return RequiredNum <= self.TotalStars
+  local CurNum = self:GetTotalStars()
+  return RequiredNum <= CurNum
+end
+
+function Wuyousheng:GetFinishStars(DungeonId)
+  return self.FinishStars[DungeonId] or 0
+end
+
+function Wuyousheng:SetFinishStars(DungeonId, Stars)
+  self.FinishStars[DungeonId] = Stars
+end
+
+function Wuyousheng:GetTotalStars()
+  local TotalStars = 0
+  for _, s in pairs(self.FinishStars) do
+    TotalStars = TotalStars + s
+  end
+  return TotalStars
 end
 
 function Wuyousheng:SetRewardGot(RewardKey)
   self.ProgressRewardsGot[RewardKey] = 1
+end
+
+function Wuyousheng:GetSquadInfo(DungeonId)
+  local SquadInfoStr = self.SquadInfoMap[DungeonId]
+  if not SquadInfoStr then
+    return
+  end
+  return SerializeUtils:UnSerialize(SquadInfoStr)
+end
+
+function Wuyousheng:SetSquadInfo(DungeonId, Squad)
+  local SquadInfoStr = SerializeUtils:Serialize(Squad)
+  self.SquadInfoMap[DungeonId] = SquadInfoStr
 end
 
 FormatProperties(Wuyousheng)

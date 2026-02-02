@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -10,7 +13,14 @@ return ReadOnly("DyePart", {
   [6] = {PartID = 6},
   [7] = {PartID = 7},
   [8] = {
-    ColorID = {1022, 1027},
+    ColorID = {
+      1022,
+      1023,
+      1024,
+      1025,
+      1026,
+      1027
+    },
     PartID = 8
   }
 })

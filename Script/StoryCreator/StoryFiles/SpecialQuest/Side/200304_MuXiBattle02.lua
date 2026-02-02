@@ -104,11 +104,11 @@ return {
           {
             startQuest = "17533583198611267434",
             startPort = "QuestStart",
-            endQuest = "17643196935421277401",
+            endQuest = "1767786512365386",
             endPort = "In"
           },
           {
-            startQuest = "17643196935421277401",
+            startQuest = "1767786512365386",
             startPort = "Out",
             endQuest = "17533583198611267436",
             endPort = "Fail"
@@ -133,7 +133,7 @@ return {
             key = "17533583198611267436",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2008.3333333333333, y = 641.6666666666666},
+            pos = {x = 2282.5, y = 599.5},
             propsData = {}
           },
           ["1753691648347932"] = {
@@ -179,11 +179,11 @@ return {
             pos = {x = 1710.461846087854, y = 384.84871100432537},
             propsData = {WaitTime = 0}
           },
-          ["17643196935421277401"] = {
-            key = "17643196935421277401",
+          ["1767786512365386"] = {
+            key = "1767786512365386",
             type = "WaitingSpecialQuestFailNode",
             name = "等待特殊任务失败",
-            pos = {x = 1501.6466007351557, y = 634.853814013644},
+            pos = {x = 1610.5673468090517, y = 613.677932066662},
             propsData = {}
           }
         },

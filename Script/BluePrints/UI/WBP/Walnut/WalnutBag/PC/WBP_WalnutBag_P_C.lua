@@ -57,11 +57,8 @@ end
 
 function M:ReceiveEnterState(StackAction)
   M.Super.ReceiveEnterState(self, StackAction)
-  if 1 == StackAction then
-    self:RefreshList(true, WalnutBagCommon.AllOptionName.TabClick)
-    if self.GameInputModeSubsystem then
-      self:OnUpdateUIStyleByInputTypeChange(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
-    end
+  if 1 == StackAction and self.GameInputModeSubsystem then
+    self:OnUpdateUIStyleByInputTypeChange(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
   end
   self.AllReddotItemsId = WalnutBagModel:GetAllNewItemsId()
   self:InitTabInfo()
@@ -333,17 +330,12 @@ function M:WalnutTabItemClick(TabWidget)
   self.ListCanvas:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self:RefreshList(true, WalnutBagCommon.AllOptionName.TabClick)
   self:HorizontalListViewResize_SetUp(self.Panel_ItemList, self.List_Item, 0)
-  self:AddTimer(0.05, function()
-    if self.List_Item:GetNumItems() > 0 then
-      local FirstItem = self.List_Item:GetItemAt(0)
-      if FirstItem then
-        self:OnListItemSelected(FirstItem, nil, true)
-      end
-    end
-  end, false, 0, "SelectFirstWalnutItem", true)
 end
 
 function M:OnUpdateWalnutItemByAction(OpAction, ErrCode, ...)
+  if not ErrCode then
+    return
+  end
   if not ErrorCode:Check(ErrCode, UIConst.Tip_CommonToast) then
     return
   end
@@ -543,28 +535,12 @@ function M:EnterWalnutSellState()
   if nil ~= UIManager then
     local SelectWalnutDatas
     if self.CurSelectContent then
-      if self:CheckIsCanAddToSaleList(self.CurSelectContent, false) then
-        local WalnutUuid = self.CurSelectContent.Id
-        local WalnutServerData = self:GetWalnutServerData(WalnutUuid)
-        local WalnutStateTagInfo = {
-          Name = "IsToChoose",
-          ExtraData = {
-            1,
-            WalnutServerData.StuffCount,
-            WalnutServerData.Price,
-            WalnutServerData.CoinId
-          }
-        }
-        self.CurSelectContent.StateTagInfo = WalnutStateTagInfo
-        if self.CurSelectContent.SelfWidget then
-          self.CurSelectContent.SelfWidget:SetStuffStyleByStateTag(self.CurSelectContent)
-        end
-        self.DesireSaleStuffObjList[WalnutUuid] = self.CurSelectContent
-      elseif self.CurSelectContent.SelfWidget then
+      if self.CurSelectContent.SelfWidget then
         self.CurSelectContent.SelfWidget:SetSelected(false)
       else
         self.CurSelectContent.IsSelect = false
       end
+      self.WS_Detail:SetActiveWidgetIndex(1)
     end
     if self:IsAnimationPlaying(self.Sell_Close) then
       self:StopAnimation(self.Sell_Close)
@@ -577,8 +553,8 @@ end
 
 function M:LeaveWalnutSellState()
   self.Tab_WalnutBag:LeaveViewSingleMode()
-  self:RefreshList(true, WalnutBagCommon.AllOptionName.TabClick)
   self.BagSellState = false
+  self:RefreshList(true, WalnutBagCommon.AllOptionName.TabClick)
   local tempList = self.DesireSaleStuffObjList
   local Length = self.List_Item:GetNumItems()
   for i = 0, Length - 1 do
@@ -592,14 +568,6 @@ function M:LeaveWalnutSellState()
     self:StopAnimation(self.Sell)
   end
   self:PlayAnimation(self.Sell_Close)
-  self:AddTimer(0.05, function()
-    if self.List_Item:GetNumItems() > 0 then
-      local FirstItem = self.List_Item:GetItemAt(0)
-      if FirstItem then
-        self:OnListItemSelected(FirstItem)
-      end
-    end
-  end, false, 0, "SelectFirstWalnutItem", true)
 end
 
 function M:RemoveWalnutSaleState()

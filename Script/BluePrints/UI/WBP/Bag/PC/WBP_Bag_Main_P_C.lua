@@ -158,6 +158,11 @@ function WBP_Bag_Main_P_C:GetStuffServerData(StuffUnitId, StuffType, FishInfo)
         end
       end
     end
+  elseif StuffType == BagCommon.StuffType.Draft then
+    if type(StuffUnitId) == "string" then
+      StuffUnitId = math.tointeger(StuffUnitId)
+    end
+    StuffServerData = PlayerAvatar.Drafts[StuffUnitId]
   end
   return StuffServerData
 end
@@ -240,11 +245,17 @@ function WBP_Bag_Main_P_C:FillPlayerDataByTypeInFrame(TabId, NeedDelayJump)
     return
   end
   local PlayerStuffs, AllWeaponCount = nil, 0
-  self.NeedSelectGridIndex = -1
+  if self.GameInputModeSubsystem and self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
+    self.NeedSelectGridIndex = 0
+  else
+    self.NeedSelectGridIndex = -1
+  end
   if TabId == BagCommon.ItemTypeToTabId.MeleeWeapon or TabId == BagCommon.ItemTypeToTabId.RangedWeapon then
     PlayerStuffs = Avatar.Weapons
   elseif TabId == BagCommon.ItemTypeToTabId.Mod then
     PlayerStuffs = Avatar.Mods
+  elseif TabId == BagCommon.ItemTypeToTabId.Draft then
+    PlayerStuffs = Avatar.Drafts
   else
     PlayerStuffs = Avatar.Resources
   end
@@ -264,6 +275,11 @@ function WBP_Bag_Main_P_C:FillPlayerDataByTypeInFrame(TabId, NeedDelayJump)
         StuffData = StuffIconObject:GetModStuffData(StuffServerData, self, self.OnListSelectStuffClicked)
         if nil ~= StuffData then
           StuffData.IsEquipped = self:GetIsStuffIsEquiped(StuffData)
+        end
+      elseif TabId == BagCommon.ItemTypeToTabId.Draft then
+        local DraftConfigData = StuffServerData:Data()
+        if DraftConfigData and DraftConfigData.ShowInBag and StuffServerData.Count > 0 then
+          StuffData = StuffIconObject:GetDraftsStuffData(StuffServerData, self, self.OnListSelectStuffClicked)
         end
       else
         local StuffConfigData = StuffServerData:Data()
@@ -331,7 +347,7 @@ function WBP_Bag_Main_P_C:FillPlayerDataByTypeInFrame(TabId, NeedDelayJump)
             self.NeedSelectGridIndex = math.max(i - 1, 0)
           end
           OrderStuffData.GridIndex = i
-          OrderStuffData.AnimNameWithCreate = i <= RowCount * ColCount and "In_OnlyOpacity" or nil
+          OrderStuffData.AnimNameWithCreate = i <= RowCount * ColCount and "In" or nil
           local StuffObj = StuffIconObject:CreateBagItemContent(OrderStuffData)
           self.List_Item:AddItem(StuffObj)
           if 0 == i % RowCount then
@@ -355,7 +371,7 @@ function WBP_Bag_Main_P_C:FillPlayerDataByTypeInFrame(TabId, NeedDelayJump)
           }
           EmptyStuffData.IsSelect = false
           EmptyStuffData.GridIndex = Index + #FinalStuffData
-          EmptyStuffData.AnimNameWithCreate = nil
+          EmptyStuffData.AnimNameWithCreate = Index <= RowCount * ColCount and "In" or nil
           local StuffObj = StuffIconObject:CreateBagItemContent(EmptyStuffData)
           self.List_Item:AddItem(StuffObj)
         end
@@ -431,6 +447,8 @@ function WBP_Bag_Main_P_C:RefreshDetail(GridIndex, StuffUuid)
     StuffServerData = self:GetStuffServerData(StuffUuid, BagCommon.StuffType.Weapon)
   elseif self.CurTabId == BagCommon.ItemTypeToTabId.Mod then
     StuffServerData = self:GetStuffServerData(StuffUuid, BagCommon.StuffType.Mod)
+  elseif self.CurTabId == BagCommon.ItemTypeToTabId.Draft then
+    StuffServerData = self:GetStuffServerData(StuffUuid, BagCommon.StuffType.Draft)
   else
     StuffServerData = self:GetStuffServerData(StuffUuid, BagCommon.StuffType.Resource, self.CurSelectStuffContent.FishInfo)
   end
@@ -473,12 +491,14 @@ function WBP_Bag_Main_P_C:EnterStuffSellState()
   local UIManager = GameInstance:GetGameUIManager()
   local SelectStuffDatas
   if nil ~= UIManager then
-    if self.CurSelectStuffContent then
+    if self.CurSelectStuffContent and self.CurSelectStuffContent.StuffType == BagCommon.TabIdToStuffType[self.CurTabId] then
       if self:CheckIsCanAddToSaleList(self.CurSelectStuffContent, false) then
         local StuffUuid = self.CurSelectStuffContent.Uuid
         local StuffServerData = self:GetStuffServerData(StuffUuid, self.CurSelectStuffContent.StuffType, self.CurSelectStuffContent.FishInfo)
         if self.CurTabId == BagCommon.ItemTypeToTabId.Mod then
           SelectStuffDatas = StuffIconObject:GetModStuffData(StuffServerData, nil, "ClickChooseStuff")
+        elseif self.CurTabId == BagCommon.ItemTypeToTabId.Draft then
+          SelectStuffDatas = StuffIconObject:GetDraftsStuffData(StuffServerData, nil, "ClickChooseStuff")
         else
           SelectStuffDatas = StuffIconObject:GetItemStuffData(StuffServerData, nil, "ClickChooseStuff")
         end
@@ -537,15 +557,17 @@ end
 function WBP_Bag_Main_P_C:RealToSaleItems(AllStuffContentList, AllStuffSellInfo)
   self:RecoverAllItemsStyle()
   local PlayerAvatar = GWorld:GetAvatar()
-  local ModList, ResourceList = {}, {}
+  local ModList, ResourceList, DraftsList = {}, {}, {}
   local IntegerUuid
   for k, v in pairs(AllStuffContentList) do
-    local StuffUuid = self:GetStuffObjId(v.Uuid)
     if v.StuffType == BagCommon.StuffType.Mod then
+      local StuffUuid = self:GetStuffObjId(v.Uuid)
       ModList[StuffUuid] = {
         Count = AllStuffSellInfo[k],
         CurrentModCount = v.Count
       }
+    elseif v.StuffType == BagCommon.StuffType.Draft then
+      DraftsList[v.UnitId] = AllStuffSellInfo[k]
     elseif v.StuffType == BagCommon.StuffType.Resource then
       IntegerUuid = v.UnitId
       if BagCommon:IsFishResource(IntegerUuid) then
@@ -572,6 +594,9 @@ function WBP_Bag_Main_P_C:RealToSaleItems(AllStuffContentList, AllStuffSellInfo)
       PlayerAvatar:ResourceBulkSale(ResourceList)
     end
   end
+  if not IsEmptyTable(DraftsList) then
+    PlayerAvatar:DraftSale(DraftsList)
+  end
 end
 
 function WBP_Bag_Main_P_C:EnterWeaponResolveState()
@@ -586,7 +611,7 @@ function WBP_Bag_Main_P_C:EnterWeaponResolveState()
   self.BagCurState = BagCommon.AllBagState.WeaponResolveState
   self.DesireResolveWeaponList = {}
   local SelectStuffDatas
-  if self.CurSelectStuffContent then
+  if self.CurSelectStuffContent and self.CurSelectStuffContent.StuffType == BagCommon.TabIdToStuffType[self.CurTabId] then
     if self:CheckIsCanAddToSaleList(self.CurSelectStuffContent, false) then
       local StuffUuid = self.CurSelectStuffContent.Uuid
       local StuffServerData = self:GetStuffServerData(StuffUuid, self.CurSelectStuffContent.StuffType)
@@ -971,6 +996,7 @@ end
 
 function WBP_Bag_Main_P_C:ClickChooseStuff(GridIndex, StuffUuid, AddNum)
   if self.BagCurState == BagCommon.AllBagState.NormalState and IsValid(self.CurSelectStuffContent) and self.CurSelectStuffContent.Uuid == StuffUuid then
+    DebugPrint("WBP_Bag_Main_P_C=== ClickChooseStuff, Click the same Item, no need to process!!")
     return
   end
   self.CurSelectGridIndex = GridIndex

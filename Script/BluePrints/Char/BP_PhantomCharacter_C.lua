@@ -114,6 +114,12 @@ function BP_PhantomCharacter:OnRealEnterDying()
       end
     end
   end
+  if self.IsHostage then
+    local TeamRecoveryComp = self:GetOrAddTeamRecoveryComp()
+    if TeamRecoveryComp then
+      TeamRecoveryComp.HaveDyingCountDown = true
+    end
+  end
 end
 
 function BP_PhantomCharacter:OnRealDie()

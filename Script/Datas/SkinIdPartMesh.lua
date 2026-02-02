@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -40,5 +43,8 @@ return ReadOnly("SkinIdPartMesh", {
   },
   [160101] = {
     [90013] = "Back"
+  },
+  [410201] = {
+    [410293] = "Back"
   }
 })

@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -34,12 +37,12 @@ return ReadOnly("FirstBonusNum", {
   },
   [110107] = {
     BonusNum = 3340,
-    FirstBonusNum = 12880,
+    FirstBonusNum = 3340,
     ItemId = 110107
   },
   [110108] = {
     BonusNum = 8550,
-    FirstBonusNum = 32980,
+    FirstBonusNum = 8550,
     ItemId = 110108
   }
 })

@@ -132,8 +132,12 @@ function Component:UnPauseTimer(KeyOrTimer)
   end
 end
 
-function Component:IsExistTimer(Key)
-  if nil == Key then
+function Component:IsExistTimer(KeyOrTimer)
+  if nil == KeyOrTimer then
+    return false
+  end
+  local Key, Timer, TimerInfo = self:_GetTimerInfo(KeyOrTimer)
+  if not Key then
     return false
   end
   return rawget(self, "TimerHandles") and nil ~= self.TimerHandles[Key]

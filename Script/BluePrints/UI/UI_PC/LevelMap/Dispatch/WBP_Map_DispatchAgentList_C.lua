@@ -255,6 +255,7 @@ function M:OnListItemClicked(Content, IsByAuto)
     if Content.UI then
       Content.UI.Btn_Minus:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
       Content.UI:StopAllAnimations()
+      Content.UI.BG:PlayAnimation(Content.UI.BG.Click)
       Content.UI:PlayAnimation(Content.UI.Select)
       Content.UI.Text_Selected:SetText(GText("UI_Disptach_Chosen"))
     end
@@ -264,6 +265,7 @@ function M:OnListItemClicked(Content, IsByAuto)
     if Content.UI then
       Content.UI.Btn_Minus:SetVisibility(ESlateVisibility.Collapsed)
       Content.UI:StopAllAnimations()
+      Content.UI.BG:PlayAnimation(Content.UI.BG.Normal)
       Content.UI:PlayAnimation(Content.UI.Normal)
     end
     self.ChooseAgentList[Content.Uuid] = nil
@@ -487,6 +489,7 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
       self.Owner.DispatchDetail:InitPadKeyInfo()
       self.Owner.DispatchDetail:ShowPadUI(false)
     end
+    self.Key_Controller_Desc:SetVisibility(ESlateVisibility.Collapsed)
   elseif "Gamepad_FaceButton_Top" == InKeyName then
     self:AutoChoose()
   elseif "Gamepad_FaceButton_Left" == InKeyName then

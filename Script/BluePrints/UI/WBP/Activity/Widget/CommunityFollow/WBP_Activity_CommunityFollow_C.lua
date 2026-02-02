@@ -51,6 +51,7 @@ function M:InitPage(ActivityId, ParentTabId, AllActivityId, ParentWidget)
     self:UpdateUIByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType())
   end
   self:InitUI()
+  ActivityUtils.SetUpJustifyOfJap(self.ActivityTitle.Text_ActivityDesc, self.ActivityTitle.Text_ActivityDescWorld)
 end
 
 function M:InitUI()

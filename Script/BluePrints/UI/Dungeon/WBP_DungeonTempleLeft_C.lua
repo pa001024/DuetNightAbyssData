@@ -8,18 +8,7 @@ end
 
 function M:AddTaskToOverlay(BattleMainUI)
   self.Super.AddTaskToOverlay(self, BattleMainUI)
-  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-  if not GameInstance then
-    return
-  end
-  local DungeonId = GameInstance:GetCurrentDungeonId()
-  local DungeonInfo = DataMgr.Dungeon[DungeonId]
-  if DungeonInfo.DungeonType == "Temple" then
-    BattleMainUI:SetOverrideInfo(BattleMainUI.SizeMap_Normal, BattleMainUI.Task_SoloTemple)
-  elseif DungeonInfo.DungeonType == "Party" then
-    BattleMainUI:SetOverrideInfo(BattleMainUI.SizeMap_MutTemple, BattleMainUI.Task_MutTemple)
-  end
-  BattleMainUI.RetainerBox_0:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  BattleMainUI.SizeBox_Map:SetVisibility(UE4.ESlateVisibility.Collapsed)
 end
 
 function M:InitListenEvent()
@@ -27,6 +16,7 @@ function M:InitListenEvent()
   self:AddDispatcher(EventID.OnSetTempleLimit, self, self.OnSetTempleLimit)
   self:AddDispatcher(EventID.OnTempleTimeChanged, self, self.OnTempleTimeChanged)
   self:AddDispatcher(EventID.OnTempleEnter, self, self.OnTempleEnter)
+  self:AddDispatcher(EventID.OnTempleTipButtonShow, self, self.OnTempleTipButtonShow)
   self:AddDispatcher(EventID.OnUpdatePartyLeftUI, self, self.OnUpdatePartyLeftUI)
 end
 
@@ -35,6 +25,20 @@ function M:OnLoaded(...)
   self:InitListenEvent()
   EventManager:FireEvent(EventID.OnTempleRightUI)
   self:InitInfo()
+  self.ShouldListenInput = false
+  if not self:IsListeningForInputAction("ActiveGuide") then
+    self:ListenForInputAction("ActiveGuide", EInputEvent.IE_Pressed, true, {
+      self,
+      self.OnTipButtonClicked
+    })
+  end
+  self.Btn_Click:UnBindEventOnClicked(self, self.OnTipButtonClicked)
+  self.Btn_Click:BindEventOnClicked(self, self.OnTipButtonClicked)
+  local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
+  self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
+  self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
+  self.CurInputDeviceType = self.GameInputModeSubsystem:GetCurrentInputType()
+  self:RefreshTipInfo()
 end
 
 function M:InitInfo()
@@ -57,6 +61,9 @@ function M:InitInfo()
     end
     self:InitParty()
   end
+  self.Btn_Click:SetText(GText("UI_TEMPLE_TIPS_" .. self.DungeonId))
+  self.Text_TempleKeyDesc:SetText(GText("UI_TEMPLE_TIPS_" .. self.DungeonId))
+  self:InitTipsKey()
 end
 
 function M:InitTemple()
@@ -169,8 +176,77 @@ function M:OnTempleEnter()
   EMUIAnimationSubsystem:EMStopAnimation(self, self.Time_Minus)
 end
 
+function M:OnTempleTipButtonShow(IsShow)
+  if IsShow then
+    self.ShouldListenInput = true
+    self:RefreshTipInfo()
+    self.Group_Btn:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self:PlayAnimation(self.Btn_In)
+    AudioManager(self):PlayUISound(self, "event:/ui/common/guide_button_show", "TipBtnShow", nil)
+  else
+    self.ShouldListenInput = false
+    self:PlayAnimation(self.Btn_Out)
+  end
+end
+
+function M:OnTipButtonClicked()
+  if not self.ShouldListenInput then
+    return
+  end
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  if GameMode then
+    GameMode:GetDungeonComponent():OnClickShowTips()
+  end
+end
+
 function M:OnUpdatePartyLeftUI(Time)
   self.Text_Time:SetText(self:GetTimeStr(Time))
+end
+
+function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
+  if self.CurInputDeviceType == CurInputDevice then
+    return
+  end
+  self.CurInputDeviceType = CurInputDevice
+  self.CurGamepadName = CurGamepadName
+  self:RefreshTipInfo()
+end
+
+function M:RefreshTipInfo()
+  if not self.ShouldListenInput then
+    return
+  end
+  if CommonUtils.GetRuntimePlatform(self) == "Mobile" or self.CurInputDeviceType == ECommonInputType.Touch then
+    self.WS_Btn:SetActiveWidgetIndex(0)
+  elseif self.CurInputDeviceType == ECommonInputType.MouseAndKeyboard then
+    self.WS_Btn:SetActiveWidgetIndex(1)
+    self.Com_KeyAdd:SetVisibility(ESlateVisibility.Collapsed)
+    self.Com_KeyText:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  elseif self.CurInputDeviceType == ECommonInputType.Gamepad then
+    self.WS_Btn:SetActiveWidgetIndex(1)
+    self.Com_KeyText:SetVisibility(ESlateVisibility.Collapsed)
+    self.Com_KeyAdd:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  end
+end
+
+function M:InitTipsKey()
+  self.Com_KeyText:CreateCommonKey({
+    KeyInfoList = {
+      {
+        Type = "Text",
+        Text = CommonUtils:GetActionMappingKeyName("ActiveGuide")
+      }
+    }
+  })
+  local ActiveGuide1 = UIUtils.GetIconListByActionName("ActiveGuide")[1]
+  local ActiveGuide2 = UIUtils.GetIconListByActionName("ActiveGuide")[2]
+  self.Com_KeyAdd:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = ActiveGuide1},
+      {Type = "Img", ImgShortPath = ActiveGuide2}
+    },
+    Type = "Add"
+  })
 end
 
 return M

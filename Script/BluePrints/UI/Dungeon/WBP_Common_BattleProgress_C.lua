@@ -6,7 +6,8 @@ local StyleToVisibility = {
   EStandard = true,
   ELeftOnly = false,
   EClassic = false,
-  EClassicTime = false
+  EClassicTime = false,
+  ELeftOnlyNumber = false
 }
 
 function M:InitWidgetUI()

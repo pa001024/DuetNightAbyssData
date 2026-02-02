@@ -65,10 +65,10 @@ function Component:SettlementBattleEvent_OnMemberVote(Uid)
 end
 
 function Component:SettlementBattleEvent_Refused(Uid)
-  DebugPrint("gmy@SettlementOnlineMgr Component:SettlementBattleEvent_Refused", Uid)
+  DebugPrint("gmy@SettlementOnlineMgr Component:SettlementBattleEvent_Refused", Uid, self.Uid)
   EventManager:FireEvent(EventID.TeamMatchOneRefused, Uid)
   TeamController:RecvTeamOnVoteRefused(Uid)
-  if not TeamController:GetModel():IsYourself(Uid) then
+  if Uid ~= self.Uid then
     UIManager(self):ShowUITip("CommonToastMain", GText("TOAST_DUNGEON_CANCEL_REJECT"), 1.5)
   end
 end

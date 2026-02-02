@@ -36,9 +36,9 @@ function ChangeTextToKeyInfoComponent:GetFinalContentText(ContentText)
         local KeyWidth = KeyInfo and KeyInfo.KeyImgWidth or 48
         local KeyHeight = KeyInfo and KeyInfo.KeyImgHeight or 48
         if "GamepadKey" == KeyType then
-          final_str = final_str .. "<img id=\"" .. Key .. "\" platform=\"" .. CurrentGamepadName .. "\" width=\"" .. KeyWidth .. "\" height=\"" .. KeyHeight .. "\"></>"
+          final_str = final_str .. "<img id=\"" .. KeyInfo.Key .. "\" platform=\"" .. CurrentGamepadName .. "\" width=\"" .. KeyWidth .. "\" height=\"" .. KeyHeight .. "\"></>"
         else
-          final_str = final_str .. "<img id=\"" .. Key .. "\" width=\"" .. KeyWidth .. "\" height=\"" .. KeyHeight .. "\"></>"
+          final_str = final_str .. "<img id=\"" .. KeyInfo.Key .. "\" width=\"" .. KeyWidth .. "\" height=\"" .. KeyHeight .. "\"></>"
         end
       end
     else

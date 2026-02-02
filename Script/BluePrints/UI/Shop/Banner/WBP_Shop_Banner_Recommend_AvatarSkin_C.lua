@@ -105,7 +105,7 @@ function M:InitBannerPage(BannerId)
     end
   end
   if self.WBP_Shop_Recommend_Common_TItle_C_0 and self.WBP_Shop_Recommend_Common_TItle_C_0.Text_MainTitle and self.BannerTab.Text1 then
-    self.WBP_Shop_Recommend_Common_TItle_C_0.Text_MainTitle:SetText(GText(self.BannerTab.Text1))
+    self.WBP_Shop_Recommend_Common_TItle_C_0:SetText(GText(self.BannerTab.Text1))
   end
   if self.Text_ActivityDesc_White then
     self.Text_ActivityDesc_White:SetText(GText("UI_Skin_Preview"))
@@ -132,6 +132,12 @@ function M:InitBannerPage(BannerId)
     if SkinNameFonts[SkinRarity] and self.WBP_Shop_Recommend_Common_TItle_C_0[SkinNameFonts[SkinRarity]] then
       self.WBP_Shop_Recommend_Common_TItle_C_0.Text_MainTitle:SetFont(self.WBP_Shop_Recommend_Common_TItle_C_0[SkinNameFonts[SkinRarity]])
     end
+  end
+  if self.Text_Detail and self.BannerTab.Text1Sub then
+    self.Text_Detail:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Text_Detail:SetText(GText(self.BannerTab.Text1Sub))
+  elseif self.Text_Detail then
+    self.Text_Detail:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
   if not bQualityTag then
     self.Com_QualityTag:SetVisibility(UIConst.VisibilityOp.Collapsed)

@@ -19,14 +19,14 @@ function WBP_Com_PageTurner_PC:SwtichPagePointAnimation(CurrentPageIndex)
   self.CurrentPageIndex = CurrentPageIndex
   local PagePoint = self.Root:GetChildAt(self.PrePageIndex - 1)
   if not PagePoint then
-    Utils.ScreenPrintScreenPirnt("翻页器索引获取PagePoint异常，建议检查下方法InitPageTurner传入的参数GuideMessageNum，或者检查下调用组件显示信息的Excel配置表")
+    Utils.ScreenPrint("翻页器索引获取PagePoint异常，建议检查下方法InitPageTurner传入的参数GuideMessageNum，或者检查下调用组件显示信息的Excel配置表")
     return
   end
   PagePoint:StopAllAnimations()
   PagePoint:PlayAnimation(PagePoint.Normal)
   PagePoint = self.Root:GetChildAt(self.CurrentPageIndex - 1)
   if not PagePoint then
-    Utils.ScreenPrintScreenPirnt("翻页器索引获取PagePoint异常，建议检查下方法InitPageTurner传入的参数GuideMessageNum，或者检查下调用组件显示信息的Excel配置表")
+    Utils.ScreenPrint("翻页器索引获取PagePoint异常，建议检查下方法InitPageTurner传入的参数GuideMessageNum，或者检查下调用组件显示信息的Excel配置表")
     return
   end
   PagePoint:StopAllAnimations()
@@ -121,7 +121,7 @@ function WBP_Com_PageTurner_PC:InitPagePoint()
   for i = 1, self.EndPageIndex do
     local NowPoint = UIManager(self):_CreateWidgetNew("PagePoint")
     if not NowPoint then
-      Utils.ScreenPrintScreenPirnt("翻页点创建异常，请检查WidgetUI配置表中的PagePoint的配置信息是否正确")
+      Utils.ScreenPrint("翻页点创建异常，请检查WidgetUI配置表中的PagePoint的配置信息是否正确")
       return
     end
     NowPoint.Button_Area.OnClicked:Add(self, function()
@@ -147,6 +147,17 @@ function WBP_Com_PageTurner_PC:InitPagePoint()
   self:AddDelayFrameFunc(function()
     CurPoint:PlayAnimation(CurPoint.Click)
   end, 3, "DelayClick")
+end
+
+function WBP_Com_PageTurner_PC:ForbidPointBtns(bForbid)
+  for i = 1, self.EndPageIndex do
+    local NowPoint = self.Root:GetChildAt(i - 1)
+    if not NowPoint then
+      return
+    end
+    NowPoint:StopAllAnimations()
+    NowPoint.Button_Area:SetIsEnabled(not bForbid)
+  end
 end
 
 function WBP_Com_PageTurner_PC:ReBindClickEvent(PageIndex, Func)

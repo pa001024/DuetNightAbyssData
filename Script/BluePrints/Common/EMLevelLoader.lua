@@ -66,11 +66,15 @@ function EMLevelLoader:InitGameScreenFilter()
 end
 
 function EMLevelLoader:InitGameGraphicsSettings()
-  DebugPrint("InitGameGraphicsSettings")
   if IsDedicatedServer(self) then
+    DebugPrint("Skip InitGameGraphicsSettings")
     return
   end
+  DebugPrint("InitGameGraphicsSettings")
   local IsMobilePlatform = CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile"
+  if UUCloudGameInstanceSubsystem and UUCloudGameInstanceSubsystem.IsCloudGame() then
+    IsMobilePlatform = false
+  end
   local AAValue
   if not IsMobilePlatform then
     local AAOptionName = "AntiAliasing"
@@ -96,7 +100,15 @@ function EMLevelLoader:InitGameGraphicsSettings()
     UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self, "r.DefaultFeature.AntiAliasing " .. AAValue)
     EMCache:Set(AAMOptionName, AAMSwitch)
   end
-  if 2 == AAValue and nil ~= USRMBlueprintLibrary then
+  local ScreenPercentage = 100
+  if not IsMobilePlatform then
+    local RenderingValue = EMCache:Get("RenderingValue")
+    if nil ~= RenderingValue then
+      ScreenPercentage = RenderingValue
+      UKismetSystemLibrary.ExecuteConsoleCommand(self, "r.ScreenPercentage " .. ScreenPercentage)
+    end
+  end
+  if 2 == AAValue and nil ~= USRMBlueprintLibrary and 100 == ScreenPercentage then
     local UMOptionName = "UpscalingMethodValue"
     local QMOptionName = "QualityModeValue"
     local UpscalingMethod = EMCache:Get(UMOptionName)
@@ -124,13 +136,19 @@ function EMLevelLoader:InitGameGraphicsSettings()
       EMCache:Set(QMOptionName, QualityMode)
     end
   end
+  if not IsMobilePlatform and UStreamlineLibraryDLSSG and UStreamlineLibraryDLSSG.IsDLSSGSupported() then
+    local DLSSFGMode = EMCache:Get("DLSSFG")
+    if nil ~= DLSSFGMode then
+      UStreamlineLibraryDLSSG.SetDLSSGMode(DLSSFGMode)
+    end
+  end
   if not IsMobilePlatform then
     local WQOptionName = "WaterQuality"
     local WaterQuality = EMCache:Get(WQOptionName)
     if nil == WaterQuality then
       WaterQuality = 3
     end
-    URuntimeCommonFunctionLibrary.SetWaterQuality(WaterQuality - 1)
+    URuntimeCommonFunctionLibrary.SetWaterQuality(math.tointeger(WaterQuality - 1))
   end
 end
 
@@ -520,7 +538,7 @@ end
 
 function EMLevelLoader:UnloadPreviewLevel(Name)
   if self[Name] then
-    local WCSubsystem = UGameplayStatics.GetGameMode(self):GetWCSubSystem()
+    local WCSubsystem = USubsystemBlueprintLibrary.GetWorldSubsystem(self, UWorldCompositionSubSystem.StaticClass())
     if WCSubsystem then
       WCSubsystem:UnFreezeWorldComposition()
       WCSubsystem:UnFreezeDistanceBasedRegion()
@@ -545,6 +563,10 @@ end
 
 function EMLevelLoader:GetDungeonPreloadData(DungeonId)
   local Ret = FDungeonPreloadData()
+  local InvalidDungeonId = {}
+  if IsDedicatedServer(self) and true == InvalidDungeonId[DungeonId] then
+    return Ret
+  end
   if nil == EMDungeonPreloadData[DungeonId] then
     return Ret
   end

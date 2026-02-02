@@ -83,6 +83,7 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
   if self.ParentWidget then
     self.ParentWidget:OnListRankItemClicked(self.Content)
   end
+  return UIUtils.Handled
 end
 
 function M:HandleNavigationUp()
@@ -109,7 +110,7 @@ end
 
 function M:InitPlayerRank()
   local BanState = self.RankInfo.BanState
-  if BanState and 1 == BanState then
+  if BanState and 0 ~= BanState then
     self.Text_Ranking:SetText(GText("RaidDungeon_Rank_Ban"))
     self.Image_RankIcon:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Image_RankPattern:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -198,6 +199,7 @@ function M:InitPlayerSquad()
       end
       CharSlotWidget.Text_Level:SetText(Info.level)
       CharSlotWidget.Switch_Type:SetActiveWidget(CharSlotWidget.Img_Avatar)
+      CharSlotWidget.Panel_Level:SetVisibility(UIConst.VisibilityOp.Visible)
     else
       CharSlotWidget.Switch_Type:SetActiveWidget(CharSlotWidget.Empty)
       CharSlotWidget.Panel_Level:SetVisibility(UIConst.VisibilityOp.Collapsed)

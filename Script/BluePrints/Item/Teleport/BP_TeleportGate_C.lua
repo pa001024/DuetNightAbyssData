@@ -7,7 +7,6 @@ function BP_TeleportGate_C:CommonInitInfo(Info)
   self.OppositeSceneName = self.UnitParams.OppositeSceneName
   self.Opacity = self.UnitParams.Opacity
   self:InitUI()
-  self:InitSceneCaptureComponent()
 end
 
 function BP_TeleportGate_C:InitSceneCaptureComponent()
@@ -57,9 +56,6 @@ function BP_TeleportGate_C:OnStartTeTeleport()
 end
 
 function BP_TeleportGate_C:StartTeleport()
-  self:ClearSceneCaptureComponent()
-  self:InitSceneCaptureComponent()
-  self:OnStartTeTeleport()
   local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   PlayerCharacter:K2_TeleportTo(self.DestLoaction, self.DestRotation, false, nil, false)
   PlayerCharacter:ResetIdle()
@@ -90,7 +86,6 @@ end
 
 function BP_TeleportGate_C:OnEMActorDestroy(DestroyReason)
   BP_TeleportGate_C.Super.OnEMActorDestroy(self, DestroyReason)
-  self:ClearSceneCaptureComponent()
 end
 
 return BP_TeleportGate_C

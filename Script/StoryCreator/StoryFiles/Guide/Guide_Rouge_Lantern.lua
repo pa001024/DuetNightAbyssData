@@ -461,7 +461,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "Left",
+              MessageLoc = "DownLeft",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },
@@ -562,7 +562,7 @@ return {
             key = "17579426118704330677",
             type = "ShowGuideButtonNode",
             name = "琉璃数量",
-            pos = {x = 2056.0336612676087, y = 285.12481022491187},
+            pos = {x = 2056.0336612676087, y = 286.34432238977644},
             propsData = {
               ShowEnable = true,
               MessageId = 301707,
@@ -584,7 +584,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "Left",
+              MessageLoc = "DownLeft",
               MessageLocOffset = {X = 0, Y = 0}
             }
           }

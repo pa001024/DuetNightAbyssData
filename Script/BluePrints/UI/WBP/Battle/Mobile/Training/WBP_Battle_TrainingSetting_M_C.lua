@@ -15,6 +15,7 @@ end
 function M:InitView()
   self.Text_TrainingMenu:SetText(GText("UI_DUNGEON_DES_TRAINING_14"))
   self.WBP_Com_BtnImg:BindEventOnClicked(self, self.OnBtnClicked)
+  self.Btn_Click.OnClicked:Add(self, self.OnBtnClicked)
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   self.TrainingData = DataMgr.Training[GameMode.DungeonId]
   self:AddTimer(1, function()

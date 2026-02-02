@@ -1,3 +1,4 @@
+local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
 local Component = {}
 
 function Component:MulticastChatMessage_Lua(Messages)
@@ -12,6 +13,7 @@ function Component:MulticastChatMessage_Lua(Messages)
         Content = DsMessage.Content,
         Time = DsMessage.TimeStamp,
         Sender = {
+          Uid = OtherDs.Uid,
           Nickname = OtherDs.PlayerName,
           Level = OtherDs.PlayerLevel,
           HeadIconId = OtherDs.HeadIconId,

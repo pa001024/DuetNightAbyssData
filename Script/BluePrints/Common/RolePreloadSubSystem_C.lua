@@ -62,6 +62,21 @@ function M:CommonPrepareMonSkillEffects(UnitId)
   return RetPathTable
 end
 
+function M:CommonPrepareMainPlayerAsserts()
+  local AllData = require("Utils.PlayerEffectsPath")
+  if not AllData then
+    return {}
+  end
+  local RetPathTable = {}
+  local MainPlayerTable = AllData.MainPlayer
+  if MainPlayerTable and not IsEmptyTable(MainPlayerTable) then
+    for _, v in ipairs(MainPlayerTable) do
+      table.insert(RetPathTable, FEMLoadPath(v))
+    end
+  end
+  return RetPathTable
+end
+
 function M:CommonPreparePlayerSkillEffects(UnitId)
   local AllData = require("Utils.PlayerEffectsPath")
   if not AllData then

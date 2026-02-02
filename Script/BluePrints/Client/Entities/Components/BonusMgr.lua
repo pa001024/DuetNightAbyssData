@@ -8,47 +8,55 @@ end
 
 function Component:TriggerRewardEvent(LogicRewards)
   DebugPrint("TriggerRewardEvent")
-  local LogicReward = LogicRewards[self.Eid]
-  assert(LogicReward, "TriggerRewardEvent: LogicReward is nil")
-  local UpValues = LogicReward.UpValues
-  local Rewards = LogicReward.Rewards
   
-  local function Callback(RewardHandler, Rewards)
-    assert(0 ~= RewardHandler, "TriggerRewardEvent RewardHandler == 0")
-    local GameMode = GWorld.GameInstance:GetCurrentGameMode()
-    if RewardHandler > 0 then
-      DebugPrint("TriggerRewardEvent in Dungeon")
-      for i = 1, #Rewards do
-        local Reward = Rewards[i]
-        local Reason, Transform, ExtraInfo, CB = table.unpack(UpValues[i])
-        if Reason == CommonConst.RewardReason.PickUp then
-          self:OnPickUp(GameMode, Reward, Reason, ExtraInfo, true)
-        else
-          self:OnGetRewardInDungeon(GameMode, Reward, Reason, Transform, ExtraInfo)
+  local function InnerTriggerRewardEvent(Eid)
+    local LogicReward = LogicRewards[Eid]
+    if not LogicReward then
+      return
+    end
+    local UpValues = LogicReward.UpValues
+    local Rewards = LogicReward.Rewards
+    
+    local function Callback(RewardHandler, Rewards)
+      assert(0 ~= RewardHandler, "TriggerRewardEvent RewardHandler == 0")
+      local GameMode = GWorld.GameInstance:GetCurrentGameMode()
+      if RewardHandler > 0 then
+        DebugPrint("TriggerRewardEvent in Dungeon")
+        for i = 1, #Rewards do
+          local Reward = Rewards[i]
+          local Reason, Transform, ExtraInfo, CB = table.unpack(UpValues[i])
+          if Reason == CommonConst.RewardReason.PickUp then
+            self:OnPickUp(GameMode, Reward, Reason, ExtraInfo, true)
+          else
+            self:OnGetRewardInDungeon(GameMode, Reward, Reason, Transform, ExtraInfo)
+          end
+          if CB then
+            CB(Reward)
+          end
         end
-        if CB then
-          CB(Reward)
-        end
-      end
-    else
-      DebugPrint("TriggerRewardEvent in Region")
-      for i = 1, #Rewards do
-        local Reason, Transform, ExtraInfo, CB = table.unpack(UpValues[i])
-        local Reward, RewardDropDatas
-        if Reason == CommonConst.RewardReason.PickUp then
-          self:OnPickUp(GameMode, Rewards[i], Reason, ExtraInfo, false)
-        else
-          Reward, RewardDropDatas = table.unpack(Rewards[i])
-          self:HandleRewardInRegion(GameMode, Reward, Reason, Transform, ExtraInfo, RewardDropDatas)
-        end
-        if CB then
-          CB(Reward, RewardDropDatas)
+      else
+        DebugPrint("TriggerRewardEvent in Region")
+        for i = 1, #Rewards do
+          local Reason, Transform, ExtraInfo, CB = table.unpack(UpValues[i])
+          local Reward, RewardDropDatas
+          if Reason == CommonConst.RewardReason.PickUp then
+            self:OnPickUp(GameMode, Rewards[i], Reason, ExtraInfo, false)
+          else
+            Reward, RewardDropDatas = table.unpack(Rewards[i])
+            self:HandleRewardInRegion(GameMode, Reward, Reason, Transform, ExtraInfo, RewardDropDatas)
+          end
+          if CB then
+            CB(Reward, RewardDropDatas)
+          end
         end
       end
     end
+    
+    self:CallServer("TriggerRewardEvent", Callback, Rewards)
   end
   
-  self:CallServer("TriggerRewardEvent", Callback, Rewards)
+  InnerTriggerRewardEvent(self.Eid)
+  InnerTriggerRewardEvent(-1)
 end
 
 function Component:OnGetRewardInDungeon(GameMode, Rewards, Reason, Transform, ExtraInfo)
@@ -75,7 +83,8 @@ function Component:OnPickUp(GameMode, Reward, Reason, ExtraInfo, bInDungeon)
   for Id, Count in pairs(Resource) do
     Count = RewardBox:GetCount(Count)
     GameMode:TriggerOnPlayerGetResource(Player, Id, Count)
-    EventManager:FireEvent(EventID.OnPlayerGetResource, Id)
+    DebugPrint("OnPlayerGetResource FireEvent", Id, ExtraInfo and ExtraInfo.WorldRegionEid or "None")
+    EventManager:FireEvent(EventID.OnPlayerGetResource, Id, ExtraInfo)
   end
 end
 

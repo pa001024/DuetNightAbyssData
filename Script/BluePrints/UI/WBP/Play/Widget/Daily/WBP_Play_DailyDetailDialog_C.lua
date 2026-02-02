@@ -21,7 +21,7 @@ function M:InitContent(Params, PopupData, Owner)
   end
   self.DataMap = Params.DataMap
   if self.DataMap.Tabs then
-    self:InitPage(self.DataMap.Tabs[1])
+    self:InitPage(self.DataMap.Tabs[1], true)
   else
     self:InitPage(self.DataMap)
   end

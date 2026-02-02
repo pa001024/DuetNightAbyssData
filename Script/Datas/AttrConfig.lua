@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -99,8 +102,7 @@ return ReadOnly("AttrConfig", {
     SortIndex1 = 4.5
   },
   AdditionalRecoverTime = {
-    Id = "AdditionalRecoverTime",
-    Name = "Attr_AdditionalRecoverTime_Name"
+    Id = "AdditionalRecoverTime"
   },
   AttackRange_Bullet = {
     Id = "AttackRange_Bullet",
@@ -380,6 +382,11 @@ return ReadOnly("AttrConfig", {
     Id = "MultiShootModifierRate",
     IsPercent = true,
     Name = "Attr_MultiShootModifierRate_Name"
+  },
+  NormalAttackRate = {
+    Id = "NormalAttackRate",
+    IsPercent = true,
+    Name = "Attr_NormalAttackRate_Name"
   },
   OnceDamagedPercent = {
     Id = "OnceDamagedPercent",

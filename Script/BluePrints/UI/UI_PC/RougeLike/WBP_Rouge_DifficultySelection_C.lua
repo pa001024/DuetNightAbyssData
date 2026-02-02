@@ -470,7 +470,7 @@ function WBP_Rouge_DifficultySelection_P_C:OnBtnClicked()
     local function Callback(Ret)
       self:BlockAllUIInput(false)
       
-      if ErrorCode:Check(Ret) then
+      if Ret == ErrorCode.RET_SUCCESS then
         local ExitDungeonInfo = {Type = "Rouge"}
         GWorld.GameInstance:SetExitDungeonData(ExitDungeonInfo)
       end

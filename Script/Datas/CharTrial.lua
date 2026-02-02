@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -106,5 +109,20 @@ return ReadOnly("CharTrial", {
     TrialDungeonId = 900002,
     UOffset = -0.0876,
     VOffset = -0.0619
+  },
+  [101020] = {
+    CharTrialId = 101020,
+    QuestRoleId = 410201,
+    TrialDungeonId = 900002
+  },
+  [101021] = {
+    CharTrialId = 101021,
+    QuestRoleId = 4102,
+    TrialDungeonId = 900002
+  },
+  [101022] = {
+    CharTrialId = 101022,
+    QuestRoleId = 4201,
+    TrialDungeonId = 900002
   }
 })

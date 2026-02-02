@@ -142,6 +142,10 @@ function M:UpdatePage(OperateSrc)
   end
   self:UpdateSubPage()
   self:RefreshPageDynamicView(PlayerAvatar.CharTrial[self.CurActivityId])
+  if ("ActivityTab" == OperateSrc or "BackToPageWithJump" == OperateSrc) and self.FocusWidgetWidget == self.Item_1 then
+    self.FocusWidgetName = nil
+    self:EnterStuffViewMode()
+  end
 end
 
 function M:GetPageConfigData()
@@ -248,6 +252,10 @@ function M:GoToTargetPageClick()
 end
 
 function M:GoToGachaClick()
+  if self.ParentWidget and type(self.ParentWidget.CheckIsInCloseSelfState) == "function" and self.ParentWidget:CheckIsInCloseSelfState() then
+    DebugPrint("ActivityTryOut=GoToGachaClick, ParentWidget is in close self state, So return")
+    return
+  end
   if self.IsInStuffViewMode then
     return
   end

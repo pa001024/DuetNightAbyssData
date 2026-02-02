@@ -93,6 +93,23 @@ function M:IsSpecialSelectCharacter()
   end
 end
 
+function M:CheckEnough(Avatar, ConsumeCountMap)
+  if Avatar:CheckEnough(ConsumeCountMap) then
+    return true
+  end
+  local HighLevelNeedCount = 0
+  for ResourceId, Count in pairs(ConsumeCountMap) do
+    local ItemCount = Avatar:GetResourceNum(ResourceId)
+    local NeedCount = Count - ItemCount
+    HighLevelNeedCount = HighLevelNeedCount + (NeedCount > 0 and NeedCount or 0)
+  end
+  local HighLevelItemCount = Avatar:GetResourceNum(19000)
+  if HighLevelNeedCount <= HighLevelItemCount then
+    return true
+  end
+  return false
+end
+
 function M:IsPartyTopicShowRedDot(CharacterId, PartyTopicLevel, PartyTopicId)
   if nil == CharacterId then
     UStoryLogUtils:PrintToFeiShu(GWorld.GameInstance, "邀约系统错误", "获取话题红点是否显示失败，character id 为空。")
@@ -129,7 +146,7 @@ function M:IsPartyTopicShowRedDot(CharacterId, PartyTopicLevel, PartyTopicId)
     return false
   end
   local PartyTopicConsume = PartyTopicData.PartyTopicConsume
-  if nil ~= PartyTopicConsume and PartyTopic and PartyTopic:IsLocked() and false == Avatar:CheckEnough(PartyTopicConsume) then
+  if nil ~= PartyTopicConsume and PartyTopic and PartyTopic:IsLocked() and false == self:CheckEnough(Avatar, PartyTopicConsume) then
     return false
   end
   return true

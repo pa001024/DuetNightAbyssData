@@ -119,9 +119,9 @@ function M:CreateEntryItem(entryId, entryData)
 end
 
 function M:GetEntryIndex(entryId)
-  for index, Entry in ipairs(self.List_Box:GetAllChildren()) do
+  for index, Entry in ipairs(self.List_Box:GetAllChildren():ToTable()) do
     if Entry.EntryId == entryId then
-      return index - 1
+      return Entry.Index
     end
   end
   return nil

@@ -89,7 +89,7 @@ function Component:UpdateJJGameReddot(TaskId)
   if not ActivityUtils.CheckEventIsOpen(MidTermGoalEventId, nil, true) then
     return
   end
-  local Task = self.MidTermTasks[TaskId]
+  local Task = self.MidTermGoals[MidTermGoalEventId].Tasks[TaskId]
   if Task then
     local TaskData = DataMgr.MidTermTask[Task.UniqueID]
     if TaskData and TaskData.TaskType == TaskType.Achievement then
@@ -111,6 +111,17 @@ function Component:UpdateJJGameReddot(TaskId)
 end
 
 function Component:TryIncreaceChallengeTaskRewardReddot(TaskId)
+  local allRewardsClaimed = true
+  local MidTermAchvProgressRewarded = self.MidTermGoals[MidTermGoalEventId].AchvProgressRewarded or {}
+  for _, v in pairs(MidTermAchvProgressRewarded) do
+    if 0 == v then
+      allRewardsClaimed = false
+      break
+    end
+  end
+  if allRewardsClaimed then
+    return
+  end
   local CacheKey = ChallengeRewardReddotName .. TaskId
   local CacheData = ReddotManager.GetLeafNodeCacheDetail(ChallengeRewardReddotName)
   if CacheData and nil == CacheData[CacheKey] then

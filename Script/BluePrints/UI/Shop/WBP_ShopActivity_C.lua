@@ -157,7 +157,7 @@ function M:Close()
     MenuWorld:InitSystemItem()
   end
   AudioManager(self):StopSystemUIBGM(self.ShopType)
-  if self.CloseCallBack then
+  if IsValid(self.ClsoeCallBackObj) and self.CloseCallBack then
     self.CloseCallBack(self.ClsoeCallBackObj)
   end
   self.Super.Close(self)
@@ -165,7 +165,7 @@ end
 
 function M:OnAnimationFinished(InAnimation)
   if InAnimation == self.Out then
-    self:BlockAllUIInput(true)
+    self:BlockAllUIInput(true, "SP_DisplayOnly")
     self:Close()
   elseif InAnimation == self.In then
     self:BlockAllUIInput(false)

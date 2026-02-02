@@ -316,6 +316,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -325,7 +326,7 @@ return {
               OptionType = "normal",
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
-              SwitchToMaster = "None",
+              SwitchToMaster = "Player",
               PlayerSwitchEmoIdle = true,
               NormalOptions = {},
               OverrideFailBlend = false
@@ -507,6 +508,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -516,7 +518,7 @@ return {
               OptionType = "normal",
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
-              SwitchToMaster = "None",
+              SwitchToMaster = "Player",
               PlayerSwitchEmoIdle = true,
               NormalOptions = {},
               OverrideFailBlend = false

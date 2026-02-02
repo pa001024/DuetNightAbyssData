@@ -263,6 +263,7 @@ return {
             pos = {x = 1985.5064478671488, y = -141.55576819336488},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_QuestTrigger_1930100"
             }
@@ -274,6 +275,7 @@ return {
             pos = {x = 1594.38791486002, y = 194.34117424701884},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_QuestTrigger_1930100"
             }

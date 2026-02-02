@@ -29,6 +29,47 @@ function BP_MonsterCharacter_C:ReceiveBeginPlay()
   end
 end
 
+function BP_MonsterCharacter_C:TryStartOutAirWallCheck(Info)
+  local GameState = UGameplayStatics.GetGameState(self)
+  local IsInDungeon = GameState and GameState:IsInDungeon()
+  if GameState and IsInDungeon and URuntimeCommonFunctionLibrary.IsWorldCompositionEnabled(self) and GameState.CheckOutAirDoorBoxTransform ~= nil and nil ~= GameState.CheckOutAirBoxLocal then
+    self.CheckOutAirDoorBoxTransform = GameState.CheckOutAirDoorBoxTransform
+    self.CheckOutAirBoxLocal = GameState.CheckOutAirBoxLocal
+    local bCanStartTime = not self.bInPool and self.IsDead and not self:IsDead() and self.InitSuccess and self.IsRealMonster and self:IsRealMonster()
+    if bCanStartTime then
+      self.TimeCount = 0
+      self.CheckOutAirDoorHandle = self:AddTimer(1, function()
+        if self.CheckOutAirDoorHandle == nil then
+          DebugPrint(self:GetName() .. " @gulinan AirDoorBoxOutCheck Handle is invalid but timer still tick")
+          self.RemoveTimer("CheckOutAirDoorBoxTimer")
+          self.CheckOutAirDoorHandle = nil
+        end
+        local bFilterActor = not self.bInPool and self.IsDead and not self:IsDead() and self.InitSuccess and self.IsRealMonster and self:IsRealMonster()
+        if nil ~= self and not bFilterActor and self.CheckOutAirDoorHandle ~= nil then
+          self:RemoveTimer(self.CheckOutAirDoorHandle)
+          self.CheckOutAirDoorHandle = nil
+        end
+        self.CheckOutAirDoorBoxTransform.Scale3D = FVector(1, 1, 1)
+        local CurLocalLoc = UE4.UKismetMathLibrary.InverseTransformLocation(self.CheckOutAirDoorBoxTransform, self:K2_GetActorLocation())
+        if CurLocalLoc.X > self.CheckOutAirBoxLocal.X or CurLocalLoc.X < -self.CheckOutAirBoxLocal.X or CurLocalLoc.Y > self.CheckOutAirBoxLocal.Y or CurLocalLoc.Y < -self.CheckOutAirBoxLocal.Y or CurLocalLoc.Z > self.CheckOutAirBoxLocal.Z or CurLocalLoc.Z < -self.CheckOutAirBoxLocal.Z then
+          if self.TimeCount < 10 then
+            self.TimeCount = self.TimeCount + 1
+          else
+            self.TimeCount = 0
+            Battle(self):BattleOnDead(self.Eid, self.Eid, 0, EDeathReason.StuckInWall)
+            if self.CheckOutAirDoorHandle ~= nil then
+              self:RemoveTimer(self.CheckOutAirDoorHandle)
+              self.CheckOutAirDoorHandle = nil
+            end
+          end
+        else
+          self.TimeCount = 0
+        end
+      end, true, 0, "CheckOutAirDoorBoxTimer", false)
+    end
+  end
+end
+
 function BP_MonsterCharacter_C:CallFromCPPDelegete(Type)
   DebugPrint("BP_MonsterCharacter_C:CallFromCPPDelegete", Type)
 end
@@ -444,6 +485,16 @@ function BP_MonsterCharacter_C:ReceiveEndPlay(EndPlayReason)
     self.BossBloodUI = nil
   end
   self.IsDestroied = true
+  if nil ~= self.CheckOutAirDoorHandle then
+    DebugPrint(self:GetName() .. " @gulinan Clear AirDoorBoxOutCheck Timer On Destroy")
+    self.RemoveTimer(self.CheckOutAirDoorHandle)
+    self.CheckOutAirDoorHandle = nil
+  end
+  if nil ~= self.CheckBornPosHandle then
+    DebugPrint(self:GetName() .. " @gulinan Clear CheckBornPosTimer Timer On Destroy")
+    self:RemoveTimer(self.CheckBornPosHandle)
+    self.CheckBornPosHandle = nil
+  end
 end
 
 function BP_MonsterCharacter_C:UpdateCdAndUseSkill(SkillId)
@@ -487,6 +538,64 @@ function BP_MonsterCharacter_C:GetManualItemId()
 end
 
 function BP_MonsterCharacter_C:CommonOnEMActorDestroy(DestroyReason)
+end
+
+function BP_MonsterCharacter_C:TryCheckBornPosTimer()
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  if not GameMode then
+    return
+  end
+  local LevelLoader = GameMode:GetLevelLoader()
+  if not LevelLoader or not LevelLoader:CheckIsRougeLike() then
+    return
+  end
+  local bCanStartCheckBornPos = not self.bInPool and self.IsDead and not self:IsDead() and self.InitSuccess and self.IsRealMonster and self:IsRealMonster()
+  if bCanStartCheckBornPos then
+    DebugPrint(self:GetName() .. " @gulinan Start CheckBornPos Timer")
+    self.CheckBornPosHandle = self:AddTimer(1, function()
+      if self.bInPool or self.IsDead and self:IsDead() or not self.InitSuccess then
+        if self.CheckBornPosHandle ~= nil then
+          DebugPrint(self:GetName() .. " @gulinan End CheckBornPosHandle Timer")
+          self:RemoveTimer(self.CheckBornPosHandle)
+          self.CheckBornPosHandle = nil
+        else
+          DebugPrint(self:GetName() .. " @gulinan CheckBornPos is nil but timer still tick")
+          self:RemoveTimer("CheckBornPos")
+        end
+      end
+      local LocalPlayer = UE4.UGameplayStatics.GetPlayerPawn(self, 0)
+      local CurrentLocation = self:K2_GetActorLocation()
+      local DistToBornPos = self.BornPos - CurrentLocation
+      local DistToPlayer = LocalPlayer and LocalPlayer:K2_GetActorLocation() - CurrentLocation or nil
+      if DistToBornPos:Size2D() > 20000 and math.abs(CurrentLocation.X) < 100 and math.abs(CurrentLocation.Y) < 100 and (nil == DistToPlayer or DistToPlayer:Size2D() > 20000) then
+        DebugPrint(self:GetName() .. " @gulinan CheckBornPos Teleport To BornPos")
+        self:K2_SetActorLocation(self.BornPos, false, nil, false)
+      end
+    end, true, 0, "CheckBornPos", false)
+  end
+end
+
+function BP_MonsterCharacter_C:AddPhantomBattleAchieve(Source)
+  if not IsStandAlone(self) then
+    return
+  end
+  local PlayerAchieveObj = UE4.URuntimeCommonFunctionLibrary.GetPlayerAchievementObject(Source)
+  if PlayerAchieveObj then
+    if self.UnitId == 8510001 then
+      PlayerAchieveObj:UploadTargetValue(2203, 1)
+    end
+    if self.UnitId == 8518001 then
+      PlayerAchieveObj:UploadTargetValue(2204, 1)
+    end
+    if self.UnitId == 8517001 then
+      PlayerAchieveObj:UploadTargetValue(2205, 1)
+    end
+  end
+end
+
+function BP_MonsterCharacter_C:PhysStateErrorReset_Lua()
+  Battle(self):ShowError_Monster_Inner_Lua("PhysStateErrorReset_Lua" .. self:GetName())
+  self.Mesh:TermBodiesBelow("Root")
 end
 
 AssembleComponents(BP_MonsterCharacter_C)

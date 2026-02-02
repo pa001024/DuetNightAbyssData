@@ -374,6 +374,10 @@ function WBP_Battle_Blood_Boss_PC_C:OnMultiHpBarLayerChange(bAdd, ChangeNum, Cal
   if self.HpBar ~= Caller then
     return
   end
+  local NewHpLayer = math.ceil(self.Hp / self.MaxHp * self.MaxHpLayer)
+  NewHpLayer = math.max(NewHpLayer, 1)
+  ChangeNum = math.abs(NewHpLayer - self.CurHpLayer)
+  DebugPrint("WBP_Battle_Blood_Boss_PC_C:OnMultiHpBarLayerChange ChangeNum: ", ChangeNum)
   if bAdd then
     self.CurHpLayer = self.CurHpLayer + ChangeNum
     self.CurMultiColorArrayIndex = self.CurMultiColorArrayIndex - ChangeNum
@@ -470,7 +474,7 @@ function WBP_Battle_Blood_Boss_PC_C:UpdateBossBlood(ActionName)
     if self.HpBar then
       self.HpBar:SetBarPercent(self.BossHpPercent)
       if IsRealReduceBlood then
-        self.HpBar:PlayDeduct(true)
+        self.HpBar:PlayDeduct(false)
       elseif self.bMultiHpBar then
         self.HpBar:HealingCheckNeedChangeLayer()
       end
@@ -478,7 +482,7 @@ function WBP_Battle_Blood_Boss_PC_C:UpdateBossBlood(ActionName)
     if self.MaxShield > 0 and self.ShieldBar then
       self.ShieldBar:SetBarPercent(self.BossShieldPercent)
       if IsRealReduceShield then
-        self.ShieldBar:PlayDeduct(true)
+        self.ShieldBar:PlayDeduct(false)
       end
     end
   elseif "Heal" == ActionName then

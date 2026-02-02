@@ -23,6 +23,7 @@ function QuestSuccessNode:OnQuestlineFinish()
     GameMode:UpdateQuestRegionDatas(self.QuestChainId, RegionUpdateDatas)
     self:SaveSTLBGM()
     self:SaveAuCondition()
+    self:SetSpecialLoadingId()
     local Location = PlayerCharacter:GetSafeLocation()
     if Location == FVector(0, 0, 0) then
       local LastRegionLocation = Avatar.LastRegionData:GetLocation()
@@ -49,21 +50,25 @@ function QuestSuccessNode:OnQuestlineFinish()
     if STLExportInfo and STLExportInfo.Quests[self.QuestId] ~= nil and STLExportInfo.Quests[self.QuestId].IsPreQuest then
       IsPreQuest = STLExportInfo.Quests[self.QuestId].IsPreQuest
     end
+    local ServerParamTable = {}
+    ServerParamTable.QuestChainId = self.QuestChainId
+    ServerParamTable.QuestId = self.QuestId
+    ServerParamTable.TriggerType = CommonConst.QuestState.Success
+    ServerParamTable.TargetId = nil
+    ServerParamTable.TargetCount = nil
+    ServerParamTable.STLData = self.Context.STLData or {}
+    ServerParamTable.RegionQuestDatas = RegionUpdateDatas or {}
+    ServerParamTable.QuestCoordinate = QuestCoordinate or {}
+    ServerParamTable.QuestCommonDatas = RegionQuestCommonUpdateDatas or {}
+    ServerParamTable.SelectRes = self.Context.ConfirmFullfill
+    ServerParamTable.bIsPlayBlackScreenOnComplete = self.Context.StoryNode and self.Context.StoryNode.bIsPlayBlackScreenOnComplete
+    ServerParamTable.ManualTrigger = nil
     if IsPreQuest then
-      local ServerParamTable = {}
-      ServerParamTable.QuestChainId = self.QuestChainId
-      ServerParamTable.QuestId = self.QuestId
-      ServerParamTable.TriggerType = CommonConst.QuestState.Success
-      ServerParamTable.TargetId = nil
-      ServerParamTable.TargetCount = nil
-      ServerParamTable.STLData = self.Context.STLData
-      ServerParamTable.RegionQuestDatas = RegionUpdateDatas
       ServerParamTable.NextId = nil
-      ServerParamTable.QuestCoordinate = QuestCoordinate
-      ServerParamTable.QuestCommonDatas = RegionQuestCommonUpdateDatas
       Avatar:HandleQuestChainDoing_QuestComplete(ServerParamTable)
     else
-      Avatar:CompleteQuestSuccess(self.QuestChainId, self.QuestId, nil, nil, nil, self.Context.STLData, RegionUpdateDatas, self.PortName, QuestCoordinate, RegionQuestCommonUpdateDatas, self.Context.ConfirmFullfill)
+      ServerParamTable.NextId = self.PortName
+      Avatar:CompleteQuestSuccess(ServerParamTable)
     end
     AudioManager(GWorld.GameInstance):ClearSTLBGM()
     local TaskInfo = {
@@ -88,6 +93,13 @@ function QuestSuccessNode:OnQuestlineFinish()
   PlayerCharacter:SavePlayerSkillUsedTimes()
   GWorld.UploadQuestChainData = false
   return
+end
+
+function QuestSuccessNode:SetSpecialLoadingId()
+  if self.Id and self.LoadingId and DataMgr.SubRegion[self.Id] and DataMgr.RegionLoading[self.LoadingId] then
+    GWorld.GameInstance.QuestDeliverId = self.Id
+    GWorld.GameInstance.QuestDeliverLoadingId = self.LoadingId
+  end
 end
 
 function QuestSuccessNode:SaveSTLBGM()

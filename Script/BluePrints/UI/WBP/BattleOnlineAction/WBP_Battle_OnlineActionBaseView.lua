@@ -419,7 +419,6 @@ function M:AddNewApplicationItem(ApplicationInfo, NeedAni)
   function NewItem.AcceptCallback(CallbackObj, Content)
     OnlineActionController:SendAcceptApplication(Content)
     self:ClearListAndSwitchEmpty(3)
-    self:OnReturnKeyDown()
   end
   
   function NewItem.RejectCallback(CallbackObj, Content)
@@ -472,11 +471,11 @@ function M:OnReturnKeyDown()
   self:UnbindAllFromAnimationFinished(self.Out)
   self:BindToAnimationFinished(self.Out, function()
     OnlineActionController:CloseView(self)
-    self:Close()
+    self:MyClose()
   end)
 end
 
-function M:Close()
+function M:MyClose()
   self.Super.Close(self)
 end
 

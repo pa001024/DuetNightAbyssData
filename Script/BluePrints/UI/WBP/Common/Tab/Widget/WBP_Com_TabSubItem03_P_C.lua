@@ -173,7 +173,7 @@ function M:BindHoverSoundFunc(func, Receiver)
 end
 
 function M:SetLockInfo(bUnLock)
-  self.IsLocked = bUnLock
+  self.IsLocked = not bUnLock
   if bUnLock then
     self:PlayAnimation(self.Normal)
   else

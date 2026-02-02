@@ -9,7 +9,22 @@ end
 function Component:OnPayFinished(Result, GoodsId, OrderId, ShopItems)
   print(_G.LogTag, "OnPayFinished", Result, GoodsId, OrderId, ShopItems)
   self:NotifyPayFinish(OrderId, Result, GoodsId, ShopItems)
-  EventManager:FireEvent(EventID.OnRechargeFinished, Result, GoodsId, ShopItems)
+  if Result == ErrorCode.RET_SUCCESS then
+    if ShopItems and DataMgr.PayGoods[GoodsId].ItemId then
+      local ShopItemData = DataMgr.ShopItem[DataMgr.PayGoods[GoodsId].ItemId]
+      assert(ShopItemData, "购买成功后读表ShopItemData为空", DataMgr.PayGoods[GoodsId].ItemId)
+      if ShopItemData.ItemType == "DailyPack" then
+        UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, ShopItems, ShopItemData.IsSpPopup, function()
+          UIManager(GWorld.GameInstance):ShowUITip(UIConst.Tip_CommonToast, GText("UI_DailyPack_PurchaseDone"))
+        end, nil, true)
+      else
+        UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, ShopItems, ShopItemData.IsSpPopup, ShopUtils:GetCloseGetItemPageCallback(), nil, true)
+      end
+    end
+  else
+    UIManager(GWorld.GameInstance):ShowError(Result, 1.0, "CommonToastMain")
+  end
+  EventManager:FireEvent(EventID.OnRechargeFinished, Result, GoodsId, ShopItems, OrderId)
   local EMHeroUSDKSubsystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UEMHeroUSDKSubsystem:StaticClass())
   local Parameters = TMap("", "")
   local FBParameters = TMap("", "")
@@ -67,6 +82,20 @@ end
 
 function Component:LeaveWorld()
   self.WaitPayDict = nil
+end
+
+function Component:GetCumulativeRechargeReward(Callback, EventId, Index)
+  DebugPrint("GetCumulativeRechargeReward", EventId, Index)
+  assert(EventId)
+  Index = Index or -1
+  
+  local function cb(ret, Rewards)
+    if Callback then
+      Callback(ret, Rewards)
+    end
+  end
+  
+  self:CallServer("GetCumulativeRechargeReward", cb, EventId, Index)
 end
 
 return Component

@@ -85,7 +85,22 @@
     "icon": "T_Coin_WeeklyDungeon"
   },
   {
+    "id": 217,
+    "name": "파티원 초대장",
+    "icon": "T_Resource_Raid_Ticket"
+  },
+  {
     "id": 218,
+    "name": "월석 사냥 기념 코인",
+    "icon": "T_Resource_Raid_Coin01"
+  },
+  {
+    "id": 219,
+    "name": "齿轮",
+    "icon": "T_Activity_Autochess_Coin01"
+  },
+  {
+    "id": 220,
     "name": "월석 사냥 기념 코인",
     "icon": "T_Resource_Raid_Coin01"
   },
@@ -168,6 +183,11 @@
     "id": 3007,
     "name": "냠냠 우유",
     "icon": "T_Resource_PetBreak"
+  },
+  {
+    "id": 3015,
+    "name": "천공 낚싯대·민트",
+    "icon": "T_FishingRod_East02"
   },
   {
     "id": 3016,
@@ -1135,6 +1155,36 @@
     "icon": "T_Range_Weapon_Part01"
   },
   {
+    "id": 12138,
+    "name": "풍운결 손잡이",
+    "icon": "T_Melee_Weapon_Part01"
+  },
+  {
+    "id": 12139,
+    "name": "풍운결 왼쪽 칼날",
+    "icon": "T_Melee_Weapon_Part02"
+  },
+  {
+    "id": 12140,
+    "name": "풍운결 오른쪽 칼날",
+    "icon": "T_Melee_Weapon_Part02"
+  },
+  {
+    "id": 12141,
+    "name": "트라이앵글 뮤즈 방아쇠",
+    "icon": "T_Range_Weapon_Part02"
+  },
+  {
+    "id": 12142,
+    "name": "트라이앵글 뮤즈 총신",
+    "icon": "T_Range_Weapon_Part03"
+  },
+  {
+    "id": 12143,
+    "name": "트라이앵글 뮤즈 총열",
+    "icon": "T_Range_Weapon_Part01"
+  },
+  {
     "id": 20002,
     "name": "파손된 스멜링 솔트",
     "icon": "T_Resource_Normal02"
@@ -1325,6 +1375,11 @@
     "icon": "T_Dye_09"
   },
   {
+    "id": 30112,
+    "name": "레인보우 염료",
+    "icon": "T_Dye_12"
+  },
+  {
     "id": 40001,
     "name": "스멜링 솔트 Ⅰ",
     "icon": "T_Hp_Full"
@@ -1371,7 +1426,7 @@
   },
   {
     "id": 41012,
-    "name": "현 위의 시편·다크 블루",
+    "name": "현 위의 시편·\n다크 블루",
     "icon": "T_Resource_Gesture_ViolinDarkIndigo"
   },
   {
@@ -1421,8 +1476,68 @@
   },
   {
     "id": 41022,
-    "name": "여유로운 바닷가·다크 블루",
+    "name": "여유로운 바닷가·보라",
     "icon": "T_Resource_Gesture_BeachBlue"
+  },
+  {
+    "id": 41028,
+    "name": "금요일 퇴근을 기다리는 모습",
+    "icon": "T_Resource_Gesture_SkillGomoku"
+  },
+  {
+    "id": 41031,
+    "name": "이슬을 담아",
+    "icon": "T_Resource_Gesture_06"
+  },
+  {
+    "id": 41032,
+    "name": "천하를 굽어보기·골드",
+    "icon": "T_Resource_DragonThrone_Golden"
+  },
+  {
+    "id": 41037,
+    "name": "설레는 마음·골드",
+    "icon": "T_Resource_Gesture_0401"
+  },
+  {
+    "id": 41038,
+    "name": "설레는 마음·다크 블루",
+    "icon": "T_Resource_Gesture_0403"
+  },
+  {
+    "id": 41039,
+    "name": "설레는 마음·벚꽃",
+    "icon": "T_Resource_Gesture_0402"
+  },
+  {
+    "id": 41040,
+    "name": "천하를 굽어보기·그레이",
+    "icon": "T_Resource_DragonThrone_Grey"
+  },
+  {
+    "id": 41041,
+    "name": "천하를 굽어보기·보라",
+    "icon": "T_Resource_DragonThrone_Purple"
+  },
+  {
+    "id": 41042,
+    "name": "반짝반짝 밤하늘·골드",
+    "icon": "T_Resource_Gesture_0501"
+  },
+  {
+    "id": 41043,
+    "name": "반짝반짝 밤하늘·오렌지",
+    "icon": "T_Resource_Gesture_0502"
+  },
+  {
+    "id": 41044,
+    "name": "반짝반짝 밤하늘·다크 블루",
+    "icon": "T_Resource_Gesture_0503"
+  },
+  {
+    "id": 41045,
+    "name": "무지갯빛 장막",
+    "icon": "T_Resource_Gesture_03"
   },
   {
     "id": 110006,
@@ -1433,6 +1548,16 @@
     "id": 110012,
     "name": "향기 선택 코스튬 패키지·제트 블랙",
     "icon": "T_Pack_Common02"
+  },
+  {
+    "id": 110015,
+    "name": "세월 선택 코스튬 패키지·청춘",
+    "icon": "T_Pack_JKSkin"
+  },
+  {
+    "id": 110016,
+    "name": "세월 선택 코스튬 패키지·겨울",
+    "icon": "T_Pack_SnowmanSkin"
   },
   {
     "id": 1001101,
@@ -1503,6 +1628,16 @@
     "id": 1004101,
     "name": "아이디어 조각·리듬",
     "icon": "T_CharPiece_Lise"
+  },
+  {
+    "id": 1004102,
+    "name": "아이디어 조각·지류",
+    "icon": "T_CharPiece_Zhiliu"
+  },
+  {
+    "id": 1004201,
+    "name": "아이디어 조각·욱명",
+    "icon": "T_CharPiece_Yuming"
   },
   {
     "id": 1004202,
@@ -1678,6 +1813,16 @@
     "id": 5110500,
     "name": "대가 낚싯대",
     "icon": "T_FishingRod_Normal_5"
+  },
+  {
+    "id": 5110601,
+    "name": "천공 낚싯대·러스트 레드",
+    "icon": "T_FishingRod_East01"
+  },
+  {
+    "id": 5110602,
+    "name": "천공 낚싯대·보라",
+    "icon": "T_FishingRod_East03"
   },
   {
     "id": 5210100,

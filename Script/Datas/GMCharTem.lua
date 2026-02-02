@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -780,8 +783,7 @@ return ReadOnly("GMCharTem", {
     }
   },
   [9999] = {
-    CharTemIds = {70210101},
-    TemId = 9999,
-    WeaponTemIds = {701020401}
+    CharTemIds = {2101001},
+    TemId = 9999
   }
 })

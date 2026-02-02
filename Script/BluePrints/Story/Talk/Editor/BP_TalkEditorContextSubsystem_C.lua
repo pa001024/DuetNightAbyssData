@@ -4,7 +4,7 @@ function M:InitNpcCharacter(NpcCharacter)
   if not IsValid(NpcCharacter) then
     return
   end
-  NpcCharacter:PreEnterStory({}, true, true)
+  NpcCharacter:PreEnterStory({}, false, true)
 end
 
 function M:GetNpcWithGender(NpcId)

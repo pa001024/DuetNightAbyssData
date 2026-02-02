@@ -1,30 +1,33 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("MountCameraData", {
   Default = {
     BackwardLocation = {
-      1200,
-      0,
-      120
+      280,
+      390,
+      130
     },
     CameraFocal = 38.6,
     CameraName = "Default",
     Ease = 14,
     ForwardLocation = {
-      850,
-      0,
-      120
+      195,
+      275,
+      130
     },
     Location = {
-      1000,
-      0,
-      120
+      240,
+      315,
+      130
     },
     Rotation = {
       0,
-      0,
-      180
+      -4,
+      -130
     },
     Time = 1.2
   }

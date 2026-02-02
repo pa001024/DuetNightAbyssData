@@ -10,6 +10,7 @@ Friend.__Props__ = {
   Eid = prop.prop("ObjId", "client save"),
   Remark = prop.prop("Str", "client save", ""),
   Star = prop.prop("Bool", "client save", false),
+  BecomeFriendTime = prop.prop("Int", "client save", 1765349474),
   Info = prop.prop("AvatarInfo.AvatarInfo", "client save")
 }
 

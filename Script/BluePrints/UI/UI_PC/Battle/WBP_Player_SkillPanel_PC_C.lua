@@ -100,26 +100,29 @@ function WBP_Player_SkillPanel_PC_C:InitListenEvent()
   self:AddDispatcher(EventID.OnGamepadUseSkillForceReleased, self, self.OnGamepadUseSkillRelease)
   self:AddDispatcher(EventID.OnEnableBattleMount, self, self.OnEnableBattleMount)
   self:AddDispatcher(EventID.OnDisableBattleMount, self, self.OnDisableBattleMount)
+  self:AddDispatcher(EventID.OnStartMountFly, self, self.OnStartMountFly)
+  self:AddDispatcher(EventID.OnStopMountFly, self, self.OnStopMountFly)
+  self:AddDispatcher(EventID.OnSkillInfosRep, self, self.OnSkillInfosRep)
 end
 
 function WBP_Player_SkillPanel_PC_C:InitVariable(OwnerPlayer)
   self.OwnerPlayer = OwnerPlayer
   local Avatar = GWorld:GetAvatar()
-  local KeySkill1Name, KeySkill2Name, KeySkill3Name, KeyFireName, KeyDashName, KeySuperDashName = "", "", "", "", "", ""
+  local KeySkill1Name, KeySkill2Name, KeySkill3Name, KeyFireName, KeyDownName, KeyMountFlyName = "", "", "", "", "", "", ""
   if Avatar and Avatar.ActionMapping ~= nil then
     KeySkill1Name = Avatar.ActionMapping.Skill1 or DataMgr.KeyBoardMap.Skill1.Key
     KeySkill2Name = Avatar.ActionMapping.Skill2 or DataMgr.KeyBoardMap.Skill2.Key
     KeySkill3Name = Avatar.ActionMapping.Skill3 or DataMgr.KeyBoardMap.Skill3.Key
     KeyFireName = Avatar.ActionMapping.Fire or DataMgr.KeyBoardMap.Fire.Key
-    KeyDashName = Avatar.ActionMapping.Avoid or DataMgr.KeyBoardMap.Avoid.Key
-    KeySuperDashName = Avatar.ActionMapping.Slide or DataMgr.KeyBoardMap.Slide.Key
+    KeyDownName = Avatar.ActionMapping.Slide or DataMgr.KeyBoardMap.Slide.Key
+    KeyMountFlyName = Avatar.ActionMapping.Jump or DataMgr.KeyBoardMap.Jump.Key
   else
     KeySkill1Name = DataMgr.KeyBoardMap.Skill1.Key
     KeySkill2Name = DataMgr.KeyBoardMap.Skill2.Key
     KeySkill3Name = DataMgr.KeyBoardMap.Skill3.Key
     KeyFireName = DataMgr.KeyBoardMap.Fire.Key
-    KeyDashName = DataMgr.KeyBoardMap.Avoid.Key
-    KeySuperDashName = DataMgr.KeyBoardMap.Slide.Key
+    KeyDownName = DataMgr.KeyBoardMap.Slide.Key
+    KeyMountFlyName = DataMgr.KeyBoardMap.Jump.Key
   end
   self.Battle_Skill_1.OwnerPanel = self
   self.Battle_Skill_1.Common_Key_PC:CreateCommonKey({
@@ -149,16 +152,24 @@ function WBP_Player_SkillPanel_PC_C:InitVariable(OwnerPlayer)
   })
   self.WBP_Key_Mounts01_PC:CreateCommonKey({
     KeyInfoList = {
-      {Type = "Text", Text = KeyDashName}
+      {Type = "Text", Text = KeyMountFlyName}
     },
-    Desc = "加速_待配表",
+    Desc = GText("UI_Keyboard_Mount_FlyUp"),
     bBattleKey = true
   })
   self.WBP_Key_Mounts02_PC:CreateCommonKey({
     KeyInfoList = {
-      {Type = "Text", Text = KeySuperDashName}
+      {Type = "Text", Text = KeyDownName}
     },
-    Desc = "超加速_待配表",
+    Desc = GText("UI_Keyboard_Mount_FlyDown"),
+    bBattleKey = true
+  })
+  self.WBP_Key_Longpress_PC:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Text", Text = KeyMountFlyName}
+    },
+    Desc = GText("UI_Keyboard_Mount_Fly"),
+    bLongPress = true,
     bBattleKey = true
   })
   self.Text_Organ:SetText(GText("UI_Prop_ExploreItem"))
@@ -166,7 +177,9 @@ function WBP_Player_SkillPanel_PC_C:InitVariable(OwnerPlayer)
   self.PlayerSpHelpInfo.TotalSize = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(self.Image_Energy_Bg):GetSize()
   self.PlayerSpBarWidth = self.PlayerSpHelpInfo.TotalSize.X
   self.PlayerSpBarHeight = self.PlayerSpHelpInfo.TotalSize.Y
+  self.RideFlyHoldTime = DataMgr.PlayerRotationRates.RideFlyHoldTime and DataMgr.PlayerRotationRates.RideFlyHoldTime.ParamentValue[1] or 0.5
   self:InitDodgeButtonVariables()
+  self:InitMountButtonVariables()
   self:RefreshSkillConfig()
   self:UnEmptyFireSkill()
   self:InitBulletUI()
@@ -205,6 +218,41 @@ function WBP_Player_SkillPanel_PC_C:InitDodgeButtonVariables()
   self.Charge_Num:SetText(self.AvoidRemainTimes)
 end
 
+function WBP_Player_SkillPanel_PC_C:InitMountButtonVariables()
+  self.WS_Operation_PC:SetActiveWidgetIndex(1)
+  self.WS_Operation_GamePad:SetActiveWidgetIndex(1)
+  self:ListenForInputAction("Jump", UE4.EInputEvent.IE_Pressed, false, {
+    self,
+    self.OnMountFlyPressed
+  })
+  self:ListenForInputAction("Jump", UE4.EInputEvent.IE_Released, false, {
+    self,
+    self.OnMountFlyReleased
+  })
+end
+
+function WBP_Player_SkillPanel_PC_C:OnMountFlyPressed()
+  if not self.OwnerPlayer.CurMount then
+    return
+  end
+  if self.OwnerPlayer:IsFlying() then
+    return
+  end
+  self.WBP_Key_Longpress_PC:OnButtonPressed(nil, true, 0, self.RideFlyHoldTime - Const.ShortPressThreshold)
+  self.WBP_Key_Longpress_GamePad:OnButtonPressed(nil, true, 0, self.RideFlyHoldTime - Const.ShortPressThreshold)
+end
+
+function WBP_Player_SkillPanel_PC_C:OnMountFlyReleased()
+  if not self.OwnerPlayer.CurMount then
+    return
+  end
+  if self.OwnerPlayer:IsFlying() then
+    return
+  end
+  self.WBP_Key_Longpress_PC:OnButtonReleased()
+  self.WBP_Key_Longpress_GamePad:OnButtonReleased()
+end
+
 function WBP_Player_SkillPanel_PC_C:InitBulletUI()
   self.Bullet_Num_Zero:SetText(0)
   self.Bullet_Num_Bow_Zero:SetText(0)
@@ -233,8 +281,8 @@ function WBP_Player_SkillPanel_PC_C:SetGamepadIcons()
   local DodgeIcon = UIUtils.GetIconListByActionName("Avoid")[1]
   local GPUseSkill = UIUtils.GetIconListByActionName("GamepadUseSkill")[1]
   local Skill3Icon = UIUtils.GetIconListByActionName("Skill3")[2]
-  local DashIcon = UIUtils.GetIconListByActionName("Avoid")[1]
-  local SuperDashIcon = UIUtils.GetIconListByActionName("Slide")[1]
+  local DownIcon = UIUtils.GetIconListByActionName("Slide")[1]
+  local MountFlyIcon = UIUtils.GetIconListByActionName("Jump")[1]
   self.Key_Weapon:CreateCommonKey({
     KeyInfoList = {
       {Type = "Img", ImgShortPath = ShootingIcon}
@@ -262,15 +310,22 @@ function WBP_Player_SkillPanel_PC_C:SetGamepadIcons()
   })
   self.WBP_Key_Mounts01_Gamepad:CreateCommonKey({
     KeyInfoList = {
-      {Type = "Img", ImgShortPath = DashIcon}
+      {Type = "Img", ImgShortPath = MountFlyIcon}
     },
-    Desc = "加速_待配表"
+    Desc = GText("UI_Keyboard_Mount_FlyUp")
   })
   self.WBP_Key_Mounts02_Gamepad:CreateCommonKey({
     KeyInfoList = {
-      {Type = "Img", ImgShortPath = SuperDashIcon}
+      {Type = "Img", ImgShortPath = DownIcon}
     },
-    Desc = "超加速_待配表"
+    Desc = GText("UI_Keyboard_Mount_FlyDown")
+  })
+  self.WBP_Key_Longpress_GamePad:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = MountFlyIcon}
+    },
+    Desc = GText("UI_Keyboard_Mount_Fly"),
+    bLongPress = true
   })
   self.Battle_Skill_1:SetGamepadIcons()
   self.Battle_Skill_2:SetGamepadIcons()
@@ -351,7 +406,6 @@ function WBP_Player_SkillPanel_PC_C:RefreshSupportSkillIcon()
     return
   end
   local SupportSKillBaseConfig = DataMgr.Skill[SupportSKillId][1][0]
-  local SupportImgIcon
   if SupportSKillBaseConfig.SkillBtnIcon then
     local Path = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Skill/T_" .. SupportSKillBaseConfig.SkillBtnIcon
     self.LoadingIconMap[SupportSKillBaseConfig.SkillBtnIcon] = IconLoadingType.SupportSkill
@@ -995,6 +1049,13 @@ function WBP_Player_SkillPanel_PC_C:OnSwitchPet()
   self:RefreshSupportSkillIcon()
 end
 
+function WBP_Player_SkillPanel_PC_C:OnSkillInfosRep(Character)
+  if not self.OwnerPlayer or self.OwnerPlayer ~= Character then
+    return
+  end
+  self:RefreshSkillConfig()
+end
+
 function WBP_Player_SkillPanel_PC_C:InitSupportSkill()
   self.bSupportSkillUnlock = false
   local Avatar = GWorld:GetAvatar()
@@ -1059,7 +1120,6 @@ function WBP_Player_SkillPanel_PC_C:ClearRemainAnim()
   end
   if self.Overlay_Mounts:GetVisibility() == ESlateVisibility.SelfHitTestInvisible and self.OwnerPlayer and not self.OwnerPlayer.CurMount then
     self.Overlay_Mounts:SetVisibility(ESlateVisibility.Collapsed)
-    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Mounts_Out)
   end
 end
 
@@ -1158,6 +1218,10 @@ function WBP_Player_SkillPanel_PC_C:OnEnableBattleMount(Character)
     self.Overlay_Mounts:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     EMUIAnimationSubsystem:EMPlayAnimation(self, self.Mounts_In)
   end
+  self.WS_Operation_PC:SetActiveWidgetIndex(1)
+  self.WS_Operation_GamePad:SetActiveWidgetIndex(1)
+  self.Battle_Skill_1:RemoveAllListenInput()
+  self.Battle_Skill_2:RemoveAllListenInput()
 end
 
 function WBP_Player_SkillPanel_PC_C:OnDisableBattleMount(Character)
@@ -1166,8 +1230,39 @@ function WBP_Player_SkillPanel_PC_C:OnDisableBattleMount(Character)
   end
   if self.Overlay_Mounts:GetVisibility() ~= ESlateVisibility.Collapsed then
     self.Overlay_Mounts:SetVisibility(ESlateVisibility.Collapsed)
-    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Mounts_Out)
   end
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.Mounts_Out)
+  self.Battle_Skill_1:AddSkillListeningInput()
+  self.Battle_Skill_2:AddSkillListeningInput()
+  self:StopListeningForInputAction("Avoid", EInputEvent.IE_Pressed)
+  self:ListenForInputAction("Avoid", UE4.EInputEvent.IE_Pressed, false, {
+    self,
+    self.OnDodgeActionInput
+  })
+end
+
+function WBP_Player_SkillPanel_PC_C:OnStartMountFly(Character)
+  if not Character:IsMainPlayer() then
+    return
+  end
+  DebugPrint("@zyh StartMountFly")
+  self.WS_Operation_PC:SetActiveWidgetIndex(0)
+  self.WS_Operation_GamePad:SetActiveWidgetIndex(0)
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.MountFly_In)
+  self:StopListeningForInputAction("Avoid", EInputEvent.IE_Pressed)
+end
+
+function WBP_Player_SkillPanel_PC_C:OnStopMountFly(Character)
+  if not Character:IsMainPlayer() then
+    return
+  end
+  self.WS_Operation_PC:SetActiveWidgetIndex(1)
+  self.WS_Operation_GamePad:SetActiveWidgetIndex(1)
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.MountFly_Out)
+  self:ListenForInputAction("Avoid", UE4.EInputEvent.IE_Pressed, false, {
+    self,
+    self.OnDodgeActionInput
+  })
 end
 
 return WBP_Player_SkillPanel_PC_C

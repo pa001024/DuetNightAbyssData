@@ -21,6 +21,9 @@ T.RT_6 = {
   "Term_Rou_10106_Glimmerfly",
   "Term_Rou_10106_LargerGlimmerfly"
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

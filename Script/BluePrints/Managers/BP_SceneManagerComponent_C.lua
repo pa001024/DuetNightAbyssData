@@ -2,13 +2,9 @@ require("UnLua")
 require("DataMgr")
 local BP_SceneManagerComponent_C = Class("BluePrints.Common.TimerMgr")
 local BattleUtils = require("Utils.BattleUtils")
-local Sha1 = require("sha1")
 local Json = require("rapidjson")
-local SDC_KEY_TIME_PRECISION = 0.3
-local SDC_KEY_OVERTIME = 30.0
-local SDC_KEY_REPEAT_ALERT_CNT = 5
-local SDC_MIN_KEYS_THRESHOLD = 6
-local SDC_KEY_ALERT_STRING = "MonitorType: ScriptDetection [KeyBoardRepeatDetection] DungeonId: %d, DungeonType = %s, RoundNum: %d, RepeatTime: %d."
+local SDC_MOUSE_CHECKCOUNT_PER_ROUND = 10
+local SDC_MOUSE_REPORT_SERVER_THRESHOLD = 5
 
 function BP_SceneManagerComponent_C:DebugPrint(...)
   DebugPrint("SceneManagerComponent", ...)
@@ -367,7 +363,7 @@ function BP_SceneManagerComponent_C:UpdateOneSceneGuideIcon(TargetEid, IsAdd, Is
     if Battle(self) then
       TargetActor = Battle(self):GetEntity(TargetEid)
     end
-    if IsValid(TargetActor) and (TargetActor.OpenState == nil or TargetActor.OpenState == false) then
+    if IsValid(TargetActor) then
       local GuideOp = self.CurSceneGuideEids[TargetEid] == nil and "Add" or "Modify"
       self:UpdateSceneGuideIcon(TargetEid, TargetActor, nil, GuideOp, true, nil, IsPlayerEid)
     else
@@ -441,7 +437,7 @@ function BP_SceneManagerComponent_C:UpdateAllSceneGuideIcon()
     if IsValid(TargetActor) and TargetActor.IsCombatItemBase then
       IsCombatItemBase = TargetActor:IsCombatItemBase()
     end
-    if IsValid(TargetActor) and (nil == TargetActor.OpenState or TargetActor.OpenState == false) and true == IsCombatItemBase then
+    if IsValid(TargetActor) then
       local GuideOp = nil == self.CurSceneGuideEids[TargetEid] and "Add" or "Modify"
       self:UpdateSceneGuideIcon(TargetEid, TargetActor, nil, GuideOp, true)
     else
@@ -453,6 +449,7 @@ function BP_SceneManagerComponent_C:UpdateAllSceneGuideIcon()
 end
 
 function BP_SceneManagerComponent_C:UpdateAllCommonGuideIcon()
+  DebugPrint("DebugGuideEid UpdateAllCommonGuideIcon")
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   if nil == GameState then
     return
@@ -460,35 +457,40 @@ function BP_SceneManagerComponent_C:UpdateAllCommonGuideIcon()
   self.CurSceneGuideEids = self.CurSceneGuideEids or {}
   local CommonGuideInfos = {}
   for k, v in pairs(self.CurSceneGuideEids) do
-    if not v.IsPlayerEid then
-      CommonGuideInfos[k] = v
-      v.IsActive = false
-    end
+    DebugPrint("DebugGuideEid UpdateAllCommonGuideIcon self.CurSceneGuideEids Loop key", k, "v.IsPlayerEid", v.IsPlayerEid)
+    CommonGuideInfos[k] = v
+    v.IsActive = false
   end
   local AllGuideEids = FIntArray()
   if nil ~= GameState.GuideEids then
     AllGuideEids = GameState.GuideEids
   end
   DebugPrint("BP_SceneManagerComponent_C:UpdateAllCommonGuideIcon AllGuideEids", AllGuideEids.Items:Num())
+  local BattleInstance = Battle(self)
+  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+  local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(GameInstance, 0)
   for Index = 1, AllGuideEids.Items:Num() do
     local TargetEid = AllGuideEids.Items:GetRef(Index).IntProperty
+    DebugPrint("DebugGuideEid UpdateAllCommonGuideIcon GuideEids Loop TargetEid", TargetEid)
     local TargetActor
-    if Battle(self) then
-      TargetActor = Battle(self):GetEntity(TargetEid)
+    if BattleInstance then
+      TargetActor = BattleInstance:GetEntity(TargetEid)
     end
     if nil ~= CommonGuideInfos[TargetEid] then
       CommonGuideInfos[TargetEid].IsActive = true
     end
-    if IsValid(TargetActor) and (nil == TargetActor.OpenState or false == TargetActor.OpenState) then
+    if IsValid(TargetActor) then
+      DebugPrint("DebugGuideEid UpdateAllCommonGuideIcon GuideEids TargetActor.OpenState", TargetActor.OpenState)
       local GuideOp = nil == CommonGuideInfos[TargetEid] and "Add" or "Modify"
       self:UpdateSceneGuideIcon(TargetEid, TargetActor, nil, GuideOp, true)
     else
-      local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-      local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(GameInstance, 0)
       PlayerCharacter.RPCComponent:RequestGuideInfo(TargetEid)
     end
   end
   for k, v in pairs(CommonGuideInfos) do
+    if v then
+      DebugPrint("DebugGuideEid UpdateAllPlayerGuideIcon PlayerGuideInfos Loop key", k, "v.IsActive", v.IsActive)
+    end
     if v and not v.IsActive then
       local Entity = self:GetCurSceneGuideEntityByData(v)
       if UKismetSystemLibrary.IsValid(Entity) then
@@ -501,6 +503,7 @@ function BP_SceneManagerComponent_C:UpdateAllCommonGuideIcon()
 end
 
 function BP_SceneManagerComponent_C:UpdateAllPlayerGuideIcon()
+  DebugPrint("DebugGuideEid UpdateAllPlayerGuideIcon")
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
@@ -511,13 +514,12 @@ function BP_SceneManagerComponent_C:UpdateAllPlayerGuideIcon()
   self.CurSceneGuideEids = self.CurSceneGuideEids or {}
   local PlayerGuideInfos = {}
   for k, v in pairs(self.CurSceneGuideEids) do
-    if v.IsPlayerEid then
-      PlayerGuideInfos[k] = v
-      local GuideIcon = UIManager:GetUIObj(tostring(k))
-      if GuideIcon and nil ~= GuideIcon.PlayerIndex and GuideIcon.PlayerIndex > 0 then
-      else
-        v.IsActive = false
-      end
+    DebugPrint("DebugGuideEid UpdateAllPlayerGuideIcon self.CurSceneGuideEids Loop key", k, "v.IsPlayerEid", v.IsPlayerEid)
+    PlayerGuideInfos[k] = v
+    local GuideIcon = UIManager:GetUIObj(tostring(k))
+    if GuideIcon and nil ~= GuideIcon.PlayerIndex and GuideIcon.PlayerIndex > 0 then
+    else
+      v.IsActive = false
     end
   end
   local AllGuideEids = FIntArray()
@@ -525,10 +527,9 @@ function BP_SceneManagerComponent_C:UpdateAllPlayerGuideIcon()
   if nil ~= PlayerState and nil ~= PlayerState.PlayerGuideEids then
     AllGuideEids = PlayerState.PlayerGuideEids
   end
-  local PlayerGuideEidsMap = {}
   for Index = 1, AllGuideEids.Items:Num() do
     local TargetEid = AllGuideEids.Items:GetRef(Index).IntProperty
-    PlayerGuideEidsMap[TargetEid] = true
+    DebugPrint("DebugGuideEid UpdateAllPlayerGuideIcon PlayerGuideEids Loop TargetEid", TargetEid)
     local TargetActor
     if Battle(self) then
       TargetActor = Battle(self):GetEntity(TargetEid)
@@ -536,7 +537,8 @@ function BP_SceneManagerComponent_C:UpdateAllPlayerGuideIcon()
     if nil ~= PlayerGuideInfos[TargetEid] then
       PlayerGuideInfos[TargetEid].IsActive = true
     end
-    if IsValid(TargetActor) and (nil == TargetActor.OpenState or false == TargetActor.OpenState) then
+    if IsValid(TargetActor) then
+      DebugPrint("DebugGuideEid UpdateAllCommonGuideIcon PlayerGuideEids TargetActor.OpenState", TargetActor.OpenState)
       local GuideOp = nil == PlayerGuideInfos[TargetEid] and "Add" or "Modify"
       self:UpdateSceneGuideIcon(TargetEid, TargetActor, nil, GuideOp, true, nil, true)
     else
@@ -546,6 +548,9 @@ function BP_SceneManagerComponent_C:UpdateAllPlayerGuideIcon()
     end
   end
   for k, v in pairs(PlayerGuideInfos) do
+    if v then
+      DebugPrint("DebugGuideEid UpdateAllPlayerGuideIcon PlayerGuideInfos Loop key", k, "v.IsActive", v.IsActive)
+    end
     if v and not v.IsActive then
       local Entity = self:GetCurSceneGuideEntityByData(v)
       if UKismetSystemLibrary.IsValid(Entity) then
@@ -923,12 +928,12 @@ function BP_SceneManagerComponent_C:UpdateSceneGuideIcon(TargetEid, TargetActor,
             end
             PoolClass:Reset(TargetEid, TargetActor, TargetActorLocation, ConfigData, IsNeedArrow, IsGuideFollowActor, IsNeedLookUpEntity, false, IsUseRealDis, true)
             PoolClass.IsActiveInPoor = true
-            self:ProcessGuideIconAfterLoad(PoolClass, ConfigData.GuideIconAni, TargetEid)
+            self:ProcessGuideIconAfterLoad(PoolClass, ConfigData.GuideIconAni, TargetEid, GuideUnitId)
             self:UpdateAllGuideIconsByName(OpType, TargetEid, PoolClass:GetName())
             self:AddTimer(0.1, self.AddGuideToPathFindingTimerFunc, false, nil, "AddGuideToPathFinding" .. TargetEid, false, TargetEid, true)
           else
             local NewGuideIcon = UIManager:LoadGuideIconAsync(ConfigData.GuideIconAni, GuideName, UIConst.ZORDER_FOR_INDICATORS, CoroutineObj, TargetEid, TargetActor, TargetActorLocation, ConfigData, IsNeedArrow, IsGuideFollowActor, IsNeedLookUpEntity, false, IsUseRealDis)
-            self:ProcessGuideIconAfterLoad(NewGuideIcon, ConfigData.GuideIconAni, TargetEid)
+            self:ProcessGuideIconAfterLoad(NewGuideIcon, ConfigData.GuideIconAni, TargetEid, GuideUnitId)
             self:UpdateAllGuideIconsByName(OpType, TargetEid, GuideName)
             TargetActor = nil
             if Battle(self) then
@@ -938,7 +943,7 @@ function BP_SceneManagerComponent_C:UpdateSceneGuideIcon(TargetEid, TargetActor,
           end
         else
           local NewGuideIcon = UIManager:LoadGuideIconAsync(ConfigData.GuideIconAni, GuideName, UIConst.ZORDER_FOR_INDICATORS, CoroutineObj, TargetEid, TargetActor, TargetActorLocation, ConfigData, IsNeedArrow, IsGuideFollowActor, IsNeedLookUpEntity, false, IsUseRealDis)
-          self:ProcessGuideIconAfterLoad(NewGuideIcon, ConfigData.GuideIconAni, TargetEid)
+          self:ProcessGuideIconAfterLoad(NewGuideIcon, ConfigData.GuideIconAni, TargetEid, GuideUnitId)
           self:UpdateAllGuideIconsByName(OpType, TargetEid, GuideName)
           self:AddTimer(0.1, self.AddGuideToPathFindingTimerFunc, false, nil, "AddGuideToPathFinding" .. TargetEid, false, TargetEid, true)
         end
@@ -998,11 +1003,11 @@ function BP_SceneManagerComponent_C:AddGuideToPathFindingTimerFunc(TargetEid, Re
   self:AddGuideToPathFinding(TargetActor, TargetEid, RequireBlockTickLod)
 end
 
-function BP_SceneManagerComponent_C:ProcessGuideIconAfterLoad(NewGuideIcon, GuideIconAni, TargetEid)
+function BP_SceneManagerComponent_C:ProcessGuideIconAfterLoad(NewGuideIcon, GuideIconAni, TargetEid, GuideUnitId)
   if nil == NewGuideIcon then
     local EMGameState = UE4.UGameplayStatics.GetGameState(self)
     if EMGameState then
-      EMGameState:ShowDungeonError("ProcessGuideIconAfterLoad Icon加载失败 请检查配表数据 GuideIconAni: " .. GuideIconAni .. "TargetEid: " .. TargetEid, Const.DungeonErrorType.DungeonIndicator, Const.DungeonErrorTitle.Config)
+      EMGameState:ShowDungeonError("ProcessGuideIconAfterLoad Icon加载失败 请检查配表数据 GuideIconAni: " .. tostring(GuideIconAni) .. " GuideUnitId: " .. GuideUnitId .. " TargetEid: " .. TargetEid, Const.DungeonErrorType.DungeonIndicator, Const.DungeonErrorTitle.Config)
     end
     DebugPrint("Error ProcessGuideIconAfterLoad NewGuideIcon == nil GuideIconAni: ", GuideIconAni, "TargetEid: ", TargetEid)
     return
@@ -1392,6 +1397,34 @@ function BP_SceneManagerComponent_C:GetIsEnableScriptDetectionCheck()
   return CurrentPlatform == CommonConst.CLIENT_DEVICE_TYPE.PC and CurInputType == ECommonInputType.MouseAndKeyboard and not IsCloudGame
 end
 
+function BP_SceneManagerComponent_C:GetScriptDetectionConditionMet_OnMouse(DungeonType, DungeonId)
+  DebugPrint("GetScriptDetectionConditionMet_OnMouse DungeonType:", DungeonType, " DungeonId:", DungeonId)
+  local BlockDungeonTypes = {"ExtermPro"}
+  local BlockDungeonIds = {
+    90108,
+    90604,
+    60702,
+    62702,
+    64702
+  }
+  local bIsMetCondition = true
+  for _, CheckDungeonType in ipairs(BlockDungeonTypes) do
+    if DungeonType == CheckDungeonType then
+      bIsMetCondition = false
+      break
+    end
+  end
+  if bIsMetCondition then
+    for _, CheckDungeonId in ipairs(BlockDungeonIds) do
+      if DungeonId == CheckDungeonId then
+        bIsMetCondition = false
+        break
+      end
+    end
+  end
+  return bIsMetCondition
+end
+
 function BP_SceneManagerComponent_C:StartScriptDetectionCheck(CheckType)
   local bIsInDungeon = false
   local EMGameState = UE4.URuntimeCommonFunctionLibrary.GetCurrentGameState(self)
@@ -1399,177 +1432,36 @@ function BP_SceneManagerComponent_C:StartScriptDetectionCheck(CheckType)
     bIsInDungeon = true
   end
   if CheckType == Const.ScriptDetectionCheckType.OnMouse then
-    local IsNeedOpenCheck = false
-    if bIsInDungeon then
-      IsNeedOpenCheck = EMGameState.GameModeType ~= "ExtermPro"
+    local IsNeedOpenCheck = bIsInDungeon and self:GetScriptDetectionConditionMet_OnMouse(EMGameState.GameModeType, EMGameState.DungeonId)
+    if IsNeedOpenCheck and Const.bIsUseCppVersion then
+      self:StartScriptDetectionCheck_OnMouse(SDC_MOUSE_CHECKCOUNT_PER_ROUND, SDC_MOUSE_REPORT_SERVER_THRESHOLD)
+    else
     end
-    if IsNeedOpenCheck then
-      self.bNeedRecordThisTurn = false
-      self.CurrentMouseLocation2D = UE4.UWidgetLayoutLibrary.GetMousePositionOnViewport(self)
-      self:StartScriptDetectionCheck_OnMouse()
-    end
-  elseif CheckType == Const.ScriptDetectionCheckType.OnKeyboard and bIsInDungeon then
-    self:StartScriptDetectionCheck_OnKeyboard()
-  end
-end
-
-function BP_SceneManagerComponent_C:StartScriptDetectionCheck_OnMouse()
-  if not self.ScriptDetectionCheck_OnMouse_Timer then
-    self.ScriptDetectionCheck_OnMouse_Timer = self:AddTimer(1.0, function()
-      local IsMouseNotMoved, IsWindowsActive = true, self:IsGameWindowActivated()
-      local CurrentMouseLocation2D = UE4.UWidgetLayoutLibrary.GetMousePositionOnViewport(self)
-      if self.CurrentMouseLocation2D ~= nil then
-        IsMouseNotMoved = UE4.UKismetMathLibrary.EqualEqual_Vector2DVector2D(self.CurrentMouseLocation2D, CurrentMouseLocation2D, 0.001)
-      end
-      if self.CurrentCheckCountInScene < 10 then
-        if not IsMouseNotMoved and IsWindowsActive then
-          self:EndScriptDetectionCheck_OnMouse(false)
-        end
-      else
-        local IsNeedRecordThisTurn = IsMouseNotMoved or not IsMouseNotMoved and not IsWindowsActive
-        self:EndScriptDetectionCheck_OnMouse(IsNeedRecordThisTurn)
-      end
-      self.CurrentCheckCountInScene = self.CurrentCheckCountInScene + 1
-    end, true, nil, "ScriptDetectionCheck_OnMouse_Timer")
-  end
-end
-
-function BP_SceneManagerComponent_C:EndScriptDetectionCheck_OnMouse(bNeedRecordThisTurn)
-  if self.ScriptDetectionCheck_OnMouse_Timer then
-    self.bNeedRecordThisTurn = bNeedRecordThisTurn
-    self:RemoveTimer(self.ScriptDetectionCheck_OnMouse_Timer)
-    self.ScriptDetectionCheck_OnMouse_Timer = nil
-    self.CurrentCheckCountInScene = 0
-  end
-end
-
-function BP_SceneManagerComponent_C:StartScriptDetectionCheck_OnKeyboard()
-  if self.SDCKeyboardOverTimeTimer then
-    self:RemoveTimer(self.SDCKeyboardOverTimeTimer)
-  end
-  self.SDCKeyboardOverTimeTimer = self:AddTimer(SDC_KEY_OVERTIME, function()
-    self:EndScriptDetectionCheck_OnKeyboard()
-  end, false)
-  self.bEnableKeyboardSDC = true
-  self.KeyList = {}
-end
-
-function BP_SceneManagerComponent_C:EndScriptDetectionCheck_OnKeyboard()
-  if self.SDCKeyboardOverTimeTimer then
-    self:RemoveTimer(self.SDCKeyboardOverTimeTimer)
-    self.SDCKeyboardOverTimeTimer = nil
-  end
-  if self.bEnableKeyboardSDC then
-    local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-    if GameInstance and self.KeyList and #self.KeyList >= SDC_MIN_KEYS_THRESHOLD then
-      local Fingerprint = self:GetKeyListFingerprints(self.KeyList)
-      if Fingerprint then
-        GameInstance.KeyListRecord[Fingerprint] = (GameInstance.KeyListRecord[Fingerprint] or 0) + 1
-        if GameInstance.KeyListRecord[Fingerprint] >= SDC_KEY_REPEAT_ALERT_CNT then
-          self:ReportScriptDetection_Keyboard(Fingerprint)
-        end
-      end
-    end
-    self.bEnableKeyboardSDC = false
-    self.KeyList = nil
-  end
-end
-
-function BP_SceneManagerComponent_C:ReceivedInputKey(Key, EventType)
-  local KeyName = Key.KeyName
-  if UIConst.MouseButton[KeyName] then
-    return
-  end
-  if self.bEnableKeyboardSDC then
-    local TimeStamp = UE4.UGameplayStatics.GetTimeSeconds(self)
-    local KeyList = self.KeyList or {}
-    self.KeyList = KeyList
-    KeyList[#KeyList + 1] = {
-      KeyName,
-      EventType,
-      TimeStamp
-    }
-  end
-end
-
-function BP_SceneManagerComponent_C:ReportScriptDetection_Keyboard(Fingerprint)
-  local PlayerAvatar = GWorld:GetAvatar()
-  if PlayerAvatar then
-    local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-    local EMGameState = UE4.URuntimeCommonFunctionLibrary.GetCurrentGameState(self)
-    if GameInstance and EMGameState then
-      local DungeonId = EMGameState.DungeonId
-      local DungeonInfo = DataMgr.Dungeon[DungeonId]
-      if DungeonInfo then
-        local DungeonType = DungeonInfo.DungeonType or 0
-        local RoundNum = 0
-        local GameState = UE4.URuntimeCommonFunctionLibrary.GetCurrentGameState(self)
-        if IsValid(GameState) then
-          RoundNum = GameState.DungeonProgress
-        end
-        local RepeatCount = GameInstance.KeyListRecord[Fingerprint] or 0
-        local AlertString = string.format(SDC_KEY_ALERT_STRING, DungeonId, DungeonType, RoundNum, RepeatCount)
-        self:ReportCheatMsg(CommonConst.MonitorCheatType.Keyboard, AlertString)
-      end
+  elseif CheckType == Const.ScriptDetectionCheckType.OnKeyboard and bIsInDungeon and self:IsEnableSDC_Keyboard(EMGameState.DungeonId) then
+    if Const.bIsUseCppVersion then
+      self:StartScriptDetectionCheck_OnKeyboard()
+    else
+      self:StartScriptDetectionCheck_OnKeyboard_Lua()
     end
   end
 end
 
-function BP_SceneManagerComponent_C:UpdateIfRecordThisTurnValue()
-  if self.CurrentMouseLocation2D == nil then
-    self.bNeedRecordThisTurn = false
-    return
-  end
-  if not self.bNeedRecordThisTurn then
-    DebugPrint("ScriptDetection== UpdateIfRecordThisTurnValue: 当前结果不需要最后校验, 已经是移动过鼠标的状态了！")
-    return
-  end
-  local CurrentMouseLocation2D = UE4.UWidgetLayoutLibrary.GetMousePositionOnViewport(self)
-  self.bNeedRecordThisTurn = UE4.UKismetMathLibrary.EqualEqual_Vector2DVector2D(self.CurrentMouseLocation2D, CurrentMouseLocation2D, 0.001)
+function BP_SceneManagerComponent_C:IsEnableSDC_Keyboard(DungeonId)
+  return true
 end
 
-function BP_SceneManagerComponent_C:CheckAndSendRecordToServer_OnMouse()
-  local PlayerAvatar = GWorld:GetAvatar()
-  if not PlayerAvatar then
-    return
-  end
-  if self.bNeedRecordThisTurn then
-    local EMGameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-    EMGameInstance.ScriptDetectionCheckRecordNum = EMGameInstance.ScriptDetectionCheckRecordNum + 1
-    DebugPrint("ScriptDetection== CheckAndSendRecordToServer_OnMouse: 未检测到鼠标移动，疑似使用脚本进行游戏操作，移除检测Timer，并且记录次数：", EMGameInstance.ScriptDetectionCheckRecordNum)
-    if EMGameInstance.ScriptDetectionCheckRecordNum >= 5 then
-      DebugPrint("ScriptDetection== CheckAndSendRecordToServer_OnMouse: 脚本检测上报，当前累计次数超过5次")
-      local AlertString = "MonitorType: ScriptDetection "
-      local EMGameState = UE4.URuntimeCommonFunctionLibrary.GetCurrentGameState(self)
-      if EMGameState then
-        local DungeonId = EMGameState.DungeonId
-        if DungeonId then
-          AlertString = AlertString .. "DungeonID: " .. DungeonId .. "  "
-          local DungeonInfo = DataMgr.Dungeon[DungeonId]
-          if DungeonInfo then
-            if DungeonInfo.DungeonType then
-              AlertString = AlertString .. "DungeonType: " .. DungeonInfo.DungeonType .. "  "
-            end
-            if DungeonInfo.DungeonLevel then
-              AlertString = AlertString .. "DungeonLevel: " .. DungeonInfo.DungeonLevel .. "  "
-            end
-          end
-        end
-        AlertString = AlertString .. "Detection threshold for unoperated duration: 10s  "
-      end
-      self:ReportCheatMsg(CommonConst.MonitorCheatType.Mouse, AlertString)
-    end
-  else
-    DebugPrint("ScriptDetection== CheckAndSendRecordToServer_OnMouse: 检测到结束前鼠标有过移动, 判定未使用脚本进行游戏操作, 若有临时记录数据也不算次数")
-  end
+function BP_SceneManagerComponent_C:StartScriptDetectionCheck_OnKeyboard_Lua()
 end
 
-function BP_SceneManagerComponent_C:OnDungeonEnd_ToSceneManager(IsWin, BattleInfo, DungeonType)
-  DebugPrint("OnDungeonEnd_ToSceneManager: 副本结束通知，当前副本类型：", DungeonType)
+function BP_SceneManagerComponent_C:OnDungeonEnd_ToSceneManager(IsWin, BattleInfo, DungeonType, DungeonId)
+  DebugPrint("OnDungeonEnd_ToSceneManager: 副本结束通知，当前副本类型：", DungeonType, DungeonId)
   if self:GetIsEnableScriptDetectionCheck() then
-    if "ExtermPro" ~= DungeonType then
-      self:UpdateIfRecordThisTurnValue()
-      self:CheckAndSendRecordToServer_OnMouse()
+    if self:GetScriptDetectionConditionMet_OnMouse(DungeonType, DungeonId) and Const.bIsUseCppVersion then
+      local ResultAlertString = self:UpdateValueAndCheckIfNeedSendToServer_OnMouse()
+      if ResultAlertString and "" ~= ResultAlertString then
+        self:ReportCheatMsg(CommonConst.MonitorCheatType.Mouse, ResultAlertString)
+      end
+    else
     end
     self:EndScriptDetectionCheck_OnKeyboard()
   end
@@ -1620,29 +1512,6 @@ function BP_SceneManagerComponent_C:CleanSpecialMonsterInfo(Eid)
   if Eid then
     self.SpecialMonsterInfo[Eid] = nil
   end
-end
-
-function BP_SceneManagerComponent_C:GetKeyListFingerprints(KeyList)
-  local SerializedStr = self:SerializeInputSequence(KeyList)
-  local Fingerprint = Sha1.sha1(SerializedStr)
-  return Fingerprint
-end
-
-function BP_SceneManagerComponent_C:SerializeInputSequence(KeyList)
-  local t = {}
-  local idx = 1
-  for i, v in ipairs(KeyList) do
-    local TimeDiff = 0
-    if i > 1 then
-      local RawDiff = v[3] - KeyList[i - 1][3]
-      TimeDiff = math.floor(RawDiff / SDC_KEY_TIME_PRECISION + 0.5) * SDC_KEY_TIME_PRECISION
-    end
-    t[idx] = v[1]
-    t[idx + 1] = v[2]
-    t[idx + 2] = TimeDiff
-    idx = idx + 3
-  end
-  return table.concat(t, "|")
 end
 
 function BP_SceneManagerComponent_C:ReportCheatMsg(CheatType, AlertString)

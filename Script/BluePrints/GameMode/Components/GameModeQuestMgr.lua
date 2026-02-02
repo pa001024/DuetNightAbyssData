@@ -579,6 +579,7 @@ function GameModeQuestMgr:RealQuestArtLevelChange(RegionId, VarName, BlackScreen
   end
   local LoadArray = TArray(FString)
   local UnloadArray = TArray(FString)
+  local NeedNotifyLevels = TSet(FString)
   if 1 == LoadEnable then
     for i, Value in pairs(Info.LoadLevel) do
       LoadArray:Add(Value)
@@ -598,6 +599,11 @@ function GameModeQuestMgr:RealQuestArtLevelChange(RegionId, VarName, BlackScreen
       end
     end
   end
+  if nil ~= Info.NeedNotifyLevels then
+    for i, Value in pairs(Info.NeedNotifyLevels) do
+      NeedNotifyLevels:Add(Value)
+    end
+  end
   if BlackScreenEnable and Info.BlackScreen == true then
     if self.QuestArtLevelChangeLevelName ~= "" then
       GWorld.logger.error("BP_EMGameMode_C:RealQuestArtLevelChange 单个任务同时触发了多个Var变量的Art显示: Name1-->" .. self.QuestArtLevelChangeLevelName .. "   Name2-->  " .. Info.LoadLevel[1])
@@ -610,7 +616,7 @@ function GameModeQuestMgr:RealQuestArtLevelChange(RegionId, VarName, BlackScreen
       OutAnimationPlayTime = Info.OutTime
     })
   end
-  self:ChangeLevelLoadingState(LoadArray, UnloadArray)
+  self:ChangeLevelLoadingState(LoadArray, UnloadArray, NeedNotifyLevels)
 end
 
 function GameModeQuestMgr:QuestArtLevelChangeCloseBlackScreen(LevelName)

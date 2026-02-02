@@ -9,6 +9,9 @@ T.RT_2 = {
   [2] = 110402,
   [3] = 110403
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -26,7 +29,7 @@ return ReadOnly("PaotaiMiniGame", {
     },
     MonsterNum = 8,
     Reward = T.RT_2,
-    StartTime = 1768874400,
+    StartTime = LocalTimeProxy(1768874400),
     TotalTime = 30
   },
   [40102] = {
@@ -44,7 +47,7 @@ return ReadOnly("PaotaiMiniGame", {
     MonsterNum = 20,
     PreDungeon = 40101,
     Reward = T.RT_2,
-    StartTime = 1768942800,
+    StartTime = LocalTimeProxy(1768942800),
     TotalTime = 60
   },
   [40103] = {
@@ -62,7 +65,7 @@ return ReadOnly("PaotaiMiniGame", {
     MonsterNum = 42,
     PreDungeon = 40102,
     Reward = T.RT_2,
-    StartTime = 1769029200,
+    StartTime = LocalTimeProxy(1769029200),
     TotalTime = 90
   },
   [40104] = {
@@ -80,7 +83,7 @@ return ReadOnly("PaotaiMiniGame", {
     MonsterNum = 51,
     PreDungeon = 40103,
     Reward = T.RT_2,
-    StartTime = 1769115600,
+    StartTime = LocalTimeProxy(1769115600),
     TotalTime = 90
   },
   [40105] = {
@@ -98,7 +101,7 @@ return ReadOnly("PaotaiMiniGame", {
     MonsterNum = 46,
     PreDungeon = 40104,
     Reward = T.RT_2,
-    StartTime = 1769202000,
+    StartTime = LocalTimeProxy(1769202000),
     TotalTime = 120
   },
   [40106] = {
@@ -116,7 +119,7 @@ return ReadOnly("PaotaiMiniGame", {
     MonsterNum = 53,
     PreDungeon = 40105,
     Reward = T.RT_2,
-    StartTime = 1769288400,
+    StartTime = LocalTimeProxy(1769288400),
     TotalTime = 140
   },
   [40107] = {
@@ -134,7 +137,7 @@ return ReadOnly("PaotaiMiniGame", {
     MonsterNum = 49,
     PreDungeon = 40106,
     Reward = T.RT_2,
-    StartTime = 1769374800,
+    StartTime = LocalTimeProxy(1769374800),
     TotalTime = 120
   }
 })

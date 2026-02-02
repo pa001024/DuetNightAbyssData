@@ -1830,6 +1830,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "QuestPoint_Balcony2",
               CameraLookAtTartgetPoint = "QuestPoint_Balcony1",
@@ -2333,6 +2334,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "QuestPoint_Dx",
@@ -2605,6 +2607,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -3625,6 +3628,7 @@ return {
             pos = {x = -413.47220002220035, y = 199.4310762594825},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "QuestArea_Mod"
             }
@@ -3636,6 +3640,7 @@ return {
             pos = {x = 969.3515734265732, y = 163.82231002571626},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "QuestArea_Mod"
             }

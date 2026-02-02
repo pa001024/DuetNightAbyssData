@@ -30,6 +30,10 @@ function M:OnClickConfirm()
   local Avatar = GWorld:GetAvatar()
   if Avatar then
     Avatar:InitMobileHudPlan(self.CurSelectIndex)
+    if 2 == self.CurSelectIndex then
+      EMCache:Set("FirstOpenLayoutPlan", true, true)
+      ReddotManager.ClearLeafNodeCount("Setting_Layout")
+    end
   end
   self:CloseSelf()
   self.IsClosing = true

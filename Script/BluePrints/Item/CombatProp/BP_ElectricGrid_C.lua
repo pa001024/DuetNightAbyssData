@@ -52,7 +52,6 @@ function BP_ElectricGrid_C:TrySetVariable()
   if not self.Start then
     self.Start = {}
     self.End = {}
-    self.Rays = {}
     self.Lasers = {}
     self.HitedArray = {}
     self:GetComponents()
@@ -68,11 +67,8 @@ function BP_ElectricGrid_C:GetComponents()
         self.Start[Name] = Component
       elseif string.find(Name, "EndMesh") then
         self.End[Name] = Component
-      elseif string.find(Name, "LaserRay") then
-        self.Rays[Name] = Component
       end
     end
-    self:SetNiagara(self.Rays)
   end
 end
 
@@ -91,6 +87,15 @@ function BP_ElectricGrid_C:LaunchLaser()
   if self.IsActive then
     return
   end
+  if not self.Rays then
+    self.Rays = {}
+    for i, v in pairs(self.Start) do
+      local Start, End = string.find(i, "%d+", 1)
+      local Idx = tonumber(string.sub(i, Start, End))
+      self.Rays["LaserRay" .. Idx] = self:CreateLaserComponent(v, "LaserRay" .. Idx)
+    end
+    self:SetNiagara(self.Rays)
+  end
   for i, v in pairs(self.Start) do
     local Start, End = string.find(i, "%d+", 1)
     local Idx = tonumber(string.sub(i, Start, End))
@@ -108,6 +113,7 @@ function BP_ElectricGrid_C:LaunchLaser()
     LaserInfo.SocketName = "LaserPoint"
     LaserInfo.Debug = false
     LaserInfo.Radiu = self.LaserRadius
+    LaserInfo.MultiTrace = true
     if self.Rays["LaserRay" .. Idx] then
       local LaserPort = Battle(self):CreateLaser(v, self.Rays["LaserRay" .. Idx], LaserInfo)
       if not self.HitedArray[LaserPort] then

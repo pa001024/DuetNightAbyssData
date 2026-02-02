@@ -138,6 +138,23 @@ function Component:CheckOtherPlayerPersonallInfo(PlayerUuid, bForceUsedServerDat
   self:CallServer("CheckOtherPlayerPersonallInfo", cb, PlayerUuid)
 end
 
+function Component:GetOtherPlayerPersonallInfo(PlayerUuid, CallbackInfo)
+  if not PlayerUuid then
+    DebugPrint("GetOtherPlayerPersonallInfo Invalid arguments")
+    return
+  end
+  
+  local function cb(ret, PlayerInfo)
+    if not ErrorCode:Check(ret) then
+      return
+    end
+    PlayerInfo.Uuid = PlayerUuid
+    CallbackInfo.Func(PlayerInfo)
+  end
+  
+  self:CallServer("CheckOtherPlayerPersonallInfo", cb, PlayerUuid)
+end
+
 function Component:SetPersonalInfoVisible(VisibleType)
   self.logger.debug("SetPersonalInfoVisible", VisibleType)
   if not CommonUtils.HasValue(CommonConst.PersonalInfoVisibleType, VisibleType) then

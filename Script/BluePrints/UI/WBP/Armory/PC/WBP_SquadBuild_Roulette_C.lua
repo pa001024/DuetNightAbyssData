@@ -68,6 +68,7 @@ function WBP_Build_Roulette_P_C:OnClickCallback()
   self.Owner.CurSlot = self
   self.Owner.CurSlotType = self.Type
   self.Owner:SwitchToRouletteList()
+  self.Owner.DontNeedPlayAnimation = false
   self:PlayAnimation(self.Click)
   self.IsClicking = true
 end

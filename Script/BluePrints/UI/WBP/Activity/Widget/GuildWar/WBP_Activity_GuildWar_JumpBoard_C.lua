@@ -9,6 +9,7 @@ function M:Construct()
   self:AddDispatcher(EventID.OnPreRaidRankInfo, self, self.OnPreRaidRankInfo)
   self:AddDispatcher(EventID.OnRaidRankInfo, self, self.OnRaidRankInfo)
   self:AddDispatcher(EventID.OnRaidRankStart, self, self.OnRaidRankStart)
+  self:AddDispatcher(EventID.OnActivityEntryShowVisible, self, self.OnActivityEntryShowVisible)
 end
 
 function M:Destruct()
@@ -16,6 +17,15 @@ function M:Destruct()
 end
 
 function M:Update()
+  if self.SkipNextRefresh then
+    self.SkipNextRefresh = false
+    return
+  end
+  self:RefreshBoardWidget()
+end
+
+function M:OnActivityEntryShowVisible()
+  self.SkipNextRefresh = true
   self:RefreshBoardWidget()
 end
 
@@ -76,25 +86,39 @@ function M:RefreshQualificationBoard()
     ":",
     self:PadZero(QualificationEndDate.min)
   })
-  BoardWidget.Text_Reward:SetText(GText("UI_Event_MidTerm_GotoPreview"))
-  BoardWidget.Btn_Check:Init({
-    ClickCallback = self.OnRewardPreviewClicked,
-    OwnerWidget = self
-  })
   BoardWidget.Text_Status:SetText(OfficalMathcStartDateText)
   BoardWidget.Text_QualificationMatch:SetText(GText("RaidDungeon_PreRaid_Rank"))
   BoardWidget.Text_OfficialMathch:SetText(GText("RaidDungeon_Raid_Rank"))
   local DataText = table.concat({
-    self:GetDateText(CurEventData.EventStartTime),
+    self:GetDateText(CurEventData.EventStartTime.GetTime()),
     " ~ ",
     QualificationEndDateText
   })
   BoardWidget.Text_Date:SetText(DataText)
-  self.Avatar:RaidSeasonGetPreRaidRankInfo(function(ErrCode)
-    if not ErrorCode:Check(ErrCode) and self then
-      self:SetRankTextureImage(BoardWidget, 0)
-    end
-  end)
+  local RaidSeasons = self.Avatar.RaidSeasons[self.Avatar.CurrentRaidSeasonId]
+  if not RaidSeasons then
+    return
+  end
+  if 1 ~= RaidSeasons.BanState then
+    BoardWidget.WS_Type:SetActiveWidgetIndex(0)
+    self.Avatar:RaidSeasonGetPreRaidRankInfo(function(ErrCode)
+      if not ErrorCode:Check(ErrCode) and self then
+        self:SetRankTextureImage(BoardWidget, 0)
+      end
+    end)
+    BoardWidget.Text_Reward:SetVisibility(UIConst.VisibilityOp.Visible)
+    BoardWidget.Text_Reward:SetText(GText("UI_Event_MidTerm_GotoPreview"))
+    BoardWidget.Btn_Check:SetVisibility(UIConst.VisibilityOp.Visible)
+    BoardWidget.Btn_Check:Init({
+      ClickCallback = self.OnRewardPreviewClicked,
+      OwnerWidget = self
+    })
+  else
+    BoardWidget.WS_Type:SetActiveWidgetIndex(1)
+    BoardWidget.Text_Ban:SetText(GText("RaidDungeon_Rank_Ban"))
+    BoardWidget.Text_Reward:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    BoardWidget.Btn_Check:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
   self:AddTimer(0.2, function()
     self.WS_Type:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     BoardWidget:PlayAnimation(BoardWidget.In)
@@ -134,12 +158,18 @@ function M:RefreshOfficialBoard()
   })
   BoardWidget.Text_Date:SetText(DataText)
   self:RefreshPreRaidRewardGot(BoardWidget)
-  self:SetRankTextureImage(BoardWidget, RaidSeasons.PreRaidGroupId)
-  self.Avatar:RaidSeasonGetRaidRankInfo(function(ErrCode)
-    if not ErrorCode:Check(ErrCode) and self then
-      self:InitRaidRankText(0)
-    end
-  end)
+  if 1 ~= RaidSeasons.BanState then
+    BoardWidget.WS_Type:SetActiveWidgetIndex(0)
+    self:SetRankTextureImage(BoardWidget, RaidSeasons.PreRaidGroupId)
+    self.Avatar:RaidSeasonGetRaidRankInfo(function(ErrCode)
+      if not ErrorCode:Check(ErrCode) and self then
+        self:InitRaidRankText(0)
+      end
+    end)
+  else
+    BoardWidget.WS_Type:SetActiveWidgetIndex(1)
+    BoardWidget.Text_Ban:SetText(GText("RaidDungeon_Rank_Ban"))
+  end
   self:AddTimer(0.2, function()
     self.WS_Type:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     BoardWidget:PlayAnimation(BoardWidget.In)
@@ -173,7 +203,7 @@ function M:RefreshPreRaidRewardGot(BoardWidget)
   if not RaidSeasons then
     return
   end
-  if RaidSeasons.PreRaidGroupId > 0 and not RaidSeasons:IsPreRaidRewardGot() then
+  if self:CanGetPreRaidReward() then
     BoardWidget.Btn_GainReward:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     BoardWidget.Btn_GainReward:Init(self, self.OnRewardGotBtnClicked)
   else
@@ -195,7 +225,26 @@ function M:InitRaidRankText(RankNum)
   end
 end
 
+function M:CanGetPreRaidReward()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  local RaidSeasons = Avatar.RaidSeasons[Avatar.CurrentRaidSeasonId]
+  if not RaidSeasons then
+    return false
+  end
+  if RaidSeasons.PreRaidGroupId <= 0 then
+    return false
+  end
+  local CanGetReward = not RaidSeasons:IsPreRaidRewardGot()
+  return CanGetReward
+end
+
 function M:OnRewardGotBtnClicked()
+  if not self:CanGetPreRaidReward() then
+    return
+  end
   AudioManager(self):PlayUISound(self, "event:/ui/activity/shop_small_btn_click", "", nil)
   
   local function Callback(ErrCode, Ret)
@@ -230,6 +279,13 @@ function M:OnRewardGotBtnClicked()
 end
 
 function M:OnRewardPreviewClicked(IsChecked)
+  local RaidSeasons = self.Avatar.RaidSeasons[self.Avatar.CurrentRaidSeasonId]
+  if not RaidSeasons then
+    return
+  end
+  if 1 == RaidSeasons.BanState then
+    return
+  end
   AudioManager(self):PlayUISound(self, "event:/ui/activity/shop_small_btn_click", "", nil)
   local GuildWarRewardPop = UIManager(self):LoadUINew("GuildWarRewardPop")
   GuildWarRewardPop:Init()
@@ -284,29 +340,35 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
 end
 
 function M:InitKeyBoardView()
-  if GuildWarUtils.IsPreRaidTime() then
-    self.WB_QualificationBoard.WS_Controller:SetActiveWidget(self.WB_QualificationBoard.Btn_Check)
-    return
-  end
   local RaidSeasons = self.Avatar.RaidSeasons[self.Avatar.CurrentRaidSeasonId]
   if not RaidSeasons then
     return
   end
-  if not RaidSeasons:IsPreRaidRewardGot() then
+  if GuildWarUtils.IsPreRaidTime() then
+    if 1 ~= RaidSeasons.BanState then
+      self.WB_QualificationBoard.WS_Controller:SetVisibility(UIConst.VisibilityOp.Visible)
+      self.WB_QualificationBoard.WS_Controller:SetActiveWidget(self.WB_QualificationBoard.Btn_Check)
+    else
+      self.WB_QualificationBoard.WS_Controller:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+  else
     self.WB_OfficialBoard.Btn_GainReward.Key_Controller:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end
 
 function M:InitGamepadView()
-  if GuildWarUtils.IsPreRaidTime() then
-    self.WB_QualificationBoard.WS_Controller:SetActiveWidget(self.WB_QualificationBoard.Key_Reward)
-    return
-  end
   local RaidSeasons = self.Avatar.RaidSeasons[self.Avatar.CurrentRaidSeasonId]
   if not RaidSeasons then
     return
   end
-  if not RaidSeasons:IsPreRaidRewardGot() then
+  if GuildWarUtils.IsPreRaidTime() then
+    if 1 ~= RaidSeasons.BanState then
+      self.WB_QualificationBoard.WS_Controller:SetVisibility(UIConst.VisibilityOp.Visible)
+      self.WB_QualificationBoard.WS_Controller:SetActiveWidget(self.WB_QualificationBoard.Key_Reward)
+    else
+      self.WB_QualificationBoard.WS_Controller:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+  elseif self:CanGetPreRaidReward() then
     self.WB_OfficialBoard.Btn_GainReward.Key_Controller:SetVisibility(UIConst.VisibilityOp.Visible)
   end
 end

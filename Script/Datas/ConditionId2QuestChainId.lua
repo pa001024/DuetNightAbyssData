@@ -11,6 +11,9 @@ T.RT_3 = {
 T.RT_4 = {
   [120101] = 1
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -125,6 +128,9 @@ return ReadOnly("ConditionId2QuestChainId", {
     [400106] = 1,
     [400107] = 1
   },
+  [120003] = {
+    [200313] = 1
+  },
   [120100] = T.RT_4,
   [120101] = {
     [120102] = 1
@@ -132,11 +138,22 @@ return ReadOnly("ConditionId2QuestChainId", {
   [120102] = {
     [120103] = 1
   },
+  [120103] = {
+    [200307] = 1,
+    [200310] = 1
+  },
+  [120104] = {
+    [200305] = 1
+  },
   [120106] = {
     [200301] = 1,
     [200302] = 1,
     [200303] = 1,
-    [200309] = 1
+    [200308] = 1,
+    [200309] = 1,
+    [200311] = 1,
+    [200312] = 1,
+    [200315] = 1
   },
   [120110] = {
     [120111] = 1
@@ -198,7 +215,8 @@ return ReadOnly("ConditionId2QuestChainId", {
     [120105] = 1
   },
   [12010306] = {
-    [200306] = 1
+    [200306] = 1,
+    [200314] = 1
   },
   [12010601] = {
     [120106] = 1

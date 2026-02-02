@@ -162,13 +162,6 @@ function Component:FiringRaySkillCreature(SkillCreatureData)
   local BornLocation = self:CalcRayBornLocation(Source, CreatureId)
   SkillCreatureData.BornLocation = BornLocation
   local Distance = SkillCreatureData.Distance
-  if CreatureConfig.AllowAttackRangeModify then
-    local LocalRanges = {1}
-    self:ApplyRangeModify(SkillCreatureData.Source, {
-      AttackRangeType = CreatureConfig.AttackRangeType
-    }, LocalRanges)
-    Distance = Distance * LocalRanges[1]
-  end
   if CreatureConfig.AllowSkillRangeModify then
     local LocalRanges = {1}
     self:ApplyRangeModify(SkillCreatureData.Source, {AllowSkill = 1}, LocalRanges)

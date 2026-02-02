@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -2017,6 +2020,15 @@ return ReadOnly("TalkAction", {
     MontageSection = "Loop",
     bUseIK = false
   },
+  Idle = {
+    ActionMontage = "Emo_Idle",
+    AnimationId = "Idle",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "Loop",
+    bUseIK = false
+  },
   Idle_Excited = {
     ActionMontage = "Emo_Idle_Excited",
     AnimationId = "Idle_Excited",
@@ -2736,6 +2748,14 @@ return ReadOnly("TalkAction", {
     IsSpecialAnim = false,
     MontageSection = "Start",
     bUseIK = true
+  },
+  Mnt_BiAn_Appear = {
+    ActionMontage = "Appear",
+    AnimationId = "Mnt_BiAn_Appear",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "Start"
   },
   Npc_Qingnian_M_Story_HideHand_End = {
     ActionMontage = "Story_HideHand",

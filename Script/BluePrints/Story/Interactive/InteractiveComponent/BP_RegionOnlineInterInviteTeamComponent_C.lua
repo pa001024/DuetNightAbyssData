@@ -22,6 +22,9 @@ function BP_RegionOnlineInterInviteTeamComponent_C:SetInteractiveName(Name)
 end
 
 function BP_RegionOnlineInterInviteTeamComponent_C:DisplayInteractiveBtn(PlayerActor)
+  if not self.CanOpen then
+    return
+  end
   local UIManager = UGameplayStatics.GetGameInstance(self):GetGameUIManager()
   local InteractiveUI = UIManager:LoadUINew(UIConst.InteractiveUIName)
   if not InteractiveUI then
@@ -61,6 +64,7 @@ function BP_RegionOnlineInterInviteTeamComponent_C:IsCanInteractive(PlayerActor)
 end
 
 function BP_RegionOnlineInterInviteTeamComponent_C:NotDisplayInteractiveBtn(PlayerActor)
+  self.CanOpen = false
   self:SetBtnDisplayed(PlayerActor, false)
   local UIManager = UGameplayStatics.GetGameInstance(self):GetGameUIManager()
   local InteractiveUI = UIManager:GetUIObj(UIConst.InteractiveUIName)
@@ -98,7 +102,7 @@ function BP_RegionOnlineInterInviteTeamComponent_C:InitCommonUIConfirmID(CommonU
   if not Data then
     return
   end
-  self.InteractiveDistance = Data.InteractiveRadius or self.InteractiveDistance
+  self:SetInteractiveDistance(Data.InteractiveRadius or self.InteractiveDistance)
   self.InteractiveAngle = Data.InteractiveAngle or self.InteractiveAngle
   self.InteractiveFaceAngle = Data.PlayerFaceAngle or self.InteractiveFaceAngle
   self.ListPriority = Data.InteractivePriority or 0

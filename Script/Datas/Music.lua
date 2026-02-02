@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -272,6 +275,15 @@ return ReadOnly("Music", {
     PathDes = "HomePianoAcc_1005009",
     Resource = 31005009
   },
+  [1005010] = {
+    Event = "event:/bgm/1_1/musicbox/0134_lili_song",
+    MusicDes = "HomePianoDes_1005010",
+    MusicId = 1005010,
+    MusicName = "HomePianoName_1005010",
+    MusicScoreId = 1005,
+    PathDes = "HomePianoAcc_1005010",
+    Resource = 31005010
+  },
   [1006001] = {
     Event = "event:/bgm/cbt02/musicbox/0044_story_first_meet_saiqi_loop",
     MusicDes = "HomePianoDes_1006001",
@@ -443,6 +455,15 @@ return ReadOnly("Music", {
     PathDes = "HomePianoAcc_1007009",
     Resource = 31007009
   },
+  [1007010] = {
+    Event = "event:/bgm/cbt03/musicbox/0073_story_virgil_theme",
+    MusicDes = "HomePianoDes_1007010",
+    MusicId = 1007010,
+    MusicName = "HomePianoName_1007010",
+    MusicScoreId = 1007,
+    PathDes = "HomePianoAcc_1007010",
+    Resource = 31007010
+  },
   [1008001] = {
     Event = "event:/bgm/cbt02/musicbox/0041_story_jiaojiao_tiejiang",
     MusicDes = "HomePianoDes_1008001",
@@ -451,6 +472,33 @@ return ReadOnly("Music", {
     MusicScoreId = 1008,
     PathDes = "HomePianoAcc_1008001",
     Resource = 31008001
+  },
+  [1008002] = {
+    Event = "event:/bgm/1_0/musicbox/0083_system_shop_normal",
+    MusicDes = "HomePianoDes_1008002",
+    MusicId = 1008002,
+    MusicName = "HomePianoName_1008002",
+    MusicScoreId = 1008,
+    PathDes = "HomePianoAcc_1008002",
+    Resource = 31008002
+  },
+  [1008003] = {
+    Event = "event:/bgm/1_0/musicbox/0084_system_shop_danjiao",
+    MusicDes = "HomePianoDes_1008003",
+    MusicId = 1008003,
+    MusicName = "HomePianoName_1008003",
+    MusicScoreId = 1008,
+    PathDes = "HomePianoAcc_1008003",
+    Resource = 31008003
+  },
+  [1008004] = {
+    Event = "event:/bgm/1_0/musicbox/0089_system_shop_adventurer",
+    MusicDes = "HomePianoDes_1008004",
+    MusicId = 1008004,
+    MusicName = "HomePianoName_1008004",
+    MusicScoreId = 1008,
+    PathDes = "HomePianoAcc_1008004",
+    Resource = 31008004
   },
   [1009001] = {
     Event = "event:/bgm/cbt03/musicbox/0072_story_reasoning",
@@ -523,5 +571,248 @@ return ReadOnly("Music", {
     MusicScoreId = 1009,
     PathDes = "HomePianoAcc_1009008",
     Resource = 31009008
+  },
+  [1010001] = {
+    Event = "event:/bgm/1_1/musicbox/0135_login_theme",
+    MusicDes = "HomePianoDes_1010001",
+    MusicId = 1010001,
+    MusicName = "HomePianoName_1010001",
+    MusicScoreId = 1010,
+    PathDes = "HomePianoAcc_1010001",
+    Resource = 31010001
+  },
+  [1010002] = {
+    Event = "event:/bgm/1_1/musicbox/0096_cs_dongguo_opening",
+    MusicDes = "HomePianoDes_1010002",
+    MusicId = 1010002,
+    MusicName = "HomePianoName_1010002",
+    MusicScoreId = 1010,
+    PathDes = "HomePianoAcc_1010002",
+    Resource = 31010002
+  },
+  [1010003] = {
+    Event = "event:/bgm/1_1/musicbox/0104_scene_yanjindu",
+    MusicDes = "HomePianoDes_1010003",
+    MusicId = 1010003,
+    MusicName = "HomePianoName_1010003",
+    MusicScoreId = 1010,
+    PathDes = "HomePianoAcc_1010003",
+    Resource = 31010003
+  },
+  [1010004] = {
+    Event = "event:/bgm/1_1/musicbox/0099_scene_port_01",
+    MusicDes = "HomePianoDes_1010004",
+    MusicId = 1010004,
+    MusicName = "HomePianoName_1010004",
+    MusicScoreId = 1010,
+    PathDes = "HomePianoAcc_1010004",
+    Resource = 31010004
+  },
+  [1010005] = {
+    Event = "event:/bgm/1_1/musicbox/0100_scene_port_02_round",
+    MusicDes = "HomePianoDes_1010005",
+    MusicId = 1010005,
+    MusicName = "HomePianoName_1010005",
+    MusicScoreId = 1010,
+    PathDes = "HomePianoAcc_1010005",
+    Resource = 31010005
+  },
+  [1010006] = {
+    Event = "event:/bgm/1_1/musicbox/0102_story_dafengjiuzhang",
+    MusicDes = "HomePianoDes_1010006",
+    MusicId = 1010006,
+    MusicName = "HomePianoName_1010006",
+    MusicScoreId = 1010,
+    PathDes = "HomePianoAcc_1010006",
+    Resource = 31010006
+  },
+  [1010007] = {
+    Event = "event:/bgm/1_1/musicbox/0105_scene_bainianchun",
+    MusicDes = "HomePianoDes_1010007",
+    MusicId = 1010007,
+    MusicName = "HomePianoName_1010007",
+    MusicScoreId = 1010,
+    PathDes = "HomePianoAcc_1010007",
+    Resource = 31010007
+  },
+  [1010008] = {
+    Event = "event:/bgm/1_1/musicbox/0106_scene_cave_near_sea",
+    MusicDes = "HomePianoDes_1010008",
+    MusicId = 1010008,
+    MusicName = "HomePianoName_1010008",
+    MusicScoreId = 1010,
+    PathDes = "HomePianoAcc_1010008",
+    Resource = 31010008
+  },
+  [1010009] = {
+    Event = "event:/bgm/1_1/musicbox/0110_story_fushu_theme",
+    MusicDes = "HomePianoDes_1010009",
+    MusicId = 1010009,
+    MusicName = "HomePianoName_1010009",
+    MusicScoreId = 1010,
+    PathDes = "HomePianoAcc_1010009",
+    Resource = 31010009
+  },
+  [1010010] = {
+    Event = "event:/bgm/1_1/musicbox/0113_scene_fushu_hospital",
+    MusicDes = "HomePianoDes_1010010",
+    MusicId = 1010010,
+    MusicName = "HomePianoName_1010010",
+    MusicScoreId = 1010,
+    PathDes = "HomePianoAcc_1010010",
+    Resource = 31010010
+  },
+  [1010011] = {
+    Event = "event:/bgm/1_1/musicbox/0108_scene_black_market",
+    MusicDes = "HomePianoDes_1010011",
+    MusicId = 1010011,
+    MusicName = "HomePianoName_1010011",
+    MusicScoreId = 1010,
+    PathDes = "HomePianoAcc_1010011",
+    Resource = 31010011
+  },
+  [1010012] = {
+    Event = "event:/bgm/1_1/musicbox/0107_story_zhuyinzhizai_full",
+    MusicDes = "HomePianoDes_1010012",
+    MusicId = 1010012,
+    MusicName = "HomePianoName_1010012",
+    MusicScoreId = 1010,
+    PathDes = "HomePianoAcc_1010012",
+    Resource = 31010012
+  },
+  [1010013] = {
+    Event = "event:/bgm/1_1/musicbox/0111_scene_wuhuizhidi",
+    MusicDes = "HomePianoDes_1010013",
+    MusicId = 1010013,
+    MusicName = "HomePianoName_1010013",
+    MusicScoreId = 1010,
+    PathDes = "HomePianoAcc_1010013",
+    Resource = 31010013
+  },
+  [1010014] = {
+    Event = "event:/bgm/1_1/musicbox/0114_scene_island_in_lake",
+    MusicDes = "HomePianoDes_1010014",
+    MusicId = 1010014,
+    MusicName = "HomePianoName_1010014",
+    MusicScoreId = 1010,
+    PathDes = "HomePianoAcc_1010014",
+    Resource = 31010014
+  },
+  [1010015] = {
+    Event = "event:/bgm/1_1/musicbox/0115_scene_wangchuan",
+    MusicDes = "HomePianoDes_1010015",
+    MusicId = 1010015,
+    MusicName = "HomePianoName_1010015",
+    MusicScoreId = 1010,
+    PathDes = "HomePianoAcc_1010015",
+    Resource = 31010015
+  },
+  [1010016] = {
+    Event = "event:/bgm/1_1/musicbox/0117_scene_tingyayuan",
+    MusicDes = "HomePianoDes_1010016",
+    MusicId = 1010016,
+    MusicName = "HomePianoName_1010016",
+    MusicScoreId = 1010,
+    PathDes = "HomePianoAcc_1010016",
+    Resource = 31010016
+  },
+  [1010017] = {
+    Event = "event:/bgm/1_1/musicbox/0097_scene_ancient_battlefield",
+    MusicDes = "HomePianoDes_1010017",
+    MusicId = 1010017,
+    MusicName = "HomePianoName_1010017",
+    MusicScoreId = 1010,
+    PathDes = "HomePianoAcc_1010017",
+    Resource = 31010017
+  },
+  [1010018] = {
+    Event = "event:/bgm/1_1/musicbox/0123_boss_juque",
+    MusicDes = "HomePianoDes_1010018",
+    MusicId = 1010018,
+    MusicName = "HomePianoName_1010018",
+    MusicScoreId = 1010,
+    PathDes = "HomePianoAcc_1010018",
+    Resource = 31010018
+  },
+  [1010019] = {
+    Event = "event:/bgm/1_1/musicbox/0129_boss_yuming",
+    MusicDes = "HomePianoDes_1010019",
+    MusicId = 1010019,
+    MusicName = "HomePianoName_1010019",
+    MusicScoreId = 1010,
+    PathDes = "HomePianoAcc_1010019",
+    Resource = 31010019
+  },
+  [1010020] = {
+    Event = "event:/bgm/1_1/musicbox/0121_boss_heilong",
+    MusicDes = "HomePianoDes_1010020",
+    MusicId = 1010020,
+    MusicName = "HomePianoName_1010020",
+    MusicScoreId = 1010,
+    PathDes = "HomePianoAcc_1010020",
+    Resource = 31010020
+  },
+  [1011001] = {
+    Event = "event:/bgm/1_0/musicbox/0093_feina_activity_level_01",
+    MusicDes = "HomePianoDes_1011001",
+    MusicId = 1011001,
+    MusicName = "HomePianoName_1011001",
+    MusicScoreId = 1011,
+    PathDes = "HomePianoAcc_1011001",
+    Resource = 31011001
+  },
+  [1011002] = {
+    Event = "event:/bgm/1_0/musicbox/0094_feina_activity_level_02",
+    MusicDes = "HomePianoDes_1011002",
+    MusicId = 1011002,
+    MusicName = "HomePianoName_1011002",
+    MusicScoreId = 1011,
+    PathDes = "HomePianoAcc_1011002",
+    Resource = 31011002
+  },
+  [1011003] = {
+    Event = "event:/bgm/1_0/musicbox/0088_saiqi_skin",
+    MusicDes = "HomePianoDes_1011003",
+    MusicId = 1011003,
+    MusicName = "HomePianoName_1011003",
+    MusicScoreId = 1011,
+    PathDes = "HomePianoAcc_1011003",
+    Resource = 31011003
+  },
+  [1011004] = {
+    Event = "event:/bgm/cbt02/musicbox/0046_level_xunlianchang",
+    MusicDes = "HomePianoDes_1011004",
+    MusicId = 1011004,
+    MusicName = "HomePianoName_1011004",
+    MusicScoreId = 1011,
+    PathDes = "HomePianoAcc_1011004",
+    Resource = 31011004
+  },
+  [1011005] = {
+    Event = "event:/bgm/cbt02/musicbox/0038_system_parkur",
+    MusicDes = "HomePianoDes_1011005",
+    MusicId = 1011005,
+    MusicName = "HomePianoName_1011005",
+    MusicScoreId = 1011,
+    PathDes = "HomePianoAcc_1011005",
+    Resource = 31011005
+  },
+  [1011006] = {
+    Event = "event:/bgm/1_0/musicbox/0090_system_shooting",
+    MusicDes = "HomePianoDes_1011006",
+    MusicId = 1011006,
+    MusicName = "HomePianoName_1011006",
+    MusicScoreId = 1011,
+    PathDes = "HomePianoAcc_1011006",
+    Resource = 31011006
+  },
+  [1011007] = {
+    Event = "event:/bgm/cbt03/musicbox/0082_system_fishing",
+    MusicDes = "HomePianoDes_1011007",
+    MusicId = 1011007,
+    MusicName = "HomePianoName_1011007",
+    MusicScoreId = 1011,
+    PathDes = "HomePianoAcc_1011007",
+    Resource = 31011007
   }
 })

@@ -45,9 +45,11 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
     if self.Com_Show then
       self.Com_Show:SetVisibility(ESlateVisibility.Collapsed)
     end
-    self:StopAnimation(self.Hover)
-    self:PlayAnimation(self.Unhover)
-    self.bIsHovered = false
+    if not self.IsUnLocked then
+      self:StopAnimation(self.Hover)
+      self:PlayAnimation(self.Unhover)
+      self.bIsHovered = false
+    end
   end
   self.Super.RefreshOpInfoByInputDevice(self, CurInputDevice, CurGamepadName)
 end
@@ -314,7 +316,7 @@ function M:OnAnimationFinished(InAnimation)
       return
     end
     SelectLevel:UpdatKeyDisplay("SelfWidget")
-  elseif InAnimation == self.In and self.bIsHovered then
+  elseif InAnimation == self.In and self.bIsHovered and not self.IsUnLocked then
     self:StopAllAnimations()
     self:PlayAnimation(self.Hover)
   end

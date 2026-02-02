@@ -64,11 +64,14 @@ function M:SetIsSelected(IsSelected)
   self:FlushAnimations()
 end
 
-function M:OnMouseEnter(MyGeometry, MouseEvent)
+function M:OnMouseEnter(MyGeometry, MouseEvent, bForce)
   if self.IsSelected then
     return
   end
-  self:PlayAnimationForward(self.Hover)
+  local bMobile = CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile"
+  if bForce or not bMobile then
+    self:PlayAnimationForward(self.Hover)
+  end
 end
 
 function M:OnMouseLeave(MouseEvent)
@@ -92,11 +95,21 @@ function M:OnMouseButtonUp(MyGeometry, MouseEvent)
     return UE4.UWidgetBlueprintLibrary.Unhandled()
   end
   if self:IsHovered() then
-    self:OnMouseEnter()
+    self:OnMouseEnter(MyGeometry, MouseEvent, true)
   else
     self:PlayAnimation(self.Normal)
   end
   AudioManager(self):PlayItemSound(self, self.Content.UnitId, "Click", self.Content.Type)
+  return UE4.UWidgetBlueprintLibrary.Unhandled()
+end
+
+function M:RecoverButton(MyGeometry, MouseEvent)
+  if self.IsSelected then
+    return UE4.UWidgetBlueprintLibrary.Unhandled()
+  end
+  self:StopAllAnimations()
+  self:PlayAnimation(self.Normal)
+  self:FlushAnimations()
   return UE4.UWidgetBlueprintLibrary.Unhandled()
 end
 
@@ -109,7 +122,7 @@ function M:OnTouchEnded(MyGeometry, InTouchEvent)
 end
 
 function M:OnRemovedFromFocusPath(MyGeometry, InTouchEvent)
-  return self:OnMouseButtonUp(MyGeometry, InTouchEvent)
+  return self:RecoverButton(MyGeometry, InTouchEvent)
 end
 
 return M

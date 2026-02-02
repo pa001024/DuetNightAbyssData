@@ -5,6 +5,9 @@ T.RT_1 = {
 }
 T.RT_2 = {100, 200}
 T.RT_3 = {1000000002, 1000000001}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

@@ -595,6 +595,24 @@ function ConditionUtils:JudgeEquipPetId(PetUnitId)
   return false
 end
 
+function ConditionUtils:JudgeUnlockMountId(MountId)
+  if not GWorld:IsSkynetServer() and IsDedicatedServer(GWorld.GameInstance) then
+    return false
+  end
+  if -1 == MountId then
+    if CommonUtils.Size(self.Mounts) > 0 then
+      return true
+    else
+      return false
+    end
+  end
+  if self.Mounts[MountId] then
+    return true
+  else
+    return false
+  end
+end
+
 function ConditionUtils:JudgeConditionalRewardEventEnd(EventId)
   if not GWorld:IsSkynetServer() and IsDedicatedServer(GWorld.GameInstance) then
     return false
@@ -752,6 +770,11 @@ function ConditionUtils:JudgeTimeArrived(Params)
   min = tonumber(min)
   sec = tonumber(sec)
   local timestamp = TimeUtils.DataToTimestampForArea(year, month, day, hour, min, sec, "China")
+  if GWorld:IsSkynetServer() then
+    timestamp = TimeUtils.EastEightToLocalTimestamp(timestamp)
+  else
+    timestamp = DataMgr.LocalTimeProxy(timestamp)
+  end
   local now = TimeUtils.NowTime()
   return timestamp <= now
 end
@@ -897,6 +920,47 @@ function ConditionUtils:JudgeDailyFreeTicketAmount(Params)
     return false
   end
   return true
+end
+
+function ConditionUtils:JudgeHaveItem(Params)
+  if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
+    local ItemType, ItemId, Count = Params[1], Params[2], Params[3]
+    local CheckFuncName = "Check" .. ItemType .. "Enough"
+    local CheckMethod = self[CheckFuncName]
+    if not CheckMethod then
+      return false
+    end
+    if CheckMethod(self, {
+      [ItemId] = Count
+    }) then
+      return true
+    end
+  end
+  return false
+end
+
+function ConditionUtils:JudgeBuyGoods(Params)
+  if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
+    local ShopItemId, Count = Params[1], Params[2]
+    local ShopItem = self.ShopItems[ShopItemId]
+    if not ShopItem then
+      return false
+    end
+    return Count <= ShopItem.AlreadyPurchaseTimes
+  end
+  return false
+end
+
+function ConditionUtils:JudgeGachaCount(Params)
+  if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
+    local GachaId, Count = Params[1], Params[2]
+    local Gacha = self.SkinGachaPool[GachaId]
+    if not Gacha then
+      return false
+    end
+    return Count <= Gacha.DrawCounts
+  end
+  return false
 end
 
 function ConditionUtils:PackParams(ConditionName, Params)

@@ -316,6 +316,7 @@ function WBP_DungeonDefenseFloat_C:OnDefenceCoreActive()
     self.Defensivewave:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.LeftWave:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Panel_Wave:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Text_Wave:SetText(GText("TARGET_DUNGEON_DEFENCE_WAVE"))
   end
   return true
 end
@@ -598,10 +599,10 @@ function WBP_DungeonDefenseFloat_C:OnDefenseWaveStart()
   self.HintTime = GameState.DefenceWaveInterval
   local WaveStartBP = self:GetWaveStartBP()
   if WaveStartBP then
-    WaveStartBP:SetVisibility(ESlateVisibility.Collapsed)
+    WaveStartBP:Hide("OnDefenseWaveStart")
     WaveStartBP.Text_WaveStart:SetText(GText("DUNGEON_DEFENCE_101"))
     self:AddTimer(self.HintTime, function()
-      WaveStartBP:SetVisibility(ESlateVisibility.HitTestInvisible)
+      WaveStartBP:Show("OnDefenseWaveStart")
       WaveStartBP:PlayInAnimation()
       AudioManager(self):PlayUISound(nil, "event:/ui/common/battle_warning", nil, nil)
     end)

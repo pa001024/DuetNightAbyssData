@@ -16,7 +16,8 @@ function M:InitRewardInfo(PageConfigData, ParentWidget)
       local NorRewardWidget = self["LowItem_" .. i]
       NorRewardWidget:InitNormalReward(i, {
         ActivityId = PageConfigData.EventId,
-        RewardId = PageConfigData.EventReward[i]
+        RewardId = PageConfigData.EventReward[i],
+        bComeBackEvent = PageConfigData.bComeBackEvent
       }, ParentWidget)
     end
   end

@@ -564,7 +564,7 @@ return {
   ManualItem = {},
   Explore = {
     ["7060002"] = {
-      AutoReset = 0,
+      AutoReset = 1,
       ["2320039"] = {
         CreatorId = 2320039,
         UnitType = "Mechanism",

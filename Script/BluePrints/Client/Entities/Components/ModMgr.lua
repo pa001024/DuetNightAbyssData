@@ -1,11 +1,8 @@
 local Decorator = require("BluePrints.Client.Wrapper.Decorator")
 local ModController = require("BluePrints.UI.WBP.Armory.Mod.Utils.ModController")
 local Component = {}
+Decorator:ApplyDecorator(Component)
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
-for key, value in pairs(Decorator) do
-  Component[key] = value
-end
-setmetatable(Component, getmetatable(Decorator))
 
 function Component:EnterWorld()
   ModController:Init()
@@ -42,6 +39,24 @@ function Component:CheckModEnough(CheckData)
   return true
 end
 
+function Component:CheckOriginalModEnough(CheckData)
+  local ModStatistics = {}
+  for key, Mod in pairs(self.Mods) do
+    if Mod.IsOriginal and not Mod:IsEquipped() then
+      if not ModStatistics[Mod.ModId] then
+        ModStatistics[Mod.ModId] = 0
+      end
+      ModStatistics[Mod.ModId] = ModStatistics[Mod.ModId] + Mod.Count
+    end
+  end
+  for ModId, Count in pairs(CheckData) do
+    if not ModStatistics[ModId] or Count > ModStatistics[ModId] then
+      return false
+    end
+  end
+  return true
+end
+
 function Component:_OnPropChangeMods(keys)
   PrintTable(keys, 2, LXYTag .. " +_OnPropChangeMods")
   if #keys > 1 then
@@ -61,6 +76,15 @@ function Component:_OnPropChangeMods(keys)
     local Mod = self.Mods[ModUuid]
     if Mod and Mod.Count > 0 and 0 == Mod.Level then
       ArmoryUtils:TryAddNewModReddot(Mod, Mod.ModId)
+    elseif not Mod then
+      local Info = self.ModUuid2ModIdMap[ModUuid]
+      if Info then
+        local FakeContent = {
+          UnitId = Info.Id,
+          Type = CommonConst.DataType.Mod
+        }
+        ArmoryUtils:SetReddotRead(FakeContent, true, false, true)
+      end
     end
   end
   local ModUuid = keys and keys[1]

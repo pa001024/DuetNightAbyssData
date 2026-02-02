@@ -21,6 +21,7 @@ function M:Construct()
   if self.NoWalnut and not self.IsStandAlone then
     self.WB_Player:GetChildAt(0).Head_Team:SetFocus()
   end
+  self:CheckIsAutoMode()
 end
 
 function M:OnLoaded(...)
@@ -335,6 +336,7 @@ function M:OnClickReward1st()
   AudioManager(self):PlayUISound(self, "event:/ui/common/mihan_level_finish_choice_btn_click", "WalnutRewardOptionClick", nil)
   self.State = 0
   self:UpdateCommonKeys("LS", GText("UI_Controller_CheckDetails"))
+  self:InterruptAutoMode()
 end
 
 function M:OnClickReward2nd()
@@ -346,6 +348,7 @@ function M:OnClickReward2nd()
   AudioManager(self):PlayUISound(self, "event:/ui/common/mihan_level_finish_choice_btn_click", "WalnutRewardOptionClick", nil)
   self.State = 0
   self:UpdateCommonKeys("LS", GText("UI_Controller_CheckDetails"))
+  self:InterruptAutoMode()
 end
 
 function M:OnClickReward3rd()
@@ -357,6 +360,7 @@ function M:OnClickReward3rd()
   AudioManager(self):PlayUISound(self, "event:/ui/common/mihan_level_finish_choice_btn_click", "WalnutRewardOptionClick", nil)
   self.State = 0
   self:UpdateCommonKeys("LS", GText("UI_Controller_CheckDetails"))
+  self:InterruptAutoMode()
 end
 
 function M:OnPressReward1st()
@@ -729,6 +733,42 @@ function M:CheckRunSystemGuide()
   end
   DebugPrint("ljl@ RunSystemGuide", SYSTEM_GUIDE_ID)
   SystemGuideManager:RunGuideById(SYSTEM_GUIDE_ID)
+end
+
+function M:CheckIsAutoMode()
+  local Avatar = GWorld:GetAvatar()
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if not Avatar then
+    return
+  end
+  local DungeonId = GWorld.GameInstance:GetCurrentDungeonId()
+  local IsAutoMode = Avatar.Dungeons[DungeonId].AutoProgress
+  local Progress = GameState.DungeonProgress or 0
+  if IsAutoMode and Progress <= IsAutoMode + 1 and 0 ~= IsAutoMode then
+    local AutoCheckTime
+    if DataMgr.GlobalConstant.AutoRoundsCheckTime then
+      AutoCheckTime = DataMgr.GlobalConstant.AutoRoundsCheckTime.ConstantValue
+    else
+      AutoCheckTime = 5
+    end
+    self.CheckIsAutoModeTimer = self:AddTimer(1, function()
+      if AutoCheckTime <= 0 then
+        self:RemoveTimer(self.CheckIsAutoModeTimer)
+        self:OnClickButtonComfirm()
+        return
+      end
+      self.Btn_Confirm:SetText(string.format(GText("UI_Auto_Round_TicketConfirm_Time"), AutoCheckTime))
+      AutoCheckTime = AutoCheckTime - 1
+    end, true, 0, "CheckIsAutoModeTimer")
+  end
+end
+
+function M:InterruptAutoMode()
+  if self.CheckIsAutoModeTimer then
+    self:RemoveTimer(self.CheckIsAutoModeTimer)
+    self.Btn_Confirm:SetText(GText("UI_CONFIRM_SELECTION"))
+    DebugPrint("ayff test InterruptAutoMode in reward choose")
+  end
 end
 
 return M

@@ -432,6 +432,9 @@ T.RT_51 = {
   [7] = 53007,
   [8] = 53008
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -3255,10 +3258,20 @@ return ReadOnly("WeaponTemplate", {
     WeaponId = 10601,
     WeaponLevel = 50
   },
+  [10102001] = {
+    RuleId = 10102001,
+    WeaponId = 10102,
+    WeaponLevel = 60
+  },
   [10103001] = {
     ModId = T.RT_9,
     ModLevel = T.RT_10,
     RuleId = 10103001,
+    WeaponId = 10103,
+    WeaponLevel = 60
+  },
+  [10103002] = {
+    RuleId = 10103002,
     WeaponId = 10103,
     WeaponLevel = 60
   },
@@ -3267,10 +3280,30 @@ return ReadOnly("WeaponTemplate", {
     WeaponId = 10105,
     WeaponLevel = 30
   },
+  [10202001] = {
+    RuleId = 10202001,
+    WeaponId = 10202,
+    WeaponLevel = 60
+  },
+  [10202002] = {
+    RuleId = 10202002,
+    WeaponId = 10202,
+    WeaponLevel = 60
+  },
+  [10203001] = {
+    RuleId = 10203001,
+    WeaponId = 10203,
+    WeaponLevel = 60
+  },
   [10204001] = {
     RuleId = 10204001,
     WeaponId = 10204,
     WeaponLevel = 30
+  },
+  [10304001] = {
+    RuleId = 10304001,
+    WeaponId = 10304,
+    WeaponLevel = 60
   },
   [10502001] = {
     ModId = T.RT_11,
@@ -3978,10 +4011,25 @@ return ReadOnly("WeaponTemplate", {
     WeaponId = 20405,
     WeaponLevel = 50
   },
+  [20407001] = {
+    RuleId = 20407001,
+    WeaponId = 20407,
+    WeaponLevel = 60
+  },
+  [20407002] = {
+    RuleId = 20407002,
+    WeaponId = 20407,
+    WeaponLevel = 60
+  },
   [20501001] = {
     ModId = T.RT_17,
     ModLevel = T.RT_10,
     RuleId = 20501001,
+    WeaponId = 20501,
+    WeaponLevel = 60
+  },
+  [20501002] = {
+    RuleId = 20501002,
     WeaponId = 20501,
     WeaponLevel = 60
   },
@@ -3992,10 +4040,240 @@ return ReadOnly("WeaponTemplate", {
     WeaponId = 20502,
     WeaponLevel = 60
   },
+  [20502002] = {
+    RuleId = 20502002,
+    WeaponId = 20502,
+    WeaponLevel = 60
+  },
   [20503001] = {
     RuleId = 20503001,
     WeaponId = 20503,
     WeaponLevel = 30
+  },
+  [20505001] = {
+    RuleId = 20505001,
+    WeaponId = 20505,
+    WeaponLevel = 60
+  },
+  [20510001] = {
+    RuleId = 20510001,
+    WeaponId = 20510,
+    WeaponLevel = 60
+  },
+  [20602001] = {
+    RuleId = 20602001,
+    WeaponId = 20602,
+    WeaponLevel = 60
+  },
+  [20603001] = {
+    RuleId = 20603001,
+    WeaponId = 20603,
+    WeaponLevel = 60
+  },
+  [91000011] = {
+    ModId = T.RT_27,
+    ModLevel = T.RT_26,
+    RuleId = 91000011,
+    WeaponId = 10103,
+    WeaponLevel = 50
+  },
+  [91000012] = {
+    ModId = T.RT_31,
+    ModLevel = T.RT_26,
+    RuleId = 91000012,
+    WeaponId = 20201,
+    WeaponLevel = 50
+  },
+  [91000013] = {
+    ModId = T.RT_29,
+    ModLevel = T.RT_26,
+    RuleId = 91000013,
+    WeaponId = 20509,
+    WeaponLevel = 50
+  },
+  [91000014] = {
+    ModId = T.RT_29,
+    ModLevel = T.RT_26,
+    RuleId = 91000014,
+    WeaponId = 20503,
+    WeaponLevel = 50
+  },
+  [91000021] = {
+    ModId = T.RT_9,
+    ModLevel = T.RT_10,
+    RuleId = 91000021,
+    WeaponId = 10201,
+    WeaponLevel = 60
+  },
+  [91000022] = {
+    ModId = T.RT_18,
+    ModLevel = T.RT_10,
+    RuleId = 91000022,
+    WeaponId = 20201,
+    WeaponLevel = 60
+  },
+  [91000023] = {
+    ModId = T.RT_9,
+    ModLevel = T.RT_10,
+    RuleId = 91000023,
+    WeaponId = 10102,
+    WeaponLevel = 60
+  },
+  [91000024] = {
+    ModId = T.RT_11,
+    ModLevel = T.RT_10,
+    RuleId = 91000024,
+    WeaponId = 10502,
+    WeaponLevel = 60
+  },
+  [91000031] = {
+    ModId = T.RT_34,
+    ModLevel = T.RT_35,
+    RuleId = 91000031,
+    WeaponId = 10602,
+    WeaponLevel = 70
+  },
+  [91000032] = {
+    ModId = T.RT_36,
+    ModLevel = T.RT_35,
+    RuleId = 91000032,
+    WeaponId = 20101,
+    WeaponLevel = 70
+  },
+  [91000033] = {
+    ModId = T.RT_34,
+    ModLevel = T.RT_35,
+    RuleId = 91000033,
+    WeaponId = 10502,
+    WeaponLevel = 70
+  },
+  [91000034] = {
+    ModId = T.RT_34,
+    ModLevel = T.RT_35,
+    RuleId = 91000034,
+    WeaponId = 10104,
+    WeaponLevel = 70
+  },
+  [91000041] = {
+    ModId = T.RT_4,
+    ModLevel = T.RT_13,
+    RuleId = 91000041,
+    WeaponId = 10304,
+    WeaponLevel = 80
+  },
+  [91000042] = {
+    ModId = T.RT_6,
+    ModLevel = T.RT_13,
+    RuleId = 91000042,
+    WeaponId = 20102,
+    WeaponLevel = 80
+  },
+  [91000043] = {
+    ModId = T.RT_4,
+    ModLevel = T.RT_13,
+    RuleId = 91000043,
+    WeaponId = 10502,
+    WeaponLevel = 80
+  },
+  [91000044] = {
+    ModId = T.RT_3,
+    ModLevel = T.RT_13,
+    RuleId = 91000044,
+    WeaponId = 10102,
+    WeaponLevel = 80
+  },
+  [91000051] = {
+    ModId = T.RT_4,
+    ModLevel = T.RT_13,
+    RuleId = 91000051,
+    WeaponId = 10204,
+    WeaponLevel = 80
+  },
+  [91000052] = {
+    ModId = T.RT_6,
+    ModLevel = T.RT_13,
+    RuleId = 91000052,
+    WeaponId = 20102,
+    WeaponLevel = 80
+  },
+  [91000053] = {
+    ModId = T.RT_5,
+    ModLevel = T.RT_13,
+    RuleId = 91000053,
+    WeaponId = 20509,
+    WeaponLevel = 80
+  },
+  [91000054] = {
+    ModId = T.RT_6,
+    ModLevel = T.RT_13,
+    RuleId = 91000054,
+    WeaponId = 20602,
+    WeaponLevel = 80
+  },
+  [91000061] = {
+    ModId = T.RT_4,
+    ModLevel = {
+      [1] = 5,
+      [2] = 5,
+      [3] = 10,
+      [4] = 10,
+      [5] = 10,
+      [6] = 10,
+      [7] = 10,
+      [8] = 10
+    },
+    RuleId = 91000061,
+    WeaponId = 10202,
+    WeaponLevel = 80
+  },
+  [91000062] = {
+    ModId = T.RT_5,
+    ModLevel = T.RT_13,
+    RuleId = 91000062,
+    WeaponId = 20510,
+    WeaponLevel = 80
+  },
+  [91000063] = {
+    ModId = T.RT_5,
+    ModLevel = T.RT_13,
+    RuleId = 91000063,
+    WeaponId = 20509,
+    WeaponLevel = 80
+  },
+  [91000064] = {
+    ModId = T.RT_6,
+    ModLevel = T.RT_13,
+    RuleId = 91000064,
+    WeaponId = 20602,
+    WeaponLevel = 80
+  },
+  [91000071] = {
+    ModId = T.RT_3,
+    ModLevel = T.RT_13,
+    RuleId = 91000071,
+    WeaponId = 10201,
+    WeaponLevel = 80
+  },
+  [91000072] = {
+    ModId = T.RT_7,
+    ModLevel = T.RT_13,
+    RuleId = 91000072,
+    WeaponId = 20201,
+    WeaponLevel = 80
+  },
+  [91000073] = {
+    ModId = T.RT_3,
+    ModLevel = T.RT_13,
+    RuleId = 91000073,
+    WeaponId = 10102,
+    WeaponLevel = 80
+  },
+  [91000074] = {
+    ModId = T.RT_4,
+    ModLevel = T.RT_13,
+    RuleId = 91000074,
+    WeaponId = 10502,
+    WeaponLevel = 80
   },
   [701010101] = {
     ModId = T.RT_34,
@@ -4019,6 +4297,14 @@ return ReadOnly("WeaponTemplate", {
     RuleId = 701020401,
     WeaponCostumeId = 1020401,
     WeaponId = 10204,
+    WeaponLevel = 70
+  },
+  [701030401] = {
+    ModId = T.RT_34,
+    ModLevel = T.RT_35,
+    RuleId = 701030401,
+    WeaponCostumeId = 3010107,
+    WeaponId = 10304,
     WeaponLevel = 70
   },
   [702050301] = {

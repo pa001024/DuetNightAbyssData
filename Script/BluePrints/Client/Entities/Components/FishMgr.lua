@@ -74,10 +74,10 @@ end
 function Component:OnCompleteFishGame(IsSuccess, callback)
   self.logger.debug("OnCompleteFishGame Begin", IsSuccess)
   
-  local function Callback(Ret, FishId, FishSize)
-    self.logger.debug("OnCompleteFishGame Callback", Ret, FishId, FishSize, IsSuccess)
+  local function Callback(Ret, FishId, FishSize, RewardReturn)
+    self.logger.debug("OnCompleteFishGame Callback", Ret, FishId, FishSize, IsSuccess, RewardReturn)
     if callback then
-      callback(Ret, FishId, FishSize, IsSuccess)
+      callback(Ret, FishId, FishSize, IsSuccess, RewardReturn)
     end
   end
   
@@ -85,7 +85,7 @@ function Component:OnCompleteFishGame(IsSuccess, callback)
 end
 
 function Component:GMSimulateFish(FishData)
-  self.logger.debug("模拟钓鱼成功，您用鱼竿:" .. FishData.FishingRodId .. "和鱼饵:" .. FishData.FishingLureId .. "在钓鱼点：" .. FishData.FishingSpotId .. "钓到了一条尺寸为：" .. FishData.FishSize .. "的鱼:" .. FishData.FishId .. "，鱼上钩所需时间为：" .. FishData.FishHookDuration, ",该鱼是否变异：", FishData.IsVariant, ",是否触发以小钓大：", FishData.IsSmall2Big)
+  self.logger.debug("模拟钓鱼成功，您用鱼竿:" .. FishData.FishingRodId .. "和鱼饵:" .. FishData.FishingLureId .. "在钓鱼点：" .. FishData.FishingSpotId .. "钓到了一条尺寸为：" .. FishData.FishSize .. "的鱼:" .. FishData.FishId .. "，鱼上钩所需时间为：" .. FishData.FishHookDuration, ",该鱼是否变异：", FishData.IsVariant, ",是否触发以小钓大：", FishData.IsSmall2Big, "获得的额外奖励Id:", FishData.ExtraRewardId, "获得的额外宠物Id:", FishData.ExtraPetId)
 end
 
 function Component:InitFishMapReddot()

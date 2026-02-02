@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -77,7 +80,7 @@ return ReadOnly("CountryRegionCode", {
   AT = {
     CountryRegionCode = "AT",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   AU = {
@@ -125,7 +128,7 @@ return ReadOnly("CountryRegionCode", {
   BE = {
     CountryRegionCode = "BE",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   BF = {
@@ -317,19 +320,19 @@ return ReadOnly("CountryRegionCode", {
   CY = {
     CountryRegionCode = "CY",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   CZ = {
     CountryRegionCode = "CZ",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   DE = {
     CountryRegionCode = "DE",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   DJ = {
@@ -341,7 +344,7 @@ return ReadOnly("CountryRegionCode", {
   DK = {
     CountryRegionCode = "DK",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   DM = {
@@ -395,7 +398,7 @@ return ReadOnly("CountryRegionCode", {
   ES = {
     CountryRegionCode = "ES",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   ET = {
@@ -407,7 +410,7 @@ return ReadOnly("CountryRegionCode", {
   FI = {
     CountryRegionCode = "FI",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   FJ = {
@@ -437,7 +440,7 @@ return ReadOnly("CountryRegionCode", {
   FR = {
     CountryRegionCode = "FR",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   GA = {
@@ -449,7 +452,7 @@ return ReadOnly("CountryRegionCode", {
   GB = {
     CountryRegionCode = "GB",
     MoneyCode = "GBP",
-    MoneySymbol = "GBP",
+    MoneySymbol = "￡",
     ServerArea = "Europe"
   },
   GD = {
@@ -521,7 +524,7 @@ return ReadOnly("CountryRegionCode", {
   GR = {
     CountryRegionCode = "GR",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   GS = {
@@ -557,7 +560,7 @@ return ReadOnly("CountryRegionCode", {
   HK = {
     CountryRegionCode = "HK",
     MoneyCode = "HKD",
-    MoneySymbol = "HKD",
+    MoneySymbol = "HK$",
     ServerArea = "HMT"
   },
   HM = {
@@ -575,7 +578,7 @@ return ReadOnly("CountryRegionCode", {
   HR = {
     CountryRegionCode = "HR",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   HT = {
@@ -587,7 +590,7 @@ return ReadOnly("CountryRegionCode", {
   HU = {
     CountryRegionCode = "HU",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   ID = {
@@ -599,7 +602,7 @@ return ReadOnly("CountryRegionCode", {
   IE = {
     CountryRegionCode = "IE",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   IL = {
@@ -647,7 +650,7 @@ return ReadOnly("CountryRegionCode", {
   IT = {
     CountryRegionCode = "IT",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   JE = {
@@ -671,7 +674,7 @@ return ReadOnly("CountryRegionCode", {
   JP = {
     CountryRegionCode = "JP",
     MoneyCode = "JPY",
-    MoneySymbol = "JPY",
+    MoneySymbol = "¥",
     ServerArea = "Asia"
   },
   KE = {
@@ -719,7 +722,7 @@ return ReadOnly("CountryRegionCode", {
   KR = {
     CountryRegionCode = "KR",
     MoneyCode = "KRW",
-    MoneySymbol = "KRW",
+    MoneySymbol = "₩",
     ServerArea = "Asia"
   },
   KW = {
@@ -791,7 +794,7 @@ return ReadOnly("CountryRegionCode", {
   LU = {
     CountryRegionCode = "LU",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   LV = {
@@ -899,7 +902,7 @@ return ReadOnly("CountryRegionCode", {
   MT = {
     CountryRegionCode = "MT",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   MU = {
@@ -977,7 +980,7 @@ return ReadOnly("CountryRegionCode", {
   NL = {
     CountryRegionCode = "NL",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   NO = {
@@ -1055,7 +1058,7 @@ return ReadOnly("CountryRegionCode", {
   PL = {
     CountryRegionCode = "PL",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   PM = {
@@ -1085,7 +1088,7 @@ return ReadOnly("CountryRegionCode", {
   PT = {
     CountryRegionCode = "PT",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   PW = {
@@ -1127,7 +1130,7 @@ return ReadOnly("CountryRegionCode", {
   RU = {
     CountryRegionCode = "RU",
     MoneyCode = "RUB",
-    MoneySymbol = "RUB",
+    MoneySymbol = "₽",
     ServerArea = "Europe"
   },
   RW = {
@@ -1163,7 +1166,7 @@ return ReadOnly("CountryRegionCode", {
   SE = {
     CountryRegionCode = "SE",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   SG = {
@@ -1181,7 +1184,7 @@ return ReadOnly("CountryRegionCode", {
   SI = {
     CountryRegionCode = "SI",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   SJ = {
@@ -1193,7 +1196,7 @@ return ReadOnly("CountryRegionCode", {
   SK = {
     CountryRegionCode = "SK",
     MoneyCode = "EUR",
-    MoneySymbol = "EUR",
+    MoneySymbol = "€",
     ServerArea = "Europe"
   },
   SL = {
@@ -1337,7 +1340,7 @@ return ReadOnly("CountryRegionCode", {
   TW = {
     CountryRegionCode = "TW",
     MoneyCode = "TWD",
-    MoneySymbol = "$NT",
+    MoneySymbol = "NT$",
     ServerArea = "HMT"
   },
   TZ = {
@@ -1367,7 +1370,7 @@ return ReadOnly("CountryRegionCode", {
   US = {
     CountryRegionCode = "US",
     MoneyCode = "USD",
-    MoneySymbol = "USD",
+    MoneySymbol = "$",
     ServerArea = "America"
   },
   UY = {

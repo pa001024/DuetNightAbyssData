@@ -169,17 +169,14 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
     return UE4.UWidgetBlueprintLibrary.Unhandled()
   end
   if self:HasFocusedDescendants() or self:HasAnyUserFocus() then
-    self:AddTimer(0.01, function()
-      if self.DeputeTabType == "Regular" then
-        self.RegularUI.List_Depute:NavigateToIndex(0)
-      elseif self.DeputeTabType == "NightBook" then
-        self.NightBookUI.List_NightBookItem:NavigateToIndex(0)
-      elseif self.DeputeTabType == "Walnut" then
-        self.WalnutUI.List_Walnut:SetFocus()
-      elseif self.DeputeTabType == "WeeklySelectDungeon" then
-        self.WeeklySelectDungeonUI.List_Weekly:SetFocus()
-      end
-    end, false, 0, "DeputeDetailListView")
+    if self.DeputeTabType == "Regular" then
+      self.RegularUI.List_Depute:NavigateToIndex(0)
+    elseif self.DeputeTabType == "NightBook" then
+      self.NightBookUI.List_NightBookItem:NavigateToIndex(0)
+    elseif self.DeputeTabType == "Walnut" then
+    elseif self.DeputeTabType == "WeeklySelectDungeon" then
+      self.WeeklySelectDungeonUI.List_Weekly:SetFocus()
+    end
   end
   return UE4.UWidgetBlueprintLibrary.Unhandled()
 end
@@ -234,17 +231,6 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   if IsUseKeyAndMouse then
     self:UpdatKeyDisplay()
   elseif self:HasFocusedDescendants() or self:HasAnyUserFocus() then
-    self:AddTimer(0.01, function()
-      if self.DeputeTabType == "Regular" then
-        self.RegularUI.List_Depute:NavigateToIndex(0)
-      elseif self.DeputeTabType == "NightBook" then
-        self.NightBookUI.List_NightBookItem:NavigateToIndex(0)
-      elseif self.DeputeTabType == "Walnut" then
-        self.WalnutUI.List_Walnut:SetFocus()
-      elseif self.DeputeTabType == "WeeklySelectDungeon" then
-        self.WeeklySelectDungeonUI.List_Weekly:SetFocus()
-      end
-    end, false, 0, "DeputeDetailListView")
   end
 end
 

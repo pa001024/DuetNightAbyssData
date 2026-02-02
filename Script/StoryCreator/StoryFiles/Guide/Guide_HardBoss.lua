@@ -78,12 +78,6 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "175403008514012527",
-            startPort = "Out",
-            endQuest = "175403052664113487",
-            endPort = "In"
-          },
-          {
             startQuest = "175403064237113932",
             startPort = "Out",
             endQuest = "175403083064215001",
@@ -144,15 +138,27 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17566307024822549330",
-            startPort = "Out",
-            endQuest = "175403052664113487",
-            endPort = "In"
-          },
-          {
             startQuest = "17566306789562549051",
             startPort = "Out",
             endQuest = "17566307024822549330",
+            endPort = "In"
+          },
+          {
+            startQuest = "17566307024822549330",
+            startPort = "Out",
+            endQuest = "17683750219427279982",
+            endPort = "In"
+          },
+          {
+            startQuest = "175403008514012527",
+            startPort = "Out",
+            endQuest = "17683750219427279982",
+            endPort = "In"
+          },
+          {
+            startQuest = "17683750219427279982",
+            startPort = "Out",
+            endQuest = "175403064237113932",
             endPort = "In"
           }
         },
@@ -205,7 +211,7 @@ return {
             key = "175403008514012527",
             type = "ShowGuideButtonNode",
             name = "区域右上角UI",
-            pos = {x = 1734.111342831805, y = 114.34145450868931},
+            pos = {x = 1732.6827714291837, y = 112.91288310606821},
             propsData = {
               ShowEnable = true,
               MessageId = 300801,
@@ -227,7 +233,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "Left",
+              MessageLoc = "DownLeft",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },
@@ -264,7 +270,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "Left",
+              MessageLoc = "DownLeft",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },
@@ -272,7 +278,7 @@ return {
             key = "175403052664113487",
             type = "ShowGuideButtonNode",
             name = "Button显示/隐藏信息",
-            pos = {x = 2125.354837856233, y = 325.2258064119178},
+            pos = {x = 2159.354837856233, y = 561.2258064119178},
             propsData = {
               ShowEnable = true,
               MessageId = 303002,
@@ -463,6 +469,36 @@ return {
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
               MessageLoc = "Right",
+              MessageLocOffset = {X = 0, Y = 0}
+            }
+          },
+          ["17683750219427279982"] = {
+            key = "17683750219427279982",
+            type = "ShowGuideButtonNode",
+            name = "Button显示/隐藏信息",
+            pos = {x = 2146.111342831805, y = 238.34145450868937},
+            propsData = {
+              ShowEnable = true,
+              MessageId = 303002,
+              MessageNote = "点击梦魇残声",
+              DelayTime = 0,
+              IsForceClick = true,
+              IsControlPlayer = false,
+              IsTimePause = true,
+              IsShowCursor = true,
+              HighLightUIPath = "StyleOfPlay.ComTab.EMScrollBox_TabItem:3",
+              UICompName = "Btn",
+              GamePadWidgetName = "",
+              IsAutoClick = false,
+              IsAutoClickByGamepad = false,
+              UIShape = "Square",
+              IsResetPlayer = false,
+              IsForbidInAnim = true,
+              IsForbidOutAnim = true,
+              UICompSizeOffset = {X = 0, Y = 0},
+              UICompLocOffset = {X = 0, Y = 0},
+              MessageParentLoc = "HighLightUI",
+              MessageLoc = "Down",
               MessageLocOffset = {X = 0, Y = 0}
             }
           }

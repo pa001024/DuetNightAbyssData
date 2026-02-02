@@ -110,11 +110,11 @@ return {
           {
             startQuest = "1753358093343572",
             startPort = "QuestStart",
-            endQuest = "1764319633300496",
+            endQuest = "1764674319905436",
             endPort = "In"
           },
           {
-            startQuest = "1764319633300496",
+            startQuest = "1764674319905436",
             startPort = "Out",
             endQuest = "1753358093344586",
             endPort = "Fail"
@@ -160,7 +160,7 @@ return {
             key = "17534266581982124",
             type = "KillMonsterNode",
             name = "击杀怪物",
-            pos = {x = 1737.274641577061, y = 290.37448796722987},
+            pos = {x = 1735.274641577061, y = 290.37448796722987},
             propsData = {
               KillMonsterType = "Id",
               MonsterNeedNums = 2,
@@ -202,11 +202,11 @@ return {
             pos = {x = 2002.0702770482806, y = 307.61831473139586},
             propsData = {WaitTime = 2}
           },
-          ["1764319633300496"] = {
-            key = "1764319633300496",
+          ["1764674319905436"] = {
+            key = "1764674319905436",
             type = "WaitingSpecialQuestFailNode",
             name = "等待特殊任务失败",
-            pos = {x = 1633.5384615384614, y = 543.4615384615385},
+            pos = {x = 1817.9999999999998, y = 526.4},
             propsData = {}
           }
         },

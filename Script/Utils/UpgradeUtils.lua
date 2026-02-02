@@ -263,7 +263,7 @@ function UpgradeUtils.CheckPetCanBreakLevelUp(Target)
     local ConsumeIds = BreakData.ConsumePetId
     for _, Pet in pairs(Avatar.Pets) do
       for _, Id in pairs(ConsumeIds) do
-        if Pet.UniqueId ~= Target.UniqueId and Id == Pet.PetId then
+        if Pet.UniqueId ~= Target.UniqueId and Id == Pet.PetId and Avatar.CurrentPet ~= Pet.UniqueId then
           return true
         end
       end

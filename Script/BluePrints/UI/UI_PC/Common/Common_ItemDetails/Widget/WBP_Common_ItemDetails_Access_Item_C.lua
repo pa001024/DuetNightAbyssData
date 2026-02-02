@@ -1,4 +1,4 @@
-local M = Class("BluePrints.UI.BP_UIState_C")
+local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 
 function M:Construct()
   self.Btn_Click.OnHovered:Add(self, self.OnBtnHovered)

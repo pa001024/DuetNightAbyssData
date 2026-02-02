@@ -231,7 +231,9 @@ end
 function WBP_SquadBuild_Main_P_C:TextCommitted()
   self.Text_DefaultName:SetText(self.SquadNameTemp)
   self:UpdateCurSquadInfo("Name", self.SquadNameTemp)
-  self:RealSaveSquad()
+  if not self.IsInEditor then
+    self:RealSaveSquad()
+  end
 end
 
 function WBP_SquadBuild_Main_P_C:NoStrWarning()
@@ -399,10 +401,14 @@ function WBP_SquadBuild_Main_P_C:RealSaveSquad()
   if IsNeedSave then
     if self.SquadListLen < self.CurSelectSquadIndex then
       self.Avatar:CreateSquad(nil, Info)
-      UIManager(self):ShowUITip("CommonToastMain", GText("UI_Squad_Save") .. self.CurSquadInfo.Name)
+      if self:CheckAllSlotUuidVaild() then
+        UIManager(self):ShowUITip("CommonToastMain", GText("UI_Squad_Save") .. self.CurSquadInfo.Name)
+      end
     else
       self.Avatar:UpdateSquad(nil, self.CurSelectSquadIndex, Info)
-      UIManager(self):ShowUITip("CommonToastMain", GText("UI_EditSuccess"))
+      if self:CheckAllSlotUuidVaild() then
+        UIManager(self):ShowUITip("CommonToastMain", GText("UI_EditSuccess"))
+      end
     end
   end
   if self.IsOpenAddSquad then
@@ -412,6 +418,16 @@ function WBP_SquadBuild_Main_P_C:RealSaveSquad()
     return
   end
   self.IsNeedPlayRefreshAnimation = true
+end
+
+function WBP_SquadBuild_Main_P_C:CheckAllSlotUuidVaild()
+  local IsValid = true
+  for SlotName, Slot in pairs(self.RightSlots) do
+    if Slot.CheckUuidIsVaild and IsValid then
+      IsValid = Slot:CheckUuidIsVaild()
+    end
+  end
+  return IsValid
 end
 
 function WBP_SquadBuild_Main_P_C:UpdateCurSquadInfo(Key, value)
@@ -751,7 +767,7 @@ end
 
 function WBP_SquadBuild_Main_P_C:OnBackKeyDown()
   if self.Panel_Tips:IsVisible() then
-    self:CloseTips()
+    self:CloseTips(true)
     return
   end
   if self.IsInEditor then
@@ -1043,6 +1059,11 @@ function WBP_SquadBuild_Main_P_C:SwitchToSquadList(NeedAnimation)
   self:InitRightDetailPanel()
   self:InitCurSquadInfo()
   self:SelectCurSquadInSquadList(nil, true)
+  self.List_Default:DisableScroll(true)
+  self.List_Default:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.EMScrollBox_0:SetVisibility(UIConst.VisibilityOp.Visible)
+  self.EMScrollBox_0:SetScrollBarVisibility(ESlateVisibility.Collapsed)
+  self.EMScrollBox_0:SetControlScrollbarInside(false)
   if self.IsInSortState then
     self:SwitchGamePadIconVisibilityBySortState(false)
   else
@@ -1161,6 +1182,47 @@ function WBP_SquadBuild_Main_P_C:UpdateSquadList()
   end
 end
 
+function WBP_SquadBuild_Main_P_C:AutoSetScrollBoxOffSet(ScrollBox, ScrollOffset)
+  if not ScrollBox then
+    return
+  end
+  self.CurScrollOffset = ScrollBox:GetScrollOffset()
+  local TargetScrollOffset = self.CurScrollOffset + ScrollOffset
+  local IsUp = ScrollOffset < 0
+  local IsDone = false
+  DebugPrint("thyScrollset", self.CurScrollOffset, TargetScrollOffset)
+  self:AddTimer(0.01, function()
+    DebugPrint("thyAutoScroll", self.CurScrollOffset, TargetScrollOffset)
+    if IsDone then
+      self:RemoveTimer("AutoScroll")
+      return
+    end
+    self.CurScrollOffset = self.CurScrollOffset + ScrollOffset / 5
+    if IsUp then
+      self.CurScrollOffset = math.max(self.CurScrollOffset, 0)
+    else
+      self.CurScrollOffset = math.min(self.CurScrollOffset, TargetScrollOffset)
+    end
+    if self.CurScrollOffset == TargetScrollOffset or 0 == self.CurScrollOffset then
+      IsDone = true
+    end
+    ScrollBox:SetScrollOffset(self.CurScrollOffset)
+  end, true, 0, "AutoScroll", true)
+end
+
+function WBP_SquadBuild_Main_P_C:GetListViewSize(TileView, Item)
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
+  local ListSize = UIManager:GetWidgetRenderSize(TileView)
+  local Parent = TileView:GetParent()
+  if Parent:Cast(UScrollBox) then
+    ListSize = UIManager:GetWidgetRenderSize(Parent)
+  end
+  local ListSizeX, ItemSizeX = ListSize.X, UIManager:GetWidgetRenderSize(Item.BG).X
+  local ListSizeY, ItemSizeY = ListSize.Y, UIManager:GetWidgetRenderSize(Item.BG).Y
+  self.Offset = (ListSizeX - ItemSizeX) / 2
+  return ListSizeY, ItemSizeY
+end
+
 function WBP_SquadBuild_Main_P_C:CheckSquadListArr()
   if self.SquadListLen > 1 then
     self.CanvasPanel_1:SetVisibility(ESlateVisibility.Visible)
@@ -1204,6 +1266,7 @@ end
 function WBP_SquadBuild_Main_P_C:AddSquad()
   DebugPrint("thy    新添加一个预设阵容的回调")
   self.SquadInfo = nil
+  self.IsInEditor = true
   self:ClearAllSlots(true)
   self.CurSelectSquadIndex = self.SquadListLen + 1
   self:InitCurSquadInfo(true)
@@ -1248,6 +1311,9 @@ function WBP_SquadBuild_Main_P_C:SwitchToSelectItemList(CurSlot, ItemType)
   self.PreContent = self.CurSlot.ItemInfo
   self.CurClickItemInfo = nil
   self.CurType = ItemType
+  if CurSlot.Type == "Roulette" then
+    self.CurType = nil
+  end
   self:ClearSlotCachedData()
   self:SwitchLeftWidgetByIndex(2)
   self:SwitchBtnPanel()
@@ -1404,7 +1470,7 @@ function WBP_SquadBuild_Main_P_C:FillSelectiveList()
   end
   self.List_Build:Init(self, {
     Filters = self.Filters,
-    OrderByDisplayNames = self.OrderByDisplayNames,
+    OrderByDisplayNames = self.CurSlotType == "Pet" and self.OrderByDisplayNamesOnPet or self.OrderByDisplayNames,
     SortType = CommonConst.DESC,
     ItemContents = self[self.CurSlotType .. "ItemContentsArray"]
   })
@@ -1487,6 +1553,18 @@ function WBP_SquadBuild_Main_P_C:SetItemSelectState(Content, IsSelected)
   end
 end
 
+function WBP_SquadBuild_Main_P_C:CheckCurSlotIsPhantomSlot()
+  if not self.CurSlot then
+    return false
+  end
+  for WidgetName, Widget in pairs(self.PhantomSlot) do
+    if self.CurSlot == Widget then
+      return true
+    end
+  end
+  return false
+end
+
 function WBP_SquadBuild_Main_P_C:ClickListItem(Content)
   if Content.Uuid == nil or Content.Uuid == "" then
     return
@@ -1494,10 +1572,19 @@ function WBP_SquadBuild_Main_P_C:ClickListItem(Content)
   if not self.CurClickItemInfo then
     self.CurClickItemInfo = self.CurSlot.ItemInfo
   end
+  if self.CurSlot and not self.PlayerAboutSlots[self.CurSlot.Type] and self.CurClickItemInfo == Content then
+    return
+  end
+  if self:CheckCurSlotIsPhantomSlot() and self.CurClickItemInfo == Content then
+    return
+  end
   if not self.PreContent then
     self.PreContent = self.CurSlot.ItemInfo
   end
   if self.CurClickItemInfo and self.CurClickItemInfo.SelfWidget then
+    if self.CurSlot.ItemInfo then
+      self.CurSlot.ItemInfo.SelfWidget:SetSelected(false)
+    end
     self.CurClickItemInfo.SelfWidget:SetSelected(false)
   end
   Content.SelfWidget:SetSelected(true)
@@ -1600,7 +1687,7 @@ function WBP_SquadBuild_Main_P_C:CheckSlotTypeIsAboutMainRole(Slot)
 end
 
 function WBP_SquadBuild_Main_P_C:OnBGClick()
-  self:CloseTips()
+  self:CloseTips(true)
   return UIUtils.Unhandled
 end
 
@@ -1776,6 +1863,7 @@ function WBP_SquadBuild_Main_P_C:GoToArmory()
   end
   self:CloseTips()
   UIManager(self):LoadUINew("ArmoryDetail", Params)
+  self.DontNeedPlayAnimation = true
 end
 
 function WBP_SquadBuild_Main_P_C:HideOrShowModel(bHide)
@@ -1795,7 +1883,9 @@ function WBP_SquadBuild_Main_P_C:MakeSureCallback(ModIndex)
     Num = NumTmp,
     Owner = self
   }
-  self.CurSlot:ClearItemFlag()
+  if self.CurSlot.ItemInfo ~= self.CurClickItemInfo then
+    self.CurSlot:ClearItemFlag()
+  end
   if self:CheckSelectItemIsRepeatInCurAllSlot() then
     self.PreSlot:ClearItemFlag()
     if self.CurSlot:GetIsEmpty() or not self:WeaponIsValidForSlot() then
@@ -1877,6 +1967,9 @@ end
 
 function WBP_SquadBuild_Main_P_C:InitSelectiveList()
   self.OrderByDisplayNames = {
+    "UI_LEVEL_SELECT"
+  }
+  self.OrderByDisplayNamesOnPet = {
     "UI_LEVEL_SELECT",
     "UI_RARITY_NAME"
   }
@@ -1912,7 +2005,11 @@ function WBP_SquadBuild_Main_P_C:SwitchToRouletteList()
   self:GetWheelNum()
   self:UpdateRouletteUI()
   self:ResetAllSlotsClickState()
-  self:PlayAnimation(self.Left_In)
+  if not self.DontNeedPlayAnimation then
+    self:PlayAnimation(self.Left_In)
+  else
+    self.Roulette.IsClicking = true
+  end
   self:FocusOnItemList()
   self:InitBottomTab(false, 2)
 end
@@ -2242,7 +2339,7 @@ end
 function WBP_SquadBuild_Main_P_C:Handle_OnGamePadDown(InKeyName)
   if "Gamepad_FaceButton_Right" == InKeyName then
     if self.Pos_Tips:GetChildAt(0) then
-      self:CloseTips()
+      self:CloseTips(true)
       return true
     end
     if self.CurGamepadArea == "ListItem" then
@@ -2522,7 +2619,7 @@ end
 function WBP_SquadBuild_Main_P_C:ReceiveEnterState(StackAction)
   self.Super.ReceiveEnterState(self, StackAction)
   if self.IsInEditor then
-    if self.CurSlot and self.CurType then
+    if self.CurSlot and self.CurSlot.Type ~= "Roulette" and self.CurType then
       self:InitLeftListItemInfo()
       self:SwitchToSelectItemList(self.CurSlot, self.CurType)
     else

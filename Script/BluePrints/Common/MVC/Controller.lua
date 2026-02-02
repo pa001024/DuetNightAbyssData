@@ -12,37 +12,15 @@ function M:Init()
   self.TimerKeys = {}
 end
 
-function M:IsPC()
-  return self.Platform == CommonConst.CLIENT_DEVICE_TYPE.PC
-end
-
-function M:IsGamepad()
-  return GWorld.GameInstance.CurInputDeviceType == ECommonInputType.Gamepad
-end
-
-function M:GetInputDeviceName()
-  return GWorld.GameInstance.CurInputDeviceName
-end
-
-function M:IsMobile()
-  return self.Platform == CommonConst.CLIENT_DEVICE_TYPE.MOBILE
-end
-
-function M:GetUIMgr(WorldContext)
-  if IsValid(self.UIManager) then
-    return self.UIManager
-  end
-  WorldContext = WorldContext or GWorld.GameInstance
-  self.UIManager = UIManager(WorldContext)
-  return self.UIManager
-end
-
 function M:Destory()
   self.bInited = false
-  for TimerKey in pairs(self.TimerKeys) do
+  for TimerKey in pairs(self.TimerKeys or {}) do
     self:StopTimer(TimerKey)
   end
-  EventManager.EventDic[self:GetEventName()] = nil
+  local EventName = self:GetEventName()
+  if EventName then
+    EventManager.EventDic[EventName] = nil
+  end
   self:GetModel():Destory()
   self._Model = nil
   GWorld.GameInstance:UnBindGamepadEvent()
@@ -135,6 +113,15 @@ function M:CheckError(ErrCode, bShowTip, ...)
   return false
 end
 
+function M:GetUIMgr(WorldContext)
+  if IsValid(self.UIManager) then
+    return self.UIManager
+  end
+  WorldContext = WorldContext or GWorld.GameInstance
+  self.UIManager = UIManager(WorldContext)
+  return self.UIManager
+end
+
 function M:RegisterEvent(EventObj, EventFunc)
   EventFunc = EventFunc or function(self, EventId, ...)
     local Func = self["Notify" .. EventId]
@@ -162,6 +149,9 @@ function M:NotifyEvent(EventId, ...)
 end
 
 function M:AddTimer(Interval, Func, IsLoop, Delay, Key, IsRealTime, ...)
+  if not self.TimerKeys then
+    self.TimerKeys = {}
+  end
   if nil == IsRealTime then
     IsRealTime = true
   end
@@ -184,6 +174,9 @@ function M:AddTimer(Interval, Func, IsLoop, Delay, Key, IsRealTime, ...)
 end
 
 function M:StopTimer(TimerKey)
+  if not self.TimerKeys then
+    self.TimerKeys = {}
+  end
   if not TimerKey then
     return
   end
@@ -208,6 +201,22 @@ function M:IsExistTimer(TimerKey)
     return false
   end
   return GWorld.GameInstance:IsExistTimer(TimerKey)
+end
+
+function M:IsPC()
+  return self.Platform == CommonConst.CLIENT_DEVICE_TYPE.PC
+end
+
+function M:IsGamepad()
+  return GWorld.GameInstance.CurInputDeviceType == ECommonInputType.Gamepad
+end
+
+function M:GetInputDeviceName()
+  return GWorld.GameInstance.CurInputDeviceName
+end
+
+function M:IsMobile()
+  return self.Platform == CommonConst.CLIENT_DEVICE_TYPE.MOBILE
 end
 
 return M

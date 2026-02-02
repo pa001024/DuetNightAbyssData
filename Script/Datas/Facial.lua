@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -168,6 +171,13 @@ return ReadOnly("Facial", {
     NpcMouth = "Cin_None_Mouth",
     SoundBaseMouth = "Cin_LipSyncBase_Normal_Mouth"
   },
+  Cin_Nervous = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Cin_Nervous",
+    NpcEye = "Cin_Nervous",
+    NpcMouth = "Cin_Nervous_Mouth",
+    SoundBaseMouth = "Cin_LipSyncBase_Normal_Mouth"
+  },
   Cin_Pain01 = {
     Eye1BlendInTime = 0.4,
     FacialId = "Cin_Pain01",
@@ -202,6 +212,13 @@ return ReadOnly("Facial", {
     NpcEye = "Cin_Smile02",
     NpcMouth = "Cin_Smile02_Mouth",
     SoundBaseMouth = "Cin_LipSyncBase_Smile_Mouth"
+  },
+  Cin_Unhappy01 = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Cin_Unhappy01",
+    NpcEye = "Cin_Unhappy01",
+    NpcMouth = "Cin_Unhappy01_Mouth",
+    SoundBaseMouth = "Cin_LipSyncBase_Normal_Mouth"
   },
   Close = {
     Eye1BlendInTime = 0.4,
@@ -259,6 +276,13 @@ return ReadOnly("Facial", {
     NpcMouth = "Grief_Mouth",
     SoundBaseMouth = "LipSyncBase_Normal_Mouth"
   },
+  Grief01 = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Grief01",
+    NpcEye = "Grief01",
+    NpcMouth = "Grief01_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
   Guilty = {
     Eye1BlendInTime = 0.4,
     FacialId = "Guilty",
@@ -285,6 +309,34 @@ return ReadOnly("Facial", {
     FacialId = "Iyada01",
     NpcEye = "Iyada01",
     NpcMouth = "Iyada01_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
+  Kezhou_Close_Smile = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Kezhou_Close_Smile",
+    NpcEye = "Close_Smile",
+    NpcMouth = "Close_Smile_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
+  Kezhou_Open_Serious = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Kezhou_Open_Serious",
+    NpcEye = "Open_Serious",
+    NpcMouth = "Open_Serious_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
+  Look = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Look",
+    NpcEye = "Look",
+    NpcMouth = "Look_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
+  Nasty = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Nasty",
+    NpcEye = "Nasty",
+    NpcMouth = "Nasty_Mouth",
     SoundBaseMouth = "LipSyncBase_Normal_Mouth"
   },
   Nervous = {
@@ -427,6 +479,13 @@ return ReadOnly("Facial", {
     FacialId = "Smile03",
     NpcEye = "Smile03",
     NpcMouth = "Smile03_Mouth",
+    SoundBaseMouth = "LipSyncBase_Smile_Mouth"
+  },
+  Smile04 = {
+    Eye1BlendInTime = 1.4,
+    FacialId = "Smile04",
+    NpcEye = "Smile04",
+    NpcMouth = "Smile04_Mouth",
     SoundBaseMouth = "LipSyncBase_Smile_Mouth"
   },
   SpecialSmile = {

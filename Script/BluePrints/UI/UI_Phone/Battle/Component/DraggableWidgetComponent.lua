@@ -12,15 +12,7 @@ function M:LeaveDesignState()
 end
 
 function M:SelectWidget()
-  local TargetMaskWidget
-  if type(self.MaskNodeName) == "table" then
-    local TargetMaskWidgetName = self.MaskNodeName[self.CurEditPlanIndex]
-    if nil ~= TargetMaskWidgetName then
-      TargetMaskWidget = self.OwnerWidget[TargetMaskWidgetName]
-    end
-  else
-    TargetMaskWidget = self.OwnerWidget[self.MaskNodeName]
-  end
+  local TargetMaskWidget = self:GetSelectWidgetMaskWidget()
   if nil ~= TargetMaskWidget then
     TargetMaskWidget:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   end
@@ -30,6 +22,13 @@ function M:SelectWidget()
 end
 
 function M:UnSelectWidget()
+  local TargetMaskWidget = self:GetSelectWidgetMaskWidget()
+  if nil ~= TargetMaskWidget then
+    TargetMaskWidget:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+end
+
+function M:GetSelectWidgetMaskWidget()
   local TargetMaskWidget
   if type(self.MaskNodeName) == "table" then
     local TargetMaskWidgetName = self.MaskNodeName[self.CurEditPlanIndex]
@@ -39,9 +38,7 @@ function M:UnSelectWidget()
   else
     TargetMaskWidget = self.OwnerWidget[self.MaskNodeName]
   end
-  if nil ~= TargetMaskWidget then
-    TargetMaskWidget:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  end
+  return TargetMaskWidget
 end
 
 function M:EnterDesignState(CurEditPlanIndex)
@@ -67,6 +64,7 @@ function M:ModifyWidgetScale(ScaleValue)
     return
   end
   WidgetNode:SetRenderScale(FVector2D(ScaleValue, ScaleValue))
+  self:AdjustPositioByScaleValueChange(WidgetNode)
   if self.OwnerWidget and type(self.OwnerWidget.OnDraggableWidgetInfoChanged) == "function" then
     self.OwnerWidget:OnDraggableWidgetInfoChanged("Scale", self, ScaleValue)
   end
@@ -83,6 +81,7 @@ function M:RegisterDraggableComponent(OwnerWidget, DraggableWidget, ParentLayout
   self.CurrnetPositionInScreen = FVector2D(0, 0)
   self.DragOffset = FVector2D(0, 0)
   self.TouchPointLocalOffset = nil
+  self.LimitDraggableArea = nil
   self:InitializeVariable()
 end
 
@@ -150,6 +149,7 @@ function M:OnTouchStarted(MyGeometry, InGestureEvent)
   self.StartPosition = ScreenSpacePosition
   local LayoutWidgetGeometry = self.ParentLayoutNode:GetCachedGeometry()
   self.TouchPointLocalOffset = UE4.USlateBlueprintLibrary.AbsoluteToLocal(LayoutWidgetGeometry, ScreenSpacePosition)
+  self:SetDraggableArea(LayoutWidgetGeometry)
   DebugPrint("DraggableWidgetComponent== Start dragging, Position in Screen Space is :", ScreenSpacePosition, ", TouchPoint LocalOffset is :", self.TouchPointLocalOffset)
   local Handled = UE4.UWidgetBlueprintLibrary.Handled()
   return UE4.UWidgetBlueprintLibrary.CaptureMouse(Handled, self.DraggableWidget)
@@ -160,7 +160,7 @@ function M:OnTouchMoved(MyGeometry, InGestureEvent)
     return UE4.UWidgetBlueprintLibrary.Unhandled()
   end
   local ScreenSpacePosition = UE4.UKismetInputLibrary.PointerEvent_GetScreenSpacePosition(InGestureEvent)
-  ScreenSpacePosition = self:ClampPositionToViewport(ScreenSpacePosition, MyGeometry)
+  ScreenSpacePosition = self:ClampPositionToViewport(ScreenSpacePosition)
   local FinalPosition = UIUtils.GetRelativePositionInParent(self.ParentLayoutNode, ScreenSpacePosition, self.TouchPointLocalOffset)
   self.DragOffset = ScreenSpacePosition - self.StartPosition
   self.CurrnetPositionInScreen = ScreenSpacePosition
@@ -214,18 +214,62 @@ function M:GetWidgetPosition()
   end
 end
 
-function M:ClampPositionToViewport(Position, MyGeometry)
-  local ViewportSize = UIManager(self):GetViewportSize()
-  if 0 == ViewportSize.X or 0 == ViewportSize.Y then
+function M:ClampPositionToViewport(Position)
+  if self.LimitDraggableArea == nil then
     return Position
   end
-  local ParentGeometry = self.OwnerWidget:GetCachedGeometry()
-  local LocalTopLeftPosition = UE4.USlateBlueprintLibrary.LocalToAbsolute(ParentGeometry, UE4.USlateBlueprintLibrary.GetLocalTopLeft(ParentGeometry))
-  local RenderLocalScale = self.ParentLayoutNode and self.ParentLayoutNode.RenderTransform.Scale.X or 1.0
-  local WidgetSize = UE4.USlateBlueprintLibrary.GetLocalSize(MyGeometry) * RenderLocalScale
-  local ClampedX = UE.UKismetMathLibrary.FClamp(Position.X, LocalTopLeftPosition.X + WidgetSize.X * 0.5, LocalTopLeftPosition.X + ViewportSize.X - WidgetSize.X * 0.5)
-  local ClampedY = UE.UKismetMathLibrary.FClamp(Position.Y, LocalTopLeftPosition.Y + WidgetSize.Y * 0.5, LocalTopLeftPosition.Y + ViewportSize.Y - WidgetSize.Y * 0.5)
+  local StartClampedX = self.LimitDraggableArea.MinX
+  local EndClampedX = self.LimitDraggableArea.MaxX
+  local StartClampedY = self.LimitDraggableArea.MinY
+  local EndClampedY = self.LimitDraggableArea.MaxY
+  local ClampedX = UE.UKismetMathLibrary.FClamp(Position.X, StartClampedX, EndClampedX)
+  local ClampedY = UE.UKismetMathLibrary.FClamp(Position.Y, StartClampedY, EndClampedY)
   return FVector2D(ClampedX, ClampedY)
+end
+
+function M:SetDraggableArea(DraggableWidgetGeometry)
+  local ParentGeometry
+  if self.OwnerWidget.SafeZone then
+    local SafeZoneChildContent = self.OwnerWidget.SafeZone:GetContent()
+    if SafeZoneChildContent then
+      ParentGeometry = SafeZoneChildContent:GetCachedGeometry()
+    else
+      ParentGeometry = self.OwnerWidget:GetCachedGeometry()
+    end
+  else
+    ParentGeometry = self.OwnerWidget:GetCachedGeometry()
+  end
+  if nil == ParentGeometry then
+    self.LimitDraggableArea = nil
+    return
+  end
+  local AbsoluteTopLeftPosition = UE4.USlateBlueprintLibrary.LocalToAbsolute(self.OwnerWidget:GetCachedGeometry(), UE4.USlateBlueprintLibrary.GetLocalTopLeft(ParentGeometry))
+  local AbsoluteParentSize = UE4.USlateBlueprintLibrary.GetAbsoluteSize(ParentGeometry)
+  local WidgetAbsoluteSize = UE4.USlateBlueprintLibrary.GetAbsoluteSize(DraggableWidgetGeometry)
+  local WidgetLocalSize = UE4.USlateBlueprintLibrary.GetLocalSize(DraggableWidgetGeometry)
+  local StartClampedX = AbsoluteTopLeftPosition.X + WidgetAbsoluteSize.X * (self.TouchPointLocalOffset.X / WidgetLocalSize.X)
+  local EndClampedX = AbsoluteTopLeftPosition.X + AbsoluteParentSize.X - WidgetAbsoluteSize.X * (1 - self.TouchPointLocalOffset.X / WidgetLocalSize.X)
+  local StartClampedY = AbsoluteTopLeftPosition.Y + WidgetAbsoluteSize.Y * (self.TouchPointLocalOffset.Y / WidgetLocalSize.Y)
+  local EndClampedY = AbsoluteTopLeftPosition.Y + AbsoluteParentSize.Y - WidgetAbsoluteSize.Y * (1 - self.TouchPointLocalOffset.Y / WidgetLocalSize.Y)
+  self.LimitDraggableArea = {
+    MinX = StartClampedX,
+    MaxX = EndClampedX,
+    MinY = StartClampedY,
+    MaxY = EndClampedY
+  }
+end
+
+function M:AdjustPositioByScaleValueChange(AdjustWidget)
+  local DraggableWidgetGeometry = AdjustWidget:GetCachedGeometry()
+  local AdjustWidgetAbsolutePos = UIManager(self.OwnerWidget):GetWorldPosition(AdjustWidget)
+  local AdjustWidgetAbsoluteSize = UE4.USlateBlueprintLibrary.GetAbsoluteSize(DraggableWidgetGeometry)
+  local AdjustWidgetAbsoluteCenterPos = FVector2D(AdjustWidgetAbsolutePos.X + AdjustWidgetAbsoluteSize.X / 2, AdjustWidgetAbsolutePos.Y + AdjustWidgetAbsoluteSize.Y / 2)
+  local AdjustWidgetLocalSize = UE4.USlateBlueprintLibrary.GetLocalSize(DraggableWidgetGeometry)
+  self.TouchPointLocalOffset = FVector2D(AdjustWidgetLocalSize.X / 2, AdjustWidgetLocalSize.Y / 2)
+  self:SetDraggableArea(DraggableWidgetGeometry)
+  local FinalAbsolutePosition = self:ClampPositionToViewport(AdjustWidgetAbsoluteCenterPos)
+  local FinalPosition = UIUtils.GetRelativePositionInParent(AdjustWidget, FinalAbsolutePosition, self.TouchPointLocalOffset)
+  self:SetWidgetPosition(FinalPosition)
 end
 
 function M:IsDragging()

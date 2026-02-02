@@ -6,7 +6,10 @@ local RarityColorName = {
   [6] = "Img_Quality_Red",
   [5] = "Img_Quality_Gold",
   [4] = "Img_Quality_Purple",
-  [3] = "Img_Quality_Blue"
+  [3] = "Img_Quality_Blue",
+  [2] = "Img_Quality_Green",
+  [1] = "Img_Quality_Grey",
+  [0] = "Img_Quality_NoQuality"
 }
 
 function M:Construct()
@@ -51,7 +54,7 @@ function M:OnClicked()
         bCustomStype = true
       }
       local AccessoryDefaultValue = DataMgr.GlobalConstant.EmptyCharAccessoryID.ConstantValue
-      if self.Content.AccessoryId ~= AccessoryDefaultValue and -1 ~= self.Content.AccessoryId then
+      if self.Content.AccessoryId ~= AccessoryDefaultValue and -1 ~= self.Content.AccessoryId and self.ItemDetails_MenuAnchor then
         self.ItemDetails_MenuAnchor.ParentWidget = self
         self.ItemDetails_MenuAnchor:OpenItemDetailsWidget(false, Content)
         self:SetSelect()
@@ -100,6 +103,8 @@ end
 function M:SetRarity(Rarity)
   if RarityColorName[Rarity] then
     self.Img_Quality:SetBrush(self[RarityColorName[Rarity]])
+  else
+    self.Img_Quality:SetBrush(self[RarityColorName[0]])
   end
 end
 

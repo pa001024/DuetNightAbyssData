@@ -24,6 +24,7 @@ function Component:InitContent()
   self:SetVisibility(UIConst.VisibilityOp.Visible)
   self.bIsFocusable = false
   self.PageTurner:InitPageTurner(WHEEL_DISPLAY_COUNT, self, self.UpdatePageTurner)
+  self.PageTurner:ForbidPointBtns(true)
   SUM_BAG_CAPACITY = DataMgr.GlobalConstant.BattleWheelPlanNum.ConstantValue
   self:SetPosition(self.Main, FVector2D(0, 0))
 end

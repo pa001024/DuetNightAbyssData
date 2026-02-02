@@ -153,10 +153,7 @@ function WBP_Player_SkillItem_PC_C:SetButtonStyleByState(SkillEnumId, StateName)
   end
   if "UnLock" == StateName then
     self:RemoveAllListenInput()
-    self:ListenForInputAction(self.SkillName, UE4.EInputEvent.IE_Pressed, false, {
-      self,
-      self.OnSkillActionInput
-    })
+    self:AddSkillListeningInput()
     if self.CurButtonState == "Lock" then
       EMUIAnimationSubsystem:EMPlayAnimation(self, self.UnLock)
     end
@@ -168,10 +165,7 @@ function WBP_Player_SkillItem_PC_C:SetButtonStyleByState(SkillEnumId, StateName)
     self:PlayAnimationForward(self.Ban)
   elseif "UnBan" == StateName then
     self:RemoveAllListenInput()
-    self:ListenForInputAction(self.SkillName, UE4.EInputEvent.IE_Pressed, false, {
-      self,
-      self.OnSkillActionInput
-    })
+    self:AddSkillListeningInput()
     if self.CurButtonState ~= "Lock" then
       EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
     end
@@ -180,20 +174,14 @@ function WBP_Player_SkillItem_PC_C:SetButtonStyleByState(SkillEnumId, StateName)
     self:SetPanelOpacityForBan(true)
   elseif "RegionUnBan" == StateName then
     self:RemoveAllListenInput()
-    self:ListenForInputAction(self.SkillName, UE4.EInputEvent.IE_Pressed, false, {
-      self,
-      self.OnSkillActionInput
-    })
+    self:AddSkillListeningInput()
     self:SetPanelOpacityForBan(false)
   elseif "Empty" == StateName then
     self:RemoveAllListenInput()
     self:EmptySkill()
   elseif "UnEmpty" == StateName then
     self:RemoveAllListenInput()
-    self:ListenForInputAction(self.SkillName, UE4.EInputEvent.IE_Pressed, false, {
-      self,
-      self.OnSkillActionInput
-    })
+    self:AddSkillListeningInput()
     self:UnEmptySkill()
   elseif "Hooking" == StateName then
     self:SetPanelOpacityForBan(true)
@@ -469,6 +457,13 @@ function WBP_Player_SkillItem_PC_C:OnIconLoadFinishWithID(Object, ResourceID)
   self.Icon_Skill:SetBrushResourceObject(Object)
   local VXSkillMat = self.VX_skillIcon:GetDynamicMaterial()
   VXSkillMat:SetTextureParameterValue("Mask", Object)
+end
+
+function WBP_Player_SkillItem_PC_C:AddSkillListeningInput()
+  self:ListenForInputAction(self.SkillName, UE4.EInputEvent.IE_Pressed, false, {
+    self,
+    self.OnSkillActionInput
+  })
 end
 
 function WBP_Player_SkillItem_PC_C:ClearRemainAnim()

@@ -53,9 +53,12 @@ function WBP_PreGameStartAnim_C:Construct()
       GameInputModeSubsystem:SetMouseCursorVisable(false)
       GameInputModeSubsystem:SetMouseCursorOpacity(0.0)
     end
-    UInputSettings.GetInputSettings().bAlwaysShowTouchInterface = true
-    UE4.UUIFunctionLibrary.SetGameIsFakingTouchEvents(true)
-    DebugPrint("lgc@WBP_PreGameStartAnim_C:Construct IsPCCloudGame:" .. tostring(UE4.UUCloudGameInstanceSubsystem.IsPCCloudGame()) .. " IsCloudGame:" .. tostring(UE4.UUCloudGameInstanceSubsystem.IsCloudGame()) .. " bShowMouseCursor:" .. "false")
+    local bPCCloudGame = UE4.UUCloudGameInstanceSubsystem.IsPCCloudGame()
+    if not bPCCloudGame then
+      UInputSettings.GetInputSettings().bAlwaysShowTouchInterface = true
+      UE4.UUIFunctionLibrary.SetGameIsFakingTouchEvents(true)
+    end
+    DebugPrint("lgc@WBP_PreGameStartAnim_C:Construct IsPCCloudGame:" .. tostring(bPCCloudGame) .. " IsCloudGame:" .. tostring(UE4.UUCloudGameInstanceSubsystem.IsCloudGame()) .. " bShowMouseCursor:" .. "false")
   end
 end
 
@@ -66,10 +69,12 @@ function WBP_PreGameStartAnim_C:PlayAnimAndClose()
   self.bClose = true
   self:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   local SystemLanguage = EMCache:Get("SystemLanguage") or "CN"
-  if "CN" == SystemLanguage and UE.AHotUpdateGameMode.IsGlobalPak() then
+  if "DE" == SystemLanguage or "FR" == SystemLanguage or "ES" == SystemLanguage then
+    SystemLanguage = "EN"
+  elseif "CN" == SystemLanguage and UE.AHotUpdateGameMode.IsGlobalPak() then
     SystemLanguage = "CN_OverSea"
   end
-  local AnimPlayTime = self[SystemLanguage]:GetEndTime() or 0.5
+  local AnimPlayTime = self[SystemLanguage] and self[SystemLanguage]:GetEndTime() or 0.5
   self:PlayAnim(SystemLanguage, 1.0)
   self:AddTimer(AnimPlayTime + 0.2, self.CloseUI, false, 0, "CloseAndLoadCG")
 end

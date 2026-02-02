@@ -15,16 +15,19 @@ function DataModel:InitData(InAvatar)
     Data = {}
   }
   for _, TreasureData in pairs(DataMgr.RougeLikeTreasure) do
-    local bIsUnlocked = self.Avatar.RougeLike:IsManualUnlocked(RougeConst.ArchiveType.Treasure, TreasureData.TreasureId)
-    local bIsNew = bIsUnlocked and self:CheckArchiveItemIsNew(RougeConst.ArchiveType.Treasure, TreasureData.TreasureId)
-    self.Manuals[RougeConst.ArchiveType.Treasure].Data[TreasureData.TreasureId] = {
-      Data = TreasureData,
-      IsUnlocked = bIsUnlocked,
-      IsNew = bIsNew
-    }
-    TotalNum = TotalNum + 1
-    UnlockedNum = UnlockedNum + (self.Manuals[RougeConst.ArchiveType.Treasure].Data[TreasureData.TreasureId].IsUnlocked and 1 or 0)
-    HasNew = HasNew or bIsNew
+    if not TreasureData.RLArchiveId then
+    else
+      local bIsUnlocked = self.Avatar.RougeLike:IsManualUnlocked(RougeConst.ArchiveType.Treasure, TreasureData.TreasureId)
+      local bIsNew = bIsUnlocked and self:CheckArchiveItemIsNew(RougeConst.ArchiveType.Treasure, TreasureData.TreasureId)
+      self.Manuals[RougeConst.ArchiveType.Treasure].Data[TreasureData.TreasureId] = {
+        Data = TreasureData,
+        IsUnlocked = bIsUnlocked,
+        IsNew = bIsNew
+      }
+      TotalNum = TotalNum + 1
+      UnlockedNum = UnlockedNum + (self.Manuals[RougeConst.ArchiveType.Treasure].Data[TreasureData.TreasureId].IsUnlocked and 1 or 0)
+      HasNew = HasNew or bIsNew
+    end
   end
   self.Manuals[RougeConst.ArchiveType.Treasure].Type = RougeConst.ArchiveType.Treasure
   self.Manuals[RougeConst.ArchiveType.Treasure].Name = GText("UI_RLArchiveTitle_Treasure")
@@ -41,16 +44,19 @@ function DataModel:InitData(InAvatar)
     Data = {}
   }
   for _, BlessingData in pairs(DataMgr.RougeLikeBlessing) do
-    local bIsUnlocked = self.Avatar.RougeLike:IsManualUnlocked(RougeConst.ArchiveType.Blessing, BlessingData.BlessingId)
-    local bIsNew = bIsUnlocked and self:CheckArchiveItemIsNew(RougeConst.ArchiveType.Blessing, BlessingData.BlessingId)
-    self.Manuals[RougeConst.ArchiveType.Blessing].Data[BlessingData.BlessingId] = {
-      Data = BlessingData,
-      IsUnlocked = bIsUnlocked,
-      IsNew = bIsNew
-    }
-    TotalNum = TotalNum + 1
-    UnlockedNum = UnlockedNum + (self.Manuals[RougeConst.ArchiveType.Blessing].Data[BlessingData.BlessingId].IsUnlocked and 1 or 0)
-    HasNew = HasNew or bIsNew
+    if not BlessingData.RLArchiveId then
+    else
+      local bIsUnlocked = self.Avatar.RougeLike:IsManualUnlocked(RougeConst.ArchiveType.Blessing, BlessingData.BlessingId)
+      local bIsNew = bIsUnlocked and self:CheckArchiveItemIsNew(RougeConst.ArchiveType.Blessing, BlessingData.BlessingId)
+      self.Manuals[RougeConst.ArchiveType.Blessing].Data[BlessingData.BlessingId] = {
+        Data = BlessingData,
+        IsUnlocked = bIsUnlocked,
+        IsNew = bIsNew
+      }
+      TotalNum = TotalNum + 1
+      UnlockedNum = UnlockedNum + (self.Manuals[RougeConst.ArchiveType.Blessing].Data[BlessingData.BlessingId].IsUnlocked and 1 or 0)
+      HasNew = HasNew or bIsNew
+    end
   end
   self.Manuals[RougeConst.ArchiveType.Blessing].Type = RougeConst.ArchiveType.Blessing
   self.Manuals[RougeConst.ArchiveType.Blessing].Name = GText("UI_RLArchiveTitle_Blessing")

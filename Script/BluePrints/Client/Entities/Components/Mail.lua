@@ -10,6 +10,11 @@ end
 
 function Component:EnterWorld()
   self:InitMailReddotNode()
+  self._PendingDelMails = {}
+end
+
+function Component:LeaveWorld()
+  self._PendingDelMails = nil
 end
 
 function Component:_OnPropChangeMailInbox(keys)
@@ -24,6 +29,19 @@ function Component:_OnPropChangeMailInbox(keys)
       self:_AddNormalMailReddotCount(MailData)
     end
     self._DeletedStarMail = nil
+    if 1 == CommonUtils.Size(keys) and not MailData then
+      local MailData = self._PendingDelMails[UniqueId]
+      if MailData and 1 == MailData.MailReaded then
+        if 0 == MailData.RewardGot then
+          local FakeMailData = {RewardGot = 1, MailReaded = 1}
+          self:_SubNormalMailReddotCount(FakeMailData)
+        end
+      elseif not MailData then
+        local FakeMailData = {RewardGot = 1, MailReaded = 1}
+        self:_SubNormalMailReddotCount(FakeMailData)
+      end
+      self._PendingDelMails[UniqueId] = nil
+    end
   end
 end
 
@@ -43,12 +61,14 @@ end
 
 function Component:_AddNormalMailReddotCount(MailData)
   if 0 == MailData.MailReaded or 0 == MailData.RewardGot then
+    DebugPrint("_AddNormalMailReddotCount邮件")
     ReddotManager.IncreaseLeafNodeCount(NormalMailName)
   end
 end
 
 function Component:_SubNormalMailReddotCount(MailData)
   if 1 == MailData.MailReaded and 1 == MailData.RewardGot then
+    DebugPrint("_SubNormalMailReddotCount邮件")
     ReddotManager.DecreaseLeafNodeCount(NormalMailName)
   end
 end
@@ -96,13 +116,17 @@ function Component:MarkMailReaded(UniqueID)
 end
 
 function Component:MarkMailStar(UniqueID)
+  local MailData = self.MailInbox[UniqueID]
+  if MailData then
+    self._PendingDelMails[UniqueID] = {
+      RewardGot = MailData.RewardGot,
+      MailReaded = MailData.MailReaded
+    }
+  end
+  
   local function cb(errCode, reward)
     EventManager:FireEvent(EventID.OnMarkMailStar, errCode, UniqueID, reward)
-    
     self.logger.info("MarkMailStar Callback", ErrorCode:Name(errCode), reward)
-    if errCode == ErrorCode.RET_SUCCESS then
-      self:_SubNormalMailReddotCount(self.StarMails[UniqueID] or self.MailInbox[UniqueID])
-    end
   end
   
   self.logger.info("MarkMailStar Start UniqueID:", UniqueID)
@@ -117,6 +141,12 @@ function Component:DeleteReadedMails()
     self:EchoMail()
   end
   
+  for UniqueID, MailData in pairs(self.MailInbox) do
+    self._PendingDelMails[UniqueID] = {
+      RewardGot = MailData.RewardGot,
+      MailReaded = MailData.MailReaded
+    }
+  end
   self.logger.info("DeleteReadedMails Start")
   self:CallServer("DeleteReadedMails", cb)
 end
@@ -135,13 +165,16 @@ end
 
 function Component:DeleteMail(UniqueID)
   local MailData = self.MailInbox[UniqueID] or self.StarMails[UniqueID]
+  if self.MailInbox[UniqueID] then
+    self._PendingDelMails[UniqueID] = {
+      RewardGot = MailData.RewardGot,
+      MailReaded = MailData.MailReaded
+    }
+  end
   
   local function cb(errCode)
     self.logger.info("DeleteMail Callback", ErrorCode:Name(errCode))
     EventManager:FireEvent(EventID.OnDeleteMail)
-    if errCode == ErrorCode.RET_SUCCESS and (0 == MailData.MailReaded or 0 == MailData.RewardGot) then
-      ReddotManager.DecreaseLeafNodeCount(NormalMailName)
-    end
   end
   
   self.logger.info("DeleteMail Start UniqueID:", UniqueID)
@@ -149,8 +182,8 @@ function Component:DeleteMail(UniqueID)
 end
 
 function Component:GetAllMailReward()
-  local function cb(errCode, RewardList)
-    EventManager:FireEvent(EventID.OnGetAllMailReward, errCode, RewardList)
+  local function cb(errCode, UniqueIds)
+    EventManager:FireEvent(EventID.OnGetAllMailReward, errCode, UniqueIds)
     
     self.logger.info("GetAllMailReward Callback", ErrorCode:Name(errCode))
     if errCode == ErrorCode.RET_SUCCESS then

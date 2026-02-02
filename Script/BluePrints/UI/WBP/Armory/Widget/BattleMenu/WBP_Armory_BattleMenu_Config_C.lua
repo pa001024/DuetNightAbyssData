@@ -225,7 +225,7 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
   self.OnClosedCbFunc = Params.OnClosedCbFunc
   self.OnClosedCbObj = Params.OnClosedCbObj
   self:SetVisibility(UIConst.VisibilityOp.Visible)
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:InitPhantomContents()
   self:SortPhantomContents()
   self.CurPhantomContent = self.PhantomContentArray[1]

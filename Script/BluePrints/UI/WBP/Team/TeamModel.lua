@@ -19,7 +19,6 @@ function M:SetTeam(Team, bDsData)
   if nil == Team then
     self.TeamData = nil
     if not self.TeamData then
-      Utils.Traceback("队伍被置空了, TeamData is nil")
       ChatController:GetModel():ClearReddotCount(ChatCommon.ChannelDef.InTeam)
       ChatController:GetModel():ClearMessage(ChatCommon.ChannelDef.InTeam)
     end
@@ -256,7 +255,6 @@ function M:PopInviteInfo()
   end
   local InviteInfo = self.InviteRecvQueue:PopBack()
   self.InviteTable[InviteInfo.Uid] = nil
-  Utils.Traceback(LXYTag .. "  组队邀请QueuePop  " .. InviteInfo.Nickname)
   return true
 end
 

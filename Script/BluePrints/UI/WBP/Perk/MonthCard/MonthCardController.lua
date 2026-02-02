@@ -86,7 +86,7 @@ function M:TryPurchaseMonthCard()
     return
   end
   self.WaitPayTag = true
-  self.PurchaseOrder = self.PurchaseOrder + 1
+  self.PurchaseOrder = (self.PurchaseOrder or 0) + 1
   local PurchaseOrder = self.PurchaseOrder
   self:AddTimer(10, function()
     self:FinishPurchase(PurchaseOrder)
@@ -173,6 +173,26 @@ function M:DisplayPurchaseRewards(MonthlyCardId, TotalReward)
   if not TotalReward then
     return
   end
+  local GameInstance = GWorld.GameInstance
+  if GameInstance then
+    local LoadingUI = GameInstance:GetLoadingUI()
+    local LoginMainPage = UIManager(GameInstance):GetUIObj("LoginMainPage")
+    DebugPrint("DisplayPurchaseRewards", LoadingUI)
+    if LoadingUI or LoginMainPage then
+      MonthCardModel:SetPurchaseRewardCache(TotalReward)
+      return
+    end
+  end
+  self:RealDisplayPurchaseRewards(TotalReward)
+end
+
+function M:RealDisplayPurchaseRewards(TotalReward, Callback)
+  if not TotalReward then
+    if Callback then
+      Callback()
+    end
+    return
+  end
   local BuyReward = TotalReward.BuyReward
   local DailyReward = TotalReward.DailyReward
   local UniqueReward = TotalReward.UniqueReward
@@ -189,9 +209,12 @@ function M:DisplayPurchaseRewards(MonthlyCardId, TotalReward)
     Count = Count + MergeReward(UniqueReward, Rewards)
   end
   if Count <= 0 then
+    if Callback then
+      Callback()
+    end
     return
   end
-  UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, Rewards, false, nil, self)
+  UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, Rewards, false, Callback, self)
 end
 
 function M:DisplayMonthCardPop(DailyReward, ...)
@@ -211,8 +234,17 @@ function M:DisplayMonthCardPop(DailyReward, ...)
   self:TryDisplayMonthCardPop(DailyReward)
 end
 
+function M:TryPopUpCacheReward()
+  local DailyReward = MonthCardModel.DailyRewardCache
+  local PurchaseReward = MonthCardModel.PurchaseRewardCache
+  MonthCardModel:ClearDailyRewardCache()
+  MonthCardModel:ClearPurchaseRewardCache()
+  self:RealDisplayPurchaseRewards(PurchaseReward, function()
+    self:TryDisplayMonthCardPop(DailyReward)
+  end)
+end
+
 function M:TryDisplayMonthCardPop(DailyReward)
-  DailyReward = DailyReward or MonthCardModel.DailyRewardCache
   if not DailyReward then
     return
   end

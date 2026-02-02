@@ -111,6 +111,15 @@ function SpecialLoadingRule:CheckRegionCondition(Region, LastRegion, Rule, bIsCr
 end
 
 function SpecialLoadingRule:GetLoadingBpPath(bIsCrossRegion)
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  if GameMode and GWorld.GameInstance.QuestDeliverId and GWorld.GameInstance.QuestDeliverLoadingId and GWorld.GameInstance.QuestDeliverId == GameMode.TargetSubRegion then
+    local LoadingData = DataMgr.RegionLoading[GWorld.GameInstance.QuestDeliverLoadingId]
+    GWorld.GameInstance.QuestDeliverId = nil
+    GWorld.GameInstance.QuestDeliverLoadingId = nil
+    if LoadingData then
+      return LoadingData, LoadingData.WBPPath
+    end
+  end
   local SceneId = WorldTravelSubsystem():GetCurrentSceneId()
   local LastSceneId = WorldTravelSubsystem():GetLastSceneId()
   if not DataMgr.Region or not DataMgr.SpecialLoading then

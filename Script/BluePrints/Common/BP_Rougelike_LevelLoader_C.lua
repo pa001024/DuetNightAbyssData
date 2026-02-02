@@ -19,7 +19,7 @@ function M:ReceiveBeginPlay()
   self.LoadingFlag = false
   self.NextRoomReady = false
   self.LevelSpacing = 100000
-  self.IsMobile = CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile"
+  self.IsMobile = CommonUtils.GetRuntimePlatform(self) == "Mobile"
   if not IsDedicatedServer(self) then
     local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
     self.LoadingUI = GameInstance:ShowLoadingUI(UIConst.COMMONCHANGESCENE)
@@ -322,6 +322,20 @@ function M:GetLevelIdByLevel(InLevel)
     end
   end
   return ""
+end
+
+function M:GetActorInLevelTransform(InActor)
+  print("RougeLike EnvirSystemActor GetActorInLevelTransform")
+  if not self.RoomId2StreamLevel then
+    return FTransform()
+  end
+  local Level = UE4.URuntimeCommonFunctionLibrary.GetLevel(InActor)
+  for Id, StreamLevelTable in pairs(self.RoomId2StreamLevel) do
+    if StreamLevelTable and StreamLevelTable[3] and StreamLevelTable[3]:GetLoadedLevel() == Level then
+      return StreamLevelTable[3].LevelTransform
+    end
+  end
+  return FTransform()
 end
 
 return M

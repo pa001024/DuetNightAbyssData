@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -170,6 +173,11 @@ return ReadOnly("CommonUIConfirm", {
     Id = 402,
     InteractiveCondition = 9,
     InteractiveFailMsg = "UI_Temple_CantGetBall"
+  },
+  [403] = {
+    ConfirmText = "UI_MECHANISM_403",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Mechanism",
+    Id = 403
   },
   [900] = {
     AutoRotate = true,
@@ -1192,6 +1200,14 @@ return ReadOnly("CommonUIConfirm", {
     InteractivePriority = 2,
     InteractiveRadius = 300
   },
+  [10629] = {
+    ConfirmText = "DROP_QUEST_TouTing",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10629,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
   [20001] = {
     ConfirmText = "BATTLE_RECOVERY_LONGPRESSHELP",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Rescue",
@@ -1872,7 +1888,7 @@ return ReadOnly("CommonUIConfirm", {
     ConfirmText = "UI_MECHANISM_104",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
     Id = 100034,
-    InteractiveRadius = 1000
+    InteractiveRadius = 200
   },
   [100035] = {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Talk",
@@ -1916,6 +1932,103 @@ return ReadOnly("CommonUIConfirm", {
     InteractiveCondition = 8029,
     InteractivePriority = 3,
     InteractiveRadius = 300
+  },
+  [100041] = {
+    ConfirmText = "UI_Drop_Xuedongzuo",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 100041,
+    InteractiveRadius = 100
+  },
+  [100042] = {
+    ConfirmText = "UI_Drop_Zuodongzuo",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 100042,
+    InteractiveRadius = 100
+  },
+  [100043] = {
+    ConfirmText = "UI_Drop_ZuoXia",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 100043,
+    InteractiveRadius = 100
+  },
+  [100044] = {
+    ConfirmText = "UI_Drop_KongxiangdangA",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 100044,
+    InteractiveRadius = 100
+  },
+  [100045] = {
+    ConfirmText = "UI_Drop_KongxiangdangB",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 100045,
+    InteractiveRadius = 100
+  },
+  [100046] = {
+    ConfirmText = "UI_Drop_KongxiangdangC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 100046,
+    InteractiveRadius = 100
+  },
+  [100047] = {
+    ConfirmText = "UI_Drop_Naxianglu",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 100047,
+    InteractiveRadius = 100
+  },
+  [100048] = {
+    ConfirmText = "UI_Drop_XiangnangA",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 100048,
+    InteractiveRadius = 100
+  },
+  [100049] = {
+    ConfirmText = "UI_Drop_XiangnangB",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 100049,
+    InteractiveRadius = 100
+  },
+  [100050] = {
+    ConfirmText = "UI_Drop_XiangnangC",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 100050,
+    InteractiveRadius = 100
+  },
+  [100051] = {
+    ConfirmText = "UI_Drop_DengCiri",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 100051,
+    InteractiveRadius = 100
+  },
+  [100052] = {
+    ConfirmText = "UI_Drop_Knock",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 100052,
+    InteractiveRadius = 100
+  },
+  [100053] = {
+    ConfirmText = "UI_Drop_Touxi",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Training",
+    Id = 100053,
+    InteractiveAngle = 180,
+    InteractiveRadius = 100
+  },
+  [100054] = {
+    ConfirmText = "UI_Drop_Wait",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 100054,
+    InteractiveRadius = 100
+  },
+  [100055] = {
+    ConfirmText = "UI_Drop_BuyPear",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 100055,
+    InteractiveRadius = 200
+  },
+  [100056] = {
+    ConfirmText = "UI_MECHANISM_104",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 100056,
+    InteractiveRadius = 1000
   },
   [118001] = {
     ConfirmText = "UI_PickupExplore1",
@@ -1962,5 +2075,13 @@ return ReadOnly("CommonUIConfirm", {
     InteractiveAngle = 120,
     InteractivePriority = 2,
     InteractiveRadius = 300
+  },
+  [10002401] = {
+    ConfirmText = "UI_CONFIRM_FISHING",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Angling",
+    Id = 10002401,
+    InteractiveFailMsg = "UI_INTERACTIVE_FAILMSG",
+    InteractivePriority = 3,
+    InteractiveRadius = 150
   }
 })

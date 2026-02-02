@@ -20,4 +20,21 @@ function M:SitEnd(Character, bImmediate)
   end, bImmediate)
 end
 
+function M:StartSitEnd(Character, bImmediate)
+  if not Character then
+    return
+  end
+  if not Character.IsSitting then
+    Character:SetSitPoseWithoutInteractive(function()
+      Character:RealSetIdlePoseBySpecialSit(function()
+        DebugPrint("WXT SitSection SitEnd ->End", Character.UnitId, bImmediate)
+      end, bImmediate)
+    end, true)
+  else
+    Character:RealSetIdlePoseBySpecialSit(function()
+      DebugPrint("WXT SitSection SitEnd ->End", Character.UnitId, bImmediate)
+    end, bImmediate)
+  end
+end
+
 return M

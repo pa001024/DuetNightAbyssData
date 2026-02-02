@@ -56,6 +56,10 @@ function M:TryInsertNewWidget(WidgetName)
   local Item = UIManager(self):CreateWidget(WidgetClass)
   self.ExternWidget[WidgetName] = Item
   if "Bubble_Reward" == WidgetName then
+    self.Pos_Bubble:ClearChildren()
+    self.Pos_Bubble:AddChildToOverlay(Item)
+  elseif "Bubble_Emoji" == WidgetName then
+    self.Pos_Bubble:ClearChildren()
     self.Pos_Bubble:AddChildToOverlay(Item)
   else
     self.VB:AddChildToVerticalBox(Item)
@@ -117,10 +121,11 @@ function M:EnableWidgetInternal(WidgetName, bEnable, ...)
     self.ActiveCount = self.ActiveCount - 1
   end
   local SpecialWidget = self:TryGetSpecailWidget(WidgetName)
+  local Widget
   if IsValid(SpecialWidget) then
     self:EnableSpecialWidget(WidgetName, SpecialWidget, bEnable, ...)
   else
-    local Widget = self:TryGetWidget(WidgetName)
+    Widget = self:TryGetWidget(WidgetName)
     if IsValid(Widget) then
       if bEnable then
         Widget:OnEnabled(...)
@@ -131,6 +136,14 @@ function M:EnableWidgetInternal(WidgetName, bEnable, ...)
   end
   if self.AttachedWidgetComponent then
     self.AttachedWidgetComponent:OnChangeActiveWidgets(self.ActiveCount)
+    local bEnableScale, MinScale, MaxScale, MinScaleDis, MaxScaleDis = self:GetWidgetScaleParams(WidgetName)
+    if bEnableScale then
+      if bEnable then
+        self.AttachedWidgetComponent:AddDistanceTestInfo(Widget or SpecialWidget, MinScale, MaxScale, MinScaleDis, MaxScaleDis)
+      else
+        self.AttachedWidgetComponent:RemoveDistanceTestInfo(Widget or SpecialWidget)
+      end
+    end
   end
 end
 
@@ -170,16 +183,12 @@ function M:PlayHideAnimation(bHidden)
     if not self.OutTimer then
       EMUIAnimationSubsystem:EMPlayAnimation(self, self.Out)
       self.OutTimer = self:AddTimer(0.33, function()
-        self.bTempHide = true
         self:Hide()
-        self.bTempHide = nil
         self.OutTimer = nil
       end)
     end
   else
-    self.bTempHide = true
     self:Show()
-    self.bTempHide = nil
     if self.OutTimer then
       self:RemoveTimer(self.OutTimer)
       self.OutTimer = nil

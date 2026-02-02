@@ -47,12 +47,12 @@ function WBP_Abyss_Lineup_List_C:InitKeyInfo()
   end
   self.Key_L:CreateCommonKey({
     KeyInfoList = {
-      {Type = "Text", Text = "Q"}
+      {Type = "Text", Text = "A"}
     }
   })
   self.Key_R:CreateCommonKey({
     KeyInfoList = {
-      {Type = "Text", Text = "E"}
+      {Type = "Text", Text = "D"}
     }
   })
   self.Key_Controller_L:CreateCommonKey({

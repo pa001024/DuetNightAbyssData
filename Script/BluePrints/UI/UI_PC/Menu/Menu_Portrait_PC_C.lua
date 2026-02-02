@@ -24,18 +24,17 @@ function Menu_Portrait_PC_C:SetImage(Path, Id, IsHeadFrame)
     end
   end
   self.Icon_Empty:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.IsSelect = false
   local Avatar = GWorld:GetAvatar()
   if Avatar then
     if not IsHeadFrame then
       if Id == Avatar.HeadIconId then
         self:PlayAnimation(self.Select_Normal)
-        self:PlayAnimation(self.Click)
         self.IsSelect = true
       end
     else
       if Id == Avatar.HeadFrameId then
         self:PlayAnimation(self.Select_Normal)
-        self:PlayAnimation(self.Click)
         self.IsSelect = true
       end
       if -1 == Id then
@@ -45,6 +44,8 @@ function Menu_Portrait_PC_C:SetImage(Path, Id, IsHeadFrame)
   end
   if self.IsSelect then
     self:SetGamePadFocus()
+  else
+    self:PlayAnimation(self.UnSelect)
   end
 end
 
@@ -60,8 +61,11 @@ function Menu_Portrait_PC_C:OnListItemObjectSet(Content)
   self.Owner = Content.Owner
   self.Content = Content
   self:StopAllAnimations()
-  self:PlayAnimation(self.Normal)
-  self:PlayAnimation(self.UnSelect)
+  if not Content.IsEmpty and Content.IsLocked then
+    self:PlayAnimation(self.HaveNot_Normal)
+  else
+    self:PlayAnimation(self.Normal)
+  end
   self.Img_Item:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Btn_Click:SetVisibility(UIConst.VisibilityOp.Visible)
   self:SetVisibility(UIConst.VisibilityOp.Visible)
@@ -72,16 +76,13 @@ function Menu_Portrait_PC_C:OnListItemObjectSet(Content)
     self.IsEmpty = true
     Content.SelfWidget = self
     self:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-    self.Btn_Click:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-    self.Img_Item:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Switch_Type:SetActiveWidgetIndex(1)
     return
   end
+  self.Switch_Type:SetActiveWidgetIndex(0)
   Content.SelfWidget = self
   self.IsHeadFrame = Content.IsHeadFrame
   self.PortraitId = Content.PortraitId
-  if self.IsSelect then
-    self:PlayAnimation(self.Select_Normal)
-  end
   if -1 == Content.PortraitId then
     self.Img_Item:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
@@ -101,7 +102,11 @@ end
 function Menu_Portrait_PC_C:OnHovered()
   self.IsHover = true
   if not self.IsSelect then
-    self:PlayAnimation(self.Hover)
+    if self.Content.IsLocked then
+      self:PlayAnimation(self.HaveNot_Hover)
+    else
+      self:PlayAnimation(self.Hover)
+    end
   end
 end
 
@@ -123,7 +128,12 @@ function Menu_Portrait_PC_C:OnUnHovered()
   self.IsHover = false
   if not self.IsSelect then
     self:StopAnimation(self.Hover)
-    self:PlayAnimation(self.UnHover)
+    self:StopAnimation(self.HaveNot_Hover)
+    if self.Content.IsLocked then
+      self:PlayAnimation(self.HaveNot_UnHover)
+    else
+      self:PlayAnimation(self.UnHover)
+    end
   end
 end
 
@@ -131,7 +141,11 @@ function Menu_Portrait_PC_C:OnPressed()
   if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
     return
   end
-  self:PlayAnimation(self.Press)
+  if self.Content.IsLocked then
+    self:PlayAnimation(self.HaveNot_Press)
+  else
+    self:PlayAnimation(self.Press)
+  end
 end
 
 function Menu_Portrait_PC_C:OnBtnReleased()
@@ -139,9 +153,17 @@ function Menu_Portrait_PC_C:OnBtnReleased()
     return
   end
   self:StopAllAnimations()
-  self:PlayAnimation(self.Normal)
+  if self.Content.IsLocked then
+    self:PlayAnimation(self.HaveNot_Normal)
+  else
+    self:PlayAnimation(self.Normal)
+  end
   if self.IsHover then
-    self:PlayAnimation(self.Click)
+    if self.Content.IsLocked then
+      self:PlayAnimation(self.HaveNot_Click)
+    else
+      self:PlayAnimation(self.Click)
+    end
   end
 end
 
@@ -175,13 +197,13 @@ function Menu_Portrait_PC_C:RemoveReddotListener(ReddotNodeName)
 end
 
 function Menu_Portrait_PC_C:OnPortraitReddotChange(Count)
-  local CacheKey = tostring(self.PortraitId)
+  local CacheKey = self.Content.PortraitId
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("Portrait")
   self.New:SetEnable(CacheDetail[CacheKey] and Count > 0)
 end
 
 function Menu_Portrait_PC_C:OnPortraitFrameReddotChange(Count)
-  local CacheKey = tostring(self.PortraitId)
+  local CacheKey = self.Content.PortraitId
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("PortraitFrame")
   self.New:SetEnable(CacheDetail[CacheKey] and Count > 0)
 end

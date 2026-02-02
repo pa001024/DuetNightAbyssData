@@ -107,8 +107,8 @@ function M:RefreshAllSummonerInfo()
       self:SetSummonerItem(i, false)
     end
   end
-  if ValidSummonerCount <= 0 then
-    self:RemoveTimer("RefreshAllSummonerInfo")
+  if ValidSummonerCount <= 0 and IsValid(self.OwnerPlayer) then
+    self.OwnerPlayer:RemoveTimer("RefreshAllSummonerInfo")
   end
 end
 

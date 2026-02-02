@@ -5,6 +5,7 @@ local WalnutBagController = require("BluePrints.UI.WBP.Walnut.WalnutBag.WalnutBa
 local WalnutBagModel = WalnutBagController:GetModel()
 local TimeUtils = require("Utils.TimeUtils")
 local EMCache = require("EMCache.EMCache")
+local ActivityController = require("BluePrints.UI.WBP.Activity.ActivityController")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
@@ -533,6 +534,12 @@ function M:IsShowAttributeTips()
 end
 
 function M:InitListCellInfo(DungeonId)
+  local DungeonData = DataMgr.Dungeon[DungeonId]
+  if not DungeonData then
+    return
+  end
+  self.DungeonData = DungeonData
+  self:AutoNextRoundInit()
   if self.SelectCell then
     self:SelectCellFocus()
   end
@@ -618,7 +625,8 @@ function M:InitListCellInfo(DungeonId)
     self.Group_TimeTips:SetVisibility(ESlateVisibility.Collapsed)
     return
   end
-  local CfgDrop = DataMgr.DoubleModDrop and DataMgr.DoubleModDrop[CommonConst.DoubleModDropEventID]
+  local EventId = ActivityController:GetDoubleModDropEventID()
+  local CfgDrop = DataMgr.DoubleModDrop and DataMgr.DoubleModDrop[EventId]
   if not CfgDrop then
     self.Group_TimeTips:SetVisibility(ESlateVisibility.Collapsed)
     return
@@ -633,6 +641,7 @@ function M:InitListCellInfo(DungeonId)
     self.Group_TimeTips:SetVisibility(ESlateVisibility.Collapsed)
     return
   end
+  self.Text_ModUpNum:SetVisibility(UE4.ESlateVisibility.Collapsed)
   local _, IsEliteRushDungeon = self:CheckDungeonType(self.CurSelectedDungeonId)
   self.Group_TimeTips:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Bg_Consume:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
@@ -648,11 +657,11 @@ function M:InitListCellInfo(DungeonId)
   local Remaining = math.max(0, math.floor(CfgValue - UsedTimes))
   local TextValue = Remaining <= 0 and "<Warning>0</>/" .. CfgValue or Remaining .. "/" .. CfgValue
   self.Text_Times:SetText(TextValue)
-  self.Text_ModUpNum:SetVisibility(IsElite and UE4.ESlateVisibility.Collapsed or UE4.ESlateVisibility.SelfHitTestInvisible)
   if not IsElite then
     local BonusConst = MdConst.EventBonus and MdConst.EventBonus.ConstantValue or 0
     local BonusPct = math.floor(BonusConst / 100)
     self.Text_ModUpNum:SetText("+" .. BonusPct .. "%")
+    self.Text_ModUpNum:SetVisibility(Remaining <= 0 and UE4.ESlateVisibility.Collapsed or UE4.ESlateVisibility.SelfHitTestInvisible)
   end
 end
 
@@ -737,8 +746,18 @@ function M:RefreshLevelCellContent(DungeonId)
   end
 end
 
+function M:AutoNextRoundInit()
+  if 1 ~= self.DungeonData.DungeonWinMode or not self.DungeonData.AutoNextRound then
+    self.AutoNextRound:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    return
+  end
+  self.AutoNextRound:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.AutoNextRound:Init(self.DungeonData)
+end
+
 function M:CheckDungeonType(DungeonId)
-  local CfgDrop = DataMgr.DoubleModDrop and DataMgr.DoubleModDrop[CommonConst.DoubleModDropEventID]
+  local EventId = ActivityController:GetDoubleModDropEventID()
+  local CfgDrop = DataMgr.DoubleModDrop and DataMgr.DoubleModDrop[EventId]
   if not DungeonId or not CfgDrop then
     return false, false
   end
@@ -881,6 +900,14 @@ function M:RefreshRewardInfoList(DungeonId)
         Content.Count = BaseCount
       end
     end
+    Content.bShadow = false
+    if Content.ItemType == "Mod" then
+      local ModModel = ModController:GetModel()
+      Content.bShadow = ModModel:GetModCountById(Content.Id) <= 0
+    elseif Content.ItemType == "Walnut" then
+      local WalnutsInBag = Avatar.Walnuts.WalnutBag
+      Content.bShadow = (WalnutsInBag[Content.Id] or 0) <= 0
+    end
     self.List_Prop:AddItem(Content)
   end
   if 0 == self.List_Prop:GetNumItems() then
@@ -890,18 +917,14 @@ function M:RefreshRewardInfoList(DungeonId)
 end
 
 function M:IsInTimeRange(dungeonId)
-  local nowTimestamp = os.time()
+  local nowTimestamp = TimeUtils.NowTime()
   local dungeonConfig = DataMgr.EventDungeonReward[dungeonId]
   if not dungeonConfig then
     return false
   end
-  for startTime, endTable in pairs(dungeonConfig) do
-    if type(endTable) == "table" then
-      for endTime, config in pairs(endTable) do
-        if startTime <= nowTimestamp and endTime >= nowTimestamp then
-          return true, config
-        end
-      end
+  for _, config in pairs(dungeonConfig) do
+    if type(config) == "table" and nowTimestamp >= config.StartDate and nowTimestamp <= config.EndDate then
+      return true, config
     end
   end
   return false
@@ -1185,6 +1208,10 @@ function M:OnClickSolo()
       local WalnutChoiceUI = UIManager(self):LoadUINew("WalnutChoice", CommonConst.WalnutUser.Depute, self.CurSelectedDungeonId)
       if self.WalnutId then
         WalnutChoiceUI:SelectWalnutById(self.WalnutId)
+      else
+        local WalnutUtils = require("BluePrints.UI.WBP.Walnut.WalnutChoice.WalnutUtils")
+        local WalnutId = WalnutUtils:GetWalnutCacheIdByDungeonId(self.CurSelectedDungeonId)
+        WalnutChoiceUI:SelectWalnutById(WalnutId)
       end
       return
     end
@@ -1253,6 +1280,10 @@ function M:OnClickMulti()
     local WalnutChoiceUI = UIManager(self):LoadUINew("WalnutChoice", CommonConst.WalnutUser.Depute, self.CurSelectedDungeonId)
     if self.WalnutId then
       WalnutChoiceUI:SelectWalnutById(self.WalnutId)
+    else
+      local WalnutUtils = require("BluePrints.UI.WBP.Walnut.WalnutChoice.WalnutUtils")
+      local WalnutId = WalnutUtils:GetWalnutCacheIdByDungeonId(self.CurSelectedDungeonId)
+      WalnutChoiceUI:SelectWalnutById(WalnutId)
     end
     return
   end
@@ -1305,14 +1336,17 @@ function M:EnterStandalone(TicketId)
     UIUtils.ShowActionRecover(self)
     return
   end
-  local Avatar = GWorld:GetAvatar()
   if -1 ~= TicketId then
     self.TicketId = TicketId
+    GWorld.GameInstance:SetTicketId(self.TicketId)
   end
   local StyleOfPlay = UIManager(self):GetUI("StyleOfPlay")
   AudioManager(self):PlayUISound(self, "event:/ui/common/map_click_enter_level", nil, nil)
   local Avatar = GWorld:GetAvatar()
   if Avatar then
+    if self:IsAutoNextRound() then
+      Avatar:SetDungeonAutoProgress(self.CurSelectedDungeonId, self.AutoNextRound:GetSelectCount())
+    end
     self:TryEnterDungeon(Avatar, self.CurSelectedDungeonId, CommonConst.DungeonNetMode.Standalone, function(RetCode, ...)
       self:BlockAllUIInput(false)
       local bRetCode = self.HandleEnterDungeonRetCode(RetCode, ...)
@@ -1412,6 +1446,9 @@ function M:OnReturnKeyDown()
   if not PlayEntry then
     return
   end
+  if self:IsAnimationPlaying(self.In) then
+    return
+  end
   AudioManager(self):SetEventSoundParam(self, "Play_DeputeDetail", {ToEnd = 1})
   if not self:IsAnimationPlaying(self.Out) then
     self:SetVisibility(ESlateVisibility.HitTestInvisible)
@@ -1471,6 +1508,8 @@ function M:UpdatKeyDisplay(FocusTypeName)
   if self.DefaultList:GetVisibility() == ESlateVisibility.SelfHitTestInvisible and self.DefaultList.IsShow then
     return
   end
+  self.Tab_Info.Key_Left:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.Tab_Info.Key_Right:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.FocusTypeName = FocusTypeName
   if "RewardWidget" == FocusTypeName then
     local BottomKeyInfo = {
@@ -1685,6 +1724,52 @@ function M:UpdatKeyDisplay(FocusTypeName)
     self:UpdateUIStyleInPlatform(true)
     StyleOfPlay.ComTab.WBP_Com_Tab_ResourceBar.KeyImg_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
     StyleOfPlay.ComTab.WBP_Com_Tab_ResourceBar.Tip_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  elseif "AutoNextRound" == FocusTypeName then
+    local BottomKeyInfo = {
+      {
+        GamePadInfoList = {
+          {
+            Type = "Img",
+            ImgShortPath = "A",
+            Owner = self
+          }
+        },
+        Desc = GText("UI_SQUAD_SELECT_CONFIRM"),
+        bLongPress = false
+      },
+      {
+        KeyInfoList = {
+          {
+            Type = "Text",
+            Text = "Esc",
+            ClickCallback = self.OnReturnKeyDown,
+            Owner = self
+          }
+        },
+        GamePadInfoList = {
+          {
+            Type = "Img",
+            ImgShortPath = "B",
+            Owner = self
+          }
+        },
+        Desc = GText("UI_BACK")
+      }
+    }
+    StyleOfPlay:UpdateOtherPageTab(BottomKeyInfo)
+    self:UpdateUIStyleInPlatform(true)
+    StyleOfPlay.ComTab.WBP_Com_Tab_ResourceBar.KeyImg_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    StyleOfPlay.ComTab.WBP_Com_Tab_ResourceBar.Tip_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Tab_Info:UpdateUIStyleInPlatform(true)
+    if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
+      self.Button_Multi:SetPCVisibility(true)
+      self.Button_Solo:SetPCVisibility(true)
+      self.Button_DoubleMod:SetPCVisibility(true)
+      self.Key_Details_GamePad:SetVisibility(ESlateVisibility.Collapsed)
+      self.Tab_Info.Key_Left:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      self.Tab_Info.Key_Right:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+    self.DefaultList:ApplyPcUiLayout()
   else
     local BottomKeyInfo = {}
     StyleOfPlay:UpdateOtherPageTab(BottomKeyInfo)
@@ -1699,9 +1784,16 @@ function M:SetPanelDetailsVis(SlateVisibility)
   self.Panel_Details:SetVisibility(SlateVisibility)
 end
 
+function M:IsAutoNextRound()
+  return self.AutoNextRound:GetVisibility() == ESlateVisibility.SelfHitTestInvisible
+end
+
 function M:UpdateUIStyleInPlatform(IsUseKeyAndMouse)
   if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
     return
+  end
+  if self:IsAutoNextRound() then
+    self.AutoNextRound:UpdateUIStyleInPlatform(IsUseKeyAndMouse)
   end
   if IsUseKeyAndMouse then
     self.Key_Check_GamePad:SetVisibility(ESlateVisibility.Collapsed)
@@ -1815,6 +1907,9 @@ function M:OnGamePadDown(InKeyName)
       self:UpdatKeyDisplay("SelfWidget")
       IsEventHandled = true
     end
+    if self:IsAutoNextRound() then
+      self.AutoNextRound:SetAutoNextRoundFocus(false)
+    end
   end
   if self.DefaultList:GetVisibility() == ESlateVisibility.SelfHitTestInvisible and self.DefaultList.IsShow then
     return IsEventHandled
@@ -1882,6 +1977,18 @@ function M:OnGamePadDown(InKeyName)
       end
       IsEventHandled = true
     end
+  elseif "Gamepad_RightThumbstick" == InKeyName then
+    self.PressedKeys.Gamepad_DPad_Up = nil
+    self.PressedKeys.Gamepad_RightThumbstick = nil
+    if self:IsAutoNextRound() and IsDpadUp then
+      self.AutoNextRound:SetAutoNextRoundFocus(true)
+      self.CurrentFocusType = "AutoNextRound"
+      if self.StyleOfPlay then
+        self:UpdatKeyDisplay("AutoNextRound")
+        self.StyleOfPlay.IsKeyEventOnGamePad = false
+      end
+      return true
+    end
   end
   return IsEventHandled
 end
@@ -1921,17 +2028,17 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
     if "Gamepad_DPad_Up" == InKeyName then
       IsEventHandled = true
     elseif "Gamepad_DPad_Down" == InKeyName then
-      if self.CurrentTabIdx == self.SpecialMonsterTabId and not self.MenuOpen then
+      if self.CurrentTabIdx == self.SpecialMonsterTabId and not self.MenuOpen and self.CurrentFocusType ~= "AutoNextRound" then
         if self.MonNum and self.MonNum > self.MaxMonNum then
           self:OpenCommanderDetails()
           IsEventHandled = true
         end
-      elseif self.CurrentTabIdx == self.ObtainTabId and not self.MenuOpen then
+      elseif self.CurrentTabIdx == self.ObtainTabId and not self.MenuOpen and self.CurrentFocusType ~= "AutoNextRound" then
         self:OpenRewardDetails()
         IsEventHandled = true
       end
       IsEventHandled = true
-    elseif "Gamepad_DPad_Right" == InKeyName and not self:IsFocusList() then
+    elseif "Gamepad_DPad_Right" == InKeyName and not self:IsFocusList() and not self:IsFocusAutoNextRound() then
       if self.DefaultList:GetVisibility() ~= ESlateVisibility.SelfHitTestInvisible then
         return IsEventHandled
       end
@@ -1946,7 +2053,7 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
         Avatar:SwitchSquadAutoPhantom(IsChecked)
         IsEventHandled = true
       end
-    elseif "Gamepad_DPad_Left" == InKeyName and not self:IsFocusList() then
+    elseif "Gamepad_DPad_Left" == InKeyName and not self:IsFocusList() and not self:IsFocusAutoNextRound() then
       if self.DefaultList:GetVisibility() ~= ESlateVisibility.SelfHitTestInvisible then
         return IsEventHandled
       end
@@ -2022,6 +2129,10 @@ end
 
 function M:IsFocusList()
   return self.CurrentFocusType == "List"
+end
+
+function M:IsFocusAutoNextRound()
+  return self.CurrentFocusType == "AutoNextRound"
 end
 
 function M:OnForbiddenRightBtnClicked()
@@ -2117,13 +2228,12 @@ function M:RefreshBtnState(bInIsMatching)
   self.ContinuousCombat = IsEliteRushDungeon
   local ShowDouble = self:IsDoubleMod()
   local RemainOK = true
-  if ShowDouble then
+  if ShowDouble and IsEliteRushDungeon then
     local DoubleModDropInfo = self:GetDoubleModDropData() or {}
     local MdConst = DataMgr.ModDropConstant or {}
     local DailyFree = MdConst.DailyFreeTicketAmount and MdConst.DailyFreeTicketAmount.ConstantValue or 0
-    local DailyMod = MdConst.DailyModDungeonAmount and MdConst.DailyModDungeonAmount.ConstantValue or 0
-    local ConfigValue = IsEliteRushDungeon and DailyFree or DailyMod
-    local UsedTimes = IsEliteRushDungeon and (DoubleModDropInfo.EliteRushTimes or 0) or DoubleModDropInfo.DropTimes or 0
+    local ConfigValue = DailyFree
+    local UsedTimes = DoubleModDropInfo.EliteRushTimes
     local Remaining = math.floor(ConfigValue - UsedTimes)
     RemainOK = Remaining > 0
   end
@@ -2180,35 +2290,6 @@ function M:RefreshBtnState(bInIsMatching)
         UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Team_CanNotEnterDungeon"))
       end
     end)
-    if self.DeputeType == Const.DeputeType.NightFlightManualDepute then
-      if ShowDouble and self.ContinuousCombat then
-        self.Button_Solo:SetVisibility(ESlateVisibility.Collapsed)
-        self.Button_DoubleMod:SetVisibility(ESlateVisibility.Visible)
-        self.Button_DoubleMod:SetText(GText("UI_Event_ModDrop_ChallengeStart"))
-        self.Button_DoubleMod:ForbidBtn(not RemainOK and self.ContinuousCombat or false)
-      else
-        self.Button_DoubleMod:SetVisibility(ESlateVisibility.Collapsed)
-        self.Button_Solo:SetText(GText("UI_Ticket_Choose"))
-        self.Button_Solo:SetVisibility(ESlateVisibility.Visible)
-      end
-      if not RemainOK then
-        self.Button_Multi:ForbidBtn(true)
-        self.Button_Solo:ForbidBtn(true)
-        self.Button_DoubleMod:ForbidBtn(true)
-        self.Button_Multi:UnBindEventOnClickedByObj(self)
-        self.Button_Solo:UnBindEventOnClickedByObj(self)
-        self.Button_DoubleMod:UnBindEventOnClickedByObj(self)
-        self.Button_Multi:BindForbidStateExecuteEvent(self, function()
-          UIManager(self):ShowUITip("CommonToastMain", GText("UI_Event_ModDrop_Exhausted"))
-        end)
-        self.Button_Solo:BindForbidStateExecuteEvent(self, function()
-          UIManager(self):ShowUITip("CommonToastMain", GText("UI_Event_ModDrop_Exhausted"))
-        end)
-        self.Button_DoubleMod:BindForbidStateExecuteEvent(self, function()
-          UIManager(self):ShowUITip("CommonToastMain", GText("UI_Event_ModDrop_Exhausted"))
-        end)
-      end
-    end
   end
   if IsComMissing then
     self.Button_Multi:ForbidBtn(true)
@@ -2222,6 +2303,35 @@ function M:RefreshBtnState(bInIsMatching)
     local CurSelectedDungeonData = DataMgr.Dungeon[self.CurSelectedDungeonId]
     if CurSelectedDungeonData and CurSelectedDungeonData.bDisableMatch then
       self.Button_Multi:SetVisibility(ESlateVisibility.Collapsed)
+    end
+  end
+  if self.DeputeType == Const.DeputeType.NightFlightManualDepute then
+    if ShowDouble and self.ContinuousCombat then
+      self.Button_Solo:SetVisibility(ESlateVisibility.Collapsed)
+      self.Button_DoubleMod:SetVisibility(ESlateVisibility.Visible)
+      self.Button_DoubleMod:SetText(GText("UI_Event_ModDrop_ChallengeStart"))
+      self.Button_DoubleMod:ForbidBtn(not RemainOK and self.ContinuousCombat or false)
+    else
+      self.Button_DoubleMod:SetVisibility(ESlateVisibility.Collapsed)
+      self.Button_Solo:SetText(GText("UI_Ticket_Choose"))
+      self.Button_Solo:SetVisibility(ESlateVisibility.Visible)
+    end
+    if not RemainOK then
+      self.Button_Multi:ForbidBtn(true)
+      self.Button_Solo:ForbidBtn(true)
+      self.Button_DoubleMod:ForbidBtn(true)
+      self.Button_Multi:UnBindEventOnClickedByObj(self)
+      self.Button_Solo:UnBindEventOnClickedByObj(self)
+      self.Button_DoubleMod:UnBindEventOnClickedByObj(self)
+      self.Button_Multi:BindForbidStateExecuteEvent(self, function()
+        UIManager(self):ShowUITip("CommonToastMain", GText("UI_Event_ModDrop_Exhausted"))
+      end)
+      self.Button_Solo:BindForbidStateExecuteEvent(self, function()
+        UIManager(self):ShowUITip("CommonToastMain", GText("UI_Event_ModDrop_Exhausted"))
+      end)
+      self.Button_DoubleMod:BindForbidStateExecuteEvent(self, function()
+        UIManager(self):ShowUITip("CommonToastMain", GText("UI_Event_ModDrop_Exhausted"))
+      end)
     end
   end
 end

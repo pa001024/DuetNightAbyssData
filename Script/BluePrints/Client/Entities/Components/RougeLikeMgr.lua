@@ -12,7 +12,6 @@ function Component:EnterRougeLike(callback, Difficulty, SquadId)
   local function cb(ret)
     if not ErrorCode:Check(ret) then
       self:ShowErrorByErrorCode("EnterRougeLike", ret)
-      return
     end
     if callback then
       callback(ret)

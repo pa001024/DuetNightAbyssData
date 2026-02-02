@@ -2,6 +2,7 @@ require("UnLua")
 local PageJumpFunctionLibrary = require("Utils.PageJumpFunctionConfig")
 local GachaModel = require("BluePrints.UI.WBP.Gacha.GachaModel")
 local ActivityUtils = require("BluePrints.UI.WBP.Activity.ActivityUtils")
+local GameFlowUtils = require("Utils.GameFlowUtils")
 local PageJumpUtils = {}
 
 function PageJumpUtils:GetItemAccess(ItemWidget, ItemId, ItemType, AccessKey, UIName, ReturnCallBack)
@@ -256,6 +257,19 @@ function PageJumpUtils:ProcessAccessItem(AccessItem, AccessText, UIName, UIUnloc
   end
 end
 
+function PageJumpUtils:IsValidAccess(UIUnlockRuleId)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local bUnlocked = Avatar:CheckUIUnlocked(UIUnlockRuleId)
+  if not bUnlocked then
+    return false
+  end
+  local bIsCanOpen, FailedIdIndex = Avatar:CheckSystemUICanOpen(UIUnlockRuleId)
+  return bIsCanOpen
+end
+
 function PageJumpUtils:CloseFrontDialog()
   local GameInstance = GWorld.GameInstance
   local UIManager = GameInstance:GetGameUIManager()
@@ -282,6 +296,18 @@ function PageJumpUtils:CloseFrontDialog()
   local FeinaRewardPage = UIManager:GetUI("FeinaEventReward")
   if FeinaRewardPage then
     FeinaRewardPage:Close()
+  end
+  local GuildWarRewardPop = UIManager:GetUI("GuildWarRewardPop")
+  if GuildWarRewardPop then
+    GuildWarRewardPop:OnReturnKeyDown()
+  end
+  local WalnutChoiceUI = UIManager:GetUI("WalnutChoice")
+  if WalnutChoiceUI then
+    if WalnutChoiceUI.CloseByEscape then
+      WalnutChoiceUI:CloseByEscape()
+    else
+      WalnutChoiceUI:Close()
+    end
   end
 end
 
@@ -315,6 +341,496 @@ function PageJumpUtils:SortAccessItem(ItemsContainer)
   for _, Item in pairs(AccessItems) do
     ItemsContainer:AddChild(Item)
   end
+end
+
+function PageJumpUtils:CanJumpByAccessKey(ItemId, ItemType, AccessKey, UIName)
+  local AccessData = DataMgr.Access[AccessKey]
+  if not AccessData then
+    return false
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  UIName = UIName or nil
+  local ShopType
+  local ActualAccessKey = AccessKey
+  if string.sub(AccessKey, 1, 5) == "Shop_" and "Shop_Pack" ~= AccessKey then
+    ShopType = AccessData.AccessParam
+    ActualAccessKey = "Shop"
+  elseif string.sub(AccessKey, 1, 14) == "ImpressionShop" then
+    ActualAccessKey = "ImpressionShop"
+  end
+  if AccessData.AccessRule == "InterfaceJump" then
+    local InterfaceJumpId = tonumber(AccessData.AccessParam)
+    if InterfaceJumpId and DataMgr.InterfaceJump[InterfaceJumpId] and ConditionUtils.CheckCondition(Avatar, DataMgr.InterfaceJump[InterfaceJumpId].PortalUnlockCondition) then
+      local bIsCanOpen, _ = Avatar:CheckSystemUICanOpen(AccessData.UIUnlockRuleId)
+      return bIsCanOpen
+    end
+    return false
+  end
+  if "Shop" == ActualAccessKey then
+    if not (ShopType and DataMgr.ShopItem2ShopSubId[ItemType] and DataMgr.ShopItem2ShopSubId[ItemType][ShopType]) or not DataMgr.ShopItem2ShopSubId[ItemType][ShopType][ItemId] then
+      return false
+    end
+    local ShopDatas = setmetatable({}, {
+      __index = DataMgr.ShopItem2ShopSubId[ItemType][ShopType][ItemId]
+    })
+    if not ShopDatas or not next(ShopDatas) then
+      return false
+    end
+    table.sort(ShopDatas, function(a, b)
+      return a.AccessOrder or b.AccessOrder < 0 or 0
+    end)
+    for _, Data in ipairs(ShopDatas) do
+      if ShopUtils:GetShopItemCanShow(Data.ShopItemId) and 0 ~= ShopUtils:GetShopItemPurchaseLimit(Data.ShopItemId) then
+        local SubTabId = Data.SubTabId
+        local MainTabId = DataMgr.ShopTabSub[SubTabId].MainTabId
+        local ShopMainTabData = DataMgr.ShopTabMain[MainTabId]
+        local SubShopTabData = DataMgr.ShopTabSub[SubTabId]
+        if ShopMainTabData.ConditionId and not Avatar.CheckUIUnlocked(Avatar, ShopMainTabData.ConditionId) and SubShopTabData.UnlockHide then
+          return false
+        end
+        if SubShopTabData.ConditionId and not Avatar.CheckUIUnlocked(Avatar, SubShopTabData.ConditionId) and SubShopTabData.UnlockHide then
+          return false
+        end
+        if AccessData.UIUnlockRuleId then
+          local bUnlocked = Avatar:CheckUIUnlocked(AccessData.UIUnlockRuleId)
+          if not bUnlocked then
+            return false
+          end
+          local bIsCanOpen, _ = Avatar:CheckSystemUICanOpen(AccessData.UIUnlockRuleId)
+          if not bIsCanOpen then
+            return false
+          end
+        end
+        return true
+      end
+    end
+    return false
+  end
+  if "Walnut" == ActualAccessKey then
+    local WalnutData = DataMgr.Walnut[ItemId]
+    if not WalnutData then
+      return false
+    end
+    return true
+  end
+  if "Dungeon" == ActualAccessKey then
+    local DungeonAccess = DataMgr.Resource2Dungeon[ItemType]
+    if not DungeonAccess or not DungeonAccess[ItemId] then
+      return false
+    end
+    if AccessData.UIUnlockRuleId then
+      local bUnlocked = Avatar:CheckUIUnlocked(AccessData.UIUnlockRuleId)
+      if not bUnlocked then
+        return false
+      end
+    end
+    return true
+  end
+  if "MonsterStrong" == ActualAccessKey then
+    local DungeonAccess = DataMgr.Reward2MonsterDungeon[ItemType]
+    if not DungeonAccess or not DungeonAccess[ItemId] then
+      return false
+    end
+    if AccessData.UIUnlockRuleId then
+      local bUnlocked = Avatar:CheckUIUnlocked(AccessData.UIUnlockRuleId)
+      if not bUnlocked then
+        return false
+      end
+    end
+    return true
+  end
+  if "ImpressionShop" == ActualAccessKey then
+    if not DataMgr.ImpressionShopItem2Shop[ItemId] then
+      return false
+    end
+    local ShopDatas = setmetatable({}, {
+      __index = DataMgr.ImpressionShopItem2Shop[ItemId]
+    })
+    if not ShopDatas or next(ShopDatas) then
+      return false
+    end
+    local ImpressionShopItemDatas = DataMgr.ImpressionShop
+    for _, ImpressionShopItemId in ipairs(ShopDatas) do
+      if 0 ~= ShopUtils:GetImprShopItemPurchaseLimit(ImpressionShopItemId) then
+        local ShopData = ImpressionShopItemDatas[ImpressionShopItemId]
+        local ImprShopData = DataMgr.ImpressionShopInfo[ShopData.RegionId]
+        if ImprShopData.ShopUnlockRuleId and not ConditionUtils.CheckCondition(Avatar, ImprShopData.ShopUnlockRuleId) then
+          return false
+        end
+        if AccessData.UIUnlockRuleId then
+          local bUnlocked = Avatar:CheckUIUnlocked(AccessData.UIUnlockRuleId)
+          if not bUnlocked then
+            return false
+          end
+        end
+        return true
+      end
+    end
+    return false
+  end
+  if "Shop_Pack" == AccessKey then
+    if not DataMgr.ShopItem2RewardPack[ItemType] or not DataMgr.ShopItem2RewardPack[ItemType][ItemId] then
+      return false
+    end
+    local ResItemData
+    for _, ItemData in ipairs(DataMgr.ShopItem2RewardPack[ItemType][ItemId]) do
+      if Avatar:CheckShopItemCanPurchase(ItemData.ShopItemId) and (not ResItemData or not (ResItemData.TypeId < ItemData.TypeId)) then
+        ResItemData = ItemData
+      end
+    end
+    if not ResItemData then
+      return false
+    end
+    return true
+  end
+  if "HardBoss" == ActualAccessKey then
+    local bSystemUnlocked = false
+    if AccessData.UIUnlockRuleId then
+      bSystemUnlocked = Avatar:CheckUIUnlocked(AccessData.UIUnlockRuleId)
+    end
+    local TargetDifficultyID
+    local HardBossDifficultyIds = {}
+    for _, HardBossData in pairs(DataMgr.HardbossMain) do
+      for _, DifficultyId in pairs(HardBossData.DifficultyId) do
+        table.insert(HardBossDifficultyIds, DifficultyId)
+      end
+    end
+    local HardBossDifficulty = DataMgr.HardBossDifficulty
+    local HardBossDifficultySorted = {}
+    for _, DifficultyId in pairs(HardBossDifficultyIds) do
+      table.insert(HardBossDifficultySorted, HardBossDifficulty[DifficultyId])
+    end
+    table.sort(HardBossDifficultySorted, function(a, b)
+      return a.DifficultyID < b.DifficultyID
+    end)
+    for _, HardBossDifficultyData in ipairs(HardBossDifficultySorted) do
+      local DynamicRewardId = HardBossDifficultyData.DifficultyReward
+      local DynamicRewardInfo = UIUtils.GetDynamicRewardInfo(DynamicRewardId)
+      if DynamicRewardInfo then
+        local RewardInfo = DataMgr.RewardView[DynamicRewardInfo.RewardView]
+        if RewardInfo then
+          local Ids = RewardInfo.Id or {}
+          for i = 1, #Ids do
+            local Id = Ids[i]
+            if ItemId == Id then
+              TargetDifficultyID = HardBossDifficultyData.DifficultyID
+              break
+            end
+          end
+        end
+      end
+      if TargetDifficultyID then
+        break
+      end
+    end
+    if not TargetDifficultyID then
+      return false
+    end
+    local bDifficultyUnlocked = Avatar:CheckHardBossCondition(TargetDifficultyID)
+    return bSystemUnlocked and bDifficultyUnlocked
+  end
+  if "Abyss" == ActualAccessKey then
+    local AbyssSeasonId = Avatar.CurrentAbyssSeasonId
+    if not AbyssSeasonId or not DataMgr.AbyssSeasonList[AbyssSeasonId] then
+      return false
+    end
+    local EventId = DataMgr.AbyssSeasonList[AbyssSeasonId].EventId
+    if not EventId or not DataMgr.EventPortal[EventId] then
+      return false
+    end
+    local RewardPreviewId = DataMgr.EventPortal[EventId].RewardPreview
+    if not RewardPreviewId or not DataMgr.RewardView[RewardPreviewId] then
+      return false
+    end
+    local RewardInfo = DataMgr.RewardView[RewardPreviewId]
+    if not RewardInfo then
+      return false
+    end
+    local Ids = RewardInfo.Id or {}
+    for i = 1, #Ids do
+      local Id = Ids[i]
+      if ItemId == Id then
+        return true
+      end
+    end
+    return false
+  end
+  return false
+end
+
+function PageJumpUtils:ExecuteJumpByAccessKey(ItemId, ItemType, AccessKey, UIName)
+  local AccessData = DataMgr.Access[AccessKey]
+  if not AccessData then
+    DebugPrint("ExecuteJumpByAccessKey: 找不到AccessData：" .. AccessKey)
+    return false
+  end
+  UIName = UIName or nil
+  local ShopType
+  local ActualAccessKey = AccessKey
+  if string.sub(AccessKey, 1, 5) == "Shop_" and "Shop_Pack" ~= AccessKey then
+    ShopType = AccessData.AccessParam
+    ActualAccessKey = "Shop"
+  elseif string.sub(AccessKey, 1, 14) == "ImpressionShop" then
+    ActualAccessKey = "ImpressionShop"
+  end
+  if AccessData.AccessRule == "InterfaceJump" then
+    local InterfaceJumpId = tonumber(AccessData.AccessParam)
+    if InterfaceJumpId and DataMgr.InterfaceJump[InterfaceJumpId] then
+      local PlayerAvatar = GWorld:GetAvatar()
+      if PlayerAvatar and ConditionUtils.CheckCondition(PlayerAvatar, DataMgr.InterfaceJump[InterfaceJumpId].PortalUnlockCondition) then
+        local bIsCanOpen, FailedIdIndex = PlayerAvatar:CheckSystemUICanOpen(AccessData.UIUnlockRuleId)
+        if bIsCanOpen then
+          self:JumpToTargetPageByJumpId(InterfaceJumpId)
+          return true
+        end
+      end
+    end
+    return false
+  end
+  if "Shop" == ActualAccessKey then
+    local CommonParam = {}
+    CommonParam.ItemWidget = nil
+    CommonParam.AccessKey = ActualAccessKey
+    CommonParam.AccessText = GText(AccessData.AccessText)
+    CommonParam.UIName = UIName
+    CommonParam.UIUnlockRuleId = AccessData.UIUnlockRuleId
+    CommonParam.AccessParam = AccessData.AccessParam
+    local res, JumpToPage = self:CreateJumpToShopAccess(ItemType, ShopType, ItemId, CommonParam)
+    if res and JumpToPage then
+      JumpToPage()
+      return true
+    end
+    return false
+  end
+  if "Walnut" == ActualAccessKey then
+    self:CloseFrontDialog()
+    local WalnutData = DataMgr.Walnut[ItemId]
+    if WalnutData then
+      local Avatar = GWorld:GetAvatar()
+      if Avatar then
+        local WalnutCount = Avatar.Walnuts.WalnutBag[ItemId] or 0
+        if 0 ~= WalnutCount then
+          self:JumpToWalnutDungeonPage(WalnutData.WalnutType, ItemId)
+        else
+          self:JumpToWalnutBagPage(WalnutData.WalnutType + 1, ItemId)
+        end
+        return true
+      end
+    end
+    return false
+  end
+  if "Dungeon" == ActualAccessKey then
+    local DungeonAccess = DataMgr.Resource2Dungeon[ItemType]
+    if not DungeonAccess or not DungeonAccess[ItemId] then
+      return false
+    end
+    local bFromPlay = false
+    if "StyleOfPlay" == UIName then
+      bFromPlay = true
+    end
+    local DungeonId = self:GetAccessDungeon(DungeonAccess[ItemId])
+    if DungeonId then
+      self:JumpToDungeonPage(DungeonId, 1, nil, bFromPlay)
+      return true
+    end
+    return false
+  end
+  if "MonsterStrong" == ActualAccessKey then
+    local DungeonAccess = DataMgr.Reward2MonsterDungeon[ItemType]
+    if not DungeonAccess or not DungeonAccess[ItemId] then
+      return false
+    end
+    local bFromPlay = false
+    if "StyleOfPlay" == UIName then
+      bFromPlay = true
+    end
+    local DungeonList = {}
+    for _, v in pairs(DungeonAccess[ItemId]) do
+      table.insert(DungeonList, v)
+    end
+    if 0 == #DungeonList then
+      return false
+    end
+    table.sort(DungeonList, function(a, b)
+      return a.DungeonId < b.DungeonId
+    end)
+    local TargetDungeon
+    local DungeonInfo = DataMgr.Dungeon
+    for _, Value in ipairs(DungeonList) do
+      local DungeonId = Value.DungeonId
+      if DungeonInfo[DungeonId] and self:CheckDungeonCondition(DungeonInfo[DungeonId].Condition) then
+        local bCanJump = true
+        if DataMgr.Dungeon2Select[DungeonId] then
+          bCanJump = self:CheckDungeonCondition(DataMgr.SelectDungeon[DataMgr.Dungeon2Select[DungeonId]].Condition)
+        elseif DataMgr.Dungeon2SubDungeon[DungeonId] and DataMgr.Dungeon2Select[DataMgr.Dungeon2SubDungeon[DungeonId]] then
+          bCanJump = self:CheckDungeonCondition(DataMgr.SelectDungeon[DataMgr.Dungeon2Select[DataMgr.Dungeon2SubDungeon[DungeonId]]].Condition)
+        end
+        if bCanJump then
+          TargetDungeon = Value
+          break
+        end
+      end
+    end
+    TargetDungeon = TargetDungeon or DungeonList[1]
+    if TargetDungeon then
+      self:JumpToDungeonPage(TargetDungeon.DungeonId, 2, TargetDungeon.MonsterId, bFromPlay)
+      return true
+    end
+    return false
+  end
+  if "ImpressionShop" == ActualAccessKey then
+    local CommonParam = {}
+    CommonParam.ItemWidget = nil
+    CommonParam.AccessKey = ActualAccessKey
+    CommonParam.AccessText = GText(AccessData.AccessText)
+    CommonParam.UIName = UIName
+    CommonParam.UIUnlockRuleId = AccessData.UIUnlockRuleId
+    CommonParam.AccessParam = AccessData.AccessParam
+    local res, JumpToPage = self:CreateJumpToImpressionShopAccess(ItemId, CommonParam)
+    if res and JumpToPage then
+      JumpToPage()
+      return true
+    end
+    return false
+  end
+  if "Shop_Pack" == AccessKey then
+    if not DataMgr.ShopItem2RewardPack[ItemType] or not DataMgr.ShopItem2RewardPack[ItemType][ItemId] then
+      return false
+    end
+    local Avatar = GWorld:GetAvatar()
+    if not Avatar then
+      return false
+    end
+    local ResItemData
+    for _, ItemData in ipairs(DataMgr.ShopItem2RewardPack[ItemType][ItemId]) do
+      if Avatar:CheckShopItemCanPurchase(ItemData.ShopItemId) and (not ResItemData or not (ResItemData.TypeId < ItemData.TypeId)) then
+        ResItemData = ItemData
+      end
+    end
+    if not ResItemData then
+      return false
+    end
+    local res, JumpToPage = self:CreateJumpToShopAccess("Reward", ResItemData.ShopType, ResItemData.TypeId, nil)
+    if res and JumpToPage then
+      JumpToPage()
+      return true
+    end
+    return false
+  end
+  if "HardBoss" == ActualAccessKey then
+    local Avatar = GWorld:GetAvatar()
+    if not Avatar then
+      return false
+    end
+    local bSystemUnlocked = false
+    if AccessData.UIUnlockRuleId then
+      bSystemUnlocked = Avatar:CheckUIUnlocked(AccessData.UIUnlockRuleId)
+    end
+    local TargetDifficultyID
+    local bDifficultyUnlocked = false
+    local HardBossDifficultyIds = {}
+    for _, HardBossData in pairs(DataMgr.HardbossMain) do
+      for _, DifficultyId in pairs(HardBossData.DifficultyId) do
+        table.insert(HardBossDifficultyIds, DifficultyId)
+      end
+    end
+    local HardBossDifficulty = DataMgr.HardBossDifficulty
+    local HardBossDifficultySorted = {}
+    for _, DifficultyId in pairs(HardBossDifficultyIds) do
+      table.insert(HardBossDifficultySorted, HardBossDifficulty[DifficultyId])
+    end
+    table.sort(HardBossDifficultySorted, function(a, b)
+      return a.DifficultyID < b.DifficultyID
+    end)
+    for _, HardBossDifficultyData in ipairs(HardBossDifficultySorted) do
+      if bDifficultyUnlocked then
+        break
+      end
+      local DynamicRewardId = HardBossDifficultyData.DifficultyReward
+      local DynamicRewardInfo = UIUtils.GetDynamicRewardInfo(DynamicRewardId)
+      if DynamicRewardInfo then
+        local RewardInfo = DataMgr.RewardView[DynamicRewardInfo.RewardView]
+        if RewardInfo then
+          local Ids = RewardInfo.Id or {}
+          for i = 1, #Ids do
+            local Id = Ids[i]
+            if ItemId == Id then
+              TargetDifficultyID = HardBossDifficultyData.DifficultyID
+              if Avatar:CheckHardBossCondition(HardBossDifficultyData.DifficultyID) then
+                bDifficultyUnlocked = true
+                break
+              end
+            end
+          end
+        end
+      end
+    end
+    if not TargetDifficultyID then
+      return false
+    end
+    local bIsUnLock = bSystemUnlocked and bDifficultyUnlocked
+    if not bIsUnLock then
+      local UIManager = GWorld.GameInstance:GetGameUIManager()
+      UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("Toast_Access_HardBossUnlock"))
+      return false
+    end
+    local TargetHardBossId
+    for _, HardBossData in pairs(DataMgr.HardbossMain) do
+      for _, DifficultyId in pairs(HardBossData.DifficultyId) do
+        if DifficultyId == TargetDifficultyID then
+          TargetHardBossId = HardBossData.HardBossId
+          break
+        end
+      end
+      if TargetHardBossId then
+        break
+      end
+    end
+    if TargetHardBossId then
+      self:JumpToStyleOfPlaySubUI("HardBossMain", TargetHardBossId)
+      return true
+    end
+    return false
+  end
+  if "Abyss" == ActualAccessKey then
+    local Avatar = GWorld:GetAvatar()
+    if not Avatar then
+      return false
+    end
+    local AbyssSeasonId = Avatar.CurrentAbyssSeasonId
+    if not AbyssSeasonId or not DataMgr.AbyssSeasonList[AbyssSeasonId] then
+      return false
+    end
+    local EventId = DataMgr.AbyssSeasonList[AbyssSeasonId].EventId
+    if not EventId or not DataMgr.EventPortal[EventId] then
+      return false
+    end
+    local RewardPreviewId = DataMgr.EventPortal[EventId].RewardPreview
+    if not RewardPreviewId or not DataMgr.RewardView[RewardPreviewId] then
+      return false
+    end
+    local RewardInfo = DataMgr.RewardView[RewardPreviewId]
+    if not RewardInfo then
+      return false
+    end
+    local Ids = RewardInfo.Id or {}
+    local bShowItem = false
+    for i = 1, #Ids do
+      local Id = Ids[i]
+      if ItemId == Id then
+        bShowItem = true
+        break
+      end
+    end
+    if not bShowItem then
+      return false
+    end
+    return self:JumpToAbyssMainNormal()
+  end
+  return false
 end
 
 function PageJumpUtils:CreateJumpToDungeonAccess(CommonParam, ItemType, ItemId, bFromPlay)
@@ -475,9 +991,6 @@ function PageJumpUtils:CreateJumpToShopAccess(ItemType, ShopType, ItemId, Common
   if not ShopDatas or next(ShopDatas) then
     return
   end
-  table.sort(ShopDatas, function(a, b)
-    return a.AccessOrder or b.AccessOrder < 0 or 0
-  end)
   local ShopData
   for _, Data in ipairs(ShopDatas) do
     if ShopUtils:GetShopItemCanShow(Data.ShopItemId) and 0 ~= ShopUtils:GetShopItemPurchaseLimit(Data.ShopItemId) then
@@ -503,40 +1016,51 @@ function PageJumpUtils:CreateJumpToShopAccess(ItemType, ShopType, ItemId, Common
     return
   end
   
+  local function RawCustomCheckUnlock()
+    local Result = {}
+    local ShopMainTabData = DataMgr.ShopTabMain[MainTabId]
+    local SubShopTabData = DataMgr.ShopTabSub[SubTabId]
+    if ShopMainTabData.ConditionId and not Avatar.CheckUIUnlocked(Avatar, ShopMainTabData.ConditionId) then
+      if SubShopTabData.UnlockHide then
+        return false
+      end
+      Result.IsInteractive = false
+      Result.IsUnLock = false
+      Result.ActiveWidgetIndex = 1
+      
+      local function CheckShopTab()
+        Avatar.CheckUIUnlocked(Avatar, ShopMainTabData.ConditionId, true)
+      end
+      
+      Result.JumpFunc = CheckShopTab
+      Result.bLocked = true
+    end
+    if not Result.bLocked and SubShopTabData.ConditionId and not Avatar.CheckUIUnlocked(Avatar, SubShopTabData.ConditionId) then
+      if SubShopTabData.UnlockHide then
+        return false
+      end
+      Result.IsInteractive = false
+      Result.IsUnLock = false
+      Result.ActiveWidgetIndex = 1
+      
+      local function CheckShopTab()
+        Avatar.CheckUIUnlocked(Avatar, SubShopTabData.ConditionId, true)
+      end
+      
+      Result.JumpFunc = CheckShopTab
+      Result.bLocked = true
+    end
+    return Result
+  end
+  
   local function CustomCheckUnlock(AccessItem, UIName)
     if AccessItem.IsInteractive == true then
-      local ShopMainTabData = DataMgr.ShopTabMain[MainTabId]
-      local SubShopTabData = DataMgr.ShopTabSub[SubTabId]
-      local bDone = false
-      if ShopMainTabData.ConditionId and not Avatar.CheckUIUnlocked(Avatar, ShopMainTabData.ConditionId) then
-        if SubShopTabData.UnlockHide then
-          return false
-        end
-        AccessItem.IsInteractive = false
-        AccessItem.IsUnLock = false
-        AccessItem.Switch_Type:SetActiveWidgetIndex(1)
-        
-        local function CheckShopTab()
-          Avatar.CheckUIUnlocked(Avatar, ShopMainTabData.ConditionId, true)
-        end
-        
-        AccessItem.JumpFunc = CheckShopTab
-        bDone = true
-      end
-      if not bDone and SubShopTabData.ConditionId and not Avatar.CheckUIUnlocked(Avatar, SubShopTabData.ConditionId) then
-        if SubShopTabData.UnlockHide then
-          return false
-        end
-        AccessItem.IsInteractive = false
-        AccessItem.IsUnLock = false
-        AccessItem.Switch_Type:SetActiveWidgetIndex(1)
-        
-        local function CheckShopTab()
-          Avatar.CheckUIUnlocked(Avatar, SubShopTabData.ConditionId, true)
-        end
-        
-        AccessItem.JumpFunc = CheckShopTab
-        bDone = true
+      local Result = RawCustomCheckUnlock()
+      if Result.bLocked then
+        AccessItem.IsInteractive = Result.IsInteractive
+        AccessItem.IsUnLock = Result.IsUnLock
+        AccessItem.Switch_Type:SetActiveWidgetIndex(Result.ActiveWidgetIndex)
+        AccessItem.JumpFunc = Result.JumpFunc
       end
     end
   end
@@ -552,7 +1076,7 @@ function PageJumpUtils:CreateJumpToShopAccess(ItemType, ShopType, ItemId, Common
   if CommonParam then
     self:ProcessAccessItem(CommonParam.AccessItem, CommonParam.AccessText, CommonParam.UIName, CommonParam.UIUnlockRuleId, JumpToPage, CustomCheckUnlock)
   end
-  return true, JumpToPage
+  return true, not RawCustomCheckUnlock().bLocked and JumpToPage
 end
 
 function PageJumpUtils:CreateJumpToImpressionShopAccess(ItemId, CommonParam)
@@ -719,7 +1243,7 @@ function PageJumpUtils:CreateJumpToForge(AccessItem, ItemType, ItemId, AccessTex
     local PlayerAvatar = GWorld:GetAvatar()
     local AvatarDrafts = PlayerAvatar.Drafts
     if not AvatarDrafts or not AvatarDrafts[DraftId] then
-      UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("Forge_InterfaceJump_Locked"))
+      self:JumpToForgeCompendiumPathByDraftId(DraftId)
       return
     end
     self:CloseFrontDialog()
@@ -727,7 +1251,11 @@ function PageJumpUtils:CreateJumpToForge(AccessItem, ItemType, ItemId, AccessTex
     if CompendiumPage then
       CompendiumPage:Close()
     end
-    self:JumpToForgePageDraftId(DraftId)
+    self:JumpToForgePageByDraftId(DraftId)
+    local ConvertPage = UIManager:GetUI("ForgeConvertMain")
+    if ConvertPage then
+      ConvertPage:Close()
+    end
   end
   
   local ForgeDataModel = require("Blueprints.UI.Forge.ForgeDataModel")
@@ -830,10 +1358,10 @@ function PageJumpUtils:CreateJumpToHardBoss(ItemId, CommonParam)
     end
   end
   
-  if CommonParam then
+  if CommonParam and CommonParam.AccessItem then
     self:ProcessAccessItem(CommonParam.AccessItem, CommonParam.AccessText, CommonParam.UIName, CommonParam.UIUnlockRuleId, JumpToPage, CustomCheckUnlock)
   end
-  return true
+  return true, JumpToPage
 end
 
 function PageJumpUtils:CreateJumpToAbyss(ItemId, CommonParam)
@@ -866,34 +1394,13 @@ function PageJumpUtils:CreateJumpToAbyss(ItemId, CommonParam)
   end
   
   local function JumpToPage()
-    local TargetAbyssId
-    if Avatar and Avatar.Abysses then
-      local AbyssIds = {}
-      local Abysses = DataMgr.AbyssSeason
-      for AbyssId, _ in pairs(Abysses) do
-        if Avatar.Abysses[AbyssId] and (not Avatar.Abysses[AbyssId].AbyssSeasonId or Avatar.Abysses[AbyssId].AbyssSeasonId == Avatar.CurrentAbyssSeasonId) then
-          table.insert(AbyssIds, AbyssId)
-        end
-      end
-      table.sort(AbyssIds, function(a, b)
-        return Abysses[a].Order < Abysses[b].Order
-      end)
-      for _, AbyssId in ipairs(AbyssIds) do
-        local IsLocked = Avatar.Abysses[AbyssId]:IsLocked()
-        if not IsLocked then
-          TargetAbyssId = AbyssId
-        end
-      end
-    end
-    if TargetAbyssId then
-      self:JumpToAbyssMain(TargetAbyssId, false, false)
-    end
+    self:JumpToAbyssMainNormal()
   end
   
   if CommonParam then
     self:ProcessAccessItem(CommonParam.AccessItem, CommonParam.AccessText, CommonParam.UIName, CommonParam.UIUnlockRuleId, JumpToPage)
   end
-  return true
+  return true, JumpToPage
 end
 
 function PageJumpUtils:JumpToDungeonPage(DungeonId, DeputeType, MonsterId, bFromPlay)
@@ -902,92 +1409,92 @@ function PageJumpUtils:JumpToDungeonPage(DungeonId, DeputeType, MonsterId, bFrom
   DungeonId = tonumber(DungeonId)
   DeputeType = tonumber(DeputeType)
   self:CloseFrontDialog()
-  local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-  local Flow = FlowManager:CreateFlow("OpenSystemUI")
-  Flow.OnBegin:Add(Flow, function()
-    local StyleOfPlay = UIManager:GetUIObj("StyleOfPlay")
-    if not StyleOfPlay then
-      StyleOfPlay = UIManager:LoadUINew("StyleOfPlay")
-      UIManager:AddToJumpPageDeque(StyleOfPlay)
-      UIManager:AddFlow("StyleOfPlay", Flow)
-    else
-      UIManager:PlaceJumpUIToTop(StyleOfPlay, "StyleOfPlay")
-      FlowManager:RemoveFlow(Flow)
-    end
-    StyleOfPlay.IsOpenSelectLevel = false
-    local SelectLevel = StyleOfPlay:OpenSubUI("DungeonSelect")
-    local Dungeon2Select = DataMgr.Dungeon2Select
-    if SelectLevel.CurSelectedDungeonId == DungeonId then
-      return
-    end
-    local ChapterId = not Dungeon2Select[DungeonId] and DataMgr.Dungeon2SubDungeon[DungeonId] and Dungeon2Select[DataMgr.Dungeon2SubDungeon[DungeonId]]
-    SelectLevel.PlayEntry = StyleOfPlay
-    if not bFromPlay then
-      SelectLevel.IsFromJump = true
-    end
-    local DungeonList, DungeonTabName
-    if DeputeType == Const.DeputeType.NightFlightManualDepute then
-      DungeonList = DataMgr.ModDungeonMonReward[MonsterId].DungeonList
-      DungeonTabName = DataMgr.PlaySubTab.DeputeNightBook.SubTabName
-      SelectLevel:SetNightFlightManualRewardView(DataMgr.ModDungeonMonReward[MonsterId].DungeonRewardView)
-    else
-      DungeonList = DataMgr.SelectDungeon[ChapterId].DungeonList
-      DungeonTabName = DataMgr.PlaySubTab.NewDeputeRoot.SubTabName
-    end
-    SelectLevel:InitLevelList(DungeonList, DungeonId, DeputeType)
-    StyleOfPlay:InitOtherPageTab({
-      DynamicNode = {
-        "Back",
-        "ResourceBar",
-        "BottomKey"
-      },
-      BottomKeyInfo = {
-        {
-          GamePadInfoList = {
-            {Type = "Add"},
-            GamePadSubKeyInfoList = {
+  GameFlowUtils:AddFlow("OpenSystemUI", {
+    GWorld.GameInstance,
+    function(_, Flow)
+      local StyleOfPlay = UIManager:GetUIObj("StyleOfPlay")
+      if not StyleOfPlay then
+        StyleOfPlay = UIManager:LoadUINew("StyleOfPlay")
+        UIManager:AddToJumpPageDeque(StyleOfPlay)
+        UIManager:AddFlow("StyleOfPlay", Flow)
+      else
+        UIManager:PlaceJumpUIToTop(StyleOfPlay, "StyleOfPlay")
+        GameFlowUtils:RemoveFlow(Flow)
+      end
+      StyleOfPlay.IsOpenSelectLevel = false
+      local SelectLevel = StyleOfPlay:OpenSubUI("DungeonSelect")
+      local Dungeon2Select = DataMgr.Dungeon2Select
+      if SelectLevel.CurSelectedDungeonId == DungeonId then
+        return
+      end
+      local ChapterId = not Dungeon2Select[DungeonId] and DataMgr.Dungeon2SubDungeon[DungeonId] and Dungeon2Select[DataMgr.Dungeon2SubDungeon[DungeonId]]
+      SelectLevel.PlayEntry = StyleOfPlay
+      if not bFromPlay then
+        SelectLevel.IsFromJump = true
+      end
+      local DungeonList, DungeonTabName
+      if DeputeType == Const.DeputeType.NightFlightManualDepute then
+        DungeonList = DataMgr.ModDungeonMonReward[MonsterId].DungeonList
+        DungeonTabName = DataMgr.PlaySubTab.DeputeNightBook.SubTabName
+        SelectLevel:SetNightFlightManualRewardView(DataMgr.ModDungeonMonReward[MonsterId].DungeonRewardView)
+      else
+        DungeonList = DataMgr.SelectDungeon[ChapterId].DungeonList
+        DungeonTabName = DataMgr.PlaySubTab.NewDeputeRoot.SubTabName
+      end
+      SelectLevel:InitLevelList(DungeonList, DungeonId, DeputeType)
+      StyleOfPlay:InitOtherPageTab({
+        DynamicNode = {
+          "Back",
+          "ResourceBar",
+          "BottomKey"
+        },
+        BottomKeyInfo = {
+          {
+            GamePadInfoList = {
+              {Type = "Add"},
+              GamePadSubKeyInfoList = {
+                {
+                  Type = "Img",
+                  ImgShortPath = "Up",
+                  Owner = SelectLevel
+                },
+                {
+                  Type = "Img",
+                  ImgShortPath = "Y",
+                  Owner = SelectLevel
+                }
+              }
+            },
+            Desc = GText("UI_CTL_DeputeInfo"),
+            bLongPress = false
+          },
+          {
+            KeyInfoList = {
               {
-                Type = "Img",
-                ImgShortPath = "Up",
-                Owner = SelectLevel
-              },
-              {
-                Type = "Img",
-                ImgShortPath = "Y",
+                Type = "Text",
+                Text = "Esc",
+                ClickCallback = SelectLevel.OnReturnKeyDown,
                 Owner = SelectLevel
               }
-            }
-          },
-          Desc = GText("UI_CTL_DeputeInfo"),
-          bLongPress = false
+            },
+            GamePadInfoList = {
+              {
+                Type = "Img",
+                ImgShortPath = "B",
+                Owner = SelectLevel
+              }
+            },
+            Desc = GText("UI_BACK")
+          }
         },
-        {
-          KeyInfoList = {
-            {
-              Type = "Text",
-              Text = "Esc",
-              ClickCallback = SelectLevel.OnReturnKeyDown,
-              Owner = SelectLevel
-            }
-          },
-          GamePadInfoList = {
-            {
-              Type = "Img",
-              ImgShortPath = "B",
-              Owner = SelectLevel
-            }
-          },
-          Desc = GText("UI_BACK")
-        }
-      },
-      OwnerPanel = SelectLevel,
-      BackCallback = SelectLevel.OnReturnKeyDown,
-      StyleName = "Text",
-      TitleName = GText(DungeonTabName),
-      InfoCallback = SelectLevel.ShowIntro
-    }, nil, true)
-  end)
-  FlowManager:AddFlow(Flow)
+        OwnerPanel = SelectLevel,
+        BackCallback = SelectLevel.OnReturnKeyDown,
+        StyleName = "Text",
+        TitleName = GText(DungeonTabName),
+        InfoCallback = SelectLevel.ShowIntro
+      }, nil, true)
+    end
+  })
 end
 
 function PageJumpUtils:JumpToWalnutDungeonPage(WalnutType, WalnutId)
@@ -1111,15 +1618,16 @@ function PageJumpUtils:JumpToRougeMain(JumpType)
   JumpType = JumpType or "NormalJump"
   local StyleOfPlay = UIManager:GetUIObj("StyleOfPlay")
   if not StyleOfPlay then
-    StyleOfPlay = UIManager:LoadUINew("StyleOfPlay")
+    StyleOfPlay = UIManager:LoadUINew("StyleOfPlay", "RougeMain")
     if "NormalJump" == JumpType then
       UIManager:AddToJumpPageDeque(StyleOfPlay)
     end
   else
     UIManager:PlaceJumpUIToTop(StyleOfPlay, "StyleOfPlay")
+    StyleOfPlay:OpenSubUI("RougeMain")
   end
   StyleOfPlay.IsOpenSelectLevel = false
-  local WidgetUI = StyleOfPlay:OpenSubUI("RougeMain")
+  local WidgetUI = StyleOfPlay:GetCurSubUI()
   if WidgetUI then
     if WidgetUI.InDifficultySelect then
       WidgetUI:BackToRougeMain()
@@ -1143,68 +1651,86 @@ end
 function PageJumpUtils:JumpToTryOut(CurTabIndex, ActivityId, CurSelectIndex)
   local GameInstance = GWorld.GameInstance
   local UIManager = GameInstance:GetGameUIManager()
-  local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-  local Flow = FlowManager:CreateFlow("OpenSystemUI")
-  Flow.OnBegin:Add(Flow, function()
-    local ActivityMain = UIManager:LoadUINew("ActivityMain", nil, CurTabIndex, ActivityId, CurSelectIndex)
-    UIManager:AddToJumpPageDeque(ActivityMain)
-    UIManager:AddFlow("ActivityMain", Flow)
-  end)
-  FlowManager:AddFlow(Flow)
+  GameFlowUtils:AddFlow("OpenSystemUI", {
+    GWorld.GameInstance,
+    function(_, Flow)
+      local ActivityMain = UIManager:LoadUINew("ActivityMain", nil, CurTabIndex, ActivityId, CurSelectIndex)
+      UIManager:AddToJumpPageDeque(ActivityMain)
+      UIManager:AddFlow("ActivityMain", Flow)
+    end
+  })
 end
 
 function PageJumpUtils:JumpToPaotai(CurTabIndex, CurSelectIndex)
   local GameInstance = GWorld.GameInstance
   local UIManager = GameInstance:GetGameUIManager()
-  local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-  local Flow = FlowManager:CreateFlow("OpenSystemUI")
-  Flow.OnBegin:Add(Flow, function()
-    local ActivityMain = UIManager:LoadUINew("ActivityMain", nil, CurTabIndex)
-    UIManager:AddToJumpPageDeque(ActivityMain)
-    local ActivityId = DataMgr.PaotaiEventConstant.PaotaiGameEventId.ConstantValue
-    local PageConfigData = DataMgr.EventPortal[ActivityId]
-    if PageConfigData.JumpUIId then
-      PageJumpUtils:JumpToTargetPageByJumpId(PageConfigData.JumpUIId, CurSelectIndex)
+  GameFlowUtils:AddFlow("OpenSystemUI", {
+    GWorld.GameInstance,
+    function(_, Flow)
+      local ActivityMain = UIManager:LoadUINew("ActivityMain", nil, CurTabIndex)
+      UIManager:AddToJumpPageDeque(ActivityMain)
+      local ActivityId = DataMgr.PaotaiEventConstant.PaotaiGameEventId.ConstantValue
+      local PageConfigData = DataMgr.EventPortal[ActivityId]
+      if PageConfigData.JumpUIId then
+        PageJumpUtils:JumpToTargetPageByJumpId(PageConfigData.JumpUIId, CurSelectIndex)
+      end
+      UIManager:AddFlow("ActivityMain", Flow)
     end
-    UIManager:AddFlow("ActivityMain", Flow)
-  end)
-  FlowManager:AddFlow(Flow)
+  })
 end
 
 function PageJumpUtils:JumpToFeinaEvent(CurTabIndex)
   local GameInstance = GWorld.GameInstance
   local UIManager = GameInstance:GetGameUIManager()
-  local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-  local Flow = FlowManager:CreateFlow("OpenSystemUI")
-  Flow.OnBegin:Add(Flow, function()
-    local ActivityMain = UIManager:LoadUINew("ActivityMain", nil, CurTabIndex)
-    UIManager:AddToJumpPageDeque(ActivityMain)
-    local ActivityId = DataMgr.EventConstant.FeinaEventId.ConstantValue
-    local PageConfigData = DataMgr.EventPortal[ActivityId]
-    if PageConfigData.JumpUIId then
-      PageJumpUtils:JumpToTargetPageByJumpId(PageConfigData.JumpUIId)
+  GameFlowUtils:AddFlow("OpenSystemUI", {
+    GWorld.GameInstance,
+    function(_, Flow)
+      local ActivityMain = UIManager:LoadUINew("ActivityMain", nil, CurTabIndex)
+      UIManager:AddToJumpPageDeque(ActivityMain)
+      local ActivityId = DataMgr.EventConstant.FeinaEventId.ConstantValue
+      local PageConfigData = DataMgr.EventPortal[ActivityId]
+      if PageConfigData.JumpUIId then
+        PageJumpUtils:JumpToTargetPageByJumpId(PageConfigData.JumpUIId)
+      end
+      UIManager:AddFlow("ActivityMain", Flow)
     end
-    UIManager:AddFlow("ActivityMain", Flow)
-  end)
-  FlowManager:AddFlow(Flow)
+  })
 end
 
 function PageJumpUtils:JumpToTempleSolo(CurTabIndex)
   local GameInstance = GWorld.GameInstance
   local UIManager = GameInstance:GetGameUIManager()
-  local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-  local Flow = FlowManager:CreateFlow("OpenSystemUI")
-  Flow.OnBegin:Add(Flow, function()
-    local ActivityMain = UIManager:LoadUINew("ActivityMain", nil, CurTabIndex)
-    UIManager:AddToJumpPageDeque(ActivityMain)
-    local ActivityId = 108001
-    local PageConfigData = DataMgr.EventPortal[ActivityId]
-    if PageConfigData.JumpUIId then
-      PageJumpUtils:JumpToTargetPageByJumpId(PageConfigData.JumpUIId)
+  GameFlowUtils:AddFlow("OpenSystemUI", {
+    GWorld.GameInstance,
+    function(_, Flow)
+      local ActivityMain = UIManager:LoadUINew("ActivityMain", nil, CurTabIndex)
+      UIManager:AddToJumpPageDeque(ActivityMain)
+      local ActivityId = 108001
+      local PageConfigData = DataMgr.EventPortal[ActivityId]
+      if PageConfigData.JumpUIId then
+        PageJumpUtils:JumpToTargetPageByJumpId(PageConfigData.JumpUIId)
+      end
+      UIManager:AddFlow("ActivityMain", Flow)
     end
-    UIManager:AddFlow("ActivityMain", Flow)
-  end)
-  FlowManager:AddFlow(Flow)
+  })
+end
+
+function PageJumpUtils:JumpToMonsterRush(CurTabIndex, EventId, DungeonId)
+  local GameInstance = GWorld.GameInstance
+  local UIManager = GameInstance:GetGameUIManager()
+  GameFlowUtils:AddFlow("OpenSystemUI", {
+    GWorld.GameInstance,
+    function(_, Flow)
+      local ActivityMain = UIManager:LoadUINew("ActivityMain", nil, CurTabIndex)
+      UIManager:AddToJumpPageDeque(ActivityMain)
+      local PageConfigData = DataMgr.EventPortal[EventId]
+      local IsOpen = ActivityUtils.CheckEventIsOpen(EventId, nil, false)
+      if PageConfigData.JumpUIId and IsOpen then
+        PageJumpUtils:JumpToTargetPageByJumpId(PageConfigData.JumpUIId, DungeonId)
+      end
+      UIManager:AddFlow("ActivityMain", Flow)
+    end
+  })
 end
 
 function PageJumpUtils:JumpToEventPage(CurTabIndex)
@@ -1215,19 +1741,19 @@ function PageJumpUtils:JumpToEventPage(CurTabIndex)
     UIManager:ShowError(36005, 1.5, UIConst.Tip_CommonToast)
     return
   end
-  local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-  local Flow = FlowManager:CreateFlow("OpenSystemUI")
-  Flow.OnBegin:Add(Flow, function()
-    local ActivityMain = UIManager:GetUIObj("ActivityMain")
-    if not ActivityMain then
-      ActivityMain = UIManager:LoadUINew("ActivityMain", nil, TabIndex)
-      UIManager:AddToJumpPageDeque(ActivityMain)
-    else
-      UIManager:PlaceJumpUIToTop(ActivityMain, "ActivityMain")
-      ActivityMain:JumpToTargetTab(TabIndex)
+  GameFlowUtils:AddFlow("OpenSystemUI", {
+    GWorld.GameInstance,
+    function(_, Flow)
+      local ActivityMain = UIManager:GetUIObj("ActivityMain")
+      if not ActivityMain then
+        ActivityMain = UIManager:LoadUINew("ActivityMain", nil, TabIndex)
+        UIManager:AddToJumpPageDeque(ActivityMain)
+      else
+        UIManager:PlaceJumpUIToTop(ActivityMain, "ActivityMain")
+        ActivityMain:JumpToTargetTab(TabIndex)
+      end
     end
-  end)
-  FlowManager:AddFlow(Flow)
+  })
 end
 
 function PageJumpUtils:JumpToShopPage(MainTabIdx, SubTabIdx, ShopItemId, ShopType, Callback, CallbackObj)
@@ -1245,6 +1771,10 @@ function PageJumpUtils:JumpToShopPage(MainTabIdx, SubTabIdx, ShopItemId, ShopTyp
   if not ShopMainPage then
     ShopMainPage = UIManager:LoadUINew(UIName, MainTabIdx, SubTabIdx, ShopItemId, ShopType, Callback, CallbackObj)
     UIManager:AddToJumpPageDeque(ShopMainPage)
+    if ShopMainPage and ShopMainPage.In and ShopMainPage:IsAnimationPlaying(ShopMainPage.In) then
+      ShopMainPage:SetAnimationCurrentTime(ShopMainPage.In, ShopMainPage.In:GetEndTime() - 0.01)
+      ShopMainPage:PlayAnimation(ShopMainPage.In)
+    end
   else
     UIManager:PlaceJumpUIToTop(ShopMainPage, UIName)
     ShopMainPage:InitShop(MainTabIdx, SubTabIdx, ShopItemId, ShopType, Callback, CallbackObj)
@@ -1282,7 +1812,42 @@ function PageJumpUtils:JumpToWalnutBagPage(ItemType, ItemId)
   end
 end
 
-function PageJumpUtils:JumpToForgePageDraftId(DraftId)
+function PageJumpUtils:JumpToForgeCompendiumPathByDraftId(DraftId)
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    local UIUnlockRule = DataMgr.UIUnlockRule
+    local UIUnlockRuleId = UIUnlockRule.Forging.UIUnlockRuleId
+    local bUnlocked = Avatar:CheckUIUnlocked(UIUnlockRuleId)
+    local bIsCanOpen, _ = Avatar:CheckSystemUICanOpen(UIUnlockRuleId)
+    if not bUnlocked then
+      UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText(DataMgr.UIUnlockRule.Forging.UIUnlockDesc))
+      return
+    elseif not bIsCanOpen then
+      UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText(DataMgr.UIUnlockRule.Forging.OpenSystemDesc[1]))
+      return
+    end
+  end
+  local GameInstance = GWorld.GameInstance
+  local UIManager = GameInstance:GetGameUIManager()
+  local ForgeMain = UIManager:GetUIObj("ForgeMain")
+  if IsValid(ForgeMain) then
+    UIManager:PlaceJumpUIToTop(ForgeMain, "ForgeMain")
+  else
+    ForgeMain = UIManager:LoadUINew("ForgeMain", {NotDelayAddListItem = true})
+    UIManager:AddToJumpPageDeque(ForgeMain)
+  end
+  local ForgeCompenduimPage = UIManager:GetUIObj("ForgeCompenduim")
+  if IsValid(ForgeCompenduimPage) then
+    ForgeCompenduimPage:NavigateToTargetDraft(DraftId)
+    UIManager:PlaceJumpUIToTop(ForgeCompenduimPage, "ForgeCompenduim")
+  else
+    ForgeCompenduimPage = UIManager:LoadUINew("ForgeCompenduim", "All")
+    UIManager:AddToJumpPageDeque(ForgeCompenduimPage)
+    ForgeCompenduimPage:NavigateToTargetDraft(DraftId)
+  end
+end
+
+function PageJumpUtils:JumpToForgePageByDraftId(DraftId)
   local GameInstance = GWorld.GameInstance
   local UIManager = GameInstance:GetGameUIManager()
   local PlayerAvatar = GWorld:GetAvatar()
@@ -1502,34 +2067,80 @@ function PageJumpUtils:JumpToArmory(Params)
   if not JumpToPageCheck(UIName) then
     return
   end
-  local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-  local Flow = FlowManager:CreateFlow("OpenSystemUI")
-  Flow.OnBegin:Add(Flow, function()
-    local UIManager = GWorld.GameInstance:GetGameUIManager()
-    local TargetUIPage = UIManager:GetUIObj(UIName)
-    if not TargetUIPage then
-      TargetUIPage = UIManager:LoadUINew(UIName, Params)
-      UIManager:AddToJumpPageDeque(TargetUIPage)
-      UIManager:AddFlow(UIName, Flow)
-    else
-      UIManager:PlaceJumpUIToTop(TargetUIPage, UIName)
-      FlowManager:RemoveFlow(Flow)
+  GameFlowUtils:AddFlow("OpenSystemUI", {
+    GWorld.GameInstance,
+    function(_, Flow)
+      local UIManager = GWorld.GameInstance:GetGameUIManager()
+      local TargetUIPage = UIManager:GetUIObj(UIName)
+      if not TargetUIPage then
+        TargetUIPage = UIManager:LoadUINew(UIName, Params)
+        UIManager:AddToJumpPageDeque(TargetUIPage)
+        UIManager:AddFlow(UIName, Flow)
+      else
+        UIManager:PlaceJumpUIToTop(TargetUIPage, UIName)
+        GameFlowUtils:RemoveFlow(Flow)
+      end
     end
-  end)
-  FlowManager:AddFlow(Flow)
+  })
 end
 
-function PageJumpUtils:JumpToAbyssMain(...)
-  local UIName = "AbyssMain"
-  if not JumpToPageCheck(UIName) then
-    return
-  end
-  self:CloseFrontDialog()
-  self:JumpToTargetPage(UIName, ...)
+function PageJumpUtils:JumpToAbyssMainNormal()
+  return self:JumpToAbyssMain(false)
 end
 
 function PageJumpUtils:JumpToAbyssMainFromActivity()
-  self:JumpToAbyssMain(false, false, true)
+  return self:JumpToAbyssMain(true)
+end
+
+function PageJumpUtils:JumpToAbyssMain(IsFromActivity)
+  local UIName = "AbyssMain"
+  if not JumpToPageCheck(UIName) then
+    return false
+  end
+  local TargetAbyssId
+  local Avatar = GWorld:GetAvatar()
+  if Avatar and Avatar.Abysses then
+    local AbyssIds = {}
+    local Abysses = DataMgr.AbyssSeason
+    for AbyssId, _ in pairs(Abysses) do
+      if Avatar.Abysses[AbyssId] and (not Avatar.Abysses[AbyssId].AbyssSeasonId or Avatar.Abysses[AbyssId].AbyssSeasonId == Avatar.CurrentAbyssSeasonId) then
+        table.insert(AbyssIds, AbyssId)
+      end
+    end
+    table.sort(AbyssIds, function(a, b)
+      return Abysses[a].Order < Abysses[b].Order
+    end)
+    for _, AbyssId in ipairs(AbyssIds) do
+      local IsLocked = Avatar.Abysses[AbyssId]:IsLocked()
+      if not IsLocked then
+        TargetAbyssId = AbyssId
+      end
+    end
+  end
+  if TargetAbyssId then
+    self:CloseFrontDialog()
+    local GameInstance = GWorld.GameInstance
+    local UIManager = GameInstance:GetGameUIManager()
+    local AbyssMain = UIManager:GetUIObj(UIName)
+    if not AbyssMain then
+      AbyssMain = UIManager:LoadUINew(UIName, TargetAbyssId, false, IsFromActivity)
+      UIManager:AddToJumpPageDeque(AbyssMain)
+    else
+      AbyssMain:SelectAbyssModeSelectionCellByAbyssId(TargetAbyssId)
+      UIManager:PlaceJumpUIToTop(AbyssMain, UIName)
+    end
+    return true
+  end
+  return false
+end
+
+function PageJumpUtils:JumpToAutoChessMain()
+  local UIName = "AutoChessMain"
+  local GameInstance = GWorld.GameInstance
+  local UIManager = GameInstance:GetGameUIManager()
+  UIManager:LoadUINew(UIName, GameInstance.AutoChessMissionId)
+  GameInstance.AutoChessMissionId = nil
+  return true
 end
 
 return PageJumpUtils

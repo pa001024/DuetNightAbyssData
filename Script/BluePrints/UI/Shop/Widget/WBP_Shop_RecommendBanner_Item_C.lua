@@ -175,12 +175,18 @@ function M:OnItemHovered()
   if self.bSelected then
     return
   end
+  if UIUtils.IsMobileInput() then
+    return
+  end
   self:StopAllAnimations()
   self:PlayAnimation(self.Hover)
 end
 
 function M:OnItemUnhovered()
   if self.bSelected then
+    return
+  end
+  if UIUtils.IsMobileInput() then
     return
   end
   self:StopAllAnimations()
@@ -194,6 +200,9 @@ function M:UnSelect()
 end
 
 function M:OnBtnPressed()
+  if UIUtils.IsMobileInput() then
+    return
+  end
   self:PlayAnimation(self.Press)
   local MousePos = UWidgetLayoutLibrary.GetMousePositionOnPlatform()
   self.PressX = MousePos.X
@@ -215,14 +224,14 @@ function M:OnBtnReleased()
   end
 end
 
-function M:OnTouchStarted(MyGeometry, InTouchEvent)
+function M:OnScrollBoxMouseButtonDown(MyGeometry, InTouchEvent)
   local ScreenSpacePosition = UE4.UKismetInputLibrary.PointerEvent_GetScreenSpacePosition(InTouchEvent)
   local MousePos = UE4.USlateBlueprintLibrary.AbsoluteToLocal(MyGeometry, ScreenSpacePosition)
   self.PressX = MousePos.X
   return UE4.UWidgetBlueprintLibrary.Unhandled()
 end
 
-function M:OnTouchEnded(MyGeometry, InTouchEvent)
+function M:OnScrollBoxMouseButtonUp(MyGeometry, InTouchEvent)
   if self:IsAnimationPlaying(self.Change_LToR) or self:IsAnimationPlaying(self.Change_RToL) then
     return UE4.UWidgetBlueprintLibrary.Unhandled()
   end
@@ -238,6 +247,10 @@ function M:OnTouchEnded(MyGeometry, InTouchEvent)
     AudioManager(self):PlayUISound(self, "event:/ui/activity/large_btn_click", nil, nil)
   end
   return UE4.UWidgetBlueprintLibrary.Unhandled()
+end
+
+function M:OnTouchMoved(MyGeometry, InTouchEvent)
+  return self:OnScrollBoxMouseButtonUp(MyGeometry, InTouchEvent)
 end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)

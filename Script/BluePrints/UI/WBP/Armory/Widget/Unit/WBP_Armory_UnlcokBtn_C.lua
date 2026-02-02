@@ -27,10 +27,12 @@ function M:OnFocusChanged()
   if self.IsInFocusPath or self.bHideGamepadKey or not self.IsGamepadInput then
     self.Key_Consume:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Key_Unlock:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Icon_Unlock:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.Spacer1:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   else
     self.Key_Consume:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.Key_Unlock:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    self.Icon_Unlock:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Spacer1:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end
@@ -53,7 +55,9 @@ function M:Init(Params)
   self.Add:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Num_Need:SetVisibility(UIConst.VisibilityOp.Collapsed)
   local Resource1 = Params.Resources[1] or {}
-  if Resource1 then
+  if Resource1 and Params.bShowCoin then
+    self:ChangeLayout(true)
+    self.HB_Num:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Icon_Piece:Init(Resource1)
     if Resource1.bShowNeedCount then
       self.Num_Hold:SetText(Resource1.NeedCount)
@@ -63,8 +67,16 @@ function M:Init(Params)
         self.Add:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
         self.Num_Need:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
         self.Num_Need:SetText(Resource1.NeedCount)
+        if Resource1.ShowRedFont and Resource1.NeedCount > Resource1.Count then
+          self.Num_Hold:SetColorAndOpacity(self.Color_NotEnough)
+        else
+          self.Num_Hold:SetColorAndOpacity(self.Color_Normal)
+        end
       end
     end
+  else
+    self:ChangeLayout(false)
+    self.HB_Num:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   self.Key_Consume:CreateCommonKey(Params.ResourceKeyInfos)
   self.Key_Unlock:CreateCommonKey(Params.KeyInfos)

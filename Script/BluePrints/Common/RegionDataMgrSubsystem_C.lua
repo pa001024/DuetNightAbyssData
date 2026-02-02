@@ -382,9 +382,25 @@ function RegionDataMgrSubsystem_C:DeleteQuestChainDataNotInClientCache(QuestChai
   if not Table then
     return
   end
+  local WorldRegionEids = {}
   for _, RegionData in ipairs(Table) do
+    WorldRegionEids[RegionData.WorldRegionEid] = true
     if not self:ClientCacheExist(RegionData.WorldRegionEid) then
       self:DestroyRegionEntity(RegionData.WorldRegionEid, EDestroyReason.QuestChainClear)
+      DebugPrint("任务链:【" .. tostring(QuestChainId) .. "】回退，删除了:" .. tostring(RegionData.WorldRegionEid))
+    end
+  end
+  local QuestRegionDatas = self.DataLibrary:GetRegionCacheDatasByIdType(ERegionDataType.RDT_QuestData)
+  for _, RegionData in pairs(QuestRegionDatas) do
+    for _, LevelData in pairs(RegionData) do
+      for _, WorldRegionEid in pairs(CommonUtils.Keys(LevelData)) do
+        local UnitRegionData = LevelData[WorldRegionEid]
+        if UnitRegionData.QuestChainId == QuestChainId and not WorldRegionEids[WorldRegionEid] then
+          UnitRegionData.ExtraRegionInfo = UnitRegionData.ExtraRegionInfo or {}
+          self:InitSSDataFromServer(UnitRegionData)
+          DebugPrint("任务链:【" .. tostring(QuestChainId) .. "】回退，恢复了:" .. tostring(UnitRegionData.WorldRegionEid))
+        end
+      end
     end
   end
 end
@@ -1261,6 +1277,14 @@ function RegionDataMgrSubsystem_C:ShowRegionError(String, Info)
   end
   if Info then
     PrintTable(Info, 2)
+  end
+end
+
+function RegionDataMgrSubsystem_C:ReportRemoveLocalDataOnce(LuaTableIndex)
+  local Data = self.DataPool:GetRegionEntityData(LuaTableIndex)
+  local Avatar = GWorld:GetAvatar()
+  if Avatar and Data then
+    Avatar:ReportRemoveLocalDataOnce(Data)
   end
 end
 

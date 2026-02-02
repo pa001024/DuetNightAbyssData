@@ -59,6 +59,48 @@ function M:InitItemInfo(ItemType, ItemId, UnitId)
   end
 end
 
+function M:InitItemInfoInBag(ItemType, ItemId, UnitId)
+  local WeaponData = DataMgr.Weapon[ItemId]
+  local BattleWeaponData = DataMgr.BattleWeapon[ItemId]
+  local Avatar = GWorld:GetAvatar()
+  local WeaponServerData
+  local Level = 1
+  local EnhanceLevel, MaxEnhanceLevel = 0, 0
+  if UnitId and type(UnitId) == "string" and not CommonUtils.IsObjId(UnitId) then
+    UnitId = CommonUtils.Str2ObjId(UnitId)
+  end
+  WeaponServerData = Avatar.Weapons[UnitId]
+  self.Text_Mod:SetText(GText("UI_Bag_MODSapacity"))
+  local GradeLevel = 0
+  if WeaponServerData then
+    Level = WeaponServerData.Level
+    EnhanceLevel = WeaponServerData.EnhanceLevel
+    GradeLevel = WeaponServerData.GradeLevel
+    local Cost = WeaponServerData:GetModSuitCost()
+    self.Text_Mod01:SetText(Cost)
+    self.Text_Mod02:SetText(WeaponServerData:LevelUpData().ModVolume)
+  else
+    self.Text_Mod01:SetText("0")
+    self.Text_Mod02:SetText(DataMgr.WeaponLevelUp[1].ModVolume)
+  end
+  assert(DataMgr.WeaponBreak[ItemId], "请检查武器突破表, WeaponId:", ItemId)
+  for _, v in pairs(DataMgr.WeaponBreak[ItemId]) do
+    if MaxEnhanceLevel < v.WeaponBreakNum then
+      MaxEnhanceLevel = v.WeaponBreakNum
+    end
+  end
+  local WeaponTypeName = self:GetWeaponTypeName(ItemId)
+  self.Text_SubTitle:SetText(WeaponTypeName)
+  self:UpdateAttrInfo(ItemId)
+  local PassiveSkillDesc = SkillUtils.CalcWeaponPassiveEffectsDesc(WeaponServerData or BattleWeaponData)
+  if nil ~= PassiveSkillDesc and "" ~= PassiveSkillDesc then
+    self.Text_SkillEffect:SetVisibility(ESlateVisibility.Visible)
+    self.Text_SkillEffect:SetText(PassiveSkillDesc)
+  else
+    self.Text_SkillEffect:SetVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
 function M:SetWeaponEnhanceLevel(EnhanceLevel, MaxEnhanceLevel)
   for i = 1, 6 do
     local str = "Switch_Star0" .. i

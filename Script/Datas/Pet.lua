@@ -71,10 +71,101 @@ T.RT_15 = {
   0,
   20
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("Pet", {
+  [601] = {
+    BattlePetId = 601,
+    EffectCreatureId = 6011,
+    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Head/Pet/T_Head_Pet_Wuyou01.T_Head_Pet_Wuyou01",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Pet/T_Head_Pet_Wuyou01.T_Head_Pet_Wuyou01",
+    IpDes = "MonsterRushEvent_Wuyou_PetDesc_1",
+    Name = "MonsterRushEvent_Wuyou_PetName_1",
+    PetExp = 70,
+    PetMaxLevel = 1,
+    PetNameTag = "Zisha",
+    PetType = 3,
+    Rarity = 5,
+    SortPriority = 6001,
+    Sound = "SOUND_ITEM_PET",
+    UnitId = 601,
+    WysSkillDesLv = {
+      [1] = "WuyoushengEvent_Pet601_SkillDesLv_1",
+      [2] = "WuyoushengEvent_Pet601_SkillDesLv_2",
+      [3] = "WuyoushengEvent_Pet601_SkillDesLv_3",
+      [4] = "WuyoushengEvent_Pet601_SkillDesLv_4"
+    }
+  },
+  [602] = {
+    BattlePetId = 602,
+    EffectCreatureId = 6021,
+    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Head/Pet/T_Head_Pet_Wuyou03.T_Head_Pet_Wuyou03",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Pet/T_Head_Pet_Wuyou03.T_Head_Pet_Wuyou03",
+    IpDes = "MonsterRushEvent_Wuyou_PetDesc_2",
+    Name = "MonsterRushEvent_Wuyou_PetName_2",
+    PetExp = 70,
+    PetMaxLevel = 1,
+    PetNameTag = "Zisha",
+    PetType = 3,
+    Rarity = 5,
+    SortPriority = 6002,
+    Sound = "SOUND_ITEM_PET",
+    UnitId = 602,
+    WysSkillDesLv = {
+      [1] = "WuyoushengEvent_Pet602_SkillDesLv_1",
+      [2] = "WuyoushengEvent_Pet602_SkillDesLv_2",
+      [3] = "WuyoushengEvent_Pet602_SkillDesLv_3",
+      [4] = "WuyoushengEvent_Pet602_SkillDesLv_4"
+    }
+  },
+  [603] = {
+    BattlePetId = 603,
+    EffectCreatureId = 6031,
+    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Head/Pet/T_Head_Pet_Wuyou02.T_Head_Pet_Wuyou02",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Pet/T_Head_Pet_Wuyou02.T_Head_Pet_Wuyou02",
+    IpDes = "MonsterRushEvent_Wuyou_PetDesc_3",
+    Name = "MonsterRushEvent_Wuyou_PetName_3",
+    PetExp = 70,
+    PetMaxLevel = 1,
+    PetNameTag = "Zisha",
+    PetType = 3,
+    Rarity = 5,
+    SortPriority = 6003,
+    Sound = "SOUND_ITEM_PET",
+    UnitId = 603,
+    WysSkillDesLv = {
+      [1] = "WuyoushengEvent_Pet603_SkillDesLv_1",
+      [2] = "WuyoushengEvent_Pet603_SkillDesLv_2",
+      [3] = "WuyoushengEvent_Pet603_SkillDesLv_3",
+      [4] = "WuyoushengEvent_Pet603_SkillDesLv_4"
+    }
+  },
+  [604] = {
+    BattlePetId = 604,
+    EffectCreatureId = 6041,
+    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Head/Pet/T_Head_Pet_Wuyou04.T_Head_Pet_Wuyou04",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Pet/T_Head_Pet_Wuyou04.T_Head_Pet_Wuyou04",
+    IpDes = "MonsterRushEvent_Wuyou_PetDesc_4",
+    Name = "MonsterRushEvent_Wuyou_PetName_4",
+    PetExp = 70,
+    PetMaxLevel = 1,
+    PetNameTag = "Zisha",
+    PetType = 3,
+    Rarity = 5,
+    SortPriority = 6004,
+    Sound = "SOUND_ITEM_PET",
+    UnitId = 604,
+    WysSkillDesLv = {
+      [1] = "WuyoushengEvent_Pet604_SkillDesLv_1",
+      [2] = "WuyoushengEvent_Pet604_SkillDesLv_2",
+      [3] = "WuyoushengEvent_Pet604_SkillDesLv_3",
+      [4] = "WuyoushengEvent_Pet604_SkillDesLv_4"
+    }
+  },
   [4011] = {
     BT = "/Game/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.BT_Npc_Pet_Patrol",
     BattlePetId = 401,
@@ -602,7 +693,7 @@ return ReadOnly("Pet", {
     PetType = 1,
     PremiumTransform = 4053,
     Rarity = 3,
-    SortPriority = 3015,
+    SortPriority = 3016,
     Sound = "SOUND_ITEM_PET",
     UnitBPPath = "/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC_Common",
     UnitId = 4052
@@ -636,10 +727,43 @@ return ReadOnly("Pet", {
     Premium = 1,
     PremiumTransform = 4053,
     Rarity = 3,
-    SortPriority = 3016,
+    SortPriority = 3017,
     Sound = "SOUND_ITEM_PET",
     UnitBPPath = "/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC_Common",
     UnitId = 4053
+  },
+  [4059] = {
+    BT = "/Game/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.BT_Npc_Pet_Patrol",
+    BattlePetId = 405,
+    BattleRoleId = 101,
+    CaptureResetMode = 1,
+    CollectRewardExp = 100,
+    DefenceCoreID = 390014,
+    EffectCreatureId = 4051,
+    GUID = 4051,
+    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Head/Pet/T_Head_Pet_Yaoye01.T_Head_Pet_Yaoye01",
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Pet.WBP_GuidePoint_Pet",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DynQuest.T_Gp_DynQuest",
+    GuideIconBPPath2 = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Pet.T_Gp_Pet",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Pet/T_Head_Pet_Yaoye01.T_Head_Pet_Yaoye01",
+    InteractiveInfo = T.RT_1,
+    IpDes = "Pet_IpDes_405",
+    MiniGamCamInitialLocation = T.RT_2,
+    MiniGamCamStayLocation = T.RT_3,
+    MiniGameCamOffset = T.RT_7,
+    MiniGameCaptureId = 901,
+    ModelId = 64051,
+    Name = "Pet_Name_4051",
+    PetExp = 70,
+    PetMaxLevel = 60,
+    PetNameTag = "Yaoye",
+    PetType = 1,
+    PremiumTransform = 4053,
+    Rarity = 3,
+    SortPriority = 3015,
+    Sound = "SOUND_ITEM_PET",
+    UnitBPPath = "/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC_Common",
+    UnitId = 4059
   },
   [4061] = {
     BT = "/Game/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.BT_Npc_Pet_Patrol",
@@ -669,7 +793,7 @@ return ReadOnly("Pet", {
     PetType = 1,
     PremiumTransform = 4063,
     Rarity = 3,
-    SortPriority = 3017,
+    SortPriority = 3018,
     Sound = "SOUND_ITEM_PET",
     UnitBPPath = "/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC_Common",
     UnitId = 4061
@@ -702,7 +826,7 @@ return ReadOnly("Pet", {
     PetType = 1,
     PremiumTransform = 4063,
     Rarity = 3,
-    SortPriority = 3018,
+    SortPriority = 3019,
     Sound = "SOUND_ITEM_PET",
     UnitBPPath = "/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC_Common",
     UnitId = 4062
@@ -736,7 +860,7 @@ return ReadOnly("Pet", {
     Premium = 1,
     PremiumTransform = 4063,
     Rarity = 3,
-    SortPriority = 3019,
+    SortPriority = 3020,
     Sound = "SOUND_ITEM_PET",
     UnitBPPath = "/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC_Common",
     UnitId = 4063
@@ -1225,7 +1349,7 @@ return ReadOnly("Pet", {
     PetType = 1,
     PremiumTransform = 4123,
     Rarity = 4,
-    SortPriority = 4004,
+    SortPriority = 4005,
     Sound = "SOUND_ITEM_PET",
     UnitBPPath = "/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC_Common",
     UnitId = 4122
@@ -1259,10 +1383,43 @@ return ReadOnly("Pet", {
     Premium = 1,
     PremiumTransform = 4123,
     Rarity = 4,
-    SortPriority = 4005,
+    SortPriority = 4006,
     Sound = "SOUND_ITEM_PET",
     UnitBPPath = "/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC_Common",
     UnitId = 4123
+  },
+  [4128] = {
+    BT = "/Game/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.BT_Npc_Pet_Patrol",
+    BattlePetId = 412,
+    BattleRoleId = 101,
+    CaptureResetMode = 1,
+    CollectRewardExp = 100,
+    DefenceCoreID = 390014,
+    EffectCreatureId = 4121,
+    GUID = 4121,
+    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Head/Pet/T_Head_Pet_Tangshuang01.T_Head_Pet_Tangshuang01",
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Pet.WBP_GuidePoint_Pet",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DynQuest.T_Gp_DynQuest",
+    GuideIconBPPath2 = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Pet.T_Gp_Pet",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Pet/T_Head_Pet_Tangshuang01.T_Head_Pet_Tangshuang01",
+    InteractiveInfo = T.RT_1,
+    IpDes = "Pet_IpDes_412",
+    MiniGamCamInitialLocation = T.RT_5,
+    MiniGamCamStayLocation = T.RT_6,
+    MiniGameCamOffset = T.RT_7,
+    MiniGameCaptureId = 401,
+    ModelId = 64121,
+    Name = "Pet_Name_4121",
+    PetExp = 100,
+    PetMaxLevel = 60,
+    PetNameTag = "Tangshuang",
+    PetType = 1,
+    PremiumTransform = 4123,
+    Rarity = 4,
+    SortPriority = 4004,
+    Sound = "SOUND_ITEM_PET",
+    UnitBPPath = "/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC_Common",
+    UnitId = 4128
   },
   [4131] = {
     BT = "/Game/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.BT_Npc_Pet_Patrol",
@@ -1292,7 +1449,7 @@ return ReadOnly("Pet", {
     PetType = 1,
     PremiumTransform = 4133,
     Rarity = 4,
-    SortPriority = 4006,
+    SortPriority = 4007,
     Sound = "SOUND_ITEM_PET",
     UnitBPPath = "/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC_Common",
     UnitId = 4131
@@ -1325,7 +1482,7 @@ return ReadOnly("Pet", {
     PetType = 1,
     PremiumTransform = 4133,
     Rarity = 4,
-    SortPriority = 4007,
+    SortPriority = 4008,
     Sound = "SOUND_ITEM_PET",
     UnitBPPath = "/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC_Common",
     UnitId = 4132
@@ -1359,7 +1516,7 @@ return ReadOnly("Pet", {
     Premium = 1,
     PremiumTransform = 4133,
     Rarity = 4,
-    SortPriority = 4008,
+    SortPriority = 4009,
     Sound = "SOUND_ITEM_PET",
     UnitBPPath = "/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC_Common",
     UnitId = 4133
@@ -1392,7 +1549,7 @@ return ReadOnly("Pet", {
     PetType = 1,
     PremiumTransform = 4143,
     Rarity = 4,
-    SortPriority = 4009,
+    SortPriority = 4010,
     Sound = "SOUND_ITEM_PET",
     UnitBPPath = "/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC_Common",
     UnitId = 4141
@@ -1425,7 +1582,7 @@ return ReadOnly("Pet", {
     PetType = 1,
     PremiumTransform = 4143,
     Rarity = 4,
-    SortPriority = 4010,
+    SortPriority = 4011,
     Sound = "SOUND_ITEM_PET",
     UnitBPPath = "/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC_Common",
     UnitId = 4142
@@ -1459,7 +1616,7 @@ return ReadOnly("Pet", {
     Premium = 1,
     PremiumTransform = 4143,
     Rarity = 4,
-    SortPriority = 4011,
+    SortPriority = 4012,
     Sound = "SOUND_ITEM_PET",
     UnitBPPath = "/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC_Common",
     UnitId = 4143
@@ -1492,7 +1649,7 @@ return ReadOnly("Pet", {
     PetType = 1,
     PremiumTransform = 4153,
     Rarity = 4,
-    SortPriority = 4012,
+    SortPriority = 4013,
     Sound = "SOUND_ITEM_PET",
     UnitBPPath = "/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC_Common",
     UnitId = 4151
@@ -1525,7 +1682,7 @@ return ReadOnly("Pet", {
     PetType = 1,
     PremiumTransform = 4153,
     Rarity = 4,
-    SortPriority = 4013,
+    SortPriority = 4014,
     Sound = "SOUND_ITEM_PET",
     UnitBPPath = "/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC_Common",
     UnitId = 4152
@@ -1559,7 +1716,7 @@ return ReadOnly("Pet", {
     Premium = 1,
     PremiumTransform = 4153,
     Rarity = 4,
-    SortPriority = 4014,
+    SortPriority = 4015,
     Sound = "SOUND_ITEM_PET",
     UnitBPPath = "/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC_Common",
     UnitId = 4153
@@ -1592,7 +1749,7 @@ return ReadOnly("Pet", {
     PetType = 1,
     PremiumTransform = 4163,
     Rarity = 4,
-    SortPriority = 4015,
+    SortPriority = 4016,
     Sound = "SOUND_ITEM_PET",
     UnitBPPath = "/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC_Common",
     UnitId = 4161
@@ -1625,7 +1782,7 @@ return ReadOnly("Pet", {
     PetType = 1,
     PremiumTransform = 4163,
     Rarity = 4,
-    SortPriority = 4016,
+    SortPriority = 4017,
     Sound = "SOUND_ITEM_PET",
     UnitBPPath = "/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC_Common",
     UnitId = 4162
@@ -1659,7 +1816,7 @@ return ReadOnly("Pet", {
     Premium = 1,
     PremiumTransform = 4163,
     Rarity = 4,
-    SortPriority = 4017,
+    SortPriority = 4018,
     Sound = "SOUND_ITEM_PET",
     UnitBPPath = "/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC_Common",
     UnitId = 4163

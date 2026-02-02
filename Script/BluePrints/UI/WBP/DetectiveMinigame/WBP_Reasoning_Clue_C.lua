@@ -4,7 +4,7 @@ local M = Class("BluePrints.UI.BP_UIState_C")
 function M:Construct()
   self.ReddotName = "DetectiveAnswer"
   self:BindEvents()
-  self.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Panel_Clue:SetVisibility(UE4.ESlateVisibility.Collapsed)
 end
 
 function M:BindEvents()
@@ -41,10 +41,13 @@ function M:InitUIInfo(Content)
   self:SetIsMultiSelected(Content.IsMultiSelected)
   self:SetCanMultiSelected(Content.CanMultiSelected)
   self.Text_Submit:SetText(GText("Minigame_Textmap_100324"))
+  self.Text_Clue_2:SetText(GText("Minigame_Textmap_100303"))
   if Content.IsSumbit then
     self.Panel_Submit:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self:PlayAnimation(self.Submitted)
   else
     self.Panel_Submit:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self:PlayAnimation(self.NotSubmitted)
   end
 end
 
@@ -58,8 +61,9 @@ function M:OnClickButton()
   self:SelectSelf()
   self.Content.Parent:UpdateItemInfo(self.Content)
   if self.Content.Parent.Book:GetIsClueUi() then
-    self.Content.Parent.Book:PlayAnimation(self.Content.Parent.Book.xiang)
+    self.Content.Parent.Book:PlayChangeAnimation(self.Content.AnswerId)
   else
+    self.Content.Parent.Book.AnswerId = self.Content.AnswerId
     self.Content.Parent.Book:SwitchToClueUi(true)
   end
 end
@@ -188,11 +192,11 @@ function M:UpdateReddotDetail(AnswerId)
     if nil == CacheDetail[CacheKey] then
       CacheDetail[CacheKey] = true
       ReddotManager.IncreaseLeafNodeCount(self.ReddotName)
-      self.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      self.Panel_Clue:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     elseif CacheDetail[CacheKey] then
-      self.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      self.Panel_Clue:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     else
-      self.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      self.Panel_Clue:SetVisibility(UE4.ESlateVisibility.Collapsed)
     end
   end
 end
@@ -204,7 +208,7 @@ function M:DecreaseReddotDetail()
   if CacheDetail and CacheDetail[CacheKey] then
     CacheDetail[CacheKey] = false
     ReddotManager.DecreaseLeafNodeCount(self.ReddotName)
-    self.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Panel_Clue:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
 end
 

@@ -173,18 +173,15 @@ local function global_index(t, k)
   return rawget(t, k)
 end
 
+local global_mt = {}
+global_mt.__index = global_index
+setmetatable(_G, global_mt)
 if WITH_UE4_NAMESPACE then
-  local global_mt = {}
-  global_mt.__index = global_index
-  setmetatable(_G, global_mt)
   _G.UE4 = UE
   print("WITH_UE4_NAMESPACE==true")
 else
-  local global_mt = {}
-  global_mt.__index = global_index
-  setmetatable(_G, global_mt)
-  _G.UE4 = _G
-  _G.UE = _G
+  rawset(_G, "UE4", _G)
+  rawset(_G, "UE", _G)
   print("WITH_UE4_NAMESPACE==false")
 end
 
@@ -383,7 +380,6 @@ _G.Const = require("Const")
 _G.UIConst = require("BluePrints.UI.UIConst")
 _G.GWorld = require("GWorld")
 _G.BattleEventName = require("BluePrints/Combat/BattleEvents/BattleEventName")
-_G.EventManager, _G.EventID = table.unpack(require("BluePrints.Managers.EventManager"))
 _G.DialogEvent = require("BluePrints.UI.UI_PC.Common.Common_Dialog.DialogEvent")
 _G.ErrorCode = require("BluePrints.Client.ErrorCode")
 _G.ConditionUtils = require("BluePrints.Common.ConditionUtils")
@@ -441,4 +437,5 @@ local FSkillLevelStruct = UE.FSkillLevelStruct
 local FMessage = UE.FMessage
 local SetupClient = require("SetupClient")
 SetupClient:Setup()
+require("BluePrints.Managers.EventManager")
 require("LogPrint")

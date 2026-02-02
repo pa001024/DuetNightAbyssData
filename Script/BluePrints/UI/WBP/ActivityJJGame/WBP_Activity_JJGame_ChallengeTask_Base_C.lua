@@ -55,9 +55,10 @@ function M:Init(Params)
   self.Owner = Params.Owner
   self.EventDay = Params.EventDay
   self._Avatar = GWorld:GetAvatar()
-  self.MidTermTask = self._Avatar.MidTermTasks
-  self.MidTermAchvProgressRewarded = self._Avatar.MidTermAchvProgressRewarded
-  self.EventEndTime = Params.EventEndTime
+  self.MidTermGoals = self._Avatar.MidTermGoals[self.MidTermGoalEventId] or {}
+  self.MidTermTask = self.MidTermGoals.Tasks or {}
+  self.MidTermAchvProgressRewarded = self.MidTermGoals.AchvProgressRewarded or {}
+  self.EventEndTime = DataMgr.EventMain[self.MidTermGoalEventId].EventEndTime
   self:InitTaskList()
   self:InitChallengeScoreItem()
   self.ChallengeTaskScore = self:CalChallengeTaskScore()
@@ -89,7 +90,9 @@ end
 
 function M:CalChallengeTaskScore()
   local Avatar = GWorld:GetAvatar()
-  return Avatar.MidTermAchvScores
+  self.MidTermGoals = Avatar.MidTermGoals[self.MidTermGoalEventId] or {}
+  local MidTermAchvScores = self.MidTermGoals.AchvScores or 0
+  return MidTermAchvScores
 end
 
 function M:UpdateChallengeTaskScore(TaskScoreToday)
@@ -104,8 +107,10 @@ end
 
 function M:UpdateChallengeTaskList()
   self.List_Challenge:ClearListItems()
+  self.MidTermGoals = self._Avatar.MidTermGoals[self.MidTermGoalEventId] or {}
+  local MidTermTasks = self.MidTermGoals.Tasks or {}
+  local SortedTaskList = self:SortTaskList(MidTermTasks)
   self.ChallengeTaskList = {}
-  local SortedTaskList = self:SortTaskList(self._Avatar.MidTermTasks)
   for i, Task in pairs(SortedTaskList) do
     local TaskData = DataMgr.MidTermTask[Task.UniqueID]
     if not TaskData then
@@ -131,24 +136,34 @@ function M:UpdateChallengeTaskList()
 end
 
 function M:SortTaskList(TaskList)
-  local UncompletedTasks = {}
+  local ClaimableTasks = {}
+  local OngoingTasks = {}
   local CompletedTasks = {}
   for k, v in pairs(TaskList) do
     local taskKey = tonumber(k)
+    local isFinished = v.Progress >= v.Target
     if v.RewardsGot then
       table.insert(CompletedTasks, {key = taskKey, value = v})
+    elseif isFinished then
+      table.insert(ClaimableTasks, {key = taskKey, value = v})
     else
-      table.insert(UncompletedTasks, {key = taskKey, value = v})
+      table.insert(OngoingTasks, {key = taskKey, value = v})
     end
   end
-  table.sort(UncompletedTasks, function(a, b)
+  table.sort(ClaimableTasks, function(a, b)
+    return a.key < b.key
+  end)
+  table.sort(OngoingTasks, function(a, b)
     return a.key < b.key
   end)
   table.sort(CompletedTasks, function(a, b)
     return a.key < b.key
   end)
   local result = {}
-  for _, pair in ipairs(UncompletedTasks) do
+  for _, pair in ipairs(ClaimableTasks) do
+    table.insert(result, pair.value)
+  end
+  for _, pair in ipairs(OngoingTasks) do
     table.insert(result, pair.value)
   end
   for _, pair in ipairs(CompletedTasks) do
@@ -217,6 +232,16 @@ function M:TrySubChallengeRewardReddot(Target)
 end
 
 function M:TryIncreaceChallengeTaskRewardReddot(TaskId)
+  local allRewardsClaimed = true
+  for _, v in pairs(self.MidTermAchvProgressRewarded) do
+    if 0 == v then
+      allRewardsClaimed = false
+      break
+    end
+  end
+  if allRewardsClaimed then
+    return
+  end
   local CacheKey = ChallengeRewardReddotName .. TaskId
   local CacheData = ReddotManager.GetLeafNodeCacheDetail(ChallengeRewardReddotName)
   if CacheData and nil == CacheData[CacheKey] then
@@ -249,7 +274,7 @@ function M:UpdateChallengeScoreItem(TaskScoreToday)
     local Index = math.floor(Count / 10)
     local Item = self["ChallengeScoreItem_" .. Index]
     if Count <= TaskScoreToday then
-      if 1 == self._Avatar.MidTermAchvProgressRewarded[Count] then
+      if 1 == self.MidTermAchvProgressRewarded[Count] then
         Item:StopAnimation(Item.Reward)
         Item:PlayAnimation(Item.Recived)
       else

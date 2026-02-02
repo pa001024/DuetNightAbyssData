@@ -57,5 +57,12 @@ function M:OnReturnKeyDown()
   self:OnBackBtnClicked()
 end
 
+function M:OnFocusReceived(MyGeometry, InFocusEvent)
+  if self.CurrentSubUI and self.CurrentSubUI.UnlockDialog then
+    return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.CurrentSubUI.UnlockDialog)
+  end
+  return M.Super.OnFocusReceived(self, MyGeometry, InFocusEvent)
+end
+
 AssembleComponents(M)
 return M

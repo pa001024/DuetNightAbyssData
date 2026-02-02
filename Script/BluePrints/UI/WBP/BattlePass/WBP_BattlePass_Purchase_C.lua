@@ -63,6 +63,7 @@ function M:InitPanel()
   self.Text_LevelUp:SetText(GText("BATTLEPASS_RANK2_PURCHASE_DESC1"))
   self.Text_Buy_Super:SetText(GText("BATTLEPASS_RANK2_PURCHASE_DESC2"))
   self.Text_Unlock:SetText(GText("BATTLEPASS_RANK2_PURCHASE_DESC3"))
+  self:RefreshCloudTimeText()
 end
 
 function M:InitTabInfo()
@@ -166,6 +167,67 @@ function M:RefreshButtons(PayRankType)
   self.Btn_Pet.OnClicked:Add(self, function()
     EventManager:FireEvent(EventID.BattlePassPetChange)
   end)
+end
+
+function M:RefreshCloudTimeText(BattlePassPayType)
+  local function HideText(bHide)
+    self.Panel_HighPresent:SetVisibility(bHide and UE4.ESlateVisibility.Collapsed or UE4.ESlateVisibility.SelfHitTestInvisible)
+    
+    self.Panel_SuperPresent:SetVisibility(bHide and UE4.ESlateVisibility.Collapsed or UE4.ESlateVisibility.SelfHitTestInvisible)
+  end
+  
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    HideText(true)
+    return
+  end
+  local ChannelId = Avatar.ChannelId
+  if not ChannelId then
+    HideText(true)
+    return
+  end
+  local ChannelInfo = DataMgr.ChannelInfo[ChannelId]
+  if not ChannelInfo then
+    HideText(true)
+    return
+  end
+  local Providers = {
+    ["nil"] = false,
+    hero = true,
+    wegame = true,
+    lenovo = true,
+    cloud = true,
+    oppo = true
+  }
+  local bIsCNOfficial = ChannelInfo.Region == "china" and Providers[ChannelInfo.Provider or "nil"]
+  if not bIsCNOfficial then
+    HideText(true)
+    return
+  end
+  HideText(false)
+  local bHasRank2 = Avatar.BattlePassUnlockRank2
+  local bHasRank3 = Avatar.BattlePassUnlockRank3
+  if BattlePassPayType then
+    if BattlePassPayType == CommonConst.BattlePassPayType.RANK2 and bHasRank2 then
+      self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
+      self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_UpdatetoRank3"))
+    elseif BattlePassPayType == CommonConst.BattlePassPayType.RANK3 and bHasRank3 then
+      self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
+      self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_Rank3"))
+    elseif BattlePassPayType == CommonConst.BattlePassPayType.RANK2_UPGRADE_RANK3 and bHasRank3 then
+      self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
+      self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_UpdatetoRank3"))
+    end
+  elseif not bHasRank2 and not bHasRank3 then
+    self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
+    self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_Rank3"))
+  elseif bHasRank2 and not bHasRank3 then
+    self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
+    self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_UpdatetoRank3"))
+  elseif bHasRank2 and bHasRank3 then
+    self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
+    self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_Rank3"))
+  end
 end
 
 function M:StartPayRank2()
@@ -344,6 +406,7 @@ function M:BuySuccessNotify(PayRankType)
   DebugPrint("gmy@WBP_BattlePass_Purchase_C M:BuySuccessNotify", PayRankType)
   AudioManager(self):PlayUISound(self, "event:/ui/common/battle_pass_pay_money_unlock", nil, nil)
   self:RefreshButtons(PayRankType)
+  self:RefreshCloudTimeText(PayRankType)
 end
 
 function M:GetRank2Price()

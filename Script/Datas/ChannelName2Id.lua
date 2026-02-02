@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -12,14 +15,15 @@ return ReadOnly("ChannelName2Id", {
     [3] = 300
   },
   hero = {
-    [1] = 240,
-    [2] = 18,
-    [3] = 305,
-    [4] = 171,
-    [5] = 160,
+    [1] = 160,
+    [2] = 171,
+    [3] = 18,
+    [4] = 237,
+    [5] = 240,
     [6] = 56,
-    [7] = 237,
-    [8] = 295
+    [7] = 305,
+    [8] = 315,
+    [9] = 295
   },
   lenovo = {
     [1] = 297

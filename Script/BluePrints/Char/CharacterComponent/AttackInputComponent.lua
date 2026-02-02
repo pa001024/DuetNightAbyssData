@@ -38,6 +38,9 @@ function Component:PressSkill3()
   if self:CheckForbidInput() or self:CheckSkillInActive(ESkillName.Skill3) then
     return
   end
+  if self.BuffManager and self.BuffManager:CheckDisableSkillBuff(ESkillType.Skill3) then
+    UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_SKILL_FORBIDDEN"))
+  end
   self:SupportSkill()
   if self.NeedSkill3Event then
     EventManager:FireEvent(EventID.OnSkill3Pressed)
@@ -67,9 +70,6 @@ function Component:SupportSkill()
   if Success then
     self:RemoveInputCache("Support")
     local BattlePet = self:GetBattlePet()
-    if BattlePet and 0 ~= BattlePet.BattlePetId then
-      BattlePet:OnBattlePetUseSkill()
-    end
     Battle(self):TriggerBattleEvent(BattleEventName.AfterSupportSkill, self)
     EventManager:FireEvent(EventID.OnTheaterPerform, BattlePet.PetId)
   end
@@ -141,6 +141,9 @@ function Component:PressSkill1()
     self:RemoveInputCache("Skill1")
     return
   end
+  if self.BuffManager and self.BuffManager:CheckDisableSkillBuff(ESkillType.Skill1) then
+    UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_SKILL_FORBIDDEN"))
+  end
   if not self:CheckCanSkillCancel(NormalSKill) and self:CheckForbidInput() or self:CheckSkillInActive(ESkillName.Skill1) then
     self:RemoveInputCache("Skill1")
     return
@@ -161,6 +164,9 @@ function Component:PressSkill2()
     local _ = not self.CurrentMasterBan and UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_SKILL_FORBIDDEN"))
     self:RemoveInputCache("Skill2")
     return
+  end
+  if self.BuffManager and self.BuffManager:CheckDisableSkillBuff(ESkillType.Skill2) then
+    UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_SKILL_FORBIDDEN"))
   end
   if not self:CheckCanSkillCancel(UltraSKill) and self:CheckForbidInput() or self:CheckSkillInActive(ESkillName.Skill2) then
     self:RemoveInputCache("Skill2")

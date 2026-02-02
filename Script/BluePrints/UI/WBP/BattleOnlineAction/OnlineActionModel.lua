@@ -1,10 +1,8 @@
 local OnlineActionCommon = require("BluePrints.UI.WBP.BattleOnlineAction.OnlineActionCommon")
 local M = Class("BluePrints.Common.MVC.Model")
+local EMLuaConst = require("EMLuaConst")
 
 function M:Init()
-  if self._Avatar and self._Avatar == self:GetAvatar() then
-    return true
-  end
   DebugPrint("OnlineActionModel Init")
   M.Super.Init(self)
   self._Avatar = nil
@@ -17,6 +15,15 @@ function M:Init()
   self.InvitationInfos = {}
   self.NameTemp = {}
   ReddotManager.AddNodeEx("OnlineActionBtn")
+  self:InitConst()
+  self.LastNearbyQueryTime = 0
+end
+
+function M:InitConst()
+  DebugPrint("OnlineActionModel InitConst RegionOnlineNearbyMaxCount " .. EMLuaConst.RegionOnlineNearbyMaxCount .. " RegionOnlineNearbyMaxDist " .. EMLuaConst.RegionOnlineNearbyMaxDist)
+  EMLuaConst.RegionOnlineNearbyMaxCount = OnlineActionCommon.MaxNearbyPlayers
+  EMLuaConst.RegionOnlineNearbyMaxDist = OnlineActionCommon.NearbtPlayDistance
+  DebugPrint("AfterOnlineActionModel InitConst RegionOnlineNearbyMaxCount " .. EMLuaConst.RegionOnlineNearbyMaxCount .. " RegionOnlineNearbyMaxDist " .. EMLuaConst.RegionOnlineNearbyMaxDist)
 end
 
 function M:CreatFakeInvitationInfo()
@@ -198,12 +205,12 @@ function M:RemoveApplyInfo(Info)
   for index, ApplyInfo in pairs(self.ApplyInfos) do
     if ApplyInfo == Info then
       table.remove(self.ApplyInfos, index)
-      DebugPrint("RemoveApplyInfo: Removed apply for Uid: " .. Info.Uid)
+      DebugPrint("RemoveApplyInfo: Removed apply for Uid: " .. tostring(Info and Info.Uid or ""))
       self:CheckIsNeedHideBtn()
       return
     end
   end
-  DebugPrint("RemoveApplyInfo: Info not found in applys: " .. Info.Uid)
+  DebugPrint("RemoveApplyInfo: Info not found in applys: " .. tostring(Info and Info.Uid or ""))
 end
 
 function M:SetAllInfoRead()
@@ -225,10 +232,61 @@ function M:ChangeAction(UniqueId)
 end
 
 function M:FindPlayerAround()
+  self._Avatar = GWorld:GetAvatar()
   if -1 == self._Avatar.CurrentOnlineType then
     return
   end
+  local now = os.time()
+  if self.LastNearbyQueryTime and now - self.LastNearbyQueryTime < OnlineActionCommon.NearbySearchCooldown and self.NearbyPlayerInfos and #self.NearbyPlayerInfos > 0 then
+    return
+  end
   self.NearbyPlayerInfos = {}
+  if OnlineActionCommon.UseSyncNearbyPlayers then
+    local Sync = UE4.URegionSyncSubsystem.GetInstance(GWorld.GameInstance)
+    if not Sync or Sync:IsNearbyResultUninitialized() then
+      ScreenPrint("::意外错误，多线程查找附近玩家失败，退化成在Lua层寻找")
+      self:FindPlayerAroundOld()
+      return
+    end
+    local NearbyIds = Sync:GetNearbyPlayersIDs()
+    if not NearbyIds then
+      return
+    end
+    DebugPrint("开始使用多线程查找结果生成待邀请列表")
+    local added = 0
+    for i = 1, NearbyIds:Length() do
+      local eidstr = NearbyIds:GetRef(i)
+      local eid = CommonUtils.Str2ObjId(eidstr)
+      local OtherPlayer = self._Avatar:GetBornedChar(eid)
+      local AvatarData = self._Avatar.RegionAvatars[eid]
+      if OtherPlayer and AvatarData and AvatarData.AvatarInfo and not OtherPlayer:CharacterInTag("Seating") then
+        table.insert(self.NearbyPlayerInfos, {
+          Uid = AvatarData.AvatarInfo.Uid,
+          NickName = AvatarData.AvatarInfo.Nickname,
+          Eid = eid,
+          Actor = OtherPlayer,
+          Level = AvatarData.AvatarInfo.Level or 1,
+          TitleBefore = AvatarData.AvatarInfo.TitleBefore,
+          TitleAfter = AvatarData.AvatarInfo.TitleAfter,
+          TitleFrame = AvatarData.AvatarInfo.TitleFrame or 10001,
+          HeadIconId = AvatarData.AvatarInfo.HeadIconId,
+          HeadFrameId = AvatarData.AvatarInfo.HeadFrameId
+        })
+        added = added + 1
+        if added >= EMLuaConst.RegionOnlineNearbyMaxCount then
+          break
+        end
+      end
+    end
+    self.LastNearbyQueryTime = now
+    return
+  else
+    DebugPrint("关闭多线程查找附近玩家，在Lua层寻找")
+    self:FindPlayerAroundOld()
+  end
+end
+
+function M:FindPlayerAroundOld()
   local MainPlayer = UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
   if not MainPlayer then
     ScreenPrint("FindPlayerAround: MainPlayer is nil")
@@ -238,35 +296,47 @@ function M:FindPlayerAround()
   local CalDistanceFunc = UE4.UKismetMathLibrary.Vector_Distance
   local SelfRegionId = self._Avatar.CurrentRegionId
   for ObjId, AvatarData in pairs(self._Avatar.RegionAvatars) do
+    DebugPrint("FindPlayerAround: Checking player with ObjId: " .. tostring(ObjId))
     local OtherPlayer = self._Avatar:GetBornedChar(ObjId)
-    if OtherPlayer and AvatarData.AvatarInfo.CurrentRegionId then
+    if OtherPlayer and AvatarData.AvatarInfo.CurrentRegionId == self._Avatar.CurrentRegionId then
+      DebugPrint("FindPlayerAround: OtherPlayer found for ObjId: " .. tostring(ObjId))
       local OtherPlayerLocation = OtherPlayer:K2_GetActorLocation()
+      DebugPrint("FindPlayerAround: OtherPlayerLocation for ObjId " .. tostring(ObjId) .. ": " .. tostring(OtherPlayerLocation))
       local Distance = CalDistanceFunc(MainPlayerLocation, OtherPlayerLocation)
-      if Distance < OnlineActionCommon.NearbtPlayDistance and not OtherPlayer:CharacterInTag("Seating") then
-        table.insert(self.NearbyPlayerInfos, {
-          Uid = AvatarData.AvatarInfo.Uid,
-          NickName = AvatarData.AvatarInfo.Nickname,
-          Eid = ObjId,
-          Actor = OtherPlayer,
-          Level = AvatarData.AvatarInfo.Level or 1,
-          TitleBefore = AvatarData.AvatarInfo.TitleBefore,
-          TitleAfter = AvatarData.AvatarInfo.TitleAfter,
-          TitleFrame = AvatarData.AvatarInfo.TitleFrame or 10001,
-          HeadIconId = AvatarData.AvatarInfo.HeadIconId,
-          HeadFrameId = AvatarData.AvatarInfo.HeadFrameId
-        })
-        if #self.NearbyPlayerInfos >= OnlineActionCommon.MaxNearbyPlayers then
-          DebugPrint("FindPlayerAround: MaxNearbyPlayers reached 达到最大玩家人数，不再搜索")
-          break
-        else
+      DebugPrint("FindPlayerAround: Distance to ObjId " .. tostring(ObjId) .. ": " .. tostring(Distance))
+      if Distance < OnlineActionCommon.NearbtPlayDistance then
+        DebugPrint("FindPlayerAround: Player with ObjId " .. tostring(AvatarData.AvatarInfo.Nickname) .. " is nearby")
+        if not OtherPlayer:CharacterInTag("Seating") then
+          DebugPrint("FindPlayerAround: Player with ObjId " .. tostring(AvatarData.AvatarInfo.Nickname) .. " is not in the same region")
+          table.insert(self.NearbyPlayerInfos, {
+            Uid = AvatarData.AvatarInfo.Uid,
+            NickName = AvatarData.AvatarInfo.Nickname,
+            Eid = ObjId,
+            Actor = OtherPlayer,
+            Level = AvatarData.AvatarInfo.Level or 1,
+            TitleBefore = AvatarData.AvatarInfo.TitleBefore,
+            TitleAfter = AvatarData.AvatarInfo.TitleAfter,
+            TitleFrame = AvatarData.AvatarInfo.TitleFrame or 10001,
+            HeadIconId = AvatarData.AvatarInfo.HeadIconId,
+            HeadFrameId = AvatarData.AvatarInfo.HeadFrameId
+          })
+          if #self.NearbyPlayerInfos >= EMLuaConst.RegionOnlineNearbyMaxCount then
+            DebugPrint("FindPlayerAround: RegionOnlineNearbyMaxCount reached 达到最大玩家人数，不再搜索")
+            break
+          end
         end
+      else
+        DebugPrint("FindPlayerAround: Player with ObjId " .. tostring(ObjId) .. " is too far")
       end
     else
+      DebugPrint("FindPlayerAround: OtherPlayer is nil for ObjId: " .. tostring(ObjId))
     end
   end
+  DebugPrint("FindPlayerAround: Found " .. tostring(#self.NearbyPlayerInfos) .. " nearby players")
+  self.LastNearbyQueryTime = os.time()
 end
 
-function M:CheckNearbyInfoVaild(NearbyInfo)
+function M:CheckNearbyInfoVaild(NearbyInfo, Index)
   local Eid = NearbyInfo.Eid
   local Char = self._Avatar:GetBornedChar(Eid)
   if not Char then
@@ -287,6 +357,16 @@ function M:CheckNearbyInfoVaild(NearbyInfo)
   end
   if Char:CharacterInTag("Seating") then
     return -2
+  end
+  if self.ActionUniqueId and nil ~= Index then
+    local Mechanism = self:GetMechanism()
+    if Mechanism then
+      local interactiveId0 = math.max(0, (Index or 1) - 1)
+      local ok = self:IsSeatValid(Mechanism, interactiveId0)
+      if not ok then
+        return -3
+      end
+    end
   end
   return true
 end
@@ -416,7 +496,10 @@ function M:GetPlayerName(Eid)
   return ""
 end
 
-function M:CheckPlayerVaild(Eid)
+function M:GetPlayerActor(Eid)
+  if Eid == self._Avatar.Eid then
+    return UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+  end
   local AvatarData = self._Avatar.RegionAvatars[Eid]
   if not AvatarData then
     return false
@@ -425,25 +508,7 @@ function M:CheckPlayerVaild(Eid)
   if not Actor then
     return false
   end
-  return true
-end
-
-function M:CheckIsInvitationValid(InvitationInfo)
-  return true
-end
-
-function M:CheckIsApplyValid(ApplyInfo)
-  if not ApplyInfo then
-    return false
-  end
-  local Actor = ApplyInfo.Actor
-  if not Actor and self._Avatar and ApplyInfo.ObjId then
-    Actor = self._Avatar:GetBornedChar(ApplyInfo.ObjId)
-  end
-  if Actor and Actor:CharacterInTag("Interactive") then
-    return false
-  end
-  return true
+  return Actor
 end
 
 function M:GetPlayerName(Eid)
@@ -529,7 +594,9 @@ function M:GetSeatVaildInfo()
   if not Mechanism then
     return false
   end
-  return Mechanism:GetValidPoint()
+  local ValidPoint = Mechanism:GetValidPoint()
+  DebugPrintTable(ValidPoint)
+  return ValidPoint
 end
 
 function M:IfHaveSeatValid()
@@ -537,12 +604,68 @@ function M:IfHaveSeatValid()
   if not SeatVaildInfo then
     return false
   end
-  for index, Valid in pairs(SeatVaildInfo) do
-    if Valid and index + 1 <= self.MaxPlayerNum then
+  for index, Info in pairs(SeatVaildInfo) do
+    if Info.Valid and index + 1 <= self.MaxPlayerNum then
       return true
     end
   end
   return false
+end
+
+function M:GetMechanismByUniqueId(UniqueId)
+  if not UniqueId then
+    return false
+  end
+  local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
+  if not GameState then
+    return false
+  end
+  return GameState.RegionOnlineMechanismMap:Find(UniqueId)
+end
+
+function M:IsSeatValid(Mechanism, InteractiveId)
+  if not Mechanism then
+    return false
+  end
+  if nil == InteractiveId then
+    return false
+  end
+  return Mechanism:CheckInteractiveIdValid(InteractiveId)
+end
+
+function M:CheckJoinValid(Eid, UniqueId, InteractiveId)
+  local Actor = self:GetPlayerActor(Eid)
+  if not Actor then
+    return -1
+  end
+  if Actor:CharacterInTag("Seating") then
+    return -3
+  end
+  local Mechanism = self:GetMechanismByUniqueId(UniqueId)
+  if not Mechanism then
+    return -2
+  end
+  local actorLoc = Actor:K2_GetActorLocation()
+  local mechLoc = Mechanism:K2_GetActorLocation()
+  local dist = UE4.UKismetMathLibrary.Vector_Distance(actorLoc, mechLoc)
+  if dist > OnlineActionCommon.NearbtPlayDistance then
+    return -2
+  end
+  if nil ~= InteractiveId then
+    local ok = self:IsSeatValid(Mechanism, InteractiveId)
+    if not ok then
+      return -4
+    end
+  elseif not self:IfHaveSeatValid() then
+    return -4
+  end
+  return 0
+end
+
+function M:GetAutoAcceptOnlineAction()
+  local AutoAcceptOnlineAction = EMCache:Get("AutoAcceptOnlineAction")
+  DebugPrint("AutoAcceptOnlineAction", AutoAcceptOnlineAction)
+  return AutoAcceptOnlineAction
 end
 
 return M

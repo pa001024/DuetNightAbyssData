@@ -18,6 +18,7 @@ function Menu_World_PC_C:Initialize(Initializer)
   self.ActivityEntranceId = 19
   self.ShopEntranceId = 4
   self.RelatedProductEntranceId = 27
+  self.CloudGameEntranceId = 30
 end
 
 function Menu_World_PC_C:OnLoaded(...)
@@ -544,8 +545,24 @@ function Menu_World_PC_C:InitSystemItem()
         else
           Item = self.Entrance_Activity
         end
-      elseif id == self.RelatedProductEntranceId and UE.AHotUpdateGameMode.IsGlobalPak() then
-        goto lbl_236
+      elseif id == self.RelatedProductEntranceId then
+        if UE.AHotUpdateGameMode.IsGlobalPak() then
+          goto lbl_270
+        end
+      elseif id == self.CloudGameEntranceId then
+        local ChannelId = HeroUSDKSubsystem(self):GetChannelId()
+        local IgnoreCNChannelIds = {
+          [46] = true,
+          [303] = true,
+          [269] = true,
+          [286] = true,
+          [297] = true,
+          [301] = true,
+          [300] = true
+        }
+        if UE.AHotUpdateGameMode.IsGlobalPak() or IgnoreCNChannelIds[ChannelId] then
+          goto lbl_270
+        end
       else
         local TaskName = "MenuEntranceBtn_" .. id
         Item = UIManager(GWorld.GameInstance):_CreateWidgetNew(WidgetName)
@@ -583,7 +600,7 @@ function Menu_World_PC_C:InitSystemItem()
         self.Entrance_Activity:SetVisibility(UIConst.VisibilityOp.Collapsed)
       end
     end
-    ::lbl_236::
+    ::lbl_270::
   end
   ItemNum = ItemNum + 4 - ItemNum % 4
   local EmptyNum = ItemNum - InitSuccNum
@@ -929,11 +946,23 @@ function Menu_World_PC_C:SetFocus_Lua()
 end
 
 local function DayAndNightForbidFunc(self)
-  local EnvironmentManager = UE4.UGameplayStatics.GetActorOfClass(self, UE4.AEnvironmentManager:StaticClass())
-  if EnvironmentManager and EnvironmentManager.GetEnableTimeElapse then
-    return not EnvironmentManager:GetEnableTimeElapse()
+  local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+  if not GameMode then
+    return true
   end
-  return false
+  local SubSystem = GameMode:GetRegionDataMgrSubSystem()
+  if not SubSystem then
+    return true
+  end
+  local CurSubRegionId = SubSystem:GetCurSubRegionId()
+  if not CurSubRegionId or CurSubRegionId <= 0 then
+    return true
+  end
+  local SubRegionData = DataMgr.SubRegion[CurSubRegionId]
+  if not SubRegionData then
+    return true
+  end
+  return SubRegionData.TODSetting ~= true
 end
 
 local ForbidFunc = {DayAndNight = DayAndNightForbidFunc}

@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -91,6 +94,11 @@ return ReadOnly("WeaponCardLevel", {
     CardLevelMax = 5,
     CollectRewardExp = 200,
     WeaponId = 10403
+  },
+  [10404] = {
+    CardLevelMax = 5,
+    CollectRewardExp = 200,
+    WeaponId = 10404
   },
   [10501] = {
     CardLevelMax = 5,
@@ -221,6 +229,11 @@ return ReadOnly("WeaponCardLevel", {
     CardLevelMax = 5,
     CollectRewardExp = 200,
     WeaponId = 20504
+  },
+  [20505] = {
+    CardLevelMax = 5,
+    CollectRewardExp = 200,
+    WeaponId = 20505
   },
   [20506] = {
     CardLevelMax = 5,

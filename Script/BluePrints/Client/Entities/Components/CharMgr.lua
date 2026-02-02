@@ -58,7 +58,48 @@ function Component:_OnPropChangeCommonChars(Keys)
   end
   for SkinId, Skin in pairs(CommonChar.OwnedSkins or {}) do
     if CharModel:GetCharIdBySkinId(SkinId) == nil then
+      CharModel:OnNewCharSkinObtained(SkinId, CharId)
       EventManager:FireEvent(EventID.OnNewCharSkinObtained, SkinId, CharId)
+    end
+  end
+  for HairId, Hair in pairs(CommonChar.OwnedHairs or {}) do
+    if nil == CharModel:GetCharIdByHairId(HairId) then
+      CharModel:OnNewCharHairObtained(HairId, CharId)
+      EventManager:FireEvent(EventID.OnNewCharHairObtained, HairId, CharId)
+    end
+  end
+end
+
+function Component:_OnPropChangeOtherCharSkins(Keys)
+  local CharId = Keys and Keys[1]
+  if not CharId then
+    return
+  end
+  local OtherCharSkins = self.OtherCharSkins[CharId]
+  if not OtherCharSkins then
+    return
+  end
+  for _, SkinId in pairs(OtherCharSkins or {}) do
+    if CharModel:GetCharIdBySkinId(SkinId) == nil then
+      CharModel:OnNewCharSkinObtained(SkinId, CharId)
+      EventManager:FireEvent(EventID.OnNewCharSkinObtained, SkinId, CharId)
+    end
+  end
+end
+
+function Component:_OnPropChangeOtherCharHairs(Keys)
+  local CharId = Keys and Keys[1]
+  if not CharId then
+    return
+  end
+  local OtherCharHairs = self.OtherCharHairs[CharId]
+  if not OtherCharHairs then
+    return
+  end
+  for HairId, Hair in pairs(OtherCharHairs or {}) do
+    if CharModel:GetCharIdByHairId(HairId) == nil then
+      CharModel:OnNewCharHairObtained(HairId, CharId)
+      EventManager:FireEvent(EventID.OnNewCharHairObtained, HairId, CharId)
     end
   end
 end
@@ -86,10 +127,15 @@ end
 
 function Component:_OnPropChangeCharAccessorys()
   for _, AccessoryId in pairs(self.CharAccessorys) do
-    if not CharModel:IsCharAccessoryExist(AccessoryId) then
+    if not self:IsCharAccessoryExist(AccessoryId) then
+      CharModel:OnNewCharAccessoryObtained(AccessoryId)
       EventManager:FireEvent(EventID.OnNewCharAccessoryObtained, AccessoryId)
     end
   end
+end
+
+function Component:IsCharAccessoryExist(AccessoryId)
+  return CharModel:IsCharAccessoryExist(AccessoryId)
 end
 
 function Component:ChangeChar(cb)
@@ -109,7 +155,10 @@ end
 
 function Component:OnSwitchCurrentChar(Ret, CharUuid)
   self.logger.debug("OnSwitchCurrentChar", Ret, CharUuid)
-  EventManager:FireEvent(EventID.OnSwitchRole, CharUuid)
+  EventManager:FireEvent(EventID.OnSwitchCurrentChar, Ret, CharUuid)
+  if Ret == ErrorCode.RET_SUCCESS then
+    EventManager:FireEvent(EventID.OnSwitchRole, CharUuid)
+  end
 end
 
 function Component:SwitchWeapon(WeaponTag, WeaponUuid)
@@ -204,11 +253,14 @@ function Component:ActivateCharSkillTreeNode(CharUuid, TreeIndex, NodeIndex)
   self:CallServer("ActivateCharSkillTreeNode", callback, CharUuid, TreeIndex, NodeIndex)
 end
 
-function Component:UnlockCharUsePiece(CharId)
+function Component:UnlockCharUsePiece(CharId, CB)
   self.logger.debug("UnlockCharUsePiece Begin", CharId)
   
   local function Callback(Ret)
     self.logger.debug("UnlockCharUsePiece Callback", Ret)
+    if CB then
+      CB(Ret, CharId)
+    end
     EventManager:FireEvent(EventID.OnUnlockCharUsePiece, Ret, CharId)
   end
   

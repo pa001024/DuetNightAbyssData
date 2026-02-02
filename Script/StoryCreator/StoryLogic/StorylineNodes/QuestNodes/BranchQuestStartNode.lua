@@ -82,6 +82,7 @@ function BranchQuestStartNode:OnChooseTrack()
         TaskUIObj.VBox_SubTasks:AddChildToVerticalBox(ChildQuestWidget)
         TaskUIObj.SubTaskWidgetsTable["Branch_" .. tostring(SubTaskIndex)] = ChildQuestWidget
         TaskUIObj.VBox_SubTasks:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+        ChildQuestWidget.SubTaskIndex = SubTaskIndex
         ChildQuestWidget:SetBranchInfo(BranchQuestInfo.TargetBranchQuestKey, GText(BranchQuestInfo.BranchQuestName))
       end
       SubTaskIndex = SubTaskIndex + 1
@@ -126,6 +127,7 @@ function BranchQuestStartNode:ExecuteBranchQuestNode()
         TaskUIObj.SubTaskWidgetsTable["Branch_" .. tostring(SubTaskIndex)] = ChildQuestWidget
         TaskUIObj.VBox_SubTasks:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
         ChildQuestWidget:PlayAnimation(ChildQuestWidget.In)
+        ChildQuestWidget.SubTaskIndex = SubTaskIndex
         ChildQuestWidget:SetBranchInfo(BranchQuestInfo.TargetBranchQuestKey, GText(BranchQuestInfo.BranchQuestName))
       end
       SubTaskIndex = SubTaskIndex + 1
@@ -155,6 +157,7 @@ function BranchQuestStartNode:ExecuteBranchQuestNode()
                 TaskUIObj.SubTaskWidgetsTable["Branch_" .. tostring(SubTaskIndex)] = ChildQuestWidget
                 TaskUIObj.VBox_SubTasks:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
                 ChildQuestWidget:PlayAnimation(ChildQuestWidget.In)
+                ChildQuestWidget.SubTaskIndex = SubTaskIndex
                 ChildQuestWidget:SetBranchInfo(BranchQuestInfo.TargetBranchQuestKey, GText(BranchQuestInfo.BranchQuestName))
               end
               SubTaskIndex = SubTaskIndex + 1
@@ -172,6 +175,7 @@ function BranchQuestStartNode:ExecuteBranchQuestNode()
             if IsValid(ChildWidget) then
               ChildWidget:PlayAnimation(ChildWidget.In)
               Index = Index + 1
+              ChildWidget.SubTaskIndex = Index
               ChildWidget:SetBranchInfo(BranchQuestInfo.TargetBranchQuestKey, GText(BranchQuestInfo.BranchQuestName))
             end
           end

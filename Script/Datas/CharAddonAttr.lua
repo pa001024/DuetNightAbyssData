@@ -29,6 +29,9 @@ T.RT_10 = {
 }
 T.RT_11 = {AttrName = "MaxHp", Rate = 0.2}
 T.RT_12 = {AttrName = "MaxHp", Rate = 0.3}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

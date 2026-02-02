@@ -27,4 +27,16 @@ function M:PlayLossAnimation(IsHardMode)
   end
 end
 
+function M:PlayFullAnimation()
+  self:PlayAnimation(self.Full)
+end
+
+function M:ShowStarLight()
+  self.StarSlot:GetChildAt(0).WS_Type:SetActiveWidgetIndex(1)
+end
+
+function M:ShowStarGrey()
+  self.StarSlot:GetChildAt(0).WS_Type:SetActiveWidgetIndex(0)
+end
+
 return M

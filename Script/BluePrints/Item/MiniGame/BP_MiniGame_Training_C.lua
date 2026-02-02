@@ -7,4 +7,7 @@ function BP_MiniGame_Training_C:OpenMechanism(Id)
   UIManager:LoadUINew("TrainingGroundSetup")
 end
 
+function BP_MiniGame_Training_C:CloseMechanism(PlayerId)
+end
+
 return BP_MiniGame_Training_C

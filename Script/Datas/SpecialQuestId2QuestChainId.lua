@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -209,5 +212,15 @@ return ReadOnly("SpecialQuestId2QuestChainId", {
   [200304] = {
     [1] = 20030401,
     [2] = 20030402
+  },
+  [200308] = {
+    [1] = 20030802
+  },
+  [200310] = {
+    [1] = 20031002,
+    [2] = 20031001
+  },
+  [200313] = {
+    [1] = 20031301
   }
 })

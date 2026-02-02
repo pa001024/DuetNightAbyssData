@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -43,7 +46,9 @@ return ReadOnly("ModSelectDungeon", {
       5001,
       5002,
       5003,
-      5004
+      5004,
+      5005,
+      5006
     },
     Name = "UI_DungeonMod_Tab_50",
     Sequence = 50
@@ -71,7 +76,9 @@ return ReadOnly("ModSelectDungeon", {
       6005,
       6006,
       6007,
-      6008
+      6008,
+      6009,
+      6010
     },
     Name = "UI_DungeonMod_Tab_60",
     Sequence = 70
@@ -100,7 +107,8 @@ return ReadOnly("ModSelectDungeon", {
       7003,
       7004,
       7005,
-      7006
+      7006,
+      7007
     },
     Name = "UI_DungeonMod_Tab_70",
     Sequence = 90
@@ -112,7 +120,11 @@ return ReadOnly("ModSelectDungeon", {
       8002,
       8003,
       8004,
-      8005
+      8005,
+      8006,
+      8007,
+      8008,
+      8009
     },
     Name = "UI_DungeonMod_Tab_80",
     Sequence = 100

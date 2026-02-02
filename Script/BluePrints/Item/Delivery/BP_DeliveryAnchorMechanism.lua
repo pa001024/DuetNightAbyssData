@@ -56,7 +56,7 @@ function M:InitTempleInteractiveComponent()
     local ComponentClass = LoadClass("/Game/BluePrints/Item/Delivery/BP_DeliveryTempleInteractiveComponent.BP_DeliveryTempleInteractiveComponent_C")
     local Component = self:AddComponentByClass(ComponentClass, false, FTransform(), false)
     Component:SetTempleId(self.TempleIds[i])
-    Component.InteractiveDistance = self.DefaultInteractiveComponent.InteractiveDistance
+    Component:SetInteractiveDistance(self.DefaultInteractiveComponent.InteractiveDistance)
     Component.InteractiveAngle = self.DefaultInteractiveComponent.InteractiveAngle
     Component.InteractiveFaceAngle = self.DefaultInteractiveComponent.InteractiveFaceAngle
     Component:InitCommonUIConfirmID(self.Data.InteractiveId)

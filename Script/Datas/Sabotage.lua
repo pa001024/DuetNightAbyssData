@@ -10,6 +10,9 @@ T.RT_4 = {
 T.RT_5 = {
   [3] = T.RT_3
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

@@ -29,6 +29,7 @@ function M:Init(RootPage, FishingSpotId, NeedMontage)
     self.Main:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
   self.Tip_DayAndNight:Init()
+  self:CheckReddotCount()
 end
 
 function M:UpdateFishingRodModelId()
@@ -322,13 +323,13 @@ function M:OnClickDisplayFish(FishResourceId)
 end
 
 function M:OnAddFocusDisplayFish()
-  if self.RootPage.DeviceInPc then
+  if self.RootPage.DeviceInPc and not self.RootPage.CurMode then
     self.BtnText:SetPCVisibility(true)
   end
 end
 
 function M:OnRemovedFocusDisplayFish()
-  if self.RootPage.DeviceInPc then
+  if self.RootPage.DeviceInPc and not self.RootPage.CurMode then
     self.BtnText:SetPCVisibility(false)
   end
 end
@@ -675,7 +676,7 @@ function M:CheckCompleteAchieveCount()
   local AchievementList = DataMgr.FishingAchievement
   for AchievementId, Data in pairs(AchievementList) do
     local FishiAchv = Avatar.FishAchvs[AchievementId]
-    if FishiAchv:IsComplete() and FishiAchv:CanRecvReward() then
+    if FishiAchv and FishiAchv:IsComplete() and FishiAchv:CanRecvReward() then
       CanReceiveCount = CanReceiveCount + 1
     end
   end
@@ -780,6 +781,31 @@ function M:BP_GetDesiredFocusTarget()
 end
 
 function M:OnClickEmpty()
+end
+
+function M:CheckReddotCount()
+  local UnLockData = EMCache:Get("FishUnLockData", true)
+  local UnLockMapData = EMCache:Get("FishMapUnLockData", true)
+  ReddotManager.ClearLeafNodeCount("AnglingMap")
+  if not UnLockData then
+    return
+  end
+  local UnLockCount = 0
+  if UnLockData then
+    for Id, State in pairs(UnLockData) do
+      UnLockCount = UnLockCount + 1
+    end
+  end
+  local UnLockMapCount = 0
+  if UnLockMapData then
+    for Id, State in pairs(UnLockMapData) do
+      UnLockMapCount = UnLockMapCount + 1
+    end
+  end
+  if UnLockCount <= UnLockMapCount then
+    return
+  end
+  ReddotManager.IncreaseLeafNodeCount("AnglingMap", UnLockCount - UnLockMapCount)
 end
 
 return M

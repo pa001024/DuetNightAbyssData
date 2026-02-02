@@ -2,8 +2,10 @@ local T = {}
 T.RT_1 = {}
 T.RT_2 = {
   AbyssShop = T.RT_1,
+  AutoChessShop = T.RT_1,
   ExploreBadgeShop = T.RT_1,
   FishingShop = T.RT_1,
+  GiftShop = T.RT_1,
   HuaxuEventShop = T.RT_1,
   HuaxuExploreShop = T.RT_1,
   RaidShopSeason01 = T.RT_1,
@@ -11,6 +13,9 @@ T.RT_2 = {
   Shop = T.RT_1,
   WeeklyDungeonShop = T.RT_1
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -18,8 +23,20 @@ return ReadOnly("ShopItem2ShopSubId", {
   Char = T.RT_2,
   CharAccessory = {
     AbyssShop = T.RT_1,
+    AutoChessShop = {
+      [10011] = {
+        [1] = {ShopItemId = 10006103, SubTabId = 100061}
+      },
+      [12123] = {
+        [1] = {ShopItemId = 10006102, SubTabId = 100061}
+      },
+      [13012] = {
+        [1] = {ShopItemId = 10006104, SubTabId = 100061}
+      }
+    },
     ExploreBadgeShop = T.RT_1,
     FishingShop = T.RT_1,
+    GiftShop = T.RT_1,
     HuaxuEventShop = T.RT_1,
     HuaxuExploreShop = T.RT_1,
     RaidShopSeason01 = T.RT_1,
@@ -29,65 +46,65 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {ShopItemId = 140106, SubTabId = 1402}
       },
       [10010] = {
-        [1] = {ShopItemId = 120202, SubTabId = 1202}
+        [1] = {ShopItemId = 120202, SubTabId = 1210}
       },
       [10012] = {
         [1] = {ShopItemId = 140104, SubTabId = 1402}
       },
       [10013] = {
-        [1] = {ShopItemId = 120203, SubTabId = 1202},
+        [1] = {ShopItemId = 120203, SubTabId = 1210},
         [2] = {ShopItemId = 140105, SubTabId = 1402}
       },
       [10015] = {
-        [1] = {ShopItemId = 120219, SubTabId = 1202}
+        [1] = {ShopItemId = 120219, SubTabId = 1210}
       },
       [10016] = {
-        [1] = {ShopItemId = 120213, SubTabId = 1202}
+        [1] = {ShopItemId = 120213, SubTabId = 1210}
       },
       [10017] = {
-        [1] = {ShopItemId = 120212, SubTabId = 1202}
+        [1] = {ShopItemId = 120212, SubTabId = 1210}
       },
       [10018] = {
-        [1] = {ShopItemId = 120211, SubTabId = 1202}
+        [1] = {ShopItemId = 120211, SubTabId = 1210}
       },
       [10031] = {
-        [1] = {ShopItemId = 120220, SubTabId = 1202}
+        [1] = {ShopItemId = 120220, SubTabId = 1210}
       },
       [10035] = {
-        [1] = {ShopItemId = 120217, SubTabId = 1202}
+        [1] = {ShopItemId = 120217, SubTabId = 1210}
       },
       [10036] = {
-        [1] = {ShopItemId = 120225, SubTabId = 1202}
+        [1] = {ShopItemId = 120225, SubTabId = 1210}
       },
       [10037] = {
-        [1] = {ShopItemId = 120214, SubTabId = 1202}
+        [1] = {ShopItemId = 120214, SubTabId = 1210}
       },
       [10038] = {
-        [1] = {ShopItemId = 120215, SubTabId = 1202}
+        [1] = {ShopItemId = 120215, SubTabId = 1210}
       },
       [10039] = {
-        [1] = {ShopItemId = 120216, SubTabId = 1202}
+        [1] = {ShopItemId = 120216, SubTabId = 1210}
       },
       [10040] = {
-        [1] = {ShopItemId = 120204, SubTabId = 1202}
+        [1] = {ShopItemId = 120204, SubTabId = 1210}
       },
       [10041] = {
-        [1] = {ShopItemId = 120205, SubTabId = 1202}
+        [1] = {ShopItemId = 120205, SubTabId = 1210}
       },
       [10042] = {
-        [1] = {ShopItemId = 120206, SubTabId = 1202}
+        [1] = {ShopItemId = 120206, SubTabId = 1210}
       },
       [10043] = {
-        [1] = {ShopItemId = 120207, SubTabId = 1202}
+        [1] = {ShopItemId = 120207, SubTabId = 1210}
       },
       [10044] = {
-        [1] = {ShopItemId = 120208, SubTabId = 1202}
+        [1] = {ShopItemId = 120208, SubTabId = 1210}
       },
       [10045] = {
-        [1] = {ShopItemId = 120209, SubTabId = 1202}
+        [1] = {ShopItemId = 120209, SubTabId = 1210}
       },
       [10046] = {
-        [1] = {ShopItemId = 120218, SubTabId = 1202}
+        [1] = {ShopItemId = 120218, SubTabId = 1210}
       },
       [10047] = {
         [1] = {ShopItemId = 140107, SubTabId = 1402}
@@ -96,10 +113,10 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {ShopItemId = 140108, SubTabId = 1402}
       },
       [10049] = {
-        [1] = {ShopItemId = 120224, SubTabId = 1202}
+        [1] = {ShopItemId = 120224, SubTabId = 1210}
       },
       [10050] = {
-        [1] = {ShopItemId = 120201, SubTabId = 1202}
+        [1] = {ShopItemId = 120201, SubTabId = 1210}
       },
       [10053] = {
         [1] = {
@@ -123,28 +140,28 @@ return ReadOnly("ShopItem2ShopSubId", {
         }
       },
       [10056] = {
-        [1] = {ShopItemId = 120226, SubTabId = 1202}
+        [1] = {ShopItemId = 120226, SubTabId = 1210}
       },
       [10057] = {
-        [1] = {ShopItemId = 120230, SubTabId = 1202}
+        [1] = {ShopItemId = 120230, SubTabId = 1210}
       },
       [10058] = {
-        [1] = {ShopItemId = 120221, SubTabId = 1202}
+        [1] = {ShopItemId = 120221, SubTabId = 1210}
       },
       [10059] = {
-        [1] = {ShopItemId = 120222, SubTabId = 1202}
+        [1] = {ShopItemId = 120222, SubTabId = 1210}
       },
       [10060] = {
-        [1] = {ShopItemId = 120223, SubTabId = 1202}
+        [1] = {ShopItemId = 120223, SubTabId = 1210}
       },
       [10061] = {
-        [1] = {ShopItemId = 120228, SubTabId = 1202}
+        [1] = {ShopItemId = 120228, SubTabId = 1210}
       },
       [10062] = {
-        [1] = {ShopItemId = 120229, SubTabId = 1202}
+        [1] = {ShopItemId = 120229, SubTabId = 1210}
       },
       [10063] = {
-        [1] = {ShopItemId = 120227, SubTabId = 1202}
+        [1] = {ShopItemId = 120227, SubTabId = 1210}
       },
       [10064] = {
         [1] = {
@@ -154,13 +171,86 @@ return ReadOnly("ShopItem2ShopSubId", {
         }
       },
       [10065] = {
-        [1] = {ShopItemId = 120232, SubTabId = 1202}
+        [1] = {ShopItemId = 120232, SubTabId = 1210}
       },
       [10066] = {
-        [1] = {ShopItemId = 120231, SubTabId = 1202}
+        [1] = {ShopItemId = 120231, SubTabId = 1210}
+      },
+      [10067] = {
+        [1] = {ShopItemId = 120233, SubTabId = 1210}
+      },
+      [10068] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140274,
+          SubTabId = 1401
+        }
+      },
+      [10069] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140275,
+          SubTabId = 1401
+        }
+      },
+      [10070] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140276,
+          SubTabId = 1401
+        }
+      },
+      [10071] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140277,
+          SubTabId = 1401
+        }
+      },
+      [10073] = {
+        [1] = {ShopItemId = 120235, SubTabId = 1210}
+      },
+      [10074] = {
+        [1] = {ShopItemId = 120236, SubTabId = 1210}
+      },
+      [10075] = {
+        [1] = {ShopItemId = 120237, SubTabId = 1210}
+      },
+      [10076] = {
+        [1] = {ShopItemId = 120333, SubTabId = 1210}
+      },
+      [10077] = {
+        [1] = {ShopItemId = 120332, SubTabId = 1210}
+      },
+      [10078] = {
+        [1] = {ShopItemId = 120331, SubTabId = 1210}
+      },
+      [10079] = {
+        [1] = {ShopItemId = 120335, SubTabId = 1210}
+      },
+      [10080] = {
+        [1] = {ShopItemId = 120234, SubTabId = 1210}
+      },
+      [10081] = {
+        [1] = {ShopItemId = 120238, SubTabId = 1210}
+      },
+      [10082] = {
+        [1] = {ShopItemId = 120239, SubTabId = 1210}
+      },
+      [10083] = {
+        [1] = {ShopItemId = 120243, SubTabId = 1210}
+      },
+      [10084] = {
+        [1] = {ShopItemId = 120240, SubTabId = 1210}
+      },
+      [10085] = {
+        [1] = {ShopItemId = 120241, SubTabId = 1210}
+      },
+      [10086] = {
+        [1] = {ShopItemId = 120242, SubTabId = 1210}
       },
       [11002] = {
-        [1] = {ShopItemId = 120702, SubTabId = 1207}
+        [1] = {ShopItemId = 120702, SubTabId = 1212}
       },
       [11003] = {
         [1] = {
@@ -169,20 +259,99 @@ return ReadOnly("ShopItem2ShopSubId", {
           SubTabId = 1401
         }
       },
+      [11004] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140287,
+          SubTabId = 1401
+        }
+      },
+      [12001] = {
+        [1] = {ShopItemId = 1210001, SubTabId = 1210}
+      },
+      [12002] = {
+        [1] = {ShopItemId = 1210002, SubTabId = 1210}
+      },
+      [12003] = {
+        [1] = {ShopItemId = 1210003, SubTabId = 1210}
+      },
+      [12004] = {
+        [1] = {ShopItemId = 1210004, SubTabId = 1210}
+      },
+      [12122] = {
+        [1] = {ShopItemId = 1209001, SubTabId = 1210}
+      },
+      [12124] = {
+        [1] = {ShopItemId = 1209002, SubTabId = 1210}
+      },
+      [13002] = {
+        [1] = {ShopItemId = 1211001, SubTabId = 1211}
+      },
+      [13003] = {
+        [1] = {ShopItemId = 1211002, SubTabId = 1211}
+      },
+      [13004] = {
+        [1] = {ShopItemId = 1211003, SubTabId = 1211}
+      },
+      [13005] = {
+        [1] = {ShopItemId = 120416, SubTabId = 1211}
+      },
+      [13006] = {
+        [1] = {ShopItemId = 120417, SubTabId = 1211}
+      },
+      [13007] = {
+        [1] = {ShopItemId = 120418, SubTabId = 1211}
+      },
+      [13008] = {
+        [1] = {ShopItemId = 120419, SubTabId = 1211}
+      },
+      [13009] = {
+        [1] = {ShopItemId = 140156, SubTabId = 1402}
+      },
+      [13010] = {
+        [1] = {ShopItemId = 140157, SubTabId = 1402}
+      },
+      [13011] = {
+        [1] = {ShopItemId = 140158, SubTabId = 1402}
+      },
+      [13013] = {
+        [1] = {ShopItemId = 1211005, SubTabId = 1211}
+      },
+      [13014] = {
+        [1] = {ShopItemId = 1211009, SubTabId = 1211}
+      },
+      [13015] = {
+        [1] = {ShopItemId = 1211010, SubTabId = 1211}
+      },
+      [13016] = {
+        [1] = {ShopItemId = 1211011, SubTabId = 1211}
+      },
+      [13017] = {
+        [1] = {ShopItemId = 1211004, SubTabId = 1211}
+      },
+      [13018] = {
+        [1] = {ShopItemId = 1211006, SubTabId = 1211}
+      },
+      [13019] = {
+        [1] = {ShopItemId = 1211007, SubTabId = 1211}
+      },
+      [13020] = {
+        [1] = {ShopItemId = 1211008, SubTabId = 1211}
+      },
       [20005] = {
-        [1] = {ShopItemId = 120305, SubTabId = 1203}
+        [1] = {ShopItemId = 120305, SubTabId = 1210}
       },
       [20006] = {
-        [1] = {ShopItemId = 120306, SubTabId = 1203}
+        [1] = {ShopItemId = 120306, SubTabId = 1210}
       },
       [20007] = {
         [1] = {ShopItemId = 140111, SubTabId = 1402}
       },
       [20016] = {
-        [1] = {ShopItemId = 120303, SubTabId = 1203}
+        [1] = {ShopItemId = 120303, SubTabId = 1210}
       },
       [20017] = {
-        [1] = {ShopItemId = 120304, SubTabId = 1203}
+        [1] = {ShopItemId = 120304, SubTabId = 1210}
       },
       [20018] = {
         [1] = {ShopItemId = 140109, SubTabId = 1402}
@@ -197,7 +366,7 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {ShopItemId = 140114, SubTabId = 1402}
       },
       [20029] = {
-        [1] = {ShopItemId = 120301, SubTabId = 1203}
+        [1] = {ShopItemId = 120301, SubTabId = 1210}
       },
       [20031] = {
         [1] = {ShopItemId = 140113, SubTabId = 1402}
@@ -206,7 +375,7 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {ShopItemId = 140112, SubTabId = 1402}
       },
       [20033] = {
-        [1] = {ShopItemId = 120302, SubTabId = 1203}
+        [1] = {ShopItemId = 120302, SubTabId = 1210}
       },
       [20034] = {
         [1] = {ShopItemId = 140117, SubTabId = 1402}
@@ -236,34 +405,82 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {ShopItemId = 140116, SubTabId = 1402}
       },
       [20040] = {
-        [1] = {ShopItemId = 120307, SubTabId = 1203}
+        [1] = {ShopItemId = 120307, SubTabId = 1210}
       },
       [20041] = {
-        [1] = {ShopItemId = 120311, SubTabId = 1203}
+        [1] = {ShopItemId = 120311, SubTabId = 1210}
       },
       [20042] = {
-        [1] = {ShopItemId = 120312, SubTabId = 1203}
+        [1] = {ShopItemId = 120312, SubTabId = 1210}
+      },
+      [20043] = {
+        [1] = {ShopItemId = 120317, SubTabId = 1210}
       },
       [20045] = {
-        [1] = {ShopItemId = 120308, SubTabId = 1203}
+        [1] = {ShopItemId = 120308, SubTabId = 1210}
       },
       [20046] = {
-        [1] = {ShopItemId = 120309, SubTabId = 1203}
+        [1] = {ShopItemId = 120309, SubTabId = 1210}
       },
       [20047] = {
-        [1] = {ShopItemId = 120310, SubTabId = 1203}
+        [1] = {ShopItemId = 120310, SubTabId = 1210}
       },
       [20049] = {
-        [1] = {ShopItemId = 120314, SubTabId = 1203}
+        [1] = {ShopItemId = 120314, SubTabId = 1210}
       },
       [20050] = {
-        [1] = {ShopItemId = 120315, SubTabId = 1203}
+        [1] = {ShopItemId = 120315, SubTabId = 1210}
       },
       [20051] = {
-        [1] = {ShopItemId = 120313, SubTabId = 1203}
+        [1] = {ShopItemId = 120313, SubTabId = 1210}
+      },
+      [20063] = {
+        [1] = {ShopItemId = 120325, SubTabId = 1210}
+      },
+      [20064] = {
+        [1] = {ShopItemId = 120326, SubTabId = 1210}
+      },
+      [20065] = {
+        [1] = {ShopItemId = 120327, SubTabId = 1210}
+      },
+      [20066] = {
+        [1] = {ShopItemId = 120334, SubTabId = 1210}
+      },
+      [20067] = {
+        [1] = {ShopItemId = 120328, SubTabId = 1210}
+      },
+      [20068] = {
+        [1] = {ShopItemId = 120329, SubTabId = 1210}
+      },
+      [20069] = {
+        [1] = {ShopItemId = 120330, SubTabId = 1210}
+      },
+      [20070] = {
+        [1] = {ShopItemId = 120316, SubTabId = 1210}
+      },
+      [20071] = {
+        [1] = {ShopItemId = 120322, SubTabId = 1210}
+      },
+      [20072] = {
+        [1] = {ShopItemId = 120323, SubTabId = 1210}
+      },
+      [20073] = {
+        [1] = {ShopItemId = 120324, SubTabId = 1210}
+      },
+      [20074] = {
+        [1] = {ShopItemId = 120318, SubTabId = 1210}
+      },
+      [20075] = {
+        [1] = {ShopItemId = 120319, SubTabId = 1210}
+      },
+      [20076] = {
+        [1] = {ShopItemId = 120320, SubTabId = 1210}
+      },
+      [20077] = {
+        [1] = {ShopItemId = 120321, SubTabId = 1210}
       },
       [21002] = {
-        [1] = {ShopItemId = 120701, SubTabId = 1207}
+        [1] = {ShopItemId = 120701, SubTabId = 1212}
       },
       [21003] = {
         [1] = {
@@ -272,95 +489,197 @@ return ReadOnly("ShopItem2ShopSubId", {
           SubTabId = 1401
         }
       },
+      [21004] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140286,
+          SubTabId = 1401
+        }
+      },
       [30002] = {
-        [1] = {ShopItemId = 120401, SubTabId = 1204}
+        [1] = {ShopItemId = 120401, SubTabId = 1211}
       },
       [30007] = {
-        [1] = {ShopItemId = 120402, SubTabId = 1204}
+        [1] = {ShopItemId = 120402, SubTabId = 1211}
       },
       [30016] = {
-        [1] = {ShopItemId = 120413, SubTabId = 1204}
+        [1] = {ShopItemId = 120413, SubTabId = 1211}
       },
       [30017] = {
-        [1] = {ShopItemId = 120403, SubTabId = 1204}
+        [1] = {ShopItemId = 120403, SubTabId = 1211}
       },
       [30018] = {
-        [1] = {ShopItemId = 120407, SubTabId = 1204}
+        [1] = {ShopItemId = 120407, SubTabId = 1211}
       },
       [30019] = {
-        [1] = {ShopItemId = 120412, SubTabId = 1204}
+        [1] = {ShopItemId = 120412, SubTabId = 1211}
+      },
+      [30020] = {
+        [1] = {ShopItemId = 120414, SubTabId = 1211}
       },
       [30022] = {
-        [1] = {ShopItemId = 120404, SubTabId = 1204}
+        [1] = {ShopItemId = 120404, SubTabId = 1211}
       },
       [30023] = {
-        [1] = {ShopItemId = 120405, SubTabId = 1204}
+        [1] = {ShopItemId = 120405, SubTabId = 1211}
       },
       [30024] = {
-        [1] = {ShopItemId = 120406, SubTabId = 1204}
+        [1] = {ShopItemId = 120406, SubTabId = 1211}
       },
       [30025] = {
-        [1] = {ShopItemId = 120408, SubTabId = 1204}
+        [1] = {ShopItemId = 120408, SubTabId = 1211}
       },
       [30026] = {
-        [1] = {ShopItemId = 120410, SubTabId = 1204}
+        [1] = {ShopItemId = 120410, SubTabId = 1211}
       },
       [30027] = {
-        [1] = {ShopItemId = 120409, SubTabId = 1204}
+        [1] = {ShopItemId = 120409, SubTabId = 1211}
+      },
+      [30028] = {
+        [1] = {ShopItemId = 120421, SubTabId = 1211}
+      },
+      [30029] = {
+        [1] = {ShopItemId = 120422, SubTabId = 1211}
+      },
+      [30030] = {
+        [1] = {ShopItemId = 120420, SubTabId = 1211}
+      },
+      [30031] = {
+        [1] = {ShopItemId = 120415, SubTabId = 1211}
+      },
+      [31001] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140267,
+          SubTabId = 1401
+        }
+      },
+      [31002] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140268,
+          SubTabId = 1401
+        }
       },
       [40001] = {
-        [1] = {ShopItemId = 120502, SubTabId = 1205}
+        [1] = {ShopItemId = 120502, SubTabId = 1211}
       },
       [40002] = {
-        [1] = {ShopItemId = 120501, SubTabId = 1205}
+        [1] = {ShopItemId = 120501, SubTabId = 1211}
       },
       [40005] = {
         [1] = {ShopItemId = 140118, SubTabId = 1402}
       },
       [40009] = {
-        [1] = {ShopItemId = 120509, SubTabId = 1205}
+        [1] = {ShopItemId = 120509, SubTabId = 1211}
       },
       [40011] = {
-        [1] = {ShopItemId = 120411, SubTabId = 1204}
+        [1] = {ShopItemId = 120411, SubTabId = 1211}
       },
       [40012] = {
-        [1] = {ShopItemId = 120510, SubTabId = 1205}
+        [1] = {ShopItemId = 120510, SubTabId = 1211}
       },
       [40014] = {
-        [1] = {ShopItemId = 120507, SubTabId = 1205}
+        [1] = {ShopItemId = 120507, SubTabId = 1211}
       },
       [40015] = {
-        [1] = {ShopItemId = 120508, SubTabId = 1205}
+        [1] = {ShopItemId = 120508, SubTabId = 1211}
       },
       [40016] = {
-        [1] = {ShopItemId = 120514, SubTabId = 1205}
+        [1] = {ShopItemId = 120514, SubTabId = 1211}
       },
       [40017] = {
-        [1] = {ShopItemId = 120503, SubTabId = 1205}
+        [1] = {ShopItemId = 120503, SubTabId = 1211}
       },
       [40018] = {
-        [1] = {ShopItemId = 120504, SubTabId = 1205}
+        [1] = {ShopItemId = 120504, SubTabId = 1211}
       },
       [40019] = {
-        [1] = {ShopItemId = 120505, SubTabId = 1205}
+        [1] = {ShopItemId = 120505, SubTabId = 1211}
       },
       [40020] = {
-        [1] = {ShopItemId = 120506, SubTabId = 1205}
+        [1] = {ShopItemId = 120506, SubTabId = 1211}
       },
       [40021] = {
-        [1] = {ShopItemId = 120512, SubTabId = 1205}
+        [1] = {ShopItemId = 120512, SubTabId = 1211}
       },
       [40022] = {
-        [1] = {ShopItemId = 120513, SubTabId = 1205}
+        [1] = {ShopItemId = 120513, SubTabId = 1211}
       },
       [40023] = {
-        [1] = {ShopItemId = 120511, SubTabId = 1205}
+        [1] = {ShopItemId = 120511, SubTabId = 1211}
       },
       [40024] = {
-        [1] = {ShopItemId = 120516, SubTabId = 1205}
+        [1] = {ShopItemId = 120516, SubTabId = 1211}
       },
       [40025] = {
-        [1] = {ShopItemId = 120515, SubTabId = 1205}
+        [1] = {ShopItemId = 120515, SubTabId = 1211}
+      },
+      [40029] = {
+        [1] = {ShopItemId = 120517, SubTabId = 1211}
+      },
+      [40030] = {
+        [1] = {ShopItemId = 120520, SubTabId = 1211}
+      },
+      [40031] = {
+        [1] = {ShopItemId = 120521, SubTabId = 1211}
+      },
+      [40032] = {
+        [1] = {ShopItemId = 120522, SubTabId = 1211}
+      },
+      [40033] = {
+        [1] = {ShopItemId = 120518, SubTabId = 1211}
+      },
+      [40038] = {
+        [1] = {ShopItemId = 120531, SubTabId = 1211}
+      },
+      [40039] = {
+        [1] = {ShopItemId = 120532, SubTabId = 1211}
+      },
+      [40040] = {
+        [1] = {ShopItemId = 120533, SubTabId = 1211}
+      },
+      [40041] = {
+        [1] = {ShopItemId = 120534, SubTabId = 1211}
+      },
+      [40042] = {
+        [1] = {ShopItemId = 120535, SubTabId = 1211}
+      },
+      [40043] = {
+        [1] = {ShopItemId = 120536, SubTabId = 1211}
+      },
+      [40044] = {
+        [1] = {ShopItemId = 120538, SubTabId = 1211}
+      },
+      [40045] = {
+        [1] = {ShopItemId = 120529, SubTabId = 1211}
+      },
+      [40046] = {
+        [1] = {ShopItemId = 120528, SubTabId = 1211}
+      },
+      [40047] = {
+        [1] = {ShopItemId = 120530, SubTabId = 1211}
+      },
+      [40048] = {
+        [1] = {ShopItemId = 120525, SubTabId = 1211}
+      },
+      [40049] = {
+        [1] = {ShopItemId = 120537, SubTabId = 1211}
+      },
+      [40050] = {
+        [1] = {ShopItemId = 120526, SubTabId = 1211}
+      },
+      [40051] = {
+        [1] = {ShopItemId = 120527, SubTabId = 1211}
+      },
+      [40052] = {
+        [1] = {ShopItemId = 120519, SubTabId = 1211}
+      },
+      [40053] = {
+        [1] = {ShopItemId = 120523, SubTabId = 1211}
+      },
+      [40054] = {
+        [1] = {ShopItemId = 120524, SubTabId = 1211}
       },
       [70001] = {
         [1] = {
@@ -373,6 +692,13 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {
           AccessOrder = 2,
           ShopItemId = 140237,
+          SubTabId = 1401
+        }
+      },
+      [70003] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140282,
           SubTabId = 1401
         }
       },
@@ -418,6 +744,27 @@ return ReadOnly("ShopItem2ShopSubId", {
           SubTabId = 1401
         }
       },
+      [70031] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140283,
+          SubTabId = 1401
+        }
+      },
+      [70032] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140285,
+          SubTabId = 1401
+        }
+      },
+      [70033] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140284,
+          SubTabId = 1401
+        }
+      },
       [80001] = {
         [1] = {
           AccessOrder = 2,
@@ -429,6 +776,13 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {
           AccessOrder = 2,
           ShopItemId = 140232,
+          SubTabId = 1401
+        }
+      },
+      [80003] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140278,
           SubTabId = 1401
         }
       },
@@ -473,14 +827,37 @@ return ReadOnly("ShopItem2ShopSubId", {
           ShopItemId = 140235,
           SubTabId = 1401
         }
+      },
+      [80031] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140279,
+          SubTabId = 1401
+        }
+      },
+      [80032] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140280,
+          SubTabId = 1401
+        }
+      },
+      [80033] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140281,
+          SubTabId = 1401
+        }
       }
     },
     WeeklyDungeonShop = T.RT_1
   },
   Draft = {
     AbyssShop = T.RT_1,
+    AutoChessShop = T.RT_1,
     ExploreBadgeShop = T.RT_1,
     FishingShop = T.RT_1,
+    GiftShop = T.RT_1,
     HuaxuEventShop = T.RT_1,
     HuaxuExploreShop = T.RT_1,
     RaidShopSeason01 = T.RT_1,
@@ -509,6 +886,9 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {ShopItemId = 10002206, SubTabId = 100022},
         [2] = {ShopItemId = 10002342, SubTabId = 100022}
       },
+      [154009] = {
+        [1] = {ShopItemId = 10002373, SubTabId = 100022}
+      },
       [154101] = {
         [1] = {ShopItemId = 10002207, SubTabId = 100022},
         [2] = {ShopItemId = 10002343, SubTabId = 100022}
@@ -521,41 +901,65 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {ShopItemId = 10002209, SubTabId = 100022},
         [2] = {ShopItemId = 10002345, SubTabId = 100022}
       },
+      [154201] = {
+        [1] = {ShopItemId = 10002374, SubTabId = 100022}
+      },
+      [154202] = {
+        [1] = {ShopItemId = 10002375, SubTabId = 100022}
+      },
+      [154203] = {
+        [1] = {ShopItemId = 10002376, SubTabId = 100022}
+      },
+      [154204] = {
+        [1] = {ShopItemId = 10002377, SubTabId = 100022}
+      },
+      [154205] = {
+        [1] = {ShopItemId = 10002378, SubTabId = 100022}
+      },
       [155001] = {
-        [1] = {ShopItemId = 10002355, SubTabId = 100023},
-        [2] = {ShopItemId = 10002301, SubTabId = 100023}
+        [1] = {ShopItemId = 10002301, SubTabId = 100023},
+        [2] = {ShopItemId = 10002355, SubTabId = 100023}
       },
       [155002] = {
-        [1] = {ShopItemId = 10002356, SubTabId = 100023},
-        [2] = {ShopItemId = 10002302, SubTabId = 100023}
+        [1] = {ShopItemId = 10002302, SubTabId = 100023},
+        [2] = {ShopItemId = 10002356, SubTabId = 100023}
       },
       [155003] = {
-        [1] = {ShopItemId = 10002357, SubTabId = 100023},
-        [2] = {ShopItemId = 10002303, SubTabId = 100023}
+        [1] = {ShopItemId = 10002303, SubTabId = 100023},
+        [2] = {ShopItemId = 10002357, SubTabId = 100023}
       },
       [155004] = {
-        [1] = {ShopItemId = 10002358, SubTabId = 100023},
-        [2] = {ShopItemId = 10002304, SubTabId = 100023}
+        [1] = {ShopItemId = 10002304, SubTabId = 100023},
+        [2] = {ShopItemId = 10002358, SubTabId = 100023}
       },
       [155005] = {
-        [1] = {ShopItemId = 10002359, SubTabId = 100023},
-        [2] = {ShopItemId = 10002305, SubTabId = 100023}
+        [1] = {ShopItemId = 10002305, SubTabId = 100023},
+        [2] = {ShopItemId = 10002359, SubTabId = 100023}
       },
       [155006] = {
-        [1] = {ShopItemId = 10002360, SubTabId = 100023},
-        [2] = {ShopItemId = 10002306, SubTabId = 100023}
+        [1] = {ShopItemId = 10002306, SubTabId = 100023},
+        [2] = {ShopItemId = 10002360, SubTabId = 100023}
       },
       [155101] = {
-        [1] = {ShopItemId = 10002361, SubTabId = 100023},
-        [2] = {ShopItemId = 10002307, SubTabId = 100023}
+        [1] = {ShopItemId = 10002307, SubTabId = 100023},
+        [2] = {ShopItemId = 10002361, SubTabId = 100023}
       },
       [155102] = {
-        [1] = {ShopItemId = 10002362, SubTabId = 100023},
-        [2] = {ShopItemId = 10002308, SubTabId = 100023}
+        [1] = {ShopItemId = 10002308, SubTabId = 100023},
+        [2] = {ShopItemId = 10002362, SubTabId = 100023}
       },
       [155103] = {
-        [1] = {ShopItemId = 10002363, SubTabId = 100023},
-        [2] = {ShopItemId = 10002309, SubTabId = 100023}
+        [1] = {ShopItemId = 10002309, SubTabId = 100023},
+        [2] = {ShopItemId = 10002363, SubTabId = 100023}
+      },
+      [1202003] = {
+        [1] = {ShopItemId = 10002112, SubTabId = 100021}
+      },
+      [1203001] = {
+        [1] = {ShopItemId = 10002113, SubTabId = 100021}
+      },
+      [1204001] = {
+        [1] = {ShopItemId = 10002114, SubTabId = 100021}
       }
     },
     Shop = T.RT_1,
@@ -653,22 +1057,35 @@ return ReadOnly("ShopItem2ShopSubId", {
     }
   },
   Drop = T.RT_2,
+  Hair = T.RT_2,
   HeadFrame = T.RT_2,
   HeadSculpture = {
     AbyssShop = T.RT_1,
+    AutoChessShop = T.RT_1,
     ExploreBadgeShop = T.RT_1,
-    FishingShop = T.RT_1,
+    FishingShop = {
+      [30095] = {
+        [1] = {ShopItemId = 802130, SubTabId = 8021}
+      },
+      [30108] = {
+        [1] = {ShopItemId = 802131, SubTabId = 8021}
+      }
+    },
+    GiftShop = T.RT_1,
     HuaxuEventShop = T.RT_1,
     HuaxuExploreShop = T.RT_1,
     RaidShopSeason01 = {
       [30022] = {
-        [1] = {ShopItemId = 10004119, SubTabId = 100041}
+        [1] = {ShopItemId = 10004119, SubTabId = 100041},
+        [2] = {ShopItemId = 10004147, SubTabId = 100041}
       },
       [30023] = {
-        [1] = {ShopItemId = 10004120, SubTabId = 100041}
+        [1] = {ShopItemId = 10004120, SubTabId = 100041},
+        [2] = {ShopItemId = 10004148, SubTabId = 100041}
       },
       [30024] = {
-        [1] = {ShopItemId = 10004121, SubTabId = 100041}
+        [1] = {ShopItemId = 10004121, SubTabId = 100041},
+        [2] = {ShopItemId = 10004149, SubTabId = 100041}
       }
     },
     Rouge = T.RT_1,
@@ -733,6 +1150,7 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {ShopItemId = 10000502, SubTabId = 100001}
       }
     },
+    AutoChessShop = T.RT_1,
     ExploreBadgeShop = {
       [31502] = {
         [1] = {ShopItemId = 702007, SubTabId = 7020}
@@ -773,6 +1191,7 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {ShopItemId = 801202, SubTabId = 8011}
       }
     },
+    GiftShop = T.RT_1,
     HuaxuEventShop = T.RT_1,
     HuaxuExploreShop = T.RT_1,
     RaidShopSeason01 = T.RT_1,
@@ -922,28 +1341,28 @@ return ReadOnly("ShopItem2ShopSubId", {
         [2] = {ShopItemId = 10002354, SubTabId = 100022}
       },
       [45001] = {
-        [1] = {ShopItemId = 10002364, SubTabId = 100023},
-        [2] = {ShopItemId = 10002310, SubTabId = 100023}
+        [1] = {ShopItemId = 10002310, SubTabId = 100023},
+        [2] = {ShopItemId = 10002364, SubTabId = 100023}
       },
       [45002] = {
-        [1] = {ShopItemId = 10002365, SubTabId = 100023},
-        [2] = {ShopItemId = 10002311, SubTabId = 100023}
+        [1] = {ShopItemId = 10002311, SubTabId = 100023},
+        [2] = {ShopItemId = 10002365, SubTabId = 100023}
       },
       [45003] = {
-        [1] = {ShopItemId = 10002366, SubTabId = 100023},
-        [2] = {ShopItemId = 10002312, SubTabId = 100023}
+        [1] = {ShopItemId = 10002312, SubTabId = 100023},
+        [2] = {ShopItemId = 10002366, SubTabId = 100023}
       },
       [45004] = {
-        [1] = {ShopItemId = 10002367, SubTabId = 100023},
-        [2] = {ShopItemId = 10002313, SubTabId = 100023}
+        [1] = {ShopItemId = 10002313, SubTabId = 100023},
+        [2] = {ShopItemId = 10002367, SubTabId = 100023}
       },
       [45005] = {
-        [1] = {ShopItemId = 10002368, SubTabId = 100023},
-        [2] = {ShopItemId = 10002314, SubTabId = 100023}
+        [1] = {ShopItemId = 10002314, SubTabId = 100023},
+        [2] = {ShopItemId = 10002368, SubTabId = 100023}
       },
       [45006] = {
-        [1] = {ShopItemId = 10002369, SubTabId = 100023},
-        [2] = {ShopItemId = 10002315, SubTabId = 100023}
+        [1] = {ShopItemId = 10002315, SubTabId = 100023},
+        [2] = {ShopItemId = 10002369, SubTabId = 100023}
       },
       [45101] = {
         [1] = {ShopItemId = 10002316, SubTabId = 100023},
@@ -959,6 +1378,9 @@ return ReadOnly("ShopItem2ShopSubId", {
       },
       [101001] = {
         [1] = {ShopItemId = 10002106, SubTabId = 100021}
+      },
+      [101003] = {
+        [1] = {ShopItemId = 10002111, SubTabId = 100021}
       },
       [102002] = {
         [1] = {ShopItemId = 10002109, SubTabId = 100021}
@@ -976,8 +1398,36 @@ return ReadOnly("ShopItem2ShopSubId", {
     Shop = T.RT_1,
     WeeklyDungeonShop = T.RT_1
   },
+  Mount = {
+    AbyssShop = T.RT_1,
+    AutoChessShop = T.RT_1,
+    ExploreBadgeShop = T.RT_1,
+    FishingShop = T.RT_1,
+    GiftShop = T.RT_1,
+    HuaxuEventShop = T.RT_1,
+    HuaxuExploreShop = T.RT_1,
+    RaidShopSeason01 = T.RT_1,
+    Rouge = T.RT_1,
+    Shop = {
+      [1001] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140269,
+          SubTabId = 1401
+        }
+      },
+      [1002] = {
+        [1] = {ShopItemId = 1208001, SubTabId = 1209}
+      },
+      [1003] = {
+        [1] = {ShopItemId = 1208002, SubTabId = 1209}
+      }
+    },
+    WeeklyDungeonShop = T.RT_1
+  },
   Pet = {
     AbyssShop = T.RT_1,
+    AutoChessShop = T.RT_1,
     ExploreBadgeShop = T.RT_1,
     FishingShop = {
       [4942] = {
@@ -987,6 +1437,7 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {ShopItemId = 802006, SubTabId = 8020}
       }
     },
+    GiftShop = T.RT_1,
     HuaxuEventShop = T.RT_1,
     HuaxuExploreShop = T.RT_1,
     RaidShopSeason01 = T.RT_1,
@@ -999,50 +1450,114 @@ return ReadOnly("ShopItem2ShopSubId", {
       [101] = {
         [1] = {ShopItemId = 10000104, SubTabId = 100001},
         [2] = {ShopItemId = 10000107, SubTabId = 100001},
-        [3] = {ShopItemId = 10000607, SubTabId = 100001},
-        [4] = {ShopItemId = 10000604, SubTabId = 100001}
+        [3] = {ShopItemId = 10000604, SubTabId = 100001},
+        [4] = {ShopItemId = 10000607, SubTabId = 100001},
+        [5] = {ShopItemId = 10000614, SubTabId = 100001},
+        [6] = {ShopItemId = 10000617, SubTabId = 100001}
       },
       [102] = {
-        [1] = {ShopItemId = 10000605, SubTabId = 100001},
-        [2] = {ShopItemId = 10000105, SubTabId = 100001}
+        [1] = {ShopItemId = 10000105, SubTabId = 100001},
+        [2] = {ShopItemId = 10000605, SubTabId = 100001},
+        [3] = {ShopItemId = 10000615, SubTabId = 100001}
       },
       [2009] = {
         [1] = {ShopItemId = 10000102, SubTabId = 100001},
-        [2] = {ShopItemId = 10000602, SubTabId = 100001}
+        [2] = {ShopItemId = 10000602, SubTabId = 100001},
+        [3] = {ShopItemId = 10000612, SubTabId = 100001}
       },
       [2013] = {
         [1] = {ShopItemId = 10000101, SubTabId = 100001},
-        [2] = {ShopItemId = 10000601, SubTabId = 100001}
+        [2] = {ShopItemId = 10000601, SubTabId = 100001},
+        [3] = {ShopItemId = 10000611, SubTabId = 100001}
       },
       [3006] = {
         [1] = {ShopItemId = 10000103, SubTabId = 100001},
-        [2] = {ShopItemId = 10000603, SubTabId = 100001}
+        [2] = {ShopItemId = 10000603, SubTabId = 100001},
+        [3] = {ShopItemId = 10000613, SubTabId = 100001}
       },
       [3007] = {
         [1] = {ShopItemId = 10000106, SubTabId = 100001},
-        [2] = {ShopItemId = 10000606, SubTabId = 100001}
+        [2] = {ShopItemId = 10000606, SubTabId = 100001},
+        [3] = {ShopItemId = 10000616, SubTabId = 100001}
       },
       [20027] = {
         [1] = {ShopItemId = 10000110, SubTabId = 100001},
-        [2] = {ShopItemId = 10000608, SubTabId = 100001}
+        [2] = {ShopItemId = 10000608, SubTabId = 100001},
+        [3] = {ShopItemId = 10000618, SubTabId = 100001}
       },
       [20028] = {
         [1] = {ShopItemId = 10000111, SubTabId = 100001},
-        [2] = {ShopItemId = 10000609, SubTabId = 100001}
+        [2] = {ShopItemId = 10000609, SubTabId = 100001},
+        [3] = {ShopItemId = 10000619, SubTabId = 100001}
+      }
+    },
+    AutoChessShop = {
+      [101] = {
+        [1] = {ShopItemId = 10006115, SubTabId = 100061},
+        [2] = {ShopItemId = 10006120, SubTabId = 100061}
+      },
+      [102] = {
+        [1] = {ShopItemId = 10006118, SubTabId = 100061},
+        [2] = {ShopItemId = 10006123, SubTabId = 100061}
+      },
+      [201] = {
+        [1] = {ShopItemId = 10006112, SubTabId = 100061}
+      },
+      [202] = {
+        [1] = {ShopItemId = 10006113, SubTabId = 100061}
+      },
+      [2009] = {
+        [1] = {ShopItemId = 10006122, SubTabId = 100061}
+      },
+      [2010] = {
+        [1] = {ShopItemId = 10006117, SubTabId = 100061}
+      },
+      [2013] = {
+        [1] = {ShopItemId = 10006121, SubTabId = 100061}
+      },
+      [2014] = {
+        [1] = {ShopItemId = 10006116, SubTabId = 100061}
+      },
+      [10100] = {
+        [1] = {ShopItemId = 10006111, SubTabId = 100061}
+      },
+      [20013] = {
+        [1] = {ShopItemId = 10006119, SubTabId = 100061}
+      },
+      [30112] = {
+        [1] = {ShopItemId = 10006114, SubTabId = 100061}
+      },
+      [41037] = {
+        [1] = {ShopItemId = 10006108, SubTabId = 100061}
+      },
+      [41038] = {
+        [1] = {ShopItemId = 10006109, SubTabId = 100061}
+      },
+      [41039] = {
+        [1] = {ShopItemId = 10006110, SubTabId = 100061}
+      },
+      [41042] = {
+        [1] = {ShopItemId = 10006105, SubTabId = 100061}
+      },
+      [41043] = {
+        [1] = {ShopItemId = 10006106, SubTabId = 100061}
+      },
+      [41044] = {
+        [1] = {ShopItemId = 10006107, SubTabId = 100061}
       }
     },
     ExploreBadgeShop = {
       [201] = {
-        [1] = {ShopItemId = 704002, SubTabId = 7040},
-        [2] = {ShopItemId = 703002, SubTabId = 7030},
-        [3] = {ShopItemId = 702005, SubTabId = 7020},
-        [4] = {ShopItemId = 701001, SubTabId = 7010}
+        [1] = {ShopItemId = 701001, SubTabId = 7010},
+        [2] = {ShopItemId = 702005, SubTabId = 7020},
+        [3] = {ShopItemId = 703002, SubTabId = 7030},
+        [4] = {ShopItemId = 704002, SubTabId = 7040}
       },
       [202] = {
-        [1] = {ShopItemId = 704003, SubTabId = 7040},
-        [2] = {ShopItemId = 703003, SubTabId = 7030},
-        [3] = {ShopItemId = 702006, SubTabId = 7020},
-        [4] = {ShopItemId = 701002, SubTabId = 7010}
+        [1] = {ShopItemId = 701002, SubTabId = 7010},
+        [2] = {ShopItemId = 702006, SubTabId = 7020},
+        [3] = {ShopItemId = 703003, SubTabId = 7030},
+        [4] = {ShopItemId = 704003, SubTabId = 7040}
       },
       [2009] = {
         [1] = {ShopItemId = 702004, SubTabId = 7020}
@@ -1051,32 +1566,32 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {ShopItemId = 702003, SubTabId = 7020}
       },
       [10100] = {
-        [1] = {ShopItemId = 704001, SubTabId = 7040},
-        [2] = {ShopItemId = 703001, SubTabId = 7030},
-        [3] = {ShopItemId = 702001, SubTabId = 7020},
-        [4] = {ShopItemId = 702002, SubTabId = 7020}
+        [1] = {ShopItemId = 702001, SubTabId = 7020},
+        [2] = {ShopItemId = 702002, SubTabId = 7020},
+        [3] = {ShopItemId = 703001, SubTabId = 7030},
+        [4] = {ShopItemId = 704001, SubTabId = 7040}
       }
     },
     FishingShop = {
       [101] = {
-        [1] = {ShopItemId = 801118, SubTabId = 8011},
-        [2] = {ShopItemId = 801129, SubTabId = 8011},
-        [3] = {ShopItemId = 801140, SubTabId = 8011},
-        [4] = {ShopItemId = 802119, SubTabId = 8021},
-        [5] = {ShopItemId = 802109, SubTabId = 8021},
+        [1] = {ShopItemId = 801104, SubTabId = 8011},
+        [2] = {ShopItemId = 801109, SubTabId = 8011},
+        [3] = {ShopItemId = 801118, SubTabId = 8011},
+        [4] = {ShopItemId = 801129, SubTabId = 8011},
+        [5] = {ShopItemId = 801140, SubTabId = 8011},
         [6] = {ShopItemId = 802104, SubTabId = 8021},
-        [7] = {ShopItemId = 801109, SubTabId = 8011},
-        [8] = {ShopItemId = 801104, SubTabId = 8011}
+        [7] = {ShopItemId = 802109, SubTabId = 8021},
+        [8] = {ShopItemId = 802119, SubTabId = 8021}
       },
       [102] = {
-        [1] = {ShopItemId = 801130, SubTabId = 8011},
-        [2] = {ShopItemId = 801141, SubTabId = 8011},
-        [3] = {ShopItemId = 802120, SubTabId = 8021},
-        [4] = {ShopItemId = 802110, SubTabId = 8021},
-        [5] = {ShopItemId = 802105, SubTabId = 8021},
-        [6] = {ShopItemId = 801119, SubTabId = 8011},
-        [7] = {ShopItemId = 801110, SubTabId = 8011},
-        [8] = {ShopItemId = 801105, SubTabId = 8011}
+        [1] = {ShopItemId = 801105, SubTabId = 8011},
+        [2] = {ShopItemId = 801110, SubTabId = 8011},
+        [3] = {ShopItemId = 801119, SubTabId = 8011},
+        [4] = {ShopItemId = 801130, SubTabId = 8011},
+        [5] = {ShopItemId = 801141, SubTabId = 8011},
+        [6] = {ShopItemId = 802105, SubTabId = 8021},
+        [7] = {ShopItemId = 802110, SubTabId = 8021},
+        [8] = {ShopItemId = 802120, SubTabId = 8021}
       },
       [201] = {
         [1] = {ShopItemId = 801123, SubTabId = 8011},
@@ -1089,81 +1604,84 @@ return ReadOnly("ShopItem2ShopSubId", {
         [3] = {ShopItemId = 801146, SubTabId = 8011}
       },
       [211] = {
-        [1] = {ShopItemId = 801125, SubTabId = 8011},
-        [2] = {ShopItemId = 801136, SubTabId = 8011},
-        [3] = {ShopItemId = 801147, SubTabId = 8011},
-        [4] = {ShopItemId = 802125, SubTabId = 8021},
+        [1] = {ShopItemId = 801114, SubTabId = 8011},
+        [2] = {ShopItemId = 801125, SubTabId = 8011},
+        [3] = {ShopItemId = 801136, SubTabId = 8011},
+        [4] = {ShopItemId = 801147, SubTabId = 8011},
         [5] = {ShopItemId = 802115, SubTabId = 8021},
-        [6] = {ShopItemId = 801114, SubTabId = 8011}
+        [6] = {ShopItemId = 802125, SubTabId = 8021}
       },
       [1001] = {
-        [1] = {ShopItemId = 801132, SubTabId = 8011},
-        [2] = {ShopItemId = 801143, SubTabId = 8011},
-        [3] = {ShopItemId = 802122, SubTabId = 8021},
-        [4] = {ShopItemId = 802112, SubTabId = 8021},
-        [5] = {ShopItemId = 801121, SubTabId = 8011},
-        [6] = {ShopItemId = 801112, SubTabId = 8011}
+        [1] = {ShopItemId = 801112, SubTabId = 8011},
+        [2] = {ShopItemId = 801121, SubTabId = 8011},
+        [3] = {ShopItemId = 801132, SubTabId = 8011},
+        [4] = {ShopItemId = 801143, SubTabId = 8011},
+        [5] = {ShopItemId = 802112, SubTabId = 8021},
+        [6] = {ShopItemId = 802122, SubTabId = 8021}
       },
       [1002] = {
-        [1] = {ShopItemId = 802123, SubTabId = 8021},
-        [2] = {ShopItemId = 802113, SubTabId = 8021}
+        [1] = {ShopItemId = 802113, SubTabId = 8021},
+        [2] = {ShopItemId = 802123, SubTabId = 8021}
       },
       [2008] = {
-        [1] = {ShopItemId = 802102, SubTabId = 8021},
+        [1] = {ShopItemId = 801102, SubTabId = 8011},
         [2] = {ShopItemId = 801107, SubTabId = 8011},
-        [3] = {ShopItemId = 801102, SubTabId = 8011}
+        [3] = {ShopItemId = 802102, SubTabId = 8021}
       },
       [2009] = {
-        [1] = {ShopItemId = 801127, SubTabId = 8011},
-        [2] = {ShopItemId = 802107, SubTabId = 8021},
-        [3] = {ShopItemId = 801116, SubTabId = 8011}
+        [1] = {ShopItemId = 801116, SubTabId = 8011},
+        [2] = {ShopItemId = 801127, SubTabId = 8011},
+        [3] = {ShopItemId = 802107, SubTabId = 8021}
       },
       [2010] = {
         [1] = {ShopItemId = 801138, SubTabId = 8011},
         [2] = {ShopItemId = 802117, SubTabId = 8021}
       },
       [2012] = {
-        [1] = {ShopItemId = 802101, SubTabId = 8021},
+        [1] = {ShopItemId = 801101, SubTabId = 8011},
         [2] = {ShopItemId = 801106, SubTabId = 8011},
-        [3] = {ShopItemId = 801101, SubTabId = 8011}
+        [3] = {ShopItemId = 802101, SubTabId = 8021}
       },
       [2013] = {
-        [1] = {ShopItemId = 801126, SubTabId = 8011},
-        [2] = {ShopItemId = 802106, SubTabId = 8021},
-        [3] = {ShopItemId = 801115, SubTabId = 8011}
+        [1] = {ShopItemId = 801115, SubTabId = 8011},
+        [2] = {ShopItemId = 801126, SubTabId = 8011},
+        [3] = {ShopItemId = 802106, SubTabId = 8021}
       },
       [2014] = {
         [1] = {ShopItemId = 801137, SubTabId = 8011},
         [2] = {ShopItemId = 802116, SubTabId = 8021}
       },
       [3001] = {
-        [1] = {ShopItemId = 801133, SubTabId = 8011},
-        [2] = {ShopItemId = 801144, SubTabId = 8011},
-        [3] = {ShopItemId = 802124, SubTabId = 8021},
-        [4] = {ShopItemId = 802114, SubTabId = 8021},
-        [5] = {ShopItemId = 801122, SubTabId = 8011},
-        [6] = {ShopItemId = 801113, SubTabId = 8011}
+        [1] = {ShopItemId = 801113, SubTabId = 8011},
+        [2] = {ShopItemId = 801122, SubTabId = 8011},
+        [3] = {ShopItemId = 801133, SubTabId = 8011},
+        [4] = {ShopItemId = 801144, SubTabId = 8011},
+        [5] = {ShopItemId = 802114, SubTabId = 8021},
+        [6] = {ShopItemId = 802124, SubTabId = 8021}
       },
       [3005] = {
-        [1] = {ShopItemId = 801203, SubTabId = 8011},
-        [2] = {ShopItemId = 802103, SubTabId = 8021},
-        [3] = {ShopItemId = 801108, SubTabId = 8011},
-        [4] = {ShopItemId = 801103, SubTabId = 8011}
+        [1] = {ShopItemId = 801103, SubTabId = 8011},
+        [2] = {ShopItemId = 801108, SubTabId = 8011},
+        [3] = {ShopItemId = 801203, SubTabId = 8011},
+        [4] = {ShopItemId = 802103, SubTabId = 8021}
       },
       [3006] = {
         [1] = {ShopItemId = 801117, SubTabId = 8011},
         [2] = {ShopItemId = 801128, SubTabId = 8011},
         [3] = {ShopItemId = 801139, SubTabId = 8011},
-        [4] = {ShopItemId = 802118, SubTabId = 8021},
-        [5] = {ShopItemId = 802108, SubTabId = 8021}
+        [4] = {ShopItemId = 802108, SubTabId = 8021},
+        [5] = {ShopItemId = 802118, SubTabId = 8021}
+      },
+      [3015] = {
+        [1] = {ShopItemId = 802007, SubTabId = 8020}
       },
       [10100] = {
-        [1] = {ShopItemId = 801131, SubTabId = 8011},
-        [2] = {ShopItemId = 801142, SubTabId = 8011},
-        [3] = {ShopItemId = 802121, SubTabId = 8021},
-        [4] = {ShopItemId = 802111, SubTabId = 8021},
-        [5] = {ShopItemId = 801120, SubTabId = 8011},
-        [6] = {ShopItemId = 801111, SubTabId = 8011}
+        [1] = {ShopItemId = 801111, SubTabId = 8011},
+        [2] = {ShopItemId = 801120, SubTabId = 8011},
+        [3] = {ShopItemId = 801131, SubTabId = 8011},
+        [4] = {ShopItemId = 801142, SubTabId = 8011},
+        [5] = {ShopItemId = 802111, SubTabId = 8021},
+        [6] = {ShopItemId = 802121, SubTabId = 8021}
       },
       [41013] = {
         [1] = {ShopItemId = 801200, SubTabId = 8011}
@@ -1180,23 +1698,30 @@ return ReadOnly("ShopItem2ShopSubId", {
       [5110500] = {
         [1] = {ShopItemId = 801008, SubTabId = 8010}
       },
+      [5110601] = {
+        [1] = {ShopItemId = 802008, SubTabId = 8020}
+      },
+      [5110602] = {
+        [1] = {ShopItemId = 802009, SubTabId = 8020}
+      },
       [5210100] = {
-        [1] = {ShopItemId = 802001, SubTabId = 8020},
-        [2] = {ShopItemId = 801001, SubTabId = 8010}
+        [1] = {ShopItemId = 801001, SubTabId = 8010},
+        [2] = {ShopItemId = 802001, SubTabId = 8020}
       },
       [5210200] = {
-        [1] = {ShopItemId = 802002, SubTabId = 8020},
-        [2] = {ShopItemId = 801002, SubTabId = 8010}
+        [1] = {ShopItemId = 801002, SubTabId = 8010},
+        [2] = {ShopItemId = 802002, SubTabId = 8020}
       },
       [5210300] = {
-        [1] = {ShopItemId = 802003, SubTabId = 8020},
-        [2] = {ShopItemId = 801003, SubTabId = 8010}
+        [1] = {ShopItemId = 801003, SubTabId = 8010},
+        [2] = {ShopItemId = 802003, SubTabId = 8020}
       },
       [5210400] = {
-        [1] = {ShopItemId = 802004, SubTabId = 8020},
-        [2] = {ShopItemId = 801004, SubTabId = 8010}
+        [1] = {ShopItemId = 801004, SubTabId = 8010},
+        [2] = {ShopItemId = 802004, SubTabId = 8020}
       }
     },
+    GiftShop = T.RT_1,
     HuaxuEventShop = {
       [101] = {
         [1] = {ShopItemId = 10001104, SubTabId = 100011}
@@ -1231,59 +1756,84 @@ return ReadOnly("ShopItem2ShopSubId", {
     RaidShopSeason01 = {
       [101] = {
         [1] = {ShopItemId = 10004107, SubTabId = 100041},
-        [2] = {ShopItemId = 10004115, SubTabId = 100041}
+        [2] = {ShopItemId = 10004115, SubTabId = 100041},
+        [3] = {ShopItemId = 10004135, SubTabId = 100041},
+        [4] = {ShopItemId = 10004143, SubTabId = 100041}
       },
       [102] = {
-        [1] = {ShopItemId = 10004116, SubTabId = 100041},
-        [2] = {ShopItemId = 10004108, SubTabId = 100041}
+        [1] = {ShopItemId = 10004108, SubTabId = 100041},
+        [2] = {ShopItemId = 10004116, SubTabId = 100041},
+        [3] = {ShopItemId = 10004136, SubTabId = 100041},
+        [4] = {ShopItemId = 10004144, SubTabId = 100041}
+      },
+      [220] = {
+        [1] = {ShopItemId = 10004153, SubTabId = 100041}
       },
       [1006] = {
-        [1] = {ShopItemId = 10004102, SubTabId = 100041}
+        [1] = {ShopItemId = 10004102, SubTabId = 100041},
+        [2] = {ShopItemId = 10004130, SubTabId = 100041}
       },
       [2009] = {
-        [1] = {ShopItemId = 10004118, SubTabId = 100041}
+        [1] = {ShopItemId = 10004118, SubTabId = 100041},
+        [2] = {ShopItemId = 10004146, SubTabId = 100041}
       },
       [2010] = {
-        [1] = {ShopItemId = 10004110, SubTabId = 100041}
+        [1] = {ShopItemId = 10004110, SubTabId = 100041},
+        [2] = {ShopItemId = 10004138, SubTabId = 100041}
       },
       [2013] = {
-        [1] = {ShopItemId = 10004117, SubTabId = 100041}
+        [1] = {ShopItemId = 10004117, SubTabId = 100041},
+        [2] = {ShopItemId = 10004145, SubTabId = 100041}
       },
       [2014] = {
-        [1] = {ShopItemId = 10004109, SubTabId = 100041}
+        [1] = {ShopItemId = 10004109, SubTabId = 100041},
+        [2] = {ShopItemId = 10004137, SubTabId = 100041}
       },
       [3006] = {
-        [1] = {ShopItemId = 10004112, SubTabId = 100041}
+        [1] = {ShopItemId = 10004112, SubTabId = 100041},
+        [2] = {ShopItemId = 10004140, SubTabId = 100041}
       },
       [3007] = {
-        [1] = {ShopItemId = 10004104, SubTabId = 100041}
+        [1] = {ShopItemId = 10004104, SubTabId = 100041},
+        [2] = {ShopItemId = 10004132, SubTabId = 100041}
       },
       [3016] = {
-        [1] = {ShopItemId = 10004101, SubTabId = 100041}
+        [1] = {ShopItemId = 10004101, SubTabId = 100041},
+        [2] = {ShopItemId = 10004125, SubTabId = 100041},
+        [3] = {ShopItemId = 10004126, SubTabId = 100041},
+        [4] = {ShopItemId = 10004127, SubTabId = 100041},
+        [5] = {ShopItemId = 10004128, SubTabId = 100041},
+        [6] = {ShopItemId = 10004129, SubTabId = 100041}
       },
       [10100] = {
-        [1] = {ShopItemId = 10004103, SubTabId = 100041}
+        [1] = {ShopItemId = 10004103, SubTabId = 100041},
+        [2] = {ShopItemId = 10004131, SubTabId = 100041}
       },
       [20013] = {
-        [1] = {ShopItemId = 10004111, SubTabId = 100041}
+        [1] = {ShopItemId = 10004111, SubTabId = 100041},
+        [2] = {ShopItemId = 10004139, SubTabId = 100041}
       },
       [20021] = {
-        [1] = {ShopItemId = 10004114, SubTabId = 100041}
+        [1] = {ShopItemId = 10004114, SubTabId = 100041},
+        [2] = {ShopItemId = 10004142, SubTabId = 100041}
       },
       [20024] = {
-        [1] = {ShopItemId = 10004113, SubTabId = 100041}
+        [1] = {ShopItemId = 10004113, SubTabId = 100041},
+        [2] = {ShopItemId = 10004141, SubTabId = 100041}
       },
       [20027] = {
-        [1] = {ShopItemId = 10004105, SubTabId = 100041}
+        [1] = {ShopItemId = 10004105, SubTabId = 100041},
+        [2] = {ShopItemId = 10004133, SubTabId = 100041}
       },
       [20028] = {
-        [1] = {ShopItemId = 10004106, SubTabId = 100041}
+        [1] = {ShopItemId = 10004106, SubTabId = 100041},
+        [2] = {ShopItemId = 10004134, SubTabId = 100041}
       }
     },
     Rouge = {
       [101] = {
-        [1] = {ShopItemId = 10002105, SubTabId = 100021},
-        [2] = {ShopItemId = 10002103, SubTabId = 100021}
+        [1] = {ShopItemId = 10002103, SubTabId = 100021},
+        [2] = {ShopItemId = 10002105, SubTabId = 100021}
       },
       [102] = {
         [1] = {ShopItemId = 10002104, SubTabId = 100021}
@@ -1307,20 +1857,29 @@ return ReadOnly("ShopItem2ShopSubId", {
         [8] = {ShopItemId = 110108, SubTabId = 1101}
       },
       [101] = {
-        [1] = {ShopItemId = 140136, SubTabId = 1402}
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140136,
+          SubTabId = 1402
+        },
+        [2] = {
+          AccessOrder = 1,
+          ShopItemId = 150303,
+          SubTabId = 1500
+        }
       },
       [102] = {
         [1] = {ShopItemId = 140141, SubTabId = 1402}
       },
       [201] = {
-        [1] = {ShopItemId = 150104, SubTabId = 1501},
-        [2] = {ShopItemId = 140143, SubTabId = 1402},
-        [3] = {ShopItemId = 140149, SubTabId = 1402}
+        [1] = {ShopItemId = 140143, SubTabId = 1402},
+        [2] = {ShopItemId = 140149, SubTabId = 1402},
+        [3] = {ShopItemId = 150104, SubTabId = 1501}
       },
       [202] = {
-        [1] = {ShopItemId = 150105, SubTabId = 1501},
-        [2] = {ShopItemId = 140144, SubTabId = 1402},
-        [3] = {ShopItemId = 140150, SubTabId = 1402}
+        [1] = {ShopItemId = 140144, SubTabId = 1402},
+        [2] = {ShopItemId = 140150, SubTabId = 1402},
+        [3] = {ShopItemId = 150105, SubTabId = 1501}
       },
       [207] = {
         [1] = {ShopItemId = 150101, SubTabId = 1500},
@@ -1333,26 +1892,26 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {ShopItemId = 150103, SubTabId = 1500}
       },
       [1001] = {
-        [1] = {ShopItemId = 140151, SubTabId = 1402},
-        [2] = {
+        [1] = {
           AccessOrder = 1,
           ShopItemId = 150106,
           SubTabId = 1501
         },
-        [3] = {ShopItemId = 140145, SubTabId = 1402}
+        [2] = {ShopItemId = 140145, SubTabId = 1402},
+        [3] = {ShopItemId = 140151, SubTabId = 1402}
       },
       [1002] = {
-        [1] = {ShopItemId = 150115, SubTabId = 1501},
-        [2] = {ShopItemId = 140142, SubTabId = 1402}
+        [1] = {ShopItemId = 140142, SubTabId = 1402},
+        [2] = {ShopItemId = 150115, SubTabId = 1501}
       },
       [1003] = {
-        [1] = {ShopItemId = 140152, SubTabId = 1402},
-        [2] = {
+        [1] = {
           AccessOrder = 1,
           ShopItemId = 150107,
           SubTabId = 1500
         },
-        [3] = {ShopItemId = 140146, SubTabId = 1402}
+        [2] = {ShopItemId = 140146, SubTabId = 1402},
+        [3] = {ShopItemId = 140152, SubTabId = 1402}
       },
       [2009] = {
         [1] = {ShopItemId = 140137, SubTabId = 1402}
@@ -1360,14 +1919,28 @@ return ReadOnly("ShopItem2ShopSubId", {
       [2013] = {
         [1] = {ShopItemId = 140138, SubTabId = 1402}
       },
+      [3016] = {
+        [1] = {
+          AccessOrder = 1,
+          ShopItemId = 150302,
+          SubTabId = 1500
+        }
+      },
+      [20013] = {
+        [1] = {
+          AccessOrder = 1,
+          ShopItemId = 150304,
+          SubTabId = 1500
+        }
+      },
       [30101] = {
-        [1] = {ShopItemId = 140153, SubTabId = 1402},
-        [2] = {
+        [1] = {
           AccessOrder = 2,
           ShopItemId = 140213,
           SubTabId = 1401
         },
-        [3] = {ShopItemId = 140147, SubTabId = 1402}
+        [2] = {ShopItemId = 140147, SubTabId = 1402},
+        [3] = {ShopItemId = 140153, SubTabId = 1402}
       },
       [30102] = {
         [1] = {ShopItemId = 150108, SubTabId = 1501}
@@ -1388,13 +1961,13 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {ShopItemId = 150113, SubTabId = 1501}
       },
       [30108] = {
-        [1] = {ShopItemId = 140154, SubTabId = 1402},
-        [2] = {
+        [1] = {
           AccessOrder = 2,
           ShopItemId = 140214,
           SubTabId = 1401
         },
-        [3] = {ShopItemId = 140148, SubTabId = 1402}
+        [2] = {ShopItemId = 140148, SubTabId = 1402},
+        [3] = {ShopItemId = 140154, SubTabId = 1402}
       },
       [30109] = {
         [1] = {ShopItemId = 150114, SubTabId = 1501}
@@ -1478,15 +2051,105 @@ return ReadOnly("ShopItem2ShopSubId", {
           SubTabId = 1401
         }
       },
+      [41028] = {
+        [1] = {ShopItemId = 140155, SubTabId = 1402}
+      },
+      [41031] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140273,
+          SubTabId = 1401
+        }
+      },
+      [41032] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140270,
+          SubTabId = 1401
+        }
+      },
+      [41037] = {
+        [1] = {
+          AccessOrder = 1,
+          ShopItemId = 150309,
+          SubTabId = 1501
+        }
+      },
+      [41038] = {
+        [1] = {
+          AccessOrder = 1,
+          ShopItemId = 150310,
+          SubTabId = 1501
+        }
+      },
+      [41039] = {
+        [1] = {
+          AccessOrder = 1,
+          ShopItemId = 150311,
+          SubTabId = 1501
+        }
+      },
+      [41040] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140271,
+          SubTabId = 1401
+        }
+      },
+      [41041] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140272,
+          SubTabId = 1401
+        }
+      },
+      [41042] = {
+        [1] = {
+          AccessOrder = 1,
+          ShopItemId = 150305,
+          SubTabId = 1501
+        }
+      },
+      [41043] = {
+        [1] = {
+          AccessOrder = 1,
+          ShopItemId = 150306,
+          SubTabId = 1501
+        }
+      },
+      [41044] = {
+        [1] = {
+          AccessOrder = 1,
+          ShopItemId = 150307,
+          SubTabId = 1501
+        }
+      },
+      [41045] = {
+        [1] = {
+          AccessOrder = 1,
+          ShopItemId = 150308,
+          SubTabId = 1501
+        }
+      },
       [110006] = {
-        [1] = {ShopItemId = 120105, SubTabId = 1201},
-        [2] = {ShopItemId = 120106, SubTabId = 1201},
-        [3] = {ShopItemId = 120107, SubTabId = 1201}
+        [1] = {ShopItemId = 120105, SubTabId = 1208},
+        [2] = {ShopItemId = 120106, SubTabId = 1208},
+        [3] = {ShopItemId = 120107, SubTabId = 1208}
       },
       [110012] = {
-        [1] = {ShopItemId = 120109, SubTabId = 1201},
-        [2] = {ShopItemId = 120110, SubTabId = 1201},
-        [3] = {ShopItemId = 120111, SubTabId = 1201}
+        [1] = {ShopItemId = 120109, SubTabId = 1208},
+        [2] = {ShopItemId = 120110, SubTabId = 1208},
+        [3] = {ShopItemId = 120111, SubTabId = 1208}
+      },
+      [110015] = {
+        [1] = {ShopItemId = 120145, SubTabId = 1208},
+        [2] = {ShopItemId = 120146, SubTabId = 1208},
+        [3] = {ShopItemId = 120147, SubTabId = 1208}
+      },
+      [110016] = {
+        [1] = {ShopItemId = 120148, SubTabId = 1208},
+        [2] = {ShopItemId = 120149, SubTabId = 1208},
+        [3] = {ShopItemId = 120150, SubTabId = 1208}
       },
       [1001101] = {
         [1] = {ShopItemId = 150116, SubTabId = 1502}
@@ -1530,6 +2193,12 @@ return ReadOnly("ShopItem2ShopSubId", {
       [1004101] = {
         [1] = {ShopItemId = 150132, SubTabId = 1502}
       },
+      [1004102] = {
+        [1] = {ShopItemId = 150133, SubTabId = 1502}
+      },
+      [1004201] = {
+        [1] = {ShopItemId = 150134, SubTabId = 1502}
+      },
       [1004202] = {
         [1] = {ShopItemId = 150135, SubTabId = 1502}
       },
@@ -1553,8 +2222,10 @@ return ReadOnly("ShopItem2ShopSubId", {
   },
   Reward = {
     AbyssShop = T.RT_1,
+    AutoChessShop = T.RT_1,
     ExploreBadgeShop = T.RT_1,
     FishingShop = T.RT_1,
+    GiftShop = T.RT_1,
     HuaxuEventShop = T.RT_1,
     HuaxuExploreShop = T.RT_1,
     RaidShopSeason01 = T.RT_1,
@@ -1697,6 +2368,18 @@ return ReadOnly("ShopItem2ShopSubId", {
       [12060] = {
         [1] = {ShopItemId = 160217, SubTabId = 1605}
       },
+      [12061] = {
+        [1] = {ShopItemId = 160218, SubTabId = 1604}
+      },
+      [12062] = {
+        [1] = {ShopItemId = 160219, SubTabId = 1604}
+      },
+      [12063] = {
+        [1] = {ShopItemId = 160220, SubTabId = 1604}
+      },
+      [12064] = {
+        [1] = {ShopItemId = 160221, SubTabId = 1604}
+      },
       [12101] = {
         [1] = {ShopItemId = 160101, SubTabId = 1601}
       },
@@ -1716,8 +2399,8 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {ShopItemId = 160106, SubTabId = 1601}
       },
       [12107] = {
-        [1] = {ShopItemId = 160316, SubTabId = 1606},
-        [2] = {ShopItemId = 160111, SubTabId = 1601}
+        [1] = {ShopItemId = 160111, SubTabId = 1601},
+        [2] = {ShopItemId = 160316, SubTabId = 1606}
       },
       [12110] = {
         [1] = {ShopItemId = 160112, SubTabId = 1601}
@@ -1738,29 +2421,91 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {ShopItemId = 160117, SubTabId = 1601}
       },
       [12116] = {
-        [1] = {ShopItemId = 160317, SubTabId = 1606},
-        [2] = {ShopItemId = 160118, SubTabId = 1601}
+        [1] = {ShopItemId = 160118, SubTabId = 1601},
+        [2] = {ShopItemId = 160317, SubTabId = 1606}
       },
       [12119] = {
-        [1] = {ShopItemId = 160121, SubTabId = 1601},
+        [1] = {ShopItemId = 160119, SubTabId = 1601},
         [2] = {ShopItemId = 160120, SubTabId = 1601},
-        [3] = {ShopItemId = 160119, SubTabId = 1601}
+        [3] = {ShopItemId = 160121, SubTabId = 1601}
       },
       [12120] = {
-        [1] = {ShopItemId = 160124, SubTabId = 1601},
+        [1] = {ShopItemId = 160122, SubTabId = 1601},
         [2] = {ShopItemId = 160123, SubTabId = 1601},
-        [3] = {ShopItemId = 160122, SubTabId = 1601}
+        [3] = {ShopItemId = 160124, SubTabId = 1601}
       },
       [12121] = {
         [1] = {ShopItemId = 160125, SubTabId = 1601}
+      },
+      [12123] = {
+        [1] = {ShopItemId = 160140, SubTabId = 1601}
+      },
+      [12124] = {
+        [1] = {ShopItemId = 160141, SubTabId = 1601}
+      },
+      [12125] = {
+        [1] = {ShopItemId = 160142, SubTabId = 1601}
+      },
+      [12126] = {
+        [1] = {ShopItemId = 160143, SubTabId = 1601}
+      },
+      [12127] = {
+        [1] = {ShopItemId = 160144, SubTabId = 1601}
+      },
+      [12128] = {
+        [1] = {ShopItemId = 160126, SubTabId = 1601}
+      },
+      [12129] = {
+        [1] = {ShopItemId = 160127, SubTabId = 1601}
+      },
+      [12130] = {
+        [1] = {ShopItemId = 160128, SubTabId = 1601}
+      },
+      [12131] = {
+        [1] = {ShopItemId = 160129, SubTabId = 1601}
+      },
+      [12132] = {
+        [1] = {ShopItemId = 160130, SubTabId = 1601}
+      },
+      [12133] = {
+        [1] = {ShopItemId = 160131, SubTabId = 1601}
+      },
+      [12134] = {
+        [1] = {ShopItemId = 160133, SubTabId = 1601},
+        [2] = {ShopItemId = 160319, SubTabId = 1606}
+      },
+      [12135] = {
+        [1] = {ShopItemId = 160132, SubTabId = 1601},
+        [2] = {ShopItemId = 160318, SubTabId = 1606}
+      },
+      [12136] = {
+        [1] = {ShopItemId = 160134, SubTabId = 1601},
+        [2] = {ShopItemId = 160135, SubTabId = 1601},
+        [3] = {ShopItemId = 160136, SubTabId = 1601}
+      },
+      [12137] = {
+        [1] = {ShopItemId = 160137, SubTabId = 1601},
+        [2] = {ShopItemId = 160138, SubTabId = 1601},
+        [3] = {ShopItemId = 160139, SubTabId = 1601}
+      },
+      [12142] = {
+        [1] = {ShopItemId = 160145, SubTabId = 1601}
+      },
+      [12143] = {
+        [1] = {ShopItemId = 160146, SubTabId = 1601}
+      },
+      [12144] = {
+        [1] = {ShopItemId = 160147, SubTabId = 1601}
       }
     },
     WeeklyDungeonShop = T.RT_1
   },
   Skin = {
     AbyssShop = T.RT_1,
+    AutoChessShop = T.RT_1,
     ExploreBadgeShop = T.RT_1,
     FishingShop = T.RT_1,
+    GiftShop = T.RT_1,
     HuaxuEventShop = T.RT_1,
     HuaxuExploreShop = T.RT_1,
     RaidShopSeason01 = T.RT_1,
@@ -1770,6 +2515,13 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {
           AccessOrder = 2,
           ShopItemId = 140230,
+          SubTabId = 1401
+        }
+      },
+      [410201] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140259,
           SubTabId = 1401
         }
       },
@@ -1785,6 +2537,7 @@ return ReadOnly("ShopItem2ShopSubId", {
   },
   Title = {
     AbyssShop = T.RT_1,
+    AutoChessShop = T.RT_1,
     ExploreBadgeShop = T.RT_1,
     FishingShop = {
       [10022] = {
@@ -1797,29 +2550,61 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {ShopItemId = 802128, SubTabId = 8021}
       }
     },
+    GiftShop = T.RT_1,
     HuaxuEventShop = T.RT_1,
     HuaxuExploreShop = T.RT_1,
     RaidShopSeason01 = {
       [10075] = {
-        [1] = {ShopItemId = 10004122, SubTabId = 100041}
+        [1] = {ShopItemId = 10004122, SubTabId = 100041},
+        [2] = {ShopItemId = 10004150, SubTabId = 100041}
       },
       [10076] = {
-        [1] = {ShopItemId = 10004123, SubTabId = 100041}
+        [1] = {ShopItemId = 10004123, SubTabId = 100041},
+        [2] = {ShopItemId = 10004151, SubTabId = 100041}
       },
       [10077] = {
-        [1] = {ShopItemId = 10004124, SubTabId = 100041}
+        [1] = {ShopItemId = 10004124, SubTabId = 100041},
+        [2] = {ShopItemId = 10004152, SubTabId = 100041}
       }
     },
     Rouge = T.RT_1,
     Shop = T.RT_1,
     WeeklyDungeonShop = T.RT_1
   },
-  TitleFrame = T.RT_2,
+  TitleFrame = {
+    AbyssShop = T.RT_1,
+    AutoChessShop = T.RT_1,
+    ExploreBadgeShop = T.RT_1,
+    FishingShop = T.RT_1,
+    GiftShop = T.RT_1,
+    HuaxuEventShop = T.RT_1,
+    HuaxuExploreShop = T.RT_1,
+    RaidShopSeason01 = T.RT_1,
+    Rouge = T.RT_1,
+    Shop = {
+      [10018] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140291,
+          SubTabId = 1401
+        }
+      }
+    },
+    WeeklyDungeonShop = T.RT_1
+  },
   Walnut = {
     AbyssShop = {
       [2029] = {
         [1] = {ShopItemId = 10000108, SubTabId = 100001},
         [2] = {ShopItemId = 10000109, SubTabId = 100001}
+      },
+      [2045] = {
+        [1] = {ShopItemId = 10000120, SubTabId = 100001},
+        [2] = {ShopItemId = 10000121, SubTabId = 100001}
+      },
+      [2046] = {
+        [1] = {ShopItemId = 10000118, SubTabId = 100001},
+        [2] = {ShopItemId = 10000119, SubTabId = 100001}
       },
       [2047] = {
         [1] = {ShopItemId = 10000114, SubTabId = 100001},
@@ -1834,8 +2619,10 @@ return ReadOnly("ShopItem2ShopSubId", {
         [2] = {ShopItemId = 10000113, SubTabId = 100001}
       }
     },
+    AutoChessShop = T.RT_1,
     ExploreBadgeShop = T.RT_1,
     FishingShop = T.RT_1,
+    GiftShop = T.RT_1,
     HuaxuEventShop = T.RT_1,
     HuaxuExploreShop = T.RT_1,
     RaidShopSeason01 = T.RT_1,
@@ -1859,6 +2646,9 @@ return ReadOnly("ShopItem2ShopSubId", {
       [1009] = {
         [1] = {ShopItemId = 151009, SubTabId = 1801}
       },
+      [1012] = {
+        [1] = {ShopItemId = 151012, SubTabId = 1801}
+      },
       [1014] = {
         [1] = {ShopItemId = 151014, SubTabId = 1801}
       },
@@ -1870,6 +2660,9 @@ return ReadOnly("ShopItem2ShopSubId", {
       },
       [1019] = {
         [1] = {ShopItemId = 151019, SubTabId = 1801}
+      },
+      [1020] = {
+        [1] = {ShopItemId = 151020, SubTabId = 1801}
       },
       [1021] = {
         [1] = {ShopItemId = 151021, SubTabId = 1801}
@@ -1958,11 +2751,23 @@ return ReadOnly("ShopItem2ShopSubId", {
       [2028] = {
         [1] = {ShopItemId = 152028, SubTabId = 1802}
       },
+      [2030] = {
+        [1] = {ShopItemId = 152030, SubTabId = 1802}
+      },
+      [2031] = {
+        [1] = {ShopItemId = 152031, SubTabId = 1802}
+      },
       [2040] = {
         [1] = {ShopItemId = 152040, SubTabId = 1802}
       },
+      [2041] = {
+        [1] = {ShopItemId = 152041, SubTabId = 1802}
+      },
       [2042] = {
         [1] = {ShopItemId = 152042, SubTabId = 1802}
+      },
+      [2043] = {
+        [1] = {ShopItemId = 152043, SubTabId = 1802}
       },
       [2044] = {
         [1] = {ShopItemId = 152044, SubTabId = 1802}
@@ -2051,6 +2856,12 @@ return ReadOnly("ShopItem2ShopSubId", {
       [151744] = {
         [1] = {ShopItemId = 651744, SubTabId = 1803}
       },
+      [151745] = {
+        [1] = {ShopItemId = 651745, SubTabId = 1803}
+      },
+      [151746] = {
+        [1] = {ShopItemId = 651746, SubTabId = 1803}
+      },
       [151751] = {
         [1] = {ShopItemId = 651751, SubTabId = 1803}
       },
@@ -2107,14 +2918,22 @@ return ReadOnly("ShopItem2ShopSubId", {
       },
       [151962] = {
         [1] = {ShopItemId = 651962, SubTabId = 1803}
+      },
+      [153011] = {
+        [1] = {ShopItemId = 653011, SubTabId = 1803}
+      },
+      [153013] = {
+        [1] = {ShopItemId = 653013, SubTabId = 1803}
       }
     },
     WeeklyDungeonShop = T.RT_1
   },
   Weapon = {
     AbyssShop = T.RT_1,
+    AutoChessShop = T.RT_1,
     ExploreBadgeShop = T.RT_1,
     FishingShop = T.RT_1,
+    GiftShop = T.RT_1,
     HuaxuEventShop = T.RT_1,
     HuaxuExploreShop = T.RT_1,
     RaidShopSeason01 = T.RT_1,
@@ -2169,6 +2988,13 @@ return ReadOnly("ShopItem2ShopSubId", {
           SubTabId = 1503
         }
       },
+      [10203] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 159108,
+          SubTabId = 1503
+        }
+      },
       [10204] = {
         [1] = {
           AccessOrder = 2,
@@ -2211,6 +3037,13 @@ return ReadOnly("ShopItem2ShopSubId", {
           SubTabId = 1503
         }
       },
+      [10304] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 159118,
+          SubTabId = 1503
+        }
+      },
       [10401] = {
         [1] = {
           AccessOrder = 2,
@@ -2229,6 +3062,13 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {
           AccessOrder = 2,
           ShopItemId = 159121,
+          SubTabId = 1503
+        }
+      },
+      [10404] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 159157,
           SubTabId = 1503
         }
       },
@@ -2407,6 +3247,13 @@ return ReadOnly("ShopItem2ShopSubId", {
           SubTabId = 1503
         }
       },
+      [20505] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 159158,
+          SubTabId = 1503
+        }
+      },
       [20506] = {
         [1] = {
           AccessOrder = 2,
@@ -2468,6 +3315,7 @@ return ReadOnly("ShopItem2ShopSubId", {
   },
   WeaponAccessory = {
     AbyssShop = T.RT_1,
+    AutoChessShop = T.RT_1,
     ExploreBadgeShop = {
       [10017] = {
         [1] = {ShopItemId = 704004, SubTabId = 7040}
@@ -2477,6 +3325,7 @@ return ReadOnly("ShopItem2ShopSubId", {
       }
     },
     FishingShop = T.RT_1,
+    GiftShop = T.RT_1,
     HuaxuEventShop = T.RT_1,
     HuaxuExploreShop = {
       [10022] = {
@@ -2591,51 +3440,108 @@ return ReadOnly("ShopItem2ShopSubId", {
           ShopItemId = 140252,
           SubTabId = 1401
         }
+      },
+      [10030] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140261,
+          SubTabId = 1401
+        }
+      },
+      [10031] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140262,
+          SubTabId = 1401
+        }
+      },
+      [10032] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140263,
+          SubTabId = 1401
+        }
+      },
+      [10033] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140264,
+          SubTabId = 1401
+        }
+      },
+      [10034] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140265,
+          SubTabId = 1401
+        }
+      },
+      [10035] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140266,
+          SubTabId = 1401
+        }
       }
     },
     WeeklyDungeonShop = T.RT_1
   },
   WeaponSkin = {
     AbyssShop = T.RT_1,
+    AutoChessShop = T.RT_1,
     ExploreBadgeShop = T.RT_1,
     FishingShop = T.RT_1,
+    GiftShop = T.RT_1,
     HuaxuEventShop = T.RT_1,
     HuaxuExploreShop = T.RT_1,
     RaidShopSeason01 = T.RT_1,
     Rouge = T.RT_1,
     Shop = {
       [3010101] = {
-        [1] = {ShopItemId = 120103, SubTabId = 1201}
+        [1] = {ShopItemId = 120103, SubTabId = 1208}
       },
       [3010102] = {
-        [1] = {ShopItemId = 120108, SubTabId = 1201}
+        [1] = {ShopItemId = 120108, SubTabId = 1208}
       },
       [3010104] = {
-        [1] = {ShopItemId = 120119, SubTabId = 1201}
+        [1] = {ShopItemId = 120119, SubTabId = 1208}
       },
       [3010105] = {
-        [1] = {ShopItemId = 120130, SubTabId = 1201}
+        [1] = {ShopItemId = 120130, SubTabId = 1208}
       },
       [3010106] = {
-        [1] = {ShopItemId = 120114, SubTabId = 1201}
+        [1] = {ShopItemId = 120114, SubTabId = 1208}
+      },
+      [3010107] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140260,
+          SubTabId = 1401
+        }
+      },
+      [3010108] = {
+        [1] = {ShopItemId = 120138, SubTabId = 1208}
       },
       [3010201] = {
-        [1] = {ShopItemId = 120104, SubTabId = 1201}
+        [1] = {ShopItemId = 120104, SubTabId = 1208}
       },
       [3010202] = {
-        [1] = {ShopItemId = 120101, SubTabId = 1201}
+        [1] = {ShopItemId = 120101, SubTabId = 1208}
       },
       [3010203] = {
-        [1] = {ShopItemId = 120132, SubTabId = 1201}
+        [1] = {ShopItemId = 120132, SubTabId = 1208}
       },
       [3010204] = {
-        [1] = {ShopItemId = 120112, SubTabId = 1201}
+        [1] = {ShopItemId = 120112, SubTabId = 1208}
+      },
+      [3010205] = {
+        [1] = {ShopItemId = 120136, SubTabId = 1208}
       },
       [3010302] = {
-        [1] = {ShopItemId = 120125, SubTabId = 1201}
+        [1] = {ShopItemId = 120125, SubTabId = 1208}
       },
       [3010303] = {
-        [1] = {ShopItemId = 120129, SubTabId = 1201}
+        [1] = {ShopItemId = 120129, SubTabId = 1208}
       },
       [3010401] = {
         [1] = {
@@ -2645,13 +3551,19 @@ return ReadOnly("ShopItem2ShopSubId", {
         }
       },
       [3010403] = {
-        [1] = {ShopItemId = 120118, SubTabId = 1201}
+        [1] = {ShopItemId = 120118, SubTabId = 1208}
       },
       [3010404] = {
-        [1] = {ShopItemId = 120133, SubTabId = 1201}
+        [1] = {ShopItemId = 120133, SubTabId = 1208}
       },
       [3010405] = {
-        [1] = {ShopItemId = 120113, SubTabId = 1201}
+        [1] = {ShopItemId = 120113, SubTabId = 1208}
+      },
+      [3010406] = {
+        [1] = {ShopItemId = 120137, SubTabId = 1208}
+      },
+      [3010407] = {
+        [1] = {ShopItemId = 120143, SubTabId = 1208}
       },
       [3010501] = {
         [1] = {
@@ -2661,43 +3573,61 @@ return ReadOnly("ShopItem2ShopSubId", {
         }
       },
       [3010502] = {
-        [1] = {ShopItemId = 120124, SubTabId = 1201}
+        [1] = {ShopItemId = 120124, SubTabId = 1208}
+      },
+      [3010503] = {
+        [1] = {ShopItemId = 120144, SubTabId = 1208}
       },
       [3010601] = {
-        [1] = {ShopItemId = 120122, SubTabId = 1201}
+        [1] = {ShopItemId = 120122, SubTabId = 1208}
       },
       [3010603] = {
-        [1] = {ShopItemId = 120131, SubTabId = 1201}
+        [1] = {ShopItemId = 120131, SubTabId = 1208}
       },
       [3010605] = {
-        [1] = {ShopItemId = 120117, SubTabId = 1201}
+        [1] = {ShopItemId = 120117, SubTabId = 1208}
+      },
+      [3010607] = {
+        [1] = {ShopItemId = 120141, SubTabId = 1208}
       },
       [3010701] = {
-        [1] = {ShopItemId = 120120, SubTabId = 1201}
+        [1] = {ShopItemId = 120120, SubTabId = 1208}
       },
       [3010703] = {
-        [1] = {ShopItemId = 120134, SubTabId = 1201}
+        [1] = {ShopItemId = 120134, SubTabId = 1208}
       },
       [3010705] = {
-        [1] = {ShopItemId = 120115, SubTabId = 1201}
+        [1] = {ShopItemId = 120115, SubTabId = 1208}
+      },
+      [3010707] = {
+        [1] = {ShopItemId = 120139, SubTabId = 1208}
       },
       [3010801] = {
-        [1] = {ShopItemId = 120121, SubTabId = 1201}
+        [1] = {ShopItemId = 120121, SubTabId = 1208}
       },
       [3010802] = {
-        [1] = {ShopItemId = 120135, SubTabId = 1201}
+        [1] = {ShopItemId = 120135, SubTabId = 1208}
+      },
+      [3010803] = {
+        [1] = {ShopItemId = 120116, SubTabId = 1208}
+      },
+      [3010804] = {
+        [1] = {ShopItemId = 120140, SubTabId = 1208}
+      },
+      [3010805] = {
+        [1] = {ShopItemId = 120142, SubTabId = 1208}
       },
       [3010901] = {
-        [1] = {ShopItemId = 120126, SubTabId = 1201}
+        [1] = {ShopItemId = 120126, SubTabId = 1208}
       },
       [3011001] = {
-        [1] = {ShopItemId = 120128, SubTabId = 1201}
+        [1] = {ShopItemId = 120128, SubTabId = 1208}
       },
       [3011101] = {
-        [1] = {ShopItemId = 120123, SubTabId = 1201}
+        [1] = {ShopItemId = 120123, SubTabId = 1208}
       },
       [3011201] = {
-        [1] = {ShopItemId = 120127, SubTabId = 1201}
+        [1] = {ShopItemId = 120127, SubTabId = 1208}
       }
     },
     WeeklyDungeonShop = T.RT_1

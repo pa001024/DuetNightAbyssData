@@ -90,18 +90,19 @@ function M:GetPipeArea()
   self.PointerSpeedResis = Info.PointerSpeedResis
 end
 
-function M:Tick()
+function M:Tick(MyGeometry, InDeltaTime)
   if not self.bGameStart or self.RootPage.bGameOver then
     return
   end
+  local SpeedRate = InDeltaTime * 60
   if not self.bCanClick then
     self.CurrentPointerAngle = math.min(self.CurrentPointerAngle + self.PointerSpeed, self.MaxPointerAngle)
     self.Panel_Pointer:SetRenderTransformAngle(self.CurrentPointerAngle)
   else
-    if self.CurrentPointerAngle - self.PointerSpeedResis <= self.MinPointerAngle and self.CurrentPointerAngle > self.MinPointerAngle then
+    if self.CurrentPointerAngle - self.PointerSpeedResis * SpeedRate <= self.MinPointerAngle and self.CurrentPointerAngle > self.MinPointerAngle then
       self:StopReleaseSound()
     end
-    self.CurrentPointerAngle = math.max(self.CurrentPointerAngle - self.PointerSpeedResis, self.MinPointerAngle)
+    self.CurrentPointerAngle = math.max(self.CurrentPointerAngle - self.PointerSpeedResis * SpeedRate, self.MinPointerAngle)
     self.Panel_Pointer:SetRenderTransformAngle(self.CurrentPointerAngle)
   end
   if self.CurrentPipeIndex > #self.PipeArea then

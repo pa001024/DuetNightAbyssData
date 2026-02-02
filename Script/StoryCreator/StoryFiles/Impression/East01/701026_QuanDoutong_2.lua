@@ -3,22 +3,22 @@ return {
   storyDescription = "",
   lineData = {
     {
-      startStory = "1764834030200393831",
+      startStory = "17648367518221123378",
       startPort = "StoryStart",
-      endStory = "1764834030200393833",
+      endStory = "17648367518221123380",
       endPort = "In"
     },
     {
-      startStory = "1764834030200393833",
+      startStory = "17648367518221123380",
       startPort = "Success",
-      endStory = "1764834030200393832",
+      endStory = "17648367518221123379",
       endPort = "StoryEnd"
     }
   },
   storyNodeData = {
-    ["1764834030200393831"] = {
+    ["17648367518221123378"] = {
       isStoryNode = true,
-      key = "1764834030200393831",
+      key = "17648367518221123378",
       type = "StoryStartNode",
       name = "StoryStart",
       pos = {x = 1014, y = 322.25},
@@ -29,9 +29,9 @@ return {
         commentData = {}
       }
     },
-    ["1764834030200393832"] = {
+    ["17648367518221123379"] = {
       isStoryNode = true,
-      key = "1764834030200393832",
+      key = "17648367518221123379",
       type = "StoryEndNode",
       name = "StoryEnd",
       pos = {x = 1795, y = 315},
@@ -42,9 +42,9 @@ return {
         commentData = {}
       }
     },
-    ["1764834030200393833"] = {
+    ["17648367518221123380"] = {
       isStoryNode = true,
-      key = "1764834030200393833",
+      key = "17648367518221123380",
       type = "StoryNode",
       name = "任务节点",
       pos = {x = 1389.6428571428573, y = 321.1487484289904},
@@ -78,48 +78,48 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "1764834030200393834",
+            startQuest = "17648367518221123381",
             startPort = "QuestStart",
-            endQuest = "1764834030200393837",
+            endQuest = "17648367518221123384",
             endPort = "In"
           },
           {
-            startQuest = "1764834030200393837",
+            startQuest = "17648367518221123384",
             startPort = "Out",
-            endQuest = "1764834030200393835",
+            endQuest = "17648367518221123382",
             endPort = "Success"
           },
           {
-            startQuest = "1764834030200393837",
+            startQuest = "17648367518221123384",
             startPort = "Fail",
-            endQuest = "1764834030200393836",
+            endQuest = "17648367518221123383",
             endPort = "Fail"
           }
         },
         nodeData = {
-          ["1764834030200393834"] = {
-            key = "1764834030200393834",
+          ["17648367518221123381"] = {
+            key = "17648367518221123381",
             type = "QuestStartNode",
             name = "QuestStart",
             pos = {x = 806, y = 316},
             propsData = {ModeType = 0}
           },
-          ["1764834030200393835"] = {
-            key = "1764834030200393835",
+          ["17648367518221123382"] = {
+            key = "17648367518221123382",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
             pos = {x = 1636, y = 252},
             propsData = {ModeType = 0}
           },
-          ["1764834030200393836"] = {
-            key = "1764834030200393836",
+          ["17648367518221123383"] = {
+            key = "17648367518221123383",
             type = "QuestFailNode",
             name = "QuestFail",
             pos = {x = 1648.0000000000002, y = 421.00000000000006},
             propsData = {}
           },
-          ["1764834030200393837"] = {
-            key = "1764834030200393837",
+          ["17648367518221123384"] = {
+            key = "17648367518221123384",
             type = "TalkNode",
             name = "对话节点",
             pos = {x = 1188.503105590062, y = 312.08695652173907},
@@ -129,7 +129,7 @@ return {
               IsNPCTurnToPlayer = true,
               FirstDialogueId = 51119029,
               FlowAssetPath = "",
-              TalkType = "FreeSimple",
+              TalkType = "Impression",
               BlendInTime = 0.5,
               BlendOutTime = 0.5,
               InType = "BlendIn",
@@ -148,6 +148,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -157,7 +158,7 @@ return {
               OptionType = "normal",
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
-              SwitchToMaster = "None",
+              SwitchToMaster = "Player",
               PlayerSwitchEmoIdle = true,
               NormalOptions = {},
               OverrideFailBlend = false

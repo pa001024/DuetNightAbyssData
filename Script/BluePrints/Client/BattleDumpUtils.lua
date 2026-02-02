@@ -193,10 +193,10 @@ function BattleDumpUtils:GetSquadInfoByQuestRoleId(RoleId, Avatar)
   local ReplaceCharId
   if RoleInfo.ExStroyInfo ~= nil then
     local Sex = Avatar.Sex
-    if RoleInfo.ExStroyInfo == "Player" then
-      Sex = Avatar.Sex
-    else
+    if string.sub(RoleInfo.ExStroyInfo, 1, 2) == "EX" then
       Sex = Avatar.WeitaSex
+    else
+      Sex = Avatar.Sex
     end
     ReplaceCharId = DataMgr.Player2RoleId[RoleInfo.ExStroyInfo][Sex]
   end
@@ -214,6 +214,7 @@ function BattleDumpUtils:GetSquadInfoByTemplate(Avatar, AvatarSquad, TrialSquad,
   local TemplateAvatarComponent = require("BluePrints.Client.TemplateAvatar.TemplateAvatarComponent")
   local TemplateAvatar = TemplateAvatarComponent()
   local ExtraSquad = {}
+  TemplateAvatar.Mods = Avatar.Mods
   if AvatarSquad.Char then
     TemplateAvatar.CurrentChar = AvatarSquad.Char
     TemplateAvatar.Chars[AvatarSquad.Char] = Avatar.Chars[AvatarSquad.Char]
@@ -283,16 +284,19 @@ function BattleDumpUtils:UpdateBattleInfo(AvatarInfo, UpdateInfo)
     return AvatarInfo
   end
   if UpdateInfo.RoleInfo then
+    AvatarInfo.RoleInfo = AvatarInfo.RoleInfo or {}
     for k, v in pairs(UpdateInfo.RoleInfo) do
       AvatarInfo.RoleInfo[k] = v
     end
   end
   if UpdateInfo.MeleeWeapon then
+    AvatarInfo.MeleeWeapon = AvatarInfo.MeleeWeapon or {}
     for k, v in pairs(UpdateInfo.MeleeWeapon) do
       AvatarInfo.MeleeWeapon[k] = v
     end
   end
   if UpdateInfo.RangedWeapon then
+    AvatarInfo.RangedWeapon = AvatarInfo.RangedWeapon or {}
     for k, v in pairs(UpdateInfo.RangedWeapon) do
       AvatarInfo.RangedWeapon[k] = v
     end

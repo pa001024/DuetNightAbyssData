@@ -91,7 +91,6 @@ function Component:OnClickBack()
 end
 
 function Component:OnReturnKeyDown()
-  UIUtils.PlayCommonBtnSe(self)
   self:OnClickBack()
 end
 

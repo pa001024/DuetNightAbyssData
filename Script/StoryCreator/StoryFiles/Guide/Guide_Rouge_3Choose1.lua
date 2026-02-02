@@ -494,7 +494,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "Left",
+              MessageLoc = "DownLeft",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },
@@ -592,7 +592,7 @@ return {
             key = "1745496317213555870",
             type = "ShowGuideButtonNode",
             name = "普通按钮",
-            pos = {x = 1746, y = 484},
+            pos = {x = 1744.6486486765134, y = 478.59459470605395},
             propsData = {
               ShowEnable = true,
               MessageId = 301808,
@@ -614,7 +614,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "Left",
+              MessageLoc = "Down",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },

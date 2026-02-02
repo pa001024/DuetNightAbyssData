@@ -49,6 +49,8 @@ function Jump_Phone_C:Construct()
     self.PanelMaterialGuide:SetScalarParameterValue(Opacity, 0)
   end
   self:ChangeByLayout(self.CurrentLayout)
+  local IconMat = self.Image_Main:GetDynamicMaterial()
+  IconMat:SetTextureParameterValue("Icon_Ranged", self.Icon_Jump)
 end
 
 function Jump_Phone_C:ChangeByLayout(Layout)
@@ -70,7 +72,7 @@ function Jump_Phone_C.ButtonJumpDown(Battle_Button_Phone, Index, StartPos)
     return
   end
   Jump_M.CurButtonState = "Press"
-  if Jump_M.OwnerPlayer:IsFlying() then
+  if Jump_M.OwnerPlayer:IsFlying() or Jump_M.OwnerPlayer.CurMount then
     Jump_M.OwnerPanel:TryToPlayTargetCommand("Jump", true)
   end
   Jump_M:PlayStateAnimation()
@@ -78,6 +80,9 @@ end
 
 function Jump_Phone_C.ButtonJumpMove(Battle_Button_Phone, TouchFingerCount, Index, LastPos, TotalDeltaDis, LastDeltaDis)
   local Jump_M = Battle_Button_Phone.Jump
+  if Jump_M.OwnerPlayer.CurMount then
+    return
+  end
   if Jump_M.OwnerPlayer:CheckSkillInActive(ESkillName.Jump) then
     return
   end
@@ -108,9 +113,9 @@ function Jump_Phone_C.ButtonJumpUp(Battle_Button_Phone, Index, WidgetLocalPos, L
     return
   end
   local FromCenterDis = UE4.UKismetMathLibrary.Distance2D(TotalDeltaDis, FVector2D(0, 0))
-  if FromCenterDis >= Jump_M.InnerButtonDis then
+  if FromCenterDis >= Jump_M.InnerButtonDis and not Jump_M.OwnerPlayer.CurMount then
     Jump_M:HandleStateWhenUp()
-  elseif Jump_M.OwnerPlayer:IsFlying() then
+  elseif Jump_M.OwnerPlayer:IsFlying() or Jump_M.OwnerPlayer.CurMount then
     Jump_M.OwnerPanel:TryToStopTargetCommand("Jump", true)
   else
     Jump_M.OwnerPanel:TryToPlayTargetCommand("Jump", true)
@@ -287,6 +292,30 @@ function Jump_Phone_C:OnGuideEnd()
   end
   self.Panel_State_Guide:SetVisibility(ESlateVisibility.Collapsed)
   self.GuidingSkill = {}
+end
+
+function Jump_Phone_C:OnStartMountFly()
+  local IconMat = self.Image_Main:GetDynamicMaterial()
+  IconMat:SetTextureParameterValue("Icon_Ranged", self.Icon_MountUp)
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.Flash)
+end
+
+function Jump_Phone_C:OnStopMountFly()
+  local IconMat = self.Image_Main:GetDynamicMaterial()
+  IconMat:SetTextureParameterValue("Icon_Ranged", self.Icon_Jump)
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.Flash)
+end
+
+function Jump_Phone_C:OnEnableBattleMount()
+  self:OnSkillInActive(ESkillName.Slide)
+  self:OnSkillInActive(ESkillName.Attack)
+  self:OnSkillInActive(ESkillName.BulletJump)
+end
+
+function Jump_Phone_C:OnDisableBattleMount()
+  self:OnSkillActive(ESkillName.Slide)
+  self:OnSkillActive(ESkillName.Attack)
+  self:OnSkillActive(ESkillName.BulletJump)
 end
 
 AssembleComponents(Jump_Phone_C)

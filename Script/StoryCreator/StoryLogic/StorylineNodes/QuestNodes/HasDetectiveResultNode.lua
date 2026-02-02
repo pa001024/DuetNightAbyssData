@@ -99,8 +99,8 @@ function HasDetectiveResultNode:Clear()
 end
 
 function HasDetectiveResultNode:OnCancelTrack()
-  self.IsTracking = false
   self:ClearTaskBarNeedOpenDetectiveGame()
+  self.IsTracking = false
 end
 
 function HasDetectiveResultNode:OnChooseTrack()
@@ -136,6 +136,7 @@ function HasDetectiveResultNode:ChangeMainTaskBarInfo()
   self.Text = TaskUIObj.Text_Tips02:GetText()
   TaskUIObj.Text_Tips02:SetText(GText("Minigame_Textmap_100304"))
   TaskUIObj.NeedOpenDetectiveGame = true
+  TaskUIObj.NeedOpenDetectiveResultIds = self.ResultIds
 end
 
 function HasDetectiveResultNode:ClearTaskBarNeedOpenDetectiveGame()
@@ -148,6 +149,7 @@ function HasDetectiveResultNode:ClearTaskBarNeedOpenDetectiveGame()
   end
   TaskUIObj.Text_Tips02:SetText(self.Text)
   TaskUIObj.NeedOpenDetectiveGame = false
+  TaskUIObj.NeedOpenDetectiveResultIds = nil
 end
 
 function HasDetectiveResultNode:ClearWhenQuestSuccess()

@@ -7,6 +7,7 @@ local BP_PickupBase_C = Class({
 })
 
 function BP_PickupBase_C:AuthorityInitInfo(Info)
+  self.MoveSpeed = 3000
 end
 
 function BP_PickupBase_C:ClientCreateInitInfo(Info)
@@ -43,6 +44,7 @@ function BP_PickupBase_C:CheckRarity(TargetRarity)
 end
 
 function BP_PickupBase_C:ClientInitInfo(Info)
+  self.MoveSpeed = 3000
 end
 
 function BP_PickupBase_C:CheckIsNeedShowGuideCallback(IsShowInMinimap, IsAllConditionAchieve)
@@ -234,12 +236,12 @@ function BP_PickupBase_C:WaitForGetResourece()
   EventManager:AddEvent(EventID.OnPlayerGetResource, self, self.OnPlayerGetResource)
 end
 
-function BP_PickupBase_C:OnPlayerGetResource(ResourceId)
-  if ResourceId == self.UseParam then
+function BP_PickupBase_C:OnPlayerGetResource(ResourceId, ExtraInfo)
+  if ResourceId == self.UseParam and ExtraInfo and ExtraInfo.WorldRegionEid == self.WorldRegionEid then
     DebugPrint("Pickup OnPlayerGetResource:", self:GetName(), self.UnitId, self.CreatorId, self.WorldRegionEid)
     self:AfterPick()
+    EventManager:RemoveEvent(EventID.OnPlayerGetResource, self)
   end
-  EventManager:RemoveEvent(EventID.OnPlayerGetResource, self)
 end
 
 function BP_PickupBase_C:ReceiveEndPlay()

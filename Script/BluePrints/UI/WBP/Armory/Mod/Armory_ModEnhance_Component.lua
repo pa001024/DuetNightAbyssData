@@ -29,18 +29,22 @@ end
 
 local function OnItemMouseButtonUpEvent(IntensifyMain, Content, MouseEvent)
   IntensifyMain:SelectContentChanged(Content)
-  if Content.IsLocked then
-    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_ModEnhance_Locked"))
-    return
-  end
-  if not Content.IsChosen or 0 == Content.ModId then
-    local Res = IntensifyMain.EnhanceWidget:AddComsumerItem(Content)
-    if Res then
-      SetItemChosen(Content, true)
+  if not Content.bShadow then
+    if Content.IsLocked then
+      UIManager():ShowUITip(UIConst.Tip_CommonToast, GText("UI_ModEnhance_Locked"))
+      return
+    end
+    if not Content.IsChosen or 0 == Content.ModId then
+      local Res = IntensifyMain.EnhanceWidget:AddComsumerItem(Content)
+      if Res then
+        SetItemChosen(Content, true)
+      end
+    else
+      SetItemChosen(Content, false)
+      IntensifyMain.EnhanceWidget:OnItemMinusBtnClick(Content)
     end
   else
-    SetItemChosen(Content, false)
-    IntensifyMain.EnhanceWidget:OnItemMinusBtnClick(Content)
+    ModController:ShowToast(GText("UI_ModCardLevelUp_NotGet"))
   end
 end
 
@@ -95,20 +99,16 @@ function Component:OnBagItemLockedOrUnlocked(OpAction, ErrCode, ...)
 end
 
 function Component:OnListItemClicked(ItemContent)
-  if not ItemContent.Uuid then
-    return
+  if ItemContent.ItemType or ItemContent.Type then
+    self:ShowItemDetails(true, ItemContent, false, true)
   end
-  self:ShowItemDetails(true, ItemContent, false, true)
 end
 
 function Component:OnItemIsHoverChanged(ItemContent, bHovered)
-  if not ItemContent.Uuid then
-    return
-  end
   if self.CurInputDeviceType ~= ECommonInputType.Gamepad then
     return
   end
-  if self.bListExpand and not self:IsInLSMode() then
+  if self.bListExpand and not self:IsInLSMode() and (ItemContent.ItemType or ItemContent.Type) then
     self:ShowItemDetails(true, ItemContent, true, true)
   end
 end
@@ -147,6 +147,7 @@ function Component:InitEnhanceComp(...)
   self:AddTimer(0.2, self.RefreshBaseInfo)
   self:AddDispatcher(EventID.OnUpdateBagItem, self, self.OnBagItemLockedOrUnlocked)
   self:UpdateTopResourceBar()
+  ModModel:GenerateEnhanceData()
 end
 
 function Component:SelectContentChanged(Content)
@@ -214,9 +215,8 @@ function Component:OnBtnAutoClick()
     local i = 1
     while i <= #self.Selective_Listing.FilteredContents and not (#AutoSelectContents >= self.EnhanceWidget.MaxComsumerCount) do
       local Content = self.Selective_Listing.FilteredContents[i]
-      if Content.IsLocked or Content.Level and Content.Level > 0 then
+      if Content.IsLocked or Content.Level and Content.Level > 0 or Content.bShadow then
       elseif Content.Count and Content.Count > 0 then
-        table.insert(PendingEnhanceResList, Content)
       else
         SetItemChosen(Content, true)
         table.insert(AutoSelectContents, Content)
@@ -283,6 +283,7 @@ function Component:RealCloseComp()
   self.Btn_Enhance:UnBindEventOnClickedByObj(self)
   self.Btn_Auto:UnBindEventOnClickedByObj(self)
   self:CloseForModCommon()
+  ModModel:DisposeEnhanceData()
 end
 
 function Component:RefreshListComp()
@@ -300,27 +301,41 @@ function Component:RefreshListComp()
       Obj.ModId = 0
       Obj.Parent = self
       Obj.bEnhance = true
-      Obj.AdjustBackGroundHeightDelay = 0.1
       Obj.MouseButtonUpEvent = OnItemMouseButtonUpEvent
       table.insert(ModContents, Obj)
       self.IncId2ModContent[IncId] = Obj
       IncId = IncId + 1
     end
   end
+  local ValidModId = {}
   for Uuid, _ in pairs(ModModel.TargetMods) do
     local Mod = ModModel:GetMod(Uuid)
     if self.Target:IsCardLevelNeedModId(Mod.ModId) and Uuid ~= self.Target.Uuid then
+      ValidModId[Mod.ModId] = 1
       for i = 1, Mod.Count do
         local Obj = ModModel:CreateModContent(Mod, nil, true)
         Obj.IncId = IncId
         Obj.Parent = self
         Obj.bEnhance = true
-        Obj.AdjustBackGroundHeightDelay = 0.1
         Obj.MouseButtonUpEvent = OnItemMouseButtonUpEvent
         table.insert(ModContents, Obj)
         self.IncId2ModContent[IncId] = Obj
         IncId = IncId + 1
       end
+    end
+  end
+  for _, ModId in pairs(self.Target.CardLevelNeedModId or {}) do
+    if not ValidModId[ModId] then
+      local Mod = ModModel:CreateEnhanceInvalidMod(IncId, ModId)
+      local Obj = ModModel:CreateModContent(Mod, nil, true)
+      Obj.IncId = IncId
+      Obj.Parent = self
+      Obj.bEnhance = true
+      Obj.MouseButtonUpEvent = OnItemMouseButtonUpEvent
+      Obj.bShadow = true
+      table.insert(ModContents, Obj)
+      self.IncId2ModContent[IncId] = Obj
+      IncId = IncId + 1
     end
   end
   self:SortSelectiveList(ModContents, 1, CommonConst.ASC)
@@ -336,6 +351,7 @@ function Component:RefreshListComp()
   if 0 == #ModContents then
     self.Selective_Listing:SetEmptyStateText(GText("UI_Armory_ModListIsEmpty"))
   end
+  self.Selective_Listing:SetTitle(GText("UI_ModCardLevelUp_Title"))
 end
 
 function Component:SortSelectiveList(InOutContentArray, SortBy, SortType)
@@ -345,6 +361,9 @@ function Component:SortSelectiveList(InOutContentArray, SortBy, SortType)
     self.SortFunc[-1] = function(M1, M2)
       local Mod1 = ModModel:GetMod(M1.Uuid)
       local Mod2 = ModModel:GetMod(M2.Uuid)
+      if Mod1.Count ~= Mod2.Count then
+        return not CommonUtils:Compare(Mod1.Count, Mod2.Count, self.SortType)
+      end
       if Mod1.Level ~= Mod2.Level then
         return CommonUtils:Compare(Mod1.Level, Mod2.Level, self.SortType)
       end
@@ -534,6 +553,8 @@ function Component:OnKeyDownComp(MyGeometry, InKeyName)
     self.Btn_Enhance:OnBtnClicked()
   elseif InKeyName == UIConst.GamePadKey.LeftThumb then
     self.Selective_Listing.Common_Sort_List.Btn_Filter_List:SetFocus()
+  elseif InKeyName == UIConst.GamePadKey.RightThumb then
+    self.Tab_Intensify:Handle_KeyEventOnGamePad(InKeyName, "KeyDown")
   end
 end
 

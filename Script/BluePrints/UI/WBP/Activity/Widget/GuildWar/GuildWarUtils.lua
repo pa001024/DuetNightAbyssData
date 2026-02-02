@@ -165,7 +165,7 @@ function GuildWarUtils.GetCoinId(ShopKey)
   return CoinId
 end
 
-function GuildWarUtils.RefreshShopReddot()
+function GuildWarUtils.HasShopReddot()
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
@@ -201,15 +201,7 @@ function GuildWarUtils.RefreshShopReddot()
       end
     end
   end)
-  if ShowReddot then
-    if not CacheDetail[SeasonEventId][GuildWarUtils.ShopCacheKey] then
-      CacheDetail[SeasonEventId][GuildWarUtils.ShopCacheKey] = 1
-      ReddotManager.IncreaseLeafNodeCount(GuildWarUtils.ReddotNodeKey)
-    end
-  elseif CacheDetail[SeasonEventId][GuildWarUtils.ShopCacheKey] then
-    ReddotManager.DecreaseLeafNodeCount(GuildWarUtils.ReddotNodeKey)
-    CacheDetail[SeasonEventId][GuildWarUtils.ShopCacheKey] = nil
-  end
+  return ShowReddot
 end
 
 function GuildWarUtils.RefreshQuestReddot(ClearCache)
@@ -231,8 +223,8 @@ function GuildWarUtils.RefreshQuestReddot(ClearCache)
     if not Node then
       ReddotManager.AddNodeEx(GuildWarUtils.ReddotRewardKey)
     end
-    ReddotManager.ClearLeafNodeCount(GuildWarUtils.ReddotRewardKey)
     if ClearCache then
+      ReddotManager.ClearLeafNodeCount(GuildWarUtils.ReddotRewardKey)
       local NodeCache = ReddotManager._GetLeafNodeCache(GuildWarUtils.ReddotRewardKey)
       NodeCache.Detail = {}
     end
@@ -249,8 +241,8 @@ function GuildWarUtils.RefreshQuestReddot(ClearCache)
                 if not CacheDetail[QuestPhaseId] then
                   CacheDetail[QuestPhaseId] = {}
                 end
-                ReddotManager.IncreaseLeafNodeCount(GuildWarUtils.ReddotRewardKey)
                 if not CacheDetail[QuestPhaseId][QuestId] then
+                  ReddotManager.IncreaseLeafNodeCount(GuildWarUtils.ReddotRewardKey)
                   CacheDetail[QuestPhaseId][QuestId] = 1
                 end
               end

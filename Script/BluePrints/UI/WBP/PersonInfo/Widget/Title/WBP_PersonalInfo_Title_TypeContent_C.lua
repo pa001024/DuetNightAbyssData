@@ -15,29 +15,44 @@ end
 
 function M:InitBaseView()
   local Avatar = GWorld:GetAvatar()
-  local TitleFramesData = Avatar.TitleFrames
+  local OwnedFrames = Avatar.TitleFrames
   local CurrentFrameID = Avatar.TitleFrame
-  local TitleFramesContents = {}
-  for index, value in pairs(TitleFramesData) do
+  local AllFrames = DataMgr.TitleFrame or {}
+  local OwnedList, UnownedList = {}, {}
+  for frameId, _ in pairs(AllFrames) do
     local SingleFrame = NewObject(UIUtils.GetCommonItemContentClass())
-    SingleFrame.FrameId = index
-    if CurrentFrameID == SingleFrame.FrameId and self.SelectedItem == nil then
-      SingleFrame.bSelect = true
-      SingleFrame.bEquipped = true
-      self.SelectedItem = SingleFrame
-      self.EquippedItem = SingleFrame
+    SingleFrame.FrameId = frameId
+    SingleFrame.bOwned = OwnedFrames and nil ~= OwnedFrames[frameId]
+    local FrameData = AllFrames[frameId]
+    local shouldInclude = SingleFrame.bOwned or FrameData and FrameData.CanPreView
+    if shouldInclude then
+      if CurrentFrameID == SingleFrame.FrameId and nil == self.SelectedItem and SingleFrame.bOwned then
+        SingleFrame.bSelect = true
+        SingleFrame.bEquipped = true
+        self.SelectedItem = SingleFrame
+        self.EquippedItem = SingleFrame
+      end
+      SingleFrame.Father = self
+      local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("TitleFrame")
+      if CacheDetail and CacheDetail[SingleFrame.FrameId] then
+        SingleFrame.IsNew = true
+      else
+        SingleFrame.IsNew = false
+      end
+      SingleFrame.FocusEvent = self.OnFocusFrame
+      SingleFrame.FocusEventObj = self
+      if SingleFrame.bOwned then
+        table.insert(OwnedList, SingleFrame)
+      else
+        table.insert(UnownedList, SingleFrame)
+      end
     end
-    SingleFrame.Father = self
-    table.insert(TitleFramesContents, SingleFrame)
-    local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("TitleFrame")
-    if CacheDetail and CacheDetail[SingleFrame.FrameId] then
-      SingleFrame.IsNew = true
-    else
-      SingleFrame.IsNew = false
-    end
-    SingleFrame.FocusEvent = self.OnFocusFrame
-    SingleFrame.FocusEventObj = self
-    self.List_Title:AddItem(SingleFrame)
+  end
+  for _, item in ipairs(OwnedList) do
+    self.List_Title:AddItem(item)
+  end
+  for _, item in ipairs(UnownedList) do
+    self.List_Title:AddItem(item)
   end
   self.List_Title.OnCreateEmptyContent:Bind(self, function(self)
     return NewObject(UIUtils.GetCommonItemContentClass())

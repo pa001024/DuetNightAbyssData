@@ -1,8 +1,13 @@
 require("UnLua")
+local LuaConst = require("EMLuaConst")
 local BP_TrainingSetupInteractiveComponent_C = Class("BluePrints.Story.Interactive.InteractiveComponent.BP_InteractiveBaseComponent_C")
 
 function BP_TrainingSetupInteractiveComponent_C:IsCanInteractive(PlayerActor)
-  return self.DistanceCheck(self:GetOwner(), PlayerActor, self.InteractiveDistance)
+  if LuaConst.OpenComputeInteractive then
+    return self:GetDistanceCheckResult()
+  else
+    return self.DistanceCheck(self:GetOwner(), PlayerActor, self.InteractiveDistance)
+  end
 end
 
 function BP_TrainingSetupInteractiveComponent_C:BtnClicked(PlayerActor, InPressTimeSeconds)

@@ -14,6 +14,9 @@ T.RT_4 = {
 T.RT_5 = {
   [1] = "Combo2"
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -56,14 +59,14 @@ return ReadOnly("GamepadSet", {
     IsAction = true,
     KeyRegion = T.RT_2,
     KeyText = "UI_CTL_BulletJump",
-    Order = 21
+    Order = 22
   },
   Camera = {
     ActionName = "Camera",
     GamepadIcon = {"R"},
     KeyRegion = T.RT_3,
     KeyText = "UI_CTL_Camera",
-    Order = 22
+    Order = 23
   },
   ChangeCameraLengthDown = {
     ActionName = "ChangeCameraLengthDown",
@@ -84,7 +87,7 @@ return ReadOnly("GamepadSet", {
     GamepadIcon = {"Vertical"},
     KeyRegion = T.RT_4,
     KeyText = "UI_CTL_Switch",
-    Order = 18
+    Order = 19
   },
   ChargeBullet = {
     ActionName = "ChargeBullet",
@@ -107,7 +110,7 @@ return ReadOnly("GamepadSet", {
     IsAction = true,
     KeyRegion = T.RT_4,
     KeyText = "UI_CTL_OpenSystem",
-    Order = 17
+    Order = 18
   },
   GamepadUseSkill = {
     ActionName = "GamepadUseSkill",
@@ -152,35 +155,35 @@ return ReadOnly("GamepadSet", {
     IsAction = true,
     KeyRegion = T.RT_3,
     KeyText = "UI_Keyboard_Map_LockMonster",
-    Order = 23
+    Order = 24
   },
   Move = {
     ActionName = "Move",
     GamepadIcon = {"L"},
     KeyRegion = T.RT_2,
     KeyText = "UI_CTL_Move",
-    Order = 20
+    Order = 21
   },
   OpenArmory = {
     ActionName = "OpenArmory",
     IsAction = true,
     KeyRegion = T.RT_5,
     KeyText = "MAIN_UI_ARMORY",
-    Order = 28
+    Order = 29
   },
   OpenBag = {
     ActionName = "OpenBag",
     IsAction = true,
     KeyRegion = T.RT_5,
     KeyText = "MAIN_UI_BAG",
-    Order = 31
+    Order = 32
   },
   OpenBattlePass = {
     ActionName = "OpenBattlePass",
     IsAction = true,
     KeyRegion = T.RT_5,
     KeyText = "MAIN_UI_BATTLEPASS",
-    Order = 26
+    Order = 27
   },
   OpenBattleWheel = {
     ActionName = "OpenBattleWheel",
@@ -191,26 +194,33 @@ return ReadOnly("GamepadSet", {
     KeyText = "MAIN_UI_BATTLEWHEEL",
     Order = 1
   },
+  OpenCamera = {
+    ActionName = "OpenCamera",
+    IsAction = true,
+    KeyRegion = T.RT_5,
+    KeyText = "UI_CameraSystem_Camera",
+    Order = 35
+  },
   OpenEvent = {
     ActionName = "OpenEvent",
     IsAction = true,
     KeyRegion = T.RT_5,
     KeyText = "MAIN_UI_GAMEEVENT",
-    Order = 29
+    Order = 30
   },
   OpenForge = {
     ActionName = "OpenForge",
     IsAction = true,
     KeyRegion = T.RT_5,
     KeyText = "MAIN_UI_FORGE",
-    Order = 33
+    Order = 34
   },
   OpenGacha = {
     ActionName = "OpenGacha",
     IsAction = true,
     KeyRegion = T.RT_5,
     KeyText = "MAIN_UI_GACHA",
-    Order = 32
+    Order = 33
   },
   OpenGuideBook = {
     ActionName = "OpenGuideBook",
@@ -226,7 +236,7 @@ return ReadOnly("GamepadSet", {
       [1] = "WB_Key_View"
     },
     KeyText = "MAIN_UI_MAP",
-    Order = 24
+    Order = 25
   },
   OpenMenu = {
     ActionName = "OpenMenu",
@@ -235,28 +245,28 @@ return ReadOnly("GamepadSet", {
       [1] = "WB_Key_Menu"
     },
     KeyText = "MAIN_UI_MENU",
-    Order = 25
+    Order = 26
   },
   OpenPlay = {
     ActionName = "OpenPlay",
     IsAction = true,
     KeyRegion = T.RT_5,
     KeyText = "MAIN_UI_PLAY",
-    Order = 30
+    Order = 31
   },
   OpenTask = {
     ActionName = "OpenTask",
     IsAction = true,
     KeyRegion = T.RT_5,
     KeyText = "MAIN_UI_QUEST",
-    Order = 27
+    Order = 28
   },
   ShowTeamInfo = {
     ActionName = "ShowTeamInfo",
     IsAction = true,
     KeyRegion = T.RT_4,
     KeyText = "UI_Keyboard_TeamInfo",
-    Order = 19
+    Order = 20
   },
   Skill1 = {
     ActionName = "Skill1",
@@ -291,5 +301,12 @@ return ReadOnly("GamepadSet", {
     KeyText = "UI_Keyboard_Map_Slide",
     Order = 3,
     TextHighLight = true
+  },
+  SwitchWalk = {
+    ActionName = "SwitchWalk",
+    IsAction = true,
+    KeyRegion = T.RT_1,
+    KeyText = "UI_CTL_SwitchWalk",
+    Order = 17
   }
 })

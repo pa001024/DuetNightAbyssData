@@ -50,6 +50,14 @@ function Theater:SetPerformRewardGot(StartTime)
   self.PerformRewardRecord:AddElement(StartTime)
 end
 
+function Theater:IsMailRewarded(MailId)
+  return 1 == self.DonatePrizeMailsGet[MailId]
+end
+
+function Theater:SetMailRewarded(MailId)
+  self.DonatePrizeMailsGet[MailId] = 1
+end
+
 FormatProperties(Theater)
 local TheaterDict = Class("TheaterDict", CustomTypes.CustomDict)
 TheaterDict.KeyType = BaseTypes.Int

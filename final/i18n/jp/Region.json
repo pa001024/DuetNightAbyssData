@@ -183,7 +183,7 @@
   },
   {
     "id": 1041,
-    "name": "<Default sb=\"text:えんしんと\">煙津渡</>",
+    "name": "煙津渡",
     "type": "Main",
     "mapId": 400,
     "mapImage": "/Game/UI/WBP/Map/Widget/RegionMap/East/WBP_Map_Reg_East_Yanjindu.WBP_Map_Reg_East_Yanjindu",
@@ -255,9 +255,9 @@
   },
   {
     "id": 1045,
-    "name": "<Default sb=\"text:こうけい\">皓京</>",
+    "name": "皓京",
     "type": "Main",
-    "mapId": null,
+    "mapId": 500,
     "mapImage": "/Game/UI/WBP/Map/Widget/RegionMap/WBP_Map_Reg_Chapter01.WBP_Map_Reg_Chapter01",
     "mapCenter": [
       20000,
@@ -329,7 +329,7 @@
   },
   {
     "id": 1049,
-    "name": "潜龙居",
+    "name": "潜龍居",
     "type": "Main",
     "mapId": 400,
     "mapImage": "",
@@ -371,15 +371,17 @@
       1.25
     ],
     "isRandom": [
-      105101
+      105101,
+      105102,
+      105103
     ],
     "alertDisable": false
   },
   {
     "id": 1052,
-    "name": "<Default sb=\"text:さんがいさん\">山外山</>",
+    "name": "山外山",
     "type": "Main",
-    "mapId": null,
+    "mapId": 501,
     "mapImage": "/Game/UI/WBP/Map/Widget/RegionMap/WBP_Map_Reg_Chapter01_KK.WBP_Map_Reg_Chapter01_KK",
     "mapCenter": [],
     "mapScale": [
@@ -393,9 +395,9 @@
   },
   {
     "id": 1053,
-    "name": "<Default sb=\"text:たいきょりょう\">太虚陵</>",
+    "name": "太虚陵",
     "type": "Main",
-    "mapId": null,
+    "mapId": 502,
     "mapImage": "/Game/UI/WBP/Map/Widget/RegionMap/WBP_Map_Reg_Chapter01_Sew.WBP_Map_Reg_Chapter01_Sew",
     "mapCenter": [
       0,
@@ -406,7 +408,8 @@
       1.25
     ],
     "isRandom": [
-      105301
+      105301,
+      105302
     ],
     "alertDisable": true
   },
@@ -430,7 +433,7 @@
     "id": 1055,
     "name": "由来の里",
     "type": "Main",
-    "mapId": null,
+    "mapId": 503,
     "mapImage": "/Game/UI/WBP/Map/Widget/RegionMap/WBP_Map_Reg_EXChapter01.WBP_Map_Reg_EXChapter01",
     "mapCenter": [
       20000,
@@ -494,6 +497,22 @@
     ],
     "isRandom": [
       105801
+    ],
+    "alertDisable": false
+  },
+  {
+    "id": 1059,
+    "name": "UI_REGION_NAME_1059",
+    "type": "Main",
+    "mapId": null,
+    "mapImage": "",
+    "mapCenter": [],
+    "mapScale": [
+      0.5,
+      1.25
+    ],
+    "isRandom": [
+      105901
     ],
     "alertDisable": false
   },

@@ -85,8 +85,8 @@ function BP_StartAndEndPoint_C:InitSetPlayerTrans()
         else
           Player:K2_SetActorLocation(Controller.TargetBornLocation, false, nil, true)
           print(_G.LogTag, "InitSetPlayerTrans SetLocation Succcesss", Player:K2_GetActorLocation())
-          Player:GetMovementComponent():ForceClientUpdate()
           Player:MulticastSetPlayerRotation(Controller.TargetBornRotator)
+          Player:GetMovementComponent():ForceClientUpdate()
           Player:RemoveGravityModifier(UE4.EGravityModifierTag.LoadLevel)
         end
       end
@@ -138,9 +138,9 @@ function BP_StartAndEndPoint_C:RealSetNewEnteredPlayerTrans(AvatarEidStr)
   NewLocation.Z = NewLocation.Z + Character.CapsuleComponent:GetUnscaledCapsuleHalfHeight()
   Character:K2_SetActorLocation(PlayerController.TargetBornLocation, false, nil, true)
   Character:K2_SetBase()
-  Character:GetMovementComponent():ForceClientUpdate()
   Character:UpdateCurrentLevelId()
   Character:MulticastSetPlayerRotation(PlayerController.TargetBornRotator)
+  Character:GetMovementComponent():ForceClientUpdate()
   Character:RemoveGravityModifier(UE4.EGravityModifierTag.LoadLevel)
 end
 

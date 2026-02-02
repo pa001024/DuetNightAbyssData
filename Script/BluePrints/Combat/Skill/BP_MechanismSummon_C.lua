@@ -77,6 +77,7 @@ function BP_MechanismSummon_C:OnDead(KillMineRoleEid, KillMineSkillId, DeathReas
     BattleTemp:RecordBattleEvent_Lua("召唤者Eid为:" .. CreatorEid .. "，召唤者名字为:" .. CreatorName .. "，Eid为:" .. self.Eid .. "，名字为" .. self:GetName() .. "的机关召唤物死亡了，它的UnitId为:" .. self.UnitId, "MechanismSummon", 0)
   end
   self:OnMechanismSummonDead(KillMineRoleEid, KillMineSkillId, DeathReason)
+  self:DestroyAllCreatures(ECreatureDeathWithCreator.Normal, EDeathReason.CreatureNotDelay)
   if self.Data and self.Data.DelayDestroyTime then
     self.FXComponent:StopAllEffects(false)
     self:AddTimer_Combat(self.Data.DelayDestroyTime, function()

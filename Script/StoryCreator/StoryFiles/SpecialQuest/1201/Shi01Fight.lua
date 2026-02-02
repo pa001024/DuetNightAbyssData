@@ -232,7 +232,7 @@ return {
               SoundStateType = 0,
               SoundPriority = 0,
               SoundType = 0,
-              SoundPath = "event:/bgm/1_1/0109_combat_black_market",
+              SoundPath = "event:/bgm/1_1/0131_story_bangfeibangjia",
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {},

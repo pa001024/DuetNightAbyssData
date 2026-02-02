@@ -27,10 +27,10 @@ function M:InitShop(MainTabIdx, SubTabIdx, ShopItemId, ShopType, bBanAnimation)
   self:InitShopTabInfo(MainTabIdx, SubTabIdx, ShopType)
   if not bBanAnimation then
     self:PlayAnimation(self.In)
-    self:BlockAllUIInput(true)
+    self:BlockAllUIInput(true, "SP_DisplayOnly")
   else
     self:PlayAnimation(self.In, 0, 1, EUMGSequencePlayMode.Forward, 6000.0, false)
-    self:BlockAllUIInput(true)
+    self:BlockAllUIInput(true, "SP_DisplayOnly")
   end
 end
 
@@ -370,12 +370,7 @@ function M:UpdateShopDetail(SubTabData)
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
     Content.ShopType = self.ShopType
     Content.ShopId = ShopData.ItemId
-    if ShopData.ItemType == "Skin" or ShopData.ItemType == "WeaponSkin" or ShopData.ItemType == "CharAccessory" or ShopData.ItemType == "WeaponAccessory" then
-      self.SkinCount = self.SkinCount + 1
-      self.Index2ShopSkin[self.SkinCount] = ShopData.ItemId
-      self.ShopSkin2Index[ShopData.ItemId] = self.SkinCount
-    end
-    if ShopData.ItemType == "Resource" and DataMgr.Resource[ShopData.TypeId] and DataMgr.Resource[ShopData.TypeId].ResourceSType == "GestureItem" then
+    if UIUtils.CanOpenSkinPreview(ShopData.ItemType, ShopData.TypeId) then
       self.SkinCount = self.SkinCount + 1
       self.Index2ShopSkin[self.SkinCount] = ShopData.ItemId
       self.ShopSkin2Index[ShopData.ItemId] = self.SkinCount
@@ -390,6 +385,7 @@ function M:UpdateShopDetail(SubTabData)
   local GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem(self)
   if self.List_Item:GetNumItems() > 0 then
     self.Group_Bottom:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Common_SortList_PC:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self:AddTimer(0.1, function()
       if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
         GameInputModeSubsystem:SetNavigateWidgetVisibility(true)
@@ -407,9 +403,15 @@ function M:UpdateShopDetail(SubTabData)
       self.ItemIndex = nil
     end)
   else
+    if self.bFilterOwned then
+      self.Text_ShopItemEmpty:SetText(GText("UI_SHOP_NOITEM"))
+    else
+      self.Text_ShopItemEmpty:SetText(GText("UI_SHOP_SOLDOUT"))
+    end
     GameInputModeSubsystem:SetNavigateWidgetVisibility(false)
     self.VB_ItemList:SetVisibility(ESlateVisibility.Collapsed)
     self.Group_Empty:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Common_SortList_PC:SetVisibility(ESlateVisibility.Collapsed)
     if self.bFilterOwned then
       self.Group_Bottom:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     else
@@ -442,10 +444,10 @@ function M:CloseSelf()
   if self:IsAnimationPlaying(self.Out) then
     return
   end
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   AudioManager(self):SetEventSoundParam(self, "OpenShopMain", {ToEnd = 1})
   if self.IsAddInDeque then
-    self:PlayAnimationForward(self.Out, UIConst.AnimOutSpeedWithPageJump.LittleFastSpeed)
+    self:PlayAnimationForward(self.Out, UIConst.AnimOutSpeedWithPageJump.MaxSpeed)
   else
     self:PlayAnimation(self.Out)
   end
@@ -542,10 +544,8 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
       IsEventHandled = self:OnGamePadDown(InKeyName)
     end
   elseif "Escape" == InKeyName then
-    if not UIManager(self):GetUIObj("CommonDialog") then
-      IsEventHandled = true
-      self:CloseSelf()
-    end
+    IsEventHandled = true
+    self:CloseSelf()
   elseif "Q" == InKeyName then
     IsEventHandled = true
     self.ShopTab:TabToLeft()
@@ -577,21 +577,6 @@ end
 function M:OnRechargeFinished(Result, GoodsId, ShopItems)
   self:BlockAllUIInput(false)
   self:RefreshSubTabData(self.CurSubTabMap)
-  if Result == ErrorCode.RET_SUCCESS then
-    if ShopItems and DataMgr.PayGoods[GoodsId].ItemId then
-      local ShopItemData = DataMgr.ShopItem[DataMgr.PayGoods[GoodsId].ItemId]
-      assert(ShopItemData, "购买成功后读表ShopItemData为空", DataMgr.PayGoods[GoodsId].ItemId)
-      if ShopItemData.ItemType == "DailyPack" then
-        UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, ShopItems, ShopItemData.IsSpPopup, function()
-          UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_DailyPack_PurchaseDone"))
-        end)
-      else
-        UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, ShopItems, ShopItemData.IsSpPopup)
-      end
-    end
-  else
-    UIManager(GWorld.GameInstance):ShowError(Result, 1.0, "CommonToastMain")
-  end
 end
 
 function M:SetFocus_Lua()

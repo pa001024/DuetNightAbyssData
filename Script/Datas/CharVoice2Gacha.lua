@@ -5,6 +5,9 @@ T.RT_1 = {
 T.RT_2 = {
   [1] = "vo_gain_1"
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -23,7 +26,7 @@ return ReadOnly("CharVoice2Gacha", {
   [1103] = {
     [1] = {
       [1] = {
-        VoiceId = 10656,
+        VoiceId = 10659,
         VoiceRes = T.RT_1,
         VoiceText = {
           [1] = "voice_ch_char_Tuosi_vo_gain"
@@ -34,7 +37,7 @@ return ReadOnly("CharVoice2Gacha", {
   [1501] = {
     [1] = {
       [1] = {
-        VoiceId = 10877,
+        VoiceId = 10884,
         VoiceRes = T.RT_1,
         VoiceText = {
           [1] = "voice_ch_char_Baonu_vo_gain"
@@ -45,7 +48,7 @@ return ReadOnly("CharVoice2Gacha", {
   [1502] = {
     [1] = {
       [1] = {
-        VoiceId = 10562,
+        VoiceId = 10565,
         VoiceRes = T.RT_1,
         VoiceText = {
           [1] = "voice_ch_char_Nifu_vo_gain"
@@ -56,7 +59,7 @@ return ReadOnly("CharVoice2Gacha", {
   [1503] = {
     [1] = {
       [1] = {
-        VoiceId = 10760,
+        VoiceId = 10763,
         VoiceRes = T.RT_1,
         VoiceText = {
           [1] = "voice_ch_char_Kezhou_vo_gain"
@@ -67,7 +70,7 @@ return ReadOnly("CharVoice2Gacha", {
   [1801] = {
     [1] = {
       [1] = {
-        VoiceId = 10449,
+        VoiceId = 10452,
         VoiceRes = T.RT_1,
         VoiceText = {
           [1] = "voice_ch_char_Feina_vo_gain"
@@ -78,13 +81,6 @@ return ReadOnly("CharVoice2Gacha", {
   [2101] = {
     [1] = {
       [1] = {
-        VoiceId = 10037,
-        VoiceRes = T.RT_1,
-        VoiceText = {
-          [1] = "voice_ch_char_Shuimu01_vo_gain"
-        }
-      },
-      [2] = {
         VoiceId = 10041,
         VoiceRes = T.RT_1,
         VoiceText = {
@@ -107,7 +103,7 @@ return ReadOnly("CharVoice2Gacha", {
   [2401] = {
     [1] = {
       [1] = {
-        VoiceId = 10259,
+        VoiceId = 10263,
         VoiceRes = T.RT_2,
         VoiceText = {
           [1] = "voice_ch_char_Baiheng_vo_gain_1"
@@ -140,7 +136,7 @@ return ReadOnly("CharVoice2Gacha", {
   [3103] = {
     [1] = {
       [1] = {
-        VoiceId = 10487,
+        VoiceId = 10490,
         VoiceRes = T.RT_1,
         VoiceText = {
           [1] = "voice_ch_char_Yeer_vo_gain"
@@ -151,7 +147,7 @@ return ReadOnly("CharVoice2Gacha", {
   [3201] = {
     [1] = {
       [1] = {
-        VoiceId = 10524,
+        VoiceId = 10527,
         VoiceRes = T.RT_1,
         VoiceText = {
           [1] = "voice_ch_char_Haier_vo_gain"
@@ -162,7 +158,7 @@ return ReadOnly("CharVoice2Gacha", {
   [3301] = {
     [1] = {
       [1] = {
-        VoiceId = 10406,
+        VoiceId = 10409,
         VoiceRes = T.RT_2,
         VoiceText = {
           [1] = "voice_ch_char_Maer_vo_gain_1"
@@ -174,7 +170,7 @@ return ReadOnly("CharVoice2Gacha", {
         GachaVoiceCondition = {
           [1] = 6007
         },
-        VoiceId = 10407,
+        VoiceId = 10410,
         VoiceRes = {
           [1] = "vo_gain_2"
         },
@@ -187,7 +183,7 @@ return ReadOnly("CharVoice2Gacha", {
   [4101] = {
     [1] = {
       [1] = {
-        VoiceId = 10611,
+        VoiceId = 10614,
         VoiceRes = {
           [1] = "vo_gain_01"
         },
@@ -201,7 +197,7 @@ return ReadOnly("CharVoice2Gacha", {
         GachaVoiceCondition = {
           [1] = 100307
         },
-        VoiceId = 10612,
+        VoiceId = 10615,
         VoiceRes = {
           [1] = "vo_gain_02"
         },
@@ -214,7 +210,7 @@ return ReadOnly("CharVoice2Gacha", {
   [4102] = {
     [1] = {
       [1] = {
-        VoiceId = 10837,
+        VoiceId = 10844,
         VoiceRes = T.RT_1,
         VoiceText = {
           [1] = "voice_ch_char_Zhiliu_vo_gain"
@@ -236,7 +232,7 @@ return ReadOnly("CharVoice2Gacha", {
   [4202] = {
     [1] = {
       [1] = {
-        VoiceId = 10338,
+        VoiceId = 10341,
         VoiceRes = T.RT_1,
         VoiceText = {
           [1] = "voice_ch_char_Landi_vo_gain"
@@ -247,7 +243,7 @@ return ReadOnly("CharVoice2Gacha", {
   [4301] = {
     [1] = {
       [1] = {
-        VoiceId = 10370,
+        VoiceId = 10373,
         VoiceRes = T.RT_1,
         VoiceText = {
           [1] = "voice_ch_char_Xibi_vo_gain"
@@ -258,14 +254,7 @@ return ReadOnly("CharVoice2Gacha", {
   [5101] = {
     [1] = {
       [1] = {
-        VoiceId = 10295,
-        VoiceRes = T.RT_1,
-        VoiceText = {
-          [1] = "voice_ch_char_Songlu01_vo_gain"
-        }
-      },
-      [2] = {
-        VoiceId = 10299,
+        VoiceId = 10302,
         VoiceRes = T.RT_1,
         VoiceText = {
           [1] = "voice_ch_char_Songlu_vo_gain"
@@ -276,7 +265,7 @@ return ReadOnly("CharVoice2Gacha", {
   [5102] = {
     [1] = {
       [1] = {
-        VoiceId = 10800,
+        VoiceId = 10803,
         VoiceRes = T.RT_1,
         VoiceText = {
           [1] = "voice_ch_char_Aote_vo_gain"
@@ -287,13 +276,6 @@ return ReadOnly("CharVoice2Gacha", {
   [5301] = {
     [1] = {
       [1] = {
-        VoiceId = 10216,
-        VoiceRes = T.RT_1,
-        VoiceText = {
-          [1] = "voice_ch_char_Saiqi01_vo_gain"
-        }
-      },
-      [2] = {
         VoiceId = 10220,
         VoiceRes = T.RT_1,
         VoiceText = {
@@ -305,7 +287,7 @@ return ReadOnly("CharVoice2Gacha", {
   [5401] = {
     [1] = {
       [1] = {
-        VoiceId = 10711,
+        VoiceId = 10714,
         VoiceRes = T.RT_1,
         VoiceText = {
           [1] = "voice_ch_char_Dafu_vo_gain"

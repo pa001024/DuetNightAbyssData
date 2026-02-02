@@ -124,6 +124,9 @@ function M:CalMoveParam(BackToInit, bPausedRecover)
   Direction:Normalize()
   local NextSpeed = Direction * self.Speed
   self:SetMovementParam(NextSpeed, FVector(0, 0, 0))
+  if self.OnBluePrintStartMove and NextSpeed:Size() > 0 then
+    self:OnBluePrintStartMove()
+  end
 end
 
 function M:TriggerSelfLogic(IsOverLap)
@@ -232,6 +235,9 @@ function M:CheckCurrentMoveEnd()
       local GameMode = UE4.UGameplayStatics.GetGameMode(self)
       GameMode:GetDungeonComponent():SetIsStepPlatformMoveEnd(self.ManualItemId, true)
       GameMode:GetDungeonComponent():StepPlatformMoveEndEvent(self.ManualItemId)
+      if self.OnBluePrintEndMove then
+        self:OnBluePrintEndMove()
+      end
     end
   end
 end
@@ -257,6 +263,9 @@ function M:SetPlatformVisible()
     local GameMode = UE4.UGameplayStatics.GetGameMode(self)
     GameMode:GetDungeonComponent():SetIsStepPlatformMoveEnd(self.ManualItemId, true)
     GameMode:GetDungeonComponent():StepPlatformMoveEndEvent(self.ManualItemId)
+    if self.OnBluePrintEndMove then
+      self:OnBluePrintEndMove()
+    end
   end
 end
 

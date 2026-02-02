@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -127,5 +130,25 @@ return ReadOnly("ShopTabMain", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Item.T_Tab_Item'",
     MainName = "HuaxuExploreShop",
     MainTabId = 10005
+  },
+  [10006] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Item.T_Tab_Item'",
+    MainName = "AutoChessShop",
+    MainTabId = 10006
+  },
+  [90001] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_ShopClothes.T_Tab_ShopClothes'",
+    MainName = "UI_SHOP_SUBTAB_SKIN",
+    MainTabId = 90001
+  },
+  [90002] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_ShopClothes.T_Tab_ShopClothes'",
+    MainName = "UI_SHOP_MAINTAB_ACCESSORY_Head",
+    MainTabId = 90002
+  },
+  [90003] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_ShopClothes.T_Tab_ShopClothes'",
+    MainName = "UI_SHOP_MAINTAB_ACCESSORY_Body",
+    MainTabId = 90003
   }
 })

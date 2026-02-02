@@ -9,7 +9,6 @@ function M:Init()
   self.FriendRequest_Dialog = nil
   self.BlackList_Dialog = nil
   self.RefreshRecommandTimer = nil
-  self.NetDelayTimer = nil
   self:GetAvatar()
 end
 
@@ -102,15 +101,12 @@ function M:SendRequest(Reason, ...)
   DebugPrint("+++++++++++++++FriendController:SendRequest  Reason =" .. Reason)
   if M["Send" .. Reason] then
     if M["Recv" .. Reason] then
-      self:StopTimer(self.NetDelayTimer)
-      self:StartNetDelayTimer()
     end
     M["Send" .. Reason](M, ...)
   end
 end
 
 function M:RecvResponse(Reason, ...)
-  self:StopTimer(self.NetDelayTimer)
   if M["Recv" .. Reason] then
     M["Recv" .. Reason](M, ...)
   end
@@ -177,7 +173,6 @@ end
 function M:RecvAgreeAdd(ErrCode, ...)
   local Uid, Coroutine = ...
   if not Coroutine then
-    self:StopTimer(self.NetDelayTimer)
     self:NotifyEvent(FriendCommon.EventId.UnblockUI)
   else
     coroutine.resume(Coroutine, ErrCode)
@@ -203,7 +198,6 @@ end
 function M:RecvRefuseAdd(ErrCode, ...)
   local Uid, FriendName, Coroutine = ...
   if not Coroutine then
-    self:StopTimer(self.NetDelayTimer)
     self:NotifyEvent(FriendCommon.EventId.UnblockUI)
   else
     coroutine.resume(Coroutine, ErrCode)
@@ -422,18 +416,6 @@ function M:StartRefreshRecommandTimer()
     self:NotifyEvent(FriendCommon.EventId.RecommandCdUpdate, false, Percent)
   end, true, 0, nil, true)
   self.RefreshRecommandTimer = Timer
-end
-
-function M:StartNetDelayTimer()
-  local Delay = 5
-  local Timer = self:AddTimer(Delay, function()
-    self:ShowToast(GText("UI_Toast_NetDelay"))
-    self:NotifyEvent(FriendCommon.EventId.UnblockUI)
-    DebugPrint("TimerDone++++++++++++++++++", self.NetDelayTimer)
-    self.NetDelayTimer = nil
-  end, false, 0, nil, true)
-  self.NetDelayTimer = Timer
-  DebugPrint("++++++++++++++++++ startTimer", Timer)
 end
 
 _G.FriendController = M

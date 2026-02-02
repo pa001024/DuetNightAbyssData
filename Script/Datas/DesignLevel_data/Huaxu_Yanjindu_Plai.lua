@@ -650,6 +650,81 @@ return {
       UnitType = "Monster",
       UnitId = 9805001
     },
+    ["2080414"] = {
+      CreatorId = 2080414,
+      UnitType = "Npc",
+      UnitId = 701087
+    },
+    ["2080415"] = {
+      CreatorId = 2080415,
+      UnitType = "Mechanism",
+      UnitId = 38
+    },
+    ["2080425"] = {
+      CreatorId = 2080425,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["2080426"] = {
+      CreatorId = 2080426,
+      UnitType = "Monster",
+      UnitId = 10003001
+    },
+    ["2080427"] = {
+      CreatorId = 2080427,
+      UnitType = "Monster",
+      UnitId = 10003001
+    },
+    ["2080428"] = {
+      CreatorId = 2080428,
+      UnitType = "Monster",
+      UnitId = 6015001
+    },
+    ["2080429"] = {
+      CreatorId = 2080429,
+      UnitType = "Monster",
+      UnitId = 6016001
+    },
+    ["2080430"] = {
+      CreatorId = 2080430,
+      UnitType = "Monster",
+      UnitId = 6016001
+    },
+    ["2080431"] = {
+      CreatorId = 2080431,
+      UnitType = "Npc",
+      UnitId = 701091
+    },
+    ["2080432"] = {
+      CreatorId = 2080432,
+      UnitType = "Npc",
+      UnitId = 701091
+    },
+    ["2080435"] = {
+      CreatorId = 2080435,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["2080436"] = {
+      CreatorId = 2080436,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["2080437"] = {
+      CreatorId = 2080437,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["2080438"] = {
+      CreatorId = 2080438,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["2080439"] = {
+      CreatorId = 2080439,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
     ["2080233"] = {
       CreatorId = 2080233,
       UnitType = "Npc",
@@ -864,6 +939,26 @@ return {
       CreatorId = 2080386,
       UnitType = "Monster",
       UnitId = 9509052
+    },
+    ["2080410"] = {
+      CreatorId = 2080410,
+      UnitType = "Drop",
+      UnitId = 11221
+    },
+    ["2080411"] = {
+      CreatorId = 2080411,
+      UnitType = "Npc",
+      UnitId = 701088
+    },
+    ["2080412"] = {
+      CreatorId = 2080412,
+      UnitType = "Npc",
+      UnitId = 200002
+    },
+    ["2080424"] = {
+      CreatorId = 2080424,
+      UnitType = "Npc",
+      UnitId = 100001
     }
   },
   ManualItem = {},
@@ -1425,8 +1520,8 @@ return {
     }
   },
   RandomRule = {
-    ["9040201"] = {RandomRuleId = 9040201},
+    ["8012015"] = {RandomRuleId = 8012015},
     ["8012003"] = {RandomRuleId = 8012003},
-    ["8012015"] = {RandomRuleId = 8012015}
+    ["9040201"] = {RandomRuleId = 9040201}
   }
 }

@@ -38,7 +38,20 @@ function M:ClientInitInfo(Info)
       end
       DoubleBossUI:ActiveBossUI()
       self.BossBloodUI:InitBossUI(self, false, BossType)
+      self:HideBloodUI()
     end
+  end
+end
+
+function M:HideBloodUI()
+  if IsValid(self.BossBloodUI) then
+    self.BossBloodUI:Hide("ChargeHide")
+  end
+end
+
+function M:ShowBloodUI()
+  if IsValid(self.BossBloodUI) then
+    self.BossBloodUI:Show("ChargeHide")
   end
 end
 

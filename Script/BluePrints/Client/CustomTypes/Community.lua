@@ -7,7 +7,8 @@ local Community = Class("Community", CustomTypes.CustomAttr)
 Community.__Props__ = {
   SignInDay = prop.prop("Int", "save", 0),
   LastSignTime = prop.prop("Int", "save", 0),
-  CommunityFollowList = prop.prop("Int2IntDict", "client save")
+  CommunityFollowList = prop.prop("Int2IntDict", "client save"),
+  ShopLimit = prop.prop("Int2IntDict", "save")
 }
 
 function Community:SetFollowed(CommunityId)

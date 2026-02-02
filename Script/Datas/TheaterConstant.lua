@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -33,7 +36,7 @@ return ReadOnly("TheaterConstant", {
   },
   NpcInteractON = {
     ConstantName = "NpcInteractON",
-    ConstantValue = 600
+    ConstantValue = 385
   },
   NpcbCreatorID = {
     ConstantName = "NpcbCreatorID",
@@ -48,7 +51,7 @@ return ReadOnly("TheaterConstant", {
   Reward2 = {ConstantName = "Reward2", ConstantValue = 110505},
   Reward2ReqNum = {
     ConstantName = "Reward2ReqNum",
-    ConstantValue = 3
+    ConstantValue = 1
   },
   RewardMax = {ConstantName = "RewardMax", ConstantValue = 5},
   SettleStepNum = {

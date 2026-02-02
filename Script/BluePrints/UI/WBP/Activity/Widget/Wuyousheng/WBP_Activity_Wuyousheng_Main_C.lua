@@ -8,36 +8,40 @@ M._components = {
 
 function M:OnLoaded(...)
   self.Super.OnLoaded(self, ...)
-  self.EventId = (...)
+  EventManager:FireEvent(EventID.RefreshWuyoushengLevelReddot)
+  self.EventId, self.DungeonId = ...
+  self.EventId = math.floor(tonumber(self.EventId) or 0)
   self:InitSubWidgetManager(self.Anchor, nil)
   self:OpenSubUI({
     Idx = "ActivityWuyoushengLevelChoose"
   }, true)
+  if self.RewardText then
+    self.RewardText:Init(nil, self.EventId)
+  end
+  local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
+  self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
+  if IsValid(self.GameInputModeSubsystem) then
+    self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
+    self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
+  end
+end
+
+function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
+  self.CurInputDevice = CurInputDevice
+  self.CurGamepadName = CurGamepadName
+  if ModController:IsMobile() then
+    return
+  end
+  for _, Widget in pairs(self.SubUI) do
+    Widget:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
+  end
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   local IsEventHandled = false
-  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
-    if "Gamepad_FaceButton_Top" == InKeyName then
-      IsEventHandled = true
-      self.Reward:OnBtnClicked()
-    elseif "Gamepad_FaceButton_Left" == InKeyName then
-      IsEventHandled = true
-      self.Store:OnBtnClicked()
-    elseif "Gamepad_Special_Left" == InKeyName then
-      IsEventHandled = true
-      self.Entry:OnBtnClicked()
-      self:OpenEntry()
-    elseif "Gamepad_FaceButton_Right" == InKeyName then
-      IsEventHandled = true
-      self:OnReturnKeyDown()
-    end
-    if not IsEventHandled then
-      IsEventHandled = self.Com_Tab:Handle_KeyEventOnGamePad(InKeyName)
-    end
-  elseif "Escape" == InKeyName then
+  if "Escape" == InKeyName then
     IsEventHandled = true
     self:OnReturnKeyDown()
   end
@@ -50,6 +54,8 @@ end
 
 function M:OnCloseAll()
   self:Close()
+  EventManager:FireEvent(EventID.OnReturnToActivityEntry)
+  EventManager:FireEvent(EventID.OnActivityEntryShowVisible)
 end
 
 function M:Close()

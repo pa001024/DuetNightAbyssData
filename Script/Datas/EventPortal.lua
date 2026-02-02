@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -98,12 +101,53 @@ return ReadOnly("EventPortal", {
     JumpUnlockTips = "EventPortal_UnlockTips_103013",
     RewardPreview = 50577
   },
+  [103016] = {
+    EventId = 103016,
+    EventShop = 81,
+    JumpUIId = 82,
+    JumpUnlockCondition = 325,
+    JumpUnlockTips = "EventPortal_UnlockTips_Common",
+    RewardBPPath = "/Game/UI/WBP/Activity/Widget/AutoChess/WBP_Activity_AutoChess_Entrance.WBP_Activity_AutoChess_Entrance",
+    RewardPreview = 1030110
+  },
+  [103017] = {
+    EventId = 103017,
+    JumpFinishDes = "UI_EventPortalFinish",
+    JumpUIId = 79,
+    JumpUnlockTips = "EventPortal_UnlockTips_Common",
+    RewardPreview = 110001,
+    SubBPPath2 = "/Game/UI/WBP/Activity/Widget/CameraGame/WBP_Activity_CameraGame_TaskEntryBtn.WBP_Activity_CameraGame_TaskEntryBtn"
+  },
+  [103018] = {
+    EventId = 103018,
+    JumpUIId = 83,
+    JumpUnlockTips = "EventPortal_UnlockTips_Common",
+    RewardBPPath = "/Game/UI/WBP/Activity/Widget/Fool/WBP_Activity_Fool_RewardText.WBP_Activity_Fool_RewardText",
+    RewardPreview = 1030106,
+    SubBPPath2 = "/Game/UI/WBP/Activity/Widget/Fool/WBP_Activity_Fool_RewardEntry.WBP_Activity_Fool_RewardEntry"
+  },
+  [103019] = {
+    EventId = 103019,
+    JumpUIId = 84,
+    JumpUnlockTips = "EventPortal_UnlockTips_Common",
+    RewardPreview = 1030112,
+    SubBPPath2 = "/Game/UI/WBP/Activity/Widget/InviteCode/WBP_Activity_InviteCode_Content.WBP_Activity_InviteCode_Content"
+  },
   [108001] = {
     EventId = 108001,
     JumpUIId = 64,
     JumpUnlockTips = "EventPortal_UnlockTips_Common",
     RewardBPPath = "/Game/UI/WBP/Activity/Widget/Temple/Solo/WBP_Activity_Temple_Solo_Reward.WBP_Activity_Temple_Solo_Reward",
     RewardPreview = 1030079
+  },
+  [110001] = {
+    EventId = 110001,
+    JumpFinishDes = "UI_EventPortalFinish",
+    JumpUIId = 75,
+    JumpUnlockCondition = 4221,
+    JumpUnlockTips = "EventPortal_UnlockTips_110001",
+    RewardBPPath = "/Game/UI/WBP/Activity/Widget/Wuyousheng/WBP_Activity_Wuyousheng_RewardText",
+    RewardPreview = 110001
   },
   [111001] = {
     EventId = 111001,
@@ -114,6 +158,22 @@ return ReadOnly("EventPortal", {
     RewardBPPath = "/Game/UI/WBP/Activity/Widget/GuildWar/WBP_Activity_GuildWar_Entrance.WBP_Activity_GuildWar_Entrance",
     RewardPreview = 1030083,
     SubBPPath2 = "/Game/UI/WBP/Activity/Widget/GuildWar/WBP_Activity_GuildWar_JumpBoard.WBP_Activity_GuildWar_JumpBoard"
+  },
+  [111002] = {
+    EventId = 111002,
+    EventShop = 71,
+    JumpFinishDes = "UI_EventPortalFinish",
+    JumpUIId = 69,
+    JumpUnlockTips = "EventPortal_UnlockTips_Common",
+    RewardBPPath = "/Game/UI/WBP/Activity/Widget/GuildWar/WBP_Activity_GuildWar_Entrance.WBP_Activity_GuildWar_Entrance",
+    RewardPreview = 1030083,
+    SubBPPath2 = "/Game/UI/WBP/Activity/Widget/GuildWar/WBP_Activity_GuildWar_JumpBoard.WBP_Activity_GuildWar_JumpBoard"
+  },
+  [1020012] = {
+    EventId = 1020012,
+    JumpUnlockCondition = 120100,
+    JumpUnlockTips = "EventPortal_UnlockTips_Common",
+    RewardPreview = 1030051
   },
   [1030022] = {
     EventId = 1030022,
@@ -142,8 +202,48 @@ return ReadOnly("EventPortal", {
     RewardPreview = 1030024,
     SubBPPath2 = "/Game/UI/WBP/Activity/Widget/Abyss/WBP_Activity_Abyss_Progress.WBP_Activity_Abyss_Progress"
   },
+  [1030025] = {
+    EventId = 1030025,
+    EventShop = 28,
+    JumpUIId = 77,
+    JumpUnlockCondition = 8002,
+    JumpUnlockTips = "EventPortal_UnlockTips_Common",
+    RewardPreview = 1030025,
+    SubBPPath2 = "/Game/UI/WBP/Activity/Widget/Abyss/WBP_Activity_Abyss_Progress.WBP_Activity_Abyss_Progress"
+  },
+  [1030026] = {
+    EventId = 1030026,
+    EventShop = 28,
+    JumpUIId = 77,
+    JumpUnlockCondition = 8002,
+    JumpUnlockTips = "EventPortal_UnlockTips_Common",
+    RewardPreview = 1030026,
+    SubBPPath2 = "/Game/UI/WBP/Activity/Widget/Abyss/WBP_Activity_Abyss_Progress.WBP_Activity_Abyss_Progress"
+  },
+  [10300601] = {
+    EventId = 10300601,
+    IsUseTabJumpBtn = false,
+    JumpUIId = 36,
+    JumpUnlockTips = "EventPortal_UnlockTips_Common",
+    RewardPreview = 1030071,
+    SubBPPath2 = "/Game/UI/WBP/Activity/Widget/JJGame/WBP_Activity_JJGame_TaskEntryBtn.WBP_Activity_JJGame_TaskEntryBtn"
+  },
   [103009001] = {
     EventId = 103009001,
+    JumpUIId = 20,
+    JumpUnlockCondition = 4360,
+    JumpUnlockTips = "EventPortal_UnlockTips_Common",
+    SubBPPath2 = "/Game/UI/WBP/Activity/Widget/DoubleMod/WBP_Activity_DoubleMod_Content.WBP_Activity_DoubleMod_Content"
+  },
+  [103009002] = {
+    EventId = 103009002,
+    JumpUIId = 20,
+    JumpUnlockCondition = 4360,
+    JumpUnlockTips = "EventPortal_UnlockTips_Common",
+    SubBPPath2 = "/Game/UI/WBP/Activity/Widget/DoubleMod/WBP_Activity_DoubleMod_Content.WBP_Activity_DoubleMod_Content"
+  },
+  [103009003] = {
+    EventId = 103009003,
     JumpUIId = 20,
     JumpUnlockCondition = 4360,
     JumpUnlockTips = "EventPortal_UnlockTips_Common",

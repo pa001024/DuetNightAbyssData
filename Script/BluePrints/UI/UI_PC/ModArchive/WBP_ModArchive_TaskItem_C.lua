@@ -322,10 +322,20 @@ end
 
 function WBP_ModArchive_TaskItem_C:OnAddedToFocusPath(InFocusEvent)
   DebugPrint("zwkkk1234 OnAddedToFocusPath")
+  if self.CurInputDeviceType and self.CurInputDeviceType == ECommonInputType.GamePad then
+    self.Btn_Build:SetGamePadVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Btn_Reward:SetGamePadVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Key_Rewards:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  end
 end
 
 function WBP_ModArchive_TaskItem_C:OnRemovedFromFocusPath(InFocusEvent)
   DebugPrint("zwkkk1234 OnRemovedFromFocusPath")
+  if self.CurInputDeviceType and self.CurInputDeviceType == ECommonInputType.GamePad then
+    self.Btn_Build:SetGamePadVisibility(ESlateVisibility.Collapsed)
+    self.Btn_Reward:SetGamePadVisibility(ESlateVisibility.Collapsed)
+    self.Key_Rewards:SetVisibility(ESlateVisibility.Collapsed)
+  end
 end
 
 function WBP_ModArchive_TaskItem_C:RefreshInputDeviceType()
@@ -452,9 +462,12 @@ function WBP_ModArchive_TaskItem_C:UpdateOnInputDeviceTypeChange()
       self:AddDelayFrameFunc(function()
         self.Btn_Build:SetGamePadVisibility(ESlateVisibility.Collapsed)
         self.Btn_Reward:SetGamePadVisibility(ESlateVisibility.Collapsed)
-        if self:HasAnyUserFocus() and not self.ListView_Rewards:HasFocusedDescendants() then
+        if self.Owner.CurWidget and self.Owner.CurWidget == self and not self.ListView_Rewards:HasFocusedDescendants() then
           self.Btn_Build:SetGamePadVisibility(ESlateVisibility.SelfHitTestInvisible)
           self.Btn_Reward:SetGamePadVisibility(ESlateVisibility.SelfHitTestInvisible)
+          if self.Key_Rewards then
+            self.Key_Rewards:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+          end
         end
       end, 1, "CollapseBtn")
     end

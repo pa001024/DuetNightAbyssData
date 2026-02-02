@@ -20,10 +20,16 @@ end
 
 function M:TalkBeginOverlap(Component, OtherActor)
   print(_G.LogTag, "LXZ TalkBeginOverlap")
+  if self:IsActorBeingDestroyed() then
+    return
+  end
 end
 
 function M:TalkEndOverlap(Component, OtherActor)
   print(_G.LogTag, "LXZ TalkEndOverlap", self.TriggerTalkId)
+  if self:IsActorBeingDestroyed() then
+    return
+  end
   if not OtherActor:IsMainPlayer() or 0 == self.TriggerTalkId then
     return
   end

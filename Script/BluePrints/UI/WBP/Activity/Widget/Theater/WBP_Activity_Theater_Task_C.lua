@@ -243,6 +243,10 @@ function M:InitViewLeftBtns()
     ItemContent.ParentWidget = self
     ItemContent.IsLock = i > self.CurStep
     ItemContent.IsSelected = self.CurStep == i
+    ItemContent.IsDone = i < self.CurStep
+    if 3 == self.CurStep and 3 == i then
+      ItemContent.IsDone = self.IsFinished
+    end
     self.View_left_btns:AddItem(ItemContent)
   end
 end
@@ -569,6 +573,15 @@ function M:RefreshViewLeftBtns()
       Item.UI:PlayAnimation(Item.UI.Lock)
     else
       Item.UI:PlayAnimation(Item.UI.Lock_Normal)
+    end
+    local IsDone = i < self.CurStep
+    if 3 == self.CurStep and 3 == i then
+      IsDone = self.IsFinished
+    end
+    if IsDone then
+      Item.UI.panel_check:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    else
+      Item.UI.panel_check:SetVisibility(ESlateVisibility.Collapsed)
     end
   end
 end

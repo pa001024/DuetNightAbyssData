@@ -94,4 +94,25 @@ function M:EndInteractive(Player, bIsSuccess)
   self.ChestInteractiveComponent:EndInteractive(Player)
 end
 
+function M:ForceCloseMechanism(PlayerEid)
+  self:SetVariableBool("bIsSuccess", true, PlayerEid)
+  if self.CurrentUI then
+    self.CurrentUI:Close()
+  end
+  self:CloseMechanism(PlayerEid)
+end
+
+function M:GetCanOpen(PlayerEid)
+  local Battle = Battle(self)
+  if not Battle then
+    return
+  end
+  local Player = Battle:GetEntity(PlayerEid)
+  if Player and not Player:CanEnterInteractive() then
+    self.CanOpen = false
+  else
+    self.CanOpen = true
+  end
+end
+
 return M

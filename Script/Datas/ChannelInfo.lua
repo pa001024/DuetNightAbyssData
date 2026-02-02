@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -160,6 +163,16 @@ return ReadOnly("ChannelInfo", {
     OS = "windows",
     Provider = "cloud",
     Region = "china",
+    SDKChannelId = 0
+  },
+  [315] = {
+    AccountPrefix = "hero",
+    ChannelId = 315,
+    DeviceType = "pc",
+    Name = "谷歌海外PC",
+    OS = "windows",
+    Provider = "hero",
+    Region = "global",
     SDKChannelId = 0
   }
 })

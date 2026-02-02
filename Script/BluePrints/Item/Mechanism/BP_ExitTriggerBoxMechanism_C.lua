@@ -28,6 +28,10 @@ function BP_ExitTriggerBoxMechanism_C:ReceiveBeginPlay()
   EventManager:AddEvent(EventID.CharDie, self, self.OnCharDie)
 end
 
+function BP_ExitTriggerBoxMechanism_C:OnRep_Size()
+  self:SetBoxExtent(self.Size)
+end
+
 function BP_ExitTriggerBoxMechanism_C:AuthorityInitInfo(Info)
   BP_ExitTriggerBoxMechanism_C.Super.AuthorityInitInfo(self, Info)
   if not IsDedicatedServer(self) then
@@ -237,22 +241,6 @@ function BP_ExitTriggerBoxMechanism_C:UpdatePage()
 end
 
 function BP_ExitTriggerBoxMechanism_C:HandleExitCountDownValueChange()
-  local UIManager = GWorld.GameInstance:GetGameUIManager()
-  if not UIManager then
-    return
-  end
-  local ExitTimeDownUI = UIManager:GetUIObj("ExitTimeDown")
-  if self.ExitCountDown < 0 and ExitTimeDownUI then
-    UIManager:UnLoadUI("ExitTimeDown")
-    return
-  end
-  if not ExitTimeDownUI then
-    local ScreenPos = FVector2D(0, 0)
-    ExitTimeDownUI = UIManager:LoadUI(UIConst.ExitTimeDown, "ExitTimeDown", UIConst.ZORDER_ABOVE_ALL, 10, ScreenPos)
-  end
-  if ExitTimeDownUI then
-    ExitTimeDownUI.TimeDown:SetText(self.ExitCountDown)
-  end
 end
 
 function BP_ExitTriggerBoxMechanism_C:IsSomeoneWaiting()
@@ -326,7 +314,62 @@ function BP_ExitTriggerBoxMechanism_C:IsPlayerWaiting(PlayerCharacter)
       end
     end
   end
+  local PCs = self:GetAllPlayerCharacters()
+  local MinDist = math.huge
+  local PlayerCharacterDist = math.huge
+  for _, Actor in pairs(PCs or {}) do
+    if PlayerCharacter == Actor:Cast(UE4.APlayerCharacter) then
+      PlayerCharacterDist = self:GetDistanceToPlayerComponent(PlayerCharacter) or math.huge
+      MinDist = math.min(PlayerCharacterDist, MinDist)
+    else
+      local Dist = self:GetDistanceToPlayerComponent(Actor) or math.huge
+      MinDist = math.min(Dist, MinDist)
+    end
+  end
+  if PlayerCharacterDist == MinDist then
+    bIsWaiting = true
+  end
   return bIsWaiting
+end
+
+function BP_ExitTriggerBoxMechanism_C:GetAllPlayerCharacters()
+  local World = self.GetWorld and self:GetWorld() or UE4.UGameplayStatics.GetWorld(self)
+  if not World then
+    return {}
+  end
+  local PCs = {}
+  local Actors = UE4.UGameplayStatics.GetAllActorsOfClass(World, UE4.APlayerCharacter)
+  if Actors then
+    for i = 1, Actors:Length() do
+      local Actor = Actors:GetRef(i)
+      if Actor then
+        table.insert(PCs, Actor)
+      end
+    end
+  end
+  return PCs
+end
+
+function BP_ExitTriggerBoxMechanism_C:GetComponentDistance(CompA, CompB)
+  if not CompA or not CompB then
+    return math.huge
+  end
+  local LocA = CompA:K2_GetComponentLocation()
+  local LocB = CompB:K2_GetComponentLocation()
+  if not LocA or not LocB then
+    return math.huge
+  end
+  local Delta = LocA - LocB
+  return Delta:Size()
+end
+
+function BP_ExitTriggerBoxMechanism_C:GetDistanceToPlayerComponent(PlayerCharacter)
+  if not (PlayerCharacter and PlayerCharacter.CapsuleComponent) or not self.CollisionComponent then
+    return nil
+  end
+  local dist = self:GetComponentDistance(PlayerCharacter.CapsuleComponent, self.CollisionComponent)
+  DebugPrint("BP_ExitTriggerBoxMechanism_C:GetDistanceToPlayerComponent", dist)
+  return dist
 end
 
 function BP_ExitTriggerBoxMechanism_C:GetUnitRealType()

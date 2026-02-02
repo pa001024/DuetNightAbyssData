@@ -122,9 +122,13 @@ function M:AddComsumerItem(InModContent)
   if self.ComsumerCount >= self.MaxComsumerCount then
     return false
   end
+  if InModContent.Count and InModContent.Count <= (self.Uuid2Count[InModContent.UnitId] or 0) then
+    return false
+  end
   self:_SetComsumerCount(self.ComsumerCount + 1)
   local ItemUI = self["Item_" .. self.ComsumerCount]
   self:_SetModItemUI(ItemUI, InModContent, self.ComsumerCount)
+  self:_AddUuid2Count(ItemUI.Content)
   InModContent.IndexInEnhance = self.ComsumerCount
   if self.ComsumerCount >= self.MaxComsumerCount then
     self:CallOnPreviewLevelChangedCallback(self.PreviewLevel + 1)
@@ -260,7 +264,6 @@ function M:_SetModItemUI(ItemUI, InModContent, IndexInEnhance)
   ModContent.Count = nil
   ModContent.bEnhance = true
   ModContent.Parent = self
-  ModContent.AdjustBackGroundHeightDelay = 0.1
   ModContent.MouseButtonUpEvent = OnItemMouseButtonUp
   ModContent.IndexInList = InModContent.IndexInList
   ModContent.IndexInEnhance = IndexInEnhance
@@ -268,11 +271,6 @@ function M:_SetModItemUI(ItemUI, InModContent, IndexInEnhance)
   ItemUI:OnListItemObjectSet(ModContent)
   ItemUI:ShowAddIcon(false)
   ItemUI:SetMinusBtn(true, self, self.OnItemMinusBtnClick)
-  local Uuid = ModContent.Uuid
-  if not self.Uuid2Count[Uuid] then
-    self.Uuid2Count[Uuid] = 0
-  end
-  self.Uuid2Count[Uuid] = self.Uuid2Count[Uuid] + 1
   if ItemUI.PolarityWidget then
     ItemUI.PolarityWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
@@ -294,6 +292,14 @@ function M:_SubUuid2Count(Content)
       self.Uuid2Count[LastUuid] = nil
     end
   end
+end
+
+function M:_AddUuid2Count(Content)
+  local Uuid = Content.Uuid
+  if not self.Uuid2Count[Uuid] then
+    self.Uuid2Count[Uuid] = 0
+  end
+  self.Uuid2Count[Uuid] = self.Uuid2Count[Uuid] + 1
 end
 
 function M:_ResetItemUI(ItemUI, IndexInEnhance, bActivate)

@@ -46,6 +46,10 @@ function BP_DefenceComponent_C:RecoverDungeonRoundData(Data)
 end
 
 function BP_DefenceComponent_C:WaveStart()
+  if self.IsInWave then
+    return
+  end
+  self.IsInWave = true
   self.GameMode:CreateEmergencyMonsterEachWave("Butcher", self, self.DefenceInfo)
   self.MonsterTotalNum = self.MonsterTotalBaseNum
   self.GameMode:TriggerCreateMonsterSpawn(self:GetMonsterSpawnId())
@@ -83,6 +87,7 @@ function BP_DefenceComponent_C:TriggerMonsterDead(Monster)
         self.GameMode:DestroyAllMonsterSpawn()
         self:AddTimer(3.5, function()
           self:AddTimer(2, self.MonsterNumCheck, true, 0, "MonsterNumCheck")
+          self:AddTimer(5, self.FallbackNumCheck, true, 0, "FallbackNumCheck")
         end, false, 0, "MonRuleReset")
       end
     end
@@ -90,13 +95,45 @@ function BP_DefenceComponent_C:TriggerMonsterDead(Monster)
 end
 
 function BP_DefenceComponent_C:MonsterNumCheck()
-  DebugPrint("DefenceComponent TriggerMonsterDead, GetMonsterNum:", self:GetMonsterNum(), "MonsterTotalNum:", self.MonsterTotalNum)
+  DebugPrint("DefenceComponent MonsterNumCheck, GetMonsterNum:", self:GetMonsterNum(), "MonsterTotalNum:", self.MonsterTotalNum)
   if 0 == self:GetMonsterNum() and self.MonsterTotalNum <= 0 then
-    self:ClearEnsureGuideTimer()
-    self.GameMode:PostCustomEvent("DefenceWaveEnd")
-    self:RemoveTimer("MonsterNumCheck")
-    self.GameMode:TriggerGameModeEvent("OnShowDefenceTarget")
+    self:DoWaveEnd()
   end
+end
+
+function BP_DefenceComponent_C:FallbackNumCheck()
+  DebugPrint("DefenceComponent FallbackNumCheck, GetMonsterNum:", self:GetMonsterNum())
+  local ActivatedMonsterSpawnNum = self.GameMode.MonsterSpawnMap:Num()
+  if ActivatedMonsterSpawnNum > 0 then
+    DebugPrint("DefenceComponent FallbackNumCheck 仍存在MonsterSpawn")
+    return
+  end
+  local IsMonsterExists = self:CheckMonsterExists()
+  if IsMonsterExists then
+    DebugPrint("DefenceComponent FallbackNumCheck 场上仍存在怪物ActorActor")
+    return
+  end
+  DebugPrint("DefenceComponent FallbackNumCheck Fallback Triggered! MonsterNum:", self:GetMonsterNum())
+  self.GameMode.EMGameState.MonsterNum = 0
+  self:DoWaveEnd()
+end
+
+function BP_DefenceComponent_C:CheckMonsterExists()
+  for _, Monster in pairs(self.GameMode.EMGameState.MonsterMap) do
+    if IsValid(Monster) and Monster.IsRealMonster and Monster:IsRealMonster() then
+      return true
+    end
+  end
+  return false
+end
+
+function BP_DefenceComponent_C:DoWaveEnd()
+  self.IsInWave = false
+  self:ClearEnsureGuideTimer()
+  self.GameMode:PostCustomEvent("DefenceWaveEnd")
+  self:RemoveTimer("MonsterNumCheck")
+  self:RemoveTimer("FallbackNumCheck")
+  self.GameMode:TriggerGameModeEvent("OnShowDefenceTarget")
 end
 
 function BP_DefenceComponent_C:OnDefenceCoreActive()

@@ -229,8 +229,10 @@ function BP_PrologueDoor:OnDoorTypeChange(DoorType)
   print(_G.LogTag, "LXZ OnDoorTypeChange", DoorType)
   if DoorType == EDoorType.UnlockedDoorAndOpenDoor or DoorType == EDoorType.UnlockedDoor then
     self.Box:SetCollisionEnabled(ECollisionEnabled.QueryOnly)
+    self.BlockPawn:SetCollisionEnabled(ECollisionEnabled.NoCollision)
   else
     self.Box:SetCollisionEnabled(ECollisionEnabled.NoCollision)
+    self.BlockPawn:SetCollisionEnabled(ECollisionEnabled.QueryOnly)
   end
 end
 

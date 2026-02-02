@@ -164,17 +164,20 @@ end
 
 function BP_Excavation_C:MissionComplete()
   self:RemoveTimer(self.BatteryHandle)
-  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-  GameMode:TriggerDungeonComponentFun("UpdateNowExcavNum", -1)
-  GameMode:TriggerDungeonComponentFun("UpdateFinishedExcavNum", 1)
-  self:TriggerGameModeEvent("OnExcavationProgressEnough")
-  self:ChangeState("Manual", 0, self.StopDigStateId)
-  self:TriggerBluePrintEvent("OnMissionComplete")
-  local GameState = UE4.UGameplayStatics.GetGameState(self)
-  GameState.DefBaseMap:Remove(self.Eid)
-  GameState.HatredCombatProp:Remove(self.Eid)
+  if not self.bTriggerGameMode then
+    self.bTriggerGameMode = true
+    local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+    GameMode:TriggerDungeonComponentFun("UpdateNowExcavNum", -1)
+    GameMode:TriggerDungeonComponentFun("UpdateFinishedExcavNum", 1)
+    self:TriggerGameModeEvent("OnExcavationProgressEnough")
+    self:ChangeState("Manual", 0, self.StopDigStateId)
+    self:TriggerBluePrintEvent("OnMissionComplete")
+    local GameState = UE4.UGameplayStatics.GetGameState(self)
+    GameState.DefBaseMap:Remove(self.Eid)
+    GameState.HatredCombatProp:Remove(self.Eid)
+    GameMode:TriggerDungeonComponentFun("JudgeNextTurn")
+  end
   self:EMActorDestroy(EDestroyReason.MechanismDead)
-  GameMode:TriggerDungeonComponentFun("JudgeNextTurn")
 end
 
 function BP_Excavation_C:ShowDeath()
@@ -185,16 +188,15 @@ end
 function BP_Excavation_C:OnDead(KillMineRoleEid, KillMineSkillId, DeathReason)
   BP_Excavation_C.Super.OnDead(self, KillMineRoleEid, KillMineSkillId, DeathReason)
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-  if IsAuthority(self) then
+  if IsAuthority(self) and not self.bTriggerDeadGameMode then
+    self.bTriggerDeadGameMode = true
     GameMode:TriggerDungeonComponentFun("UpdateNowExcavNum", -1)
     GameMode:TriggerDungeonComponentFun("UpdateTurnDeadExcavNum", 1)
     self:CreateNextExcavation()
-  end
-  self:ChangeState("Manual", 0, self.StopDigStateId)
-  if IsAuthority(self) then
     GameMode:TriggerGameModeEvent("OnExcavationDestroyed")
     GameMode:TriggerDungeonComponentFun("JudgeNextTurn")
   end
+  self:ChangeState("Manual", 0, self.StopDigStateId)
   if IsStandAlone(self) or IsClient(self) then
     self:OnExcavationDestroyed()
   end

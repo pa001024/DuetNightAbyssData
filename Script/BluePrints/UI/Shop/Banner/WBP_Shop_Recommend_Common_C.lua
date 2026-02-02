@@ -109,9 +109,6 @@ function M:InitTitleAndFont()
     return nil
   end
   local TitleRoot = self.WBP_Shop_Recommend_Common_TItle_C_0
-  if TitleRoot and TitleRoot.Text_MainTitle and BannerData.Text1 then
-    TitleRoot.Text_MainTitle:SetText(GText(BannerData.Text1))
-  end
   local Rarity = self:GetDisplayRarity()
   if TitleRoot and TitleRoot.Text_MainTitle then
     local Fonts = {
@@ -125,6 +122,7 @@ function M:InitTitleAndFont()
       TitleRoot.Text_MainTitle:SetFont(TitleRoot[FontKey])
     end
   end
+  TitleRoot:SetText(GText(BannerData.Text1))
   if self.Com_QualityTag then
     if Rarity then
       self.Com_QualityTag:Init(Rarity)
@@ -133,22 +131,21 @@ function M:InitTitleAndFont()
       self:SafeSetVisibility(self.Com_QualityTag, UE4.ESlateVisibility.Collapsed)
     end
   end
-  if self.Group_ActivityQa and self.Com_BtnExplanation and self.Com_BtnExplanation.Tex_Explanation then
-    if BannerData.Text2EntryText and BannerData.Text2 then
-      local BtnExplanationConfigData = {}
-      BtnExplanationConfigData.OwnerWidget = self
-      BtnExplanationConfigData.Desc = BannerData.Text2EntryText
-      BtnExplanationConfigData.ClickCallback = self.OnBtnExplanationClick
-      self:SafeSetVisibility(self.HB, UE4.ESlateVisibility.SelfHitTestInvisible)
-      self:SafeSetVisibility(self.Group_ActivityQa, UE4.ESlateVisibility.SelfHitTestInvisible)
-      self.Com_BtnExplanation:Init(BtnExplanationConfigData)
-    else
-      self:SafeSetVisibility(self.Group_ActivityQa, UE4.ESlateVisibility.Collapsed)
-      local TimeWidget = self.HBTime or self.ActivityTime
-      if not TimeWidget or not TimeWidget:IsVisible() then
-        self:SafeSetVisibility(self.HB, UE4.ESlateVisibility.Collapsed)
-      end
-    end
+  self:SafeSetVisibility(self.HB, UE4.ESlateVisibility.Collapsed)
+  if self.Group_ActivityQa and self.Com_BtnExplanation and self.Com_BtnExplanation.Tex_Explanation and BannerData.Text2EntryText and BannerData.Text2 then
+    local BtnExplanationConfigData = {}
+    BtnExplanationConfigData.OwnerWidget = self
+    BtnExplanationConfigData.Desc = BannerData.Text2EntryText
+    BtnExplanationConfigData.ClickCallback = self.OnBtnExplanationClick
+    self:SafeSetVisibility(self.HB, UE4.ESlateVisibility.SelfHitTestInvisible)
+    self:SafeSetVisibility(self.Group_ActivityQa, UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Com_BtnExplanation:Init(BtnExplanationConfigData)
+  end
+  if self.Text_Detail and BannerData.Text1Sub then
+    self:SafeSetVisibility(self.Text_Detail, UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Text_Detail:SetText(GText(BannerData.Text1Sub))
+  elseif self.Text_Detail then
+    self:SafeSetVisibility(self.Text_Detail, UE4.ESlateVisibility.Collapsed)
   end
 end
 
@@ -271,9 +268,29 @@ function M:OnBtnSwitchClick()
   end
 end
 
+function M:OnRKeyDown()
+  if not self.BannerData then
+    return
+  end
+  if self.BannerData.DisplayType ~= "Resource" and self.BannerData.DisplayType ~= "Mount" then
+    return
+  end
+  if self.BannerData.DisplayType == "Resource" then
+    self:OnReplayGesture()
+  elseif self.BannerData.DisplayType == "Mount" then
+    self:OnRideMount()
+  end
+end
+
 function M:OnReplayGesture()
   if self.Parent and self.BannerData and self.BannerData.DisplayId then
     self.Parent:ReplayGesture(self.BannerData.DisplayId)
+  end
+end
+
+function M:OnRideMount()
+  if self.Parent and self.Parent.RiderMount and self.BannerData.DisplayId then
+    self.Parent:RiderMount(self.BannerData.DisplayId)
   end
 end
 
@@ -290,7 +307,6 @@ function M:InitRewardInfo()
     self:ClearAndHideRewardView()
     return
   end
-  local ShopItemData = self:GetShopItemInfo(BannerData.ItemId)
   if ShopItemData and ShopItemData.TypeId and DataMgr.Reward and DataMgr.Reward[ShopItemData.TypeId] then
     TypeId = ShopItemData.TypeId
     Rewards = DataMgr.Reward and DataMgr.Reward[TypeId]
@@ -436,9 +452,11 @@ function M:OnBtnPreviewClick()
     end
     Params.EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon
     Params.bNoEndCamera = true
+    self.Parent.ActorController:HidePlayerActor("ActorController_HidePlayerBeforeMount", false)
     UIManager(self):LoadUINew("ArmoryDetail", Params)
     self.Parent.Shop_RecommendBanner:StopBannerTimer()
-  elseif ("Skin" == PreviewType or "WeaponSkin" == PreviewType or "CharAccessory" == PreviewType or "WeaponAccessory" == PreviewType or "Resource" == PreviewType) and PreviewIdList then
+  elseif PreviewIdList and UIUtils.CanOpenSkinPreview(PreviewType, PreviewIdList[1]) then
+    self.Parent.ActorController:HidePlayerActor("ActorController_HidePlayerBeforeMount", false)
     UIManager(self):LoadUINew("SkinPreview", {
       ItemType = PreviewType,
       SkinList = PreviewIdList,
@@ -447,6 +465,7 @@ function M:OnBtnPreviewClick()
     self.Parent.Shop_RecommendBanner:StopBannerTimer()
     return
   elseif "SkinSeries" == PreviewType then
+    self.Parent.ActorController:HidePlayerActor("ActorController_HidePlayerBeforeMount", false)
     UIManager(self):LoadUINew("CharSkinPreview", {
       Type = "ShopRecommend",
       SkinSeriesId = BannerData.SkinSeries
@@ -481,9 +500,13 @@ function M:InitTimeInfo()
   if not BannerData then
     return
   end
-  local EndTime = BannerData.EndTime
   local ActivityTime = self.Activity_Time
   local HBTime = self.HB_Time
+  if BannerData.ShowRemainTime ~= true then
+    self:SafeSetVisibility(HBTime or ActivityTime, UE4.ESlateVisibility.Collapsed)
+    return
+  end
+  local EndTime = BannerData.EndTime
   if EndTime and ActivityTime then
     self:SafeSetVisibility(self.HB, UE4.ESlateVisibility.SelfHitTestInvisible)
     self:SafeSetVisibility(HBTime or ActivityTime, UE4.ESlateVisibility.SelfHitTestInvisible)
@@ -502,11 +525,6 @@ function M:InitTimeInfo()
     
     UpdateTimeInfo()
     self:AddTimer(1.0, UpdateTimeInfo, true, 0, "Recommend_Common_Timer", true)
-  else
-    self:SafeSetVisibility(HBTime or ActivityTime, UE4.ESlateVisibility.Collapsed)
-    if not self.Group_ActivityQa or not self.Group_ActivityQa:IsVisible() then
-      self:SafeSetVisibility(self.HB, UE4.ESlateVisibility.Collapsed)
-    end
   end
 end
 
@@ -634,11 +652,7 @@ function M:SetButtonPayAvailable()
   end
   if self.MainBtn.Group_BuyNum and self.MainBtn.Text_BuyNum and self.PurchaseLimit > 0 then
     self:SafeSetVisibility(self.MainBtn.Group_BuyNum, UE4.ESlateVisibility.SelfHitTestInvisible)
-    local PurchaseLimitText = {
-      GText("UI_Banner_Remain_Buy"),
-      tostring(self.PurchaseLimit)
-    }
-    self.MainBtn.Text_BuyNum:SetText(table.concat(PurchaseLimitText, ": "))
+    self.MainBtn.Text_BuyNum:SetText(GText("UI_Banner_Remain_Buy") .. tostring(self.PurchaseLimit))
   else
     self:SafeSetVisibility(self.MainBtn.Group_BuyNum, UE4.ESlateVisibility.Collapsed)
   end
@@ -668,8 +682,7 @@ function M:SetButtonPayAvailable()
     self.MainBtn.Icon_Currency:Init({
       Id = self.ShopItemData.PriceType,
       Icon = LoadObject(DataMgr.Resource[self.ShopItemData.PriceType].Icon),
-      ItemType = self.ShopItemData.ItemType,
-      UIName = "ShopMain"
+      ItemType = self.ShopItemData.ItemType
     })
   end
   self:SafeSetVisibility(self.MainBtn.WS_Detail, UE4.ESlateVisibility.SelfHitTestInvisible)
@@ -719,7 +732,7 @@ function M:OnBtnPayClick()
     local FinalPrice, PriceType = self:ComputeFinalPrice(ShopItemData)
     local CurrentCount = Avatar:GetResourceNum(PriceType)
     FinalPrice = FinalPrice * SelectCount
-    if CurrentCount < FinalPrice and 99 == self.PriceType then
+    if CurrentCount < FinalPrice then
       local function JumpToShop()
         self:AddTimer(0.3, function()
           PageJumpUtils:JumpToShopPage(CommonConst.GachaJumpToShopMainTabId, nil, nil, "Shop")
@@ -867,21 +880,15 @@ end
 function M:InitVideoInfo()
   self.Parent:SetHasVideo(self.bHasVideo)
   if not self.bHasVideo then
+    self.Parent:StopVideoBGWithDelay(0.5)
     return
+  else
+    self.Parent:StopVideoBG()
   end
   self.Parent:InitVideoPlayer(self.BannerData.BgVideoPath, self.BannerData.DisplayType, self.BannerData.DisplayId)
   if not self.Parent.bPlayVideoTop then
     self.Parent:PlayVideoBG()
   end
-end
-
-function M:ExitBanner()
-  if self.bHasVideo then
-    self.Parent:StopVideoBG()
-  end
-  self.Parent:SetAllowedToShowHideUI(false)
-  self.Parent:SetShowModel(false)
-  self.Parent:SetHasVideo(false)
 end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
@@ -944,7 +951,7 @@ function M:UpdateCommonTabInfo()
         {
           Type = "Text",
           Text = "R",
-          ClickCallback = self.OnReplayGesture,
+          ClickCallback = self.OnRKeyDown,
           Owner = self
         }
       },
@@ -952,11 +959,31 @@ function M:UpdateCommonTabInfo()
         {
           Type = "Img",
           ImgShortPath = "Y",
-          ClickCallback = self.OnReplayGesture,
+          ClickCallback = self.OnRKeyDown,
           Owner = self
         }
       },
       Desc = GText("UI_Banner_ReplayGesture")
+    })
+  elseif self.BannerData.DisplayType and self.BannerData.DisplayType == "Mount" and self.BannerData.DisplayId and not self.bHasVideo then
+    table.insert(Params, {
+      KeyInfoList = {
+        {
+          Type = "Text",
+          Text = "R",
+          ClickCallback = self.OnRKeyDown,
+          Owner = self
+        }
+      },
+      GamePadInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = "Y",
+          ClickCallback = self.OnRKeyDown,
+          Owner = self
+        }
+      },
+      Desc = GText("UI_CTL_Ride")
     })
   end
   table.insert(Params, {
@@ -1002,7 +1029,7 @@ function M:UpdateCommonTabInfo()
     })
   end
   if self.BannerData.DisplayType and (self.BannerData.DisplayId or self.BannerData.SkinSeries) and not self.bHasVideo then
-    if self.BannerData.DisplayType ~= "Weapon" and self.BannerData.DisplayType ~= "WeaponSkin" and self.BannerData.DisplayType ~= "WeaponAccessory" then
+    if self.BannerData.DisplayType ~= "Weapon" and self.BannerData.DisplayType ~= "WeaponSkin" and self.BannerData.DisplayType ~= "WeaponAccessory" and self.Parent.EnableMouseWheel then
       table.insert(Params, {
         KeyInfoList = {
           {
@@ -1030,12 +1057,14 @@ function M:UpdateCommonTabInfo()
         bLongPress = false
       })
     end
-    table.insert(Params, {
-      GamePadInfoList = {
-        {Type = "Img", ImgShortPath = "RH"}
-      },
-      Desc = GText("UI_CTL_RotatePreview")
-    })
+    if self.Parent.EnableDrag then
+      table.insert(Params, {
+        GamePadInfoList = {
+          {Type = "Img", ImgShortPath = "RH"}
+        },
+        Desc = GText("UI_CTL_RotatePreview")
+      })
+    end
   end
   table.insert(Params, {
     KeyInfoList = {
@@ -1084,8 +1113,8 @@ end
 function M:HandleKeyDown(InKey, InKeyName)
   print("lgc@WBP_Shop_Recommend_Common HandleKeyDown", InKeyName)
   if "R" == InKeyName or InKeyName == Const.GamepadFaceButtonUp then
-    if self.BannerData.DisplayId and self.BannerData.DisplayType and self.BannerData.DisplayType == "Resource" then
-      self:OnReplayGesture()
+    if self.BannerData.DisplayId and self.BannerData.DisplayType and (self.BannerData.DisplayType == "Resource" or self.BannerData.DisplayType == "Mount") then
+      self:OnRKeyDown()
       return true
     end
   elseif InKeyName == Const.GamepadLeftThumbstick then

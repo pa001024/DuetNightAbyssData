@@ -2,10 +2,7 @@ local Decorator = require("BluePrints.Client.Wrapper.Decorator")
 local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
 local MiscUtils = require("Utils.MiscUtils")
 local Component = {}
-for key, value in pairs(Decorator) do
-  Component[key] = value
-end
-setmetatable(Component, getmetatable(Decorator))
+Decorator:ApplyDecorator(Component)
 
 local function Trim(input)
   return (string.gsub(input, "^%s*(.-)%s*$", "%1"))
@@ -302,10 +299,13 @@ function Component:OnForbidChat(time, reason, timeDelta)
   ChatController:OpenForbidChatDialog(time, reason, timeDelta)
 end
 
-function Component:ReportChat(reason, remark, chat_message)
+function Component:ReportChat(reason, remark, chat_message, InCallBack)
   local function callback(Ret)
     self.logger.debug("ReportChat: ErrorCode: " .. Ret)
     
+    if InCallBack then
+      InCallBack(Ret)
+    end
     local IsError = ErrorCode:Check(Ret, UIConst.Tip_CommonToast)
     if not IsError then
       return
@@ -314,6 +314,56 @@ function Component:ReportChat(reason, remark, chat_message)
   end
   
   self:CallServer("ReportChat", callback, reason, remark, chat_message)
+end
+
+function Component:ReportMatch(Uid, Nickname, Level, reason, InCallBack)
+  local function callback(Ret)
+    self.logger.debug("ReportMatch: ErrorCode: " .. Ret)
+    
+    if InCallBack then
+      InCallBack(Ret)
+    end
+    local IsError = ErrorCode:Check(Ret, UIConst.Tip_CommonToast)
+    if not IsError then
+      return
+    end
+    UIManager(GWorld.GameInstance):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Chat_ReportSuccess"))
+  end
+  
+  local Info = {
+    Nickname = Nickname,
+    Level = Level,
+    Reason = reason,
+    Remark = "举报匹配"
+  }
+  self:CallServerMethod("ReportMatch", Uid, Info)
+  callback(ErrorCode.RET_SUCCESS)
+end
+
+function Component:ReportPhoto(Uid, Nickname, Level, PictureUniqueId, Url, reason, InCallBack)
+  local function callback(Ret)
+    self.logger.debug("ReportPhoto: ErrorCode: " .. Ret)
+    
+    if InCallBack then
+      InCallBack(Ret)
+    end
+    local IsError = ErrorCode:Check(Ret, UIConst.Tip_CommonToast)
+    if not IsError then
+      return
+    end
+    UIManager(GWorld.GameInstance):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Chat_ReportSuccess"))
+  end
+  
+  local Info = {
+    Nickname = Nickname,
+    Level = Level,
+    Reason = reason,
+    Remark = "举报违规照片",
+    PictureUniqueId = PictureUniqueId,
+    Url = Url
+  }
+  self:CallServerMethod("ReportAfdayPhoto", Uid, Info)
+  callback(ErrorCode.RET_SUCCESS)
 end
 
 function Component:SendModSuitToWorld(InCallbackInfo, channel_type, tag, eid, mod_suit_index)

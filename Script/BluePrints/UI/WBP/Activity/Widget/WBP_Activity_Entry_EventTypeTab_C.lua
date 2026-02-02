@@ -64,6 +64,7 @@ function M:OnHovered()
     return
   end
   self.bBtnClickHovered = true
+  self:StopAnimation(self.UnHover)
   self:PlayAnimation(self.Hover)
 end
 
@@ -72,7 +73,7 @@ function M:OnUnhovered()
     return
   end
   self.bBtnClickHovered = false
-  self:StopAllAnimations()
+  self:StopAnimation(self.Hover)
   self:BindToAnimationFinished(self.UnHover, {
     self,
     function()
@@ -194,7 +195,7 @@ function M:GetIsShowReddotAndNew(Content)
   end
   local NodeName = ActivityReddotHelper.GetEventTabNodeName(Content.TabId)
   local ReddotNode = ReddotManager.GetTreeNode(NodeName)
-  if ReddotNode and ReddotNode.Cache and ReddotNode.Count and ReddotNode.Count > 0 then
+  if ReddotNode and ReddotNode.Count and ReddotNode.Count > 0 then
     if ReddotNode.ReddotType == UIConst.RedDotType.CommonRedDot then
       bShowReddot = true
     elseif ReddotNode.ReddotType == UIConst.RedDotType.NewRedDot then

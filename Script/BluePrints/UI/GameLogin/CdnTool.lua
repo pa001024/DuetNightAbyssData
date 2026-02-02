@@ -121,6 +121,10 @@ function CdnTool:GetMaintenanceInterceptUrl(ServerID, Cb)
   Private.CdnGetJson(CdnPath:CdnUrl(ServerID), CdnPath:MaintenanceInterceptUrl(ServerID), Cb)
 end
 
+function CdnTool:GetGMUrlLink(Path, Cb)
+  Private.CdnGetJson(CdnPath:CdnUrl(), Path, Cb)
+end
+
 function CdnTool:CdnUrl()
   return CdnPath:CdnUrl()[1]
 end
@@ -158,16 +162,16 @@ function CdnTool:GetCdnHideData(HostId)
           GWorld.logger.error("执行GetCdnHideData出错，json解析失败!!!")
           return
         end
-        local ChanelProvider = GWorld.ServerListMgr:GetChanelProvider()
-        if not ChanelProvider then
-          print("执行GetCdnHideData出错，ChannelProvider为空,CdnPath:" .. tostring(CdnPath:CdnUrl(HostId)) .. HideDataPath)
+        local ExamineKey = GWorld.ServerListMgr:GetExamineKey()
+        if not ExamineKey then
+          print("执行GetCdnHideData出错，ExamineKey为空,CdnPath:" .. tostring(CdnPath:CdnUrl(HostId)) .. HideDataPath)
           return
         end
-        if not Infos[ChanelProvider] then
-          print("执行GetCdnHideData出错，收到的数据中没有对应渠道的数据,CdnPath:" .. tostring(CdnPath:CdnUrl(HostId)) .. HideDataPath, "当前渠道:" .. ChanelProvider)
+        if not Infos[ExamineKey] then
+          print("执行GetCdnHideData出错，收到的数据中没有对应ExamineKey数据,CdnPath:" .. tostring(CdnPath:CdnUrl(HostId)) .. HideDataPath, "当前ExamineKey:" .. ExamineKey)
           return
         end
-        Avatar.CdnHideData = Infos[ChanelProvider]
+        Avatar.CdnHideData = Infos[ExamineKey]
         PrintTable(Avatar.CdnHideData, 10, "CdnHideData")
         print("[CdnTool] 执行GetCdnHideData成功, Url:", HideDataPath, ",可以通过gm PrintTable(A.CdnHideData)查看详细数据。")
       end,

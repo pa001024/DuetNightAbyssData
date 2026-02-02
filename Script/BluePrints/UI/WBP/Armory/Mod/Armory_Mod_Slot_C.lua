@@ -40,7 +40,10 @@ end
 
 function M:ResetUI()
   self.Img_NoneHint:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  self.Quality_Bar:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Panel_Quality:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if self.Quality_Bar then
+    self.Quality_Bar:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
   self.Panel_Select:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.List_ModStar:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Icon_Mod:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -174,29 +177,18 @@ function M:UpdateSlotUIUsed(SlotUIData)
       self.List_ModStar:AddItem(StarContent)
     end
   end
-  self.Quality_Bar:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-  local RarityImgPath
+  self.Panel_Quality:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   local Rarity = Mod.Rarity
-  if SlotUIData.SlotId == ModCommon.MaxSlotCount then
-    RarityImgPath = DataMgr.ModRarity[Rarity].MidSlotBg
-  else
-    RarityImgPath = DataMgr.ModRarity[Rarity].LRSlotBg
-  end
-  UResourceLibrary.LoadObjectAsync(self, RarityImgPath, {
-    self,
-    function(_, Icon)
-      self.Quality_Bar:SetBrushResourceObject(Icon)
-    end
-  })
+  local Mat = self.BG_Quality:GetDynamicMaterial()
+  Mat:SetScalarParameterValue("Index", Rarity)
   self.ModContent = ModModel:CreateModContent(Mod, true, not ModModel:IsModUIPreview())
   self.ModContent.IsShowDetails = true
   self.ModContent.MenuPlacement = ModCommon.SlotIdToMenuPlacement[SlotUIData.SlotId]
   self.ItemDetails_MenuAnchor:InitializeSetUp(self, self.ModContent, true)
   self.ItemDetails_MenuAnchor:SetRevertShear(true)
   ArmoryUtils:SetReddotRead(self.ModContent, true)
-  if SlotUIData.bEquiping then
+  if SlotUIData:IsNeedPlayScanline() then
     self:PlayScanlineAnim(Mod.Rarity)
-    SlotUIData.bEquiping = false
   end
   if SlotUIData.bNotOwned then
     self.Img_NoneHint:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -487,6 +479,7 @@ end
 
 function M:PlayScanlineAnim(Rarity)
   self:StopAnimation(self.Normal)
+  self:StopScanlineAnim()
   if 1 == Rarity then
     self:PlayAnimation(self.ScanLine_Gray)
   elseif 2 == Rarity then

@@ -90,10 +90,11 @@ function Component:OnAnchorGetUserMenuContent(Anchor)
     
     function Content.Callback()
       local Params = {
-        PlayerName = AvatarInfo.Nickname,
+        Nickname = AvatarInfo.Nickname,
         UID = AvatarInfo.Uid,
+        Level = AvatarInfo.Level,
         TextLenMax = 50,
-        ChatMassage = self._MessageContent,
+        ChatMessage = self._MessageContent,
         ForbidRightBtn = true,
         DontCloseWhenRightBtnClicked = true
       }
@@ -136,7 +137,9 @@ function Component:OnAnchorGetUserMenuContent(Anchor)
   local InBounsScene = GWorld.GameInstance.IsInTempScene and GWorld.GameInstance:IsInTempScene()
   local IsInDungeon = GWorld:GetAvatar():IsInDungeon()
   local IsInHardBoss = GWorld:GetAvatar():IsInHardBoss()
-  local bInTeam = TeamController:GetModel():GetInviteSendBox()[self._AvatarInfo.Uid] or Avatar:IsInTeam() or Avatar:IsInMultiDungeon()
+  local bNotInvitable = TeamController:GetModel():GetInviteSendBox()[self._AvatarInfo.Uid] or Avatar:IsInMultiDungeon()
+  local TeamData = TeamController:GetModel():GetTeam()
+  bNotInvitable = bNotInvitable or 4 == (TeamData and #TeamData.Members)
   local Channel = ChatController:GetModel():GetCurrentChannel()
   local InviteTeamIdx
   if IsInHardBoss then
@@ -176,7 +179,7 @@ function Component:OnAnchorGetUserMenuContent(Anchor)
     if self._MessageContent then
       table.insert(Switch, AccusePlayer)
     end
-    if bInTeam then
+    if bNotInvitable then
       table.remove(Switch, InviteTeamIdx)
     end
     if Channel == ChatCommon.ChannelDef.InTeam or Channel == ChatCommon.ChannelDef.Friend then

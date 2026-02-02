@@ -26,7 +26,7 @@ function M:OnListItemObjectSet(Content)
   rawset(self, "bFormPersonalPage", Content.bFormPersonalPage)
   rawset(self, "IsCharacterTrialMode", Content.IsCharacterTrialMode)
   rawset(self, "IsTargetUnowned", Content.IsTargetUnowned)
-  rawset(self, "IsCurrentUse", Content.IsCurrentUse)
+  rawset(self, "bSelectTag", Content.bSelectTag)
   rawset(self, "bDyeable", Content.bDyeable)
   rawset(self, "Type", Content.Type)
   rawset(self, "ItemType", Content.ItemType)
@@ -49,28 +49,28 @@ function M:OnListItemObjectSet(Content)
     self.WS_State:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.WS_Img:SetActiveWidgetIndex(0)
   end
-  self:SetIcon(Content.IconPath)
+  self:SetIcon(Content.IconPath or Content.Icon)
   self:SetDyeable(Content.bDyeable)
   self:SetRarity(Content.Rarity)
   self:InitTextStyle()
-  self:SetIsNew(Content.IsNew)
-  self:SetIsSelected(Content.IsSelect)
+  self:SetIsNew(Content.RedDotType)
+  self:SetSelected(Content.IsSelect)
 end
 
-function M:SetReddot(IsNew)
-  self:SetIsNew(IsNew)
+function M:SetReddot(RedDotType)
+  self:SetIsNew(RedDotType)
 end
 
-function M:SetIsNew(IsNew)
-  if IsNew then
+function M:SetIsNew(RedDotType)
+  if RedDotType == UIConst.RedDotType.NewRedDot then
     self.New:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   else
     self.New:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end
 
-function M:SetIsCurrentUse(IsCurrentUse)
-  self.IsCurrentUse = IsCurrentUse
+function M:SetItemSelect(bSelectTag)
+  self.bSelectTag = bSelectTag
   self:InitTextStyle()
 end
 
@@ -86,12 +86,18 @@ function M:InitTextStyle()
     return
   end
   if self.ItemType == CommonConst.DataType.Skin then
-    self.Text_Disable:SetText(GText("UI_Skin_NoChar"))
-  else
+    if self.bSelectTag then
+      self.Text_Disable:SetText(GText("UI_Skin_NoChar"))
+    else
+      self.Text_Disable:SetText(GText("UI_Skin_Forbid"))
+    end
+  elseif self.bSelectTag then
     self.Text_Disable:SetText(GText("UI_Skin_NoWeapon"))
+  else
+    self.Text_Disable:SetText(GText("UI_Skin_Forbid"))
   end
   self.WS_State:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-  if self.IsCurrentUse then
+  if self.bSelectTag then
     if self.IsCharacterTrialMode then
       self.WS_State:SetActiveWidgetIndex(1)
       self.Text_TryOut:SetText(GText("UI_CharPreview_Accessory_In_Trial"))
@@ -136,7 +142,7 @@ function M:OnClicked()
         ItemId = self.ItemId,
         bCustomStype = true
       }
-      if self.ItemId ~= nil and -1 ~= self.ItemId then
+      if self.ItemId ~= nil and -1 ~= self.ItemId and self.ItemDetails_MenuAnchor then
         self.ItemDetails_MenuAnchor.ParentWidget = self
         self.ItemDetails_MenuAnchor:OpenItemDetailsWidget(false, Content)
       end
@@ -217,7 +223,7 @@ function M:OnRemovedFromFocusPath()
   end
 end
 
-function M:SetIsSelected(IsSelected)
+function M:SetSelected(IsSelected)
   if IsSelected then
     self:SetSelect()
   else
@@ -247,6 +253,8 @@ function M:OnBtnHovered()
   end
   if self.CurInputDeviceType == ECommonInputType.Gamepad then
     self:SetSelect()
+  elseif self.CurInputDeviceType == ECommonInputType.Touch then
+    return
   else
     AudioManager(self):PlayUISound(nil, "event:/ui/common/hover_btn_large", nil, nil)
     EMUIAnimationSubsystem:EMPlayAnimation(self, self.Hover)
@@ -257,13 +265,25 @@ function M:OnBtnUnhovered()
   if self.Content.IsSelect then
     return
   end
-  EMUIAnimationSubsystem:EMPlayAnimation(self, self.UnHover)
+  if self.CurInputDeviceType == ECommonInputType.Touch then
+    return
+  end
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
+end
+
+function M:OnBtnReleased()
+  if self.Content.IsSelect then
+    return
+  end
+  EMUIAnimationSubsystem:EMStopAnimation(self, self.Press)
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
 end
 
 function M:OnBtnPressed()
   if self.Content.IsSelect then
     return
   end
+  EMUIAnimationSubsystem:EMStopAnimation(self, self.Normal)
   EMUIAnimationSubsystem:EMPlayAnimation(self, self.Press)
 end
 

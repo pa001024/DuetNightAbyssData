@@ -8,7 +8,8 @@ local ETypingStates = {
   None = 1,
   FirstFrame = 2,
   Init = 3,
-  Typing = 4
+  Typing = 4,
+  Error = 5
 }
 
 function M:Construct()
@@ -43,7 +44,7 @@ function M:Construct()
 end
 
 function M:Tick(MyGeometry, InDeltaTime)
-  if self.TypingState == ETypingStates.None then
+  if self.TypingState == ETypingStates.None or self.TypingState == ETypingStates.Error then
     return
   elseif self.TypingState == ETypingStates.FirstFrame then
     self.TypingState = ETypingStates.Init
@@ -173,7 +174,7 @@ function M:IsFinished()
 end
 
 function M:ToFinish()
-  if self.TypingState ~= ETypingStates.Typing then
+  if self.TypingState ~= ETypingStates.Typing and self.TypingState ~= ETypingStates.Error then
     self.bPrepareToFinish = true
     return false
   end
@@ -240,8 +241,8 @@ function M:Init()
     self.TypingState = ETypingStates.Typing
   else
     MiscUtils.Error("TypingUserWidget initialization failed or empty dialogue!")
+    self.TypingState = ETypingStates.Error
     self:ToFinish()
-    self.TypingState = ETypingStates.None
   end
 end
 

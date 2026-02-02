@@ -295,7 +295,7 @@ function M:OnWearBtnClick()
     self.RootPage.Angling_Main:RefreshFishRod(self.CurrentRodId)
     self.RootPage:UpdateFishingRodModelId()
   else
-    if self.WearLureContent == self.SelectLureContent then
+    if self.WearLureContent == self.SelectLureContent and 0 ~= self.SelectLureContent.Count then
       return
     end
     if 0 == self.SelectLureContent.Count then

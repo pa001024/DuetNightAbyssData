@@ -136,6 +136,17 @@ function M:OnOpenTaskUI(UIName)
   end
   self.CurSubUI = WidgetUI
   self.CurSubUI:SetFocus()
+  self:PlayAnimationIn(WidgetUI, true)
+end
+
+function M:PlayAnimationIn(WidgetUI, bForce)
+  if not WidgetUI or not WidgetUI.In then
+    return
+  end
+  if WidgetUI:IsPlayingAnimation(WidgetUI.In) then
+    WidgetUI:StopAnimation(WidgetUI.In)
+  end
+  WidgetUI:PlayAnimation(WidgetUI.In)
 end
 
 function M:SwitchIn()
@@ -145,6 +156,7 @@ function M:SwitchIn()
   if self.CurSubUI.SwitchIn then
     self.CurSubUI:SwitchIn()
   end
+  self:PlayAnimationIn(self.CurSubUI, false)
 end
 
 function M:SwitchGamepadKeyShow(IsShow)
@@ -168,7 +180,7 @@ end
 
 function M:BP_GetDesiredFocusTarget()
   if self.CurSubUI and self.CurSubUI.NodeName == "StarterQuest" and not UIUtils.HasAnyFocus(self.CurSubUI) then
-    return self.CurSubUI.List_Task
+    return self.CurSubUI:ReGetDesiredFocusTarget()
   end
   return self.CurSubUI or self
 end

@@ -136,8 +136,9 @@ function Component:CheckCharAppearanceReddot(Char)
   local Avatar = GWorld:GetAvatar()
   local CommonChar = Avatar.CommonChars[Char.CharId]
   local Count = 0
+  local LeafNodeName
   for _, Type in pairs(CommonConst.CharAccessoryTypes) do
-    local LeafNodeName = CommonConst.DataType.CharAccessory .. Type
+    LeafNodeName = CommonConst.DataType.CharAccessory .. Type
     local CharAccessoryNode = ReddotManager.GetTreeNode(LeafNodeName)
     local NewAccessoryCount = CharAccessoryNode and CharAccessoryNode.Count or 0
     Count = Count + NewAccessoryCount
@@ -148,10 +149,14 @@ function Component:CheckCharAppearanceReddot(Char)
       Count = Count + SkinNewAccessoryCount
     end
   end
-  local LeafNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. Char.CharId
+  LeafNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. Char.CharId
   local SkinNode = ReddotManager.GetTreeNode(LeafNodeName)
   local NewSkinCount = SkinNode and SkinNode.Count or 0
   Count = Count + NewSkinCount
+  LeafNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. Char.CharId
+  local HairNode = ReddotManager.GetTreeNode(LeafNodeName)
+  local NewHairCount = HairNode and HairNode.Count or 0
+  Count = Count + NewHairCount
   return Count > 0
 end
 
@@ -195,7 +200,7 @@ function Component:AddSubTabReddotListen()
       self:UpdateSubTabReddotCommon(ArmoryUtils.ArmorySubTabNames.Grade)
     end, self.ComparedChar.CharId)
     self:AddCharAppearanceReddotListen(function(self, Count)
-      self:SubTabReddotFunc(ArmoryUtils.ArmorySubTabNames.Appearance, Count > 0)
+      self:UpdateSubTabReddotCommon(ArmoryUtils.ArmorySubTabNames.Appearance)
     end, self.ComparedChar.CharId)
     self:AddCharRedordReddotListen(function(self, Count)
       self:SubTabReddotFunc(ArmoryUtils.ArmorySubTabNames.Files, Count > 0)
@@ -441,7 +446,7 @@ function Component:RemoveCharGradeReddotListen()
   self:_RemoveReddotListenerCommon(CommonConst.DataType.Char .. ArmoryUtils.ArmorySubTabNames.Grade)
 end
 
-function Component:AddCharAppearanceReddotListen(Callback, CharId)
+function Component:AddCharAppearanceReddotListen(Callback, CharId, Exclude)
   if self.IsPreviewMode or self.NoReddot then
     return
   end
@@ -453,18 +458,43 @@ function Component:AddCharAppearanceReddotListen(Callback, CharId)
   local Avatar = GWorld:GetAvatar()
   local CommonChar = Avatar.CommonChars[CharId]
   local LeafNodes = {}
-  for _, Type in pairs(CommonConst.CharAccessoryTypes) do
-    local LeafNodeName = CommonConst.DataType.CharAccessory .. Type
-    LeafNodes[LeafNodeName] = ReddotManager.GetTreeNode(LeafNodeName) and 1 or nil
-    for key, Skin in pairs(CommonChar.OwnedSkins) do
-      LeafNodeName = LeafNodeName .. Skin.SkinId
-      LeafNodes[LeafNodeName] = ReddotManager.GetTreeNode(LeafNodeName) and 1 or nil
+  Exclude = Exclude or {}
+  
+  local function IsExcluded(Type)
+    for key, value in pairs(Exclude) do
+      if value == Type then
+        return true
+      end
     end
   end
-  local LeafNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. CharId
-  LeafNodes[LeafNodeName] = ReddotManager.GetTreeNode(LeafNodeName) and 1 or nil
+  
+  for _, Type in pairs(CommonConst.CharAccessoryTypes) do
+    if not IsExcluded(Type) then
+      local LeafNodeName = CommonConst.DataType.CharAccessory .. Type
+      LeafNodes[LeafNodeName] = ReddotManager.GetTreeNode(LeafNodeName) and 1 or nil
+      for key, Skin in pairs(CommonChar.OwnedSkins) do
+        LeafNodeName = LeafNodeName .. Skin.SkinId
+        LeafNodes[LeafNodeName] = ReddotManager.GetTreeNode(LeafNodeName) and 1 or nil
+      end
+    end
+  end
   if not self.CharAppearanceNodeNames[NodeName] and not IsEmptyTable(LeafNodes) then
     ReddotManager.AddListener(NodeName, self, Callback, LeafNodes)
+    self.CharAppearanceNodeNames[NodeName] = 1
+  end
+  NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. CharId
+  if ReddotManager.GetTreeNode(NodeName) then
+    ReddotManager.AddListener(NodeName, self, Callback, nil, true)
+    self.CharAppearanceNodeNames[NodeName] = 1
+  end
+  NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. CharId
+  if ReddotManager.GetTreeNode(NodeName) then
+    ReddotManager.AddListener(NodeName, self, Callback, nil, true)
+    self.CharAppearanceNodeNames[NodeName] = 1
+  end
+  NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. CharId
+  if ReddotManager.GetTreeNode(NodeName) then
+    ReddotManager.AddListener(NodeName, self, Callback, nil, true)
     self.CharAppearanceNodeNames[NodeName] = 1
   end
 end

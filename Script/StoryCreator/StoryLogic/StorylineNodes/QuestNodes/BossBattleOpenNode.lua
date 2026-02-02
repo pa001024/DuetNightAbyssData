@@ -30,7 +30,7 @@ function M:Clear()
   self.Player:RemoveDisableInputTag(PauseTag)
   local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
   if GameState then
-    GameState:ClientHideHardBossDgBossActor(false)
+    GameState:ClientHideHardBossDgActor(false, "Boss")
   end
 end
 
@@ -50,39 +50,20 @@ function M:PlaySequence()
     local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
     GameMode:SetGamePaused(PauseTag, true)
     local TS = TalkSubsystem()
-    TS:SetSequenceIgnorePause(true, self.LevelSequenceActor, self.SequencePlayer)
+    TS:AddIgnorePauseObject(self.LevelSequenceActor)
   end
   self.SequencePlayer.OnFinished:Add(SequenceAsset, function()
     self:OnSequencePlayFinished()
   end)
-  self.SequencePlayer.OnPause:Add(SequenceAsset, function()
-    self:OnSequencePause()
-  end)
   local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
-  if GameState and GameState:IsInRegion() then
-    self.SequencePlayer:Play()
-  else
-    local MarkedFrameIndex = UE4.UMovieSceneSequenceExtensions.FindMarkedFrameByLabel(SequenceAsset, "EnterPause")
-    if -1 == MarkedFrameIndex then
-      local TotalFrames = UE4.UMovieSceneSequenceExtensions.GetPlaybackEnd(SequenceAsset) - 5
-      local FrameRate = self.SequencePlayer:GetFrameRate()
-      local Time = TotalFrames * FrameRate.Denominator / FrameRate.Numerator
-      local PlaybackParams = FMovieSceneSequencePlaybackParams()
-      PlaybackParams.Time = Time
-      PlaybackParams.PositionType = EMovieScenePositionType.Time
-      self.SequencePlayer:PlayTo(PlaybackParams)
-    else
-      local PlaybackParams = FMovieSceneSequencePlaybackParams()
-      PlaybackParams.MarkedFrame = "EnterPause"
-      PlaybackParams.PositionType = EMovieScenePositionType.MarkedFrame
-      self.SequencePlayer:PlayTo(PlaybackParams)
-    end
+  if GameState and GameState:IsInDungeon() then
     self.LoadingUI.Group_Coop:SetVisibility(UIConst.VisibilityOp.Visible)
     self.LoadingUI.Com_Loading:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.LoadingUI.Text_CoopTitle:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
+  self.SequencePlayer:Play()
   if GameState then
-    GameState:ClientHideHardBossDgBossActor(true)
+    GameState:ClientHideHardBossDgActor(true, "Boss")
   end
 end
 
@@ -120,6 +101,8 @@ function M:OnSequencePlayFinished()
   EventManager:RemoveEvent(EventID.OnHardBossOpeningAllPlayerReady, self)
   if self.PauseGameGlobal and Utils.IsStandAlone(GWorld.GameInstance) then
     self.TalkContext:OnPausedEnd()
+    local TS = TalkSubsystem()
+    TS:ClearIgnorePauseObjects()
     local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
     GameMode:SetGamePaused(PauseTag, false)
   end
@@ -132,14 +115,6 @@ function M:OnSequencePlayFinished()
   self.LevelSequenceActor:K2_DestroyActor()
   self.Callback()
   self.SequencePlayer = nil
-end
-
-function M:OnSequencePause()
-  self.LoadingUI:PlayAnimation(self.LoadingUI.Remind_In)
-  self.LoadingUI.Com_Loading:PlayAnimation(self.LoadingUI.Com_Loading.Loop, 0.0, 0)
-  EventManager:FireEvent(EventID.OnHardBossOpeningSequencePause)
-  self.LoadingUI.Com_Loading:SetVisibility(UIConst.VisibilityOp.Visible)
-  self.LoadingUI.Text_CoopTitle:SetVisibility(UIConst.VisibilityOp.Visible)
 end
 
 function M:OnAllPlayerReadyCallback()

@@ -275,6 +275,20 @@ function M:SortItemContents(InOutArr, Key, SortType)
       b.ConsumableType = BagCommon.ConsumableItemTypeSortWeight[b.UseEffectType] or 1
       return self:GetFinalSortResult(a, b, OrderBy, SortType, 1, 3)
     end
+  elseif self.CurTabId == BagCommon.ItemTypeToTabId.Draft then
+    OrderBy = {
+      "ApplicationType",
+      "Rarity",
+      "StuffId"
+    }
+    if "UI_Select_Unique" == Key then
+      OrderBy[1] = "Rarity"
+      OrderBy[2] = "ApplicationType"
+    end
+    
+    function SortFunc(a, b)
+      return self:GetFinalSortResult(a, b, OrderBy, SortType, 1, 3)
+    end
   else
     OrderBy = {"Rarity", "StuffId"}
     
@@ -335,6 +349,8 @@ function M:FillPlayerDataByType(TabId, NeedDelayJump)
     PlayerStuffs = Avatar.Weapons
   elseif TabId == BagCommon.ItemTypeToTabId.Mod then
     PlayerStuffs = Avatar.Mods
+  elseif TabId == BagCommon.ItemTypeToTabId.Draft then
+    PlayerStuffs = Avatar.Drafts
   else
     PlayerStuffs = Avatar.Resources
   end
@@ -354,6 +370,8 @@ function M:FillPlayerDataByType(TabId, NeedDelayJump)
         if nil ~= StuffData then
           StuffData.IsEquipped = self:GetIsStuffIsEquiped(StuffData)
         end
+      elseif TabId == BagCommon.ItemTypeToTabId.Draft then
+        StuffData = StuffIconObject:GetDraftsStuffData(StuffServerData, self)
       else
         local StuffConfigData = StuffServerData:Data()
         if StuffConfigData and StuffConfigData.MaterialClassify == TabId then
@@ -452,10 +470,13 @@ function M:RealToJumpToSelectItem()
     else
       self:RefreshDetail(-1, nil)
     end
-  elseif not self.Panel_Detail:IsVisible() then
-    self.CurSelectGridIndex = -1
-    self.CurSelectStuffContent = nil
-    self.List_Item:ScrollIndexIntoView(0)
+  else
+    if not self.Panel_Detail:IsVisible() then
+      self.CurSelectGridIndex = -1
+      self.CurSelectStuffContent = nil
+      self.List_Item:ScrollIndexIntoView(0)
+    end
+    self:RefreshDetail(-1, nil)
   end
   self:AfterFillDataInfo()
 end
@@ -513,7 +534,11 @@ function M:CheckIsCanAddToResolveList(CurStuffContent, bIsShowToast)
 end
 
 function M:GetStuffSaleCondition()
-  return self.CheckBox_Retain:IsChecked(), self.CheckBox_Ignore:IsChecked()
+  if self.CurTabId ~= BagCommon.ItemTypeToTabId.Mod then
+    return false, false
+  else
+    return self.CheckBox_Retain:IsChecked(), self.CheckBox_Ignore:IsChecked()
+  end
 end
 
 function M:RefreshSaleItemSelect(StuffUuid, GridIndex, AddNum)
@@ -549,6 +574,8 @@ function M:RefreshSaleItemSelect(StuffUuid, GridIndex, AddNum)
     local StuffData = {}
     if self.CurTabId == BagCommon.ItemTypeToTabId.Mod then
       StuffData = StuffIconObject:GetModStuffData(StuffServerData, nil, "ClickChooseStuff")
+    elseif self.CurTabId == BagCommon.ItemTypeToTabId.Draft then
+      StuffData = StuffIconObject:GetDraftsStuffData(StuffServerData, nil, "ClickChooseStuff")
     else
       StuffData = StuffIconObject:GetItemStuffData(StuffServerData, nil, "ClickChooseStuff")
     end
@@ -633,6 +660,8 @@ function M:RemoveItemSaleState(StuffId)
   if StuffContent.StuffType == BagCommon.StuffType.Mod then
     local IsCurInModTab = self.CurTabId == BagCommon.ItemTypeToTabId.Mod
     IsNeedCancelSelect = self.CurSelectStuffContent ~= nil and StuffContent.Uuid == self.CurSelectStuffContent.Uuid
+  elseif StuffContent.StuffType == BagCommon.StuffType.Draft then
+    IsNeedCancelSelect = self.CurTabId == BagCommon.ItemTypeToTabId.Draft and self.CurSelectStuffContent ~= nil and StuffContent.Uuid == self.CurSelectStuffContent.Uuid
   elseif StuffContent.StuffType == BagCommon.StuffType.Resource then
     local StuffConfigData = DataMgr.Resource[StuffContent.UnitId]
     IsNeedCancelSelect = self.CurTabId == StuffConfigData.MaterialClassify and self.CurSelectStuffContent ~= nil and StuffContent.Uuid == self.CurSelectStuffContent.Uuid
@@ -708,6 +737,9 @@ function M:TryToAddItemToTargetListWithRarity(StuffContent)
       else
         NowAddToSaleListCount = StuffData.StuffCount
       end
+    elseif self.CurTabId == BagCommon.ItemTypeToTabId.Draft then
+      StuffData = StuffIconObject:GetDraftsStuffData(StuffServerData, nil, "ClickChooseStuff")
+      NowAddToSaleListCount = StuffData.StuffCount
     else
       StuffData = StuffIconObject:GetItemStuffData(StuffServerData, nil, "ClickChooseStuff")
       NowAddToSaleListCount = StuffData.StuffCount
@@ -882,6 +914,12 @@ function M:OnSelectStuffItemChanged(SelectItem, bIsSelect)
   if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
     if self.BagCurState == BagCommon.AllBagState.NormalState then
       self:OnListSelectStuffClicked(SelectItem)
+      if 1 ~= SelectItem.GridIndex then
+        local FirstFocusSelectStuffContent = self.List_Item:GetItemAt(0)
+        if FirstFocusSelectStuffContent.IsSelect and FirstFocusSelectStuffContent.SelfWidget then
+          FirstFocusSelectStuffContent.SelfWidget:SetSelected(false)
+        end
+      end
     elseif self.BagCurState == BagCommon.AllBagState.ChooseSaleState or self.BagCurState == BagCommon.AllBagState.WeaponResolveState then
       local SellPageMainUI = UIManager(self):GetUI(BagCommon.BagStuffSelectUIName)
       if nil ~= SellPageMainUI then
@@ -1923,7 +1961,7 @@ function M:OnUpdateBagItemByAction(OpAction, ErrCode, ...)
           end
         end
       end
-    elseif "FishResourceBulkSale" == OpAction then
+    elseif "FishResourceBulkSale" == OpAction and self.CurTabId == BagCommon.ItemTypeToTabId.FishItem then
       local SaleFishResources, SaleFishPrice = ...
       local Avatar = GWorld:GetAvatar()
       for ResourceId, FishInfos in pairs(SaleFishResources) do
@@ -1959,6 +1997,29 @@ function M:OnUpdateBagItemByAction(OpAction, ErrCode, ...)
             FishSaleStuffObj.Count = FishCount
             if FishSaleStuffObj.SelfWidget then
               FishSaleStuffObj.SelfWidget:SetCount(FishCount)
+            end
+          end
+        end
+      end
+    elseif "DraftBulkSale" == OpAction and self.CurTabId == BagCommon.ItemTypeToTabId.Draft then
+      local SaleDraftSucc = (...)
+      for k, v in pairs(SaleDraftSucc) do
+        local StuffUnitId = k
+        local StuffServerData = self:GetStuffServerData(StuffUnitId, BagCommon.StuffType.Draft)
+        if nil == StuffServerData or "number" == type(StuffServerData.Count) and StuffServerData.Count <= 0 then
+          local NeedRemoveObj = self.DesireSaleStuffObjList[tostring(StuffUnitId)]
+          if NeedRemoveObj then
+            self.List_Item:RemoveItem(NeedRemoveObj)
+            SellCount = SellCount + 1
+          else
+            IsNeedRefreshAll = true
+          end
+        else
+          local NeedUpdateObj = self.DesireSaleStuffObjList[tostring(StuffUnitId)]
+          if NeedUpdateObj then
+            NeedUpdateObj.Count = StuffServerData.Count
+            if NeedUpdateObj.SelfWidget then
+              NeedUpdateObj.SelfWidget:SetCount(StuffServerData.Count)
             end
           end
         end

@@ -77,6 +77,8 @@ function M:InitBannerPage(BannerId, ParentWidget)
   else
     return
   end
+  self.Parent:StopVideoBGWithDelay(0.5)
+  self.Parent:SetHasVideo(false)
   self.Parent.Group_BG:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Parent:SetCameraToPreviewActor()
   self.Parent:SetAllowedToShowHideUI(false)
@@ -201,7 +203,7 @@ function M:RefreshCharModel(DailyPackData)
 end
 
 function M:RefreshPageGiftInfo(DailyPackData)
-  self.WBP_Shop_Recommend_Common_TItle_C_0.Text_MainTitle:SetText(GText(DailyPackData.Name))
+  self.WBP_Shop_Recommend_Common_TItle_C_0:SetText(GText(DailyPackData.Name))
   local ConfigData = {
     OwnerWidget = self,
     Desc = "UI_Common_Rule",
@@ -209,6 +211,12 @@ function M:RefreshPageGiftInfo(DailyPackData)
   }
   self.Com_BtnExplanation:Init(ConfigData)
   self.Text_ActivityDesc_White:SetText(GText("UI_DailyPack_CharPreview"))
+  if self.Text_Detail and self.BannerData.Text1Sub then
+    self.Text_Detail:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Text_Detail:SetText(GText(self.BannerData.Text1Sub))
+  elseif self.Text_Detail then
+    self.Text_Detail:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
 end
 
 function M:OnBtnExplanationClick()
@@ -362,6 +370,14 @@ end
 function M:InitActivity_TimeInfo()
   self:RemoveTimer("ShopItemCountdown")
   self:RemoveTimer("ShopItemCountdown_Left")
+  local BannerData = self.BannerData
+  if not BannerData then
+    return
+  end
+  if BannerData.ShowRemainTime ~= true then
+    self.HB_Time:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    return
+  end
   local ShopItemData = self.DailyPackShopItemList[self.TabId]
   if ShopItemData and ShopUtils:ShouldShowRemainingTime(ShopItemData.ItemId) and ShopItemData.EndTime then
     self.HB_Time:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)

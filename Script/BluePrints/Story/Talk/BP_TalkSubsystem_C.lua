@@ -47,12 +47,14 @@ function M:ReceiveDeinitialize()
   EventManager:RemoveEvent(EventID.CharRecover, self)
   EventManager:RemoveEvent(EventID.CharDie, self)
   self:CleanTimer()
-  local TempTalkTasks = {}
-  for _, Task in pairs(self.TalkTasks) do
-    TempTalkTasks[_] = Task
-  end
-  for _, Task in pairs(TempTalkTasks) do
-    Task:Clear()
+  if self.TalkTasks then
+    local TempTalkTasks = {}
+    for _, Task in pairs(self.TalkTasks) do
+      TempTalkTasks[_] = Task
+    end
+    for _, Task in pairs(TempTalkTasks) do
+      Task:Clear()
+    end
   end
   self.TalkTasks = {}
   self.TalkTaskDatas = {}
@@ -861,9 +863,6 @@ function M:GetNpcPlayDialogueCallback(NpcId)
       Func = function(Obj, DialogueId)
         local Avatar = GWorld:GetAvatar()
         if not Avatar then
-          return
-        end
-        if Avatar:CheckSignBoardNpcTalkIsRecord(NpcId, DialogueId) then
           return
         end
         if not Avatar:CheckSignBoardNpcTalkValid(NpcId, DialogueId) then

@@ -40,7 +40,7 @@ function Account:SdkLogin()
     ConnectType = GWorld.NetworkMgr.ConnectType,
     HotfixIndex = GWorld.HotfixDataIndex or 0,
     ClientVersion = {
-      [PatchKey] = ClientVersion
+      ForceUpdateCheck = DataMgr.HotfixData.force_update_version
     },
     PatchVersion = {
       [PatchKey] = PatchVersion
@@ -124,7 +124,7 @@ function Account:QuickLogin(account_name, password)
     ConnectType = GWorld.NetworkMgr.ConnectType,
     HotfixIndex = GWorld.HotfixDataIndex or 0,
     ClientVersion = {
-      [PatchKey] = ClientVersion
+      ForceUpdateCheck = DataMgr.HotfixData.force_update_version
     },
     PatchVersion = {
       [PatchKey] = PatchVersion

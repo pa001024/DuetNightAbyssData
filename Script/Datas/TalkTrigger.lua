@@ -137,6 +137,9 @@ T.RT_63 = {
 T.RT_64 = {
   QuestChainFinish = T.RT_62
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -951,6 +954,14 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 200012,
     TriggerCondition = {
       QuestChainFinish = {QuestChainId = 200305}
+    }
+  },
+  [200013] = {
+    StoryLinePath = "TalkGossip/AfterQuest/120114_End.story",
+    TalkId = 200013,
+    TalkTriggerId = 200013,
+    TriggerCondition = {
+      QuestChainFinish = {QuestChainId = 120114}
     }
   },
   [300100] = {
@@ -2262,6 +2273,11 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 511282,
     Type = "Impression"
   },
+  [511511] = {
+    StoryLinePath = "Impression/East01/Gossip/511511_WangChun.story",
+    TalkId = 511511,
+    TalkTriggerId = 511511
+  },
   [511512] = {
     StoryLinePath = "Impression/East01/Gossip/511512_BaiJL.story",
     TalkId = 511512,
@@ -2274,6 +2290,21 @@ return ReadOnly("TalkTrigger", {
     StoryLinePath = "Impression/East01/Gossip/511514_BaiDD.story",
     TalkId = 511514,
     TalkTriggerId = 511514
+  },
+  [511530] = {
+    StoryLinePath = "BubbleTalk/511530.story",
+    TalkId = 511530,
+    TalkTriggerId = 511530
+  },
+  [511531] = {
+    StoryLinePath = "BubbleTalk/511531.story",
+    TalkId = 511531,
+    TalkTriggerId = 511531
+  },
+  [511550] = {
+    StoryLinePath = "BubbleTalk/511550.story",
+    TalkId = 511550,
+    TalkTriggerId = 511550
   },
   [600101] = {
     DialogueId = 60010101,
@@ -3644,6 +3675,26 @@ return ReadOnly("TalkTrigger", {
     TalkId = 830014,
     TalkTriggerId = 830014
   },
+  [830015] = {
+    StoryLinePath = "Explore/ExploreGroup.story",
+    TalkId = 830015,
+    TalkTriggerId = 830015
+  },
+  [830016] = {
+    StoryLinePath = "Explore/ExploreGroup.story",
+    TalkId = 830016,
+    TalkTriggerId = 830016
+  },
+  [830017] = {
+    StoryLinePath = "Explore/ExploreGroup.story",
+    TalkId = 830017,
+    TalkTriggerId = 830017
+  },
+  [830018] = {
+    StoryLinePath = "Explore/ExploreGroup.story",
+    TalkId = 830018,
+    TalkTriggerId = 830018
+  },
   [900101] = {
     StoryLinePath = "TalkGossip/900101_Duanzao_Bubble.story",
     TalkId = 900101,
@@ -3685,8 +3736,9 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 900601
   },
   [900701] = {
-    TalkTriggerId = 900701,
-    TriggerCondition = T.RT_60
+    StoryLinePath = "TalkGossip/900701_Yuming.story",
+    TalkId = 900701,
+    TalkTriggerId = 900701
   },
   [900801] = {
     StoryLinePath = "TalkGossip/900801_Landi.story",
@@ -3763,8 +3815,9 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 902501
   },
   [902601] = {
-    TalkTriggerId = 902601,
-    TriggerCondition = T.RT_60
+    StoryLinePath = "TalkGossip/902601_Zhiliu.story",
+    TalkId = 902601,
+    TalkTriggerId = 902601
   },
   [902701] = {
     StoryLinePath = "TalkGossip/902701_Kezhou.story",
@@ -3797,8 +3850,9 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 910104
   },
   [910105] = {
-    TalkTriggerId = 910105,
-    TriggerCondition = T.RT_60
+    StoryLinePath = "TalkGossip/LongIdleBubble/YumingIdleBubble.story",
+    TalkId = 910105,
+    TalkTriggerId = 910105
   },
   [910106] = {
     StoryLinePath = "TalkGossip/LongIdleBubble/LandiIdleBubble.story",
@@ -3875,8 +3929,9 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 910120
   },
   [910121] = {
-    TalkTriggerId = 910121,
-    TriggerCondition = T.RT_60
+    StoryLinePath = "TalkGossip/LongIdleBubble/ZhiliuIdleBubble.story",
+    TalkId = 910121,
+    TalkTriggerId = 910121
   },
   [910122] = {
     StoryLinePath = "TalkGossip/LongIdleBubble/KezhouIdleBubble.story",
@@ -3952,16 +4007,19 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 920113
   },
   [920114] = {
-    TalkTriggerId = 920114,
-    TriggerCondition = T.RT_60
+    StoryLinePath = "TalkGossip/EasterEggBubble/YumingAote.story",
+    TalkId = 920114,
+    TalkTriggerId = 920114
   },
   [920115] = {
-    TalkTriggerId = 920115,
-    TriggerCondition = T.RT_60
+    StoryLinePath = "TalkGossip/EasterEggBubble/YumingKezhou.story",
+    TalkId = 920115,
+    TalkTriggerId = 920115
   },
   [920116] = {
-    TalkTriggerId = 920116,
-    TriggerCondition = T.RT_60
+    StoryLinePath = "TalkGossip/EasterEggBubble/YumingHaier.story",
+    TalkId = 920116,
+    TalkTriggerId = 920116
   },
   [920117] = {
     StoryLinePath = "TalkGossip/EasterEggBubble/LandiXibi.story",
@@ -4021,8 +4079,9 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 920128
   },
   [920129] = {
-    TalkTriggerId = 920129,
-    TriggerCondition = T.RT_60
+    StoryLinePath = "TalkGossip/EasterEggBubble/FushuZhiliu.story",
+    TalkId = 920129,
+    TalkTriggerId = 920129
   },
   [920130] = {
     StoryLinePath = "TalkGossip/EasterEggBubble/FushuYeer.story",
@@ -4221,14 +4280,17 @@ return ReadOnly("TalkTrigger", {
     TriggerCondition = T.RT_60
   },
   [920172] = {
-    TalkTriggerId = 920172,
-    TriggerCondition = T.RT_60
+    StoryLinePath = "TalkGossip/EasterEggBubble/ZhiliuShuimu.story",
+    TalkId = 920172,
+    TalkTriggerId = 920172
   },
   [920173] = {
-    TalkTriggerId = 920173,
-    TriggerCondition = T.RT_60
+    StoryLinePath = "TalkGossip/EasterEggBubble/ZhiliuKezhou.story",
+    TalkId = 920173,
+    TalkTriggerId = 920173
   },
   [920174] = {
+    TalkId = 920174,
     TalkTriggerId = 920174,
     TriggerCondition = T.RT_60
   },
@@ -4237,8 +4299,9 @@ return ReadOnly("TalkTrigger", {
     TriggerCondition = T.RT_60
   },
   [920176] = {
-    TalkTriggerId = 920176,
-    TriggerCondition = T.RT_60
+    StoryLinePath = "TalkGossip/EasterEggBubble/KezhouYuming.story",
+    TalkId = 920176,
+    TalkTriggerId = 920176
   },
   [920177] = {
     StoryLinePath = "TalkGossip/EasterEggBubble/KezhouBaonu.story",
@@ -5094,6 +5157,14 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 51014201,
     TriggerCondition = {
       ImprComp = {TalkTriggerId = 510142}
+    }
+  },
+  [51014901] = {
+    StoryLinePath = "Impression/East01/701015_Yang_2",
+    TalkId = 51014901,
+    TalkTriggerId = 51014901,
+    TriggerCondition = {
+      QuestChainFinish = {QuestChainId = 200311}
     }
   },
   [51105801] = {
@@ -6022,6 +6093,10 @@ return ReadOnly("TalkTrigger", {
   [80004258] = {
     StoryLinePath = "Dungeon\\EventFeina\\EventFeina_Guide_12.story",
     TalkTriggerId = 80004258
+  },
+  [80004259] = {
+    StoryLinePath = "Dungeon\\EventFeina\\EventFeina_Guide_03.story",
+    TalkTriggerId = 80004259
   },
   [88888801] = {
     StoryLinePath = "Explore/Home_Cat.story",

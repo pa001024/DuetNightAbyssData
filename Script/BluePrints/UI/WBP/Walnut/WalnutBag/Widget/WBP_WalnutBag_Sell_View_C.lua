@@ -36,7 +36,7 @@ function M:OnLoaded(...)
     end
   end
   self:PlayInAnim()
-  if self.ParentWidget.CurSelectContent then
+  if self.ParentWidget.CurSelectContent and self.ParentWidget.CurSelectContent.Count > 0 then
     self:AddTimer(0.01, function()
       self.ParentWidget:OnListItemSelected(self.ParentWidget.CurSelectContent)
     end)
@@ -139,7 +139,7 @@ function M:RefreshBaseInfo()
   self.Text_Num:SetText(GText("UI_Bag_Sell_Amount"))
   self.Text_Select:SetText(GText("UI_Bag_Sell_Select"))
   self.Text_Total:SetText(GText("UI_Bag_Decompose_Expect"))
-  self.Text_Empty:SetText(GText("UI_BAG_Nochosen"))
+  self.Text_Empty:SetText(GText("UI_NoWalnut"))
   self.Button_Purchase:SetGamePadImg("Y")
   self.Button_Purchase:SetText(GText("UI_BAG_Sell"))
   self.Button_Purchase:BindEventOnClicked(self, self.TryToSaleWalnut)

@@ -3633,7 +3633,7 @@
         "id": 150202,
         "名称": "Misty Sea Requiem",
         "类型": "Buff",
-        "描述": "Enters [Funeral Rite] status. Upon entry, if the user's Skill Range exceeds 100%, the excess is converted into Skill Damage at a fixed ratio, and Skill Range is reduced to 100% for the duration.\nWhile under [Funeral Rite], gains Trigger Probability Increase for ranged weapons; [Lunar Hunt] and [Solar Eclipse] cost no Sanity; [Lunar Hunt] pulls enemies toward its centre; [Solar Eclipse] deals increased damage.\n[Funeral Rite] ends after a set duration or after casting a total of 6 [Lunar Hunt] and/or [Solar Eclipse].",
+        "描述": "Enters [Funeral Rite] status. Upon entry, if the user's Skill Range exceeds 100%, the excess is converted into Skill Intensity at a fixed ratio, and Skill Range is reduced to 100% for the duration.\nWhile under [Funeral Rite], gains Trigger Probability Increase for ranged weapons; [Lunar Hunt] and [Solar Eclipse] cost no Sanity; [Lunar Hunt] pulls enemies toward its centre; [Solar Eclipse] deals increased damage.\n[Funeral Rite] ends after a set duration or after casting a total of 6 [Lunar Hunt] and/or [Solar Eclipse].",
         "icon": "Nifu02",
         "cd": 3,
         "e": [
@@ -4101,7 +4101,7 @@
         "id": 150301,
         "名称": "Drift of Youth",
         "类型": "DMG",
-        "描述": "Deals Lumino Damage to enemies within range 3 times and increases Kezhou's Ranged Weapon Attack Speed.\n\nWhile in [Aspect Manifestation] state, increases Kezhou's Melee Weapon Attack Speed, during which Kezhou is immune to Hitstun when taking damage.",
+        "描述": "Deals Lumino Damage to enemies within range 3 times and increases Kezhou's Ranged Weapon Attack Speed.\nWhile in [Aspect Manifestation] state, increases Kezhou's Melee Weapon Attack Speed, during which Kezhou is immune to Hitstun when taking damage.",
         "icon": "Kezhou01",
         "cd": 1,
         "e": [
@@ -4311,7 +4311,7 @@
         "id": 150302,
         "名称": "Lightswords Slice Starry Streams",
         "类型": "Buff",
-        "描述": "Enters [Aspect Manifestation] state and summons [Edges of All Times] to rain from the sky, dealing Lumino Damage to enemies within range.\n\nWhile in [Aspect Manifestation] state, Kezhou's Melee Weapon becomes [Phanosword]. When triggering Bonus Effect using [Phanosword], generates 1 [Phanoplume].\nWhile in [Aspect Manifestation] state, this skill is replaced with [Feathers Chase Dust In Dreams].",
+        "描述": "Enters [Aspect Manifestation] state and summons [Edges of All Times] to rain from the sky, dealing Lumino Damage to enemies within range.\nWhile in [Aspect Manifestation] state, Kezhou's Melee Weapon becomes [Phanosword]. When triggering Bonus Effect using [Phanosword], generates 1 [Phanoplume].\nWhile in [Aspect Manifestation] state, this skill is replaced with [Feathers Chase Dust In Dreams].",
         "icon": "Kezhou02_On",
         "cd": 3,
         "e": [
@@ -4442,18 +4442,18 @@
                 "ba": "ATK_Melee",
                 "fn": "Damage",
                 "r": [
-                  0.16,
-                  0.21,
-                  0.26,
-                  0.31,
-                  0.36,
-                  0.41,
-                  0.46,
-                  0.51,
-                  0.56,
-                  0.61,
-                  0.66,
-                  0.71
+                  0.03,
+                  0.04,
+                  0.05,
+                  0.06,
+                  0.07,
+                  0.08,
+                  0.09,
+                  0.1,
+                  0.11,
+                  0.12,
+                  0.13,
+                  0.14
                 ]
               },
               {
@@ -4778,18 +4778,18 @@
           {
             "名称": "[Lightswords Slice Starry Streams]Plunging/Sliding/Charged Attack DMG",
             "值": [
-              0.16,
-              0.21,
-              0.26,
-              0.31,
-              0.36,
-              0.41,
-              0.46,
-              0.51,
-              0.56,
-              0.61,
-              0.66,
-              0.71
+              0.03,
+              0.04,
+              0.05,
+              0.06,
+              0.07,
+              0.08,
+              0.09,
+              0.1,
+              0.11,
+              0.12,
+              0.13,
+              0.14
             ]
           },
           {
@@ -4866,7 +4866,7 @@
         ],
         "术语解释": {
           "Phanosword": "Inherits all stats from Kezhou's melee weapon and gains increased Attack Range.\n[Phanosword] has Normal Attack modes for Sword, Greatsword, Polearm, and Dual Blades. After executing the final hit of [Phanosword], it switches to a random attack mode and launches all [Phanoplumes].",
-          "Phanoplume": "Kezhou can have a maximum of 7 [Phanoplumes] at the same time. When launched, each [Phanoplume] selects a random enemy to orbit and homes towards them to attack, dealing Lumino Damage to enemies along the path. After attacking the enemy 4 times, the [Phanoplume] dissipates.\n\nTargets hit by [Phanoplume] take additional damage, which is equivalent to a certain percentage of the DoT of Bonus Effect: Lumino multiplied by Kezhou's Melee Weapon Trigger Probability.",
+          "Phanoplume": "Kezhou can have a maximum of 7 [Phanoplumes] at the same time. When launched, each [Phanoplume] selects a random enemy to orbit and homes towards them to attack, dealing Lumino Damage to enemies along the path. After attacking the enemy 3 times, the [Phanoplume] dissipates.\nTargets hit by [Phanoplume] take additional damage, which is equivalent to a certain percentage of the DoT of Bonus Effect: Lumino multiplied by Kezhou's Melee Weapon Trigger Probability.",
           "Feathers Chase Dust In Dreams": "Ends [Aspect Manifestation] state and deals Lumino Damage to enemies in front."
         },
         "子技能": [
@@ -4880,9 +4880,9 @@
       },
       {
         "id": 150303,
-        "名称": "Life Drifts, Tides Rearrange",
+        "名称": "Life's A Fleeting, Shifting Tide",
         "类型": "Passive",
-        "描述": "Begins with 50 points each of [Sword Intent] and [String Intent] (maximum 100).\n [Sword Intent] increases Melee Weapon Damage Dealt and Melee Weapon Trigger Probability, and reduces the Sanity Cost of [Lightswords Slice Starry Streams]. At maximum [Sword Intent], Sanity Cost is further reduced by 30.\n [String Intent] increases Ranged Weapon Damage Dealt and Ranged Weapon Trigger Probability, and reduces the Sanity Cost of [Feathers Chase Dust In Dreams]. At maximum [String Intent], Sanity Cost is further reduced by 30.\nWhile in [Aspect Manifestation] state, each time damage is dealt with a melee weapon, 1 point of [Sword Intent] converts into [String Intent]. While out of [Aspect Manifestation] state, each time damage is dealt with a ranged weapon, 1 point of [String Intent] converts into [Sword Intent]. ",
+        "描述": "Begins with 50 points each of [Sword Intent] and [String Intent] (maximum 100).\n[Sword Intent] increases Melee Weapon Damage Dealt and Melee Weapon Trigger Probability, and reduces the Sanity Cost of [Lightswords Slice Starry Streams]. At maximum [Sword Intent], Sanity Cost is further reduced by 30.\n[String Intent] increases Ranged Weapon Damage Dealt and Ranged Weapon Trigger Probability, and reduces the Sanity Cost of [Feathers Chase Dust In Dreams]. At maximum [String Intent], Sanity Cost is further reduced by 30.\nWhile in [Aspect Manifestation] state, each time damage is dealt with a melee weapon, 1 point of [Sword Intent] converts into [String Intent]. While out of [Aspect Manifestation] state, each time damage is dealt with a ranged weapon, 1 point of [String Intent] converts into [Sword Intent]. ",
         "icon": "Kezhou03",
         "b": [
           {
@@ -5023,7 +5023,7 @@
             ]
           },
           {
-            "名称": "Sanity Cost Reduced",
+            "名称": "[Lightswords Slice Starry Streams] Sanity Cost Reduced",
             "值": 0.3,
             "格式": "{}×[Sword Intent]"
           },
@@ -5092,7 +5092,7 @@
         "id": 150304,
         "名称": "Yet the Drifter Marks the Change",
         "类型": "Passive",
-        "描述": "Upon entering [Aspect Manifestation] state, records the current [Sword Intent] points. For a period of time, if the [Sword Intent] point drops below this value, the [Sword Intent] effect applied to [Life's A Fleeting, Shifting Tide] will adopt the recorded value instead. This effect is invalid after exiting [Aspect Manifestation] state.\n\nUpon ending [Aspect Manifestation] state, records the current [String Intent] points. For a period of time, if the [String Intent] point drops below this value, the [String Intent] effect applied to [Life's A Fleeting, Shifting Tide] will adopt the recorded value instead. This effect is invalid while in [Aspect Manifestation] state.",
+        "描述": "Upon entering [Aspect Manifestation] state, records the current [Sword Intent] points. For a period of time, if the [Sword Intent] point drops below this value, the [Sword Intent] effect applied to [Life's A Fleeting, Shifting Tide] will adopt the recorded value instead. This effect is invalid after exiting [Aspect Manifestation] state.\nUpon ending [Aspect Manifestation] state, records the current [String Intent] points. For a period of time, if the [String Intent] point drops below this value, the [String Intent] effect applied to [Life's A Fleeting, Shifting Tide] will adopt the recorded value instead. This effect is invalid while in [Aspect Manifestation] state.",
         "icon": "ExtraPassive",
         "p": [
           {
@@ -5150,9 +5150,9 @@
       }
     ],
     "溯源": [
-      "Increases the effect percentage of [Sword Intent]/[String Intent] applied to [Life's A Fleeting, Shifting Tide] by 0.7%.\n\nWhen there is/are 1/2 enemy/enemies within 20 metres, the mutual conversion point between [Sword Intent] and [String Intent] is increased to 3/2 points when Kezhou deals weapon damage.",
+      "Increases the effect percentage of [Sword Intent]/[String Intent] applied to [Life's A Fleeting, Shifting Tide] by 0.7%.\nWhen there is/are 1/2 enemy/enemies within 20 metres, the mutual conversion point between [Sword Intent] and [String Intent] is increased to 3/2 points when Kezhou deals weapon damage.",
       "When damage triggers a bonus effect, gains +90% Damage Dealt for 5s and restores 2 Sanity. Sanity restoration can occur once every 1s.",
-      "[Wanderings of Youth] Level +2; [Life's A Fleeting, Shifting Tide] Level +1.",
+      "[Drift of Youth] Level +2; [Life's A Fleeting, Shifting Tide] Level +1.",
       "When using [Lightswords Slice Starry Streams], Kezhou gains [Blessed by Wind and Moon]: Grants immunity to Hitstun and reduces Damage Taken by 25% for 25s.",
       "[Lightswords Slice Starry Streams] Level +2;\n[Life's A Fleeting, Shifting Tide] Level +1.",
       "When triggering Bonus Effect, Kezhou gains 1 stack that increases his PEN stats by 3% for 12s, up to 18 stacks."
@@ -5210,14 +5210,49 @@
     "属性": "光",
     "精通": [
       "Polearm",
-      "Assault Rifle"
+      "Shotgun"
+    ],
+    "标签": [
+      "DPS",
+      "Skill DMG"
     ],
     "基础攻击": 28,
     "基础生命": 70,
     "基础防御": 252,
     "基础护盾": 140,
     "基础神智": 150,
-    "突破": [],
+    "突破": [
+      {
+        "Coin": 5200,
+        "Filthoid Clot": 10,
+        "Lense of Enlightenment": 5
+      },
+      {
+        "Coin": 10400,
+        "Statue Debris": 5,
+        "Golden Floriated Diadem": 7
+      },
+      {
+        "Coin": 16300,
+        "Statue Debris": 10,
+        "Golden Floriated Diadem": 15
+      },
+      {
+        "Coin": 34700,
+        "Statue Debris": 20,
+        "Copy of Elysian Hymnal": 6
+      },
+      {
+        "Coin": 81600,
+        "Statue Debris": 40,
+        "Copy of Elysian Hymnal": 12
+      },
+      {
+        "Coin": 243000,
+        "Statue Debris": 80,
+        "Copy of Elysian Hymnal": 25
+      }
+    ],
     "技能": [
       {
         "id": 150401,
@@ -5256,7 +5291,7 @@
                 "fn": "AddBuff",
                 "dot": [
                   {
-                    "it": 0.1,
+                    "it": 0.2,
                     "t": "SecondSpChange",
                     "v": -1
                   }
@@ -5271,9 +5306,9 @@
                 "fn": "AddBuff",
                 "dot": [
                   {
-                    "it": 0.1,
+                    "it": 0.2,
                     "t": "SecondSpChange",
-                    "v": -1.5
+                    "v": -1
                   }
                 ]
               }
@@ -5284,7 +5319,7 @@
           {
             "名称": "[Artificer Energy] consumed per second during Cruise",
             "影响": "技能效益",
-            "值": 1.5,
+            "值": 1,
             "格式": "{}"
           },
           {
@@ -5324,7 +5359,14 @@
         "icon": "Passive",
         "p": [
           {
-            "id": 150401
+            "id": 150401,
+            "v": {
+              "AddSpPer": 1,
+              "Skill02BuffLastTime": 30,
+              "Skill02BulletNumPer": 1,
+              "Skill02Gradient": 10,
+              "Skill02OffAddDamageBaseRatePer": 0.01
+            }
           }
         ]
       },
@@ -5336,7 +5378,10 @@
         "icon": "ExtraPassive",
         "p": [
           {
-            "id": 150402
+            "id": 150402,
+            "v": {
+              "ConversionRate": 1
+            }
           }
         ]
       }
@@ -5761,7 +5806,7 @@
         "id": 160103,
         "名称": "Diffusion",
         "类型": "Passive",
-        "描述": "When a Lumino bonus effect is triggered, deals an additional Lumino AoE Damage at the target's location.",
+        "描述": "When a Lumino bonus effect is triggered, deals an additional Lumino AoE Damage at the target's location. This effect triggers 1 time every 0.5s.",
         "icon": "Zhujue03",
         "e": [
           {
@@ -6849,7 +6894,7 @@
       "Targets granted the ability to deal additional elemental damage by [Boisterous Tea Party] gain an effect that increases their PEN stats by 6% for each type of additional damage effect they possess.",
       "Increases max [Taleweaver Quill] stacks to 45. Using [\"On a Warm Afternoon\"] grants 3 additional stacks. While [Boisterous Tea Party] is active, gains 1 extra stack per second.",
       "[\"On a Warm Afternoon\"] Level +2; [\"Bad Sorcerers Hate Sunlight!\"] Level +1.",
-      "Each stack of [Taleweaver Quill] increases Fina's Skill Damage by 2% and Skill Range by 1%.",
+      "Each stack of [Taleweaver Quill] increases Fina's Skill Intensity by 2% and Skill Range by 1%.",
       "[\"Let the Tea Party Begin!\"] Level +2; [\"Bad Sorcerers Hate Sunlight!\"] Level +1.",
       "During [Boisterous Tea Party], when Fina deals weapon damage, for each Bonus Effect the target is suffering, the CRIT Chance of this attack is increased by 24%, and the elemental type of the damage is converted to the target's weakness type."
     ]
@@ -8149,7 +8194,7 @@
     "阵营": "Huaxu",
     "属性": "水",
     "精通": [
-      "Whipsword",
+      "Whipblade",
       "Bow"
     ],
     "标签": [
@@ -8164,7 +8209,7 @@
     "基础神智": 150,
     "加成": {
       "Skill Duration": 0.15,
-      "Skill DMG": 0.2
+      "Skill Intensity": 0.2
     },
     "突破": [
       {
@@ -8677,7 +8722,7 @@
             "格式": "{}s"
           },
           {
-            "名称": "[Nine-Needle Therapy]Skill Damage Increase",
+            "名称": "[Nine-Needle Therapy]Skill Intensity Increase",
             "值": [
               0.12,
               0.14,
@@ -8692,10 +8737,10 @@
               0.32,
               0.34
             ],
-            "格式": "{%}Skill Damage"
+            "格式": "{%}Skill Intensity"
           },
           {
-            "名称": "[Nine-Needle Therapy]Skill Damage Cap Boost",
+            "名称": "[Nine-Needle Therapy]Skill Intensity Cap Boost",
             "值": 1.2
           },
           {
@@ -8760,7 +8805,7 @@
           }
         ],
         "术语解释": {
-          "Nine-Needle Therapy": "Increases Skill Damage by a percentage of [Fushu]'s Skill Damage."
+          "Nine-Needle Therapy": "Increases Skill Intensity by a percentage of [Fushu]'s Skill Intensity."
         }
       },
       {
@@ -8905,7 +8950,7 @@
         "id": 240104,
         "名称": "Brimful of Vitality",
         "类型": "Passive",
-        "描述": "Increases Skill Damage based on the number of [Yunchi] on the field.",
+        "描述": "Increases Skill Intensity based on the number of [Yunchi] on the field.",
         "icon": "ExtraPassive",
         "b": [
           {
@@ -8930,7 +8975,7 @@
         ],
         "字段": [
           {
-            "名称": "Skill DMG Boost",
+            "名称": "Skill Intensity Boost",
             "值": 0.33,
             "格式": "{%}×the amount of [Yunchi]"
           }
@@ -8976,7 +9021,7 @@
       }
     ],
     "溯源": [
-      "When Fushu or her nearby teammates are applied with [Nine-Needle Therapy], they ignore the target's DEF by 30% when dealing Skill Damage.",
+      "When Fushu or her nearby teammates are applied with [Nine-Needle Therapy], they ignore the target's DEF by 30% when dealing Skill DMG.",
       "Increases the maximum number of [Yunchi] allowed on the field at the same time to 3.",
       "[Subcelestial Solace] Level +2; [Archaeus Revival] Level +1.",
       "Increase the stack cap of [Archaeus Revival] to 3, and grants 12% Morale Boost per stack.",
@@ -9543,7 +9588,7 @@
       "Grants 6 stacks of [Preload] when battle starts, and increases Morale by 35% for 60s.",
       "During [Gunpowder Revelry], reduces Damage Taken by 30%, and decreases the interval of gaining the ATK Speed boost to 0.06s.",
       "[Deadly Blossom] Level +2; [Tactical Rapid Fire] Level +1.",
-      "Increases damage dealt to targets with a HP percentage lower than 70% by 35%.",
+      "Increases damage dealt to targets with a HP percentage lower than 50% by 70%.",
       "[Gunpowder Revelry] Level +2; [Tactical Rapid Fire] Level +1.",
       "During [Gunpowder Revelry], when triggering Bonus Effect using [Hansel and Gretel], inflicts [Laceration] on the target(s) for 8s."
     ],
@@ -10069,7 +10114,7 @@
         "id": 310203,
         "名称": "Automatic Sanitizing",
         "类型": "Passive",
-        "描述": "Carries 2 [Heavy Dirtexpellers] that automatically target and shoot nearby enemies once every 3s, dealing Pyro Damage.\nWhen dodging, Hilda reloads her ranged weapon Magazine to maximum and gains [Elegant Anger] for a period of time.",
+        "描述": "When dodging, Hilda reloads her ranged weapon Magazine to maximum and gains [Elegant Anger].",
         "icon": "Xier03",
         "p": [
           {
@@ -10266,7 +10311,7 @@
     "基础神智": 180,
     "加成": {
       "ATK": 0.5,
-      "Skill DMG": 0.2
+      "Skill Intensity": 0.2
     },
     "突破": [
       {
@@ -10474,8 +10519,8 @@
           }
         ],
         "术语解释": {
-          "Tot Popper: Yale's Make": "When dealing damage, causes greater Stance reduction to the target(s). The greater the difference between Yale and Oliver's Skill Range and the Skill Damage, the higher the chance of deploying [Tot Popper: Yale's Make]. If the difference is no less than 50%, it's guaranteed to be a [Tot Popper: Yale's Make].",
-          "Tot Popper: Oliver's Make": "Deals higher damage. The greater the difference between Yale and Oliver's Skill Damage and the Skill Range provided by equipped Demon Wedges, the higher the chance of deploying [Tot Popper: Oliver's Make]. If the difference is no less than 50%, it's guaranteed to be a [Tot Popper: Oliver's Make]."
+          "Tot Popper: Yale's Make": "When dealing damage, causes greater Stance reduction to the target(s). The greater the difference between Yale and Oliver's Skill Range and the Skill Intensity, the higher the chance of deploying [Tot Popper: Yale's Make]. If the difference is no less than 50%, it's guaranteed to be a [Tot Popper: Yale's Make].",
+          "Tot Popper: Oliver's Make": "Deals higher damage. The greater the difference between Yale and Oliver's Skill Intensity and the Skill Range provided by equipped Demon Wedges, the higher the chance of deploying [Tot Popper: Oliver's Make]. If the difference is no less than 50%, it's guaranteed to be a [Tot Popper: Oliver's Make]."
         }
       },
       {
@@ -11744,8 +11789,13 @@
     "阵营": "The Hyperborean Empire",
     "属性": "火",
     "精通": [
-      "Whipsword",
-      "Pistol"
+      "Whipblade",
+      "Assault Rifle"
+    ],
+    "标签": [
+      "DPS",
+      "Skill DMG",
+      "Support"
     ],
     "基础攻击": 13,
     "基础生命": 185,
@@ -11789,7 +11839,7 @@
         "id": 320201,
         "名称": "Burgundy Flurry",
         "类型": "DMG",
-        "描述": "Launches all [Spinblades], dealing Pyro DMG to enemies in front and granting 1 stack of [Inebriation] to the user. Tap repeatedly or hold the Attack button to unleash a flurry of attacks.",
+        "描述": "Launches all [Spinblades], dealing Pyro DMG to enemies in front and granting 1 stack of [Inebriation] to the user. Tap repeatedly or hold the normal skill or melee attack button to unleash a flurry of attacks.",
         "icon": "Haier01",
         "e": [
           {
@@ -11847,7 +11897,7 @@
           },
           {
             "名称": "+[Spinblade] Launch Speed per [Inebriation] Stack",
-            "值": 0.2
+            "值": 0.4
           }
         ],
         "升级": [
@@ -11905,14 +11955,14 @@
           }
         ],
         "术语解释": {
-          "Inebriation": "Gains Skill Speed. [Spinblades] travel faster and their duration is paused. Gains immunity to Hitstun. All [Inebriation] stacks are removed when [Burgundy Flurry] ends."
+          "Inebriation": "Gains Skill Speed. [Spinblades] duration is paused. Gains immunity to Hitstun. All [Inebriation] stacks are removed when [Burgundy Flurry] ends."
         }
       },
       {
         "id": 320202,
         "名称": "Claret Waltz",
         "类型": "Summon",
-        "描述": "Deals Pyro DMG to enemies in front and summons 8 [Spinblades] to orbit the user, dealing damage to enemies along their path.",
+        "描述": "Summon 8 [Spinblades] that orbit around you.",
         "icon": "Haier02",
         "e": [
           {
@@ -11955,6 +12005,12 @@
             "名称": "[Spinblade] Launch Speed",
             "值": 20,
             "格式": "{}m/s"
+          },
+          {
+            "名称": "[Spinblade] Launch Distance",
+            "值": 37,
+            "值2": 43,
+            "格式": "{}-{}m"
           }
         ],
         "升级": [
@@ -12012,7 +12068,7 @@
           }
         ],
         "术语解释": {
-          "Spinblade": "Each [Spinblade] completes one orbit around the character every 2s. When launched, it travels up to 30m before returning. If struck by [Burgundy Flurry] while returning, it is relaunched toward a random enemy within 20m. Each launch refreshes its speed based on [Inebriation] stacks. A maximum of 8 [Spinblades] can exist at once."
+          "Spinblade": "When orbiting around the character, [Spinblades] deal damage to enemies once every 2s.\nWhen launched, it travels back after reaching a certain distance. If struck by [Burgundy Flurry] while returning, it is relaunched toward a random enemy within range. Each launch refreshes its speed based on [Inebriation] stacks, dealing damage 1 time along the path both on its way out and back. A maximum of 8 [Spinblades] can exist at once."
         }
       },
       {
@@ -12025,7 +12081,7 @@
           {
             "id": 320201,
             "v": {
-              "AddSpeedRate": 0.2,
+              "AddSpeedRate": 0.4,
               "Grade1Prob": 0.3,
               "Grade4InDamage": 0.3,
               "Passive01DamageRate": 0.1
@@ -12034,7 +12090,7 @@
         ],
         "字段": [
           {
-            "名称": "[Laceration] Additional Damage",
+            "名称": "[Laceration] Detonation Damage",
             "影响": "技能威力",
             "值": 0.1
           }
@@ -12094,14 +12150,14 @@
           }
         ],
         "术语解释": {
-          "Laceration": "All weapon and skill damage (excluding [Spinblades] and [Laceration]) detonates 2 stacks of [Laceration], dealing additional elemental damage. Max 20 detonations per second."
+          "Laceration": "All Weapon and Skill DMG (excluding [Spinblades] and [Laceration]) detonates 1 stack of [Laceration], dealing additional Pyro damage. Max 30 detonations per second."
         }
       },
       {
         "id": 320204,
         "名称": "Blood Beneath Wine",
         "类型": "Passive",
-        "描述": "Triggering [Laceration] grants 1 [Tipsy Mark]. Restores Sanity once every 20 Marks gained.",
+        "描述": "Detonating [Laceration] grants the triggering character 1 [Tipsy Mark]. Restores Sanity once every 20 Marks gained.",
         "icon": "ExtraPassive",
         "e": [
           {
@@ -12110,6 +12166,12 @@
               {
                 "fn": "AddSp",
                 "sp": 4
+              },
+              {
+                "fn": "RemoveBuff"
+              },
+              {
+                "fn": "RemoveBuff"
               }
             ]
           }
@@ -12123,7 +12185,7 @@
           {
             "名称": "Sanity Recovery",
             "值": 4,
-            "格式": "{}%"
+            "格式": "{}"
           }
         ]
       },
@@ -12167,11 +12229,11 @@
     ],
     "溯源": [
       "Damage from [Spinblades] has a 30% chance to inflict 1 additional stack of [Laceration].",
-      "Attacks from [Burgundy Flurry] can block incoming projectiles. Each stack of [Inebriation] reduces Damage Taken by 3%.",
+      "When orbited by [Spinblades], reduces Damage Taken by 30% and increases Damage Dealt by 30%.",
       "[Burgundy Flurry] Level +2, [Claret Waltz] Level +1.",
-      "Damage from [Laceration] detonation is increased by 30%.",
+      "Damage from [Laceration] detonation is increased by 30%, [Spinblade] Launch Speed is increased by 25.",
       "[Claret Waltz] Level +2, [Burgundy Flurry] Level +1.",
-      "All weapon and skill damage (excluding [Spinblades] and [Laceration]) detonates 2 stacks of [Laceration]."
+      "All Weapon and Skill DMG (excluding [Spinblades] and [Laceration]) detonates 2 stacks of [Laceration]."
     ]
   },
   {
@@ -12664,7 +12726,7 @@
         "id": 330103,
         "名称": "Margie's Recycling Sack",
         "类型": "Passive",
-        "描述": "When the user or allies pick up loot, the user gains 1 stack of [Jackpot!], lasting for the rest of the battle. Each stack increases Skill DMG, up to 20 stacks.",
+        "描述": "When the user or allies pick up loot, the user gains 1 stack of [Jackpot!], lasting for the rest of the battle. Each stack increases Skill Intensity, up to 20 stacks.",
         "icon": "Maer03",
         "b": [
           {
@@ -12713,7 +12775,7 @@
         ],
         "字段": [
           {
-            "名称": "Skill DMG Boost per stack",
+            "名称": "Skill Intensity Boost per stack",
             "值": [
               0.024,
               0.028,
@@ -13664,7 +13726,7 @@
     "基础神智": 240,
     "加成": {
       "Morale": 0.15,
-      "Skill DMG": 0.2
+      "Skill Intensity": 0.2
     },
     "突破": [
       {
@@ -13901,7 +13963,7 @@
         "id": 410202,
         "名称": "Heaven-Earth Divination",
         "类型": "DMG",
-        "描述": "When the user holds fewer than 2 [Talismans], deals Electro Damage to nearby enemies. \nWhen the user holds 2 or more [Talismans], this skill transforms based on the combination.",
+        "描述": "When the user holds fewer than 2 [Talismans], deals Electro Damage to nearby enemies. \nWhen the user holds 2 [Talismans], this skill transforms based on the combination.",
         "icon": "Zhiliu02_1",
         "cd": 2.5,
         "e": [
@@ -13912,18 +13974,18 @@
                 "ba": "ATK_Char",
                 "fn": "Damage",
                 "r": [
-                  6.3,
-                  7.7,
-                  9.1,
-                  10.5,
-                  11.9,
-                  13.3,
-                  14.7,
-                  16.1,
-                  17.5,
-                  18.9,
-                  20.3,
-                  21.7
+                  4.73,
+                  5.78,
+                  6.83,
+                  7.88,
+                  8.93,
+                  9.98,
+                  11.03,
+                  12.08,
+                  13.13,
+                  14.18,
+                  15.23,
+                  16.28
                 ]
               },
               {
@@ -13939,18 +14001,18 @@
                 "ba": "ATK_Char",
                 "fn": "Damage",
                 "r": [
-                  18.93,
-                  23.13,
-                  27.33,
-                  31.53,
-                  35.73,
-                  39.93,
-                  44.13,
-                  48.33,
-                  52.53,
-                  56.73,
-                  60.93,
-                  65.13
+                  14.2,
+                  17.35,
+                  20.5,
+                  23.65,
+                  26.8,
+                  29.95,
+                  33.1,
+                  36.25,
+                  39.4,
+                  42.55,
+                  45.7,
+                  48.85
                 ]
               },
               {
@@ -13966,18 +14028,18 @@
                 "ba": "ATK_Char",
                 "fn": "Damage",
                 "r": [
-                  8.72,
-                  10.66,
-                  12.6,
-                  14.54,
-                  16.48,
-                  18.42,
-                  20.36,
-                  22.3,
-                  24.24,
-                  26.18,
-                  28.12,
-                  30.06
+                  6.59,
+                  8.04,
+                  9.49,
+                  10.94,
+                  12.39,
+                  13.84,
+                  15.29,
+                  16.74,
+                  18.19,
+                  19.64,
+                  21.09,
+                  22.54
                 ]
               },
               {
@@ -14055,18 +14117,18 @@
                 "ba": "ATK_Char",
                 "fn": "Damage",
                 "r": [
-                  24.35,
-                  29.75,
-                  35.15,
-                  40.55,
-                  45.95,
-                  51.35,
-                  56.75,
-                  62.15,
-                  67.55,
-                  72.95,
-                  78.35,
-                  83.75
+                  16.3,
+                  19.92,
+                  23.54,
+                  27.16,
+                  30.78,
+                  34.4,
+                  38.02,
+                  41.64,
+                  45.26,
+                  48.88,
+                  52.5,
+                  56.12
                 ]
               },
               {
@@ -14086,18 +14148,18 @@
                   {
                     "k": "DamageRate",
                     "v": [
-                      0.39,
+                      0.27,
+                      0.34,
+                      0.41,
                       0.48,
-                      0.57,
-                      0.66,
-                      0.75,
-                      0.84,
-                      0.93,
-                      1.02,
-                      1.11,
-                      1.2,
-                      1.29,
-                      1.38
+                      0.55,
+                      0.62,
+                      0.69,
+                      0.76,
+                      0.83,
+                      0.9,
+                      0.97,
+                      1.04
                     ],
                     "z": "Normal"
                   }
@@ -14159,18 +14221,18 @@
             "名称": "[Thunder's Oracle Peal] DMG",
             "影响": "技能威力",
             "值": [
-              24.35,
-              29.75,
-              35.15,
-              40.55,
-              45.95,
-              51.35,
-              56.75,
-              62.15,
-              67.55,
-              72.95,
-              78.35,
-              83.75
+              16.3,
+              19.92,
+              23.54,
+              27.16,
+              30.78,
+              34.4,
+              38.02,
+              41.64,
+              45.26,
+              48.88,
+              52.5,
+              56.12
             ]
           },
           {
@@ -14184,32 +14246,32 @@
             "名称": "[Myriad Things Thrive] DMG",
             "影响": "技能威力",
             "值": [
-              6.3,
-              7.7,
-              9.1,
-              10.5,
-              11.9,
-              13.3,
-              14.7,
-              16.1,
-              17.5,
-              18.9,
-              20.3,
-              21.7
+              4.73,
+              5.78,
+              6.83,
+              7.88,
+              8.93,
+              9.98,
+              11.03,
+              12.08,
+              13.13,
+              14.18,
+              15.23,
+              16.28
             ],
             "值2": [
-              18.93,
-              23.13,
-              27.33,
-              31.53,
-              35.73,
-              39.93,
-              44.13,
-              48.33,
-              52.53,
-              56.73,
-              60.93,
-              65.13
+              14.2,
+              17.35,
+              20.5,
+              23.65,
+              26.8,
+              29.95,
+              33.1,
+              36.25,
+              39.4,
+              42.55,
+              45.7,
+              48.85
             ],
             "格式": "{%}×3+{%}"
           },
@@ -14235,18 +14297,18 @@
             "名称": "[Zhen-Xun Convergence] DMG",
             "影响": "技能威力",
             "值": [
-              8.72,
-              10.66,
-              12.6,
-              14.54,
-              16.48,
-              18.42,
-              20.36,
-              22.3,
-              24.24,
-              26.18,
-              28.12,
-              30.06
+              6.59,
+              8.04,
+              9.49,
+              10.94,
+              12.39,
+              13.84,
+              15.29,
+              16.74,
+              18.19,
+              19.64,
+              21.09,
+              22.54
             ]
           },
           {
@@ -14282,18 +14344,18 @@
           {
             "名称": "[Fortune's Clarity] Skill DMG Boost",
             "值": [
-              0.39,
+              0.27,
+              0.34,
+              0.41,
               0.48,
-              0.57,
-              0.66,
-              0.75,
-              0.84,
-              0.93,
-              1.02,
-              1.11,
-              1.2,
-              1.29,
-              1.38
+              0.55,
+              0.62,
+              0.69,
+              0.76,
+              0.83,
+              0.9,
+              0.97,
+              1.04
             ]
           },
           {
@@ -14360,7 +14422,7 @@
         "术语解释": {
           "Thunder's Oracle Peal": "When Zhiliu has 2 [Talismans: Zhen], [Heaven-Earth Divination] is replaced with [Thunder's Oracle Peal]. \n[Thunder's Oracle Peal]: Consumes all [Talismans], dealing Electro Damage to enemies in a straight line ahead.",
           "Myriad Things Thrive": "When holding 1 [Talisman: Zhen] and 1 [Talisman: Xun], replaces [Heaven-Earth Divination] with this skill. \nRemoves all [Talismans]. Deals DoT to enemies in a forward area, then creates a [Four Realms Align] field at their location. Every 3s, targets up to 5 enemies within the field to creates a [Zhen-Xun Convergence] at their location, dealing Electro AoE Damage.",
-          "Fortune's Clarity": "When Zhiliu has 2 [Talismans: Xun], [Heaven-Earth Divination] is replaced with [Fortune's Clarity].\n[Fortune's Clarity]: Consumes all [Talismans] to deal Electro Damage to enemies around and increase Zhiliu's Skill Damage."
+          "Fortune's Clarity": "When Zhiliu has 2 [Talismans: Xun], [Heaven-Earth Divination] is replaced with [Fortune's Clarity].\n[Fortune's Clarity]: Consumes all [Talismans] to deal Electro Damage to enemies around and increase Zhiliu's Skill DMG."
         },
         "子技能": [
           {
@@ -14500,7 +14562,7 @@
                 "t": [
                   {
                     "k": "StrongValue",
-                    "v": 0.04
+                    "v": 0.015
                   }
                 ]
               }
@@ -14518,7 +14580,7 @@
         "字段": [
           {
             "名称": "Morale Boost per stack",
-            "值": 0.04
+            "值": 0.015
           },
           {
             "名称": "Duration",
@@ -14570,9 +14632,9 @@
       "Casting [Thunder's Oracle Peal] extends the Skill DMG bonus from [Fortune's Clarity] by 3.5s and causes [Four Realms Align] to trigger [Zhen-Xun Convergence] one additional time, each [Zhen-Xun Convergence] bolt dealing 60% of the base damage.",
       "Empowers [Myriad Things Thrive] with alternate trigger effects. Tap: [Zhen-Xun Convergence] targets up to 8 enemies. Hold: [Four Realms Align] persists for the rest of the battle, consuming 6 Sanity per second; ends when Sanity reaches 0 or upon casting a skill or using a weapon.",
       "[Celestial Revelation] Level +2, [Talismans Coalescence] Level +1.",
-      "When using [Celestial Revelation], increases ATK for Zhiliu and the nearby teammate(s) by 30% for 16s.",
+      "When excess Sanity Recovery overflows, grants 1 stack of +16% ATK Boost for 16s for self and allies, stacking up to 5 times.",
       "[Heaven-Earth Divination] Level +2, [Talismans Coalescence] Level +1.",
-      "When within [Four Realms Align]'s range, increases Zhiliu's PEN stats by 55%."
+      "When within [Four Realms Align]'s range, increases Zhiliu's PEN stats by 40%, and gains Skill DMG Boost from [Fortune's Clarity]."
     ]
   },
   {
@@ -14593,13 +14655,13 @@
       "Weapon DMG"
     ],
     "基础攻击": 22,
-    "基础生命": 165,
+    "基础生命": 150,
     "基础防御": 300,
     "基础护盾": 50,
     "基础神智": 200,
     "加成": {
       "ATK": 0.5,
-      "Skill DMG": 0.2
+      "Skill Intensity": 0.2
     },
     "突破": [
       {
@@ -14647,21 +14709,42 @@
             "t": [
               {
                 "ba": "ATK",
+                "co": 420104,
                 "dt": "Thunder",
                 "fn": "Damage",
                 "r": [
-                  1.47,
-                  1.8,
-                  2.13,
-                  2.46,
-                  2.79,
-                  3.12,
-                  3.45,
-                  3.78,
-                  4.11,
-                  4.44,
-                  4.77,
-                  5.1
+                  1.93,
+                  2.16,
+                  2.39,
+                  2.62,
+                  2.85,
+                  3.08,
+                  3.31,
+                  3.54,
+                  3.77,
+                  4,
+                  4.23,
+                  4.46
+                ]
+              },
+              {
+                "ba": "ATK",
+                "co": 420103,
+                "dt": "Thunder",
+                "fn": "Damage",
+                "r": [
+                  6.67,
+                  8.15,
+                  9.63,
+                  11.11,
+                  12.59,
+                  14.07,
+                  15.55,
+                  17.03,
+                  18.51,
+                  19.99,
+                  21.47,
+                  22.95
                 ]
               },
               {
@@ -14677,18 +14760,18 @@
                 "ba": "ATK_Char",
                 "fn": "Damage",
                 "r": [
-                  0.86,
-                  1.06,
-                  1.26,
-                  1.46,
-                  1.66,
-                  1.86,
-                  2.06,
-                  2.26,
-                  2.46,
-                  2.66,
-                  2.86,
-                  3.06
+                  1.41,
+                  1.73,
+                  2.05,
+                  2.37,
+                  2.69,
+                  3.01,
+                  3.33,
+                  3.65,
+                  3.97,
+                  4.29,
+                  4.61,
+                  4.93
                 ]
               },
               {
@@ -14698,23 +14781,18 @@
             ]
           },
           {
-            "id": 420142,
+            "id": 420141,
             "t": [
               {
-                "fn": "AddBuff"
+                "fn": "RemoveBuff"
               },
               {
-                "fn": "AddBuff",
-                "t": [
-                  {
-                    "k": "SkillRange",
-                    "v": 0.3
-                  },
-                  {
-                    "k": "AttackRangeModifierValue",
-                    "v": 60
-                  }
-                ]
+                "Dilation": 0.5,
+                "Duration": 0.15,
+                "fn": "HitStop"
+              },
+              {
+                "fn": "AddBuff"
               }
             ]
           }
@@ -14729,18 +14807,18 @@
                   {
                     "k": "DamageRate",
                     "v": [
-                      0.09,
-                      0.12,
-                      0.15,
+                      0.14,
                       0.18,
-                      0.21,
-                      0.24,
-                      0.27,
+                      0.22,
+                      0.26,
                       0.3,
-                      0.33,
-                      0.36,
-                      0.39,
-                      0.42
+                      0.34,
+                      0.38,
+                      0.42,
+                      0.46,
+                      0.5,
+                      0.54,
+                      0.58
                     ],
                     "z": "Normal"
                   }
@@ -14753,88 +14831,88 @@
           {
             "名称": "Sanity Cost",
             "影响": "技能效益",
-            "值": 18,
+            "值": 24,
             "格式": "{}"
           },
           {
             "名称": "[Starlight Descent] DMG",
             "值": [
-              1.47,
-              1.8,
-              2.13,
-              2.46,
-              2.79,
-              3.12,
-              3.45,
-              3.78,
-              4.11,
-              4.44,
-              4.77,
-              5.1
+              1.93,
+              2.16,
+              2.39,
+              2.62,
+              2.85,
+              3.08,
+              3.31,
+              3.54,
+              3.77,
+              4,
+              4.23,
+              4.46
             ]
           },
           {
             "名称": "[Starstorm Descent] DMG",
             "值": [
-              4.9,
-              6,
-              7.1,
-              8.2,
-              9.3,
-              10.4,
-              11.5,
-              12.6,
-              13.7,
-              14.8,
-              15.9,
-              17
+              6.67,
+              8.15,
+              9.63,
+              11.11,
+              12.59,
+              14.07,
+              15.55,
+              17.03,
+              18.51,
+              19.99,
+              21.47,
+              22.95
             ]
           },
           {
             "名称": "[Starlight Descent] DMG Radius",
             "影响": "技能范围",
-            "值": 6,
+            "值": 10,
             "格式": "{}m"
           },
           {
             "名称": "[Raging Thunder] DMG",
             "影响": "技能威力",
             "值": [
-              0.86,
-              1.06,
-              1.26,
-              1.46,
-              1.66,
-              1.86,
-              2.06,
-              2.26,
-              2.46,
-              2.66,
-              2.86,
-              3.06
+              1.41,
+              1.73,
+              2.05,
+              2.37,
+              2.69,
+              3.01,
+              3.33,
+              3.65,
+              3.97,
+              4.29,
+              4.61,
+              4.93
             ]
           },
           {
             "名称": "[Raging Thunder] DMG Radius",
             "影响": "技能范围",
-            "值": 6,
+            "值": 3,
             "格式": "{}m"
           },
           {
             "名称": "DMG Boost",
             "值": [
-              0.09,
-              0.12,
-              0.15,
+              0.14,
               0.18,
-              0.21,
-              0.24,
-              0.27,
+              0.22,
+              0.26,
               0.3,
-              0.33,
-              0.36,
-              0.39,
-              0.42
+              0.34,
+              0.38,
+              0.42,
+              0.46,
+              0.5,
+              0.54,
+              0.58
             ]
           },
           {
@@ -14902,14 +14980,14 @@
           "Starlight Descent": "Plunges at high speed, dealing AoE Electro Damage on impact. This attack is regarded as a melee weapon Plunging Attack. Using this skill in [Xuanjiao Manifest] state triggers [Wyrmcall Clouds].",
           "Reverse Scale": "Reverse Scale persists, with a maximum of 6 scales existing at the same time. The scales are removed when the [Xuanjiao Manifest] state ends.",
           "Wyrmcall Clouds": "Spawns [Raging Thunders] at targets struck by [Starlight Descent] or [Starstorm Descent], dealing Electro AoE Damage. A maximum of 5 targets can be selected.",
-          "Starstorm Descent": "Consumes all [Reverse Scales] to grant a Damage Dealt Increase to self and allies.\n Then plunges at high speed, dealing Electro AoE Damage on impact. Counts as a Plunging Attack from a melee weapon. While in [Xuanjiao Manifest], also triggers [Wyrmcall Clouds]."
+          "Starstorm Descent": "Consumes all [Reverse Scales] to grant a Damage Dealt Increase to self.\n Then plunges at high speed, dealing Electro AoE Damage on impact. Counts as a Plunging Attack from a melee weapon. While in [Xuanjiao Manifest], also triggers [Wyrmcall Clouds]."
         }
       },
       {
         "id": 420102,
         "名称": "Grimscales",
         "类型": "Buff",
-        "描述": "Deals Electro AoE Damage to enemies in front and enters the [Xuanjiao Manifest] state.\n While active, the user and all Electro allies gain [Fish-Dragon Dance].",
+        "描述": "Deals Electro AoE Damage to enemies in front and enters the [Xuanjiao Manifest] state.\nWhile active, applies [Thunderous Onslaught] to nearby enemies.",
         "icon": "Yuming02",
         "cd": 3,
         "e": [
@@ -14945,18 +15023,18 @@
                 "ba": "ATK_Char",
                 "fn": "Damage",
                 "r": [
-                  3.59,
-                  4.38,
-                  5.17,
-                  5.96,
-                  6.75,
-                  7.54,
-                  8.33,
-                  9.12,
-                  9.91,
-                  10.7,
-                  11.49,
-                  12.28
+                  17.11,
+                  20.92,
+                  24.73,
+                  28.54,
+                  32.35,
+                  36.16,
+                  39.97,
+                  43.78,
+                  47.59,
+                  51.4,
+                  55.21,
+                  59.02
                 ]
               },
               {
@@ -14978,41 +15056,66 @@
                 "ba": "ATK_Char",
                 "fn": "Damage",
                 "r": [
-                  4.43,
-                  5.42,
-                  6.41,
-                  7.4,
-                  8.39,
-                  9.38,
-                  10.37,
-                  11.36,
-                  12.35,
-                  13.34,
-                  14.33,
-                  15.32
+                  9.71,
+                  11.87,
+                  14.03,
+                  16.19,
+                  18.35,
+                  20.51,
+                  22.67,
+                  24.83,
+                  26.99,
+                  29.15,
+                  31.31,
+                  33.47
                 ]
               }
             ]
-          },
+          }
+        ],
+        "b": [
           {
-            "id": 420133,
+            "id": 420123,
             "t": [
               {
-                "ba": "ATK_Char",
-                "fn": "Damage",
-                "r": [
-                  1.47,
-                  1.8,
-                  2.13,
-                  2.46,
-                  2.79,
-                  3.12,
-                  3.45,
-                  3.78,
-                  4.11,
-                  4.44,
-                  4.77,
-                  5.1
+                "fn": "AddBuff",
+                "aura": [
+                  {
+                    "id": 420124,
+                    "t": {
+                      "fn": "AddBuff",
+                      "t": [
+                        {
+                          "k": "DamageRate",
+                          "v": [
+                            0.232,
+                            0.284,
+                            0.336,
+                            0.388,
+                            0.44,
+                            0.492,
+                            0.544,
+                            0.596,
+                            0.648,
+                            0.7,
+                            0.752,
+                            0.804
+                          ],
+                          "z": "Normal"
+                        }
+                      ]
+                    },
+                    "range": -1,
+                    "camp": "Friend"
+                  },
+                  {
+                    "id": 420131,
+                    "t": {
+                      "fn": "AddBuff"
+                    },
+                    "range": 2000,
+                    "camp": "Enemy"
+                  }
                 ]
               }
             ]
@@ -15029,18 +15132,18 @@
             "名称": "Skill DMG",
             "影响": "技能威力",
             "值": [
-              3.59,
-              4.38,
-              5.17,
-              5.96,
-              6.75,
-              7.54,
-              8.33,
-              9.12,
-              9.91,
-              10.7,
-              11.49,
-              12.28
+              17.11,
+              20.92,
+              24.73,
+              28.54,
+              32.35,
+              36.16,
+              39.97,
+              43.78,
+              47.59,
+              51.4,
+              55.21,
+              59.02
             ]
           },
           {
@@ -15048,24 +15151,6 @@
             "影响": "技能范围",
             "值": 10,
             "格式": "{}m"
-          },
-          {
-            "名称": "[Xuanjiao Manifest] DMG",
-            "影响": "技能威力",
-            "值": [
-              1.47,
-              1.8,
-              2.13,
-              2.46,
-              2.79,
-              3.12,
-              3.45,
-              3.78,
-              4.11,
-              4.44,
-              4.77,
-              5.1
-            ]
           },
           {
             "名称": "[Xuanjiao] Max DMG Absorption",
@@ -15086,21 +15171,27 @@
             "格式": "{%}Max HP"
           },
           {
-            "名称": "[Fish-Dragon Dance] DMG",
+            "名称": "[Thunderous Onslaught] Effect Radius",
+            "影响": "技能范围",
+            "值": 20,
+            "格式": "{}m"
+          },
+          {
+            "名称": "[Thunderous Onslaught] DMG",
             "影响": "技能威力",
             "值": [
-              4.43,
-              5.42,
-              6.41,
-              7.4,
-              8.39,
-              9.38,
-              10.37,
-              11.36,
-              12.35,
-              13.34,
-              14.33,
-              15.32
+              9.71,
+              11.87,
+              14.03,
+              16.19,
+              18.35,
+              20.51,
+              22.67,
+              24.83,
+              26.99,
+              29.15,
+              31.31,
+              33.47
             ]
           }
         ],
@@ -15159,39 +15250,40 @@
           }
         ],
         "术语解释": {
-          "Xuanjiao Manifest": "Immune to Hitstun. Xuanjiao hovers around [Yuming], dealing Electro Damage to enemies on contact (once every 2s per enemy).\n Xuanjiao absorbs HP damage inflicted on [Yuming]. When the absorbed amount reaches a set percentage of [Yuming]'s Max HP, [Xuanjiao Manifest] ends.",
-          "Fish-Dragon Dance": "When dealing Skill DMG to a target afflicted with [Thunderous Onslaught], deals bonus Electro Damage. Can trigger on the same target once every 3s."
+          "Xuanjiao Manifest": "Immune to Hitstun. Xuanjiao hovers around [Yuming].\nXuanjiao absorbs HP damage inflicted on [Yuming]. When the absorbed amount reaches a set percentage of [Yuming]'s Max HP, [Xuanjiao Manifest] ends.",
+          "Thunderous Onslaught": "Targets with [Thunderous Onslaught] take additional Electro DMG from [Yuming] 1 time when damaged by [Yuming] or Electro allies. Can trigger on the same target once every 2s."
         }
       },
       {
         "id": 420103,
         "名称": "Soaring Sky-High",
         "类型": "Passive",
-        "描述": "When dealing damage with a melee weapon, inflicts [Thunderous Onslaught] on enemies, reducing their Electro Resistance.\n During [Xuanjiao Manifest], [Thunderous Onslaught] is automatically applied to all enemies.",
+        "描述": "During [Xuanjiao Manifest], grants DMG Boost to self and Electro allies.",
         "icon": "Yuming03",
         "b": [
           {
-            "id": 420131,
+            "id": 420124,
             "t": [
               {
                 "fn": "AddBuff",
                 "t": [
                   {
-                    "k": "ThunderDamagedRate",
+                    "k": "DamageRate",
                     "v": [
-                      0.052,
-                      0.064,
-                      0.076,
-                      0.088,
-                      0.1,
-                      0.112,
-                      0.124,
-                      0.136,
-                      0.148,
-                      0.16,
-                      0.172,
-                      0.184
-                    ]
+                      0.232,
+                      0.284,
+                      0.336,
+                      0.388,
+                      0.44,
+                      0.492,
+                      0.544,
+                      0.596,
+                      0.648,
+                      0.7,
+                      0.752,
+                      0.804
+                    ],
+                    "z": "Normal"
                   }
                 ]
               }
@@ -15202,50 +15294,30 @@
           {
             "id": 420101,
             "v": {
-              "Grade4BonusRate": 0.18,
-              "Grade6DmgRate": 0.9,
+              "Grade4BonusRate": 0.12,
+              "Grade6CD": 6,
               "PassiveBuffLastTime": 3,
-              "Skill1BuffLastTime": 8,
-              "SuperDamageRate": [
-                3.43,
-                4.2,
-                4.97,
-                5.74,
-                6.51,
-                7.28,
-                8.05,
-                8.82,
-                9.59,
-                10.36,
-                11.13,
-                11.9
-              ]
+              "Skill1BuffLastTime": 8
             }
           }
         ],
         "字段": [
           {
-            "名称": "Electro Resistance Decrease",
+            "名称": "DMG Boost",
             "值": [
-              0.052,
-              0.064,
-              0.076,
-              0.088,
-              0.1,
-              0.112,
-              0.124,
-              0.136,
-              0.148,
-              0.16,
-              0.172,
-              0.184
+              0.232,
+              0.284,
+              0.336,
+              0.388,
+              0.44,
+              0.492,
+              0.544,
+              0.596,
+              0.648,
+              0.7,
+              0.752,
+              0.804
             ]
-          },
-          {
-            "名称": "[Thunderous Onslaught] Duration",
-            "影响": "技能耐久",
-            "值": 3,
-            "格式": "{}s"
           }
         ],
         "升级": [
@@ -15355,11 +15427,11 @@
     ],
     "溯源": [
       "While in [Xuanjiao Manifest], each [Precipitous Thunderfall] grants 1 extra [Reverse Scale]. Using [Starstorm Descent] also increases Weapon Attack Range by 0.6 and Skill Range by 30% for self and allies, lasting 8s.",
-      "[Fish-Dragon Dance] deals 300% of its base damage.",
+      "[Thunderous Onslaught] deals 160% of its base damage.",
       "[Precipitous Thunderfall] Level +2; [Soaring Sky-High] Level +1.",
-      "Plunging Attack deals additional damage equal to 18% of Yuming's Skill Damage, with a maximum of 36%.",
+      "Plunging Attack deals additional Electro damage equal to 12% of Yuming's Skill Intensity, with a maximum of 36%.",
       "[Grimscales] Level +2; [Soaring Sky-High] Level +1.",
-      "[Starlight Descent] and [Starstorm Descent] deal 90% more damage to targets affected by [Thunderous Onslaught]. Using [Starstorm Descent] restores [Xuanjiao]'s DMG absorption by 1.8%."
+      "During [Xuanjiao Manifest], increases PEN stats by 25%. After triggering [Thunderous Onslaught] 6 times, deals an additional instance of [Thunderous Onslaught] damage at 130% of its original multiplier to all targets affected. Can trigger once every 0.60s."
     ]
   },
   {
@@ -16198,7 +16270,7 @@
     "阵营": "The Hyperborean Empire",
     "属性": "雷",
     "精通": [
-      "Whipsword",
+      "Whipblade",
       "Pistol"
     ],
     "标签": [
@@ -16213,7 +16285,7 @@
     "基础神智": 200,
     "加成": {
       "HP": 0.5,
-      "Skill DMG": 0.2
+      "Skill Intensity": 0.2
     },
     "突破": [
       {
@@ -18029,7 +18101,7 @@
         "id": 510106,
         "名称": "Combat Supply",
         "类型": "Passive",
-        "描述": "When dealing skill damage, there is a chance to drop 1 [Ammo Supply Chest].",
+        "描述": "When dealing Skill DMG, there is a chance to drop 1 [Ammo Supply Chest].",
         "icon": "ExtraPassive",
         "p": [
           {
@@ -18090,7 +18162,7 @@
       "[Trotters Trot-Trot] Level +2; [Chop-Chop, Commissaries!] Level +1.",
       "Increases the stack cap of [Heavyweight] to 20. When Truffle starts mounting [Filbert], gains 20 stacks of [Heavyweight].",
       "[Tummy Full, Hands Full] Level +2; [Chop-Chop, Commissaries!] Level +1.",
-      "After picking up [Activated Sal Volatile], [Tranquilizer Dewdrop], or [Ammo Supply Chest], Truffle gains 1 stack that increases her Skill Damage by 45% for 15s, up to 3 stacks."
+      "After picking up [Activated Sal Volatile], [Tranquilizer Dewdrop], or [Ammo Supply Chest], Truffle gains 1 stack that increases her Skill Intensity by 45% for 15s, up to 3 stacks."
     ]
   },
   {
@@ -18712,7 +18784,7 @@
     "基础神智": 150,
     "加成": {
       "Resolve": 0.05,
-      "Skill DMG": 0.2
+      "Skill Intensity": 0.2
     },
     "突破": [
       {
@@ -19190,7 +19262,7 @@
         "id": 530103,
         "名称": "Amberlight",
         "类型": "Passive",
-        "描述": "When dealing CRIT damage, Psyche gains one of the following buffs at random: ATK Boost, Skill Damage Boost, or Resolve Boost.\nIncreases Psyche's damage for each buff she gains, up to 12 buffs.",
+        "描述": "When dealing CRIT damage, Psyche gains one of the following buffs at random: ATK Boost, Skill Intensity Boost, or Resolve Boost.\nIncreases Psyche's damage for each buff she gains, up to 12 buffs.",
         "icon": "Saiqi03",
         "b": [
           {
@@ -19318,7 +19390,7 @@
             ]
           },
           {
-            "名称": "Skill DMG Boost",
+            "名称": "Skill Intensity Boost",
             "值": [
               0.079,
               0.098,
@@ -19527,7 +19599,7 @@
     "阵营": "The Hyperborean Empire",
     "属性": "风",
     "精通": [
-      "Whipsword",
+      "Whipblade",
       "Assault Rifle"
     ],
     "标签": [

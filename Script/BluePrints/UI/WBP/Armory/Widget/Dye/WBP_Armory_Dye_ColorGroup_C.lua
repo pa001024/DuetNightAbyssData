@@ -54,9 +54,8 @@ function M:OnListItemObjectSet(Content)
       Widget:SetVisibility(UIConst.VisibilityOp.Hidden)
     end
   end
-  local Data = DataMgr.Swatch[ColorContents[1].ColorId]
-  local ResourceData = Data and DataMgr.Resource[Data.ResourceID]
-  self.ResourceId = Data and Data.ResourceID
+  self.ResourceId = ColorContents[1].ResourceId
+  local ResourceData = DataMgr.Resource[self.ResourceId]
   self.Icon_Dye:Init({
     ParentWidget = self,
     ItemType = CommonConst.ItemType.Resource,
@@ -68,7 +67,7 @@ function M:OnListItemObjectSet(Content)
     OnRemovedFromFocusPath = self.OnResourceRemovedFromFocusPath
   })
   local Avatar = GWorld:GetAvatar()
-  local Resource = Avatar.Resources[Data.ResourceID]
+  local Resource = Avatar.Resources[self.ResourceId]
   if Resource then
     self.Num_Hold:SetText(Resource.Count)
   else

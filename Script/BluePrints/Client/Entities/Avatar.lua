@@ -97,7 +97,15 @@ Avatar.__Component__ = {
   "BluePrints.Client.Entities.Components.TheaterActivity",
   "BluePrints.Client.Entities.Components.RaidSeasonMgr",
   "BluePrints.Client.Entities.Components.MountMgr",
-  "BluePrints.Client.Entities.Components.WebJumpMgr"
+  "BluePrints.Client.Entities.Components.WebJumpMgr",
+  "BluePrints.Client.Entities.Components.WuyoushengActivity",
+  "BluePrints.Client.Entities.Components.GiftComp",
+  "BluePrints.Client.Entities.Components.RegionReputationMgr",
+  "BluePrints.Client.Entities.Components.AutoChess",
+  "BluePrints.Client.Entities.Components.AprilFoolsDayMgr",
+  "BluePrints.Client.Entities.Components.SecondaryPasswordComp",
+  "BluePrints.Client.Entities.Components.ComeBackMgr",
+  "BluePrints.Client.Entities.Components.PhotoEventMgr"
 }
 
 function Avatar:Init(eid)
@@ -143,6 +151,7 @@ end
 function Avatar:OnRefreshLogin(TimeOffset, TimeZone, IsNewAvatar)
   TimeUtils.SetTimeOffset(TimeOffset)
   TimeUtils.SetServerTimeZone(TimeZone)
+  DebugPrint("Avatar：OnRefreshLogin | Call LoginSuccess")
   self:LoginSuccess()
   local HeroUSDKSubsystem = HeroUSDKSubsystem()
   if IsNewAvatar then
@@ -153,15 +162,16 @@ end
 function Avatar:OnRelayLogin(TimeOffset, TimeZone, IsNewAvatar)
   TimeUtils.SetTimeOffset(TimeOffset)
   TimeUtils.SetServerTimeZone(TimeZone)
+  DebugPrint("Avatar：OnRelayLogin | Call LoginSuccess")
   self:LoginSuccess()
 end
 
 function Avatar:LoginSuccess()
-  self:RefreshWeapon()
   self:InitGameSetting()
   SystemGuideManager:InitCondition()
   
   local function callback()
+    self:_OnLoginSuccess()
     EventManager:FireEvent(EventID.OnLoginSuccess)
     GWorld.GameInstance:OnLoginSuccess()
   end
@@ -440,7 +450,21 @@ function Avatar:ClearCreatePhantomInfo(PhantomRoleId)
   self.PhantomCreateInfo[PhantomRoleId] = nil
 end
 
-function Avatar:NotifyAppStoreRatingJump()
+function Avatar:NotifyAppStoreRatingJump(IsShowGameRating)
+  local PlatformName = MiscUtils:GetGameReviewPlatform()
+  DebugPrint("NotifyAppStoreRatingJump Platform", IsShowGameRating, PlatformName)
+  if not IsShowGameRating then
+    if not HeroUSDKSubsystem():IsHeroSDKEnable() then
+      DebugPrint("NotifyAppStoreRatingJump HeroUSDKSubsystem Is not Enable")
+      return
+    end
+    if "IOS" == PlatformName or "Google" == PlatformName then
+      HeroUSDKSubsystem():AppRatingWithType(0, "")
+    elseif "TapTap" == PlatformName then
+      HeroUSDKSubsystem():AppRatingWithType(1, "")
+    end
+    return
+  end
   if GWorld.GameInstance then
     local UIManager = GWorld.GameInstance:GetGameUIManager()
     UIManager:LoadUINew("GameReview")

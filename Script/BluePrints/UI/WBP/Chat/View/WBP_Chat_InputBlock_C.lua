@@ -37,7 +37,6 @@ function M:SetOnTextCommittedCallback(Callback)
 end
 
 function M:FocusInputField()
-  Utils.Traceback(LXYTag, "ChatInputBlock::FocusInputField")
   self._bFocusing = true
   self.Text_Input:SetFocus()
   self:PlayAnimationForward(self.Click)

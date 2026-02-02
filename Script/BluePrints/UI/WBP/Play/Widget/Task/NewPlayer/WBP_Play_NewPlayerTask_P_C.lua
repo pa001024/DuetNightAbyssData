@@ -136,7 +136,6 @@ end
 function M:SwitchIn()
   self:TryNavigateToIndex(0)
   self:UpdateUIStyleInPlatform()
-  self:PlayAnimation(self.In)
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
@@ -191,6 +190,13 @@ function M:OnAllDailyTaskRewardKey()
   if self.Btn_Reward:GetVisibility() ~= UIConst.VisibilityOp.Collapsed then
     self:GetAllRewardBtnClick()
   end
+end
+
+function M:ReGetDesiredFocusTarget()
+  if self.SelectItem and self.SelectItem.FocusTypeName ~= "SelfWidget" then
+    self.SelectItem:UpdatKeyDisplay("SelfWidget")
+  end
+  return self.List_Task
 end
 
 function M:SwitchGamepadKeyShow(IsShow, FocusTypeName)

@@ -60,9 +60,7 @@ function M:OnMenuOpenChanged(bIsOpen)
 end
 
 function M:Destruct()
-  if HoverTimer then
-    self:StopHoverTimer()
-  end
+  self:StopHoverTimer()
   if not self.bMenuClosing then
     self:CloseItemDetailsWidget(true)
   end
@@ -134,8 +132,8 @@ end
 function M:StopHoverTimer()
   if self:IsExistTimer(HoverTimer) then
     self:RemoveTimer(HoverTimer)
-    HoverTimer = nil
   end
+  HoverTimer = nil
 end
 
 function M:OpenItemDetailsWidget(bIsHover, Content)

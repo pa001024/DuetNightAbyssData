@@ -51,8 +51,11 @@ function M:OnOneOccupationSucceed()
     self.Overridden.OnOneOccupationSucceed(self)
   end
   if IsAuthority(self) then
-    local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-    GameMode:TriggerDungeonComponentFun("OnOneOccupationSucceed", self)
+    if not self.bTriggerGameMode then
+      self.bTriggerGameMode = true
+      local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+      GameMode:TriggerDungeonComponentFun("OnOneOccupationSucceed", self)
+    end
     self:EMActorDestroy(EDestroyReason.MechanismDead)
   end
 end
@@ -111,6 +114,7 @@ function M:OnEMActorDestroy(DestroyReason)
   if IsAuthority(self) and self.OccupateProgress >= 100 then
     self:RemoveTimer("Occupation")
     self:RemoveTimer("OccupationSucceed")
+    local GameMode = UE4.UGameplayStatics.GetGameMode(self)
     for _, Player in pairs(GameMode:GetAllPlayer()) do
       self:ActiveAllGuide(nil, Player.Eid)
       self:DeactiveGuide(Player.Eid)

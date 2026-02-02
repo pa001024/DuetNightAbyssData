@@ -318,6 +318,9 @@ function M:InitCoroutine()
   self:InitDispatchCondition()
   self.InitComplete = true
   self.CoroutineInitObj = nil
+  if self.TrackTarget then
+    self:CreateTrackIndicator(self.TrackTarget)
+  end
   if self.IsMiniMap then
     local Array = GWorld.GameInstance:GetSceneManager().FloorBoxArray
     if Array then
@@ -371,6 +374,7 @@ function M:InitInMiniMap()
       MissionIndicatorManager:ActiveMissionIndicatorByRegionMap(DataMgr.QuestChain[MissionIndicatorManager.TrackingSpecialSideQuestChainId].SpecialQuestDisplayName, DataMgr.QuestChain[MissionIndicatorManager.TrackingSpecialSideQuestChainId].QuestNpcId)
     end
   end)
+  self.MarkPointTargetActor = nil
 end
 
 function M:MinimapDelayMapImagePos(Reason)
@@ -512,6 +516,13 @@ function M:InitInRegionMap()
     })
     self.TureHardBoss_MapTips.Common_Button_Text_PC:BindEventOnClicked(self, self.OnConveyClicked)
     self.TureHardBoss_MapTips.Parent = self
+  end
+  if not self.ChanllengeTips then
+    local TipsBpPath = "WidgetBlueprint'/Game/UI/WBP/AreaCoop/Widget/WBP_AreaCoop_MapTips.WBP_AreaCoop_MapTips'"
+    self.ChanllengeTips = UIManager(self):CreateWidgetAsync(nil, self.CoroutineInitObj, TipsBpPath)
+    self.MainMap.Convey_AreaCoop:AddChild(self.ChanllengeTips)
+    self.ChanllengeTips:SetVisibility(ESlateVisibility.Collapsed)
+    self.ChanllengeTips.Parent = self
   end
   if self.RegionIcon then
     local Icon = LoadObject(self.RegionIcon)
@@ -1054,7 +1065,7 @@ end
 
 function M:OnMouseWheel(MyGeometry, Event)
   if self.MainMap.IsPanelOpen or not self.BgHeight then
-    return
+    return UWidgetBlueprintLibrary.Unhandled()
   end
   local delta = UKismetInputLibrary.PointerEvent_GetWheelDelta(Event) * 0.05
   local temp = self.MapScale.X + delta
@@ -1795,6 +1806,7 @@ function M:ShowFloor(FloorId)
   end
   self.CurrentFloorId = FloorId
   self:ShowFloor_Component(FloorId)
+  self:SetAllMissionIndicatorsPlayerFloorId(self.CurrentFloorId)
 end
 
 function M:OnClickOpenRegionList_Sound()
@@ -1838,6 +1850,17 @@ end
 function M:ChangeRegion(RegionId, InitCompleteFunc)
   self:ClearData()
   self:Init(false, RegionId, self.MainMap, InitCompleteFunc)
+end
+
+function M:SetAllMissionIndicatorsPlayerFloorId(InFloorId)
+  local Indicators = MissionIndicatorManager:GetAllIndicatorUIObjs()
+  if not IsEmptyTable(Indicators) then
+    for _, Obj in pairs(Indicators) do
+      if IsValid(Obj) then
+        Obj.PlayerFloorLevelId = InFloorId
+      end
+    end
+  end
 end
 
 function M:ChangeRegionForSmartIndicator(InTaskSubRegionId, TrackingQuestChainId)
@@ -1934,25 +1957,35 @@ function M:OnCommonTrack(TrackingType, Id, IsAdd)
   if not self.IsMiniMap then
     return
   end
+  if IsAdd then
+    GWorld.GameInstance.TrackingPack = {TrackingType, Id}
+  else
+    GWorld.GameInstance.TrackingPack = nil
+  end
   local trackTarget = self:GetTrackingTarget(TrackingType, Id)
   if not trackTarget then
     return
   end
   if IsAdd then
     local TargetActor
+    local StaticCreartorId = TArray(0)
+    local ManualItemId = TArray(0)
     if TrackingType == CommonConst.RegionMapTrackingType.TeleportPoint then
       local Data = DataMgr.TeleportPoint[Id]
       TargetActor = self.GameState.StaticCreatorMap:FindRef(trackTarget.Data.StaticId)
+      StaticCreartorId:Add(trackTarget.Data.StaticId)
     elseif TrackingType == CommonConst.RegionMapTrackingType.RegionPoint then
       local Data = DataMgr.RegionPoint[Id]
       local CreatorId = Data.StaticId
       if CreatorId then
         TargetActor = self.GameState.StaticCreatorMap:FindRef(CreatorId)
+        StaticCreartorId:Add(CreatorId)
       else
         local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
         if GameMode then
           local ManualItemId = Data.ManualItemId
           TargetActor = GameMode.BPBornRegionActor:FindRef(ManualItemId)
+          ManualItemId:Add(ManualItemId)
         end
       end
     elseif TrackingType == CommonConst.RegionMapTrackingType.MiniDispatchPoint then
@@ -1960,10 +1993,25 @@ function M:OnCommonTrack(TrackingType, Id, IsAdd)
       local CreatorId = Data.TriggerBoxID
       if CreatorId then
         TargetActor = self.GameState.StaticCreatorMap:FindRef(CreatorId)
+        StaticCreartorId:Add(CreatorId)
       end
+    elseif TrackingType == CommonConst.RegionMapTrackingType.MarkPoint then
+      local ActorClass = LoadClass("/Game/BluePrints/Common/Level/BP_RegionMapTrackTarget.BP_RegionMapTrackTarget")
+      if self.MarkPointTargetActor then
+        self.MarkPointTargetActor:K2_DestroyActor()
+      end
+      local Location = trackTarget.RenderTransform.Translation
+      Location = self:TransformUILocToWorldLoc(Location.X, Location.Y)
+      local Transform = FTransform(FRotator(), FVector(Location.X, Location.Y, -100000))
+      self.MarkPointTargetActor = self:GetWorld():SpawnActor(ActorClass, Transform, ESpawnActorCollisionHandlingMethod.AlwaysSpawn, nil, self, nil)
+      self.MarkPointTargetActor.MarkUuid = Id
     end
     local arrow = self.MainMap:NewPointArrow()
     self:AddTrack(trackTarget, arrow, TargetActor)
+    local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+    if GameMode then
+      GameMode:OpenGuideIconRegion(nil, StaticCreartorId, ManualItemId, nil, nil)
+    end
     self.MainMap.TracePanel:AddChild(trackTarget)
     if TrackingType == CommonConst.RegionMapTrackingType.TeleportPoint then
       trackTarget:ReInitTeleportPoint(DataMgr.TeleportPoint[Id])
@@ -1972,23 +2020,59 @@ function M:OnCommonTrack(TrackingType, Id, IsAdd)
     trackTarget:SetRenderScale(self.MinimapIconScale / FVector2D(0.7, 0.7))
     trackTarget:StopAllAnimations()
     trackTarget:PlayAnimation(trackTarget.Loop, 0, 0)
-    GWorld.GameInstance.TrackingPack = {TrackingType, Id}
   elseif self.MainMap.TracePanel:HasChild(trackTarget) then
+    local StaticCreartorId = TArray(0)
+    local ManualItemId = TArray(0)
+    if TrackingType == CommonConst.RegionMapTrackingType.TeleportPoint then
+      StaticCreartorId:Add(trackTarget.Data.StaticId)
+    elseif TrackingType == CommonConst.RegionMapTrackingType.RegionPoint then
+      local Data = DataMgr.RegionPoint[Id]
+      local CreatorId = Data.StaticId
+      if CreatorId then
+        StaticCreartorId:Add(CreatorId)
+      else
+        local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+        if GameMode then
+          local ManualItemId = Data.ManualItemId
+          ManualItemId:Add(ManualItemId)
+        end
+      end
+    elseif TrackingType == CommonConst.RegionMapTrackingType.MiniDispatchPoint then
+      local Data = DataMgr.DynQuest[Id]
+      local CreatorId = Data.TriggerBoxID
+      if CreatorId then
+        StaticCreartorId:Add(CreatorId)
+      end
+    end
     if TrackingType == CommonConst.RegionMapTrackingType.MiniDispatchPoint and DataMgr.Dispatch[Id] ~= nil then
       self:RemoveTrack(trackTarget)
+      local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+      if GameMode then
+        GameMode:CloseGuideIconRegion(nil, StaticCreartorId, ManualItemId, nil, nil)
+      end
+      if TrackingType == CommonConst.RegionMapTrackingType.TeleportPoint then
+        trackTarget:ReInitTeleportPoint(DataMgr.TeleportPoint[Id])
+      end
       trackTarget:RemoveFromParent()
-      GWorld.GameInstance.TrackingPack = nil
       return
     end
     self.Panel_Point:AddChild(trackTarget)
     self:AdjustSlot(trackTarget.Slot)
     trackTarget:SetRenderScale(self.MinimapIconScale)
     self:RemoveTrack(trackTarget)
+    local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+    if GameMode then
+      GameMode:CloseGuideIconRegion(nil, StaticCreartorId, ManualItemId, nil, nil)
+    end
     if TrackingType == CommonConst.RegionMapTrackingType.TeleportPoint then
       trackTarget:ReInitTeleportPoint(DataMgr.TeleportPoint[Id])
     end
     trackTarget:StopAllAnimations()
     GWorld.GameInstance.TrackingPack = nil
+    if self.MarkPointTargetActor then
+      self.MarkPointTargetActor:K2_DestroyActor()
+      self.MarkPointTargetActor = nil
+    end
   end
 end
 
@@ -2074,6 +2158,10 @@ end
 
 function M:CreateTrackIndicator(TrackTarget)
   if self.IsMiniMap then
+    return
+  end
+  if not self.InitComplete then
+    self.TrackTarget = TrackTarget
     return
   end
   if not self.TrackIndicator then
@@ -2211,6 +2299,20 @@ function M:OnFocusLost(MyGeometry, InFocusEvent)
     self.GamepadSelect:SetRenderOpacity(0)
   end
   return UWidgetBlueprintLibrary.Unhandle
+end
+
+function M:TryToastNotInSameRegion()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local RegionId = DataMgr.SubRegion[Avatar.CurrentRegionId].RegionId
+  if DataMgr.Region[RegionId] and DataMgr.Region[RegionId].RegionMapId then
+    RegionId = DataMgr.RegionMap[DataMgr.Region[RegionId].RegionMapId].RegionId
+  end
+  if self.RegionID ~= RegionId then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_RegionMap_NotInSameRegion"))
+  end
 end
 
 AssembleComponents(M)

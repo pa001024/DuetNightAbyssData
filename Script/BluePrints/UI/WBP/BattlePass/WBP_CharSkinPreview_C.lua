@@ -187,50 +187,45 @@ function M:InitParams()
       self.SkinSeriesId = SkinData and SkinData.SkinSeries
     end
   end
-  if nil == BattlePassController:GetModelData("ActorController") then
-    local Avatar = GWorld:GetAvatar()
-    if Avatar and Avatar.Chars and Avatar.CurrentChar then
-      local CurrentChar = Avatar.Chars[Avatar.CurrentChar]
-      local CurrentSkinId = CurrentChar and CurrentChar:GetAppearance().SkinId
-      local PreviewSkinId
-      if self.bUseOptRewardSkinList and self.InitSkinId then
-        PreviewSkinId = self.InitSkinId
-      elseif self.SkinSeriesId then
-        local PreferredId, MinId
-        for SkinId, Info in pairs(DataMgr.Skin) do
-          if Info.SkinSeries == self.SkinSeriesId then
-            if Info.CharId == (CurrentChar and CurrentChar.CharId) then
-              PreferredId = SkinId
-              break
-            end
-            if not MinId or SkinId < MinId then
-              MinId = SkinId
-            end
+  local Avatar = GWorld:GetAvatar()
+  if Avatar and Avatar.Chars and Avatar.CurrentChar then
+    local CurrentChar = Avatar.Chars[Avatar.CurrentChar]
+    local CurrentSkinId = CurrentChar and CurrentChar:GetAppearance().SkinId
+    local PreviewSkinId
+    if self.bUseOptRewardSkinList and self.InitSkinId then
+      PreviewSkinId = self.InitSkinId
+    elseif self.SkinSeriesId then
+      local PreferredId, MinId
+      for SkinId, Info in pairs(DataMgr.Skin) do
+        if Info.SkinSeries == self.SkinSeriesId then
+          if Info.CharId == (CurrentChar and CurrentChar.CharId) then
+            PreferredId = SkinId
+            break
+          end
+          if not MinId or SkinId < MinId then
+            MinId = SkinId
           end
         end
-        PreviewSkinId = PreferredId or MinId
       end
-      PreviewSkinId = PreviewSkinId or self.InitSkinId or CurrentSkinId
-      if not self.InitSkinId then
-        self.InitSkinId = PreviewSkinId
-      end
-      local PreviewParams = {
-        Type = "Char",
-        SkinId = PreviewSkinId,
-        EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
-        ViewUI = self
-      }
-      local Target = self:CreatePreviewTargetData(PreviewParams)
-      PreviewParams.Target = Target
-      self.ActorController = self:CreatePreviewActor(PreviewParams)
-      BattlePassController:SetModelData("ActorController", self.ActorController)
-      BattlePassController:GetModelData("ActorController"):OnOpened()
-      BattlePassController:GetModel():AddModelDataRefCount("ActorController")
-      self.IsPreviewMode = true
+      PreviewSkinId = PreferredId or MinId
     end
-  else
-    self.ActorController = BattlePassController:GetModelData("ActorController")
-    BattlePassController:GetModel():AddModelDataRefCount("ActorController")
+    PreviewSkinId = PreviewSkinId or self.InitSkinId or CurrentSkinId
+    if not self.InitSkinId then
+      self.InitSkinId = PreviewSkinId
+    end
+    local PreviewParams = {
+      Type = "Char",
+      SkinId = PreviewSkinId,
+      EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
+      ViewUI = self
+    }
+    local Target = self:CreatePreviewTargetData(PreviewParams)
+    PreviewParams.Target = Target
+    self.ActorController = self:CreatePreviewActor(PreviewParams)
+    BattlePassController:SetModelData("BagActorController", self.ActorController)
+    BattlePassController:GetModelData("BagActorController"):OnOpened()
+    BattlePassController:GetModel():AddModelDataRefCount("BagActorController")
+    self.IsPreviewMode = true
   end
 end
 
@@ -350,6 +345,7 @@ function M:BuildRoleItemContents()
       Content.SortHasSkin = bHasSkin
       Content.SortIsOwned = true
       Content.SortSkinId = SkinIdForChar
+      Content.CharId = Char.CharId
       self.RoleItemContentsMap[Uuid] = Content
       table.insert(self.RoleItemContentsArray, Content)
       OwnedCharIds[Char.CharId] = true
@@ -384,6 +380,7 @@ function M:BuildRoleItemContents()
           Content.SortHasSkin = bHasSkin
           Content.SortIsOwned = false
           Content.SortSkinId = SkinIdForChar
+          Content.CharId = CharId
           self.RoleItemContentsMap[Content.Uuid] = Content
           self.UnownedCharContentMap[CharId] = Content
           table.insert(self.RoleItemContentsArray, Content)
@@ -511,14 +508,14 @@ function M:UpdatePreviewSkinActorForContent(Content)
   local CharId
   if RealChar then
     CharId = RealChar.CharId or Content.CharId or Content.UnitId
-    BattlePassController:GetModelData("ActorController"):ChangeCharModel(RealChar)
+    BattlePassController:GetModelData("BagActorController"):ChangeCharModel(RealChar)
   elseif Content.Target then
     if Content.Avatar then
-      BattlePassController:GetModelData("ActorController"):SetAvatar(Content.Avatar)
+      BattlePassController:GetModelData("BagActorController"):SetAvatar(Content.Avatar)
     end
-    BattlePassController:GetModelData("ActorController"):ChangeCharModel(Content.Target)
+    BattlePassController:GetModelData("BagActorController"):ChangeCharModel(Content.Target)
     CharId = Content.Target and Content.Target.CharId or Content.CharId or Content.UnitId
-    BattlePassController:GetModelData("ActorController"):SetAvatar(RealAvatar)
+    BattlePassController:GetModelData("BagActorController"):SetAvatar(RealAvatar)
   end
   if CharId then
     self:ApplyCurrentSkinAppearance(CharId)
@@ -539,7 +536,7 @@ function M:Destruct(...)
     self.GameInputModeSubsystem.OnInputMethodChanged:Remove(self, self.OnUpdateUIStyleByInputTypeChange)
   end
   local UIBattleMain = UIManager(self):GetUI("BattlePassMain")
-  if UIBattleMain and self.BehaviorType == M.PreviewBehaviorType.BattlePassPreview and self.InitSkinId and BattlePassController:GetModelData("ActorController") then
+  if UIBattleMain and self.BehaviorType == M.PreviewBehaviorType.BattlePassPreview and self.InitSkinId and BattlePassController:GetModelData("BagActorController") then
     local SkinData = DataMgr.Skin[self.InitSkinId]
     local Avatar = GWorld:GetAvatar()
     local RestoreChar
@@ -550,17 +547,17 @@ function M:Destruct(...)
       end
     end
     if RestoreChar then
-      BattlePassController:GetModelData("ActorController"):ChangeCharModel(RestoreChar)
+      BattlePassController:GetModelData("BagActorController"):ChangeCharModel(RestoreChar)
       local AppearanceInfo = {
         CharId = SkinData.CharId,
         SkinId = self.InitSkinId,
         AccessorySuit = {}
       }
-      BattlePassController:GetModelData("ActorController"):ChangeCharAppearance(AppearanceInfo)
+      BattlePassController:GetModelData("BagActorController"):ChangeCharAppearance(AppearanceInfo)
     end
   end
   M.Super.Destruct(self, ...)
-  BattlePassController:GetModel():RemoveModelDataRefCount("ActorController", function(Target)
+  BattlePassController:GetModel():RemoveModelDataRefCount("BagActorController", function(Target)
     if not Target or not IsValid(Target) then
       return
     end
@@ -622,14 +619,14 @@ function M:UpdatePreviewSkinActor()
   local CharId
   if RealChar then
     CharId = RealChar.CharId
-    BattlePassController:GetModelData("ActorController"):ChangeCharModel(RealChar)
+    BattlePassController:GetModelData("BagActorController"):ChangeCharModel(RealChar)
   elseif self.CurRoleContent and self.CurRoleContent.Target then
     if self.CurRoleContent.Avatar then
-      BattlePassController:GetModelData("ActorController"):SetAvatar(self.CurRoleContent.Avatar)
+      BattlePassController:GetModelData("BagActorController"):SetAvatar(self.CurRoleContent.Avatar)
     end
-    BattlePassController:GetModelData("ActorController"):ChangeCharModel(self.CurRoleContent.Target)
+    BattlePassController:GetModelData("BagActorController"):ChangeCharModel(self.CurRoleContent.Target)
     CharId = self.CurRoleContent.Target and self.CurRoleContent.Target.CharId or self.CurRoleContent.CharId or self.CurRoleContent.UnitId
-    BattlePassController:GetModelData("ActorController"):SetAvatar(RealAvatar)
+    BattlePassController:GetModelData("BagActorController"):SetAvatar(RealAvatar)
   end
   if CharId then
     self:ApplyCurrentSkinAppearance(CharId)
@@ -638,7 +635,7 @@ function M:UpdatePreviewSkinActor()
 end
 
 function M:EnterSkinCameraAnimation()
-  BattlePassController:GetModelData("ActorController"):SetMontageAndCamera(CommonConst.ArmoryType.Char)
+  BattlePassController:GetModelData("BagActorController"):SetMontageAndCamera(CommonConst.ArmoryType.Char)
 end
 
 function M:GetPreviewSkinIdForChar(CharId)
@@ -659,7 +656,7 @@ function M:GetPreviewSkinIdForChar(CharId)
 end
 
 function M:ApplyCurrentSkinAppearance(CharId)
-  if not BattlePassController:GetModelData("ActorController") or not CharId then
+  if not BattlePassController:GetModelData("BagActorController") or not CharId then
     return
   end
   local SkinId = self:GetPreviewSkinIdForChar(CharId)
@@ -671,7 +668,7 @@ function M:ApplyCurrentSkinAppearance(CharId)
     SkinId = SkinId,
     AccessorySuit = {}
   }
-  BattlePassController:GetModelData("ActorController"):ChangeCharAppearance(AppearanceInfo)
+  BattlePassController:GetModelData("BagActorController"):ChangeCharAppearance(AppearanceInfo)
 end
 
 function M:InitInputSettings()
@@ -960,7 +957,9 @@ function M:BuildBottomKeyInfo()
 end
 
 function M:OnBackKeyDown()
-  if self.bRoleListOpen then
+  if self.bSelfHidden then
+    self:OnHideUIKeyDown()
+  elseif self.bRoleListOpen then
     self:CloseRoleListPanel()
   else
     self:ExitSkin()
@@ -1247,7 +1246,7 @@ end
 function M:RefreshDetailPanel()
   local Content = self.CurRoleContent
   local CharId = Content.UnitId
-  local SkinId = self.CharId2SkinId[CharId] or self.InitSkinId
+  local SkinId = self.CharId2SkinId and self.CharId2SkinId[CharId] or self.InitSkinId
   DebugPrint("gmy@WBP_CharSkinPreview_C M:RefreshDetailPanel", self.CurRoleContent, CharId, SkinId)
   local SkinData = DataMgr.Skin[SkinId]
   local CharCfg = DataMgr.Char[CharId]
@@ -1721,6 +1720,13 @@ function M:DoApplySkinOptReward(Content)
             UIUtils.ShowGetItemPage("Skin", SkinId, 1, nil, nil, nil, nil, true, true)
           end
         end)
+      else
+        local ArmorySkinPage = UIManager(self):GetUIObj("ArmorySkin")
+        if ArmorySkinPage then
+          ArmorySkinPage:AddTimer(0.3, function()
+            UIUtils.ShowGetItemPage("Skin", SkinId, 1, nil, nil, nil, nil, true, true)
+          end)
+        end
       end
     end
     self:Close()
@@ -1778,6 +1784,13 @@ function M:DoApplyWeaponSkinOptReward(Content)
             UIUtils.ShowGetItemPage("WeaponSkin", SkinId, 1, nil, nil, nil, nil, true, true)
           end
         end)
+      else
+        local ArmorySkinPage = UIManager(self):GetUIObj("ArmorySkin")
+        if ArmorySkinPage then
+          ArmorySkinPage:AddTimer(0.3, function()
+            UIUtils.ShowGetItemPage("WeaponSkin", SkinId, 1, nil, nil, nil, nil, true, true)
+          end)
+        end
       end
     end
     self:Close()
@@ -1835,6 +1848,13 @@ function M:DoApplyCharSkinOptReward(Content)
             UIUtils.ShowGetItemPage("Skin", SkinId, 1, nil, nil, nil, nil, true, true)
           end
         end)
+      else
+        local ArmorySkinPage = UIManager(self):GetUIObj("ArmorySkin")
+        if ArmorySkinPage then
+          ArmorySkinPage:AddTimer(0.3, function()
+            UIUtils.ShowGetItemPage("Skin", SkinId, 1, nil, nil, nil, nil, true, true)
+          end)
+        end
       end
     end
     self:Close()
@@ -1893,6 +1913,13 @@ function M:DoApplyAccessoryOptReward(Content)
             UIUtils.ShowGetItemPage(Type, SkinId, 1, nil, nil, nil, nil, true, true)
           end
         end)
+      else
+        local ArmorySkinPage = UIManager(self):GetUIObj("ArmorySkin")
+        if ArmorySkinPage then
+          ArmorySkinPage:AddTimer(0.3, function()
+            UIUtils.ShowGetItemPage(Type, SkinId, 1, nil, nil, nil, nil, true, true)
+          end)
+        end
       end
     end
     self:Close()
@@ -1951,6 +1978,13 @@ function M:DoApplyGestureOptReward(Content)
             UIUtils.ShowGetItemPage(Type, SkinId, 1, nil, nil, nil, nil, true, true)
           end
         end)
+      else
+        local ArmorySkinPage = UIManager(self):GetUIObj("ArmorySkin")
+        if ArmorySkinPage then
+          ArmorySkinPage:AddTimer(0.3, function()
+            UIUtils.ShowGetItemPage(Type, SkinId, 1, nil, nil, nil, nil, true, true)
+          end)
+        end
       end
     end
     self:Close()
@@ -2111,9 +2145,9 @@ end
 function M:OnAnalogValueChanged(_MyGeometry, InAnalogInputEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if "Gamepad_RightX" == InKeyName and BattlePassController:GetModelData("ActorController") then
+  if "Gamepad_RightX" == InKeyName and BattlePassController:GetModelData("BagActorController") then
     local DeltaX = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 10
-    BattlePassController:GetModelData("ActorController"):OnDragging({X = DeltaX})
+    BattlePassController:GetModelData("BagActorController"):OnDragging({X = DeltaX})
     return UIUtils.Handled
   end
   return UIUtils.Unhandled
@@ -2177,7 +2211,7 @@ function M:OnContentKeyDown(MyGeometry, InKeyEvent)
       self.Owner:HideGamepadShortcut(self.Owner.OpenTipsButtonIndex)
       IsEventHandled = true
     end
-  elseif InKeyName == UIConst.GamePadKey.FaceButtonRight and Item:HasAnyFocus() then
+  elseif InKeyName == UIConst.GamePadKey.FaceButtonRight and (Item:HasAnyUserFocus() or Item:HasFocusedDescendants()) then
     self.Owner.ButtonBar:SetGamepadBtnKeyVisibility(true)
     self.Owner:HideGamepadShortcut(self.Owner.ConfirmButtonIndex)
     self.Owner:HideGamepadShortcut(self.Owner.CancelButtonIndex)
@@ -2198,29 +2232,25 @@ function M:InitWeaponParams()
     self.BehaviorType = self.Params.Type
     self.WeaponSkinOptRewardId = self.Params.WeaponSkinOptRewardId
     self.ResourceId = self.Params.ResourceId
+    self.PreSelectSkinId = self.Params.SkinId
   end
-  if nil == BattlePassController:GetModelData("ActorController") then
-    local Avatar = GWorld:GetAvatar()
-    if Avatar then
-      local OptReward = DataMgr.OptReward[self.WeaponSkinOptRewardId]
-      local PreviewSkinId = OptReward and OptReward.Id[1]
-      local PreviewParams = {
-        Type = "Weapon",
-        SkinId = PreviewSkinId,
-        EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
-        ViewUI = self
-      }
-      local Target = self:CreatePreviewTargetData(PreviewParams)
-      PreviewParams.Target = Target
-      self.ActorController = self:CreatePreviewActor(PreviewParams)
-      BattlePassController:SetModelData("ActorController", self.ActorController)
-      BattlePassController:GetModelData("ActorController"):OnOpened()
-      BattlePassController:GetModel():AddModelDataRefCount("ActorController")
-      self.IsPreviewMode = true
-    end
-  else
-    self.ActorController = BattlePassController:GetModelData("ActorController")
-    BattlePassController:GetModel():AddModelDataRefCount("ActorController")
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    local OptReward = DataMgr.OptReward[self.WeaponSkinOptRewardId]
+    local PreviewSkinId = OptReward and OptReward.Id[1]
+    local PreviewParams = {
+      Type = "Weapon",
+      SkinId = PreviewSkinId,
+      EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
+      ViewUI = self
+    }
+    local Target = self:CreatePreviewTargetData(PreviewParams)
+    PreviewParams.Target = Target
+    self.ActorController = self:CreatePreviewActor(PreviewParams)
+    BattlePassController:SetModelData("BagActorController", self.ActorController)
+    BattlePassController:GetModelData("BagActorController"):OnOpened()
+    BattlePassController:GetModel():AddModelDataRefCount("BagActorController")
+    self.IsPreviewMode = true
   end
   self:InitWeaponSkinList()
 end
@@ -2271,9 +2301,9 @@ end
 function M:InitSkinList(FilteredContents)
   self.FilteredContents = FilteredContents
   self.List_Skin:ClearListItems()
-  self:UpdateAccessoryDetails(FilteredContents[1])
   self.List_Skin:SetVisibility(UIConst.VisibilityOp.Visible)
   local SelectFirstItem = false
+  local PreSelectSkinContent
   for _, Content in ipairs(FilteredContents) do
     if self.JumpToAccessoryId and self.JumpToAccessoryId == Content.AccessoryId then
       self.ComparedContent = Content
@@ -2288,12 +2318,24 @@ function M:InitSkinList(FilteredContents)
       Content.IsSelect = true
       SelectFirstItem = true
     end
+    if self.PreSelectSkinId and Content.SkinId == self.PreSelectSkinId then
+      PreSelectSkinContent = Content
+    end
     self.List_Skin:AddItem(Content)
   end
   self.List_Skin:RequestFillEmptyContent()
-  local FirstItem = self.List_Skin:GetListItems()[1]
-  if FirstItem then
-    self:OnSkinItemClicked(FirstItem)
+  if PreSelectSkinContent then
+    self:AddDelayFrameFunc(function()
+      self:OnSkinItemClicked(PreSelectSkinContent)
+      if PreSelectSkinContent.SelfWidget then
+        PreSelectSkinContent.SelfWidget:SetFocus()
+      end
+    end, 3)
+  else
+    local FirstItem = self.List_Skin:GetListItems()[1]
+    if FirstItem then
+      self:OnSkinItemClicked(FirstItem)
+    end
   end
 end
 
@@ -2303,29 +2345,25 @@ function M:InitCharParams()
     self.BehaviorType = self.Params.Type
     self.CharSkinOptRewardId = self.Params.CharSkinOptRewardId
     self.ResourceId = self.Params.ResourceId
+    self.PreSelectSkinId = self.Params.SkinId
   end
-  if nil == BattlePassController:GetModelData("ActorController") then
-    local Avatar = GWorld:GetAvatar()
-    if Avatar then
-      local OptReward = DataMgr.OptReward[self.WeaponSkinOptRewardId]
-      local PreviewSkinId = OptReward and OptReward.Id[1]
-      local PreviewParams = {
-        Type = "Char",
-        SkinId = PreviewSkinId,
-        EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
-        ViewUI = self
-      }
-      local Target = self:CreatePreviewTargetData(PreviewParams)
-      PreviewParams.Target = Target
-      self.ActorController = self:CreatePreviewActor(PreviewParams)
-      BattlePassController:SetModelData("ActorController", self.ActorController)
-      BattlePassController:GetModelData("ActorController"):OnOpened()
-      BattlePassController:GetModel():AddModelDataRefCount("ActorController")
-      self.IsPreviewMode = true
-    end
-  else
-    self.ActorController = BattlePassController:GetModelData("ActorController")
-    BattlePassController:GetModel():AddModelDataRefCount("ActorController")
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    local OptReward = DataMgr.OptReward[self.WeaponSkinOptRewardId]
+    local PreviewSkinId = OptReward and OptReward.Id[1]
+    local PreviewParams = {
+      Type = "Char",
+      SkinId = PreviewSkinId,
+      EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
+      ViewUI = self
+    }
+    local Target = self:CreatePreviewTargetData(PreviewParams)
+    PreviewParams.Target = Target
+    self.ActorController = self:CreatePreviewActor(PreviewParams)
+    BattlePassController:SetModelData("BagActorController", self.ActorController)
+    BattlePassController:GetModelData("BagActorController"):OnOpened()
+    BattlePassController:GetModel():AddModelDataRefCount("BagActorController")
+    self.IsPreviewMode = true
   end
   self:InitCharSkinList()
 end
@@ -2378,6 +2416,7 @@ function M:InitAccessoryParams()
     self.BehaviorType = self.Params.Type
     self.AccessoryOptRewardId = self.Params.AccessoryOptRewardId
     self.ResourceId = self.Params.ResourceId
+    self.PreSelectAccessoryId = self.Params.AccessoryId
   end
   local OptReward = DataMgr.OptReward[self.Params.AccessoryOptRewardId]
   local Type = OptReward and OptReward.Type[1]
@@ -2392,26 +2431,22 @@ function M:InitAccessoryParams()
       self.Map_AccessoryContents[Id] = Content
     end
   end
-  if nil == BattlePassController:GetModelData("ActorController") then
-    local Avatar = GWorld:GetAvatar()
-    if Avatar then
-      local PreviewAccessoryId = OptReward and OptReward.Id[1]
-      local PreviewParams = {
-        Type = "Char",
-        EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
-        ViewUI = self
-      }
-      local Target = self:CreatePreviewTargetData(PreviewParams)
-      PreviewParams.Target = Target
-      self.ActorController = self:CreatePreviewActor(PreviewParams)
-      BattlePassController:SetModelData("ActorController", self.ActorController)
-      BattlePassController:GetModelData("ActorController"):OnOpened()
-      BattlePassController:GetModel():AddModelDataRefCount("ActorController")
-      self.IsPreviewMode = true
-    end
-  else
-    self.ActorController = BattlePassController:GetModelData("ActorController")
-    BattlePassController:GetModel():AddModelDataRefCount("ActorController")
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    local PreviewAccessoryId = OptReward and OptReward.Id[1]
+    local PreviewParams = {
+      Type = "Char",
+      EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
+      ViewUI = self,
+      SkinId = self.Params.SkinId
+    }
+    local Target = self:CreatePreviewTargetData(PreviewParams)
+    PreviewParams.Target = Target
+    self.ActorController = self:CreatePreviewActor(PreviewParams)
+    BattlePassController:SetModelData("BagActorController", self.ActorController)
+    BattlePassController:GetModelData("BagActorController"):OnOpened()
+    BattlePassController:GetModel():AddModelDataRefCount("BagActorController")
+    self.IsPreviewMode = true
   end
   self:InitAccessoryList()
 end
@@ -2477,8 +2512,8 @@ function M:InitList(FilteredContents)
     local bId = b.Id or 0
     return aId < bId
   end)
-  self:UpdateAccessoryDetails(FilteredContents[1])
   self.TileView_Pendant:SetVisibility(UIConst.VisibilityOp.Visible)
+  local PreSelectAccessoryContent
   for _, Content in ipairs(FilteredContents) do
     if self.JumpToAccessoryId and self.JumpToAccessoryId == Content.AccessoryId then
       self.ComparedContent = Content
@@ -2489,12 +2524,24 @@ function M:InitList(FilteredContents)
         Content.TryOutText = GText("UI_CharPreview_Accessory_In_Trial")
       end
     end
+    if self.PreSelectAccessoryId and self.PreSelectAccessoryId == Content.AccessoryId then
+      PreSelectAccessoryContent = Content
+    end
     self.TileView_Pendant:AddItem(Content)
   end
   self.TileView_Pendant:RequestFillEmptyContent()
-  local FirstItem = self.TileView_Pendant:GetListItems()[1]
-  if FirstItem then
-    self:OnAccessoryItemClicked(FirstItem)
+  if PreSelectAccessoryContent then
+    self:AddDelayFrameFunc(function()
+      self:OnAccessoryItemClicked(PreSelectAccessoryContent)
+      if PreSelectAccessoryContent.SelfWidget then
+        PreSelectAccessoryContent.SelfWidget:SetFocus()
+      end
+    end, 3)
+  else
+    local FirstItem = self.TileView_Pendant:GetListItems()[1]
+    if FirstItem then
+      self:OnAccessoryItemClicked(FirstItem)
+    end
   end
 end
 
@@ -2504,6 +2551,7 @@ function M:InitWeaponAccessoryParams()
     self.BehaviorType = self.Params.Type
     self.AccessoryOptRewardId = self.Params.AccessoryOptRewardId
     self.ResourceId = self.Params.ResourceId
+    self.PreSelectAccessoryId = self.Params.AccessoryId
   end
   local OptReward = DataMgr.OptReward[self.Params.AccessoryOptRewardId]
   local Type = OptReward and OptReward.Type[1]
@@ -2518,26 +2566,21 @@ function M:InitWeaponAccessoryParams()
       self.Map_AccessoryContents[Id] = Content
     end
   end
-  if nil == BattlePassController:GetModelData("ActorController") then
-    local Avatar = GWorld:GetAvatar()
-    if Avatar then
-      local PreviewAccessoryId = OptReward and OptReward.Id[1]
-      local PreviewParams = {
-        Type = "Weapon",
-        EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
-        ViewUI = self
-      }
-      local Target = self:CreatePreviewTargetData(PreviewParams)
-      PreviewParams.Target = Target
-      self.ActorController = self:CreatePreviewActor(PreviewParams)
-      BattlePassController:SetModelData("ActorController", self.ActorController)
-      BattlePassController:GetModelData("ActorController"):OnOpened()
-      BattlePassController:GetModel():AddModelDataRefCount("ActorController")
-      self.IsPreviewMode = true
-    end
-  else
-    self.ActorController = BattlePassController:GetModelData("ActorController")
-    BattlePassController:GetModel():AddModelDataRefCount("ActorController")
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    local PreviewAccessoryId = OptReward and OptReward.Id[1]
+    local PreviewParams = {
+      Type = "Weapon",
+      EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
+      ViewUI = self
+    }
+    local Target = self:CreatePreviewTargetData(PreviewParams)
+    PreviewParams.Target = Target
+    self.ActorController = self:CreatePreviewActor(PreviewParams)
+    BattlePassController:SetModelData("BagActorController", self.ActorController)
+    BattlePassController:GetModelData("BagActorController"):OnOpened()
+    BattlePassController:GetModel():AddModelDataRefCount("BagActorController")
+    self.IsPreviewMode = true
   end
   self:InitAccessoryList()
 end
@@ -2584,6 +2627,7 @@ function M:InitGestureItemParams()
     self.BehaviorType = self.Params.Type
     self.GestureOptRewardId = self.Params.GestureOptRewardId
     self.ResourceId = self.Params.ResourceId
+    self.PreSelectAccessoryId = self.Params.GestureId
   end
   local OptReward = DataMgr.OptReward[self.Params.GestureOptRewardId]
   local Type = OptReward and OptReward.Type[1]
@@ -2598,26 +2642,21 @@ function M:InitGestureItemParams()
       self.Map_GestureContents[Id] = Content
     end
   end
-  if nil == BattlePassController:GetModelData("ActorController") then
-    local Avatar = GWorld:GetAvatar()
-    if Avatar then
-      local PreviewGestureId = OptReward and OptReward.Id[1]
-      local PreviewParams = {
-        Type = "Char",
-        EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
-        ViewUI = self
-      }
-      local Target = self:CreatePreviewTargetData(PreviewParams)
-      PreviewParams.Target = Target
-      self.ActorController = self:CreatePreviewActor(PreviewParams)
-      BattlePassController:SetModelData("ActorController", self.ActorController)
-      BattlePassController:GetModelData("ActorController"):OnOpened()
-      BattlePassController:GetModel():AddModelDataRefCount("ActorController")
-      self.IsPreviewMode = true
-    end
-  else
-    self.ActorController = BattlePassController:GetModelData("ActorController")
-    BattlePassController:GetModel():AddModelDataRefCount("ActorController")
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    local PreviewGestureId = OptReward and OptReward.Id[1]
+    local PreviewParams = {
+      Type = "Char",
+      EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
+      ViewUI = self
+    }
+    local Target = self:CreatePreviewTargetData(PreviewParams)
+    PreviewParams.Target = Target
+    self.ActorController = self:CreatePreviewActor(PreviewParams)
+    BattlePassController:SetModelData("BagActorController", self.ActorController)
+    BattlePassController:GetModelData("BagActorController"):OnOpened()
+    BattlePassController:GetModel():AddModelDataRefCount("BagActorController")
+    self.IsPreviewMode = true
   end
   self:InitGestureList()
 end
@@ -2696,20 +2735,20 @@ function M:SelectAccessoryItem(Content)
   if self.Params.Type == "SelectCharAccessory" then
     self:ClearCharAccessoryPreview()
     self.ActorController:DestoryPlayerMeleeWeapon()
-    BattlePassController:GetModelData("ActorController"):StopPlayerFX()
-    BattlePassController:GetModelData("ActorController"):StopPlayerMontage()
+    BattlePassController:GetModelData("BagActorController"):StopPlayerFX()
+    BattlePassController:GetModelData("BagActorController"):StopPlayerMontage()
     self.ActorController:HidePlayerActor("CharSkinPreview", false)
     if UIConst.FXAccessoryTypes[Content.AccessoryType] then
-      BattlePassController:GetModelData("ActorController"):ShowPlayerFXAccessory(Content.AccessoryId, Content.AccessoryType)
+      BattlePassController:GetModelData("BagActorController"):ShowPlayerFXAccessory(Content.AccessoryId, Content.AccessoryType)
       if UIConst.HidePlayerAccessoryTypes[Content.AccessoryType] then
         self.ActorController:HidePlayerActor("CharSkinPreview", true)
       end
     else
-      BattlePassController:GetModelData("ActorController"):ChangeCharAccessory(Content.AccessoryId, Content.AccessoryType)
+      BattlePassController:GetModelData("BagActorController"):ChangeCharAccessory(Content.AccessoryId, Content.AccessoryType)
     end
     self.ActorController:SetArmoryCameraTag("Char", Content.AccessoryType, "")
   else
-    BattlePassController:GetModelData("ActorController"):ChangeWeaponAccessory(Content.AccessoryId)
+    BattlePassController:GetModelData("BagActorController"):ChangeWeaponAccessory(Content.AccessoryId)
   end
 end
 
@@ -2909,7 +2948,7 @@ function M:UpdatePreviewWeaponSkinActorForContent(Content)
     EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
     ViewUI = self
   })
-  BattlePassController:GetModelData("ActorController"):ChangeSingleWeapon(WeaponData)
+  BattlePassController:GetModelData("BagActorController"):ChangeSingleWeapon(WeaponData)
   self.IsPreviewMode = true
 end
 
@@ -2923,14 +2962,14 @@ function M:UpdatePreviewCharSkinActorForContent(Content)
     SkinId = Content.SkinId,
     AccessorySuit = {}
   }
-  BattlePassController:GetModelData("ActorController").bStandaloneWeapon = false
-  BattlePassController:GetModelData("ActorController").ArmoryHelper:SetOriginalRotation(FRotator(0, 90, 0))
-  BattlePassController:GetModelData("ActorController").ExCameraOffset = FVector(0, 0, 0)
-  BattlePassController:GetModelData("ActorController"):ChangeCharModel(CharData)
-  BattlePassController:GetModelData("ActorController").ArmoryHelper:SetPlayer(BattlePassController:GetModelData("ActorController").ArmoryPlayer)
-  BattlePassController:GetModelData("ActorController").DelayFrame = 30
-  BattlePassController:GetModelData("ActorController"):SetMontageAndCamera("Char", nil, nil)
-  BattlePassController:GetModelData("ActorController"):ChangeCharAppearance(AppearanceInfo)
+  BattlePassController:GetModelData("BagActorController").bStandaloneWeapon = false
+  BattlePassController:GetModelData("BagActorController").ArmoryHelper:SetOriginalRotation(FRotator(0, 90, 0))
+  BattlePassController:GetModelData("BagActorController").ExCameraOffset = FVector(0, 0, 0)
+  BattlePassController:GetModelData("BagActorController"):ChangeCharModel(CharData)
+  BattlePassController:GetModelData("BagActorController").ArmoryHelper:SetPlayer(BattlePassController:GetModelData("BagActorController").ArmoryPlayer)
+  BattlePassController:GetModelData("BagActorController").DelayFrame = 30
+  BattlePassController:GetModelData("BagActorController"):SetMontageAndCamera("Char", nil, nil)
+  BattlePassController:GetModelData("BagActorController"):ChangeCharAppearance(AppearanceInfo)
   self.IsPreviewMode = true
 end
 

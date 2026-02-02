@@ -52,25 +52,28 @@ function BP_SupplyBase_C:OpenMechanism(PlayerActorEid)
     self:TriggerGameModeEvent("OnSupplyInteractive")
     self.NowPlayerEid = PlayerActorEid
     self:ClientPlayAnim(PlayerActorEid, 0, self.Eid)
-    self:AddTimer(self.SetInteractiveTime, self.InteractiveHandle)
+    self:AddTimer(self.SetInteractiveTime, self.InteractiveHandle, false, 0, "SupplayInteractive", false, PlayerActorEid)
   end
 end
 
-function BP_SupplyBase_C:InteractiveHandle()
+function BP_SupplyBase_C:InteractiveHandle(PlayerEid)
   if self.OpenState then
     if not self.OpenState then
       self.CanOpen = true
     end
     return
   end
-  local PlayerActor = Battle(self):GetEntity(self.NowPlayerEid)
   self.OpenState = true
   self:AddSurvivalValue()
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   if GameMode then
-    GameMode:TriggerDungeonAchieve("OnInteractiveSupplyBase", PlayerActor.Eid)
+    GameMode:TriggerDungeonAchieve("OnInteractiveSupplyBase", PlayerEid)
   end
-  PlayerActor:DeInteractiveMechanism(self.Eid, self.NowPlayerEid, 0, true)
+  local PlayerActor = Battle(self):GetEntity(PlayerEid)
+  if not PlayerActor then
+    return
+  end
+  PlayerActor:DeInteractiveMechanism(self.Eid, PlayerEid, 0, true)
 end
 
 function BP_SupplyBase_C:CloseMechanism(PlayerId, IsSuccess)

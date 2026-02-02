@@ -6,6 +6,8 @@ function M:Init()
   self.GuideType = nil
   self._GuidePointName = ""
   self.TargetPointList = {}
+  self.EventId = nil
+  self.EventParams = {}
   self.Text_TargetFound = ""
   self.Text_TargetNotFound = ""
   self.bShouldSetCameraParams = false
@@ -86,6 +88,8 @@ end
 
 function M:OnInitScreenshotParams(InOutParams)
   InOutParams.TargetPointNames = self.TargetPointList
+  InOutParams.EventId = self.EventId
+  InOutParams.EventParams = self.EventParams
   InOutParams.Text_TargetFound = GText(self.Text_TargetFound)
   if not self.Text_TargetFound or self.Text_TargetFound == "" then
     InOutParams.Text_TargetFound = GText("UI_CameraSystem_QuestSucc_Default")

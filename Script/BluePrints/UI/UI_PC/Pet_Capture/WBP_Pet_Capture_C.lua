@@ -688,7 +688,7 @@ function WBP_Pet_Capture_C:MoveRightSelectArrow()
   self.MoveSelectArrowHandle = ULTweenBPLibrary.FloatTo(self, {
     self,
     function(_, Value)
-      if not self.SelectStart then
+      if not self.SelectStart or self.SelectThrowSnack then
         ULTweenBPLibrary.KillIfIsTweening(self, self.MoveSelectArrowHandle)
         return
       end
@@ -708,7 +708,7 @@ function WBP_Pet_Capture_C:MoveLeftSelectArrow()
   self.MoveSelectArrowHandle = ULTweenBPLibrary.FloatTo(self, {
     self,
     function(_, Value)
-      if not self.SelectStart then
+      if not self.SelectStart or self.SelectThrowSnack then
         ULTweenBPLibrary.KillIfIsTweening(self, self.MoveSelectArrowHandle)
         return
       end

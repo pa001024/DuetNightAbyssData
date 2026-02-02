@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -231,6 +234,12 @@ return ReadOnly("BattleWeaponAttr", {
     MeleeWeaponAttrDisplay = "AlwaysFalse",
     RangedWeaponAttrDisplay = "AlwaysTrue",
     UltraWeaponInherit = 1
+  },
+  NormalAttackRate = {
+    AttrName = "NormalAttackRate",
+    DefaultValue = 0,
+    MeleeWeaponAttrDisplay = "AlwaysFalse",
+    RangedWeaponAttrDisplay = "AlwaysFalse"
   },
   RayCreatureRate = {
     AttrName = "RayCreatureRate",

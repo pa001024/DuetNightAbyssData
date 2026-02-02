@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -136,6 +139,13 @@ return ReadOnly("Mail", {
     MailSenderId = 99999,
     MailTimeLimit = -1,
     MailTitle = "Mail_Title_10008"
+  },
+  [10018] = {
+    MailContent = "Mail_Content_10018",
+    MailId = 10018,
+    MailSenderId = 99999,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10018"
   },
   [10021] = {
     MailContent = "Mail_Content_10021",
@@ -451,6 +461,34 @@ return ReadOnly("Mail", {
     MailSenderId = 900019,
     MailTimeLimit = -1,
     MailTitle = "Mail_Title_10066"
+  },
+  [10067] = {
+    IfStar = true,
+    MailContent = "Mail_Content_10067",
+    MailId = 10067,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10067"
+  },
+  [10068] = {
+    MailContent = "Mail_Content_10068",
+    MailId = 10068,
+    MailSenderId = 99999,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10068"
+  },
+  [10069] = {
+    MailContent = "Mail_Content_10069",
+    MailId = 10069,
+    MailSenderId = 99999,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10069"
+  },
+  [10070] = {
+    MailContent = "Mail_Content_10070",
+    MailId = 10070,
+    MailSenderId = 99999,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10069"
   },
   [19101] = {
     Condition = 4100,

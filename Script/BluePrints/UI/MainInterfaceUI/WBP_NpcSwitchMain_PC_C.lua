@@ -550,7 +550,7 @@ function WBP_NpcSwitchMain_PC_C:InitCameraTab()
 end
 
 function WBP_NpcSwitchMain_PC_C:PlayBlackScreenIn()
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   local UIManager = GWorld.GameInstance:GetGameUIManager()
   local Params = {}
   Params.BlackScreenHandle = "NPCSwitch"
@@ -870,7 +870,7 @@ function WBP_NpcSwitchMain_PC_C:SwitchNpcPose(NpcId, IsSet, PlayAppear, PlayDisa
   local ShowAnimationId = ShowAnimation[self.NowTabId]
   local GameInstance = GWorld.GameInstance
   local GameState = UE4.UGameplayStatics.GetGameState(GameInstance)
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   GameState:GetNpcInfoAsync(self.NpcStaticCreator[self.NowTabId].UnitId, function(Npc)
     self:BlockAllUIInput(false)
     Npc:InitNpcAccessories(NpcInfo.CharId)
@@ -1024,7 +1024,7 @@ function WBP_NpcSwitchMain_PC_C:CloseList()
       self.NpcStaticCreator[self.NowTabId].UnitId = 0
     end
   end
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self.Panel_Selected:StopAnimation(self.Panel_Selected.In)
   self.Panel_Selected:PlayAnimation(self.Panel_Selected.Out)
   
@@ -1055,7 +1055,7 @@ function WBP_NpcSwitchMain_PC_C:CloseMain()
 end
 
 function WBP_NpcSwitchMain_PC_C:SetCannotClose(time)
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   
   local function func()
     self:BlockAllUIInput(false)

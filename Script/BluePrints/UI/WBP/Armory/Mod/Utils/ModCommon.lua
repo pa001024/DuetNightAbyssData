@@ -1,4 +1,5 @@
 local ModCommon = {}
+ModCommon.WuyoushengMod = "WuyoushengMod"
 ModCommon.ArmoryMod = "ArmoryMod"
 ModCommon.AbyssMod = "AbyssMod"
 ModCommon.DragUIName = "ArmoryModItemDrag"

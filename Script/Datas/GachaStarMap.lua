@@ -41,6 +41,9 @@ T.RT_14 = {Count = 1, Weight = 2000}
 T.RT_15 = {
   [1] = T.RT_14
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -196,6 +199,55 @@ return ReadOnly("GachaStarMap", {
           [20024] = T.RT_8,
           [20035] = T.RT_8,
           [60002] = T.RT_8
+        },
+        Star5 = T.RT_1,
+        Up4 = T.RT_1,
+        Up5 = T.RT_1,
+        UpSum4 = 0,
+        UpSum5 = 0
+      },
+      [6] = T.RT_6
+    },
+    [9004] = {
+      [2] = {
+        Star3 = T.RT_1,
+        Star4 = T.RT_1,
+        Star5 = {
+          [410201] = T.RT_11
+        },
+        Up4 = T.RT_1,
+        Up5 = T.RT_1,
+        UpSum4 = 0,
+        UpSum5 = 0
+      },
+      [4] = {
+        Star3 = T.RT_9,
+        Star4 = {
+          [10001] = T.RT_8,
+          [10002] = T.RT_8,
+          [10003] = T.RT_8,
+          [10004] = T.RT_8,
+          [10021] = T.RT_8,
+          [10022] = T.RT_8,
+          [10023] = T.RT_8,
+          [10032] = T.RT_8,
+          [20002] = T.RT_8,
+          [20003] = T.RT_8,
+          [20004] = T.RT_8,
+          [20008] = T.RT_8,
+          [20009] = T.RT_8,
+          [20010] = T.RT_8,
+          [20011] = T.RT_8,
+          [20012] = T.RT_8,
+          [20013] = T.RT_8,
+          [20014] = T.RT_8,
+          [20015] = T.RT_8,
+          [20021] = T.RT_8,
+          [20022] = T.RT_8,
+          [20023] = T.RT_8,
+          [20024] = T.RT_8,
+          [20035] = T.RT_8,
+          [50003] = T.RT_8
         },
         Star5 = T.RT_1,
         Up4 = T.RT_1,

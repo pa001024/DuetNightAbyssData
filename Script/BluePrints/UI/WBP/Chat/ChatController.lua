@@ -3,6 +3,7 @@ local ChatCommon = require("BluePrints.UI.WBP.Chat.ChatCommon")
 local TimeUtils = require("Utils.TimeUtils")
 local HeroUSDKUtils = require("Utils.HeroUSDKUtils")
 local MiscUtils = require("Utils.MiscUtils")
+local json = require("rapidjson")
 local M = Class("BluePrints.Common.MVC.Controller")
 
 function M:Init()
@@ -63,6 +64,10 @@ function M:SendChatToPlayer(Uid, ContentText)
   local DyeShareContent = self:TryParseMyDyePlanInfo(ContentText)
   if DyeShareContent and not ModContent then
     ContentText = DyeShareContent
+  end
+  local GiftContent = self:TryParseGiftInfo(ContentText)
+  if GiftContent and not ModContent and not DyeShareContent then
+    ContentText = GiftContent
   end
   self:GetAvatar():ChatToPlayer(Uid, ContentText)
 end
@@ -157,10 +162,7 @@ function M:RecvChatToWorld(ChannelType, ContentText)
     return
   end
   local FakeMessage = self:CreateFakeMsg(ContentText, CommonConst.MESSAGE_TYPE_SELF, ChannelType)
-  local TimeWrap, MsgWrap = self:GetModel():AddMessage(FakeMessage, false)
-  if FakeMessage.ChannelType == ChatModel:GetCurrentChannel() then
-    self:NotifyEvent(ChatCommon.EventID.ChatMsgSent, TimeWrap, MsgWrap)
-  end
+  self:_AddMessage(FakeMessage, false)
 end
 
 function M:SendChatToTeam(ContentText)
@@ -190,10 +192,7 @@ function M:RecvChatToTeam(ContentText)
     return
   end
   local FakeMessage = self:CreateFakeMsg(ContentText, CommonConst.MESSAGE_TYPE_SELF, ChatCommon.ChannelDef.InTeam)
-  local TimeWrap, MsgWrap = self:GetModel():AddMessage(FakeMessage, false)
-  if FakeMessage.ChannelType == ChatCommon.ChannelDef.InTeam then
-    self:NotifyEvent(ChatCommon.EventID.ChatMsgSent, TimeWrap, MsgWrap)
-  end
+  self:_AddMessage(FakeMessage, false)
 end
 
 function M:SendChatToSettlementOnline(ContentText)
@@ -213,10 +212,7 @@ function M:RecvChatToSettlementOnline(ContentText)
     return
   end
   local FakeMessage = self:CreateFakeMsg(ContentText, CommonConst.MESSAGE_TYPE_SELF, ChatCommon.ChannelDef.SettlementOnline)
-  local TimeWrap, MsgWrap = self:GetModel():AddMessage(FakeMessage, false)
-  if FakeMessage.ChannelType == ChatCommon.ChannelDef.SettlementOnline then
-    self:NotifyEvent(ChatCommon.EventID.ChatMsgSent, TimeWrap, MsgWrap)
-  end
+  self:_AddMessage(FakeMessage, false)
 end
 
 function M:SendMemberChangeTipsToTeam(MemberInfo, EventType)
@@ -233,11 +229,7 @@ end
 
 function M:RecvSystemInfoToTeam(ContentText)
   local FakeMessage = self:CreateFakeMsg(ContentText, CommonConst.MESSAGE_TYPE_SYSTEM, ChatCommon.ChannelDef.InTeam)
-  local TimeWrap, MsgWrap = self:GetModel():AddMessage(FakeMessage, false)
-  if FakeMessage.ChannelType ~= ChatModel:GetCurrentChannel() then
-    return
-  end
-  self:NotifyEvent(ChatCommon.EventID.ChatMsgRecv, TimeWrap, MsgWrap)
+  self:_AddMessage(FakeMessage, false)
 end
 
 function M:SendChangeQuickMessage(Index, ContentText)
@@ -308,6 +300,15 @@ function M:TryParseMyDyePlanInfo(MsgStr)
   return nil
 end
 
+function M:TryParseGiftInfo(MsgStr)
+  if MsgStr == ChatCommon.GiftCopyHeader then
+    local GiftContent = self:GenerateGiftMessage()
+    return GiftContent
+  else
+    return nil
+  end
+end
+
 function M:HandleChatMessage(Message)
   if not self.bInited then
     return
@@ -321,8 +322,42 @@ function M:HandleChatMessage(Message)
   if ChatModel:IsChannelExclude(Message.ChannelType) then
     return
   end
-  local TimeWrap, MsgWrap = self:GetModel():AddMessage(Message, true)
-  if Message.ChannelType ~= ChatModel:GetCurrentChannel() then
+  self:_AddMessage(Message, true)
+end
+
+function M:SendGiftMessage(UID, Index)
+  self.GiftInfo = {
+    Index = Index or 1
+  }
+  self:SendChatToPlayer(UID, ChatCommon.GiftCopyHeader)
+end
+
+function M:SendGiftReceivedMessage(UID, Index)
+  self.GiftInfo = {
+    bGiftReceived = true,
+    Index = Index or 1
+  }
+  self:SendChatToPlayer(UID, ChatCommon.GiftCopyHeader)
+end
+
+function M:GenerateGiftMessage()
+  if not self.GiftInfo then
+    return nil
+  end
+  return ChatCommon.GiftCopyHeader .. json.encode(self.GiftInfo)
+end
+
+function M:_AddMessage(Message, bCalcUnread)
+  local TimeWrap, MsgWrap = self:GetModel():AddMessage(Message, bCalcUnread)
+  local Channel = Message.ChannelType
+  if MsgWrap:IsSticker() and Channel ~= ChatCommon.ChannelDef.Friend then
+    local Uid = Message.Sender.Uid
+    local GroupId = MsgWrap.EmojiInfos[1].GroupId
+    local Id = MsgWrap.EmojiInfos[1].Id
+    local StickerTexPath = DataMgr.ChatEmoji[GroupId][Id]
+    self:NotifyEvent(ChatCommon.EventID.RecvStickerInPubChannels, Uid, StickerTexPath)
+  end
+  if Channel ~= ChatModel:GetCurrentChannel() then
     return
   end
   if Message.Type == CommonConst.MESSAGE_TYPE_SELF then
@@ -440,9 +475,6 @@ end
 
 function M:OpenChatReportDialog(Params)
   local View = self:GetView()
-  if not IsValid(View) then
-    return
-  end
   self:GetUIMgr(View):ShowCommonPopupUI(ChatCommon.AccuseDialog, Params, View)
 end
 

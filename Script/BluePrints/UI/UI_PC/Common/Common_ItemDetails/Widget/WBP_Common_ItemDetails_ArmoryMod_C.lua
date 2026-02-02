@@ -140,6 +140,125 @@ function M:OnInitItemInfo(ModInfo, ModServerData)
   end
 end
 
+function M:OnInitItemInfoInBag(ModInfo, ModServerData)
+  self.ParentWidget.EMScrollBox_1.OnMouseButtonDown:Remove(self, self.OnBtnPressed)
+  self.ParentWidget.EMScrollBox_1.OnMouseButtonDown:Add(self, self.OnBtnPressed)
+  if not self.ParentWidget.Content.IsArmoryMod then
+    return
+  end
+  if not ModServerData then
+    return
+  end
+  self:InitAttrList()
+  self.ModServerData = ModServerData
+  local Platfrom = CommonUtils.GetDeviceTypeByPlatformName(self)
+  self.ParentWidget.Panel_Extra:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.ParentWidget.Switch_Bg:SetActiveWidgetIndex(1)
+  self.ParentWidget.Switch_Frame:SetActiveWidgetIndex(1)
+  self.Text_Plus:SetText("+")
+  local LineWidget = self.ParentWidget.Line
+  local BtnWidget = self.ParentWidget.Panel_Button
+  local Btn = self.ParentWidget.Btn02_Mod
+  local BtnUnEquip = self.ParentWidget.Btn01_Mod
+  if "Mobile" == Platfrom then
+    Btn:SwitchNormalAnimation()
+    BtnUnEquip:SwitchNormalAnimation()
+    self.ParentWidget.Btn01_Mod:SetIconPanelVisibility(UIConst.VisibilityOp.Collapsed)
+    self.ParentWidget.Btn02_Mod:SetIconPanelVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  self.ParentWidget.Btn01_Mod:SetDefaultGamePadImg("X")
+  self.ParentWidget.Btn02_Mod:SetDefaultGamePadImg("Y")
+  if not ModModel:IsModUINormal() then
+    LineWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    BtnWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  if not ModServerData:IsOriginalMaxLevel() or not ModServerData:IsFinalMaxLevel() then
+    LineWidget.Switch_Line:SetActiveWidgetIndex(0)
+    LineWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Panel_Preview:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    if self.ParentWidget.Content.bIsHoverState then
+      self.ParentWidget.Panel_Extra:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      BtnWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.ParentWidget.Switch_Bg:SetActiveWidgetIndex(0)
+      self.ParentWidget.Switch_Frame:SetActiveWidgetIndex(0)
+      LineWidget.Switch_Bg:SetActiveWidgetIndex(0)
+    elseif ModModel:IsModUINormal() then
+      LineWidget.Switch_Bg:SetActiveWidgetIndex(1)
+      BtnWidget:SetVisibility(UIConst.VisibilityOp.Visible)
+      Btn:SetVisibility(UIConst.VisibilityOp.Visible)
+      if ModServerData:HasCardLevel() and ModServerData:IsOriginalMaxLevel() then
+        Btn:SetText(GText("UI_Mod_CardLevelUp"))
+      else
+        Btn:SetText(GText("UI_FUNC_LEVELUP"))
+      end
+      if not self.Btn2Binded then
+        Btn:BindEventOnPressed(self, self.OnBtnPressed)
+        Btn:BindEventOnReleased(self, self.OnBtnIntensifyClicked)
+        self.Btn2Binded = true
+      end
+      BtnUnEquip:SetVisibility(UIConst.VisibilityOp.Visible)
+      local SelectStuff = ModModel:GetSelectStuff()
+      if SelectStuff:IsSlot() then
+        BtnUnEquip:SetText(GText("UI_Armory_Weapon_Remove"))
+      else
+        BtnUnEquip:SetText(GText("UI_Mod_QuickEquip"))
+      end
+      DebugPrint(ErrorTag, "绑定 ArmoryMod Tips 按钮里面的回调", self.ModServerData:GetName())
+      BtnUnEquip.ReleaseLogics = {}
+      BtnUnEquip.PressLogics = {}
+      BtnUnEquip:BindEventOnPressed(self, self.OnBtnPressed)
+      BtnUnEquip:BindEventOnReleased(self, self.OnBtnUnEquipMod)
+      self.EnableBtn = true
+    end
+  elseif ModModel:IsModUINormal() then
+    if self.ParentWidget.Content.bIsHoverState then
+      BtnWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      LineWidget.Switch_Line:SetActiveWidgetIndex(1)
+      LineWidget.Switch_Bg:SetActiveWidgetIndex(0)
+    else
+      BtnWidget:SetVisibility(UIConst.VisibilityOp.Visible)
+      Btn:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      BtnUnEquip:SetVisibility(UIConst.VisibilityOp.Visible)
+      local SelectStuff = ModModel:GetSelectStuff()
+      if SelectStuff:IsSlot() then
+        BtnUnEquip:SetText(GText("UI_Armory_Weapon_Remove"))
+      else
+        BtnUnEquip:SetText(GText("UI_Mod_QuickEquip"))
+      end
+      BtnUnEquip.ReleaseLogics = {}
+      BtnUnEquip.PressLogics = {}
+      BtnUnEquip:BindEventOnPressed(self, self.OnBtnPressed)
+      BtnUnEquip:BindEventOnReleased(self, self.OnBtnUnEquipMod)
+      LineWidget.Switch_Line:SetActiveWidgetIndex(0)
+      LineWidget.Switch_Bg:SetActiveWidgetIndex(1)
+    end
+    LineWidget:SetVisibility(UIConst.VisibilityOp.Visible)
+    if LineWidget.White then
+      LineWidget.Bg02_Straight:SetColorAndOpacity(LineWidget.White)
+      LineWidget.Bg02:SetColorAndOpacity(LineWidget.White)
+    end
+    LineWidget.Text_Level:SetText(GText("Max_Level_Achieved"))
+  end
+  self:UpdateAttrList()
+  if self.ModServerData.ConflictUuids:Length() > 0 and ModModel:IsModUINormal() then
+    self.ParentWidget.Panel_Extra:SetVisibility(UIConst.VisibilityOp.Visible)
+    LineWidget:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.ParentWidget.Switch_Bg:SetActiveWidgetIndex(1)
+    self.ParentWidget.Switch_Frame:SetActiveWidgetIndex(1)
+    LineWidget.Switch_Line:SetActiveWidgetIndex(1)
+    LineWidget.Bg02_Straight:SetColorAndOpacity(LineWidget.Red)
+    LineWidget.Bg02:SetColorAndOpacity(LineWidget.Red)
+    local ConflictMod = ModModel:GetMod(self.ModServerData.ConflictUuids[1])
+    local Text = string.format(GText("UI_Armory_ConflictWithMod"), GText(ConflictMod:Data().Name))
+    BtnUnEquip:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    if ModServerData:IsFinalMaxLevel() then
+      BtnWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      LineWidget.Switch_Line:SetActiveWidgetIndex(0)
+    end
+    LineWidget.Text_Level:SetText(Text)
+  end
+end
+
 function M:IsRecommendAttr(AttrKey)
   return ModModel:IsRecommendAttr(AttrKey), true
 end

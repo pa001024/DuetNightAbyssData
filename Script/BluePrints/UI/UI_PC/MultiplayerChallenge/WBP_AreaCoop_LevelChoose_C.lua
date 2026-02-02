@@ -43,6 +43,9 @@ function M:Construct()
   self:InitWidgetInfoInGamePad()
   self:StaticInit()
   self.ScrollBox_Desc:ScrollToStart()
+  if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
+    self:InitKeyboardView()
+  end
 end
 
 function M:Destruct()
@@ -356,8 +359,9 @@ function M:OpenTicketDialog_Solo()
     DungeonId = DungeonId,
     RightCallbackObj = self,
     RightCallbackFunction = function(Obj, PackageData)
-      self.TicketId = PackageData and PackageData.Content_1 and PackageData.Content_1.TicketId or nil
-      self:EnterStandalone()
+      local SelectedTicketId = PackageData and PackageData.Content_1 and PackageData.Content_1.TicketId or nil
+      self.TicketId = SelectedTicketId
+      self:EnterStandalone(SelectedTicketId)
     end,
     ForbiddenRightCallbackObj = self,
     AutoFocus = true
@@ -397,7 +401,7 @@ function M:TeamMatchTimingEnd()
   self:RefreshBtnState(false)
 end
 
-function M:EnterStandalone()
+function M:EnterStandalone(TicketId)
   local Avatar = GWorld:GetAvatar()
   assert(Avatar, "NO AVATAR")
   local DungeonId = self:GetCurDungeonId()
@@ -418,6 +422,13 @@ function M:EnterStandalone()
     return
   end
   self:RefreshBtnState(true)
+  local TicketParam = TicketId
+  if nil == TicketParam then
+    TicketParam = self.TicketId
+  end
+  if nil == TicketParam then
+    TicketParam = -1
+  end
   self:TryEnterDungeon(Avatar, DungeonId, CommonConst.DungeonNetMode.Standalone, function(RetCode, ...)
     local bCanEnter = M.HandleEnterDungeonRetCode(RetCode, ...)
     if bCanEnter then
@@ -431,7 +442,7 @@ function M:EnterStandalone()
     else
       self:RefreshBtnState(false)
     end
-  end)
+  end, TicketParam)
 end
 
 function M:OnReturnKeyDown()
@@ -718,9 +729,11 @@ function M:EnsurePlatformDefaultListLoaded()
     if Widget.IsLeft ~= nil then
       Widget.IsLeft = true
     end
-    if Widget.NeedLeft then
-      Widget.NeedLeft = true
-    end
+    self:AddTimer(0.3, function()
+      if IsValid(Widget) and Widget.Preview and Widget.Preview.Btn_Qa_Summon then
+        Widget.Preview.Btn_Qa_Summon.Tips_MenuAnchor:SetPlacement(EMenuPlacement.MenuPlacement_ComboBox)
+      end
+    end)
     if TargetGroup and TargetGroup.AddChild then
       TargetGroup:ClearChildren()
       TargetGroup:AddChild(Widget)

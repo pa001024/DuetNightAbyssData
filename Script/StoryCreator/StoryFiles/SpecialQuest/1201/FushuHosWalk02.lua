@@ -118,6 +118,12 @@ return {
             startPort = "QuestStart",
             endQuest = "1763637969070769",
             endPort = "In"
+          },
+          {
+            startQuest = "176363793557489",
+            startPort = "QuestStart",
+            endQuest = "176537194275455835729",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -208,6 +214,20 @@ return {
               EnableFadeOut = false,
               NewTargetPointName = "",
               StaticCreatorIdList = {2070211}
+            }
+          },
+          ["176537194275455835729"] = {
+            key = "176537194275455835729",
+            type = "ChangeStaticCreatorNode",
+            name = "生成女孩",
+            pos = {x = 1198.6297729618166, y = 138.33307533539738},
+            propsData = {
+              ActiveEnable = true,
+              EnableBlackScreenSync = false,
+              EnableFadeIn = false,
+              EnableFadeOut = false,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {2070207}
             }
           }
         },

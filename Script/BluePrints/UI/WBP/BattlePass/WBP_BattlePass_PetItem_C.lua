@@ -11,13 +11,6 @@ function M:Construct()
   self.Button_Area.OnHovered:Add(self, self.OnBtnHovered)
   self.Button_Area.OnUnhovered:Add(self, self.OnBtnUnhovered)
   self.Button_Area.OnClicked:Add(self, self.OnBtnClicked)
-  self.Btn_Check:BindEventOnClicked(self, self.OnBtnChecked)
-  self.Key_Detail:CreateCommonKey({
-    KeyInfoList = {
-      {Type = "Img", ImgShortPath = "X"}
-    },
-    Desc = GText("UI_Controller_CheckDetails")
-  })
   self:PlayAnimation(self.Normal)
 end
 
@@ -120,6 +113,10 @@ function M:OnBtnChecked()
     },
     EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon
   })
+end
+
+function M:OnFocusReceived(MyGeometry, InFocusEvent)
+  return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.Button_Area)
 end
 
 return M

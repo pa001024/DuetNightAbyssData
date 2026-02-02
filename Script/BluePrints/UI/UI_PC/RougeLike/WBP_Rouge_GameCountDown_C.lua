@@ -4,7 +4,6 @@ local M = Class({
 })
 
 function M:InitRougeGameCountDown()
-  EventManager:AddEvent(EventID.OnRougeLikeCanonScoreAdd, self, self.AddScore)
   self.CurScore = 0
   self.Text_ScoreTitle:SetText(GText("RougeMiniGamePoints"))
   self.Text_ScoreNum:SetText(0)

@@ -450,12 +450,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "176543733256461290259",
-            startPort = "Out",
-            endQuest = "176543733256461290254",
-            endPort = "In"
-          },
-          {
             startQuest = "176543733256461290248",
             startPort = "Out",
             endQuest = "176543733256461290261",
@@ -508,6 +502,30 @@ return {
             startPort = "Out",
             endQuest = "17562898249003756",
             endPort = "Fail"
+          },
+          {
+            startQuest = "17562901517964930",
+            startPort = "true",
+            endQuest = "17657815633362556",
+            endPort = "In"
+          },
+          {
+            startQuest = "176543733256461290259",
+            startPort = "Out",
+            endQuest = "1765883761703655463",
+            endPort = "Input"
+          },
+          {
+            startQuest = "1765883761703655463",
+            startPort = "PC",
+            endQuest = "176543733256461290254",
+            endPort = "In"
+          },
+          {
+            startQuest = "1765883761703655463",
+            startPort = "Mobile",
+            endQuest = "1765883755179655362",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -644,6 +662,7 @@ return {
             pos = {x = 1908.5967341482049, y = 53.10873272754064},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 12018202,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1201/120104/12018202.12018202'",
               TalkType = "FixSimple",
@@ -667,6 +686,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -834,6 +854,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1050,6 +1071,7 @@ return {
             pos = {x = 356.8121278875924, y = 1377.6959565202596},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = ""
             }
@@ -1198,7 +1220,7 @@ return {
             key = "176543733256461290249",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 6073.143213888905, y = -1003.9908108834899},
+            pos = {x = 5883.669536863958, y = -1002.2364249851107},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 12018221,
@@ -1269,9 +1291,9 @@ return {
             key = "176543733256461290254",
             type = "ShowGuideNode",
             name = "显示引导（支持执行操作后自动关闭/强制引导）",
-            pos = {x = 6332.905597071489, y = -868.8452029326894},
+            pos = {x = 6402.203840057466, y = -951.301340156509},
             propsData = {
-              MessageId = 200035,
+              MessageId = 200038,
               SkillNameList = {"Skill3"},
               LastTime = -1,
               bIsForceTouch = false,
@@ -1307,7 +1329,7 @@ return {
             key = "176543733256461290256",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = 6076.0319190557275, y = -691.1749631941385},
+            pos = {x = 5886.55824203078, y = -689.4205772957594},
             propsData = {
               NewDescription = "Description_Nai03_02_01",
               NewDetail = "",
@@ -1340,7 +1362,7 @@ return {
             key = "176543733256461290259",
             type = "ShowGuideMainNode",
             name = "显示图文引导",
-            pos = {x = 6075.087487036818, y = -866.4282135623347},
+            pos = {x = 5885.613810011871, y = -864.6738276639555},
             propsData = {GuideId = 108}
           },
           ["176543733256461290260"] = {
@@ -1379,6 +1401,45 @@ return {
               MessageContent = "ResetVine",
               UnitId = -1
             }
+          },
+          ["17657815633362556"] = {
+            key = "17657815633362556",
+            type = "SwitchPlayerBattlePetNode",
+            name = "切换玩家战斗宠物",
+            pos = {x = 1908.3529411764707, y = -134.47058823529414},
+            propsData = {BattlePetId = 0}
+          },
+          ["1765883755179655362"] = {
+            key = "1765883755179655362",
+            type = "ShowGuideNode",
+            name = "显示引导（支持执行操作后自动关闭/强制引导）",
+            pos = {x = 6414.706772391085, y = -748.1177304280674},
+            propsData = {
+              MessageId = 200038,
+              SkillNameList = {"Skill3"},
+              LastTime = -1,
+              bIsForceTouch = false,
+              bIsTimeDilation = false,
+              HighLightUIPath = "BattleMain.Char_Skill.SupportSkill",
+              UICompName = "Button_Area",
+              UIShape = "Square",
+              IsForbidInAnim = false,
+              IsForbidOutAnim = false,
+              ForbidSuccessAnim = false,
+              IsNotForceRelease = false,
+              UICompSizeOffset = {X = 0, Y = 0},
+              UICompLocOffset = {X = 0, Y = 0},
+              MessageParentLoc = "HighLightUI",
+              MessageLoc = "Up",
+              MessageLocOffset = {X = 0, Y = 0}
+            }
+          },
+          ["1765883761703655463"] = {
+            key = "1765883761703655463",
+            type = "PlatformJudgmentNode",
+            name = "PC/手机平台判断",
+            pos = {x = 6128.741874747674, y = -880.3617741381852},
+            propsData = {}
           }
         },
         commentData = {
@@ -1421,8 +1482,8 @@ return {
           ["176543737835561291520"] = {
             key = "176543737835561291520",
             name = "Input Commment...",
-            position = {x = 6008.93156843157, y = -1092.290459540458},
-            size = {width = 530.7692307692305, height = 526.1538461538462}
+            position = {x = 5819.457891406622, y = -1090.536073642079},
+            size = {width = 889.1085227553581, height = 632.1041080640772}
           },
           ["176543740170761291995"] = {
             key = "176543740170761291995",
@@ -1611,6 +1672,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1709,6 +1771,7 @@ return {
             pos = {x = 2969.4705882352937, y = -275.48431372549027},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "QuestPoint_GongMingShi02"
             }
@@ -1720,6 +1783,7 @@ return {
             pos = {x = 2998.915966386554, y = -161.06834733893552},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "QuestPoint_GongMingShi01"
             }
@@ -1731,6 +1795,7 @@ return {
             pos = {x = 3111.020798319328, y = -177.58053221288515},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "QuestPoint_GongMingShi02"
             }
@@ -1742,6 +1807,7 @@ return {
             pos = {x = 3148.213445378152, y = -262.0655462184874},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "QuestPoint_GongMingShi01"
             }
@@ -1937,12 +2003,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1760426995628658726",
-            startPort = "Out",
-            endQuest = "17604287715923273921",
-            endPort = "In"
-          },
-          {
             startQuest = "1760426995628658728",
             startPort = "Out",
             endQuest = "1756298279497658761",
@@ -2031,6 +2091,24 @@ return {
             startPort = "Out",
             endQuest = "17651785927758401",
             endPort = "In"
+          },
+          {
+            startQuest = "17658839282091296062",
+            startPort = "PC",
+            endQuest = "17604287715923273921",
+            endPort = "In"
+          },
+          {
+            startQuest = "17658839282091296062",
+            startPort = "Mobile",
+            endQuest = "17658839151741295904",
+            endPort = "In"
+          },
+          {
+            startQuest = "1760426995628658726",
+            startPort = "Out",
+            endQuest = "17658839282091296062",
+            endPort = "Input"
           }
         },
         nodeData = {
@@ -2159,6 +2237,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2332,9 +2411,9 @@ return {
             key = "17604287715923273921",
             type = "ShowGuideNode",
             name = "显示引导（支持执行操作后自动关闭/强制引导）",
-            pos = {x = 3191.348971693941, y = 107.59206103494034},
+            pos = {x = 3191.348971693941, y = 457.59206103494034},
             propsData = {
-              MessageId = 200035,
+              MessageId = 200038,
               SkillNameList = {"Skill3"},
               LastTime = -1,
               bIsForceTouch = false,
@@ -2459,6 +2538,38 @@ return {
               GuideTalkStyle = "Normal",
               OverrideFailBlend = false
             }
+          },
+          ["17658839151741295904"] = {
+            key = "17658839151741295904",
+            type = "ShowGuideNode",
+            name = "显示引导（支持执行操作后自动关闭/强制引导）",
+            pos = {x = 3215.7799808886766, y = 622.9211859718451},
+            propsData = {
+              MessageId = 200038,
+              SkillNameList = {"Skill3"},
+              LastTime = -1,
+              bIsForceTouch = false,
+              bIsTimeDilation = false,
+              HighLightUIPath = "BattleMain.Char_Skill.SupportSkill",
+              UICompName = "Button_Area",
+              UIShape = "Square",
+              IsForbidInAnim = false,
+              IsForbidOutAnim = false,
+              ForbidSuccessAnim = false,
+              IsNotForceRelease = false,
+              UICompSizeOffset = {X = 0, Y = 0},
+              UICompLocOffset = {X = 0, Y = 0},
+              MessageParentLoc = "HighLightUI",
+              MessageLoc = "Up",
+              MessageLocOffset = {X = 0, Y = 0}
+            }
+          },
+          ["17658839282091296062"] = {
+            key = "17658839282091296062",
+            type = "PlatformJudgmentNode",
+            name = "PC/手机平台判断",
+            pos = {x = 2911.7799808886766, y = 458.9800511858789},
+            propsData = {}
           }
         },
         commentData = {
@@ -2635,12 +2746,6 @@ return {
           {
             startQuest = "17604245689179802881",
             startPort = "Out",
-            endQuest = "17604267649913564",
-            endPort = "In"
-          },
-          {
-            startQuest = "17604245689179802881",
-            startPort = "Out",
             endQuest = "17604268115714451",
             endPort = "In"
           },
@@ -2721,6 +2826,24 @@ return {
             startPort = "Out",
             endQuest = "17651785195057433",
             endPort = "In"
+          },
+          {
+            startQuest = "17658839687621936435",
+            startPort = "PC",
+            endQuest = "17604267649913564",
+            endPort = "In"
+          },
+          {
+            startQuest = "17658839687621936435",
+            startPort = "Mobile",
+            endQuest = "17658839607711936294",
+            endPort = "In"
+          },
+          {
+            startQuest = "17604245689179802881",
+            startPort = "Out",
+            endQuest = "17658839687621936435",
+            endPort = "Input"
           }
         },
         nodeData = {
@@ -2849,6 +2972,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -3066,9 +3190,9 @@ return {
             key = "17604267649913564",
             type = "ShowGuideNode",
             name = "显示引导（支持执行操作后自动关闭/强制引导）",
-            pos = {x = 3165.7799808886766, y = 68.98005118587884},
+            pos = {x = 3210.607566505905, y = 532.7731485333607},
             propsData = {
-              MessageId = 200035,
+              MessageId = 200038,
               SkillNameList = {"Skill3"},
               LastTime = -1,
               bIsForceTouch = false,
@@ -3199,6 +3323,38 @@ return {
               GuideTalkStyle = "Normal",
               OverrideFailBlend = false
             }
+          },
+          ["17658839607711936294"] = {
+            key = "17658839607711936294",
+            type = "ShowGuideNode",
+            name = "显示引导（支持执行操作后自动关闭/强制引导）",
+            pos = {x = 3230.2042364392632, y = 675.4886775880525},
+            propsData = {
+              MessageId = 200038,
+              SkillNameList = {"Skill3"},
+              LastTime = -1,
+              bIsForceTouch = false,
+              bIsTimeDilation = false,
+              HighLightUIPath = "BattleMain.Char_Skill.SupportSkill",
+              UICompName = "Button_Area",
+              UIShape = "Square",
+              IsForbidInAnim = false,
+              IsForbidOutAnim = false,
+              ForbidSuccessAnim = false,
+              IsNotForceRelease = false,
+              UICompSizeOffset = {X = 0, Y = 0},
+              UICompLocOffset = {X = 0, Y = 0},
+              MessageParentLoc = "HighLightUI",
+              MessageLoc = "Up",
+              MessageLocOffset = {X = 0, Y = 0}
+            }
+          },
+          ["17658839687621936435"] = {
+            key = "17658839687621936435",
+            type = "PlatformJudgmentNode",
+            name = "PC/手机平台判断",
+            pos = {x = 2930.48010379256, y = 549.8234114707952},
+            propsData = {}
           }
         },
         commentData = {
@@ -3945,6 +4101,7 @@ return {
               HideMechanismsFX = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -4339,6 +4496,7 @@ return {
               HideMechanismsFX = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",

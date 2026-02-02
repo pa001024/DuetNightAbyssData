@@ -1,6 +1,6 @@
 require("UnLua")
 local M = Class({
-  "BluePrints.UI.BP_UIState_C"
+  "BluePrints.UI.BP_EMUserWidget_C"
 })
 
 function M:OnMouseEnter(MyGeometry, MouseEvent)
@@ -56,12 +56,6 @@ end
 
 function M:PlayGoldFlipAudio()
   AudioManager(self):PlayUISound(self, "event:/ui/common/mihan_level_finish_choose_gold_flip", nil, nil)
-end
-
-function M:SetSelected()
-  self:AddDelayFrameFunc(function()
-    self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
-  end)
 end
 
 return M

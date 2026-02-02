@@ -107,6 +107,9 @@ function ItemUtils.GetItemIconPath(ItemId, TableName)
   if "Walnut" == TableName then
     IconPath = DataMgr.Walnut[ItemId].Icon
   end
+  if "Mount" == TableName then
+    IconPath = DataMgr.Mount[ItemId].ResourceIcon
+  end
   return IconPath
 end
 

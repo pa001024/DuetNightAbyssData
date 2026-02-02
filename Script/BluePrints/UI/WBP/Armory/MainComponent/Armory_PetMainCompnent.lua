@@ -684,6 +684,9 @@ function M:OnPropChangePets(keys)
 end
 
 function M:OnPetReddotRead(UniqueId, InContent)
+  if not self.UseablePetItemContentsMap or not self.ResourcePetItemContentsMap then
+    return
+  end
   local Content = self.UseablePetItemContentsMap[UniqueId] or self.ResourcePetItemContentsMap[UniqueId]
   if Content and InContent == Content then
     return

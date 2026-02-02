@@ -171,6 +171,7 @@ end
 function BP_CombatPropBase_C:OnDead(KillMineRoleEid, KillMineSkillId, DeathReason)
   self.bIsDead = true
   self:OnDeadStateChange(self.bIsDead)
+  self:DestroyAllCreatures(ECreatureDeathWithCreator.Normal, EDeathReason.CreatureNotDelay)
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   if GameMode then

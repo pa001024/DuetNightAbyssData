@@ -54,9 +54,7 @@ function Component:MultiCastSetCharacterTagAfterMaxTN_Implementation(CharacterTa
       local UIManager = GameInstance:GetGameUIManager()
       local DefeatedUI = UIManager:GetUIObj("DefeatedInteract")
       if DefeatedUI then
-        DefeatedUI:StopAllAnimations()
-        DefeatedUI:ChangeUIDefeatedState(false)
-        DefeatedUI:Close()
+        DefeatedUI:CloseExecuteItem(self)
         self:SetHeightLightTip(false)
       end
     end
@@ -162,7 +160,7 @@ function Component:MultiCastPlayCondemnMontage_Implementation()
           end
         end)
       end
-      local BlendOutTime = 0 ~= AnimationAsset:GetDefaultBlendOutTime() and AnimationAsset:GetDefaultBlendOutTime() or 0.25
+      local BlendOutTime = 0 ~= AnimationAsset:GetDefaultBlendOutTime() and AnimationAsset:GetDefaultBlendOutTime() or 0.3
       self:AddTimer(AnimTime - BlendOutTime, self.QuitDefeatedTag, false, 0, "QuitDefeatedTag")
     end
   end
@@ -221,9 +219,7 @@ function Component:LeaveDefeatedTag()
   if not self:HasCannotCondemn() then
     local DefeatedUI = UIManager(self):GetUIObj("DefeatedInteract")
     if DefeatedUI then
-      DefeatedUI:StopAllAnimations()
-      DefeatedUI:PlayAnimation(DefeatedUI.out)
-      DefeatedUI:TryShowPhoneUI(false)
+      DefeatedUI:RemoveExecuteItem(self, "out")
     end
     self:SetHeightLightTip(false)
   end
@@ -250,7 +246,7 @@ function Component:GetEnableBeCondemned()
 end
 
 function Component:IsCantLeaveDefeated()
-  return self:CharacterInTag("Defeated") and not self:IsExistTimer("QuitDefeatedTag") and (self.EnableBeCondemned == ECondemnState.AccessEnterDefeated or self.EnableBeCondemned == ECondemnState.DefeatedStopNotify)
+  return self:CharacterInTag("Defeated") and not self:IsExistTimer("QuitDefeatedTag") and (self.EnableBeCondemned == ECondemnState.AccessEnterDefeated or self.EnableBeCondemned == ECondemnState.DefeatedStopNotify or self.EnableBeCondemned == ECondemnState.WaitEnterDefeated)
 end
 
 function Component:ApplyEffectAddtiveHit(DamageEvent)

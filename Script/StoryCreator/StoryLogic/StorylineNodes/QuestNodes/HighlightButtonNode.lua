@@ -111,8 +111,12 @@ function HighlightButtonNode:ShowMessage(Context)
           end
         elseif self.SkillType == "Skill2" then
           Instruction.Key.Text_Describe:SetText(GText("Guide_HighlightButton_Skill2"))
+        elseif self.SkillType == "Skill3" then
+          Instruction.Key.Text_Describe:SetText(GText("Guide_HighlightButton_Skill3"))
         elseif self.SkillType == "Interactive" then
           Instruction.Key.Text_Describe:SetText(GText("MESSAGE_TITLE_LOADING_21_PC"))
+        elseif self.SkillType == "Slide" then
+          Instruction.Key.Text_Describe:SetText(GText("Guide_HighlightButton_Crouch"))
         end
       end
     else
@@ -123,6 +127,7 @@ function HighlightButtonNode:ShowMessage(Context)
         BattleMain.Char_Skill.Skill:PlayAnimation(BattleMain.Char_Skill.Skill.Skill_1_Loop, 0, 0)
       elseif self.SkillType == "Skill2" then
         BattleMain.Char_Skill.Skill:PlayAnimation(BattleMain.Char_Skill.Skill.Skill_2_Loop, 0, 0)
+      elseif self.SkillType == "Skill3" then
       elseif self.SkillType == "MoveCamera" then
         UE4.UUIStateAsyncActionBase.ShowGuideToastFingerNode(GameInstance, 200012, -1, self.SkillType, "Up", FVector2D(0, 0))
       end
@@ -195,8 +200,12 @@ function HighlightButtonNode:OnQuestlineFail()
           Instruction.Key.Text_Describe:SetText(GText("Guide_HighlightButton_Skill1"))
         elseif self.SkillType == "Skill2" then
           Instruction.Key.Text_Describe:SetText(GText("Guide_HighlightButton_Skill2"))
+        elseif self.SkillType == "Skill3" then
+          Instruction.Key.Text_Describe:SetText(GText("Guide_HighlightButton_Skill3"))
         elseif self.SkillType == "Interactive" then
           Instruction.Key.Text_Describe:SetText(GText("MESSAGE_TITLE_LOADING_21_PC"))
+        elseif self.SkillType == "Slide" then
+          Instruction.Key.Text_Describe:SetText(GText("Guide_HighlightButton_Crouch"))
         end
       end
     else
@@ -207,6 +216,7 @@ function HighlightButtonNode:OnQuestlineFail()
         BattleMain.Char_Skill.Skill:PlayAnimation(BattleMain.Char_Skill.Skill.Skill_1_Loop, 0, 0)
       elseif self.SkillType == "Skill2" then
         BattleMain.Char_Skill.Skill:PlayAnimation(BattleMain.Char_Skill.Skill.Skill_2_Loop, 0, 0)
+      elseif self.SkillType == "Skill3" then
       end
     end
   elseif "PC" == Platform then

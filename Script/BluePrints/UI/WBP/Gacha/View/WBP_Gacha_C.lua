@@ -125,7 +125,7 @@ function M:InitGachaUI(SkinGachaTabId)
   self.Image_Black:SetRenderOpacity(0)
   self:PlayAnimation(self.In)
   AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "GachaMainIn", nil)
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:FillGachaItem()
 end
 
@@ -211,7 +211,7 @@ function M:OnGachaTypeItemClick(TabId, Content, bPlaySound, bIsAutoSelect)
   end
   self.LastWidgetContent = Content
   self.List_Pool:BP_SetItemSelection(Content, true)
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:PlayAnimation(self.Change)
   if bPlaySound then
     AudioManager(self):PlayUISound(self, "event:/ui/activity/large_btn_click", nil, nil)
@@ -811,7 +811,6 @@ function M:PurchaseGachaResource(IsSingleGacha, bFromGachaRes)
             ShortText = PopoverText
           }
           self.PopupUI = UIManager(self):ShowCommonPopupUI(PopUpId, Params)
-          self:PopupUIGamepadSetting()
           return
         end
       end
@@ -826,19 +825,12 @@ function M:PurchaseGachaResource(IsSingleGacha, bFromGachaRes)
         end
       end
       
-      local PopupId
-      if CoinId == CommonConst.Coins.Coin1 then
-        PopupId = 100137
-      elseif CoinId == CommonConst.Coins.Coin4 then
-        PopupId = 100263
-      end
-      if not PopupId then
-        return
-      end
+      local PopupId = 100290
       local Params = {}
+      Params.CostType = CoinId
+      Params.CostNum = CoinNeededCount
       Params.LeftCallbackObj = self
       Params.RightCallbackObj = self
-      Params.RightCallbackFunction = JumpToShop
       self.PopupUI = UIManager(self):ShowCommonPopupUI(PopupId, Params, self)
     else
       local function Confirm()
@@ -890,87 +882,8 @@ function M:PurchaseGachaResource(IsSingleGacha, bFromGachaRes)
         ShortText = PopoverText
       }
       self.PopupUI = UIManager(self):ShowCommonPopupUI(PopUpId, Params)
-      self:PopupUIGamepadSetting()
     end
   end
-end
-
-function M:PopupUIGamepadSetting()
-  self.PopupUI.OpenTipsButtonIndex = self.PopupUI:InitGamepadShortcut({
-    KeyInfoList = {
-      {
-        Type = "Img",
-        ImgShortPath = UIConst.GamePadImgKey.LeftThumb
-      }
-    },
-    Desc = GText("UI_Controller_CheckDetails")
-  })
-  self.PopupUI.ConfirmButtonIndex = self.PopupUI:InitGamepadShortcut({
-    KeyInfoList = {
-      {
-        Type = "Img",
-        ImgShortPath = UIConst.GamePadImgKey.FaceButtonBottom
-      }
-    },
-    Desc = GText("UI_Tips_Ensure")
-  })
-  self.PopupUI.CancelButtonIndex = self.PopupUI:InitGamepadShortcut({
-    KeyInfoList = {
-      {
-        Type = "Img",
-        ImgShortPath = UIConst.GamePadImgKey.FaceButtonRight
-      }
-    },
-    Desc = GText("UI_BACK")
-  })
-  self.PopupUI:HideGamepadShortcut(self.PopupUI.ConfirmButtonIndex)
-  self.PopupUI:HideGamepadShortcut(self.PopupUI.CancelButtonIndex)
-  local ItemWidget = self.PopupUI:GetContentWidgetByName("ItemSubsize")
-  if ItemWidget then
-    ItemWidget.OnContentKeyDown = self.OnContentKeyDown
-    local Item = ItemWidget.Item:GetChildAt(0)
-    Item:BindEventOnMenuOpenChanged(self, self.ItemMenuAnchorChanged)
-  end
-end
-
-function M:ItemMenuAnchorChanged(bIsOpen)
-  if UIUtils.UtilsGetCurrentInputType() ~= ECommonInputType.Gamepad then
-    return
-  end
-  if self.PopupUI then
-    if bIsOpen then
-      self.PopupUI:HideGamepadShortcut(self.PopupUI.CancelButtonIndex)
-      self.PopupUI:HideGamepadShortcut(self.PopupUI.ConfirmButtonIndex)
-    else
-      self.PopupUI:ShowGamepadShortcut(self.PopupUI.CancelButtonIndex)
-      self.PopupUI:ShowGamepadShortcut(self.PopupUI.ConfirmButtonIndex)
-    end
-  end
-end
-
-function M:OnContentKeyDown(MyGeometry, InKeyEvent)
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  local IsEventHandled = false
-  local Item = self.Item:GetChildAt(0)
-  if InKeyName == UIConst.GamePadKey.LeftThumb then
-    if Item then
-      Item:SetFocus()
-      self.Owner.ButtonBar:SetGamepadBtnKeyVisibility(false)
-      self.Owner:ShowGamepadShortcut(self.Owner.ConfirmButtonIndex)
-      self.Owner:ShowGamepadShortcut(self.Owner.CancelButtonIndex)
-      self.Owner:HideGamepadShortcut(self.Owner.OpenTipsButtonIndex)
-      IsEventHandled = true
-    end
-  elseif InKeyName == UIConst.GamePadKey.FaceButtonRight and Item:HasAnyFocus() then
-    self.Owner.ButtonBar:SetGamepadBtnKeyVisibility(true)
-    self.Owner:HideGamepadShortcut(self.Owner.ConfirmButtonIndex)
-    self.Owner:HideGamepadShortcut(self.Owner.CancelButtonIndex)
-    self.Owner:ShowGamepadShortcut(self.Owner.OpenTipsButtonIndex)
-    self.Owner:SetFocus()
-    IsEventHandled = true
-  end
-  return IsEventHandled
 end
 
 function M:OnDrawGacha(Ret, Data, RebateData)
@@ -1374,7 +1287,12 @@ function M:TakeGachaScreenShot(Widget, OnHideCallback)
     self:GetScreenShotWidget()
   end
   if IsValid(self.GachaScreenShotWidget) then
-    self.GachaScreenShotWidget:Init(Image, Widget, OnHideCallback)
+    local Params = {
+      Image = Image,
+      Parent = Widget,
+      OnHiddenCallback = OnHideCallback
+    }
+    self.GachaScreenShotWidget:Init(Params)
     self.GachaScreenShotWidget:SetFocus()
   end
 end
@@ -1534,7 +1452,7 @@ function M:CloseSelf()
       AudioManager(self):StopSound(self, self.CurrentBgMusic)
     end
     self.VideoPlayer:Close()
-    self:BlockAllUIInput(true)
+    self:BlockAllUIInput(true, "SP_DisplayOnly")
     if self.IsAddInDeque then
       self:PlayAnimationForward(self.Out, UIConst.AnimOutSpeedWithPageJump.LittleFastSpeed)
     else

@@ -1,16 +1,11 @@
 local Decorator = require("BluePrints.Client.Wrapper.Decorator")
 local ForgeModel = require("Blueprints.UI.Forge.ForgeDataModel")
 local Component = {}
-for key, value in pairs(Decorator) do
-  Component[key] = value
-end
-setmetatable(Component, getmetatable(Decorator))
+Decorator:ApplyDecorator(Component)
 
 function Component:EnterWorld()
   ForgeModel:Initialize()
 end
-
-Component:LimitCall(0.1)
 
 function Component:StartProduct(DraftId, SelectParam, ProduceNum)
   self.logger.debug("ZJT_ StartProduct ClientCallServer DraftId ", DraftId, ProduceNum)
@@ -23,8 +18,6 @@ function Component:StartProduct(DraftId, SelectParam, ProduceNum)
   
   self:CallServer("StartProduct", Callback, DraftId, ProduceNum, SelectParam)
 end
-
-Component:LimitCall(0.1)
 
 function Component:CompleteProduct(DraftId)
   self.logger.debug("ZJT_ CompleteProduct DraftId", DraftId)
@@ -46,8 +39,6 @@ function Component:OnBlueProductComplete(DraftId)
   ForgeModel:IncreaseReddotByDraftInfo(DraftId)
 end
 
-Component:LimitCall(0.1)
-
 function Component:AccelerateProduct(DraftId)
   self.logger.debug("ZJT_ AccelerateBlueProduct DraftId", DraftId)
   
@@ -58,8 +49,6 @@ function Component:AccelerateProduct(DraftId)
   
   self:CallServer("AccelerateProduct", Callback, DraftId)
 end
-
-Component:LimitCall(0.1)
 
 function Component:CancelProduct(DraftId)
   self.logger.debug("ZJT_ CancelProduct DraftId ")
@@ -80,6 +69,46 @@ function Component:GetAllDraftCompleteReward(SeleteParam)
   end
   
   self:CallServer("GetAllDraftCompleteReward", Callback, SeleteParam)
+end
+
+function Component:DraftSale(DraftTable)
+  self.logger.debug("DraftSale Start")
+  PrintTable(DraftTable, 3)
+  
+  local function Callback(Ret)
+    self.logger.debug("DraftSale Callback", Ret)
+    EventManager:FireEvent(EventID.OnUpdateBagItem, "DraftBulkSale", Ret, DraftTable)
+  end
+  
+  self:CallServer("DraftSale", Callback, DraftTable)
+end
+
+function Component:ConvertResource(InCallback, ConvertId, Count, ConsumeResources)
+  self.logger.debug("ConvertResource Start", ConvertId, Count, ConsumeResources)
+  
+  local function Callback(Ret)
+    self.logger.debug("ConvertResource Callback", Ret, ConvertId, Count, ConsumeResources)
+    if not ErrorCode:Check(Ret) then
+      return
+    end
+    InCallback(Ret)
+  end
+  
+  self:CallServer("ConvertResource", Callback, ConvertId, Count, ConsumeResources)
+end
+
+function Component:ConvertMod(InCallback, ConvertId, Count, ConsumeMods)
+  self.logger.debug("ConvertMod Start", ConvertId, Count, ConsumeMods)
+  
+  local function Callback(Ret, NewModIdList)
+    self.logger.debug("ConvertMod Callback", Ret, ConvertId, Count, ConsumeMods, NewModIdList)
+    if not ErrorCode:Check(Ret) then
+      return
+    end
+    InCallback(Ret, NewModIdList)
+  end
+  
+  self:CallServer("ConvertMod", Callback, ConvertId, Count, ConsumeMods)
 end
 
 function Component:_OnPropChangeDrafts(Keys)

@@ -15,12 +15,14 @@ function M:Construct()
 end
 
 function M:Init(bUseGamePad)
+  self.Initing = true
   self:UpdateKeyImg(bUseGamePad)
   self.Key_Auto:AddExecuteLogic(self, self.OnAutoPlayClicked)
   self.Key_Skip:AddExecuteLogic(self, self.OnSkipClicked)
   self.Key_Story_Review:AddExecuteLogic(self, self.OnReviewClicked)
   self.Key_Encyclopedia:AddExecuteLogic(self, self.OpenEncyclopedia)
   self:Enable()
+  self.Initing = false
 end
 
 function M:UpdateKeyImg(bUseGamePad)
@@ -117,7 +119,7 @@ function M:UpdateKeyImg(bUseGamePad)
     self.AutoPlayTimer = self:AddTimer(0.1, function()
       self.AutoPlayTimer = nil
       self:SetAutoPlay(true)
-    end)
+    end, nil, nil, nil, true)
   end
 end
 
@@ -154,6 +156,7 @@ function M:OnSkipClicked()
   if self.SkipCallback then
     self.SkipCallback.Func(self.SkipCallback.Obj)
   end
+  self:OnSkipKeyReleased()
 end
 
 function M:OnReviewClicked()
@@ -292,7 +295,7 @@ function M:OnConfirmKeyReleased()
   self.ConfirmTimer = self:AddTimer(self.Key_Confirm.Press:GetEndTime(), function()
     self.Key_Confirm:OnShortCutReleased()
     self.ConfirmTimer = nil
-  end)
+  end, nil, nil, nil, true)
 end
 
 function M:OnReviewKeyPressed()
@@ -363,7 +366,9 @@ function M:Enable()
       Key:EnableKey()
     end
   end
-  self:SetAutoPlay(self:GetAutoPlay())
+  if not self.Initing then
+    self:SetAutoPlay(self:GetAutoPlay())
+  end
 end
 
 function M:Disable()

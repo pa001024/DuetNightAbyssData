@@ -14,23 +14,4 @@ function WBP_Forging_EntranceCompedium_C:Init(Object, ClickCallback)
   self.Btn_Click.OnClicked:Add(Object, ClickCallback)
 end
 
-function WBP_Forging_EntranceCompedium_C:RefreshOpInfoByInputDevice(CurInputType, CurGamepadName)
-  if UIUtils.IsGamepadInput() and not self.bIsHideGamepadKey then
-    self.Controller:CreateGamepadKey(UIConst.GamePadImgKey.SpecialRight)
-    self.Controller:SetVisibility(UE4.ESlateVisibility.Visible)
-  else
-    self.Controller:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  end
-end
-
-function WBP_Forging_EntranceCompedium_C:HideGamepadKeyTip(bIsHide)
-  if bIsHide then
-    self.Controller:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.bIsHideGamepadKey = true
-  else
-    self.Controller:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.bIsHideGamepadKey = nil
-  end
-end
-
 return WBP_Forging_EntranceCompedium_C

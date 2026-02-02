@@ -44,11 +44,11 @@ function ReddotTreeNode_ModArchive:OnInitNodeCache(NodeCache)
             if Condition and ConditionUtils.CheckCondition(Avatar, Condition) then
               self:CheckFirstNew(ArchiveInfo, NodeCache)
             end
-            for ModId, State in pairs(NodeCache.Detail.States) do
-              if true == State then
-                NodeCache.Detail.NewNum = NodeCache.Detail.NewNum + 1
-              end
-            end
+          end
+        end
+        for ModId, State in pairs(NodeCache.Detail.States) do
+          if true == State then
+            NodeCache.Detail.NewNum = NodeCache.Detail.NewNum + 1
           end
         end
         NodeCache.Count = NodeCache.Detail.RedNum + NodeCache.Detail.NewNum

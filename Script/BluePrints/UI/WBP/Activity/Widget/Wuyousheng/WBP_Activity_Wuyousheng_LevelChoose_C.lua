@@ -1,20 +1,54 @@
 require("UnLua")
 local M = Class({
-  "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.UI.BP_UIState_C"
 })
+M._components = {
+  "BluePrints.UI.WBP.Activity.Widget.Wuyousheng.WBP_Activity_Wuyousheng_LevelChoose_C_GamepadComp"
+}
 
 function M:Construct()
   self.Btn_Start.Btn_Click.OnClicked:Add(self, self.BtnStartOnClicked)
+  self.Btn_Start.Btn_Click.OnPressed:Add(self, self.BtnStartOnPressed)
   self:InitLevelList()
-  self:RefreshLevelInfo(self.DungeonList[1])
-  self.Root.SelectedDungeonId = self.DungeonList[1]
+  local DefaultSelectIndex = 1
+  for i = 1, #self.DungeonList do
+    if self.DungeonList[i] == self.Root.DungeonId then
+      DefaultSelectIndex = i
+      break
+    end
+  end
+  self:RefreshLevelInfo(self.DungeonList[DefaultSelectIndex], DefaultSelectIndex, nil)
+  self.SelectedIndex = DefaultSelectIndex
+  self.Root.SelectedDungeonId = self.DungeonList[DefaultSelectIndex]
+  self.Btn_Start.Text_Btn:SetText(GText("UI_WuyoushengEvent_GoToEdit"))
+  self:InitGamePad()
+  self:AddTimer(0.1, function()
+    self:OnUpdateUIStyleByInputTypeChange(self.Root.CurInputDevice, self.Root.CurGamepadName)
+  end)
+  self.EMScrollBox_List.OnUserScrolled:Add(self, self.OnListViewLevelTabScrolled)
+  self:AddTimer(0.1, function()
+    self:OnListViewLevelTabScrolled()
+  end)
+end
+
+function M:OnListViewLevelTabScrolled()
+  UIUtils.UpdateScrollBoxArrow(self.EMScrollBox_List, self.List_ArrowTop, self.List_ArrowBottom)
 end
 
 function M:BtnStartOnClicked()
+  if self.Btn_Start.Btn_Click:GetForbidden() then
+    return
+  end
   self.Root:OpenSubUI({
     Idx = "ActivityWuyoushengTeamBuild"
   }, self.Root.SelectedDungeonId)
+end
+
+function M:BtnStartOnPressed()
+  if self.Btn_Start.Btn_Click:GetForbidden() then
+    return
+  end
+  AudioManager(self):PlayUISound(self, "event:/ui/activity/wuyoudaguai_btn_click_enter_sub_page", nil, nil)
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
@@ -22,30 +56,7 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   local IsHandled = true
   if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
-    if "Gamepad_Special_Right" == InKeyName then
-      if not self.CurDungeonPanel.Btn_Enemy.IsPressing then
-        self.CurDungeonPanel.Btn_Enemy:OnBtnPressed()
-      end
-    elseif "Gamepad_Special_Left" == InKeyName then
-      if not self.CurDungeonPanel.Btn_Entry.IsPressing then
-        self.CurDungeonPanel.Btn_Entry:OnBtnPressed()
-      end
-    elseif "Gamepad_FaceButton_Right" == InKeyName then
-      self:OnReturnKeyDown()
-    elseif "Gamepad_FaceButton_Top" == InKeyName then
-      if self.Reward and not self.Reward.IsPressing then
-        self.Reward:OnBtnPressed()
-      end
-    elseif "Gamepad_FaceButton_Left" == InKeyName then
-      self.BtnStart:OnBtnPressed()
-    elseif "Gamepad_LeftThumbstick" == InKeyName then
-      if self.Panel_Reset:IsVisible() then
-        AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
-        self:ShowResetConfirmWindow()
-      end
-    else
-      IsHandled = false
-    end
+    IsHandled = self:HandleGamepadInput(InKeyName)
   elseif "Escape" == InKeyName then
     self:OnReturnKeyDown()
   else
@@ -65,6 +76,8 @@ function M:SwitchIn(...)
   self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self:PlayAnimation(self.In)
   self:InitTable()
+  self:InitLevelList()
+  self.Root.RewardText:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
 end
 
 function M:SwitchOut()
@@ -126,19 +139,80 @@ function M:InitLevelList()
   table.sort(self.DungeonList, function(a, b)
     return a < b
   end)
-  if self.List_LevelTab then
-    self.List_LevelTab:ClearListItems()
+  if self.HB_List then
+    self.HB_List:ClearChildren()
   end
+  self.LevelTabWidgetList = {}
+  self.LevelTabList = {}
+  local EventId = self.Root and self.Root.EventId
   for i = 1, #self.DungeonList, 2 do
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
     Content.ParentWidget = self
     Content.DungeonId1 = self.DungeonList[i]
     Content.DungeonId2 = self.DungeonList[i + 1]
-    self.List_LevelTab:AddItem(Content)
+    Content.Index1 = i
+    Content.Index2 = i + 1
+    Content.EventId = EventId
+    local Widget = UIManager(self):CreateWidget("WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Wuyousheng/WBP_Activity_Wuyousheng_LevelTabGroup.WBP_Activity_Wuyousheng_LevelTabGroup'")
+    Widget:OnListItemObjectSet(Content)
+    self.HB_List:AddChildToHorizontalBox(Widget)
+    table.insert(self.LevelTabWidgetList, Widget)
+    table.insert(self.LevelTabList, Widget.LevelTab_1)
+    table.insert(self.LevelTabList, Widget.LevelTab_2)
+  end
+  self:SetupLevelTabNavigation()
+end
+
+function M:SetupLevelTabNavigation()
+  if not self.LevelTabWidgetList or 0 == #self.LevelTabWidgetList then
+    return
+  end
+  local WidgetCount = #self.LevelTabWidgetList
+  for i = 1, WidgetCount do
+    local Widget = self.LevelTabWidgetList[i]
+    if not Widget then
+    else
+      local LevelTab_1 = Widget.LevelTab_1
+      local LevelTab_2 = Widget.LevelTab_2
+      if LevelTab_1 and LevelTab_2 and LevelTab_2:GetVisibility() ~= ESlateVisibility.Collapsed then
+        LevelTab_1:SetNavigationRuleExplicit(EUINavigation.Right, LevelTab_2)
+        LevelTab_2:SetNavigationRuleExplicit(EUINavigation.Left, LevelTab_1)
+      end
+      if 1 == i and LevelTab_1 then
+        LevelTab_1:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Stop)
+      end
+      if i == WidgetCount then
+        local LastTab
+        if LevelTab_2 and LevelTab_2:GetVisibility() ~= ESlateVisibility.Collapsed then
+          LastTab = LevelTab_2
+        elseif LevelTab_1 then
+          LastTab = LevelTab_1
+        end
+        if LastTab then
+          LastTab:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
+        end
+      end
+      if i < WidgetCount then
+        local NextWidget = self.LevelTabWidgetList[i + 1]
+        if NextWidget and NextWidget.LevelTab_1 then
+          local CurrentLastTab
+          if LevelTab_2 and LevelTab_2:GetVisibility() ~= ESlateVisibility.Collapsed then
+            CurrentLastTab = LevelTab_2
+          elseif LevelTab_1 then
+            CurrentLastTab = LevelTab_1
+          end
+          local NextFirstTab = NextWidget.LevelTab_1
+          if CurrentLastTab and NextFirstTab then
+            CurrentLastTab:SetNavigationRuleExplicit(EUINavigation.Right, NextFirstTab)
+            NextFirstTab:SetNavigationRuleExplicit(EUINavigation.Left, CurrentLastTab)
+          end
+        end
+      end
+    end
   end
 end
 
-function M:RefreshLevelInfo(DungeonId)
+function M:RefreshLevelInfo(DungeonId, Index, EndTime)
   local WuyoushengEventLevelData = DataMgr.WuyoushengEventLevel[DungeonId]
   if not WuyoushengEventLevelData then
     return
@@ -149,6 +223,14 @@ function M:RefreshLevelInfo(DungeonId)
   self.Text_GoalTitle:SetText(GText("UI_WuyoushengEvent_LevelTarget"))
   self.Text_LevelEffectTitle:SetText(GText("UI_WuyoushengEvent_LevelBuff"))
   self.Text_MonsterDetailTitle:SetText(GText("UI_WuyoushengEvent_PetDetail"))
+  self.Text_SubTitleNum:SetText(Index)
+  self.Text_TitleIndex:SetText(WuyoushengEventLevelData.LevelIconLetter)
+  local Avatar = GWorld:GetAvatar()
+  local WuyoushengData = Avatar.WuyoushengActivity[self.Root.EventId]
+  local FinishStars = 0
+  if WuyoushengData then
+    FinishStars = WuyoushengData:GetFinishStars(DungeonId) or 0
+  end
   for i = 1, 3 do
     local GoalData = self["GoalStarItem_" .. i]
     local LevelGoalRequiredTime1 = WuyoushengEventLevelData.LevelGoalRequiredTime1[i]
@@ -159,13 +241,29 @@ function M:RefreshLevelInfo(DungeonId)
       GoalText = string.format(GText("Wuyousheng_Target_LevelLimitTime"), LevelGoalRequiredTime1)
     end
     GoalData.Text_GoalDesc:SetText(GoalText)
+    if i <= FinishStars then
+      GoalData.StarSubItem.Normal:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      GoalData.StarSubItem.Light:SetVisibility(UIConst.VisibilityOp.Visible)
+    else
+      GoalData.StarSubItem.Normal:SetVisibility(UIConst.VisibilityOp.Visible)
+      GoalData.StarSubItem.Light:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
   end
   self.MonsterList:ClearChildren()
   local PetCount = 0
-  for i = 1, #WuyoushengEventLevelData.LevelPet do
+  self.WidgetList = {}
+  local PetNum = #WuyoushengEventLevelData.LevelPet
+  if self.PetNum ~= PetNum then
+    self.PetNum = PetNum
+    self.WBP_Activity_Wuyousheng_BG02.Spine_Char:SetAnimation(0, "In" .. PetNum, false)
+    self.WBP_Activity_Wuyousheng_BG02.Spine_Char:AddAnimation(0, "Loop" .. PetNum, true, 0)
+    AudioManager(self):PlayUISound(self, "event:/ui/activity/wuyoudaguai_sub_page_in", nil, nil)
+  end
+  for i = 1, PetNum do
     local PetId = WuyoushengEventLevelData.LevelPet[i]
     local Widget = self:CreateWidgetNew("ComItemUniversalM")
     local PetData = DataMgr.Pet[PetId]
+    self.WidgetList[i] = Widget
     if PetData then
       local Content = {
         Id = PetId,
@@ -173,6 +271,10 @@ function M:RefreshLevelInfo(DungeonId)
         Rarity = PetData.Rarity,
         Icon = PetData.Icon,
         IsShowDetails = true
+      }
+      Content.OnMenuOpenChangedEvents = {
+        Obj = self,
+        Callback = self.ItemMenuAnchorChanged
       }
       Widget:Init(Content)
       self.MonsterList:AddChildToWrapBox(Widget)
@@ -189,6 +291,26 @@ function M:RefreshLevelInfo(DungeonId)
       self.MonsterList:AddChildToWrapBox(EmptyWidget)
     end
   end
+  if EndTime and EndTime > TimeUtils.NowTime() then
+    self.Btn_Start.Btn_Click:SetForbidden(true)
+    local TimeStr = UIUtils.GetLeftTimeStrStyle1(EndTime)
+    self.Btn_Start.Text_Btn:SetText(string.format(GText("UI_WuyoushengEvent_Lock_Time"), TimeStr))
+  else
+    self.Btn_Start.Btn_Click:SetForbidden(false)
+    self.Btn_Start.Text_Btn:SetText(GText("UI_WuyoushengEvent_GoToEdit"))
+  end
 end
 
+function M:ItemMenuAnchorChanged(bIsOpen)
+  if not self.IsUseGamePad then
+    return
+  end
+  if bIsOpen then
+    self:ChangeFocusMode(3)
+  else
+    self:ChangeFocusMode(2)
+  end
+end
+
+AssembleComponents(M)
 return M

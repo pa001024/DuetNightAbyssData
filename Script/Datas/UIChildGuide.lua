@@ -51,6 +51,9 @@ T.RT_12 = {
   PC = "Message_Guide_Badge_1",
   Phone = "Message_Guide_Badge_1"
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -3257,6 +3260,295 @@ return ReadOnly("UIChildGuide", {
       }
     },
     GuideTitle = "Mon_Guide_Title_115",
+    GuideType = "ImageText"
+  },
+  [11601] = {
+    ChildGuideId = 11601,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_AutoChess_1",
+        PC = "UIGuide_AutoChess_1",
+        Phone = "UIGuide_AutoChess_1"
+      },
+      GuidePicture = {
+        GamePad = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_1.T_Guide_Img_AutoChess_1'",
+        PC = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_1.T_Guide_Img_AutoChess_1'",
+        Phone = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_1.T_Guide_Img_AutoChess_1'"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_AutoChess_1",
+    GuideType = "ImageText"
+  },
+  [11602] = {
+    ChildGuideId = 11602,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_AutoChess_2_1",
+        PC = "UIGuide_AutoChess_2_1",
+        Phone = "UIGuide_AutoChess_2_1"
+      },
+      GuidePicture = {
+        GamePad = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_2.T_Guide_Img_AutoChess_2'",
+        PC = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_2.T_Guide_Img_AutoChess_2'",
+        Phone = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_2.T_Guide_Img_AutoChess_2'"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_AutoChess_2",
+    GuideType = "ImageText"
+  },
+  [11603] = {
+    ChildGuideId = 11603,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_AutoChess_2_2",
+        PC = "UIGuide_AutoChess_2_2",
+        Phone = "UIGuide_AutoChess_2_2"
+      },
+      GuidePicture = {
+        GamePad = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_3.T_Guide_Img_AutoChess_3'",
+        PC = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_3.T_Guide_Img_AutoChess_3'",
+        Phone = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_3.T_Guide_Img_AutoChess_3'"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_AutoChess_2",
+    GuideType = "ImageText"
+  },
+  [11604] = {
+    ChildGuideId = 11604,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_AutoChess_2_3",
+        PC = "UIGuide_AutoChess_2_3",
+        Phone = "UIGuide_AutoChess_2_3"
+      },
+      GuidePicture = {
+        GamePad = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_4.T_Guide_Img_AutoChess_4'",
+        PC = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_4.T_Guide_Img_AutoChess_4'",
+        Phone = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_4.T_Guide_Img_AutoChess_4'"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_AutoChess_2",
+    GuideType = "ImageText"
+  },
+  [11605] = {
+    ChildGuideId = 11605,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_AutoChess_3",
+        PC = "UIGuide_AutoChess_3",
+        Phone = "UIGuide_AutoChess_3"
+      },
+      GuidePicture = {
+        GamePad = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_5.T_Guide_Img_AutoChess_5'",
+        PC = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_5.T_Guide_Img_AutoChess_5'",
+        Phone = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_5.T_Guide_Img_AutoChess_5'"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_AutoChess_3",
+    GuideType = "ImageText"
+  },
+  [11606] = {
+    ChildGuideId = 11606,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_AutoChess_4_1",
+        PC = "UIGuide_AutoChess_4_1",
+        Phone = "UIGuide_AutoChess_4_1"
+      },
+      GuidePicture = {
+        GamePad = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_6.T_Guide_Img_AutoChess_6'",
+        PC = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_6.T_Guide_Img_AutoChess_6'",
+        Phone = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_6.T_Guide_Img_AutoChess_6'"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_AutoChess_4",
+    GuideType = "ImageText"
+  },
+  [11607] = {
+    ChildGuideId = 11607,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_AutoChess_4_2",
+        PC = "UIGuide_AutoChess_4_2",
+        Phone = "UIGuide_AutoChess_4_2"
+      },
+      GuidePicture = {
+        GamePad = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_7.T_Guide_Img_AutoChess_7'",
+        PC = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_7.T_Guide_Img_AutoChess_7'",
+        Phone = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_7.T_Guide_Img_AutoChess_7'"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_AutoChess_4",
+    GuideType = "ImageText"
+  },
+  [11608] = {
+    ChildGuideId = 11608,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_AutoChess_5",
+        PC = "UIGuide_AutoChess_5",
+        Phone = "UIGuide_AutoChess_5"
+      },
+      GuidePicture = {
+        GamePad = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_8.T_Guide_Img_AutoChess_8'",
+        PC = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_8.T_Guide_Img_AutoChess_8'",
+        Phone = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_AutoChess_8.T_Guide_Img_AutoChess_8'"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_AutoChess_5",
+    GuideType = "ImageText"
+  },
+  [11701] = {
+    ChildGuideId = 11701,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_ShengMing_1",
+        PC = "UIGuide_ShengMing_1",
+        Phone = "UIGuide_ShengMing_1"
+      },
+      GuidePicture = {
+        GamePad = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_ShengMing_1.T_Guide_Img_ShengMing_1'",
+        PC = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_ShengMing_1.T_Guide_Img_ShengMing_1'",
+        Phone = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_ShengMing_1.T_Guide_Img_ShengMing_1'"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_ShengMing_1",
+    GuideType = "ImageText"
+  },
+  [11702] = {
+    ChildGuideId = 11702,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_ShengMing_2",
+        PC = "UIGuide_ShengMing_2",
+        Phone = "UIGuide_ShengMing_2"
+      },
+      GuidePicture = {
+        GamePad = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_ShengMing_2.T_Guide_Img_ShengMing_2'",
+        PC = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_ShengMing_2.T_Guide_Img_ShengMing_2'",
+        Phone = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_ShengMing_2.T_Guide_Img_ShengMing_2'"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_ShengMing_1",
+    GuideType = "ImageText"
+  },
+  [11703] = {
+    ChildGuideId = 11703,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_ShengMing_3",
+        PC = "UIGuide_ShengMing_3",
+        Phone = "UIGuide_ShengMing_3"
+      },
+      GuidePicture = {
+        GamePad = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_ShengMing_3.T_Guide_Img_ShengMing_3'",
+        PC = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_ShengMing_3.T_Guide_Img_ShengMing_3'",
+        Phone = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_ShengMing_3.T_Guide_Img_ShengMing_3'"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_ShengMing_1",
+    GuideType = "ImageText"
+  },
+  [11801] = {
+    ChildGuideId = 11801,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_WuYou_1",
+        PC = "UIGuide_WuYou_1",
+        Phone = "UIGuide_WuYou_1"
+      },
+      GuidePicture = {
+        GamePad = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_WuYou_1.T_Guide_Img_WuYou_1'",
+        PC = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_WuYou_1.T_Guide_Img_WuYou_1'",
+        Phone = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_WuYou_1.T_Guide_Img_WuYou_1'"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_WuYou_1",
+    GuideType = "ImageText"
+  },
+  [11802] = {
+    ChildGuideId = 11802,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_WuYou_2",
+        PC = "UIGuide_WuYou_2",
+        Phone = "UIGuide_WuYou_2"
+      },
+      GuidePicture = {
+        GamePad = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_WuYou_2.T_Guide_Img_WuYou_2'",
+        PC = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_WuYou_2.T_Guide_Img_WuYou_2'",
+        Phone = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_WuYou_2.T_Guide_Img_WuYou_2'"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_WuYou_1",
+    GuideType = "ImageText"
+  },
+  [11803] = {
+    ChildGuideId = 11803,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_WuYou_3",
+        PC = "UIGuide_WuYou_3",
+        Phone = "UIGuide_WuYou_3"
+      },
+      GuidePicture = {
+        GamePad = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_WuYou_3.T_Guide_Img_WuYou_3'",
+        PC = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_WuYou_3.T_Guide_Img_WuYou_3'",
+        Phone = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_WuYou_3.T_Guide_Img_WuYou_3'"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_WuYou_1",
+    GuideType = "ImageText"
+  },
+  [11901] = {
+    ChildGuideId = 11901,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_ZuoQi_1",
+        PC = "UIGuide_ZuoQi_1",
+        Phone = "UIGuide_ZuoQi_1"
+      },
+      GuidePicture = {
+        GamePad = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_ZuoQi_1.T_Guide_Img_ZuoQi_1'",
+        PC = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_ZuoQi_1.T_Guide_Img_ZuoQi_1'",
+        Phone = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_ZuoQi_1.T_Guide_Img_ZuoQi_1'"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_ZuoQi_1",
+    GuideType = "ImageText"
+  },
+  [11902] = {
+    ChildGuideId = 11902,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_ZuoQi_2",
+        PC = "UIGuide_ZuoQi_2",
+        Phone = "UIGuide_ZuoQi_2"
+      },
+      GuidePicture = {
+        GamePad = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_ZuoQi_2.T_Guide_Img_ZuoQi_2'",
+        PC = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_ZuoQi_2.T_Guide_Img_ZuoQi_2'",
+        Phone = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_ZuoQi_2.T_Guide_Img_ZuoQi_2'"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_ZuoQi_2",
+    GuideType = "ImageText"
+  },
+  [11903] = {
+    ChildGuideId = 11903,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_ZuoQi_3",
+        PC = "UIGuide_ZuoQi_3",
+        Phone = "UIGuide_ZuoQi_3"
+      },
+      GuidePicture = {
+        GamePad = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_ZuoQi_3.T_Guide_Img_ZuoQi_3'",
+        PC = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_ZuoQi_3.T_Guide_Img_ZuoQi_3'",
+        Phone = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_ZuoQi_3.T_Guide_Img_ZuoQi_3'"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_ZuoQi_3",
     GuideType = "ImageText"
   },
   [100101] = {

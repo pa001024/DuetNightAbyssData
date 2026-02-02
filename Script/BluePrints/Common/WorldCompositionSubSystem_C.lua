@@ -1,6 +1,7 @@
 require("Unlua")
 local M = Class("BluePrints.Common.TimerMgr")
 local SettingUtils = require("Utils.SettingUtils")
+local GameFlowUtils = require("Utils.GameFlowUtils")
 
 function M:OnAsyncTravelBegin_Lua(Player)
   if not self.TravelRequests then
@@ -135,23 +136,13 @@ function M:OnEndTalk()
   self.BOpenRegionDataTickLog = true
 end
 
-function M:CreateFlow()
-  if not self.AsyncTravelUseGameFlow then
-    return
-  end
-  local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(self, UGameFlowManager)
-  self.Flow = FlowManager:CreateFlow("LevelDelivery")
-  FlowManager:AddFlow(self.Flow)
-end
-
 function M:RemoveFlow()
   if not self.AsyncTravelUseGameFlow then
     return
   end
-  if self.Flow then
-    local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(self, UGameFlowManager)
-    FlowManager:RemoveFlow(self.Flow)
-    self.Flow = nil
+  DebugPrint("WC RemoveFlow", self.FlowId)
+  if self.FlowId and self.FlowId >= 0 then
+    GameFlowUtils:RemoveFlow(self.FlowId)
   end
 end
 
@@ -213,6 +204,51 @@ function M:IsFoliageLevelContain(TableFoliageLevel, IsPhone, PackageName)
     end
   end
   return false
+end
+
+function M:DestroyAllRegionDataAndEnterDungeon(DungeonId)
+  if not DungeonId or not DataMgr.Dungeon[DungeonId] then
+    return
+  end
+  local Data = DataMgr.Dungeon[DungeonId]
+  self:PauseAndAsyncDestroyRegionData({
+    self,
+    function()
+      local EidKeys = Battle(self):GetAllEntities():Keys()
+      for _, Eid in pairs(EidKeys) do
+        local Ent = Battle(self):GetEntity(Eid)
+        if Ent and not Ent.BpBorn then
+          if Ent.EMActorDestroy and (not Ent.IsPlayer or not Ent:IsPlayer()) then
+            Ent:EMActorDestroy(EDestroyReason.LevelUnloadedSaveGame)
+          elseif not Ent.IsPlayer or not Ent:IsPlayer() then
+            Ent:Destroy()
+          end
+        end
+      end
+      self:ClearAllRegionData()
+      self:UnloadDesignLevel(true)
+      self:RefreshDungeonId()
+      self:RespawnGameMode(true, DungeonId)
+      self:LoadDesignLevel(true, DungeonId)
+      self:AddTimer(0.5, function()
+        local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+        GameMode:SetGameModeState(EGameModeState.EPrepare)
+        GameMode:GetLevelLoader():LevelLoaderReady()
+        GameMode:TryTriggerOnPrepare("BattleInit")
+        GameMode:TryTriggerOnPrepare("GameModeBeginPlay")
+        local Controller = UGameplayStatics.GetPlayerController(self, 0)
+        local AvatarEidStr = Controller.AvatarEidStr
+        if GameMode.LevelLoader and not GameMode.AlreadyInit then
+          GameMode.LevelLoader:SetInitTrans(Controller)
+        end
+        GameMode:OnCharacterReady(AvatarEidStr, self)
+        GameMode:TryTriggerOnInit(AvatarEidStr)
+        local GameState = UGameplayStatics.GetGameState(self)
+        GameState.EndLoadingSuccess = false
+        GameState:TryEndLoading("PlayerReady")
+      end)
+    end
+  })
 end
 
 return M

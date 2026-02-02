@@ -3,6 +3,7 @@ local BP_CaptureInteractiveComponent_C = Class({
   "BluePrints.Item.Chest.BP_ChestInteractiveComponent_C",
   "BluePrints.Common.TimerMgr"
 })
+local LuaConst = require("EMLuaConst")
 
 function BP_CaptureInteractiveComponent_C:ReceiveBeginPlay()
   self.Super.ReceiveBeginPlay(self)
@@ -14,10 +15,11 @@ end
 function BP_CaptureInteractiveComponent_C:IsCanInteractive(PlayerActor)
   local Owner = self:GetOwner()
   local CanOpen = Owner:GetCanCapture(PlayerActor.Eid)
-  if self:DistanceCheckComponent(PlayerActor, self.InteractiveDistance, false) and self.CFaceToACheckComponent(self, PlayerActor, self.InteractiveFaceAngle) and self.AFaceToCCheckComponent(PlayerActor, self, self.InteractiveAngle) and self:CheckPlayerTag(PlayerActor) and CanOpen and not Owner.OpenState then
-    return true
+  if LuaConst.OpenComputeInteractive then
+    return self:GetDistanceCheckResult() and self.CFaceToACheckComponent(self, PlayerActor, self.InteractiveFaceAngle) and self.AFaceToCCheckComponent(PlayerActor, self, self.InteractiveAngle) and self:CheckPlayerTag(PlayerActor) and CanOpen and not Owner.OpenState
+  else
+    return self:DistanceCheckComponent(PlayerActor, self.InteractiveDistance, false) and self.CFaceToACheckComponent(self, PlayerActor, self.InteractiveFaceAngle) and self.AFaceToCCheckComponent(PlayerActor, self, self.InteractiveAngle) and self:CheckPlayerTag(PlayerActor) and CanOpen and not Owner.OpenState
   end
-  return false
 end
 
 function BP_CaptureInteractiveComponent_C:DisplayInteractiveBtn(PlayerActor)

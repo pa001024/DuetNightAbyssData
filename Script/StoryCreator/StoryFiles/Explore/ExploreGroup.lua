@@ -250,6 +250,54 @@ return {
             startPort = "Out",
             endQuest = "17574035721012838226",
             endPort = "Success"
+          },
+          {
+            startQuest = "17574035721012838228",
+            startPort = "Branch_15",
+            endQuest = "17657813789572072",
+            endPort = "In"
+          },
+          {
+            startQuest = "17574035721012838228",
+            startPort = "Branch_17",
+            endQuest = "17657813807002135",
+            endPort = "In"
+          },
+          {
+            startQuest = "17574035721012838228",
+            startPort = "Branch_16",
+            endQuest = "17657813799652100",
+            endPort = "In"
+          },
+          {
+            startQuest = "17574035721012838228",
+            startPort = "Branch_18",
+            endQuest = "17657813819212178",
+            endPort = "In"
+          },
+          {
+            startQuest = "17657813789572072",
+            startPort = "Out",
+            endQuest = "17574035721012838226",
+            endPort = "Success"
+          },
+          {
+            startQuest = "17657813799652100",
+            startPort = "Out",
+            endQuest = "17574035721012838226",
+            endPort = "Success"
+          },
+          {
+            startQuest = "17657813807002135",
+            startPort = "Out",
+            endQuest = "17574035721012838226",
+            endPort = "Success"
+          },
+          {
+            startQuest = "17657813819212178",
+            startPort = "Out",
+            endQuest = "17574035721012838226",
+            endPort = "Success"
           }
         },
         nodeData = {
@@ -276,6 +324,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -304,7 +353,7 @@ return {
             key = "17574035721012838226",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2309.090909090909, y = 171.8181818181818},
+            pos = {x = 2399.090909090909, y = 168.0681818181818},
             propsData = {ModeType = 0}
           },
           ["17574035721012838227"] = {
@@ -334,7 +383,11 @@ return {
                 830011,
                 830012,
                 830013,
-                830014
+                830014,
+                830015,
+                830016,
+                830017,
+                830018
               }
             }
           },
@@ -361,6 +414,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -401,6 +455,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -441,6 +496,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -481,6 +537,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -521,6 +578,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -561,6 +619,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -601,6 +660,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -641,6 +701,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -681,6 +742,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -721,6 +783,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -761,6 +824,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -801,6 +865,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -841,6 +906,171 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
+              BeginNewTargetPointName = "",
+              EndNewTargetPointName = "",
+              CameraLookAtTartgetPoint = "",
+              RestoreStand = false,
+              TalkActors = {
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = true
+                }
+              },
+              FreezeWorldComposition = false,
+              bTravelFullLoadWorldComposition = false,
+              SwitchToMaster = "None",
+              OverrideFailBlend = false
+            }
+          },
+          ["17657813789572072"] = {
+            key = "17657813789572072",
+            type = "TalkNode",
+            name = "830015",
+            pos = {x = 1725.25, y = 1874.3749999999998},
+            propsData = {
+              IsNpcNode = false,
+              TalkType = "Cinematic",
+              TalkStageName = "",
+              ShowFilePath = "/Game/AssetDesign/Level/Sequencer/Region/East01/LS_Yanjindu_Explore_Shoot1",
+              InType = "BlendIn",
+              OutType = "BlendOut",
+              ShowSkipButton = false,
+              ShowReviewButton = false,
+              ShowWikiButton = false,
+              PauseGameGlobal = false,
+              HideNpcs = false,
+              HideMonsters = false,
+              HideAllBattleEntity = false,
+              HideEffectCreature = false,
+              HideMechanismsFX = true,
+              DisableNpcOptimization = false,
+              DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
+              BeginNewTargetPointName = "",
+              EndNewTargetPointName = "",
+              CameraLookAtTartgetPoint = "",
+              RestoreStand = false,
+              TalkActors = {
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = true
+                }
+              },
+              FreezeWorldComposition = false,
+              bTravelFullLoadWorldComposition = false,
+              SwitchToMaster = "None",
+              OverrideFailBlend = false
+            }
+          },
+          ["17657813799652100"] = {
+            key = "17657813799652100",
+            type = "TalkNode",
+            name = "830016",
+            pos = {x = 1726.375, y = 2011.6249999999998},
+            propsData = {
+              IsNpcNode = false,
+              TalkType = "Cinematic",
+              TalkStageName = "",
+              ShowFilePath = "/Game/AssetDesign/Level/Sequencer/Region/East01/LS_Yanjindu_Explore_Shoot2",
+              InType = "BlendIn",
+              OutType = "BlendOut",
+              ShowSkipButton = false,
+              ShowReviewButton = false,
+              ShowWikiButton = false,
+              PauseGameGlobal = false,
+              HideNpcs = false,
+              HideMonsters = false,
+              HideAllBattleEntity = false,
+              HideEffectCreature = false,
+              HideMechanismsFX = true,
+              DisableNpcOptimization = false,
+              DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
+              BeginNewTargetPointName = "",
+              EndNewTargetPointName = "",
+              CameraLookAtTartgetPoint = "",
+              RestoreStand = false,
+              TalkActors = {
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = true
+                }
+              },
+              FreezeWorldComposition = false,
+              bTravelFullLoadWorldComposition = false,
+              SwitchToMaster = "None",
+              OverrideFailBlend = false
+            }
+          },
+          ["17657813807002135"] = {
+            key = "17657813807002135",
+            type = "TalkNode",
+            name = "830017",
+            pos = {x = 1721.875, y = 2156.125},
+            propsData = {
+              IsNpcNode = false,
+              TalkType = "Cinematic",
+              TalkStageName = "",
+              ShowFilePath = "/Game/AssetDesign/Level/Sequencer/Region/East01/LS_Yanjindu_Explore_Shoot3",
+              InType = "BlendIn",
+              OutType = "BlendOut",
+              ShowSkipButton = false,
+              ShowReviewButton = false,
+              ShowWikiButton = false,
+              PauseGameGlobal = false,
+              HideNpcs = false,
+              HideMonsters = false,
+              HideAllBattleEntity = false,
+              HideEffectCreature = false,
+              HideMechanismsFX = true,
+              DisableNpcOptimization = false,
+              DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
+              BeginNewTargetPointName = "",
+              EndNewTargetPointName = "",
+              CameraLookAtTartgetPoint = "",
+              RestoreStand = false,
+              TalkActors = {
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = true
+                }
+              },
+              FreezeWorldComposition = false,
+              bTravelFullLoadWorldComposition = false,
+              SwitchToMaster = "None",
+              OverrideFailBlend = false
+            }
+          },
+          ["17657813819212178"] = {
+            key = "17657813819212178",
+            type = "TalkNode",
+            name = "830018",
+            pos = {x = 1732, y = 2306},
+            propsData = {
+              IsNpcNode = false,
+              TalkType = "Cinematic",
+              TalkStageName = "",
+              ShowFilePath = "/Game/AssetDesign/Level/Sequencer/Region/East01/LS_Yanjindu_Explore_Shoot4",
+              InType = "BlendIn",
+              OutType = "BlendOut",
+              ShowSkipButton = false,
+              ShowReviewButton = false,
+              ShowWikiButton = false,
+              PauseGameGlobal = false,
+              HideNpcs = false,
+              HideMonsters = false,
+              HideAllBattleEntity = false,
+              HideEffectCreature = false,
+              HideMechanismsFX = true,
+              DisableNpcOptimization = false,
+              DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -859,7 +1089,14 @@ return {
             }
           }
         },
-        commentData = {}
+        commentData = {
+          ["17657814570284134"] = {
+            key = "17657814570284134",
+            name = "烟津渡射击",
+            position = {x = 1619.75, y = 1793.2499999999998},
+            size = {width = 430.00000000000006, height = 711.2500000000001}
+          }
+        }
       }
     }
   },

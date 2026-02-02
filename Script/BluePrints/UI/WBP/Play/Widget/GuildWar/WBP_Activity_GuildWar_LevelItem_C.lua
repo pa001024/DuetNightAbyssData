@@ -14,6 +14,7 @@ function M:Construct()
   self.New_Tag:SetVisibility(ESlateVisibility.Collapsed)
   self.Btn_Click.OnClicked:Add(self, self.OnSubCellClicked)
   self.Mobile = "Mobile" == CommonUtils.GetDeviceTypeByPlatformName(self)
+  self.Text_Unlock:SetText(GText("UI_RaidDungeon_Unlock_Time"))
 end
 
 function M:Destruct()
@@ -147,7 +148,7 @@ end
 
 function M:OnMouseLeave(MyGeometry, MouseEvent)
   self.IsEnter = false
-  if self.Mobile or self.IsSelect or self:IsPlayingAnimation(self.Click) then
+  if self.Mobile or self.IsSelect then
     return
   end
   self:StopAnimation(self.Hover)

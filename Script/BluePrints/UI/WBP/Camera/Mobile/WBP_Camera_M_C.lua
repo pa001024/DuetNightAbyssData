@@ -314,6 +314,10 @@ end
 
 function M:TickFindTargets()
   M.Super.TickFindTargets(self)
+  if self.InitParams and self.InitParams.IsAprilFoolsDayActivity then
+    self.WBP_Camera_Shoot_M:StopLoopRemind()
+    return
+  end
   if self.bScreenshotWidgetShow or self.IsShotTargetSucceeded then
     self.WBP_Camera_Shoot_M:StopLoopRemind()
     return

@@ -17,7 +17,6 @@ function ReddotTreeNode_GuildWar:_Judge(EventId)
   if not CacheDetail[EventId] then
     CacheDetail[EventId] = {}
   end
-  GuildWarUtils.RefreshShopReddot()
   GuildWarUtils.RefreshQuestReddot()
   GuildWarUtils.RefreshEntranceReddot()
   GuildWarUtils.RefreshRewardGotReddot()

@@ -1,4 +1,5 @@
 require("UnLua")
+local RougeConst = require("BluePrints.UI.UI_PC.RougeLike.RougeAchive.RougeConst")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
@@ -19,9 +20,7 @@ end
 
 function M:OnListItemObjectSet(Content)
   self:SetNavRule()
-  if self.IsNew == nil then
-    self.IsNew = Content.IsNew
-  end
+  self.IsNew = false
   self.IsUnlocked = Content.IsUnlocked
   self.Index = Content.Index
   self.Data = Content.Data
@@ -29,6 +28,11 @@ function M:OnListItemObjectSet(Content)
   self.TotalNum = Content.TotalNum
   self.SubItems = Content.SubItems
   self.Parent = Content.Parent
+  for _, Data in ipairs(self.SubItems) do
+    if self.Parent.DataModel:CheckArchiveItemIsNew(RougeConst.ArchiveType.Event, Data.ArchiveId) then
+      self.IsNew = true
+    end
+  end
   self.IsSelected = self.Parent.CurSelectIndex == self.Index
   self.Btn_Click:SetChecked(self.IsSelected)
   self:InitEventItem()
@@ -99,10 +103,16 @@ function M:BP_OnItemSelectionChanged(IsSelected)
   self.IsSelected = IsSelected
   if IsSelected then
     self:PlayAnimation(self.Select)
+    for _, Data in ipairs(self.SubItems) do
+      if Data.IsUnlocked and Data.IsNew then
+        self.Parent.DataModel:MarkArchiveItemSeened(RougeConst.ArchiveType.Event, Data.ArchiveId)
+      end
+    end
     if self.IsNew then
       self.IsNew = false
       self.New:SetVisibility(ESlateVisibility.Collapsed)
     end
+    self.Parent.DataModel:UpdateArchiveReddot(RougeConst.ArchiveType.Event)
     if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
       self.Btn_Click:SetFocus()
     elseif self.Parent.CurSelectIndex ~= self.Index then

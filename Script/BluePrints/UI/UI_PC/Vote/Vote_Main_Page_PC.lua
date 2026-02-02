@@ -81,10 +81,49 @@ function M:Construct()
   self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshInfoByInputTypeChange)
   self.CurMode = self.GameInputModeSubsystem:GetCurrentInputType()
   self:RefreshInfoByInputTypeChange(self.CurMode)
+  self:InitAutoVote()
 end
 
-function M:OnLoaded(...)
-  self.Super.OnLoaded(self, ...)
+function M:InitAutoVote()
+  local DungeonId = GWorld.GameInstance:GetCurrentDungeonId() or 90401
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if not IsStandAlone(GameState) then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  print(_G.LogTag, "LXZ OnLoaded Vote", DungeonId, GameState.DungeonProgress, Avatar.Dungeons[DungeonId].AutoProgress)
+  if Avatar.Dungeons[DungeonId].AutoProgress > 0 then
+    if GameState.DungeonProgress - 1 <= Avatar.Dungeons[DungeonId].AutoProgress then
+      self.TotalAutoSelectTime = DataMgr.GlobalConstant.AutoRoundsCheckTime.ConstantValue or 5
+      self.AutoSelectTime = self.TotalAutoSelectTime
+      self:AddTimer(0.1, self.OnAutoVoteCountDown, true, 0, "OnAutoVoteCountDown", true, true)
+      self.Switch_Show:SetActiveWidgetIndex(1)
+      self.Text_Tips:SetText(string.format(GText("UI_Auto_Round_DungeonTips_1"), GameState.DungeonProgress - 1, Avatar.Dungeons[DungeonId].AutoProgress))
+    else
+      self.TotalAutoSelectTime = DataMgr.GlobalConstant.AutoRoundsCheckTime.ConstantValue or 5
+      self.AutoSelectTime = self.TotalAutoSelectTime
+      self:AddTimer(0.1, self.OnAutoVoteCountDown, true, 0, "OnAutoVoteCountDown", true, false)
+      self.Switch_Show:SetActiveWidgetIndex(0)
+      self.Text_Tips_1:SetText(GText("UI_Auto_Round_DungeonTips_2"))
+      self.Text_Tips_1:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    end
+  else
+    self.Switch_Show:SetActiveWidgetIndex(0)
+    self.Text_Tips_1:SetVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
+function M:OnAutoVoteCountDown(IsContinue)
+  self.AutoSelectTime = self.AutoSelectTime - 0.1
+  local IntCountDown = math.ceil(self.AutoSelectTime)
+  IntCountDown = math.max(IntCountDown, 0)
+  local CountDownPercent = IntCountDown / self.TotalAutoSelectTime
+  self.CountDown.Text_CountDown:SetText(string.format("%d", IntCountDown))
+  self.Bar01:SetPercent(CountDownPercent)
+  self.Bar02:SetPercent(CountDownPercent)
+  if self.AutoSelectTime <= 0 then
+    self:Vote(IsContinue)
+  end
 end
 
 function M:SetCurrentWavePanelToastInfo()
@@ -175,9 +214,11 @@ function M:Vote(IsContinue)
   if IsContinue == self.SelectContinue then
     return
   end
+  self:RemoveTimer("OnAutoVoteCountDown")
   if IsContinue then
     local Avatar = GWorld:GetAvatar()
     if Avatar then
+      Traceback()
       Avatar:TryEnterNextProgress(function(Ret)
         if Ret == ErrorCode.RET_SUCCESS then
           self.SelectContinue = IsContinue

@@ -16,6 +16,9 @@ T.RT_4 = {
   [3] = 50,
   [4] = 75
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -131,11 +134,11 @@ return ReadOnly("DeductToughnessHitIndex", {
   [8515052] = T.RT_1,
   [8515601] = T.RT_1,
   [8518001] = T.RT_1,
-  [8518002] = T.RT_1,
   [8521001] = T.RT_2,
   [8522001] = T.RT_2,
   [8523001] = T.RT_2,
   [8523002] = T.RT_2,
+  [8524001] = T.RT_4,
   [9901001] = T.RT_2,
   [9901002] = T.RT_2,
   [9901003] = T.RT_2,

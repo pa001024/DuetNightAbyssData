@@ -437,6 +437,15 @@ function M:CheckTempleState()
     self.Btn_Start.Text:SetText(GText("UI_TempleEvent_EntryLevel"))
     self.Btn_Start.WorldText:SetText(EnText("UI_TempleEvent_EntryLevel"))
     self.Btn_Start.WS_Type:SetActiveWidgetIndex(0)
+    self:AddDelayFrameFunc(function()
+      local Item = self.TempleId2Items[self.TempleId]
+      if Item then
+        local Entry = UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.List_SubTab, Item.Index - 1)
+        if Entry and Entry.State == "Lock" then
+          Entry:SetState()
+        end
+      end
+    end, 3)
     return true
   end
 end

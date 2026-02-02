@@ -1,3 +1,19 @@
+local T = {}
+T.RT_1 = {
+  [1] = "sgm sl 42",
+  [2] = "sgm ct 60",
+  [3] = "gm UnlockRegionTeleport 1",
+  [4] = "gm MockAllSystemCondition",
+  [5] = "sgm qcf 100102",
+  [6] = "sgm qcf 100103",
+  [7] = "sgm qc 10020101",
+  [8] = "sgm qcf 120003",
+  [9] = "gm skipregion 1 104108 1",
+  [10] = "gm SuccessAllSystemGuide"
+}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -133,6 +149,24 @@ return ReadOnly("GMIntegration", {
     },
     GMIntegrationName = "CE_EX01_2"
   },
+  ChapterUIEast01End = {
+    GMCommands = {
+      [1] = "gm UnlockRegionTeleport 1",
+      [2] = "gm MockAllSystemCondition",
+      [3] = "gm SuccessAllSystemGuide",
+      [4] = "sgm qcf 120104",
+      [5] = "sgm qcf 120105",
+      [6] = "sgm qc 12010607",
+      [7] = "gm skipregion 1 104105 1"
+    },
+    GMDisplayName = "东国大章节UI（结束）",
+    GMIntegrationName = "ChapterUIEast01End"
+  },
+  ChapterUIEast01Start = {
+    GMCommands = T.RT_1,
+    GMDisplayName = "东国大章节UI（开始）",
+    GMIntegrationName = "ChapterUIEast01Start"
+  },
   Clouds = {
     GMCommands = {
       [1] = "gm skipregion 1 100103 1"
@@ -179,18 +213,7 @@ return ReadOnly("GMIntegration", {
     GMIntegrationName = "DynPrologue"
   },
   East01C1 = {
-    GMCommands = {
-      [1] = "sgm sl 42",
-      [2] = "sgm ct 60",
-      [3] = "gm UnlockRegionTeleport 1",
-      [4] = "gm MockAllSystemCondition",
-      [5] = "sgm qcf 100102",
-      [6] = "sgm qcf 100103",
-      [7] = "sgm qc 10020101",
-      [8] = "sgm qcf 120003",
-      [9] = "gm skipregion 1 104108 1",
-      [10] = "gm SuccessAllSystemGuide"
-    },
+    GMCommands = T.RT_1,
     GMDisplayName = "东国一期（一）",
     GMIntegrationName = "East01C1",
     GMTab = "任务"
@@ -205,8 +228,9 @@ return ReadOnly("GMIntegration", {
       [6] = "sgm qcf 100103",
       [7] = "sgm qc 10020101",
       [8] = "sgm qcf 120101",
-      [9] = "gm skipregion 1 104110 1",
-      [10] = "gm SuccessAllSystemGuide"
+      [9] = "sgm qcf 120101",
+      [10] = "gm skipregion 1 104110 1",
+      [11] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "东国一期（二）",
     GMIntegrationName = "East01C2",
@@ -221,9 +245,10 @@ return ReadOnly("GMIntegration", {
       [5] = "sgm qcf 100102",
       [6] = "sgm qcf 100103",
       [7] = "sgm qc 10020101",
-      [8] = "sgm qcf 120102",
-      [9] = "gm skipregion 1 104109 1",
-      [10] = "gm SuccessAllSystemGuide"
+      [8] = "sgm qcf 120101",
+      [9] = "sgm qcf 120102",
+      [10] = "gm skipregion 1 104109 1",
+      [11] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "东国一期（三）",
     GMIntegrationName = "East01C3",
@@ -238,9 +263,10 @@ return ReadOnly("GMIntegration", {
       [5] = "sgm qcf 100102",
       [6] = "sgm qcf 100103",
       [7] = "sgm qc 10020101",
-      [8] = "sgm qc 12010317",
-      [9] = "gm skipregion 1 104106 1",
-      [10] = "gm SuccessAllSystemGuide"
+      [8] = "sgm qcf 120101",
+      [9] = "sgm qc 12010317",
+      [10] = "gm skipregion 1 104106 1",
+      [11] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "东国一期（扶疏线）",
     GMIntegrationName = "East01C4",
@@ -255,9 +281,10 @@ return ReadOnly("GMIntegration", {
       [5] = "sgm qcf 100102",
       [6] = "sgm qcf 100103",
       [7] = "sgm qc 10020101",
-      [8] = "sgm qcf 120104",
-      [9] = "gm skipregion 1 104109 1",
-      [10] = "gm SuccessAllSystemGuide"
+      [8] = "sgm qcf 120101",
+      [9] = "sgm qcf 120104",
+      [10] = "gm skipregion 1 104109 1",
+      [11] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "东国一期（虬先生线）",
     GMIntegrationName = "East01C5",
@@ -272,10 +299,11 @@ return ReadOnly("GMIntegration", {
       [5] = "sgm qcf 100102",
       [6] = "sgm qcf 100103",
       [7] = "sgm qc 10020101",
-      [8] = "sgm qcf 120104",
-      [9] = "sgm qcf 120105",
-      [10] = "gm skipregion 1 104110 1",
-      [11] = "gm SuccessAllSystemGuide"
+      [8] = "sgm qcf 120101",
+      [9] = "sgm qcf 120104",
+      [10] = "sgm qcf 120105",
+      [11] = "gm skipregion 1 104110 1",
+      [12] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "东国一期（六）",
     GMIntegrationName = "East01C6",
@@ -291,12 +319,67 @@ return ReadOnly("GMIntegration", {
       [6] = "sgm qcf 100301",
       [7] = "sgm qcf 100307",
       [8] = "sgm sl 40",
-      [9] = "gm skipregion 1 101107 1",
-      [10] = "gm SuccessAllSystemGuide"
+      [9] = "gm skipregion 1 101107 1"
     },
     GMDisplayName = "东国引入",
     GMIntegrationName = "EastOpen",
     GMTab = "任务"
+  },
+  EnterWuyoushengDungeon01 = {
+    GMCommands = {
+      [1] = "sgm CompleteCondition 4221",
+      [2] = "gm enterdungeon 22001"
+    },
+    GMDisplayName = "进入无由生活动关卡第1关",
+    GMIntegrationName = "EnterWuyoushengDungeon01"
+  },
+  EnterWuyoushengDungeon02 = {
+    GMCommands = {
+      [1] = "sgm CompleteCondition 4221",
+      [2] = "gm enterdungeon 22002"
+    },
+    GMDisplayName = "进入无由生活动关卡第2关",
+    GMIntegrationName = "EnterWuyoushengDungeon02"
+  },
+  EnterWuyoushengDungeon03 = {
+    GMCommands = {
+      [1] = "sgm CompleteCondition 4221",
+      [2] = "gm enterdungeon 22003"
+    },
+    GMDisplayName = "进入无由生活动关卡第3关",
+    GMIntegrationName = "EnterWuyoushengDungeon03"
+  },
+  EnterWuyoushengDungeon04 = {
+    GMCommands = {
+      [1] = "sgm CompleteCondition 4221",
+      [2] = "gm enterdungeon 22004"
+    },
+    GMDisplayName = "进入无由生活动关卡第4关",
+    GMIntegrationName = "EnterWuyoushengDungeon04"
+  },
+  EnterWuyoushengDungeon05 = {
+    GMCommands = {
+      [1] = "sgm CompleteCondition 4221",
+      [2] = "gm enterdungeon 22005"
+    },
+    GMDisplayName = "进入无由生活动关卡第5关",
+    GMIntegrationName = "EnterWuyoushengDungeon05"
+  },
+  EnterWuyoushengDungeon06 = {
+    GMCommands = {
+      [1] = "sgm CompleteCondition 4221",
+      [2] = "gm enterdungeon 22006"
+    },
+    GMDisplayName = "进入无由生活动关卡第6关",
+    GMIntegrationName = "EnterWuyoushengDungeon06"
+  },
+  EnterWuyoushengDungeon07 = {
+    GMCommands = {
+      [1] = "sgm CompleteCondition 4221",
+      [2] = "gm enterdungeon 22007"
+    },
+    GMDisplayName = "进入无由生活动关卡第7关",
+    GMIntegrationName = "EnterWuyoushengDungeon07"
   },
   FakeQuest1002 = {
     GMCommands = {
@@ -734,11 +817,12 @@ return ReadOnly("GMIntegration", {
       [5] = "sgm qcf 100102",
       [6] = "sgm qcf 100103",
       [7] = "sgm qc 10020101",
-      [8] = "sgm qcf 120104",
-      [9] = "sgm qcf 120105",
-      [10] = "gm skipregion 1 105701 1",
-      [11] = "sgm qc 12010605",
-      [12] = "gm SuccessAllSystemGuide"
+      [8] = "sgm qcf 120101",
+      [9] = "sgm qcf 120104",
+      [10] = "sgm qcf 120105",
+      [11] = "gm skipregion 1 105701 1",
+      [12] = "sgm qc 12010605",
+      [13] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "东国一期（黑龙BOSS战）",
     GMIntegrationName = "HeilongBoss",
@@ -753,11 +837,12 @@ return ReadOnly("GMIntegration", {
       [5] = "sgm qcf 100102",
       [6] = "sgm qcf 100103",
       [7] = "sgm qc 10020101",
-      [8] = "sgm qcf 120104",
-      [9] = "sgm qcf 120105",
-      [10] = "sgm qc 12010602",
-      [11] = "gm skipregion 1 105701 1",
-      [12] = "gm SuccessAllSystemGuide"
+      [8] = "sgm qcf 120101",
+      [9] = "sgm qcf 120104",
+      [10] = "sgm qcf 120105",
+      [11] = "sgm qc 12010602",
+      [12] = "gm skipregion 1 105701 1",
+      [13] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "东国一期（到达黑龙祭坛）",
     GMIntegrationName = "HeilongBossAlt"
@@ -771,10 +856,11 @@ return ReadOnly("GMIntegration", {
       [5] = "sgm qcf 100102",
       [6] = "sgm qcf 100103",
       [7] = "sgm qc 10020101",
-      [8] = "sgm qcf 120102",
-      [9] = "gm skipregion 1 104105 1",
-      [10] = "sgm qc 12010352",
-      [11] = "gm SuccessAllSystemGuide"
+      [8] = "sgm qcf 120101",
+      [9] = "sgm qcf 120102",
+      [10] = "gm skipregion 1 104105 1",
+      [11] = "sgm qc 12010352",
+      [12] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "东国一期（采集黑龙鳞）",
     GMIntegrationName = "HeilonglingFight"
@@ -788,11 +874,12 @@ return ReadOnly("GMIntegration", {
       [5] = "sgm qcf 100102",
       [6] = "sgm qcf 100103",
       [7] = "sgm qc 10020101",
-      [8] = "sgm qcf 120103",
-      [9] = "sgm qc 12010518",
-      [10] = "gm SS:SetInt(\"East01Nai03Phase\",1)",
-      [11] = "gm skipregion 1 104701 1",
-      [12] = "gm SuccessAllSystemGuide"
+      [8] = "sgm qcf 120101",
+      [9] = "sgm qcf 120103",
+      [10] = "sgm qc 12010518",
+      [11] = "gm SS:SetInt(\"East01Nai03Phase\",1)",
+      [12] = "gm skipregion 1 104701 1",
+      [13] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "东国一期（巨阙BOSS战）",
     GMIntegrationName = "JuqueBoss",
@@ -854,6 +941,58 @@ return ReadOnly("GMIntegration", {
     GMDisplayName = "扶疏幻境3",
     GMIntegrationName = "Nai03",
     GMTab = "任务"
+  },
+  OnlineTimeEvent10Min = {
+    GMCommands = {
+      [1] = "sgm tct2",
+      [2] = "sgm tct2",
+      [3] = "sgm tct2",
+      [4] = "sgm tct2",
+      [5] = "sgm tct2",
+      [6] = "sgm tct2",
+      [7] = "sgm tct2",
+      [8] = "sgm tct2",
+      [9] = "sgm tct2",
+      [10] = "sgm tct2"
+    },
+    GMDisplayName = "联机时长增加10分钟",
+    GMIntegrationName = "OnlineTimeEvent10Min"
+  },
+  OnlineTimeEvent50Min = {
+    GMCommands = {
+      [1] = "sgm tct2",
+      [2] = "sgm tct2",
+      [3] = "sgm tct2",
+      [4] = "sgm tct2",
+      [5] = "sgm tct2",
+      [6] = "sgm tct2",
+      [7] = "sgm tct2",
+      [8] = "sgm tct2",
+      [9] = "sgm tct2",
+      [10] = "sgm tct2",
+      [11] = "sgm tct2",
+      [12] = "sgm tct2",
+      [13] = "sgm tct2",
+      [14] = "sgm tct2",
+      [15] = "sgm tct2",
+      [16] = "sgm tct2",
+      [17] = "sgm tct2",
+      [18] = "sgm tct2",
+      [19] = "sgm tct2",
+      [20] = "sgm tct2",
+      [21] = "sgm tct2",
+      [22] = "sgm tct2",
+      [23] = "sgm tct2",
+      [24] = "sgm tct2",
+      [25] = "sgm tct2",
+      [26] = "sgm tct2",
+      [27] = "sgm tct2",
+      [28] = "sgm tct2",
+      [29] = "sgm tct2",
+      [30] = "sgm tct2"
+    },
+    GMDisplayName = "联机时长增加50分钟",
+    GMIntegrationName = "OnlineTimeEvent50Min"
   },
   PorJiebei = {
     GMCommands = {
@@ -1057,10 +1196,11 @@ return ReadOnly("GMIntegration", {
       [5] = "sgm qcf 100102",
       [6] = "sgm qcf 100103",
       [7] = "sgm qc 10020101",
-      [8] = "sgm qcf 120102",
-      [9] = "sgm qc 12010312",
-      [10] = "gm skipregion 1 104107 2",
-      [11] = "gm SuccessAllSystemGuide"
+      [8] = "sgm qcf 120101",
+      [9] = "sgm qcf 120102",
+      [10] = "sgm qc 12010312",
+      [11] = "gm skipregion 1 104107 2",
+      [12] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "东国一期（百年春保卫战）",
     GMIntegrationName = "SprFight",
@@ -1133,17 +1273,17 @@ return ReadOnly("GMIntegration", {
   },
   UnlockRougeAll = {
     GMCommands = {
-      [1] = "gm CompleteCondition 5052",
-      [2] = "gm CompleteCondition 5053",
-      [3] = "gm CompleteCondition 5054",
-      [4] = "gm CompleteCondition 5055",
-      [5] = "gm CompleteCondition 5056",
-      [6] = "gm CompleteCondition 5057",
-      [7] = "gm CompleteCondition 5058",
-      [8] = "gm CompleteCondition 5059",
-      [9] = "gm CompleteCondition 5060",
-      [10] = "gm CompleteCondition 5069",
-      [11] = "gm CompleteCondition 5072"
+      [1] = "sgm CompleteCondition 5052",
+      [2] = "sgm CompleteCondition 5053",
+      [3] = "sgm CompleteCondition 5054",
+      [4] = "sgm CompleteCondition 5055",
+      [5] = "sgm CompleteCondition 5056",
+      [6] = "sgm CompleteCondition 5057",
+      [7] = "sgm CompleteCondition 5058",
+      [8] = "sgm CompleteCondition 5059",
+      [9] = "sgm CompleteCondition 5060",
+      [10] = "sgm CompleteCondition 5069",
+      [11] = "sgm CompleteCondition 5072"
     },
     GMDisplayName = "解锁肉鸽所有难度",
     GMIntegrationName = "UnlockRougeAll"
@@ -1167,11 +1307,12 @@ return ReadOnly("GMIntegration", {
       [5] = "sgm qcf 100102",
       [6] = "sgm qcf 100103",
       [7] = "sgm qc 10020101",
-      [8] = "sgm qcf 120103",
-      [9] = "gm skipregion 1 104102 1",
-      [10] = "sgm qc 12010518",
-      [11] = "sgm qc 12010513",
-      [12] = "gm SuccessAllSystemGuide"
+      [8] = "sgm qcf 120101",
+      [9] = "sgm qcf 120103",
+      [10] = "gm skipregion 1 104102 1",
+      [11] = "sgm qc 12010518",
+      [12] = "sgm qc 12010513",
+      [13] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "东国一期（煜明BOSS战）",
     GMIntegrationName = "YumingBoss",

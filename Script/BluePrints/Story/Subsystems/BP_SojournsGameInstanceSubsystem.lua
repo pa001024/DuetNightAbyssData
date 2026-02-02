@@ -1,9 +1,11 @@
 require("UnLua")
+local GameFlowUtils = require("Utils.GameFlowUtils")
 local EInvitationState = {
   None = "None",
   Going = "Going",
   Inviting = "Inviting",
   Backing = "Backing",
+  Ending = "Ending",
   Recording = "Recording"
 }
 local M = Class("BluePrints.Common.TimerMgr")
@@ -45,10 +47,6 @@ function M:ListenInterruptInvitataion()
   EventManager:AddEvent(EventID.OnNetDisconnect, self, self.StopInvitation)
 end
 
-function M:ListenEnterOtherRegion()
-  EventManager:AddEvent(EventID.OnRegionLoaded, self, self.OnEnterOtherRegion)
-end
-
 function M:BeginInvitation(CharacterId, TopicLevel, bIsReview, OnFailed, OnSucceed)
   self:TryInitialize()
   if self:IsInInvitation() then
@@ -80,18 +78,16 @@ function M:BeginInvitation(CharacterId, TopicLevel, bIsReview, OnFailed, OnSucce
       end
       return
     end
-    local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-    local Flow = FlowManager:CreateFlow("Sojourn")
-    self.Flow = Flow
-    Flow.OnBegin:Add(Flow, function()
-      if OnSucceed then
-        OnSucceed()
+    self.Flow = GameFlowUtils:AddFlow("Sojourn", {
+      self,
+      function(_, Flow)
+        if OnSucceed then
+          OnSucceed()
+        end
+        DebugPrint(string.format("邀约子系统：开始邀约 %d %d %s。", CharacterId, TopicLevel, tostring(bIsReview)))
+        self:StartStoryline()
       end
-      DebugPrint(string.format("邀约子系统：开始邀约 %d %d %s。", CharacterId, TopicLevel, tostring(bIsReview)))
-      self:ListenEnterOtherRegion()
-      self:StartStoryline()
-    end)
-    FlowManager:AddFlow(Flow)
+    })
   end)
 end
 
@@ -105,26 +101,27 @@ function M:EndInvitation()
   local bIsReview = self.bIsReview
   DebugPrint(string.format("邀约子系统：结束邀约 %d %d %s。", CharacterId, TopicLevel, tostring(bIsReview)))
   self:ClearInvitation()
-  local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-  local Flow = FlowManager:CreateFlow("Sojourn")
-  Flow.OnBegin:Add(Flow, function()
-    local FlowOpenUI = FlowManager:CreateFlow("OpenSystemUI")
-    FlowOpenUI.OnBegin:Add(FlowOpenUI, function()
-      try({
-        exec = function()
-          UIManager(self):AddFlow("Entertainment", FlowOpenUI)
-          local UI = UIManager(self):LoadUINew("Entertainment", CharacterId, TopicLevel, Flow)
-        end,
-        catch = function(err)
-          FlowManager:RemoveFlow(Flow)
-          DebugPrint(ErrorTag, "LoadUINew Entertainment Error! traceback: ")
-          Traceback(ErrorTag, err, false)
+  GameFlowUtils:AddFlow("Sojourn", {
+    self,
+    function(_, Flow)
+      GameFlowUtils:AddFlow("OpenSystemUI", {
+        self,
+        function(_, FlowOpenUI)
+          try({
+            exec = function()
+              UIManager(self):AddFlow("Entertainment", FlowOpenUI)
+              UIManager(self):LoadUINew("Entertainment", CharacterId, TopicLevel, Flow)
+            end,
+            catch = function(err)
+              GameFlowUtils:RemoveFlow(Flow)
+              DebugPrint(ErrorTag, "LoadUINew Entertainment Error! traceback: ")
+              Traceback(ErrorTag, err, false)
+            end
+          })
         end
       })
-    end)
-    FlowManager:AddFlow(FlowOpenUI)
-  end)
-  FlowManager:AddFlow(Flow)
+    end
+  })
 end
 
 function M:StopInvitation()
@@ -145,6 +142,11 @@ end
 function M:IsInInvitation()
   self:TryInitialize()
   return self.InvitationState ~= EInvitationState.None
+end
+
+function M:IsNeedBlockAfterLoading()
+  self:TryInitialize()
+  return self.InvitationState == EInvitationState.Going or self.InvitationState == EInvitationState.Inviting or self.InvitationState == EInvitationState.Backing
 end
 
 function M:TryInitialize()
@@ -191,7 +193,6 @@ function M:ClearInvitation()
   self.PartyTopicData = nil
   self.TopicLevel = nil
   self.bIsReview = nil
-  EventManager:RemoveEvent(EventID.OnRegionLoaded, self)
   EventManager:RemoveEvent(EventID.CloseLoading, self)
   EventManager:RemoveEvent(EventID.InLoading, self)
   EventManager:RemoveEvent(EventID.OnNetDisconnect, self)
@@ -207,18 +208,18 @@ function M:OnEnterOtherRegion()
   if not self:IsInInvitation() then
     return
   end
-  if self.InvitationState ~= EInvitationState.Inviting then
-    return
+  if self.InvitationState == EInvitationState.Inviting then
+    self:StartStoryline()
+  else
+    self.InvitationState = EInvitationState.Ending
   end
-  self:StartStoryline()
 end
 
 function M:StartStoryline()
   local StorylinePath = self.PartyTopicData.PartyTopicTalkId
   
   local function OnCompleted()
-    local FlowManager = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UGameFlowManager)
-    FlowManager:RemoveFlow(self.Flow)
+    GameFlowUtils:RemoveFlow(self.Flow)
     self.Flow = nil
     self:CompleteInvite()
   end
@@ -245,11 +246,7 @@ function M:CompleteInvite()
 end
 
 function M:BackFromInvite()
-  if self.bIsReview then
-    self:EndInvitation()
-  else
-    self:RecordInvite()
-  end
+  self:RecordInvite()
 end
 
 function M:RecordInvite()

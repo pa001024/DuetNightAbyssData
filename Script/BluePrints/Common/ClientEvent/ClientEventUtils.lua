@@ -41,13 +41,10 @@ function ClientEventUtils:ClearSpecailQuestEvent(SpecialQuestId)
   end
 end
 
-function ClientEventUtils:CheckWhenNodeClear(SpecialQuestId)
+function ClientEventUtils:TryInterruptSpecialQuestEvent(SpecialQuestId, Reason)
   local SpecialEvent = self.SpecialQuestEvents[SpecialQuestId]
   if SpecialEvent then
-    local Ans = SpecialEvent:CheckWhenNodeClear()
-    if Ans then
-      self:ClearSpecailQuestEvent(SpecialQuestId)
-    end
+    SpecialEvent:InterruptSpecialQuestEvent(Reason)
   end
 end
 

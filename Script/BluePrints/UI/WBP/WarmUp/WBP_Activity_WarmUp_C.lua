@@ -209,10 +209,13 @@ function M:InitListWidget(ListWidget, Index, RewardId)
   local RewardState = ActivityUtils.GetCurSignRewardState(Index, DailyLoginServerData)
   local isGot = RewardState == ActivityUtils.EnumPlayerSignRewardState.Completed
   local bCanGet = RewardState == ActivityUtils.EnumPlayerSignRewardState.SignedNotRecv
+  ListWidget:StopAllAnimations()
   if RewardState == ActivityUtils.EnumPlayerSignRewardState.NotSign then
     ListWidget:PlayAnimation(ListWidget.Normal)
+    DebugPrint("JLy RewardState is Normal", Index, RewardId)
   elseif RewardState == ActivityUtils.EnumPlayerSignRewardState.SignedNotRecv then
     ListWidget:PlayAnimation(ListWidget.Complete)
+    DebugPrint("JLy RewardState is Completed", Index, RewardId)
   elseif RewardState == ActivityUtils.EnumPlayerSignRewardState.Completed then
     ListWidget:PlayAnimation(ListWidget.Received)
   end
@@ -337,9 +340,6 @@ function M:OnGamePadButtonDown(InKeyName)
       return true
     end
     return false
-  elseif InKeyName == UIConst.GamePadKey.FaceButtonBottom and 1 == self.FocusMode then
-    self:OnGetAllReward()
-    return true
   end
   return false
 end

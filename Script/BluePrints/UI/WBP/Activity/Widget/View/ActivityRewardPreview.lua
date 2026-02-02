@@ -7,12 +7,16 @@ function M:OnListItemObjectSet(Content)
   self.PhaseId = Content.PhaseId
   self.RewardPreview = Content.RewardPreview
   self.IsZhiliuQuest = Content.IsZhiliuQuest
+  self.IsComeBackEvent = Content.IsComeBackEvent
   self:InitPreRewardView()
 end
 
 function M:InitPreRewardView()
+  self.HB_Title:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   if self.IsZhiliuQuest then
     self.Text_TitleNum:SetText(GText("ZhiLiuEntrust_GrandReward_Name"))
+  elseif self.IsComeBackEvent then
+    self.HB_Title:SetVisibility(ESlateVisibility.Collapsed)
   else
     self.Text_TitleNum:SetText(string.format(GText("UI_GameEvent_StarterQuest_Phase"), self.Index))
   end

@@ -31,7 +31,6 @@ end
 
 function DailyPack:Active()
   local NowTime = TimeUtils.NowTime()
-  local PeriodTime = TimeUtils.GetDaySec(self.RewardPeriod)
   if 1 == self.State and NowTime < self.ExpiredTime then
     self.ExpiredTime = self.ExpiredTime + self.RewardPeriod * CommonConst.DayTime
   else
@@ -40,18 +39,11 @@ function DailyPack:Active()
   end
   self.State = 1
   self.Count = self.Count + 1
-  self.LastRefreshTime = NowTime
 end
 
 function DailyPack:Reset()
   self.RewardGot = {}
   self.Count = 0
-  self.LoginDays = 1
-end
-
-function DailyPack:UnActive()
-  self.Count = 0
-  self.State = 0
   self.LoginDays = 1
 end
 
@@ -61,65 +53,11 @@ end
 
 function DailyPack:LoginAdd()
   self.LoginDays = self.LoginDays + 1
+end
+
+function DailyPack:SetRewardGot()
+  self.RewardGot[self.LoginDays] = 1
   self.LastRefreshTime = TimeUtils.NowTime()
-end
-
-function DailyPack:LoginFinish()
-  self.Count = self.Count - 1
-  self.LoginDays = 0
-  self.RewardGot = {}
-end
-
-function DailyPack:GetLoginRewardIdx()
-  if not self:IsActive() then
-    return
-  end
-  if not self.LoginRequire then
-    return
-  end
-  local RewardIdx
-  for k, v in ipairs(self.LoginRequire) do
-    if self.LoginDays == v then
-      RewardIdx = k
-      break
-    end
-  end
-  if not RewardIdx then
-    return
-  end
-  if 1 == self.RewardGot[RewardIdx] then
-    return
-  end
-  return RewardIdx
-end
-
-function DailyPack:HandleLogin()
-  local Last5Clock = TimeUtils.TimestampLastClock(5)
-  if Last5Clock < self.LastRefreshTime then
-    return
-  end
-  self:LoginAdd()
-  local RewardIdx = self:GetLoginRewardIdx()
-  return RewardIdx
-end
-
-function DailyPack:CheckDailyPackFinish(RewardIdx)
-  if RewardIdx >= #self.Reward then
-    self:LoginFinish()
-    if self.Count <= 0 then
-      self:UnActive()
-    end
-    return true
-  end
-  return false
-end
-
-function DailyPack:GetRewardByRewardIdx(RewardIdx)
-  return self.Reward[RewardIdx]
-end
-
-function DailyPack:SetRewardGot(RewardIdx)
-  self.RewardGot[RewardIdx] = 1
 end
 
 function DailyPack:GetRewardMailId()
@@ -133,6 +71,14 @@ function DailyPack:SetRewardRecord(RewardId, NowTime)
     RewardId,
     NowTime
   }
+end
+
+function DailyPack:HasGetDailyReward()
+  return TimeUtils.GetIntervalDay(self.LastRefreshTime, TimeUtils.NowTime()) < 1
+end
+
+function DailyPack:GetLoginRewardId()
+  return self.Reward[1]
 end
 
 FormatProperties(DailyPack)

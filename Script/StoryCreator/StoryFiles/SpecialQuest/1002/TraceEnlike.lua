@@ -425,6 +425,7 @@ return {
             pos = {x = 873.4579898172002, y = -378.1224238290315},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "Npc_TraceEnli_1191916"
             }
@@ -497,6 +498,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -534,6 +536,7 @@ return {
             pos = {x = 1760.3547247264275, y = -155.9864926249248},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "Npc_TraceEnli_1191916"
             }
@@ -1390,6 +1393,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "P_101294Player",
               CameraLookAtTartgetPoint = "",
@@ -2003,6 +2007,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2078,6 +2083,7 @@ return {
             pos = {x = 1595.10682384965, y = 4.2276453958194224},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "Npc_TraceEnlike02_1191917"
             }
@@ -2125,6 +2131,7 @@ return {
             pos = {x = 2275.632399568393, y = -2.9308350854969945},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "Npc_TraceEnlike02_1191917"
             }
@@ -2166,6 +2173,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "101293Nvzhu1",
               CameraLookAtTartgetPoint = "",
@@ -2642,6 +2650,7 @@ return {
             pos = {x = 1855.356469201297, y = -60.37856063219337},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "Npc_TraceEnli03_1191927"
             }
@@ -2753,6 +2762,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "P1190930Boy1",
               CameraLookAtTartgetPoint = "P_1190918",
@@ -2794,6 +2804,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2868,6 +2879,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2967,6 +2979,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -3049,6 +3062,7 @@ return {
             pos = {x = 1389.75, y = 820.1875000000001},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "Npc_TraceEnli03_1191927"
             }
@@ -3110,6 +3124,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "P_101294Player",
               CameraLookAtTartgetPoint = "",

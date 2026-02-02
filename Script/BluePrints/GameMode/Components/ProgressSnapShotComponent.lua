@@ -1,6 +1,7 @@
 require("UnLua")
 local CommonUtils = require("Utils.CommonUtils")
 local SerializeUtils = require("Utils.SerializeUtils")
+local WalnutUtils = require("BluePrints.UI.WBP.Walnut.WalnutChoice.WalnutUtils")
 local ProgressSnapShotComponent = {}
 
 function ProgressSnapShotComponent:TryResetBattleEid()
@@ -72,24 +73,43 @@ end
 function ProgressSnapShotComponent:TriggerProgressRecover()
   local ProgressData = self:GetProgressData()
   if ProgressData then
+    local RecoverStage = "OnBattle"
     if ProgressData.IsRougeLike then
       self:RougeRecoverProgressData()
     elseif ProgressData.IsAbyss then
       self:AbyssRecoverProgressData()
     else
-      self:RecoverProgressData()
+      RecoverStage = self:RecoverProgressData()
     end
-    self:OnProgressRecoverSucceed()
+    if "OnVoteBegin" == RecoverStage then
+      self:ExecuteNextStepOfDungeonVote()
+      self:DoCustomLogicOnRecoverToVoteEnd()
+    elseif "OnBattle" == RecoverStage then
+      self:OnProgressRecoverSucceed()
+    end
   end
 end
 
-function ProgressSnapShotComponent:RecordProgressData()
+function ProgressSnapShotComponent:CheckProgressSnapShotEnable()
   if not IsStandAlone(self) then
-    return
+    return false
   end
   if not Const.ProgressRecoverDungeonType[self.EMGameState.GameModeType] then
+    return false
+  end
+  return true
+end
+
+function ProgressSnapShotComponent:RecordProgressData()
+  if not self:CheckProgressSnapShotEnable() then
     return
   end
+  local ResData, _Data = self:GenerateProgressData("OnBattle")
+  UE4.UGameplayStatics.GetGameInstance(self):ClearProgressData()
+  GWorld:GetAvatar():SaveProgressData(ResData)
+end
+
+function ProgressSnapShotComponent:GenerateProgressData(CurStage)
   DebugPrint("ProgressSnapShotComponent: RecordProgressData")
   local StaticCreatorData = {}
   local RandomCreatorData = {}
@@ -104,7 +124,11 @@ function ProgressSnapShotComponent:RecordProgressData()
           RandomLevelName = self.RandomActorManager:GetCreatorRegionDataLevelName(Monster.RandomRuleId, Monster.RandomCreatorId),
           RandomIdxInRule = self.RandomActorManager:GetCreatorRegionDataIdxInRule(Monster.RandomRuleId, Monster.RandomCreatorId)
         }
-        table.insert(RandomCreatorData, TmpData)
+        if self:IsRandomCreatorInfoValid(TmpData, true) then
+          table.insert(RandomCreatorData, TmpData)
+        else
+          DebugPrint("ProgressSnapShotComponent: 尝试存储非法随机点数据 Monster Eid", Monster.Eid, "UnitId", Monster.UnitId, "RandomCreatorId", Monster.RandomCreatorId)
+        end
       elseif 0 ~= Monster.CreatorId then
         local TmpData = {
           StaticCreatorId = Monster.CreatorId,
@@ -116,23 +140,13 @@ function ProgressSnapShotComponent:RecordProgressData()
     end
   end
   for _, Monster in pairs(self.EMGameState.NpcMap) do
-    if IsValid(Monster) and not Monster:IsDead() and Monster.CreatorType == "StaticCreator" then
-      if 0 ~= Monster.RandomCreatorId then
-        local TmpData = {
-          RandomRuleId = Monster.RandomRuleId,
-          RandomTableId = Monster.RandomTableId,
-          RandomLevelName = self.RandomActorManager:GetCreatorRegionDataLevelName(Monster.RandomRuleId, Monster.RandomCreatorId),
-          RandomIdxInRule = self.RandomActorManager:GetCreatorRegionDataIdxInRule(Monster.RandomRuleId, Monster.RandomCreatorId)
-        }
-        table.insert(RandomCreatorData, TmpData)
-      elseif 0 ~= Monster.CreatorId and not Monster:IsPetNpc() then
-        local TmpData = {
-          StaticCreatorId = Monster.CreatorId,
-          PrivateEnable = Monster.PrivateEnable,
-          LevelName = self:GetActorLevelName(Monster)
-        }
-        table.insert(StaticCreatorData, TmpData)
-      end
+    if IsValid(Monster) and not Monster:IsDead() and Monster.CreatorType == "StaticCreator" and 0 ~= Monster.CreatorId and not Monster:IsPetNpc() then
+      local TmpData = {
+        StaticCreatorId = Monster.CreatorId,
+        PrivateEnable = Monster.PrivateEnable,
+        LevelName = self:GetActorLevelName(Monster)
+      }
+      table.insert(StaticCreatorData, TmpData)
     end
   end
   for _, CombatItem in pairs(self.EMGameState.CombatItemMap) do
@@ -147,7 +161,11 @@ function ProgressSnapShotComponent:RecordProgressData()
           RandomIdxInRule = self.RandomActorManager:GetCreatorRegionDataIdxInRule(CombatItem.RandomRuleId, CombatItem.RandomCreatorId),
           ItemData = CombatItem:GetDungeonSaveData() or {}
         }
-        table.insert(RandomCreatorData, TmpData)
+        if self:IsRandomCreatorInfoValid(TmpData, true) then
+          table.insert(RandomCreatorData, TmpData)
+        else
+          DebugPrint("ProgressSnapShotComponent: 尝试存储非法随机点数据 CombatItem Eid", CombatItem.Eid, "UnitId", CombatItem.UnitId, "RandomCreatorId", CombatItem.RandomCreatorId)
+        end
       elseif 0 ~= CombatItem.CreatorId and not CombatItem.IsPetDefenceMechanism then
         local TmpData = {
           StaticCreatorId = CombatItem.CreatorId,
@@ -217,6 +235,11 @@ function ProgressSnapShotComponent:RecordProgressData()
   local DungeonTimeData = {}
   DungeonTimeData.GameTime = self.EMGameState:GetGameEndTime()
   DungeonTimeData.PlayerTime = PlayerState:GetPlayerEndTime()
+  local AutoNextRoundInfo = {}
+  AutoNextRoundInfo.TicketId = GWorld.GameInstance:GetTicketId()
+  local CachedWalnutId, CachedWalnutType = WalnutUtils:GetWalnutCacheIdByDungeonId(self.DungeonId)
+  AutoNextRoundInfo.WalnutId = CachedWalnutId
+  AutoNextRoundInfo.WalnutType = CachedWalnutType
   local ResData = {
     Eid = Eid,
     DungeonId = DungeonId,
@@ -232,11 +255,12 @@ function ProgressSnapShotComponent:RecordProgressData()
     DungeonUIInfoData = DungeonUIInfoData,
     DungeonEventData = DungeonEventData,
     RecoveryCountInfo = RecoveryCountInfo,
-    DungeonTimeData = DungeonTimeData
+    DungeonTimeData = DungeonTimeData,
+    AutoNextRoundInfo = AutoNextRoundInfo,
+    CurStage = CurStage
   }
   PrintTable(ResData, 6)
-  UE4.UGameplayStatics.GetGameInstance(self):ClearProgressData()
-  GWorld:GetAvatar():SaveProgressData(ResData)
+  return ResData, TmpDungeonSnapShotData
 end
 
 function ProgressSnapShotComponent:RecoverProgressData()
@@ -280,7 +304,9 @@ function ProgressSnapShotComponent:RecoverProgressData()
     end
   end
   for i, RandomData in pairs(ProgressData.RandomCreatorData) do
-    self.RandomActorManager:ProgressDataRecoverRandomActor(RandomData.RandomRuleId, RandomData.RandomLevelName, RandomData.RandomIdxInRule, RandomData.RandomTableId, RandomData.ItemData)
+    if self:IsRandomCreatorInfoValid(RandomData, false) then
+      self.RandomActorManager:ProgressDataRecoverRandomActor(RandomData.RandomRuleId, RandomData.RandomLevelName, RandomData.RandomIdxInRule, RandomData.RandomTableId, RandomData.ItemData)
+    end
   end
   self:TriggerDungeonComponentFun("RecoverDungeonRoundData", ProgressData.DungeonData)
   self:SetDungeonSnapShotData(ProgressData.DungeonSnapShotData)
@@ -307,10 +333,60 @@ function ProgressSnapShotComponent:RecoverProgressData()
       Player.PlayerState.RecoveredPlayerTime = ProgressData.DungeonTimeData.PlayerTime or 0
     end
   end
+  if ProgressData.AutoNextRoundInfo then
+    local SavedTickId = ProgressData.AutoNextRoundInfo.TicketId
+    if SavedTickId then
+      GWorld.GameInstance:SetTicketId(SavedTickId)
+    end
+    local SavedWalnutId = ProgressData.AutoNextRoundInfo.WalnutId
+    local SavedWalnutType = ProgressData.AutoNextRoundInfo.WalnutType
+    if SavedWalnutId and SavedWalnutType then
+      WalnutUtils:SetWalnutCacheId(SavedWalnutId, SavedWalnutType)
+    end
+  end
+  local ResCurStage = ProgressData.CurStage or "OnBattle"
+  if self:IsWalnutDungeon() and "OnVoteBegin" == ResCurStage then
+    local Avatar = GWorld:GetAvatar()
+    if Avatar then
+      local CurWalnutId = Avatar.Walnuts.WalnutId
+      if -1 == CurWalnutId or CurWalnutId > 0 then
+        ResCurStage = "OnBattle"
+      end
+    end
+  end
+  return ResCurStage
 end
 
 function ProgressSnapShotComponent:OnProgressRecoverSucceed()
   self.Overridden.OnProgressRecoverSucceed(self)
+end
+
+function ProgressSnapShotComponent:DoCustomLogicOnRecoverToVoteEnd()
+  if self.EMGameState.GameModeType == "SurvivalMini" then
+    self:OnProgressRecoverSucceed()
+  end
+  if self:IsWalnutDungeon() then
+    EventManager:AddEvent(EventID.OnDungeonWalnutChoiceUIOpen, self, function()
+      EventManager:RemoveEvent(EventID.OnDungeonWalnutChoiceUIOpen, self)
+      self:SetGamePaused("NextWalnutRecover", true)
+    end)
+  end
+end
+
+function ProgressSnapShotComponent:IsRandomCreatorInfoValid(TmpInfo, IsRecord)
+  if not TmpInfo.RandomLevelName or TmpInfo.RandomLevelName == "" then
+    ScreenPrint("ProgressSnapShotComponent: 非法的随机点数据, RandomLevelName非法  是否发生在存储时: " .. tostring(IsRecord))
+    return false
+  end
+  if not TmpInfo.RandomRuleId then
+    ScreenPrint("ProgressSnapShotComponent: 非法的随机点数据, RandomRuleId为空  是否发生在存储时: " .. tostring(IsRecord))
+    return false
+  end
+  if not TmpInfo.RandomTableId then
+    ScreenPrint("ProgressSnapShotComponent: 非法的随机点数据, RandomTableId为空  是否发生在存储时: " .. tostring(IsRecord))
+    return false
+  end
+  return true
 end
 
 function ProgressSnapShotComponent:RougeRecordProgressData(PassRoomExtraInfo)

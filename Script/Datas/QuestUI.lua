@@ -1,9 +1,13 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("QuestUI", {
   [100301] = {
     AudioPath = "event:/ui/common/chapter_2_trans",
+    AudioPathFinal = "event:/ui/common/chapter_2_trans",
     CantoName = "Episode_02_01",
     ChapterName = "Episode_02",
     QuestId = 100301,
@@ -12,6 +16,7 @@ return ReadOnly("QuestUI", {
   },
   [100302] = {
     AudioPath = "event:/ui/common/chapter_2_trans",
+    AudioPathFinal = "event:/ui/common/chapter_2_trans",
     CantoName = "Episode_02_02",
     ChapterName = "Episode_02",
     QuestId = 100302,
@@ -20,6 +25,7 @@ return ReadOnly("QuestUI", {
   },
   [100303] = {
     AudioPath = "event:/ui/common/chapter_2_trans",
+    AudioPathFinal = "event:/ui/common/chapter_2_trans",
     CantoName = "Episode_02_03",
     ChapterName = "Episode_02",
     QuestId = 100303,
@@ -28,6 +34,7 @@ return ReadOnly("QuestUI", {
   },
   [100304] = {
     AudioPath = "event:/ui/common/chapter_2_trans",
+    AudioPathFinal = "event:/ui/common/chapter_2_trans",
     CantoName = "Episode_02_04",
     ChapterName = "Episode_02",
     QuestId = 100304,
@@ -36,6 +43,7 @@ return ReadOnly("QuestUI", {
   },
   [100305] = {
     AudioPath = "event:/ui/common/chapter_2_trans",
+    AudioPathFinal = "event:/ui/common/chapter_2_trans",
     CantoName = "Episode_02_05",
     ChapterName = "Episode_02",
     QuestId = 100305,
@@ -44,6 +52,7 @@ return ReadOnly("QuestUI", {
   },
   [100306] = {
     AudioPath = "event:/ui/common/chapter_2_trans",
+    AudioPathFinal = "event:/ui/common/chapter_2_trans",
     CantoName = "Episode_02_06",
     ChapterName = "Episode_02",
     QuestId = 100306,
@@ -52,14 +61,25 @@ return ReadOnly("QuestUI", {
   },
   [100307] = {
     AudioPath = "event:/ui/common/chapter_2_trans",
+    AudioPathFinal = "event:/ui/common/chapter_2_trans",
     CantoName = "Episode_02_07",
     ChapterName = "Episode_02",
     QuestId = 100307,
     Title = "Name_100307",
     UIName = "Chapter_Transition02"
   },
+  [120101] = {
+    AudioPath = "event:/ui/common/main_quest_start",
+    AudioPathFinal = "event:/ui/common/main_quest_finish",
+    CantoName = "Episode_1200",
+    ChapterName = "UI_Quest_ChapterHuaxu",
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Region/T_Region_Yanjindu.T_Region_Yanjindu'",
+    QuestId = 120101,
+    UIName = "ChapterUI"
+  },
   [120111] = {
     AudioPath = "event:/ui/activity/feina_day_update",
+    AudioPathFinal = "event:/ui/activity/feina_day_update",
     CantoName = "1.0",
     ChapterName = "Episode_Feina",
     QuestId = 120111,
@@ -68,6 +88,7 @@ return ReadOnly("QuestUI", {
   },
   [120112] = {
     AudioPath = "event:/ui/activity/feina_day_update",
+    AudioPathFinal = "event:/ui/activity/feina_day_update",
     CantoName = "2.0",
     ChapterName = "Episode_Feina",
     QuestId = 120112,
@@ -76,6 +97,7 @@ return ReadOnly("QuestUI", {
   },
   [120113] = {
     AudioPath = "event:/ui/activity/feina_day_update",
+    AudioPathFinal = "event:/ui/activity/feina_day_update",
     CantoName = "3.0",
     ChapterName = "Episode_Feina",
     QuestId = 120113,
@@ -84,6 +106,7 @@ return ReadOnly("QuestUI", {
   },
   [120114] = {
     AudioPath = "event:/ui/activity/feina_day_update",
+    AudioPathFinal = "event:/ui/activity/feina_day_update",
     CantoName = "6.0",
     ChapterName = "Episode_Feina",
     QuestId = 120114,

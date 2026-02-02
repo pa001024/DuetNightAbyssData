@@ -40,6 +40,21 @@ function WBP_Build_Character_P_C:InitSlot(Params)
   self.Item:Init({Owner = self})
 end
 
+function WBP_Build_Character_P_C:CheckUuidIsVaild()
+  if self.IsEmpty then
+    return true
+  end
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    if not Avatar.Chars[self.Uuid] then
+      self:ClearSlot()
+    else
+      return true
+    end
+  end
+  return false
+end
+
 function WBP_Build_Character_P_C:PlayRefreshAnimation()
   if not self.IsEmpty then
     self.Item:PlayAnimation(self.Item.Refresh)

@@ -202,7 +202,7 @@ function M:CloseSelf()
   if self.CurSubUI and not self.CurSubUI.IsClose then
     if self.CurSubUI.IsGamepadClickItem then
       self.CurSubUI.IsGamepadClickItem = false
-      self.CurSubUI:SetFocus()
+      self.BG:SetFocus()
     else
       self.CurSubUI:CloseSelf()
       self:PlayAnimation(self.Back)
@@ -353,7 +353,7 @@ function M:InitCurSubUI(Index)
   local DungeonId = FeinaEventConfig.DungeonId
   local IsPassDungeon1, IsPassDungeon2 = self:GetPassDungeon(Index)
   self.CurSubUI:InitLevelDetail(DungeonId, IsPassDungeon1, IsPassDungeon2, Index)
-  self.CurSubUI:SetFocus()
+  self.BG:SetFocus()
   self:PlayAnimation(self.Next)
   self:UpdateBottomKeyInfo()
 end
@@ -376,7 +376,7 @@ function M:RefreshCurSubUI(Index)
   local IsPassDungeon1, IsPassDungeon2 = self:GetPassDungeon(Index)
   self.CurSubUI:InitLevelDetail(DungeonId, IsPassDungeon1, IsPassDungeon2, Index)
   self.CurSubUI:PlayAnimation(self.CurSubUI.Change)
-  self.CurSubUI:SetFocus()
+  self.BG:SetFocus()
 end
 
 function M:Destruct()
@@ -416,7 +416,7 @@ function M:ParentOnKeyDown(MyGeometry, InKeyEvent)
     self.CurSubUI:GoToDungeon()
   elseif "Escape" == InKeyName or "Gamepad_FaceButton_Right" == InKeyName then
     if self.CurSubUI.IsGamepadClickItem then
-      self.CurSubUI:SetFocus()
+      self.BG:SetFocus()
       self.CurSubUI:HideGamepadTips(false)
       self.CurSubUI.IsGamepadClickItem = false
       self:UpdateBottomKeyInfo()
@@ -425,7 +425,7 @@ function M:ParentOnKeyDown(MyGeometry, InKeyEvent)
     end
   elseif InKeyName == UIConst.GamePadKey.LeftThumb then
     if self.CurSubUI.IsGamepadClickItem then
-      self.CurSubUI:SetFocus()
+      self.BG:SetFocus()
       self.CurSubUI:HideGamepadTips(false)
     else
       self.CurSubUI.List_Reward:SetFocus()
@@ -451,6 +451,15 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
     self.IsFirstFocus = true
     self.Level01.Btn_Click:SetFocus()
   end
+end
+
+function M:OnFocusReceived(MyGeometry, InFocusEvent)
+  if self.CurSubUI and not self.CurSubUI.IsClose then
+    self.CurSubUI.IsGamepadClickItem = false
+    self.BG:SetFocus()
+    self.CurSubUI:HideGamepadTips(false)
+  end
+  return UIUtils.Handle
 end
 
 return M

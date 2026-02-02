@@ -38,5 +38,9 @@ function FSMMethods:Enter(NewState)
   end
 end
 
+function FSMMethods:Reset()
+  self.CurrentStateName = nil
+end
+
 FSM.__index = FSMMethods
 return FSM

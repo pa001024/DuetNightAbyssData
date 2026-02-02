@@ -28,6 +28,7 @@ function M:Construct()
   self:AddDispatcher(EventID.OnResourcesChanged, self, self.OnResourcesChanged)
   self:RefreshBaseInfo()
   self:AddDispatcher(EventID.OnPetLocked, self, self.OnPetLocked)
+  self.Text_Warning:SetText(GText("Pet_Affix_Replace_ReConfirm_Tips"))
 end
 
 function M:ReceiveEnterState(StackAction)
@@ -377,6 +378,8 @@ function M:ReallyMix()
       self.IsFinishing = true
       self.Entry_Pet_Mix.VX_GlowLine:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       self.Entry_Pet_Now.VX_GlowLine:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.Panel_Warning:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.SelectedPet = nil
     elseif DataMgr.ErrorCode[ErrCode] then
       UIManager(self):ShowError(ErrCode, nil, UIConst.Tip_CommonToast)
       self:BlockAllUIInput(false)
@@ -388,9 +391,6 @@ function M:ReallyMix()
   
   self._Avatar:PetEntryReplace(CallBack, self.Params.Target.UniqueId, self.CurEntryContent.Index, self.SelectedPet.UniqueId, self.SelectedEntryContent.Index)
   self:BlockAllUIInput(true)
-  self:AddTimer(5, function()
-    self:BlockAllUIInput(false)
-  end)
 end
 
 function M:OnFinish()
@@ -479,9 +479,15 @@ function M:OnPetMixEntryDestructed(SelectedPetEntryContent, Pet)
   self.Btn_Switch:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Entry_Pet_Mix:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Entry_Pet_Mix.Button_Area:SetFocus()
+  if self.SelectedPet and self.CurEntryContent and not self.CurEntryContent.IsEmpty then
+    self.Btn_Confirm:SetText(GText("Pet_Affix_Replace"))
+    self.Panel_Warning:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+  else
+    self.Btn_Confirm:SetText(GText("Pet_Affix_Activat"))
+    self.Panel_Warning:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
   local PetData = DataMgr.Pet[Pet.UnitId]
   if self.EffectCreatureId and self.EffectCreatureId == PetData.EffectCreatureId then
-    ScreenPrint("不创建宠物")
     return
   elseif self.EffectCreatureId and self.EffectCreatureId ~= PetData.EffectCreatureId and self.EffectCreature then
     self.EffectCreature:SetActorHiddenInGame(true)
@@ -515,12 +521,15 @@ function M:OnEntryClicked(Content)
   else
     self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
   end
-  if Content.IsEmpty then
-    self.Btn_Confirm:SetText(GText("Pet_Affix_Activat"))
-    self.Btn_Confirm:SetVisibility(UIConst.VisibilityOp.Visible)
-  else
+  local shouldShowWarning = self.SelectedPet ~= nil and not Content.IsEmpty
+  if shouldShowWarning then
+    self.Panel_Warning:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.Btn_Confirm:SetText(GText("Pet_Affix_Replace"))
     self.Btn_Confirm:SetVisibility(UIConst.VisibilityOp.Visible)
+  else
+    self.Btn_Confirm:SetText(GText("Pet_Affix_Activat"))
+    self.Btn_Confirm:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.Panel_Warning:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end
 
@@ -639,17 +648,7 @@ end
 
 function M:GetDPIAdjustedMixPetOffset()
   local OriginalOffset = self.EffectCreature.MixPetOffset or FVector(0, 63, 25)
-  local IsMobile = CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile"
-  if not IsMobile then
-    return OriginalOffset
-  end
-  local DPIScale = self:GetCurrentDPIScale()
-  local DeviceScale = self:GetMobileDeviceScale()
-  local AdjustedX = OriginalOffset.X * DPIScale * DeviceScale
-  local AdjustedY = OriginalOffset.Y * DPIScale * DeviceScale
-  local AdjustedZ = OriginalOffset.Z * DPIScale * DeviceScale
-  DebugPrint(string.format("PetMix DPI调整: 原始偏移(%.2f,%.2f,%.2f) -> 调整后(%.2f,%.2f,%.2f), DPI缩放:%.2f, 设备缩放:%.2f", OriginalOffset.X, OriginalOffset.Y, OriginalOffset.Z, AdjustedX, AdjustedY, AdjustedZ, DPIScale, DeviceScale))
-  return FVector(AdjustedX, AdjustedY, AdjustedZ)
+  return OriginalOffset
 end
 
 function M:GetCurrentDPIScale()

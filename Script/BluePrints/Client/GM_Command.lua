@@ -32,6 +32,7 @@ function GM_Command:Init_Command()
     CN = "CreateNpc",
     CPet = "CreatePet",
     TriggerLoadedEvent = "TriggerLoadedEvent",
+    MonsterForceLOD = "MonsterForceLOD",
     LowQuality = "LowQuality",
     ShowFlag = "ShowFlag",
     QualityLevel = "QualityLevel",
@@ -94,6 +95,7 @@ function GM_Command:Init_Command()
     LHQ = "LHQTEST",
     LJH = "LJHTEST",
     AYF = "AYFTEST",
+    LGC = "LGCTEST",
     DungeonEventTest = "DungeonEventTest",
     SwitchSurvivalValueChange = "SwitchSurvivalValueChange",
     PrintLevelDebugInfo = "PrintLevelDebugInfo",
@@ -229,6 +231,7 @@ function GM_Command:Init_Command()
     UWGL = "UpWeaponGradeLevel",
     ChangeWeaponColor = "ChangeWeaponColor",
     CleanWeaponColor = "CleanWeaponColor",
+    ForgeRPCTest = "ForgeRPCTest",
     NOCD = "NoCDForSkill",
     UpdateMonCd = "UpdateMonCd",
     FireDanmaku = "FireDanmaku",
@@ -279,6 +282,10 @@ function GM_Command:Init_Command()
     ShowSkillCreature = "ShowSkillCreature",
     ShowRayCreature = "ShowRayCreature",
     AnimCacheEnableState = "AnimCacheEnableState",
+    EnableOnlineAnimCache = "EnableOnlineAnimCache",
+    GDTAI = "GDTAI",
+    GDTEMBT = "GDTEMBT",
+    GDTAnimCache = "GDTAnimCache",
     GetDrop = "GetDrop",
     DS = "DisconnectServer",
     CS = "ConnectServer",
@@ -304,7 +311,7 @@ function GM_Command:Init_Command()
     MGC = "ManualGC",
     sctime = "SetClientTime",
     EnableBuffMesh = "EnableBuffMesh",
-    PSOP = "PSOPrepare",
+    SwitchRWS = "SwitchRWS",
     pcmv = "PrintCharModVolume",
     ChangeSpeed = "ChangeSpeed",
     SetWalk = "SetWalk",
@@ -487,6 +494,7 @@ function GM_Command:Init_Command()
     CommonActivitySettlement = "CommonActivitySettlement",
     EnterPaotai = "EnterPaotai",
     EnterEventDungeon = "EnterEventDungeon",
+    MonsterBornPosCheck = "MonsterBornPosCheck",
     PrintLevelbound = "PrintLevelbound",
     ShowScenarioPerformanceData = "ShowScenarioPerformanceData",
     ShowScenarioDataOnTick = "ShowScenarioDataOnTick",
@@ -498,6 +506,8 @@ function GM_Command:Init_Command()
     EnableRegionPlayerRandomRoleId = "EnableRegionPlayerRandomRoleId",
     EnableRegionPlayerOnlyShowHeadUI = "EnableRegionPlayerOnlyShowHeadUI",
     URB = "UseResourceBattle",
+    AFD = "ApplyAFDTransform",
+    CAFD = "CancelAFDTransform",
     NPCSubSystemOnline = "NPCSubSystemOnline",
     NPCSubSystemChangeId = "NPCSubSystemChangeOnlineRegionId",
     ReadyForRegonOnline = "ReadyForRegonOnline",
@@ -511,8 +521,43 @@ function GM_Command:Init_Command()
     HideStoryUI = "HideStoryUI",
     HideEntertainmentUI = "HideEntertainmentUI",
     GetAllOptPackages = "GetAllOptPackages",
-    ActorSnapShot = "ActorSnapShot"
+    Eids = "ShowEids",
+    ActorSnapShot = "ActorSnapShot",
+    CreateAutoChessMonster = "CreateAutoChessMonster",
+    RemoveAutoChessMonster = "RemoveAutoChessMonster",
+    AutoChessUI = "OpenAutoChessUI",
+    AutoChessBuffDetail = "OpenAutoChessBuffDetailUI",
+    AutoChessDeputeMonsterInfo = "OpenAutoChessDeputeMonsterInfoUI",
+    OpenFameMainUI = "OpenFameMainUI",
+    ReputationExpAdd = "ReputationExpAdd",
+    CreateNewTreasureItemToPocket = "CreateNewTreasureItemToPocket",
+    SoloTreasureBag = "SoloTreasureBag",
+    OpenUIAndAddSoloTreaureScore = "OpenUIAndAddSoloTreaureScore",
+    OpenReturnWelcomeBanner = "OpenReturnWelcomeBanner",
+    OpenSecPassWordUI = "OpenSecPassWordUI"
   }
+end
+
+function GM_Command:OpenAutoChessDeputeMonsterInfoUI(MissionID)
+  local MissionID = tonumber(MissionID)
+  UIManager(self):LoadUINew("AutoChessDeputeMonsterInfoUI", MissionID)
+end
+
+function GM_Command:OpenAutoChessBuffDetailUI(MissionID)
+  local MissionID = tonumber(MissionID)
+  UIManager(self):LoadUINew("AutoChessBuffDetail", MissionID)
+end
+
+function GM_Command:OpenUIAndAddSoloTreaureScore(AddScore)
+  local UI = UIManager(GWorld.GameInstance):LoadUINew("SoloTreasureCountDownTip")
+  local RealScore = tonumber(AddScore)
+  if type(RealScore) == "number" then
+    EventManager:FireEvent(EventID.OnUpdateGameScore, RealScore)
+  end
+end
+
+function GM_Command:LGCTEST(Param)
+  UIManager(self):LoadUINew("ComBackWelcomeBanner")
 end
 
 function GM_Command:GMUseCDK(CDK)
@@ -864,9 +909,11 @@ function GM_Command:Hotfix(...)
   assert(HotfixData.index, "需要填写HotfixData.index")
   assert(HotfixData.script, "需要填写HotfixData.script")
   local UnLuaHotReload = require("UnLuaHotReload")
-  require("HotFix").ExecHotFix(HotfixData.index, HotfixData.script)
+  require("HotFix").ExecHotFix(HotfixData.index, HotfixData.script, true)
   GWorld.HotfixDataIndex = HotfixData.index
-  self:ServerBattleCommand("Hotfix")
+  if not IsStandAlone(self.Player) then
+    self:ServerBattleCommand("Hotfix")
+  end
 end
 
 function GM_Command:GetAvatar(...)
@@ -989,8 +1036,8 @@ function GM_Command:CreatePet(UnitId, Num, Level)
   self:ServerBattleCommand("CreatePet", UnitId, Num, Level, "StaticCreator")
 end
 
-function GM_Command:CreateMonster(UnitId, Num, Level)
-  self:ServerBattleCommand("CreateMonster", self.Player.Eid, UnitId, Num, Level, "StaticCreator")
+function GM_Command:CreateMonster(UnitId, Num, Level, ForcedLOD)
+  self:ServerBattleCommand("CreateMonster", self.Player.Eid, UnitId, Num, Level, "StaticCreator", ForcedLOD)
 end
 
 function GM_Command:CreateMonsterSpawnMonster(UnitId, Num, Level)
@@ -1533,6 +1580,16 @@ function GM_Command:FillPlayerInfo(FinalMsgTable)
   local PlayerState = self.Player.PlayerState
   local PlayerPing = PlayerState:GetPlayerPing()
   table.insert(FinalMsgTable, "PlayerPing \t" .. tostring(PlayerPing) .. "\n")
+  local VersionText = UE.AHotUpdateGameMode.GetTotalVersionNumber()
+  if "" == VersionText then
+    VersionText = "编辑器状态，未获取到版本号"
+  end
+  table.insert(FinalMsgTable, "Game Version \t" .. VersionText .. "\n")
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    local Hostnum = Avatar.Hostnum
+    table.insert(FinalMsgTable, "Avatar Hostnum \t" .. tostring(Hostnum) .. "\n")
+  end
 end
 
 function GM_Command:FillScanLevelInfo(FinalMsgTable)
@@ -1728,26 +1785,63 @@ function GM_Command:THYTEST(type, TaskId, Arg)
   end
 end
 
+function GM_Command:ForgeRPCTest()
+  local function Callback(Ret)
+    DebugPrint("ForgeRPCTest, Ret is :", Ret)
+    
+    ErrorCode:Check(Ret)
+  end
+  
+  local TestFunctions = {}
+  local Avatar = GWorld:GetAvatar()
+  table.insert(TestFunctions, function()
+    DebugPrint("Tianyi@ 批量铸造测试， ProduceNum = 99999999999")
+    local DraftId = 1001
+    local SelectParam = {}
+    local ProduceNum = 99999999999
+    Avatar:CallServer("StartProduct", Callback, DraftId, ProduceNum, SelectParam)
+  end)
+  table.insert(TestFunctions, function()
+    DebugPrint("Tianyi@ 批量铸造测试， ProduceNum = -1")
+    local DraftId = 1001
+    local SelectParam = {}
+    local ProduceNum = -1
+    Avatar:CallServer("StartProduct", Callback, DraftId, ProduceNum, SelectParam)
+  end)
+  table.insert(TestFunctions, function()
+    DebugPrint("Tianyi@ 饰品批量铸造测试， DraftId = 340003")
+    local DraftId = 340003
+    local SelectParam = {}
+    local ProduceNum = 3
+    Avatar:CallServer("StartProduct", Callback, DraftId, ProduceNum, SelectParam)
+  end)
+  table.insert(TestFunctions, function()
+    DebugPrint("Tianyi@ 武器批量铸造测试， DraftId = 920604")
+    local DraftId = 920604
+    local SelectParam = {}
+    local ProduceNum = 333333
+    Avatar:CallServer("StartProduct", Callback, DraftId, ProduceNum, SelectParam)
+  end)
+  table.insert(TestFunctions, function()
+    DebugPrint("Tianyi@ 武器加速铸造测试 DraftId = 920604")
+    local DraftId = 920604
+    Avatar:CallServer("AccelerateProduct", Callback, DraftId)
+  end)
+  table.insert(TestFunctions, function()
+    DebugPrint("Tianyi@ 武器取消铸造测试 DraftId = 920604")
+    local DraftId = 920604
+    Avatar:CallServer("CancelProduct", Callback, DraftId)
+  end)
+  for i = 1, #TestFunctions do
+    self.Player:AddTimer((i - 1) * 1.0, function()
+      local TestFunction = TestFunctions[i]
+      TestFunction()
+    end)
+  end
+end
+
 function GM_Command:JTYTEST(Value)
-  local Data = {
-    TitleName = GText("MAIN_UI_FORGE"),
-    LeftKey = "Q",
-    RightKey = "E",
-    StyleName = "Text",
-    Tabs = {
-      {Text = "测试1", TabId = 1},
-      {Text = "测试2", TabId = 2}
-    },
-    DynamicNode = {
-      "Back",
-      "ResourceBar",
-      "BottomKey"
-    },
-    BottomKeyInfo = {},
-    OwnerPanel = self,
-    ChildWidgetBPPath = "WidgetBlueprint'/Game/UI/WBP/Announcement/Widget/WBP_Announcement_TabItem.WBP_Announcement_TabItem'"
-  }
-  UIManager(self):ShowCommonPopupUI(100000, {TabConfigData = Data})
+  PageJumpUtils:JumpToForgeCompendiumPathByDraftId(1001)
 end
 
 function GM_Command:HTYTEST(type, Id)
@@ -1928,6 +2022,7 @@ end
 
 function GM_Command:UnlockHardBoss(bAll)
   print(_G.LogTag, "UnlockHardBoss", bAll)
+  local GMFunctionLibrary = require("BluePrints.UI.GMInterface.GMFunctionLibrary")
   
   local function FillCondition(Info)
     local ConditionList = {}
@@ -1935,18 +2030,20 @@ function GM_Command:UnlockHardBoss(bAll)
       local Condition = InnerInfo.UnlockCondition
       if Condition then
         if type(Condition) == "table" then
-          table.move(Condition, 1, #Condition, #ConditionList + 1, ConditionList)
+          for i = 1, #Condition do
+            GMFunctionLibrary.ExecConsoleCommand(self:GetGameInstance(), "sgm CompleteCondition " .. tostring(Condition[i]))
+          end
         else
-          ConditionList[#ConditionList + 1] = Condition
+          GMFunctionLibrary.ExecConsoleCommand(self:GetGameInstance(), "sgm CompleteCondition " .. tostring(Condition))
         end
       end
     end
     return ConditionList
   end
   
-  self:CompleteCondition(FillCondition(DataMgr.HardBossMain))
+  FillCondition(DataMgr.HardBossMain)
   if bAll then
-    self:CompleteCondition(FillCondition(DataMgr.HardBossDifficulty))
+    FillCondition(DataMgr.HardBossDifficulty)
   end
   if not Const.UnlockRegionTeleport then
     Const.UnlockRegionTeleport = true
@@ -2361,6 +2458,15 @@ end
 
 function GM_Command:ReuseSkill(UnitId, SkillIndex)
   self:ServerBattleCommand("ReuseSkill", UnitId, SkillIndex, self.Player.Eid)
+end
+
+function GM_Command:MonsterForceLOD(UnitId, ForceLodIndex)
+  local Entities = Battle(self.Player):GetAllEntities()
+  for eid, ent in pairs(Entities) do
+    if ent and pairs(Entities) and ent and ent.IsMonster and ent.UnitId == tonumber(UnitId) then
+      ent.Mesh:SetForcedLOD(tonumber(ForceLodIndex))
+    end
+  end
 end
 
 function GM_Command:HasTargetMonster()
@@ -2852,6 +2958,31 @@ function GM_Command:AnimCacheEnableState(IsEnable)
   UE4.URuntimeCommonFunctionLibrary.EnableGlobalAnimCache(self.Player, tonumber(IsEnable) > 0)
 end
 
+function GM_Command:EnableOnlineAnimCache(IsEnable)
+  require("EMLuaConst").bEnableDSAnimCache = tonumber(IsEnable) > 0
+end
+
+local GDTAIFlag = 1
+
+function GM_Command:GDTAI()
+  GDTAIFlag = 1 - GDTAIFlag
+  UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self.Player, "gdt.EnableCategoryName AI " .. tostring(GDTAIFlag), nil)
+end
+
+local GDTEMBT = 1
+
+function GM_Command:GDTEMBT()
+  GDTEMBT = 1 - GDTEMBT
+  UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self.Player, "gdt.EnableCategoryName EMBT " .. tostring(GDTEMBT), nil)
+end
+
+local GDTAnimCache = 0
+
+function GM_Command:GDTAnimCache()
+  GDTAnimCache = 1 - GDTAnimCache
+  UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self.Player, "gdt.EnableCategoryName AnimCache " .. tostring(GDTAnimCache), nil)
+end
+
 function GM_Command:DisconnectServer()
   local Avatar = self:GetClientAvatar()
   if Avatar then
@@ -3201,18 +3332,24 @@ function GM_Command:GetSceneSoundPause(SoundType)
   print(_G.LogTag, "GetSceneSoundPause 的输出值是", SoundType, AudioManager(self.Player):GetSceneSoundPause(tonumber(SoundType)))
 end
 
-function GM_Command:EnterDungeon(DungeonId)
+function GM_Command:EnterDungeon(DungeonId, SquadId)
   DungeonId = tonumber(DungeonId)
+  SquadId = tonumber(SquadId)
   if not DungeonId then
     return
   end
   local avatar = self:GetClientAvatar()
   if avatar then
-    avatar:EnterDungeon(DungeonId)
+    avatar:EnterDungeon(DungeonId, nil, function(retCode)
+      if 0 == retCode then
+        return
+      end
+      UIManager(self):ShowUITip("CommonToastMain", DataMgr.ErrorCode[retCode].ErrorCodeContent)
+    end, nil, SquadId)
   end
 end
 
-function GM_Command:EnterEventDungeon(DungeonId, EventId)
+function GM_Command:EnterEventDungeon(DungeonId, EventId, ...)
   DungeonId = tonumber(DungeonId)
   EventId = tonumber(EventId)
   if not DungeonId or not EventId then
@@ -3226,7 +3363,21 @@ function GM_Command:EnterEventDungeon(DungeonId, EventId)
   if not avatar then
     return
   end
-  avatar:EnterEventDungeon(nil, DungeonId, nil, EventId)
+  local t = {
+    ...
+  }
+  local k, v
+  local CustomParams = {}
+  for i = 1, #t do
+    if 1 == i % 2 then
+      k = t[i]
+    else
+      v = t[i]
+      v = tonumber(v) or v
+      CustomParams[k] = v
+    end
+  end
+  avatar:EnterEventDungeon(nil, DungeonId, nil, EventId, CustomParams)
 end
 
 function GM_Command:EnterPaotai(DungeonId, PaotaiId)
@@ -3239,6 +3390,10 @@ function GM_Command:EnterPaotai(DungeonId, PaotaiId)
   if avatar then
     avatar:EnterDungeon(DungeonId, nil, nil, nil, nil, {PaotaiId = PaotaiId})
   end
+end
+
+function GM_Command:MonsterBornPosCheck(IsEnable)
+  Const.EnableRougeLikeBornCheck = tonumber(IsEnable) > 0
 end
 
 function GM_Command:EnterLocalDungeon(DungeonId)
@@ -3655,10 +3810,164 @@ function GM_Command:SetClientTime(year, month, day, hour, minute, second)
   TimeUtils.TimeOffset = math.floor(t - os.time())
 end
 
-function GM_Command:PSOPrepare(QualityLevel, UnitType)
-  local PSOManager = require("Test.PSOPrepare")
-  PSOManager:Initialize(self)
-  PSOManager:DoPrepare(QualityLevel, UnitType)
+function GM_Command:SwitchRWS(Type, TypeId, SkinId)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  DebugPrint(string.format("SwitchRWS Type:%s, TypeId:%s, SkinId:%s", tostring(Type), tostring(TypeId), tostring(SkinId)))
+  TypeId = tonumber(TypeId)
+  if SkinId then
+    SkinId = tonumber(SkinId)
+    Type = Type .. "Skin"
+  end
+  
+  local function RefreshPlayer()
+    local AvatarInfo = AvatarUtils:GetDefaultBattleInfo(Avatar)
+    local PlayerController = self.Player:GetController()
+    PlayerController:SetAvatarInfo(CommonUtils.ObjId2Str(Avatar.Eid), AvatarInfo)
+    self.Player:ChangeRole(nil, AvatarInfo)
+  end
+  
+  local function ChangeRole(Id)
+    function Avatar.OnSwitchCurrentChar(Ret, CharUuid)
+      Avatar.logger.debug("OnSwitchCurrentChar", Ret, CharUuid)
+      
+      RefreshPlayer()
+      EventManager:FireEvent(EventID.OnSwitchRole, Avatar.CurrentChar)
+    end
+    
+    for CharUUid, CharData in pairs(Avatar.Chars) do
+      if CharData.CharId == Id then
+        if CharUUid == Avatar.CurrentChar then
+          DebugPrint(string.format("当前角色已经是: %d，无需切换", Id))
+          return
+        end
+        Avatar:SwitchCurrentChar(CharUUid)
+        return
+      end
+    end
+    DebugPrint(string.format("当前账号没有角色: %d，无法切换", Id))
+  end
+  
+  local function ChangeWeapon(Id)
+    function Avatar.OnSwitchWeapon(Ret, WeaponTag, WeaponUuid)
+      Avatar.logger.debug("yc_test OnSwitchWeapon", Ret, WeaponTag, WeaponUuid)
+      
+      RefreshPlayer()
+      EventManager:FireEvent(EventID.OnSwitchWeapon, WeaponTag, WeaponUuid)
+    end
+    
+    for WeaponUuid, WeaponData in pairs(Avatar.Weapons) do
+      if WeaponData.WeaponId == Id then
+        local BattleWeaponData = DataMgr.BattleWeapon[Id]
+        if CommonUtils.HasValue(BattleWeaponData.WeaponTag, CommonConst.WeaponType.MeleeWeapon) then
+          if Avatar.MeleeWeapon ~= WeaponUuid then
+            Avatar:SwitchWeapon(CommonConst.WeaponType.MeleeWeapon, WeaponUuid)
+          else
+            DebugPrint(string.format("当前近战武器已经是: %d，无需切换", Id))
+          end
+        elseif CommonUtils.HasValue(BattleWeaponData.WeaponTag, CommonConst.WeaponType.RangedWeapon) then
+          if Avatar.RangedWeapon ~= WeaponUuid then
+            Avatar:SwitchWeapon(CommonConst.WeaponType.RangedWeapon, WeaponUuid)
+          else
+            DebugPrint(string.format("当前远程武器已经是: %d，无需切换", Id))
+          end
+        end
+        return
+      end
+    end
+  end
+  
+  local function ChangeCharAppearanceSkin(Id, SkinId)
+    Avatar.logger.debug("ChangeCharAppearanceSkin Start", SkinId)
+    local AppearanceIndex = 1
+    
+    local function RefreshSkinCallback(Ret, CharUuid, AppearanceIndex, SkinId)
+      Avatar.logger.debug("OnChangeCharAppearanceSkin", Ret)
+      RefreshPlayer()
+      EventManager:FireEvent(EventID.OnCharSkinChanged, Ret, CharUuid, AppearanceIndex, SkinId)
+    end
+    
+    function Avatar:ChangeCharAppearanceSkin(CharUuid, AppearanceIndex, SkinId)
+      DebugPrint("ZJT_ ChangeCharAppearanceSkin", CharUuid, AppearanceIndex, SkinId)
+      self:CallServer("ChangeCharAppearanceSkin", RefreshSkinCallback, CharUuid, AppearanceIndex, SkinId)
+    end
+    
+    for CharUuid, CharData in pairs(Avatar.Chars) do
+      if CharData.CharId == Id then
+        if CharUuid == Avatar.CurrentChar then
+          DebugPrint(string.format("当前角色已经是: %d，无需切换", Id))
+          return
+        end
+        Avatar:ChangeCharAppearanceSkin(CharUuid, AppearanceIndex, SkinId)
+        return
+      end
+    end
+    Avatar.logger.debug("ChangeCharAppearanceSkin End", SkinId)
+  end
+  
+  local function ChangeWeaponAppearanceSkin(Id, SkinId)
+    Avatar.logger.debug("ChangeWeaponAppearanceSkin Start", Id, SkinId)
+    
+    local function RefreshSkinCallback(Ret, WeaponTag, WeaponUuid, SkinId)
+      Avatar.logger.debug("OnChangeWeaponAppearanceSkin", Ret)
+      RefreshPlayer()
+      EventManager:FireEvent(EventID.OnWeaponSkinChanged, Ret, WeaponTag, WeaponUuid, SkinId)
+    end
+    
+    function Avatar:ChangeWeaponAppearanceSkin(WeaponUuid, SkinId)
+      self.logger.debug("ZJT_ ChangeWeaponAppearanceSkin Start", CommonUtils.ObjId2Str(WeaponUuid), SkinId)
+      self:CallServer("ChangeWeaponAppearanceSkin", RefreshSkinCallback, WeaponUuid, SkinId)
+    end
+    
+    local BattleWeaponData = DataMgr.BattleWeapon[Id]
+    if not BattleWeaponData then
+      DebugPrint(string.format("未找到 %s 对应的武器数据,无法切换皮肤", Id))
+      return
+    end
+    local WeaponUuid, WeaponData
+    if CommonUtils.HasValue(BattleWeaponData.WeaponTag, CommonConst.WeaponType.MeleeWeapon) then
+      WeaponUuid = Avatar.MeleeWeapon
+      WeaponData = Avatar.Weapons[WeaponUuid]
+    elseif CommonUtils.HasValue(BattleWeaponData.WeaponTag, CommonConst.WeaponType.RangedWeapon) then
+      WeaponUuid = Avatar.RangedWeapon
+      WeaponData = Avatar.Weapons[WeaponUuid]
+    end
+    if not WeaponUuid then
+      DebugPrint("当前没有装备武器,无法切换皮肤")
+      return
+    end
+    local SkinApplicationType = DataMgr.Weapon[Id].SkinApplicationType
+    local WeaponSkinItem = DataMgr.WeaponSkin[SkinId]
+    local CanApply = CommonUtils.HasValue(SkinApplicationType, WeaponSkinItem.ApplicationType) and WeaponSkinItem.SkinId ~= WeaponData:GetAppearance().SkinId or false
+    if not CanApply then
+      DebugPrint(string.format("武器皮肤 %d 无法应用到当前武器 %d 上", SkinId, Id))
+      return
+    else
+      Avatar:ChangeWeaponAppearanceSkin(WeaponUuid, SkinId)
+    end
+    Avatar.logger.debug("ChangeWeaponAppearanceSkin End", Id, SkinId)
+  end
+  
+  if "char" == Type or "role" == Type then
+    ChangeRole(TypeId)
+  elseif "weapon" == Type then
+    ChangeWeapon(TypeId)
+  elseif "charSkin" == Type or "roleSkin" == Type then
+    ChangeRole(TypeId)
+    self.Player:AddTimer(0, function()
+      ChangeCharAppearanceSkin(TypeId, SkinId)
+    end, false, 0.5, "QAAutoTest")
+  elseif "weaponSkin" == Type then
+    ChangeWeapon(TypeId)
+    self.Player:AddTimer(0, function()
+      ChangeWeaponAppearanceSkin(TypeId, SkinId)
+    end, false, 0.5, "QAAutoTest")
+  else
+    DebugPrint("AutoTestChange 不支持的类型: ", Type)
+    return
+  end
 end
 
 function GM_Command:ResetTrollyLoc(NowId, NextId)
@@ -3993,8 +4302,8 @@ function GM_Command:ShowRealAttr()
   local SkillSustain = self.Player:GetAttr("SkillSustain")
   local SkillRange = self.Player:GetAttr("SkillRange")
   local SkillEfficiency = self.Player:GetAttr("SkillEfficiency")
-  local StrongValue = string.format("%.2f", (1 + self.Player:GetAttr("StrongValue")) * 100)
-  local EnmityValue = string.format("%.2f", (1 + self.Player:GetAttr("EnmityValue")) * 100)
+  local StrongValue = string.format("%.2f", (1 + (self.Player:GetAttr("StrongValue") or 0)) * 100)
+  local EnmityValue = string.format("%.2f", (1 + (self.Player:GetAttr("EnmityValue") or 0)) * 100)
   ScreenPrint("背水：" .. EnmityValue .. "%")
   ScreenPrint("昂扬：" .. StrongValue .. "%")
   local Weapon = self.Player:GetCurrentWeapon()
@@ -4003,10 +4312,12 @@ function GM_Command:ShowRealAttr()
     local CRD = string.format("%.2f", Weapon:GetAttr("CRD") * 100)
     local TRI = string.format("%.2f", Weapon:GetAttr("TriggerProbability") * 100)
     local MultiShoot = string.format("%.2f", Weapon:GetAttr("MultiShoot") * 100)
+    local AttackSpeed_Normal = string.format("%.2f", Weapon:GetAttr("AttackSpeed_Normal"))
     ScreenPrint("多重射击：" .. MultiShoot .. "%")
     ScreenPrint("触发概率：" .. TRI .. "%")
     ScreenPrint("爆伤：" .. CRD .. "%")
     ScreenPrint("暴击：" .. CRI .. "%")
+    ScreenPrint("攻速：" .. AttackSpeed_Normal)
   end
   ScreenPrint("技能效益：" .. string.format("%.2f", SkillEfficiency * 100) .. "%")
   ScreenPrint("技能耐久：" .. string.format("%.2f", SkillSustain * 100) .. "%")
@@ -4276,13 +4587,28 @@ end
 function GM_Command:CompleteSystemCondition()
   local GMFunctionLibrary = require("BluePrints.UI.GMInterface.GMFunctionLibrary")
   GMFunctionLibrary.ExecConsoleCommand(self:GetGameInstance(), "sgm sysu")
+  GMFunctionLibrary.ExecConsoleCommand(self:GetGameInstance(), "sgm CompleteCondition " .. tostring(8002))
+  GMFunctionLibrary.ExecConsoleCommand(self:GetGameInstance(), "sgm CompleteCondition " .. tostring(4220))
+  GMFunctionLibrary.ExecConsoleCommand(self:GetGameInstance(), "sgm CompleteCondition " .. tostring(4170))
+  GMFunctionLibrary.ExecConsoleCommand(self:GetGameInstance(), "sgm CompleteCondition " .. tostring(2001))
   self:SuccessAllSystemGuide()
-  self:CompleteCondition({
-    8002,
-    4220,
-    4170,
-    2001
-  })
+  local GameInstance = self:GetGameInstance()
+  local GMFunctionLibrary = require("BluePrints.UI.GMInterface.GMFunctionLibrary")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 100102")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 100103")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 100201")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 100202")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 100203")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 100204")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 100205")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 100206")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 100207")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 100208")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 200101")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 200102")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 200103")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 200104")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 200215")
 end
 
 function GM_Command:MockAllSystemCondition(bSave)
@@ -5025,7 +5351,7 @@ function GM_Command:UnlockMonsterGallery()
   for RuleId, GalleryData in pairs(DataMgr.GalleryRule) do
     if not GalleryData.DisableTrainingGround then
       local UnitId = GalleryData.PreferredMonsterId
-      Avatar:CheckFirstMonster(UnitId, false)
+      Avatar:CheckFirstMonster(UnitId, true)
     end
   end
 end
@@ -5837,13 +6163,6 @@ function GM_Command:SSRPlaySequence(RecorderId, StateId)
   end
 end
 
-function GM_Command:SSRPlaySequence(RecorderId, StateId)
-  local GameMode = UE.UGameplayStatics.GetGameMode(self.Player)
-  if GameMode.LevelSequenceStateRecorder then
-    GameMode.LevelSequenceStateRecorder:PlaySequence(tonumber(RecorderId), tonumber(StateId))
-  end
-end
-
 function GM_Command:StartFlow(Owner, FlowAsset)
   Owner = Owner or self.Player
   FlowAsset = FlowAsset or LoadObject("/Game/Dialogue/SpecialSideStory/2002/200234/510122.510122")
@@ -5960,6 +6279,54 @@ end
 function GM_Command:PinAttr(AttrName, Eid)
   local Panel = UIManager(self.Player):LoadUI(UIConst.ATTRDEBUGPANEL, "AttrDebugPanel", UIConst.ZORDER_ABOVE_ALL)
   Panel:AddAttrWatcher(AttrName, Eid)
+end
+
+function GM_Command:ShowEids()
+  local function _ShowEids(IsShow)
+    local GameState = UE4.UGameplayStatics.GetGameState(self.Player)
+    
+    local PlayerLoc = self.Player:K2_GetActorLocation()
+    for _, Target in pairs(Battle(self.Player).Entities) do
+      if Target.IsCharacter and Target:IsCharacter() then
+        local Comp = Target:GetComponentByClass(UCharDebugWidgetComponent:StaticClass())
+        if not Comp then
+          local BPClass = LoadClass("/Game/BluePrints/ScreenDebug/BP_ScreenDebugComponent.BP_ScreenDebugComponent")
+          Comp = Target:AddComponentByClass(BPClass, false, UE4.FTransform(), false)
+          Comp:SetHiddenInGame(true)
+        end
+        if Comp then
+          if IsShow and Comp.bHiddenInGame then
+            local TargetLoc = Target:K2_GetActorLocation()
+            local Dis = FVector.Dist(PlayerLoc, TargetLoc)
+            if Dis < 1000 then
+              Comp:SetHiddenInGame(false)
+              Comp:K2_AttachTo(Target:K2_GetRootComponent(), "None", EAttachLocation.SnapToTargetIncludingScale, false)
+              Comp:K2_SetRelativeLocation(FVector(0, 0, 150), false, nil, false)
+              Comp:SetWidgetSpace(UE4.EWidgetSpace.Screen)
+              Comp:AddDebugTEXT("Eid", "Eid:" .. tostring(Target.Eid))
+            end
+          elseif not IsShow and not Comp.bHiddenInGame then
+            Comp:SetHiddenInGame(true)
+          end
+        end
+      end
+    end
+    if self.IsShowingEids then
+      self.IsShowingEids = nil
+    else
+      self.IsShowingEids = true
+    end
+  end
+  
+  if self.IsShowingEids then
+    self.Player:RemoveTimer("ShowEidsTimer")
+    _ShowEids(false)
+  else
+    _ShowEids(true)
+    self.Player:AddTimer(1, function()
+      _ShowEids(true)
+    end, true, 0, "ShowEidsTimer")
+  end
 end
 
 function GM_Command:OpenWalnutRewardDialog(Id)
@@ -6147,7 +6514,7 @@ function GM_Command:ControlAllMonsterBTTickEnable(bEnable)
 end
 
 function GM_Command:LJHTEST()
-  UIUtils.OpenRaidReward()
+  EventManager:FireEvent(EventID.OnDailyRefresh)
 end
 
 function GM_Command:TestGraphTask()
@@ -6471,6 +6838,21 @@ function GM_Command:UseResourceBattle(ResourceId)
   end
 end
 
+function GM_Command:ApplyAFDTransform(TransformId)
+  TransformId = tonumber(TransformId)
+  if self.Player then
+    self.Avatar:RegionOnlineTransformAFDay(TransformId)
+    self.Player:ApplyAFDTransform(TransformId)
+  end
+end
+
+function GM_Command:CancelAFDTransform()
+  if self.Player then
+    self.Avatar:RegionOnlineTransformAFDay(-1)
+    self.Player:CancelAFDTransform()
+  end
+end
+
 function GM_Command:EnableRegionPlayerOnlyShowHeadUI(Enable, Num)
 end
 
@@ -6503,6 +6885,7 @@ function GM_Command:ReadyForRegonOnline()
   GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm aar")
   GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm aaws")
   GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm aawa")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm aamd")
   local A = GWorld:GetAvatar()
   A:GmGetAllTitle()
   A:GmGetAllTitleFrame()
@@ -6518,12 +6901,13 @@ end
 
 function GM_Command:RandomChar()
   local A = GWorld:GetAvatar()
+  A:ChangeBattleWheel(1, 1, 41022)
   A:ChangeBattleWheel(1, 2, 41017)
-  A:ChangeBattleWheel(1, 1, 41014)
-  A:ChangeBattleWheel(1, 4, 41015)
+  A:ChangeBattleWheel(1, 3, 49996)
+  A:ChangeBattleWheel(1, 4, 49998)
   A:ChangeBattleWheel(1, 5, 41011)
   A:ChangeBattleWheel(1, 6, 41010)
-  A:ChangeBattleWheel(1, 7, 41003)
+  A:ChangeBattleWheel(1, 7, 41019)
   A:ChangeBattleWheel(1, 8, 41013)
   
   local function RandomKey(tbl, filter)
@@ -6660,12 +7044,27 @@ function GM_Command:CompleteSystemConditionWithoutGuide()
   local GMFunctionLibrary = require("BluePrints.UI.GMInterface.GMFunctionLibrary")
   GMFunctionLibrary.ExecConsoleCommand(self:GetGameInstance(), "sgm sysu")
   self:SuccessAllSystemGuide()
-  self:CompleteCondition({
-    8002,
-    4220,
-    4170,
-    2001
-  })
+  GMFunctionLibrary.ExecConsoleCommand(self:GetGameInstance(), "sgm CompleteCondition " .. tostring(8002))
+  GMFunctionLibrary.ExecConsoleCommand(self:GetGameInstance(), "sgm CompleteCondition " .. tostring(4220))
+  GMFunctionLibrary.ExecConsoleCommand(self:GetGameInstance(), "sgm CompleteCondition " .. tostring(4170))
+  GMFunctionLibrary.ExecConsoleCommand(self:GetGameInstance(), "sgm CompleteCondition " .. tostring(2001))
+  local GameInstance = self:GetGameInstance()
+  local GMFunctionLibrary = require("BluePrints.UI.GMInterface.GMFunctionLibrary")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 100102")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 100103")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 100201")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 100202")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 100203")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 100204")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 100205")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 100206")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 100207")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 100208")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 200101")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 200102")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 200103")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 200104")
+  GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 200215")
 end
 
 function GM_Command:OpenOnlineActionView(OpenModel)
@@ -6881,6 +7280,96 @@ function GM_Command:TeleportPlayer(PosX, PosY, PosZ)
   local GameInstance = self:GetGameInstance()
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(GameInstance, 0)
   Player:K2_SetActorLocation(FinalPos, false, nil, false)
+end
+
+function GM_Command:CreateAutoChessMonster(CombatChessId, Index, IsEnemy)
+  EventManager:FireEvent(EventID.OnAutoChessCreateMonster, CombatChessId, Index, IsEnemy)
+end
+
+function GM_Command:RemoveAutoChessMonster(Index, IsEnemy)
+  EventManager:FireEvent(EventID.OnAutoChessRemoveMonster, Index, IsEnemy)
+end
+
+function GM_Command:OpenFameMainUI(...)
+  local GameInstance = self:GetGameInstance()
+  local UIManager = GameInstance:GetGameUIManager()
+  local SystemUIConfig = DataMgr.SystemUI.FameMain
+  if nil ~= SystemUIConfig then
+    return UIManager:LoadUINew("FameMain", ...)
+  end
+end
+
+function GM_Command:ReputationExpAdd(...)
+  local RegionId, OldLevel, OldExp, CurLevel, CurExp, OnlyShowLevel = ...
+  local ReputationExpAddInfo = {
+    RegionId = tonumber(RegionId),
+    OldLevel = tonumber(OldLevel),
+    OldExp = tonumber(OldExp),
+    CurLevel = tonumber(CurLevel),
+    CurExp = tonumber(CurExp),
+    OnlyShowLevel = OnlyShowLevel
+  }
+  local GameInstance = self:GetGameInstance()
+  local UIManager = GameInstance:GetGameUIManager()
+  local SystemUIConfig = DataMgr.SystemUI.ReputationLevelUp
+  if nil ~= SystemUIConfig then
+    return UIManager:LoadUINew("ReputationLevelUp", ReputationExpAddInfo)
+  end
+end
+
+function GM_Command:OpenAutoChessUI()
+  UIManager(self):LoadUINew("AutoChessMain")
+end
+
+function GM_Command:SoloTreasureBag(bOpen, SearchId)
+  SearchId = tonumber(SearchId)
+  if "true" == bOpen then
+    self.SoloTreasureBagUI = UIManager(self):LoadUINew("SoloTreasureBag", SearchId)
+    self.SoloTreasureBagUI:SetInputUIOnly(true)
+    self.SoloTreasureBagUI.InventoryController:CreateNewTreasureItemToPocket(self.SoloTreasureBagUI.WBP_Type01_Bag04, 100101, FVector2D(0, 0))
+    self.SoloTreasureBagUI.InventoryController:CreateNewTreasureItemToPocket(self.SoloTreasureBagUI.WBP_Type01_Bag04, 100102, FVector2D(0, 2))
+  else
+    self.SoloTreasureBagUI:SetInputUIOnly(false)
+    self.SoloTreasureBagUI:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+end
+
+function GM_Command:CreateNewTreasureItemToPocket(PocketName, TreasureId)
+  if not self.SoloTreasureBagUI or not self.SoloTreasureBagUI.InventoryController then
+    UIManager(self):ShowUITip("CommonToastMain", GText("添加Item失败,先打开背包界面再添加Item"), 2)
+    return
+  end
+  local PocketWidget = self.SoloTreasureBagUI[PocketName]
+  if "Bag_Search" == PocketName then
+    PocketWidget = self.SoloTreasureBagUI.Bag_Search.WBP_Search_Bag
+  end
+  local ValidInfo = self.SoloTreasureBagUI.InventoryController:GetValidTopLeftByTreasureId(PocketWidget, tonumber(TreasureId))
+  if not ValidInfo or not ValidInfo.TopLeft then
+    UIManager(self):ShowUITip("CommonToastMain", GText("添加Item失败,无可用位置"), 2)
+    return
+  end
+  local IsSuccess = self.SoloTreasureBagUI.InventoryController:CreateNewTreasureItemToPocket(PocketWidget, tonumber(TreasureId), ValidInfo.TopLeft)
+  if not IsSuccess then
+    UIManager(self):ShowUITip("CommonToastMain", GText("添加Item失败"), 2)
+  else
+    UIManager(self):ShowUITip("CommonToastMain", GText("添加Item成功"), 2)
+  end
+end
+
+function GM_Command:OpenReturnWelcomeBanner()
+  UIManager(self):LoadUINew("ComBackWelcomeBanner")
+end
+
+function GM_Command:OpenSecPassWordUI(Mode, Min, Max, TextLimit)
+  Mode = Mode or 3
+  Min = Min or 1
+  Max = Max or 999999
+  TextLimit = TextLimit or 10
+  UIManager(self):LoadUINew("CommonNumInput", tonumber(Mode), {
+    Min = tonumber(Min),
+    Max = tonumber(Max),
+    TextLimit = tonumber(TextLimit)
+  })
 end
 
 return GM_Command

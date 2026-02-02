@@ -5,8 +5,9 @@ local M = Class({
   "Blueprints.UI.BP_UIState_C"
 })
 
-function M:Init(Parent)
+function M:Init(Parent, ShowMailId)
   self.Parent = Parent
+  self.ShowMailId = ShowMailId
   self:GetCurrentSystemLanguage()
   self:InitRpcEvent()
   self:InitCommonTab()
@@ -31,7 +32,8 @@ function M:GetCurrentSystemLanguage()
     EN = "ContentEN",
     JP = "ContentJP",
     KR = "ContentKR",
-    TC = "ContentTC"
+    TC = "ContentTC",
+    FR = "ContentFR"
   }
   self.CurrentSystemLanguage = "CN"
   for key, value in pairs(SystemLanguages) do
@@ -61,10 +63,10 @@ function M:InitCommonTab()
   self.Button_Receive_All:SetText(GText("UI_Mail_Recieveall"))
   self.Button_Receive_All:BindEventOnClicked(self, self.OnClickButtonReceiveAll)
   self.Button_Receive_All:SetGamePadImg("Y")
-  self.Button_Receive:SetText(GText("UI_Mail_Recieve"))
   self.Button_Receive:SetGamePadIconVisible(true)
   self.Button_Receive:SetGamePadImg("A")
   self.Button_Receive:BindEventOnClicked(self, self.OnClickButtonReceive)
+  self.Btn_Normal:BindEventOnClicked(self, self.OnClickButtonReceive)
   self.Button_DeleteAllRead:SetText(GText("UI_Mail_Delete_All"))
   self.Button_DeleteAllRead:BindEventOnClicked(self, self.OnClickButtonDeleteAllRead)
   self.Button_DeleteAllRead:SetGamePadImg("X")
@@ -151,6 +153,7 @@ function M:InitMailMain()
         self.NormalMailList[Id].IsStar = false
         self.NormalMailList[Id].DueTime = self:CalculateDueTime(Data)
         self.NormalMailList[Id].RealDueTime = self:CalcuateRealDueTime(Data)
+        self.NormalMailList[Id].HeadIconId = Data.HeadIconId
       end
     end
     if Avatar.StarMails then
@@ -165,6 +168,7 @@ function M:InitMailMain()
         self.StarMailList[Id].IsStar = true
         self.StarMailList[Id].DueTime = self:CalculateDueTime(Data)
         self.StarMailList[Id].RealDueTime = self:CalcuateRealDueTime(Data)
+        self.StarMailList[Id].HeadIconId = Data.HeadIconId
       end
     end
   end
@@ -246,7 +250,17 @@ function M:OnMailListTabClicked(TabId, SelectMailIndex, bKeepScrollOffset)
       self.WS_MailDetail:SetActiveWidgetIndex(0)
     end
   end
-  self:UpdateFocusState("ListMail", SelectMailIndex)
+  if self.List_Mail:GetNumItems() > 0 and 1 == self.WS_MailList:GetActiveWidgetIndex() then
+    self.List_Mail.BP_OnEntryInitialized:Add(self, function()
+      self:AddTimer(0.1, function()
+        self:UpdateFocusState("ListMail", SelectMailIndex)
+      end)
+      self.List_Mail.BP_OnEntryInitialized:Clear()
+    end)
+  else
+    self:UpdateFocusState("ListMail", SelectMailIndex)
+  end
+  self:InitListReddot()
 end
 
 function M:SetMailTabRedDot(Nums)
@@ -290,6 +304,8 @@ end
 
 function M:CheckHaveRewardToReceive(IsGot)
   if 0 == IsGot then
+    self.Button_Receive:ForbidBtn(false)
+  elseif self:IsGift(self.CurContent) then
     self.Button_Receive:ForbidBtn(false)
   else
     self.Button_Receive:ForbidBtn(true)
@@ -339,22 +355,28 @@ function M:InitListMail(SelectMailIndex, bKeepScrollOffset, ...)
     MailContent.DueTime = Data.DueTime
     MailContent.ParentWidget = self
     MailContent.IsSelected = false
+    MailContent.HeadIconId = Data.HeadIconId
     table.insert(self.MailContentList, MailContent)
   end
   self:SortListMail(SortTable)
   if SelectMailIndex > #self.MailContentList then
     SelectMailIndex = #self.MailContentList
   end
-  self.MailContentList[SelectMailIndex].IsSelected = true
-  self.SelectMailUniqueId = self.MailContentList[SelectMailIndex].UniqueId
   for Index, Content in ipairs(self.MailContentList) do
     Content.Id = Index
     self.List_Mail:AddItem(Content)
+    if self.ShowMailId and self.ShowMailId == Content.MailId then
+      SelectMailIndex = Index
+    end
   end
+  self.MailContentList[SelectMailIndex].IsSelected = true
+  self.SelectMailUniqueId = self.MailContentList[SelectMailIndex].UniqueId
   if self:IsExistTimer("AddEmpty") then
     self:RemoveTimer("AddEmpty")
   end
   self:AddTimer(0.01, function()
+    self.ShowMailId = nil
+    
     local function Final()
       if bKeepScrollOffset then
         self.List_Mail:SetScrollOffset(ScrollOffset)
@@ -381,6 +403,24 @@ function M:InitListMail(SelectMailIndex, bKeepScrollOffset, ...)
     self.ScrollBox_MailList:SetScrollbarVisibility(UIConst.VisibilityOp.Collapsed)
     Final()
   end, false, 0, "AddEmpty")
+end
+
+function M:InitListReddot()
+  self.List_Mail.OnListViewScrolled:Clear()
+  local bShowReddot = false
+  if 1 == self.NowTabId then
+    if self.NorMailNums + self.StarMailNums > 0 then
+      bShowReddot = true
+    end
+  elseif self.StarMailNums > 0 then
+    bShowReddot = true
+  end
+  if not bShowReddot then
+    self.GroupListReddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    return
+  else
+    self.GroupListReddot:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
   self.List_Mail.OnListViewScrolled:Add(self, self.OnList_MailScrolled)
   self:AddTimer(0.1, function()
     self:OnList_MailScrolled()
@@ -482,12 +522,15 @@ function M:OnMailListItemClicked(Content)
   local MailInfo
   MailInfo = self:GetMailInfo(Content)
   self.Text_MailTitle:SetText(GText(MailInfo.MailTitle))
-  local NpcId = MailInfo.MailSenderId
-  local Name = "Mail_Sender_Default"
-  if NpcId then
-    local NpcInfo = DataMgr.Npc[NpcId]
-    if NpcInfo and NpcInfo.UnitName then
-      Name = NpcInfo.UnitName
+  local Name = MailInfo.Nickname
+  if not Name then
+    local NpcId = MailInfo.MailSenderId
+    Name = "Mail_Sender_Default"
+    if NpcId then
+      local NpcInfo = DataMgr.Npc[NpcId]
+      if NpcInfo and NpcInfo.UnitName then
+        Name = NpcInfo.UnitName
+      end
     end
   end
   self.Text_From:SetText(GText(Name))
@@ -539,6 +582,24 @@ function M:OnMailListItemClicked(Content)
     self.Group_KeyDelete:SetVisibility(ESlateVisibility.Collapsed)
     self.Key_Delete:SetVisibility(ESlateVisibility.Collapsed)
   end
+  self:UpdateBtnReceive()
+end
+
+function M:UpdateBtnReceive()
+  if self:IsGift(self.CurContent) then
+    if 1 == self.CurContent.RewardGot then
+      self.WS_Btn:SetActiveWidgetIndex(1)
+      self.Btn_Normal:SetText(GText("UI_SendGift_ViewGift2"))
+    else
+      self.WS_Btn:SetActiveWidgetIndex(0)
+      self.Button_Receive:SetText(GText("UI_SendGift_ViewGift"))
+    end
+    self.ImageGiftSign:SetVisibility(UIConst.VisibilityOp.Visible)
+  else
+    self.WS_Btn:SetActiveWidgetIndex(0)
+    self.Button_Receive:SetText(GText("UI_Mail_Recieve"))
+    self.ImageGiftSign:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
 end
 
 function M:GetMailInfo(Content)
@@ -559,7 +620,12 @@ function M:GetMailInfo(Content)
     MailInfo.MailSenderId = MailData.MailSenderId
     MailInfo.MailTimeLimit = MailData.MailTimeLimit
     local MailData = DataMgr.Mail[Content.MailId]
-    MailInfo.MailContent = GText(MailData.MailContent)
+    if 0 ~= Mail.HeadIconId then
+      MailInfo.MailContent = GText(Mail.MailContent[self.CurrentSystemLanguage] or Mail.MailContent.CN)
+      MailInfo.Nickname = Mail.Nickname
+    else
+      MailInfo.MailContent = GText(MailData.MailContent)
+    end
     MailInfo.MailTitle = GText(MailData.MailTitle)
     for key, value in pairs(Mail.FormatText or {}) do
       MailInfo.MailContent = string.gsub(MailInfo.MailContent, "{" .. key .. "}", GText(value))
@@ -701,7 +767,7 @@ end
 
 function M:OnUpdateUIStyleByInputTypeChange(CurInputType, CurGamepadName)
   self.Super.OnUpdateUIStyleByInputTypeChange(self, CurInputType, CurGamepadName)
-  if CurInputType == ECommonInputType.Gamepad then
+  if CurInputType == ECommonInputType.Gamepad and IsValid(self.Parent) and self.Parent:HasAnyFocus() then
     self:InitGamepadView()
   else
     self:InitKeyboardView()
@@ -886,7 +952,9 @@ function M:SetCommonGamePadVisibility(Op)
   self.WBP_Com_TabSub01.Key_Left:SetVisibility(Op)
   self.WBP_Com_TabSub01.Key_Right:SetVisibility(Op)
   self.Key_RewardTitle:SetVisibility(Op)
-  self.Parent:RefreshTabBottomKey()
+  if self.Parent then
+    self.Parent:RefreshTabBottomKey()
+  end
   self.Group_KeyCollect:SetVisibility(Op)
   self.Key_Collect:SetVisibility(Op)
   self.Group_KeyDelete:SetVisibility(Op)
@@ -958,12 +1026,24 @@ function M:OnClickButtonReceive()
     return
   end
   local MailInfo = self:GetMailInfo(self.CurContent)
-  if 1 == self.CurContent.RewardGot or MailInfo.MailReward == nil then
+  if (1 == self.CurContent.RewardGot or MailInfo.MailReward == nil) and not self:IsGift(self.CurContent) then
     return
   else
     local Avatar = GWorld:GetAvatar()
-    self:BlockAllUIInput(true)
-    Avatar:GetMailRewards(self.CurContent.UniqueId)
+    local Mail
+    if self.CurContent.IsStar then
+      Mail = Avatar.StarMails[self.CurContent.UniqueId]
+    else
+      Mail = Avatar.MailInbox[self.CurContent.UniqueId]
+    end
+    if self:IsGift(self.CurContent) then
+      local ShopItemId = string.match(Mail.CtxId, "ShopItemId:(.-) ")
+      GiftController:OpenGiftCardView(Mail.MailSender, ShopItemId, 2, Mail)
+    else
+      local Avatar = GWorld:GetAvatar()
+      self:BlockAllUIInput(true)
+      Avatar:GetMailRewards(self.CurContent.UniqueId)
+    end
   end
 end
 
@@ -1077,13 +1157,13 @@ function M:OnGetMailRewards(Ret, UniqueID, UniqueIds)
     end
     local Rewards = self:GetMailRewardIds(UniqueIds)
     self.GamePadState = "GetItemPage"
-    UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, Rewards, false, function(obj)
-      self:ResetFocusState()
-      self:CheckHaveRewardToReceive(self.CurContent.RewardGot)
-    end, self)
-    self:SetTileListGotState()
     self.CurContent.RewardGot = 1
     self.CurContent.MailReaded = 1
+    UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, Rewards, false, function(obj)
+      self:ResetFocusState()
+    end, self)
+    self:SetTileListGotState()
+    self:CheckHaveRewardToReceive(self.CurContent.RewardGot)
     if not self:CheckHaveRewardToReceiveAll() then
       self.Parent:RefreshTabBottomKey()
     end
@@ -1093,6 +1173,7 @@ function M:OnGetMailRewards(Ret, UniqueID, UniqueIds)
   else
     self:HandleAvatarRet(Ret)
   end
+  self:UpdateBtnReceive()
 end
 
 function M:OnGetAllMailReward(Ret, UniqueIds)
@@ -1115,10 +1196,12 @@ function M:OnMarkMailStar(Ret, UniqueID, UniqueIds)
   if Ret == ErrorCode.RET_SUCCESS then
     self:BlockAllUIInput(false)
     self.StarUniqueId = UniqueID
+    self:CheckHaveRewardToReceive(1)
     if 1 ~= self.NormalMailList[UniqueID].RewardGot and self.NormalMailList[UniqueID].ItemList[1] then
       local Rewards = self:GetMailRewardIds(UniqueID)
       self.NormalMailList[UniqueID].RewardGot = 1
       self.GamePadState = "GetItemPage"
+      self.bMarkMailStar = true
       UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, Rewards, false, function(obj)
         self:PlayStarAnim()
       end, self)
@@ -1151,6 +1234,7 @@ function M:PlayStarAnim()
     self:ResetFocusState()
     self:OnMailListTabClicked(self.NowTabId, SelectMailIndex, true)
     self:UpdateMailNum()
+    self.bMarkMailStar = false
   end
   
   local AnimTime = self.CurContent.SelfWidget.List_Collect:GetEndTime()
@@ -1235,6 +1319,10 @@ function M:PlayInAnim()
 end
 
 function M:PlayOutAnim()
+end
+
+function M:IsGift(Content)
+  return Content.HeadIconId and 0 ~= Content.HeadIconId
 end
 
 return M

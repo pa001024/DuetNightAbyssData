@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -32,7 +35,8 @@ return ReadOnly("ArtLevelControl_RegionId2TaskVar", {
     [4] = "IQ12010307",
     [5] = "IQ12010313",
     [6] = "IQ12010502",
-    [7] = "IQ12010513_fu"
+    [7] = "IQ12010513_fu",
+    [8] = "IQ120315"
   },
   [1045] = {
     [1] = "Wuyousheng_First_12020122",

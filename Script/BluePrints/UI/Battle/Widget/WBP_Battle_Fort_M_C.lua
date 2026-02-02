@@ -181,11 +181,6 @@ function WBP_Battle_Fort_M_C:InitJoyStick()
   self.Joystick_Border:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
-function WBP_Battle_Fort_M_C:InitFortBackKey(FortBackKey)
-  FortBackKey.Btn_Exit:SetText(GText("UI_Mechanism_ExitPaotai"))
-  FortBackKey.Btn_Exit:BindEventOnClicked(self, self.OnPressQuit)
-end
-
 function WBP_Battle_Fort_M_C:HideSelf(IsHide)
   local AllChildrend = self.Main:GetAllChildren()
   local Length = AllChildrend:Length()

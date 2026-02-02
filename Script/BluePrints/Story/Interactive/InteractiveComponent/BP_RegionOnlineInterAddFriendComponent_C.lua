@@ -22,6 +22,9 @@ function BP_RegionOnlineInterAddFriendComponent_C:SetInteractiveName(Name)
 end
 
 function BP_RegionOnlineInterAddFriendComponent_C:DisplayInteractiveBtn(PlayerActor)
+  if not self.CanOpen then
+    return
+  end
   local UIManager = UGameplayStatics.GetGameInstance(self):GetGameUIManager()
   local InteractiveUI = UIManager:LoadUINew(UIConst.InteractiveUIName)
   if not InteractiveUI then
@@ -32,6 +35,7 @@ function BP_RegionOnlineInterAddFriendComponent_C:DisplayInteractiveBtn(PlayerAc
   self:SetBtnDisplayed(PlayerActor, true)
   self:RefreshInteractiveBtn(PlayerActor)
   self.IsDisplayed = true
+  DebugPrint("JLY BP_RegionOnlineInterAddFriendComponent_C:DisplayInteractiveBtn")
 end
 
 function BP_RegionOnlineInterAddFriendComponent_C:RefreshInteractiveBtn(PlayerActor)
@@ -61,13 +65,16 @@ function BP_RegionOnlineInterAddFriendComponent_C:IsCanInteractive(PlayerActor)
 end
 
 function BP_RegionOnlineInterAddFriendComponent_C:NotDisplayInteractiveBtn(PlayerActor)
+  self.CanOpen = false
   self:SetBtnDisplayed(PlayerActor, false)
   local UIManager = UGameplayStatics.GetGameInstance(self):GetGameUIManager()
   local InteractiveUI = UIManager:GetUIObj(UIConst.InteractiveUIName)
   if not InteractiveUI then
+    DebugPrint("JLY BP_RegionOnlineInterAddFriendComponent_C:Not InteractiveUI")
     return
   end
   InteractiveUI:RemoveInteractiveItem(self)
+  DebugPrint("JLY BP_RegionOnlineInterAddFriendComponent_C:RemoveInteractiveItem")
 end
 
 function BP_RegionOnlineInterAddFriendComponent_C:CheckCanEnterOrEixt()
@@ -98,7 +105,7 @@ function BP_RegionOnlineInterAddFriendComponent_C:InitCommonUIConfirmID(CommonUI
   if not Data then
     return
   end
-  self.InteractiveDistance = Data.InteractiveRadius or self.InteractiveDistance
+  self:SetInteractiveDistance(Data.InteractiveRadius or self.InteractiveDistance)
   self.InteractiveAngle = Data.InteractiveAngle or self.InteractiveAngle
   self.InteractiveFaceAngle = Data.PlayerFaceAngle or self.InteractiveFaceAngle
   self.ListPriority = Data.InteractivePriority or 0

@@ -206,7 +206,7 @@ function ArchiveRewardModel:GetAllRewards(ReceiveAllParm)
           end
         end
         if Content.SelfWidget then
-          Content.SelfWidget:RefreshBtn(0 == Ret)
+          Content.SelfWidget:RefreshBtn(Content.ConfigData.RewardsGot)
         end
         Content.ConfigData.ReceiveParm.ArchiveMain:RefreshReddotInfo(Content.ConfigData.Type, Content.ConfigData.Nums)
       end

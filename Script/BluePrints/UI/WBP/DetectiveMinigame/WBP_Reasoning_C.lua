@@ -39,9 +39,6 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
   self.InferOrCommitFailTimes = 0
   self:RefreshButtonUI()
   self:InitGamePadUI()
-  if not self.IsClueEmpty and not ReasoningUtils:IsMultiEndingQuestion(self.CurerntQuestionId) then
-    self.Clue_01:SelectSelf()
-  end
   self:SetPanelGuideText(-1, false, false, true)
   self.AutoClose = false
   self.TabNewAnswerId, self.TabNewQuestionId = nil, nil
@@ -62,6 +59,8 @@ function M:Construct()
     self.Clue_05,
     self.Clue_06
   }
+  self.Tab:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Panel_Num:SetVisibility(UE4.ESlateVisibility.Collapsed)
   AudioManager(self):PlaySystemUIBGM("event:/bgm/cbt03/0072_story_reasoning", nil, "Reasoning")
 end
 
@@ -171,18 +170,30 @@ function M:InitQuestion()
       end)
     end
   end
+  local parentQuestionsArray = {}
+  for parentId, parentQuestion in pairs(parentQuestions) do
+    table.insert(parentQuestionsArray, parentQuestion)
+  end
+  table.sort(parentQuestionsArray, function(a, b)
+    local aSolved = ReasoningUtils:IsQuestionSolved(a.id)
+    local bSolved = ReasoningUtils:IsQuestionSolved(b.id)
+    if aSolved ~= bSolved then
+      return not aSolved and bSolved
+    end
+    return a.id < b.id
+  end)
   self.ParentQuestions = parentQuestions
+  self.ParentQuestionsArray = parentQuestionsArray
   self.ChildToParentMap = childToParentMap
   local firstParentId
-  for id, _ in pairs(parentQuestions) do
-    firstParentId = id
-    break
+  if #parentQuestionsArray > 0 then
+    firstParentId = parentQuestionsArray[1].id
   end
   DebugPrint("InitQuestion: ", self.CurerntQuestionId)
   if 0 == self.CurerntQuestionId then
     self.Text_Title:SetText(GText("Minigame_Textmap_100301"))
   end
-  self.Book:InitUIInfo(self.ParentQuestions, self, self.TabNewAnswerId, self.TabNewQuestionId)
+  self.Book:InitUIInfo(self.ParentQuestionsArray, self, self.TabNewAnswerId, self.TabNewQuestionId)
 end
 
 function M:InitSortedAnswers()
@@ -246,13 +257,6 @@ function M:InitAnswers()
       Content.IsSumbit = SubmittedAnswerIds and ReasoningUtils:TableContains(SubmittedAnswerIds, AnswerId)
       clueWidget:InitUIInfo(Content)
       clueWidget:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-      if self.TabNewAnswerId == AnswerId then
-        self.TabNewAnswerId = nil
-        self:AddTimer(0.2, function()
-          clueWidget:OnClickButton()
-          clueWidget:SetFocus()
-        end)
-      end
     end
   end
   self.IsClueEmpty = 0 == clueCount
@@ -271,7 +275,6 @@ function M:InitAnswers()
     self.Panel_Solve:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.Panel_Complete:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.Text_Complete:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.Line:SetRenderOpacity(0.6)
     self.Text_Title:SetRenderOpacity(0.6)
     self.Text_Question:SetRenderOpacity(0.6)
     if self.ParentQuestions[self.CurerntQuestionId] then
@@ -284,7 +287,6 @@ function M:InitAnswers()
     self.Panel_Solve:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Text_Complete:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Panel_Complete:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.Line:SetRenderOpacity(1.0)
     self.Text_Title:SetRenderOpacity(1.0)
     self.Text_Question:SetRenderOpacity(1.0)
   end
@@ -345,6 +347,8 @@ function M:OnClickBackButton()
     self:RefreshButtonUI()
     self:ClearClueWidgetsAnimations()
     self:SetClueUIEmpty()
+  elseif not self.Book.IsClueUi then
+    self.Book:OnClickClose()
   else
     self:Close()
   end
@@ -450,6 +454,7 @@ end
 
 function M:OnDetectiveAniFinish(QuestionId)
   self.IsPlayingAnimation = false
+  self.Book:RefreshReddotAndSolvedUI()
   if self.AutoClose then
     self:Close()
     return
@@ -474,14 +479,16 @@ end
 
 function M:OnAssociateAniFinish(AnswerId)
   self.IsPlayingAnimation = false
+  self.Book:RefreshReddotAndSolvedUI()
   if self.AutoClose then
     self:Close()
     return
   end
-  self:RefreshAnswerByQuestionId(self.CurerntQuestionId)
   for _, clueWidget in ipairs(self.ClueWidgets) do
     if clueWidget and clueWidget.Content and clueWidget.Content.AnswerId == AnswerId then
       clueWidget:PlayAnimation(clueWidget.Refresh)
+      clueWidget:OnClickButton()
+      clueWidget:SetFocus()
       AudioManager(self):PlayUISound(self, "event:/ui/common/tuili_clue_new_appear", nil, nil)
     end
   end
@@ -506,7 +513,6 @@ function M:InitInferAnswerState()
   self:UpdateItemInfo(nil)
   self:SetListItemCanMultiSelected(true)
   self:ClearClueWidgetsAnimations()
-  self.CurrentChosenContent = nil
   self:SetClueUIEmpty()
 end
 
@@ -531,6 +537,11 @@ function M:InferAnswer()
         self:RefreshButtonUI()
         self:SetClueUIEmpty()
         self:ClearClueWidgetsAnimations()
+        for _, clueWidget in ipairs(self.ClueWidgets) do
+          if clueWidget and clueWidget.Content and clueWidget.Content.AnswerId == NewAnswer then
+            clueWidget:PlayAnimation(clueWidget.Hide_Refresh)
+          end
+        end
       end)
       self.InferOrCommitFailTimes = 0
       self:PlayInferOrCommitFailAnimation()
@@ -629,13 +640,21 @@ end
 
 function M:ClearClueWidgetsAnimations()
   for _, clueWidget in ipairs(self.ClueWidgets) do
-    if clueWidget and clueWidget:IsVisible() then
+    if clueWidget and clueWidget:IsVisible() and clueWidget.Content ~= self.CurrentChosenContent then
       if clueWidget.Content.CanMultiSelected or self.CurrentReasoningState == EReasoningState.CommitAnswer then
         clueWidget:PlayAnimation(clueWidget.Multi_Normal)
       else
         clueWidget:PlayAnimation(clueWidget.Normal)
       end
       clueWidget:SetIsSingleSelected(false)
+      clueWidget:SetIsMultiSelected(false)
+    elseif clueWidget and clueWidget:IsVisible() and clueWidget.Content == self.CurrentChosenContent then
+      if self.CurrentReasoningState == EReasoningState.SeeAnswerDetail then
+        clueWidget:PlayAnimation(clueWidget.Click)
+      else
+        clueWidget:PlayAnimation(clueWidget.Normal_JustClick)
+      end
+      clueWidget:SetIsSingleSelected(true)
       clueWidget:SetIsMultiSelected(false)
     end
   end
@@ -671,6 +690,17 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   return UE4.UWidgetBlueprintLibrary.Handled()
 end
 
+function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) and "Gamepad_FaceButton_Bottom" == InKeyName and not self.Book:GetIsClueUi() then
+    self.Book:OnClickClose()
+    self:SetDefaultFocus()
+    self.Btn_Associate.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Visible)
+  end
+  return UE4.UWidgetBlueprintLibrary.Unhandled()
+end
+
 function M:RefreshAnswerByQuestionId(QuestionId, Index)
   local bClearClueWidgetsAnimations = false
   if QuestionId ~= self.CurerntQuestionId then
@@ -700,7 +730,16 @@ end
 
 function M:SelectFirstClue()
   if not self.IsClueEmpty and not ReasoningUtils:IsMultiEndingQuestion(self.CurerntQuestionId) and self.CurrentChosenContent == nil then
-    self.Clue_01:OnClickButton()
+    local clueWidget = self.ClueWidgets[1]
+    self:UpdateItemInfo(clueWidget.Content)
+    self.CurrentChosenContent = clueWidget.Content
+    if self.CurrentReasoningState == EReasoningState.SeeAnswerDetail or self.CurrentReasoningState == EReasoningState.CommitAnswerFinish then
+      clueWidget:PlayAnimation(clueWidget.Click)
+    else
+      clueWidget:PlayAnimation(clueWidget.Normal_JustClick)
+    end
+    clueWidget:SetIsSingleSelected(true)
+    clueWidget:SetIsMultiSelected(false)
   end
 end
 
@@ -715,10 +754,10 @@ function M:OnClickButtonAssociate()
     end
     if self.CurrentReasoningState == EReasoningState.SeeAnswerDetail then
       UIManager(self):ShowUITip("CommonToastMain", GText("Minigame_Textmap_100305"))
-    elseif self.CurrentReasoningState == EReasoningState.InferAnswer then
-      UIManager(self):ShowUITip("CommonToastMain", GText("Minigame_Textmap_100316"))
-    elseif self.CurrentReasoningState == EReasoningState.CommitAnswer then
-      UIManager(self):ShowUITip("CommonToastMain", GText("Minigame_Textmap_100316"))
+    elseif self.CurrentReasoningState == EReasoningState.InferAnswer and self.CurrentClueCount < self.TotalClueCount then
+      UIManager(self):ShowUITip("CommonToastMain", GText("Minigame_Textmap_100342"))
+    elseif self.CurrentReasoningState == EReasoningState.CommitAnswer and self.CurrentClueCount < self.TotalClueCount then
+      UIManager(self):ShowUITip("CommonToastMain", GText("Minigame_Textmap_100342"))
     end
     return
   end
@@ -760,8 +799,10 @@ function M:InitSeeAnswerDetailState(state)
 end
 
 function M:RefreshButtonState()
+  local bShowNum = true
+  self.Text_SelectNum:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Text_Warn:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-  local WarnInText
+  local WarnInText, NumText
   if self.CurrentReasoningState == EReasoningState.SeeAnswerDetail then
     self.Btn_Associate.Text:SetText(GText("Minigame_Textmap_100313"))
     self:SetTextWarnText(nil)
@@ -769,12 +810,19 @@ function M:RefreshButtonState()
     WarnInText = GText("Minigame_Textmap_100314")
     local currentClueCount = CommonUtils.TableLength(self.CurrentSelectedAnswers)
     local totalClueCount = ReasoningUtils:GetMissingInferAnswersNum(self.CurerntQuestionId)
-    self.Btn_Associate.Text:SetText(string.format(GText("Minigame_Textmap_100315"), currentClueCount, totalClueCount))
+    if currentClueCount > totalClueCount then
+      NumText = "<W>" .. currentClueCount .. "</><H>/" .. totalClueCount .. "</>"
+    else
+      NumText = "<H>" .. currentClueCount .. "</><H>/" .. totalClueCount .. "</>"
+    end
+    self.Text_SelectNum:SetText(NumText)
+    self.Text_SelectNum:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Btn_Associate.Text:SetText(GText("Minigame_Textmap_100313"))
     AudioManager(self):PlayUISound(self, "event:/ui/common/tuili_clue_msg_select", nil, nil)
   elseif self.CurrentReasoningState == EReasoningState.CommitAnswer then
     self.Btn_Associate.Text:SetText(GText("Minigame_Textmap_100320"))
     if self.IsCommitAnswerMultiSelect then
-      WarnInText = GText("Minigame_Textmap_100329")
+      WarnInText = GText("Minigame_Textmap_100328")
     else
       WarnInText = GText("Minigame_Textmap_100328")
     end
@@ -783,6 +831,7 @@ function M:RefreshButtonState()
     self.Btn_Associate.Text:SetText(GText("Minigame_Textmap_100325"))
   end
   local isForbidden = true
+  self.IsLackClue = false
   local NeededAnswers
   if self.CurrentReasoningState == EReasoningState.InferAnswer or self.CurrentReasoningState == EReasoningState.SeeAnswerDetail then
     NeededAnswers = ReasoningUtils:GetMissingInferAnswers(self.CurerntQuestionId)
@@ -794,37 +843,52 @@ function M:RefreshButtonState()
   if not NeededAnswers then
     isForbidden = true
     WarnInText = GText("Minigame_Textmap_100339")
+    bShowNum = false
     self.IsLackClue = true
   elseif self.CurrentReasoningState == EReasoningState.SeeAnswerDetail then
     if #self.CurrentUnlockedAnswers > 0 then
       isForbidden = false
     end
   elseif self.CurrentReasoningState == EReasoningState.InferAnswer then
-    if CommonUtils.TableLength(self.CurrentSelectedAnswers) > 0 then
+    local currentClueCount = CommonUtils.TableLength(self.CurrentSelectedAnswers)
+    local totalClueCount = ReasoningUtils:GetMissingInferAnswersNum(self.CurerntQuestionId)
+    if currentClueCount == totalClueCount then
       isForbidden = false
     end
+    self.CurrentClueCount = currentClueCount
+    self.TotalClueCount = totalClueCount
   elseif self.CurrentReasoningState == EReasoningState.CommitAnswer then
+    local currentClueCount = CommonUtils.TableLength(self.CurrentSelectedAnswers)
     if self.IsCommitAnswerMultiSelect then
-      if CommonUtils.TableLength(self.CurrentSelectedAnswers) > 0 then
-        isForbidden = false
-        if ReasoningUtils:IsMultiEndingQuestion(self.CurerntQuestionId) then
-          WarnInText = GText("Minigame_Textmap_100333")
-        end
-      end
-    elseif self.CurrentChosenContent then
+      currentClueCount = CommonUtils.TableLength(self.CurrentSelectedAnswers)
+    else
+      currentClueCount = self.CurrentChosenContent and 1 or 0
+    end
+    local totalClueCount = CommonUtils.TableLength(NeededAnswers)
+    if currentClueCount == totalClueCount then
       isForbidden = false
       if ReasoningUtils:IsMultiEndingQuestion(self.CurerntQuestionId) then
         WarnInText = GText("Minigame_Textmap_100333")
       end
     end
+    if currentClueCount > totalClueCount then
+      NumText = "<W>" .. currentClueCount .. "</><H>/" .. totalClueCount .. "</>"
+    else
+      NumText = "<H>" .. currentClueCount .. "</><H>/" .. totalClueCount .. "</>"
+    end
+    self.Text_SelectNum:SetText(NumText)
+    self.Text_SelectNum:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.CurrentClueCount = currentClueCount
+    self.TotalClueCount = totalClueCount
   end
   self.Btn_Associate.Btn_Click:SetForbidden(isForbidden)
-  self:SetTextWarnText(WarnInText)
+  self:SetTextWarnText(WarnInText, bShowNum)
 end
 
-function M:SetTextWarnText(Text)
+function M:SetTextWarnText(Text, bShowNum)
   if self.IsInDialogue then
     self.Text_Warn:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Panel_Num:SetVisibility(UE4.ESlateVisibility.Collapsed)
     return
   end
   if self.IsClueEmpty then
@@ -834,9 +898,14 @@ function M:SetTextWarnText(Text)
     self:PlayAnimation(self.Text_Warn_In)
     self.WarnInText = Text
     self.Text_Warn:SetText(Text)
+    self.Panel_Num:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   elseif nil == Text then
     self.Text_Warn:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Panel_Num:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.WarnInText = nil
+  end
+  if false == bShowNum then
+    self.Panel_Num:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
 end
 

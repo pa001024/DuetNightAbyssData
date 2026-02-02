@@ -27,6 +27,7 @@ function WBP_Battle_Button_Phone:ForceInit()
   self.AtkRanged:UpdateWeaponIcon()
   self.DelayAddTouchLayerTimer = self:AddTimer(0.1, self.DelayAddTouchLayer, true)
   self:InitHUDLayout()
+  self:InitMountHUD()
 end
 
 function WBP_Battle_Button_Phone:OnLoaded(...)
@@ -52,6 +53,12 @@ function WBP_Battle_Button_Phone:InitListenEvent()
   self:AddDispatcher(EventID.OnMobileHudPlanChanged, self, self.UpdateLayoutInfoByServerData)
   self:AddDispatcher(EventID.OnSwitchLeftShoot, self, self.InitLeftShoot)
   self:AddDispatcher(EventID.OnSwitchLeftBulletJump, self, self.InitLeftBulletJump)
+  self:AddDispatcher(EventID.OnEnableBattleMount, self, self.OnEnableBattleMount)
+  self:AddDispatcher(EventID.OnDisableBattleMount, self, self.OnDisableBattleMount)
+  self:AddDispatcher(EventID.OnStartMountFly, self, self.OnStartMountFly)
+  self:AddDispatcher(EventID.OnStopMountFly, self, self.OnStopMountFly)
+  self:AddDispatcher(EventID.OnSkillInfosRep, self, self.OnSkillInfosRep)
+  self:AddDispatcher(EventID.OnMobileHookShow, self, self.OnMobileHookShow)
   self:InitTouchListenEvent()
 end
 
@@ -120,9 +127,6 @@ function WBP_Battle_Button_Phone:UpdateLayoutInfoByServerData(OpType, Layout, La
         if "JumpPos" == ParentName then
           self.Jump.InnerButtonDis = self.Jump.DefaultButtonDis * PositionInHUD.ScaleX
         end
-        if "AtkRangedPos" == ParentName then
-          self.AtkRanged.EdgeWidth = self.AtkRanged.DefaultEdgeWidth * PositionInHUD.ScaleX
-        end
       end
       self:SetBtnDefaultPosition(Layout - 1)
       self:InitLeftButtons()
@@ -181,6 +185,8 @@ function WBP_Battle_Button_Phone:InitVariable()
   self.AtkMelee.OwnerPanel = self
   self.Squat.OwnerPanel = self
   self.Squat.OwnerPlayer = self.OwnerPlayer
+  self.Walk.OwnerPanel = self
+  self.Walk.OwnerPlayer = self.OwnerPlayer
   self.Battle_Menu.OwnerPanel = self
   self.Dodge.OwnerPanel = self
   self.AimLocked.OwnerPanel = self
@@ -209,6 +215,12 @@ function WBP_Battle_Button_Phone:OnBattlePetInitReady()
   self.SupportSkill:RefreshSupportSkillIcon()
   if not self.OwnerPlayer:CheckSkillInActive(ESkillName.Skill3) then
     self:ChangeSkillButtonState(ESkillName.Skill3, "UnEmpty")
+  end
+end
+
+function WBP_Battle_Button_Phone:InitMountHUD()
+  if not self.OwnerPlayer.CurMount then
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Mounts_Out)
   end
 end
 
@@ -319,6 +331,8 @@ function WBP_Battle_Button_Phone:TryToStopTargetCommand(KeyName, IsClearInputCac
     self.OwnerPlayer:ActionCallback("BulletJump", EInputEvent.IE_Released)
   elseif "SwitchCrouch" == KeyName then
     self.OwnerPlayer:ActionCallback("SwitchCrouch", EInputEvent.IE_Released)
+  elseif "SwitchWalk" == KeyName then
+    self.OwnerPlayer:ActionCallback("SwitchWalk", EInputEvent.IE_Released)
   end
 end
 
@@ -377,6 +391,8 @@ function WBP_Battle_Button_Phone:ChangeSkillButtonState(SkillName, StateName)
       self.Bullet.CurButtonState = "Empty"
       self.AtkRanged:UpdateRangeWeaponButton()
       self.Bullet:SetVisibility(ESlateVisibility.Collapsed)
+    elseif SkillName == ESkillName.SwitchWalk then
+      self.Walk:SetVisibility(UE4.ESlateVisibility.Collapsed)
     end
   elseif "UnEmpty" == StateName then
     if SkillName == ESkillName.Skill1 then
@@ -396,6 +412,8 @@ function WBP_Battle_Button_Phone:ChangeSkillButtonState(SkillName, StateName)
       self.Bullet.CurButtonState = "Normal"
       self.AtkRanged:UpdateRangeWeaponButton()
       self.Bullet:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    elseif SkillName == ESkillName.SwitchWalk then
+      self.Walk:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     end
   end
   if "UnLock" == StateName then
@@ -430,6 +448,8 @@ function WBP_Battle_Button_Phone:ChangeSkillButtonState(SkillName, StateName)
       self.BulletJump:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
       self.BulletJumpLeft:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
       self.Jump:OnSkillActive(SkillName)
+    elseif SkillName == ESkillName.SwitchWalk then
+      self.Walk:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     end
   elseif "Lock" == StateName then
     if SkillName == ESkillName.Attack then
@@ -459,6 +479,8 @@ function WBP_Battle_Button_Phone:ChangeSkillButtonState(SkillName, StateName)
       self.BulletJump:SetVisibility(UE4.ESlateVisibility.Collapsed)
       self.BulletJumpLeft:SetVisibility(UE4.ESlateVisibility.Collapsed)
       self.Jump:OnSkillInActive(SkillName)
+    elseif SkillName == ESkillName.SwitchWalk then
+      self.Walk:SetVisibility(UE4.ESlateVisibility.Collapsed)
     end
   elseif "Ban" == StateName then
     if SkillName == ESkillName.Attack then
@@ -555,10 +577,18 @@ function WBP_Battle_Button_Phone:RefreshRoleSkillButton()
   self.SupportSkill:RefreshButtonStyle()
 end
 
+function WBP_Battle_Button_Phone:OnSkillInfosRep(Character)
+  if not self.OwnerPlayer or self.OwnerPlayer ~= Character then
+    return
+  end
+  self:RefreshSkillConfig()
+end
+
 function WBP_Battle_Button_Phone:UpdateSkillInfoInTimer()
   if IsValid(self.OwnerPlayer) and not self.OwnerPlayer.IsUpdatedUIInThisTick then
     self.Skill:UpdateSkillInTimer()
     self.Squat:UpdateButtonInTimer()
+    self.Walk:UpdateButtonInTimer()
     self.Dodge:UpdateButtonInTimer()
     self.AimLocked:UpdateButtonInTimer()
     self.IsCharacterInFalling = self.OwnerPlayer:CharacterInTag("Falling")
@@ -678,6 +708,38 @@ function WBP_Battle_Button_Phone:OnPropEffectEndReplaceSkill(SkillName)
   end
 end
 
+function WBP_Battle_Button_Phone:OnEnableBattleMount(Character)
+  if not Character:IsMainPlayer() then
+    return
+  end
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.Mounts_In)
+  self.Jump:OnEnableBattleMount()
+end
+
+function WBP_Battle_Button_Phone:OnDisableBattleMount(Character)
+  if not Character:IsMainPlayer() then
+    return
+  end
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.Mounts_Out)
+  self.Jump:OnDisableBattleMount()
+end
+
+function WBP_Battle_Button_Phone:OnStartMountFly(Character)
+  if not Character:IsMainPlayer() then
+    return
+  end
+  self.Dodge:OnStartMountFly()
+  self.Jump:OnStartMountFly()
+end
+
+function WBP_Battle_Button_Phone:OnStopMountFly(Character)
+  if not Character:IsMainPlayer() then
+    return
+  end
+  self.Dodge:OnStopMountFly()
+  self.Jump:OnStopMountFly()
+end
+
 function WBP_Battle_Button_Phone:Destruct()
   self.Super.Destruct(self)
   local Avatar = GWorld:GetAvatar()
@@ -694,6 +756,17 @@ end
 
 function WBP_Battle_Button_Phone:ShowAtkMeleeForbidTips()
   UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_MELEE_FORBIDDEN"))
+end
+
+function WBP_Battle_Button_Phone:OnMobileHookShow(Hook)
+  local BattleMainUI = UIManager(self):GetUIObj("BattleMain")
+  if BattleMainUI.Char_Skill.Execute.IsShow then
+    BattleMainUI.Char_Skill.Switch_Type:SetActiveWidgetIndex(0)
+    return
+  end
+  BattleMainUI.Char_Skill.Switch_Type:SetActiveWidgetIndex(1)
+  Hook.InteractiveUI = BattleMainUI.Char_Skill.HookLock
+  Hook.InteractiveUI:Init(Hook)
 end
 
 AssembleComponents(WBP_Battle_Button_Phone)

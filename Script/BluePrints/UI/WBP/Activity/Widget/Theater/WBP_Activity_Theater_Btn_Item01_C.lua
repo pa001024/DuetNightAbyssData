@@ -19,6 +19,11 @@ function M:OnListItemObjectSet(Content)
   else
     self:PlayAnimation(self.Lock_Normal)
   end
+  if Content.IsDone then
+    self.panel_check:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.panel_check:SetVisibility(ESlateVisibility.Collapsed)
+  end
   if Content.IsSelected then
     self:PlayAnimation(self.Click)
     self:SetFocus()

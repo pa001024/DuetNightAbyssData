@@ -85,11 +85,26 @@ function M:RefreshList(bAnimation, FromSrc)
       self.Text_Empty_World_1:SetText(EnText("UI_NoWalnut_Sell"))
       self.Panel_Empty_Search:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       self.Panel_Empty_Detail:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      self.List_Item:SetVisibility(UE4.ESlateVisibility.Collapsed)
     else
       self.Panel_Empty_Detail:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      self.List_Item:SetVisibility(UE4.ESlateVisibility.Visable)
     end
   else
     self.Panel_Empty_Search:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Panel_Empty_Detail:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.List_Item:SetVisibility(UE4.ESlateVisibility.Visable)
+  end
+  if self.BagSellState and self.CurSelectContent and self.CurSelectContent.Count > 0 then
+  else
+    self:AddTimer(0.05, function()
+      if self.List_Item:GetNumItems() > 0 then
+        local FirstItem = self.List_Item:GetItemAt(0)
+        if FirstItem then
+          self:OnListItemSelected(FirstItem, nil, true)
+        end
+      end
+    end, false, 0, "SelectFirstWalnutItem", true)
   end
 end
 

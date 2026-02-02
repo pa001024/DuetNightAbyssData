@@ -93,9 +93,13 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   if CurInputDevice == ECommonInputType.Gamepad then
     self.Com_KeyAdd:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.Com_KeyText:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  else
+  elseif CurInputDevice == ECommonInputType.MouseAndKeyboard then
     self.Com_KeyText:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.Com_KeyAdd:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  if ModController:IsMobile() then
+    self.Com_KeyAdd:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Com_KeyText:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
   self.Super.RefreshOpInfoByInputDevice(self, CurInputDevice, CurGamepadName)
 end

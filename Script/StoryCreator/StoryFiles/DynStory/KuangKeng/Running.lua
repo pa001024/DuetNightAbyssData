@@ -144,12 +144,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17370099970278173",
-            startPort = "Out",
-            endQuest = "173701070387115747",
-            endPort = "In"
-          },
-          {
             startQuest = "173701070387115747",
             startPort = "Out",
             endQuest = "173701071590016048",
@@ -412,6 +406,18 @@ return {
             startPort = "Out",
             endQuest = "17370098651655963",
             endPort = "In"
+          },
+          {
+            startQuest = "17670754662271105",
+            startPort = "Out",
+            endQuest = "173701070387115747",
+            endPort = "In"
+          },
+          {
+            startQuest = "17370099970278173",
+            startPort = "Out",
+            endQuest = "17670754662271105",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -503,6 +509,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -575,6 +582,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -736,6 +744,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -806,6 +815,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -897,6 +907,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -949,6 +960,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1125,6 +1137,13 @@ return {
               NewTargetPointName = "",
               StaticCreatorIdList = {1440141, 1440143}
             }
+          },
+          ["17670754662271105"] = {
+            key = "17670754662271105",
+            type = "WaitOfTimeNode",
+            name = "延迟等待",
+            pos = {x = 4330.275000000001, y = 558.210294117647},
+            propsData = {WaitTime = 0.3}
           }
         },
         commentData = {}

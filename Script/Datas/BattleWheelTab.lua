@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -17,5 +20,9 @@ return ReadOnly("BattleWheelTab", {
   [4] = {
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Phantom.T_Tab_Phantom",
     TabId = 4
+  },
+  [5] = {
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Mounts.T_Tab_Mounts",
+    TabId = 5
   }
 })

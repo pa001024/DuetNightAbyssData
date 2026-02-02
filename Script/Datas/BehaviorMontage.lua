@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -459,6 +462,12 @@ return ReadOnly("BehaviorMontage", {
     MontageGroupId = 9501,
     MontageId = 9501100,
     MontagePath = "/Game/Asset/Char/Monster/NE_Villiger/Animation/Montage/Combat/Skill/NE_Villiger_SpecialAlert_Montage.NE_Villiger_SpecialAlert_Montage",
+    MontageType = "EnterAlert"
+  },
+  [9510100] = {
+    MontageGroupId = 9510,
+    MontageId = 9510100,
+    MontagePath = "/Game/Asset/Char/Monster/NE_Villiger07/Animation/Montage/Combat/Skill/NE_Villiger07_SpecialAlert_Montage.NE_Villiger07_SpecialAlert_Montage",
     MontageType = "EnterAlert"
   },
   [9801001] = {

@@ -5,6 +5,7 @@ local WBP_Archive_PageChar_C = Class({
 WBP_Archive_PageChar_C._components = {
   "BluePrints.UI.UI_PC.Common.HorizontalListViewResizeComp"
 }
+local ActorController = require("BluePrints.UI.WBP.Armory.ActorController.Armory_ActorController")
 
 function WBP_Archive_PageChar_C:Construct()
   self.Super.Construct(self)
@@ -16,7 +17,13 @@ function WBP_Archive_PageChar_C:Construct()
   self.List_Item.BP_OnEntryInitialized:Clear()
   self.List_Item.OnCreateEmptyContent:Bind(self, function(self)
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
-    Content.Icon = nil
+    if self.Name == "Character" then
+      Content.Type = "Character"
+    elseif self.Name == "Melee" or self.Name == "Ranged" then
+      Content.Type = "Weapon"
+    end
+    Content.NotInteractive = true
+    Content.IsEmpty = nil
     Content.Parent = self
     return Content
   end)
@@ -30,13 +37,16 @@ function WBP_Archive_PageChar_C:Construct()
 end
 
 function WBP_Archive_PageChar_C:Destruct()
-  self.Super.Destruct(self)
+  if self.ActorController then
+    self.ActorController:OnDestruct()
+  end
   self.List_Item.BP_OnEntryInitialized:Remove(self, self.OnObjectSetFinished)
   self:HorizontalListViewResize_TearDown()
   self:ClearListenEvent()
   if self.NodeName then
     ReddotManager.RemoveListener(self.NodeName, self)
   end
+  self.Super.Destruct(self)
 end
 
 function WBP_Archive_PageChar_C:OnLoaded(...)
@@ -58,6 +68,14 @@ function WBP_Archive_PageChar_C:OnLoaded(...)
     end
     ReddotManager.AddListener(self.NodeName, self, self.RefreshReddot)
   end
+  self.ActorController = ActorController:New({
+    ViewUI = self,
+    IsPreviewMode = true,
+    IsCharacterTrialMode = false,
+    EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewArmory,
+    bNeedEndCamera = false
+  })
+  self.ActorController:OnOpened()
 end
 
 function WBP_Archive_PageChar_C:InitFilter()
@@ -176,11 +194,8 @@ function WBP_Archive_PageChar_C:RefreshList(bAnimation)
   self.ItemId2Index = {}
   self:OnListFillWith()
   self:AddTimer(0.01, function()
-    self:OnRefreshListLater(bAnimation)
-    self:OnRefreshListEnd()
-    if bAnimation then
-      self.List_Item:ScrollToTop()
-    end
+    self.List_Item:RequestFillEmptyContent()
+    self.List_Item:RequestPlayEntriesAnim()
   end, false, 0, "OnRefreshListLater", true)
 end
 
@@ -523,7 +538,7 @@ function WBP_Archive_PageChar_C:PlayOutAnim()
     return
   end
   AudioManager(self):SetEventSoundParam(self, "ArchivePageCharOpenSound", {ToEnd = 1})
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:BindToAnimationFinished(self.Out, {
     self,
     self.Close
@@ -532,6 +547,10 @@ function WBP_Archive_PageChar_C:PlayOutAnim()
 end
 
 function WBP_Archive_PageChar_C:Close()
+  self.List_Item:ClearListItems()
+  if self.ActorController then
+    self.ActorController:OnClosed()
+  end
   self.Super.Close(self)
 end
 
@@ -572,6 +591,7 @@ function WBP_Archive_PageChar_C:ClickListWeapon(Content)
     EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewArmory,
     bNoEndCamera = true,
     bFromArchive = true,
+    bHideWeaponAppearance = true,
     DoNotSort = true,
     OnCloseDelegate = nil
   })

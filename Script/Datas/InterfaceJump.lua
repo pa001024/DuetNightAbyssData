@@ -8,6 +8,9 @@ T.RT_6 = {3002}
 T.RT_7 = {3001, 125}
 T.RT_8 = {4240}
 T.RT_9 = {4220}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -91,8 +94,8 @@ return ReadOnly("InterfaceJump", {
   },
   [14] = {
     InterfaceJumpId = 14,
-    JumpParameter1 = "AbyssMain",
-    JumpType = "MereJump",
+    JumpParameter1 = "JumpToAbyssMainNormal",
+    JumpType = "SelfDefinedJump",
     PortalUnlockCondition = T.RT_3,
     PortalUnlockTips = "UI_Locked_Des_Abyss"
   },
@@ -613,12 +616,84 @@ return ReadOnly("InterfaceJump", {
     PortalUnlockCondition = T.RT_9,
     PortalUnlockTips = "UI_Locked_Des_GameEvent"
   },
+  [75] = {
+    InterfaceJumpId = 75,
+    JumpParameter1 = "ActivityWuyoushengMain",
+    JumpParameter2 = "110001.0",
+    JumpType = "MereJump"
+  },
+  [76] = {
+    InterfaceJumpId = 76,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "40.0",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_9,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
   [77] = {
     InterfaceJumpId = 77,
     JumpParameter1 = "JumpToAbyssMainFromActivity",
     JumpType = "SelfDefinedJump",
     PortalUnlockCondition = T.RT_3,
     PortalUnlockTips = "UI_Locked_Des_Abyss"
+  },
+  [78] = {
+    InterfaceJumpId = 78,
+    JumpParameter1 = "MountsMain",
+    JumpType = "MereJump"
+  },
+  [79] = {
+    InterfaceJumpId = 79,
+    JumpParameter1 = "ActivityCamreaGame",
+    JumpType = "MereJump",
+    PortalUnlockCondition = T.RT_9,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [80] = {
+    InterfaceJumpId = 80,
+    JumpParameter1 = "BagGameMain",
+    JumpType = "MereJump",
+    PortalUnlockCondition = T.RT_9,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [81] = {
+    InterfaceJumpId = 81,
+    JumpParameter1 = "JumpToShopPage",
+    JumpParameter2 = "10006.0",
+    JumpParameter3 = "100061",
+    JumpParameter4 = "nil",
+    JumpParameter5 = "AutoChessShop",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_9,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [82] = {
+    InterfaceJumpId = 82,
+    JumpParameter1 = "AutoChessMain",
+    JumpType = "MereJump"
+  },
+  [83] = {
+    InterfaceJumpId = 83,
+    JumpParameter1 = "AprilFoolsDayMain",
+    JumpType = "MereJump"
+  },
+  [84] = {
+    InterfaceJumpId = 84,
+    JumpParameter1 = "JumpToInviteCode",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_9,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [85] = {
+    InterfaceJumpId = 85,
+    JumpParameter1 = "JumpToShopPage",
+    JumpParameter2 = "110.0",
+    JumpParameter3 = "1101",
+    JumpParameter4 = "nil",
+    JumpParameter5 = "Shop",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_4,
+    PortalUnlockTips = "UI_Locked_Des_Shop"
   },
   [1101] = {
     InterfaceJumpId = 1101,

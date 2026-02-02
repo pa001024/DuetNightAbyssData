@@ -2,6 +2,12 @@ local M = Class({
   "BluePrints.Common.TimerMgr"
 })
 local OPENING_WAIT_TIME = 5
+local PlayerGameState = {
+  NotReady = 1,
+  Ready = 2,
+  Disconnect = 3,
+  Exit = 4
+}
 
 function M:InitHardBossDgComponent()
   self.GameMode = self:GetOwner()
@@ -18,10 +24,19 @@ function M:InitHardBossDgComponent()
   self.BossUnitId = HardBossInfo.BossUnitId
   self.BossStaticCreatorId = HardBossInfo.BossStaticId
   self.AirWallStaticCreatorId = HardBossInfo.AirWallStaticId
+  self.PreparingAirWallStaticId = HardBossInfo.PreparingAirWallStaticId
+  self:RegisterGameModeEvents()
   DebugPrint("HardBossDgComponent: InitHardBossDgComponent")
 end
 
+function M:RegisterGameModeEvents()
+  self.GameMode.EMGameState:RegisterGameModeEvent("OnExit", self, self.OnPlayerExitGame)
+  self.GameMode.EMGameState:RegisterGameModeEvent("OnDisconnect", self, self.OnPlayerDisconnectGame)
+  EventManager:AddEvent(EventID.OnAvatarLogout, self, self.OnPlayerAvatarLogout)
+end
+
 function M:InitHardBossDgBaseInfo()
+  GWorld:DSBLog("Info", "HardBossDgComponent: InitHardBossDgBaseInfo", "GameMode")
   self:SpawnMainActors()
   self:PlayOpeningSequence()
 end
@@ -36,6 +51,7 @@ function M:SpawnMainActors()
   end
   local CreatorIds = TArray(0)
   CreatorIds:Add(self.BossStaticCreatorId)
+  CreatorIds:Add(self.PreparingAirWallStaticId)
   self.GameMode:TriggerActiveStaticCreator(CreatorIds, "HardBossMain")
 end
 
@@ -44,25 +60,23 @@ function M:OnStaticCreatorEvent(EventName, Eid, UnitId, UnitType)
     local Boss = Battle(self):GetEntity(Eid)
     if IsValid(Boss) then
       Boss:StopBT("HardBossOpening")
+      Battle(self):AddBuffToTarget(Boss, Boss, Const.InvincibleBuffId, -1)
       self.BossEid = Eid
     end
   end
 end
 
 function M:PlayOpeningSequence()
-  self.ClientReadyNum = 0
   self.IsWaitingClientOpening = true
+  self.ClientReadyMap = {}
   local Players = self.GameMode:GetAllPlayer()
   for _, Player in pairs(Players) do
     DebugPrint("HardBossDgComponent: PlayOpeningSequence", Player.Eid)
-    self.GameMode:SetPlayerInvincible(Player, true)
+    GWorld:DSBLog("Info", "HardBossDgComponent: PlayOpeningSequence PlayerEid: " .. Player.Eid, "GameMode")
+    self:MutePlayerAction(Player, true)
     self.GameMode:PausePhantomBTByPlayer(Player, true, "HardBossOpening")
   end
   self.GameMode:AddDungeonEvent("OpeningSequence")
-  self:AddTimer(Const.BossOpeningEnsureTime, function()
-    GameState(self):ShowDungeonError("HardBossDgComponent:开场动画超时触发保底！", Const.DungeonErrorType.DungeonGame, Const.DungeonErrorTitle.Process)
-    self:OnAllClientOpeningReady()
-  end, false, 0, "EnsureClientOpening")
 end
 
 function M:OnPlayerEnter(Eid)
@@ -70,23 +84,36 @@ function M:OnPlayerEnter(Eid)
     return
   end
   DebugPrint("HardBossDgComponent: OnPlayerEnter", Eid)
+  GWorld:DSBLog("Info", "HardBossDgComponent: OnPlayerEnter PlayerEid: " .. Eid, "GameMode")
   local Player = Battle(self):GetEntity(Eid)
-  self.GameMode:SetPlayerInvincible(Player, true)
+  self:MutePlayerAction(Player, true)
   self.GameMode:PausePhantomBTByPlayer(Player, true, "HardBossOpening")
 end
 
 function M:ClientPlayOpeningFinish(PlayerEid)
-  self.ClientReadyNum = self.ClientReadyNum + 1
-  local TotalPlayerNum = self.GameMode:GetTargetPlayerNum()
-  DebugPrint("HardBossDgComponent: ClientPlaySequenceFinish PlayerEid:", PlayerEid, " ClientReadyNum:", self.ClientReadyNum, " TotalPlayerNum:", TotalPlayerNum, "IsWaitingClientOpening", self.IsWaitingClientOpening)
-  if 1 == self.ClientReadyNum then
-    self:AddTimer(OPENING_WAIT_TIME, function()
-      self:OnAllClientOpeningReady()
-    end, false, 0, "WaitingClientOpening", true)
+  local PlayerCharacter = Battle(self):GetEntity(PlayerEid)
+  if not PlayerCharacter then
+    return
   end
-  if TotalPlayerNum <= self.ClientReadyNum then
+  local PlayerNum = self.GameMode:GetTargetPlayerNum()
+  local AvatarEidStr = PlayerCharacter:GetOwner().AvatarEidStr
+  DebugPrint("HardBossDgComponent: ClientPlaySequenceFinish PlayerEid:", PlayerEid, " PlayerNum:", PlayerNum, "AvatarEidStr", AvatarEidStr)
+  GWorld:DSBLog("Info", "HardBossDgComponent: ClientPlaySequenceFinish PlayerEid: " .. PlayerEid .. " PlayerNum: " .. PlayerNum .. " AvatarEidStr: " .. AvatarEidStr, "GameMode")
+  self.ClientReadyMap[AvatarEidStr] = PlayerGameState.Ready
+  if self:IsAllActiveClientReady() then
     self:OnAllClientOpeningReady()
   end
+end
+
+function M:IsAllActiveClientReady()
+  local PlayerNum = self.GameMode:GetTargetPlayerNum()
+  local ActiveReadyCount = 0
+  for AvatarEidStr, State in pairs(self.ClientReadyMap) do
+    if State == PlayerGameState.Ready then
+      ActiveReadyCount = ActiveReadyCount + 1
+    end
+  end
+  return PlayerNum <= ActiveReadyCount
 end
 
 function M:OnAllClientOpeningReady()
@@ -94,23 +121,88 @@ function M:OnAllClientOpeningReady()
     return
   end
   self.IsWaitingClientOpening = false
-  self:RemoveTimer("WaitingClientOpening")
   DebugPrint("HardBossDgComponent: OnAllClientOpeningReady")
+  GWorld:DSBLog("Info", "HardBossDgComponent: OnAllClientOpeningReady ", "GameMode")
   self.GameMode:RemoveDungeonEvent("OpeningSequence")
-  local AllPlayers = self.GameMode:GetAllPlayer()
-  for _, Player in pairs(AllPlayers) do
-    DebugPrint("HardBossDgComponent: OnAllClientOpeningReady", Player.Eid)
-    self.GameMode:SetPlayerInvincible(Player, false)
-    self.GameMode:PausePhantomBTByPlayer(Player, false, "HardBossOpening")
-  end
-  local Boss = Battle(self):GetEntity(self.BossEid)
-  if IsValid(Boss) then
-    Boss:RestartBT()
-  end
   local CreatorIds = TArray(0)
   CreatorIds:Add(self.AirWallStaticCreatorId)
   self.GameMode:TriggerActiveStaticCreator(CreatorIds)
   self.GameMode:TriggerGameModeEvent("Event_OnAllClientOpeningReady")
+end
+
+function M:RealGameStart()
+  local Boss = Battle(self):GetEntity(self.BossEid)
+  if IsValid(Boss) then
+    Boss:RestartBT()
+    Battle(self):RemoveBuffFromTarget(Boss, Boss, Const.InvincibleBuffId, false, -1)
+  end
+  local AllPlayers = self.GameMode:GetAllPlayer()
+  for _, Player in pairs(AllPlayers) do
+    DebugPrint("HardBossDgComponent: RealGameStart", Player.Eid)
+    GWorld:DSBLog("Info", "HardBossDgComponent: RealGameStart PlayerEid: " .. Player.Eid, "GameMode")
+    self:MutePlayerAction(Player, false)
+    self.GameMode:PausePhantomBTByPlayer(Player, false, "HardBossOpening")
+  end
+  local Creator = self.GameMode.EMGameState:GetStaticCreatorInfo(self.PreparingAirWallStaticId)
+  if IsValid(Creator) then
+    local ChildEids = Creator:GetChildEids()
+    for _, ChildEid in pairs(ChildEids) do
+      local AirWall = Battle(self):GetEntity(ChildEid)
+      if IsValid(AirWall) and AirWall.HardBossPreAirWallEnd then
+        AirWall:HardBossPreAirWallEnd()
+      end
+    end
+  end
+end
+
+function M:OnPlayerExitGame(AvatarArr)
+  if not self.IsWaitingClientOpening then
+    return
+  end
+  local PlayerNum = self.GameMode:GetTargetPlayerNum()
+  for i = 1, AvatarArr:Length() do
+    local AvatarEidStr = AvatarArr:GetRef(i)
+    self.ClientReadyMap[AvatarEidStr] = PlayerGameState.Exit
+    DebugPrint("HardBossDgComponent: OnPlayerExitGame", AvatarEidStr, "PlayerNum", PlayerNum)
+    GWorld:DSBLog("Info", "HardBossDgComponent: OnPlayerExitGame AvatarEidStr: " .. AvatarEidStr .. " PlayerNum: " .. PlayerNum, "GameMode")
+  end
+  if self:IsAllActiveClientReady() then
+    self:OnAllClientOpeningReady()
+  end
+end
+
+function M:OnPlayerDisconnectGame(AvatarEidStr)
+  if not self.IsWaitingClientOpening then
+    return
+  end
+  local PlayerNum = self.GameMode:GetTargetPlayerNum()
+  self.ClientReadyMap[AvatarEidStr] = PlayerGameState.Disconnect
+  DebugPrint("HardBossDgComponent: OnPlayerDisconnectGame", AvatarEidStr, "PlayerNum", PlayerNum)
+  GWorld:DSBLog("Info", "HardBossDgComponent: OnPlayerDisconnectGame AvatarEidStr: " .. AvatarEidStr .. " PlayerNum: " .. PlayerNum, "GameMode")
+end
+
+function M:OnPlayerAvatarLogout(AvatarEidStr)
+  if not self.IsWaitingClientOpening then
+    return
+  end
+  local PlayerNum = self.GameMode:GetTargetPlayerNum()
+  DebugPrint("HardBossDgComponent: OnPlayerAvatarLogout", AvatarEidStr, "PlayerNum", PlayerNum)
+  GWorld:DSBLog("Info", "HardBossDgComponent: OnPlayerAvatarLogout AvatarEidStr: " .. AvatarEidStr .. " PlayerNum: " .. PlayerNum, "GameMode")
+  if self:IsAllActiveClientReady() then
+    self:OnAllClientOpeningReady()
+  end
+end
+
+function M:MutePlayerAction(Player, IsMute)
+  if not IsValid(Player) then
+    return
+  end
+  DebugPrint("HardBossDgComponent: MutePlayerAction", IsMute, "PlayerEid:", Player.Eid)
+  if IsMute then
+    Battle(self):AddBuffToTarget(Player, Player, Const.MuteBuffId, -1)
+  else
+    Battle(self):RemoveBuffFromTarget(Player, Player, Const.MuteBuffId, false, -1)
+  end
 end
 
 return M

@@ -1,0 +1,32 @@
+local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
+local ActivityReddotHelper = require("BluePrints.UI.WBP.Activity.ActivityReddotHelper")
+local ReddotTreeNode_TotalRecharge = Class("BluePrints.UI.Reddot.Child.Activity.ActivityBase")
+
+function ReddotTreeNode_TotalRecharge:_Judge(ActivityID)
+  local PlayerAvatar = GWorld:GetAvatar()
+  local ActivityData = PlayerAvatar.AccumulateRecharge[ActivityID]
+  local CurrentTotalPoint = ActivityData.Score or 0
+  local RewardGotList = ActivityData.RewardGot
+  local PageConfigData = DataMgr.CumulativeTopUpEvent[ActivityID]
+  if not ActivityUtils.CheckEventIsInActiveTime(ActivityID) then
+    return false
+  end
+  local NeedPoints = {}
+  if PageConfigData and PageConfigData.ScoreRankReward then
+    for k, _ in pairs(PageConfigData.ScoreRankReward) do
+      table.insert(NeedPoints, k)
+    end
+    table.sort(NeedPoints)
+    for i = 1, #NeedPoints do
+      local scoreNeeded = NeedPoints[i]
+      local index = i
+      local hasGot = 1 == RewardGotList[index]
+      if not hasGot and CurrentTotalPoint >= scoreNeeded then
+        return true
+      end
+    end
+  end
+  return false
+end
+
+return ReddotTreeNode_TotalRecharge

@@ -286,6 +286,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -369,6 +370,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -803,6 +805,7 @@ return {
             pos = {x = 665.4450549450551, y = 764.9725274725275},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "Npc_AIBai_1180006"
             }
@@ -821,6 +824,7 @@ return {
             pos = {x = 922.5714285714288, y = 107.42857142857157},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "Npc_AIBai_1180006"
             }
@@ -1235,6 +1239,7 @@ return {
               SkipToOption = true,
               DisableNpcOptimization = true,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "P101008Player",
               CameraLookAtTartgetPoint = "",
@@ -1326,6 +1331,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1420,6 +1426,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = true,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1649,6 +1656,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1884,6 +1892,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1924,6 +1933,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1971,6 +1981,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2040,6 +2051,7 @@ return {
             pos = {x = -175.93609022556387, y = 1166},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = ""
             }
@@ -2074,6 +2086,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2156,6 +2169,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2840,6 +2854,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = true,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2896,6 +2911,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = true,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2957,6 +2973,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = true,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -3019,6 +3036,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = true,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -3104,6 +3122,7 @@ return {
             pos = {x = 291.66070857958397, y = 842.0859535334247},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "Point_TrainingGround"
             }
@@ -3115,6 +3134,7 @@ return {
             pos = {x = 915.4793393740767, y = 858.8893723368435},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "Point_TrainingGround"
             }
@@ -3126,6 +3146,7 @@ return {
             pos = {x = 332.67557352442304, y = 629.8261343786635},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "Npc_Bai_Shangdian"
             }
@@ -3144,6 +3165,7 @@ return {
             pos = {x = 874.6308095686027, y = 648.3975629500919},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "Npc_Bai_Shangdian"
             }
@@ -3167,6 +3189,7 @@ return {
             pos = {x = -69.99999999999994, y = 205.58928571428578},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "P_1210121"
             }
@@ -3178,6 +3201,7 @@ return {
             pos = {x = 1203.4285714285713, y = 412.44642857142856},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "P_1210121"
             }
@@ -3515,6 +3539,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -3618,6 +3643,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = true,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -3695,6 +3721,7 @@ return {
             pos = {x = 124.20179820179789, y = 40.65934065934047},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "200002"
             }
@@ -3706,6 +3733,7 @@ return {
             pos = {x = 329.68131868131843, y = 39.89010989010973},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_QuestTrigger_1180130"
             }
@@ -3717,6 +3745,7 @@ return {
             pos = {x = 294.37912087912053, y = 1128.1593406593406},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "200002"
             }
@@ -3728,6 +3757,7 @@ return {
             pos = {x = 495.2582417582415, y = 648.543956043956},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_QuestTrigger_1180130"
             }
@@ -3800,6 +3830,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = true,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",

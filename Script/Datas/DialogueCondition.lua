@@ -11,12 +11,18 @@ T.RT_5 = {TalkTriggerId = 500080}
 T.RT_6 = {
   ImprComp = T.RT_5
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("DialogueCondition", {
   [51007572] = T.RT_6,
   [51007574] = T.RT_6,
+  [51155701] = {
+    QuestChainFinish = {QuestChainId = 200315}
+  },
   [800305081] = {
     IsBoy = T.RT_4
   },

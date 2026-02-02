@@ -375,10 +375,12 @@ function Component:DispatchSelectClick(Id)
   local FloorId = DataMgr.DispatchUI[UIId].FloorId
   self:OnFloorBtnClicked(FloorId, true)
   local Select = self.DispatchSelect[Id]
-  Select.Slot:SetZOrder(10)
-  Select:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  Select.IsPlay = false
-  Select:PlayAnimation(Select.Click)
+  if Select then
+    Select.Slot:SetZOrder(10)
+    Select:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    Select.IsPlay = false
+    Select:PlayAnimation(Select.Click)
+  end
 end
 
 function Component:RefreshDispatchSelect()
@@ -435,6 +437,7 @@ function Component:OnDispatchTrace(Dispatch)
   if TrackingId ~= self.CurTrackDispatchId then
     self:CancelCurrentTracking()
     EventManager:FireEvent(EventID.OnCommonTrack, CommonConst.RegionMapTrackingType.MiniDispatchPoint, self.CurTrackDispatchId, true)
+    self:TryToastNotInSameRegion()
   else
     EventManager:FireEvent(EventID.OnCommonTrack, CommonConst.RegionMapTrackingType.MiniDispatchPoint, self.CurTrackDispatchId, false)
   end

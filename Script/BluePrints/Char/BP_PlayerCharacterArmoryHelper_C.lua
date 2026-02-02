@@ -20,10 +20,6 @@ function M:ClearPPSetting()
   self.Camera.PostProcessSettings.WeightedBlendables.Array:Clear()
 end
 
-function M:ReceiveEndPlay()
-  self.ArmoryLocation = nil
-end
-
 function M:SetCameraStartTrans(StartTransform, FOV, Player)
   local CameraMgr = UGameplayStatics.GetPlayerCameraManager(self, 0)
   self.RecoverEndTransform = FTransform()
@@ -34,6 +30,7 @@ function M:SetCameraStartTrans(StartTransform, FOV, Player)
   if not self.OriginalFOV then
     self.OriginalFOV = CameraMgr:GetFOVAngle()
   end
+  self:SetFOV(self.OriginalFOV)
   if Player and self.Player ~= Player and Player.Mesh then
     self.OriginalRootTrans = Player.Mesh:K2_GetComponentToWorld()
   end
@@ -45,8 +42,9 @@ function M:SetCameraStartTrans(StartTransform, FOV, Player)
   self:CalcCircle()
   self.Camera:K2_SetWorldTransform(StartTransform, false, nil, false)
   self:OnCameraRotated()
-  local CurRot = self.Player:K2_GetActorRotation()
-  self.OriginalRotation = FRotator(CurRot.Pitch, CurRot.Yaw, CurRot.Roll)
+  self:OnCameraZoom()
+  local CurRot = self.Player and self.Player:K2_GetActorRotation() or self.EndRot
+  self:SetOriginalRotation(CurRot)
   self:SetTickableWhenPaused(true)
 end
 
@@ -194,6 +192,7 @@ function M:Move(CompleteFunc, Ease)
     end
     self.Camera:K2_SetWorldLocationAndRotation(temp, lerpRot, false, nil, false)
     self:OnCameraRotated()
+    self:OnCameraZoom()
   end
   
   if self.Duration <= 0 then
@@ -323,9 +322,21 @@ function M:OnScrolling(DeltaScroll)
     self.ScrollDirection = 0
   end
   self.LTweenHandle_Scroll = ULTweenBPLibrary.WorldPositionTo(self.Camera, EndValue, self.ScrollAnimDuration, 0, self.ScrollEase)
+  if self.LTweenHandle_Scroll then
+    self.LTweenHandle_Scroll:OnUpdate({
+      self,
+      self.OnCameraScrolled
+    })
+  end
   local LTweenActor = UE4.ALTweenActor.GetLTweenInstance(self.LTweenHandle_Scroll)
   if LTweenActor then
     LTweenActor:SetTickableWhenPaused(true)
+  end
+end
+
+function M:OnCameraScrolled(InProgress)
+  if self.OnCameraZoom then
+    self:OnCameraZoom()
   end
 end
 
@@ -405,6 +416,9 @@ end
 
 function M:StartFOVAnim(EndFOV, Duration, Ease, CompleteFunc)
   local CameraMgr = UGameplayStatics.GetPlayerCameraManager(self, 0)
+  if not CameraMgr then
+    return
+  end
   self.StartFOV = CameraMgr:GetFOVAngle()
   self.EndFOV = EndFOV
   if IsValid(self.LTweenHandle_FOV) then
@@ -414,6 +428,7 @@ function M:StartFOVAnim(EndFOV, Duration, Ease, CompleteFunc)
     self,
     function(_, value)
       local fov = UE4.UKismetMathLibrary.Lerp(self.StartFOV, self.EndFOV, value)
+      self:SetFOV(fov)
       self.Camera:SetFieldOfView(fov)
     end
   }, 0, 1, Duration or 0, 0, Ease or 14)
@@ -426,9 +441,22 @@ function M:StartFOVAnim(EndFOV, Duration, Ease, CompleteFunc)
   end
 end
 
+function M:SetFOV(FOV)
+  self.Camera:SetFieldOfView(FOV)
+end
+
+function M:SetPreviewLevelActor(PreviewLevelActor)
+  rawset(self, "PreviewLevelActor", PreviewLevelActor)
+end
+
+function M:GetPreviewLevelActor()
+  return rawget(self, "PreviewLevelActor")
+end
+
 function M:StartPreviewBGAnimation(TargetLoc, Duration)
-  if _G.UIPreviewPreviewLevel then
-    local BGActor = _G.UIPreviewPreviewLevel:GetBGActor()
+  local PreviewLevelActor = self:GetPreviewLevelActor()
+  if PreviewLevelActor and PreviewLevelActor.GetBGActor then
+    local BGActor = PreviewLevelActor:GetBGActor()
     if BGActor then
       local StartLoc = FVector(0, 0, 0)
       self.LTweenHandle_BGAnim = UE4.ULTweenBPLibrary.FloatTo(self, {
@@ -546,7 +574,9 @@ function M:TransformWeaponCamera()
   end
 end
 
-function M:ReceiveEndPlay()
+function M:ReceiveEndPlay(...)
+  self.Overridden.ReceiveEndPlay(self, ...)
+  self.ArmoryLocation = nil
   self:DestroyViewActorIfNeed()
 end
 
@@ -560,7 +590,35 @@ function M:BindViewTargetEvents(Events, Obj)
   Events = Events or {}
   self._OnEndViewTarget = Events.OnEndViewTarget
   self._OnBecomeViewTarget = Events.OnBecomeViewTarget
+  self._OnAfterEndViewTarget = Events.OnAfterEndViewTarget
   self.ViewTargetEventObj = Obj
+end
+
+function M:ViewTarget()
+  local Controller = UE4.UGameplayStatics.GetPlayerController(self, 0)
+  if not Controller then
+    return
+  end
+  if Controller.PlayerCameraManager and not rawget(self, "bOnSetNewViewTargetBound") then
+    rawset(self, "bOnSetNewViewTargetBound", true)
+    Controller.PlayerCameraManager.OnSetNewViewTarget:Add(self, self.OnCameraManagerSetNewViewTarget)
+  end
+  Controller:SetViewTargetWithBlend(self, 0, UE4.EViewTargetBlendFunction.VTBlend_Linear, 0, false)
+end
+
+function M:OnCameraManagerSetNewViewTarget(NewTarget)
+  if NewTarget ~= self and self._OnAfterEndViewTarget then
+    self._OnAfterEndViewTarget(self.ViewTargetEventObj, NewTarget)
+  end
+end
+
+function M:DestroySelf()
+  local Controller = UE4.UGameplayStatics.GetPlayerController(self, 0)
+  if Controller then
+    Controller.PlayerCameraManager.OnSetNewViewTarget:Remove(self, self.OnCameraManagerSetNewViewTarget)
+  end
+  self:K2_DestroyActor()
+  DebugPrint("CY@ Armory Helper Destroyed")
 end
 
 function M:K2_OnEndViewTarget(PC)
@@ -576,8 +634,8 @@ function M:K2_OnBecomeViewTarget(PC)
 end
 
 function M:GetActorToRotate()
-  if _G.UIPreviewPreviewLevel then
-    return _G.UIPreviewPreviewLevel:GetGroundActor()
+  if self:GetPreviewLevelActor() then
+    return self:GetPreviewLevelActor():GetGroundActor()
   end
 end
 

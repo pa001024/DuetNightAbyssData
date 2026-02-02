@@ -100,6 +100,22 @@ function WBP_Bag_Sell_View_C:OnUpdateBagItemByAction(OpAction, ErrCode, ...)
         AllRewards[ItemKeys][CoinId] = Price
         bIsNotShowGetItemPage = bIsNotShowGetItemPage and false
       end
+    elseif "DraftBulkSale" == OpAction then
+      local SaleDraftsSucc = (...)
+      AllRewards[ItemKeys] = {}
+      bIsNotShowGetItemPage = false
+      for k, v in pairs(SaleDraftsSucc) do
+        local StuffUnitId = tostring(k)
+        local SellDraftObj = self.NeedDealWithStuffData[StuffUnitId]
+        if SellDraftObj then
+          local NowSaleStuffCount = self.NeedDealWithStuffCount[StuffUnitId]
+          if AllRewards[ItemKeys][SellDraftObj.CoinId] then
+            AllRewards[ItemKeys][SellDraftObj.CoinId] = AllRewards[ItemKeys][SellDraftObj.CoinId] + SellDraftObj.Price * NowSaleStuffCount
+          else
+            AllRewards[ItemKeys][SellDraftObj.CoinId] = SellDraftObj.Price * NowSaleStuffCount
+          end
+        end
+      end
     end
     if not bIsNotShowGetItemPage then
       self:ShowGetItemPage(AllRewards)
@@ -561,6 +577,13 @@ function WBP_Bag_Sell_View_C:TryToSaleStuff()
         StuffDataDict.StuffCount = self.NeedDealWithStuffCount[ModItemUuid]
         table.insert(CommonDialogParams.StuffInfoList, StuffDataDict)
       end
+    elseif ItemData.StuffType == BagCommon.StuffType.Draft then
+      StuffServerData = PlayerAvatar.Drafts[ItemData.UnitId]
+      if nil ~= StuffServerData then
+        local StuffDataDict = StuffIconObject:GetDraftsStuffData(StuffServerData, self)
+        StuffDataDict.StuffCount = self.NeedDealWithStuffCount[ItemUuid]
+        table.insert(CommonDialogParams.StuffInfoList, StuffDataDict)
+      end
     else
       StuffServerData = PlayerAvatar.Resources[ItemData.UnitId]
       if nil ~= StuffServerData then
@@ -577,7 +600,9 @@ function WBP_Bag_Sell_View_C:TryToSaleStuff()
       end
     end
   end
+  local bIsNeedCheckLimitType = false
   if self.ParentWidget and self.ParentWidget.CurTabId == BagCommon.ItemTypeToTabId.Mod then
+    bIsNeedCheckLimitType = true
     CommonDialogParams.LeftText = GText("UI_Bag_ModExtract_Ready")
     CommonDialogParams.RightText = GText("UI_Bag_ModExtract_Get")
     local LimitedCoinNum, CurCoinNumDaily = self:GetCoin3DataInfo()
@@ -596,7 +621,7 @@ function WBP_Bag_Sell_View_C:TryToSaleStuff()
   for k, v in pairs(self.AllTypeCoinInfo) do
     if v > 0 then
       local ValueCount = 0
-      if k == CommonConst.Coins.Coin3 then
+      if k == CommonConst.Coins.Coin3 and bIsNeedCheckLimitType then
         local LimitedCoinNum, CurCoinNumDaily = self:GetCoin3DataInfo()
         if LimitedCoinNum < CurCoinNumDaily + v and not CommonDialogParams.IsShowEmptyText then
           bIsNeedShowTips = true
@@ -1257,10 +1282,11 @@ end
 function WBP_Bag_Sell_View_C:UpdateItemNumFromList(StuffContent, DeltaNum)
   local StuffCoinId = StuffContent.CoinId
   if self.AllTypeCoinInfo[StuffCoinId] ~= nil and DeltaNum > 0 then
+    local CanSaleNum = math.min(StuffContent.AddNum, StuffContent.Count - self.NeedDealWithStuffCount[StuffContent.Uuid])
     if self.NeedDealWithStuffData[StuffContent.Uuid].Price then
-      self.AllTypeCoinInfo[StuffCoinId] = self.AllTypeCoinInfo[StuffCoinId] + StuffContent.AddNum * self.NeedDealWithStuffData[StuffContent.Uuid].Price
+      self.AllTypeCoinInfo[StuffCoinId] = self.AllTypeCoinInfo[StuffCoinId] + CanSaleNum * self.NeedDealWithStuffData[StuffContent.Uuid].Price
     else
-      self.AllTypeCoinInfo[StuffCoinId] = self.AllTypeCoinInfo[StuffCoinId] + StuffContent.AddNum * StuffContent.Price
+      self.AllTypeCoinInfo[StuffCoinId] = self.AllTypeCoinInfo[StuffCoinId] + CanSaleNum * StuffContent.Price
     end
   end
   local SaleNum = StuffContent.StateTagInfo.ExtraData[1]

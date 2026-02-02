@@ -32,11 +32,13 @@ function WBP_Battle_Fort_Base_C:OnLoaded(...)
     Buff = 1,
     Char_Skill = 1,
     Team = 1,
-    Chat_Entry = 1
+    Chat_Entry = 1,
+    HBox = 1,
+    SizeBox_Map = 1
   }
   self.FortEid = (...)
   self:InitInfo()
-  self:CreateFortBackKey()
+  self:CreateFortBackEntry()
   self:InitAim()
   self:InitSkillItem()
   self:InitBloodBar()
@@ -292,12 +294,12 @@ function WBP_Battle_Fort_Base_C:TryToPlayAimDiffusionStartAnim()
   end
 end
 
-function WBP_Battle_Fort_Base_C:CreateFortBackKey()
+function WBP_Battle_Fort_Base_C:CreateFortBackEntry()
   local UIBattleMain = UIManager(self.Owner):GetUI("BattleMain")
   if UIBattleMain then
-    local FortBackKey = UIBattleMain:CreateFortBack()
-    if FortBackKey then
-      self:InitFortBackKey(FortBackKey)
+    local FortBackEntry = UIBattleMain:CreateFortBack()
+    if FortBackEntry then
+      self:InitFortBackEntry(FortBackEntry)
     end
   end
 end
@@ -331,6 +333,12 @@ function WBP_Battle_Fort_Base_C:HidePaotaiName(IsHide)
   else
     self.FortBloodBar.Text_Name:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end
+end
+
+function WBP_Battle_Fort_Base_C:InitFortBackEntry(FortBackKey)
+  local IconPath = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Quit.T_Entrance_Quit"
+  FortBackKey:InitInterface(IconPath, "Esc", GText("UI_CTL_Quit"))
+  FortBackKey.Btn_top.OnClicked:Add(self, self.OnPressQuit_ESC)
 end
 
 return WBP_Battle_Fort_Base_C

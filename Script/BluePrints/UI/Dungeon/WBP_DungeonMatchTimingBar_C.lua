@@ -40,8 +40,8 @@ function M:Initialize(Initializer)
   self.Super.Initialize(self)
 end
 
-function M:OnLoaded(DungeonId, EnterState, bIsMatch)
-  DebugPrint("gmy@WBP_DungeonMatchTimingBar_C:OnLoaded ", DungeonId, EnterState, debug.traceback())
+function M:OnLoaded(...)
+  local DungeonId, EnterState, bIsMatch = ...
   self.DungeonId = DungeonId
   local DungeonData = DataMgr.Dungeon[self.DungeonId]
   assert(DungeonData, "副本ID错误" .. tostring(self.DungeonId))
@@ -420,7 +420,6 @@ function M:OnTeamMatchStartEntering()
 end
 
 function M:OnTeamMatchCancel(Ret)
-  DebugPrint("gmy@WBP_DungeonMatchTimingBar_C M:OnTeamMatchCancel", tostring(Ret), debug.traceback())
   if not Ret then
     self:Close()
   elseif Ret == ErrorCode.RET_FAIL then

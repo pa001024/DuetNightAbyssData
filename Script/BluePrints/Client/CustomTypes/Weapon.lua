@@ -454,7 +454,7 @@ function Weapon:OnlineDumpInfo()
   WeaponInfo.WeaponId = self.WeaponId
   WeaponInfo.EnhanceLevel = self.EnhanceLevel
   WeaponInfo.GradeLevel = self.GradeLevel
-  return Weapon
+  return WeaponInfo
 end
 
 function Weapon:DumpAccessory()
@@ -509,6 +509,9 @@ function Weapon:DumpSkillInfos(Avatar, ExtraInfo)
         for SkillId1, SkillId2 in pairs(ModData.ModActivateSkills) do
           if Skills[SkillId1] then
             Skills[SkillId2] = Skills[SkillId1]
+            if ModData.ModLevelAsSkillLevel then
+              Skills[SkillId2].Level = Mod.Level + 1
+            end
             Skills[SkillId1] = nil
           end
         end
@@ -526,6 +529,9 @@ function Weapon:DumpSkillInfos(Avatar, ExtraInfo)
           for SkillId1, SkillId2 in pairs(ModData.ModActivateSkills) do
             if Skills[SkillId1] then
               Skills[SkillId2] = Skills[SkillId1]
+              if ModData.ModLevelAsSkillLevel then
+                Skills[SkillId2].Level = Mod.Level + 1
+              end
               Skills[SkillId1] = nil
             end
           end

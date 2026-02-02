@@ -51,6 +51,7 @@ function M:Init()
   self.WBP_Armory_PetAchive.Pet_Sift:BindEventOnSelectionsChanged(self, self.OnSiftSelectionsChanged)
   self.WBP_Armory_PetAchive.Pet_Sift:BindEventOnAddedToFocusPath(self, self.OnSiftAddedToFocusPath)
   self.WBP_Armory_PetAchive.Pet_Sift:BindEventOnRemovedFromFocusPath(self, self.OnSiftRemovedFromFocusPath)
+  self.WBP_Armory_PetAchive.Pet_Sift.bNotAutoFocus = true
   self.WBP_Armory_PetAchive.Btn_Locked.Button_Area.OnClicked:Add(self, self.LockOrUnlockPet)
   self:InitKeyInfo()
   self:RefreshBaseInfo()
@@ -774,7 +775,18 @@ function M:ReallyDestruct()
 end
 
 function M:ReallyOnFocusReceived(MyGeometry, InFocusEvent)
+  local Sift = self.WBP_Armory_PetAchive and self.WBP_Armory_PetAchive.Pet_Sift
+  if Sift and Sift.IsExistTimer and Sift:IsExistTimer("Common_Sift_AutoFocusTimer") then
+    DebugPrint("Sift已存在自动聚焦定时器")
+    UIUtils.HideNavigateWidgetTemporarily(0.2)
+    self.WBP_Armory_PetAchive.List_Item:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    self:AddTimer(0.2, function()
+      self.WBP_Armory_PetAchive.List_Item:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end)
+    return
+  end
   if not self.WBP_Armory_PetAchive.List_Item:HasAnyUserFocus() and CommonUtils.Size(self.ContentArray) > 0 then
+    DebugPrint("更改聚焦:OnFocusReceived")
     self.WBP_Armory_PetAchive.List_Item:SetFocus()
   end
   return self.M.Super.OnFocusReceived(self, MyGeometry, InFocusEvent)

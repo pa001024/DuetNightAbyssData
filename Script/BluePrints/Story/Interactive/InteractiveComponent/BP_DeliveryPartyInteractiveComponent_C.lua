@@ -1,6 +1,7 @@
 require("UnLua")
 require("DataMgr")
 local BP_DeliveryPartyInteractiveComponent_C = Class("BluePrints.Story.Interactive.InteractiveComponent.BP_InteractiveBaseComponent_C")
+local LuaConst = require("EMLuaConst")
 
 function BP_DeliveryPartyInteractiveComponent_C:ReceiveBeginPlay()
   self.Super.ReceiveBeginPlay(self)
@@ -28,10 +29,11 @@ function BP_DeliveryPartyInteractiveComponent_C:IsCanInteractive(PlayerActor)
   if Controller:GetStoryModeState() then
     return false
   end
-  if self:GetInteractiveName() ~= "" and self.DistanceCheckComponent(self, PlayerActor, self.InteractiveDistance, false) and self.CFaceToACheckComponent(self, PlayerActor, self.InteractiveFaceAngle, false) and self.AFaceToCCheckComponent(PlayerActor, self, self.InteractiveAngle, false) then
-    return true
+  if LuaConst.OpenComputeInteractive then
+    return self:GetInteractiveName() ~= "" and self:GetDistanceCheckResult() and self.CFaceToACheckComponent(self, PlayerActor, self.InteractiveFaceAngle, false) and self.AFaceToCCheckComponent(PlayerActor, self, self.InteractiveAngle, false)
+  else
+    return self:GetInteractiveName() ~= "" and self.DistanceCheckComponent(self, PlayerActor, self.InteractiveDistance, false) and self.CFaceToACheckComponent(self, PlayerActor, self.InteractiveFaceAngle, false) and self.AFaceToCCheckComponent(PlayerActor, self, self.InteractiveAngle, false)
   end
-  return false
 end
 
 function BP_DeliveryPartyInteractiveComponent_C:UpdateDisplayInteractiveBtn(PlayerActor)

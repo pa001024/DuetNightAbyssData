@@ -1,5 +1,7 @@
 require("UnLua")
 local HeroUSDKUtils = require("Utils.HeroUSDKUtils")
+local GiftController = require("BluePrints.UI.WBP.Gift.GiftController")
+local GiftCommon = require("BluePrints.UI.WBP.Gift.GiftCommon")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
@@ -15,14 +17,32 @@ function M:Construct()
   self.Btn_GiftPay:BindForbidStateExecuteEvent(self, self.PurChaseShopItem)
   self.Text_Qa:SetText(GText("UI_GACHA_DESDETAIL"))
   self.Btn_GiftPay.Text_BtnBuy:SetText(GText("UI_SHOP_PURCHASE"))
-  self.Btn_GiftPay.Text_BtnEmpty:SetText(GText("UI_SHOP_SOLDOUT"))
+  if GiftController and GiftController:IsInGiftShop() then
+    self.Btn_GiftPay.Text_BtnEmpty:SetText(GText("UI_SendGift_SendGiftLimit"))
+    self.Text_SoldOut:SetText(GText("UI_SendGift_SendGiftLimit"))
+  else
+    self.Btn_GiftPay.Text_BtnEmpty:SetText(GText("UI_SHOP_SOLDOUT"))
+    self.Text_SoldOut:SetText(GText("UI_SHOP_SOLDOUT"))
+  end
   self.Btn_GiftPay.Img_GamePad:CreateCommonKey({
     KeyInfoList = {
       {Type = "Img", ImgShortPath = "A"}
     }
   })
+  self.Btn_Choose:UnBindEventOnClickedByObj(self)
+  self.Btn_Choose:BindEventOnClicked(self, self.OnBtnChooseGiftClicked)
+  self.Btn_Choose:BindForbidStateExecuteEvent(self, self.OnBtnChooseGiftClicked)
+  self.Btn_Choose:OverriddenSoundFunc()
+  self.Com_Hint:UnBindEventOnClickedByObj(self)
+  self.Com_Hint:BindEventOnClicked(self, function()
+    ShopUtils:OpenLockConditionPopup(self.ShopItemData)
+  end)
   self.Text_Tip:SetText(GText("UI_TRAIN_CLOSE"))
-  self.Text_BuyLeftTitle:SetText(GText("UI_SHOP_SHOPITEMLIMIT"))
+  if GiftController:IsInGiftShop() then
+    self.Text_BuyLeftTitle:SetText(GText("UI_SendGift_GiftItemMax"))
+  else
+    self.Text_BuyLeftTitle:SetText(GText("UI_SHOP_SHOPITEMLIMIT"))
+  end
   self:InitGamePadKeyInfo()
   self.List_Item.OnCreateEmptyContent:Bind(self, function(self)
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
@@ -41,10 +61,11 @@ end
 function M:OnLoaded(...)
   M.Super.OnLoaded(self)
   self.ShopItemData, self.ParentWidget, self.CloseCallback = ...
+  self.bInGiftShop = GiftController:IsInGiftShop()
   self.CurrentCount = 1
   self.UnitPrice = ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId)
   self:SetFocus()
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   local Icon = ItemUtils.GetItemIcon(self.ShopItemData.TypeId, self.ShopItemData.ItemType)
   if Icon then
     self.Image_Icon:SetBrushFromTexture(Icon)
@@ -96,11 +117,14 @@ function M:OnLoaded(...)
     end
   end
   self.List_Item:RequestFillEmptyContent()
-  local PurchaseLimit = ShopUtils:GetShopItemPurchaseLimit(self.ShopItemData.ItemId)
-  local TotalPurchaseLimit = self.ShopItemData.PurchaseLimit
-  self.Text_BuyLeftTimes:SetText(PurchaseLimit .. "/" .. TotalPurchaseLimit)
+  local LimitText = ShopUtils:GetUnifiedLimitText(self.ShopItemData.ItemId)
+  self.Text_BuyLeftTimes:SetText(LimitText)
   local Cost = ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId)
-  self.Btn_GiftPay.Text_BtnBuy:SetText(GText("UI_SHOP_PURCHASE"))
+  if self.bInGiftShop then
+    self.Btn_GiftPay.Text_BtnBuy:SetText(GText("UI_SendGift_Send"))
+  else
+    self.Btn_GiftPay.Text_BtnBuy:SetText(GText("UI_SHOP_PURCHASE"))
+  end
   if DataMgr.ShopItem2PayGoods[self.ShopItemData.ItemId] then
     self.Btn_GiftPay.WS_Detail:SetActiveWidgetIndex(0)
     self.Btn_GiftPay.Text_PriceMoneySymbol:SetText(GText(ShopUtils:GetCurrencyType()))
@@ -118,23 +142,35 @@ function M:OnLoaded(...)
     })
     self.Btn_GiftPay.Text_Price:SetText(Cost)
   end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  self.WS_Btn:SetActiveWidgetIndex(0)
   self.Btn_GiftPay:ForbidBtn(false)
-  if ShopUtils:CanPurchase(self.ShopItemData, self.ShopItemData.PriceType, ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId)) then
-    self.Btn_GiftPay:ForbidBtn(false)
-    self.bForbiddenPurchase = false
-  elseif 1 == self.ShopItemData.PurchaseFailRes then
-    self.Btn_GiftPay:ForbidBtn(true)
-    self.bForbiddenPurchase = true
+  self.IsLockState = ShopUtils:CheckShopItemCondition(self.ShopItemData)
+  if self.IsLockState then
+    self:UpdateLockCondition()
   else
-    self.Btn_GiftPay:DisableBtn(true)
-    self.bForbiddenPurchase = true
+    self.WS_Btn:SetActiveWidgetIndex(0)
+    local canPurchase = ShopUtils:CanPurchase(self.ShopItemData, self.ShopItemData.PriceType, ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId))
+    local shouldSoldOut = self.bInGiftShop and ShopUtils:ShouldPlaySoldOutAnimation(self.ShopItemData.ItemId)
+    if canPurchase and not shouldSoldOut then
+      self.Btn_GiftPay:ForbidBtn(false)
+      self.bForbiddenPurchase = false
+    else
+      local forbid = 1 == self.ShopItemData.PurchaseFailRes or self.bInGiftShop or shouldSoldOut
+      if forbid then
+        self.Btn_GiftPay:ForbidBtn(true)
+        self.bForbiddenPurchase = true
+      else
+        self.Btn_GiftPay:DisableBtn(true)
+        self.bForbiddenPurchase = true
+      end
+    end
   end
   self.Btn_GiftPay.Text_Price:SetColorAndOpacity(UE4.UUIFunctionLibrary.StringToSlateColor("FFFFFF"))
   if not DataMgr.ShopItem2PayGoods[self.ShopItemData.ItemId] then
-    local Avatar = GWorld:GetAvatar()
-    if not Avatar then
-      return
-    end
     local HasCount = Avatar.Resources[self.ShopItemData.PriceType] and Avatar.Resources[self.ShopItemData.PriceType].Count or 0
     local NeedCount = ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId)
     if HasCount < NeedCount then
@@ -172,11 +208,26 @@ function M:OnLoaded(...)
     self.Btn_Qa:SetVisibility(ESlateVisibility.Collapsed)
     self.Text_Qa:SetVisibility(ESlateVisibility.Collapsed)
   end
-  if self.ShopItemData.ShowBonus then
+  if ShopUtils:ShouldShowDiscount(self.ShopItemData.ItemId, self.ShopItemData) then
     self.Group_More:SetVisibility(ESlateVisibility.Visible)
     self.Text_MoreNum:SetText("+" .. self.ShopItemData.ShowBonus)
   else
     self.Group_More:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  if self.bInGiftShop then
+    self.BtnChooseGiftEnable = false
+    self.Group_BtnChoose:SetVisibility(ESlateVisibility.Collapsed)
+  elseif self.ShopItemData.CanBeGift and ShopUtils:ShowSendGiftButton(self.ShopItemData) then
+    self.BtnChooseGiftEnable = true
+    self.Group_BtnChoose:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    if GiftController:CheckCanSendGift() then
+      self.Btn_Choose:ForbidBtn(false)
+    else
+      self.Btn_Choose:ForbidBtn(true)
+    end
+  else
+    self.BtnChooseGiftEnable = false
+    self.Group_BtnChoose:SetVisibility(ESlateVisibility.Collapsed)
   end
   local TopResource = {
     self.ShopItemData.PriceType
@@ -186,10 +237,10 @@ function M:OnLoaded(...)
     OnMenuOpenChanged = self.OnDescOpenChanged
   })
   self:UpdateGamePadKeyInfo()
-  if PurchaseLimit > 0 then
-    self:PlayAnimation(self.In)
-  else
+  if ShopUtils:ShouldPlaySoldOutAnimation(self.ShopItemData.ItemId) then
     self:PlayAnimation(self.In_SoldOut)
+  else
+    self:PlayAnimation(self.In)
   end
   AudioManager(self):PlayUISound(self, "event:/ui/common/gift_pack_info_show", "GiftPopupIn", nil)
 end
@@ -212,8 +263,8 @@ function M:OnBtnDetailClick()
 end
 
 function M:UpdateRefreshTime(RefreshTime)
-  ShopUtils:RefreshShopRefreshTime(RefreshTime, self.Text_RefreshTime)
-  self:AddTimer(1, ShopUtils.RefreshShopRefreshTime, true, 0, "RefreshTimeTimer", true, RefreshTime, self.Text_RefreshTime)
+  ShopUtils:RefreshShopRefreshTime(RefreshTime, self.Text_RefreshTime, self.ShopItemData.ItemId)
+  self:AddTimer(1, ShopUtils.RefreshShopRefreshTime, true, 0, "RefreshTimeTimer", true, RefreshTime, self.Text_RefreshTime, self.ShopItemData.ItemId)
 end
 
 function M:UpdateCutOffTime(CutoffTime)
@@ -237,8 +288,40 @@ function M:UpdateLimitTime(ItemEndTime)
   self.Text_Time:SetText(string.format(GText("UI_SHOP_REMAINTIME"), RemainTimeStr))
 end
 
+function M:UpdateLockCondition()
+  self.WS_Btn:SetActiveWidgetIndex(1)
+  self.ConditionDisplay = self.ShopItemData.ItemConditionDisplay and self.ShopItemData.ItemCondition
+  if self.ConditionDisplay then
+    self.Com_Hint.IsForbidden = true
+    self.Com_Hint:SetText(GText(DataMgr.Condition[self.ShopItemData.ItemCondition[1]] and DataMgr.Condition[self.ShopItemData.ItemCondition[1]].ConditionText or ""))
+    self.Com_Hint.bAutoButtonChange = false
+    self.Com_Hint:SetIconPanelVisibility(ESlateVisibility.Collapsed)
+    self.Com_Hint:SetGamepadIconVisibility(false)
+    self.Com_Hint:SetGamePadVisibility(ESlateVisibility.Collapsed)
+    self.Com_Hint.Button_Area:SetIsEnabled(false)
+  else
+    self.Com_Hint.IsForbidden = false
+    self.Com_Hint:SetText(GText("UI_Shop_ItemUnlock"))
+    self.Com_Hint.bAutoButtonChange = true
+    self.Com_Hint:SetIconPanelVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Com_Hint:SetGamepadIconVisibility(true)
+    self.Com_Hint.Button_Area:SetIsEnabled(true)
+  end
+end
+
 function M:PurChaseShopItem()
   if self:IsAnimationPlaying(self.Out) then
+    return
+  end
+  if self.bInGiftShop then
+    local giftMain = UIManager(self):GetUIObj(GiftCommon.GiftShopViewName)
+    local OtherUid = giftMain and giftMain.FriendUid or nil
+    if OtherUid then
+      GiftController:TryToSendGift(OtherUid, self.ShopItemData.ItemId)
+    else
+      ScreenPrint("没有选择好友，请在送礼商店选完好友在点击")
+    end
+    self:CloseSelf(true)
     return
   end
   ShopUtils:CanPurchase(self.ShopItemData, self.ShopItemData.PriceType, ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId))
@@ -361,26 +444,32 @@ function M:Purchase(ShopItemData, ParentWidget)
       }
       UIManager(self):ShowCommonPopupUI(PopUpId, Params)
     elseif 5 == ShopItemData.PurchaseFailRes then
-      local function JumpToShop()
-        PageJumpUtils:JumpToShopPage(CommonConst.GachaJumpToShopMainTabId, nil, nil, "Shop")
-        
-        self:CloseSelf(true)
-      end
-      
-      local PopupId
-      if ShopItemData.PriceType == CommonConst.Coins.Coin1 then
-        PopupId = 100137
-      elseif ShopItemData.PriceType == CommonConst.Coins.Coin4 then
-        PopupId = 100263
-      end
-      if not PopupId then
+      local Avatar = GWorld:GetAvatar()
+      if not Avatar then
         return
       end
+      local PopupId = 100290
+      local CachedShopItemData = self.ShopItemData
+      local CachedParentWidget = self.ParentWidget
+      local CachedCloseCallback = self.CloseCallback
+      local IsYellow = 1 == self.ShopItemData.Bg
+      
+      local function ReOpenGiftPopup()
+        local UIName = IsYellow and "PayGiftPopup_Yellow" or "PayGiftPopup_Purple"
+        UIManager(GWorld.GameInstance):LoadUINew(UIName, CachedShopItemData, CachedParentWidget, CachedCloseCallback)
+      end
+      
+      ShopUtils:SetCloseGetItemPageCallback({CloseGetItemPageCallback = ReOpenGiftPopup})
       local Params = {}
-      Params.LeftCallbackObj = self
-      Params.RightCallbackObj = self
-      Params.RightCallbackFunction = JumpToShop
-      UIManager(self):ShowCommonPopupUI(PopupId, Params, self)
+      Params.ShopItemId = self.ShopItemData.ItemId
+      Params.Uid = Avatar.Uid
+      
+      function Params.CloseBtnCallbackFunction(Obj, PackageData)
+        ShopUtils:SetCloseGetItemPageCallback({CloseGetItemPageCallback = nil})
+      end
+      
+      self.PopupUI = UIManager(self):ShowCommonPopupUI(PopupId, Params, self)
+      self:CloseSelf(true)
     end
     return
   end
@@ -401,6 +490,18 @@ function M:Purchase(ShopItemData, ParentWidget)
   end
   Avatar:PurchaseShopItem(ShopItemData.ItemId, 1)
   self:CloseSelf(true)
+end
+
+function M:OnBtnChooseGiftClicked()
+  if self.BtnChooseGiftEnable then
+    if self.Btn_Choose:IsBtnForbidden() then
+      ShopUtils:OpenForbidGiftChooseTip()
+    else
+      ShopUtils:OpenChooseGiftTarget(self.ShopItemData.ItemId)
+      self:CloseSelf(true)
+    end
+  else
+  end
 end
 
 function M:CloseSelf(bForce)
@@ -485,6 +586,20 @@ function M:InitGamePadKeyInfo()
   }
   self.Key_Qa:CreateCommonKey(Key_Qa_Params)
   self.Key_Qa:SetVisibility(ESlateVisibility.Collapsed)
+  local Key_BtnChoose_Params = {
+    KeyInfoList = {
+      {
+        Type = "Img",
+        ImgShortPath = DataMgr.KeyboardText[UIConst.GamePadKey.FaceButtonTop].KeyText
+      }
+    }
+  }
+  if self.Key_BtnChoose then
+    self.Key_BtnChoose:CreateCommonKey(Key_BtnChoose_Params)
+  end
+  if self.Gift_GamePad then
+    self.Gift_GamePad:SetVisibility(ESlateVisibility.Collapsed)
+  end
   self.Com_Tab_ResourceBar:SetGamePadKeyImgByPath(UIUtils.UtilsGetKeyIconPathInGamepad(DataMgr.KeyboardText[UIConst.GamePadKey.RightThumb].KeyText))
   self.Com_Tab_ResourceBar:SetLastFocusWidget(self)
   self:UpdateGamePadKeyInfo()
@@ -511,36 +626,54 @@ end
 
 function M:UpdateGamePadKeyInfo()
   self.Btn_GiftPay:RefreshIconAndGamePadVisibility()
+  self.Com_Hint:RefreshIconAndGamePadVisibility()
   if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
     self.Text_Tip:SetVisibility(ESlateVisibility.Collapsed)
     self.Panel_Key:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     if self.FocusOnSubItem and not self.bItemTipsOpen and not self.bTipOpen then
       self.Btn_GiftPay:SetGamePadVisibility(ESlateVisibility.Collapsed)
+      self.Com_Hint:SetGamePadVisibility(ESlateVisibility.Collapsed)
       self.Key_Qa:SetVisibility(ESlateVisibility.Collapsed)
       self.GamePadKeyCheck:SetVisibility(ESlateVisibility.Collapsed)
       self.GamePadKeyA:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
       self.GamePadKeyB:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      if self.Gift_GamePad then
+        self.Gift_GamePad:SetVisibility(ESlateVisibility.Collapsed)
+      end
     elseif self.bItemTipsOpen or self.bTipOpen then
       if self.bItemTipsOpen then
         self.Key_Qa:SetVisibility(ESlateVisibility.Collapsed)
       end
       self.Btn_GiftPay:SetGamePadVisibility(ESlateVisibility.Collapsed)
+      self.Com_Hint:SetGamePadVisibility(ESlateVisibility.Collapsed)
       self.GamePadKeyCheck:SetVisibility(ESlateVisibility.Collapsed)
       self.GamePadKeyA:SetVisibility(ESlateVisibility.Collapsed)
       self.GamePadKeyB:SetVisibility(ESlateVisibility.Collapsed)
+      if self.Gift_GamePad then
+        self.Gift_GamePad:SetVisibility(ESlateVisibility.Collapsed)
+      end
     else
       if self.ShopItemData and self.ShopItemData.ItemDes then
         self.Key_Qa:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
       end
       self.Btn_GiftPay:SetGamePadVisibility(ESlateVisibility.SelfHitTestInvisible)
+      if not self.ConditionDisplay then
+        self.Com_Hint:SetGamePadVisibility(ESlateVisibility.SelfHitTestInvisible)
+      end
       self.GamePadKeyCheck:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
       self.GamePadKeyA:SetVisibility(ESlateVisibility.Collapsed)
       self.GamePadKeyB:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      if self.BtnChooseGiftEnable and self.Gift_GamePad then
+        self.Gift_GamePad:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      end
     end
   else
     self.Key_Qa:SetVisibility(ESlateVisibility.Collapsed)
     self.Text_Tip:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Panel_Key:SetVisibility(ESlateVisibility.Collapsed)
+    if self.Gift_GamePad then
+      self.Gift_GamePad:SetVisibility(ESlateVisibility.Collapsed)
+    end
   end
 end
 
@@ -584,7 +717,16 @@ function M:OnGamePadDown(InKeyName)
       return false
     end
     AudioManager(self):PlayUISound(self.Btn_GiftPay, "event:/ui/activity/shop_small_btn_click", nil, nil)
-    self:PurChaseShopItem()
+    if self.IsLockState then
+      if self.ShopItemData.ItemCondition and not self.ShopItemData.ItemConditionDisplay then
+        ShopUtils:OpenLockConditionPopup(self.ShopItemData)
+      end
+    else
+      self:PurChaseShopItem()
+    end
+  elseif InKeyName == UIConst.GamePadKey.FaceButtonTop and self.BtnChooseGiftEnable and not self.FocusOnSubItem and not self.bTipOpen and not self.bItemTipsOpen then
+    IsEventHandled = true
+    self:OnBtnChooseGiftClicked()
   end
   self:UpdateGamePadKeyInfo()
   return IsEventHandled

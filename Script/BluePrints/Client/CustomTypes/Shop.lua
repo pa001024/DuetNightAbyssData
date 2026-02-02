@@ -38,6 +38,9 @@ function ShopItem:Init(ItemId)
   if not ItemId then
     return
   end
+  if not DataMgr.ShopItem[ItemId] then
+    return
+  end
   self.ItemId = ItemId
   local PurchaseLimit = DataMgr.ShopItem[ItemId].PurchaseLimit
   if nil ~= PurchaseLimit then
@@ -51,7 +54,8 @@ function ShopItem:Data()
 end
 
 function ShopItem:SetRefreshTime(ItemId)
-  local RefreshTime = DataMgr.ShopItem[ItemId].RefreshTime
+  local ShopItemInfo = DataMgr.ShopItem[ItemId]
+  local RefreshTime = ShopItemInfo.RefreshTime
   local RefreshTimeType = ShopItemRefreshTimeType.NOREFRESH
   if RefreshTime then
     for key, value in pairs(RefreshTime) do
@@ -60,8 +64,16 @@ function ShopItem:SetRefreshTime(ItemId)
       end
     end
   end
-  local StartTime = TimeUtils.DataToTimestamp(CommonConst.ShopRefreshBeginTime[1], CommonConst.ShopRefreshBeginTime[2], CommonConst.ShopRefreshBeginTime[3], CommonConst.ShopRefreshBeginTime[4], CommonConst.ShopRefreshBeginTime[5], CommonConst.ShopRefreshBeginTime[6])
-  if RefreshTimeType == ShopItemRefreshTimeType.HOUR or RefreshTimeType == ShopItemRefreshTimeType.DAY then
+  local StartTime
+  if ShopItemInfo.NewRefreshBeginTime then
+    StartTime = TimeUtils.EastEightToLocalTimestamp(ShopItemInfo.NewRefreshBeginTime)
+  else
+    StartTime = TimeUtils.DataToTimestamp(CommonConst.ShopRefreshBeginTime[1], CommonConst.ShopRefreshBeginTime[2], CommonConst.ShopRefreshBeginTime[3], CommonConst.ShopRefreshBeginTime[4], CommonConst.ShopRefreshBeginTime[5], CommonConst.ShopRefreshBeginTime[6])
+  end
+  if RefreshTimeType == ShopItemRefreshTimeType.HOUR then
+    local year, month, day, hour, min, sec = TimeUtils.TimestampToData(StartTime)
+    self.LastRefreshTime = TimeUtils.DataToTimestamp(year, month, day, hour, 0, 0)
+  elseif RefreshTimeType == ShopItemRefreshTimeType.DAY then
     local year, month, day, hour, min, sec = TimeUtils.TimestampToData(StartTime)
     local refresh_hms = CommonConst.GAME_REFRESH_HMS
     self.LastRefreshTime = TimeUtils.DataToTimestamp(year, month, day, table.unpack(refresh_hms))

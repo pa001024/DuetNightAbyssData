@@ -11,6 +11,7 @@ WBP_GameStartMainPage_C._components = {
   "BluePrints.UI.WBP.Announcement.View.WBP_LoginMainComponent_Announcement"
 }
 local RightBottomBtnName = {
+  "Log",
   "Fix",
   "Set",
   "Support",
@@ -122,6 +123,7 @@ function WBP_GameStartMainPage_C:Construct()
   self.Btn_Close:BindEventOnClicked(self, self.ExitGame)
   self.Btn_Back:BindEventOnClicked(self, self.SwitchAccount)
   self.Btn_Fix:BindEventOnClicked(self, self.RepairGame)
+  self.Btn_Log:BindEventOnClicked(self, self.OpenLogDialog)
   self.Btn_Set:BindEventOnClicked(self, self.OnClickSet)
   self.Btn_Set:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   local RemainTimeDict, TimeCount = UIUtils.GetLeftTimeStrStyle2(TimeUtils.NowTime())
@@ -369,11 +371,13 @@ function WBP_GameStartMainPage_C:BindDelegates()
   self.Btn_Close:Construct()
   self.Btn_Back:Construct()
   self.Btn_Fix:Construct()
+  self.Btn_Log:Construct()
   self.Btn_Set:Construct()
   self.Btn_Support:Construct()
   self.Btn_Close:BindEventOnClicked(self, self.ExitGame)
   self.Btn_Back:BindEventOnClicked(self, self.SwitchAccount)
   self.Btn_Fix:BindEventOnClicked(self, self.RepairGame)
+  self.Btn_Log:BindEventOnClicked(self, self.OpenLogDialog)
   self.Btn_Set:BindEventOnClicked(self, self.OnClickSet)
   self.Btn_Support:BindEventOnClicked(self, self.OnClickSupport)
   self.Btn_ChangeOverSeaSever.OnClicked:Add(self, self.OnClickServerSelect)
@@ -587,12 +591,30 @@ function WBP_GameStartMainPage_C:OnCompilePSODelegateStart(NumPrecompilesRemaini
   self.Progress_Download:SetVisibility(ESlateVisibility.Visible)
   self.Progress_Download:SetPercent(NumPrecompilesComplete / (NumPrecompilesRemaining + NumPrecompilesComplete))
   self.Text_CheckPatch:SetText(string.format(GText("UI_Login_Shader"), string.format("%.1f", NumPrecompilesComplete / (NumPrecompilesRemaining + NumPrecompilesComplete) * 100)))
+  local CompiledPSONum = EMCache:Get("CompiledPSONum") or -100
+  if CompiledPSONum >= 0 then
+    EMCache:Set("LastCompiledPSONum", CompiledPSONum)
+    EMCache:Set("CompiledPSONum", nil)
+  end
+  self:SaveCompiledPSONum(NumPrecompilesComplete)
 end
 
 function WBP_GameStartMainPage_C:OnCompilePSODelegateTick(NumPrecompilesRemaining, NumPrecompilesComplete)
   DebugPrint("OnCompilePSODelegateTick", NumPrecompilesRemaining, NumPrecompilesComplete)
   self.Progress_Download:SetPercent(NumPrecompilesComplete / (NumPrecompilesRemaining + NumPrecompilesComplete))
   self.Text_CheckPatch:SetText(string.format(GText("UI_Login_Shader"), string.format("%.1f", NumPrecompilesComplete / (NumPrecompilesRemaining + NumPrecompilesComplete) * 100)))
+  self:SaveCompiledPSONum(NumPrecompilesComplete)
+end
+
+function WBP_GameStartMainPage_C:SaveCompiledPSONum(NumPrecompilesComplete)
+  local LastSavedNum = EMCache:Get("CompiledPSONum") or -100
+  local LastDivisor = LastSavedNum // 100
+  local Divisor = NumPrecompilesComplete // 100
+  if LastDivisor < Divisor then
+    DebugPrint("SaveCompiledPSONum", NumPrecompilesComplete)
+    EMCache:Set("CompiledPSONum", NumPrecompilesComplete)
+    EMCache:SaveCommon()
+  end
 end
 
 function WBP_GameStartMainPage_C:RefreshOpInfoByInputDevice(CurInputType, CurGamepadName)
@@ -887,7 +909,7 @@ function WBP_GameStartMainPage_C:EMLogin()
   local bUploaded = false
   
   local function TimerFunc()
-    self:AddTimer(2, function()
+    self:AddTimer(3, function()
       local GameInstance = self:GetGameInstance()
       if GWorld.NetworkMgr then
         DebugPrint("Disconnecting existing network connection...")
@@ -994,6 +1016,14 @@ function WBP_GameStartMainPage_C:RepairGame()
   Params.RightCallbackObj = self
   Params.RightCallbackFunction = self.DeleteFileAndReentryGame
   UIManager(self):ShowCommonPopupUI(100186, Params, self)
+end
+
+function WBP_GameStartMainPage_C:OpenLogDialog()
+  local Params = {
+    Parent = self,
+    Data = {}
+  }
+  UIManager(self):ShowCommonPopupUI(100304, Params, self)
 end
 
 function WBP_GameStartMainPage_C:OnSwitchAccount(Result, Msg)
@@ -1680,6 +1710,14 @@ end
 
 function WBP_GameStartMainPage_C:ShowDownloadBasepakUI(bLargeVersion)
   self:ShowPatchPopUI(bLargeVersion and 100020 or 100031, function()
+    local NewGMHyperLink = GWorld.GameInstance.GMHyperLink
+    DebugPrint("1 ShowDownloadBasepakUI NewGMHyperLink:", NewGMHyperLink)
+    if NewGMHyperLink then
+      DebugPrint("1 ShowDownloadBasepakUI launch NewGMHyperLink and quit game")
+      UE4.UKismetSystemLibrary.LaunchURL(NewGMHyperLink)
+      self:ForceQuitGame()
+      return
+    end
     local HyperLink = ""
     for _, v in pairs(DataMgr.ExamineInfo) do
       if v.ChannelID and v.ChannelID == HeroUSDKSubsystem(self):GetChannelId() then
@@ -1702,6 +1740,14 @@ function WBP_GameStartMainPage_C:ShowDownloadBasepakUI(bLargeVersion)
       self:ForceQuitGame()
     end
   end, function()
+    local NewGMHyperLink = GWorld.GameInstance.GMHyperLink
+    DebugPrint("2 ShowDownloadBasepakUI NewGMHyperLink:", NewGMHyperLink)
+    if NewGMHyperLink then
+      DebugPrint("2 ShowDownloadBasepakUI launch NewGMHyperLink and quit game")
+      UE4.UKismetSystemLibrary.LaunchURL(NewGMHyperLink)
+      self:ForceQuitGame()
+      return
+    end
     local HyperLink = ""
     for _, v in pairs(DataMgr.ExamineInfo) do
       if v.ChannelID and v.ChannelID == HeroUSDKSubsystem(self):GetChannelId() then

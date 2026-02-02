@@ -65,7 +65,8 @@ ForgeConst.ControllerFSMStates = {
   NormalPage_FocusItem = 1,
   NormalPage_ShowItem = 2,
   NormalPage_FocusSort = 3,
-  PathPage_Normal = 4
+  PathPage_Normal = 4,
+  NormalPage_FocusCompendium = 5
 }
 ForgeConst.CompendiumTabType = {
   1,
@@ -73,6 +74,13 @@ ForgeConst.CompendiumTabType = {
   5,
   6,
   7
+}
+ForgeConst.ProductTypeToTabId = {
+  All = 1,
+  Weapon = 4,
+  Mod = 5,
+  Resource = 6,
+  CharAccessory = 7
 }
 ForgeConst.NewdotNodeName = {
   Root = "ForgeNewdotRoot",

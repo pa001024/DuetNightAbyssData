@@ -21,6 +21,17 @@ function ModSlotUIData.New()
   return NewObj
 end
 
+function ModSlotUIData:IsNeedPlayScanline()
+  local bEquiping = self.bEquiping
+  local bMarkForceCalcSlotCost = self.bMarkForceCalcSlotCost
+  self.bMarkForceCalcSlotCost = nil
+  if bEquiping and not bMarkForceCalcSlotCost then
+    self.bEquiping = nil
+    return true
+  end
+  return false
+end
+
 function ModSlotUIData:MarkPendingTakeOff(bPendingTakeOff)
   self.bPendingTakeOff = bPendingTakeOff
 end
@@ -56,9 +67,13 @@ function ModSlotUIData:InState(State)
   return self.SlotState & State == State
 end
 
-function ModSlotUIData:Init(SlotId, Target)
+function ModSlotUIData:Init(SlotId, Target, bEquiping)
   self.SlotId = SlotId
   self.SuitIndex = Target.ModSuitIndex
+  if bEquiping then
+    self.bEquiping = bEquiping
+    self.bMarkForceCalcSlotCost = true
+  end
   local Slot = self:GetSlot()
   self.UIPolarity = Slot.Polarity
   if GetModModel():IsModUuidValid(Slot.ModEid) then

@@ -18,6 +18,9 @@ T.RT_16 = {104110}
 T.RT_17 = {104106}
 T.RT_18 = {104104}
 T.RT_19 = {101105}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -203,8 +206,8 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 1004,
     StoryPath = "SpecialQuest\\1101\\ProtectDafu.story",
+    SubRegionIds = T.RT_4,
     TalkTriggerId = 1001,
-    TriggerBoxStaticCreatorId = 1640042,
     UniversalConfigId = 1004
   },
   [1005] = {
@@ -1382,5 +1385,45 @@ return ReadOnly("SpecialQuestConfig", {
     SubRegionIds = T.RT_12,
     TalkTriggerId = 1001,
     UniversalConfigId = 20030402
+  },
+  [20030802] = {
+    FailCustomEvent = "Fail_01",
+    QuestChainId = 200308,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 20030802,
+    StoryPath = "SpecialQuest\\Side\\200308_MiaoMiaoXiang01.story",
+    SubRegionIds = {105801},
+    TalkTriggerId = 1001,
+    UniversalConfigId = 20030802
+  },
+  [20031001] = {
+    FailCustomEvent = "Fail",
+    QuestChainId = 200310,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 20031001,
+    StoryPath = "SpecialQuest\\Side\\200310_XiangHuoGuiChen01.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 2080415,
+    UniversalConfigId = 20031001
+  },
+  [20031002] = {
+    FailCustomEvent = "Fail",
+    QuestChainId = 200310,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 20031002,
+    StoryPath = "SpecialQuest\\Side\\200310_XiangHuoGuiChen02.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 2110328,
+    UniversalConfigId = 20031002
+  },
+  [20031301] = {
+    FailCustomEvent = "Fail",
+    QuestChainId = 200313,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 20031301,
+    StoryPath = "SpecialQuest\\Side\\200313_HuaChaDeWeiDao.story",
+    SubRegionIds = {104110, 104107},
+    TalkTriggerId = 1001,
+    UniversalConfigId = 20031301
   }
 })

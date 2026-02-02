@@ -359,6 +359,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -469,6 +470,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -604,6 +606,7 @@ return {
             pos = {x = 2626.2976190476184, y = -682.7142857142851},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_Dyn_2050006"
             }
@@ -615,6 +618,7 @@ return {
             pos = {x = 2632.011904761904, y = -514.0714285714275},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_Dyn_2050007"
             }
@@ -626,6 +630,7 @@ return {
             pos = {x = 2629.1547619047615, y = -284.035714285713},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_Dyn_2050008"
             }
@@ -637,6 +642,7 @@ return {
             pos = {x = 2678.5532581453626, y = 665.5755012531333},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_Dyn_2050006"
             }
@@ -648,6 +654,7 @@ return {
             pos = {x = 2684.2675438596484, y = 834.2183583959909},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_Dyn_2050007"
             }
@@ -659,6 +666,7 @@ return {
             pos = {x = 2692.8389724310773, y = 1029.9683583959911},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_Dyn_2050008"
             }

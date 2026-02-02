@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -299,9 +302,17 @@ return ReadOnly("StoryVariable", {
     IsGlobal = true,
     VarName = "FinishSelectGender"
   },
+  FirstEscape = {
+    IsGlobal = true,
+    VarName = "FirstEscape"
+  },
   FirstGotoIceCity12000103 = {
     QuestChainId = 120001,
     VarName = "FirstGotoIceCity12000103"
+  },
+  FirstXiangge_12020125 = {
+    IsGlobal = true,
+    VarName = "FirstXiangge_12020125"
   },
   FollowEnlike100206 = {
     IsGlobal = true,
@@ -376,6 +387,7 @@ return ReadOnly("StoryVariable", {
     IsGlobal = true,
     VarName = "IQ12010513_fu"
   },
+  IQ120315 = {IsGlobal = true, VarName = "IQ120315"},
   JiShuvar1 = {IsGlobal = true, VarName = "JiShuvar1"},
   JiShuvar2 = {IsGlobal = true, VarName = "JiShuvar2"},
   JiShuvar3 = {IsGlobal = true, VarName = "JiShuvar3"},
@@ -409,6 +421,14 @@ return ReadOnly("StoryVariable", {
   MiaoMiaoXiang3 = {
     IsGlobal = true,
     VarName = "MiaoMiaoXiang3"
+  },
+  MiaoMiaoXiangEnd = {
+    IsGlobal = true,
+    VarName = "MiaoMiaoXiangEnd"
+  },
+  MiaoMiaoXiangSavePoint1 = {
+    IsGlobal = true,
+    VarName = "MiaoMiaoXiangSavePoint1"
   },
   NPC110108 = {IsGlobal = true, VarName = "NPC110108"},
   NengYuanNPC110105 = {

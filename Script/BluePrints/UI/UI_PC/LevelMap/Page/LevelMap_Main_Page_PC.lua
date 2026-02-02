@@ -324,6 +324,9 @@ function M:InitCommonWidget()
 end
 
 function M:InitBottomTab()
+  if self.GameInputModeSubsystem:GetCurrentInputType() ~= ECommonInputType.Gamepad then
+    return
+  end
   self.Key_Tip.Panel_Key:ClearChildren()
   self.Key_Esc = UIManager(self):_CreateWidgetNew("ComKeyTextDesc")
   self.Key_Tip.Panel_Key:AddChild(self.Key_Esc)

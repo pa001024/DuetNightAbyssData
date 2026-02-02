@@ -70,7 +70,6 @@ end
 
 function BP_SeatBase_C:OpenMechanism(PlayerActorEid)
   print(_G.LogTag, "LXZ OpenMechanism", PlayerActorEid, self:GetName(), self.PlayerAndSeat[PlayerActorEid])
-  Traceback()
   if self.PlayerAndSeat and self.PlayerAndSeat[PlayerActorEid] then
     return
   end
@@ -620,12 +619,14 @@ function BP_SeatBase_C:GetValidPoint()
   local PointIndex = {}
   for i, Point in pairs(self.PointArray) do
     local Valid = true
+    local Eid = 0
     for PlayerEid, UsePoint in pairs(self.PlayerAndSeat) do
       if UsePoint.Index == Point.Index then
         Valid = false
+        Eid = PlayerEid
       end
     end
-    PointIndex[Point.Index] = Valid
+    PointIndex[Point.Index] = {Valid = Valid, Eid = Eid}
   end
   return PointIndex
 end

@@ -1,11 +1,15 @@
 require("UnLua")
 local EMCache = require("EMCache.EMCache")
+local LuaConst = require("EMLuaConst")
 local BP_NpcBiographyInteractiveComponent_C = Class("BluePrints.Story.Interactive.InteractiveComponent.BP_InteractiveBaseComponent_C")
 
 function BP_NpcBiographyInteractiveComponent_C:IsCanInteractive(PlayerActor)
   local Owner = self:GetOwner()
-  local Res = self.DistanceCheck(Owner, PlayerActor, self.InteractiveDistance) and self.BFaceToACheck(Owner, PlayerActor, self.InteractiveFaceAngle) and self:LockShowCheck(Owner) and self:ConditionCheck(Owner) and not Owner.bHidden
-  return Res
+  if LuaConst.OpenComputeInteractive then
+    return self:GetDistanceCheckResult() and self.BFaceToACheck(Owner, PlayerActor, self.InteractiveFaceAngle) and self:LockShowCheck(Owner) and self:ConditionCheck(Owner) and not Owner.bHidden
+  else
+    return self.DistanceCheck(Owner, PlayerActor, self.InteractiveDistance) and self.BFaceToACheck(Owner, PlayerActor, self.InteractiveFaceAngle) and self:LockShowCheck(Owner) and self:ConditionCheck(Owner) and not Owner.bHidden
+  end
 end
 
 function BP_NpcBiographyInteractiveComponent_C:GetUUID()

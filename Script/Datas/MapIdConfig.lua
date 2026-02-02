@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -315,6 +318,10 @@ return ReadOnly("MapIdConfig", {
     MapID = 249,
     MapName = "Haiboliya_Chezhan_CXQ_Design"
   },
+  Haiboliya_Chezhan_CZYW_Design = {
+    MapID = 263,
+    MapName = "Haiboliya_Chezhan_CZYW_Design"
+  },
   Haiboliya_Chezhan_HWQ_Design = {
     MapID = 250,
     MapName = "Haiboliya_Chezhan_HWQ_Design"
@@ -330,6 +337,34 @@ return ReadOnly("MapIdConfig", {
   Haiboliya_Chezhan_YT_Design = {
     MapID = 253,
     MapName = "Haiboliya_Chezhan_YT_Design"
+  },
+  Haiboliya_Chezhan_YW01_Design = {
+    MapID = 264,
+    MapName = "Haiboliya_Chezhan_YW01_Design"
+  },
+  Haiboliya_Chezhan_YW02_Design = {
+    MapID = 265,
+    MapName = "Haiboliya_Chezhan_YW02_Design"
+  },
+  Haiboliya_Chezhan_YW03_Design = {
+    MapID = 266,
+    MapName = "Haiboliya_Chezhan_YW03_Design"
+  },
+  Haiboliya_Chezhan_YW04_Design = {
+    MapID = 267,
+    MapName = "Haiboliya_Chezhan_YW04_Design"
+  },
+  Haiboliya_Chezhan_YW05_Design = {
+    MapID = 268,
+    MapName = "Haiboliya_Chezhan_YW05_Design"
+  },
+  Haiboliya_Chezhan_YW06_Design = {
+    MapID = 269,
+    MapName = "Haiboliya_Chezhan_YW06_Design"
+  },
+  Haiboliya_Chezhan_YWS_Design = {
+    MapID = 262,
+    MapName = "Haiboliya_Chezhan_YWS_Design"
   },
   Haiboliya_Chezhan_ZZZ_Design = {
     MapID = 254,
@@ -359,6 +394,11 @@ return ReadOnly("MapIdConfig", {
     MapID = 121,
     MapName = "HomeBase_Design"
   },
+  Huaxu_Haojing_Batt04_Design = {
+    ExploreID = 7080,
+    MapID = 270,
+    MapName = "Huaxu_Haojing_Batt04_Design"
+  },
   Huaxu_Haojing_Eas_Design = {
     ExploreID = 7045,
     MapID = 201,
@@ -384,6 +424,11 @@ return ReadOnly("MapIdConfig", {
     MapID = 235,
     MapName = "Huaxu_Haojing_Int_Design"
   },
+  Huaxu_Haojing_Int_IQ12020208_DesignTask = {
+    ExploreID = 7078,
+    MapID = 260,
+    MapName = "Huaxu_Haojing_Int_IQ12020208_DesignTask"
+  },
   Huaxu_Haojing_Jlc_Design = {
     ExploreID = 7072,
     MapID = 242,
@@ -403,6 +448,11 @@ return ReadOnly("MapIdConfig", {
     ExploreID = 7067,
     MapID = 237,
     MapName = "Huaxu_Haojing_TRLM_Design"
+  },
+  Huaxu_Haojing_TRLM_IQ12020515_DesignTask = {
+    ExploreID = 7079,
+    MapID = 261,
+    MapName = "Huaxu_Haojing_TRLM_IQ12020515_DesignTask"
   },
   Huaxu_Haojing_TXJ_Design = {
     ExploreID = 7068,

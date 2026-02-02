@@ -478,23 +478,28 @@ function WBP_Common_Dialog_PC_C:AutofitDialog()
   else
     self.Size_Bg:SetMinDesiredWidth(DialogMinWidthNormal)
   end
-  local AllChildrend = self.Pos_Tips:GetAllChildren()
-  local Length = AllChildrend:Length()
-  local HasTipWidgetVisible = false
-  for i = 1, Length do
-    local TipWidget = AllChildrend:GetRef(i)
-    local WidgetVisibility = TipWidget:GetVisibility()
-    if WidgetVisibility == UE4.ESlateVisibility.Visible or WidgetVisibility == UE4.ESlateVisibility.SelfHitTestInvisible then
-      HasTipWidgetVisible = true
-      break
-    end
-  end
-  if self.PopupStyle.ShowTip and HasTipWidgetVisible then
+  if self.Params.FixTipHeight then
     self.Spacer_VBNode_Top:SetSize(UE4.FVector2D(0, self.Spacer_VBNode_Top_Y_Large))
     self.Spacer_VBNode_Botton:SetSize(UE4.FVector2D(0, self.Spacer_VBNode_Botton_Y_Large))
   else
-    self.Spacer_VBNode_Top:SetSize(UE4.FVector2D(0, self.Spacer_VBNode_Top_Y_Normal))
-    self.Spacer_VBNode_Botton:SetSize(UE4.FVector2D(0, self.Spacer_VBNode_Botton_Y_Normal))
+    local AllChildrend = self.Pos_Tips:GetAllChildren()
+    local Length = AllChildrend:Length()
+    local HasTipWidgetVisible = false
+    for i = 1, Length do
+      local TipWidget = AllChildrend:GetRef(i)
+      local WidgetVisibility = TipWidget:GetVisibility()
+      if WidgetVisibility == UE4.ESlateVisibility.Visible or WidgetVisibility == UE4.ESlateVisibility.SelfHitTestInvisible then
+        HasTipWidgetVisible = true
+        break
+      end
+    end
+    if self.PopupStyle.ShowTip and HasTipWidgetVisible then
+      self.Spacer_VBNode_Top:SetSize(UE4.FVector2D(0, self.Spacer_VBNode_Top_Y_Large))
+      self.Spacer_VBNode_Botton:SetSize(UE4.FVector2D(0, self.Spacer_VBNode_Botton_Y_Large))
+    else
+      self.Spacer_VBNode_Top:SetSize(UE4.FVector2D(0, self.Spacer_VBNode_Top_Y_Normal))
+      self.Spacer_VBNode_Botton:SetSize(UE4.FVector2D(0, self.Spacer_VBNode_Botton_Y_Normal))
+    end
   end
 end
 
@@ -547,9 +552,6 @@ function WBP_Common_Dialog_PC_C:OnPreviewKeyDown(MyGeometry, InKeyEvent)
 end
 
 function WBP_Common_Dialog_PC_C:OnKeyDown(MyGeometry, InKeyEvent)
-  if CommonUtils:IfExistSystemGuideUI(self) then
-    return UE4.UWidgetBlueprintLibrary.Handled()
-  end
   if self.IsClosing then
     return UE4.UWidgetBlueprintLibrary.Handled()
   end
@@ -836,6 +838,31 @@ function WBP_Common_Dialog_PC_C:ShowGamepadShortcut(Index)
   local GamepadShortcut = self:GetGamepadShortcutByIndex(Index)
   if GamepadShortcut then
     GamepadShortcut:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  end
+end
+
+function WBP_Common_Dialog_PC_C:ClearAllGamepadShortcutContent()
+  if not self.Index2GamepadShortcut then
+    return
+  end
+  for _, Shortcut in ipairs(self.Index2GamepadShortcut) do
+    if Shortcut then
+      Shortcut.KeyInfoList = nil
+      Shortcut.CreateInfo = nil
+      if Shortcut.SubWidgetList and Shortcut.SubWidgetList.Clear then
+        Shortcut.SubWidgetList:Clear()
+      end
+    end
+  end
+end
+
+function WBP_Common_Dialog_PC_C:ShowAllGamepadShortcut()
+  local GamepadShortcutNum = #self.Index2GamepadShortcut
+  for Index = 1, GamepadShortcutNum do
+    local Shortcut = self:GetGamepadShortcutByIndex(Index)
+    if Shortcut and Shortcut.KeyInfoList and #Shortcut.KeyInfoList > 0 then
+      self:ShowGamepadShortcut(Index)
+    end
   end
 end
 

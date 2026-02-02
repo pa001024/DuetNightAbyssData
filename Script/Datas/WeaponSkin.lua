@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -12,6 +15,8 @@ return ReadOnly("WeaponSkin", {
     LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Claymore_Kongjun.T_Gacha_Claymore_Kongjun'",
     Name = "UI_WeaponSkin_Name_3010101",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 40,
     SkinID = 3010101,
     SkinPath = 3010101,
     Sound = "SOUND_ITEM_WEAPON",
@@ -90,6 +95,34 @@ return ReadOnly("WeaponSkin", {
     Sound = "SOUND_ITEM_WEAPON",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
+  [3010107] = {
+    ApplicationType = 103,
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Claymore_Dahuang.T_Bust_Claymore_Dahuang'",
+    Dec = "UI_WeaponSkin_Des_3010107",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Claymore_Dahuang.T_Bust_Claymore_Dahuang'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Claymore_Dahuang.T_Head_Claymore_Dahuang'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Claymore_Dahuang.T_Gacha_Claymore_Dahuang'",
+    Name = "UI_WeaponSkin_Name_3010107",
+    Rarity = 5,
+    SkinID = 3010107,
+    SkinPath = 3010107,
+    Sound = "SOUND_ITEM_WEAPON",
+    UnlockOption = "UI_Accessory_Unlock_Shop"
+  },
+  [3010108] = {
+    ApplicationType = 103,
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Claymore_Tangfu.T_Bust_Claymore_Tangfu'",
+    Dec = "UI_WeaponSkin_Des_3010108",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Claymore_Tangfu.T_Bust_Claymore_Tangfu'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Claymore_Tangfu.T_Head_Claymore_Tangfu'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Claymore_Tangfu.T_Gacha_Claymore_Tangfu'",
+    Name = "UI_WeaponSkin_Name_3010108",
+    Rarity = 5,
+    SkinID = 3010108,
+    SkinPath = 3010108,
+    Sound = "SOUND_ITEM_WEAPON",
+    UnlockOption = "UI_Accessory_Unlock_Shop"
+  },
   [3010201] = {
     ApplicationType = 101,
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Sword_Kongjun.T_Bust_Sword_Kongjun'",
@@ -100,6 +133,8 @@ return ReadOnly("WeaponSkin", {
     LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Sword_Kongjun.T_Gacha_Sword_Kongjun'",
     Name = "UI_WeaponSkin_Name_3010201",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 40,
     SkinID = 3010201,
     SkinPath = 3010201,
     Sound = "SOUND_ITEM_WEAPON",
@@ -150,6 +185,20 @@ return ReadOnly("WeaponSkin", {
     Sound = "SOUND_ITEM_WEAPON",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
+  [3010205] = {
+    ApplicationType = 101,
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Sword_Tangfu.T_Bust_Sword_Tangfu'",
+    Dec = "UI_WeaponSkin_Des_3010108",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Sword_Tangfu.T_Bust_Sword_Tangfu'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Sword_Tangfu.T_Head_Sword_Tangfu'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Sword_Tangfu.T_Gacha_Sword_Tangfu'",
+    Name = "UI_WeaponSkin_Name_3010205",
+    Rarity = 4,
+    SkinID = 3010205,
+    SkinPath = 3010205,
+    Sound = "SOUND_ITEM_WEAPON",
+    UnlockOption = "UI_Accessory_Unlock_Shop"
+  },
   [3010301] = {
     ApplicationType = 206,
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Bow_Huanri.T_Bust_Bow_Huanri'",
@@ -159,10 +208,12 @@ return ReadOnly("WeaponSkin", {
     LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Bow_Huanri.T_Gacha_Bow_Huanri'",
     Name = "UI_WeaponSkin_Name_3010301",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 40,
     SkinID = 3010301,
     SkinPath = 3010301,
     Sound = "SOUND_ITEM_WEAPON",
-    UnlockOption = "UI_Accessory_Unlock_Shop"
+    UnlockOption = "UI_Accessory_Unlock_Gacha"
   },
   [3010302] = {
     ApplicationType = 206,
@@ -218,10 +269,12 @@ return ReadOnly("WeaponSkin", {
     LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Polearm_Talang.T_Gacha_Polearm_Talang'",
     Name = "UI_WeaponSkin_Name_3010402",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 40,
     SkinID = 3010402,
     SkinPath = 3010402,
     Sound = "SOUND_ITEM_WEAPON",
-    UnlockOption = "UI_Accessory_Unlock_Shop"
+    UnlockOption = "UI_Accessory_Unlock_Gacha"
   },
   [3010403] = {
     ApplicationType = 102,
@@ -268,6 +321,34 @@ return ReadOnly("WeaponSkin", {
     Sound = "SOUND_ITEM_WEAPON",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
+  [3010406] = {
+    ApplicationType = 102,
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Polearm_Tangfu.T_Bust_Polearm_Tangfu'",
+    Dec = "UI_WeaponSkin_Des_3010108",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Polearm_Tangfu.T_Bust_Polearm_Tangfu'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Polearm_Tangfu.T_Head_Polearm_Tangfu'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Polearm_Tangfu.T_Gacha_Polearm_Tangfu'",
+    Name = "UI_WeaponSkin_Name_3010406",
+    Rarity = 4,
+    SkinID = 3010406,
+    SkinPath = 3010406,
+    Sound = "SOUND_ITEM_WEAPON",
+    UnlockOption = "UI_Accessory_Unlock_Shop"
+  },
+  [3010407] = {
+    ApplicationType = 102,
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Polearm_Bixiao.T_Bust_Polearm_Bixiao'",
+    Dec = "UI_WeaponSkin_Des_3010407",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Polearm_Bixiao.T_Bust_Polearm_Bixiao'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Polearm_Bixiao.T_Head_Polearm_Bixiao'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Polearm_Bixiao.T_Gacha_Polearm_Bixiao'",
+    Name = "UI_WeaponSkin_Name_3010407",
+    Rarity = 5,
+    SkinID = 3010407,
+    SkinPath = 3010407,
+    Sound = "SOUND_ITEM_WEAPON",
+    UnlockOption = "UI_Accessory_Unlock_Shop"
+  },
   [3010501] = {
     ApplicationType = 205,
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Machinegun_Dalang.T_Bust_Machinegun_Dalang'",
@@ -295,6 +376,20 @@ return ReadOnly("WeaponSkin", {
     Rarity = 5,
     SkinID = 3010502,
     SkinPath = 3010502,
+    Sound = "SOUND_ITEM_WEAPON",
+    UnlockOption = "UI_Accessory_Unlock_Shop"
+  },
+  [3010503] = {
+    ApplicationType = 205,
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Machinegun_Bixiao.T_Bust_Machinegun_Bixiao'",
+    Dec = "UI_WeaponSkin_Des_3010407",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Machinegun_Bixiao.T_Bust_Machinegun_Bixiao'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Machinegun_Bixiao.T_Head_Machinegun_Bixiao'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Machinegun_Bixiao.T_Gacha_Machinegun_Bixiao'",
+    Name = "UI_WeaponSkin_Name_3010503",
+    Rarity = 5,
+    SkinID = 3010503,
+    SkinPath = 3010503,
     Sound = "SOUND_ITEM_WEAPON",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
@@ -346,6 +441,21 @@ return ReadOnly("WeaponSkin", {
     Sound = "SOUND_ITEM_WEAPON",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
+  [3010607] = {
+    AddOnModel = {3010608},
+    ApplicationType = 104,
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Dualblade_Tangfu.T_Bust_Dualblade_Tangfu'",
+    Dec = "UI_WeaponSkin_Des_3010108",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Dualblade_Tangfu.T_Bust_Dualblade_Tangfu'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Dualblade_Tangfu.T_Head_Dualblade_Tangfu'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Dualblade_Tangfu.T_Gacha_Dualblade_Tangfu'",
+    Name = "UI_WeaponSkin_Name_3010607",
+    Rarity = 4,
+    SkinID = 3010607,
+    SkinPath = 3010607,
+    Sound = "SOUND_ITEM_WEAPON",
+    UnlockOption = "UI_Accessory_Unlock_Shop"
+  },
   [3010701] = {
     AddOnModel = {3010702},
     ApplicationType = 106,
@@ -394,6 +504,21 @@ return ReadOnly("WeaponSkin", {
     Sound = "SOUND_ITEM_WEAPON",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
+  [3010707] = {
+    AddOnModel = {3010708},
+    ApplicationType = 106,
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Katana_Tangfu.T_Bust_Katana_Tangfu'",
+    Dec = "UI_WeaponSkin_Des_3010108",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Katana_Tangfu.T_Bust_Katana_Tangfu'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Katana_Tangfu.T_Head_Katana_Tangfu'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Katana_Tangfu.T_Gacha_Katana_Tangfu'",
+    Name = "UI_WeaponSkin_Name_3010707",
+    Rarity = 4,
+    SkinID = 3010707,
+    SkinPath = 3010707,
+    Sound = "SOUND_ITEM_WEAPON",
+    UnlockOption = "UI_Accessory_Unlock_Shop"
+  },
   [3010801] = {
     ApplicationType = 105,
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Swordwhip_Fubei.T_Bust_Swordwhip_Fubei'",
@@ -421,6 +546,49 @@ return ReadOnly("WeaponSkin", {
     Rarity = 5,
     SkinID = 3010802,
     SkinPath = 3010802,
+    Sound = "SOUND_ITEM_WEAPON",
+    UnlockOption = "UI_Accessory_Unlock_Shop"
+  },
+  [3010803] = {
+    ApplicationType = 105,
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Swordwhip_Shiru.T_Bust_Swordwhip_Shiru'",
+    Dec = "UI_WeaponSkin_Des_3010106",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Swordwhip_Shiru.T_Bust_Swordwhip_Shiru'",
+    GoShopTypeId = {120116},
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Swordwhip_Shiru.T_Head_Swordwhip_Shiru'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Swordwhip_Shiru.T_Gacha_Swordwhip_Shiru'",
+    Name = "UI_WeaponSkin_Name_3010803",
+    Rarity = 4,
+    SkinID = 3010803,
+    SkinPath = 3010803,
+    Sound = "SOUND_ITEM_WEAPON",
+    UnlockOption = "UI_Accessory_Unlock_Shop"
+  },
+  [3010804] = {
+    ApplicationType = 105,
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Swordwhip_Tangfu.T_Bust_Swordwhip_Tangfu'",
+    Dec = "UI_WeaponSkin_Des_3010108",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Swordwhip_Tangfu.T_Bust_Swordwhip_Tangfu'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Swordwhip_Tangfu.T_Head_Swordwhip_Tangfu'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Swordwhip_Tangfu.T_Gacha_Swordwhip_Tangfu'",
+    Name = "UI_WeaponSkin_Name_3010804",
+    Rarity = 4,
+    SkinID = 3010804,
+    SkinPath = 3010804,
+    Sound = "SOUND_ITEM_WEAPON",
+    UnlockOption = "UI_Accessory_Unlock_Shop"
+  },
+  [3010805] = {
+    ApplicationType = 105,
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Swordwhip_Bixiao.T_Bust_Swordwhip_Bixiao'",
+    Dec = "UI_WeaponSkin_Des_3010407",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Swordwhip_Bixiao.T_Bust_Swordwhip_Bixiao'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Swordwhip_Bixiao.T_Head_Swordwhip_Bixiao'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Swordwhip_Bixiao.T_Gacha_Swordwhip_Bixiao'",
+    Name = "UI_WeaponSkin_Name_3010805",
+    Rarity = 5,
+    SkinID = 3010805,
+    SkinPath = 3010805,
     Sound = "SOUND_ITEM_WEAPON",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },

@@ -26,7 +26,8 @@ function M:Construct()
   self.Btn_NormalTask.OnClicked:Add(self, self.OnNormalTaskClicked)
   self.Btn_ChallengeTask.OnClicked:Add(self, self.OnChallengeTaskClicked)
   self._Avatar = GWorld:GetAvatar()
-  self.Text_TaskScoreToday:SetText(self._Avatar.MidTermScores)
+  self.MidTermGoals = self._Avatar.MidTermGoals[self.MidTermGoalEventId] or {}
+  self.Text_TaskScoreToday:SetText(self.MidTermGoals.Scores or 0)
   self:InitGamepadKey()
   self:RefreshBaseInfo()
   self:InitListenEvent()
@@ -193,19 +194,23 @@ end
 
 function M:CheckIsMidTermGoalNeedShowReddot()
   self:ClearNormalRewardReddot()
-  if CommonUtils.Size(self._Avatar.MidTermScoresRewards) > 0 then
+  local MidTermScoresRewards = self.MidTermGoals.ScoresRewards or {}
+  local MidTermAchvProgressRewarded = self.MidTermGoals.AchvProgressRewarded or {}
+  local TaskFinishCounts = self.MidTermGoals.TaskFinishCount or {}
+  local MidTermTasks = self.MidTermGoals.Tasks or {}
+  if CommonUtils.Size(MidTermScoresRewards) > 0 then
     self:TryIncreaceNormalRewardReddot("ScoresRewards")
   else
     self:TrySubNormalRewardReddot("ScoresRewards")
   end
-  for Count, v in pairs(self._Avatar.MidTermAchvProgressRewarded) do
+  for Count, v in pairs(MidTermAchvProgressRewarded) do
     if 0 == v then
       self:TryIncreaceChallengeRewardReddot(Count)
     else
       self:TrySubChallengeRewardReddot(Count)
     end
   end
-  for TaskId, Task in pairs(self._Avatar.MidTermTasks) do
+  for TaskId, Task in pairs(MidTermTasks) do
     local TaskData = DataMgr.MidTermTask[Task.UniqueID]
     if not TaskData then
       Utils.ScreenPrint("MidTermTask表中不存在UniqueID为" .. Task.UniqueID .. "的任务，请检查配置")
@@ -217,19 +222,19 @@ function M:CheckIsMidTermGoalNeedShowReddot()
       end
       self:TryIncreaceChallengeTaskNewReddot(Task)
     elseif TaskData.TaskType == TaskType.Cycle then
-      if self._Avatar.MidTermTasksRecord[TaskId].FinishCount and self._Avatar.MidTermTasksRecord[TaskId].FinishCount > 0 then
+      if TaskFinishCounts[TaskId] and TaskFinishCounts[TaskId] > 0 then
         self:TryIncreaceNormalRewardReddot(Task.UniqueID)
       else
         self:TrySubNormalRewardReddot(Task.UniqueID)
       end
       self:TryIncreaceNormalTaskNewReddot(Task)
     else
-      if Task.Progress >= Task.Target and Task.RewardsGot == false then
+      if Task.Progress >= Task.Target and Task.RewardsGot == false and TaskData.EnableDay == self:CalEventDay() then
         self:TryIncreaceNormalRewardReddot(Task.UniqueID)
       else
         self:TrySubNormalRewardReddot(Task.UniqueID)
       end
-      if not (CommonUtils.Size(self._Avatar.MidTermScoresRewards) > 0) then
+      if not (CommonUtils.Size(MidTermScoresRewards) > 0) then
         self:TryIncreaceNormalTaskNewReddot(Task)
       end
     end
@@ -238,7 +243,7 @@ function M:CheckIsMidTermGoalNeedShowReddot()
     self:ClearChallengeTaskNewReddot()
     self:ClearChallengeRewardReddot()
     self:ClearNormalTaskNewReddot()
-    local hasUnclaimedScoreRewards = CommonUtils.Size(self._Avatar.MidTermScoresRewards) > 0
+    local hasUnclaimedScoreRewards = CommonUtils.Size(MidTermScoresRewards) > 0
     if not hasUnclaimedScoreRewards or TimeUtils.NowTime() > self.RewardEndTime then
       self:ClearNormalRewardReddot()
     end
@@ -417,7 +422,7 @@ function M:ClearNormalRewardReddot()
 end
 
 function M:UpdateActivityTabNewReddot()
-  local EventId = 103006
+  local EventId = self.MidTermGoalEventId
   local NormalTaskNewCacheData = ReddotManager.GetLeafNodeCacheDetail(NormalTaskNewReddotName)
   
   local function hasTrueValue(cache)

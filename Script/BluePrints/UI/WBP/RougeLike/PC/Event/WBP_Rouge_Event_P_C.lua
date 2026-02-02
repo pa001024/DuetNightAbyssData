@@ -8,6 +8,9 @@ function M:Construct()
   self.CanInteractChoices = true
   
   function self.Callback()
+    if not IsValid(self) then
+      return
+    end
     if self.NextEventId then
       self.StoryPath = DataMgr.RougeLikeRoom[self.NextEventId].EventStoryline
       self.NextEventId = nil

@@ -8,6 +8,9 @@ T.RT_6 = {315}
 T.RT_7 = {316}
 T.RT_8 = {317}
 T.RT_9 = {318}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -144,6 +147,40 @@ return ReadOnly("DefenceMove", {
       [4] = T.RT_3,
       [5] = T.RT_2,
       [6] = T.RT_3
+    },
+    MonsterTotalBaseNum = 50,
+    WavesPerStage = 2
+  },
+  [90169] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 10,
+    ButcherMonsterSpawnProbability = T.RT_1,
+    DungeonId = 90169,
+    EnsureGuideTime = 180,
+    MonsterSpawnId = {
+      [1] = T.RT_4,
+      [2] = {90169, 314},
+      [3] = T.RT_4,
+      [4] = T.RT_5,
+      [5] = T.RT_4,
+      [6] = T.RT_5
+    },
+    MonsterTotalBaseNum = 50,
+    WavesPerStage = 2
+  },
+  [90170] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 10,
+    ButcherMonsterSpawnProbability = T.RT_1,
+    DungeonId = 90170,
+    EnsureGuideTime = 180,
+    MonsterSpawnId = {
+      [1] = T.RT_4,
+      [2] = {90170, 314},
+      [3] = T.RT_4,
+      [4] = T.RT_5,
+      [5] = T.RT_4,
+      [6] = T.RT_5
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -467,6 +504,48 @@ return ReadOnly("DefenceMove", {
       [6] = T.RT_3
     },
     MonsterTotalBaseNum = 50,
+    WavesPerStage = 2
+  },
+  [91201] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 10,
+    ButcherMonsterSpawnProbability = T.RT_1,
+    DungeonId = 91201,
+    EnsureGuideTime = 180,
+    MonsterSpawnId = {
+      [1] = T.RT_8,
+      [2] = {
+        91201,
+        912010,
+        318
+      },
+      [3] = T.RT_8,
+      [4] = T.RT_9,
+      [5] = T.RT_8,
+      [6] = T.RT_9
+    },
+    MonsterTotalBaseNum = 100,
+    WavesPerStage = 2
+  },
+  [91202] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 10,
+    ButcherMonsterSpawnProbability = T.RT_1,
+    DungeonId = 91202,
+    EnsureGuideTime = 180,
+    MonsterSpawnId = {
+      [1] = T.RT_8,
+      [2] = {
+        91202,
+        912020,
+        318
+      },
+      [3] = T.RT_8,
+      [4] = T.RT_9,
+      [5] = T.RT_8,
+      [6] = T.RT_9
+    },
+    MonsterTotalBaseNum = 100,
     WavesPerStage = 2
   },
   [91251] = {

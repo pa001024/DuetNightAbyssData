@@ -448,6 +448,28 @@
     "icon": "GR_Fangjin"
   },
   {
+    "id": 6015018,
+    "n": "Ashblossom Filthoid – Revenge",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 11,
+    "def": 300,
+    "hp": 510,
+    "tn": 150,
+    "icon": "GR_Fangjin"
+  },
+  {
+    "id": 6015021,
+    "n": "Ashblossom Filthoid – Sacrifice",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 11,
+    "def": 300,
+    "hp": 510,
+    "tn": 150,
+    "icon": "GR_Fangjin"
+  },
+  {
     "id": 6016001,
     "n": "Blightcalyx Filthoid",
     "f": 1,
@@ -460,6 +482,17 @@
   {
     "id": 6016013,
     "n": "Blightcalyx Filthoid – Corrosion",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 11,
+    "def": 300,
+    "hp": 510,
+    "tn": 150,
+    "icon": "GR_Eshi"
+  },
+  {
+    "id": 6016015,
+    "n": "Blightcalyx Filthoid – Decay",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -486,6 +519,17 @@
     "atk": 10,
     "def": 130,
     "hp": 71,
+    "tn": 150,
+    "icon": "GR_Kuirui"
+  },
+  {
+    "id": 6017013,
+    "n": "Stigma Filthoid – Corrosion",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 11,
+    "def": 300,
+    "hp": 510,
     "tn": 150,
     "icon": "GR_Kuirui"
   },
@@ -1171,6 +1215,18 @@
     "icon": "Jh_Shenfu"
   },
   {
+    "id": 8003022,
+    "n": "Blessed Priest - Thunderstorm",
+    "t": "Elite_Monster",
+    "f": 4,
+    "atk": 11,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 150,
+    "icon": "Jh_Shenfu"
+  },
+  {
     "id": 8003024,
     "n": "Blessed Priest - Phantom",
     "t": "Elite_Monster",
@@ -1283,6 +1339,16 @@
     "icon": "Boss_01_Saiqi"
   },
   {
+    "id": 8502602,
+    "n": "The Eclosioner",
+    "t": "Boss",
+    "atk": 24,
+    "def": 300,
+    "hp": 6000,
+    "tn": 8400,
+    "icon": "Boss_01_Saiqi"
+  },
+  {
     "id": 8503001,
     "n": "Crystalophile",
     "t": "Boss",
@@ -1323,6 +1389,16 @@
     "icon": "Boss_05_Lianhuo"
   },
   {
+    "id": 8505602,
+    "n": "The Warden of the Inferno",
+    "t": "Boss",
+    "atk": 24,
+    "def": 300,
+    "hp": 6000,
+    "tn": 8400,
+    "icon": "Boss_05_Lianhuo"
+  },
+  {
     "id": 8509001,
     "n": "???",
     "t": "Boss",
@@ -1342,6 +1418,26 @@
     "tn": 3000
   },
   {
+    "id": 8510001,
+    "n": "Zhuyin",
+    "t": "Boss",
+    "atk": 30,
+    "def": 0,
+    "hp": 6000,
+    "tn": 4500,
+    "icon": "Boss_Bailong"
+  },
+  {
+    "id": 8511001,
+    "n": "Taihao",
+    "t": "Boss",
+    "atk": 30,
+    "def": 0,
+    "hp": 6000,
+    "tn": 2000,
+    "icon": "Boss_Bailong"
+  },
+  {
     "id": 8512001,
     "n": "\"Beast From the Snowfield\"",
     "t": "Boss",
@@ -1353,6 +1449,16 @@
   },
   {
     "id": 8512601,
+    "n": "\"Beast From the Snowfield\"",
+    "t": "Boss",
+    "atk": 24,
+    "def": 300,
+    "hp": 6000,
+    "tn": 10000,
+    "icon": "Boss_Linen"
+  },
+  {
+    "id": 8512602,
     "n": "\"Beast From the Snowfield\"",
     "t": "Boss",
     "atk": 24,
@@ -1378,6 +1484,16 @@
     "atk": 15,
     "def": 300,
     "hp": 6000,
+    "tn": 2000,
+    "icon": "Boss_Kuxiu"
+  },
+  {
+    "id": 8513701,
+    "n": "Blessed Ascetic – Thunderstorm",
+    "t": "Boss",
+    "atk": 60,
+    "def": 300,
+    "hp": 225000,
     "tn": 2000,
     "icon": "Boss_Kuxiu"
   },
@@ -1442,7 +1558,7 @@
   },
   {
     "id": 8516001,
-    "n": "富尔维斯【待包装】",
+    "n": "富尔维斯【远期待包装】",
     "t": "Boss",
     "atk": 15,
     "def": 720,
@@ -1451,8 +1567,18 @@
     "icon": "Empty"
   },
   {
+    "id": 8518001,
+    "n": "Terracolossus",
+    "t": "Boss",
+    "atk": 20,
+    "def": 0,
+    "hp": 3000,
+    "tn": 3000,
+    "icon": "Boss_Juque"
+  },
+  {
     "id": 8519001,
-    "n": "列车【待包装】",
+    "n": "列车【远期待包装】",
     "t": "Boss",
     "atk": 15,
     "def": 0,
@@ -1462,7 +1588,7 @@
   },
   {
     "id": 8520001,
-    "n": "艾达【待包装】",
+    "n": "艾达【远期待包装】",
     "t": "Boss",
     "atk": 15,
     "def": 0,
@@ -1472,7 +1598,7 @@
   },
   {
     "id": 8522001,
-    "n": "蜕生者【待包装】",
+    "n": "蜕生者【远期待包装】",
     "t": "Boss",
     "atk": 15,
     "def": 300,
@@ -1482,12 +1608,22 @@
   },
   {
     "id": 8523001,
-    "n": "教会基石【待包装】",
+    "n": "教会基石【远期待包装】",
     "t": "Boss",
     "atk": 15,
     "def": 0,
     "hp": 6000,
     "tn": 2000,
+    "icon": "Empty"
+  },
+  {
+    "id": 8524001,
+    "n": "恒梦咏叹调【远期待包装】",
+    "t": "Boss",
+    "atk": 24,
+    "def": 0,
+    "hp": 7000,
+    "tn": 4500,
     "icon": "Empty"
   },
   {
@@ -1499,6 +1635,18 @@
     "es": 82,
     "hp": 14,
     "tn": 150,
+    "icon": "SQ_Yinxie"
+  },
+  {
+    "id": 9001014,
+    "n": "Wildswarm's Sword - Thunderbolt",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 20,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 600,
     "icon": "SQ_Yinxie"
   },
   {
@@ -1887,6 +2035,15 @@
     "icon": "Mon_Yunzong01"
   },
   {
+    "id": 9810001,
+    "n": "Skywing Gull",
+    "atk": 10,
+    "def": 130,
+    "hp": 1,
+    "tn": 150,
+    "icon": "HX_Hainiao"
+  },
+  {
     "id": 10001001,
     "n": "Guard of Yingtian",
     "f": 5,
@@ -1943,8 +2100,44 @@
     "icon": "HX_Tianshi02"
   },
   {
+    "id": 10005011,
+    "n": "Frenzied Guard of Yingtian – Frostbite",
+    "t": "Elite_Monster",
+    "f": 5,
+    "atk": 20,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 150,
+    "icon": "HX_Tianshi02"
+  },
+  {
     "id": 10005012,
     "n": "Frenzied Guard of Yingtian – Blast",
+    "t": "Elite_Monster",
+    "f": 5,
+    "atk": 20,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 150,
+    "icon": "HX_Tianshi02"
+  },
+  {
+    "id": 10005013,
+    "n": "Frenzied Guard of Yingtian – Corrosion",
+    "t": "Elite_Monster",
+    "f": 5,
+    "atk": 20,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 150,
+    "icon": "HX_Tianshi02"
+  },
+  {
+    "id": 10005024,
+    "n": "Frenzied Guard of Yingtian – Phantom",
     "t": "Elite_Monster",
     "f": 5,
     "atk": 20,

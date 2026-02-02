@@ -10,7 +10,7 @@ function Component:InitPenalizeComponentImpl()
   self.InteractiveType = Const.PressInteractive
   self.PenalizeInteractiveComponent.bCanUsed = true
   self.PenalizeInteractiveComponent:SetInteractiveName("BATTLE_CONDEMN_NAME")
-  self.PenalizeInteractiveComponent.InteractiveDistance = 400
+  self.PenalizeInteractiveComponent:SetInteractiveDistance(400)
   self.PenalizeInteractiveComponent.InteractiveFaceAngle = 180
   self.PenalizeInteractiveComponent.InteractiveAngle = 360
   local ModelData = DataMgr.Model[self.ModelId]
@@ -55,12 +55,10 @@ function Component:Penalize(PlayerId)
     self.CondemnerEid = PlayerId
     local Res = false
     if self:IsHpEnterDeathStory() then
-      self:SetEnableBeCondemned(ECondemnState.WaitEnterDefeated)
       self:BeforeBePenalize()
       self:SendPenalizeStoryEvent()
       Res = true
     elseif self:GetAttr("Hp") <= 0 then
-      self:SetEnableBeCondemned(ECondemnState.WaitEnterDefeated)
       self:BeforeBePenalize()
       Res = Role:UsePenalizeSkill(self.Eid)
     elseif not self:HasAirWallBetweenPosition(Role) then
@@ -70,6 +68,7 @@ function Component:Penalize(PlayerId)
       Role:ClientShowToast(UIConst.Tip_CommonToast, GText("TOAST_PENALIZEINVALID"))
     end
     if Res then
+      self:SetEnableBeCondemned(ECondemnState.WaitEnterDefeated)
       self:DisableToughnessRecover()
       self:DefeatedRecoverToIdleSuccess()
     else
@@ -93,9 +92,7 @@ function Component:HideDefeatedUI()
   end
   local DefeatedUI = UIManager:GetUIObj("DefeatedInteract")
   if DefeatedUI then
-    DefeatedUI:StopAllAnimations()
-    DefeatedUI:PlayAnimation(DefeatedUI.Press)
-    DefeatedUI:TryShowPhoneUI(false)
+    DefeatedUI:RemoveExecuteItem(self, "Press")
   end
 end
 

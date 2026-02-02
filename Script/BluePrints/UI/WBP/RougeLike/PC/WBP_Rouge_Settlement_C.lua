@@ -62,7 +62,7 @@ function WBP_Rouge_Settlement_C:OnExitButtonClicked()
       return
     end
     DebugPrint("WBP_Rouge_Settlement_C: OnExitButtonClicked")
-    self:BlockAllUIInput(true)
+    self:BlockAllUIInput(true, "SP_DisplayOnly")
     self:BindToAnimationFinished(self.Settlement_Out, {
       self,
       self.OnOutAnimFinished

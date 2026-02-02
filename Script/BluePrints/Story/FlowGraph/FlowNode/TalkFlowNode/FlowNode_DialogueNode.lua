@@ -113,15 +113,15 @@ end
 
 function M:OnDialogueForceToEnd(DialogueId)
   local DialogueData = self:TryGetCurrentDialogueData()
+  local FlowAsset = self:GetFlowAsset()
+  FlowAsset:CloseTalkActorsOptimization()
   DebugPrint("DialogueFlowNode: OnDialogueForceToEnd", DialogueId)
   if DialogueData and DialogueData.DialogueId == DialogueId then
     if self.SequencePlayer then
       DebugPrint("DialogueFlowNode: OnDialogueForceToEnd Skip", DialogueId, self.SequenceFinishIndex)
       if self.SequenceFinishIndex and -1 ~= self.SequenceFinishIndex then
         self.RuntimeProxy:SetInSkip(true)
-        self:EnableResetPhysic(true)
         self.SequencePlayer:SkipToDialogueEnd(DialogueId)
-        self:EnableResetPhysic(false)
         self.RuntimeProxy:SetInSkip(false)
         self:OnSequencePause()
       end
@@ -168,14 +168,8 @@ function M:IterForward()
   end
   if self.SequencePlayer then
     self.SequenceFinishIndex = self.Index
-    local Index = self.Index
     if not self.SequencePlayer:TryPlayToDialogueId(DialogueData.DialogueId) then
-      if 1 == Index then
-        self:EnableResetPhysic(false)
-      end
       self:IterForward()
-    elseif 1 == Index then
-      self:EnableResetPhysic(false)
     end
   else
     local FlowDialogueData = FFlowDialogue.New(DialogueData, self.DialogueSettingsTable[DialogueData.DialogueId])
@@ -211,24 +205,17 @@ function M:BindSequenceActors()
   local TalkTask = self:TryGetTalkTask()
   local BindNpcs = TalkTask.TalkTaskData.TalkActors
   local LevelSequence = self.LevelSequence
-  self.SavedLodActor = {}
-  local bMobile = CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile"
   for _, NpcData in pairs(BindNpcs) do
     local UnitId = NpcData.TalkActorId
     local TalkActorData = TalkContext:GetTalkActorData(TalkTask, UnitId)
     if TalkActorData and TalkActorData.TalkActor then
       local NpcIdTag = tostring(UnitId)
+      DialogueAssets:TryCacheNpcTransform(TalkActorData.TalkActor)
       if UTalkFunctionLibrary.IsSequenceOwnTag(LevelSequence, NpcIdTag) then
         LevelSequenceActor:AddBindingByTag(NpcIdTag, TalkActorData.TalkActor, false)
-        local TalkActor = TalkActorData.TalkActor
-        if TalkActor.Mesh and not bMobile then
-          TalkActor.Mesh:SetForcedLOD(1)
-          self.SavedLodActor[TalkActor] = TalkActor.Mesh:GetForcedLOD()
-        end
       end
     end
   end
-  self:EnableResetPhysic(true)
   local UPostProcessFunctionLibrary = LoadClass(LibraryPath)
   if UPostProcessFunctionLibrary and UPostProcessFunctionLibrary.MobileCloseLights then
     UPostProcessFunctionLibrary.MobileCloseLights(LevelSequenceActor)
@@ -317,13 +304,26 @@ function M:Skip()
   if self.RuntimeProxy then
     self.RuntimeProxy:SetInSkip(true)
   end
+  local FlowAsset = self:GetFlowAsset()
+  FlowAsset:CloseTalkActorsOptimization()
+  local StopDialogueId
+  if FlowAsset and FlowAsset.bIsInRestartDialogueSkip then
+    StopDialogueId = FlowAsset.RestartDialogueId
+  end
+  local DialogueData = self:TryGetCurrentDialogueData()
+  local DialogueId = DialogueData and DialogueData.DialogueId
   repeat
+    if DialogueId and DialogueId == StopDialogueId then
+      break
+    end
     self:TrySkipToDialogueStart()
     self:SkipCurrentDialogue()
     if self.RuntimeProxy then
       self.RuntimeProxy:SetInSkip(true)
     end
     self:IterForward()
+    DialogueData = self:TryGetCurrentDialogueData()
+    DialogueId = DialogueData and DialogueData.DialogueId
   until self:IsDialogueNodeFinish()
   if self.RuntimeProxy then
     self.RuntimeProxy:SetInSkip(false)
@@ -354,20 +354,6 @@ function M:Resume()
   end
 end
 
-function M:EnableResetPhysic(bEnable)
-  local TalkContext = GWorld.GameInstance:GetTalkContext()
-  local TalkTask = self:TryGetTalkTask()
-  local BindNpcs = TalkTask.TalkTaskData.TalkActors
-  self.SavedLodActor = {}
-  for _, NpcData in pairs(BindNpcs) do
-    local UnitId = NpcData.TalkActorId
-    local TalkActorData = TalkContext:GetTalkActorData(TalkTask, UnitId)
-    if TalkActorData and IsValid(TalkActorData.TalkActor) then
-      TalkActorData.TalkActor.EnableResetPhysic = bEnable
-    end
-  end
-end
-
 function M:K2_Cleanup()
   if not self.RuntimeProxy then
     return
@@ -375,14 +361,6 @@ function M:K2_Cleanup()
   self.RuntimeProxy.OnPlayDialogue:Clear()
   self.RuntimeProxy.OnEndPlayDialogue:Clear()
   self.SequencePlayer.OnFinished:Clear()
-  if self.SavedLodActor then
-    for TalkActor, Lod in pairs(self.SavedLodActor) do
-      if TalkActor.Mesh then
-        TalkActor.Mesh:SetForcedLOD(Lod)
-      end
-    end
-    self.SavedLodActor = nil
-  end
 end
 
 return M

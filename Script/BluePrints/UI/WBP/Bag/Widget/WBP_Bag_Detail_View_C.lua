@@ -92,6 +92,9 @@ function WBP_Bag_Detail_View_C:RefreshDetailInfo(StuffServerData, StuffConfigDat
     elseif self.StuffType == BagCommon.StuffType.Resource and StuffConfigData.Type == "Read" then
       self.Btn_Locked:SetVisibility(UE4.ESlateVisibility.Collapsed)
       self.Key_Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    elseif self.StuffType == BagCommon.StuffType.Draft then
+      self.Btn_Locked:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      self.Key_Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
     elseif nil ~= self.OwnerContent and -1 == self.OwnerContent.Price then
       self.Btn_Locked:SetVisibility(UE4.ESlateVisibility.Collapsed)
       self.Key_Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -143,9 +146,9 @@ function WBP_Bag_Detail_View_C:RefreshDetailInfo(StuffServerData, StuffConfigDat
     Icon = self.OwnerContent.Icon
   }
   self.Item:Init(ItemObject)
-  self.Item:HideOrShowTimeLimitWidget(true)
+  self.Item:HideNotNeccessaryWidget(true)
   self.Item:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
-  if self.StuffType == "Mod" and nil ~= self.OwnerContent then
+  if self.StuffType == BagCommon.StuffType.Mod and nil ~= self.OwnerContent then
     self:UpdateStarStyle(self.OwnerContent.Level)
     self.Star:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   else
@@ -224,10 +227,12 @@ function WBP_Bag_Detail_View_C:RefreshInfoWithWeapon(PlayerAvatar, StuffServerDa
     self.Panel_Skill:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
   self.Panel_Property:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.Panel_Draft:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_TimeLimit:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_Describe:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_Effect:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_Tag:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Panel_MountHint:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.List_ModStar:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Img_Attribute:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Img_Aura:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -299,9 +304,11 @@ function WBP_Bag_Detail_View_C:RefreshInfoWithMod(PlayerAvatar, StuffServerData,
   self.Swtich02:SetActiveWidgetIndex(1)
   self.Panel_TimeLimit:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Text_SubTitle:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Panel_Draft:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_Describe:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_Skill:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_Property:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Panel_MountHint:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Img_Attribute:SetVisibility(UE4.ESlateVisibility.Collapsed)
   if StuffServerData.WeaponUuids:Length() > 0 or StuffServerData.CharUuids:Length() > 0 then
     self.Text_Equipped:SetText(GText("UI_Bag_Equipped"))
@@ -360,23 +367,78 @@ function WBP_Bag_Detail_View_C:RefreshInfoWithResource(PlayerAvatar, StuffServer
   if DataMgr.LimitedTimeResource[StuffConfigData.ResourceId] then
     local LimitedData = ItemUtils.GetItemLimitedInfo(StuffConfigData.ResourceId)
     if LimitedData then
-      local diff = os.difftime(LimitedData.EndTime, TimeUtils.NowTime())
+      local diff = os.difftime(LimitedData.EndTime.GetTime(), TimeUtils.NowTime())
       if diff < 86400 then
         self.BG_TimeLimit:SetColorAndOpacity(self.Color_Red)
       else
         self.BG_TimeLimit:SetColorAndOpacity(self.Color_Orange)
       end
       self.Panel_TimeLimit:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-      local RemainTimeDict, TimeCount = UIUtils.GetLeftTimeStrStyle2(LimitedData.EndTime, TimeUtils.NowTime())
+      local RemainTimeDict, TimeCount = UIUtils.GetLeftTimeStrStyle2(LimitedData.EndTime.GetTime(), TimeUtils.NowTime())
       self.Time_CountDown:SetTimeText(nil, RemainTimeDict)
       self.Text_Expiration:SetText(GText("UI_Date_End"))
-      self.Time_Expiration:SetTimeText(LimitedData.EndTime, UIConst.EnumTimeStyleType.YMDAndHMS)
+      self.Time_Expiration:SetTimeText(LimitedData.EndTime.GetTime(), UIConst.EnumTimeStyleType.YMDAndHMS)
     else
       self.Panel_TimeLimit:SetVisibility(UE4.ESlateVisibility.Collapsed)
     end
   else
     self.Panel_TimeLimit:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
+  if StuffConfigData.ResourceSType == "MountItem" then
+    local MountItemVarData = StuffConfigData.FunctionVars
+    if MountItemVarData then
+      local MountInfo = DataMgr.Mount[MountItemVarData.Id]
+      if MountInfo and MountInfo.UseLimitDes then
+        self.Text_MountHint:SetText(GText(MountInfo.UseLimitDes))
+        self.Panel_MountHint:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      else
+        self.Panel_MountHint:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      end
+    else
+      self.Panel_MountHint:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+  else
+    self.Panel_MountHint:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  self.List_ModStar:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Swtich01:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Panel_Draft:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Panel_Skill:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Panel_Effect:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Panel_Tag:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Panel_Equipped:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Panel_Property:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Img_Attribute:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Img_Aura:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Polarity_1:SetVisibility(UIConst.VisibilityOp.Collapsed)
+end
+
+function WBP_Bag_Detail_View_C:RefreshInfoWithDraft(PlayerAvatar, StuffServerData, StuffConfigData)
+  self.Text_Hold01:SetText(GText("UI_Bag_Sellconfirm_Hold"))
+  self.Swtich02:SetActiveWidgetIndex(1)
+  if StuffConfigData.DetailDes ~= nil then
+    self.Text_Describe:SetText(GText(StuffConfigData.DetailDes))
+    self.Panel_Describe:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.Panel_Describe:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  self.Panel_Draft:ClearChildren()
+  local ItemInfoWidget = UIManager(self):CreateWidget("WidgetBlueprint'/Game/UI/WBP/Bag/Widget/WBP_Bag_Tips_Draft.WBP_Bag_Tips_Draft_C'", false)
+  if ItemInfoWidget then
+    local DraftSlot = self.Panel_Draft:AddChildToOverlay(ItemInfoWidget)
+    if DraftSlot then
+      DraftSlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+      DraftSlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+    end
+    self.ItemInfoWidget = ItemInfoWidget
+    ItemInfoWidget.ParentWidget = self
+    ItemInfoWidget:InitItemInfo(BagCommon.StuffType.Draft, StuffConfigData.DraftId, self.OwnerContent.Uuid, self.OwnerContent)
+  end
+  self.Panel_Draft:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.Panel_LongDescribe:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Panel_TimeLimit:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Text_SubTitle:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Panel_MountHint:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.List_ModStar:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Swtich01:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_Skill:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -389,7 +451,7 @@ function WBP_Bag_Detail_View_C:RefreshInfoWithResource(PlayerAvatar, StuffServer
   self.Polarity_1:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
-function WBP_Bag_Detail_View_C:RefreshInfoWithOther(StuffConfigData)
+function WBP_Bag_Detail_View_C:RefreshInfoWithOther(PlayerAvatar, StuffServerData, StuffConfigData)
   self.Text_ItemName:SetText(GText(StuffConfigData.ResourceName))
   self.Text_SubTitle:SetText(GText(DataMgr.BagTab[StuffConfigData.MaterialClassify].TabName))
   self.Text_SubTitle:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
@@ -404,6 +466,7 @@ function WBP_Bag_Detail_View_C:RefreshInfoWithOther(StuffConfigData)
   end
   self.Swtich01:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.List_ModStar:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Panel_Draft:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_Skill:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_TimeLimit:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_LongDescribe:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -412,6 +475,7 @@ function WBP_Bag_Detail_View_C:RefreshInfoWithOther(StuffConfigData)
   self.Panel_Equipped:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_Property:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Img_Attribute:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Panel_MountHint:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Img_Aura:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Polarity_1:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
@@ -536,11 +600,23 @@ function WBP_Bag_Detail_View_C:UpdateBottomSingleBtnInfo(FromStr, Callback, Pare
   if "WeaponAndMod" == FromStr then
     self.Btn01:UnBindEventOnClickedByObj(ParentWidget)
     self.Btn01:SetText(GText("UI_BAG_Gotoarmory"))
+    self.Btn01:SetReddot(false)
     self.Btn01:BindEventOnClicked(ParentWidget, Callback)
+    self.Img_Yes:SetBrushResourceObject(LoadObject("/Game/UI/Texture/Static/Atlas/Common/T_Com_IconYes.T_Com_IconYes"))
+    self.Img_Yes:SetBrushTintColor(UE4.UUIFunctionLibrary.StringToSlateColor("E1B453FF"))
     self.Panel_Button:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  elseif "Mount" == FromStr then
+    self.Btn01:UnBindEventOnClickedByObj(ParentWidget)
+    self.Btn01:SetText(GText("UI_JumpMount"))
+    self.Btn01:SetReddot(false)
+    self.Btn01:BindEventOnClicked(ParentWidget, Callback)
+    self.Img_Yes:SetBrushResourceObject(LoadObject("/Game/UI/Texture/Static/Atlas/Common/T_Com_IconYes.T_Com_IconYes"))
+    self.Img_Yes:SetBrushTintColor(UE4.UUIFunctionLibrary.StringToSlateColor("E1B453FF"))
+    self.Panel_Button:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   elseif "Read" == FromStr then
     self.Btn01:UnBindEventOnClickedByObj(ParentWidget)
     self.Btn01:SetText(GText("UI_BAG_Read"))
+    self.Btn01:SetReddot(false)
     self.Btn01:BindEventOnClicked(ParentWidget, Callback)
     self.Img_Yes:SetBrushResourceObject(LoadObject("/Game/UI/Texture/Static/Atlas/Common/T_Com_IconYes.T_Com_IconYes"))
     self.Img_Yes:SetBrushTintColor(UE4.UUIFunctionLibrary.StringToSlateColor("E1B453FF"))
@@ -558,8 +634,11 @@ function WBP_Bag_Detail_View_C:UpdateBottomSingleBtnInfo(FromStr, Callback, Pare
   elseif "ConsumableItem" == FromStr then
     self.Btn01:UnBindEventOnClickedByObj(ParentWidget)
     self.Btn01:SetText(GText("UI_Consumable_Open"))
+    self.Btn01:SetReddot(false)
     self.Btn01.AudioEventPath = "event:/ui/common/click_btn_confirm"
     self.Btn01:BindEventOnClicked(ParentWidget, Callback)
+    self.Img_Yes:SetBrushResourceObject(LoadObject("/Game/UI/Texture/Static/Atlas/Common/T_Com_IconYes.T_Com_IconYes"))
+    self.Img_Yes:SetBrushTintColor(UE4.UUIFunctionLibrary.StringToSlateColor("E1B453FF"))
     self.Panel_Button:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   else
     self.Panel_Button:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -683,6 +762,15 @@ function WBP_Bag_Detail_View_C:GetWeaponTypeName(WeaponId)
         end
         WeaponTagData = DataMgr.WeaponTag[BowTag or "Bow02"] or {}
       end
+      if "Bow" == v then
+        local BowTag
+        for _, tag in pairs(BattleWeaponData.WeaponTag) do
+          if "Bow01" == tag then
+            BowTag = tag
+          end
+        end
+        WeaponTagData = DataMgr.WeaponTag[BowTag or "Bow02"] or {}
+      end
       if WeaponTagData.WeaponTagTextmap then
         WeaponName = GText(WeaponTagData.WeaponTagTextmap)
       end
@@ -732,6 +820,7 @@ function WBP_Bag_Detail_View_C:OnViewStuffAccessKey()
   end
   if TargetNavigateWidget then
     TargetNavigateWidget:SetFocus()
+    self.EMScrollBox_Detail:ScrollWidgetIntoView(TargetNavigateWidget)
   end
 end
 

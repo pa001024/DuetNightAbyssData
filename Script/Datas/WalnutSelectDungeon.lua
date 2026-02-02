@@ -1,5 +1,8 @@
 local T = {}
-T.RT_1 = {2, 3}
+T.RT_1 = {3, 3}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -8,14 +11,11 @@ return ReadOnly("WalnutSelectDungeon", {
     DungeonId = {
       60102,
       60202,
-      60302,
       60402,
       60502,
       60602,
       60702,
-      60802,
       60902,
-      61002,
       61102
     },
     DungeonRandomNum = T.RT_1,
@@ -26,14 +26,11 @@ return ReadOnly("WalnutSelectDungeon", {
     DungeonId = {
       62102,
       62202,
-      62302,
       62402,
       62502,
       62602,
       62702,
-      62802,
       62902,
-      63002,
       63102
     },
     DungeonRandomNum = T.RT_1,
@@ -44,14 +41,11 @@ return ReadOnly("WalnutSelectDungeon", {
     DungeonId = {
       64102,
       64202,
-      64302,
       64402,
       64502,
       64602,
       64702,
-      64802,
       64902,
-      65002,
       65102
     },
     DungeonRandomNum = T.RT_1,

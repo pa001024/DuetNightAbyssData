@@ -32,10 +32,16 @@ function M:Construct()
     end
   end
   if self.WBP_Shop_Recommend_Common_TItle_C_0 and self.WBP_Shop_Recommend_Common_TItle_C_0.Text_MainTitle then
-    self.WBP_Shop_Recommend_Common_TItle_C_0.Text_MainTitle:SetText(GText(BannerTab.Text1))
+    self.WBP_Shop_Recommend_Common_TItle_C_0:SetText(GText(BannerTab.Text1))
   end
   if self.Text_ActivityDesc_White then
     self.Text_ActivityDesc_White:SetText(GText("UI_Weapon_Preview"))
+  end
+  if self.Text_Detail and self.BannerTab.Text1Sub then
+    self.Text_Detail:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Text_Detail:SetText(GText(self.BannerTab.Text1Sub))
+  elseif self.Text_Detail then
+    self.Text_Detail:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
   self.ItemId = self.BannerTab.ItemId
   if self.ItemId and DataMgr.ShopItem[self.ItemId] then
@@ -105,14 +111,12 @@ function M:UpdateBuyBtn()
     self.Btn_Pay.WS_Detail:SetVisibility(ESlateVisibility.Visibie)
     self.Btn_Pay.Text_BuyNum:SetText(GText("UI_Banner_Remain_Buy") .. Count)
     self.Btn_Pay.Text_BtnBuy:SetText(GText("UI_SHOP_PURCHASE"))
-    self.Btn_Pay.Btn_Buy:SetForbidden(false)
-    self.Btn_Pay:PlayAnimation(self.Btn_Pay.Btn_Normal)
+    self.Btn_Pay:ForbidBtn(false)
     self.bForbidden = false
   else
     self.Btn_Pay.Group_BuyNum:SetVisibility(ESlateVisibility.Collapsed)
     self.Btn_Pay.Text_BtnEmpty:SetText(GText("UI_SHOP_SOLDOUT"))
-    self.Btn_Pay.Btn_Buy:SetForbidden(true)
-    self.Btn_Pay:PlayAnimation(self.Btn_Pay.Btn_Foridden)
+    self.Btn_Pay:ForbidBtn(true)
     self.Btn_Pay.WS_Detail:SetVisibility(ESlateVisibility.Collapsed)
     self.bForbidden = true
   end
@@ -130,7 +134,7 @@ function M:InitTime()
     end, true, 0, "Shop_Recommend_Gift4_1", true)
     self:NotifyTimeTick()
   else
-    self.HB_Time:SetVisibility(ESlateVisibility.Collapsed)
+    self.HB:SetVisibility(ESlateVisibility.Collapsed)
   end
 end
 

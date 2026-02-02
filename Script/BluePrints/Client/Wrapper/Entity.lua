@@ -12,6 +12,7 @@ function AvatarEntity:Init(eid, override)
   self.is_client_entity = true
   self.server_proxy = nil
   self.CallbackFuncs = {}
+  self.CallbackId2RPCName = {}
   override = override or false
   GWorld.EntityManager:AddEntity(self.id, self, override)
 end
@@ -46,7 +47,14 @@ end
 function AvatarEntity:CallServer(func_name, callback, ...)
   local CallbackId = GWorld:GenCallbackId()
   self.CallbackFuncs[CallbackId] = callback
+  self.CallbackId2RPCName[CallbackId] = func_name
   self:CallServerMethod(func_name, CallbackId, ...)
+end
+
+function AvatarEntity:BindCallbackFunc(callback)
+  local CallbackId = GWorld:GenCallbackId()
+  self.CallbackFuncs[CallbackId] = callback
+  return CallbackId
 end
 
 function AvatarEntity:LatentCallServer(func_name, ...)
@@ -74,7 +82,20 @@ function AvatarEntity:CallClientCallback(CallbackId, ...)
   if callback then
     callback(...)
   end
+  self:_TryProcessBlockUIMark(CallbackId)
   self.CallbackFuncs[CallbackId] = nil
+end
+
+function AvatarEntity:_TryProcessBlockUIMark(CallbackId)
+  local RPCName = self.CallbackId2RPCName[CallbackId]
+  if RPCName and self.BlockUIMarks then
+    if self.BlockUIMarks[RPCName] then
+      UIManager(GWorld.GameInstance):_BlockAllUIInput(false, RPCName)
+      DebugPrint(LXYTag, "Decorator:BlockAllUIInput Unlock", RPCName)
+    end
+    self.BlockUIMarks[RPCName] = nil
+  end
+  self.CallbackId2RPCName[CallbackId] = nil
 end
 
 function AvatarEntity:Destroy()
@@ -94,30 +115,9 @@ function AvatarEntity:GetSerializeOnline()
 end
 
 function AvatarEntity:RpcCache(FuncName, ...)
-  local SerializeOnline = self:GetSerializeOnline()
-  if not SerializeOnline then
-    return
-  end
-  if "RequestEnterOnline" == FuncName then
-    SerializeOnline.StartRpcCache()
-  end
-  if not SerializeOnline.GetStartRpcCacheState() then
-    return
-  end
-  SerializeOnline.log_rpc_call(FuncName, ...)
-  if "RequestLeaveOnline" == FuncName then
-    SerializeOnline.CloseRpcCache()
-    SerializeOnline.SaveRPCCalls()
-  end
 end
 
 function AvatarEntity:SaveRPCCalls()
-  local SerializeOnline = self:GetSerializeOnline()
-  if not SerializeOnline then
-    return
-  end
-  SerializeOnline.CloseRpcCache()
-  SerializeOnline.SaveRPCCalls()
 end
 
 return {AvatarEntity = AvatarEntity}

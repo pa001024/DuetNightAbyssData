@@ -167,7 +167,7 @@ function M:UpdateLimitTime()
     return
   end
   local StartTiem = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(TimeUtils.NowTime())
-  local EndTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(self.ShopItemData.EndTime)
+  local EndTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(self.ShopItemData.EndTime and self.ShopItemData.EndTime.GetTime())
   local RemainTime = UKismetMathLibrary.Subtract_DateTimeDateTime(EndTime, StartTiem)
   local RemainTimeStr = ""
   local TimeCount = 0

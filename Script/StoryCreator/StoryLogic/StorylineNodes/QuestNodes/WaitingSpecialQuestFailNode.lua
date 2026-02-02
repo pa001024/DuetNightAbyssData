@@ -17,9 +17,7 @@ NodeInfo:]] .. self:ToString()
     Callback()
   end
   
-  CurrentEvent:SetFailCondition()
   CurrentEvent:AddFailNodeCallback(self, FinishNodeCallback)
-  CurrentEvent:WaitingFail()
 end
 
 function WaitingSpecialQuestFailNode:Clear()

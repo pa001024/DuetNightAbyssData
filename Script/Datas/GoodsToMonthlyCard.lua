@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -11,9 +14,12 @@ return ReadOnly("GoodsToMonthlyCard", {
     [6] = 10010,
     [7] = 10011,
     [8] = 10012,
-    [9] = 10001,
-    [10] = 10002,
-    [11] = 10003,
-    [12] = 10004
+    [9] = 10013,
+    [10] = 10014,
+    [11] = 10015,
+    [12] = 10001,
+    [13] = 10002,
+    [14] = 10003,
+    [15] = 10004
   }
 })

@@ -29,16 +29,21 @@ function M:GetPreloadAssetPathFromLua(InObjId, PrelaodInfo)
   end
   PrelaodInfo.RoleId = RoleInfo.RoleId
   PrelaodInfo.SkinId = RoleInfo.SkinId
+  if RoleInfo.MountDatas and 0 ~= RoleInfo.MountDatas.MountId then
+    PrelaodInfo.MountId = RoleInfo.MountDatas.MountId
+  end
   if RoleInfo.AppearanceSuit then
     print(_G.LogTag, "RegionPlayerInitInfo AppearanceSuitInfo")
     local AppearanceSuitInfo = RoleInfo.AppearanceSuit
     local AccessorySuit = AppearanceSuitInfo.AccessorySuit or {}
     local PartMeshAccessoryId, _ = self:GetOwnerPartMeshInfo(RoleInfo)
     PrelaodInfo.AccessoryIds:Add(PartMeshAccessoryId)
-    for _, AccessoryTypeIdx in pairs(CommonConst.NewCharAccessoryTypes) do
+    for _Type, AccessoryTypeIdx in pairs(CommonConst.NewCharAccessoryTypes) do
       local AccessoryId = AccessorySuit[AccessoryTypeIdx]
-      if AccessoryId and AccessoryId ~= PartMeshAccessoryId then
+      if not DataMgr.CharPartType[_Type] and AccessoryId and AccessoryId ~= PartMeshAccessoryId then
         PrelaodInfo.AccessoryIds:Add(AccessoryId)
+      elseif DataMgr.CharPartType[_Type] then
+        PrelaodInfo.PartIds:Add(AccessoryId)
       end
     end
   end
@@ -126,7 +131,7 @@ end
 
 function M:AfterBornNewChar(ObjId, BornedChar)
   local Avatar = GWorld:GetAvatar()
-  if nil == Avatar then
+  if nil == Avatar or nil == Avatar.OtherRoleInfo then
     return
   end
   local RealObjId = CommonUtils.Str2ObjId(ObjId)
@@ -135,6 +140,19 @@ function M:AfterBornNewChar(ObjId, BornedChar)
     return
   end
   Avatar:InitOnlineStateAfterBorn(RealObjId, RoleInfo)
+end
+
+function M:ClearAllTempRoleInfo()
+  local Avatar = GWorld:GetAvatar()
+  if nil == Avatar then
+    return
+  end
+  if not Avatar.OtherRoleInfo then
+    return
+  end
+  if Avatar.DestoryAllOthers then
+    Avatar:DestoryAllOthers()
+  end
 end
 
 return M

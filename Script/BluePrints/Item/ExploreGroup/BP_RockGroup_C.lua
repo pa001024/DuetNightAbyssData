@@ -47,6 +47,9 @@ function M:OnRingRockFinish(IsRightOne, Eid)
   if not self.HasWrongOne then
     self:ChangeState("Manual", 0, self.FinishStateId)
   else
+    if self.Rocks:Num() <= 0 then
+      self:GetAllRocks()
+    end
     for _, v in pairs(self.Rocks) do
       v.Finish = false
       v.Energy = 0
@@ -86,6 +89,9 @@ end
 function M:OnActive()
   self.RotateHalf = not self.RotateHalf
   self.CurRotate = 0
+  if self.Rocks:Num() <= 0 or not self.Rocks[1] then
+    self:GetAllRocks()
+  end
   local CurRot = self.Rocks[1]:K2_GetActorRotation()
   self.TargetRotation = FRotator(CurRot.Pitch, CurRot.Yaw + tonumber(string.format("%.1f", self.RotateNum)) % 1 * 360.0, CurRot.Roll)
   self:SetActorTickEnabled(true)

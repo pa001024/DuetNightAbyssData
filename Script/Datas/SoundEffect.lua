@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -386,6 +389,42 @@ return ReadOnly("SoundEffect", {
     SoundId = 623,
     SoundPath = "event:/sfx/pet/Oubo/skill01_burst"
   },
+  [624] = {
+    SoundId = 624,
+    SoundPath = "event:/sfx/enemy/NE/Wuyou/skill01_hit"
+  },
+  [625] = {
+    SoundId = 625,
+    SoundPath = "event:/sfx/pet/Wuyou/wuyou02_skill01_shot"
+  },
+  [626] = {
+    SoundId = 626,
+    SoundPath = "event:/sfx/pet/Wuyou/wuyou02_skill01_hit"
+  },
+  [627] = {
+    SoundId = 627,
+    SoundPath = "event:/sfx/pet/Wuyou/wuyou03_skill01_fx"
+  },
+  [628] = {
+    SoundId = 628,
+    SoundPath = "event:/sfx/enemy/NE/Wuyou/skill01_hit"
+  },
+  [629] = {
+    SoundId = 629,
+    SoundPath = "event:/sfx/enemy/NE/Wuyou/skill01_hit"
+  },
+  [801] = {
+    SoundId = 801,
+    SoundPath = "event:/sfx/mnt/$PlayerName$/fly"
+  },
+  [802] = {
+    SoundId = 802,
+    SoundPath = "event:/sfx/mnt/$PlayerName$/GroundIdle"
+  },
+  [803] = {
+    SoundId = 803,
+    SoundPath = "event:/sfx/mnt/$PlayerName$/die_auto"
+  },
   [1001] = {
     NumLimit = 5,
     SoundId = 1001,
@@ -645,6 +684,10 @@ return ReadOnly("SoundEffect", {
     SoundId = 3002,
     SoundPath = "event:/sfx/btc/common/footstep_costume_yongzhuang"
   },
+  [3003] = {
+    SoundId = 3003,
+    SoundPath = "event:/sfx/btc/common/footstep_costume_zhiliu_coin"
+  },
   [3101] = {
     NumLimit = 5,
     SoundId = 3101,
@@ -655,10 +698,10 @@ return ReadOnly("SoundEffect", {
     SoundId = 3102,
     SoundPath = "event:/sfx/btc/common/huanwen_costume_yongzhuang"
   },
-  [3201] = {
+  [3103] = {
     NumLimit = 5,
-    SoundId = 3201,
-    SoundPath = "event:/sfx/common/player/action/death01"
+    SoundId = 3103,
+    SoundPath = "event:/sfx/btc/common/huanwen_costume_zhiliu"
   },
   [3301] = {
     SoundId = 3301,
@@ -668,6 +711,10 @@ return ReadOnly("SoundEffect", {
     SoundId = 3302,
     SoundPath = "event:/sfx/btc/summer/fallattack"
   },
+  [3303] = {
+    SoundId = 3303,
+    SoundPath = "event:/sfx/btc/zhiliu/fallattack"
+  },
   [3401] = {
     SoundId = 3401,
     SoundPath = "event:/sfx/btc/starry/bulletjump"
@@ -675,6 +722,18 @@ return ReadOnly("SoundEffect", {
   [3402] = {
     SoundId = 3402,
     SoundPath = "event:/sfx/btc/summer/bulletjump"
+  },
+  [3403] = {
+    SoundId = 3403,
+    SoundPath = "event:/sfx/btc/zhiliu/bulletjump"
+  },
+  [3502] = {
+    SoundId = 3502,
+    SoundPath = "event:/sfx/common/player/action/death01"
+  },
+  [3601] = {
+    SoundId = 3601,
+    SoundPath = "event:/sfx/btc/common/fw_qrj"
   },
   [10001] = {
     NumLimit = 5,
@@ -866,6 +925,10 @@ return ReadOnly("SoundEffect", {
     SoundId = 150309,
     SoundPath = "event:/sfx/weapon/Polearm/Kezhou/mod01_fly"
   },
+  [150310] = {
+    SoundId = 150310,
+    SoundPath = "event:/sfx/player/Kezhou/passive_end"
+  },
   [160101] = {
     NumLimit = 5,
     SoundId = 160101,
@@ -1035,7 +1098,7 @@ return ReadOnly("SoundEffect", {
   [240104] = {
     NumLimit = 5,
     ReplaceSoundID = {
-      [240199] = "event:/sfx/player/Baiheng01/Swimring"
+      [240199] = "event:/sfx/player/Baiheng01/skill02_team_effect"
     },
     SoundId = 240104
   },
@@ -1124,6 +1187,46 @@ return ReadOnly("SoundEffect", {
     SoundId = 320105,
     SoundPath = "event:/sfx/common/player/hit/weapon/heavySwordHit_heavy"
   },
+  [320201] = {
+    SoundId = 320201,
+    SoundPath = "event:/sfx/player/Kami/knife_back"
+  },
+  [320202] = {
+    SoundId = 320202,
+    SoundPath = "event:/sfx/player/Kami/knife_explode"
+  },
+  [320203] = {
+    SoundId = 320203,
+    SoundPath = "event:/sfx/player/Kami/knife_idle_loop_1"
+  },
+  [320204] = {
+    SoundId = 320204,
+    SoundPath = "event:/sfx/player/Kami/knife_idle_loop_2"
+  },
+  [320205] = {
+    SoundId = 320205,
+    SoundPath = "event:/sfx/player/Kami/skill01_hit"
+  },
+  [320206] = {
+    SoundId = 320206,
+    SoundPath = "event:/sfx/player/Kami/skill01_loop"
+  },
+  [320207] = {
+    SoundId = 320207,
+    SoundPath = "event:/sfx/player/Kami/passive_hit"
+  },
+  [320208] = {
+    SoundId = 320208,
+    SoundPath = "event:/sfx/player/Kami/knife_hit"
+  },
+  [320209] = {
+    SoundId = 320209,
+    SoundPath = "event:/sfx/common/player/hit/weapon/katanaHit_normal"
+  },
+  [320210] = {
+    SoundId = 320210,
+    SoundPath = "event:/sfx/player/Kami/skill01_shoot"
+  },
   [330101] = {
     NumLimit = 3,
     SoundId = 330101,
@@ -1187,27 +1290,27 @@ return ReadOnly("SoundEffect", {
   [410201] = {
     NumLimit = 5,
     SoundId = 410201,
-    SoundPath = "event:/sfx/player/Zhiliu/skill01_01_cast"
+    SoundPath = "event:/sfx/player/$PlayerName$/skill01_01_cast"
   },
   [410202] = {
     NumLimit = 5,
     SoundId = 410202,
-    SoundPath = "event:/sfx/player/Zhiliu/passive_loop"
+    SoundPath = "event:/sfx/player/$PlayerName$/passive_loop"
   },
   [410204] = {
     NumLimit = 5,
     SoundId = 410204,
-    SoundPath = "event:/sfx/player/Zhiliu/skill02_tt_cast"
+    SoundPath = "event:/sfx/player/$PlayerName$/skill02_tt_cast"
   },
   [410205] = {
     NumLimit = 4,
     SoundId = 410205,
-    SoundPath = "event:/sfx/player/Zhiliu/skill02_td_explode"
+    SoundPath = "event:/sfx/player/$PlayerName$/skill02_td_explode"
   },
   [410206] = {
     NumLimit = 5,
     SoundId = 410206,
-    SoundPath = "event:/sfx/player/Zhiliu/skill02_td_loop"
+    SoundPath = "event:/sfx/player/$PlayerName$/skill02_td_loop"
   },
   [410207] = {
     NumLimit = 5,
@@ -1254,6 +1357,11 @@ return ReadOnly("SoundEffect", {
     NumLimit = 3,
     SoundId = 420103,
     SoundPath = "event:/sfx/player/Yuming/skill01_fx_hit"
+  },
+  [420104] = {
+    NumLimit = 3,
+    SoundId = 420104,
+    SoundPath = "event:/sfx/player/Yuming/grade6"
   },
   [420201] = {
     NumLimit = 5,
@@ -3149,6 +3257,11 @@ return ReadOnly("SoundEffect", {
     SoundId = 950002,
     SoundPath = "event:/sfx/enemy/NE/Dajie/skill03_hit"
   },
+  [950003] = {
+    NumLimit = 5,
+    SoundId = 950003,
+    SoundPath = "event:/sfx/common/scene/shenmiao/jj_shield"
+  },
   [950101] = {
     NumLimit = 5,
     SoundId = 950101,
@@ -3170,6 +3283,10 @@ return ReadOnly("SoundEffect", {
   [950701] = {
     SoundId = 950701,
     SoundPath = "event:/sfx/common/enemy/hit/swordHit_normal"
+  },
+  [951001] = {
+    SoundId = 951001,
+    SoundPath = "event:/sfx/common/enemy/hit/swordHit_light"
   },
   [980101] = {
     NumLimit = 1,
@@ -3470,6 +3587,27 @@ return ReadOnly("SoundEffect", {
     SoundId = 2050404,
     SoundPath = "event:/sfx/weapon/Machinegun/Poxiao/hit_none",
     SubSoundId = 6
+  },
+  [2050501] = {
+    SoundId = 2050501,
+    SoundPath = "event:/sfx/weapon/Machinegun/Sanjiao/behit_01",
+    SubSoundId = 5
+  },
+  [2050502] = {
+    SoundId = 2050502,
+    SoundPath = "event:/sfx/weapon/Machinegun/Sanjiao/behit_01"
+  },
+  [2050503] = {
+    SoundId = 2050503,
+    SoundPath = "event:/sfx/weapon/Machinegun/Sanjiao/explode"
+  },
+  [2050504] = {
+    SoundId = 2050504,
+    SoundPath = "event:/sfx/weapon/Machinegun/Sanjiao/shoot_fire_01"
+  },
+  [2050505] = {
+    SoundId = 2050505,
+    SoundPath = "event:/sfx/weapon/Machinegun/Sanjiao/explode_behit"
   },
   [2050601] = {
     SoundId = 2050601,

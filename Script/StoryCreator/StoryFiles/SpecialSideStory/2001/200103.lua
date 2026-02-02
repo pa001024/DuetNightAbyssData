@@ -35,11 +35,11 @@ return {
     {
       startStory = "17456575621327261",
       startPort = "Success",
-      endStory = "175195993301219061",
+      endStory = "17695149075574385",
       endPort = "In"
     },
     {
-      startStory = "175195993301219061",
+      startStory = "17695149075574385",
       startPort = "Success",
       endStory = "174687711753614252462",
       endPort = "In"
@@ -249,6 +249,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -302,6 +303,7 @@ return {
             pos = {x = 1434.5164835164835, y = 741.1758241758241},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "Npc_200048Bai_1210093"
             }
@@ -594,6 +596,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -661,6 +664,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -708,6 +712,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -818,6 +823,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1160,6 +1166,7 @@ return {
             pos = {x = 2291.012647199348, y = 690.6131643292769},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "N",
               GuideName = "Npc_200048Bai_1210093"
             }
@@ -1607,6 +1614,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1686,6 +1694,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1755,6 +1764,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1795,6 +1805,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1877,6 +1888,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1959,6 +1971,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2042,6 +2055,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2102,6 +2116,7 @@ return {
             pos = {x = 3472.9621261343864, y = -258.7872877665792},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "P200054Pet"
             }
@@ -2113,6 +2128,7 @@ return {
             pos = {x = 3855.26747663427, y = -299.12114907790226},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "P200054Pet"
             }
@@ -2147,6 +2163,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2281,7 +2298,7 @@ return {
       key = "174687711753614252462",
       type = "StoryNode",
       name = "捉宠物",
-      pos = {x = 2357.7798175274415, y = 329.3638408068694},
+      pos = {x = 2362.224261971886, y = 314.91939636242495},
       propsData = {
         QuestId = 20010306,
         QuestDescriptionComment = "",
@@ -2466,6 +2483,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2513,6 +2531,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2583,7 +2602,7 @@ return {
       key = "175195993301219061",
       type = "GameModeCompleteNode",
       name = "抓捕魔灵",
-      pos = {x = 2115.987460815047, y = 333.11598746081506},
+      pos = {x = 2118.4956899131375, y = 523.9783969407359},
       propsData = {
         QuestId = 20010305,
         QuestDescriptionComment = "",
@@ -2608,6 +2627,140 @@ return {
       questNodeData = {
         lineData = {},
         nodeData = {},
+        commentData = {}
+      }
+    },
+    ["17695149075574385"] = {
+      isStoryNode = true,
+      key = "17695149075574385",
+      type = "StoryNode",
+      name = "抓捕魔灵",
+      pos = {x = 2113.6256172994485, y = 321.2925268450745},
+      propsData = {
+        QuestId = 20010305,
+        QuestDescriptionComment = "",
+        QuestDescription = "Description_200103_5",
+        QuestDeatil = "Content_200103_5",
+        TaskRegionReName = "",
+        TaskSubRegionReName = "",
+        RecommendLevel = -1,
+        bIsStartQuest = false,
+        bIsEndQuest = false,
+        bIsNotifyGameMode = true,
+        bIsStartChapter = false,
+        bIsEndChapter = false,
+        bIsShowOnComplete = true,
+        bIsPlayBlackScreenOnComplete = false,
+        bIsPlayBlackScreenOnFail = false,
+        bIsDynamicEvent = false,
+        ResurgencePoint = "",
+        bUseQuestCoordinate = false,
+        bDeadTriggerQuestFail = false,
+        IsFairyLand = false,
+        SubRegionId = 101103,
+        SubRegionIdList = {},
+        StoryGuideType = "Point",
+        StoryGuidePointName = "P200054Pet",
+        JumpId = 0
+      },
+      questNodeData = {
+        lineData = {
+          {
+            startQuest = "17695149075574386",
+            startPort = "QuestStart",
+            endQuest = "17695149653285992",
+            endPort = "In"
+          },
+          {
+            startQuest = "17695149653285992",
+            startPort = "Out",
+            endQuest = "17695149904236492",
+            endPort = "In"
+          },
+          {
+            startQuest = "17695149904236492",
+            startPort = "Out",
+            endQuest = "17695149766256201",
+            endPort = "In"
+          },
+          {
+            startQuest = "17695149766256201",
+            startPort = "Success",
+            endQuest = "17695150154116758",
+            endPort = "In"
+          },
+          {
+            startQuest = "17695150154116758",
+            startPort = "Out",
+            endQuest = "17695149075574389",
+            endPort = "Success"
+          }
+        },
+        nodeData = {
+          ["17695149075574386"] = {
+            key = "17695149075574386",
+            type = "QuestStartNode",
+            name = "QuestStart",
+            pos = {x = 800, y = 300},
+            propsData = {ModeType = 0}
+          },
+          ["17695149075574389"] = {
+            key = "17695149075574389",
+            type = "QuestSuccessNode",
+            name = "QuestSuccess",
+            pos = {x = 2441.304347826087, y = 310.4347826086956},
+            propsData = {ModeType = 0}
+          },
+          ["17695149075574392"] = {
+            key = "17695149075574392",
+            type = "QuestFailNode",
+            name = "QuestFail",
+            pos = {x = 2800, y = 700},
+            propsData = {}
+          },
+          ["17695149653285992"] = {
+            key = "17695149653285992",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 1224, y = 313.6},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "Pet_Guide",
+              UnitId = -1
+            }
+          },
+          ["17695149766256201"] = {
+            key = "17695149766256201",
+            type = "AsyncConditionNode",
+            name = "异步等待条件完成",
+            pos = {x = 1796, y = 309.2},
+            propsData = {ConditionId = 20010305}
+          },
+          ["17695149904236492"] = {
+            key = "17695149904236492",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 1513.8185253152647, y = 279.6770045172219},
+            propsData = {
+              IsShow = true,
+              bOpenRangeEffect = false,
+              GuideType = "P",
+              GuideName = "P200054Pet"
+            }
+          },
+          ["17695150154116758"] = {
+            key = "17695150154116758",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 2112.2185253152643, y = 276.07700451722195},
+            propsData = {
+              IsShow = false,
+              bOpenRangeEffect = false,
+              GuideType = "P",
+              GuideName = "P200054Pet"
+            }
+          }
+        },
         commentData = {}
       }
     }

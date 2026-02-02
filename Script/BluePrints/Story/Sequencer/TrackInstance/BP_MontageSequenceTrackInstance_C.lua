@@ -6,7 +6,7 @@ function M:OnEndUpdateInputsEvent()
     if UTrackInstanceFunctionLibrary.IsPlayerJump(self, Input) then
       local NpcCharacter = self:GetBoundNpcCharacter()
       if IsValid(NpcCharacter) then
-        NpcCharacter:ForceResetDynamics(true)
+        NpcCharacter:ForceResetDynamics()
         break
       end
     end

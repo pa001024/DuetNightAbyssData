@@ -4,6 +4,7 @@ local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local SkillUtils = require("Utils.SkillUtils")
 local MiscUtils = require("Utils.MiscUtils")
 local CommonUtils = require("Utils.CommonUtils")
+local Mod = require("BluePrints.Client.CustomTypes.Mod").Mod
 local ModSlotUIData = ModDatas.ModSlotUIData
 local SelectedStuff = ModDatas.SelectedStuff
 local PolarityEditModePayload = ModDatas.PolarityEditModePayload
@@ -22,6 +23,7 @@ function M:Init()
   self.TargetMods = {}
   self:ResetUIData()
   self.SuitInfoCopyed = nil
+  self.Context = {}
 end
 
 function M:Destory()
@@ -59,6 +61,7 @@ function M:ResetUIData()
   self.MainUICase = ModCommon.MainUICase.Normal
   self.GamePadSelectedStuff = nil
   self.DummyAvatar_CopyMode = nil
+  self.CopyModeSenderName = nil
 end
 
 function M:GenerateSlotUIDatas(SuitIndex)
@@ -321,7 +324,7 @@ function M:ForceCalcSlotsCost(ExcludeModUuid, bTakeOff)
       local Mod = self:GetMod(ModUuid)
       if ExcludeMod.AddCharModCost or Mod.Polarity == ExcludeMod.ReducePolarityEffect[1] then
         self.CurSlots[SlotId] = ModSlotUIData.New()
-        self.CurSlots[SlotId]:Init(SlotId, self:GetTarget())
+        self.CurSlots[SlotId]:Init(SlotId, self:GetTarget(), SlotUIData.bEquiping)
         if not self:IsModUuidValid(self.CurSlots[SlotId].ModEid) then
           self:RemoveEquipedMod(SlotId, ModUuid)
           DirtySlotIds[SlotId] = ModUuid
@@ -443,7 +446,11 @@ function M:GetMod(ModUuid)
   if not self:IsModUuidValid(ModUuid) then
     return
   end
-  return self:GetAvatar().Mods[ModUuid]
+  local _Mod = self:GetAvatar().Mods[ModUuid]
+  if not _Mod and self.InvalidMods then
+    return self.InvalidMods[ModUuid]
+  end
+  return _Mod
 end
 
 function M:IsBugMod(ModUuid)
@@ -777,6 +784,35 @@ function M:IsModMatchSift(ModItem)
   return true
 end
 
+function M:DoModSearch(Mod, SearchText)
+  if string.isempty(SearchText) then
+    return true
+  end
+  if string.find(Mod:GetName(), SearchText) then
+    return true
+  end
+  local ModConf = Mod:Data()
+  if ModConf.AddAttrs then
+    for _, ModAttr in ipairs(ModConf.AddAttrs) do
+      local AttrConfig = DataMgr.AttrConfig[ModAttr.AttrName]
+      if AttrConfig and string.find(GText(AttrConfig.Name), SearchText) then
+        return true
+      end
+    end
+  end
+  if ModConf.PassiveEffectsDesc and string.find(GText(ModConf.PassiveEffectsDesc), SearchText) then
+    return true
+  end
+  if ModConf.FilterTag then
+    for _, Tag in ipairs(ModConf.FilterTag) do
+      if string.find(GText(Tag), SearchText) then
+        return true
+      end
+    end
+  end
+  return false
+end
+
 function M:StartPolarityEditMode()
   local SelectedStuff = self:GetSelectStuff()
   self.PolarityEditModeData = PolarityEditModePayload.New(self:GetCurrentSuitCost())
@@ -1036,6 +1072,21 @@ function M:IsRecommendAttr(AttrKey)
   return false
 end
 
+function M:GenerateEnhanceData()
+  self.InvalidMods = {}
+end
+
+function M:CreateEnhanceInvalidMod(DummyUuid, ModId)
+  local InvalidMod = Mod(DummyUuid, ModId, 0)
+  InvalidMod.Count = 0
+  self.InvalidMods[DummyUuid] = InvalidMod
+  return InvalidMod
+end
+
+function M:DisposeEnhanceData()
+  self.InvalidMods = nil
+end
+
 function M:_GenerateModUserOverCostMsg(TargetMod, PreviewLevel, User, Res)
   if not User then
     DebugPrint(ErrorTag, LXYTag, "Mod的User不应该为空，Mod的反向引用Uuid列表有问题， Mod：", TargetMod:GetName())
@@ -1203,6 +1254,18 @@ function M:GetOnceRunningGuide()
   local bRunning = self.bRunningGuide
   self.bRunningGuide = false
   return bRunning
+end
+
+function M:GetConvertMods(CurConvertPoolId)
+  local ShowMods = {}
+  local Mods = self:GetAvatar().Mods
+  for _, Mod in pairs(Mods) do
+    local ConvertPoolId, ConvertWeight = Mod:GetConvert()
+    if ConvertPoolId and (ConvertPoolId == CurConvertPoolId or nil == CurConvertPoolId) then
+      table.insert(ShowMods, Mod)
+    end
+  end
+  return ShowMods
 end
 
 AssembleComponents(M)

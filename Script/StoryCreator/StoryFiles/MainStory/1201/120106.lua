@@ -144,12 +144,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17308126725271623979",
-            startPort = "Out",
-            endQuest = "17308127132391624296",
-            endPort = "In"
-          },
-          {
             startQuest = "17645142396365689",
             startPort = "Out",
             endQuest = "17645142259085386",
@@ -207,6 +201,24 @@ return {
             startQuest = "17651998561923210560",
             startPort = "Out",
             endQuest = "17651998476793210277",
+            endPort = "In"
+          },
+          {
+            startQuest = "1730811239880405932",
+            startPort = "QuestStart",
+            endQuest = "17660600733511603187",
+            endPort = "In"
+          },
+          {
+            startQuest = "17308126725271623979",
+            startPort = "Out",
+            endQuest = "17660601326541603644",
+            endPort = "In"
+          },
+          {
+            startQuest = "17660601326541603644",
+            startPort = "Out",
+            endQuest = "17308127132391624296",
             endPort = "In"
           }
         },
@@ -268,6 +280,7 @@ return {
             pos = {x = 2526.7981625185953, y = 465.29657834425615},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1201/120106/12020701.12020701'",
               TalkType = "FixSimple",
@@ -291,6 +304,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -465,6 +479,40 @@ return {
               SoundPriority = 0,
               SoundType = 1
             }
+          },
+          ["17660600733511603187"] = {
+            key = "17660600733511603187",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1812, y = -92},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {104110},
+              bStoreToServer = false
+            }
+          },
+          ["17660601326541603644"] = {
+            key = "17660601326541603644",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2360.8421052631575, y = 688.9473684210526},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_1/0101_story_zhuyinzhizai_low",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {104110},
+              bStoreToServer = false
+            }
           }
         },
         commentData = {}
@@ -613,6 +661,12 @@ return {
             startPort = "Out",
             endQuest = "17649388219951283365",
             endPort = "In"
+          },
+          {
+            startQuest = "17627785072375028003",
+            startPort = "Out",
+            endQuest = "17659698609813847856",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -632,6 +686,7 @@ return {
               ModeType = 1,
               Id = 105701,
               StartIndex = 1,
+              LoadingId = 0,
               IsWhite = false
             }
           },
@@ -949,6 +1004,16 @@ return {
               MessageContent = "SwitchEnvFilRainDisable",
               UnitId = -1
             }
+          },
+          ["17659698609813847856"] = {
+            key = "17659698609813847856",
+            type = "SetGlobalSoundParamNode",
+            name = "设置全局音效参数",
+            pos = {x = 1740, y = -146},
+            propsData = {
+              ParamName = "east01_guangbing_volume",
+              ParamValue = 1
+            }
           }
         },
         commentData = {}
@@ -1231,6 +1296,7 @@ return {
             pos = {x = 1450.3179028132206, y = 455.9273570107137},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1201/120106/12020901.12020901'",
               TalkType = "FixSimple",
@@ -1254,6 +1320,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1357,6 +1424,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1368,7 +1436,7 @@ return {
                   TalkActorVisible = false
                 }
               },
-              FreezeWorldComposition = false,
+              FreezeWorldComposition = true,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
               OverrideFailBlend = false
@@ -1445,12 +1513,12 @@ return {
       key = "173087681291313454010",
       type = "StoryNode",
       name = "战前对话",
-      pos = {x = 1357.5921052631625, y = 437.7312030075189},
+      pos = {x = 1357.5921052631625, y = 440.889097744361},
       propsData = {
         QuestId = 12010605,
         QuestDescriptionComment = "",
-        QuestDescription = "Description_120106_5",
-        QuestDeatil = "Content_120106_5",
+        QuestDescription = "Description_120106_3",
+        QuestDeatil = "Content_120106_3",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -1547,6 +1615,7 @@ return {
             pos = {x = 3299.6302465934964, y = 620.8673695733588},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 12022101,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1201/120106/12022101.12022101'",
               TalkType = "FixSimple",
@@ -1570,6 +1639,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1633,6 +1703,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1657,6 +1728,7 @@ return {
             pos = {x = 3112.626262626263, y = 338.11111111111126},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1201/120106/SQ_Ver0101_SC021.SQ_Ver0101_SC021'",
               TalkType = "FixSimple",
@@ -1680,6 +1752,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1756,7 +1829,7 @@ return {
       key = "173087741508215085989",
       type = "StoryNode",
       name = "Boss战斗",
-      pos = {x = 1396.04563285685, y = 671.3227956254273},
+      pos = {x = 1394.04563285685, y = 671.3227956254273},
       propsData = {
         QuestId = 12010606,
         QuestDescriptionComment = "",
@@ -1793,12 +1866,6 @@ return {
             endPort = "Success"
           },
           {
-            startQuest = "17609504286721978342",
-            startPort = "Out",
-            endQuest = "17609503510361977359",
-            endPort = "In"
-          },
-          {
             startQuest = "17609504286721978343",
             startPort = "false",
             endQuest = "17609504429101978885",
@@ -1808,12 +1875,6 @@ return {
             startQuest = "173087741508315085993",
             startPort = "QuestStart",
             endQuest = "17609504286721978343",
-            endPort = "In"
-          },
-          {
-            startQuest = "17609504429101978885",
-            startPort = "Out",
-            endQuest = "17609503510361977359",
             endPort = "In"
           },
           {
@@ -1835,9 +1896,15 @@ return {
             endPort = "Fail"
           },
           {
-            startQuest = "17616448564418974084",
+            startQuest = "17650090489933200749",
             startPort = "Out",
-            endQuest = "17609504286721978342",
+            endQuest = "17616448564418974084",
+            endPort = "In"
+          },
+          {
+            startQuest = "17609504429101978885",
+            startPort = "Out",
+            endQuest = "17650090489933200749",
             endPort = "In"
           },
           {
@@ -1847,9 +1914,15 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17650090489933200749",
+            startQuest = "17616448564418974084",
             startPort = "Out",
-            endQuest = "17616448564418974084",
+            endQuest = "17609504286721978342",
+            endPort = "In"
+          },
+          {
+            startQuest = "17609504286721978342",
+            startPort = "Out",
+            endQuest = "17609503510361977359",
             endPort = "In"
           }
         },
@@ -1858,14 +1931,14 @@ return {
             key = "173087741508315085993",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 2503.319986383688, y = 333.26184684880326},
+            pos = {x = 1816.9295101932119, y = 328.4427992297556},
             propsData = {ModeType = 0}
           },
           ["173087741508315085994"] = {
             key = "173087741508315085994",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 3984.797732277572, y = 303.5593416360155},
+            pos = {x = 3991.2263037061434, y = 331.41648449315835},
             propsData = {ModeType = 0}
           },
           ["173087741508315085995"] = {
@@ -1879,7 +1952,7 @@ return {
             key = "173087750865415494962",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "异步设置玩家位置旋转",
-            pos = {x = 3722.9710235173566, y = 594.1964688496544},
+            pos = {x = 3727.256737803071, y = 600.6250402782258},
             propsData = {
               UnitId = 0,
               NewTargetPointName = "QuestPoint_RestartPoint",
@@ -1894,14 +1967,14 @@ return {
             key = "17609503510361977359",
             type = "WaitingSpecialQuestStartAndFinishNode",
             name = "等待特殊任务开始并完成",
-            pos = {x = 3422.2867892976587, y = 313.3511705685619},
+            pos = {x = 3419.1915512024207, y = 301.19878961618093},
             propsData = {SpecialConfigId = 2012, BlackScreenImmediately = true}
           },
           ["17609504286721978342"] = {
             key = "17609504286721978342",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = 3105.5067384421513, y = 313.8678371609353},
+            pos = {x = 3155.420195999087, y = 302.99288892076964},
             propsData = {
               VarName = "East01HeilongBoss",
               VarValue = 1
@@ -1911,7 +1984,7 @@ return {
             key = "17609504286721978343",
             type = "ExecuteBlueprintFunctionCheckVarNode",
             name = "是否在阶段1",
-            pos = {x = 2788.911347910834, y = 317.7338346434774},
+            pos = {x = 2123.3904369377497, y = 316.82783050269063},
             propsData = {
               FunctionName = "Equal",
               VarName = "East01HeilongBoss",
@@ -1925,7 +1998,7 @@ return {
             key = "17609504429101978885",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 3061.7834807831373, y = 581.3663165210078},
+            pos = {x = 2381.716814116471, y = 485.70917366386493},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 2020034,
@@ -1937,7 +2010,7 @@ return {
             key = "17616448564418974084",
             type = "TalkNode",
             name = "【SEQ】Show_FightStart",
-            pos = {x = 3104.84154332608, y = 125.8495396184343},
+            pos = {x = 2913.6792244855, y = 313.2379454155358},
             propsData = {
               IsNpcNode = false,
               TalkType = "Cinematic",
@@ -1959,6 +2032,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1980,12 +2054,12 @@ return {
             key = "17650090489933200749",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 3079.3834586466173, y = -56.90225563909778},
+            pos = {x = 2627.1515745886463, y = 314.323831317424},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,
               SoundType = 0,
-              SoundPath = "event:/bgm/1_1/0102_story_dafengjiuzhang",
+              SoundPath = "event:/bgm/1_1/0122_boss_heilong_intro",
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {},
@@ -2158,6 +2232,7 @@ return {
               ModeType = 1,
               Id = 104105,
               StartIndex = 1,
+              LoadingId = 0,
               IsWhite = false
             }
           },
@@ -2175,6 +2250,7 @@ return {
             pos = {x = 4628.991367221871, y = 450.0857550378015},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1201/120106/12022301.12022301'",
               TalkType = "QuestImpression",
@@ -2198,6 +2274,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2252,6 +2329,7 @@ return {
             pos = {x = 3278.5074438305323, y = 448.0331984357471},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1201/120106/12022209.12022209'",
               TalkType = "FixSimple",
@@ -2275,6 +2353,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2319,6 +2398,7 @@ return {
             pos = {x = 2710.5762812899247, y = 454.30099061358425},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1201/120106/12022201.12022201'",
               TalkType = "FixSimple",
@@ -2342,6 +2422,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2405,6 +2486,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2416,7 +2498,7 @@ return {
                   TalkActorVisible = false
                 }
               },
-              FreezeWorldComposition = false,
+              FreezeWorldComposition = true,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
               OverrideFailBlend = false
@@ -2448,6 +2530,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2459,7 +2542,7 @@ return {
                   TalkActorVisible = false
                 }
               },
-              FreezeWorldComposition = false,
+              FreezeWorldComposition = true,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
               OverrideFailBlend = false
@@ -2491,6 +2574,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2502,7 +2586,7 @@ return {
                   TalkActorVisible = false
                 }
               },
-              FreezeWorldComposition = false,
+              FreezeWorldComposition = true,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
               OverrideFailBlend = false
@@ -2704,7 +2788,7 @@ return {
       key = "173087937770320392044",
       type = "StoryNode",
       name = "结束",
-      pos = {x = 1953.2895308924549, y = 678.1461398060372},
+      pos = {x = 1947.7895308924549, y = 668.6461398060372},
       propsData = {
         QuestId = 12010608,
         QuestDescriptionComment = "",
@@ -2717,7 +2801,7 @@ return {
         bIsEndQuest = true,
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
-        bIsEndChapter = true,
+        bIsEndChapter = false,
         bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
@@ -2747,12 +2831,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17648376578557812",
-            startPort = "Out",
-            endQuest = "173087937770320392049",
-            endPort = "Success"
-          },
-          {
             startQuest = "17648533813476695345",
             startPort = "Out",
             endQuest = "17648533813476695346",
@@ -2771,6 +2849,18 @@ return {
             endPort = "In"
           },
           {
+            startQuest = "173087937770320392048",
+            startPort = "QuestStart",
+            endQuest = "173088005921721211691",
+            endPort = "In"
+          },
+          {
+            startQuest = "17681947897264579",
+            startPort = "Out",
+            endQuest = "173087937770320392049",
+            endPort = "Success"
+          },
+          {
             startQuest = "173088005921721211690",
             startPort = "Out",
             endQuest = "176485827397516580494",
@@ -2779,13 +2869,13 @@ return {
           {
             startQuest = "176485827397516580494",
             startPort = "Out",
-            endQuest = "17648376578557812",
+            endQuest = "17683073871414718",
             endPort = "In"
           },
           {
-            startQuest = "173087937770320392048",
-            startPort = "QuestStart",
-            endQuest = "173088005921721211691",
+            startQuest = "17683073871414718",
+            startPort = "Out",
+            endQuest = "17681947897264579",
             endPort = "In"
           }
         },
@@ -2794,14 +2884,14 @@ return {
             key = "173087937770320392048",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 2673.6705465244463, y = 434.42647008164244},
+            pos = {x = 2854.870546524446, y = 439.22647008164245},
             propsData = {ModeType = 0}
           },
           ["173087937770320392049"] = {
             key = "173087937770320392049",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 5123.448726246688, y = 454.4019242208129},
+            pos = {x = 5356.348726246688, y = 450.10192422081286},
             propsData = {ModeType = 0}
           },
           ["173087937770320392050"] = {
@@ -2832,14 +2922,14 @@ return {
             key = "173088005921721211690",
             type = "TalkNode",
             name = "【SC019】被止流催眠",
-            pos = {x = 4124.496888742773, y = 431.64680579364534},
+            pos = {x = 4110.096888742773, y = 419.24680579364536},
             propsData = {
               IsNpcNode = false,
               TalkType = "Cinematic",
               TalkStageName = "",
               ShowFilePath = "/Game/Asset/Cinematics/Story/Ver01/Ver0101/Ver0101_SC019/SQ_Ver0101_SC019",
               BlendInTime = 1,
-              BlendOutTime = 0,
+              BlendOutTime = 1,
               InType = "FadeIn",
               OutType = "FadeOut",
               ShowFadeDetail = false,
@@ -2854,6 +2944,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2894,7 +2985,7 @@ return {
             key = "17648376578557812",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 4733.690789473684, y = 446.9847117794487},
+            pos = {x = 4736.090789473684, y = 224.98471177944865},
             propsData = {
               IsNpcNode = false,
               TalkType = "Cinematic",
@@ -2915,6 +3006,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2950,7 +3042,7 @@ return {
             key = "176485826171916580031",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 3813.122807017544, y = 440.96491228070164},
+            pos = {x = 3743.522807017544, y = 452.96491228070164},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,
@@ -2967,12 +3059,26 @@ return {
             key = "176485827397516580494",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 4441.017543859647, y = 450.43859649122805},
+            pos = {x = 4405.017543859647, y = 444.038596491228},
             propsData = {
               SoundStateType = 3,
               SoundPriority = 0,
               SoundType = 0
             }
+          },
+          ["17681947897264579"] = {
+            key = "17681947897264579",
+            type = "OpenChapterUINode",
+            name = "打开章节开始UI",
+            pos = {x = 5025.895454545455, y = 452.40000000000003},
+            propsData = {ChapterUIId = 120101, UIType = "End"}
+          },
+          ["17683073871414718"] = {
+            key = "17683073871414718",
+            type = "WaitOfTimeNode",
+            name = "延迟等待",
+            pos = {x = 4706, y = 444.25},
+            propsData = {WaitTime = 1}
           }
         },
         commentData = {}
@@ -3080,21 +3186,15 @@ return {
             endPort = "Fail"
           },
           {
-            startQuest = "17599270814071963155",
-            startPort = "QuestStart",
-            endQuest = "17648532593386692894",
-            endPort = "In"
-          },
-          {
-            startQuest = "17648532593386692894",
-            startPort = "Out",
-            endQuest = "17648534706977649845",
-            endPort = "In"
-          },
-          {
             startQuest = "17648534706977649845",
             startPort = "Out",
             endQuest = "17614892951439282282",
+            endPort = "In"
+          },
+          {
+            startQuest = "17599270814071963155",
+            startPort = "QuestStart",
+            endQuest = "17648534706977649845",
             endPort = "In"
           }
         },
@@ -3263,7 +3363,7 @@ return {
             key = "17648532593386692894",
             type = "AuConditionNode",
             name = "音频条件节点",
-            pos = {x = 518, y = 611},
+            pos = {x = 266, y = 260.59999999999997},
             propsData = {
               ActionType = 0,
               Condition = "",
@@ -3274,7 +3374,7 @@ return {
             key = "17648534706977649845",
             type = "SetGlobalSoundParamNode",
             name = "设置全局音效参数",
-            pos = {x = 519.9411764705883, y = 786},
+            pos = {x = 506.7411764705883, y = 609.6},
             propsData = {
               ParamName = "heilongjitan_amb_type",
               ParamValue = 1

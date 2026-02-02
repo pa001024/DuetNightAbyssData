@@ -280,6 +280,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = true,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -590,6 +591,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "P101044Bai",
               CameraLookAtTartgetPoint = "",
@@ -804,6 +806,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -982,6 +985,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "P_1180081Nvzhu",
               CameraLookAtTartgetPoint = "",
@@ -1181,6 +1185,7 @@ return {
             pos = {x = 1340.563909774436, y = 9.357142857142845},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_QuestTrigger_1180082"
             }
@@ -1192,6 +1197,7 @@ return {
             pos = {x = 847.3496240601501, y = 300.7857142857143},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_QuestTrigger_1180084"
             }
@@ -1203,6 +1209,7 @@ return {
             pos = {x = 1081.9924812030074, y = 9.357142857142925},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_QuestTrigger_1180084"
             }
@@ -1214,6 +1221,7 @@ return {
             pos = {x = 1089.84962406015, y = 139.00000000000003},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_QuestTrigger_1180084"
             }
@@ -1225,6 +1233,7 @@ return {
             pos = {x = 1323.7781954887216, y = 133.64285714285708},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_QuestTrigger_1180082"
             }
@@ -1759,6 +1768,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1792,6 +1802,7 @@ return {
               ModeType = 1,
               Id = 101103,
               StartIndex = 14,
+              LoadingId = 0,
               IsWhite = false
             }
           },
@@ -1855,6 +1866,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "P101054Player",
               CameraLookAtTartgetPoint = "",
@@ -2510,12 +2522,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17530915923252919104",
-            startPort = "Out",
-            endQuest = "17524831388711303209",
-            endPort = "In"
-          },
-          {
             startQuest = "1752480737495341056",
             startPort = "Out",
             endQuest = "17580270507406429296",
@@ -2544,6 +2550,12 @@ return {
             startPort = "Out",
             endQuest = "17580271238856430960",
             endPort = "In"
+          },
+          {
+            startQuest = "17530916907132921079",
+            startPort = "Out",
+            endQuest = "17524831388711303209",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -2558,7 +2570,7 @@ return {
             key = "1752480737494341037",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 5034.00836542139, y = 389.2947575539547},
+            pos = {x = 5220.00836542139, y = 567.2947575539547},
             propsData = {ModeType = 0}
           },
           ["1752480737494341038"] = {
@@ -2658,6 +2670,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2752,6 +2765,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "P_1270185",
               CameraLookAtTartgetPoint = "",
@@ -2871,6 +2885,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "P_101310Player",
               CameraLookAtTartgetPoint = "",
@@ -2897,7 +2912,7 @@ return {
             key = "17524831388711303209",
             type = "TalkNode",
             name = "晶体爆了",
-            pos = {x = 4782.355965660267, y = 394.3141762417961},
+            pos = {x = 4890.355965660267, y = 528.3141762417961},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 10131001,
@@ -2938,6 +2953,7 @@ return {
             pos = {x = 2743.0993928488942, y = 539.2274828229155},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "QuestPoint_Part01_QuestCheck_11"
             }
@@ -2949,6 +2965,7 @@ return {
             pos = {x = 3654.860230833449, y = 585.4740103352126},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "QuestPoint_Part01_QuestCheck_11"
             }
@@ -3023,7 +3040,7 @@ return {
             key = "17530916907132921079",
             type = "ChangeStaticCreatorNode",
             name = "生成晶体渣和下一个房间的晶体",
-            pos = {x = 4302.87525508936, y = 248.71528333615726},
+            pos = {x = 4600.87525508936, y = 582.7152833361572},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -3040,6 +3057,7 @@ return {
             pos = {x = 4002.126432023697, y = -0.021605833115764028},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_kuangkeng_part01_door"
             }
@@ -3051,6 +3069,7 @@ return {
             pos = {x = 4308.302902611932, y = 522.3313353433546},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint_kuangkeng_part01_door"
             }
@@ -3472,6 +3491,7 @@ return {
             pos = {x = -433.50004335872285, y = 963.9954865632443},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "QuestPoint_Part02_Battle"
             }
@@ -3483,6 +3503,7 @@ return {
             pos = {x = -62.06215813267325, y = 1078.5569071065688},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "QuestPoint_Part02_Battle"
             }
@@ -3572,6 +3593,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "P_101313Player2",
               CameraLookAtTartgetPoint = "",
@@ -3760,6 +3782,7 @@ return {
             pos = {x = 523.5573205626029, y = -3.814741988496962},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "QuestPoint_Part02_QuestCheck"
             }
@@ -3814,6 +3837,7 @@ return {
             pos = {x = -902.8949760938862, y = -77.66666666666674},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "P_101313Bomb"
             }
@@ -3825,6 +3849,7 @@ return {
             pos = {x = -666.0091308074954, y = 468.1666666666665},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "P_101313Bomb"
             }

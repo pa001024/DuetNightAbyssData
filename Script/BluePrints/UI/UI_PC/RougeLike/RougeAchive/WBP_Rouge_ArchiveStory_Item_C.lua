@@ -146,6 +146,7 @@ function M:OnCellClicked()
     if self.Parent.List_Item:GetItemAt(self.Index + 1) then
       self.Btn_Click:SetNavigationRuleExplicit(EUINavigation.Down, self.Parent.List_Item:GetItemAt(self.Index + 1).UI.Btn_Click)
     end
+    self.Parent.List_Item:SetScrollOffset(self.Parent.List_Item:GetScrollOffset() + 1)
     self:StopAnimation(self.List_In)
     self:PlayAnimation(self.List_Out)
     self.Parent:ChooseSeries(self.Index, self)
@@ -165,6 +166,7 @@ function M:OnCellHovered()
     self.Parent:HoverSeries(self)
     self.Btn_Click:SetFocus()
     self.List_SubItem:BP_ClearSelection()
+    self.Parent.List_Item:BP_NavigateToItem(self)
   end
   if self.IsSelected and self.IsUnlocked then
     self.Btn_Click:SetNavigationRuleExplicit(EUINavigation.Down, self.List_SubItem)

@@ -43,7 +43,8 @@ function BP_SabotageTarget_C:ActiveOnServer()
   end
   BP_SabotageTarget_C.Super.ActiveOnServer(self)
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-  if GameMode then
+  if GameMode and not self.bTriggerActiveGameMode then
+    self.bTriggerActiveGameMode = true
     GameMode:TriggerDungeonComponentFun("SabotageTargetActive")
     GameMode:SetClientDungeonUIState(Const.EDungeonUIState.OnTarget)
   end
@@ -73,9 +74,9 @@ end
 function BP_SabotageTarget_C:OnDead(KillMineRoleEid, KillMineSkillId, DeathReason)
   BP_SabotageTarget_C.Super.OnDead(self, KillMineRoleEid, KillMineSkillId, DeathReason)
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-  if GameMode then
-    GameMode:TriggerGameModeEvent("OnSabotageTargetDead")
+  if GameMode and not self.bSabotageIsDead then
     self.bSabotageIsDead = true
+    GameMode:TriggerGameModeEvent("OnSabotageTargetDead")
   end
 end
 

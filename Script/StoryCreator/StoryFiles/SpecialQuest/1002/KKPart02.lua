@@ -153,6 +153,7 @@ return {
             pos = {x = 879.378070216391, y = 293.03564675504725},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "QuestPoint_Part02_Battle"
             }
@@ -164,6 +165,7 @@ return {
             pos = {x = 1346.0447368830562, y = 298.03564675504674},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "QuestPoint_Part02_Battle"
             }

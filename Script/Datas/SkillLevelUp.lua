@@ -242,6 +242,9 @@ T.RT_42 = {
   [3] = 20014,
   [4] = 20013
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

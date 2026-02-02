@@ -7,10 +7,16 @@ function M:CommonInitInfo(Info)
   if self.IsOpen then
     self.Sphere:SetHiddenInGame(false)
     self.SphereCollision:SetCollisionEnabled(self.DefaultCollisionType)
+    if self.CheckPlayerSphere then
+      self.CheckPlayerSphere:SetCollisionEnabled(self.DefaultCollisionType)
+    end
     self:ShowFX()
   else
     self.Sphere:SetHiddenInGame(true)
     self.SphereCollision:SetCollisionEnabled(ECollisionEnabled.NoCollision)
+    if self.CheckPlayerSphere then
+      self.CheckPlayerSphere:SetCollisionEnabled(ECollisionEnabled.NoCollision)
+    end
     self:HideFX()
   end
 end
@@ -21,6 +27,9 @@ function M:ActiveCombat(bFromGameMode)
   self.IsOpen = true
   self.Sphere:SetHiddenInGame(false)
   self.SphereCollision:SetCollisionEnabled(self.DefaultCollisionType)
+  if self.CheckPlayerSphere then
+    self.CheckPlayerSphere:SetCollisionEnabled(self.DefaultCollisionType)
+  end
   self:ShowFX()
 end
 
@@ -29,6 +38,9 @@ function M:InactiveCombat(bFromGameMode)
   self.IsOpen = false
   self.Sphere:SetHiddenInGame(true)
   self.SphereCollision:SetCollisionEnabled(ECollisionEnabled.NoCollision)
+  if self.CheckPlayerSphere then
+    self.CheckPlayerSphere:SetCollisionEnabled(ECollisionEnabled.NoCollision)
+  end
   self:HideFX()
 end
 
@@ -37,6 +49,9 @@ function M:InactiveCombatDestroy(bFromGameMode)
   self.IsOpen = false
   self.Sphere:SetHiddenInGame(true)
   self.SphereCollision:SetCollisionEnabled(ECollisionEnabled.NoCollision)
+  if self.CheckPlayerSphere then
+    self.CheckPlayerSphere:SetCollisionEnabled(ECollisionEnabled.NoCollision)
+  end
   self:DestroyHideFX()
 end
 
@@ -85,6 +100,9 @@ function M:SetBroken()
     return
   end
   self:InactiveCombatDestroy()
+  if not self.EnableAddScore then
+    return
+  end
   local CurGameMode = UE4.UGameplayStatics.GetGameMode(self)
   local DamageType = ""
   if 1 == self.DamageType then
@@ -125,6 +143,11 @@ end
 
 function M:OnBreakCountDown(SourceEid)
   self.Overridden.OnBreakCountDown(self, SourceEid)
+  self:SetBroken()
+end
+
+function M:OnPlayerIn(Player)
+  Battle(self):AddBuffToTarget(self, Player, self.BuffId, self.BuffTime, nil, nil)
   self:SetBroken()
 end
 

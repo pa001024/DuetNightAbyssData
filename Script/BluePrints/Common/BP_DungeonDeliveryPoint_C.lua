@@ -15,7 +15,7 @@ function M:GetDeliveryInfo(PlayerEid)
       self.NextAvailableIndex = 1
     end
     Index = self.NextAvailableIndex
-    self.PlayerToIndex[Index] = PlayerEid
+    self.PlayerToIndex[PlayerEid] = Index
     self.NextAvailableIndex = self.NextAvailableIndex + 1
   end
   local Point = self.PointArray[Index]

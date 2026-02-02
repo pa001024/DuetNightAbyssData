@@ -155,13 +155,12 @@ local function OnItemRemovedFromFocusPathEvent(ArmoryMod, Entry)
 end
 
 local function OnDetailLockBtnClick()
-  local ArmoryMod = ModController:GetView(self, ModCommon.ArmoryMod)
-  ArmoryMod = ArmoryMod or ModController:GetView(self, ModCommon.AbyssMod)
+  local ArmoryMod = ModController:GetView(nil)
   local Avatar = ModModel:GetAvatar()
   ArmoryMod.ItemDetailsWidget.Btn_Locked:ForbidBtn(true)
   local Content = ArmoryMod:GetContentBySelectStuff()
   if Content.IsLocked then
-    UIManager(self):ShowCommonPopupUI(100019, {
+    UIManager(nil):ShowCommonPopupUI(100019, {
       RightCallbackFunction = function()
         Avatar:UnLockResourceInBag(CommonConst.AllType.Mod, Content.Uuid)
       end,
@@ -319,7 +318,7 @@ function M:InitButtons()
   self.CheckBox_Mod_Delegate = {
     Inst = self,
     Func = function()
-      self:SetUpModList(false)
+      self:SetUpModList(true)
     end
   }
   self.CheckBox_Mod:BindEventOnClicked(self.CheckBox_Mod_Delegate)
@@ -368,23 +367,14 @@ function M:InitBtnImport()
 end
 
 function M:InitCommonUI()
-  local function SortCallback()
-    local SortBy, SortType = self.Common_SortList_PC:GetSortInfos()
-    
-    ModModel:SetSortConf(SortBy, SortType)
-    self:SetUpModList(false)
-  end
-  
-  self.Common_SortList_PC:BindEventOnSelectionsChanged(self, SortCallback)
-  self.Common_SortList_PC:BindEventOnSortTypeChanged(self, SortCallback)
   self.Sift:SetSiftModelId(ModCommon.ModSiftId)
   self.Sift:BindEventOnSelectionsChanged(self, function(_, SelectedItems, ItemDatas)
     ModModel:SetSiftConf(SelectedItems, ItemDatas)
     ModModel:FilterModsOfTarget()
-    self:SetUpModList(false)
+    self:SetUpModList(true)
   end)
   self.Common_PolarityList_PC:BindEventOnSelectionsChanged(self, function()
-    self:SetUpModList(false)
+    self:SetUpModList(true)
   end)
   
   local function CloseCb()
@@ -418,7 +408,7 @@ function M:InitCommonUI()
     },
     {
       GamePadInfoList = {
-        {Type = "Text", ImgShortPath = "A"}
+        {Type = "Img", ImgShortPath = "A"}
       },
       Desc = GText("UI_Tips_Ensure")
     },
@@ -480,6 +470,10 @@ function M:InitCommonUI()
     self.CurrAttrTabIdx = TabWidget.Idx
     self:UpdateAttrListImpl()
   end)
+  self.Com_Search:BindEventOnContentChanged(self, function()
+    self:SetUpModList(true)
+  end)
+  self.Com_Search:SetHintText(GText("UI_Mod_SearchHint"))
 end
 
 function M:ReceiveEnterState(StackAction)
@@ -495,9 +489,11 @@ function M:ReceiveEnterState(StackAction)
   local SelectStuff = ModModel:GetSelectStuff()
   if SelectStuff and not ModController:IsGamepad() then
     if SelectStuff:IsSlot() then
-      self:UpdateSlotUIBySlotId(SelectStuff.SlotId)
       local SlotUI = self.ModSlotUIs[SelectStuff.SlotId]
-      SlotUI:SetFocus()
+      if SlotUI then
+        self:UpdateSlotUIBySlotId(SelectStuff.SlotId)
+        SlotUI:SetFocus()
+      end
     elseif SelectStuff:IsModExist() then
       local Content = self:GetContentBySelectStuff(SelectStuff)
       if Content then
@@ -539,7 +535,7 @@ end
 
 function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
   M.Super.InitUIInfo(self, Name, IsInUIMode, EventList, ...)
-  if Name == ModCommon.AbyssMod then
+  if Name ~= ModCommon.ArmoryMod then
     self:SetComponent("BluePrints.UI.WBP.Abyss.Mod.Abyss_Mod_PC_Comp")
   end
   local MainUICase
@@ -748,9 +744,9 @@ function M:OnTargetTabSpawned(TabContent, UI)
   
   local function Callback(_, Count)
     if Count > 0 then
-      UI:EMShowReddot(true, EReddotType.New, 0)
+      UI:EMShowReddot(true, EReddotType.New)
     else
-      UI:EMShowReddot(false, EReddotType.New, 0)
+      UI:EMShowReddot(false, EReddotType.New)
     end
   end
   
@@ -822,7 +818,8 @@ function M:SetUpModTab()
     self.Tab_Mod:LeaveViewSingleMode()
     self:ShowTabResourceBar(false)
   end
-  self.Tab_Mod:UpdateTopTitle(GText("MESSAGE_TITLE_LOADING_31_PC") .. "/" .. ModModel:GetTarget():GetName())
+  local TargetName = ModModel.CopyModeSenderName or ModModel:GetTarget():GetName()
+  self.Tab_Mod:UpdateTopTitle(GText("MESSAGE_TITLE_LOADING_31_PC") .. "/" .. TargetName)
   self:PlayTabInAnim()
   self.Btn_Auto:ForbidBtn(not next(ModModel.TargetMods))
 end
@@ -842,6 +839,7 @@ function M:SetUpModList(bAnim)
     for _, ModUuid in ipairs(ModModel.CurModList) do
       local Mod = ModModel:GetMod(ModUuid)
       if self:IsHideConflictMod() and Mod.ConflictUuids:Length() > 0 then
+      elseif not ModModel:DoModSearch(Mod, self:GetSearchText()) then
       elseif ModModel:FilterSingleModOfTarget(FilterPolarity, false, Mod) then
         self:AddModContentToList(Mod)
         self.needNavigation = true
@@ -1214,7 +1212,7 @@ function M:NotifyOnStartPolarityMode()
   }
   self:BindToAnimationFinished(self.LoadingPolarity_In, Delegate)
   self:PlayAnimationForward(self.LoadingPolarity_In)
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   if not self.PolarityEditWidget then
     self.PolarityEditWidget = self:CreateWidgetNew(ModCommon.PolarityEditUI)
     local RootWidget = UIUtils.GetRootUWidget(self)
@@ -1263,7 +1261,7 @@ function M:NotifyOnStopPolarityMode()
   }
   self:BindToAnimationFinished(self.LoadingPolarity_In, Delegate)
   self:PlayAnimationReverse(self.LoadingPolarity_In)
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:RefreshModCostVX()
   self:UpdateAllSlotsUI()
   ModController:SetUICamera(FVector(0, 0, 0))
@@ -1426,6 +1424,12 @@ function M:CloseLinkLine(ModUuid, DragUI)
 end
 
 function M:ClearLinkLine()
+  for _, Widget in pairs(self.SlotLineWidgets) do
+    Widget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  for _, Widget in pairs(self.DragLineWidgets) do
+    Widget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
   self.SlotLineWidgets = {}
   self.DragLineWidgets = {}
   if self:IsExistTimer(self.LinkLineTicker) then
@@ -1447,6 +1451,10 @@ end
 
 function M:IsHideConflictMod()
   return self.CheckBox_Mod:IsChecked()
+end
+
+function M:GetSearchText()
+  return self.Com_Search:GetText()
 end
 
 function M:DoModItemSelected(ModUuid, bSelected)

@@ -142,6 +142,13 @@ function CheckBranchQuestFinishedNode:UpdateWorldTaskPanel(InportInfo)
     self.BlackScreenUIDurationTimer = GWorld.GameInstance:AddTimer(0.5, function()
       if IsValid(TaskUIObj.SubTaskWidgetsTable[InportInfo]) then
         TaskUIObj.SubTaskWidgetsTable[InportInfo]:PlayAnimation(TaskUIObj.SubTaskWidgetsTable[InportInfo].CompletionTask)
+        if TaskUIObj.SubTaskWidgetsTable[InportInfo].bPlayArrive then
+          TaskUIObj.SubTaskWidgetsTable[InportInfo]:StopArrive()
+          local BattleMain = UIManager(GWorld.GameInstance):GetUIObj("BattleMain")
+          if BattleMain.Battle_Map then
+            BattleMain.Battle_Map.WildMap:EnterOrExitTaskRegion(nil, false)
+          end
+        end
         TaskUIObj.SubTaskWidgetsTable[InportInfo]:BindToAnimationFinished(TaskUIObj.SubTaskWidgetsTable[InportInfo].CompletionTask, {
           TaskUIObj.SubTaskWidgetsTable[InportInfo],
           function()

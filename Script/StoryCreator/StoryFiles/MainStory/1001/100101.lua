@@ -541,6 +541,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1194,6 +1195,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1416,6 +1418,7 @@ return {
             pos = {x = 1113.489200376658, y = 159.07987457080517},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "Mechanism_NewGoto2_1590310"
             }
@@ -1427,6 +1430,7 @@ return {
             pos = {x = 1116.054648421866, y = 429.5555982474286},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_NewGoto1_1590309"
             }
@@ -1438,6 +1442,7 @@ return {
             pos = {x = 1120.2365745250818, y = 298.5933462315784},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "QuestTrigger0202"
             }
@@ -1449,6 +1454,7 @@ return {
             pos = {x = 1056.539059581738, y = 559.6590602728209},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_NewGoto1_1590309"
             }
@@ -1460,6 +1466,7 @@ return {
             pos = {x = 1214.5664450340794, y = 668.6197079938754},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "Mechanism_NewGoto2_1590310"
             }
@@ -1471,6 +1478,7 @@ return {
             pos = {x = 1371.168876162865, y = 555.340569929754},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "QuestTrigger0202"
             }
@@ -1482,6 +1490,7 @@ return {
             pos = {x = 808.3974941350377, y = 1138.4323919780556},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "QuestTrigger0202"
             }
@@ -1493,6 +1502,7 @@ return {
             pos = {x = 612.4724636100075, y = 1178.6356886813528},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "Mechanism_NewGoto2_1590310"
             }
@@ -1504,6 +1514,7 @@ return {
             pos = {x = 1374.2749024417806, y = 316.89530158286937},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "Mechanism_NewGoto2_1590310"
             }
@@ -3075,6 +3086,7 @@ return {
               ModeType = 1,
               Id = 100104,
               StartIndex = 1,
+              LoadingId = 0,
               IsWhite = false
             }
           },
@@ -3160,6 +3172,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -3454,15 +3467,21 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "174780912212427913500",
-            startPort = "Out",
-            endQuest = "17455513993457536",
-            endPort = "In"
-          },
-          {
             startQuest = "17455524057598317",
             startPort = "Out",
             endQuest = "17586344016145427",
+            endPort = "In"
+          },
+          {
+            startQuest = "174780912212427913500",
+            startPort = "Out",
+            endQuest = "quest_1684406184798402",
+            endPort = "In"
+          },
+          {
+            startQuest = "quest_1684406184798402",
+            startPort = "Out",
+            endQuest = "17455513993457536",
             endPort = "In"
           }
         },
@@ -3521,7 +3540,7 @@ return {
             key = "quest_1684406184798402",
             type = "PlayerSwitchWalkRunNode",
             name = "玩家走跑切换-走",
-            pos = {x = -871.2228256117633, y = -250.20949099248145},
+            pos = {x = -1220.0600349140889, y = -57.65135145759774},
             propsData = {Rate = 0.15, Mode = "EWT_Winded"}
           },
           quest_1684406184798405 = {
@@ -3612,6 +3631,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -3849,6 +3869,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -3907,6 +3928,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -4485,21 +4507,21 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17648491118984266",
+            startQuest = "17648489087555400",
             startPort = "OldPlan",
-            endQuest = "17648491118984265",
+            endQuest = "17648489132915514",
             endPort = "In"
           },
           {
-            startQuest = "17648491118984266",
+            startQuest = "17648489087555400",
             startPort = "NewPlan",
-            endQuest = "17648491118984267",
+            endQuest = "17648489117145476",
             endPort = "In"
           },
           {
             startQuest = "1717059439275987955",
             startPort = "Mobile",
-            endQuest = "17648491118984266",
+            endQuest = "17648489087555400",
             endPort = "In"
           }
         },
@@ -4555,7 +4577,7 @@ return {
             key = "quest_1688640194427721",
             type = "GoToNode",
             name = "前往-第一次掉下去",
-            pos = {x = 602.9254249668074, y = 395.0584637443276},
+            pos = {x = 585.9254249668074, y = 411.0584637443276},
             propsData = {
               GuideUIEnable = false,
               StaticCreatorId = 1110010110,
@@ -4593,7 +4615,7 @@ return {
             key = "quest_1688640194428736",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "异步设置玩家位置旋转",
-            pos = {x = 1855.5830513462458, y = 428.10488809167254},
+            pos = {x = 1854.725908489103, y = 428.10488809167254},
             propsData = {
               UnitId = 0,
               NewTargetPointName = "QuestPoint_BJ_Fail1",
@@ -4608,14 +4630,14 @@ return {
             key = "quest_1688640194429739",
             type = "WaitOfTimeNode",
             name = "延迟等待",
-            pos = {x = 1595.0338167359844, y = 434.6631969433855},
+            pos = {x = 1608.0338167359844, y = 420.6631969433855},
             propsData = {WaitTime = 0.5}
           },
           quest_1688640194429742 = {
             key = "quest_1688640194429742",
             type = "WaitOfTimeNode",
             name = "延迟等待",
-            pos = {x = 2116.6781747260143, y = 439.72175234840046},
+            pos = {x = 2137.5684186284534, y = 431.546955600433},
             propsData = {WaitTime = 0.5}
           },
           quest_1688640194429751 = {
@@ -4875,6 +4897,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "QuestPoint_BJ_Target2",
@@ -5541,19 +5564,26 @@ return {
               MessageLocOffset = {X = 0, Y = 0}
             }
           },
-          ["17648491118984265"] = {
-            key = "17648491118984265",
+          ["17648489087555400"] = {
+            key = "17648489087555400",
+            type = "LayoutPlanNode",
+            name = "判断当前当前玩家布局节点",
+            pos = {x = 2611.7674202736, y = 606.7191569164152},
+            propsData = {}
+          },
+          ["17648489117145476"] = {
+            key = "17648489117145476",
             type = "ShowGuideNode",
             name = "显示引导（支持执行操作后自动关闭/强制引导）",
-            pos = {x = 3268.23760227502, y = 830.2334066425376},
+            pos = {x = 3054.8639115016704, y = 645.3507358637835},
             propsData = {
-              MessageId = 200011,
+              MessageId = 200036,
               SkillNameList = {"BulletJump"},
               LastTime = -1,
               bIsForceTouch = true,
               bIsTimeDilation = true,
-              HighLightUIPath = "BattleMain.Char_Skill.Jump",
-              UICompName = "Image_Hotspot",
+              HighLightUIPath = "BattleMain.Char_Skill.BulletJump",
+              UICompName = "Btn_BulletJump",
               UIShape = "Square",
               IsForbidInAnim = false,
               IsForbidOutAnim = false,
@@ -5566,26 +5596,19 @@ return {
               MessageLocOffset = {X = 0, Y = 0}
             }
           },
-          ["17648491118984266"] = {
-            key = "17648491118984266",
-            type = "LayoutPlanNode",
-            name = "判断当前当前玩家布局节点",
-            pos = {x = 2905.331088837789, y = 684.1833077705007},
-            propsData = {}
-          },
-          ["17648491118984267"] = {
-            key = "17648491118984267",
+          ["17648489132915514"] = {
+            key = "17648489132915514",
             type = "ShowGuideNode",
             name = "显示引导（支持执行操作后自动关闭/强制引导）",
-            pos = {x = 3262.831088837789, y = 673.8708077705007},
+            pos = {x = 2999.6258162635754, y = 833.6840691971169},
             propsData = {
-              MessageId = 200036,
+              MessageId = 200011,
               SkillNameList = {"BulletJump"},
               LastTime = -1,
               bIsForceTouch = true,
               bIsTimeDilation = true,
-              HighLightUIPath = "BattleMain.Char_Skill.BulletJump",
-              UICompName = "Btn_BulletJump",
+              HighLightUIPath = "BattleMain.Char_Skill.Jump",
+              UICompName = "Image_Hotspot",
               UIShape = "Square",
               IsForbidInAnim = false,
               IsForbidOutAnim = false,
@@ -5957,6 +5980,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "QuestPoint4",
               CameraLookAtTartgetPoint = "QuestPoint10",
@@ -6081,6 +6105,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "QuestPoint6",
               CameraLookAtTartgetPoint = "",
@@ -6669,6 +6694,7 @@ return {
             pos = {x = -593.6814932426048, y = 160.0849723503057},
             propsData = {
               IsNpcNode = false,
+              bUseFlowAssetActors = false,
               FirstDialogueId = 10010801,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1001/10010801.10010801'",
               TalkType = "FixSimple",
@@ -6692,6 +6718,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",

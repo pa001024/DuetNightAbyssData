@@ -27,6 +27,10 @@ function M:InitContent(Params, PopupData, Owner)
   else
     self.HorizontalBox_TotalProgress:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
+  if ConfigData.OnlyShowNowProgress then
+    self.Text_Split:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Text_NumMax:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
   if not ConfigData.ShowIcon then
     self.Icon:SetVisibility(UIConst.VisibilityOp.Collapsed)
   elseif ConfigData.IconPath then
@@ -138,6 +142,10 @@ function M:SortItems()
       return false
     elseif not a.RewardsGot and b.RewardsGot then
       return true
+    elseif not a.NeedSwitchType and b.NeedSwitchType then
+      return true
+    elseif a.NeedSwitchType and not b.NeedSwitchType then
+      return false
     end
     return a.SourceNum < b.SourceNum
   end)

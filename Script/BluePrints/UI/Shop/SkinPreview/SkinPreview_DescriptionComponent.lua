@@ -5,6 +5,8 @@ function M:UpdateDescription(ItemData)
   local itemType = ItemData.ItemType
   if "Skin" == itemType then
     self:UpdateCharSkinDescription(ItemData)
+  elseif "Hair" == itemType then
+    self:UpdateHairDescription(ItemData)
   elseif "WeaponSkin" == itemType then
     self:UpdateWeaponSkinDescription(ItemData)
   elseif "CharAccessory" == itemType then
@@ -12,7 +14,11 @@ function M:UpdateDescription(ItemData)
   elseif "WeaponAccessory" == itemType then
     self:UpdateWeaponAccessoryDescription(ItemData)
   elseif "Resource" == itemType then
-    self:UpdateCharGestureDescription(ItemData)
+    if ItemData.ResourceSType == "GestureItem" then
+      self:UpdateCharGestureDescription(ItemData)
+    end
+  elseif "Mount" == itemType then
+    self:UpdateMountDescription(ItemData)
   end
 end
 
@@ -34,6 +40,7 @@ function M:UpdateCharSkinDescription(SkinInfo)
   self.Tag_Quality:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.HorizontalBox_Color:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Tab_Change:SetVisibility(ESlateVisibility.Collapsed)
+  self.WBP_Mounts:SetVisibility(ESlateVisibility.Collapsed)
   local ElementType = DataMgr.BattleChar[SkinData.CharId].Attribute
   if ElementType then
     local IconName = "Armory_" .. ElementType
@@ -53,6 +60,32 @@ function M:UpdateCharSkinDescription(SkinInfo)
   end
 end
 
+function M:UpdateHairDescription(SkinInfo)
+  local HairData = DataMgr.Hair[SkinInfo.TypeId]
+  if not HairData then
+    return
+  end
+  self.Text_CharName:SetText(GText("UI_Hair_Name"))
+  self.Text_SkinName:SetText(GText(HairData.Name))
+  self.Text_Info:SetText(GText(HairData.HairDescribe))
+  self.Tag_Quality:Init(HairData.Rarity)
+  self:UpdateSkinNameFontByRarity(HairData.Rarity)
+  self:HideZoomKey(false)
+  self.Tag_Quality:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
+  self.HorizontalBox_Color:SetVisibility(ESlateVisibility.Collapsed)
+  self.Tab_Change:SetVisibility(ESlateVisibility.Collapsed)
+  self.WBP_Mounts:SetVisibility(ESlateVisibility.Collapsed)
+  local AccessoryIconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Fashion_Hair.T_Tab_Fashion_Hair"
+  if AccessoryIconPath then
+    local AccessoryIcon = LoadObject(AccessoryIconPath)
+    self.Image_Element:SetBrushResourceObject(AccessoryIcon)
+    self.Image_Element:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
 function M:UpdateCharAccessoryDescription(SkinInfo)
   local AccessoryData = DataMgr.CharAccessory[SkinInfo.TypeId]
   if not AccessoryData then
@@ -68,6 +101,7 @@ function M:UpdateCharAccessoryDescription(SkinInfo)
   self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
   self.HorizontalBox_Color:SetVisibility(ESlateVisibility.Collapsed)
   self.Tab_Change:SetVisibility(ESlateVisibility.Collapsed)
+  self.WBP_Mounts:SetVisibility(ESlateVisibility.Collapsed)
   local AccessoryIconPath = ArmoryUtils:GetCharNoneAccessoryIconPaths()[AccessoryData.AccessoryType]
   if AccessoryIconPath then
     local AccessoryIcon = LoadObject(AccessoryIconPath)
@@ -94,6 +128,7 @@ function M:UpdateCharGestureDescription(SkinInfo)
   self.HorizontalBox_Color:SetVisibility(ESlateVisibility.Collapsed)
   self.Tab_Change:SetVisibility(ESlateVisibility.Collapsed)
   self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
+  self.WBP_Mounts:SetVisibility(ESlateVisibility.Collapsed)
 end
 
 function M:UpdateWeaponSkinDescription(SkinInfo)
@@ -110,6 +145,7 @@ function M:UpdateWeaponSkinDescription(SkinInfo)
   self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
   self.HorizontalBox_Color:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Tab_Change:SetVisibility(ESlateVisibility.Collapsed)
+  self.WBP_Mounts:SetVisibility(ESlateVisibility.Collapsed)
   local WeaponTypeInfo = DataMgr.WeaponTypeContrast[WeaponSkinData.ApplicationType]
   if not WeaponTypeInfo then
     return
@@ -140,6 +176,35 @@ function M:UpdateWeaponAccessoryDescription(SkinInfo)
   self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
   self.HorizontalBox_Color:SetVisibility(ESlateVisibility.Collapsed)
   self.Tab_Change:SetVisibility(ESlateVisibility.Visible)
+  self.WBP_Mounts:SetVisibility(ESlateVisibility.Collapsed)
+end
+
+function M:UpdateMountDescription(ItemData)
+  if not ItemData.TypeId then
+    return
+  end
+  local MountData = DataMgr.Mount[ItemData.TypeId]
+  if not MountData then
+    return
+  end
+  self.Text_CharName:SetText(GText("UI_Mount"))
+  self.Text_SkinName:SetText(GText(MountData.MountName))
+  self.Text_Info:SetText(GText(MountData.MountDes))
+  self.Tag_Quality:Init(MountData.MountRarity)
+  self:UpdateSkinNameFontByRarity(MountData.MountRarity)
+  self.WBP_Mounts:SetVisibility(ESlateVisibility.Collapsed)
+  self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
+  self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
+  self.Tab_Change:SetVisibility(ESlateVisibility.Collapsed)
+  self.HorizontalBox_Color:SetVisibility(ESlateVisibility.Collapsed)
+  local MountIconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Mounts.T_Tab_Mounts"
+  if MountIconPath then
+    local AccessoryIcon = LoadObject(MountIconPath)
+    self.Image_Element:SetBrushResourceObject(AccessoryIcon)
+    self.Image_Element:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
+  end
 end
 
 return M

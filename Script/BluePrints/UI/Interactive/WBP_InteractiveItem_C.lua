@@ -83,7 +83,10 @@ function WBP_InteractiveItem_C:GetAnimationNameByAnimation(Ainmation)
   return self.AnimationNames[Ainmation]
 end
 
-function WBP_InteractiveItem_C:InitWidgetInfoInGamePad()
+function WBP_InteractiveItem_C:InitWidgetInfoInGamePad(IsGamePad)
+  if not IsGamePad or self.GamePadKeyInited then
+    return
+  end
   local GamepadKeys = UIUtils.GetIconListByActionName("Interactive")
   local ImgShortPath = GamepadKeys[1]
   self.Key_Interactive_GamePad:CreateCommonKey({
@@ -95,6 +98,7 @@ function WBP_InteractiveItem_C:InitWidgetInfoInGamePad()
       }
     }
   })
+  rawset(self, "GamePadKeyInited", true)
 end
 
 function WBP_InteractiveItem_C:Destruct()
@@ -147,7 +151,6 @@ function WBP_InteractiveItem_C:InitInteractiveInfo(InteractiveInfo)
   self:InitLongPressState()
   self:InitOwnerUuId()
   self.ListPriority = InteractiveInfo.ListPriority or 1
-  self:InitWidgetInfoInGamePad()
 end
 
 function WBP_InteractiveItem_C:InitLongPressState()
@@ -164,7 +167,6 @@ function WBP_InteractiveItem_C:InitLongPressState()
   if self.InteractiveInfo:IsLastingInteract() and 0 ~= self.InteractiveInfo:GetNeedLongPressTime() then
     local PressedPercent = self.InteractiveInfo:GetLongPressedPercent()
     local ReduceTime = self.InteractiveInfo:GetReduceTime()
-    ScreenPrint("CurrentPressedTime = " .. tostring(PressedPercent) .. "  ReduceTime: " .. tostring(ReduceTime))
     local AnimationSpeed = ReduceTime <= 0 and 0 or LongPressAnimationTime / ReduceTime
     self:PlayAnimation(self:GetAnimation("LongPress"), 1 - PressedPercent, 1, UE4.EUMGSequencePlayMode.Reverse, AnimationSpeed)
     self.Text_RemainTime:SetRenderOpacity(0)
@@ -198,6 +200,7 @@ end
 
 function WBP_InteractiveItem_C:UseGamePadStyle(UseGamePadStyle)
   if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+    self:InitWidgetInfoInGamePad(UseGamePadStyle)
     local ActiveWidgetIndex = UseGamePadStyle and 1 or 0
     self.WidgetSwitcher_Key:SetActiveWidgetIndex(ActiveWidgetIndex)
   end
@@ -684,7 +687,6 @@ function WBP_InteractiveItem_C:UpdatePressStateAnim()
     if 0 ~= self.InteractiveInfo:GetNeedLongPressTime() then
       local PressedPercent = self.InteractiveInfo:GetLongPressedPercent()
       local ReduceTime = self.InteractiveInfo:GetReduceTime()
-      ScreenPrint("CurrentPressedTime = " .. tostring(PressedPercent) .. "  ReduceTime: " .. tostring(ReduceTime))
       local AnimationSpeed = ReduceTime <= 0 and 0 or LongPressAnimationTime / ReduceTime
       self:PlayAnimation(self:GetAnimation("LongPress"), 1 - PressedPercent, 1, UE4.EUMGSequencePlayMode.Reverse, AnimationSpeed)
       self.Text_RemainTime:SetRenderOpacity(0)

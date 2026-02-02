@@ -46,12 +46,46 @@ end
 function BP_AutoDoor_C:OpenMechanism(CharacterEid)
   print(_G.LogTag, "LXZ OpenMechanism")
   self:UpdateRegionData("DoorOpenState", true)
+  local NeedRepair = false
+  for i, v in pairs(self.ComponentLoc) do
+    if not IsValid(i) then
+      NeedRepair = true
+      break
+    end
+  end
+  if NeedRepair then
+    local Components = self:GetMeshComponents()
+    local Index = 1
+    for i, v in pairs(self.ComponentLoc) do
+      if Index <= Components:Length() then
+        i = Components:GetRef(Index)
+        Index = Index + 1
+      end
+    end
+  end
   self:OpenDoor(CharacterEid, self.Eid)
 end
 
 function BP_AutoDoor_C:CloseMechanism(CharacterEid)
   print(_G.LogTag, "LXZ CloseMechanism")
   self:UpdateRegionData("DoorOpenState", false)
+  local NeedRepair = false
+  for i, v in pairs(self.ComponentLoc) do
+    if not IsValid(i) then
+      NeedRepair = true
+      break
+    end
+  end
+  if NeedRepair then
+    local Components = self:GetMeshComponents()
+    local Index = 1
+    for i, v in pairs(self.ComponentLoc) do
+      if Index <= Components:Length() then
+        i = Components:GetRef(Index)
+        Index = Index + 1
+      end
+    end
+  end
   self:CloseDoor(CharacterEid, self.Eid)
 end
 
@@ -63,9 +97,6 @@ end
 function BP_AutoDoor_C:Init()
   if self.if_door then
     self.RunnerMaterial_Mid = UE4.UKismetMaterialLibrary.CreateDynamicMaterialInstance(self, self.RunnerMaterial)
-    if not self.door_state then
-      self.Box:K2_DestroyComponent(self)
-    end
   else
     self:K2_DestroyActor()
   end

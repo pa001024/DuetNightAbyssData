@@ -25,6 +25,7 @@ function M:Construct()
   self.Text_Empty:SetText(GText("UI_Event_MidTerm_End"))
   self.Btn_OneClickGet.Text_GetReward:SetText(GText("UI_CTL_ClaimALL"))
   self.Btn_OneClickGet.Btn_GetReward.OnClicked:Add(self, self.GetAllTaskScores)
+  self.Btn_OneClickGet.Btn_GetReward.OnClicked:Add(self, self.GetBigReward)
   self.Btn_GetBigReward.OnClicked:Add(self, self.GetBigReward)
   self.TaskScroll:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.CurFocusTask = nil
@@ -61,17 +62,14 @@ end
 function M:Init(Params)
   self.Params = Params
   self.Owner = Params.Owner
-  self.EventDay = Params.EventDay
   self.EventEndTime = Params.EventEndTime
   self._Avatar = GWorld:GetAvatar()
-  self.MidTermTask = self._Avatar.MidTermTasks
-  self.MidTermTasksRecord = self._Avatar.MidTermTasksRecord
-  self.MidTermAchvProgressRewarded = self._Avatar.MidTermAchvProgressRewarded
-  self.MidTermScores = self._Avatar.MidTermScores
-  self.MidTermScoresRewards = self._Avatar.MidTermScoresRewards
   self.MidTermGoalEventId = self.MidTermConst.MidTermGoalEventId.ConstantValue
+  self.MidTermGoals = self._Avatar.MidTermGoals[self.MidTermGoalEventId] or {}
+  self.EventDay = self:CalEventDay()
   self.RewardEndTime = DataMgr.EventMain[self.MidTermGoalEventId].RewardEndTime
-  if CommonUtils.Size(self.MidTermScoresRewards) > 0 then
+  local MidTermScoresRewards = self.MidTermGoals.ScoresRewards or {}
+  if CommonUtils.Size(MidTermScoresRewards) > 0 then
     self.Group_Score:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Group_Progress:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self:TryIncreaceNormalRewardReddot("ScoresRewards")
@@ -93,7 +91,7 @@ function M:Init(Params)
     self.Btn_OneClickGet.Btn_GetReward:SetForbidden(false)
     self.Btn_OneClickGet.Key_GetReward:SetForbidKey(false)
   end
-  self:UpdateTaskScoreToday(self.MidTermScores)
+  self:UpdateTaskScoreToday()
   self:InitTaskList()
   self:PlayAnimation(self.In)
   if TimeUtils.NowTime() > self.EventEndTime then
@@ -111,6 +109,14 @@ function M:Init(Params)
     end
   end
   self:SetFocus()
+end
+
+function M:CalEventDay()
+  local EventStartTime = DataMgr.EventMain[self.MidTermGoalEventId].EventStartTime
+  local currentTime = TimeUtils.NowTime()
+  local intervalDays = TimeUtils.GetIntervalDay(EventStartTime, currentTime)
+  local calculatedEventDay = intervalDays + 1
+  return calculatedEventDay
 end
 
 function M:TryIncreaceNormalRewardReddot(Key)
@@ -144,7 +150,8 @@ end
 function M:TryClearNormalTaskRewardReddot()
   local CacheData = ReddotManager.GetLeafNodeCacheDetail(NormalRewardReddotName)
   if CacheData then
-    for TaskId, Task in pairs(self._Avatar.MidTermTasks) do
+    local MidTermTasks = self.MidTermGoals.Tasks
+    for TaskId, Task in pairs(MidTermTasks) do
       local TaskData = DataMgr.MidTermTask[Task.UniqueID]
       if not TaskData then
         Utils.ScreenPrint("MidTermTask表中不存在UniqueID为" .. Task.UniqueID .. "的任务，请检查配置")
@@ -168,8 +175,8 @@ function M:TrySubNormalTaskNewReddot(TaskId)
   end
 end
 
-function M:UpdateTaskScoreToday(MidTermScores)
-  local MidTermScores = self._Avatar.MidTermScores
+function M:UpdateTaskScoreToday()
+  local MidTermScores = self.MidTermGoals.Scores or 0
   self.Text_TaskScoreToday:SetText(MidTermScores)
   if IsValid(self.Owner.Owner) then
     self.Owner.Owner.Text_TaskScoreToday:SetText(MidTermScores)
@@ -203,7 +210,7 @@ function M:UpdateTaskScoreToday(MidTermScores)
           self:PlayAnimation(self.Percent_VX)
           self.previousProgressPercent = 1.0
           self:AddTimer(0.1, function()
-            self:UpdateTaskScoreToday(MidTermScores)
+            self:UpdateTaskScoreToday()
           end)
         end
       })
@@ -234,6 +241,7 @@ end
 function M:UpdateNormalTaskList()
   local NormalTaskConfig = {
     Name = "UI_Event_MidTerm_DailyTask",
+    EventDay = self.EventDay,
     TaskType = TaskType.Daily,
     YesterdayRewardGot = self.YesterdayRewardGot,
     Owner = self
@@ -244,6 +252,7 @@ end
 function M:UpdateCycleTaskList()
   local CycleTaskConfig = {
     Name = "UI_Event_MidTerm_RepeatTask",
+    EventDay = self.EventDay,
     MidTermTasksRecord = self.MidTermTasksRecord,
     TaskType = TaskType.Cycle,
     YesterdayRewardGot = self.YesterdayRewardGot,
@@ -254,7 +263,8 @@ end
 
 function M:InitYesterdayRewardList()
   self.List_BigReward:ClearListItems()
-  for RewardId, Count in pairs(self.MidTermScoresRewards) do
+  local MidTermScoresRewards = self.MidTermGoals.ScoresRewards or {}
+  for RewardId, Count in pairs(MidTermScoresRewards) do
     local RewardConfig = DataMgr.Reward[RewardId]
     for j, ResourceId in ipairs(RewardConfig.Id) do
       local ResourceConfig = DataMgr.Resource[ResourceId]
@@ -320,6 +330,8 @@ function M:UpdateBtnState(TaskScoreToday)
 end
 
 function M:UpdateOneClickBtnState()
+  local Avatar = GWorld:GetAvatar()
+  self.MidTermGoals = Avatar.MidTermGoals[self.MidTermGoalEventId]
   local canReceive = false
   
   local function checkTaskItemCanReceive(TaskItem)
@@ -328,12 +340,13 @@ function M:UpdateOneClickBtnState()
     end
     local taskProp = TaskItem.TaskProp
     local taskType = TaskItem.TaskConfig.TaskType
+    local Progress = taskProp.Progress or 0
     if type(TaskType.Daily) == "table" and (taskType == TaskType.Daily[1] or taskType == TaskType.Daily[2]) then
-      return taskProp.Progress >= taskProp.Target and not taskProp.RewardsGot
+      return Progress >= taskProp.Target and not taskProp.RewardsGot
     end
+    local TaskFinishCounts = self.MidTermGoals.TaskFinishCount or {}
     if taskType == TaskType.Cycle then
-      local record = self._Avatar and self._Avatar.MidTermTasksRecord and self._Avatar.MidTermTasksRecord[taskProp.UniqueID]
-      return record and record.FinishCount and record.FinishCount > 0
+      return TaskFinishCounts[taskProp.UniqueID] and TaskFinishCounts[taskProp.UniqueID] > 0
     end
     return false
   end
@@ -354,14 +367,15 @@ function M:UpdateOneClickBtnState()
       end
     end
   end
+  if self.YesterdayRewardGot == false then
+    canReceive = true
+  end
   if TimeUtils.NowTime() > self.EventEndTime then
     canReceive = false
   end
   if canReceive then
-    if self.YesterdayRewardGot then
-      self.Btn_OneClickGet.Btn_GetReward:SetForbidden(false)
-      self.Btn_OneClickGet.Key_GetReward:SetForbidKey(false)
-    end
+    self.Btn_OneClickGet.Btn_GetReward:SetForbidden(false)
+    self.Btn_OneClickGet.Key_GetReward:SetForbidKey(false)
     if CommonUtils.GetDeviceTypeByPlatformName() ~= "Mobile" then
       self.Owner.Com_Tab:UpdateBottomKeyInfo({
         {
@@ -434,13 +448,16 @@ function M:UpdateOneClickBtnState()
 end
 
 function M:GetBigReward()
+  if TimeUtils.NowTime() > self.RewardEndTime then
+    return
+  end
   AudioManager(self):PlayUISound(self, "event:/ui/activity/wenmingboyi_all_btn_click", nil, nil)
   
   local function Cb(ErrCode, Ret)
     DebugPrint("GetBigReward", ErrorCode:Name(ErrCode))
     if ErrCode == ErrorCode.RET_SUCCESS then
       self.YesterdayRewardGot = true
-      self:UpdateTaskScoreToday(self._Avatar.MidTermScores)
+      self:UpdateTaskScoreToday()
       self:TrySubNormalRewardReddot("ScoresRewards")
       UIManager(GWorld.GameInstance):LoadUI(UIConst.LoadInConfig, "GetItemPage", nil, nil, nil, nil, Ret, self.OnGetItemPageClosed, self)
     else
@@ -490,7 +507,7 @@ function M:GetAllTaskScores()
     if ErrCode == ErrorCode.RET_SUCCESS then
       self:UpdateNormalTaskList()
       self:UpdateCycleTaskList()
-      self:UpdateTaskScoreToday(self._Avatar.MidTermScores)
+      self:UpdateTaskScoreToday()
       self:UpdateOneClickBtnState()
       self:TryClearNormalTaskRewardReddot()
       self:PlayAnimation(self.Up)
@@ -541,13 +558,12 @@ function M:OnTaskGet(Item)
   Item.Content.CanGet = false
   if Item.Content.TaskType == TaskType.Cycle then
     Item.WS_Btn:SetActiveWidgetIndex(1)
-    Item:UpdateInfinityNum(self._Avatar.MidTermTasksRecord[Item.TaskId].FinishCount)
+    Item:UpdateInfinityNum(Item.TaskFinishCount)
   else
     Item.WS_Btn:SetActiveWidgetIndex(3)
     Item:PlayAnimation(Item.In_Got)
   end
-  local currentScore = self._Avatar.MidTermScores
-  self:UpdateTaskScoreToday(currentScore)
+  self:UpdateTaskScoreToday()
   self:UpdateOneClickBtnState()
   self:TrySubNormalRewardReddot(Item.TaskProp.UniqueID)
   self:TrySubNormalTaskNewReddot(Item.TaskProp.UniqueID)
@@ -624,6 +640,7 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
     IsEventHandled = false
   elseif "SpaceBar" == InKeyName then
     self:GetAllTaskScores()
+    self:GetBigReward()
   end
   return UE4.UWidgetBlueprintLibrary.Unhandled()
 end

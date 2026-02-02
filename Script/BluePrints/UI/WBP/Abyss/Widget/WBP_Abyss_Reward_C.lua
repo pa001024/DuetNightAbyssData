@@ -17,6 +17,14 @@ function WBP_Abyss_Reward_C:Init(Parent, Func, AbyssId, NowValue, MaxValue)
   self.AbyssId = AbyssId
   self.Text_Now:SetText(NowValue)
   self.Text_All:SetText(MaxValue)
+  local Abysses = DataMgr.AbyssSeason
+  if AbyssId and Abysses[AbyssId] and Abysses[AbyssId].AbyssType and 3 == Abysses[AbyssId].AbyssType then
+    self.Text_Split:SetVisibility(ESlateVisibility.Collapsed)
+    self.Text_All:SetVisibility(ESlateVisibility.Collapsed)
+  else
+    self.Text_Split:SetVisibility(ESlateVisibility.HitTestInvisible)
+    self.Text_All:SetVisibility(ESlateVisibility.HitTestInvisible)
+  end
   if not ReddotManager.GetTreeNode("AbyssReward") then
     ReddotManager.AddNode("AbyssReward")
   end

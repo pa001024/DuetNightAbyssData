@@ -8,6 +8,11 @@ function M:StartInteractive(PlayerActor)
   if not PlayerActor then
     return
   end
+  local GameState = UGameplayStatics.GetGameState(self)
+  if GameState.ShouldStopHookInDungeonDelivery then
+    DebugPrint("ayff test DungeonDelivery中禁止钩锁交互")
+    return
+  end
   local Avatar = GWorld:GetAvatar()
   local MainPlayer = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   local IsMainPlayer = MainPlayer.Eid == PlayerActor.Eid

@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -278,7 +281,7 @@ return ReadOnly("CaptureProgress", {
   },
   [80103] = {
     Growth1 = 30,
-    Growth2 = 30,
+    Growth2 = 40,
     Growth3 = 30,
     ProgressProbId = 80103
   },

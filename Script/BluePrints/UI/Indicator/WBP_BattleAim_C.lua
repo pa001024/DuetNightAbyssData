@@ -20,8 +20,13 @@ end
 function WBP_BattleAim_C:Init(Root)
   self.Root = Root
   self.CurSightUI = Root.SightUI
-  local AllChildren = self["Panel_Aim_" .. self.Root.CurWeaponStyleNode]:GetAllChildren()
-  self.AimStarTable = AllChildren:ToTable()
+  local AllChildren
+  if self["Panel_Aim_" .. self.Root.CurWeaponStyleNode] and self["Panel_Aim_" .. self.Root.CurWeaponStyleNode].GetAllChildren then
+    AllChildren = self["Panel_Aim_" .. self.Root.CurWeaponStyleNode]:GetAllChildren()
+  end
+  if AllChildren then
+    self.AimStarTable = AllChildren:ToTable()
+  end
 end
 
 function WBP_BattleAim_C:TryToPlayAimDiffusionStartAnim()
@@ -47,6 +52,9 @@ function WBP_BattleAim_C:RefreshHitEffectEnhanceVisibility()
 end
 
 function WBP_BattleAim_C:RealRefreshAimColor(ColorIntensty)
+  if not self.AimStarTable or not next(self.AimStarTable) then
+    return
+  end
   for _, AimNode in ipairs(self.AimStarTable) do
     AimNode:SetColorAndOpacity(ColorIntensty)
   end

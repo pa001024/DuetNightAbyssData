@@ -30,6 +30,14 @@ function Component:GetSquadCreateInfoByNow(ExtraInfo)
     ResInfo.PhantomWeapon1 = ExtraInfo.PhantomWeapon1
     ResInfo.PhantomWeapon2 = ExtraInfo.PhantomWeapon2
     ResInfo.Pet = ExtraInfo.Pet
+    if not ResInfo.PhantomWeapon1 or not ResInfo.Phantom1 then
+      ResInfo.Phantom1 = nil
+      ResInfo.PhantomWeapon1 = nil
+    end
+    if not ResInfo.PhantomWeapon2 or not ResInfo.Phantom2 then
+      ResInfo.Phantom2 = nil
+      ResInfo.PhantomWeapon2 = nil
+    end
   end
   return ResInfo
 end

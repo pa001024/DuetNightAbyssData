@@ -17,6 +17,10 @@ function M:Construct()
   self.bIsFocusable = true
 end
 
+function M:SetLineHeightPercentage(LineHeight)
+  self.Text_Input.LineHeightPercentage = LineHeight
+end
+
 function M:OnBtnClicked()
   if self:GetText() == "" then
     self:OnPasteBtnClicked()
@@ -49,9 +53,12 @@ function M:UpdateBtns()
       self.Group_Btn:SetVisibility(UIConst.VisibilityOp.Collapsed)
       self.Image_Btn_BG:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
-  else
+  elseif self.bNeedPasteBtn then
     self.WS_Icon:SetActiveWidgetIndex(1)
     self.Text_Btn:SetText(GText("UI_Input_Clean"))
+  else
+    self.Group_Btn:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Image_Btn_BG:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   self:UpdateGamePadFocusKey()
 end

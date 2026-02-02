@@ -65,6 +65,9 @@ T.RT_23 = {-500, 0}
 T.RT_24 = {
   OffsetXY = T.RT_23
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -168,29 +171,41 @@ return ReadOnly("TeleportStaticId2TeleportPointName", {
   [2010067] = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_1"
   },
-  [2010068] = {
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_2"
-  },
   [2010069] = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
   },
   [2020005] = {
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_105701_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_105701_1",
+    Temples = {
+      [1] = 81602
+    }
   },
   [2030001] = {
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_8"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_8",
+    Temples = {
+      [1] = 81302
+    }
   },
   [2040001] = {
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_6"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_6",
+    Temples = {
+      [1] = 81402
+    }
   },
   [2050001] = {
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_12"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_12",
+    Temples = {
+      [1] = 81403
+    }
   },
   [2060001] = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_9"
   },
   [2070001] = {
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_11"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_11",
+    Temples = {
+      [1] = 81601
+    }
   },
   [2080002] = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_5"
@@ -202,19 +217,31 @@ return ReadOnly("TeleportStaticId2TeleportPointName", {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_14"
   },
   [2080027] = {
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_13"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_13",
+    Temples = {
+      [1] = 80706
+    }
   },
   [2090006] = {
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_1",
+    Temples = {
+      [1] = 81401
+    }
   },
   [2090007] = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_2"
   },
   [2100001] = {
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_7"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_7",
+    Temples = {
+      [1] = 80904
+    }
   },
   [2110001] = {
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_4"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_4",
+    Temples = {
+      [1] = 81301
+    }
   },
   [2340003] = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_105501_1"
@@ -228,14 +255,8 @@ return ReadOnly("TeleportStaticId2TeleportPointName", {
   [2370633] = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_105301_1"
   },
-  [2370634] = {
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_105301_2"
-  },
   [2400013] = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104502_1"
-  },
-  [2400014] = {
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104502_2"
   },
   [2400015] = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104502_3"
@@ -261,7 +282,13 @@ return ReadOnly("TeleportStaticId2TeleportPointName", {
   [2430045] = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104505_2"
   },
-  [2440008] = {
+  [292420056] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_4"
+  },
+  [292430075] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104505_3"
+  },
+  [292440001] = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104506_1"
   }
 })

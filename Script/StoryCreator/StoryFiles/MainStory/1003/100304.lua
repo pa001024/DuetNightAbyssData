@@ -439,6 +439,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -548,6 +549,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -666,6 +668,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -886,6 +889,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1318,6 +1322,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1512,6 +1517,7 @@ return {
             pos = {x = 1448.0791316526615, y = 50.71657754010702},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_TiaoPin_1940023"
             }
@@ -1523,6 +1529,7 @@ return {
             pos = {x = 1753.961484593838, y = 45.42245989304815},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_TiaoPin_1940023"
             }
@@ -1560,6 +1567,7 @@ return {
             pos = {x = 1438.6673669467789, y = 479.5401069518717},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_TiaoPin_1940024"
             }
@@ -1571,6 +1579,7 @@ return {
             pos = {x = 1772.7850140056025, y = 480.7165775401071},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_TiaoPin_1940024"
             }
@@ -1582,6 +1591,7 @@ return {
             pos = {x = 1450.4320728291318, y = 975.422459893048},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_TiaoPin_1940025"
             }
@@ -1593,6 +1603,7 @@ return {
             pos = {x = 1784.5497198879555, y = 977.7754010695187},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_TiaoPin_1940025"
             }
@@ -1837,6 +1848,7 @@ return {
               ModeType = 1,
               Id = 103201,
               StartIndex = 1,
+              LoadingId = 0,
               IsWhite = false
             }
           },
@@ -1905,6 +1917,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2162,6 +2175,7 @@ return {
               ModeType = 1,
               Id = 101101,
               StartIndex = 1,
+              LoadingId = 0,
               IsWhite = false
             }
           },
@@ -2561,6 +2575,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -2634,6 +2649,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",

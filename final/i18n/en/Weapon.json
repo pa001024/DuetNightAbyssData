@@ -725,12 +725,12 @@
       }
     ],
     "熔炼": [
-      "Skill Range +30.0%. When performing Normal Attacks with this weapon, grants a 3.6% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
-      "Skill Range +36.0%. When performing Normal Attacks with this weapon, grants a 4.3% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
-      "Skill Range +42.0%. When performing Normal Attacks with this weapon, grants a 5.0% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
-      "Skill Range +48.0%. When performing Normal Attacks with this weapon, grants a 5.8% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
-      "Skill Range +54.0%. When performing Normal Attacks with this weapon, grants a 6.5% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
-      "Skill Range +60.0%. When performing Normal Attacks with this weapon, grants a 7.2% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons."
+      "Skill Range +30.0%. Each hit of Normal Attack with this weapon grants a 3.6% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
+      "Skill Range +36.0%. Each hit of Normal Attack with this weapon grants a 4.3% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
+      "Skill Range +42.0%. Each hit of Normal Attack with this weapon grants a 5.0% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
+      "Skill Range +48.0%. Each hit of Normal Attack with this weapon grants a 5.8% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
+      "Skill Range +54.0%. Each hit of Normal Attack with this weapon grants a 6.5% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
+      "Skill Range +60.0%. Each hit of Normal Attack with this weapon grants a 7.2% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons."
     ],
     "技能": [
       {
@@ -981,12 +981,12 @@
       }
     ],
     "熔炼": [
-      "Skill Damage +20.0%. When an Electro character performs a Plunging Attack with this weapon, grants +15.0% Skill Damage for 10.0s (up to 3 stacks).",
-      "Skill Damage +24.0%. When an Electro character performs a Plunging Attack with this weapon, grants +18.0% Skill Damage for 10.0s (up to 3 stacks).",
-      "Skill Damage +28.0%. When an Electro character performs a Plunging Attack with this weapon, grants +21.0% Skill Damage for 10.0s (up to 3 stacks).",
-      "Skill Damage +32.0%. When an Electro character performs a Plunging Attack with this weapon, grants +24.0% Skill Damage for 10.0s (up to 3 stacks).",
-      "Skill Damage +36.0%. When an Electro character performs a Plunging Attack with this weapon, grants +27.0% Skill Damage for 10.0s (up to 3 stacks).",
-      "Skill Damage +40.0%. When an Electro character performs a Plunging Attack with this weapon, grants +30.0% Skill Damage for 10.0s (up to 3 stacks)."
+      "Skill Intensity +20.0%. When an Electro character deals damage using a Plunging Attack with this weapon, grants self and Electro allies +5.0% Skill DMG for 10.0s (up to 5 stacks).",
+      "Skill Intensity +24.0%. When an Electro character deals damage using a Plunging Attack with this weapon, grants self and Electro allies +6.0% Skill DMG for 10.0s (up to 5 stacks).",
+      "Skill Intensity +28.0%. When an Electro character deals damage using a Plunging Attack with this weapon, grants self and Electro allies +7.0% Skill DMG for 10.0s (up to 5 stacks).",
+      "Skill Intensity +32.0%. When an Electro character deals damage using a Plunging Attack with this weapon, grants self and Electro allies +8.0% Skill DMG for 10.0s (up to 5 stacks).",
+      "Skill Intensity +36.0%. When an Electro character deals damage using a Plunging Attack with this weapon, grants self and Electro allies +9.0% Skill DMG for 10.0s (up to 5 stacks).",
+      "Skill Intensity +40.0%. When an Electro character deals damage using a Plunging Attack with this weapon, grants self and Electro allies +10.0% Skill DMG for 10.0s (up to 5 stacks)."
     ],
     "技能": [
       {
@@ -1109,12 +1109,12 @@
       }
     ],
     "熔炼": [
-      "Resolve +5.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 8.0% and ATK Speed by 15.0% for 15.0s. Each instance of Skill Damage or Ranged Weapon Damage extends the duration by 0.2s.",
-      "Resolve +6.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 9.6% and ATK Speed by 18.0% for 15.0s. Each instance of Skill Damage or Ranged Weapon Damage extends the duration by 0.2s.",
-      "Resolve +7.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 11.2% and ATK Speed by 21.0% for 15.0s. Each instance of Skill Damage or Ranged Weapon Damage extends the duration by 0.2s.",
-      "Resolve +8.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 12.8% and ATK Speed by 24.0% for 15.0s. Each instance of Skill Damage or Ranged Weapon Damage extends the duration by 0.2s.",
-      "Resolve +9.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 14.4% and ATK Speed by 27.0% for 15.0s. Each instance of Skill Damage or Ranged Weapon Damage extends the duration by 0.2s.",
-      "Resolve +10.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 16.0% and ATK Speed by 30.0% for 15.0s. Each instance of Skill Damage or Ranged Weapon Damage extends the duration by 0.2s."
+      "Resolve +5.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 8.0% and ATK Speed by 15.0% for 15.0s. Each instance of Skill DMG or Ranged Weapon DMG extends the duration by 0.2s.",
+      "Resolve +6.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 9.6% and ATK Speed by 18.0% for 15.0s. Each instance of Skill DMG or Ranged Weapon DMG extends the duration by 0.2s.",
+      "Resolve +7.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 11.2% and ATK Speed by 21.0% for 15.0s. Each instance of Skill DMG or Ranged Weapon DMG extends the duration by 0.2s.",
+      "Resolve +8.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 12.8% and ATK Speed by 24.0% for 15.0s. Each instance of Skill DMG or Ranged Weapon DMG extends the duration by 0.2s.",
+      "Resolve +9.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 14.4% and ATK Speed by 27.0% for 15.0s. Each instance of Skill DMG or Ranged Weapon DMG extends the duration by 0.2s.",
+      "Resolve +10.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 16.0% and ATK Speed by 30.0% for 15.0s. Each instance of Skill DMG or Ranged Weapon DMG extends the duration by 0.2s."
     ],
     "技能": [
       {
@@ -1237,12 +1237,12 @@
       }
     ],
     "熔炼": [
-      "Skill Damage +24.0%.",
-      "Skill Damage +28.8%.",
-      "Skill Damage +33.6%.",
-      "Skill Damage +38.4%.",
-      "Skill Damage +43.2%.",
-      "Skill Damage +48.0%."
+      "Skill Intensity +24.0%.",
+      "Skill Intensity +28.8%.",
+      "Skill Intensity +33.6%.",
+      "Skill Intensity +38.4%.",
+      "Skill Intensity +43.2%.",
+      "Skill Intensity +48.0%."
     ],
     "技能": [
       {
@@ -1886,12 +1886,12 @@
       }
     ],
     "熔炼": [
-      "Morale +15.0%. When an Electro character uses their Ultimate Skill, grants +25.0% Skill Damage for 10.0s (up to 3.0 stacks).",
-      "Morale +18.0%. When an Electro character uses their Ultimate Skill, grants +30.0% Skill Damage for 10.0s (up to 3.0 stacks).",
-      "Morale +21.0%. When an Electro character uses their Ultimate Skill, grants +35.0% Skill Damage for 10.0s (up to 3.0 stacks).",
-      "Morale +24.0%. When an Electro character uses their Ultimate Skill, grants +40.0% Skill Damage for 10.0s (up to 3.0 stacks).",
-      "Morale +27.0%. When an Electro character uses their Ultimate Skill, grants +45.0% Skill Damage for 10.0s (up to 3.0 stacks).",
-      "Morale +30.0%. When an Electro character uses their Ultimate Skill, grants +50.0% Skill Damage for 10.0s (up to 3.0 stacks)."
+      "Morale +15.0%. When an Electro character uses their Ultimate Skill, grants +25.0% Skill Intensity for 12.0s (up to 3.0 stacks).",
+      "Morale +18.0%. When an Electro character uses their Ultimate Skill, grants +30.0% Skill Intensity for 12.0s (up to 3.0 stacks).",
+      "Morale +21.0%. When an Electro character uses their Ultimate Skill, grants +35.0% Skill Intensity for 12.0s (up to 3.0 stacks).",
+      "Morale +24.0%. When an Electro character uses their Ultimate Skill, grants +40.0% Skill Intensity for 12.0s (up to 3.0 stacks).",
+      "Morale +27.0%. When an Electro character uses their Ultimate Skill, grants +45.0% Skill Intensity for 12.0s (up to 3.0 stacks).",
+      "Morale +30.0%. When an Electro character uses their Ultimate Skill, grants +50.0% Skill Intensity for 12.0s (up to 3.0 stacks)."
     ],
     "技能": [
       {
@@ -2352,6 +2352,136 @@
     ]
   },
   {
+    "id": 10404,
+    "icon": "Dualblade_Fengyun",
+    "名称": "Skyfall Duality",
+    "版本": "1.2",
+    "描述": "Raging tides shatter the blackened frost; as winds converge, a cold gleam is drawn.",
+    "类型": [
+      "近战",
+      "双刀"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 20,
+    "暴击": 0.22,
+    "暴伤": 2,
+    "触发": 0.2,
+    "加成": {
+      "攻击范围": 100
+    },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Blade": 4,
+        "Basic Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Blade": 3,
+        "Intermediate Weapon Component: Decoration": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Blade": 6,
+        "Advanced Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Blade": 10,
+        "Advanced Weapon Component: Decoration": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Blade": 20,
+        "Advanced Weapon Component: Decoration": 8
+      }
+    ],
+    "熔炼": [
+      "ATK Range +1.0. Charged Attacks with this weapon have a 6.0% chance not to consume Combo Points.",
+      "ATK Range +1.2. Charged Attacks with this weapon have a 7.2% chance not to consume Combo Points.",
+      "ATK Range +1.4. Charged Attacks with this weapon have a 8.4% chance not to consume Combo Points.",
+      "ATK Range +1.6. Charged Attacks with this weapon have a 9.6% chance not to consume Combo Points.",
+      "ATK Range +1.8. Charged Attacks with this weapon have a 10.8% chance not to consume Combo Points.",
+      "ATK Range +2.0. Charged Attacks with this weapon have a 12.0% chance not to consume Combo Points."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "1-Hit DMG": "20.0%×2",
+          "2-Hit DMG": "25.0%×2",
+          "3-Hit DMG": "38.0%",
+          "4-Hit DMG": "43.0%×3"
+        },
+        "id": 1040101,
+        "削韧": [
+          15,
+          20,
+          35,
+          20
+        ],
+        "卡肉": [
+          0,
+          0,
+          0.07
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Charged Attack DMG": "20.0%×6",
+          "Charged Attack Finisher DMG": "55.0%"
+        },
+        "id": 1040102,
+        "削韧": [
+          12,
+          40
+        ],
+        "卡肉": [
+          0,
+          0.1
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Plunge DMG": "51.0%"
+        },
+        "id": 1040103,
+        "削韧": [
+          33
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Sliding Attack DMG": "36.0%×2"
+        },
+        "id": 1040104,
+        "削韧": [
+          12
+        ],
+        "卡肉": [
+          0.03
+        ]
+      }
+    ]
+  },
+  {
     "id": 10501,
     "icon": "Swordwhip_Buyu",
     "名称": "Undying Oneiros",
@@ -2541,12 +2671,12 @@
       }
     ],
     "熔炼": [
-      "Skill Damage +20.0%. When a Hydro character deals CRIT Damage with this weapon, increases Skill DMG for allies by 17.0% for 6.0s.",
-      "Skill Damage +24.0%. When a Hydro character deals CRIT Damage with this weapon, increases Skill DMG for allies by 20.4% for 6.0s.",
-      "Skill Damage +28.0%. When a Hydro character deals CRIT Damage with this weapon, increases Skill DMG for allies by 23.8% for 6.0s.",
-      "Skill Damage +32.0%. When a Hydro character deals CRIT Damage with this weapon, increases Skill DMG for allies by 27.2% for 6.0s.",
-      "Skill Damage +36.0%. When a Hydro character deals CRIT Damage with this weapon, increases Skill DMG for allies by 30.6% for 6.0s.",
-      "Skill Damage +40.0%. When a Hydro character deals CRIT Damage with this weapon, increases Skill DMG for allies by 34.0% for 6.0s."
+      "Skill Intensity +20.0%. When a Hydro character deals CRIT DMG with this weapon, increases Skill DMG for allies by 17.0% for 6.0s.",
+      "Skill Intensity +24.0%. When a Hydro character deals CRIT DMG with this weapon, increases Skill DMG for allies by 20.4% for 6.0s.",
+      "Skill Intensity +28.0%. When a Hydro character deals CRIT DMG with this weapon, increases Skill DMG for allies by 23.8% for 6.0s.",
+      "Skill Intensity +32.0%. When a Hydro character deals CRIT DMG with this weapon, increases Skill DMG for allies by 27.2% for 6.0s.",
+      "Skill Intensity +36.0%. When a Hydro character deals CRIT DMG with this weapon, increases Skill DMG for allies by 30.6% for 6.0s.",
+      "Skill Intensity +40.0%. When a Hydro character deals CRIT DMG with this weapon, increases Skill DMG for allies by 34.0% for 6.0s."
     ],
     "技能": [
       {
@@ -2624,7 +2754,7 @@
     "icon": "Swordwhip_Chixing",
     "名称": "Tetherlash",
     "版本": "1.0",
-    "描述": "It is not emotion alone that binds the human heart. This coiling whipsword binds tighter than words, and strikes deeper than trust.",
+    "描述": "It is not emotion alone that binds the human heart. This coiling whipblade binds tighter than words, and strikes deeper than trust.",
     "类型": [
       "近战",
       "鞭刃"
@@ -2758,7 +2888,7 @@
     "icon": "Swordwhip_Canghu",
     "名称": "Viridis Reefs",
     "版本": "1.0",
-    "描述": "ithered coral lies strewn along the silent shore — fragments that cradle the sea's shattered dreams.",
+    "描述": "Withered coral lies strewn along the silent shore — fragments that cradle the sea's shattered dreams.",
     "类型": [
       "近战",
       "鞭刃"
@@ -3344,13 +3474,11 @@
         "类型": "武器伤害",
         "字段": {
           "Projectile DMG": "71.0%",
-          "Explosion DMG": "50.0%",
           "Explosion Radius": "3.0m"
         },
         "id": 2010101,
         "削韧": [
-          12,
-          20
+          12
         ]
       }
     ]
@@ -3577,12 +3705,12 @@
       }
     ],
     "熔炼": [
-      "Skill Damage +24.0%.",
-      "Skill Damage +28.8%.",
-      "Skill Damage +33.6%.",
-      "Skill Damage +38.4%.",
-      "Skill Damage +43.2%.",
-      "Skill Damage +48.0%."
+      "Skill Intensity +24.0%.",
+      "Skill Intensity +28.8%.",
+      "Skill Intensity +33.6%.",
+      "Skill Intensity +38.4%.",
+      "Skill Intensity +43.2%.",
+      "Skill Intensity +48.0%."
     ],
     "技能": [
       {
@@ -3907,12 +4035,12 @@
       }
     ],
     "熔炼": [
-      "Multishot +37.5%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill Damage and Ranged Weapon Damage by 12.0% for 12.0s, up to 4.0 stacks.",
-      "Multishot +45.0%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill Damage and Ranged Weapon Damage by 14.4% for 12.0s, up to 4.0 stacks.",
-      "Multishot +52.5%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill Damage and Ranged Weapon Damage by 16.8% for 12.0s, up to 4.0 stacks.",
-      "Multishot +60.0%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill Damage and Ranged Weapon Damage by 19.2% for 12.0s, up to 4.0 stacks.",
-      "Multishot +67.5%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill Damage and Ranged Weapon Damage by 21.6% for 12.0s, up to 4.0 stacks.",
-      "Multishot +75.0%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill Damage and Ranged Weapon Damage by 24.0% for 12.0s, up to 4.0 stacks."
+      "Multishot +37.5%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill DMG and Ranged Weapon DMG by 12.0% for 12.0s, up to 4.0 stacks.",
+      "Multishot +45.0%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill DMG and Ranged Weapon DMG by 14.4% for 12.0s, up to 4.0 stacks.",
+      "Multishot +52.5%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill DMG and Ranged Weapon DMG by 16.8% for 12.0s, up to 4.0 stacks.",
+      "Multishot +60.0%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill DMG and Ranged Weapon DMG by 19.2% for 12.0s, up to 4.0 stacks.",
+      "Multishot +67.5%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill DMG and Ranged Weapon DMG by 21.6% for 12.0s, up to 4.0 stacks.",
+      "Multishot +75.0%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill DMG and Ranged Weapon DMG by 24.0% for 12.0s, up to 4.0 stacks."
     ],
     "技能": [
       {
@@ -4344,9 +4472,6 @@
         "类型": "武器伤害",
         "字段": {
           "Explosion DMG": "100.0%",
-          "Explosion DMG - Phase 2": "217.0%",
-          "Explosion DMG - Phase 3": "383.0%",
-          "Explosion DMG - Phase 4": "592.0%",
           "Explosion Radius": "2.0m",
           "2-Hit Explosion Radius": "3.0m",
           "3-Hit Explosion Radius": "4.0m",
@@ -4354,10 +4479,7 @@
         },
         "id": 2040201,
         "削韧": [
-          50,
-          100,
-          150,
-          200
+          50
         ]
       }
     ]
@@ -4868,6 +4990,85 @@
     ]
   },
   {
+    "id": 20505,
+    "icon": "Machinegun_Sanjiao",
+    "名称": "Trigon Muse",
+    "版本": "1.2",
+    "描述": "From threefold geometry, the goddess bestowed her praise, entrusting beauty itself to be honed into lethal edge.",
+    "类型": [
+      "远程",
+      "突击枪"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 18,
+    "暴击": 0.24,
+    "暴伤": 2.15,
+    "触发": 0.28,
+    "弹匣": 25,
+    "最大弹药": 120,
+    "弹药转化率": 2.2,
+    "最大射程": 2900,
+    "加成": {
+      "弹匣": 0.3
+    },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Bolt": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Bolt": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Bolt": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Bolt": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Bolt": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
+    "熔炼": [
+      "Mag Capacity +30.0%. After firing 10 rounds, the weapon consumes all remaining rounds in the magazine to fire a special round that deals AoE DMG. For each round consumed, this damage increases by 1.7%, up to 51.0%. Defeating an enemy with this weapon has a 25.0% chance to restore 1 round.",
+      "Mag Capacity +36.0%. After firing 10 rounds, the weapon consumes all remaining rounds in the magazine to fire a special round that deals AoE DMG. For each round consumed, this damage increases by 2.0%, up to 61.2%. Defeating an enemy with this weapon has a 30.0% chance to restore 1 round.",
+      "Mag Capacity +42.0%. After firing 10 rounds, the weapon consumes all remaining rounds in the magazine to fire a special round that deals AoE DMG. For each round consumed, this damage increases by 2.4%, up to 71.4%. Defeating an enemy with this weapon has a 35.0% chance to restore 1 round.",
+      "Mag Capacity +48.0%. After firing 10 rounds, the weapon consumes all remaining rounds in the magazine to fire a special round that deals AoE DMG. For each round consumed, this damage increases by 2.7%, up to 81.6%. Defeating an enemy with this weapon has a 40.0% chance to restore 1 round.",
+      "Mag Capacity +54.0%. After firing 10 rounds, the weapon consumes all remaining rounds in the magazine to fire a special round that deals AoE DMG. For each round consumed, this damage increases by 3.1%, up to 91.8%. Defeating an enemy with this weapon has a 45.0% chance to restore 1 round.",
+      "Mag Capacity +60.0%. After firing 10 rounds, the weapon consumes all remaining rounds in the magazine to fire a special round that deals AoE DMG. For each round consumed, this damage increases by 3.4%, up to 102.0%. Defeating an enemy with this weapon has a 50.0% chance to restore 1 round."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Beam DMG": "5.0%",
+          "Explosion DMG": "291.5%"
+        },
+        "id": 2050501
+      }
+    ]
+  },
+  {
     "id": 20506,
     "icon": "Machinegun_Quewu",
     "名称": "Cloudveil Unfurl",
@@ -5345,12 +5546,12 @@
       }
     ],
     "熔炼": [
-      "Skill Duration +15.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +10.0% ATK, +10.0% DEF, +7.5% Skill Damage, or +10.0% Skill Duration.",
-      "Skill Duration +18.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +12.0% ATK, +12.0% DEF, +9.0% Skill Damage, or +12.0% Skill Duration.",
-      "Skill Duration +21.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +14.0% ATK, +14.0% DEF, +10.5% Skill Damage, or +14.0% Skill Duration.",
-      "Skill Duration +24.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +16.0% ATK, +16.0% DEF, +12.0% Skill Damage, or +16.0% Skill Duration.",
-      "Skill Duration +27.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +18.0% ATK, +18.0% DEF, +13.5% Skill Damage, or +18.0% Skill Duration.",
-      "Skill Duration +30.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +20.0% ATK, +20.0% DEF, +15.0% Skill Damage, or +20.0% Skill Duration."
+      "Skill Duration +15.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +10.0% ATK, +10.0% DEF, +7.5% Skill Intensity, or +10.0% Skill Duration.",
+      "Skill Duration +18.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +12.0% ATK, +12.0% DEF, +9.0% Skill Intensity, or +12.0% Skill Duration.",
+      "Skill Duration +21.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +14.0% ATK, +14.0% DEF, +10.5% Skill Intensity, or +14.0% Skill Duration.",
+      "Skill Duration +24.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +16.0% ATK, +16.0% DEF, +12.0% Skill Intensity, or +16.0% Skill Duration.",
+      "Skill Duration +27.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +18.0% ATK, +18.0% DEF, +13.5% Skill Intensity, or +18.0% Skill Duration.",
+      "Skill Duration +30.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +20.0% ATK, +20.0% DEF, +15.0% Skill Intensity, or +20.0% Skill Duration."
     ],
     "技能": [
       {
@@ -5428,12 +5629,12 @@
       }
     ],
     "熔炼": [
-      "Skill Range +30.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill Damage, grants +35.0% Skill DMG for 6.0s.",
-      "Skill Range +36.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill Damage, grants +42.0% Skill DMG for 6.0s.",
-      "Skill Range +42.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill Damage, grants +49.0% Skill DMG for 6.0s.",
-      "Skill Range +48.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill Damage, grants +56.0% Skill DMG for 6.0s.",
-      "Skill Range +54.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill Damage, grants +63.0% Skill DMG for 6.0s.",
-      "Skill Range +60.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill Damage, grants +70.0% Skill DMG for 6.0s."
+      "Skill Range +30.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill DMG, grants +35.0% Skill DMG for 6.0s.",
+      "Skill Range +36.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill DMG, grants +42.0% Skill DMG for 6.0s.",
+      "Skill Range +42.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill DMG, grants +49.0% Skill DMG for 6.0s.",
+      "Skill Range +48.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill DMG, grants +56.0% Skill DMG for 6.0s.",
+      "Skill Range +54.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill DMG, grants +63.0% Skill DMG for 6.0s.",
+      "Skill Range +60.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill DMG, grants +70.0% Skill DMG for 6.0s."
     ],
     "技能": [
       {

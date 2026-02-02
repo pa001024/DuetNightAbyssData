@@ -3,12 +3,12 @@ local TimeUtils = {}
 TimeUtils.StandardTimestamp = 0
 TimeUtils.RemoveStandardOffset = 0
 TimeUtils.TimeOffset = 0
-TimeUtils.ServerTimeZone = 0
 TimeUtils.RefreshHMS = {
   5,
   0,
   0
 }
+TimeUtils.BeijingTimeZone = 8
 local now = os.time()
 TimeUtils.CurrentTimeZone = os.difftime(now, os.time(os.date("!*t", now))) / 3600
 
@@ -61,11 +61,12 @@ function TimeUtils.SetTimeOffset(offset)
 end
 
 function TimeUtils.SetServerTimeZone(TimeZone)
+  DebugPrint("CZC,SetServerTimeZone", TimeZone)
   TimeUtils.ServerTimeZone = TimeZone
 end
 
 function TimeUtils.GetServerTimeZone()
-  return TimeUtils.ServerTimeZone
+  return TimeUtils.ServerTimeZone or 0
 end
 
 function TimeUtils.GetCurrentTimeZone()
@@ -91,13 +92,25 @@ end
 
 function TimeUtils.TimeToStr(Timestamp, UserServerTimezone)
   Timestamp = Timestamp or TimeUtils.NowTime()
+  if type(Timestamp) == "table" and Timestamp.GetTime then
+    Timestamp = Timestamp:GetTime()
+  end
   if nil == UserServerTimezone then
     UserServerTimezone = true
   end
   if UserServerTimezone then
-    Timestamp = os.time(os.date("!*t", Timestamp)) + TimeUtils.ServerTimeZone * 3600
+    Timestamp = os.time(os.date("!*t", Timestamp)) + TimeUtils.GetServerTimeZone() * 3600
   end
   return os.date("%y-%m-%d, %H:%M:%S", Timestamp)
+end
+
+function TimeUtils.TimestampToServerTimestamp(current_time)
+  if TimeUtils.ServerTimeZone == nil then
+    ScreenPrint("czc 禁止在服务器时区未设置的情况下访问服务器时区", debug.traceback())
+  end
+  local timezone = TimeUtils.GetServerTimeZone()
+  current_time = current_time + (TimeUtils.BeijingTimeZone - timezone) * 3600
+  return math.floor(current_time)
 end
 
 function TimeUtils.DataToTimestamp(year, month, day, hour, minute, second, use_timezone)
@@ -158,50 +171,62 @@ end
 
 function TimeUtils.TimeToYMDHMSStr(Timestamp, UserServerTimezone, Joiner1, Joiner2)
   Timestamp = Timestamp or TimeUtils.NowTime()
+  if type(Timestamp) == "table" and Timestamp.GetTime then
+    Timestamp = Timestamp:GetTime()
+  end
   Joiner1 = Joiner1 or "-"
   Joiner2 = Joiner2 or ":"
   if nil == UserServerTimezone then
     UserServerTimezone = true
   end
   if UserServerTimezone then
-    Timestamp = os.time(os.date("!*t", Timestamp)) + TimeUtils.ServerTimeZone * 3600
+    Timestamp = os.time(os.date("!*t", Timestamp)) + TimeUtils.GetServerTimeZone() * 3600
   end
   return os.date("%Y" .. Joiner1 .. "%m" .. Joiner1 .. "%d" .. " " .. "%H" .. Joiner2 .. "%M" .. Joiner2 .. "%S", Timestamp)
 end
 
 function TimeUtils.TimeToYMDHMStr(Timestamp, UserServerTimezone, Joiner1, Joiner2)
   Timestamp = Timestamp or TimeUtils.NowTime()
+  if type(Timestamp) == "table" and Timestamp.GetTime then
+    Timestamp = Timestamp:GetTime()
+  end
   Joiner1 = Joiner1 or "-"
   Joiner2 = Joiner2 or ":"
   if nil == UserServerTimezone then
     UserServerTimezone = true
   end
   if UserServerTimezone then
-    Timestamp = os.time(os.date("!*t", Timestamp)) + TimeUtils.ServerTimeZone * 3600
+    Timestamp = os.time(os.date("!*t", Timestamp)) + TimeUtils.GetServerTimeZone() * 3600
   end
   return os.date("%Y" .. Joiner1 .. "%m" .. Joiner1 .. "%d" .. " " .. "%H" .. Joiner2 .. "%M", Timestamp)
 end
 
 function TimeUtils.TimeToYMDStr(Timestamp, UserServerTimezone, Joiner)
   Timestamp = Timestamp or TimeUtils.NowTime()
+  if type(Timestamp) == "table" and Timestamp.GetTime then
+    Timestamp = Timestamp:GetTime()
+  end
   Joiner = Joiner or "-"
   if nil == UserServerTimezone then
     UserServerTimezone = true
   end
   if UserServerTimezone then
-    Timestamp = os.time(os.date("!*t", Timestamp)) + TimeUtils.ServerTimeZone * 3600
+    Timestamp = os.time(os.date("!*t", Timestamp)) + TimeUtils.GetServerTimeZone() * 3600
   end
   return os.date("%Y" .. Joiner .. "%m" .. Joiner .. "%d", Timestamp)
 end
 
 function TimeUtils.TimeToHMSStr(Timestamp, UserServerTimezone, Joiner)
   Timestamp = Timestamp or TimeUtils.NowTime()
+  if type(Timestamp) == "table" and Timestamp.GetTime then
+    Timestamp = Timestamp:GetTime()
+  end
   Joiner = Joiner or ":"
   if nil == UserServerTimezone then
     UserServerTimezone = true
   end
   if UserServerTimezone then
-    Timestamp = os.time(os.date("!*t", Timestamp)) + TimeUtils.ServerTimeZone * 3600
+    Timestamp = os.time(os.date("!*t", Timestamp)) + TimeUtils.GetServerTimeZone() * 3600
   end
   return os.date("%H" .. Joiner .. "%M" .. Joiner .. "%S", Timestamp)
 end
@@ -252,8 +277,11 @@ function TimeUtils.ExcelTimestampToLuaData(time)
   return d.year, d.month, d.day, d.hour, d.min, d.sec
 end
 
-function TimeUtils.GetWeekMonday(timestamp)
-  local date = os.date("*t", timestamp)
+function TimeUtils.GetWeekMonday(Timestamp)
+  if type(Timestamp) == "table" and Timestamp.GetTime then
+    Timestamp = Timestamp:GetTime()
+  end
+  local date = os.date("*t", Timestamp)
   local wday = date.wday
   local daysToSubtract = (wday - 2 + 7) % 7
   local monday = os.time({

@@ -17,6 +17,7 @@ function M:PlayOutAnim()
   if self.Panel_Detail.IsSkillTipsOpened then
     self.Common_Skill_Effect_Tips_PC:PlayOutAnim()
   end
+  self:MarkToRemove()
   self:BindToAnimationFinished(self.Out, {
     self,
     self.Close
@@ -96,6 +97,22 @@ function M:RefreshDetailView(StuffConfigData)
   if self.BagCurState == BagCommon.AllBagState.NormalState then
     if self.CurTabId == BagCommon.ItemTypeToTabId.MeleeWeapon or self.CurTabId == BagCommon.ItemTypeToTabId.RangedWeapon or self.CurTabId == BagCommon.ItemTypeToTabId.Mod then
       self.Panel_Detail:UpdateBottomSingleBtnInfo("WeaponAndMod", self.OnClickGoToAmory, self)
+    elseif self.CurTabId == BagCommon.ItemTypeToTabId.Resource then
+      if StuffConfigData.ResourceSType == BagCommon.MountTypeInResource then
+        local function WrapMountFunc()
+          local MountItemVarData = StuffConfigData.FunctionVars
+          
+          if MountItemVarData then
+            PageJumpUtils:JumpToTargetPageByJumpId(BagCommon.MountJumpId, MountItemVarData.Id)
+          else
+            DebugPrint("BagMainPageView== RefreshDetailView DataMgr Resource of Mount FunctionVars is nil!!!")
+          end
+        end
+        
+        self.Panel_Detail:UpdateBottomSingleBtnInfo("Mount", WrapMountFunc, self)
+      else
+        self.Panel_Detail:UpdateBottomSingleBtnInfo("Other", nil, self)
+      end
     elseif self.CurTabId == BagCommon.ItemTypeToTabId.ReadItem then
       local function WrapReadFunc()
         UIManager(self):LoadUINew("ItemInformation", StuffConfigData.ResourceId, "Read", self, true)

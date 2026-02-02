@@ -28,7 +28,7 @@ function M:InitTabInfo()
     },
     StyleName = "Text",
     OwnerPanel = self,
-    TitleName = GText("个人主页"),
+    TitleName = GText("UI_PersonInfo_Name"),
     BackCallback = self.OnReturnKeyDown
   })
 end

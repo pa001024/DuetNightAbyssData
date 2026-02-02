@@ -84,10 +84,17 @@ T.RT_2 = {
   [10161] = 0.31315240083507,
   [10171] = 0.31315240083507
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("PetToEntry", {
+  [601] = T.RT_1,
+  [602] = T.RT_1,
+  [603] = T.RT_1,
+  [604] = T.RT_1,
   [4011] = T.RT_1,
   [4012] = T.RT_1,
   [4013] = T.RT_1,
@@ -105,6 +112,7 @@ return ReadOnly("PetToEntry", {
   [4051] = T.RT_1,
   [4052] = T.RT_1,
   [4053] = T.RT_1,
+  [4059] = T.RT_1,
   [4061] = T.RT_1,
   [4062] = T.RT_1,
   [4063] = T.RT_1,
@@ -124,6 +132,7 @@ return ReadOnly("PetToEntry", {
   [4121] = T.RT_1,
   [4122] = T.RT_1,
   [4123] = T.RT_1,
+  [4128] = T.RT_1,
   [4131] = T.RT_1,
   [4132] = T.RT_1,
   [4133] = T.RT_1,

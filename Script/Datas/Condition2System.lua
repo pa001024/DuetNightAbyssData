@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -138,6 +141,12 @@ return ReadOnly("Condition2System", {
   },
   [4400] = {
     [1] = "TODSetting"
+  },
+  [4410] = {
+    [1] = "Mount"
+  },
+  [4420] = {
+    [1] = "RegionReputation"
   },
   [8002] = {
     [1] = "Abyss"

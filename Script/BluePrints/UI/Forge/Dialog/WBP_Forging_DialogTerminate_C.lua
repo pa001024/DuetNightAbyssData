@@ -16,6 +16,19 @@ function WBP_Forging_DialogTerminate_C:InitContent(Params, PopupData, Owner)
   self:InitView()
 end
 
+function WBP_Forging_DialogTerminate_C:InitGamepadView()
+  if self.IsShowingTip then
+    self.ControllerFSM:Enter(FSMState.ShowTip)
+  else
+    self.ControllerFSM:Enter(FSMState.Normal)
+  end
+end
+
+function WBP_Forging_DialogTerminate_C:InitKeyboardView()
+  self.ControllerFSM:Reset()
+  self:HideAllGamepadShortcut()
+end
+
 function WBP_Forging_DialogTerminate_C:InitView()
   self.Text_TitleDone:SetText(GText("UI_FORGING_COMPLETED"))
   self.Text_TitleRefund:SetText(GText("UI_Return_Forge_Unfinished"))
@@ -145,6 +158,7 @@ function WBP_Forging_DialogTerminate_C:OnMenuOpenChange(IsOpen)
   else
     self.ControllerFSM:Enter(FSMState.CheckItem)
   end
+  self.IsShowingTip = IsOpen
 end
 
 function WBP_Forging_DialogTerminate_C:OnContentKeyDown(MyGeometry, InKeyEvent)

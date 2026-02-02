@@ -235,7 +235,7 @@ function M:OnDailyTaskRewardChange(DailyTaskId, Rewards)
 end
 
 function M:UpdateTimeCountDown()
-  self.LeftTimeDict = TimeUtils.TimestampNextClock(CommonConst.GAME_REFRESH_HMS[1])
+  self.LeftTimeDict = math.floor(TimeUtils.NextDailyRefreshTime(TimeUtils.NowTime()))
   local RemainTimeDict, TimeCount = UIUtils.GetLeftTimeStrStyle2(self.LeftTimeDict)
   self.Refresh_Time:SetTimeText(GText("UI_DailyGoal_RemainTime"), RemainTimeDict)
 end

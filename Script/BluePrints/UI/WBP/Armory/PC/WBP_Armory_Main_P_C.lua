@@ -336,6 +336,9 @@ function M:OnKeyUp(MyGeometry, InKeyEvent)
 end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
+  if self.CurrentSubUI and self.CurrentSubUI.UnlockDialog then
+    return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.CurrentSubUI.UnlockDialog)
+  end
   if not self.IsGamepadInput then
     return UIUtils.Handled
   end
@@ -934,6 +937,9 @@ function M:OnRemovedFromFocusPath()
 end
 
 function M:GetDesiredFocusTarget()
+  if self.CurrentSubUI and self.CurrentSubUI.UnlockDialog then
+    return self.CurrentSubUI.UnlockDialog
+  end
   local State = self.FSM:Peak()
   if not self:IsFocusStateValid(State) then
     self.FSM:Pop()

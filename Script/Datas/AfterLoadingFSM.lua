@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -15,6 +18,10 @@ return ReadOnly("AfterLoadingFSM", {
     NextState = "EndState"
   },
   EndState = {FSMState = "EndState"},
+  Entertainment = {
+    FSMState = "Entertainment",
+    NextState = "TriggerGuide"
+  },
   GameplayReward = {
     FSMState = "GameplayReward",
     NextState = "SystemUnlock"
@@ -37,7 +44,7 @@ return ReadOnly("AfterLoadingFSM", {
   },
   SystemUnlock = {
     FSMState = "SystemUnlock",
-    NextState = "TriggerGuide"
+    NextState = "Entertainment"
   },
   TriggerGuide = {
     FSMState = "TriggerGuide",

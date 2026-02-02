@@ -56,6 +56,7 @@ function Guide_Touch:Init(MessageId, LastTime, DelayTime, Actions, IsForceClick,
   self.UIShape = UIShape
   self.IsPlayInAnimation = false
   self.IsInUIMode = true
+  self.bOpenWindow = false
   self.IsAdapted = IsAdapted
   self.UICompSizeOffset = FVector2D(UICompSizeOffset.X, UICompSizeOffset.Y)
   self.UICompLocOffset = FVector2D(UICompLocOffset.X, UICompLocOffset.Y)
@@ -524,7 +525,19 @@ function Guide_Touch:ErrorExit()
   })
   self:EnableMapBtn()
   self:Close()
-  self.IsDestroied = true
+end
+
+function Guide_Touch:GuideSkip()
+  self:RemoveTimer("GuideTouchRefreshPos")
+  self:ChangePlayerInputable(true, true)
+  if DataMgr.SystemGuide[SystemGuideManager.RunningId] then
+    local Path = DataMgr.SystemGuide[SystemGuideManager.RunningId].GuideStoryline
+    GWorld.StoryMgr:StopStoryline(Path, false)
+    self:EnableMapBtn()
+    self:Close()
+  else
+    DebugPrint("@lkkkERROR:GuideTouchSkip引导id不存在", SystemGuideManager.RunningId)
+  end
 end
 
 function Guide_Touch:InitClickLogic()
@@ -977,16 +990,28 @@ function Guide_Touch:CreateSelfGuideBubble()
     self.MessageContent = GText(TextMapIndex)
     self.MessageContent = CommonUtils:StringReplaceActionName(self.MessageContent)
   end
+  self.bSkip = 0
+  if -1 ~= SystemGuideManager.RunningId then
+    self.bSkip = DataMgr.SystemGuide[SystemGuideManager.RunningId].GuideSkip
+  end
   if not self.Bubble then
     if self.UsingGamepad then
-      self.Bubble = UIManger:LoadUI("/Game/UI/WBP/Guide/Widget/WBP_Guide_ContentBlock.WBP_Guide_ContentBlock", "GuideBubble", self:GetZOrder(), self.MessageContent, self.MessageLoc, self.GamePadKey)
+      self.Bubble = UIManger:LoadUI("/Game/UI/WBP/Guide/Widget/WBP_Guide_ContentBlock.WBP_Guide_ContentBlock", "GuideBubble", self:GetZOrder(), self.MessageContent, self.MessageLoc, self.GamePadKey, self.bSkip, self)
+      if 1 == self.bSkip then
+        self.Bubble.Controller_Skip:SetVisibility(UE4.ESlateVisibility.Visible)
+      end
     else
-      self.Bubble = UIManger:LoadUI("/Game/UI/WBP/Guide/Widget/WBP_Guide_ContentBlock.WBP_Guide_ContentBlock", "GuideBubble", self:GetZOrder(), self.MessageContent, self.MessageLoc, nil)
+      self.Bubble = UIManger:LoadUI("/Game/UI/WBP/Guide/Widget/WBP_Guide_ContentBlock.WBP_Guide_ContentBlock", "GuideBubble", self:GetZOrder(), self.MessageContent, self.MessageLoc, nil, self.bSkip, self)
+      self.Bubble.Controller_Skip:SetVisibility(UE4.ESlateVisibility.Collapsed)
     end
   elseif self.UsingGamepad then
-    self.Bubble:InitMessage(self.MessageContent, self.MessageLoc, self.GamePadKey)
+    self.Bubble:InitMessage(self.MessageContent, self.MessageLoc, self.GamePadKey, self.bSkip, self)
+    if 1 == self.bSkip then
+      self.Bubble.Controller_Skip:SetVisibility(UE4.ESlateVisibility.Visible)
+    end
   else
-    self.Bubble:InitMessage(self.MessageContent, self.MessageLoc, nil)
+    self.Bubble:InitMessage(self.MessageContent, self.MessageLoc, nil, self.bSkip, self)
+    self.Bubble.Controller_Skip:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
   self:AddTimer(0.1, function()
     self:CalcBubblePosition()
@@ -1144,6 +1169,10 @@ function Guide_Touch:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   local Handle = false
+  if "Gamepad_Special_Right" == InKeyName and 1 == self.bSkip then
+    self.Bubble.Controller_Skip:OnButtonPressed()
+    return UE4.UWidgetBlueprintLibrary.Handled()
+  end
   if self.IsShowCursor and not self.UsingGamepad then
     return UE4.UWidgetBlueprintLibrary.Handled()
   end
@@ -1172,11 +1201,15 @@ function Guide_Touch:OnKeyDown(MyGeometry, InKeyEvent)
 end
 
 function Guide_Touch:OnKeyUp(MyGeometry, InKeyEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if "Gamepad_Special_Right" == InKeyName then
+    self.Bubble.Controller_Skip:OnButtonReleased()
+    return UE4.UWidgetBlueprintLibrary.Handled()
+  end
   if self.IsShowCursor then
     return UE4.UWidgetBlueprintLibrary.Handled()
   end
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   if "LeftAlt" == InKeyName and 0 ~= self.Cursor then
     self:SetCursor(0)
     self:QueryCursor()
@@ -1290,7 +1323,9 @@ function Guide_Touch:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
     self.UsingGamepad = true
     self.GameInputModeSubsystem:SetNavigateWidgetOpacity(0)
     self:CreateSelfGuideBubble()
-    self:SetFocus()
+    if false == self.bOpenWindow then
+      self:SetFocus()
+    end
   end
 end
 
@@ -1330,6 +1365,9 @@ end
 
 function Guide_Touch:OnFocusLost(InFocusEvent)
   if self.UsingGamepad then
+    if self.bOpenWindow then
+      return
+    end
     if not self.FocusCount then
       return
     end
@@ -1343,6 +1381,9 @@ end
 
 function Guide_Touch:OnRemovedFromFocusPath(InFocusEvent)
   if self.UsingGamepad then
+    if self.bOpenWindow then
+      return
+    end
     if not self.FocusCount then
       return
     end

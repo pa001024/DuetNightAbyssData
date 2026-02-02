@@ -290,6 +290,51 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
+    ["142100311"] = {
+      CreatorId = 142100311,
+      UnitType = "Npc",
+      UnitId = 701093
+    },
+    ["142100312"] = {
+      CreatorId = 142100312,
+      UnitType = "Npc",
+      UnitId = 701094
+    },
+    ["142100313"] = {
+      CreatorId = 142100313,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["142100314"] = {
+      CreatorId = 142100314,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["142100315"] = {
+      CreatorId = 142100315,
+      UnitType = "Monster",
+      UnitId = 9508001
+    },
+    ["142100316"] = {
+      CreatorId = 142100316,
+      UnitType = "Monster",
+      UnitId = 9508001
+    },
+    ["142100317"] = {
+      CreatorId = 142100317,
+      UnitType = "Monster",
+      UnitId = 9508001
+    },
+    ["142100318"] = {
+      CreatorId = 142100318,
+      UnitType = "Drop",
+      UnitId = 20031501
+    },
+    ["142100319"] = {
+      CreatorId = 142100319,
+      UnitType = "Drop",
+      UnitId = 20031502
+    },
     ["2100003"] = {
       CreatorId = 2100003,
       UnitType = "Npc",

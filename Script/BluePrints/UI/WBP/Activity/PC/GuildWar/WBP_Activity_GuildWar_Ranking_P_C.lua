@@ -115,4 +115,12 @@ function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
   return UIUtils.Unhandled
 end
 
+function M:OnFocusReceived()
+  local LastItem = self.LastClickedItem
+  if LastItem and LastItem.SelfWidget then
+    self.List_Ranking:NavigateToIndex(LastItem.RankInfo.RankNum - 1)
+  end
+  return UIUtils.Handled
+end
+
 return M

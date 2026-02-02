@@ -11,27 +11,25 @@ function BP_LevelLoader_C:ReceiveBeginPlay()
   if IsDedicatedServer(self) then
     self.IsPC = true
   else
-    self.IsPC = CommonUtils.GetDeviceTypeByPlatformName(self) == "PC"
+    self.IsPC = CommonUtils.GetRuntimePlatform(self) == "PC"
   end
   if EMLuaConst and IsClient(self) then
     self.UseCCDOldValue = EMLuaConst.UseCCDInPC
     EMLuaConst.UseCCDInPC = false
   end
-  self.PCScalabilityLevelNum = {
-    [0] = 6,
-    [1] = 7,
-    [2] = 8
-  }
-  self.MobileScalabilityLevelNum = {IOS = 5, Android = 8}
   self.MinimumLoadMaxLevelNum = 5
+  local ScalabilityLevel = GWorld.GameInstance.GetGameplayScalabilityLevel()
   if self.IsPC then
-    local ScalabilityLevel = GWorld.GameInstance.GetGameplayScalabilityLevel()
-    self.MinimumLoadMaxLevelNum = self.PCScalabilityLevelNum[ScalabilityLevel] or self.MinimumLoadMaxLevelNum
+    self.MinimumLoadMaxLevelNum = Const.PCScalabilityLevelNum[ScalabilityLevel] or self.MinimumLoadMaxLevelNum
   else
     local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
-    self.MinimumLoadMaxLevelNum = self.MobileScalabilityLevelNum[PlatformName] or self.MinimumLoadMaxLevelNum
+    if Const.MobileScalabilityLevelNum[PlatformName] then
+      self.MinimumLoadMaxLevelNum = Const.MobileScalabilityLevelNum[PlatformName][ScalabilityLevel] or self.MinimumLoadMaxLevelNum
+    else
+      self.MinimumLoadMaxLevelNum = self.MinimumLoadMaxLevelNum
+    end
   end
-  DebugPrint("NewLevelLoader", "MinimumLoadMaxLevelNum:", self.MinimumLoadMaxLevelNum)
+  DebugPrint("NewLevelLoader", "MinimumLoadMaxLevelNum:", self.MinimumLoadMaxLevelNum, ScalabilityLevel)
   self:BeginPlay()
   self.EnvironmentManager.bFixLightDirection = false
   self.showAllLevel = false
@@ -324,9 +322,14 @@ function BP_LevelLoader_C:PreloadLevels()
     self:ReleaseInitialBuildingLock()
   end
   if IsClient(self) then
+    self.WaitForPlayerStateTime = UGameplayStatics.GetRealTimeSeconds(self)
     while true do
       local playerController = UGameplayStatics.GetPlayerController(self, 0)
       if playerController and playerController.PlayerState then
+        break
+      end
+      if UGameplayStatics.GetRealTimeSeconds(self) - self.WaitForPlayerStateTime > 60 then
+        DebugPrint("NewLevelLoader", "Wait for PlayerState OverLimit!!!!")
         break
       end
       UKismetSystemLibrary.Delay(self, 0.1)
@@ -512,7 +515,8 @@ function BP_LevelLoader_C:OnPreloadComplete()
     local tempLoc
     local playerCharacter = UGameplayStatics.GetPlayerCharacter(self, 0)
     self.LevelPathfinding:UpdateAllPathfinding(playerCharacter.CurrentLevelId)
-    if playerController.PlayerState.bIsEMInactive then
+    DebugPrint("NewLevelLoader playerController.PlayerState", playerController and playerController.PlayerState)
+    if playerController and playerController.PlayerState and playerController.PlayerState.bIsEMInactive then
       tempLoc = playerCharacter:K2_GetActorLocation()
       DebugPrint("NewLevelLoader", "bIsEMInactive", tempLoc)
     elseif not UKismetMathLibrary.EqualEqual_VectorVector(playerController.TargetBornLocation, FVector(0, 0, 0), 0.001) then

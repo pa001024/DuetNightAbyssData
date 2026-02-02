@@ -32,6 +32,7 @@ function BP_TcpClient_C:K2_ConnectSuccess()
   if Avatar then
     Avatar:ResetOnReconnect()
   end
+  EventManager:FireEvent(EventID.OnConnectSuccess)
   GWorld.NetworkMgr:ConnectSuccess()
   local UIManager = GWorld.GameInstance:GetGameUIManager()
   if UIManager then

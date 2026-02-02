@@ -18,7 +18,7 @@ function FDialogueNode:CreateNodeData(DialogueId)
   self.bPaused = false
   self.IterateArgs = {}
   self.IterGraph.DialogueNodeMap[DialogueId] = self
-  if Dialogue.RelatedWikiId then
+  if Dialogue.RelatedWikiId and self.DialogueWikiComponent then
     self.DialogueWikiComponent:AddListenWikiId(Dialogue.RelatedWikiId)
   end
 end

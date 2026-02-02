@@ -69,12 +69,22 @@ function M:CheckQuestIsShowByCheckState(QuestChainId, QuestChainData)
     return false
   end
   local CurrentTime = TimeUtils.NowTime()
-  local QuestStartTime = DataMgr.QuestChain[QuestChainId].StartTime
-  local QuestEndTime = DataMgr.QuestChain[QuestChainId].EndTime
+  local StartTime = DataMgr.QuestChain[QuestChainId].StartTime
+  local EndTime = DataMgr.QuestChain[QuestChainId].EndTime
+  local QuestStartTime, QuestEndTime
+  if StartTime then
+    QuestStartTime = StartTime:GetTime()
+  end
+  if EndTime then
+    QuestEndTime = EndTime:GetTime()
+  end
   if QuestStartTime and QuestEndTime and (CurrentTime < QuestStartTime or CurrentTime > QuestEndTime) and (QuestChainType == Const.LimTimeQuestChainType or QuestChainType == Const.MainActivityQuestChainType) then
     return false
   end
   if QuestStartTime and CurrentTime < QuestStartTime and (QuestChainType == Const.LimTimeQuestChainType or QuestChainType == Const.MainActivityQuestChainType) then
+    return false
+  end
+  if not QuestStartTime and QuestEndTime and CurrentTime > QuestEndTime and (QuestChainType == Const.LimTimeQuestChainType or QuestChainType == Const.MainActivityQuestChainType) then
     return false
   end
   if QuestChainData.CanShow == false and (QuestChainType == Const.LimTimeQuestChainType or QuestChainType == Const.MainActivityQuestChainType) then

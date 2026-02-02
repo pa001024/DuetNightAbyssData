@@ -41,7 +41,7 @@ function WBP_ModArchive_Main_C:OnLoaded(...)
   self.Text_Title:SetText(GText("MAIN_UI_MODGUIDEBOOK"))
   self:RefreshDot()
   if self.CurInputDeviceType ~= ECommonInputType.GamePad then
-    self:BlockAllUIInput(true)
+    self:BlockAllUIInput(true, "SP_DisplayOnly")
   end
   self:AddTabReddotListen()
 end
@@ -550,6 +550,9 @@ function WBP_ModArchive_Main_C:RefreshOpInfoByInputDevice(CurInputDevice, CurGam
   self.CurInputDeviceType = CurInputDevice
   self.CurGamepadName = CurGamepadName
   self:InitBtnTipsUI()
+  if self.CurInputDeviceType == ECommonInputType.GamePad and self.TabMain and self.TabMain[self.CurTab] and self.TabMain[self.CurTab].OnSwitchToGamepad then
+    self.TabMain[self.CurTab]:OnSwitchToGamepad()
+  end
 end
 
 function WBP_ModArchive_Main_C:InitBtnTipsUI()

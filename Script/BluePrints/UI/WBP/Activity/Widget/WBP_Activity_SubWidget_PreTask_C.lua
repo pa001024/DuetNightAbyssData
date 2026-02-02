@@ -133,11 +133,9 @@ function M:IsNeedShow()
     table.insert(PrerequisiteQuestId, QuestId)
   end
   for _, QuestId in pairs(PrerequisiteQuestId) do
-    local QuestChain = Avatar.QuestChains[QuestId]
-    if not QuestChain then
-      return true
-    end
-    if not QuestChain:IsFinish() then
+    local IsQuestFinished = Avatar:IsQuestFinished(QuestId)
+    local IsQuestAssumeFinished = Avatar:IsQuestAssumeFinished(QuestId)
+    if not IsQuestFinished and not IsQuestAssumeFinished then
       return true
     end
   end

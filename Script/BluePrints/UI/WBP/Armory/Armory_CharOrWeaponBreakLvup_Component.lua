@@ -375,7 +375,7 @@ function Component:OnTargetBreakLevelUp(Ret, Uuid, TargetBreakLevel)
       elseif self.Type == "Weapon" then
         self.BreakHintText = "Weapon_BreakLevelUp_Success"
       end
-      self:BlockAllUIInput(true)
+      self:BlockAllUIInput(true, "SP_DisplayOnly")
       self.CurrentSubUI:OnBreakLevelUpSuccess(self.Target.EnhanceLevel)
       self.Btn_Upgrade:ForbidBtn(true)
       self:UpdateBreakLvUpResourceItems({})

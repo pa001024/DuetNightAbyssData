@@ -405,6 +405,13 @@ function Char:GetSkin(SkinId, Avatar)
   return CommonChar.OwnedSkins[SkinId]
 end
 
+function Char:GetHair(HairId, Avatar)
+  local CommonChar = Avatar and Avatar.CommonChars[self.CharId] or {
+    OwnedHairs = {}
+  }
+  return CommonChar.OwnedHairs[HairId]
+end
+
 Char.CommunityAttrs = {
   "MaxHp",
   "MaxES",
@@ -575,15 +582,31 @@ function Char:DumpAccessorySuit(AppearanceSuit)
   return AccessorySuit
 end
 
+function Char:DumpAccessoryCustomParams(AppearanceSuit)
+  local CustomParams = AppearanceSuit and AppearanceSuit.AccessoryCustomParams
+  if not CustomParams then
+    return
+  end
+  local AccessoryCustomParams = {}
+  for key, value in pairs(CustomParams) do
+    AccessoryCustomParams[key] = value
+  end
+  return AccessoryCustomParams
+end
+
 function Char:DumpAppearanceSuit(Avatar, AppearanceIndex)
   local AppearanceSuit = self.AppearanceSuits[AppearanceIndex or self.CurrentAppearanceIndex]
   local SkinId = AppearanceSuit and AppearanceSuit.SkinId
+  local HairId = AppearanceSuit and AppearanceSuit.HairId
   return {
     AccessorySuit = self:DumpAccessorySuit(AppearanceSuit),
+    AccessoryCustomParams = self:DumpAccessoryCustomParams(AppearanceSuit),
     IsShowPartMesh = self:DumpIsShowPartMesh(Avatar, SkinId),
     IsCornerVisible = self:DumpIsCornerVisible(AppearanceSuit),
     SkinId = SkinId,
+    HairId = HairId,
     Colors = self:DumpColors(Avatar, SkinId),
+    HairColors = self:DumpHairColors(Avatar, HairId),
     CharId = self.CharId
   }
 end
@@ -599,6 +622,23 @@ function Char:DumpColors(Avatar, SkinId)
   end
   local Colors = {}
   local CurrentColors = Skin:GetColors()
+  for i, value in pairs(CurrentColors) do
+    Colors[i] = value
+  end
+  return Colors
+end
+
+function Char:DumpHairColors(Avatar, HairId)
+  if not Avatar or not Avatar.CommonChars then
+    return
+  end
+  local CommonChar = Avatar.CommonChars[self.CharId]
+  local Hair = CommonChar and CommonChar.OwnedHairs[HairId]
+  if not Hair then
+    return
+  end
+  local Colors = {}
+  local CurrentColors = Hair:GetColors()
   for i, value in pairs(CurrentColors) do
     Colors[i] = value
   end
@@ -1033,7 +1073,11 @@ function Char:GetAppearance(AppearanceIndex)
 end
 
 function Char:GetDefaultSkinId()
-  return self:Data().DefaultSkinId
+  return self:Data().DefaultSkinId or self.CharId
+end
+
+function Char:GetDefaultHairId()
+  return self:Data().DefaultHairId or self.CharId
 end
 
 function Char:GetPartMeshAccessoryInfo(SkinId)

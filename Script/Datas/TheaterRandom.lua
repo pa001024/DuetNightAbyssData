@@ -12,12 +12,14 @@ T.RT_2 = {
 T.RT_3 = {
   4031,
   4032,
-  4033
+  4033,
+  4039
 }
 T.RT_4 = {
   4041,
   4042,
-  4043
+  4043,
+  4049
 }
 T.RT_5 = {
   4051,
@@ -32,7 +34,8 @@ T.RT_6 = {
 T.RT_7 = {
   4071,
   4072,
-  4073
+  4073,
+  4079
 }
 T.RT_8 = {
   4081,
@@ -79,6 +82,9 @@ T.RT_16 = {
   4162,
   4163
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

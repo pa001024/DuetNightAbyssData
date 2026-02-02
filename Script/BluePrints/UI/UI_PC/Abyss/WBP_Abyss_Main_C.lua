@@ -97,7 +97,8 @@ function WBP_Abyss_Main_C:SetRewardParams()
     Rewards = {},
     NowNum = 0,
     NumMax = 0,
-    ReceiveButtonText = "UI_Achievement_GetAllReward"
+    ReceiveButtonText = "UI_Achievement_GetAllReward",
+    OnlyShowNowProgress = true
   }
   local Avatar = GWorld:GetAvatar()
   if Avatar then
@@ -192,6 +193,11 @@ function WBP_Abyss_Main_C:SetRewardParams()
           end
           ConfigData.NumMax = tostring(Level - Pre.RewardAddOn)
         end
+        local NewItem = {}
+        NewItem.IsEmpty = true
+        NewItem.NeedSwitchType = true
+        NewItem.EmptyHint = "Abyss_Infinite_ProgressReward_Lock"
+        table.insert(ConfigData.Items, NewItem)
       end
       self.Params.ConfigData = ConfigData
     end
@@ -228,13 +234,15 @@ function WBP_Abyss_Main_C:RefreshTipFragment(RewardItems)
           IconPath = DataMgr.Walnut[WalnutId].Icon
         end
         local CharId = DataMgr.AbyssSeasonList[AbyssSeasonId].CharId
-        local CharName = DataMgr.Char[CharId].CharName
-        local Params = {
-          Text = string.format(GText("Abyss_CharReward_Walnut"), GText(CharName)),
-          IconPath = IconPath
-        }
-        self.Tip_Fragment:Init(Params)
-        self.Tip_Fragment:PlayInAnim()
+        if CharId then
+          local CharName = DataMgr.Char[CharId].CharName
+          local Params = {
+            Text = string.format(GText("Abyss_CharReward_Walnut"), GText(CharName)),
+            IconPath = IconPath
+          }
+          self.Tip_Fragment:Init(Params)
+          self.Tip_Fragment:PlayInAnim()
+        end
       end
       return
     end
@@ -321,6 +329,26 @@ function WBP_Abyss_Main_C:InitInfo(FirstSelectedAbyssId)
   self:InitWidgetInfoInGamePad()
 end
 
+function WBP_Abyss_Main_C:SelectAbyssModeSelectionCellByAbyssId(AbyssId)
+  if AbyssId and self.AbyssId2Index and self.AbyssId2Index[AbyssId] then
+    local Index = self.AbyssId2Index[AbyssId]
+    if Index then
+      if self.SelectIndex and Index == self.SelectIndex then
+        if self.IsEndless then
+          self.List_Level:ScrollToBottom()
+        elseif self.Target then
+          self.List_Level:ScrollIndexIntoView(self.Target - 1)
+        end
+      else
+        local AbyssModeSelectionCell = self.WBox_Mode:GetChildAt(Index - 1)
+        if AbyssModeSelectionCell then
+          AbyssModeSelectionCell:OnCellClicked()
+        end
+      end
+    end
+  end
+end
+
 function WBP_Abyss_Main_C:OnClickedAbyssModeSelectionCell(AbyssModeSelectionCell, DoNotPlaySound)
   if AbyssModeSelectionCell.IsLocked then
     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText(DataMgr.AbyssSeason[AbyssModeSelectionCell.AbyssId].DifficultyLockToast))
@@ -374,10 +402,6 @@ function WBP_Abyss_Main_C:RefreshAbyssLevelInfo(AbyssId)
       self.IsEndless = true
       local Avatar = GWorld:GetAvatar()
       if Avatar then
-        local JumpStep
-        if Abyss.InfiniteNode then
-          JumpStep = Abyss.InfiniteNode[1]
-        end
         local MaxAbyssProgress = Avatar.Abysses[AbyssId].MaxAbyssProgress
         local MaybeAllLevelNum = MaxAbyssProgress[1] + 1
         local AllLevelNum = 1
@@ -406,11 +430,12 @@ function WBP_Abyss_Main_C:RefreshAbyssLevelInfo(AbyssId)
         self.Max = AllLevelNum
         self.MaxLevelNum = AllLevelNum
         self.CanJump = false
-        if JumpStep then
-          self.JumpIndex = (math.floor((AllLevelNum - 1) / JumpStep) + 1) * JumpStep
-          if 0 ~= AllLevelNum % JumpStep and Avatar:CheckAbyssCanJump(AbyssId, self.JumpIndex) then
-            self.CanJump = true
-          end
+        self.JumpIndex = nil
+        if Abyss.InfiniteNode then
+          self.JumpIndex = Avatar:GetJumpLevelIndex(AbyssId)
+        end
+        if self.JumpIndex and AllLevelNum < self.JumpIndex then
+          self.CanJump = true
         end
         for Index = 1, AllLevelNum do
           local LevelChooseObj = NewObject(UE4.LoadClass(ClassPath))
@@ -441,13 +466,14 @@ function WBP_Abyss_Main_C:RefreshAbyssLevelInfo(AbyssId)
         end
         if self.CanJump then
           local PlayNodeLevelUnlockAnimation = true
-          if EMCache:Get("LastUnlockNodeLevel") == self.JumpIndex then
+          if EMCache:Get("NodeLevelUnlockAnimationPlayed", true) then
             PlayNodeLevelUnlockAnimation = false
           end
           self.Max = self.Max + 2
           self.MaxLevelNum = self.JumpIndex
           local LevelChooseObj_JumpTip = NewObject(UE4.LoadClass(ClassPath))
           LevelChooseObj_JumpTip.IsJumpTip = true
+          LevelChooseObj_JumpTip.JumpIndex = self.JumpIndex
           LevelChooseObj_JumpTip.AbyssId = AbyssId
           LevelChooseObj_JumpTip.Root = self
           self.List_Level:AddItem(LevelChooseObj_JumpTip)
@@ -459,7 +485,6 @@ function WBP_Abyss_Main_C:RefreshAbyssLevelInfo(AbyssId)
           LevelChooseObj.AbyssId = AbyssId
           LevelChooseObj.AbyssLevelId = AbyssLevelId
           LevelChooseObj.Index = self.JumpIndex
-          LevelChooseObj.NodeIndex = math.floor(self.JumpIndex / JumpStep)
           LevelChooseObj.IsEndless = true
           LevelChooseObj.Root = self
           LevelChooseObj.IsLocked = false
@@ -1070,10 +1095,15 @@ function WBP_Abyss_Main_C:PlayOutAnim()
     self,
     self.Close
   })
+  AudioManager(self):SetEventSoundParam(self, "AbyssMainOpenSound", {ToEnd = 1})
+  AudioManager(self):StopSound(self, "AbyssMainOpenSound")
   self:PlayAnimationForward(self.Out)
   self.Com_Tab:PlayAnimationForward(self.Com_Tab.Out)
   if self.IsFromActivity then
+    self.IsFromActivity = false
+    DebugPrint("JLy PlayOutAnim OnReturnToActivityEntry")
     EventManager:FireEvent(EventID.OnReturnToActivityEntry)
+    EventManager:FireEvent(EventID.OnActivityEntryShowVisible)
   end
 end
 
@@ -1129,7 +1159,7 @@ function WBP_Abyss_Main_C:GetAllRewards(ReceiveAllParm)
         Item.ConfigData.CanReceive = CanReceive
         Item.ConfigData.RewardsGot = IsGot
         if Item.SelfWidget then
-          Item.SelfWidget:RefreshBtn(IsGot)
+          Item.SelfWidget:RefreshBtn(IsGot, CanReceive)
         end
       end
       ReceiveAllParm.SelfWidget:RefreshButton(HaveReWardToGet)
@@ -1153,10 +1183,10 @@ function WBP_Abyss_Main_C:ShowReviewPopUp()
   if not DataMgr.AbyssSeasonList[AbyssSeasonId] then
     return
   end
-  if EMCache:Get("LastViewAbyss") == AbyssSeasonId then
+  if EMCache:Get("LastViewAbyss", true) == AbyssSeasonId then
     return
   end
-  EMCache:Set("LastViewAbyss", AbyssSeasonId)
+  EMCache:Set("LastViewAbyss", AbyssSeasonId, true)
   local LastSeasonId = DataMgr.AbyssSeasonList[AbyssSeasonId].LastSeason
   if not LastSeasonId then
     return
@@ -1165,8 +1195,12 @@ function WBP_Abyss_Main_C:ShowReviewPopUp()
   if not AbyssId then
     return
   end
-  local Params = {SeasonId = LastSeasonId, AbyssId = AbyssId}
-  UIManager(self):ShowCommonPopupUI(100191, Params, self)
+  local Params = {
+    SeasonId = LastSeasonId,
+    AbyssId = AbyssId,
+    LastFocus = self
+  }
+  UIManager(self):LoadUINew("Abyss_Review", Params)
 end
 
 function WBP_Abyss_Main_C:TryChangeSelectedTab(NavigationDirection, Index)

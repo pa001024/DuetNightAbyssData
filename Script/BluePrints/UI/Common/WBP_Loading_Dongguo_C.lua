@@ -136,14 +136,9 @@ function WBP_Loading_Dongguo_C:InitTitle(TitleBp, TitleTrans)
   if not TitleBp then
     return
   end
-  local SystemLanguageSurfix = {
-    CN = 1,
-    TC = 2,
-    JP = 4,
-    KR = 5
-  }
+  local SystemLanguageSurfix = {CN = 1, Other = 2}
   local SystemLanguage = EMCache:Get("SystemLanguage")
-  TitleBp = StringReplaceUtil(TitleBp, SystemLanguageSurfix[SystemLanguage] or 3)
+  TitleBp = StringReplaceUtil(TitleBp, SystemLanguageSurfix[SystemLanguage] or 2)
   self.Group_Title:ClearChildren()
   local TitleWidget = UIManager(self):CreateWidget(TitleBp)
   self.Group_Title:AddChildToOverlay(TitleWidget)

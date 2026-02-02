@@ -18,6 +18,11 @@ function Component:InitGamePad()
     }
   })
   self.Btn_EditPolarity:SetDefaultGamePadImg("RS")
+  self.Key_Search:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = "LS"}
+    }
+  })
   self.Btn_Auto:SetDefaultGamePadImg("Y")
   self.Btn_Discharge:SetDefaultGamePadImg("X")
   self.Btn_Discharge:TryOverrideLongPressClickFunc(function()
@@ -198,7 +203,7 @@ function Component:Handle_OnGamePadDown(InKeyName)
       self.Btn_EditPolarity:OnBtnClicked()
       return true
     elseif "Gamepad_LeftThumbstick" == InKeyName then
-      self.Common_SortList_PC:SetFocus()
+      self.Com_Search:SetFocus()
       self.IsFocusInSpecialItem = true
       return true
     elseif "Gamepad_Special_Left" == InKeyName then
@@ -293,6 +298,7 @@ function Component:SwitchMainUIToPCOrMoble()
   self.Key_FocusList_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.List_Role:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.CheckBox_Mod:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.Key_Search:SetVisibility(UIConst.VisibilityOp.Collapsed)
   ModModel:SetGamePadSelectedStuff(nil, nil)
   self.IsFocusOnResourceBar = false
 end
@@ -345,7 +351,7 @@ function Component:SwitchMainUIToGamePad()
   if self.PolarityEditWidget then
     self.PolarityEditWidget.Com_Cost.Key:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
-  self.Mod_Plan.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Visible)
+  self.Mod_Plan.Key_GamePad:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   self.Common_PolarityList_PC.Key_LT:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Common_PolarityList_PC.Key_RT:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Key_FocusList_GamePad:SetVisibility(UIConst.VisibilityOp.Visible)
@@ -355,10 +361,9 @@ function Component:SwitchMainUIToGamePad()
   self.List_Role.BP_OnItemSelectionChanged:Clear()
   self.List_Role.BP_OnItemSelectionChanged:Add(self, self.OnRoleListItemSelectionChanged)
   self.List_Select_Mod.BP_OnItemSelectionChanged:Add(self, self.OnModListItemChange)
+  self.Key_Search:SetVisibility(UIConst.VisibilityOp.Visible)
   self:SetGamepadNavigationRule()
   self:SetDefaultGamepadFocus()
-  self.Sift:BindEventOnAddedToFocusPath(self, self.OnSiftAddedToFocusPath)
-  self.Sift:BindEventOnRemovedFromFocusPath(self, self.OnSiftRemovedFromFocusPath)
   self.Btn_Share:BindEventOnAddedToFocusPath(self, self.OnBtnCopyLinkAddedToFocusPath)
   self.Btn_Share:BindEventOnRemovedFromFocusPath(self, self.OnBtnCopyLinkRemovedFromFocusPath)
   if self.ItemDetailsWidget then
@@ -367,14 +372,6 @@ function Component:SwitchMainUIToGamePad()
     end)
   end
   self.Btn_Info:SetGamepadIconVisibility(false)
-end
-
-function Component:OnSiftAddedToFocusPath()
-  self.Common_SortList_PC.Img_Key:SetVisibility(UIConst.VisibilityOp.Collapsed)
-end
-
-function Component:OnSiftRemovedFromFocusPath()
-  self.Common_SortList_PC.Img_Key:SetVisibility(UIConst.VisibilityOp.Visible)
 end
 
 function Component:OnBtnCopyLinkAddedToFocusPath()
@@ -415,11 +412,6 @@ function Component:SetGamepadNavigationRule()
       })
     end
   end
-  self.Common_SortList_PC.Btn_SortType:SetNavigationRuleExplicit(EUINavigation.Right, self.Sift)
-  self.Common_SortList_PC.Btn_SortType:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
-  self.Common_SortList_PC.Btn_Filter_List:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
-  self.Common_SortList_PC.Btn_Filter_List:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Stop)
-  self.Sift:SetNavigationRuleExplicit(EUINavigation.Left, self.Common_SortList_PC.Btn_SortType)
   self.Sift:SetNavigationRuleExplicit(EUINavigation.Right, self.CheckBox_Mod)
   self.CheckBox_Mod:SetNavigationRuleExplicit(EUINavigation.Left, self.Sift)
   self.Mod_Plan.Btn_Plan:SetNavigationRuleExplicit(EUINavigation.Right, self.Mod_Plan.Btn_Edit)

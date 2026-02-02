@@ -5,8 +5,13 @@ function BP_MergeInteractiveComponent_C:BtnPressed(PlayerActor)
   self:StartInteractive(PlayerActor)
 end
 
-function BP_MergeInteractiveComponent_C:BtnReleased(PlayerActor)
-  self:EndPressInteractive(PlayerActor)
+function BP_MergeInteractiveComponent_C:BtnReleased(PlayerActor, InPressTimeSeconds)
+  local Owner = self:GetOwner()
+  if Owner and Owner.InteractiveType == Const.PressInteractive then
+    self:EndPressInteractive(PlayerActor, false)
+  elseif Owner.InteractiveType == Const.ClickInteractive then
+    self:EndInteractive(PlayerActor)
+  end
 end
 
 function BP_MergeInteractiveComponent_C:StartInteractive(PlayerActor)

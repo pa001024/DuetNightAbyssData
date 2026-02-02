@@ -1724,7 +1724,12 @@ function G:TakeGachaScreenShot(Widget, OnHideCallback)
     self:GetScreenShotWidget()
   end
   if IsValid(self.GachaScreenShotWidget) then
-    self.GachaScreenShotWidget:Init(Image, Widget, OnHideCallback)
+    local Params = {
+      Image = Image,
+      Parent = Widget,
+      OnHiddenCallback = OnHideCallback
+    }
+    self.GachaScreenShotWidget:Init(Params)
     self.GachaScreenShotWidget:SetFocus()
   end
 end

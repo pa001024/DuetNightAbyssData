@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -9,7 +12,8 @@ return ReadOnly("ExamineInfo", {
     IP = "121.199.19.146",
     JumpURL = "https://apps.apple.com/cn/app/%E4%BA%8C%E9%87%8D%E8%9E%BA%E6%97%8B/id6470771372",
     MirrorChannelID = 0,
-    Port = 8000
+    Port = 8000,
+    Remark = "IOS-官方"
   },
   ["10.0"] = {
     ChannelID = 286,
@@ -17,7 +21,8 @@ return ReadOnly("ExamineInfo", {
     HostNum = 5001,
     IP = "121.199.19.146",
     MirrorChannelID = 0,
-    Port = 8000
+    Port = 8000,
+    Remark = "PC-Wegame"
   },
   ["11.0"] = {
     ChannelID = 297,
@@ -25,7 +30,8 @@ return ReadOnly("ExamineInfo", {
     HostNum = 5001,
     IP = "121.199.19.146",
     MirrorChannelID = 0,
-    Port = 8000
+    Port = 8000,
+    Remark = "PC-联想"
   },
   ["12.0"] = {
     ChannelID = 237,
@@ -33,7 +39,8 @@ return ReadOnly("ExamineInfo", {
     HostNum = 5001,
     IP = "121.199.19.146",
     MirrorChannelID = 287,
-    Port = 8000
+    Port = 8000,
+    Remark = "PC-Tap"
   },
   ["13.0"] = {
     ChannelID = 237,
@@ -42,7 +49,8 @@ return ReadOnly("ExamineInfo", {
     IP = "121.199.19.146",
     JumpURL = "https://www.3839.com/a/183726.htm",
     MirrorChannelID = 288,
-    Port = 8000
+    Port = 8000,
+    Remark = "PC-好游"
   },
   ["14.0"] = {
     ChannelID = 301,
@@ -50,7 +58,8 @@ return ReadOnly("ExamineInfo", {
     HostNum = 5001,
     IP = "121.199.19.146",
     MirrorChannelID = 0,
-    Port = 8000
+    Port = 8000,
+    Remark = "IOS-云游戏"
   },
   ["15.0"] = {
     ChannelID = 300,
@@ -58,7 +67,8 @@ return ReadOnly("ExamineInfo", {
     HostNum = 5001,
     IP = "121.199.19.146",
     MirrorChannelID = 0,
-    Port = 8000
+    Port = 8000,
+    Remark = "安卓-云游戏"
   },
   ["16.0"] = {
     ChannelID = 171,
@@ -66,7 +76,9 @@ return ReadOnly("ExamineInfo", {
     HostNum = 5003,
     IP = "43.130.139.32",
     JumpURL = "https://apps.apple.com/us/app/id6744096826",
-    Port = 8000
+    MirrorChannelID = 0,
+    Port = 8000,
+    Remark = "IOS-海外"
   },
   ["17.0"] = {
     ChannelID = 160,
@@ -74,36 +86,49 @@ return ReadOnly("ExamineInfo", {
     HostNum = 5003,
     IP = "43.130.139.32",
     JumpURL = "https://play.google.com/store/apps/details?id=com.panstudio.gplay.duetnightabyss.arpg.global",
-    Port = 8000
+    MirrorChannelID = 0,
+    Port = 8000,
+    Remark = "谷歌-海外"
   },
-  ["18.0"] = {ChannelID = 240, ExamineKey = "18.0"},
+  ["18.0"] = {
+    ChannelID = 240,
+    ExamineKey = "18.0",
+    MirrorChannelID = 0,
+    Remark = "PC-海外"
+  },
   ["19.0"] = {
     ChannelID = 295,
     ExamineKey = "19.0",
     HostNum = 5003,
     IP = "43.130.139.32",
-    Port = 8000
+    MirrorChannelID = 0,
+    Port = 8000,
+    Remark = "Epic-海外"
   },
   ["2.0"] = {
     ChannelID = 18,
     ExamineKey = "2.0",
     HostNum = 5001,
     IP = "121.199.19.146",
-    JumpURL = "https://dna.yingxiong.com",
+    JumpURL = "https://cdn-dna.yingxiong.com/dna/Android_dna.apk",
     MirrorChannelID = 0,
-    Port = 8000
+    Port = 8000,
+    Remark = "安卓-官方"
   },
   ["20.0"] = {
     ChannelID = 240,
     ExamineKey = "20.0",
-    MirrorChannelID = 307
+    MirrorChannelID = 307,
+    Remark = "PC投放包体"
   },
   ["21.0"] = {
     ChannelID = 305,
     ExamineKey = "21.0",
     HostNum = 5003,
     IP = "43.130.139.32",
-    Port = 8000
+    MirrorChannelID = 0,
+    Port = 8000,
+    Remark = "Steam"
   },
   ["22.0"] = {
     ChannelID = 314,
@@ -111,7 +136,17 @@ return ReadOnly("ExamineInfo", {
     HostNum = 5001,
     IP = "121.199.19.146",
     MirrorChannelID = 0,
-    Port = 8000
+    Port = 8000,
+    Remark = "PC-云游戏"
+  },
+  ["23.0"] = {
+    ChannelID = 315,
+    ExamineKey = "23.0",
+    HostNum = 5003,
+    IP = "43.130.139.32",
+    MirrorChannelID = 0,
+    Port = 8000,
+    Remark = "谷歌海外PC"
   },
   ["3.0"] = {
     ChannelID = 46,
@@ -120,7 +155,8 @@ return ReadOnly("ExamineInfo", {
     IP = "106.14.60.38",
     JumpURL = "https://app.biligame.com/page/detail_share.html?id=111015&sourceFrom=23006&_1758700080446",
     MirrorChannelID = 0,
-    Port = 8000
+    Port = 8000,
+    Remark = "安卓-B站"
   },
   ["4.0"] = {
     ChannelID = 18,
@@ -129,7 +165,8 @@ return ReadOnly("ExamineInfo", {
     IP = "121.199.19.146",
     JumpURL = "https://www.taptap.cn/app/388717",
     MirrorChannelID = 167,
-    Port = 8000
+    Port = 8000,
+    Remark = "安卓-Tap"
   },
   ["5.0"] = {
     ChannelID = 18,
@@ -138,7 +175,8 @@ return ReadOnly("ExamineInfo", {
     IP = "121.199.19.146",
     JumpURL = "https://www.3839.com/a/158909.htm",
     MirrorChannelID = 161,
-    Port = 8000
+    Port = 8000,
+    Remark = "安卓-好游"
   },
   ["6.0"] = {
     ChannelID = 18,
@@ -147,7 +185,8 @@ return ReadOnly("ExamineInfo", {
     IP = "121.199.19.146",
     JumpURL = "https://www.douyin.com/user/MS4wLjABAAAARPsdV6EkvU0tLECUo1hukfkzr697ntfSEVS3CVCh5R0",
     MirrorChannelID = 296,
-    Port = 8000
+    Port = 8000,
+    Remark = "安卓-抖音"
   },
   ["7.0"] = {
     ChannelID = 303,
@@ -156,7 +195,8 @@ return ReadOnly("ExamineInfo", {
     IP = "121.199.19.146",
     JumpURL = "https://actcpc.heytapimage.com/userfiles/pager_render/game_detail/index.html?banner_type=icon&appId=36323183",
     MirrorChannelID = 0,
-    Port = 8000
+    Port = 8000,
+    Remark = "安卓-oppo"
   },
   ["8.0"] = {
     ChannelID = 237,
@@ -164,7 +204,8 @@ return ReadOnly("ExamineInfo", {
     HostNum = 5001,
     IP = "121.199.19.146",
     MirrorChannelID = 0,
-    Port = 8000
+    Port = 8000,
+    Remark = "PC-官方"
   },
   ["9.0"] = {
     ChannelID = 269,
@@ -172,6 +213,7 @@ return ReadOnly("ExamineInfo", {
     HostNum = 5002,
     IP = "106.14.60.38",
     MirrorChannelID = 0,
-    Port = 8000
+    Port = 8000,
+    Remark = "PC-B站"
   }
 })

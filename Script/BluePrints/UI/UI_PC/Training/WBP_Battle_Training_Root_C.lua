@@ -655,8 +655,8 @@ function WBP_Battle_Training_Root_C:FilterItemsForMonsterGallery(MonsterCampOpti
   for Id, Info in pairs(DataMgr.GalleryRule) do
     local MonsterId = Info.PreferredMonsterId
     if not self:CheckMonsterInCamp(MonsterId, self.CurrentMonsterCampOption) or not MonsterUtils.CheckGallerRuleByMonsterRelease(Info) then
-    elseif Info.DisableTrainingGround ~= true and (not (self.OnlyShowUnlockedMonsters and Avatar) or not Avatar:CheckFirstMonster(Info.PreferredMonsterId, true)) then
-      local IsLocked = Avatar:CheckFirstMonster(Info.PreferredMonsterId, true)
+    elseif Info.DisableTrainingGround ~= true and (not (self.OnlyShowUnlockedMonsters and Avatar) or not Avatar:CheckFirstMonster(Info.PreferredMonsterId, false)) then
+      local IsLocked = Avatar:CheckFirstMonster(Info.PreferredMonsterId, false)
       table.insert(self.MonsterGallery, {
         Id = Id,
         Info = Info,

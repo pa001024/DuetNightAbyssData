@@ -1,4 +1,4 @@
-local ExecuteBlueprintFunctionSetVarNode = Class("StoryCreator.StoryLogic.StorylineNodes.BaseQuestNode")
+local ExecuteBlueprintFunctionSetVarNode = Class("StoryCreator.StoryLogic.StorylineNodes.BaseAsynQuestNode")
 local VarLogType = UE.EStoryLogType.StoryVar
 
 function ExecuteBlueprintFunctionSetVarNode:Init()
@@ -7,9 +7,10 @@ function ExecuteBlueprintFunctionSetVarNode:Init()
   self.VarInfos = {}
 end
 
-function ExecuteBlueprintFunctionSetVarNode:Execute()
+function ExecuteBlueprintFunctionSetVarNode:Execute(Callback)
   if not self.VarName or self.VarName == "" then
     UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, VarLogType, "通过蓝图函数设置变量节点出错", "没有填写VarName, FileName:" .. tostring(self.Context.FileName) .. ",请策划排查.")
+    Callback()
     return
   end
   local VarInfo = DataMgr.StoryVariable[self.VarName]
@@ -20,6 +21,7 @@ function ExecuteBlueprintFunctionSetVarNode:Execute()
     end
     _Str = _Str .. ",FileName:" .. tostring(self.Context.FileName) .. ",请策划排查."
     UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, VarLogType, "通过蓝图函数设置变量节点出错", _Str)
+    Callback()
     return
   end
   local NewVarInfos = {}
@@ -35,14 +37,29 @@ function ExecuteBlueprintFunctionSetVarNode:Execute()
   local StorySubsystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UStorySubsystem:StaticClass())
   local Ret = StorySubsystem:ExecuteBlueprintVarFunction(self.FunctionName, self.VarName, NewVarInfos, self.QuestChainId, false)
   if type(Ret) ~= "number" or 0 ~= Ret % 1 then
-    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, VarLogType, "通过蓝图函数设置变量节点出错", "函数[" .. tostring(self.FunctionName) .. "]的返回值不是int类型")
+    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, VarLogType, "通过蓝图函数设置变量节点出错", "函数[" .. tostring(self.FunctionName) .. "]的返回值不是int类型, Ret:" .. tostring(Ret))
+    Callback()
     return nil
   end
   StorySubsystem:SetInt(self.VarName, Ret)
-  return nil
+  if not VarInfo.IsGlobal then
+    Callback()
+  else
+    EventManager:AddEvent(EventID.OnStoryVarUpdated, self, function(Obj, VarName, VarValue)
+      EventManager:RemoveEvent(EventID.OnStoryVarUpdated, self)
+      if VarName == self.VarName and VarValue == Ret then
+        Callback()
+      end
+    end)
+  end
+end
+
+function ExecuteBlueprintFunctionSetVarNode:Stop()
+  self:Clear()
 end
 
 function ExecuteBlueprintFunctionSetVarNode:Clear()
+  EventManager:RemoveEvent(EventID.OnStoryVarUpdated, self)
 end
 
 function ExecuteBlueprintFunctionSetVarNode:OnQuestlineFinish()

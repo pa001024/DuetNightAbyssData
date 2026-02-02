@@ -221,6 +221,7 @@ function M:SetContentInfo(SourceInfo, CollectRewardExpRecord)
   if self.AllContentInfo and self.AllContentInfo[SourceInfo.Id] then
     return
   end
+  local CurrentVersion = DataMgr.GlobalConstant.CurrentVersion.ConstantValue
   local Id = SourceInfo.ID
   self.AllContentInfo[SourceInfo.ID] = {
     ID = SourceInfo.ID,
@@ -231,7 +232,7 @@ function M:SetContentInfo(SourceInfo, CollectRewardExpRecord)
   local IdTable = {}
   if 1 == Id then
     for _, CharInfo in pairs(DataMgr.Char) do
-      if not CharInfo.IsNotOpen and CharInfo.CollectRewardExp then
+      if not CharInfo.IsNotOpen and CharInfo.CollectRewardExp and (not CharInfo.ReleaseVersion or CurrentVersion >= CharInfo.ReleaseVersion) then
         if CharInfo.GenderTag then
           if CharInfo.GenderTag == self.Avatar.Sex then
             table.insert(IdTable, CharInfo.CharId)
@@ -244,7 +245,7 @@ function M:SetContentInfo(SourceInfo, CollectRewardExpRecord)
     end
   elseif 2 == Id then
     for _, WeaponInfo in pairs(DataMgr.Weapon) do
-      if not WeaponInfo.IsNotOpen and WeaponInfo.CollectRewardExp then
+      if not WeaponInfo.IsNotOpen and WeaponInfo.CollectRewardExp and (not WeaponInfo.ReleaseVersion or CurrentVersion >= WeaponInfo.ReleaseVersion) then
         table.insert(IdTable, WeaponInfo.WeaponId)
       end
     end
@@ -260,7 +261,7 @@ function M:SetContentInfo(SourceInfo, CollectRewardExpRecord)
     end
   elseif 4 == Id then
     for _, ModInfo in pairs(DataMgr.Mod) do
-      if not ModInfo.IsNotOpen and ModInfo.CollectRewardExp then
+      if not ModInfo.IsNotOpen and ModInfo.CollectRewardExp and (not ModInfo.ReleaseVersion or CurrentVersion >= ModInfo.ReleaseVersion) then
         table.insert(IdTable, ModInfo.Id)
       end
     end

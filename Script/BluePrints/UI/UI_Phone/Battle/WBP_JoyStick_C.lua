@@ -71,6 +71,9 @@ function WBP_JoyStick_C:SetTouchVisibility(InVisibility)
     Controller:SetVirtualJoystickVisibility(false)
     DebugPrint("HY@ UIManagerComponent InActivateVirtualJoystick== Try to InActivate Joystick")
   else
+    if not self.IsHide then
+      return
+    end
     self.IsHide = false
     UIManager:ActivateVirtualJoystick()
     UIManager:SetRealVirtualJoystickZOrder(6)

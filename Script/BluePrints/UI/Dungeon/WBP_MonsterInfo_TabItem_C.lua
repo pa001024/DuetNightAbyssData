@@ -46,7 +46,9 @@ function M:OnListItemObjectSet(Obj)
   if bIsNormal then
     self.Icon_Monster_Type:SetVisibility(UE4.ESlateVisibility.Collapsed)
   else
-    self.Icon_Monster_Type:SetVisibility(UE4.ESlateVisibility.Visible)
+    if self.Icon_Monster_Type then
+      self.Icon_Monster_Type:SetVisibility(UE4.ESlateVisibility.Visible)
+    end
     local MonsterTypeIcon
     if bIsBoss then
       MonsterTypeIcon = LoadObject(string.format("%s", MONSTER_BOSS_ICON))

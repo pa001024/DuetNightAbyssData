@@ -50,9 +50,6 @@ function M:RecordBubbleDialogue(DialogueId)
   if not DialogueData then
     return
   end
-  if Avatar:CheckSignBoardNpcTalkIsRecord(DialogueData.SpeakNpcId, DialogueId) then
-    return
-  end
   if not Avatar:CheckSignBoardNpcTalkValid(DialogueData.SpeakNpcId, DialogueId) then
     return
   end

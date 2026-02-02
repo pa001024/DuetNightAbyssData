@@ -162,7 +162,7 @@ function M:AddReddotCount(ChannelType, FriendUid)
   if ChannelType ~= ChatCommon.ChannelDef.Friend then
     local NodeName = ChatCommon.ReddotNamePre .. ChatCommon.ChannelNames[ChannelType]
     local Node = ReddotManager.GetTreeNode(NodeName)
-    if Node:GetNodeCount() < ChatCommon.ReddotMaxCount then
+    if Node:GetNodeCount() <= ChatCommon.ReddotMaxCount then
       ReddotManager.IncreaseLeafNodeCount(NodeName)
       ReddotManager.GetTreeNode(NodeName):UpdateParentsCount()
     end
@@ -174,7 +174,7 @@ function M:AddReddotCount(ChannelType, FriendUid)
     local NodeName = ChatCommon.ReddotNamePre .. FriendUid
     local Node = ReddotManager.GetTreeNode(NodeName)
     local AddValue = Chat:GetUnreadCount() - Node.Count
-    if AddValue > 0 and Node:GetNodeCount() < ChatCommon.ReddotMaxCount then
+    if AddValue > 0 and Node:GetNodeCount() <= ChatCommon.ReddotMaxCount then
       ReddotManager.IncreaseLeafNodeCount(NodeName, AddValue)
       ReddotManager.GetTreeNode(NodeName):UpdateParentsCount()
     end

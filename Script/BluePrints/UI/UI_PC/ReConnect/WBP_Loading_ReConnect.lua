@@ -9,9 +9,9 @@ function M:ExInit(...)
   self:OnLoaded()
 end
 
-function M:OnLoaded()
+function M:OnLoaded(...)
+  self.bDisplayOnly = (...)
   if not self.bDisplayOnly then
-    DebugPrint("gmy@WBP_Loading_ReConnect M:OnLoaded", debug.traceback())
     local NetworkMgr = GWorld.NetworkMgr
     if NetworkMgr then
       NetworkMgr.bUIReConnecting = true
@@ -24,7 +24,6 @@ end
 
 function M:Close()
   if not self.bDisplayOnly then
-    DebugPrint("gmy@WBP_Loading_ReConnect M:Close", debug.traceback())
     local NetworkMgr = GWorld.NetworkMgr
     if NetworkMgr then
       NetworkMgr.bUIReConnecting = false
@@ -35,6 +34,7 @@ function M:Close()
   else
     self.Common_Loading_PC:StopAllAnimations()
     self:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    M.Super.Close()
   end
 end
 

@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -152,6 +155,13 @@ return ReadOnly("ModGuideBookArchive", {
     ArchiveId = 1111,
     ModList = {41755, 41756},
     Name = "ModArchive_Name_Char_1111",
+    RewardId = 7101,
+    TabId = 1
+  },
+  [1112] = {
+    ArchiveId = 1112,
+    ModList = {41745, 41746},
+    Name = "ModArchive_Name_Char_1112",
     RewardId = 7101,
     TabId = 1
   },
@@ -780,6 +790,15 @@ return ReadOnly("ModGuideBookArchive", {
     TabId = 1,
     UnlockCondition = 145
   },
+  [1641] = {
+    ArchiveId = 1641,
+    ModList = {51745, 51746},
+    Name = "ModArchive_Name_Char_1641",
+    RewardId = 7101,
+    ShowCondition = 240,
+    TabId = 1,
+    UnlockCondition = 145
+  },
   [1660] = {
     ArchiveId = 1660,
     ModList = {56151, 56153},
@@ -789,10 +808,28 @@ return ReadOnly("ModGuideBookArchive", {
     TabId = 1,
     UnlockCondition = 145
   },
+  [1661] = {
+    ArchiveId = 1661,
+    ModList = {56141, 56143},
+    Name = "ModArchive_Name_Char_1661",
+    RewardId = 7101,
+    ShowCondition = 240,
+    TabId = 1,
+    UnlockCondition = 145
+  },
   [1680] = {
     ArchiveId = 1680,
     ModList = {56152, 56154},
     Name = "ModArchive_Name_Char_1680",
+    RewardId = 7101,
+    ShowCondition = 240,
+    TabId = 1,
+    UnlockCondition = 145
+  },
+  [1681] = {
+    ArchiveId = 1681,
+    ModList = {56142, 56144},
+    Name = "ModArchive_Name_Char_1681",
     RewardId = 7101,
     ShowCondition = 240,
     TabId = 1,
@@ -999,6 +1036,33 @@ return ReadOnly("ModGuideBookArchive", {
     TabId = 2,
     UnlockCondition = 145
   },
+  [2200] = {
+    ArchiveId = 2200,
+    ModList = {202003},
+    Name = "ModArchive_Name_Melee_2200",
+    RewardId = 7101,
+    ShowCondition = 240,
+    TabId = 2,
+    UnlockCondition = 145
+  },
+  [2210] = {
+    ArchiveId = 2210,
+    ModList = {203001},
+    Name = "ModArchive_Name_Melee_2210",
+    RewardId = 7101,
+    ShowCondition = 240,
+    TabId = 2,
+    UnlockCondition = 145
+  },
+  [2220] = {
+    ArchiveId = 2220,
+    ModList = {204001},
+    Name = "ModArchive_Name_Melee_2220",
+    RewardId = 7101,
+    ShowCondition = 240,
+    TabId = 2,
+    UnlockCondition = 145
+  },
   [3010] = {
     ArchiveId = 3010,
     ModList = {
@@ -1131,12 +1195,39 @@ return ReadOnly("ModGuideBookArchive", {
     RewardId = 7101,
     TabId = 3
   },
+  [3121] = {
+    ArchiveId = 3121,
+    ModList = {
+      43701,
+      43702,
+      43703
+    },
+    Name = "ModArchive_Name_Range_3121",
+    RewardId = 7101,
+    TabId = 3
+  },
+  [3122] = {
+    ArchiveId = 3122,
+    ModList = {
+      43312,
+      43342,
+      43343
+    },
+    Name = "ModArchive_Name_Range_3122",
+    RewardId = 7101,
+    TabId = 3
+  },
   [3130] = {
     ArchiveId = 3130,
     ModList = {
       53001,
       53007,
-      53008
+      53008,
+      53009,
+      53010,
+      53011,
+      53012,
+      53013
     },
     Name = "ModArchive_Name_Range_3130",
     RewardId = 7101,
@@ -1262,7 +1353,11 @@ return ReadOnly("ModGuideBookArchive", {
   },
   [4090] = {
     ArchiveId = 4090,
-    ModList = {54005, 54006},
+    ModList = {
+      54005,
+      54006,
+      54009
+    },
     Name = "ModArchive_Name_UMelee_4090",
     RewardId = 7101,
     ShowCondition = 240,
@@ -1277,6 +1372,21 @@ return ReadOnly("ModGuideBookArchive", {
       54103
     },
     Name = "ModArchive_Name_UMelee_4100",
+    RewardId = 7101,
+    ShowCondition = 240,
+    TabId = 4,
+    UnlockCondition = 145
+  },
+  [4110] = {
+    ArchiveId = 4110,
+    ModList = {
+      54201,
+      54202,
+      54203,
+      54204,
+      54205
+    },
+    Name = "ModArchive_Name_UMelee_4110",
     RewardId = 7101,
     ShowCondition = 240,
     TabId = 4,

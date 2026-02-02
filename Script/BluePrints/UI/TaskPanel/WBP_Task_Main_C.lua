@@ -410,12 +410,22 @@ function WBP_Task_Main:CheckQuestIsShowByCheckState(QuestChainId, QuestChainData
     return false
   end
   local CurrentTime = TimeUtils.NowTime()
-  local QuestStartTime = DataMgr.QuestChain[QuestChainId].StartTime
-  local QuestEndTime = DataMgr.QuestChain[QuestChainId].EndTime
+  local StartTime = DataMgr.QuestChain[QuestChainId].StartTime
+  local EndTime = DataMgr.QuestChain[QuestChainId].EndTime
+  local QuestStartTime, QuestEndTime
+  if StartTime then
+    QuestStartTime = StartTime:GetTime()
+  end
+  if EndTime then
+    QuestEndTime = EndTime:GetTime()
+  end
   if QuestStartTime and QuestEndTime and (CurrentTime < QuestStartTime or CurrentTime > QuestEndTime) and (QuestChainType == Const.LimTimeQuestChainType or QuestChainType == Const.MainActivityQuestChainType) then
     return false
   end
   if QuestStartTime and CurrentTime < QuestStartTime and (QuestChainType == Const.LimTimeQuestChainType or QuestChainType == Const.MainActivityQuestChainType) then
+    return false
+  end
+  if not QuestStartTime and QuestEndTime and CurrentTime > QuestEndTime and (QuestChainType == Const.LimTimeQuestChainType or QuestChainType == Const.MainActivityQuestChainType) then
     return false
   end
   if QuestChainData.CanShow == false and (QuestChainType == Const.LimTimeQuestChainType or QuestChainType == Const.MainActivityQuestChainType) then
@@ -460,7 +470,6 @@ function WBP_Task_Main:ShowQuestDetailInfo(QuestWidget)
     self.RootWidget.Text_TaskTitle:SetRenderOpacity(0)
     self:AddTimer(0.01, function()
       local TextBlockWidth = UIManager(self):GetWidgetRenderSize(self.RootWidget.Text_TaskTitle)
-      self.RootWidget.Text_TaskTitle:SetTextByPixelWidth(GText("Quest_ToBeContinued"), TextBlockWidth.X)
       self.RootWidget.Text_TaskTitle:SetRenderOpacity(1)
     end, false, 0, "DelayToShowText")
     self.RootWidget.HB_Position:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -474,6 +483,7 @@ function WBP_Task_Main:ShowQuestDetailInfo(QuestWidget)
     self.RootWidget.VB_TaskReward:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.RootWidget.WS_Bottom:SetActiveWidgetIndex(1)
     self:SetTrackButtonText(false)
+    self.RootWidget.Group_TimeRemaining:SetVisibility(UE4.ESlateVisibility.Collapsed)
     return
   end
   self.RootWidget.VB_TaskReward:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
@@ -522,7 +532,6 @@ function WBP_Task_Main:ShowQuestDetailInfo(QuestWidget)
     self.RootWidget.Text_TaskTitle:SetRenderOpacity(0)
     self:AddTimer(0.01, function()
       local TextBlockWidth = UIManager(self):GetWidgetRenderSize(self.RootWidget.Text_TaskTitle)
-      self.RootWidget.Text_TaskTitle:SetTextByPixelWidth(QuestWidget.QuestName, TextBlockWidth.X)
       self.RootWidget.Text_TaskTitle:SetRenderOpacity(1)
     end, false, 0, "DelayToShowText")
     self.RootWidget.Text_TaskDetail:SetText(QuestWidget.QuestDeatil)
@@ -1665,13 +1674,14 @@ function WBP_Task_Main:OnClickReasoningEntrance()
 end
 
 function WBP_Task_Main:UpdateReasoningRedDot()
-  local HasNewQuestionOrClue = ReasoningUtils:IsHasNewQuestionOrClue()
+  local IsNewClue = ReasoningUtils:IsAllClueHasNewClue()
+  local IsNewQuestion = ReasoningUtils:IsAllQuestionHasNewQuestion()
   if self.CommonTabWidget and self.CommonTabWidget.ReasoningEntrance then
-    if 2 == HasNewQuestionOrClue then
-      self.CommonTabWidget.ReasoningEntrance.Text_Clue:SetText(GText("Minigame_Textmap_100303"))
+    if IsNewClue then
+      self.CommonTabWidget.ReasoningEntrance.Bubble:ShowInfo()
       self.CommonTabWidget.ReasoningEntrance.Panel_Clue:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
       self.CommonTabWidget.ReasoningEntrance.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    elseif 1 == HasNewQuestionOrClue then
+    elseif IsNewQuestion then
       self.CommonTabWidget.ReasoningEntrance.Panel_Clue:SetVisibility(UE4.ESlateVisibility.Collapsed)
       self.CommonTabWidget.ReasoningEntrance.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     else

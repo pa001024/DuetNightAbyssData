@@ -226,7 +226,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "UpRight",
+              MessageLoc = "Up",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },
@@ -316,7 +316,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "UpRight",
+              MessageLoc = "Up",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },
@@ -394,8 +394,8 @@ return {
               IsControlPlayer = false,
               IsTimePause = true,
               IsShowCursor = true,
-              HighLightUIPath = "LevelMapMain.Dispatch_Detail:1",
-              UICompName = "List_ExReward",
+              HighLightUIPath = "LevelMapMain",
+              UICompName = "Dispatch_Detail:1",
               GamePadWidgetName = "",
               IsAutoClick = false,
               IsAutoClickByGamepad = false,

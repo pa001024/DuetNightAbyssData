@@ -46,7 +46,7 @@ function M:InitItemInfo(ShopItemData)
   if not Avatar then
     return
   end
-  if ShopItemData.ShowBonus and not Avatar:CheckShopItemSoldOutDisplay(ShopItemData.ItemId) then
+  if ShopUtils:ShouldShowDiscount(ShopItemData.ItemId, ShopItemData) then
     self.Group_More:SetVisibility(ESlateVisibility.Visible)
     self.Text_MoreNum:SetText("+" .. ShopItemData.ShowBonus)
   else
@@ -54,10 +54,10 @@ function M:InitItemInfo(ShopItemData)
   end
   local ItemName = ItemUtils:GetDropName(ShopItemData.TypeId, ShopItemData.ItemType)
   self.Text_GiftTitle:SetText(ItemName)
-  local PurchaseLimit = ShopUtils:GetShopItemPurchaseLimit(ShopItemData.ItemId)
-  if PurchaseLimit >= 0 then
+  local LimitText = ShopUtils:GetUnifiedLimitText(ShopItemData.ItemId)
+  if "" ~= LimitText then
     self.Group_BuyLeftTimes:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    self.Text_BuyLeftTimes:SetText(GText("UI_SHOP_SHOPITEMLIMIT") .. PurchaseLimit .. "/" .. self.ShopItemData.PurchaseLimit)
+    self.Text_BuyLeftTimes:SetText(LimitText)
   else
     self.Group_BuyLeftTimes:SetVisibility(ESlateVisibility.Collapsed)
   end
@@ -81,13 +81,36 @@ function M:InitItemInfo(ShopItemData)
   end
 end
 
+function M:UpdateBuyLeftTimesForGift(ShopItemData)
+  local giftMain = GiftController and GiftController:GetGiftMainPage() or nil
+  local Uid = giftMain and giftMain.FriendUid or nil
+  local Remain = ShopUtils:GetGiftItemPurchaseLimit(ShopItemData.ItemId, Uid)
+  local Total = ShopUtils:GetGiftItemPurchaseTotalLimit(ShopItemData.ItemId, Uid)
+  if Remain >= 0 and Total >= 0 then
+    self.Group_BuyLeftTimes:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Text_BuyLeftTimes:SetText(GText("UI_SendGift_GiftItemMax") .. Remain .. "/" .. Total)
+  else
+    self.Group_BuyLeftTimes:SetVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
+function M:UpdateBuyLeftTimesForShop(ShopItemData)
+  local PurchaseLimit = ShopUtils:GetShopItemPurchaseLimit(ShopItemData.ItemId)
+  if PurchaseLimit >= 0 then
+    self.Group_BuyLeftTimes:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Text_BuyLeftTimes:SetText(GText("UI_SHOP_SHOPITEMLIMIT") .. PurchaseLimit .. "/" .. self.ShopItemData.PurchaseLimit)
+  else
+    self.Group_BuyLeftTimes:SetVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
 function M:UpdateShopItemRefreshTime(RefreshTime)
   if not RefreshTime then
     self.Group_LimitTime:SetVisibility(ESlateVisibility.Collapsed)
   else
     self.Group_LimitTime:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    ShopUtils:RefreshShopRefreshTime(RefreshTime, self.Com_Time.Text_TimeDesc)
-    self:AddTimer(1, ShopUtils.RefreshShopRefreshTime, true, 0, "RefreshTimeTimer", true, RefreshTime, self.Com_Time.Text_TimeDesc)
+    ShopUtils:RefreshShopRefreshTime(RefreshTime, self.Com_Time.Text_TimeDesc, self.ShopItemData.ItemId)
+    self:AddTimer(1, ShopUtils.RefreshShopRefreshTime, true, 0, "RefreshTimeTimer", true, RefreshTime, self.Com_Time.Text_TimeDesc, self.ShopItemData.ItemId)
   end
 end
 

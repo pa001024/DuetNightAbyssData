@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -7,7 +10,8 @@ return ReadOnly("UIKeyboardSet", {
       "Attack",
       "Fire",
       "QuitChallenge",
-      "OpenMenu"
+      "OpenMenu",
+      "ShowCursor"
     },
     IsWhiteList = true,
     KeyboardSetName = "BattleFort"

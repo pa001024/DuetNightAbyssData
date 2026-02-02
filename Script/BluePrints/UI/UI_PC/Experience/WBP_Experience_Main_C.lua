@@ -1,5 +1,6 @@
 require("UnLua")
 local AttrModel = require("BluePrints.UI.UI_PC.Experience.WBP_Experience_Attr_Model")
+local TimeUtils = require("Utils.TimeUtils")
 local WBP_Experience_Main_C = Class("BluePrints.UI.BP_UIState_C")
 
 function WBP_Experience_Main_C:ReceiveEnterState(StackAction)
@@ -685,56 +686,85 @@ function WBP_Experience_Main_C:UpdateNodeInfo()
   local LevelInfos = DataMgr.PlayerLevelUp
   local LevelInfo = LevelInfos[self.SelectedItem.Level]
   if LevelInfo and LevelInfo.NodeType then
-    self.Switch_promote:SetActiveWidgetIndex(1)
+    local HaveItem = false
     local ClassPath = "/Game/UI/UI_PC/Common/Common_Item_subsize_PC_Content.Common_Item_subsize_PC_Content_C"
+    local ShopItem = DataMgr.ShopItem
+    local Walnut = DataMgr.Walnut
+    local NowTime = TimeUtils:NowTime()
     self.ListView_Promote:ClearListItems()
     for Index, Type in ipairs(LevelInfo.NodeType) do
-      local Content = NewObject(UE4.LoadClass(ClassPath))
-      Content.Root = self
-      Content.Index = Index
-      Content.Type = Type
-      Content.Title = LevelInfo.NodeTitle[Index]
-      Content.Content = LevelInfo.NodeContent[Index] or {}
-      Content.Level = self.SelectedItem.Level
-      self.ListView_Promote:AddItem(Content)
-    end
-    self:AddTimer(0.1, function()
-      local AllEntryHeight = 0
-      local DisplayedEntries = self.ListView_Promote:GetDisplayedEntryWidgets()
-      for i = 1, DisplayedEntries:Length() do
-        local Entry = DisplayedEntries:GetRef(i)
-        local EntryHeight = Entry:GetDesiredSize().Y
-        AllEntryHeight = AllEntryHeight + EntryHeight
+      local SortedItemInfos
+      if "Walnut" == Type and LevelInfo.NodeContent[Index] and LevelInfo.NodeContent[Index].Id then
+        local Ids = LevelInfo.NodeContent[Index].Id
+        local IncludIds = {}
+        for Index, Id in pairs(Ids) do
+          IncludIds[Id] = 1
+        end
+        for ItemId, Info in pairs(ShopItem) do
+          if "Walnut" == Info.ItemType and Info.UnlockLevel == self.SelectedItem.Level and Walnut[Info.TypeId] and IncludIds[Walnut[Info.TypeId].WalnutType] and (not Info.StartTime or NowTime >= Info.StartTime) and (not Info.EndTime or NowTime <= Info.StartTime) then
+            SortedItemInfos = SortedItemInfos or {}
+            table.insert(SortedItemInfos, Info)
+          end
+        end
+        if SortedItemInfos then
+          table.sort(SortedItemInfos, function(a, b)
+            return a.ItemId > b.ItemId
+          end)
+        end
       end
-      if AllEntryHeight > self.SwitchHeight then
-        self.NeedShowTip = true
-      else
-        self.NeedShowTip = false
-      end
-      self:InitNormalTab()
-    end, false, 0, "UpdateNodeInfoTimer", true)
-  else
-    self.NeedShowTip = false
-    self.Switch_promote:SetActiveWidgetIndex(0)
-    local TargetLevel
-    for Level, Info in ipairs(LevelInfos) do
-      if Level > self.SelectedItem.Level and Info.NodeType then
-        TargetLevel = Level
-        break
+      if "Walnut" ~= Type or "Walnut" == Type and SortedItemInfos then
+        HaveItem = true
+        local Content = NewObject(UE4.LoadClass(ClassPath))
+        Content.Root = self
+        Content.SortedItemInfos = SortedItemInfos
+        Content.Index = Index
+        Content.Type = Type
+        Content.Title = LevelInfo.NodeTitle[Index]
+        Content.Content = LevelInfo.NodeContent[Index] or {}
+        Content.Level = self.SelectedItem.Level
+        self.ListView_Promote:AddItem(Content)
       end
     end
-    self.Com_EmptyBg:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-    if TargetLevel then
-      self.Com_EmptyBg.Slot_Text:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-      self.Com_EmptyBg.Text_Empty_World:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-      local Text = string.format(GText("PlayerLevel_Toast_Locked"), TargetLevel)
-      self.Com_EmptyBg.Text_Empty:SetText(Text)
-    else
-      self.Com_EmptyBg.Slot_Text:SetVisibility(UIConst.VisibilityOp.Collapsed)
-      self.Com_EmptyBg.Text_Empty_World:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    if HaveItem then
+      self.Switch_promote:SetActiveWidgetIndex(1)
+      self:AddTimer(0.1, function()
+        local AllEntryHeight = 0
+        local DisplayedEntries = self.ListView_Promote:GetDisplayedEntryWidgets()
+        for i = 1, DisplayedEntries:Length() do
+          local Entry = DisplayedEntries:GetRef(i)
+          local EntryHeight = Entry:GetDesiredSize().Y
+          AllEntryHeight = AllEntryHeight + EntryHeight
+        end
+        if AllEntryHeight > self.SwitchHeight then
+          self.NeedShowTip = true
+        else
+          self.NeedShowTip = false
+        end
+        self:InitNormalTab()
+      end, false, 0, "UpdateNodeInfoTimer", true)
+      return
     end
-    self:InitNormalTab()
   end
+  self.NeedShowTip = false
+  self.Switch_promote:SetActiveWidgetIndex(0)
+  local TargetLevel
+  for Level, Info in ipairs(LevelInfos) do
+    if Level > self.SelectedItem.Level and Info.NodeType then
+      TargetLevel = Level
+      break
+    end
+  end
+  self.Com_EmptyBg:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+  if TargetLevel then
+    self.Com_EmptyBg.Slot_Text:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    self.Com_EmptyBg.Text_Empty_World:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    local Text = string.format(GText("PlayerLevel_Toast_Locked"), TargetLevel)
+    self.Com_EmptyBg.Text_Empty:SetText(Text)
+  else
+    self.Com_EmptyBg.Slot_Text:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Com_EmptyBg.Text_Empty_World:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  self:InitNormalTab()
 end
 
 function WBP_Experience_Main_C:UpdateArrow()

@@ -5,6 +5,7 @@ local M = Class({
 
 function M:OnLoaded(...)
   self.Super.OnLoaded(self, ...)
+  local ShowMailId = (...)
   self.Platform = CommonUtils.GetDeviceTypeByPlatformName(self)
   AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "MailMain", nil)
   if self.Platform == "PC" then
@@ -47,8 +48,19 @@ function M:OnLoaded(...)
       BackCallback = self.OnPressESC
     })
   end
-  self.WBP_Mail_Root:Init(self)
+  self.WBP_Mail_Root:Init(self, ShowMailId)
   self:PlayInAnim()
+end
+
+function M:ReceiveEnterState(StackAction)
+  M.Super.ReceiveEnterState(self, StackAction)
+  if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
+    self.WBP_Mail_Root:SetFocus()
+    self:OnUpdateUIStyleByInputTypeChange(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
+  end
+  if self.WBP_Mail_Root.bMarkMailStar then
+    self.WBP_Mail_Root:PlayStarAnim()
+  end
 end
 
 function M:RefreshTabBottomKey()
@@ -158,7 +170,7 @@ function M:OnPressSPACE()
 end
 
 function M:PlayInAnim()
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:PlayAnimation(self.In)
   
   local function PlayAnimFinished()
@@ -171,7 +183,7 @@ end
 
 function M:PlayOutAnim()
   self:PlayAnimation(self.Out)
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   self.WBP_Mail_Root:PlayOutAnim()
   AudioManager(self):SetEventSoundParam(self, "MailMain", {ToEnd = 1})
   self:BindToAnimationFinished(self.Out, {

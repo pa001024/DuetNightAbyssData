@@ -17,6 +17,9 @@ T.RT_7 = {
 T.RT_8 = {
   "UI_Locked_Des_Shop"
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -427,6 +430,20 @@ return ReadOnly("UIUnlockRule", {
     UIUnlockRuleId = "ModDungeon",
     UnlockPopupType = "Light"
   },
+  Mount = {
+    AfterUIUnlockDesc = "System_Des_Mount",
+    ConditionId = 4410,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Mount.T_Entrance_Mount",
+    IsHideUnlockPopup = 1,
+    OpenConditionId = T.RT_1,
+    OpenSystemDesc = {
+      "UI_Disabled_Des_Mount"
+    },
+    UIUnlockDesc = "UI_Locked_Des_Mount",
+    UIUnlockName = "UI_Mount",
+    UIUnlockRuleId = "Mount",
+    UnlockPopupType = "Normal"
+  },
   Party = {
     ConditionId = 4230,
     IsHideUnlockPopup = 1,
@@ -531,6 +548,20 @@ return ReadOnly("UIUnlockRule", {
     UIUnlockDesc = "UI_Locked_Des_Quest",
     UIUnlockName = "MAIN_UI_QUEST",
     UIUnlockRuleId = "Quest",
+    UnlockPopupType = "Normal"
+  },
+  RegionReputation = {
+    AfterUIUnlockDesc = "System_Des_RegionReputation",
+    ConditionId = 4420,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Fame.T_Entrance_Fame",
+    IsHideUnlockPopup = 1,
+    OpenConditionId = T.RT_1,
+    OpenSystemDesc = {
+      "UI_Disabled_Des_RegionReputation"
+    },
+    UIUnlockDesc = "UI_Locked_Des_RegionReputation",
+    UIUnlockName = "MAIN_UI_FAME",
+    UIUnlockRuleId = "RegionReputation",
     UnlockPopupType = "Normal"
   },
   RegionalShopTab = {

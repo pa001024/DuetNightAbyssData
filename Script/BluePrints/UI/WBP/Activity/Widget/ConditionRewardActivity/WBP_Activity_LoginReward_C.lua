@@ -1,4 +1,5 @@
 require("UnLua")
+local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.UI.WBP.Activity.Widget.ConditionRewardActivity.ConditionRewardActiviyBase"
@@ -58,6 +59,7 @@ function M:InitUI()
   self.LoginReward_Item01:PlayAnimationByType(self.IsCanGetReward, self.IsComplete or self.IsGetReward)
   self.LoginReward_Item02:PlayAnimationByType(self.IsCanGetReward, self.IsComplete or self.IsGetReward)
   self.Btn_Click.OnClicked:Add(self, self.OnBtnClick)
+  ActivityUtils.SetUpJustifyOfJap(self.LoginReward_Title.Text_ActivityDesc)
 end
 
 function M:OnViewStuffDetailClick(IsOpenDetail, RewardItem)

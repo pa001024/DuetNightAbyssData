@@ -28,6 +28,9 @@ T.RT_14 = {Skill = 210003}
 T.RT_15 = {Skill = 310003}
 T.RT_16 = {Skill = 310001}
 T.RT_17 = {Skill = 410003}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

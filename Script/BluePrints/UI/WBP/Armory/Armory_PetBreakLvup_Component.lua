@@ -823,7 +823,7 @@ function Component:UpdateBtnState(bIsMaxLevel)
 end
 
 function Component:BlockAllUIInputWithDelayUnblock(DelayTime)
-  self:BlockAllUIInput(true)
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   local TargetTime = DelayTime
   if not TargetTime or TargetTime <= 0 then
     TargetTime = 5

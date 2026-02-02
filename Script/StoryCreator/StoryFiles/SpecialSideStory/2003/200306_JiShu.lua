@@ -72,7 +72,8 @@ return {
         SubRegionId = 104107,
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_20030601_2080080",
-        bIsPlayBlackScreenOnComplete = false
+        bIsPlayBlackScreenOnComplete = false,
+        SubRegionIdList = {}
       },
       questNodeData = {
         lineData = {
@@ -207,6 +208,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -401,18 +403,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17557456730894691",
-            startPort = "Out",
-            endQuest = "17557456730894692",
-            endPort = "In"
-          },
-          {
-            startQuest = "17557456730894692",
-            startPort = "Out",
-            endQuest = "1755831902029947888",
-            endPort = "In"
-          },
-          {
             startQuest = "17533468197691331208",
             startPort = "Out",
             endQuest = "1755831312053936237",
@@ -569,21 +559,81 @@ return {
             endPort = "In"
           },
           {
+            startQuest = "176663137908021563",
+            startPort = "Out",
+            endQuest = "176663137908021564",
+            endPort = "In"
+          },
+          {
+            startQuest = "1752463403168441",
+            startPort = "QuestStart",
+            endQuest = "176663137908021563",
+            endPort = "In"
+          },
+          {
+            startQuest = "1752463403168441",
+            startPort = "QuestStart",
+            endQuest = "176663137908021565",
+            endPort = "In"
+          },
+          {
+            startQuest = "176663137908021565",
+            startPort = "Out",
+            endQuest = "17666320102492903689",
+            endPort = "In"
+          },
+          {
             startQuest = "1755831411713938883",
             startPort = "true",
-            endQuest = "17646715955692553",
+            endQuest = "176768532780615414",
             endPort = "In"
           },
           {
             startQuest = "17557456730894693",
             startPort = "Out",
-            endQuest = "17646721298863443",
+            endQuest = "176768534059815750",
             endPort = "In"
           },
           {
             startQuest = "1756448910150960311",
             startPort = "Out",
-            endQuest = "17646721553243664",
+            endQuest = "176768534821015892",
+            endPort = "In"
+          },
+          {
+            startQuest = "17682957329865737",
+            startPort = "true",
+            endQuest = "17682957357305802",
+            endPort = "In"
+          },
+          {
+            startQuest = "17682957357305802",
+            startPort = "true",
+            endQuest = "17682957155525575",
+            endPort = "In"
+          },
+          {
+            startQuest = "17682957155525575",
+            startPort = "true",
+            endQuest = "17682957481415960",
+            endPort = "In"
+          },
+          {
+            startQuest = "17682957481415960",
+            startPort = "Out",
+            endQuest = "17682957560836138",
+            endPort = "In"
+          },
+          {
+            startQuest = "17557456730894691",
+            startPort = "Out",
+            endQuest = "17689102612451598",
+            endPort = "In"
+          },
+          {
+            startQuest = "17689102612451598",
+            startPort = "Fail",
+            endQuest = "1755831902029947888",
             endPort = "In"
           }
         },
@@ -660,7 +710,7 @@ return {
             key = "17540161998261316532",
             type = "GoToNode",
             name = "前往机关",
-            pos = {x = 2243.72565139414, y = 169.99190820426196},
+            pos = {x = 2492.72565139414, y = 381.49190820426196},
             propsData = {
               GuideUIEnable = false,
               StaticCreatorId = 2080080,
@@ -672,7 +722,7 @@ return {
             key = "17557453372342796",
             type = "TalkNode",
             name = "开车对话",
-            pos = {x = 1557.9971751950438, y = 1291.5158528805018},
+            pos = {x = 1566.5686036107704, y = 1205.8015687232353},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 51103030,
@@ -689,7 +739,7 @@ return {
             key = "17557453372342797",
             type = "WaitingMechanismEnterStateNode",
             name = "等待机关进入状态",
-            pos = {x = 1835.556390767131, y = 1292.1877355635404},
+            pos = {x = 1844.1278191828576, y = 1206.4734514062739},
             propsData = {
               CreateType = "StaticCreator",
               CreateId = 2080094,
@@ -702,7 +752,7 @@ return {
             key = "17557453372342798",
             type = "TalkNode",
             name = "开车对话",
-            pos = {x = 2392.26896629836, y = 1289.4311886718315},
+            pos = {x = 2400.8403947140864, y = 1203.716904514565},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 51103031,
@@ -719,7 +769,7 @@ return {
             key = "17557453372342799",
             type = "GoToNode",
             name = "前往吸球入坑",
-            pos = {x = 1971.540539232839, y = 159.4997312556905},
+            pos = {x = 2187.540539232839, y = 379.9997312556905},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 2080083,
@@ -784,7 +834,7 @@ return {
             key = "17557456730894691",
             type = "TalkNode",
             name = "开车对话",
-            pos = {x = 1557.5939891973267, y = 1572.4552190523186},
+            pos = {x = 1561.8797034830409, y = 1405.312364945649},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 51103032,
@@ -797,24 +847,11 @@ return {
               OverrideFailBlend = false
             }
           },
-          ["17557456730894692"] = {
-            key = "17557456730894692",
-            type = "WaitingMechanismEnterStateNode",
-            name = "等待机关进入状态",
-            pos = {x = 1841.8103248594255, y = 1572.30284674081},
-            propsData = {
-              CreateType = "StaticCreator",
-              CreateId = 2080099,
-              StateId = 701003,
-              IsGuideEnable = false,
-              GuidePointName = ""
-            }
-          },
           ["17557456730894693"] = {
             key = "17557456730894693",
             type = "GoToNode",
             name = "前往拨引石块",
-            pos = {x = 1273.2580137027926, y = 1290.219892176343},
+            pos = {x = 1281.8294421185192, y = 1204.5056080190764},
             propsData = {
               GuideUIEnable = false,
               StaticCreatorId = 2080084,
@@ -847,7 +884,7 @@ return {
             key = "1755831411713938883",
             type = "ExecuteBlueprintFunctionCheckVarNode",
             name = "执行变量检测函数",
-            pos = {x = 998.709467390195, y = 1005.7556943830162},
+            pos = {x = 1005.8523245330521, y = 1002.8985515258735},
             propsData = {
               FunctionName = "Equal",
               VarName = "JiShuvar1",
@@ -861,7 +898,7 @@ return {
             key = "1755831840673946300",
             type = "ExecuteBlueprintFunctionCheckVarNode",
             name = "执行变量检测函数",
-            pos = {x = 992.8089937936419, y = 1290.729498947636},
+            pos = {x = 1001.3804222093686, y = 1205.0152147903696},
             propsData = {
               FunctionName = "Equal",
               VarName = "JiShuvar2",
@@ -875,7 +912,7 @@ return {
             key = "1755831871030947037",
             type = "ExecuteBlueprintFunctionCheckVarNode",
             name = "执行变量检测函数",
-            pos = {x = 1002.9781112849993, y = 1573.2914722583841},
+            pos = {x = 1007.2638255707135, y = 1410.434332437429},
             propsData = {
               FunctionName = "Equal",
               VarName = "JiShuvar3",
@@ -889,21 +926,21 @@ return {
             key = "1755831899160947808",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = 2113.9963384407392, y = 1291.6969377266078},
+            pos = {x = 2122.567766856466, y = 1205.9826535693412},
             propsData = {VarName = "JiShuvar2", VarValue = 1}
           },
           ["1755831902029947888"] = {
             key = "1755831902029947888",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = 2122.340910250738, y = 1576.0177974038265},
+            pos = {x = 2131.2409102507377, y = 1402.8463718685855},
             propsData = {VarName = "JiShuvar3", VarValue = 1}
           },
           ["1756448910150960311"] = {
             key = "1756448910150960311",
             type = "GoToNode",
             name = "前往旋转扇叶",
-            pos = {x = 1281.3350570997627, y = 1572.5802343219136},
+            pos = {x = 1281.3350570997627, y = 1405.437380215244},
             propsData = {
               GuideUIEnable = false,
               StaticCreatorId = 2080085,
@@ -916,21 +953,33 @@ return {
             type = "CalculateVarCountNode",
             name = "变量计数节点",
             pos = {x = 1405.7447839657154, y = 607.3587060586387},
-            propsData = {VarName = "JiShuvar2", VarValue = 1}
+            propsData = {
+              VarName = "JiShuvar2",
+              VarValue = 1,
+              IsOpen = true
+            }
           },
           ["175698917540210034"] = {
             key = "175698917540210034",
             type = "CalculateVarCountNode",
             name = "变量计数节点",
             pos = {x = 1403.9870134536711, y = 804.9879061895083},
-            propsData = {VarName = "JiShuvar3", VarValue = 1}
+            propsData = {
+              VarName = "JiShuvar3",
+              VarValue = 1,
+              IsOpen = true
+            }
           },
           ["175698917690310081"] = {
             key = "175698917690310081",
             type = "CalculateVarCountNode",
             name = "变量计数节点",
             pos = {x = 1404.3974587912264, y = 405.6119471102243},
-            propsData = {VarName = "JiShuvar1", VarValue = 1}
+            propsData = {
+              VarName = "JiShuvar1",
+              VarValue = 1,
+              IsOpen = true
+            }
           },
           ["175698922574411425"] = {
             key = "175698922574411425",
@@ -939,6 +988,7 @@ return {
             pos = {x = 1118.65949816075, y = 408.3706100719763},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint200306_2"
             }
@@ -950,6 +1000,7 @@ return {
             pos = {x = 1803.4648202896017, y = 405.66192659858734},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "P",
               GuideName = "TargetPoint200306_2"
             }
@@ -961,6 +1012,7 @@ return {
             pos = {x = 1116.647205455027, y = 607.831102448238},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_20030603_2080084"
             }
@@ -972,6 +1024,7 @@ return {
             pos = {x = 1117.4192642785563, y = 806.3531612717672},
             propsData = {
               IsShow = true,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_20030604_2080085"
             }
@@ -983,6 +1036,7 @@ return {
             pos = {x = 1803.460135492887, y = 606.1399158754991},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_20030603_2080084"
             }
@@ -994,6 +1048,7 @@ return {
             pos = {x = 1804.5077545405059, y = 802.5922968278802},
             propsData = {
               IsShow = false,
+              bOpenRangeEffect = false,
               GuideType = "M",
               GuideName = "Mechanism_20030604_2080085"
             }
@@ -1058,26 +1113,134 @@ return {
               GuidePointName = ""
             }
           },
-          ["17646715955692553"] = {
-            key = "17646715955692553",
+          ["176663137908021563"] = {
+            key = "176663137908021563",
+            type = "WaitingMechanismEnterStateNode",
+            name = "等待机关进入状态",
+            pos = {x = 1594.946718706332, y = -175.8167502674114},
+            propsData = {
+              CreateType = "StaticCreator",
+              CreateId = 2080090,
+              StateId = 1210151,
+              IsGuideEnable = false,
+              GuidePointName = ""
+            }
+          },
+          ["176663137908021564"] = {
+            key = "176663137908021564",
+            type = "SetVarNode",
+            name = "设置变量值",
+            pos = {x = 2007.3035364564612, y = -172.60739917314186},
+            propsData = {VarName = "JiShuvar1", VarValue = 1}
+          },
+          ["176663137908021565"] = {
+            key = "176663137908021565",
+            type = "WaitingMechanismEnterStateNode",
+            name = "等待机关进入状态",
+            pos = {x = 1603.668122006709, y = 37.82383528765459},
+            propsData = {
+              CreateType = "StaticCreator",
+              CreateId = 2080096,
+              StateId = 1210172,
+              IsGuideEnable = false,
+              GuidePointName = ""
+            }
+          },
+          ["17666320102492903689"] = {
+            key = "17666320102492903689",
+            type = "SetVarNode",
+            name = "设置变量值",
+            pos = {x = 2012.8996373853179, y = 46.89802135429093},
+            propsData = {VarName = "JiShuvar2", VarValue = 1}
+          },
+          ["176768532780615414"] = {
+            key = "176768532780615414",
             type = "ShowGuideMainNode",
             name = "显示图文引导",
-            pos = {x = 1277.9016641379242, y = 1157.7270016469251},
+            pos = {x = 1276.857142857143, y = 1133.7142857142858},
             propsData = {GuideId = 94}
           },
-          ["17646721298863443"] = {
-            key = "17646721298863443",
+          ["176768534059815750"] = {
+            key = "176768534059815750",
             type = "ShowGuideMainNode",
             name = "显示图文引导",
-            pos = {x = 1537.7369539296508, y = 1443.9711568090686},
+            pos = {x = 1562.6350023165544, y = 1335.9637269987807},
             propsData = {GuideId = 95}
           },
-          ["17646721553243664"] = {
-            key = "17646721553243664",
+          ["176768534821015892"] = {
+            key = "176768534821015892",
             type = "ShowGuideMainNode",
             name = "显示图文引导",
-            pos = {x = 1533.6828999591912, y = 1773.7008797397764},
+            pos = {x = 1562.6350023165546, y = 1537.392294171499},
             propsData = {GuideId = 93}
+          },
+          ["17682957155525575"] = {
+            key = "17682957155525575",
+            type = "ExecuteBlueprintFunctionCheckVarNode",
+            name = "执行变量检测函数",
+            pos = {x = 1523.7972027972028, y = 1780.7184482184484},
+            propsData = {
+              FunctionName = "Equal",
+              VarName = "JiShuvar3",
+              Duration = 0,
+              VarInfos = {
+                {VarName = "Value", VarValue = "0"}
+              }
+            }
+          },
+          ["17682957329865737"] = {
+            key = "17682957329865737",
+            type = "ExecuteBlueprintFunctionCheckVarNode",
+            name = "执行变量检测函数",
+            pos = {x = 1013.7972027972024, y = 1766.4327339327342},
+            propsData = {
+              FunctionName = "Equal",
+              VarName = "JiShuvar1",
+              Duration = 0,
+              VarInfos = {
+                {VarName = "Value", VarValue = "1"}
+              }
+            }
+          },
+          ["17682957357305802"] = {
+            key = "17682957357305802",
+            type = "ExecuteBlueprintFunctionCheckVarNode",
+            name = "执行变量检测函数",
+            pos = {x = 1270.9400599400599, y = 1766.432733932734},
+            propsData = {
+              FunctionName = "Equal",
+              VarName = "JiShuvar2",
+              Duration = 0,
+              VarInfos = {
+                {VarName = "Value", VarValue = "1"}
+              }
+            }
+          },
+          ["17682957481415960"] = {
+            key = "17682957481415960",
+            type = "GoToNode",
+            name = "前往旋转扇叶",
+            pos = {x = 1808.082917082917, y = 1775.0041625041624},
+            propsData = {
+              GuideUIEnable = false,
+              StaticCreatorId = 2080085,
+              GuideType = "M",
+              GuidePointName = "Mechanism_20030604_2080085"
+            }
+          },
+          ["17682957560836138"] = {
+            key = "17682957560836138",
+            type = "SetVarNode",
+            name = "设置变量值",
+            pos = {x = 2082.368631368631, y = 1780.7184482184482},
+            propsData = {VarName = "JiShuvar3", VarValue = 1}
+          },
+          ["17689102612451598"] = {
+            key = "17689102612451598",
+            type = "ConditionNode",
+            name = "条件节点",
+            pos = {x = 1843.7142857142858, y = 1411.142857142857},
+            propsData = {ConditionId = 1000609}
           }
         },
         commentData = {}
@@ -1355,7 +1518,7 @@ return {
       key = "17524799552681856",
       type = "StoryNode",
       name = "与公尚对话",
-      pos = {x = 1960.6078694523706, y = 272.04117169257114},
+      pos = {x = 1961.4186802631814, y = 273.66279331419275},
       propsData = {
         QuestId = 20030603,
         QuestDescriptionComment = "",
@@ -1468,6 +1631,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
@@ -1703,6 +1867,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",

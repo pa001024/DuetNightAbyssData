@@ -675,6 +675,9 @@ function M:SwitchToTargetTab(mainType)
   end
   self.IsAssociatedJump = true
   local RealMainType = mainType + 1
+  if self.CurrentTabIndex == RealMainType then
+    return
+  end
   for index, tab in ipairs(self.Tabs) do
     if tab.MainType == RealMainType and self.CurrentTabIndex ~= tab.TabId then
       self.CurrentTabIndex = tab.TabId
@@ -903,6 +906,7 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   self.Super.RefreshOpInfoByInputDevice(self, CurInputDevice, CurGamepadName)
   self.CurGamepadName = CurGamepadName
   local IsUseKeyAndMouse = CurInputDevice == ECommonInputType.MouseAndKeyboard
+  local IsUseGamePad = CurInputDevice == ECommonInputType.Gamepad
   local ActiveWidgetIndex = IsUseKeyAndMouse and 0 or 1
   if IsUseKeyAndMouse then
     if self.ListText then
@@ -913,7 +917,9 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
     if self.ListText then
       self.ListText:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     end
-    self.Com_Input_Light:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    if IsUseGamePad then
+      self.Com_Input_Light:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    end
     if self.IsSearchMode then
       self.Com_Input_Light:SetFocus()
       self.Com_Input_Light:FocusInputField()

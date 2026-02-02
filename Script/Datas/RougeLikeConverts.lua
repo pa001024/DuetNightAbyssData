@@ -215,6 +215,9 @@ T.RT_71 = {
   [6] = T.RT_66
 }
 T.RT_72 = {RoomTypeWeight = 1000}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end

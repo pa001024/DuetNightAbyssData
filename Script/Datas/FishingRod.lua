@@ -1,5 +1,8 @@
 local T = {}
 T.RT_1 = {30101}
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -7,6 +10,7 @@ return ReadOnly("FishingRod", {
   [101] = {
     AutoFishingLevel = 2,
     EffectCreatureId = T.RT_1,
+    EffectParam = 1,
     FishingRodId = 101,
     FishingRodLevel = 1,
     Length = 100,
@@ -18,6 +22,7 @@ return ReadOnly("FishingRod", {
   [102] = {
     AutoFishingLevel = 3,
     EffectCreatureId = T.RT_1,
+    EffectParam = 2,
     FishingRodId = 102,
     FishingRodLevel = 3,
     Length = 120,
@@ -29,6 +34,7 @@ return ReadOnly("FishingRod", {
   [103] = {
     AutoFishingLevel = 4,
     EffectCreatureId = T.RT_1,
+    EffectParam = 3,
     FishingRodId = 103,
     FishingRodLevel = 7,
     Length = 140,
@@ -40,6 +46,8 @@ return ReadOnly("FishingRod", {
   [104] = {
     AutoFishingLevel = 5,
     EffectCreatureId = T.RT_1,
+    EffectId = 412,
+    EffectParam = 2,
     FishingRodId = 104,
     FishingRodLevel = 12,
     Length = 160,
@@ -51,11 +59,52 @@ return ReadOnly("FishingRod", {
   [105] = {
     AutoFishingLevel = 6,
     EffectCreatureId = T.RT_1,
+    EffectId = 411,
+    EffectParam = 1,
     FishingRodId = 105,
     FishingRodLevel = 20,
     Length = 180,
     MaterialPath = "/Game/Asset/Char/Player/Common/Weapon/Common/Materials/MI_WPSkinCom01.MI_WPSkinCom01",
     MeshResourceId = 601,
     ResourceId = 5110500
+  },
+  [106] = {
+    AutoFishingLevel = 6,
+    EffectCreatureId = T.RT_1,
+    EffectId = 413,
+    EffectParam = 1,
+    FishingRodId = 106,
+    FishingRodLevel = 20,
+    Length = 180,
+    MaterialParam = 1,
+    MaterialPath = "/Game/Asset/Char/Player/Common/Fishing/Materials/MI_Fish_HX01.MI_Fish_HX01",
+    MeshResourceId = 602,
+    ResourceId = 3015
+  },
+  [10601] = {
+    AutoFishingLevel = 6,
+    EffectCreatureId = T.RT_1,
+    EffectId = 413,
+    EffectParam = 2,
+    FishingRodId = 10601,
+    FishingRodLevel = 20,
+    Length = 180,
+    MaterialParam = 2,
+    MaterialPath = "/Game/Asset/Char/Player/Common/Fishing/Materials/MI_Fish_HX01.MI_Fish_HX01",
+    MeshResourceId = 602,
+    ResourceId = 5110601
+  },
+  [10602] = {
+    AutoFishingLevel = 6,
+    EffectCreatureId = T.RT_1,
+    EffectId = 413,
+    EffectParam = 3,
+    FishingRodId = 10602,
+    FishingRodLevel = 20,
+    Length = 180,
+    MaterialParam = 3,
+    MaterialPath = "/Game/Asset/Char/Player/Common/Fishing/Materials/MI_Fish_HX01.MI_Fish_HX01",
+    MeshResourceId = 602,
+    ResourceId = 5110602
   }
 })

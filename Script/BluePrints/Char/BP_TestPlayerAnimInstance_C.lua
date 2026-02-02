@@ -121,6 +121,14 @@ function BP_TestPlayerAnimInstance_C:GetArmoryIdleTag()
   return Pawn:GetUsingWeaponType(self.IsEnterArmory)
 end
 
+function BP_TestPlayerAnimInstance_C:IsArmoryIdleTag(Tag)
+  if not Tag then
+    return false
+  end
+  local CurrentTag = self:GetArmoryIdleTag()
+  return CurrentTag == Tag
+end
+
 function BP_TestPlayerAnimInstance_C:OnAnimationEnded(Montage, Interrupted)
 end
 

@@ -525,6 +525,24 @@ v100ids = set(
     ]
 )
 
+v110ids = set(
+    [
+        1012901,
+        1013201,
+        7012701,
+        10100401,
+        10100501,
+        10100502,
+        10100503,
+        10100504,
+        50520301,
+        50520302,
+        50520303,
+        52000601,
+        52020101,
+    ]
+)
+
 
 class AchievementProcessor(BaseProcessor):
     def __init__(self, data_loader):
@@ -533,6 +551,11 @@ class AchievementProcessor(BaseProcessor):
 
     def process_item(self, achievement_data, language):
         id = achievement_data.get("AchievementId", 0)
+        ver = "1.2"
+        if id in v110ids:
+            ver = "1.1"
+        elif id in v100ids:
+            ver = "1.0"
         processed = {
             "id": id,
             "名称": self.get_translated_text(
@@ -543,7 +566,7 @@ class AchievementProcessor(BaseProcessor):
             ),
             "品质": achievement_data.get("AchievementRarity", 0),
             "描述": self._process_description(achievement_data),
-            "版本": "1.0" if id in v100ids else "1.1",
+            "版本": ver,
             "奖励": self._process_reward(achievement_data, language),
         }
         return processed

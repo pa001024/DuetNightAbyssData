@@ -69,6 +69,9 @@ T.RT_14 = {
   150,
   65
 }
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -90,7 +93,8 @@ return ReadOnly("SpawnNPC", {
     FixedCameraM = "/Game/UI/UI_PC/Forging/Blueprint/BP_ForgeCamera_Mobile",
     NPCName = "UI_Npc_Name_Duanzao",
     SpawnNPCId = 900001,
-    StartDialogue = 21000201
+    StartDialogue = 21000201,
+    UseXFOV = true
   },
   [900002] = {
     BPPath = "/Game/AssetDesign/Char/Npc/BaiNpc/BaiSD/BP_BaiSDRegion",
@@ -140,7 +144,7 @@ return ReadOnly("SpawnNPC", {
     },
     CameraRotationDeltaM = {
       0,
-      10,
+      7,
       0
     },
     CameraRotationM = T.RT_10,
@@ -307,7 +311,7 @@ return ReadOnly("SpawnNPC", {
     },
     CameraRotationDeltaM = {
       0,
-      6.5,
+      3.5,
       0
     },
     CameraRotationM = {
@@ -326,7 +330,8 @@ return ReadOnly("SpawnNPC", {
     SpawnAngle = 0,
     SpawnNPCId = 910003,
     SpawnRadius = 1.5,
-    StartDialogue = 21000503
+    StartDialogue = 21000503,
+    UseXFOV = true
   },
   [910005] = {
     BPPath = "/Game/AssetDesign/Char/Npc/BaiNpc/Bai_Beibao/BP_NPC_BaiBB",

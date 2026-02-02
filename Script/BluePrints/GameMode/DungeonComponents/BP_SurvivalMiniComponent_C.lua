@@ -40,6 +40,9 @@ function M:RecoverDungeonRoundData(Data)
 end
 
 function M:StartRound()
+  if self.IsRoundBegin then
+    return
+  end
   M.Super.StartRound(self)
   self.GameMode:CreateEmergencyMonsterEachWave("Treasure", self, self.SurvivalMiniInfo)
   self.GameMode:CreateEmergencyMonsterEachWave("Butcher", self, self.SurvivalMiniInfo)

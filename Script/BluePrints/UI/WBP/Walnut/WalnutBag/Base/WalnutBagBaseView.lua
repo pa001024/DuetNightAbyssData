@@ -140,7 +140,7 @@ function M:OnListItemSelected(Content, NotAddToSellList, bDefaultSelect)
   if not bDefaultSelect then
     AudioManager(self):PlayItemSound(self, Content.Id, "Click", WalnutBagCommon.WalnutTypeName)
   end
-  if self.CurSelectContent then
+  if self.CurSelectContent and self.CurSelectContent.Id ~= Content.Id then
     self.CurSelectContent.IsSelect = false
     if self.CurSelectContent.SelfWidget then
       self.CurSelectContent.SelfWidget:SetSelected(false)
@@ -150,6 +150,12 @@ function M:OnListItemSelected(Content, NotAddToSellList, bDefaultSelect)
   Content.IsSelect = true
   if Content.SelfWidget then
     Content.SelfWidget:SetSelected(true)
+  else
+    local EntryWidget = UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.List_Item, self.ItemId2Index[Content.Id] - 1)
+    if EntryWidget and EntryWidget.SetSelected then
+      EntryWidget:SetSelected(true)
+      Content.SelfWidget = EntryWidget
+    end
   end
   self:RefreshDetailPanelView()
   self:UpdateReddotView(Content)
@@ -236,18 +242,22 @@ function M:RemoveItemSaleState(StuffId)
   }
   StuffContent.StateTagInfo = StuffStateTagInfo
   StuffContent.IsSelect = false
-  if StuffContent.SelfWidget and StuffContent.Uuid == StuffId then
-    StuffContent.SelfWidget:SetSelected(false)
-    StuffContent.SelfWidget:SetStuffStyleByStateTag(StuffContent)
-  end
   local Item = self.List_Item:GetItemAt(self.ItemId2Index[IStuffId] - 1)
   Item.StateTagInfo = StuffStateTagInfo
+  local EntryWidget = UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.List_Item, self.ItemId2Index[IStuffId] - 1)
+  if EntryWidget and StuffContent.Uuid == StuffId then
+    EntryWidget:SetSelected(false)
+    EntryWidget:SetStuffStyleByStateTag(StuffContent)
+  end
   local IsNeedCancelSelect = false
   local StuffConfigData = DataMgr.Resource[StuffContent.UnitId]
   IsNeedCancelSelect = self.CurSelectStuffContent ~= nil and StuffContent.Uuid == self.CurSelectStuffContent.Uuid
   self.DesireSaleWalnutObjList[IStuffId] = nil
   if IsNeedCancelSelect then
     self.List_Item:BP_ClearSelection()
+  end
+  if tonumber(StuffId) == self.CurSelectContent.Id then
+    self.WS_Detail:SetActiveWidgetIndex(1)
   end
 end
 
@@ -357,13 +367,12 @@ function M:CheckIsCanAddToSaleList(CurStuffContent, bIsShowToast)
   if nil == CurStuffContent then
     CurStuffContent = self.CurSelectStuffContent
   end
+  if CurStuffContent and CurStuffContent.Count <= 0 then
+    return false
+  end
   local ShowTextId
-  if nil ~= CurStuffContent then
-    if -1 == CurStuffContent.Price then
-      ShowTextId = 7014
-    elseif 0 ~= CurStuffContent.LockType then
-      ShowTextId = 7010
-    end
+  if nil ~= CurStuffContent and -1 == CurStuffContent.Price then
+    ShowTextId = 7014
   end
   if ShowTextId and bIsShowToast then
     UIManager(self):ShowError(ShowTextId, nil, UIConst.Tip_CommonToast)

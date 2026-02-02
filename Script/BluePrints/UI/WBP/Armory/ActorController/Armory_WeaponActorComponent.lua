@@ -29,6 +29,12 @@ local function _RemoveWeaponCoroutine(self, CoroutineName)
   local Idx = self.WeaponCoroutineMap[CoroutineName]
   if Idx then
     table.remove(self.WeaponCoroutineArray, Idx)
+    self.WeaponCoroutineMap[CoroutineName] = nil
+    for name, index in pairs(self.WeaponCoroutineMap) do
+      if index > Idx then
+        self.WeaponCoroutineMap[name] = index - 1
+      end
+    end
   end
 end
 
@@ -268,7 +274,11 @@ function M:SetSingleWeaponCamera(WeaponData)
     Offset = Offset + self.ExCameraOffset
   end
   self.ArmoryHelper:TransformCamera(Offset, Rotation, 0.5)
-  self.ArmoryHelper:StartFOVAnim(90, 0.5, 14)
+  local FOV = 70
+  if WeaponHelper.CamFOV then
+    FOV = WeaponHelper.CamFOV:ToTable()[WeaponTag] or 70
+  end
+  self.ArmoryHelper:StartFOVAnim(FOV, 0.5, 14)
   local MinDistance = WeaponHelper.CamDistance_Min:ToTable()[WeaponTag] or 0
   local MinLocation = UKismetMathLibrary.GetForwardVector(Rotation) * -MinDistance
   local MaxDistance = WeaponHelper.CamDistance_Max:ToTable()[WeaponTag] or 0
@@ -400,7 +410,7 @@ function M:WeaponLvUpOrBreakUp()
   ArmoryWeapon.FXComponent:PlayEffectByIDParams(304, {bTickEvenWhenPaused = true, NotAttached = true})
 end
 
-function M:Component_OnDestruct()
+function M:Component_DestroyActors()
   self.CurrentWeaponInfo = nil
   local UIManager = UIManager(self.ViewUI)
   if IsValid(self.ArmoryWeapon) then

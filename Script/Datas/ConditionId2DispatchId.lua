@@ -1,3 +1,6 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
@@ -346,5 +349,11 @@ return ReadOnly("ConditionId2DispatchId", {
     [2] = 109114,
     [3] = 109123,
     [4] = 109124
+  },
+  [89102] = {
+    [1] = 210205
+  },
+  [89103] = {
+    [1] = 310305
   }
 })

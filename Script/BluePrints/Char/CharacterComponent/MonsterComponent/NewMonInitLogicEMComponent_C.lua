@@ -38,7 +38,12 @@ function M:NewMonInitComponent_CallBPReceiveBeginPlay(Owner)
       end
     end
   end
-  Owner.bEnableAnimSequenceCacheOpt = true
+  if Owner.TryStartOutAirWallCheck then
+    Owner:TryStartOutAirWallCheck()
+  end
+  if Owner.TryCheckBornPosTimer and IsAuthority(Owner) and Const.EnableRougeLikeBornCheck then
+    Owner:TryCheckBornPosTimer()
+  end
 end
 
 function M:NewMonInitComponent_TriggerDungeonComponentFun(GameMode, Name)

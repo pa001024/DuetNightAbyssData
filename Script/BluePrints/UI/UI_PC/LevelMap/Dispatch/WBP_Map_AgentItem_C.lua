@@ -123,28 +123,28 @@ function M:OnUnhovered()
   if self.Content.IsChoose then
     return
   end
-  self:PlayAnimation(self.Unhover)
+  self.BG:OnCellUnhovered()
 end
 
 function M:OnPressed()
   if self.Content.IsChoose then
     return
   end
-  self:PlayAnimation(self.Press)
+  self.BG:OnCellPressed()
 end
 
 function M:OnReleased()
   if self.Content.IsChoose or self.State == AgentEnum.Dispatching then
     return
   end
-  self:PlayAnimation(self.Normal)
+  self.BG:OnCellReleased()
 end
 
 function M:OnHovered()
   if self.Content.IsChoose then
     return
   end
-  self:PlayAnimation(self.Hover)
+  self.BG:OnCellHovered()
 end
 
 return M

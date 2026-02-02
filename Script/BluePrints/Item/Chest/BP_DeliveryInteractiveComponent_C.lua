@@ -1,4 +1,5 @@
 require("UnLua")
+local LuaConst = require("EMLuaConst")
 local BP_DeliveryInteractiveComponent_C = Class({
   "BluePrints.Story.Interactive.InteractiveComponent.BP_InteractiveBaseComponent_C",
   "BluePrints.Common.TimerMgr"
@@ -15,7 +16,11 @@ function BP_DeliveryInteractiveComponent_C:IsCanInteractive(PlayerActor)
   if not GameState:GetMechanismInteractiveInSpecialQuest(Owner) then
     return false
   end
-  return self.DistanceCheck(Owner, PlayerActor, self.InteractiveDistance) and self.BFaceToACheck(Owner, PlayerActor, self.InteractiveFaceAngle) and self.BFaceToACheck(PlayerActor, Owner, self.InteractiveAngle) and Owner.CanOpen
+  if LuaConst.OpenComputeInteractive then
+    return self:GetDistanceCheckResult() and self.BFaceToACheck(Owner, PlayerActor, self.InteractiveFaceAngle) and self.BFaceToACheck(PlayerActor, Owner, self.InteractiveAngle) and Owner.CanOpen
+  else
+    return self.DistanceCheck(Owner, PlayerActor, self.InteractiveDistance) and self.BFaceToACheck(Owner, PlayerActor, self.InteractiveFaceAngle) and self.BFaceToACheck(PlayerActor, Owner, self.InteractiveAngle) and Owner.CanOpen
+  end
 end
 
 function BP_DeliveryInteractiveComponent_C:TriggerEnter(PlayerActor)

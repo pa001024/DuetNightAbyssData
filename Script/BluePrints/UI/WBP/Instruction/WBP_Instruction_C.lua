@@ -74,6 +74,7 @@ function M:ShowActionTextPC(ActionName)
     self.RealSetSkill1 = self.Text03:ShowTextPC("Guide_UI_Skill1_PC", "Guide_UI_Skill1_Gamepad")
   elseif "Skill2" == ActionName then
     self.RealSetSkill2 = self.Text04:ShowTextPC("Guide_UI_Skill2_PC", "Guide_UI_Skill2_Gamepad")
+  elseif "Skill3" == ActionName then
   elseif "Skill2Attack" == ActionName then
     self.Arrow:SetVisibility(UE4.ESlateVisibility.Visible)
     self.RealSetSkill2Attack = self.Text05:ShowTextPC("Guide_UI_Skill2Attack_PC", "Guide_UI_Skill2Attack_PC")
@@ -97,6 +98,7 @@ function M:ShowActionTextMobile(ActionName)
     self.RealSetSkill2 = self.Four1:GetVisibility() ~= UE4.ESlateVisibility.Visible
     self.Four1:SetVisibility(UE4.ESlateVisibility.Visible)
     self.Text04:SetText(GText("Guide_UI_Skill2_Mobile"))
+  elseif "Skill3" == ActionName then
   elseif "Skill2Attack" == ActionName then
     self.RealSetSkill2Attack = self.Four2:GetVisibility() ~= UE4.ESlateVisibility.Visible
     self.Four2:SetVisibility(UE4.ESlateVisibility.Visible)
@@ -166,6 +168,9 @@ function M:ShowActionKeyAndText(ActionName)
     local KeyName = CommonUtils:GetActionMappingKeyName(ActionName)
     local FixPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Instruction/T_Key_%s_L.T_Key_%s_L'"
     local ReplaceKey = string.gsub(KeyName, " ", "_")
+    if DataMgr.KeyboardText[ReplaceKey] then
+      ReplaceKey = DataMgr.KeyboardText[ReplaceKey].KeyText
+    end
     ImgPath = string.format(FixPath, ReplaceKey, ReplaceKey)
     Img = LoadObject(ImgPath)
     if not IsValid(Img) then
@@ -225,8 +230,12 @@ function M:SetActionText(ActionName)
     self.Key.Text_Describe:SetText(GText("Guide_HighlightButton_Skill1"))
   elseif "Skill2" == ActionName then
     self.Key.Text_Describe:SetText(GText("Guide_HighlightButton_Skill2"))
+  elseif "Skill3" == ActionName then
+    self.Key.Text_Describe:SetText(GText("Guide_HighlightButton_Skill3"))
   elseif self.SkillType == "Interactive" then
     self.Key.Text_Describe:SetText(GText("MESSAGE_TITLE_LOADING_21_PC"))
+  elseif self.SkillType == "Slide" then
+    self.Key.Text_Describe:SetText(GText("Guide_HighlightButton_Crouch"))
   end
 end
 

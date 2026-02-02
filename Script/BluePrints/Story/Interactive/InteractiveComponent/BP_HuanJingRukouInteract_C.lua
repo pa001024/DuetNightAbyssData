@@ -1,6 +1,7 @@
 require("UnLua")
 require("DataMgr")
 local StoryInterActiveModel = require("BluePrints.UI.WBP.StoryInteractive.StoryInteractiveModel")
+local LuaConst = require("EMLuaConst")
 local BP_HuanJingRuKouInteract_C = Class("BluePrints.Story.Interactive.InteractiveComponent.BP_InteractiveBaseComponent_C")
 
 function BP_HuanJingRuKouInteract_C:ReceiveBeginPlay()
@@ -14,10 +15,11 @@ function BP_HuanJingRuKouInteract_C:SetComponentInfo(QuestChainId, SubRegionId)
 end
 
 function BP_HuanJingRuKouInteract_C:IsCanInteractive(PlayerActor)
-  if self:GetInteractiveName() ~= "" and self.DistanceCheckComponent(self, PlayerActor, self.InteractiveDistance, false) and self.CFaceToACheckComponent(self, PlayerActor, self.InteractiveFaceAngle, false) and self.AFaceToCCheckComponent(PlayerActor, self, self.InteractiveAngle, false) then
-    return true
+  if LuaConst.OpenComputeInteractive then
+    return self:GetInteractiveName() ~= "" and self:GetDistanceCheckResult() and self.CFaceToACheckComponent(self, PlayerActor, self.InteractiveFaceAngle, false) and self.AFaceToCCheckComponent(PlayerActor, self, self.InteractiveAngle, false)
+  else
+    return self:GetInteractiveName() ~= "" and self.DistanceCheckComponent(self, PlayerActor, self.InteractiveDistance, false) and self.CFaceToACheckComponent(self, PlayerActor, self.InteractiveFaceAngle, false) and self.AFaceToCCheckComponent(PlayerActor, self, self.InteractiveAngle, false)
   end
-  return false
 end
 
 function BP_HuanJingRuKouInteract_C:GetInteractiveName()

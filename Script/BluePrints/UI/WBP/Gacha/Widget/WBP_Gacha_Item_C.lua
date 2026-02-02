@@ -63,7 +63,7 @@ function M:OnAnimationFinished(InAnim)
     end
   elseif InAnim == self.Convert then
     self.Panel_Change:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    if self:HasAnyFocus() then
+    if self:HasAnyUserFocus() or self:HasFocusedDescendants() then
       self.ItemIcon:SetFocus()
     end
   end
