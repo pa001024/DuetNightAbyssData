@@ -7059,5 +7059,44 @@
     "耐受": -4,
     "类型": "Ranged Consonance Weapon",
     "效果": "Upgrades the Katana Charged Attack. Upon striking an enemy, the character leaps into the air and slams down, dealing multiple hits to surrounding foes for double the damage of the standard attack."
+  },
+  {
+    "id": 202003,
+    "icon": "Fenrir01",
+    "名称": "Commanding Thrust",
+    "版本": "1.2",
+    "系列": "Fenrir's ",
+    "品质": "金",
+    "极性": "V",
+    "耐受": 25,
+    "类型": "Melee Weapons",
+    "攻击范围": 1.2,
+    "效果": "Upgrades the Polearm Normal Attack to summon phantom spears that strike the target. Deals 200.0% more damage than the standard attack."
+  },
+  {
+    "id": 203001,
+    "icon": "Fenrir01",
+    "名称": "Edgeless Blade",
+    "版本": "1.2",
+    "系列": "Fenrir's ",
+    "品质": "金",
+    "极性": "V",
+    "耐受": 25,
+    "类型": "Melee Weapons",
+    "攻速": 0.3,
+    "效果": "Upgrades the Greatsword Normal Attack to unleash 3 Swordwaves on the final hit, cleaving through enemies in its path. Deals 200.0% more damage than the standard attack."
+  },
+  {
+    "id": 204001,
+    "icon": "Fenrir01",
+    "名称": "In Full Bloom",
+    "版本": "1.2",
+    "系列": "Fenrir's ",
+    "品质": "金",
+    "极性": "V",
+    "耐受": 25,
+    "类型": "Melee Weapons",
+    "攻速": 0.3,
+    "效果": "Upgrades the Dual Blades Sliding Attack into a lethal dash, slashing through all enemies in its path. Deals 200.0% more damage than the standard attack."
   }
 ]

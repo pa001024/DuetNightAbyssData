@@ -7,6 +7,9 @@ class BaseProcessor:
         self.data_loader = data_loader
         self.file_type = "Base"
         self.i18n_data = data_loader.load_json("TextMap_I18n.json")
+        self.i18n_data_cn_alt = {}
+        for item in data_loader.load_json("TextMap_TextMapContent.json"):
+            self.i18n_data_cn_alt.update(item.get("Loader"))
 
     def get_file_type(self):
         return self.file_type
@@ -102,7 +105,9 @@ class BaseProcessor:
         # 从i18n_data中查找
         text_entry = self.i18n_data.get(text_key, {})
         if not text_entry:
-            return text_key
+            return self.i18n_data_cn_alt.get(text_key, {}).get(
+                "TextMapContent", text_key
+            )
 
         # 获取当前语言
         language = language if language else self.data_loader.language
@@ -140,7 +145,9 @@ class BaseProcessor:
                     break
         if content[:-4] == "{空格}":
             content = content.replace("{空格}", " ")
-        return content or text_key
+        return content or self.i18n_data_cn_alt.get(text_key, {}).get(
+            "TextMapContent", text_key
+        )
 
     def get_translated_dialogue(self, dialogue_key, language=""):
         """获取翻译后的对话文本

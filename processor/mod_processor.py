@@ -709,7 +709,7 @@ class ModProcessor(BaseProcessor):
         for item in items:
             # 过滤掉id > 200000的mod
             mod_id = item.get("Id", 0)
-            if mod_id < 100 or mod_id > 200000:
+            if mod_id < 100 or mod_id > 300000:
                 continue
 
             processed = self.process_item(item, language)

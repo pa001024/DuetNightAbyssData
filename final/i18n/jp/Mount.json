@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1000,
+    "name": "擬似玄狴",
+    "des": "コウショウが開発した機枢の乗り物は、まるで本物の玄狴のように精巧だ。玄狴を乗って煙津渡の街中を走り回ったら、きっと大騒ぎになるだろう。",
+    "icon": "Mounts_0002",
+    "resourceIcon": "Icon_Mounts_0002",
+    "rarity": 4,
+    "sort": 97,
+    "resourceId": 49999,
+    "fly": 1,
+    "access": [
+      "Text_MountQuest01"
+    ]
+  },
+  {
+    "id": 1001,
+    "name": "擬似太皓",
+    "des": "コウショウが開発した<Default note=\"text:きすう\">機枢</>の乗り物で、白龍様を模している。華胥にこれ一つしかなく、コウショウの工房に大切に保管されている――まあ、これ一つだけで助かった。もしたくさんの太皓様が空を飛び回るようなことになれば、きっと天礼司が黙っていないし、乗り込んでくるだろうから。だがコウショウは気にも留めず、量産化に向けてひたすら突き進んでいる。幸運を祈ろう。\n 名声許可がなくても飛行できる。",
+    "icon": "Mounts_0001",
+    "resourceIcon": "Icon_Mounts_0001",
+    "rarity": 6,
+    "sort": 100,
+    "resourceId": 49998,
+    "access": [
+      "Text_SHOP_MAINTAB_GACHA"
+    ]
+  },
+  {
+    "id": 1002,
+    "name": "装甲騎兵ランナー",
+    "des": "不滅もやがて消え去る、雨の中の涙のように。",
+    "icon": "Mounts_0003",
+    "resourceIcon": "Icon_Mounts_0003",
+    "rarity": 5,
+    "sort": 99,
+    "resourceId": 49997,
+    "fly": 1,
+    "access": [
+      "Shop_Main"
+    ]
+  },
+  {
+    "id": 1003,
+    "name": "ヘーゼルナッツいけいけいけ！",
+    "des": "ブーブー？ ブーブー。ブーブー！",
+    "icon": "Mounts_0004",
+    "resourceIcon": "Icon_Mounts_0004",
+    "rarity": 4,
+    "sort": 98,
+    "resourceId": 49996,
+    "fly": 1,
+    "access": [
+      "Shop_Main"
+    ]
+  }
+]

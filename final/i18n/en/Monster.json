@@ -1359,6 +1359,16 @@
     "icon": "Boss_03_Shijing"
   },
   {
+    "id": 8503002,
+    "n": "Crystalophile",
+    "t": "Boss",
+    "atk": 30,
+    "def": 160,
+    "hp": 6000,
+    "tn": 6000,
+    "icon": "Boss_03_Shijing"
+  },
+  {
     "id": 8503601,
     "n": "Crystalophile",
     "t": "Boss",
@@ -1376,6 +1386,16 @@
     "def": 135,
     "hp": 6000,
     "tn": 4500,
+    "icon": "Boss_05_Lianhuo"
+  },
+  {
+    "id": 8505002,
+    "n": "The Warden of the Inferno",
+    "t": "Boss",
+    "atk": 24,
+    "def": 300,
+    "hp": 6000,
+    "tn": 8400,
     "icon": "Boss_05_Lianhuo"
   },
   {
@@ -1445,6 +1465,16 @@
     "def": 0,
     "hp": 4800,
     "tn": 99999,
+    "icon": "Boss_Linen"
+  },
+  {
+    "id": 8512002,
+    "n": "\"Beast From the Snowfield\"",
+    "t": "Boss",
+    "atk": 24,
+    "def": 300,
+    "hp": 6000,
+    "tn": 8400,
     "icon": "Boss_Linen"
   },
   {

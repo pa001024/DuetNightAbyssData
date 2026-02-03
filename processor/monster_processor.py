@@ -82,6 +82,12 @@ class MonsterProcessor(BaseProcessor):
             if abyss_dungeon_info.get("DungeonMonsters", []):
                 for monster_id in abyss_dungeon_info.get("DungeonMonsters", []):
                     self.valid_monster_ids.add(monster_id)
+        # 加载HardBossMain.json并提取MonsterId
+        hard_boss_main_data = data_loader.load_json("HardBossMain.json")
+        for hard_boss_info in hard_boss_main_data:
+            monster_id = hard_boss_info.get("MonsterId")
+            if monster_id:
+                self.valid_monster_ids.add(monster_id)
 
     def process_item(self, monster_data, language):
         id = monster_data.get("UnitId", 0)

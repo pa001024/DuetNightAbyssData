@@ -22,6 +22,8 @@ class ShopItemProcessor(BaseProcessor):
             "Pet": data_loader.load_json("Pet.json"),
             "Title": data_loader.load_json("Title.json"),
             "Draft": data_loader.load_json("Draft.json"),
+            "Mount": data_loader.load_json("Mount.json"),
+            "TitleFrame": data_loader.load_json("TitleFrame.json"),
         }
 
         # 加载商店相关数据
@@ -74,6 +76,8 @@ class ShopItemProcessor(BaseProcessor):
                     "Walnut",
                     "Reward",
                     "Pet",
+                    "Mount",
+                    "TitleFrame",
                 ]:
                     # 这些表直接使用 ID 作为键
                     type_item = table.get(str(type_id))
@@ -165,16 +169,20 @@ class ShopItemProcessor(BaseProcessor):
                                                 accessory_name_key, language
                                             )
                     elif item_type in [
-                        "Skin",
                         "WeaponSkin",
                         "CharAccessory",
                         "WeaponAccessory",
                         "HeadSculpture",
                         "Title",
+                        "TitleFrame",
                     ]:
                         name_key = type_item.get("Name")
+                    elif item_type == "Skin":
+                        name_key = type_item.get("SkinName")
                     elif item_type in ["DailyPack", "Walnut", "Reward", "Pet"]:
                         name_key = type_item.get("Name")
+                    elif item_type == "Mount":
+                        name_key = type_item.get("MountName")
 
                     if name_key and item_type not in ["Mod", "Draft"]:
                         type_name = self.get_translated_text(name_key, language)

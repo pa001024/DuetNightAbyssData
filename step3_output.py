@@ -23,6 +23,11 @@ from processor.sub_region_processor import SubRegionProcessor
 from processor.region_point_processor import RegionPointProcessor
 from processor.shop_item_processor import ShopItemProcessor
 from processor.raid_buff_processor import RaidBuffProcessor
+from processor.pet_entry_processor import PetEntryProcessor
+from processor.hard_boss_processor import HardBossProcessor
+from processor.reward_view_processor import RewardViewProcessor
+from processor.robot_equip_processor import RobotEquipProcessor
+from processor.mount_processor import MountProcessor
 
 
 class DataLoader:
@@ -219,6 +224,11 @@ class FinalProcessor:
             "RegionPoint": RegionPointProcessor,
             "ShopItem": ShopItemProcessor,
             "RaidBuff": RaidBuffProcessor,
+            "PetEntry": PetEntryProcessor,
+            "RewardView": RewardViewProcessor,
+            "HardBoss": HardBossProcessor,
+            "RobotEquip": RobotEquipProcessor,
+            "Mount": MountProcessor,
             # Add other processor classes here as they are implemented
         }
 
@@ -321,14 +331,13 @@ if __name__ == "__main__":
 
     # Define default file types to process
     default_file_types = [
-        #  11
         "Achievement",
         "Mod",
-        "Weapon",
         "Char",
         "Monster",
-        "Draft",
+        "Weapon",
         "Dungeon",
+        "Draft",
         "Reward",
         "Pet",
         "AbyssBuff",
@@ -336,14 +345,19 @@ if __name__ == "__main__":
         "Walnut",
         "Fish",
         "FishingSpot",
-        "Resource",
         "DynQuest",
+        "Resource",
         "QuestChain",
         "Region",
         "SubRegion",
         "RegionPoint",
         "ShopItem",
         "RaidBuff",
+        "PetEntry",
+        "RewardView",
+        "HardBoss",
+        "RobotEquip",
+        "Mount",
     ]
 
     # 使用命令行参数指定的文件类型，如果没有则使用默认列表

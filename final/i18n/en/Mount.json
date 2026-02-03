@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1000,
+    "name": "Mecha-Sable Bi'an",
+    "des": "A mechanical mount developed by Master Gongshang, lifelike enough to pass for a real Sable Bi'an. Still, riding a divine beast — even a counterfeit — feels a little irreverent.\"",
+    "icon": "Mounts_0002",
+    "resourceIcon": "Icon_Mounts_0002",
+    "rarity": 4,
+    "sort": 97,
+    "resourceId": 49999,
+    "fly": 1,
+    "access": [
+      "Text_MountQuest01"
+    ]
+  },
+  {
+    "id": 1001,
+    "name": "Mecha-Taihao",
+    "des": "A mechanised aerial craft built by Master Gongshang, modelled after Lord Argent. There's only one in all Huaxu, kept as a prized showpiece in Gongshang's workshop. Thankfully, he only built one. If replicas of Taihao ever filled the skies, the Ministry of Rites would come knocking in outrage. Yet Master Gongshang remains unmoved, set on mass-producing it all the same. Good luck to him.\nNo Reputation Perk is required to pilot this vehicle.",
+    "icon": "Mounts_0001",
+    "resourceIcon": "Icon_Mounts_0001",
+    "rarity": 6,
+    "sort": 100,
+    "resourceId": 49998,
+    "access": [
+      "Text_SHOP_MAINTAB_GACHA"
+    ]
+  },
+  {
+    "id": 1002,
+    "name": "Blade-run Knight",
+    "des": "All those moments will be lost in time, like tears in rain.",
+    "icon": "Mounts_0003",
+    "resourceIcon": "Icon_Mounts_0003",
+    "rarity": 5,
+    "sort": 99,
+    "resourceId": 49997,
+    "fly": 1,
+    "access": [
+      "Shop_Main"
+    ]
+  },
+  {
+    "id": 1003,
+    "name": "Filbert, let's go go go!",
+    "des": "Oink oink? Oink oink. Oink oink!",
+    "icon": "Mounts_0004",
+    "resourceIcon": "Icon_Mounts_0004",
+    "rarity": 4,
+    "sort": 98,
+    "resourceId": 49996,
+    "fly": 1,
+    "access": [
+      "Shop_Main"
+    ]
+  }
+]
