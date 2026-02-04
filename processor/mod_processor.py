@@ -115,6 +115,9 @@ class ModProcessor(BaseProcessor):
         processed["耐受"] = tolerance
         processed["类型"] = mod_type
 
+        if mod_data.get("CardLevelNeedModId"):
+            processed["消耗"] = mod_data.get("CardLevelNeedModId")
+
         # 处理AddAttrs，根据CalcModAttrByLevel逻辑计算属性值
         add_attrs = mod_data.get("AddAttrs", [])
         for attr in add_attrs:

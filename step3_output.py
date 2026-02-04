@@ -151,7 +151,7 @@ class DataLoader:
     def get_mod_name(self, mod_id):
         mod_index = self.build_index("Mod.json", "Id")
         mod = mod_index.get(mod_id, {})
-        return f"{self.translate(mod.get('TypeName', ''))}{self.translate(mod.get('Name', ''))}".strip()
+        return f"{self.translate(mod.get('Name', ''))}".strip()
 
     def get_char_name(self, char_id):
         char_index = self.build_index("Char.json", "Id")

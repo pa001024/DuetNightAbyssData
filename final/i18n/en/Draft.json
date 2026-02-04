@@ -1471,7 +1471,7 @@
   },
   {
     "id": 151002,
-    "n": "Phoenix's Nirvana",
+    "n": "Nirvana",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1483,7 +1483,7 @@
     "x": [
       {
         "id": 41002,
-        "n": "Phoenix's Nirvana",
+        "n": "Nirvana",
         "c": 5,
         "t": "Mod"
       }
@@ -1492,7 +1492,7 @@
   },
   {
     "id": 151003,
-    "n": "Phoenix's Blessing",
+    "n": "Blessing",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1504,7 +1504,7 @@
     "x": [
       {
         "id": 41003,
-        "n": "Phoenix's Blessing",
+        "n": "Blessing",
         "c": 5,
         "t": "Mod"
       }
@@ -1513,7 +1513,7 @@
   },
   {
     "id": 151007,
-    "n": "Phoenix's Standfast",
+    "n": "Standfast",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1525,7 +1525,7 @@
     "x": [
       {
         "id": 41007,
-        "n": "Phoenix's Standfast",
+        "n": "Standfast",
         "c": 5,
         "t": "Mod"
       }
@@ -1534,7 +1534,7 @@
   },
   {
     "id": 151301,
-    "n": "Siren's Wings·Inspo",
+    "n": "Wings·Inspo",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1546,7 +1546,7 @@
     "x": [
       {
         "id": 41004,
-        "n": "Phoenix's Wings",
+        "n": "Wings",
         "c": 5,
         "t": "Mod"
       }
@@ -1555,7 +1555,7 @@
   },
   {
     "id": 151311,
-    "n": "Sphinx's Onslaught",
+    "n": "Onslaught",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1567,7 +1567,7 @@
     "x": [
       {
         "id": 41001,
-        "n": "Phoenix's Blaze",
+        "n": "Blaze",
         "c": 5,
         "t": "Mod"
       }
@@ -1576,7 +1576,7 @@
   },
   {
     "id": 151312,
-    "n": "Sphinx's Intrepidity",
+    "n": "Intrepidity",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1588,7 +1588,7 @@
     "x": [
       {
         "id": 41001,
-        "n": "Phoenix's Blaze",
+        "n": "Blaze",
         "c": 5,
         "t": "Mod"
       }
@@ -1597,7 +1597,7 @@
   },
   {
     "id": 151313,
-    "n": "Sphinx's Duel",
+    "n": "Duel",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1609,7 +1609,7 @@
     "x": [
       {
         "id": 41313,
-        "n": "Sphinx's Duel",
+        "n": "Duel",
         "c": 5,
         "t": "Mod"
       }
@@ -1618,7 +1618,7 @@
   },
   {
     "id": 151314,
-    "n": "Sphinx's Trapped",
+    "n": "Trapped",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1630,7 +1630,7 @@
     "x": [
       {
         "id": 41314,
-        "n": "Sphinx's Trapped",
+        "n": "Trapped",
         "c": 5,
         "t": "Mod"
       }
@@ -1639,7 +1639,7 @@
   },
   {
     "id": 151315,
-    "n": "Sphinx's Surge",
+    "n": "Surge",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1651,7 +1651,7 @@
     "x": [
       {
         "id": 41315,
-        "n": "Sphinx's Surge",
+        "n": "Surge",
         "c": 5,
         "t": "Mod"
       }
@@ -1660,7 +1660,7 @@
   },
   {
     "id": 151316,
-    "n": "Sphinx's Relentless",
+    "n": "Relentless",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1672,7 +1672,7 @@
     "x": [
       {
         "id": 41316,
-        "n": "Sphinx's Relentless",
+        "n": "Relentless",
         "c": 5,
         "t": "Mod"
       }
@@ -1681,7 +1681,7 @@
   },
   {
     "id": 151321,
-    "n": "Griffin's Nihility·Wildfire",
+    "n": "Nihility·Wildfire",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1693,7 +1693,7 @@
     "x": [
       {
         "id": 41321,
-        "n": "Griffin's Nihility·Wildfire",
+        "n": "Nihility·Wildfire",
         "c": 5,
         "t": "Mod"
       }
@@ -1702,7 +1702,7 @@
   },
   {
     "id": 151322,
-    "n": "Griffin's Seawave·Wildfire",
+    "n": "Seawave·Wildfire",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1714,7 +1714,7 @@
     "x": [
       {
         "id": 41322,
-        "n": "Griffin's Seawave·Wildfire",
+        "n": "Seawave·Wildfire",
         "c": 5,
         "t": "Mod"
       }
@@ -1723,7 +1723,7 @@
   },
   {
     "id": 151323,
-    "n": "Griffin's Inferno·Wildfire",
+    "n": "Inferno·Wildfire",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1735,7 +1735,7 @@
     "x": [
       {
         "id": 41323,
-        "n": "Griffin's Inferno·Wildfire",
+        "n": "Inferno·Wildfire",
         "c": 5,
         "t": "Mod"
       }
@@ -1744,7 +1744,7 @@
   },
   {
     "id": 151324,
-    "n": "Griffin's Thunder·Wildfire",
+    "n": "Thunder·Wildfire",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1756,7 +1756,7 @@
     "x": [
       {
         "id": 41324,
-        "n": "Griffin's Thunder·Wildfire",
+        "n": "Thunder·Wildfire",
         "c": 5,
         "t": "Mod"
       }
@@ -1765,7 +1765,7 @@
   },
   {
     "id": 151325,
-    "n": "Griffin's Squall·Wildfire",
+    "n": "Squall·Wildfire",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1777,7 +1777,7 @@
     "x": [
       {
         "id": 41325,
-        "n": "Griffin's Squall·Wildfire",
+        "n": "Squall·Wildfire",
         "c": 5,
         "t": "Mod"
       }
@@ -1786,7 +1786,7 @@
   },
   {
     "id": 151326,
-    "n": "Griffin's Skylume·Wildfire",
+    "n": "Skylume·Wildfire",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1798,7 +1798,7 @@
     "x": [
       {
         "id": 41326,
-        "n": "Griffin's Skylume·Wildfire",
+        "n": "Skylume·Wildfire",
         "c": 5,
         "t": "Mod"
       }
@@ -1807,7 +1807,7 @@
   },
   {
     "id": 151331,
-    "n": "Griffin's Nihility·Midnight Sun",
+    "n": "Nihility·Midnight Sun",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1819,7 +1819,7 @@
     "x": [
       {
         "id": 41331,
-        "n": "Griffin's Nihility·Midnight Sun",
+        "n": "Nihility·Midnight Sun",
         "c": 5,
         "t": "Mod"
       }
@@ -1828,7 +1828,7 @@
   },
   {
     "id": 151332,
-    "n": "Griffin's Seawave·Midnight Sun",
+    "n": "Seawave·Midnight Sun",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1840,7 +1840,7 @@
     "x": [
       {
         "id": 41332,
-        "n": "Griffin's Seawave·Midnight Sun",
+        "n": "Seawave·Midnight Sun",
         "c": 5,
         "t": "Mod"
       }
@@ -1849,7 +1849,7 @@
   },
   {
     "id": 151333,
-    "n": "Griffin's Inferno·Midnight Sun",
+    "n": "Inferno·Midnight Sun",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1861,7 +1861,7 @@
     "x": [
       {
         "id": 41333,
-        "n": "Griffin's Inferno·Midnight Sun",
+        "n": "Inferno·Midnight Sun",
         "c": 5,
         "t": "Mod"
       }
@@ -1870,7 +1870,7 @@
   },
   {
     "id": 151334,
-    "n": "Griffin's Thunder·Midnight Sun",
+    "n": "Thunder·Midnight Sun",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1882,7 +1882,7 @@
     "x": [
       {
         "id": 41334,
-        "n": "Griffin's Thunder·Midnight Sun",
+        "n": "Thunder·Midnight Sun",
         "c": 5,
         "t": "Mod"
       }
@@ -1891,7 +1891,7 @@
   },
   {
     "id": 151335,
-    "n": "Griffin's Squall·Midnight Sun",
+    "n": "Squall·Midnight Sun",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1903,7 +1903,7 @@
     "x": [
       {
         "id": 41335,
-        "n": "Griffin's Squall·Midnight Sun",
+        "n": "Squall·Midnight Sun",
         "c": 5,
         "t": "Mod"
       }
@@ -1912,7 +1912,7 @@
   },
   {
     "id": 151336,
-    "n": "Griffin's Skylume·Midnight Sun",
+    "n": "Skylume·Midnight Sun",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1924,7 +1924,7 @@
     "x": [
       {
         "id": 41336,
-        "n": "Griffin's Skylume·Midnight Sun",
+        "n": "Skylume·Midnight Sun",
         "c": 5,
         "t": "Mod"
       }
@@ -1933,7 +1933,7 @@
   },
   {
     "id": 151411,
-    "n": "Typhon's Prime·Morale",
+    "n": "Prime·Morale",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1945,7 +1945,7 @@
     "x": [
       {
         "id": 41411,
-        "n": "Typhon's Prime·Morale",
+        "n": "Prime·Morale",
         "c": 5,
         "t": "Mod"
       }
@@ -1954,7 +1954,7 @@
   },
   {
     "id": 151412,
-    "n": "Typhon's Prime·Resolve",
+    "n": "Prime·Resolve",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1966,7 +1966,7 @@
     "x": [
       {
         "id": 41412,
-        "n": "Typhon's Prime·Resolve",
+        "n": "Prime·Resolve",
         "c": 5,
         "t": "Mod"
       }
@@ -1975,7 +1975,7 @@
   },
   {
     "id": 151413,
-    "n": "Typhon's Prime·Huntdown",
+    "n": "Prime·Huntdown",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -1987,7 +1987,7 @@
     "x": [
       {
         "id": 41413,
-        "n": "Typhon's Prime·Huntdown",
+        "n": "Prime·Huntdown",
         "c": 5,
         "t": "Mod"
       }
@@ -1996,7 +1996,7 @@
   },
   {
     "id": 151414,
-    "n": "Typhon's Prime·Serenity",
+    "n": "Prime·Serenity",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2008,7 +2008,7 @@
     "x": [
       {
         "id": 41414,
-        "n": "Typhon's Prime·Serenity",
+        "n": "Prime·Serenity",
         "c": 5,
         "t": "Mod"
       }
@@ -2017,7 +2017,7 @@
   },
   {
     "id": 151415,
-    "n": "Typhon's Prime·Uplift",
+    "n": "Prime·Uplift",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2029,7 +2029,7 @@
     "x": [
       {
         "id": 41415,
-        "n": "Typhon's Prime·Uplift",
+        "n": "Prime·Uplift",
         "c": 5,
         "t": "Mod"
       }
@@ -2038,7 +2038,7 @@
   },
   {
     "id": 151421,
-    "n": "Typhon's Prime·Morale",
+    "n": "Prime·Morale",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2050,7 +2050,7 @@
     "x": [
       {
         "id": 41421,
-        "n": "Typhon's Prime·Morale",
+        "n": "Prime·Morale",
         "c": 5,
         "t": "Mod"
       }
@@ -2059,7 +2059,7 @@
   },
   {
     "id": 151422,
-    "n": "Typhon's Prime·Resolve",
+    "n": "Prime·Resolve",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2071,7 +2071,7 @@
     "x": [
       {
         "id": 41422,
-        "n": "Typhon's Prime·Resolve",
+        "n": "Prime·Resolve",
         "c": 5,
         "t": "Mod"
       }
@@ -2080,7 +2080,7 @@
   },
   {
     "id": 151423,
-    "n": "Typhon's Prime·Huntdown",
+    "n": "Prime·Huntdown",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2092,7 +2092,7 @@
     "x": [
       {
         "id": 41423,
-        "n": "Typhon's Prime·Huntdown",
+        "n": "Prime·Huntdown",
         "c": 5,
         "t": "Mod"
       }
@@ -2101,7 +2101,7 @@
   },
   {
     "id": 151424,
-    "n": "Typhon's Prime·Serenity",
+    "n": "Prime·Serenity",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2113,7 +2113,7 @@
     "x": [
       {
         "id": 41424,
-        "n": "Typhon's Prime·Serenity",
+        "n": "Prime·Serenity",
         "c": 5,
         "t": "Mod"
       }
@@ -2122,7 +2122,7 @@
   },
   {
     "id": 151425,
-    "n": "Typhon's Prime·Uplift",
+    "n": "Prime·Uplift",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2134,7 +2134,7 @@
     "x": [
       {
         "id": 41425,
-        "n": "Typhon's Prime·Uplift",
+        "n": "Prime·Uplift",
         "c": 5,
         "t": "Mod"
       }
@@ -2143,7 +2143,7 @@
   },
   {
     "id": 151431,
-    "n": "Typhon's Prime·Morale",
+    "n": "Prime·Morale",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2155,7 +2155,7 @@
     "x": [
       {
         "id": 41431,
-        "n": "Typhon's Prime·Morale",
+        "n": "Prime·Morale",
         "c": 5,
         "t": "Mod"
       }
@@ -2164,7 +2164,7 @@
   },
   {
     "id": 151432,
-    "n": "Typhon's Prime·Resolve",
+    "n": "Prime·Resolve",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2176,7 +2176,7 @@
     "x": [
       {
         "id": 41432,
-        "n": "Typhon's Prime·Resolve",
+        "n": "Prime·Resolve",
         "c": 5,
         "t": "Mod"
       }
@@ -2185,7 +2185,7 @@
   },
   {
     "id": 151433,
-    "n": "Typhon's Prime·Huntdown",
+    "n": "Prime·Huntdown",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2197,7 +2197,7 @@
     "x": [
       {
         "id": 41433,
-        "n": "Typhon's Prime·Huntdown",
+        "n": "Prime·Huntdown",
         "c": 5,
         "t": "Mod"
       }
@@ -2206,7 +2206,7 @@
   },
   {
     "id": 151434,
-    "n": "Typhon's Prime·Serenity",
+    "n": "Prime·Serenity",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2218,7 +2218,7 @@
     "x": [
       {
         "id": 41434,
-        "n": "Typhon's Prime·Serenity",
+        "n": "Prime·Serenity",
         "c": 5,
         "t": "Mod"
       }
@@ -2227,7 +2227,7 @@
   },
   {
     "id": 151435,
-    "n": "Typhon's Prime·Uplift",
+    "n": "Prime·Uplift",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2239,7 +2239,7 @@
     "x": [
       {
         "id": 41435,
-        "n": "Typhon's Prime·Uplift",
+        "n": "Prime·Uplift",
         "c": 5,
         "t": "Mod"
       }
@@ -2248,7 +2248,7 @@
   },
   {
     "id": 151441,
-    "n": "Typhon's Prime·Morale",
+    "n": "Prime·Morale",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2260,7 +2260,7 @@
     "x": [
       {
         "id": 41441,
-        "n": "Typhon's Prime·Morale",
+        "n": "Prime·Morale",
         "c": 5,
         "t": "Mod"
       }
@@ -2269,7 +2269,7 @@
   },
   {
     "id": 151442,
-    "n": "Typhon's Prime·Resolve",
+    "n": "Prime·Resolve",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2281,7 +2281,7 @@
     "x": [
       {
         "id": 41442,
-        "n": "Typhon's Prime·Resolve",
+        "n": "Prime·Resolve",
         "c": 5,
         "t": "Mod"
       }
@@ -2290,7 +2290,7 @@
   },
   {
     "id": 151443,
-    "n": "Typhon's Prime·Huntdown",
+    "n": "Prime·Huntdown",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2302,7 +2302,7 @@
     "x": [
       {
         "id": 41443,
-        "n": "Typhon's Prime·Huntdown",
+        "n": "Prime·Huntdown",
         "c": 5,
         "t": "Mod"
       }
@@ -2311,7 +2311,7 @@
   },
   {
     "id": 151444,
-    "n": "Typhon's Prime·Serenity",
+    "n": "Prime·Serenity",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2323,7 +2323,7 @@
     "x": [
       {
         "id": 41444,
-        "n": "Typhon's Prime·Serenity",
+        "n": "Prime·Serenity",
         "c": 5,
         "t": "Mod"
       }
@@ -2332,7 +2332,7 @@
   },
   {
     "id": 151445,
-    "n": "Typhon's Prime·Uplift",
+    "n": "Prime·Uplift",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2344,7 +2344,7 @@
     "x": [
       {
         "id": 41445,
-        "n": "Typhon's Prime·Uplift",
+        "n": "Prime·Uplift",
         "c": 5,
         "t": "Mod"
       }
@@ -2353,7 +2353,7 @@
   },
   {
     "id": 151451,
-    "n": "Typhon's Prime·Morale",
+    "n": "Prime·Morale",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2365,7 +2365,7 @@
     "x": [
       {
         "id": 41451,
-        "n": "Typhon's Prime·Morale",
+        "n": "Prime·Morale",
         "c": 5,
         "t": "Mod"
       }
@@ -2374,7 +2374,7 @@
   },
   {
     "id": 151452,
-    "n": "Typhon's Prime·Resolve",
+    "n": "Prime·Resolve",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2386,7 +2386,7 @@
     "x": [
       {
         "id": 41452,
-        "n": "Typhon's Prime·Resolve",
+        "n": "Prime·Resolve",
         "c": 5,
         "t": "Mod"
       }
@@ -2395,7 +2395,7 @@
   },
   {
     "id": 151453,
-    "n": "Typhon's Prime·Huntdown",
+    "n": "Prime·Huntdown",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2407,7 +2407,7 @@
     "x": [
       {
         "id": 41453,
-        "n": "Typhon's Prime·Huntdown",
+        "n": "Prime·Huntdown",
         "c": 5,
         "t": "Mod"
       }
@@ -2416,7 +2416,7 @@
   },
   {
     "id": 151454,
-    "n": "Typhon's Prime·Serenity",
+    "n": "Prime·Serenity",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2428,7 +2428,7 @@
     "x": [
       {
         "id": 41454,
-        "n": "Typhon's Prime·Serenity",
+        "n": "Prime·Serenity",
         "c": 5,
         "t": "Mod"
       }
@@ -2437,7 +2437,7 @@
   },
   {
     "id": 151455,
-    "n": "Typhon's Prime·Uplift",
+    "n": "Prime·Uplift",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2449,7 +2449,7 @@
     "x": [
       {
         "id": 41455,
-        "n": "Typhon's Prime·Uplift",
+        "n": "Prime·Uplift",
         "c": 5,
         "t": "Mod"
       }
@@ -2458,7 +2458,7 @@
   },
   {
     "id": 151461,
-    "n": "Typhon's Prime·Morale",
+    "n": "Prime·Morale",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2470,7 +2470,7 @@
     "x": [
       {
         "id": 41461,
-        "n": "Typhon's Prime·Morale",
+        "n": "Prime·Morale",
         "c": 5,
         "t": "Mod"
       }
@@ -2479,7 +2479,7 @@
   },
   {
     "id": 151462,
-    "n": "Typhon's Prime·Resolve",
+    "n": "Prime·Resolve",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2491,7 +2491,7 @@
     "x": [
       {
         "id": 41462,
-        "n": "Typhon's Prime·Resolve",
+        "n": "Prime·Resolve",
         "c": 5,
         "t": "Mod"
       }
@@ -2500,7 +2500,7 @@
   },
   {
     "id": 151463,
-    "n": "Typhon's Prime·Huntdown",
+    "n": "Prime·Huntdown",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2512,7 +2512,7 @@
     "x": [
       {
         "id": 41463,
-        "n": "Typhon's Prime·Huntdown",
+        "n": "Prime·Huntdown",
         "c": 5,
         "t": "Mod"
       }
@@ -2521,7 +2521,7 @@
   },
   {
     "id": 151464,
-    "n": "Typhon's Prime·Serenity",
+    "n": "Prime·Serenity",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2533,7 +2533,7 @@
     "x": [
       {
         "id": 41464,
-        "n": "Typhon's Prime·Serenity",
+        "n": "Prime·Serenity",
         "c": 5,
         "t": "Mod"
       }
@@ -2542,7 +2542,7 @@
   },
   {
     "id": 151465,
-    "n": "Typhon's Prime·Uplift",
+    "n": "Prime·Uplift",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2554,7 +2554,7 @@
     "x": [
       {
         "id": 41465,
-        "n": "Typhon's Prime·Uplift",
+        "n": "Prime·Uplift",
         "c": 5,
         "t": "Mod"
       }
@@ -2563,7 +2563,7 @@
   },
   {
     "id": 151711,
-    "n": "Covenanter's Scorch",
+    "n": "Scorch",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2575,7 +2575,7 @@
     "x": [
       {
         "id": 41711,
-        "n": "Covenanter's Scorch",
+        "n": "Scorch",
         "c": 5,
         "t": "Mod"
       }
@@ -2584,7 +2584,7 @@
   },
   {
     "id": 151712,
-    "n": "Covenanter's Blaze·Morale",
+    "n": "Blaze·Morale",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2596,7 +2596,7 @@
     "x": [
       {
         "id": 41712,
-        "n": "Covenanter's Blaze·Morale",
+        "n": "Blaze·Morale",
         "c": 5,
         "t": "Mod"
       }
@@ -2605,7 +2605,7 @@
   },
   {
     "id": 151713,
-    "n": "Covenanter's Blaze·Spectrum",
+    "n": "Blaze·Spectrum",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2617,7 +2617,7 @@
     "x": [
       {
         "id": 41713,
-        "n": "Covenanter's Blaze·Spectrum",
+        "n": "Blaze·Spectrum",
         "c": 5,
         "t": "Mod"
       }
@@ -2626,7 +2626,7 @@
   },
   {
     "id": 151714,
-    "n": "Covenanter's Standfast·Inspo",
+    "n": "Standfast·Inspo",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2638,7 +2638,7 @@
     "x": [
       {
         "id": 41714,
-        "n": "Covenanter's Standfast·Inspo",
+        "n": "Standfast·Inspo",
         "c": 5,
         "t": "Mod"
       }
@@ -2647,7 +2647,7 @@
   },
   {
     "id": 151721,
-    "n": "Covenanter's Blaze·Nirvana",
+    "n": "Blaze·Nirvana",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2659,7 +2659,7 @@
     "x": [
       {
         "id": 41721,
-        "n": "Covenanter's Blaze·Nirvana",
+        "n": "Blaze·Nirvana",
         "c": 5,
         "t": "Mod"
       }
@@ -2668,7 +2668,7 @@
   },
   {
     "id": 151722,
-    "n": "Covenanter's Blaze·Spectrum",
+    "n": "Blaze·Spectrum",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2680,7 +2680,7 @@
     "x": [
       {
         "id": 41722,
-        "n": "Covenanter's Blaze·Spectrum",
+        "n": "Blaze·Spectrum",
         "c": 5,
         "t": "Mod"
       }
@@ -2689,7 +2689,7 @@
   },
   {
     "id": 151723,
-    "n": "Covenanter's Blaze·Inspo",
+    "n": "Blaze·Inspo",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2701,7 +2701,7 @@
     "x": [
       {
         "id": 41723,
-        "n": "Covenanter's Blaze·Inspo",
+        "n": "Blaze·Inspo",
         "c": 5,
         "t": "Mod"
       }
@@ -2710,7 +2710,7 @@
   },
   {
     "id": 151724,
-    "n": "Covenanter's Wings·Volition",
+    "n": "Wings·Volition",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2722,7 +2722,7 @@
     "x": [
       {
         "id": 41724,
-        "n": "Covenanter's Wings·Volition",
+        "n": "Wings·Volition",
         "c": 5,
         "t": "Mod"
       }
@@ -2731,7 +2731,7 @@
   },
   {
     "id": 151731,
-    "n": "Covenanter's Blaze·Standfast",
+    "n": "Blaze·Standfast",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2743,7 +2743,7 @@
     "x": [
       {
         "id": 41731,
-        "n": "Covenanter's Blaze·Standfast",
+        "n": "Blaze·Standfast",
         "c": 5,
         "t": "Mod"
       }
@@ -2752,7 +2752,7 @@
   },
   {
     "id": 151732,
-    "n": "Covenanter's Blaze·Eternity",
+    "n": "Blaze·Eternity",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2764,7 +2764,7 @@
     "x": [
       {
         "id": 41732,
-        "n": "Covenanter's Blaze·Eternity",
+        "n": "Blaze·Eternity",
         "c": 5,
         "t": "Mod"
       }
@@ -2773,7 +2773,7 @@
   },
   {
     "id": 151733,
-    "n": "Covenanter's Blaze·Inspo",
+    "n": "Blaze·Inspo",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2785,7 +2785,7 @@
     "x": [
       {
         "id": 41733,
-        "n": "Covenanter's Blaze·Inspo",
+        "n": "Blaze·Inspo",
         "c": 5,
         "t": "Mod"
       }
@@ -2794,7 +2794,7 @@
   },
   {
     "id": 151734,
-    "n": "Covenanter's Nirvana·Spectrum",
+    "n": "Nirvana·Spectrum",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2806,7 +2806,7 @@
     "x": [
       {
         "id": 41734,
-        "n": "Covenanter's Nirvana·Spectrum",
+        "n": "Nirvana·Spectrum",
         "c": 5,
         "t": "Mod"
       }
@@ -2815,7 +2815,7 @@
   },
   {
     "id": 151741,
-    "n": "Covenanter's Blaze·Nirvana",
+    "n": "Blaze·Nirvana",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2827,7 +2827,7 @@
     "x": [
       {
         "id": 41741,
-        "n": "Covenanter's Blaze·Nirvana",
+        "n": "Blaze·Nirvana",
         "c": 5,
         "t": "Mod"
       }
@@ -2836,7 +2836,7 @@
   },
   {
     "id": 151742,
-    "n": "Covenanter's Blaze·Morale",
+    "n": "Blaze·Morale",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2848,7 +2848,7 @@
     "x": [
       {
         "id": 41742,
-        "n": "Covenanter's Blaze·Morale",
+        "n": "Blaze·Morale",
         "c": 5,
         "t": "Mod"
       }
@@ -2857,7 +2857,7 @@
   },
   {
     "id": 151743,
-    "n": "Covenanter's Blaze·Volition",
+    "n": "Blaze·Volition",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2869,7 +2869,7 @@
     "x": [
       {
         "id": 41743,
-        "n": "Covenanter's Blaze·Volition",
+        "n": "Blaze·Volition",
         "c": 5,
         "t": "Mod"
       }
@@ -2878,7 +2878,7 @@
   },
   {
     "id": 151744,
-    "n": "Covenanter's Standfast·Eternity",
+    "n": "Standfast·Eternity",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2890,7 +2890,7 @@
     "x": [
       {
         "id": 41744,
-        "n": "Covenanter's Standfast·Eternity",
+        "n": "Standfast·Eternity",
         "c": 5,
         "t": "Mod"
       }
@@ -2899,7 +2899,7 @@
   },
   {
     "id": 151745,
-    "n": "Feathered Serpent's{空格}Spectrum",
+    "n": "Spectrum",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -2911,7 +2911,7 @@
     "x": [
       {
         "id": 41745,
-        "n": "Feathered Serpent's{空格}Spectrum",
+        "n": "Spectrum",
         "c": 5,
         "t": "Mod"
       },
@@ -2926,7 +2926,7 @@
   },
   {
     "id": 151746,
-    "n": "Feathered Serpent's{空格}Volition",
+    "n": "Volition",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -2938,7 +2938,7 @@
     "x": [
       {
         "id": 41746,
-        "n": "Feathered Serpent's{空格}Volition",
+        "n": "Volition",
         "c": 5,
         "t": "Mod"
       },
@@ -2953,7 +2953,7 @@
   },
   {
     "id": 151751,
-    "n": "Covenanter's Blaze·Standfast",
+    "n": "Blaze·Standfast",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2965,7 +2965,7 @@
     "x": [
       {
         "id": 41751,
-        "n": "Covenanter's Blaze·Standfast",
+        "n": "Blaze·Standfast",
         "c": 5,
         "t": "Mod"
       }
@@ -2974,7 +2974,7 @@
   },
   {
     "id": 151752,
-    "n": "Covenanter's Blaze·Resolve",
+    "n": "Blaze·Resolve",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2986,7 +2986,7 @@
     "x": [
       {
         "id": 41752,
-        "n": "Covenanter's Blaze·Resolve",
+        "n": "Blaze·Resolve",
         "c": 5,
         "t": "Mod"
       }
@@ -2995,7 +2995,7 @@
   },
   {
     "id": 151753,
-    "n": "Covenanter's Blaze·Volition",
+    "n": "Blaze·Volition",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3007,7 +3007,7 @@
     "x": [
       {
         "id": 41753,
-        "n": "Covenanter's Blaze·Volition",
+        "n": "Blaze·Volition",
         "c": 5,
         "t": "Mod"
       }
@@ -3016,7 +3016,7 @@
   },
   {
     "id": 151754,
-    "n": "Covenanter's Wings·Eternity",
+    "n": "Wings·Eternity",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3028,7 +3028,7 @@
     "x": [
       {
         "id": 41754,
-        "n": "Covenanter's Wings·Eternity",
+        "n": "Wings·Eternity",
         "c": 5,
         "t": "Mod"
       }
@@ -3037,7 +3037,7 @@
   },
   {
     "id": 151755,
-    "n": "Feathered Serpent's{空格}Resolve",
+    "n": "Resolve",
     "r": 5,
     "v": "1.1",
     "t": "Mod",
@@ -3049,7 +3049,7 @@
     "x": [
       {
         "id": 41755,
-        "n": "Feathered Serpent's{空格}Resolve",
+        "n": "Resolve",
         "c": 5,
         "t": "Mod"
       },
@@ -3064,7 +3064,7 @@
   },
   {
     "id": 151756,
-    "n": "Feathered Serpent's{空格}Eternity",
+    "n": "Eternity",
     "r": 5,
     "v": "1.1",
     "t": "Mod",
@@ -3076,7 +3076,7 @@
     "x": [
       {
         "id": 41756,
-        "n": "Feathered Serpent's{空格}Eternity",
+        "n": "Eternity",
         "c": 5,
         "t": "Mod"
       },
@@ -3091,7 +3091,7 @@
   },
   {
     "id": 151761,
-    "n": "Covenanter's Scorch",
+    "n": "Scorch",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3103,7 +3103,7 @@
     "x": [
       {
         "id": 41761,
-        "n": "Covenanter's Scorch",
+        "n": "Scorch",
         "c": 5,
         "t": "Mod"
       }
@@ -3112,7 +3112,7 @@
   },
   {
     "id": 151762,
-    "n": "Covenanter's Blaze·Resolve",
+    "n": "Blaze·Resolve",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3124,7 +3124,7 @@
     "x": [
       {
         "id": 41762,
-        "n": "Covenanter's Blaze·Resolve",
+        "n": "Blaze·Resolve",
         "c": 5,
         "t": "Mod"
       }
@@ -3133,7 +3133,7 @@
   },
   {
     "id": 151763,
-    "n": "Covenanter's Blaze·Eternity",
+    "n": "Blaze·Eternity",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3145,7 +3145,7 @@
     "x": [
       {
         "id": 41763,
-        "n": "Covenanter's Blaze·Eternity",
+        "n": "Blaze·Eternity",
         "c": 5,
         "t": "Mod"
       }
@@ -3154,7 +3154,7 @@
   },
   {
     "id": 151764,
-    "n": "Covenanter's Nirvana·Volition",
+    "n": "Nirvana·Volition",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3166,7 +3166,7 @@
     "x": [
       {
         "id": 41764,
-        "n": "Covenanter's Nirvana·Volition",
+        "n": "Nirvana·Volition",
         "c": 5,
         "t": "Mod"
       }
@@ -3175,7 +3175,7 @@
   },
   {
     "id": 151801,
-    "n": "Jormungand's Gleaming Sword",
+    "n": "Gleaming Sword",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3187,7 +3187,7 @@
     "x": [
       {
         "id": 41801,
-        "n": "Jormungand's Gleaming Sword",
+        "n": "Gleaming Sword",
         "c": 5,
         "t": "Mod"
       }
@@ -3196,7 +3196,7 @@
   },
   {
     "id": 151802,
-    "n": "Jormungand's Gleaming Polearm",
+    "n": "Gleaming Polearm",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3208,7 +3208,7 @@
     "x": [
       {
         "id": 41802,
-        "n": "Jormungand's Gleaming Polearm",
+        "n": "Gleaming Polearm",
         "c": 5,
         "t": "Mod"
       }
@@ -3217,7 +3217,7 @@
   },
   {
     "id": 151803,
-    "n": "Jormungand's Gleaming Greatsword",
+    "n": "Gleaming Greatsword",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3229,7 +3229,7 @@
     "x": [
       {
         "id": 41803,
-        "n": "Jormungand's Gleaming Greatsword",
+        "n": "Gleaming Greatsword",
         "c": 5,
         "t": "Mod"
       }
@@ -3238,7 +3238,7 @@
   },
   {
     "id": 151804,
-    "n": "Jormungand's Gleaming Dual Blades",
+    "n": "Gleaming Dual Blades",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3250,7 +3250,7 @@
     "x": [
       {
         "id": 41804,
-        "n": "Jormungand's Gleaming Dual Blades",
+        "n": "Gleaming Dual Blades",
         "c": 5,
         "t": "Mod"
       }
@@ -3259,7 +3259,7 @@
   },
   {
     "id": 151805,
-    "n": "Jormungand's Gleaming Whipblade",
+    "n": "Gleaming Whipblade",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3271,7 +3271,7 @@
     "x": [
       {
         "id": 41805,
-        "n": "Jormungand's Gleaming Whipblade",
+        "n": "Gleaming Whipblade",
         "c": 5,
         "t": "Mod"
       }
@@ -3280,7 +3280,7 @@
   },
   {
     "id": 151806,
-    "n": "Jormungand's Gleaming Katana",
+    "n": "Gleaming Katana",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3292,7 +3292,7 @@
     "x": [
       {
         "id": 41806,
-        "n": "Jormungand's Gleaming Katana",
+        "n": "Gleaming Katana",
         "c": 5,
         "t": "Mod"
       }
@@ -3301,7 +3301,7 @@
   },
   {
     "id": 151807,
-    "n": "Jormungand's Gleaming Pistol",
+    "n": "Gleaming Pistol",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3313,7 +3313,7 @@
     "x": [
       {
         "id": 41807,
-        "n": "Jormungand's Gleaming Pistol",
+        "n": "Gleaming Pistol",
         "c": 5,
         "t": "Mod"
       }
@@ -3322,7 +3322,7 @@
   },
   {
     "id": 151808,
-    "n": "Jormungand's Gleaming Dual Pistols",
+    "n": "Gleaming Dual Pistols",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3334,7 +3334,7 @@
     "x": [
       {
         "id": 41808,
-        "n": "Jormungand's Gleaming Dual Pistols",
+        "n": "Gleaming Dual Pistols",
         "c": 5,
         "t": "Mod"
       }
@@ -3343,7 +3343,7 @@
   },
   {
     "id": 151809,
-    "n": "Jormungand's Gleaming Grenade Launcher",
+    "n": "Gleaming Grenade Launcher",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3355,7 +3355,7 @@
     "x": [
       {
         "id": 41809,
-        "n": "Jormungand's Gleaming Grenade Launcher",
+        "n": "Gleaming Grenade Launcher",
         "c": 5,
         "t": "Mod"
       }
@@ -3364,7 +3364,7 @@
   },
   {
     "id": 151810,
-    "n": "Jormungand's Gleaming Shotgun",
+    "n": "Gleaming Shotgun",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3376,7 +3376,7 @@
     "x": [
       {
         "id": 41810,
-        "n": "Jormungand's Gleaming Shotgun",
+        "n": "Gleaming Shotgun",
         "c": 5,
         "t": "Mod"
       }
@@ -3385,7 +3385,7 @@
   },
   {
     "id": 151811,
-    "n": "Jormungand's Gleaming Assault Rifle",
+    "n": "Gleaming Assault Rifle",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3397,7 +3397,7 @@
     "x": [
       {
         "id": 41811,
-        "n": "Jormungand's Gleaming Assault Rifle",
+        "n": "Gleaming Assault Rifle",
         "c": 5,
         "t": "Mod"
       }
@@ -3406,7 +3406,7 @@
   },
   {
     "id": 151812,
-    "n": "Jormungand's Gleaming Bow",
+    "n": "Gleaming Bow",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3418,7 +3418,7 @@
     "x": [
       {
         "id": 41812,
-        "n": "Jormungand's Gleaming Bow",
+        "n": "Gleaming Bow",
         "c": 5,
         "t": "Mod"
       }
@@ -3427,7 +3427,7 @@
   },
   {
     "id": 151911,
-    "n": "Arbiter's Illusionary Sacrifice",
+    "n": "Illusionary Sacrifice",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3439,7 +3439,7 @@
     "x": [
       {
         "id": 41911,
-        "n": "Arbiter's Illusionary Sacrifice",
+        "n": "Illusionary Sacrifice",
         "c": 5,
         "t": "Mod"
       }
@@ -3448,7 +3448,7 @@
   },
   {
     "id": 151921,
-    "n": "Bahamut's Misty Veil",
+    "n": "Misty Veil",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3460,7 +3460,7 @@
     "x": [
       {
         "id": 41921,
-        "n": "Bahamut's Misty Veil",
+        "n": "Misty Veil",
         "c": 5,
         "t": "Mod"
       }
@@ -3469,7 +3469,7 @@
   },
   {
     "id": 151922,
-    "n": "Bahamut's Frosty Torrent",
+    "n": "Frosty Torrent",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3481,7 +3481,7 @@
     "x": [
       {
         "id": 41922,
-        "n": "Bahamut's Frosty Torrent",
+        "n": "Frosty Torrent",
         "c": 5,
         "t": "Mod"
       }
@@ -3490,7 +3490,7 @@
   },
   {
     "id": 151931,
-    "n": "Ifrit's Devouring Wildfire",
+    "n": "Devouring Wildfire",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3502,7 +3502,7 @@
     "x": [
       {
         "id": 41931,
-        "n": "Ifrit's Devouring Wildfire",
+        "n": "Devouring Wildfire",
         "c": 5,
         "t": "Mod"
       }
@@ -3511,7 +3511,7 @@
   },
   {
     "id": 151941,
-    "n": "Summanus's Ravaging Thunder",
+    "n": "Ravaging Thunder",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3523,7 +3523,7 @@
     "x": [
       {
         "id": 41941,
-        "n": "Summanus's Ravaging Thunder",
+        "n": "Ravaging Thunder",
         "c": 5,
         "t": "Mod"
       }
@@ -3532,7 +3532,7 @@
   },
   {
     "id": 151951,
-    "n": "Hastur's Whispering Zephyr",
+    "n": "Whispering Zephyr",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3544,7 +3544,7 @@
     "x": [
       {
         "id": 41951,
-        "n": "Hastur's Whispering Zephyr",
+        "n": "Whispering Zephyr",
         "c": 5,
         "t": "Mod"
       }
@@ -3553,7 +3553,7 @@
   },
   {
     "id": 151952,
-    "n": "Hastur's Turbulent Cyclone",
+    "n": "Turbulent Cyclone",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3565,7 +3565,7 @@
     "x": [
       {
         "id": 41952,
-        "n": "Hastur's Turbulent Cyclone",
+        "n": "Turbulent Cyclone",
         "c": 5,
         "t": "Mod"
       }
@@ -3574,7 +3574,7 @@
   },
   {
     "id": 151961,
-    "n": "Helios's Prismatic Neon",
+    "n": "Prismatic Neon",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3586,7 +3586,7 @@
     "x": [
       {
         "id": 41961,
-        "n": "Helios's Prismatic Neon",
+        "n": "Prismatic Neon",
         "c": 5,
         "t": "Mod"
       }
@@ -3595,7 +3595,7 @@
   },
   {
     "id": 151962,
-    "n": "Helios's Gleam & Glimmer",
+    "n": "Gleam & Glimmer",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3607,7 +3607,7 @@
     "x": [
       {
         "id": 41962,
-        "n": "Helios's Gleam & Glimmer",
+        "n": "Gleam & Glimmer",
         "c": 5,
         "t": "Mod"
       }
@@ -3616,7 +3616,7 @@
   },
   {
     "id": 152001,
-    "n": "Cerberus's Impetus",
+    "n": "Impetus",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3628,7 +3628,7 @@
     "x": [
       {
         "id": 42001,
-        "n": "Cerberus's Impetus",
+        "n": "Impetus",
         "c": 3,
         "t": "Mod"
       }
@@ -3637,7 +3637,7 @@
   },
   {
     "id": 152004,
-    "n": "Cerberus's Celerity",
+    "n": "Celerity",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3649,7 +3649,7 @@
     "x": [
       {
         "id": 42311,
-        "n": "Fenrir's Brutality",
+        "n": "Brutality",
         "c": 3,
         "t": "Mod"
       }
@@ -3658,7 +3658,7 @@
   },
   {
     "id": 152005,
-    "n": "Cerberus's Threshold",
+    "n": "Threshold",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3670,7 +3670,7 @@
     "x": [
       {
         "id": 42322,
-        "n": "Fenrir's Patrol",
+        "n": "Patrol",
         "c": 3,
         "t": "Mod"
       }
@@ -3679,7 +3679,7 @@
   },
   {
     "id": 152007,
-    "n": "Cerberus's Impetus·Focus",
+    "n": "Impetus·Focus",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3691,13 +3691,13 @@
     "x": [
       {
         "id": 42001,
-        "n": "Cerberus's Impetus",
+        "n": "Impetus",
         "c": 2,
         "t": "Mod"
       },
       {
         "id": 42002,
-        "n": "Cerberus's Focus",
+        "n": "Focus",
         "c": 1,
         "t": "Mod"
       }
@@ -3706,7 +3706,7 @@
   },
   {
     "id": 152008,
-    "n": "Cerberus's Rage·Trammel",
+    "n": "Rage·Trammel",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3718,13 +3718,13 @@
     "x": [
       {
         "id": 42003,
-        "n": "Cerberus's Rage",
+        "n": "Rage",
         "c": 3,
         "t": "Mod"
       },
       {
         "id": 42006,
-        "n": "Cerberus's Trammel",
+        "n": "Trammel",
         "c": 1,
         "t": "Mod"
       }
@@ -3733,7 +3733,7 @@
   },
   {
     "id": 152101,
-    "n": "Cerberus's Edge",
+    "n": "Edge",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3745,13 +3745,13 @@
     "x": [
       {
         "id": 42001,
-        "n": "Cerberus's Impetus",
+        "n": "Impetus",
         "c": 3,
         "t": "Mod"
       },
       {
         "id": 32101,
-        "n": "Cerberus's Edge",
+        "n": "Edge",
         "c": 5,
         "t": "Mod"
       }
@@ -3760,7 +3760,7 @@
   },
   {
     "id": 152102,
-    "n": "Cerberus's Penetration",
+    "n": "Penetration",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3772,13 +3772,13 @@
     "x": [
       {
         "id": 42001,
-        "n": "Cerberus's Impetus",
+        "n": "Impetus",
         "c": 3,
         "t": "Mod"
       },
       {
         "id": 32102,
-        "n": "Cerberus's Penetration",
+        "n": "Penetration",
         "c": 5,
         "t": "Mod"
       }
@@ -3787,7 +3787,7 @@
   },
   {
     "id": 152103,
-    "n": "Cerberus's Crusher",
+    "n": "Crusher",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3799,13 +3799,13 @@
     "x": [
       {
         "id": 42001,
-        "n": "Cerberus's Impetus",
+        "n": "Impetus",
         "c": 3,
         "t": "Mod"
       },
       {
         "id": 32103,
-        "n": "Cerberus's Crusher",
+        "n": "Crusher",
         "c": 5,
         "t": "Mod"
       }
@@ -3814,7 +3814,7 @@
   },
   {
     "id": 153001,
-    "n": "Lilith's Impetus",
+    "n": "Impetus",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3826,7 +3826,7 @@
     "x": [
       {
         "id": 43001,
-        "n": "Lilith's Impetus",
+        "n": "Impetus",
         "c": 3,
         "t": "Mod"
       }
@@ -3835,7 +3835,7 @@
   },
   {
     "id": 153004,
-    "n": "Lilith's Celerity",
+    "n": "Celerity",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3847,7 +3847,7 @@
     "x": [
       {
         "id": 43341,
-        "n": "Fafnir's Frugality",
+        "n": "Frugality",
         "c": 3,
         "t": "Mod"
       }
@@ -3856,7 +3856,7 @@
   },
   {
     "id": 153005,
-    "n": "Lilith's Foldover",
+    "n": "Foldover",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3868,13 +3868,13 @@
     "x": [
       {
         "id": 43301,
-        "n": "Fafnir's Loadout",
+        "n": "Loadout",
         "c": 3,
         "t": "Mod"
       },
       {
         "id": 33005,
-        "n": "Lilith's Foldover",
+        "n": "Foldover",
         "c": 5,
         "t": "Mod"
       }
@@ -3883,7 +3883,7 @@
   },
   {
     "id": 153007,
-    "n": "Lilith's Impetus·Focus",
+    "n": "Impetus·Focus",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3895,13 +3895,13 @@
     "x": [
       {
         "id": 43001,
-        "n": "Lilith's Impetus",
+        "n": "Impetus",
         "c": 2,
         "t": "Mod"
       },
       {
         "id": 43002,
-        "n": "Lilith's Focus",
+        "n": "Focus",
         "c": 1,
         "t": "Mod"
       }
@@ -3910,7 +3910,7 @@
   },
   {
     "id": 153008,
-    "n": "Lilith's Rage·Trammel",
+    "n": "Rage·Trammel",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3922,13 +3922,13 @@
     "x": [
       {
         "id": 43003,
-        "n": "Lilith's Rage",
+        "n": "Rage",
         "c": 3,
         "t": "Mod"
       },
       {
         "id": 43006,
-        "n": "Lilith's Trammel",
+        "n": "Trammel",
         "c": 1,
         "t": "Mod"
       }
@@ -3937,7 +3937,7 @@
   },
   {
     "id": 153009,
-    "n": "Lilith's Focus·Coercion",
+    "n": "Focus·Coercion",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3949,13 +3949,13 @@
     "x": [
       {
         "id": 43601,
-        "n": "Lilith's Focus·Mass",
+        "n": "Focus·Mass",
         "c": 3,
         "t": "Mod"
       },
       {
         "id": 33411,
-        "n": "Fafnir's Coercion",
+        "n": "Coercion",
         "c": 1,
         "t": "Mod"
       }
@@ -3964,7 +3964,7 @@
   },
   {
     "id": 153010,
-    "n": "Lilith's Rage·Converge",
+    "n": "Rage·Converge",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3976,13 +3976,13 @@
     "x": [
       {
         "id": 43008,
-        "n": "Lilith's Rage·Trammel",
+        "n": "Rage·Trammel",
         "c": 3,
         "t": "Mod"
       },
       {
         "id": 43402,
-        "n": "Fafnir's Furious Beam",
+        "n": "Furious Beam",
         "c": 1,
         "t": "Mod"
       }
@@ -3991,7 +3991,7 @@
   },
   {
     "id": 153011,
-    "n": "Lilith's Foldover·Dexterity",
+    "n": "Foldover·Dexterity",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4003,13 +4003,13 @@
     "x": [
       {
         "id": 43604,
-        "n": "Lilith's Rain of Quivers",
+        "n": "Rain of Quivers",
         "c": 3,
         "t": "Mod"
       },
       {
         "id": 33203,
-        "n": "Fafnir's Dexterity",
+        "n": "Dexterity",
         "c": 1,
         "t": "Mod"
       }
@@ -4018,7 +4018,7 @@
   },
   {
     "id": 153012,
-    "n": "Lilith's Celerity·Quiver",
+    "n": "Celerity·Quiver",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4030,13 +4030,13 @@
     "x": [
       {
         "id": 43602,
-        "n": "Lilith's Celerity·Cunning",
+        "n": "Celerity·Cunning",
         "c": 3,
         "t": "Mod"
       },
       {
         "id": 33202,
-        "n": "Fafnir's Arrow",
+        "n": "Arrow",
         "c": 1,
         "t": "Mod"
       }
@@ -4045,7 +4045,7 @@
   },
   {
     "id": 153013,
-    "n": "Lilith's Arrow·Abundance",
+    "n": "Arrow·Abundance",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4057,13 +4057,13 @@
     "x": [
       {
         "id": 43603,
-        "n": "Lilith's Quiver·Loadout",
+        "n": "Quiver·Loadout",
         "c": 3,
         "t": "Mod"
       },
       {
         "id": 43404,
-        "n": "Fafnir's Speed Boost",
+        "n": "Speed Boost",
         "c": 1,
         "t": "Mod"
       }
@@ -4072,7 +4072,7 @@
   },
   {
     "id": 153101,
-    "n": "Lilith's Edge",
+    "n": "Edge",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4084,13 +4084,13 @@
     "x": [
       {
         "id": 43001,
-        "n": "Lilith's Impetus",
+        "n": "Impetus",
         "c": 3,
         "t": "Mod"
       },
       {
         "id": 33101,
-        "n": "Lilith's Edge",
+        "n": "Edge",
         "c": 5,
         "t": "Mod"
       }
@@ -4099,7 +4099,7 @@
   },
   {
     "id": 153102,
-    "n": "Lilith's Penetration",
+    "n": "Penetration",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4111,13 +4111,13 @@
     "x": [
       {
         "id": 43001,
-        "n": "Lilith's Impetus",
+        "n": "Impetus",
         "c": 3,
         "t": "Mod"
       },
       {
         "id": 33102,
-        "n": "Lilith's Penetration",
+        "n": "Penetration",
         "c": 5,
         "t": "Mod"
       }
@@ -4126,7 +4126,7 @@
   },
   {
     "id": 153103,
-    "n": "Lilith's Crusher",
+    "n": "Crusher",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4138,13 +4138,13 @@
     "x": [
       {
         "id": 43001,
-        "n": "Lilith's Impetus",
+        "n": "Impetus",
         "c": 3,
         "t": "Mod"
       },
       {
         "id": 33103,
-        "n": "Lilith's Crusher",
+        "n": "Crusher",
         "c": 5,
         "t": "Mod"
       }
@@ -4153,7 +4153,7 @@
   },
   {
     "id": 154001,
-    "n": "Eldritch Cerberus's Impetus",
+    "n": "Impetus",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4165,7 +4165,7 @@
     "x": [
       {
         "id": 44001,
-        "n": "Eldritch Cerberus's Impetus",
+        "n": "Impetus",
         "c": 3,
         "t": "Mod"
       }
@@ -4174,7 +4174,7 @@
   },
   {
     "id": 154002,
-    "n": "Eldritch Cerberus's Focus",
+    "n": "Focus",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4186,7 +4186,7 @@
     "x": [
       {
         "id": 44002,
-        "n": "Eldritch Cerberus's Focus",
+        "n": "Focus",
         "c": 3,
         "t": "Mod"
       }
@@ -4195,7 +4195,7 @@
   },
   {
     "id": 154003,
-    "n": "Eldritch Cerberus's Rage",
+    "n": "Rage",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4207,7 +4207,7 @@
     "x": [
       {
         "id": 44003,
-        "n": "Eldritch Cerberus's Rage",
+        "n": "Rage",
         "c": 3,
         "t": "Mod"
       }
@@ -4216,7 +4216,7 @@
   },
   {
     "id": 154004,
-    "n": "Eldritch Cerberus's Celerity",
+    "n": "Celerity",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4228,7 +4228,7 @@
     "x": [
       {
         "id": 44004,
-        "n": "Eldritch Cerberus's Celerity",
+        "n": "Celerity",
         "c": 3,
         "t": "Mod"
       }
@@ -4237,7 +4237,7 @@
   },
   {
     "id": 154005,
-    "n": "Eldritch Cerberus's Threshold",
+    "n": "Threshold",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4249,7 +4249,7 @@
     "x": [
       {
         "id": 44005,
-        "n": "Eldritch Cerberus's Threshold",
+        "n": "Threshold",
         "c": 3,
         "t": "Mod"
       }
@@ -4258,7 +4258,7 @@
   },
   {
     "id": 154006,
-    "n": "Eldritch Cerberus's Trammel",
+    "n": "Trammel",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4270,7 +4270,7 @@
     "x": [
       {
         "id": 44006,
-        "n": "Eldritch Cerberus's Trammel",
+        "n": "Trammel",
         "c": 3,
         "t": "Mod"
       }
@@ -4279,7 +4279,7 @@
   },
   {
     "id": 154009,
-    "n": "Eldritch Cerberus's Trammel·Impetus",
+    "n": "Trammel·Impetus",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -4291,13 +4291,13 @@
     "x": [
       {
         "id": 44006,
-        "n": "Eldritch Cerberus's Trammel",
+        "n": "Trammel",
         "c": 2,
         "t": "Mod"
       },
       {
         "id": 44001,
-        "n": "Eldritch Cerberus's Impetus",
+        "n": "Impetus",
         "c": 1,
         "t": "Mod"
       }
@@ -4306,7 +4306,7 @@
   },
   {
     "id": 154101,
-    "n": "Eldritch Cerberus's Edge",
+    "n": "Edge",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4318,7 +4318,7 @@
     "x": [
       {
         "id": 44101,
-        "n": "Eldritch Cerberus's Edge",
+        "n": "Edge",
         "c": 3,
         "t": "Mod"
       }
@@ -4327,7 +4327,7 @@
   },
   {
     "id": 154102,
-    "n": "Eldritch Cerberus's Penetration",
+    "n": "Penetration",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4339,7 +4339,7 @@
     "x": [
       {
         "id": 44102,
-        "n": "Eldritch Cerberus's Penetration",
+        "n": "Penetration",
         "c": 3,
         "t": "Mod"
       }
@@ -4348,7 +4348,7 @@
   },
   {
     "id": 154103,
-    "n": "Eldritch Cerberus's Crusher",
+    "n": "Crusher",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4360,7 +4360,7 @@
     "x": [
       {
         "id": 44103,
-        "n": "Eldritch Cerberus's Crusher",
+        "n": "Crusher",
         "c": 3,
         "t": "Mod"
       }
@@ -4369,7 +4369,7 @@
   },
   {
     "id": 154201,
-    "n": "Eldritch Cerberus's Impact·Threshold",
+    "n": "Impact·Threshold",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -4381,13 +4381,13 @@
     "x": [
       {
         "id": 44005,
-        "n": "Eldritch Cerberus's Threshold",
+        "n": "Threshold",
         "c": 2,
         "t": "Mod"
       },
       {
         "id": 44001,
-        "n": "Eldritch Cerberus's Impetus",
+        "n": "Impetus",
         "c": 1,
         "t": "Mod"
       }
@@ -4396,7 +4396,7 @@
   },
   {
     "id": 154202,
-    "n": "Eldritch Cerberus's Blitz·Flash Strike",
+    "n": "Blitz·Flash Strike",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -4408,13 +4408,13 @@
     "x": [
       {
         "id": 44101,
-        "n": "Eldritch Cerberus's Edge",
+        "n": "Edge",
         "c": 2,
         "t": "Mod"
       },
       {
         "id": 44004,
-        "n": "Eldritch Cerberus's Celerity",
+        "n": "Celerity",
         "c": 1,
         "t": "Mod"
       }
@@ -4423,7 +4423,7 @@
   },
   {
     "id": 154203,
-    "n": "Eldritch Cerberus's Dropshot·Swift Dropshot",
+    "n": "Dropshot·Swift Dropshot",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -4435,13 +4435,13 @@
     "x": [
       {
         "id": 44102,
-        "n": "Eldritch Cerberus's Penetration",
+        "n": "Penetration",
         "c": 2,
         "t": "Mod"
       },
       {
         "id": 44004,
-        "n": "Eldritch Cerberus's Celerity",
+        "n": "Celerity",
         "c": 1,
         "t": "Mod"
       }
@@ -4450,7 +4450,7 @@
   },
   {
     "id": 154204,
-    "n": "Eldritch Cerberus's Respite",
+    "n": "Respite",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -4462,13 +4462,13 @@
     "x": [
       {
         "id": 44103,
-        "n": "Eldritch Cerberus's Crusher",
+        "n": "Crusher",
         "c": 2,
         "t": "Mod"
       },
       {
         "id": 44002,
-        "n": "Eldritch Cerberus's Focus",
+        "n": "Focus",
         "c": 1,
         "t": "Mod"
       }
@@ -4477,7 +4477,7 @@
   },
   {
     "id": 154205,
-    "n": "Eldritch Cerberus's Fervor",
+    "n": "Fervor",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -4489,13 +4489,13 @@
     "x": [
       {
         "id": 44003,
-        "n": "Eldritch Cerberus's Rage",
+        "n": "Rage",
         "c": 2,
         "t": "Mod"
       },
       {
         "id": 44002,
-        "n": "Eldritch Cerberus's Focus",
+        "n": "Focus",
         "c": 1,
         "t": "Mod"
       }
@@ -4504,7 +4504,7 @@
   },
   {
     "id": 155001,
-    "n": "Eldritch Lilith's Impetus",
+    "n": "Impetus",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4516,7 +4516,7 @@
     "x": [
       {
         "id": 45001,
-        "n": "Eldritch Lilith's Impetus",
+        "n": "Impetus",
         "c": 3,
         "t": "Mod"
       }
@@ -4525,7 +4525,7 @@
   },
   {
     "id": 155002,
-    "n": "Eldritch Lilith's Focus",
+    "n": "Focus",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4537,7 +4537,7 @@
     "x": [
       {
         "id": 45002,
-        "n": "Eldritch Lilith's Focus",
+        "n": "Focus",
         "c": 3,
         "t": "Mod"
       }
@@ -4546,7 +4546,7 @@
   },
   {
     "id": 155003,
-    "n": "Eldritch Lilith's Rage",
+    "n": "Rage",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4558,7 +4558,7 @@
     "x": [
       {
         "id": 45003,
-        "n": "Eldritch Lilith's Rage",
+        "n": "Rage",
         "c": 3,
         "t": "Mod"
       }
@@ -4567,7 +4567,7 @@
   },
   {
     "id": 155004,
-    "n": "Eldritch Lilith's Celerity",
+    "n": "Celerity",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4579,7 +4579,7 @@
     "x": [
       {
         "id": 45004,
-        "n": "Eldritch Lilith's Celerity",
+        "n": "Celerity",
         "c": 3,
         "t": "Mod"
       }
@@ -4588,7 +4588,7 @@
   },
   {
     "id": 155005,
-    "n": "Eldritch Lilith's Foldover",
+    "n": "Foldover",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4600,7 +4600,7 @@
     "x": [
       {
         "id": 45005,
-        "n": "Eldritch Lilith's Foldover",
+        "n": "Foldover",
         "c": 3,
         "t": "Mod"
       }
@@ -4609,7 +4609,7 @@
   },
   {
     "id": 155006,
-    "n": "Eldritch Lilith's Trammel",
+    "n": "Trammel",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4621,7 +4621,7 @@
     "x": [
       {
         "id": 45006,
-        "n": "Eldritch Lilith's Trammel",
+        "n": "Trammel",
         "c": 3,
         "t": "Mod"
       }
@@ -4630,7 +4630,7 @@
   },
   {
     "id": 155101,
-    "n": "Eldritch Lilith's Edge",
+    "n": "Edge",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4642,7 +4642,7 @@
     "x": [
       {
         "id": 45101,
-        "n": "Eldritch Lilith's Edge",
+        "n": "Edge",
         "c": 3,
         "t": "Mod"
       }
@@ -4651,7 +4651,7 @@
   },
   {
     "id": 155102,
-    "n": "Eldritch Lilith's Penetration",
+    "n": "Penetration",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4663,7 +4663,7 @@
     "x": [
       {
         "id": 45102,
-        "n": "Eldritch Lilith's Penetration",
+        "n": "Penetration",
         "c": 3,
         "t": "Mod"
       }
@@ -4672,7 +4672,7 @@
   },
   {
     "id": 155103,
-    "n": "Eldritch Lilith's Crusher",
+    "n": "Crusher",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -4684,7 +4684,7 @@
     "x": [
       {
         "id": 45103,
-        "n": "Eldritch Lilith's Crusher",
+        "n": "Crusher",
         "c": 3,
         "t": "Mod"
       }
@@ -4693,7 +4693,7 @@
   },
   {
     "id": 156141,
-    "n": "Changeling's Volition",
+    "n": "Volition",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -4705,7 +4705,7 @@
     "x": [
       {
         "id": 31201,
-        "n": "Pan's Volition",
+        "n": "Volition",
         "c": 10,
         "t": "Mod"
       }
@@ -4714,7 +4714,7 @@
   },
   {
     "id": 156142,
-    "n": "Siren's Wings·Inspo·Volition",
+    "n": "Wings·Inspo·Volition",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -4726,13 +4726,13 @@
     "x": [
       {
         "id": 56141,
-        "n": "Changeling's Volition",
+        "n": "Volition",
         "c": 1,
         "t": "Mod"
       },
       {
         "id": 31301,
-        "n": "Siren's Wings·Inspo",
+        "n": "Wings·Inspo",
         "c": 10,
         "t": "Mod"
       },
@@ -4747,7 +4747,7 @@
   },
   {
     "id": 156143,
-    "n": "Changeling's Morale",
+    "n": "Morale",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -4759,7 +4759,7 @@
     "x": [
       {
         "id": 31001,
-        "n": "Phoenix's Blaze",
+        "n": "Blaze",
         "c": 10,
         "t": "Mod"
       }
@@ -4768,7 +4768,7 @@
   },
   {
     "id": 156144,
-    "n": "Siren's Wings·Inspo·Morale",
+    "n": "Wings·Inspo·Morale",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -4780,13 +4780,13 @@
     "x": [
       {
         "id": 56143,
-        "n": "Changeling's Morale",
+        "n": "Morale",
         "c": 1,
         "t": "Mod"
       },
       {
         "id": 31301,
-        "n": "Siren's Wings·Inspo",
+        "n": "Wings·Inspo",
         "c": 10,
         "t": "Mod"
       },
@@ -4801,7 +4801,7 @@
   },
   {
     "id": 156151,
-    "n": "Changeling's Volition",
+    "n": "Volition",
     "r": 5,
     "v": "1.1",
     "t": "Mod",
@@ -4813,7 +4813,7 @@
     "x": [
       {
         "id": 31202,
-        "n": "Pan's Inspo",
+        "n": "Inspo",
         "c": 10,
         "t": "Mod"
       }
@@ -4822,7 +4822,7 @@
   },
   {
     "id": 156152,
-    "n": "Siren's Wings·Inspo·Volition",
+    "n": "Wings·Inspo·Volition",
     "r": 5,
     "v": "1.1",
     "t": "Mod",
@@ -4834,13 +4834,13 @@
     "x": [
       {
         "id": 56151,
-        "n": "Changeling's Volition",
+        "n": "Volition",
         "c": 1,
         "t": "Mod"
       },
       {
         "id": 31301,
-        "n": "Siren's Wings·Inspo",
+        "n": "Wings·Inspo",
         "c": 10,
         "t": "Mod"
       },
@@ -4855,7 +4855,7 @@
   },
   {
     "id": 156153,
-    "n": "Changeling's Resolve",
+    "n": "Resolve",
     "r": 5,
     "v": "1.1",
     "t": "Mod",
@@ -4867,7 +4867,7 @@
     "x": [
       {
         "id": 31004,
-        "n": "Phoenix's Wings",
+        "n": "Wings",
         "c": 10,
         "t": "Mod"
       }
@@ -4876,7 +4876,7 @@
   },
   {
     "id": 156154,
-    "n": "Siren's Wings·Inspo·Resolve",
+    "n": "Wings·Inspo·Resolve",
     "r": 5,
     "v": "1.1",
     "t": "Mod",
@@ -4888,13 +4888,13 @@
     "x": [
       {
         "id": 56153,
-        "n": "Changeling's Resolve",
+        "n": "Resolve",
         "c": 1,
         "t": "Mod"
       },
       {
         "id": 31301,
-        "n": "Siren's Wings·Inspo",
+        "n": "Wings·Inspo",
         "c": 10,
         "t": "Mod"
       },
@@ -9337,7 +9337,7 @@
   },
   {
     "id": 1202003,
-    "n": "Fenrir's Commanding Thrust",
+    "n": "Commanding Thrust",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -9349,13 +9349,13 @@
     "x": [
       {
         "id": 102003,
-        "n": "Fenrir's Commanding Thrust",
+        "n": "Commanding Thrust",
         "c": 1,
         "t": "Mod"
       },
       {
         "id": 42312,
-        "n": "Fenrir's Fervor",
+        "n": "Fervor",
         "c": 10,
         "t": "Mod"
       }
@@ -9364,7 +9364,7 @@
   },
   {
     "id": 1203001,
-    "n": "Fenrir's Edgeless Blade",
+    "n": "Edgeless Blade",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -9376,13 +9376,13 @@
     "x": [
       {
         "id": 103001,
-        "n": "Fenrir's Edgeless Blade",
+        "n": "Edgeless Blade",
         "c": 1,
         "t": "Mod"
       },
       {
         "id": 42311,
-        "n": "Fenrir's Brutality",
+        "n": "Brutality",
         "c": 10,
         "t": "Mod"
       }
@@ -9391,7 +9391,7 @@
   },
   {
     "id": 1204001,
-    "n": "Fenrir's In Full Bloom",
+    "n": "In Full Bloom",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -9403,13 +9403,13 @@
     "x": [
       {
         "id": 104001,
-        "n": "Fenrir's In Full Bloom",
+        "n": "In Full Bloom",
         "c": 1,
         "t": "Mod"
       },
       {
         "id": 42421,
-        "n": "Fenrir's Afterimage",
+        "n": "Afterimage",
         "c": 10,
         "t": "Mod"
       }
