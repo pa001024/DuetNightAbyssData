@@ -53,6 +53,7 @@ class ResourceProcessor(BaseProcessor):
             "id": resource_id,
             "name": resource_name,
             "icon": icon,
+            "rarity": resource_data.get("Rarity", ""),
         }
 
         return processed_resource
