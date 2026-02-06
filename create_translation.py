@@ -544,6 +544,7 @@ def process_ex_fields(base_path: Path, lang_code: str):
                     "jp": "ContentJP",
                     "kr": "ContentKR",
                     "tc": "ContentTC",
+                    "fr": "ContentFR",
                 }
 
                 target_field = lang_field_map.get(lang_code, "TextMapContent")
@@ -575,6 +576,144 @@ def process_ex_fields(base_path: Path, lang_code: str):
         print(f"  已保存扩展字段: {output_file.name} ({len(ex_mapping)} 个条目)")
     else:
         print("  跳过: 没有找到扩展字段的翻译")
+
+
+def extract_root_keys_and_values(base_path: Path) -> Dict[str, str]:
+    """
+    从zh-CN文件中提取最外层的键值对
+    例如: {"暴击":"暴击率", "昂扬":"昂扬"} -> {"暴击":"暴击率", "昂扬":"昂扬"}
+
+    Args:
+        base_path: 基础路径
+
+    Returns:
+        提取的键值对字典
+    """
+    root_key_values = {}
+    cn_dir = base_path / "cn"
+
+    # 只读取translation.json文件
+    translation_file = cn_dir / "translation.json"
+
+    if translation_file.exists():
+        try:
+            with open(translation_file, "r", encoding="utf-8") as f:
+                data = json.load(f)
+
+            # 检查是否是字典类型（最外层是键值对）
+            if isinstance(data, dict):
+                # 添加所有键值对到字典
+                root_key_values.update(data)
+            print(
+                f"  成功读取文件: {translation_file.name} ({len(root_key_values)} 个键值对)"
+            )
+        except Exception as e:
+            print(f"  警告: 无法读取文件 {translation_file.name}: {e}")
+    else:
+        print(f"  警告: 文件不存在 {translation_file.name}")
+
+    return root_key_values
+
+
+def process_root_keys(base_path: Path, lang_code: str, root_key_values: Dict[str, str]):
+    """
+    处理从zh-CN文件提取的最外层键值对，从TextMap_I18n.json中获取翻译
+
+    Args:
+        base_path: 基础路径
+        lang_code: 语言代码
+        root_key_values: 提取的键值对字典
+    """
+    if not root_key_values:
+        return
+
+    print(f"\n处理最外层键值对: 语言: {lang_code}")
+
+    # 加载TextMap_I18n.json文件
+    textmap_file = Path("./out/TextMap_I18n.json")
+    if not textmap_file.exists():
+        print(f"  跳过: TextMap_I18n.json 文件不存在")
+        return
+
+    with open(textmap_file, "r", encoding="utf-8") as f:
+        textmap_data = json.load(f)
+
+    # 合并所有键到一个映射字典
+    root_mapping = {}
+
+    # 遍历所有提取的键值对
+    matched_count = 0
+    for root_key, root_value in root_key_values.items():
+        # 从TextMap_I18n.json中查找翻译
+        found = False
+        # 先尝试根据值查找翻译
+        for text_key, text_entry in textmap_data.items():
+            # 查找中文值为键值的条目
+            if text_entry.get("TextMapContent") == root_value:
+                # 根据语言代码获取对应翻译
+                lang_field_map = {
+                    "cn": "TextMapContent",
+                    "en": "ContentEN",
+                    "jp": "ContentJP",
+                    "kr": "ContentKR",
+                    "tc": "ContentTC",
+                    "fr": "ContentFR",
+                }
+
+                target_field = lang_field_map.get(lang_code, "TextMapContent")
+                target_value = text_entry.get(target_field, root_key)
+
+                if root_key != target_value:
+                    root_mapping[root_key] = target_value.replace("{空格}", " ")
+                    matched_count += 1
+                    found = True
+                    break
+
+        # 如果根据值没有找到翻译，尝试根据键查找翻译
+        if not found:
+            for text_key, text_entry in textmap_data.items():
+                # 查找中文值为键的条目
+                if text_entry.get("TextMapContent") == root_key:
+                    # 根据语言代码获取对应翻译
+                    lang_field_map = {
+                        "cn": "TextMapContent",
+                        "en": "ContentEN",
+                        "jp": "ContentJP",
+                        "kr": "ContentKR",
+                        "tc": "ContentTC",
+                        "fr": "ContentFR",
+                    }
+
+                    target_field = lang_field_map.get(lang_code, "TextMapContent")
+                    target_value = text_entry.get(target_field, root_key)
+
+                    if root_key != target_value:
+                        root_mapping[root_key] = target_value.replace("{空格}", " ")
+                        matched_count += 1
+                        found = True
+                        break
+
+    # 保存键映射到默认的translation.json文件
+    output_file = base_path / lang_code / "translation.json"
+    if root_mapping:
+        # 如果文件已存在,读取并合并
+        if output_file.exists():
+            try:
+                with open(output_file, "r", encoding="utf-8") as f:
+                    existing_data = json.load(f)
+                existing_data.update(root_mapping)
+                root_mapping = existing_data
+                print(f"  合并键值对到现有文件: 共 {len(root_mapping)} 个条目")
+            except Exception as e:
+                print(f"  警告: 无法读取现有文件,将创建新文件: {e}")
+
+        # 保存文件
+        with open(output_file, "w", encoding="utf-8") as f:
+            json.dump(root_mapping, f, ensure_ascii=False, indent=2)
+
+        print(f"  已保存键值对翻译: {output_file.name} ({len(root_mapping)} 个条目)")
+    else:
+        print("  跳过: 没有找到键值对的翻译")
 
 
 def main():
@@ -618,6 +757,10 @@ def main():
 
     print(f"找到JSON文件: {[f.name for f in json_files]}")
 
+    # 提取最外层的键值对
+    root_key_values = extract_root_keys_and_values(base_path)
+    print(f"\n提取到最外层键值对: {len(root_key_values)} 个")
+
     allow_types = ["Mod", "Weapon", "Char", "Achievement", "Monster"]
     # 对每个语言文件夹处理每个JSON文件
     for lang_dir in lang_dirs:
@@ -632,6 +775,9 @@ def main():
 
         # 处理扩展字段
         process_ex_fields(base_path, lang_code)
+
+        # 处理最外层键值对
+        process_root_keys(base_path, lang_code, root_key_values)
 
     print(f"\n{'='*60}")
     print("完成!")
