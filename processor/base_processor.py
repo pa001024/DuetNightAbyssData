@@ -111,6 +111,91 @@ class BaseProcessor:
             return content
         return ""
 
+    def get_dialogue_chain(self, first_dialogue_id, language=""):
+        """获取对话链
+
+        Args:
+            first_dialogue_id: 第一个对话ID
+            language: 语言类型
+
+        Returns:
+            list: 对话链列表
+        """
+        dialogue_chain = []
+        current_dialogue_id = str(first_dialogue_id)
+
+        while current_dialogue_id:
+            dialogue_data = self.get_dialogue_data(current_dialogue_id, language)
+            if not dialogue_data:
+                break
+
+            # 获取对话内容
+            dialogue_text = self.get_dialogue_content(current_dialogue_id, language)
+            if not dialogue_text:
+                break
+
+            dialogue_item = {"id": int(current_dialogue_id), "content": dialogue_text}
+
+            # 只在有 SpeakNpcId 字段时才添加
+            if "SpeakNpcId" in dialogue_data:
+                dialogue_item["npc"] = dialogue_data["SpeakNpcId"]
+
+            dialogue_chain.append(dialogue_item)
+
+            # 获取下一个对话ID
+            next_dialogue_id = dialogue_data.get("NextDialogue")
+            if not next_dialogue_id:
+                break
+
+            current_dialogue_id = str(next_dialogue_id)
+
+        return dialogue_chain
+
+    def _process_talk_trigger(self, talk_trigger_data, language=""):
+        """处理对话触发数据
+
+        Args:
+            talk_trigger_data: 对话触发数据
+            language: 语言类型
+
+        Returns:
+            dict: 处理后的对话触发数据
+        """
+        if not talk_trigger_data:
+            return {}
+
+        processed_trigger = {
+            "id": talk_trigger_data.get("Id", 0),
+            "type": talk_trigger_data.get("Type", ""),
+        }
+
+        # 处理对话ID
+        if "DialogueId" in talk_trigger_data:
+            dialogue_id = talk_trigger_data.get("DialogueId")
+            processed_trigger["dialogueId"] = dialogue_id
+
+            # 获取对话内容
+            dialogue_content = self.get_dialogue_content(dialogue_id, language)
+            if dialogue_content:
+                processed_trigger["content"] = dialogue_content
+
+            # 获取说话NPC ID
+            dialogue_data = self.get_dialogue_data(dialogue_id, language)
+            if dialogue_data and "SpeakNpcId" in dialogue_data:
+                processed_trigger["speakNpcId"] = dialogue_data["SpeakNpcId"]
+
+        # 处理其他字段
+        if "Condition" in talk_trigger_data:
+            processed_trigger["condition"] = talk_trigger_data.get("Condition")
+
+        if "Action" in talk_trigger_data:
+            processed_trigger["action"] = talk_trigger_data.get("Action")
+
+        if "Params" in talk_trigger_data:
+            processed_trigger["params"] = talk_trigger_data.get("Params")
+
+        return processed_trigger
+
     def get_file_type(self):
         return self.file_type
 

@@ -79,8 +79,6 @@ class QuestStoryProcessor(BaseProcessor):
         with open(output_file, "w", encoding="utf-8") as f:
             json.dump(items, f, ensure_ascii=False, indent=2, sort_keys=False)
 
-        print(f"任务故事数据已保存到: {output_file}", flush=True)
-
         return output_file
 
     def load_story_file(self, story_path):
@@ -167,46 +165,6 @@ class QuestStoryProcessor(BaseProcessor):
                     )
 
         return talk_nodes
-
-    def get_dialogue_chain(self, first_dialogue_id, language=""):
-        """获取对话链
-
-        Args:
-            first_dialogue_id: 第一个对话ID
-            language: 语言类型
-
-        Returns:
-            list: 对话链列表
-        """
-        dialogue_chain = []
-        current_dialogue_id = str(first_dialogue_id)
-
-        while current_dialogue_id:
-            dialogue_data = self.get_dialogue_data(current_dialogue_id, language)
-            if not dialogue_data:
-                break
-
-            # 获取对话内容
-            dialogue_text = self.get_dialogue_content(current_dialogue_id, language)
-            if not dialogue_text:
-                break
-
-            dialogue_item = {"id": int(current_dialogue_id), "content": dialogue_text}
-
-            # 只在有 SpeakNpcId 字段时才添加
-            if "SpeakNpcId" in dialogue_data:
-                dialogue_item["speakNpcId"] = dialogue_data["SpeakNpcId"]
-
-            dialogue_chain.append(dialogue_item)
-
-            # 获取下一个对话ID
-            next_dialogue_id = dialogue_data.get("NextDialogue")
-            if not next_dialogue_id:
-                break
-
-            current_dialogue_id = str(next_dialogue_id)
-
-        return dialogue_chain
 
     def process_quest_chain(self, quest_chain_data, stl_quest_chain_data, language=""):
         """处理单个任务链

@@ -22,9 +22,16 @@ class QuestChainProcessor(BaseProcessor):
         # 将 quest_chain_id 转换为字符串以便在字典中查找
         quest_chain_id_str = str(quest_chain_id)
         if quest_chain_id_str in self.stl_export_quest_chain_data:
-            return self.stl_export_quest_chain_data[quest_chain_id_str].get(
-                "Quests", {}
-            )
+            obj = self.stl_export_quest_chain_data[quest_chain_id_str].get("Quests", {})
+            rst = []
+            for quest_id, quest_data in obj.items():
+                item = {
+                    "id": int(quest_id),
+                    "next": quest_data.get("NextQuestId", 0),
+                }
+                rst.append(item)
+            if rst:
+                return rst
         return {}
 
     def process_item(self, quest_chain_data, language):
@@ -102,31 +109,31 @@ class QuestChainProcessor(BaseProcessor):
             "chapterName": chapter_name,
             "chapterNumber": chapter_number,
             "episode": episode,
-            # "episodeName": episode_name,
-            "ifAutoStart": quest_chain_data.get("IfAutoStart"),
-            "isDefaultTrack": quest_chain_data.get("IsDefaultTrack"),
-            "isOpenReasoning": quest_chain_data.get("IsOpenReasoning"),
-            "isShowWindow": quest_chain_data.get("IsShowWindow"),
-            # 是否是主线
-            "isMainStory": quest_chain_data.get("MainStoryType"),
-            # "mainStoryUnlockMessage": main_story_unlock_message,
-            "questChainType": quest_chain_data.get("QuestChainType"),
-            "reward": quest_chain_data.get("QuestChainReward"),
-            "questReward": quest_chain_data.get("QuestReward"),
             "desc": quest_description,
             "detail": quest_detail,
-            "showCondition": quest_chain_data.get("ShowCondition"),
-            "unlockCondition": quest_chain_data.get("UnlockCondition"),
-            # "storyPath": quest_chain_data.get("StoryPath"),
+            # "episodeName": episode_name,
+            # "ifAutoStart": quest_chain_data.get("IfAutoStart"),
+            # "isDefaultTrack": quest_chain_data.get("IsDefaultTrack"),
+            # "isOpenReasoning": quest_chain_data.get("IsOpenReasoning"),
+            # "isShowWindow": quest_chain_data.get("IsShowWindow"),
+            # 是否是主线
+            "type": quest_chain_data.get("QuestChainType"),
+            "main": quest_chain_data.get("MainStoryType"),
             "icon": quest_chain_data.get("ChapterBeginEndIconPath", "")
             .split(".")[-1]
             .replace("'", ""),
-            "loginPlayerTransform": quest_chain_data.get("LoginPlayerTransform"),
-            "lockShowSubRegionId": quest_chain_data.get("LockShowSubRegionId"),
-            "lockShowTeleportPointName": quest_chain_data.get(
-                "LockShowTeleportPointName"
-            ),
-            "questNpcId": quest_chain_data.get("QuestNpcId"),
+            # "mainStoryUnlockMessage": main_story_unlock_message,
+            "reward": quest_chain_data.get("QuestChainReward"),
+            "questReward": quest_chain_data.get("QuestReward"),
+            # "showCondition": quest_chain_data.get("ShowCondition"),
+            # "unlockCondition": quest_chain_data.get("UnlockCondition"),
+            # "storyPath": quest_chain_data.get("StoryPath"),
+            # "loginPlayerTransform": quest_chain_data.get("LoginPlayerTransform"),
+            # "lockShowSubRegionId": quest_chain_data.get("LockShowSubRegionId"),
+            # "lockShowTeleportPointName": quest_chain_data.get(
+            #     "LockShowTeleportPointName"
+            # ),
+            "npc": quest_chain_data.get("QuestNpcId"),
             # "unlockTitle": unlock_title,
             # "unlockContent": unlock_content,
             # "specialQuestDisplayName": quest_chain_data.get("SpecialQuestDisplayName"),

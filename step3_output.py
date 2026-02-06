@@ -30,6 +30,7 @@ from processor.reward_view_processor import RewardViewProcessor
 from processor.robot_equip_processor import RobotEquipProcessor
 from processor.mount_processor import MountProcessor
 from processor.title_processor import TitleProcessor
+from processor.npc_processor import NpcProcessor
 
 
 class DataLoader:
@@ -233,6 +234,7 @@ class FinalProcessor:
             "RobotEquip": RobotEquipProcessor,
             "Mount": MountProcessor,
             "Title": TitleProcessor,
+            "Npc": NpcProcessor,
             # Add other processor classes here as they are implemented
         }
 
@@ -364,6 +366,7 @@ if __name__ == "__main__":
         "RobotEquip",
         "Mount",
         "Title",
+        "Npc",
     ]
 
     # 使用命令行参数指定的文件类型，如果没有则使用默认列表
