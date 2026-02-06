@@ -17,7 +17,7 @@ class PetEntryProcessor(BaseProcessor):
         battle_pet_level = pet_entry_data.get("BattlePetLevel", 1)
         rarity = pet_entry_data.get("Rarity", 1)
 
-        icon = pet_entry_data.get("Icon", "")
+        icon = pet_entry_data.get("Icon", "").replace("T_Armory_Pet_Attr_", "")
         icon_name = self._extract_icon_name(icon)
 
         pet_entry_name = pet_entry_data.get("PetEntryName", "")
