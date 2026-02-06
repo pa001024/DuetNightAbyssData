@@ -11,10 +11,30 @@
     "主动": {
       "描述": "Deals damage equal to {%} of the main character's ATK to enemies in front within 10 m. Restores {} Sanity per second and increases Skill Speed by {%} for {}s.",
       "值": [
-        60,
-        15,
-        0.3,
-        4
+        [
+          60,
+          60,
+          60,
+          60
+        ],
+        [
+          15,
+          15,
+          15,
+          15
+        ],
+        [
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ],
+        [
+          4,
+          4,
+          4,
+          4
+        ]
       ]
     },
     "被动": {
@@ -34,9 +54,24 @@
     "主动": {
       "描述": "Fires 16 homing projectiles, each dealing damage equal to {%} of the main character's ATK to enemies hit. Increases Resolve by {%}, and for {}s the Wishen's HP percentage is treated as 1% when calculating Morale and Resolve.",
       "值": [
-        5,
-        0.3,
-        4
+        [
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ],
+        [
+          4,
+          4,
+          4,
+          4
+        ]
       ]
     },
     "被动": {
@@ -56,10 +91,30 @@
     "主动": {
       "描述": "Generates 3 rotating blades around the main character, dealing damage equal to {%} of the main character's ATK to enemies hit. Restores {} Combo Points per second and increases Charged Attack DMG by {%} for {}s.",
       "值": [
-        5,
-        40,
-        0.9,
-        4
+        [
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          40,
+          40,
+          40,
+          40
+        ],
+        [
+          0.9,
+          0.9,
+          0.9,
+          0.9
+        ],
+        [
+          4,
+          4,
+          4,
+          4
+        ]
       ]
     },
     "被动": {
@@ -79,9 +134,24 @@
     "主动": {
       "描述": "Deals damage equal to {%} of the main character's ATK to enemies within 6 m. Increases all summons' Attack Speed by {%} for {}s.",
       "值": [
-        60,
-        0.8,
-        4
+        [
+          60,
+          60,
+          60,
+          60
+        ],
+        [
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        [
+          4,
+          4,
+          4,
+          4
+        ]
       ]
     },
     "被动": {
@@ -102,15 +172,35 @@
     "主动": {
       "描述": "Deals Umbro Damage equivalent to {%} of the main character's ATK to enemies within range, with an additional random attribute-based effect for {}s.",
       "值": [
-        4.68,
-        10
+        [
+          4.68,
+          6.24,
+          7.8,
+          9.36
+        ],
+        [
+          10,
+          10,
+          10,
+          10
+        ]
       ]
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nUmbro ATK +{%}, Max HP +{%}",
       "值": [
-        0.0075,
-        0.03
+        [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ]
       ]
     }
   },
@@ -127,15 +217,35 @@
     "主动": {
       "描述": "Deals Umbro Damage equivalent to {%} of the main character's ATK to enemies within range, with an additional random attribute-based effect for {}s.",
       "值": [
-        4.68,
-        10
+        [
+          4.68,
+          6.24,
+          7.8,
+          9.36
+        ],
+        [
+          10,
+          10,
+          10,
+          10
+        ]
       ]
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nUmbro ATK +{%}, Max HP +{%}",
       "值": [
-        0.0075,
-        0.03
+        [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ]
       ]
     }
   },
@@ -152,15 +262,35 @@
     "主动": {
       "描述": "Deals Umbro Damage equivalent to {%} of the main character's ATK to enemies within range, with an additional random attribute-based effect for {}s.",
       "值": [
-        4.68,
-        10
+        [
+          4.68,
+          6.24,
+          7.8,
+          9.36
+        ],
+        [
+          10,
+          10,
+          10,
+          10
+        ]
       ]
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nUmbro ATK +{%}, Max HP +{%}",
       "值": [
-        0.0075,
-        0.03
+        [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ]
       ]
     }
   },
@@ -177,15 +307,35 @@
     "主动": {
       "描述": "Increases ATK for self and allies by {%} for {}s.",
       "值": [
-        0.075,
-        12
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        [
+          12,
+          12,
+          12,
+          12
+        ]
       ]
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nHydro ATK +{%}, Max HP +{%}",
       "值": [
-        0.0075,
-        0.03
+        [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ]
       ]
     }
   },
@@ -202,15 +352,35 @@
     "主动": {
       "描述": "Increases ATK for self and allies by {%} for {}s.",
       "值": [
-        0.075,
-        12
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        [
+          12,
+          12,
+          12,
+          12
+        ]
       ]
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nHydro ATK +{%}, Max HP +{%}",
       "值": [
-        0.0075,
-        0.03
+        [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ]
       ]
     }
   },
@@ -227,15 +397,35 @@
     "主动": {
       "描述": "Increases ATK for self and allies by {%} for {}s.",
       "值": [
-        0.075,
-        12
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        [
+          12,
+          12,
+          12,
+          12
+        ]
       ]
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nHydro ATK +{%}, Max HP +{%}",
       "值": [
-        0.0075,
-        0.03
+        [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ]
       ]
     }
   },
@@ -252,14 +442,29 @@
     "主动": {
       "描述": "Restores {} Sanity to self and allies.",
       "值": [
-        9
+        [
+          9,
+          12,
+          15,
+          18
+        ]
       ]
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nPyro ATK +{%}, Max HP +{%}",
       "值": [
-        0.0075,
-        0.03
+        [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ]
       ]
     }
   },
@@ -276,14 +481,29 @@
     "主动": {
       "描述": "Restores {} Sanity to self and allies.",
       "值": [
-        9
+        [
+          9,
+          12,
+          15,
+          18
+        ]
       ]
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nPyro ATK +{%}, Max HP +{%}",
       "值": [
-        0.0075,
-        0.03
+        [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ]
       ]
     }
   },
@@ -300,14 +520,29 @@
     "主动": {
       "描述": "Restores {} Sanity to self and allies.",
       "值": [
-        9
+        [
+          9,
+          12,
+          15,
+          18
+        ]
       ]
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nPyro ATK +{%}, Max HP +{%}",
       "值": [
-        0.0075,
-        0.03
+        [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ]
       ]
     }
   },
@@ -324,14 +559,29 @@
     "主动": {
       "描述": "Restores {} Sanity to self and allies.",
       "值": [
-        9
+        [
+          9,
+          12,
+          15,
+          18
+        ]
       ]
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nPyro ATK +{%}, Max HP +{%}",
       "值": [
-        0.0075,
-        0.03
+        [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ]
       ]
     }
   },
@@ -348,19 +598,59 @@
     "主动": {
       "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
       "值": [
-        10,
-        120,
-        0.1,
-        0.1,
-        0.075,
-        0.1
+        [
+          10,
+          10,
+          10,
+          10
+        ],
+        [
+          120,
+          160,
+          200,
+          240
+        ],
+        [
+          0.1,
+          0.12,
+          0.14,
+          0.16
+        ],
+        [
+          0.1,
+          0.12,
+          0.14,
+          0.16
+        ],
+        [
+          0.075,
+          0.09,
+          0.105,
+          0.12
+        ],
+        [
+          0.1,
+          0.12,
+          0.14,
+          0.16
+        ]
       ]
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nElectro ATK +{%}, Max HP +{%}",
       "值": [
-        0.0075,
-        0.03
+        [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ]
       ]
     }
   },
@@ -377,19 +667,59 @@
     "主动": {
       "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
       "值": [
-        10,
-        120,
-        0.1,
-        0.1,
-        0.075,
-        0.1
+        [
+          10,
+          10,
+          10,
+          10
+        ],
+        [
+          120,
+          160,
+          200,
+          240
+        ],
+        [
+          0.1,
+          0.12,
+          0.14,
+          0.16
+        ],
+        [
+          0.1,
+          0.12,
+          0.14,
+          0.16
+        ],
+        [
+          0.075,
+          0.09,
+          0.105,
+          0.12
+        ],
+        [
+          0.1,
+          0.12,
+          0.14,
+          0.16
+        ]
       ]
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nElectro ATK +{%}, Max HP +{%}",
       "值": [
-        0.0075,
-        0.03
+        [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ]
       ]
     }
   },
@@ -406,19 +736,59 @@
     "主动": {
       "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
       "值": [
-        10,
-        120,
-        0.1,
-        0.1,
-        0.075,
-        0.1
+        [
+          10,
+          10,
+          10,
+          10
+        ],
+        [
+          120,
+          160,
+          200,
+          240
+        ],
+        [
+          0.1,
+          0.12,
+          0.14,
+          0.16
+        ],
+        [
+          0.1,
+          0.12,
+          0.14,
+          0.16
+        ],
+        [
+          0.075,
+          0.09,
+          0.105,
+          0.12
+        ],
+        [
+          0.1,
+          0.12,
+          0.14,
+          0.16
+        ]
       ]
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nElectro ATK +{%}, Max HP +{%}",
       "值": [
-        0.0075,
-        0.03
+        [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ]
       ]
     }
   },
@@ -435,19 +805,59 @@
     "主动": {
       "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
       "值": [
-        10,
-        120,
-        0.1,
-        0.1,
-        0.075,
-        0.1
+        [
+          10,
+          10,
+          10,
+          10
+        ],
+        [
+          120,
+          160,
+          200,
+          240
+        ],
+        [
+          0.1,
+          0.12,
+          0.14,
+          0.16
+        ],
+        [
+          0.1,
+          0.12,
+          0.14,
+          0.16
+        ],
+        [
+          0.075,
+          0.09,
+          0.105,
+          0.12
+        ],
+        [
+          0.1,
+          0.12,
+          0.14,
+          0.16
+        ]
       ]
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nElectro ATK +{%}, Max HP +{%}",
       "值": [
-        0.0075,
-        0.03
+        [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ]
       ]
     }
   },
@@ -464,14 +874,29 @@
     "主动": {
       "描述": "Heals self and allies by {%} of the main character's Max HP.",
       "值": [
-        0.15
+        [
+          0.15,
+          0.2,
+          0.25,
+          0.3
+        ]
       ]
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nAnemo ATK +{%}, Max HP +{%}",
       "值": [
-        0.0075,
-        0.03
+        [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ]
       ]
     }
   },
@@ -488,14 +913,29 @@
     "主动": {
       "描述": "Heals self and allies by {%} of the main character's Max HP.",
       "值": [
-        0.15
+        [
+          0.15,
+          0.2,
+          0.25,
+          0.3
+        ]
       ]
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nAnemo ATK +{%}, Max HP +{%}",
       "值": [
-        0.0075,
-        0.03
+        [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ]
       ]
     }
   },
@@ -512,14 +952,29 @@
     "主动": {
       "描述": "Heals self and allies by {%} of the main character's Max HP.",
       "值": [
-        0.15
+        [
+          0.15,
+          0.2,
+          0.25,
+          0.3
+        ]
       ]
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nAnemo ATK +{%}, Max HP +{%}",
       "值": [
-        0.0075,
-        0.03
+        [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ]
       ]
     }
   },
@@ -536,14 +991,29 @@
     "主动": {
       "描述": "Heals self and allies by {%} of the main character's Max HP.",
       "值": [
-        0.15
+        [
+          0.15,
+          0.2,
+          0.25,
+          0.3
+        ]
       ]
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nAnemo ATK +{%}, Max HP +{%}",
       "值": [
-        0.0075,
-        0.03
+        [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ]
       ]
     }
   },
@@ -560,16 +1030,41 @@
     "主动": {
       "描述": "Deals Lumino DMG equal to {%} of the main character's ATK to enemies within range, while decreasing their Damage Dealt by {%} for {}s.",
       "值": [
-        4.68,
-        0.018,
-        10
+        [
+          4.68,
+          6.24,
+          7.8,
+          9.36
+        ],
+        [
+          0.018,
+          0.024,
+          0.03,
+          0.036
+        ],
+        [
+          10,
+          10,
+          10,
+          10
+        ]
       ]
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nLumino ATK +{%}, Max HP +{%}",
       "值": [
-        0.0075,
-        0.03
+        [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ]
       ]
     }
   },
@@ -586,16 +1081,41 @@
     "主动": {
       "描述": "Deals Lumino DMG equal to {%} of the main character's ATK to enemies within range, while decreasing their Damage Dealt by {%} for {}s.",
       "值": [
-        4.68,
-        0.018,
-        10
+        [
+          4.68,
+          6.24,
+          7.8,
+          9.36
+        ],
+        [
+          0.018,
+          0.024,
+          0.03,
+          0.036
+        ],
+        [
+          10,
+          10,
+          10,
+          10
+        ]
       ]
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nLumino ATK +{%}, Max HP +{%}",
       "值": [
-        0.0075,
-        0.03
+        [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ]
       ]
     }
   },
@@ -612,16 +1132,41 @@
     "主动": {
       "描述": "Deals Lumino DMG equal to {%} of the main character's ATK to enemies within range, while decreasing their Damage Dealt by {%} for {}s.",
       "值": [
-        4.68,
-        0.018,
-        10
+        [
+          4.68,
+          6.24,
+          7.8,
+          9.36
+        ],
+        [
+          0.018,
+          0.024,
+          0.03,
+          0.036
+        ],
+        [
+          10,
+          10,
+          10,
+          10
+        ]
       ]
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nLumino ATK +{%}, Max HP +{%}",
       "值": [
-        0.0075,
-        0.03
+        [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ]
       ]
     }
   },
@@ -638,15 +1183,35 @@
     "主动": {
       "描述": "Deals damage equal to {%} of the main character's ATK to nearby enemies. Detects 1 Geniemon and 1 Chest within 100m, marking their positions for 30s.",
       "值": [
-        11.7
+        [
+          11.7,
+          15.6,
+          19.5,
+          23.4
+        ]
       ]
     },
     "被动": {
       "描述": "Auto-Pickup Range +{}m, EXP gained from defeated enemies +{%}, and a {%} chance to drop bonus loot.",
       "值": [
-        0.075,
-        0.075,
-        20
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        [
+          20,
+          20,
+          20,
+          20
+        ]
       ]
     }
   },
@@ -663,15 +1228,35 @@
     "主动": {
       "描述": "Deals damage equal to {%} of the main character's ATK to nearby enemies. Detects 1 Geniemon and 1 Chest within 100m, marking their positions for 30s.",
       "值": [
-        11.7
+        [
+          11.7,
+          15.6,
+          19.5,
+          23.4
+        ]
       ]
     },
     "被动": {
       "描述": "Auto-Pickup Range +{}m, EXP gained from defeated enemies +{%}, and a {%} chance to drop bonus loot.",
       "值": [
-        0.075,
-        0.075,
-        20
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        [
+          20,
+          20,
+          20,
+          20
+        ]
       ]
     }
   },
@@ -688,15 +1273,35 @@
     "主动": {
       "描述": "Deals damage equal to {%} of the main character's ATK to nearby enemies. Detects 1 Geniemon and 1 Chest within 100m, marking their positions for 30s.",
       "值": [
-        11.7
+        [
+          11.7,
+          15.6,
+          19.5,
+          23.4
+        ]
       ]
     },
     "被动": {
       "描述": "Auto-Pickup Range +{}m, EXP gained from defeated enemies +{%}, and a {%} chance to drop bonus loot.",
       "值": [
-        0.075,
-        0.075,
-        20
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        [
+          20,
+          20,
+          20,
+          20
+        ]
       ]
     }
   },
@@ -713,15 +1318,35 @@
     "主动": {
       "描述": "Deals damage equal to {%} of the main character's ATK to nearby enemies. Detects 1 Geniemon and 1 Chest within 100m, marking their positions for 30s.",
       "值": [
-        11.7
+        [
+          11.7,
+          15.6,
+          19.5,
+          23.4
+        ]
       ]
     },
     "被动": {
       "描述": "Auto-Pickup Range +{}m, EXP gained from defeated enemies +{%}, and a {%} chance to drop bonus loot.",
       "值": [
-        0.075,
-        0.075,
-        20
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        [
+          20,
+          20,
+          20,
+          20
+        ]
       ]
     }
   },
@@ -738,16 +1363,41 @@
     "主动": {
       "描述": "Grants self and allies -{%} Damage Taken for {}s.",
       "值": [
-        0.45,
-        0.9
+        [
+          0.45,
+          0.6,
+          0.75,
+          0.9
+        ],
+        [
+          0.9,
+          1.2,
+          1.5,
+          1.8
+        ]
       ]
     },
     "被动": {
       "描述": "Jump Speed +{%}, Helix Leap Speed +{%}, Sliding Friction -{%}.",
       "值": [
-        0.075,
-        0.075,
-        0.05
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        [
+          0.05,
+          0.1,
+          0.15,
+          0.2
+        ]
       ]
     }
   },
@@ -764,16 +1414,41 @@
     "主动": {
       "描述": "Grants self and allies -{%} Damage Taken for {}s.",
       "值": [
-        0.45,
-        0.9
+        [
+          0.45,
+          0.6,
+          0.75,
+          0.9
+        ],
+        [
+          0.9,
+          1.2,
+          1.5,
+          1.8
+        ]
       ]
     },
     "被动": {
       "描述": "Jump Speed +{%}, Helix Leap Speed +{%}, Sliding Friction -{%}.",
       "值": [
-        0.075,
-        0.075,
-        0.05
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        [
+          0.05,
+          0.1,
+          0.15,
+          0.2
+        ]
       ]
     }
   },
@@ -790,16 +1465,41 @@
     "主动": {
       "描述": "Grants self and allies -{%} Damage Taken for {}s.",
       "值": [
-        0.45,
-        0.9
+        [
+          0.45,
+          0.6,
+          0.75,
+          0.9
+        ],
+        [
+          0.9,
+          1.2,
+          1.5,
+          1.8
+        ]
       ]
     },
     "被动": {
       "描述": "Jump Speed +{%}, Helix Leap Speed +{%}, Sliding Friction -{%}.",
       "值": [
-        0.075,
-        0.075,
-        0.05
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        [
+          0.05,
+          0.1,
+          0.15,
+          0.2
+        ]
       ]
     }
   },
@@ -816,16 +1516,41 @@
     "主动": {
       "描述": "Continuously heals self and allies, restoring {%} of their Max HP per second for {}s.",
       "值": [
-        0.027,
-        10
+        [
+          0.027,
+          0.036,
+          0.045,
+          0.054
+        ],
+        [
+          10,
+          10,
+          10,
+          10
+        ]
       ]
     },
     "被动": {
       "描述": "ATK +{%}, Max HP +{%}, DEF +{%}.",
       "值": [
-        0.018,
-        0.018,
-        0.018
+        [
+          0.018,
+          0.024,
+          0.03,
+          0.036
+        ],
+        [
+          0.018,
+          0.024,
+          0.03,
+          0.036
+        ],
+        [
+          0.018,
+          0.024,
+          0.03,
+          0.036
+        ]
       ]
     }
   },
@@ -842,16 +1567,41 @@
     "主动": {
       "描述": "Continuously heals self and allies, restoring {%} of their Max HP per second for {}s.",
       "值": [
-        0.027,
-        10
+        [
+          0.027,
+          0.036,
+          0.045,
+          0.054
+        ],
+        [
+          10,
+          10,
+          10,
+          10
+        ]
       ]
     },
     "被动": {
       "描述": "ATK +{%}, Max HP +{%}, DEF +{%}.",
       "值": [
-        0.018,
-        0.018,
-        0.018
+        [
+          0.018,
+          0.024,
+          0.03,
+          0.036
+        ],
+        [
+          0.018,
+          0.024,
+          0.03,
+          0.036
+        ],
+        [
+          0.018,
+          0.024,
+          0.03,
+          0.036
+        ]
       ]
     }
   },
@@ -868,16 +1618,41 @@
     "主动": {
       "描述": "Continuously heals self and allies, restoring {%} of their Max HP per second for {}s.",
       "值": [
-        0.027,
-        10
+        [
+          0.027,
+          0.036,
+          0.045,
+          0.054
+        ],
+        [
+          10,
+          10,
+          10,
+          10
+        ]
       ]
     },
     "被动": {
       "描述": "ATK +{%}, Max HP +{%}, DEF +{%}.",
       "值": [
-        0.018,
-        0.018,
-        0.018
+        [
+          0.018,
+          0.024,
+          0.03,
+          0.036
+        ],
+        [
+          0.018,
+          0.024,
+          0.03,
+          0.036
+        ],
+        [
+          0.018,
+          0.024,
+          0.03,
+          0.036
+        ]
       ]
     }
   },
@@ -894,16 +1669,41 @@
     "主动": {
       "描述": "Deals Umbro Damage equal to {%} of the main character's ATK to enemies within range and reduces their DEF by {%} for {}s.",
       "值": [
-        5.85,
-        0.03,
-        10
+        [
+          5.85,
+          7.8,
+          9.75,
+          11.7
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ],
+        [
+          10,
+          10,
+          10,
+          10
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Umbro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
       "值": [
-        0.012,
-        0.0045
+        [
+          0.012,
+          0.016,
+          0.02,
+          0.024
+        ],
+        [
+          0.0045,
+          0.006,
+          0.0075,
+          0.009
+        ]
       ]
     }
   },
@@ -920,16 +1720,41 @@
     "主动": {
       "描述": "Deals Umbro Damage equal to {%} of the main character's ATK to enemies within range and reduces their DEF by {%} for {}s.",
       "值": [
-        5.85,
-        0.03,
-        10
+        [
+          5.85,
+          7.8,
+          9.75,
+          11.7
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ],
+        [
+          10,
+          10,
+          10,
+          10
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Umbro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
       "值": [
-        0.012,
-        0.0045
+        [
+          0.012,
+          0.016,
+          0.02,
+          0.024
+        ],
+        [
+          0.0045,
+          0.006,
+          0.0075,
+          0.009
+        ]
       ]
     }
   },
@@ -946,16 +1771,41 @@
     "主动": {
       "描述": "Deals Umbro Damage equal to {%} of the main character's ATK to enemies within range and reduces their DEF by {%} for {}s.",
       "值": [
-        5.85,
-        0.03,
-        10
+        [
+          5.85,
+          7.8,
+          9.75,
+          11.7
+        ],
+        [
+          0.03,
+          0.04,
+          0.05,
+          0.06
+        ],
+        [
+          10,
+          10,
+          10,
+          10
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Umbro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
       "值": [
-        0.012,
-        0.0045
+        [
+          0.012,
+          0.016,
+          0.02,
+          0.024
+        ],
+        [
+          0.0045,
+          0.006,
+          0.0075,
+          0.009
+        ]
       ]
     }
   },
@@ -972,15 +1822,35 @@
     "主动": {
       "描述": "Increases ATK of all allied [Summons] by {%} for {}s.",
       "值": [
-        0.09,
-        10
+        [
+          0.09,
+          0.12,
+          0.15,
+          0.18
+        ],
+        [
+          10,
+          10,
+          10,
+          10
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Hydro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
       "值": [
-        0.012,
-        0.0045
+        [
+          0.012,
+          0.016,
+          0.02,
+          0.024
+        ],
+        [
+          0.0045,
+          0.006,
+          0.0075,
+          0.009
+        ]
       ]
     }
   },
@@ -997,15 +1867,35 @@
     "主动": {
       "描述": "Increases ATK of all allied [Summons] by {%} for {}s.",
       "值": [
-        0.09,
-        10
+        [
+          0.09,
+          0.12,
+          0.15,
+          0.18
+        ],
+        [
+          10,
+          10,
+          10,
+          10
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Hydro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
       "值": [
-        0.012,
-        0.0045
+        [
+          0.012,
+          0.016,
+          0.02,
+          0.024
+        ],
+        [
+          0.0045,
+          0.006,
+          0.0075,
+          0.009
+        ]
       ]
     }
   },
@@ -1022,15 +1912,35 @@
     "主动": {
       "描述": "Increases ATK of all allied [Summons] by {%} for {}s.",
       "值": [
-        0.09,
-        10
+        [
+          0.09,
+          0.12,
+          0.15,
+          0.18
+        ],
+        [
+          10,
+          10,
+          10,
+          10
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Hydro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
       "值": [
-        0.012,
-        0.0045
+        [
+          0.012,
+          0.016,
+          0.02,
+          0.024
+        ],
+        [
+          0.0045,
+          0.006,
+          0.0075,
+          0.009
+        ]
       ]
     }
   },
@@ -1047,15 +1957,35 @@
     "主动": {
       "描述": "Increases ATK of all allied [Summons] by {%} for {}s.",
       "值": [
-        0.09,
-        10
+        [
+          0.09,
+          0.12,
+          0.15,
+          0.18
+        ],
+        [
+          10,
+          10,
+          10,
+          10
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Hydro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
       "值": [
-        0.012,
-        0.0045
+        [
+          0.012,
+          0.016,
+          0.02,
+          0.024
+        ],
+        [
+          0.0045,
+          0.006,
+          0.0075,
+          0.009
+        ]
       ]
     }
   },
@@ -1072,15 +2002,35 @@
     "主动": {
       "描述": "Spawns 1 [Activated Sal Volatile], 1 [Tranquilizer Dewdrop], and 1 [Ammo Supply Chest]. Increases Skill Duration for self and allies by {%} for {}s.",
       "值": [
-        0.15,
-        15
+        [
+          0.15,
+          0.2,
+          0.25,
+          0.3
+        ],
+        [
+          15,
+          15,
+          15,
+          15
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Pyro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
       "值": [
-        0.012,
-        0.0045
+        [
+          0.012,
+          0.016,
+          0.02,
+          0.024
+        ],
+        [
+          0.0045,
+          0.006,
+          0.0075,
+          0.009
+        ]
       ]
     }
   },
@@ -1097,15 +2047,35 @@
     "主动": {
       "描述": "Spawns 1 [Activated Sal Volatile], 1 [Tranquilizer Dewdrop], and 1 [Ammo Supply Chest]. Increases Skill Duration for self and allies by {%} for {}s.",
       "值": [
-        0.15,
-        15
+        [
+          0.15,
+          0.2,
+          0.25,
+          0.3
+        ],
+        [
+          15,
+          15,
+          15,
+          15
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Pyro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
       "值": [
-        0.012,
-        0.0045
+        [
+          0.012,
+          0.016,
+          0.02,
+          0.024
+        ],
+        [
+          0.0045,
+          0.006,
+          0.0075,
+          0.009
+        ]
       ]
     }
   },
@@ -1122,15 +2092,35 @@
     "主动": {
       "描述": "Spawns 1 [Activated Sal Volatile], 1 [Tranquilizer Dewdrop], and 1 [Ammo Supply Chest]. Increases Skill Duration for self and allies by {%} for {}s.",
       "值": [
-        0.15,
-        15
+        [
+          0.15,
+          0.2,
+          0.25,
+          0.3
+        ],
+        [
+          15,
+          15,
+          15,
+          15
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Pyro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
       "值": [
-        0.012,
-        0.0045
+        [
+          0.012,
+          0.016,
+          0.02,
+          0.024
+        ],
+        [
+          0.0045,
+          0.006,
+          0.0075,
+          0.009
+        ]
       ]
     }
   },
@@ -1147,15 +2137,35 @@
     "主动": {
       "描述": "Grants self and allies {} Ultra Shield points and restores their Sanity by {}.",
       "值": [
-        225,
-        9
+        [
+          225,
+          300,
+          375,
+          450
+        ],
+        [
+          9,
+          12,
+          15,
+          18
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Electro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
       "值": [
-        0.012,
-        0.0045
+        [
+          0.012,
+          0.016,
+          0.02,
+          0.024
+        ],
+        [
+          0.0045,
+          0.006,
+          0.0075,
+          0.009
+        ]
       ]
     }
   },
@@ -1172,15 +2182,35 @@
     "主动": {
       "描述": "Grants self and allies {} Ultra Shield points and restores their Sanity by {}.",
       "值": [
-        225,
-        9
+        [
+          225,
+          300,
+          375,
+          450
+        ],
+        [
+          9,
+          12,
+          15,
+          18
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Electro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
       "值": [
-        0.012,
-        0.0045
+        [
+          0.012,
+          0.016,
+          0.02,
+          0.024
+        ],
+        [
+          0.0045,
+          0.006,
+          0.0075,
+          0.009
+        ]
       ]
     }
   },
@@ -1197,15 +2227,35 @@
     "主动": {
       "描述": "Grants self and allies {} Ultra Shield points and restores their Sanity by {}.",
       "值": [
-        225,
-        9
+        [
+          225,
+          300,
+          375,
+          450
+        ],
+        [
+          9,
+          12,
+          15,
+          18
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Electro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
       "值": [
-        0.012,
-        0.0045
+        [
+          0.012,
+          0.016,
+          0.02,
+          0.024
+        ],
+        [
+          0.0045,
+          0.006,
+          0.0075,
+          0.009
+        ]
       ]
     }
   },
@@ -1222,16 +2272,41 @@
     "主动": {
       "描述": "Heals self and allies for {%} of the main character's Max HP and grants +{%} DEF for {}s.",
       "值": [
-        0.06,
-        15,
-        0.18
+        [
+          0.06,
+          0.08,
+          0.1,
+          0.12
+        ],
+        [
+          15,
+          15,
+          15,
+          15
+        ],
+        [
+          0.18,
+          0.24,
+          0.3,
+          0.36
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Anemo ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
       "值": [
-        0.012,
-        0.0045
+        [
+          0.012,
+          0.016,
+          0.02,
+          0.024
+        ],
+        [
+          0.0045,
+          0.006,
+          0.0075,
+          0.009
+        ]
       ]
     }
   },
@@ -1248,16 +2323,41 @@
     "主动": {
       "描述": "Heals self and allies for {%} of the main character's Max HP and grants +{%} DEF for {}s.",
       "值": [
-        0.06,
-        15,
-        0.18
+        [
+          0.06,
+          0.08,
+          0.1,
+          0.12
+        ],
+        [
+          15,
+          15,
+          15,
+          15
+        ],
+        [
+          0.18,
+          0.24,
+          0.3,
+          0.36
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Anemo ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
       "值": [
-        0.012,
-        0.0045
+        [
+          0.012,
+          0.016,
+          0.02,
+          0.024
+        ],
+        [
+          0.0045,
+          0.006,
+          0.0075,
+          0.009
+        ]
       ]
     }
   },
@@ -1274,16 +2374,41 @@
     "主动": {
       "描述": "Heals self and allies for {%} of the main character's Max HP and grants +{%} DEF for {}s.",
       "值": [
-        0.06,
-        15,
-        0.18
+        [
+          0.06,
+          0.08,
+          0.1,
+          0.12
+        ],
+        [
+          15,
+          15,
+          15,
+          15
+        ],
+        [
+          0.18,
+          0.24,
+          0.3,
+          0.36
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Anemo ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
       "值": [
-        0.012,
-        0.0045
+        [
+          0.012,
+          0.016,
+          0.02,
+          0.024
+        ],
+        [
+          0.0045,
+          0.006,
+          0.0075,
+          0.009
+        ]
       ]
     }
   },
@@ -1300,16 +2425,41 @@
     "主动": {
       "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill DMG taken by them by {%} for {}s.",
       "值": [
-        5.85,
-        0.036,
-        10
+        [
+          5.85,
+          7.8,
+          9.75,
+          11.7
+        ],
+        [
+          0.036,
+          0.048,
+          0.06,
+          0.072
+        ],
+        [
+          10,
+          10,
+          10,
+          10
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Lumino ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
       "值": [
-        0.012,
-        0.0045
+        [
+          0.012,
+          0.016,
+          0.02,
+          0.024
+        ],
+        [
+          0.0045,
+          0.006,
+          0.0075,
+          0.009
+        ]
       ]
     }
   },
@@ -1326,16 +2476,41 @@
     "主动": {
       "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill DMG taken by them by {%} for {}s.",
       "值": [
-        5.85,
-        0.036,
-        10
+        [
+          5.85,
+          7.8,
+          9.75,
+          11.7
+        ],
+        [
+          0.036,
+          0.048,
+          0.06,
+          0.072
+        ],
+        [
+          10,
+          10,
+          10,
+          10
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Lumino ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
       "值": [
-        0.012,
-        0.0045
+        [
+          0.012,
+          0.016,
+          0.02,
+          0.024
+        ],
+        [
+          0.0045,
+          0.006,
+          0.0075,
+          0.009
+        ]
       ]
     }
   },
@@ -1352,16 +2527,41 @@
     "主动": {
       "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill DMG taken by them by {%} for {}s.",
       "值": [
-        5.85,
-        0.036,
-        10
+        [
+          5.85,
+          7.8,
+          9.75,
+          11.7
+        ],
+        [
+          0.036,
+          0.048,
+          0.06,
+          0.072
+        ],
+        [
+          10,
+          10,
+          10,
+          10
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Lumino ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
       "值": [
-        0.012,
-        0.0045
+        [
+          0.012,
+          0.016,
+          0.02,
+          0.024
+        ],
+        [
+          0.0045,
+          0.006,
+          0.0075,
+          0.009
+        ]
       ]
     }
   },
@@ -1378,16 +2578,41 @@
     "主动": {
       "描述": "Deals Umbro DMG equal to {%} of the main character's ATK to nearby enemies, and increases [Morale] for self and allies by {%} for {}s.",
       "值": [
-        11.7,
-        0.06,
-        12
+        [
+          11.7,
+          15.6,
+          19.5,
+          23.4
+        ],
+        [
+          0.06,
+          0.08,
+          0.1,
+          0.12
+        ],
+        [
+          12,
+          12,
+          12,
+          12
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Umbro ATK for the main character and the Combat Partners by {%} and the stats provided by Umbro Demon Wedges prefixed with [Griffin], [Typhon], and [Covenanter] by {%}.",
       "值": [
-        0.024,
-        0.009
+        [
+          0.024,
+          0.032,
+          0.04,
+          0.048
+        ],
+        [
+          0.009,
+          0.012,
+          0.015,
+          0.018
+        ]
       ]
     }
   },
@@ -1404,16 +2629,41 @@
     "主动": {
       "描述": "For each [Summon] summoned by the main character, increases damage dealt by self and allies by {%} for {}s, up to {%}.",
       "值": [
-        0.0405,
-        0.162,
-        12
+        [
+          0.0405,
+          0.054,
+          0.0675,
+          0.081
+        ],
+        [
+          0.162,
+          0.216,
+          0.27,
+          0.324
+        ],
+        [
+          12,
+          12,
+          12,
+          12
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Hydro ATK for the main character and the Combat Partners by {%} and the stats provided by Hydro Demon Wedges prefixed with [Griffin], [Typhon], and [Covenanter] by {%}.",
       "值": [
-        0.024,
-        0.009
+        [
+          0.024,
+          0.032,
+          0.04,
+          0.048
+        ],
+        [
+          0.009,
+          0.012,
+          0.015,
+          0.018
+        ]
       ]
     }
   },
@@ -1430,16 +2680,41 @@
     "主动": {
       "描述": "Deals Pyro DMG equal to {%} of the main character's ATK to nearby enemies, and increases [Multishot] for self and allies by {%} for {}s.",
       "值": [
-        11.7,
-        0.105,
-        12
+        [
+          11.7,
+          15.6,
+          19.5,
+          23.4
+        ],
+        [
+          0.105,
+          0.14,
+          0.175,
+          0.21
+        ],
+        [
+          12,
+          12,
+          12,
+          12
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Pyro ATK for the main character and the Combat Partners by {%} and the stats provided by Pyro Demon Wedges prefixed with [Griffin], [Typhon], and [Covenanter] by {%}.",
       "值": [
-        0.024,
-        0.009
+        [
+          0.024,
+          0.032,
+          0.04,
+          0.048
+        ],
+        [
+          0.009,
+          0.012,
+          0.015,
+          0.018
+        ]
       ]
     }
   },
@@ -1456,16 +2731,41 @@
     "主动": {
       "描述": "Restores {} Sanity to self and allies, and increases their Skill DMG by {%} for {}s.",
       "值": [
-        15,
-        0.105,
-        12
+        [
+          15,
+          20,
+          25,
+          30
+        ],
+        [
+          0.105,
+          0.14,
+          0.175,
+          0.21
+        ],
+        [
+          12,
+          12,
+          12,
+          12
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Electro ATK for the main character and the Combat Partners by {%} and the stats provided by Electro Demon Wedges prefixed with [Griffin], [Typhon], and [Covenanter] by {%}.",
       "值": [
-        0.024,
-        0.009
+        [
+          0.024,
+          0.032,
+          0.04,
+          0.048
+        ],
+        [
+          0.009,
+          0.012,
+          0.015,
+          0.018
+        ]
       ]
     }
   },
@@ -1482,16 +2782,41 @@
     "主动": {
       "描述": "Increases [Resolve] by {%} for self and allies for {}s. If the main character's HP falls below 25%, instantly heals them for {%} HP.",
       "值": [
-        0.06,
-        12,
-        0.1
+        [
+          0.06,
+          0.08,
+          0.1,
+          0.12
+        ],
+        [
+          12,
+          12,
+          12,
+          12
+        ],
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Anemo ATK for the main character and the Combat Partners by {%} and the stats provided by Anemo Demon Wedges prefixed with [Griffin], [Typhon], and [Covenanter] by {%}.",
       "值": [
-        0.024,
-        0.009
+        [
+          0.024,
+          0.032,
+          0.04,
+          0.048
+        ],
+        [
+          0.009,
+          0.012,
+          0.015,
+          0.018
+        ]
       ]
     }
   },
@@ -1508,16 +2833,41 @@
     "主动": {
       "描述": "Deals Lumino DMG equal to {%} of the main character's ATK to nearby enemies, and grants +{%} Lumino additional DMG to self and allies for {}s.",
       "值": [
-        11.7,
-        0.0315,
-        12
+        [
+          11.7,
+          15.6,
+          19.5,
+          23.4
+        ],
+        [
+          0.0315,
+          0.042,
+          0.0525,
+          0.063
+        ],
+        [
+          12,
+          12,
+          12,
+          12
+        ]
       ]
     },
     "被动": {
       "描述": "Increases Lumino ATK for the main character and the Combat Partners by {%} and the stats provided by Lumino Demon Wedges prefixed with [Griffin], [Typhon], and [Covenanter] by {%}.",
       "值": [
-        0.024,
-        0.009
+        [
+          0.024,
+          0.032,
+          0.04,
+          0.048
+        ],
+        [
+          0.009,
+          0.012,
+          0.015,
+          0.018
+        ]
       ]
     }
   },

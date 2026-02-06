@@ -61,31 +61,12 @@ class PetProcessor(BaseProcessor):
         if not data:
             return rst
 
-        # 处理属性数据
-        attributes = self._process_pet_attributes(data)
-        if attributes:
-            rst.update(attributes)
-
         # 处理技能数据
         skills = self._process_pet_skills(data, battle_pet_id)
         if skills:
             rst.update(skills)
 
         return rst
-
-    def _process_pet_attributes(self, battle_pet_data):
-        """处理魔灵属性数据"""
-        if not battle_pet_data:
-            return {}
-
-        attributes = {
-            "基础攻击": battle_pet_data.get("ATK", 0),
-            "基础生命": battle_pet_data.get("MaxHp", 0),
-            "基础防御": battle_pet_data.get("DEF", 0),
-        }
-
-        # 移除值为0的属性
-        return {k: v for k, v in attributes.items() if v > 0}
 
     def _process_pet_skills(self, battle_pet_data, battle_pet_id):
         """处理魔灵技能数据"""
@@ -143,31 +124,37 @@ class PetProcessor(BaseProcessor):
         if desc_values:
             for i, value in enumerate(desc_values):
                 placeholder = f"#{i + 1}"
-                param_value = None
                 is_percent = False
 
-                if isinstance(value, str):
-                    if "$" in value:
-                        # 处理 $...$%? 格式
-                        expr_match = re.search(r"\$([^$]+)\$%?", value)
-                        if expr_match:
-                            expr = expr_match.group(1)
-                            is_percent = value.endswith("%")
+                # 为每个参数计算不同等级的值（通常是1-3级）
+                param_values = []
+                for level in range(1, 5):  # 计算1-3级的值
+                    param_value = None
+                    if isinstance(value, str):
+                        if "$" in value:
+                            # 处理 $...$%? 格式
+                            expr_match = re.search(r"\$([^$]+)\$%?", value)
+                            if expr_match:
+                                expr = expr_match.group(1)
+                                is_percent = value.endswith("%")
+                                param_value = self._calculate_expr_value(
+                                    expr, skill_id, level, "Skill"
+                                )
+                                if is_percent:
+                                    param_value = param_value / 100
+                        else:
+                            # 直接计算表达式
                             param_value = self._calculate_expr_value(
-                                expr, skill_id, 1, "Skill"
+                                value, skill_id, level, "Skill"
                             )
-                            if is_percent:
-                                param_value = param_value / 100
-                    else:
-                        # 直接计算表达式
-                        param_value = self._calculate_expr_value(
-                            value, skill_id, 1, "Skill"
-                        )
-                elif isinstance(value, (int, float)):
-                    param_value = value
+                    elif isinstance(value, (int, float)):
+                        param_value = value
 
-                if param_value is not None:
-                    values.append(self.round_value(param_value))
+                    if param_value is not None:
+                        param_values.append(self.round_value(param_value))
+
+                if param_values:
+                    values.append(param_values)
                     # 替换占位符
                     if is_percent:
                         skill_desc = skill_desc.replace(placeholder, "{%}")
@@ -191,23 +178,29 @@ class PetProcessor(BaseProcessor):
         if passive_effect_params:
             for i, value in enumerate(passive_effect_params):
                 placeholder = f"#{i + 1}"
-                param_value = None
                 is_percent = False
 
-                if isinstance(value, str) and "$" in value:
-                    # 处理 $...$%? 格式
-                    expr_match = re.search(r"\$([^$]+)\$%?", value)
-                    if expr_match:
-                        expr = expr_match.group(1)
-                        is_percent = value.endswith("%")
-                        param_value = self._calculate_expr_value(
-                            expr, battle_pet_id, 1, "BattlePet"
-                        )
-                        if is_percent:
-                            param_value = param_value / 100
+                # 为每个参数计算不同等级的值（通常是1-3级）
+                param_values = []
+                for level in range(1, 5):  # 计算1-3级的值
+                    param_value = None
+                    if isinstance(value, str) and "$" in value:
+                        # 处理 $...$%? 格式
+                        expr_match = re.search(r"\$([^$]+)\$%?", value)
+                        if expr_match:
+                            expr = expr_match.group(1)
+                            is_percent = value.endswith("%")
+                            param_value = self._calculate_expr_value(
+                                expr, battle_pet_id, level, "BattlePet"
+                            )
+                            if is_percent:
+                                param_value = param_value / 100
 
-                if param_value is not None:
-                    values.append(self.round_value(param_value))
+                    if param_value is not None:
+                        param_values.append(self.round_value(param_value))
+
+                if param_values:
+                    values.append(param_values)
                     # 替换占位符
                     if is_percent:
                         skill_desc = skill_desc.replace(placeholder, "{%}")
