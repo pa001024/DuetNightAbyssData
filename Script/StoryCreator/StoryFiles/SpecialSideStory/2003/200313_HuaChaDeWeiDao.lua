@@ -463,7 +463,7 @@ return {
       key = "1766736339901917",
       type = "StoryNode",
       name = "蒹葭浦遇怪物",
-      pos = {x = 1009.130434782609, y = 469.44099378882004},
+      pos = {x = 1009.130434782609, y = 471.44099378882004},
       propsData = {
         QuestId = 20031303,
         QuestDescriptionComment = "",
@@ -485,7 +485,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        SubRegionId = 104107,
+        SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_PingYuan_2080425",

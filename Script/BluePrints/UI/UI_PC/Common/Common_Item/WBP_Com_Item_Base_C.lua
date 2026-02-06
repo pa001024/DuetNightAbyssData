@@ -824,14 +824,13 @@ end
 
 function M:SetShadow(bShadow)
   self:AsyncLoadWidgetCommon(nil, "SetShadowTask", function(CoroutineObj)
-    if self.WidgetMap[self.ShadowWidget] then
-      self:RemoveWidgetFromNode(self.ShadowWidget, true)
-    end
     if bShadow then
       if not self.WidgetMap[self.ShadowWidget] then
         self.ShadowWidget = self:CreateWidgetAsync("ComItemShadow", CoroutineObj)
       end
       self:AddWidgetToNode(self.ShadowWidget)
+    elseif self.WidgetMap[self.ShadowWidget] then
+      self:RemoveWidgetFromNode(self.ShadowWidget)
     end
   end)
 end

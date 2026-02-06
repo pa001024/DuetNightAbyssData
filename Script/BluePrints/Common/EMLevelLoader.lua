@@ -538,7 +538,7 @@ end
 
 function EMLevelLoader:UnloadPreviewLevel(Name)
   if self[Name] then
-    local WCSubsystem = USubsystemBlueprintLibrary.GetWorldSubsystem(self, UWorldCompositionSubSystem.StaticClass())
+    local WCSubsystem = UGameplayStatics.GetGameMode(self):GetWCSubSystem()
     if WCSubsystem then
       WCSubsystem:UnFreezeWorldComposition()
       WCSubsystem:UnFreezeDistanceBasedRegion()

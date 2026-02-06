@@ -9,7 +9,6 @@ function BP_AutoChess_Formation_C:ReceiveBeginPlay()
   self.Index2EnemyCubeInfo = {}
   self.CurrentHoverCubeIndex = nil
   self.CurrentSelectCubeIndex = nil
-  self.MonsterCreatingCount = 0
   for i = 0, 47 do
     local CubeActor = self["AutoChess_Cube" .. i].ChildActor
     if CubeActor then
@@ -63,7 +62,6 @@ function BP_AutoChess_Formation_C:CreateChessMonster(CombatChessId, CubeIndex, I
       Actor.EquipList = EquipList
     end
     DebugPrint("ayff test create monster at CubeIndex:", CubeIndex, " UnitId:", UnitId, " Eid:", Unit.Eid)
-    self.MonsterCreatingCount = self.MonsterCreatingCount - 1
     self:OnCubeMonsterSelected(CubeIndex, false)
   end
   
@@ -76,7 +74,6 @@ function BP_AutoChess_Formation_C:CreateChessMonster(CombatChessId, CubeIndex, I
   Context.IntParams:Add("Level", GameMode:GetFixedGamemodeLevel())
   Context.OnUnitInitCreateReadyDynamic:Add(self, LoadFinishCallback)
   GameMode.EMGameState.EventMgr:CreateUnitNew(Context, false)
-  self.MonsterCreatingCount = self.MonsterCreatingCount + 1
   CubeInfoList[CubeIndex] = {}
 end
 
@@ -209,10 +206,6 @@ function BP_AutoChess_Formation_C:SwitchMonsterPosition(Index1, Index2)
   end
   self:OnCubeMonsterSelected(Index1, false)
   self:OnCubeMonsterSelected(Index2, false)
-end
-
-function BP_AutoChess_Formation_C:IsMonsterCreating()
-  return self.MonsterCreatingCount > 0
 end
 
 return BP_AutoChess_Formation_C

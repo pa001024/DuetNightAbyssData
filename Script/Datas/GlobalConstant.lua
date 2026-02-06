@@ -706,7 +706,7 @@ return ReadOnly("GlobalConstant", {
   },
   NewPlayerTagTime = {
     ConstantName = "NewPlayerTagTime",
-    ConstantValue = 1770652800
+    ConstantValue = 1767924000
   },
   NicknameMaxLen = {
     ConstantName = "NicknameMaxLen",
@@ -999,7 +999,7 @@ return ReadOnly("GlobalConstant", {
   },
   TalkWaitForNewPage = {
     ConstantName = "TalkWaitForNewPage",
-    ConstantValue = 1.3
+    ConstantValue = 2
   },
   TaskWarningLevel = {
     ConstantName = "TaskWarningLevel",

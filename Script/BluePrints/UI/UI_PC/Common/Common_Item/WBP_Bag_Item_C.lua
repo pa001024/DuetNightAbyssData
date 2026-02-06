@@ -569,20 +569,17 @@ function M:ShowModStar(Mod)
   end
 end
 
-function M:HideNotNeccessaryWidget(bHide)
-  local ChildrenCount = self.Node_Widget:GetChildrenCount()
-  if ChildrenCount < 1 then
-    return
-  end
-  for i = 0, ChildrenCount - 1 do
-    local ChildWidget = self.Node_Widget:GetChildAt(i)
-    if self.WidgetMap[ChildWidget] then
-      if bHide then
-        ChildWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
-      else
-        ChildWidget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-      end
+function M:HideOrShowTimeLimitWidget(bHide)
+  if bHide then
+    if not self.WidgetMap[self.TimeLimitWidget] then
+      return
     end
+    self.TimeLimitWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  else
+    if self.WidgetMap[self.TimeLimitWidget] then
+      return
+    end
+    self.TimeLimitWidget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end
 end
 
@@ -598,7 +595,6 @@ function M:SetSelected(IsSelected)
   if self.Content then
     self.Content.IsSelect = IsSelected
   end
-  self.Root:SetRenderOpacity(1)
   if IsSelected then
     if not self.Item:IsAnimationPlaying(self.Item.Click) then
       self.Item:StopAllAnimations()

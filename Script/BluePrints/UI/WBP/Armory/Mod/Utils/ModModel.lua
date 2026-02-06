@@ -61,7 +61,6 @@ function M:ResetUIData()
   self.MainUICase = ModCommon.MainUICase.Normal
   self.GamePadSelectedStuff = nil
   self.DummyAvatar_CopyMode = nil
-  self.CopyModeSenderName = nil
 end
 
 function M:GenerateSlotUIDatas(SuitIndex)

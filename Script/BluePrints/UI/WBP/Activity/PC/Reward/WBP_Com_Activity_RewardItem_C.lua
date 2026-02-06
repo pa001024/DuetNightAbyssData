@@ -84,9 +84,7 @@ function M:OnListItemObjectSet(Content)
   end
   self.IsListened = true
   self:InitRewards(Content.ConfigData)
-  if self.Key_Item then
-    self.Key_Item:CreateGamepadKey(UIConst.GamePadImgKey.LeftThumb)
-  end
+  self.Key_Item:CreateGamepadKey(UIConst.GamePadImgKey.LeftThumb)
 end
 
 function M:SetIcon(IconPath)
@@ -135,9 +133,7 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
     end
     if not self.Owner.IsInViewMode then
       self.Owner:ShowGamepadViewBtn(true)
-      if self.Key_Item then
-        self.Key_Item:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-      end
+      self.Key_Item:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       self.Btn_Reward:SetGamePadIconVisible(true)
       self.Btn_Goto:SetGamepadIconVisibility(true)
     end
@@ -262,7 +258,7 @@ end
 
 function M:InitGamepadView()
   self.UsedList:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-  if self:HasAnyUserFocus() and not self.Owner.IsInViewMode and self.Key_Item then
+  if self:HasAnyUserFocus() and not self.Owner.IsInViewMode then
     self.Key_Item:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end
   if self:IsAnimationPlaying() then
@@ -279,9 +275,7 @@ function M:InitKeyBoardView()
   if self.UsedList then
     self.UsedList:SetVisibility(UIConst.VisibilityOp.Visible)
   end
-  if self.Key_Item then
-    self.Key_Item:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  end
+  self.Key_Item:SetVisibility(UIConst.VisibilityOp.Collapsed)
   if not self:IsAnimationPlaying(self.In) then
     self:StopAllAnimations()
   end
@@ -465,15 +459,11 @@ function M:SwitchSelectedMode()
     self.Owner.IsInViewMode = false
     self:SetFocus()
     self.Owner:ShowGamepadViewBtn(true)
-    if self.Key_Item then
-      self.Key_Item:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    end
+    self.Key_Item:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   else
     self.Owner.RewardContent_OneClick.Btn_OneClick:SetGamePadIconVisible(false)
     self.UsedList:SetVisibility(UIConst.VisibilityOp.Visible)
-    if self.Key_Item then
-      self.Key_Item:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    end
+    self.Key_Item:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Owner.IsInViewMode = true
     self.SelectedIndex = 0
     self:FocusToRewardItem()
@@ -509,9 +499,7 @@ end
 function M:OnFocusLost(InFocusEvent)
   self.Btn_Reward:SetGamePadIconVisible(false)
   self.Btn_Goto:SetGamepadIconVisibility(false)
-  if self.Key_Item then
-    self.Key_Item:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  end
+  self.Key_Item:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 return M

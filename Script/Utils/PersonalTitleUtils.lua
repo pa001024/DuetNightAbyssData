@@ -9,9 +9,6 @@ end
 function PersonalTitleUtils.GetTitleContent(PrefixId, SuffixId)
   local PrefixTitle = PersonalTitleUtils.GetTitleName(PrefixId)
   local SuffixTitle = PersonalTitleUtils.GetTitleName(SuffixId)
-  if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
-    return (SuffixTitle or " ") .. (PrefixTitle and string.format(" %s", PrefixTitle) or " ")
-  end
   return (PrefixTitle or " ") .. (SuffixTitle or " ")
 end
 

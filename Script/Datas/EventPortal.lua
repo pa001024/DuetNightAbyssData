@@ -130,7 +130,7 @@ return ReadOnly("EventPortal", {
     EventId = 103019,
     JumpUIId = 84,
     JumpUnlockTips = "EventPortal_UnlockTips_Common",
-    RewardPreview = 1030112,
+    RewardPreview = 1030062,
     SubBPPath2 = "/Game/UI/WBP/Activity/Widget/InviteCode/WBP_Activity_InviteCode_Content.WBP_Activity_InviteCode_Content"
   },
   [108001] = {

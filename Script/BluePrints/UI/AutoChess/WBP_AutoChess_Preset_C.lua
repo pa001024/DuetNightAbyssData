@@ -91,7 +91,7 @@ end
 
 function M:InitButton()
   self.Btn_Add.OnClicked:Clear()
-  self.Btn_Click.OnClicked:Clear()
+  self.Btn_Click.OnClicked:Add(self, self.OnClickPreset)
   self.Btn_Enter:UnBindEventOnClickedByObj(self)
   self.Btn_Apply:UnBindEventOnClickedByObj(self)
   self.Btn_Rewrite:UnBindEventOnClickedByObj(self)
@@ -140,7 +140,6 @@ function M:OnClickApply()
     else
       DebugPrint("@@@AutoChessPreset no BattlePage")
     end
-    self.Btn_Rewrite:ForbidBtn(true)
     self.Btn_Apply:ForbidBtn(true)
   else
     DebugPrint("@@@AutoChessPreset no CachedSquadInfo")
@@ -223,9 +222,9 @@ function M:OnClickPreset()
     self.CurrentInputType = UIUtils.UtilsGetCurrentInputType()
     if self.CurrentInputType == ECommonInputType.Gamepad then
       if 0 == self.WS_Btn:GetActiveWidgetIndex() then
-        self.Btn_Enter:OnBtnClicked()
+        self:OnClickEnter()
       else
-        self.Btn_Rewrite:OnBtnClicked()
+        self:OnClickRewrite()
       end
     end
     return
@@ -330,27 +329,20 @@ function M:InitGamepadView()
     self.CurrentInputType = self.Owner.GameInputModeSubsystem:GetCurrentInputType()
   end
   if self:HasFocusedDescendants() or self:HasAnyUserFocus() then
+    self:ShowButtonGamepadIcon()
     if 0 == self.WS_Type:GetActiveWidgetIndex() then
       self.GameInputModeSubsystem:SetTargetUIFocusWidget(self.Btn_Click)
+      self:OnClickPreset()
     else
       self.GameInputModeSubsystem:SetTargetUIFocusWidget(self.Btn_Add)
     end
   end
-  self:ShowButtonGamepadIcon()
 end
 
 function M:InitButtonGamepadView()
   self.Btn_Enter:SetGamePadImg("A")
   self.Btn_Rewrite:SetGamePadImg("A")
   self.Btn_Apply:SetGamePadImg("X")
-  self.Controller_Erase:CreateCommonKey({
-    KeyInfoList = {
-      {
-        Type = "Img",
-        ImgShortPath = UIConst.GamePadImgKey.LeftThumb
-      }
-    }
-  })
 end
 
 function M:InitKeyboardView()
@@ -372,14 +364,12 @@ function M:HideButtonGamepadIcon()
   self.Btn_Enter:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
   self.Btn_Rewrite:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
   self.Btn_Apply:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
-  self.Controller_Erase:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 function M:ShowButtonGamepadIcon()
   self.Btn_Enter:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Btn_Rewrite:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Btn_Apply:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  self.Controller_Erase:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
 end
 
 function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
@@ -394,14 +384,8 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
         self.Btn_Rewrite:OnBtnClicked()
       end
       IsEventHandled = true
-    elseif InKeyName == UIConst.GamePadKey.FaceButtonLeft then
-      if 1 == self.WS_Btn:GetActiveWidgetIndex() then
-        self.Btn_Apply:OnBtnClicked()
-        IsEventHandled = true
-      end
-    elseif InKeyName == UIConst.GamePadKey.LeftThumb then
-      self:OnClickErase()
-      AudioManager(self):PlayUISound(nil, "event:/ui/common/click_btn_small", "AutoChessPreset_EraseSound", nil)
+    elseif InKeyName == UIConst.GamePadKey.FaceButtonLeft and 1 == self.WS_Btn:GetActiveWidgetIndex() then
+      self.OnClickApply()
       IsEventHandled = true
     end
   end

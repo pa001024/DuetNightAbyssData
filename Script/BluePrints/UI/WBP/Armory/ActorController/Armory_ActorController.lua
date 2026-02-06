@@ -510,10 +510,6 @@ function M:RealPlayMontageAndCamera(ArmoryPlayer, MontageTag, bShowOrHideWeapon,
 end
 
 function M:ResetActorRotation()
-  if self.MVPActorController then
-    self.MVPActorController:ResetActorRotation()
-    return
-  end
   self.ArmoryHelper:ResetRotation()
   local ArmoryPet = self:GetPetActor()
   if ArmoryPet and ArmoryPet.SkeletalMesh then
@@ -876,7 +872,7 @@ function M:Component_OnDestruct()
 end
 
 function M:ViewTarget()
-  if self.IsControled or self.bDestructed then
+  if self.IsControled then
     return
   end
   if not IsValid(self.ArmoryHelper) then

@@ -74,17 +74,13 @@ function AutoChessRewardModel:MakeRewardData(EventId)
             Item.CanReceive = CommonQuestActivity[QuestId].Progress >= CommonQuestActivity[QuestId].Target and false == CommonQuestActivity[QuestId].RewardsGot
           end
           Item.Type = QuestPhaseId
-          if CommonQuestActivity[QuestId] then
-            Item.RewardsGot = CommonQuestActivity[QuestId].RewardsGot
-          end
+          Item.RewardsGot = CommonQuestActivity[QuestId].RewardsGot
           Item.NotreachText = GText("UI_Archive_CollectionInProgress")
           Item.Hint = GText(Config.StarterQuestDes)
           Item.ReddotName = "AutoChessReward"
           Item.ReceiveButtonText = GText("UI_Archive_CollectionClaim")
           Item.Num = Config.Target
-          if CommonQuestActivity[QuestId] then
-            Item.TextProgress = "(" .. tostring(CommonQuestActivity[QuestId].Progress) .. "/" .. tostring(CommonQuestActivity[QuestId].Target) .. ")"
-          end
+          Item.TextProgress = "(" .. tostring(CommonQuestActivity[QuestId].Progress) .. "/" .. tostring(CommonQuestActivity[QuestId].Target) .. ")"
           Item.HideProgressAfterGot = true
           Item.ReceiveCallBack = self.GetReward
           Item.ReceiveParm = {}

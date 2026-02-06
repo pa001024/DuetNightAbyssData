@@ -30,7 +30,7 @@ function Component:InitPortraitReddotNode()
     for UniqueId, CacheData in pairs(CacheDetail) do
       local Find = false
       for index, value in ipairs(Avatar.HeadIconList) do
-        if value == UniqueId then
+        if tostring(value) == UniqueId then
           Find = true
         end
       end
@@ -40,10 +40,8 @@ function Component:InitPortraitReddotNode()
     end
     for _, Value in pairs(Avatar.HeadIconList or {}) do
       local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("Portrait")
-      if CacheDetail[Value] then
+      if CacheDetail[tostring(Value)] then
         ReddotManager.IncreaseLeafNodeCount("Portrait")
-      elseif nil == CacheDetail[Value] then
-        CacheDetail[Value] = false
       end
     end
   end
@@ -64,7 +62,7 @@ function Component:InitPortraitFrameReddotNode()
     for UniqueId, CacheData in pairs(CacheDetail) do
       local Find = false
       for index, value in ipairs(Avatar.HeadFrameList) do
-        if value == UniqueId then
+        if tostring(value) == UniqueId then
           Find = true
         end
       end
@@ -74,10 +72,8 @@ function Component:InitPortraitFrameReddotNode()
     end
     for _, Value in pairs(Avatar.HeadFrameList or {}) do
       local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("PortraitFrame")
-      if CacheDetail[Value] then
+      if CacheDetail[tostring(Value)] then
         ReddotManager.IncreaseLeafNodeCount("PortraitFrame")
-      elseif nil == CacheDetail[Value] then
-        CacheDetail[Value] = false
       end
     end
   end
@@ -151,10 +147,10 @@ end
 
 function Component:_OnPropChangeHeadIconList()
   for _, Value in ipairs(self.HeadIconList) do
-    local CacheKey = Value
+    local CacheKey = tostring(Value)
     local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("Portrait")
-    if nil == CacheDetail[CacheKey] and 10001 ~= CacheKey then
-      UIUtils.TryAddReddotCacheDetailNumber(CacheKey, "Portrait")
+    if nil == CacheDetail[CacheKey] and "10001" ~= CacheKey then
+      UIUtils.TryAddReddotCacheDetail(CacheKey, "Portrait")
     end
   end
 end
@@ -166,10 +162,10 @@ end
 
 function Component:_OnPropChangeHeadFrameList()
   for _, Value in ipairs(self.HeadFrameList) do
-    local CacheKey = Value
+    local CacheKey = tostring(Value)
     local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("PortraitFrame")
-    if nil == CacheDetail[CacheKey] and -1 ~= CacheKey then
-      UIUtils.TryAddReddotCacheDetailNumber(CacheKey, "PortraitFrame")
+    if nil == CacheDetail[CacheKey] and "-1" ~= CacheKey then
+      UIUtils.TryAddReddotCacheDetail(CacheKey, "PortraitFrame")
     end
   end
 end

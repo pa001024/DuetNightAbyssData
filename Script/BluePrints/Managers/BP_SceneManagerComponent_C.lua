@@ -363,7 +363,7 @@ function BP_SceneManagerComponent_C:UpdateOneSceneGuideIcon(TargetEid, IsAdd, Is
     if Battle(self) then
       TargetActor = Battle(self):GetEntity(TargetEid)
     end
-    if IsValid(TargetActor) then
+    if IsValid(TargetActor) and (TargetActor.OpenState == nil or TargetActor.OpenState == false) then
       local GuideOp = self.CurSceneGuideEids[TargetEid] == nil and "Add" or "Modify"
       self:UpdateSceneGuideIcon(TargetEid, TargetActor, nil, GuideOp, true, nil, IsPlayerEid)
     else
@@ -437,7 +437,7 @@ function BP_SceneManagerComponent_C:UpdateAllSceneGuideIcon()
     if IsValid(TargetActor) and TargetActor.IsCombatItemBase then
       IsCombatItemBase = TargetActor:IsCombatItemBase()
     end
-    if IsValid(TargetActor) then
+    if IsValid(TargetActor) and (nil == TargetActor.OpenState or TargetActor.OpenState == false) and true == IsCombatItemBase then
       local GuideOp = nil == self.CurSceneGuideEids[TargetEid] and "Add" or "Modify"
       self:UpdateSceneGuideIcon(TargetEid, TargetActor, nil, GuideOp, true)
     else
@@ -458,8 +458,10 @@ function BP_SceneManagerComponent_C:UpdateAllCommonGuideIcon()
   local CommonGuideInfos = {}
   for k, v in pairs(self.CurSceneGuideEids) do
     DebugPrint("DebugGuideEid UpdateAllCommonGuideIcon self.CurSceneGuideEids Loop key", k, "v.IsPlayerEid", v.IsPlayerEid)
-    CommonGuideInfos[k] = v
-    v.IsActive = false
+    if not v.IsPlayerEid then
+      CommonGuideInfos[k] = v
+      v.IsActive = false
+    end
   end
   local AllGuideEids = FIntArray()
   if nil ~= GameState.GuideEids then
@@ -479,8 +481,7 @@ function BP_SceneManagerComponent_C:UpdateAllCommonGuideIcon()
     if nil ~= CommonGuideInfos[TargetEid] then
       CommonGuideInfos[TargetEid].IsActive = true
     end
-    if IsValid(TargetActor) then
-      DebugPrint("DebugGuideEid UpdateAllCommonGuideIcon GuideEids TargetActor.OpenState", TargetActor.OpenState)
+    if IsValid(TargetActor) and (nil == TargetActor.OpenState or false == TargetActor.OpenState) then
       local GuideOp = nil == CommonGuideInfos[TargetEid] and "Add" or "Modify"
       self:UpdateSceneGuideIcon(TargetEid, TargetActor, nil, GuideOp, true)
     else
@@ -515,11 +516,13 @@ function BP_SceneManagerComponent_C:UpdateAllPlayerGuideIcon()
   local PlayerGuideInfos = {}
   for k, v in pairs(self.CurSceneGuideEids) do
     DebugPrint("DebugGuideEid UpdateAllPlayerGuideIcon self.CurSceneGuideEids Loop key", k, "v.IsPlayerEid", v.IsPlayerEid)
-    PlayerGuideInfos[k] = v
-    local GuideIcon = UIManager:GetUIObj(tostring(k))
-    if GuideIcon and nil ~= GuideIcon.PlayerIndex and GuideIcon.PlayerIndex > 0 then
-    else
-      v.IsActive = false
+    if v.IsPlayerEid then
+      PlayerGuideInfos[k] = v
+      local GuideIcon = UIManager:GetUIObj(tostring(k))
+      if GuideIcon and nil ~= GuideIcon.PlayerIndex and GuideIcon.PlayerIndex > 0 then
+      else
+        v.IsActive = false
+      end
     end
   end
   local AllGuideEids = FIntArray()
@@ -537,8 +540,7 @@ function BP_SceneManagerComponent_C:UpdateAllPlayerGuideIcon()
     if nil ~= PlayerGuideInfos[TargetEid] then
       PlayerGuideInfos[TargetEid].IsActive = true
     end
-    if IsValid(TargetActor) then
-      DebugPrint("DebugGuideEid UpdateAllCommonGuideIcon PlayerGuideEids TargetActor.OpenState", TargetActor.OpenState)
+    if IsValid(TargetActor) and (nil == TargetActor.OpenState or false == TargetActor.OpenState) then
       local GuideOp = nil == PlayerGuideInfos[TargetEid] and "Add" or "Modify"
       self:UpdateSceneGuideIcon(TargetEid, TargetActor, nil, GuideOp, true, nil, true)
     else

@@ -197,13 +197,13 @@ function Menu_Portrait_PC_C:RemoveReddotListener(ReddotNodeName)
 end
 
 function Menu_Portrait_PC_C:OnPortraitReddotChange(Count)
-  local CacheKey = self.Content.PortraitId
+  local CacheKey = tostring(self.Content.PortraitId)
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("Portrait")
   self.New:SetEnable(CacheDetail[CacheKey] and Count > 0)
 end
 
 function Menu_Portrait_PC_C:OnPortraitFrameReddotChange(Count)
-  local CacheKey = self.Content.PortraitId
+  local CacheKey = tostring(self.Content.PortraitId)
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("PortraitFrame")
   self.New:SetEnable(CacheDetail[CacheKey] and Count > 0)
 end

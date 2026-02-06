@@ -174,8 +174,7 @@ return ReadOnly("CharAccessory", {
     RegainItemId = 110,
     RegainItemNum = 4,
     SortPriority = 402,
-    Sound = "SOUND_ITEM_CLOTH",
-    UnlockOption = "UI_Accessory_Unlock_Event"
+    Sound = "SOUND_ITEM_CLOTH"
   },
   [10012] = {
     AccessoryId = 10012,
@@ -998,7 +997,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10067",
     Rarity = 5,
     SortPriority = 505,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [10068] = {
@@ -1011,7 +1009,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10068",
     Rarity = 5,
     SortPriority = 505,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Exchange"
   },
   [10069] = {
@@ -1024,7 +1021,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10069",
     Rarity = 5,
     SortPriority = 505,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Exchange"
   },
   [10070] = {
@@ -1037,7 +1033,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10070",
     Rarity = 5,
     SortPriority = 505,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Exchange"
   },
   [10071] = {
@@ -1050,7 +1045,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10071",
     Rarity = 5,
     SortPriority = 505,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Exchange"
   },
   [10072] = {
@@ -1063,7 +1057,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10072",
     Rarity = 4,
     SortPriority = 408,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [10073] = {
@@ -1077,7 +1070,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10073",
     Rarity = 4,
     SortPriority = 408,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [10074] = {
@@ -1091,7 +1083,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10074",
     Rarity = 4,
     SortPriority = 408,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [10075] = {
@@ -1105,7 +1096,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10075",
     Rarity = 4,
     SortPriority = 408,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [10076] = {
@@ -1118,7 +1108,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10076",
     Rarity = 5,
     SortPriority = 506,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [10077] = {
@@ -1132,7 +1121,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10077",
     Rarity = 5,
     SortPriority = 506,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [10078] = {
@@ -1146,7 +1134,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10078",
     Rarity = 5,
     SortPriority = 506,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [10079] = {
@@ -1160,7 +1147,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10079",
     Rarity = 5,
     SortPriority = 506,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [10080] = {
@@ -1173,7 +1159,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10080",
     Rarity = 5,
     SortPriority = 507,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [10081] = {
@@ -1187,7 +1172,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10081",
     Rarity = 5,
     SortPriority = 507,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [10082] = {
@@ -1201,7 +1185,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10082",
     Rarity = 5,
     SortPriority = 507,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [10083] = {
@@ -1214,7 +1197,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10083",
     Rarity = 5,
     SortPriority = 508,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [10084] = {
@@ -1228,7 +1210,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10084",
     Rarity = 5,
     SortPriority = 508,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [10085] = {
@@ -1242,7 +1223,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10085",
     Rarity = 5,
     SortPriority = 508,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [10086] = {
@@ -1256,7 +1236,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10086",
     Rarity = 5,
     SortPriority = 508,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [10087] = {
@@ -1269,7 +1248,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10087",
     Rarity = 4,
     SortPriority = 409,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Event"
   },
   [10088] = {
@@ -1282,7 +1260,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10088",
     Rarity = 4,
     SortPriority = 409,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Event"
   },
   [10089] = {
@@ -1295,7 +1272,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_10089",
     Rarity = 4,
     SortPriority = 409,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Event"
   },
   [10090] = {
@@ -1349,7 +1325,6 @@ return ReadOnly("CharAccessory", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Fx07_01.T_Fashion_Fx07_01'",
     Name = "UI_Accessory_Name_11002",
     Rarity = 4,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [11003] = {
@@ -1360,7 +1335,6 @@ return ReadOnly("CharAccessory", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Fx08_01.T_Fashion_Fx08_01'",
     Name = "UI_Accessory_Name_11003",
     Rarity = 5,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Exchange"
   },
   [11004] = {
@@ -1368,10 +1342,8 @@ return ReadOnly("CharAccessory", {
     AccessoryType = "FX_PlungingATK",
     Des = "UI_Accessory_Desc_11004",
     GroupName = "FallAttack_Costume_03",
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Fx13.T_Fashion_Fx13'",
     Name = "UI_Accessory_Name_11004",
     Rarity = 5,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Exchange"
   },
   [12001] = {
@@ -1382,9 +1354,7 @@ return ReadOnly("CharAccessory", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Hat03.T_Fashion_Hat03'",
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hat/Mesh/Player_Hat07_SM.Player_Hat07_SM'",
     Name = "UI_Accessory_Name_12001",
-    Rarity = 4,
-    Sound = "SOUND_ITEM_CLOTH",
-    UnlockOption = "UI_Accessory_Unlock_Shop"
+    Rarity = 4
   },
   [12002] = {
     AccessoryId = 12002,
@@ -1394,9 +1364,7 @@ return ReadOnly("CharAccessory", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Hat04.T_Fashion_Hat04'",
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hat/Mesh/Player_Hat06_SM.Player_Hat06_SM'",
     Name = "UI_Accessory_Name_12002",
-    Rarity = 4,
-    Sound = "SOUND_ITEM_CLOTH",
-    UnlockOption = "UI_Accessory_Unlock_Shop"
+    Rarity = 4
   },
   [12003] = {
     AccessoryId = 12003,
@@ -1406,9 +1374,7 @@ return ReadOnly("CharAccessory", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Hat01.T_Fashion_Hat01'",
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hat/Mesh/Player_Hat10_SM.Player_Hat10_SM'",
     Name = "UI_Accessory_Name_12003",
-    Rarity = 4,
-    Sound = "SOUND_ITEM_CLOTH",
-    UnlockOption = "UI_Accessory_Unlock_Shop"
+    Rarity = 4
   },
   [12004] = {
     AccessoryId = 12004,
@@ -1418,9 +1384,7 @@ return ReadOnly("CharAccessory", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Hat02.T_Fashion_Hat02'",
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hat/Mesh/Player_Hat08_SM.Player_Hat08_SM'",
     Name = "UI_Accessory_Name_12004",
-    Rarity = 4,
-    Sound = "SOUND_ITEM_CLOTH",
-    UnlockOption = "UI_Accessory_Unlock_Shop"
+    Rarity = 4
   },
   [12121] = {
     AccessoryId = 12121,
@@ -1428,12 +1392,9 @@ return ReadOnly("CharAccessory", {
     AccessoryType = "Hair",
     Des = "UI_Skin_Des_0010",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
-    IsForbidCustom = true,
-    IsTail = true,
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hair/Mesh/Player_Hair04_SM.Player_Hair04_SM'",
     Name = "UI_Skin_Name_0010",
-    Rarity = 4,
-    Sound = "SOUND_ITEM_CLOTH"
+    Rarity = 4
   },
   [12122] = {
     AccessoryId = 12122,
@@ -1441,12 +1402,9 @@ return ReadOnly("CharAccessory", {
     AccessoryType = "Hat",
     Des = "UI_Accessory_Desc_12122",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head48.T_Fashion_Head48'",
-    IsForbidCustom = true,
-    IsTail = true,
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hair/Mesh/Player_Hair01_SM.Player_Hair01_SM'",
     Name = "UI_Accessory_Name_12122",
     Rarity = 4,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [12123] = {
@@ -1455,12 +1413,9 @@ return ReadOnly("CharAccessory", {
     AccessoryType = "Hat",
     Des = "UI_Accessory_Desc_12123",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head49.T_Fashion_Head49'",
-    IsForbidCustom = true,
-    IsTail = true,
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hair/Mesh/Player_Hair02_SM.Player_Hair02_SM'",
     Name = "UI_Accessory_Name_12123",
     Rarity = 4,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Event"
   },
   [12124] = {
@@ -1469,12 +1424,9 @@ return ReadOnly("CharAccessory", {
     AccessoryType = "Hat",
     Des = "UI_Accessory_Desc_12124",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head50.T_Fashion_Head50'",
-    IsForbidCustom = true,
-    IsTail = true,
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hair/Mesh/Player_Hair03B_SM.Player_Hair03B_SM'",
     Name = "UI_Accessory_Name_12124",
     Rarity = 4,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [12125] = {
@@ -1483,13 +1435,10 @@ return ReadOnly("CharAccessory", {
     AccessoryType = "Hat",
     Des = "UI_Accessory_Desc_12124",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head51.T_Fashion_Head51'",
-    IsForbidCustom = true,
     IsHide = true,
-    IsTail = true,
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hair/Mesh/Player_Hair03A_SM.Player_Hair03A_SM'",
     Name = "UI_Accessory_Name_12125",
-    Rarity = 4,
-    Sound = "SOUND_ITEM_CLOTH"
+    Rarity = 4
   },
   [12126] = {
     AccessoryId = 12126,
@@ -1497,13 +1446,10 @@ return ReadOnly("CharAccessory", {
     AccessoryType = "Hat",
     Des = "UI_Accessory_Desc_12124",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head47.T_Fashion_Head47'",
-    IsForbidCustom = true,
     IsHide = true,
-    IsTail = true,
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hair/Mesh/Player_Hair03C_SM.Player_Hair03C_SM'",
     Name = "UI_Accessory_Name_12126",
-    Rarity = 4,
-    Sound = "SOUND_ITEM_CLOTH"
+    Rarity = 4
   },
   [13001] = {
     AccessoryId = 13001,
@@ -1515,7 +1461,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_13001",
     Rarity = 4,
     SortPriority = 402,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [13002] = {
@@ -1529,7 +1474,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_13002",
     Rarity = 4,
     SortPriority = 402,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [13003] = {
@@ -1543,7 +1487,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_13003",
     Rarity = 4,
     SortPriority = 402,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [13004] = {
@@ -1557,7 +1500,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_13004",
     Rarity = 4,
     SortPriority = 402,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [13005] = {
@@ -1570,7 +1512,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_13005",
     Rarity = 5,
     SortPriority = 510,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [13006] = {
@@ -1586,7 +1527,6 @@ return ReadOnly("CharAccessory", {
     RegainItemId = 110,
     RegainItemNum = 20,
     SortPriority = 510,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [13007] = {
@@ -1600,7 +1540,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_13007",
     Rarity = 5,
     SortPriority = 510,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [13008] = {
@@ -1614,7 +1553,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_13008",
     Rarity = 5,
     SortPriority = 510,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [13009] = {
@@ -1628,7 +1566,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_13009",
     Rarity = 4,
     SortPriority = 403,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [13010] = {
@@ -1642,7 +1579,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_13010",
     Rarity = 4,
     SortPriority = 403,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [13011] = {
@@ -1656,7 +1592,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_13011",
     Rarity = 4,
     SortPriority = 403,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [13012] = {
@@ -1670,7 +1605,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_13012",
     Rarity = 4,
     SortPriority = 403,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Event"
   },
   [13013] = {
@@ -1684,7 +1618,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_13013",
     Rarity = 4,
     SortPriority = 403,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [13014] = {
@@ -1698,7 +1631,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_13014",
     Rarity = 4,
     SortPriority = 403,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [13015] = {
@@ -1712,7 +1644,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_13015",
     Rarity = 4,
     SortPriority = 403,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [13016] = {
@@ -1726,7 +1657,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_13016",
     Rarity = 4,
     SortPriority = 403,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [13017] = {
@@ -1739,7 +1669,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_13017",
     Rarity = 5,
     SortPriority = 511,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [13018] = {
@@ -1753,7 +1682,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_13018",
     Rarity = 5,
     SortPriority = 511,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [13019] = {
@@ -1767,7 +1695,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_13019",
     Rarity = 5,
     SortPriority = 511,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [13020] = {
@@ -1781,7 +1708,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_13020",
     Rarity = 5,
     SortPriority = 511,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [20001] = {
@@ -2705,7 +2631,6 @@ return ReadOnly("CharAccessory", {
     RegainItemId = 110,
     RegainItemNum = 20,
     SortPriority = 504,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [20064] = {
@@ -2719,7 +2644,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_20064",
     Rarity = 5,
     SortPriority = 504,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [20065] = {
@@ -2733,7 +2657,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_20065",
     Rarity = 5,
     SortPriority = 504,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [20066] = {
@@ -2746,7 +2669,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_20066",
     Rarity = 5,
     SortPriority = 506,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [20067] = {
@@ -2762,7 +2684,6 @@ return ReadOnly("CharAccessory", {
     RegainItemId = 110,
     RegainItemNum = 20,
     SortPriority = 506,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [20068] = {
@@ -2776,7 +2697,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_20068",
     Rarity = 5,
     SortPriority = 506,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [20069] = {
@@ -2790,7 +2710,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_20069",
     Rarity = 5,
     SortPriority = 506,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [20070] = {
@@ -2803,7 +2722,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_20070",
     Rarity = 4,
     SortPriority = 411,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [20071] = {
@@ -2817,7 +2735,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_20071",
     Rarity = 4,
     SortPriority = 411,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [20072] = {
@@ -2831,7 +2748,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_20072",
     Rarity = 4,
     SortPriority = 411,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [20073] = {
@@ -2845,7 +2761,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_20073",
     Rarity = 4,
     SortPriority = 411,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [20074] = {
@@ -2857,7 +2772,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_20074",
     Rarity = 5,
     SortPriority = 412,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [20075] = {
@@ -2870,7 +2784,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_20075",
     Rarity = 5,
     SortPriority = 412,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [20076] = {
@@ -2883,7 +2796,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_20076",
     Rarity = 5,
     SortPriority = 412,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [20077] = {
@@ -2896,7 +2808,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_20077",
     Rarity = 5,
     SortPriority = 412,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [21001] = {
@@ -2913,7 +2824,6 @@ return ReadOnly("CharAccessory", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Fx07_02.T_Fashion_Fx07_02'",
     Name = "UI_Accessory_Name_21002",
     Rarity = 4,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop",
     VisualEffectId = 83002
   },
@@ -2924,7 +2834,6 @@ return ReadOnly("CharAccessory", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Fx08_02.T_Fashion_Fx08_02'",
     Name = "UI_Accessory_Name_21003",
     Rarity = 5,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     VisualEffectId = 83003
   },
@@ -2932,10 +2841,8 @@ return ReadOnly("CharAccessory", {
     AccessoryId = 21004,
     AccessoryType = "FX_HelixLeap",
     Des = "UI_Accessory_Desc_21004",
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Fx12.T_Fashion_Fx12'",
     Name = "UI_Accessory_Name_21004",
     Rarity = 5,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     VisualEffectId = 83004
   },
@@ -3262,7 +3169,6 @@ return ReadOnly("CharAccessory", {
     Rarity = 5,
     ReleaseVersion = 120,
     SortPriority = 504,
-    Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [30021] = {
@@ -3275,7 +3181,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_30021",
     Rarity = 4,
     SortPriority = 403,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Impression"
   },
   [30022] = {
@@ -3388,7 +3293,6 @@ return ReadOnly("CharAccessory", {
     RegainItemId = 110,
     RegainItemNum = 20,
     SortPriority = 504,
-    Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [30029] = {
@@ -3403,7 +3307,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_30029",
     Rarity = 5,
     SortPriority = 504,
-    Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [30030] = {
@@ -3418,7 +3321,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_30030",
     Rarity = 5,
     SortPriority = 504,
-    Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [30031] = {
@@ -3431,7 +3333,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_30031",
     Rarity = 5,
     SortPriority = 504,
-    Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [30032] = {
@@ -3450,9 +3351,7 @@ return ReadOnly("CharAccessory", {
     MVPKey = "Youyou",
     Montage = "MVPShow_01_Montage",
     Name = "UI_Accessory_Name_31001",
-    Rarity = 5,
-    Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Exchange"
+    Rarity = 5
   },
   [31002] = {
     AccessoryId = 31002,
@@ -3462,9 +3361,7 @@ return ReadOnly("CharAccessory", {
     MVPKey = "Pini",
     Montage = "MVPShow_02_Montage",
     Name = "UI_Accessory_Name_31002",
-    Rarity = 5,
-    Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Exchange"
+    Rarity = 5
   },
   [39998] = {
     AccessoryId = 39998,
@@ -3898,7 +3795,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_40029",
     Rarity = 5,
     SortPriority = 507,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [40030] = {
@@ -3913,7 +3809,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_40030",
     Rarity = 5,
     SortPriority = 507,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [40031] = {
@@ -3928,7 +3823,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_40031",
     Rarity = 5,
     SortPriority = 507,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [40032] = {
@@ -3943,7 +3837,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_40032",
     Rarity = 5,
     SortPriority = 507,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [40033] = {
@@ -3958,7 +3851,6 @@ return ReadOnly("CharAccessory", {
     Rarity = 5,
     SocketName = "root",
     SortPriority = 507,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [40034] = {
@@ -4004,7 +3896,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_40038",
     Rarity = 5,
     SortPriority = 506,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [40039] = {
@@ -4018,7 +3909,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_40039",
     Rarity = 5,
     SortPriority = 506,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [40040] = {
@@ -4032,7 +3922,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_40040",
     Rarity = 5,
     SortPriority = 506,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [40041] = {
@@ -4046,7 +3935,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_40041",
     Rarity = 5,
     SortPriority = 506,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [40042] = {
@@ -4060,7 +3948,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_40042",
     Rarity = 5,
     SortPriority = 506,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [40043] = {
@@ -4074,7 +3961,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_40043",
     Rarity = 5,
     SortPriority = 506,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [40044] = {
@@ -4087,7 +3973,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_40044",
     Rarity = 5,
     SortPriority = 508,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [40045] = {
@@ -4101,7 +3986,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_40045",
     Rarity = 5,
     SortPriority = 508,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [40046] = {
@@ -4115,7 +3999,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_40046",
     Rarity = 5,
     SortPriority = 508,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [40047] = {
@@ -4129,7 +4012,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_40047",
     Rarity = 5,
     SortPriority = 508,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [40048] = {
@@ -4142,7 +4024,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_40048",
     Rarity = 5,
     SortPriority = 509,
-    Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [40049] = {
@@ -4158,7 +4039,6 @@ return ReadOnly("CharAccessory", {
     RegainItemId = 110,
     RegainItemNum = 20,
     SortPriority = 509,
-    Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [40050] = {
@@ -4172,7 +4052,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_40050",
     Rarity = 5,
     SortPriority = 509,
-    Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [40051] = {
@@ -4186,7 +4065,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_40051",
     Rarity = 5,
     SortPriority = 509,
-    Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [40052] = {
@@ -4199,7 +4077,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_40052",
     Rarity = 5,
     SortPriority = 510,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [40053] = {
@@ -4213,7 +4090,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_40053",
     Rarity = 5,
     SortPriority = 510,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [40054] = {
@@ -4227,7 +4103,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_40054",
     Rarity = 5,
     SortPriority = 510,
-    Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [49998] = {
@@ -4279,8 +4154,7 @@ return ReadOnly("CharAccessory", {
     RegainItemId = 110,
     RegainItemNum = 4,
     SortPriority = 5,
-    Sound = "SOUND_ITEM_CUTE",
-    UnlockOption = "UI_Accessory_Unlock_Exchange"
+    Sound = "SOUND_ITEM_CUTE"
   },
   [50004] = {
     AccessoryId = 50004,
@@ -4346,7 +4220,7 @@ return ReadOnly("CharAccessory", {
     AccessoryType = "FX_Footprint",
     CreatureId = 70003,
     Des = "UI_Accessory_Desc_70003",
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Fx10_02.T_Fashion_Fx10_02'",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_YellowChick",
     Name = "UI_Accessory_Name_70003",
     Rarity = 5,
     SortPriority = 503,
@@ -4449,7 +4323,7 @@ return ReadOnly("CharAccessory", {
     AccessoryType = "FX_Footprint",
     CreatureId = 70031,
     Des = "UI_Accessory_Desc_70003",
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Fx10_01.T_Fashion_Fx10_01'",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_YellowChick",
     Name = "UI_Accessory_Name_70031",
     Rarity = 5,
     SortPriority = 503,
@@ -4462,7 +4336,7 @@ return ReadOnly("CharAccessory", {
     AccessoryType = "FX_Footprint",
     CreatureId = 70032,
     Des = "UI_Accessory_Desc_70003",
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Fx10.T_Fashion_Fx10'",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_YellowChick",
     Name = "UI_Accessory_Name_70032",
     Rarity = 5,
     SortPriority = 503,
@@ -4475,7 +4349,7 @@ return ReadOnly("CharAccessory", {
     AccessoryType = "FX_Footprint",
     CreatureId = 70033,
     Des = "UI_Accessory_Desc_70003",
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Fx10_03.T_Fashion_Fx10_03'",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_YellowChick",
     Name = "UI_Accessory_Name_70033",
     Rarity = 5,
     SortPriority = 503,
@@ -4551,7 +4425,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_80003",
     Rarity = 5,
     SortPriority = 503,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     VisualEffectId = 80030
   },
@@ -4645,7 +4518,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_80031",
     Rarity = 5,
     SortPriority = 503,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     VisualEffectId = 80031
   },
@@ -4657,7 +4529,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_80032",
     Rarity = 5,
     SortPriority = 503,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     VisualEffectId = 80032
   },
@@ -4669,7 +4540,6 @@ return ReadOnly("CharAccessory", {
     Name = "UI_Accessory_Name_80033",
     Rarity = 5,
     SortPriority = 503,
-    Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     VisualEffectId = 80033
   },

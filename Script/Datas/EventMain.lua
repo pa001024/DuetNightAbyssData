@@ -467,7 +467,7 @@ return ReadOnly("EventMain", {
     EventId = 103019,
     EventName = "Event_Title_103019",
     EventNameBPPath = "/Game/UI/WBP/Activity/Widget/InviteCode/WBP_Activity_InviteCode_Title.WBP_Activity_InviteCode_Title",
-    EventStartTime = LocalTimeProxy(1770602400),
+    EventStartTime = LocalTimeProxy(1767924000),
     EventTypeId = 103,
     EventUnlockCondition = 4220,
     MobileBluePrint = "/Game/UI/WBP/Activity/Mobile/ActivityJump/WBP_Activity_Jump_M.WBP_Activity_Jump_M",

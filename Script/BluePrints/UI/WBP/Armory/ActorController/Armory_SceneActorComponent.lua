@@ -157,10 +157,6 @@ function M:UnloadPreviewScene()
         if EnvirSystemActor then
           EnvirSystemActor.Disable = true
         end
-        local Controller = UE4.UGameplayStatics.GetPlayerController(self.ArmoryHelper, 0)
-        if Controller then
-          UTalkSequenceFunctionLibrary.UpdatePlayerCameraManager(Controller)
-        end
         WorldLoader:UnloadPreviewLevel("PreviewLevel" .. self.EPreviewSceneType)
         if IsValid(self.ArmoryHelper) then
           self.ArmoryHelper:SetPreviewLevelActor(nil)

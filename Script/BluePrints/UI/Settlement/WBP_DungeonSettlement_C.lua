@@ -1069,7 +1069,7 @@ end
 
 function M:Exit()
   DebugPrint("DungeonSettlement: ClickExitButton")
-  self:BlockAllUIInput(true, "SP_DisplayOnly")
+  self:BlockAllUIInput(true)
   local Avatar = GWorld:GetAvatar()
   Avatar:ExitDungeonSettlement()
   EventManager:AddEvent(EventID.OnExitDungeon, self, self.DefaultExit)
@@ -1105,7 +1105,6 @@ function M:OnCloseSettlementUI()
     AudioManager(self):StopSound(self, "WinSettlement")
   end
   self:SetCharDirLight(false)
-  ChatController:GetModel():ClearReddotCount(CommonConst.ChatChannel.SettlementOnline)
   self:Close()
 end
 

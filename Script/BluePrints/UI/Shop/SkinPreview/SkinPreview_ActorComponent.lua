@@ -831,7 +831,6 @@ function M:SetCameraToDefault()
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   local PreviewController = self.ActorController
   if Controller and Player and PreviewController then
-    self:CloseMVPSequence()
     Controller:SetViewTargetWithBlend(Player)
     self.CurrentCameraState = "Default"
   end
@@ -862,6 +861,7 @@ function M:DestroyPreviewActor()
   if self.ActorController then
     self.ActorController:DestroyMount()
     self.ActorController:OnDestruct()
+    self.ActorController:TryDestroyActors()
     self.ActorController = nil
   end
 end

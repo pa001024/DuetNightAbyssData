@@ -323,17 +323,6 @@ function M:DisableCubeInteraction()
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
   PlayerController.bEnableMouseOverEvents = false
   PlayerController.bEnableClickEvents = false
-  EventManager:FireEvent(EventID.OnAutoChessDisableCubeInteraction)
-end
-
-function M:IsMonsterCreating()
-  if not self.AutoChessFormation then
-    self:GetAutoChessFormation()
-  end
-  if self.AutoChessFormation.IsMonsterCreating then
-    return self.AutoChessFormation:IsMonsterCreating()
-  end
-  return false
 end
 
 AssembleComponents(M)

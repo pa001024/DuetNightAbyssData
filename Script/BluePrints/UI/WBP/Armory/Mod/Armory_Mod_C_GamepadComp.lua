@@ -18,11 +18,6 @@ function Component:InitGamePad()
     }
   })
   self.Btn_EditPolarity:SetDefaultGamePadImg("RS")
-  self.Key_Search:CreateCommonKey({
-    KeyInfoList = {
-      {Type = "Img", ImgShortPath = "LS"}
-    }
-  })
   self.Btn_Auto:SetDefaultGamePadImg("Y")
   self.Btn_Discharge:SetDefaultGamePadImg("X")
   self.Btn_Discharge:TryOverrideLongPressClickFunc(function()
@@ -202,10 +197,6 @@ function Component:Handle_OnGamePadDown(InKeyName)
     elseif "Gamepad_RightThumbstick" == InKeyName then
       self.Btn_EditPolarity:OnBtnClicked()
       return true
-    elseif "Gamepad_LeftThumbstick" == InKeyName then
-      self.Com_Search:SetFocus()
-      self.IsFocusInSpecialItem = true
-      return true
     elseif "Gamepad_Special_Left" == InKeyName then
       self.Btn_Info:SetFocus()
       self.Key_Gamepad:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -298,7 +289,6 @@ function Component:SwitchMainUIToPCOrMoble()
   self.Key_FocusList_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.List_Role:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.CheckBox_Mod:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-  self.Key_Search:SetVisibility(UIConst.VisibilityOp.Collapsed)
   ModModel:SetGamePadSelectedStuff(nil, nil)
   self.IsFocusOnResourceBar = false
 end
@@ -351,7 +341,7 @@ function Component:SwitchMainUIToGamePad()
   if self.PolarityEditWidget then
     self.PolarityEditWidget.Com_Cost.Key:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
-  self.Mod_Plan.Key_GamePad:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+  self.Mod_Plan.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Common_PolarityList_PC.Key_LT:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Common_PolarityList_PC.Key_RT:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Key_FocusList_GamePad:SetVisibility(UIConst.VisibilityOp.Visible)
@@ -361,7 +351,6 @@ function Component:SwitchMainUIToGamePad()
   self.List_Role.BP_OnItemSelectionChanged:Clear()
   self.List_Role.BP_OnItemSelectionChanged:Add(self, self.OnRoleListItemSelectionChanged)
   self.List_Select_Mod.BP_OnItemSelectionChanged:Add(self, self.OnModListItemChange)
-  self.Key_Search:SetVisibility(UIConst.VisibilityOp.Visible)
   self:SetGamepadNavigationRule()
   self:SetDefaultGamepadFocus()
   self.Btn_Share:BindEventOnAddedToFocusPath(self, self.OnBtnCopyLinkAddedToFocusPath)

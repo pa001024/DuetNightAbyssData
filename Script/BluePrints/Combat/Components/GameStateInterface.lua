@@ -419,28 +419,10 @@ end
 function Component:OnRep_ExitInfo()
   local ExitMechanismArray = self.MechanismMap:FindRef("ExitTrigger")
   local ExitMechanism
-  if ExitMechanismArray and ExitMechanismArray.Array then
+  if ExitMechanismArray then
     ExitMechanism = ExitMechanismArray.Array:ToTable()[1]
   end
   local bIsWaiting = ExitMechanism and ExitMechanism:IsPlayerWaiting(UE4.UGameplayStatics.GetPlayerController(self, 0).Character)
-  if not ExitMechanism then
-    local PlayerCharacter = UE4.UGameplayStatics.GetPlayerController(self, 0).Character
-    local PCs = self:GetAllPlayerCharacters()
-    local MinDist = math.huge
-    local PlayerCharacterDist = math.huge
-    for _, Actor in pairs(PCs or {}) do
-      if PlayerCharacter == Actor:Cast(UE4.APlayerCharacter) then
-        PlayerCharacterDist = self:GetDistanceToPlayerComponent(PlayerCharacter) or math.huge
-        MinDist = math.min(PlayerCharacterDist, MinDist)
-      else
-        local Dist = self:GetDistanceToPlayerComponent(Actor) or math.huge
-        MinDist = math.min(Dist, MinDist)
-      end
-    end
-    if PlayerCharacterDist ~= math.huge and PlayerCharacterDist == MinDist then
-      bIsWaiting = true
-    end
-  end
   DebugPrint("GameState:OnRep_ExitInfo", ExitMechanism, bIsWaiting)
   PrintTable(self.ExitInfo)
   if self.GameModeType == "Party" then
@@ -448,58 +430,6 @@ function Component:OnRep_ExitInfo()
   else
     self:OnRepDungeonExitInfo(self.ExitInfo, bIsWaiting)
   end
-end
-
-function Component:GetDistanceToPlayerComponent(PlayerCharacter)
-  local World = self.GetWorld and self:GetWorld() or UE4.UGameplayStatics.GetWorld(self)
-  if not World then
-    return nil
-  end
-  local BPClass = UE4.UClass.Load("/Game/BluePrints/Common/Triggers/BP_ExitTriggerBoxMechanism.BP_ExitTriggerBoxMechanism_C")
-  DebugPrint("BPClass: ", BPClass)
-  local Actors = UE4.UGameplayStatics.GetAllActorsOfClass(World, UE4.BP_ExitTriggerBoxMechanism_C)
-  local BP_ExitTriggerBoxMechanism
-  if Actors and Actors:Length() > 0 then
-    BP_ExitTriggerBoxMechanism = Actors:GetRef(1)
-  else
-    return nil
-  end
-  if not (PlayerCharacter and PlayerCharacter.CapsuleComponent) or not BP_ExitTriggerBoxMechanism.CollisionComponent then
-    return nil
-  end
-  local dist = self:GetComponentDistance(PlayerCharacter.CapsuleComponent, BP_ExitTriggerBoxMechanism.CollisionComponent)
-  return dist
-end
-
-function Component:GetAllPlayerCharacters()
-  local World = self.GetWorld and self:GetWorld() or UE4.UGameplayStatics.GetWorld(self)
-  if not World then
-    return {}
-  end
-  local PCs = {}
-  local Actors = UE4.UGameplayStatics.GetAllActorsOfClass(World, UE4.APlayerCharacter)
-  if Actors then
-    for i = 1, Actors:Length() do
-      local Actor = Actors:GetRef(i)
-      if Actor then
-        table.insert(PCs, Actor)
-      end
-    end
-  end
-  return PCs
-end
-
-function Component:GetComponentDistance(CompA, CompB)
-  if not CompA or not CompB then
-    return math.huge
-  end
-  local LocA = CompA:K2_GetComponentLocation()
-  local LocB = CompB:K2_GetComponentLocation()
-  if not LocA or not LocB then
-    return math.huge
-  end
-  local Delta = LocA - LocB
-  return Delta:Size()
 end
 
 function Component:SurvivalValueFinished_Lua()

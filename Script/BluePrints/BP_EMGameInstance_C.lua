@@ -598,7 +598,7 @@ function BP_EMGameInstance_C:CalculateMVP()
     if self.MVPInfo.MVPScore == nil or CurScore > self.MVPInfo.MVPScore then
       IsCurrentMVP = true
     elseif CurScore == self.MVPInfo.MVPScore then
-      if Player.IsPhantom and self.MVPInfo.IsPhantom or not Player.IsPhantom and not self.MVPInfo.IsPhantom then
+      if Player.IsPhantom == self.MVPInfo.IsPhantom then
         if PlayerRoleId < self.MVPInfo.RoleId then
           IsCurrentMVP = true
         end

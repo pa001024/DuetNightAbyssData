@@ -1999,7 +1999,7 @@ The man plunges into the water, and the surface vanishes without a trace.
 The lantern sits undisturbed at your feet, yet it burns brighter.]]
         },
         [6101801] = {
-          ContentFR = "Tu t’assieds près du feu pour te reposer.\nSoudain, un bruit étrange effleure ton oreille... puis s’éloigne, monte au-dessus de ta tête.\nIl enfle, de plus en plus clair : un froissement doux, comme des ailes de velours qui se frôlent.",
+          Content = "你在篝火旁坐下休息。\n忽然间，你注意到了一种奇怪的响声。一开始它好像就在你耳畔，然后渐渐远了一点，移到了头顶。\n声音越来越响，窸窸窣窣，似乎是某种柔软的东西在互相摩擦。",
           DialogueId = 6101801,
           GUID = "0F4674BA",
           NextDialogue = 6101802,
@@ -2007,7 +2007,7 @@ The lantern sits undisturbed at your feet, yet it burns brighter.]]
           Subtitle = "You settle beside the campfire for a rest.\nSuddenly, a faint sound tickles your ear... then rises, drifting somewhere above.\nIt swells — a soft, feathery rustle, like velvet wings brushing together."
         },
         [6101802] = {
-          ContentFR = "« Hé ! {性别:Petit veinard|Petite veinarde} ! »",
+          Content = "“嗨！幸运的旅人！”",
           DialogueId = 6101802,
           GUID = "0F4674E4",
           NextDialogue = 6101803,
@@ -2017,7 +2017,7 @@ The lantern sits undisturbed at your feet, yet it burns brighter.]]
           Subtitle = "\"Hey there! Lucky traveller!\""
         },
         [6101803] = {
-          ContentFR = "Une pluie de plumes chatoyantes descend sur toi. Jamais, dans l’Abysse, tu n’as vu autant de couleurs à la fois.\nBientôt, tu te retrouves enseveli sous cet amas bariolé, ridicule pantin d’une farce de rue, oscillant entre le comique et le pathétique.",
+          Content = "色彩斑斓的羽毛从头顶落下来。你从来没有一次在深渊里同时看到这么多颜色。\n现在，你被包围在一地羽毛中间，好像被街头玩整蛊游戏的小家伙们偶然选中的倒霉路人，尴尬中还透着一丝微妙的可悲。",
           DialogueId = 6101803,
           GUID = "0F46750E",
           NextDialogue = 6101804,
@@ -2025,7 +2025,7 @@ The lantern sits undisturbed at your feet, yet it burns brighter.]]
           Subtitle = "A flurry of vibrant feathers rains down from above — more colours than you've ever seen in the Abyssum.\nYou find yourself knee-deep in absurd fluff, like the butt of a street prank caught between comedy and pity."
         },
         [6101804] = {
-          ContentFR = "« Quoi, pas de réaction ? Tu traînes ici depuis si longtemps... tu ne t’ennuies pas ? »\nUn homme avec un masque grotesque d’oiseau apparaît, suspendu la tête en bas.\nIl descend lentement jusqu’à ce que ses yeux soient au même niveau que les tiens.\nComment il tient cette posture, tu n’en sais rien. Mais ce qui compte, c’est que le bec de son masque vacille dangereusement, prêt à heurter ton visage.",
+          Content = "“我说，你怎么一点反应也没有？你在深渊里待这么久了，不觉得无聊吗？”\n戴着滑稽的鸟头面具的人从上方倒立着缓缓降落下来，让自己的视线与你齐平。\n你不知道他是怎么保持这个动作的，但这不重要，重要的是他面具上的尖嘴快要戳到你的脸了。",
           DialogueId = 6101804,
           GUID = "0F467538",
           NextOptions = {
@@ -2040,7 +2040,7 @@ A figure descends upside-down, eyes level with yours. He wears a comical bird ma
 How he's holding that pose, you can't begin to guess.]]
         },
         [6101805] = {
-          ContentFR = "<I>« Je n’ai pas le temps de jouer. »</>",
+          Content = "我没空陪你胡闹。",
           DialogueId = 6101805,
           GUID = "0F467562",
           NextDialogue = 6101806,
@@ -2048,7 +2048,7 @@ How he's holding that pose, you can't begin to guess.]]
           Subtitle = "I don't have time for this."
         },
         [6101806] = {
-          ContentFR = "« Allons, ne sois pas si {性别:froid|froide}. Les vieux de l’Église Élyséenne ne t’ont-ils pas appris ? Une bonne action chaque jour attire la chance !\nAllez, <H>joue avec moi</>. Si tu gagnes, je t’offre une récompense, si tu perds... rien du tout. Pas de punition. Alors ? »",
+          Content = "“别这么冷淡嘛，传颂会的老家伙们应该教过你吧，日行一善会有好报的。”\n“跟我<H>玩个游戏</>，赢了就给你奖励，输了也没有惩罚。稳赚不赔，怎么样？”",
           DialogueId = 6101806,
           GUID = "0F46758C",
           NextOptions = {
@@ -2063,7 +2063,7 @@ How he's holding that pose, you can't begin to guess.]]
 "Come on, play a little game with me. Win, and I'll give you a prize. Lose? No punishment. Nothing's at stake here. What do you say?"]]
         },
         [6101807] = {
-          ContentFR = "<I>« D’accord. »</>",
+          Content = "好吧。",
           DialogueId = 6101807,
           GUID = "0F4675B6",
           IsKeyOption = true,
@@ -6415,7 +6415,7 @@ With a final nod, you turn and walk away.]]
           Subtitle = "Suddenly, pale gleams break across the dark — no, not light. You peer closer, and see them for what they are: the bleached husks of Filthoids, piled one upon another, as if some heretic painter had hurled his strokes in a drunken frenzy.\nYou flinch back — and two familiar figures take shape beside you."
         },
         [6201903] = {
-          ContentFR = "« Kof... kof... ça n’en finit jamais... »\nCalista essuie le sang qui perle à ses lèvres et laisse son arc tomber à terre.\n« C’était ma dernière flèche... désormais, il ne reste que la magie. »\n« Hé... j’ai bien mérité ma place auprès de vos dieux, non ? Alors, je vous en conjure : quand je tomberai, ne jetez pas mon corps dans une fosse commune. Laissez-moi au moins un corps intact. »",
+          ContentFR = "« <I>Kof... kof...</> ça n’en finit jamais... »\nCalista essuie le sang qui perle à ses lèvres et laisse son arc tomber à terre.\n« C’était ma dernière flèche... désormais, il ne reste que la magie. »\n« Hé... j’ai bien mérité ma place auprès de vos dieux, non ? Alors, je vous en conjure : quand je tomberai, ne jetez pas mon corps dans une fosse commune. Laissez-moi au moins un corps intact. »",
           DialogueId = 6201903,
           GUID = "0F869BB6",
           NextDialogue = 6201904,
@@ -13351,7 +13351,7 @@ CameraMoveTo{_delay{0},TargetPosition{"-68.912094,-67.938797,184.066406,0.000075
           VoiceName = "voice/$Locale$/story/1003/100322/191D55C8"
         },
         [10032214] = {
-          ContentFR = "08 oct.\nPréparés : costumes et sacs de couchage.\nConfirmé par : Mondry\n(Note : Les réserves de nourriture s’épuisent. <H>Pour le mois intensif de répétitions à venir, il faudra demander une nouvelle livraison.</>)\n...\n12 nov.\nRemplacés : trois microphones.\nConfirmé par : Grinde\n(Note : L’un d’eux émet un son beaucoup trop fort, mais la directrice Putsch a insisté pour le garder tel quel.)\n14 nov.\nInstallé : rideau rouge. Le rideau doré a été renvoyé à l’entrepôt.\nConfirmé par : Bell\n...\n24 nov.\nRetrouvés : cinq perruques égarées.\nConfirmé par : Bell\n(Note : Les coins de la loge accumulent toutes sortes d’objets. Je vais tout vider aujourd’hui.)\n25 nov.\nPréparés : quinze couronnes de fleurs, neuf paires de bottes de cavalier.\nConfirmé par : Mondry",
+          ContentFR = "Inventaire des accessoires – Théâtre Galea\n\nPlusieurs membres de l’équipe en coulisse tiennent ce registre, qui détaille avec précision la gestion des accessoires du théâtre sur les deux dernières semaines.\n\n08 oct.\nPréparés : costumes et sacs de couchage.\nConfirmé par : Mondry\n(Note : Les réserves de nourriture s’épuisent. <H>Pour le mois intensif de répétitions à venir, il faudra demander une nouvelle livraison.</>)\n...\n12 nov.\nRemplacés : trois microphones.\nConfirmé par : Grinde\n(Note : L’un d’eux émet un son beaucoup trop fort, mais la directrice Putsch a insisté pour le garder tel quel.)\n14 nov.\nInstallé : rideau rouge. Le rideau doré a été renvoyé à l’entrepôt.\nConfirmé par : Bell\n...\n24 nov.\nRetrouvés : cinq perruques égarées.\nConfirmé par : Bell\n(Note : Les coins de la loge accumulent toutes sortes d’objets. Je vais tout vider aujourd’hui.)\n25 nov.\nPréparés : quinze couronnes de fleurs, neuf paires de bottes de cavalier.\nConfirmé par : Mondry",
           DialogueId = 10032214,
           DialoguePanelType = "{type:showtext;topic:READ_NAME_2000046;content:READ_TEXT_2000046}",
           GUID = "191D55F2",
@@ -19022,7 +19022,7 @@ LookAt{_delay{2.1},LookAtDescription{"100360:n(100001)"}},
           VoiceName = "voice/$Locale$/story/1003/100341/191E8C06"
         },
         [10034104] = {
-          ContentFR = "Destinataire : <H>Rhythm Fischer</>, membre des Veilleurs de Givrelac, sous la tutelle de la VIᵉ Légion dans la Région de Cocytus.\n\nPour sa décision ferme, son courage exemplaire et son efficacité sans égale lors de multiples opérations de <H>purge des Souillés</>.\nPour le rôle irremplaçable qu’elle a joué dans la préservation de l’ordre public et la sécurité de la région.\n\nAprès évaluation de la Légion, et au nom de Sa Majesté Julius, il est décrété d’élever Rhythm Fischer au rang d’adjudante et de lui remettre la Distinction de l’Empereur.\n\nQu’elle demeure un modèle pour tous les soldats, les incitant à se surpasser, à grandir ensemble et à offrir leur force à l’Empire.\n\nToute gloire à l’Empereur.",
+          ContentFR = "Cette distinction impériale, forgée en or pur, n’est remis qu’aux soldats ayant apporté une contribution exceptionnelle à l’Empire.\n\nDestinataire : <H>Rhythm Fischer</>, membre des Veilleurs de Givrelac, sous la tutelle de la VIᵉ Légion dans la Région de Cocytus.\nPour sa décision ferme, son courage exemplaire et son efficacité sans égale lors de multiples opérations de <H>purge des Souillés</>.\nPour le rôle irremplaçable qu’elle a joué dans la préservation de l’ordre public et la sécurité de la région.\nAprès évaluation de la Légion, et au nom de Sa Majesté Julius, il est décidé d’élever Rhythm Fischer au rang d’adjudante et de lui remettre la Distinction de l’Empereur.\nQu’elle demeure un modèle pour tous les soldats, les incitant à se surpasser, à grandir ensemble et à offrir leur force à l’Empire.\n\nToute gloire à l’Empereur.",
           DialogueId = 10034104,
           DialoguePanelType = "{type:showtext;topic:READ_NAME_2000047;content:READ_TEXT_2000047}",
           GUID = "191E8C30",
@@ -19044,7 +19044,7 @@ All glory to His Majesty.]],
           VoiceName = "voice/$Locale$/story/1003/100341/191E8C5A"
         },
         [10034106] = {
-          ContentFR = "<H>Les Dégradés sont d’une dangerosité extrême, ne vous fiez jamais aux apparences !</>\n\nLe 24 septembre, un grave cas de <H>Dégradation</> s’est produit à Givrelac, entraînant de lourdes pertes. Après enquête de la VIᵉ Légion et de ses Veilleurs, les conclusions suivantes ont été établies :\n\nLe 13 septembre, Monsieur et Madame Fischer, habitants de la cité, croisa sur la route longeant la Rive du Lac du Deuil un jeune homme grièvement blessé : Robie Brown. Poussés par la compassion, ils l’accueillirent chez eux et lui prodiguèrent des soins.\nMais Robie Brown était en réalité un Dégradé. Il avait échappé aux contrôles réguliers de l’Empire et trouvé refuge hors des murs. Tout en acceptant l’aide du couple, il dissimula volontairement les marques de sa Dégradation. Dix jours plus tard, la tragédie survint : il se transforma en Souillé et massacra des dizaines de citoyens du quartier sud de Givrelac, dont le couple Fischer. L’intervention rapide des Veilleurs mit fin à la menace, mais trop tard pour éviter le carnage.\n\nLe bilan s’élève à 18 morts, dont 3 Solariens et 34 blessés.\n\nRappel à tous les citoyens : n’accordez jamais l’hospitalité à un Charon d’identité incertaine. Si vous soupçonnez la présence d’un Dégradé, signalez-le immédiatement au Bureau de la Sécurité.\n\nLes Dégradés resteront à jamais les ennemis de l’humanité, sans exception.\n\nToute personne surprise à protéger un Dégradé ou à dissimuler son existence sera condamnée à mort, conformément à l’article 54 du Code Pénal Hyperboréen.",
+          ContentFR = "Enfoui sous un tas d’objets oubliés, ce vieux quotidien jauni relate un tragique accident survenu il y a bien longtemps.\n\n<H>Les Dégradés sont d’une dangerosité extrême, ne vous fiez jamais aux apparences !</>\nLe 24 septembre, un grave cas de <H>Dégradation</> s’est produit à Givrelac, entraînant de lourdes pertes. Après enquête de la VIᵉ Légion et de ses Veilleurs, les conclusions suivantes ont été établies :\nLe 13 septembre, Monsieur et Madame Fischer, habitants de la cité, croisa sur la route longeant la Rive du Lac du Deuil un jeune homme grièvement blessé : Robie Brown. Poussés par la compassion, ils l’accueillirent chez eux et lui prodiguèrent des soins.\nMais Robie Brown était en réalité un Dégradé. Il avait échappé aux contrôles réguliers de l’Empire et trouvé refuge hors des murs. Tout en acceptant l’aide du couple, il dissimula volontairement les marques de sa Dégradation. Dix jours plus tard, la tragédie survint : il se transforma en Souillé et massacra des dizaines de citoyens du quartier sud de Givrelac, dont le couple Fischer. L’intervention rapide des Veilleurs mit fin à la menace, mais trop tard pour éviter le carnage.\nLe bilan s’élève à 18 morts, dont 3 Solariens et 34 blessés.\nRappel à tous les citoyens : n’accordez jamais l’hospitalité à un Charon d’identité incertaine. Si vous soupçonnez la présence d’un Dégradé, signalez-le immédiatement au Bureau de la Sécurité.\nLes Dégradés resteront à jamais les ennemis de l’humanité, sans exception.\n\nToute personne surprise à protéger un Dégradé ou à dissimuler son existence sera condamnée à mort, conformément à l’article 54 du Code Pénal Hyperboréen.",
           DialogueId = 10034106,
           DialoguePanelType = "{type:showtext;topic:READ_NAME_2000048;content:READ_TEXT_2000048}",
           GUID = "191E8C84",
@@ -25022,7 +25022,7 @@ PlayAnimation{ActorId{200021},AnimationId{"Talk02_Start"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1003/100353/191F5554"
         },
         [10035331] = {
-          ContentFR = "Affaire : Bagarre au Théâtre Galea\nDate : 9 octobre, 20 h 30\n\nDépositaire de plainte : Letizia Putsch, directrice de la troupe de la Flûte Enchantée\n\nParties impliquées :\nParsifal Snowfield (comédien principal)\nSusanna Rossi (comédienne principale)\nMathew Bernard (spectateur)\nFeeley Francisco (spectateur)\n...\nRésumé de l’incident : Une altercation aurait éclaté entre des membres de la troupe et des spectateurs du premier rang. Témoignages évoquant des coups portés aux comédiens par les spectateurs. (Certaines pages du rapport officiel ont été arrachées.)\n\nConclusion : Preuves insuffisantes. Aucune suite judiciaire.\n\nRemarques : Les représentations de Né du blizzard sont suspendues jusqu’à nouvel ordre, sans date de reprise annoncée.\nJ’aurais tant voulu voir cette pièce avec Blues, pour effacer le regret de ne pas l’avoir vue autrefois. Mais il semble que ce ne soit pas pour bientôt...",
+          ContentFR = "Affaire : Bagarre au Théâtre Galea\nDate : 9 octobre, 20 h 30\n\nDépositaire de plainte : Letizia Putsch, directrice de la troupe de la Flûte Enchantée\n\nParties impliquées :\nParsifal Snowfield (comédien principal)\nSusanna Rossi (comédienne principale)\nMathew Bernard (spectateur)\nFeeley Francisco (spectateur)\n...\nRésumé de l’incident : Une altercation aurait éclaté entre des membres de la troupe et des spectateurs du premier rang. Témoignages évoquant des coups portés aux comédiens par les spectateurs. (Certaines pages du rapport officiel ont été arrachées.)\n\nConclusion : Preuves insuffisantes. Aucune suite judiciaire.\n\nRemarques : Les représentations de <I>Né du blizzard</> sont suspendues jusqu’à nouvel ordre, sans date de reprise annoncée.\nJ’aurais tant voulu voir cette pièce avec Blues, pour effacer le regret de ne pas l’avoir vue autrefois. Mais il semble que ce ne soit pas pour bientôt...",
           DialogueId = 10035331,
           DialoguePanelType = "{type:showtext;topic:READ_NAME_2000049;content:READ_TEXT_2000049}",
           GUID = "191F557E",
@@ -32274,7 +32274,7 @@ PostProcess{MaterailInstance{"MaterialInstanceConstant'/Game/Asset/Scene/common/
           VoiceName = "voice/$Locale$/story/1003/100378/1920ECB2"
         },
         [10037995] = {
-          ContentFR = "Peu importe ce qu’ils exigent de nous... n’oublie jamais : nous ne sommes pas des monstres.",
+          ContentFR = "Quoi qu’ils nous fassent faire, n’oublie jamais ça, nous ne sommes pas des monstres.",
           DialogueId = 10037995,
           GUID = "19210B11",
           SpeakNpcId = 100328,
@@ -32282,7 +32282,7 @@ PostProcess{MaterailInstance{"MaterialInstanceConstant'/Game/Asset/Scene/common/
           VoiceName = "voice/$Locale$/story/1003/100379/19210B11"
         },
         [10037996] = {
-          ContentFR = "Clive traîne souvent près du Quai du Vent-Murmure. Allez le trouver là-bas.",
+          ContentFR = "Clive est près du parking, juste à l’extérieur des portes de la ville. Rejoignez-le là-bas.",
           DialogueId = 10037996,
           GUID = "19210B10",
           SpeakNpcId = 200022,
@@ -32290,7 +32290,7 @@ PostProcess{MaterailInstance{"MaterialInstanceConstant'/Game/Asset/Scene/common/
           VoiceName = "voice/$Locale$/story/1003/100379/19210B10"
         },
         [10037997] = {
-          ContentFR = "Je demanderai au docteur de s’occuper du papier et de l’encre. Quant au sceau, je compte sur vous pour aller le récupérer. Désolée... cette blessure finit vraiment par vous ralentir.",
+          ContentFR = "J’ai demandé au médecin de me prêter du papier et un stylo, je pourrai rédiger mes lettres. Mais le sceau... je compte sur vous. Désolée... mes blessures ne font que vous ralentir.",
           DialogueId = 10037997,
           GUID = "19210B0G",
           SpeakNpcId = 100304,
@@ -32438,7 +32438,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           VoiceName = "voice/$Locale$/story/1003/100380/191EF0C6"
         },
         [10038101] = {
-          ContentFR = "Pendant le couvre-feu de Givrelac, la circulation est strictement interdite dans cette zone.",
+          ContentFR = "Accès interdit durant le couvre-feu de Givrelac.",
           DialogueId = 10038101,
           GUID = "19210B0D",
           Subtitle = "Access is prohibited during Icelake's curfew hours."
@@ -34001,7 +34001,7 @@ CameraMoveTo{_delay{5.6},TargetPosition{"-132.485352,-61.171875,81.044434,0.0011
         [10100804] = {
           Camera = "-248.898438,-755.938965,492.554199,0.000024,-25.400085,73.454407,40.000011,873.135193,false,Manual,1.2",
           CameraBlendCurve = "easeInOutQuad",
-          ContentFR = "Bon. Je t’ai fait entrer, notre <H>accord</> est rempli. Je retourne à mes affaires. Tu ne m’attireras pas de problèmes... pas vrai ?",
+          ContentFR = "Bon. Je t’ai fait entrer, notre <H>accord</H> est rempli. Je retourne à mes affaires. Tu ne m’attireras pas de problèmes... pas vrai ?",
           DialogueId = 10100804,
           FacialId = {
             [1] = "200003:Uninterested01"
@@ -86449,7 +86449,7 @@ TurnTo{_delay{13.5},TurnToDescription{"220022:p(190)"}}
         },
         [12010124] = {
           Camera = "-300.496887,-107.604889,166.557129,0.000039,-5.799308,31.399658,50.0,441.88739,false,DoNotOverride,8.0",
-          ContentFR = "Figurez-vous qu’elle a été choisie par le Mandat Céleste alors qu’elle était encore bien jeune, et qu’elle est devenue le Haut Chancelier de Longyuan. À Huaxu, le commerce, les finances, les taxes... tout passe par elle.",
+          ContentFR = "Figurez-vous qu’elle a été choisie par le destin alors qu’elle était encore bien jeune, et qu’elle est devenue le Haut Chancelier de Longyuan. À Huaxu, le commerce, les finances, les taxes... tout passe par elle.",
           DialogueId = 12010124,
           FacialId = {
             [1] = "210004:Smile01"
@@ -86635,7 +86635,7 @@ TurnTo{_delay{13.5},TurnToDescription{"220022:p(190)"}}
           VoiceName = "voice/$Locale$/story/1201/120102/1E10F896"
         },
         [12010208] = {
-          ContentFR = "Ou... ouiiiin... Ce matin, j’ai prié le Seigneur Dragon d’Argent, en espérant que la chance me sourirait aujourd’hui...",
+          ContentFR = "<I>Ou... ouiiiin...</> Ce matin, j’ai prié le Dieu-Dragon d’Argent, en espérant que la chance me sourirait aujourd’hui...",
           DialogueId = 12010208,
           GUID = "1E10F8C0",
           NextDialogue = 12010209,
@@ -86657,7 +86657,7 @@ TurnTo{_delay{13.5},TurnToDescription{"220022:p(190)"}}
         },
         [12010210] = {
           Camera = "345.640625,-174.457031,104.969238,0.000003,-0.600497,140.202652,35.000008,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "On dirait que le Seigneur Dragon d’Argent a enfin répondu à mes prières... Euh... Votre Majesté le Roi Démon, est-ce que je peux... toucher vos cornes encore une fois ?",
+          ContentFR = "On dirait que le Dieu-Dragon d’Argent a enfin répondu à mes prières... Euh... Votre Majesté le Roi Démon, est-ce que je peux... toucher vos cornes encore une fois ?",
           DialogueId = 12010210,
           GUID = "1E10F914",
           LookAt = {
@@ -87756,7 +87756,7 @@ PlayAnimation{ActorId{210004},AnimationId{"Explain01_Start"},Duration{1}}
         },
         [12010508] = {
           Camera = "-2086.416992,-1506.259277,1044.228516,0.000102,-15.798794,37.99028,28.0,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Que le Ciel vous protège... que le Seigneur Dragon d’Argent veille sur vous. Êtes-vous tous sains et saufs ?",
+          ContentFR = "Que le Ciel vous protège... que le Dieu-Dragon d’Argent veille sur vous. Êtes-vous tous sains et saufs ?",
           DialogueId = 12010508,
           FinalCamera = "-2543.464355,680.419128,896.21582,0.000097,-15.59871,-11.41056,28.0,100000.0,false,DoNotOverride,2.8",
           GUID = "1E1129F8",
@@ -88099,7 +88099,7 @@ PlayAnimation{ActorId{210004},AnimationId{"Explain01_Start"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120106/1E11398E"
         },
         [12010604] = {
-          ContentFR = "Il ne faut pas voir l’<H>offrande d’encens</> comme une demande adressée au Seigneur Dragon d’Argent.",
+          ContentFR = "Il ne faut pas voir l’<H>offrande d’encens</> comme une demande adressée au Dieu-Dragon d’Argent.",
           DialogueId = 12010604,
           GUID = "1E1139B8",
           NextDialogue = 12010605,
@@ -88120,7 +88120,7 @@ PlayAnimation{ActorId{210004},AnimationId{"Explain01_Start"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120106/1E1139E2"
         },
         [12010606] = {
-          ContentFR = "Le peuple offre l’encens au Ciel pour soutenir les Neuf Chapitres. La volonté des Préceptes se manifeste alors sous la forme du Seigneur Dragon d’Argent, qui, à son tour, protège le peuple par l’encens.",
+          ContentFR = "Le peuple offre l’encens au Ciel pour soutenir les Neuf Chapitres. La volonté des Préceptes se manifeste alors sous la forme du Dieu-Dragon d’Argent, qui, à son tour, protège le peuple par l’encens.",
           DialogueId = 12010606,
           GUID = "1E113A0C",
           NextDialogue = 12010607,
@@ -88129,7 +88129,7 @@ PlayAnimation{ActorId{210004},AnimationId{"Explain01_Start"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120106/1E113A0C"
         },
         [12010607] = {
-          ContentFR = "Les vœux ne se réalisent qu’au prix d’efforts constants. Le Seigneur Dragon d’Argent n’est que le témoin silencieux de ce chemin, depuis des millénaires.",
+          ContentFR = "Les vœux ne se réalisent qu’au prix d’efforts constants. Le Dieu-Dragon d’Argent n’est que le témoin silencieux de ce chemin, depuis des millénaires.",
           DialogueId = 12010607,
           GUID = "1E113A36",
           NextDialogue = 12010608,
@@ -88878,7 +88878,7 @@ PlayAnimation{ActorId{210004},AnimationId{"Talk02_End"},Duration{1}},
           VoiceName = "voice/$Locale$/story/1201/120108/1E115BD8"
         },
         [12010813] = {
-          ContentFR = "Dans les légendes antiques de Huaxu, Zhuyin est l’ennemi juré du Seigneur Dragon d’Argent. Sa puissance démente s’échappe, donnant naissance à des bêtes corrompues. Les terres qu’il souille deviennent stériles.",
+          ContentFR = "Dans les légendes antiques de Huaxu, Zhuyin est l’ennemi juré du Dieu-Dragon d’Argent. Sa puissance démente s’échappe, donnant naissance à des bêtes corrompues. Les terres qu’il souille deviennent stériles.",
           DialogueId = 12010813,
           FacialId = {
             [1] = "210004:Angry01"
@@ -91016,7 +91016,7 @@ CameraMoveTo{_delay{9},TargetPosition{"151.875,84.750977,99.082031,0.000186,11.9
         },
         [12012112] = {
           Camera = "594.422852,573.201172,288.23291,0.000224,-13.401206,-141.804123,35.0,452.333679,false,DoNotOverride,3.746801",
-          ContentFR = "Vous connaissez la Patronne Zhiliu ? Bien sûr... et moi je dîne avec le Seigneur Dragon d’Argent sous un ciel radieux. Des paroles, tout le monde peut en servir.",
+          ContentFR = "Vous connaissez la Patronne Zhiliu ? Bien sûr... et moi je dîne avec le Dieu-Dragon d’Argent sous un ciel radieux. Des paroles, tout le monde peut en servir.",
           DefaultLookAt = "TalkNpc",
           DialogueId = 12012112,
           FinalCamera = "628.412109,530.005859,288.23291,0.000224,-13.401206,-141.804123,35.0,452.333679,false,DoNotOverride,3.746801",
@@ -91236,7 +91236,7 @@ SetLocation{ActorId{210059},TargetPoint{"Xiaodi2_Move"},Visibility{"Hide"}}
           VoiceName = "voice/$Locale$/story/1201/120123/1E1251C6"
         },
         [12012312] = {
-          ContentFR = "Par le Ciel et par la terre, ose jurer devant le Seigneur Dragon d’Argent que tu ne l’as pas fait exprès !",
+          ContentFR = "Par le Ciel et par la terre, ose jurer devant le Dieu-Dragon d’Argent que tu ne l’as pas fait exprès !",
           DefaultLookAt = "TalkNpc",
           DialogueId = 12012312,
           GUID = "1E1251F0",
@@ -95497,7 +95497,7 @@ LookAt{LookAtDescription{"210013:p(BP_FixSimple_42_fushu01)"}}
         [12015512] = {
           Camera = "113.025772,32.107635,18.959473,0.000157,29.397686,10.806211,30.000008,12977.529297,false,Manual,12.571992",
           CameraBlendCurve = "easeInOutQuad",
-          ContentFR = "Lors de la Grande Épidémie, il y a cent ans... en soignant les malades, j’ai été imprudente et j’ai... contracté un mal terrible. Ma sœur a figé mon corps par un procédé qui lui était propre, afin de ralentir la progression de la maladie.",
+          ContentFR = "Lors de la grande épidémie, il y a cent ans... en soignant les malades, j’ai été imprudente et j’ai... contracté un mal terrible. Ma sœur a figé mon corps par un procédé qui lui était propre, afin de ralentir la progression de la maladie.",
           DialogueId = 12015512,
           Duration = 2,
           FinalCamera = "177.948578,52.488884,107.528198,0.000187,49.996937,27.204828,30.000013,12977.529297,false,Manual,12.571992",
@@ -96640,7 +96640,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120165/1E15015C"
         },
         [12016601] = {
-          ContentFR = "{nickname}... c’est toi ?",
+          Content = "{nickname}，是你吗？",
           DialogueId = 12016601,
           Duration = 2,
           GUID = "1E15119A",
@@ -96670,7 +96670,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120166/1E1511C4"
         },
         [12016603] = {
-          ContentFR = "Nous nous reverrons. J’en suis certaine. D’ici là... prends soin de toi. Ne te blesse pas.",
+          Content = "我们一定能够再次相逢的。在那之前，照顾好自己，不要受伤。",
           DialogueId = 12016603,
           Duration = 3,
           GUID = "1E1511EE",
@@ -96684,7 +96684,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120166/1E1511EE"
         },
         [12016604] = {
-          ContentFR = "Avance maintenant. Ne t’arrête pas. Je veillerai toujours sur ton chemin.",
+          Content = "现在往前走吧，不要停下脚步。我会一直守望你的背影。",
           DialogueId = 12016604,
           Duration = 3,
           GUID = "1E151218",
@@ -96767,7 +96767,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
     Loader = function()
       return {
         [12016901] = {
-          ContentFR = "Ça fait longtemps, {nickname}.",
+          Content = "好久不见，{nickname}。",
           DialogueId = 12016901,
           Duration = 2,
           GUID = "1E1542D2",
@@ -96784,7 +96784,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120169/1E1542D2"
         },
         [12016902] = {
-          ContentFR = "Tu es allé loin, n’est-ce pas ? Un endroit étrange, nouveau... que je ne connaîtrai sans doute jamais.",
+          Content = "你是不是去了什么地方……一个我从未听过的、陌生又新鲜的地方？",
           DialogueId = 12016902,
           Duration = 3,
           GUID = "1E1542FC",
@@ -96798,7 +96798,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120169/1E1542FC"
         },
         [12016903] = {
-          ContentFR = "Quand tu reviendras à Givrelac... si tu en as envie... tu me raconteras ?",
+          Content = "如果可以的话，等你什么时候回来冰湖城，可以讲给我听听吗？",
           DialogueId = 12016903,
           Duration = 3,
           GUID = "1E154326",
@@ -96812,7 +96812,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120169/1E154326"
         },
         [12016904] = {
-          ContentFR = "Je sais que c’est peut-être égoïste... mais s’il te plaît, ne m’oublie pas.",
+          Content = "虽然这个愿望有点奢侈……可以的话，请不要忘记我。",
           DialogueId = 12016904,
           GUID = "1E154350",
           SnapShot = "ECHO",
@@ -96833,7 +96833,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120170/1E15533A"
         },
         [12017002] = {
-          ContentFR = "Où est-ce que tu t’es encore {性别:fourré|fourrée} ? Reviens vite... Fina attend toujours tes histoires.",
+          Content = "到底去哪儿了，让我好找。快回来吧，菲娜还想听你给她讲故事。",
           DialogueId = 12017002,
           GUID = "1E155364",
           SnapShot = "MEMORY",
@@ -96843,7 +96843,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120170/1E155364"
         },
         [12017003] = {
-          ContentFR = "Ne va pas te casser une jambe dehors. Quand tu auras fini ton travail, rentre aux Asphodèles. Je t’ai gardé une boisson chaude — mais elle ne t’attendra pas éternellement.",
+          Content = "别在外面折断腿了。干完了活计就回水仙平原吧，我为你留了杯热饮，放凉了可就不好了。",
           DialogueId = 12017003,
           Duration = 3,
           GUID = "1E15538E",
@@ -96855,7 +96855,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120170/1E15538E"
         },
         [12017004] = {
-          ContentFR = "Gagner sa vie, c’est important. Mais si on a l’argent sans le temps de le vivre... à quoi bon ?",
+          Content = "挣钱固然重要。要是有命赚钱没命花，可就得不偿失了。",
           DialogueId = 12017004,
           Duration = 3,
           GUID = "1E1553B8",
@@ -97020,7 +97020,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120174/1E159558"
         },
         [12017405] = {
-          ContentFR = "... C’était la Grande Épidémie d’il y a cent ans.",
+          ContentFR = "... C’était la grande épidémie d’il y a cent ans.",
           DialogueId = 12017405,
           Duration = 1,
           GUID = "1E159582",
@@ -98272,7 +98272,7 @@ PlayAnimation{_delay{2},ActorId{100001},AnimationId{"Nvzhu_Story_Angry02_Start"}
           VoiceName = "voice/$Locale$/story/1201/120185/1E164B4A"
         },
         [12018514] = {
-          ContentFR = "Hm... nous autres, gens du marché noir, évoluons depuis longtemps à la lisière de leurs lois. Nous savons jusqu’où aller — et où nous arrêter.",
+          ContentFR = "Heh... nous autres, gens du marché noir, évoluons depuis longtemps à la lisière de leurs lois. Nous savons jusqu’où aller — et où nous arrêter.",
           DialogueId = 12018514,
           Duration = 2,
           GUID = "1E164B74",
@@ -99361,7 +99361,7 @@ CameraMoveTo{_delay{4.6},TargetPosition{"-6437.628906,-5467.57373,1041.154297,0.
           VoiceName = "voice/$Locale$/story/1201/120198/1E171E9A"
         },
         [12019802] = {
-          ContentFR = "Encore des imprévus, à ce que je vois... Hm. Cette chasse devient de plus en plus savoureuse.",
+          ContentFR = "Encore des imprévus, à ce que je vois... Heh. Cette chasse devient de plus en plus savoureuse.",
           DialogueId = 12019802,
           GUID = "1E171EC4",
           NextDialogue = 12019803,
@@ -99530,7 +99530,7 @@ CameraMoveTo{_delay{4.6},TargetPosition{"-6437.628906,-5467.57373,1041.154297,0.
           VoiceName = "voice/$Locale$/story/1201/120199/1E17307C"
         },
         [12019911] = {
-          ContentFR = "Hm... Suis-je vraiment celui qui met ce monde en danger ? Ou bien est-ce ce monde lui-même qui est déjà en train de se disloquer ? Les dérives causées par les Neuf Chapitres... peux-tu vraiment les ignorer ?",
+          ContentFR = "Heh... Suis-je vraiment celui qui met ce monde en danger ? Ou bien est-ce ce monde lui-même qui est déjà en train de se disloquer ? Les dérives causées par les Neuf Chapitres... peux-tu vraiment les ignorer ?",
           DialogueId = 12019911,
           GUID = "1E1730A6",
           NextDialogue = 12019912,
@@ -100750,7 +100750,7 @@ CameraMoveTo{_delay{4.6},TargetPosition{"-6437.628906,-5467.57373,1041.154297,0.
           VoiceName = "voice/$Locale$/story/1201/120222/1E18A92C"
         },
         [12022207] = {
-          ContentFR = "L’ère du <H>Seigneur Dragon d’Argent</> doit prendre fin. Et moi... j’en saisirai l’autorité.",
+          ContentFR = "L’ère du <H>Dieu-Dragon d’Argent</> doit prendre fin. Et moi... j’en saisirai l’autorité.",
           DialogueId = 12022207,
           GUID = "1E18A956",
           NextDialogue = 12022208,
@@ -101069,7 +101069,7 @@ CameraMoveTo{_delay{4.6},TargetPosition{"-6437.628906,-5467.57373,1041.154297,0.
           VoiceName = "voice/$Locale$/story/1201/120223/1E18BBE0"
         },
         [12022321] = {
-          ContentFR = "L’ère du <H>Seigneur Dragon d’Argent</> doit prendre fin. Et moi... j’en saisirai l’autorité.",
+          ContentFR = "L’ère du <H>Dieu-Dragon d’Argent</> doit prendre fin. Et moi... j’en saisirai l’autorité.",
           DialogueId = 12022321,
           GUID = "1E18BC0A",
           NextDialogue = 12022322,
@@ -101816,7 +101816,7 @@ CameraMoveTo{_delay{4.6},TargetPosition{"-6437.628906,-5467.57373,1041.154297,0.
           VoiceName = "voice/$Locale$/story/1201/120229/1E191DFC"
         },
         [12022919] = {
-          ContentFR = "Le Seigneur Dragon d’Argent chassera le mal pour nous ! Si nous provoquons Son courroux et perdons Sa protection, ce serait là la véritable ruine. Je vous en prie, réfléchissez !",
+          ContentFR = "Le Dieu-Dragon d’Argent chassera le mal pour nous ! Si nous provoquons Son courroux et perdons Sa protection, ce serait là la véritable ruine. Je vous en prie, réfléchissez !",
           DialogueId = 12022919,
           GUID = "1E191E26",
           NextDialogue = 12022920,
@@ -101849,7 +101849,7 @@ CameraMoveTo{_delay{4.6},TargetPosition{"-6437.628906,-5467.57373,1041.154297,0.
           VoiceName = "voice/$Locale$/story/1201/120229/1E191E7A"
         },
         [12022922] = {
-          ContentFR = "Vraiment ? Alors dites-moi : maintenant que les Bi’an obscurs assiègent Éternel Printemps, où se trouve la protection du Seigneur Dragon d’Argent ?",
+          ContentFR = "Vraiment ? Alors dites-moi : maintenant que les Bi’an obscurs assiègent Éternel Printemps, où se trouve la protection du Dieu-Dragon d’Argent ?",
           DialogueId = 12022922,
           GUID = "1E191EA4",
           NextDialogue = 12022923,
@@ -102573,7 +102573,7 @@ CameraMoveTo{_delay{4.6},TargetPosition{"-6437.628906,-5467.57373,1041.154297,0.
           Subtitle = "You seem like a pretty important person."
         },
         [12025403] = {
-          ContentFR = "Hm... ce ne sont que des titres sans réelle substance. J’ai depuis longtemps dépassé l’âge où l’on se réjouit de la gloire ou de profits éphémères.",
+          ContentFR = "Heh... ce ne sont que des titres sans réelle substance. J’ai depuis longtemps dépassé l’âge où l’on se réjouit de la gloire ou de profits éphémères.",
           DialogueId = 12025403,
           GUID = "1E1AB5AE",
           NextDialogue = 12025404,
@@ -119132,7 +119132,7 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
         },
         [20007006] = {
           Camera = "721.993774,408.491211,205.130859,0.00002,-14.403127,-165.088608,35.0,369.08606,false,Manual,12.0",
-          ContentFR = "<I>Ouinnn...</> Truffle, tu ne peux pas rester à Givrelac ? Le Roi Démon de la Lumière a enfin trouvé quelqu’un pour scander ses titres ensemble !",
+          ContentFR = "<I><I>Ouinnn...</> Truffle, tu ne peux pas rester à Givrelac ? Le Roi Démon de la Lumière a enfin trouvé quelqu’un pour scander ses titres ensemble !</>",
           DialogueId = 20007006,
           FacialId = {
             [1] = "200002:Sad01"
@@ -120259,7 +120259,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           VoiceName = "voice/$Locale$/env/Ver0101/7D6CF45A"
         },
         [50102301] = {
-          ContentFR = "Par le regard du Seigneur Dragon, moi, Xueji, je fais le serment de ne jamais trahir Chuqing, sinon...",
+          ContentFR = "Par le regard du Dieu-Dragon, moi, Xueji, je fais le serment de ne jamais trahir Chuqing, sinon...",
           DialogueId = 50102301,
           GUID = "7D6D04C2",
           Subtitle = "By Lord Argent as my witness, I, Xueji, swear never to fail Chuqing, or I'll—",
@@ -120273,7 +120273,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           VoiceName = "voice/$Locale$/env/Ver0101/7D6D152A"
         },
         [50102501] = {
-          ContentFR = "Que le Seigneur Dragon d’Argent bénisse cette traversée et nous accorde une navigation sans heurts !",
+          ContentFR = "Que le Dieu-Dragon d’Argent bénisse cette traversée et nous accorde une navigation sans heurts !",
           DialogueId = 50102501,
           GUID = "7D6D2592",
           Subtitle = "May Lord Argent grant this voyage fair winds and safe seas!",
@@ -120547,7 +120547,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           VoiceName = "voice/$Locale$/env/Ver0101/7D6F222A"
         },
         [50105701] = {
-          ContentFR = "C’est ici que je vais allumer l’encens. Le Seigneur Dragon d’Argent se dressera comme dans les mythes, et il exterminera cette bête immonde jusqu’au dernier souffle !",
+          ContentFR = "C’est ici que je vais allumer l’encens. Le Dieu-Dragon d’Argent se dressera comme dans les mythes, et il exterminera cette bête immonde jusqu’au dernier souffle !",
           DialogueId = 50105701,
           GUID = "7D6F3292",
           SpeakNpcId = 701073,
@@ -122646,7 +122646,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           Subtitle = "I can't cure her heartache, so I make different soups every day, hoping to at least make her feel better with tasty food."
         },
         [51000201] = {
-          ContentFR = "J’espère que la crème de champignons préparée ce soir réchauffera un peu le cœur de Madame.",
+          ContentFR = "J’espère que la crème de champignons que je prépare ce soir apportera un peu de réconfort à Dame Hilin... Oh ? Te voilà de retour, mon enfant.",
           DialogueId = 51000201,
           GUID = "7FAC747A",
           NextDialogue = 51000202,
@@ -123612,7 +123612,7 @@ MoveTo{ActorId{700006},TargetPoint{"Point_510005_Aier"},MoveSpeed{150},Visibilit
           Subtitle = "(Alice gently strokes the clothing which is a testament of one girl protecting the other. You bid farewell to Alice and get ready to tell Elsa the truth.)"
         },
         [51000812] = {
-          ContentFR = "Dès que je serai rétablie, je reprendrai la route pour une nouvelle aventure.",
+          ContentFR = "Dès que je serai rétablie, je reprendrai la route... pour une nouvelle aventure.",
           DialogueId = 51000812,
           GUID = "7FACD8B8",
           SpeakNpcId = 700032,
@@ -124840,7 +124840,7 @@ PlayAnimation{_delay{7.2},ActorId{100001},AnimationId{"Think_Start"},Duration{1}
           Subtitle = "Love... what does it really taste like!? Was it the rush of ecstasy when I joined Camilla's fan club, or the crushing heartbreak when I heard she disbanded it?"
         },
         [51001340] = {
-          ContentFR = "<I>Snif...</> seul le sourire de Dame Camilla pourra recoller les morceaux de mon cœur brisé !",
+          ContentFR = "<I><I>Snif...</> seul le sourire de Dame Camilla pourra recoller les morceaux de mon cœur brisé !</>",
           DialogueId = 51001340,
           GUID = "7FAD2F58",
           SpeakNpcId = 790011,
@@ -126833,7 +126833,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
           }
         },
         [51002322] = {
-          ContentFR = "<I>Soupir. </>Depuis l’année dernière, sa santé décline de plus en plus... Je crains qu’il ne lui reste plus beaucoup de temps. La question de Hamel est son ultime souci...",
+          ContentFR = "<I><I>Soupir. </>Depuis l’année dernière, sa santé décline de plus en plus... Je crains qu’il ne lui reste plus beaucoup de temps. La question de Hamel est son ultime souci...</>",
           DialogueId = 51002322,
           GUID = "7FADD074",
           NextOptions = {
@@ -127012,7 +127012,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
           }
         },
         [51002419] = {
-          ContentFR = "<I>Soupir.</> Je me demande si Dame Hilin pourra voir s’accomplir son dernier souhait de son vivant.",
+          ContentFR = "<I><I>Soupir.</> Je me demande si Dame Hilin pourra voir s’accomplir son dernier souhait de son vivant.</>",
           DialogueId = 51002419,
           GUID = "7FADE05E",
           NextDialogue = 51002420,
@@ -127978,7 +127978,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
           Subtitle = "(A kid outside the theatre, eyeing popcorn longingly... Could she have been the one who spiked Buck's milk?)"
         },
         [51003301] = {
-          ContentFR = "<I>Atchoum !</> On dirait qu’il fait encore plus froid...",
+          ContentFR = "<I><I>Atchoum !</> On dirait qu’il fait encore plus froid...</>",
           DialogueId = 51003301,
           GUID = "7FAE7112",
           NextDialogue = 51003302,
@@ -130533,7 +130533,7 @@ will be as thrilling as he predicts.]]
           Subtitle = "\"Wild Filthoids gorge on our flesh, city lords shear our fleece. The hounds dine on fine white loaves, while lowly Charon sheep chew yellowed grass. We roll and we crawl, we baa and we fawn. The masters laugh, while we bear it all.\""
         },
         [51004908] = {
-          ContentFR = "Ah... O-Oh, je... euh...",
+          ContentFR = "Ah... ouuh...",
           DialogueId = 51004908,
           GUID = "7FAF78B8",
           NextDialogue = 51004909,
@@ -131571,7 +131571,7 @@ It is best to leave her undisturbed for a while.]]
           }
         },
         [51005044] = {
-          ContentFR = "Quand vous lirez cette lettre, nous aurons déjà quitté la Maison d’Hypnos.\nLa tragédie de Psyche a alerté les Veilleurs. Nous ne pouvions plus rester à Givrelac.\nAvant qu’ils n’arrivent, j’ai conduit tout le monde loin d’ici.\nNe soyez pas triste pour nous, et ne craignez pas que nous perdions le contrôle en sombrant dans la Dégradation.\n\nNous partons vers les terres sauvages, vers l’inconnu.\nPeut-être la mort nous attend-elle, ou bien un miracle encore invisible.\nMais jusqu’au bout, nous garderons espoir.\nC’est ce qu’elle nous a appris.\n\nEt... merci. Merci pour tout ce que vous avez fait.\n\nElisa Taylor",
+          ContentFR = "Quand vous lirez cette lettre, nous aurons déjà quitté la Maison d’Hypnos.\nLa tragédie de Psyche a alerté les Veilleurs. Nous ne pouvions plus rester à Givrelac.\nAvant qu’ils n’arrivent, j’ai conduit tout le monde loin d’ici.\nNe soyez pas triste pour nous, et ne craignez pas que nous perdions le contrôle en sombrant dans la Dégradation.\n\nNous partons vers les terres sauvages, vers l’inconnu.\nPeut-être la mort nous attend-elle, ou bien un miracle encore invisible.\nMais jusqu’au bout, nous garderons espoir.\nC’est ce qu’elle nous a appris.\n\nEt... merci. Merci pour tout ce que vous avez fait.\n\n<I>Elisa Taylor</>",
           DialogueId = 51005044,
           DialoguePanelType = "{type:showtext;topic:Reading_Title_200208;content:Reading_Content_200208}",
           GUID = "7FAF8F08",
@@ -132344,7 +132344,7 @@ It is best to leave her undisturbed for a while.]]
           Subtitle = "Hahah, forget it. You look like you're about to faint."
         },
         [51005409] = {
-          ContentFR = "<I>Hmpf.</> Heureusement que tout le monde n’est pas aussi {性别:fermé|fermée} que toi sur la diversité culinaire.",
+          ContentFR = "<I><I>Hmpf.</> Heureusement que tout le monde n’est pas aussi {性别:fermé|fermée} que toi sur la diversité culinaire.</>",
           DialogueId = 51005409,
           GUID = "7FAFCAEA",
           NextDialogue = 51005410,
@@ -132524,7 +132524,7 @@ It is best to leave her undisturbed for a while.]]
           Subtitle = "(After considerable effort, the aromas blend into a delightful explosion of flavours. Marcus serves up a bowl of the steaming fish stew, his face expectant for your critique.)"
         },
         [51005611] = {
-          ContentFR = "<I>Kof... </>Voilà, goûte. As-tu trouvé ça bon et original ?",
+          ContentFR = "<I><I>Kof... </>Voilà, goûte. As-tu trouvé ça bon et original ?</>",
           DialogueId = 51005611,
           GUID = "7FAFEC0E",
           NextOptions = {
@@ -132787,7 +132787,7 @@ It is best to leave her undisturbed for a while.]]
         },
         [51005807] = {
           Camera = "-121.098236,-47.270508,134.38916,0.00009,-2.592344,127.106155,35.000011,1.5,false,Disable,1.2",
-          ContentFR = "<I>Hmpf.</> Regarde mieux !",
+          ContentFR = "<I><I>Hmpf.</> Regarde mieux !</>",
           DialogueId = 51005807,
           GUID = "7FB00C36",
           LookAt = {
@@ -138101,7 +138101,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           Subtitle = "A few days ago, I saw a beggar catch the Rat Warrior... and turn it into kebabs... waaah..."
         },
         [51007639] = {
-          ContentFR = "<I>Soupir...</> triste, mais dans la recherche, ça arrive. Je veux juste vérifier comment vont les petits rats qu’il protégeait.",
+          ContentFR = "<I><I>Soupir...</> triste, mais dans la recherche, ça arrive. Je veux juste vérifier comment vont les petits rats qu’il protégeait.</>",
           DialogueId = 51007639,
           GUID = "7FB138C6",
           NextDialogue = 51007640,
@@ -139739,7 +139739,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51007928] = {
           Camera = "-125.646004,-486.612549,465.015015,-0.001072,-47.41058,90.325813,15.353726,100000.0,false,Manual,22.0",
-          ContentFR = "<I>Soupir...</> Des attractions pas chères et amusantes pour les habitants de Brumelac... faut que je trouve un moyen...",
+          ContentFR = "<I><I>Soupir...</> Des attractions pas chères et amusantes pour les habitants de Brumelac... faut que je trouve un moyen...</>",
           DialogueId = 51007928,
           GUID = "7FB16830",
           NextDialogue = 51007929,
@@ -140296,7 +140296,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51009101] = {
           Camera = "31.95166,-155.348633,189.27417,0.000149,-19.998835,117.216698,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Oh, te voilà, {性别:gamin|gamine}.",
+          ContentFR = "Ah, da bist du ja, {性别:Kleiner|Kleine}.",
           DialogueId = 51009101,
           FinalCamera = "22.969727,-137.882812,182.126709,0.000149,-19.998835,117.216698,35.000011,100000.0,false,DoNotOverride,2.8",
           GUID = "7FB228A2",
@@ -140311,7 +140311,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           ToFinalCameraBlendTime = 10
         },
         [51009102] = {
-          ContentFR = "J’ai quelque chose à te dire. Si tu as un moment, viens donc me voir.",
+          ContentFR = "Ich wollte mit dir über etwas reden. Komm vorbei, wenn du einen Moment Zeit hast.",
           DialogueId = 51009102,
           FacialId = {
             [1] = "230002:Smile02"
@@ -140323,7 +140323,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51009103] = {
           Camera = "-75.501465,184.568848,113.267334,0.000113,6.000218,-73.174103,35.000008,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Hein ? Que se passe-t-il ?",
+          ContentFR = "Gibt’s ein Problem?",
           DialogueId = 51009103,
           FacialId = {
             [1] = "100001:Confident02"
@@ -140338,7 +140338,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51009104] = {
           Camera = "-0.50293,-143.24707,186.720215,0.000033,-20.097776,108.487289,35.000008,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Disons que c’est une vieille qui aime se mêler de tout... mais quand je vois {性别:un jeune aventurier|une jeune aventurière} tout juste parti sur les routes, j’ai toujours envie de donner un petit coup de main.",
+          ContentFR = "Nenn es die Einmischung einer alten Schmiedin. Aber wenn ich sehe, wie ein Jungspund seine ersten Schritte macht, kann ich einfach nicht tatenlos zusehen.",
           DialogueId = 51009104,
           FacialId = {
             [1] = "230002:Satisfy01"
@@ -140353,7 +140353,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51009105] = {
           Camera = "-12.577637,39.386719,106.859375,0.000067,-6.599274,139.219772,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Voici l’un des enseignements qu’on acquiert avec l’âge : l’aventure de demain se prépare aujourd’hui. Allez, suis-moi, j’ai quelque chose à te montrer.",
+          ContentFR = "Hier ein Rat von jemandem, der mehr Schmieden gesehen hat, als sie zählen kann: Die Reise von morgen beginnt mit der Vorbereitung von heute. Komm, ich will dir etwas zeigen.",
           DialogueId = 51009105,
           FacialId = {
             [1] = "230002:Happy02"
@@ -140367,7 +140367,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51009106] = {
           Camera = "-72.382324,317.592285,116.973633,0.000082,-1.397914,-90.974327,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Si même Luno, la forgeronne le dit, alors on ferait mieux de se préparer dès maintenant !",
+          ContentFR = "Na gut, wenn sogar unsere Meisterin das sagt, sollten wir uns besser vorbereiten!",
           DialogueId = 51009106,
           FacialId = {
             [1] = "230001:Smile01"
@@ -140390,7 +140390,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009107] = {
           Camera = "-75.27478,43.773438,123.701057,0.000271,3.798657,-56.419697,35.000015,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Qu’est-ce que c’est ?",
+          ContentFR = "Was ist das?",
           DialogueId = 51009107,
           GUID = "7FB2299E",
           LookAt = {
@@ -140407,7 +140407,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009108] = {
           Camera = "-62.247192,-183.929199,181.586136,0.000295,-20.401276,71.576736,35.000015,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Ah, te voilà. Tu arrives au bon moment : la forge est à bonne température, et ces vieux bras ont besoin d’un peu d’exercice.",
+          ContentFR = "Ah, du bist da. Gutes Timing. Die Schmiede hat gerade die perfekte Temperatur, und diese alten Knochen brauchen Bewegung.",
           DialogueId = 51009108,
           FacialId = {
             [1] = "230002:Satisfy01"
@@ -140421,7 +140421,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
           Subtitle = "Ah, you came. Good timing — the forge is just at the right temperature, and these old bones could use the stretch."
         },
         [51009109] = {
-          ContentFR = "Ton épée m’a inspirée. Laisse-moi te montrer ce dont je suis encore capable.",
+          ContentFR = "Dein Schwert hat mich richtig inspiriert. Ich zeig dir, was diese Hände noch draufhaben.",
           DialogueId = 51009109,
           FacialId = {
             [1] = "230002:Confident02"
@@ -140435,7 +140435,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009110] = {
           Camera = "8.336334,-29.466553,77.175323,0.000124,7.39872,94.000053,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Voilà qui est fait !",
+          ContentFR = "Fertig.",
           DialogueId = 51009110,
           FacialId = {
             [1] = "230002:Happy02"
@@ -140454,7 +140454,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009111] = {
           Camera = "-109.266235,212.040771,142.030579,0.000303,-12.201387,-63.418461,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Ouaaah ! Incroyable !",
+          ContentFR = "Wow! Das war unglaublich!",
           DialogueId = 51009111,
           FacialId = {
             [1] = "230001:Smile02"
@@ -140472,7 +140472,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009112] = {
           Camera = "-98.319763,-208.091797,193.145508,0.000145,-22.401394,63.002728,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Rassure-toi, cette fois c’est un service spécial, gratuit.",
+          ContentFR = "Was für eine schöne Waffe. Darf ich sie ausprobieren?",
           DialogueId = 51009112,
           GUID = "7FB22A70",
           LookAt = {
@@ -140487,7 +140487,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009113] = {
           Camera = "-98.319763,-208.091797,193.145508,0.000145,-22.401394,63.002728,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Bien sûr. Elle a été forgée pour toi, après tout.",
+          ContentFR = "Natürlich. Sie wurde schließlich für dich geschmiedet.",
           DialogueId = 51009113,
           GUID = "7FB22A9A",
           LookAt = {
@@ -140499,7 +140499,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009114] = {
           Camera = "-24.090881,-40.348145,106.749283,0.00021,-8.600826,75.590508,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Elle ne rivalise peut-être pas avec ta lame d’origine, mais c’est sans doute l’une de mes plus belles créations.",
+          ContentFR = "Sie mag deinem alten Schwert nicht das Wasser reichen, aber ich würde sagen, sie gehört zu meinen besten Arbeiten.",
           DialogueId = 51009114,
           FacialId = {
             [1] = "230002:Confident02"
@@ -140511,7 +140511,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009115] = {
           Camera = "-45.129822,68.886719,129.014465,0.000222,1.198575,-71.808838,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Merci... mais pourquoi forger une arme spécialement pour moi ? J’ai déjà...",
+          ContentFR = "Danke. Aber warum machst du dir so viel Mühe für mich? Ich hab doch schon ...",
           DialogueId = 51009115,
           FacialId = {
             [1] = "100001:Shy"
@@ -140526,7 +140526,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009116] = {
           Camera = "-47.538391,-157.203125,145.923813,0.00021,-15.601462,76.384178,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Une arme est la compagne la plus fidèle {性别:d’un jeune aventurier|d’une jeune aventurière}. On ne doit jamais partir sans être prêt.",
+          ContentFR = "Eine Waffe ist der treueste Gefährte eines jungen Abenteurers. Du solltest niemals unvorbereitet sein.",
           DialogueId = 51009116,
           FacialId = {
             [1] = "230002:Happy02"
@@ -140540,7 +140540,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
           }
         },
         [51009117] = {
-          ContentFR = "J’en ai vu défiler, des {性别:gamins|gamines} comme toi : certains sont tombés dans l’oubli, d’autres sont devenus des légendes d’Atlasia. Tous ont commencé de la même façon : curieux, téméraires, brûlant d’ardeur, mais sans la moindre prudence.",
+          ContentFR = "Ich habe mehr junge Leute wie dich gesehen, als ich zählen kann. Manche sind in Vergessenheit geraten, andere wurden zu Legenden von Atlasia. Aber alle begannen gleich: neugierig, ungestüm, voller Feuer und mit viel zu wenig Vorsicht.",
           DialogueId = 51009117,
           FacialId = {
             [1] = "230002:Ahaha02"
@@ -140551,7 +140551,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
           Subtitle = "I've seen more youngsters like you than I can count — some faded into quiet obscurity, others became legends of Atlasia. But they all began the same: curious, reckless, full of fire and far too little caution."
         },
         [51009118] = {
-          ContentFR = "Une arme fiable, c’est le remède qui tempère la fougue et renforce des mains encore inexpérimentées.",
+          ContentFR = "Deshalb ist eine verlässliche Waffe wichtig. Sie zügelt die Hitze der Jugend und stabilisiert Hände, die noch nicht durch die Zeit geprüft sind.",
           DialogueId = 51009118,
           FacialId = {
             [1] = "230002:Satisfy01"
@@ -140563,7 +140563,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009119] = {
           Camera = "-11.187744,-30.125488,113.694717,0.000209,-16.401381,81.782051,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Peut-être n’en as-tu pas besoin pour l’instant, mais garde-la comme arme de secours. Considère-la comme un conseil d’aînée.",
+          ContentFR = "Vielleicht brauchst du sie jetzt nicht, aber behalt sie als Ersatz. Sieh es als Rat einer alten Schmiedin.",
           DialogueId = 51009119,
           GUID = "7FB22B96",
           NextDialogue = 51009120,
@@ -140572,7 +140572,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009120] = {
           Camera = "-36.630005,38.096924,125.536903,0.000215,5.798011,-71.413826,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Merci... je la traiterai avec soin.",
+          ContentFR = "Ich ... Ich werde. Danke.",
           DialogueId = 51009120,
           FacialId = {
             [1] = "100001:Smile01"
@@ -140584,7 +140584,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009121] = {
           Camera = "-23.448242,-113.345947,147.890976,0.000217,-16.601587,81.187027,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Si jamais tu trouves de bons matériaux ou de nouveaux plans, reviens me voir. Je t’en forgerai d’autres.",
+          ContentFR = "Wenn du auf deiner Reise auf feine Materialien oder neue Baupläne stößt, bring sie mir. Ich werde etwas Neues für dich schmieden.",
           DialogueId = 51009121,
           FacialId = {
             [1] = "230002:Confident02"
@@ -140595,7 +140595,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
           Subtitle = "If you come across any fine materials or new blueprints on your journey, bring them to me. I'll forge something new for you."
         },
         [51009122] = {
-          ContentFR = "Mais celle-ci... si un jour elle s’émousse, se brise ou tombe en morceaux, rapporte-la-moi. Peu importe le nombre de fois : je la reforgerai.",
+          ContentFR = "Was diese hier angeht ... sollte der Tag kommen, an dem sie stumpf wird, abplatzt oder sogar bricht, bring sie zurück zu mir. Ich werde sie wieder schmieden, egal wie lange es her ist.",
           DialogueId = 51009122,
           GUID = "7FB22C14",
           NextDialogue = 51009123,
@@ -140604,7 +140604,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009123] = {
           Camera = "-72.498413,-159.67749,187.376312,0.000227,-25.601515,61.982807,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Promets-moi seulement que, chaque fois que tu la tiendras, tu te souviendras de ce qui t’a poussé à prendre la route.",
+          ContentFR = "Versprich mir nur eins: Wann immer du sie in der Hand hältst, denk daran, was dein Herz damals dazu bewegte, loszuziehen.",
           DialogueId = 51009123,
           FacialId = {
             [1] = "230002:Happy02"
@@ -140616,7 +140616,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009124] = {
           Camera = "-77.020996,37.951172,120.615501,0.000228,5.798578,-53.617523,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Je te le promets.",
+          ContentFR = "Ich werde sorgsam mit ihr umgehen. Mein Wort darauf.",
           DialogueId = 51009124,
           FacialId = {
             [1] = "100001:Confident02"
@@ -140631,7 +140631,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009125] = {
           Camera = "7.467804,-22.984863,112.509064,0.000025,-21.401974,93.791664,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Héhé... Ce regard-là... on ne le voit plus souvent chez les jeunes.",
+          ContentFR = "Ah ... Dieser Blick in deinen Augen. So etwas sieht man bei jungen Leuten heutzutage kaum noch.",
           DialogueId = 51009125,
           FacialId = {
             [1] = "230002:Satisfy01"
@@ -140659,7 +140659,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009127] = {
           Camera = "-70.951233,159.355713,107.396042,0.000206,-7.602048,-68.41877,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Euh... Luno, la forgeronne ? Tu fais une drôle de tête... Il y a un problème ?",
+          ContentFR = "Äh ... Schmiedin? Du bist ganz still geworden und wirkst seltsam. Ist alles in Ordnung?",
           DialogueId = 51009127,
           FacialId = {
             [1] = "230001:Shock01"
@@ -140674,7 +140674,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009128] = {
           Camera = "6.965179,-18.811523,117.716042,0.000023,-25.002098,92.79113,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Non... ce n’est rien. Je repensais simplement à de vieux souvenirs.",
+          ContentFR = "Hm? Oh, nichts. Nur ... eine alte Erinnerung.",
           DialogueId = 51009128,
           FacialId = {
             [1] = "230002:Syouganai01"
@@ -140691,7 +140691,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
           }
         },
         [51009129] = {
-          ContentFR = "Dis-moi, {性别:gamin|gamine}... pourrais-tu me rendre un petit service ?",
+          ContentFR = "Sag mal, Jungspund ... könntest du mir einen Gefallen tun?",
           DialogueId = 51009129,
           FacialId = {
             [1] = "230002:None"
@@ -140706,7 +140706,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009130] = {
           Camera = "-47.573486,44.222656,131.574463,0.000207,1.597875,-67.619141,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Bien sûr. Lequel ?",
+          ContentFR = "Natürlich. Was ist es?",
           DialogueId = 51009130,
           FacialId = {
             [1] = "100001:Smile01"
@@ -140721,7 +140721,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009131] = {
           Camera = "-40.003357,-158.163818,175.533508,0.000306,-22.201714,78.178841,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Si, au cours de ton voyage, tu tombes sur — ou entends parler — d’une épée d’un rouge ardent, comme les flammes elles-mêmes... préviens-moi.",
+          ContentFR = "Wenn du auf deiner Reise zufällig ein Schwert siehst – oder davon hörst –, das die Farbe der Flammen hat, lass es mich wissen.",
           DialogueId = 51009131,
           GUID = "7FB22D8E",
           NextDialogue = 51009132,
@@ -140733,7 +140733,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009132] = {
           Camera = "-79.764465,168.026123,112.217056,0.000226,-5.602353,-64.817764,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Ce serait aussi l’une de tes créations ?",
+          ContentFR = "Ist das auch eines deiner Werke?",
           DialogueId = 51009132,
           GUID = "7FB22DB8",
           NextDialogue = 51009133,
@@ -140745,7 +140745,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009133] = {
           Camera = "-54.818481,-149.708496,145.451065,0.00023,-15.002154,70.382484,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Sans doute... Mais je ne me souviens plus quand je l’ai forgée, ni pour qui...",
+          ContentFR = "Ich glaube schon. Aber wann ich es geschmiedet habe ... und für wen ich es gemacht habe ... kann ich mich nicht mehr erinnern.",
           DialogueId = 51009133,
           FinalCamera = "-23.610504,-51.820557,117.260406,0.000222,-15.60216,74.782066,35.000011,100000.0,false,DoNotOverride,2.8",
           GUID = "7FB22DE2",
@@ -140755,7 +140755,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
           ToFinalCameraBlendTime = 15
         },
         [51009134] = {
-          ContentFR = "Il ne me reste que cette image : cette couleur rouge, brûlante... et cette impression que je dois retrouver cette épée.",
+          ContentFR = "Alles, woran ich mich erinnere, ist dieses feurige Rot. Wie Flammen. Und das Gefühl, dass ich es finden muss.",
           DialogueId = 51009134,
           GUID = "7FB22E0C",
           NextDialogue = 51009135,
@@ -140764,7 +140764,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009135] = {
           Camera = "4.024445,-18.40332,83.317413,0.00013,3.196528,91.587433,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Même de simples rumeurs m’aideraient. S’il te plaît, tends l’oreille si tu entends parler d’une telle épée.",
+          ContentFR = "Sogar Gerüchte wären hilfreich. Bitte, halte ein Ohr für mich offen.",
           DialogueId = 51009135,
           FacialId = {
             [1] = "230002:Satisfy01"
@@ -140781,7 +140781,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009136] = {
           Camera = "-74.956299,70.125977,132.865021,0.000285,-2.00201,-61.222034,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "D’accord. Je ferai attention.",
+          ContentFR = "Verstanden. Ich werde Ausschau halten.",
           DialogueId = 51009136,
           GUID = "7FB22E60",
           NextDialogue = 51009137,
@@ -140793,7 +140793,7 @@ LookAt{_delay{1.5},LookAtDescription{"100001:n(230001)"}},
         },
         [51009137] = {
           Camera = "-45.467529,-102.451904,136.414795,0.000299,-15.201719,72.779053,35.000011,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Bien... Assez bavardé pour une vieille femme. Une nouvelle aventure t’attend — et qu’Atlasia toute entière en soit témoin.",
+          ContentFR = "Genug gequasselt von einer alten Schmiedin. Ein neues Wunder steht bevor. Möge ganz Atlasia Zeuge deiner Reise werden.",
           DialogueId = 51009137,
           FacialId = {
             [1] = "230002:Happy02"
@@ -168548,7 +168548,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "Uh... well, that's how the Empire shows its might. We fight for peace, don't you see?"
         },
         [51125305] = {
-          ContentFR = "Alors pourquoi vouloir vivre à Huaxu ? Ici, tant que tu agis avec droiture, le Seigneur Dragon d’Argent veille sur toi jour après jour.",
+          ContentFR = "Alors pourquoi vouloir vivre à Huaxu ? Ici, tant que tu agis avec droiture, le Dieu-Dragon d’Argent veille sur toi jour après jour.",
           DialogueId = 51125305,
           GUID = "7FFCA15A",
           SpeakNpcId = 701036,
@@ -169141,7 +169141,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "But Ju, bent on peace for all, built a boat with his own hands — asking help from no one — and pushed off alone from this very Starwharf!"
         },
         [51125711] = {
-          ContentFR = "Par la grâce du Seigneur Dragon d’Argent, Ju survécut aux tempêtes et atteignit le mystérieux pays de la Tour. Hélas, là-bas non plus, la paix n’existait pas. Convaincu que les peuples étrangers ne pouvaient offrir l’espoir à Huaxu, Ju reprit la route du retour... accompagné d’autres âmes en quête de stabilité.",
+          ContentFR = "Par la grâce du Dieu-Dragon d’Argent, Ju survécut aux tempêtes et atteignit le mystérieux pays de la Tour. Hélas, là-bas non plus, la paix n’existait pas. Convaincu que les peuples étrangers ne pouvaient offrir l’espoir à Huaxu, Ju reprit la route du retour... accompagné d’autres âmes en quête de stabilité.",
           DialogueId = 51125711,
           GUID = "7FFCE3F6",
           NextDialogue = 51125712,
@@ -169500,7 +169500,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "I get \"betray a vow\", but what does \"break faith\" mean?"
         },
         [51125908] = {
-          ContentFR = "Exactement. Si vous faites affaire avec un habitant de Huaxu, une fois le prix fixé, vous devez conclure un pacte sous le regard du Seigneur Dragon d’Argent. Sans cela, nous ne pouvons vous accorder notre confiance.",
+          ContentFR = "Exactement. Si vous faites affaire avec un habitant de Huaxu, une fois le prix fixé, vous devez conclure un pacte sous le regard du Dieu-Dragon d’Argent. Sans cela, nous ne pouvons vous accorder notre confiance.",
           DialogueId = 51125908,
           GUID = "7FFD0448",
           NextDialogue = 51125909,
@@ -169516,7 +169516,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "Oh, I see — contracts. We do that too. No problem!"
         },
         [51125910] = {
-          ContentFR = "Non, ce n’est pas la même chose. Nos contrats sont sacrés, conclus sous le témoignage du Seigneur Dragon d’Argent. L’encre est mêlée aux cendres de Lune Profonde : dès la signature, le serment est reconnu.",
+          ContentFR = "Non, ce n’est pas la même chose. Nos contrats sont sacrés, conclus sous le témoignage du Dieu-Dragon d’Argent. L’encre est mêlée aux cendres de Lune Profonde : dès la signature, le serment est reconnu.",
           DialogueId = 51125910,
           GUID = "7FFD049C",
           NextDialogue = 51125911,
@@ -170640,7 +170640,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "Count not rhetoric but truth as measure."
         },
         [51126519] = {
-          ContentFR = "Par le Seigneur Dragon d’Argent... comment fais-tu pour tout retenir mot pour mot ? Tu as l’œil céleste ou quoi ?",
+          ContentFR = "Par le Dieu-Dragon d’Argent... comment fais-tu pour tout retenir mot pour mot ? Tu as l’œil céleste ou quoi ?",
           DialogueId = 51126519,
           GUID = "7FFD6886",
           NextDialogue = 51126520,
@@ -171225,7 +171225,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "A Wishen...? Yes... I remember now. Born for no reason... left to wander without purpose. But still, I long to go home... Can you tell me... where that is?"
         },
         [51126904] = {
-          ContentFR = "<I>Tu es le Seigneur Dragon d’Argent.</>",
+          ContentFR = "<I>Tu es le Dieu-Dragon d’Argent.</>",
           DialogueId = 51126904,
           GUID = "7FFDA7B0",
           ImprPlusId = 1210,
@@ -171233,7 +171233,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "You're Lord Argent."
         },
         [51126905] = {
-          ContentFR = "Le Seigneur Dragon d’Argent ? Non... je ne suis pas lui. Le Seigneur Dragon d’Argent protège Huaxu. Moi, je ne suis qu’un... Wishen.",
+          ContentFR = "Le Dieu-Dragon d’Argent ? Non... je ne suis pas lui. Le Dieu-Dragon d’Argent protège Huaxu. Moi, je ne suis qu’un... Wishen.",
           DialogueId = 51126905,
           GUID = "7FFDA7DA",
           NextDialogue = 51126906,
@@ -171406,7 +171406,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "You wouldn't understand... that feeling of finally going home..."
         },
         [51127001] = {
-          ContentFR = "« Que la lumière miséricordieuse du Seigneur Dragon d’Argent éclaire jusqu’aux royaumes d’ombre. Âmes solitaires, esprits entravés, ne vous égarez plus, ne demeurez plus en errance. Que les souffrances d’autrefois soient mises de côté, qu’aujourd’hui vous receviez la délivrance, et soyez baignées dans l’éclat de sa grâce... »",
+          ContentFR = "« Que la lumière miséricordieuse du Dieu-Dragon d’Argent éclaire jusqu’aux royaumes d’ombre. Âmes solitaires, esprits entravés, ne vous égarez plus, ne demeurez plus en errance. Que les souffrances d’autrefois soient mises de côté, qu’aujourd’hui vous receviez la délivrance, et soyez baignées dans l’éclat de sa grâce... »",
           DialogueId = 51127001,
           GUID = "7FFDB79A",
           NextOptions = {
@@ -171465,7 +171465,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "Of course. It would be better still if you joined me."
         },
         [51127008] = {
-          ContentFR = "Que la lumière miséricordieuse du Seigneur Dragon d’Argent éclaire jusqu’aux royaumes d’ombre. Âmes solitaires, esprits entravés, ne vous égarez plus, ne demeurez plus en errance.",
+          ContentFR = "Que la lumière miséricordieuse du Dieu-Dragon d’Argent éclaire jusqu’aux royaumes d’ombre. Âmes solitaires, esprits entravés, ne vous égarez plus, ne demeurez plus en errance.",
           DialogueId = 51127008,
           GUID = "7FFDB8C0",
           NextDialogue = 51127009,
@@ -171739,7 +171739,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "So what are you doing here?"
         },
         [51127115] = {
-          ContentFR = "Mon grand-père est tombé très malade. Une maladie appelée « vieillesse ». Il y a quelque temps, le Seigneur Dragon d’Argent l’a emmené. Avant de fermer les yeux, il m’a raconté qu’il avait vu ici, au Ravin du Clair-Obscur, des gens morts devenus des Wishen.",
+          ContentFR = "Mon grand-père est tombé très malade. Une maladie appelée « vieillesse ». Il y a quelque temps, le Dieu-Dragon d’Argent l’a emmené. Avant de fermer les yeux, il m’a raconté qu’il avait vu ici, au Ravin du Clair-Obscur, des gens morts devenus des Wishen.",
           DialogueId = 51127115,
           GUID = "7FFDCA4E",
           NextDialogue = 51127116,
@@ -172103,7 +172103,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "The tree says... blossom."
         },
         [51127316] = {
-          ContentFR = "Fleurir... La vie d’un arbre est longue, mais sa floraison est brève — et c’est justement pour ça qu’elle attire tous les regards. Les humains sont pareils : guidés par des saisons invisibles, ils fleurissent soudain... même le Seigneur Dragon d’Argent s’en émerveillerait.",
+          ContentFR = "Fleurir... La vie d’un arbre est longue, mais sa floraison est brève — et c’est justement pour ça qu’elle attire tous les regards. Les humains sont pareils : guidés par des saisons invisibles, ils fleurissent soudain... même le Dieu-Dragon d’Argent s’en émerveillerait.",
           DialogueId = 51127316,
           GUID = "7FFDEB48",
           NextOptions = {
@@ -172296,7 +172296,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "Why would I tell you?"
         },
         [51127503] = {
-          ContentFR = "Oh ho, du répondant ! Mais écoute bien : ici, c’est pas un terrain de jeu pour {性别:un morveux|une morveuse} qui sent encore le lait. Seuls des types comme moi... hic... des figures légendaires, qui font trembler les rues et les rumeurs... comme moi, Chizhatian, ont leur place ici. Compris ?",
+          ContentFR = "Oh ho, du répondant ! Mais écoute bien : ici, c’est pas un terrain de jeu pour {性别:un morveux|une morveuse} qui sent encore le lait. Seuls des types comme moi... <I>hic... </>des figures légendaires, qui font trembler les rues et les rumeurs... comme moi, Chizhatian, ont leur place ici. Compris ?",
           DialogueId = 51127503,
           GUID = "7FFE09F6",
           NextDialogue = 51127504,
@@ -172754,7 +172754,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "Hmm... can't say for sure. Put aside all that mythical nonsense — or those wild tales about the Ministry of Fortune scheming with Haze Market — there are two stories folk reckon might hold water."
         },
         [51127626] = {
-          ContentFR = "La première dit que, lors du chaos causé par le Dragon Noir, le Seigneur Dragon d’Argent l’a écrasé. À ce moment-là, un navire de Tisse-Étoiles, de retour au port, se trouvait dans les parages — et n’a pas résisté à la colère divine.",
+          ContentFR = "La première dit que, lors du chaos causé par le Dragon Noir, le Dieu-Dragon d’Argent l’a écrasé. À ce moment-là, un navire de Tisse-Étoiles, de retour au port, se trouvait dans les parages — et n’a pas résisté à la colère divine.",
           DialogueId = 51127626,
           GUID = "7FFE1E24",
           NextDialogue = 51127627,
@@ -173672,7 +173672,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "What are you doing out here? It's dangerous."
         },
         [51128203] = {
-          ContentFR = "Oh, je le sais bien ! Merci de vous en soucier. Mais justement, c’est parce que c’est dangereux que je suis venu. Je voulais allumer un bâton d’encens de Lune Profonde pour le Seigneur Dragon d’Argent, ici même, là où personne n’ose poser le pied, et lui demander d’éradiquer définitivement le Fléau de Zhuyin !",
+          ContentFR = "Oh, je le sais bien ! Merci de vous en soucier. Mais justement, c’est parce que c’est dangereux que je suis venu. Je voulais allumer un bâton d’encens de Lune Profonde pour le Dieu-Dragon d’Argent, ici même, là où personne n’ose poser le pied, et lui demander d’éradiquer définitivement le Fléau de Zhuyin !",
           DialogueId = 51128203,
           GUID = "7FFE7CCE",
           SpeakNpcId = 701073,
@@ -173687,7 +173687,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "Linger any longer and a Sable Bi'an will be along to make a meal of you."
         },
         [51128205] = {
-          ContentFR = "Pas d’inquiétude, pas d’inquiétude. Je sais que l’endroit est dangereux — c’est précisément pour cela que je suis venu ici, là où nul n’ose s’aventurer, afin d’offrir de l’encens de Lune Profonde au Seigneur Dragon d’Argent et de le supplier d’anéantir le Fléau de Zhuyin une bonne fois pour toutes !",
+          ContentFR = "Pas d’inquiétude, pas d’inquiétude. Je sais que l’endroit est dangereux — c’est précisément pour cela que je suis venu ici, là où nul n’ose s’aventurer, afin d’offrir de l’encens de Lune Profonde au Dieu-Dragon d’Argent et de le supplier d’anéantir le Fléau de Zhuyin une bonne fois pour toutes !",
           DialogueId = 51128205,
           GUID = "7FFE7D22",
           NextDialogue = 51128206,
@@ -173710,7 +173710,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "Go on then — don't trouble over me!"
         },
         [51128208] = {
-          ContentFR = "C’est ici que je vais allumer l’encens. Le Seigneur Dragon d’Argent se dressera comme dans les mythes, et il exterminera cette bête immonde jusqu’au dernier souffle !",
+          ContentFR = "C’est ici que je vais allumer l’encens. Le Dieu-Dragon d’Argent se dressera comme dans les mythes, et il exterminera cette bête immonde jusqu’au dernier souffle !",
           DialogueId = 51128208,
           GUID = "7FFE7DA0",
           NextDialogue = 51128209,
@@ -173761,7 +173761,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "Really? Didn't take you for the tough sort. You're not from Huaxu, are you? Your clothes don't look Huaxu, either."
         },
         [51128214] = {
-          ContentFR = "Dans ce cas, accepteriez-vous de brûler de l’encens avec moi ? À deux, nos prières auront plus de chances d’atteindre le Seigneur Dragon d’Argent !",
+          ContentFR = "Dans ce cas, accepteriez-vous de brûler de l’encens avec moi ? À deux, nos prières auront plus de chances d’atteindre le Dieu-Dragon d’Argent !",
           DialogueId = 51128214,
           GUID = "7FFE7E9C",
           NextOptions = {
@@ -173795,7 +173795,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "All right, I won't keep you guessing. Long ago in Huaxu, there lived a wicked creature called Zhuyin."
         },
         [51128218] = {
-          ContentFR = "Par son cœur inquiet et malveillant, elle poussait les hommes à la violence, faisant couler le sang. Le peuple vivait dans la misère, sans répit, et les lamentations ne cessaient jamais. Alors les gens allumèrent l’encens, les uns après les autres, et implorèrent l’aide du Seigneur Dragon.",
+          ContentFR = "Par son cœur inquiet et malveillant, elle poussait les hommes à la violence, faisant couler le sang. Le peuple vivait dans la misère, sans répit, et les lamentations ne cessaient jamais. Alors les gens allumèrent l’encens, les uns après les autres, et implorèrent l’aide du Dieu-Dragon.",
           DialogueId = 51128218,
           GUID = "7FFE7F44",
           NextDialogue = 51128219,
@@ -173803,7 +173803,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "It sowed unrest in people's hearts and drove them to harm one another. The land fell into misery and people knew no peace, so they lit incense — one after another — and prayed for Lord Argent's help."
         },
         [51128219] = {
-          ContentFR = "Depuis les Neuf Cieux, le Seigneur Dragon d’Argent perçut le parfum de l’encens de Lune Profonde. Pris de colère, il usa de sa puissance divine pour chasser Zhuyin au-delà des mers de Huaxu.",
+          ContentFR = "Depuis les Neuf Cieux, le Dieu-Dragon d’Argent perçut le parfum de l’encens de Lune Profonde. Pris de colère, il usa de sa puissance divine pour chasser Zhuyin au-delà des mers de Huaxu.",
           DialogueId = 51128219,
           GUID = "7FFE7F6E",
           NextDialogue = 51128220,
@@ -173837,14 +173837,14 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "(You take a stick of incense and join him in the offering.)"
         },
         [51128223] = {
-          ContentFR = "<I>Vous cherchez donc à reproduire le rituel des mythes, pour appeler le Seigneur Dragon d’Argent ?</>",
+          ContentFR = "<I>Vous cherchez donc à reproduire le rituel des mythes, pour appeler le Dieu-Dragon d’Argent ?</>",
           DialogueId = 51128223,
           GUID = "7FFE8016",
           NextDialogue = 51128224,
           Subtitle = "So you mean to call Lord Argent the way people did in the old tales?"
         },
         [51128224] = {
-          ContentFR = "Exactement ! Je me dis que, de nos jours, tout le monde brûle de l’encens sans cesse. Le Seigneur Dragon d’Argent doit sentir l’encens partout et ne plus savoir où intervenir. Alors si j’offre de l’encens ici, dans un lieu désert, il ne pourra qu’être intrigué.",
+          ContentFR = "Exactement ! Je me dis que, de nos jours, tout le monde brûle de l’encens sans cesse. Le Dieu-Dragon d’Argent doit sentir l’encens partout et ne plus savoir où intervenir. Alors si j’offre de l’encens ici, dans un lieu désert, il ne pourra qu’être intrigué.",
           DialogueId = 51128224,
           GUID = "7FFE8040",
           NextDialogue = 51128225,
@@ -177055,7 +177055,7 @@ LookAt{_delay{1},LookAtDescription{"900012:n(100001)"}}
         },
         [51151207] = {
           Camera = "83.419922,-2.439453,100.824219,0.000082,-6.798552,-173.972046,25.0,100000.0,false,DoNotOverride,2.8",
-          ContentFR = "Le hasard, voilà la clé du profit ! Cette idée m’est venue comme une illumination, un jour où je priais le Seigneur Dragon d’Argent. Alors ? Avoue que c’est une idée de génie !",
+          ContentFR = "Le hasard, voilà la clé du profit ! Cette idée m’est venue comme une illumination, un jour où je priais le Dieu-Dragon d’Argent. Alors ? Avoue que c’est une idée de génie !",
           DialogueId = 51151207,
           GUID = "800D3AE6",
           LookAt = {
@@ -182129,7 +182129,7 @@ Psyche's Room
         },
         [70013601] = {
           Camera = "-1014.009033,-38.646729,437.392578,0.000006,-1.999756,-2.801728,20.0,100000.0,false,Manual,2.33",
-          ContentFR = "Une vieille affiche jaunie, dont on peine à déchiffrer le contenu :\n\n...\nLe récital de la célèbre chanteuse Violetta commencera dès la semaine prochaine !\nLe classique Né du Blizzard renaît sur scène, et sa voix céleste résonnera dans toute Givrelac !\nUne semaine entière de représentations immanquables ! À ne manquer sous aucun prétexte !\nContre rémunération, possibilité de vous faire entrer clandestinement dans la cité intérieure !\nVenez goûter à une fête musicale réservée à l’élite !\n...\nContact : Monsieur Jack\nPoint de rendez-vous : chaque nuit, à minuit, près de la bouche d’égout.\nCode à transmettre à l’homme roux : « Coucou, coucou ».",
+          ContentFR = "Une vieille affiche jaunie, dont on peine à déchiffrer le contenu :\n\n...\nLe récital de la célèbre chanteuse Violetta commencera dès la semaine prochaine !\nLe classique <I>Né du Blizzard</> renaît sur scène, et sa voix céleste résonnera dans toute Givrelac !\nUne semaine entière de représentations immanquables ! À ne manquer sous aucun prétexte !\nContre rémunération, possibilité de vous faire entrer clandestinement dans la cité intérieure !\nVenez goûter à une fête musicale réservée à l’élite !\n...\nContact : Monsieur Jack\nPoint de rendez-vous : chaque nuit, à minuit, près de la bouche d’égout.\nCode à transmettre à l’homme roux : « Coucou, coucou ».",
           DialogueId = 70013601,
           Duration = 5,
           GUID = "AF458E6A",
@@ -235370,14 +235370,14 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [90010301] = {
           Camera = "192.657425,-208.698975,78.959908,0.000142,-5.798523,129.981186,35.0,250.0,false,DoNotOverride,2.8",
-          ContentFR = "C’est mon ami. Il a beau être petit, il est sacrément costaud — il attise le feu de la forge pour moi.",
+          ContentFR = "C’est mon fidèle compagnon. Pas bien grand, mais sacrément costaud ! Je lui confie le soin d’attiser le feu de la forge.",
           DialogueId = 90010301,
           GUID = "E154D302",
           SpeakNpcId = 900001,
           Subtitle = "That's my little friend. Tiny, but strong — it keeps the forge fire going."
         },
         [90020101] = {
-          ContentFR = "Les boissons fermentées sont là-bas, vas-y, sers-toi... Oh, et n’en donne surtout pas à un mineur.",
+          ContentFR = "<I>Bâille</>... Bonjour... Hein ? Ah, il est trop tard pour dire bonjour ? Euh... bonsoir, alors ?",
           DialogueId = 90020101,
           Duration = 3,
           GUID = "E15B1AD2",
@@ -235386,7 +235386,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           VoiceName = "voice/$Locale$/char/Bai/vo_shop_r03"
         },
         [90020201] = {
-          ContentFR = "Le repos fait partie du voyage. Que dirais-tu d’une tasse de la spécialité Luno ?",
+          ContentFR = "Hein ?! J-Je ne faisais pas la sieste... Hum hum ! Tu veux acheter quelque chose ?",
           DialogueId = 90020201,
           GUID = "E15B2B3A",
           SpeakNpcId = 900002,
@@ -245264,7 +245264,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           bForbidSkipOptions = true
         },
         [510013041] = {
-          ContentFR = "<I>Je préfère considérer Camilla comme une alliée forte et fiable. Elle nous a aidés à de nombreuses reprises. Pas seulement nous, d’ailleurs : au moins la moitié de Givrelac lui doit quelque chose.</>",
+          ContentFR = "<I>Non, Camilla est une amie digne de confiance. Elle m’a déjà aidé.</>",
           DialogueId = 510013041,
           FailDialogue = 51001305,
           GUID = "510013041.0",
@@ -245273,7 +245273,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           Subtitle = "No, Ms Camilla is a trustworthy friend and she's helped me out before."
         },
         [510013042] = {
-          ContentFR = "<I>Ce n’est pas une raison pour déblatérer ici. Je crois en l’intégrité de Camilla, et ce n’est pas avec tes accusations ridicules que tu la saliras.</>",
+          ContentFR = "<I>Laisse tomber, je fais confiance à mon jugement. Je sais qui est vraiment Camilla.</>",
           DialogueId = 510013042,
           FailDialogue = 51001305,
           GUID = "510013042.0",
@@ -245282,7 +245282,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           Subtitle = "Save your breath. Ms Camilla's integrity is not up for debate. I trust my own judgment of her."
         },
         [510013043] = {
-          ContentFR = "<I>J’ai vu de mes yeux le discernement de Camilla : qu’il s’agisse des gens ou des boissons, rien ne lui échappe. Celui qui ne reconnaît rien, ici, c’est toi.</>",
+          ContentFR = "<I>En fait, tu voulais juste lui fourguer ta piquette et elle t’a rembarré. Voilà pourquoi tu rages.</>",
           DialogueId = 510013043,
           FailDialogue = 51001305,
           GUID = "510013043.0",
@@ -245291,7 +245291,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           Subtitle = "Let me guess — she turned down your swill, and now you're bitter."
         },
         [510013061] = {
-          ContentFR = "<I>Hum... kof...</> J’entends à ton accent que tu n’es pas du coin. Laisse-moi deviner, depuis que tu es arrivé à Givrelac, tu n’as jamais mis les pieds ailleurs qu’au bar de Camilla ?",
+          ContentFR = "<I><I>Hum... kof...</> J’entends à ton accent que tu n’es pas du coin. Laisse-moi deviner, depuis que tu es arrivé à Givrelac, tu n’as jamais mis les pieds ailleurs qu’au bar de Camilla ?</>",
           DialogueId = 510013061,
           GUID = "510013061.0",
           SpeakNpcId = 700014,
@@ -245304,14 +245304,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           Subtitle = "So what?"
         },
         [510013091] = {
-          ContentFR = "<I>D’accord, je prends une pinte.</>",
+          ContentFR = "D’accord, je prends une pinte.",
           DialogueId = 510013091,
           GUID = "510013091.0",
           NextDialogue = 51001310,
           Subtitle = "Alright, I'll take a can."
         },
         [510013092] = {
-          ContentFR = "<I>On en a pour son argent.</>",
+          ContentFR = "<I>Un alcool trop bon marché, c’est jamais bon signe. Je passe mon tour.</>",
           DialogueId = 510013092,
           GUID = "510013092.0",
           NextDialogue = 51001313,
@@ -245334,7 +245334,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           Subtitle = "Yeah! Don't let her words scare you, buddy! Why not chug a barrel to prove how good your stuff is?"
         },
         [510013281] = {
-          ContentFR = "<I>Sa camelote fait vraiment des ravages...</>",
+          ContentFR = "<I>Ces faux produits finissent toujours par faire du mal...</>",
           DialogueId = 510013281,
           GUID = "510013281.0",
           NextDialogue = 51001329,
@@ -245894,7 +245894,7 @@ However, her teacher is displeased with her momentary distraction.]]
           }
         },
         [510035051] = {
-          ContentFR = "Rêvasser comme ça, c’est prendre le risque qu’elle te note dans son carnet.",
+          ContentFR = "<I>Rêvasser comme ça, c’est prendre le risque qu’elle te note dans son carnet.</>",
           DialogueId = 510035051,
           GUID = "510035051.0",
           ImprPlusId = 1001,
@@ -247239,7 +247239,7 @@ However, her teacher is displeased with her momentary distraction.]]
           Subtitle = "No thanks. I'm busy."
         },
         [510091111] = {
-          ContentFR = "Euh... je dois payer pour ça ?",
+          ContentFR = "Wird mich das was kosten?",
           DialogueId = 510091111,
           GUID = "510091111.0",
           ImprPlusId = 1001,
@@ -247247,7 +247247,7 @@ However, her teacher is displeased with her momentary distraction.]]
           Subtitle = "Is this... going to cost me?"
         },
         [510091112] = {
-          ContentFR = "Quelle arme magnifique... je peux l’essayer ?",
+          ContentFR = "Keine Sorge. Dieses Mal geht’s aufs Haus – ein einmaliger Spezialservice.",
           DialogueId = 510091112,
           GUID = "510091112.0",
           ImprPlusId = 1004,
@@ -262420,13 +262420,13 @@ However, her teacher is displeased with her momentary distraction.]]
           Subtitle = "It's Echowort."
         },
         [900103011] = {
-          ContentFR = "<I>Qu’est-ce que c’est que ce truc noir, là-bas ?</>",
+          ContentFR = "Hein ? C’est quoi ce petit truc sombre, là, derrière ?",
           DialogueId = 900103011,
           GUID = "900103011.0",
           Subtitle = "What's that black thingy over there?"
         },
         [900103012] = {
-          ContentFR = "<I>À bientôt.</>",
+          ContentFR = "À la prochaine.",
           DialogueId = 900103012,
           GUID = "900103012.0",
           Subtitle = "Goodbye."

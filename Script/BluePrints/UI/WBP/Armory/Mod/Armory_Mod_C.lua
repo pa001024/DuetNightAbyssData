@@ -818,8 +818,7 @@ function M:SetUpModTab()
     self.Tab_Mod:LeaveViewSingleMode()
     self:ShowTabResourceBar(false)
   end
-  local TargetName = ModModel.CopyModeSenderName or ModModel:GetTarget():GetName()
-  self.Tab_Mod:UpdateTopTitle(GText("MESSAGE_TITLE_LOADING_31_PC") .. "/" .. TargetName)
+  self.Tab_Mod:UpdateTopTitle(GText("MESSAGE_TITLE_LOADING_31_PC") .. "/" .. ModModel:GetTarget():GetName())
   self:PlayTabInAnim()
   self.Btn_Auto:ForbidBtn(not next(ModModel.TargetMods))
 end

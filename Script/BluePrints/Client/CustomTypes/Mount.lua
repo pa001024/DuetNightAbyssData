@@ -6,7 +6,7 @@ local FormatProperties = require("NetworkEngine.Common.Assemble").FormatProperti
 local Mount = Class("Mount", CustomTypes.CustomAttr)
 Mount.__Props__ = {
   MountId = prop.prop("Int", "client save"),
-  BattleMountId = prop.getter("Data", "BattleMountId"),
+  BattleMountId = prop.getter("BattleChar", "BattleMountId"),
   MountRarity = prop.getter("Data", "MountRarity"),
   ResourceId = prop.getter("Data", "ResourceId"),
   UsedSkins = prop.prop("Appearance.SkinDict", "client save"),
@@ -50,6 +50,9 @@ MountShareData.__Props__ = {
 
 function MountShareData:Data()
   return DataMgr.MountLevel[self.LevelId]
+end
+
+function MountShareData:IsUnlock()
 end
 
 FormatProperties(MountShareData)

@@ -11,7 +11,6 @@ function M:OnLoaded(...)
   self.Text_Tip:SetText(GText("UI_RougeLike_End__ClickEmpty"))
   self:InitPresets()
   self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
-  self:SetFocus()
   self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
   self:InitButtonNavigation()
   self:PlayAnimation(self.In)
@@ -23,9 +22,7 @@ function M:InitButtonNavigation()
     self,
     function()
       if 0 == self.Preset_02.WS_Type:GetActiveWidgetIndex() then
-        if not self.Preset_02.IsSelected then
-          self.Preset_02:OnClickPreset()
-        end
+        self.Preset_02:OnClickPreset()
         return self.Preset_02.Btn_Click
       else
         return self.Preset_02.Btn_Add
@@ -36,9 +33,7 @@ function M:InitButtonNavigation()
     self,
     function()
       if 0 == self.Preset_01.WS_Type:GetActiveWidgetIndex() then
-        if not self.Preset_01.IsSelected then
-          self.Preset_01:OnClickPreset()
-        end
+        self.Preset_01:OnClickPreset()
         return self.Preset_01.Btn_Click
       else
         return self.Preset_01.Btn_Add
@@ -49,9 +44,7 @@ function M:InitButtonNavigation()
     self,
     function()
       if 0 == self.Preset_03.WS_Type:GetActiveWidgetIndex() then
-        if not self.Preset_03.IsSelected then
-          self.Preset_03:OnClickPreset()
-        end
+        self.Preset_03:OnClickPreset()
         return self.Preset_03.Btn_Click
       else
         return self.Preset_03.Btn_Add
@@ -62,9 +55,7 @@ function M:InitButtonNavigation()
     self,
     function()
       if 0 == self.Preset_02.WS_Type:GetActiveWidgetIndex() then
-        if not self.Preset_02.IsSelected then
-          self.Preset_02:OnClickPreset()
-        end
+        self.Preset_02:OnClickPreset()
         return self.Preset_02.Btn_Click
       else
         return self.Preset_02.Btn_Add
@@ -78,9 +69,7 @@ function M:InitButtonNavigation()
     self,
     function()
       if 0 == self.Preset_02.WS_Type:GetActiveWidgetIndex() then
-        if not self.Preset_02.IsSelected then
-          self.Preset_02:OnClickPreset()
-        end
+        self.Preset_02:OnClickPreset()
         return self.Preset_02.Btn_Click
       else
         return self.Preset_02.Btn_Add
@@ -91,9 +80,7 @@ function M:InitButtonNavigation()
     self,
     function()
       if 0 == self.Preset_01.WS_Type:GetActiveWidgetIndex() then
-        if not self.Preset_01.IsSelected then
-          self.Preset_01:OnClickPreset()
-        end
+        self.Preset_01:OnClickPreset()
         return self.Preset_01.Btn_Click
       else
         return self.Preset_01.Btn_Add
@@ -104,9 +91,7 @@ function M:InitButtonNavigation()
     self,
     function()
       if 0 == self.Preset_03.WS_Type:GetActiveWidgetIndex() then
-        if not self.Preset_03.IsSelected then
-          self.Preset_03:OnClickPreset()
-        end
+        self.Preset_03:OnClickPreset()
         return self.Preset_03.Btn_Click
       else
         return self.Preset_03.Btn_Add
@@ -117,9 +102,7 @@ function M:InitButtonNavigation()
     self,
     function()
       if 0 == self.Preset_02.WS_Type:GetActiveWidgetIndex() then
-        if not self.Preset_02.IsSelected then
-          self.Preset_02:OnClickPreset()
-        end
+        self.Preset_02:OnClickPreset()
         return self.Preset_02.Btn_Click
       else
         return self.Preset_02.Btn_Add
@@ -187,17 +170,12 @@ end
 
 function M:InitKeyboardView()
   self.Btn_Close:SetVisibility(UE4.ESlateVisibility.Visible)
-  self.Preset_01:InitKeyboardView()
-  self.Preset_02:InitKeyboardView()
-  self.Preset_03:InitKeyboardView()
 end
 
 function M:InitGamepadView()
   if self:HasFocusedDescendants() or self:HasAnyUserFocus() then
     self.Preset_01:SetFocus()
     self.Preset_01:InitGamepadView()
-    self.Preset_02:InitGamepadView()
-    self.Preset_03:InitGamepadView()
   end
 end
 

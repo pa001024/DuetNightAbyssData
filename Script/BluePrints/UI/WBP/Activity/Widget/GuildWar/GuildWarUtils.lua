@@ -165,7 +165,7 @@ function GuildWarUtils.GetCoinId(ShopKey)
   return CoinId
 end
 
-function GuildWarUtils.HasShopReddot()
+function GuildWarUtils.RefreshShopReddot()
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
@@ -201,7 +201,15 @@ function GuildWarUtils.HasShopReddot()
       end
     end
   end)
-  return ShowReddot
+  if ShowReddot then
+    if not CacheDetail[SeasonEventId][GuildWarUtils.ShopCacheKey] then
+      CacheDetail[SeasonEventId][GuildWarUtils.ShopCacheKey] = 1
+      ReddotManager.IncreaseLeafNodeCount(GuildWarUtils.ReddotNodeKey)
+    end
+  elseif CacheDetail[SeasonEventId][GuildWarUtils.ShopCacheKey] then
+    ReddotManager.DecreaseLeafNodeCount(GuildWarUtils.ReddotNodeKey)
+    CacheDetail[SeasonEventId][GuildWarUtils.ShopCacheKey] = nil
+  end
 end
 
 function GuildWarUtils.RefreshQuestReddot(ClearCache)

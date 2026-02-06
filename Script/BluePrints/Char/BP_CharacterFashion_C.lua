@@ -213,12 +213,7 @@ function BP_CharacterFashion_C:ChangeCharHair(HairId)
   local HairType = CommonConst.DataType.Hair
   local DefaultHairId = Owner.DefaultCharPartId:Find(HairType)
   local HairData = DataMgr.Hair[HairId]
-  if HairData and HairData.IsHideHat then
-    rawset(self, "HideHatByHair", true)
-  end
   if self.InitWithCombinePart then
-    Owner:DetachSuitItem(HairType)
-    Owner:DeactivatePartMeshComp(HairType)
     if not HairData then
       if not self:IsHideHiarByAnyAccessory() then
         table.insert(self.InitPartIds, DefaultHairId)
@@ -230,8 +225,7 @@ function BP_CharacterFashion_C:ChangeCharHair(HairId)
     end
     local CharPartId
     if HairData.LinkAccessory then
-      self:ChangeAccessory(HairData.LinkAccessory, HairType)
-      return
+      CharPartId = GetCharPartIdByAccessoryId(HairData.LinkAccessory)
     elseif HairData.CharPartId then
       CharPartId = HairData.CharPartId
     end

@@ -8,13 +8,12 @@ function M:InitParams(Params)
   self.Params = Params
   self:InitDungeonInfo()
   self.Btn_Exit.Button_Area.OnClicked:Add(self, self.OnExitClicked)
+  self.Btn_Continue.Button_Area.OnClicked:Add(self, self.OnContinueClicked)
   if self.Params and 2 == self.Params.MissionType and self.Params.IsWin then
-    self.Btn_Continue:ForbidBtn(true)
+    self.Btn_Continue:SetIsEnabled(false)
     self.Btn_Continue:BindForbidStateExecuteEvent(self, function()
       UIManager(self):ShowUITip("CommonToastMain", GText("UI_AutoChess_CantStartAgain"))
     end)
-  else
-    self.Btn_Continue.Button_Area.OnClicked:Add(self, self.OnContinueClicked)
   end
   if self.Btn_Data then
     self.Btn_Data.Button_Area.OnClicked:Add(self, self.InitBattleInfo)
@@ -455,18 +454,14 @@ end
 
 function M:ItemMenuAnchorChanged(IsOpen)
   if self.CurInputDeviceType ~= ECommonInputType.Gamepad then
-    if self.Key_GamePad then
-      self.Key_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    end
+    self.Key_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
     return
   end
   self.IsOpenItemMenu = IsOpen
   if IsOpen then
     local BottomKeyInfo = {}
-    if self.Key_GamePad then
-      self.Key_GamePad:UpdateKeyInfo(BottomKeyInfo)
-      self.Key_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    end
+    self.Key_GamePad:UpdateKeyInfo(BottomKeyInfo)
+    self.Key_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
   else
     if self.IsFocusRewardList then
       local RewardWidget = self.Settlement_RewardItem

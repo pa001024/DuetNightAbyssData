@@ -17,10 +17,7 @@ function M:Destory()
   for TimerKey in pairs(self.TimerKeys or {}) do
     self:StopTimer(TimerKey)
   end
-  local EventName = self:GetEventName()
-  if EventName then
-    EventManager.EventDic[EventName] = nil
-  end
+  EventManager.EventDic[self:GetEventName()] = nil
   self:GetModel():Destory()
   self._Model = nil
   GWorld.GameInstance:UnBindGamepadEvent()

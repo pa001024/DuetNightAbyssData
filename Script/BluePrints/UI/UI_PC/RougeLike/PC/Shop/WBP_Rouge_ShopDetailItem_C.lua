@@ -208,7 +208,6 @@ function M:SetSuit()
       self.ShowSuitActive = true
       local SuitData = RougeUtils:GenSuitDetail(self.GroupId, Level, true)
       self.SuitDetail_SubItem:InitUIInfo(SuitData)
-      self.SuitDetail_SubItem.bSkipDefinitionAutoInit = true
       UIUtils.SetDefinitionText(self.SuitDetail_SubItem.Text_SuitDesc, SuitData.ExplanationId)
     end
   elseif self.Type == "Treasure" and DataMgr.TreasureGroup[self.GroupId] then

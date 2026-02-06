@@ -104,7 +104,7 @@ function ProgressSnapShotComponent:RecordProgressData()
   if not self:CheckProgressSnapShotEnable() then
     return
   end
-  local ResData, _Data = self:GenerateProgressData("OnBattle")
+  local ResData = self:GenerateProgressData("OnBattle")
   UE4.UGameplayStatics.GetGameInstance(self):ClearProgressData()
   GWorld:GetAvatar():SaveProgressData(ResData)
 end
@@ -260,7 +260,7 @@ function ProgressSnapShotComponent:GenerateProgressData(CurStage)
     CurStage = CurStage
   }
   PrintTable(ResData, 6)
-  return ResData, TmpDungeonSnapShotData
+  return ResData
 end
 
 function ProgressSnapShotComponent:RecoverProgressData()

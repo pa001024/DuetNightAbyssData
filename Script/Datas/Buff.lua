@@ -2707,7 +2707,7 @@ return ReadOnly("Buff", {
     CombatConditionId = 1004,
     IsShowInBillboard = true,
     MaxLayer = 5,
-    MergeRule1 = "Global",
+    MergeRule1 = "Personal",
     MergeRule2 = "NewFree"
   },
   [10204] = {

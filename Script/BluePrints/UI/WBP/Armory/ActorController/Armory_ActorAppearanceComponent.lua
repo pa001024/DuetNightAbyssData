@@ -233,20 +233,14 @@ function M:StopMVPSequence()
     self.MVPActorController.IsPlayingSequence = false
     Player:StopMontage()
     Player:StopMVPSequence()
-    local Avatar = GWorld:GetAvatar()
-    if not (Avatar and Avatar.CurrentOnlineType) or -1 == Avatar.CurrentOnlineType then
-      self.ViewUI:UISetGamePaused(self.ViewUI.WidgetName or self.ViewUI.ConfigName, true)
-    end
+    self.ViewUI:UISetGamePaused(self.ViewUI.WidgetName or self.ViewUI.ConfigName, true)
   elseif self.PlayMVPInfo then
     local _self, Player, AccessoryId = table.unpack(self.PlayMVPInfo)
     self.PlayMVPInfo = nil
     self.IsPlayingSequence = false
     Player:StopMontage()
     Player:StopMVPSequence()
-    local Avatar = GWorld:GetAvatar()
-    if not (Avatar and Avatar.CurrentOnlineType) or -1 == Avatar.CurrentOnlineType then
-      self.ViewUI:UISetGamePaused(self.ViewUI.WidgetName or self.ViewUI.ConfigName, true)
-    end
+    self.ViewUI:UISetGamePaused(self.ViewUI.WidgetName or self.ViewUI.ConfigName, true)
   end
 end
 

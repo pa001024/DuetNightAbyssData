@@ -214,7 +214,6 @@ function BattleDumpUtils:GetSquadInfoByTemplate(Avatar, AvatarSquad, TrialSquad,
   local TemplateAvatarComponent = require("BluePrints.Client.TemplateAvatar.TemplateAvatarComponent")
   local TemplateAvatar = TemplateAvatarComponent()
   local ExtraSquad = {}
-  TemplateAvatar.Mods = Avatar.Mods
   if AvatarSquad.Char then
     TemplateAvatar.CurrentChar = AvatarSquad.Char
     TemplateAvatar.Chars[AvatarSquad.Char] = Avatar.Chars[AvatarSquad.Char]

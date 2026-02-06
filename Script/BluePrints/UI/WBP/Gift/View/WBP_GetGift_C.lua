@@ -273,9 +273,7 @@ function M:OnPurChaseClick()
         CallbackInfo = {
           Func = self.OnRechargeCallback,
           Obj = self
-        },
-        LeftGamepadKey = Const.GamepadFaceButtonUp,
-        ShowBKeyClose = true
+        }
       })
     end
   end

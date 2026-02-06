@@ -18,6 +18,7 @@ from processor.fishing_spot_processor import FishingSpotProcessor
 from processor.resource_processor import ResourceProcessor
 from processor.dyn_quest_processor import DynQuestProcessor
 from processor.quest_chain_processor import QuestChainProcessor
+from processor.quest_story_processor import QuestStoryProcessor
 from processor.region_processor import RegionProcessor
 from processor.sub_region_processor import SubRegionProcessor
 from processor.region_point_processor import RegionPointProcessor
@@ -28,6 +29,7 @@ from processor.hard_boss_processor import HardBossProcessor
 from processor.reward_view_processor import RewardViewProcessor
 from processor.robot_equip_processor import RobotEquipProcessor
 from processor.mount_processor import MountProcessor
+from processor.title_processor import TitleProcessor
 
 
 class DataLoader:
@@ -219,6 +221,7 @@ class FinalProcessor:
             "Resource": ResourceProcessor,
             "DynQuest": DynQuestProcessor,
             "QuestChain": QuestChainProcessor,
+            "QuestStory": QuestStoryProcessor,
             "Region": RegionProcessor,
             "SubRegion": SubRegionProcessor,
             "RegionPoint": RegionPointProcessor,
@@ -229,6 +232,7 @@ class FinalProcessor:
             "HardBoss": HardBossProcessor,
             "RobotEquip": RobotEquipProcessor,
             "Mount": MountProcessor,
+            "Title": TitleProcessor,
             # Add other processor classes here as they are implemented
         }
 
@@ -348,6 +352,7 @@ if __name__ == "__main__":
         "DynQuest",
         "Resource",
         "QuestChain",
+        "QuestStory",
         "Region",
         "SubRegion",
         "RegionPoint",
@@ -358,6 +363,7 @@ if __name__ == "__main__":
         "HardBoss",
         "RobotEquip",
         "Mount",
+        "Title",
     ]
 
     # 使用命令行参数指定的文件类型，如果没有则使用默认列表

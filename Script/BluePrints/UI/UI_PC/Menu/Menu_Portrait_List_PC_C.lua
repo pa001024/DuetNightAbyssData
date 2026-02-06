@@ -198,14 +198,14 @@ end
 function Menu_Portrait_List_PC_C:TrySetHeadFrame(...)
   if self.SelectId then
     self:SetHeadFrameInfo(self.SelectId)
-    UIUtils.TrySubReddotCacheDetailNumber(self.SelectId, "PortraitFrame")
+    UIUtils.TrySubReddotCacheDetail(self.SelectId, "PortraitFrame")
   end
 end
 
 function Menu_Portrait_List_PC_C:TrySetPortrait()
   if self.SelectId then
     self:SetPortraitInfo(self.SelectId)
-    UIUtils.TrySubReddotCacheDetailNumber(self.SelectId, "Portrait")
+    UIUtils.TrySubReddotCacheDetail(self.SelectId, "Portrait")
   end
 end
 

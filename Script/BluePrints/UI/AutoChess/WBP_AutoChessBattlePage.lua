@@ -102,7 +102,6 @@ end
 function M:Close()
   EventManager:RemoveEvent(EventID.OnDungeonEscClose, self)
   self:RemoveTimer(self.CountDownTimerName)
-  self:StopListeningForInputAction("OpenMenu", EInputEvent.IE_Pressed)
   self:StopListeningForInputAction("OpenMenu", EInputEvent.IE_Released)
   self.Super.Close(self)
 end
@@ -815,9 +814,6 @@ function M:TryStartBattle()
     self.UIManager:ShowUITip("CommonToastMain", GText("UI_AutoChess_NoMonsterToast"))
     return
   end
-  if self.GameMode:TriggerDungeonComponentFun("IsMonsterCreating") then
-    return
-  end
   if self.UsedDeployCost > self.TotalDeployCost then
     self:PlayAnimation(self.Cost_Warning)
     self.UIManager:ShowUITip("CommonToastMain", GText("UI_AutoChess_IllegalToast"))
@@ -1060,7 +1056,7 @@ function M:InitButtonGamepadView()
     WrapBox:AddChild(Key1)
     Key1:CreateCommonKey({
       KeyInfoList = {
-        {Type = "Img", ImgShortPath = "L"}
+        {Type = "Img", ImgShortPath = "R"}
       },
       bLongPress = false,
       Desc = GText("UI_CTL_Move")
@@ -1069,7 +1065,7 @@ function M:InitButtonGamepadView()
     WrapBox:AddChild(Key2)
     Key2:CreateCommonKey({
       KeyInfoList = {
-        {Type = "Img", ImgShortPath = "R"}
+        {Type = "Img", ImgShortPath = "L"}
       },
       bLongPress = false,
       Desc = GText("UI_CTL_Camera")

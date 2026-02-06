@@ -106,7 +106,7 @@ function M:TryToSendGift(OtherUid, ShopItemId)
       self:OpenGiftCardView(OtherUid, ShopItemId, 1)
     elseif ErrCode == ErrorCode.GIFT_RECIPIENT_INVENTORY_FULL then
       UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_SendGift_AlreadyHave"))
-    elseif ErrCode == ErrorCode.GIFT_RECIPIENT_REGION_CODE_RESTRICTED then
+    elseif ErrCode == ErrorCode.GIFT_RECIPIENT_BAN_RECV then
       UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_SendGift_CantSendRegion"))
     else
       UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_SendGift_CantSendOther"))
@@ -118,12 +118,6 @@ end
 
 function M:OpenGiftCardView(OtherUid, ShopItemId, GreetingsMode, Mail)
   if 1 == GreetingsMode then
-    local FriendData = FriendController:GetModel():GetFriendDict()[OtherUid]
-    if not FriendData then
-      UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_SendGift_NoLongerFriend"))
-      return
-    end
-  else
     local FriendData = FriendController:GetModel():GetFriendDict()[OtherUid]
     if not FriendData then
       local function OpenGiftCardView(OtherPlayerInfo)

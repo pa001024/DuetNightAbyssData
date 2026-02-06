@@ -217,6 +217,18 @@ function Component:OnBtnAutoClick()
       local Content = self.Selective_Listing.FilteredContents[i]
       if Content.IsLocked or Content.Level and Content.Level > 0 or Content.bShadow then
       elseif Content.Count and Content.Count > 0 then
+        local IsCommon = false
+        if self.Target.CardLevelNeedResourceId then
+          for _, ResourceId in pairs(self.Target.CardLevelNeedResourceId) do
+            if ResourceId == Content.UnitId then
+              IsCommon = true
+              break
+            end
+          end
+        end
+        if not IsCommon then
+          table.insert(PendingEnhanceResList, Content)
+        end
       else
         SetItemChosen(Content, true)
         table.insert(AutoSelectContents, Content)

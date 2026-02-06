@@ -503,7 +503,7 @@ function Component:GetAvatarBuffList()
       if not AvatarInfo then
         return
       end
-      AvatarBuffs = AvatarInfo.PlayerInfo.ServerBuffs
+      AvatarBuffs = AvatarInfo.PlayerInfo.Buffs
     end
   end
   return AvatarBuffs

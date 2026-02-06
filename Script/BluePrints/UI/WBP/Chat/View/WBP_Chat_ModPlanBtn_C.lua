@@ -30,7 +30,7 @@ function M:OnBtnClickInMod()
   else
     UIMode = ModCommon.MainUICase.CopyMode
   end
-  ModModel:CreateDummyAvatarForCopyMode(self.ModSuitInfo, self.SenderName)
+  ModModel:CreateDummyAvatarForCopyMode(self.ModSuitInfo)
   ModController:OpenView(ModCommon.ArmoryMod, self.TargetType, Tag, {1}, nil, {
     Func = function()
       ChatController:OpenView(nil, bBattle)
@@ -65,9 +65,8 @@ end
 function M:Destruct()
 end
 
-function M:InitMod(ModSuitInfo, bSelfMsg, SenderName)
+function M:InitMod(ModSuitInfo, bSelfMsg)
   self.DyePlanInfo = nil
-  self.SenderName = nil
   self.ModSuitInfo = ModSuitInfo
   local ModSuitName = ModSuitInfo.TargetInfo[6]
   local TargetType = ModSuitInfo.TargetInfo[1]
@@ -78,12 +77,7 @@ function M:InitMod(ModSuitInfo, bSelfMsg, SenderName)
   local Conf, Name = nil, "角色或武器被删除了!!!!"
   if "Char" == TargetType then
     Conf = DataMgr.Char[TargetId]
-    if nil ~= Conf.GenderTag then
-      Name = SenderName
-      self.SenderName = SenderName
-    else
-      Name = Conf.CharName
-    end
+    Name = Conf.CharName
   elseif "Weapon" == TargetType then
     Conf = DataMgr.Weapon[TargetId]
     Name = Conf.WeaponName

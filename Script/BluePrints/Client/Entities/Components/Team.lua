@@ -285,7 +285,9 @@ function Component:TeamBattleEvent_SelectWalnut()
   local DungeonId = TeamController:GetModel():GetNowDungeonId()
   local WalnutChoice = UIManager(self):LoadUINew("WalnutChoice", CommonConst.WalnutUser.Depute, DungeonId)
   local WalnutId = TeamController:GetModel().WalnutId
-  WalnutChoice:SelectWalnutById(WalnutId)
+  if WalnutId then
+    WalnutChoice:SelectWalnutById(WalnutId)
+  end
   EventManager:FireEvent(EventID.SelectWalnut)
 end
 

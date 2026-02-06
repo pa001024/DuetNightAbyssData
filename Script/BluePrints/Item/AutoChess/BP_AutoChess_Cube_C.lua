@@ -32,7 +32,6 @@ function BP_AutoChess_Cube_C:ReceiveBeginPlay()
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
   self:EnableInput(PlayerController)
   EventManager:AddEvent(EventID.OnAutoChessCubeChangeState, self, self.OnAutoChessCubeChangeState)
-  EventManager:AddEvent(EventID.OnAutoChessDisableCubeInteraction, self, self.DisableCubeInteraction)
 end
 
 function BP_AutoChess_Cube_C:OnAutoChessCubeChangeState(State, ...)
@@ -214,23 +213,6 @@ function BP_AutoChess_Cube_C:SetMonsterState(IsSelected)
         Monster:K2_SetActorLocation(NewLoc, false, nil, true)
       end
     end
-  end
-end
-
-function BP_AutoChess_Cube_C:DisableCubeInteraction()
-  if CommonUtils.GetRuntimePlatform(self) == "Mobile" then
-    if self.OnInputTouchBegin then
-      self.OnInputTouchBegin:Clear()
-    end
-    if self.OnInputTouchEnd then
-      self.OnInputTouchEnd:Clear()
-    end
-  end
-  if self.OnClicked then
-    self.OnClicked:Clear()
-  end
-  if self.OnReleased then
-    self.OnReleased:Clear()
   end
 end
 

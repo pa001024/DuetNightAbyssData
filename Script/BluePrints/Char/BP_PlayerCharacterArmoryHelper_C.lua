@@ -44,7 +44,7 @@ function M:SetCameraStartTrans(StartTransform, FOV, Player)
   self:OnCameraRotated()
   self:OnCameraZoom()
   local CurRot = self.Player and self.Player:K2_GetActorRotation() or self.EndRot
-  self:SetOriginalRotation(CurRot)
+  self.OriginalRotation = FRotator(CurRot.Pitch, CurRot.Yaw, CurRot.Roll)
   self:SetTickableWhenPaused(true)
 end
 

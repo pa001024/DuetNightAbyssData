@@ -878,14 +878,8 @@ function M:PurChase()
       end
     end,
     RightCallbackObj = self,
-    RightCallbackFunction = function(Obj, Data)
-      if Obj then
-        local count = 1
-        if Data and Data.Content_1 and Data.Content_1.CallObj then
-          count = Data.Content_1.CallObj.CurrentCount or 1
-        end
-        Obj:PurchaseShopItem(count)
-      end
+    RightCallbackFunction = function()
+      self:PurchaseShopItem()
     end,
     ForbiddenRightCallbackObj = self,
     ForbiddenRightCallbackFunction = function(Obj, PackageData)
@@ -916,8 +910,7 @@ function M:PurchaseGift()
   end
 end
 
-function M:PurchaseShopItem(count)
-  local FinalCount = count or self.CurrentCount or 1
+function M:PurchaseShopItem()
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
@@ -969,7 +962,7 @@ function M:PurchaseShopItem(count)
     return
   end
   self:BlockAllUIInput(true)
-  Avatar:PurchaseShopItem(self.ShopItemData.ItemId, FinalCount)
+  Avatar:PurchaseShopItem(self.ShopItemData.ItemId, 1)
 end
 
 function M:RefreshPurchaseState()
@@ -978,9 +971,6 @@ function M:RefreshPurchaseState()
     self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(1)
     self.Text_Desc:SetText(GText("UI_SHOP_ALREADYOWNED"))
     self.bForbiddenButton = true
-  else
-    self:UpdateButtonBuy()
-    self:UpdatePrice()
   end
 end
 

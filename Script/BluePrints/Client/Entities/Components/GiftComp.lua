@@ -67,10 +67,6 @@ function Component:NotifyGetGiftMailItemSuccess(Index)
   if RecvGiftRecords and CommonUtils.Size(RecvGiftRecords) > 0 then
     GiftData = RecvGiftRecords[Index]
   end
-  local FriendData = FriendController:GetModel():GetFriendDict()[OtherUid]
-  if not FriendData then
-    return
-  end
   ChatController:SendGiftReceivedMessage(GiftData.Uid, Index)
 end
 

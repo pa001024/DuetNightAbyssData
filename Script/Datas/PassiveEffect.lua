@@ -734,7 +734,7 @@ return ReadOnly("PassiveEffect", {
     Vars = {
       AttrName = "SkillEfficiency",
       BuffId = 6141,
-      CompareBase = 1.3
+      CompareBase = 1.5
     }
   },
   [6143] = {

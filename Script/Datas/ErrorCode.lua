@@ -8545,18 +8545,6 @@ return ReadOnly("ErrorCode", {
     ErrorCodeContent = "密码校验错误",
     ErrorCodeId = 89006
   },
-  [90001] = {
-    ErrorCodeContent = "活动未开启",
-    ErrorCodeId = 90001
-  },
-  [90002] = {
-    ErrorCodeContent = "请求异常，请稍后再试",
-    ErrorCodeId = 90002
-  },
-  [90003] = {
-    ErrorCodeContent = "请点击「前往」跳转网页登录后生成",
-    ErrorCodeId = 90003
-  },
   [90010] = {
     ContentEN = "Node data missing or invalid",
     ContentJP = "ステータスノードのデータが見つかりませんまたは、エラー発生",

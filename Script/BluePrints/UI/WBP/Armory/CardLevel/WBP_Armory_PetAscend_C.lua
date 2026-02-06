@@ -502,7 +502,7 @@ function M:RefreshBreakHintText()
   local PetBrekId = "PetBreak." .. PetId .. "." .. BreakNum
   if not Avatar.CollectRewardExpRecord[PetBrekId] then
     local PetBreakData = DataMgr.PetBreak[PetId]
-    local BreakNumData = PetBreakData and PetBreakData[BreakNum]
+    local BreakNumData = PetBreakData and PetBreakData[BreakNum + 1]
     local RewardExp = BreakNumData and BreakNumData.CollectRewardExp or 0
     if RewardExp <= 0 then
       return

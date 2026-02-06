@@ -152,6 +152,7 @@ return ReadOnly("PetBreak", {
       PetId = 4011
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -187,6 +188,7 @@ return ReadOnly("PetBreak", {
       PetId = 4012
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -222,6 +224,7 @@ return ReadOnly("PetBreak", {
       PetId = 4013
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 4,
       PetBreakNum = 3,
@@ -257,6 +260,7 @@ return ReadOnly("PetBreak", {
       PetId = 4021
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -292,6 +296,7 @@ return ReadOnly("PetBreak", {
       PetId = 4022
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -327,6 +332,7 @@ return ReadOnly("PetBreak", {
       PetId = 4023
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 4,
       PetBreakNum = 3,
@@ -362,6 +368,7 @@ return ReadOnly("PetBreak", {
       PetId = 4031
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -397,6 +404,7 @@ return ReadOnly("PetBreak", {
       PetId = 4032
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -432,6 +440,7 @@ return ReadOnly("PetBreak", {
       PetId = 4033
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 4,
       PetBreakNum = 3,
@@ -467,6 +476,7 @@ return ReadOnly("PetBreak", {
       PetId = 4039
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -502,6 +512,7 @@ return ReadOnly("PetBreak", {
       PetId = 4041
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -537,6 +548,7 @@ return ReadOnly("PetBreak", {
       PetId = 4042
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -572,6 +584,7 @@ return ReadOnly("PetBreak", {
       PetId = 4043
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 4,
       PetBreakNum = 3,
@@ -607,6 +620,7 @@ return ReadOnly("PetBreak", {
       PetId = 4049
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -642,6 +656,7 @@ return ReadOnly("PetBreak", {
       PetId = 4051
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -677,6 +692,7 @@ return ReadOnly("PetBreak", {
       PetId = 4052
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -712,6 +728,7 @@ return ReadOnly("PetBreak", {
       PetId = 4053
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 4,
       PetBreakNum = 3,
@@ -747,6 +764,7 @@ return ReadOnly("PetBreak", {
       PetId = 4059
     },
     [3] = {
+      CollectRewardExp = 50,
       EntryNum = 3,
       PetBreakNum = 3,
       PetId = 4059
@@ -781,6 +799,7 @@ return ReadOnly("PetBreak", {
       PetId = 4061
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -816,6 +835,7 @@ return ReadOnly("PetBreak", {
       PetId = 4062
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -851,6 +871,7 @@ return ReadOnly("PetBreak", {
       PetId = 4063
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 4,
       PetBreakNum = 3,
@@ -886,6 +907,7 @@ return ReadOnly("PetBreak", {
       PetId = 4071
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -921,6 +943,7 @@ return ReadOnly("PetBreak", {
       PetId = 4072
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -956,6 +979,7 @@ return ReadOnly("PetBreak", {
       PetId = 4073
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 4,
       PetBreakNum = 3,
@@ -991,6 +1015,7 @@ return ReadOnly("PetBreak", {
       PetId = 4079
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -1026,6 +1051,7 @@ return ReadOnly("PetBreak", {
       PetId = 4081
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -1061,6 +1087,7 @@ return ReadOnly("PetBreak", {
       PetId = 4082
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -1096,6 +1123,7 @@ return ReadOnly("PetBreak", {
       PetId = 4083
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 4,
       PetBreakNum = 3,
@@ -1131,6 +1159,7 @@ return ReadOnly("PetBreak", {
       PetId = 4091
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -1166,6 +1195,7 @@ return ReadOnly("PetBreak", {
       PetId = 4092
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -1201,6 +1231,7 @@ return ReadOnly("PetBreak", {
       PetId = 4093
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 4,
       PetBreakNum = 3,
@@ -1236,6 +1267,7 @@ return ReadOnly("PetBreak", {
       PetId = 4111
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -1271,6 +1303,7 @@ return ReadOnly("PetBreak", {
       PetId = 4112
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -1306,6 +1339,7 @@ return ReadOnly("PetBreak", {
       PetId = 4113
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 4,
       PetBreakNum = 3,
@@ -1341,6 +1375,7 @@ return ReadOnly("PetBreak", {
       PetId = 4121
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -1376,6 +1411,7 @@ return ReadOnly("PetBreak", {
       PetId = 4122
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -1411,6 +1447,7 @@ return ReadOnly("PetBreak", {
       PetId = 4123
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 4,
       PetBreakNum = 3,
@@ -1446,6 +1483,7 @@ return ReadOnly("PetBreak", {
       PetId = 4128
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -1481,6 +1519,7 @@ return ReadOnly("PetBreak", {
       PetId = 4131
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -1516,6 +1555,7 @@ return ReadOnly("PetBreak", {
       PetId = 4132
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -1551,6 +1591,7 @@ return ReadOnly("PetBreak", {
       PetId = 4133
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 4,
       PetBreakNum = 3,
@@ -1586,6 +1627,7 @@ return ReadOnly("PetBreak", {
       PetId = 4141
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -1621,6 +1663,7 @@ return ReadOnly("PetBreak", {
       PetId = 4142
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -1656,6 +1699,7 @@ return ReadOnly("PetBreak", {
       PetId = 4143
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 4,
       PetBreakNum = 3,
@@ -1691,6 +1735,7 @@ return ReadOnly("PetBreak", {
       PetId = 4151
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -1726,6 +1771,7 @@ return ReadOnly("PetBreak", {
       PetId = 4152
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -1761,6 +1807,7 @@ return ReadOnly("PetBreak", {
       PetId = 4153
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 4,
       PetBreakNum = 3,
@@ -1796,6 +1843,7 @@ return ReadOnly("PetBreak", {
       PetId = 4161
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -1831,6 +1879,7 @@ return ReadOnly("PetBreak", {
       PetId = 4162
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 3,
       PetBreakNum = 3,
@@ -1866,6 +1915,7 @@ return ReadOnly("PetBreak", {
       PetId = 4163
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 4,
       PetBreakNum = 3,
@@ -1901,6 +1951,7 @@ return ReadOnly("PetBreak", {
       PetId = 4211
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 4,
       PetBreakNum = 3,
@@ -1936,6 +1987,7 @@ return ReadOnly("PetBreak", {
       PetId = 4221
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 4,
       PetBreakNum = 3,
@@ -1971,6 +2023,7 @@ return ReadOnly("PetBreak", {
       PetId = 4231
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 4,
       PetBreakNum = 3,
@@ -2006,6 +2059,7 @@ return ReadOnly("PetBreak", {
       PetId = 4241
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 4,
       PetBreakNum = 3,
@@ -2041,6 +2095,7 @@ return ReadOnly("PetBreak", {
       PetId = 4251
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 4,
       PetBreakNum = 3,
@@ -2076,6 +2131,7 @@ return ReadOnly("PetBreak", {
       PetId = 4261
     },
     [3] = {
+      CollectRewardExp = 50,
       ConsumeResource = T.RT_2,
       EntryNum = 4,
       PetBreakNum = 3,

@@ -122,9 +122,6 @@ function M:AddComsumerItem(InModContent)
   if self.ComsumerCount >= self.MaxComsumerCount then
     return false
   end
-  if InModContent.Count and InModContent.Count <= (self.Uuid2Count[InModContent.UnitId] or 0) then
-    return false
-  end
   self:_SetComsumerCount(self.ComsumerCount + 1)
   local ItemUI = self["Item_" .. self.ComsumerCount]
   self:_SetModItemUI(ItemUI, InModContent, self.ComsumerCount)

@@ -14239,18 +14239,6 @@ return ReadOnly("ShopItem", {
     TypeNum = 1,
     UnlockRaidPoint = 1200000
   },
-  [10004153] = {
-    ItemId = 10004153,
-    ItemType = "Resource",
-    Price = 1,
-    PriceType = 217,
-    Sequence = 70,
-    StartTime = LocalTimeProxy(1672545600),
-    SubTabId = 100041,
-    TypeId = 220,
-    TypeNum = 10,
-    UnlockRaidPoint = 1
-  },
   [10005101] = {
     ItemId = 10005101,
     ItemType = "WeaponAccessory",

@@ -10,18 +10,11 @@ local ComItemPriority = {
 }
 
 function M:Construct()
-  self:Init()
-end
-
-function M:Init()
   self.WidgetsMap = {}
   self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
 end
 
 function M:CreateAndAddWidgetAsyc(WidgetName, CoroutineObj)
-  if not self.WidgetsMap then
-    self:Init()
-  end
   local AddedWidget = self.WidgetsMap[WidgetName]
   if AddedWidget then
     AddedWidget:SetVisibility(ESlateVisibility.SelfHitTestInvisible)

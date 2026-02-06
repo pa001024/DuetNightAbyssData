@@ -5537,16 +5537,6 @@ return ReadOnly("RewardView", {
     RewardViewId = 1030111,
     Type = T.RT_12
   },
-  [1030112] = {
-    Id = {
-      [1] = 209,
-      [2] = 211,
-      [3] = 208,
-      [4] = 207
-    },
-    RewardViewId = 1030112,
-    Type = T.RT_9
-  },
   [1040001] = {
     Id = {
       [1] = 41007,

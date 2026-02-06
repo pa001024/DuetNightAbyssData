@@ -233,10 +233,6 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "HomePianoDes_1005009",
     WildcardClassification = "Story"
   },
-  HomePianoDes_1008003 = {
-    TextMapId = "HomePianoDes_1008003",
-    WildcardClassification = "Story"
-  },
   MESSAGE_LOADING_35_PC = {
     TextMapId = "MESSAGE_LOADING_35_PC",
     WildcardClassification = "Story"
@@ -539,10 +535,6 @@ return ReadOnly("TextMapWildcard", {
   },
   RLArchive_ID = {
     TextMapId = "RLArchive_ID",
-    WildcardClassification = "Story"
-  },
-  RegionReputation_EntrustContent_17 = {
-    TextMapId = "RegionReputation_EntrustContent_17",
     WildcardClassification = "Story"
   },
   System_Des_Play = {

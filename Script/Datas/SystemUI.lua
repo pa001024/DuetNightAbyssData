@@ -538,7 +538,6 @@ return ReadOnly("SystemUI", {
     ZOrder = 54
   },
   AutoChessBattlePage = {
-    ConfigName = "OnlyAddToStack",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/AutoChess/WBP_Activity_AutoChess_BattlePage_M.WBP_Activity_AutoChess_BattlePage_M'",
     PCBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/AutoChess/WBP_Activity_AutoChess_BattlePage_P.WBP_Activity_AutoChess_BattlePage_P'",
     UIName = "AutoChessBattlePage"

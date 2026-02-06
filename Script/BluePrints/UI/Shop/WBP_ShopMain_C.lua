@@ -416,7 +416,6 @@ function M:RefreshSubTabData(SubTabData)
     self:SetAllowedToShowHideUI(false)
     self:SetShowModel(false)
     self:SetHasVideo(false)
-    self:SetCameraToDefault()
     self:DestroyPreviewActor()
     if self.Common_Tab and self.Common_Tab.WBP_Com_Tab_ResourceBar then
       self.Common_Tab.WBP_Com_Tab_ResourceBar:SetGetReplyOnBack(nil)

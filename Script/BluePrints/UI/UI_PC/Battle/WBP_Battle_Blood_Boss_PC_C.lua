@@ -374,8 +374,7 @@ function WBP_Battle_Blood_Boss_PC_C:OnMultiHpBarLayerChange(bAdd, ChangeNum, Cal
   if self.HpBar ~= Caller then
     return
   end
-  local NewHpLayer = math.ceil(self.Hp / self.MaxHp * self.MaxHpLayer)
-  NewHpLayer = math.max(NewHpLayer, 1)
+  local NewHpLayer = math.floor(self.Hp / self.MaxHp * self.MaxHpLayer)
   ChangeNum = math.abs(NewHpLayer - self.CurHpLayer)
   DebugPrint("WBP_Battle_Blood_Boss_PC_C:OnMultiHpBarLayerChange ChangeNum: ", ChangeNum)
   if bAdd then

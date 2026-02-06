@@ -610,6 +610,9 @@ end
 
 function M:CreateCharAccessoryContents(Char, SkinId, Params)
   Params = Params or {}
+  if rawget(self, "IsAccessoryContentsCreated") and not Params.bRecreate then
+    return
+  end
   local OnContentCreated = Params.OnContentCreated or function()
   end
   rawset(self, "IsAccessoryContentsCreated", true)
@@ -1077,7 +1080,7 @@ function M:CreateCurrentMVPContent(Char)
 end
 
 function M:CreateMVPContentMap()
-  if not rawget(self, "Map_AccessoryContents") then
+  if rawget(self, "Map_MVPContents") or not rawget(self, "Map_AccessoryContents") then
     return
   end
   rawset(self, "Map_MVPContents", {})
@@ -1185,31 +1188,6 @@ function M:OnTopTabSelected(TabWidget, Content)
   end
 end
 
-local function IsSkinSupportAccessory(SkinId, AccessoryId)
-  local Data = DataMgr.CharAccessory[AccessoryId] or DataMgr.CharPartMesh[AccessoryId]
-  if not Data or not Data.Skin then
-    return true
-  end
-  for key, value in pairs(Data.Skin) do
-    if value == SkinId then
-      return true
-    end
-  end
-  return false
-end
-
-local function RemoveUnsupportedAccessories(SkinId, AccessorySuit)
-  local UnsupportedAcceesoryIdx = {}
-  for key, value in pairs(AccessorySuit) do
-    if not IsSkinSupportAccessory(SkinId, value) then
-      table.insert(UnsupportedAcceesoryIdx, key)
-    end
-  end
-  for index, value in ipairs(UnsupportedAcceesoryIdx) do
-    AccessorySuit[value] = nil
-  end
-end
-
 function M:UpdateActorAppearance(SkinId, HairId)
   if self.Type ~= CommonConst.ArmoryType.Char then
     return
@@ -1221,8 +1199,6 @@ function M:UpdateActorAppearance(SkinId, HairId)
   AppearanceSuitInfo.SkinId = SkinId or AppearanceSuitInfo.SkinId
   AppearanceSuitInfo.HairId = HairId or AppearanceSuitInfo.HairId
   AppearanceSuitInfo.Colors = self.Target:DumpColors(ArmoryUtils:GetAvatar(), AppearanceSuitInfo.SkinId)
-  AppearanceSuitInfo.AccessorySuit = AppearanceSuitInfo.AccessorySuit or {}
-  RemoveUnsupportedAccessories(AppearanceSuitInfo.SkinId, AppearanceSuitInfo.AccessorySuit)
   self.ActorController:ChangeCharAppearance(AppearanceSuitInfo)
   if self.LastCharSkinId and AppearanceSuitInfo.SkinId ~= self.LastCharSkinId then
     self.ActorController.DelayFrame = 30

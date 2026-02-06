@@ -102,12 +102,6 @@
     "rarity": 5
   },
   {
-    "id": 217,
-    "name": "小隊邀請函",
-    "icon": "T_Resource_Raid_Ticket",
-    "rarity": 4
-  },
-  {
     "id": 218,
     "name": "狩月紀念幣",
     "icon": "T_Resource_Raid_Coin01",

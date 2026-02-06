@@ -1113,12 +1113,6 @@ return ReadOnly("EffectCreature", {
     MeshResourceId = 312,
     SocketName = "root"
   },
-  [11506] = {
-    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Part/Show/Animation/Montage/Show_Chenglu_NewWoman_Montage.Show_Chenglu_NewWoman_Montage",
-    EffectCreatureId = 11506,
-    MeshResourceId = 312,
-    SocketName = "root"
-  },
   [11601] = {
     EffectCreatureId = 11601,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Gesture/BP_EffectCreature_Gesture_LungChair01.BP_EffectCreature_Gesture_LungChair01",
