@@ -1,0 +1,38 @@
+[
+  {
+    "RaidBuffID": 1,
+    "RaidBuffDes": "Lorsque la Puissance de compétence d’un personnage Anémo dépasse 100 %, chaque tranche de 30% au-delà de ce seuil augmente la Pénétration de tous les attributs de 5%, jusqu’à un maximum de 50%.",
+    "RaidBuffParameter": [
+      "30%",
+      "5%",
+      "50%"
+    ]
+  },
+  {
+    "RaidBuffID": 2,
+    "RaidBuffDes": "Lorsque la Puissance de compétence d’un personnage Anémo dépasse 100 %, chaque tranche de 30% au-delà de ce seuil augmente la Pénétration de tous les attributs de 5%, jusqu’à un maximum de 50%.",
+    "RaidBuffParameter": [
+      "30%",
+      "5%",
+      "50%"
+    ]
+  },
+  {
+    "RaidBuffID": 3,
+    "RaidBuffDes": "Lorsque la Puissance de compétence d’un personnage Anémo dépasse 100 %, chaque tranche de 30% au-delà de ce seuil augmente la Pénétration de tous les attributs de 5%, jusqu’à un maximum de 50%.",
+    "RaidBuffParameter": [
+      "30%",
+      "5%",
+      "50%"
+    ]
+  },
+  {
+    "RaidBuffID": 12,
+    "RaidBuffDes": "Lorsque les Dégâts de compétence d’un personnage d’Attribut Électro dépassent 100 %, chaque tranche supplémentaire de 30% permet aux Dégâts de compétence d’ignorer 3.5% de la DÉF de la cible, jusqu’à un maximum de 42.0% ignorés.",
+    "RaidBuffParameter": [
+      "30%",
+      "3.5%",
+      "42.0%"
+    ]
+  }
+]

@@ -1,0 +1,9782 @@
+[
+  {
+    "id": 1000,
+    "名称": "Mandat scellé : Berenica",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1001101,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Berenica"
+      },
+      {
+        "id": 1001101,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Berenica"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1001,
+    "名称": "Mandat scellé : Phantasio",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1001103,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Phantasio"
+      },
+      {
+        "id": 1001103,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Phantasio"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1002,
+    "名称": "Mandat scellé : Lisbell",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1001501,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Courroux"
+      },
+      {
+        "id": 1001501,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Courroux"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1003,
+    "名称": "Mandat scellé : Dame Nifle",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1001502,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Dame Nifle"
+      },
+      {
+        "id": 1001502,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Dame Nifle"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1004,
+    "名称": "Mandat scellé : Kezhou",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1001503,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Kezhou"
+      },
+      {
+        "id": 1001503,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Kezhou"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1005,
+    "名称": "Mandat scellé : Fina",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1001801,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Fina"
+      },
+      {
+        "id": 1001801,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Fina"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1006,
+    "名称": "Mandat scellé : Rebecca",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1002101,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Rebecca"
+      },
+      {
+        "id": 1002101,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Rebecca"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1007,
+    "名称": "Mandat scellé : Tabethe",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1002301,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Tabethe"
+      },
+      {
+        "id": 1002301,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Tabethe"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1008,
+    "名称": "Mandat scellé : Fushu",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1002401,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Fushu"
+      },
+      {
+        "id": 1002401,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Fushu"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1009,
+    "名称": "Mandat scellé : Lynn",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1003101,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Lynn"
+      },
+      {
+        "id": 1003101,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Lynn"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1010,
+    "名称": "Mandat scellé : Hilda",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1003102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Hilda"
+      },
+      {
+        "id": 1003102,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Hilda"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1011,
+    "名称": "Mandat scellé : Yale et Oliver",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1003103,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Yale et Oliver"
+      },
+      {
+        "id": 1003103,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Yale et Oliver"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1012,
+    "名称": "Mandat scellé : Vulcera",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1003201,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Vulcera"
+      },
+      {
+        "id": 1003201,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Vulcera"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1013,
+    "名称": "Mandat scellé : Camilla",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1003202,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Camilla"
+      },
+      {
+        "id": 1003202,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Camilla"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1014,
+    "名称": "Mandat scellé : Margie",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1003301,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Margie"
+      },
+      {
+        "id": 1003301,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Margie"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1015,
+    "名称": "Mandat scellé : Rhythm",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1004101,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Rhythm"
+      },
+      {
+        "id": 1004101,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Rhythm"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1016,
+    "名称": "Mandat scellé : Zhiliu",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1004102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Zhiliu"
+      },
+      {
+        "id": 1004102,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Zhiliu"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1017,
+    "名称": "Mandat scellé : Yuming",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1004201,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Yuming"
+      },
+      {
+        "id": 1004201,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Yuming"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1018,
+    "名称": "Mandat scellé : Randy",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1004202,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Randy"
+      },
+      {
+        "id": 1004202,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Randy"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1019,
+    "名称": "Mandat scellé : Sibylle",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1004301,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Sibylle"
+      },
+      {
+        "id": 1004301,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Sibylle"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1020,
+    "名称": "Mandat scellé : Truffle et Filbert",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1005101,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Truffle et Filbert"
+      },
+      {
+        "id": 1005101,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Truffle et Filbert"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1021,
+    "名称": "Mandat scellé : L’Étranger",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1005102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : L’Étranger"
+      },
+      {
+        "id": 1005102,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : L’Étranger"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1022,
+    "名称": "Mandat scellé : Psyche",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1005301,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Psyche"
+      },
+      {
+        "id": 1005301,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Psyche"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1023,
+    "名称": "Mandat scellé : Daphne",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1005401,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Daphne"
+      },
+      {
+        "id": 1005401,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Daphne"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 2001,
+    "名称": "Mandat scellé : Trancheur d’ambre",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10101,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Trancheur d’ambre",
+        "d": 1
+      },
+      {
+        "id": 12068,
+        "type": "Resource",
+        "count": 1,
+        "name": "Trancheur d’ambre : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12069,
+        "type": "Resource",
+        "count": 1,
+        "name": "Trancheur d’ambre : Lame"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2002,
+    "名称": "Mandat scellé : Écho du passé",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10103,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Écho du passé",
+        "d": 1
+      },
+      {
+        "id": 12070,
+        "type": "Resource",
+        "count": 1,
+        "name": "Écho du passé : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12071,
+        "type": "Resource",
+        "count": 1,
+        "name": "Écho du passé : Lame"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2003,
+    "名称": "Mandat scellé : Stratagème habile",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10104,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Stratagème habile",
+        "d": 1
+      },
+      {
+        "id": 12001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Stratagème habile : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Stratagème habile : Lame"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2004,
+    "名称": "Mandat scellé : Baiser de la sirène",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10201,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Baiser de la sirène",
+        "d": 1
+      },
+      {
+        "id": 12022,
+        "type": "Resource",
+        "count": 1,
+        "name": "Baiser de la sirène : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12023,
+        "type": "Resource",
+        "count": 1,
+        "name": "Baiser de la sirène : Lame"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2005,
+    "名称": "Mandat scellé : Sépulture errante",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10206,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Sépulture errante",
+        "d": 1
+      },
+      {
+        "id": 12110,
+        "type": "Resource",
+        "count": 1,
+        "name": "Sépulture errante : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12111,
+        "type": "Resource",
+        "count": 1,
+        "name": "Sépulture errante : Lame"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2006,
+    "名称": "Mandat scellé : Brise-fer",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10302,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Brise-fer",
+        "d": 1
+      },
+      {
+        "id": 12074,
+        "type": "Resource",
+        "count": 1,
+        "name": "Brise-fer : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12075,
+        "type": "Resource",
+        "count": 1,
+        "name": "Brise-fer : Lame"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2007,
+    "名称": "Mandat scellé : Désir incandescent",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10303,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Désir incandescent",
+        "d": 1
+      },
+      {
+        "id": 12112,
+        "type": "Resource",
+        "count": 1,
+        "name": "Désir incandescent : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12113,
+        "type": "Resource",
+        "count": 1,
+        "name": "Désir incandescent : Lame"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2008,
+    "名称": "Mandat scellé : Crocs de l’exilé",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10401,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Crocs de l’exilé",
+        "d": 1
+      },
+      {
+        "id": 12044,
+        "type": "Resource",
+        "count": 1,
+        "name": "Crocs de l’exilé : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12045,
+        "type": "Resource",
+        "count": 1,
+        "name": "Crocs de l’exilé : Lame gauche"
+      },
+      {
+        "id": 12046,
+        "type": "Resource",
+        "count": 1,
+        "name": "Crocs de l’exilé : Lame droite"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2009,
+    "名称": "Mandat scellé : Regard du requin abyssal",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10403,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Regard du requin abyssal",
+        "d": 1
+      },
+      {
+        "id": 12087,
+        "type": "Resource",
+        "count": 1,
+        "name": "Regard du requin abyssal : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12088,
+        "type": "Resource",
+        "count": 1,
+        "name": "Regard du requin abyssal : Lame gauche"
+      },
+      {
+        "id": 12089,
+        "type": "Resource",
+        "count": 1,
+        "name": "Regard du requin abyssal : Lame droite"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2010,
+    "名称": "Mandat scellé : Oneiros éternel",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10501,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Oneiros éternel",
+        "d": 1
+      },
+      {
+        "id": 12026,
+        "type": "Resource",
+        "count": 1,
+        "name": "Oneiros éternel : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12027,
+        "type": "Resource",
+        "count": 1,
+        "name": "Oneiros éternel : Lame"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2011,
+    "名称": "Mandat scellé : Étreinte brisée",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10503,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Étreinte brisée",
+        "d": 1
+      },
+      {
+        "id": 12114,
+        "type": "Resource",
+        "count": 1,
+        "name": "Étreinte brisée : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12115,
+        "type": "Resource",
+        "count": 1,
+        "name": "Étreinte brisée : Lame"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2012,
+    "名称": "Mandat scellé : Momiji Itteki",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10601,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Momiji Itteki",
+        "d": 1
+      },
+      {
+        "id": 12003,
+        "type": "Resource",
+        "count": 1,
+        "name": "Momiji Itteki : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12004,
+        "type": "Resource",
+        "count": 1,
+        "name": "Momiji Itteki : Lame"
+      },
+      {
+        "id": 12005,
+        "type": "Resource",
+        "count": 1,
+        "name": "Momiji Itteki : Ornement"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2013,
+    "名称": "Mandat scellé : Ombre fanée",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10602,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Ombre fanée",
+        "d": 1
+      },
+      {
+        "id": 12116,
+        "type": "Resource",
+        "count": 1,
+        "name": "Ombre fanée : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12117,
+        "type": "Resource",
+        "count": 1,
+        "name": "Ombre fanée : Lame"
+      },
+      {
+        "id": 12118,
+        "type": "Resource",
+        "count": 1,
+        "name": "Ombre fanée : Ornement"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2014,
+    "名称": "Mandat scellé : Singularité entropique",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20101,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Singularité entropique",
+        "d": 1
+      },
+      {
+        "id": 12028,
+        "type": "Resource",
+        "count": 1,
+        "name": "Singularité entropique : Verrou"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12029,
+        "type": "Resource",
+        "count": 1,
+        "name": "Singularité entropique : Armature"
+      },
+      {
+        "id": 12030,
+        "type": "Resource",
+        "count": 1,
+        "name": "Singularité entropique : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2015,
+    "名称": "Mandat scellé : Dépouilleur",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20102,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Dépouilleur",
+        "d": 1
+      },
+      {
+        "id": 12119,
+        "type": "Resource",
+        "count": 1,
+        "name": "Dépouilleur : Verrou"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12120,
+        "type": "Resource",
+        "count": 1,
+        "name": "Dépouilleur : Armature"
+      },
+      {
+        "id": 12121,
+        "type": "Resource",
+        "count": 1,
+        "name": "Dépouilleur : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2016,
+    "名称": "Mandat scellé : Duo infâme",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20201,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Duo infâme",
+        "d": 1
+      },
+      {
+        "id": 12122,
+        "type": "Resource",
+        "count": 1,
+        "name": "Duo infâme : Armature"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12123,
+        "type": "Resource",
+        "count": 1,
+        "name": "Duo infâme : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2017,
+    "名称": "Mandat scellé : Pulsation azurée",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20203,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Pulsation azurée",
+        "d": 1
+      },
+      {
+        "id": 12031,
+        "type": "Resource",
+        "count": 1,
+        "name": "Pulsation azurée : Armature"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12032,
+        "type": "Resource",
+        "count": 1,
+        "name": "Pulsation azurée : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2018,
+    "名称": "Mandat scellé : Désintégrateur",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20303,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Désintégrateur",
+        "d": 1
+      },
+      {
+        "id": 12124,
+        "type": "Resource",
+        "count": 1,
+        "name": "Désintégrateur : Verrou"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12125,
+        "type": "Resource",
+        "count": 1,
+        "name": "Désintégrateur : Armature"
+      },
+      {
+        "id": 12126,
+        "type": "Resource",
+        "count": 1,
+        "name": "Désintégrateur : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2019,
+    "名称": "Mandat scellé : Édit argenté",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20305,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Édit argenté",
+        "d": 1
+      },
+      {
+        "id": 12076,
+        "type": "Resource",
+        "count": 1,
+        "name": "Édit argenté : Verrou"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12077,
+        "type": "Resource",
+        "count": 1,
+        "name": "Édit argenté : Armature"
+      },
+      {
+        "id": 12078,
+        "type": "Resource",
+        "count": 1,
+        "name": "Édit argenté : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2020,
+    "名称": "Mandat scellé : Hurlement balistique",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20401,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Hurlement balistique",
+        "d": 1
+      },
+      {
+        "id": 12127,
+        "type": "Resource",
+        "count": 1,
+        "name": "Hurlement balistique : Verrou"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12128,
+        "type": "Resource",
+        "count": 1,
+        "name": "Hurlement balistique : Armature"
+      },
+      {
+        "id": 12129,
+        "type": "Resource",
+        "count": 1,
+        "name": "Hurlement balistique : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2021,
+    "名称": "Mandat scellé : Semeur silencieux",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20402,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Semeur silencieux",
+        "d": 1
+      },
+      {
+        "id": 12009,
+        "type": "Resource",
+        "count": 1,
+        "name": "Semeur silencieux : Verrou"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12010,
+        "type": "Resource",
+        "count": 1,
+        "name": "Semeur silencieux : Armature"
+      },
+      {
+        "id": 12011,
+        "type": "Resource",
+        "count": 1,
+        "name": "Semeur silencieux : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2022,
+    "名称": "Mandat scellé : Disloqueur",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20501,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Disloqueur",
+        "d": 1
+      },
+      {
+        "id": 12130,
+        "type": "Resource",
+        "count": 1,
+        "name": "Disloqueur : Verrou"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12131,
+        "type": "Resource",
+        "count": 1,
+        "name": "Disloqueur : Armature"
+      },
+      {
+        "id": 12132,
+        "type": "Resource",
+        "count": 1,
+        "name": "Disloqueur : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2023,
+    "名称": "Mandat scellé : Brasier salvateur",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20503,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Brasier salvateur",
+        "d": 1
+      },
+      {
+        "id": 12079,
+        "type": "Resource",
+        "count": 1,
+        "name": "Brasier salvateur : Verrou"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12080,
+        "type": "Resource",
+        "count": 1,
+        "name": "Brasier salvateur : Armature"
+      },
+      {
+        "id": 12081,
+        "type": "Resource",
+        "count": 1,
+        "name": "Brasier salvateur : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2024,
+    "名称": "Mandat scellé : Soupir du désert",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20601,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Soupir du désert",
+        "d": 1
+      },
+      {
+        "id": 12106,
+        "type": "Resource",
+        "count": 1,
+        "name": "Soupir du désert : Corde d’arc"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12107,
+        "type": "Resource",
+        "count": 1,
+        "name": "Soupir du désert : Bras d’arc supérieur"
+      },
+      {
+        "id": 12108,
+        "type": "Resource",
+        "count": 1,
+        "name": "Soupir du désert : Bras d’arc inférieur"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2025,
+    "名称": "Mandat scellé : Déchire-âme",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20604,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Déchire-âme",
+        "d": 1
+      },
+      {
+        "id": 12103,
+        "type": "Resource",
+        "count": 1,
+        "name": "Déchire-âme : Corde d’arc"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12104,
+        "type": "Resource",
+        "count": 1,
+        "name": "Déchire-âme : Bras d’arc supérieur"
+      },
+      {
+        "id": 12105,
+        "type": "Resource",
+        "count": 1,
+        "name": "Déchire-âme : Bras d’arc inférieur"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2026,
+    "名称": "Mandat scellé : Entraves du solitaire",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10102,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Entraves du solitaire",
+        "d": 1
+      },
+      {
+        "id": 12040,
+        "type": "Resource",
+        "count": 1,
+        "name": "Entraves du solitaire : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12041,
+        "type": "Resource",
+        "count": 1,
+        "name": "Entraves du solitaire : Lame"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2027,
+    "名称": "Mandat scellé : Rose vagabonde",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10105,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Rose vagabonde",
+        "d": 1
+      },
+      {
+        "id": 12085,
+        "type": "Resource",
+        "count": 1,
+        "name": "Rose vagabonde : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12086,
+        "type": "Resource",
+        "count": 1,
+        "name": "Rose vagabonde : Lame"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2028,
+    "名称": "Mandat scellé : Hallebarde de jade printanier",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10202,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Hallebarde de jade printanier",
+        "d": 1
+      },
+      {
+        "id": 12072,
+        "type": "Resource",
+        "count": 1,
+        "name": "Hallebarde de jade printanier : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12073,
+        "type": "Resource",
+        "count": 1,
+        "name": "Hallebarde de jade printanier : Lame"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2029,
+    "名称": "Mandat scellé : Moisson de l’espoir",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10204,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Moisson de l’espoir",
+        "d": 1
+      },
+      {
+        "id": 12053,
+        "type": "Resource",
+        "count": 1,
+        "name": "Moisson de l’espoir : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12054,
+        "type": "Resource",
+        "count": 1,
+        "name": "Moisson de l’espoir : Lame"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2030,
+    "名称": "Mandat scellé : Fureur incandescente",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10301,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Fureur incandescente",
+        "d": 1
+      },
+      {
+        "id": 12042,
+        "type": "Resource",
+        "count": 1,
+        "name": "Fureur incandescente : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12043,
+        "type": "Resource",
+        "count": 1,
+        "name": "Fureur incandescente : Lame"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2031,
+    "名称": "Mandat scellé : Mémoire dorée",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10402,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Mémoire dorée",
+        "d": 1
+      },
+      {
+        "id": 12082,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mémoire dorée : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12083,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mémoire dorée : Lame gauche"
+      },
+      {
+        "id": 12084,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mémoire dorée : Lame droite"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2032,
+    "名称": "Mandat scellé : Vagues sinueuses",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10504,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Vagues sinueuses",
+        "d": 1
+      },
+      {
+        "id": 12090,
+        "type": "Resource",
+        "count": 1,
+        "name": "Vagues sinueuses : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12091,
+        "type": "Resource",
+        "count": 1,
+        "name": "Vagues sinueuses : Lame"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2033,
+    "名称": "Mandat scellé : Grâce sacrée",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10603,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Grâce sacrée",
+        "d": 1
+      },
+      {
+        "id": 12092,
+        "type": "Resource",
+        "count": 1,
+        "name": "Grâce sacrée : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12093,
+        "type": "Resource",
+        "count": 1,
+        "name": "Grâce sacrée : Lame"
+      },
+      {
+        "id": 12094,
+        "type": "Resource",
+        "count": 1,
+        "name": "Grâce sacrée : Ornement"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2034,
+    "名称": "Mandat scellé : Hiérophanie",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20103,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Hiérophanie",
+        "d": 1
+      },
+      {
+        "id": 12095,
+        "type": "Resource",
+        "count": 1,
+        "name": "Hiérophanie : Verrou"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12096,
+        "type": "Resource",
+        "count": 1,
+        "name": "Hiérophanie : Armature"
+      },
+      {
+        "id": 12097,
+        "type": "Resource",
+        "count": 1,
+        "name": "Hiérophanie : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2035,
+    "名称": "Mandat scellé : Pneuma",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20205,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Pneuma",
+        "d": 1
+      },
+      {
+        "id": 12098,
+        "type": "Resource",
+        "count": 1,
+        "name": "Pneuma : Armature"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12099,
+        "type": "Resource",
+        "count": 1,
+        "name": "Pneuma : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2036,
+    "名称": "Mandat scellé : Jugement stellaire",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20301,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Jugement stellaire",
+        "d": 1
+      },
+      {
+        "id": 12006,
+        "type": "Resource",
+        "count": 1,
+        "name": "Jugement stellaire : Verrou"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12007,
+        "type": "Resource",
+        "count": 1,
+        "name": "Jugement stellaire : Armature"
+      },
+      {
+        "id": 12008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Jugement stellaire : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2037,
+    "名称": "Mandat scellé : Résonance de Guixu",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20304,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Résonance de Guixu",
+        "d": 1
+      },
+      {
+        "id": 12047,
+        "type": "Resource",
+        "count": 1,
+        "name": "Résonance de Guixu : Verrou"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12048,
+        "type": "Resource",
+        "count": 1,
+        "name": "Résonance de Guixu : Armature"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2038,
+    "名称": "Mandat scellé : Aube du verdict",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20403,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Aube du verdict",
+        "d": 1
+      },
+      {
+        "id": 12100,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aube du verdict : Verrou"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12101,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aube du verdict : Armature"
+      },
+      {
+        "id": 12102,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aube du verdict : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2039,
+    "名称": "Mandat scellé : Art de la détonation",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20405,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Art de la détonation",
+        "d": 1
+      },
+      {
+        "id": 12033,
+        "type": "Resource",
+        "count": 1,
+        "name": "Art de la détonation : Verrou"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12034,
+        "type": "Resource",
+        "count": 1,
+        "name": "Art de la détonation : Armature"
+      },
+      {
+        "id": 12035,
+        "type": "Resource",
+        "count": 1,
+        "name": "Art de la détonation : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2040,
+    "名称": "Mandat scellé : Colère proscrite",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20502,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Colère proscrite",
+        "d": 1
+      },
+      {
+        "id": 12012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Colère proscrite : Verrou"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12013,
+        "type": "Resource",
+        "count": 1,
+        "name": "Colère proscrite : Armature"
+      },
+      {
+        "id": 12014,
+        "type": "Resource",
+        "count": 1,
+        "name": "Colère proscrite : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2041,
+    "名称": "Mandat scellé : Hymne de l'aube",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20504,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Hymne de l’aube",
+        "d": 1
+      },
+      {
+        "id": 12015,
+        "type": "Resource",
+        "count": 1,
+        "name": "Hymne de l’aube : Verrou"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12016,
+        "type": "Resource",
+        "count": 1,
+        "name": "Hymne de l’aube : Armature"
+      },
+      {
+        "id": 12017,
+        "type": "Resource",
+        "count": 1,
+        "name": "Hymne de l’aube : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2042,
+    "名称": "Mandat scellé : Ode des profondeurs",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20507,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Ode des profondeurs",
+        "d": 1
+      },
+      {
+        "id": 12050,
+        "type": "Resource",
+        "count": 1,
+        "name": "Ode des profondeurs : Verrou"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12051,
+        "type": "Resource",
+        "count": 1,
+        "name": "Ode des profondeurs : Armature"
+      },
+      {
+        "id": 12052,
+        "type": "Resource",
+        "count": 1,
+        "name": "Ode des profondeurs : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2043,
+    "名称": "Mandat scellé : Lumière de l’Apocalypse",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20602,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Lumière de l’Apocalypse",
+        "d": 1
+      },
+      {
+        "id": 12036,
+        "type": "Resource",
+        "count": 1,
+        "name": "Lumière de l’Apocalypse : Corde d’arc"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12037,
+        "type": "Resource",
+        "count": 1,
+        "name": "Lumière de l’Apocalypse : Bras d’arc supérieur"
+      },
+      {
+        "id": 12038,
+        "type": "Resource",
+        "count": 1,
+        "name": "Lumière de l’Apocalypse : Bras d’arc inférieur"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2044,
+    "名称": "Mandat scellé : Inflorescence d’Embla",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20603,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Inflorescence d’Embla",
+        "d": 1
+      },
+      {
+        "id": 12018,
+        "type": "Resource",
+        "count": 1,
+        "name": "Inflorescence d’Embla : Corde d’arc"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12019,
+        "type": "Resource",
+        "count": 1,
+        "name": "Inflorescence d’Embla : Bras d’arc supérieur"
+      },
+      {
+        "id": 12020,
+        "type": "Resource",
+        "count": 1,
+        "name": "Inflorescence d’Embla : Bras d’arc inférieur"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2045,
+    "名称": "Mandat scellé : Péché impardonnable",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10203,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Péché impardonnable",
+        "d": 1
+      },
+      {
+        "id": 12024,
+        "type": "Resource",
+        "count": 1,
+        "name": "Péché impardonnable : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12025,
+        "type": "Resource",
+        "count": 1,
+        "name": "Péché impardonnable : Lame"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2046,
+    "名称": "Mandat scellé : Adieu éternel",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10304,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Adieu éternel",
+        "d": 1
+      },
+      {
+        "id": 12055,
+        "type": "Resource",
+        "count": 1,
+        "name": "Adieu éternel : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12056,
+        "type": "Resource",
+        "count": 1,
+        "name": "Adieu éternel : Lame"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2047,
+    "名称": "Mandat scellé : Grâce d’Halcyon",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10502,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Grâce d’Halcyon",
+        "d": 1
+      },
+      {
+        "id": 12057,
+        "type": "Resource",
+        "count": 1,
+        "name": "Grâce d’Halcyon : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12058,
+        "type": "Resource",
+        "count": 1,
+        "name": "Grâce d’Halcyon : Lame"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2048,
+    "名称": "Mandat scellé : Banquet incandescent",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20302,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Banquet incandescent",
+        "d": 1
+      },
+      {
+        "id": 12059,
+        "type": "Resource",
+        "count": 1,
+        "name": "Banquet incandescent : Verrou"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12060,
+        "type": "Resource",
+        "count": 1,
+        "name": "Banquet incandescent : Armature"
+      },
+      {
+        "id": 12061,
+        "type": "Resource",
+        "count": 1,
+        "name": "Banquet incandescent : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2049,
+    "名称": "Mandat scellé : Lumière éphémère",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20510,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Lumière éphémère",
+        "d": 1
+      },
+      {
+        "id": 12062,
+        "type": "Resource",
+        "count": 1,
+        "name": "Lumière éphémère : Verrou"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12063,
+        "type": "Resource",
+        "count": 1,
+        "name": "Lumière éphémère : Armature"
+      },
+      {
+        "id": 12064,
+        "type": "Resource",
+        "count": 1,
+        "name": "Lumière éphémère : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2050,
+    "名称": "Mandat scellé : Plume du tisseur de rêves",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20509,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Plume du tisseur de rêves",
+        "d": 1
+      },
+      {
+        "id": 12065,
+        "type": "Resource",
+        "count": 1,
+        "name": "Plume du tisseur de rêves : Verrou"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12066,
+        "type": "Resource",
+        "count": 1,
+        "name": "Plume du tisseur de rêves : Armature"
+      },
+      {
+        "id": 12067,
+        "type": "Resource",
+        "count": 1,
+        "name": "Plume du tisseur de rêves : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2051,
+    "名称": "Mandat scellé : Messagère de l’avenir",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10208,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Messagère de l’avenir",
+        "d": 1
+      },
+      {
+        "id": 12133,
+        "type": "Resource",
+        "count": 1,
+        "name": "Messagère de l’avenir : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12134,
+        "type": "Resource",
+        "count": 1,
+        "name": "Messagère de l’avenir : Lame"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2052,
+    "名称": "Mandat scellé : Royaume azuré",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20506,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Voile nuageux",
+        "d": 1
+      },
+      {
+        "id": 12135,
+        "type": "Resource",
+        "count": 1,
+        "name": "Voile nuageux : Verrou"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12136,
+        "type": "Resource",
+        "count": 1,
+        "name": "Voile nuageux : Armature"
+      },
+      {
+        "id": 12137,
+        "type": "Resource",
+        "count": 1,
+        "name": "Voile nuageux : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2053,
+    "名称": "Mandat scellé : Messagère de l’avenir",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10404,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Sentence des vents",
+        "d": 1
+      },
+      {
+        "id": 12138,
+        "type": "Resource",
+        "count": 1,
+        "name": "Sentence des vents : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12139,
+        "type": "Resource",
+        "count": 1,
+        "name": "Sentence des vents : Lame gauche"
+      },
+      {
+        "id": 12140,
+        "type": "Resource",
+        "count": 1,
+        "name": "Sentence des vents : Lame droite"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2054,
+    "名称": "Mandat scellé : Faucheuse d’obsidienne",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20505,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Muse trigonale",
+        "d": 1
+      },
+      {
+        "id": 12141,
+        "type": "Resource",
+        "count": 1,
+        "name": "Muse trigonale : Verrou"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12142,
+        "type": "Resource",
+        "count": 1,
+        "name": "Muse trigonale : Armature"
+      },
+      {
+        "id": 12143,
+        "type": "Resource",
+        "count": 1,
+        "name": "Muse trigonale : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice du Mandat scellé : Loyal"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 151321,
+    "名称": "Mandat scellé : Néant du Griffon · Conflagration",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51321,
+        "type": "Mod",
+        "count": 1,
+        "name": "Néant · Conflagration",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151322,
+    "名称": "Mandat scellé : Marébrise du Griffon · Conflagration",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51322,
+        "type": "Mod",
+        "count": 1,
+        "name": "Marébrise · Conflagration",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151323,
+    "名称": "Mandat scellé : Enfer du Griffon · Conflagration",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51323,
+        "type": "Mod",
+        "count": 1,
+        "name": "Enfer · Conflagration",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151324,
+    "名称": "Mandat scellé : Tonnerre du Griffon · Conflagration",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51324,
+        "type": "Mod",
+        "count": 1,
+        "name": "Tonnerre · Conflagration",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151325,
+    "名称": "Mandat scellé : Rafale du Griffon · Conflagration",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51325,
+        "type": "Mod",
+        "count": 1,
+        "name": "Rafale · Conflagration",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151326,
+    "名称": "Mandat scellé : Aurore du Griffon · Conflagration",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51326,
+        "type": "Mod",
+        "count": 1,
+        "name": "Aurore · Conflagration",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151331,
+    "名称": "Mandat scellé : Néant du Griffon · Soleil de minuit",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51331,
+        "type": "Mod",
+        "count": 1,
+        "name": "Néant · Soleil de minuit",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151332,
+    "名称": "Mandat scellé : Marébrise du Griffon · Soleil de minuit",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51332,
+        "type": "Mod",
+        "count": 1,
+        "name": "Marébrise · Soleil de minuit",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151333,
+    "名称": "Mandat scellé : Enfer du Griffon · Soleil de minuit",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51333,
+        "type": "Mod",
+        "count": 1,
+        "name": "Enfer · Soleil de minuit",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151334,
+    "名称": "Mandat scellé : Tonnerre du Griffon · Soleil de minuit",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51334,
+        "type": "Mod",
+        "count": 1,
+        "name": "Tonnerre · Soleil de minuit",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151335,
+    "名称": "Mandat scellé : Rafale du Griffon · Soleil de minuit",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51335,
+        "type": "Mod",
+        "count": 1,
+        "name": "Rafale · Soleil de minuit",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151336,
+    "名称": "Mandat scellé : Aurore du Griffon · Soleil de minuit",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51336,
+        "type": "Mod",
+        "count": 1,
+        "name": "Aurore · Soleil de minuit",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151411,
+    "名称": "Mandat scellé : Apogée du Typhon · Vigueur",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51411,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Vigueur",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151412,
+    "名称": "Mandat scellé : Apogée du Typhon · Ténacité",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51412,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Ténacité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151413,
+    "名称": "Mandat scellé : Apogée du Typhon · Poursuite",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51413,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Poursuite",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151414,
+    "名称": "Mandat scellé : Apogée du Typhon · Sérénité",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51414,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Sérénité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151415,
+    "名称": "Mandat scellé : Apogée du Typhon · Exaltation",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51415,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Exaltation",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151421,
+    "名称": "Mandat scellé : Apogée du Typhon · Vigueur",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51421,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Vigueur",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151422,
+    "名称": "Mandat scellé : Apogée du Typhon · Ténacité",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51422,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Ténacité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151423,
+    "名称": "Mandat scellé : Apogée du Typhon · Poursuite",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51423,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Poursuite",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151424,
+    "名称": "Mandat scellé : Apogée du Typhon · Sérénité",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51424,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Sérénité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151425,
+    "名称": "Mandat scellé : Apogée du Typhon · Exaltation",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51425,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Exaltation",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151431,
+    "名称": "Mandat scellé : Apogée du Typhon · Vigueur",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51431,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Vigueur",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151432,
+    "名称": "Mandat scellé : Apogée du Typhon · Ténacité",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51432,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Ténacité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151433,
+    "名称": "Mandat scellé : Apogée du Typhon · Poursuite",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51433,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Poursuite",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151434,
+    "名称": "Mandat scellé : Apogée du Typhon · Sérénité",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51434,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Sérénité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151435,
+    "名称": "Mandat scellé : Apogée du Typhon · Exaltation",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51435,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Exaltation",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151441,
+    "名称": "Mandat scellé : Apogée du Typhon · Vigueur",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51441,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Vigueur",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151442,
+    "名称": "Mandat scellé : Apogée du Typhon · Ténacité",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51442,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Ténacité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151443,
+    "名称": "Mandat scellé : Apogée du Typhon · Poursuite",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51443,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Poursuite",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151444,
+    "名称": "Mandat scellé : Apogée du Typhon · Sérénité",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51444,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Sérénité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151445,
+    "名称": "Mandat scellé : Apogée du Typhon · Exaltation",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51445,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Exaltation",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151451,
+    "名称": "Mandat scellé : Apogée du Typhon · Vigueur",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51451,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Vigueur",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151452,
+    "名称": "Mandat scellé : Apogée du Typhon · Ténacité",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51452,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Ténacité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151453,
+    "名称": "Mandat scellé : Apogée du Typhon · Poursuite",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51453,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Poursuite",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151454,
+    "名称": "Mandat scellé : Apogée du Typhon · Sérénité",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51454,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Sérénité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151455,
+    "名称": "Mandat scellé : Apogée du Typhon · Exaltation",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51455,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Exaltation",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151461,
+    "名称": "Mandat scellé : Apogée du Typhon · Vigueur",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51461,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Vigueur",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151462,
+    "名称": "Mandat scellé : Apogée du Typhon · Ténacité",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51462,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Ténacité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151463,
+    "名称": "Mandat scellé : Apogée du Typhon · Poursuite",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51463,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Poursuite",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151464,
+    "名称": "Mandat scellé : Apogée du Typhon · Sérénité",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51464,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Sérénité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151465,
+    "名称": "Mandat scellé : Apogée du Typhon · Exaltation",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51465,
+        "type": "Mod",
+        "count": 1,
+        "name": "Apogée · Exaltation",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151711,
+    "名称": "Mandat scellé : Embrasement du Pactisant",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51711,
+        "type": "Mod",
+        "count": 1,
+        "name": "Embrasement",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151712,
+    "名称": "Mandat scellé : Ardeur du Pactisant · Vigueur",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51712,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ardeur · Vigueur",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151713,
+    "名称": "Mandat scellé : Ardeur du Pactisant · Pouvoir",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51713,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ardeur · Pouvoir",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151714,
+    "名称": "Mandat scellé : Dévotion du Pactisant · Inspiration",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51714,
+        "type": "Mod",
+        "count": 1,
+        "name": "Dévotion · Inspiration",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151721,
+    "名称": "Mandat scellé : Ardeur du Pactisant · Nirvana",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51721,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ardeur · Nirvana",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151722,
+    "名称": "Mandat scellé : Ardeur du Pactisant · Pouvoir",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51722,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ardeur · Pouvoir",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151723,
+    "名称": "Mandat scellé : Ardeur du Pactisant · Inspiration",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51723,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ardeur · Inspiration",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151724,
+    "名称": "Mandat scellé : Ailes du Pactisant · Décision",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51724,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ailes · Décision",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151731,
+    "名称": "Mandat scellé : Ardeur du Pactisant · Dévotion",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51731,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ardeur · Dévotion",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151732,
+    "名称": "Mandat scellé : Ardeur du Pactisant · Éternité",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51732,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ardeur · Éternité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151733,
+    "名称": "Mandat scellé : Ardeur du Pactisant · Inspiration",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51733,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ardeur · Inspiration",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151734,
+    "名称": "Mandat scellé : Nirvana du Pactisant · Pouvoir",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51734,
+        "type": "Mod",
+        "count": 1,
+        "name": "Nirvana · Pouvoir",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151741,
+    "名称": "Mandat scellé : Ardeur du Pactisant · Nirvana",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51741,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ardeur · Nirvana",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151742,
+    "名称": "Mandat scellé : Ardeur du Pactisant · Vigueur",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51742,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ardeur · Vigueur",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151743,
+    "名称": "Mandat scellé : Ardeur du Pactisant · Décision",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51743,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ardeur · Décision",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151744,
+    "名称": "Mandat scellé : Dévotion du Pactisant · Éternité",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51744,
+        "type": "Mod",
+        "count": 1,
+        "name": "Dévotion · Éternité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151745,
+    "名称": "Mandat scellé : Pouvoir de Quetzalcoatl",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51745,
+        "type": "Mod",
+        "count": 1,
+        "name": "Pouvoir",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151746,
+    "名称": "Mandat scellé : Décision de Quetzalcoatl",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51746,
+        "type": "Mod",
+        "count": 1,
+        "name": "Décision",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151751,
+    "名称": "Mandat scellé : Ardeur du Pactisant · Dévotion",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51751,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ardeur · Dévotion",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151752,
+    "名称": "Mandat scellé : Ardeur du Pactisant · Ténacité",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51752,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ardeur · Ténacité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151753,
+    "名称": "Mandat scellé : Ardeur du Pactisant · Décision",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51753,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ardeur · Décision",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151754,
+    "名称": "Mandat scellé : Ailes du Pactisant · Éternité",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51754,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ailes · Éternité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151755,
+    "名称": "Mandat scellé : Ténacité de Quetzalcoatl",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51755,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ténacité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151756,
+    "名称": "Mandat scellé : Éternité de Quetzalcoatl",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51756,
+        "type": "Mod",
+        "count": 1,
+        "name": "Éternité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151761,
+    "名称": "Mandat scellé : Embrasement du Pactisant",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51761,
+        "type": "Mod",
+        "count": 1,
+        "name": "Embrasement",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151762,
+    "名称": "Mandat scellé : Ardeur du Pactisant · Ténacité",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51762,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ardeur · Ténacité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151763,
+    "名称": "Mandat scellé : Ardeur du Pactisant · Éternité",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51763,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ardeur · Éternité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151764,
+    "名称": "Mandat scellé : Nirvana du Pactisant · Décision",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51764,
+        "type": "Mod",
+        "count": 1,
+        "name": "Nirvana · Décision",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151911,
+    "名称": "Mandat scellé : Sacrifice illusoire de l’Arbitre",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51911,
+        "type": "Mod",
+        "count": 1,
+        "name": "Sacrifice illusoire",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151921,
+    "名称": "Mandat scellé : Voile brumeux de Bahamut",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51921,
+        "type": "Mod",
+        "count": 1,
+        "name": "Voile brumeux",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151922,
+    "名称": "Mandat scellé : Torrent glacé de Bahamut",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51922,
+        "type": "Mod",
+        "count": 1,
+        "name": "Torrent glacé",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151931,
+    "名称": "Mandat scellé : Brasier dévorant d'Ifrit",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51931,
+        "type": "Mod",
+        "count": 1,
+        "name": "Brasier dévorant",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151941,
+    "名称": "Mandat scellé : Foudre destructrice de Summanus",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51941,
+        "type": "Mod",
+        "count": 1,
+        "name": "Foudre destructrice",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151951,
+    "名称": "Mandat scellé : Souffle du zéphir d’Hastur",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51951,
+        "type": "Mod",
+        "count": 1,
+        "name": "Souffle du zéphir",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151952,
+    "名称": "Mandat scellé : Cyclone déchaîné d’Hastur",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51952,
+        "type": "Mod",
+        "count": 1,
+        "name": "Cyclone déchaîné",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151961,
+    "名称": "Mandat scellé : Prisme spectral d’Hélios",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51961,
+        "type": "Mod",
+        "count": 1,
+        "name": "Prisme spectral",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151962,
+    "名称": "Mandat scellé : Lueurs jumelles d’Hélios",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51962,
+        "type": "Mod",
+        "count": 1,
+        "name": "Lueurs jumelles",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 153011,
+    "名称": "Mandat scellé : Échombre de Lilith · Dextérité",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 53011,
+        "type": "Mod",
+        "count": 1,
+        "name": "Échombre · Dextérité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 153013,
+    "名称": "Mandat scellé : Flèche de Lilith · Abondance",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 53013,
+        "type": "Mod",
+        "count": 1,
+        "name": "Flèche · Abondance",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 156151,
+    "名称": "Mandat scellé : Décision du Métamorphe",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 56151,
+        "type": "Mod",
+        "count": 1,
+        "name": "Décision",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 156152,
+    "名称": "Mandat scellé : Ailes de Sirène · Inspiration · Décision",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 56152,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ailes · Inspiration · Décision",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 156153,
+    "名称": "Mandat scellé : Ténacité du Métamorphe",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 56153,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ténacité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 156154,
+    "名称": "Mandat scellé : Ailes de Sirène · Inspiration · Ténacité",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 56154,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ailes · Inspiration · Ténacité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  }
+]

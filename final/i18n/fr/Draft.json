@@ -1,0 +1,9419 @@
+[
+  {
+    "id": 1001,
+    "n": "Élixir d’aiguisage",
+    "r": 5,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 20027,
+    "d": 15,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 20023,
+        "n": "Sable d’or",
+        "c": 6,
+        "t": "Resource"
+      },
+      {
+        "id": 20008,
+        "n": "Cristal répulsif",
+        "c": 4,
+        "t": "Resource"
+      },
+      {
+        "id": 20029,
+        "n": "Support d’ajustement",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 20032,
+        "n": "Liquide de refroidissement",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 1002,
+    "n": "Projectile explosif",
+    "r": 5,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 20028,
+    "d": 15,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 20023,
+        "n": "Sable d’or",
+        "c": 4,
+        "t": "Resource"
+      },
+      {
+        "id": 20008,
+        "n": "Cristal répulsif",
+        "c": 6,
+        "t": "Resource"
+      },
+      {
+        "id": 20029,
+        "n": "Support d’ajustement",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 20032,
+        "n": "Liquide de refroidissement",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 1003,
+    "n": "Injecteur de sérum",
+    "r": 5,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 20030,
+    "d": 25,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 20021,
+        "n": "Bougie sacrée",
+        "c": 5,
+        "t": "Resource"
+      },
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 25000
+  },
+  {
+    "id": 1004,
+    "n": "Polymère de Souillé",
+    "r": 5,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 20031,
+    "d": 25,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 20024,
+        "n": "Tentacule de Souillé",
+        "c": 5,
+        "t": "Resource"
+      },
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 25000
+  },
+  {
+    "id": 1005,
+    "n": "Support d’ajustement",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 2,
+    "p": 20029,
+    "d": 10,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 20010,
+        "n": "Vrille rampante",
+        "c": 100,
+        "t": "Resource"
+      },
+      {
+        "id": 20009,
+        "n": "Larme vermillon",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20011,
+        "n": "Grumeau de Souillé",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 10000
+  },
+  {
+    "id": 1006,
+    "n": "Liquide de refroidissement",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 2,
+    "p": 20032,
+    "d": 10,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 20010,
+        "n": "Vrille rampante",
+        "c": 100,
+        "t": "Resource"
+      },
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20005,
+        "n": "Poudre de pierre",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20011,
+        "n": "Grumeau de Souillé",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 10000
+  },
+  {
+    "id": 1007,
+    "n": "Sable d’or",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 20023,
+    "d": 10,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 20013,
+        "n": "Souvenir des Lunariens",
+        "c": 15,
+        "t": "Resource"
+      },
+      {
+        "id": 20014,
+        "n": "Plume de queue de Nivéole",
+        "c": 5,
+        "t": "Resource"
+      },
+      {
+        "id": 20019,
+        "n": "Réactif inflammable",
+        "c": 5,
+        "t": "Resource"
+      },
+      {
+        "id": 20018,
+        "n": "Débris de statue",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 10000
+  },
+  {
+    "id": 1008,
+    "n": "Cristal répulsif",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 20008,
+    "d": 10,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 20013,
+        "n": "Souvenir des Lunariens",
+        "c": 15,
+        "t": "Resource"
+      },
+      {
+        "id": 20017,
+        "n": "Blindage de véhicule",
+        "c": 5,
+        "t": "Resource"
+      },
+      {
+        "id": 20020,
+        "n": "Enduit isolant",
+        "c": 5,
+        "t": "Resource"
+      },
+      {
+        "id": 20018,
+        "n": "Débris de statue",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 10000
+  },
+  {
+    "id": 1014,
+    "n": "Sel volatil I",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 10,
+    "p": 40001,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 20010,
+        "n": "Vrille rampante",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 5000
+  },
+  {
+    "id": 1015,
+    "n": "Sel volatil concentré I",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 10,
+    "p": 40002,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 20010,
+        "n": "Vrille rampante",
+        "c": 10,
+        "t": "Resource"
+      },
+      {
+        "id": 20032,
+        "n": "Liquide de refroidissement",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 5000
+  },
+  {
+    "id": 1016,
+    "n": "Caisse de munitions I",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 10,
+    "p": 40003,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 20010,
+        "n": "Vrille rampante",
+        "c": 20,
+        "t": "Resource"
+      },
+      {
+        "id": 20023,
+        "n": "Sable d’or",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 5000
+  },
+  {
+    "id": 1017,
+    "n": "Module de transfert d’affinité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 201,
+    "d": 40,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 30001,
+        "n": "Essence vitale",
+        "c": 20,
+        "t": "Resource"
+      },
+      {
+        "id": 20023,
+        "n": "Sable d’or",
+        "c": 4,
+        "t": "Resource"
+      },
+      {
+        "id": 20008,
+        "n": "Cristal répulsif",
+        "c": 4,
+        "t": "Resource"
+      },
+      {
+        "id": 20010,
+        "n": "Vrille rampante",
+        "c": 100,
+        "t": "Resource"
+      }
+    ],
+    "m": 240000
+  },
+  {
+    "id": 1018,
+    "n": "Module de transfert d’affinité d’arme",
+    "r": 5,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 202,
+    "d": 30,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 30002,
+        "n": "Aimant de précision",
+        "c": 20,
+        "t": "Resource"
+      },
+      {
+        "id": 20023,
+        "n": "Sable d’or",
+        "c": 3,
+        "t": "Resource"
+      },
+      {
+        "id": 20008,
+        "n": "Cristal répulsif",
+        "c": 3,
+        "t": "Resource"
+      },
+      {
+        "id": 20010,
+        "n": "Vrille rampante",
+        "c": 80,
+        "t": "Resource"
+      }
+    ],
+    "m": 180000
+  },
+  {
+    "id": 1019,
+    "n": "Sel volatil II",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 10,
+    "p": 40011,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 20010,
+        "n": "Vrille rampante",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20013,
+        "n": "Souvenir des Lunariens",
+        "c": 6,
+        "t": "Resource"
+      },
+      {
+        "id": 4010001,
+        "n": "Vertigalis",
+        "c": 10,
+        "t": "Resource"
+      },
+      {
+        "id": 4010008,
+        "n": "Lotus d’hiver",
+        "c": 10,
+        "t": "Resource"
+      }
+    ],
+    "m": 10000
+  },
+  {
+    "id": 1020,
+    "n": "Sel volatil concentré II",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 10,
+    "p": 40012,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 20010,
+        "n": "Vrille rampante",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20032,
+        "n": "Liquide de refroidissement",
+        "c": 3,
+        "t": "Resource"
+      },
+      {
+        "id": 4010005,
+        "n": "Bidon de Phoxichor",
+        "c": 5,
+        "t": "Resource"
+      },
+      {
+        "id": 4010003,
+        "n": "Source cristalline",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 5000
+  },
+  {
+    "id": 1021,
+    "n": "Caisse de munitions II",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 10,
+    "p": 40013,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 20010,
+        "n": "Vrille rampante",
+        "c": 100,
+        "t": "Resource"
+      },
+      {
+        "id": 20023,
+        "n": "Sable d’or",
+        "c": 3,
+        "t": "Resource"
+      },
+      {
+        "id": 4010004,
+        "n": "Bonnet de neige",
+        "c": 5,
+        "t": "Resource"
+      },
+      {
+        "id": 4020003,
+        "n": "Argentite",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 5000
+  },
+  {
+    "id": 1022,
+    "n": "Délice Yum",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 10,
+    "p": 3002,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 20010,
+        "n": "Vrille rampante",
+        "c": 25,
+        "t": "Resource"
+      },
+      {
+        "id": 20023,
+        "n": "Sable d’or",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 4010004,
+        "n": "Bonnet de neige",
+        "c": 3,
+        "t": "Resource"
+      },
+      {
+        "id": 4020003,
+        "n": "Argentite",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 5000
+  },
+  {
+    "id": 1023,
+    "n": "Délice Yum-Yum",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 10,
+    "p": 3003,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 20010,
+        "n": "Vrille rampante",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20023,
+        "n": "Sable d’or",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 4010004,
+        "n": "Bonnet de neige",
+        "c": 6,
+        "t": "Resource"
+      },
+      {
+        "id": 4020003,
+        "n": "Argentite",
+        "c": 10,
+        "t": "Resource"
+      }
+    ],
+    "m": 10000
+  },
+  {
+    "id": 1050,
+    "n": "Dé à 10 faces",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 10,
+    "p": 3001,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 20023,
+        "n": "Sable d’or",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 20008,
+        "n": "Cristal répulsif",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 5000
+  },
+  {
+    "id": 1051,
+    "n": "Caisse de munitions I",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 10,
+    "p": 40003,
+    "d": 0,
+    "x": [
+      {
+        "id": 3000017,
+        "n": "Vrille rampante",
+        "c": 20,
+        "t": "Resource"
+      },
+      {
+        "id": 3000016,
+        "n": "Sable d’or",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 5000
+  },
+  {
+    "id": 1052,
+    "n": "Carnet de mission — Tome II",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 207,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 206,
+        "n": "Carnet de mission — Tome I",
+        "c": 4,
+        "t": "Resource"
+      }
+    ],
+    "m": 300
+  },
+  {
+    "id": 1053,
+    "n": "Carnet de mission — Tome III",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 208,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 207,
+        "n": "Carnet de mission — Tome II",
+        "c": 4,
+        "t": "Resource"
+      }
+    ],
+    "m": 800
+  },
+  {
+    "id": 1054,
+    "n": "Carnet de mission — Tome IV",
+    "r": 5,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 209,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 208,
+        "n": "Carnet de mission — Tome III",
+        "c": 4,
+        "t": "Resource"
+      }
+    ],
+    "m": 2000
+  },
+  {
+    "id": 2011,
+    "n": "Turbine convergente",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10002,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10001,
+        "n": "Branche desséchée",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 100
+  },
+  {
+    "id": 2012,
+    "n": "Océalis",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10003,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10002,
+        "n": "Turbine convergente",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 200
+  },
+  {
+    "id": 2013,
+    "n": "Perceur de tempête",
+    "r": 5,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10004,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10003,
+        "n": "Océalis",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 300
+  },
+  {
+    "id": 2021,
+    "n": "Flamme éternelle",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10006,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10005,
+        "n": "Écaille de lézard flamboyant",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 100
+  },
+  {
+    "id": 2022,
+    "n": "Chaînes embrasées",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10007,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10006,
+        "n": "Flamme éternelle",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 200
+  },
+  {
+    "id": 2023,
+    "n": "Lave solidifiée",
+    "r": 5,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10008,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10007,
+        "n": "Chaînes embrasées",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 300
+  },
+  {
+    "id": 2031,
+    "n": "Hydrorésine",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10010,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10009,
+        "n": "Perle azurée",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 100
+  },
+  {
+    "id": 2032,
+    "n": "Purificateur d’eau",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10011,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10010,
+        "n": "Hydrorésine",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 200
+  },
+  {
+    "id": 2033,
+    "n": "Larme glaciale",
+    "r": 5,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10012,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10011,
+        "n": "Purificateur d’eau",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 300
+  },
+  {
+    "id": 2041,
+    "n": "Jade tempétueux",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10014,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10013,
+        "n": "Aiguille de foudre",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 100
+  },
+  {
+    "id": 2042,
+    "n": "Laine d’or",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10015,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10014,
+        "n": "Jade tempétueux",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 200
+  },
+  {
+    "id": 2043,
+    "n": "Éclair en bouteille",
+    "r": 5,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10016,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10015,
+        "n": "Laine d’or",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 300
+  },
+  {
+    "id": 2051,
+    "n": "Diadème floral doré",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10018,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10017,
+        "n": "Lentille de l’illumination",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 100
+  },
+  {
+    "id": 2052,
+    "n": "Exemplaire de l’Hymnes sacrés",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10019,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10018,
+        "n": "Diadème floral doré",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 200
+  },
+  {
+    "id": 2053,
+    "n": "Balance de justice éternelle",
+    "r": 5,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10020,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10019,
+        "n": "Exemplaire de l’Hymnes sacrés",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 300
+  },
+  {
+    "id": 2061,
+    "n": "Clé d’obsidienne",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10022,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10021,
+        "n": "Dague rouillée",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 100
+  },
+  {
+    "id": 2062,
+    "n": "Tome du rituel séléniste",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10023,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10022,
+        "n": "Clé d’obsidienne",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 200
+  },
+  {
+    "id": 2063,
+    "n": "Plaque cellulaire de Souillée",
+    "r": 5,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10024,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10023,
+        "n": "Tome du rituel séléniste",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 300
+  },
+  {
+    "id": 4001,
+    "n": "Composant d’arme intermédiaire : Poignée",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 11002,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 11001,
+        "n": "Composant d’arme basique : Poignée",
+        "c": 3,
+        "t": "Resource"
+      }
+    ],
+    "m": 100
+  },
+  {
+    "id": 4002,
+    "n": "Composant d’arme avancé : Poignée",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 11003,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 11002,
+        "n": "Composant d’arme intermédiaire : Poignée",
+        "c": 3,
+        "t": "Resource"
+      }
+    ],
+    "m": 200
+  },
+  {
+    "id": 4003,
+    "n": "Composant d’arme intermédiaire : Lame",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 11005,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 11004,
+        "n": "Composant d’arme basique : Lame",
+        "c": 3,
+        "t": "Resource"
+      }
+    ],
+    "m": 100
+  },
+  {
+    "id": 4004,
+    "n": "Composant d’arme avancé : Lame",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 11006,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 11005,
+        "n": "Composant d’arme intermédiaire : Lame",
+        "c": 3,
+        "t": "Resource"
+      }
+    ],
+    "m": 200
+  },
+  {
+    "id": 4005,
+    "n": "Composant d’arme intermédiaire : Ornement",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 11008,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 11007,
+        "n": "Composant d’arme basique : Ornement",
+        "c": 3,
+        "t": "Resource"
+      }
+    ],
+    "m": 100
+  },
+  {
+    "id": 4006,
+    "n": "Composant d’arme avancé : Ornement",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 11009,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 11008,
+        "n": "Composant d’arme intermédiaire : Ornement",
+        "c": 3,
+        "t": "Resource"
+      }
+    ],
+    "m": 200
+  },
+  {
+    "id": 4007,
+    "n": "Composant d’arme intermédiaire : Canon",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 11011,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 11010,
+        "n": "Composant d’arme basique : Canon",
+        "c": 3,
+        "t": "Resource"
+      }
+    ],
+    "m": 100
+  },
+  {
+    "id": 4008,
+    "n": "Composant d’arme avancé : Canon",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 11012,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 11011,
+        "n": "Composant d’arme intermédiaire : Canon",
+        "c": 3,
+        "t": "Resource"
+      }
+    ],
+    "m": 200
+  },
+  {
+    "id": 4009,
+    "n": "Composant d’arme intermédiaire : Verrou",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 11014,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 11013,
+        "n": "Composant d’arme basique : Verrou",
+        "c": 3,
+        "t": "Resource"
+      }
+    ],
+    "m": 100
+  },
+  {
+    "id": 4010,
+    "n": "Composant d’arme avancé : Verrou",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 11015,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 11014,
+        "n": "Composant d’arme intermédiaire : Verrou",
+        "c": 3,
+        "t": "Resource"
+      }
+    ],
+    "m": 200
+  },
+  {
+    "id": 4011,
+    "n": "Composant d’arme intermédiaire : Armature",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 11017,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 11016,
+        "n": "Composant d’arme basique : Armature",
+        "c": 3,
+        "t": "Resource"
+      }
+    ],
+    "m": 100
+  },
+  {
+    "id": 4012,
+    "n": "Composant d’arme avancé : Armature",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 11018,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 11017,
+        "n": "Composant d’arme intermédiaire : Armature",
+        "c": 3,
+        "t": "Resource"
+      }
+    ],
+    "m": 200
+  },
+  {
+    "id": 9526,
+    "n": "Brasier salvateur",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20503,
+    "d": 70,
+    "x": [
+      {
+        "id": 3000012,
+        "n": "Support d’ajustement",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 3000013,
+        "n": "Brasier salvateur : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 3000014,
+        "n": "Brasier salvateur : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 3000015,
+        "n": "Brasier salvateur : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 70000
+  },
+  {
+    "id": 151002,
+    "n": "Nirvana",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51002,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41002,
+        "n": "Nirvana",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151003,
+    "n": "Bénédiction",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51003,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41003,
+        "n": "Bénédiction",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151007,
+    "n": "Dévotion",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51007,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41007,
+        "n": "Dévotion",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151301,
+    "n": "Ailes · Inspiration",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51301,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41004,
+        "n": "Ailes",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151311,
+    "n": "Assaut",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51311,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41001,
+        "n": "Ardeur",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151312,
+    "n": "Témérité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51312,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41001,
+        "n": "Ardeur",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151313,
+    "n": "Duel",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51313,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41313,
+        "n": "Duel",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151314,
+    "n": "Embuscade",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51314,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41314,
+        "n": "Embuscade",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151315,
+    "n": "Afflux",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51315,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41315,
+        "n": "Afflux",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151316,
+    "n": "Perpétuel",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51316,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41316,
+        "n": "Perpétuel",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151321,
+    "n": "Néant · Conflagration",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51321,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41321,
+        "n": "Néant · Conflagration",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151322,
+    "n": "Marébrise · Conflagration",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51322,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41322,
+        "n": "Marébrise · Conflagration",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151323,
+    "n": "Enfer · Conflagration",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51323,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41323,
+        "n": "Enfer · Conflagration",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151324,
+    "n": "Tonnerre · Conflagration",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51324,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41324,
+        "n": "Tonnerre · Conflagration",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151325,
+    "n": "Rafale · Conflagration",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51325,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41325,
+        "n": "Rafale · Conflagration",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151326,
+    "n": "Aurore · Conflagration",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51326,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41326,
+        "n": "Aurore · Conflagration",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151331,
+    "n": "Néant · Soleil de minuit",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51331,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41331,
+        "n": "Néant · Soleil de minuit",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151332,
+    "n": "Marébrise · Soleil de minuit",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51332,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41332,
+        "n": "Marébrise · Soleil de minuit",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151333,
+    "n": "Enfer · Soleil de minuit",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51333,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41333,
+        "n": "Enfer · Soleil de minuit",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151334,
+    "n": "Tonnerre · Soleil de minuit",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51334,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41334,
+        "n": "Tonnerre · Soleil de minuit",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151335,
+    "n": "Rafale · Soleil de minuit",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51335,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41335,
+        "n": "Rafale · Soleil de minuit",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151336,
+    "n": "Aurore · Soleil de minuit",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51336,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41336,
+        "n": "Aurore · Soleil de minuit",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151411,
+    "n": "Apogée · Vigueur",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51411,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41411,
+        "n": "Apogée · Vigueur",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151412,
+    "n": "Apogée · Ténacité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51412,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41412,
+        "n": "Apogée · Ténacité",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151413,
+    "n": "Apogée · Poursuite",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51413,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41413,
+        "n": "Apogée · Poursuite",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151414,
+    "n": "Apogée · Sérénité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51414,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41414,
+        "n": "Apogée · Sérénité",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151415,
+    "n": "Apogée · Exaltation",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51415,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41415,
+        "n": "Apogée · Exaltation",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151421,
+    "n": "Apogée · Vigueur",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51421,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41421,
+        "n": "Apogée · Vigueur",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151422,
+    "n": "Apogée · Ténacité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51422,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41422,
+        "n": "Apogée · Ténacité",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151423,
+    "n": "Apogée · Poursuite",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51423,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41423,
+        "n": "Apogée · Poursuite",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151424,
+    "n": "Apogée · Sérénité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51424,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41424,
+        "n": "Apogée · Sérénité",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151425,
+    "n": "Apogée · Exaltation",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51425,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41425,
+        "n": "Apogée · Exaltation",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151431,
+    "n": "Apogée · Vigueur",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51431,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41431,
+        "n": "Apogée · Vigueur",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151432,
+    "n": "Apogée · Ténacité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51432,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41432,
+        "n": "Apogée · Ténacité",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151433,
+    "n": "Apogée · Poursuite",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51433,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41433,
+        "n": "Apogée · Poursuite",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151434,
+    "n": "Apogée · Sérénité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51434,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41434,
+        "n": "Apogée · Sérénité",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151435,
+    "n": "Apogée · Exaltation",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51435,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41435,
+        "n": "Apogée · Exaltation",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151441,
+    "n": "Apogée · Vigueur",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51441,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41441,
+        "n": "Apogée · Vigueur",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151442,
+    "n": "Apogée · Ténacité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51442,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41442,
+        "n": "Apogée · Ténacité",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151443,
+    "n": "Apogée · Poursuite",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51443,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41443,
+        "n": "Apogée · Poursuite",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151444,
+    "n": "Apogée · Sérénité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51444,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41444,
+        "n": "Apogée · Sérénité",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151445,
+    "n": "Apogée · Exaltation",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51445,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41445,
+        "n": "Apogée · Exaltation",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151451,
+    "n": "Apogée · Vigueur",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51451,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41451,
+        "n": "Apogée · Vigueur",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151452,
+    "n": "Apogée · Ténacité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51452,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41452,
+        "n": "Apogée · Ténacité",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151453,
+    "n": "Apogée · Poursuite",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51453,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41453,
+        "n": "Apogée · Poursuite",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151454,
+    "n": "Apogée · Sérénité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51454,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41454,
+        "n": "Apogée · Sérénité",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151455,
+    "n": "Apogée · Exaltation",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51455,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41455,
+        "n": "Apogée · Exaltation",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151461,
+    "n": "Apogée · Vigueur",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51461,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41461,
+        "n": "Apogée · Vigueur",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151462,
+    "n": "Apogée · Ténacité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51462,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41462,
+        "n": "Apogée · Ténacité",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151463,
+    "n": "Apogée · Poursuite",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51463,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41463,
+        "n": "Apogée · Poursuite",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151464,
+    "n": "Apogée · Sérénité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51464,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41464,
+        "n": "Apogée · Sérénité",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151465,
+    "n": "Apogée · Exaltation",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51465,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41465,
+        "n": "Apogée · Exaltation",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151711,
+    "n": "Embrasement",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51711,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41711,
+        "n": "Embrasement",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151712,
+    "n": "Ardeur · Vigueur",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51712,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41712,
+        "n": "Ardeur · Vigueur",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151713,
+    "n": "Ardeur · Pouvoir",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51713,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41713,
+        "n": "Ardeur · Pouvoir",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151714,
+    "n": "Dévotion · Inspiration",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51714,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41714,
+        "n": "Dévotion · Inspiration",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151721,
+    "n": "Ardeur · Nirvana",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51721,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41721,
+        "n": "Ardeur · Nirvana",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151722,
+    "n": "Ardeur · Pouvoir",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51722,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41722,
+        "n": "Ardeur · Pouvoir",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151723,
+    "n": "Ardeur · Inspiration",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51723,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41723,
+        "n": "Ardeur · Inspiration",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151724,
+    "n": "Ailes · Décision",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51724,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41724,
+        "n": "Ailes · Décision",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151731,
+    "n": "Ardeur · Dévotion",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51731,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41731,
+        "n": "Ardeur · Dévotion",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151732,
+    "n": "Ardeur · Éternité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51732,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41732,
+        "n": "Ardeur · Éternité",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151733,
+    "n": "Ardeur · Inspiration",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51733,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41733,
+        "n": "Ardeur · Inspiration",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151734,
+    "n": "Nirvana · Pouvoir",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51734,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41734,
+        "n": "Nirvana · Pouvoir",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151741,
+    "n": "Ardeur · Nirvana",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51741,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41741,
+        "n": "Ardeur · Nirvana",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151742,
+    "n": "Ardeur · Vigueur",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51742,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41742,
+        "n": "Ardeur · Vigueur",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151743,
+    "n": "Ardeur · Décision",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51743,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41743,
+        "n": "Ardeur · Décision",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151744,
+    "n": "Dévotion · Éternité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51744,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41744,
+        "n": "Dévotion · Éternité",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151745,
+    "n": "Pouvoir",
+    "r": 5,
+    "v": "1.2",
+    "t": "Mod",
+    "c": 1,
+    "p": 51745,
+    "d": 60,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41745,
+        "n": "Pouvoir",
+        "c": 5,
+        "t": "Mod"
+      },
+      {
+        "id": 201,
+        "n": "Module de transfert d’affinité",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 100000
+  },
+  {
+    "id": 151746,
+    "n": "Décision",
+    "r": 5,
+    "v": "1.2",
+    "t": "Mod",
+    "c": 1,
+    "p": 51746,
+    "d": 60,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41746,
+        "n": "Décision",
+        "c": 5,
+        "t": "Mod"
+      },
+      {
+        "id": 201,
+        "n": "Module de transfert d’affinité",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 100000
+  },
+  {
+    "id": 151751,
+    "n": "Ardeur · Dévotion",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51751,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41751,
+        "n": "Ardeur · Dévotion",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151752,
+    "n": "Ardeur · Ténacité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51752,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41752,
+        "n": "Ardeur · Ténacité",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151753,
+    "n": "Ardeur · Décision",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51753,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41753,
+        "n": "Ardeur · Décision",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151754,
+    "n": "Ailes · Éternité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51754,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41754,
+        "n": "Ailes · Éternité",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151755,
+    "n": "Ténacité",
+    "r": 5,
+    "v": "1.1",
+    "t": "Mod",
+    "c": 1,
+    "p": 51755,
+    "d": 60,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41755,
+        "n": "Ténacité",
+        "c": 5,
+        "t": "Mod"
+      },
+      {
+        "id": 201,
+        "n": "Module de transfert d’affinité",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 100000
+  },
+  {
+    "id": 151756,
+    "n": "Éternité",
+    "r": 5,
+    "v": "1.1",
+    "t": "Mod",
+    "c": 1,
+    "p": 51756,
+    "d": 60,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41756,
+        "n": "Éternité",
+        "c": 5,
+        "t": "Mod"
+      },
+      {
+        "id": 201,
+        "n": "Module de transfert d’affinité",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 100000
+  },
+  {
+    "id": 151761,
+    "n": "Embrasement",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51761,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41761,
+        "n": "Embrasement",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151762,
+    "n": "Ardeur · Ténacité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51762,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41762,
+        "n": "Ardeur · Ténacité",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151763,
+    "n": "Ardeur · Éternité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51763,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41763,
+        "n": "Ardeur · Éternité",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151764,
+    "n": "Nirvana · Décision",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51764,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41764,
+        "n": "Nirvana · Décision",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151801,
+    "n": "Épée affûtée",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51801,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41801,
+        "n": "Épée affûtée",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151802,
+    "n": "Arme d’hast affûtée",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51802,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41802,
+        "n": "Arme d’hast affûtée",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151803,
+    "n": "Espadon affûté",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51803,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41803,
+        "n": "Espadon affûté",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151804,
+    "n": "Doubles lames affûtées",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51804,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41804,
+        "n": "Doubles lames affûtées",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151805,
+    "n": "Épée-fouet affûtée",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51805,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41805,
+        "n": "Épée-fouet affûtée",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151806,
+    "n": "Katana affûté",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51806,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41806,
+        "n": "Katana affûté",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151807,
+    "n": "Pistolet affûté",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51807,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41807,
+        "n": "Pistolet affûté",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151808,
+    "n": "Doubles pistolets affûtés",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51808,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41808,
+        "n": "Doubles pistolets affûtés",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151809,
+    "n": "Lance-grenades affûté",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51809,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41809,
+        "n": "Lance-grenades affûté",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151810,
+    "n": "Fusil à pompe affûté",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51810,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41810,
+        "n": "Fusil à pompe affûté",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151811,
+    "n": "Fusil d’assaut affûté",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51811,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41811,
+        "n": "Fusil d’assaut affûté",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151812,
+    "n": "Arc affûté",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51812,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41812,
+        "n": "Arc affûté",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151911,
+    "n": "Sacrifice illusoire",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51911,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41911,
+        "n": "Sacrifice illusoire",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151921,
+    "n": "Voile brumeux",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51921,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41921,
+        "n": "Voile brumeux",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151922,
+    "n": "Torrent glacé",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51922,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41922,
+        "n": "Torrent glacé",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151931,
+    "n": "Brasier dévorant",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51931,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41931,
+        "n": "Brasier dévorant",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151941,
+    "n": "Foudre destructrice",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51941,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41941,
+        "n": "Foudre destructrice",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151951,
+    "n": "Souffle du zéphir",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51951,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41951,
+        "n": "Souffle du zéphir",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151952,
+    "n": "Cyclone déchaîné",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51952,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41952,
+        "n": "Cyclone déchaîné",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151961,
+    "n": "Prisme spectral",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51961,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41961,
+        "n": "Prisme spectral",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151962,
+    "n": "Lueurs jumelles",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51962,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41962,
+        "n": "Lueurs jumelles",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 152001,
+    "n": "Fulgurance",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 52001,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 42001,
+        "n": "Fulgurance",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 152004,
+    "n": "Célérité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 52004,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 42311,
+        "n": "Brutalité",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 152005,
+    "n": "Limite",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 52005,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 42322,
+        "n": "Veilleur",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 152007,
+    "n": "Fulgurance · Concentration",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 52007,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 42001,
+        "n": "Fulgurance",
+        "c": 2,
+        "t": "Mod"
+      },
+      {
+        "id": 42002,
+        "n": "Concentration",
+        "c": 1,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 152008,
+    "n": "Fureur · Entrave",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 52008,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 42003,
+        "n": "Fureur",
+        "c": 3,
+        "t": "Mod"
+      },
+      {
+        "id": 42006,
+        "n": "Entrave",
+        "c": 1,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 152101,
+    "n": "Tranchant",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 52101,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 42001,
+        "n": "Fulgurance",
+        "c": 3,
+        "t": "Mod"
+      },
+      {
+        "id": 32101,
+        "n": "Tranchant",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 152102,
+    "n": "Pénétration",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 52102,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 42001,
+        "n": "Fulgurance",
+        "c": 3,
+        "t": "Mod"
+      },
+      {
+        "id": 32102,
+        "n": "Pénétration",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 152103,
+    "n": "Écrasement",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 52103,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 42001,
+        "n": "Fulgurance",
+        "c": 3,
+        "t": "Mod"
+      },
+      {
+        "id": 32103,
+        "n": "Écrasement",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 153001,
+    "n": "Fulgurance",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 53001,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 43001,
+        "n": "Fulgurance",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 153004,
+    "n": "Célérité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 53004,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 43341,
+        "n": "Austérité",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 153005,
+    "n": "Échombre",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 53005,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 43301,
+        "n": "Préparation",
+        "c": 3,
+        "t": "Mod"
+      },
+      {
+        "id": 33005,
+        "n": "Échombre",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 153007,
+    "n": "Fulgurance · Concentration",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 53007,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 43001,
+        "n": "Fulgurance",
+        "c": 2,
+        "t": "Mod"
+      },
+      {
+        "id": 43002,
+        "n": "Concentration",
+        "c": 1,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 153008,
+    "n": "Fureur · Entrave",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 53008,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 43003,
+        "n": "Fureur",
+        "c": 3,
+        "t": "Mod"
+      },
+      {
+        "id": 43006,
+        "n": "Entrave",
+        "c": 1,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 153009,
+    "n": "Concentration · Intimidation",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 53009,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 43601,
+        "n": "Concentration · Fardeau",
+        "c": 3,
+        "t": "Mod"
+      },
+      {
+        "id": 33411,
+        "n": "Intimidation",
+        "c": 1,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 153010,
+    "n": "Fureur · Focalisation",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 53010,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 43008,
+        "n": "Fureur · Entrave",
+        "c": 3,
+        "t": "Mod"
+      },
+      {
+        "id": 43402,
+        "n": "Rayon furieux",
+        "c": 1,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 153011,
+    "n": "Échombre · Dextérité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 53011,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 43604,
+        "n": "Pluie de flèches",
+        "c": 3,
+        "t": "Mod"
+      },
+      {
+        "id": 33203,
+        "n": "Dextérité",
+        "c": 1,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 153012,
+    "n": "Célérité · Carquois",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 53012,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 43602,
+        "n": "Célérité · Ruse",
+        "c": 3,
+        "t": "Mod"
+      },
+      {
+        "id": 33202,
+        "n": "Flèche",
+        "c": 1,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 153013,
+    "n": "Flèche · Abondance",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 53013,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 43603,
+        "n": "Carquois · Préparation",
+        "c": 3,
+        "t": "Mod"
+      },
+      {
+        "id": 43404,
+        "n": "Accélération",
+        "c": 1,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 153101,
+    "n": "Tranchant",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 53101,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 43001,
+        "n": "Fulgurance",
+        "c": 3,
+        "t": "Mod"
+      },
+      {
+        "id": 33101,
+        "n": "Tranchant",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 153102,
+    "n": "Pénétration",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 53102,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 43001,
+        "n": "Fulgurance",
+        "c": 3,
+        "t": "Mod"
+      },
+      {
+        "id": 33102,
+        "n": "Pénétration",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 153103,
+    "n": "Écrasement",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 53103,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 43001,
+        "n": "Fulgurance",
+        "c": 3,
+        "t": "Mod"
+      },
+      {
+        "id": 33103,
+        "n": "Écrasement",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 154001,
+    "n": "Fulgurance",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 54001,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 44001,
+        "n": "Fulgurance",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 154002,
+    "n": "Concentration",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 54002,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 44002,
+        "n": "Concentration",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 154003,
+    "n": "Fureur",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 54003,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 44003,
+        "n": "Fureur",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 154004,
+    "n": "Célérité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 54004,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 44004,
+        "n": "Célérité",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 154005,
+    "n": "Limite",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 54005,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 44005,
+        "n": "Limite",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 154006,
+    "n": "Entrave",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 54006,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 44006,
+        "n": "Entrave",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 154009,
+    "n": "Entrave · Fulgurance",
+    "r": 5,
+    "v": "1.2",
+    "t": "Mod",
+    "c": 1,
+    "p": 54009,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 44006,
+        "n": "Entrave",
+        "c": 2,
+        "t": "Mod"
+      },
+      {
+        "id": 44001,
+        "n": "Fulgurance",
+        "c": 1,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 154101,
+    "n": "Tranchant",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 54101,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 44101,
+        "n": "Tranchant",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 154102,
+    "n": "Pénétration",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 54102,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 44102,
+        "n": "Pénétration",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 154103,
+    "n": "Écrasement",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 54103,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 44103,
+        "n": "Écrasement",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 154201,
+    "n": "Impact · Limite",
+    "r": 5,
+    "v": "1.2",
+    "t": "Mod",
+    "c": 1,
+    "p": 54201,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 44005,
+        "n": "Limite",
+        "c": 2,
+        "t": "Mod"
+      },
+      {
+        "id": 44001,
+        "n": "Fulgurance",
+        "c": 1,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 154202,
+    "n": "Éclair · Frappe-lumière",
+    "r": 5,
+    "v": "1.2",
+    "t": "Mod",
+    "c": 1,
+    "p": 54202,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 44101,
+        "n": "Tranchant",
+        "c": 2,
+        "t": "Mod"
+      },
+      {
+        "id": 44004,
+        "n": "Célérité",
+        "c": 1,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 154203,
+    "n": "Impact · Impact rapide",
+    "r": 5,
+    "v": "1.2",
+    "t": "Mod",
+    "c": 1,
+    "p": 54203,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 44102,
+        "n": "Pénétration",
+        "c": 2,
+        "t": "Mod"
+      },
+      {
+        "id": 44004,
+        "n": "Célérité",
+        "c": 1,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 154204,
+    "n": "Répit",
+    "r": 5,
+    "v": "1.2",
+    "t": "Mod",
+    "c": 1,
+    "p": 54204,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 44103,
+        "n": "Écrasement",
+        "c": 2,
+        "t": "Mod"
+      },
+      {
+        "id": 44002,
+        "n": "Concentration",
+        "c": 1,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 154205,
+    "n": "Ferveur",
+    "r": 5,
+    "v": "1.2",
+    "t": "Mod",
+    "c": 1,
+    "p": 54205,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 44003,
+        "n": "Fureur",
+        "c": 2,
+        "t": "Mod"
+      },
+      {
+        "id": 44002,
+        "n": "Concentration",
+        "c": 1,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 155001,
+    "n": "Fulgurance",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 55001,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 45001,
+        "n": "Fulgurance",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 155002,
+    "n": "Concentration",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 55002,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 45002,
+        "n": "Concentration",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 155003,
+    "n": "Fureur",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 55003,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 45003,
+        "n": "Fureur",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 155004,
+    "n": "Célérité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 55004,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 45004,
+        "n": "Célérité",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 155005,
+    "n": "Échombre",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 55005,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 45005,
+        "n": "Échombre",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 155006,
+    "n": "Entrave",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 55006,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 45006,
+        "n": "Entrave",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 155101,
+    "n": "Tranchant",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 55101,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 45101,
+        "n": "Tranchant",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 155102,
+    "n": "Pénétration",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 55102,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 45102,
+        "n": "Pénétration",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 155103,
+    "n": "Écrasement",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 55103,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 45103,
+        "n": "Écrasement",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 156141,
+    "n": "Décision",
+    "r": 5,
+    "v": "1.2",
+    "t": "Mod",
+    "c": 1,
+    "p": 56141,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 31201,
+        "n": "Décision",
+        "c": 10,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 156142,
+    "n": "Ailes · Inspiration · Décision",
+    "r": 5,
+    "v": "1.2",
+    "t": "Mod",
+    "c": 1,
+    "p": 56142,
+    "d": 120,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 56141,
+        "n": "Décision",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 31301,
+        "n": "Ailes · Inspiration",
+        "c": 10,
+        "t": "Mod"
+      },
+      {
+        "id": 20021,
+        "n": "Bougie sacrée",
+        "c": 20,
+        "t": "Resource"
+      }
+    ],
+    "m": 200000
+  },
+  {
+    "id": 156143,
+    "n": "Vigueur",
+    "r": 5,
+    "v": "1.2",
+    "t": "Mod",
+    "c": 1,
+    "p": 56143,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 31001,
+        "n": "Ardeur",
+        "c": 10,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 156144,
+    "n": "Ailes · Inspiration · Vigueur",
+    "r": 5,
+    "v": "1.2",
+    "t": "Mod",
+    "c": 1,
+    "p": 56144,
+    "d": 120,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 56143,
+        "n": "Vigueur",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 31301,
+        "n": "Ailes · Inspiration",
+        "c": 10,
+        "t": "Mod"
+      },
+      {
+        "id": 20024,
+        "n": "Tentacule de Souillé",
+        "c": 20,
+        "t": "Resource"
+      }
+    ],
+    "m": 200000
+  },
+  {
+    "id": 156151,
+    "n": "Décision",
+    "r": 5,
+    "v": "1.1",
+    "t": "Mod",
+    "c": 1,
+    "p": 56151,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 31202,
+        "n": "Inspiration",
+        "c": 10,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 156152,
+    "n": "Ailes · Inspiration · Décision",
+    "r": 5,
+    "v": "1.1",
+    "t": "Mod",
+    "c": 1,
+    "p": 56152,
+    "d": 120,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 56151,
+        "n": "Décision",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 31301,
+        "n": "Ailes · Inspiration",
+        "c": 10,
+        "t": "Mod"
+      },
+      {
+        "id": 20021,
+        "n": "Bougie sacrée",
+        "c": 20,
+        "t": "Resource"
+      }
+    ],
+    "m": 200000
+  },
+  {
+    "id": 156153,
+    "n": "Ténacité",
+    "r": 5,
+    "v": "1.1",
+    "t": "Mod",
+    "c": 1,
+    "p": 56153,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 31004,
+        "n": "Ailes",
+        "c": 10,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 156154,
+    "n": "Ailes · Inspiration · Ténacité",
+    "r": 5,
+    "v": "1.1",
+    "t": "Mod",
+    "c": 1,
+    "p": 56154,
+    "d": 120,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 56153,
+        "n": "Ténacité",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 31301,
+        "n": "Ailes · Inspiration",
+        "c": 10,
+        "t": "Mod"
+      },
+      {
+        "id": 20024,
+        "n": "Tentacule de Souillé",
+        "c": 20,
+        "t": "Resource"
+      }
+    ],
+    "m": 200000
+  },
+  {
+    "id": 310001,
+    "n": "Petit Pioupiou",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10001,
+    "d": 5,
+    "x": [
+      {
+        "id": 20009,
+        "n": "Larme vermillon",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 20000
+  },
+  {
+    "id": 310002,
+    "n": "Petit Pioupiou – Blanc ivoire",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10002,
+    "d": 5,
+    "x": [
+      {
+        "id": 20009,
+        "n": "Larme vermillon",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20005,
+        "n": "Poudre de pierre",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 310003,
+    "n": "Petit Pioupiou – Caramel",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10003,
+    "d": 5,
+    "x": [
+      {
+        "id": 20009,
+        "n": "Larme vermillon",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20011,
+        "n": "Grumeau de Souillé",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 310004,
+    "n": "Petit Pioupiou – Bleu indigo",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10004,
+    "d": 5,
+    "x": [
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20005,
+        "n": "Poudre de pierre",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 310005,
+    "n": "Jeune pousse verte",
+    "r": 3,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10005,
+    "d": 5,
+    "x": [
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20011,
+        "n": "Grumeau de Souillé",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 20000
+  },
+  {
+    "id": 310006,
+    "n": "Jeune pousse verte – Doré",
+    "r": 3,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10006,
+    "d": 5,
+    "x": [
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20005,
+        "n": "Poudre de pierre",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20011,
+        "n": "Grumeau de Souillé",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 310007,
+    "n": "Jeune pousse verte – Bleu céleste",
+    "r": 3,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10007,
+    "d": 5,
+    "x": [
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20005,
+        "n": "Poudre de pierre",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20009,
+        "n": "Larme vermillon",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 310008,
+    "n": "Jeune pousse verte – Rouille",
+    "r": 3,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10008,
+    "d": 5,
+    "x": [
+      {
+        "id": 20014,
+        "n": "Plume de queue de Nivéole",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20019,
+        "n": "Réactif inflammable",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20017,
+        "n": "Blindage de véhicule",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 310009,
+    "n": "Cinder",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10009,
+    "d": 5,
+    "x": [
+      {
+        "id": 20014,
+        "n": "Plume de queue de Nivéole",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20019,
+        "n": "Réactif inflammable",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20020,
+        "n": "Enduit isolant",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 310010,
+    "n": "Nœud papillon",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10010,
+    "d": 5,
+    "x": [
+      {
+        "id": 20014,
+        "n": "Plume de queue de Nivéole",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20019,
+        "n": "Réactif inflammable",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20018,
+        "n": "Débris de statue",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 20000
+  },
+  {
+    "id": 310011,
+    "n": "Nœud papillon – Blanc ivoire",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10011,
+    "d": 5,
+    "x": [
+      {
+        "id": 20020,
+        "n": "Enduit isolant",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20018,
+        "n": "Débris de statue",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20014,
+        "n": "Plume de queue de Nivéole",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 310012,
+    "n": "Nœud papillon – Rouille",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10012,
+    "d": 5,
+    "x": [
+      {
+        "id": 20020,
+        "n": "Enduit isolant",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20018,
+        "n": "Débris de statue",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20017,
+        "n": "Blindage de véhicule",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 310013,
+    "n": "Nœud papillon – Blanc sakura",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10013,
+    "d": 5,
+    "x": [
+      {
+        "id": 20014,
+        "n": "Plume de queue de Nivéole",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20018,
+        "n": "Débris de statue",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20017,
+        "n": "Blindage de véhicule",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 310014,
+    "n": "Dragon des rêves – Liuliu",
+    "r": 5,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10014,
+    "d": 5,
+    "x": [
+      {
+        "id": 20009,
+        "n": "Larme vermillon",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 310015,
+    "n": "Peluche Lunoeggy",
+    "r": 5,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10015,
+    "d": 5,
+    "x": [
+      {
+        "id": 4010012,
+        "n": "Œuf d’oiseau",
+        "c": 10,
+        "t": "Resource"
+      },
+      {
+        "id": 4010004,
+        "n": "Bonnet de neige",
+        "c": 20,
+        "t": "Resource"
+      },
+      {
+        "id": 20005,
+        "n": "Poudre de pierre",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 20000
+  },
+  {
+    "id": 310016,
+    "n": "Humeur – Pétillante",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10016,
+    "d": 5,
+    "x": [
+      {
+        "id": 20029,
+        "n": "Support d’ajustement",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 20032,
+        "n": "Liquide de refroidissement",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 40000
+  },
+  {
+    "id": 310017,
+    "n": "Humeur – Neigeuse",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10017,
+    "d": 5,
+    "x": [
+      {
+        "id": 20029,
+        "n": "Support d’ajustement",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 20032,
+        "n": "Liquide de refroidissement",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 40000
+  },
+  {
+    "id": 310018,
+    "n": "Humeur – Pluvieuse",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10018,
+    "d": 5,
+    "x": [
+      {
+        "id": 20029,
+        "n": "Support d’ajustement",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 20032,
+        "n": "Liquide de refroidissement",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 40000
+  },
+  {
+    "id": 310019,
+    "n": "Humeur – Arc-en-ciel",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10019,
+    "d": 5,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 310020,
+    "n": "Casse-tête",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10020,
+    "d": 5,
+    "s": 1,
+    "x": [
+      {
+        "id": 4010011,
+        "n": "Sacraline",
+        "c": 40,
+        "t": "Resource"
+      },
+      {
+        "id": 4010004,
+        "n": "Bonnet de neige",
+        "c": 40,
+        "t": "Resource"
+      },
+      {
+        "id": 20005,
+        "n": "Poudre de pierre",
+        "c": 100,
+        "t": "Resource"
+      },
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 100,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 310021,
+    "n": "Masque de l’aube – Doré",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10021,
+    "d": 5,
+    "x": [
+      {
+        "id": 20029,
+        "n": "Support d’ajustement",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 20032,
+        "n": "Liquide de refroidissement",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 40000
+  },
+  {
+    "id": 310022,
+    "n": "Masque de l’aube – Gris plomb",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10022,
+    "d": 5,
+    "x": [
+      {
+        "id": 20014,
+        "n": "Plume de queue de Nivéole",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20019,
+        "n": "Réactif inflammable",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20020,
+        "n": "Enduit isolant",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 310023,
+    "n": "Masque de fertilité",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10023,
+    "d": 5,
+    "x": [
+      {
+        "id": 20029,
+        "n": "Support d’ajustement",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 310024,
+    "n": "Halo solaire",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10031,
+    "d": 5,
+    "x": [
+      {
+        "id": 4010009,
+        "n": "Unité d’alimentation portative",
+        "c": 40,
+        "t": "Resource"
+      },
+      {
+        "id": 4010006,
+        "n": "Rosée pourpre",
+        "c": 60,
+        "t": "Resource"
+      },
+      {
+        "id": 20011,
+        "n": "Grumeau de Souillé",
+        "c": 100,
+        "t": "Resource"
+      },
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 100,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 310025,
+    "n": "Ombrelle élégante",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10030,
+    "d": 5,
+    "s": 1,
+    "x": [
+      {
+        "id": 4010001,
+        "n": "Vertigalis",
+        "c": 15,
+        "t": "Resource"
+      },
+      {
+        "id": 4010003,
+        "n": "Source cristalline",
+        "c": 15,
+        "t": "Resource"
+      },
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20009,
+        "n": "Larme vermillon",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 310026,
+    "n": "Contes de Givrelac",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10029,
+    "d": 5,
+    "s": 1,
+    "x": [
+      {
+        "id": 4010008,
+        "n": "Lotus d’hiver",
+        "c": 30,
+        "t": "Resource"
+      },
+      {
+        "id": 4010010,
+        "n": "Fleur-des-Fissures",
+        "c": 30,
+        "t": "Resource"
+      },
+      {
+        "id": 20005,
+        "n": "Poudre de pierre",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 310027,
+    "n": "Instant de génie",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10028,
+    "d": 5,
+    "s": 1,
+    "x": [
+      {
+        "id": 4010011,
+        "n": "Sacraline",
+        "c": 30,
+        "t": "Resource"
+      },
+      {
+        "id": 4010001,
+        "n": "Vertigalis",
+        "c": 15,
+        "t": "Resource"
+      },
+      {
+        "id": 20011,
+        "n": "Grumeau de Souillé",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 310028,
+    "n": "Virtuose publicitaire - Émeraude",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10027,
+    "d": 5,
+    "s": 1,
+    "x": [
+      {
+        "id": 4010005,
+        "n": "Bidon de Phoxichor",
+        "c": 60,
+        "t": "Resource"
+      },
+      {
+        "id": 4010001,
+        "n": "Vertigalis",
+        "c": 20,
+        "t": "Resource"
+      },
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 100,
+        "t": "Resource"
+      },
+      {
+        "id": 20011,
+        "n": "Grumeau de Souillé",
+        "c": 100,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 310029,
+    "n": "Virtuose publicitaire - Indigo",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10026,
+    "d": 5,
+    "s": 1,
+    "x": [
+      {
+        "id": 4010009,
+        "n": "Unité d’alimentation portative",
+        "c": 40,
+        "t": "Resource"
+      },
+      {
+        "id": 4010010,
+        "n": "Fleur-des-Fissures",
+        "c": 40,
+        "t": "Resource"
+      },
+      {
+        "id": 20009,
+        "n": "Larme vermillon",
+        "c": 100,
+        "t": "Resource"
+      },
+      {
+        "id": 20005,
+        "n": "Poudre de pierre",
+        "c": 100,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 310030,
+    "n": "En attente éternelle",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10024,
+    "d": 5,
+    "s": 1,
+    "x": [
+      {
+        "id": 4010006,
+        "n": "Rosée pourpre",
+        "c": 60,
+        "t": "Resource"
+      },
+      {
+        "id": 4010012,
+        "n": "Œuf d’oiseau",
+        "c": 20,
+        "t": "Resource"
+      },
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 100,
+        "t": "Resource"
+      },
+      {
+        "id": 20009,
+        "n": "Larme vermillon",
+        "c": 100,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 310031,
+    "n": "Ornement porte-bonheur",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10052,
+    "d": 5,
+    "s": 1,
+    "x": [
+      {
+        "id": 4010016,
+        "n": "Relique brisée",
+        "c": 20,
+        "t": "Resource"
+      },
+      {
+        "id": 4010015,
+        "n": "Pierre rétive",
+        "c": 10,
+        "t": "Resource"
+      },
+      {
+        "id": 20009,
+        "n": "Larme vermillon",
+        "c": 100,
+        "t": "Resource"
+      },
+      {
+        "id": 20005,
+        "n": "Poudre de pierre",
+        "c": 100,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 310032,
+    "n": "Or, argent... et tigre ?",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10033,
+    "d": 5,
+    "s": 1,
+    "x": [
+      {
+        "id": 4010017,
+        "n": "Grillon du métier",
+        "c": 20,
+        "t": "Resource"
+      },
+      {
+        "id": 4010018,
+        "n": "Scinque de pierre",
+        "c": 10,
+        "t": "Resource"
+      },
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 100,
+        "t": "Resource"
+      },
+      {
+        "id": 20009,
+        "n": "Larme vermillon",
+        "c": 100,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 310033,
+    "n": "Étincelle des neiges",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 10034,
+    "d": 5,
+    "s": 1,
+    "x": [
+      {
+        "id": 4010019,
+        "n": "Grenouille guette-pluie",
+        "c": 25,
+        "t": "Resource"
+      },
+      {
+        "id": 4010014,
+        "n": "Lys céleste",
+        "c": 15,
+        "t": "Resource"
+      },
+      {
+        "id": 20011,
+        "n": "Grumeau de Souillé",
+        "c": 100,
+        "t": "Resource"
+      },
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 100,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 310201,
+    "n": "Insigne d’argent",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10201,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10200,
+        "n": "Insigne de fer",
+        "c": 3,
+        "t": "Resource"
+      }
+    ],
+    "m": 100
+  },
+  {
+    "id": 310202,
+    "n": "Insigne doré",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10202,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10201,
+        "n": "Insigne d’argent",
+        "c": 3,
+        "t": "Resource"
+      }
+    ],
+    "m": 200
+  },
+  {
+    "id": 310204,
+    "n": "Œil omniscient",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10204,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10203,
+        "n": "Voile du silence",
+        "c": 3,
+        "t": "Resource"
+      }
+    ],
+    "m": 100
+  },
+  {
+    "id": 310205,
+    "n": "Couronne de l’Illumination",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10205,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10204,
+        "n": "Œil omniscient",
+        "c": 3,
+        "t": "Resource"
+      }
+    ],
+    "m": 200
+  },
+  {
+    "id": 310207,
+    "n": "Herbe raffinée",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10207,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10206,
+        "n": "Feuille tendre de Biru",
+        "c": 3,
+        "t": "Resource"
+      }
+    ],
+    "m": 100
+  },
+  {
+    "id": 310208,
+    "n": "Potion complexe",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10208,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10207,
+        "n": "Herbe raffinée",
+        "c": 3,
+        "t": "Resource"
+      }
+    ],
+    "m": 200
+  },
+  {
+    "id": 310210,
+    "n": "Lunette lumineuse",
+    "r": 3,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10210,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10209,
+        "n": "Flèche lumineuse",
+        "c": 3,
+        "t": "Resource"
+      }
+    ],
+    "m": 100
+  },
+  {
+    "id": 310211,
+    "n": "Carquois lumineux",
+    "r": 4,
+    "v": "1.0",
+    "t": "Resource",
+    "c": 1,
+    "p": 10211,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 10210,
+        "n": "Lunette lumineuse",
+        "c": 3,
+        "t": "Resource"
+      }
+    ],
+    "m": 200
+  },
+  {
+    "id": 320001,
+    "n": "Lunettes de sage",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20001,
+    "d": 5,
+    "x": [
+      {
+        "id": 20020,
+        "n": "Enduit isolant",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20018,
+        "n": "Débris de statue",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20014,
+        "n": "Plume de queue de Nivéole",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 20000
+  },
+  {
+    "id": 320002,
+    "n": "Lunettes de sage – Rouille",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20002,
+    "d": 5,
+    "x": [
+      {
+        "id": 20020,
+        "n": "Enduit isolant",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20018,
+        "n": "Débris de statue",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20017,
+        "n": "Blindage de véhicule",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 320003,
+    "n": "Lunettes de sage – Gris plomb",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20003,
+    "d": 5,
+    "x": [
+      {
+        "id": 20014,
+        "n": "Plume de queue de Nivéole",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20018,
+        "n": "Débris de statue",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20017,
+        "n": "Blindage de véhicule",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 320004,
+    "n": "Lunettes de sage – Caramel",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20004,
+    "d": 5,
+    "x": [
+      {
+        "id": 20009,
+        "n": "Larme vermillon",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 320005,
+    "n": "Bandeau de l’ascète",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20005,
+    "d": 5,
+    "x": [
+      {
+        "id": 20009,
+        "n": "Larme vermillon",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20005,
+        "n": "Poudre de pierre",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 20000
+  },
+  {
+    "id": 320006,
+    "n": "Bandeau de l’ascète – Blanc ivoire",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20006,
+    "d": 5,
+    "x": [
+      {
+        "id": 20009,
+        "n": "Larme vermillon",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20011,
+        "n": "Grumeau de Souillé",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 320007,
+    "n": "Bandeau de l’ascète – Rouille",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20007,
+    "d": 5,
+    "x": [
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20005,
+        "n": "Poudre de pierre",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 320008,
+    "n": "Papillon arc-en-ciel",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20008,
+    "d": 5,
+    "x": [
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20011,
+        "n": "Grumeau de Souillé",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 20000
+  },
+  {
+    "id": 320009,
+    "n": "Papillon arc-en-ciel – Bleu céleste",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20009,
+    "d": 5,
+    "x": [
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20005,
+        "n": "Poudre de pierre",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20011,
+        "n": "Grumeau de Souillé",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 320010,
+    "n": "Papillon arc-en-ciel – Blanc sakura",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20010,
+    "d": 5,
+    "x": [
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20005,
+        "n": "Poudre de pierre",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20009,
+        "n": "Larme vermillon",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 320011,
+    "n": "Papillon arc-en-ciel – Gris plomb",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20011,
+    "d": 5,
+    "x": [
+      {
+        "id": 20014,
+        "n": "Plume de queue de Nivéole",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20019,
+        "n": "Réactif inflammable",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20017,
+        "n": "Blindage de véhicule",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 320012,
+    "n": "Papillon des brumes",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20012,
+    "d": 5,
+    "x": [
+      {
+        "id": 20014,
+        "n": "Plume de queue de Nivéole",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20019,
+        "n": "Réactif inflammable",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20020,
+        "n": "Enduit isolant",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 20000
+  },
+  {
+    "id": 320013,
+    "n": "Papillon des brumes – Menthe",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20013,
+    "d": 5,
+    "x": [
+      {
+        "id": 20014,
+        "n": "Plume de queue de Nivéole",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20019,
+        "n": "Réactif inflammable",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20018,
+        "n": "Débris de statue",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 320014,
+    "n": "Papillon des brumes – Rouille",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20014,
+    "d": 5,
+    "x": [
+      {
+        "id": 20020,
+        "n": "Enduit isolant",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20018,
+        "n": "Débris de statue",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20014,
+        "n": "Plume de queue de Nivéole",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 320015,
+    "n": "Papillon des brumes – Gris plomb",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20015,
+    "d": 5,
+    "x": [
+      {
+        "id": 20020,
+        "n": "Enduit isolant",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20018,
+        "n": "Débris de statue",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20017,
+        "n": "Blindage de véhicule",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 320016,
+    "n": "Bandage d’urgence",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20016,
+    "d": 5,
+    "x": [
+      {
+        "id": 20014,
+        "n": "Plume de queue de Nivéole",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20018,
+        "n": "Débris de statue",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20017,
+        "n": "Blindage de véhicule",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 20000
+  },
+  {
+    "id": 320017,
+    "n": "Bandage d’urgence – Jade noir",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20017,
+    "d": 5,
+    "x": [
+      {
+        "id": 20009,
+        "n": "Larme vermillon",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 320018,
+    "n": "Bandage d’urgence – Blanc sakura",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20018,
+    "d": 5,
+    "x": [
+      {
+        "id": 20009,
+        "n": "Larme vermillon",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20005,
+        "n": "Poudre de pierre",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 320019,
+    "n": "Bandage d’urgence – Bleu céleste",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20019,
+    "d": 5,
+    "x": [
+      {
+        "id": 20009,
+        "n": "Larme vermillon",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20011,
+        "n": "Grumeau de Souillé",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 320020,
+    "n": "Système de survie",
+    "r": 3,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20020,
+    "d": 5,
+    "s": 1,
+    "x": [
+      {
+        "id": 4010008,
+        "n": "Lotus d’hiver",
+        "c": 20,
+        "t": "Resource"
+      },
+      {
+        "id": 4010010,
+        "n": "Fleur-des-Fissures",
+        "c": 20,
+        "t": "Resource"
+      },
+      {
+        "id": 20011,
+        "n": "Grumeau de Souillé",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 20000
+  },
+  {
+    "id": 320021,
+    "n": "Plume des cieux",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20021,
+    "d": 5,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 320022,
+    "n": "Fleur magique inversée - Rouille",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20022,
+    "d": 5,
+    "x": [
+      {
+        "id": 20029,
+        "n": "Support d’ajustement",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 20032,
+        "n": "Liquide de refroidissement",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 40000
+  },
+  {
+    "id": 320023,
+    "n": "Fleur magique droite - Ivoire",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20023,
+    "d": 5,
+    "x": [
+      {
+        "id": 20029,
+        "n": "Support d’ajustement",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 20032,
+        "n": "Liquide de refroidissement",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 40000
+  },
+  {
+    "id": 320024,
+    "n": "Moustache de Luno, la forgeronne",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20024,
+    "d": 5,
+    "x": [
+      {
+        "id": 20014,
+        "n": "Plume de queue de Nivéole",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20019,
+        "n": "Réactif inflammable",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20017,
+        "n": "Blindage de véhicule",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 320025,
+    "n": "Valve de perception",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20025,
+    "d": 5,
+    "s": 1,
+    "x": [
+      {
+        "id": 4010003,
+        "n": "Source cristalline",
+        "c": 15,
+        "t": "Resource"
+      },
+      {
+        "id": 4010002,
+        "n": "Indigalis",
+        "c": 30,
+        "t": "Resource"
+      },
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20011,
+        "n": "Grumeau de Souillé",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 320026,
+    "n": "Œil de bouton",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20029,
+    "d": 5,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 320027,
+    "n": "Baiser de Filbert",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20034,
+    "d": 5,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 320028,
+    "n": "Masque d’Oni déchu",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20033,
+    "d": 5,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 320029,
+    "n": "Hier s’est éteint",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20026,
+    "d": 5,
+    "x": [
+      {
+        "id": 4010009,
+        "n": "Unité d’alimentation portative",
+        "c": 40,
+        "t": "Resource"
+      },
+      {
+        "id": 4010006,
+        "n": "Rosée pourpre",
+        "c": 60,
+        "t": "Resource"
+      },
+      {
+        "id": 20011,
+        "n": "Grumeau de Souillé",
+        "c": 100,
+        "t": "Resource"
+      },
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 100,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 320030,
+    "n": "Bandeau de l’ascète – Caramel",
+    "r": 3,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 20030,
+    "d": 5,
+    "s": 1,
+    "x": [
+      {
+        "id": 4010012,
+        "n": "Œuf d’oiseau",
+        "c": 10,
+        "t": "Resource"
+      },
+      {
+        "id": 4010004,
+        "n": "Bonnet de neige",
+        "c": 20,
+        "t": "Resource"
+      },
+      {
+        "id": 20005,
+        "n": "Poudre de pierre",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 20000
+  },
+  {
+    "id": 330001,
+    "n": "Lanterne",
+    "r": 3,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 30001,
+    "d": 5,
+    "s": 1,
+    "x": [
+      {
+        "id": 4020003,
+        "n": "Argentite",
+        "c": 30,
+        "t": "Resource"
+      },
+      {
+        "id": 4010005,
+        "n": "Bidon de Phoxichor",
+        "c": 30,
+        "t": "Resource"
+      },
+      {
+        "id": 20009,
+        "n": "Larme vermillon",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20005,
+        "n": "Poudre de pierre",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 20000
+  },
+  {
+    "id": 330002,
+    "n": "Gourde des nuages errants",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 30002,
+    "d": 5,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 330003,
+    "n": "Flacon de Phoxichor",
+    "r": 3,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 30004,
+    "d": 5,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 330004,
+    "n": "Lampe de mineur",
+    "r": 3,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 30005,
+    "d": 5,
+    "s": 1,
+    "x": [
+      {
+        "id": 4010002,
+        "n": "Indigalis",
+        "c": 20,
+        "t": "Resource"
+      },
+      {
+        "id": 4020003,
+        "n": "Argentite",
+        "c": 30,
+        "t": "Resource"
+      },
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20011,
+        "n": "Grumeau de Souillé",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 20000
+  },
+  {
+    "id": 330005,
+    "n": "Lanterne suspendue",
+    "r": 3,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 30006,
+    "d": 5,
+    "s": 1,
+    "x": [
+      {
+        "id": 4010007,
+        "n": "Coquillage",
+        "c": 10,
+        "t": "Resource"
+      },
+      {
+        "id": 4010005,
+        "n": "Bidon de Phoxichor",
+        "c": 30,
+        "t": "Resource"
+      },
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 50,
+        "t": "Resource"
+      },
+      {
+        "id": 20009,
+        "n": "Larme vermillon",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 20000
+  },
+  {
+    "id": 330006,
+    "n": "Dé du destin",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 30009,
+    "d": 5,
+    "s": 1,
+    "x": [
+      {
+        "id": 4010009,
+        "n": "Unité d’alimentation portative",
+        "c": 40,
+        "t": "Resource"
+      },
+      {
+        "id": 4010006,
+        "n": "Rosée pourpre",
+        "c": 60,
+        "t": "Resource"
+      },
+      {
+        "id": 20011,
+        "n": "Grumeau de Souillé",
+        "c": 100,
+        "t": "Resource"
+      },
+      {
+        "id": 20012,
+        "n": "Chaîne",
+        "c": 100,
+        "t": "Resource"
+      }
+    ],
+    "m": 20000
+  },
+  {
+    "id": 330007,
+    "n": "Or, argent... et tigre ?",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 30021,
+    "d": 5,
+    "s": 1,
+    "x": [
+      {
+        "id": 4010017,
+        "n": "Grillon du métier",
+        "c": 20,
+        "t": "Resource"
+      },
+      {
+        "id": 4010018,
+        "n": "Scinque de pierre",
+        "c": 10,
+        "t": "Resource"
+      },
+      {
+        "id": 20005,
+        "n": "Poudre de pierre",
+        "c": 100,
+        "t": "Resource"
+      },
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 100,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 340001,
+    "n": "Joyau caudal de Phoxène",
+    "r": 5,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 40001,
+    "d": 5,
+    "x": [
+      {
+        "id": 20020,
+        "n": "Enduit isolant",
+        "c": 5,
+        "t": "Resource"
+      },
+      {
+        "id": 20018,
+        "n": "Débris de statue",
+        "c": 5,
+        "t": "Resource"
+      },
+      {
+        "id": 20017,
+        "n": "Blindage de véhicule",
+        "c": 5,
+        "t": "Resource"
+      }
+    ],
+    "m": 10000
+  },
+  {
+    "id": 340002,
+    "n": "Serment de Cambay",
+    "r": 5,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 40002,
+    "d": 5,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 340003,
+    "n": "Roue de véhicule",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 40003,
+    "d": 5,
+    "s": 1,
+    "x": [
+      {
+        "id": 4020003,
+        "n": "Argentite",
+        "c": 45,
+        "t": "Resource"
+      },
+      {
+        "id": 4010007,
+        "n": "Coquillage",
+        "c": 15,
+        "t": "Resource"
+      },
+      {
+        "id": 20009,
+        "n": "Larme vermillon",
+        "c": 75,
+        "t": "Resource"
+      },
+      {
+        "id": 20005,
+        "n": "Poudre de pierre",
+        "c": 75,
+        "t": "Resource"
+      }
+    ],
+    "m": 30000
+  },
+  {
+    "id": 340004,
+    "n": "Ornement dorsal porte-bonheur",
+    "r": 4,
+    "v": "1.0",
+    "t": "CharAccessory",
+    "c": 1,
+    "p": 40008,
+    "d": 5,
+    "s": 1,
+    "x": [
+      {
+        "id": 4010016,
+        "n": "Relique brisée",
+        "c": 20,
+        "t": "Resource"
+      },
+      {
+        "id": 4010015,
+        "n": "Pierre rétive",
+        "c": 10,
+        "t": "Resource"
+      },
+      {
+        "id": 20002,
+        "n": "Sel volatil endommagé",
+        "c": 100,
+        "t": "Resource"
+      },
+      {
+        "id": 20011,
+        "n": "Grumeau de Souillé",
+        "c": 100,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 910101,
+    "n": "Trancheur d’ambre",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10101,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12068,
+        "n": "Trancheur d’ambre : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12069,
+        "n": "Trancheur d’ambre : Lame",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910102,
+    "n": "Entraves du solitaire",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10102,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12040,
+        "n": "Entraves du solitaire : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12041,
+        "n": "Entraves du solitaire : Lame",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910103,
+    "n": "Écho du passé",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10103,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12070,
+        "n": "Écho du passé : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12071,
+        "n": "Écho du passé : Lame",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910104,
+    "n": "Stratagème habile",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10104,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12001,
+        "n": "Stratagème habile : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12002,
+        "n": "Stratagème habile : Lame",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910105,
+    "n": "Rose vagabonde",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10105,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12085,
+        "n": "Rose vagabonde : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12086,
+        "n": "Rose vagabonde : Lame",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910201,
+    "n": "Baiser de la sirène",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10201,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12022,
+        "n": "Baiser de la sirène : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12023,
+        "n": "Baiser de la sirène : Lame",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910202,
+    "n": "Hallebarde de jade printanier",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10202,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12072,
+        "n": "Hallebarde de jade printanier : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12073,
+        "n": "Hallebarde de jade printanier : Lame",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910203,
+    "n": "Péché impardonnable",
+    "r": 5,
+    "v": "1.2",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10203,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12024,
+        "n": "Péché impardonnable : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12025,
+        "n": "Péché impardonnable : Lame",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910204,
+    "n": "Moisson de l’espoir",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10204,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12053,
+        "n": "Moisson de l’espoir : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12054,
+        "n": "Moisson de l’espoir : Lame",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910206,
+    "n": "Sépulture errante",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10206,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12110,
+        "n": "Sépulture errante : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12111,
+        "n": "Sépulture errante : Lame",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910208,
+    "n": "Messagère de l’avenir",
+    "r": 5,
+    "v": "1.1",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10208,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12133,
+        "n": "Messagère de l’avenir : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12134,
+        "n": "Messagère de l’avenir : Lame",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910301,
+    "n": "Fureur incandescente",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10301,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12042,
+        "n": "Fureur incandescente : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12043,
+        "n": "Fureur incandescente : Lame",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910302,
+    "n": "Brise-fer",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10302,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12074,
+        "n": "Brise-fer : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12075,
+        "n": "Brise-fer : Lame",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910303,
+    "n": "Désir incandescent",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10303,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12112,
+        "n": "Désir incandescent : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12113,
+        "n": "Désir incandescent : Lame",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910304,
+    "n": "Adieu éternel",
+    "r": 5,
+    "v": "1.2",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10304,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12055,
+        "n": "Adieu éternel : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12056,
+        "n": "Adieu éternel : Lame",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910401,
+    "n": "Crocs de l’exilé",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10401,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12044,
+        "n": "Crocs de l’exilé : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12045,
+        "n": "Crocs de l’exilé : Lame gauche",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12046,
+        "n": "Crocs de l’exilé : Lame droite",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910402,
+    "n": "Mémoire dorée",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10402,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12082,
+        "n": "Mémoire dorée : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12083,
+        "n": "Mémoire dorée : Lame gauche",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12084,
+        "n": "Mémoire dorée : Lame droite",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910403,
+    "n": "Regard du requin abyssal",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10403,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12087,
+        "n": "Regard du requin abyssal : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12088,
+        "n": "Regard du requin abyssal : Lame gauche",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12089,
+        "n": "Regard du requin abyssal : Lame droite",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910404,
+    "n": "Sentence des vents",
+    "r": 5,
+    "v": "1.2",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10404,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12138,
+        "n": "Sentence des vents : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12139,
+        "n": "Sentence des vents : Lame gauche",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12140,
+        "n": "Sentence des vents : Lame droite",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910501,
+    "n": "Oneiros éternel",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10501,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12026,
+        "n": "Oneiros éternel : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12027,
+        "n": "Oneiros éternel : Lame",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910502,
+    "n": "Grâce d’Halcyon",
+    "r": 5,
+    "v": "1.1",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10502,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12057,
+        "n": "Grâce d’Halcyon : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12058,
+        "n": "Grâce d’Halcyon : Lame",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910503,
+    "n": "Étreinte brisée",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10503,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12114,
+        "n": "Étreinte brisée : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12115,
+        "n": "Étreinte brisée : Lame",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910504,
+    "n": "Vagues sinueuses",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10504,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12090,
+        "n": "Vagues sinueuses : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12091,
+        "n": "Vagues sinueuses : Lame",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910601,
+    "n": "Momiji Itteki",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10601,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12003,
+        "n": "Momiji Itteki : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12004,
+        "n": "Momiji Itteki : Lame",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12005,
+        "n": "Momiji Itteki : Ornement",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910602,
+    "n": "Ombre fanée",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10602,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12116,
+        "n": "Ombre fanée : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12117,
+        "n": "Ombre fanée : Lame",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12118,
+        "n": "Ombre fanée : Ornement",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910603,
+    "n": "Grâce sacrée",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10603,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12092,
+        "n": "Grâce sacrée : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12093,
+        "n": "Grâce sacrée : Lame",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12094,
+        "n": "Grâce sacrée : Ornement",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920101,
+    "n": "Singularité entropique",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20101,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12028,
+        "n": "Singularité entropique : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12029,
+        "n": "Singularité entropique : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12030,
+        "n": "Singularité entropique : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920102,
+    "n": "Dépouilleur",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20102,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12119,
+        "n": "Dépouilleur : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12120,
+        "n": "Dépouilleur : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12121,
+        "n": "Dépouilleur : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920103,
+    "n": "Hiérophanie",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20103,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12095,
+        "n": "Hiérophanie : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12096,
+        "n": "Hiérophanie : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12097,
+        "n": "Hiérophanie : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920201,
+    "n": "Duo infâme",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20201,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12122,
+        "n": "Duo infâme : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12123,
+        "n": "Duo infâme : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920203,
+    "n": "Pulsation azurée",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20203,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12031,
+        "n": "Pulsation azurée : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12032,
+        "n": "Pulsation azurée : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920205,
+    "n": "Pneuma",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20205,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12098,
+        "n": "Pneuma : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12099,
+        "n": "Pneuma : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920301,
+    "n": "Jugement stellaire",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20301,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12006,
+        "n": "Jugement stellaire : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12007,
+        "n": "Jugement stellaire : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12008,
+        "n": "Jugement stellaire : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920302,
+    "n": "Banquet incandescent",
+    "r": 5,
+    "v": "1.4",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20302,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12059,
+        "n": "Banquet incandescent : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12060,
+        "n": "Banquet incandescent : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12061,
+        "n": "Banquet incandescent : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920303,
+    "n": "Désintégrateur",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20303,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12124,
+        "n": "Désintégrateur : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12125,
+        "n": "Désintégrateur : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12126,
+        "n": "Désintégrateur : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920304,
+    "n": "Résonance de Guixu",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20304,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12047,
+        "n": "Résonance de Guixu : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12048,
+        "n": "Résonance de Guixu : Armature",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920305,
+    "n": "Édit argenté",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20305,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12076,
+        "n": "Édit argenté : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12077,
+        "n": "Édit argenté : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12078,
+        "n": "Édit argenté : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920401,
+    "n": "Hurlement balistique",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20401,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12127,
+        "n": "Hurlement balistique : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12128,
+        "n": "Hurlement balistique : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12129,
+        "n": "Hurlement balistique : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920402,
+    "n": "Semeur silencieux",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20402,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12009,
+        "n": "Semeur silencieux : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12010,
+        "n": "Semeur silencieux : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12011,
+        "n": "Semeur silencieux : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920403,
+    "n": "Aube du verdict",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20403,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12100,
+        "n": "Aube du verdict : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12101,
+        "n": "Aube du verdict : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12102,
+        "n": "Aube du verdict : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920405,
+    "n": "Art de la détonation",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20405,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12033,
+        "n": "Art de la détonation : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12034,
+        "n": "Art de la détonation : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12035,
+        "n": "Art de la détonation : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920501,
+    "n": "Disloqueur",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20501,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12130,
+        "n": "Disloqueur : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12131,
+        "n": "Disloqueur : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12132,
+        "n": "Disloqueur : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920502,
+    "n": "Colère proscrite",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20502,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12012,
+        "n": "Colère proscrite : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12013,
+        "n": "Colère proscrite : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12014,
+        "n": "Colère proscrite : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920503,
+    "n": "Brasier salvateur",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20503,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12079,
+        "n": "Brasier salvateur : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12080,
+        "n": "Brasier salvateur : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12081,
+        "n": "Brasier salvateur : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920504,
+    "n": "Hymne de l’aube",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20504,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12015,
+        "n": "Hymne de l’aube : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12016,
+        "n": "Hymne de l’aube : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12017,
+        "n": "Hymne de l’aube : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920505,
+    "n": "Muse trigonale",
+    "r": 5,
+    "v": "1.2",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20505,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12141,
+        "n": "Muse trigonale : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12142,
+        "n": "Muse trigonale : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12143,
+        "n": "Muse trigonale : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920506,
+    "n": "Voile nuageux",
+    "r": 5,
+    "v": "1.1",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20506,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12135,
+        "n": "Voile nuageux : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12136,
+        "n": "Voile nuageux : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12137,
+        "n": "Voile nuageux : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920507,
+    "n": "Ode des profondeurs",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20507,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12050,
+        "n": "Ode des profondeurs : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12051,
+        "n": "Ode des profondeurs : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12052,
+        "n": "Ode des profondeurs : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920509,
+    "n": "Plume du tisseur de rêves",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20509,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12065,
+        "n": "Plume du tisseur de rêves : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12066,
+        "n": "Plume du tisseur de rêves : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12067,
+        "n": "Plume du tisseur de rêves : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920510,
+    "n": "Lumière éphémère",
+    "r": 5,
+    "v": "1.1",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20510,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12062,
+        "n": "Lumière éphémère : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12063,
+        "n": "Lumière éphémère : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12064,
+        "n": "Lumière éphémère : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920601,
+    "n": "Soupir du désert",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20601,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12106,
+        "n": "Soupir du désert : Corde d’arc",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12107,
+        "n": "Soupir du désert : Bras d’arc supérieur",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12108,
+        "n": "Soupir du désert : Bras d’arc inférieur",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920602,
+    "n": "Lumière de l’Apocalypse",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20602,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12036,
+        "n": "Lumière de l’Apocalypse : Corde d’arc",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12037,
+        "n": "Lumière de l’Apocalypse : Bras d’arc supérieur",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12038,
+        "n": "Lumière de l’Apocalypse : Bras d’arc inférieur",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920603,
+    "n": "Inflorescence d’Embla",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20603,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12018,
+        "n": "Inflorescence d’Embla : Corde d’arc",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12019,
+        "n": "Inflorescence d’Embla : Bras d’arc supérieur",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12020,
+        "n": "Inflorescence d’Embla : Bras d’arc inférieur",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920604,
+    "n": "Déchire-âme",
+    "r": 5,
+    "v": "1.0",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20604,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12103,
+        "n": "Déchire-âme : Corde d’arc",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12104,
+        "n": "Déchire-âme : Bras d’arc supérieur",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12105,
+        "n": "Déchire-âme : Bras d’arc inférieur",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 1202003,
+    "n": "Percée dominante",
+    "r": 5,
+    "v": "1.2",
+    "t": "Mod",
+    "c": 1,
+    "p": 202003,
+    "d": 120,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 102003,
+        "n": "Percée dominante",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 42312,
+        "n": "Ferveur",
+        "c": 10,
+        "t": "Mod"
+      }
+    ],
+    "m": 200000
+  },
+  {
+    "id": 1203001,
+    "n": "Âme tranchante",
+    "r": 5,
+    "v": "1.2",
+    "t": "Mod",
+    "c": 1,
+    "p": 203001,
+    "d": 120,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 103001,
+        "n": "Âme tranchante",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 42311,
+        "n": "Brutalité",
+        "c": 10,
+        "t": "Mod"
+      }
+    ],
+    "m": 200000
+  },
+  {
+    "id": 1204001,
+    "n": "Floraison incisive",
+    "r": 5,
+    "v": "1.2",
+    "t": "Mod",
+    "c": 1,
+    "p": 204001,
+    "d": 120,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 104001,
+        "n": "Floraison incisive",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 42421,
+        "n": "Rémanence",
+        "c": 10,
+        "t": "Mod"
+      }
+    ],
+    "m": 200000
+  }
+]

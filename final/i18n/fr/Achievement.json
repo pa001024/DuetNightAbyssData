@@ -1,0 +1,6531 @@
+[
+  {
+    "id": 20101,
+    "名称": "Spirale du destin I",
+    "分类": "Entre deux rives",
+    "品质": 3,
+    "描述": "Se connecter pendant 1 jours",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 20102,
+    "名称": "Spirale du destin II",
+    "分类": "Entre deux rives",
+    "品质": 3,
+    "描述": "Se connecter pendant 7 jours",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 20103,
+    "名称": "Spirale du destin III",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "Se connecter pendant 30 jours",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 20104,
+    "名称": "Spirale du destin IV",
+    "分类": "Entre deux rives",
+    "品质": 1,
+    "描述": "Se connecter pendant 100 jours",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 20105,
+    "名称": "Spirale du destin V",
+    "分类": "Entre deux rives",
+    "品质": 1,
+    "描述": "Se connecter pendant 365 jours",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Assidu": 1
+    }
+  },
+  {
+    "id": 100101,
+    "名称": "La Faucheuse attendra I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Restaurer 5000 PV",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 100102,
+    "名称": "La Faucheuse attendra II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Restaurer 15000 PV",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 100103,
+    "名称": "La Faucheuse attendra III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Restaurer 30000 PV",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Miséricordieux": 1
+    }
+  },
+  {
+    "id": 101001,
+    "名称": "Béni par lumière divine I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Infliger 300000 Dégâts Lumino",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 101002,
+    "名称": "Béni par lumière divine II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Infliger 1500000 Dégâts Lumino",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 101003,
+    "名称": "Béni par lumière divine III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Infliger 6000000 Dégâts Lumino",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 101101,
+    "名称": "Quand la nuit tombe I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Infliger 300000 Dégâts Umbro",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 101102,
+    "名称": "Quand la nuit tombe II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Infliger 1500000 Dégâts Umbro",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 101103,
+    "名称": "Quand la nuit tombe III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Infliger 6000000 Dégâts Umbro",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 101201,
+    "名称": "Le chagrin de l’eau I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Infliger 300000 Dégâts Hydro",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 101202,
+    "名称": "Le chagrin de l’eau II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Infliger 1500000 Dégâts Hydro",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 101203,
+    "名称": "Le chagrin de l’eau III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Infliger 6000000 Dégâts Hydro",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 101301,
+    "名称": "L’allégresse du feu I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Infliger 300000 Dégâts Pyro",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 101302,
+    "名称": "L’allégresse du feu II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Infliger 1500000 Dégâts Pyro",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 101303,
+    "名称": "L’allégresse du feu III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Infliger 6000000 Dégâts Pyro",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 101401,
+    "名称": "Ne reste pas sous l’arbre I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Infliger 300000 Dégâts Électro",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 101402,
+    "名称": "Ne reste pas sous l’arbre II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Infliger 1500000 Dégâts Électro",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 101403,
+    "名称": "Ne reste pas sous l’arbre III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Infliger 6000000 Dégâts Électro",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 101501,
+    "名称": "Quel boucan ! I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Infliger 300000 Dégâts Anémo",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 101502,
+    "名称": "Quel boucan ! II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Infliger 1500000 Dégâts Anémo",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 101503,
+    "名称": "Quel boucan ! III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Infliger 6000000 Dégâts Anémo",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 101601,
+    "名称": "Déchirure des dimensions I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Infliger 150000 Dégâts tranchants",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 101602,
+    "名称": "Déchirure des dimensions II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Infliger 600000 Dégâts tranchants",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 101603,
+    "名称": "Déchirure des dimensions III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Infliger 3000000 Dégâts tranchants",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 101701,
+    "名称": "Combattant de la dernière flemme I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Infliger 150000 Dégâts perforants",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 101702,
+    "名称": "Combattant de la dernière flemme II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Infliger 600000 Dégâts perforants",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 101703,
+    "名称": "Combattant de la dernière flemme III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Infliger 3000000 Dégâts perforants",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 101801,
+    "名称": "Casque obligatoire I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Infliger 150000 Dégâts contondants",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 101802,
+    "名称": "Casque obligatoire II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Infliger 600000 Dégâts contondants",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 101803,
+    "名称": "Casque obligatoire III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Infliger 3000000 Dégâts contondants",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 102101,
+    "名称": "Miracle médical I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Restaurer 20 PV en une seule action",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 102102,
+    "名称": "Miracle médical II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Restaurer 50 PV en une seule action",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 102103,
+    "名称": "Miracle médical III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Restaurer 100 PV en une seule action",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 102201,
+    "名称": "Une simple frappe I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Infliger 2000 dégâts en une seule action avec une arme",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 102202,
+    "名称": "Une simple frappe II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Infliger 5000 dégâts en une seule action avec une arme",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 102203,
+    "名称": "Une simple frappe III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Infliger 10000 dégâts en une seule action avec une arme",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 102301,
+    "名称": "Un simple coup de pied I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Infliger 1500 dégâts en une seule action avec une compétence",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 102302,
+    "名称": "Un simple coup de pied II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Infliger 3000 dégâts en une seule action avec une compétence",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 102303,
+    "名称": "Un simple coup de pied III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Infliger 6000 dégâts en une seule action avec une compétence",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 200101,
+    "名称": "Préservation de l’environnement I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Vaincre 500 Souillés",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 200102,
+    "名称": "Préservation de l’environnement II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Vaincre 1500 Souillés",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 200103,
+    "名称": "Préservation de l’environnement III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Vaincre 3000 Souillés",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 200201,
+    "名称": "Némésis d’Hyperborea I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Vaincre 500 ennemis de la Légion Hyperboréenne",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 200202,
+    "名称": "Némésis d’Hyperborea II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Vaincre 1500 ennemis de la Légion Hyperboréenne",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 200203,
+    "名称": "Némésis d’Hyperborea III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Vaincre 3000 ennemis de la Légion Hyperboréenne",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 200301,
+    "名称": "Némésis d’Élysium I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Vaincre 500 ennemis de l’Église Élyséenne",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 200302,
+    "名称": "Némésis d’Élysium II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Vaincre 1500 ennemis de l’Église Élyséenne",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 200303,
+    "名称": "Némésis d’Élysium III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Vaincre 3000 ennemis de l’Église Élyséenne",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 200401,
+    "名称": "Digne adversaire I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Vaincre 5 Ordonnateurs",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 200402,
+    "名称": "Digne adversaire II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Vaincre 15 Ordonnateurs",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 200403,
+    "名称": "Digne adversaire III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Vaincre 30 Ordonnateurs",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 200501,
+    "名称": "Némésis des Déchus I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Vaincre 500 ennemis des Déchus",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 200502,
+    "名称": "Némésis des Déchus II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Vaincre 1500 ennemis des Déchus",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 200503,
+    "名称": "Némésis des Déchus III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Vaincre 3000 ennemis des Déchus",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 200601,
+    "名称": "Un adversaire parmi d’autres I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Vaincre au total 5 Ordonnateurs possédant deux aptitudes",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 200602,
+    "名称": "Un adversaire parmi d’autres II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Vaincre au total 15 Ordonnateurs possédant deux aptitudes",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 200603,
+    "名称": "Un adversaire parmi d’autres III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Vaincre au total 30 Ordonnateurs possédant deux aptitudes",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 200701,
+    "名称": "Un défi honorable I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Vaincre au total 5 Ordonnateurs possédant trois aptitudes",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 200702,
+    "名称": "Un défi honorable II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Vaincre au total 15 Ordonnateurs possédant trois aptitudes",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 200703,
+    "名称": "Un défi honorable III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Vaincre au total 30 Ordonnateurs possédant trois aptitudes",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Maître": 1
+    }
+  },
+  {
+    "id": 200801,
+    "名称": "Un monde sans voleurs I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Vaincre au total 5 fois Lulu, pilleuse de loot",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 200802,
+    "名称": "Un monde sans voleurs II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Vaincre au total 15 fois Lulu, pilleuse de loot",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 200803,
+    "名称": "Un monde sans voleurs III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Vaincre au total 30 fois Lulu, pilleuse de loot",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Hésitant": 1,
+      "Title: Bourreau": 1
+    }
+  },
+  {
+    "id": 200901,
+    "名称": "Némésis de Huaxu I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Vaincre un total de 500 ennemis à Huaxu",
+    "版本": "1.2",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 200902,
+    "名称": "Némésis de Huaxu II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Vaincre un total de 1500 ennemis à Huaxu",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 200903,
+    "名称": "Némésis de Huaxu III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Vaincre un total de 3000 ennemis à Huaxu",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201001,
+    "名称": "Préservation de l’environnement de Huaxu I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Vaincre un total de 500 Souillés affectés par l’Encens",
+    "版本": "1.2",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 201002,
+    "名称": "Préservation de l’environnement de Huaxu II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Vaincre un total de 1500 Souillés affectés par l’Encens",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 201003,
+    "名称": "Préservation de l’environnement de Huaxu III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Vaincre un total de 3000 Souillés affectés par l’Encens",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201101,
+    "名称": "C’est le moment I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Achever un ennemi avec une arme de mêlée à 500 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 201102,
+    "名称": "C’est le moment II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Achever un ennemi avec une arme de mêlée à 1500 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 201103,
+    "名称": "C’est le moment III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Achever un ennemi avec une arme de mêlée à 3000 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201201,
+    "名称": "La fortune sourit aux audacieux I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Achever un ennemi avec une arme à distance à 500 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 201202,
+    "名称": "La fortune sourit aux audacieux II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Achever un ennemi avec une arme à distance à 1500 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 201203,
+    "名称": "La fortune sourit aux audacieux III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Achever un ennemi avec une arme à distance à 3000 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201301,
+    "名称": "Attention à la tête I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Achever un ennemi avec une Attaque plongeante à 50 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 201302,
+    "名称": "Attention à la tête II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Achever un ennemi avec une Attaque plongeante à 150 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 201303,
+    "名称": "Attention à la tête III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Achever un ennemi avec une Attaque plongeante à 300 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201401,
+    "名称": "Patience offensive I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Achever un ennemi avec une Attaque chargée à 50 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 201402,
+    "名称": "Patience offensive II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Achever un ennemi avec une Attaque chargée à 150 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 201403,
+    "名称": "Patience offensive III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Achever un ennemi avec une Attaque chargée à 300 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201501,
+    "名称": "Glissade ménagère I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Achever un ennemi avec une Attaque en glissade à 50 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 201502,
+    "名称": "Glissade ménagère II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Achever un ennemi avec une Attaque en glissade à 150 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 201503,
+    "名称": "Glissade ménagère III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Achever un ennemi avec une Attaque en glissade à 300 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201601,
+    "名称": "Tsssss... Boum ! I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Achever un ennemi avec une Attaque de rayon à 50 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 201602,
+    "名称": "Tsssss... Boum ! II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Achever un ennemi avec une Attaque de rayon à 150 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 201603,
+    "名称": "Tsssss... Boum ! III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Achever un ennemi avec une Attaque de rayon à 300 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201701,
+    "名称": "Feux d’artifice naissants I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Achever un ennemi avec un projectile explosif à 50 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 201702,
+    "名称": "Feux d’artifice naissants II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Achever un ennemi avec un projectile explosif à 150 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 201703,
+    "名称": "Feux d’artifice naissants III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Achever un ennemi avec un projectile explosif à 300 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201801,
+    "名称": "Victoire implacable : Morsure de givre",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Vaincre un Ordonnateur – Morsure de givre en mission solo avant qu’il ne lance ses pics de glace",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201802,
+    "名称": "Victoire implacable : Déflagration",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Vaincre un Ordonnateur – Déflagration en mission solo sans subir de dégâts d’explosion",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201803,
+    "名称": "Victoire implacable : Éclair foudroyant",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Détruire un total de 60 [Orbes électriques] invoquées par un Ordonnateur – Éclair foudroyant en mission solo",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201804,
+    "名称": "Victoire implacable : Pourriture cramoisie",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Vaincre un Ordonnateur – Pourriture cramoisie en mission solo sans subir de dégâts de son [Marais putride]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201805,
+    "名称": "Victoire implacable : Flétrissure",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Vaincre un Ordonnateur – Flétrissure en mission solo sans subir de dégâts de son [Rayon flétrissant]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201806,
+    "名称": "Victoire implacable : Gardien",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Vaincre un Ordonnateur – Gardien en mission solo sans qu’aucun projectile ne soit bloqué par sa [Barrière protectrice]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201807,
+    "名称": "Victoire implacable : Représailles",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Vaincre un Ordonnateur – Représailles en mission solo alors que moins de 5 de ses alliés sont sous l’effet [Renforcé]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201808,
+    "名称": "Victoire implacable : Geôle de givre",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Vaincre un Ordonnateur – Geôle de givre en mission solo sans subir de dégâts de sa [Geôle de givre]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201809,
+    "名称": "Victoire implacable : Sacrifice",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Vaincre un Ordonnateur – Sacrifice en mission solo sans subir les dégâts de son explosion à la mort",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201810,
+    "名称": "Victoire implacable : Corrosion",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Vaincre un Ordonnateur – Corrosion en mission solo sans subir de dégâts de son [Venin]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201811,
+    "名称": "Victoire implacable : Tempête électrique",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Vaincre un Ordonnateur – Tempête électrique en mission solo sans subir de dégâts de son [Cataclysme foudroyant]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201812,
+    "名称": "Victoire implacable : Bain de sang",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Vaincre un Ordonnateur – Bain de sang en mission solo sans subir de dégâts de sa part",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201813,
+    "名称": "Victoire implacable : Feu résiduel",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Vaincre un Ordonnateur – Feu résiduel en mission solo sans subir les dégâts de l’explosion de fin de [Feu résiduel]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201814,
+    "名称": "Victoire implacable : Spectre",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Vaincre un Ordonnateur – Spectre en mission solo sans qu’aucune [Illusion] qu’il a invoquée ne reste sur le terrain",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201901,
+    "名称": "Victoire implacable : Camouflage",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Vaincre un total de 15 leurres de Soldat sniper – Camouflage en mission solo",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201902,
+    "名称": "Victoire implacable : Assaut armé",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Vaincre un Soldat expéditionnaire – Assaut armé en mission solo sans subir de dégâts de ses [Mines terrestres]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 201903,
+    "名称": "Victoire implacable : Magnétik",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Infliger l’état [Paralysie] 20 fois à un ennemi lors d’une mission solo <Highlight>[Capture]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 202101,
+    "名称": "Tu es déjà mort I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Accomplir une fois : vaincre 3 ennemis en 3 s",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 202102,
+    "名称": "Tu es déjà mort II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Accomplir une fois : vaincre 6 ennemis en 3 s",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 202103,
+    "名称": "Tu es déjà mort III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Accomplir une fois : vaincre 10 ennemis en 3 s",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 202201,
+    "名称": "Fulgurance légendaire : Compétence de combat I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Accomplir une fois : utiliser une Compétence de combat 2 fois en 3 s",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 202202,
+    "名称": "Fulgurance légendaire : Compétence de combat II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Accomplir une fois : utiliser une Compétence de combat 4 fois en 3 s",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 202203,
+    "名称": "Fulgurance légendaire : Compétence de combat III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Accomplir une fois : utiliser une Compétence de combat 6 fois en 3 s",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 202301,
+    "名称": "Fulgurance légendaire : Compétence ultime I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Accomplir une fois : utiliser une Compétence ultime 2 fois en 6 s",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 202302,
+    "名称": "Fulgurance légendaire : Compétence ultime II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Accomplir une fois : utiliser une Compétence ultime 3 fois en 6 s",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 202303,
+    "名称": "Fulgurance légendaire : Compétence ultime III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Accomplir une fois : utiliser une Compétence ultime 4 fois en 6 s",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 202401,
+    "名称": "Fulgurance légendaire : Effet supplémentaire élémentaire I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Réussir à infliger 5 Effets supplémentaires élémentaires à un ennemi en moins de 3 s",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 202402,
+    "名称": "Fulgurance légendaire : Effet supplémentaire élémentaire II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Réussir à infliger 10 Effets supplémentaires élémentaires à un ennemi en moins de 3 s",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 202403,
+    "名称": "Fulgurance légendaire : Effet supplémentaire élémentaire III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Réussir à infliger 20 Effets supplémentaires élémentaires à un ennemi en moins de 3 s",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 203101,
+    "名称": "C’est en forgeant qu’on devient forgeron : Compétence de combat I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Utiliser une Compétence de combat 50 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 203102,
+    "名称": "C’est en forgeant qu’on devient forgeron : Compétence de combat II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Utiliser une Compétence de combat 100 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 203103,
+    "名称": "C’est en forgeant qu’on devient forgeron : Compétence de combat III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Utiliser une Compétence de combat 200 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 203201,
+    "名称": "C’est en forgeant qu’on devient forgeron : Compétence ultime I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Utiliser une Compétence ultime 50 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 203202,
+    "名称": "C’est en forgeant qu’on devient forgeron : Compétence ultime II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Utiliser une Compétence ultime 100 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 203203,
+    "名称": "C’est en forgeant qu’on devient forgeron : Compétence ultime III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Utiliser une Compétence ultime 200 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 203301,
+    "名称": "C’est en forgeant qu’on devient forgeron : Soutien de Géniemon I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Utiliser le Soutien de Géniemon au total 50 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 203302,
+    "名称": "C’est en forgeant qu’on devient forgeron : Soutien de Géniemon II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Utiliser le Soutien de Géniemon au total 100 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 203303,
+    "名称": "C’est en forgeant qu’on devient forgeron : Soutien de Géniemon III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Utiliser le Soutien de Géniemon au total 200 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 300101,
+    "名称": "Assaut instantané I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Infliger 5000 dégâts à un Boss durant une seule phase de faiblesse exposée",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 300102,
+    "名称": "Assaut instantané II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Infliger 15000 dégâts à un Boss durant une seule phase de faiblesse exposée",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 300103,
+    "名称": "Assaut instantané III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Infliger 60000 dégâts à un Boss durant une seule phase de faiblesse exposée",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Méprisable": 1
+    }
+  },
+  {
+    "id": 301101,
+    "名称": "Blindage maximal I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Accorder un total de 100 points d’Ultra-bouclier à des coéquipiers",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 301102,
+    "名称": "Blindage maximal II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Accorder un total de 500 points d’Ultra-bouclier à des coéquipiers",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 301103,
+    "名称": "Blindage maximal III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Accorder un total de 1000 points d’Ultra-bouclier à des coéquipiers",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 301201,
+    "名称": "Miséricorde infinie I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Porter secours à un allié à 10 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 5000,
+      "Title: Renaissant": 1
+    }
+  },
+  {
+    "id": 301202,
+    "名称": "Miséricorde infinie II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Porter secours à un allié à 20 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 301203,
+    "名称": "Miséricorde infinie III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Porter secours à un allié à 30 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 302101,
+    "名称": "Briseur de cieux I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Parcourir au total 5000 m avec le Bond Cyclonique",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 302102,
+    "名称": "Briseur de cieux II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Parcourir au total 15000 m avec le Bond Cyclonique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 302103,
+    "名称": "Briseur de cieux III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Parcourir au total 30000 m avec le Bond Cyclonique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 303101,
+    "名称": "C’est l’heure du bain I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Cumuler un total de 600 s d’Effet supplémentaire : Hydro",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 303102,
+    "名称": "C’est l’heure du bain II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Cumuler un total de 1800 s d’Effet supplémentaire : Hydro",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 303103,
+    "名称": "C’est l’heure du bain III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Cumuler un total de 3600 s d’Effet supplémentaire : Hydro",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 303201,
+    "名称": "Préparez les glaçons I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Cumuler un total de 600 s d’Effet supplémentaire : Pyro",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 303202,
+    "名称": "Préparez les glaçons II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Cumuler un total de 1800 s d’Effet supplémentaire : Pyro",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 303203,
+    "名称": "Préparez les glaçons III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Cumuler un total de 3600 s d’Effet supplémentaire : Pyro",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 303301,
+    "名称": "Ça picote ! I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Cumuler un total de 600 s d’Effet supplémentaire : Électro",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 303302,
+    "名称": "Ça picote ! II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Cumuler un total de 1800 s d’Effet supplémentaire : Électro",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 303303,
+    "名称": "Ça picote ! III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Cumuler un total de 3600 s d’Effet supplémentaire : Électro",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 303401,
+    "名称": "Cheveux en bataille ! I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Cumuler un total de 600 s d’Effet supplémentaire : Anémo",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 303402,
+    "名称": "Cheveux en bataille ! II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Cumuler un total de 1800 s d’Effet supplémentaire : Anémo",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 303403,
+    "名称": "Cheveux en bataille ! III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Cumuler un total de 3600 s d’Effet supplémentaire : Anémo",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 303501,
+    "名称": "Extinction des feux ! I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Cumuler un total de 600 s d’Effet supplémentaire : Umbro",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 303502,
+    "名称": "Extinction des feux ! II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Cumuler un total de 1800 s d’Effet supplémentaire : Umbro",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 303503,
+    "名称": "Extinction des feux ! III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Cumuler un total de 3600 s d’Effet supplémentaire : Umbro",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 303601,
+    "名称": "C’est l’heure de briller ! I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Cumuler un total de 600 s d’Effet supplémentaire : Lumino",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 303602,
+    "名称": "C’est l’heure de briller ! II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Cumuler un total de 1800 s d’Effet supplémentaire : Lumino",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 303603,
+    "名称": "C’est l’heure de briller ! III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Cumuler un total de 3600 s d’Effet supplémentaire : Lumino",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 304101,
+    "名称": "J’ai beaucoup d’amis I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Invoquer un Partenaire de combat à 15 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 304102,
+    "名称": "J’ai beaucoup d’amis II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Invoquer un Partenaire de combat à 30 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 304103,
+    "名称": "J’ai beaucoup d’amis III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Invoquer un Partenaire de combat à 60 reprises",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Capitaine": 1
+    }
+  },
+  {
+    "id": 304201,
+    "名称": "Silhouette d’un héros I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Infliger 100000 dégâts avec les Partenaires de combat",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 304202,
+    "名称": "Silhouette d’un héros II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Infliger 300000 dégâts avec les Partenaires de combat",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 304203,
+    "名称": "Silhouette d’un héros III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Infliger 1000000 dégâts avec les Partenaires de combat",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 304301,
+    "名称": "Compte sur moi I",
+    "分类": "Bien plus que des chiffres",
+    "品质": 3,
+    "描述": "Restaurer 1500 PV avec les Partenaires de combat",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 304302,
+    "名称": "Compte sur moi II",
+    "分类": "Bien plus que des chiffres",
+    "品质": 2,
+    "描述": "Restaurer 3000 PV avec les Partenaires de combat",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 304303,
+    "名称": "Compte sur moi III",
+    "分类": "Bien plus que des chiffres",
+    "品质": 1,
+    "描述": "Restaurer 10000 PV avec les Partenaires de combat",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 500101,
+    "名称": "Silence nocturne : Sibylle I",
+    "分类": "Éveil du Daimon",
+    "品质": 3,
+    "描述": "Remporter en moins de 300 s, en mode solo, le défi [Échos nocturnes : Sibylle] en difficulté maximale",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 500102,
+    "名称": "Silence nocturne : Sibylle II",
+    "分类": "Éveil du Daimon",
+    "品质": 2,
+    "描述": "Remporter en moins de 180 s, en mode solo, le défi [Échos nocturnes : Sibylle] en difficulté maximale",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 500103,
+    "名称": "Silence nocturne : Sibylle III",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Remporter en moins de 90 s, en mode solo, le défi [Échos nocturnes : Sibylle] en difficulté maximale",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Fléau": 1
+    }
+  },
+  {
+    "id": 500201,
+    "名称": "Silence nocturne : Cristallophage I",
+    "分类": "Éveil du Daimon",
+    "品质": 3,
+    "描述": "Remporter en moins de 300 s, en mode solo, le défi [Échos nocturnes : Cristallophage] en difficulté maximale",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 500202,
+    "名称": "Silence nocturne : Cristallophage II",
+    "分类": "Éveil du Daimon",
+    "品质": 2,
+    "描述": "Remporter en moins de 180 s, en mode solo, le défi [Échos nocturnes : Cristallophage] en difficulté maximale",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 500203,
+    "名称": "Silence nocturne : Cristallophage III",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Remporter en moins de 90 s, en mode solo, le défi [Échos nocturnes : Cristallophage] en difficulté maximale",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Bestial": 1
+    }
+  },
+  {
+    "id": 500301,
+    "名称": "Silence nocturne : L’Éclose I",
+    "分类": "Éveil du Daimon",
+    "品质": 3,
+    "描述": "Remporter en moins de 300 s, en mode solo, le défi [Échos nocturnes : L’Éclose] en difficulté maximale",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 500302,
+    "名称": "Silence nocturne : L’Éclose II",
+    "分类": "Éveil du Daimon",
+    "品质": 2,
+    "描述": "Remporter en moins de 180 s, en mode solo, le défi [Échos nocturnes : L’Éclose] en difficulté maximale",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 500303,
+    "名称": "Silence nocturne : L’Éclose III",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Remporter en moins de 90 s, en mode solo, le défi [Échos nocturnes : L’Éclose] en difficulté maximale",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 500401,
+    "名称": "Silence nocturne : Geôlière de la fournaise I",
+    "分类": "Éveil du Daimon",
+    "品质": 3,
+    "描述": "Dans [Échos nocturnes : Geôlière de la fournaise], remporter le combat en mode solo et en difficulté maximale en moins de 300 s",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 500402,
+    "名称": "Silence nocturne : Geôlière de la fournaise II",
+    "分类": "Éveil du Daimon",
+    "品质": 2,
+    "描述": "Dans [Échos nocturnes : Geôlière de la fournaise], remporter le combat en mode solo et en difficulté maximale en moins de 180 s",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 500403,
+    "名称": "Silence nocturne : Geôlière de la fournaise III",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Dans [Échos nocturnes : Geôlière de la fournaise], remporter le combat en mode solo et en difficulté maximale en moins de 90 s",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 500501,
+    "名称": "Silence nocturne : La Bête née du blizzard I",
+    "分类": "Éveil du Daimon",
+    "品质": 3,
+    "描述": "Dans [Échos nocturnes : La Bête née du blizzard], remporter le combat en mode solo et en difficulté maximale en moins de 300 s",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 500502,
+    "名称": "Silence nocturne : La Bête née du blizzard II",
+    "分类": "Éveil du Daimon",
+    "品质": 2,
+    "描述": "Dans [Échos nocturnes : La Bête née du blizzard], remporter le combat en mode solo et en difficulté maximale en moins de 180 s",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 500503,
+    "名称": "Silence nocturne : La Bête née du blizzard III",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Dans [Échos nocturnes : La Bête née du blizzard], remporter le combat en mode solo et en difficulté maximale en moins de 90 s",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 501101,
+    "名称": "Silence nocturne — Solo : Sibylle",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Remporter [Échos nocturnes : Sibylle] en difficulté maximale, sans invoquer de Partenaires de combat",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 501201,
+    "名称": "Silence nocturne — Solo : Cristallophage",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Remporter [Échos nocturnes : Cristallophage] en difficulté maximale, sans invoquer de Partenaires de combat",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 501301,
+    "名称": "Silence nocturne — Solo : L’Éclose",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Remporter [Échos nocturnes : L’Éclose] en difficulté maximale, sans invoquer de Partenaires de combat",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 501401,
+    "名称": "Silence nocturne — Solo : Geôlière de la fournaise",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Dans [Échos nocturnes : Geôlière de la fournaise], remporter le combat en difficulté maximale sans invoquer de Partenaires de combat",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 501501,
+    "名称": "Silence nocturne — Solo : La Bête née du blizzard",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Dans [Échos nocturnes : La Bête née du blizzard], remporter le combat en difficulté maximale sans invoquer de Partenaires de combat",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 502201,
+    "名称": "Négociation musclée — Solo",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Remporter la mission [Médiation] en mode solo et en difficulté maximale, sans invoquer de Partenaires de combat",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 502401,
+    "名称": "Éradication totale — Solo",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Remporter la mission [Extermination] en mode solo et en difficulté maximale, sans invoquer de Partenaires de combat",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 502501,
+    "名称": "Sauvetage éclair — Solo",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Remporter la mission [Escorte] en mode solo et en difficulté maximale, sans invoquer de Partenaires de combat",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 502601,
+    "名称": "Pas fait pour la course — Solo",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Remporter la mission [Transfert] en mode solo et en difficulté maximale, sans invoquer de Partenaires de combat",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 503101,
+    "名称": "Enquêteur au grand cœur — Hors pair I",
+    "分类": "Éveil du Daimon",
+    "品质": 3,
+    "描述": "Remporter la mission [Exploration ∞] en mode solo et en difficulté maximale, après avoir vaincu au moins 80 ennemis",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 503102,
+    "名称": "Enquêteur au grand cœur — Hors pair II",
+    "分类": "Éveil du Daimon",
+    "品质": 2,
+    "描述": "Remporter la mission [Exploration ∞] en mode solo et en difficulté maximale, après avoir vaincu au moins 150 ennemis",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 503103,
+    "名称": "Enquêteur au grand cœur — Hors pair III",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Remporter la mission [Exploration ∞] en mode solo et en difficulté maximale, après avoir vaincu au moins 300 ennemis",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 503201,
+    "名称": "Gardien éternel des Luno — Hors pair I",
+    "分类": "Éveil du Daimon",
+    "品质": 3,
+    "描述": "Remporter la mission [Défense ∞] en mode solo et en difficulté maximale, après avoir vaincu au moins 80 ennemis",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 503202,
+    "名称": "Gardien éternel des Luno — Hors pair II",
+    "分类": "Éveil du Daimon",
+    "品质": 2,
+    "描述": "Remporter la mission [Défense ∞] en mode solo et en difficulté maximale, après avoir vaincu au moins 150 ennemis",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 503203,
+    "名称": "Gardien éternel des Luno — Hors pair III",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Remporter la mission [Défense ∞] en mode solo et en difficulté maximale, après avoir vaincu au moins 300 ennemis",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 504101,
+    "名称": "Réminiscence nocturne : Sibylle",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Remporter une fois [Échos nocturnes : Sibylle]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Concurrent": 1
+    }
+  },
+  {
+    "id": 504201,
+    "名称": "Réminiscence nocturne : Cristallophage",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Remporter une fois [Échos nocturnes : Cristallophage]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 504301,
+    "名称": "Réminiscence nocturne : L’Éclose",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Remporter une fois [Échos nocturnes : L’Éclose]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 504401,
+    "名称": "Réminiscence nocturne : Geôlière de la fournaise",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Remporter une fois [Échos nocturnes : Geôlière de la fournaise]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 504501,
+    "名称": "Réminiscence nocturne : La Bête née du blizzard",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Remporter une fois [Échos nocturnes : La Bête née du blizzard]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 505101,
+    "名称": "Silence nocturne — Hors pair : Sibylle",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Remporter [Échos nocturnes : Sibylle] en difficulté maximale, sans perdre de PV ni invoquer de Partenaires de combat",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Commandant de Légion": 1
+    }
+  },
+  {
+    "id": 505201,
+    "名称": "Silence nocturne — Hors pair : Cristallophage",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Remporter [Échos nocturnes : Cristallophage] en difficulté maximale, sans perdre de PV ni invoquer de Partenaires de combat",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Endeuillé": 1
+    }
+  },
+  {
+    "id": 505301,
+    "名称": "Silence nocturne — Hors pair : L’Éclose",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Remporter [Échos nocturnes : L’Éclose] en difficulté maximale, sans perdre de PV ni invoquer de Partenaires de combat",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Ailé": 1
+    }
+  },
+  {
+    "id": 505401,
+    "名称": "Silence nocturne — Hors pair : Geôlière de la fournaise",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Dans [Échos nocturnes : Geôlière de la fournaise] en difficulté maximale, remporter le combat sans perdre de PV ni invoquer de Partenaires de combat",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Geôlier": 1
+    }
+  },
+  {
+    "id": 505501,
+    "名称": "Silence nocturne — Hors pair : La Bête née du blizzard",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Dans [Échos nocturnes : La Bête née du blizzard] en difficulté maximale, remporter le combat sans perdre de PV ni invoquer de Partenaires de combat",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 506201,
+    "名称": "Négociation musclée — Chrono I",
+    "分类": "Éveil du Daimon",
+    "品质": 3,
+    "描述": "Remporter la mission [Médiation] en mode solo et en difficulté maximale en moins de 300 s",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 506202,
+    "名称": "Négociation musclée — Chrono II",
+    "分类": "Éveil du Daimon",
+    "品质": 2,
+    "描述": "Remporter la mission [Médiation] en mode solo et en difficulté maximale en moins de 180 s",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 506203,
+    "名称": "Négociation musclée — Chrono III",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Remporter la mission [Médiation] en mode solo et en difficulté maximale en moins de 90 s",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 506301,
+    "名称": "Éradication totale — Chrono I",
+    "分类": "Éveil du Daimon",
+    "品质": 3,
+    "描述": "Remporter la mission [Extermination] en mode solo et en difficulté maximale en moins de 420 s",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 506302,
+    "名称": "Éradication totale — Chrono II",
+    "分类": "Éveil du Daimon",
+    "品质": 2,
+    "描述": "Remporter la mission [Extermination] en mode solo et en difficulté maximale en moins de 300 s",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 506303,
+    "名称": "Éradication totale — Chrono III",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Remporter la mission [Extermination] en mode solo et en difficulté maximale en moins de 180 s",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 506401,
+    "名称": "Sauvetage éclair — Chrono I",
+    "分类": "Éveil du Daimon",
+    "品质": 3,
+    "描述": "Remporter la mission [Escorte] en mode solo et en difficulté maximale en moins de 420 s",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 506402,
+    "名称": "Sauvetage éclair — Chrono II",
+    "分类": "Éveil du Daimon",
+    "品质": 2,
+    "描述": "Remporter la mission [Escorte] en mode solo et en difficulté maximale en moins de 300 s",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 506403,
+    "名称": "Sauvetage éclair — Chrono III",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Remporter la mission [Escorte] en mode solo et en difficulté maximale en moins de 180 s",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 507101,
+    "名称": "Je vois clair dans ton jeu — Sibylle",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Neutraliser un total de 300 projectiles dans [Échos nocturnes : Sibylle] en difficulté maximale",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 507201,
+    "名称": "Je vois clair dans ton jeu — Cristallophage",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Dans [Échos nocturnes : Cristallophage] en difficulté maximale, faire percuter un pilier au Cristallophage 3 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 507301,
+    "名称": "Je vois clair dans ton jeu — L’Éclose",
+    "分类": "Éveil du Daimon",
+    "品质": 1,
+    "描述": "Détruire toutes les ailes de l’Éclose dans [Échos nocturnes : L’Éclose] en difficulté maximale et en moins de 8 secondes",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 900001,
+    "名称": "Explorateur du Dédale — Regard dans les abysses I",
+    "分类": "Jardin labyrinthique",
+    "品质": 3,
+    "描述": "Terminer le Dédale mystique à n’importe quelle difficulté 1 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 5000,
+      "Title: Marcheur nocturne": 1
+    }
+  },
+  {
+    "id": 900101,
+    "名称": "Explorateur du Dédale — Regard dans les abysses II",
+    "分类": "Jardin labyrinthique",
+    "品质": 3,
+    "描述": "Terminer Dédale mystique — Difficulté II",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 900201,
+    "名称": "Explorateur du Dédale — Regard dans les abysses III",
+    "分类": "Jardin labyrinthique",
+    "品质": 2,
+    "描述": "Terminer Dédale mystique — Difficulté III",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Sombre": 1
+    }
+  },
+  {
+    "id": 900301,
+    "名称": "Explorateur du Dédale — Regard dans les abysses IV",
+    "分类": "Jardin labyrinthique",
+    "品质": 2,
+    "描述": "Terminer Dédale mystique — Difficulté IV",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 900401,
+    "名称": "Explorateur du Dédale — Regard dans les abysses V",
+    "分类": "Jardin labyrinthique",
+    "品质": 1,
+    "描述": "Terminer Dédale mystique — Difficulté V",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Rôdeur": 1
+    }
+  },
+  {
+    "id": 910001,
+    "名称": "Que la lumière soit",
+    "分类": "Jardin labyrinthique",
+    "品质": 3,
+    "描述": "Éveiller la Lanterne du Dédale mystique 1 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 910101,
+    "名称": "Gloire au vagabond solitaire I",
+    "分类": "Jardin labyrinthique",
+    "品质": 3,
+    "描述": "Éveiller 1 nœuds de [Couvercle : Bénédiction d’honneur]",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 910102,
+    "名称": "Gloire au vagabond solitaire II",
+    "分类": "Jardin labyrinthique",
+    "品质": 2,
+    "描述": "Éveiller 24 nœuds de [Couvercle : Bénédiction d’honneur]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 910201,
+    "名称": "Lumière aux Inébranlables I",
+    "分类": "Jardin labyrinthique",
+    "品质": 3,
+    "描述": "Éveiller 1 nœuds de [Poignée : Bénédiction de lumière]",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 910202,
+    "名称": "Lumière aux Inébranlables II",
+    "分类": "Jardin labyrinthique",
+    "品质": 2,
+    "描述": "Éveiller 24 nœuds de [Poignée : Bénédiction de lumière]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 910301,
+    "名称": "Courage pour le sabreur I",
+    "分类": "Jardin labyrinthique",
+    "品质": 3,
+    "描述": "Éveiller 1 nœuds de [Corps : Bénédiction de courage]",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 910302,
+    "名称": "Courage pour le sabreur II",
+    "分类": "Jardin labyrinthique",
+    "品质": 2,
+    "描述": "Éveiller 24 nœuds de [Corps : Bénédiction de courage]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 910401,
+    "名称": "Justice au chercheur I",
+    "分类": "Jardin labyrinthique",
+    "品质": 3,
+    "描述": "Éveiller 1 nœuds de [Socle : Bénédiction de justice]",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 910402,
+    "名称": "Justice au chercheur II",
+    "分类": "Jardin labyrinthique",
+    "品质": 2,
+    "描述": "Éveiller 24 nœuds de [Socle : Bénédiction de justice]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 911101,
+    "名称": "Éclosion sanglante I",
+    "分类": "Jardin labyrinthique",
+    "品质": 3,
+    "描述": "Entrer 1 fois dans [Combat — Umbré dispersé] dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 911102,
+    "名称": "Éclosion sanglante II",
+    "分类": "Jardin labyrinthique",
+    "品质": 2,
+    "描述": "Entrer 12 fois dans [Combat — Umbré dispersé] dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 911201,
+    "名称": "Illusions éphémères I",
+    "分类": "Jardin labyrinthique",
+    "品质": 3,
+    "描述": "Entrer 1 fois dans [Rencontre] dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 911202,
+    "名称": "Illusions éphémères II",
+    "分类": "Jardin labyrinthique",
+    "品质": 2,
+    "描述": "Entrer 12 fois dans [Rencontre] dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 912101,
+    "名称": "Gardien du feu I",
+    "分类": "Jardin labyrinthique",
+    "品质": 1,
+    "描述": "Obtenir 20000 [Braises] dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 912201,
+    "名称": "Collectionneur de braise",
+    "分类": "Jardin labyrinthique",
+    "品质": 1,
+    "描述": "Lors d’une exploration du Dédale mystique, posséder au moins 3000 [Braises]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 912301,
+    "名称": "Accumulateur",
+    "分类": "Jardin labyrinthique",
+    "品质": 1,
+    "描述": "Terminer le Dédale mystique en possédant au moins 1500 [Braises]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 920101,
+    "名称": "Fonte du cœur I",
+    "分类": "Jardin labyrinthique",
+    "品质": 3,
+    "描述": "Obtenir 1 types de Lucimèches [Cœur de feu] dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 920102,
+    "名称": "Fonte du cœur II",
+    "分类": "Jardin labyrinthique",
+    "品质": 2,
+    "描述": "Obtenir 15 types de Lucimèches [Cœur de feu] dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 920201,
+    "名称": "Reflet de la lune I",
+    "分类": "Jardin labyrinthique",
+    "品质": 3,
+    "描述": "Obtenir 1 types de Lucimèches [Lune marine] dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 920202,
+    "名称": "Reflet de la lune II",
+    "分类": "Jardin labyrinthique",
+    "品质": 2,
+    "描述": "Obtenir 15 types de Lucimèches [Lune marine] dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 920301,
+    "名称": "Désert sous le ciel étoilé I",
+    "分类": "Jardin labyrinthique",
+    "品质": 3,
+    "描述": "Obtenir 1 types de Lucimèches [Luménite] dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 920302,
+    "名称": "Désert sous le ciel étoilé II",
+    "分类": "Jardin labyrinthique",
+    "品质": 2,
+    "描述": "Obtenir 15 types de Lucimèches [Luménite] dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 920401,
+    "名称": "Murmures de la forêt I",
+    "分类": "Jardin labyrinthique",
+    "品质": 3,
+    "描述": "Obtenir 1 types de Lucimèches [Rameau lumineux] dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 920402,
+    "名称": "Murmures de la forêt II",
+    "分类": "Jardin labyrinthique",
+    "品质": 2,
+    "描述": "Obtenir 15 types de Lucimèches [Rameau lumineux] dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 920501,
+    "名称": "Effet papillon I",
+    "分类": "Jardin labyrinthique",
+    "品质": 3,
+    "描述": "Obtenir 1 types de Lucimèches [Papillon nocturne] dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 920502,
+    "名称": "Effet papillon II",
+    "分类": "Jardin labyrinthique",
+    "品质": 2,
+    "描述": "Obtenir 15 types de Lucimèches [Papillon nocturne] dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 920601,
+    "名称": "Forêt des lucioles I",
+    "分类": "Jardin labyrinthique",
+    "品质": 3,
+    "描述": "Obtenir 1 types de Lucimèches [Luciole brillante] dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 920602,
+    "名称": "Forêt des lucioles II",
+    "分类": "Jardin labyrinthique",
+    "品质": 2,
+    "描述": "Obtenir 15 types de Lucimèches [Luciole brillante] dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 920701,
+    "名称": "Floraison funeste I",
+    "分类": "Jardin labyrinthique",
+    "品质": 3,
+    "描述": "Obtenir 1 types de Lucimèches [Fleur vampirique] dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 920702,
+    "名称": "Floraison funeste II",
+    "分类": "Jardin labyrinthique",
+    "品质": 2,
+    "描述": "Obtenir 15 types de Lucimèches [Fleur vampirique] dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 930001,
+    "名称": "Artéfacts sacrés I",
+    "分类": "Jardin labyrinthique",
+    "品质": 3,
+    "描述": "Obtenir 1 types d’Artéfacts dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 930002,
+    "名称": "Artéfacts sacrés II",
+    "分类": "Jardin labyrinthique",
+    "品质": 2,
+    "描述": "Obtenir 25 types d’Artéfacts dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 940001,
+    "名称": "La Faucheuse attendra — Dédale mystique",
+    "分类": "Jardin labyrinthique",
+    "品质": 1,
+    "描述": "Restaurer un total de 50000 PV dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 940101,
+    "名称": "Une simple frappe — Dédale mystique",
+    "分类": "Jardin labyrinthique",
+    "品质": 1,
+    "描述": "Infliger 30000 dégâts en une seule action avec une arme de mêlée dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 940201,
+    "名称": "Un simple tir — Dédale mystique",
+    "分类": "Jardin labyrinthique",
+    "品质": 1,
+    "描述": "Infliger 10000 dégâts en une seule action avec une arme à distance dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 940301,
+    "名称": "Gardien de la lanterne — Papillon nocturne",
+    "分类": "Jardin labyrinthique",
+    "品质": 1,
+    "描述": "Infliger un total de 2000000 dégâts avec les Lucimèches [Papillon nocturne]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 940401,
+    "名称": "Gardien de la lanterne — Luciole brillante",
+    "分类": "Jardin labyrinthique",
+    "品质": 1,
+    "描述": "Infliger 12000</highlight> dégâts en une seule action avec une Lucimèche [Luciole brillante]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 940501,
+    "名称": "Gardien de la lanterne — Rameau lumineux",
+    "分类": "Jardin labyrinthique",
+    "品质": 1,
+    "描述": "Infliger un total de 2000000 dégâts avec les Lucimèches [Rameau lumineux]",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 940601,
+    "名称": "Un simple coup de pied — Dédale mystique",
+    "分类": "Jardin labyrinthique",
+    "品质": 1,
+    "描述": "Infliger 10000 dégâts en une seule action avec une compétence dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 941101,
+    "名称": "Béni par lumière divine — Dédale mystique",
+    "分类": "Jardin labyrinthique",
+    "品质": 1,
+    "描述": "Infliger 20000 Dégâts Lumino en une action dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 941201,
+    "名称": "Quand la nuit tombe — Dédale mystique",
+    "分类": "Jardin labyrinthique",
+    "品质": 1,
+    "描述": "Infliger 20000 Dégâts Umbro en une action dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 941301,
+    "名称": "Le chagrin de l’eau — Dédale mystique",
+    "分类": "Jardin labyrinthique",
+    "品质": 1,
+    "描述": "Infliger 20000 Dégâts Hydro en une action dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 941401,
+    "名称": "L’allégresse du feu — Dédale mystique",
+    "分类": "Jardin labyrinthique",
+    "品质": 1,
+    "描述": "Infliger 20000 Dégâts Pyro en une action dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 941501,
+    "名称": "Ne reste pas sous l’arbre — Dédale mystique",
+    "分类": "Jardin labyrinthique",
+    "品质": 1,
+    "描述": "Infliger 20000 Dégâts Électro en une action dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 941601,
+    "名称": "Quel boucan ! — Dédale mystique",
+    "分类": "Jardin labyrinthique",
+    "品质": 1,
+    "描述": "Infliger 20000 Dégâts Anémo en une action dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 942101,
+    "名称": "Chevalier des ténèbres",
+    "分类": "Jardin labyrinthique",
+    "品质": 1,
+    "描述": "Vaincre 2000 ennemis dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 942201,
+    "名称": "Digne adversaire — Dédale mystique",
+    "分类": "Jardin labyrinthique",
+    "品质": 1,
+    "描述": "Vaincre 60 Ordonnateurs dans le Dédale mystique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 1010101,
+    "名称": "Carillon d’allégresse I",
+    "分类": "Liste de souhaits",
+    "品质": 3,
+    "描述": "Obtenir 1000000 pièces",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 1010102,
+    "名称": "Carillon d’allégresse II",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Obtenir 5000000 pièces",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 1010103,
+    "名称": "Carillon d’allégresse III",
+    "分类": "Liste de souhaits",
+    "品质": 1,
+    "描述": "Obtenir 10000000 pièces",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Opulent": 1
+    }
+  },
+  {
+    "id": 1010201,
+    "名称": "Ton nom est Rouge I",
+    "分类": "Liste de souhaits",
+    "品质": 3,
+    "描述": "Obtenir 5000 Globules cramoisis",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 1010202,
+    "名称": "Ton nom est Rouge II",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Obtenir 50000 Globules cramoisis",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 1010203,
+    "名称": "Ton nom est Rouge III",
+    "分类": "Liste de souhaits",
+    "品质": 1,
+    "描述": "Obtenir 500000 Globules cramoisis",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Écarlate": 1
+    }
+  },
+  {
+    "id": 1010304,
+    "名称": "Échos du passé",
+    "分类": "Liste de souhaits",
+    "品质": 3,
+    "描述": "Rassembler toutes les Journaux égarés de l’Île du Purgatoire — Ruines",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 1010305,
+    "名称": "Partenaire de recherche de Theo",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Rassembler toutes les Notes de terrain de Theo",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 1010306,
+    "名称": "Entre deux soupirs",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Rassembler toutes les histoires des Dégradés de la Maison d’Hypnos",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 1010601,
+    "名称": "Chasseur de trésors — Île du Purgatoire",
+    "分类": "Liste de souhaits",
+    "品质": 1,
+    "描述": "Rassembler toutes les Feuilles perdues de l’Île du Purgatoire",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 1010701,
+    "名称": "Chasseur de trésors — Givrelac",
+    "分类": "Liste de souhaits",
+    "品质": 1,
+    "描述": "Rassembler toutes les Feuilles perdues des Environs de Givrelac",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 1010801,
+    "名称": "Chasseur de trésors — Forteresse de Lonza",
+    "分类": "Liste de souhaits",
+    "品质": 1,
+    "描述": "Rassembler toutes les Feuilles perdues de la Forteresse de Lonza",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 1012501,
+    "名称": "Archive mémorielle",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Rassembler les dix chapitres d’Hymne de la Chandelle d’Argent dans les Environs de Givrelac",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 1012601,
+    "名称": "Contes de Momiji",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Rassembler les quatre chapitres de Momiji : Récits du soulèvement au Théâtre Galea",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 1012901,
+    "名称": "Berceau du chaos",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Rassembler toutes les Feuilles perdues du Marché Voilé",
+    "版本": "1.1",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 1013201,
+    "名称": "Chasseur de trésors — Port-des-Brumes",
+    "分类": "Liste de souhaits",
+    "品质": 1,
+    "描述": "Rassembler toutes les Feuilles perdues du Port-des-Brumes",
+    "版本": "1.1",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 1020101,
+    "名称": "L’argent n’achète pas tout I",
+    "分类": "Liste de souhaits",
+    "品质": 3,
+    "描述": "Dépenser 1000000 pièces",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 1020102,
+    "名称": "L’argent n’achète pas tout II",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Dépenser 5000000 pièces",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 1020103,
+    "名称": "L’argent n’achète pas tout III",
+    "分类": "Liste de souhaits",
+    "品质": 1,
+    "描述": "Dépenser 10000000 pièces",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Consommateur": 1
+    }
+  },
+  {
+    "id": 1020201,
+    "名称": "Je veux du pouvoir I",
+    "分类": "Liste de souhaits",
+    "品质": 3,
+    "描述": "Utiliser 5000 Globules cramoisis",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 1020202,
+    "名称": "Je veux du pouvoir II",
+    "分类": "Liste de souhaits",
+    "品质": 3,
+    "描述": "Utiliser 50000 Globules cramoisis",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 1020203,
+    "名称": "Je veux du pouvoir III",
+    "分类": "Liste de souhaits",
+    "品质": 3,
+    "描述": "Utiliser 500000 Globules cramoisis",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 1021001,
+    "名称": "Manuel d’accélération temporelle I",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Utiliser 10 Marteaux-jouets",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Voyageur du temps": 1
+    }
+  },
+  {
+    "id": 1021002,
+    "名称": "Manuel d’accélération temporelle II",
+    "分类": "Liste de souhaits",
+    "品质": 1,
+    "描述": "Utiliser 50 Marteaux-jouets",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 1030101,
+    "名称": "Magnat des mers I",
+    "分类": "Liste de souhaits",
+    "品质": 3,
+    "描述": "Obtenir 10 espèces de poissons",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 1030102,
+    "名称": "Magnat des mers II",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Obtenir 30 espèces de poissons",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 1030103,
+    "名称": "Magnat des mers III",
+    "分类": "Liste de souhaits",
+    "品质": 1,
+    "描述": "Obtenir 70 espèces de poissons",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Pêcheur": 1
+    }
+  },
+  {
+    "id": 1035101,
+    "名称": "Fardeau du savoir I",
+    "分类": "Liste de souhaits",
+    "品质": 3,
+    "描述": "Obtenir au total 1 documents à lire",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 1035102,
+    "名称": "Fardeau du savoir II",
+    "分类": "Liste de souhaits",
+    "品质": 3,
+    "描述": "Obtenir au total 10 documents à lire",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 1035103,
+    "名称": "Fardeau du savoir III",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Obtenir au total 50 documents à lire",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Érudit": 1
+    }
+  },
+  {
+    "id": 1035201,
+    "名称": "Cité mélodieuse I",
+    "分类": "Liste de souhaits",
+    "品质": 3,
+    "描述": "Obtenir 5 partitions",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 5000,
+      "Title: Aux touches d’ivoire": 1,
+      "Title Frame: Mouvement I Style": 1
+    }
+  },
+  {
+    "id": 1035202,
+    "名称": "Cité mélodieuse II",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Obtenir 20 partitions",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title Frame: Mouvement II Style": 1
+    }
+  },
+  {
+    "id": 1035203,
+    "名称": "Cité mélodieuse III",
+    "分类": "Liste de souhaits",
+    "品质": 1,
+    "描述": "Obtenir 50 partitions",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Lyrique": 1,
+      "Title Frame: Mouvement III Style": 1
+    }
+  },
+  {
+    "id": 3010101,
+    "名称": "Le secret de la force I",
+    "分类": "Liste de souhaits",
+    "品质": 3,
+    "描述": "Obtenir 30 Sceaux démoniaques",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 3010102,
+    "名称": "Le secret de la force II",
+    "分类": "Liste de souhaits",
+    "品质": 3,
+    "描述": "Obtenir 60 Sceaux démoniaques",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 3010103,
+    "名称": "Le secret de la force III",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Obtenir 100 Sceaux démoniaques",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 3010104,
+    "名称": "Le secret de la force IV",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Obtenir 200 Sceaux démoniaques",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 3010105,
+    "名称": "Le secret de la force V",
+    "分类": "Liste de souhaits",
+    "品质": 1,
+    "描述": "Obtenir 500 Sceaux démoniaques",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Force": 1
+    }
+  },
+  {
+    "id": 3030101,
+    "名称": "Collectionneur de sceaux I",
+    "分类": "Liste de souhaits",
+    "品质": 3,
+    "描述": "Obtenir un Sceau démoniaque rare pour la première fois",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 3030201,
+    "名称": "Collectionneur de sceaux II",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Obtenir un Sceau démoniaque épique pour la première fois",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 3030301,
+    "名称": "Collectionneur de sceaux III",
+    "分类": "Liste de souhaits",
+    "品质": 1,
+    "描述": "Obtenir un Sceau démoniaque légendaire pour la première fois",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Puissant": 1
+    }
+  },
+  {
+    "id": 3030401,
+    "名称": "Limite du pouvoir",
+    "分类": "Liste de souhaits",
+    "品质": 1,
+    "描述": "Obtenir 1 Sceau démoniaque légendaire Niv. 10",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Invincible": 1
+    }
+  },
+  {
+    "id": 3040101,
+    "名称": "L’espoir du peuple I",
+    "分类": "Vers le sommet",
+    "品质": 3,
+    "描述": "Équiper un personnage avec au moins 7 Sceaux démoniaques",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 3040102,
+    "名称": "Le dernier espoir du village",
+    "分类": "Vers le sommet",
+    "品质": 1,
+    "描述": "Équiper n’importe quel personnage de 9 Sceaux démoniaques",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Armé": 1
+    }
+  },
+  {
+    "id": 3050101,
+    "名称": "La meilleure épée I",
+    "分类": "Vers le sommet",
+    "品质": 3,
+    "描述": "Équiper une arme de mêlée avec au moins 7 Sceaux démoniaques",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 3050201,
+    "名称": "Le meilleur fusil I",
+    "分类": "Vers le sommet",
+    "品质": 3,
+    "描述": "Équiper une arme à distance avec au moins 7 Sceaux démoniaques",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 4010101,
+    "名称": "Feu à volonté ! I",
+    "分类": "Liste de souhaits",
+    "品质": 3,
+    "描述": "Obtenir 5 armes",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 4010102,
+    "名称": "Feu à volonté ! II",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Obtenir 10 armes",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 4010103,
+    "名称": "Feu à volonté ! III",
+    "分类": "Liste de souhaits",
+    "品质": 1,
+    "描述": "Obtenir 15 armes",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Maître d’armes": 1
+    }
+  },
+  {
+    "id": 4020101,
+    "名称": "Lame des braves I",
+    "分类": "Vers le sommet",
+    "品质": 3,
+    "描述": "Atteindre le Niv. 60 avec 1 armes différentes",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 4020102,
+    "名称": "Lame des braves II",
+    "分类": "Vers le sommet",
+    "品质": 2,
+    "描述": "Atteindre le Niv. 60 avec 5 armes différentes",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 4020103,
+    "名称": "Lame des braves III",
+    "分类": "Vers le sommet",
+    "品质": 1,
+    "描述": "Atteindre le Niv. 60 avec 10 armes différentes",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 4030101,
+    "名称": "Forgé par l’épreuve I",
+    "分类": "Vers le sommet",
+    "品质": 3,
+    "描述": "Atteindre la phase 6 d’ascension avec 1 armes différentes",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 4030102,
+    "名称": "Forgé par l’épreuve II",
+    "分类": "Vers le sommet",
+    "品质": 2,
+    "描述": "Atteindre la phase 6 d’ascension avec 5 armes différentes",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 4030103,
+    "名称": "Forgé par l’épreuve III",
+    "分类": "Vers le sommet",
+    "品质": 1,
+    "描述": "Atteindre la phase 6 d’ascension avec 10 armes différentes",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Ardent": 1
+    }
+  },
+  {
+    "id": 4060101,
+    "名称": "L’art de l’alchimiste I",
+    "分类": "Vers le sommet",
+    "品质": 3,
+    "描述": "Porter le Niveau de fusion de 1 armes au Niv. 5",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 4060102,
+    "名称": "L’art de l’alchimiste II",
+    "分类": "Vers le sommet",
+    "品质": 2,
+    "描述": "Porter le Niveau de fusion de 5 armes au Niv. 5",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 4060103,
+    "名称": "L’art de l’alchimiste III",
+    "分类": "Vers le sommet",
+    "品质": 1,
+    "描述": "Porter le Niveau de fusion de 10 armes au Niv. 5",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 5011901,
+    "名称": "Mineur d’or",
+    "分类": "Découverte du monde",
+    "品质": 1,
+    "描述": "Obtenir 100 Lumites",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 5012001,
+    "名称": "Réserves pour l’hibernation",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Briser au total 100 Noix à coque de fer",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 5012101,
+    "名称": "Roche en furie",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Briser au total 100 Pierres Plop Plop",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 5012401,
+    "名称": "C’est quoi ça ? À moi ! I",
+    "分类": "Découverte du monde",
+    "品质": 3,
+    "描述": "Récolter des objets 10 fois au total",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 5012402,
+    "名称": "C’est quoi ça ? À moi ! II",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Récolter des objets 100 fois au total",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 5012403,
+    "名称": "C’est quoi ça ? À moi ! III",
+    "分类": "Découverte du monde",
+    "品质": 1,
+    "描述": "Récolter des objets 1000 fois au total",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 5013401,
+    "名称": "Coralithe en furie",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Détruire un total de 100 Coralithes",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 5040101,
+    "名称": "Récompense de la persévérance",
+    "分类": "Le perfectionniste",
+    "品质": 2,
+    "描述": "Terminer 3 vagues dans n’importe quelle mission en mode ∞",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 5090101,
+    "名称": "Gardien Éternel des Luno I",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 3,
+    "描述": "Terminer pour la première fois la mission [Défense ∞]",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 5090201,
+    "名称": "Gardien des Luno I",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 3,
+    "描述": "Terminer pour la première fois la mission [Défense]",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 5090301,
+    "名称": "Expert en recherches sur le terrain I",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 3,
+    "描述": "Terminer pour la première fois la mission [Excavation ∞]",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 5090401,
+    "名称": "Tu peux fuir, mais pas te cacher I",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 3,
+    "描述": "Terminer pour la première fois la mission [Capture]",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 5090501,
+    "名称": "Enquêteur au grand cœur I",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 3,
+    "描述": "Terminer pour la première fois la mission [Exploration ∞]",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 5090601,
+    "名称": "Enquêteur légendaire I",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 3,
+    "描述": "Terminer pour la première fois la mission [Précaution]",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 5090701,
+    "名称": "Négociation musclée I",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 3,
+    "描述": "Terminer pour la première fois la mission [Médiation]",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 5090801,
+    "名称": "Pas fait pour la course I",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 3,
+    "描述": "Terminer pour la première fois la mission [Transfert]",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 5090901,
+    "名称": "Éradication totale I",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 3,
+    "描述": "Terminer pour la première fois la mission [Extermination]",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 5091001,
+    "名称": "Sauvetage éclair I",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 3,
+    "描述": "Terminer pour la première fois la mission [Escorte]",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 5092001,
+    "名称": "Gardien Éternel des Luno II",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Terminer la mission [Défense ∞] un total de 20 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 5092101,
+    "名称": "Gardien des Luno II",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Terminer la mission [Défense] un total de 20 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 5092201,
+    "名称": "Expert en recherches sur le terrain II",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Terminer la mission [Excavation ∞] un total de 20 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 5092301,
+    "名称": "Tu peux fuir, mais pas te cacher II",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Terminer la mission [Capture] un total de 20 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 5092401,
+    "名称": "Enquêteur au grand cœur II",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Terminer la mission [Exploration ∞] un total de 20 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 5092501,
+    "名称": "Enquêteur légendaire II",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Terminer la mission [Précaution] un total de 20 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 5092601,
+    "名称": "Négociation musclée II",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Terminer la mission [Médiation] un total de 20 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 5092701,
+    "名称": "Pas fait pour la course II",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Terminer la mission [Transfert] un total de 20 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 5092801,
+    "名称": "Éradication totale II",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Terminer la mission [Extermination] un total de 20 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 5092901,
+    "名称": "Sauvetage éclair II",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Terminer la mission [Escorte] un total de 20 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 5093001,
+    "名称": "Aux origines de la légende",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Terminer 50 missions au total",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Apprenti": 1
+    }
+  },
+  {
+    "id": 5093101,
+    "名称": "Confrérie des Chasseurs de Phoxène",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Terminer 20 missions au total en mode coop",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Bien entouré": 1
+    }
+  },
+  {
+    "id": 5130101,
+    "名称": "Évasion impeccable",
+    "分类": "Le perfectionniste",
+    "品质": 2,
+    "描述": "Terminer une mission [Médiation] sans déclencher de Piège rebondissant",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 5150101,
+    "名称": "Infiltration parfaite",
+    "分类": "Le perfectionniste",
+    "品质": 2,
+    "描述": "Terminer une mission [Escorte] sans déclencher le décompte d’exécution",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 5160101,
+    "名称": "As de la chance",
+    "分类": "Le perfectionniste",
+    "品质": 2,
+    "描述": "Dans une mission [Escorte], libérer la cible après avoir forcé une seule cellule",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 5170101,
+    "名称": "Tenter le diable",
+    "分类": "Le perfectionniste",
+    "品质": 2,
+    "描述": "Dans une mission [Escorte], libérer la cible alors qu’il reste moins de 5 s au décompte",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 5180101,
+    "名称": "Infiltration violente",
+    "分类": "Le perfectionniste",
+    "品质": 2,
+    "描述": "Dans une mission [Escorte], vaincre toutes les patrouilles",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 5190101,
+    "名称": "Fragile : Manipuler avec précaution",
+    "分类": "Le perfectionniste",
+    "品质": 2,
+    "描述": "Terminer une mission [Transfert] sans qu’aucun Drone magnétique n’explose",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 5200101,
+    "名称": "Défenseur des Luno",
+    "分类": "Le perfectionniste",
+    "品质": 2,
+    "描述": "Terminer une mission [Défense] sans que le Noyau défensif ne subisse de dégâts",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 5210101,
+    "名称": "Défenseur ultime des Luno",
+    "分类": "Le perfectionniste",
+    "品质": 2,
+    "描述": "Terminer une mission [Défense ∞] sans que le Noyau défensif ne subisse de dégâts",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 5220101,
+    "名称": "Immunisé aux toxines",
+    "分类": "Le perfectionniste",
+    "品质": 2,
+    "描述": "Terminer une mission [Exploration ∞] sans utiliser de Réservoir de sérum",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 5230101,
+    "名称": "Chance en carton",
+    "分类": "Le perfectionniste",
+    "品质": 2,
+    "描述": "Dans une mission [Escorte], libérer la cible à la 4ᵉ tentative de résolution du mécanisme après trois échecs consécutifs",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 5250101,
+    "名称": "Coup de bluff",
+    "分类": "Le perfectionniste",
+    "品质": 2,
+    "描述": "Remporter une mission [Médiation] sans vaincre aucun chef des Déchus",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 5260101,
+    "名称": "Pas de témoins",
+    "分类": "Le perfectionniste",
+    "品质": 2,
+    "描述": "Remporter une mission [Médiation] après avoir vaincu tous les chefs des Déchus",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 5270101,
+    "名称": "Vertu de miséricorde",
+    "分类": "Le perfectionniste",
+    "品质": 2,
+    "描述": "Remporter n’importe quelle mission sans vaincre un seul ennemi",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 6010101,
+    "名称": "Un futur prometteur I",
+    "分类": "Vers le sommet",
+    "品质": 3,
+    "描述": "Posséder 1 personnages Niv. 60",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 5000,
+      "Title: Éclairé": 1
+    }
+  },
+  {
+    "id": 6010102,
+    "名称": "Un futur prometteur II",
+    "分类": "Vers le sommet",
+    "品质": 2,
+    "描述": "Posséder 5 personnages Niv. 60",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 6010103,
+    "名称": "Un futur prometteur III",
+    "分类": "Vers le sommet",
+    "品质": 1,
+    "描述": "Posséder 10 personnages Niv. 60",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 6020101,
+    "名称": "À trois, c’est mieux I",
+    "分类": "Vers le sommet",
+    "品质": 3,
+    "描述": "Posséder 1 personnages ayant atteint la phase 6 d’ascension",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 6020201,
+    "名称": "À trois, c’est mieux II",
+    "分类": "Vers le sommet",
+    "品质": 2,
+    "描述": "Posséder 5 personnages ayant atteint la phase 6 d’ascension",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 6020202,
+    "名称": "À trois, c’est mieux III",
+    "分类": "Vers le sommet",
+    "品质": 1,
+    "描述": "Posséder 10 personnages ayant atteint la phase 6 d’ascension",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Aguerri": 1
+    }
+  },
+  {
+    "id": 6040101,
+    "名称": "Limite du pouvoir I",
+    "分类": "Vers le sommet",
+    "品质": 3,
+    "描述": "Ajuster l’affinité d’un emplacement de Sceau démoniaque 5 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 5000,
+      "Title: Approprié": 1
+    }
+  },
+  {
+    "id": 6040102,
+    "名称": "Limite du pouvoir II",
+    "分类": "Vers le sommet",
+    "品质": 2,
+    "描述": "Ajuster l’affinité d’un emplacement de Sceau démoniaque 10 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 6040103,
+    "名称": "Limite du pouvoir III",
+    "分类": "Vers le sommet",
+    "品质": 1,
+    "描述": "Ajuster l’affinité d’un emplacement de Sceau démoniaque 20 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 6050101,
+    "名称": "Limite du pouvoir — Berenica",
+    "分类": "Vers le sommet",
+    "品质": 3,
+    "描述": "Ajuster l’affinité d’un emplacement de Sceau démoniaque de Berenica 2 fois",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 6060101,
+    "名称": "Mon ADN s’active I",
+    "分类": "Vers le sommet",
+    "品质": 3,
+    "描述": "Atteindre le niveau 6 d’Intron pour 1 personnages",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 6060102,
+    "名称": "Mon ADN s’active II",
+    "分类": "Vers le sommet",
+    "品质": 2,
+    "描述": "Atteindre le niveau 6 d’Intron pour 5 personnages",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 6060103,
+    "名称": "Mon ADN s’active III",
+    "分类": "Vers le sommet",
+    "品质": 1,
+    "描述": "Atteindre le niveau 6 d’Intron pour 10 personnages",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Éveillé": 1
+    }
+  },
+  {
+    "id": 6070101,
+    "名称": "Mon ADN s’active — Berenica",
+    "分类": "Vers le sommet",
+    "品质": 3,
+    "描述": "Améliorer le niveau d’Intron de Berenica au Niv. 6",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 6080101,
+    "名称": "Un regard en arrière I",
+    "分类": "Liste de souhaits",
+    "品质": 3,
+    "描述": "Obtenir 5 personnages",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 6080102,
+    "名称": "Un regard en arrière II",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Obtenir 10 personnages",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 6080103,
+    "名称": "Un regard en arrière III",
+    "分类": "Liste de souhaits",
+    "品质": 1,
+    "描述": "Obtenir 20 personnages",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Fatidique": 1
+    }
+  },
+  {
+    "id": 7010101,
+    "名称": "L’inoubliable",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "Terminer la quête : « Murmures des sables »",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Au-delà du Royaume des Sables": 1,
+      "Title: Être de songes": 1
+    }
+  },
+  {
+    "id": 7010201,
+    "名称": "Saisir l’instant",
+    "分类": "Entre deux rives",
+    "品质": 3,
+    "描述": "Terminer la quête : « La Luno errante »",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 7010501,
+    "名称": "Nouveau monde",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "Terminer la quête : « Renaissance »",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Impérial": 1,
+      "Title: Vagabond": 1
+    }
+  },
+  {
+    "id": 7010601,
+    "名称": "Guide de survie impérial",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "Terminer la quête : « L’art de survivre »",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Chasseur de Phoxène": 1
+    }
+  },
+  {
+    "id": 7010701,
+    "名称": "Le prix de la vérité",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "Terminer la quête : « Le secret derrière la porte »",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Étranger": 1
+    }
+  },
+  {
+    "id": 7010801,
+    "名称": "Terre aux fleurs épanouies",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "Terminer la quête : « Porté par la brise »",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Honoré par la fleur blanche": 1
+    }
+  },
+  {
+    "id": 7010901,
+    "名称": "Le pari du roi",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "Terminer la quête : « Les Observateurs »",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Insensé": 1
+    }
+  },
+  {
+    "id": 7011001,
+    "名称": "Transcendance",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "Terminer la quête : « Le jour du jugement »",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Injustement accusé": 1
+    }
+  },
+  {
+    "id": 7011101,
+    "名称": "Telle une proie impuissante",
+    "分类": "Entre deux rives",
+    "品质": 3,
+    "描述": "Être témoin du destin d’un Charon... ou peut-être de tous les Charons.",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 7011201,
+    "名称": "Sur ses traces",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "Au fil des tours du temps, les souvenirs défilent comme des ombres dans une lanterne.",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 7011301,
+    "名称": "Compagnons des flammes",
+    "分类": "Entre deux rives",
+    "品质": 3,
+    "描述": "Allumer une lanterne dans la Fosse de Glevum pour ceux qui suivront.",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 7011401,
+    "名称": "Home, Sweet Home",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "S’installer au Sanctuaire.",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Comme de la famille": 1
+    }
+  },
+  {
+    "id": 7011501,
+    "名称": "Le coût de la vérité",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "« Si je ne peux vivre comme un être humain, alors laissez-moi mourir comme tel. »",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 7011601,
+    "名称": "Ton reflet",
+    "分类": "Entre deux rives",
+    "品质": 1,
+    "描述": "Cette photo se souvient de votre nom, comme de l’écho de ma voix.",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 7011701,
+    "名称": "Chasseur de Phoxène professionnel",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "Survivre à l’entraînement infernal de l’Étranger.",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 7011801,
+    "名称": "Visiteur de la Mer du Silence",
+    "分类": "Entre deux rives",
+    "品质": 3,
+    "描述": "Ramer contre le courant, sans cesse ramené vers les jours d’autrefois.",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 7011901,
+    "名称": "Bonjour, Givrelac",
+    "分类": "Entre deux rives",
+    "品质": 1,
+    "描述": "Un nouveau monde, un nouveau départ.",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Rompu à la ville": 1
+    }
+  },
+  {
+    "id": 7012001,
+    "名称": "Des fleurs pour une jeune fille",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "« Je suis venu te ramener à la maison. »",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 7012101,
+    "名称": "Art de l’explosion",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "Surcharger le réservoir Phoxichor pour détruire la salle des machines.",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 7012201,
+    "名称": "Feu ! Feu !",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "Utiliser la tourelle pour ouvrir la voie vers la Salle de commande centrale.",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 7012301,
+    "名称": "Viens, douce mort",
+    "分类": "Entre deux rives",
+    "品质": 3,
+    "描述": "Tic, tac...",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 7012401,
+    "名称": "La bannière",
+    "分类": "Entre deux rives",
+    "品质": 3,
+    "描述": "Ne tentez jamais le destin en disant : « Je ferai ça quand la guerre sera finie. »",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 7012501,
+    "名称": "Sous la pluie battante",
+    "分类": "Entre deux rives",
+    "品质": 3,
+    "描述": "« S’il n’y a de place que pour une personne sous le parapluie, alors marchons ensemble sous la pluie. »",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 5000,
+      "Title: Volonté": 1
+    }
+  },
+  {
+    "id": 7012601,
+    "名称": "Marqué par les flammes",
+    "分类": "Entre deux rives",
+    "品质": 1,
+    "描述": "Renaître de la prison des flammes.",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 7012701,
+    "名称": "À la jeunesse perdue",
+    "分类": "Entre deux rives",
+    "品质": 3,
+    "描述": "Terminer la quête secondaire : « Là où fleurissait l’osmanthe »",
+    "版本": "1.1",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 7012801,
+    "名称": "Capitaine, ne tirez pas !",
+    "分类": "Entre deux rives",
+    "品质": 3,
+    "描述": "Terminer la quête secondaire : « Moment de gloire »",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Antagoniste": 1
+    }
+  },
+  {
+    "id": 7013101,
+    "名称": "Hier n’est plus",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "Source : Terminer la quête « Temps de l’innocence »",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 7013201,
+    "名称": "Verre brisé",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "Source : Terminer la quête « La terre écarlate »",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Démon": 1
+    }
+  },
+  {
+    "id": 7013301,
+    "名称": "Le courage de survivre",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "Source : Terminer la quête « Requiem pour les sans-nom »",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 7013401,
+    "名称": "Une seule vérité",
+    "分类": "Entre deux rives",
+    "品质": 3,
+    "描述": "Déduire la probable cachette de l’agresseur dans l’affaire de la Traque aux Charons.",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 5000,
+      "Title: Sagace": 1
+    }
+  },
+  {
+    "id": 7013501,
+    "名称": "Les Vengeurs",
+    "分类": "Entre deux rives",
+    "品质": 1,
+    "描述": "Faire face aux monstres qui vous ont jadis blessé.",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Dément": 1
+    }
+  },
+  {
+    "id": 7013601,
+    "名称": "La détermination de la jeune fille",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "« Je ne regarderai plus jamais quelqu’un mourir à cause d’un Souillé. »",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 7013701,
+    "名称": "Jamais bredouille",
+    "分类": "Entre deux rives",
+    "品质": 3,
+    "描述": "Pêcher un gros poisson pour les habitants de Brumelac.",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 7013801,
+    "名称": "Le fantôme des égouts",
+    "分类": "Entre deux rives",
+    "品质": 3,
+    "描述": "Nous vivons tous dans le caniveau, mais certains d’entre nous lèvent encore les yeux vers les étoiles.",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 7013901,
+    "名称": "Par quelle salutation répondre ?",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "J’ai imaginé nos retrouvailles mille fois — jamais ainsi.",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 7014001,
+    "名称": "Pour la liberté",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "Déchirer la cage, même s’il ne reste que vos mains en lambeaux.",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 7014101,
+    "名称": "Une révérence parfaite",
+    "分类": "Entre deux rives",
+    "品质": 1,
+    "描述": "« À la seule représentation réussie de ma vie. »",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Sous les étoiles": 1,
+      "Title: Comédien": 1
+    }
+  },
+  {
+    "id": 8010101,
+    "名称": "Nouvelle rencontre I",
+    "分类": "Voyage entre amis",
+    "品质": 3,
+    "描述": "Ajouter 5 amis",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 5000,
+      "Title: Meilleur ami": 1
+    }
+  },
+  {
+    "id": 8010102,
+    "名称": "Nouvelle rencontre II",
+    "分类": "Voyage entre amis",
+    "品质": 3,
+    "描述": "Ajouter 20 amis",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 5000,
+      "Title: Festif": 1,
+      "Title: Ami": 1
+    }
+  },
+  {
+    "id": 9010401,
+    "名称": "Club des forgerons I",
+    "分类": "Vers le sommet",
+    "品质": 3,
+    "描述": "Forger un total de 1 plans d’arme",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 9010402,
+    "名称": "Club des forgerons II",
+    "分类": "Vers le sommet",
+    "品质": 2,
+    "描述": "Forger un total de 5 plans d’arme",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 9010403,
+    "名称": "Club des forgerons III",
+    "分类": "Vers le sommet",
+    "品质": 1,
+    "描述": "Forger un total de 10 plans d’arme",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Aîné": 1
+    }
+  },
+  {
+    "id": 9010501,
+    "名称": "Initiation à la forge I",
+    "分类": "Vers le sommet",
+    "品质": 3,
+    "描述": "Forger 1 objet",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 5000,
+      "Title: Forgeron": 1
+    }
+  },
+  {
+    "id": 9010502,
+    "名称": "Initiation à la forge II",
+    "分类": "Vers le sommet",
+    "品质": 2,
+    "描述": "Forger 5 objets",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 9010503,
+    "名称": "Initiation à la forge III",
+    "分类": "Vers le sommet",
+    "品质": 1,
+    "描述": "Forger 10 objets",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 9910101,
+    "名称": "Ascension du héros I",
+    "分类": "Entre deux rives",
+    "品质": 3,
+    "描述": "Atteindre le Niveau d’Aventure 10",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 9910201,
+    "名称": "Ascension du héros II",
+    "分类": "Entre deux rives",
+    "品质": 3,
+    "描述": "Atteindre le Niveau d’Aventure 20",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 9910301,
+    "名称": "Ascension du héros III",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "Atteindre le Niveau d’Aventure 30",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 9910401,
+    "名称": "Ascension du héros IV",
+    "分类": "Entre deux rives",
+    "品质": 2,
+    "描述": "Atteindre le Niveau d’Aventure 40",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 9910501,
+    "名称": "Ascension du héros V",
+    "分类": "Entre deux rives",
+    "品质": 1,
+    "描述": "Atteindre le Niveau d’Aventure 50",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 9910601,
+    "名称": "Ascension du héros VI",
+    "分类": "Entre deux rives",
+    "品质": 1,
+    "描述": "Atteindre le Niveau d’Aventure 60",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Héros": 1
+    }
+  },
+  {
+    "id": 10010101,
+    "名称": "Mille fois, je t’ai cherché I",
+    "分类": "Liste de souhaits",
+    "品质": 3,
+    "描述": "Effectuer un total de 20 évocations",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 5000,
+      "Title: Éblouissant": 1
+    }
+  },
+  {
+    "id": 10010102,
+    "名称": "Mille fois, je t’ai cherché II",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Effectuer un total de 50 évocations",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 10010103,
+    "名称": "Mille fois, je t’ai cherché III",
+    "分类": "Liste de souhaits",
+    "品质": 1,
+    "描述": "Effectuer un total de 100 évocations",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Mignon et irrésistible": 1,
+      "Title: Mère": 1,
+      "Title: Père": 1
+    }
+  },
+  {
+    "id": 10100101,
+    "名称": "Par-delà l’eau, l’herbe et l’île",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Trouver au total 8 Sphères d’exploration laissées par Luno, l’exploratrice sur l’Île du Purgatoire",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 10100201,
+    "名称": "Par-delà l’eau, l’herbe et la ville",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Trouver au total 20 Sphères d’exploration laissées par Luno, l’exploratrice dans les Environs de Givrelac",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 10100301,
+    "名称": "Par-delà l’eau, l’herbe et la forteresse",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Trouver au total 10 Sphères d’exploration laissées par Luno, l’exploratrice à la Forteresse de Lonza",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 10100401,
+    "名称": "Par-delà l’eau, l’herbe et la bruine",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Trouver au total 8 Sphères d’exploration laissées par Luno, l’exploratrice à Port-des-Brumes",
+    "版本": "1.1",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 10100501,
+    "名称": "Maître des runes I",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Obtenir un total de 10 Runes de Taixu",
+    "版本": "1.1",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 10100502,
+    "名称": "Maître des runes II",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Obtenir un total de 80 Runes de Taixu",
+    "版本": "1.1",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 10100503,
+    "名称": "Maître des runes III",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Obtenir un total de 160 Runes de Taixu",
+    "版本": "1.1",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 10100504,
+    "名称": "Maître des runes IV",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Obtenir un total de 220 Runes de Taixu",
+    "版本": "1.1",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 17002001,
+    "名称": "Instants figés : Berenica",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "Lire intégralement l’Anthologie du temps de Berenica dans les Fragments de mémoire du Sanctuaire.",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: De Berenica": 1
+    }
+  },
+  {
+    "id": 17002002,
+    "名称": "Instants figés : Phantasio",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "Lire intégralement l’Anthologie du temps de Phantasio dans les Fragments de mémoire du Sanctuaire.",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: De Phantasio": 1
+    }
+  },
+  {
+    "id": 17002004,
+    "名称": "Instants figés : Dame Nifle",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "Lire intégralement l’Anthologie du temps de Dame Nifle dans les Fragments de mémoire du Sanctuaire.",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: De Dame Nifle": 1
+    }
+  },
+  {
+    "id": 17002005,
+    "名称": "Instants figés : Kezhou",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "Lire intégralement l’Anthologie du temps de Kezhou dans les Fragments de mémoire du Sanctuaire.",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: De Kezhou": 1
+    }
+  },
+  {
+    "id": 17002007,
+    "名称": "Instants figés : Fina",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "Lire intégralement l’Anthologie du temps de Fina dans les Fragments de mémoire du Sanctuaire.",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: De Fina": 1
+    }
+  },
+  {
+    "id": 17002008,
+    "名称": "Instants figés : Rebecca",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "Lire intégralement l’Anthologie du temps de Rebecca dans les Fragments de mémoire du Sanctuaire.",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: De Rebecca": 1
+    }
+  },
+  {
+    "id": 17002010,
+    "名称": "Instants figés : Tabethe",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "Lire intégralement l’Anthologie du temps de Tabethe dans les Fragments de mémoire du Sanctuaire.",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: De Tabethe": 1
+    }
+  },
+  {
+    "id": 17002011,
+    "名称": "Instants figés : Fushu",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "Lire intégralement l’Anthologie du temps de Fushu dans les Fragments de mémoire du Sanctuaire.",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: De Fushu": 1
+    }
+  },
+  {
+    "id": 17002012,
+    "名称": "Instants figés : Lynn",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "Lire intégralement l’Anthologie du temps de Lynn dans les Fragments de mémoire du Sanctuaire.",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: De Lynn": 1
+    }
+  },
+  {
+    "id": 17002014,
+    "名称": "Instants figés : Yale et Oliver",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "Lire intégralement l’Anthologie du temps de Yale et Oliver dans les Fragments de mémoire du Sanctuaire.",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: De Yale": 1,
+      "Title: D’Oliver": 1
+    }
+  },
+  {
+    "id": 17002015,
+    "名称": "Instants figés : Vulcera",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "Lire intégralement l’Anthologie du temps de Vulcera dans les Fragments de mémoire du Sanctuaire.",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: De Vulcera": 1
+    }
+  },
+  {
+    "id": 17002017,
+    "名称": "Instants figés : Margie",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "Lire intégralement l’Anthologie du temps de Margie dans les Fragments de mémoire du Sanctuaire.",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: De Margie": 1
+    }
+  },
+  {
+    "id": 17002018,
+    "名称": "Instants figés : Rhythm",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "Lire intégralement l’Anthologie du temps de Rhythm dans les Fragments de mémoire du Sanctuaire.",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: De Rhythm": 1
+    }
+  },
+  {
+    "id": 17002021,
+    "名称": "Instants figés : Randy",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "Lire intégralement l’Anthologie du temps de Randy dans les Fragments de mémoire du Sanctuaire.",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: De Randy": 1
+    }
+  },
+  {
+    "id": 17002022,
+    "名称": "Instants figés : Sibylle",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "Lire intégralement l’Anthologie du temps de Sibylle dans les Fragments de mémoire du Sanctuaire.",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: De Sibylle": 1
+    }
+  },
+  {
+    "id": 17002023,
+    "名称": "Instants figés : Truffle et Filbert",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "Lire intégralement l’Anthologie du temps de Truffle et Filbert dans les Fragments de mémoire du Sanctuaire.",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: De Truffle": 1,
+      "Title: De Filbert": 1
+    }
+  },
+  {
+    "id": 17002024,
+    "名称": "Instants figés : L’Étranger",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "Lire intégralement l’Anthologie du temps de l’Étranger dans les Fragments de mémoire du Sanctuaire.",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: De l’Étranger": 1
+    }
+  },
+  {
+    "id": 17002025,
+    "名称": "Instants figés : Psyche",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "Lire intégralement l’Anthologie du temps de Psyche dans les Fragments de mémoire du Sanctuaire.",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: De Psyche": 1
+    }
+  },
+  {
+    "id": 17002026,
+    "名称": "Instants figés : Daphne",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "Lire intégralement l’Anthologie du temps de Daphne dans les Fragments de mémoire du Sanctuaire.",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: De Daphne": 1
+    }
+  },
+  {
+    "id": 17003001,
+    "名称": "Un moment de répit : Berenica",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Berenica au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Berenica": 1
+    }
+  },
+  {
+    "id": 17003002,
+    "名称": "Un moment de répit : Phantasio",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Phantasio au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Phantasio": 1
+    }
+  },
+  {
+    "id": 17003003,
+    "名称": "Un moment de répit : Lisbell",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Lisbell au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Lisbell": 1
+    }
+  },
+  {
+    "id": 17003004,
+    "名称": "Un moment de répit : Dame Nifle",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Dame Nifle au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Dame Nifle": 1
+    }
+  },
+  {
+    "id": 17003005,
+    "名称": "Un moment de répit : Kezhou",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Kezhou au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Kezhou": 1
+    }
+  },
+  {
+    "id": 17003007,
+    "名称": "Un moment de répit : Fina",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Fina au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Fina": 1
+    }
+  },
+  {
+    "id": 17003008,
+    "名称": "Un moment de répit : Rebecca",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Rebecca au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Rebecca": 1
+    }
+  },
+  {
+    "id": 17003010,
+    "名称": "Un moment de répit : Tabethe",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Tabethe au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Tabethe": 1
+    }
+  },
+  {
+    "id": 17003011,
+    "名称": "Un moment de répit : Fushu",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Fushu au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Fushu": 1
+    }
+  },
+  {
+    "id": 17003012,
+    "名称": "Un moment de répit : Lynn",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Lynn au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Lynn": 1
+    }
+  },
+  {
+    "id": 17003014,
+    "名称": "Un moment de répit : Yale et Oliver",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Yale et Oliver au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Yale": 1,
+      "Title: Oliver": 1
+    }
+  },
+  {
+    "id": 17003015,
+    "名称": "Un moment de répit : Vulcera",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Vulcera au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Vulcera": 1
+    }
+  },
+  {
+    "id": 17003017,
+    "名称": "Un moment de répit : Margie",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Margie au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Margie": 1
+    }
+  },
+  {
+    "id": 17003018,
+    "名称": "Un moment de répit : Rhythm",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Rhythm au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Rhythm": 1
+    }
+  },
+  {
+    "id": 17003019,
+    "名称": "Un moment de répit : Zhiliu",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Zhiliu au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Zhiliu": 1
+    }
+  },
+  {
+    "id": 17003020,
+    "名称": "Un moment de répit : Yuming",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Yuming au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Yuming": 1
+    }
+  },
+  {
+    "id": 17003021,
+    "名称": "Un moment de répit : Randy",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Randy au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Randy": 1
+    }
+  },
+  {
+    "id": 17003022,
+    "名称": "Un moment de répit : Sibylle",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Sibylle au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Sibylle": 1
+    }
+  },
+  {
+    "id": 17003023,
+    "名称": "Un moment de répit : Truffle et Filbert",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Truffle et Filbert au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Truffle": 1,
+      "Title: Filbert": 1
+    }
+  },
+  {
+    "id": 17003024,
+    "名称": "Un moment de répit : L’Étranger",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter l’Étranger au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: L’Étranger": 1
+    }
+  },
+  {
+    "id": 17003025,
+    "名称": "Un moment de répit : Psyche",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Psyche au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Psyche": 1
+    }
+  },
+  {
+    "id": 17003026,
+    "名称": "Un moment de répit : Daphne",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Daphne au Sanctuaire et lui parler une fois",
+    "版本": "1.2",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Daphne": 1
+    }
+  },
+  {
+    "id": 20010101,
+    "名称": "Dés pipés I",
+    "分类": "Voyage entre amis",
+    "品质": 3,
+    "描述": "Réussir 5 Tests d’Impression (hors Boutique d’Impressions)",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 20010102,
+    "名称": "Dés pipés II",
+    "分类": "Voyage entre amis",
+    "品质": 2,
+    "描述": "Réussir 10 Tests d’Impression (hors Boutique d’Impressions)",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 20010103,
+    "名称": "Dés pipés III",
+    "分类": "Voyage entre amis",
+    "品质": 1,
+    "描述": "Réussir 50 Tests d’Impression (hors Boutique d’Impressions)",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Œuf": 1
+    }
+  },
+  {
+    "id": 20030101,
+    "名称": "Mignon et irrésistible — Hyperborea",
+    "分类": "Voyage entre amis",
+    "品质": 3,
+    "描述": "Porter toutes les Impressions de l’Empire Hyperboréen à 30",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 20030102,
+    "名称": "Sagesse prodigieuse — Hyperborea",
+    "分类": "Voyage entre amis",
+    "品质": 1,
+    "描述": "Porter l’Impression [Sagesse] dans l’Empire Hyperboréen à 100",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Ingénieux": 1
+    }
+  },
+  {
+    "id": 20030103,
+    "名称": "Justice à l’œuvre — Hyperborea",
+    "分类": "Voyage entre amis",
+    "品质": 1,
+    "描述": "Porter l’Impression [Morale] dans l’Empire Hyperboréen à 100",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Vertueux": 1
+    }
+  },
+  {
+    "id": 20030104,
+    "名称": "Guide de vie — Hyperborea",
+    "分类": "Voyage entre amis",
+    "品质": 1,
+    "描述": "Porter l’Impression [Empathie] dans l’Empire Hyperboréen à 100",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Attentionné": 1
+    }
+  },
+  {
+    "id": 20030105,
+    "名称": "Berceau du chaos — Hyperborea",
+    "分类": "Voyage entre amis",
+    "品质": 1,
+    "描述": "Porter l’Impression [Chaos] dans l’Empire Hyperboréen à 100",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Chaotique mauvais": 1
+    }
+  },
+  {
+    "id": 20030106,
+    "名称": "Mignon et irrésistible — Hyperborea II",
+    "分类": "Voyage entre amis",
+    "品质": 1,
+    "描述": "Porter n’importe quelle Impression dans l’Empire Hyperboréen à 100",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Célèbre": 1
+    }
+  },
+  {
+    "id": 20030107,
+    "名称": "Philosophie de survie — Hyperborea",
+    "分类": "Voyage entre amis",
+    "品质": 1,
+    "描述": "Porter l’Impression [Avantage] dans l’Empire Hyperboréen à 100",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Pragmatique": 1
+    }
+  },
+  {
+    "id": 30010101,
+    "名称": "Briller grâce à toi I",
+    "分类": "Liste de souhaits",
+    "品质": 3,
+    "描述": "Obtenir 5 accessoires",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 30010102,
+    "名称": "Briller grâce à toi II",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Obtenir 25 accessoires",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 30010103,
+    "名称": "Briller grâce à toi III",
+    "分类": "Liste de souhaits",
+    "品质": 1,
+    "描述": "Obtenir 50 accessoires",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Rayonnant": 1
+    }
+  },
+  {
+    "id": 50100101,
+    "名称": "La tempête approche",
+    "分类": "Instant merveilleux",
+    "品质": 2,
+    "描述": "S’asseoir sur le \"Trône du Pouvoir\"",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 50100201,
+    "名称": "Foi inébranlable",
+    "分类": "Instant merveilleux",
+    "品质": 2,
+    "描述": "Laisser derrière soi toute hésitation, plonger dans la botte de foin et goûter à la liberté d’un aigle",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 50100301,
+    "名称": "« La Montagne » de Givrelac",
+    "分类": "Instant merveilleux",
+    "品质": 2,
+    "描述": "Gravir le « sommet » de Givrelac, simplement parce que la « montagne » est là",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 50100401,
+    "名称": "Fée des glaces",
+    "分类": "Instant merveilleux",
+    "品质": 2,
+    "描述": "Sauter d’une plaque de glace à l’autre dans le bon ordre",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 50130101,
+    "名称": "Trésor merveilleux, où es-tu ? I",
+    "分类": "Découverte du monde",
+    "品质": 3,
+    "描述": "Ouvrir au total 1 coffres hors mission",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 50130102,
+    "名称": "Trésor merveilleux, où es-tu ? II",
+    "分类": "Découverte du monde",
+    "品质": 3,
+    "描述": "Ouvrir au total 10 coffres hors mission",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 50130103,
+    "名称": "Trésor merveilleux, où es-tu ? III",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Ouvrir au total 50 coffres hors mission",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 50130104,
+    "名称": "Trésor merveilleux, où es-tu ? IV",
+    "分类": "Découverte du monde",
+    "品质": 1,
+    "描述": "Ouvrir au total 100 coffres hors mission",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Chasseur de trésors": 1
+    }
+  },
+  {
+    "id": 50131701,
+    "名称": "Alors, les autres, vous y arrivez ?",
+    "分类": "Découverte du monde",
+    "品质": 3,
+    "描述": "Accomplir 1 Défis de Luno, l’exploratrice",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 50131702,
+    "名称": "Alors, les autres, vous y arrivez, hein ?",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Accomplir 5 Défis de Luno, l’exploratrice",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 50131703,
+    "名称": "Alors, les autres, vous y arrivez ou quoi ?!",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Accomplir 10 Défis de Luno, l’exploratrice",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Explorateur": 1
+    }
+  },
+  {
+    "id": 50131901,
+    "名称": "L’énigmatique I",
+    "分类": "Découverte du monde",
+    "品质": 3,
+    "描述": "Trouver 1 trésors indiqués sur les Feuilles perdues",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 50131902,
+    "名称": "L’énigmatique II",
+    "分类": "Découverte du monde",
+    "品质": 3,
+    "描述": "Trouver 5 trésors indiqués sur les Feuilles perdues",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 50131903,
+    "名称": "L’énigmatique III",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Trouver 10 trésors indiqués sur les Feuilles perdues",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 50510101,
+    "名称": "Ainsi parla Paniemon I",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Recevoir 1 fois des cadeaux de Paniemon",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 50510102,
+    "名称": "Ainsi parla Paniemon II",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Recevoir 5 fois des cadeaux de Paniemon",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 50510103,
+    "名称": "Ainsi parla Paniemon III",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Recevoir 10 fois des cadeaux de Paniemon",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 50520301,
+    "名称": "Au cœur des floraisons I",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Découvrir 1 Wishen parmi les pétales dansants",
+    "版本": "1.1",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 50520302,
+    "名称": "Au cœur des floraisons II",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Découvrir 5 Wishen parmi les pétales dansants",
+    "版本": "1.1",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 50520303,
+    "名称": "Au cœur des floraisons III",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Découvrir 10 Wishen parmi les pétales dansants",
+    "版本": "1.1",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 52000101,
+    "名称": "Oiseaux errants — Île du Purgatoire",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Enregistrer 3 positions de l’Île du Purgatoire grâce à l’Oiseau onirique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 52000201,
+    "名称": "Oiseaux errants — Quartier Est de Givrelac",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Enregistrer 9 positions de Givrelac grâce à l’Oiseau onirique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 52000301,
+    "名称": "Oiseaux errants — Égouts de Givrelac",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Enregistrer 4 positions des Égouts de Givrelac grâce à l’Oiseau onirique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 52000401,
+    "名称": "Oiseaux errants — Fosse de Glevum",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Enregistrer 2 positions de la Fosse de Glevum grâce à l’Oiseau onirique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 52000501,
+    "名称": "Oiseaux errants — Forteresse de Lonza",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Enregistrer 6 positions de la Forteresse de Lonza grâce à l’Oiseau onirique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 52000601,
+    "名称": "Oiseaux errants — Port-des-Brumes",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Enregistrer 13 positions à Port-des-Brumes grâce à l’Oiseau onirique",
+    "版本": "1.1",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 52010001,
+    "名称": "Expert en logistique",
+    "分类": "Instant merveilleux",
+    "品质": 2,
+    "描述": "Prendre le contrôle des trois ascenseurs de la Forteresse de Lonza",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 52020101,
+    "名称": "Apprenti d’honneur de la Secte Jishu",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "Résoudre 5 mécanismes de la Secte Jishu et récupérer les récompenses associées",
+    "版本": "1.1",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 107030501,
+    "名称": "Pérégrinations — Givrelac",
+    "分类": "Entre deux rives",
+    "品质": 1,
+    "描述": "Terminer toutes les quêtes secondaires de Givrelac — Empire Hyperboréen",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Glacial": 1
+    }
+  },
+  {
+    "id": 140010101,
+    "名称": "Un fan de Géniemon qui passait par là I",
+    "分类": "Liste de souhaits",
+    "品质": 3,
+    "描述": "Se lier d’amitié avec 1 Géniemon au total",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 140010102,
+    "名称": "Un fan de Géniemon qui passait par là II",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Se lier d’amitié avec 10 Géniemon au total",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 140010103,
+    "名称": "Un fan de Géniemon qui passait par là III",
+    "分类": "Liste de souhaits",
+    "品质": 1,
+    "描述": "Se lier d’amitié avec 50 Géniemon au total",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Géniemon": 1
+    }
+  },
+  {
+    "id": 140020101,
+    "名称": "Club des Géniemon I",
+    "分类": "Vers le sommet",
+    "品质": 3,
+    "描述": "Effectuer 5 ascensions de Géniemon",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 140020102,
+    "名称": "Club des Géniemon II",
+    "分类": "Vers le sommet",
+    "品质": 2,
+    "描述": "Effectuer 10 ascensions de Géniemon",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 140020103,
+    "名称": "Club des Géniemon III",
+    "分类": "Vers le sommet",
+    "品质": 1,
+    "描述": "Effectuer 50 ascensions de Géniemon",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 140030101,
+    "名称": "Je serai le meilleur Maître Géniemon I",
+    "分类": "Vers le sommet",
+    "品质": 3,
+    "描述": "Posséder 1 Géniemon ayant atteint la phase 3 d’ascension ",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 140030201,
+    "名称": "Je serai le meilleur Maître Géniemon II",
+    "分类": "Vers le sommet",
+    "品质": 2,
+    "描述": "Posséder 5 Géniemon ayant atteint la phase 3 d’ascension ",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 140030301,
+    "名称": "Je serai le meilleur Maître Géniemon III",
+    "分类": "Vers le sommet",
+    "品质": 1,
+    "描述": "Posséder 10 Géniemon ayant atteint la phase 3 d’ascension ",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Maître Géniemon": 1
+    }
+  },
+  {
+    "id": 150010101,
+    "名称": "Chef-d’œuvre intemporel",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 3,
+    "描述": "Terminer toutes les « Représentations classiques » du Théâtre immersif",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 5000,
+      "Title: Classique": 1
+    }
+  },
+  {
+    "id": 150010201,
+    "名称": "Nuit inoubliable I",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 3,
+    "描述": "Terminer 1 fois toutes les « Représentations à l’affiche » de la période en cours du Théâtre immersif",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 150010202,
+    "名称": "Nuit inoubliable II",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 2,
+    "描述": "Terminer 5 fois toutes les « Représentations à l’affiche » de la période en cours du Théâtre immersif",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 150010203,
+    "名称": "Nuit inoubliable III",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Terminer 10 fois toutes les « Représentations à l’affiche » de la période en cours du Théâtre immersif",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 150010301,
+    "名称": "Nuit blanche I",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 3,
+    "描述": "Terminer toutes les « Représentations à l’affiche » du Théâtre immersif pendant 2 périodes consécutives",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 150010401,
+    "名称": "Nuit blanche II",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 2,
+    "描述": "Terminer toutes les « Représentations à l’affiche » du Théâtre immersif pendant 3 périodes consécutives",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 150010501,
+    "名称": "Nuit blanche III",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Terminer toutes les « Représentations à l’affiche » du Théâtre immersif pendant 5 périodes consécutives",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 150010601,
+    "名称": "Nuit étoilée I",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 3,
+    "描述": "Terminer « Représentation immortelle » Acte III du Théâtre immersif",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 150010701,
+    "名称": "Nuit étoilée II",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 2,
+    "描述": "Terminer « Représentation immortelle » Acte V du Théâtre immersif",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 150010801,
+    "名称": "Nuit étoilée III",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Terminer « Représentation immortelle » Acte X du Théâtre immersif",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Épique": 1
+    }
+  },
+  {
+    "id": 160010101,
+    "名称": "Encyclopédiste d’Atlasia I",
+    "分类": "Liste de souhaits",
+    "品质": 3,
+    "描述": "Débloquer 25 entrées de l’Atlasium",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 160010102,
+    "名称": "Encyclopédiste d’Atlasia II",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Débloquer 50 entrées de l’Atlasium",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 160010103,
+    "名称": "Encyclopédiste d’Atlasia III",
+    "分类": "Liste de souhaits",
+    "品质": 1,
+    "描述": "Débloquer 75 entrées de l’Atlasium",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 5000,
+      "Title: Érudit": 1
+    }
+  },
+  {
+    "id": 170010101,
+    "名称": "Chronique du temps I",
+    "分类": "Joyeux moments",
+    "品质": 3,
+    "描述": "Débloquer 5 Fragments de mémoire dans Anthologie du temps",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 5000,
+      "Title: Hors du temps": 1
+    }
+  },
+  {
+    "id": 170010102,
+    "名称": "Chronique du temps II",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Débloquer 10 Fragments de mémoire dans Anthologie du temps",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 170010103,
+    "名称": "Chronique du temps III",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "Débloquer 20 Fragments de mémoire dans Anthologie du temps",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Souvenir": 1
+    }
+  },
+  {
+    "id": 200010101,
+    "名称": "Noir irisé I",
+    "分类": "Liste de souhaits",
+    "品质": 3,
+    "描述": "Effectuer 1 teinture",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 5000,
+      "Title: Tapageur": 1
+    }
+  },
+  {
+    "id": 200010102,
+    "名称": "Noir irisé II",
+    "分类": "Liste de souhaits",
+    "品质": 2,
+    "描述": "Effectuer 5 teintures",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 200010103,
+    "名称": "Noir irisé III",
+    "分类": "Liste de souhaits",
+    "品质": 1,
+    "描述": "Effectuer 10 teintures",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  },
+  {
+    "id": 210010101,
+    "名称": "L’émotion demeure",
+    "分类": "Voyage entre amis",
+    "品质": 2,
+    "描述": "Prendre 5 photos",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Photographe": 1
+    }
+  },
+  {
+    "id": 519001001,
+    "名称": "Service & Co. I",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 3,
+    "描述": "Effectuer un total de 10 Expéditions",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 519001002,
+    "名称": "Service & Co. II",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 2,
+    "描述": "Effectuer un total de 100 Expéditions",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 519001003,
+    "名称": "Service & Co. III",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Effectuer un total de 1000 Expéditions",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2,
+      "Title: Supérieur": 1
+    }
+  },
+  {
+    "id": 521001001,
+    "名称": "Jamais vaincu, jamais satisfait",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 3,
+    "描述": "Échouer 1 Expéditions",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 521002001,
+    "名称": "Objectif : Réussite",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 3,
+    "描述": "Réussir 1 Expéditions",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 521003001,
+    "名称": "Champion du surmenage",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 3,
+    "描述": "Obtenir une Grande réussite dans 1 Expéditions",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 2000
+    }
+  },
+  {
+    "id": 521004001,
+    "名称": "Chef d’équipe légendaire",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 3,
+    "描述": "Obtenir une Réussite parfaite dans 1 Expéditions",
+    "版本": "1.0",
+    "奖励": {
+      "Pièce": 5000,
+      "Title: Avisé": 1
+    }
+  },
+  {
+    "id": 1005160101,
+    "名称": "Je ne fais que passer I",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 2,
+    "描述": "Accomplir 1 Quêtes dynamiques",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 1005160102,
+    "名称": "Je ne fais que passer II",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 2,
+    "描述": "Accomplir 10 Quêtes dynamiques",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 1005160103,
+    "名称": "Je ne fais que passer III",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 2,
+    "描述": "Accomplir 50 Quêtes dynamiques",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 1005160104,
+    "名称": "Je ne fais que passer IV",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 2,
+    "描述": "Accomplir 100 Quêtes dynamiques",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1,
+      "Title: Inattendu": 1
+    }
+  },
+  {
+    "id": 1005170101,
+    "名称": "Au-delà des limites",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 2,
+    "描述": "Réussir 30 Épreuves de l’Oiseau onirique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 1
+    }
+  },
+  {
+    "id": 1005170201,
+    "名称": "J’adore les défis",
+    "分类": "Veni, Vidi, Vici",
+    "品质": 1,
+    "描述": "Obtenir une note de 3★ dans 20 Épreuves de l’Oiseau onirique",
+    "版本": "1.0",
+    "奖励": {
+      "Indice du Mandat scellé : Loyal": 2
+    }
+  }
+]

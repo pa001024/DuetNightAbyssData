@@ -3830,6 +3830,20 @@
                 "sequence": 100,
                 "startTime": 1672545600,
                 "unlockRaidPoint": 1200000
+              },
+              {
+                "id": 10004153,
+                "itemType": "Resource",
+                "typeId": 220,
+                "typeName": "월석 사냥 기념 코인",
+                "price": 1,
+                "priceType": 217,
+                "priceName": "파티원 초대장",
+                "num": 10,
+                "subTabId": 100041,
+                "sequence": 70,
+                "startTime": 1672545600,
+                "unlockRaidPoint": 1
               }
             ]
           }

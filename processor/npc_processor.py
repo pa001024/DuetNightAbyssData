@@ -68,10 +68,16 @@ class NpcProcessor(BaseProcessor):
         if "RelatedTalks" in npc_data:
             talks = npc_data.get("RelatedTalks")
             dialogue_chains = []
+            seen_dialogue_ids = set()
             for talk in talks:
                 chain = self._process_talk_trigger(talk, language)
                 if chain:
-                    dialogue_chains.extend(chain)
+                    for dialogue in chain:
+                        # 去重：只添加新的对话条目
+                        dialogue_id = dialogue.get("id")
+                        if dialogue_id not in seen_dialogue_ids:
+                            seen_dialogue_ids.add(dialogue_id)
+                            dialogue_chains.append(dialogue)
             if dialogue_chains:
                 processed["talks"] = dialogue_chains
 

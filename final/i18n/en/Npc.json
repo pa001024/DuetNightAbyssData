@@ -50,11 +50,6 @@
         "id": 90200001,
         "content": "I assume the role of the shattered prisoner, and you, as a watchful warden, stand sentinel over my chains.",
         "npc": 81103
-      },
-      {
-        "id": 90200001,
-        "content": "I assume the role of the shattered prisoner, and you, as a watchful warden, stand sentinel over my chains.",
-        "npc": 81103
       }
     ]
   },
@@ -243,11 +238,6 @@
         "id": 90210001,
         "content": "Patrol complete. No signs of dangerous creatures, structural damage, or suspicious markings. Routine operations may proceed without interruption. Report concluded.",
         "npc": 84101
-      },
-      {
-        "id": 90210001,
-        "content": "Patrol complete. No signs of dangerous creatures, structural damage, or suspicious markings. Routine operations may proceed without interruption. Report concluded.",
-        "npc": 84101
       }
     ]
   },
@@ -364,11 +354,6 @@
     "type": "Show",
     "icon": "Dafu",
     "talks": [
-      {
-        "id": 90190001,
-        "content": "It's delightful to see you safe and well today. Take care... The peace we all long for will surely arrive someday.",
-        "npc": 85401
-      },
       {
         "id": 90190001,
         "content": "It's delightful to see you safe and well today. Take care... The peace we all long for will surely arrive someday.",
@@ -1307,11 +1292,6 @@
         "id": 11017901,
         "content": "Go, stay in touch, and be careful.",
         "npc": 110010
-      },
-      {
-        "id": 11017901,
-        "content": "Go, stay in touch, and be careful.",
-        "npc": 110010
       }
     ]
   },
@@ -1653,11 +1633,6 @@
     "camp": "NPC",
     "type": "Normal",
     "talks": [
-      {
-        "id": 11010501,
-        "content": "Doctor... Dr Daphne... We're stuck in this bloody dump. Please, Dr Daphne, if I don't make it, do me a favour and bury me...",
-        "npc": 110045
-      },
       {
         "id": 11010501,
         "content": "Doctor... Dr Daphne... We're stuck in this bloody dump. Please, Dr Daphne, if I don't make it, do me a favour and bury me...",
@@ -2394,26 +2369,6 @@
     "camp": "NPC",
     "type": "Normal",
     "talks": [
-      {
-        "id": 20001401,
-        "content": "Oh, before I forget — I have a couple of questions:",
-        "npc": 200027
-      },
-      {
-        "id": 20001402,
-        "content": "Have you ever stood under the Heaventree? Are the legends really true — is the Heaventree so massive that its crown covers the entire sky? Could we see... a glittering canopy of crystals looking up its trunk?",
-        "npc": 200027
-      },
-      {
-        "id": 20001403,
-        "content": "And... and another question — is the sandy beach really as soft and smooth as they say — malleable like dough, and not at all rough on the feet?",
-        "npc": 200027
-      },
-      {
-        "id": 20001404,
-        "content": "Sorry for bombarding you with so many questions! I'm asking for my friends at the inn... Hehe, they are all very fascinated by your hometown.",
-        "npc": 200027
-      },
       {
         "id": 20001401,
         "content": "Oh, before I forget — I have a couple of questions:",
@@ -5058,10 +5013,6 @@
       {
         "id": 51001211,
         "content": "(In silence, the elder periodically snaps from his thoughts, letting out a lingering sigh. It's unclear whether it's a tribute to a fallen comrade or a lament for the changing times.)"
-      },
-      {
-        "id": 51001211,
-        "content": "(In silence, the elder periodically snaps from his thoughts, letting out a lingering sigh. It's unclear whether it's a tribute to a fallen comrade or a lament for the changing times.)"
       }
     ]
   },
@@ -5077,11 +5028,6 @@
     "camp": "NPC",
     "type": "Normal",
     "talks": [
-      {
-        "id": 51000812,
-        "content": "Once I've recovered, I will start my next adventure.",
-        "npc": 700032
-      },
       {
         "id": 51000812,
         "content": "Once I've recovered, I will start my next adventure.",
@@ -5103,16 +5049,6 @@
       {
         "id": 51000606,
         "content": "My precious daughter... As long as you don't leave me, I'll do anything for you...",
-        "npc": 700006
-      },
-      {
-        "id": 51000409,
-        "content": "I'm counting on you...",
-        "npc": 700006
-      },
-      {
-        "id": 51000409,
-        "content": "I'm counting on you...",
         "npc": 700006
       }
     ]
@@ -5357,16 +5293,6 @@
         "id": 510034142,
         "content": "But we all know a dark tide is rising, gaining strength. One day it will consume everything we cherish. But before that day comes, I shall journey to the source that has been prophesied.",
         "npc": 700015
-      },
-      {
-        "id": 510034141,
-        "content": "Something is about to happen! We stand upon the frozen lake, yet we perceive only coldness, deep isolation, and the frigid rigidity of our surroundings.",
-        "npc": 700015
-      },
-      {
-        "id": 510034142,
-        "content": "But we all know a dark tide is rising, gaining strength. One day it will consume everything we cherish. But before that day comes, I shall journey to the source that has been prophesied.",
-        "npc": 700015
       }
     ]
   },
@@ -5408,11 +5334,6 @@
         "id": 51001417,
         "content": "I wonder what those kids have been up to lately. They must have grown taller, haven't they?",
         "npc": 700017
-      },
-      {
-        "id": 51001417,
-        "content": "I wonder what those kids have been up to lately. They must have grown taller, haven't they?",
-        "npc": 700017
       }
     ]
   },
@@ -5441,11 +5362,6 @@
         "id": 51002311,
         "content": "...",
         "npc": 700019
-      },
-      {
-        "id": 51002311,
-        "content": "...",
-        "npc": 700019
       }
     ]
   },
@@ -5455,15 +5371,6 @@
     "camp": "NPC",
     "type": "Normal",
     "talks": [
-      {
-        "id": 51002427,
-        "content": "Ugh, my head hurts! I should go prepare dinner now. I just hope my soup might make her feel a little better.",
-        "npc": 700020
-      },
-      {
-        "id": 51002428,
-        "content": "(Although the truth is harsh, in her final days, she has finally found the answer that was forty years late. At least, she won't have to step into the grave with doubts and regrets. Perhaps this is as close to a good ending as one might hope for.)"
-      },
       {
         "id": 51002427,
         "content": "Ugh, my head hurts! I should go prepare dinner now. I just hope my soup might make her feel a little better.",
@@ -5547,11 +5454,6 @@
     "camp": "NPC",
     "type": "Normal",
     "talks": [
-      {
-        "id": 51000707,
-        "content": "Did you find anything?",
-        "npc": 700032
-      },
       {
         "id": 51000707,
         "content": "Did you find anything?",
@@ -5693,21 +5595,6 @@
         "npc": 100001
       },
       {
-        "id": 51002206,
-        "content": "Oh, wow... Thank you. Really. Thank you so much...",
-        "npc": 700048
-      },
-      {
-        "id": 51002031,
-        "content": "It was so hard to leave when I was young, and now I can't go back...",
-        "npc": 700048
-      },
-      {
-        "id": 51002032,
-        "content": "Take care.",
-        "npc": 100001
-      },
-      {
         "id": 51002031,
         "content": "It was so hard to leave when I was young, and now I can't go back...",
         "npc": 700048
@@ -5826,11 +5713,6 @@
       {
         "id": 51001602,
         "content": "(Dressed in ragged military garb, the Charon man before you sends menacing glares towards the passersby.)"
-      },
-      {
-        "id": 51001629,
-        "content": "Scram!! Don't let me catch sight of you again!! Beat it!!!",
-        "npc": 700068
       },
       {
         "id": 51001629,
@@ -5959,11 +5841,6 @@
         "id": 510034143,
         "content": "I no longer have to worry about the cold winter. Thank you so much, Phoxhunter.",
         "npc": 700080
-      },
-      {
-        "id": 510034143,
-        "content": "I no longer have to worry about the cold winter. Thank you so much, Phoxhunter.",
-        "npc": 700080
       }
     ]
   },
@@ -5991,10 +5868,6 @@
         "id": 51003703,
         "content": "It is my sincere wish that you are reunited.",
         "npc": 700081
-      },
-      {
-        "id": 51003704,
-        "content": "(You leave Belinda's tent, now understanding why Emma treasures this place. Belinda's powers may be limited, but she uses them to mend souls and soothe wounds.)"
       },
       {
         "id": 51003704,
@@ -6094,16 +5967,6 @@
         "id": 510034142,
         "content": "But we all know a dark tide is rising, gaining strength. One day it will consume everything we cherish. But before that day comes, I shall journey to the source that has been prophesied.",
         "npc": 700015
-      },
-      {
-        "id": 510034141,
-        "content": "Something is about to happen! We stand upon the frozen lake, yet we perceive only coldness, deep isolation, and the frigid rigidity of our surroundings.",
-        "npc": 700015
-      },
-      {
-        "id": 510034142,
-        "content": "But we all know a dark tide is rising, gaining strength. One day it will consume everything we cherish. But before that day comes, I shall journey to the source that has been prophesied.",
-        "npc": 700015
       }
     ]
   },
@@ -6113,11 +5976,6 @@
     "camp": "NPC",
     "type": "Normal",
     "talks": [
-      {
-        "id": 510034143,
-        "content": "I no longer have to worry about the cold winter. Thank you so much, Phoxhunter.",
-        "npc": 700080
-      },
       {
         "id": 510034143,
         "content": "I no longer have to worry about the cold winter. Thank you so much, Phoxhunter.",
@@ -8934,16 +8792,6 @@
         "npc": 701046
       },
       {
-        "id": 51126101,
-        "content": "If I'd known sooner, I would've joined right away. With EverSpring supporting me, I wouldn't have lost that big deal just for lacking a bit of capital...",
-        "npc": 701046
-      },
-      {
-        "id": 51126102,
-        "content": "Ah, my friend — are you here to apply to become a Starweaver as well?",
-        "npc": 701046
-      },
-      {
         "id": 51126111,
         "content": "I never realized being a Starweaver came with so many perks. EverSpring truly is remarkable.",
         "npc": 701046
@@ -9044,16 +8892,6 @@
     "camp": "NPC",
     "type": "Normal",
     "talks": [
-      {
-        "id": 51126401,
-        "content": "Didn't expect to stumble upon something this old today. It seems barely stable enough to read the weather, let alone fortunes...",
-        "npc": 701051
-      },
-      {
-        "id": 51126402,
-        "content": "It must date back to my great-great-grandfather's time — or perhaps even earlier. Well, you get the idea. It's ancient.",
-        "npc": 701051
-      },
       {
         "id": 51126401,
         "content": "Didn't expect to stumble upon something this old today. It seems barely stable enough to read the weather, let alone fortunes...",
@@ -9293,11 +9131,6 @@
         "npc": 701059
       },
       {
-        "id": 51126901,
-        "content": "No matter how far I wander, I always end up here again. What is this place? Who... who am I?",
-        "npc": 701059
-      },
-      {
         "id": 51126909,
         "content": "Home... but where is it? And where am I...?",
         "npc": 701059
@@ -9315,11 +9148,6 @@
     "camp": "NPC",
     "type": "Normal",
     "talks": [
-      {
-        "id": 51127001,
-        "content": "O merciful light of Lord Argent, shine through the shadowed bourne; let lone souls and lingering shades not wander, nor remain forlorn. Let the woes of yore be laid aside; this day be ferried across, bathed in kindly light.",
-        "npc": 701060
-      },
       {
         "id": 51127001,
         "content": "O merciful light of Lord Argent, shine through the shadowed bourne; let lone souls and lingering shades not wander, nor remain forlorn. Let the woes of yore be laid aside; this day be ferried across, bathed in kindly light.",
@@ -9509,25 +9337,6 @@
     "camp": "NPC",
     "type": "Normal",
     "talks": [
-      {
-        "id": 51127601,
-        "content": "Let's see... old cotton, bit of tung oil — pack it in tight. Two thin planks either side, nail 'em firm... aye, that'll hold her.",
-        "npc": 701067
-      },
-      {
-        "id": 51127602,
-        "content": "Kiddo, do me a favour — pass me the rivets from that tool kit of mine, will you? Look at these old nails — barely holding on. Leave 'em like this and she'll shake herself apart in no time.",
-        "npc": 701067
-      },
-      {
-        "id": 51127603,
-        "content": "(You follow his gesture, find the rivets, and hand them over.)"
-      },
-      {
-        "id": 51127604,
-        "content": "Cheers, kiddo. Right then... ha! Done!",
-        "npc": 701067
-      },
       {
         "id": 51127601,
         "content": "Let's see... old cotton, bit of tung oil — pack it in tight. Two thin planks either side, nail 'em firm... aye, that'll hold her.",
@@ -10506,396 +10315,6 @@
     "camp": "NPC",
     "type": "Normal",
     "talks": [
-      {
-        "id": 73000203,
-        "content": "What!? Again...? Can't you just fail once? Fine, fine... guess it still needs a bit more work.",
-        "npc": 818022
-      },
-      {
-        "id": 73000204,
-        "content": "Yep, that's more like it! Honestly? Still not sure what practical use it has... but hey, gotta be good for something.",
-        "npc": 818022
-      },
-      {
-        "id": 73000201,
-        "content": "I gave this thing another upgrade — go on, give it a whirl and help me test the tweaks. Cost me a fortune to smuggle in from Elysium, y'know. No way you're getting through this time!",
-        "npc": 818022
-      },
-      {
-        "id": 73000301,
-        "content": "You're back. Good timing — I gave it another upgrade. Last one was way too easy. But this time? I bet you'll trip at least once.",
-        "npc": 818022
-      },
-      {
-        "id": 73000303,
-        "content": "Again!? Seriously!? I've poured so much into upgrading this thing... But I'm not giving up! Just you wait — I'll get you next time!",
-        "npc": 818022
-      },
-      {
-        "id": 73000304,
-        "content": "Hah! Watching you flail around just now gave me an idea. I'll pitch it to my superior — slap this baby on the Icelake gates and stop anyone from barging in!",
-        "npc": 818022
-      },
-      {
-        "id": 73000401,
-        "content": "There you are! I've been waiting. I poured every last coin into this baby — she's a beast now. No way you're getting through this time.",
-        "npc": 818022
-      },
-      {
-        "id": 73000403,
-        "content": "Again!? Are you kidding me!? Ugh... Y'know what, forget it. I should've known better than to trust Elysian tech. This is what I get for smuggling their junk behind His Majesty's back.",
-        "npc": 818022
-      },
-      {
-        "id": 73000405,
-        "content": "Ha! Gotcha at last! This thing's a masterpiece — I oughta present it to His Majesty himself. Perfect for screening recruits. I'll finally rake in a fat bonus and pay off all the debt I racked up building it.",
-        "npc": 818022
-      },
-      {
-        "id": 73000502,
-        "content": "(The machine hums softly. A crude dial sits atop it, etched with three labels: Easy, Hard, and Extremely Hard. Looks like the handiwork of that overly chatty soldier.)",
-        "npc": 818022
-      },
-      {
-        "id": 73000202,
-        "content": "You wanna go again? Sure, why not. You nimble types really love bouncing around, huh?",
-        "npc": 818022
-      },
-      {
-        "id": 73000302,
-        "content": "You wanna go again? Sure, why not. You nimble types really love bouncing around, huh?",
-        "npc": 818022
-      },
-      {
-        "id": 73000402,
-        "content": "You wanna go again? Sure, why not. You nimble types really love bouncing around, huh?",
-        "npc": 818022
-      },
-      {
-        "id": 73000203,
-        "content": "What!? Again...? Can't you just fail once? Fine, fine... guess it still needs a bit more work.",
-        "npc": 818022
-      },
-      {
-        "id": 73000204,
-        "content": "Yep, that's more like it! Honestly? Still not sure what practical use it has... but hey, gotta be good for something.",
-        "npc": 818022
-      },
-      {
-        "id": 73000201,
-        "content": "I gave this thing another upgrade — go on, give it a whirl and help me test the tweaks. Cost me a fortune to smuggle in from Elysium, y'know. No way you're getting through this time!",
-        "npc": 818022
-      },
-      {
-        "id": 73000301,
-        "content": "You're back. Good timing — I gave it another upgrade. Last one was way too easy. But this time? I bet you'll trip at least once.",
-        "npc": 818022
-      },
-      {
-        "id": 73000303,
-        "content": "Again!? Seriously!? I've poured so much into upgrading this thing... But I'm not giving up! Just you wait — I'll get you next time!",
-        "npc": 818022
-      },
-      {
-        "id": 73000304,
-        "content": "Hah! Watching you flail around just now gave me an idea. I'll pitch it to my superior — slap this baby on the Icelake gates and stop anyone from barging in!",
-        "npc": 818022
-      },
-      {
-        "id": 73000401,
-        "content": "There you are! I've been waiting. I poured every last coin into this baby — she's a beast now. No way you're getting through this time.",
-        "npc": 818022
-      },
-      {
-        "id": 73000403,
-        "content": "Again!? Are you kidding me!? Ugh... Y'know what, forget it. I should've known better than to trust Elysian tech. This is what I get for smuggling their junk behind His Majesty's back.",
-        "npc": 818022
-      },
-      {
-        "id": 73000405,
-        "content": "Ha! Gotcha at last! This thing's a masterpiece — I oughta present it to His Majesty himself. Perfect for screening recruits. I'll finally rake in a fat bonus and pay off all the debt I racked up building it.",
-        "npc": 818022
-      },
-      {
-        "id": 73000502,
-        "content": "(The machine hums softly. A crude dial sits atop it, etched with three labels: Easy, Hard, and Extremely Hard. Looks like the handiwork of that overly chatty soldier.)",
-        "npc": 818022
-      },
-      {
-        "id": 73000202,
-        "content": "You wanna go again? Sure, why not. You nimble types really love bouncing around, huh?",
-        "npc": 818022
-      },
-      {
-        "id": 73000302,
-        "content": "You wanna go again? Sure, why not. You nimble types really love bouncing around, huh?",
-        "npc": 818022
-      },
-      {
-        "id": 73000402,
-        "content": "You wanna go again? Sure, why not. You nimble types really love bouncing around, huh?",
-        "npc": 818022
-      },
-      {
-        "id": 73000203,
-        "content": "What!? Again...? Can't you just fail once? Fine, fine... guess it still needs a bit more work.",
-        "npc": 818022
-      },
-      {
-        "id": 73000204,
-        "content": "Yep, that's more like it! Honestly? Still not sure what practical use it has... but hey, gotta be good for something.",
-        "npc": 818022
-      },
-      {
-        "id": 73000201,
-        "content": "I gave this thing another upgrade — go on, give it a whirl and help me test the tweaks. Cost me a fortune to smuggle in from Elysium, y'know. No way you're getting through this time!",
-        "npc": 818022
-      },
-      {
-        "id": 73000301,
-        "content": "You're back. Good timing — I gave it another upgrade. Last one was way too easy. But this time? I bet you'll trip at least once.",
-        "npc": 818022
-      },
-      {
-        "id": 73000303,
-        "content": "Again!? Seriously!? I've poured so much into upgrading this thing... But I'm not giving up! Just you wait — I'll get you next time!",
-        "npc": 818022
-      },
-      {
-        "id": 73000304,
-        "content": "Hah! Watching you flail around just now gave me an idea. I'll pitch it to my superior — slap this baby on the Icelake gates and stop anyone from barging in!",
-        "npc": 818022
-      },
-      {
-        "id": 73000401,
-        "content": "There you are! I've been waiting. I poured every last coin into this baby — she's a beast now. No way you're getting through this time.",
-        "npc": 818022
-      },
-      {
-        "id": 73000403,
-        "content": "Again!? Are you kidding me!? Ugh... Y'know what, forget it. I should've known better than to trust Elysian tech. This is what I get for smuggling their junk behind His Majesty's back.",
-        "npc": 818022
-      },
-      {
-        "id": 73000405,
-        "content": "Ha! Gotcha at last! This thing's a masterpiece — I oughta present it to His Majesty himself. Perfect for screening recruits. I'll finally rake in a fat bonus and pay off all the debt I racked up building it.",
-        "npc": 818022
-      },
-      {
-        "id": 73000502,
-        "content": "(The machine hums softly. A crude dial sits atop it, etched with three labels: Easy, Hard, and Extremely Hard. Looks like the handiwork of that overly chatty soldier.)",
-        "npc": 818022
-      },
-      {
-        "id": 73000202,
-        "content": "You wanna go again? Sure, why not. You nimble types really love bouncing around, huh?",
-        "npc": 818022
-      },
-      {
-        "id": 73000302,
-        "content": "You wanna go again? Sure, why not. You nimble types really love bouncing around, huh?",
-        "npc": 818022
-      },
-      {
-        "id": 73000402,
-        "content": "You wanna go again? Sure, why not. You nimble types really love bouncing around, huh?",
-        "npc": 818022
-      },
-      {
-        "id": 73000203,
-        "content": "What!? Again...? Can't you just fail once? Fine, fine... guess it still needs a bit more work.",
-        "npc": 818022
-      },
-      {
-        "id": 73000204,
-        "content": "Yep, that's more like it! Honestly? Still not sure what practical use it has... but hey, gotta be good for something.",
-        "npc": 818022
-      },
-      {
-        "id": 73000201,
-        "content": "I gave this thing another upgrade — go on, give it a whirl and help me test the tweaks. Cost me a fortune to smuggle in from Elysium, y'know. No way you're getting through this time!",
-        "npc": 818022
-      },
-      {
-        "id": 73000301,
-        "content": "You're back. Good timing — I gave it another upgrade. Last one was way too easy. But this time? I bet you'll trip at least once.",
-        "npc": 818022
-      },
-      {
-        "id": 73000303,
-        "content": "Again!? Seriously!? I've poured so much into upgrading this thing... But I'm not giving up! Just you wait — I'll get you next time!",
-        "npc": 818022
-      },
-      {
-        "id": 73000304,
-        "content": "Hah! Watching you flail around just now gave me an idea. I'll pitch it to my superior — slap this baby on the Icelake gates and stop anyone from barging in!",
-        "npc": 818022
-      },
-      {
-        "id": 73000401,
-        "content": "There you are! I've been waiting. I poured every last coin into this baby — she's a beast now. No way you're getting through this time.",
-        "npc": 818022
-      },
-      {
-        "id": 73000403,
-        "content": "Again!? Are you kidding me!? Ugh... Y'know what, forget it. I should've known better than to trust Elysian tech. This is what I get for smuggling their junk behind His Majesty's back.",
-        "npc": 818022
-      },
-      {
-        "id": 73000405,
-        "content": "Ha! Gotcha at last! This thing's a masterpiece — I oughta present it to His Majesty himself. Perfect for screening recruits. I'll finally rake in a fat bonus and pay off all the debt I racked up building it.",
-        "npc": 818022
-      },
-      {
-        "id": 73000502,
-        "content": "(The machine hums softly. A crude dial sits atop it, etched with three labels: Easy, Hard, and Extremely Hard. Looks like the handiwork of that overly chatty soldier.)",
-        "npc": 818022
-      },
-      {
-        "id": 73000202,
-        "content": "You wanna go again? Sure, why not. You nimble types really love bouncing around, huh?",
-        "npc": 818022
-      },
-      {
-        "id": 73000302,
-        "content": "You wanna go again? Sure, why not. You nimble types really love bouncing around, huh?",
-        "npc": 818022
-      },
-      {
-        "id": 73000402,
-        "content": "You wanna go again? Sure, why not. You nimble types really love bouncing around, huh?",
-        "npc": 818022
-      },
-      {
-        "id": 73000203,
-        "content": "What!? Again...? Can't you just fail once? Fine, fine... guess it still needs a bit more work.",
-        "npc": 818022
-      },
-      {
-        "id": 73000204,
-        "content": "Yep, that's more like it! Honestly? Still not sure what practical use it has... but hey, gotta be good for something.",
-        "npc": 818022
-      },
-      {
-        "id": 73000201,
-        "content": "I gave this thing another upgrade — go on, give it a whirl and help me test the tweaks. Cost me a fortune to smuggle in from Elysium, y'know. No way you're getting through this time!",
-        "npc": 818022
-      },
-      {
-        "id": 73000301,
-        "content": "You're back. Good timing — I gave it another upgrade. Last one was way too easy. But this time? I bet you'll trip at least once.",
-        "npc": 818022
-      },
-      {
-        "id": 73000303,
-        "content": "Again!? Seriously!? I've poured so much into upgrading this thing... But I'm not giving up! Just you wait — I'll get you next time!",
-        "npc": 818022
-      },
-      {
-        "id": 73000304,
-        "content": "Hah! Watching you flail around just now gave me an idea. I'll pitch it to my superior — slap this baby on the Icelake gates and stop anyone from barging in!",
-        "npc": 818022
-      },
-      {
-        "id": 73000401,
-        "content": "There you are! I've been waiting. I poured every last coin into this baby — she's a beast now. No way you're getting through this time.",
-        "npc": 818022
-      },
-      {
-        "id": 73000403,
-        "content": "Again!? Are you kidding me!? Ugh... Y'know what, forget it. I should've known better than to trust Elysian tech. This is what I get for smuggling their junk behind His Majesty's back.",
-        "npc": 818022
-      },
-      {
-        "id": 73000405,
-        "content": "Ha! Gotcha at last! This thing's a masterpiece — I oughta present it to His Majesty himself. Perfect for screening recruits. I'll finally rake in a fat bonus and pay off all the debt I racked up building it.",
-        "npc": 818022
-      },
-      {
-        "id": 73000502,
-        "content": "(The machine hums softly. A crude dial sits atop it, etched with three labels: Easy, Hard, and Extremely Hard. Looks like the handiwork of that overly chatty soldier.)",
-        "npc": 818022
-      },
-      {
-        "id": 73000202,
-        "content": "You wanna go again? Sure, why not. You nimble types really love bouncing around, huh?",
-        "npc": 818022
-      },
-      {
-        "id": 73000302,
-        "content": "You wanna go again? Sure, why not. You nimble types really love bouncing around, huh?",
-        "npc": 818022
-      },
-      {
-        "id": 73000402,
-        "content": "You wanna go again? Sure, why not. You nimble types really love bouncing around, huh?",
-        "npc": 818022
-      },
-      {
-        "id": 73000203,
-        "content": "What!? Again...? Can't you just fail once? Fine, fine... guess it still needs a bit more work.",
-        "npc": 818022
-      },
-      {
-        "id": 73000204,
-        "content": "Yep, that's more like it! Honestly? Still not sure what practical use it has... but hey, gotta be good for something.",
-        "npc": 818022
-      },
-      {
-        "id": 73000201,
-        "content": "I gave this thing another upgrade — go on, give it a whirl and help me test the tweaks. Cost me a fortune to smuggle in from Elysium, y'know. No way you're getting through this time!",
-        "npc": 818022
-      },
-      {
-        "id": 73000301,
-        "content": "You're back. Good timing — I gave it another upgrade. Last one was way too easy. But this time? I bet you'll trip at least once.",
-        "npc": 818022
-      },
-      {
-        "id": 73000303,
-        "content": "Again!? Seriously!? I've poured so much into upgrading this thing... But I'm not giving up! Just you wait — I'll get you next time!",
-        "npc": 818022
-      },
-      {
-        "id": 73000304,
-        "content": "Hah! Watching you flail around just now gave me an idea. I'll pitch it to my superior — slap this baby on the Icelake gates and stop anyone from barging in!",
-        "npc": 818022
-      },
-      {
-        "id": 73000401,
-        "content": "There you are! I've been waiting. I poured every last coin into this baby — she's a beast now. No way you're getting through this time.",
-        "npc": 818022
-      },
-      {
-        "id": 73000403,
-        "content": "Again!? Are you kidding me!? Ugh... Y'know what, forget it. I should've known better than to trust Elysian tech. This is what I get for smuggling their junk behind His Majesty's back.",
-        "npc": 818022
-      },
-      {
-        "id": 73000405,
-        "content": "Ha! Gotcha at last! This thing's a masterpiece — I oughta present it to His Majesty himself. Perfect for screening recruits. I'll finally rake in a fat bonus and pay off all the debt I racked up building it.",
-        "npc": 818022
-      },
-      {
-        "id": 73000502,
-        "content": "(The machine hums softly. A crude dial sits atop it, etched with three labels: Easy, Hard, and Extremely Hard. Looks like the handiwork of that overly chatty soldier.)",
-        "npc": 818022
-      },
-      {
-        "id": 73000202,
-        "content": "You wanna go again? Sure, why not. You nimble types really love bouncing around, huh?",
-        "npc": 818022
-      },
-      {
-        "id": 73000302,
-        "content": "You wanna go again? Sure, why not. You nimble types really love bouncing around, huh?",
-        "npc": 818022
-      },
-      {
-        "id": 73000402,
-        "content": "You wanna go again? Sure, why not. You nimble types really love bouncing around, huh?",
-        "npc": 818022
-      },
       {
         "id": 73000203,
         "content": "What!? Again...? Can't you just fail once? Fine, fine... guess it still needs a bit more work.",
@@ -12034,20 +11453,6 @@
         "id": 10010116,
         "content": "Don't push yourself too hard. We still have to save some strength for those Filthoids.",
         "npc": 100003
-      },
-      {
-        "id": 10010116,
-        "content": "Don't push yourself too hard. We still have to save some strength for those Filthoids.",
-        "npc": 100003
-      },
-      {
-        "id": 11010207,
-        "content": "It's done... Argh...",
-        "npc": 110022
-      },
-      {
-        "id": 11010208,
-        "content": "<W>Your hands are drenched in wet, slimy filth, uncertain whether it's the Filthoid's secretions or its innards. Yet, a sudden joy tingles through your soul, bringing an inexplicable elation.</>"
       },
       {
         "id": 11010207,

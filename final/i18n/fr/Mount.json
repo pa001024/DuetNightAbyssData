@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1000,
+    "name": "Bi’an obscur mécanisé",
+    "des": "Monture mécanisée développée par Gongshang, reproduisant fidèlement un Bi’an obscur. Le chevaucher à toute allure dans Port-des-Brumes ne manquera pas de laisser les passants bouche bée.",
+    "icon": "Mounts_0002",
+    "resourceIcon": "Icon_Mounts_0002",
+    "rarity": 4,
+    "sort": 97,
+    "resourceId": 49999,
+    "fly": 1,
+    "access": [
+      "Text_MountQuest01"
+    ]
+  },
+  {
+    "id": 1001,
+    "name": "Taihao mécanisé",
+    "des": "Monture mécanisée développée par Gongshang, à l’effigie du Seigneur Dragon d’Argent Taihao. Pièce unique conservée dans son atelier — heureusement, car voir Taihao sillonner le ciel en escadrille attirerait sans doute l’attention courroucée du Bureau des Rites. Gongshang, pour sa part, ne semble nullement décidé à renoncer à une production en série.\nAucun avantage de réputation n’est requis pour le vol.",
+    "icon": "Mounts_0001",
+    "resourceIcon": "Icon_Mounts_0001",
+    "rarity": 6,
+    "sort": 100,
+    "resourceId": 49998,
+    "access": [
+      "Text_SHOP_MAINTAB_GACHA"
+    ]
+  },
+  {
+    "id": 1002,
+    "name": "Chevalier aux lames d’argent",
+    "des": "Même l’immortel finit par se perdre, comme des larmes dans la pluie.",
+    "icon": "Mounts_0003",
+    "resourceIcon": "Icon_Mounts_0003",
+    "rarity": 5,
+    "sort": 99,
+    "resourceId": 49997,
+    "fly": 1,
+    "access": [
+      "Shop_Main"
+    ]
+  },
+  {
+    "id": 1003,
+    "name": "Filbert, fonce fonce fonce !",
+    "des": "Groin groin ? Groin groin !",
+    "icon": "Mounts_0004",
+    "resourceIcon": "Icon_Mounts_0004",
+    "rarity": 4,
+    "sort": 98,
+    "resourceId": 49996,
+    "fly": 1,
+    "access": [
+      "Shop_Main"
+    ]
+  }
+]

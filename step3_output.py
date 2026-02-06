@@ -333,7 +333,7 @@ if __name__ == "__main__":
     OUTPUT_DIR = os.path.join(os.getcwd(), "final")
 
     # Define languages to process
-    LANGUAGES = ["cn", "en", "jp", "kr", "tc"]
+    LANGUAGES = ["cn", "en", "jp", "kr", "tc", "fr"]
 
     # Define default file types to process
     default_file_types = [

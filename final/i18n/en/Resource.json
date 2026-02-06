@@ -102,6 +102,12 @@
     "rarity": 5
   },
   {
+    "id": 217,
+    "name": "Team Pass",
+    "icon": "T_Resource_Raid_Ticket",
+    "rarity": 4
+  },
+  {
     "id": 218,
     "name": "Phoxcoin",
     "icon": "T_Resource_Raid_Coin01",

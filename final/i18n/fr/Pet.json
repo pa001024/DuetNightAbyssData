@@ -1,0 +1,1689 @@
+[
+  {
+    "id": 601,
+    "名称": "Wishen aux talismans",
+    "icon": "Wuyou01",
+    "品质": 5,
+    "类型": 3,
+    "最大等级": 1,
+    "捕获经验": 0,
+    "经验": 70,
+    "主动": {
+      "描述": "Inflige aux ennemis situés dans un rayon frontal de 10 m des dégâts équivalents à {%} de l’ATQ du personnage principal. Restaure {} de Lucidité par seconde et augmente la Vitesse de compétence de {%} pendant {} s.",
+      "值": [
+        60,
+        15,
+        0.3,
+        4
+      ]
+    },
+    "被动": {
+      "描述": "Vaincre 30 ennemis : Les dégâts augmentent jusqu’à 12 000 % de l’ATQ du personnage principal.\nVaincre 60 ennemis : Puissance de compétence +150 %.\nVaincre 90 ennemis : Temps de recharge des compétences de soutien -50 %.\nVaincre 120 ennemis : Dégâts de compétence +90 %.",
+      "值": []
+    }
+  },
+  {
+    "id": 602,
+    "名称": "Wishen ascète",
+    "icon": "Wuyou03",
+    "品质": 5,
+    "类型": 3,
+    "最大等级": 1,
+    "捕获经验": 0,
+    "经验": 70,
+    "主动": {
+      "描述": "Tire 16 projectiles à tête chercheuse, chacun infligeant des dégâts équivalents à {%} de l’ATQ du personnage principal. Augmente la Ténacité de {%} et, lors du calcul de la Vigueur et de la Ténacité, le pourcentage de PV est forcé à 1 % pendant {} s.",
+      "值": [
+        5,
+        0.3,
+        4
+      ]
+    },
+    "被动": {
+      "描述": "Vaincre 30 ennemis : Les dégâts augmentent jusqu’à 1 000 % de l’ATQ du personnage principal.\nVaincre 60 ennemis : Tir multiple +75 %.\nVaincre 90 ennemis : Temps de recharge des compétences de soutien -50 %.\nVaincre 120 ennemis : Vitesse d’attaque des armes à distance +90 %.",
+      "值": []
+    }
+  },
+  {
+    "id": 603,
+    "名称": "Wishen aux lames dansantes",
+    "icon": "Wuyou02",
+    "品质": 5,
+    "类型": 3,
+    "最大等级": 1,
+    "捕获经验": 0,
+    "经验": 70,
+    "主动": {
+      "描述": "Génère 3 lames tournoyantes autour du personnage principal, infligeant des dégâts équivalents à {%} de l’ATQ du personnage principal aux ennemis touchés. Restaure {} points de Combo par seconde et augmente les dégâts d’attaque chargée de {%} pendant {} s.",
+      "值": [
+        5,
+        40,
+        0.9,
+        4
+      ]
+    },
+    "被动": {
+      "描述": "Vaincre 30 ennemis : Génère 3 lames supplémentaires.\nVaincre 60 ennemis : DGT d’arme +135 %.\nVaincre 90 ennemis : Temps de recharge des compétences de soutien -50 %.\nVaincre 120 ennemis : Vitesse d’attaque des armes de mêlée +90 %.",
+      "值": []
+    }
+  },
+  {
+    "id": 604,
+    "名称": "Wishen des prairies",
+    "icon": "Wuyou04",
+    "品质": 5,
+    "类型": 3,
+    "最大等级": 1,
+    "捕获经验": 0,
+    "经验": 70,
+    "主动": {
+      "描述": "Inflige aux ennemis dans un rayon de 6 m des dégâts équivalents à {%} de l’ATQ du personnage principal. Augmente la Vitesse d’attaque de toutes les invocations de {%} pendant {} s.",
+      "值": [
+        60,
+        0.8,
+        4
+      ]
+    },
+    "被动": {
+      "描述": "Vaincre 30 ennemis : Les dégâts augmentent jusqu’à 12 000 % de l’ATQ du personnage principal.\nVaincre 60 ennemis : Portée de compétence +100 % ; Durée de compétence +100 %.\nVaincre 90 ennemis : Temps de recharge des compétences de soutien -50 %.\nVaincre 120 ennemis : Dégâts infligés par les invocations +500 %.",
+      "值": []
+    }
+  },
+  {
+    "id": 4011,
+    "uid": 4011,
+    "名称": "Équinoxe mystique",
+    "icon": "Zisha03",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Inflige des Dégâts Umbro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches, et applique aléatoirement un Effet supplémentaire élémentaire pendant {} s.",
+      "值": [
+        4.68,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Umbro +{%} ; PV max +{%}.",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4012,
+    "uid": 4012,
+    "名称": "Équinoxe ardent",
+    "icon": "Zisha02",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Inflige des Dégâts Umbro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches, et applique aléatoirement un Effet supplémentaire élémentaire pendant {} s.",
+      "值": [
+        4.68,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Umbro +{%} ; PV max +{%}.",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4013,
+    "uid": 4013,
+    "名称": "Équinoxe scintillant",
+    "icon": "Zisha01",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Inflige des Dégâts Umbro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches, et applique aléatoirement un Effet supplémentaire élémentaire pendant {} s.",
+      "值": [
+        4.68,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Umbro +{%} ; PV max +{%}.",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4021,
+    "uid": 4021,
+    "名称": "Gouttine mystique",
+    "icon": "Yuyi01",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Augmente l’ATQ de soi-même et des alliés de {%} pendant {} s.",
+      "值": [
+        0.075,
+        12
+      ]
+    },
+    "被动": {
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Hydro +{%} ; PV max +{%}.",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4022,
+    "uid": 4022,
+    "名称": "Gouttine ardent",
+    "icon": "Yuyi02",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Augmente l’ATQ de soi-même et des alliés de {%} pendant {} s.",
+      "值": [
+        0.075,
+        12
+      ]
+    },
+    "被动": {
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Hydro +{%} ; PV max +{%}.",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4023,
+    "uid": 4023,
+    "名称": "Gouttine scintillant",
+    "icon": "Yuyi03",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Augmente l’ATQ de soi-même et des alliés de {%} pendant {} s.",
+      "值": [
+        0.075,
+        12
+      ]
+    },
+    "被动": {
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Hydro +{%} ; PV max +{%}.",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4031,
+    "uid": 4031,
+    "名称": "Piquero mystique",
+    "icon": "Dahuo01",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Restaure {} de Lucidité à soi-même et aux alliés.",
+      "值": [
+        9
+      ]
+    },
+    "被动": {
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Pyro +{%} ; PV max +{%}.",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4032,
+    "uid": 4032,
+    "名称": "Piquero ardent",
+    "icon": "Dahuo02",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Restaure {} de Lucidité à soi-même et aux alliés.",
+      "值": [
+        9
+      ]
+    },
+    "被动": {
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Pyro +{%} ; PV max +{%}.",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4033,
+    "uid": 4033,
+    "名称": "Piquero scintillant",
+    "icon": "Dahuo03",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Restaure {} de Lucidité à soi-même et aux alliés.",
+      "值": [
+        9
+      ]
+    },
+    "被动": {
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Pyro +{%} ; PV max +{%}.",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4039,
+    "uid": 4031,
+    "名称": "Piquero mystique",
+    "icon": "Dahuo01",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Restaure {} de Lucidité à soi-même et aux alliés.",
+      "值": [
+        9
+      ]
+    },
+    "被动": {
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Pyro +{%} ; PV max +{%}.",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4041,
+    "uid": 4041,
+    "名称": "Voltino mystique",
+    "icon": "Zhamao01",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Octroie {} points d’Ultra-bouclier à soi-même et aux alliés, et applique aléatoirement l’un des effets suivants pendant {} s : ATQ +{%}, DÉF +{%}, Puissance de compétence +{%} ou Durée de compétence +{%}.",
+      "值": [
+        10,
+        120,
+        0.1,
+        0.1,
+        0.075,
+        0.1
+      ]
+    },
+    "被动": {
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Électro +{%} ; PV max +{%}.",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4042,
+    "uid": 4042,
+    "名称": "Voltino ardent",
+    "icon": "Zhamao02",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Octroie {} points d’Ultra-bouclier à soi-même et aux alliés, et applique aléatoirement l’un des effets suivants pendant {} s : ATQ +{%}, DÉF +{%}, Puissance de compétence +{%} ou Durée de compétence +{%}.",
+      "值": [
+        10,
+        120,
+        0.1,
+        0.1,
+        0.075,
+        0.1
+      ]
+    },
+    "被动": {
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Électro +{%} ; PV max +{%}.",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4043,
+    "uid": 4043,
+    "名称": "Voltino scintillant",
+    "icon": "Zhamao03",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Octroie {} points d’Ultra-bouclier à soi-même et aux alliés, et applique aléatoirement l’un des effets suivants pendant {} s : ATQ +{%}, DÉF +{%}, Puissance de compétence +{%} ou Durée de compétence +{%}.",
+      "值": [
+        10,
+        120,
+        0.1,
+        0.1,
+        0.075,
+        0.1
+      ]
+    },
+    "被动": {
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Électro +{%} ; PV max +{%}.",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4049,
+    "uid": 4041,
+    "名称": "Voltino mystique",
+    "icon": "Zhamao01",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Octroie {} points d’Ultra-bouclier à soi-même et aux alliés, et applique aléatoirement l’un des effets suivants pendant {} s : ATQ +{%}, DÉF +{%}, Puissance de compétence +{%} ou Durée de compétence +{%}.",
+      "值": [
+        10,
+        120,
+        0.1,
+        0.1,
+        0.075,
+        0.1
+      ]
+    },
+    "被动": {
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Électro +{%} ; PV max +{%}.",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4051,
+    "uid": 4051,
+    "名称": "Champichou mystique",
+    "icon": "Yaoye01",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Soigne soi-même et ses alliés à hauteur de {%} des PV max du personnage principal.",
+      "值": [
+        0.15
+      ]
+    },
+    "被动": {
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Anémo +{%} ; PV max +{%}.",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4052,
+    "uid": 4052,
+    "名称": "Champichou ardent",
+    "icon": "Yaoye02",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Soigne soi-même et ses alliés à hauteur de {%} des PV max du personnage principal.",
+      "值": [
+        0.15
+      ]
+    },
+    "被动": {
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Anémo +{%} ; PV max +{%}.",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4053,
+    "uid": 4053,
+    "名称": "Champichou scintillant",
+    "icon": "Yaoye03",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Soigne soi-même et ses alliés à hauteur de {%} des PV max du personnage principal.",
+      "值": [
+        0.15
+      ]
+    },
+    "被动": {
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Anémo +{%} ; PV max +{%}.",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4059,
+    "uid": 4051,
+    "名称": "Champichou mystique",
+    "icon": "Yaoye01",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Soigne soi-même et ses alliés à hauteur de {%} des PV max du personnage principal.",
+      "值": [
+        0.15
+      ]
+    },
+    "被动": {
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Anémo +{%} ; PV max +{%}.",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4061,
+    "uid": 4061,
+    "名称": "Lumi mystique",
+    "icon": "Shanling01",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Inflige des Dégâts Lumino équivalents à {%} de l’ATQ du personnage principal et réduit les dégâts infligés des ennemis touchés de {%} pendant {} s.",
+      "值": [
+        4.68,
+        0.018,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Umbro +{%} ; PV max +{%}.",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4062,
+    "uid": 4062,
+    "名称": "Lumi ardent",
+    "icon": "Shanling02",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Inflige des Dégâts Lumino équivalents à {%} de l’ATQ du personnage principal et réduit les dégâts infligés des ennemis touchés de {%} pendant {} s.",
+      "值": [
+        4.68,
+        0.018,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Umbro +{%} ; PV max +{%}.",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4063,
+    "uid": 4063,
+    "名称": "Lumi scintillant",
+    "icon": "Shanling03",
+    "品质": 3,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 70,
+    "主动": {
+      "描述": "Inflige des Dégâts Lumino équivalents à {%} de l’ATQ du personnage principal et réduit les dégâts infligés des ennemis touchés de {%} pendant {} s.",
+      "值": [
+        4.68,
+        0.018,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Umbro +{%} ; PV max +{%}.",
+      "值": [
+        0.0075,
+        0.03
+      ]
+    }
+  },
+  {
+    "id": 4071,
+    "uid": 4071,
+    "名称": "Poto Carta mystique",
+    "icon": "Nihao01",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 150,
+    "主动": {
+      "描述": "Inflige des dégâts équivalents à {%} de l’ATQ du personnage principal aux ennemis proches. Détecte 1 Géniemon et 1 coffre dans un rayon de 100 m, marquant leur position pendant 30 s.",
+      "值": [
+        11.7
+      ]
+    },
+    "被动": {
+      "描述": "Portée ramassage auto +{} m, EXP gagnée sur les ennemis vaincus +{%}, et {%} de chances d’obtenir un butin supplémentaire.",
+      "值": [
+        0.075,
+        0.075,
+        20
+      ]
+    }
+  },
+  {
+    "id": 4072,
+    "uid": 4072,
+    "名称": "Poto Carta ardent",
+    "icon": "Nihao02",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 150,
+    "主动": {
+      "描述": "Inflige des dégâts équivalents à {%} de l’ATQ du personnage principal aux ennemis proches. Détecte 1 Géniemon et 1 coffre dans un rayon de 100 m, marquant leur position pendant 30 s.",
+      "值": [
+        11.7
+      ]
+    },
+    "被动": {
+      "描述": "Portée ramassage auto +{} m, EXP gagnée sur les ennemis vaincus +{%}, et {%} de chances d’obtenir un butin supplémentaire.",
+      "值": [
+        0.075,
+        0.075,
+        20
+      ]
+    }
+  },
+  {
+    "id": 4073,
+    "uid": 4073,
+    "名称": "Poto Carta scintillant",
+    "icon": "Nihao03",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 150,
+    "主动": {
+      "描述": "Inflige des dégâts équivalents à {%} de l’ATQ du personnage principal aux ennemis proches. Détecte 1 Géniemon et 1 coffre dans un rayon de 100 m, marquant leur position pendant 30 s.",
+      "值": [
+        11.7
+      ]
+    },
+    "被动": {
+      "描述": "Portée ramassage auto +{} m, EXP gagnée sur les ennemis vaincus +{%}, et {%} de chances d’obtenir un butin supplémentaire.",
+      "值": [
+        0.075,
+        0.075,
+        20
+      ]
+    }
+  },
+  {
+    "id": 4079,
+    "uid": 4071,
+    "名称": "Poto Carta mystique",
+    "icon": "Nihao01",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 150,
+    "主动": {
+      "描述": "Inflige des dégâts équivalents à {%} de l’ATQ du personnage principal aux ennemis proches. Détecte 1 Géniemon et 1 coffre dans un rayon de 100 m, marquant leur position pendant 30 s.",
+      "值": [
+        11.7
+      ]
+    },
+    "被动": {
+      "描述": "Portée ramassage auto +{} m, EXP gagnée sur les ennemis vaincus +{%}, et {%} de chances d’obtenir un butin supplémentaire.",
+      "值": [
+        0.075,
+        0.075,
+        20
+      ]
+    }
+  },
+  {
+    "id": 4081,
+    "uid": 4081,
+    "名称": "Périnou mystique",
+    "icon": "Zhenzhu01",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 150,
+    "主动": {
+      "描述": "Réduit les dégâts subis par vous et vos alliés de {%} pendant {} s.",
+      "值": [
+        0.45,
+        0.9
+      ]
+    },
+    "被动": {
+      "描述": "Vitesse de saut +{%}, Vitesse de bond cyclonique +{%}, Friction de glissade -{%}.",
+      "值": [
+        0.075,
+        0.075,
+        0.05
+      ]
+    }
+  },
+  {
+    "id": 4082,
+    "uid": 4082,
+    "名称": "Périnou ardent",
+    "icon": "Zhenzhu02",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 150,
+    "主动": {
+      "描述": "Réduit les dégâts subis par vous et vos alliés de {%} pendant {} s.",
+      "值": [
+        0.45,
+        0.9
+      ]
+    },
+    "被动": {
+      "描述": "Vitesse de saut +{%}, Vitesse de bond cyclonique +{%}, Friction de glissade -{%}.",
+      "值": [
+        0.075,
+        0.075,
+        0.05
+      ]
+    }
+  },
+  {
+    "id": 4083,
+    "uid": 4083,
+    "名称": "Périnou scintillant",
+    "icon": "Zhenzhu03",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 150,
+    "主动": {
+      "描述": "Réduit les dégâts subis par vous et vos alliés de {%} pendant {} s.",
+      "值": [
+        0.45,
+        0.9
+      ]
+    },
+    "被动": {
+      "描述": "Vitesse de saut +{%}, Vitesse de bond cyclonique +{%}, Friction de glissade -{%}.",
+      "值": [
+        0.075,
+        0.075,
+        0.05
+      ]
+    }
+  },
+  {
+    "id": 4091,
+    "uid": 4091,
+    "名称": "M. Bonne Nuit mystique",
+    "icon": "Haomeng01",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 150,
+    "主动": {
+      "描述": "Applique une régénération continue à vous et vos alliés, restaurant {%} de leurs PV max par seconde pendant {} s.",
+      "值": [
+        0.027,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "ATQ +{%}, PV max +{%}, DÉF +{%}.",
+      "值": [
+        0.018,
+        0.018,
+        0.018
+      ]
+    }
+  },
+  {
+    "id": 4092,
+    "uid": 4092,
+    "名称": "M. Bonne Nuit ardent",
+    "icon": "Haomeng02",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 150,
+    "主动": {
+      "描述": "Applique une régénération continue à vous et vos alliés, restaurant {%} de leurs PV max par seconde pendant {} s.",
+      "值": [
+        0.027,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "ATQ +{%}, PV max +{%}, DÉF +{%}.",
+      "值": [
+        0.018,
+        0.018,
+        0.018
+      ]
+    }
+  },
+  {
+    "id": 4093,
+    "uid": 4093,
+    "名称": "M. Bonne Nuit scintillant",
+    "icon": "Haomeng03",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 150,
+    "主动": {
+      "描述": "Applique une régénération continue à vous et vos alliés, restaurant {%} de leurs PV max par seconde pendant {} s.",
+      "值": [
+        0.027,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "ATQ +{%}, PV max +{%}, DÉF +{%}.",
+      "值": [
+        0.018,
+        0.018,
+        0.018
+      ]
+    }
+  },
+  {
+    "id": 4111,
+    "uid": 4111,
+    "名称": "Nébuthis mystique",
+    "icon": "Fuyou01",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Inflige des Dégâts Umbro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches et réduit leur DÉF de {%} pendant {} s.",
+      "值": [
+        5.85,
+        0.03,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Umbro du personnage principal et des Partenaires de combat de {%}. Augmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4112,
+    "uid": 4112,
+    "名称": "Nébuthis ardent",
+    "icon": "Fuyou02",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Inflige des Dégâts Umbro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches et réduit leur DÉF de {%} pendant {} s.",
+      "值": [
+        5.85,
+        0.03,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Umbro du personnage principal et des Partenaires de combat de {%}. Augmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4113,
+    "uid": 4113,
+    "名称": "Nébuthis scintillant",
+    "icon": "Fuyou03",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Inflige des Dégâts Umbro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches et réduit leur DÉF de {%} pendant {} s.",
+      "值": [
+        5.85,
+        0.03,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Umbro du personnage principal et des Partenaires de combat de {%}. Augmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4121,
+    "uid": 4121,
+    "名称": "Lapiniva mystique",
+    "icon": "Tangshuang01",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Augmente l’ATQ de toutes les [Invocations] alliées de {%} pendant {} s.",
+      "值": [
+        0.09,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Hydro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4122,
+    "uid": 4122,
+    "名称": "Lapiniva ardent",
+    "icon": "Tangshuang02",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Augmente l’ATQ de toutes les [Invocations] alliées de {%} pendant {} s.",
+      "值": [
+        0.09,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Hydro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4123,
+    "uid": 4123,
+    "名称": "Lapiniva scintillant",
+    "icon": "Tangshuang03",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Augmente l’ATQ de toutes les [Invocations] alliées de {%} pendant {} s.",
+      "值": [
+        0.09,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Hydro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4128,
+    "uid": 4121,
+    "名称": "Lapiniva mystique",
+    "icon": "Tangshuang01",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Augmente l’ATQ de toutes les [Invocations] alliées de {%} pendant {} s.",
+      "值": [
+        0.09,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Hydro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4131,
+    "uid": 4131,
+    "名称": "Pyrocoda mystique",
+    "icon": "YYHW01",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Fait apparaître un [Sel volatil stimulant], une [Goutte de rosée apaisante] et une [Caisse de munitions]. Augmente la durée de compétence de vous et vos alliés de {%} pendant {} s.",
+      "值": [
+        0.15,
+        15
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Pyro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4132,
+    "uid": 4132,
+    "名称": "Pyrocoda ardent",
+    "icon": "YYHW02",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Fait apparaître un [Sel volatil stimulant], une [Goutte de rosée apaisante] et une [Caisse de munitions]. Augmente la durée de compétence de vous et vos alliés de {%} pendant {} s.",
+      "值": [
+        0.15,
+        15
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Pyro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4133,
+    "uid": 4133,
+    "名称": "Pyrocoda scintillant",
+    "icon": "YYHW03",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Fait apparaître un [Sel volatil stimulant], une [Goutte de rosée apaisante] et une [Caisse de munitions]. Augmente la durée de compétence de vous et vos alliés de {%} pendant {} s.",
+      "值": [
+        0.15,
+        15
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Pyro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4141,
+    "uid": 4141,
+    "名称": "Miaouzz mystique",
+    "icon": "Pipa01",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Octroie à vous et vos alliés {} points d’Ultra-bouclier et restaure {} de Lucidité.",
+      "值": [
+        225,
+        9
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Électro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4142,
+    "uid": 4142,
+    "名称": "Miaouzz ardent",
+    "icon": "Pipa03",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Octroie à vous et vos alliés {} points d’Ultra-bouclier et restaure {} de Lucidité.",
+      "值": [
+        225,
+        9
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Électro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4143,
+    "uid": 4143,
+    "名称": "Miaouzz scintillant",
+    "icon": "Pipa02",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Octroie à vous et vos alliés {} points d’Ultra-bouclier et restaure {} de Lucidité.",
+      "值": [
+        225,
+        9
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Électro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4151,
+    "uid": 4151,
+    "名称": "Fluffée mystique",
+    "icon": "Mianmian01",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Soigne vous-même et vos alliés à hauteur de {%} des PV max du personnage principal, et augmente la DÉF de +{%} pendant {} s.",
+      "值": [
+        0.06,
+        15,
+        0.18
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Anémo du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4152,
+    "uid": 4152,
+    "名称": "Fluffée ardent",
+    "icon": "Mianmian02",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Soigne vous-même et vos alliés à hauteur de {%} des PV max du personnage principal, et augmente la DÉF de +{%} pendant {} s.",
+      "值": [
+        0.06,
+        15,
+        0.18
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Anémo du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4153,
+    "uid": 4153,
+    "名称": "Fluffée scintillant",
+    "icon": "Mianmian03",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Soigne vous-même et vos alliés à hauteur de {%} des PV max du personnage principal, et augmente la DÉF de +{%} pendant {} s.",
+      "值": [
+        0.06,
+        15,
+        0.18
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Anémo du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4161,
+    "uid": 4161,
+    "名称": "Ballabeille mystique",
+    "icon": "Qiuqiu01",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Inflige des Dégâts Lumino équivalents à {%} de l’ATQ du personnage principal aux ennemis proches et augmente les Dégâts de compétence qu’ils subissent de {%} pendant {} s.",
+      "值": [
+        5.85,
+        0.036,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Lumino du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4162,
+    "uid": 4162,
+    "名称": "Ballabeille ardent",
+    "icon": "Qiuqiu02",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Inflige des Dégâts Lumino équivalents à {%} de l’ATQ du personnage principal aux ennemis proches et augmente les Dégâts de compétence qu’ils subissent de {%} pendant {} s.",
+      "值": [
+        5.85,
+        0.036,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Lumino du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4163,
+    "uid": 4163,
+    "名称": "Ballabeille scintillant",
+    "icon": "Qiuqiu03",
+    "品质": 4,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Inflige des Dégâts Lumino équivalents à {%} de l’ATQ du personnage principal aux ennemis proches et augmente les Dégâts de compétence qu’ils subissent de {%} pendant {} s.",
+      "值": [
+        5.85,
+        0.036,
+        10
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Lumino du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "值": [
+        0.012,
+        0.0045
+      ]
+    }
+  },
+  {
+    "id": 4211,
+    "uid": 4211,
+    "名称": "Umbrelf",
+    "icon": "Heiyao",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Inflige des Dégâts Umbro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches, et augmente [Vigueur] de {%} pour vous et vos alliés pendant {} s.",
+      "值": [
+        11.7,
+        0.06,
+        12
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Umbro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Umbro avec comme préfixe : [Griffon], [Typhon] et [Pactisant].",
+      "值": [
+        0.024,
+        0.009
+      ]
+    }
+  },
+  {
+    "id": 4221,
+    "uid": 4221,
+    "名称": "Hydrelf",
+    "icon": "Jinqing",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Augmente les dégâts infligés par vous et vos alliés de {%} pour chaque [Invocation] active du personnage principal, jusqu’à un maximum de {%}, pendant {} s.",
+      "值": [
+        0.0405,
+        0.162,
+        12
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Hydro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Hydro avec comme préfixe : [Griffon], [Typhon] et [Pactisant].",
+      "值": [
+        0.024,
+        0.009
+      ]
+    }
+  },
+  {
+    "id": 4231,
+    "uid": 4231,
+    "名称": "Pyrelf",
+    "icon": "Manao",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Inflige des Dégâts Pyro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches, et augmente [Tir multiple] de {%} pour vous et vos alliés pendant {} s.",
+      "值": [
+        11.7,
+        0.105,
+        12
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Pyro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Pyro avec comme préfixe : [Griffon], [Typhon] et [Pactisant].",
+      "值": [
+        0.024,
+        0.009
+      ]
+    }
+  },
+  {
+    "id": 4241,
+    "uid": 4241,
+    "名称": "Électrelf",
+    "icon": "Zijing",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Restaure {} de Lucidité à vous et vos alliés, et augmente leurs Dégâts de compétence de {%} pendant {} s.",
+      "值": [
+        15,
+        0.105,
+        12
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Électro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Électro avec comme préfixe : [Griffon], [Typhon] et [Pactisant].",
+      "值": [
+        0.024,
+        0.009
+      ]
+    }
+  },
+  {
+    "id": 4251,
+    "uid": 4251,
+    "名称": "Anémelf",
+    "icon": "Bixi",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Augmente [Ténacité] de {%} pour vous et vos alliés pendant {} s. Si les PV du personnage principal tombent sous 25 %, restaure immédiatement {%} PV.",
+      "值": [
+        0.06,
+        12,
+        0.1
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Anémo du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Anémo avec comme préfixe : [Griffon], [Typhon] et [Pactisant].",
+      "值": [
+        0.024,
+        0.009
+      ]
+    }
+  },
+  {
+    "id": 4261,
+    "uid": 4261,
+    "名称": "Luminelf",
+    "icon": "Oubo",
+    "品质": 5,
+    "类型": 1,
+    "最大等级": 60,
+    "捕获经验": 100,
+    "经验": 100,
+    "主动": {
+      "描述": "Inflige des Dégâts Lumino équivalents à {%} de l’ATQ du personnage principal aux ennemis proches, et confère +{%} de Dégâts Lumino supplémentaires à vous et vos alliés pendant {} s.",
+      "值": [
+        11.7,
+        0.0315,
+        12
+      ]
+    },
+    "被动": {
+      "描述": "Augmente l’ATQ Lumino du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Lumino avec comme préfixe : [Griffon], [Typhon] et [Pactisant].",
+      "值": [
+        0.024,
+        0.009
+      ]
+    }
+  },
+  {
+    "id": 4911,
+    "uid": 4911,
+    "名称": "Drone guérisseur mystique",
+    "icon": "HealRobot01",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4912,
+    "uid": 4912,
+    "名称": "Drone guérisseur ardent",
+    "icon": "HealRobot02",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4913,
+    "uid": 4913,
+    "名称": "Drone guérisseur onirique",
+    "icon": "HealRobot03",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4921,
+    "uid": 4921,
+    "名称": "Drone magnétique mystique",
+    "icon": "BlastRobot01",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4922,
+    "uid": 4922,
+    "名称": "Drone magnétique ardent",
+    "icon": "BlastRobot02",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4923,
+    "uid": 4923,
+    "名称": "Drone magnétique onirique",
+    "icon": "BlastRobot03",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4931,
+    "uid": 4931,
+    "名称": "Gélidou mystique",
+    "icon": "YYD01",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4932,
+    "uid": 4932,
+    "名称": "Gélidou ardent",
+    "icon": "YYD02",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4933,
+    "uid": 4933,
+    "名称": "Gélidou onirique",
+    "icon": "YYD03",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4934,
+    "uid": 4931,
+    "名称": "Gélidou mystique",
+    "icon": "YYD01",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4935,
+    "uid": 4931,
+    "名称": "Gélidou mystique",
+    "icon": "YYD01",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4936,
+    "uid": 4932,
+    "名称": "Gélidou ardent",
+    "icon": "YYD02",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4941,
+    "uid": 4941,
+    "名称": "Gélidou éclatant",
+    "icon": "YYD04",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4942,
+    "uid": 4941,
+    "名称": "Gélidou éclatant — Sérénité",
+    "icon": "YYD04",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  },
+  {
+    "id": 4943,
+    "uid": 4941,
+    "名称": "Gélidou éclatant — Habile",
+    "icon": "YYD04",
+    "品质": 2,
+    "类型": 2,
+    "最大等级": 1,
+    "捕获经验": 100,
+    "经验": 40
+  }
+]

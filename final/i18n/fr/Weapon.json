@@ -1,0 +1,5737 @@
+[
+  {
+    "id": 10101,
+    "icon": "Broadsword_Huipo",
+    "名称": "Trancheur d’ambre",
+    "版本": "1.0",
+    "描述": "L’arme portée par Berenica. Une lame ornementée d’élégantes dorures, forgée dans un métal noir rare que l’on ne trouve nulle part ailleurs. À l’évidence, ce n’est pas une arme que les habitants de l’Île du Purgatoire pourraient posséder.",
+    "类型": [
+      "近战",
+      "单手剑"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 19,
+    "暴击": 0.25,
+    "暴伤": 2,
+    "触发": 0.15,
+    "加成": {
+      "攻击": 0.6
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Sel volatil endommagé": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Réactif inflammable": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6900,
+        "Réactif inflammable": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Lame": 1
+      },
+      {
+        "Pièce": 17000,
+        "Réactif inflammable": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Lame": 2
+      },
+      {
+        "Pièce": 49000,
+        "Réactif inflammable": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Lame": 4
+      },
+      {
+        "Pièce": 180000,
+        "Réactif inflammable": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Lame": 8
+      }
+    ],
+    "熔炼": [
+      "ATQ du personnage +60.0%.",
+      "ATQ du personnage +72.0%.",
+      "ATQ du personnage +84.0%.",
+      "ATQ du personnage +96.0%.",
+      "ATQ du personnage +108.0%.",
+      "ATQ du personnage +120.0%."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "45.0%",
+          "Dégâts du 2ᵉ coup": "50.0%",
+          "Dégâts du 3ᵉ coup": "40.0%×2",
+          "Dégâts du 4ᵉ coup": "82.0%"
+        },
+        "id": 1010101,
+        "削韧": [
+          25,
+          30,
+          30,
+          50
+        ],
+        "延迟": [
+          0.05,
+          0.1,
+          0,
+          0.05
+        ],
+        "卡肉": [
+          0.03,
+          0.03,
+          0,
+          0.07
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "113.0%"
+        },
+        "id": 1010102,
+        "削韧": [
+          73
+        ],
+        "卡肉": [
+          0.03
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "51.0%"
+        },
+        "id": 1010103,
+        "削韧": [
+          33
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "51.0%"
+        },
+        "id": 1010104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10102,
+    "icon": "Broadsword_Guzi",
+    "名称": "Entraves du solitaire",
+    "版本": "1.0",
+    "描述": "Puisse une ivresse sans fin combler chaque vide laissé par ta solitude.",
+    "类型": [
+      "近战",
+      "单手剑"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 20,
+    "暴击": 0.22,
+    "暴伤": 2.15,
+    "触发": 0.3,
+    "加成": {
+      "触发": 0.75
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Sel volatil endommagé": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Réactif inflammable": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6900,
+        "Réactif inflammable": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Lame": 1
+      },
+      {
+        "Pièce": 17000,
+        "Réactif inflammable": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Lame": 2
+      },
+      {
+        "Pièce": 49000,
+        "Réactif inflammable": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Lame": 4
+      },
+      {
+        "Pièce": 180000,
+        "Réactif inflammable": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Lame": 8
+      }
+    ],
+    "熔炼": [
+      "Chance de déclenchement +75.0%. Lorsqu’un personnage Hydro déclenche un Effet supplémentaire avec cette arme, les autres alliés obtiennent +33.0% d’ATQ pendant 6.0 s.",
+      "Chance de déclenchement +90.0%. Lorsqu’un personnage Hydro déclenche un Effet supplémentaire avec cette arme, les autres alliés obtiennent +39.6% d’ATQ pendant 6.0 s.",
+      "Chance de déclenchement +105.0%. Lorsqu’un personnage Hydro déclenche un Effet supplémentaire avec cette arme, les autres alliés obtiennent +46.2% d’ATQ pendant 6.0 s.",
+      "Chance de déclenchement +120.0%. Lorsqu’un personnage Hydro déclenche un Effet supplémentaire avec cette arme, les autres alliés obtiennent +52.8% d’ATQ pendant 6.0 s.",
+      "Chance de déclenchement +135.0%. Lorsqu’un personnage Hydro déclenche un Effet supplémentaire avec cette arme, les autres alliés obtiennent +59.4% d’ATQ pendant 6.0 s.",
+      "Chance de déclenchement +150.0%. Lorsqu’un personnage Hydro déclenche un Effet supplémentaire avec cette arme, les autres alliés obtiennent +66.0% d’ATQ pendant 6.0 s."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "45.0%",
+          "Dégâts du 2ᵉ coup": "50.0%",
+          "Dégâts du 3ᵉ coup": "40.0%×2",
+          "Dégâts du 4ᵉ coup": "82.0%"
+        },
+        "id": 1010101,
+        "削韧": [
+          25,
+          30,
+          30,
+          50
+        ],
+        "延迟": [
+          0.05,
+          0.1,
+          0,
+          0.05
+        ],
+        "卡肉": [
+          0.03,
+          0.03,
+          0,
+          0.07
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "113.0%"
+        },
+        "id": 1010102,
+        "削韧": [
+          73
+        ],
+        "卡肉": [
+          0.03
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "51.0%"
+        },
+        "id": 1010103,
+        "削韧": [
+          33
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "51.0%"
+        },
+        "id": 1010104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10103,
+    "icon": "Sword_Zhuiyi",
+    "名称": "Écho du passé",
+    "版本": "1.0",
+    "描述": "Une épée d’origine inconnue, présente à tes côtés depuis aussi longtemps que tu t’en souviennes. Peut-être qu’un jour, elle deviendra la clé qui reliera le passé au présent.",
+    "类型": [
+      "近战",
+      "单手剑"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 17,
+    "暴击": 0.3,
+    "暴伤": 2.1,
+    "触发": 0.12,
+    "加成": {
+      "攻击范围": 100
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Sel volatil endommagé": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Réactif inflammable": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6900,
+        "Réactif inflammable": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Lame": 1
+      },
+      {
+        "Pièce": 17000,
+        "Réactif inflammable": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Lame": 2
+      },
+      {
+        "Pièce": 49000,
+        "Réactif inflammable": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Lame": 4
+      },
+      {
+        "Pièce": 180000,
+        "Réactif inflammable": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Lame": 8
+      }
+    ],
+    "熔炼": [
+      "Portée d’attaque +1.0. Lorsque cette arme inflige un coup critique, vous avez 33.0% de chances de restaurer 3.0 de Lucidité.\nCet effet peut se déclencher au maximum une fois toutes les 0.5 s.",
+      "Portée d’attaque +1.2. Lorsque cette arme inflige un coup critique, vous avez 39.6% de chances de restaurer 3.0 de Lucidité.\nCet effet peut se déclencher au maximum une fois toutes les 0.5 s.",
+      "Portée d’attaque +1.4. Lorsque cette arme inflige un coup critique, vous avez 46.2% de chances de restaurer 3.0 de Lucidité.\nCet effet peut se déclencher au maximum une fois toutes les 0.5 s.",
+      "Portée d’attaque +1.6. Lorsque cette arme inflige un coup critique, vous avez 52.8% de chances de restaurer 3.0 de Lucidité.\nCet effet peut se déclencher au maximum une fois toutes les 0.5 s.",
+      "Portée d’attaque +1.8. Lorsque cette arme inflige un coup critique, vous avez 59.4% de chances de restaurer 3.0 de Lucidité.\nCet effet peut se déclencher au maximum une fois toutes les 0.5 s.",
+      "Portée d’attaque +2.0. Lorsque cette arme inflige un coup critique, vous avez 66.0% de chances de restaurer 3.0 de Lucidité.\nCet effet peut se déclencher au maximum une fois toutes les 0.5 s."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "45.0%",
+          "Dégâts du 2ᵉ coup": "50.0%",
+          "Dégâts du 3ᵉ coup": "40.0%×2",
+          "Dégâts du 4ᵉ coup": "82.0%"
+        },
+        "id": 1010101,
+        "削韧": [
+          25,
+          30,
+          30,
+          50
+        ],
+        "延迟": [
+          0.05,
+          0.1,
+          0,
+          0.05
+        ],
+        "卡肉": [
+          0.03,
+          0.03,
+          0,
+          0.07
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "113.0%"
+        },
+        "id": 1010102,
+        "削韧": [
+          73
+        ],
+        "卡肉": [
+          0.03
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "51.0%"
+        },
+        "id": 1010103,
+        "削韧": [
+          33
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "51.0%"
+        },
+        "id": 1010104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10104,
+    "icon": "Sword_Huimou",
+    "名称": "Stratagème habile",
+    "版本": "1.0",
+    "描述": "La meilleure défense reste l’attaque... mais n’oublie jamais qu’un repos suffisant en est aussi la clef.",
+    "类型": [
+      "近战",
+      "单手剑"
+    ],
+    "伤害类型": "切割",
+    "攻击": 18,
+    "暴击": 0.2,
+    "暴伤": 2,
+    "触发": 0.33,
+    "加成": {
+      "防御": 0.5
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Sel volatil endommagé": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Réactif inflammable": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6900,
+        "Réactif inflammable": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Lame": 1
+      },
+      {
+        "Pièce": 17000,
+        "Réactif inflammable": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Lame": 2
+      },
+      {
+        "Pièce": 49000,
+        "Réactif inflammable": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Lame": 4
+      },
+      {
+        "Pièce": 180000,
+        "Réactif inflammable": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Lame": 8
+      }
+    ],
+    "熔炼": [
+      "DÉF +50.0%. Lorsque l’arme déclenche un Effet supplémentaire, elle a 25.0% de chances de réduire le Bouclier de la cible d’une valeur équivalente à 350.0% de la DÉF du porteur.",
+      "DÉF +60.0%. Lorsque l’arme déclenche un Effet supplémentaire, elle a 30.0% de chances de réduire le Bouclier de la cible d’une valeur équivalente à 350.0% de la DÉF du porteur.",
+      "DÉF +70.0%. Lorsque l’arme déclenche un Effet supplémentaire, elle a 35.0% de chances de réduire le Bouclier de la cible d’une valeur équivalente à 350.0% de la DÉF du porteur.",
+      "DÉF +80.0%. Lorsque l’arme déclenche un Effet supplémentaire, elle a 40.0% de chances de réduire le Bouclier de la cible d’une valeur équivalente à 350.0% de la DÉF du porteur.",
+      "DÉF +90.0%. Lorsque l’arme déclenche un Effet supplémentaire, elle a 45.0% de chances de réduire le Bouclier de la cible d’une valeur équivalente à 350.0% de la DÉF du porteur.",
+      "DÉF +100.0%. Lorsque l’arme déclenche un Effet supplémentaire, elle a 50.0% de chances de réduire le Bouclier de la cible d’une valeur équivalente à 350.0% de la DÉF du porteur."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "45.0%",
+          "Dégâts du 2ᵉ coup": "50.0%",
+          "Dégâts du 3ᵉ coup": "40.0%×2",
+          "Dégâts du 4ᵉ coup": "82.0%"
+        },
+        "id": 1010101,
+        "削韧": [
+          25,
+          30,
+          30,
+          50
+        ],
+        "延迟": [
+          0.05,
+          0.1,
+          0,
+          0.05
+        ],
+        "卡肉": [
+          0.03,
+          0.03,
+          0,
+          0.07
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "113.0%"
+        },
+        "id": 1010102,
+        "削韧": [
+          73
+        ],
+        "卡肉": [
+          0.03
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "51.0%"
+        },
+        "id": 1010103,
+        "削韧": [
+          33
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "51.0%"
+        },
+        "id": 1010104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10105,
+    "icon": "Sword_Liulang",
+    "名称": "Rose vagabonde",
+    "版本": "1.0",
+    "描述": "Je marcherai à tes côtés, vers des horizons lointains, bien au-delà des sables mouvants.",
+    "类型": [
+      "近战",
+      "单手剑"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 20,
+    "暴击": 0.23,
+    "暴伤": 2.1,
+    "触发": 0.28,
+    "加成": {
+      "攻速": 0.25
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Sel volatil endommagé": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Réactif inflammable": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6900,
+        "Réactif inflammable": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Lame": 1
+      },
+      {
+        "Pièce": 17000,
+        "Réactif inflammable": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Lame": 2
+      },
+      {
+        "Pièce": 49000,
+        "Réactif inflammable": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Lame": 4
+      },
+      {
+        "Pièce": 180000,
+        "Réactif inflammable": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Lame": 8
+      }
+    ],
+    "熔炼": [
+      "Vitesse d’attaque +25.0%. Lors d’une Attaque chargée avec cette arme, 28.0% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s.",
+      "Vitesse d’attaque +30.0%. Lors d’une Attaque chargée avec cette arme, 33.6% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s.",
+      "Vitesse d’attaque +35.0%. Lors d’une Attaque chargée avec cette arme, 39.2% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s.",
+      "Vitesse d’attaque +40.0%. Lors d’une Attaque chargée avec cette arme, 44.8% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s.",
+      "Vitesse d’attaque +45.0%. Lors d’une Attaque chargée avec cette arme, 50.4% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s.",
+      "Vitesse d’attaque +50.0%. Lors d’une Attaque chargée avec cette arme, 56.0% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "45.0%",
+          "Dégâts du 2ᵉ coup": "50.0%",
+          "Dégâts du 3ᵉ coup": "40.0%×2",
+          "Dégâts du 4ᵉ coup": "82.0%"
+        },
+        "id": 1010101,
+        "削韧": [
+          25,
+          30,
+          30,
+          50
+        ],
+        "延迟": [
+          0.05,
+          0.1,
+          0,
+          0.05
+        ],
+        "卡肉": [
+          0.03,
+          0.03,
+          0,
+          0.07
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "113.0%"
+        },
+        "id": 1010102,
+        "削韧": [
+          73
+        ],
+        "卡肉": [
+          0.03
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "51.0%"
+        },
+        "id": 1010103,
+        "削韧": [
+          33
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "51.0%"
+        },
+        "id": 1010104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10201,
+    "icon": "Polearm_Sairen",
+    "名称": "Baiser de la sirène",
+    "版本": "1.0",
+    "描述": "Embrasse-moi... Embrasse-moi profondément, avant que ne vienne demain, avant que nos jeunes cœurs ne se fanent, avant que la mort ne nous sépare.",
+    "类型": [
+      "近战",
+      "长柄"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 21,
+    "暴击": 0.22,
+    "暴伤": 2.2,
+    "触发": 0.22,
+    "加成": {
+      "技能范围": 0.3
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Poudre de pierre": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Enduit isolant": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6900,
+        "Enduit isolant": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Lame": 1
+      },
+      {
+        "Pièce": 17000,
+        "Enduit isolant": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Lame": 2
+      },
+      {
+        "Pièce": 49000,
+        "Enduit isolant": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Lame": 4
+      },
+      {
+        "Pièce": 180000,
+        "Enduit isolant": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Lame": 8
+      }
+    ],
+    "熔炼": [
+      "Portée de compétence +30.0%. Lorsqu’une Attaque normale portée avec cette arme touche une cible, confère +3.6% de Vitesse d’attaque pendant 15.0 s. Cumulable jusqu’à 12.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Portée de compétence +36.0%. Lorsqu’une Attaque normale portée avec cette arme touche une cible, confère +4.3% de Vitesse d’attaque pendant 15.0 s. Cumulable jusqu’à 12.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Portée de compétence +42.0%. Lorsqu’une Attaque normale portée avec cette arme touche une cible, confère +5.0% de Vitesse d’attaque pendant 15.0 s. Cumulable jusqu’à 12.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Portée de compétence +48.0%. Lorsqu’une Attaque normale portée avec cette arme touche une cible, confère +5.8% de Vitesse d’attaque pendant 15.0 s. Cumulable jusqu’à 12.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Portée de compétence +54.0%. Lorsqu’une Attaque normale portée avec cette arme touche une cible, confère +6.5% de Vitesse d’attaque pendant 15.0 s. Cumulable jusqu’à 12.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Portée de compétence +60.0%. Lorsqu’une Attaque normale portée avec cette arme touche une cible, confère +7.2% de Vitesse d’attaque pendant 15.0 s. Cumulable jusqu’à 12.0 fois. L’effet est annulé lors du changement d’arme."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "35.0%",
+          "Dégâts du 2ᵉ coup": "25.0%×3",
+          "Dégâts du 3ᵉ coup": "50.0%",
+          "Dégâts du 4ᵉ coup": "40.0%",
+          "Dégâts du 5ᵉ coup": "75.0%"
+        },
+        "id": 1020101,
+        "削韧": [
+          20,
+          15,
+          35,
+          25,
+          50
+        ],
+        "卡肉": [
+          0.1,
+          0,
+          0,
+          0.03,
+          0.03
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "10.0%"
+        },
+        "id": 1020102,
+        "削韧": [
+          5
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "47.0%"
+        },
+        "id": 1020103,
+        "削韧": [
+          30
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "40.0%"
+        },
+        "id": 1020104,
+        "削韧": [
+          26
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10202,
+    "icon": "Polearm_Chunjue",
+    "名称": "Hallebarde de jade printanier",
+    "版本": "1.0",
+    "描述": "Une arme d’hast rapportée par les Tisse-Étoiles depuis leur terre natale, Huaxu. Sa lame s’inspire du saule, plante emblématique de leur patrie, symbole du « foyer ». Même s’ils tissent les cieux d’Atlasia de leurs constellations, un jour, ils retourneront vers cette contrée verdoyante et paisible.",
+    "类型": [
+      "近战",
+      "长柄"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 18,
+    "暴击": 0.24,
+    "暴伤": 2.15,
+    "触发": 0.3,
+    "加成": {
+      "攻速": 0.25
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Poudre de pierre": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Enduit isolant": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6900,
+        "Enduit isolant": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Lame": 1
+      },
+      {
+        "Pièce": 17000,
+        "Enduit isolant": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Lame": 2
+      },
+      {
+        "Pièce": 49000,
+        "Enduit isolant": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Lame": 4
+      },
+      {
+        "Pièce": 180000,
+        "Enduit isolant": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Lame": 8
+      }
+    ],
+    "熔炼": [
+      "Vitesse d’attaque +25.0%. Les attaques avec cette arme infligent 45.0% de dégâts supplémentaires aux cibles affectées par un Effet supplémentaire.",
+      "Vitesse d’attaque +30.0%. Les attaques avec cette arme infligent 54.0% de dégâts supplémentaires aux cibles affectées par un Effet supplémentaire.",
+      "Vitesse d’attaque +35.0%. Les attaques avec cette arme infligent 63.0% de dégâts supplémentaires aux cibles affectées par un Effet supplémentaire.",
+      "Vitesse d’attaque +40.0%. Les attaques avec cette arme infligent 72.0% de dégâts supplémentaires aux cibles affectées par un Effet supplémentaire.",
+      "Vitesse d’attaque +45.0%. Les attaques avec cette arme infligent 81.0% de dégâts supplémentaires aux cibles affectées par un Effet supplémentaire.",
+      "Vitesse d’attaque +50.0%. Les attaques avec cette arme infligent 90.0% de dégâts supplémentaires aux cibles affectées par un Effet supplémentaire."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "35.0%",
+          "Dégâts du 2ᵉ coup": "25.0%×3",
+          "Dégâts du 3ᵉ coup": "50.0%",
+          "Dégâts du 4ᵉ coup": "40.0%",
+          "Dégâts du 5ᵉ coup": "75.0%"
+        },
+        "id": 1020101,
+        "削韧": [
+          20,
+          15,
+          35,
+          25,
+          50
+        ],
+        "卡肉": [
+          0.1,
+          0,
+          0,
+          0.03,
+          0.03
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "10.0%"
+        },
+        "id": 1020102,
+        "削韧": [
+          5
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "47.0%"
+        },
+        "id": 1020103,
+        "削韧": [
+          30
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "40.0%"
+        },
+        "id": 1020104,
+        "削韧": [
+          26
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10203,
+    "icon": "Polearm_Zuiqian",
+    "名称": "Péché impardonnable",
+    "版本": "1.2",
+    "描述": "Le froid mord, le soleil brûle, et les années consument la vie des mortels.",
+    "类型": [
+      "近战",
+      "长柄"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 20,
+    "暴击": 0.3,
+    "暴伤": 2,
+    "触发": 0.15,
+    "加成": {
+      "技能威力": 0.2
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Poudre de pierre": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Enduit isolant": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6900,
+        "Enduit isolant": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Lame": 1
+      },
+      {
+        "Pièce": 17000,
+        "Enduit isolant": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Lame": 2
+      },
+      {
+        "Pièce": 49000,
+        "Enduit isolant": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Lame": 4
+      },
+      {
+        "Pièce": 180000,
+        "Enduit isolant": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Lame": 8
+      }
+    ],
+    "熔炼": [
+      "Puissance de compétence +20.0%. Lorsqu’un personnage Électro inflige des dégâts d’attaque plongeante, vous et vos alliés Électro gagnez 1 cumul d’augmentation des Dégâts de compétence de 5.0% pendant 10.0 s, cumulable jusqu’à 5 fois.",
+      "Puissance de compétence +24.0%. Lorsqu’un personnage Électro inflige des dégâts d’attaque plongeante, vous et vos alliés Électro gagnez 1 cumul d’augmentation des Dégâts de compétence de 6.0% pendant 10.0 s, cumulable jusqu’à 5 fois.",
+      "Puissance de compétence +28.0%. Lorsqu’un personnage Électro inflige des dégâts d’attaque plongeante, vous et vos alliés Électro gagnez 1 cumul d’augmentation des Dégâts de compétence de 7.0% pendant 10.0 s, cumulable jusqu’à 5 fois.",
+      "Puissance de compétence +32.0%. Lorsqu’un personnage Électro inflige des dégâts d’attaque plongeante, vous et vos alliés Électro gagnez 1 cumul d’augmentation des Dégâts de compétence de 8.0% pendant 10.0 s, cumulable jusqu’à 5 fois.",
+      "Puissance de compétence +36.0%. Lorsqu’un personnage Électro inflige des dégâts d’attaque plongeante, vous et vos alliés Électro gagnez 1 cumul d’augmentation des Dégâts de compétence de 9.0% pendant 10.0 s, cumulable jusqu’à 5 fois.",
+      "Puissance de compétence +40.0%. Lorsqu’un personnage Électro inflige des dégâts d’attaque plongeante, vous et vos alliés Électro gagnez 1 cumul d’augmentation des Dégâts de compétence de 10.0% pendant 10.0 s, cumulable jusqu’à 5 fois."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "35.0%",
+          "Dégâts du 2ᵉ coup": "25.0%×3",
+          "Dégâts du 3ᵉ coup": "50.0%",
+          "Dégâts du 4ᵉ coup": "40.0%",
+          "Dégâts du 5ᵉ coup": "75.0%"
+        },
+        "id": 1020101,
+        "削韧": [
+          20,
+          15,
+          35,
+          25,
+          50
+        ],
+        "卡肉": [
+          0.1,
+          0,
+          0,
+          0.03,
+          0.03
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "10.0%"
+        },
+        "id": 1020102,
+        "削韧": [
+          5
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "47.0%"
+        },
+        "id": 1020103,
+        "削韧": [
+          30
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "40.0%"
+        },
+        "id": 1020104,
+        "削韧": [
+          26
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10204,
+    "icon": "Scythe_Xiji",
+    "名称": "Moisson de l’espoir",
+    "版本": "1.0",
+    "描述": "J’ai enfoui une graine dans la terre gelée, dans l’espoir d’une lune des moissons qui peut-être ne viendra jamais.",
+    "类型": [
+      "近战",
+      "长柄"
+    ],
+    "伤害类型": "切割",
+    "攻击": 22,
+    "暴击": 0.23,
+    "暴伤": 2.5,
+    "触发": 0.1,
+    "加成": {
+      "背水": 0.05
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Poudre de pierre": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Enduit isolant": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6900,
+        "Enduit isolant": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Lame": 1
+      },
+      {
+        "Pièce": 17000,
+        "Enduit isolant": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Lame": 2
+      },
+      {
+        "Pièce": 49000,
+        "Enduit isolant": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Lame": 4
+      },
+      {
+        "Pièce": 180000,
+        "Enduit isolant": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Lame": 8
+      }
+    ],
+    "熔炼": [
+      "Ténacité +5.0%. Lorsqu’un personnage Anémo utilise sa compétence ultime, il obtient [Bénédiction des Mille Vents] :\nTénacité +8.0%, Vitesse d’attaque +15.0% pendant 15.0 s.\nChaque Dégâts de compétence ou DGT d’arme à distance prolonge la durée de l’effet de 0.2 s.",
+      "Ténacité +6.0%. Lorsqu’un personnage Anémo utilise sa compétence ultime, il obtient [Bénédiction des Mille Vents] :\nTénacité +9.6%, Vitesse d’attaque +18.0% pendant 15.0 s.\nChaque Dégâts de compétence ou DGT d’arme à distance prolonge la durée de l’effet de 0.2 s.",
+      "Ténacité +7.0%. Lorsqu’un personnage Anémo utilise sa compétence ultime, il obtient [Bénédiction des Mille Vents] :\nTénacité +11.2%, Vitesse d’attaque +21.0% pendant 15.0 s.\nChaque Dégâts de compétence ou DGT d’arme à distance prolonge la durée de l’effet de 0.2 s.",
+      "Ténacité +8.0%. Lorsqu’un personnage Anémo utilise sa compétence ultime, il obtient [Bénédiction des Mille Vents] :\nTénacité +12.8%, Vitesse d’attaque +24.0% pendant 15.0 s.\nChaque Dégâts de compétence ou DGT d’arme à distance prolonge la durée de l’effet de 0.2 s.",
+      "Ténacité +9.0%. Lorsqu’un personnage Anémo utilise sa compétence ultime, il obtient [Bénédiction des Mille Vents] :\nTénacité +14.4%, Vitesse d’attaque +27.0% pendant 15.0 s.\nChaque Dégâts de compétence ou DGT d’arme à distance prolonge la durée de l’effet de 0.2 s.",
+      "Ténacité +10.0%. Lorsqu’un personnage Anémo utilise sa compétence ultime, il obtient [Bénédiction des Mille Vents] :\nTénacité +16.0%, Vitesse d’attaque +30.0% pendant 15.0 s.\nChaque Dégâts de compétence ou DGT d’arme à distance prolonge la durée de l’effet de 0.2 s."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "35.0%",
+          "Dégâts du 2ᵉ coup": "25.0%×3",
+          "Dégâts du 3ᵉ coup": "50.0%",
+          "Dégâts du 4ᵉ coup": "40.0%",
+          "Dégâts du 5ᵉ coup": "75.0%"
+        },
+        "id": 1020101,
+        "削韧": [
+          20,
+          15,
+          35,
+          25,
+          50
+        ],
+        "卡肉": [
+          0.1,
+          0,
+          0,
+          0.03,
+          0.03
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "10.0%"
+        },
+        "id": 1020102,
+        "削韧": [
+          5
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "47.0%"
+        },
+        "id": 1020103,
+        "削韧": [
+          30
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "40.0%"
+        },
+        "id": 1020104,
+        "削韧": [
+          26
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10206,
+    "icon": "Scythe_Chixing",
+    "名称": "Sépulture errante",
+    "版本": "1.0",
+    "描述": "Arme prisée des chasseurs d’Atlasia.\nMême face à un Souillé, un seul coup bien porté suffit à abattre la proie.",
+    "类型": [
+      "近战",
+      "长柄"
+    ],
+    "伤害类型": "切割",
+    "攻击": 19,
+    "暴击": 0.25,
+    "暴伤": 2,
+    "触发": 0.15,
+    "加成": {
+      "技能威力": 0.24
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Poudre de pierre": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Enduit isolant": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6900,
+        "Enduit isolant": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Lame": 1
+      },
+      {
+        "Pièce": 17000,
+        "Enduit isolant": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Lame": 2
+      },
+      {
+        "Pièce": 49000,
+        "Enduit isolant": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Lame": 4
+      },
+      {
+        "Pièce": 180000,
+        "Enduit isolant": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Lame": 8
+      }
+    ],
+    "熔炼": [
+      "Puissance de compétence +24.0%.",
+      "Puissance de compétence +28.8%.",
+      "Puissance de compétence +33.6%.",
+      "Puissance de compétence +38.4%.",
+      "Puissance de compétence +43.2%.",
+      "Puissance de compétence +48.0%."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "35.0%",
+          "Dégâts du 2ᵉ coup": "25.0%×3",
+          "Dégâts du 3ᵉ coup": "50.0%",
+          "Dégâts du 4ᵉ coup": "40.0%",
+          "Dégâts du 5ᵉ coup": "75.0%"
+        },
+        "id": 1020101,
+        "削韧": [
+          20,
+          15,
+          35,
+          25,
+          50
+        ],
+        "卡肉": [
+          0.1,
+          0,
+          0,
+          0.03,
+          0.03
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "10.0%"
+        },
+        "id": 1020102,
+        "削韧": [
+          5
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "47.0%"
+        },
+        "id": 1020103,
+        "削韧": [
+          30
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "40.0%"
+        },
+        "id": 1020104,
+        "削韧": [
+          26
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10208,
+    "icon": "Scythe_Yihe",
+    "名称": "Messagère de l’avenir",
+    "版本": "1.1",
+    "描述": "Colombe immaculée qui vole pour défendre la dignité, elle jure de consacrer chaque plume à la voûte céleste appelée Avenir.",
+    "类型": [
+      "近战",
+      "长柄"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 21,
+    "暴击": 0.2,
+    "暴伤": 1.85,
+    "触发": 0.3,
+    "加成": {
+      "暴击": 0.5
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Poudre de pierre": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Enduit isolant": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6900,
+        "Enduit isolant": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Lame": 1
+      },
+      {
+        "Pièce": 17000,
+        "Enduit isolant": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Lame": 2
+      },
+      {
+        "Pièce": 49000,
+        "Enduit isolant": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Lame": 4
+      },
+      {
+        "Pièce": 180000,
+        "Enduit isolant": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Lame": 8
+      }
+    ],
+    "熔炼": [
+      "Taux CRIT +50.0%. Lorsque cette arme inflige des dégâts avec une attaque normale, il y a 1.7% de chances de recharger le chargeur de l’arme à distance équipée.",
+      "Taux CRIT +60.0%. Lorsque cette arme inflige des dégâts avec une attaque normale, il y a 2.0% de chances de recharger le chargeur de l’arme à distance équipée.",
+      "Taux CRIT +70.0%. Lorsque cette arme inflige des dégâts avec une attaque normale, il y a 2.4% de chances de recharger le chargeur de l’arme à distance équipée.",
+      "Taux CRIT +80.0%. Lorsque cette arme inflige des dégâts avec une attaque normale, il y a 2.7% de chances de recharger le chargeur de l’arme à distance équipée.",
+      "Taux CRIT +90.0%. Lorsque cette arme inflige des dégâts avec une attaque normale, il y a 3.1% de chances de recharger le chargeur de l’arme à distance équipée.",
+      "Taux CRIT +100.0%. Lorsque cette arme inflige des dégâts avec une attaque normale, il y a 3.4% de chances de recharger le chargeur de l’arme à distance équipée."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "35.0%",
+          "Dégâts du 2ᵉ coup": "25.0%×3",
+          "Dégâts du 3ᵉ coup": "50.0%",
+          "Dégâts du 4ᵉ coup": "40.0%",
+          "Dégâts du 5ᵉ coup": "75.0%"
+        },
+        "id": 1020101,
+        "削韧": [
+          20,
+          15,
+          35,
+          25,
+          50
+        ],
+        "卡肉": [
+          0.1,
+          0,
+          0,
+          0.03,
+          0.03
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "10.0%"
+        },
+        "id": 1020102,
+        "削韧": [
+          5
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "47.0%"
+        },
+        "id": 1020103,
+        "削韧": [
+          30
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "40.0%"
+        },
+        "id": 1020104,
+        "削韧": [
+          26
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10301,
+    "icon": "Claymore_Chengjie",
+    "名称": "Fureur incandescente",
+    "版本": "1.0",
+    "描述": "Brûle... brûle... brûle ! Ce feu purificateur consumera tout le mal de ce monde.",
+    "类型": [
+      "近战",
+      "重剑"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 19,
+    "暴击": 0.24,
+    "暴伤": 2.05,
+    "触发": 0.15,
+    "加成": {
+      "生命": 0.5
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Grumeau de Souillé": 6,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6100,
+        "Débris de statue": 3,
+        "Composant d’arme basique : Lame": 4,
+        "Composant d’arme basique : Ornement": 2
+      },
+      {
+        "Pièce": 6900,
+        "Débris de statue": 6,
+        "Composant d’arme intermédiaire : Lame": 3,
+        "Composant d’arme intermédiaire : Ornement": 1
+      },
+      {
+        "Pièce": 17000,
+        "Débris de statue": 12,
+        "Composant d’arme avancé : Lame": 6,
+        "Composant d’arme avancé : Ornement": 2
+      },
+      {
+        "Pièce": 49000,
+        "Débris de statue": 24,
+        "Composant d’arme avancé : Lame": 10,
+        "Composant d’arme avancé : Ornement": 4
+      },
+      {
+        "Pièce": 180000,
+        "Débris de statue": 48,
+        "Composant d’arme avancé : Lame": 20,
+        "Composant d’arme avancé : Ornement": 8
+      }
+    ],
+    "熔炼": [
+      "PV max +50.0%. Lorsqu’un personnage Pyro subit des dégâts, il obtient +15.0% de Durée de compétence pendant 8.0 s. Cumulable jusqu’à 3.0 fois.",
+      "PV max +60.0%. Lorsqu’un personnage Pyro subit des dégâts, il obtient +18.0% de Durée de compétence pendant 8.0 s. Cumulable jusqu’à 3.0 fois.",
+      "PV max +70.0%. Lorsqu’un personnage Pyro subit des dégâts, il obtient +21.0% de Durée de compétence pendant 8.0 s. Cumulable jusqu’à 3.0 fois.",
+      "PV max +80.0%. Lorsqu’un personnage Pyro subit des dégâts, il obtient +24.0% de Durée de compétence pendant 8.0 s. Cumulable jusqu’à 3.0 fois.",
+      "PV max +90.0%. Lorsqu’un personnage Pyro subit des dégâts, il obtient +27.0% de Durée de compétence pendant 8.0 s. Cumulable jusqu’à 3.0 fois.",
+      "PV max +100.0%. Lorsqu’un personnage Pyro subit des dégâts, il obtient +30.0% de Durée de compétence pendant 8.0 s. Cumulable jusqu’à 3.0 fois."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "40.0%",
+          "Dégâts du 2ᵉ coup": "45.0%",
+          "Dégâts du 3ᵉ coup": "50.0%",
+          "Dégâts du 4ᵉ coup": "120.0%"
+        },
+        "id": 1030101,
+        "削韧": [
+          20,
+          25,
+          30,
+          85
+        ],
+        "卡肉": [
+          0.07,
+          0.07,
+          0.07,
+          0.07
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "55.0%",
+          "Dégâts finaux d’attaque chargée": "50.0%"
+        },
+        "id": 1030102,
+        "削韧": [
+          35,
+          150
+        ],
+        "卡肉": [
+          0.03,
+          0.1
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "51.0%"
+        },
+        "id": 1030103,
+        "削韧": [
+          33
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "73.0%"
+        },
+        "id": 1030104,
+        "削韧": [
+          47
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10302,
+    "icon": "Claymore_Rimian",
+    "名称": "Brise-fer",
+    "版本": "1.0",
+    "描述": "Nulle loi ne naît sans force — et seule une puissance inégalée peut en écrire le fer.",
+    "类型": [
+      "近战",
+      "重剑"
+    ],
+    "伤害类型": "切割",
+    "攻击": 18,
+    "暴击": 0.2,
+    "暴伤": 2.05,
+    "触发": 0.3,
+    "加成": {
+      "暴击": 0.5
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Grumeau de Souillé": 6,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6100,
+        "Débris de statue": 3,
+        "Composant d’arme basique : Lame": 4,
+        "Composant d’arme basique : Ornement": 2
+      },
+      {
+        "Pièce": 6900,
+        "Débris de statue": 6,
+        "Composant d’arme intermédiaire : Lame": 3,
+        "Composant d’arme intermédiaire : Ornement": 1
+      },
+      {
+        "Pièce": 17000,
+        "Débris de statue": 12,
+        "Composant d’arme avancé : Lame": 6,
+        "Composant d’arme avancé : Ornement": 2
+      },
+      {
+        "Pièce": 49000,
+        "Débris de statue": 24,
+        "Composant d’arme avancé : Lame": 10,
+        "Composant d’arme avancé : Ornement": 4
+      },
+      {
+        "Pièce": 180000,
+        "Débris de statue": 48,
+        "Composant d’arme avancé : Lame": 20,
+        "Composant d’arme avancé : Ornement": 8
+      }
+    ],
+    "熔炼": [
+      "Taux CRIT +50.0%. Lorsque l’arme déclenche un Effet supplémentaire, a 2.1% de chances de passer directement au niveau de Combo maximal.",
+      "Taux CRIT +60.0%. Lorsque l’arme déclenche un Effet supplémentaire, a 2.5% de chances de passer directement au niveau de Combo maximal.",
+      "Taux CRIT +70.0%. Lorsque l’arme déclenche un Effet supplémentaire, a 2.9% de chances de passer directement au niveau de Combo maximal.",
+      "Taux CRIT +80.0%. Lorsque l’arme déclenche un Effet supplémentaire, a 3.4% de chances de passer directement au niveau de Combo maximal.",
+      "Taux CRIT +90.0%. Lorsque l’arme déclenche un Effet supplémentaire, a 3.8% de chances de passer directement au niveau de Combo maximal.",
+      "Taux CRIT +100.0%. Lorsque l’arme déclenche un Effet supplémentaire, a 4.2% de chances de passer directement au niveau de Combo maximal."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "40.0%",
+          "Dégâts du 2ᵉ coup": "45.0%",
+          "Dégâts du 3ᵉ coup": "50.0%",
+          "Dégâts du 4ᵉ coup": "120.0%"
+        },
+        "id": 1030101,
+        "削韧": [
+          20,
+          25,
+          30,
+          85
+        ],
+        "卡肉": [
+          0.07,
+          0.07,
+          0.07,
+          0.07
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "55.0%",
+          "Dégâts finaux d’attaque chargée": "50.0%"
+        },
+        "id": 1030102,
+        "削韧": [
+          35,
+          150
+        ],
+        "卡肉": [
+          0.03,
+          0.1
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "51.0%"
+        },
+        "id": 1030103,
+        "削韧": [
+          33
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "73.0%"
+        },
+        "id": 1030104,
+        "削韧": [
+          47
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10303,
+    "icon": "Claymore_Chixing",
+    "名称": "Désir incandescent",
+    "版本": "1.0",
+    "描述": "Une lame immaculée, qui fend l’air d’un gémissement muet — avide, éternellement, d’être rougie d’écarlate.",
+    "类型": [
+      "近战",
+      "重剑"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 17,
+    "暴击": 0.24,
+    "暴伤": 2.1,
+    "触发": 0.2,
+    "加成": {
+      "技能耐久": 0.18
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Grumeau de Souillé": 6,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6100,
+        "Débris de statue": 3,
+        "Composant d’arme basique : Lame": 4,
+        "Composant d’arme basique : Ornement": 2
+      },
+      {
+        "Pièce": 6900,
+        "Débris de statue": 6,
+        "Composant d’arme intermédiaire : Lame": 3,
+        "Composant d’arme intermédiaire : Ornement": 1
+      },
+      {
+        "Pièce": 17000,
+        "Débris de statue": 12,
+        "Composant d’arme avancé : Lame": 6,
+        "Composant d’arme avancé : Ornement": 2
+      },
+      {
+        "Pièce": 49000,
+        "Débris de statue": 24,
+        "Composant d’arme avancé : Lame": 10,
+        "Composant d’arme avancé : Ornement": 4
+      },
+      {
+        "Pièce": 180000,
+        "Débris de statue": 48,
+        "Composant d’arme avancé : Lame": 20,
+        "Composant d’arme avancé : Ornement": 8
+      }
+    ],
+    "熔炼": [
+      "Durée de compétence +18.0%.",
+      "Durée de compétence +21.6%.",
+      "Durée de compétence +25.2%.",
+      "Durée de compétence +28.8%.",
+      "Durée de compétence +32.4%.",
+      "Durée de compétence +36.0%."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "40.0%",
+          "Dégâts du 2ᵉ coup": "45.0%",
+          "Dégâts du 3ᵉ coup": "50.0%",
+          "Dégâts du 4ᵉ coup": "120.0%"
+        },
+        "id": 1030101,
+        "削韧": [
+          20,
+          25,
+          30,
+          85
+        ],
+        "卡肉": [
+          0.07,
+          0.07,
+          0.07,
+          0.07
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "55.0%",
+          "Dégâts finaux d’attaque chargée": "50.0%"
+        },
+        "id": 1030102,
+        "削韧": [
+          35,
+          150
+        ],
+        "卡肉": [
+          0.03,
+          0.1
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "51.0%"
+        },
+        "id": 1030103,
+        "削韧": [
+          33
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "73.0%"
+        },
+        "id": 1030104,
+        "削韧": [
+          47
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10304,
+    "icon": "Claymore_Wangu",
+    "名称": "Adieu éternel",
+    "版本": "1.2",
+    "描述": "Tranche l’écho des âges révolus, et ouvre la voie à des siècles de paix.",
+    "类型": [
+      "近战",
+      "重剑"
+    ],
+    "伤害类型": "切割",
+    "攻击": 22,
+    "暴击": 0.2,
+    "暴伤": 2,
+    "触发": 0.33,
+    "加成": {
+      "昂扬": 0.15
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Grumeau de Souillé": 6,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6100,
+        "Débris de statue": 3,
+        "Composant d’arme basique : Lame": 4,
+        "Composant d’arme basique : Ornement": 2
+      },
+      {
+        "Pièce": 6900,
+        "Débris de statue": 6,
+        "Composant d’arme intermédiaire : Lame": 3,
+        "Composant d’arme intermédiaire : Ornement": 1
+      },
+      {
+        "Pièce": 17000,
+        "Débris de statue": 12,
+        "Composant d’arme avancé : Lame": 6,
+        "Composant d’arme avancé : Ornement": 2
+      },
+      {
+        "Pièce": 49000,
+        "Débris de statue": 24,
+        "Composant d’arme avancé : Lame": 10,
+        "Composant d’arme avancé : Ornement": 4
+      },
+      {
+        "Pièce": 180000,
+        "Débris de statue": 48,
+        "Composant d’arme avancé : Lame": 20,
+        "Composant d’arme avancé : Ornement": 8
+      }
+    ],
+    "熔炼": [
+      "Vigueur +15.0%. Lorsqu’un personnage Électro utilise sa Compétence ultime, vous obtenez 1 cumul de +25.0% de Puissance de compétence pendant 12.0 s (cumulable jusqu’à 3.0 fois).",
+      "Vigueur +18.0%. Lorsqu’un personnage Électro utilise sa Compétence ultime, vous obtenez 1 cumul de +30.0% de Puissance de compétence pendant 12.0 s (cumulable jusqu’à 3.0 fois).",
+      "Vigueur +21.0%. Lorsqu’un personnage Électro utilise sa Compétence ultime, vous obtenez 1 cumul de +35.0% de Puissance de compétence pendant 12.0 s (cumulable jusqu’à 3.0 fois).",
+      "Vigueur +24.0%. Lorsqu’un personnage Électro utilise sa Compétence ultime, vous obtenez 1 cumul de +40.0% de Puissance de compétence pendant 12.0 s (cumulable jusqu’à 3.0 fois).",
+      "Vigueur +27.0%. Lorsqu’un personnage Électro utilise sa Compétence ultime, vous obtenez 1 cumul de +45.0% de Puissance de compétence pendant 12.0 s (cumulable jusqu’à 3.0 fois).",
+      "Vigueur +30.0%. Lorsqu’un personnage Électro utilise sa Compétence ultime, vous obtenez 1 cumul de +50.0% de Puissance de compétence pendant 12.0 s (cumulable jusqu’à 3.0 fois)."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "40.0%",
+          "Dégâts du 2ᵉ coup": "45.0%",
+          "Dégâts du 3ᵉ coup": "50.0%",
+          "Dégâts du 4ᵉ coup": "120.0%"
+        },
+        "id": 1030101,
+        "削韧": [
+          20,
+          25,
+          30,
+          85
+        ],
+        "卡肉": [
+          0.07,
+          0.07,
+          0.07,
+          0.07
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "55.0%",
+          "Dégâts finaux d’attaque chargée": "50.0%"
+        },
+        "id": 1030102,
+        "削韧": [
+          35,
+          150
+        ],
+        "卡肉": [
+          0.03,
+          0.1
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "51.0%"
+        },
+        "id": 1030103,
+        "削韧": [
+          33
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "73.0%"
+        },
+        "id": 1030104,
+        "削韧": [
+          47
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10401,
+    "icon": "Dualblade_Shixiang",
+    "名称": "Crocs de l’exilé",
+    "版本": "1.0",
+    "描述": "Un loup solitaire n’a pour tout héritage que ses crocs. Devant lui, le dédale du destin ; sous ses pas, les cendres de sa patrie.",
+    "类型": [
+      "近战",
+      "双刀"
+    ],
+    "伤害类型": "切割",
+    "攻击": 21,
+    "暴击": 0.16,
+    "暴伤": 2.1,
+    "触发": 0.33,
+    "加成": {
+      "攻速": 0.25
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Lame": 4,
+        "Composant d’arme basique : Ornement": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Lame": 3,
+        "Composant d’arme intermédiaire : Ornement": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Lame": 6,
+        "Composant d’arme avancé : Ornement": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Lame": 10,
+        "Composant d’arme avancé : Ornement": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Lame": 20,
+        "Composant d’arme avancé : Ornement": 8
+      }
+    ],
+    "熔炼": [
+      "Vitesse d’attaque +25.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme et que les PV sont inférieurs à 25 %, a 45.0% de chance de restaurer 1.5% % des PV max.",
+      "Vitesse d’attaque +30.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme et que les PV sont inférieurs à 25 %, a 45.0% de chance de restaurer 1.8% % des PV max.",
+      "Vitesse d’attaque +35.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme et que les PV sont inférieurs à 25 %, a 45.0% de chance de restaurer 2.1% % des PV max.",
+      "Vitesse d’attaque +40.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme et que les PV sont inférieurs à 25 %, a 45.0% de chance de restaurer 2.4% % des PV max.",
+      "Vitesse d’attaque +45.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme et que les PV sont inférieurs à 25 %, a 45.0% de chance de restaurer 2.7% % des PV max.",
+      "Vitesse d’attaque +50.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme et que les PV sont inférieurs à 25 %, a 45.0% de chance de restaurer 3.0% % des PV max."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "20.0%×2",
+          "Dégâts du 2ᵉ coup": "25.0%×2",
+          "Dégâts du 3ᵉ coup": "38.0%",
+          "Dégâts du 4ᵉ coup": "43.0%×3"
+        },
+        "id": 1040101,
+        "削韧": [
+          15,
+          20,
+          35,
+          20
+        ],
+        "卡肉": [
+          0,
+          0,
+          0.07
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "20.0%×6",
+          "Dégâts finaux d’attaque chargée": "55.0%"
+        },
+        "id": 1040102,
+        "削韧": [
+          12,
+          40
+        ],
+        "卡肉": [
+          0,
+          0.1
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "51.0%"
+        },
+        "id": 1040103,
+        "削韧": [
+          33
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "36.0%×2"
+        },
+        "id": 1040104,
+        "削韧": [
+          12
+        ],
+        "卡肉": [
+          0.03
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10402,
+    "icon": "Dualblade_Liujin",
+    "名称": "Mémoire dorée",
+    "版本": "1.0",
+    "描述": "Lorsque les vagues d’encre montèrent, son maître leva ces lames d’or vers le ciel — ultime offrande à un dieu silencieux, qui jamais ne répondit.",
+    "类型": [
+      "近战",
+      "双刀"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 18,
+    "暴击": 0.24,
+    "暴伤": 2.15,
+    "触发": 0.15,
+    "加成": {
+      "暴伤": 0.625
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Lame": 4,
+        "Composant d’arme basique : Ornement": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Lame": 3,
+        "Composant d’arme intermédiaire : Ornement": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Lame": 6,
+        "Composant d’arme avancé : Ornement": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Lame": 10,
+        "Composant d’arme avancé : Ornement": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Lame": 20,
+        "Composant d’arme avancé : Ornement": 8
+      }
+    ],
+    "熔炼": [
+      "DGT CRIT +62.5%. Les Attaques en glissade avec cette arme gagnent +75.0% de Taux CRIT.",
+      "DGT CRIT +75.0%. Les Attaques en glissade avec cette arme gagnent +90.0% de Taux CRIT.",
+      "DGT CRIT +87.5%. Les Attaques en glissade avec cette arme gagnent +105.0% de Taux CRIT.",
+      "DGT CRIT +100.0%. Les Attaques en glissade avec cette arme gagnent +120.0% de Taux CRIT.",
+      "DGT CRIT +112.5%. Les Attaques en glissade avec cette arme gagnent +135.0% de Taux CRIT.",
+      "DGT CRIT +125.0%. Les Attaques en glissade avec cette arme gagnent +150.0% de Taux CRIT."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "20.0%×2",
+          "Dégâts du 2ᵉ coup": "25.0%×2",
+          "Dégâts du 3ᵉ coup": "38.0%",
+          "Dégâts du 4ᵉ coup": "43.0%×3"
+        },
+        "id": 1040101,
+        "削韧": [
+          15,
+          20,
+          35,
+          20
+        ],
+        "卡肉": [
+          0,
+          0,
+          0.07
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "20.0%×6",
+          "Dégâts finaux d’attaque chargée": "55.0%"
+        },
+        "id": 1040102,
+        "削韧": [
+          12,
+          40
+        ],
+        "卡肉": [
+          0,
+          0.1
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "51.0%"
+        },
+        "id": 1040103,
+        "削韧": [
+          33
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "36.0%×2"
+        },
+        "id": 1040104,
+        "削韧": [
+          12
+        ],
+        "卡肉": [
+          0.03
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10403,
+    "icon": "Dualblade_Yousha",
+    "名称": "Regard du requin abyssal",
+    "版本": "1.0",
+    "描述": "En cet instant, vous êtes le chasseur des abysses — tapis dans les profondeurs, prêt à frapper.",
+    "类型": [
+      "近战",
+      "双刀"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 20,
+    "暴击": 0.2,
+    "暴伤": 2.35,
+    "触发": 0.28,
+    "加成": {
+      "技能范围": 0.36
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Lame": 4,
+        "Composant d’arme basique : Ornement": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Lame": 3,
+        "Composant d’arme intermédiaire : Ornement": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Lame": 6,
+        "Composant d’arme avancé : Ornement": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Lame": 10,
+        "Composant d’arme avancé : Ornement": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Lame": 20,
+        "Composant d’arme avancé : Ornement": 8
+      }
+    ],
+    "熔炼": [
+      "Portée de compétence +36.0%.",
+      "Portée de compétence +43.2%.",
+      "Portée de compétence +50.4%.",
+      "Portée de compétence +57.6%.",
+      "Portée de compétence +64.8%.",
+      "Portée de compétence +72.0%."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "20.0%×2",
+          "Dégâts du 2ᵉ coup": "25.0%×2",
+          "Dégâts du 3ᵉ coup": "38.0%",
+          "Dégâts du 4ᵉ coup": "43.0%×3"
+        },
+        "id": 1040101,
+        "削韧": [
+          15,
+          20,
+          35,
+          20
+        ],
+        "卡肉": [
+          0,
+          0,
+          0.07
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "20.0%×6",
+          "Dégâts finaux d’attaque chargée": "55.0%"
+        },
+        "id": 1040102,
+        "削韧": [
+          12,
+          40
+        ],
+        "卡肉": [
+          0,
+          0.1
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "51.0%"
+        },
+        "id": 1040103,
+        "削韧": [
+          33
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "36.0%×2"
+        },
+        "id": 1040104,
+        "削韧": [
+          12
+        ],
+        "卡肉": [
+          0.03
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10404,
+    "icon": "Dualblade_Fengyun",
+    "名称": "Sentence des vents",
+    "版本": "1.2",
+    "描述": "Les flots déchaînés fendent le givre obscur ; lorsque les vents s’élèvent, une lueur glaciale jaillit.",
+    "类型": [
+      "近战",
+      "双刀"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 20,
+    "暴击": 0.22,
+    "暴伤": 2,
+    "触发": 0.2,
+    "加成": {
+      "攻击范围": 100
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Lame": 4,
+        "Composant d’arme basique : Ornement": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Lame": 3,
+        "Composant d’arme intermédiaire : Ornement": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Lame": 6,
+        "Composant d’arme avancé : Ornement": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Lame": 10,
+        "Composant d’arme avancé : Ornement": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Lame": 20,
+        "Composant d’arme avancé : Ornement": 8
+      }
+    ],
+    "熔炼": [
+      "Portée d’attaque +1.0. Lors d’une Attaque chargée avec cette arme, 6.0% de chances de ne pas consommer de points de Combo.",
+      "Portée d’attaque +1.2. Lors d’une Attaque chargée avec cette arme, 7.2% de chances de ne pas consommer de points de Combo.",
+      "Portée d’attaque +1.4. Lors d’une Attaque chargée avec cette arme, 8.4% de chances de ne pas consommer de points de Combo.",
+      "Portée d’attaque +1.6. Lors d’une Attaque chargée avec cette arme, 9.6% de chances de ne pas consommer de points de Combo.",
+      "Portée d’attaque +1.8. Lors d’une Attaque chargée avec cette arme, 10.8% de chances de ne pas consommer de points de Combo.",
+      "Portée d’attaque +2.0. Lors d’une Attaque chargée avec cette arme, 12.0% de chances de ne pas consommer de points de Combo."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "20.0%×2",
+          "Dégâts du 2ᵉ coup": "25.0%×2",
+          "Dégâts du 3ᵉ coup": "38.0%",
+          "Dégâts du 4ᵉ coup": "43.0%×3"
+        },
+        "id": 1040101,
+        "削韧": [
+          15,
+          20,
+          35,
+          20
+        ],
+        "卡肉": [
+          0,
+          0,
+          0.07
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "20.0%×6",
+          "Dégâts finaux d’attaque chargée": "55.0%"
+        },
+        "id": 1040102,
+        "削韧": [
+          12,
+          40
+        ],
+        "卡肉": [
+          0,
+          0.1
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "51.0%"
+        },
+        "id": 1040103,
+        "削韧": [
+          33
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "36.0%×2"
+        },
+        "id": 1040104,
+        "削韧": [
+          12
+        ],
+        "卡肉": [
+          0.03
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10501,
+    "icon": "Swordwhip_Buyu",
+    "名称": "Oneiros éternel",
+    "版本": "1.0",
+    "描述": "Un vieux rêve tourné vers l’avenir.",
+    "类型": [
+      "近战",
+      "鞭刃"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 21,
+    "暴击": 0.2,
+    "暴伤": 2.25,
+    "触发": 0.3,
+    "加成": {
+      "生命": 0.5
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Sel volatil endommagé": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Réactif inflammable": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6900,
+        "Réactif inflammable": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Lame": 1
+      },
+      {
+        "Pièce": 17000,
+        "Réactif inflammable": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Lame": 2
+      },
+      {
+        "Pièce": 49000,
+        "Réactif inflammable": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Lame": 4
+      },
+      {
+        "Pièce": 180000,
+        "Réactif inflammable": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Lame": 8
+      }
+    ],
+    "熔炼": [
+      "PV max +50.0%. Lorsqu’une attaque avec cette arme déclenche un Effet supplémentaire, vous gagnez 8.6% de PV max supplémentaires pendant 15.0 s (cumulable jusqu’à 10.0 fois).",
+      "PV max +60.0%. Lorsqu’une attaque avec cette arme déclenche un Effet supplémentaire, vous gagnez 10.3% de PV max supplémentaires pendant 15.0 s (cumulable jusqu’à 10.0 fois).",
+      "PV max +70.0%. Lorsqu’une attaque avec cette arme déclenche un Effet supplémentaire, vous gagnez 12.0% de PV max supplémentaires pendant 15.0 s (cumulable jusqu’à 10.0 fois).",
+      "PV max +80.0%. Lorsqu’une attaque avec cette arme déclenche un Effet supplémentaire, vous gagnez 13.8% de PV max supplémentaires pendant 15.0 s (cumulable jusqu’à 10.0 fois).",
+      "PV max +90.0%. Lorsqu’une attaque avec cette arme déclenche un Effet supplémentaire, vous gagnez 15.5% de PV max supplémentaires pendant 15.0 s (cumulable jusqu’à 10.0 fois).",
+      "PV max +100.0%. Lorsqu’une attaque avec cette arme déclenche un Effet supplémentaire, vous gagnez 17.2% de PV max supplémentaires pendant 15.0 s (cumulable jusqu’à 10.0 fois)."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "40.0%",
+          "Dégâts du 2ᵉ coup": "50.0%",
+          "Dégâts du 3ᵉ coup": "60.0%",
+          "Dégâts du 4ᵉ coup": "50.0%×2"
+        },
+        "id": 1050101,
+        "削韧": [
+          25,
+          30,
+          35,
+          35
+        ],
+        "延迟": [
+          0.05,
+          0.1,
+          0,
+          0.05
+        ],
+        "卡肉": [
+          0.03,
+          0.03,
+          0,
+          0.07
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "16.1%"
+        },
+        "id": 1050102,
+        "削韧": [
+          12
+        ],
+        "卡肉": [
+          0.03
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "51.0%"
+        },
+        "id": 1010103,
+        "削韧": [
+          33
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "51.0%"
+        },
+        "id": 1010104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10502,
+    "icon": "Swordwhip_Zeshi",
+    "名称": "Grâce d’Halcyon",
+    "版本": "1.1",
+    "描述": "Le ciel prend en pitié chaque brin d’herbe ; une pluie de grâce vient soulager tout ce qui vit.",
+    "类型": [
+      "近战",
+      "鞭刃"
+    ],
+    "伤害类型": "切割",
+    "攻击": 18,
+    "暴击": 0.3,
+    "暴伤": 2.1,
+    "触发": 0.15,
+    "加成": {
+      "技能威力": 0.2
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Sel volatil endommagé": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Réactif inflammable": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6900,
+        "Réactif inflammable": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Lame": 1
+      },
+      {
+        "Pièce": 17000,
+        "Réactif inflammable": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Lame": 2
+      },
+      {
+        "Pièce": 49000,
+        "Réactif inflammable": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Lame": 4
+      },
+      {
+        "Pièce": 180000,
+        "Réactif inflammable": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Lame": 8
+      }
+    ],
+    "熔炼": [
+      "Puissance de compétence +20.0%. Lorsqu’un personnage Hydro inflige un coup critique avec cette arme, augmente les Dégâts de compétence des alliés de 17.0% pendant 6.0 s.",
+      "Puissance de compétence +24.0%. Lorsqu’un personnage Hydro inflige un coup critique avec cette arme, augmente les Dégâts de compétence des alliés de 20.4% pendant 6.0 s.",
+      "Puissance de compétence +28.0%. Lorsqu’un personnage Hydro inflige un coup critique avec cette arme, augmente les Dégâts de compétence des alliés de 23.8% pendant 6.0 s.",
+      "Puissance de compétence +32.0%. Lorsqu’un personnage Hydro inflige un coup critique avec cette arme, augmente les Dégâts de compétence des alliés de 27.2% pendant 6.0 s.",
+      "Puissance de compétence +36.0%. Lorsqu’un personnage Hydro inflige un coup critique avec cette arme, augmente les Dégâts de compétence des alliés de 30.6% pendant 6.0 s.",
+      "Puissance de compétence +40.0%. Lorsqu’un personnage Hydro inflige un coup critique avec cette arme, augmente les Dégâts de compétence des alliés de 34.0% pendant 6.0 s."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "40.0%",
+          "Dégâts du 2ᵉ coup": "50.0%",
+          "Dégâts du 3ᵉ coup": "60.0%",
+          "Dégâts du 4ᵉ coup": "50.0%×2"
+        },
+        "id": 1050101,
+        "削韧": [
+          25,
+          30,
+          35,
+          35
+        ],
+        "延迟": [
+          0.05,
+          0.1,
+          0,
+          0.05
+        ],
+        "卡肉": [
+          0.03,
+          0.03,
+          0,
+          0.07
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "16.1%"
+        },
+        "id": 1050102,
+        "削韧": [
+          12
+        ],
+        "卡肉": [
+          0.03
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "51.0%"
+        },
+        "id": 1010103,
+        "削韧": [
+          33
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "51.0%"
+        },
+        "id": 1010104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10503,
+    "icon": "Swordwhip_Chixing",
+    "名称": "Étreinte brisée",
+    "版本": "1.0",
+    "描述": "Les liens entre humains ne naissent pas tous du cœur : cette épée-fouet, faite pour s’enrouler et s’entremêler, touche parfois plus profond que les mots — ou la confiance.",
+    "类型": [
+      "近战",
+      "鞭刃"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 19,
+    "暴击": 0.18,
+    "暴伤": 2.15,
+    "触发": 0.3,
+    "加成": {
+      "技能耐久": 0.18
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Sel volatil endommagé": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Réactif inflammable": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6900,
+        "Réactif inflammable": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Lame": 1
+      },
+      {
+        "Pièce": 17000,
+        "Réactif inflammable": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Lame": 2
+      },
+      {
+        "Pièce": 49000,
+        "Réactif inflammable": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Lame": 4
+      },
+      {
+        "Pièce": 180000,
+        "Réactif inflammable": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Lame": 8
+      }
+    ],
+    "熔炼": [
+      "Durée de compétence +18.0%.",
+      "Durée de compétence +21.6%.",
+      "Durée de compétence +25.2%.",
+      "Durée de compétence +28.8%.",
+      "Durée de compétence +32.4%.",
+      "Durée de compétence +36.0%."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "40.0%",
+          "Dégâts du 2ᵉ coup": "50.0%",
+          "Dégâts du 3ᵉ coup": "60.0%",
+          "Dégâts du 4ᵉ coup": "50.0%×2"
+        },
+        "id": 1050101,
+        "削韧": [
+          25,
+          30,
+          35,
+          35
+        ],
+        "延迟": [
+          0.05,
+          0.1,
+          0,
+          0.05
+        ],
+        "卡肉": [
+          0.03,
+          0.03,
+          0,
+          0.07
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "16.1%"
+        },
+        "id": 1050102,
+        "削韧": [
+          12
+        ],
+        "卡肉": [
+          0.03
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "51.0%"
+        },
+        "id": 1010103,
+        "削韧": [
+          33
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "51.0%"
+        },
+        "id": 1010104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10504,
+    "icon": "Swordwhip_Canghu",
+    "名称": "Vagues sinueuses",
+    "版本": "1.0",
+    "描述": "Sur le rivage gisent des restes de corail flétri, où se sont figés les fragments des rêves brisés de l’océan d’azur.",
+    "类型": [
+      "近战",
+      "鞭刃"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 17,
+    "暴击": 0.26,
+    "暴伤": 2.35,
+    "触发": 0.12,
+    "加成": {
+      "触发": 0.75
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Sel volatil endommagé": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Réactif inflammable": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6900,
+        "Réactif inflammable": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Lame": 1
+      },
+      {
+        "Pièce": 17000,
+        "Réactif inflammable": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Lame": 2
+      },
+      {
+        "Pièce": 49000,
+        "Réactif inflammable": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Lame": 4
+      },
+      {
+        "Pièce": 180000,
+        "Réactif inflammable": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Lame": 8
+      }
+    ],
+    "熔炼": [
+      "Chance de déclenchement +75.0%. Les Attaques chargées avec cette arme confèrent +44.0% d’augmentation de la Vitesse d’attaque pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
+      "Chance de déclenchement +90.0%. Les Attaques chargées avec cette arme confèrent +52.8% d’augmentation de la Vitesse d’attaque pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
+      "Chance de déclenchement +105.0%. Les Attaques chargées avec cette arme confèrent +61.6% d’augmentation de la Vitesse d’attaque pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
+      "Chance de déclenchement +120.0%. Les Attaques chargées avec cette arme confèrent +70.4% d’augmentation de la Vitesse d’attaque pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
+      "Chance de déclenchement +135.0%. Les Attaques chargées avec cette arme confèrent +79.2% d’augmentation de la Vitesse d’attaque pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
+      "Chance de déclenchement +150.0%. Les Attaques chargées avec cette arme confèrent +88.0% d’augmentation de la Vitesse d’attaque pendant 6.0 s. L’effet est annulé lors du changement d’arme."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "40.0%",
+          "Dégâts du 2ᵉ coup": "50.0%",
+          "Dégâts du 3ᵉ coup": "60.0%",
+          "Dégâts du 4ᵉ coup": "50.0%×2"
+        },
+        "id": 1050101,
+        "削韧": [
+          25,
+          30,
+          35,
+          35
+        ],
+        "延迟": [
+          0.05,
+          0.1,
+          0,
+          0.05
+        ],
+        "卡肉": [
+          0.03,
+          0.03,
+          0,
+          0.07
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "16.1%"
+        },
+        "id": 1050102,
+        "削韧": [
+          12
+        ],
+        "卡肉": [
+          0.03
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "51.0%"
+        },
+        "id": 1010103,
+        "削韧": [
+          33
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "51.0%"
+        },
+        "id": 1010104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10601,
+    "icon": "Katana_Feiqie",
+    "名称": "Momiji Itteki",
+    "版本": "1.0",
+    "描述": "Arme atypique rendue célèbre par la tragédie <I>Momiji : Récits du soulèvement.</> On raconte que la tache carmin sur la garde serait le sang d’un roi — frappé par la main même qui avait juré de le protéger.",
+    "类型": [
+      "近战",
+      "太刀"
+    ],
+    "伤害类型": "切割",
+    "攻击": 19,
+    "暴击": 0.22,
+    "暴伤": 2.25,
+    "触发": 0.15,
+    "加成": {
+      "暴伤": 0.625
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Ornement": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Ornement": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Ornement": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Ornement": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Ornement": 8
+      }
+    ],
+    "熔炼": [
+      "DGT CRIT +62.5%. Infliger des dégâts augmente les dégâts infligés de 9.0%, plus 9.0% supplémentaires par niveau de Combo.",
+      "DGT CRIT +75.0%. Infliger des dégâts augmente les dégâts infligés de 10.8%, plus 10.8% supplémentaires par niveau de Combo.",
+      "DGT CRIT +87.5%. Infliger des dégâts augmente les dégâts infligés de 12.6%, plus 12.6% supplémentaires par niveau de Combo.",
+      "DGT CRIT +100.0%. Infliger des dégâts augmente les dégâts infligés de 14.4%, plus 14.4% supplémentaires par niveau de Combo.",
+      "DGT CRIT +112.5%. Infliger des dégâts augmente les dégâts infligés de 16.2%, plus 16.2% supplémentaires par niveau de Combo.",
+      "DGT CRIT +125.0%. Infliger des dégâts augmente les dégâts infligés de 18.0%, plus 18.0% supplémentaires par niveau de Combo."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "20.0%×3",
+          "Dégâts du 2ᵉ coup": "30.0%×4",
+          "Dégâts du 3ᵉ coup": "40.0%×2+45.0%",
+          "Dégâts du 4ᵉ coup": "85.0%"
+        },
+        "id": 1060101,
+        "削韧": [
+          15,
+          20,
+          25,
+          50
+        ],
+        "卡肉": [
+          0,
+          0,
+          0.03,
+          0.03
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "10.0%×9"
+        },
+        "id": 1060102,
+        "削韧": [
+          8
+        ],
+        "卡肉": [
+          0.03
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "51.0%"
+        },
+        "id": 1060103,
+        "削韧": [
+          33
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "51.0%"
+        },
+        "id": 1060104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10602,
+    "icon": "Katana_Chixing",
+    "名称": "Ombre fanée",
+    "版本": "1.0",
+    "描述": "Dans les yeux du mourant, on voit flotter une fleur de cerisier écarlate — légère, silencieuse... définitive.",
+    "类型": [
+      "近战",
+      "太刀"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 17,
+    "暴击": 0.23,
+    "暴伤": 2.15,
+    "触发": 0.2,
+    "加成": {
+      "技能范围": 0.36
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Ornement": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Ornement": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Ornement": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Ornement": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Ornement": 8
+      }
+    ],
+    "熔炼": [
+      "Portée de compétence +36.0%.",
+      "Portée de compétence +43.2%.",
+      "Portée de compétence +50.4%.",
+      "Portée de compétence +57.6%.",
+      "Portée de compétence +64.8%.",
+      "Portée de compétence +72.0%."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "20.0%×3",
+          "Dégâts du 2ᵉ coup": "30.0%×4",
+          "Dégâts du 3ᵉ coup": "40.0%×2+45.0%",
+          "Dégâts du 4ᵉ coup": "85.0%"
+        },
+        "id": 1060101,
+        "削韧": [
+          15,
+          20,
+          25,
+          50
+        ],
+        "卡肉": [
+          0,
+          0,
+          0.03,
+          0.03
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "10.0%×9"
+        },
+        "id": 1060102,
+        "削韧": [
+          8
+        ],
+        "卡肉": [
+          0.03
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "51.0%"
+        },
+        "id": 1060103,
+        "削韧": [
+          33
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "51.0%"
+        },
+        "id": 1060104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10603,
+    "icon": "Katana_Yuli",
+    "名称": "Grâce sacrée",
+    "版本": "1.0",
+    "描述": "Une inscription pâlie court le long de la garde : « Louange à l’Église Élyséenne ! Puissent les Neuf Dieux répandre leur grâce sur la terre pécheresse du duché de Yashnia ! »",
+    "类型": [
+      "近战",
+      "太刀"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 20,
+    "暴击": 0.2,
+    "暴伤": 2.5,
+    "触发": 0.2,
+    "加成": {
+      "攻击": 0.5
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Ornement": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Ornement": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Ornement": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Ornement": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Ornement": 8
+      }
+    ],
+    "熔炼": [
+      "ATQ du personnage +50.0%. Les Attaques chargées avec cette arme confèrent +75.0% de DGT CRIT pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
+      "ATQ du personnage +60.0%. Les Attaques chargées avec cette arme confèrent +90.0% de DGT CRIT pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
+      "ATQ du personnage +70.0%. Les Attaques chargées avec cette arme confèrent +105.0% de DGT CRIT pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
+      "ATQ du personnage +80.0%. Les Attaques chargées avec cette arme confèrent +120.0% de DGT CRIT pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
+      "ATQ du personnage +90.0%. Les Attaques chargées avec cette arme confèrent +135.0% de DGT CRIT pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
+      "ATQ du personnage +100.0%. Les Attaques chargées avec cette arme confèrent +150.0% de DGT CRIT pendant 6.0 s. L’effet est annulé lors du changement d’arme."
+    ],
+    "技能": [
+      {
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du 1ᵉʳ coup": "20.0%×3",
+          "Dégâts du 2ᵉ coup": "30.0%×4",
+          "Dégâts du 3ᵉ coup": "40.0%×2+45.0%",
+          "Dégâts du 4ᵉ coup": "85.0%"
+        },
+        "id": 1060101,
+        "削韧": [
+          15,
+          20,
+          25,
+          50
+        ],
+        "卡肉": [
+          0,
+          0,
+          0.03,
+          0.03
+        ]
+      },
+      {
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque chargée": "10.0%×9"
+        },
+        "id": 1060102,
+        "削韧": [
+          8
+        ],
+        "卡肉": [
+          0.03
+        ]
+      },
+      {
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque plongeante": "51.0%"
+        },
+        "id": 1060103,
+        "削韧": [
+          33
+        ]
+      },
+      {
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’attaque en glissade": "51.0%"
+        },
+        "id": 1060104,
+        "削韧": [
+          33
+        ],
+        "卡肉": [
+          0.1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20101,
+    "icon": "Pistol_Wuxu",
+    "名称": "Singularité entropique",
+    "版本": "1.0",
+    "描述": "Par la vérité, le monde se déconstruit — et tout ordre se dissout.",
+    "类型": [
+      "远程",
+      "手枪"
+    ],
+    "伤害类型": "切割",
+    "攻击": 16,
+    "暴击": 0.2,
+    "暴伤": 2.1,
+    "触发": 0.33,
+    "弹匣": 20,
+    "最大弹药": 150,
+    "弹药转化率": 0.4,
+    "最大射程": 2800,
+    "加成": {
+      "触发": 0.75
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Canon": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Canon": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Canon": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Canon": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Canon": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Canon": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "Chance de déclenchement +75.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des DGT de zone équivalents à 50.0% de son ATQ.",
+      "Chance de déclenchement +90.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des DGT de zone équivalents à 60.0% de son ATQ.",
+      "Chance de déclenchement +105.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des DGT de zone équivalents à 70.0% de son ATQ.",
+      "Chance de déclenchement +120.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des DGT de zone équivalents à 80.0% de son ATQ.",
+      "Chance de déclenchement +135.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des DGT de zone équivalents à 90.0% de son ATQ.",
+      "Chance de déclenchement +150.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des DGT de zone équivalents à 100.0% de son ATQ."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du projectile": "71.0%",
+          "Rayon d’explosion": "3.0m"
+        },
+        "id": 2010101,
+        "削韧": [
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20102,
+    "icon": "Pistol_Chixing",
+    "名称": "Dépouilleur",
+    "版本": "1.0",
+    "描述": "Arrachée à la spirale de morts empilées, voilà une erreur faite chair — une vérité qui n’aurait jamais dû naître.",
+    "类型": [
+      "远程",
+      "手枪"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 15,
+    "暴击": 0.25,
+    "暴伤": 2.3,
+    "触发": 0.15,
+    "弹匣": 15,
+    "最大弹药": 150,
+    "弹药转化率": 0.4,
+    "最大射程": 2800,
+    "加成": {
+      "攻击": 0.6
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Canon": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Canon": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Canon": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Canon": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Canon": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Canon": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "ATQ du personnage +60.0%.",
+      "ATQ du personnage +72.0%.",
+      "ATQ du personnage +84.0%.",
+      "ATQ du personnage +96.0%.",
+      "ATQ du personnage +108.0%.",
+      "ATQ du personnage +120.0%."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du projectile": "71.0%"
+        },
+        "id": 2019901,
+        "削韧": [
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20103,
+    "icon": "Pistol_Gaoyu",
+    "名称": "Hiérophanie",
+    "版本": "1.0",
+    "描述": "Le fracas des oracles divins résonnera dans le crâne de chaque hérétique.",
+    "类型": [
+      "远程",
+      "手枪"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 18,
+    "暴击": 0.25,
+    "暴伤": 2.05,
+    "触发": 0.3,
+    "弹匣": 15,
+    "最大弹药": 150,
+    "弹药转化率": 0.4,
+    "最大射程": 2800,
+    "加成": {
+      "多重": 0.375
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Canon": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Canon": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Canon": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Canon": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Canon": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Canon": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "Tir multiple +37.5%. Lorsque cette arme déclenche un Effet supplémentaire, augmente les dégâts des armes de mêlée de 35.0% pendant 12.0 s.",
+      "Tir multiple +45.0%. Lorsque cette arme déclenche un Effet supplémentaire, augmente les dégâts des armes de mêlée de 42.0% pendant 12.0 s.",
+      "Tir multiple +52.5%. Lorsque cette arme déclenche un Effet supplémentaire, augmente les dégâts des armes de mêlée de 49.0% pendant 12.0 s.",
+      "Tir multiple +60.0%. Lorsque cette arme déclenche un Effet supplémentaire, augmente les dégâts des armes de mêlée de 56.0% pendant 12.0 s.",
+      "Tir multiple +67.5%. Lorsque cette arme déclenche un Effet supplémentaire, augmente les dégâts des armes de mêlée de 63.0% pendant 12.0 s.",
+      "Tir multiple +75.0%. Lorsque cette arme déclenche un Effet supplémentaire, augmente les dégâts des armes de mêlée de 70.0% pendant 12.0 s."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du projectile": "71.0%"
+        },
+        "id": 2019901,
+        "削韧": [
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20201,
+    "icon": "Crossbow_Chixing",
+    "名称": "Duo infâme",
+    "版本": "1.0",
+    "描述": "Dans la spirale où la mort s’amoncelle, chaque erreur enfante une autre — puis une autre encore.",
+    "类型": [
+      "远程",
+      "双枪"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 21,
+    "暴击": 0.2,
+    "暴伤": 2.2,
+    "触发": 0.28,
+    "弹匣": 20,
+    "最大弹药": 150,
+    "弹药转化率": 0.6,
+    "最大射程": 2800,
+    "加成": {
+      "技能威力": 0.24
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Canon": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Canon": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Canon": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Canon": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Canon": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Canon": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "Puissance de compétence +24.0%.",
+      "Puissance de compétence +28.8%.",
+      "Puissance de compétence +33.6%.",
+      "Puissance de compétence +38.4%.",
+      "Puissance de compétence +43.2%.",
+      "Puissance de compétence +48.0%."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du projectile": "47.0%"
+        },
+        "id": 2020101,
+        "削韧": [
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20203,
+    "icon": "Crossbow_Lanse",
+    "名称": "Pulsation azurée",
+    "版本": "1.0",
+    "描述": "L’immensité de l’océan pulse sans fin au rythme de la vie — foisonnante, vibrante, indomptable.",
+    "类型": [
+      "远程",
+      "双枪"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 19,
+    "暴击": 0.2,
+    "暴伤": 2.25,
+    "触发": 0.25,
+    "弹匣": 20,
+    "最大弹药": 150,
+    "弹药转化率": 0.6,
+    "最大射程": 2800,
+    "加成": {
+      "技能耐久": 0.15
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Canon": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Canon": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Canon": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Canon": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Canon": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Canon": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "Durée de compétence +15.0%. Les projectiles rebondissent une fois après avoir touché un ennemi ou un élément du décor. Infliger des dégâts avec cette arme augmente les DGT d’arme des Doubles pistolets de 45.0% pendant 15.0 s.",
+      "Durée de compétence +18.0%. Les projectiles rebondissent une fois après avoir touché un ennemi ou un élément du décor. Infliger des dégâts avec cette arme augmente les DGT d’arme des Doubles pistolets de 54.0% pendant 18.0 s.",
+      "Durée de compétence +21.0%. Les projectiles rebondissent une fois après avoir touché un ennemi ou un élément du décor. Infliger des dégâts avec cette arme augmente les DGT d’arme des Doubles pistolets de 63.0% pendant 21.0 s.",
+      "Durée de compétence +24.0%. Les projectiles rebondissent une fois après avoir touché un ennemi ou un élément du décor. Infliger des dégâts avec cette arme augmente les DGT d’arme des Doubles pistolets de 72.0% pendant 24.0 s.",
+      "Durée de compétence +27.0%. Les projectiles rebondissent une fois après avoir touché un ennemi ou un élément du décor. Infliger des dégâts avec cette arme augmente les DGT d’arme des Doubles pistolets de 81.0% pendant 27.0 s.",
+      "Durée de compétence +30.0%. Les projectiles rebondissent une fois après avoir touché un ennemi ou un élément du décor. Infliger des dégâts avec cette arme augmente les DGT d’arme des Doubles pistolets de 90.0% pendant 30.0 s."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du projectile": "47.0%",
+          "Dégâts de ricochet": "47.0%"
+        },
+        "id": 2020301,
+        "削韧": [
+          8,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20205,
+    "icon": "Crossbow_Gaoyu",
+    "名称": "Pneuma",
+    "版本": "1.0",
+    "描述": "Le fracas des oracles divins résonnera dans le crâne de chaque hérétique.",
+    "类型": [
+      "远程",
+      "双枪"
+    ],
+    "伤害类型": "切割",
+    "攻击": 18,
+    "暴击": 0.25,
+    "暴伤": 2,
+    "触发": 0.15,
+    "弹匣": 20,
+    "最大弹药": 150,
+    "弹药转化率": 0.6,
+    "最大射程": 2800,
+    "加成": {
+      "暴击": 0.5
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Canon": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Canon": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Canon": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Canon": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Canon": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Canon": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "Taux CRIT +50.0%. Lorsqu’un coup critique est infligé avec cette arme, confère +6.2% Tir multiple pendant 12.0 s.\nCumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Taux CRIT +60.0%. Lorsqu’un coup critique est infligé avec cette arme, confère +7.5% Tir multiple pendant 12.0 s.\nCumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Taux CRIT +70.0%. Lorsqu’un coup critique est infligé avec cette arme, confère +8.8% Tir multiple pendant 12.0 s.\nCumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Taux CRIT +80.0%. Lorsqu’un coup critique est infligé avec cette arme, confère +10.0% Tir multiple pendant 12.0 s.\nCumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Taux CRIT +90.0%. Lorsqu’un coup critique est infligé avec cette arme, confère +11.2% Tir multiple pendant 12.0 s.\nCumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Taux CRIT +100.0%. Lorsqu’un coup critique est infligé avec cette arme, confère +12.5% Tir multiple pendant 12.0 s.\nCumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du projectile": "47.0%"
+        },
+        "id": 2020101,
+        "削韧": [
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20301,
+    "icon": "Cannon_Qunxing",
+    "名称": "Jugement stellaire",
+    "版本": "1.0",
+    "描述": "Que les pénitents cessent donc de lever les yeux vers la nuit : le firmament n’écoute pas, et les étoiles n’accordent l’absolution à personne.",
+    "类型": [
+      "远程",
+      "榴炮"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 14,
+    "暴击": 0.2,
+    "暴伤": 2.4,
+    "触发": 0.18,
+    "弹匣": 8,
+    "最大弹药": 40,
+    "弹药转化率": 0.25,
+    "最大射程": 2800,
+    "加成": {
+      "子弹爆炸范围": 25
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Armature": 4,
+        "Composant d’arme basique : Verrou": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Armature": 3,
+        "Composant d’arme intermédiaire : Verrou": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Armature": 6,
+        "Composant d’arme avancé : Verrou": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Armature": 10,
+        "Composant d’arme avancé : Verrou": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Armature": 20,
+        "Composant d’arme avancé : Verrou": 8
+      }
+    ],
+    "熔炼": [
+      "Rayon de l’explosion +0.2. À l’explosion, le projectile se divise en 6 projectiles supplémentaires qui explosent à leur tour. Vaincre un ennemi avec cette arme octroie 1 cumul augmentant les DGT CRIT de 8.8% pendant 15.0 s, jusqu’à 10.0 cumuls. Changer d’arme retire cet effet.",
+      "Rayon de l’explosion +0.3. À l’explosion, le projectile se divise en 6 projectiles supplémentaires qui explosent à leur tour. Vaincre un ennemi avec cette arme octroie 1 cumul augmentant les DGT CRIT de 10.5% pendant 15.0 s, jusqu’à 10.0 cumuls. Changer d’arme retire cet effet.",
+      "Rayon de l’explosion +0.3. À l’explosion, le projectile se divise en 6 projectiles supplémentaires qui explosent à leur tour. Vaincre un ennemi avec cette arme octroie 1 cumul augmentant les DGT CRIT de 12.2% pendant 15.0 s, jusqu’à 10.0 cumuls. Changer d’arme retire cet effet.",
+      "Rayon de l’explosion +0.4. À l’explosion, le projectile se divise en 6 projectiles supplémentaires qui explosent à leur tour. Vaincre un ennemi avec cette arme octroie 1 cumul augmentant les DGT CRIT de 14.0% pendant 15.0 s, jusqu’à 10.0 cumuls. Changer d’arme retire cet effet.",
+      "Rayon de l’explosion +0.5. À l’explosion, le projectile se divise en 6 projectiles supplémentaires qui explosent à leur tour. Vaincre un ennemi avec cette arme octroie 1 cumul augmentant les DGT CRIT de 15.8% pendant 15.0 s, jusqu’à 10.0 cumuls. Changer d’arme retire cet effet.",
+      "Rayon de l’explosion +0.5. À l’explosion, le projectile se divise en 6 projectiles supplémentaires qui explosent à leur tour. Vaincre un ennemi avec cette arme octroie 1 cumul augmentant les DGT CRIT de 17.5% pendant 15.0 s, jusqu’à 10.0 cumuls. Changer d’arme retire cet effet."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’explosion": "80.0%",
+          "Dégâts d’explosion — Phase 2": "15.0%",
+          "Rayon d’explosion": "3.0m",
+          "Rayon d’explosion — Phase 2": "3.0m"
+        },
+        "id": 2030201,
+        "削韧": [
+          30,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20302,
+    "icon": "Cannon_Chiqiang",
+    "名称": "Banquet incandescent",
+    "版本": "1.4",
+    "描述": "La nuit, des souliers rouges, la rosée sur les pétales. Un souffle effleure les tempes, les détonations précipitées déchirent l’air, et la poudre se dissipe... Tout participe à ce festin extatique de projectiles.",
+    "类型": [
+      "远程",
+      "榴炮"
+    ],
+    "伤害类型": "切割",
+    "攻击": 15,
+    "暴击": 0.2,
+    "暴伤": 2.4,
+    "触发": 0.2,
+    "弹匣": 9,
+    "最大弹药": 120,
+    "弹药转化率": 0.45,
+    "最大射程": 2800,
+    "加成": {
+      "多重": 0.375
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Armature": 4,
+        "Composant d’arme basique : Verrou": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Armature": 3,
+        "Composant d’arme intermédiaire : Verrou": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Armature": 6,
+        "Composant d’arme avancé : Verrou": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Armature": 10,
+        "Composant d’arme avancé : Verrou": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Armature": 20,
+        "Composant d’arme avancé : Verrou": 8
+      }
+    ],
+    "熔炼": [
+      "Tir multiple +37.5%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et les DGT d’arme à distance de 12.0% pour 12.0 s, jusqu’à 4.0 cumuls.",
+      "Tir multiple +45.0%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et les DGT d’arme à distance de 14.4% pour 12.0 s, jusqu’à 4.0 cumuls.",
+      "Tir multiple +52.5%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et les DGT d’arme à distance de 16.8% pour 12.0 s, jusqu’à 4.0 cumuls.",
+      "Tir multiple +60.0%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et les DGT d’arme à distance de 19.2% pour 12.0 s, jusqu’à 4.0 cumuls.",
+      "Tir multiple +67.5%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et les DGT d’arme à distance de 21.6% pour 12.0 s, jusqu’à 4.0 cumuls.",
+      "Tir multiple +75.0%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et les DGT d’arme à distance de 24.0% pour 12.0 s, jusqu’à 4.0 cumuls."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’explosion": "32.0%",
+          "Dégâts d’explosion — Phase 2": "32.0%",
+          "Dégâts d’explosion — Phase 3": "32.0%",
+          "Rayon d’explosion": "3.0m",
+          "Rayon d’explosion — Phase 2": "3.0m",
+          "Rayon d’explosion — Phase 3": "3.0m"
+        },
+        "id": 2030301,
+        "削韧": [
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20303,
+    "icon": "Cannon_Chixing",
+    "名称": "Désintégrateur",
+    "版本": "1.0",
+    "描述": "La plus pure manière de retourner à la nature : se réduire en cendre, puis disparaître dans la poussière qui attend.",
+    "类型": [
+      "远程",
+      "榴炮"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 18,
+    "暴击": 0.2,
+    "暴伤": 1.8,
+    "触发": 0.2,
+    "弹匣": 8,
+    "最大弹药": 40,
+    "弹药转化率": 0.35,
+    "最大射程": 2800,
+    "加成": {
+      "技能范围": 0.36
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Armature": 4,
+        "Composant d’arme basique : Verrou": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Armature": 3,
+        "Composant d’arme intermédiaire : Verrou": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Armature": 6,
+        "Composant d’arme avancé : Verrou": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Armature": 10,
+        "Composant d’arme avancé : Verrou": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Armature": 20,
+        "Composant d’arme avancé : Verrou": 8
+      }
+    ],
+    "熔炼": [
+      "Portée de compétence +36.0%.",
+      "Portée de compétence +43.2%.",
+      "Portée de compétence +50.4%.",
+      "Portée de compétence +57.6%.",
+      "Portée de compétence +64.8%.",
+      "Portée de compétence +72.0%."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’explosion": "95.0%",
+          "Rayon d’explosion": "3.0m"
+        },
+        "id": 2030101,
+        "削韧": [
+          40
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20304,
+    "icon": "Cannon_Guixu",
+    "名称": "Résonance de Guixu",
+    "版本": "1.0",
+    "描述": "Le bronze trempe l’ossature des rouages ; au milieu des ronces du néant se forge l’âme des héros.",
+    "类型": [
+      "远程",
+      "榴炮"
+    ],
+    "伤害类型": "切割",
+    "攻击": 16,
+    "暴击": 0.22,
+    "暴伤": 2.15,
+    "触发": 0.2,
+    "弹匣": 8,
+    "最大弹药": 20,
+    "弹药转化率": 0.3,
+    "最大射程": 2800,
+    "加成": {
+      "暴伤": 0.625
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Armature": 4,
+        "Composant d’arme basique : Verrou": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Armature": 3,
+        "Composant d’arme intermédiaire : Verrou": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Armature": 6,
+        "Composant d’arme avancé : Verrou": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Armature": 10,
+        "Composant d’arme avancé : Verrou": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Armature": 20,
+        "Composant d’arme avancé : Verrou": 8
+      }
+    ],
+    "熔炼": [
+      "DGT CRIT +62.5%. Lorsque les projectiles touchent un ennemi ou un élément du décor, ils se divisent en 2 projectiles supplémentaires. En passant à cette arme, le Tir multiple augmente jusqu’à 38.0%, puis diminue progressivement. Cet effet peut être déclenché une fois toutes les 10 s et disparaît en changeant d’arme.",
+      "DGT CRIT +75.0%. Lorsque les projectiles touchent un ennemi ou un élément du décor, ils se divisent en 2 projectiles supplémentaires. En passant à cette arme, le Tir multiple augmente jusqu’à 45.0%, puis diminue progressivement. Cet effet peut être déclenché une fois toutes les 10 s et disparaît en changeant d’arme.",
+      "DGT CRIT +87.5%. Lorsque les projectiles touchent un ennemi ou un élément du décor, ils se divisent en 2 projectiles supplémentaires. En passant à cette arme, le Tir multiple augmente jusqu’à 52.0%, puis diminue progressivement. Cet effet peut être déclenché une fois toutes les 10 s et disparaît en changeant d’arme.",
+      "DGT CRIT +100.0%. Lorsque les projectiles touchent un ennemi ou un élément du décor, ils se divisent en 2 projectiles supplémentaires. En passant à cette arme, le Tir multiple augmente jusqu’à 59.0%, puis diminue progressivement. Cet effet peut être déclenché une fois toutes les 10 s et disparaît en changeant d’arme.",
+      "DGT CRIT +112.5%. Lorsque les projectiles touchent un ennemi ou un élément du décor, ils se divisent en 2 projectiles supplémentaires. En passant à cette arme, le Tir multiple augmente jusqu’à 66.0%, puis diminue progressivement. Cet effet peut être déclenché une fois toutes les 10 s et disparaît en changeant d’arme.",
+      "DGT CRIT +125.0%. Lorsque les projectiles touchent un ennemi ou un élément du décor, ils se divisent en 2 projectiles supplémentaires. En passant à cette arme, le Tir multiple augmente jusqu’à 73.0%, puis diminue progressivement. Cet effet peut être déclenché une fois toutes les 10 s et disparaît en changeant d’arme."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’explosion": "15.0%",
+          "Dégâts sur la durée": "4.0%",
+          "Dégâts d’explosion — Phase 2": "8.0%",
+          "Rayon d’explosion": "3.0m",
+          "Rayon d’explosion — Phase 2": "3.0m"
+        },
+        "id": 2030401,
+        "削韧": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20305,
+    "icon": "Cannon_Yinbai",
+    "名称": "Édit argenté",
+    "版本": "1.0",
+    "描述": "Montée sur mille douilles argentées, l’ardeur divine s’abat — gravant le décret des dieux dans la poitrine de chaque hérétique.",
+    "类型": [
+      "远程",
+      "榴炮"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 19,
+    "暴击": 0.25,
+    "暴伤": 2.35,
+    "触发": 0.3,
+    "弹匣": 200,
+    "最大弹药": 500,
+    "弹药转化率": 3.3,
+    "最大射程": 2800,
+    "加成": {
+      "攻速": 0.25
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Armature": 4,
+        "Composant d’arme basique : Verrou": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Armature": 3,
+        "Composant d’arme intermédiaire : Verrou": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Armature": 6,
+        "Composant d’arme avancé : Verrou": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Armature": 10,
+        "Composant d’arme avancé : Verrou": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Armature": 20,
+        "Composant d’arme avancé : Verrou": 8
+      }
+    ],
+    "熔炼": [
+      "Vitesse d’attaque +25.0%. Lorsque cette arme déclenche un Effet supplémentaire, confère +5.0% d’augmentation de la Vitesse d’attaque pendant 12.0 s (jusqu’à 10.0 cumuls). L’effet est annulé lors du changement d’arme.",
+      "Vitesse d’attaque +30.0%. Lorsque cette arme déclenche un Effet supplémentaire, confère +6.0% d’augmentation de la Vitesse d’attaque pendant 12.0 s (jusqu’à 10.0 cumuls). L’effet est annulé lors du changement d’arme.",
+      "Vitesse d’attaque +35.0%. Lorsque cette arme déclenche un Effet supplémentaire, confère +7.0% d’augmentation de la Vitesse d’attaque pendant 12.0 s (jusqu’à 10.0 cumuls). L’effet est annulé lors du changement d’arme.",
+      "Vitesse d’attaque +40.0%. Lorsque cette arme déclenche un Effet supplémentaire, confère +8.0% d’augmentation de la Vitesse d’attaque pendant 12.0 s (jusqu’à 10.0 cumuls). L’effet est annulé lors du changement d’arme.",
+      "Vitesse d’attaque +45.0%. Lorsque cette arme déclenche un Effet supplémentaire, confère +9.0% d’augmentation de la Vitesse d’attaque pendant 12.0 s (jusqu’à 10.0 cumuls). L’effet est annulé lors du changement d’arme.",
+      "Vitesse d’attaque +50.0%. Lorsque cette arme déclenche un Effet supplémentaire, confère +10.0% d’augmentation de la Vitesse d’attaque pendant 12.0 s (jusqu’à 10.0 cumuls). L’effet est annulé lors du changement d’arme."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du projectile": "7.2%",
+          "Intervalle de tir": "0.3tirs/s",
+          "Intervalle de tir — Phase 2": "0.2tirs/s",
+          "Intervalle de tir — Phase 3": "0.1tirs/s",
+          "Intervalle de tir — Phase 4": "0.1tirs/s"
+        },
+        "id": 2030501,
+        "削韧": [
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20401,
+    "icon": "Shotgun_Chixing",
+    "名称": "Hurlement balistique",
+    "版本": "1.0",
+    "描述": "Ce n’est qu’après la toute dernière plainte... que le monde retrouve enfin le silence.",
+    "类型": [
+      "远程",
+      "霰弹枪"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 18,
+    "暴击": 0.2,
+    "暴伤": 1.8,
+    "触发": 0.2,
+    "弹匣": 6,
+    "最大弹药": 60,
+    "弹药转化率": 0.5,
+    "最大射程": 2800,
+    "加成": {
+      "技能耐久": 0.18
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Canon": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Canon": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Canon": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Canon": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Canon": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Canon": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "Durée de compétence +18.0%.",
+      "Durée de compétence +21.6%.",
+      "Durée de compétence +25.2%.",
+      "Durée de compétence +28.8%.",
+      "Durée de compétence +32.4%.",
+      "Durée de compétence +36.0%."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du projectile": "30.0%",
+          "Nombre de projectiles": "5.0"
+        },
+        "id": 2040101,
+        "削韧": [
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20402,
+    "icon": "Shotgun_Banzi",
+    "名称": "Semeur silencieux",
+    "版本": "1.0",
+    "描述": "Injecte des graines dans le corps... et laisse la destruction éclore de l’intérieur.",
+    "类型": [
+      "远程",
+      "霰弹枪"
+    ],
+    "射速": 1.0,
+    "装填": 2.33333,
+    "伤害类型": "震荡",
+    "攻击": 16,
+    "暴击": 0.16,
+    "暴伤": 1.8,
+    "触发": 0.15,
+    "弹匣": 12,
+    "最大弹药": 90,
+    "弹药转化率": 0.25,
+    "最大射程": 2000,
+    "加成": {
+      "暴击": 0.5
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Canon": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Canon": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Canon": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Canon": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Canon": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Canon": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "Taux CRIT +50.0%. Les projectiles se fixent sur la cible et explosent après 3 s. Lorsque plusieurs projectiles adhèrent au même endroit, ils se cumulent et augmentent les dégâts ainsi que la portée de l’explosion. Avec 1/2/3 cumuls, l’explosion inflige 217.0%/383.0%/592.0% des dégâts initiaux.",
+      "Taux CRIT +60.0%. Les projectiles se fixent sur la cible et explosent après 3 s. Lorsque plusieurs projectiles adhèrent au même endroit, ils se cumulent et augmentent les dégâts ainsi que la portée de l’explosion. Avec 1/2/3 cumuls, l’explosion inflige 225.0%/399.0%/615.0% des dégâts initiaux.",
+      "Taux CRIT +70.0%. Les projectiles se fixent sur la cible et explosent après 3 s. Lorsque plusieurs projectiles adhèrent au même endroit, ils se cumulent et augmentent les dégâts ainsi que la portée de l’explosion. Avec 1/2/3 cumuls, l’explosion inflige 234.0%/414.0%/639.0% des dégâts initiaux.",
+      "Taux CRIT +80.0%. Les projectiles se fixent sur la cible et explosent après 3 s. Lorsque plusieurs projectiles adhèrent au même endroit, ils se cumulent et augmentent les dégâts ainsi que la portée de l’explosion. Avec 1/2/3 cumuls, l’explosion inflige 243.0%/429.0%/663.0% des dégâts initiaux.",
+      "Taux CRIT +90.0%. Les projectiles se fixent sur la cible et explosent après 3 s. Lorsque plusieurs projectiles adhèrent au même endroit, ils se cumulent et augmentent les dégâts ainsi que la portée de l’explosion. Avec 1/2/3 cumuls, l’explosion inflige 251.0%/445.0%/686.0% des dégâts initiaux.",
+      "Taux CRIT +100.0%. Les projectiles se fixent sur la cible et explosent après 3 s. Lorsque plusieurs projectiles adhèrent au même endroit, ils se cumulent et augmentent les dégâts ainsi que la portée de l’explosion. Avec 1/2/3 cumuls, l’explosion inflige 260.0%/460.0%/710.0% des dégâts initiaux."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’explosion": "100.0%",
+          "Rayon d’explosion": "2.0m",
+          "Rayon d’explosion — Phase 2": "3.0m",
+          "Rayon d’explosion — Phase 3": "4.0m",
+          "Rayon d’explosion — Phase 4": "5.0m"
+        },
+        "id": 2040201,
+        "削韧": [
+          50
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20403,
+    "icon": "Shotgun_Shengcai",
+    "名称": "Aube du verdict",
+    "版本": "1.0",
+    "描述": "Arme portée par les chevaliers de l’Ordre Sacré de l’Iris, au sein de l’Église Élyséenne. Sainteté suprême ! Nous faisons serment de répandre la parole des Neuf jusqu’aux confins d’Atlasia.",
+    "类型": [
+      "远程",
+      "霰弹枪"
+    ],
+    "装填": 2.0,
+    "伤害类型": "切割",
+    "攻击": 17,
+    "暴击": 0.2,
+    "暴伤": 2,
+    "触发": 0.15,
+    "弹匣": 5,
+    "最大弹药": 60,
+    "弹药转化率": 0.25,
+    "最大射程": 3500,
+    "加成": {
+      "暴伤": 0.625
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Canon": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Canon": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Canon": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Canon": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Canon": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Canon": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "DGT CRIT +62.5%. Les projectiles tirés suivent la direction du viseur. Plus la cible est éloignée, plus les dégâts augmentent, jusqu’à un maximum de +45.0%.",
+      "DGT CRIT +75.0%. Les projectiles tirés suivent la direction du viseur. Plus la cible est éloignée, plus les dégâts augmentent, jusqu’à un maximum de +54.0%.",
+      "DGT CRIT +87.5%. Les projectiles tirés suivent la direction du viseur. Plus la cible est éloignée, plus les dégâts augmentent, jusqu’à un maximum de +63.0%.",
+      "DGT CRIT +100.0%. Les projectiles tirés suivent la direction du viseur. Plus la cible est éloignée, plus les dégâts augmentent, jusqu’à un maximum de +72.0%.",
+      "DGT CRIT +112.5%. Les projectiles tirés suivent la direction du viseur. Plus la cible est éloignée, plus les dégâts augmentent, jusqu’à un maximum de +81.0%.",
+      "DGT CRIT +125.0%. Les projectiles tirés suivent la direction du viseur. Plus la cible est éloignée, plus les dégâts augmentent, jusqu’à un maximum de +90.0%."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts d’explosion": "139.0%",
+          "Rayon d’explosion": "3.0m"
+        },
+        "id": 2040301,
+        "削韧": [
+          25
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20405,
+    "icon": "Shotgun_Baopo",
+    "名称": "Art de la détonation",
+    "版本": "1.0",
+    "描述": "— Hein ? Atlasia court à sa perte ? Bah. Tant qu’on peut faire tout sauter, ça me va.",
+    "类型": [
+      "远程",
+      "霰弹枪"
+    ],
+    "装填": 2.33333,
+    "伤害类型": "震荡",
+    "攻击": 15,
+    "暴击": 0.15,
+    "暴伤": 1.65,
+    "触发": 0.1,
+    "弹匣": 12,
+    "最大弹药": 60,
+    "弹药转化率": 0.3,
+    "最大射程": 2800,
+    "加成": {
+      "攻击": 0.5
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Canon": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Canon": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Canon": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Canon": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Canon": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Canon": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "ATQ du personnage +50.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des DGT de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +20.0% d’Efficacité de compétence pendant 15.0 s.",
+      "ATQ du personnage +60.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des DGT de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +24.0% d’Efficacité de compétence pendant 15.0 s.",
+      "ATQ du personnage +70.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des DGT de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +28.0% d’Efficacité de compétence pendant 15.0 s.",
+      "ATQ du personnage +80.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des DGT de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +32.0% d’Efficacité de compétence pendant 15.0 s.",
+      "ATQ du personnage +90.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des DGT de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +36.0% d’Efficacité de compétence pendant 15.0 s.",
+      "ATQ du personnage +100.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des DGT de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +40.0% d’Efficacité de compétence pendant 15.0 s."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du projectile": "33.0%",
+          "Dégâts d’explosion": "200.0%",
+          "Calibre du projectile": "2.8m",
+          "Rayon d’explosion": "10.0m"
+        },
+        "id": 2040501,
+        "削韧": [
+          12,
+          80
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20501,
+    "icon": "Machinegun_Chixing",
+    "名称": "Disloqueur",
+    "版本": "1.0",
+    "描述": "Quand la balle lacère la chair et brûle l’âme, jusqu’où peuvent tenir la bonté, l’honnêteté et le courage ?",
+    "类型": [
+      "远程",
+      "突击枪"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 17,
+    "暴击": 0.23,
+    "暴伤": 2.25,
+    "触发": 0.3,
+    "弹匣": 50,
+    "最大弹药": 200,
+    "弹药转化率": 2,
+    "最大射程": 2800,
+    "加成": {
+      "技能耐久": 0.18
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Verrou": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Verrou": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Verrou": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Verrou": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Verrou": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Verrou": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "Durée de compétence +18.0%.",
+      "Durée de compétence +21.6%.",
+      "Durée de compétence +25.2%.",
+      "Durée de compétence +28.8%.",
+      "Durée de compétence +32.4%.",
+      "Durée de compétence +36.0%."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du projectile": "16.0%",
+          "Intervalle de tir": "0.1tirs/s"
+        },
+        "id": 2050101,
+        "削韧": [
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20502,
+    "icon": "Machinegun_Fangzhu",
+    "名称": "Colère proscrite",
+    "版本": "1.0",
+    "描述": "Arme des Corvins des Déchus. Écoutez... voici la colère des bannis ! Voici la cloche funèbre qui résonne pour l’Empire !",
+    "类型": [
+      "远程",
+      "突击枪"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 15,
+    "暴击": 0.25,
+    "暴伤": 2.2,
+    "触发": 0.15,
+    "弹匣": 30,
+    "最大弹药": 160,
+    "弹药转化率": 1.6,
+    "最大射程": 2900,
+    "加成": {
+      "触发": 0.75
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Verrou": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Verrou": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Verrou": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Verrou": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Verrou": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Verrou": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "Chance de déclenchement +75.0%. Tire un rayon d’énergie qui rebondit sur la cible et frappe jusqu’à 4 ennemis proches. Lorsqu’un personnage Électro déclenche un Effet supplémentaire avec cette arme, il obtient +45.0% de DGT d’arme pendant 10.0 s.",
+      "Chance de déclenchement +90.0%. Tire un rayon d’énergie qui rebondit sur la cible et frappe jusqu’à 4 ennemis proches. Lorsqu’un personnage Électro déclenche un Effet supplémentaire avec cette arme, il obtient +54.0% de DGT d’arme pendant 10.0 s.",
+      "Chance de déclenchement +105.0%. Tire un rayon d’énergie qui rebondit sur la cible et frappe jusqu’à 4 ennemis proches. Lorsqu’un personnage Électro déclenche un Effet supplémentaire avec cette arme, il obtient +63.0% de DGT d’arme pendant 10.0 s.",
+      "Chance de déclenchement +120.0%. Tire un rayon d’énergie qui rebondit sur la cible et frappe jusqu’à 4 ennemis proches. Lorsqu’un personnage Électro déclenche un Effet supplémentaire avec cette arme, il obtient +72.0% de DGT d’arme pendant 10.0 s.",
+      "Chance de déclenchement +135.0%. Tire un rayon d’énergie qui rebondit sur la cible et frappe jusqu’à 4 ennemis proches. Lorsqu’un personnage Électro déclenche un Effet supplémentaire avec cette arme, il obtient +81.0% de DGT d’arme pendant 10.0 s.",
+      "Chance de déclenchement +150.0%. Tire un rayon d’énergie qui rebondit sur la cible et frappe jusqu’à 4 ennemis proches. Lorsqu’un personnage Électro déclenche un Effet supplémentaire avec cette arme, il obtient +90.0% de DGT d’arme pendant 10.0 s."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du rayon d’énergie": "17.6%",
+          "Dégâts de ricochet": "17.6%",
+          "Intervalle de tir": "0.1tirs/s"
+        },
+        "id": 2050201,
+        "削韧": [
+          4,
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20503,
+    "icon": "Machinegun_Qiqing",
+    "名称": "Brasier salvateur",
+    "版本": "1.0",
+    "描述": "Un lance-flammes manié par les chevaliers de l’Ordre Sacré de l’Iris. Sainteté suprême ! Ô feu sacré, descends sur nous ! En ton nom, nous jurons de réduire en cendres toute corruption.",
+    "类型": [
+      "远程",
+      "突击枪"
+    ],
+    "伤害类型": "切割",
+    "攻击": 19,
+    "暴击": 0.15,
+    "暴伤": 2,
+    "触发": 0.33,
+    "弹匣": 50,
+    "最大弹药": 120,
+    "弹药转化率": 1.5,
+    "最大射程": 2000,
+    "加成": {
+      "触发": 0.75
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Verrou": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Verrou": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Verrou": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Verrou": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Verrou": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Verrou": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "Chance de déclenchement +75.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme, il y a 30.0% de chances de recharger 1 projectile.",
+      "Chance de déclenchement +90.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme, il y a 36.0% de chances de recharger 1 projectile.",
+      "Chance de déclenchement +105.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme, il y a 42.0% de chances de recharger 1 projectile.",
+      "Chance de déclenchement +120.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme, il y a 48.0% de chances de recharger 1 projectile.",
+      "Chance de déclenchement +135.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme, il y a 54.0% de chances de recharger 1 projectile.",
+      "Chance de déclenchement +150.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme, il y a 60.0% de chances de recharger 1 projectile."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du rayon d’énergie": "20.0%",
+          "Intervalle de tir": "0.1tirs/s"
+        },
+        "id": 2050301,
+        "削韧": [
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20504,
+    "icon": "Machinegun_Poxiao",
+    "名称": "Hymne de l’aube",
+    "版本": "1.0",
+    "描述": "Mitraillette utilisée par les chevaliers de l’Ordre Sacré de l’Iris, fidèles à l’Église Élyséenne.\n« Sainteté suprême ! Si nous pouvons contempler ne fût-ce qu’un éclat de l’aube, alors même couverts d’épines, nous la goûterons comme un baume céleste. »",
+    "类型": [
+      "远程",
+      "突击枪"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 18,
+    "暴击": 0.26,
+    "暴伤": 2.45,
+    "触发": 0.24,
+    "弹匣": 30,
+    "最大弹药": 100,
+    "弹药转化率": 1.1,
+    "最大射程": 2000,
+    "加成": {
+      "多重": 0.375
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Verrou": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Verrou": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Verrou": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Verrou": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Verrou": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Verrou": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "Tir multiple +37.5%. Infliger des dégâts avec cette arme augmente les dégâts proportionnellement au pourcentage de munitions restantes : moins il en reste, plus les dégâts augmentent, jusqu’à un maximum de 45.0%.\nLe bonus maximal est atteint lorsque les munitions passent sous 20.0%.",
+      "Tir multiple +45.0%. Infliger des dégâts avec cette arme augmente les dégâts proportionnellement au pourcentage de munitions restantes : moins il en reste, plus les dégâts augmentent, jusqu’à un maximum de 54.0%.\nLe bonus maximal est atteint lorsque les munitions passent sous 20.0%.",
+      "Tir multiple +52.5%. Infliger des dégâts avec cette arme augmente les dégâts proportionnellement au pourcentage de munitions restantes : moins il en reste, plus les dégâts augmentent, jusqu’à un maximum de 63.0%.\nLe bonus maximal est atteint lorsque les munitions passent sous 20.0%.",
+      "Tir multiple +60.0%. Infliger des dégâts avec cette arme augmente les dégâts proportionnellement au pourcentage de munitions restantes : moins il en reste, plus les dégâts augmentent, jusqu’à un maximum de 72.0%.\nLe bonus maximal est atteint lorsque les munitions passent sous 20.0%.",
+      "Tir multiple +67.5%. Infliger des dégâts avec cette arme augmente les dégâts proportionnellement au pourcentage de munitions restantes : moins il en reste, plus les dégâts augmentent, jusqu’à un maximum de 81.0%.\nLe bonus maximal est atteint lorsque les munitions passent sous 20.0%.",
+      "Tir multiple +75.0%. Infliger des dégâts avec cette arme augmente les dégâts proportionnellement au pourcentage de munitions restantes : moins il en reste, plus les dégâts augmentent, jusqu’à un maximum de 90.0%.\nLe bonus maximal est atteint lorsque les munitions passent sous 20.0%."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du rayon d’énergie": "12.0%",
+          "Dégâts du rayon d’énergie — Phase 2": "20.0%",
+          "Dégâts du rayon d’énergie — Phase 3": "37.0%",
+          "Intervalle de tir": "0.5tirs/s",
+          "Intervalle de tir — Phase 2": "0.3tirs/s",
+          "Intervalle de tir — Phase 3": "0.1tirs/s"
+        },
+        "id": 2050401,
+        "削韧": [
+          3,
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20505,
+    "icon": "Machinegun_Sanjiao",
+    "名称": "Muse trigonale",
+    "版本": "1.2",
+    "描述": "La géométrie aux trois arêtes a reçu l’éloge de la déesse, prête à transformer l’art de la beauté en une acuité mortelle.",
+    "类型": [
+      "远程",
+      "突击枪"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 18,
+    "暴击": 0.24,
+    "暴伤": 2.15,
+    "触发": 0.28,
+    "弹匣": 25,
+    "最大弹药": 120,
+    "弹药转化率": 2.2,
+    "最大射程": 2900,
+    "加成": {
+      "弹匣": 0.3
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Verrou": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Verrou": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Verrou": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Verrou": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Verrou": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Verrou": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "Capacité du chargeur +30.0%. Après avoir consommé 10 munitions en tirant avec cette arme, toutes les munitions restantes du chargeur sont consommées pour tirer 1 projectile spécial infligeant des Dégâts de zone. Chaque munition consommée augmente les dégâts de ce tir de 1.7%, jusqu’à un maximum de 51.0%. Vaincre un ennemi avec cette arme a 25.0% de chances d’obtenir 1 projectile.",
+      "Capacité du chargeur +36.0%. Après avoir consommé 10 munitions en tirant avec cette arme, toutes les munitions restantes du chargeur sont consommées pour tirer 1 projectile spécial infligeant des Dégâts de zone. Chaque munition consommée augmente les dégâts de ce tir de 2.0%, jusqu’à un maximum de 61.2%. Vaincre un ennemi avec cette arme a 30.0% de chances d’obtenir 1 projectile.",
+      "Capacité du chargeur +42.0%. Après avoir consommé 10 munitions en tirant avec cette arme, toutes les munitions restantes du chargeur sont consommées pour tirer 1 projectile spécial infligeant des Dégâts de zone. Chaque munition consommée augmente les dégâts de ce tir de 2.4%, jusqu’à un maximum de 71.4%. Vaincre un ennemi avec cette arme a 35.0% de chances d’obtenir 1 projectile.",
+      "Capacité du chargeur +48.0%. Après avoir consommé 10 munitions en tirant avec cette arme, toutes les munitions restantes du chargeur sont consommées pour tirer 1 projectile spécial infligeant des Dégâts de zone. Chaque munition consommée augmente les dégâts de ce tir de 2.7%, jusqu’à un maximum de 81.6%. Vaincre un ennemi avec cette arme a 40.0% de chances d’obtenir 1 projectile.",
+      "Capacité du chargeur +54.0%. Après avoir consommé 10 munitions en tirant avec cette arme, toutes les munitions restantes du chargeur sont consommées pour tirer 1 projectile spécial infligeant des Dégâts de zone. Chaque munition consommée augmente les dégâts de ce tir de 3.1%, jusqu’à un maximum de 91.8%. Vaincre un ennemi avec cette arme a 45.0% de chances d’obtenir 1 projectile.",
+      "Capacité du chargeur +60.0%. Après avoir consommé 10 munitions en tirant avec cette arme, toutes les munitions restantes du chargeur sont consommées pour tirer 1 projectile spécial infligeant des Dégâts de zone. Chaque munition consommée augmente les dégâts de ce tir de 3.4%, jusqu’à un maximum de 102.0%. Vaincre un ennemi avec cette arme a 50.0% de chances d’obtenir 1 projectile."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du rayon d’énergie": "5.0%",
+          "Dégâts d’explosion": "291.5%"
+        },
+        "id": 2050501
+      }
+    ]
+  },
+  {
+    "id": 20506,
+    "icon": "Machinegun_Quewu",
+    "名称": "Voile nuageux",
+    "版本": "1.1",
+    "描述": "Les nuées s’écartent, laissant s’élancer deux paons en plein vol ; sur un tapis de brocart fleuri, une danseuse esquisse ses pas gracieux.",
+    "类型": [
+      "远程",
+      "突击枪"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 16,
+    "暴击": 0.22,
+    "暴伤": 2.1,
+    "触发": 0.15,
+    "弹匣": 60,
+    "最大弹药": 150,
+    "弹药转化率": 2.1,
+    "最大射程": 2900,
+    "加成": {
+      "弹匣": 0.3
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Verrou": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Verrou": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Verrou": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Verrou": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Verrou": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Verrou": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "Capacité du chargeur +30.0%. Lorsqu’un coup critique est infligé avec cette arme, confère 1 cumul de Vitesse d’attaque +5.0% pendant 6.0 s, cumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Capacité du chargeur +36.0%. Lorsqu’un coup critique est infligé avec cette arme, confère 1 cumul de Vitesse d’attaque +6.0% pendant 6.0 s, cumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Capacité du chargeur +42.0%. Lorsqu’un coup critique est infligé avec cette arme, confère 1 cumul de Vitesse d’attaque +7.0% pendant 6.0 s, cumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Capacité du chargeur +48.0%. Lorsqu’un coup critique est infligé avec cette arme, confère 1 cumul de Vitesse d’attaque +8.0% pendant 6.0 s, cumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Capacité du chargeur +54.0%. Lorsqu’un coup critique est infligé avec cette arme, confère 1 cumul de Vitesse d’attaque +9.0% pendant 6.0 s, cumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Capacité du chargeur +60.0%. Lorsqu’un coup critique est infligé avec cette arme, confère 1 cumul de Vitesse d’attaque +10.0% pendant 6.0 s, cumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du projectile": "4.1%",
+          "Intervalle de tir": "0.1tirs/s"
+        },
+        "id": 2050601,
+        "削韧": [
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20507,
+    "icon": "Machinegun_Yinlang",
+    "名称": "Ode des profondeurs",
+    "版本": "1.0",
+    "描述": "Le jeune marin, trop occupé à affaler la voile avant la tempête, n’a jamais compté les mots d’amour cachés sous les flots.\nIl ignorait que chaque chanson de sirène n’était qu’un murmure destiné à son cœur.",
+    "类型": [
+      "远程",
+      "突击枪"
+    ],
+    "伤害类型": "切割",
+    "攻击": 16,
+    "暴击": 0.22,
+    "暴伤": 2.2,
+    "触发": 0.25,
+    "弹匣": 1,
+    "最大弹药": 10,
+    "弹药转化率": 0.1,
+    "最大射程": 2800,
+    "加成": {
+      "暴伤": 0.625
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Verrou": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Verrou": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Verrou": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Verrou": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Verrou": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Verrou": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "DGT CRIT +62.5%. Lorsque les projectiles touchent le décor ou parcourent une certaine distance, ils reviennent vers l’utilisateur et ajoutent 1 munition.\nChaque augmentation de la munition maximale augmente les dégâts de 4.5%, jusqu’à un maximum de 45.0%.",
+      "DGT CRIT +75.0%. Lorsque les projectiles touchent le décor ou parcourent une certaine distance, ils reviennent vers l’utilisateur et ajoutent 1 munition.\nChaque augmentation de la munition maximale augmente les dégâts de 5.4%, jusqu’à un maximum de 54.0%.",
+      "DGT CRIT +87.5%. Lorsque les projectiles touchent le décor ou parcourent une certaine distance, ils reviennent vers l’utilisateur et ajoutent 1 munition.\nChaque augmentation de la munition maximale augmente les dégâts de 6.3%, jusqu’à un maximum de 63.0%.",
+      "DGT CRIT +100.0%. Lorsque les projectiles touchent le décor ou parcourent une certaine distance, ils reviennent vers l’utilisateur et ajoutent 1 munition.\nChaque augmentation de la munition maximale augmente les dégâts de 7.2%, jusqu’à un maximum de 72.0%.",
+      "DGT CRIT +112.5%. Lorsque les projectiles touchent le décor ou parcourent une certaine distance, ils reviennent vers l’utilisateur et ajoutent 1 munition.\nChaque augmentation de la munition maximale augmente les dégâts de 8.1%, jusqu’à un maximum de 81.0%.",
+      "DGT CRIT +125.0%. Lorsque les projectiles touchent le décor ou parcourent une certaine distance, ils reviennent vers l’utilisateur et ajoutent 1 munition.\nChaque augmentation de la munition maximale augmente les dégâts de 9.0%, jusqu’à un maximum de 90.0%."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du projectile": "6.0%",
+          "Intervalle de tir": "0.1tirs/s"
+        },
+        "id": 2050701,
+        "削韧": [
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20509,
+    "icon": "Machinegun_Zhimeng",
+    "名称": "Plume du tisseur de rêves",
+    "版本": "1.0",
+    "描述": "D’une plume immaculée, j’ai tissé une frêle cage et refermé, entre ses barreaux, la sauvagerie du monde.",
+    "类型": [
+      "远程",
+      "突击枪"
+    ],
+    "伤害类型": "切割",
+    "攻击": 15,
+    "暴击": 0.24,
+    "暴伤": 2.4,
+    "触发": 0.15,
+    "弹匣": 50,
+    "最大弹药": 120,
+    "弹药转化率": 1.5,
+    "最大射程": 2000,
+    "加成": {
+      "技能范围": 0.3
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Verrou": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Verrou": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Verrou": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Verrou": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Verrou": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Verrou": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "Portée de compétence +30.0%. Lorsqu’un personnage Lumino inflige des dégâts supplémentaires, il y a 30.0% de chances d’octroyer à ses alliés +9.0% ATQ pendant 15.0 s (jusqu’à 10.0 cumuls).",
+      "Portée de compétence +36.0%. Lorsqu’un personnage Lumino inflige des dégâts supplémentaires, il y a 30.0% de chances d’octroyer à ses alliés +10.8% ATQ pendant 15.0 s (jusqu’à 10.0 cumuls).",
+      "Portée de compétence +42.0%. Lorsqu’un personnage Lumino inflige des dégâts supplémentaires, il y a 30.0% de chances d’octroyer à ses alliés +12.6% ATQ pendant 15.0 s (jusqu’à 10.0 cumuls).",
+      "Portée de compétence +48.0%. Lorsqu’un personnage Lumino inflige des dégâts supplémentaires, il y a 30.0% de chances d’octroyer à ses alliés +14.4% ATQ pendant 15.0 s (jusqu’à 10.0 cumuls).",
+      "Portée de compétence +54.0%. Lorsqu’un personnage Lumino inflige des dégâts supplémentaires, il y a 30.0% de chances d’octroyer à ses alliés +16.2% ATQ pendant 15.0 s (jusqu’à 10.0 cumuls).",
+      "Portée de compétence +60.0%. Lorsqu’un personnage Lumino inflige des dégâts supplémentaires, il y a 30.0% de chances d’octroyer à ses alliés +18.0% ATQ pendant 15.0 s (jusqu’à 10.0 cumuls)."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du rayon d’énergie": "20.0%",
+          "Intervalle de tir": "0.1tirs/s"
+        },
+        "id": 2050301,
+        "削韧": [
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20510,
+    "icon": "Machinegun_Ruohua",
+    "名称": "Lumière éphémère",
+    "版本": "1.1",
+    "描述": "En rêve, ma lame décroche la lune glacée qui se mire dans le fleuve ; sous l’éclair de son acier, un nouvel automne déjà s’éteint.",
+    "类型": [
+      "远程",
+      "突击枪"
+    ],
+    "伤害类型": "切割",
+    "攻击": 18,
+    "暴击": 0.22,
+    "暴伤": 2.2,
+    "触发": 0.33,
+    "弹匣": 1,
+    "最大弹药": 15,
+    "弹药转化率": 0.1,
+    "最大射程": 2800,
+    "加成": {
+      "技能耐久": 0.15
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Verrou": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Verrou": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Verrou": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Verrou": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Verrou": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Verrou": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "Durée de compétence +15.0%. Les projectiles reviennent après impact ou distance parcourue, ajoutant 1 munition. Lorsqu’un personnage Lumino déclenche un Effet supplémentaire, il obtient 1 cumul d’ATQ +17.5% pendant 24.0 s, jusqu’à 9.0 cumuls. L’utilisation de la compétence ultime réinitialise la durée de tous les cumuls à 24.0 s.",
+      "Durée de compétence +18.0%. Les projectiles reviennent après impact ou distance parcourue, ajoutant 1 munition. Lorsqu’un personnage Lumino déclenche un Effet supplémentaire, il obtient 1 cumul d’ATQ +21.0% pendant 24.0 s, jusqu’à 9.0 cumuls. L’utilisation de la compétence ultime réinitialise la durée de tous les cumuls à 24.0 s.",
+      "Durée de compétence +21.0%. Les projectiles reviennent après impact ou distance parcourue, ajoutant 1 munition. Lorsqu’un personnage Lumino déclenche un Effet supplémentaire, il obtient 1 cumul d’ATQ +24.5% pendant 24.0 s, jusqu’à 9.0 cumuls. L’utilisation de la compétence ultime réinitialise la durée de tous les cumuls à 24.0 s.",
+      "Durée de compétence +24.0%. Les projectiles reviennent après impact ou distance parcourue, ajoutant 1 munition. Lorsqu’un personnage Lumino déclenche un Effet supplémentaire, il obtient 1 cumul d’ATQ +28.0% pendant 24.0 s, jusqu’à 9.0 cumuls. L’utilisation de la compétence ultime réinitialise la durée de tous les cumuls à 24.0 s.",
+      "Durée de compétence +27.0%. Les projectiles reviennent après impact ou distance parcourue, ajoutant 1 munition. Lorsqu’un personnage Lumino déclenche un Effet supplémentaire, il obtient 1 cumul d’ATQ +31.5% pendant 24.0 s, jusqu’à 9.0 cumuls. L’utilisation de la compétence ultime réinitialise la durée de tous les cumuls à 24.0 s.",
+      "Durée de compétence +30.0%. Les projectiles reviennent après impact ou distance parcourue, ajoutant 1 munition. Lorsqu’un personnage Lumino déclenche un Effet supplémentaire, il obtient 1 cumul d’ATQ +35.0% pendant 24.0 s, jusqu’à 9.0 cumuls. L’utilisation de la compétence ultime réinitialise la durée de tous les cumuls à 24.0 s."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du projectile": "6.0%",
+          "Intervalle de tir": "0.1tirs/s"
+        },
+        "id": 2051001,
+        "削韧": [
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20601,
+    "icon": "Bow_Shashi",
+    "名称": "Soupir du désert",
+    "版本": "1.0",
+    "描述": "Toi, âme solitaire — lorsque tu te tiens au cœur des flammes et choisis de n’être plus qu’un grain de sable livré au vent, commence alors ta renaissance... et la conquête de ton propre destin.",
+    "类型": [
+      "远程",
+      "弓",
+      "弓（长弓）"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 17,
+    "暴击": 0.19,
+    "暴伤": 2,
+    "触发": 0.2,
+    "弹匣": 1,
+    "最大弹药": 50,
+    "弹药转化率": 0.5,
+    "最大射程": 4000,
+    "加成": {
+      "攻速": 0.25
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Armature": 4,
+        "Composant d’arme basique : Canon": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Armature": 3,
+        "Composant d’arme intermédiaire : Canon": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Armature": 6,
+        "Composant d’arme avancé : Canon": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Armature": 10,
+        "Composant d’arme avancé : Canon": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Armature": 20,
+        "Composant d’arme avancé : Canon": 8
+      }
+    ],
+    "熔炼": [
+      "Vitesse d’attaque +25.0%. Chaque ennemi touché par une flèche augmente ses dégâts de 9.0%, jusqu’à un maximum de 45.0%.",
+      "Vitesse d’attaque +30.0%. Chaque ennemi touché par une flèche augmente ses dégâts de 10.8%, jusqu’à un maximum de 54.0%.",
+      "Vitesse d’attaque +35.0%. Chaque ennemi touché par une flèche augmente ses dégâts de 12.6%, jusqu’à un maximum de 63.0%.",
+      "Vitesse d’attaque +40.0%. Chaque ennemi touché par une flèche augmente ses dégâts de 14.4%, jusqu’à un maximum de 72.0%.",
+      "Vitesse d’attaque +45.0%. Chaque ennemi touché par une flèche augmente ses dégâts de 16.2%, jusqu’à un maximum de 81.0%.",
+      "Vitesse d’attaque +50.0%. Chaque ennemi touché par une flèche augmente ses dégâts de 18.0%, jusqu’à un maximum de 90.0%."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du projectile": "35.0%",
+          "Dégâts du projectile — Phase 2": "60.0%",
+          "Dégâts du projectile — Phase 3": "143.0%",
+          "Calibre du projectile": "0.2m",
+          "Calibre du projectile — Phase 2": "1.0m",
+          "Calibre du projectile — Phase 3": "1.0m"
+        },
+        "id": 2060101,
+        "削韧": [
+          8,
+          10,
+          20
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20602,
+    "icon": "Bow_Huguang",
+    "名称": "Lumière de l’Apocalypse",
+    "版本": "1.0",
+    "描述": "La corde vibre : la cible est à portée.\nReste calme, mon ami — le destin de ton ennemi est déjà scellé.",
+    "类型": [
+      "远程",
+      "弓",
+      "弓（短弓）"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 18,
+    "暴击": 0.26,
+    "暴伤": 2.2,
+    "触发": 0.2,
+    "弹匣": 1,
+    "最大弹药": 150,
+    "弹药转化率": 4.75,
+    "最大射程": 4000,
+    "加成": {
+      "技能耐久": 0.15
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Armature": 4,
+        "Composant d’arme basique : Canon": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Armature": 3,
+        "Composant d’arme intermédiaire : Canon": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Armature": 6,
+        "Composant d’arme avancé : Canon": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Armature": 10,
+        "Composant d’arme avancé : Canon": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Armature": 20,
+        "Composant d’arme avancé : Canon": 8
+      }
+    ],
+    "熔炼": [
+      "Durée de compétence +15.0%. Lorsqu’un coup critique est infligé avec cette arme, confère aléatoirement à vos alliés l’un des effets suivants pendant 16.0 s : ATQ +10.0%, DÉF +10.0%, Puissance de compétence +7.5% ou Durée de compétence +10.0%.",
+      "Durée de compétence +18.0%. Lorsqu’un coup critique est infligé avec cette arme, confère aléatoirement à vos alliés l’un des effets suivants pendant 16.0 s : ATQ +12.0%, DÉF +12.0%, Puissance de compétence +9.0% ou Durée de compétence +12.0%.",
+      "Durée de compétence +21.0%. Lorsqu’un coup critique est infligé avec cette arme, confère aléatoirement à vos alliés l’un des effets suivants pendant 16.0 s : ATQ +14.0%, DÉF +14.0%, Puissance de compétence +10.5% ou Durée de compétence +14.0%.",
+      "Durée de compétence +24.0%. Lorsqu’un coup critique est infligé avec cette arme, confère aléatoirement à vos alliés l’un des effets suivants pendant 16.0 s : ATQ +16.0%, DÉF +16.0%, Puissance de compétence +12.0% ou Durée de compétence +16.0%.",
+      "Durée de compétence +27.0%. Lorsqu’un coup critique est infligé avec cette arme, confère aléatoirement à vos alliés l’un des effets suivants pendant 16.0 s : ATQ +18.0%, DÉF +18.0%, Puissance de compétence +13.5% ou Durée de compétence +18.0%.",
+      "Durée de compétence +30.0%. Lorsqu’un coup critique est infligé avec cette arme, confère aléatoirement à vos alliés l’un des effets suivants pendant 16.0 s : ATQ +20.0%, DÉF +20.0%, Puissance de compétence +15.0% ou Durée de compétence +20.0%."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du projectile": "6.3%",
+          "Nombre de projectiles": "7.0"
+        },
+        "id": 2060201,
+        "削韧": [
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20603,
+    "icon": "Bow_Yinbu",
+    "名称": "Inflorescence d’Embla",
+    "版本": "1.0",
+    "描述": "Nul vivant ne sait ce qui repose au-delà de la Mer du Silence. Peut-être, dans ce chaos primordial, une fleur minuscule ose-t-elle encore éclore.",
+    "类型": [
+      "远程",
+      "弓",
+      "弓（长弓）"
+    ],
+    "伤害类型": "切割",
+    "攻击": 15,
+    "暴击": 0.22,
+    "暴伤": 2.2,
+    "触发": 0.3,
+    "弹匣": 1,
+    "最大弹药": 150,
+    "弹药转化率": 1.25,
+    "最大射程": 4000,
+    "加成": {
+      "技能范围": 0.3
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Armature": 4,
+        "Composant d’arme basique : Canon": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Armature": 3,
+        "Composant d’arme intermédiaire : Canon": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Armature": 6,
+        "Composant d’arme avancé : Canon": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Armature": 10,
+        "Composant d’arme avancé : Canon": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Armature": 20,
+        "Composant d’arme avancé : Canon": 8
+      }
+    ],
+    "熔炼": [
+      "Portée de compétence +30.0%. Pendant la charge, verrouille progressivement les ennemis dans la zone. Lors du relâchement, tire des flèches traçantes vers toutes les cibles verrouillées. Lorsqu’un personnage Lumino inflige des Dégâts de compétence, il obtient +35.0% de Dégâts de compétence pendant 6.0 s.",
+      "Portée de compétence +36.0%. Pendant la charge, verrouille progressivement les ennemis dans la zone. Lors du relâchement, tire des flèches traçantes vers toutes les cibles verrouillées. Lorsqu’un personnage Lumino inflige des Dégâts de compétence, il obtient +42.0% de Dégâts de compétence pendant 6.0 s.",
+      "Portée de compétence +42.0%. Pendant la charge, verrouille progressivement les ennemis dans la zone. Lors du relâchement, tire des flèches traçantes vers toutes les cibles verrouillées. Lorsqu’un personnage Lumino inflige des Dégâts de compétence, il obtient +49.0% de Dégâts de compétence pendant 6.0 s.",
+      "Portée de compétence +48.0%. Pendant la charge, verrouille progressivement les ennemis dans la zone. Lors du relâchement, tire des flèches traçantes vers toutes les cibles verrouillées. Lorsqu’un personnage Lumino inflige des Dégâts de compétence, il obtient +56.0% de Dégâts de compétence pendant 6.0 s.",
+      "Portée de compétence +54.0%. Pendant la charge, verrouille progressivement les ennemis dans la zone. Lors du relâchement, tire des flèches traçantes vers toutes les cibles verrouillées. Lorsqu’un personnage Lumino inflige des Dégâts de compétence, il obtient +63.0% de Dégâts de compétence pendant 6.0 s.",
+      "Portée de compétence +60.0%. Pendant la charge, verrouille progressivement les ennemis dans la zone. Lors du relâchement, tire des flèches traçantes vers toutes les cibles verrouillées. Lorsqu’un personnage Lumino inflige des Dégâts de compétence, il obtient +70.0% de Dégâts de compétence pendant 6.0 s."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du projectile": "18.0%",
+          "Calibre du projectile": "0.2m"
+        },
+        "id": 2060301,
+        "削韧": [
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20604,
+    "icon": "Bow_Chixing",
+    "名称": "Déchire-âme",
+    "版本": "1.0",
+    "描述": "La vie et la mort s’entrelacent dans la flèche quittant la corde, faisant résonner une plainte capable de déchirer l’âme.",
+    "类型": [
+      "远程",
+      "弓",
+      "弓（短弓）"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 19,
+    "暴击": 0.22,
+    "暴伤": 2.05,
+    "触发": 0.33,
+    "弹匣": 1,
+    "最大弹药": 150,
+    "弹药转化率": 4.75,
+    "最大射程": 4000,
+    "加成": {
+      "技能范围": 0.36
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Armature": 4,
+        "Composant d’arme basique : Canon": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Armature": 3,
+        "Composant d’arme intermédiaire : Canon": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Armature": 6,
+        "Composant d’arme avancé : Canon": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Armature": 10,
+        "Composant d’arme avancé : Canon": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Armature": 20,
+        "Composant d’arme avancé : Canon": 8
+      }
+    ],
+    "熔炼": [
+      "Portée de compétence +36.0%.",
+      "Portée de compétence +43.2%.",
+      "Portée de compétence +50.4%.",
+      "Portée de compétence +57.6%.",
+      "Portée de compétence +64.8%.",
+      "Portée de compétence +72.0%."
+    ],
+    "技能": [
+      {
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": {
+          "Dégâts du projectile": "6.3%",
+          "Nombre de projectiles": "7.0"
+        },
+        "id": 2060201,
+        "削韧": [
+          3
+        ]
+      }
+    ]
+  }
+]

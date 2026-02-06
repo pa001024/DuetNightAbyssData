@@ -1,0 +1,364 @@
+[
+  {
+    "id": 10011,
+    "bid": 1001,
+    "icon": "World",
+    "name": "Gourmand",
+    "r": 3,
+    "upid": 10012,
+    "desc": "Portée ramassage auto +2 m"
+  },
+  {
+    "id": 10012,
+    "bid": 1001,
+    "icon": "World",
+    "name": "Gourmand",
+    "r": 4,
+    "upid": 10013,
+    "desc": "Portée ramassage auto +4 m"
+  },
+  {
+    "id": 10013,
+    "bid": 1001,
+    "icon": "World",
+    "name": "Gourmand",
+    "r": 5,
+    "desc": "Portée ramassage auto +6 m"
+  },
+  {
+    "id": 10021,
+    "bid": 1002,
+    "icon": "World",
+    "name": "Économe",
+    "r": 3,
+    "upid": 10022,
+    "desc": "Taux de butin augmenté de 5%"
+  },
+  {
+    "id": 10022,
+    "bid": 1002,
+    "icon": "World",
+    "name": "Économe",
+    "r": 4,
+    "upid": 10023,
+    "desc": "Taux de butin augmenté de 10%"
+  },
+  {
+    "id": 10023,
+    "bid": 1002,
+    "icon": "World",
+    "name": "Économe",
+    "r": 5,
+    "desc": "Taux de butin augmenté de 15%"
+  },
+  {
+    "id": 10031,
+    "bid": 1003,
+    "icon": "Battle",
+    "name": "Sage",
+    "r": 3,
+    "upid": 10032,
+    "desc": "EXP obtenue en vainquant des ennemis +5%"
+  },
+  {
+    "id": 10032,
+    "bid": 1003,
+    "icon": "Battle",
+    "name": "Sage",
+    "r": 4,
+    "upid": 10033,
+    "desc": "EXP obtenue en vainquant des ennemis +10%"
+  },
+  {
+    "id": 10033,
+    "bid": 1003,
+    "icon": "Battle",
+    "name": "Sage",
+    "r": 5,
+    "desc": "EXP obtenue en vainquant des ennemis +15%"
+  },
+  {
+    "id": 10041,
+    "bid": 1004,
+    "icon": "Battle",
+    "name": "Tenace",
+    "r": 5,
+    "desc": "Tentatives de réanimation +1"
+  },
+  {
+    "id": 10061,
+    "bid": 1006,
+    "icon": "Speed",
+    "name": "Impulsif",
+    "r": 3,
+    "upid": 10062,
+    "desc": "Vitesse de saut +2%"
+  },
+  {
+    "id": 10062,
+    "bid": 1006,
+    "icon": "Speed",
+    "name": "Impulsif",
+    "r": 4,
+    "upid": 10063,
+    "desc": "Vitesse de saut +4%"
+  },
+  {
+    "id": 10063,
+    "bid": 1006,
+    "icon": "Speed",
+    "name": "Impulsif",
+    "r": 5,
+    "desc": "Vitesse de saut +6%"
+  },
+  {
+    "id": 10071,
+    "bid": 1007,
+    "icon": "Speed",
+    "name": "Rapide",
+    "r": 3,
+    "upid": 10072,
+    "desc": "Vitesse de bond cyclonique +2%"
+  },
+  {
+    "id": 10072,
+    "bid": 1007,
+    "icon": "Speed",
+    "name": "Rapide",
+    "r": 4,
+    "upid": 10073,
+    "desc": "Vitesse de bond cyclonique +4%"
+  },
+  {
+    "id": 10073,
+    "bid": 1007,
+    "icon": "Speed",
+    "name": "Rapide",
+    "r": 5,
+    "desc": "Vitesse de bond cyclonique +6%"
+  },
+  {
+    "id": 10081,
+    "bid": 1008,
+    "icon": "Speed",
+    "name": "Dodu",
+    "r": 3,
+    "upid": 10082,
+    "desc": "Vitesse de glissade +4%"
+  },
+  {
+    "id": 10082,
+    "bid": 1008,
+    "icon": "Speed",
+    "name": "Dodu",
+    "r": 4,
+    "upid": 10083,
+    "desc": "Vitesse de glissade +8%"
+  },
+  {
+    "id": 10083,
+    "bid": 1008,
+    "icon": "Speed",
+    "name": "Dodu",
+    "r": 5,
+    "desc": "Vitesse de glissade +12%"
+  },
+  {
+    "id": 10091,
+    "bid": 1009,
+    "icon": "Speed",
+    "name": "Vigilant",
+    "r": 3,
+    "upid": 10092,
+    "desc": "Temps de recharge d’esquive -5%"
+  },
+  {
+    "id": 10092,
+    "bid": 1009,
+    "icon": "Speed",
+    "name": "Vigilant",
+    "r": 4,
+    "upid": 10093,
+    "desc": "Temps de recharge d’esquive -10%"
+  },
+  {
+    "id": 10093,
+    "bid": 1009,
+    "icon": "Speed",
+    "name": "Vigilant",
+    "r": 5,
+    "desc": "Temps de recharge d’esquive -15%"
+  },
+  {
+    "id": 10101,
+    "bid": 1010,
+    "icon": "Base",
+    "name": "Féroce",
+    "r": 3,
+    "upid": 10102,
+    "desc": "ATQ +8%"
+  },
+  {
+    "id": 10102,
+    "bid": 1010,
+    "icon": "Base",
+    "name": "Féroce",
+    "r": 4,
+    "upid": 10103,
+    "desc": "ATQ +16%"
+  },
+  {
+    "id": 10103,
+    "bid": 1010,
+    "icon": "Base",
+    "name": "Féroce",
+    "r": 5,
+    "desc": "ATQ +24%"
+  },
+  {
+    "id": 10111,
+    "bid": 1011,
+    "icon": "Base",
+    "name": "Cuirassé",
+    "r": 3,
+    "upid": 10112,
+    "desc": "DÉF +8%"
+  },
+  {
+    "id": 10112,
+    "bid": 1011,
+    "icon": "Base",
+    "name": "Cuirassé",
+    "r": 4,
+    "upid": 10113,
+    "desc": "DÉF +16%"
+  },
+  {
+    "id": 10113,
+    "bid": 1011,
+    "icon": "Base",
+    "name": "Cuirassé",
+    "r": 5,
+    "desc": "DÉF +24%"
+  },
+  {
+    "id": 10121,
+    "bid": 1012,
+    "icon": "Base",
+    "name": "Robuste",
+    "r": 3,
+    "upid": 10122,
+    "desc": "PV max +8%"
+  },
+  {
+    "id": 10122,
+    "bid": 1012,
+    "icon": "Base",
+    "name": "Robuste",
+    "r": 4,
+    "upid": 10123,
+    "desc": "PV max +16%"
+  },
+  {
+    "id": 10123,
+    "bid": 1012,
+    "icon": "Base",
+    "name": "Robuste",
+    "r": 5,
+    "desc": "PV max +24%"
+  },
+  {
+    "id": 10131,
+    "bid": 1013,
+    "icon": "Base",
+    "name": "Timide",
+    "r": 3,
+    "upid": 10132,
+    "desc": "Bouclier max +8%"
+  },
+  {
+    "id": 10132,
+    "bid": 1013,
+    "icon": "Base",
+    "name": "Timide",
+    "r": 4,
+    "upid": 10133,
+    "desc": "Bouclier max +16%"
+  },
+  {
+    "id": 10133,
+    "bid": 1013,
+    "icon": "Base",
+    "name": "Timide",
+    "r": 5,
+    "desc": "Bouclier max +24%"
+  },
+  {
+    "id": 10141,
+    "bid": 1014,
+    "icon": "Battle",
+    "name": "Perspicace",
+    "r": 3,
+    "upid": 10142,
+    "desc": "Temps de recharge des compétences de soutien -8%"
+  },
+  {
+    "id": 10142,
+    "bid": 1014,
+    "icon": "Battle",
+    "name": "Perspicace",
+    "r": 4,
+    "upid": 10143,
+    "desc": "Temps de recharge des compétences de soutien -16%"
+  },
+  {
+    "id": 10143,
+    "bid": 1014,
+    "icon": "Battle",
+    "name": "Perspicace",
+    "r": 5,
+    "desc": "Temps de recharge des compétences de soutien -24%"
+  },
+  {
+    "id": 10151,
+    "bid": 1015,
+    "icon": "World",
+    "name": "Érudit",
+    "r": 3,
+    "upid": 10152,
+    "desc": "EXP octroyée lorsqu’utilisé comme matériau +20%"
+  },
+  {
+    "id": 10152,
+    "bid": 1015,
+    "icon": "World",
+    "name": "Érudit",
+    "r": 4,
+    "upid": 10153,
+    "desc": "EXP octroyée lorsqu’utilisé comme matériau +40%"
+  },
+  {
+    "id": 10153,
+    "bid": 1015,
+    "icon": "World",
+    "name": "Érudit",
+    "r": 5,
+    "desc": "EXP octroyée lorsqu’utilisé comme matériau +60%"
+  },
+  {
+    "id": 10161,
+    "bid": 1016,
+    "icon": "World",
+    "name": "Habile",
+    "r": 5,
+    "desc": "Permet de décrypter rapidement des mécanismes."
+  },
+  {
+    "id": 10171,
+    "bid": 1017,
+    "icon": "World",
+    "name": "Sérénité",
+    "r": 5,
+    "desc": "Récupération automatique en pêche"
+  }
+]
