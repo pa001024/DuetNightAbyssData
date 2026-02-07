@@ -31,6 +31,7 @@ from processor.robot_equip_processor import RobotEquipProcessor
 from processor.mount_processor import MountProcessor
 from processor.title_processor import TitleProcessor
 from processor.npc_processor import NpcProcessor
+from processor.rouge_processor import RougeLikeBlessingProcessor, RougeLikeContractProcessor, RougeLikeRoomProcessor, RougeLikeStoryEventProcessor, RougeLikeTalentProcessor, RougeLikeTreasureProcessor
 
 
 class DataLoader:
@@ -235,6 +236,12 @@ class FinalProcessor:
             "Mount": MountProcessor,
             "Title": TitleProcessor,
             "Npc": NpcProcessor,
+            "RougeLikeBlessing": RougeLikeBlessingProcessor,
+            "RougeLikeContract": RougeLikeContractProcessor,
+            "RougeLikeRoom": RougeLikeRoomProcessor,
+            "RougeLikeStoryEvent": RougeLikeStoryEventProcessor,
+            "RougeLikeTalent": RougeLikeTalentProcessor,
+            "RougeLikeTreasure": RougeLikeTreasureProcessor,
             # Add other processor classes here as they are implemented
         }
 
@@ -367,6 +374,12 @@ if __name__ == "__main__":
         "Mount",
         "Title",
         "Npc",
+        "RougeLikeBlessing",
+        "RougeLikeContract",
+        "RougeLikeRoom",
+        "RougeLikeStoryEvent",
+        "RougeLikeTalent",
+        "RougeLikeTreasure",
     ]
 
     # 使用命令行参数指定的文件类型，如果没有则使用默认列表

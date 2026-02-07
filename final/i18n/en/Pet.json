@@ -2,6 +2,7 @@
   {
     "id": 601,
     "名称": "Talisman-Wielding Wishen",
+    "描述": "A Wishen who wields destructive talismans with ease — though the real mystery is where they're pulling them from.",
     "icon": "Wuyou01",
     "品质": 5,
     "类型": 3,
@@ -9,6 +10,7 @@
     "捕获经验": 0,
     "经验": 70,
     "主动": {
+      "id": 601,
       "描述": "Deals damage equal to {%} of the main character's ATK to enemies in front within 10 m. Restores {} Sanity per second and increases Skill Speed by {%} for {}s.",
       "值": [
         [
@@ -35,7 +37,8 @@
           4,
           4
         ]
-      ]
+      ],
+      "cd": 8
     },
     "被动": {
       "描述": "Defeat 30 enemies: Damage increases to 12000% of the main character's ATK.\nDefeat 60 enemies: Skill Intensity +150%.\nDefeat 90 enemies: Support Skill cooldown -50%.\nDefeat 120 enemies: Skill DMG +90%.",
@@ -45,6 +48,7 @@
   {
     "id": 602,
     "名称": "Ascetic Wishen",
+    "描述": "He seems calm, composed — but cross him, and the consequences may far exceed your expectations.",
     "icon": "Wuyou03",
     "品质": 5,
     "类型": 3,
@@ -52,6 +56,7 @@
     "捕获经验": 0,
     "经验": 70,
     "主动": {
+      "id": 602,
       "描述": "Fires 16 homing projectiles, each dealing damage equal to {%} of the main character's ATK to enemies hit. Increases Resolve by {%}, and for {}s the Wishen's HP percentage is treated as 1% when calculating Morale and Resolve.",
       "值": [
         [
@@ -72,7 +77,8 @@
           4,
           4
         ]
-      ]
+      ],
+      "cd": 8
     },
     "被动": {
       "描述": "Defeat 30 enemies: Damage increases to 1000% of the main character's ATK.\nDefeat 60 enemies: Multishot +75%.\nDefeat 90 enemies: Support Skill cooldown -50%.\nDefeat 120 enemies: Ranged Weapon Attack Speed +90%.",
@@ -82,6 +88,7 @@
   {
     "id": 603,
     "名称": "Bladeborne Wishen",
+    "描述": "A master of sword-flight, their blades drift and whirl with effortless grace — the perfect backdrop for a photo, if they'd let you borrow it.",
     "icon": "Wuyou02",
     "品质": 5,
     "类型": 3,
@@ -89,6 +96,7 @@
     "捕获经验": 0,
     "经验": 70,
     "主动": {
+      "id": 603,
       "描述": "Generates 3 rotating blades around the main character, dealing damage equal to {%} of the main character's ATK to enemies hit. Restores {} Combo Points per second and increases Charged Attack DMG by {%} for {}s.",
       "值": [
         [
@@ -115,7 +123,8 @@
           4,
           4
         ]
-      ]
+      ],
+      "cd": 8
     },
     "被动": {
       "描述": "Defeat 30 enemies: Generates 3 additional blades.\nDefeat 60 enemies: Weapon DMG +135%.\nDefeat 90 enemies: Support Skill cooldown -50%.\nDefeat 120 enemies: Melee Weapon Attack Speed +90%.",
@@ -125,6 +134,7 @@
   {
     "id": 604,
     "名称": "Meadow-Walking Wishen",
+    "描述": "They always drift with a light, unhurried grace — and if you're feeling down, a gentle pat from them might just lift your spirits.",
     "icon": "Wuyou04",
     "品质": 5,
     "类型": 3,
@@ -132,6 +142,7 @@
     "捕获经验": 0,
     "经验": 70,
     "主动": {
+      "id": 604,
       "描述": "Deals damage equal to {%} of the main character's ATK to enemies within 6 m. Increases all summons' Attack Speed by {%} for {}s.",
       "值": [
         [
@@ -152,7 +163,8 @@
           4,
           4
         ]
-      ]
+      ],
+      "cd": 8
     },
     "被动": {
       "描述": "Defeat 30 enemies: Damage increases to 12000% of the main character's ATK.\nDefeat 60 enemies: Skill Range +100%; Skill Duration +100%.\nDefeat 90 enemies: Support Skill cooldown -50%.\nDefeat 120 enemies: Damage dealt by summons +500%.",
@@ -163,13 +175,16 @@
     "id": 4011,
     "uid": 4011,
     "名称": "Miraculous Equinex",
+    "描述": "Often found near battlefields, ruins, or graveyards, this Geniemon feeds on the remains of the fallen. Its twin horns and grim habits have earned it a reputation as an ill omen across many regions.",
     "icon": "Zisha03",
+    "异化": 4013,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 401,
       "描述": "Deals Umbro Damage equivalent to {%} of the main character's ATK to enemies within range, with an additional random attribute-based effect for {}s.",
       "值": [
         [
@@ -184,7 +199,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nUmbro ATK +{%}, Max HP +{%}",
@@ -208,13 +224,16 @@
     "id": 4012,
     "uid": 4012,
     "名称": "Ardent Equinex",
+    "描述": "Often found near battlefields, ruins, or graveyards, this Geniemon feeds on the remains of the fallen. Its twin horns and grim habits have earned it a reputation as an ill omen across many regions.",
     "icon": "Zisha02",
+    "异化": 4013,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 401,
       "描述": "Deals Umbro Damage equivalent to {%} of the main character's ATK to enemies within range, with an additional random attribute-based effect for {}s.",
       "值": [
         [
@@ -229,7 +248,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nUmbro ATK +{%}, Max HP +{%}",
@@ -253,13 +273,16 @@
     "id": 4013,
     "uid": 4013,
     "名称": "Shiny Equinex",
+    "描述": "Often found near battlefields, ruins, or graveyards, this Geniemon feeds on the remains of the fallen. Its twin horns and grim habits have earned it a reputation as an ill omen across many regions.",
     "icon": "Zisha01",
+    "异化": 4013,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 401,
       "描述": "Deals Umbro Damage equivalent to {%} of the main character's ATK to enemies within range, with an additional random attribute-based effect for {}s.",
       "值": [
         [
@@ -274,7 +297,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nUmbro ATK +{%}, Max HP +{%}",
@@ -298,13 +322,16 @@
     "id": 4021,
     "uid": 4021,
     "名称": "Miraculous Dripplet",
+    "描述": "Floating through the air, Dripplet, with an affinity to water, normally curls its translucent body, making it nearly invisible in sunlight. Only when it rains does it unfurl gracefully, blossoming like an ethereal flower in mid-air.",
     "icon": "Yuyi01",
+    "异化": 4023,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 402,
       "描述": "Increases ATK for self and allies by {%} for {}s.",
       "值": [
         [
@@ -319,7 +346,8 @@
           12,
           12
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nHydro ATK +{%}, Max HP +{%}",
@@ -343,13 +371,16 @@
     "id": 4022,
     "uid": 4022,
     "名称": "Ardent Dripplet",
+    "描述": "Floating through the air, Dripplet, with an affinity to water, normally curls its translucent body, making it nearly invisible in sunlight. Only when it rains does it unfurl gracefully, blossoming like an ethereal flower in mid-air.",
     "icon": "Yuyi02",
+    "异化": 4023,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 402,
       "描述": "Increases ATK for self and allies by {%} for {}s.",
       "值": [
         [
@@ -364,7 +395,8 @@
           12,
           12
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nHydro ATK +{%}, Max HP +{%}",
@@ -388,13 +420,16 @@
     "id": 4023,
     "uid": 4023,
     "名称": "Shiny Dripplet",
+    "描述": "Floating through the air, Dripplet, with an affinity to water, normally curls its translucent body, making it nearly invisible in sunlight. Only when it rains does it unfurl gracefully, blossoming like an ethereal flower in mid-air.",
     "icon": "Yuyi03",
+    "异化": 4023,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 402,
       "描述": "Increases ATK for self and allies by {%} for {}s.",
       "值": [
         [
@@ -409,7 +444,8 @@
           12,
           12
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nHydro ATK +{%}, Max HP +{%}",
@@ -433,13 +469,16 @@
     "id": 4031,
     "uid": 4031,
     "名称": "Miraculous Zippyro",
+    "描述": "Mostly comprised of heat-producing glands, Zippyro releases waves of intense heat whenever it opens its mouth.",
     "icon": "Dahuo01",
+    "异化": 4033,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 403,
       "描述": "Restores {} Sanity to self and allies.",
       "值": [
         [
@@ -448,7 +487,8 @@
           15,
           18
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nPyro ATK +{%}, Max HP +{%}",
@@ -472,13 +512,16 @@
     "id": 4032,
     "uid": 4032,
     "名称": "Ardent Zippyro",
+    "描述": "Mostly comprised of heat-producing glands, Zippyro releases waves of intense heat whenever it opens its mouth.",
     "icon": "Dahuo02",
+    "异化": 4033,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 403,
       "描述": "Restores {} Sanity to self and allies.",
       "值": [
         [
@@ -487,7 +530,8 @@
           15,
           18
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nPyro ATK +{%}, Max HP +{%}",
@@ -511,13 +555,16 @@
     "id": 4033,
     "uid": 4033,
     "名称": "Shiny Zippyro",
+    "描述": "Mostly comprised of heat-producing glands, Zippyro releases waves of intense heat whenever it opens its mouth.",
     "icon": "Dahuo03",
+    "异化": 4033,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 403,
       "描述": "Restores {} Sanity to self and allies.",
       "值": [
         [
@@ -526,7 +573,8 @@
           15,
           18
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nPyro ATK +{%}, Max HP +{%}",
@@ -550,13 +598,16 @@
     "id": 4039,
     "uid": 4031,
     "名称": "Miraculous Zippyro",
+    "描述": "Mostly comprised of heat-producing glands, Zippyro releases waves of intense heat whenever it opens its mouth.",
     "icon": "Dahuo01",
+    "异化": 4033,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 403,
       "描述": "Restores {} Sanity to self and allies.",
       "值": [
         [
@@ -565,7 +616,8 @@
           15,
           18
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nPyro ATK +{%}, Max HP +{%}",
@@ -589,13 +641,16 @@
     "id": 4041,
     "uid": 4041,
     "名称": "Miraculous Cubolt",
+    "描述": "Commonly found in highlands, Cubolts were once hunted for their highly conductive fur. So when encountering humans, they curl into a ball and roll away at incredible speed.",
     "icon": "Zhamao01",
+    "异化": 4043,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 404,
       "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
       "值": [
         [
@@ -634,7 +689,8 @@
           0.14,
           0.16
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nElectro ATK +{%}, Max HP +{%}",
@@ -658,13 +714,16 @@
     "id": 4042,
     "uid": 4042,
     "名称": "Ardent Cubolt",
+    "描述": "Commonly found in highlands, Cubolts were once hunted for their highly conductive fur. So when encountering humans, they curl into a ball and roll away at incredible speed.",
     "icon": "Zhamao02",
+    "异化": 4043,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 404,
       "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
       "值": [
         [
@@ -703,7 +762,8 @@
           0.14,
           0.16
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nElectro ATK +{%}, Max HP +{%}",
@@ -727,13 +787,16 @@
     "id": 4043,
     "uid": 4043,
     "名称": "Shiny Cubolt",
+    "描述": "Commonly found in highlands, Cubolts were once hunted for their highly conductive fur. So when encountering humans, they curl into a ball and roll away at incredible speed.",
     "icon": "Zhamao03",
+    "异化": 4043,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 404,
       "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
       "值": [
         [
@@ -772,7 +835,8 @@
           0.14,
           0.16
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nElectro ATK +{%}, Max HP +{%}",
@@ -796,13 +860,16 @@
     "id": 4049,
     "uid": 4041,
     "名称": "Miraculous Cubolt",
+    "描述": "Commonly found in highlands, Cubolts were once hunted for their highly conductive fur. So when encountering humans, they curl into a ball and roll away at incredible speed.",
     "icon": "Zhamao01",
+    "异化": 4043,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 404,
       "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
       "值": [
         [
@@ -841,7 +908,8 @@
           0.14,
           0.16
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nElectro ATK +{%}, Max HP +{%}",
@@ -865,13 +933,16 @@
     "id": 4051,
     "uid": 4051,
     "名称": "Miraculous Shroomie",
+    "描述": "A parasitic Geniemon that grows inside fungi, gradually taking control of its host. The puffing sound it makes is caused by wind passing through the hollow space between its body and the husk of its host.",
     "icon": "Yaoye01",
+    "异化": 4053,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 405,
       "描述": "Heals self and allies by {%} of the main character's Max HP.",
       "值": [
         [
@@ -880,7 +951,8 @@
           0.25,
           0.3
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nAnemo ATK +{%}, Max HP +{%}",
@@ -904,13 +976,16 @@
     "id": 4052,
     "uid": 4052,
     "名称": "Ardent Shroomie",
+    "描述": "A parasitic Geniemon that grows inside fungi, gradually taking control of its host. The puffing sound it makes is caused by wind passing through the hollow space between its body and the husk of its host.",
     "icon": "Yaoye02",
+    "异化": 4053,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 405,
       "描述": "Heals self and allies by {%} of the main character's Max HP.",
       "值": [
         [
@@ -919,7 +994,8 @@
           0.25,
           0.3
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nAnemo ATK +{%}, Max HP +{%}",
@@ -943,13 +1019,16 @@
     "id": 4053,
     "uid": 4053,
     "名称": "Shiny Shroomie",
+    "描述": "A parasitic Geniemon that grows inside fungi, gradually taking control of its host. The puffing sound it makes is caused by wind passing through the hollow space between its body and the husk of its host.",
     "icon": "Yaoye03",
+    "异化": 4053,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 405,
       "描述": "Heals self and allies by {%} of the main character's Max HP.",
       "值": [
         [
@@ -958,7 +1037,8 @@
           0.25,
           0.3
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nAnemo ATK +{%}, Max HP +{%}",
@@ -982,13 +1062,16 @@
     "id": 4059,
     "uid": 4051,
     "名称": "Miraculous Shroomie",
+    "描述": "A parasitic Geniemon that grows inside fungi, gradually taking control of its host. The puffing sound it makes is caused by wind passing through the hollow space between its body and the husk of its host.",
     "icon": "Yaoye01",
+    "异化": 4053,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 405,
       "描述": "Heals self and allies by {%} of the main character's Max HP.",
       "值": [
         [
@@ -997,7 +1080,8 @@
           0.25,
           0.3
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nAnemo ATK +{%}, Max HP +{%}",
@@ -1021,13 +1105,16 @@
     "id": 4061,
     "uid": 4061,
     "名称": "Miraculous Lumi",
+    "描述": "Agile, mischievous, and greedy, Lumi are lovers of shiny things. If you spot one, check your valuables!",
     "icon": "Shanling01",
+    "异化": 4063,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 406,
       "描述": "Deals Lumino DMG equal to {%} of the main character's ATK to enemies within range, while decreasing their Damage Dealt by {%} for {}s.",
       "值": [
         [
@@ -1048,7 +1135,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nLumino ATK +{%}, Max HP +{%}",
@@ -1072,13 +1160,16 @@
     "id": 4062,
     "uid": 4062,
     "名称": "Ardent Lumi",
+    "描述": "Agile, mischievous, and greedy, Lumi are lovers of shiny things. If you spot one, check your valuables!",
     "icon": "Shanling02",
+    "异化": 4063,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 406,
       "描述": "Deals Lumino DMG equal to {%} of the main character's ATK to enemies within range, while decreasing their Damage Dealt by {%} for {}s.",
       "值": [
         [
@@ -1099,7 +1190,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nLumino ATK +{%}, Max HP +{%}",
@@ -1123,13 +1215,16 @@
     "id": 4063,
     "uid": 4063,
     "名称": "Shiny Lumi",
+    "描述": "Agile, mischievous, and greedy, Lumi are lovers of shiny things. If you spot one, check your valuables!",
     "icon": "Shanling03",
+    "异化": 4063,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 406,
       "描述": "Deals Lumino DMG equal to {%} of the main character's ATK to enemies within range, while decreasing their Damage Dealt by {%} for {}s.",
       "值": [
         [
@@ -1150,7 +1245,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "The main character and Combat Partners gain:\nLumino ATK +{%}, Max HP +{%}",
@@ -1174,13 +1270,16 @@
     "id": 4071,
     "uid": 4071,
     "名称": "Miraculous Bro Boxie",
+    "描述": "An introverted, carrion-feeding Geniemon that indiscriminately hoards anything it can encompass, using some for sustenance while stashing others away as materials for its nest.",
     "icon": "Nihao01",
+    "异化": 4073,
     "品质": 5,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
     "主动": {
+      "id": 407,
       "描述": "Deals damage equal to {%} of the main character's ATK to nearby enemies. Detects 1 Geniemon and 1 Chest within 100m, marking their positions for 30s.",
       "值": [
         [
@@ -1189,7 +1288,8 @@
           19.5,
           23.4
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Auto-Pickup Range +{}m, EXP gained from defeated enemies +{%}, and a {%} chance to drop bonus loot.",
@@ -1219,13 +1319,16 @@
     "id": 4072,
     "uid": 4072,
     "名称": "Ardent Bro Boxie",
+    "描述": "An introverted, carrion-feeding Geniemon that indiscriminately hoards anything it can encompass, using some for sustenance while stashing others away as materials for its nest.",
     "icon": "Nihao02",
+    "异化": 4073,
     "品质": 5,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
     "主动": {
+      "id": 407,
       "描述": "Deals damage equal to {%} of the main character's ATK to nearby enemies. Detects 1 Geniemon and 1 Chest within 100m, marking their positions for 30s.",
       "值": [
         [
@@ -1234,7 +1337,8 @@
           19.5,
           23.4
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Auto-Pickup Range +{}m, EXP gained from defeated enemies +{%}, and a {%} chance to drop bonus loot.",
@@ -1264,13 +1368,16 @@
     "id": 4073,
     "uid": 4073,
     "名称": "Shiny Bro Boxie",
+    "描述": "An introverted, carrion-feeding Geniemon that indiscriminately hoards anything it can encompass, using some for sustenance while stashing others away as materials for its nest.",
     "icon": "Nihao03",
+    "异化": 4073,
     "品质": 5,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
     "主动": {
+      "id": 407,
       "描述": "Deals damage equal to {%} of the main character's ATK to nearby enemies. Detects 1 Geniemon and 1 Chest within 100m, marking their positions for 30s.",
       "值": [
         [
@@ -1279,7 +1386,8 @@
           19.5,
           23.4
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Auto-Pickup Range +{}m, EXP gained from defeated enemies +{%}, and a {%} chance to drop bonus loot.",
@@ -1309,13 +1417,16 @@
     "id": 4079,
     "uid": 4071,
     "名称": "Miraculous Bro Boxie",
+    "描述": "An introverted, carrion-feeding Geniemon that indiscriminately hoards anything it can encompass, using some for sustenance while stashing others away as materials for its nest.",
     "icon": "Nihao01",
+    "异化": 4073,
     "品质": 5,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
     "主动": {
+      "id": 407,
       "描述": "Deals damage equal to {%} of the main character's ATK to nearby enemies. Detects 1 Geniemon and 1 Chest within 100m, marking their positions for 30s.",
       "值": [
         [
@@ -1324,7 +1435,8 @@
           19.5,
           23.4
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Auto-Pickup Range +{}m, EXP gained from defeated enemies +{%}, and a {%} chance to drop bonus loot.",
@@ -1354,13 +1466,16 @@
     "id": 4081,
     "uid": 4081,
     "名称": "Miraculous Pearabbit",
+    "描述": "A remarkably agile Geniemon. Its comically large ears not only fail to hinder its coordination but actually create a sleek, aerodynamic form that helps it move with incredible speed.",
     "icon": "Zhenzhu01",
+    "异化": 4083,
     "品质": 5,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
     "主动": {
+      "id": 408,
       "描述": "Grants self and allies -{%} Damage Taken for {}s.",
       "值": [
         [
@@ -1375,7 +1490,8 @@
           1.5,
           1.8
         ]
-      ]
+      ],
+      "cd": 25
     },
     "被动": {
       "描述": "Jump Speed +{%}, Helix Leap Speed +{%}, Sliding Friction -{%}.",
@@ -1405,13 +1521,16 @@
     "id": 4082,
     "uid": 4082,
     "名称": "Ardent Pearabbit",
+    "描述": "A remarkably agile Geniemon. Its comically large ears not only fail to hinder its coordination but actually create a sleek, aerodynamic form that helps it move with incredible speed.",
     "icon": "Zhenzhu02",
+    "异化": 4083,
     "品质": 5,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
     "主动": {
+      "id": 408,
       "描述": "Grants self and allies -{%} Damage Taken for {}s.",
       "值": [
         [
@@ -1426,7 +1545,8 @@
           1.5,
           1.8
         ]
-      ]
+      ],
+      "cd": 25
     },
     "被动": {
       "描述": "Jump Speed +{%}, Helix Leap Speed +{%}, Sliding Friction -{%}.",
@@ -1456,13 +1576,16 @@
     "id": 4083,
     "uid": 4083,
     "名称": "Shiny Pearabbit",
+    "描述": "A remarkably agile Geniemon. Its comically large ears not only fail to hinder its coordination but actually create a sleek, aerodynamic form that helps it move with incredible speed.",
     "icon": "Zhenzhu03",
+    "异化": 4083,
     "品质": 5,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
     "主动": {
+      "id": 408,
       "描述": "Grants self and allies -{%} Damage Taken for {}s.",
       "值": [
         [
@@ -1477,7 +1600,8 @@
           1.5,
           1.8
         ]
-      ]
+      ],
+      "cd": 25
     },
     "被动": {
       "描述": "Jump Speed +{%}, Helix Leap Speed +{%}, Sliding Friction -{%}.",
@@ -1507,13 +1631,16 @@
     "id": 4091,
     "uid": 4091,
     "名称": "Miraculous Mr Goodnight",
+    "描述": "A lazy but incredibly long-lived Geniemon that spends over 98% of its time in slumber. Perhaps that's the secret to its longevity.",
     "icon": "Haomeng01",
+    "异化": 4093,
     "品质": 5,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
     "主动": {
+      "id": 409,
       "描述": "Continuously heals self and allies, restoring {%} of their Max HP per second for {}s.",
       "值": [
         [
@@ -1528,7 +1655,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "ATK +{%}, Max HP +{%}, DEF +{%}.",
@@ -1558,13 +1686,16 @@
     "id": 4092,
     "uid": 4092,
     "名称": "Ardent Mr Goodnight",
+    "描述": "A lazy but incredibly long-lived Geniemon that spends over 98% of its time in slumber. Perhaps that's the secret to its longevity.",
     "icon": "Haomeng02",
+    "异化": 4093,
     "品质": 5,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
     "主动": {
+      "id": 409,
       "描述": "Continuously heals self and allies, restoring {%} of their Max HP per second for {}s.",
       "值": [
         [
@@ -1579,7 +1710,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "ATK +{%}, Max HP +{%}, DEF +{%}.",
@@ -1609,13 +1741,16 @@
     "id": 4093,
     "uid": 4093,
     "名称": "Shiny Mr Goodnight",
+    "描述": "A lazy but incredibly long-lived Geniemon that spends over 98% of its time in slumber. Perhaps that's the secret to its longevity.",
     "icon": "Haomeng03",
+    "异化": 4093,
     "品质": 5,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
     "主动": {
+      "id": 409,
       "描述": "Continuously heals self and allies, restoring {%} of their Max HP per second for {}s.",
       "值": [
         [
@@ -1630,7 +1765,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "ATK +{%}, Max HP +{%}, DEF +{%}.",
@@ -1660,13 +1796,16 @@
     "id": 4111,
     "uid": 4111,
     "名称": "Miraculous Nebuthis",
+    "描述": "Often spotted drifting through abandoned castles and forgotten ruins, this Geniemon resembles a lone wisp of ghostly flame from afar.",
     "icon": "Fuyou01",
+    "异化": 4113,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 411,
       "描述": "Deals Umbro Damage equal to {%} of the main character's ATK to enemies within range and reduces their DEF by {%} for {}s.",
       "值": [
         [
@@ -1687,7 +1826,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Increases Umbro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
@@ -1711,13 +1851,16 @@
     "id": 4112,
     "uid": 4112,
     "名称": "Ardent Nebuthis",
+    "描述": "Often spotted drifting through abandoned castles and forgotten ruins, this Geniemon resembles a lone wisp of ghostly flame from afar.",
     "icon": "Fuyou02",
+    "异化": 4113,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 411,
       "描述": "Deals Umbro Damage equal to {%} of the main character's ATK to enemies within range and reduces their DEF by {%} for {}s.",
       "值": [
         [
@@ -1738,7 +1881,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Increases Umbro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
@@ -1762,13 +1906,16 @@
     "id": 4113,
     "uid": 4113,
     "名称": "Shiny Nebuthis",
+    "描述": "Often spotted drifting through abandoned castles and forgotten ruins, this Geniemon resembles a lone wisp of ghostly flame from afar.",
     "icon": "Fuyou03",
+    "异化": 4113,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 411,
       "描述": "Deals Umbro Damage equal to {%} of the main character's ATK to enemies within range and reduces their DEF by {%} for {}s.",
       "值": [
         [
@@ -1789,7 +1936,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Increases Umbro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
@@ -1813,13 +1961,16 @@
     "id": 4121,
     "uid": 4121,
     "名称": "Miraculous Bunniva",
+    "描述": "Squishy as pudding and cute as a button, the Frosted Bunny Geniemon was once a continental sensation — until a scholar from Aethyrie revealed that its adorable little \"eyes\"... weren't eyes at all, but part of its internal anatomy. Let's just say it's been less popular ever since.",
     "icon": "Tangshuang01",
+    "异化": 4123,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 412,
       "描述": "Increases ATK of all allied [Summons] by {%} for {}s.",
       "值": [
         [
@@ -1834,7 +1985,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Increases Hydro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
@@ -1858,13 +2010,16 @@
     "id": 4122,
     "uid": 4122,
     "名称": "Ardent Bunniva",
+    "描述": "Squishy as pudding and cute as a button, the Frosted Bunny Geniemon was once a continental sensation — until a scholar from Aethyrie revealed that its adorable little \"eyes\"... weren't eyes at all, but part of its internal anatomy. Let's just say it's been less popular ever since.",
     "icon": "Tangshuang02",
+    "异化": 4123,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 412,
       "描述": "Increases ATK of all allied [Summons] by {%} for {}s.",
       "值": [
         [
@@ -1879,7 +2034,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Increases Hydro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
@@ -1903,13 +2059,16 @@
     "id": 4123,
     "uid": 4123,
     "名称": "Shiny Bunniva",
+    "描述": "Squishy as pudding and cute as a button, the Frosted Bunny Geniemon was once a continental sensation — until a scholar from Aethyrie revealed that its adorable little \"eyes\"... weren't eyes at all, but part of its internal anatomy. Let's just say it's been less popular ever since.",
     "icon": "Tangshuang03",
+    "异化": 4123,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 412,
       "描述": "Increases ATK of all allied [Summons] by {%} for {}s.",
       "值": [
         [
@@ -1924,7 +2083,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Increases Hydro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
@@ -1948,13 +2108,16 @@
     "id": 4128,
     "uid": 4121,
     "名称": "Miraculous Bunniva",
+    "描述": "Squishy as pudding and cute as a button, the Frosted Bunny Geniemon was once a continental sensation — until a scholar from Aethyrie revealed that its adorable little \"eyes\"... weren't eyes at all, but part of its internal anatomy. Let's just say it's been less popular ever since.",
     "icon": "Tangshuang01",
+    "异化": 4123,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 412,
       "描述": "Increases ATK of all allied [Summons] by {%} for {}s.",
       "值": [
         [
@@ -1969,7 +2132,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Increases Hydro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
@@ -1993,13 +2157,16 @@
     "id": 4131,
     "uid": 4131,
     "名称": "Miraculous Pyrootail",
+    "描述": "Wreathed in flames and native to scorching regions, this fiery Geniemon leaves a faint whiff of grilled meat wherever it goes.",
     "icon": "YYHW01",
+    "异化": 4133,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 413,
       "描述": "Spawns 1 [Activated Sal Volatile], 1 [Tranquilizer Dewdrop], and 1 [Ammo Supply Chest]. Increases Skill Duration for self and allies by {%} for {}s.",
       "值": [
         [
@@ -2014,7 +2181,8 @@
           15,
           15
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Increases Pyro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
@@ -2038,13 +2206,16 @@
     "id": 4132,
     "uid": 4132,
     "名称": "Ardent Pyrootail",
+    "描述": "Wreathed in flames and native to scorching regions, this fiery Geniemon leaves a faint whiff of grilled meat wherever it goes.",
     "icon": "YYHW02",
+    "异化": 4133,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 413,
       "描述": "Spawns 1 [Activated Sal Volatile], 1 [Tranquilizer Dewdrop], and 1 [Ammo Supply Chest]. Increases Skill Duration for self and allies by {%} for {}s.",
       "值": [
         [
@@ -2059,7 +2230,8 @@
           15,
           15
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Increases Pyro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
@@ -2083,13 +2255,16 @@
     "id": 4133,
     "uid": 4133,
     "名称": "Shiny Pyrootail",
+    "描述": "Wreathed in flames and native to scorching regions, this fiery Geniemon leaves a faint whiff of grilled meat wherever it goes.",
     "icon": "YYHW03",
+    "异化": 4133,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 413,
       "描述": "Spawns 1 [Activated Sal Volatile], 1 [Tranquilizer Dewdrop], and 1 [Ammo Supply Chest]. Increases Skill Duration for self and allies by {%} for {}s.",
       "值": [
         [
@@ -2104,7 +2279,8 @@
           15,
           15
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Increases Pyro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
@@ -2128,13 +2304,16 @@
     "id": 4141,
     "uid": 4141,
     "名称": "Miraculous Catizz",
+    "描述": "Always crackling with static, this poor Geniemon is often shunned by others. No one truly knows what it looks like — all you ever see are a pair of lonely eyes, peeking out from behind a tiny toy car.",
     "icon": "Pipa01",
+    "异化": 4143,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 414,
       "描述": "Grants self and allies {} Ultra Shield points and restores their Sanity by {}.",
       "值": [
         [
@@ -2149,7 +2328,8 @@
           15,
           18
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "Increases Electro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
@@ -2173,13 +2353,16 @@
     "id": 4142,
     "uid": 4142,
     "名称": "Ardent Catizz",
+    "描述": "Always crackling with static, this poor Geniemon is often shunned by others. No one truly knows what it looks like — all you ever see are a pair of lonely eyes, peeking out from behind a tiny toy car.",
     "icon": "Pipa03",
+    "异化": 4143,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 414,
       "描述": "Grants self and allies {} Ultra Shield points and restores their Sanity by {}.",
       "值": [
         [
@@ -2194,7 +2377,8 @@
           15,
           18
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "Increases Electro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
@@ -2218,13 +2402,16 @@
     "id": 4143,
     "uid": 4143,
     "名称": "Shiny Catizz",
+    "描述": "Always crackling with static, this poor Geniemon is often shunned by others. No one truly knows what it looks like — all you ever see are a pair of lonely eyes, peeking out from behind a tiny toy car.",
     "icon": "Pipa02",
+    "异化": 4143,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 414,
       "描述": "Grants self and allies {} Ultra Shield points and restores their Sanity by {}.",
       "值": [
         [
@@ -2239,7 +2426,8 @@
           15,
           18
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "Increases Electro ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
@@ -2263,13 +2451,16 @@
     "id": 4151,
     "uid": 4151,
     "名称": "Miraculous Dandemeow",
+    "描述": "Light as thistledown and never still, this tiny, lively Geniemon floats endlessly from place to place, carried by a single seed — forever chasing the end of a journey that doesn't exist.",
     "icon": "Mianmian01",
+    "异化": 4153,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 415,
       "描述": "Heals self and allies for {%} of the main character's Max HP and grants +{%} DEF for {}s.",
       "值": [
         [
@@ -2290,7 +2481,8 @@
           0.3,
           0.36
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Increases Anemo ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
@@ -2314,13 +2506,16 @@
     "id": 4152,
     "uid": 4152,
     "名称": "Ardent Dandemeow",
+    "描述": "Light as thistledown and never still, this tiny, lively Geniemon floats endlessly from place to place, carried by a single seed — forever chasing the end of a journey that doesn't exist.",
     "icon": "Mianmian02",
+    "异化": 4153,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 415,
       "描述": "Heals self and allies for {%} of the main character's Max HP and grants +{%} DEF for {}s.",
       "值": [
         [
@@ -2341,7 +2536,8 @@
           0.3,
           0.36
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Increases Anemo ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
@@ -2365,13 +2561,16 @@
     "id": 4153,
     "uid": 4153,
     "名称": "Shiny Dandemeow",
+    "描述": "Light as thistledown and never still, this tiny, lively Geniemon floats endlessly from place to place, carried by a single seed — forever chasing the end of a journey that doesn't exist.",
     "icon": "Mianmian03",
+    "异化": 4153,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 415,
       "描述": "Heals self and allies for {%} of the main character's Max HP and grants +{%} DEF for {}s.",
       "值": [
         [
@@ -2392,7 +2591,8 @@
           0.3,
           0.36
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Increases Anemo ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
@@ -2416,13 +2616,16 @@
     "id": 4161,
     "uid": 4161,
     "名称": "Miraculous Ballbee",
+    "描述": "Radiant as a burning star, this Geniemon is known to light the way for weary travellers. Just don't stare at it too long — its periodic flashes can be blinding.",
     "icon": "Qiuqiu01",
+    "异化": 4163,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 416,
       "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill DMG taken by them by {%} for {}s.",
       "值": [
         [
@@ -2443,7 +2646,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Increases Lumino ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
@@ -2467,13 +2671,16 @@
     "id": 4162,
     "uid": 4162,
     "名称": "Ardent Ballbee",
+    "描述": "Radiant as a burning star, this Geniemon is known to light the way for weary travellers. Just don't stare at it too long — its periodic flashes can be blinding.",
     "icon": "Qiuqiu02",
+    "异化": 4163,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 416,
       "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill DMG taken by them by {%} for {}s.",
       "值": [
         [
@@ -2494,7 +2701,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Increases Lumino ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
@@ -2518,13 +2726,16 @@
     "id": 4163,
     "uid": 4163,
     "名称": "Shiny Ballbee",
+    "描述": "Radiant as a burning star, this Geniemon is known to light the way for weary travellers. Just don't stare at it too long — its periodic flashes can be blinding.",
     "icon": "Qiuqiu03",
+    "异化": 4163,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 416,
       "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill DMG taken by them by {%} for {}s.",
       "值": [
         [
@@ -2545,7 +2756,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Increases Lumino ATK for the main character and the Combat Partners by {%} and the stats provided by Demon Wedges prefixed with [Phoenix] by {%}.",
@@ -2569,6 +2781,7 @@
     "id": 4211,
     "uid": 4211,
     "名称": "Umbrelf",
+    "描述": "A Geniemon of legendary rarity, its body gleams with the lustre of obsidian. Long believed to exist only in bardic ballads and the dreams of minstrels.",
     "icon": "Heiyao",
     "品质": 5,
     "类型": 1,
@@ -2576,6 +2789,7 @@
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 421,
       "描述": "Deals Umbro DMG equal to {%} of the main character's ATK to nearby enemies, and increases [Morale] for self and allies by {%} for {}s.",
       "值": [
         [
@@ -2596,7 +2810,8 @@
           12,
           12
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Increases Umbro ATK for the main character and the Combat Partners by {%} and the stats provided by Umbro Demon Wedges prefixed with [Griffin], [Typhon], and [Covenanter] by {%}.",
@@ -2620,6 +2835,7 @@
     "id": 4221,
     "uid": 4221,
     "名称": "Hydrelf",
+    "描述": "A Geniemon of legendary rarity, its body gleams with the lustre of iolite. Long believed to exist only in bardic ballads and the dreams of minstrels.",
     "icon": "Jinqing",
     "品质": 5,
     "类型": 1,
@@ -2627,6 +2843,7 @@
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 422,
       "描述": "For each [Summon] summoned by the main character, increases damage dealt by self and allies by {%} for {}s, up to {%}.",
       "值": [
         [
@@ -2647,7 +2864,8 @@
           12,
           12
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Increases Hydro ATK for the main character and the Combat Partners by {%} and the stats provided by Hydro Demon Wedges prefixed with [Griffin], [Typhon], and [Covenanter] by {%}.",
@@ -2671,6 +2889,7 @@
     "id": 4231,
     "uid": 4231,
     "名称": "Pyrelf",
+    "描述": "A Geniemon of legendary rarity, its body gleams with the lustre of carnelian. Long believed to exist only in bardic ballads and the dreams of minstrels.",
     "icon": "Manao",
     "品质": 5,
     "类型": 1,
@@ -2678,6 +2897,7 @@
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 423,
       "描述": "Deals Pyro DMG equal to {%} of the main character's ATK to nearby enemies, and increases [Multishot] for self and allies by {%} for {}s.",
       "值": [
         [
@@ -2698,7 +2918,8 @@
           12,
           12
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Increases Pyro ATK for the main character and the Combat Partners by {%} and the stats provided by Pyro Demon Wedges prefixed with [Griffin], [Typhon], and [Covenanter] by {%}.",
@@ -2722,6 +2943,7 @@
     "id": 4241,
     "uid": 4241,
     "名称": "Electrelf",
+    "描述": "A Geniemon of legendary rarity, its body gleams with the lustre of amethyst. Long believed to exist only in bardic ballads and the dreams of minstrels.",
     "icon": "Zijing",
     "品质": 5,
     "类型": 1,
@@ -2729,6 +2951,7 @@
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 424,
       "描述": "Restores {} Sanity to self and allies, and increases their Skill DMG by {%} for {}s.",
       "值": [
         [
@@ -2749,7 +2972,8 @@
           12,
           12
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "Increases Electro ATK for the main character and the Combat Partners by {%} and the stats provided by Electro Demon Wedges prefixed with [Griffin], [Typhon], and [Covenanter] by {%}.",
@@ -2773,6 +2997,7 @@
     "id": 4251,
     "uid": 4251,
     "名称": "Anemelf",
+    "描述": "A Geniemon of legendary rarity, its body gleams with the lustre of emerald. Long believed to exist only in bardic ballads and the dreams of minstrels.",
     "icon": "Bixi",
     "品质": 5,
     "类型": 1,
@@ -2780,6 +3005,7 @@
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 425,
       "描述": "Increases [Resolve] by {%} for self and allies for {}s. If the main character's HP falls below 25%, instantly heals them for {%} HP.",
       "值": [
         [
@@ -2800,7 +3026,8 @@
           0.1,
           0.1
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Increases Anemo ATK for the main character and the Combat Partners by {%} and the stats provided by Anemo Demon Wedges prefixed with [Griffin], [Typhon], and [Covenanter] by {%}.",
@@ -2824,6 +3051,7 @@
     "id": 4261,
     "uid": 4261,
     "名称": "Luminelf",
+    "描述": "A Geniemon of legendary rarity, its body gleams with the lustre of opal. Long believed to exist only in bardic ballads and the dreams of minstrels.",
     "icon": "Oubo",
     "品质": 5,
     "类型": 1,
@@ -2831,6 +3059,7 @@
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 426,
       "描述": "Deals Lumino DMG equal to {%} of the main character's ATK to nearby enemies, and grants +{%} Lumino additional DMG to self and allies for {}s.",
       "值": [
         [
@@ -2851,7 +3080,8 @@
           12,
           12
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Increases Lumino ATK for the main character and the Combat Partners by {%} and the stats provided by Lumino Demon Wedges prefixed with [Griffin], [Typhon], and [Covenanter] by {%}.",
@@ -2875,6 +3105,7 @@
     "id": 4911,
     "uid": 4911,
     "名称": "Miraculous Healing Drone",
+    "描述": "A Geniemon that has mimicked the form of a Healing Drone. Though the mechanisms behind Geniemon mimicry remain an enigma, this variant has fully adapted to life in the Aeolipile, evolving traits optimised for survival.",
     "icon": "HealRobot01",
     "品质": 2,
     "类型": 2,
@@ -2886,6 +3117,7 @@
     "id": 4912,
     "uid": 4912,
     "名称": "Ardent Healing Drone",
+    "描述": "A Geniemon that has mimicked the form of a Healing Drone. Though the mechanisms behind Geniemon mimicry remain an enigma, this variant has fully adapted to life in the Aeolipile, evolving traits optimised for survival.",
     "icon": "HealRobot02",
     "品质": 2,
     "类型": 2,
@@ -2897,6 +3129,7 @@
     "id": 4913,
     "uid": 4913,
     "名称": "Ethereal Healing Drone",
+    "描述": "A Geniemon that has mimicked the form of a Healing Drone. Though the mechanisms behind Geniemon mimicry remain an enigma, this variant has fully adapted to life in the Aeolipile, evolving traits optimised for survival.",
     "icon": "HealRobot03",
     "品质": 2,
     "类型": 2,
@@ -2908,6 +3141,7 @@
     "id": 4921,
     "uid": 4921,
     "名称": "Miraculous Magnetix Drone",
+    "描述": "A Geniemon that has mimicked the form of a Magnetix Drone. Though the mechanisms behind Geniemon mimicry remain an enigma, this variant has fully adapted to life in the Aeolipile, evolving traits optimised for survival.",
     "icon": "BlastRobot01",
     "品质": 2,
     "类型": 2,
@@ -2919,6 +3153,7 @@
     "id": 4922,
     "uid": 4922,
     "名称": "Ardent Magnetix Drone",
+    "描述": "A Geniemon that has mimicked the form of a Magnetix Drone. Though the mechanisms behind Geniemon mimicry remain an enigma, this variant has fully adapted to life in the Aeolipile, evolving traits optimised for survival.",
     "icon": "BlastRobot02",
     "品质": 2,
     "类型": 2,
@@ -2930,6 +3165,7 @@
     "id": 4923,
     "uid": 4923,
     "名称": "Ethereal Magnetix Drone",
+    "描述": "A Geniemon that has mimicked the form of a Magnetix Drone. Though the mechanisms behind Geniemon mimicry remain an enigma, this variant has fully adapted to life in the Aeolipile, evolving traits optimised for survival.",
     "icon": "BlastRobot03",
     "品质": 2,
     "类型": 2,
@@ -2941,6 +3177,7 @@
     "id": 4931,
     "uid": 4931,
     "名称": "Miraculous Jellomon",
+    "描述": "A burrowing Geniemon that thrives in the cracks between layers of soil. It feeds on rot and decay, enriching the land by returning nutrients to the earth.",
     "icon": "YYD01",
     "品质": 2,
     "类型": 2,
@@ -2952,6 +3189,7 @@
     "id": 4932,
     "uid": 4932,
     "名称": "Ardent Jellomon",
+    "描述": "A burrowing Geniemon that thrives in the cracks between layers of soil. It feeds on rot and decay, enriching the land by returning nutrients to the earth.",
     "icon": "YYD02",
     "品质": 2,
     "类型": 2,
@@ -2963,6 +3201,7 @@
     "id": 4933,
     "uid": 4933,
     "名称": "Ethereal Jellomon",
+    "描述": "A burrowing Geniemon that thrives in the cracks between layers of soil. It feeds on rot and decay, enriching the land by returning nutrients to the earth.",
     "icon": "YYD03",
     "品质": 2,
     "类型": 2,
@@ -2974,6 +3213,7 @@
     "id": 4934,
     "uid": 4931,
     "名称": "Miraculous Jellomon",
+    "描述": "A burrowing Geniemon that thrives in the cracks between layers of soil. It feeds on rot and decay, enriching the land by returning nutrients to the earth.",
     "icon": "YYD01",
     "品质": 2,
     "类型": 2,
@@ -2985,6 +3225,7 @@
     "id": 4935,
     "uid": 4931,
     "名称": "Miraculous Jellomon",
+    "描述": "A burrowing Geniemon that thrives in the cracks between layers of soil. It feeds on rot and decay, enriching the land by returning nutrients to the earth.",
     "icon": "YYD01",
     "品质": 2,
     "类型": 2,
@@ -2996,6 +3237,7 @@
     "id": 4936,
     "uid": 4932,
     "名称": "Ardent Jellomon",
+    "描述": "A burrowing Geniemon that thrives in the cracks between layers of soil. It feeds on rot and decay, enriching the land by returning nutrients to the earth.",
     "icon": "YYD02",
     "品质": 2,
     "类型": 2,
@@ -3007,6 +3249,7 @@
     "id": 4941,
     "uid": 4941,
     "名称": "Luminous Jellomon",
+    "描述": "A burrowing Geniemon that thrives in the cracks between layers of soil. It feeds on rot and decay, enriching the land by returning nutrients to the earth.",
     "icon": "YYD04",
     "品质": 2,
     "类型": 2,
@@ -3018,6 +3261,7 @@
     "id": 4942,
     "uid": 4941,
     "名称": "Luminous Jellomon: At peace",
+    "描述": "A burrowing Geniemon that thrives in the cracks between layers of soil. It feeds on rot and decay, enriching the land by returning nutrients to the earth.",
     "icon": "YYD04",
     "品质": 2,
     "类型": 2,
@@ -3029,6 +3273,7 @@
     "id": 4943,
     "uid": 4941,
     "名称": "Luminous Jellomon: Deft",
+    "描述": "A burrowing Geniemon that thrives in the cracks between layers of soil. It feeds on rot and decay, enriching the land by returning nutrients to the earth.",
     "icon": "YYD04",
     "品质": 2,
     "类型": 2,

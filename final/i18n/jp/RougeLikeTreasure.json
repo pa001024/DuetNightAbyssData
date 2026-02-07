@@ -1,0 +1,1832 @@
+[
+  {
+    "id": 10101,
+    "name": "燭芯職人の不滅の炎",
+    "desc": "追加で「更新」チャンスを<Highlight>@1</>回獲得する。初回更新は「エンバー」を消費しない。",
+    "simple_desc": "追加の「更新」機会を獲得、初回更新は「エンバー」を消費しない。",
+    "ip_desc": "灯火は子供らの頬に笑みを浮かべ、凍える世界に希望を灯した。だが俗世の炎はいつか消える運命である。だから彼女はただ、朽ちる蠟燭の度に新たな火を掲げ続けるしかなかった。\n聖湖の深奥で、キャンドル職人はついに不滅の炎を錬成した。\nしかし、もはやその輝きを待つ人は、誰一人として残されていない。",
+    "treasure_group": 1,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_01.T_Rouge_Treasure_01",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "room_condition": [],
+    "server_build": [
+      [
+        1,
+        15
+      ]
+    ],
+    "server_build_value": [
+      "$#RougelikeServerBuild[1].Param[1]$"
+    ],
+    "rl_archive_id": 1,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10102,
+    "name": "謎の行商人の割引券",
+    "desc": "謎の行商人の全商品価格が<Highlight>@1</>オフ。",
+    "simple_desc": "謎の行商人の全アイテム価格が割引。",
+    "ip_desc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "treasure_group": 1,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_02.T_Rouge_Treasure_02",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [
+      [
+        3
+      ]
+    ],
+    "server_build_value": [
+      "$(1-#RougelikeServerBuild[3].Param[1])*100$%"
+    ],
+    "rl_archive_id": 2,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 0,
+    "client_build": {}
+  },
+  {
+    "id": 10103,
+    "name": "眷族の浄化石鹼",
+    "desc": "次のフロアに入る時、HPが<Highlight>$1</>回復する。",
+    "simple_desc": "次のフロアに入る時、HPが回復する。",
+    "ip_desc": "彼女こそ最も敬虔たる信者であった。その言動は、いかなる時も神々の教えを忠実に守る。たとえ誰の目も届かぬところでも、決して戒めも破ることはない。貧しき者には手を差し伸べ、道端にうずくまる者には懐の全てを晒し、異端を唱える者に対しても、九神の恩寵を感得せよと寛容の心で諭した。",
+    "treasure_group": 1,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20104001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_05.T_Rouge_Treasure_05",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 3,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10104,
+    "name": "眷族の目覚め石鹼",
+    "desc": "次のフロアに入る時、SPが<Highlight>$1</>回復する。",
+    "simple_desc": "次のフロアに入る時、SPが回復する。",
+    "ip_desc": "「仮に神々があなたの描くような完全な存在ではなかったら、その行為に意義はあるのか？」相手は彼女を詰問した。\n「もちろんあるわ」と彼女は懐から溢れるような笑みを浮かべ、「信仰とは与えられるためのものではなく、己を律するためのもの。この胸に一片のやましさもない限り、神の真偽も、神の善悪も、私には何の関係もない。」",
+    "treasure_group": 1,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20105001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_06.T_Rouge_Treasure_06",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 4,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10105,
+    "name": "純潔天使の賛歌",
+    "desc": "足跡獲得量が<Highlight>@1</>アップ。",
+    "simple_desc": "足跡の獲得量アップ。",
+    "ip_desc": "それは誰もが知る、迷途の子らを導く慈悲の神々を讃える賛歌。エリュシオンの信者らは深淵に佇み、欠けた旋律を紡ぎながら、神々に救済を求め、約束の天蓋へと導くことを乞う。やがて黄金の音色に包まれ、彼らは幸福の微笑みを浮かべたまま、永遠の眠りに就いた。",
+    "treasure_group": 2,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_07.T_Rouge_Treasure_07",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [
+      [
+        19
+      ]
+    ],
+    "server_build_value": [
+      "$#RougelikeServerBuild[19].Param[1]*100$%"
+    ],
+    "rl_archive_id": 5,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 0,
+    "client_build": {}
+  },
+  {
+    "id": 10106,
+    "name": "聖療司祭の鍵",
+    "desc": "復活回数が<Highlight>#1</>回増加する。",
+    "simple_desc": "復活回数増加。",
+    "ip_desc": "一行は四方より湧き上がる暗影に包囲された。騎士はただ独り闇に飛び込み、生きる道を切り拓いた。暗影が散った後、聖療司祭は黒き霧の中から、満身創痍になった騎士の体を引きずり出した。\n必ず救って見せると、聖療司祭は心に誓った。癒しの術の真義とは、勇者の犠牲を決して無為に還さぬことだと。",
+    "treasure_group": 1,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20107001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_09.T_Rouge_Treasure_09",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 6,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10107,
+    "name": "苦行僧の足枷",
+    "desc": "HP割合が<Highlight>$1</>未満の場合、<Highlight>$2</>秒以内にダメージを受けてものけ反らなくなり、被ダメージが<Highlight>$3</>ダウンする。この効果は<Highlight>$4</>秒ごとに1回のみ発動可能。",
+    "simple_desc": "HPが減少した後、ダメージを受けてものけ反らなくなり、被ダメージがダウンする。",
+    "ip_desc": "長い旅路の中で、真実は常に苦痛とともにある。夜の鐘が鳴り響く時、流浪の鳥はなぜ巣に帰らないのか？\n高塔は大陸の中心ではない。それは神が万物の根源ではないからだと、彼は信じている。この世界は自分の足で歩いてこそ意味がある。たとえ、一生を鎖につながれたままでも。",
+    "treasure_group": 1,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20101001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_21.T_Rouge_Treasure_21",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 7,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10108,
+    "name": "鳥面怪人の玩具・その1",
+    "desc": "スキルダメージが<Highlight>$1</>アップする。近接武器ダメージが<Highlight>$1</>ダウンする。",
+    "simple_desc": "スキルダメージアップ、近接武器ダメージダウン。",
+    "ip_desc": "「何かを得るには必ず代価が伴う」——ありきたりな教えも、ゲームという視点から見れば、また新たな発見がある。\n魔術師は箱におもちゃのボールを投げ入れ、「良い知らせと悪い知らせ、どちらから聞きたい？」と聞いた。",
+    "treasure_group": 10108,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20108001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_32.T_Rouge_Treasure_32",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 8,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10109,
+    "name": "鳥面怪人の玩具・その2",
+    "desc": "スキルダメージが<Highlight>$1</>アップする。遠隔武器ダメージが<Highlight>$1</>ダウンする。",
+    "simple_desc": "スキルダメージアップ、遠隔武器ダメージダウン。",
+    "ip_desc": "「何かを得るには必ず代価が伴う」——ありきたりな教えも、ゲームという視点から見れば、また新たな発見がある。\n魔術師は箱におもちゃのボールを投げ入れ、「良い知らせと悪い知らせ、どちらから聞きたい？」と聞いた。",
+    "treasure_group": 10108,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20109001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_32.T_Rouge_Treasure_32",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 9,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10110,
+    "name": "鳥面怪人の玩具・その3",
+    "desc": "近接武器ダメージが<Highlight>$1</>アップする。スキルダメージが<Highlight>$1</>ダウンする。",
+    "simple_desc": "近接武器ダメージアップ、スキルダメージダウン。",
+    "ip_desc": "「何かを得るには必ず代価が伴う」——ありきたりな教えも、ゲームという視点から見れば、また新たな発見がある。\n魔術師は箱におもちゃのボールを投げ入れ、「良い知らせと悪い知らせ、どちらから聞きたい？」と聞いた。",
+    "treasure_group": 10108,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20110001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_32.T_Rouge_Treasure_32",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 10,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10111,
+    "name": "鳥面怪人の玩具・その4",
+    "desc": "近接武器ダメージが<Highlight>$1</>アップする。遠隔武器ダメージが<Highlight>$1</>ダウンする。",
+    "simple_desc": "近接武器ダメージアップ、遠隔武器ダメージダウン。",
+    "ip_desc": "「何かを得るには必ず代価が伴う」——ありきたりな教えも、ゲームという視点から見れば、また新たな発見がある。\n魔術師は箱におもちゃのボールを投げ入れ、「良い知らせと悪い知らせ、どちらから聞きたい？」と聞いた。",
+    "treasure_group": 10108,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20111001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_32.T_Rouge_Treasure_32",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 11,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10112,
+    "name": "鳥面怪人の玩具・その5",
+    "desc": "遠隔武器ダメージが<Highlight>$1</>アップする。スキルダメージが<Highlight>$1</>ダウンする。",
+    "simple_desc": "遠隔武器ダメージアップ、スキルダメージダウン。",
+    "ip_desc": "「何かを得るには必ず代価が伴う」——ありきたりな教えも、ゲームという視点から見れば、また新たな発見がある。\n魔術師は箱におもちゃのボールを投げ入れ、「良い知らせと悪い知らせ、どちらから聞きたい？」と聞いた。",
+    "treasure_group": 10108,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20112001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_32.T_Rouge_Treasure_32",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 12,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10113,
+    "name": "鳥面怪人の玩具・その6",
+    "desc": "遠隔武器ダメージが<Highlight>$1</>アップする。近接武器ダメージが<Highlight>$1</>ダウンアップする。",
+    "simple_desc": "遠隔武器ダメージアップ、近接武器ダメージダウン。",
+    "ip_desc": "「何かを得るには必ず代価が伴う」——ありきたりな教えも、ゲームという視点から見れば、また新たな発見がある。\n魔術師は箱におもちゃのボールを投げ入れ、「良い知らせと悪い知らせ、どちらから聞きたい？」と聞いた。",
+    "treasure_group": 10108,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20113001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_32.T_Rouge_Treasure_32",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 13,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10114,
+    "name": "ポケット型連れの乾物",
+    "desc": "ジェネモン支援を発動後、<Highlight>$2</>秒間自身の与ダメージが<Highlight>$1</>アップする。",
+    "simple_desc": "ジェネモン支援発動後、ダメージアップ。",
+    "ip_desc": "「何かを得るには必ず代価が伴う」——ありきたりな教えも、ゲームという視点から見れば、また新たな発見がある。\n魔術師は箱におもちゃのボールを投げ入れ、「良い知らせと悪い知らせ、どちらから聞きたい？」と聞いた。",
+    "treasure_group": 1,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20120001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_28.T_Rouge_Treasure_28",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 14,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10201,
+    "name": "彷徨う騎士の腰袋",
+    "desc": "ランダムにレアリティが<Highlight>レア</>または<Highlight>レジェンド</>の「キャンドルの芯」を<Highlight>2</>つ獲得する。",
+    "simple_desc": "ランダムにレアリティが<Highlight>レア</>、または<Highlight>レジェンド</>のキャンドルの芯を獲得。",
+    "ip_desc": "水、乾物、火打ち石、そして皺になっている地図。その持ち主はチョークで地図に自分たちの足跡を描こうとしたが、線は交錯して重なり、ついに地図の縁をはみ出している。何度も同じ場所をぐるぐると回るように描かれた線は、ついに方向を見失い、最後には歪んだ疑問符だけがぽつりと残されていた。",
+    "treasure_group": 3,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_03.T_Rouge_Treasure_03",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [
+      [
+        4
+      ]
+    ],
+    "server_build_value": [],
+    "rl_archive_id": 15,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 0,
+    "client_build": {}
+  },
+  {
+    "id": 10202,
+    "name": "彷徨う騎士の腰袋",
+    "desc": "ランダムにレアリティが<Highlight>レア</>または<Highlight>レジェンド</>の「レリック」を<Highlight>2</>つ獲得する。",
+    "simple_desc": "ランダムにレアリティが<Highlight>レア</>、または<Highlight>レジェンド</>のレリックを獲得。",
+    "ip_desc": "水、乾物、火打ち石、そして皺になっている地図。その持ち主はチョークで地図に自分たちの足跡を描こうとしたが、線は交錯して重なり、ついに地図の縁をはみ出している。何度も同じ場所をぐるぐると回るように描かれた線は、ついに方向を見失い、最後には歪んだ疑問符だけがぽつりと残されていた。",
+    "treasure_group": 3,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_03.T_Rouge_Treasure_03",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [
+      [
+        16
+      ]
+    ],
+    "server_build_value": [],
+    "rl_archive_id": 16,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 0,
+    "client_build": {}
+  },
+  {
+    "id": 10203,
+    "name": "斥候の靴",
+    "desc": "キャラクター最大回避回数が<Highlight>#1</>回増加する。",
+    "simple_desc": "キャラクター最大回避回数増加。",
+    "ip_desc": "機敏な子よ、誰よりも早く山頂へ登り、仲間たちの模範となれ。\n勇敢たる戦士よ、最初に戦場へ踏み込み、後続の者の道標となれ。\n高潔な信者よ、真っ先に地獄へ飛び込み、聖なる大地を穢から守れ。",
+    "treasure_group": 1,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20103001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_19.T_Rouge_Treasure_19",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 17,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10204,
+    "name": "仄暗き月信者の聖杯",
+    "desc": "スキル発動時、SP<Highlight>$1</>回復、クールダウン <Highlight>$2</>秒減少。\n 「暗影」中のみ有効。",
+    "simple_desc": "スキル発動時、SP回復。\n 「暗影」中のみ有効。",
+    "ip_desc": "二つの貌を持つ神よ、我らの祈りを聞き給え―白き羽根を刃で散らせ、鼓動する心臓が針に貫かれても、この偽りの運命から脱することさえできるなら、満月が逆さまになるまで、我らも静寂の祈りを捧げ続ける。",
+    "treasure_group": 1,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20102001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_22.T_Rouge_Treasure_22",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 18,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10205,
+    "name": "狂信者の指環",
+    "desc": "レリックを獲得後、復活するたびに自身の与ダメージが<Highlight>$1</>アップする。",
+    "simple_desc": "レリックを獲得後、復活するたびに与ダメージアップ。",
+    "ip_desc": "呪われた籠の鳥よ、落ち葉はあなたの枕ではなく、暮れ色もあなたの夢郷ではない。死さえも安らぎを与えぬだろう。ならば、目覚めよ―死を味わい、痛みを噛み締め、この理不尽な運命が汝に屈するまで抗え。",
+    "treasure_group": 1,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20114001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_24.T_Rouge_Treasure_24",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 19,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10206,
+    "name": "聖樹学者の訓戒・精通",
+    "desc": "スキルダメージが目標の防御力を<Highlight>$1</>無視する。異なる種類のキャンドルの芯を所持するごとに効果が<Highlight>$3</>ダウンする（最大<Highlight>$2</>まで）。",
+    "simple_desc": "スキルダメージが目標の防御力を無視する。異なる種類のキャンドルの芯を所持するごとに効果がダウン。",
+    "ip_desc": "学びに成ることを望むならば、まず己の志すところを明らかにせよ。然る後は一意専心、刻苦勉励すべし。",
+    "treasure_group": 1,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20115001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_25.T_Rouge_Treasure_25",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 20,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10207,
+    "name": "仄暗き月信者の供奉",
+    "desc": "次のフロアに入るたびに、<Highlight>@1</>のエンバーを消費し、該当フロアの被ダメージが<Highlight>$1</>ダウンする。\n 次のフロアに入る際、エンバーが<Highlight>@1</>未満の場合、この効果は発動しない。",
+    "simple_desc": "次のフロアに入るたび、少量のエンバーを消費してそのフロアで受けるダメージをダウンさせる。",
+    "ip_desc": "皆が下を向くときは、あなただけ顔を上げろ。皆がひざまずくときは、あなただけまっすぐ立て。皆が賛美するときは、あなただけ疑問をぶつけろ。皆が幸せに酔うときは、あなただけ狂え。\nそうすれば、満月の鎖は解け、運命の裏側に、ふと真実が見えてくるだろう。",
+    "treasure_group": 1,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20116001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_23.T_Rouge_Treasure_23",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "room_condition": [],
+    "server_build": [
+      [
+        25
+      ]
+    ],
+    "server_build_value": [
+      "$#RougelikeServerBuild[25].Param[1]$"
+    ],
+    "rl_archive_id": 21,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10209,
+    "name": "黄金鳥の羽根",
+    "desc": "朦朧と離散の暗影で<Highlight>ノーマル</>品質のキャンドルの芯を選択し、即時ににアップグレードする。",
+    "simple_desc": "朦朧と離散の暗影で<Highlight>ノーマル</>品質のキャンドルの芯を選択し、即時ににアップグレードする。",
+    "ip_desc": "鳥は空を望むが、深淵には空はない。鳥は止まり木を求めるが、深淵に広がるのは恐怖の枝のみ。",
+    "treasure_group": 1,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_17.T_Rouge_Treasure_17",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "room_condition": [],
+    "server_build": [
+      [
+        22
+      ]
+    ],
+    "server_build_value": [],
+    "rl_archive_id": 22,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10210,
+    "name": "深淵意志の思いやり",
+    "desc": "ホルダーを<Highlight>@1</>体倒すたびに、エンバー<Highlight>@2</>を獲得する。",
+    "simple_desc": "一定数のホルダーを倒すとエンバー獲得。",
+    "ip_desc": "幾度も転生を重ね、幾度も絶望に沈む。方角も時も、自我すら失われてゆく。疲れ果てた旅人は果てしない闇を歩む。付き纏うのは孤独と恐怖のみ。ただ、その底知れぬ闇の中に、彼の足跡を静かに見守る誰かの眼差しがあることにはまだ気づいていない。",
+    "treasure_group": 1,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_20.T_Rouge_Treasure_20",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "room_condition": [],
+    "server_build": [
+      [
+        23
+      ]
+    ],
+    "server_build_value": [
+      "$#RougelikeServerBuild[23].Param[2]$",
+      "$#RougelikeServerBuild[24].Param[1]$"
+    ],
+    "rl_archive_id": 23,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10211,
+    "name": "道化的励まし",
+    "desc": "次に朦朧と離散の暗影でキャンドルの芯を選択する際、<Highlight>レジェンド</>品質以上が確定で出現する。",
+    "simple_desc": "次に朦朧と離散の暗影でキャンドルの芯を選択する際、<Highlight>レジェンド</>品質以上が確定で出現する。",
+    "ip_desc": "いつの間にかバッグにメモが入っていた。どうやら警戒心をもう少し持った方が良さそうだ。幸いにもこのメモには、毒も呪いもかけられていなかった。そこに書かれていたのは、ただ心からの祝福の一言だ：「旅路の平安と幸運を祈る―あなたの友より」",
+    "treasure_group": 10211,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_30.T_Rouge_Treasure_30",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "room_condition": [],
+    "server_build": [
+      [
+        49
+      ],
+      [
+        27
+      ]
+    ],
+    "server_build_value": [],
+    "rl_archive_id": 24,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10212,
+    "name": "聖樹学者の教え・連想",
+    "desc": "このレリックを獲得する時、追加で<Highlight>1</>のキャンドルの芯が手に入る。所持数が最も多いカテゴリから優先的に獲得する。",
+    "simple_desc": "このレリックを獲得する時、追加で<Highlight>1</>のキャンドルの芯が手に入る。所持数が最も多いカテゴリから優先的に獲得する。",
+    "ip_desc": "世界万物には必ず何らかの繋がりがある。論理的思考を駆使し、帰納法と演繹法を組み合わせれば、新しい発見が生まれるかもしれない。",
+    "treasure_group": 3,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_12.T_Rouge_Treasure_12",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [
+      [
+        34
+      ]
+    ],
+    "server_build_value": [],
+    "rl_archive_id": 25,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 0,
+    "client_build": {}
+  },
+  {
+    "id": 10213,
+    "name": "燭芯祭司の召喚術・炉心の炎",
+    "desc": "即時に<Highlight>1</>個のキャンドルの芯を獲得する（優先的に「炉心の火」を入手）。今回の探索は「炉心の火」の出現率が少しアップする。",
+    "simple_desc": "「炉心の火」の出現率が少しアップし、即時に<Highlight>1</>個獲得する。",
+    "ip_desc": "燭芯祭司は通霊の術に長け、亡者の力を己のものとして扱える。彼は死者を友と見なし、決して恐れることはなかった。だが、この深淵に足を踏み入れた時―燭光に映った暗影は、いったい何者なのか？なぜ、その魂は苦しんでいるのか？そしてなぜ……彼らは振り返れ、進むなと訴えるのか？",
+    "treasure_group": 4,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_04.T_Rouge_Treasure_04",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "room_condition": [
+      5044,
+      5064
+    ],
+    "server_build": [
+      [
+        35
+      ],
+      [
+        36
+      ]
+    ],
+    "server_build_value": [],
+    "rl_archive_id": 26,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10214,
+    "name": "燭芯祭司の召喚術・水面の月",
+    "desc": "即時に<Highlight>1</>個のキャンドルの芯を獲得する（優先的に「水面の月」を入手）。今回の探索は「水面の月」の出現率が少しアップする。",
+    "simple_desc": "「水面の月」の出現率が少しアップし、即時に<Highlight>1</>個獲得する。",
+    "ip_desc": "燭芯祭司は通霊の術に長け、亡者の力を己のものとして扱える。彼は死者を友と見なし、決して恐れることはなかった。だが、この深淵に足を踏み入れた時―燭光に映った暗影は、いったい何者なのか？なぜ、その魂は苦しんでいるのか？そしてなぜ……彼らは振り返れ、進むなと訴えるのか？",
+    "treasure_group": 4,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_04.T_Rouge_Treasure_04",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "room_condition": [
+      5045,
+      5065
+    ],
+    "server_build": [
+      [
+        37
+      ],
+      [
+        38
+      ]
+    ],
+    "server_build_value": [],
+    "rl_archive_id": 27,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10215,
+    "name": "燭芯祭司の召喚術・蛍光石",
+    "desc": "即時に<Highlight>1</>個のキャンドルの芯を獲得する（優先的に「蛍光石」を入手）。今回の探索は「蛍光石」の出現率が少しアップする。",
+    "simple_desc": "「蛍光石」の出現率が少しアップし、即時に<Highlight>1</>個獲得する。",
+    "ip_desc": "燭芯祭司は通霊の術に長け、亡者の力を己のものとして扱える。彼は死者を友と見なし、決して恐れることはなかった。だが、この深淵に足を踏み入れた時―燭光に映った暗影は、いったい何者なのか？なぜ、その魂は苦しんでいるのか？そしてなぜ……彼らは振り返れ、進むなと訴えるのか？",
+    "treasure_group": 4,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_04.T_Rouge_Treasure_04",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "room_condition": [
+      5046
+    ],
+    "server_build": [
+      [
+        39
+      ],
+      [
+        40
+      ]
+    ],
+    "server_build_value": [],
+    "rl_archive_id": 28,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10216,
+    "name": "燭芯祭司の召喚術・流明の枝",
+    "desc": "即時に<Highlight>1</>個のキャンドルの芯を獲得する（優先的に「流明の枝」を入手）。今回の探索は「流明の枝」の出現率が少しアップする。",
+    "simple_desc": "「流明の枝」の出現率が少しアップし、即時に<Highlight>1</>個獲得する。",
+    "ip_desc": "燭芯祭司は通霊の術に長け、亡者の力を己のものとして扱える。彼は死者を友と見なし、決して恐れることはなかった。だが、この深淵に足を踏み入れた時―燭光に映った暗影は、いったい何者なのか？なぜ、その魂は苦しんでいるのか？そしてなぜ……彼らは振り返れ、進むなと訴えるのか？",
+    "treasure_group": 4,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_04.T_Rouge_Treasure_04",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "room_condition": [
+      5047,
+      5065
+    ],
+    "server_build": [
+      [
+        41
+      ],
+      [
+        42
+      ]
+    ],
+    "server_build_value": [],
+    "rl_archive_id": 29,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10217,
+    "name": "燭芯祭司の召喚術・奈落の黒蝶",
+    "desc": "即時に<Highlight>1</>枚のキャンドルの芯を獲得する（優先的に「奈落の黒蝶」を入手）。今回の探索は「奈落の黒蝶」の出現率が少しアップする。",
+    "simple_desc": "「奈落の黒蝶」の出現率が少しアップし、即時に<Highlight>1</>個獲得する。",
+    "ip_desc": "燭芯祭司は通霊の術に長け、亡者の力を己のものとして扱える。彼は死者を友と見なし、決して恐れることはなかった。だが、この深淵に足を踏み入れた時―燭光に映った暗影は、いったい何者なのか？なぜ、その魂は苦しんでいるのか？そしてなぜ……彼らは振り返れ、進むなと訴えるのか？",
+    "treasure_group": 4,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_04.T_Rouge_Treasure_04",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "room_condition": [
+      5048
+    ],
+    "server_build": [
+      [
+        43
+      ],
+      [
+        44
+      ]
+    ],
+    "server_build_value": [],
+    "rl_archive_id": 30,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10218,
+    "name": "燭芯祭司の召喚術・曵光虫",
+    "desc": "即時に<Highlight>1</>個のキャンドルの芯を獲得する（優先的に「曵光虫」を入手）。今回の探索は「曵光虫」の出現率が少しアップする。",
+    "simple_desc": "「曵光虫」の出現率が少しアップし、即時に<Highlight>1</>個獲得する。",
+    "ip_desc": "燭芯祭司は通霊の術に長け、亡者の力を己のものとして扱える。彼は死者を友と見なし、決して恐れることはなかった。だが、この深淵に足を踏み入れた時―燭光に映った暗影は、いったい何者なのか？なぜ、その魂は苦しんでいるのか？そしてなぜ……彼らは振り返れ、進むなと訴えるのか？",
+    "treasure_group": 4,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_04.T_Rouge_Treasure_04",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "room_condition": [
+      5049,
+      5064
+    ],
+    "server_build": [
+      [
+        45
+      ],
+      [
+        46
+      ]
+    ],
+    "server_build_value": [],
+    "rl_archive_id": 31,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10219,
+    "name": "燭芯祭司の召喚術・血を啜る紅蓮",
+    "desc": "即時に<Highlight>1</>個のキャンドルの芯を獲得する（優先的に「血を啜る紅蓮」を入手）。今回の探索は「血を啜る紅蓮」の出現率が少しアップする。",
+    "simple_desc": "「血を啜る紅蓮」の出現率が少しアップし、即時に<Highlight>1</>個獲得する。",
+    "ip_desc": "燭芯祭司は通霊の術に長け、亡者の力を己のものとして扱える。彼は死者を友と見なし、決して恐れることはなかった。だが、この深淵に足を踏み入れた時―燭光に映った暗影は、いったい何者なのか？なぜ、その魂は苦しんでいるのか？そしてなぜ……彼らは振り返れ、進むなと訴えるのか？",
+    "treasure_group": 4,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_04.T_Rouge_Treasure_04",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "room_condition": [
+      5050
+    ],
+    "server_build": [
+      [
+        47
+      ],
+      [
+        48
+      ]
+    ],
+    "server_build_value": [],
+    "rl_archive_id": 32,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10301,
+    "name": "彷徨う騎士の腰袋",
+    "desc": "ランダムにレアリティが<Highlight>レジェンド</>または<Highlight>エピック</>の「キャンドルの芯」を<Highlight>2</>つ獲得する。",
+    "simple_desc": "ランダムにレアリティが<Highlight>レジェンド</>、または<Highlight>エピック</>のキャンドルの芯を獲得。",
+    "ip_desc": "水、乾物、火打ち石、そして皺になっている地図。その持ち主はチョークで地図に自分たちの足跡を描こうとしたが、線は交錯して重なり、ついに地図の縁をはみ出している。何度も同じ場所をぐるぐると回るように描かれた線は、ついに方向を見失い、最後には歪んだ疑問符だけがぽつりと残されていた。",
+    "treasure_group": 3,
+    "treasure_rarity": 3,
+    "treasure_weight": 200,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_03.T_Rouge_Treasure_03",
+    "end_points": [
+      40
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [
+      [
+        17
+      ]
+    ],
+    "server_build_value": [],
+    "rl_archive_id": 33,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 0,
+    "client_build": {}
+  },
+  {
+    "id": 10302,
+    "name": "彷徨う騎士の腰袋",
+    "desc": "ランダムにレアリティが<Highlight>レジェンド</>または<Highlight>エピック</>の「レリック」を<Highlight>2</>つ獲得する。",
+    "simple_desc": "ランダムにレアリティが<Highlight>レジェンド</>、または<Highlight>エピック</>のレリックを獲得。",
+    "ip_desc": "水、乾物、火打ち石、そして皺になっている地図。その持ち主はチョークで地図に自分たちの足跡を描こうとしたが、線は交錯して重なり、ついに地図の縁をはみ出している。何度も同じ場所をぐるぐると回るように描かれた線は、ついに方向を見失い、最後には歪んだ疑問符だけがぽつりと残されていた。",
+    "treasure_group": 3,
+    "treasure_rarity": 3,
+    "treasure_weight": 200,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_03.T_Rouge_Treasure_03",
+    "end_points": [
+      40
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [
+      [
+        18
+      ]
+    ],
+    "server_build_value": [],
+    "rl_archive_id": 34,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 0,
+    "client_build": {}
+  },
+  {
+    "id": 10303,
+    "name": "聖療司祭のピアス",
+    "desc": "SPの自然回復量が<Highlight>#1</>アップする。",
+    "simple_desc": "SP自然回復量アップ。",
+    "ip_desc": "「なぜ私を救った？」目を見開いた騎士が、地獄の業火のような視線で迫る。「狂う前にせめてこの魂だけは\n無垢のままで黄泉に還りたかったのに！」\n聖療司祭が必死に救い戻したその体を引きずり、騎士は再び闇へと足を踏み入れる。もはや、いったい誰を救えばよいというのか？",
+    "treasure_group": 1,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20106001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_10.T_Rouge_Treasure_10",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 35,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10304,
+    "name": "鳥面怪人のトランプ劇",
+    "desc": "全てのキャンドルの芯をランダムなキャンドルの芯に置換する。よりレアリティが高いキャンドルの芯を獲得する可能性がある。所持しているキャンドルの芯の数に応じてエンバーを獲得する。キャンドルの芯<Highlight>1</>個ごとに<Highlight>@1</>のエンバーを獲得する。",
+    "simple_desc": "全てのキャンドルの芯をランダムなキャンドルの芯に置換する。所持しているキャンドルの芯の数に応じてエンバーを獲得する。",
+    "ip_desc": "「あの石頭の商人が店のルールを変えないなら、私から特別サービスを提供しようじゃないか！」魔術師はトランプを裏返して広げた。「さあ、心ゆくまで引くといい！」",
+    "treasure_group": 10304,
+    "treasure_rarity": 3,
+    "treasure_weight": 200,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_15.T_Rouge_Treasure_15",
+    "end_points": [
+      40
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [
+      [
+        5
+      ],
+      [
+        26
+      ]
+    ],
+    "server_build_value": [
+      "$#RougelikeServerBuild[26].Param[2]$"
+    ],
+    "rl_archive_id": 0,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 0,
+    "client_build": {}
+  },
+  {
+    "id": 10305,
+    "name": "鳥面怪人の魔術",
+    "desc": "全てのレリックをランダムなレリックに置換する。よりレアリティが高いレリックを獲得する可能性がある。",
+    "simple_desc": "全てのレリックをランダムなレリックに置換。",
+    "ip_desc": "「怪人」などという俗っぽい呼び名より、「魔術師」の方が彼の好みだった。このどんよりした退屈な空間で、刹那の快楽を紡ぎ出すことこそ、彼が生きる最後の目的である。快楽の代償だって？考えるまでもない。失うものなど、とっくに何も残っていないのだから。",
+    "treasure_group": 10305,
+    "treasure_rarity": 3,
+    "treasure_weight": 200,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_16.T_Rouge_Treasure_16",
+    "end_points": [
+      40
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [
+      [
+        6
+      ]
+    ],
+    "server_build_value": [],
+    "rl_archive_id": 0,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 0,
+    "client_build": {}
+  },
+  {
+    "id": 10306,
+    "name": "貴君のご厚情",
+    "desc": "レリックを<Highlight>1</>個所持するごとに、与ダメージが<Highlight>$1</>アップする。",
+    "simple_desc": "レリックが多ければ多いほど、与ダメージがアップ。",
+    "ip_desc": "富を憎む者などいない。だが、財宝を山と積むだけなら、それはただの退屈な人生に過ぎないだろう。金貨を人々の笑顔に鋳替えよ。さすれば、千年の時を超えても我が名は感謝の詩に刻まれるだろう―この賛美こそが、真の財産となるのだ。",
+    "treasure_group": 1,
+    "treasure_rarity": 3,
+    "treasure_weight": 200,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20118001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_18.T_Rouge_Treasure_18",
+    "end_points": [
+      40
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 36,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10307,
+    "name": "聖樹学者の訓戒・博識",
+    "desc": "異なる種類のキャンドルの芯を所持するごとに全属性貫通が<Highlight>$1</>アップする（最大<Highlight>$2</>まで）。",
+    "simple_desc": "異なる種類のキャンドルの芯を所持するごとに全属性貫通アップ。",
+    "ip_desc": "知への道は、まず無数の書物と向き合うことから始まる。それらを血肉と同化させ、肉体という檻を打ち破れ。さすれば、自ずと視界は地平線の彼方まで広がっていくのだ。",
+    "treasure_group": 1,
+    "treasure_rarity": 3,
+    "treasure_weight": 200,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20119001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_26.T_Rouge_Treasure_26",
+    "end_points": [
+      40
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 37,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10308,
+    "name": "聖樹学者の教え・凝縮",
+    "desc": "同種類のキャンドルの芯セット効果をアクティブするために必要な数が<Highlight>1</>個減少する。",
+    "simple_desc": "同種類のキャンドルの芯セット効果をアクティブするために必要な数が減少。",
+    "ip_desc": "真実は簡潔なり、深慮すれば、小知も大助け。",
+    "treasure_group": 10308,
+    "treasure_rarity": 3,
+    "treasure_weight": 200,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_11.T_Rouge_Treasure_11",
+    "end_points": [
+      40
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 38,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 0,
+    "client_build": {
+      "GroupDiscount": -1
+    }
+  },
+  {
+    "id": 10309,
+    "name": "深淵意志の憐み",
+    "desc": "復活回数が尽きる時、エンバーを<Highlight>@1</>消費し、追加で<Highlight>1</>回の復活回数を獲得できる。",
+    "simple_desc": "復活回数が尽きる時、エンバーの消費で追加の復活回数を獲得。",
+    "ip_desc": "果てしない闇があなたを飲み込もうとしたその時、残り火から一筋の光が奇跡的に輝いた。もし深淵に意志があるなら、それはきっとあなたの命がここで消えることを望んでいないのだろう。",
+    "treasure_group": 10309,
+    "treasure_rarity": 3,
+    "treasure_weight": 200,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_08.T_Rouge_Treasure_08",
+    "end_points": [
+      40
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "room_condition": [],
+    "server_build": [
+      [
+        21
+      ]
+    ],
+    "server_build_value": [
+      "$#RougelikeServerBuild[21].Param[2]$"
+    ],
+    "rl_archive_id": 39,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10310,
+    "name": "満月の加護を受けし剣",
+    "desc": "近接攻撃で敵にダメージを与えると、周囲に八本の剣気を放ち、命中した敵に<Highlight>$1</>キャラ攻撃力分の光属性ダメージを与える。クールタイム<Highlight>$2</>秒。",
+    "simple_desc": "近接攻撃で敵にダメージを与えると、周囲に剣気を放ち、命中した敵に光属性ダメージを与える。",
+    "ip_desc": "銀の剣を手にした騎士が敵陣を切り抜ける。白き輝きは満月のごとく戦場を照らし、力尽きた兵士たちの瞳を再び開かせた。\n ああ――これは運命の神の導き！奇跡の光に涙し、人々の四肢は信仰の力で再び軽やかになる。彼らは立ち上がり、光を追って進軍を続けた。",
+    "treasure_group": 10310,
+    "treasure_rarity": 3,
+    "treasure_weight": 200,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20130001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_46.T_Rouge_Treasure_46",
+    "end_points": [
+      40
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 53,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 0,
+    "client_build": {}
+  },
+  {
+    "id": 10311,
+    "name": "闇夜にて夢を喰らう恐怖",
+    "desc": "スキルで敵にダメージを与えると、自身の周囲に爆発を起こし、敵に<Highlight>$1</>キャラ攻撃力分の闇属性ダメージを与える。クールタイム<Highlight>$2</>秒。",
+    "simple_desc": "スキルで敵にダメージを与えると、自身の周囲に爆発を起こし、敵に闇属性ダメージを与える。",
+    "ip_desc": "闇が初めて聖なる湖を蝕んだ時、エリュシオンの最も勇敢たる騎士たちは自らその中へと足を踏み入れた。\n 大半は命を落とし、生き残った者も夢を永遠に失った。ひとたび目を閉じれば、闇が思考を奪い、底なしの深淵へと引きずり込むのだ。",
+    "treasure_group": 10310,
+    "treasure_rarity": 3,
+    "treasure_weight": 200,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20131001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_47.T_Rouge_Treasure_47",
+    "end_points": [
+      40
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 54,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 0,
+    "client_build": {}
+  },
+  {
+    "id": 10312,
+    "name": "無知なる罪人の翼",
+    "desc": "敵にダメージを与えると<Highlight>12</>発の追尾弾を放ち、命中した敵に<Highlight>$1</>キャラ攻撃力分の風属性ダメージを与える。クールタイム<Highlight>$2</>秒。",
+    "simple_desc": "敵にダメージを与えると追尾弾を放ち、命中した敵に風属性ダメージを与える。",
+    "ip_desc": "出征の前夜、気負う若き騎士は羽のように広がる聖痕を銀の鎧で覆い隠した。ただ召集の前に、もう一度エリュシオンに勝利を捧げるために。\n だがその勝利は、突如出現した巨大な穢獣によって無に帰した。騎士もまた行方不明となる――彼に翼が生え、空へ飛び立ちエリュシオンを見捨てたと言う者もいれば、暗月に心を蝕まれ、穢獣と一体となったと語る者もいた。",
+    "treasure_group": 10310,
+    "treasure_rarity": 3,
+    "treasure_weight": 200,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20132001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_48.T_Rouge_Treasure_48",
+    "end_points": [
+      40
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 55,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 0,
+    "client_build": {}
+  },
+  {
+    "id": 10313,
+    "name": "聖徒のささやきの波紋",
+    "desc": "召喚物が召喚された時、召喚位置で一度ダメージを放ち、命中した敵に<Highlight>$1</>キャラ攻撃力分の水属性ダメージを与える。クールタイム<Highlight>$2</>秒。",
+    "simple_desc": "召喚物が召喚された時、召喚位置で一度ダメージを放ち、命中した敵に水属性ダメージを与える。",
+    "ip_desc": "つま先が聖なる湖の水面に触れたとき、光なき波紋が広がり、まるで暗月が水底から浮かび上がるようだった。もしこの湖面が本当に天の楽土へ通じているのなら、なぜ自分の姿すら映し出せないのか。\n 一瞬にして奔流が湧き立ち、聖徒の疑念もその姿もまた、漆黒の渦へと呑み込まれた。",
+    "treasure_group": 10310,
+    "treasure_rarity": 3,
+    "treasure_weight": 200,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20133001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_49.T_Rouge_Treasure_49",
+    "end_points": [
+      40
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 56,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 0,
+    "client_build": {}
+  },
+  {
+    "id": 10314,
+    "name": "灼炎に戴かれし聖冠",
+    "desc": "遠隔攻撃で敵にダメージを与えると、前方扇形範囲の敵に<Highlight>$1</>キャラ攻撃力分の火属性ダメージを与える。クールタイム<Highlight>$2</>秒。",
+    "simple_desc": "遠隔攻撃で敵にダメージを与えると、前方扇形範囲の敵に火属性ダメージを与える。",
+    "ip_desc": "その貴族は言った、自らに流れるのは神聖なる血脈、民を救うために身を捧げねばならぬと。\n 戴冠の日、彼女は長い髪を炎と化し、神聖なる儀式を烈火の刑場へと変えた。聖堂も、そこに集った貴族たちもすべて焼き尽くされる。火柱は天を突き、太陽すら凌ぐ輝きに、人々は息を呑み仰ぎ見た。\n 彼女は己を捧げ、そして万民を救ったのだ。",
+    "treasure_group": 10310,
+    "treasure_rarity": 3,
+    "treasure_weight": 200,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20134001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_50.T_Rouge_Treasure_50",
+    "end_points": [
+      40
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 57,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 0,
+    "client_build": {}
+  },
+  {
+    "id": 10315,
+    "name": "諸神の戒めの棘鎖",
+    "desc": "スキル発動時、前方に3回の落雷を放ち、命中した敵に<Highlight>$1</>キャラ攻撃力分の雷属性ダメージを与える。クールタイム<Highlight>$2</>秒。",
+    "simple_desc": "スキル発動時、前方に落雷を放ち、命中した敵に雷属性ダメージを与える。",
+    "ip_desc": "私は暗き時代を生きた。異端者は群れをなし、塔を倒さんとした。\n 私は見た、数千の棘が塔より垂れ下がり、空を覆う光景を。\n 信仰厚き者よ、恐れるな。神々が罰するのは罪ある者のみ。棘がすべての悪を滅ぼした後、血にまみれて訪れるのは必ず幸福なる新時代だ。",
+    "treasure_group": 10310,
+    "treasure_rarity": 3,
+    "treasure_weight": 200,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20135001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_51.T_Rouge_Treasure_51",
+    "end_points": [
+      40
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 58,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 0,
+    "client_build": {}
+  },
+  {
+    "id": 10316,
+    "name": "彷徨の騎士の残夢",
+    "desc": "ダメージが<Highlight>$1</>未満のとき、追加で<Highlight>$2</>の固定ダメージを与える。",
+    "simple_desc": "ダメージが低いとき、追加で固定ダメージを与える。",
+    "ip_desc": "彼女は気づいていた、静かに広がる闇に。それでも道を見失った今、何かを奪い、何かを消し去ることなどできなかった。\n だから彼女は差し出したのだ、一粒の透明な飴玉を――それが刹那の幻夢でも、欺瞞の嘘でもいい。友がわずかに笑顔を見せられるなら、それで十分だった。",
+    "treasure_group": 1,
+    "treasure_rarity": 3,
+    "treasure_weight": 200,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20121001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_54.T_Rouge_Treasure_54",
+    "end_points": [
+      40
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 61,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 11101,
+    "name": "護衛騎士の鉄壁",
+    "desc": "シールドがある時、被ダメージ<Highlight>$1</>ダウン。",
+    "simple_desc": "シールドがある時、被ダメージダウン。",
+    "ip_desc": "十九歳で初めて戦場に立った時、穢獣の長い爪が知り合ったばかりの仲間を串刺しにした。間に合わなかった盾には、鮮血の花がべっとりと咲いていた。どれだけ洗っても、かすかな傷跡は残り続ける。\n\n彼は何のために戦うのか？信仰のためか、正義のためか、いつかこの傷跡を忘れられる日のためか。",
+    "treasure_group": 101,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20171001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_34.T_Rouge_Treasure_34",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 40,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 11201,
+    "name": "護衛騎士の利剣",
+    "desc": "シールドがある時、与ダメージ<Highlight>$1</>アップ。",
+    "simple_desc": "シールドがある時、与ダメージアップ。",
+    "ip_desc": "十四歳で初めて訓練を受けた日、武器商人に勧められた初心者装備の中から、彼は真っ先にこの長剣を手に取った。友人は「銃の方が使いやすいのに！」と彼を笑った。\n「騎士はみんな剣を持つものだ。」彼は絵本の英雄を真似て長剣を頭の上に掲げ、「エリュシオンのために！」と叫んだ。",
+    "treasure_group": 101,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20172001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_33.T_Rouge_Treasure_33",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 41,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 12101,
+    "name": "繁栄の神の契約・果断",
+    "desc": "選択肢更新のエンバー消費+<Highlight>@1</>、<Highlight>@2</>フロア踏破するとこの効果は終了し、エンバー<Highlight>@3</>獲得。",
+    "simple_desc": "選択した更新の消費が増加。指定した階数を通過すると上限に達し、エンバーを獲得する。",
+    "ip_desc": "完璧を求めるのは決して賢明ではない。機会が訪れたら、即座に行動すべきである。躊躇すれば、幸運を逃すことになる。",
+    "treasure_group": 102,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_35.T_Rouge_Treasure_35",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [
+      [
+        49
+      ],
+      [
+        30
+      ],
+      [
+        31
+      ]
+    ],
+    "server_build_value": [
+      "$(#RougelikeServerBuild[30].Param[1]-1)*100$%",
+      "$(#RougelikeServerBuild[30].RoomCount-1)$",
+      "$#RougelikeServerBuild[31].Param[1]$"
+    ],
+    "rl_archive_id": 42,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 0,
+    "client_build": {}
+  },
+  {
+    "id": 12102,
+    "name": "繁栄の神の契約・慎重",
+    "desc": "謎の行商人の商品価格+<Highlight>@1</>。<Highlight>@2</>フロア踏破するとこの効果は終了し、エンバー<Highlight>@3</>獲得。",
+    "simple_desc": "謎の行商人のすべての商品の価格が上がっている。指定した階数を通過すると上限に達し、エンバーを獲得する。",
+    "ip_desc": "俗世の物に執着するは愚かである。私欲は必ず腐敗を生む。収穫を望む者は、まず種蒔きの代価を数えよ。",
+    "treasure_group": 102,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_36.T_Rouge_Treasure_36",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [
+      [
+        49
+      ],
+      [
+        28
+      ],
+      [
+        29
+      ]
+    ],
+    "server_build_value": [
+      "$(#RougelikeServerBuild[28].Param[1]-1)*100$%",
+      "$(#RougelikeServerBuild[28].RoomCount-1)$",
+      "$#RougelikeServerBuild[29].Param[1]$"
+    ],
+    "rl_archive_id": 43,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 0,
+    "client_build": {}
+  },
+  {
+    "id": 12201,
+    "name": "繁栄の神の契約・自制",
+    "desc": "与ダメージ-<Highlight>$1</>ダウン。<Highlight>@1</>フロア踏破するとこの効果は終了し、エンバー<Highlight>@2</>獲得。",
+    "simple_desc": "与ダメージダウン。一定フロア踏破すると解除されエンバーを獲得。",
+    "ip_desc": "忍耐は最も尊い美徳である。草木が朝日を待つように、神の恵みが降るのを待ち続ける。俗世の雑念を捨て、敬虔な心で光の道を歩む。",
+    "treasure_group": 102,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20161001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_37.T_Rouge_Treasure_37",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "room_condition": [],
+    "server_build": [
+      [
+        49
+      ],
+      [
+        50
+      ],
+      [
+        33
+      ]
+    ],
+    "server_build_value": [
+      "$(#RougelikeServerBuild[50].RoomCount-1)$",
+      "$#RougelikeServerBuild[33].Param[1]$"
+    ],
+    "rl_archive_id": 44,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 13101,
+    "name": "劫火の刻印",
+    "desc": "ダメージを与えると<Highlight>$1</>の確率で追加で<Highlight>$2</>キャラ攻撃の火属性ダメージを与える。",
+    "simple_desc": "ダメージを与えると確率で追加の火属性ダメージを与える。",
+    "ip_desc": "揺らめく蝋燭の光でも、暖炉の炎でもない。\n山林を呑み込む業火となり、行く先を阻むものを灰に変えよう。",
+    "treasure_group": 103,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20181001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_38.T_Rouge_Treasure_38",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 45,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 13102,
+    "name": "水蝕の刻印",
+    "desc": "ダメージを与えると<Highlight>$1</>の確率で追加で<Highlight>$2</>キャラ攻撃の水属性ダメージを与える。",
+    "simple_desc": "ダメージを与えると確率で追加の水属性ダメージを与える。",
+    "ip_desc": "春の雨でも、せせらぎの水でもない。\n我は町を吞み込む津波となり、前に塞がるもの粉砕して見せる。",
+    "treasure_group": 103,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20182001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_39.T_Rouge_Treasure_39",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 46,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 13103,
+    "name": "風化の刻印",
+    "desc": "ダメージを与えると<Highlight>$1</>の確率で追加で<Highlight>$2</>キャラ攻撃の風属性ダメージを与える。",
+    "simple_desc": "ダメージを与えると確率で追加の風属性ダメージを与える。",
+    "ip_desc": "優しい吐息でも、そよ風でもない。\n我は屋根を吹き飛ばす狂風となり、\n前に塞がるものを引き裂いてみせる。",
+    "treasure_group": 103,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20183001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_40.T_Rouge_Treasure_40",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 47,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 13104,
+    "name": "雷鳴の刻印",
+    "desc": "ダメージを与えると<Highlight>$1</>の確率で追加で<Highlight>$2</>キャラ攻撃の雷属性ダメージを与える。",
+    "simple_desc": "ダメージを与えると確率で追加の雷属性ダメージを与える。",
+    "ip_desc": "かすかな電光でも、火花の瞬きでもない。\n我は暗き夜を引き裂く無音の雷鳴となり、前に塞がるものを震え上がらせ、魂ごと砕いてみせる。",
+    "treasure_group": 103,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20184001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_41.T_Rouge_Treasure_41",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 48,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 14101,
+    "name": "贖罪の騎士のアームガード",
+    "desc": "スキル効率-<Highlight>$1</>と引き換えに与ダメージ+<Highlight>$2</>。",
+    "simple_desc": "スキル効率ダウンと引き換えに与ダメージアップ。",
+    "ip_desc": "彼女は幼い頃から、騎士である姉に憧れていた。姉は強く聡明で、成せない任務などなかった。\n聖湖の底に広がる深淵こそ、最凶の戦場だと言われる。最強の騎士ですら、生きて帰ってられない場所だと。それでも姉は戻ってきた。\nただ、それから二度と言葉を口にすることはなかった。",
+    "treasure_group": 104,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20151001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_42.T_Rouge_Treasure_42",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 49,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 14201,
+    "name": "贖罪の騎士の錆びた剣",
+    "desc": "近接武器ダメージ-<Highlight>$1</>と引き換えに与ダメージ+<Highlight>$2</>。",
+    "simple_desc": "近接武器ダメージダウンと引き換えに与ダメージアップ。",
+    "ip_desc": "姉は聖湖で神を怒らせ、魂の一部を罰として奪われたと大人たちは言う。\nだが、姉は正しく敬虔な騎士だ。きっと自分の魂の欠片をあそこに置き忘れただけ。誰も信じなくても、私が証明する。\nこの深淵へ降りて、絶対に姉の失われた魂を取り戻してみせる。",
+    "treasure_group": 104,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20152001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_43.T_Rouge_Treasure_43",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 50,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 14202,
+    "name": "贖罪の騎士の朽ちた槍",
+    "desc": "遠隔武器ダメージ-<Highlight>$1</>と引き換えに与ダメージ+<Highlight>$2</>。",
+    "simple_desc": "遠隔武器ダメージダウンと引き換えに与ダメージアップ。",
+    "ip_desc": "姉さん……あなたなの？どうして、こんな姿に……？なぜ、私に剣を向けるの？\n「嘘つき……嘘つき……」漆黒の暗影が、鋭く耳を劈く声で繰り返す。「正義なんてない……ただの偽りだ。」\nふと、彼女は思い出した。姉がこっそりと語った言葉を――「騎士団を辞めて、普通の人になりたい。」",
+    "treasure_group": 104,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20153001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_44.T_Rouge_Treasure_44",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 51,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 14301,
+    "name": "贖罪の騎士のペンダント",
+    "desc": "被ダメージ+<Highlight>$1</>と引き換えに与ダメージ+<Highlight>$2</>。",
+    "simple_desc": "被ダメージアップと引き換えに与ダメージアップ。",
+    "ip_desc": "暗影は、まるで最初から存在しなかったかのように消え去った。彼女は悟った。姉の失われた魂は、もう二度と戻らないのだ。\nもし私があんなに姉に憧れていなかったら、もし姉が選ばれた時、あんなに喜んでいなかったら、姉は死なずに済んだのかな？姉を殺したのは…私？\n深淵は彼女の涙を吞み込み、何事もなかったように黙していた。",
+    "treasure_group": 104,
+    "treasure_rarity": 3,
+    "treasure_weight": 200,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20154001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_45.T_Rouge_Treasure_45",
+    "end_points": [
+      40
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 52,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 15101,
+    "name": "幽惘の術士の長弓",
+    "desc": "敵の「体勢」が<Highlight>$1</>以上のとき、ダメージを与えると<Highlight>$2</>点のSPを回復。クールタイム<Highlight>$3</>秒。",
+    "simple_desc": "敵の「体勢」が高いとき、ダメージを与えるとSPを回復。",
+    "ip_desc": "ならば今、彼女はなぜ傷だらけの体を引きずり、この終わりなき迷宮を進み続けるのか？\n なぜならどんな隅に隠れても、ケイシーは必ず彼女を見つけるから。どんな荒唐な言い訳でも、フーリンは決して怒らないから。\n そして彼女の手には血に染まった徽章が握られていた。それは誰かの完全な信頼と託しを背負っていた。\n 彼女には……もう諦められない理由があった。",
+    "treasure_group": 105,
+    "treasure_rarity": 1,
+    "treasure_weight": 1000,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20156001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_53.T_Rouge_Treasure_53",
+    "end_points": [
+      10
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 59,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 15201,
+    "name": "幽惘の術士の折れ矢",
+    "desc": "敵の「体勢」が<Highlight>$1</>未満のとき、与ダメージ<Highlight>$2</>アップ。",
+    "simple_desc": "敵の「体勢」が低いとき、与ダメージアップ。",
+    "ip_desc": "幼い頃から彼女はいつも諦めてきた。学び舎では聖樹学院の選抜を欠席し、騎士団に入っても昇格試験に一度も挑まなかった。\n 誰もが上を目指せるわけではない。頂に辿り着けば必ず落ちる日が来る。それなら初めから留まり続ける方がいいと、彼女は選んだのだ。",
+    "treasure_group": 105,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "Role",
+    "treasure_mod": 20157001,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_52.T_Rouge_Treasure_52",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "room_condition": [],
+    "server_build": [],
+    "server_build_value": [],
+    "rl_archive_id": 60,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 1,
+    "client_build": {}
+  }
+]

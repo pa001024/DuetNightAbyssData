@@ -2,6 +2,7 @@
   {
     "id": 601,
     "名称": "Wishen aux talismans",
+    "描述": "Un Wishen maniant des talismans destructeurs avec une aisance déconcertante — mais ce qui vous intrigue le plus, c’est de savoir où il puise cette réserve presque inépuisable de talismans.",
     "icon": "Wuyou01",
     "品质": 5,
     "类型": 3,
@@ -9,6 +10,7 @@
     "捕获经验": 0,
     "经验": 70,
     "主动": {
+      "id": 601,
       "描述": "Inflige aux ennemis situés dans un rayon frontal de 10 m des dégâts équivalents à {%} de l’ATQ du personnage principal. Restaure {} de Lucidité par seconde et augmente la Vitesse de compétence de {%} pendant {} s.",
       "值": [
         [
@@ -35,7 +37,8 @@
           4,
           4
         ]
-      ]
+      ],
+      "cd": 8
     },
     "被动": {
       "描述": "Vaincre 30 ennemis : Les dégâts augmentent jusqu’à 12 000 % de l’ATQ du personnage principal.\nVaincre 60 ennemis : Puissance de compétence +150 %.\nVaincre 90 ennemis : Temps de recharge des compétences de soutien -50 %.\nVaincre 120 ennemis : Dégâts de compétence +90 %.",
@@ -45,6 +48,7 @@
   {
     "id": 602,
     "名称": "Wishen ascète",
+    "描述": "Un Wishen à l’allure calme et maîtrisée — mais éveiller sa colère pourrait entraîner des conséquences que nul n’ose imaginer.",
     "icon": "Wuyou03",
     "品质": 5,
     "类型": 3,
@@ -52,6 +56,7 @@
     "捕获经验": 0,
     "经验": 70,
     "主动": {
+      "id": 602,
       "描述": "Tire 16 projectiles à tête chercheuse, chacun infligeant des dégâts équivalents à {%} de l’ATQ du personnage principal. Augmente la Ténacité de {%} et, lors du calcul de la Vigueur et de la Ténacité, le pourcentage de PV est forcé à 1 % pendant {} s.",
       "值": [
         [
@@ -72,7 +77,8 @@
           4,
           4
         ]
-      ]
+      ],
+      "cd": 8
     },
     "被动": {
       "描述": "Vaincre 30 ennemis : Les dégâts augmentent jusqu’à 1 000 % de l’ATQ du personnage principal.\nVaincre 60 ennemis : Tir multiple +75 %.\nVaincre 90 ennemis : Temps de recharge des compétences de soutien -50 %.\nVaincre 120 ennemis : Vitesse d’attaque des armes à distance +90 %.",
@@ -82,6 +88,7 @@
   {
     "id": 603,
     "名称": "Wishen aux lames dansantes",
+    "描述": "Un Wishen passé maître dans l’art de faire virevolter les épées : les lames qui gravitent autour de lui feraient un décor parfait pour une photographie... à condition qu’il accepte de vous rendre ce service.",
     "icon": "Wuyou02",
     "品质": 5,
     "类型": 3,
@@ -89,6 +96,7 @@
     "捕获经验": 0,
     "经验": 70,
     "主动": {
+      "id": 603,
       "描述": "Génère 3 lames tournoyantes autour du personnage principal, infligeant des dégâts équivalents à {%} de l’ATQ du personnage principal aux ennemis touchés. Restaure {} points de Combo par seconde et augmente les dégâts d’attaque chargée de {%} pendant {} s.",
       "值": [
         [
@@ -115,7 +123,8 @@
           4,
           4
         ]
-      ]
+      ],
+      "cd": 8
     },
     "被动": {
       "描述": "Vaincre 30 ennemis : Génère 3 lames supplémentaires.\nVaincre 60 ennemis : DGT d’arme +135 %.\nVaincre 90 ennemis : Temps de recharge des compétences de soutien -50 %.\nVaincre 120 ennemis : Vitesse d’attaque des armes de mêlée +90 %.",
@@ -125,6 +134,7 @@
   {
     "id": 604,
     "名称": "Wishen des prairies",
+    "描述": "Un Wishen qui se déplace toujours avec une légèreté nonchalante. Et les jours de cafard, il suffit de lui caresser doucement le sommet de la tête pour sentir votre cœur s’alléger.",
     "icon": "Wuyou04",
     "品质": 5,
     "类型": 3,
@@ -132,6 +142,7 @@
     "捕获经验": 0,
     "经验": 70,
     "主动": {
+      "id": 604,
       "描述": "Inflige aux ennemis dans un rayon de 6 m des dégâts équivalents à {%} de l’ATQ du personnage principal. Augmente la Vitesse d’attaque de toutes les invocations de {%} pendant {} s.",
       "值": [
         [
@@ -152,7 +163,8 @@
           4,
           4
         ]
-      ]
+      ],
+      "cd": 8
     },
     "被动": {
       "描述": "Vaincre 30 ennemis : Les dégâts augmentent jusqu’à 12 000 % de l’ATQ du personnage principal.\nVaincre 60 ennemis : Portée de compétence +100 % ; Durée de compétence +100 %.\nVaincre 90 ennemis : Temps de recharge des compétences de soutien -50 %.\nVaincre 120 ennemis : Dégâts infligés par les invocations +500 %.",
@@ -163,13 +175,16 @@
     "id": 4011,
     "uid": 4011,
     "名称": "Équinoxe mystique",
+    "描述": "Souvent aperçu près des ruines, des champs de bataille ou des cimetières, ce Géniemon se nourrit des restes des défunts. Ses deux cornes, autant que ses habitudes funèbres, lui ont valu d’être tenu pour un funeste présage.",
     "icon": "Zisha03",
+    "异化": 4013,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 401,
       "描述": "Inflige des Dégâts Umbro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches, et applique aléatoirement un Effet supplémentaire élémentaire pendant {} s.",
       "值": [
         [
@@ -184,7 +199,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Umbro +{%} ; PV max +{%}.",
@@ -208,13 +224,16 @@
     "id": 4012,
     "uid": 4012,
     "名称": "Équinoxe ardent",
+    "描述": "Souvent aperçu près des ruines, des champs de bataille ou des cimetières, ce Géniemon se nourrit des restes des défunts. Ses deux cornes, autant que ses habitudes funèbres, lui ont valu d’être tenu pour un funeste présage.",
     "icon": "Zisha02",
+    "异化": 4013,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 401,
       "描述": "Inflige des Dégâts Umbro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches, et applique aléatoirement un Effet supplémentaire élémentaire pendant {} s.",
       "值": [
         [
@@ -229,7 +248,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Umbro +{%} ; PV max +{%}.",
@@ -253,13 +273,16 @@
     "id": 4013,
     "uid": 4013,
     "名称": "Équinoxe scintillant",
+    "描述": "Souvent aperçu près des ruines, des champs de bataille ou des cimetières, ce Géniemon se nourrit des restes des défunts. Ses deux cornes, autant que ses habitudes funèbres, lui ont valu d’être tenu pour un funeste présage.",
     "icon": "Zisha01",
+    "异化": 4013,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 401,
       "描述": "Inflige des Dégâts Umbro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches, et applique aléatoirement un Effet supplémentaire élémentaire pendant {} s.",
       "值": [
         [
@@ -274,7 +297,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Umbro +{%} ; PV max +{%}.",
@@ -298,13 +322,16 @@
     "id": 4021,
     "uid": 4021,
     "名称": "Gouttine mystique",
+    "描述": "Géniemon aquatique flottant dans les airs. Son corps translucide, recroquevillé sur lui-même, se fond si bien dans la lumière qu’on le distingue à peine.\nCe n’est qu’à la pluie qu’il s’éveille et s’étire, s’épanouissant dans le ciel tel une fleur de cristal.",
     "icon": "Yuyi01",
+    "异化": 4023,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 402,
       "描述": "Augmente l’ATQ de soi-même et des alliés de {%} pendant {} s.",
       "值": [
         [
@@ -319,7 +346,8 @@
           12,
           12
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Hydro +{%} ; PV max +{%}.",
@@ -343,13 +371,16 @@
     "id": 4022,
     "uid": 4022,
     "名称": "Gouttine ardent",
+    "描述": "Géniemon aquatique flottant dans les airs. Son corps translucide, recroquevillé sur lui-même, se fond si bien dans la lumière qu’on le distingue à peine.\nCe n’est qu’à la pluie qu’il s’éveille et s’étire, s’épanouissant dans le ciel tel une fleur de cristal.",
     "icon": "Yuyi02",
+    "异化": 4023,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 402,
       "描述": "Augmente l’ATQ de soi-même et des alliés de {%} pendant {} s.",
       "值": [
         [
@@ -364,7 +395,8 @@
           12,
           12
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Hydro +{%} ; PV max +{%}.",
@@ -388,13 +420,16 @@
     "id": 4023,
     "uid": 4023,
     "名称": "Gouttine scintillant",
+    "描述": "Géniemon aquatique flottant dans les airs. Son corps translucide, recroquevillé sur lui-même, se fond si bien dans la lumière qu’on le distingue à peine.\nCe n’est qu’à la pluie qu’il s’éveille et s’étire, s’épanouissant dans le ciel tel une fleur de cristal.",
     "icon": "Yuyi03",
+    "异化": 4023,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 402,
       "描述": "Augmente l’ATQ de soi-même et des alliés de {%} pendant {} s.",
       "值": [
         [
@@ -409,7 +444,8 @@
           12,
           12
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Hydro +{%} ; PV max +{%}.",
@@ -433,13 +469,16 @@
     "id": 4031,
     "uid": 4031,
     "名称": "Piquero mystique",
+    "描述": "Géniemon dont plus de la moitié du corps est composée de glandes thermiques. Il suffit qu’il entrouvre la bouche pour qu’en jaillisse une vague brûlante, capable d’embraser l’air lui-même.",
     "icon": "Dahuo01",
+    "异化": 4033,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 403,
       "描述": "Restaure {} de Lucidité à soi-même et aux alliés.",
       "值": [
         [
@@ -448,7 +487,8 @@
           15,
           18
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Pyro +{%} ; PV max +{%}.",
@@ -472,13 +512,16 @@
     "id": 4032,
     "uid": 4032,
     "名称": "Piquero ardent",
+    "描述": "Géniemon dont plus de la moitié du corps est composée de glandes thermiques. Il suffit qu’il entrouvre la bouche pour qu’en jaillisse une vague brûlante, capable d’embraser l’air lui-même.",
     "icon": "Dahuo02",
+    "异化": 4033,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 403,
       "描述": "Restaure {} de Lucidité à soi-même et aux alliés.",
       "值": [
         [
@@ -487,7 +530,8 @@
           15,
           18
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Pyro +{%} ; PV max +{%}.",
@@ -511,13 +555,16 @@
     "id": 4033,
     "uid": 4033,
     "名称": "Piquero scintillant",
+    "描述": "Géniemon dont plus de la moitié du corps est composée de glandes thermiques. Il suffit qu’il entrouvre la bouche pour qu’en jaillisse une vague brûlante, capable d’embraser l’air lui-même.",
     "icon": "Dahuo03",
+    "异化": 4033,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 403,
       "描述": "Restaure {} de Lucidité à soi-même et aux alliés.",
       "值": [
         [
@@ -526,7 +573,8 @@
           15,
           18
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Pyro +{%} ; PV max +{%}.",
@@ -550,13 +598,16 @@
     "id": 4039,
     "uid": 4031,
     "名称": "Piquero mystique",
+    "描述": "Géniemon dont plus de la moitié du corps est composée de glandes thermiques. Il suffit qu’il entrouvre la bouche pour qu’en jaillisse une vague brûlante, capable d’embraser l’air lui-même.",
     "icon": "Dahuo01",
+    "异化": 4033,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 403,
       "描述": "Restaure {} de Lucidité à soi-même et aux alliés.",
       "值": [
         [
@@ -565,7 +616,8 @@
           15,
           18
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Pyro +{%} ; PV max +{%}.",
@@ -589,13 +641,16 @@
     "id": 4041,
     "uid": 4041,
     "名称": "Voltino mystique",
+    "描述": "Géniemon des hauts plateaux, célèbre pour son pelage à la conductivité exceptionnelle. Longtemps chassé par les humains, il s’est fait méfiant : à la moindre présence, il se roule en boule et dévale les pentes à la vitesse de l’éclair.",
     "icon": "Zhamao01",
+    "异化": 4043,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 404,
       "描述": "Octroie {} points d’Ultra-bouclier à soi-même et aux alliés, et applique aléatoirement l’un des effets suivants pendant {} s : ATQ +{%}, DÉF +{%}, Puissance de compétence +{%} ou Durée de compétence +{%}.",
       "值": [
         [
@@ -634,7 +689,8 @@
           0.14,
           0.16
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Électro +{%} ; PV max +{%}.",
@@ -658,13 +714,16 @@
     "id": 4042,
     "uid": 4042,
     "名称": "Voltino ardent",
+    "描述": "Géniemon des hauts plateaux, célèbre pour son pelage à la conductivité exceptionnelle. Longtemps chassé par les humains, il s’est fait méfiant : à la moindre présence, il se roule en boule et dévale les pentes à la vitesse de l’éclair.",
     "icon": "Zhamao02",
+    "异化": 4043,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 404,
       "描述": "Octroie {} points d’Ultra-bouclier à soi-même et aux alliés, et applique aléatoirement l’un des effets suivants pendant {} s : ATQ +{%}, DÉF +{%}, Puissance de compétence +{%} ou Durée de compétence +{%}.",
       "值": [
         [
@@ -703,7 +762,8 @@
           0.14,
           0.16
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Électro +{%} ; PV max +{%}.",
@@ -727,13 +787,16 @@
     "id": 4043,
     "uid": 4043,
     "名称": "Voltino scintillant",
+    "描述": "Géniemon des hauts plateaux, célèbre pour son pelage à la conductivité exceptionnelle. Longtemps chassé par les humains, il s’est fait méfiant : à la moindre présence, il se roule en boule et dévale les pentes à la vitesse de l’éclair.",
     "icon": "Zhamao03",
+    "异化": 4043,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 404,
       "描述": "Octroie {} points d’Ultra-bouclier à soi-même et aux alliés, et applique aléatoirement l’un des effets suivants pendant {} s : ATQ +{%}, DÉF +{%}, Puissance de compétence +{%} ou Durée de compétence +{%}.",
       "值": [
         [
@@ -772,7 +835,8 @@
           0.14,
           0.16
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Électro +{%} ; PV max +{%}.",
@@ -796,13 +860,16 @@
     "id": 4049,
     "uid": 4041,
     "名称": "Voltino mystique",
+    "描述": "Géniemon des hauts plateaux, célèbre pour son pelage à la conductivité exceptionnelle. Longtemps chassé par les humains, il s’est fait méfiant : à la moindre présence, il se roule en boule et dévale les pentes à la vitesse de l’éclair.",
     "icon": "Zhamao01",
+    "异化": 4043,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 404,
       "描述": "Octroie {} points d’Ultra-bouclier à soi-même et aux alliés, et applique aléatoirement l’un des effets suivants pendant {} s : ATQ +{%}, DÉF +{%}, Puissance de compétence +{%} ou Durée de compétence +{%}.",
       "值": [
         [
@@ -841,7 +908,8 @@
           0.14,
           0.16
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Électro +{%} ; PV max +{%}.",
@@ -865,13 +933,16 @@
     "id": 4051,
     "uid": 4051,
     "名称": "Champichou mystique",
+    "描述": "Géniemon parasite qui s’installe dans les champignons, prenant peu à peu le contrôle de leur organisme.\nLe son « pouf pouf » qu’il émet provient du vent s’engouffrant dans la cavité entre son corps et l’enveloppe de son hôte.",
     "icon": "Yaoye01",
+    "异化": 4053,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 405,
       "描述": "Soigne soi-même et ses alliés à hauteur de {%} des PV max du personnage principal.",
       "值": [
         [
@@ -880,7 +951,8 @@
           0.25,
           0.3
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Anémo +{%} ; PV max +{%}.",
@@ -904,13 +976,16 @@
     "id": 4052,
     "uid": 4052,
     "名称": "Champichou ardent",
+    "描述": "Géniemon parasite qui s’installe dans les champignons, prenant peu à peu le contrôle de leur organisme.\nLe son « pouf pouf » qu’il émet provient du vent s’engouffrant dans la cavité entre son corps et l’enveloppe de son hôte.",
     "icon": "Yaoye02",
+    "异化": 4053,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 405,
       "描述": "Soigne soi-même et ses alliés à hauteur de {%} des PV max du personnage principal.",
       "值": [
         [
@@ -919,7 +994,8 @@
           0.25,
           0.3
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Anémo +{%} ; PV max +{%}.",
@@ -943,13 +1019,16 @@
     "id": 4053,
     "uid": 4053,
     "名称": "Champichou scintillant",
+    "描述": "Géniemon parasite qui s’installe dans les champignons, prenant peu à peu le contrôle de leur organisme.\nLe son « pouf pouf » qu’il émet provient du vent s’engouffrant dans la cavité entre son corps et l’enveloppe de son hôte.",
     "icon": "Yaoye03",
+    "异化": 4053,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 405,
       "描述": "Soigne soi-même et ses alliés à hauteur de {%} des PV max du personnage principal.",
       "值": [
         [
@@ -958,7 +1037,8 @@
           0.25,
           0.3
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Anémo +{%} ; PV max +{%}.",
@@ -982,13 +1062,16 @@
     "id": 4059,
     "uid": 4051,
     "名称": "Champichou mystique",
+    "描述": "Géniemon parasite qui s’installe dans les champignons, prenant peu à peu le contrôle de leur organisme.\nLe son « pouf pouf » qu’il émet provient du vent s’engouffrant dans la cavité entre son corps et l’enveloppe de son hôte.",
     "icon": "Yaoye01",
+    "异化": 4053,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 405,
       "描述": "Soigne soi-même et ses alliés à hauteur de {%} des PV max du personnage principal.",
       "值": [
         [
@@ -997,7 +1080,8 @@
           0.25,
           0.3
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Anémo +{%} ; PV max +{%}.",
@@ -1021,13 +1105,16 @@
     "id": 4061,
     "uid": 4061,
     "名称": "Lumi mystique",
+    "描述": "Géniemon vif, malicieux et cupide, passionné par tout ce qui brille.\nSi vous avez la chance d’en apercevoir un... vérifiez aussitôt si vos bijoux sont toujours à leur place.",
     "icon": "Shanling01",
+    "异化": 4063,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 406,
       "描述": "Inflige des Dégâts Lumino équivalents à {%} de l’ATQ du personnage principal et réduit les dégâts infligés des ennemis touchés de {%} pendant {} s.",
       "值": [
         [
@@ -1048,7 +1135,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Umbro +{%} ; PV max +{%}.",
@@ -1072,13 +1160,16 @@
     "id": 4062,
     "uid": 4062,
     "名称": "Lumi ardent",
+    "描述": "Géniemon vif, malicieux et cupide, passionné par tout ce qui brille.\nSi vous avez la chance d’en apercevoir un... vérifiez aussitôt si vos bijoux sont toujours à leur place.",
     "icon": "Shanling02",
+    "异化": 4063,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 406,
       "描述": "Inflige des Dégâts Lumino équivalents à {%} de l’ATQ du personnage principal et réduit les dégâts infligés des ennemis touchés de {%} pendant {} s.",
       "值": [
         [
@@ -1099,7 +1190,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Umbro +{%} ; PV max +{%}.",
@@ -1123,13 +1215,16 @@
     "id": 4063,
     "uid": 4063,
     "名称": "Lumi scintillant",
+    "描述": "Géniemon vif, malicieux et cupide, passionné par tout ce qui brille.\nSi vous avez la chance d’en apercevoir un... vérifiez aussitôt si vos bijoux sont toujours à leur place.",
     "icon": "Shanling03",
+    "异化": 4063,
     "品质": 3,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
     "主动": {
+      "id": 406,
       "描述": "Inflige des Dégâts Lumino équivalents à {%} de l’ATQ du personnage principal et réduit les dégâts infligés des ennemis touchés de {%} pendant {} s.",
       "值": [
         [
@@ -1150,7 +1245,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ Umbro +{%} ; PV max +{%}.",
@@ -1174,13 +1270,16 @@
     "id": 4071,
     "uid": 4071,
     "名称": "Poto Carta mystique",
+    "描述": "Géniemon charognard à tendance casanière.\nIl collectionne compulsivement tout ce qu’il peut entasser : une partie sert de nourriture, le reste de matériaux pour tapisser son nid intérieur.",
     "icon": "Nihao01",
+    "异化": 4073,
     "品质": 5,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
     "主动": {
+      "id": 407,
       "描述": "Inflige des dégâts équivalents à {%} de l’ATQ du personnage principal aux ennemis proches. Détecte 1 Géniemon et 1 coffre dans un rayon de 100 m, marquant leur position pendant 30 s.",
       "值": [
         [
@@ -1189,7 +1288,8 @@
           19.5,
           23.4
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Portée ramassage auto +{} m, EXP gagnée sur les ennemis vaincus +{%}, et {%} de chances d’obtenir un butin supplémentaire.",
@@ -1219,13 +1319,16 @@
     "id": 4072,
     "uid": 4072,
     "名称": "Poto Carta ardent",
+    "描述": "Géniemon charognard à tendance casanière.\nIl collectionne compulsivement tout ce qu’il peut entasser : une partie sert de nourriture, le reste de matériaux pour tapisser son nid intérieur.",
     "icon": "Nihao02",
+    "异化": 4073,
     "品质": 5,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
     "主动": {
+      "id": 407,
       "描述": "Inflige des dégâts équivalents à {%} de l’ATQ du personnage principal aux ennemis proches. Détecte 1 Géniemon et 1 coffre dans un rayon de 100 m, marquant leur position pendant 30 s.",
       "值": [
         [
@@ -1234,7 +1337,8 @@
           19.5,
           23.4
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Portée ramassage auto +{} m, EXP gagnée sur les ennemis vaincus +{%}, et {%} de chances d’obtenir un butin supplémentaire.",
@@ -1264,13 +1368,16 @@
     "id": 4073,
     "uid": 4073,
     "名称": "Poto Carta scintillant",
+    "描述": "Géniemon charognard à tendance casanière.\nIl collectionne compulsivement tout ce qu’il peut entasser : une partie sert de nourriture, le reste de matériaux pour tapisser son nid intérieur.",
     "icon": "Nihao03",
+    "异化": 4073,
     "品质": 5,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
     "主动": {
+      "id": 407,
       "描述": "Inflige des dégâts équivalents à {%} de l’ATQ du personnage principal aux ennemis proches. Détecte 1 Géniemon et 1 coffre dans un rayon de 100 m, marquant leur position pendant 30 s.",
       "值": [
         [
@@ -1279,7 +1386,8 @@
           19.5,
           23.4
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Portée ramassage auto +{} m, EXP gagnée sur les ennemis vaincus +{%}, et {%} de chances d’obtenir un butin supplémentaire.",
@@ -1309,13 +1417,16 @@
     "id": 4079,
     "uid": 4071,
     "名称": "Poto Carta mystique",
+    "描述": "Géniemon charognard à tendance casanière.\nIl collectionne compulsivement tout ce qu’il peut entasser : une partie sert de nourriture, le reste de matériaux pour tapisser son nid intérieur.",
     "icon": "Nihao01",
+    "异化": 4073,
     "品质": 5,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
     "主动": {
+      "id": 407,
       "描述": "Inflige des dégâts équivalents à {%} de l’ATQ du personnage principal aux ennemis proches. Détecte 1 Géniemon et 1 coffre dans un rayon de 100 m, marquant leur position pendant 30 s.",
       "值": [
         [
@@ -1324,7 +1435,8 @@
           19.5,
           23.4
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Portée ramassage auto +{} m, EXP gagnée sur les ennemis vaincus +{%}, et {%} de chances d’obtenir un butin supplémentaire.",
@@ -1354,13 +1466,16 @@
     "id": 4081,
     "uid": 4081,
     "名称": "Périnou mystique",
+    "描述": "Géniemon d’une agilité remarquable. Ses longues oreilles, loin d’entraver ses mouvements, lui donnent une silhouette fuselée et parfaitement aérodynamique.",
     "icon": "Zhenzhu01",
+    "异化": 4083,
     "品质": 5,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
     "主动": {
+      "id": 408,
       "描述": "Réduit les dégâts subis par vous et vos alliés de {%} pendant {} s.",
       "值": [
         [
@@ -1375,7 +1490,8 @@
           1.5,
           1.8
         ]
-      ]
+      ],
+      "cd": 25
     },
     "被动": {
       "描述": "Vitesse de saut +{%}, Vitesse de bond cyclonique +{%}, Friction de glissade -{%}.",
@@ -1405,13 +1521,16 @@
     "id": 4082,
     "uid": 4082,
     "名称": "Périnou ardent",
+    "描述": "Géniemon d’une agilité remarquable. Ses longues oreilles, loin d’entraver ses mouvements, lui donnent une silhouette fuselée et parfaitement aérodynamique.",
     "icon": "Zhenzhu02",
+    "异化": 4083,
     "品质": 5,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
     "主动": {
+      "id": 408,
       "描述": "Réduit les dégâts subis par vous et vos alliés de {%} pendant {} s.",
       "值": [
         [
@@ -1426,7 +1545,8 @@
           1.5,
           1.8
         ]
-      ]
+      ],
+      "cd": 25
     },
     "被动": {
       "描述": "Vitesse de saut +{%}, Vitesse de bond cyclonique +{%}, Friction de glissade -{%}.",
@@ -1456,13 +1576,16 @@
     "id": 4083,
     "uid": 4083,
     "名称": "Périnou scintillant",
+    "描述": "Géniemon d’une agilité remarquable. Ses longues oreilles, loin d’entraver ses mouvements, lui donnent une silhouette fuselée et parfaitement aérodynamique.",
     "icon": "Zhenzhu03",
+    "异化": 4083,
     "品质": 5,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
     "主动": {
+      "id": 408,
       "描述": "Réduit les dégâts subis par vous et vos alliés de {%} pendant {} s.",
       "值": [
         [
@@ -1477,7 +1600,8 @@
           1.5,
           1.8
         ]
-      ]
+      ],
+      "cd": 25
     },
     "被动": {
       "描述": "Vitesse de saut +{%}, Vitesse de bond cyclonique +{%}, Friction de glissade -{%}.",
@@ -1507,13 +1631,16 @@
     "id": 4091,
     "uid": 4091,
     "名称": "M. Bonne Nuit mystique",
+    "描述": "Géniemon paresseux mais à la longévité légendaire.\nOn estime qu’il passe plus de 98 % de sa vie à dormir — un repos qui, semble-t-il, lui assure une éternelle jeunesse.",
     "icon": "Haomeng01",
+    "异化": 4093,
     "品质": 5,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
     "主动": {
+      "id": 409,
       "描述": "Applique une régénération continue à vous et vos alliés, restaurant {%} de leurs PV max par seconde pendant {} s.",
       "值": [
         [
@@ -1528,7 +1655,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "ATQ +{%}, PV max +{%}, DÉF +{%}.",
@@ -1558,13 +1686,16 @@
     "id": 4092,
     "uid": 4092,
     "名称": "M. Bonne Nuit ardent",
+    "描述": "Géniemon paresseux mais à la longévité légendaire.\nOn estime qu’il passe plus de 98 % de sa vie à dormir — un repos qui, semble-t-il, lui assure une éternelle jeunesse.",
     "icon": "Haomeng02",
+    "异化": 4093,
     "品质": 5,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
     "主动": {
+      "id": 409,
       "描述": "Applique une régénération continue à vous et vos alliés, restaurant {%} de leurs PV max par seconde pendant {} s.",
       "值": [
         [
@@ -1579,7 +1710,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "ATQ +{%}, PV max +{%}, DÉF +{%}.",
@@ -1609,13 +1741,16 @@
     "id": 4093,
     "uid": 4093,
     "名称": "M. Bonne Nuit scintillant",
+    "描述": "Géniemon paresseux mais à la longévité légendaire.\nOn estime qu’il passe plus de 98 % de sa vie à dormir — un repos qui, semble-t-il, lui assure une éternelle jeunesse.",
     "icon": "Haomeng03",
+    "异化": 4093,
     "品质": 5,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
     "主动": {
+      "id": 409,
       "描述": "Applique une régénération continue à vous et vos alliés, restaurant {%} de leurs PV max par seconde pendant {} s.",
       "值": [
         [
@@ -1630,7 +1765,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "ATQ +{%}, PV max +{%}, DÉF +{%}.",
@@ -1660,13 +1796,16 @@
     "id": 4111,
     "uid": 4111,
     "名称": "Nébuthis mystique",
+    "描述": "Ce Géniemon hante les vieux châteaux, les ruines et toutes les bâtisses désertées.\nDe loin, il n’est qu’une lueur flottant dans l’ombre — une petite flamme spectrale suspendue dans les airs.",
     "icon": "Fuyou01",
+    "异化": 4113,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 411,
       "描述": "Inflige des Dégâts Umbro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches et réduit leur DÉF de {%} pendant {} s.",
       "值": [
         [
@@ -1687,7 +1826,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Augmente l’ATQ Umbro du personnage principal et des Partenaires de combat de {%}. Augmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
@@ -1711,13 +1851,16 @@
     "id": 4112,
     "uid": 4112,
     "名称": "Nébuthis ardent",
+    "描述": "Ce Géniemon hante les vieux châteaux, les ruines et toutes les bâtisses désertées.\nDe loin, il n’est qu’une lueur flottant dans l’ombre — une petite flamme spectrale suspendue dans les airs.",
     "icon": "Fuyou02",
+    "异化": 4113,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 411,
       "描述": "Inflige des Dégâts Umbro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches et réduit leur DÉF de {%} pendant {} s.",
       "值": [
         [
@@ -1738,7 +1881,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Augmente l’ATQ Umbro du personnage principal et des Partenaires de combat de {%}. Augmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
@@ -1762,13 +1906,16 @@
     "id": 4113,
     "uid": 4113,
     "名称": "Nébuthis scintillant",
+    "描述": "Ce Géniemon hante les vieux châteaux, les ruines et toutes les bâtisses désertées.\nDe loin, il n’est qu’une lueur flottant dans l’ombre — une petite flamme spectrale suspendue dans les airs.",
     "icon": "Fuyou03",
+    "异化": 4113,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 411,
       "描述": "Inflige des Dégâts Umbro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches et réduit leur DÉF de {%} pendant {} s.",
       "值": [
         [
@@ -1789,7 +1936,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Augmente l’ATQ Umbro du personnage principal et des Partenaires de combat de {%}. Augmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
@@ -1813,13 +1961,16 @@
     "id": 4121,
     "uid": 4121,
     "名称": "Lapiniva mystique",
+    "描述": "Aussi souple qu’un pudding et adorable à souhait, ce Géniemon — surnommé le Lapiniva — fit un temps fureur sur tout le continent.\nJusqu’au jour où un érudit d’Aethyrie révéla que ses deux petits \"yeux\" noirs... n’étaient pas des yeux, mais une partie de son système interne. Depuis, disons simplement que sa popularité n’est jamais remontée.",
     "icon": "Tangshuang01",
+    "异化": 4123,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 412,
       "描述": "Augmente l’ATQ de toutes les [Invocations] alliées de {%} pendant {} s.",
       "值": [
         [
@@ -1834,7 +1985,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Augmente l’ATQ Hydro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
@@ -1858,13 +2010,16 @@
     "id": 4122,
     "uid": 4122,
     "名称": "Lapiniva ardent",
+    "描述": "Aussi souple qu’un pudding et adorable à souhait, ce Géniemon — surnommé le Lapiniva — fit un temps fureur sur tout le continent.\nJusqu’au jour où un érudit d’Aethyrie révéla que ses deux petits \"yeux\" noirs... n’étaient pas des yeux, mais une partie de son système interne. Depuis, disons simplement que sa popularité n’est jamais remontée.",
     "icon": "Tangshuang02",
+    "异化": 4123,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 412,
       "描述": "Augmente l’ATQ de toutes les [Invocations] alliées de {%} pendant {} s.",
       "值": [
         [
@@ -1879,7 +2034,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Augmente l’ATQ Hydro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
@@ -1903,13 +2059,16 @@
     "id": 4123,
     "uid": 4123,
     "名称": "Lapiniva scintillant",
+    "描述": "Aussi souple qu’un pudding et adorable à souhait, ce Géniemon — surnommé le Lapiniva — fit un temps fureur sur tout le continent.\nJusqu’au jour où un érudit d’Aethyrie révéla que ses deux petits \"yeux\" noirs... n’étaient pas des yeux, mais une partie de son système interne. Depuis, disons simplement que sa popularité n’est jamais remontée.",
     "icon": "Tangshuang03",
+    "异化": 4123,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 412,
       "描述": "Augmente l’ATQ de toutes les [Invocations] alliées de {%} pendant {} s.",
       "值": [
         [
@@ -1924,7 +2083,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Augmente l’ATQ Hydro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
@@ -1948,13 +2108,16 @@
     "id": 4128,
     "uid": 4121,
     "名称": "Lapiniva mystique",
+    "描述": "Aussi souple qu’un pudding et adorable à souhait, ce Géniemon — surnommé le Lapiniva — fit un temps fureur sur tout le continent.\nJusqu’au jour où un érudit d’Aethyrie révéla que ses deux petits \"yeux\" noirs... n’étaient pas des yeux, mais une partie de son système interne. Depuis, disons simplement que sa popularité n’est jamais remontée.",
     "icon": "Tangshuang01",
+    "异化": 4123,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 412,
       "描述": "Augmente l’ATQ de toutes les [Invocations] alliées de {%} pendant {} s.",
       "值": [
         [
@@ -1969,7 +2132,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Augmente l’ATQ Hydro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
@@ -1993,13 +2157,16 @@
     "id": 4131,
     "uid": 4131,
     "名称": "Pyrocoda mystique",
+    "描述": "Entièrement drapé de flammes, ce Géniemon né des terres brûlantes dégage en permanence un délicat parfum de viande grillée... Un fumet qui annonce sa présence bien avant que vous ne l’aperceviez.",
     "icon": "YYHW01",
+    "异化": 4133,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 413,
       "描述": "Fait apparaître un [Sel volatil stimulant], une [Goutte de rosée apaisante] et une [Caisse de munitions]. Augmente la durée de compétence de vous et vos alliés de {%} pendant {} s.",
       "值": [
         [
@@ -2014,7 +2181,8 @@
           15,
           15
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Augmente l’ATQ Pyro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
@@ -2038,13 +2206,16 @@
     "id": 4132,
     "uid": 4132,
     "名称": "Pyrocoda ardent",
+    "描述": "Entièrement drapé de flammes, ce Géniemon né des terres brûlantes dégage en permanence un délicat parfum de viande grillée... Un fumet qui annonce sa présence bien avant que vous ne l’aperceviez.",
     "icon": "YYHW02",
+    "异化": 4133,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 413,
       "描述": "Fait apparaître un [Sel volatil stimulant], une [Goutte de rosée apaisante] et une [Caisse de munitions]. Augmente la durée de compétence de vous et vos alliés de {%} pendant {} s.",
       "值": [
         [
@@ -2059,7 +2230,8 @@
           15,
           15
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Augmente l’ATQ Pyro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
@@ -2083,13 +2255,16 @@
     "id": 4133,
     "uid": 4133,
     "名称": "Pyrocoda scintillant",
+    "描述": "Entièrement drapé de flammes, ce Géniemon né des terres brûlantes dégage en permanence un délicat parfum de viande grillée... Un fumet qui annonce sa présence bien avant que vous ne l’aperceviez.",
     "icon": "YYHW03",
+    "异化": 4133,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 413,
       "描述": "Fait apparaître un [Sel volatil stimulant], une [Goutte de rosée apaisante] et une [Caisse de munitions]. Augmente la durée de compétence de vous et vos alliés de {%} pendant {} s.",
       "值": [
         [
@@ -2104,7 +2279,8 @@
           15,
           15
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Augmente l’ATQ Pyro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
@@ -2128,13 +2304,16 @@
     "id": 4141,
     "uid": 4141,
     "名称": "Miaouzz mystique",
+    "描述": "Constamment parcouru d’électricité statique, ce pauvre Géniemon se voit souvent rejeté par les siens. Nul ne connaît réellement son apparence ; tout ce que l’on aperçoit, ce sont deux yeux tristes qui dépassent timidement d’une minuscule voiture-jouet.",
     "icon": "Pipa01",
+    "异化": 4143,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 414,
       "描述": "Octroie à vous et vos alliés {} points d’Ultra-bouclier et restaure {} de Lucidité.",
       "值": [
         [
@@ -2149,7 +2328,8 @@
           15,
           18
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "Augmente l’ATQ Électro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
@@ -2173,13 +2353,16 @@
     "id": 4142,
     "uid": 4142,
     "名称": "Miaouzz ardent",
+    "描述": "Constamment parcouru d’électricité statique, ce pauvre Géniemon se voit souvent rejeté par les siens. Nul ne connaît réellement son apparence ; tout ce que l’on aperçoit, ce sont deux yeux tristes qui dépassent timidement d’une minuscule voiture-jouet.",
     "icon": "Pipa03",
+    "异化": 4143,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 414,
       "描述": "Octroie à vous et vos alliés {} points d’Ultra-bouclier et restaure {} de Lucidité.",
       "值": [
         [
@@ -2194,7 +2377,8 @@
           15,
           18
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "Augmente l’ATQ Électro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
@@ -2218,13 +2402,16 @@
     "id": 4143,
     "uid": 4143,
     "名称": "Miaouzz scintillant",
+    "描述": "Constamment parcouru d’électricité statique, ce pauvre Géniemon se voit souvent rejeté par les siens. Nul ne connaît réellement son apparence ; tout ce que l’on aperçoit, ce sont deux yeux tristes qui dépassent timidement d’une minuscule voiture-jouet.",
     "icon": "Pipa02",
+    "异化": 4143,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 414,
       "描述": "Octroie à vous et vos alliés {} points d’Ultra-bouclier et restaure {} de Lucidité.",
       "值": [
         [
@@ -2239,7 +2426,8 @@
           15,
           18
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "Augmente l’ATQ Électro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
@@ -2263,13 +2451,16 @@
     "id": 4151,
     "uid": 4151,
     "名称": "Fluffée mystique",
+    "描述": "Vif et minuscule, ce Géniemon est incapable de demeurer en place. Il se laisse porter aux quatre vents, agrippé à une graine de coton, poursuivant l’illusion obstinée d’un voyage dont l’ultime destination... n’existe pas.",
     "icon": "Mianmian01",
+    "异化": 4153,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 415,
       "描述": "Soigne vous-même et vos alliés à hauteur de {%} des PV max du personnage principal, et augmente la DÉF de +{%} pendant {} s.",
       "值": [
         [
@@ -2290,7 +2481,8 @@
           0.3,
           0.36
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Augmente l’ATQ Anémo du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
@@ -2314,13 +2506,16 @@
     "id": 4152,
     "uid": 4152,
     "名称": "Fluffée ardent",
+    "描述": "Vif et minuscule, ce Géniemon est incapable de demeurer en place. Il se laisse porter aux quatre vents, agrippé à une graine de coton, poursuivant l’illusion obstinée d’un voyage dont l’ultime destination... n’existe pas.",
     "icon": "Mianmian02",
+    "异化": 4153,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 415,
       "描述": "Soigne vous-même et vos alliés à hauteur de {%} des PV max du personnage principal, et augmente la DÉF de +{%} pendant {} s.",
       "值": [
         [
@@ -2341,7 +2536,8 @@
           0.3,
           0.36
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Augmente l’ATQ Anémo du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
@@ -2365,13 +2561,16 @@
     "id": 4153,
     "uid": 4153,
     "名称": "Fluffée scintillant",
+    "描述": "Vif et minuscule, ce Géniemon est incapable de demeurer en place. Il se laisse porter aux quatre vents, agrippé à une graine de coton, poursuivant l’illusion obstinée d’un voyage dont l’ultime destination... n’existe pas.",
     "icon": "Mianmian03",
+    "异化": 4153,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 415,
       "描述": "Soigne vous-même et vos alliés à hauteur de {%} des PV max du personnage principal, et augmente la DÉF de +{%} pendant {} s.",
       "值": [
         [
@@ -2392,7 +2591,8 @@
           0.3,
           0.36
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Augmente l’ATQ Anémo du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
@@ -2416,13 +2616,16 @@
     "id": 4161,
     "uid": 4161,
     "名称": "Ballabeille mystique",
+    "描述": "Aussi éclatant qu’une étoile embrasée, ce Géniemon sert parfois de guide ou de flambeau aux voyageurs épuisés. Mais prenez garde : ses éclairs lumineux, réguliers et aveuglants, ne doivent jamais être fixés trop longtemps.",
     "icon": "Qiuqiu01",
+    "异化": 4163,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 416,
       "描述": "Inflige des Dégâts Lumino équivalents à {%} de l’ATQ du personnage principal aux ennemis proches et augmente les Dégâts de compétence qu’ils subissent de {%} pendant {} s.",
       "值": [
         [
@@ -2443,7 +2646,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Augmente l’ATQ Lumino du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
@@ -2467,13 +2671,16 @@
     "id": 4162,
     "uid": 4162,
     "名称": "Ballabeille ardent",
+    "描述": "Aussi éclatant qu’une étoile embrasée, ce Géniemon sert parfois de guide ou de flambeau aux voyageurs épuisés. Mais prenez garde : ses éclairs lumineux, réguliers et aveuglants, ne doivent jamais être fixés trop longtemps.",
     "icon": "Qiuqiu02",
+    "异化": 4163,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 416,
       "描述": "Inflige des Dégâts Lumino équivalents à {%} de l’ATQ du personnage principal aux ennemis proches et augmente les Dégâts de compétence qu’ils subissent de {%} pendant {} s.",
       "值": [
         [
@@ -2494,7 +2701,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Augmente l’ATQ Lumino du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
@@ -2518,13 +2726,16 @@
     "id": 4163,
     "uid": 4163,
     "名称": "Ballabeille scintillant",
+    "描述": "Aussi éclatant qu’une étoile embrasée, ce Géniemon sert parfois de guide ou de flambeau aux voyageurs épuisés. Mais prenez garde : ses éclairs lumineux, réguliers et aveuglants, ne doivent jamais être fixés trop longtemps.",
     "icon": "Qiuqiu03",
+    "异化": 4163,
     "品质": 4,
     "类型": 1,
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 416,
       "描述": "Inflige des Dégâts Lumino équivalents à {%} de l’ATQ du personnage principal aux ennemis proches et augmente les Dégâts de compétence qu’ils subissent de {%} pendant {} s.",
       "值": [
         [
@@ -2545,7 +2756,8 @@
           10,
           10
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Augmente l’ATQ Lumino du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
@@ -2569,6 +2781,7 @@
     "id": 4211,
     "uid": 4211,
     "名称": "Umbrelf",
+    "描述": "D’une rareté presque mythique, ce Géniemon arbore l’éclat sombre et profond de l’obsidienne. Longtemps, l’on crut qu’il n’existait que dans les ballades des bardes et les rêves des ménestrels.",
     "icon": "Heiyao",
     "品质": 5,
     "类型": 1,
@@ -2576,6 +2789,7 @@
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 421,
       "描述": "Inflige des Dégâts Umbro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches, et augmente [Vigueur] de {%} pour vous et vos alliés pendant {} s.",
       "值": [
         [
@@ -2596,7 +2810,8 @@
           12,
           12
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Augmente l’ATQ Umbro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Umbro avec comme préfixe : [Griffon], [Typhon] et [Pactisant].",
@@ -2620,6 +2835,7 @@
     "id": 4221,
     "uid": 4221,
     "名称": "Hydrelf",
+    "描述": "D’une rareté presque mythique, ce Géniemon arbore l’éclat limpide et bleuté de l’iolite. Longtemps, l’on crut qu’il n’existait que dans les ballades des bardes et les rêves des ménestrels.",
     "icon": "Jinqing",
     "品质": 5,
     "类型": 1,
@@ -2627,6 +2843,7 @@
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 422,
       "描述": "Augmente les dégâts infligés par vous et vos alliés de {%} pour chaque [Invocation] active du personnage principal, jusqu’à un maximum de {%}, pendant {} s.",
       "值": [
         [
@@ -2647,7 +2864,8 @@
           12,
           12
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Augmente l’ATQ Hydro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Hydro avec comme préfixe : [Griffon], [Typhon] et [Pactisant].",
@@ -2671,6 +2889,7 @@
     "id": 4231,
     "uid": 4231,
     "名称": "Pyrelf",
+    "描述": "D’une rareté presque mythique, ce Géniemon arbore l’éclat chaleureux de la cornaline. Longtemps, l’on crut qu’il n’existait que dans les ballades des bardes et les rêves des ménestrels.",
     "icon": "Manao",
     "品质": 5,
     "类型": 1,
@@ -2678,6 +2897,7 @@
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 423,
       "描述": "Inflige des Dégâts Pyro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches, et augmente [Tir multiple] de {%} pour vous et vos alliés pendant {} s.",
       "值": [
         [
@@ -2698,7 +2918,8 @@
           12,
           12
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Augmente l’ATQ Pyro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Pyro avec comme préfixe : [Griffon], [Typhon] et [Pactisant].",
@@ -2722,6 +2943,7 @@
     "id": 4241,
     "uid": 4241,
     "名称": "Électrelf",
+    "描述": "D’une rareté presque mythique, ce Géniemon arbore l’éclat cristallin de l’améthyste.\nLongtemps, l’on crut qu’il n’existait que dans les ballades des bardes et les rêves des ménestrels.",
     "icon": "Zijing",
     "品质": 5,
     "类型": 1,
@@ -2729,6 +2951,7 @@
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 424,
       "描述": "Restaure {} de Lucidité à vous et vos alliés, et augmente leurs Dégâts de compétence de {%} pendant {} s.",
       "值": [
         [
@@ -2749,7 +2972,8 @@
           12,
           12
         ]
-      ]
+      ],
+      "cd": 40
     },
     "被动": {
       "描述": "Augmente l’ATQ Électro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Électro avec comme préfixe : [Griffon], [Typhon] et [Pactisant].",
@@ -2773,6 +2997,7 @@
     "id": 4251,
     "uid": 4251,
     "名称": "Anémelf",
+    "描述": "D’une rareté presque mythique, ce Géniemon arbore l’éclat profond de l’émeraude. Longtemps, l’on crut qu’il n’existait que dans les ballades des bardes et les rêves des ménestrels.",
     "icon": "Bixi",
     "品质": 5,
     "类型": 1,
@@ -2780,6 +3005,7 @@
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 425,
       "描述": "Augmente [Ténacité] de {%} pour vous et vos alliés pendant {} s. Si les PV du personnage principal tombent sous 25 %, restaure immédiatement {%} PV.",
       "值": [
         [
@@ -2800,7 +3026,8 @@
           0.1,
           0.1
         ]
-      ]
+      ],
+      "cd": 30
     },
     "被动": {
       "描述": "Augmente l’ATQ Anémo du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Anémo avec comme préfixe : [Griffon], [Typhon] et [Pactisant].",
@@ -2824,6 +3051,7 @@
     "id": 4261,
     "uid": 4261,
     "名称": "Luminelf",
+    "描述": "D’une rareté presque mythique, ce Géniemon arbore les reflets changeants de l’opale. Longtemps, l’on crut qu’il n’existait que dans les ballades des bardes et les rêves des ménestrels.",
     "icon": "Oubo",
     "品质": 5,
     "类型": 1,
@@ -2831,6 +3059,7 @@
     "捕获经验": 100,
     "经验": 100,
     "主动": {
+      "id": 426,
       "描述": "Inflige des Dégâts Lumino équivalents à {%} de l’ATQ du personnage principal aux ennemis proches, et confère +{%} de Dégâts Lumino supplémentaires à vous et vos alliés pendant {} s.",
       "值": [
         [
@@ -2851,7 +3080,8 @@
           12,
           12
         ]
-      ]
+      ],
+      "cd": 20
     },
     "被动": {
       "描述": "Augmente l’ATQ Lumino du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Lumino avec comme préfixe : [Griffon], [Typhon] et [Pactisant].",
@@ -2875,6 +3105,7 @@
     "id": 4911,
     "uid": 4911,
     "名称": "Drone guérisseur mystique",
+    "描述": "Ce Géniemon a choisi de prendre l’apparence d’un Drone guérisseur. Les principes du mimétisme des Géniemon demeurent inconnus, mais celui-ci s’est parfaitement adapté aux conditions des Éolipyliens, développant les caractéristiques les plus propices à sa survie.",
     "icon": "HealRobot01",
     "品质": 2,
     "类型": 2,
@@ -2886,6 +3117,7 @@
     "id": 4912,
     "uid": 4912,
     "名称": "Drone guérisseur ardent",
+    "描述": "Ce Géniemon a choisi de prendre l’apparence d’un Drone guérisseur. Les principes du mimétisme des Géniemon demeurent inconnus, mais celui-ci s’est parfaitement adapté aux conditions des Éolipyliens, développant les caractéristiques les plus propices à sa survie.",
     "icon": "HealRobot02",
     "品质": 2,
     "类型": 2,
@@ -2897,6 +3129,7 @@
     "id": 4913,
     "uid": 4913,
     "名称": "Drone guérisseur onirique",
+    "描述": "Ce Géniemon a choisi de prendre l’apparence d’un Drone guérisseur. Les principes du mimétisme des Géniemon demeurent inconnus, mais celui-ci s’est parfaitement adapté aux conditions des Éolipyliens, développant les caractéristiques les plus propices à sa survie.",
     "icon": "HealRobot03",
     "品质": 2,
     "类型": 2,
@@ -2908,6 +3141,7 @@
     "id": 4921,
     "uid": 4921,
     "名称": "Drone magnétique mystique",
+    "描述": "Ce Géniemon a choisi de prendre l’apparence d’un Drone magnétique. Les principes du mimétisme des Géniemon demeurent inconnus, mais celui-ci s’est parfaitement adapté aux conditions des Éolipyliens, développant les caractéristiques les plus propices à sa survie.",
     "icon": "BlastRobot01",
     "品质": 2,
     "类型": 2,
@@ -2919,6 +3153,7 @@
     "id": 4922,
     "uid": 4922,
     "名称": "Drone magnétique ardent",
+    "描述": "Ce Géniemon a choisi de prendre l’apparence d’un Drone magnétique. Les principes du mimétisme des Géniemon demeurent inconnus, mais celui-ci s’est parfaitement adapté aux conditions des Éolipyliens, développant les caractéristiques les plus propices à sa survie.",
     "icon": "BlastRobot02",
     "品质": 2,
     "类型": 2,
@@ -2930,6 +3165,7 @@
     "id": 4923,
     "uid": 4923,
     "名称": "Drone magnétique onirique",
+    "描述": "Ce Géniemon a choisi de prendre l’apparence d’un Drone magnétique. Les principes du mimétisme des Géniemon demeurent inconnus, mais celui-ci s’est parfaitement adapté aux conditions des Éolipyliens, développant les caractéristiques les plus propices à sa survie.",
     "icon": "BlastRobot03",
     "品质": 2,
     "类型": 2,
@@ -2941,6 +3177,7 @@
     "id": 4931,
     "uid": 4931,
     "名称": "Gélidou mystique",
+    "描述": "Ce Géniemon fouisseur se glisse entre les failles du sol. Il se nourrit de décomposition et, ce faisant, enrichit la terre — rendant à la nature ce qu’elle lui a accordé.",
     "icon": "YYD01",
     "品质": 2,
     "类型": 2,
@@ -2952,6 +3189,7 @@
     "id": 4932,
     "uid": 4932,
     "名称": "Gélidou ardent",
+    "描述": "Ce Géniemon fouisseur se glisse entre les failles du sol. Il se nourrit de décomposition et, ce faisant, enrichit la terre — rendant à la nature ce qu’elle lui a accordé.",
     "icon": "YYD02",
     "品质": 2,
     "类型": 2,
@@ -2963,6 +3201,7 @@
     "id": 4933,
     "uid": 4933,
     "名称": "Gélidou onirique",
+    "描述": "Ce Géniemon fouisseur se glisse entre les failles du sol. Il se nourrit de décomposition et, ce faisant, enrichit la terre — rendant à la nature ce qu’elle lui a accordé.",
     "icon": "YYD03",
     "品质": 2,
     "类型": 2,
@@ -2974,6 +3213,7 @@
     "id": 4934,
     "uid": 4931,
     "名称": "Gélidou mystique",
+    "描述": "Ce Géniemon fouisseur se glisse entre les failles du sol. Il se nourrit de décomposition et, ce faisant, enrichit la terre — rendant à la nature ce qu’elle lui a accordé.",
     "icon": "YYD01",
     "品质": 2,
     "类型": 2,
@@ -2985,6 +3225,7 @@
     "id": 4935,
     "uid": 4931,
     "名称": "Gélidou mystique",
+    "描述": "Ce Géniemon fouisseur se glisse entre les failles du sol. Il se nourrit de décomposition et, ce faisant, enrichit la terre — rendant à la nature ce qu’elle lui a accordé.",
     "icon": "YYD01",
     "品质": 2,
     "类型": 2,
@@ -2996,6 +3237,7 @@
     "id": 4936,
     "uid": 4932,
     "名称": "Gélidou ardent",
+    "描述": "Ce Géniemon fouisseur se glisse entre les failles du sol. Il se nourrit de décomposition et, ce faisant, enrichit la terre — rendant à la nature ce qu’elle lui a accordé.",
     "icon": "YYD02",
     "品质": 2,
     "类型": 2,
@@ -3007,6 +3249,7 @@
     "id": 4941,
     "uid": 4941,
     "名称": "Gélidou éclatant",
+    "描述": "Ce Géniemon fouisseur se glisse entre les failles du sol. Il se nourrit de décomposition et, ce faisant, enrichit la terre — rendant à la nature ce qu’elle lui a accordé.",
     "icon": "YYD04",
     "品质": 2,
     "类型": 2,
@@ -3018,6 +3261,7 @@
     "id": 4942,
     "uid": 4941,
     "名称": "Gélidou éclatant — Sérénité",
+    "描述": "Ce Géniemon fouisseur se glisse entre les failles du sol. Il se nourrit de décomposition et, ce faisant, enrichit la terre — rendant à la nature ce qu’elle lui a accordé.",
     "icon": "YYD04",
     "品质": 2,
     "类型": 2,
@@ -3029,6 +3273,7 @@
     "id": 4943,
     "uid": 4941,
     "名称": "Gélidou éclatant — Habile",
+    "描述": "Ce Géniemon fouisseur se glisse entre les failles du sol. Il se nourrit de décomposition et, ce faisant, enrichit la terre — rendant à la nature ce qu’elle lui a accordé.",
     "icon": "YYD04",
     "品质": 2,
     "类型": 2,

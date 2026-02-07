@@ -1,0 +1,276 @@
+[
+  {
+    "id": 101,
+    "name": "질식 지역",
+    "desc": "자신의 받는 치료가 <Highlight>#1</> 감소한다.",
+    "desc_values": [
+      "$math.ceil(#GlobalPassiveData[30101001].Vars.HealRate*100)$%"
+    ],
+    "global_passive_id": 30101001,
+    "heat_value": 1,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Char_HealDown.T_Rou_Contract_Char_HealDown",
+    "max_level": 5,
+    "room_type": [],
+    "unit_id": [],
+    "unit_num": [],
+    "unit_type": "",
+    "explanation_id": [],
+    "server_build": []
+  },
+  {
+    "id": 102,
+    "name": "곤궁 지역",
+    "desc": "자신의 공격이 <Highlight>#1</> 감소한다.",
+    "desc_values": [
+      "$math.ceil(-#Buff[30101002].AddAttrs[1].Rate*100)$%"
+    ],
+    "global_passive_id": 30101002,
+    "heat_value": 2,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Char_SpDown.T_Rou_Contract_Char_SpDown",
+    "max_level": 5,
+    "room_type": [],
+    "unit_id": [],
+    "unit_num": [],
+    "unit_type": "",
+    "explanation_id": [],
+    "server_build": []
+  },
+  {
+    "id": 103,
+    "name": "성장 지역",
+    "desc": "적의 최대 HP가 <Highlight>#1</> 상승한다",
+    "desc_values": [
+      "$math.ceil(#Buff[30102001].AddAttrs[1].Rate*100)$%"
+    ],
+    "global_passive_id": 30102001,
+    "heat_value": 2,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mon_HpUp.T_Rou_Contract_Mon_HpUp",
+    "max_level": 5,
+    "room_type": [],
+    "unit_id": [],
+    "unit_num": [],
+    "unit_type": "",
+    "explanation_id": [],
+    "server_build": []
+  },
+  {
+    "id": 104,
+    "name": "구박 지역",
+    "desc": "적의 공격이 <Highlight>#1</> 상승한다.",
+    "desc_values": [
+      "$math.ceil(#Buff[30102002].AddAttrs[1].Rate*100)$%"
+    ],
+    "global_passive_id": 30102002,
+    "heat_value": 2,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mon__AtkUp.T_Rou_Contract_Mon__AtkUp",
+    "max_level": 5,
+    "room_type": [],
+    "unit_id": [],
+    "unit_num": [],
+    "unit_type": "",
+    "explanation_id": [],
+    "server_build": []
+  },
+  {
+    "id": 105,
+    "name": "무감각 지역",
+    "desc": "적이 받는 대미지가 <Highlight>#1</> 감소한다.",
+    "desc_values": [
+      "$math.ceil(#GlobalPassiveData[30102003].Vars.DamagedRate*100)$%"
+    ],
+    "global_passive_id": 30102003,
+    "heat_value": 2,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mon_HpUp.T_Rou_Contract_Mon_HpUp",
+    "max_level": 5,
+    "room_type": [],
+    "unit_id": [],
+    "unit_num": [],
+    "unit_type": "",
+    "explanation_id": [],
+    "server_build": []
+  },
+  {
+    "id": 106,
+    "name": "육종 지역",
+    "desc": "일반 적이 처치되면 반경 <Highlight>4</>m의 폭발이 1회 생성되어, 대미지를 입힌다.",
+    "desc_values": [],
+    "global_passive_id": 30102004,
+    "heat_value": 3,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mon_Explode.T_Rou_Contract_Mon_Explode",
+    "max_level": 1,
+    "room_type": [],
+    "unit_id": [],
+    "unit_num": [],
+    "unit_type": "",
+    "explanation_id": [
+      "Term_Rou_Contract_106_Blast"
+    ],
+    "server_build": []
+  },
+  {
+    "id": 107,
+    "name": "소동 지역",
+    "desc": "전투·희미한 그림자와 전투·흩어진 그림자에서 추가로 <Highlight>#1</>명의 지휘자가 나타난다.",
+    "desc_values": [
+      "$#GlobalPassiveData[30103001].Vars.Count$"
+    ],
+    "global_passive_id": 30103001,
+    "heat_value": 5,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Room_ExtraStrong.T_Rou_Contract_Room_ExtraStrong",
+    "max_level": 3,
+    "room_type": [
+      1,
+      6
+    ],
+    "unit_id": [
+      6001011,
+      6001012,
+      6001014,
+      6002015,
+      6001016,
+      6001017,
+      6001018,
+      6001019,
+      6001020,
+      6001021,
+      6002022,
+      6001023,
+      6001024,
+      7001011,
+      7002012,
+      7002014,
+      7001015,
+      7001016,
+      7001017,
+      7001018,
+      7001019,
+      7002020,
+      7001021,
+      7001022,
+      7001023,
+      7001024
+    ],
+    "unit_num": [
+      1,
+      2,
+      3
+    ],
+    "unit_type": "Monster",
+    "explanation_id": [],
+    "server_build": []
+  },
+  {
+    "id": 108,
+    "name": "떠들썩한 지역",
+    "desc": "전투·아득한 그림자에서 추가로 <Highlight>#1</>명의 엘리트 적이 나타난다.",
+    "desc_values": [
+      "$#GlobalPassiveData[30103002].Vars.Count$"
+    ],
+    "global_passive_id": 30103002,
+    "heat_value": 3,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Room_ExtraElite.T_Rou_Contract_Room_ExtraElite",
+    "max_level": 2,
+    "room_type": [
+      2
+    ],
+    "unit_id": [
+      9901051,
+      9901052,
+      9901053
+    ],
+    "unit_num": [
+      1,
+      2
+    ],
+    "unit_type": "Monster",
+    "explanation_id": [],
+    "server_build": []
+  },
+  {
+    "id": 109,
+    "name": "구조 지역",
+    "desc": "전투에서 <Highlight>#1</>개의 적대 장치가 나타난다.",
+    "desc_values": [
+      "$#GlobalPassiveData[30103003].Vars.Count$"
+    ],
+    "global_passive_id": 30103003,
+    "heat_value": 1,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Room_ExtraMech.T_Rou_Contract_Room_ExtraMech",
+    "max_level": 1,
+    "room_type": [
+      1,
+      2,
+      6
+    ],
+    "unit_id": [
+      39002,
+      39004
+    ],
+    "unit_num": [
+      1
+    ],
+    "unit_type": "Mechanism",
+    "explanation_id": [],
+    "server_build": []
+  },
+  {
+    "id": 110,
+    "name": "물이 마른 지역",
+    "desc": "심연 행상인에게 구매 시, 필요한 잿불이 <Highlight>50%</> 상승한다.",
+    "desc_values": [],
+    "global_passive_id": 0,
+    "heat_value": 10,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mechanics_CostUp.T_Rou_Contract_Mechanics_CostUp",
+    "max_level": 1,
+    "room_type": [],
+    "unit_id": [],
+    "unit_num": [],
+    "unit_type": "",
+    "explanation_id": [],
+    "server_build": [
+      [
+        12
+      ]
+    ]
+  },
+  {
+    "id": 111,
+    "name": "맹목 지역",
+    "desc": "선택할 때마다, 선택 가능한 옵션이 1개 <Highlight>감소</>한다.",
+    "desc_values": [],
+    "global_passive_id": 0,
+    "heat_value": 5,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mechanics_LessChoice.T_Rou_Contract_Mechanics_LessChoice",
+    "max_level": 1,
+    "room_type": [],
+    "unit_id": [],
+    "unit_num": [],
+    "unit_type": "",
+    "explanation_id": [],
+    "server_build": [
+      [
+        13
+      ]
+    ]
+  },
+  {
+    "id": 112,
+    "name": "미련한 지역",
+    "desc": "선택할 때마다, 강제로 랜덤 선택을 진행한다.",
+    "desc_values": [],
+    "global_passive_id": 0,
+    "heat_value": 15,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mechanics_RandomChoice.T_Rou_Contract_Mechanics_RandomChoice",
+    "max_level": 1,
+    "room_type": [],
+    "unit_id": [],
+    "unit_num": [],
+    "unit_type": "",
+    "explanation_id": [],
+    "server_build": [
+      [
+        14
+      ]
+    ]
+  }
+]

@@ -1,0 +1,2033 @@
+[
+  {
+    "id": 10111,
+    "name": "Augmentation d’ATQ",
+    "desc": "ATQ +<Highlight>#1</>",
+    "branch": 1,
+    "type": 3,
+    "max_level": 1,
+    "level_up_point": 15,
+    "mod_equip": "Role",
+    "talent_mod": 30101051,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_ATK.T_Rouge_Talent_ATK'",
+    "icon_loc": [
+      0,
+      0
+    ],
+    "unlock": [
+      10221,
+      10322
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 10221,
+    "name": "Augmentation de la Durée de compétence",
+    "desc": "Durée de compétence +<Highlight>#1</>",
+    "branch": 1,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 20,
+    "mod_equip": "Role",
+    "talent_mod": 30101041,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillSustainUP.T_Rouge_Talent_SkillSustainUP'",
+    "icon_loc": [
+      200,
+      130
+    ],
+    "unlock": [
+      10431
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 10322,
+    "name": "Augmentation de la Puissance de compétence",
+    "desc": "Puissance de compétence +<Highlight>#1</>",
+    "branch": 1,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 20,
+    "mod_equip": "Role",
+    "talent_mod": 30101011,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillIntensityUP.T_Rouge_Talent_SkillIntensityUP'",
+    "icon_loc": [
+      200,
+      -130
+    ],
+    "unlock": [
+      10532,
+      10633
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 10431,
+    "name": "Augmentation de Ténacité",
+    "desc": "Ténacité +<Highlight>#1</>",
+    "branch": 1,
+    "type": 2,
+    "max_level": 1,
+    "level_up_point": 100,
+    "mod_equip": "Role",
+    "talent_mod": 30101062,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Berserker.T_Rouge_Talent_Berserker'",
+    "icon_loc": [
+      400,
+      130
+    ],
+    "unlock": [
+      10741,
+      10842
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 10532,
+    "name": "Augmentation de l’Efficacité de compétence",
+    "desc": "Efficacité de compétence +<Highlight>#1</>",
+    "branch": 1,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 25,
+    "mod_equip": "Role",
+    "talent_mod": 30101021,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillEfficiencyUP.T_Rouge_Talent_SkillEfficiencyUP'",
+    "icon_loc": [
+      400,
+      -65
+    ],
+    "unlock": [
+      10943
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 10633,
+    "name": "Augmentation de la Portée de compétence",
+    "desc": "Portée de compétence +<Highlight>#1</>",
+    "branch": 1,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 25,
+    "mod_equip": "Role",
+    "talent_mod": 30101031,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillRangeUP.T_Rouge_Talent_SkillRangeUP'",
+    "icon_loc": [
+      400,
+      -195
+    ],
+    "unlock": [
+      11044
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 10741,
+    "name": "Augmentation de la Puissance de compétence",
+    "desc": "Puissance de compétence +<Highlight>#1</>",
+    "branch": 1,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 30,
+    "mod_equip": "Role",
+    "talent_mod": 30101011,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillIntensityUP.T_Rouge_Talent_SkillIntensityUP'",
+    "icon_loc": [
+      600,
+      195
+    ],
+    "unlock": [
+      11151
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 10842,
+    "name": "Augmentation d’ATQ",
+    "desc": "ATQ +<Highlight>#1</>",
+    "branch": 1,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 30,
+    "mod_equip": "Role",
+    "talent_mod": 30101051,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_ATK.T_Rouge_Talent_ATK'",
+    "icon_loc": [
+      600,
+      65
+    ],
+    "unlock": [
+      11252
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 10943,
+    "name": "Augmentation de l’Efficacité de compétence",
+    "desc": "Efficacité de compétence +<Highlight>#1</>",
+    "branch": 1,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 30,
+    "mod_equip": "Role",
+    "talent_mod": 30101021,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillEfficiencyUP.T_Rouge_Talent_SkillEfficiencyUP'",
+    "icon_loc": [
+      600,
+      -65
+    ],
+    "unlock": [
+      11353
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 11044,
+    "name": "Augmentation de la Durée de compétence",
+    "desc": "Durée de compétence +<Highlight>#1</>",
+    "branch": 1,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 30,
+    "mod_equip": "Role",
+    "talent_mod": 30101041,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillSustainUP.T_Rouge_Talent_SkillSustainUP'",
+    "icon_loc": [
+      600,
+      -195
+    ],
+    "unlock": [
+      11454
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 11151,
+    "name": "Augmentation de la Portée de compétence",
+    "desc": "Portée de compétence +<Highlight>#1</>",
+    "branch": 1,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 35,
+    "mod_equip": "Role",
+    "talent_mod": 30101031,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillRangeUP.T_Rouge_Talent_SkillRangeUP'",
+    "icon_loc": [
+      800,
+      195
+    ],
+    "unlock": [
+      11561
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 11252,
+    "name": "Augmentation de la Puissance de compétence (II)",
+    "desc": "Puissance de compétence +<Highlight>#1</>",
+    "branch": 1,
+    "type": 2,
+    "max_level": 1,
+    "level_up_point": 100,
+    "mod_equip": "Role",
+    "talent_mod": 30101072,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillIntensityUP.T_Rouge_Talent_SkillIntensityUP'",
+    "icon_loc": [
+      800,
+      65
+    ],
+    "unlock": [
+      11662
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 11353,
+    "name": "Augmentation de la Durée de compétence",
+    "desc": "Durée de compétence +<Highlight>#1</>",
+    "branch": 1,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 35,
+    "mod_equip": "Role",
+    "talent_mod": 30101041,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillSustainUP.T_Rouge_Talent_SkillSustainUP'",
+    "icon_loc": [
+      800,
+      -65
+    ],
+    "unlock": [
+      11763
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 11454,
+    "name": "Augmentation de la Puissance de compétence",
+    "desc": "Puissance de compétence +<Highlight>#1</>",
+    "branch": 1,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 35,
+    "mod_equip": "Role",
+    "talent_mod": 30101011,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillIntensityUP.T_Rouge_Talent_SkillIntensityUP'",
+    "icon_loc": [
+      800,
+      -195
+    ],
+    "unlock": [
+      11864
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 11561,
+    "name": "Augmentation de la Durée de compétence",
+    "desc": "Durée de compétence +<Highlight>#1</>",
+    "branch": 1,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 40,
+    "mod_equip": "Role",
+    "talent_mod": 30101041,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillSustainUP.T_Rouge_Talent_SkillSustainUP'",
+    "icon_loc": [
+      1000,
+      195
+    ],
+    "unlock": [
+      11971
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 11662,
+    "name": "Augmentation d’ATQ",
+    "desc": "ATQ +<Highlight>#1</>",
+    "branch": 1,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 40,
+    "mod_equip": "Role",
+    "talent_mod": 30101051,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_ATK.T_Rouge_Talent_ATK'",
+    "icon_loc": [
+      1000,
+      65
+    ],
+    "unlock": [
+      12072
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 11763,
+    "name": "Augmentation de la Puissance de compétence",
+    "desc": "Puissance de compétence +<Highlight>#1</>",
+    "branch": 1,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 40,
+    "mod_equip": "Role",
+    "talent_mod": 30101011,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillIntensityUP.T_Rouge_Talent_SkillIntensityUP'",
+    "icon_loc": [
+      1000,
+      -65
+    ],
+    "unlock": [
+      12173
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 11864,
+    "name": "Augmentation de la Portée de compétence",
+    "desc": "Portée de compétence +<Highlight>#1</>",
+    "branch": 1,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 40,
+    "mod_equip": "Role",
+    "talent_mod": 30101031,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillRangeUP.T_Rouge_Talent_SkillRangeUP'",
+    "icon_loc": [
+      1000,
+      -195
+    ],
+    "unlock": [
+      12173
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 11971,
+    "name": "Augmentation de l’Efficacité de compétence",
+    "desc": "Efficacité de compétence +<Highlight>#1</>",
+    "branch": 1,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 45,
+    "mod_equip": "Role",
+    "talent_mod": 30101021,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillEfficiencyUP.T_Rouge_Talent_SkillEfficiencyUP'",
+    "icon_loc": [
+      1200,
+      195
+    ],
+    "unlock": [
+      12281
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 12072,
+    "name": "Augmentation de la Portée de compétence",
+    "desc": "Portée de compétence +<Highlight>#1</>",
+    "branch": 1,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 45,
+    "mod_equip": "Role",
+    "talent_mod": 30101031,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillRangeUP.T_Rouge_Talent_SkillRangeUP'",
+    "icon_loc": [
+      1200,
+      65
+    ],
+    "unlock": [
+      12382
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 12173,
+    "name": "Augmentation de Vigueur",
+    "desc": "Vigueur +<Highlight>#1</>",
+    "branch": 1,
+    "type": 2,
+    "max_level": 1,
+    "level_up_point": 100,
+    "mod_equip": "Role",
+    "talent_mod": 30101082,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Morale.T_Rouge_Talent_Morale'",
+    "icon_loc": [
+      1200,
+      -130
+    ],
+    "unlock": [],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 12281,
+    "name": "Augmentation d’ATQ",
+    "desc": "ATQ +<Highlight>#1</>",
+    "branch": 1,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 50,
+    "mod_equip": "Role",
+    "talent_mod": 30101051,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_ATK.T_Rouge_Talent_ATK'",
+    "icon_loc": [
+      1400,
+      195
+    ],
+    "unlock": [
+      12491
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 12382,
+    "name": "Augmentation de la Puissance de compétence",
+    "desc": "Puissance de compétence +<Highlight>#1</>",
+    "branch": 1,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 50,
+    "mod_equip": "Role",
+    "talent_mod": 30101011,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillIntensityUP.T_Rouge_Talent_SkillIntensityUP'",
+    "icon_loc": [
+      1400,
+      65
+    ],
+    "unlock": [
+      12491
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 12491,
+    "name": "Augmentation des dégâts infligés",
+    "desc": "Dégâts infligés +<Highlight>#1</>",
+    "branch": 1,
+    "type": 2,
+    "max_level": 1,
+    "level_up_point": 100,
+    "mod_equip": "Role",
+    "talent_mod": 30101092,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_DamageUp.T_Rouge_Talent_DamageUp'",
+    "icon_loc": [
+      1600,
+      130
+    ],
+    "unlock": [],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 20111,
+    "name": "Augmentation des PV max",
+    "desc": "PV max +<Highlight>#1</>",
+    "branch": 2,
+    "type": 3,
+    "max_level": 1,
+    "level_up_point": 15,
+    "mod_equip": "Role",
+    "talent_mod": 30102011,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_HPUP.T_Rouge_Talent_HPUP'",
+    "icon_loc": [
+      0,
+      0
+    ],
+    "unlock": [
+      20221,
+      20322
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 20221,
+    "name": "Augmentation de DÉF",
+    "desc": "DÉF +<Highlight>#1</>",
+    "branch": 2,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 20,
+    "mod_equip": "Role",
+    "talent_mod": 30102021,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_DEF.T_Rouge_Talent_DEF'",
+    "icon_loc": [
+      200,
+      65
+    ],
+    "unlock": [
+      20431,
+      20532
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 20322,
+    "name": "Augmentation du Bouclier",
+    "desc": "Bouclier +<Highlight>#1</>",
+    "branch": 2,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 20,
+    "mod_equip": "Role",
+    "talent_mod": 30102031,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_ESUP.T_Rouge_Talent_ESUP'",
+    "icon_loc": [
+      200,
+      -65
+    ],
+    "unlock": [
+      20532,
+      20633
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 20431,
+    "name": "Augmentation de la Lucidité maximale",
+    "desc": "Lucidité max +<Highlight>#1</>",
+    "branch": 2,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 25,
+    "mod_equip": "Role",
+    "talent_mod": 30102041,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SP.T_Rouge_Talent_SP'",
+    "icon_loc": [
+      400,
+      130
+    ],
+    "unlock": [
+      20741
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 20532,
+    "name": "Point d’empreinte",
+    "desc": "Gain de Points d’empreinte +<Highlight>@1</>",
+    "branch": 2,
+    "type": 2,
+    "max_level": 1,
+    "level_up_point": 100,
+    "mod_equip": "",
+    "talent_mod": 0,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_knapsack.T_Rouge_Talent_knapsack'",
+    "icon_loc": [
+      400,
+      0
+    ],
+    "unlock": [
+      20842,
+      20943
+    ],
+    "server_build": [
+      [
+        9
+      ]
+    ],
+    "server_build_value": [
+      "$#RougelikeServerBuild[9].Param[1]*100$%"
+    ]
+  },
+  {
+    "id": 20633,
+    "name": "Augmentation du Bouclier",
+    "desc": "Bouclier +<Highlight>#1</>",
+    "branch": 2,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 25,
+    "mod_equip": "Role",
+    "talent_mod": 30102031,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_ESUP.T_Rouge_Talent_ESUP'",
+    "icon_loc": [
+      400,
+      -130
+    ],
+    "unlock": [
+      21044
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 20741,
+    "name": "Augmentation du Bouclier",
+    "desc": "Bouclier +<Highlight>#1</>",
+    "branch": 2,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 30,
+    "mod_equip": "Role",
+    "talent_mod": 30102031,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_ESUP.T_Rouge_Talent_ESUP'",
+    "icon_loc": [
+      600,
+      195
+    ],
+    "unlock": [
+      21151
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 20842,
+    "name": "Augmentation des PV max",
+    "desc": "PV max +<Highlight>#1</>",
+    "branch": 2,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 30,
+    "mod_equip": "Role",
+    "talent_mod": 30102011,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_HPUP.T_Rouge_Talent_HPUP'",
+    "icon_loc": [
+      600,
+      65
+    ],
+    "unlock": [
+      21252
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 20943,
+    "name": "Augmentation de la Lucidité maximale",
+    "desc": "Lucidité max +<Highlight>#1</>",
+    "branch": 2,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 30,
+    "mod_equip": "Role",
+    "talent_mod": 30102041,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SP.T_Rouge_Talent_SP'",
+    "icon_loc": [
+      600,
+      -65
+    ],
+    "unlock": [
+      21353
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 21044,
+    "name": "Augmentation de DÉF",
+    "desc": "DÉF +<Highlight>#1</>",
+    "branch": 2,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 30,
+    "mod_equip": "Role",
+    "talent_mod": 30102021,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_DEF.T_Rouge_Talent_DEF'",
+    "icon_loc": [
+      600,
+      -195
+    ],
+    "unlock": [
+      21454
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 21151,
+    "name": "Augmentation de la Lucidité maximale",
+    "desc": "Lucidité max +<Highlight>#1</>",
+    "branch": 2,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 35,
+    "mod_equip": "Role",
+    "talent_mod": 30102041,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SP.T_Rouge_Talent_SP'",
+    "icon_loc": [
+      800,
+      195
+    ],
+    "unlock": [
+      21561
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 21252,
+    "name": "Augmentation de DÉF",
+    "desc": "DÉF +<Highlight>#1</>",
+    "branch": 2,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 35,
+    "mod_equip": "Role",
+    "talent_mod": 30102021,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_DEF.T_Rouge_Talent_DEF'",
+    "icon_loc": [
+      800,
+      65
+    ],
+    "unlock": [
+      21662
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 21353,
+    "name": "Honneur du brave",
+    "desc": "Gain de Braise +<Highlight>@1</>",
+    "branch": 2,
+    "type": 2,
+    "max_level": 1,
+    "level_up_point": 100,
+    "mod_equip": "",
+    "talent_mod": 0,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_EndPointsUP.T_Rouge_Talent_EndPointsUP'",
+    "icon_loc": [
+      800,
+      -65
+    ],
+    "unlock": [
+      21763
+    ],
+    "server_build": [
+      [
+        10
+      ]
+    ],
+    "server_build_value": [
+      "$#RougelikeServerBuild[10].Param[1]*100$%"
+    ]
+  },
+  {
+    "id": 21454,
+    "name": "Augmentation des PV max",
+    "desc": "PV max +<Highlight>#1</>",
+    "branch": 2,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 35,
+    "mod_equip": "Role",
+    "talent_mod": 30102011,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_HPUP.T_Rouge_Talent_HPUP'",
+    "icon_loc": [
+      800,
+      -195
+    ],
+    "unlock": [
+      21864
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 21561,
+    "name": "Augmentation des PV max",
+    "desc": "PV max +<Highlight>#1</>",
+    "branch": 2,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 40,
+    "mod_equip": "Role",
+    "talent_mod": 30102011,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_HPUP.T_Rouge_Talent_HPUP'",
+    "icon_loc": [
+      1000,
+      195
+    ],
+    "unlock": [
+      21971
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 21662,
+    "name": "Augmentation de la Lucidité maximale",
+    "desc": "Lucidité max +<Highlight>#1</>",
+    "branch": 2,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 40,
+    "mod_equip": "Role",
+    "talent_mod": 30102041,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SP.T_Rouge_Talent_SP'",
+    "icon_loc": [
+      1000,
+      65
+    ],
+    "unlock": [
+      21971
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 21763,
+    "name": "Augmentation du Bouclier",
+    "desc": "Bouclier +<Highlight>#1</>",
+    "branch": 2,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 40,
+    "mod_equip": "Role",
+    "talent_mod": 30102031,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_ESUP.T_Rouge_Talent_ESUP'",
+    "icon_loc": [
+      1000,
+      -65
+    ],
+    "unlock": [
+      22072
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 21864,
+    "name": "Augmentation de DÉF",
+    "desc": "DÉF +<Highlight>#1</>",
+    "branch": 2,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 40,
+    "mod_equip": "Role",
+    "talent_mod": 30102021,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_DEF.T_Rouge_Talent_DEF'",
+    "icon_loc": [
+      1000,
+      -195
+    ],
+    "unlock": [
+      22173
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 21971,
+    "name": "Ressources initiales",
+    "desc": "Commence une nouvelle exploration avec <Highlight>@1</> Braises",
+    "branch": 2,
+    "type": 2,
+    "max_level": 1,
+    "level_up_point": 100,
+    "mod_equip": "",
+    "talent_mod": 0,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_EndPointsUP.T_Rouge_Talent_EndPointsUP'",
+    "icon_loc": [
+      1200,
+      130
+    ],
+    "unlock": [],
+    "server_build": [
+      [
+        2
+      ]
+    ],
+    "server_build_value": [
+      "$#RougelikeServerBuild[2].Param[1]$"
+    ]
+  },
+  {
+    "id": 22072,
+    "name": "Augmentation de DÉF",
+    "desc": "DÉF +<Highlight>#1</>",
+    "branch": 2,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 45,
+    "mod_equip": "Role",
+    "talent_mod": 30102021,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_DEF.T_Rouge_Talent_DEF'",
+    "icon_loc": [
+      1200,
+      -65
+    ],
+    "unlock": [
+      22281
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 22173,
+    "name": "Augmentation de la Lucidité maximale",
+    "desc": "Lucidité max +<Highlight>#1</>",
+    "branch": 2,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 45,
+    "mod_equip": "Role",
+    "talent_mod": 30102041,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SP.T_Rouge_Talent_SP'",
+    "icon_loc": [
+      1200,
+      -195
+    ],
+    "unlock": [
+      22382
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 22281,
+    "name": "Augmentation des PV max",
+    "desc": "PV max +<Highlight>#1</>",
+    "branch": 2,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 50,
+    "mod_equip": "Role",
+    "talent_mod": 30102011,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_HPUP.T_Rouge_Talent_HPUP'",
+    "icon_loc": [
+      1400,
+      -65
+    ],
+    "unlock": [
+      22491
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 22382,
+    "name": "Augmentation du Bouclier",
+    "desc": "Bouclier +<Highlight>#1</>",
+    "branch": 2,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 50,
+    "mod_equip": "Role",
+    "talent_mod": 30102031,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_ESUP.T_Rouge_Talent_ESUP'",
+    "icon_loc": [
+      1400,
+      -195
+    ],
+    "unlock": [
+      22491
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 22491,
+    "name": "Rites mystiques",
+    "desc": "Régénération auto de Lucidité +<Highlight>#1</>",
+    "branch": 2,
+    "type": 2,
+    "max_level": 1,
+    "level_up_point": 100,
+    "mod_equip": "Role",
+    "talent_mod": 30102052,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_MaxSpUP.T_Rouge_Talent_MaxSpUP'",
+    "icon_loc": [
+      1600,
+      -130
+    ],
+    "unlock": [],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 30111,
+    "name": "Augmentation d’ATQ",
+    "desc": "ATQ +<Highlight>#1</>",
+    "branch": 3,
+    "type": 3,
+    "max_level": 1,
+    "level_up_point": 15,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103011,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Melee_AttackUP.T_Rouge_Talent_Melee_AttackUP'",
+    "icon_loc": [
+      0,
+      0
+    ],
+    "unlock": [
+      30221,
+      30322
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 30221,
+    "name": "Augmentation de la Chance de déclenchement",
+    "desc": "Chance de déclenchement +<Highlight>#1</>",
+    "branch": 3,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 20,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103041,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Qiege.T_Rouge_Talent_Qiege'",
+    "icon_loc": [
+      200,
+      130
+    ],
+    "unlock": [
+      30431,
+      30532
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 30322,
+    "name": "Augmentation d’ATQ tranchante/perforante/contondante",
+    "desc": "ATQ tranchante, ATQ perforante et ATQ contondante +<Highlight>#1</>",
+    "branch": 3,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 20,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103051,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
+    "icon_loc": [
+      200,
+      -130
+    ],
+    "unlock": [
+      30633
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 30431,
+    "name": "Augmentation du Taux CRIT",
+    "desc": "Taux CRIT +<Highlight>#1</>",
+    "branch": 3,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 25,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103021,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CriUP.T_Rouge_Talent_CriUP'",
+    "icon_loc": [
+      400,
+      195
+    ],
+    "unlock": [
+      30741
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 30532,
+    "name": "Augmentation des DGT CRIT",
+    "desc": "DGT CRIT +<Highlight>#1</>",
+    "branch": 3,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 25,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103031,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CRDUP.T_Rouge_Talent_CRDUP'",
+    "icon_loc": [
+      400,
+      65
+    ],
+    "unlock": [
+      30842
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 30633,
+    "name": "Augmentation de la Portée d’attaque",
+    "desc": "Portée d’attaque +<Highlight>#1</>",
+    "branch": 3,
+    "type": 2,
+    "max_level": 1,
+    "level_up_point": 100,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103062,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillRangeUP.T_Rouge_Talent_SkillRangeUP'",
+    "icon_loc": [
+      400,
+      -130
+    ],
+    "unlock": [
+      30943,
+      31044
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 30741,
+    "name": "Augmentation d’ATQ",
+    "desc": "ATQ +<Highlight>#1</>",
+    "branch": 3,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 30,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103011,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Melee_AttackUP.T_Rouge_Talent_Melee_AttackUP'",
+    "icon_loc": [
+      600,
+      195
+    ],
+    "unlock": [
+      31151
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 30842,
+    "name": "Augmentation d’ATQ tranchante/perforante/contondante",
+    "desc": "ATQ tranchante, ATQ perforante et ATQ contondante +<Highlight>#1</>",
+    "branch": 3,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 30,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103051,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
+    "icon_loc": [
+      600,
+      65
+    ],
+    "unlock": [
+      31252
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 30943,
+    "name": "Augmentation des DGT CRIT",
+    "desc": "DGT CRIT +<Highlight>#1</>",
+    "branch": 3,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 30,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103031,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CRDUP.T_Rouge_Talent_CRDUP'",
+    "icon_loc": [
+      600,
+      -65
+    ],
+    "unlock": [
+      31353
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 31044,
+    "name": "Augmentation de la Chance de déclenchement",
+    "desc": "Chance de déclenchement +<Highlight>#1</>",
+    "branch": 3,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 30,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103041,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Qiege.T_Rouge_Talent_Qiege'",
+    "icon_loc": [
+      600,
+      -195
+    ],
+    "unlock": [
+      31454
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 31151,
+    "name": "Augmentation de la Chance de déclenchement",
+    "desc": "Chance de déclenchement +<Highlight>#1</>",
+    "branch": 3,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 35,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103041,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Qiege.T_Rouge_Talent_Qiege'",
+    "icon_loc": [
+      800,
+      195
+    ],
+    "unlock": [
+      31561
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 31252,
+    "name": "Augmentation du Taux CRIT",
+    "desc": "Taux CRIT +<Highlight>#1</>",
+    "branch": 3,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 35,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103021,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CriUP.T_Rouge_Talent_CriUP'",
+    "icon_loc": [
+      800,
+      65
+    ],
+    "unlock": [
+      31662
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 31353,
+    "name": "Augmentation d’ATQ tranchante/perforante/contondante",
+    "desc": "ATQ tranchante, ATQ perforante et ATQ contondante +<Highlight>#1</>",
+    "branch": 3,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 35,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103051,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
+    "icon_loc": [
+      800,
+      -65
+    ],
+    "unlock": [
+      31763
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 31454,
+    "name": "Augmentation du Taux CRIT (II)",
+    "desc": "Taux CRIT +<Highlight>#1</>",
+    "branch": 3,
+    "type": 2,
+    "max_level": 1,
+    "level_up_point": 100,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103082,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CriUP.T_Rouge_Talent_CriUP'",
+    "icon_loc": [
+      800,
+      -195
+    ],
+    "unlock": [
+      31864
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 31561,
+    "name": "Augmentation d’ATQ tranchante/perforante/contondante",
+    "desc": "ATQ tranchante, ATQ perforante et ATQ contondante +<Highlight>#1</>",
+    "branch": 3,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 40,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103051,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
+    "icon_loc": [
+      1000,
+      195
+    ],
+    "unlock": [
+      31971
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 31662,
+    "name": "Augmentation d’ATQ",
+    "desc": "ATQ +<Highlight>#1</>",
+    "branch": 3,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 40,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103011,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Melee_AttackUP.T_Rouge_Talent_Melee_AttackUP'",
+    "icon_loc": [
+      1000,
+      65
+    ],
+    "unlock": [
+      31971
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 31763,
+    "name": "Augmentation des DGT CRIT",
+    "desc": "DGT CRIT +<Highlight>#1</>",
+    "branch": 3,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 40,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103031,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CRDUP.T_Rouge_Talent_CRDUP'",
+    "icon_loc": [
+      1000,
+      -65
+    ],
+    "unlock": [
+      32072
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 31864,
+    "name": "Augmentation du Taux CRIT",
+    "desc": "Taux CRIT +<Highlight>#1</>",
+    "branch": 3,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 40,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103021,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CriUP.T_Rouge_Talent_CriUP'",
+    "icon_loc": [
+      1000,
+      -195
+    ],
+    "unlock": [
+      32173
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 31971,
+    "name": "Augmentation des DGT CRIT (II)",
+    "desc": "DGT CRIT +<Highlight>#1</>",
+    "branch": 3,
+    "type": 2,
+    "max_level": 1,
+    "level_up_point": 100,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103092,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CRDUP.T_Rouge_Talent_CRDUP'",
+    "icon_loc": [
+      1200,
+      130
+    ],
+    "unlock": [],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 32072,
+    "name": "Augmentation d’ATQ tranchante/perforante/contondante",
+    "desc": "ATQ tranchante, ATQ perforante et ATQ contondante +<Highlight>#1</>",
+    "branch": 3,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 45,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103051,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
+    "icon_loc": [
+      1200,
+      -65
+    ],
+    "unlock": [
+      32281
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 32173,
+    "name": "Augmentation d’ATQ",
+    "desc": "ATQ +<Highlight>#1</>",
+    "branch": 3,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 45,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103011,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Melee_AttackUP.T_Rouge_Talent_Melee_AttackUP'",
+    "icon_loc": [
+      1200,
+      -195
+    ],
+    "unlock": [
+      32382
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 32281,
+    "name": "Augmentation d’ATQ",
+    "desc": "ATQ +<Highlight>#1</>",
+    "branch": 3,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 50,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103011,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Melee_AttackUP.T_Rouge_Talent_Melee_AttackUP'",
+    "icon_loc": [
+      1400,
+      -65
+    ],
+    "unlock": [
+      32491
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 32382,
+    "name": "Augmentation d’ATQ tranchante/perforante/contondante",
+    "desc": "ATQ tranchante, ATQ perforante et ATQ contondante +<Highlight>#1</>",
+    "branch": 3,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 50,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103051,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
+    "icon_loc": [
+      1400,
+      -195
+    ],
+    "unlock": [
+      32491
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 32491,
+    "name": "Augmentation de la Vitesse d’attaque",
+    "desc": "Vitesse d’attaque +<Highlight>#1</>",
+    "branch": 3,
+    "type": 2,
+    "max_level": 1,
+    "level_up_point": 100,
+    "mod_equip": "MeleeWeapon",
+    "talent_mod": 30103072,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Guanchuan.T_Rouge_Talent_Guanchuan'",
+    "icon_loc": [
+      1600,
+      -130
+    ],
+    "unlock": [],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 40111,
+    "name": "Augmentation d’ATQ",
+    "desc": "ATQ +<Highlight>#1</>",
+    "branch": 4,
+    "type": 3,
+    "max_level": 1,
+    "level_up_point": 15,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104011,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Range_AttackUP.T_Rouge_Talent_Range_AttackUP'",
+    "icon_loc": [
+      0,
+      0
+    ],
+    "unlock": [
+      40221,
+      40322
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 40221,
+    "name": "Augmentation de la Chance de déclenchement",
+    "desc": "Chance de déclenchement +<Highlight>#1</>",
+    "branch": 4,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 20,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104041,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Qiege.T_Rouge_Talent_Qiege'",
+    "icon_loc": [
+      200,
+      130
+    ],
+    "unlock": [
+      40431
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 40322,
+    "name": "Augmentation d’ATQ tranchante/perforante/contondante",
+    "desc": "ATQ tranchante, ATQ perforante et ATQ contondante +<Highlight>#1</>",
+    "branch": 4,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 20,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104051,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
+    "icon_loc": [
+      200,
+      -130
+    ],
+    "unlock": [
+      40532,
+      40633
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 40431,
+    "name": "Augmentation du Taux CRIT (II)",
+    "desc": "Taux CRIT +<Highlight>#1</>",
+    "branch": 4,
+    "type": 2,
+    "max_level": 1,
+    "level_up_point": 100,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104082,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CriUP.T_Rouge_Talent_CriUP'",
+    "icon_loc": [
+      400,
+      130
+    ],
+    "unlock": [
+      40741,
+      40842
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 40532,
+    "name": "Augmentation du Taux CRIT",
+    "desc": "Taux CRIT +<Highlight>#1</>",
+    "branch": 4,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 25,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104021,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CriUP.T_Rouge_Talent_CriUP'",
+    "icon_loc": [
+      400,
+      -65
+    ],
+    "unlock": [
+      40943
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 40633,
+    "name": "Augmentation des DGT CRIT",
+    "desc": "DGT CRIT +<Highlight>#1</>",
+    "branch": 4,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 25,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104031,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CRDUP.T_Rouge_Talent_CRDUP'",
+    "icon_loc": [
+      400,
+      -195
+    ],
+    "unlock": [
+      41044
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 40741,
+    "name": "Augmentation des DGT CRIT",
+    "desc": "DGT CRIT +<Highlight>#1</>",
+    "branch": 4,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 30,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104031,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CRDUP.T_Rouge_Talent_CRDUP'",
+    "icon_loc": [
+      600,
+      195
+    ],
+    "unlock": [
+      41151
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 40842,
+    "name": "Augmentation de la Chance de déclenchement",
+    "desc": "Chance de déclenchement +<Highlight>#1</>",
+    "branch": 4,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 30,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104041,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Qiege.T_Rouge_Talent_Qiege'",
+    "icon_loc": [
+      600,
+      65
+    ],
+    "unlock": [
+      41252
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 40943,
+    "name": "Augmentation d’ATQ",
+    "desc": "ATQ +<Highlight>#1</>",
+    "branch": 4,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 30,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104011,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Range_AttackUP.T_Rouge_Talent_Range_AttackUP'",
+    "icon_loc": [
+      600,
+      -65
+    ],
+    "unlock": [
+      41353
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 41044,
+    "name": "Augmentation d’ATQ tranchante/perforante/contondante",
+    "desc": "ATQ tranchante, ATQ perforante et ATQ contondante +<Highlight>#1</>",
+    "branch": 4,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 30,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104051,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
+    "icon_loc": [
+      600,
+      -195
+    ],
+    "unlock": [
+      41454
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 41151,
+    "name": "Augmentation de Tir multiple",
+    "desc": "Tir multiple +<Highlight>#1</>",
+    "branch": 4,
+    "type": 2,
+    "max_level": 1,
+    "level_up_point": 100,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104072,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_MultiShot.T_Rouge_Talent_MultiShot'",
+    "icon_loc": [
+      800,
+      195
+    ],
+    "unlock": [
+      41561
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 41252,
+    "name": "Augmentation d’ATQ tranchante/perforante/contondante",
+    "desc": "ATQ tranchante, ATQ perforante et ATQ contondante +<Highlight>#1</>",
+    "branch": 4,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 35,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104051,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
+    "icon_loc": [
+      800,
+      65
+    ],
+    "unlock": [
+      41662
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 41353,
+    "name": "Augmentation du Taux CRIT",
+    "desc": "Taux CRIT +<Highlight>#1</>",
+    "branch": 4,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 35,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104021,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CriUP.T_Rouge_Talent_CriUP'",
+    "icon_loc": [
+      800,
+      -65
+    ],
+    "unlock": [
+      41763
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 41454,
+    "name": "Augmentation de la Chance de déclenchement",
+    "desc": "Chance de déclenchement +<Highlight>#1</>",
+    "branch": 4,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 35,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104041,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Qiege.T_Rouge_Talent_Qiege'",
+    "icon_loc": [
+      800,
+      -195
+    ],
+    "unlock": [
+      41864
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 41561,
+    "name": "Augmentation des DGT CRIT",
+    "desc": "DGT CRIT +<Highlight>#1</>",
+    "branch": 4,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 40,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104031,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CRDUP.T_Rouge_Talent_CRDUP'",
+    "icon_loc": [
+      1000,
+      195
+    ],
+    "unlock": [
+      41971
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 41662,
+    "name": "Augmentation du Taux CRIT",
+    "desc": "Taux CRIT +<Highlight>#1</>",
+    "branch": 4,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 40,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104021,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CriUP.T_Rouge_Talent_CriUP'",
+    "icon_loc": [
+      1000,
+      65
+    ],
+    "unlock": [
+      42072
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 41763,
+    "name": "Augmentation d’ATQ tranchante/perforante/contondante",
+    "desc": "ATQ tranchante, ATQ perforante et ATQ contondante +<Highlight>#1</>",
+    "branch": 4,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 40,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104051,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
+    "icon_loc": [
+      1000,
+      -65
+    ],
+    "unlock": [
+      42173
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 41864,
+    "name": "Augmentation d’ATQ",
+    "desc": "ATQ +<Highlight>#1</>",
+    "branch": 4,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 40,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104011,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Range_AttackUP.T_Rouge_Talent_Range_AttackUP'",
+    "icon_loc": [
+      1000,
+      -195
+    ],
+    "unlock": [
+      42173
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 41971,
+    "name": "Augmentation d’ATQ tranchante/perforante/contondante",
+    "desc": "ATQ tranchante, ATQ perforante et ATQ contondante +<Highlight>#1</>",
+    "branch": 4,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 45,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104051,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
+    "icon_loc": [
+      1200,
+      195
+    ],
+    "unlock": [
+      42281
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 42072,
+    "name": "Augmentation d’ATQ",
+    "desc": "ATQ +<Highlight>#1</>",
+    "branch": 4,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 45,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104011,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Range_AttackUP.T_Rouge_Talent_Range_AttackUP'",
+    "icon_loc": [
+      1200,
+      65
+    ],
+    "unlock": [
+      42382
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 42173,
+    "name": "Augmentation des DGT CRIT (II)",
+    "desc": "DGT CRIT +<Highlight>#1</>",
+    "branch": 4,
+    "type": 2,
+    "max_level": 1,
+    "level_up_point": 100,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104092,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CRDUP.T_Rouge_Talent_CRDUP'",
+    "icon_loc": [
+      1200,
+      -130
+    ],
+    "unlock": [],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 42281,
+    "name": "Augmentation d’ATQ",
+    "desc": "ATQ +<Highlight>#1</>",
+    "branch": 4,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 50,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104011,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Range_AttackUP.T_Rouge_Talent_Range_AttackUP'",
+    "icon_loc": [
+      1400,
+      195
+    ],
+    "unlock": [
+      42491
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 42382,
+    "name": "Augmentation d’ATQ tranchante/perforante/contondante",
+    "desc": "ATQ tranchante, ATQ perforante et ATQ contondante +<Highlight>#1</>",
+    "branch": 4,
+    "type": 1,
+    "max_level": 1,
+    "level_up_point": 50,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104051,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
+    "icon_loc": [
+      1400,
+      65
+    ],
+    "unlock": [
+      42491
+    ],
+    "server_build": [],
+    "server_build_value": []
+  },
+  {
+    "id": 42491,
+    "name": "Augmentation de la Vitesse d’attaque",
+    "desc": "Vitesse d’attaque +<Highlight>#1</>",
+    "branch": 4,
+    "type": 2,
+    "max_level": 1,
+    "level_up_point": 100,
+    "mod_equip": "RangedWeapon",
+    "talent_mod": 30104062,
+    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Guanchuan.T_Rouge_Talent_Guanchuan'",
+    "icon_loc": [
+      1600,
+      130
+    ],
+    "unlock": [],
+    "server_build": [],
+    "server_build_value": []
+  }
+]

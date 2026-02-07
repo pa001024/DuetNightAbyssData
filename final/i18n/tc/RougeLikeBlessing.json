@@ -1,0 +1,3363 @@
+[
+  {
+    "id": 101,
+    "name": "淬火之刃",
+    "desc": "近戰武器攻擊提高<Highlight>#1</>。",
+    "simple_desc": "近戰武器攻擊提高。",
+    "blessing_group": 1,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "MeleeWeapon",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 1,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 102,
+    "name": "連環之刃",
+    "desc": "近戰武器觸發概率提高<Highlight>#1</>。",
+    "simple_desc": "近戰武器<Highlight>觸發概率</>提高。",
+    "blessing_group": 1,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "MeleeWeapon",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 2,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 103,
+    "name": "搏鬥之刃",
+    "desc": "近戰武器<Highlight>普通攻擊傷害</>提高<Highlight>$1</>。",
+    "simple_desc": "近戰武器<Highlight>普通攻擊傷害</>提高。",
+    "blessing_group": 1,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 3,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 104,
+    "name": "熔爐的饋贈",
+    "desc": "<Highlight>$2</>米內敵人被擊敗時，自身回復<Highlight>$1</>生命。",
+    "simple_desc": "<Highlight>近處</>敵人被擊敗時，自身回復生命。",
+    "blessing_group": 1,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 4,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 105,
+    "name": "熔爐的儀式",
+    "desc": "受到來自自身周圍<Highlight>$2</>米內或帶有[熔炎]敵人的傷害降低<Highlight>$1</>。",
+    "simple_desc": "受到<Highlight>近處</>或帶有[熔炎]敵人的傷害降低。",
+    "blessing_group": 1,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5041,
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [
+      "Term_Rou_10101_MoltenBlaze"
+    ],
+    "rl_archive_id": 5,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 106,
+    "name": "復燃的野火",
+    "desc": "受到傷害時為自身周圍<Highlight>8</>米內的敵人附加<Highlight>1</>層[熔炎]，效果每<Highlight>$1</>秒最多觸發1次。",
+    "simple_desc": "受到傷害時為<Highlight>近處</>敵人附加[熔炎]。",
+    "blessing_group": 1,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5041,
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [
+      "Term_Rou_10101_MoltenBlaze"
+    ],
+    "rl_archive_id": 6,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 107,
+    "name": "技巧之刃",
+    "desc": "近戰武器<Highlight>暴擊率</>提高<Highlight>#1</>。",
+    "simple_desc": "近戰武器<Highlight>暴擊率</>提高。",
+    "blessing_group": 1,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "MeleeWeapon",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 7,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 108,
+    "name": "勇武之刃",
+    "desc": "近戰武器<Highlight>暴擊傷害</>提高<Highlight>#1</>。",
+    "simple_desc": "近戰武器<Highlight>暴擊傷害</>提高。",
+    "blessing_group": 1,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "MeleeWeapon",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 8,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 109,
+    "name": "迸發之刃",
+    "desc": "近戰武器<Highlight>下落攻擊、蓄力攻擊、滑行攻擊傷害</>提高<Highlight>$1</>。",
+    "simple_desc": "近戰武器<Highlight>下落攻擊、蓄力攻擊、滑行攻擊傷害</>提高。",
+    "blessing_group": 1,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 9,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 110,
+    "name": "不息的野火",
+    "desc": "每<Highlight>$1</>秒為周圍<Highlight>8</>米內的敵人附加<Highlight>1</>層[熔炎]。",
+    "simple_desc": "每隔一段時間為<Highlight>近處</>敵人附加[熔炎]。",
+    "blessing_group": 1,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5041,
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [
+      "Term_Rou_10101_MoltenBlaze"
+    ],
+    "rl_archive_id": 10,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 111,
+    "name": "淬火的饋贈",
+    "desc": "對帶有超過<Highlight>$3</>層[熔炎]的敵人造成傷害時，自身回復<Highlight>$1</>生命，效果每<Highlight>$2</>秒最多觸發1次。",
+    "simple_desc": "對帶有[熔炎]的敵人造成傷害時，恢復生命。",
+    "blessing_group": 1,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5041,
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [
+      "Term_Rou_10101_MoltenBlaze"
+    ],
+    "rl_archive_id": 11,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 112,
+    "name": "縱橫之刃",
+    "desc": "近戰武器<Highlight>攻擊速度</>提高<Highlight>#1</>，<Highlight>攻擊範圍</>提高<Highlight>#2</>。",
+    "simple_desc": "近戰武器<Highlight>攻擊速度</>與<Highlight>攻擊範圍</>提高。",
+    "blessing_group": 1,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "MeleeWeapon",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [],
+    "rl_archive_id": 12,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 113,
+    "name": "進擊迸發",
+    "desc": "任何傷害導致目標生命低於<Highlight>$3</>時，額外造成1次<Highlight>$1</>角色攻擊的傷害，效果對同一目標每<Highlight>$2</>秒最多觸發1次。",
+    "simple_desc": "任何傷害導致目標生命<Highlight>較低</>時<Highlight>額外</>造成傷害。",
+    "blessing_group": 1,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [],
+    "rl_archive_id": 13,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 114,
+    "name": "熾烈的野火",
+    "desc": "近戰武器造成傷害時，如果目標[熔炎]超過<Highlight>$2</>層，額外造成<Highlight>$1</>角色攻擊的傷害。",
+    "simple_desc": "近戰武器對[熔炎]層數較高的敵人<Highlight>額外</>造成傷害。",
+    "blessing_group": 1,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5042,
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [
+      "Term_Rou_10101_MoltenBlaze"
+    ],
+    "rl_archive_id": 14,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 115,
+    "name": "淬火的儀式",
+    "desc": "自身周圍<Highlight>8</>米內敵人越少，造成的傷害越高，最多提高<Highlight>$1</>。",
+    "simple_desc": "<Highlight>近處</>敵人越少，造成的傷害越高。",
+    "blessing_group": 1,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5042,
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [],
+    "rl_archive_id": 15,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 201,
+    "name": "饑餓獵手",
+    "desc": "遠端武器<Highlight>攻擊</>提高<Highlight>#1</>。",
+    "simple_desc": "遠端武器<Highlight>攻擊</>提高。",
+    "blessing_group": 2,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "RangedWeapon",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 16,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 202,
+    "name": "無形獵手",
+    "desc": "遠端武器<Highlight>觸發概率</>提高<Highlight>#1</>。",
+    "simple_desc": "遠端武器<Highlight>觸發概率</>提高。",
+    "blessing_group": 2,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "RangedWeapon",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 17,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 203,
+    "name": "覓食口腕",
+    "desc": "遠端武器造成傷害時生成[彈藥補給箱]，效果每<Highlight>$1</>秒最多觸發1次。已激活[II階]效果時，額外生成<Highlight>1</>枚[微型浮海月]。",
+    "simple_desc": "遠端武器造成傷害時生成[彈藥補給箱]。",
+    "blessing_group": 2,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [
+      "Term_Rou_10102_MiniSeaborneMoons"
+    ],
+    "rl_archive_id": 18,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 204,
+    "name": "浮遊傘膜",
+    "desc": "成功拾取掉落物時，獲得<Highlight>$1</>超限護盾，效果每<Highlight>$2</>秒最多觸發1次。",
+    "simple_desc": "成功拾取掉落物時，獲得超限護盾。",
+    "blessing_group": 2,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 19,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 205,
+    "name": "瀚海的貯存",
+    "desc": "造成傷害時生成[活化嗅鹽]或[凝神露滴]，效果每<Highlight>$1</>秒最多觸發1次。已激活[浮海月]II階效果時，額外掉落<Highlight>1</>枚[微型浮海月]。",
+    "simple_desc": "造成傷害時生成[活化嗅鹽]或[凝神露滴]。",
+    "blessing_group": 2,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [
+      "Term_Rou_10102_MiniSeaborneMoons"
+    ],
+    "rl_archive_id": 20,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 206,
+    "name": "瀚海的警示",
+    "desc": "自身<Highlight>20</>米範圍內有敵人時，若已激活[III階]效果，角色攻擊提高<Highlight>$1</>，否則提高<Highlight>$2</>。",
+    "simple_desc": "自身周圍一定範圍內有敵人時，角色攻擊提高。",
+    "blessing_group": 2,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 1,
+    "mod_equip": "Role",
+    "room_condition": [
+      5025,
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
+    "end_points": [
+      10
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 21,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 207,
+    "name": "致命獵手",
+    "desc": "遠端武器<Highlight>暴擊率</>提高<Highlight>#1</>。",
+    "simple_desc": "遠端武器<Highlight>暴擊率</>提高。",
+    "blessing_group": 2,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "RangedWeapon",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 22,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 208,
+    "name": "複合毒素",
+    "desc": "遠端武器<Highlight>暴擊傷害</>提高<Highlight>#1</>。",
+    "simple_desc": "遠端武器<Highlight>暴擊傷害</>提高。",
+    "blessing_group": 2,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "RangedWeapon",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 23,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 209,
+    "name": "瀚海的饋贈",
+    "desc": "生命值百分比或神智百分比低於<Highlight>$2</>時，<Highlight>[瀚海的貯存]</>生成對應補給的概率提高至<Highlight>$1</>。\n生命值百分比、神智百分比或彈藥儲備低於<Highlight>$2</>時，生成[微型浮海月]的數量提高<Highlight>100%</>。",
+    "simple_desc": "生命或神智較低時，[瀚海的貯存]掉落對應補給的概率提高。",
+    "blessing_group": 2,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5025,
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [
+      "Term_Rou_10102_MiniSeaborneMoons"
+    ],
+    "rl_archive_id": 24,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 210,
+    "name": "瀚海的生機",
+    "desc": "成功拾取掉落物時，額外回復<Highlight>$1</>點神智。",
+    "simple_desc": "成功拾取掉落物時，額外回復神智。",
+    "blessing_group": 2,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 25,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 211,
+    "name": "瀚海的呼喚",
+    "desc": "魔靈支援冷卻時間減少<Highlight>$1</>。",
+    "simple_desc": "魔靈支援冷卻時間減少。",
+    "blessing_group": 2,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 26,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 212,
+    "name": "斑斕觸須",
+    "desc": "遠端武器<Highlight>多重射擊</>提高<Highlight>#1</>。",
+    "simple_desc": "遠端武器<Highlight>多重射擊</>提高。",
+    "blessing_group": 2,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "RangedWeapon",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [],
+    "rl_archive_id": 27,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 213,
+    "name": "敏銳獵手",
+    "desc": "遠端武器<Highlight>攻擊速度</>提高<Highlight>#1</>。",
+    "simple_desc": "遠端武器<Highlight>攻擊速度</>提高。",
+    "blessing_group": 2,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "RangedWeapon",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [],
+    "rl_archive_id": 28,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 214,
+    "name": "瀚海的蜇刺",
+    "desc": "對與自身距離大於<Highlight>$2</>米的目標造成遠端武器傷害時，附加1層受到的遠端武器傷害提高<Highlight>$1</>的效果，最多提高到<Highlight>$3</>。",
+    "simple_desc": "對與自身距離較遠的目標造成遠端武器傷害時，其受到的遠端武器傷害逐步提高。",
+    "blessing_group": 2,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5063,
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [],
+    "rl_archive_id": 29,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 215,
+    "name": "蟄伏獵手",
+    "desc": "保持移動超過<Highlight>2</>秒後，自身受到的傷害降低<Highlight>$1</>，直到停止移動為止。\n \n 停止移動超過<Highlight>2</>秒後，自身造成的傷害提高<Highlight>$2</>，直到移動為止。",
+    "simple_desc": "保持移動超過<Highlight>2</>秒後，自身受到的傷害降低，直到停止移動為止。\n \n 停止移動超過<Highlight>2</>秒後，自身造成的傷害提高，直到移動為止。",
+    "blessing_group": 2,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [],
+    "rl_archive_id": 30,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 301,
+    "name": "星光效應",
+    "desc": "技能範圍提高<Highlight>#1</>。",
+    "simple_desc": "技能範圍提高。",
+    "blessing_group": 3,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 31,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 302,
+    "name": "天然雕琢",
+    "desc": "技能耐久提高<Highlight>#1</>。",
+    "simple_desc": "技能耐久提高。",
+    "blessing_group": 3,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 32,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 303,
+    "name": "遊彩光帶",
+    "desc": "技能效益提高<Highlight>#1</>。",
+    "simple_desc": "技能效益提高。",
+    "blessing_group": 3,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 33,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 304,
+    "name": "溫潤觸碰",
+    "desc": "釋放技能時，回復<Highlight>$1</>點神智，效果每<Highlight>$2</>秒最多觸發1次。",
+    "simple_desc": "釋放技能時，回復神智。",
+    "blessing_group": 3,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 34,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 305,
+    "name": "晶瑩觸碰",
+    "desc": "釋放技能時，回復最大護盾<Highlight>$1</>的護盾，效果每<Highlight>$2</>秒最多觸發1次。",
+    "simple_desc": "釋放技能時，回復護盾。",
+    "blessing_group": 3,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 35,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 306,
+    "name": "石中流光",
+    "desc": "技能速度提高<Highlight>$1</>。",
+    "simple_desc": "技能速度提高。",
+    "blessing_group": 3,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5033
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 36,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 307,
+    "name": "瑰麗翠色",
+    "desc": "最大神智提高<Highlight>#1</>。",
+    "simple_desc": "最大神智提高。",
+    "blessing_group": 3,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 37,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 308,
+    "name": "剛性觸碰",
+    "desc": "神智百分比小於<Highlight>$2</>時，受到的傷害降低<Highlight>$1</>。",
+    "simple_desc": "神智百分比較低時，受到傷害降低。",
+    "blessing_group": 3,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 38,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 309,
+    "name": "凝神熒光",
+    "desc": "神智百分比下降至<Highlight>$3</>以下時，在<Highlight>$4</>秒內每秒回復<Highlight>$1</>點神智，效果每<Highlight>$2</>秒最多觸發1次。",
+    "simple_desc": "神智百分比較低時，每秒回復神智。",
+    "blessing_group": 3,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 39,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 310,
+    "name": "輝煌折影",
+    "desc": "釋放技能時，獲得<Highlight>$1</>層[華光]。",
+    "simple_desc": "釋放技能時，獲得一定層數的<Highlight>[華光]</>。",
+    "blessing_group": 3,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5034
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 40,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 311,
+    "name": "華彩綻放",
+    "desc": "[閃耀]狀態中，每秒回復<Highlight>$1</>點神智。",
+    "simple_desc": "[閃耀]狀態中，每秒回復神智。",
+    "blessing_group": 3,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5034
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [
+      "Term_Rou_10103_Radiance"
+    ],
+    "rl_archive_id": 41,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 312,
+    "name": "尖晶共鳴",
+    "desc": "技能威力提高<Highlight>#1</>。",
+    "simple_desc": "技能威力提高。",
+    "blessing_group": 3,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [],
+    "rl_archive_id": 42,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 313,
+    "name": "輝耀折射",
+    "desc": "技能傷害無視目標<Highlight>$1</>防禦。",
+    "simple_desc": "技能傷害無視目標部分防禦。",
+    "blessing_group": 3,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [],
+    "rl_archive_id": 43,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 314,
+    "name": "鋒芒觸碰",
+    "desc": "[閃耀]狀態提供的技能傷害提高效果提高至<Highlight>$1</>。",
+    "simple_desc": "[閃耀]狀態提供的技能傷害提提高效果提高。",
+    "blessing_group": 3,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5034
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [
+      "Term_Rou_10103_Radiance"
+    ],
+    "rl_archive_id": 44,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 315,
+    "name": "弧光降誕",
+    "desc": "[放射]的觸發間隔降低至<Highlight>$1</>秒。",
+    "simple_desc": "[放射]的觸發的間隔降低。",
+    "blessing_group": 3,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5035
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [
+      "Term_Rou_10103_Emission"
+    ],
+    "rl_archive_id": 45,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 401,
+    "name": "生命的傳播",
+    "desc": "造成傷害時，有<Highlight>$1</>的概率召喚1個[流明種]，效果每<Highlight>$2</>秒最多觸發1次。",
+    "simple_desc": "造成傷害，有概率召喚1個[流明種]。",
+    "blessing_group": 4,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [
+      "Term_Rou_10104_Lumiseed"
+    ],
+    "rl_archive_id": 46,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 402,
+    "name": "自然的律動",
+    "desc": "召喚召喚物時，自身技能威力提高<Highlight>$1</>，效果持續<Highlight>$2</>秒，最多疊加<Highlight>$3</>層。",
+    "simple_desc": "召喚召喚物時，自身技能威力提高。",
+    "blessing_group": 4,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 47,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 403,
+    "name": "自然的轟鳴",
+    "desc": "召喚召喚物時，自身攻擊提高<Highlight>$1</>，效果持續<Highlight>$2</>秒，最多疊加<Highlight>$3</>層。",
+    "simple_desc": "召喚召喚物時，自身攻擊提高。",
+    "blessing_group": 4,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 48,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 404,
+    "name": "沃壤改良",
+    "desc": "受到的治療提高<Highlight>$1</>。",
+    "simple_desc": "受到的治療提高。",
+    "blessing_group": 4,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 49,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 405,
+    "name": "自然的療愈",
+    "desc": "召喚召喚物時，自身回復最大生命<Highlight>$1</>的生命。",
+    "simple_desc": "召喚召喚物時，回復生命。",
+    "blessing_group": 4,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 50,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 406,
+    "name": "自然的生機",
+    "desc": "召喚召喚物時，自身回復<Highlight>$1</>點神智。",
+    "simple_desc": "召喚召喚物時，回復神智。",
+    "blessing_group": 4,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 51,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 407,
+    "name": "生命的鼓動",
+    "desc": "每<Highlight>$1</>秒召喚1個[流明種]。",
+    "simple_desc": "每隔一段時間召喚1個[流明種]。",
+    "blessing_group": 4,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [
+      "Term_Rou_10104_Lumiseed"
+    ],
+    "rl_archive_id": 52,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 408,
+    "name": "生命的本能",
+    "desc": "受到傷害時，有<Highlight>$1</>的概率召喚1個[流明種]，效果每<Highlight>$2</>秒最多觸發1次。",
+    "simple_desc": "受到傷害時，有概率召喚1個[流明種]。",
+    "blessing_group": 4,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [
+      "Term_Rou_10104_Lumiseed"
+    ],
+    "rl_archive_id": 53,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 409,
+    "name": "自然的庇護",
+    "desc": "自身周圍<Highlight>8</>米範圍內有召喚物時，受到的傷害降低<Highlight>$1</>。",
+    "simple_desc": "自身周圍有召喚物時，受到的傷害降低。",
+    "blessing_group": 4,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 54,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 410,
+    "name": "林莽擴張",
+    "desc": "受到治療時，自身造成的傷害提高<Highlight>$1</>，持續$2秒。",
+    "simple_desc": "受到治療時，短時間內造成的傷害提高。",
+    "blessing_group": 4,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 55,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 411,
+    "name": "逆向紮根",
+    "desc": "召喚召喚物時，對召喚位置<Highlight>6</>米內的敵人造成戰姿削減效果。",
+    "simple_desc": "召喚召喚物時，對召喚位置附近的敵人造成戰姿削減效果。",
+    "blessing_group": 4,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 1,
+    "mod_equip": "Role",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 56,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 412,
+    "name": "自然的憤怒",
+    "desc": "自身周圍<Highlight>8</>米範圍內每有1個召喚物，自身獲得1層傷害提高<Highlight>$2</>效果，最多疊加<Highlight>$1</>層。",
+    "simple_desc": "自身周圍召喚物越多，自身造成的傷害越高。",
+    "blessing_group": 4,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [],
+    "rl_archive_id": 57,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 413,
+    "name": "自然的厚重",
+    "desc": "召喚物的攻擊提高<Highlight>$1</>。",
+    "simple_desc": "召喚物的攻擊提高。",
+    "blessing_group": 4,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [],
+    "rl_archive_id": 58,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 414,
+    "name": "自然的法則",
+    "desc": "每次召喚非流明枝係列召喚物時，在召喚位置觸發1次爆炸衝擊，造成<Highlight>$1</>角色攻擊的傷害。",
+    "simple_desc": "每次召喚非流明枝係列召喚物時，在召喚位置觸發1次爆炸衝擊。",
+    "blessing_group": 4,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [],
+    "rl_archive_id": 59,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 415,
+    "name": "繁茂生長",
+    "desc": "[流明種]進化為[流明枝葉]的概率提高至<Highlight>100%</>。",
+    "simple_desc": "[流明種]進化為[流明枝葉]的概率提高至<Highlight>100%</>。",
+    "blessing_group": 4,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 1,
+    "mod_equip": "Role",
+    "room_condition": [
+      5038,
+      5065
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      50
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [
+      "Term_Rou_10104_Lumiseed",
+      "Term_Rou_10104_Lumileaf"
+    ],
+    "rl_archive_id": 60,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 501,
+    "name": "滑翔之姿",
+    "desc": "螺旋飛躍時，獲得攻擊提高<Highlight>$1</>效果，持續<Highlight>$2</>秒，並獲得<Highlight>$3</>層[噬影]。",
+    "simple_desc": "螺旋飛躍時，獲得攻擊提高效果，並獲得[噬影]。",
+    "blessing_group": 5,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [
+      "Term_Rou_10105_Nocturne"
+    ],
+    "rl_archive_id": 57,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 502,
+    "name": "飄舞之姿",
+    "desc": "進入滑行時，生成3枚[風翼]，命中敵人造成<Highlight>$1</>角色攻擊的傷害，並獲得<Highlight>$2</>層[噬影]。",
+    "simple_desc": "進入滑行時，生成3枚[風翼]，並獲得[噬影]。",
+    "blessing_group": 5,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [
+      "Term_Rou_10105_Nocturne",
+      "Term_Rou_10105_WindWings"
+    ],
+    "rl_archive_id": 58,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 503,
+    "name": "化繭之姿",
+    "desc": "閃避時，獲得受到的傷害降低<Highlight>$1</>的效果，持續<Highlight>$2</>秒，並獲得<Highlight>$3</>層[噬影]。",
+    "simple_desc": "閃避時，獲得受到的傷害降低效果，並獲得[噬影]。",
+    "blessing_group": 5,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [
+      "Term_Rou_10105_Nocturne"
+    ],
+    "rl_archive_id": 59,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 504,
+    "name": "奇彩的斑紋",
+    "desc": "最大神智提高<Highlight>#1</>。",
+    "simple_desc": "最大神智提高",
+    "blessing_group": 5,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 60,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 505,
+    "name": "乘風之姿",
+    "desc": "技能速度提高<Highlight>$1</>。",
+    "simple_desc": "技能速度提高",
+    "blessing_group": 5,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 61,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 506,
+    "name": "渦旋氣流",
+    "desc": "下落攻擊對敵人造成傷害時會生成1個[鱗粉]領域，對其中的敵人每秒造成<Highlight>$2</>角色攻擊的傷害，並獲得<Highlight>$3</>層[噬影]。效果每<Highlight>$1</>秒最多觸發1次。",
+    "simple_desc": "下落攻擊對敵人造成傷害時會生成1個[鱗粉]領域，並獲得[噬影]。",
+    "blessing_group": 5,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [
+      "Term_Rou_10105_Nocturne",
+      "Term_Rou_10105_Powder"
+    ],
+    "rl_archive_id": 62,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 507,
+    "name": "衝擊氣流",
+    "desc": "下落攻擊的傷害提高<Highlight>$1</>。",
+    "simple_desc": "下落攻擊的傷害提高",
+    "blessing_group": 5,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 63,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 508,
+    "name": "散逸氣流",
+    "desc": "近戰攻擊範圍提高<Highlight>#1</>。",
+    "simple_desc": "近戰攻擊範圍提高",
+    "blessing_group": 5,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "MeleeWeapon",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 64,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 509,
+    "name": "輕緩氣流",
+    "desc": "最大閃避次數增加<Highlight>#1</>次。",
+    "simple_desc": "最大閃避次數增加。",
+    "blessing_group": 5,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 65,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 510,
+    "name": "飛散的鱗粉",
+    "desc": "閃避時，生成1個[鱗粉]領域，對其中的敵人每秒造成<Highlight>$2</>角色攻擊的傷害。效果每<Highlight>$1</>秒最多觸發1次。",
+    "simple_desc": "閃避時，生成1個[鱗粉]領域。",
+    "blessing_group": 5,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 1,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [
+      "Term_Rou_10105_Powder"
+    ],
+    "rl_archive_id": 66,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 511,
+    "name": "紊亂氣流",
+    "desc": "每<Highlight>$1</>秒獲得<Highlight>$2</>層[噬影]。自身的[噬影]大於<Highlight>$3</>層時，通過此祝福獲得[噬影]時，還會發射1顆[刃翼]，命中敵人造成<Highlight>$4</>角色攻擊的傷害。",
+    "simple_desc": "每隔一段時間獲得[噬影]。自身[噬影]大於一定層數時會額外發射1枚[刃翼]。",
+    "blessing_group": 5,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [
+      "Term_Rou_10105_Nocturne",
+      "Term_Rou_10105_BladeWings"
+    ],
+    "rl_archive_id": 67,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 512,
+    "name": "奪目之姿",
+    "desc": "每有1次最大閃避次數，最大神智增加<Highlight>$1</>。",
+    "simple_desc": "按照最大閃避次數，獲得最大神智增加。",
+    "blessing_group": 5,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [],
+    "rl_archive_id": 68,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 513,
+    "name": "鋒利的蝶翼",
+    "desc": "角色攻擊提高<Highlight>#1</>。",
+    "simple_desc": "角色攻擊提高。",
+    "blessing_group": 5,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [],
+    "rl_archive_id": 69,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 514,
+    "name": "喚風之姿",
+    "desc": "攻擊速度提高<Highlight>$1</>。",
+    "simple_desc": "攻擊速度提高。",
+    "blessing_group": 5,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [],
+    "rl_archive_id": 70,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 515,
+    "name": "破繭之姿",
+    "desc": "閃避時攻擊提高<Highlight>$1</>，持續<Highlight>$2</>秒。",
+    "simple_desc": "閃避時攻擊提高",
+    "blessing_group": 5,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5040
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [],
+    "rl_archive_id": 71,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 601,
+    "name": "飄忽的巡遊",
+    "desc": "技能範圍提高<Highlight>#1</>。",
+    "simple_desc": "技能範圍提高。",
+    "blessing_group": 6,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 76,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 602,
+    "name": "逐光的巡遊",
+    "desc": "造成傷害時，有<Highlight>$1</>概率獲得<Highlight>1</>隻[曳光蟲]。",
+    "simple_desc": "每次造成傷害有概率獲得[曳光蟲]。",
+    "blessing_group": 6,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [
+      "Term_Rou_10106_Glimmerfly"
+    ],
+    "rl_archive_id": 77,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 603,
+    "name": "驅黯的巡遊",
+    "desc": "每<Highlight>$1</>秒獲得<Highlight>1</>隻[曳光蟲]。",
+    "simple_desc": "每<Highlight>10</>秒獲得[曳光蟲]。",
+    "blessing_group": 6,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [
+      "Term_Rou_10106_Glimmerfly"
+    ],
+    "rl_archive_id": 78,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 604,
+    "name": "佯攻信號",
+    "desc": "未攜帶[曳光蟲]時，遠端武器暴擊率提高<Highlight>$1</>。\n攜帶[曳光蟲]時，遠端武器暴擊率提高<Highlight>$2</>。",
+    "simple_desc": "遠端武器暴擊率提高，攜帶[曳光蟲]時效果更強。",
+    "blessing_group": 6,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [
+      "Term_Rou_10106_Glimmerfly"
+    ],
+    "rl_archive_id": 79,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 605,
+    "name": "閃燃信號",
+    "desc": "未攜帶[曳光蟲]時，遠端武器暴擊傷害提高<Highlight>$1</>。\n攜帶[曳光蟲]時，遠端武器暴擊傷害提高<Highlight>$2</>。",
+    "simple_desc": "遠端武器暴擊傷害提高，攜帶[曳光蟲]時效果更強。",
+    "blessing_group": 6,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [
+      "Term_Rou_10106_Glimmerfly"
+    ],
+    "rl_archive_id": 80,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 606,
+    "name": "爍爍幽光",
+    "desc": "未攜帶[曳光蟲]時，遠端武器觸發概率提高<Highlight>$1</>。\n攜帶[曳光蟲]時，遠端武器觸發概率提高<Highlight>$2</>。",
+    "simple_desc": "遠端武器觸發概率提高，擁有[曳光蟲]時效果更強。",
+    "blessing_group": 6,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [
+      "Term_Rou_10106_Glimmerfly"
+    ],
+    "rl_archive_id": 81,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 607,
+    "name": "引伴信號",
+    "desc": "召喚物造成的傷害提高<Highlight>$1</>。",
+    "simple_desc": "召喚物造成的傷害提高。",
+    "blessing_group": 6,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 82,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 608,
+    "name": "應激閃光",
+    "desc": "受到傷害或召喚召喚物時，獲得<Highlight>1</>隻[曳光蟲]，效果每<Highlight>$1</>秒最多觸發1次。",
+    "simple_desc": "受到傷害或召喚召喚物時，獲得[曳光蟲]。",
+    "blessing_group": 6,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [
+      "Term_Rou_10106_Glimmerfly"
+    ],
+    "rl_archive_id": 83,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 609,
+    "name": "靈動流光",
+    "desc": "技能效益提高<Highlight>#1</>。",
+    "simple_desc": "技能效益提高。",
+    "blessing_group": 6,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 84,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 610,
+    "name": "生若繁星",
+    "desc": "未攜帶[曳光蟲]時，遠端武器多重射擊提高<Highlight>$1</>。\n攜帶[曳光蟲]時，遠端武器多重射擊提高<Highlight>$2</>。",
+    "simple_desc": "遠端武器多重射擊提高，擁有[曳光蟲]時效果更強。",
+    "blessing_group": 6,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [
+      "Term_Rou_10106_Glimmerfly"
+    ],
+    "rl_archive_id": 85,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 611,
+    "name": "輪回的巡遊",
+    "desc": "獲得<Highlight>#1</>次復蘇次數。攜帶[曳光蟲]時，受到的傷害降低<Highlight>$1</>，下一次復蘇後失去此效果。",
+    "simple_desc": "獲得額外復蘇次數，攜帶[曳光蟲]時，受到的傷害降低，下一次復蘇後失去此效果。",
+    "blessing_group": 6,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 1,
+    "mod_equip": "Role",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
+    "end_points": [
+      20
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [
+      "Term_Rou_10106_Glimmerfly"
+    ],
+    "rl_archive_id": 86,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 612,
+    "name": "靜謐的告別",
+    "desc": "未攜帶[曳光蟲]時，全屬性穿透提高<Highlight>$1</>。\n攜帶[曳光蟲]時，全屬性穿透提高<Highlight>$2</>。",
+    "simple_desc": "全屬性穿透提高，擁有[曳光蟲]時效果更強。",
+    "blessing_group": 6,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [
+      "Term_Rou_10106_Glimmerfly"
+    ],
+    "rl_archive_id": 87,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 613,
+    "name": "禦敵信號",
+    "desc": "未攜帶[曳光蟲]時，昂揚提高<Highlight>$1</>。\n攜帶[曳光蟲]時，昂揚提高<Highlight>$2</>。",
+    "simple_desc": "昂揚提高，攜帶[曳光蟲]時效果更強。",
+    "blessing_group": 6,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [
+      "Term_Rou_10106_Glimmerfly"
+    ],
+    "rl_archive_id": 88,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 614,
+    "name": "集群信號",
+    "desc": "自身周圍有敵人時，[曳光蟲]攻擊間隔大幅縮短，持續<Highlight>$2</>秒，效果每<Highlight>$1</>秒最多觸發1次。",
+    "simple_desc": "自身周圍有敵人時，[曳光蟲]攻擊間隔大幅縮短。",
+    "blessing_group": 6,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5007,
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [
+      "Term_Rou_10106_Glimmerfly"
+    ],
+    "rl_archive_id": 89,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 615,
+    "name": "搖曳微光",
+    "desc": "[曳光蟲]造成的傷害提高<Highlight>$1</>。",
+    "simple_desc": "[曳光蟲]造成的傷害提高。",
+    "blessing_group": 6,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5007,
+      5064
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [
+      "Term_Rou_10106_Glimmerfly"
+    ],
+    "rl_archive_id": 90,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 701,
+    "name": "鮮血的貯存",
+    "desc": "技能耐久提高<Highlight>#1</>。",
+    "simple_desc": "技能耐久提高。",
+    "blessing_group": 7,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 91,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 702,
+    "name": "猩紅之花",
+    "desc": "生命值百分比小於<Highlight>100%</>時，神智自然恢復量提高<Highlight>$2</>點；生命值百分比為<Highlight>100%</>時，神智自然恢復量提高<Highlight>$1</>點。",
+    "simple_desc": "神智自然恢復量提高，生命百分比較低時效果更強。",
+    "blessing_group": 7,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 92,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 703,
+    "name": "鮮血的淤塞",
+    "desc": "生命值百分比小於<Highlight>100%</>時，近戰武器觸發概率提高<Highlight>$2</>；生命值百分比為<Highlight>100%</>時，近戰武器觸發概率提高<Highlight>$1</>。",
+    "simple_desc": "近戰武器觸發概率提高，生命百分比較低時效果更強。",
+    "blessing_group": 7,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 93,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 704,
+    "name": "掙紮本能",
+    "desc": "最大生命提高<Highlight>#1</>。",
+    "simple_desc": "最大生命提高。",
+    "blessing_group": 7,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 94,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 705,
+    "name": "荊棘之葉",
+    "desc": "防禦提高<Highlight>#1</>。受到傷害時，獲得造成的傷害提高<Highlight>$1</>效果，持續<Highlight>$2</>秒，效果每<Highlight>$3</>秒最多觸發1次。",
+    "simple_desc": "防禦提高，受到傷害時，獲得造成的傷害提高效果。",
+    "blessing_group": 7,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 95,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 706,
+    "name": "吞噬之根",
+    "desc": "造成傷害時，在目標位置額外造成1次自身最大生命<Highlight>$1</>的範圍傷害，效果每<Highlight>$2</>秒最多觸發1次。",
+    "simple_desc": "造成傷害時，在目標位置額外造成基於自身最大生命的範圍傷害。",
+    "blessing_group": 7,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 96,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 707,
+    "name": "鮮血的湧動",
+    "desc": "生命值百分比小於<Highlight>100%</>時，技能威力提高<Highlight>$2</>；生命值百分比為<Highlight>100%</>時，技能威力提高<Highlight>$1</>。",
+    "simple_desc": "技能威力提高，生命百分比較低時效果更強。",
+    "blessing_group": 7,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 97,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 708,
+    "name": "鮮血的渴望",
+    "desc": "造成的傷害提高<Highlight>$1</>，生命值百分比每降低<Highlight>1%</>，效果倍率增加<Highlight>1%</>，最多增加至<Highlight>$2</>。",
+    "simple_desc": "造成的傷害提高，生命百分比較低時效果更強。",
+    "blessing_group": 7,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 98,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 709,
+    "name": "攝食本能",
+    "desc": "生命值百分比小於<Highlight>100%</>時，近戰武器暴擊率提高<Highlight>$2</>；生命值百分比為<Highlight>100%</>時，近戰武器暴擊率提高<Highlight>$1</>。",
+    "simple_desc": "近戰武器暴擊率提高，生命百分比較低時效果更強。",
+    "blessing_group": 7,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 99,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 710,
+    "name": "狂亂本能",
+    "desc": "生命值百分比小於<Highlight>100%</>時，近戰武器暴擊傷害提高<Highlight>$2</>；生命值百分比為<Highlight>100%</>時，近戰武器暴擊傷害提高<Highlight>$1</>。",
+    "simple_desc": "近戰武器暴擊傷害提高，生命百分比較低時效果更強。",
+    "blessing_group": 7,
+    "blessing_rarity": 2,
+    "blessing_weight": 300,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      20,
+      35
+    ],
+    "level_up_prices": [
+      300
+    ],
+    "shop_prices": 400,
+    "shop_weight": 500,
+    "refresh_weight_add": 12,
+    "weight_add": 6,
+    "group_priority": 2,
+    "explanation_id": [],
+    "rl_archive_id": 100,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 711,
+    "name": "鮮血的庇護",
+    "desc": "受到傷害時，獲得<Highlight>$1</>超限護盾，效果每<Highlight>$2</>秒最多觸發1次。",
+    "simple_desc": "受到傷害時，獲得超限護盾。",
+    "blessing_group": 7,
+    "blessing_rarity": 1,
+    "blessing_weight": 1000,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
+    "end_points": [
+      10,
+      15
+    ],
+    "level_up_prices": [
+      150
+    ],
+    "shop_prices": 200,
+    "shop_weight": 1000,
+    "refresh_weight_add": 6,
+    "weight_add": 3,
+    "group_priority": 1,
+    "explanation_id": [],
+    "rl_archive_id": 101,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 712,
+    "name": "生存本能",
+    "desc": "受到的單次傷害不會高於自身最大生命的<Highlight>#1</>，受到超過最大生命<Highlight>$2</>的傷害後<Highlight>$3</>秒內，每秒回復最大生命<Highlight>$1</>的生命。",
+    "simple_desc": "限製自身受到的單次傷害，受到高額傷害後，持續回復生命。",
+    "blessing_group": 7,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [],
+    "rl_archive_id": 102,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 713,
+    "name": "汲取本能",
+    "desc": "釋放[終結技]時，失去全部防禦，將失去值的<Highlight>$1</>轉化為角色攻擊，持續<Highlight>$2</>秒，效果每<Highlight>$3</>秒最多觸發1次。",
+    "simple_desc": "釋放[終結技]時，失去全部防禦，轉化為角色攻擊。",
+    "blessing_group": 7,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [],
+    "rl_archive_id": 103,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 714,
+    "name": "枯萎之種",
+    "desc": "生命值百分比小於<Highlight>100%</>時，技能傷害無視目標<Highlight>$2</>防禦；生命值百分比為<Highlight>100%</>時，技能傷害無視目標<Highlight>$1</>防禦。",
+    "simple_desc": "技能傷害無視目標一定防禦，生命百分比較低時效果更強。",
+    "blessing_group": 7,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [],
+    "rl_archive_id": 104,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  },
+  {
+    "id": 715,
+    "name": "糾纏之莖",
+    "desc": "生命值百分比小於<Highlight>40%</>時，背水提高<Highlight>$2</>；生命值百分比大於等於<Highlight>40%</>時，背水提高<Highlight>$1</>。",
+    "simple_desc": "背水提高，生命百分比較低時效果更強。",
+    "blessing_group": 7,
+    "blessing_rarity": 3,
+    "blessing_weight": 100,
+    "max_level": 2,
+    "mod_equip": "Role",
+    "room_condition": [
+      5062
+    ],
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
+    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
+    "end_points": [
+      40,
+      60
+    ],
+    "level_up_prices": [
+      600
+    ],
+    "shop_prices": 800,
+    "shop_weight": 200,
+    "refresh_weight_add": 24,
+    "weight_add": 12,
+    "group_priority": 3,
+    "explanation_id": [],
+    "rl_archive_id": 105,
+    "unlock_condition_text": "燭芯尚未解鎖",
+    "can_sell": 1
+  }
+]

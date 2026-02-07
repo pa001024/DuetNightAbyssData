@@ -1,0 +1,276 @@
+[
+  {
+    "id": 101,
+    "name": "窒息の域",
+    "desc": "自身の受ける回復効果が<Highlight>#1</>ダウン。",
+    "desc_values": [
+      "$math.ceil(#GlobalPassiveData[30101001].Vars.HealRate*100)$%"
+    ],
+    "global_passive_id": 30101001,
+    "heat_value": 1,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Char_HealDown.T_Rou_Contract_Char_HealDown",
+    "max_level": 5,
+    "room_type": [],
+    "unit_id": [],
+    "unit_num": [],
+    "unit_type": "",
+    "explanation_id": [],
+    "server_build": []
+  },
+  {
+    "id": 102,
+    "name": "疲労の域",
+    "desc": "自身の攻撃力が<Highlight>#1</>ダウン。",
+    "desc_values": [
+      "$math.ceil(-#Buff[30101002].AddAttrs[1].Rate*100)$%"
+    ],
+    "global_passive_id": 30101002,
+    "heat_value": 2,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Char_SpDown.T_Rou_Contract_Char_SpDown",
+    "max_level": 5,
+    "room_type": [],
+    "unit_id": [],
+    "unit_num": [],
+    "unit_type": "",
+    "explanation_id": [],
+    "server_build": []
+  },
+  {
+    "id": 103,
+    "name": "繁栄の域",
+    "desc": "敵の最大HPが<Highlight>#1</>アップ。",
+    "desc_values": [
+      "$math.ceil(#Buff[30102001].AddAttrs[1].Rate*100)$%"
+    ],
+    "global_passive_id": 30102001,
+    "heat_value": 2,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mon_HpUp.T_Rou_Contract_Mon_HpUp",
+    "max_level": 5,
+    "room_type": [],
+    "unit_id": [],
+    "unit_num": [],
+    "unit_type": "",
+    "explanation_id": [],
+    "server_build": []
+  },
+  {
+    "id": 104,
+    "name": "苦痛の域",
+    "desc": "敵の攻撃力が<Highlight>#1</>アップ。",
+    "desc_values": [
+      "$math.ceil(#Buff[30102002].AddAttrs[1].Rate*100)$%"
+    ],
+    "global_passive_id": 30102002,
+    "heat_value": 2,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mon__AtkUp.T_Rou_Contract_Mon__AtkUp",
+    "max_level": 5,
+    "room_type": [],
+    "unit_id": [],
+    "unit_num": [],
+    "unit_type": "",
+    "explanation_id": [],
+    "server_build": []
+  },
+  {
+    "id": 105,
+    "name": "鈍感の域",
+    "desc": "敵の被ダメージが<Highlight>#1</>ダウン。",
+    "desc_values": [
+      "$math.ceil(#GlobalPassiveData[30102003].Vars.DamagedRate*100)$%"
+    ],
+    "global_passive_id": 30102003,
+    "heat_value": 2,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mon_HpUp.T_Rou_Contract_Mon_HpUp",
+    "max_level": 5,
+    "room_type": [],
+    "unit_id": [],
+    "unit_num": [],
+    "unit_type": "",
+    "explanation_id": [],
+    "server_build": []
+  },
+  {
+    "id": 106,
+    "name": "育種の域",
+    "desc": "通常の敵が倒されると、半径<Highlight>4</>メートルの爆発を起こしてダメージを与える。",
+    "desc_values": [],
+    "global_passive_id": 30102004,
+    "heat_value": 3,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mon_Explode.T_Rou_Contract_Mon_Explode",
+    "max_level": 1,
+    "room_type": [],
+    "unit_id": [],
+    "unit_num": [],
+    "unit_type": "",
+    "explanation_id": [
+      "Term_Rou_Contract_106_Blast"
+    ],
+    "server_build": []
+  },
+  {
+    "id": 107,
+    "name": "騒動の域",
+    "desc": "戦闘・朦朧の暗影と戦闘・離散の暗影に追加で<Highlight>#1</>体のホルダーが現れる。",
+    "desc_values": [
+      "$#GlobalPassiveData[30103001].Vars.Count$"
+    ],
+    "global_passive_id": 30103001,
+    "heat_value": 5,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Room_ExtraStrong.T_Rou_Contract_Room_ExtraStrong",
+    "max_level": 3,
+    "room_type": [
+      1,
+      6
+    ],
+    "unit_id": [
+      6001011,
+      6001012,
+      6001014,
+      6002015,
+      6001016,
+      6001017,
+      6001018,
+      6001019,
+      6001020,
+      6001021,
+      6002022,
+      6001023,
+      6001024,
+      7001011,
+      7002012,
+      7002014,
+      7001015,
+      7001016,
+      7001017,
+      7001018,
+      7001019,
+      7002020,
+      7001021,
+      7001022,
+      7001023,
+      7001024
+    ],
+    "unit_num": [
+      1,
+      2,
+      3
+    ],
+    "unit_type": "Monster",
+    "explanation_id": [],
+    "server_build": []
+  },
+  {
+    "id": 108,
+    "name": "喧騒の域",
+    "desc": "戦闘・深遠の幽淵に追加で<Highlight>#1</>体の精鋭敵が出現。",
+    "desc_values": [
+      "$#GlobalPassiveData[30103002].Vars.Count$"
+    ],
+    "global_passive_id": 30103002,
+    "heat_value": 3,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Room_ExtraElite.T_Rou_Contract_Room_ExtraElite",
+    "max_level": 2,
+    "room_type": [
+      2
+    ],
+    "unit_id": [
+      9901051,
+      9901052,
+      9901053
+    ],
+    "unit_num": [
+      1,
+      2
+    ],
+    "unit_type": "Monster",
+    "explanation_id": [],
+    "server_build": []
+  },
+  {
+    "id": 109,
+    "name": "構造の域",
+    "desc": "戦闘中に敵対機関が<Highlight>#1</>個出現。",
+    "desc_values": [
+      "$#GlobalPassiveData[30103003].Vars.Count$"
+    ],
+    "global_passive_id": 30103003,
+    "heat_value": 1,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Room_ExtraMech.T_Rou_Contract_Room_ExtraMech",
+    "max_level": 1,
+    "room_type": [
+      1,
+      2,
+      6
+    ],
+    "unit_id": [
+      39002,
+      39004
+    ],
+    "unit_num": [
+      1
+    ],
+    "unit_type": "Mechanism",
+    "explanation_id": [],
+    "server_build": []
+  },
+  {
+    "id": 110,
+    "name": "枯渇の域",
+    "desc": "謎の行商人のもとで取引をする時、必要なエンバーが<Highlight>50%</>増加。",
+    "desc_values": [],
+    "global_passive_id": 0,
+    "heat_value": 10,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mechanics_CostUp.T_Rou_Contract_Mechanics_CostUp",
+    "max_level": 1,
+    "room_type": [],
+    "unit_id": [],
+    "unit_num": [],
+    "unit_type": "",
+    "explanation_id": [],
+    "server_build": [
+      [
+        12
+      ]
+    ]
+  },
+  {
+    "id": 111,
+    "name": "盲目の域",
+    "desc": "選択時、選択肢が1つ<Highlight>減少</>。",
+    "desc_values": [],
+    "global_passive_id": 0,
+    "heat_value": 5,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mechanics_LessChoice.T_Rou_Contract_Mechanics_LessChoice",
+    "max_level": 1,
+    "room_type": [],
+    "unit_id": [],
+    "unit_num": [],
+    "unit_type": "",
+    "explanation_id": [],
+    "server_build": [
+      [
+        13
+      ]
+    ]
+  },
+  {
+    "id": 112,
+    "name": "愚痴の域",
+    "desc": "選択時、選択肢がランダムに強制決定。",
+    "desc_values": [],
+    "global_passive_id": 0,
+    "heat_value": 15,
+    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mechanics_RandomChoice.T_Rou_Contract_Mechanics_RandomChoice",
+    "max_level": 1,
+    "room_type": [],
+    "unit_id": [],
+    "unit_num": [],
+    "unit_type": "",
+    "explanation_id": [],
+    "server_build": [
+      [
+        14
+      ]
+    ]
+  }
+]

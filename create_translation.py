@@ -46,6 +46,8 @@ from typing import Dict, List
 #
 # 当前配置: 提取多种字段
 FIELD_CONFIG = [
+    ("name", "translation.json"),
+    ("n", "translation.json"),
     ("名称", "translation.json"),
     ("别名", "translation.json"),
     ("分类", "translation.json"),
@@ -57,6 +59,7 @@ FIELD_CONFIG = [
     ("技能.字段.名称", "translation.json"),
     ("技能.字段.格式", "translation.json"),
     ("技能.术语解释", "translation.json"),
+    ("同律武器.名称", "translation.json"),
     ("奖励", "translation.json"),  # 嵌套对象 - 提取奖励中所有键的翻译
     # ("效果", "translation_effect.json"),
 ]
@@ -93,6 +96,9 @@ EX_FIELDS = [
     "魔灵",
     "夜航手册",
     "委托密函",
+    "活力魔灵",
+    "失活魔灵",
+    "魔灵潜质",
 ]
 
 # 是否在输出时添加字段前缀 (例如: "效果:xxx" -> "Effect:xxx")
@@ -761,7 +767,16 @@ def main():
     root_key_values = extract_root_keys_and_values(base_path)
     print(f"\n提取到最外层键值对: {len(root_key_values)} 个")
 
-    allow_types = ["Mod", "Weapon", "Char", "Achievement", "Monster"]
+    allow_types = [
+        "Mod",
+        "Weapon",
+        "Char",
+        "Achievement",
+        "Monster",
+        "Pet",
+        "Dungeon",
+        "Resource",
+    ]
     # 对每个语言文件夹处理每个JSON文件
     for lang_dir in lang_dirs:
         lang_code = lang_dir.name

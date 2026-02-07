@@ -34,9 +34,11 @@ class PetProcessor(BaseProcessor):
             "id": pet_id,
             "uid": pet_data.get("GUID", 0),
             "名称": self.get_translated_text(pet_data.get("Name", "")),
+            "描述": self.get_translated_text(pet_data.get("IpDes", "")),
             "icon": pet_data.get("Icon", "")
             .replace("/Game/UI/Texture/Dynamic/Image/Head/Pet/T_Head_Pet_", "")
             .split(".")[0],
+            "异化": pet_data.get("PremiumTransform", 0),
             "品质": pet_data.get("Rarity", 0),
             "类型": pet_data.get("PetType", 0),
             "最大等级": pet_data.get("PetMaxLevel", 0),
@@ -45,6 +47,8 @@ class PetProcessor(BaseProcessor):
         }
         if not processed["uid"]:
             del processed["uid"]
+        if not processed["异化"]:
+            del processed["异化"]
         battle_pet = self._process_battle_pet(pet_data.get("BattlePetId", 0))
         if battle_pet:
             processed.update(battle_pet)
@@ -161,7 +165,19 @@ class PetProcessor(BaseProcessor):
                     else:
                         skill_desc = skill_desc.replace(placeholder, "{}")
 
-        return {"描述": skill_desc, "值": values}
+        # 构建技能数据
+        skill_data = {
+            "id": skill_info.get("SkillId", 0),
+            "描述": skill_desc,
+            "值": values,
+        }
+
+        # 添加冷却时间（CD）
+        cd = skill_info.get("CD", 0)
+        if cd:
+            skill_data["cd"] = cd
+
+        return skill_data
 
     def _process_passive_skill(
         self, passive_desc, passive_effect_params, battle_pet_id
@@ -207,7 +223,10 @@ class PetProcessor(BaseProcessor):
                     else:
                         skill_desc = skill_desc.replace(placeholder, "{}")
 
-        return {"描述": skill_desc, "值": values}
+        return {
+            "描述": skill_desc,
+            "值": values,
+        }
 
     def _parse_template_string(
         self, template_str, table_id, level, table_type, desc_values=None
