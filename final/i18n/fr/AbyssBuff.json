@@ -33,7 +33,7 @@
   {
     "id": 101,
     "icon": "Exchange",
-    "n": "Résonance du Jugement : Pacte élémentaire",
+    "n": "抉择变奏：元素契约",
     "d": "Les ennemis se voient attribuer l’Attribut élémentaire sélectionné. Les dégâts reçus provenant des attributs avantagés sont augmentés de 400 %, tandis que ceux issus des attributs désavantagés sont réduits de 50 %.",
     "t": 1
   },
@@ -88,7 +88,7 @@
   {
     "id": 207,
     "icon": "Mon_Survive02",
-    "n": "Résonance défensive : Trempe de l’esprit",
+    "n": "防御变奏：精神淬炼",
     "d": "Les ennemis subissent une réduction des dégâts de 80%. Chaque fois qu’ils reçoivent des Dégâts de compétence, l’effet de réduction diminue de 4%.",
     "t": 2,
     "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
@@ -282,7 +282,7 @@
   {
     "id": 12111,
     "icon": "Melee",
-    "n": "Allegro féroce : Âge de gloire",
+    "n": "活跃急板：辉煌岁月",
     "d": "Lorsqu’un allié utilise une Compétence de combat ou une Compétence ultime, il obtient 60% de Vigueur, pendant 18 s.",
     "t": 1,
     "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
@@ -298,7 +298,7 @@
   {
     "id": 12121,
     "icon": "Skill",
-    "n": "Allegro féroce : Unis comme un seul",
+    "n": "活跃急板：众志成城",
     "d": "Lorsqu’un allié utilise une Compétence de combat ou une Compétence ultime, il obtient +10% de Dégâts de compétence pendant 15 s, cumulable jusqu’à 9 fois. À plein cumul, il devient immunisé aux interruptions lorsqu’il subit des dégâts.",
     "t": 1,
     "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
@@ -306,7 +306,7 @@
   {
     "id": 12211,
     "icon": "Skill",
-    "n": "Allegro féroce : Retrouvailles",
+    "n": "活跃急板：再聚首",
     "d": "Lorsqu’un allié utilise une Compétence de combat ou une Compétence ultime, il confère à lui-même et à ses alliés +50% de Puissance de compétence pendant 10 s. Les effets appliqués par des alliés différents peuvent se cumuler.",
     "t": 1,
     "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
@@ -314,7 +314,7 @@
   {
     "id": 12221,
     "icon": "Range",
-    "n": "Andante furioso : Le courage du défi",
+    "n": "激昂行板：挑战者的勇气",
     "d": "Toutes les 5 instances de dégâts infligées par un allié confèrent 1 cumul de +10% de dégâts infligés pendant 15 s, cumulable jusqu’à 9 fois.",
     "t": 1,
     "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"

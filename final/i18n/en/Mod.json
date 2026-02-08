@@ -7175,7 +7175,7 @@
       56141
     ],
     "减伤": 0.3,
-    "效果": "Grants +88.0% Skill Intensity when Skill Efficiency is ≥ 130.0%."
+    "效果": "Grants +88.0% Skill Intensity when Skill Efficiency is ≥ 150.0%."
   },
   {
     "id": 56142,
@@ -7194,7 +7194,7 @@
     "神智": 1.65,
     "技能效益": 0.44,
     "减伤": 0.5,
-    "效果": "Grants +88.0% Skill Intensity when Skill Efficiency is ≥ 130.0%."
+    "效果": "Grants +88.0% Skill Intensity when Skill Efficiency is ≥ 150.0%."
   },
   {
     "id": 56143,
@@ -7387,7 +7387,48 @@
     "耐受": 25,
     "类型": "Melee Weapons",
     "攻速": 0.2,
-    "效果": "Upgrades Sword Normal Attack to deal double the damage of the standard attack."
+    "效果": "Upgrades Sword Normal Attack to deal double the damage of the standard attack.",
+    "技能替换": {
+      "1010101": {
+        "id": 1010201,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "1-Hit DMG",
+            "值": 0.65,
+            "削韧": 20,
+            "卡肉": 0.03,
+            "取消": 0.2,
+            "连段": 0.3
+          },
+          {
+            "名称": "2-Hit DMG",
+            "值": 0.85,
+            "削韧": 25,
+            "卡肉": 0.03,
+            "取消": 0.2,
+            "连段": 0.3
+          },
+          {
+            "名称": "3-Hit DMG",
+            "值": 0.55,
+            "格式": "{%}×4",
+            "削韧": 25,
+            "取消": 0.2667,
+            "连段": 0.6
+          },
+          {
+            "名称": "4-Hit DMG",
+            "值": 1.2,
+            "削韧": 40,
+            "卡肉": 0.1,
+            "取消": 0.6333,
+            "连段": 1.1333
+          }
+        ]
+      }
+    }
   },
   {
     "id": 101002,
@@ -7400,7 +7441,23 @@
     "耐受": 25,
     "类型": "Melee Weapons",
     "暴击": 0.4,
-    "效果": "Upgrades Sword Charged Attack to deal double the damage of the standard attack."
+    "效果": "Upgrades Sword Charged Attack to deal double the damage of the standard attack.",
+    "技能替换": {
+      "1010102": {
+        "id": 1010202,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Charged Attack DMG",
+            "值": 2.28,
+            "削韧": 73,
+            "卡肉": 0.1,
+            "取消": 1.2333
+          }
+        ]
+      }
+    }
   },
   {
     "id": 101003,
@@ -7413,7 +7470,23 @@
     "耐受": 25,
     "类型": "Melee Weapons",
     "触发": 0.6,
-    "效果": "Upgrades Sword Charged Attack to summon Swordshadows that explode on impact or upon vanishing, damaging enemies in a large AoE. Deals double the damage of the standard attack."
+    "效果": "Upgrades Sword Charged Attack to summon Swordshadows that explode on impact or upon vanishing, damaging enemies in a large AoE. Deals double the damage of the standard attack.",
+    "技能替换": {
+      "1010102": {
+        "id": 1010302,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Charged Attack DMG",
+            "值": 1.14,
+            "格式": "{%}×2",
+            "削韧": 36,
+            "取消": 1.2333
+          }
+        ]
+      }
+    }
   },
   {
     "id": 102001,
@@ -7426,7 +7499,22 @@
     "耐受": 25,
     "类型": "Melee Weapons",
     "暴伤": 0.5,
-    "效果": "Upgrades the Polearm Charged Attack to throw 5 polearms forward, attacking enemies in your path for double the damage of the standard attack."
+    "效果": "Upgrades the Polearm Charged Attack to throw 5 polearms forward, attacking enemies in your path for double the damage of the standard attack.",
+    "技能替换": {
+      "1020102": {
+        "id": 1020202,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Charged Attack DMG",
+            "值": 0.3,
+            "削韧": 10,
+            "取消": 1.5
+          }
+        ]
+      }
+    }
   },
   {
     "id": 102002,
@@ -7439,7 +7527,28 @@
     "耐受": 25,
     "类型": "Melee Weapons",
     "暴击": 0.4,
-    "效果": "Upgrades the Polearm Plunging Attack to trigger a bigger shockwave on impact, dealing double the damage of the standard attack."
+    "效果": "Upgrades the Polearm Plunging Attack to trigger a bigger shockwave on impact, dealing double the damage of the standard attack.",
+    "技能替换": {
+      "1020103": {
+        "id": 1020203,
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Plunge DMG",
+            "值": 0.47,
+            "削韧": 15,
+            "取消": 1.7
+          },
+          {
+            "名称": "Plunge 2-Hit DMG",
+            "值": 0.63,
+            "削韧": 20,
+            "取消": 1.7
+          }
+        ]
+      }
+    }
   },
   {
     "id": 102003,
@@ -7452,7 +7561,53 @@
     "耐受": 25,
     "类型": "Melee Weapons",
     "攻击范围": 0.8,
-    "效果": "Upgrades Polearm Normal Attack to summon phantom spears that strike the target. Deals double the damage of the standard attack."
+    "效果": "Upgrades Polearm Normal Attack to summon phantom spears that strike the target. Deals double the damage of the standard attack.",
+    "技能替换": {
+      "1020101": {
+        "id": 1020201,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "1-Hit DMG",
+            "值": 1.1,
+            "削韧": 25,
+            "卡肉": 0.03,
+            "取消": 0.4,
+            "连段": 0.4667
+          },
+          {
+            "名称": "2-Hit DMG",
+            "值": 1.2,
+            "格式": "{%}×2",
+            "削韧": 25,
+            "卡肉": 0.03,
+            "取消": 0.6,
+            "连段": 1.0333
+          },
+          {
+            "名称": "3-Hit DMG",
+            "值": 0.5,
+            "值2": 1.5,
+            "格式": "{%}×2+{%}",
+            "削韧": 40,
+            "卡肉": 0.1,
+            "取消": 0.9667,
+            "连段": 0.9667
+          },
+          {
+            "名称": "4-Hit DMG",
+            "值": 0.3,
+            "值2": 3.7,
+            "格式": "{%}+{%}",
+            "削韧": 150,
+            "卡肉": 0.1,
+            "取消": 1.1667,
+            "连段": 2.1
+          }
+        ]
+      }
+    }
   },
   {
     "id": 102004,
@@ -7465,7 +7620,22 @@
     "耐受": 25,
     "类型": "Melee Weapons",
     "暴击": 0.4,
-    "效果": "Upgrades Polearm Charged Attack to launch a forward dash, damaging enemies in the user's path for double the damage of the standard attack."
+    "效果": "Upgrades Polearm Charged Attack to launch a forward dash, damaging enemies in the user's path for double the damage of the standard attack.",
+    "技能替换": {
+      "1020102": {
+        "id": 1020302,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Charged Attack DMG",
+            "值": 1.24,
+            "削韧": 40,
+            "取消": 1.4
+          }
+        ]
+      }
+    }
   },
   {
     "id": 103001,
@@ -7478,7 +7648,47 @@
     "耐受": 25,
     "类型": "Melee Weapons",
     "攻速": 0.2,
-    "效果": "Upgrades the Greatsword Normal Attack to unleash 3 Swordwaves upon final hit, cleaving through enemies in your path for double the damage of the standard attack."
+    "效果": "Upgrades the Greatsword Normal Attack to unleash 3 Swordwaves upon final hit, cleaving through enemies in your path for double the damage of the standard attack.",
+    "技能替换": {
+      "1030101": {
+        "id": 1030201,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "1-Hit DMG",
+            "值": 1.2,
+            "削韧": 30,
+            "卡肉": 0.07,
+            "取消": 0.5945,
+            "连段": 0.8667
+          },
+          {
+            "名称": "2-Hit DMG",
+            "值": 0.7,
+            "削韧": 35,
+            "卡肉": 0.07,
+            "取消": 0.6,
+            "连段": 1.3667
+          },
+          {
+            "名称": "3-Hit DMG",
+            "值": 1.8,
+            "削韧": 70,
+            "卡肉": 0.07,
+            "取消": 1.212,
+            "连段": 1.6667
+          },
+          {
+            "名称": "Path DMG",
+            "值": 1.42,
+            "削韧": 35,
+            "取消": 1.212,
+            "连段": 1.6667
+          }
+        ]
+      }
+    }
   },
   {
     "id": 103002,
@@ -7491,7 +7701,34 @@
     "耐受": 25,
     "类型": "Melee Weapons",
     "攻击": 0.5,
-    "效果": "Upgrades the Greatsword Charged Attack to allow movement during charging while capturing controllable monsters along the path (up to 4). Spending combos extends the charging window, culminating in a powerful AoE attack upon release or timeout that deals double the damage of the standard attack."
+    "效果": "Upgrades the Greatsword Charged Attack to allow movement during charging while capturing controllable monsters along the path (up to 4). Spending combos extends the charging window, culminating in a powerful AoE attack upon release or timeout that deals double the damage of the standard attack.",
+    "技能替换": {
+      "1030102": {
+        "id": 1030202,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Path DMG",
+            "值": 0.55,
+            "削韧": 20,
+            "取消": 17.0667
+          },
+          {
+            "名称": "Charged Attack Finisher DMG",
+            "值": 2,
+            "削韧": 62,
+            "取消": 17.0667
+          },
+          {
+            "名称": "Endpoint DMG",
+            "值": 0.55,
+            "削韧": 20,
+            "取消": 17.0667
+          }
+        ]
+      }
+    }
   },
   {
     "id": 103003,
@@ -7504,7 +7741,14 @@
     "耐受": 25,
     "类型": "Melee Weapons",
     "攻击范围": 0.8,
-    "效果": "Upgrades Greatsword Normal Attack to summon rotating gears that unleash a flurry of strikes. Deals double the damage of the standard attack."
+    "效果": "Upgrades Greatsword Normal Attack to summon rotating gears that unleash a flurry of strikes. Deals double the damage of the standard attack.",
+    "技能替换": {
+      "1030101": {
+        "id": 1030301,
+        "名称": "普通攻击",
+        "类型": "武器伤害"
+      }
+    }
   },
   {
     "id": 104001,
@@ -7517,7 +7761,23 @@
     "耐受": 25,
     "类型": "Melee Weapons",
     "攻速": 0.2,
-    "效果": "Upgrades the Dual Blades Sliding Attack into a lethal dash, slashing through all enemies in your path for double the damage of the standard attack."
+    "效果": "Upgrades the Dual Blades Sliding Attack into a lethal dash, slashing through all enemies in your path for double the damage of the standard attack.",
+    "技能替换": {
+      "1040104": {
+        "id": 1040204,
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Sliding Attack DMG",
+            "值": 2.05,
+            "削韧": 66,
+            "卡肉": 0.03,
+            "取消": 0.9388
+          }
+        ]
+      }
+    }
   },
   {
     "id": 104002,
@@ -7530,7 +7790,48 @@
     "耐受": 25,
     "类型": "Melee Weapons",
     "攻速": 0.2,
-    "效果": "Upgrades Dual Blades Normal Attack to combine the blades into a returning throw. Deals double the damage of the standard attack."
+    "效果": "Upgrades Dual Blades Normal Attack to combine the blades into a returning throw. Deals double the damage of the standard attack.",
+    "技能替换": {
+      "1040101": {
+        "id": 1040201,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "1-Hit DMG",
+            "值": 0.55,
+            "削韧": 20,
+            "卡肉": 0.03,
+            "取消": 0.1667,
+            "连段": 0.2667
+          },
+          {
+            "名称": "2-Hit DMG",
+            "值": 1.2,
+            "削韧": 35,
+            "卡肉": 0.03,
+            "取消": 0.3,
+            "连段": 0.5
+          },
+          {
+            "名称": "3-Hit DMG",
+            "值": 0.55,
+            "格式": "{%}×4",
+            "削韧": 20,
+            "取消": 0.8667,
+            "连段": 1.0333
+          },
+          {
+            "名称": "4-Hit DMG",
+            "值": 0.82,
+            "格式": "{%}×5",
+            "削韧": 25,
+            "取消": 1.3,
+            "连段": 1.8667
+          }
+        ]
+      }
+    }
   },
   {
     "id": 104003,
@@ -7543,7 +7844,22 @@
     "耐受": 25,
     "类型": "Melee Weapons",
     "暴伤": 0.5,
-    "效果": "Upgrades Dual Blades Charged Attack to combine the blades and hurl them forward, damaging enemies in their path. Deals double the damage of the standard attack."
+    "效果": "Upgrades Dual Blades Charged Attack to combine the blades and hurl them forward, damaging enemies in their path. Deals double the damage of the standard attack.",
+    "技能替换": {
+      "1040102": {
+        "id": 1040202,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Charged Attack DMG",
+            "值": 0.88,
+            "削韧": 28,
+            "取消": 2
+          }
+        ]
+      }
+    }
   },
   {
     "id": 106001,
@@ -7556,7 +7872,42 @@
     "耐受": 25,
     "类型": "Melee Weapons",
     "攻击范围": 0.8,
-    "效果": "Upgrades the Katana Charged Attack. Upon striking an enemy, the character leaps into the air and slams down, dealing multiple hits to surrounding foes for double the damage of the standard attack."
+    "效果": "Upgrades the Katana Charged Attack. Upon striking an enemy, the character leaps into the air and slams down, dealing multiple hits to surrounding foes for double the damage of the standard attack.",
+    "技能替换": {
+      "1060102": {
+        "id": 1060202,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Charged Thrust Damage",
+            "值": 0.75,
+            "格式": "{%}×3",
+            "削韧": 5,
+            "卡肉": 0.03,
+            "取消": 0.9357,
+            "连段": 0.9
+          },
+          {
+            "名称": "Charged Attack DMG",
+            "值": 0.64,
+            "格式": "{%}×8",
+            "削韧": 6,
+            "卡肉": 0.03,
+            "连段": 1.09
+          },
+          {
+            "名称": "Charged Attack Finisher DMG",
+            "值": 1.9,
+            "削韧": 15,
+            "延迟": 1.392,
+            "卡肉": 0.03,
+            "取消": 3.1667,
+            "连段": 4.6346
+          }
+        ]
+      }
+    }
   },
   {
     "id": 150401,
@@ -7585,7 +7936,53 @@
       52005
     ],
     "攻击范围": 1.2,
-    "效果": "Upgrades the Polearm Normal Attack to summon phantom spears that strike the target. Deals 200.0% more damage than the standard attack."
+    "效果": "Upgrades the Polearm Normal Attack to summon phantom spears that strike the target. Deals 200.0% more damage than the standard attack.",
+    "技能替换": {
+      "1020101": {
+        "id": 1020201,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "1-Hit DMG",
+            "值": 1.1,
+            "削韧": 25,
+            "卡肉": 0.03,
+            "取消": 0.4,
+            "连段": 0.4667
+          },
+          {
+            "名称": "2-Hit DMG",
+            "值": 1.2,
+            "格式": "{%}×2",
+            "削韧": 25,
+            "卡肉": 0.03,
+            "取消": 0.6,
+            "连段": 1.0333
+          },
+          {
+            "名称": "3-Hit DMG",
+            "值": 0.5,
+            "值2": 1.5,
+            "格式": "{%}×2+{%}",
+            "削韧": 40,
+            "卡肉": 0.1,
+            "取消": 0.9667,
+            "连段": 0.9667
+          },
+          {
+            "名称": "4-Hit DMG",
+            "值": 0.3,
+            "值2": 3.7,
+            "格式": "{%}+{%}",
+            "削韧": 150,
+            "卡肉": 0.1,
+            "取消": 1.1667,
+            "连段": 2.1
+          }
+        ]
+      }
+    }
   },
   {
     "id": 203001,
@@ -7602,7 +7999,47 @@
       52005
     ],
     "攻速": 0.3,
-    "效果": "Upgrades the Greatsword Normal Attack to unleash 3 Swordwaves on the final hit, cleaving through enemies in its path. Deals 200.0% more damage than the standard attack."
+    "效果": "Upgrades the Greatsword Normal Attack to unleash 3 Swordwaves on the final hit, cleaving through enemies in its path. Deals 200.0% more damage than the standard attack.",
+    "技能替换": {
+      "1030101": {
+        "id": 1030201,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "1-Hit DMG",
+            "值": 1.2,
+            "削韧": 30,
+            "卡肉": 0.07,
+            "取消": 0.5945,
+            "连段": 0.8667
+          },
+          {
+            "名称": "2-Hit DMG",
+            "值": 0.7,
+            "削韧": 35,
+            "卡肉": 0.07,
+            "取消": 0.6,
+            "连段": 1.3667
+          },
+          {
+            "名称": "3-Hit DMG",
+            "值": 1.8,
+            "削韧": 70,
+            "卡肉": 0.07,
+            "取消": 1.212,
+            "连段": 1.6667
+          },
+          {
+            "名称": "Path DMG",
+            "值": 1.42,
+            "削韧": 35,
+            "取消": 1.212,
+            "连段": 1.6667
+          }
+        ]
+      }
+    }
   },
   {
     "id": 204001,
@@ -7619,6 +8056,22 @@
       52005
     ],
     "攻速": 0.3,
-    "效果": "Upgrades the Dual Blades Sliding Attack into a lethal dash, slashing through all enemies in its path. Deals 200.0% more damage than the standard attack."
+    "效果": "Upgrades the Dual Blades Sliding Attack into a lethal dash, slashing through all enemies in its path. Deals 200.0% more damage than the standard attack.",
+    "技能替换": {
+      "1040104": {
+        "id": 1040204,
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Sliding Attack DMG",
+            "值": 2.05,
+            "削韧": 66,
+            "卡肉": 0.03,
+            "取消": 0.9388
+          }
+        ]
+      }
+    }
   }
 ]

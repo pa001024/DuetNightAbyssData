@@ -143,7 +143,8 @@
               10.4,
               11.17,
               11.94
-            ]
+            ],
+            "削韧": 25
           },
           {
             "名称": "Rayon des dégâts",
@@ -603,7 +604,8 @@
               0.37,
               0.39,
               0.41
-            ]
+            ],
+            "削韧": 15
           },
           {
             "名称": "Dégâts du 2ᵉ coup",
@@ -621,7 +623,8 @@
               0.47,
               0.5,
               0.53
-            ]
+            ],
+            "削韧": 15
           },
           {
             "名称": "Dégâts du 3ᵉ coup",
@@ -639,7 +642,8 @@
               0.53,
               0.56,
               0.59
-            ]
+            ],
+            "削韧": 25
           },
           {
             "名称": "Dégâts du 4ᵉ coup",
@@ -657,7 +661,8 @@
               0.71,
               0.75,
               0.79
-            ]
+            ],
+            "削韧": 30
           },
           {
             "名称": "Dégâts du 5ᵉ coup",
@@ -675,7 +680,8 @@
               0.78,
               0.82,
               0.86
-            ]
+            ],
+            "削韧": 40
           },
           {
             "名称": "Rayon des dégâts de combo",
@@ -685,11 +691,13 @@
           },
           {
             "名称": "Dégâts d’attaque chargée",
-            "值": 1.13
+            "值": 1.13,
+            "削韧": 73
           },
           {
             "名称": "Dégâts d’attaque en glissade",
-            "值": 0.51
+            "值": 0.51,
+            "削韧": 33
           },
           {
             "名称": "Dégâts de la 1ʳᵉ onde tranchante",
@@ -707,7 +715,8 @@
               4.16,
               4.39,
               4.62
-            ]
+            ],
+            "削韧": 15
           },
           {
             "名称": "Dégâts de la 2ᵉ onde tranchante",
@@ -725,7 +734,8 @@
               5.2,
               5.49,
               5.78
-            ]
+            ],
+            "削韧": 15
           },
           {
             "名称": "Dégâts de la 3ᵉ onde tranchante",
@@ -743,7 +753,8 @@
               5.88,
               6.21,
               6.54
-            ]
+            ],
+            "削韧": 15
           },
           {
             "名称": "Dégâts de la 4ᵉ onde tranchante",
@@ -761,7 +772,8 @@
               7.96,
               8.4,
               8.84
-            ]
+            ],
+            "削韧": 15
           },
           {
             "名称": "Dégâts de la 5ᵉ onde tranchante",
@@ -779,7 +791,8 @@
               8.66,
               9.14,
               9.62
-            ]
+            ],
+            "削韧": 15
           },
           {
             "名称": "Dégâts de l’onde tranchante",
@@ -797,7 +810,8 @@
               4.16,
               4.39,
               4.62
-            ]
+            ],
+            "削韧": 15
           },
           {
             "名称": "Largeur de l’onde tranchante",
@@ -1297,7 +1311,9 @@
               4.79,
               5.14,
               5.49
-            ]
+            ],
+            "削韧": 25,
+            "取消": 1
           },
           {
             "名称": "[Recitativo]Rayon des dégâts",
@@ -1309,7 +1325,9 @@
             "名称": "[Recitativo]Durée d’[Adagio]",
             "影响": "技能耐久",
             "值": 8,
-            "格式": "{}s"
+            "格式": "{}s",
+            "削韧": 25,
+            "取消": 1
           },
           {
             "名称": "[Aria]Coût en Lucidité",
@@ -1333,7 +1351,9 @@
               7.53,
               8.09,
               8.65
-            ]
+            ],
+            "削韧": 25,
+            "取消": 0.5
           },
           {
             "名称": "[Aria]Augmentation de la Portée de compétence de [Presto]",
@@ -1407,7 +1427,8 @@
           {
             "id": 110311,
             "类型": "Dégâts",
-            "icon": "Tuosi01_2"
+            "icon": "Tuosi01_2",
+            "名称": "Aria"
           }
         ]
       },
@@ -1684,7 +1705,8 @@
               21.74,
               23.35,
               24.96
-            ]
+            ],
+            "削韧": 25
           },
           {
             "名称": "Dégâts du 2ᵉ coup de [Griffes sauvages]",
@@ -1702,7 +1724,8 @@
               21.74,
               23.35,
               24.96
-            ]
+            ],
+            "削韧": 25
           },
           {
             "名称": "Dégâts du 3ᵉ coup de [Griffes sauvages]",
@@ -1720,7 +1743,8 @@
               14.49,
               15.56,
               16.63
-            ]
+            ],
+            "削韧": 15
           },
           {
             "名称": "Dégâts du 4ᵉ coup de [Griffes sauvages]",
@@ -1738,7 +1762,8 @@
               56.16,
               60.32,
               64.48
-            ]
+            ],
+            "削韧": 100
           },
           {
             "名称": "Dégâts d’attaque plongeante de [Griffes sauvages]",
@@ -1756,7 +1781,8 @@
               57.96,
               62.25,
               66.54
-            ]
+            ],
+            "削韧": 50
           },
           {
             "名称": "Rayon des dégâts de [Griffes sauvages]",
@@ -1780,7 +1806,8 @@
               12.74,
               13.68,
               14.62
-            ]
+            ],
+            "削韧": 15
           },
           {
             "名称": "Longueur du rayon d’énergie de [Hurlement funèbre]",
@@ -1885,7 +1912,8 @@
             "id": 110321,
             "类型": "Bonus",
             "icon": "Tuosi02_Off",
-            "cd": 3
+            "cd": 3,
+            "名称": "Duo"
           }
         ]
       },
@@ -2357,7 +2385,8 @@
               21.47,
               22.95
             ],
-            "格式": "{%}×3+{%}"
+            "格式": "{%}×3+{%}",
+            "削韧": 80
           },
           {
             "名称": "Rayon des dégâts",
@@ -2756,7 +2785,9 @@
               6.97,
               7.36,
               7.75
-            ]
+            ],
+            "削韧": 25,
+            "取消": 2
           },
           {
             "名称": "[Samaël]Dégâts du 2ᵉ coup",
@@ -2774,7 +2805,9 @@
               8.14,
               8.59,
               9.04
-            ]
+            ],
+            "削韧": 25,
+            "取消": 2
           },
           {
             "名称": "[Samaël]Dégâts du 3ᵉ coup",
@@ -2793,7 +2826,9 @@
               4.3,
               4.53
             ],
-            "格式": "{%}×2"
+            "格式": "{%}×2",
+            "削韧": 15,
+            "取消": 2
           },
           {
             "名称": "[Samaël]Dégâts du 4ᵉ coup",
@@ -2826,7 +2861,9 @@
               11.96,
               12.59
             ],
-            "格式": "{%}+{%}"
+            "格式": "{%}+{%}",
+            "削韧": 80,
+            "取消": 2
           },
           {
             "名称": "[Samaël]Rayon des dégâts de combo",
@@ -2835,11 +2872,15 @@
           },
           {
             "名称": "[Samaël]Dégâts d’attaque plongeante",
-            "值": 0.51
+            "值": 0.51,
+            "削韧": 33,
+            "取消": 2
           },
           {
             "名称": "[Samaël]Dégâts d’attaque en glissade",
-            "值": 0.73
+            "值": 0.73,
+            "削韧": 47,
+            "取消": 2
           },
           {
             "名称": "[Samaël]Dégâts d’attaque chargée",
@@ -2857,7 +2898,9 @@
               17.03,
               17.98,
               18.93
-            ]
+            ],
+            "削韧": 80,
+            "取消": 2
           },
           {
             "名称": "[Samaël]Dégâts d’attaque chargée (niveau S)",
@@ -2890,7 +2933,9 @@
               17.98,
               18.93
             ],
-            "格式": "{%}+{%}"
+            "格式": "{%}+{%}",
+            "削韧": 80,
+            "取消": 2
           },
           {
             "名称": "[Samaël]Zone d’effet des dégâts de l’attaque chargée",
@@ -2936,7 +2981,8 @@
               14.35,
               15.41,
               16.47
-            ]
+            ],
+            "削韧": 30
           },
           {
             "名称": "Rayon des Dégâts de compétence",
@@ -3007,7 +3053,8 @@
             "id": 150121,
             "类型": "Bonus",
             "icon": "Baonu02_Off",
-            "cd": 2.5
+            "cd": 2.5,
+            "名称": "Tension"
           }
         ]
       },
@@ -3120,7 +3167,8 @@
               6,
               6.44,
               6.88
-            ]
+            ],
+            "削韧": 45
           },
           {
             "名称": "Rayon des dégâts",
@@ -3501,7 +3549,9 @@
               34,
               36.52,
               39.04
-            ]
+            ],
+            "削韧": 100,
+            "取消": 1
           },
           {
             "名称": "[Éclipse solaire]Rayon de dégâts",
@@ -3525,7 +3575,9 @@
               34,
               36.52,
               39.04
-            ]
+            ],
+            "削韧": 100,
+            "取消": 1
           },
           {
             "名称": "[Chasse lunaire]Rayon de dégâts",
@@ -3541,7 +3593,9 @@
           {
             "名称": "[Éclipse solaire]Durée de la réduction d’ATQ",
             "值": 3,
-            "格式": "{}s"
+            "格式": "{}s",
+            "削韧": 100,
+            "取消": 1
           },
           {
             "名称": "[Chasse lunaire]Réduction de la Vitesse de déplacement",
@@ -3551,7 +3605,9 @@
           {
             "名称": "[Chasse lunaire]Durée de la réduction de Vitesse de déplacement",
             "值": 3,
-            "格式": "{}s"
+            "格式": "{}s",
+            "削韧": 100,
+            "取消": 1
           }
         ],
         "升级": [
@@ -3615,7 +3671,8 @@
           {
             "id": 150211,
             "类型": "Dégâts",
-            "icon": "Nifu01_2"
+            "icon": "Nifu01_2",
+            "名称": "Éclipse solaire"
           },
           {
             "id": 150212,
@@ -4634,7 +4691,9 @@
               11.15,
               11.98,
               12.81
-            ]
+            ],
+            "削韧": 30,
+            "取消": 1.6346
           },
           {
             "名称": "[Ciel tranché par la lumière]Augmentation de la Portée d’attaque de [Phanolame]",
@@ -4663,7 +4722,9 @@
               1.95,
               2.09,
               2.23
-            ]
+            ],
+            "削韧": 10,
+            "取消": 1.6346
           },
           {
             "名称": "[Ciel tranché par la lumière]Coefficient d’application des [Phanoplumes]",
@@ -4699,7 +4760,9 @@
               21.07,
               22.63,
               24.19
-            ]
+            ],
+            "削韧": 100,
+            "取消": 1.016
           },
           {
             "名称": "[Plumes chassant la poussière des songes]Rayon de dégâts",
@@ -4722,7 +4785,9 @@
               1.81,
               1.94,
               2.07
-            ]
+            ],
+            "削韧": 15,
+            "取消": 1.6346
           },
           {
             "名称": "[Ciel tranché par la lumière]Dégâts des Attaques normales avec arme d’hast",
@@ -4739,7 +4804,9 @@
               2.06,
               2.21,
               2.36
-            ]
+            ],
+            "削韧": 20,
+            "取消": 1.6346
           },
           {
             "名称": "[Ciel tranché par la lumière]Dégâts des Attaques normales avec espadon",
@@ -4756,7 +4823,9 @@
               1.89,
               2.03,
               2.17
-            ]
+            ],
+            "削韧": 30,
+            "取消": 1.6346
           },
           {
             "名称": "[Ciel tranché par la lumière]Dégâts des Attaques normales avec doubles lames",
@@ -4773,7 +4842,9 @@
               1.09,
               1.17,
               1.25
-            ]
+            ],
+            "削韧": 20,
+            "取消": 1.6346
           },
           {
             "名称": "[Ciel tranché par la lumière]Dégâts d’attaque plongeante/de glissade/chargée",
@@ -4790,7 +4861,9 @@
               0.12,
               0.13,
               0.14
-            ]
+            ],
+            "削韧": 80,
+            "取消": 1.6346
           },
           {
             "名称": "[Ciel tranché par la lumière]Dégâts lors du changement de mode d’arme",
@@ -4807,7 +4880,9 @@
               3.8,
               4.08,
               4.36
-            ]
+            ],
+            "削韧": 60,
+            "取消": 1.6346
           }
         ],
         "升级": [
@@ -4874,7 +4949,8 @@
             "id": 150321,
             "类型": "Bonus",
             "icon": "Kezhou02_Off",
-            "cd": 3
+            "cd": 3,
+            "名称": "Phanolame"
           }
         ]
       },
@@ -5331,7 +5407,8 @@
           {
             "名称": "Dégâts",
             "影响": "技能威力",
-            "值": 1
+            "值": 1,
+            "削韧": 50
           }
         ]
       },
@@ -5528,7 +5605,8 @@
               14.39,
               15.46,
               16.53
-            ]
+            ],
+            "削韧": 40
           },
           {
             "名称": "Largeur de l’onde tranchante",
@@ -5706,7 +5784,8 @@
               21.15,
               22.72,
               24.29
-            ]
+            ],
+            "削韧": 150
           },
           {
             "名称": "Rayon des dégâts",
@@ -5864,7 +5943,8 @@
               7.05,
               7.61,
               8.17
-            ]
+            ],
+            "削韧": 40
           },
           {
             "名称": "Rayon des dégâts",
@@ -6208,7 +6288,8 @@
               1.26,
               1.35,
               1.44
-            ]
+            ],
+            "削韧": 40
           },
           {
             "名称": "Rayon des dégâts",
@@ -6232,13 +6313,15 @@
               1.85,
               1.99,
               2.13
-            ]
+            ],
+            "削韧": 65
           },
           {
             "名称": "Durée de la réduction de Vitesse de déplacement",
             "影响": "技能耐久",
             "值": 12,
-            "格式": "{}s"
+            "格式": "{}s",
+            "削韧": 40
           }
         ],
         "升级": [
@@ -6625,7 +6708,8 @@
             "id": 180121,
             "类型": "Bonus",
             "icon": "Feina02_Off",
-            "cd": 0.8
+            "cd": 0.8,
+            "名称": "Goûter endiablé"
           }
         ]
       },
@@ -7038,7 +7122,8 @@
               23.08,
               24.79,
               26.5
-            ]
+            ],
+            "削韧": 15
           },
           {
             "名称": "Rayon des dégâts d’invocation",
@@ -7103,7 +7188,15 @@
         ],
         "术语解释": {
           "Invocation : Aurelia": "Hérite de 100 % des statistiques de Rebecca et attaque continuellement les ennemis proches, infligeant des Dégâts Hydro."
-        }
+        },
+        "子技能": [
+          {
+            "id": 210112,
+            "类型": "",
+            "icon": "",
+            "名称": "Invocation : Aurelia"
+          }
+        ]
       },
       {
         "id": 210102,
@@ -7193,7 +7286,8 @@
               27.69,
               29.74,
               31.79
-            ]
+            ],
+            "削韧": 100
           },
           {
             "名称": "Bonus de dégâts par cumul de [Venin de l’amour]",
@@ -7839,7 +7933,8 @@
               1.7,
               1.83,
               1.96
-            ]
+            ],
+            "削韧": 15
           },
           {
             "名称": "Durée d’invocation",
@@ -8027,7 +8122,8 @@
               1.7,
               1.83,
               1.96
-            ]
+            ],
+            "削韧": 15
           },
           {
             "名称": "Durée d’invocation",
@@ -8347,7 +8443,8 @@
               6.67,
               7.16,
               7.65
-            ]
+            ],
+            "削韧": 15
           },
           {
             "名称": "Rayon d’effet des Invocations",
@@ -8443,7 +8540,18 @@
         ],
         "术语解释": {
           "Invocation : Yunchi": "Hérite de 100 % des statistiques de Fushu et inflige des Dégâts Hydro chaque seconde aux 5 ennemis les plus proches.\nToutes les 3 s, [Yunchi] soigne les alliés proches et leur restaure de la Lucidité."
-        }
+        },
+        "子技能": [
+          {
+            "id": 240111,
+            "名称": "Invocation : Yunchi",
+            "类型": "Invocation",
+            "icon": "Baiheng01",
+            "术语解释": {
+              "Invocation : Yunchi": "Hérite de 100 % des statistiques de Fushu et inflige des Dégâts Hydro chaque seconde aux 5 ennemis les plus proches.\nToutes les 3 s, [Yunchi] soigne les alliés proches et leur restaure de la Lucidité."
+            }
+          }
+        ]
       },
       {
         "id": 240102,
@@ -8670,7 +8778,8 @@
               15.68,
               16.84,
               18
-            ]
+            ],
+            "削韧": 100
           },
           {
             "名称": "Rayon des dégâts de [Symbiose parfaite]",
@@ -9152,7 +9261,8 @@
               5.83,
               6.26,
               6.69
-            ]
+            ],
+            "削韧": 15
           },
           {
             "名称": "Rayon des dégâts",
@@ -9163,7 +9273,8 @@
           {
             "名称": "Durée de [Lacération]",
             "值": 8,
-            "格式": "{}s"
+            "格式": "{}s",
+            "削韧": 15
           },
           {
             "名称": "Dégâts de [Lacération]",
@@ -9245,7 +9356,15 @@
         ],
         "术语解释": {
           "Lacération": "Lorsque la cible subit des DGT d’arme à distance de la part de [Lynn], le compteur de [Plaie lacérée] augmente de 1.\nLorsque la durée de l’effet expire, la cible subit des Dégâts Pyro équivalent à :\n[Compteur de Plaie lacérée] × Dégâts de base de [Lacération]."
-        }
+        },
+        "子技能": [
+          {
+            "id": 310111,
+            "类型": "Dégâts",
+            "icon": "Linen01",
+            "名称": "Lacération"
+          }
+        ]
       },
       {
         "id": 310102,
@@ -9344,7 +9463,8 @@
               2.53,
               2.67,
               2.81
-            ]
+            ],
+            "削韧": 1
           },
           {
             "名称": "Portée de tir maximale",
@@ -9776,7 +9896,8 @@
               2.08,
               2.23,
               2.38
-            ]
+            ],
+            "削韧": 33
           },
           {
             "名称": "Chance de régénération de Lucidité",
@@ -9996,7 +10117,8 @@
               10.55,
               11.33,
               12.11
-            ]
+            ],
+            "削韧": 33
           },
           {
             "名称": "Rayon des dégâts",
@@ -10020,7 +10142,8 @@
               6.88,
               7.39,
               7.9
-            ]
+            ],
+            "削韧": 33
           },
           {
             "名称": "Dégâts du [Crassinator lourd]",
@@ -10038,7 +10161,8 @@
               10.63,
               11.42,
               12.21
-            ]
+            ],
+            "削韧": 33
           },
           {
             "名称": "Rayon de ciblage du [Crassinator]",
@@ -10431,7 +10555,8 @@
               15.1,
               16.22,
               17.34
-            ]
+            ],
+            "削韧": 120
           },
           {
             "名称": "Dégâts de [P’tit Boum : signé Oliver]",
@@ -10449,7 +10574,8 @@
               25.1,
               26.96,
               28.82
-            ]
+            ],
+            "削韧": 20
           },
           {
             "名称": "Longueur de la zone en croix",
@@ -10521,7 +10647,134 @@
         "术语解释": {
           "P’tit Boum : signé Yale": "Inflige un plus fort affaiblissement de la posture. Plus l’écart entre sa Puissance de compétence et sa Portée de compétence est élevé, plus la probabilité d’obtenir un [P’tit Boum : signé Yale] augmente. \nSi l’écart est supérieur ou égal à 50 %, un [P’tit Boum : signé Yale] est garanti.",
           "P’tit Boum : signé Oliver": "Inflige davantage de dégâts. Plus l’écart entre sa Portée de compétence et sa Puissance de compétence est élevé, plus la probabilité d’obtenir un [P’tit Boum : signé Oliver] augmente.\nSi l’écart est supérieur ou égal à 50 %, un [P’tit Boum : signé Oliver] est garanti."
-        }
+        },
+        "子技能": [
+          {
+            "id": 310311,
+            "名称": "P’tit Boum : signé Yale",
+            "类型": "Dégâts",
+            "描述": "Lance 1 bombe appelée [P’tit Boum], qui sera soit un [P’tit Boum : signé Yale], soit un [P’tit Boum : signé Oliver].\nÀ l’atterrissage, elle explose après 2 s, infligeant des Dégâts Pyro dans une zone en croix et déclenchant toutes les autres bombes [P’tit Boum] à portée.\nJusqu’à 10 [P’tit Boum] peuvent être présents simultanément.",
+            "icon": "Yeer01",
+            "e": [
+              {
+                "id": 310313,
+                "t": [
+                  {
+                    "ba": "ATK_Char",
+                    "fn": "Damage",
+                    "r": [
+                      5.02,
+                      6.14,
+                      7.26,
+                      8.38,
+                      9.5,
+                      10.62,
+                      11.74,
+                      12.86,
+                      13.98,
+                      15.1,
+                      16.22,
+                      17.34
+                    ]
+                  },
+                  {
+                    "fn": "CutToughness",
+                    "v": 120
+                  }
+                ]
+              },
+              {
+                "id": 310315,
+                "t": [
+                  {
+                    "ba": "ATK_Char",
+                    "fn": "Damage",
+                    "r": [
+                      8.36,
+                      10.22,
+                      12.08,
+                      13.94,
+                      15.8,
+                      17.66,
+                      19.52,
+                      21.38,
+                      23.24,
+                      25.1,
+                      26.96,
+                      28.82
+                    ]
+                  },
+                  {
+                    "fn": "CutToughness",
+                    "v": 20
+                  }
+                ]
+              }
+            ],
+            "字段": [
+              {
+                "名称": "Coût en Lucidité",
+                "影响": "技能效益",
+                "值": 15,
+                "格式": "{}"
+              },
+              {
+                "名称": "Dégâts de [P’tit Boum : signé Yale]",
+                "影响": "技能威力",
+                "值": [
+                  5.02,
+                  6.14,
+                  7.26,
+                  8.38,
+                  9.5,
+                  10.62,
+                  11.74,
+                  12.86,
+                  13.98,
+                  15.1,
+                  16.22,
+                  17.34
+                ],
+                "削韧": 120
+              },
+              {
+                "名称": "Dégâts de [P’tit Boum : signé Oliver]",
+                "影响": "技能威力",
+                "值": [
+                  8.36,
+                  10.22,
+                  12.08,
+                  13.94,
+                  15.8,
+                  17.66,
+                  19.52,
+                  21.38,
+                  23.24,
+                  25.1,
+                  26.96,
+                  28.82
+                ],
+                "削韧": 20
+              },
+              {
+                "名称": "Longueur de la zone en croix",
+                "影响": "技能范围",
+                "值": 15,
+                "格式": "{}m"
+              },
+              {
+                "名称": "Largeur de la zone en croix",
+                "影响": "技能范围",
+                "值": 4,
+                "格式": "{}m"
+              }
+            ],
+            "术语解释": {
+              "P’tit Boum : signé Yale": "Inflige un plus fort affaiblissement de la posture. Plus l’écart entre sa Puissance de compétence et sa Portée de compétence est élevé, plus la probabilité d’obtenir un [P’tit Boum : signé Yale] augmente. \nSi l’écart est supérieur ou égal à 50 %, un [P’tit Boum : signé Yale] est garanti.",
+              "P’tit Boum : signé Oliver": "Inflige davantage de dégâts. Plus l’écart entre sa Portée de compétence et sa Puissance de compétence est élevé, plus la probabilité d’obtenir un [P’tit Boum : signé Oliver] augmente.\nSi l’écart est supérieur ou égal à 50 %, un [P’tit Boum : signé Oliver] est garanti."
+            }
+          }
+        ]
       },
       {
         "id": 310302,
@@ -10635,7 +10888,9 @@
               20.9,
               22.45,
               24
-            ]
+            ],
+            "削韧": 25,
+            "取消": 5.6854
           },
           {
             "名称": "[Labo des cauchemars]Multiplicateur de dégâts supplémentaire par [P’tit Boum] déclenché",
@@ -10723,7 +10978,8 @@
             "id": 310321,
             "类型": "Dégâts",
             "icon": "Yeer02_Off",
-            "cd": 2.3
+            "cd": 2.3,
+            "名称": "Labo des cauchemars"
           }
         ]
       },
@@ -11333,7 +11589,8 @@
               398,
               425
             ],
-            "格式": "{%}PV max+{}"
+            "格式": "{%}PV max+{}",
+            "削韧": 10
           },
           {
             "名称": "[Châtiment transperçant]Rayon de dégâts",
@@ -11498,7 +11755,8 @@
               340,
               363
             ],
-            "格式": "{%}PV max+{}"
+            "格式": "{%}PV max+{}",
+            "削韧": 100
           },
           {
             "名称": "Rayon des dégâts",
@@ -11509,7 +11767,8 @@
           {
             "名称": "Durée de Provocation",
             "值": 5,
-            "格式": "{}s"
+            "格式": "{}s",
+            "削韧": 100
           }
         ],
         "升级": [
@@ -11883,7 +12142,8 @@
           {
             "名称": "Dégâts de [Rafale pourpre]",
             "影响": "技能威力",
-            "值": 1
+            "值": 1,
+            "削韧": 25
           },
           {
             "名称": "Zone d’effet de [Rafale pourpre]",
@@ -11956,7 +12216,15 @@
         ],
         "术语解释": {
           "Ébriété": "La Vitesse de compétence est augmentée. Les [Lames tournoyantes] volent plus vite et leur durée est suspendue. Confère une immunité aux interruptions. Tous les cumuls d’[Ébriété] sont dissipés lorsque [Rafale pourpre] se termine."
-        }
+        },
+        "子技能": [
+          {
+            "id": 320211,
+            "名称": "Ébriété",
+            "类型": "Dégâts",
+            "icon": "Haier01"
+          }
+        ]
       },
       {
         "id": 320202,
@@ -11993,7 +12261,8 @@
           {
             "名称": "Dégâts des [Lames tournoyantes]",
             "影响": "技能威力",
-            "值": 0.15
+            "值": 0.15,
+            "削韧": 1
           },
           {
             "名称": "Durée des [Lames tournoyantes]",
@@ -12377,12 +12646,14 @@
               4.63,
               4.97,
               5.31
-            ]
+            ],
+            "削韧": 5
           },
           {
             "名称": "Durée d’Étourdissement",
             "值": 2,
-            "格式": "{}s"
+            "格式": "{}s",
+            "削韧": 5
           },
           {
             "名称": "Nombre max de cibles",
@@ -12581,7 +12852,8 @@
               3.78,
               4.06,
               4.34
-            ]
+            ],
+            "削韧": 30
           },
           {
             "名称": "Rayon de l’explosion",
@@ -12605,7 +12877,8 @@
               5.56,
               5.97,
               6.38
-            ]
+            ],
+            "削韧": 30
           },
           {
             "名称": "Rayon de l’explosion renforcée",
@@ -12658,7 +12931,8 @@
               3.7,
               3.97,
               4.24
-            ]
+            ],
+            "削韧": 30
           },
           {
             "名称": "Zone d’effet des dégâts supplémentaires",
@@ -13126,7 +13400,8 @@
               11.62,
               12.48,
               13.34
-            ]
+            ],
+            "削韧": 33
           },
           {
             "名称": "Bonus de dégâts lors de la consommation d’[Énergie électrique]",
@@ -13144,7 +13419,8 @@
               19.37,
               20.8,
               22.23
-            ]
+            ],
+            "削韧": 33
           },
           {
             "名称": "Bonus de dégâts infligés",
@@ -13406,7 +13682,8 @@
               12.5,
               13.43,
               14.36
-            ]
+            ],
+            "削韧": 90
           },
           {
             "名称": "Rayon des dégâts",
@@ -13435,7 +13712,9 @@
               3.87,
               4.16,
               4.45
-            ]
+            ],
+            "削韧": 33,
+            "取消": 1.0925
           },
           {
             "名称": "[Charge statique]Rayon d’effet de [Charge positive]",
@@ -13458,7 +13737,8 @@
               37.18,
               39.93,
               42.68
-            ]
+            ],
+            "削韧": 33
           },
           {
             "名称": "Augmentation de la Vitesse de déplacement",
@@ -13468,7 +13748,8 @@
             "名称": "[Charge statique]Durée de [Charge statique]",
             "影响": "技能耐久",
             "值": 6,
-            "格式": "{}s"
+            "格式": "{}s",
+            "削韧": 33
           }
         ],
         "升级": [
@@ -13534,7 +13815,8 @@
             "id": 410121,
             "类型": "Bonus",
             "icon": "Lise02_Off",
-            "cd": 2
+            "cd": 2,
+            "名称": "Surtension"
           }
         ]
       },
@@ -13865,7 +14147,9 @@
               6.24,
               6.7,
               7.16
-            ]
+            ],
+            "削韧": 100,
+            "取消": 5.6339
           },
           {
             "名称": "[Révélation céleste : Zhen]Rayon des dégâts de [Révélation céleste : Zhen]",
@@ -13889,7 +14173,9 @@
               10.4,
               11.17,
               11.94
-            ]
+            ],
+            "削韧": 100,
+            "取消": 1.1859
           },
           {
             "名称": "[Révélation céleste : Xun]Rayon des dégâts de [Révélation céleste : Xun]",
@@ -14209,7 +14495,9 @@
               15.19,
               16.32,
               17.45
-            ]
+            ],
+            "削韧": 100,
+            "取消": 1.281
           },
           {
             "名称": "[Divination cosmique]Rayon des dégâts de [Divination cosmique]",
@@ -14233,7 +14521,9 @@
               48.88,
               52.5,
               56.12
-            ]
+            ],
+            "削韧": 100,
+            "取消": 1.889
           },
           {
             "名称": "[Voix du tonnerre]Zone d’effet de [Voix du tonnerre]",
@@ -14273,7 +14563,9 @@
               45.7,
               48.85
             ],
-            "格式": "{%}×3+{%}"
+            "格式": "{%}×3+{%}",
+            "削韧": 100,
+            "取消": 4.8465
           },
           {
             "名称": "[Convergence primordiale]Rayon des dégâts de [Convergence primordiale]",
@@ -14309,7 +14601,9 @@
               19.64,
               21.09,
               22.54
-            ]
+            ],
+            "削韧": 100,
+            "取消": 4.8465
           },
           {
             "名称": "[Convergence primordiale]Rayon des dégâts de [Convergence Zhen-Xun]",
@@ -14333,7 +14627,9 @@
               21.82,
               23.44,
               25.06
-            ]
+            ],
+            "削韧": 25,
+            "取消": 1.5084
           },
           {
             "名称": "[Clarté du destin]Rayon des dégâts de [Clarté du destin]",
@@ -14428,17 +14724,20 @@
           {
             "id": 410221,
             "类型": "Dégâts",
-            "icon": "Zhiliu02_2"
+            "icon": "Zhiliu02_2",
+            "名称": "Voix du tonnerre"
           },
           {
             "id": 410222,
             "类型": "Dégâts",
-            "icon": "Zhiliu02_3"
+            "icon": "Zhiliu02_3",
+            "名称": "Convergence primordiale"
           },
           {
             "id": 410223,
             "类型": "Bonus",
-            "icon": "Zhiliu02_4"
+            "icon": "Zhiliu02_4",
+            "名称": "Clarté du destin"
           }
         ]
       },
@@ -14849,7 +15148,8 @@
               4,
               4.23,
               4.46
-            ]
+            ],
+            "削韧": 50
           },
           {
             "名称": "Dégâts de [Fracas astral]",
@@ -14866,7 +15166,8 @@
               19.99,
               21.47,
               22.95
-            ]
+            ],
+            "削韧": 50
           },
           {
             "名称": "Rayon des dégâts de [Fracas étoilé]/[Fracas astral]",
@@ -14890,7 +15191,8 @@
               4.29,
               4.61,
               4.93
-            ]
+            ],
+            "削韧": 33
           },
           {
             "名称": "Rayon des dégâts de [Tonnerres impétueux]",
@@ -15144,7 +15446,8 @@
               51.4,
               55.21,
               59.02
-            ]
+            ],
+            "削韧": 33
           },
           {
             "名称": "Rayon des Dégâts de compétence",
@@ -15171,7 +15474,7 @@
             "格式": "{%}PV max"
           },
           {
-            "名称": "Rayon d’effet de [Fureur foudroyante]",
+            "名称": "[酣战]效果半径",
             "影响": "技能范围",
             "值": 20,
             "格式": "{}m"
@@ -15741,7 +16044,8 @@
               67,
               72
             ],
-            "格式": "{%}DÉF+{}"
+            "格式": "{%}DÉF+{}",
+            "削韧": 100
           },
           {
             "名称": "Rayon d’effet",
@@ -15837,7 +16141,8 @@
             "id": 420211,
             "类型": "DÉF",
             "icon": "Landi01_Off",
-            "cd": 2
+            "cd": 2,
+            "名称": "Barrière"
           }
         ]
       },
@@ -15965,7 +16270,9 @@
               100,
               107
             ],
-            "格式": "{%}DÉF+{}"
+            "格式": "{%}DÉF+{}",
+            "削韧": 100,
+            "取消": 2.6667
           },
           {
             "名称": "[Choc]Octroie un Ultra-bouclier",
@@ -16462,7 +16769,8 @@
               113,
               121
             ],
-            "格式": "{%}PV max+{}"
+            "格式": "{%}PV max+{}",
+            "削韧": 100
           },
           {
             "名称": "Rayon des dégâts d’[Usurpation divine]",
@@ -16501,7 +16809,8 @@
               86,
               92
             ],
-            "格式": "{%}PV max+{}"
+            "格式": "{%}PV max+{}",
+            "削韧": 15
           },
           {
             "名称": "Rayon de la zone de [Châtiment de la Légion]",
@@ -16773,7 +17082,8 @@
               16,
               17
             ],
-            "格式": "{%}PV max+{}"
+            "格式": "{%}PV max+{}",
+            "取消": 1.3333
           },
           {
             "名称": "[Invocation : Orbe chaotique]Dégâts de liaison renforcés",
@@ -16806,7 +17116,8 @@
               38,
               41
             ],
-            "格式": "{%}PV max+{}"
+            "格式": "{%}PV max+{}",
+            "取消": 1.3333
           },
           {
             "名称": "[Invocation : Orbe chaotique]Taux de transfert des dégâts",
@@ -16843,7 +17154,8 @@
               199,
               213
             ],
-            "格式": "{%}PV max+{}"
+            "格式": "{%}PV max+{}",
+            "削韧": 33
           },
           {
             "名称": "[Tempête destructrice]Rayon de dégâts",
@@ -17387,7 +17699,9 @@
               55,
               59
             ],
-            "格式": "{%}PV max+{}"
+            "格式": "{%}PV max+{}",
+            "削韧": 100,
+            "取消": 0.3335
           },
           {
             "名称": "[Pas de panique, c’est Filbert !]Dégâts finaux",
@@ -17420,7 +17734,9 @@
               55,
               59
             ],
-            "格式": "{%}PV max+{}"
+            "格式": "{%}PV max+{}",
+            "削韧": 100,
+            "取消": 0.3335
           },
           {
             "名称": "[Pas de panique, c’est Filbert !]Rayon des Dégâts d’impact",
@@ -17495,7 +17811,8 @@
               395,
               422
             ],
-            "格式": "{%}PV max+{}"
+            "格式": "{%}PV max+{}",
+            "削韧": 100
           },
           {
             "名称": "[Filbert fonce !]Rayon des Dégâts d’impact",
@@ -17566,7 +17883,8 @@
             "id": 510111,
             "类型": "Dégâts",
             "icon": "Songlu01_02",
-            "cd": 1
+            "cd": 1,
+            "名称": "Filbert fonce !"
           }
         ]
       },
@@ -17785,7 +18103,8 @@
               395,
               422
             ],
-            "格式": "{%}PV max+{}"
+            "格式": "{%}PV max+{}",
+            "削韧": 100
           },
           {
             "名称": "Dégâts du 1ᵉʳ coup de Filbert",
@@ -17818,7 +18137,8 @@
               422,
               451
             ],
-            "格式": "{%}PV max+{}"
+            "格式": "{%}PV max+{}",
+            "削韧": 40
           },
           {
             "名称": "Dégâts du 2ᵉ coup de Filbert",
@@ -17851,7 +18171,8 @@
               516,
               552
             ],
-            "格式": "{%}PV max+{}"
+            "格式": "{%}PV max+{}",
+            "削韧": 60
           },
           {
             "名称": "Dégâts de l’attaque plongeante de Filbert",
@@ -17884,7 +18205,8 @@
               408,
               436
             ],
-            "格式": "{%}PV max+{}"
+            "格式": "{%}PV max+{}",
+            "削韧": 60
           }
         ],
         "升级": [
@@ -17949,7 +18271,8 @@
             "id": 510121,
             "类型": "Bonus",
             "icon": "Songlu02_Off",
-            "cd": 3.4
+            "cd": 3.4,
+            "名称": "Passion du travail"
           }
         ]
       },
@@ -18612,7 +18935,8 @@
             "名称": "Durée de [Tranche-gorge]",
             "影响": "技能耐久",
             "值": 15,
-            "格式": "{}s"
+            "格式": "{}s",
+            "削韧": 20
           },
           {
             "名称": "Dégâts d’[Éclat de croc]",
@@ -18630,7 +18954,8 @@
               20.16,
               21.65,
               23.14
-            ]
+            ],
+            "削韧": 20
           }
         ],
         "升级": [
@@ -18951,7 +19276,8 @@
               2.04,
               2.191,
               2.342
-            ]
+            ],
+            "削韧": 100
           },
           {
             "名称": "[Rêve de Chrysalide]Rayon d’effet de [Mirage]",
@@ -18981,7 +19307,8 @@
               1.27,
               1.364,
               1.458
-            ]
+            ],
+            "削韧": 15
           },
           {
             "名称": "[Chasse-lumière]Dégâts de déclenchement de [Poussière d’écailles]",
@@ -19005,7 +19332,8 @@
             "名称": "[Chasse-lumière]Durée de [Poussière d’écailles]",
             "影响": "技能耐久",
             "值": 10,
-            "格式": "{}s"
+            "格式": "{}s",
+            "削韧": 15
           }
         ],
         "升级": [
@@ -19072,7 +19400,8 @@
             "id": 530111,
             "类型": "Dégâts",
             "icon": "Saiqi01_2",
-            "cd": 0.6
+            "cd": 0.6,
+            "名称": "Mirage"
           }
         ]
       },
@@ -19177,7 +19506,8 @@
               1.33,
               1.404,
               1.478
-            ]
+            ],
+            "削韧": 15
           },
           {
             "名称": "Rayon des Dégâts de tir",

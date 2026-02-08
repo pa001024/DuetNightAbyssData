@@ -1292,7 +1292,7 @@
     "icon": "FeatheredSnake01",
     "名称": "Vrille",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "蓝",
     "极性": "A",
     "耐受": 7,
@@ -1304,7 +1304,7 @@
     "icon": "FeatheredSnake01",
     "名称": "Essor",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "蓝",
     "极性": "V",
     "耐受": 7,
@@ -1316,7 +1316,7 @@
     "icon": "FeatheredSnake01",
     "名称": "Tumulte",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "蓝",
     "极性": "A",
     "耐受": 7,
@@ -1328,7 +1328,7 @@
     "icon": "FeatheredSnake01",
     "名称": "Guérison",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "蓝",
     "极性": "O",
     "耐受": 7,
@@ -1340,7 +1340,7 @@
     "icon": "FeatheredSnake01",
     "名称": "Rupture",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "蓝",
     "极性": "D",
     "耐受": 7,
@@ -1352,7 +1352,7 @@
     "icon": "FeatheredSnake01",
     "名称": "Inflexible",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "蓝",
     "极性": "D",
     "耐受": 7,
@@ -1364,7 +1364,7 @@
     "icon": "FeatheredSnake01",
     "名称": "Vigilance",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "蓝",
     "极性": "D",
     "耐受": 7,
@@ -1376,7 +1376,7 @@
     "icon": "FeatheredSnake01",
     "名称": "Soutien",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "蓝",
     "极性": "D",
     "耐受": 7,
@@ -1388,7 +1388,7 @@
     "icon": "FeatheredSnake01",
     "名称": "Roc",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "蓝",
     "极性": "A",
     "耐受": 7,
@@ -1400,7 +1400,7 @@
     "icon": "FeatheredSnake01",
     "名称": "Esquive",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "蓝",
     "极性": "O",
     "耐受": 7,
@@ -1412,7 +1412,7 @@
     "icon": "FeatheredSnake01",
     "名称": "Ignition",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "蓝",
     "极性": "A",
     "耐受": 7,
@@ -2784,7 +2784,7 @@
     "icon": "FeatheredSnake01_Black",
     "名称": "Éternité",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "紫",
     "极性": "D",
     "属性": "Umbro",
@@ -2798,7 +2798,7 @@
     "icon": "FeatheredSnake01_Black",
     "名称": "Vigueur",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "紫",
     "极性": "V",
     "属性": "Umbro",
@@ -2872,7 +2872,7 @@
     "icon": "FeatheredSnake01_Blue",
     "名称": "Vigueur",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "紫",
     "极性": "A",
     "属性": "Hydro",
@@ -2886,7 +2886,7 @@
     "icon": "FeatheredSnake01_Blue",
     "名称": "Décision",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "紫",
     "极性": "V",
     "属性": "Hydro",
@@ -2960,7 +2960,7 @@
     "icon": "FeatheredSnake01_Red",
     "名称": "Décision",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "紫",
     "极性": "D",
     "属性": "Pyro",
@@ -2974,7 +2974,7 @@
     "icon": "FeatheredSnake01_Red",
     "名称": "Pouvoir",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "紫",
     "极性": "O",
     "属性": "Pyro",
@@ -3048,7 +3048,7 @@
     "icon": "FeatheredSnake01_Purple",
     "名称": "Pouvoir",
     "版本": "1.2",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "紫",
     "极性": "A",
     "属性": "Électro",
@@ -3062,7 +3062,7 @@
     "icon": "FeatheredSnake01_Purple",
     "名称": "Décision",
     "版本": "1.2",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "紫",
     "极性": "D",
     "属性": "Électro",
@@ -3136,7 +3136,7 @@
     "icon": "FeatheredSnake01_Green",
     "名称": "Ténacité",
     "版本": "1.1",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "紫",
     "极性": "V",
     "属性": "Anémo",
@@ -3150,7 +3150,7 @@
     "icon": "FeatheredSnake01_Green",
     "名称": "Éternité",
     "版本": "1.1",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "紫",
     "极性": "O",
     "属性": "Anémo",
@@ -3223,7 +3223,7 @@
     "icon": "FeatheredSnake01",
     "名称": "Vigueur",
     "版本": "1.3",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "紫",
     "极性": "A",
     "属性": "Lumino",
@@ -3237,7 +3237,7 @@
     "icon": "FeatheredSnake01",
     "名称": "Éternité",
     "版本": "1.3",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "紫",
     "极性": "V",
     "属性": "Lumino",
@@ -3870,7 +3870,7 @@
     "极性": "V",
     "耐受": 15,
     "类型": "Armes à distance",
-    "效果": "Après avoir vaincu un ennemi, augmente la Vitesse de déplacement de 48.0%, la Vitesse de glissade de 48.0% et la Vitesse de bond cyclonique de 48.0% pendant 15.0 s."
+    "效果": "Après avoir vaincu un ennemi, augmente la Vitesse de déplacement de 48.0%, la Vitesse de glissade de 48.0% et la Vitesse de Bond Cyclonique de 48.0% pendant 15.0 s."
   },
   {
     "id": 43341,
@@ -3887,7 +3887,7 @@
   {
     "id": 43342,
     "icon": "Fafnir01",
-    "名称": "Renversement",
+    "名称": "反转",
     "版本": "1.2",
     "系列": "de Fáfnir",
     "品质": "紫",
@@ -3899,7 +3899,7 @@
   {
     "id": 43343,
     "icon": "Fafnir01",
-    "名称": "Déchéance",
+    "名称": "衰朽",
     "版本": "1.2",
     "系列": "de Fáfnir",
     "品质": "紫",
@@ -4101,7 +4101,7 @@
   {
     "id": 43701,
     "icon": "Fafnir01",
-    "名称": "Siphon d’âme",
+    "名称": "摄魂",
     "版本": "1.2",
     "系列": "de Fáfnir",
     "品质": "紫",
@@ -4113,7 +4113,7 @@
   {
     "id": 43702,
     "icon": "Fafnir01",
-    "名称": "Mutation",
+    "名称": "变幻",
     "版本": "1.2",
     "系列": "de Fáfnir",
     "品质": "紫",
@@ -4125,7 +4125,7 @@
   {
     "id": 43703,
     "icon": "Fafnir01",
-    "名称": "Malédiction",
+    "名称": "诅咒",
     "版本": "1.2",
     "系列": "de Fáfnir",
     "品质": "紫",
@@ -5377,7 +5377,7 @@
     "icon": "FeatheredSnake01_Black",
     "名称": "Éternité",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "金",
     "极性": "D",
     "属性": "Umbro",
@@ -5391,7 +5391,7 @@
     "icon": "FeatheredSnake01_Black",
     "名称": "Vigueur",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "金",
     "极性": "V",
     "属性": "Umbro",
@@ -5477,7 +5477,7 @@
     "icon": "FeatheredSnake01_Blue",
     "名称": "Vigueur",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "金",
     "极性": "A",
     "属性": "Hydro",
@@ -5491,7 +5491,7 @@
     "icon": "FeatheredSnake01_Blue",
     "名称": "Décision",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "金",
     "极性": "V",
     "属性": "Hydro",
@@ -5577,7 +5577,7 @@
     "icon": "FeatheredSnake01_Red",
     "名称": "Décision",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "金",
     "极性": "D",
     "属性": "Pyro",
@@ -5591,7 +5591,7 @@
     "icon": "FeatheredSnake01_Red",
     "名称": "Pouvoir",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "金",
     "极性": "O",
     "属性": "Pyro",
@@ -5677,7 +5677,7 @@
     "icon": "FeatheredSnake01_Purple",
     "名称": "Pouvoir",
     "版本": "1.2",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "金",
     "极性": "A",
     "属性": "Électro",
@@ -5694,7 +5694,7 @@
     "icon": "FeatheredSnake01_Purple",
     "名称": "Décision",
     "版本": "1.2",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "金",
     "极性": "D",
     "属性": "Électro",
@@ -5783,7 +5783,7 @@
     "icon": "FeatheredSnake01_Green",
     "名称": "Ténacité",
     "版本": "1.1",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "金",
     "极性": "V",
     "属性": "Anémo",
@@ -5800,7 +5800,7 @@
     "icon": "FeatheredSnake01_Green",
     "名称": "Éternité",
     "版本": "1.1",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "金",
     "极性": "O",
     "属性": "Anémo",
@@ -5888,7 +5888,7 @@
     "icon": "FeatheredSnake01",
     "名称": "Vigueur",
     "版本": "1.3",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "金",
     "极性": "A",
     "属性": "Lumino",
@@ -5902,7 +5902,7 @@
     "icon": "FeatheredSnake01",
     "名称": "Éternité",
     "版本": "1.3",
-    "系列": "de Quetzalcoatl",
+    "系列": "de Quetzalcoatl{空格}",
     "品质": "金",
     "极性": "V",
     "属性": "Lumino",
@@ -6731,7 +6731,7 @@
   {
     "id": 54201,
     "icon": "Cerberus02",
-    "名称": "Impact · Limite",
+    "名称": "强击·领界",
     "版本": "1.2",
     "系列": "du Cerbère occulte",
     "品质": "金",
@@ -6779,7 +6779,7 @@
   {
     "id": 54204,
     "icon": "Cerberus02",
-    "名称": "Répit",
+    "名称": "喘息",
     "版本": "1.2",
     "系列": "du Cerbère occulte",
     "品质": "金",
@@ -6794,7 +6794,7 @@
   {
     "id": 54205,
     "icon": "Cerberus02",
-    "名称": "Ferveur",
+    "名称": "狂热",
     "版本": "1.2",
     "系列": "du Cerbère occulte",
     "品质": "金",
@@ -7175,7 +7175,7 @@
       56141
     ],
     "减伤": 0.3,
-    "效果": "Lorsque l’Efficacité de compétence est ≥ 130.0%, votre Puissance de compétence augmente de 88.0%."
+    "效果": "Lorsque l’Efficacité de compétence est ≥ 150.0%, votre Puissance de compétence augmente de 88.0%."
   },
   {
     "id": 56142,
@@ -7194,12 +7194,12 @@
     "神智": 1.65,
     "技能效益": 0.44,
     "减伤": 0.5,
-    "效果": "Lorsque l’Efficacité de compétence est ≥ 130.0%, votre Puissance de compétence augmente de 88.0%."
+    "效果": "Lorsque l’Efficacité de compétence est ≥ 150.0%, votre Puissance de compétence augmente de 88.0%."
   },
   {
     "id": 56143,
     "icon": "Changeling01_Purple",
-    "名称": "Vigueur",
+    "名称": "Ténacité",
     "版本": "1.2",
     "系列": "du Métamorphe",
     "品质": "金",
@@ -7216,7 +7216,7 @@
   {
     "id": 56144,
     "icon": "Siren01_Purple",
-    "名称": "Ailes · Inspiration · Vigueur",
+    "名称": "Ailes · Inspiration · Ténacité",
     "版本": "1.2",
     "系列": "de la Sirène",
     "品质": "金",
@@ -7307,7 +7307,7 @@
   {
     "id": 56161,
     "icon": "Changeling01",
-    "名称": "Vigueur",
+    "名称": "Poursuite",
     "版本": "1.3",
     "系列": "du Métamorphe",
     "品质": "金",
@@ -7324,7 +7324,7 @@
   {
     "id": 56162,
     "icon": "Siren01",
-    "名称": "Ailes · Inspiration · Vigueur",
+    "名称": "Ailes · Inspiration · Poursuite",
     "版本": "1.3",
     "系列": "de la Sirène",
     "品质": "金",
@@ -7387,7 +7387,48 @@
     "耐受": 25,
     "类型": "Armes de mêlée",
     "攻速": 0.2,
-    "效果": "Modifie l’Attaque normale de l’Épée : inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base."
+    "效果": "Modifie l’Attaque normale de l’Épée : inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base.",
+    "技能替换": {
+      "1010101": {
+        "id": 1010201,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts du 1ᵉʳ coup",
+            "值": 0.65,
+            "削韧": 20,
+            "卡肉": 0.03,
+            "取消": 0.2,
+            "连段": 0.3
+          },
+          {
+            "名称": "Dégâts du 2ᵉ coup",
+            "值": 0.85,
+            "削韧": 25,
+            "卡肉": 0.03,
+            "取消": 0.2,
+            "连段": 0.3
+          },
+          {
+            "名称": "Dégâts du 3ᵉ coup",
+            "值": 0.55,
+            "格式": "{%}×4",
+            "削韧": 25,
+            "取消": 0.2667,
+            "连段": 0.6
+          },
+          {
+            "名称": "Dégâts du 4ᵉ coup",
+            "值": 1.2,
+            "削韧": 40,
+            "卡肉": 0.1,
+            "取消": 0.6333,
+            "连段": 1.1333
+          }
+        ]
+      }
+    }
   },
   {
     "id": 101002,
@@ -7400,7 +7441,23 @@
     "耐受": 25,
     "类型": "Armes de mêlée",
     "暴击": 0.4,
-    "效果": "Modifie l’Attaque chargée de l’Épée : inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base."
+    "效果": "Modifie l’Attaque chargée de l’Épée : inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base.",
+    "技能替换": {
+      "1010102": {
+        "id": 1010202,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque chargée",
+            "值": 2.28,
+            "削韧": 73,
+            "卡肉": 0.1,
+            "取消": 1.2333
+          }
+        ]
+      }
+    }
   },
   {
     "id": 101003,
@@ -7413,7 +7470,23 @@
     "耐受": 25,
     "类型": "Armes de mêlée",
     "触发": 0.6,
-    "效果": "Modifie l’Attaque chargée de l’Épée : l’attaque chargée invoque des Ombrelames qui explosent à l’impact contre un obstacle ou lors de leur dissipation, infligeant d’importants Dégâts de zone. Inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base."
+    "效果": "Modifie l’Attaque chargée de l’Épée : l’attaque chargée invoque des Ombrelames qui explosent à l’impact contre un obstacle ou lors de leur dissipation, infligeant d’importants Dégâts de zone. Inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base.",
+    "技能替换": {
+      "1010102": {
+        "id": 1010302,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque chargée",
+            "值": 1.14,
+            "格式": "{%}×2",
+            "削韧": 36,
+            "取消": 1.2333
+          }
+        ]
+      }
+    }
   },
   {
     "id": 102001,
@@ -7426,7 +7499,22 @@
     "耐受": 25,
     "类型": "Armes de mêlée",
     "暴伤": 0.5,
-    "效果": "Modifie l’Attaque chargée de l’Arme d’hast : vous projetez 5 armes vers l’avant, touchant tous les ennemis sur votre trajectoire. Les dégâts sont augmentés de 100 % par rapport à l’attaque de base."
+    "效果": "Modifie l’Attaque chargée de l’Arme d’hast : vous projetez 5 armes vers l’avant, touchant tous les ennemis sur votre trajectoire. Les dégâts sont augmentés de 100 % par rapport à l’attaque de base.",
+    "技能替换": {
+      "1020102": {
+        "id": 1020202,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque chargée",
+            "值": 0.3,
+            "削韧": 10,
+            "取消": 1.5
+          }
+        ]
+      }
+    }
   },
   {
     "id": 102002,
@@ -7439,7 +7527,28 @@
     "耐受": 25,
     "类型": "Armes de mêlée",
     "暴击": 0.4,
-    "效果": "Modifie l’Attaque plongeante de l’Arme d’hast : l’impact génère une onde de choc de plus grande portée. Les dégâts sont augmentés de 100 % par rapport à l’attaque de base."
+    "效果": "Modifie l’Attaque plongeante de l’Arme d’hast : l’impact génère une onde de choc de plus grande portée. Les dégâts sont augmentés de 100 % par rapport à l’attaque de base.",
+    "技能替换": {
+      "1020103": {
+        "id": 1020203,
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque plongeante",
+            "值": 0.47,
+            "削韧": 15,
+            "取消": 1.7
+          },
+          {
+            "名称": "Dégâts du 2ᵉ coup d’attaque plongeante",
+            "值": 0.63,
+            "削韧": 20,
+            "取消": 1.7
+          }
+        ]
+      }
+    }
   },
   {
     "id": 102003,
@@ -7452,7 +7561,53 @@
     "耐受": 25,
     "类型": "Armes de mêlée",
     "攻击范围": 0.8,
-    "效果": "Modifie l’Attaque normale de l’Arme d’hast : invoque des lances spectrales qui frappent la cible. Inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base."
+    "效果": "Modifie l’Attaque normale de l’Arme d’hast : invoque des lances spectrales qui frappent la cible. Inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base.",
+    "技能替换": {
+      "1020101": {
+        "id": 1020201,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts du 1ᵉʳ coup",
+            "值": 1.1,
+            "削韧": 25,
+            "卡肉": 0.03,
+            "取消": 0.4,
+            "连段": 0.4667
+          },
+          {
+            "名称": "Dégâts du 2ᵉ coup",
+            "值": 1.2,
+            "格式": "{%}×2",
+            "削韧": 25,
+            "卡肉": 0.03,
+            "取消": 0.6,
+            "连段": 1.0333
+          },
+          {
+            "名称": "Dégâts du 3ᵉ coup",
+            "值": 0.5,
+            "值2": 1.5,
+            "格式": "{%}×2+{%}",
+            "削韧": 40,
+            "卡肉": 0.1,
+            "取消": 0.9667,
+            "连段": 0.9667
+          },
+          {
+            "名称": "Dégâts du 4ᵉ coup",
+            "值": 0.3,
+            "值2": 3.7,
+            "格式": "{%}+{%}",
+            "削韧": 150,
+            "卡肉": 0.1,
+            "取消": 1.1667,
+            "连段": 2.1
+          }
+        ]
+      }
+    }
   },
   {
     "id": 102004,
@@ -7465,7 +7620,22 @@
     "耐受": 25,
     "类型": "Armes de mêlée",
     "暴击": 0.4,
-    "效果": "Modifie l’Attaque chargée de l’Arme d’hast : déclenche une ruée vers l’avant, infligeant des dégâts aux ennemis sur la trajectoire. Inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base."
+    "效果": "Modifie l’Attaque chargée de l’Arme d’hast : déclenche une ruée vers l’avant, infligeant des dégâts aux ennemis sur la trajectoire. Inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base.",
+    "技能替换": {
+      "1020102": {
+        "id": 1020302,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque chargée",
+            "值": 1.24,
+            "削韧": 40,
+            "取消": 1.4
+          }
+        ]
+      }
+    }
   },
   {
     "id": 103001,
@@ -7478,7 +7648,47 @@
     "耐受": 25,
     "类型": "Armes de mêlée",
     "攻速": 0.2,
-    "效果": "Modifie l’Attaque normale de l’Espadon : la dernière frappe libère trois lames d’énergie, tranchant les ennemis sur votre trajectoire. Les dégâts sont augmentés de 100 % par rapport à l’attaque de base."
+    "效果": "Modifie l’Attaque normale de l’Espadon : la dernière frappe libère trois lames d’énergie, tranchant les ennemis sur votre trajectoire. Les dégâts sont augmentés de 100 % par rapport à l’attaque de base.",
+    "技能替换": {
+      "1030101": {
+        "id": 1030201,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts du 1ᵉʳ coup",
+            "值": 1.2,
+            "削韧": 30,
+            "卡肉": 0.07,
+            "取消": 0.5945,
+            "连段": 0.8667
+          },
+          {
+            "名称": "Dégâts du 2ᵉ coup",
+            "值": 0.7,
+            "削韧": 35,
+            "卡肉": 0.07,
+            "取消": 0.6,
+            "连段": 1.3667
+          },
+          {
+            "名称": "Dégâts du 3ᵉ coup",
+            "值": 1.8,
+            "削韧": 70,
+            "卡肉": 0.07,
+            "取消": 1.212,
+            "连段": 1.6667
+          },
+          {
+            "名称": "Dégâts de trajectoire",
+            "值": 1.42,
+            "削韧": 35,
+            "取消": 1.212,
+            "连段": 1.6667
+          }
+        ]
+      }
+    }
   },
   {
     "id": 103002,
@@ -7491,7 +7701,34 @@
     "耐受": 25,
     "类型": "Armes de mêlée",
     "攻击": 0.5,
-    "效果": "Modifie l’Attaque chargée de l’Espadon : vous pouvez vous déplacer pendant la charge et agripper jusqu’à 4 ennemis contrôlables sur votre trajectoire. Dépenser des points de Combo prolonge la durée de déplacement. À la fin de la charge ou lors du relâchement, déclenche une large attaque de zone. Les dégâts sont augmentés de 100 % par rapport à l’attaque de base."
+    "效果": "Modifie l’Attaque chargée de l’Espadon : vous pouvez vous déplacer pendant la charge et agripper jusqu’à 4 ennemis contrôlables sur votre trajectoire. Dépenser des points de Combo prolonge la durée de déplacement. À la fin de la charge ou lors du relâchement, déclenche une large attaque de zone. Les dégâts sont augmentés de 100 % par rapport à l’attaque de base.",
+    "技能替换": {
+      "1030102": {
+        "id": 1030202,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts de trajectoire",
+            "值": 0.55,
+            "削韧": 20,
+            "取消": 17.0667
+          },
+          {
+            "名称": "Dégâts finaux d’attaque chargée",
+            "值": 2,
+            "削韧": 62,
+            "取消": 17.0667
+          },
+          {
+            "名称": "Dégâts finaux",
+            "值": 0.55,
+            "削韧": 20,
+            "取消": 17.0667
+          }
+        ]
+      }
+    }
   },
   {
     "id": 103003,
@@ -7504,7 +7741,14 @@
     "耐受": 25,
     "类型": "Armes de mêlée",
     "攻击范围": 0.8,
-    "效果": "Modifie l’Attaque normale de l’Espadon : invoque des engrenages tournoyants qui assènent une volée de coups. Inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base."
+    "效果": "Modifie l’Attaque normale de l’Espadon : invoque des engrenages tournoyants qui assènent une volée de coups. Inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base.",
+    "技能替换": {
+      "1030101": {
+        "id": 1030301,
+        "名称": "普通攻击",
+        "类型": "武器伤害"
+      }
+    }
   },
   {
     "id": 104001,
@@ -7517,7 +7761,23 @@
     "耐受": 25,
     "类型": "Armes de mêlée",
     "攻速": 0.2,
-    "效果": "Modifie l’Attaque de glissade des Doubles lames : vous foncez en avant, infligeant des dégâts à tous les ennemis sur votre trajectoire. Les dégâts sont augmentés de 100 % par rapport à l’attaque de base."
+    "效果": "Modifie l’Attaque de glissade des Doubles lames : vous foncez en avant, infligeant des dégâts à tous les ennemis sur votre trajectoire. Les dégâts sont augmentés de 100 % par rapport à l’attaque de base.",
+    "技能替换": {
+      "1040104": {
+        "id": 1040204,
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque en glissade",
+            "值": 2.05,
+            "削韧": 66,
+            "卡肉": 0.03,
+            "取消": 0.9388
+          }
+        ]
+      }
+    }
   },
   {
     "id": 104002,
@@ -7530,7 +7790,48 @@
     "耐受": 25,
     "类型": "Armes de mêlée",
     "攻速": 0.2,
-    "效果": "Modifie l’Attaque normale des Doubles lames : assemble les deux lames pour effectuer une attaque tournoyante. Inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base."
+    "效果": "Modifie l’Attaque normale des Doubles lames : assemble les deux lames pour effectuer une attaque tournoyante. Inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base.",
+    "技能替换": {
+      "1040101": {
+        "id": 1040201,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts du 1ᵉʳ coup",
+            "值": 0.55,
+            "削韧": 20,
+            "卡肉": 0.03,
+            "取消": 0.1667,
+            "连段": 0.2667
+          },
+          {
+            "名称": "Dégâts du 2ᵉ coup",
+            "值": 1.2,
+            "削韧": 35,
+            "卡肉": 0.03,
+            "取消": 0.3,
+            "连段": 0.5
+          },
+          {
+            "名称": "Dégâts du 3ᵉ coup",
+            "值": 0.55,
+            "格式": "{%}×4",
+            "削韧": 20,
+            "取消": 0.8667,
+            "连段": 1.0333
+          },
+          {
+            "名称": "Dégâts du 4ᵉ coup",
+            "值": 0.82,
+            "格式": "{%}×5",
+            "削韧": 25,
+            "取消": 1.3,
+            "连段": 1.8667
+          }
+        ]
+      }
+    }
   },
   {
     "id": 104003,
@@ -7543,7 +7844,22 @@
     "耐受": 25,
     "类型": "Armes de mêlée",
     "暴伤": 0.5,
-    "效果": "Modifie l’Attaque chargée des Doubles lames : assemble les lames puis les projette vers l’avant, blessant les ennemis sur leur trajectoire. Inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base."
+    "效果": "Modifie l’Attaque chargée des Doubles lames : assemble les lames puis les projette vers l’avant, blessant les ennemis sur leur trajectoire. Inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base.",
+    "技能替换": {
+      "1040102": {
+        "id": 1040202,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque chargée",
+            "值": 0.88,
+            "削韧": 28,
+            "取消": 2
+          }
+        ]
+      }
+    }
   },
   {
     "id": 106001,
@@ -7556,7 +7872,42 @@
     "耐受": 25,
     "类型": "Armes de mêlée",
     "攻击范围": 0.8,
-    "效果": "Modifie l’Attaque chargée du Katana : après avoir touché un ennemi, vous bondissez puis effectuez une attaque plongeante infligeant plusieurs coups aux ennemis proches. Les dégâts sont augmentés de 100 % par rapport à l’attaque de base."
+    "效果": "Modifie l’Attaque chargée du Katana : après avoir touché un ennemi, vous bondissez puis effectuez une attaque plongeante infligeant plusieurs coups aux ennemis proches. Les dégâts sont augmentés de 100 % par rapport à l’attaque de base.",
+    "技能替换": {
+      "1060102": {
+        "id": 1060202,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque chargée perforante",
+            "值": 0.75,
+            "格式": "{%}×3",
+            "削韧": 5,
+            "卡肉": 0.03,
+            "取消": 0.9357,
+            "连段": 0.9
+          },
+          {
+            "名称": "Dégâts d’attaque chargée",
+            "值": 0.64,
+            "格式": "{%}×8",
+            "削韧": 6,
+            "卡肉": 0.03,
+            "连段": 1.09
+          },
+          {
+            "名称": "Dégâts finaux d’attaque chargée",
+            "值": 1.9,
+            "削韧": 15,
+            "延迟": 1.392,
+            "卡肉": 0.03,
+            "取消": 3.1667,
+            "连段": 4.6346
+          }
+        ]
+      }
+    }
   },
   {
     "id": 150401,
@@ -7573,7 +7924,7 @@
   {
     "id": 202003,
     "icon": "Fenrir01",
-    "名称": "Percée dominante",
+    "名称": "统御穿刺",
     "版本": "1.2",
     "系列": "de Fenrir",
     "品质": "金",
@@ -7585,12 +7936,58 @@
       52005
     ],
     "攻击范围": 1.2,
-    "效果": "Modifie l’Attaque normale de l’Arme d’hast : invoque des lances spectrales qui frappent la cible. Inflige 200.0% de dégâts supplémentaires par rapport à l’attaque de base."
+    "效果": "改变长柄的普通攻击招式和威力。召唤枪影攻击。对比默认招式，综合威力提高200.0%。",
+    "技能替换": {
+      "1020101": {
+        "id": 1020201,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts du 1ᵉʳ coup",
+            "值": 1.1,
+            "削韧": 25,
+            "卡肉": 0.03,
+            "取消": 0.4,
+            "连段": 0.4667
+          },
+          {
+            "名称": "Dégâts du 2ᵉ coup",
+            "值": 1.2,
+            "格式": "{%}×2",
+            "削韧": 25,
+            "卡肉": 0.03,
+            "取消": 0.6,
+            "连段": 1.0333
+          },
+          {
+            "名称": "Dégâts du 3ᵉ coup",
+            "值": 0.5,
+            "值2": 1.5,
+            "格式": "{%}×2+{%}",
+            "削韧": 40,
+            "卡肉": 0.1,
+            "取消": 0.9667,
+            "连段": 0.9667
+          },
+          {
+            "名称": "Dégâts du 4ᵉ coup",
+            "值": 0.3,
+            "值2": 3.7,
+            "格式": "{%}+{%}",
+            "削韧": 150,
+            "卡肉": 0.1,
+            "取消": 1.1667,
+            "连段": 2.1
+          }
+        ]
+      }
+    }
   },
   {
     "id": 203001,
     "icon": "Fenrir01",
-    "名称": "Âme tranchante",
+    "名称": "无锋剑意",
     "版本": "1.2",
     "系列": "de Fenrir",
     "品质": "金",
@@ -7602,12 +7999,52 @@
       52005
     ],
     "攻速": 0.3,
-    "效果": "Modifie l’Attaque normale de l’Espadon : la dernière frappe libère trois ondes tranchantes, tranchant les ennemis sur votre trajectoire. Les dégâts sont augmentés de 200.0% par rapport à l’attaque de base."
+    "效果": "改变重剑的普通攻击招式和威力，普通攻击的最后一击可创造3道剑气，攻击沿途的敌人。对比默认招式，综合威力提高200.0%。",
+    "技能替换": {
+      "1030101": {
+        "id": 1030201,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts du 1ᵉʳ coup",
+            "值": 1.2,
+            "削韧": 30,
+            "卡肉": 0.07,
+            "取消": 0.5945,
+            "连段": 0.8667
+          },
+          {
+            "名称": "Dégâts du 2ᵉ coup",
+            "值": 0.7,
+            "削韧": 35,
+            "卡肉": 0.07,
+            "取消": 0.6,
+            "连段": 1.3667
+          },
+          {
+            "名称": "Dégâts du 3ᵉ coup",
+            "值": 1.8,
+            "削韧": 70,
+            "卡肉": 0.07,
+            "取消": 1.212,
+            "连段": 1.6667
+          },
+          {
+            "名称": "Dégâts de trajectoire",
+            "值": 1.42,
+            "削韧": 35,
+            "取消": 1.212,
+            "连段": 1.6667
+          }
+        ]
+      }
+    }
   },
   {
     "id": 204001,
     "icon": "Fenrir01",
-    "名称": "Floraison incisive",
+    "名称": "穿花刺骨",
     "版本": "1.2",
     "系列": "de Fenrir",
     "品质": "金",
@@ -7619,6 +8056,22 @@
       52005
     ],
     "攻速": 0.3,
-    "效果": "Modifie l’Attaque de glissade des Doubles lames : vous foncez en avant, infligeant des dégâts à tous les ennemis sur votre trajectoire. Les dégâts sont augmentés de 200.0% par rapport à l’attaque de base."
+    "效果": "改变双刀的滑铲攻击招式和威力，向前冲刺并对沿途的所有敌人造成伤害。对比默认招式，综合威力提高200.0%。",
+    "技能替换": {
+      "1040104": {
+        "id": 1040204,
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque en glissade",
+            "值": 2.05,
+            "削韧": 66,
+            "卡肉": 0.03,
+            "取消": 0.9388
+          }
+        ]
+      }
+    }
   }
 ]

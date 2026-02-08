@@ -1,6 +1,10 @@
 from processor.base_processor import BaseProcessor
 from ast_parser import NodeType
 import re
+import os
+import json
+import glob
+from typing import Any
 
 
 class CharProcessor(BaseProcessor):
@@ -34,6 +38,10 @@ class CharProcessor(BaseProcessor):
         self.char_addon_attr_data = data_loader.load_json("CharAddonAttr.json")
         # 加载技能升级所需材料数据
         self.skill_level_up_data = data_loader.load_json("SkillLevelUp.json")
+        self._project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        self._asset_root = os.path.join(self._project_root, "out", "Asset")
+        self._anim_path_cache = {}
+        self._anim_meta_cache = {}
 
         # 等级列表，用于显示属性
         self.levels = [1]
@@ -110,7 +118,8 @@ class CharProcessor(BaseProcessor):
             "VarSkillLevelSource": "",  # 排除 VarSkillLevelSource（内部使用）
         }
 
-    def process_item(self, char_data, language):
+    def process_item(self, item_data, language):
+        char_data = item_data
         char_id = char_data.get("CharId", 0)
         if char_id > 100000:
             return {}
@@ -535,10 +544,19 @@ class CharProcessor(BaseProcessor):
         # 处理子技能
         sub_skills = skill_info.get("SubSkills", [])
         if sub_skills:
+            explanation_names = self._extract_explanation_names(
+                skill_info.get("ExplanationId", [])
+            )
             processed_sub_skills = []
-            for sub_skill_id in sub_skills:
+            for sub_index, sub_skill_id in enumerate(sub_skills):
                 sub_skill_data = self._process_single_skill(sub_skill_id)
                 if sub_skill_data:
+                    if (
+                        sub_index < len(explanation_names)
+                        and explanation_names[sub_index]
+                    ):
+                        sub_skill_data["名称"] = explanation_names[sub_index]
+
                     # 过滤条件：去除属性与父技能相同或为空的子技能
                     # 当子技能的某个属性为空时，视为与父技能相同
                     is_different = False
@@ -570,6 +588,24 @@ class CharProcessor(BaseProcessor):
                 result["子技能"] = processed_sub_skills
 
         return result
+
+    def _extract_explanation_names(self, explanation_ids):
+        """从 ExplanationId 中提取术语名称，用于子技能命名兜底"""
+        names = []
+        if not explanation_ids:
+            return names
+
+        for term_id in explanation_ids:
+            term_data = self.combat_term_data.get(str(term_id), {})
+            if not term_data:
+                names.append("")
+                continue
+
+            term_key = term_data.get("CombatTerm", "")
+            term_name = self.get_translated_text(term_key)
+            names.append(term_name or "")
+
+        return names
 
     def _parse_buff_detail(
         self,
@@ -888,7 +924,7 @@ class CharProcessor(BaseProcessor):
 
                 # 处理 CreateDanmaku - 解析 DanmakuTemplateId 并获取详细数据
                 if function_name == "CreateDanmaku":
-                    danmaku_data = {"fn": function_name}
+                    danmaku_data: dict[str, object] = {"fn": function_name}
 
                     # 处理 TaskEffects 中的字段
                     for field_name, field_value in task_effect.items():
@@ -1241,6 +1277,17 @@ class CharProcessor(BaseProcessor):
             return True
         return False
 
+    def _trim_trailing_zeros(self, arr):
+        """去掉数组尾部的0，如果全为0则返回空数组"""
+        if not arr:
+            return []
+
+        trimmed = arr.copy()
+        while trimmed and trimmed[-1] == 0:
+            trimmed.pop()
+
+        return trimmed
+
     def process_skill_desc(self, skill_info, skill_id, max_level):
         """处理技能等级描述为紧凑格式"""
         desc_keys = skill_info.get("SkillDescKeys", [])
@@ -1253,9 +1300,10 @@ class CharProcessor(BaseProcessor):
 
         # 处理SkillDescGroups，获取每个组的翻译名称和对应的项目索引
         group_mapping = {}
+        group_order_mapping = {}
         if skill_desc_groups:
             # 遍历每个技能描述组
-            for group_data in skill_desc_groups:
+            for group_order, group_data in enumerate(skill_desc_groups):
                 if isinstance(group_data, dict):
                     # 获取字典中的唯一键作为GroupNameKey
                     for group_name_key, item_indices in group_data.items():
@@ -1268,12 +1316,16 @@ class CharProcessor(BaseProcessor):
                         for idx in item_indices:
                             # 注意：索引从1开始，需要转换为从0开始
                             group_mapping[idx - 1] = group_name
+                            group_order_mapping[idx - 1] = group_order
 
                 else:
                     # 如果不是字典，跳过
                     continue
 
         result = []
+        group_timing_map = self._build_group_timing_map(
+            skill_info, len(skill_desc_groups)
+        )
 
         for i, desc_key in enumerate(desc_keys):
             if i >= len(desc_values):
@@ -1391,8 +1443,299 @@ class CharProcessor(BaseProcessor):
             if format_template:
                 item["格式"] = format_template
 
+            # 基于字段引用的技能ID关联战斗数据（仅伤害字段）
+            field_combat_meta = self._resolve_field_combat_meta(desc_values[i])
+            if field_combat_meta.get("削韧"):
+                item["削韧"] = field_combat_meta["削韧"]
+            field_cancel = field_combat_meta.get("取消")
+            field_combo = field_combat_meta.get("连段")
+
+            # 回退：伤害字段若未从引用ID定位到取消/连段，按分组对应Node补齐。
+            group_order = group_order_mapping.get(i)
+            group_timing = (
+                group_timing_map.get(group_order) if group_order is not None else None
+            )
+            if (
+                field_combat_meta.get("is_damage")
+                and group_timing
+                and not field_cancel
+                and group_timing.get("取消")
+            ):
+                field_cancel = group_timing["取消"]
+            if (
+                field_combat_meta.get("is_damage")
+                and group_timing
+                and not field_combo
+                and group_timing.get("连段")
+            ):
+                field_combo = group_timing["连段"]
+
+            if field_combat_meta.get("is_damage"):
+                if field_cancel:
+                    item["取消"] = field_cancel
+                if field_combo:
+                    item["连段"] = field_combo
+
             result.append({"名称": desc_text, **item})
 
+        return result
+
+    def _build_group_timing_map(self, skill_info, group_count):
+        """按技能节点链顺序构建分组取消/连段映射"""
+        if group_count <= 0:
+            return {}
+
+        mapping = {}
+
+        # 分组0默认对应主技能本体。
+        begin_node_id = skill_info.get("BeginNodeId")
+        if begin_node_id:
+            cancel, combo = self._get_skill_timing_by_begin_node(begin_node_id)
+            mapping[0] = {"取消": cancel, "连段": combo}
+
+        # 分组1..N优先对应SubSkills（用户定义的子技能段）。
+        sub_skills = skill_info.get("SubSkills", [])
+        for group_order in range(1, group_count):
+            if group_order - 1 < len(sub_skills):
+                sub_skill_id = sub_skills[group_order - 1]
+                sub_begin_node = self._get_skill_begin_node(sub_skill_id)
+                if sub_begin_node:
+                    cancel, combo = self._get_skill_timing_by_begin_node(sub_begin_node)
+                    mapping[group_order] = {
+                        "取消": cancel,
+                        "连段": combo,
+                    }
+
+        return mapping
+
+    def _get_skill_begin_node(self, skill_id):
+        """获取技能ID对应的BeginNodeId"""
+        skill = self.skill_data.get(str(skill_id), {})
+        if not skill:
+            skill = self.skill_data.get(skill_id, {})
+        if not isinstance(skill, list) or not skill:
+            return None
+
+        skill_entry = skill[0]
+        if isinstance(skill_entry, list) and skill_entry:
+            skill_entry = skill_entry[0]
+        if not isinstance(skill_entry, dict):
+            return None
+
+        return skill_entry.get("BeginNodeId")
+
+    def _resolve_field_combat_meta(self, desc_value):
+        """按字段引用的技能ID解析削韧/取消/连段（仅伤害字段）"""
+        if not isinstance(desc_value, str):
+            return {}
+
+        skill_effect_ids, skill_node_ids = self._extract_referenced_ids(desc_value)
+        if not skill_effect_ids and not skill_node_ids:
+            return {}
+
+        result: dict[str, Any] = {"is_damage": False}
+        has_damage = False
+
+        for effect_id in skill_effect_ids:
+            skill_effect = self.skill_effects_data.get(str(effect_id))
+            if not skill_effect:
+                skill_effect = self.skill_effects_data.get(effect_id)
+            if not skill_effect:
+                continue
+
+            for task_effect in skill_effect.get("TaskEffects", []):
+                func = task_effect.get("Function")
+                if func in ("Damage", "CutToughness"):
+                    has_damage = True
+                    result["is_damage"] = True
+                if func == "CutToughness":
+                    value = task_effect.get("Value")
+                    if isinstance(value, (int, float)):
+                        previous = result.get("削韧", 0)
+                        previous_value = (
+                            previous if isinstance(previous, (int, float)) else 0
+                        )
+                        result["削韧"] = max(previous_value, value)
+
+        if not has_damage:
+            return result
+
+        # 优先：字段里直接引用 SkillNode[id]
+        for node_id in skill_node_ids:
+            cancel, combo = self._get_skill_timing_by_begin_node(node_id)
+            if cancel or combo:
+                if cancel:
+                    result["取消"] = cancel
+                if combo:
+                    result["连段"] = combo
+                return result
+
+        # 不再用 SkillEffects[id] 反查 Skill[id] 取节点信息，避免把效果ID误当技能ID。
+        return result
+
+    def _extract_referenced_ids(self, desc_value):
+        """提取字段中引用的 SkillEffects 与 SkillNode ID（按出现顺序去重）"""
+        if not isinstance(desc_value, str):
+            return [], []
+
+        skill_effect_ids = []
+        skill_node_ids = []
+        seen_effect_ids = set()
+        seen_node_ids = set()
+
+        for effect_id_str in re.findall(r"\$#SkillEffects\[(\d+)\]", desc_value):
+            effect_id = int(effect_id_str)
+            if effect_id not in seen_effect_ids:
+                seen_effect_ids.add(effect_id)
+                skill_effect_ids.append(effect_id)
+
+        for node_id_str in re.findall(r"\$#SkillNode\[(\d+)\]", desc_value):
+            node_id = int(node_id_str)
+            if node_id not in seen_node_ids:
+                seen_node_ids.add(node_id)
+                skill_node_ids.append(node_id)
+
+        return skill_effect_ids, skill_node_ids
+
+    def _get_skill_timing_by_skill_id(self, skill_id):
+        """通过技能ID查找BeginNodeId并解析取消/连段"""
+        skill = self.skill_data.get(str(skill_id), {})
+        if not skill:
+            skill = self.skill_data.get(skill_id, {})
+        if not isinstance(skill, list) or not skill:
+            return 0, 0
+
+        skill_entry = skill[0]
+        if isinstance(skill_entry, list) and skill_entry:
+            skill_entry = skill_entry[0]
+        if not isinstance(skill_entry, dict):
+            return 0, 0
+
+        begin_node_id = skill_entry.get("BeginNodeId")
+        return self._get_skill_timing_by_begin_node(begin_node_id)
+
+    def _get_skill_timing_by_begin_node(self, begin_node_id):
+        """通过起始Node解析该段技能动画取消窗口和连段"""
+        if not begin_node_id:
+            return 0, 0
+
+        node = self.skill_node_data.get(str(begin_node_id), {})
+        if not node:
+            node = self.skill_node_data.get(begin_node_id, {})
+        if not node:
+            return 0, 0
+
+        anim_path = self._resolve_char_anim_json_path(node)
+        cancel, combo = self._read_anim_cancel_and_combo(anim_path)
+        return cancel, combo
+
+    def _collect_skill_node_chain(self, begin_node_id, limit):
+        """按NextNodeId遍历SkillNode链表，遇到环时停止"""
+        nodes = []
+        visited = set()
+        current = begin_node_id
+
+        while current and current not in visited and len(nodes) < max(limit, 1):
+            node = self.skill_node_data.get(str(current), {})
+            if not node:
+                node = self.skill_node_data.get(current, {})
+            if not node:
+                break
+
+            nodes.append(node)
+            visited.add(current)
+            current = node.get("NextNodeId")
+
+        return nodes
+
+    def _resolve_char_anim_json_path(self, node):
+        """根据角色SkillNode中的AnimPath/AnimResource定位动画JSON"""
+        anim_path = node.get("AnimPath", "")
+        anim_resource = node.get("AnimResource") or node.get("AnimName")
+        if not anim_path or not anim_resource:
+            return None
+
+        cache_key = (anim_path, anim_resource)
+        if cache_key in self._anim_path_cache:
+            return self._anim_path_cache[cache_key]
+
+        candidate = None
+        normalized_path = anim_path.replace("\\", "/")
+        marker = "/Game/Asset/"
+        if marker in normalized_path:
+            rel = normalized_path.split(marker, 1)[1].strip("/")
+            direct_path = os.path.join(
+                self._asset_root,
+                *[p for p in rel.split("/") if p],
+                f"{anim_resource}.json",
+            )
+            if os.path.exists(direct_path):
+                candidate = direct_path
+
+        if not candidate:
+            # 兜底：按AnimResource在Asset中搜索，避免路径差异导致丢失
+            pattern = os.path.join(self._asset_root, "**", f"{anim_resource}.json")
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                candidate = sorted(set(matches))[0]
+
+        self._anim_path_cache[cache_key] = candidate
+        return candidate
+
+    def _read_anim_cancel_and_combo(self, anim_path):
+        """读取动画JSON中的取消窗口和连段"""
+        if not anim_path:
+            return 0, 0
+
+        if anim_path in self._anim_meta_cache:
+            return self._anim_meta_cache[anim_path]
+
+        cancel = 0.0
+        combo = 0.0
+
+        try:
+            with open(anim_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+
+            montage = data[0] if isinstance(data, list) and data else {}
+            properties = montage.get("Properties", {})
+
+            for notify in properties.get("Notifies", []):
+                if notify.get("NotifyName") == "BP_SkillCancel_C":
+                    link_value = notify.get("LinkValue")
+                    if isinstance(link_value, (int, float)):
+                        cancel = max(cancel, float(link_value))
+                    elif isinstance(link_value, str):
+                        stripped = link_value.strip()
+                        if stripped:
+                            try:
+                                cancel = max(cancel, float(stripped))
+                            except ValueError:
+                                pass
+                if notify.get("NotifyName") == "BP_NextCombo_C":
+                    link_value = notify.get("LinkValue")
+                    if link_value in (None, ""):
+                        end_link = notify.get("EndLink")
+                        if isinstance(end_link, dict):
+                            link_value = end_link.get("LinkValue")
+                    if isinstance(link_value, (int, float)):
+                        combo = max(combo, float(link_value))
+                    elif isinstance(link_value, str):
+                        stripped = link_value.strip()
+                        if stripped:
+                            try:
+                                combo = max(combo, float(stripped))
+                            except ValueError:
+                                pass
+
+        except Exception as e:
+            print(f"读取角色动画文件错误: {e}", flush=True)
+
+        result = (
+            self.round_value(cancel),
+            self.round_value(combo),
+        )
+        self._anim_meta_cache[anim_path] = result
         return result
 
     def _calc_skill_desc_value_raw(self, desc_value, skill_id, level):

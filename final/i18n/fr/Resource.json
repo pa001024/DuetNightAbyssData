@@ -102,12 +102,6 @@
     "rarity": 5
   },
   {
-    "id": 217,
-    "name": "Laissez-passer d’escouade",
-    "icon": "T_Resource_Raid_Ticket",
-    "rarity": 4
-  },
-  {
     "id": 218,
     "name": "Jeton de Phoxène",
     "icon": "T_Resource_Raid_Coin01",
@@ -223,7 +217,7 @@
   },
   {
     "id": 3015,
-    "name": "Canne d’artifice – Menthe",
+    "name": "天工竿·薄荷",
     "icon": "T_FishingRod_East02",
     "rarity": 5
   },
@@ -1861,13 +1855,13 @@
   },
   {
     "id": 110015,
-    "name": "Coffret d’apparence (Sélection) – En fuite",
+    "name": "流年自选形象礼箱·匆匆",
     "icon": "T_Pack_JKSkin",
     "rarity": 5
   },
   {
     "id": 110016,
-    "name": "Coffret d’apparence (Sélection) – Hivernal",
+    "name": "流年自选形象礼箱·冬日",
     "icon": "T_Pack_SnowmanSkin",
     "rarity": 5
   },
@@ -2179,13 +2173,13 @@
   },
   {
     "id": 5110601,
-    "name": "Canne d’artifice – Rouille",
+    "name": "天工竿·锈红",
     "icon": "T_FishingRod_East01",
     "rarity": 5
   },
   {
     "id": 5110602,
-    "name": "Canne d’artifice – Pourpre profond",
+    "name": "天工竿·绛紫",
     "icon": "T_FishingRod_East03",
     "rarity": 5
   },

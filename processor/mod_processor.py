@@ -1,4 +1,9 @@
 from processor.base_processor import BaseProcessor
+import re
+import os
+import json
+import glob
+import math
 
 
 class ModProcessor(BaseProcessor):
@@ -11,6 +16,13 @@ class ModProcessor(BaseProcessor):
         self.i18n_data = self.data_loader.load_json("TextMap_I18n.json")
         # 加载SkillGrow配置，用于计算字符串类型的属性值
         self.skill_grow_data = self.data_loader.load_json("SkillGrow.json")
+        self.skill_data = self.data_loader.load_json("Skill.json")
+        self.skill_effects_data = self.data_loader.load_json("SkillEffects.json")
+        self.skill_node_data = self.data_loader.load_json("SkillNode.json")
+        self._project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        self._asset_root = os.path.join(self._project_root, "out", "Asset")
+        self._anim_path_cache = {}
+        self._anim_meta_cache = {}
 
         # 品质名称映射
         self.quality_names = ["白", "绿", "蓝", "紫", "金"]
@@ -51,7 +63,8 @@ class ModProcessor(BaseProcessor):
             "RayCreatureRate": "射线伤害",
         }
 
-    def process_item(self, mod_data, language):
+    def process_item(self, item_data, language):
+        mod_data = item_data
         # 获取ModTag信息
         mod_tag_info = self.data_loader.get_mod_tag_info(
             mod_data.get("ApplicationType", 0)
@@ -159,7 +172,491 @@ class ModProcessor(BaseProcessor):
         # 处理PassiveEffectsDesc，解析DescValues并填入占位符
         self._process_passive_effects_desc(mod_data, processed)
 
+        # 处理技能替换（ModActivateSkills）
+        skill_replacements = self._process_mod_activate_skills(mod_data, language)
+        if skill_replacements:
+            processed["技能替换"] = skill_replacements
+
         return processed
+
+    def _process_mod_activate_skills(self, mod_data, language):
+        """处理ModActivateSkills，输出技能替换映射"""
+        activate_skills = mod_data.get("ModActivateSkills")
+        if not isinstance(activate_skills, dict) or not activate_skills:
+            return {}
+
+        replacements = {}
+        for old_skill_id, new_skill_id in activate_skills.items():
+            try:
+                normalized_old_id = int(old_skill_id)
+            except (TypeError, ValueError):
+                normalized_old_id = old_skill_id
+
+            try:
+                normalized_new_id = int(new_skill_id)
+            except (TypeError, ValueError):
+                normalized_new_id = new_skill_id
+
+            replacements[str(old_skill_id)] = self._build_skill_replace_info(
+                normalized_old_id, normalized_new_id, language
+            )
+
+        return replacements
+
+    def _build_skill_replace_info(self, old_skill_id, new_skill_id, language):
+        """构建单个替换技能信息，结构与武器技能一致"""
+        old_skill_entry = self._get_skill_entry(old_skill_id)
+        new_skill_entry = self._get_skill_entry(new_skill_id)
+
+        replace_name = self._get_skill_display_name(
+            old_skill_entry, old_skill_id, language
+        )
+        fields = self._process_weapon_like_skill_fields(new_skill_entry, new_skill_id)
+
+        result = {
+            "id": new_skill_id,
+            "名称": replace_name,
+            "类型": "武器伤害",
+        }
+        if fields:
+            result["字段"] = fields
+
+        return result
+
+    def _get_skill_entry(self, skill_id):
+        """获取Skill表中的标准技能条目"""
+        skill_info = self.skill_data.get(str(skill_id), {})
+        if not skill_info:
+            skill_info = self.skill_data.get(skill_id, {})
+
+        if not isinstance(skill_info, list) or not skill_info:
+            return {}
+
+        entry = skill_info[0]
+        if isinstance(entry, list) and entry:
+            entry = entry[0]
+
+        return entry if isinstance(entry, dict) else {}
+
+    def _get_skill_display_name(self, skill_entry, skill_id, language):
+        """获取技能显示名（名称前置技能ID）"""
+        type_map = {
+            "Shooting": "射击",
+            "Attack": "普通攻击",
+            "HeavyAttack": "蓄力攻击",
+            "FallAttack": "下落攻击",
+            "SlideAttack": "滑行攻击",
+        }
+
+        if not isinstance(skill_entry, dict):
+            return str(skill_id)
+
+        skill_name_key = skill_entry.get("SkillName", "")
+        translated = (
+            self.get_translated_text(skill_name_key, language) if skill_name_key else ""
+        )
+        if translated:
+            return translated
+
+        skill_type = skill_entry.get("SkillType", "")
+        if skill_type:
+            return type_map.get(skill_type, skill_type)
+
+        return str(skill_id)
+
+    def _process_weapon_like_skill_fields(self, skill_entry, table_id):
+        """按武器技能逻辑解析字段"""
+        if not isinstance(skill_entry, dict):
+            return []
+
+        desc_keys = skill_entry.get("SkillDescKeys", [])
+        desc_values = skill_entry.get("SkillDescValues", [])
+        if not desc_keys or not desc_values:
+            return []
+
+        if isinstance(desc_keys, dict):
+            items = desc_keys.items()
+        else:
+            items = enumerate(desc_keys)
+
+        result = []
+        for key_or_index, desc_key in items:
+            if isinstance(desc_values, dict):
+                lookup_key = (
+                    str(key_or_index + 1)
+                    if isinstance(key_or_index, int)
+                    else key_or_index
+                )
+                desc_value = desc_values.get(lookup_key)
+            else:
+                if key_or_index >= len(desc_values):
+                    continue
+                desc_value = desc_values[key_or_index]
+
+            if desc_value is None:
+                continue
+
+            desc_text = self.get_translated_text(desc_key)
+            preprocessed_desc_value = self.preprocess_expression(desc_value)
+            calculated_value = self._parse_weapon_like_desc_value(
+                preprocessed_desc_value, table_id, 1
+            )
+
+            value, value2, value_format = self._extract_field_value_and_format(
+                calculated_value
+            )
+            item = {
+                "名称": desc_text,
+                "值": value,
+            }
+            if value2 is not None:
+                item["值2"] = value2
+            if value_format and value_format != "{%}":
+                item["格式"] = value_format
+
+            skill_effects_info = self._parse_skill_effects(desc_value)
+            if skill_effects_info:
+                cut_toughness = skill_effects_info.get("削韧", 0)
+                delay = skill_effects_info.get("延迟", 0)
+                hit_stop = skill_effects_info.get("卡肉", 0)
+                if cut_toughness:
+                    item["削韧"] = cut_toughness
+                if delay:
+                    item["延迟"] = delay
+                if hit_stop:
+                    item["卡肉"] = hit_stop
+
+            result.append(item)
+
+        cancels, combos = self._process_skill_timing(skill_entry, len(result))
+        for i, item in enumerate(result):
+            cancel = cancels[i] if i < len(cancels) else 0
+            combo = combos[i] if i < len(combos) else 0
+            if cancel:
+                item["取消"] = cancel
+            if combo:
+                item["连段"] = combo
+
+        return result
+
+    def _parse_weapon_like_desc_value(self, desc_value, table_id, level):
+        """按武器技能规则解析DescValue，支持多个$...$表达式"""
+        result = desc_value
+        pattern = r"\$(-)?(.*?)\$"
+        matches = list(re.finditer(pattern, desc_value))
+
+        for match in reversed(matches):
+            expr_content = match.group(2)
+            has_neg = match.group(1)
+
+            after_match = result[match.end() :]
+            suffix = ""
+            for c in after_match:
+                if c == "$":
+                    break
+                suffix += c
+
+            math_match = re.match(r"math\.(ceil|floor)\((.*)\)", expr_content)
+            try:
+                if math_match:
+                    math_func = math_match.group(1)
+                    inner_expr = math_match.group(2)
+
+                    expr_value = self._calculate_expr_value(
+                        inner_expr, table_id, level, "BattleWeapon"
+                    )
+
+                    if isinstance(expr_value, (int, float)):
+                        if math_func == "ceil":
+                            processed_value = math.ceil(expr_value)
+                        else:
+                            processed_value = math.floor(expr_value)
+
+                        if has_neg:
+                            processed_value = -processed_value
+
+                        formatted_value = f"{processed_value:.1f}"
+                    else:
+                        formatted_value = "0.0"
+                else:
+                    expr_value = self._calculate_expr_value(
+                        expr_content, table_id, level, "BattleWeapon"
+                    )
+
+                    if has_neg:
+                        final_value = -expr_value
+                    else:
+                        final_value = expr_value
+
+                    formatted_value = f"{final_value:.1f}"
+
+                result = (
+                    result[: match.start()]
+                    + f"{formatted_value}{suffix}"
+                    + result[match.end() + len(suffix) :]
+                )
+            except Exception as e:
+                print(f"表达式解析错误: {e}", flush=True)
+                formatted_value = "0.0"
+                result = (
+                    result[: match.start()]
+                    + f"{formatted_value}{suffix}"
+                    + result[match.end() + len(suffix) :]
+                )
+
+        return result
+
+    def _extract_field_value_and_format(self, calculated_value):
+        """从格式化后的描述值中提取数值和格式模板"""
+        if calculated_value is None:
+            return 0, None, None
+
+        text = str(calculated_value)
+        matches = list(re.finditer(r"-?\d+(?:\.\d+)?", text))
+        if not matches:
+            return text, None, None
+
+        def _prev_significant_char(source, index):
+            i = index - 1
+            while i >= 0 and source[i].isspace():
+                i -= 1
+            return source[i] if i >= 0 else ""
+
+        values = []
+        fmt_parts = []
+        cursor = 0
+
+        for match in matches:
+            start, end = match.span()
+            fmt_parts.append(text[cursor:start])
+
+            raw_number = match.group(0)
+            percent = end < len(text) and text[end] == "%"
+            prev_char = _prev_significant_char(text, start)
+
+            is_multiplier_constant = (
+                prev_char in ("×", "x", "X", "*")
+                and not percent
+                and re.fullmatch(r"\d+", raw_number) is not None
+                and len(values) >= 1
+            )
+
+            if is_multiplier_constant:
+                fmt_parts.append(raw_number)
+                cursor = end
+                continue
+
+            number_value = float(raw_number)
+            if percent:
+                values.append(self.round_value(number_value / 100.0))
+                fmt_parts.append("{%}")
+                cursor = end + 1
+            else:
+                values.append(self.round_value(number_value))
+                fmt_parts.append("{}")
+                cursor = end
+
+        fmt_parts.append(text[cursor:])
+
+        if not values:
+            return text, None, None
+
+        value = values[0]
+        value2 = values[1] if len(values) > 1 else None
+        value_format = "".join(fmt_parts) if fmt_parts else None
+        return value, value2, value_format
+
+    def _parse_skill_effects(self, desc_value):
+        """解析desc_value中的SkillEffects引用，提取削韧/延迟/卡肉"""
+        if not isinstance(desc_value, str):
+            return {}
+
+        result = {}
+        visited_effect_ids = set()
+        pattern = r"\$#SkillEffects\[(\d+)\]"
+        matches = re.findall(pattern, desc_value)
+
+        for effect_id_str in matches:
+            effect_id = int(effect_id_str)
+            if effect_id in visited_effect_ids:
+                continue
+            visited_effect_ids.add(effect_id)
+
+            skill_effect = self.skill_effects_data.get(str(effect_id))
+            if not skill_effect:
+                skill_effect = self.skill_effects_data.get(effect_id)
+            if not skill_effect:
+                continue
+
+            task_effects = skill_effect.get("TaskEffects", [])
+            for task_effect in task_effects:
+                func = task_effect.get("Function")
+                if func == "HitStop":
+                    delay = task_effect.get("Delay")
+                    duration = task_effect.get("Duration")
+                    if delay is not None:
+                        result["延迟"] = delay
+                    if duration is not None:
+                        result["卡肉"] = duration
+                if func == "CutToughness":
+                    value = task_effect.get("Value")
+                    if value is not None:
+                        result["削韧"] = value
+
+        return result
+
+    def _process_skill_timing(self, skill_entry, field_count):
+        """根据技能节点链表解析每段技能的取消窗口和连段"""
+        if field_count <= 0:
+            return [], []
+
+        begin_node_id = skill_entry.get("BeginNodeId")
+        if not begin_node_id:
+            return [0] * field_count, [0] * field_count
+
+        node_chain = self._collect_skill_node_chain(begin_node_id, field_count)
+        if not node_chain:
+            return [0] * field_count, [0] * field_count
+
+        cancels = []
+        combos = []
+        for node in node_chain:
+            anim_path = self._resolve_anim_json_path(node)
+            cancel, combo = self._read_anim_duration_and_cancel(anim_path)
+            cancels.append(cancel)
+            combos.append(combo)
+
+        while len(cancels) < field_count:
+            cancels.append(cancels[-1] if cancels else 0)
+            combos.append(combos[-1] if combos else 0)
+
+        return cancels[:field_count], combos[:field_count]
+
+    def _collect_skill_node_chain(self, begin_node_id, limit):
+        """按NextNodeId遍历SkillNode链表，遇到环时停止"""
+        nodes = []
+        visited = set()
+        current = begin_node_id
+
+        while current and current not in visited and len(nodes) < max(limit, 1):
+            node = self.skill_node_data.get(str(current), {})
+            if not node:
+                node = self.skill_node_data.get(current, {})
+            if not node:
+                break
+
+            nodes.append(node)
+            visited.add(current)
+            current = node.get("NextNodeId")
+
+        return nodes
+
+    def _resolve_anim_json_path(self, node):
+        """根据SkillNode中的动画信息定位动画JSON文件"""
+        anim_resource = node.get("AnimResource") or node.get("AnimName")
+        if not anim_resource:
+            return None
+
+        anim_path = node.get("AnimPath", "")
+        anim_sub_path = node.get("AnimSubPath", "")
+        cache_key = (anim_resource, anim_path, anim_sub_path)
+        if cache_key in self._anim_path_cache:
+            return self._anim_path_cache[cache_key]
+
+        candidate = None
+
+        if anim_path:
+            normalized_path = anim_path.replace("\\", "/")
+            marker = "/Game/Asset/"
+            if marker in normalized_path:
+                rel = normalized_path.split(marker, 1)[1].strip("/")
+                direct_path = os.path.join(
+                    self._asset_root,
+                    *[p for p in rel.split("/") if p],
+                    f"{anim_resource}.json",
+                )
+                if os.path.exists(direct_path):
+                    candidate = direct_path
+
+        if not candidate:
+            sub_dir = [p for p in anim_sub_path.replace("\\", "/").split("/") if p]
+            base_dir = os.path.join(
+                self._asset_root,
+                "Char",
+                "Player",
+                "*",
+                "Animation",
+                "Montage",
+                *sub_dir,
+            )
+
+            patterns = [
+                os.path.join(base_dir, f"{anim_resource}.json"),
+                os.path.join(base_dir, f"*_{anim_resource}.json"),
+            ]
+            matches = []
+            for pattern in patterns:
+                matches.extend(glob.glob(pattern))
+
+            if matches:
+                matches = sorted(set(matches))
+                candidate = matches[0]
+
+        self._anim_path_cache[cache_key] = candidate
+        return candidate
+
+    def _read_anim_duration_and_cancel(self, anim_path):
+        """读取动画JSON中的取消窗口和连段"""
+        if not anim_path:
+            return 0, 0
+
+        if anim_path in self._anim_meta_cache:
+            return self._anim_meta_cache[anim_path]
+
+        cancel = 0.0
+        combo = 0.0
+
+        try:
+            with open(anim_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+
+            montage = data[0] if isinstance(data, list) and data else {}
+            properties = montage.get("Properties", {})
+
+            for notify in properties.get("Notifies", []):
+                if notify.get("NotifyName") == "BP_SkillCancel_C":
+                    link_value = notify.get("LinkValue")
+                    if isinstance(link_value, (int, float)):
+                        cancel = max(cancel, float(link_value))
+                    elif isinstance(link_value, str):
+                        stripped = link_value.strip()
+                        if stripped:
+                            try:
+                                cancel = max(cancel, float(stripped))
+                            except ValueError:
+                                pass
+                if notify.get("NotifyName") == "BP_NextCombo_C":
+                    link_value = notify.get("LinkValue")
+                    if link_value in (None, ""):
+                        end_link = notify.get("EndLink")
+                        if isinstance(end_link, dict):
+                            link_value = end_link.get("LinkValue")
+                    if isinstance(link_value, (int, float)):
+                        combo = max(combo, float(link_value))
+                    elif isinstance(link_value, str):
+                        stripped = link_value.strip()
+                        if stripped:
+                            try:
+                                combo = max(combo, float(stripped))
+                            except ValueError:
+                                pass
+
+        except Exception as e:
+            print(f"读取动画文件错误: {e}", flush=True)
+
+        result = (self.round_value(cancel), self.round_value(combo))
+        self._anim_meta_cache[anim_path] = result
+        return result
 
     def _process_passive_effects_desc(self, mod_data, processed):
         """处理PassiveEffectsDesc，解析DescValues并填入占位符"""
@@ -198,7 +695,7 @@ class ModProcessor(BaseProcessor):
                 # 但实际上第16行的赋值会覆盖第15行的结果，所以最终CastTo只取决于math.floor
 
                 # 步骤1: 调用ReplaceDescValueTypeCast（但实际上结果会被步骤2覆盖）
-                placeholder = f"#{i+1}"
+                placeholder = f"#{i + 1}"
                 has_int_prefix = (
                     f"{{[Ii][Nn][Tt]}}{placeholder}" in passive_desc
                     or f"{{[Ii][Nn][Tt]}}{placeholder}" in passive_desc

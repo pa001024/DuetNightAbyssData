@@ -524,7 +524,7 @@
   },
   {
     "id": 6017013,
-    "n": "Souillé stigmate — Corrosion",
+    "n": "侵蚀 魁蕊秽兽",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -1519,7 +1519,7 @@
   },
   {
     "id": 8513701,
-    "n": "Ascète béni — Tempête électrique",
+    "n": "转雷 蒙恩的苦修士",
     "t": "Boss",
     "atk": 60,
     "def": 300,
@@ -2155,7 +2155,7 @@
   },
   {
     "id": 10005013,
-    "n": "Garde de Yingtian frénétique — Corrosion",
+    "n": "侵蚀 失序的应天侍",
     "t": "Elite_Monster",
     "f": 5,
     "atk": 20,

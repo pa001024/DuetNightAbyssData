@@ -48,13 +48,14 @@ class RewardViewProcessor(BaseProcessor):
         processed["child"] = []
 
         # 遍历Id列表，每个Id对应一个奖励项
-        ids = item_data.get("Id", [])
-        types = item_data.get("Type", [])
-        params = item_data.get("Param", [])
-        counts = item_data.get("Quantity", [])
+        ids = self._normalize_array_field(item_data.get("Id", []))
+        types = self._normalize_array_field(item_data.get("Type", []))
 
         # 确保列表长度一致，使用默认值0
         max_len = min(len(ids), len(types))
+        params = self._normalize_array_field(item_data.get("Param", []), max_len)
+        counts = self._normalize_array_field(item_data.get("Quantity", []), max_len)
+
         # 确保params和counts列表长度至少与max_len一致
         while len(params) < max_len:
             params.append(0)
@@ -140,6 +141,33 @@ class RewardViewProcessor(BaseProcessor):
             processed["child"].append(item)
 
         return processed
+
+    def _normalize_array_field(self, value, min_len=0):
+        """将奖励字段统一为数组，兼容OrderedDict和None。"""
+        if isinstance(value, list):
+            result = value.copy()
+        elif isinstance(value, dict):
+            result = [0] * max(min_len, 0)
+            for key, item in value.items():
+                try:
+                    index = int(key) - 1
+                except (TypeError, ValueError):
+                    continue
+
+                if index < 0:
+                    continue
+
+                while len(result) <= index:
+                    result.append(0)
+                result[index] = item
+        elif value is None:
+            result = [0] * max(min_len, 0)
+        else:
+            result = [value]
+
+        while len(result) < min_len:
+            result.append(0)
+        return result
 
     def _get_item_name(self, item_id, item_type):
         """

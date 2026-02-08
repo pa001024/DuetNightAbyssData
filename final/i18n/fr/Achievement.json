@@ -3192,7 +3192,7 @@
     "名称": "Archive mémorielle",
     "分类": "Liste de souhaits",
     "品质": 2,
-    "描述": "Rassembler les dix chapitres d’Hymne de la Chandelle d’Argent dans les Environs de Givrelac",
+    "描述": "集齐冰湖城周边所有银烛狂欢颂歌的十个章节",
     "版本": "1.0",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1
@@ -3203,7 +3203,7 @@
     "名称": "Contes de Momiji",
     "分类": "Liste de souhaits",
     "品质": 2,
-    "描述": "Rassembler les quatre chapitres de Momiji : Récits du soulèvement au Théâtre Galea",
+    "描述": "集齐盖雷亚剧院所有《红叶反讨秘话》的四个章节",
     "版本": "1.0",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1
@@ -5087,498 +5087,498 @@
   },
   {
     "id": 17002001,
-    "名称": "Instants figés : Berenica",
+    "名称": "停驻光阴·贝蕾妮卡",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "Lire intégralement l’Anthologie du temps de Berenica dans les Fragments de mémoire du Sanctuaire.",
+    "描述": "于休憩之所“点滴”处完整阅读贝蕾妮卡的光阴集故事",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: De Berenica": 1
+      "Title: 贝蕾妮卡的": 1
     }
   },
   {
     "id": 17002002,
-    "名称": "Instants figés : Phantasio",
+    "名称": "停驻光阴·幻景",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "Lire intégralement l’Anthologie du temps de Phantasio dans les Fragments de mémoire du Sanctuaire.",
+    "描述": "于休憩之所“点滴”处完整阅读幻景的光阴集故事",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: De Phantasio": 1
+      "Title: 幻景的": 1
     }
   },
   {
     "id": 17002004,
-    "名称": "Instants figés : Dame Nifle",
+    "名称": "停驻光阴·妮弗尔夫人",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "Lire intégralement l’Anthologie du temps de Dame Nifle dans les Fragments de mémoire du Sanctuaire.",
+    "描述": "于休憩之所“点滴”处完整阅读妮弗尔夫人的光阴集故事",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: De Dame Nifle": 1
+      "Title: 妮弗尔夫人的": 1
     }
   },
   {
     "id": 17002005,
-    "名称": "Instants figés : Kezhou",
+    "名称": "停驻光阴·刻舟",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "Lire intégralement l’Anthologie du temps de Kezhou dans les Fragments de mémoire du Sanctuaire.",
+    "描述": "于休憩之所“点滴”处完整阅读刻舟的光阴集故事",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: De Kezhou": 1
+      "Title: 刻舟的": 1
     }
   },
   {
     "id": 17002007,
-    "名称": "Instants figés : Fina",
+    "名称": "停驻光阴·菲娜",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "Lire intégralement l’Anthologie du temps de Fina dans les Fragments de mémoire du Sanctuaire.",
+    "描述": "于休憩之所“点滴”处完整阅读菲娜的光阴集故事",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: De Fina": 1
+      "Title: 菲娜的": 1
     }
   },
   {
     "id": 17002008,
-    "名称": "Instants figés : Rebecca",
+    "名称": "停驻光阴·丽蓓卡",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "Lire intégralement l’Anthologie du temps de Rebecca dans les Fragments de mémoire du Sanctuaire.",
+    "描述": "于休憩之所“点滴”处完整阅读丽蓓卡的光阴集故事",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: De Rebecca": 1
+      "Title: 丽蓓卡的": 1
     }
   },
   {
     "id": 17002010,
-    "名称": "Instants figés : Tabethe",
+    "名称": "停驻光阴·塔比瑟",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "Lire intégralement l’Anthologie du temps de Tabethe dans les Fragments de mémoire du Sanctuaire.",
+    "描述": "于休憩之所“点滴”处完整阅读塔比瑟的光阴集故事",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: De Tabethe": 1
+      "Title: 塔比瑟的": 1
     }
   },
   {
     "id": 17002011,
-    "名称": "Instants figés : Fushu",
+    "名称": "停驻光阴·扶疏",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "Lire intégralement l’Anthologie du temps de Fushu dans les Fragments de mémoire du Sanctuaire.",
+    "描述": "于休憩之所“点滴”处完整阅读扶疏的光阴集故事",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: De Fushu": 1
+      "Title: 扶疏的": 1
     }
   },
   {
     "id": 17002012,
-    "名称": "Instants figés : Lynn",
+    "名称": "停驻光阴·琳恩",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "Lire intégralement l’Anthologie du temps de Lynn dans les Fragments de mémoire du Sanctuaire.",
+    "描述": "于休憩之所“点滴”处完整阅读琳恩的光阴集故事",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: De Lynn": 1
+      "Title: 琳恩的": 1
     }
   },
   {
     "id": 17002014,
-    "名称": "Instants figés : Yale et Oliver",
+    "名称": "停驻光阴·耶尔与奥利弗",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "Lire intégralement l’Anthologie du temps de Yale et Oliver dans les Fragments de mémoire du Sanctuaire.",
+    "描述": "于休憩之所“点滴”处完整阅读耶尔与奥利弗的光阴集故事",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: De Yale": 1,
-      "Title: D’Oliver": 1
+      "Title: 耶尔的": 1,
+      "Title: 奥利弗的": 1
     }
   },
   {
     "id": 17002015,
-    "名称": "Instants figés : Vulcera",
+    "名称": "停驻光阴·海尔法",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "Lire intégralement l’Anthologie du temps de Vulcera dans les Fragments de mémoire du Sanctuaire.",
+    "描述": "于休憩之所“点滴”处完整阅读海尔法的光阴集故事",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: De Vulcera": 1
+      "Title: 海尔法的": 1
     }
   },
   {
     "id": 17002017,
-    "名称": "Instants figés : Margie",
+    "名称": "停驻光阴·玛尔洁",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "Lire intégralement l’Anthologie du temps de Margie dans les Fragments de mémoire du Sanctuaire.",
+    "描述": "于休憩之所“点滴”处完整阅读玛尔洁的光阴集故事",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: De Margie": 1
+      "Title: 玛尔洁的": 1
     }
   },
   {
     "id": 17002018,
-    "名称": "Instants figés : Rhythm",
+    "名称": "停驻光阴·黎瑟",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "Lire intégralement l’Anthologie du temps de Rhythm dans les Fragments de mémoire du Sanctuaire.",
+    "描述": "于休憩之所“点滴”处完整阅读黎瑟的光阴集故事",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: De Rhythm": 1
+      "Title: 黎瑟的": 1
     }
   },
   {
     "id": 17002021,
-    "名称": "Instants figés : Randy",
+    "名称": "停驻光阴·兰迪",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "Lire intégralement l’Anthologie du temps de Randy dans les Fragments de mémoire du Sanctuaire.",
+    "描述": "于休憩之所“点滴”处完整阅读兰迪的光阴集故事",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: De Randy": 1
+      "Title: 兰迪的": 1
     }
   },
   {
     "id": 17002022,
-    "名称": "Instants figés : Sibylle",
+    "名称": "停驻光阴·西比尔",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "Lire intégralement l’Anthologie du temps de Sibylle dans les Fragments de mémoire du Sanctuaire.",
+    "描述": "于休憩之所“点滴”处完整阅读西比尔的光阴集故事",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: De Sibylle": 1
+      "Title: 西比尔的": 1
     }
   },
   {
     "id": 17002023,
-    "名称": "Instants figés : Truffle et Filbert",
+    "名称": "停驻光阴·松露与榛子",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "Lire intégralement l’Anthologie du temps de Truffle et Filbert dans les Fragments de mémoire du Sanctuaire.",
+    "描述": "于休憩之所“点滴”处完整阅读松露与榛子的光阴集故事",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: De Truffle": 1,
-      "Title: De Filbert": 1
+      "Title: 松露的": 1,
+      "Title: 榛子的": 1
     }
   },
   {
     "id": 17002024,
-    "名称": "Instants figés : L’Étranger",
+    "名称": "停驻光阴·奥特赛德",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "Lire intégralement l’Anthologie du temps de l’Étranger dans les Fragments de mémoire du Sanctuaire.",
+    "描述": "于休憩之所“点滴”处完整阅读奥特赛德的光阴集故事",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: De l’Étranger": 1
+      "Title: 奥特赛德的": 1
     }
   },
   {
     "id": 17002025,
-    "名称": "Instants figés : Psyche",
+    "名称": "停驻光阴·赛琪",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "Lire intégralement l’Anthologie du temps de Psyche dans les Fragments de mémoire du Sanctuaire.",
+    "描述": "于休憩之所“点滴”处完整阅读赛琪的光阴集故事",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: De Psyche": 1
+      "Title: 赛琪的": 1
     }
   },
   {
     "id": 17002026,
-    "名称": "Instants figés : Daphne",
+    "名称": "停驻光阴·达芙涅",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "Lire intégralement l’Anthologie du temps de Daphne dans les Fragments de mémoire du Sanctuaire.",
+    "描述": "于休憩之所“点滴”处完整阅读达芙涅的光阴集故事",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: De Daphne": 1
+      "Title: 达芙涅的": 1
     }
   },
   {
     "id": 17003001,
-    "名称": "Un moment de répit : Berenica",
+    "名称": "休憩一刻·贝蕾妮卡",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter Berenica au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请贝蕾妮卡入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: Berenica": 1
+      "Title: 贝蕾妮卡": 1
     }
   },
   {
     "id": 17003002,
-    "名称": "Un moment de répit : Phantasio",
+    "名称": "休憩一刻·幻景",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter Phantasio au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请幻景入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: Phantasio": 1
+      "Title: 幻景": 1
     }
   },
   {
     "id": 17003003,
-    "名称": "Un moment de répit : Lisbell",
+    "名称": "休憩一刻·莉兹贝尔",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter Lisbell au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请莉兹贝尔入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: Lisbell": 1
+      "Title: 莉兹贝尔": 1
     }
   },
   {
     "id": 17003004,
-    "名称": "Un moment de répit : Dame Nifle",
+    "名称": "休憩一刻·妮弗尔夫人",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter Dame Nifle au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请妮弗尔夫人入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: Dame Nifle": 1
+      "Title: 妮弗尔夫人": 1
     }
   },
   {
     "id": 17003005,
-    "名称": "Un moment de répit : Kezhou",
+    "名称": "休憩一刻·刻舟",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter Kezhou au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请刻舟入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: Kezhou": 1
+      "Title: 刻舟": 1
     }
   },
   {
     "id": 17003007,
-    "名称": "Un moment de répit : Fina",
+    "名称": "休憩一刻·菲娜",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter Fina au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请菲娜入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: Fina": 1
+      "Title: 菲娜": 1
     }
   },
   {
     "id": 17003008,
-    "名称": "Un moment de répit : Rebecca",
+    "名称": "休憩一刻·丽蓓卡",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter Rebecca au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请丽蓓卡入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: Rebecca": 1
+      "Title: 丽蓓卡": 1
     }
   },
   {
     "id": 17003010,
-    "名称": "Un moment de répit : Tabethe",
+    "名称": "休憩一刻·塔比瑟",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter Tabethe au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请塔比瑟入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: Tabethe": 1
+      "Title: 塔比瑟": 1
     }
   },
   {
     "id": 17003011,
-    "名称": "Un moment de répit : Fushu",
+    "名称": "休憩一刻·扶疏",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter Fushu au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请扶疏入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: Fushu": 1
+      "Title: 扶疏": 1
     }
   },
   {
     "id": 17003012,
-    "名称": "Un moment de répit : Lynn",
+    "名称": "休憩一刻·琳恩",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter Lynn au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请琳恩入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: Lynn": 1
+      "Title: 琳恩": 1
     }
   },
   {
     "id": 17003014,
-    "名称": "Un moment de répit : Yale et Oliver",
+    "名称": "休憩一刻·耶尔与奥利弗",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter Yale et Oliver au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请耶尔与奥利弗入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: Yale": 1,
-      "Title: Oliver": 1
+      "Title: 耶尔": 1,
+      "Title: 奥利弗": 1
     }
   },
   {
     "id": 17003015,
-    "名称": "Un moment de répit : Vulcera",
+    "名称": "休憩一刻·海尔法",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter Vulcera au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请海尔法入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: Vulcera": 1
+      "Title: 海尔法": 1
     }
   },
   {
     "id": 17003017,
-    "名称": "Un moment de répit : Margie",
+    "名称": "休憩一刻·玛尔洁",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter Margie au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请玛尔洁入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: Margie": 1
+      "Title: 玛尔洁": 1
     }
   },
   {
     "id": 17003018,
-    "名称": "Un moment de répit : Rhythm",
+    "名称": "休憩一刻·黎瑟",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter Rhythm au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请黎瑟入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: Rhythm": 1
+      "Title: 黎瑟": 1
     }
   },
   {
     "id": 17003019,
-    "名称": "Un moment de répit : Zhiliu",
+    "名称": "休憩一刻·止流",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter Zhiliu au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请止流入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: Zhiliu": 1
+      "Title: 止流": 1
     }
   },
   {
     "id": 17003020,
-    "名称": "Un moment de répit : Yuming",
+    "名称": "休憩一刻·煜明",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter Yuming au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请煜明入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: Yuming": 1
+      "Title: 煜明": 1
     }
   },
   {
     "id": 17003021,
-    "名称": "Un moment de répit : Randy",
+    "名称": "休憩一刻·兰迪",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter Randy au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请兰迪入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: Randy": 1
+      "Title: 兰迪": 1
     }
   },
   {
     "id": 17003022,
-    "名称": "Un moment de répit : Sibylle",
+    "名称": "休憩一刻·西比尔",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter Sibylle au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请西比尔入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: Sibylle": 1
+      "Title: 西比尔": 1
     }
   },
   {
     "id": 17003023,
-    "名称": "Un moment de répit : Truffle et Filbert",
+    "名称": "休憩一刻·松露与榛子",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter Truffle et Filbert au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请松露与榛子入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: Truffle": 1,
-      "Title: Filbert": 1
+      "Title: 松露": 1,
+      "Title: 榛子": 1
     }
   },
   {
     "id": 17003024,
-    "名称": "Un moment de répit : L’Étranger",
+    "名称": "休憩一刻·奥特赛德",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter l’Étranger au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请奥特赛德入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: L’Étranger": 1
+      "Title: 奥特赛德": 1
     }
   },
   {
     "id": 17003025,
-    "名称": "Un moment de répit : Psyche",
+    "名称": "休憩一刻·赛琪",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter Psyche au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请赛琪入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: Psyche": 1
+      "Title: 赛琪": 1
     }
   },
   {
     "id": 17003026,
-    "名称": "Un moment de répit : Daphne",
+    "名称": "休憩一刻·达芙涅",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "Inviter Daphne au Sanctuaire et lui parler une fois",
+    "描述": "于休憩之所邀请达芙涅入驻并对话一次",
     "版本": "1.2",
     "奖励": {
       "Indice du Mandat scellé : Loyal": 1,
-      "Title: Daphne": 1
+      "Title: 达芙涅": 1
     }
   },
   {

@@ -5018,7 +5018,7 @@
     "talks": [
       {
         "id": 10037995,
-        "content": "Peu importe ce qu’ils exigent de nous... n’oublie jamais : nous ne sommes pas des monstres.",
+        "content": "Quoi qu’ils nous fassent faire, n’oublie jamais ça, nous ne sommes pas des monstres.",
         "npc": 100328
       }
     ]
@@ -5187,7 +5187,7 @@
     "talks": [
       {
         "id": 10037997,
-        "content": "Je demanderai au docteur de s’occuper du papier et de l’encre. Quant au sceau, je compte sur vous pour aller le récupérer. Désolée... cette blessure finit vraiment par vous ralentir.",
+        "content": "J’ai demandé au médecin de me prêter du papier et un stylo, je pourrai rédiger mes lettres. Mais le sceau... je compte sur vous. Désolée... mes blessures ne font que vous ralentir.",
         "npc": 100304
       }
     ]
@@ -6887,13 +6887,13 @@
   },
   {
     "id": 111001,
-    "name": "Ada",
+    "name": "艾达",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 111002,
-    "name": "Yvaine",
+    "name": "伊薇",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -6911,13 +6911,13 @@
   },
   {
     "id": 111121,
-    "name": "Fée",
+    "name": "精灵",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 111122,
-    "name": "Ada",
+    "name": "艾达",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -6929,67 +6929,67 @@
   },
   {
     "id": 111124,
-    "name": "Chef du village",
+    "name": "村长",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 111150,
-    "name": "Monsieur Chien",
+    "name": "狗叔",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 111151,
-    "name": "Mademoiselle Oiseau",
+    "name": "鸟姐",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 111152,
-    "name": "Monsieur Cochon",
+    "name": "猪哥",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 111153,
-    "name": "Monsieur Loup",
+    "name": "狼叔",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 111154,
-    "name": "Jeune homme anxieux",
+    "name": "焦急的青年",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 111155,
-    "name": "Femme chaleureuse",
+    "name": "热情的妇人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 111156,
-    "name": "Vieil homme exalté",
+    "name": "激动的老人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 111157,
-    "name": "Enfant émerveillé",
+    "name": "憧憬的孩童",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 111158,
-    "name": "Homme d’âge mûr jaloux",
+    "name": "嫉妒的中年人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 111159,
-    "name": "Villageois affolé",
+    "name": "慌张的村民",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -10789,7 +10789,7 @@
     "talks": [
       {
         "id": 51000812,
-        "content": "Dès que je serai rétablie, je reprendrai la route pour une nouvelle aventure.",
+        "content": "Dès que je serai rétablie, je reprendrai la route... pour une nouvelle aventure.",
         "npc": 700032
       }
     ]
@@ -11579,17 +11579,17 @@
         "options": [
           {
             "id": 510013041,
-            "content": "<I>Je préfère considérer Camilla comme une alliée forte et fiable. Elle nous a aidés à de nombreuses reprises. Pas seulement nous, d’ailleurs : au moins la moitié de Givrelac lui doit quelque chose.</>",
+            "content": "<I>Non, Camilla est une amie digne de confiance. Elle m’a déjà aidé.</>",
             "next": 51001306
           },
           {
             "id": 510013042,
-            "content": "<I>Ce n’est pas une raison pour déblatérer ici. Je crois en l’intégrité de Camilla, et ce n’est pas avec tes accusations ridicules que tu la saliras.</>",
+            "content": "<I>Laisse tomber, je fais confiance à mon jugement. Je sais qui est vraiment Camilla.</>",
             "next": 51001306
           },
           {
             "id": 510013043,
-            "content": "<I>J’ai vu de mes yeux le discernement de Camilla : qu’il s’agisse des gens ou des boissons, rien ne lui échappe. Celui qui ne reconnaît rien, ici, c’est toi.</>",
+            "content": "<I>En fait, tu voulais juste lui fourguer ta piquette et elle t’a rembarré. Voilà pourquoi tu rages.</>",
             "next": 51001306
           }
         ]
@@ -11602,7 +11602,7 @@
       },
       {
         "id": 510013061,
-        "content": "<I>Hum... kof...</> J’entends à ton accent que tu n’es pas du coin. Laisse-moi deviner, depuis que tu es arrivé à Givrelac, tu n’as jamais mis les pieds ailleurs qu’au bar de Camilla ?",
+        "content": "<I><I>Hum... kof...</> J’entends à ton accent que tu n’es pas du coin. Laisse-moi deviner, depuis que tu es arrivé à Givrelac, tu n’as jamais mis les pieds ailleurs qu’au bar de Camilla ?</>",
         "npc": 700014
       },
       {
@@ -11624,12 +11624,12 @@
         "options": [
           {
             "id": 510013091,
-            "content": "<I>D’accord, je prends une pinte.</>",
+            "content": "D’accord, je prends une pinte.",
             "next": 51001310
           },
           {
             "id": 510013092,
-            "content": "<I>On en a pour son argent.</>",
+            "content": "<I>Un alcool trop bon marché, c’est jamais bon signe. Je passe mon tour.</>",
             "next": 51001313
           }
         ]
@@ -11764,7 +11764,7 @@
         "options": [
           {
             "id": 510013281,
-            "content": "<I>Sa camelote fait vraiment des ravages...</>",
+            "content": "<I>Ces faux produits finissent toujours par faire du mal...</>",
             "next": 51001329
           }
         ]
@@ -11997,7 +11997,7 @@
         "options": [
           {
             "id": 510035051,
-            "content": "Rêvasser comme ça, c’est prendre le risque qu’elle te note dans son carnet.",
+            "content": "<I>Rêvasser comme ça, c’est prendre le risque qu’elle te note dans son carnet.</>",
             "next": 510035054,
             "impr": {
               "Avantage": 3
@@ -13408,7 +13408,7 @@
     "talks": [
       {
         "id": 51003301,
-        "content": "<I>Atchoum !</> On dirait qu’il fait encore plus froid...",
+        "content": "<I><I>Atchoum !</> On dirait qu’il fait encore plus froid...</>",
         "npc": 700080,
         "next": 51003302
       },
@@ -15729,7 +15729,7 @@
     "talks": [
       {
         "id": 51000812,
-        "content": "Dès que je serai rétablie, je reprendrai la route pour une nouvelle aventure.",
+        "content": "Dès que je serai rétablie, je reprendrai la route... pour une nouvelle aventure.",
         "npc": 700032
       },
       {
@@ -22496,7 +22496,7 @@
       },
       {
         "id": 51125305,
-        "content": "Alors pourquoi vouloir vivre à Huaxu ? Ici, tant que tu agis avec droiture, le Seigneur Dragon d’Argent veille sur toi jour après jour.",
+        "content": "Alors pourquoi vouloir vivre à Huaxu ? Ici, tant que tu agis avec droiture, le Dieu-Dragon d’Argent veille sur toi jour après jour.",
         "npc": 701036
       }
     ]
@@ -23007,7 +23007,7 @@
       },
       {
         "id": 51125711,
-        "content": "Par la grâce du Seigneur Dragon d’Argent, Ju survécut aux tempêtes et atteignit le mystérieux pays de la Tour. Hélas, là-bas non plus, la paix n’existait pas. Convaincu que les peuples étrangers ne pouvaient offrir l’espoir à Huaxu, Ju reprit la route du retour... accompagné d’autres âmes en quête de stabilité.",
+        "content": "Par la grâce du Dieu-Dragon d’Argent, Ju survécut aux tempêtes et atteignit le mystérieux pays de la Tour. Hélas, là-bas non plus, la paix n’existait pas. Convaincu que les peuples étrangers ne pouvaient offrir l’espoir à Huaxu, Ju reprit la route du retour... accompagné d’autres âmes en quête de stabilité.",
         "npc": 701041,
         "next": 51125712
       },
@@ -23287,7 +23287,7 @@
       },
       {
         "id": 51125908,
-        "content": "Exactement. Si vous faites affaire avec un habitant de Huaxu, une fois le prix fixé, vous devez conclure un pacte sous le regard du Seigneur Dragon d’Argent. Sans cela, nous ne pouvons vous accorder notre confiance.",
+        "content": "Exactement. Si vous faites affaire avec un habitant de Huaxu, une fois le prix fixé, vous devez conclure un pacte sous le regard du Dieu-Dragon d’Argent. Sans cela, nous ne pouvons vous accorder notre confiance.",
         "npc": 701044,
         "next": 51125909
       },
@@ -23299,7 +23299,7 @@
       },
       {
         "id": 51125910,
-        "content": "Non, ce n’est pas la même chose. Nos contrats sont sacrés, conclus sous le témoignage du Seigneur Dragon d’Argent. L’encre est mêlée aux cendres de Lune Profonde : dès la signature, le serment est reconnu.",
+        "content": "Non, ce n’est pas la même chose. Nos contrats sont sacrés, conclus sous le témoignage du Dieu-Dragon d’Argent. L’encre est mêlée aux cendres de Lune Profonde : dès la signature, le serment est reconnu.",
         "npc": 701044,
         "next": 51125911
       },
@@ -24019,7 +24019,7 @@
       },
       {
         "id": 51126519,
-        "content": "Par le Seigneur Dragon d’Argent... comment fais-tu pour tout retenir mot pour mot ? Tu as l’œil céleste ou quoi ?",
+        "content": "Par le Dieu-Dragon d’Argent... comment fais-tu pour tout retenir mot pour mot ? Tu as l’œil céleste ou quoi ?",
         "npc": 701052,
         "next": 51126520
       },
@@ -24276,7 +24276,7 @@
           },
           {
             "id": 51126904,
-            "content": "<I>Tu es le Seigneur Dragon d’Argent.</>",
+            "content": "<I>Tu es le Dieu-Dragon d’Argent.</>",
             "next": 51126905,
             "impr": {
               "Chaos": 3
@@ -24292,7 +24292,7 @@
       },
       {
         "id": 51126905,
-        "content": "Le Seigneur Dragon d’Argent ? Non... je ne suis pas lui. Le Seigneur Dragon d’Argent protège Huaxu. Moi, je ne suis qu’un... Wishen.",
+        "content": "Le Dieu-Dragon d’Argent ? Non... je ne suis pas lui. Le Dieu-Dragon d’Argent protège Huaxu. Moi, je ne suis qu’un... Wishen.",
         "npc": 701059,
         "next": 51126906
       },
@@ -24422,7 +24422,7 @@
     "talks": [
       {
         "id": 51127001,
-        "content": "« Que la lumière miséricordieuse du Seigneur Dragon d’Argent éclaire jusqu’aux royaumes d’ombre. Âmes solitaires, esprits entravés, ne vous égarez plus, ne demeurez plus en errance. Que les souffrances d’autrefois soient mises de côté, qu’aujourd’hui vous receviez la délivrance, et soyez baignées dans l’éclat de sa grâce... »",
+        "content": "« Que la lumière miséricordieuse du Dieu-Dragon d’Argent éclaire jusqu’aux royaumes d’ombre. Âmes solitaires, esprits entravés, ne vous égarez plus, ne demeurez plus en errance. Que les souffrances d’autrefois soient mises de côté, qu’aujourd’hui vous receviez la délivrance, et soyez baignées dans l’éclat de sa grâce... »",
         "npc": 701060,
         "options": [
           {
@@ -24500,7 +24500,7 @@
       },
       {
         "id": 51127008,
-        "content": "Que la lumière miséricordieuse du Seigneur Dragon d’Argent éclaire jusqu’aux royaumes d’ombre. Âmes solitaires, esprits entravés, ne vous égarez plus, ne demeurez plus en errance.",
+        "content": "Que la lumière miséricordieuse du Dieu-Dragon d’Argent éclaire jusqu’aux royaumes d’ombre. Âmes solitaires, esprits entravés, ne vous égarez plus, ne demeurez plus en errance.",
         "npc": 701060,
         "next": 51127009
       },
@@ -24690,7 +24690,7 @@
       },
       {
         "id": 51127115,
-        "content": "Mon grand-père est tombé très malade. Une maladie appelée « vieillesse ». Il y a quelque temps, le Seigneur Dragon d’Argent l’a emmené. Avant de fermer les yeux, il m’a raconté qu’il avait vu ici, au Ravin du Clair-Obscur, des gens morts devenus des Wishen.",
+        "content": "Mon grand-père est tombé très malade. Une maladie appelée « vieillesse ». Il y a quelque temps, le Dieu-Dragon d’Argent l’a emmené. Avant de fermer les yeux, il m’a raconté qu’il avait vu ici, au Ravin du Clair-Obscur, des gens morts devenus des Wishen.",
         "npc": 701061,
         "next": 51127116
       },
@@ -24923,7 +24923,7 @@
       },
       {
         "id": 51127316,
-        "content": "Fleurir... La vie d’un arbre est longue, mais sa floraison est brève — et c’est justement pour ça qu’elle attire tous les regards. Les humains sont pareils : guidés par des saisons invisibles, ils fleurissent soudain... même le Seigneur Dragon d’Argent s’en émerveillerait.",
+        "content": "Fleurir... La vie d’un arbre est longue, mais sa floraison est brève — et c’est justement pour ça qu’elle attire tous les regards. Les humains sont pareils : guidés par des saisons invisibles, ils fleurissent soudain... même le Dieu-Dragon d’Argent s’en émerveillerait.",
         "npc": 701063,
         "options": [
           {
@@ -25089,7 +25089,7 @@
       },
       {
         "id": 51127503,
-        "content": "Oh ho, du répondant ! Mais écoute bien : ici, c’est pas un terrain de jeu pour {性别:un morveux|une morveuse} qui sent encore le lait. Seuls des types comme moi... hic... des figures légendaires, qui font trembler les rues et les rumeurs... comme moi, Chizhatian, ont leur place ici. Compris ?",
+        "content": "Oh ho, du répondant ! Mais écoute bien : ici, c’est pas un terrain de jeu pour {性别:un morveux|une morveuse} qui sent encore le lait. Seuls des types comme moi... <I>hic... </>des figures légendaires, qui font trembler les rues et les rumeurs... comme moi, Chizhatian, ont leur place ici. Compris ?",
         "npc": 701066,
         "next": 51127504
       },
@@ -25828,12 +25828,12 @@
       },
       {
         "id": 51128203,
-        "content": "Oh, je le sais bien ! Merci de vous en soucier. Mais justement, c’est parce que c’est dangereux que je suis venu. Je voulais allumer un bâton d’encens de Lune Profonde pour le Seigneur Dragon d’Argent, ici même, là où personne n’ose poser le pied, et lui demander d’éradiquer définitivement le Fléau de Zhuyin !",
+        "content": "Oh, je le sais bien ! Merci de vous en soucier. Mais justement, c’est parce que c’est dangereux que je suis venu. Je voulais allumer un bâton d’encens de Lune Profonde pour le Dieu-Dragon d’Argent, ici même, là où personne n’ose poser le pied, et lui demander d’éradiquer définitivement le Fléau de Zhuyin !",
         "npc": 701073
       },
       {
         "id": 51128205,
-        "content": "Pas d’inquiétude, pas d’inquiétude. Je sais que l’endroit est dangereux — c’est précisément pour cela que je suis venu ici, là où nul n’ose s’aventurer, afin d’offrir de l’encens de Lune Profonde au Seigneur Dragon d’Argent et de le supplier d’anéantir le Fléau de Zhuyin une bonne fois pour toutes !",
+        "content": "Pas d’inquiétude, pas d’inquiétude. Je sais que l’endroit est dangereux — c’est précisément pour cela que je suis venu ici, là où nul n’ose s’aventurer, afin d’offrir de l’encens de Lune Profonde au Dieu-Dragon d’Argent et de le supplier d’anéantir le Fléau de Zhuyin une bonne fois pour toutes !",
         "npc": 701073,
         "next": 51128206
       },
@@ -25850,7 +25850,7 @@
       },
       {
         "id": 51128208,
-        "content": "C’est ici que je vais allumer l’encens. Le Seigneur Dragon d’Argent se dressera comme dans les mythes, et il exterminera cette bête immonde jusqu’au dernier souffle !",
+        "content": "C’est ici que je vais allumer l’encens. Le Dieu-Dragon d’Argent se dressera comme dans les mythes, et il exterminera cette bête immonde jusqu’au dernier souffle !",
         "npc": 701073,
         "next": 51128209
       },
@@ -25896,7 +25896,7 @@
       },
       {
         "id": 51128214,
-        "content": "Dans ce cas, accepteriez-vous de brûler de l’encens avec moi ? À deux, nos prières auront plus de chances d’atteindre le Seigneur Dragon d’Argent !",
+        "content": "Dans ce cas, accepteriez-vous de brûler de l’encens avec moi ? À deux, nos prières auront plus de chances d’atteindre le Dieu-Dragon d’Argent !",
         "npc": 701073,
         "options": [
           {
@@ -25923,7 +25923,7 @@
         "options": [
           {
             "id": 51128223,
-            "content": "<I>Vous cherchez donc à reproduire le rituel des mythes, pour appeler le Seigneur Dragon d’Argent ?</>",
+            "content": "<I>Vous cherchez donc à reproduire le rituel des mythes, pour appeler le Dieu-Dragon d’Argent ?</>",
             "next": 51128224
           }
         ]
@@ -25936,13 +25936,13 @@
       },
       {
         "id": 51128224,
-        "content": "Exactement ! Je me dis que, de nos jours, tout le monde brûle de l’encens sans cesse. Le Seigneur Dragon d’Argent doit sentir l’encens partout et ne plus savoir où intervenir. Alors si j’offre de l’encens ici, dans un lieu désert, il ne pourra qu’être intrigué.",
+        "content": "Exactement ! Je me dis que, de nos jours, tout le monde brûle de l’encens sans cesse. Le Dieu-Dragon d’Argent doit sentir l’encens partout et ne plus savoir où intervenir. Alors si j’offre de l’encens ici, dans un lieu désert, il ne pourra qu’être intrigué.",
         "npc": 701073,
         "next": 51128225
       },
       {
         "id": 51128218,
-        "content": "Par son cœur inquiet et malveillant, elle poussait les hommes à la violence, faisant couler le sang. Le peuple vivait dans la misère, sans répit, et les lamentations ne cessaient jamais. Alors les gens allumèrent l’encens, les uns après les autres, et implorèrent l’aide du Seigneur Dragon.",
+        "content": "Par son cœur inquiet et malveillant, elle poussait les hommes à la violence, faisant couler le sang. Le peuple vivait dans la misère, sans répit, et les lamentations ne cessaient jamais. Alors les gens allumèrent l’encens, les uns après les autres, et implorèrent l’aide du Dieu-Dragon.",
         "npc": 701073,
         "next": 51128219
       },
@@ -25954,7 +25954,7 @@
       },
       {
         "id": 51128219,
-        "content": "Depuis les Neuf Cieux, le Seigneur Dragon d’Argent perçut le parfum de l’encens de Lune Profonde. Pris de colère, il usa de sa puissance divine pour chasser Zhuyin au-delà des mers de Huaxu.",
+        "content": "Depuis les Neuf Cieux, le Dieu-Dragon d’Argent perçut le parfum de l’encens de Lune Profonde. Pris de colère, il usa de sa puissance divine pour chasser Zhuyin au-delà des mers de Huaxu.",
         "npc": 701073,
         "next": 51128220
       },
@@ -25971,7 +25971,7 @@
         "options": [
           {
             "id": 51128223,
-            "content": "<I>Vous cherchez donc à reproduire le rituel des mythes, pour appeler le Seigneur Dragon d’Argent ?</>",
+            "content": "<I>Vous cherchez donc à reproduire le rituel des mythes, pour appeler le Dieu-Dragon d’Argent ?</>",
             "next": 51128224
           }
         ]
@@ -26152,7 +26152,7 @@
   },
   {
     "id": 701099,
-    "name": "Vieux Chen",
+    "name": "陈老爹",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -26274,7 +26274,7 @@
       },
       {
         "id": 51001340,
-        "content": "<I>Snif...</> seul le sourire de Dame Camilla pourra recoller les morceaux de mon cœur brisé !",
+        "content": "<I><I>Snif...</> seul le sourire de Dame Camilla pourra recoller les morceaux de mon cœur brisé !</>",
         "npc": 790011
       }
     ]
@@ -27354,7 +27354,7 @@
       },
       {
         "id": 90010301,
-        "content": "C’est mon ami. Il a beau être petit, il est sacrément costaud — il attise le feu de la forge pour moi.",
+        "content": "C’est mon fidèle compagnon. Pas bien grand, mais sacrément costaud ! Je lui confie le soin d’attiser le feu de la forge.",
         "npc": 900001
       }
     ]
@@ -27367,7 +27367,7 @@
     "talks": [
       {
         "id": 90020201,
-        "content": "Le repos fait partie du voyage. Que dirais-tu d’une tasse de la spécialité Luno ?",
+        "content": "Hein ?! J-Je ne faisais pas la sieste... Hum hum ! Tu veux acheter quelque chose ?",
         "npc": 900002
       }
     ]
@@ -27553,7 +27553,7 @@
       },
       {
         "id": 51151207,
-        "content": "Le hasard, voilà la clé du profit ! Cette idée m’est venue comme une illumination, un jour où je priais le Seigneur Dragon d’Argent. Alors ? Avoue que c’est une idée de génie !",
+        "content": "Le hasard, voilà la clé du profit ! Cette idée m’est venue comme une illumination, un jour où je priais le Dieu-Dragon d’Argent. Alors ? Avoue que c’est une idée de génie !",
         "npc": 900012,
         "next": 51151208
       },

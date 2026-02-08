@@ -1,10 +1,8 @@
 from processor.base_processor import BaseProcessor
 import re
 import os
-from dotenv import load_dotenv
-
-# 加载.env文件
-load_dotenv()
+import json
+import glob
 
 
 class WeaponProcessor(BaseProcessor):
@@ -22,8 +20,14 @@ class WeaponProcessor(BaseProcessor):
         self.weapon_card_level_data = data_loader.load_json("WeaponCardLevel.json")
         self.attribute_data = data_loader.load_json("Attribute.json")
         self.skill_effects_data = data_loader.load_json("SkillEffects.json")
+        self.skill_node_data = data_loader.load_json("SkillNode.json")
+        self._project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        self._asset_root = os.path.join(self._project_root, "out", "Asset")
+        self._anim_path_cache = {}
+        self._anim_meta_cache = {}
 
-    def process_item(self, weapon_data, language):
+    def process_item(self, item_data, language):
+        weapon_data = item_data
         weapon_id = weapon_data.get("WeaponId", 0)
 
         # 获取BattleWeapon数据
@@ -43,8 +47,6 @@ class WeaponProcessor(BaseProcessor):
             "类型": self.process_tags(battle_weapon.get("WeaponTag", [])),
         }
 
-        # 处理WeaponBlueprint，提取武器模型名称
-        processed.update(self._process_weapon_blueprint(battle_weapon))
         processed.update(self._process_attributes(battle_weapon, weapon_id))
         processed.update(
             {
@@ -54,11 +56,18 @@ class WeaponProcessor(BaseProcessor):
             }
         )
         try:
+            skills, reload_value, shooting_interval = self._process_skills(
+                battle_weapon, weapon_id
+            )
             processed.update(
                 {
-                    "技能": self._process_skills(battle_weapon, weapon_id),
+                    "技能": skills,
                 }
             )
+            if reload_value:
+                processed["装填"] = reload_value
+            if shooting_interval:
+                processed["射击间隔"] = shooting_interval
         except Exception as e:
             print(f"处理武器 {weapon_id} 技能时出错: {e}")
             import traceback
@@ -70,14 +79,17 @@ class WeaponProcessor(BaseProcessor):
     def _process_skills(self, battle_weapon, weapon_id):
         """处理武器技能"""
         if not battle_weapon:
-            return []
+            return [], 0.0, 0.0
 
         # 获取武器技能列表
         weapon_skill_list = battle_weapon.get("WeaponSkillList", [])
         if not weapon_skill_list:
-            return []
+            return [], 0.0, 0.0
 
         skills = []
+        reload_value = 0.0
+        shooting_interval = 0.0
+        is_ranged_weapon = self._is_ranged_weapon(battle_weapon)
 
         # 处理每个技能
         for skill_id in weapon_skill_list:
@@ -99,6 +111,9 @@ class WeaponProcessor(BaseProcessor):
             else:
                 skill_entry = skill_data
 
+            if not isinstance(skill_entry, dict):
+                continue
+
             # 获取技能名称和描述
             # skill_name = self.get_translated_text(skill_entry.get("SkillName", ""))
             # skill_desc_key = skill_entry.get("SkillDesc", "")
@@ -109,29 +124,35 @@ class WeaponProcessor(BaseProcessor):
             skill_desc_values = skill_entry.get("SkillDescValues", [])
 
             # 构建技能信息
+            skill_type = skill_entry.get("SkillType", "")
             skill_info_dict = {
                 "id": skill_id,
-                "名称": skill_entry.get("SkillType", ""),
+                "名称": skill_type,
                 # "weapon": skill_entry.get("SkillWeaponType", ""),
             }
+
+            if skill_type == "Reload":
+                reload_candidate = self._extract_reload_from_skill(skill_entry)
+                if reload_candidate:
+                    reload_value = max(reload_value, reload_candidate)
+            if is_ranged_weapon and skill_type == "Shooting":
+                shooting_candidate = self._extract_shooting_interval_from_skill(
+                    skill_entry
+                )
+                if shooting_candidate:
+                    if shooting_interval:
+                        shooting_interval = min(shooting_interval, shooting_candidate)
+                    else:
+                        shooting_interval = shooting_candidate
 
             # 如果有描述，处理描述中的占位符
             if skill_desc_keys:
                 # 计算技能描述（默认使用武器等级1）
-                processed_desc, cut_toughness, delay, hit_stop = (
-                    self._process_weapon_skill_desc(
-                        skill_entry, weapon_id, skill_desc_keys, skill_desc_values
-                    )
+                processed_desc = self._process_weapon_skill_desc(
+                    skill_entry, weapon_id, skill_desc_keys, skill_desc_values
                 )
                 if processed_desc:
                     skill_info_dict["字段"] = processed_desc
-                # 添加削韧、延迟、卡肉数据
-                if cut_toughness:
-                    skill_info_dict["削韧"] = cut_toughness
-                if delay:
-                    skill_info_dict["延迟"] = delay
-                if hit_stop:
-                    skill_info_dict["卡肉"] = hit_stop
 
             skills.append(skill_info_dict)
 
@@ -145,48 +166,84 @@ class WeaponProcessor(BaseProcessor):
         }
         for skill in skills:
             if "字段" in skill:
-                skill_item = {
-                    "名称": typeMap.get(skill["名称"], skill["名称"]),
-                    "类型": "武器伤害",
-                    "字段": skill["字段"],
-                }
-                # 添加id、削韧、延迟、卡肉数据
+                skill_item = {}
                 if "id" in skill:
                     skill_item["id"] = skill["id"]
-                if "削韧" in skill:
-                    skill_item["削韧"] = skill["削韧"]
-                if "延迟" in skill:
-                    skill_item["延迟"] = skill["延迟"]
-                if "卡肉" in skill:
-                    skill_item["卡肉"] = skill["卡肉"]
+                skill_item["名称"] = typeMap.get(skill["名称"], skill["名称"])
+                skill_item["类型"] = "武器伤害"
+                skill_item["字段"] = skill["字段"]
                 rst.append(skill_item)
-        return rst
+        return rst, self.round_value(reload_value), self.round_value(shooting_interval)
 
-    def _trim_trailing_zeros(self, arr):
-        """去掉数组尾部的0，如果全为0则返回空数组"""
-        if not arr:
-            return []
+    def _is_ranged_weapon(self, battle_weapon):
+        """根据武器数据判断是否为远程武器"""
+        if not isinstance(battle_weapon, dict):
+            return False
 
-        # 创建数组副本以避免修改原始数据
-        trimmed = arr.copy()
+        # 远程武器通常具备弹药相关字段。
+        for key in ("MagazineCapacity", "BulletMax", "BulletConver"):
+            if battle_weapon.get(key) is not None:
+                return True
 
-        # 从尾部开始去掉0
-        while trimmed and trimmed[-1] == 0:
-            trimmed.pop()
+        tags = battle_weapon.get("WeaponTag", [])
+        for tag in tags if isinstance(tags, list) else []:
+            if not isinstance(tag, str):
+                continue
+            lower_tag = tag.lower()
+            if "range" in lower_tag or "shoot" in lower_tag or "gun" in lower_tag:
+                return True
 
-        return trimmed
+        return False
+
+    def _extract_reload_from_skill(self, skill_entry):
+        """从Reload技能对应动画里提取BP_SkillEffect_C的LinkValue作为装填时间"""
+        begin_node_id = skill_entry.get("BeginNodeId")
+        if not begin_node_id:
+            return 0.0
+
+        node_chain = self._collect_skill_node_chain(begin_node_id, 8)
+        reload_value = 0.0
+        for node in node_chain:
+            anim_path = self._resolve_anim_json_path(node)
+            cancel, combo, skill_effect_link, shooting_interval = (
+                self._read_anim_cancel_and_links(anim_path)
+            )
+            del cancel, combo, shooting_interval
+            if skill_effect_link:
+                reload_value = max(reload_value, skill_effect_link)
+
+        return self.round_value(reload_value)
+
+    def _extract_shooting_interval_from_skill(self, skill_entry):
+        """从Shooting技能动画的最后一个AnimSegment提取射击间隔"""
+        begin_node_id = skill_entry.get("BeginNodeId")
+        if not begin_node_id:
+            return 0.0
+
+        node_chain = self._collect_skill_node_chain(begin_node_id, 8)
+        intervals = []
+        for node in node_chain:
+            anim_path = self._resolve_anim_json_path(node)
+            cancel, combo, skill_effect_link, shooting_interval = (
+                self._read_anim_cancel_and_links(anim_path)
+            )
+            del cancel, combo, skill_effect_link
+            if shooting_interval:
+                intervals.append(shooting_interval)
+
+        if not intervals:
+            return 0.0
+
+        return self.round_value(min(intervals))
 
     def _process_weapon_skill_desc(
         self, _skill_entry, weapon_id, desc_keys, desc_values
     ):
         """处理武器技能描述，替换占位符"""
         if not desc_keys or not desc_values:
-            return {}, [], [], []
+            return []
 
-        rst = {}
-        cut_toughness = []
-        delay = []
-        hit_stop = []
+        rst = []
 
         # desc_keys 和 desc_values 可能是列表或字典
         if isinstance(desc_keys, dict):
@@ -214,10 +271,6 @@ class WeaponProcessor(BaseProcessor):
                 desc_value = desc_values[key_or_index]
 
             if desc_value is None:
-                # 当desc_value为None时，使用0作为默认值
-                cut_toughness.append(0)
-                delay.append(0)
-                hit_stop.append(0)
                 continue
 
             # 获取描述文本
@@ -229,26 +282,319 @@ class WeaponProcessor(BaseProcessor):
             calculated_value = self._parse_single_desc_value(
                 preprocessed_desc_value, weapon_id, 1, "BattleWeapon"
             )
-            rst[desc_text] = calculated_value
+
+            value, value2, value_format = self._extract_field_value_and_format(
+                calculated_value
+            )
+            item = {
+                "名称": desc_text,
+                "值": value,
+            }
+            if value2 is not None:
+                item["值2"] = value2
+            if value_format and value_format != "{%}":
+                item["格式"] = value_format
 
             # 为每个技能字段解析对应的SkillEffects，提取HitStop和CutToughness信息
             skill_effects_info = self._parse_skill_effects(desc_value, weapon_id)
+            is_damage_field = bool(skill_effects_info.get("is_damage"))
             if skill_effects_info:
-                cut_toughness.append(skill_effects_info.get("削韧", 0))
-                delay.append(skill_effects_info.get("延迟", 0))
-                hit_stop.append(skill_effects_info.get("卡肉", 0))
+                cut_toughness = skill_effects_info.get("削韧", 0)
+                delay = skill_effects_info.get("延迟", 0)
+                hit_stop = skill_effects_info.get("卡肉", 0)
+                if cut_toughness:
+                    item["削韧"] = cut_toughness
+                if delay:
+                    item["延迟"] = delay
+                if hit_stop:
+                    item["卡肉"] = hit_stop
+
+            item["_is_damage"] = is_damage_field
+
+            rst.append(item)
+
+        cancels, combos = self._process_skill_timing(_skill_entry, len(rst))
+        for i, item in enumerate(rst):
+            if not item.pop("_is_damage", False):
+                continue
+            cancel = cancels[i] if i < len(cancels) else 0
+            combo = combos[i] if i < len(combos) else 0
+            if cancel:
+                item["取消"] = cancel
+            if combo:
+                item["连段"] = combo
+
+        return rst
+
+    def _extract_field_value_and_format(self, calculated_value):
+        """从格式化后的描述值中提取数值和格式模板"""
+        if calculated_value is None:
+            return 0, None, None
+
+        text = str(calculated_value)
+        matches = list(re.finditer(r"-?\d+(?:\.\d+)?", text))
+        if not matches:
+            return text, None, None
+
+        def _prev_significant_char(source, index):
+            i = index - 1
+            while i >= 0 and source[i].isspace():
+                i -= 1
+            return source[i] if i >= 0 else ""
+
+        values = []
+        fmt_parts = []
+        cursor = 0
+
+        for match in matches:
+            start, end = match.span()
+            fmt_parts.append(text[cursor:start])
+
+            raw_number = match.group(0)
+            percent = end < len(text) and text[end] == "%"
+            prev_char = _prev_significant_char(text, start)
+
+            # xN 连击次数属于常量，应保留在格式里，不作为值占位。
+            is_multiplier_constant = (
+                prev_char in ("×", "x", "X", "*")
+                and not percent
+                and re.fullmatch(r"\d+", raw_number) is not None
+                and len(values) >= 1
+            )
+
+            if is_multiplier_constant:
+                fmt_parts.append(raw_number)
+                cursor = end
+                continue
+
+            number_value = float(raw_number)
+            if percent:
+                values.append(self.round_value(number_value / 100.0))
+                fmt_parts.append("{%}")
+                cursor = end + 1
             else:
-                # 当没有技能效果信息时，使用0作为默认值
-                cut_toughness.append(0)
-                delay.append(0)
-                hit_stop.append(0)
+                values.append(self.round_value(number_value))
+                fmt_parts.append("{}")
+                cursor = end
 
-        # 处理数组，去掉尾部的0
-        cut_toughness = self._trim_trailing_zeros(cut_toughness)
-        delay = self._trim_trailing_zeros(delay)
-        hit_stop = self._trim_trailing_zeros(hit_stop)
+        fmt_parts.append(text[cursor:])
 
-        return rst, cut_toughness, delay, hit_stop
+        if not values:
+            return text, None, None
+
+        value = values[0]
+        value2 = values[1] if len(values) > 1 else None
+        value_format = "".join(fmt_parts) if fmt_parts else None
+        return value, value2, value_format
+
+    def _process_skill_timing(self, skill_entry, field_count):
+        """根据技能节点链表解析每段技能的取消窗口和连段"""
+        if field_count <= 0:
+            return [], []
+
+        begin_node_id = skill_entry.get("BeginNodeId")
+        if not begin_node_id:
+            return [0] * field_count, [0] * field_count
+
+        node_chain = self._collect_skill_node_chain(begin_node_id, field_count)
+        if not node_chain:
+            return [0] * field_count, [0] * field_count
+
+        cancels = []
+        combos = []
+        for node in node_chain:
+            anim_path = self._resolve_anim_json_path(node)
+            cancel, combo, _, shooting_interval = self._read_anim_cancel_and_links(
+                anim_path
+            )
+            del shooting_interval
+            cancels.append(cancel)
+            combos.append(combo)
+
+        while len(cancels) < field_count:
+            cancels.append(cancels[-1] if cancels else 0)
+            combos.append(combos[-1] if combos else 0)
+
+        return cancels[:field_count], combos[:field_count]
+
+    def _collect_skill_node_chain(self, begin_node_id, limit):
+        """按NextNodeId遍历SkillNode链表，遇到环时停止"""
+        nodes = []
+        visited = set()
+        current = begin_node_id
+
+        while current and current not in visited and len(nodes) < max(limit, 1):
+            node = self.skill_node_data.get(str(current), {})
+            if not node:
+                node = self.skill_node_data.get(current, {})
+            if not node:
+                break
+
+            nodes.append(node)
+            visited.add(current)
+            current = node.get("NextNodeId")
+
+        return nodes
+
+    def _resolve_anim_json_path(self, node):
+        """根据SkillNode中的动画信息定位动画JSON文件"""
+        anim_resource = node.get("AnimResource") or node.get("AnimName")
+        if not anim_resource:
+            return None
+
+        anim_path = node.get("AnimPath", "")
+        anim_sub_path = node.get("AnimSubPath", "")
+        cache_key = (anim_resource, anim_path, anim_sub_path)
+        if cache_key in self._anim_path_cache:
+            return self._anim_path_cache[cache_key]
+
+        candidate = None
+
+        if anim_path:
+            normalized_path = anim_path.replace("\\", "/")
+            marker = "/Game/Asset/"
+            if marker in normalized_path:
+                rel = normalized_path.split(marker, 1)[1].strip("/")
+                direct_path = os.path.join(
+                    self._asset_root,
+                    *[p for p in rel.split("/") if p],
+                    f"{anim_resource}.json",
+                )
+                if os.path.exists(direct_path):
+                    candidate = direct_path
+
+        if not candidate:
+            sub_dir = [p for p in anim_sub_path.replace("\\", "/").split("/") if p]
+            base_dir = os.path.join(
+                self._asset_root,
+                "Char",
+                "Player",
+                "*",
+                "Animation",
+                "Montage",
+                *sub_dir,
+            )
+
+            patterns = [
+                os.path.join(base_dir, f"{anim_resource}.json"),
+                os.path.join(base_dir, f"*_{anim_resource}.json"),
+            ]
+            matches = []
+            for pattern in patterns:
+                matches.extend(glob.glob(pattern))
+
+            if matches:
+                matches = sorted(set(matches))
+                candidate = matches[0]
+
+        self._anim_path_cache[cache_key] = candidate
+        return candidate
+
+    def _read_anim_cancel_and_links(self, anim_path):
+        """读取动画JSON中的取消窗口、连段及技能效果触发点"""
+        if not anim_path:
+            return 0, 0, 0, 0
+
+        if anim_path in self._anim_meta_cache:
+            return self._anim_meta_cache[anim_path]
+
+        cancel = 0.0
+        combo = 0.0
+        skill_effect_link = 0.0
+        shooting_interval = 0.0
+
+        try:
+            with open(anim_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+
+            montage = data[0] if isinstance(data, list) and data else {}
+            properties = montage.get("Properties", {})
+
+            for slot in properties.get("SlotAnimTracks", []):
+                segments = slot.get("AnimTrack", {}).get("AnimSegments", [])
+                if not segments:
+                    continue
+
+                # 尾段可能切到End/Idle，优先取与首段同AnimReference的最后一段（如Shooting_Loop）。
+                segment = segments[-1]
+                first_ref = segments[0].get("AnimReference")
+                if isinstance(first_ref, dict):
+                    first_ref_key = first_ref.get("ObjectPath") or first_ref.get(
+                        "ObjectName"
+                    )
+                    for candidate in reversed(segments):
+                        candidate_ref = candidate.get("AnimReference")
+                        if not isinstance(candidate_ref, dict):
+                            continue
+                        candidate_ref_key = candidate_ref.get(
+                            "ObjectPath"
+                        ) or candidate_ref.get("ObjectName")
+                        if first_ref_key and candidate_ref_key == first_ref_key:
+                            segment = candidate
+                            break
+
+                start = float(segment.get("AnimStartTime", 0) or 0)
+                end = float(segment.get("AnimEndTime", 0) or 0)
+                play_rate = float(segment.get("AnimPlayRate", 1) or 1)
+                if (end - start) < 0.1:
+                    shooting_interval = play_rate
+                else:
+                    interval = max(0.0, (end - start) * play_rate)
+                    if interval:
+                        shooting_interval = max(shooting_interval, interval)
+
+            for notify in properties.get("Notifies", []):
+                if notify.get("NotifyName") == "BP_SkillCancel_C":
+                    link_value = notify.get("LinkValue")
+                    if isinstance(link_value, (int, float)):
+                        cancel = max(cancel, float(link_value))
+                    elif isinstance(link_value, str):
+                        stripped = link_value.strip()
+                        if stripped:
+                            try:
+                                cancel = max(cancel, float(stripped))
+                            except ValueError:
+                                pass
+                if notify.get("NotifyName") == "BP_NextCombo_C":
+                    link_value = notify.get("LinkValue")
+                    if link_value in (None, ""):
+                        end_link = notify.get("EndLink")
+                        if isinstance(end_link, dict):
+                            link_value = end_link.get("LinkValue")
+                    if isinstance(link_value, (int, float)):
+                        combo = max(combo, float(link_value))
+                    elif isinstance(link_value, str):
+                        stripped = link_value.strip()
+                        if stripped:
+                            try:
+                                combo = max(combo, float(stripped))
+                            except ValueError:
+                                pass
+                if notify.get("NotifyName") == "BP_SkillEffect_C":
+                    link_value = notify.get("LinkValue")
+                    if isinstance(link_value, (int, float)):
+                        skill_effect_link = max(skill_effect_link, float(link_value))
+                    elif isinstance(link_value, str):
+                        stripped = link_value.strip()
+                        if stripped:
+                            try:
+                                skill_effect_link = max(
+                                    skill_effect_link, float(stripped)
+                                )
+                            except ValueError:
+                                pass
+
+        except Exception as e:
+            print(f"读取动画文件错误: {e}", flush=True)
+
+        result = (
+            self.round_value(cancel),
+            self.round_value(combo),
+            self.round_value(skill_effect_link),
+            self.round_value(shooting_interval),
+        )
+        self._anim_meta_cache[anim_path] = result
+        return result
 
     def _process_add_attr(self, battle_weapon, weapon_id):
         """处理武器属性加成"""
@@ -417,8 +763,10 @@ class WeaponProcessor(BaseProcessor):
                 # 如果需要取整
                 if cast_to:
                     try:
-                        val = float(re.search(r"([\d.]+)", val_str).group(1))
-                        val_str = f"{int(val)}{percent}"
+                        number_match = re.search(r"([\d.]+)", val_str)
+                        if number_match:
+                            val = float(number_match.group(1))
+                            val_str = f"{int(val)}{percent}"
                     except:
                         pass
 
@@ -515,7 +863,7 @@ class WeaponProcessor(BaseProcessor):
         if not isinstance(desc_value, str):
             return {}
 
-        result = {}
+        result = {"is_damage": False}
         visited_effect_ids = set()
 
         # 查找所有SkillEffects引用模式: $#SkillEffects[id]...
@@ -557,70 +905,12 @@ class WeaponProcessor(BaseProcessor):
 
                 # 检查是否是CutToughness函数
                 if task_effect.get("Function") == "CutToughness":
+                    result["is_damage"] = True
                     # 解析CutToughness的Value字段
                     value = task_effect.get("Value")
                     if value is not None:
                         result["削韧"] = value
-
-        return result
-
-    def _process_weapon_blueprint(self, battle_weapon):
-        """处理WeaponBlueprint，提取武器模型名称并读取外部动画文件"""
-
-        result = {}
-
-        # 从环境变量获取导出路径，不设置默认值
-        export_path = os.getenv("EXPORT_PATH")
-        # 如果没有配置环境变量，直接返回空值
-        if not export_path:
-            return result
-
-        # 获取WeaponBlueprint
-        weapon_blueprint = battle_weapon.get("WeaponBlueprint", "")
-        if not weapon_blueprint:
-            return result
-
-        # 提取BP_后面的部分，如Shotgun_Banzi
-        match = re.search(r"BP_([^.]+)", weapon_blueprint)
-        if not match:
-            return result
-
-        weapon_model = match.group(1)
-
-        # 从WeaponBlueprint路径中提取武器类型
-        weapon_type_match = re.search(r"/([^/]+)/BP_" + weapon_model, weapon_blueprint)
-        if not weapon_type_match:
-            return result
-
-        weapon_type = weapon_type_match.group(1)
-
-        # 构建基础路径
-        base_path = f"{export_path}/Asset/Char/Player/Common/Weapon/{weapon_type}/{weapon_model}/Animation"
-
-        # 读取射击间隔 (Shooting)
-        shooting_file = os.path.join(base_path, f"{weapon_model}_Shooting.props.txt")
-        if os.path.exists(shooting_file):
-            try:
-                with open(shooting_file, "r", encoding="utf-8") as f:
-                    content = f.read()
-                    seq_match = re.search(r"SequenceLength\s*=\s*([\d.]+)", content)
-                    if seq_match:
-                        result["射速"] = (
-                            round((1 / float(seq_match.group(1))) * 1000) / 1000
-                        )
-            except Exception as e:
-                print(f"读取射击文件错误: {e}")
-
-        # 读取装填时间 (Reload)
-        reload_file = os.path.join(base_path, f"{weapon_model}_Reload.props.txt")
-        if os.path.exists(reload_file):
-            try:
-                with open(reload_file, "r", encoding="utf-8") as f:
-                    content = f.read()
-                    seq_match = re.search(r"SequenceLength\s*=\s*([\d.]+)", content)
-                    if seq_match:
-                        result["装填"] = float(seq_match.group(1))
-            except Exception as e:
-                print(f"读取装填文件错误: {e}")
+                if task_effect.get("Function") == "Damage":
+                    result["is_damage"] = True
 
         return result

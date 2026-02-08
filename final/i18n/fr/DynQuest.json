@@ -2206,7 +2206,7 @@
   },
   {
     "id": 210205,
-    "name": "Éboulement",
+    "name": "山体坍塌",
     "level": [
       60,
       65
@@ -2910,7 +2910,7 @@
   },
   {
     "id": 310305,
-    "name": "Coralithe luxuriante",
+    "name": "茂盛的山瑚",
     "level": [
       60,
       65

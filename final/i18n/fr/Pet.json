@@ -1494,7 +1494,7 @@
       "cd": 25
     },
     "被动": {
-      "描述": "Vitesse de saut +{%}, Vitesse de bond cyclonique +{%}, Friction de glissade -{%}.",
+      "描述": "Vitesse de saut +{%}, Vitesse de Bond Cyclonique +{%}, Friction de glissade -{%}.",
       "值": [
         [
           0.075,
@@ -1549,7 +1549,7 @@
       "cd": 25
     },
     "被动": {
-      "描述": "Vitesse de saut +{%}, Vitesse de bond cyclonique +{%}, Friction de glissade -{%}.",
+      "描述": "Vitesse de saut +{%}, Vitesse de Bond Cyclonique +{%}, Friction de glissade -{%}.",
       "值": [
         [
           0.075,
@@ -1604,7 +1604,7 @@
       "cd": 25
     },
     "被动": {
-      "描述": "Vitesse de saut +{%}, Vitesse de bond cyclonique +{%}, Friction de glissade -{%}.",
+      "描述": "Vitesse de saut +{%}, Vitesse de Bond Cyclonique +{%}, Friction de glissade -{%}.",
       "值": [
         [
           0.075,

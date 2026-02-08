@@ -102,12 +102,6 @@
     "rarity": 5
   },
   {
-    "id": 217,
-    "name": "파티원 초대장",
-    "icon": "T_Resource_Raid_Ticket",
-    "rarity": 4
-  },
-  {
     "id": 218,
     "name": "월석 사냥 기념 코인",
     "icon": "T_Resource_Raid_Coin01",

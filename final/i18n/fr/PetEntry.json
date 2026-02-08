@@ -118,7 +118,7 @@
     "name": "Rapide",
     "r": 3,
     "upid": 10072,
-    "desc": "Vitesse de bond cyclonique +2%"
+    "desc": "Vitesse de Bond Cyclonique +2%"
   },
   {
     "id": 10072,
@@ -127,7 +127,7 @@
     "name": "Rapide",
     "r": 4,
     "upid": 10073,
-    "desc": "Vitesse de bond cyclonique +4%"
+    "desc": "Vitesse de Bond Cyclonique +4%"
   },
   {
     "id": 10073,
@@ -135,7 +135,7 @@
     "icon": "Speed",
     "name": "Rapide",
     "r": 5,
-    "desc": "Vitesse de bond cyclonique +6%"
+    "desc": "Vitesse de Bond Cyclonique +6%"
   },
   {
     "id": 10081,

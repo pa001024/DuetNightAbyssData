@@ -102,6 +102,8 @@ class DataLoader:
 
         # 获取当前语言
         language = language if language else self.language
+        if not isinstance(language, str):
+            language = "cn"
 
         # 根据当前语言获取对应字段
         # 语言映射：cn->TextMapContent, en->ContentEN, jp->ContentJP, kr->ContentKR, fr->ContentFR, tc->ContentTC
@@ -208,6 +210,9 @@ class FinalProcessor:
     def __init__(self, base_dir, output_dir):
         self.base_dir = base_dir
         self.output_dir = output_dir
+        self.input_file_alias = {
+            "HardBoss": "HardBossMain",
+        }
 
         # 不在这里创建共享的DataLoader实例，改为每个任务创建独立实例
 
@@ -301,10 +306,11 @@ class FinalProcessor:
         processor.data_loader.set_language(language)
 
         # Load data for the file type and language
-        file_path = os.path.join(self.base_dir, f"{file_type}.json")
-        # if not os.path.exists(file_path):
-        # print(f"{file_type} data not found for language: {language}")
-        # return
+        source_type = self.input_file_alias.get(file_type, file_type)
+        file_path = os.path.join(self.base_dir, f"{source_type}.json")
+        if not os.path.exists(file_path) and source_type != "QuestStory":
+            print(f"Skip {file_type} for {language}: {source_type}.json not found")
+            return
 
         # Load and process items
         items = processor.load_items(file_path)

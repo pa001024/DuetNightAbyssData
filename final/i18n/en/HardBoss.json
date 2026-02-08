@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "name": "Sibylle",
+    "icon": "Xibi",
+    "desc": "The chief of the Hyperborean Empire's 13th Legion. Her arrival on Purgatorio Island irrevocably altered our destiny.",
+    "diff": [
+      {
+        "id": 1001,
+        "lv": 30,
+        "r": 1016
+      },
+      {
+        "id": 1002,
+        "lv": 40,
+        "r": 1017
+      },
+      {
+        "id": 1003,
+        "lv": 50,
+        "r": 1018
+      },
+      {
+        "id": 1004,
+        "lv": 60,
+        "r": 1019
+      },
+      {
+        "id": 1005,
+        "lv": 70,
+        "r": 1020
+      },
+      {
+        "id": 1006,
+        "lv": 80,
+        "r": 1021
+      }
+    ],
+    "mid": 8500002
+  },
+  {
+    "id": 2,
+    "name": "Crystalophile",
+    "icon": "ShiJingZhe",
+    "desc": "The Grim Reaper of Glevum. A massive Filthoid in the depths of Glevum Pit, mechanically repeating the behaviour of tunnelling and devouring any glowing objects.",
+    "diff": [
+      {
+        "id": 1011,
+        "lv": 30,
+        "r": 1022
+      },
+      {
+        "id": 1012,
+        "lv": 40,
+        "r": 1023
+      },
+      {
+        "id": 1013,
+        "lv": 50,
+        "r": 1024
+      },
+      {
+        "id": 1014,
+        "lv": 60,
+        "r": 1025
+      },
+      {
+        "id": 1015,
+        "lv": 70,
+        "r": 1026
+      },
+      {
+        "id": 1016,
+        "lv": 80,
+        "r": 1027
+      }
+    ],
+    "mid": 8503002
+  },
+  {
+    "id": 3,
+    "name": "The Eclosioner",
+    "icon": "Saiqi",
+    "desc": "The seed in the frozen soil that has forfeited the opportunity for a gentle descent into the night.",
+    "diff": [
+      {
+        "id": 1021,
+        "lv": 30,
+        "r": 1028
+      },
+      {
+        "id": 1022,
+        "lv": 40,
+        "r": 1029
+      },
+      {
+        "id": 1023,
+        "lv": 50,
+        "r": 1030
+      },
+      {
+        "id": 1024,
+        "lv": 60,
+        "r": 1031
+      },
+      {
+        "id": 1025,
+        "lv": 70,
+        "r": 1032
+      },
+      {
+        "id": 1026,
+        "lv": 80,
+        "r": 1033
+      }
+    ],
+    "mid": 8502002
+  },
+  {
+    "id": 4,
+    "name": "\"The Warden of the Inferno\"",
+    "icon": "Haier",
+    "desc": "The Warden of the Imperial Military Prison wields her chains to chastise evil and her flames to defend justice.",
+    "diff": [
+      {
+        "id": 1031,
+        "lv": 30,
+        "r": 1034
+      },
+      {
+        "id": 1032,
+        "lv": 40,
+        "r": 1035
+      },
+      {
+        "id": 1033,
+        "lv": 50,
+        "r": 1036
+      },
+      {
+        "id": 1034,
+        "lv": 60,
+        "r": 1037
+      },
+      {
+        "id": 1035,
+        "lv": 70,
+        "r": 1038
+      },
+      {
+        "id": 1036,
+        "lv": 80,
+        "r": 1039
+      }
+    ],
+    "mid": 8505002
+  },
+  {
+    "id": 5,
+    "name": "\"Beast From the Snowfield\"",
+    "icon": "Linen",
+    "desc": "It is the Beast From the Snowfield, crushing children's homes and melting remnants of the fairy's slumber.",
+    "diff": [
+      {
+        "id": 1041,
+        "lv": 30,
+        "r": 1040
+      },
+      {
+        "id": 1042,
+        "lv": 40,
+        "r": 1041
+      },
+      {
+        "id": 1043,
+        "lv": 50,
+        "r": 1042
+      },
+      {
+        "id": 1044,
+        "lv": 60,
+        "r": 1043
+      },
+      {
+        "id": 1045,
+        "lv": 70,
+        "r": 1044
+      },
+      {
+        "id": 1046,
+        "lv": 80,
+        "r": 1045
+      }
+    ],
+    "mid": 8512002
+  }
+]
