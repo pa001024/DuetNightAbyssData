@@ -112,42 +112,100 @@ class BaseProcessor:
         return ""
 
     def get_dialogue_chain(self, first_dialogue_id, language=""):
-        """获取对话链
+        """获取对话链（支持分支）
 
         Args:
             first_dialogue_id: 第一个对话ID
             language: 语言类型
 
         Returns:
-            list: 对话链列表
+            list: 对话链列表，包含所有分支
         """
         dialogue_chain = []
-        current_dialogue_id = str(first_dialogue_id)
+        visited = set()  # 用于去重
+        queue = [(str(first_dialogue_id), None)]  # (对话ID, 父对话ID)
 
-        while current_dialogue_id:
+        while queue:
+            current_dialogue_id, parent_id = queue.pop(0)
+            
+            # 跳过已处理的对话
+            if current_dialogue_id in visited:
+                continue
+            visited.add(current_dialogue_id)
+
             dialogue_data = self.get_dialogue_data(current_dialogue_id, language)
             if not dialogue_data:
-                break
+                continue
 
             # 获取对话内容
             dialogue_text = self.get_dialogue_content(current_dialogue_id, language)
             if not dialogue_text:
-                break
+                continue
 
-            dialogue_item = {"id": int(current_dialogue_id), "content": dialogue_text}
+            dialogue_item = {
+                "id": int(current_dialogue_id), 
+                "content": dialogue_text
+            }
 
             # 只在有 SpeakNpcId 字段时才添加
             if "SpeakNpcId" in dialogue_data:
                 dialogue_item["npc"] = dialogue_data["SpeakNpcId"]
 
-            dialogue_chain.append(dialogue_item)
-
-            # 获取下一个对话ID
+            # 添加next字段（只在有下一个对话时）
             next_dialogue_id = dialogue_data.get("NextDialogue")
-            if not next_dialogue_id:
-                break
+            if next_dialogue_id:
+                dialogue_item["next"] = int(next_dialogue_id)
+                # 将下一个对话加入队列
+                queue.append((str(next_dialogue_id), current_dialogue_id))
 
-            current_dialogue_id = str(next_dialogue_id)
+            # 添加options字段（如果有NextOptions）
+            if "NextOptions" in dialogue_data:
+                next_options = dialogue_data["NextOptions"]
+                options = []
+                # 加载ImpressionPlus数据
+                impression_plus_data = self.data_loader.load_json("ImpressionPlus.json")
+                for option_id in next_options:
+                    option_data = self.get_dialogue_data(str(option_id), language)
+                    if option_data:
+                        option_content = self.get_dialogue_content(str(option_id), language)
+                        if option_content:
+                            option_item = {
+                                "id": int(option_id),
+                                "content": option_content
+                            }
+                            # 添加next字段（只在有下一个对话时）
+                            option_next = option_data.get("NextDialogue")
+                            if option_next:
+                                option_item["next"] = int(option_next)
+                                # 将选项的下一个对话加入队列
+                                queue.append((str(option_next), str(option_id)))
+                            # 处理ImprPlusId
+                            impr_plus_id = option_data.get("ImprPlusId")
+                            if impr_plus_id and impression_plus_data:
+                                impr_data = impression_plus_data.get(str(impr_plus_id))
+                                if impr_data:
+                                    impr = {}
+                                    # 映射表：字段名 -> 翻译键
+                                    impression_map = {
+                                        "BenefitPlus": "Impression_Name_Benefit",
+                                        "MoralityPlus": "Impression_Name_Morality",
+                                        "WisdomPlus": "Impression_Name_Wisdom",
+                                        "EmpathyPlus": "Impression_Name_Empathy",
+                                        "ChaosPlus": "Impression_Name_Chaos"
+                                    }
+                                    for field, trans_key in impression_map.items():
+                                        value = impr_data.get(field, 0)
+                                        if value > 0:
+                                            # 翻译字段名
+                                            field_name = self.data_loader.translate(trans_key)
+                                            impr[field_name] = value
+                                    if impr:
+                                        option_item["impr"] = impr
+                            options.append(option_item)
+                if options:
+                    dialogue_item["options"] = options
+
+            dialogue_chain.append(dialogue_item)
 
         return dialogue_chain
 

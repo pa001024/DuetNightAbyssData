@@ -31,7 +31,14 @@ from processor.robot_equip_processor import RobotEquipProcessor
 from processor.mount_processor import MountProcessor
 from processor.title_processor import TitleProcessor
 from processor.npc_processor import NpcProcessor
-from processor.rouge_processor import RougeLikeBlessingProcessor, RougeLikeContractProcessor, RougeLikeRoomProcessor, RougeLikeStoryEventProcessor, RougeLikeTalentProcessor, RougeLikeTreasureProcessor
+from processor.rouge_processor import (
+    RougeLikeBlessingProcessor,
+    RougeLikeContractProcessor,
+    RougeLikeRoomProcessor,
+    RougeLikeStoryEventProcessor,
+    RougeLikeTalentProcessor,
+    RougeLikeTreasureProcessor,
+)
 
 
 class DataLoader:
@@ -295,9 +302,9 @@ class FinalProcessor:
 
         # Load data for the file type and language
         file_path = os.path.join(self.base_dir, f"{file_type}.json")
-        if not os.path.exists(file_path):
-            print(f"{file_type} data not found for language: {language}")
-            return
+        # if not os.path.exists(file_path):
+        # print(f"{file_type} data not found for language: {language}")
+        # return
 
         # Load and process items
         items = processor.load_items(file_path)
