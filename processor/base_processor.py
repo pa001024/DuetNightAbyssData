@@ -108,6 +108,12 @@ class BaseProcessor:
                         content = dialogue_data[fallback_field]
                         break
 
+            # 部分对话没有 Content，使用 OptionTopic 作为回退文本
+            if not content:
+                option_topic = dialogue_data.get("OptionTopic", "")
+                if option_topic:
+                    content = option_topic
+
             return content
         return ""
 
@@ -127,7 +133,7 @@ class BaseProcessor:
 
         while queue:
             current_dialogue_id, parent_id = queue.pop(0)
-            
+
             # 跳过已处理的对话
             if current_dialogue_id in visited:
                 continue
@@ -142,13 +148,10 @@ class BaseProcessor:
             if not dialogue_text:
                 continue
 
-            dialogue_item = {
-                "id": int(current_dialogue_id), 
-                "content": dialogue_text
-            }
+            dialogue_item = {"id": int(current_dialogue_id), "content": dialogue_text}
 
             # 只在有 SpeakNpcId 字段时才添加
-            if "SpeakNpcId" in dialogue_data:
+            if "SpeakNpcId" in dialogue_data and dialogue_data["SpeakNpcId"]:
                 dialogue_item["npc"] = dialogue_data["SpeakNpcId"]
 
             # 添加next字段（只在有下一个对话时）
@@ -167,11 +170,13 @@ class BaseProcessor:
                 for option_id in next_options:
                     option_data = self.get_dialogue_data(str(option_id), language)
                     if option_data:
-                        option_content = self.get_dialogue_content(str(option_id), language)
+                        option_content = self.get_dialogue_content(
+                            str(option_id), language
+                        )
                         if option_content:
                             option_item = {
                                 "id": int(option_id),
-                                "content": option_content
+                                "content": option_content,
                             }
                             # 添加next字段（只在有下一个对话时）
                             option_next = option_data.get("NextDialogue")
@@ -191,13 +196,15 @@ class BaseProcessor:
                                         "MoralityPlus": "Impression_Name_Morality",
                                         "WisdomPlus": "Impression_Name_Wisdom",
                                         "EmpathyPlus": "Impression_Name_Empathy",
-                                        "ChaosPlus": "Impression_Name_Chaos"
+                                        "ChaosPlus": "Impression_Name_Chaos",
                                     }
                                     for field, trans_key in impression_map.items():
                                         value = impr_data.get(field, 0)
                                         if value > 0:
                                             # 翻译字段名
-                                            field_name = self.data_loader.translate(trans_key)
+                                            field_name = self.data_loader.translate(
+                                                trans_key
+                                            )
                                             impr[field_name] = value
                                     if impr:
                                         option_item["impr"] = impr

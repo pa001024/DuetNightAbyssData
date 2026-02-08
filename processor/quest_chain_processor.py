@@ -27,7 +27,7 @@ class QuestChainProcessor(BaseProcessor):
             for quest_id, quest_data in obj.items():
                 item = {
                     "id": int(quest_id),
-                    "next": quest_data.get("NextQuestId", 0),
+                    # "next": quest_data.get("nextQuestId", 0),
                 }
                 rst.append(item)
             if rst:

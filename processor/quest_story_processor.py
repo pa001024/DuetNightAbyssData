@@ -1,5 +1,6 @@
 import json
 import os
+import re
 from pathlib import Path
 from collections import OrderedDict
 from processor.base_processor import BaseProcessor
@@ -10,6 +11,8 @@ class QuestStoryProcessor(BaseProcessor):
         super().__init__(data_loader)
         self.file_type = "QuestStory"
         self.story_files_base_path = os.path.join("out", "StoryCreator", "StoryFiles")
+        self.dialogue_flow_base_path = os.path.join("out", "Dialogue")
+        self.dialogue_flow_cache = {}
 
     def load_items(self, file_path):
         """加载任务链数据（兼容接口）
@@ -107,6 +110,130 @@ class QuestStoryProcessor(BaseProcessor):
         except Exception as e:
             print(f"加载故事文件失败 {story_path}: {e}", flush=True)
             return None
+
+    def _parse_flow_asset_path(self, flow_asset_path):
+        """将 FlowAssetPath 转换为 out/Dialogue 下的 json 路径。"""
+        if not flow_asset_path or not isinstance(flow_asset_path, str):
+            return ""
+
+        match = re.search(r"/Game/Dialogue/([^']+)", flow_asset_path)
+        if not match:
+            return ""
+
+        asset_part = match.group(1)
+        asset_part = asset_part.split(".")[0]
+        asset_part = asset_part.replace("/", os.sep).replace("\\", os.sep)
+        return os.path.join(self.dialogue_flow_base_path, f"{asset_part}.json")
+
+    def load_dialogue_flow_file(self, flow_asset_path):
+        """加载 FlowAssetPath 对应的对话流程文件。"""
+        file_path = self._parse_flow_asset_path(flow_asset_path)
+        if not file_path:
+            return None
+
+        if file_path in self.dialogue_flow_cache:
+            return self.dialogue_flow_cache[file_path]
+
+        if not os.path.exists(file_path):
+            return None
+
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                data = json.load(f, object_pairs_hook=OrderedDict)
+                self.dialogue_flow_cache[file_path] = data
+                return data
+        except Exception as e:
+            print(f"加载对话流程文件失败 {file_path}: {e}", flush=True)
+            return None
+
+    def get_dialogue_chain_from_flow_asset(self, flow_asset_path, language=""):
+        """从 FlowAssetPath 解析对话链。"""
+        flow_data = self.load_dialogue_flow_file(flow_asset_path)
+        if not flow_data or not isinstance(flow_data, list):
+            return []
+
+        guid_to_node = {}
+        start_guids = []
+
+        for item in flow_data:
+            if not isinstance(item, dict):
+                continue
+            props = item.get("Properties", {})
+            node_guid = props.get("NodeGuid")
+            if node_guid:
+                guid_to_node[str(node_guid)] = item
+            if item.get("Type") == "FlowNode_Start" and node_guid:
+                start_guids.append(str(node_guid))
+
+        if not start_guids:
+            return []
+
+        queue = list(start_guids)
+        visited_guids = set()
+        dialogue_ids = []
+        dialogue_seen = set()
+
+        while queue:
+            current_guid = queue.pop(0)
+            if current_guid in visited_guids:
+                continue
+            visited_guids.add(current_guid)
+
+            node = guid_to_node.get(current_guid)
+            if not node:
+                continue
+
+            node_type = node.get("Type", "")
+            props = node.get("Properties", {})
+
+            if node_type == "FlowNode_Dialogue":
+                for item in props.get("DialogueData", []) or []:
+                    dialogue_id = (
+                        item.get("DialogueId") if isinstance(item, dict) else None
+                    )
+                    if dialogue_id and dialogue_id not in dialogue_seen:
+                        dialogue_seen.add(dialogue_id)
+                        dialogue_ids.append(dialogue_id)
+
+            for conn in props.get("Connections", []) or []:
+                if not isinstance(conn, dict):
+                    continue
+                target = conn.get("Value", {})
+                if not isinstance(target, dict):
+                    continue
+                next_guid = target.get("NodeGuid")
+                if next_guid:
+                    next_guid = str(next_guid)
+                    if next_guid not in visited_guids:
+                        queue.append(next_guid)
+
+        dialogue_chain = []
+        emitted_ids = set()
+        emitted_option_ids = set()
+
+        for dialogue_id in dialogue_ids:
+            dialogue_id_str = str(dialogue_id)
+            if dialogue_id_str in emitted_ids or dialogue_id_str in emitted_option_ids:
+                continue
+
+            sub_chain = self.get_dialogue_chain(dialogue_id, language)
+            if not sub_chain:
+                continue
+
+            for item in sub_chain:
+                item_id_str = str(item.get("id"))
+                if item_id_str in emitted_ids or item_id_str in emitted_option_ids:
+                    continue
+
+                dialogue_chain.append(item)
+                emitted_ids.add(item_id_str)
+
+                for option in item.get("options", []):
+                    option_id = option.get("id")
+                    if option_id is not None:
+                        emitted_option_ids.add(str(option_id))
+
+        return dialogue_chain
 
     def find_talk_nodes_for_quest(self, story_data, quest_id):
         """在故事数据中查找指定任务的所有对话节点和推理节点
@@ -420,6 +547,54 @@ class QuestStoryProcessor(BaseProcessor):
 
         return resolved
 
+    def _dedupe_identical_nodes(self, processed_nodes):
+        """按节点内容去重（忽略 id），并修复 next 引用。"""
+        deduped_nodes = []
+        content_to_id = {}
+        duplicate_to_kept = {}
+
+        for node in processed_nodes:
+            node_id = str(node.get("id"))
+            content_node = dict(node)
+            content_node.pop("id", None)
+            content_key = json.dumps(content_node, ensure_ascii=False, sort_keys=True)
+
+            if content_key in content_to_id:
+                duplicate_to_kept[node_id] = content_to_id[content_key]
+                continue
+
+            content_to_id[content_key] = node_id
+            deduped_nodes.append(node)
+
+        if not duplicate_to_kept:
+            return deduped_nodes
+
+        def resolve_node_id(node_id):
+            current = str(node_id)
+            while current in duplicate_to_kept:
+                current = duplicate_to_kept[current]
+            return current
+
+        for node in deduped_nodes:
+            next_ids = node.get("next")
+            if not next_ids:
+                continue
+
+            remapped = []
+            remapped_seen = set()
+            for next_id in next_ids:
+                mapped_id = resolve_node_id(next_id)
+                if mapped_id not in remapped_seen:
+                    remapped_seen.add(mapped_id)
+                    remapped.append(mapped_id)
+
+            if remapped:
+                node["next"] = remapped
+            else:
+                node.pop("next", None)
+
+        return deduped_nodes
+
     def process_quest_chain(self, quest_chain_data, stl_quest_chain_data, language=""):
         """处理单个任务链
 
@@ -465,16 +640,6 @@ class QuestStoryProcessor(BaseProcessor):
             except ValueError:
                 continue
 
-            # 查找该任务的所有节点（按顺序）
-            nodes = self.process_quest_nodes_order(story_data, quest_id)
-
-            # 如果没有按顺序的节点，使用原来的方法
-            if not nodes:
-                nodes = self.find_talk_nodes_for_quest(story_data, quest_id)
-
-            if not nodes:
-                continue
-
             quest_name = ""
             quest_desc = ""
             for story_node in story_data.get("storyNodeData", {}).values():
@@ -487,6 +652,17 @@ class QuestStoryProcessor(BaseProcessor):
                         props_data.get("QuestDeatil", "")
                     )
                     break
+
+            # 查找该任务的所有节点（按顺序）
+            nodes = self.process_quest_nodes_order(story_data, quest_id)
+
+            # 如果没有按顺序的节点，使用原来的方法
+            if not nodes:
+                nodes = self.find_talk_nodes_for_quest(story_data, quest_id)
+
+            # 无对话节点但存在任务名称/描述时也要保留任务
+            if not nodes and not (quest_name or quest_desc):
+                continue
 
             # 处理每个节点
             processed_nodes = []
@@ -501,11 +677,25 @@ class QuestStoryProcessor(BaseProcessor):
                     node_info["next"] = node["next"]
 
                 # 如果是对话节点，获取对话链
-                if node["type"] == "TalkNode" and "first_dialogue_id" in node:
-                    first_dialogue_id = node["first_dialogue_id"]
-                    dialogue_chain = self.get_dialogue_chain(
-                        first_dialogue_id, language
-                    )
+                if node["type"] == "TalkNode":
+                    dialogue_chain = []
+
+                    first_dialogue_id = node.get("first_dialogue_id", 0)
+                    if first_dialogue_id:
+                        dialogue_chain = self.get_dialogue_chain(
+                            first_dialogue_id, language
+                        )
+
+                    # FirstDialogueId 为 0 时，尝试走 FlowAssetPath 对话流
+                    if not dialogue_chain:
+                        flow_asset_path = node.get("props_data", {}).get(
+                            "FlowAssetPath", ""
+                        )
+                        if flow_asset_path:
+                            dialogue_chain = self.get_dialogue_chain_from_flow_asset(
+                                flow_asset_path, language
+                            )
+
                     if dialogue_chain:
                         node_info["dialogues"] = dialogue_chain
 
@@ -584,7 +774,9 @@ class QuestStoryProcessor(BaseProcessor):
                 else:
                     node_info.pop("next", None)
 
-            if processed_nodes:
+            processed_nodes = self._dedupe_identical_nodes(processed_nodes)
+
+            if processed_nodes or quest_name or quest_desc:
                 s = {
                     "id": quest_id,
                     "name": quest_name,
