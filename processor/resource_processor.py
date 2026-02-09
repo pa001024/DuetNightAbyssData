@@ -29,8 +29,8 @@ class ResourceProcessor(BaseProcessor):
         """
         resource_id = resource_data.get("ResourceId")
 
-        if resource_id not in self.draft_resource_ids:
-            return None
+        # if resource_id not in self.draft_resource_ids:
+        #     return None
 
         resource_name_key = resource_data.get("ResourceName")
         resource_name = ""
@@ -53,7 +53,7 @@ class ResourceProcessor(BaseProcessor):
             "id": resource_id,
             "name": resource_name,
             "icon": icon,
-            "rarity": resource_data.get("Rarity", ""),
+            "rarity": resource_data.get("Rarity", 1),
         }
 
         return processed_resource

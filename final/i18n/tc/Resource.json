@@ -24,6 +24,24 @@
     "rarity": 4
   },
   {
+    "id": 103,
+    "name": "精力",
+    "icon": "T_Coin_Other_Jingli",
+    "rarity": 2
+  },
+  {
+    "id": 104,
+    "name": "一本樂譜",
+    "icon": "T_Coin_Other_Jingli",
+    "rarity": 2
+  },
+  {
+    "id": 105,
+    "name": "皎皎紀念幣·致明日",
+    "icon": "T_Resource_CoinCBT2",
+    "rarity": 5
+  },
+  {
     "id": 110,
     "name": "水色稜鏡",
     "icon": "T_Gacha_Coin01",
@@ -33,6 +51,36 @@
     "id": 111,
     "name": "虹色稜鏡",
     "icon": "T_Gacha_Coin02",
+    "rarity": 5
+  },
+  {
+    "id": 121,
+    "name": "侍者皎皎的月度訂單#1",
+    "icon": "T_Read_03",
+    "rarity": 5
+  },
+  {
+    "id": 123,
+    "name": "精裝詩集",
+    "icon": "T_Resource_BattlePassExp",
+    "rarity": 5
+  },
+  {
+    "id": 124,
+    "name": "典藏詩集",
+    "icon": "T_Resource_BattlePassExp",
+    "rarity": 5
+  },
+  {
+    "id": 125,
+    "name": "裝訂憑證",
+    "icon": "T_Resource_BattlePassPetReward",
+    "rarity": 5
+  },
+  {
+    "id": 126,
+    "name": "裝訂憑證",
+    "icon": "T_Resource_BattlePassPetReward",
     "rarity": 5
   },
   {
@@ -46,6 +94,24 @@
     "name": "武器移轉模組",
     "icon": "T_Resource_PolarityAura",
     "rarity": 5
+  },
+  {
+    "id": 203,
+    "name": "余燼",
+    "icon": "T_Rouge_Token_02",
+    "rarity": 1
+  },
+  {
+    "id": 204,
+    "name": "精力藥劑",
+    "icon": "T_Resource_ActionPoint_ActionPointRecoveryM",
+    "rarity": 4
+  },
+  {
+    "id": 205,
+    "name": "琉璃",
+    "icon": "T_Rouge_TalentToken_01",
+    "rarity": 1
   },
   {
     "id": 206,
@@ -102,6 +168,12 @@
     "rarity": 5
   },
   {
+    "id": 217,
+    "name": "小隊邀請函",
+    "icon": "T_Resource_Raid_Ticket",
+    "rarity": 4
+  },
+  {
     "id": 218,
     "name": "狩月紀念幣",
     "icon": "T_Resource_Raid_Coin01",
@@ -117,6 +189,18 @@
     "id": 220,
     "name": "狩月紀念幣",
     "icon": "T_Resource_Raid_Coin01",
+    "rarity": 4
+  },
+  {
+    "id": 301,
+    "name": "聲名許可·冰湖城",
+    "icon": "T_Fame_0101",
+    "rarity": 4
+  },
+  {
+    "id": 302,
+    "name": "聲名許可·煙津渡",
+    "icon": "T_Fame_0201",
     "rarity": 4
   },
   {
@@ -138,10 +222,70 @@
     "rarity": 5
   },
   {
+    "id": 1004,
+    "name": "華彩沙漏·限時",
+    "icon": "T_Resource_GachaTicket_03",
+    "rarity": 5
+  },
+  {
     "id": 1006,
     "name": "熔煉模具",
     "icon": "T_Resource_GeneralWeaponCard",
     "rarity": 5
+  },
+  {
+    "id": 1007,
+    "name": "重鑄回收器I",
+    "icon": "T_Icon_ModRandomPurple",
+    "rarity": 4
+  },
+  {
+    "id": 1008,
+    "name": "重鑄回收器II",
+    "icon": "T_Icon_ModRandomBlue",
+    "rarity": 3
+  },
+  {
+    "id": 2000,
+    "name": "歷練經驗",
+    "icon": "T_Exp_Rank",
+    "rarity": 5
+  },
+  {
+    "id": 2001,
+    "name": "歷練經驗",
+    "icon": "T_Exp_Rank",
+    "rarity": 5
+  },
+  {
+    "id": 2002,
+    "name": "詩歌段落",
+    "icon": "T_Resource_BattlePassExp",
+    "rarity": 5
+  },
+  {
+    "id": 2003,
+    "name": "完成度",
+    "icon": "T_Resource_DailyGoalExp",
+    "rarity": 5
+  },
+  {
+    "id": 2004,
+    "name": "詩歌段落",
+    "icon": "T_Resource_BattlePassExp",
+    "rarity": 5
+  },
+  {
+    "id": 2005,
+    "name": "回歸積分",
+    "icon": "T_Coin_ActivityReturn",
+    "rarity": 5
+  },
+  {
+    "id": 2007,
+    "name": "武器說明書·一",
+    "icon": "T_Resource_Weapon_Exp02",
+    "rarity": 2
   },
   {
     "id": 2008,
@@ -162,6 +306,12 @@
     "rarity": 5
   },
   {
+    "id": 2011,
+    "name": "戰鬥旋律·一",
+    "icon": "T_Resource_Char_Exp02",
+    "rarity": 2
+  },
+  {
     "id": 2012,
     "name": "戰鬥旋律·二",
     "icon": "T_Resource_Char_Exp03",
@@ -177,6 +327,18 @@
     "id": 2014,
     "name": "戰鬥旋律·四",
     "icon": "T_Resource_Char_Exp05",
+    "rarity": 5
+  },
+  {
+    "id": 2015,
+    "name": "酒杯碰撞間的談資",
+    "icon": "T_Coin_Fame01",
+    "rarity": 5
+  },
+  {
+    "id": 2016,
+    "name": "織星航路上的佳話",
+    "icon": "T_Coin_Fame02",
     "rarity": 5
   },
   {
@@ -198,6 +360,12 @@
     "rarity": 4
   },
   {
+    "id": 3004,
+    "name": "妙膏膏",
+    "icon": "T_Resource_PetExp01",
+    "rarity": 3
+  },
+  {
     "id": 3005,
     "name": "妙妙膏膏",
     "icon": "T_Resource_PetExp02",
@@ -216,6 +384,42 @@
     "rarity": 5
   },
   {
+    "id": 3008,
+    "name": "不妙罐罐",
+    "icon": "T_Resource_PetFood04",
+    "rarity": 5
+  },
+  {
+    "id": 3010,
+    "name": "功利印象·冰湖城",
+    "icon": "T_Impression_Benefit",
+    "rarity": 5
+  },
+  {
+    "id": 3011,
+    "name": "道德印象·冰湖城",
+    "icon": "T_Impression_Morality",
+    "rarity": 5
+  },
+  {
+    "id": 3012,
+    "name": "才智印象·冰湖城",
+    "icon": "T_Impression_Wisdom",
+    "rarity": 5
+  },
+  {
+    "id": 3013,
+    "name": "共情印象·冰湖城",
+    "icon": "T_Impression_Empathy",
+    "rarity": 5
+  },
+  {
+    "id": 3014,
+    "name": "混沌印象·冰湖城",
+    "icon": "T_Impression_Chaos",
+    "rarity": 5
+  },
+  {
     "id": 3015,
     "name": "天工竿·薄荷",
     "icon": "T_FishingRod_East02",
@@ -225,6 +429,36 @@
     "id": 3016,
     "name": "增幅激化器",
     "icon": "T_Resourece_GeneralModLevelUpItem",
+    "rarity": 5
+  },
+  {
+    "id": 3017,
+    "name": "功利印象·華胥",
+    "icon": "T_Impression_Benefit",
+    "rarity": 5
+  },
+  {
+    "id": 3018,
+    "name": "道德印象·華胥",
+    "icon": "T_Impression_Morality",
+    "rarity": 5
+  },
+  {
+    "id": 3019,
+    "name": "才智印象·華胥",
+    "icon": "T_Impression_Wisdom",
+    "rarity": 5
+  },
+  {
+    "id": 3020,
+    "name": "共情印象·華胥",
+    "icon": "T_Impression_Empathy",
+    "rarity": 5
+  },
+  {
+    "id": 3021,
+    "name": "混沌印象·華胥",
+    "icon": "T_Impression_Chaos",
     "rarity": 5
   },
   {
@@ -702,6 +936,12 @@
     "rarity": 5
   },
   {
+    "id": 12021,
+    "name": "茵布拉花序的弓身",
+    "icon": "T_Melee_Weapon_Part03",
+    "rarity": 5
+  },
+  {
     "id": 12022,
     "name": "塞壬的擁吻的握柄",
     "icon": "T_Melee_Weapon_Part01",
@@ -804,6 +1044,12 @@
     "rarity": 5
   },
   {
+    "id": 12039,
+    "name": "弧光百劫的弓身",
+    "icon": "T_Melee_Weapon_Part03",
+    "rarity": 5
+  },
+  {
     "id": 12040,
     "name": "孤子的縛鎖的握柄",
     "icon": "T_Melee_Weapon_Part01",
@@ -855,6 +1101,12 @@
     "id": 12048,
     "name": "歸墟棘輪的槍身",
     "icon": "T_Range_Weapon_Part03",
+    "rarity": 5
+  },
+  {
+    "id": 12049,
+    "name": "歸墟棘輪的槍管",
+    "icon": "T_Range_Weapon_Part01",
     "rarity": 5
   },
   {
@@ -1212,6 +1464,12 @@
     "rarity": 5
   },
   {
+    "id": 12109,
+    "name": "烈焰孤沙的弓身",
+    "icon": "T_Melee_Weapon_Part03",
+    "rarity": 5
+  },
+  {
     "id": 12110,
     "name": "枯朽的握柄",
     "icon": "T_Melee_Weapon_Part01",
@@ -1416,16 +1674,100 @@
     "rarity": 5
   },
   {
+    "id": 19000,
+    "name": "心跡·紛繁",
+    "icon": "T_Entertainment_Emotion_Myriad",
+    "rarity": 4
+  },
+  {
+    "id": 19001,
+    "name": "心跡·歡樂",
+    "icon": "T_Entertainment_Emotion_Joy",
+    "rarity": 3
+  },
+  {
+    "id": 19002,
+    "name": "心跡·悲傷",
+    "icon": "T_Entertainment_Emotion_Sorrow",
+    "rarity": 3
+  },
+  {
+    "id": 19003,
+    "name": "心跡·恐懼",
+    "icon": "T_Entertainment_Emotion_Fear",
+    "rarity": 3
+  },
+  {
+    "id": 19004,
+    "name": "心跡·憤怒",
+    "icon": "T_Entertainment_Emotion_Anger",
+    "rarity": 3
+  },
+  {
+    "id": 19005,
+    "name": "心跡·信任",
+    "icon": "T_Entertainment_Emotion_Trust",
+    "rarity": 3
+  },
+  {
+    "id": 19006,
+    "name": "心跡·平靜",
+    "icon": "T_Entertainment_Emotion_InnerPeace",
+    "rarity": 3
+  },
+  {
+    "id": 19007,
+    "name": "心跡·困惑",
+    "icon": "T_Entertainment_Emotion_Confusion",
+    "rarity": 3
+  },
+  {
+    "id": 19008,
+    "name": "心跡·渴望",
+    "icon": "T_Entertainment_Emotion_Desire",
+    "rarity": 3
+  },
+  {
+    "id": 20001,
+    "name": "穢獸甲殼",
+    "icon": "T_Resource_Ganran01",
+    "rarity": 3
+  },
+  {
     "id": 20002,
     "name": "破損的嗅鹽",
     "icon": "T_Resource_Normal02",
     "rarity": 2
   },
   {
+    "id": 20003,
+    "name": "淨化的水",
+    "icon": "T_Resource_Jiaohui02",
+    "rarity": 3
+  },
+  {
+    "id": 20004,
+    "name": "軍團銘牌",
+    "icon": "T_Resource_Diguo01",
+    "rarity": 3
+  },
+  {
     "id": 20005,
     "name": "石料粉末",
     "icon": "T_Resource_Normal04",
     "rarity": 2
+  },
+  {
+    "id": 20006,
+    "name": "祝文卷軸",
+    "icon": "T_Resource_Jiaohui01",
+    "rarity": 4
+  },
+  {
+    "id": 20007,
+    "name": "訊號線纜",
+    "icon": "T_Resource_Diguo02",
+    "rarity": 4
   },
   {
     "id": 20008,
@@ -1470,6 +1812,18 @@
     "rarity": 3
   },
   {
+    "id": 20015,
+    "name": "金屬護甲",
+    "icon": "T_Resource_Forge_Medium03",
+    "rarity": 3
+  },
+  {
+    "id": 20016,
+    "name": "賜福飾物",
+    "icon": "T_Resource_Forge_Medium04",
+    "rarity": 3
+  },
+  {
     "id": 20017,
     "name": "載具裝甲",
     "icon": "T_Resource_Forge_Medium05",
@@ -1500,6 +1854,12 @@
     "rarity": 4
   },
   {
+    "id": 20022,
+    "name": "流體合金",
+    "icon": "T_Resource_Forge_High02",
+    "rarity": 4
+  },
+  {
     "id": 20023,
     "name": "金砂",
     "icon": "T_Resource_Forge_High03",
@@ -1509,6 +1869,18 @@
     "id": 20024,
     "name": "穢獸觸鬚",
     "icon": "T_Resource_Forge_High04",
+    "rarity": 4
+  },
+  {
+    "id": 20025,
+    "name": "驅動組件",
+    "icon": "T_Resource_Forge_High05",
+    "rarity": 4
+  },
+  {
+    "id": 20026,
+    "name": "通訊手冊",
+    "icon": "T_Resource_Forge_High06",
     "rarity": 4
   },
   {
@@ -1545,6 +1917,192 @@
     "id": 20032,
     "name": "冷卻液",
     "icon": "T_Resource_Forge_Product06",
+    "rarity": 4
+  },
+  {
+    "id": 20500,
+    "name": "儲物箱鑰匙",
+    "icon": "T_Drop_Key01",
+    "rarity": 1
+  },
+  {
+    "id": 20501,
+    "name": "布魯內托的儲物箱鑰匙",
+    "icon": "T_Drop_Key01",
+    "rarity": 1
+  },
+  {
+    "id": 20512,
+    "name": "遺落銀幣",
+    "icon": "T_Rouge_Drop_Interim1",
+    "rarity": 3
+  },
+  {
+    "id": 20513,
+    "name": "細碎礦石",
+    "icon": "T_Rouge_Drop_Interim2",
+    "rarity": 3
+  },
+  {
+    "id": 20514,
+    "name": "老舊護具",
+    "icon": "T_Rouge_Drop_Interim3",
+    "rarity": 3
+  },
+  {
+    "id": 20515,
+    "name": "無主勛章",
+    "icon": "T_Rouge_Drop_Interim4",
+    "rarity": 3
+  },
+  {
+    "id": 20516,
+    "name": "空瓶",
+    "icon": "T_Rouge_Drop_Interim5",
+    "rarity": 3
+  },
+  {
+    "id": 20517,
+    "name": "枯枝",
+    "icon": "T_Rouge_Drop_Interim6",
+    "rarity": 3
+  },
+  {
+    "id": 20518,
+    "name": "女神像寶石",
+    "icon": "T_Rouge_Drop_Interim7",
+    "rarity": 4
+  },
+  {
+    "id": 20602,
+    "name": "凈界島·其一",
+    "icon": "T_TreasureMap_Prologue",
+    "rarity": 4
+  },
+  {
+    "id": 20603,
+    "name": "凈界島·其二",
+    "icon": "T_TreasureMap_Prologue",
+    "rarity": 4
+  },
+  {
+    "id": 20604,
+    "name": "凈界島·其三",
+    "icon": "T_TreasureMap_Prologue",
+    "rarity": 4
+  },
+  {
+    "id": 20605,
+    "name": "凈界島·其四",
+    "icon": "T_TreasureMap_Prologue",
+    "rarity": 4
+  },
+  {
+    "id": 20608,
+    "name": "冰湖城·其一",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20609,
+    "name": "冰湖城·其二",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20610,
+    "name": "冰湖城·其三",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20611,
+    "name": "冰湖城·其四",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20612,
+    "name": "冰湖城·其五",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20613,
+    "name": "冰湖城·其六",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20614,
+    "name": "冰湖城·其七",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20615,
+    "name": "冰湖城·其八",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20616,
+    "name": "冰湖城·其九",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20617,
+    "name": "冰湖城·其十",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20620,
+    "name": "龍莎要塞·其一",
+    "icon": "T_TreasureMap_EXChapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20621,
+    "name": "龍莎要塞·其二",
+    "icon": "T_TreasureMap_EXChapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20622,
+    "name": "龍莎要塞·其三",
+    "icon": "T_TreasureMap_EXChapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20630,
+    "name": "煙津渡·其一",
+    "icon": "T_TreasureMap_East",
+    "rarity": 4
+  },
+  {
+    "id": 20631,
+    "name": "煙津渡·其二",
+    "icon": "T_TreasureMap_East",
+    "rarity": 4
+  },
+  {
+    "id": 20632,
+    "name": "煙津渡·其三",
+    "icon": "T_TreasureMap_East",
+    "rarity": 4
+  },
+  {
+    "id": 20633,
+    "name": "煙津渡·其四",
+    "icon": "T_TreasureMap_East",
+    "rarity": 4
+  },
+  {
+    "id": 20634,
+    "name": "煙津渡·其五",
+    "icon": "T_TreasureMap_East",
     "rarity": 4
   },
   {
@@ -1644,8 +2202,62 @@
     "rarity": 4
   },
   {
+    "id": 30110,
+    "name": "高級染劑·星河",
+    "icon": "T_Dye_10",
+    "rarity": 5
+  },
+  {
+    "id": 30111,
+    "name": "高級染劑·麥穗",
+    "icon": "T_Dye_11",
+    "rarity": 5
+  },
+  {
     "id": 30112,
     "name": "虹彩染劑",
+    "icon": "T_Dye_12",
+    "rarity": 5
+  },
+  {
+    "id": 30113,
+    "name": "中级染剂·棕色-浅【待包装】",
+    "icon": "T_Dye_15",
+    "rarity": 5
+  },
+  {
+    "id": 30114,
+    "name": "中级染剂·棕色-深【待包装】",
+    "icon": "T_Dye_15",
+    "rarity": 5
+  },
+  {
+    "id": 30115,
+    "name": "中级染剂·绿色-浅【待包装】",
+    "icon": "T_Dye_14",
+    "rarity": 5
+  },
+  {
+    "id": 30116,
+    "name": "中级染剂·绿色-深【待包装】",
+    "icon": "T_Dye_15",
+    "rarity": 5
+  },
+  {
+    "id": 30117,
+    "name": "高级染剂·粉色【待包装】",
+    "icon": "T_Dye_13",
+    "rarity": 5
+  },
+  {
+    "id": 30118,
+    "name": "发型染剂·基础【待包装】",
+    "icon": "T_Dye_12",
+    "rarity": 4
+  },
+  {
+    "id": 30119,
+    "name": "发型染剂·黑白棕粉绿【待包装】",
     "icon": "T_Dye_12",
     "rarity": 5
   },
@@ -1686,10 +2298,28 @@
     "rarity": 4
   },
   {
+    "id": 41001,
+    "name": "滋滋烤肉",
+    "icon": "T_Resource_Gesture_Kaorou",
+    "rarity": 5
+  },
+  {
     "id": 41002,
     "name": "箱中之貓·本色",
     "icon": "T_Resource_Gesture_Zhixiang",
     "rarity": 5
+  },
+  {
+    "id": 41003,
+    "name": "魔法學徒",
+    "icon": "T_Resource_Gesture_Saozhou",
+    "rarity": 5
+  },
+  {
+    "id": 41004,
+    "name": "隱蔽之所",
+    "icon": "T_Resource_Gesture_Caocong",
+    "rarity": 4
   },
   {
     "id": 41005,
@@ -1701,6 +2331,36 @@
     "id": 41006,
     "name": "箱中之貓·白櫻",
     "icon": "T_Resource_Gesture_Zhixiang",
+    "rarity": 5
+  },
+  {
+    "id": 41007,
+    "name": "整備動作·近戰武器",
+    "icon": "T_Resource_Gesture_MeleeWeapon",
+    "rarity": 4
+  },
+  {
+    "id": 41008,
+    "name": "整備動作·遠端武器",
+    "icon": "T_Resource_Gesture_RangeWeapon",
+    "rarity": 4
+  },
+  {
+    "id": 41009,
+    "name": "整備動作",
+    "icon": "T_Resource_Gesture_Idle",
+    "rarity": 4
+  },
+  {
+    "id": 41010,
+    "name": "寶箱誘惑",
+    "icon": "T_Resource_Gesture_BiteBox",
+    "rarity": 5
+  },
+  {
+    "id": 41011,
+    "name": "床的束縛",
+    "icon": "T_Resource_Gesture_Bed",
     "rarity": 5
   },
   {
@@ -1770,9 +2430,51 @@
     "rarity": 6
   },
   {
+    "id": 41023,
+    "name": "展示自我",
+    "icon": "T_Resource_Gesture_Show",
+    "rarity": 4
+  },
+  {
+    "id": 41024,
+    "name": "打招呼",
+    "icon": "T_Resource_Gesture_Hello",
+    "rarity": 4
+  },
+  {
+    "id": 41025,
+    "name": "肯定",
+    "icon": "T_Resource_Gesture_Nice",
+    "rarity": 4
+  },
+  {
+    "id": 41026,
+    "name": "否定",
+    "icon": "T_Resource_Gesture_NoNoNo",
+    "rarity": 4
+  },
+  {
+    "id": 41027,
+    "name": "喝彩",
+    "icon": "T_Resource_Gesture_WellDone",
+    "rarity": 4
+  },
+  {
     "id": 41028,
     "name": "戰術錯亂步",
     "icon": "T_Resource_Gesture_SkillGomoku",
+    "rarity": 4
+  },
+  {
+    "id": 41029,
+    "name": "幻想騎士一式",
+    "icon": "T_Resource_Gesture_PunchLeft",
+    "rarity": 4
+  },
+  {
+    "id": 41030,
+    "name": "幻想騎士二式",
+    "icon": "T_Resource_Gesture_PunchRight",
     "rarity": 4
   },
   {
@@ -1786,6 +2488,30 @@
     "name": "睥睨山河·鎏金",
     "icon": "T_Resource_DragonThrone_Golden",
     "rarity": 6
+  },
+  {
+    "id": 41033,
+    "name": "姿勢：電子屏",
+    "icon": "T_Resource_Gesture_Electronscreen",
+    "rarity": 4
+  },
+  {
+    "id": 41034,
+    "name": "林梢日光",
+    "icon": "T_Resource_Gesture_PeachBlossom",
+    "rarity": 4
+  },
+  {
+    "id": 41035,
+    "name": "林梢日光·鎏金",
+    "icon": "T_Resource_Gesture_Ginkgo",
+    "rarity": 4
+  },
+  {
+    "id": 41036,
+    "name": "高雅人士",
+    "icon": "T_Resource_Gesture_Youya",
+    "rarity": 4
   },
   {
     "id": 41037,
@@ -1842,6 +2568,66 @@
     "rarity": 4
   },
   {
+    "id": 41046,
+    "name": "轉動螺旋",
+    "icon": "T_Resource_Gesture_02",
+    "rarity": 4
+  },
+  {
+    "id": 41047,
+    "name": "慷慨解囊",
+    "icon": "T_Resource_Gesture_01",
+    "rarity": 4
+  },
+  {
+    "id": 42001,
+    "name": "牽機方樞·卻邪",
+    "icon": "T_Icon_CentralSquare_Equip01",
+    "rarity": 4
+  },
+  {
+    "id": 42002,
+    "name": "牽機方樞",
+    "icon": "T_Icon_CentralSquare_Equip",
+    "rarity": 4
+  },
+  {
+    "id": 49996,
+    "name": "榛子沖沖沖",
+    "icon": "T_Mounts_Gesture_0401",
+    "rarity": 4
+  },
+  {
+    "id": 49997,
+    "name": "銀翼騎士",
+    "icon": "T_Mounts_Gesture_0301",
+    "rarity": 5
+  },
+  {
+    "id": 49998,
+    "name": "擬真太皓",
+    "icon": "T_Mounts_Gesture_0101",
+    "rarity": 6
+  },
+  {
+    "id": 49999,
+    "name": "擬真玄色狴犴",
+    "icon": "T_Mounts_Gesture_0201",
+    "rarity": 4
+  },
+  {
+    "id": 110001,
+    "name": "啟航武器自選·其一",
+    "icon": "T_OptPack_Weapon01",
+    "rarity": 5
+  },
+  {
+    "id": 110002,
+    "name": "啟航武器自選·其一",
+    "icon": "T_OptPack_Weapon01",
+    "rarity": 5
+  },
+  {
     "id": 110006,
     "name": "啟航自選形象禮箱·星芒",
     "icon": "T_Pack_Christmas",
@@ -1852,6 +2638,18 @@
     "name": "聞香自選形象禮箱·墨玉",
     "icon": "T_Pack_Common02",
     "rarity": 5
+  },
+  {
+    "id": 110013,
+    "name": "夢魘殘聲材料自選包",
+    "icon": "T_Rouge_Drop_Interim4",
+    "rarity": 4
+  },
+  {
+    "id": 110014,
+    "name": "武器突破自選禮箱",
+    "icon": "T_Pack_WeaponUserChoose",
+    "rarity": 4
   },
   {
     "id": 110015,
@@ -1896,6 +2694,18 @@
     "rarity": 5
   },
   {
+    "id": 1001504,
+    "name": "思緒片段·蘇乙",
+    "icon": "T_Resource_Root_Star5",
+    "rarity": 5
+  },
+  {
+    "id": 1001601,
+    "name": "思緒片段·狩月人·光",
+    "icon": "T_CharPiece_Protagonist",
+    "rarity": 5
+  },
+  {
     "id": 1001801,
     "name": "思緒片段·菲娜",
     "icon": "T_CharPiece_Feina",
@@ -1905,6 +2715,12 @@
     "id": 1002101,
     "name": "思緒片段·麗蓓卡",
     "icon": "T_CharPiece_Shuimu",
+    "rarity": 5
+  },
+  {
+    "id": 1002102,
+    "name": "思緒片段·伊薇",
+    "icon": "T_Resource_Root_Star5",
     "rarity": 5
   },
   {
@@ -1926,6 +2742,12 @@
     "rarity": 5
   },
   {
+    "id": 1003102,
+    "name": "思緒片段·希爾妲",
+    "icon": "T_CharPiece_Xier",
+    "rarity": 5
+  },
+  {
     "id": 1003103,
     "name": "思緒片段·耶爾與奧利弗",
     "icon": "T_CharPiece_Yeer",
@@ -1935,6 +2757,12 @@
     "id": 1003201,
     "name": "思緒片段·海爾法",
     "icon": "T_CharPiece_Haier",
+    "rarity": 5
+  },
+  {
+    "id": 1003202,
+    "name": "思緒片段·卡蜜拉",
+    "icon": "T_CharPiece_Kami",
     "rarity": 5
   },
   {
@@ -1996,6 +2824,828 @@
     "name": "思緒片段·達芙涅",
     "icon": "T_CharPiece_Dafu",
     "rarity": 5
+  },
+  {
+    "id": 1011101,
+    "name": "印記·貝蕾妮卡",
+    "icon": "T_Phantom_Heitao",
+    "rarity": 5
+  },
+  {
+    "id": 1011103,
+    "name": "印記·幻景",
+    "icon": "T_Phantom_Tuosi",
+    "rarity": 5
+  },
+  {
+    "id": 1011501,
+    "name": "印記·莉茲貝爾",
+    "icon": "T_Phantom_Baonu",
+    "rarity": 5
+  },
+  {
+    "id": 1011502,
+    "name": "印記·妮弗爾夫人",
+    "icon": "T_Phantom_Nifu",
+    "rarity": 5
+  },
+  {
+    "id": 1011503,
+    "name": "印記·刻舟",
+    "icon": "T_Phantom_Kezhou",
+    "rarity": 5
+  },
+  {
+    "id": 1011504,
+    "name": "印記·蘇乙",
+    "icon": "T_Phantom_Kezhou",
+    "rarity": 5
+  },
+  {
+    "id": 1011601,
+    "name": "印記·狩月人·光",
+    "icon": "T_Phantom_Nvzhu",
+    "rarity": 5
+  },
+  {
+    "id": 1011801,
+    "name": "印記·菲娜",
+    "icon": "T_Phantom_Feina",
+    "rarity": 5
+  },
+  {
+    "id": 1012101,
+    "name": "印記·麗蓓卡",
+    "icon": "T_Phantom_Shuimu",
+    "rarity": 5
+  },
+  {
+    "id": 1012102,
+    "name": "印記·伊薇",
+    "icon": "T_Phantom_Shuimu",
+    "rarity": 5
+  },
+  {
+    "id": 1012301,
+    "name": "印記·塔比瑟",
+    "icon": "T_Phantom_Zhangyu",
+    "rarity": 5
+  },
+  {
+    "id": 1012401,
+    "name": "印記·扶疏",
+    "icon": "T_Phantom_Baiheng",
+    "rarity": 5
+  },
+  {
+    "id": 1013101,
+    "name": "印記·琳恩",
+    "icon": "T_Phantom_Linen",
+    "rarity": 5
+  },
+  {
+    "id": 1013102,
+    "name": "印記·希爾妲",
+    "icon": "T_Phantom_Xier",
+    "rarity": 5
+  },
+  {
+    "id": 1013103,
+    "name": "印記·耶爾與奧利弗",
+    "icon": "T_Phantom_Yeer",
+    "rarity": 5
+  },
+  {
+    "id": 1013201,
+    "name": "印記·海爾法",
+    "icon": "T_Phantom_Haier",
+    "rarity": 5
+  },
+  {
+    "id": 1013202,
+    "name": "印記·卡蜜拉",
+    "icon": "T_Phantom_Kami",
+    "rarity": 5
+  },
+  {
+    "id": 1013301,
+    "name": "印記·瑪爾潔",
+    "icon": "T_Phantom_Maer",
+    "rarity": 5
+  },
+  {
+    "id": 1014101,
+    "name": "印記·黎瑟",
+    "icon": "T_Phantom_Lise",
+    "rarity": 5
+  },
+  {
+    "id": 1014102,
+    "name": "印記·止流",
+    "icon": "T_Phantom_Zhiliu",
+    "rarity": 5
+  },
+  {
+    "id": 1014201,
+    "name": "印記·煜明",
+    "icon": "T_Phantom_Yuming",
+    "rarity": 5
+  },
+  {
+    "id": 1014202,
+    "name": "印記·蘭迪",
+    "icon": "T_Phantom_Landi",
+    "rarity": 5
+  },
+  {
+    "id": 1014301,
+    "name": "印記·西比爾",
+    "icon": "T_Phantom_Xibi",
+    "rarity": 5
+  },
+  {
+    "id": 1015101,
+    "name": "印記·松露與榛子",
+    "icon": "T_Phantom_Songlu",
+    "rarity": 5
+  },
+  {
+    "id": 1015102,
+    "name": "印記·奥特賽德",
+    "icon": "T_Phantom_Aote",
+    "rarity": 5
+  },
+  {
+    "id": 1015301,
+    "name": "印記·賽琪",
+    "icon": "T_Phantom_Saiqi",
+    "rarity": 5
+  },
+  {
+    "id": 1015401,
+    "name": "印記·達芙涅",
+    "icon": "T_Phantom_Dafu",
+    "rarity": 5
+  },
+  {
+    "id": 1110000,
+    "name": "印記·空",
+    "icon": "T_Resource_CallPhantom_Empty",
+    "rarity": 4
+  },
+  {
+    "id": 2000001,
+    "name": "石像上的銘文",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000002,
+    "name": "瓶中浩劫·其一",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000003,
+    "name": "散落的日記·其一",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000004,
+    "name": "散落的日記·其二",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000005,
+    "name": "散落的日記·其三",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000006,
+    "name": "手術錄音",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000007,
+    "name": "《疾病與人》——穢蝕節選",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000008,
+    "name": "異國的書籍",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000009,
+    "name": "收購者的來信",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000010,
+    "name": "還未寄出的回信",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000011,
+    "name": "積灰的家書",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000012,
+    "name": "《天生無敵大軍團長》·其一",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000013,
+    "name": "愛麗絲的日記",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000014,
+    "name": "《觀察記錄》·其一",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000015,
+    "name": "《觀察記錄》·其二",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000016,
+    "name": "《觀察記錄》·其三",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000017,
+    "name": "安妮的信",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000018,
+    "name": "遺落的日記",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000019,
+    "name": "陳舊的日記",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000020,
+    "name": "憤怒的劃痕",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000021,
+    "name": "墻縫間的警告",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000022,
+    "name": "墻縫間的密語",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000023,
+    "name": "《告別貧窮，走上人生巔峰！》",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000024,
+    "name": "沒有地址的信件",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000025,
+    "name": "神棄者同盟宣傳冊",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000026,
+    "name": "增加要塞維修人力的申請",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000027,
+    "name": "揉成一團的紙片",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000028,
+    "name": "某位同盟成員的日記",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000029,
+    "name": "改進排水機關的申請",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000030,
+    "name": "凱旋節放假通知",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000031,
+    "name": "對龍莎要塞的行動指示",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000032,
+    "name": "模擬戰場對戰記錄",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000033,
+    "name": "我最好的伙伴們",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000034,
+    "name": "傷員救治記錄",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000035,
+    "name": "一次交談筆錄",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000036,
+    "name": "治療師的日記",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000037,
+    "name": "拆開的信件",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000038,
+    "name": "催繳帳單",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000039,
+    "name": "藥劑標籤",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000040,
+    "name": "一張便箋",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000041,
+    "name": "賽琪·弗萊伊的檔案",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000042,
+    "name": "艾麗莎·泰勒的檔案",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000043,
+    "name": "亨特·克拉克的檔案",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000044,
+    "name": "《化蟲》",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000045,
+    "name": "揉爛的神棄者同盟傳單",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000046,
+    "name": "蓋雷亞劇院道具清單",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000047,
+    "name": "帝皇尾戒勳章",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000048,
+    "name": "老舊的報紙",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000049,
+    "name": "蓋雷亞劇院鬥毆事件",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000050,
+    "name": "寫滿的舊日記",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000051,
+    "name": "《天生無敵大軍團長》·其二",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000052,
+    "name": "染血的日記",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000053,
+    "name": "《紅葉反討秘話》·其一",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000054,
+    "name": "《紅葉反討秘話》·其二",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000055,
+    "name": "《紅葉反討秘話》·其三",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000056,
+    "name": "《紅葉反討秘話》·其四",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000057,
+    "name": "銀燭狂歡頌歌·其一",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000058,
+    "name": "銀燭狂歡頌歌·其二",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000059,
+    "name": "銀燭狂歡頌歌・其三",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000060,
+    "name": "銀燭狂歡頌歌・其四",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000061,
+    "name": "銀燭狂歡頌歌・其五",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000062,
+    "name": "銀燭狂歡頌歌・其六",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000063,
+    "name": "銀燭狂歡頌歌・其七",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000064,
+    "name": "銀燭狂歡頌歌・其八",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000065,
+    "name": "銀燭狂歡頌歌・其九",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000066,
+    "name": "銀燭狂歡頌歌・其十",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000067,
+    "name": "抵制銀燭狂歡節！",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000068,
+    "name": "喝點什麼，請開尊口",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000069,
+    "name": "神棄者同盟秘聞・其一",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000070,
+    "name": "枝葉銜月・穢獸浪潮",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000071,
+    "name": "枝葉銜月・起義前夜",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000072,
+    "name": "《燭陰之災調查筆錄》",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000073,
+    "name": "《海納百粹》",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000074,
+    "name": "《機樞真是好》",
+    "icon": "T_Read_East03",
+    "rarity": 3
+  },
+  {
+    "id": 2000075,
+    "name": "《禦龍在天》·第五回",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000076,
+    "name": "偽造字畫",
+    "icon": "T_Read_East03",
+    "rarity": 3
+  },
+  {
+    "id": 2000077,
+    "name": "《風伯雜俎（節選）》",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000078,
+    "name": "不知何人的絕筆",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000079,
+    "name": "一份貨物交付備忘錄",
+    "icon": "T_Read_East03",
+    "rarity": 3
+  },
+  {
+    "id": 2000080,
+    "name": "一頁日記",
+    "icon": "T_Read_East03",
+    "rarity": 3
+  },
+  {
+    "id": 2000081,
+    "name": "《華胥人的生死觀》",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000082,
+    "name": "《華胥新生兒起名熱門字分析》",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000083,
+    "name": "《大風x年佘餘慶貸錢契》",
+    "icon": "T_Read_East03",
+    "rarity": 3
+  },
+  {
+    "id": 2000084,
+    "name": "《進香儀軌》",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000085,
+    "name": "《蘿湘辨法錄·第十卷》",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000086,
+    "name": "《阿特拉西亞行跡·煙津渡篇》",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000087,
+    "name": "《織星客列傳》",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000088,
+    "name": "《格林威治考古協會項目申請書》",
+    "icon": "T_Read_East03",
+    "rarity": 3
+  },
+  {
+    "id": 2000089,
+    "name": "《錦鯉皎皎的生意經·第七卷》",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000090,
+    "name": "《關於暫停煙津渡對外貿易的通知》",
+    "icon": "T_Read_East03",
+    "rarity": 3
+  },
+  {
+    "id": 2000091,
+    "name": "一封織星客之間的信件",
+    "icon": "T_Read_East02",
+    "rarity": 3
+  },
+  {
+    "id": 2000092,
+    "name": "《惡人當道》·其一",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000093,
+    "name": "《惡人當道》·其二",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000094,
+    "name": "《惡人當道》·其三",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000095,
+    "name": "《惡人當道》·其四",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000096,
+    "name": "《煉金術師的筆記·之一》",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000097,
+    "name": "《煉金術師的筆記·之二》",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000098,
+    "name": "《來自一位長輩的訓誡》",
+    "icon": "T_Read_East03",
+    "rarity": 3
+  },
+  {
+    "id": 3000001,
+    "name": "一盒紙星星",
+    "icon": "T_Impression_Star",
+    "rarity": 4
+  },
+  {
+    "id": 3000002,
+    "name": "少女的舊衣",
+    "icon": "T_Impression_Star",
+    "rarity": 3
+  },
+  {
+    "id": 3000003,
+    "name": "《馬背上的寶藏書》",
+    "icon": "T_Impression_Star",
+    "rarity": 3
+  },
+  {
+    "id": 3000004,
+    "name": "熟悉的鐵絲肖像",
+    "icon": "T_Impression_Star",
+    "rarity": 3
+  },
+  {
+    "id": 3000005,
+    "name": "醫療箱",
+    "icon": "T_Guide_Ex01_AidKit",
+    "rarity": 4
+  },
+  {
+    "id": 3000006,
+    "name": "阿瓦爾的相片",
+    "icon": "T_Photo_Group01",
+    "rarity": 4
+  },
+  {
+    "id": 3000007,
+    "name": "染血的相片",
+    "icon": "T_Photo_Group02",
+    "rarity": 4
+  },
+  {
+    "id": 3000008,
+    "name": "白色的花",
+    "icon": "T_Quest_Chapter01_Flower_2",
+    "rarity": 4
+  },
+  {
+    "id": 3000009,
+    "name": "危險的藥方",
+    "icon": "T_Impression_Star",
+    "rarity": 4
+  },
+  {
+    "id": 3000010,
+    "name": "費伊贈送的畫像",
+    "icon": "T_Impression_Star",
+    "rarity": 4
+  },
+  {
+    "id": 3000011,
+    "name": "舊鑰匙",
+    "icon": "T_Impression_Star",
+    "rarity": 4
   },
   {
     "id": 3000012,
@@ -2106,6 +3756,12 @@
     "rarity": 2
   },
   {
+    "id": 4010013,
+    "name": "焦糖菇",
+    "icon": "T_Pickup_Mushroom02",
+    "rarity": 2
+  },
+  {
     "id": 4010014,
     "name": "告蒼",
     "icon": "T_Pickup_05",
@@ -2142,9 +3798,675 @@
     "rarity": 2
   },
   {
+    "id": 4010020,
+    "name": "塵息蝶",
+    "icon": "T_Pickup_Butterfly03",
+    "rarity": 2
+  },
+  {
+    "id": 4020001,
+    "name": "堅殼果",
+    "icon": "T_Pickup_Nut01",
+    "rarity": 2
+  },
+  {
+    "id": 4020002,
+    "name": "金殼果",
+    "icon": "T_Pickup_Nut02",
+    "rarity": 3
+  },
+  {
     "id": 4020003,
     "name": "銀輝石",
     "icon": "T_Pickup_Stone01",
+    "rarity": 2
+  },
+  {
+    "id": 4020004,
+    "name": "明輝石",
+    "icon": "T_Pickup_Stone02",
+    "rarity": 3
+  },
+  {
+    "id": 4020005,
+    "name": "咚咚石",
+    "icon": "T_Pickup_Stomach",
+    "rarity": 2
+  },
+  {
+    "id": 4020006,
+    "name": "山瑚",
+    "icon": "T_Pickup_03",
+    "rarity": 2
+  },
+  {
+    "id": 4030001,
+    "name": "節日餘溫",
+    "icon": "T_Icon_TheaterOnline_06",
+    "rarity": 4
+  },
+  {
+    "id": 4030002,
+    "name": "無堅不摧大錘",
+    "icon": "T_Icon_TheaterOnline_04",
+    "rarity": 4
+  },
+  {
+    "id": 4030003,
+    "name": "浪漫香氛蠟燭",
+    "icon": "T_Icon_TheaterOnline_03",
+    "rarity": 4
+  },
+  {
+    "id": 4030004,
+    "name": "末日求生套裝",
+    "icon": "T_Icon_TheaterOnline_01",
+    "rarity": 4
+  },
+  {
+    "id": 4030005,
+    "name": "整包時尚配飾",
+    "icon": "T_Icon_TheaterOnline_05",
+    "rarity": 4
+  },
+  {
+    "id": 4030006,
+    "name": "華胥絳色綢緞",
+    "icon": "T_Icon_TheaterOnline_02",
+    "rarity": 4
+  },
+  {
+    "id": 5011010,
+    "name": "洄游魚",
+    "icon": "T_Fish_Sea_Normal_1",
+    "rarity": 2
+  },
+  {
+    "id": 5011011,
+    "name": "洄游魚·異種",
+    "icon": "T_Fish_Sea_Normal_1_1",
+    "rarity": 2
+  },
+  {
+    "id": 5011020,
+    "name": "多彩棘刺",
+    "icon": "T_Fish_Sea_Normal_2",
+    "rarity": 2
+  },
+  {
+    "id": 5011021,
+    "name": "多彩棘刺·異種",
+    "icon": "T_Fish_Sea_Normal_2_1",
+    "rarity": 2
+  },
+  {
+    "id": 5011030,
+    "name": "銀條魚",
+    "icon": "T_Fish_Sea_Normal_3",
+    "rarity": 3
+  },
+  {
+    "id": 5011031,
+    "name": "銀條魚·異種",
+    "icon": "T_Fish_Sea_Normal_3_1",
+    "rarity": 3
+  },
+  {
+    "id": 5012010,
+    "name": "長須翁",
+    "icon": "T_Fish_FreshWater_Normal_1",
+    "rarity": 3
+  },
+  {
+    "id": 5012011,
+    "name": "長須翁·異種",
+    "icon": "T_Fish_FreshWater_Normal_1_1",
+    "rarity": 3
+  },
+  {
+    "id": 5012020,
+    "name": "斑點狗魚",
+    "icon": "T_Fish_FreshWater_Normal_2",
+    "rarity": 2
+  },
+  {
+    "id": 5012021,
+    "name": "斑點狗魚·異種",
+    "icon": "T_Fish_FreshWater_Normal_2_1",
+    "rarity": 2
+  },
+  {
+    "id": 5012030,
+    "name": "鰲蝦",
+    "icon": "T_Fish_FreshWater_Normal_3",
+    "rarity": 2
+  },
+  {
+    "id": 5012031,
+    "name": "鰲蝦·異種",
+    "icon": "T_Fish_FreshWater_Normal_3_1",
+    "rarity": 2
+  },
+  {
+    "id": 5013010,
+    "name": "利齒侏儒",
+    "icon": "T_Fish_DirtyWater_Normal_1",
+    "rarity": 3
+  },
+  {
+    "id": 5013011,
+    "name": "利齒侏儒·異種",
+    "icon": "T_Fish_DirtyWater_Normal_1_1",
+    "rarity": 3
+  },
+  {
+    "id": 5013020,
+    "name": "吧唧吧唧魚",
+    "icon": "T_Fish_DirtyWater_Normal_2",
+    "rarity": 2
+  },
+  {
+    "id": 5013021,
+    "name": "吧唧吧唧魚·異種",
+    "icon": "T_Fish_DirtyWater_Normal_2_1",
+    "rarity": 2
+  },
+  {
+    "id": 5013030,
+    "name": "長腿先生",
+    "icon": "T_Fish_DirtyWater_Normal_3",
+    "rarity": 2
+  },
+  {
+    "id": 5013031,
+    "name": "長腿先生·異種",
+    "icon": "T_Fish_DirtyWater_Normal_3_1",
+    "rarity": 2
+  },
+  {
+    "id": 5021010,
+    "name": "永恆燈塔",
+    "icon": "T_Fish_Sea_Village_1",
+    "rarity": 3
+  },
+  {
+    "id": 5021011,
+    "name": "永恆燈塔·異種",
+    "icon": "T_Fish_Sea_Village_1_1",
+    "rarity": 3
+  },
+  {
+    "id": 5021020,
+    "name": "逐汐魚",
+    "icon": "T_Fish_Sea_Village_2",
+    "rarity": 3
+  },
+  {
+    "id": 5021021,
+    "name": "逐汐魚·異種",
+    "icon": "T_Fish_Sea_Village_2_1",
+    "rarity": 3
+  },
+  {
+    "id": 5021030,
+    "name": "洋面飛鳥",
+    "icon": "T_Fish_Sea_Village_4",
+    "rarity": 4
+  },
+  {
+    "id": 5021031,
+    "name": "洋面飛鳥·異種",
+    "icon": "T_Fish_Sea_Village_4_1",
+    "rarity": 4
+  },
+  {
+    "id": 5021040,
+    "name": "海洋寶寶",
+    "icon": "T_Fish_Sea_Village_3",
+    "rarity": 4
+  },
+  {
+    "id": 5021041,
+    "name": "海洋寶寶·異種",
+    "icon": "T_Fish_Sea_Village_3_1",
+    "rarity": 4
+  },
+  {
+    "id": 5021050,
+    "name": "繁葉銀鮫",
+    "icon": "T_Fish_Sea_Village_5",
+    "rarity": 5
+  },
+  {
+    "id": 5021051,
+    "name": "繁葉銀鮫·異種",
+    "icon": "T_Fish_Sea_Village_5_1",
+    "rarity": 5
+  },
+  {
+    "id": 5022010,
+    "name": "珠紋扁扁鯊",
+    "icon": "T_Fish_Sea_East_1",
+    "rarity": 4
+  },
+  {
+    "id": 5022011,
+    "name": "珠紋扁扁鯊·異種",
+    "icon": "T_Fish_Sea_East_1_1",
+    "rarity": 4
+  },
+  {
+    "id": 5022020,
+    "name": "齒輪鐘螺蟹",
+    "icon": "T_Fish_Sea_East_2",
+    "rarity": 3
+  },
+  {
+    "id": 5022021,
+    "name": "齒輪鐘螺蟹·異種",
+    "icon": "T_Fish_Sea_East_2_1",
+    "rarity": 3
+  },
+  {
+    "id": 5022030,
+    "name": "懸珠魚",
+    "icon": "T_Fish_Sea_East_4",
+    "rarity": 4
+  },
+  {
+    "id": 5022031,
+    "name": "懸珠魚·異種",
+    "icon": "T_Fish_Sea_East_4_1",
+    "rarity": 4
+  },
+  {
+    "id": 5022040,
+    "name": "蜮",
+    "icon": "T_Fish_Sea_East_3",
+    "rarity": 3
+  },
+  {
+    "id": 5022041,
+    "name": "蜮·異種",
+    "icon": "T_Fish_Sea_East_3_1",
+    "rarity": 3
+  },
+  {
+    "id": 5022050,
+    "name": "雙髻鯊",
+    "icon": "T_Fish_Sea_East_5",
+    "rarity": 5
+  },
+  {
+    "id": 5022051,
+    "name": "雙髻鯊·異種",
+    "icon": "T_Fish_Sea_East_5_1",
+    "rarity": 5
+  },
+  {
+    "id": 5023010,
+    "name": "月牙魚",
+    "icon": "T_Fish_FreshWater_IceLake_3",
+    "rarity": 3
+  },
+  {
+    "id": 5023011,
+    "name": "月牙魚·異種",
+    "icon": "T_Fish_FreshWater_IceLake_3_1",
+    "rarity": 3
+  },
+  {
+    "id": 5023020,
+    "name": "湖中夫人",
+    "icon": "T_Fish_FreshWater_IceLake_2",
+    "rarity": 3
+  },
+  {
+    "id": 5023021,
+    "name": "湖中夫人·異種",
+    "icon": "T_Fish_FreshWater_IceLake_2_1",
+    "rarity": 3
+  },
+  {
+    "id": 5023030,
+    "name": "淚湖魚",
+    "icon": "T_Fish_FreshWater_IceLake_4",
+    "rarity": 4
+  },
+  {
+    "id": 5023031,
+    "name": "淚湖魚·異種",
+    "icon": "T_Fish_FreshWater_IceLake_4_1",
+    "rarity": 4
+  },
+  {
+    "id": 5023040,
+    "name": "洗衣槌魚",
+    "icon": "T_Fish_FreshWater_IceLake_1",
+    "rarity": 4
+  },
+  {
+    "id": 5023041,
+    "name": "洗衣槌魚·異種",
+    "icon": "T_Fish_FreshWater_IceLake_1_1",
+    "rarity": 4
+  },
+  {
+    "id": 5023050,
+    "name": "光椎魚",
+    "icon": "T_Fish_FreshWater_IceLake_5",
+    "rarity": 5
+  },
+  {
+    "id": 5023051,
+    "name": "光椎魚·異種",
+    "icon": "T_Fish_FreshWater_IceLake_5_1",
+    "rarity": 5
+  },
+  {
+    "id": 5024010,
+    "name": "斑斕舞衣",
+    "icon": "T_Fish_FreshWater_East_1",
+    "rarity": 3
+  },
+  {
+    "id": 5024011,
+    "name": "斑斕舞衣·異種",
+    "icon": "T_Fish_FreshWater_East_1_1",
+    "rarity": 3
+  },
+  {
+    "id": 5024020,
+    "name": "壽星烏賊",
+    "icon": "T_Fish_FreshWater_East_2",
+    "rarity": 3
+  },
+  {
+    "id": 5024021,
+    "name": "壽星烏賊·異種",
+    "icon": "T_Fish_FreshWater_East_2_1",
+    "rarity": 3
+  },
+  {
+    "id": 5024030,
+    "name": "負荊魨",
+    "icon": "T_Fish_FreshWater_East_4",
+    "rarity": 4
+  },
+  {
+    "id": 5024031,
+    "name": "負荊魨·異種",
+    "icon": "T_Fish_FreshWater_East_4_1",
+    "rarity": 4
+  },
+  {
+    "id": 5024040,
+    "name": "荷包鯉",
+    "icon": "T_Fish_FreshWater_East_3",
+    "rarity": 4
+  },
+  {
+    "id": 5024041,
+    "name": "荷包鯉·異種",
+    "icon": "T_Fish_FreshWater_East_3_1",
+    "rarity": 4
+  },
+  {
+    "id": 5024050,
+    "name": "水龍王",
+    "icon": "T_Fish_FreshWater_East_5",
+    "rarity": 5
+  },
+  {
+    "id": 5024051,
+    "name": "水龍王·異種",
+    "icon": "T_Fish_FreshWater_East_5_1",
+    "rarity": 5
+  },
+  {
+    "id": 5025010,
+    "name": "鼠鼠魚",
+    "icon": "T_Fish_DirtyWater_Sew_1",
+    "rarity": 3
+  },
+  {
+    "id": 5025011,
+    "name": "鼠鼠魚·異種",
+    "icon": "T_Fish_DirtyWater_Sew_1_1",
+    "rarity": 3
+  },
+  {
+    "id": 5025020,
+    "name": "囓骨鰻",
+    "icon": "T_Fish_DirtyWater_Sew_2",
+    "rarity": 3
+  },
+  {
+    "id": 5025021,
+    "name": "囓骨鰻·異種",
+    "icon": "T_Fish_DirtyWater_Sew_2_1",
+    "rarity": 3
+  },
+  {
+    "id": 5025030,
+    "name": "水中骷髏",
+    "icon": "T_Fish_DirtyWater_Sew_4",
+    "rarity": 4
+  },
+  {
+    "id": 5025031,
+    "name": "水中骷髏·異種",
+    "icon": "T_Fish_DirtyWater_Sew_4_1",
+    "rarity": 4
+  },
+  {
+    "id": 5025040,
+    "name": "驚聲尖笑獸",
+    "icon": "T_Fish_DirtyWater_Sew_3",
+    "rarity": 4
+  },
+  {
+    "id": 5025041,
+    "name": "驚聲尖笑獸·異種",
+    "icon": "T_Fish_DirtyWater_Sew_3_1",
+    "rarity": 4
+  },
+  {
+    "id": 5025050,
+    "name": "水蠊",
+    "icon": "T_Fish_DirtyWater_Sew_5",
+    "rarity": 5
+  },
+  {
+    "id": 5025051,
+    "name": "水蠊·異種",
+    "icon": "T_Fish_DirtyWater_Sew_5_1",
+    "rarity": 5
+  },
+  {
+    "id": 5026010,
+    "name": "石磨比目",
+    "icon": "T_Fish_Sea_East_6",
+    "rarity": 3
+  },
+  {
+    "id": 5026011,
+    "name": "石磨比目·異種",
+    "icon": "T_Fish_Sea_East_6_1",
+    "rarity": 3
+  },
+  {
+    "id": 5026020,
+    "name": "蘭蟹",
+    "icon": "T_Fish_Sea_East_7",
+    "rarity": 3
+  },
+  {
+    "id": 5026021,
+    "name": "蘭蟹·異種",
+    "icon": "T_Fish_Sea_East_7_1",
+    "rarity": 3
+  },
+  {
+    "id": 5026030,
+    "name": "海星",
+    "icon": "T_Fish_Sea_East_8",
+    "rarity": 4
+  },
+  {
+    "id": 5026031,
+    "name": "海星·異種",
+    "icon": "T_Fish_Sea_East_8_1",
+    "rarity": 4
+  },
+  {
+    "id": 5026040,
+    "name": "小炮仗",
+    "icon": "T_Fish_Sea_East_9",
+    "rarity": 4
+  },
+  {
+    "id": 5026041,
+    "name": "小炮仗·異種",
+    "icon": "T_Fish_Sea_East_9_1",
+    "rarity": 4
+  },
+  {
+    "id": 5026050,
+    "name": "滄浪鯤",
+    "icon": "T_Fish_Sea_East_10",
+    "rarity": 5
+  },
+  {
+    "id": 5026051,
+    "name": "滄浪鯤·異種",
+    "icon": "T_Fish_Sea_East_10_1",
+    "rarity": 5
+  },
+  {
+    "id": 5027010,
+    "name": "刀魚",
+    "icon": "T_Fish_FreshWater_East_6",
+    "rarity": 3
+  },
+  {
+    "id": 5027011,
+    "name": "刀魚·異種",
+    "icon": "T_Fish_FreshWater_East_6_1",
+    "rarity": 3
+  },
+  {
+    "id": 5027020,
+    "name": "桃花鱖",
+    "icon": "T_Fish_FreshWater_East_7",
+    "rarity": 3
+  },
+  {
+    "id": 5027021,
+    "name": "桃花鱖·異種",
+    "icon": "T_Fish_FreshWater_East_7_1",
+    "rarity": 3
+  },
+  {
+    "id": 5027030,
+    "name": "四腮鱸魚",
+    "icon": "T_Fish_FreshWater_East_8",
+    "rarity": 4
+  },
+  {
+    "id": 5027031,
+    "name": "四腮鱸魚·異種",
+    "icon": "T_Fish_FreshWater_East_8_1",
+    "rarity": 4
+  },
+  {
+    "id": 5027040,
+    "name": "鳳凰魚",
+    "icon": "T_Fish_FreshWater_East_9",
+    "rarity": 4
+  },
+  {
+    "id": 5027041,
+    "name": "鳳凰魚·異種",
+    "icon": "T_Fish_FreshWater_East_9_1",
+    "rarity": 4
+  },
+  {
+    "id": 5027050,
+    "name": "帝王之徵",
+    "icon": "T_Fish_FreshWater_East_10",
+    "rarity": 5
+  },
+  {
+    "id": 5027051,
+    "name": "帝王之徵·異種",
+    "icon": "T_Fish_FreshWater_East_10_1",
+    "rarity": 5
+  },
+  {
+    "id": 5028010,
+    "name": "烏睛",
+    "icon": "T_Fish_DirtyWater_East_1",
+    "rarity": 3
+  },
+  {
+    "id": 5028011,
+    "name": "烏睛·異種",
+    "icon": "T_Fish_DirtyWater_East_1_1",
+    "rarity": 3
+  },
+  {
+    "id": 5028020,
+    "name": "泥雀",
+    "icon": "T_Fish_DirtyWater_East_2",
+    "rarity": 3
+  },
+  {
+    "id": 5028021,
+    "name": "泥雀·異種",
+    "icon": "T_Fish_DirtyWater_East_2_1",
+    "rarity": 3
+  },
+  {
+    "id": 5028030,
+    "name": "無明魚",
+    "icon": "T_Fish_DirtyWater_East_3",
+    "rarity": 4
+  },
+  {
+    "id": 5028031,
+    "name": "無明魚·異種",
+    "icon": "T_Fish_DirtyWater_East_3_1",
+    "rarity": 4
+  },
+  {
+    "id": 5028040,
+    "name": "蟾蜍",
+    "icon": "T_Fish_DirtyWater_East_4",
+    "rarity": 4
+  },
+  {
+    "id": 5028041,
+    "name": "蟾蜍·異種",
+    "icon": "T_Fish_DirtyWater_East_4_1",
+    "rarity": 4
+  },
+  {
+    "id": 5028050,
+    "name": "撲棱魚",
+    "icon": "T_Fish_DirtyWater_East_5",
+    "rarity": 5
+  },
+  {
+    "id": 5028051,
+    "name": "撲棱魚·異種",
+    "icon": "T_Fish_DirtyWater_East_5_1",
+    "rarity": 5
+  },
+  {
+    "id": 5110100,
+    "name": "新手訓練竿",
+    "icon": "T_FishingRod_Normal_1",
     "rarity": 2
   },
   {
@@ -2212,5 +4534,911 @@
     "name": "春澤玄寶",
     "icon": "T_Coin_ActivityZhiliu01",
     "rarity": 4
+  },
+  {
+    "id": 6000002,
+    "name": "奇妙箱",
+    "icon": "T_Resource_CoinActivityFool",
+    "rarity": 5
+  },
+  {
+    "id": 6000003,
+    "name": "紅鱗魚",
+    "icon": "T_Fashion_Head41",
+    "rarity": 4
+  },
+  {
+    "id": 6100001,
+    "name": "生命符石",
+    "icon": "T_Activity_Autochess_Item02",
+    "rarity": 3
+  },
+  {
+    "id": 6100002,
+    "name": "防禦符石",
+    "icon": "T_Activity_Autochess_Item02",
+    "rarity": 3
+  },
+  {
+    "id": 6100003,
+    "name": "攻擊符石",
+    "icon": "T_Activity_Autochess_Item01",
+    "rarity": 3
+  },
+  {
+    "id": 6100004,
+    "name": "護盾符石",
+    "icon": "T_Activity_Autochess_Item02",
+    "rarity": 3
+  },
+  {
+    "id": 6100005,
+    "name": "生命·防禦符石",
+    "icon": "T_Activity_Autochess_Item02",
+    "rarity": 3
+  },
+  {
+    "id": 6100006,
+    "name": "攻擊·防禦符石",
+    "icon": "T_Activity_Autochess_Item01",
+    "rarity": 3
+  },
+  {
+    "id": 6100007,
+    "name": "攻擊·生命符石",
+    "icon": "T_Activity_Autochess_Item01",
+    "rarity": 3
+  },
+  {
+    "id": 6100008,
+    "name": "護盾·生命符石",
+    "icon": "T_Activity_Autochess_Item02",
+    "rarity": 3
+  },
+  {
+    "id": 6100009,
+    "name": "攻擊·護盾符石",
+    "icon": "T_Activity_Autochess_Item01",
+    "rarity": 3
+  },
+  {
+    "id": 6100010,
+    "name": "擊潰符石",
+    "icon": "T_Activity_Autochess_Item03",
+    "rarity": 4
+  },
+  {
+    "id": 6100011,
+    "name": "瓦解符石",
+    "icon": "T_Activity_Autochess_Item03",
+    "rarity": 4
+  },
+  {
+    "id": 6100012,
+    "name": "淬鍊符石",
+    "icon": "T_Activity_Autochess_Item03",
+    "rarity": 4
+  },
+  {
+    "id": 6100013,
+    "name": "激怒符石",
+    "icon": "T_Activity_Autochess_Item03",
+    "rarity": 4
+  },
+  {
+    "id": 6100014,
+    "name": "療愈符石",
+    "icon": "T_Activity_Autochess_Item04",
+    "rarity": 4
+  },
+  {
+    "id": 6100015,
+    "name": "鼓舞符石",
+    "icon": "T_Activity_Autochess_Item04",
+    "rarity": 4
+  },
+  {
+    "id": 6100016,
+    "name": "共鳴符石",
+    "icon": "T_Activity_Autochess_Item04",
+    "rarity": 4
+  },
+  {
+    "id": 6100017,
+    "name": "亢奮符石",
+    "icon": "T_Activity_Autochess_Item04",
+    "rarity": 4
+  },
+  {
+    "id": 6100018,
+    "name": "怒濤符石",
+    "icon": "T_Activity_Autochess_Item03",
+    "rarity": 4
+  },
+  {
+    "id": 6100019,
+    "name": "仁心符石",
+    "icon": "T_Activity_Autochess_Item04",
+    "rarity": 4
+  },
+  {
+    "id": 6100020,
+    "name": "破釜符石",
+    "icon": "T_Activity_Autochess_Item03",
+    "rarity": 4
+  },
+  {
+    "id": 6100021,
+    "name": "底力符石",
+    "icon": "T_Activity_Autochess_Item04",
+    "rarity": 4
+  },
+  {
+    "id": 6100022,
+    "name": "穿透符石",
+    "icon": "T_Activity_Autochess_Item03",
+    "rarity": 4
+  },
+  {
+    "id": 6100023,
+    "name": "致命符石",
+    "icon": "T_Activity_Autochess_Item03",
+    "rarity": 4
+  },
+  {
+    "id": 6100024,
+    "name": "凜霜符石",
+    "icon": "T_Activity_Autochess_Item06",
+    "rarity": 5
+  },
+  {
+    "id": 6100025,
+    "name": "爆破符石",
+    "icon": "T_Activity_Autochess_Item05",
+    "rarity": 5
+  },
+  {
+    "id": 6100026,
+    "name": "侵蝕符石",
+    "icon": "T_Activity_Autochess_Item06",
+    "rarity": 5
+  },
+  {
+    "id": 6100027,
+    "name": "霹靂符石",
+    "icon": "T_Activity_Autochess_Item05",
+    "rarity": 5
+  },
+  {
+    "id": 6100028,
+    "name": "猩紅符石",
+    "icon": "T_Activity_Autochess_Item05",
+    "rarity": 5
+  },
+  {
+    "id": 6100029,
+    "name": "枯萎符石",
+    "icon": "T_Activity_Autochess_Item05",
+    "rarity": 5
+  },
+  {
+    "id": 6100030,
+    "name": "守護符石",
+    "icon": "T_Activity_Autochess_Item06",
+    "rarity": 5
+  },
+  {
+    "id": 6100031,
+    "name": "復仇符石",
+    "icon": "T_Activity_Autochess_Item06",
+    "rarity": 5
+  },
+  {
+    "id": 6100032,
+    "name": "霜獄符石",
+    "icon": "T_Activity_Autochess_Item06",
+    "rarity": 5
+  },
+  {
+    "id": 6100033,
+    "name": "殘火符石",
+    "icon": "T_Activity_Autochess_Item05",
+    "rarity": 5
+  },
+  {
+    "id": 6100034,
+    "name": "舍身符石",
+    "icon": "T_Activity_Autochess_Item05",
+    "rarity": 5
+  },
+  {
+    "id": 6100035,
+    "name": "轉雷符石",
+    "icon": "T_Activity_Autochess_Item05",
+    "rarity": 5
+  },
+  {
+    "id": 6100036,
+    "name": "浴血符石",
+    "icon": "T_Activity_Autochess_Item05",
+    "rarity": 5
+  },
+  {
+    "id": 6100101,
+    "name": "疾冲秽兽机傀I",
+    "icon": "T_Head_Gr_Jichong",
+    "rarity": 1
+  },
+  {
+    "id": 6100102,
+    "name": "游击秽兽机傀I",
+    "icon": "T_Head_Gr_Youji",
+    "rarity": 1
+  },
+  {
+    "id": 6100103,
+    "name": "漂浮秽兽机傀I",
+    "icon": "T_Head_Gr_Piaofu",
+    "rarity": 1
+  },
+  {
+    "id": 6100104,
+    "name": "暴徒秽兽机傀I",
+    "icon": "T_Head_Gr_Baotu",
+    "rarity": 1
+  },
+  {
+    "id": 6100105,
+    "name": "笼草秽兽机傀I",
+    "icon": "T_Head_GR_Longcao",
+    "rarity": 1
+  },
+  {
+    "id": 6100106,
+    "name": "疾冲秽兽机傀II",
+    "icon": "T_Head_Gr_Jichong_C01",
+    "rarity": 1
+  },
+  {
+    "id": 6100107,
+    "name": "游击秽兽机傀II",
+    "icon": "T_Head_Gr_Youji_C01",
+    "rarity": 1
+  },
+  {
+    "id": 6100108,
+    "name": "狙击列兵机傀I",
+    "icon": "T_Head_Jt_Juji",
+    "rarity": 1
+  },
+  {
+    "id": 6100109,
+    "name": "劈斩列兵机傀I",
+    "icon": "T_Head_Jt_Pizhuo",
+    "rarity": 1
+  },
+  {
+    "id": 6100110,
+    "name": "远征列兵机傀I",
+    "icon": "T_Head_Jt_Ranger",
+    "rarity": 1
+  },
+  {
+    "id": 6100111,
+    "name": "精锐士官机傀I",
+    "icon": "T_Head_Jt_Zhihui",
+    "rarity": 1
+  },
+  {
+    "id": 6100112,
+    "name": "帝皇之仁机傀I",
+    "icon": "T_Head_Jt_Zhiren",
+    "rarity": 1
+  },
+  {
+    "id": 6100113,
+    "name": "远征列兵机傀II",
+    "icon": "T_Head_Jt_Ranger_C01",
+    "rarity": 1
+  },
+  {
+    "id": 6100114,
+    "name": "突击列兵机傀II",
+    "icon": "T_Head_Jt_Tuji_C01",
+    "rarity": 1
+  },
+  {
+    "id": 6100115,
+    "name": "警戒机机傀I",
+    "icon": "T_Jingjie",
+    "rarity": 1
+  },
+  {
+    "id": 6100116,
+    "name": "蒙恩的执事机傀I",
+    "icon": "T_Head_Jh_Zhishi",
+    "rarity": 1
+  },
+  {
+    "id": 6100117,
+    "name": "蒙恩的先锋机傀I",
+    "icon": "T_Head_Jh_Xianfeng",
+    "rarity": 1
+  },
+  {
+    "id": 6100118,
+    "name": "蒙恩的神甫机傀I",
+    "icon": "T_Head_Jh_Shenfu",
+    "rarity": 1
+  },
+  {
+    "id": 6100119,
+    "name": "野蜂利刃机傀I",
+    "icon": "T_Head_SQ_Yinxie",
+    "rarity": 1
+  },
+  {
+    "id": 6100120,
+    "name": "野蜂暗箭机傀I",
+    "icon": "T_Head_SQ_Dufeng",
+    "rarity": 1
+  },
+  {
+    "id": 6100121,
+    "name": "野蜂密探机傀I",
+    "icon": "T_Head_SQ_Niaopao",
+    "rarity": 1
+  },
+  {
+    "id": 6100122,
+    "name": "对局积分",
+    "icon": "T_Activity_Autochess_Coin02",
+    "rarity": 5
+  },
+  {
+    "id": 31001001,
+    "name": "《二重螺旋》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31001002,
+    "name": "《涉過沙海的你》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31001003,
+    "name": "《昨日靜謐》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31001004,
+    "name": "《荒村》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31001005,
+    "name": "《晨霧》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31001006,
+    "name": "《漫長告別》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31002001,
+    "name": "《神明所注視的》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31002002,
+    "name": "《命運頌 I》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31002003,
+    "name": "《命運頌 II》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31003001,
+    "name": "《命懸一線》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31003002,
+    "name": "《狹路相逢》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31003003,
+    "name": "《生存，抑或毀滅 I》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31003004,
+    "name": "《生存，抑或毀滅 II》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31004001,
+    "name": "《深閉的門》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31004002,
+    "name": "《黑鐵城塞》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31004003,
+    "name": "《旅人淺眠》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31004004,
+    "name": "《冷幽默》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31004005,
+    "name": "《嬉鬧時日》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31004006,
+    "name": "《水仙平原》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31004007,
+    "name": "《修普諾斯之家》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31004008,
+    "name": "《家》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31005001,
+    "name": "《格雷姆廢礦》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31005002,
+    "name": "《凍土之上》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31005003,
+    "name": "《暴風雪》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31005004,
+    "name": "《嗜晶者》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31005005,
+    "name": "《蟄伏》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31005006,
+    "name": "《人為刀俎》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31005007,
+    "name": "《秘密與代價》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31005008,
+    "name": "《靈鳥試煉I》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31005009,
+    "name": "《靈鳥試煉II》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31005010,
+    "name": "《莉莉蔻的歌謠·黑鐵搖籃》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31006001,
+    "name": "《初遇》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31006002,
+    "name": "《賽琪：蜉蝣夢》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31006003,
+    "name": "《未至的花期》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31006004,
+    "name": "《記憶的底片》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31006005,
+    "name": "《命定的終點》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31006006,
+    "name": "《她曾走過的》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31006007,
+    "name": "《蛹殼因何而織？》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31006008,
+    "name": "《雙翼因何而生？》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31006009,
+    "name": "《因我降生於此》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31006010,
+    "name": "《不凋花》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31007001,
+    "name": "《戰前籌備》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31007002,
+    "name": "《緊急行動》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31007003,
+    "name": "《動力心髒》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31007004,
+    "name": "《遇險》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31007005,
+    "name": "《逃亡》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31007006,
+    "name": "《卡嘉：槍炮與菟絲花》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31007007,
+    "name": "《達芙涅：雨》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31007008,
+    "name": "《雨後》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31007009,
+    "name": "《審判者囚籠》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31007010,
+    "name": "《維吉爾：榮耀以何物築基？》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31008001,
+    "name": "《流浪的鐵匠皎皎》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31008002,
+    "name": "《侍者皎皎的好夢》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31008003,
+    "name": "《蛋蛋皎皎的友誼》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31008004,
+    "name": "《探險家皎皎的大冒險》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31009001,
+    "name": "《紡織邏輯之網》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31009002,
+    "name": "《費西爾：純真年代》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31009003,
+    "name": "《蓋雷亞劇院》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31009004,
+    "name": "《溝渠裡的星空》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31009005,
+    "name": "《那高懸如燈塔的》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31009006,
+    "name": "《救贖》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31009007,
+    "name": "《無垢的心髒》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31009008,
+    "name": "《致無名者的安魂曲》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010001,
+    "name": "《風起煙津》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010002,
+    "name": "《山海的彼端》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010003,
+    "name": "《煙津渡》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010004,
+    "name": "《浮星埠》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010005,
+    "name": "《清波唱晚》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010006,
+    "name": "《謁神》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010007,
+    "name": "《清平樂》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010008,
+    "name": "《潮聲岩穴》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010009,
+    "name": "《杏花天影》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010010,
+    "name": "《百年枯榮》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010011,
+    "name": "《狡兔》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010012,
+    "name": "《劫灰》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010013,
+    "name": "《塵漠石海》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010014,
+    "name": "《虞淵幽明》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010015,
+    "name": "《忘川溯影》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010016,
+    "name": "《聽鴉原》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010017,
+    "name": "《千樞狩陣》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010018,
+    "name": "《機傀甦醒》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010019,
+    "name": "《焚心》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010020,
+    "name": "《傾天》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31011001,
+    "name": "《夜鶯漫遊奇境記 I》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31011002,
+    "name": "《夜鶯漫遊奇境記 II》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31011003,
+    "name": "《綺夢入夜》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31011004,
+    "name": "《沙海之思》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31011005,
+    "name": "《全速前進！》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31011006,
+    "name": "《箭在弦上》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31011007,
+    "name": "《悠閒水岸》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 101160101,
+    "name": "印記·狩月人·光",
+    "icon": "T_Phantom_Nanzhu",
+    "rarity": 5
   }
 ]

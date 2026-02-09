@@ -24,6 +24,24 @@
     "rarity": 4
   },
   {
+    "id": 103,
+    "name": "Énergie",
+    "icon": "T_Coin_Other_Jingli",
+    "rarity": 2
+  },
+  {
+    "id": 104,
+    "name": "Une partition",
+    "icon": "T_Coin_Other_Jingli",
+    "rarity": 2
+  },
+  {
+    "id": 105,
+    "name": "Pièce Luno – CBT2",
+    "icon": "T_Resource_CoinCBT2",
+    "rarity": 5
+  },
+  {
     "id": 110,
     "name": "Prisme azuré",
     "icon": "T_Gacha_Coin01",
@@ -33,6 +51,36 @@
     "id": 111,
     "name": "Prisme iridescent",
     "icon": "T_Gacha_Coin02",
+    "rarity": 5
+  },
+  {
+    "id": 121,
+    "name": "Pass mensuel de Luno, la servante n° 1",
+    "icon": "T_Read_03",
+    "rarity": 5
+  },
+  {
+    "id": 123,
+    "name": "Ballade du Ménestrel : Édition prestige",
+    "icon": "T_Resource_BattlePassExp",
+    "rarity": 5
+  },
+  {
+    "id": 124,
+    "name": "Ballade du Ménestrel : Édition collector",
+    "icon": "T_Resource_BattlePassExp",
+    "rarity": 5
+  },
+  {
+    "id": 125,
+    "name": "Insigne de reliure",
+    "icon": "T_Resource_BattlePassPetReward",
+    "rarity": 5
+  },
+  {
+    "id": 126,
+    "name": "Insigne de reliure",
+    "icon": "T_Resource_BattlePassPetReward",
     "rarity": 5
   },
   {
@@ -46,6 +94,24 @@
     "name": "Module de transfert d’affinité d’arme",
     "icon": "T_Resource_PolarityAura",
     "rarity": 5
+  },
+  {
+    "id": 203,
+    "name": "Braise",
+    "icon": "T_Rouge_Token_02",
+    "rarity": 1
+  },
+  {
+    "id": 204,
+    "name": "Tonique d’énergie",
+    "icon": "T_Resource_ActionPoint_ActionPointRecoveryM",
+    "rarity": 4
+  },
+  {
+    "id": 205,
+    "name": "Lumistella",
+    "icon": "T_Rouge_TalentToken_01",
+    "rarity": 1
   },
   {
     "id": 206,
@@ -102,6 +168,12 @@
     "rarity": 5
   },
   {
+    "id": 217,
+    "name": "Laissez-passer d’escouade",
+    "icon": "T_Resource_Raid_Ticket",
+    "rarity": 4
+  },
+  {
     "id": 218,
     "name": "Jeton de Phoxène",
     "icon": "T_Resource_Raid_Coin01",
@@ -117,6 +189,18 @@
     "id": 220,
     "name": "Jeton de Phoxène",
     "icon": "T_Resource_Raid_Coin01",
+    "rarity": 4
+  },
+  {
+    "id": 301,
+    "name": "Avantages de réputation : Givrelac",
+    "icon": "T_Fame_0101",
+    "rarity": 4
+  },
+  {
+    "id": 302,
+    "name": "Avantages de réputation : Port-des-Brumes",
+    "icon": "T_Fame_0201",
     "rarity": 4
   },
   {
@@ -138,10 +222,70 @@
     "rarity": 5
   },
   {
+    "id": 1004,
+    "name": "Sablier prismatique (temporaire)",
+    "icon": "T_Resource_GachaTicket_03",
+    "rarity": 5
+  },
+  {
     "id": 1006,
     "name": "Moule de fusion",
     "icon": "T_Resource_GeneralWeaponCard",
     "rarity": 5
+  },
+  {
+    "id": 1007,
+    "name": "重铸回收器I",
+    "icon": "T_Icon_ModRandomPurple",
+    "rarity": 4
+  },
+  {
+    "id": 1008,
+    "name": "重铸回收器II",
+    "icon": "T_Icon_ModRandomBlue",
+    "rarity": 3
+  },
+  {
+    "id": 2000,
+    "name": "EXP d’aventure",
+    "icon": "T_Exp_Rank",
+    "rarity": 5
+  },
+  {
+    "id": 2001,
+    "name": "EXP d’aventure",
+    "icon": "T_Exp_Rank",
+    "rarity": 5
+  },
+  {
+    "id": 2002,
+    "name": "Strophe",
+    "icon": "T_Resource_BattlePassExp",
+    "rarity": 5
+  },
+  {
+    "id": 2003,
+    "name": "Progression",
+    "icon": "T_Resource_DailyGoalExp",
+    "rarity": 5
+  },
+  {
+    "id": 2004,
+    "name": "Strophe",
+    "icon": "T_Resource_BattlePassExp",
+    "rarity": 5
+  },
+  {
+    "id": 2005,
+    "name": "Points de retour",
+    "icon": "T_Coin_ActivityReturn",
+    "rarity": 5
+  },
+  {
+    "id": 2007,
+    "name": "Manuel d’arme I",
+    "icon": "T_Resource_Weapon_Exp02",
+    "rarity": 2
   },
   {
     "id": 2008,
@@ -162,6 +306,12 @@
     "rarity": 5
   },
   {
+    "id": 2011,
+    "name": "Mélodie de combat I",
+    "icon": "T_Resource_Char_Exp02",
+    "rarity": 2
+  },
+  {
     "id": 2012,
     "name": "Mélodie de combat II",
     "icon": "T_Resource_Char_Exp03",
@@ -177,6 +327,18 @@
     "id": 2014,
     "name": "Mélodie de combat IV",
     "icon": "T_Resource_Char_Exp05",
+    "rarity": 5
+  },
+  {
+    "id": 2015,
+    "name": "Bruits de taverne",
+    "icon": "T_Coin_Fame01",
+    "rarity": 5
+  },
+  {
+    "id": 2016,
+    "name": "Chroniques de la Route des Étoiles",
+    "icon": "T_Coin_Fame02",
     "rarity": 5
   },
   {
@@ -198,6 +360,12 @@
     "rarity": 4
   },
   {
+    "id": 3004,
+    "name": "Crème Yum",
+    "icon": "T_Resource_PetExp01",
+    "rarity": 3
+  },
+  {
     "id": 3005,
     "name": "Crème Yum-Yum",
     "icon": "T_Resource_PetExp02",
@@ -216,6 +384,42 @@
     "rarity": 5
   },
   {
+    "id": 3008,
+    "name": "Malice Yum",
+    "icon": "T_Resource_PetFood04",
+    "rarity": 5
+  },
+  {
+    "id": 3010,
+    "name": "Impression – Avantage (Givrelac)",
+    "icon": "T_Impression_Benefit",
+    "rarity": 5
+  },
+  {
+    "id": 3011,
+    "name": "Impression – Morale (Givrelac)",
+    "icon": "T_Impression_Morality",
+    "rarity": 5
+  },
+  {
+    "id": 3012,
+    "name": "Impression – Sagesse (Givrelac)",
+    "icon": "T_Impression_Wisdom",
+    "rarity": 5
+  },
+  {
+    "id": 3013,
+    "name": "Impression – Empathie (Givrelac)",
+    "icon": "T_Impression_Empathy",
+    "rarity": 5
+  },
+  {
+    "id": 3014,
+    "name": "Impression – Chaos (Givrelac)",
+    "icon": "T_Impression_Chaos",
+    "rarity": 5
+  },
+  {
     "id": 3015,
     "name": "天工竿·薄荷",
     "icon": "T_FishingRod_East02",
@@ -225,6 +429,36 @@
     "id": 3016,
     "name": "Catalyseur d’amplification",
     "icon": "T_Resourece_GeneralModLevelUpItem",
+    "rarity": 5
+  },
+  {
+    "id": 3017,
+    "name": "Impression – Avantage (Huaxu)",
+    "icon": "T_Impression_Benefit",
+    "rarity": 5
+  },
+  {
+    "id": 3018,
+    "name": "Impression – Morale (Huaxu)",
+    "icon": "T_Impression_Morality",
+    "rarity": 5
+  },
+  {
+    "id": 3019,
+    "name": "Impression – Sagesse (Huaxu)",
+    "icon": "T_Impression_Wisdom",
+    "rarity": 5
+  },
+  {
+    "id": 3020,
+    "name": "Impression – Empathie (Huaxu)",
+    "icon": "T_Impression_Empathy",
+    "rarity": 5
+  },
+  {
+    "id": 3021,
+    "name": "Impression – Chaos (Huaxu)",
+    "icon": "T_Impression_Chaos",
     "rarity": 5
   },
   {
@@ -702,6 +936,12 @@
     "rarity": 5
   },
   {
+    "id": 12021,
+    "name": "Inflorescence d’Embla : Corps d’arc",
+    "icon": "T_Melee_Weapon_Part03",
+    "rarity": 5
+  },
+  {
     "id": 12022,
     "name": "Baiser de la sirène : Poignée",
     "icon": "T_Melee_Weapon_Part01",
@@ -804,6 +1044,12 @@
     "rarity": 5
   },
   {
+    "id": 12039,
+    "name": "Lumière de l’Apocalypse : Corps d’arc",
+    "icon": "T_Melee_Weapon_Part03",
+    "rarity": 5
+  },
+  {
     "id": 12040,
     "name": "Entraves du solitaire : Poignée",
     "icon": "T_Melee_Weapon_Part01",
@@ -855,6 +1101,12 @@
     "id": 12048,
     "name": "Résonance de Guixu : Armature",
     "icon": "T_Range_Weapon_Part03",
+    "rarity": 5
+  },
+  {
+    "id": 12049,
+    "name": "Résonance de Guixu : Canon",
+    "icon": "T_Range_Weapon_Part01",
     "rarity": 5
   },
   {
@@ -1212,6 +1464,12 @@
     "rarity": 5
   },
   {
+    "id": 12109,
+    "name": "Soupir du désert : Corps d’arc",
+    "icon": "T_Melee_Weapon_Part03",
+    "rarity": 5
+  },
+  {
     "id": 12110,
     "name": "Sépulture errante : Poignée",
     "icon": "T_Melee_Weapon_Part01",
@@ -1416,16 +1674,100 @@
     "rarity": 5
   },
   {
+    "id": 19000,
+    "name": "Empreinte d’âme : Polyphonie",
+    "icon": "T_Entertainment_Emotion_Myriad",
+    "rarity": 4
+  },
+  {
+    "id": 19001,
+    "name": "Empreinte d’âme : Joie",
+    "icon": "T_Entertainment_Emotion_Joy",
+    "rarity": 3
+  },
+  {
+    "id": 19002,
+    "name": "Empreinte d’âme : Tristesse",
+    "icon": "T_Entertainment_Emotion_Sorrow",
+    "rarity": 3
+  },
+  {
+    "id": 19003,
+    "name": "Empreinte d’âme : Peur",
+    "icon": "T_Entertainment_Emotion_Fear",
+    "rarity": 3
+  },
+  {
+    "id": 19004,
+    "name": "Empreinte d’âme : Colère",
+    "icon": "T_Entertainment_Emotion_Anger",
+    "rarity": 3
+  },
+  {
+    "id": 19005,
+    "name": "Empreinte d’âme : Confiance",
+    "icon": "T_Entertainment_Emotion_Trust",
+    "rarity": 3
+  },
+  {
+    "id": 19006,
+    "name": "Empreinte d’âme : Sérénité",
+    "icon": "T_Entertainment_Emotion_InnerPeace",
+    "rarity": 3
+  },
+  {
+    "id": 19007,
+    "name": "Empreinte d’âme : Doute",
+    "icon": "T_Entertainment_Emotion_Confusion",
+    "rarity": 3
+  },
+  {
+    "id": 19008,
+    "name": "Empreinte d’âme : Désir",
+    "icon": "T_Entertainment_Emotion_Desire",
+    "rarity": 3
+  },
+  {
+    "id": 20001,
+    "name": "Carapace de Souillé",
+    "icon": "T_Resource_Ganran01",
+    "rarity": 3
+  },
+  {
     "id": 20002,
     "name": "Sel volatil endommagé",
     "icon": "T_Resource_Normal02",
     "rarity": 2
   },
   {
+    "id": 20003,
+    "name": "Eau purifiée",
+    "icon": "T_Resource_Jiaohui02",
+    "rarity": 3
+  },
+  {
+    "id": 20004,
+    "name": "Plaque d’identité de la Légion",
+    "icon": "T_Resource_Diguo01",
+    "rarity": 3
+  },
+  {
     "id": 20005,
     "name": "Poudre de pierre",
     "icon": "T_Resource_Normal04",
     "rarity": 2
+  },
+  {
+    "id": 20006,
+    "name": "Parchemin de bénédiction",
+    "icon": "T_Resource_Jiaohui01",
+    "rarity": 4
+  },
+  {
+    "id": 20007,
+    "name": "Câble de signal",
+    "icon": "T_Resource_Diguo02",
+    "rarity": 4
   },
   {
     "id": 20008,
@@ -1470,6 +1812,18 @@
     "rarity": 3
   },
   {
+    "id": 20015,
+    "name": "Armure métallique",
+    "icon": "T_Resource_Forge_Medium03",
+    "rarity": 3
+  },
+  {
+    "id": 20016,
+    "name": "Ornement de bénédiction",
+    "icon": "T_Resource_Forge_Medium04",
+    "rarity": 3
+  },
+  {
     "id": 20017,
     "name": "Blindage de véhicule",
     "icon": "T_Resource_Forge_Medium05",
@@ -1500,6 +1854,12 @@
     "rarity": 4
   },
   {
+    "id": 20022,
+    "name": "Alliage liquide",
+    "icon": "T_Resource_Forge_High02",
+    "rarity": 4
+  },
+  {
     "id": 20023,
     "name": "Sable d’or",
     "icon": "T_Resource_Forge_High03",
@@ -1509,6 +1869,18 @@
     "id": 20024,
     "name": "Tentacule de Souillé",
     "icon": "T_Resource_Forge_High04",
+    "rarity": 4
+  },
+  {
+    "id": 20025,
+    "name": "Module de propulsion",
+    "icon": "T_Resource_Forge_High05",
+    "rarity": 4
+  },
+  {
+    "id": 20026,
+    "name": "Manuel de communication",
+    "icon": "T_Resource_Forge_High06",
     "rarity": 4
   },
   {
@@ -1545,6 +1917,192 @@
     "id": 20032,
     "name": "Liquide de refroidissement",
     "icon": "T_Resource_Forge_Product06",
+    "rarity": 4
+  },
+  {
+    "id": 20500,
+    "name": "Clé de coffre",
+    "icon": "T_Drop_Key01",
+    "rarity": 1
+  },
+  {
+    "id": 20501,
+    "name": "Clé du coffre de Brunetto",
+    "icon": "T_Drop_Key01",
+    "rarity": 1
+  },
+  {
+    "id": 20512,
+    "name": "Pièce d’argent perdue",
+    "icon": "T_Rouge_Drop_Interim1",
+    "rarity": 3
+  },
+  {
+    "id": 20513,
+    "name": "Minerai fragmenté",
+    "icon": "T_Rouge_Drop_Interim2",
+    "rarity": 3
+  },
+  {
+    "id": 20514,
+    "name": "Bouclier abandonné",
+    "icon": "T_Rouge_Drop_Interim3",
+    "rarity": 3
+  },
+  {
+    "id": 20515,
+    "name": "Médaille sans propriétaire",
+    "icon": "T_Rouge_Drop_Interim4",
+    "rarity": 3
+  },
+  {
+    "id": 20516,
+    "name": "Bouteille vide",
+    "icon": "T_Rouge_Drop_Interim5",
+    "rarity": 3
+  },
+  {
+    "id": 20517,
+    "name": "Branche desséchée",
+    "icon": "T_Rouge_Drop_Interim6",
+    "rarity": 3
+  },
+  {
+    "id": 20518,
+    "name": "Gemme de la déesse",
+    "icon": "T_Rouge_Drop_Interim7",
+    "rarity": 4
+  },
+  {
+    "id": 20602,
+    "name": "Île du Purgatoire : Tome I",
+    "icon": "T_TreasureMap_Prologue",
+    "rarity": 4
+  },
+  {
+    "id": 20603,
+    "name": "Île du Purgatoire : Tome II",
+    "icon": "T_TreasureMap_Prologue",
+    "rarity": 4
+  },
+  {
+    "id": 20604,
+    "name": "Île du Purgatoire : Tome III",
+    "icon": "T_TreasureMap_Prologue",
+    "rarity": 4
+  },
+  {
+    "id": 20605,
+    "name": "Île du Purgatoire : Tome IV",
+    "icon": "T_TreasureMap_Prologue",
+    "rarity": 4
+  },
+  {
+    "id": 20608,
+    "name": "Givrelac — Tome I",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20609,
+    "name": "Givrelac — Tome II",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20610,
+    "name": "Givrelac — Tome III",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20611,
+    "name": "Givrelac — Tome IV",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20612,
+    "name": "Givrelac — Tome V",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20613,
+    "name": "Givrelac — Tome VI",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20614,
+    "name": "Givrelac — Tome VII",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20615,
+    "name": "Givrelac — Tome VIII",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20616,
+    "name": "Givrelac — Tome IX",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20617,
+    "name": "Givrelac — Tome X",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20620,
+    "name": "Forteresse de Lonza — Tome I",
+    "icon": "T_TreasureMap_EXChapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20621,
+    "name": "Forteresse de Lonza — Tome II",
+    "icon": "T_TreasureMap_EXChapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20622,
+    "name": "Forteresse de Lonza — Tome III",
+    "icon": "T_TreasureMap_EXChapter01",
+    "rarity": 4
+  },
+  {
+    "id": 20630,
+    "name": "Port-des-Brumes — Tome I",
+    "icon": "T_TreasureMap_East",
+    "rarity": 4
+  },
+  {
+    "id": 20631,
+    "name": "Port-des-Brumes — Tome II",
+    "icon": "T_TreasureMap_East",
+    "rarity": 4
+  },
+  {
+    "id": 20632,
+    "name": "Port-des-Brumes — Tome III",
+    "icon": "T_TreasureMap_East",
+    "rarity": 4
+  },
+  {
+    "id": 20633,
+    "name": "Port-des-Brumes — Tome IV",
+    "icon": "T_TreasureMap_East",
+    "rarity": 4
+  },
+  {
+    "id": 20634,
+    "name": "Port-des-Brumes — Tome V",
+    "icon": "T_TreasureMap_East",
     "rarity": 4
   },
   {
@@ -1644,8 +2202,62 @@
     "rarity": 4
   },
   {
+    "id": 30110,
+    "name": "Teinture avancée : Galaxie",
+    "icon": "T_Dye_10",
+    "rarity": 5
+  },
+  {
+    "id": 30111,
+    "name": "Teinture avancée : Épis de blé",
+    "icon": "T_Dye_11",
+    "rarity": 5
+  },
+  {
     "id": 30112,
     "name": "Teinture iridescente",
+    "icon": "T_Dye_12",
+    "rarity": 5
+  },
+  {
+    "id": 30113,
+    "name": "中级染剂·棕色-浅【待包装】",
+    "icon": "T_Dye_15",
+    "rarity": 5
+  },
+  {
+    "id": 30114,
+    "name": "中级染剂·棕色-深【待包装】",
+    "icon": "T_Dye_15",
+    "rarity": 5
+  },
+  {
+    "id": 30115,
+    "name": "中级染剂·绿色-浅【待包装】",
+    "icon": "T_Dye_14",
+    "rarity": 5
+  },
+  {
+    "id": 30116,
+    "name": "中级染剂·绿色-深【待包装】",
+    "icon": "T_Dye_15",
+    "rarity": 5
+  },
+  {
+    "id": 30117,
+    "name": "高级染剂·粉色【待包装】",
+    "icon": "T_Dye_13",
+    "rarity": 5
+  },
+  {
+    "id": 30118,
+    "name": "发型染剂·基础【待包装】",
+    "icon": "T_Dye_12",
+    "rarity": 4
+  },
+  {
+    "id": 30119,
+    "name": "发型染剂·黑白棕粉绿【待包装】",
     "icon": "T_Dye_12",
     "rarity": 5
   },
@@ -1686,10 +2298,28 @@
     "rarity": 4
   },
   {
+    "id": 41001,
+    "name": "Maître du barbecue",
+    "icon": "T_Resource_Gesture_Kaorou",
+    "rarity": 5
+  },
+  {
     "id": 41002,
     "name": "Chat dans la boîte",
     "icon": "T_Resource_Gesture_Zhixiang",
     "rarity": 5
+  },
+  {
+    "id": 41003,
+    "name": "Apprenti sorcier",
+    "icon": "T_Resource_Gesture_Saozhou",
+    "rarity": 5
+  },
+  {
+    "id": 41004,
+    "name": "Refuge secret",
+    "icon": "T_Resource_Gesture_Caocong",
+    "rarity": 4
   },
   {
     "id": 41005,
@@ -1701,6 +2331,36 @@
     "id": 41006,
     "name": "Chat dans la boîte – Blanc sakura",
     "icon": "T_Resource_Gesture_Zhixiang",
+    "rarity": 5
+  },
+  {
+    "id": 41007,
+    "name": "Posture : Arme de mêlée",
+    "icon": "T_Resource_Gesture_MeleeWeapon",
+    "rarity": 4
+  },
+  {
+    "id": 41008,
+    "name": "Posture : Arme à distance",
+    "icon": "T_Resource_Gesture_RangeWeapon",
+    "rarity": 4
+  },
+  {
+    "id": 41009,
+    "name": "Posture",
+    "icon": "T_Resource_Gesture_Idle",
+    "rarity": 4
+  },
+  {
+    "id": 41010,
+    "name": "Tentation du coffre",
+    "icon": "T_Resource_Gesture_BiteBox",
+    "rarity": 5
+  },
+  {
+    "id": 41011,
+    "name": "Enchaîné au lit",
+    "icon": "T_Resource_Gesture_Bed",
     "rarity": 5
   },
   {
@@ -1770,9 +2430,51 @@
     "rarity": 6
   },
   {
+    "id": 41023,
+    "name": "Se mettre en valeur",
+    "icon": "T_Resource_Gesture_Show",
+    "rarity": 4
+  },
+  {
+    "id": 41024,
+    "name": "Saluer",
+    "icon": "T_Resource_Gesture_Hello",
+    "rarity": 4
+  },
+  {
+    "id": 41025,
+    "name": "Approuver",
+    "icon": "T_Resource_Gesture_Nice",
+    "rarity": 4
+  },
+  {
+    "id": 41026,
+    "name": "Refuser",
+    "icon": "T_Resource_Gesture_NoNoNo",
+    "rarity": 4
+  },
+  {
+    "id": 41027,
+    "name": "Acclamer",
+    "icon": "T_Resource_Gesture_WellDone",
+    "rarity": 4
+  },
+  {
     "id": 41028,
     "name": "Déhanchement fantasque",
     "icon": "T_Resource_Gesture_SkillGomoku",
+    "rarity": 4
+  },
+  {
+    "id": 41029,
+    "name": "Posture du chevalier fantasque I",
+    "icon": "T_Resource_Gesture_PunchLeft",
+    "rarity": 4
+  },
+  {
+    "id": 41030,
+    "name": "Posture du chevalier fantasque II",
+    "icon": "T_Resource_Gesture_PunchRight",
     "rarity": 4
   },
   {
@@ -1786,6 +2488,30 @@
     "name": "Dominer monts et fleuves – Doré",
     "icon": "T_Resource_DragonThrone_Golden",
     "rarity": 6
+  },
+  {
+    "id": 41033,
+    "name": "Posture : Écran électronique",
+    "icon": "T_Resource_Gesture_Electronscreen",
+    "rarity": 4
+  },
+  {
+    "id": 41034,
+    "name": "Lumière de canopée",
+    "icon": "T_Resource_Gesture_PeachBlossom",
+    "rarity": 4
+  },
+  {
+    "id": 41035,
+    "name": "Lumière de canopée – Doré",
+    "icon": "T_Resource_Gesture_Ginkgo",
+    "rarity": 4
+  },
+  {
+    "id": 41036,
+    "name": "L’Esthète",
+    "icon": "T_Resource_Gesture_Youya",
+    "rarity": 4
   },
   {
     "id": 41037,
@@ -1842,6 +2568,66 @@
     "rarity": 4
   },
   {
+    "id": 41046,
+    "name": "Spirale tournoyante",
+    "icon": "T_Resource_Gesture_02",
+    "rarity": 4
+  },
+  {
+    "id": 41047,
+    "name": "Bourse généreuse",
+    "icon": "T_Resource_Gesture_01",
+    "rarity": 4
+  },
+  {
+    "id": 42001,
+    "name": "Nexus mécanique : Fléau des Souillures",
+    "icon": "T_Icon_CentralSquare_Equip01",
+    "rarity": 4
+  },
+  {
+    "id": 42002,
+    "name": "Nexus mécanique",
+    "icon": "T_Icon_CentralSquare_Equip",
+    "rarity": 4
+  },
+  {
+    "id": 49996,
+    "name": "Filbert, fonce fonce fonce !",
+    "icon": "T_Mounts_Gesture_0401",
+    "rarity": 4
+  },
+  {
+    "id": 49997,
+    "name": "Chevalier aux lames d’argent",
+    "icon": "T_Mounts_Gesture_0301",
+    "rarity": 5
+  },
+  {
+    "id": 49998,
+    "name": "Taihao mécanisé",
+    "icon": "T_Mounts_Gesture_0101",
+    "rarity": 6
+  },
+  {
+    "id": 49999,
+    "name": "Bi’an obscur mécanisé",
+    "icon": "T_Mounts_Gesture_0201",
+    "rarity": 4
+  },
+  {
+    "id": 110001,
+    "name": "Sélecteur d’arme de départ (I)",
+    "icon": "T_OptPack_Weapon01",
+    "rarity": 5
+  },
+  {
+    "id": 110002,
+    "name": "Sélecteur d’arme de départ (I)",
+    "icon": "T_OptPack_Weapon01",
+    "rarity": 5
+  },
+  {
     "id": 110006,
     "name": "Coffret de sélection d’apparence – Lueur astrale",
     "icon": "T_Pack_Christmas",
@@ -1852,6 +2638,18 @@
     "name": "Coffret de sélection d’apparence Sérénité – Jade noir",
     "icon": "T_Pack_Common02",
     "rarity": 5
+  },
+  {
+    "id": 110013,
+    "name": "Coffret de sélection de matériaux d’Échos nocturnes",
+    "icon": "T_Rouge_Drop_Interim4",
+    "rarity": 4
+  },
+  {
+    "id": 110014,
+    "name": "Coffret de sélection d’ascension d’arme",
+    "icon": "T_Pack_WeaponUserChoose",
+    "rarity": 4
   },
   {
     "id": 110015,
@@ -1896,6 +2694,18 @@
     "rarity": 5
   },
   {
+    "id": 1001504,
+    "name": "Fragment de pensée : Su Yi",
+    "icon": "T_Resource_Root_Star5",
+    "rarity": 5
+  },
+  {
+    "id": 1001601,
+    "name": "Fragment de pensée : Chasseur de Phoxène — Lumino",
+    "icon": "T_CharPiece_Protagonist",
+    "rarity": 5
+  },
+  {
     "id": 1001801,
     "name": "Fragment de pensée : Fina",
     "icon": "T_CharPiece_Feina",
@@ -1905,6 +2715,12 @@
     "id": 1002101,
     "name": "Fragment de pensée : Rebecca",
     "icon": "T_CharPiece_Shuimu",
+    "rarity": 5
+  },
+  {
+    "id": 1002102,
+    "name": "Fragment de pensée : Yvaine",
+    "icon": "T_Resource_Root_Star5",
     "rarity": 5
   },
   {
@@ -1926,6 +2742,12 @@
     "rarity": 5
   },
   {
+    "id": 1003102,
+    "name": "Fragment de pensée : Hilda",
+    "icon": "T_CharPiece_Xier",
+    "rarity": 5
+  },
+  {
     "id": 1003103,
     "name": "Fragment de pensée : Yale et Oliver",
     "icon": "T_CharPiece_Yeer",
@@ -1935,6 +2757,12 @@
     "id": 1003201,
     "name": "Fragment de pensée : Vulcera",
     "icon": "T_CharPiece_Haier",
+    "rarity": 5
+  },
+  {
+    "id": 1003202,
+    "name": "Fragment de pensée : Camilla",
+    "icon": "T_CharPiece_Kami",
     "rarity": 5
   },
   {
@@ -1996,6 +2824,828 @@
     "name": "Fragment de pensée : Daphne",
     "icon": "T_CharPiece_Dafu",
     "rarity": 5
+  },
+  {
+    "id": 1011101,
+    "name": "Emblème : Berenica",
+    "icon": "T_Phantom_Heitao",
+    "rarity": 5
+  },
+  {
+    "id": 1011103,
+    "name": "Emblème : Phantasio",
+    "icon": "T_Phantom_Tuosi",
+    "rarity": 5
+  },
+  {
+    "id": 1011501,
+    "name": "Emblème : Lisbell",
+    "icon": "T_Phantom_Baonu",
+    "rarity": 5
+  },
+  {
+    "id": 1011502,
+    "name": "Emblème : Dame Nifle",
+    "icon": "T_Phantom_Nifu",
+    "rarity": 5
+  },
+  {
+    "id": 1011503,
+    "name": "Emblème : Kezhou",
+    "icon": "T_Phantom_Kezhou",
+    "rarity": 5
+  },
+  {
+    "id": 1011504,
+    "name": "Emblème : Su Yi",
+    "icon": "T_Phantom_Kezhou",
+    "rarity": 5
+  },
+  {
+    "id": 1011601,
+    "name": "Emblème : Chasseur de Phoxène — Lumino",
+    "icon": "T_Phantom_Nvzhu",
+    "rarity": 5
+  },
+  {
+    "id": 1011801,
+    "name": "Emblème : Fina",
+    "icon": "T_Phantom_Feina",
+    "rarity": 5
+  },
+  {
+    "id": 1012101,
+    "name": "Emblème : Rebecca",
+    "icon": "T_Phantom_Shuimu",
+    "rarity": 5
+  },
+  {
+    "id": 1012102,
+    "name": "Emblème : Yvaine",
+    "icon": "T_Phantom_Shuimu",
+    "rarity": 5
+  },
+  {
+    "id": 1012301,
+    "name": "Emblème : Tabethe",
+    "icon": "T_Phantom_Zhangyu",
+    "rarity": 5
+  },
+  {
+    "id": 1012401,
+    "name": "Emblème : Fushu",
+    "icon": "T_Phantom_Baiheng",
+    "rarity": 5
+  },
+  {
+    "id": 1013101,
+    "name": "Emblème : Lynn",
+    "icon": "T_Phantom_Linen",
+    "rarity": 5
+  },
+  {
+    "id": 1013102,
+    "name": "Emblème : Hilda",
+    "icon": "T_Phantom_Xier",
+    "rarity": 5
+  },
+  {
+    "id": 1013103,
+    "name": "Emblème : Yale et Oliver",
+    "icon": "T_Phantom_Yeer",
+    "rarity": 5
+  },
+  {
+    "id": 1013201,
+    "name": "Emblème : Vulcera",
+    "icon": "T_Phantom_Haier",
+    "rarity": 5
+  },
+  {
+    "id": 1013202,
+    "name": "Emblème : Camilla",
+    "icon": "T_Phantom_Kami",
+    "rarity": 5
+  },
+  {
+    "id": 1013301,
+    "name": "Emblème : Margie",
+    "icon": "T_Phantom_Maer",
+    "rarity": 5
+  },
+  {
+    "id": 1014101,
+    "name": "Emblème : Rhythm",
+    "icon": "T_Phantom_Lise",
+    "rarity": 5
+  },
+  {
+    "id": 1014102,
+    "name": "Emblème : Zhiliu",
+    "icon": "T_Phantom_Zhiliu",
+    "rarity": 5
+  },
+  {
+    "id": 1014201,
+    "name": "Emblème : Yuming",
+    "icon": "T_Phantom_Yuming",
+    "rarity": 5
+  },
+  {
+    "id": 1014202,
+    "name": "Emblème : Randy",
+    "icon": "T_Phantom_Landi",
+    "rarity": 5
+  },
+  {
+    "id": 1014301,
+    "name": "Emblème : Sibylle",
+    "icon": "T_Phantom_Xibi",
+    "rarity": 5
+  },
+  {
+    "id": 1015101,
+    "name": "Emblème : Truffle et Filbert",
+    "icon": "T_Phantom_Songlu",
+    "rarity": 5
+  },
+  {
+    "id": 1015102,
+    "name": "Emblème : L’Étranger",
+    "icon": "T_Phantom_Aote",
+    "rarity": 5
+  },
+  {
+    "id": 1015301,
+    "name": "Emblème : Psyche",
+    "icon": "T_Phantom_Saiqi",
+    "rarity": 5
+  },
+  {
+    "id": 1015401,
+    "name": "Emblème : Daphne",
+    "icon": "T_Phantom_Dafu",
+    "rarity": 5
+  },
+  {
+    "id": 1110000,
+    "name": "Emblème : Rappel",
+    "icon": "T_Resource_CallPhantom_Empty",
+    "rarity": 4
+  },
+  {
+    "id": 2000001,
+    "name": "Inscription sur la statue",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000002,
+    "name": "Catastrophe en bouteille : Tome I",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000003,
+    "name": "Journal égaré : Tome I",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000004,
+    "name": "Journal égaré : Tome II",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000005,
+    "name": "Journal égaré : Tome III",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000006,
+    "name": "Journal de l’opération",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000007,
+    "name": "« Maladie & Humanité » – Extrait sur la Dégradation",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000008,
+    "name": "Livre venu d’ailleurs",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000009,
+    "name": "Lettre de l’acheteur",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000010,
+    "name": "Lettre de réponse non envoyée",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000011,
+    "name": "Lettre familiale poussiéreuse",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000012,
+    "name": "Le chef invincible de la Légion : Tome I",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000013,
+    "name": "Journal d’Alice",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000014,
+    "name": "Notes de terrain : Tome I",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000015,
+    "name": "Notes de terrain : Tome II",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000016,
+    "name": "Notes de terrain : Tome III",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000017,
+    "name": "Lettre d’Annie",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000018,
+    "name": "Journal perdu",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000019,
+    "name": "Vieux journal",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000020,
+    "name": "Griffures de colère",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000021,
+    "name": "Avertissement dans la fissure",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000022,
+    "name": "Secret dans la fissure",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000023,
+    "name": "Adieu la misère, bonjour la gloire !",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000024,
+    "name": "Lettre sans adresse",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000025,
+    "name": "Brochure des Déchus",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000026,
+    "name": "Demande de renfort pour l’entretien de la forteresse",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000027,
+    "name": "Note froissée",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000028,
+    "name": "Journal d’un membre des Déchus",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000029,
+    "name": "Demande d’amélioration du système de drainage",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000030,
+    "name": "Avis de congé pour la Journée du Triomphe",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000031,
+    "name": "Directive d’opération pour la Forteresse de Lonza",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000032,
+    "name": "Journal de combat simulé",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000033,
+    "name": "Mes plus fidèles compagnons",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000034,
+    "name": "Rapport médical d’urgence",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000035,
+    "name": "Transcription d’une conversation",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000036,
+    "name": "Journal d’un guérisseur",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000037,
+    "name": "Lettre ouverte",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000038,
+    "name": "Avis de recouvrement",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000039,
+    "name": "Étiquettes de flacons",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000040,
+    "name": "Feuillet griffonné",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000041,
+    "name": "Dossier de Psyche Frey",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000042,
+    "name": "Dossier d’Elisa Taylor",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000043,
+    "name": "Dossier de Hunt Clark",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000044,
+    "name": "Esprit de la Ruche",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000045,
+    "name": "Tract froissé des Déchus",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000046,
+    "name": "Inventaire des accessoires – Théâtre Galea",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000047,
+    "name": "Distinction de l’Empereur",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000048,
+    "name": "Vieille presse",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000049,
+    "name": "Bagarre au Théâtre Galea",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000050,
+    "name": "Journal rempli jusqu’au bout",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000051,
+    "name": "L’Invincible Commandant de Légion II",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000052,
+    "name": "Journal ensanglanté",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000053,
+    "name": "Momiji : Récits du soulèvement I",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000054,
+    "name": "Momiji : Récits du soulèvement II",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000055,
+    "name": "Momiji : Récits du soulèvement III",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000056,
+    "name": "Momiji : Récits du soulèvement IV",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000057,
+    "name": "Hymne de la Chandelle d’Argent (I)",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000058,
+    "name": "Hymne de la Chandelle d’Argent (II)",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000059,
+    "name": "Hymne de la Chandelle d’Argent (III)",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000060,
+    "name": "Hymne de la Chandelle d’Argent (IV)",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000061,
+    "name": "Hymne de la Chandelle d’Argent (V)",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000062,
+    "name": "Hymne de la Chandelle d’Argent (VI)",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000063,
+    "name": "Hymne de la Chandelle d’Argent (VII)",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000064,
+    "name": "Hymne de la Chandelle d’Argent (VIII)",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000065,
+    "name": "Hymne de la Chandelle d’Argent (IX)",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000066,
+    "name": "Hymne de la Chandelle d’Argent (X)",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000067,
+    "name": "Boycottez la Fête de la Chandelle d’Argent !",
+    "icon": "T_Read_02",
+    "rarity": 3
+  },
+  {
+    "id": 2000068,
+    "name": "Qu’est-ce qu’on vous sert ? Dîtes seulement le nom",
+    "icon": "T_Read_03",
+    "rarity": 3
+  },
+  {
+    "id": 2000069,
+    "name": "Secrets des Déchus (I)",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000070,
+    "name": "Feuilles et Lune - Vagues des Souillés",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000071,
+    "name": "Feuilles et Lune - La veille de l’Insurrection",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000072,
+    "name": "Dossier d’enquête sur le Fléau de Zhuyin",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000073,
+    "name": "Le Compendium des Cent Essences",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000074,
+    "name": "La Jishu, c’est vraiment bien",
+    "icon": "T_Read_East03",
+    "rarity": 3
+  },
+  {
+    "id": 2000075,
+    "name": "Le Dragon au Firmament — Chapitre V",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000076,
+    "name": "Peinture contrefaite",
+    "icon": "T_Read_East03",
+    "rarity": 3
+  },
+  {
+    "id": 2000077,
+    "name": "Contes de l’Oncle Feng (extrait)",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000078,
+    "name": "Dernières lignes d’un auteur inconnu",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000079,
+    "name": "Note de livraison de marchandises",
+    "icon": "T_Read_East03",
+    "rarity": 3
+  },
+  {
+    "id": 2000080,
+    "name": "Page arrachée d’un journal intime",
+    "icon": "T_Read_East03",
+    "rarity": 3
+  },
+  {
+    "id": 2000081,
+    "name": "La conception huaxienne de la vie et de la mort",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000082,
+    "name": "Analyse des prénoms les plus donnés aux nouveau-nés de Huaxu",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000083,
+    "name": "Contrat de prêt — Année X de Dafeng",
+    "icon": "T_Read_East03",
+    "rarity": 3
+  },
+  {
+    "id": 2000084,
+    "name": "Rituel d’offrande d’encens",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000085,
+    "name": "Registres de jurisprudence de Luoxiang — Volume X",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000086,
+    "name": "Chroniques de voyage en Huaxu — Port-des-Brumes",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000087,
+    "name": "Annales des Tisse-Étoiles",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000088,
+    "name": "Dossiers de projets de la Société archéologique de Gréniche",
+    "icon": "T_Read_East03",
+    "rarity": 3
+  },
+  {
+    "id": 2000089,
+    "name": "Les ficelles du commerce de Luno, la carpe — Volume VII",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000090,
+    "name": "Avis de suspension temporaire du commerce extérieur au Port-des-Brumes",
+    "icon": "T_Read_East03",
+    "rarity": 3
+  },
+  {
+    "id": 2000091,
+    "name": "Correspondance entre Tisse-Étoiles",
+    "icon": "T_Read_East02",
+    "rarity": 3
+  },
+  {
+    "id": 2000092,
+    "name": "Quand les infâmes gouvernent (I)",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000093,
+    "name": "Quand les infâmes gouvernent (II)",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000094,
+    "name": "Quand les infâmes gouvernent (III)",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000095,
+    "name": "Quand les infâmes gouvernent (IV)",
+    "icon": "T_Read_East01",
+    "rarity": 3
+  },
+  {
+    "id": 2000096,
+    "name": "Journal de l’alchimiste – I",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000097,
+    "name": "Journal de l’alchimiste – II",
+    "icon": "T_Read_01",
+    "rarity": 3
+  },
+  {
+    "id": 2000098,
+    "name": "L’Admonition d’un aîné",
+    "icon": "T_Read_East03",
+    "rarity": 3
+  },
+  {
+    "id": 3000001,
+    "name": "Boîte d’étoiles en papier",
+    "icon": "T_Impression_Star",
+    "rarity": 4
+  },
+  {
+    "id": 3000002,
+    "name": "Vêtements usés de fillette",
+    "icon": "T_Impression_Star",
+    "rarity": 3
+  },
+  {
+    "id": 3000003,
+    "name": "Trésor en selle",
+    "icon": "T_Impression_Star",
+    "rarity": 3
+  },
+  {
+    "id": 3000004,
+    "name": "Portrait en fil de fer familier",
+    "icon": "T_Impression_Star",
+    "rarity": 3
+  },
+  {
+    "id": 3000005,
+    "name": "Trousse de soin",
+    "icon": "T_Guide_Ex01_AidKit",
+    "rarity": 4
+  },
+  {
+    "id": 3000006,
+    "name": "Photographie d’Avar",
+    "icon": "T_Photo_Group01",
+    "rarity": 4
+  },
+  {
+    "id": 3000007,
+    "name": "Photographie ensanglantée",
+    "icon": "T_Photo_Group02",
+    "rarity": 4
+  },
+  {
+    "id": 3000008,
+    "name": "Fleur blanche",
+    "icon": "T_Quest_Chapter01_Flower_2",
+    "rarity": 4
+  },
+  {
+    "id": 3000009,
+    "name": "Ordonnance suspecte",
+    "icon": "T_Impression_Star",
+    "rarity": 4
+  },
+  {
+    "id": 3000010,
+    "name": "Portrait offert par Faye",
+    "icon": "T_Impression_Star",
+    "rarity": 4
+  },
+  {
+    "id": 3000011,
+    "name": "Vieille clé",
+    "icon": "T_Impression_Star",
+    "rarity": 4
   },
   {
     "id": 3000012,
@@ -2106,6 +3756,12 @@
     "rarity": 2
   },
   {
+    "id": 4010013,
+    "name": "Caramellus",
+    "icon": "T_Pickup_Mushroom02",
+    "rarity": 2
+  },
+  {
     "id": 4010014,
     "name": "Lys céleste",
     "icon": "T_Pickup_05",
@@ -2142,9 +3798,675 @@
     "rarity": 2
   },
   {
+    "id": 4010020,
+    "name": "Cendralis",
+    "icon": "T_Pickup_Butterfly03",
+    "rarity": 2
+  },
+  {
+    "id": 4020001,
+    "name": "Noix à coque de fer",
+    "icon": "T_Pickup_Nut01",
+    "rarity": 2
+  },
+  {
+    "id": 4020002,
+    "name": "Noix à coque dorée",
+    "icon": "T_Pickup_Nut02",
+    "rarity": 3
+  },
+  {
     "id": 4020003,
     "name": "Argentite",
     "icon": "T_Pickup_Stone01",
+    "rarity": 2
+  },
+  {
+    "id": 4020004,
+    "name": "Lumite",
+    "icon": "T_Pickup_Stone02",
+    "rarity": 3
+  },
+  {
+    "id": 4020005,
+    "name": "Pierre Plop Plop",
+    "icon": "T_Pickup_Stomach",
+    "rarity": 2
+  },
+  {
+    "id": 4020006,
+    "name": "Coralithe",
+    "icon": "T_Pickup_03",
+    "rarity": 2
+  },
+  {
+    "id": 4030001,
+    "name": "Rémanence festive",
+    "icon": "T_Icon_TheaterOnline_06",
+    "rarity": 4
+  },
+  {
+    "id": 4030002,
+    "name": "Marteau indestructible",
+    "icon": "T_Icon_TheaterOnline_04",
+    "rarity": 4
+  },
+  {
+    "id": 4030003,
+    "name": "Bougies parfumées",
+    "icon": "T_Icon_TheaterOnline_03",
+    "rarity": 4
+  },
+  {
+    "id": 4030004,
+    "name": "Kit de survie de l’Apocalypse",
+    "icon": "T_Icon_TheaterOnline_01",
+    "rarity": 4
+  },
+  {
+    "id": 4030005,
+    "name": "Lot d’accessoires « Tendance »",
+    "icon": "T_Icon_TheaterOnline_05",
+    "rarity": 4
+  },
+  {
+    "id": 4030006,
+    "name": "Soie pourpre de Huaxu",
+    "icon": "T_Icon_TheaterOnline_02",
+    "rarity": 4
+  },
+  {
+    "id": 5011010,
+    "name": "Pérégrin des marées",
+    "icon": "T_Fish_Sea_Normal_1",
+    "rarity": 2
+  },
+  {
+    "id": 5011011,
+    "name": "Pérégrin des marées variant",
+    "icon": "T_Fish_Sea_Normal_1_1",
+    "rarity": 2
+  },
+  {
+    "id": 5011020,
+    "name": "Épine prismatique",
+    "icon": "T_Fish_Sea_Normal_2",
+    "rarity": 2
+  },
+  {
+    "id": 5011021,
+    "name": "Épine prismatique variant",
+    "icon": "T_Fish_Sea_Normal_2_1",
+    "rarity": 2
+  },
+  {
+    "id": 5011030,
+    "name": "Argentilé",
+    "icon": "T_Fish_Sea_Normal_3",
+    "rarity": 3
+  },
+  {
+    "id": 5011031,
+    "name": "Argentilé variant",
+    "icon": "T_Fish_Sea_Normal_3_1",
+    "rarity": 3
+  },
+  {
+    "id": 5012010,
+    "name": "Barbillon vénérable",
+    "icon": "T_Fish_FreshWater_Normal_1",
+    "rarity": 3
+  },
+  {
+    "id": 5012011,
+    "name": "Barbillon vénérable variant",
+    "icon": "T_Fish_FreshWater_Normal_1_1",
+    "rarity": 3
+  },
+  {
+    "id": 5012020,
+    "name": "Brochet tacheté",
+    "icon": "T_Fish_FreshWater_Normal_2",
+    "rarity": 2
+  },
+  {
+    "id": 5012021,
+    "name": "Brochet tacheté variant",
+    "icon": "T_Fish_FreshWater_Normal_2_1",
+    "rarity": 2
+  },
+  {
+    "id": 5012030,
+    "name": "Écrevisse cuirassée",
+    "icon": "T_Fish_FreshWater_Normal_3",
+    "rarity": 2
+  },
+  {
+    "id": 5012031,
+    "name": "Écrevisse cuirassée variante",
+    "icon": "T_Fish_FreshWater_Normal_3_1",
+    "rarity": 2
+  },
+  {
+    "id": 5013010,
+    "name": "Gnominic",
+    "icon": "T_Fish_DirtyWater_Normal_1",
+    "rarity": 3
+  },
+  {
+    "id": 5013011,
+    "name": "Gnominic variant",
+    "icon": "T_Fish_DirtyWater_Normal_1_1",
+    "rarity": 3
+  },
+  {
+    "id": 5013020,
+    "name": "Gouliphage",
+    "icon": "T_Fish_DirtyWater_Normal_2",
+    "rarity": 2
+  },
+  {
+    "id": 5013021,
+    "name": "Gouliphage variant",
+    "icon": "T_Fish_DirtyWater_Normal_2_1",
+    "rarity": 2
+  },
+  {
+    "id": 5013030,
+    "name": "Longpattes",
+    "icon": "T_Fish_DirtyWater_Normal_3",
+    "rarity": 2
+  },
+  {
+    "id": 5013031,
+    "name": "Longpattes variant",
+    "icon": "T_Fish_DirtyWater_Normal_3_1",
+    "rarity": 2
+  },
+  {
+    "id": 5021010,
+    "name": "Lumiphare",
+    "icon": "T_Fish_Sea_Village_1",
+    "rarity": 3
+  },
+  {
+    "id": 5021011,
+    "name": "Lumiphare variant",
+    "icon": "T_Fish_Sea_Village_1_1",
+    "rarity": 3
+  },
+  {
+    "id": 5021020,
+    "name": "Chasse-marée",
+    "icon": "T_Fish_Sea_Village_2",
+    "rarity": 3
+  },
+  {
+    "id": 5021021,
+    "name": "Chasse-marée variant",
+    "icon": "T_Fish_Sea_Village_2_1",
+    "rarity": 3
+  },
+  {
+    "id": 5021030,
+    "name": "Poisson-planeur",
+    "icon": "T_Fish_Sea_Village_4",
+    "rarity": 4
+  },
+  {
+    "id": 5021031,
+    "name": "Poisson-planeur variant",
+    "icon": "T_Fish_Sea_Village_4_1",
+    "rarity": 4
+  },
+  {
+    "id": 5021040,
+    "name": "Boulépume",
+    "icon": "T_Fish_Sea_Village_3",
+    "rarity": 4
+  },
+  {
+    "id": 5021041,
+    "name": "Boulépume variant",
+    "icon": "T_Fish_Sea_Village_3_1",
+    "rarity": 4
+  },
+  {
+    "id": 5021050,
+    "name": "Feuilargent",
+    "icon": "T_Fish_Sea_Village_5",
+    "rarity": 5
+  },
+  {
+    "id": 5021051,
+    "name": "Feuilargent variant",
+    "icon": "T_Fish_Sea_Village_5_1",
+    "rarity": 5
+  },
+  {
+    "id": 5022010,
+    "name": "Requin perligrane",
+    "icon": "T_Fish_Sea_East_1",
+    "rarity": 4
+  },
+  {
+    "id": 5022011,
+    "name": "Requin perligrane variant",
+    "icon": "T_Fish_Sea_East_1_1",
+    "rarity": 4
+  },
+  {
+    "id": 5022020,
+    "name": "Crabe engrenage",
+    "icon": "T_Fish_Sea_East_2",
+    "rarity": 3
+  },
+  {
+    "id": 5022021,
+    "name": "Crabe engrenage variant",
+    "icon": "T_Fish_Sea_East_2_1",
+    "rarity": 3
+  },
+  {
+    "id": 5022030,
+    "name": "Pendiperle",
+    "icon": "T_Fish_Sea_East_4",
+    "rarity": 4
+  },
+  {
+    "id": 5022031,
+    "name": "Pendiperle variant",
+    "icon": "T_Fish_Sea_East_4_1",
+    "rarity": 4
+  },
+  {
+    "id": 5022040,
+    "name": "Yuu",
+    "icon": "T_Fish_Sea_East_3",
+    "rarity": 3
+  },
+  {
+    "id": 5022041,
+    "name": "Yuu variant",
+    "icon": "T_Fish_Sea_East_3_1",
+    "rarity": 3
+  },
+  {
+    "id": 5022050,
+    "name": "Requin bicrête",
+    "icon": "T_Fish_Sea_East_5",
+    "rarity": 5
+  },
+  {
+    "id": 5022051,
+    "name": "Requin bicrête variant",
+    "icon": "T_Fish_Sea_East_5_1",
+    "rarity": 5
+  },
+  {
+    "id": 5023010,
+    "name": "Phoxénotruite",
+    "icon": "T_Fish_FreshWater_IceLake_3",
+    "rarity": 3
+  },
+  {
+    "id": 5023011,
+    "name": "Phoxénotruite variante",
+    "icon": "T_Fish_FreshWater_IceLake_3_1",
+    "rarity": 3
+  },
+  {
+    "id": 5023020,
+    "name": "Dame du Lac",
+    "icon": "T_Fish_FreshWater_IceLake_2",
+    "rarity": 3
+  },
+  {
+    "id": 5023021,
+    "name": "Dame du Lac variante",
+    "icon": "T_Fish_FreshWater_IceLake_2_1",
+    "rarity": 3
+  },
+  {
+    "id": 5023030,
+    "name": "Truite du Lac du Deuil",
+    "icon": "T_Fish_FreshWater_IceLake_4",
+    "rarity": 4
+  },
+  {
+    "id": 5023031,
+    "name": "Truite du Lac du Deuil variante",
+    "icon": "T_Fish_FreshWater_IceLake_4_1",
+    "rarity": 4
+  },
+  {
+    "id": 5023040,
+    "name": "Poisson battoir",
+    "icon": "T_Fish_FreshWater_IceLake_1",
+    "rarity": 4
+  },
+  {
+    "id": 5023041,
+    "name": "Poisson battoir variant",
+    "icon": "T_Fish_FreshWater_IceLake_1_1",
+    "rarity": 4
+  },
+  {
+    "id": 5023050,
+    "name": "Luminépine",
+    "icon": "T_Fish_FreshWater_IceLake_5",
+    "rarity": 5
+  },
+  {
+    "id": 5023051,
+    "name": "Luminépine variant",
+    "icon": "T_Fish_FreshWater_IceLake_5_1",
+    "rarity": 5
+  },
+  {
+    "id": 5024010,
+    "name": "Danseuse bigarrée",
+    "icon": "T_Fish_FreshWater_East_1",
+    "rarity": 3
+  },
+  {
+    "id": 5024011,
+    "name": "Danseuse bigarrée variante",
+    "icon": "T_Fish_FreshWater_East_1_1",
+    "rarity": 3
+  },
+  {
+    "id": 5024020,
+    "name": "Poulpe Shouxing",
+    "icon": "T_Fish_FreshWater_East_2",
+    "rarity": 3
+  },
+  {
+    "id": 5024021,
+    "name": "Poulpe Shouxing variant",
+    "icon": "T_Fish_FreshWater_East_2_1",
+    "rarity": 3
+  },
+  {
+    "id": 5024030,
+    "name": "Globe-épines",
+    "icon": "T_Fish_FreshWater_East_4",
+    "rarity": 4
+  },
+  {
+    "id": 5024031,
+    "name": "Globe-épines variant",
+    "icon": "T_Fish_FreshWater_East_4_1",
+    "rarity": 4
+  },
+  {
+    "id": 5024040,
+    "name": "Carpe-bourse",
+    "icon": "T_Fish_FreshWater_East_3",
+    "rarity": 4
+  },
+  {
+    "id": 5024041,
+    "name": "Carpe-bourse variante",
+    "icon": "T_Fish_FreshWater_East_3_1",
+    "rarity": 4
+  },
+  {
+    "id": 5024050,
+    "name": "Wyrm des eaux",
+    "icon": "T_Fish_FreshWater_East_5",
+    "rarity": 5
+  },
+  {
+    "id": 5024051,
+    "name": "Wyrm des eaux variant",
+    "icon": "T_Fish_FreshWater_East_5_1",
+    "rarity": 5
+  },
+  {
+    "id": 5025010,
+    "name": "Sourifin",
+    "icon": "T_Fish_DirtyWater_Sew_1",
+    "rarity": 3
+  },
+  {
+    "id": 5025011,
+    "name": "Sourifin variant",
+    "icon": "T_Fish_DirtyWater_Sew_1_1",
+    "rarity": 3
+  },
+  {
+    "id": 5025020,
+    "name": "Murène ronge-os",
+    "icon": "T_Fish_DirtyWater_Sew_2",
+    "rarity": 3
+  },
+  {
+    "id": 5025021,
+    "name": "Murène ronge-os variante",
+    "icon": "T_Fish_DirtyWater_Sew_2_1",
+    "rarity": 3
+  },
+  {
+    "id": 5025030,
+    "name": "Voile-osseux",
+    "icon": "T_Fish_DirtyWater_Sew_4",
+    "rarity": 4
+  },
+  {
+    "id": 5025031,
+    "name": "Voile-osseux variant",
+    "icon": "T_Fish_DirtyWater_Sew_4_1",
+    "rarity": 4
+  },
+  {
+    "id": 5025040,
+    "name": "Vocifère",
+    "icon": "T_Fish_DirtyWater_Sew_3",
+    "rarity": 4
+  },
+  {
+    "id": 5025041,
+    "name": "Vocifère variant",
+    "icon": "T_Fish_DirtyWater_Sew_3_1",
+    "rarity": 4
+  },
+  {
+    "id": 5025050,
+    "name": "Cafard d’eau",
+    "icon": "T_Fish_DirtyWater_Sew_5",
+    "rarity": 5
+  },
+  {
+    "id": 5025051,
+    "name": "Cafard d’eau variant",
+    "icon": "T_Fish_DirtyWater_Sew_5_1",
+    "rarity": 5
+  },
+  {
+    "id": 5026010,
+    "name": "Meule-sole",
+    "icon": "T_Fish_Sea_East_6",
+    "rarity": 3
+  },
+  {
+    "id": 5026011,
+    "name": "Meule-sole variante",
+    "icon": "T_Fish_Sea_East_6_1",
+    "rarity": 3
+  },
+  {
+    "id": 5026020,
+    "name": "Crabe-orchidée",
+    "icon": "T_Fish_Sea_East_7",
+    "rarity": 3
+  },
+  {
+    "id": 5026021,
+    "name": "Crabe-orchidée variant",
+    "icon": "T_Fish_Sea_East_7_1",
+    "rarity": 3
+  },
+  {
+    "id": 5026030,
+    "name": "Étoile de mer",
+    "icon": "T_Fish_Sea_East_8",
+    "rarity": 4
+  },
+  {
+    "id": 5026031,
+    "name": "Étoile de mer variante",
+    "icon": "T_Fish_Sea_East_8_1",
+    "rarity": 4
+  },
+  {
+    "id": 5026040,
+    "name": "Crevette-pétarde",
+    "icon": "T_Fish_Sea_East_9",
+    "rarity": 4
+  },
+  {
+    "id": 5026041,
+    "name": "Crevette-pétarde variante",
+    "icon": "T_Fish_Sea_East_9_1",
+    "rarity": 4
+  },
+  {
+    "id": 5026050,
+    "name": "Kun des Vagues d’Azur",
+    "icon": "T_Fish_Sea_East_10",
+    "rarity": 5
+  },
+  {
+    "id": 5026051,
+    "name": "Kun des Vagues d’Azur variant",
+    "icon": "T_Fish_Sea_East_10_1",
+    "rarity": 5
+  },
+  {
+    "id": 5027010,
+    "name": "Poisson-sabre",
+    "icon": "T_Fish_FreshWater_East_6",
+    "rarity": 3
+  },
+  {
+    "id": 5027011,
+    "name": "Poisson-sabre variant",
+    "icon": "T_Fish_FreshWater_East_6_1",
+    "rarity": 3
+  },
+  {
+    "id": 5027020,
+    "name": "Perche fleurie",
+    "icon": "T_Fish_FreshWater_East_7",
+    "rarity": 3
+  },
+  {
+    "id": 5027021,
+    "name": "Perche fleurie variante",
+    "icon": "T_Fish_FreshWater_East_7_1",
+    "rarity": 3
+  },
+  {
+    "id": 5027030,
+    "name": "Tétrabranchie",
+    "icon": "T_Fish_FreshWater_East_8",
+    "rarity": 4
+  },
+  {
+    "id": 5027031,
+    "name": "Tétrabranchie variant",
+    "icon": "T_Fish_FreshWater_East_8_1",
+    "rarity": 4
+  },
+  {
+    "id": 5027040,
+    "name": "Cichlidé-phénix",
+    "icon": "T_Fish_FreshWater_East_9",
+    "rarity": 4
+  },
+  {
+    "id": 5027041,
+    "name": "Cichlidé-phénix variant",
+    "icon": "T_Fish_FreshWater_East_9_1",
+    "rarity": 4
+  },
+  {
+    "id": 5027050,
+    "name": "Signe de l’Empereur",
+    "icon": "T_Fish_FreshWater_East_10",
+    "rarity": 5
+  },
+  {
+    "id": 5027051,
+    "name": "Signe de l’Empereur variant",
+    "icon": "T_Fish_FreshWater_East_10_1",
+    "rarity": 5
+  },
+  {
+    "id": 5028010,
+    "name": "Œil-d’encre",
+    "icon": "T_Fish_DirtyWater_East_1",
+    "rarity": 3
+  },
+  {
+    "id": 5028011,
+    "name": "Œil-d’encre variant",
+    "icon": "T_Fish_DirtyWater_East_1_1",
+    "rarity": 3
+  },
+  {
+    "id": 5028020,
+    "name": "Sauteur de vase",
+    "icon": "T_Fish_DirtyWater_East_2",
+    "rarity": 3
+  },
+  {
+    "id": 5028021,
+    "name": "Sauteur de vase variant",
+    "icon": "T_Fish_DirtyWater_East_2_1",
+    "rarity": 3
+  },
+  {
+    "id": 5028030,
+    "name": "Ombre-lueur",
+    "icon": "T_Fish_DirtyWater_East_3",
+    "rarity": 4
+  },
+  {
+    "id": 5028031,
+    "name": "Ombre-lueur variante",
+    "icon": "T_Fish_DirtyWater_East_3_1",
+    "rarity": 4
+  },
+  {
+    "id": 5028040,
+    "name": "Crapaud",
+    "icon": "T_Fish_DirtyWater_East_4",
+    "rarity": 4
+  },
+  {
+    "id": 5028041,
+    "name": "Crapaud variant",
+    "icon": "T_Fish_DirtyWater_East_4_1",
+    "rarity": 4
+  },
+  {
+    "id": 5028050,
+    "name": "Fluttille",
+    "icon": "T_Fish_DirtyWater_East_5",
+    "rarity": 5
+  },
+  {
+    "id": 5028051,
+    "name": "Fluttille variante",
+    "icon": "T_Fish_DirtyWater_East_5_1",
+    "rarity": 5
+  },
+  {
+    "id": 5110100,
+    "name": "Canne d’entraînement",
+    "icon": "T_FishingRod_Normal_1",
     "rarity": 2
   },
   {
@@ -2212,5 +4534,911 @@
     "name": "Bon de Printemps éternel",
     "icon": "T_Coin_ActivityZhiliu01",
     "rarity": 4
+  },
+  {
+    "id": 6000002,
+    "name": "Coffre merveilleux",
+    "icon": "T_Resource_CoinActivityFool",
+    "rarity": 5
+  },
+  {
+    "id": 6000003,
+    "name": "红鳞鱼",
+    "icon": "T_Fashion_Head41",
+    "rarity": 4
+  },
+  {
+    "id": 6100001,
+    "name": "生命符石",
+    "icon": "T_Activity_Autochess_Item02",
+    "rarity": 3
+  },
+  {
+    "id": 6100002,
+    "name": "防御符石",
+    "icon": "T_Activity_Autochess_Item02",
+    "rarity": 3
+  },
+  {
+    "id": 6100003,
+    "name": "攻击符石",
+    "icon": "T_Activity_Autochess_Item01",
+    "rarity": 3
+  },
+  {
+    "id": 6100004,
+    "name": "护盾符石",
+    "icon": "T_Activity_Autochess_Item02",
+    "rarity": 3
+  },
+  {
+    "id": 6100005,
+    "name": "生命·防御符石",
+    "icon": "T_Activity_Autochess_Item02",
+    "rarity": 3
+  },
+  {
+    "id": 6100006,
+    "name": "攻击·防御符石",
+    "icon": "T_Activity_Autochess_Item01",
+    "rarity": 3
+  },
+  {
+    "id": 6100007,
+    "name": "攻击·生命符石",
+    "icon": "T_Activity_Autochess_Item01",
+    "rarity": 3
+  },
+  {
+    "id": 6100008,
+    "name": "护盾·生命符石",
+    "icon": "T_Activity_Autochess_Item02",
+    "rarity": 3
+  },
+  {
+    "id": 6100009,
+    "name": "攻击·护盾符石",
+    "icon": "T_Activity_Autochess_Item01",
+    "rarity": 3
+  },
+  {
+    "id": 6100010,
+    "name": "击溃符石",
+    "icon": "T_Activity_Autochess_Item03",
+    "rarity": 4
+  },
+  {
+    "id": 6100011,
+    "name": "瓦解符石",
+    "icon": "T_Activity_Autochess_Item03",
+    "rarity": 4
+  },
+  {
+    "id": 6100012,
+    "name": "淬炼符石",
+    "icon": "T_Activity_Autochess_Item03",
+    "rarity": 4
+  },
+  {
+    "id": 6100013,
+    "name": "激怒符石",
+    "icon": "T_Activity_Autochess_Item03",
+    "rarity": 4
+  },
+  {
+    "id": 6100014,
+    "name": "疗愈符石",
+    "icon": "T_Activity_Autochess_Item04",
+    "rarity": 4
+  },
+  {
+    "id": 6100015,
+    "name": "鼓舞符石",
+    "icon": "T_Activity_Autochess_Item04",
+    "rarity": 4
+  },
+  {
+    "id": 6100016,
+    "name": "共鸣符石",
+    "icon": "T_Activity_Autochess_Item04",
+    "rarity": 4
+  },
+  {
+    "id": 6100017,
+    "name": "亢奋符石",
+    "icon": "T_Activity_Autochess_Item04",
+    "rarity": 4
+  },
+  {
+    "id": 6100018,
+    "name": "怒涛符石",
+    "icon": "T_Activity_Autochess_Item03",
+    "rarity": 4
+  },
+  {
+    "id": 6100019,
+    "name": "仁心符石",
+    "icon": "T_Activity_Autochess_Item04",
+    "rarity": 4
+  },
+  {
+    "id": 6100020,
+    "name": "破釜符石",
+    "icon": "T_Activity_Autochess_Item03",
+    "rarity": 4
+  },
+  {
+    "id": 6100021,
+    "name": "底力符石",
+    "icon": "T_Activity_Autochess_Item04",
+    "rarity": 4
+  },
+  {
+    "id": 6100022,
+    "name": "穿透符石",
+    "icon": "T_Activity_Autochess_Item03",
+    "rarity": 4
+  },
+  {
+    "id": 6100023,
+    "name": "致命符石",
+    "icon": "T_Activity_Autochess_Item03",
+    "rarity": 4
+  },
+  {
+    "id": 6100024,
+    "name": "凛霜符石",
+    "icon": "T_Activity_Autochess_Item06",
+    "rarity": 5
+  },
+  {
+    "id": 6100025,
+    "name": "爆破符石",
+    "icon": "T_Activity_Autochess_Item05",
+    "rarity": 5
+  },
+  {
+    "id": 6100026,
+    "name": "侵蚀符石",
+    "icon": "T_Activity_Autochess_Item06",
+    "rarity": 5
+  },
+  {
+    "id": 6100027,
+    "name": "霹雳符石",
+    "icon": "T_Activity_Autochess_Item05",
+    "rarity": 5
+  },
+  {
+    "id": 6100028,
+    "name": "猩红符石",
+    "icon": "T_Activity_Autochess_Item05",
+    "rarity": 5
+  },
+  {
+    "id": 6100029,
+    "name": "枯萎符石",
+    "icon": "T_Activity_Autochess_Item05",
+    "rarity": 5
+  },
+  {
+    "id": 6100030,
+    "name": "守护符石",
+    "icon": "T_Activity_Autochess_Item06",
+    "rarity": 5
+  },
+  {
+    "id": 6100031,
+    "name": "复仇符石",
+    "icon": "T_Activity_Autochess_Item06",
+    "rarity": 5
+  },
+  {
+    "id": 6100032,
+    "name": "霜狱符石",
+    "icon": "T_Activity_Autochess_Item06",
+    "rarity": 5
+  },
+  {
+    "id": 6100033,
+    "name": "残火符石",
+    "icon": "T_Activity_Autochess_Item05",
+    "rarity": 5
+  },
+  {
+    "id": 6100034,
+    "name": "舍身符石",
+    "icon": "T_Activity_Autochess_Item05",
+    "rarity": 5
+  },
+  {
+    "id": 6100035,
+    "name": "转雷符石",
+    "icon": "T_Activity_Autochess_Item05",
+    "rarity": 5
+  },
+  {
+    "id": 6100036,
+    "name": "浴血符石",
+    "icon": "T_Activity_Autochess_Item05",
+    "rarity": 5
+  },
+  {
+    "id": 6100101,
+    "name": "疾冲秽兽机傀I",
+    "icon": "T_Head_Gr_Jichong",
+    "rarity": 1
+  },
+  {
+    "id": 6100102,
+    "name": "游击秽兽机傀I",
+    "icon": "T_Head_Gr_Youji",
+    "rarity": 1
+  },
+  {
+    "id": 6100103,
+    "name": "漂浮秽兽机傀I",
+    "icon": "T_Head_Gr_Piaofu",
+    "rarity": 1
+  },
+  {
+    "id": 6100104,
+    "name": "暴徒秽兽机傀I",
+    "icon": "T_Head_Gr_Baotu",
+    "rarity": 1
+  },
+  {
+    "id": 6100105,
+    "name": "笼草秽兽机傀I",
+    "icon": "T_Head_GR_Longcao",
+    "rarity": 1
+  },
+  {
+    "id": 6100106,
+    "name": "疾冲秽兽机傀II",
+    "icon": "T_Head_Gr_Jichong_C01",
+    "rarity": 1
+  },
+  {
+    "id": 6100107,
+    "name": "游击秽兽机傀II",
+    "icon": "T_Head_Gr_Youji_C01",
+    "rarity": 1
+  },
+  {
+    "id": 6100108,
+    "name": "狙击列兵机傀I",
+    "icon": "T_Head_Jt_Juji",
+    "rarity": 1
+  },
+  {
+    "id": 6100109,
+    "name": "劈斩列兵机傀I",
+    "icon": "T_Head_Jt_Pizhuo",
+    "rarity": 1
+  },
+  {
+    "id": 6100110,
+    "name": "远征列兵机傀I",
+    "icon": "T_Head_Jt_Ranger",
+    "rarity": 1
+  },
+  {
+    "id": 6100111,
+    "name": "精锐士官机傀I",
+    "icon": "T_Head_Jt_Zhihui",
+    "rarity": 1
+  },
+  {
+    "id": 6100112,
+    "name": "帝皇之仁机傀I",
+    "icon": "T_Head_Jt_Zhiren",
+    "rarity": 1
+  },
+  {
+    "id": 6100113,
+    "name": "远征列兵机傀II",
+    "icon": "T_Head_Jt_Ranger_C01",
+    "rarity": 1
+  },
+  {
+    "id": 6100114,
+    "name": "突击列兵机傀II",
+    "icon": "T_Head_Jt_Tuji_C01",
+    "rarity": 1
+  },
+  {
+    "id": 6100115,
+    "name": "警戒机机傀I",
+    "icon": "T_Jingjie",
+    "rarity": 1
+  },
+  {
+    "id": 6100116,
+    "name": "蒙恩的执事机傀I",
+    "icon": "T_Head_Jh_Zhishi",
+    "rarity": 1
+  },
+  {
+    "id": 6100117,
+    "name": "蒙恩的先锋机傀I",
+    "icon": "T_Head_Jh_Xianfeng",
+    "rarity": 1
+  },
+  {
+    "id": 6100118,
+    "name": "蒙恩的神甫机傀I",
+    "icon": "T_Head_Jh_Shenfu",
+    "rarity": 1
+  },
+  {
+    "id": 6100119,
+    "name": "野蜂利刃机傀I",
+    "icon": "T_Head_SQ_Yinxie",
+    "rarity": 1
+  },
+  {
+    "id": 6100120,
+    "name": "野蜂暗箭机傀I",
+    "icon": "T_Head_SQ_Dufeng",
+    "rarity": 1
+  },
+  {
+    "id": 6100121,
+    "name": "野蜂密探机傀I",
+    "icon": "T_Head_SQ_Niaopao",
+    "rarity": 1
+  },
+  {
+    "id": 6100122,
+    "name": "对局积分",
+    "icon": "T_Activity_Autochess_Coin02",
+    "rarity": 5
+  },
+  {
+    "id": 31001001,
+    "name": "Duet Night Abyss Main Theme — Thème principal",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31001002,
+    "name": "Across the Sandrealm — Toi qui traversas le Royaume des Sables",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31001003,
+    "name": "Tranquility of My Yesterdays — Tranquillité d’hier",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31001004,
+    "name": "The Deserted Village — Village abandonné",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31001005,
+    "name": "Morning Mist — Brume matinale",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31001006,
+    "name": "A Long Farewell — Un long adieu",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31002001,
+    "name": "The Fategazer — Sous l’œil du Destin",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31002002,
+    "name": "Our Sacred Destiny I — Notre destin sacré I",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31002003,
+    "name": "Our Sacred Destiny II — Notre destin sacré II",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31003001,
+    "name": "At Stake — Au bord du gouffre",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31003002,
+    "name": "The Wrong Way — Le mauvais chemin",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31003003,
+    "name": "Fight, or Die I — Combattre ou périr I",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31003004,
+    "name": "Fight, or Die II — Combattre ou périr II",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31004001,
+    "name": "The Closed Door — La porte fermée",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31004002,
+    "name": "The Iron Cage — La cage de fer",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31004003,
+    "name": "Lullaby for a Voyager — Berceuse pour le voyageur",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31004004,
+    "name": "Bad Jokes — Mauvaises blagues",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31004005,
+    "name": "Joys of Life — Les jours d’insouciance",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31004006,
+    "name": "The Asphodel — Les Asphodèles",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31004007,
+    "name": "Hypnos' House — Maison d’Hypnos",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31004008,
+    "name": "My Sweet Little Home — Doux foyer",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31005001,
+    "name": "Glevum Pit — Fosse de Glevum",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31005002,
+    "name": "Over the Frozen Land — Par-delà les terres gelées",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31005003,
+    "name": "Snowstorm — Tempête de neige",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31005004,
+    "name": "The Crystal Devourer — Le Cristallophage",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31005005,
+    "name": "The Lurkers — Les Rôdeurs",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31005006,
+    "name": "Under Arbitrary Authority — Sous le joug des puissants",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31005007,
+    "name": "The Awful Truth — La terrible vérité",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31005008,
+    "name": "Avian Spirit Trials I — Épreuves de l’Oiseau onirique I",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31005009,
+    "name": "Avian Spirit Trials II — Épreuves de l’Oiseau onirique II",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31005010,
+    "name": "《莉莉蔻的歌谣·黑铁摇篮》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31006001,
+    "name": "First Met With Psyche — Première rencontre avec Psyche",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31006002,
+    "name": "Psyche: Daydream in a Chrysalis — Psyche : Rêve éphémère en chrysalide",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31006003,
+    "name": "Florescence Unmet — Floraison inachevée",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31006004,
+    "name": "Memories that We Take — Les souvenirs que nous emportons",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31006005,
+    "name": "Destined End — Fin prédestinée",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31006006,
+    "name": "Footsteps of Her Lifetime — Les traces de sa vie",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31006007,
+    "name": "For What Dream Does Chrysalis Weave — Pour quel rêve se tisse la chrysalide ?",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31006008,
+    "name": "On What Breeze Do Wings Rise — Sous quel vent naissent les ailes ?",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31006009,
+    "name": "Cause I Was Born Here — Parce que je suis d’ici",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31006010,
+    "name": "Amaranth — Amarante",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31007001,
+    "name": "Before the War — Avant la guerre",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31007002,
+    "name": "Emergency Action — Intervention d’urgence",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31007003,
+    "name": "A Vibrant Heart — Le cœur vibrant",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31007004,
+    "name": "In Danger — En péril",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31007005,
+    "name": "Escape — Fuite",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31007006,
+    "name": "Katya: Guns and Vines — Katya : De poudre et de vigne",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31007007,
+    "name": "Daphne: It's Raining in Dismania — Daphne : Il pleut sur Dismania",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31007008,
+    "name": "After Rain — Après la pluie",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31007009,
+    "name": "Burning Abyss — Abîme ardent",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31007010,
+    "name": "《维吉尔：荣耀以何物筑基？》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31008001,
+    "name": "The Wandering Lunosmith — Luno, la forgeronne errante",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31008002,
+    "name": "《侍者皎皎的好梦》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31008003,
+    "name": "《蛋蛋皎皎的友谊》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31008004,
+    "name": "《探险家皎皎的大冒险》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31009001,
+    "name": "Web of Logic — Toile de logique",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31009002,
+    "name": "The Fischers: Our Bygone Days —Les Fischer : Le temps de l’innocence",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31009003,
+    "name": "Galea Theatre — Théâtre Galea",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31009004,
+    "name": "Stars Shining Over the Gutter — Les étoiles au-dessus du caniveau",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31009005,
+    "name": "A Light Like a Beacon — Tel un phare dans la nuit",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31009006,
+    "name": "Redemption — Rédemption",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31009007,
+    "name": "Heart of Innocence — Un cœur pur",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31009008,
+    "name": "Requiem for the Nameless — Requiem pour les sans-nom",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010001,
+    "name": "《风起烟津》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010002,
+    "name": "《山海的彼端》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010003,
+    "name": "《烟津渡》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010004,
+    "name": "《浮星埠》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010005,
+    "name": "《清波唱晚》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010006,
+    "name": "《谒神》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010007,
+    "name": "《清平乐》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010008,
+    "name": "《潮声岩穴》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010009,
+    "name": "《杏花天影》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010010,
+    "name": "《百年枯荣》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010011,
+    "name": "《狡兔》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010012,
+    "name": "《劫灰》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010013,
+    "name": "《尘漠石海》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010014,
+    "name": "《虞渊幽明》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010015,
+    "name": "《忘川溯影》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010016,
+    "name": "《听鸦原》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010017,
+    "name": "《千枢狩阵》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010018,
+    "name": "《机傀苏醒》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010019,
+    "name": "《焚心》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31010020,
+    "name": "《倾天》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31011001,
+    "name": "《夜莺漫游奇境记 I》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31011002,
+    "name": "《夜莺漫游奇境记 II》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31011003,
+    "name": "《绮梦入夜》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31011004,
+    "name": "《沙海之思》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31011005,
+    "name": "《全速前进！》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31011006,
+    "name": "《箭在弦上》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 31011007,
+    "name": "《悠闲水岸》",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2
+  },
+  {
+    "id": 101160101,
+    "name": "Emblème : Chasseur de Phoxène — Lumino",
+    "icon": "T_Phantom_Nanzhu",
+    "rarity": 5
   }
 ]
