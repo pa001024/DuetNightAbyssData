@@ -1,0 +1,1128 @@
+[
+  {
+    "id": 1001,
+    "name": "Hyperborea",
+    "icon": "T_Tab_IceLake",
+    "refreshCost": {
+      "Coin": 10000
+    },
+    "weekLimit": 1500,
+    "levels": [
+      {
+        "lv": 1,
+        "exp": 100,
+        "reward": 111001
+      },
+      {
+        "lv": 2,
+        "exp": 100,
+        "reward": 111002
+      },
+      {
+        "lv": 3,
+        "exp": 100,
+        "reward": 111003
+      },
+      {
+        "lv": 4,
+        "exp": 100,
+        "reward": 111004
+      },
+      {
+        "lv": 5,
+        "exp": 100,
+        "reward": 111005
+      },
+      {
+        "lv": 6,
+        "exp": 200,
+        "reward": 111006
+      },
+      {
+        "lv": 7,
+        "exp": 200,
+        "reward": 111007
+      },
+      {
+        "lv": 8,
+        "exp": 200,
+        "reward": 111008
+      },
+      {
+        "lv": 9,
+        "exp": 200,
+        "reward": 111009
+      },
+      {
+        "lv": 10,
+        "exp": 200,
+        "reward": 111010
+      },
+      {
+        "lv": 11,
+        "exp": 300,
+        "reward": 111011
+      },
+      {
+        "lv": 12,
+        "exp": 300,
+        "reward": 111012
+      },
+      {
+        "lv": 13,
+        "exp": 300,
+        "reward": 111013
+      },
+      {
+        "lv": 14,
+        "exp": 300,
+        "reward": 111014
+      },
+      {
+        "lv": 15,
+        "exp": 300,
+        "reward": 111015
+      },
+      {
+        "lv": 16,
+        "exp": 400,
+        "reward": 111016
+      },
+      {
+        "lv": 17,
+        "exp": 400,
+        "reward": 111017
+      },
+      {
+        "lv": 18,
+        "exp": 400,
+        "reward": 111018
+      },
+      {
+        "lv": 19,
+        "exp": 400,
+        "reward": 111019
+      },
+      {
+        "lv": 20,
+        "exp": 400,
+        "reward": 111020
+      },
+      {
+        "lv": 21,
+        "exp": 500,
+        "reward": 111021
+      },
+      {
+        "lv": 22,
+        "exp": 500,
+        "reward": 111022
+      },
+      {
+        "lv": 23,
+        "exp": 500,
+        "reward": 111023
+      },
+      {
+        "lv": 24,
+        "exp": 500,
+        "reward": 111024
+      },
+      {
+        "lv": 25,
+        "exp": 500,
+        "reward": 111025
+      },
+      {
+        "lv": 26,
+        "exp": 600,
+        "reward": 111026
+      },
+      {
+        "lv": 27,
+        "exp": 600,
+        "reward": 111027
+      },
+      {
+        "lv": 28,
+        "exp": 600,
+        "reward": 111028
+      },
+      {
+        "lv": 29,
+        "exp": 600,
+        "reward": 111029
+      },
+      {
+        "lv": 30,
+        "exp": 600,
+        "reward": 111030
+      }
+    ],
+    "entrusts": [
+      {
+        "id": 10001,
+        "name": "Lunodeliverer's Gathering Request",
+        "desc": "\"You're always out and about. Bet you've picked up a fair few good finds — think you could sell me some? I'm trying out a little sideline...\"",
+        "icon": "T_Head_WaimaiJJ",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            4010011,
+            10
+          ],
+          [
+            "Resource",
+            4010010,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 10002,
+        "name": "Lunodeliverer's Gathering Request",
+        "desc": "\"You're always out and about. Bet you've picked up a fair few good finds — think you could sell me some? I'm trying out a little sideline...\"",
+        "icon": "T_Head_WaimaiJJ",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            4010011,
+            10
+          ],
+          [
+            "Resource",
+            4010005,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 10003,
+        "name": "Lunodeliverer's Gathering Request",
+        "desc": "\"You're always out and about. Bet you've picked up a fair few good finds — think you could sell me some? I'm trying out a little sideline...\"",
+        "icon": "T_Head_WaimaiJJ",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            4010011,
+            10
+          ],
+          [
+            "Resource",
+            4020003,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 10004,
+        "name": "Lunodeliverer's Gathering Request",
+        "desc": "\"You're always out and about. Bet you've picked up a fair few good finds — think you could sell me some? I'm trying out a little sideline...\"",
+        "icon": "T_Head_WaimaiJJ",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            4010010,
+            10
+          ],
+          [
+            "Resource",
+            4010008,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 10005,
+        "name": "Lunodeliverer's Gathering Request",
+        "desc": "\"You're always out and about. Bet you've picked up a fair few good finds — think you could sell me some? I'm trying out a little sideline...\"",
+        "icon": "T_Head_WaimaiJJ",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            4010010,
+            10
+          ],
+          [
+            "Resource",
+            4010004,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 10006,
+        "name": "Camilla's Materials Request",
+        "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
+        "icon": "T_Head_Kami",
+        "exp": 20,
+        "weight": 20,
+        "items": [
+          [
+            "Resource",
+            20001,
+            100
+          ],
+          [
+            "Resource",
+            20012,
+            400
+          ]
+        ]
+      },
+      {
+        "id": 10007,
+        "name": "Camilla's Materials Request",
+        "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
+        "icon": "T_Head_Kami",
+        "exp": 20,
+        "weight": 20,
+        "items": [
+          [
+            "Resource",
+            20003,
+            100
+          ],
+          [
+            "Resource",
+            20005,
+            400
+          ]
+        ]
+      },
+      {
+        "id": 10008,
+        "name": "Camilla's Materials Request",
+        "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
+        "icon": "T_Head_Kami",
+        "exp": 20,
+        "weight": 20,
+        "items": [
+          [
+            "Resource",
+            20004,
+            100
+          ],
+          [
+            "Resource",
+            20011,
+            400
+          ]
+        ]
+      },
+      {
+        "id": 10009,
+        "name": "Camilla's Materials Request",
+        "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
+        "icon": "T_Head_Kami",
+        "exp": 20,
+        "weight": 20,
+        "items": [
+          [
+            "Resource",
+            20009,
+            400
+          ],
+          [
+            "Resource",
+            20014,
+            50
+          ]
+        ]
+      },
+      {
+        "id": 10010,
+        "name": "Camilla's Materials Request",
+        "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
+        "icon": "T_Head_Kami",
+        "exp": 20,
+        "weight": 20,
+        "items": [
+          [
+            "Resource",
+            20002,
+            400
+          ],
+          [
+            "Resource",
+            20019,
+            50
+          ]
+        ]
+      },
+      {
+        "id": 10011,
+        "name": "Camilla's Materials Request",
+        "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
+        "icon": "T_Head_Kami",
+        "exp": 20,
+        "weight": 20,
+        "items": [
+          [
+            "Resource",
+            20012,
+            400
+          ],
+          [
+            "Resource",
+            20017,
+            50
+          ]
+        ]
+      },
+      {
+        "id": 10012,
+        "name": "Camilla's Materials Request",
+        "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
+        "icon": "T_Head_Kami",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            20006,
+            10
+          ],
+          [
+            "Resource",
+            20017,
+            50
+          ]
+        ]
+      },
+      {
+        "id": 10013,
+        "name": "Camilla's Materials Request",
+        "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
+        "icon": "T_Head_Kami",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            20022,
+            10
+          ],
+          [
+            "Resource",
+            20020,
+            50
+          ]
+        ]
+      },
+      {
+        "id": 10014,
+        "name": "Camilla's Materials Request",
+        "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
+        "icon": "T_Head_Kami",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            20007,
+            10
+          ],
+          [
+            "Resource",
+            20018,
+            50
+          ]
+        ]
+      },
+      {
+        "id": 10015,
+        "name": "Margie's Supply Request",
+        "desc": "\"Wh—What!? I heard there's a genie in the rubbish bin who grants wishes if you ask nicely — is that true? Ha, just kidding~ But I really do need these supplies!\"",
+        "icon": "T_Head_Maer",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            20004,
+            100
+          ],
+          [
+            "Resource",
+            4010011,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 10016,
+        "name": "Margie's Supply Request",
+        "desc": "\"Wh—What!? I heard there's a genie in the rubbish bin who grants wishes if you ask nicely — is that true? Ha, just kidding~ But I really do need these supplies!\"",
+        "icon": "T_Head_Maer",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            20015,
+            100
+          ],
+          [
+            "Resource",
+            4010010,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 10017,
+        "name": "Margie's Supply Request",
+        "desc": "\"Wh—What!? I heard there's a genie in the rubbish bin who grants wishes if you ask nicely — is that true? Ha, just kidding~ But I really do need these supplies!\"",
+        "icon": "T_Head_Maer",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            20016,
+            100
+          ],
+          [
+            "Resource",
+            4010004,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 10018,
+        "name": "Margie's Supply Request",
+        "desc": "\"Wh—What!? I heard there's a genie in the rubbish bin who grants wishes if you ask nicely — is that true? Ha, just kidding~ But I really do need these supplies!\"",
+        "icon": "T_Head_Maer",
+        "exp": 40,
+        "weight": 5,
+        "items": [
+          [
+            "Resource",
+            20007,
+            10
+          ],
+          [
+            "Resource",
+            4010005,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 10019,
+        "name": "Margie's Supply Request",
+        "desc": "\"Wh—What!? I heard there's a genie in the rubbish bin who grants wishes if you ask nicely — is that true? Ha, just kidding~ But I really do need these supplies!\"",
+        "icon": "T_Head_Maer",
+        "exp": 40,
+        "weight": 5,
+        "items": [
+          [
+            "Resource",
+            20025,
+            10
+          ],
+          [
+            "Resource",
+            4020003,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 10020,
+        "name": "Margie's Supply Request",
+        "desc": "\"Wh—What!? I heard there's a genie in the rubbish bin who grants wishes if you ask nicely — is that true? Ha, just kidding~ But I really do need these supplies!\"",
+        "icon": "T_Head_Maer",
+        "exp": 40,
+        "weight": 5,
+        "items": [
+          [
+            "Resource",
+            20026,
+            10
+          ],
+          [
+            "Resource",
+            4010008,
+            10
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1002,
+    "name": "Huaxu",
+    "icon": "T_Tab_East_Season01",
+    "refreshCost": {
+      "Coin": 10000
+    },
+    "weekLimit": 1500,
+    "levels": [
+      {
+        "lv": 1,
+        "exp": 100,
+        "reward": 111031
+      },
+      {
+        "lv": 2,
+        "exp": 100,
+        "reward": 111032
+      },
+      {
+        "lv": 3,
+        "exp": 100,
+        "reward": 111033
+      },
+      {
+        "lv": 4,
+        "exp": 100,
+        "reward": 111034
+      },
+      {
+        "lv": 5,
+        "exp": 100,
+        "reward": 111035
+      },
+      {
+        "lv": 6,
+        "exp": 200,
+        "reward": 111036
+      },
+      {
+        "lv": 7,
+        "exp": 200,
+        "reward": 111037
+      },
+      {
+        "lv": 8,
+        "exp": 200,
+        "reward": 111038
+      },
+      {
+        "lv": 9,
+        "exp": 200,
+        "reward": 111039
+      },
+      {
+        "lv": 10,
+        "exp": 200,
+        "reward": 111040
+      },
+      {
+        "lv": 11,
+        "exp": 300,
+        "reward": 111041
+      },
+      {
+        "lv": 12,
+        "exp": 300,
+        "reward": 111042
+      },
+      {
+        "lv": 13,
+        "exp": 300,
+        "reward": 111043
+      },
+      {
+        "lv": 14,
+        "exp": 300,
+        "reward": 111044
+      },
+      {
+        "lv": 15,
+        "exp": 300,
+        "reward": 111045
+      },
+      {
+        "lv": 16,
+        "exp": 400,
+        "reward": 111046
+      },
+      {
+        "lv": 17,
+        "exp": 400,
+        "reward": 111047
+      },
+      {
+        "lv": 18,
+        "exp": 400,
+        "reward": 111048
+      },
+      {
+        "lv": 19,
+        "exp": 400,
+        "reward": 111049
+      },
+      {
+        "lv": 20,
+        "exp": 400,
+        "reward": 111050
+      },
+      {
+        "lv": 21,
+        "exp": 500,
+        "reward": 111051
+      },
+      {
+        "lv": 22,
+        "exp": 500,
+        "reward": 111052
+      },
+      {
+        "lv": 23,
+        "exp": 500,
+        "reward": 111053
+      },
+      {
+        "lv": 24,
+        "exp": 500,
+        "reward": 111054
+      },
+      {
+        "lv": 25,
+        "exp": 500,
+        "reward": 111055
+      },
+      {
+        "lv": 26,
+        "exp": 600,
+        "reward": 111056
+      },
+      {
+        "lv": 27,
+        "exp": 600,
+        "reward": 111057
+      },
+      {
+        "lv": 28,
+        "exp": 600,
+        "reward": 111058
+      },
+      {
+        "lv": 29,
+        "exp": 600,
+        "reward": 111059
+      },
+      {
+        "lv": 30,
+        "exp": 600,
+        "reward": 111060
+      }
+    ],
+    "entrusts": [
+      {
+        "id": 11001,
+        "name": "Lunocarp's Gathering Request",
+        "desc": "\"Snow says you lot pick up bits like this all the time while you're out adventuring... and most of it just ends up going to waste, right? If you can, could you spare me some?\"",
+        "icon": "T_Head_JinliJJ",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            4010018,
+            10
+          ],
+          [
+            "Resource",
+            4010019,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 11002,
+        "name": "Lunocarp's Gathering Request",
+        "desc": "\"Snow says you lot pick up bits like this all the time while you're out adventuring... and most of it just ends up going to waste, right? If you can, could you spare me some?\"",
+        "icon": "T_Head_JinliJJ",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            4010018,
+            10
+          ],
+          [
+            "Resource",
+            4010015,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 11003,
+        "name": "Lunocarp's Gathering Request",
+        "desc": "\"Snow says you lot pick up bits like this all the time while you're out adventuring... and most of it just ends up going to waste, right? If you can, could you spare me some?\"",
+        "icon": "T_Head_JinliJJ",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            4010018,
+            10
+          ],
+          [
+            "Resource",
+            4020006,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 11004,
+        "name": "Lunocarp's Gathering Request",
+        "desc": "\"Snow says you lot pick up bits like this all the time while you're out adventuring... and most of it just ends up going to waste, right? If you can, could you spare me some?\"",
+        "icon": "T_Head_JinliJJ",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            4010019,
+            10
+          ],
+          [
+            "Resource",
+            4010016,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 11005,
+        "name": "Lunocarp's Gathering Request",
+        "desc": "\"Snow says you lot pick up bits like this all the time while you're out adventuring... and most of it just ends up going to waste, right? If you can, could you spare me some?\"",
+        "icon": "T_Head_JinliJJ",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            4010019,
+            10
+          ],
+          [
+            "Resource",
+            4010017,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 11006,
+        "name": "A Starweaver's Materials Request",
+        "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
+        "icon": "T_Head_FameCommon",
+        "exp": 20,
+        "weight": 20,
+        "items": [
+          [
+            "Resource",
+            20001,
+            100
+          ],
+          [
+            "Resource",
+            20012,
+            400
+          ]
+        ]
+      },
+      {
+        "id": 11007,
+        "name": "A Starweaver's Materials Request",
+        "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
+        "icon": "T_Head_FameCommon",
+        "exp": 20,
+        "weight": 20,
+        "items": [
+          [
+            "Resource",
+            20003,
+            100
+          ],
+          [
+            "Resource",
+            20005,
+            400
+          ]
+        ]
+      },
+      {
+        "id": 11008,
+        "name": "A Starweaver's Materials Request",
+        "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
+        "icon": "T_Head_FameCommon",
+        "exp": 20,
+        "weight": 20,
+        "items": [
+          [
+            "Resource",
+            20004,
+            100
+          ],
+          [
+            "Resource",
+            20011,
+            400
+          ]
+        ]
+      },
+      {
+        "id": 11009,
+        "name": "A Starweaver's Materials Request",
+        "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
+        "icon": "T_Head_FameCommon",
+        "exp": 20,
+        "weight": 20,
+        "items": [
+          [
+            "Resource",
+            20009,
+            400
+          ],
+          [
+            "Resource",
+            20014,
+            50
+          ]
+        ]
+      },
+      {
+        "id": 11010,
+        "name": "A Starweaver's Materials Request",
+        "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
+        "icon": "T_Head_FameCommon",
+        "exp": 20,
+        "weight": 20,
+        "items": [
+          [
+            "Resource",
+            20002,
+            400
+          ],
+          [
+            "Resource",
+            20019,
+            50
+          ]
+        ]
+      },
+      {
+        "id": 11011,
+        "name": "A Starweaver's Materials Request",
+        "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
+        "icon": "T_Head_FameCommon",
+        "exp": 20,
+        "weight": 20,
+        "items": [
+          [
+            "Resource",
+            20012,
+            400
+          ],
+          [
+            "Resource",
+            20017,
+            50
+          ]
+        ]
+      },
+      {
+        "id": 11012,
+        "name": "A Starweaver's Materials Request",
+        "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
+        "icon": "T_Head_FameCommon",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            20006,
+            10
+          ],
+          [
+            "Resource",
+            20017,
+            50
+          ]
+        ]
+      },
+      {
+        "id": 11013,
+        "name": "A Starweaver's Materials Request",
+        "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
+        "icon": "T_Head_FameCommon",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            20022,
+            10
+          ],
+          [
+            "Resource",
+            20020,
+            50
+          ]
+        ]
+      },
+      {
+        "id": 11014,
+        "name": "A Starweaver's Materials Request",
+        "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
+        "icon": "T_Head_FameCommon",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            20007,
+            10
+          ],
+          [
+            "Resource",
+            20018,
+            50
+          ]
+        ]
+      },
+      {
+        "id": 11015,
+        "name": "A Starweaver's Materials Request",
+        "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
+        "icon": "T_Head_FameCommon",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            20004,
+            100
+          ],
+          [
+            "Resource",
+            4010018,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 11016,
+        "name": "Mr Qiu's Supply Request",
+        "desc": "\"No need to be tense. Lend me your hand today, and there will come a day when I repay the favour.\"",
+        "icon": "T_Head_Qiu",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            20015,
+            100
+          ],
+          [
+            "Resource",
+            4010019,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 11017,
+        "name": "Mr Qiu's Supply Request",
+        "desc": "\"No need to be tense. Lend me your hand today, and there will come a day when I repay the favour.\"",
+        "icon": "T_Head_Qiu",
+        "exp": 30,
+        "weight": 10,
+        "items": [
+          [
+            "Resource",
+            20016,
+            100
+          ],
+          [
+            "Resource",
+            4010017,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 11018,
+        "name": "Mr Qiu's Supply Request",
+        "desc": "\"No need to be tense. Lend me your hand today, and there will come a day when I repay the favour.\"",
+        "icon": "T_Head_Qiu",
+        "exp": 40,
+        "weight": 5,
+        "items": [
+          [
+            "Resource",
+            20007,
+            10
+          ],
+          [
+            "Resource",
+            4010015,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 11019,
+        "name": "Mr Qiu's Supply Request",
+        "desc": "\"No need to be tense. Lend me your hand today, and there will come a day when I repay the favour.\"",
+        "icon": "T_Head_Qiu",
+        "exp": 40,
+        "weight": 5,
+        "items": [
+          [
+            "Resource",
+            20025,
+            10
+          ],
+          [
+            "Resource",
+            4020006,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 11020,
+        "name": "Mr Qiu's Supply Request",
+        "desc": "\"No need to be tense. Lend me your hand today, and there will come a day when I repay the favour.\"",
+        "icon": "T_Head_Qiu",
+        "exp": 40,
+        "weight": 5,
+        "items": [
+          [
+            "Resource",
+            20026,
+            10
+          ],
+          [
+            "Resource",
+            4010016,
+            10
+          ]
+        ]
+      }
+    ]
+  }
+]

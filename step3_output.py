@@ -22,6 +22,7 @@ from processor.quest_story_processor import QuestStoryProcessor
 from processor.region_processor import RegionProcessor
 from processor.sub_region_processor import SubRegionProcessor
 from processor.region_point_processor import RegionPointProcessor
+from processor.region_reputation_processor import RegionReputationProcessor
 from processor.shop_item_processor import ShopItemProcessor
 from processor.raid_buff_processor import RaidBuffProcessor
 from processor.pet_entry_processor import PetEntryProcessor
@@ -239,6 +240,7 @@ class FinalProcessor:
             "Region": RegionProcessor,
             "SubRegion": SubRegionProcessor,
             "RegionPoint": RegionPointProcessor,
+            "RegionReputation": RegionReputationProcessor,
             "ShopItem": ShopItemProcessor,
             "RaidBuff": RaidBuffProcessor,
             "PetEntry": PetEntryProcessor,
@@ -378,6 +380,7 @@ if __name__ == "__main__":
         "Region",
         "SubRegion",
         "RegionPoint",
+        "RegionReputation",
         "ShopItem",
         "RaidBuff",
         "PetEntry",

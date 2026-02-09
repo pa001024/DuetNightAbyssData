@@ -209,6 +209,7 @@ class ShopItemProcessor(BaseProcessor):
             "sequence": shop_item_data.get("Sequence"),
             "startTime": shop_item_data.get("StartTime"),
             "endTime": shop_item_data.get("EndTime"),
+            "unlock": shop_item_data.get("UnlockLevel"),
         }
         if not processed_shop_item.get("limit"):
             del processed_shop_item["limit"]
