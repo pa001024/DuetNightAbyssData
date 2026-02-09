@@ -10,10 +10,12 @@ class TitleProcessor(BaseProcessor):
     def _build_title_access(self):
         """构建Title获取方式映射"""
         self.title_access = {}
+        self.theater_task_map = {}
 
         reward_data = self.data_loader.load_json("Reward.json")
         achievement_data = self.data_loader.load_json("Achievement.json")
         quest_chain_data = self.data_loader.load_json("QuestChain.json")
+        theater_task_data = self.data_loader.load_json("TheaterTask.json")
 
         for achievement_id, achievement in achievement_data.items():
             reward_id = achievement.get("AchievementReward", 0)
@@ -38,6 +40,20 @@ class TitleProcessor(BaseProcessor):
                     if item_type == "Title":
                         self.title_access[str(item_id)] = ["Quest", quest_chain_id]
 
+        for theater_task in theater_task_data:
+            theater_task_id = theater_task.get("TheaterTaskID", 0)
+            reward_id = theater_task.get("RewardId", 0)
+            self.theater_task_map[str(theater_task_id)] = theater_task
+
+            reward_info = reward_data.get(str(reward_id), {})
+            ids = reward_info.get("Id", [])
+            reward_types = reward_info.get("Type", [])
+
+            for i, item_id in enumerate(ids):
+                item_type = reward_types[i] if i < len(reward_types) else ""
+                if item_type == "Title":
+                    self.title_access[str(item_id)] = ["TheaterTask", theater_task_id]
+
     def process_item(self, title_data, language):
         """处理单个Title项目"""
         title_id = title_data.get("TitleID", 0)
@@ -57,7 +73,7 @@ class TitleProcessor(BaseProcessor):
             "name": translated_name,
             # "Des": translated_des,
             # "Icon": icon_name,
-            # "IfSuffix": if_suffix,
+            "suf": if_suffix,
             "src": access_text,
         }
         if not processed["src"]:
@@ -114,6 +130,13 @@ class TitleProcessor(BaseProcessor):
                 skin_name = self.get_translated_text(skin_name_key, language)
                 return f"角色皮肤「{skin_name}」"
 
+            elif access_type == "TheaterTask":
+                theater_task = self.theater_task_map.get(str(access_id), {})
+                des_key = theater_task.get("Des", "")
+                target = theater_task.get("Target", "")
+                des_text = self.get_translated_text(des_key, language)
+                return self._fill_template_placeholder(des_text, target)
+
             else:
                 return f"{access_type}「{access_id}」"
 
@@ -141,6 +164,22 @@ class TitleProcessor(BaseProcessor):
         base_name = os.path.basename(icon_path)
         icon_name = base_name.split(".")[0]
         return icon_name
+
+    def _fill_template_placeholder(self, text, value):
+        """填充文本中的占位符（如%s、%d、{0}）"""
+        if not text:
+            return ""
+        if value in (None, ""):
+            return text
+
+        value_str = str(value)
+        if "{0}" in text:
+            return text.replace("{0}", value_str)
+
+        try:
+            return text % value
+        except Exception:
+            return text.replace("%s", value_str).replace("%d", value_str)
 
     def process_all_items(self, items, language):
         """处理所有项目，添加排序"""

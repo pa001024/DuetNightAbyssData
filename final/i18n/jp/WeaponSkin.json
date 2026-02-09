@@ -1,0 +1,346 @@
+[
+  {
+    "id": 3010101,
+    "name": "ジマンノサカナ",
+    "desc": "一日釣りをするくらいなら、せめて魚の一匹ぐらい持って帰れ。……ちょうど今日、市場で割引中だ。80銅貨だよ。",
+    "icon": "T_Head_Claymore_Kongjun",
+    "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010102,
+    "name": "群星の炎",
+    "desc": "星が星と衝突する、その刹那に交わされた別れの口づけ。砕けた囁きは空の彼方へと尾を引き、愚直な抱擁は――まるで銀河が吐息を漏らしたかのようだった。",
+    "icon": "T_Head_Claymore_Qunxing",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010103,
+    "name": "UI_WeaponSkin_Name_3010103",
+    "desc": "UI_WeaponSkin_Des_3010103",
+    "icon": "T_Head_Claymore_Rongyao",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010104,
+    "name": "父祖の遺志・大剣",
+    "desc": "とある父の叱咤が大剣となった。愛という名の鞭だ――いや、つまりは、父の愛は重いってことだ。",
+    "icon": "T_Head_Claymore_Fubei",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010105,
+    "name": "働かにゃい",
+    "desc": "にゃ！",
+    "icon": "T_Head_Claymore_Damiao",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010106,
+    "name": "破竹の勢い・大剣",
+    "desc": "真の達人に武器など不要。折れた竹の一本、枯れ枝のひと振り――それだけで、誰も抗えぬ伝説を刻むことができる。",
+    "icon": "T_Head_Claymore_Shiru",
+    "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010107,
+    "name": "大狂宴",
+    "desc": "天地を開き、万物を静める。",
+    "icon": "T_Head_Claymore_Dahuang",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010108,
+    "name": "飴串・大剣",
+    "desc": "フルーツ飴を竹串に刺したもの。",
+    "icon": "T_Head_Claymore_Tangfu",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010201,
+    "name": "レイトウサカナ",
+    "desc": "冷凍保存された戦闘力と旨味。缶詰が腐っても、この魚は腐らない。",
+    "icon": "T_Head_Sword_Kongjun",
+    "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010202,
+    "name": "父祖の遺志",
+    "desc": "とある父の叱咤が刃となった。愛という名の鞭だ――いや、つまりは、父の愛は重いってことだ。",
+    "icon": "T_Head_Sword_Fubei",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010203,
+    "name": "癒しの肉球",
+    "desc": "にゃう～",
+    "icon": "T_Head_Sword_Miaoshou",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010204,
+    "name": "破竹の勢い・片手剣",
+    "desc": "真の達人に武器など不要。折れた竹の一本、枯れ枝のひと振り――それだけで、誰も抗えぬ伝説を刻むことができる。",
+    "icon": "T_Head_Sword_Shiru",
+    "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010205,
+    "name": "飴串・片手剣",
+    "desc": "フルーツ飴を竹串に刺したもの。",
+    "icon": "T_Head_Sword_Tangfu",
+    "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010301,
+    "name": "太陽を呼ぶプレスト",
+    "desc": "お日さまはどこに？お日さまはどこに？お日さまは、私たちの手のひらの中に。",
+    "icon": "T_Head_Bow_Huanri",
+    "rarity": 5,
+    "unlock": "万華で獲得"
+  },
+  {
+    "id": 3010302,
+    "name": "疑心にゃん影",
+    "desc": "うにゃ！",
+    "icon": "T_Head_Bow_Beigong",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010303,
+    "name": "びくびくにゃんこ",
+    "desc": "みゃあ！",
+    "icon": "T_Head_Bow_jinggong",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010401,
+    "name": "夏夜の弦音",
+    "desc": "ひとすじの澄んだ音色が、少女の浅い夢を覚まし、夏の日の心の弦をそっと奏でた。",
+    "icon": "T_Head_Polearm_Xiaye",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010402,
+    "name": "波踏みの舞曲",
+    "desc": "波しぶきが舞姫のつま先で跳ね、海風が真夏のすべてを運び、クライマックスがこの瞬間に刻まれる。",
+    "icon": "T_Head_Polearm_Talang",
+    "rarity": 5,
+    "unlock": "万華で獲得"
+  },
+  {
+    "id": 3010403,
+    "name": "父祖の遺志・長柄",
+    "desc": "とある父の叱咤が長柄武器となった。愛という名の鞭だ――いや、つまりは、父の愛は重いってことだ。",
+    "icon": "T_Head_Polearm_Fubei",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010404,
+    "name": "猫突猛進",
+    "desc": "にゃ――！",
+    "icon": "T_Head_Polearm_Miaotu",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010405,
+    "name": "破竹の勢い・長柄",
+    "desc": "真の達人に武器など不要。折れた竹の一本、枯れ枝のひと振り――それだけで、誰も抗えぬ伝説を刻むことができる。",
+    "icon": "T_Head_Polearm_Shiru",
+    "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010406,
+    "name": "飴串・長柄",
+    "desc": "フルーツ飴を竹串に刺したもの。",
+    "icon": "T_Head_Polearm_Tangfu",
+    "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010407,
+    "name": "青空の龍吟・長柄",
+    "desc": "俗世の喧騒に染まらず、碧い波を切り裂いて進む。",
+    "icon": "T_Head_Polearm_Bixiao",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010501,
+    "name": "ホワイトシャーク",
+    "desc": "サメちゃんはヘンな企みがあるわけじゃない。",
+    "icon": "T_Head_Machinegun_Dalang",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010502,
+    "name": "ビリビリネコ1号",
+    "desc": "にゃ♪にゃにゃ～♪にゃん♪",
+    "icon": "T_Head_Machinegun_Dianju",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010503,
+    "name": "青空の龍吟・ライフル",
+    "desc": "俗世の喧騒に染まらず、碧い波を切り裂いて進む。",
+    "icon": "T_Head_Machinegun_Bixiao",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010601,
+    "name": "父祖の遺志・双剣",
+    "desc": "とある父の叱咤が双剣となった。愛という名の鞭だ――いや、つまりは、父の愛は重いってことだ。",
+    "icon": "T_Head_Dualblade_Fubei",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010603,
+    "name": "こそこそにゃんこ",
+    "desc": "みゃうにゃ～",
+    "icon": "T_Head_Dualblade_Maomao",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010605,
+    "name": "破竹の勢い・双剣",
+    "desc": "真の達人に武器など不要。折れた竹の一本、枯れ枝のひと振り――それだけで、誰も抗えぬ伝説を刻むことができる。",
+    "icon": "T_Head_Dualblade_Shiru",
+    "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010607,
+    "name": "飴串・双剣",
+    "desc": "フルーツ飴を竹串に刺したもの。",
+    "icon": "T_Head_Dualblade_Tangfu",
+    "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010701,
+    "name": "父祖の遺志・太刀",
+    "desc": "とある父の叱咤が太刀となった。愛という名の鞭だ――いや、つまりは、父の愛は重いってことだ。",
+    "icon": "T_Head_Katana_Fubei",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010703,
+    "name": "吾輩はにゃんこ",
+    "desc": "にゃーにゃーにゃお〜。にゃんにゃんみゃーにゃーにゃんにゃー、にゃんにゃんみーみーにゃっ♪",
+    "icon": "T_Head_Katana_Woshi",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010705,
+    "name": "破竹の勢い・太刀",
+    "desc": "真の達人に武器など不要。折れた竹の一本、枯れ枝のひと振り――それだけで、誰も抗えぬ伝説を刻むことができる。",
+    "icon": "T_Head_Katana_Shiru",
+    "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010707,
+    "name": "飴串・太刀",
+    "desc": "フルーツ飴を竹串に刺したもの。",
+    "icon": "T_Head_Katana_Tangfu",
+    "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010801,
+    "name": "父祖の遺志・ウィップブレード",
+    "desc": "とある父の叱咤がウィップブレードとなった。愛という名の鞭だ――いや、つまりは、父の愛は重いってことだ。",
+    "icon": "T_Head_Swordwhip_Fubei",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010802,
+    "name": "ネコウィンナー",
+    "desc": "に゛ゃ゛に゛ゃ゛に゛ゃ゛〜〜！！",
+    "icon": "T_Head_Swordwhip_Miaomiao",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010803,
+    "name": "破竹の勢い・ウィップブレード",
+    "desc": "真の達人に武器など不要。折れた竹の一本、枯れ枝のひと振り――それだけで、誰も抗えぬ伝説を刻むことができる。",
+    "icon": "T_Head_Swordwhip_Shiru",
+    "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010804,
+    "name": "飴串・ウィップブレード",
+    "desc": "フルーツ飴を竹串に刺したもの。",
+    "icon": "T_Head_Swordwhip_Tangfu",
+    "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010805,
+    "name": "青空の龍吟・ウィップブレード",
+    "desc": "俗世の喧騒に染まらず、碧い波を切り裂いて進む。",
+    "icon": "T_Head_Swordwhip_Bixiao",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010901,
+    "name": "茶トラの天下",
+    "desc": "にゃ～～～",
+    "icon": "T_Head_Cannon_Daju",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3011001,
+    "name": "ビリビリネコ2号",
+    "desc": "にゃう♪にゃにゃ～♪にゃん♪",
+    "icon": "T_Head_Shotgun_Dianju",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3011101,
+    "name": "もちねこ1号",
+    "desc": "にゃ。",
+    "icon": "T_Head_Pistol_Maobing",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3011201,
+    "name": "もちねこ2号",
+    "desc": "にゃにゃ。",
+    "icon": "T_Head_Crossbow_Maobing",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  }
+]

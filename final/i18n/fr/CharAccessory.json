@@ -1,0 +1,2258 @@
+[
+  {
+    "id": 10001,
+    "name": "Petit Pioupiou",
+    "desc": "Héros du célèbre conte « <I>L’Étrange Aventure de Pioupiou</> », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
+    "icon": "T_Fashion_Head_YellowChick",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 10002,
+    "name": "Petit Pioupiou – Blanc ivoire",
+    "desc": "Héros du célèbre conte « <I>L’Étrange Aventure de Pioupiou</> », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
+    "icon": "T_Fashion_Head_WhiteChick",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 10003,
+    "name": "Petit Pioupiou – Caramel",
+    "desc": "Héros du célèbre conte « <I>L’Étrange Aventure de Pioupiou</> », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
+    "icon": "T_Fashion_Head_BrownChick",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 10004,
+    "name": "Petit Pioupiou – Bleu indigo",
+    "desc": "Héros du célèbre conte « <I>L’Étrange Aventure de Pioupiou</> », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
+    "icon": "T_Fashion_Head_BlackChick",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 10005,
+    "name": "Jeune pousse verte",
+    "desc": "À ne surtout pas consommer !",
+    "icon": "T_Fashion_Head_Sprout",
+    "rarity": 3,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 10006,
+    "name": "Jeune pousse verte – Doré",
+    "desc": "À ne surtout pas consommer !",
+    "icon": "T_Fashion_Head_YellowSprout",
+    "rarity": 3,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 10007,
+    "name": "Jeune pousse verte – Bleu céleste",
+    "desc": "À ne surtout pas consommer !",
+    "icon": "T_Fashion_Head_BlueSprout",
+    "rarity": 3,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 10008,
+    "name": "Jeune pousse verte – Rouille",
+    "desc": "À ne surtout pas consommer !",
+    "icon": "T_Fashion_Head_RedSprout",
+    "rarity": 3,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 10009,
+    "name": "Cinder",
+    "desc": "Infusé de l’inspiration et de la fougue de Luno, la forgeronne, ce Cinder portatif évoque sans cesse la fournaise ardente qu’il attise de ses battements.",
+    "icon": "T_Fashion_Head_Wuwu",
+    "rarity": 4,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10010,
+    "name": "Nœud papillon",
+    "desc": "Symbole de noblesse, incarnation des bonnes manières... ou peut-être simplement un papillon incapable de s’envoler.",
+    "icon": "T_Fashion_Head_Bow",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10011,
+    "name": "Nœud papillon – Blanc ivoire",
+    "desc": "Symbole de noblesse, incarnation des bonnes manières... ou peut-être simplement un papillon incapable de s’envoler.",
+    "icon": "T_Fashion_Head_SilverBow",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
+    "id": 10012,
+    "name": "Nœud papillon – Rouille",
+    "desc": "Symbole de noblesse, incarnation des bonnes manières... ou peut-être simplement un papillon incapable de s’envoler.",
+    "icon": "T_Fashion_Head_RedBow",
+    "rarity": 4,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10013,
+    "name": "Nœud papillon – Blanc sakura",
+    "desc": "Symbole de noblesse, incarnation des bonnes manières... ou peut-être simplement un papillon incapable de s’envoler.",
+    "icon": "T_Fashion_Head_PinkBow",
+    "rarity": 4,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10015,
+    "name": "Peluche Lunoeggy",
+    "desc": "Sous la coquille... encore une coquille. Et sous la coquille ? Toujours une coquille. Absolument pas une Luno. Vraiment pas.",
+    "icon": "T_Fashion_Head_EggJiao",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10016,
+    "name": "Humeur – Pétillante",
+    "desc": "Voici mon humeur du jour.",
+    "icon": "T_Fashion_Head_Bubble",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10017,
+    "name": "Humeur – Neigeuse",
+    "desc": "Voici mon humeur du jour.",
+    "icon": "T_Fashion_Head_Snow",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10018,
+    "name": "Humeur – Pluvieuse",
+    "desc": "Voici mon humeur du jour.",
+    "icon": "T_Fashion_Head_Rain",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10019,
+    "name": "Humeur – Arc-en-ciel",
+    "desc": "Voici mon humeur du jour.",
+    "icon": "T_Fashion_Head_Rainbow",
+    "rarity": 4,
+    "unlock": "Source : Coffret de départ IV"
+  },
+  {
+    "id": 10020,
+    "name": "Casse-tête",
+    "desc": "Avec ça, vous deviendrez prodigieusement doué pour \"creuser\" les problèmes.",
+    "icon": "T_Fashion_Head16",
+    "rarity": 4,
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
+  },
+  {
+    "id": 10021,
+    "name": "Masque de l’aube – Doré",
+    "desc": "Un masque honorant les anciens de Huaxu. Le porter, c’est contempler une vision grandiose : des myriades de guerriers en armure, visages voilés, sculptant l’aube du monde pour un avenir de paix éternelle.",
+    "icon": "T_Fashion_Head_GoldenMask",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 10022,
+    "name": "Masque de l’aube – Gris plomb",
+    "desc": "Un masque honorant les anciens de Huaxu. Le porter, c’est contempler une vision grandiose : des myriades de guerriers en armure, visages voilés, sculptant l’aube du monde pour un avenir de paix éternelle.",
+    "icon": "T_Fashion_Head_SilverMask",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 10023,
+    "name": "Masque de fertilité",
+    "desc": "Autrefois, il servait à converser avec les divinités en quête de prospérité. Aujourd’hui, ceux qui attendent encore la grâce du miracle tournent leurs prières vers la haute tour d’Élysium, quelque part au loin.",
+    "icon": "T_Fashion_Head_FoxMask",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 10024,
+    "name": "En attente éternelle",
+    "desc": "La personne que vous tentez de joindre est indisponible. Aujourd’hui, demain... et pour toujours.",
+    "icon": "T_Fashion_Head18",
+    "rarity": 4,
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
+  },
+  {
+    "id": 10026,
+    "name": "Virtuose publicitaire - Indigo",
+    "desc": "La publicité infiltre chaque recoin de votre vie. Même ici. Et non : vous ne pouvez pas la passer.",
+    "icon": "T_Fashion_Head19",
+    "rarity": 4,
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
+  },
+  {
+    "id": 10027,
+    "name": "Virtuose publicitaire - Émeraude",
+    "desc": "La publicité infiltre chaque recoin de votre vie. Même ici. Et non : vous ne pouvez pas la passer.",
+    "icon": "T_Fashion_Head20",
+    "rarity": 4,
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
+  },
+  {
+    "id": 10028,
+    "name": "Instant de génie",
+    "desc": "Une étincelle... qui en annonce mille autres.",
+    "icon": "T_Fashion_Head17",
+    "rarity": 4,
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
+  },
+  {
+    "id": 10029,
+    "name": "Contes de Givrelac",
+    "desc": "Un petit cadeau promotionnel offert avec chaque verre de « Contes de Givrelac ».",
+    "icon": "T_Fashion_Head21",
+    "rarity": 4,
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
+  },
+  {
+    "id": 10030,
+    "name": "Ombrelle élégante",
+    "desc": "En théorie : une adorable ombrelle coupe-vent et coupe-pluie.\nEn pratique : un peu plus petite que sur la photo... vraiment plus petite.",
+    "icon": "T_Fashion_Head09",
+    "rarity": 4,
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
+  },
+  {
+    "id": 10031,
+    "name": "Halo solaire",
+    "desc": "Même la lave ne saurait consumer une larme ardente de ferveur.",
+    "icon": "T_Fashion_Weapon11",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10032,
+    "name": "Nœud en ruban",
+    "desc": "Deux ailes de soie dansant au vent — en quête de la chevelure où elles se poseront.",
+    "icon": "T_Fashion_Head07",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 10035,
+    "name": "Ornement chaton",
+    "desc": "Vif, adorable, espiègle, splendide... Tous les mots manquent pour capturer l’irrésistible magie de ces oreilles félines.",
+    "icon": "T_Fashion_Head_CatEar",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10037,
+    "name": "Humeur – Approuvé",
+    "desc": "Voici mon humeur du jour.",
+    "icon": "T_Fashion_Head13",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10038,
+    "name": "Humeur – Émerveillement",
+    "desc": "Voici mon humeur du jour.",
+    "icon": "T_Fashion_Head14",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10039,
+    "name": "Humeur – Perplexe",
+    "desc": "Voici mon humeur du jour.",
+    "icon": "T_Fashion_Head10",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10040,
+    "name": "Humeur – Résignation",
+    "desc": "Voici mon humeur du jour.",
+    "icon": "T_Fashion_Head15",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10041,
+    "name": "Humeur – Colère",
+    "desc": "Voici mon humeur du jour.",
+    "icon": "T_Fashion_Head02",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10042,
+    "name": "Humeur – Inspiration",
+    "desc": "Voici mon humeur du jour.",
+    "icon": "T_Fashion_Head01",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10043,
+    "name": "Humeur – Admiration",
+    "desc": "Voici mon humeur du jour.",
+    "icon": "T_Fashion_Head03",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10044,
+    "name": "Humeur – Erreur",
+    "desc": "Voici mon humeur du jour.",
+    "icon": "T_Fashion_Head11",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10045,
+    "name": "Humeur – Correct",
+    "desc": "Voici mon humeur du jour.",
+    "icon": "T_Fashion_Head12",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10046,
+    "name": "Ornement chaton – Jade noir",
+    "desc": "Vif, adorable, espiègle, splendide... Tous les mots manquent pour capturer l’irrésistible magie de ces oreilles félines.",
+    "icon": "T_Fashion_Head_DarkCatEar",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10047,
+    "name": "Ornement chaton – Blanc sakura",
+    "desc": "Vif, adorable, espiègle, splendide... Tous les mots manquent pour capturer l’irrésistible magie de ces oreilles félines.",
+    "icon": "T_Fashion_Head_PinkCatEar",
+    "rarity": 4,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10048,
+    "name": "Ornement chaton – Gris plomb",
+    "desc": "Vif, adorable, espiègle, splendide... Tous les mots manquent pour capturer l’irrésistible magie de ces oreilles félines.",
+    "icon": "T_Fashion_Head_GreyCatEar",
+    "rarity": 4,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10049,
+    "name": "Halo Givre-Étoilé",
+    "desc": "Un diadème baigné de lueurs boréales, témoin des serments les plus doux.",
+    "icon": "T_Fashion_Head26",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10050,
+    "name": "Rossignol des songes",
+    "desc": "L’oiseau a quitté son nid douillet. Quelle histoire rapportera-t-il cette fois ?",
+    "icon": "T_Fashion_Head22",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10052,
+    "name": "Ornement porte-bonheur",
+    "desc": "Certains habitants de Huaxu semblent nourrir une affection singulière pour une créature arthropode ancienne et tenace — un attachement que cet ornement laisse entrevoir.",
+    "icon": "T_Fashion_Head27",
+    "rarity": 4,
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
+  },
+  {
+    "id": 10053,
+    "name": "Lunettes d’été – Jade noir",
+    "desc": "Même le soleil le plus ardent ne saurait nous empêcher d’emporter tout un été dans notre regard.",
+    "icon": "T_Fashion_Head28",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10054,
+    "name": "Lunettes d’été – Rouille",
+    "desc": "Même le soleil le plus ardent ne saurait nous empêcher d’emporter tout un été dans notre regard.",
+    "icon": "T_Fashion_Head30",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10055,
+    "name": "Lunettes d’été – Blanc sakura",
+    "desc": "Même le soleil le plus ardent ne saurait nous empêcher d’emporter tout un été dans notre regard.",
+    "icon": "T_Fashion_Head29",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10056,
+    "name": "Trophée de chasse de Zhuyin – Pourpre profond",
+    "desc": "Tout est déjà scellé. Rien ne peut être défait.",
+    "icon": "T_Fashion_Head33_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10057,
+    "name": "Ornement de Phoxène – Jade noir",
+    "desc": "Après avoir écouté le récit du vieux voyageur, certains vouèrent au Phoxène une dévotion presque fanatique. Porter cet ornement est l’une des façons d’exprimer cette fascination.",
+    "icon": "T_Fashion_Head24",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10058,
+    "name": "Rossignol des songes – Blanc ivoire",
+    "desc": "L’oiseau a quitté son nid douillet. Quelle histoire rapportera-t-il cette fois ?",
+    "icon": "T_Fashion_Head22_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10059,
+    "name": "Rossignol des songes – Blanc sakura",
+    "desc": "L’oiseau a quitté son nid douillet. Quelle histoire rapportera-t-il cette fois ?",
+    "icon": "T_Fashion_Head22_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10060,
+    "name": "Rossignol des songes – Jaune abricot",
+    "desc": "L’oiseau a quitté son nid douillet. Quelle histoire rapportera-t-il cette fois ?",
+    "icon": "T_Fashion_Head22_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10061,
+    "name": "Trophée de chasse de Zhuyin – Doré",
+    "desc": "Tout est déjà scellé. Rien ne peut être défait.",
+    "icon": "T_Fashion_Head33_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10062,
+    "name": "Trophée de chasse de Zhuyin – Blanc ivoire",
+    "desc": "Tout est déjà scellé. Rien ne peut être défait.",
+    "icon": "T_Fashion_Head33_04",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10063,
+    "name": "Trophée de chasse de Zhuyin – Rouille",
+    "desc": "Tout est déjà scellé. Rien ne peut être défait.",
+    "icon": "T_Fashion_Head33_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10064,
+    "name": "Lunettes d’été – Doré",
+    "desc": "Même le soleil le plus ardent ne saurait nous empêcher d’emporter tout un été dans notre regard.",
+    "icon": "T_Fashion_Head31",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10065,
+    "name": "Ornement de Phoxène – Caramel",
+    "desc": "Après avoir écouté le récit du vieux voyageur, certains vouèrent au Phoxène une dévotion presque fanatique. Porter cet ornement est l’une des façons d’exprimer cette fascination.",
+    "icon": "T_Fashion_Head25",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10066,
+    "name": "Ornement de Phoxène – Blanc ivoire",
+    "desc": "Après avoir écouté le récit du vieux voyageur, certains vouèrent au Phoxène une dévotion presque fanatique. Porter cet ornement est l’une des façons d’exprimer cette fascination.",
+    "icon": "T_Fashion_Head23",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10067,
+    "name": "Abondance prospère",
+    "desc": "我恭喜你发财~",
+    "icon": "T_Fashion_Head34",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10068,
+    "name": "诸天月相·鎏金",
+    "desc": "予天理以终结。",
+    "icon": "T_Fashion_Head39",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10069,
+    "name": "诸天月相·绛紫",
+    "desc": "予天理以终结。",
+    "icon": "T_Fashion_Head39_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10070,
+    "name": "诸天月相·铅灰",
+    "desc": "予天理以终结。",
+    "icon": "T_Fashion_Head39_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10071,
+    "name": "诸天月相·晴蓝",
+    "desc": "予天理以终结。",
+    "icon": "T_Fashion_Head39_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10072,
+    "name": "神行发饰·涅白",
+    "desc": "步步生风，心想事成。",
+    "icon": "T_Fashion_Head36",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10073,
+    "name": "神行发饰·杏黄",
+    "desc": "步步生风，心想事成。",
+    "icon": "T_Fashion_Head36_01",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10074,
+    "name": "神行发饰·焦糖",
+    "desc": "步步生风，心想事成。",
+    "icon": "T_Fashion_Head36_03",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10075,
+    "name": "神行发饰·墨玉",
+    "desc": "步步生风，心想事成。",
+    "icon": "T_Fashion_Head36_02",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10076,
+    "name": "雀翎发饰·薄荷",
+    "desc": "一屏翠羽揽日月，万眸金辉映山河。",
+    "icon": "T_Fashion_Head35",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10077,
+    "name": "雀翎发饰·涅白",
+    "desc": "一屏翠羽揽日月，万眸金辉映山河。",
+    "icon": "T_Fashion_Head35_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10078,
+    "name": "雀翎发饰·绛紫",
+    "desc": "一屏翠羽揽日月，万眸金辉映山河。",
+    "icon": "T_Fashion_Head35_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10079,
+    "name": "雀翎发饰·锈红",
+    "desc": "一屏翠羽揽日月，万眸金辉映山河。",
+    "icon": "T_Fashion_Head35_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10080,
+    "name": "星霜王冠·鎏金",
+    "desc": "在群星与霜雪的祝福下加冕。",
+    "icon": "T_Fashion_Head38_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10081,
+    "name": "星霜王冠·铅灰",
+    "desc": "在群星与霜雪的祝福下加冕。",
+    "icon": "T_Fashion_Head38_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10082,
+    "name": "星霜王冠·墨玉",
+    "desc": "在群星与霜雪的祝福下加冕。",
+    "icon": "T_Fashion_Head38",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10083,
+    "name": "兔绒发饰·涅白",
+    "desc": "要来点兔子吗？",
+    "icon": "T_Fashion_Head37",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10084,
+    "name": "兔绒发饰·焦糖",
+    "desc": "要来点兔子吗？",
+    "icon": "T_Fashion_Head37_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10085,
+    "name": "兔绒发饰·墨玉",
+    "desc": "要来点兔子吗？",
+    "icon": "T_Fashion_Head37_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10086,
+    "name": "兔绒发饰·黛蓝",
+    "desc": "要来点兔子吗？",
+    "icon": "T_Fashion_Head37_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10087,
+    "name": "银鳞鱼",
+    "desc": "银鳞鱼与玉鳞鱼与红鳞鱼与死鳞鱼，这到底是什么鱼？",
+    "icon": "T_Fashion_Head40",
+    "rarity": 4,
+    "unlock": "通过活动获得"
+  },
+  {
+    "id": 10088,
+    "name": "死鱗鱼",
+    "desc": "银鳞鱼与玉鳞鱼与红鳞鱼与死鳞鱼，这到底是什么鱼？",
+    "icon": "T_Fashion_Head44",
+    "rarity": 4,
+    "unlock": "通过活动获得"
+  },
+  {
+    "id": 10089,
+    "name": "红鳞鱼",
+    "desc": "银鳞鱼与玉鳞鱼与红鳞鱼与死鳞鱼，这到底是什么鱼？",
+    "icon": "T_Fashion_Head41",
+    "rarity": 4,
+    "unlock": "通过活动获得"
+  },
+  {
+    "id": 11001,
+    "name": "UI_Accessory_Name_11001",
+    "desc": "UI_Accessory_Desc_11001",
+    "icon": "",
+    "rarity": 0,
+    "unlock": ""
+  },
+  {
+    "id": 11002,
+    "name": "Floraison stellaire",
+    "desc": "Les feux d’artifice en pleine floraison emportent mon âme, la plongeant dans un océan d’étoiles solitaire.",
+    "icon": "T_Fashion_Fx07_01",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 11003,
+    "name": "Semer l’Été",
+    "desc": "Une graine d’été chute depuis les nuages, et, entre éclaboussures et sable brûlant, fait éclore une éternité fugace.",
+    "icon": "T_Fashion_Fx08_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 11004,
+    "name": "星落如雨",
+    "desc": "疑是赤龙衔燧木，偷来星雨种人间。",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 12001,
+    "name": "釉色铭",
+    "desc": "这青蓝的茶盏，装的是半生风雨，端的是一顶山河。",
+    "icon": "T_Fashion_Hat03",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
+    "id": 12002,
+    "name": "雨中行",
+    "desc": "不大不小的帽檐，刚好足以在朦胧雨雾里徐行。",
+    "icon": "T_Fashion_Hat04",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
+    "id": 12003,
+    "name": "致候晴空",
+    "desc": "将理想与未来掷向苍穹。",
+    "icon": "T_Fashion_Hat01",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
+    "id": 12004,
+    "name": "柔风吹拂",
+    "desc": "回廊转角处，发带在柔风中轻摇。",
+    "icon": "T_Fashion_Hat02",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
+    "id": 12121,
+    "name": "Vœu de la nuit étoilée",
+    "desc": "À la saison où le jour est le plus court, lorsque les clochettes résonnent, chacun confie ses vœux au ciel nocturne, les laissant s’envoler, portés par l’éclat des étoiles, vers l’avenir.",
+    "icon": "T_Fashion_Head46",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
+    "id": 12122,
+    "name": "乌乌头套",
+    "desc": "现在，谁是真的乌乌？",
+    "icon": "T_Fashion_Head48",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12123,
+    "name": "魔王头套",
+    "desc": "现在，谁是真的光之魔王大人？",
+    "icon": "T_Fashion_Head49",
+    "rarity": 4,
+    "unlock": "通过活动获得"
+  },
+  {
+    "id": 12124,
+    "name": "奇妙纸袋·本色",
+    "desc": "套上纸袋以后仿佛有种神奇的魔力，让人不再压抑自己的天性。",
+    "icon": "T_Fashion_Head50",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13001,
+    "name": "神行腰饰·涅白",
+    "desc": "步步生风，心想事成。",
+    "icon": "T_Fashion_Waist16",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13002,
+    "name": "神行腰饰·杏黄",
+    "desc": "步步生风，心想事成。",
+    "icon": "T_Fashion_Waist16_01",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13003,
+    "name": "神行腰饰·焦糖",
+    "desc": "步步生风，心想事成。",
+    "icon": "T_Fashion_Waist16_03",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13004,
+    "name": "神行腰饰·墨玉",
+    "desc": "步步生风，心想事成。",
+    "icon": "T_Fashion_Waist16_02",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13005,
+    "name": "墨玉纸伞·鎏金",
+    "desc": "以夜色为面，敛尽江湖烟雨。",
+    "icon": "T_Fashion_Waist17",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13006,
+    "name": "墨玉纸伞·墨玉",
+    "desc": "以夜色为面，敛尽江湖烟雨。",
+    "icon": "T_Fashion_Waist17_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13007,
+    "name": "墨玉纸伞·锈红",
+    "desc": "以夜色为面，敛尽江湖烟雨。",
+    "icon": "T_Fashion_Waist17_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13008,
+    "name": "墨玉纸伞·黛蓝",
+    "desc": "以夜色为面，敛尽江湖烟雨。",
+    "icon": "T_Fashion_Waist17_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13009,
+    "name": "短喵喵腰饰·涅白",
+    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在猫尾巴的面前都会显得黯淡无光，这就是猫尾巴那让人无法拒绝的魔力。",
+    "icon": "T_Fashion_Waist11",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13010,
+    "name": "短喵喵腰饰·墨玉",
+    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在猫尾巴的面前都会显得黯淡无光，这就是猫尾巴那让人无法拒绝的魔力。",
+    "icon": "T_Fashion_Waist11_02",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13011,
+    "name": "短喵喵腰饰·白樱",
+    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在猫尾巴的面前都会显得黯淡无光，这就是猫尾巴那让人无法拒绝的魔力。",
+    "icon": "T_Fashion_Waist11_01",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13012,
+    "name": "短喵喵腰饰·铅灰",
+    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在猫尾巴的面前都会显得黯淡无光，这就是猫尾巴那让人无法拒绝的魔力。",
+    "icon": "T_Fashion_Waist11_03",
+    "rarity": 4,
+    "unlock": "通过活动获得"
+  },
+  {
+    "id": 13013,
+    "name": "长喵喵腰饰·涅白",
+    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在猫尾巴的面前都会显得黯淡无光，这就是猫尾巴那让人无法拒绝的魔力。",
+    "icon": "T_Fashion_Waist10",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13014,
+    "name": "长喵喵腰饰·墨玉",
+    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在猫尾巴的面前都会显得黯淡无光，这就是猫尾巴那让人无法拒绝的魔力。",
+    "icon": "T_Fashion_Waist10_02",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13015,
+    "name": "长喵喵腰饰·白樱",
+    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在猫尾巴的面前都会显得黯淡无光，这就是猫尾巴那让人无法拒绝的魔力。",
+    "icon": "T_Fashion_Waist10_01",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13016,
+    "name": "长喵喵腰饰·铅灰",
+    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在猫尾巴的面前都会显得黯淡无光，这就是猫尾巴那让人无法拒绝的魔力。",
+    "icon": "T_Fashion_Waist10_03",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13017,
+    "name": "兔绒腰饰·涅白",
+    "desc": "要来点兔子吗？",
+    "icon": "T_Fashion_Waist14",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13018,
+    "name": "兔绒腰饰·焦糖",
+    "desc": "要来点兔子吗？",
+    "icon": "T_Fashion_Waist14_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13019,
+    "name": "兔绒腰饰·墨玉",
+    "desc": "要来点兔子吗？",
+    "icon": "T_Fashion_Waist14_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13020,
+    "name": "兔绒腰饰·黛蓝",
+    "desc": "要来点兔子吗？",
+    "icon": "T_Fashion_Waist14_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20001,
+    "name": "Lunettes de sage",
+    "desc": "La sagesse s’inscrit dans le cercle parfait de ces montures, amplifiant l’aura clairvoyante de celle ou celui qui les porte.",
+    "icon": "T_Fashion_Face_Glasses",
+    "rarity": 4,
+    "unlock": "Source : Coffret de départ I"
+  },
+  {
+    "id": 20002,
+    "name": "Lunettes de sage – Rouille",
+    "desc": "La sagesse s’inscrit dans le cercle parfait de ces montures, amplifiant l’aura clairvoyante de celle ou celui qui les porte.",
+    "icon": "T_Fashion_Face_RedGlasses",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 20003,
+    "name": "Lunettes de sage – Gris plomb",
+    "desc": "La sagesse s’inscrit dans le cercle parfait de ces montures, amplifiant l’aura clairvoyante de celle ou celui qui les porte.",
+    "icon": "T_Fashion_Face_TransparentGlasses",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 20004,
+    "name": "Lunettes de sage – Caramel",
+    "desc": "La sagesse s’inscrit dans le cercle parfait de ces montures, amplifiant l’aura clairvoyante de celle ou celui qui les porte.",
+    "icon": "T_Fashion_Face_HawksbillGlasses",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 20005,
+    "name": "Bandeau de l’ascète",
+    "desc": "Les yeux ne sont que des voiles qui entravent notre capacité à ressentir véritablement le monde.",
+    "icon": "T_Fashion_Face_EyeMask",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20006,
+    "name": "Bandeau de l’ascète – Blanc ivoire",
+    "desc": "Les yeux ne sont que des voiles qui entravent notre capacité à ressentir véritablement le monde.",
+    "icon": "T_Fashion_Face_WhiteBandage",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20007,
+    "name": "Bandeau de l’ascète – Rouille",
+    "desc": "Les yeux ne sont que des voiles qui entravent notre capacité à ressentir véritablement le monde.",
+    "icon": "T_Fashion_Face_RedBandage",
+    "rarity": 4,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 20008,
+    "name": "Papillon arc-en-ciel",
+    "desc": "Un papillon qui danse dans l’orage, veillant silencieusement sur ceux que la foudre effraie, jusqu’à ce que le tonnerre se taise et que la peur se dissipe.",
+    "icon": "T_Fashion_Face_Butterfly01",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 20009,
+    "name": "Papillon arc-en-ciel – Bleu céleste",
+    "desc": "Un papillon qui danse dans l’orage, veillant silencieusement sur ceux que la foudre effraie, jusqu’à ce que le tonnerre se taise et que la peur se dissipe.",
+    "icon": "T_Fashion_Face_WhiteButterfly01",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 20010,
+    "name": "Papillon arc-en-ciel – Blanc sakura",
+    "desc": "Un papillon qui danse dans l’orage, veillant silencieusement sur ceux que la foudre effraie, jusqu’à ce que le tonnerre se taise et que la peur se dissipe.",
+    "icon": "T_Fashion_Face_PinkButterfly01",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 20011,
+    "name": "Papillon arc-en-ciel – Gris plomb",
+    "desc": "Un papillon qui danse dans l’orage, veillant silencieusement sur ceux que la foudre effraie, jusqu’à ce que le tonnerre se taise et que la peur se dissipe.",
+    "icon": "T_Fashion_Face_BlackButterfly01",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 20012,
+    "name": "Papillon des brumes",
+    "desc": "Chez certains clans Charon, on raconte que ces papillons naissent chaque jour des fleurs blanches de la Mère Embla, avant de se dissoudre dans les brumes crépusculaires du Père Ask.",
+    "icon": "T_Fashion_Face_Butterfly02",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 20013,
+    "name": "Papillon des brumes – Menthe",
+    "desc": "Chez certains clans Charon, on raconte que ces papillons naissent chaque jour des fleurs blanches de la Mère Embla, avant de se dissoudre dans les brumes crépusculaires du Père Ask.",
+    "icon": "T_Fashion_Face_CyanButterfly02",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 20014,
+    "name": "Papillon des brumes – Rouille",
+    "desc": "Chez certains clans Charon, on raconte que ces papillons naissent chaque jour des fleurs blanches de la Mère Embla, avant de se dissoudre dans les brumes crépusculaires du Père Ask.",
+    "icon": "T_Fashion_Face_RedButterfly02",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 20015,
+    "name": "Papillon des brumes – Gris plomb",
+    "desc": "Chez certains clans Charon, on raconte que ces papillons naissent chaque jour des fleurs blanches de la Mère Embla, avant de se dissoudre dans les brumes crépusculaires du Père Ask.",
+    "icon": "T_Fashion_Face_GreyButterfly02",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 20016,
+    "name": "Bandage d’urgence",
+    "desc": "Quand la douleur frappe, appliquez-le sans attendre.",
+    "icon": "T_Fashion_Face_Bandage",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20017,
+    "name": "Bandage d’urgence – Jade noir",
+    "desc": "Quand la douleur frappe, appliquez-le sans attendre.",
+    "icon": "T_Fashion_Face_BlackBandage",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20018,
+    "name": "Bandage d’urgence – Blanc sakura",
+    "desc": "Quand la douleur frappe, appliquez-le sans attendre.",
+    "icon": "T_Fashion_Face_PinkBandage",
+    "rarity": 4,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 20019,
+    "name": "Bandage d’urgence – Bleu céleste",
+    "desc": "Quand la douleur frappe, appliquez-le sans attendre.",
+    "icon": "T_Fashion_Face_BlueBandage",
+    "rarity": 4,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 20020,
+    "name": "Système de survie",
+    "desc": "Brouillards toxiques, flammes, fumée, sable... Derrière cette structure en apparence rudimentaire se cache tout ce qui, bien souvent, sépare la survie de la mort.",
+    "icon": "T_Fashion_Face_ArmyMask",
+    "rarity": 3,
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
+  },
+  {
+    "id": 20021,
+    "name": "Plume des cieux",
+    "desc": "Le désir de voler s’enracine dans la cage de chair, et ces ailes entrouvertes murmurent le rêve de liberté.",
+    "icon": "T_Fashion_Face_Wing",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 20022,
+    "name": "Fleur magique inversée - Rouille",
+    "desc": "L’on ne saura jamais si, au prochain battement de paupières, apparaîtra une colombe... ou une rose.",
+    "icon": "T_Fashion_Face_RedFlower",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 20023,
+    "name": "Fleur magique droite - Ivoire",
+    "desc": "L’on ne saura jamais si, au prochain battement de paupières, apparaîtra une colombe... ou une rose.",
+    "icon": "T_Fashion_Face_WhiteFlower",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 20024,
+    "name": "Moustache de Luno, la forgeronne",
+    "desc": "Une fausse moustache conférant à celle qui la porte une prestance tranquille. Il suffit toutefois de la presser deux fois de temps à autre, afin d’éviter qu’elle ne se détache.",
+    "icon": "T_Fashion_Face_Beard",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 20025,
+    "name": "Valve de perception",
+    "desc": "Ouvrez votre regard... et laissez le monde se dévoiler.",
+    "icon": "T_Fashion_Face_Valve",
+    "rarity": 4,
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
+  },
+  {
+    "id": 20026,
+    "name": "Hier s’est éteint",
+    "desc": "Même si le passé s’est effacé, n’oubliez jamais le rêve qui vous porte... ni la trace qu’une vie laisse derrière elle.",
+    "icon": "T_Fashion_Face06",
+    "rarity": 5,
+    "unlock": ""
+  },
+  {
+    "id": 20027,
+    "name": "Monocle du savoir",
+    "desc": "Quand le pendentif rouge frissonne dans le vent, on croirait entendre un chercheur tourner une page et murmurer : « ... hmm. »",
+    "icon": "T_Fashion_Face03",
+    "rarity": 4,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 20028,
+    "name": "Centre de l’attention",
+    "desc": "Vibrant, joyeux... impossible à ignorer.",
+    "icon": "T_Fashion_Face01",
+    "rarity": 4,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 20029,
+    "name": "Œil de bouton",
+    "desc": "Pour celles et ceux qui préfèrent éviter... tout contact visuel.",
+    "icon": "T_Fashion_Face04",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20030,
+    "name": "Bandeau de l’ascète – Caramel",
+    "desc": "Autrefois porté pour défier la lumière. Aujourd’hui relégué, de peur qu’il n’attire à nouveau la colère divine.",
+    "icon": "T_Fashion_Face05",
+    "rarity": 3,
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
+  },
+  {
+    "id": 20031,
+    "name": "Œil de bouton – Blanc sakura",
+    "desc": "Groin~ groin~ groiiiiin~",
+    "icon": "T_Fashion_Face02",
+    "rarity": 4,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 20032,
+    "name": "Œil de bouton – Menthe",
+    "desc": "Les yeux ne sont que des voiles qui entravent notre capacité à ressentir véritablement le monde.",
+    "icon": "T_Fashion_Face09",
+    "rarity": 4,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 20033,
+    "name": "Masque d’Oni déchu",
+    "desc": "Pour celles et ceux qui préfèrent éviter... tout contact visuel.",
+    "icon": "T_Fashion_Face08",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20034,
+    "name": "Baiser de Filbert",
+    "desc": "Pour celles et ceux qui préfèrent éviter... tout contact visuel.",
+    "icon": "T_Fashion_Face07",
+    "rarity": 4,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 20035,
+    "name": "Plume des cieux – Blanc ivoire",
+    "desc": "Le désir de voler s’enracine dans la cage de chair, et ces ailes entrouvertes murmurent le rêve de liberté.",
+    "icon": "T_Fashion_Face10",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 20036,
+    "name": "Rêve-papillon – Bleu indigo",
+    "desc": "Même à travers un voile, le monde foisonnant se laisse sentir.",
+    "icon": "T_Fashion_Face13",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 20037,
+    "name": "Rêve-papillon – Blanc ivoire",
+    "desc": "Même à travers un voile, le monde foisonnant se laisse sentir.",
+    "icon": "T_Fashion_Face11",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 20038,
+    "name": "Rêve-papillon – Jade noir",
+    "desc": "Même à travers un voile, le monde foisonnant se laisse sentir.",
+    "icon": "T_Fashion_Face14",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 20039,
+    "name": "Lunettes réfléchissantes",
+    "desc": "Des cercles de sagesse sertis dans une monture d’une précision implacable, amplifiant à l’infini l’aura de clairvoyance de celui ou celle qui les porte.",
+    "icon": "T_Fashion_Face12",
+    "rarity": 4,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 20040,
+    "name": "Ondes miroitantes – Blanc ivoire",
+    "desc": "Ce qui emplit leur regard... Est-ce une larme, ou bien l’onde douce du clair de lune ?",
+    "icon": "T_Fashion_Face16",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20041,
+    "name": "Barbe de Givre-Étoilé",
+    "desc": "Les enfants, êtes-vous prêts à recevoir vos cadeaux ?",
+    "icon": "T_Fashion_Face17",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20042,
+    "name": "Marque de Zhuyin – Pourpre profond",
+    "desc": "Tout est déjà scellé. Rien ne peut être défait.",
+    "icon": "T_Fashion_Face15",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20043,
+    "name": "Lunettes à écailles draconiques",
+    "desc": "Il tamise la lumière, repousse la poussière, et permet de discerner le vrai du faux.",
+    "icon": "T_Fashion_Face21_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20045,
+    "name": "Ondes miroitantes – Pourpre profond",
+    "desc": "Ce qui emplit leur regard... Est-ce une larme, ou bien l’onde douce du clair de lune ?",
+    "icon": "T_Fashion_Face16_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20046,
+    "name": "Ondes miroitantes – Bleu indigo",
+    "desc": "Ce qui emplit leur regard... Est-ce une larme, ou bien l’onde douce du clair de lune ?",
+    "icon": "T_Fashion_Face16_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20047,
+    "name": "Ondes miroitantes – Blanc sakura",
+    "desc": "Ce qui emplit leur regard... Est-ce une larme, ou bien l’onde douce du clair de lune ?",
+    "icon": "T_Fashion_Face16_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20049,
+    "name": "Marque de Zhuyin – Doré",
+    "desc": "Tout est déjà scellé. Rien ne peut être défait.",
+    "icon": "T_Fashion_Face15_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20050,
+    "name": "Marque de Zhuyin – Blanc ivoire",
+    "desc": "Tout est déjà scellé. Rien ne peut être défait.",
+    "icon": "T_Fashion_Face15_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20051,
+    "name": "Marque de Zhuyin – Rouille",
+    "desc": "Tout est déjà scellé. Rien ne peut être défait.",
+    "icon": "T_Fashion_Face15_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20063,
+    "name": "龙纹墨镜·涅白",
+    "desc": "Il tamise la lumière, repousse la poussière, et permet de discerner le vrai du faux.",
+    "icon": "T_Fashion_Face21_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20064,
+    "name": "龙纹墨镜·绛紫",
+    "desc": "Il tamise la lumière, repousse la poussière, et permet de discerner le vrai du faux.",
+    "icon": "T_Fashion_Face21_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20065,
+    "name": "龙纹墨镜·白樱",
+    "desc": "Il tamise la lumière, repousse la poussière, et permet de discerner le vrai du faux.",
+    "icon": "T_Fashion_Face21",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20066,
+    "name": "执理光轮·鎏金",
+    "desc": "执天理正乱世。",
+    "icon": "T_Fashion_Face20",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20067,
+    "name": "执理光轮·涅白",
+    "desc": "执天理正乱世。",
+    "icon": "T_Fashion_Face20_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20068,
+    "name": "执理光轮·绛紫",
+    "desc": "执天理正乱世。",
+    "icon": "T_Fashion_Face20_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20069,
+    "name": "执理光轮·锈红",
+    "desc": "执天理正乱世。",
+    "icon": "T_Fashion_Face20_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20070,
+    "name": "炫酷墨镜·墨玉",
+    "desc": "我只是个传说。",
+    "icon": "T_Fashion_Face19",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20071,
+    "name": "炫酷墨镜·白樱",
+    "desc": "我只是个传说。",
+    "icon": "T_Fashion_Face19_01",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20072,
+    "name": "炫酷墨镜·铅灰",
+    "desc": "我只是个传说。",
+    "icon": "T_Fashion_Face19_03",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20073,
+    "name": "炫酷墨镜·杏黄",
+    "desc": "我只是个传说。",
+    "icon": "T_Fashion_Face19_02",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20074,
+    "name": "一线风水·鎏金",
+    "desc": "驱邪退恶，破煞消灾。",
+    "icon": "T_Fashion_Face18_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20075,
+    "name": "一线风水·涅白",
+    "desc": "驱邪退恶，破煞消灾。",
+    "icon": "T_Fashion_Face18_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20076,
+    "name": "一线风水·墨玉",
+    "desc": "驱邪退恶，破煞消灾。",
+    "icon": "T_Fashion_Face18",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20077,
+    "name": "一线风水·锈红",
+    "desc": "驱邪退恶，破煞消灾。",
+    "icon": "T_Fashion_Face18_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 21001,
+    "name": "UI_Accessory_Name_21001",
+    "desc": "UI_Accessory_Desc_21001",
+    "icon": "",
+    "rarity": 0,
+    "unlock": ""
+  },
+  {
+    "id": 21002,
+    "name": "Vol interstellaire",
+    "desc": "Voguer entre les étoiles, à l’écoute des murmures immémoriaux du cosmos.",
+    "icon": "T_Fashion_Fx07_02",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 21003,
+    "name": "Course sur les flots",
+    "desc": "D’un pas léger, il effleure les flots et progresse en foulant les vagues.",
+    "icon": "T_Fashion_Fx08_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 21004,
+    "name": "星河游龙",
+    "desc": "逐焰摇光动星汉，垂天银河作游龙。",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 30001,
+    "name": "Lanterne",
+    "desc": "Une lanterne qui porte la lumière à vos côtés, pour que la sérénité accompagne chacun de vos pas.",
+    "icon": "T_Fashion_Back_Lantern",
+    "rarity": 3,
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
+  },
+  {
+    "id": 30002,
+    "name": "Gourde des nuages errants",
+    "desc": "Les nuées se tordent et emportent soleil et lune, dispersant mille pensées. Dans cette gourde repose un univers miniature, où se cachent des myriades d’harmonies.",
+    "icon": "T_Fashion_Waist_Gourd",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30003,
+    "name": "Vagabonds de la Nuit",
+    "desc": "La vie est une barque solitaire dérivant dans la nuit sans fin. Des ronces serrent ses rives, et la rivière déborde d’un chagrin ancien.",
+    "icon": "T_Fashion_Waist_Card",
+    "rarity": 4,
+    "unlock": "Disponible via les missions"
+  },
+  {
+    "id": 30004,
+    "name": "Flacon de Phoxichor",
+    "desc": "Contenant hermétique conçu par les Éolipyliens pour le Phoxichor. Stable, sûr... et prisé des collectionneurs, même vide.",
+    "icon": "T_Fashion_Waist06",
+    "rarity": 3,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 30005,
+    "name": "Lampe de mineur",
+    "desc": "Une lumière dans les profondeurs — plus tenace que la peur, plus fidèle que le souffle.",
+    "icon": "T_Fashion_Waist03",
+    "rarity": 3,
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
+  },
+  {
+    "id": 30006,
+    "name": "Lanterne suspendue",
+    "desc": "Accrochée aux portes pour guider les égarés, les retardataires... et ceux qui cherchent encore leur chemin.",
+    "icon": "T_Fashion_Waist04",
+    "rarity": 3,
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
+  },
+  {
+    "id": 30007,
+    "name": "Souvenirs en spirale",
+    "desc": "Un poireau qui murmure à votre âme : « Allez... encore un tour. »",
+    "icon": "T_Fashion_Waist01",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30008,
+    "name": "Jade yin-yang",
+    "desc": "L’ombre et la lumière s’y étreignent ; le ciel et la terre s’y rejoignent.",
+    "icon": "T_Fashion_Waist02",
+    "rarity": 4,
+    "unlock": "Source : Coffret de départ III"
+  },
+  {
+    "id": 30009,
+    "name": "Dé du destin",
+    "desc": "Lancez-le. Croyez-y. Et recommencez quand il aura ruiné votre journée.",
+    "icon": "T_Fashion_Waist05",
+    "rarity": 4,
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
+  },
+  {
+    "id": 30016,
+    "name": "Voilelune nocturne",
+    "desc": "Forgée sous un clair de lune parfait, cette lame renommée en a retenu l’éclat. Inclinez-la légèrement — et la lumière lunaire ondulera sur son acier.",
+    "icon": "T_Fashion_Waist_Katana",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30017,
+    "name": "Conte de peluche",
+    "desc": "Ce n’est qu’en refermant le livre des contes que la véritable magie commence — le courage transmis par les histoires nous accompagne, même dans un monde qui n’a rien d’un conte.",
+    "icon": "T_Fashion_Waist07",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30018,
+    "name": "Charme du lapin raffiné – Blanc ivoire",
+    "desc": "Une lueur délicate éclaire la nuit, tandis que le clair de lune montre le chemin du retour.",
+    "icon": "T_Fashion_Waist09",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30019,
+    "name": "Bonhomme de Givre-Étoilé",
+    "desc": "Enveloppé des souvenirs chaleureux des enfants, le bonhomme de neige s’assoupit au cœur de la longue nuit d’hiver.",
+    "icon": "T_Fashion_Waist08",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30020,
+    "name": "Sceptre du dragon assoupi",
+    "desc": "Tenir entre ses mains l’autorité des cieux.",
+    "icon": "T_Fashion_Waist15",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30021,
+    "name": "Or, argent... et tigre ?",
+    "desc": "La morale ? Dans les lacs d’Atlasia, on ne repêche jamais ce qu’on y a jeté... seulement ce qu’on ne voulait surtout pas. Un tigre, par exemple.",
+    "icon": "T_Fashion_Head06",
+    "rarity": 4,
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
+  },
+  {
+    "id": 30022,
+    "name": "Conte de peluche – Blanc sakura",
+    "desc": "Ce n’est qu’en refermant le livre des contes que la véritable magie commence — le courage transmis par les histoires nous accompagne, même dans un monde qui n’a rien d’un conte.",
+    "icon": "T_Fashion_Waist07_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30023,
+    "name": "Conte de peluche – Jade noir",
+    "desc": "Ce n’est qu’en refermant le livre des contes que la véritable magie commence — le courage transmis par les histoires nous accompagne, même dans un monde qui n’a rien d’un conte.",
+    "icon": "T_Fashion_Waist07_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30024,
+    "name": "Conte de peluche – Bleu céleste",
+    "desc": "Ce n’est qu’en refermant le livre des contes que la véritable magie commence — le courage transmis par les histoires nous accompagne, même dans un monde qui n’a rien d’un conte.",
+    "icon": "T_Fashion_Waist07_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30025,
+    "name": "Charme du lapin raffiné – Rouille",
+    "desc": "Une lueur délicate éclaire la nuit, tandis que le clair de lune montre le chemin du retour.",
+    "icon": "T_Fashion_Waist09_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30026,
+    "name": "Charme du lapin raffiné – Blanc sakura",
+    "desc": "Une lueur délicate éclaire la nuit, tandis que le clair de lune montre le chemin du retour.",
+    "icon": "T_Fashion_Waist09_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30027,
+    "name": "Charme du lapin raffiné – Doré",
+    "desc": "Une lueur délicate éclaire la nuit, tandis que le clair de lune montre le chemin du retour.",
+    "icon": "T_Fashion_Waist09_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30028,
+    "name": "伏龙节·涅白",
+    "desc": "Tenir entre ses mains l’autorité des cieux.",
+    "icon": "T_Fashion_Waist15_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30029,
+    "name": "伏龙节·绛紫",
+    "desc": "Tenir entre ses mains l’autorité des cieux.",
+    "icon": "T_Fashion_Waist15_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30030,
+    "name": "伏龙节·锈红",
+    "desc": "Tenir entre ses mains l’autorité des cieux.",
+    "icon": "T_Fashion_Waist15_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30031,
+    "name": "神算子",
+    "desc": "金珠轻拨算乾坤。",
+    "icon": "T_Fashion_Waist13",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 31001,
+    "name": "胜利动作·悠游水岸",
+    "desc": "可变更胜利动作。",
+    "icon": "T_Fashion_SettlementAction_01",
+    "rarity": 5,
+    "unlock": ""
+  },
+  {
+    "id": 31002,
+    "name": "胜利动作·睥睨山河",
+    "desc": "可变更胜利动作。",
+    "icon": "T_Fashion_SettlementAction_02",
+    "rarity": 5,
+    "unlock": ""
+  },
+  {
+    "id": 40001,
+    "name": "Joyau caudal de Phoxène",
+    "desc": "La plus infime variation d’humidité n’échappe jamais à la sensibilité de cette queue. Les voyageurs aguerris observent souvent, les soirs de pluie, si un joyau caudal de Phoxène se met à danser en solitaire : signe que les nuées se dissiperont bientôt et que la lune reviendra bénir la route.",
+    "icon": "T_Fashion_Back12",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40002,
+    "name": "Serment de Cambay",
+    "desc": "Lame de protection autant que d’offense, elle porte la dignité et la foi de ses maîtres successifs. À travers les siècles, ce serment d’acier transmet encore les avertissements venus des temps immémoriaux.",
+    "icon": "T_Fashion_Back_Sword",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40003,
+    "name": "Roue de véhicule",
+    "desc": "Donnez-moi un levier — je ferai tourner le monde. Ou, à défaut, cette roue.",
+    "icon": "T_Fashion_Back03",
+    "rarity": 4,
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
+  },
+  {
+    "id": 40005,
+    "name": "Hymne du vent",
+    "desc": "Portée par le vent et ses ailes, elle étreint le ciel — chante, plane, et ne regarde jamais en bas.",
+    "icon": "T_Fashion_Back05",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 40007,
+    "name": "Hymne du vent",
+    "desc": "Porté par des ailes de vent, embrassez le ciel et la liberté.",
+    "icon": "T_Fashion_Back13",
+    "rarity": 5,
+    "unlock": "Source : Coffret de départ II"
+  },
+  {
+    "id": 40008,
+    "name": "Ornement dorsal porte-bonheur",
+    "desc": "Certains habitants de Huaxu semblent nourrir une affection singulière pour une créature arthropode ancienne et tenace — un attachement que cet ornement laisse entrevoir.",
+    "icon": "T_Fashion_Back20",
+    "rarity": 4,
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
+  },
+  {
+    "id": 40009,
+    "name": "Ailes Givre-Étoilé",
+    "desc": "Aussi éthérées soient-elles, ces ailes peuvent encore porter les enfants à travers l’hiver le plus rude.",
+    "icon": "T_Fashion_Back21",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40011,
+    "name": "Clochette de Givre-Étoilé",
+    "desc": "♪ Vive le vent, vive le vent, vive le vent d’hiver ♪",
+    "icon": "T_Fashion_Back19",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40012,
+    "name": "Écaille inversée de Zhuyin – Pourpre profond",
+    "desc": "Tout est déjà scellé. Rien ne peut être défait.",
+    "icon": "T_Fashion_Back22",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40014,
+    "name": "Accessoire dorsal de Plume Porte-Lumière",
+    "desc": "Ô ailes douces comme celles d’un oisillon, emportez mon désir et volez vers l’horizon où brille la lumière.",
+    "icon": "T_Fashion_Back15",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40015,
+    "name": "Accessoire de taille de Plume Porte-Lumière",
+    "desc": "Ô ailes douces comme celles d’un oisillon, emportez mon désir et volez vers l’horizon où brille la lumière.",
+    "icon": "T_Fashion_Back26",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40016,
+    "name": "Accessoire dorsal de Phoxène – Jade noir",
+    "desc": "Après avoir écouté le récit du vieux voyageur, certains vouèrent au Phoxène une dévotion presque fanatique. Porter cet accessoire de taille est l’une des façons d’exprimer cette fascination.",
+    "icon": "T_Fashion_Back17",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40017,
+    "name": "Joyau caudal de Phoxène – Jade noir",
+    "desc": "La plus infime variation d’humidité n’échappe jamais à la sensibilité de cette queue. Les voyageurs aguerris observent souvent, les soirs de pluie, si un joyau caudal de Phoxène se met à danser en solitaire : signe que les nuées se dissiperont bientôt et que la lune reviendra bénir la route.",
+    "icon": "T_Fashion_Back12_04",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40018,
+    "name": "Joyau caudal de Phoxène – Jaune abricot",
+    "desc": "La plus infime variation d’humidité n’échappe jamais à la sensibilité de cette queue. Les voyageurs aguerris observent souvent, les soirs de pluie, si un joyau caudal de Phoxène se met à danser en solitaire : signe que les nuées se dissiperont bientôt et que la lune reviendra bénir la route.",
+    "icon": "T_Fashion_Back12_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40019,
+    "name": "Joyau caudal de Phoxène – Blanc sakura",
+    "desc": "La plus infime variation d’humidité n’échappe jamais à la sensibilité de cette queue. Les voyageurs aguerris observent souvent, les soirs de pluie, si un joyau caudal de Phoxène se met à danser en solitaire : signe que les nuées se dissiperont bientôt et que la lune reviendra bénir la route.",
+    "icon": "T_Fashion_Back12_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40020,
+    "name": "Joyau caudal de Phoxène – Rouille",
+    "desc": "La plus infime variation d’humidité n’échappe jamais à la sensibilité de cette queue. Les voyageurs aguerris observent souvent, les soirs de pluie, si un joyau caudal de Phoxène se met à danser en solitaire : signe que les nuées se dissiperont bientôt et que la lune reviendra bénir la route.",
+    "icon": "T_Fashion_Back12_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40021,
+    "name": "Écaille inversée de Zhuyin – Doré",
+    "desc": "Tout est déjà scellé. Rien ne peut être défait.",
+    "icon": "T_Fashion_Back25",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40022,
+    "name": "Écaille inversée de Zhuyin – Blanc ivoire",
+    "desc": "Tout est déjà scellé. Rien ne peut être défait.",
+    "icon": "T_Fashion_Back23",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40023,
+    "name": "Écaille inversée de Zhuyin – Rouille",
+    "desc": "Tout est déjà scellé. Rien ne peut être défait.",
+    "icon": "T_Fashion_Back24",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40024,
+    "name": "Accessoire dorsal de Phoxène – Caramel",
+    "desc": "Après avoir écouté le récit du vieux voyageur, certains vouèrent au Phoxène une dévotion presque fanatique. Porter cet accessoire de taille est l’une des façons d’exprimer cette fascination.",
+    "icon": "T_Fashion_Back16",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40025,
+    "name": "Accessoire dorsal de Phoxène – Blanc ivoire",
+    "desc": "Après avoir écouté le récit du vieux voyageur, certains vouèrent au Phoxène une dévotion presque fanatique. Porter cet accessoire de taille est l’une des façons d’exprimer cette fascination.",
+    "icon": "T_Fashion_Back18",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40029,
+    "name": "鎏金飞羽·鎏金",
+    "desc": "天空从来不是禁忌的领域，任何人都可以拥有登天的权利。",
+    "icon": "T_Fashion_Back34_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40030,
+    "name": "鎏金飞羽·涅白",
+    "desc": "天空从来不是禁忌的领域，任何人都可以拥有登天的权利。",
+    "icon": "T_Fashion_Back34",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40031,
+    "name": "鎏金飞羽·绛紫",
+    "desc": "天空从来不是禁忌的领域，任何人都可以拥有登天的权利。",
+    "icon": "T_Fashion_Back34_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40032,
+    "name": "鎏金飞羽·锈红",
+    "desc": "天空从来不是禁忌的领域，任何人都可以拥有登天的权利。",
+    "icon": "T_Fashion_Back34_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40033,
+    "name": "阴阳玉背饰",
+    "desc": "阴阳双璧抱圆中，晦明两仪天地融。",
+    "icon": "T_Fashion_Back35",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40038,
+    "name": "衔光飞羽背饰·黛蓝",
+    "desc": "Ô ailes douces comme celles d’un oisillon, emportez mon désir et volez vers l’horizon où brille la lumière.",
+    "icon": "T_Fashion_Back30_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40039,
+    "name": "衔光飞羽背饰·墨玉",
+    "desc": "Ô ailes douces comme celles d’un oisillon, emportez mon désir et volez vers l’horizon où brille la lumière.",
+    "icon": "T_Fashion_Back30",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40040,
+    "name": "衔光飞羽背饰·锈红",
+    "desc": "Ô ailes douces comme celles d’un oisillon, emportez mon désir et volez vers l’horizon où brille la lumière.",
+    "icon": "T_Fashion_Back30_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40041,
+    "name": "衔光飞羽腰饰·黛蓝",
+    "desc": "Ô ailes douces comme celles d’un oisillon, emportez mon désir et volez vers l’horizon où brille la lumière.",
+    "icon": "T_Fashion_Back31_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40042,
+    "name": "衔光飞羽腰饰·墨玉",
+    "desc": "Ô ailes douces comme celles d’un oisillon, emportez mon désir et volez vers l’horizon où brille la lumière.",
+    "icon": "T_Fashion_Back31",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40043,
+    "name": "衔光飞羽腰饰·锈红",
+    "desc": "Ô ailes douces comme celles d’un oisillon, emportez mon désir et volez vers l’horizon où brille la lumière.",
+    "icon": "T_Fashion_Back31_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40044,
+    "name": "雀翎背饰·薄荷",
+    "desc": "一屏翠羽揽日月，万眸金辉映山河。",
+    "icon": "T_Fashion_Back32_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40045,
+    "name": "雀翎背饰·涅白",
+    "desc": "一屏翠羽揽日月，万眸金辉映山河。",
+    "icon": "T_Fashion_Back32",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40046,
+    "name": "雀翎背饰·绛紫",
+    "desc": "一屏翠羽揽日月，万眸金辉映山河。",
+    "icon": "T_Fashion_Back32_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40047,
+    "name": "雀翎背饰·锈红",
+    "desc": "一屏翠羽揽日月，万眸金辉映山河。",
+    "icon": "T_Fashion_Back32_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40048,
+    "name": "执理佩剑·鎏金",
+    "desc": "以利刃止干戈。",
+    "icon": "T_Fashion_Back36",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40049,
+    "name": "执理佩剑·涅白",
+    "desc": "以利刃止干戈。",
+    "icon": "T_Fashion_Back36_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40050,
+    "name": "执理佩剑·绛紫",
+    "desc": "以利刃止干戈。",
+    "icon": "T_Fashion_Back36_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40051,
+    "name": "执理佩剑·锈红",
+    "desc": "以利刃止干戈。",
+    "icon": "T_Fashion_Back36_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40052,
+    "name": "星霜披肩·锈红",
+    "desc": "落在肩头的雪花，披着星辰，于冬日长眠。",
+    "icon": "T_Fashion_Back33_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40053,
+    "name": "星霜披肩·涅白",
+    "desc": "落在肩头的雪花，披着星辰，于冬日长眠。",
+    "icon": "T_Fashion_Back33",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40054,
+    "name": "星霜披肩·墨玉",
+    "desc": "落在肩头的雪花，披着星辰，于冬日长眠。",
+    "icon": "T_Fashion_Back33_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 50001,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": ""
+  },
+  {
+    "id": 50002,
+    "name": "Flammes de la Chandelle d’Argent",
+    "desc": " ",
+    "icon": "T_Fashion_Fx03",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 50003,
+    "name": "银烛玩偶",
+    "desc": " ",
+    "icon": "T_Fashion_Fx11",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
+    "id": 60001,
+    "name": " ",
+    "desc": " ",
+    "icon": "",
+    "rarity": 5,
+    "unlock": ""
+  },
+  {
+    "id": 60002,
+    "name": "Mirage de nébuleuse",
+    "desc": "Un geste de la main, et voici venu le temps de dire adieu aux étoiles.",
+    "icon": "T_Fashion_Fx04",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 70001,
+    "name": "Trace ondoyante",
+    "desc": "Les ondulations laissées par le passage d’un papillon éveillent tout le cœur de l’été.",
+    "icon": "T_Fashion_Fx01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70002,
+    "name": "Force du caneton – Bleu indigo",
+    "desc": "L’avenir s’annonce vraiment radieux... <I>coin-coin.</>",
+    "icon": "T_Fashion_Fx05_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70003,
+    "name": "火树银花·鎏金",
+    "desc": "腾龙吹焰，彻夜欢歌。",
+    "icon": "T_Fashion_Head_YellowChick",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70011,
+    "name": "Trace ondoyante – Rouille",
+    "desc": "Les ondulations laissées par le passage d’un papillon éveillent tout le cœur de l’été.",
+    "icon": "T_Fashion_Fx01_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70012,
+    "name": "Trace ondoyante – Jade noir",
+    "desc": "Les ondulations laissées par le passage d’un papillon éveillent tout le cœur de l’été.",
+    "icon": "T_Fashion_Fx01_04",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70013,
+    "name": "Trace ondoyante – Blanc ivoire",
+    "desc": "Les ondulations laissées par le passage d’un papillon éveillent tout le cœur de l’été.",
+    "icon": "T_Fashion_Fx01_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70021,
+    "name": "Force du caneton – Doré",
+    "desc": "L’avenir s’annonce vraiment radieux... <I>coin-coin.</>",
+    "icon": "T_Fashion_Fx05_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70022,
+    "name": "Force du caneton – Rouille",
+    "desc": "L’avenir s’annonce vraiment radieux... <I>coin-coin.</>",
+    "icon": "T_Fashion_Fx05_04",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70023,
+    "name": "Force du caneton – Blanc ivoire",
+    "desc": "L’avenir s’annonce vraiment radieux... <I>coin-coin.</>",
+    "icon": "T_Fashion_Fx05_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70031,
+    "name": "火树银花·锈红",
+    "desc": "腾龙吹焰，彻夜欢歌。",
+    "icon": "T_Fashion_Head_YellowChick",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70032,
+    "name": "火树银花·涅白",
+    "desc": "腾龙吹焰，彻夜欢歌。",
+    "icon": "T_Fashion_Head_YellowChick",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70033,
+    "name": "火树银花·黛蓝",
+    "desc": "腾龙吹焰，彻夜欢歌。",
+    "icon": "T_Fashion_Head_YellowChick",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80001,
+    "name": "Invitation d’une nuit d’été",
+    "desc": "Des papillons, chargés de pensées, attendent l’arrivée du protagoniste pour ouvrir le bal.",
+    "icon": "T_Fashion_Fx02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80002,
+    "name": "Mélodie des reflets aquatiques – Blanc ivoire",
+    "desc": "Des bulles s’épanouissent tandis que les bancs de poissons s’unissent pour entonner une joyeuse mélodie marine.",
+    "icon": "T_Fashion_Fx06_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80003,
+    "name": "游龙诀·鎏金",
+    "desc": "以血为媒，以金为契；千秋万载，庇佑苍生。",
+    "icon": "T_Fashion_Fx09_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80011,
+    "name": "Invitation d’une nuit d’été – Rouille",
+    "desc": "Des papillons, chargés de pensées, attendent l’arrivée du protagoniste pour ouvrir le bal.",
+    "icon": "T_Fashion_Fx02_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80012,
+    "name": "Invitation d’une nuit d’été – Jade noir",
+    "desc": "Des papillons, chargés de pensées, attendent l’arrivée du protagoniste pour ouvrir le bal.",
+    "icon": "T_Fashion_Fx02_04",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80013,
+    "name": "Invitation d’une nuit d’été – Blanc ivoire",
+    "desc": "Des papillons, chargés de pensées, attendent l’arrivée du protagoniste pour ouvrir le bal.",
+    "icon": "T_Fashion_Fx02_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80021,
+    "name": "Mélodie des reflets aquatiques – Bleu indigo",
+    "desc": "Des bulles s’épanouissent tandis que les bancs de poissons s’unissent pour entonner une joyeuse mélodie marine.",
+    "icon": "T_Fashion_Fx06_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80022,
+    "name": "Mélodie des reflets aquatiques – Rouille",
+    "desc": "Des bulles s’épanouissent tandis que les bancs de poissons s’unissent pour entonner une joyeuse mélodie marine.",
+    "icon": "T_Fashion_Fx06_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80023,
+    "name": "Mélodie des reflets aquatiques – Doré",
+    "desc": "Des bulles s’épanouissent tandis que les bancs de poissons s’unissent pour entonner une joyeuse mélodie marine.",
+    "icon": "T_Fashion_Fx06_04",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80031,
+    "name": "游龙诀·锈红",
+    "desc": "以血为媒，以金为契；千秋万载，庇佑苍生。",
+    "icon": "T_Fashion_Fx09_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80032,
+    "name": "游龙诀·绛紫",
+    "desc": "以血为媒，以金为契；千秋万载，庇佑苍生。",
+    "icon": "T_Fashion_Fx09_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80033,
+    "name": "游龙诀·涅白",
+    "desc": "以血为媒，以金为契；千秋万载，庇佑苍生。",
+    "icon": "T_Fashion_Fx09",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  }
+]

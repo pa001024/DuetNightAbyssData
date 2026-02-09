@@ -1,0 +1,282 @@
+[
+  {
+    "id": 10001,
+    "name": "Note de musique – Jade noir",
+    "desc": "Frappez en cadence — laissez monter le chant du combat.",
+    "icon": "T_Fashion_Weapon22",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10002,
+    "name": "Note de musique – Doré",
+    "desc": "Frappez en cadence — laissez monter le chant du combat.",
+    "icon": "T_Fashion_Weapon23",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10003,
+    "name": "Note de musique – Blanc ivoire",
+    "desc": "Frappez en cadence — laissez monter le chant du combat.",
+    "icon": "T_Fashion_Weapon02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10004,
+    "name": "Note de musique – Blanc sakura",
+    "desc": "Frappez en cadence — laissez monter le chant du combat.",
+    "icon": "T_Fashion_Weapon01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10005,
+    "name": "Nœud papillon – Jade noir",
+    "desc": "Un papillon qui renonce à son rêve de voler.",
+    "icon": "T_Fashion_Weapon16",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10006,
+    "name": "Nœud papillon – Blanc ivoire",
+    "desc": "Un papillon qui renonce à son rêve de voler.",
+    "icon": "T_Fashion_Weapon15",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10007,
+    "name": "Nœud papillon – Rouille",
+    "desc": "Un papillon qui renonce à son rêve de voler.",
+    "icon": "T_Fashion_Weapon13",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10008,
+    "name": "Nœud papillon – Menthe",
+    "desc": "Un papillon qui renonce à son rêve de voler.",
+    "icon": "T_Fashion_Weapon14",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10009,
+    "name": "Rose – Rouille",
+    "desc": "Une fleur née du brasier et de la fumée.",
+    "icon": "T_Fashion_Weapon17",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10010,
+    "name": "Rose – Jade noir",
+    "desc": "Une fleur née du brasier et de la fumée.",
+    "icon": "T_Fashion_Weapon20",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10011,
+    "name": "Rose – Bleu indigo",
+    "desc": "Une fleur née du brasier et de la fumée.",
+    "icon": "T_Fashion_Weapon18",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10012,
+    "name": "Rose – Blanc ivoire",
+    "desc": "Une fleur née du brasier et de la fumée.",
+    "icon": "T_Fashion_Weapon19",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10013,
+    "name": "Aile solitaire – Jade noir",
+    "desc": "Une aile reniée par les dieux.",
+    "icon": "T_Fashion_Weapon03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10014,
+    "name": "Aile solitaire – Bleu indigo",
+    "desc": "Une aile reniée par les dieux.",
+    "icon": "T_Fashion_Weapon05",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10015,
+    "name": "Aile solitaire – Doré",
+    "desc": "Une aile reniée par les dieux.",
+    "icon": "T_Fashion_Weapon09",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10016,
+    "name": "Aile solitaire – Blanc ivoire",
+    "desc": "Une aile reniée par les dieux.",
+    "icon": "T_Fashion_Weapon06",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10017,
+    "name": "Petit Pioupiou",
+    "desc": "Héros du célèbre conte « <I>L’Étrange Aventure de Pioupiou</> », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
+    "icon": "T_Fashion_Weapon21",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10018,
+    "name": "Petit Pioupiou – Blanc ivoire",
+    "desc": "Héros du célèbre conte « <I>L’Étrange Aventure de Pioupiou</> », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
+    "icon": "T_Fashion_Weapon25",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10019,
+    "name": "Petit Pioupiou – Caramel",
+    "desc": "Héros du célèbre conte « <I>L’Étrange Aventure de Pioupiou</> », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
+    "icon": "T_Fashion_Weapon24",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10020,
+    "name": "Petit Pioupiou – Bleu indigo",
+    "desc": "Héros du célèbre conte « <I>L’Étrange Aventure de Pioupiou</> », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
+    "icon": "T_Fashion_Weapon26",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10021,
+    "name": "Cinder",
+    "desc": "Infusé de l’inspiration et de la fougue de Luno, la forgeronne, ce Cinder portatif évoque sans cesse la fournaise ardente qu’il attise de ses battements.",
+    "icon": "T_Fashion_Weapon12",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10022,
+    "name": "Dragon des rêves – Liuliu",
+    "desc": "Les dragons fascinent chaque époque. Puissants, sauvages, insaisissables — leur rareté les drape d’une aura de mystère. C’est cette brume d’imaginaire qui nourrit la créativité des peuples depuis toujours.",
+    "icon": "T_Fashion_Weapon10",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10023,
+    "name": "Peluche Lunoeggy",
+    "desc": "Sous la coquille... encore une coquille. Et sous la coquille ? Toujours une coquille. Absolument pas une Luno. Vraiment pas.",
+    "icon": "T_Fashion_Weapon27",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10024,
+    "name": "Étoile marine assoupie – Menthe",
+    "desc": "Les étoiles de mer rêvent-elles de météores ?",
+    "icon": "T_Fashion_Weapon33",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10025,
+    "name": "Étoile marine assoupie – Blanc sakura",
+    "desc": "Les étoiles de mer rêvent-elles de météores ?",
+    "icon": "T_Fashion_Weapon31",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10026,
+    "name": "Étoile marine assoupie – Caramel",
+    "desc": "Les étoiles de mer rêvent-elles de météores ?",
+    "icon": "T_Fashion_Weapon32",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10027,
+    "name": "Conque chatoyante – Jaune abricot",
+    "desc": "Pourquoi ne pas demander à la conque chatoyante ?",
+    "icon": "T_Fashion_Weapon30",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10028,
+    "name": "Conque chatoyante – Bleu indigo",
+    "desc": "Pourquoi ne pas demander à la conque chatoyante ?",
+    "icon": "T_Fashion_Weapon29",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10029,
+    "name": "Conque chatoyante – Bleu céleste",
+    "desc": "Pourquoi ne pas demander à la conque chatoyante ?",
+    "icon": "T_Fashion_Weapon28",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10030,
+    "name": "龙渊穗·锈红",
+    "desc": "穗为缰，缚神君。",
+    "icon": "T_Fashion_Weapon34_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10031,
+    "name": "龙渊穗·绛紫",
+    "desc": "穗为缰，缚神君。",
+    "icon": "T_Fashion_Weapon34_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10032,
+    "name": "龙渊穗·涅白",
+    "desc": "穗为缰，缚神君。",
+    "icon": "T_Fashion_Weapon34",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10033,
+    "name": "龙纹坠·锈红",
+    "desc": "蟠龙栖玄玉。",
+    "icon": "T_Fashion_Weapon35_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10034,
+    "name": "龙纹坠·绛紫",
+    "desc": "蟠龙栖玄玉。",
+    "icon": "T_Fashion_Weapon35_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10035,
+    "name": "龙纹坠·涅白",
+    "desc": "蟠龙栖玄玉。",
+    "icon": "T_Fashion_Weapon35",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  }
+]

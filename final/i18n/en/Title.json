@@ -2,980 +2,1194 @@
   {
     "id": 10001,
     "name": "Affluent",
+    "suf": false,
     "src": "成就「Joyful Chime Ⅲ」"
   },
   {
     "id": 10002,
     "name": "Scarlet",
+    "suf": false,
     "src": "成就「Your Name Is Red Ⅲ」"
   },
   {
     "id": 10003,
     "name": "Fiery",
+    "suf": false,
     "src": "成就「Thoroughly Tempered Ⅲ」"
   },
   {
     "id": 10004,
     "name": "Veteran",
+    "suf": false,
     "src": "成就「It Takes Three Ⅲ」"
   },
   {
     "id": 10005,
     "name": "Lively",
+    "suf": false,
     "src": "成就「Hello, My Friend Ⅱ」"
   },
   {
     "id": 10006,
     "name": "Soaring",
+    "suf": false,
     "src": "成就「Nocturnal Finale - Peerless: The Eclosioner」"
   },
   {
     "id": 10007,
     "name": "Mourning",
+    "suf": false,
     "src": "成就「Nocturnal Finale - Peerless: Crystalophile」"
   },
   {
     "id": 10008,
     "name": "Awakened",
+    "suf": false,
     "src": "成就「My DNA Is Responding Ⅲ」"
   },
   {
     "id": 10009,
     "name": "Diligent",
+    "suf": false,
     "src": "成就「Fate's Spiral Ⅴ」"
   },
   {
     "id": 10010,
     "name": "Bestial",
+    "suf": false,
     "src": "成就「Nocturnal Finale: Crystalophile Ⅲ」"
   },
   {
     "id": 10011,
     "name": "Fateful",
+    "suf": false,
     "src": "成就「Suddenly Look Back Ⅲ」"
   },
   {
     "id": 10012,
     "name": "Radiant",
+    "suf": false,
     "src": "成就「Shine Bright Because of You Ⅲ」"
   },
   {
     "id": 10013,
     "name": "Geniemons'",
+    "suf": false,
     "src": "成就「Just a Passing Geniemon Enthusiast Ⅲ」"
   },
   {
     "id": 10014,
     "name": "Judicious",
+    "suf": false,
     "src": "成就「Talent Management」"
   },
   {
     "id": 10015,
     "name": "Classic",
+    "suf": false,
     "src": "成就「Timeless Masterpiece」"
   },
   {
     "id": 10016,
     "name": "Epic",
+    "suf": false,
     "src": "成就「A Starlit Night Ⅲ」"
   },
   {
     "id": 10017,
     "name": "Gloomy",
+    "suf": false,
     "src": "成就「Mazexplorer: Gaze into the Abyss Ⅲ」"
   },
   {
     "id": 10018,
     "name": "Merciful",
+    "suf": false,
     "src": "成就「Keep the Grim Reaper Waiting Ⅲ」"
   },
   {
     "id": 10019,
     "name": "Despicable",
+    "suf": false,
     "src": "成就「Raging Blitz Ⅲ」"
   },
   {
     "id": 10020,
     "name": "Halting",
+    "suf": false,
     "src": "成就「A World Without Thieves Ⅲ」"
   },
   {
     "id": 10021,
     "name": "Abrupt",
+    "suf": false,
     "src": "成就「Just a Passer-By Ⅳ」"
   },
   {
     "id": 10022,
-    "name": "Skunked"
+    "name": "Skunked",
+    "suf": false
   },
   {
     "id": 10023,
     "name": "Winsome and Awesome",
+    "suf": false,
     "src": "成就「Searching a Thousand Times Ⅲ」"
   },
   {
     "id": 10024,
     "name": "Apprentice",
+    "suf": false,
     "src": "成就「The Beginning of the Legend」"
   },
   {
     "id": 10025,
     "name": "Erudite",
+    "suf": false,
     "src": "成就「Atlasipedia Ⅲ」"
   },
   {
     "id": 10026,
-    "name": "Midsummer Night's"
+    "name": "Midsummer Night's",
+    "suf": false
   },
   {
     "id": 10027,
-    "name": "Clumsy-Footed"
+    "name": "Clumsy-Footed",
+    "suf": false
   },
   {
     "id": 10028,
     "name": "Dazzling",
+    "suf": false,
     "src": "成就「Searching a Thousand Times Ⅰ」"
   },
   {
     "id": 10029,
     "name": "Timeless",
+    "suf": false,
     "src": "成就「Chronicle of Time Ⅰ」"
   },
   {
     "id": 10030,
-    "name": "Babbling"
+    "name": "Babbling",
+    "suf": false
   },
   {
     "id": 10031,
     "name": "Proper",
+    "suf": false,
     "src": "成就「Hit the Limit of Strength Ⅰ」"
   },
   {
     "id": 10032,
-    "name": "Skilled"
+    "name": "Skilled",
+    "suf": false
   },
   {
     "id": 10033,
-    "name": "Seasoned"
+    "name": "Seasoned",
+    "suf": false
   },
   {
     "id": 10034,
-    "name": "Lucky"
+    "name": "Lucky",
+    "suf": false
   },
   {
     "id": 10035,
     "name": "Ivory-Keyed",
+    "suf": false,
     "src": "成就「City of Love Ⅰ」"
   },
   {
     "id": 10036,
     "name": "Mighty",
+    "suf": false,
     "src": "成就「Wedge Collector Ⅲ」"
   },
   {
     "id": 10037,
     "name": "Flamboyant",
+    "suf": false,
     "src": "成就「Iridescent Black Ⅰ」"
   },
   {
     "id": 10038,
     "name": "Enlightened",
+    "suf": false,
     "src": "成就「Promising Future Ⅰ」"
   },
   {
     "id": 10039,
     "name": "Well-Connected",
+    "suf": false,
     "src": "成就「The League of Phoxhunters」"
   },
   {
     "id": 10040,
     "name": "Reborn",
+    "suf": false,
     "src": "成就「Infinite Compassion Ⅰ」"
   },
   {
     "id": 10041,
-    "name": "Journeying"
+    "name": "Journeying",
+    "suf": false
   },
   {
     "id": 10042,
-    "name": "Perfect"
+    "name": "Perfect",
+    "suf": false
   },
   {
     "id": 10043,
     "name": "Icy",
+    "suf": false,
     "src": "成就「Roaming the Earth - Icelake」"
   },
   {
     "id": 10044,
     "name": "Lyrical",
+    "suf": false,
     "src": "成就「City of Love Ⅲ」"
   },
   {
     "id": 10045,
     "name": "Armed",
+    "suf": false,
     "src": "成就「The Last Resort」"
   },
   {
     "id": 10046,
     "name": "Resourceful",
+    "suf": false,
     "src": "成就「Astonishing Wisdom - Hyperborea」"
   },
   {
     "id": 10047,
     "name": "Virtuous",
+    "suf": false,
     "src": "成就「Justice Enforcement - Hyperborea」"
   },
   {
     "id": 10048,
     "name": "Considerate",
+    "suf": false,
     "src": "成就「A Guiding Light - Hyperborea」"
   },
   {
     "id": 10049,
     "name": "Chaotic Evil",
+    "suf": false,
     "src": "成就「Cradle of Chaos - Hyperborea」"
   },
   {
     "id": 10050,
     "name": "Renowned",
+    "suf": false,
     "src": "成就「Winsome and Awesome - Hyperborea」"
   },
   {
     "id": 10051,
     "name": "Pragmatic",
+    "suf": false,
     "src": "成就「Philosophy of Survival - Hyperborea」"
   },
   {
     "id": 10052,
     "name": "Night-Walker",
+    "suf": false,
     "src": "成就「Mazexplorer: Gaze into the Abyss Ⅰ」"
   },
   {
     "id": 10053,
-    "name": "Dreambound"
+    "name": "Dreambound",
+    "suf": false
   },
   {
     "id": 10054,
     "name": "Invincible",
+    "suf": false,
     "src": "成就「Hit the Limit of Strength」"
   },
   {
     "id": 10055,
-    "name": "Surreal"
+    "name": "Surreal",
+    "suf": false
   },
   {
     "id": 10056,
     "name": "Streetwise",
+    "suf": false,
     "src": "成就「Good Morning, Icelake」"
   },
   {
     "id": 10057,
     "name": "Kinlike",
+    "suf": false,
     "src": "成就「Home, Sweet Home」"
   },
   {
     "id": 10058,
     "name": "Wronged",
+    "suf": false,
     "src": "成就「Transcendence」"
   },
   {
     "id": 10059,
     "name": "Sand-isolated",
+    "suf": false,
     "src": "成就「The Unforgettable」"
   },
   {
     "id": 10060,
     "name": "Flower-Honoured",
+    "suf": false,
     "src": "成就「A Place Where Flowers Bloom」"
   },
   {
     "id": 10061,
-    "name": "Resilient"
+    "name": "Resilient",
+    "suf": false
   },
   {
     "id": 10062,
     "name": "Starlit",
+    "suf": false,
     "src": "成就「A Perfect Final Bow」"
   },
   {
     "id": 10063,
     "name": "Imperial",
+    "suf": false,
     "src": "成就「Brand New World」"
   },
   {
     "id": 10064,
     "name": "Wise",
+    "suf": false,
     "src": "成就「Only One Truth」"
   },
   {
     "id": 10065,
-    "name": "Burdensome"
+    "name": "Burdensome",
+    "suf": false
   },
   {
     "id": 10066,
     "name": "Mad",
+    "suf": false,
     "src": "成就「The Retaliators」"
   },
   {
     "id": 10067,
-    "name": "Masked"
+    "name": "Masked",
+    "suf": false
   },
   {
     "id": 10068,
-    "name": "Grand"
+    "name": "Grand",
+    "suf": false
   },
   {
     "id": 10069,
-    "name": "Petty"
+    "name": "Petty",
+    "suf": false
   },
   {
     "id": 10070,
-    "name": "Deadly"
+    "name": "Deadly",
+    "suf": false
   },
   {
     "id": 10071,
-    "name": "Amiable"
+    "name": "Amiable",
+    "suf": false
   },
   {
     "id": 10072,
-    "name": "Optimistic"
+    "name": "Optimistic",
+    "suf": false
   },
   {
     "id": 10073,
-    "name": "Elegant"
+    "name": "Elegant",
+    "suf": false
   },
   {
     "id": 10074,
-    "name": "Hard-Luck"
+    "name": "Hard-Luck",
+    "suf": false
   },
   {
     "id": 10075,
-    "name": "Distinguished"
+    "name": "Distinguished",
+    "suf": false
   },
   {
     "id": 10076,
-    "name": "Legendary"
+    "name": "Legendary",
+    "suf": false
   },
   {
     "id": 10077,
-    "name": "Peerless"
+    "name": "Peerless",
+    "suf": false
   },
   {
     "id": 10078,
-    "name": "Worry-Worn"
+    "name": "Worry-Worn",
+    "suf": false,
+    "src": "Deliver a total of <H>300</> Green-tier materials"
   },
   {
     "id": 10079,
-    "name": "Pure-White"
+    "name": "Pure-White",
+    "suf": false,
+    "src": "Deliver a total of <H>100</> Blue-tier materials"
   },
   {
     "id": 10080,
-    "name": "Battle-Tempered"
+    "name": "Battle-Tempered",
+    "suf": false
   },
   {
     "id": 10081,
-    "name": "Sleepy-Eyed"
+    "name": "Sleepy-Eyed",
+    "suf": false
   },
   {
     "id": 10082,
-    "name": "Apocalyptic"
+    "name": "Apocalyptic",
+    "suf": false
   },
   {
     "id": 10083,
-    "name": "Wall-Leaping"
+    "name": "Wall-Leaping",
+    "suf": false
   },
   {
     "id": 10084,
-    "name": "Polite"
+    "name": "Polite",
+    "suf": false
   },
   {
     "id": 10085,
     "name": "Berenica's",
+    "suf": false,
     "src": "成就「A Quiet Sojourn: Berenica」"
   },
   {
     "id": 10086,
     "name": "Phantasio's",
+    "suf": false,
     "src": "成就「A Quiet Sojourn: Phantasio」"
   },
   {
     "id": 10087,
-    "name": "Lisbell's"
+    "name": "Lisbell's",
+    "suf": false
   },
   {
     "id": 10088,
     "name": "Lady Nifle's",
+    "suf": false,
     "src": "成就「A Quiet Sojourn: Lady Nifle」"
   },
   {
     "id": 10089,
     "name": "Kezhou's",
+    "suf": false,
     "src": "成就「A Quiet Sojourn: Kezhou」"
   },
   {
     "id": 10090,
-    "name": "Su Yi's"
+    "name": "Su Yi's",
+    "suf": false
   },
   {
     "id": 10091,
     "name": "Fina's",
+    "suf": false,
     "src": "成就「A Quiet Sojourn: Fina」"
   },
   {
     "id": 10092,
     "name": "Rebecca's",
+    "suf": false,
     "src": "成就「A Quiet Sojourn: Rebecca」"
   },
   {
     "id": 10093,
-    "name": "Yvaine's"
+    "name": "Yvaine's",
+    "suf": false
   },
   {
     "id": 10094,
     "name": "Tabethe's",
+    "suf": false,
     "src": "成就「A Quiet Sojourn: Tabethe」"
   },
   {
     "id": 10095,
     "name": "Fushu's",
+    "suf": false,
     "src": "成就「A Quiet Sojourn: Fushu」"
   },
   {
     "id": 10096,
     "name": "Lynn's",
+    "suf": false,
     "src": "成就「A Quiet Sojourn: Lynn」"
   },
   {
     "id": 10097,
-    "name": "Hilda's"
+    "name": "Hilda's",
+    "suf": false
   },
   {
     "id": 10098,
     "name": "Yale's",
+    "suf": false,
     "src": "成就「A Quiet Sojourn: Yale and Oliver」"
   },
   {
     "id": 10099,
     "name": "Oliver's",
+    "suf": false,
     "src": "成就「A Quiet Sojourn: Yale and Oliver」"
   },
   {
     "id": 10100,
     "name": "Hellfire's",
+    "suf": false,
     "src": "成就「A Quiet Sojourn: Hellfire」"
   },
   {
     "id": 10101,
-    "name": "Camilla's"
+    "name": "Camilla's",
+    "suf": false
   },
   {
     "id": 10102,
     "name": "Margie's",
+    "suf": false,
     "src": "成就「A Quiet Sojourn: Margie」"
   },
   {
     "id": 10103,
     "name": "Rhythm's",
+    "suf": false,
     "src": "成就「A Quiet Sojourn: Rhythm」"
   },
   {
     "id": 10104,
-    "name": "Zhiliu's"
+    "name": "Zhiliu's",
+    "suf": false
   },
   {
     "id": 10105,
-    "name": "Yuming's"
+    "name": "Yuming's",
+    "suf": false
   },
   {
     "id": 10106,
     "name": "Randy's",
+    "suf": false,
     "src": "成就「A Quiet Sojourn: Randy」"
   },
   {
     "id": 10107,
     "name": "Sibylle's",
+    "suf": false,
     "src": "成就「A Quiet Sojourn: Sibylle」"
   },
   {
     "id": 10108,
     "name": "Truffle's",
+    "suf": false,
     "src": "成就「A Quiet Sojourn: Truffle and Filbert」"
   },
   {
     "id": 10109,
     "name": "Filbert's",
+    "suf": false,
     "src": "成就「A Quiet Sojourn: Truffle and Filbert」"
   },
   {
     "id": 10110,
     "name": "Outsider's",
+    "suf": false,
     "src": "成就「A Quiet Sojourn: Outsider」"
   },
   {
     "id": 10111,
     "name": "Psyche's",
+    "suf": false,
     "src": "成就「A Quiet Sojourn: Psyche」"
   },
   {
     "id": 10112,
     "name": "Daphne's",
+    "suf": false,
     "src": "成就「A Quiet Sojourn: Daphne」"
   },
   {
     "id": 10113,
-    "name": "机枢派的"
+    "name": "机枢派的",
+    "suf": false
   },
   {
     "id": 20001,
     "name": " Strength",
+    "suf": true,
     "src": "成就「The Secret of Power Ⅴ」"
   },
   {
     "id": 20002,
     "name": " Weapon Master",
+    "suf": true,
     "src": "成就「Firepower Advantage Ⅲ」"
   },
   {
     "id": 20003,
     "name": " Bounty Hunter",
+    "suf": true,
     "src": "成就「Fantastic Treasure and Where to Find It Ⅳ」"
   },
   {
     "id": 20004,
     "name": " Scholar",
+    "suf": true,
     "src": "成就「The Weight of Knowledge Ⅲ」"
   },
   {
     "id": 20005,
     "name": " Master",
+    "suf": true,
     "src": "成就「A Worthy Challenge Ⅲ」"
   },
   {
     "id": 20006,
     "name": " Chief",
+    "suf": true,
     "src": "成就「Nocturnal Finale - Peerless: Sibylle」"
   },
   {
     "id": 20007,
     "name": " Warden",
+    "suf": true,
     "src": "成就「Nocturnal Finale · Peerless: The Warden of the Inferno」"
   },
   {
     "id": 20008,
     "name": " Captain",
+    "suf": true,
     "src": "成就「I Have Many Friends Ⅲ」"
   },
   {
     "id": 20009,
     "name": " Hero",
+    "suf": true,
     "src": "成就「Heroic Path Ⅵ」"
   },
   {
     "id": 20010,
     "name": " Senior",
+    "suf": true,
     "src": "成就「Blacksmithing Club Ⅲ」"
   },
   {
     "id": 20011,
     "name": " Geniemon Master",
+    "suf": true,
     "src": "成就「Next Stop: Geniemon Master Ⅲ」"
   },
   {
     "id": 20012,
     "name": " Explorer",
+    "suf": true,
     "src": "成就「Can Anyone Else Do This???」"
   },
   {
     "id": 20013,
     "name": " Roamer",
+    "suf": true,
     "src": "成就「Mazexplorer: Gaze into the Abyss Ⅴ」"
   },
   {
     "id": 20014,
     "name": " Remembrance",
+    "suf": true,
     "src": "成就「Chronicle of Time Ⅲ」"
   },
   {
     "id": 20015,
     "name": " Consumer",
+    "suf": true,
     "src": "成就「Beware of the Consumerism Trap Ⅲ」"
   },
   {
     "id": 20016,
     "name": " BFF",
+    "suf": true,
     "src": "成就「Hello, My Friend Ⅰ」"
   },
   {
     "id": 20017,
     "name": " Doombringer",
+    "suf": true,
     "src": "成就「Nocturnal Finale: Sibylle Ⅲ」"
   },
   {
     "id": 20018,
     "name": " Superior",
+    "suf": true,
     "src": "成就「Odd Jobs Inc. Ⅲ」"
   },
   {
     "id": 20019,
     "name": " Executioner",
+    "suf": true,
     "src": "成就「A World Without Thieves Ⅲ」"
   },
   {
     "id": 20020,
-    "name": " Beacon"
+    "name": " Beacon",
+    "suf": true
   },
   {
     "id": 20021,
     "name": " Angler",
+    "suf": true,
     "src": "成就「Seafood Tycoon Ⅲ」"
   },
   {
     "id": 20022,
-    "name": " Collector"
+    "name": " Collector",
+    "suf": true
   },
   {
     "id": 20023,
-    "name": " Magnate"
+    "name": " Magnate",
+    "suf": true
   },
   {
     "id": 20024,
     "name": " Father",
+    "suf": true,
     "src": "成就「Searching a Thousand Times Ⅲ」"
   },
   {
     "id": 20025,
-    "name": " Messenger"
+    "name": " Messenger",
+    "suf": true
   },
   {
     "id": 20026,
     "name": " Photographer",
+    "suf": true,
     "src": "成就「Timeless Warmth」"
   },
   {
     "id": 20027,
-    "name": " Poet"
+    "name": " Poet",
+    "suf": true
   },
   {
     "id": 20028,
-    "name": " Dismantler"
+    "name": " Dismantler",
+    "suf": true
   },
   {
     "id": 20029,
     "name": " Time Traveler",
+    "suf": true,
     "src": "成就「Time Acceleration Guide Ⅰ」"
   },
   {
     "id": 20030,
-    "name": " New Garb"
+    "name": " New Garb",
+    "suf": true
   },
   {
     "id": 20031,
-    "name": " Rising Star"
+    "name": " Rising Star",
+    "suf": true
   },
   {
     "id": 20032,
-    "name": " Dancer"
+    "name": " Dancer",
+    "suf": true
   },
   {
     "id": 20033,
-    "name": " Sun"
+    "name": " Sun",
+    "suf": true
   },
   {
     "id": 20034,
-    "name": " Lover"
+    "name": " Lover",
+    "suf": true
   },
   {
     "id": 20035,
     "name": " Mother",
+    "suf": true,
     "src": "成就「Searching a Thousand Times Ⅲ」"
   },
   {
     "id": 20036,
-    "name": " Knight"
+    "name": " Knight",
+    "suf": true
   },
   {
     "id": 20037,
     "name": " Egg",
+    "suf": true,
     "src": "成就「Loaded Dice Ⅲ」"
   },
   {
     "id": 20038,
     "name": " Challenger",
+    "suf": true,
     "src": "成就「Nocturnal Resurgence - Sibylle」"
   },
   {
     "id": 20039,
     "name": " Friend",
+    "suf": true,
     "src": "成就「Hello, My Friend Ⅱ」"
   },
   {
     "id": 20040,
-    "name": " Impression"
+    "name": " Impression",
+    "suf": true
   },
   {
     "id": 20041,
-    "name": " Kaleidoscope"
+    "name": " Kaleidoscope",
+    "suf": true
   },
   {
     "id": 20042,
     "name": " Blacksmith",
+    "suf": true,
     "src": "成就「Introduction to Blacksmith Ⅰ」"
   },
   {
     "id": 20043,
     "name": " Drifter",
+    "suf": true,
     "src": "成就「Brand New World」"
   },
   {
     "id": 20044,
     "name": " Phoxhunter",
+    "suf": true,
     "src": "成就「Empire Survival Guide」"
   },
   {
     "id": 20045,
     "name": " Dreamt-of One",
+    "suf": true,
     "src": "成就「The Unforgettable」"
   },
   {
     "id": 20046,
     "name": " Outlander",
+    "suf": true,
     "src": "成就「The Price of Seeking Truth」"
   },
   {
     "id": 20047,
     "name": " Performer",
+    "suf": true,
     "src": "成就「A Perfect Final Bow」"
   },
   {
     "id": 20048,
-    "name": " Geniemon"
+    "name": " Geniemon",
+    "suf": true
   },
   {
     "id": 20049,
     "name": " Will",
+    "suf": true,
     "src": "成就「Into the Downpour」"
   },
   {
     "id": 20050,
     "name": " Demon",
+    "suf": true,
     "src": "成就「Shattered Glass」"
   },
   {
     "id": 20051,
     "name": " Fool",
+    "suf": true,
     "src": "成就「King's Gambit」"
   },
   {
     "id": 20052,
     "name": " Dog",
+    "suf": true,
     "src": "Event Quests「Beyond the Page」"
   },
   {
     "id": 20053,
     "name": " Unicorn",
+    "suf": true,
     "src": "Event Quests「Old Friends, New Tales」"
   },
   {
     "id": 20054,
     "name": " Butterfly",
+    "suf": true,
     "src": "Event Quests「Unexpected Commission」"
   },
   {
     "id": 20055,
     "name": " Nightingale",
+    "suf": true,
     "src": "Event Quests「Little Nightingale, Take Wing for Tomorrow」"
   },
   {
     "id": 20056,
-    "name": " Nemesis"
+    "name": " Nemesis",
+    "suf": true
   },
   {
     "id": 20057,
-    "name": " Menace"
+    "name": " Menace",
+    "suf": true
   },
   {
     "id": 20058,
-    "name": " Hermit"
+    "name": " Hermit",
+    "suf": true
   },
   {
     "id": 20059,
-    "name": " Magician"
+    "name": " Magician",
+    "suf": true
   },
   {
     "id": 20060,
-    "name": " Warrior"
+    "name": " Warrior",
+    "suf": true
   },
   {
     "id": 20061,
-    "name": " Master of Slacking"
+    "name": " Master of Slacking",
+    "suf": true
   },
   {
     "id": 20062,
-    "name": " Soul"
+    "name": " Soul",
+    "suf": true
   },
   {
     "id": 20063,
-    "name": " Workhorse"
+    "name": " Workhorse",
+    "suf": true
   },
   {
     "id": 20064,
-    "name": " Whirlwind"
+    "name": " Whirlwind",
+    "suf": true
   },
   {
     "id": 20065,
-    "name": " Lover"
+    "name": " Lover",
+    "suf": true
   },
   {
     "id": 20066,
     "name": " Villain",
+    "suf": true,
     "src": "成就「Captain, Don't Shoot Me!」"
   },
   {
     "id": 20067,
-    "name": " King Hustle"
+    "name": " King Hustle",
+    "suf": true,
+    "src": "Deliver a total of <H>30</> Festive Afterglow"
   },
   {
     "id": 20068,
-    "name": " Demon King"
+    "name": " Demon King",
+    "suf": true,
+    "src": "Earn the highest reward in <H>5</> minigame(s)"
   },
   {
     "id": 20069,
     "name": "Berenica",
+    "suf": true,
     "src": "成就「A Little Get-Together: Berenica」"
   },
   {
     "id": 20070,
     "name": "Phantasio",
+    "suf": true,
     "src": "成就「A Little Get-Together: Phantasio」"
   },
   {
     "id": 20071,
     "name": "Lisbell",
+    "suf": true,
     "src": "成就「A Little Get-Together: Lisbell」"
   },
   {
     "id": 20072,
     "name": "Lady Nifle",
+    "suf": true,
     "src": "成就「A Little Get-Together: Lady Nifle」"
   },
   {
     "id": 20073,
     "name": "Kezhou",
+    "suf": true,
     "src": "成就「A Little Get-Together: Kezhou」"
   },
   {
     "id": 20074,
-    "name": " Su Yi"
+    "name": " Su Yi",
+    "suf": true
   },
   {
     "id": 20075,
     "name": " Fina",
+    "suf": true,
     "src": "成就「A Little Get-Together: Fina」"
   },
   {
     "id": 20076,
     "name": " Rebecca",
+    "suf": true,
     "src": "成就「A Little Get-Together: Rebecca」"
   },
   {
     "id": 20077,
-    "name": " Yvaine"
+    "name": " Yvaine",
+    "suf": true
   },
   {
     "id": 20078,
     "name": " Tabethe",
+    "suf": true,
     "src": "成就「A Little Get-Together: Tabethe」"
   },
   {
     "id": 20079,
     "name": " Fushu",
+    "suf": true,
     "src": "成就「A Little Get-Together: Fushu」"
   },
   {
     "id": 20080,
     "name": " Lynn",
+    "suf": true,
     "src": "成就「A Little Get-Together: Lynn」"
   },
   {
     "id": 20081,
-    "name": " Hilda"
+    "name": " Hilda",
+    "suf": true
   },
   {
     "id": 20082,
     "name": " Yale",
+    "suf": true,
     "src": "成就「A Little Get-Together: Yale and Oliver」"
   },
   {
     "id": 20083,
     "name": " Oliver",
+    "suf": true,
     "src": "成就「A Little Get-Together: Yale and Oliver」"
   },
   {
     "id": 20084,
     "name": " Hellfire",
+    "suf": true,
     "src": "成就「A Little Get-Together: Hellfire」"
   },
   {
     "id": 20085,
-    "name": " Camilla"
+    "name": " Camilla",
+    "suf": true
   },
   {
     "id": 20086,
     "name": " Margie",
+    "suf": true,
     "src": "成就「A Little Get-Together: Margie」"
   },
   {
     "id": 20087,
     "name": " Rhythm",
+    "suf": true,
     "src": "成就「A Little Get-Together: Rhythm」"
   },
   {
     "id": 20088,
     "name": " Zhiliu",
+    "suf": true,
     "src": "成就「A Little Get-Together: Zhiliu」"
   },
   {
     "id": 20089,
     "name": " Yuming",
+    "suf": true,
     "src": "成就「A Little Get-Together: Yuming」"
   },
   {
     "id": 20090,
     "name": " Randy",
+    "suf": true,
     "src": "成就「A Little Get-Together: Randy」"
   },
   {
     "id": 20091,
     "name": " Sibylle",
+    "suf": true,
     "src": "成就「A Little Get-Together: Sibylle」"
   },
   {
     "id": 20092,
     "name": " Truffle",
+    "suf": true,
     "src": "成就「A Little Get-Together: Truffle and Filbert」"
   },
   {
     "id": 20093,
     "name": " Filbert",
+    "suf": true,
     "src": "成就「A Little Get-Together: Truffle and Filbert」"
   },
   {
     "id": 20094,
     "name": " Outsider",
+    "suf": true,
     "src": "成就「A Little Get-Together: Outsider」"
   },
   {
     "id": 20095,
     "name": " Psyche",
+    "suf": true,
     "src": "成就「A Little Get-Together: Psyche」"
   },
   {
     "id": 20096,
     "name": " Daphne",
+    "suf": true,
     "src": "成就「A Little Get-Together: Daphne」"
   },
   {
     "id": 20097,
-    "name": "神之一手"
+    "name": "神之一手",
+    "suf": true
   }
 ]

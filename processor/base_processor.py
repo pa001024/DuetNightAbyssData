@@ -10,6 +10,7 @@ class BaseProcessor:
         self.i18n_data_cn_alt = {}
         for item in data_loader.load_json("TextMap_TextMapContent.json"):
             self.i18n_data_cn_alt.update(item.get("Loader"))
+        self.condition_data = data_loader.load_json("Condition.json")
         # 预加载所有语言的对话数据
         self.dialogue_data_cache = {}
         self._load_all_dialogue_data()
@@ -154,15 +155,33 @@ class BaseProcessor:
             if "SpeakNpcId" in dialogue_data and dialogue_data["SpeakNpcId"]:
                 dialogue_item["npc"] = dialogue_data["SpeakNpcId"]
 
-            # 添加next字段（只在有下一个对话时）
-            next_dialogue_id = dialogue_data.get("NextDialogue")
-            if next_dialogue_id:
-                dialogue_item["next"] = int(next_dialogue_id)
-                # 将下一个对话加入队列
-                queue.append((str(next_dialogue_id), current_dialogue_id))
+            has_next_options = bool(dialogue_data.get("NextOptions"))
+
+            # NextOptions 与 NextDialogue 互斥：有选项时不走 NextDialogue 分支
+            if not has_next_options:
+                next_dialogue_id = dialogue_data.get("NextDialogue")
+                if next_dialogue_id:
+                    dialogue_item["next"] = int(next_dialogue_id)
+                    # 将下一个对话加入队列
+                    queue.append((str(next_dialogue_id), current_dialogue_id))
+
+            if dialogue_data.get("ImprCheckId"):
+                dialogue_item["imprCheck"] = self._inline_impr_check(
+                    dialogue_data.get("ImprCheckId")
+                )
+
+            if dialogue_data.get("ImprPlusId"):
+                impression_plus_data = self.data_loader.load_json("ImpressionPlus.json")
+                impr_data = impression_plus_data.get(
+                    str(dialogue_data.get("ImprPlusId"))
+                )
+                if impr_data:
+                    impr = self._inline_impr_plus(impr_data)
+                    if impr:
+                        dialogue_item["impr"] = impr
 
             # 添加options字段（如果有NextOptions）
-            if "NextOptions" in dialogue_data:
+            if has_next_options:
                 next_options = dialogue_data["NextOptions"]
                 options = []
                 # 加载ImpressionPlus数据
@@ -180,7 +199,7 @@ class BaseProcessor:
                             }
                             # 添加next字段（只在有下一个对话时）
                             option_next = option_data.get("NextDialogue")
-                            if option_next:
+                            if option_next and not option_data.get("NextOptions"):
                                 option_item["next"] = int(option_next)
                                 # 将选项的下一个对话加入队列
                                 queue.append((str(option_next), str(option_id)))
@@ -189,25 +208,17 @@ class BaseProcessor:
                             if impr_plus_id and impression_plus_data:
                                 impr_data = impression_plus_data.get(str(impr_plus_id))
                                 if impr_data:
-                                    impr = {}
-                                    # 映射表：字段名 -> 翻译键
-                                    impression_map = {
-                                        "BenefitPlus": "Impression_Name_Benefit",
-                                        "MoralityPlus": "Impression_Name_Morality",
-                                        "WisdomPlus": "Impression_Name_Wisdom",
-                                        "EmpathyPlus": "Impression_Name_Empathy",
-                                        "ChaosPlus": "Impression_Name_Chaos",
-                                    }
-                                    for field, trans_key in impression_map.items():
-                                        value = impr_data.get(field, 0)
-                                        if value > 0:
-                                            # 翻译字段名
-                                            field_name = self.data_loader.translate(
-                                                trans_key
-                                            )
-                                            impr[field_name] = value
+                                    impr = self._inline_impr_plus(impr_data)
                                     if impr:
                                         option_item["impr"] = impr
+
+                            if option_data.get("ImprCheckId"):
+                                impr_check = self._inline_impr_check(
+                                    option_data.get("ImprCheckId")
+                                )
+                                if impr_check:
+                                    option_item["imprCheck"] = impr_check
+
                             options.append(option_item)
                 if options:
                     dialogue_item["options"] = options
@@ -349,6 +360,38 @@ class BaseProcessor:
                 t = Positioning[tag]
                 rst.append(self.get_translated_text(t["Name"]))
         return rst
+
+    def _inline_impr_check(self, condition_id):
+        """将ImprCheckId转换为Condition中的ImprShopUnlock数组"""
+        condition = self.condition_data.get(str(condition_id), {})
+        condition_map = condition.get("ConditionMap", {})
+        unlock_list = condition_map.get("ImprShopUnlock", [])
+
+        if unlock_list and isinstance(unlock_list[0], list):
+            return unlock_list[0]
+
+        return []
+
+    def _inline_impr_plus(self, impr_data):
+        """将ImprPlus配置转换为 [RegionId, 属性名, 值]"""
+        if not impr_data:
+            return []
+
+        region_id = impr_data.get("RegionId", 0)
+        plus_fields = [
+            ("BenefitPlus", "Benefit"),
+            ("MoralityPlus", "Morality"),
+            ("WisdomPlus", "Wisdom"),
+            ("EmpathyPlus", "Empathy"),
+            ("ChaosPlus", "Chaos"),
+        ]
+
+        for field, name in plus_fields:
+            value = impr_data.get(field, 0)
+            if value > 0:
+                return [region_id, name, value]
+
+        return []
 
     def get_translated_text(self, text_key, language=""):
         """从i18n数据中获取翻译文本"""

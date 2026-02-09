@@ -1,0 +1,282 @@
+[
+  {
+    "id": 10001,
+    "name": "음표·제트 블랙",
+    "desc": "진격의 선율을 연주한다.",
+    "icon": "T_Fashion_Weapon22",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10002,
+    "name": "음표·골드",
+    "desc": "진격의 선율을 연주한다.",
+    "icon": "T_Fashion_Weapon23",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10003,
+    "name": "음표·아이보리",
+    "desc": "진격의 선율을 연주한다.",
+    "icon": "T_Fashion_Weapon02",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10004,
+    "name": "음표·벚꽃",
+    "desc": "진격의 선율을 연주한다.",
+    "icon": "T_Fashion_Weapon01",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10005,
+    "name": "리본·제트 블랙",
+    "desc": "나비는 비행의 꿈을 잃었다.",
+    "icon": "T_Fashion_Weapon16",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10006,
+    "name": "리본·아이보리",
+    "desc": "나비는 비행의 꿈을 잃었다.",
+    "icon": "T_Fashion_Weapon15",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10007,
+    "name": "리본·러스트 레드",
+    "desc": "나비는 비행의 꿈을 잃었다.",
+    "icon": "T_Fashion_Weapon13",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10008,
+    "name": "리본·민트",
+    "desc": "나비는 비행의 꿈을 잃었다.",
+    "icon": "T_Fashion_Weapon14",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10009,
+    "name": "장미·러스트 레드",
+    "desc": "포화 속에서 꽃을 피운다.",
+    "icon": "T_Fashion_Weapon17",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10010,
+    "name": "장미·제트 블랙",
+    "desc": "포화 속에서 꽃을 피운다.",
+    "icon": "T_Fashion_Weapon20",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10011,
+    "name": "장미·다크 블루",
+    "desc": "포화 속에서 꽃을 피운다.",
+    "icon": "T_Fashion_Weapon18",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10012,
+    "name": "장미·아이보리",
+    "desc": "포화 속에서 꽃을 피운다.",
+    "icon": "T_Fashion_Weapon19",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10013,
+    "name": "날개·제트 블랙",
+    "desc": "신에게 버려진 날개.",
+    "icon": "T_Fashion_Weapon03",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10014,
+    "name": "날개·다크 블루",
+    "desc": "신에게 버려진 날개.",
+    "icon": "T_Fashion_Weapon05",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10015,
+    "name": "날개·골드",
+    "desc": "신에게 버려진 날개.",
+    "icon": "T_Fashion_Weapon09",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10016,
+    "name": "날개·아이보리",
+    "desc": "신에게 버려진 날개.",
+    "icon": "T_Fashion_Weapon06",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10017,
+    "name": "삐약이",
+    "desc": "아트라시아 대륙의 유명한 동화 이야기 〈삐약이의 놀라운 모험〉의 주인공이자 삐약이라고 불리는 병아리. 매일 다른 곳에서 깨어난 삐약이가 다양한 친구들을 사귀고 놀라운 모험을 떠나 계생의 의미를 찾고, 악당의 음모를 파헤치는 이야기를 담고 있다.",
+    "icon": "T_Fashion_Weapon21",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10018,
+    "name": "삐약이·아이보리",
+    "desc": "아트라시아 대륙의 유명한 동화 이야기 〈삐약이의 놀라운 모험〉의 주인공이자 삐약이라고 불리는 병아리. 매일 다른 곳에서 깨어난 삐약이가 다양한 친구들을 사귀고 놀라운 모험을 떠나 계생의 의미를 찾고, 악당의 음모를 파헤치는 이야기를 담고 있다.",
+    "icon": "T_Fashion_Weapon25",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10019,
+    "name": "삐약이·캐러멜",
+    "desc": "아트라시아 대륙의 유명한 동화 이야기 〈삐약이의 놀라운 모험〉의 주인공이자 삐약이라고 불리는 병아리. 매일 다른 곳에서 깨어난 삐약이가 다양한 친구들을 사귀고 놀라운 모험을 떠나 계생의 의미를 찾고, 악당의 음모를 파헤치는 이야기를 담고 있다.",
+    "icon": "T_Fashion_Weapon24",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10020,
+    "name": "삐약이·다크 블루",
+    "desc": "아트라시아 대륙의 유명한 동화 이야기 〈삐약이의 놀라운 모험〉의 주인공이자 삐약이라고 불리는 병아리. 매일 다른 곳에서 깨어난 삐약이가 다양한 친구들을 사귀고 놀라운 모험을 떠나 계생의 의미를 찾고, 악당의 음모를 파헤치는 이야기를 담고 있다.",
+    "icon": "T_Fashion_Weapon26",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10021,
+    "name": "까망이",
+    "desc": "휴대용 까망이. 대장장이 루나의 영감과 열정이 가득 담겨 있어 까망이가 끊임없이 내뿜는 화롯불을 연상시킨다.",
+    "icon": "T_Fashion_Weapon12",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10022,
+    "name": "환상 속의 용·육육이",
+    "desc": "용은 시대를 초월하여 많은 사람들에게 사랑받는 존재로, 강력하고 야성적이지만, 동시에 사람 앞에 잘 나타나지 않아 더 몽환적이고 매력적인 존재다. 이러한 묘한 이미지는 사람들이 무한한 상상의 나래를 펼칠 수 있게 해준다.",
+    "icon": "T_Fashion_Weapon10",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10023,
+    "name": "달걀 루나 인형",
+    "desc": "계란 껍질 아래엔 계란 껍질, 그리고 계란 껍질이 있을 뿐, 절대로 루나가 아니다!",
+    "icon": "T_Fashion_Weapon27",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10024,
+    "name": "불가사리·민트",
+    "desc": "불가사리는 유성의 꿈을 꾸는가?",
+    "icon": "T_Fashion_Weapon33",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10025,
+    "name": "불가사리·벚꽃",
+    "desc": "불가사리는 유성의 꿈을 꾸는가?",
+    "icon": "T_Fashion_Weapon31",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10026,
+    "name": "불가사리·캐러멜",
+    "desc": "불가사리는 유성의 꿈을 꾸는가?",
+    "icon": "T_Fashion_Weapon32",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10027,
+    "name": "알록달록 소라·오렌지",
+    "desc": "알록달록 소라시여~ 질문을 해도 될까요?",
+    "icon": "T_Fashion_Weapon30",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10028,
+    "name": "알록달록 소라·\n다크 블루",
+    "desc": "알록달록 소라시여~ 질문을 해도 될까요?",
+    "icon": "T_Fashion_Weapon29",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10029,
+    "name": "알록달록 소라·\n스카이 블루",
+    "desc": "알록달록 소라시여~ 질문을 해도 될까요?",
+    "icon": "T_Fashion_Weapon28",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10030,
+    "name": "龙渊穗·锈红",
+    "desc": "穗为缰，缚神君。",
+    "icon": "T_Fashion_Weapon34_01",
+    "rarity": 5,
+    "unlock": "프리즘 교환으로 획득"
+  },
+  {
+    "id": 10031,
+    "name": "龙渊穗·绛紫",
+    "desc": "穗为缰，缚神君。",
+    "icon": "T_Fashion_Weapon34_02",
+    "rarity": 5,
+    "unlock": "프리즘 교환으로 획득"
+  },
+  {
+    "id": 10032,
+    "name": "龙渊穗·涅白",
+    "desc": "穗为缰，缚神君。",
+    "icon": "T_Fashion_Weapon34",
+    "rarity": 5,
+    "unlock": "프리즘 교환으로 획득"
+  },
+  {
+    "id": 10033,
+    "name": "龙纹坠·锈红",
+    "desc": "蟠龙栖玄玉。",
+    "icon": "T_Fashion_Weapon35_01",
+    "rarity": 5,
+    "unlock": "프리즘 교환으로 획득"
+  },
+  {
+    "id": 10034,
+    "name": "龙纹坠·绛紫",
+    "desc": "蟠龙栖玄玉。",
+    "icon": "T_Fashion_Weapon35_02",
+    "rarity": 5,
+    "unlock": "프리즘 교환으로 획득"
+  },
+  {
+    "id": 10035,
+    "name": "龙纹坠·涅白",
+    "desc": "蟠龙栖玄玉。",
+    "icon": "T_Fashion_Weapon35",
+    "rarity": 5,
+    "unlock": "프리즘 교환으로 획득"
+  }
+]

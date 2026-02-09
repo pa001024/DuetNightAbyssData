@@ -1,0 +1,346 @@
+[
+  {
+    "id": 3010101,
+    "name": "Victory by Receipt",
+    "desc": "A true angler never comes home empty-handed. Good thing the fish market had a clearance sale — 80 coins a pop, but no one has to know.",
+    "icon": "T_Head_Claymore_Kongjun",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010102,
+    "name": "Stellar Blaze",
+    "desc": "Just before they collided, the stars kissed farewell. Their shattered whispers became streaks of fire — lovers' breath adrift across the Milky Way.",
+    "icon": "T_Head_Claymore_Qunxing",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010103,
+    "name": "UI_WeaponSkin_Name_3010103",
+    "desc": "UI_WeaponSkin_Des_3010103",
+    "icon": "T_Head_Claymore_Rongyao",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010104,
+    "name": "Tough Love – Greatsword",
+    "desc": "A greatsword of unusual design, said to embody a father's love: firm, instructive, and just a little traumatising.",
+    "icon": "T_Head_Claymore_Fubei",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010105,
+    "name": "Meowsterpiece",
+    "desc": "Meow!",
+    "icon": "T_Head_Claymore_Damiao",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010106,
+    "name": "Vigor Rise – Greatsword",
+    "desc": "A true martial master has no need of steel — be it a snapped length of bamboo or a withered branch, anything they take in hand becomes a weapon to be reckoned with.",
+    "icon": "T_Head_Claymore_Shiru",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010107,
+    "name": "Grand Epulary",
+    "desc": "The grandeur hewn from void — an epulary for all realms.",
+    "icon": "T_Head_Claymore_Dahuang",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010108,
+    "name": "Sweet Fortune – Greatsword",
+    "desc": "A skewer of candied delight.",
+    "icon": "T_Head_Claymore_Tangfu",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010201,
+    "name": "The Backup Catch",
+    "desc": "Frozen Frostline Trout — firm, flavour-rich, and shelf-stable. Outlasts canned meat, cling wrap, and maybe even your survival instincts.",
+    "icon": "T_Head_Sword_Kongjun",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010202,
+    "name": "Tough Love",
+    "desc": "A sword of unusual design, said to embody a father's love: firm, instructive, and just a little traumatising.",
+    "icon": "T_Head_Sword_Fubei",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010203,
+    "name": "Meowraculous",
+    "desc": "Meeow~",
+    "icon": "T_Head_Sword_Miaoshou",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010204,
+    "name": "Vigor Rise – Sword",
+    "desc": "A true martial master has no need of steel — be it a snapped length of bamboo or a withered branch, anything they take in hand becomes a weapon to be reckoned with.",
+    "icon": "T_Head_Sword_Shiru",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010205,
+    "name": "Sweet Fortune – Sword",
+    "desc": "A skewer of candied delight.",
+    "icon": "T_Head_Sword_Tangfu",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010301,
+    "name": "Sunrise Scherzo",
+    "desc": "Where is the sun? Look — it's dancing in the palm of my hand.",
+    "icon": "T_Head_Bow_Huanri",
+    "rarity": 5,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 3010302,
+    "name": "Meowrage",
+    "desc": "Mrrraow!",
+    "icon": "T_Head_Bow_Beigong",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010303,
+    "name": "Meowstruck",
+    "desc": "Meeoowoo!",
+    "icon": "T_Head_Bow_jinggong",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010401,
+    "name": "Midsummer Nocturne",
+    "desc": "A single note breaks the hush — waking her from a midsummer dream, and plucking softly at the strings of her heart.",
+    "icon": "T_Head_Polearm_Xiaye",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010402,
+    "name": "Tideborn Rhapsody",
+    "desc": "Waves leap beneath the dancer's steps — summer's rhythm crashing through the air. Here, the rhapsody crests: wild and bright.",
+    "icon": "T_Head_Polearm_Talang",
+    "rarity": 5,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 3010403,
+    "name": "Tough Love – Polearm",
+    "desc": "A polearm of unusual design, said to embody a father's love: firm, instructive, and just a little traumatising.",
+    "icon": "T_Head_Polearm_Fubei",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010404,
+    "name": "Meowmentum",
+    "desc": "Meeooow!",
+    "icon": "T_Head_Polearm_Miaotu",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010405,
+    "name": "Vigor Rise – Polearm",
+    "desc": "A true martial master has no need of steel — be it a snapped length of bamboo or a withered branch, anything they take in hand becomes a weapon to be reckoned with.",
+    "icon": "T_Head_Polearm_Shiru",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010406,
+    "name": "Sweet Fortune – Polearm",
+    "desc": "A skewer of candied delight.",
+    "icon": "T_Head_Polearm_Tangfu",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010407,
+    "name": "Verdant Finale – Polearm",
+    "desc": "Above the din, beyond the froth — a solitary cruise on an endless emerald.",
+    "icon": "T_Head_Polearm_Bixiao",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010501,
+    "name": "Fintastic Riptide",
+    "desc": "What trouble could a cute little shark possibly cause?",
+    "icon": "T_Head_Machinegun_Dalang",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010502,
+    "name": "Guitabby No. 1",
+    "desc": "Meow♪ meow-meow-meow♪ meow-meow♪♪",
+    "icon": "T_Head_Machinegun_Dianju",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010503,
+    "name": "Verdant Finale – Assault Rifle",
+    "desc": "Above the din, beyond the froth — a solitary cruise on an endless emerald.",
+    "icon": "T_Head_Machinegun_Bixiao",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010601,
+    "name": "Tough Love – Dual Blades",
+    "desc": "A pair of dual blades of unusual design, said to embody a father's love: firm, instructive, and just a little traumatising.",
+    "icon": "T_Head_Dualblade_Fubei",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010603,
+    "name": "Meowsterious",
+    "desc": "Meow~",
+    "icon": "T_Head_Dualblade_Maomao",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010605,
+    "name": "Vigor Rise – Dual Blades",
+    "desc": "A true martial master has no need of steel — be it a snapped length of bamboo or a withered branch, anything they take in hand becomes a weapon to be reckoned with.",
+    "icon": "T_Head_Dualblade_Shiru",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010607,
+    "name": "Sweet Fortune – Dual Blades",
+    "desc": "A skewer of candied delight.",
+    "icon": "T_Head_Dualblade_Tangfu",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010701,
+    "name": "Tough Love – Katana",
+    "desc": "A katana of unusual design, said to embody a father's love: firm, instructive, and just a little traumatising.",
+    "icon": "T_Head_Katana_Fubei",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010703,
+    "name": "I Am a Cat",
+    "desc": "Meow-meow meoow, meow-meow mee-meow, meow-meow mee-meoow~",
+    "icon": "T_Head_Katana_Woshi",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010705,
+    "name": "Vigor Rise – Katana",
+    "desc": "A true martial master has no need of steel — be it a snapped length of bamboo or a withered branch, anything they take in hand becomes a weapon to be reckoned with.",
+    "icon": "T_Head_Katana_Shiru",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010707,
+    "name": "Sweet Fortune – Katana",
+    "desc": "A skewer of candied delight.",
+    "icon": "T_Head_Katana_Tangfu",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010801,
+    "name": "Tough Love – Whipblade",
+    "desc": "A whipblade of unusual design, said to embody a father's love: firm, instructive, and just a little traumatising.",
+    "icon": "T_Head_Swordwhip_Fubei",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010802,
+    "name": "Meow-Meow Sausage",
+    "desc": "Meeeeow—!",
+    "icon": "T_Head_Swordwhip_Miaomiao",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010803,
+    "name": "Vigor Rise – Whipblade",
+    "desc": "A true martial master has no need of steel — be it a snapped length of bamboo or a withered branch, anything they take in hand becomes a weapon to be reckoned with.",
+    "icon": "T_Head_Swordwhip_Shiru",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010804,
+    "name": "Sweet Fortune – Whipblade",
+    "desc": "A skewer of candied delight.",
+    "icon": "T_Head_Swordwhip_Tangfu",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010805,
+    "name": "Verdant Finale – Whipblade",
+    "desc": "Above the din, beyond the froth — a solitary cruise on an endless emerald.",
+    "icon": "T_Head_Swordwhip_Bixiao",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010901,
+    "name": "Checkmeow",
+    "desc": "Meow~~~",
+    "icon": "T_Head_Cannon_Daju",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3011001,
+    "name": "Guitabby No. 2",
+    "desc": "Meeow♪ meow-meow-meow♪ meow-meow♪♪",
+    "icon": "T_Head_Shotgun_Dianju",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3011101,
+    "name": "Catloaf No. 1",
+    "desc": "Meow.",
+    "icon": "T_Head_Pistol_Maobing",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3011201,
+    "name": "Catloaf No. 2",
+    "desc": "Meow-meow.",
+    "icon": "T_Head_Crossbow_Maobing",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  }
+]

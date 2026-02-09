@@ -1,0 +1,346 @@
+[
+  {
+    "id": 3010101,
+    "name": "Percée inespérée",
+    "desc": "Un vrai pêcheur ne rentre jamais bredouille. Par chance, le marché faisait des soldes aujourd’hui — quatre-vingts pièces la bête. Inutile de préciser d’où vient la prise.",
+    "icon": "T_Head_Claymore_Kongjun",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010102,
+    "name": "Flamme stellaire",
+    "desc": "Juste avant leur collision, les étoiles s’échangèrent un dernier baiser.\nLeurs murmures brisés se muèrent en traînées de feu — souffle de deux amantes dérivant dans la voie lactée.",
+    "icon": "T_Head_Claymore_Qunxing",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010103,
+    "name": "UI_WeaponSkin_Name_3010103",
+    "desc": "UI_WeaponSkin_Des_3010103",
+    "icon": "T_Head_Claymore_Rongyao",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010104,
+    "name": "Héritage paternel – Espadon",
+    "desc": "Un espadon singulier, censé incarner l’autorité d’un père : ferme, formateur... et traumatisant juste ce qu’il faut.",
+    "icon": "T_Head_Claymore_Fubei",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010105,
+    "name": "Chat-d’œuvre",
+    "desc": "Miaou !",
+    "icon": "T_Head_Claymore_Damiao",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010106,
+    "name": "Vigueur irrésistible – Espadon",
+    "desc": "Un véritable maître n’a pas besoin d’arme : un bambou brisé ou une branche desséchée suffisent à écrire une légende que nul ne peut arrêter.",
+    "icon": "T_Head_Claymore_Shiru",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010107,
+    "name": "Festin primordial",
+    "desc": "Fendre le ciel et la terre, et apaiser les huit horizons par un banquet.",
+    "icon": "T_Head_Claymore_Dahuang",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010108,
+    "name": "糖福禄·重剑",
+    "desc": "冰糖葫芦竹签儿串。",
+    "icon": "T_Head_Claymore_Tangfu",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010201,
+    "name": "Second hameçon",
+    "desc": "La Truite des glaces congelée : ferme, savoureuse... et impérissable. Même les conserves et le film alimentaire finiront avant elle — peut-être même avant votre bon sens.",
+    "icon": "T_Head_Sword_Kongjun",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010202,
+    "name": "Héritage paternel",
+    "desc": "Une épée singulière, censée incarner l’autorité d’un père : ferme, formatrice... et traumatisante juste ce qu’il faut.",
+    "icon": "T_Head_Sword_Fubei",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010203,
+    "name": "Miaou-raculeux",
+    "desc": "Miaouuu~",
+    "icon": "T_Head_Sword_Miaoshou",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010204,
+    "name": "Vigueur irrésistible – Épée",
+    "desc": "Un véritable maître n’a pas besoin d’arme : un bambou brisé ou une branche desséchée suffisent à écrire une légende que nul ne peut arrêter.",
+    "icon": "T_Head_Sword_Shiru",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010205,
+    "name": "糖福禄·单手剑",
+    "desc": "冰糖葫芦竹签儿串。",
+    "icon": "T_Head_Sword_Tangfu",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010301,
+    "name": "Scherzo de l’aurore",
+    "desc": "Où se cache le soleil ? Là, regarde... il danse au creux de ma paume.",
+    "icon": "T_Head_Bow_Huanri",
+    "rarity": 5,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 3010302,
+    "name": "Fureur féline",
+    "desc": "Grrr-miaou !",
+    "icon": "T_Head_Bow_Beigong",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010303,
+    "name": "Frayeur féline",
+    "desc": "Miaouuu !",
+    "icon": "T_Head_Bow_jinggong",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010401,
+    "name": "Nocturne d’été",
+    "desc": "Une note cristalline fend le silence, tire une jeune fille de son rêve d’été... et vient frôler les cordes sensibles de son cœur.",
+    "icon": "T_Head_Polearm_Xiaye",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010402,
+    "name": "Rhapsodie des vagues",
+    "desc": "Sous les pas de la danseuse, l’écume bondit. Le vent salé charrie tout un été, et le sommet de la vague se fige ici — éclatant, indompté.",
+    "icon": "T_Head_Polearm_Talang",
+    "rarity": 5,
+    "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 3010403,
+    "name": "Héritage paternel – Arme d’hast",
+    "desc": "Une arme d’hast pour le moins singulière, censée incarner l’autorité d’un père : ferme, formatrice... et traumatisante juste ce qu’il faut.",
+    "icon": "T_Head_Polearm_Fubei",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010404,
+    "name": "Miaou-mentum",
+    "desc": "Miaaaou — !",
+    "icon": "T_Head_Polearm_Miaotu",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010405,
+    "name": "Vigueur irrésistible – Arme d’hast",
+    "desc": "Un véritable maître n’a pas besoin d’arme : un bambou brisé ou une branche desséchée suffisent à écrire une légende que nul ne peut arrêter.",
+    "icon": "T_Head_Polearm_Shiru",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010406,
+    "name": "糖福禄·长柄",
+    "desc": "冰糖葫芦竹签儿串。",
+    "icon": "T_Head_Polearm_Tangfu",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010407,
+    "name": "碧霄吟·长柄",
+    "desc": "尘嚣无染，碧波破浪。",
+    "icon": "T_Head_Polearm_Bixiao",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010501,
+    "name": "Raz-de-marée requin",
+    "desc": "Quel mauvais dessein pourrait bien avoir un adorable petit requin ?",
+    "icon": "T_Head_Machinegun_Dalang",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010502,
+    "name": "Guitare miaou n° 1",
+    "desc": "Miaou ♪ miaou-miaou-miaou ♪ miaou-miaou ♪♪",
+    "icon": "T_Head_Machinegun_Dianju",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010503,
+    "name": "碧霄吟·突击枪",
+    "desc": "尘嚣无染，碧波破浪。",
+    "icon": "T_Head_Machinegun_Bixiao",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010601,
+    "name": "Héritage paternel – Doubles lames",
+    "desc": "Une paire de lames singulières, censées incarner l’autorité d’un père : fermes, formatrices... et traumatisantes juste ce qu’il faut.",
+    "icon": "T_Head_Dualblade_Fubei",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010603,
+    "name": "Mystérieusement miaou",
+    "desc": "Mii-miaou~",
+    "icon": "T_Head_Dualblade_Maomao",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010605,
+    "name": "Vigueur irrésistible – Doubles lames",
+    "desc": "Un véritable maître n’a pas besoin d’arme : un bambou brisé ou une branche desséchée suffisent à écrire une légende que nul ne peut arrêter.",
+    "icon": "T_Head_Dualblade_Shiru",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010607,
+    "name": "糖福禄·双刀",
+    "desc": "冰糖葫芦竹签儿串。",
+    "icon": "T_Head_Dualblade_Tangfu",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010701,
+    "name": "Héritage paternel – Katana",
+    "desc": "Un katana singulier, censé incarner l’autorité d’un père : ferme, formateur... et traumatisant juste ce qu’il faut.",
+    "icon": "T_Head_Katana_Fubei",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010703,
+    "name": "Je suis un chat",
+    "desc": "Miaou miaou miaou miaou, miaou miaou mi-miaou, miaou miaou mi-miaou~",
+    "icon": "T_Head_Katana_Woshi",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010705,
+    "name": "Vigueur irrésistible – Katana",
+    "desc": "Un véritable maître n’a pas besoin d’arme : un bambou brisé ou une branche desséchée suffisent à écrire une légende que nul ne peut arrêter.",
+    "icon": "T_Head_Katana_Shiru",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010707,
+    "name": "糖福禄·太刀",
+    "desc": "冰糖葫芦竹签儿串。",
+    "icon": "T_Head_Katana_Tangfu",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010801,
+    "name": "Héritage paternel – Épée-fouet",
+    "desc": "Une épée-fouet singulière, censée incarner l’autorité d’un père : ferme, formatrice... et traumatisante juste ce qu’il faut.",
+    "icon": "T_Head_Swordwhip_Fubei",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010802,
+    "name": "Saucisse miaou-miaou",
+    "desc": "Miaaaaaou — !",
+    "icon": "T_Head_Swordwhip_Miaomiao",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010803,
+    "name": "Vigueur irrésistible – Épée-fouet",
+    "desc": "Un véritable maître n’a pas besoin d’arme : un bambou brisé ou une branche desséchée suffisent à écrire une légende que nul ne peut arrêter.",
+    "icon": "T_Head_Swordwhip_Shiru",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010804,
+    "name": "糖福禄·鞭刃",
+    "desc": "冰糖葫芦竹签儿串。",
+    "icon": "T_Head_Swordwhip_Tangfu",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010805,
+    "name": "碧霄吟·鞭刃",
+    "desc": "尘嚣无染，碧波破浪。",
+    "icon": "T_Head_Swordwhip_Bixiao",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010901,
+    "name": "Tout est miaou",
+    "desc": "Miaou~~~",
+    "icon": "T_Head_Cannon_Daju",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3011001,
+    "name": "Guitare miaou n° 2",
+    "desc": "Miaouuu ♪ miaou-miaou-miaou ♪ miaou-miaou ♪♪",
+    "icon": "T_Head_Shotgun_Dianju",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3011101,
+    "name": "Galette de chat n° 1",
+    "desc": "Miaou.",
+    "icon": "T_Head_Pistol_Maobing",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3011201,
+    "name": "Galette de chat n° 2",
+    "desc": "Miaou miaou.",
+    "icon": "T_Head_Crossbow_Maobing",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  }
+]

@@ -1,0 +1,346 @@
+[
+  {
+    "id": 3010101,
+    "name": "빈손 1호",
+    "desc": "하루 종일 낚시를 한 용사는 결코 빈손으로 집에 돌아갈 수 없다. 다행히도 오늘 수산시장에서 할인가 80쿠퍼에 한 마리를 팔고 있다.",
+    "icon": "T_Head_Claymore_Kongjun",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010102,
+    "name": "별들의 화염",
+    "desc": "별들은 충돌하기 전에 작별 인사를 나눈다. 조각난 속삭임은 하늘 위의 불꽃이 되어, 마치 은하가 숨을 내뱉는 것처럼 보인다.",
+    "icon": "T_Head_Claymore_Qunxing",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010103,
+    "name": "UI_WeaponSkin_Name_3010103",
+    "desc": "UI_WeaponSkin_Des_3010103",
+    "icon": "T_Head_Claymore_Rongyao",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010104,
+    "name": "선조의 그늘·대검",
+    "desc": "다소 특이한 대검. 아버지의 채찍... 아니, 아버지의 사랑을 상징한다.",
+    "icon": "T_Head_Claymore_Fubei",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010105,
+    "name": "대검이다옹",
+    "desc": "냐옹!",
+    "icon": "T_Head_Claymore_Damiao",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010106,
+    "name": "파죽지세·대검",
+    "desc": "진정한 고수는 무기를 가리지 않고, 부러진 대나무나 마른 가지 하나만으로, 불패 전설을 써 내려간다.",
+    "icon": "T_Head_Claymore_Shiru",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010107,
+    "name": "장엄한 연회",
+    "desc": "새로운 시대가 열리니, 엄숙한 연회로 세상을 위로하리라.",
+    "icon": "T_Head_Claymore_Dahuang",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010108,
+    "name": "후루후루·대검",
+    "desc": "새빨간 열매를 꼬치에 꽂자.",
+    "icon": "T_Head_Claymore_Tangfu",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010201,
+    "name": "빈손 2호",
+    "desc": "냉동 시 힘과 풍미가 함께 깃드는 설무늬어. 통조림과 랩의 유통기한이 지나더라도 이건 멀쩡할 것이다.",
+    "icon": "T_Head_Sword_Kongjun",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010202,
+    "name": "선조의 그늘",
+    "desc": "다소 특이한 검. 아버지의 채찍… 아니, 아버지의 사랑을 상징한다.",
+    "icon": "T_Head_Sword_Fubei",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010203,
+    "name": "냥수회춘",
+    "desc": "냐옹~",
+    "icon": "T_Head_Sword_Miaoshou",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010204,
+    "name": "파죽지세·한손검",
+    "desc": "진정한 고수는 무기를 가리지 않고, 부러진 대나무나 마른 가지 하나만으로, 불패 전설을 써 내려간다.",
+    "icon": "T_Head_Sword_Shiru",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010205,
+    "name": "후루후루·한손검",
+    "desc": "새빨간 열매를 꼬치에 꽂자.",
+    "icon": "T_Head_Sword_Tangfu",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010301,
+    "name": "태양의 급보",
+    "desc": "태양아, 태양아 어디에 있니? 태양은 우리의 손안에 있어.",
+    "icon": "T_Head_Bow_Huanri",
+    "rarity": 5,
+    "unlock": "광채에서 획득"
+  },
+  {
+    "id": 3010302,
+    "name": "냐옹짧궁",
+    "desc": "냐오옹?",
+    "icon": "T_Head_Bow_Beigong",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010303,
+    "name": "애옹길궁",
+    "desc": "캬르르르릉!",
+    "icon": "T_Head_Bow_jinggong",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010401,
+    "name": "여름밤의 현음",
+    "desc": "청아한 목소리가 소녀의 얕은 꿈을 깨우고, 여름의 심금을 울린다.",
+    "icon": "T_Head_Polearm_Xiaye",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010402,
+    "name": "파도 타기 춤곡",
+    "desc": "물결은 춤추는 자의 발끝에서 넘실대고, 바닷바람은 온 여름의 정수를 감싸며 클라이맥스를 이곳에 새긴다.",
+    "icon": "T_Head_Polearm_Talang",
+    "rarity": 5,
+    "unlock": "광채에서 획득"
+  },
+  {
+    "id": 3010403,
+    "name": "선조의 그늘·장병기",
+    "desc": "다소 특이한 장병기. 아버지의 채찍... 아니, 아버지의 사랑을 상징한다.",
+    "icon": "T_Head_Polearm_Fubei",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010404,
+    "name": "묘돌맹진",
+    "desc": "냐오옹——!",
+    "icon": "T_Head_Polearm_Miaotu",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010405,
+    "name": "파죽지세·장병기",
+    "desc": "진정한 고수는 무기를 가리지 않고, 부러진 대나무나 마른 가지 하나만으로, 불패 전설을 써 내려간다.",
+    "icon": "T_Head_Polearm_Shiru",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010406,
+    "name": "후루후루·장병기",
+    "desc": "새빨간 열매를 꼬치에 꽂자.",
+    "icon": "T_Head_Polearm_Tangfu",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010407,
+    "name": "푸른 하늘의 노래·장병기",
+    "desc": "때묻지 않은 짙푸른 물결 너머 그곳.",
+    "icon": "T_Head_Polearm_Bixiao",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010501,
+    "name": "상어 회오리",
+    "desc": "아기 상어는 아무런 악의도 없답니다.",
+    "icon": "T_Head_Machinegun_Dalang",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010502,
+    "name": "일렉 치즈 No.1",
+    "desc": "냐옹♪ 냐오옹♪ 냐옹♪♪",
+    "icon": "T_Head_Machinegun_Dianju",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010503,
+    "name": "푸른 하늘의 노래·돌격소총",
+    "desc": "때묻지 않은 짙푸른 물결 너머 그곳.",
+    "icon": "T_Head_Machinegun_Bixiao",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010601,
+    "name": "선조의 그늘·쌍도",
+    "desc": "다소 특이한 쌍도. 아버지의 채찍... 아니, 아버지의 사랑을 상징한다.",
+    "icon": "T_Head_Dualblade_Fubei",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010603,
+    "name": "수상쩍다옹",
+    "desc": "냐오오옹~",
+    "icon": "T_Head_Dualblade_Maomao",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010605,
+    "name": "파죽지세·쌍도",
+    "desc": "진정한 고수는 무기를 가리지 않고, 부러진 대나무나 마른 가지 하나만으로, 불패 전설을 써 내려간다.",
+    "icon": "T_Head_Dualblade_Shiru",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010607,
+    "name": "후루후루·쌍도",
+    "desc": "새빨간 열매를 꼬치에 꽂자.",
+    "icon": "T_Head_Dualblade_Tangfu",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010701,
+    "name": "선조의 그늘·대도",
+    "desc": "다소 특이한 대도. 아버지의 채찍... 아니, 아버지의 사랑을 상징한다.",
+    "icon": "T_Head_Katana_Fubei",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010703,
+    "name": "애옹이로소이다",
+    "desc": "나는 애옹이로소이다. 이름은 아직 없다.",
+    "icon": "T_Head_Katana_Woshi",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010705,
+    "name": "파죽지세·대도",
+    "desc": "진정한 고수는 무기를 가리지 않고, 부러진 대나무나 마른 가지 하나만으로, 불패 전설을 써 내려간다.",
+    "icon": "T_Head_Katana_Shiru",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010707,
+    "name": "후루후루·대도",
+    "desc": "새빨간 열매를 꼬치에 꽂자.",
+    "icon": "T_Head_Katana_Tangfu",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010801,
+    "name": "선조의 그늘·\n칼날 채찍",
+    "desc": "다소 특이한 칼날 채찍. 아버지의 채찍... 아니, 아버지의 사랑을 상징한다.",
+    "icon": "T_Head_Swordwhip_Fubei",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010802,
+    "name": "맥스묭",
+    "desc": "냐오오옹냐오오옹냐오오오옹——",
+    "icon": "T_Head_Swordwhip_Miaomiao",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010803,
+    "name": "파죽지세·칼날 채찍",
+    "desc": "진정한 고수는 무기를 가리지 않고, 부러진 대나무나 마른 가지 하나만으로, 불패 전설을 써 내려간다.",
+    "icon": "T_Head_Swordwhip_Shiru",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010804,
+    "name": "후루후루·칼날 채찍",
+    "desc": "새빨간 열매를 꼬치에 꽂자.",
+    "icon": "T_Head_Swordwhip_Tangfu",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010805,
+    "name": "푸른 하늘의 노래·칼날 채찍",
+    "desc": "때묻지 않은 짙푸른 물결 너머 그곳.",
+    "icon": "T_Head_Swordwhip_Bixiao",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010901,
+    "name": "탄도는 고정이다옹",
+    "desc": "냐옹~~~",
+    "icon": "T_Head_Cannon_Daju",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3011001,
+    "name": "일렉 치즈 No.2",
+    "desc": "냐오옹♪ 냐오오옹♪ 냐오옹♪♪",
+    "icon": "T_Head_Shotgun_Dianju",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3011101,
+    "name": "애옹빵 1호",
+    "desc": "냐옹.",
+    "icon": "T_Head_Pistol_Maobing",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3011201,
+    "name": "애옹빵 2호",
+    "desc": "냐옹냐옹.",
+    "icon": "T_Head_Crossbow_Maobing",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  }
+]

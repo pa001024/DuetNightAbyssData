@@ -939,17 +939,21 @@
                     "id": 101002151,
                     "content": "(Follow Camilla and Snow to Icelake.)",
                     "next": 10100223,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 101002152,
                     "content": "(I can't trust strangers.)",
                     "next": 10100216,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   }
                 ]
               },
@@ -1075,17 +1079,21 @@
                     "id": 101004021,
                     "content": "Don't be afraid, everything's all right now.",
                     "next": 10100403,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 101004022,
                     "content": "I remember someone just promised to protect me.",
                     "next": 10100404,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -1236,25 +1244,31 @@
                     "id": 101006061,
                     "content": "From a small island in the South.",
                     "next": 10100607,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 101006062,
                     "content": "I'm a relative of Ms Camilla.",
                     "next": 10100609,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   },
                   {
                     "id": 101006063,
                     "content": "(Remain silent and look at Camilla.)",
                     "next": 101006110,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   }
                 ]
               },
@@ -1751,17 +1765,21 @@
                     "id": 101016101,
                     "content": "Excuse me...",
                     "next": 10101612,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 101016102,
                     "content": "Snow, was that you?",
                     "next": 10101611,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -2239,17 +2257,21 @@
                     "id": 101024191,
                     "content": "It's not really up to them, I suppose.",
                     "next": 10102420,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 101024192,
                     "content": "Snow has a point. An eye for an eye.",
                     "next": 10102420,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   }
                 ]
               },
@@ -2403,17 +2425,21 @@
                     "id": 101026091,
                     "content": "I've been faced with greater dangers.",
                     "next": 10102610,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 101026092,
                     "content": "Between starvation and danger, I choose the latter.",
                     "next": 10102610,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               },
@@ -3265,17 +3291,21 @@
                     "id": 101044051,
                     "content": "Thanks, I owe you another one.",
                     "next": 10104406,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 101044052,
                     "content": "Since it's a job offered by you guys, it's only right.",
                     "next": 10104406,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               },
@@ -3451,17 +3481,21 @@
                     "id": 101046091,
                     "content": "Let's go then.",
                     "next": 10104612,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 101046092,
                     "content": "Don't listen to Snow, she just wants extra help.",
                     "next": 10104610,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   }
                 ]
               },
@@ -4028,17 +4062,21 @@
                     "id": 101054041,
                     "content": "We defeated that Filthoid. Give it back.",
                     "next": 10105406,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 101054042,
                     "content": "If there's no such thing as dibs, that means we can just beat you up and take the Crystallo back.",
                     "next": 10105406,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -5341,17 +5379,21 @@
                     "id": 101070031,
                     "content": "I told him a story that brought him to tears.",
                     "next": 10107004,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 101070032,
                     "content": "He broke his leg on his way back and is now howling in pain at home.",
                     "next": 10107006,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -5483,9 +5525,11 @@
                     "id": 101071081,
                     "content": "That makes sense; I should adopt a habit too. Does Mr Henrik have any?",
                     "next": 10107109,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   }
                 ]
               },
@@ -6057,17 +6101,21 @@
                     "id": 10108304,
                     "content": "Huh, that's a clever tactic. ",
                     "next": 10108306,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 10108305,
                     "content": "Hmm... that's rather underhanded. ",
                     "next": 10108308,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   }
                 ]
               },
@@ -6194,17 +6242,21 @@
                     "id": 10108304,
                     "content": "Huh, that's a clever tactic. ",
                     "next": 10108306,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 10108305,
                     "content": "Hmm... that's rather underhanded. ",
                     "next": 10108308,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   }
                 ]
               },
@@ -6795,17 +6847,21 @@
                     "id": 10110214,
                     "content": "I'm from a backwater village, we're rather uninformed...",
                     "next": 10110215,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 10110216,
                     "content": "You ask too many questions. Shut it or I'll share what I just saw with...",
                     "next": 10110217,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -8163,17 +8219,21 @@
                     "id": 10113026,
                     "content": "(Calm down and remain silent — it's unwise to draw more attention from the Legion.)",
                     "next": 10113027,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 10113028,
                     "content": "(Continue the speech despite the risk — you've made up your mind to set the record straight for Psyche.)",
                     "next": 10113029,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   }
                 ]
               },
@@ -8348,25 +8408,31 @@
                     "id": 101131171,
                     "content": "...Okay.",
                     "next": 10113118,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 101131172,
                     "content": "It's alright. I'll get better... soon.",
                     "next": 10113118,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 101131173,
                     "content": "Tears are for losers. One day, I'll make them pay.",
                     "next": 10113118,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -8827,17 +8893,21 @@
                     "id": 10030406,
                     "content": "Ms Camilla, you really are tough on the outside but soft on the inside.",
                     "next": 10030407,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 10030408,
                     "content": "...Maybe I should've just stayed dead for a while.",
                     "next": 10030409,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -9200,17 +9270,21 @@
                     "id": 10030809,
                     "content": "No need. Let's just get it over with.",
                     "next": 10030810,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 10030811,
                     "content": "I'm not that fragile.",
                     "next": 10030812,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   }
                 ]
               },
@@ -9388,17 +9462,21 @@
                     "id": 10031002,
                     "content": "Yes, I remember it.",
                     "next": 10031004,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 10031003,
                     "content": "Well, if someone knocked you out cold on the street, you wouldn't forget either.",
                     "next": 10031004,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -9569,17 +9647,21 @@
                     "id": 10031114,
                     "content": "It's okay.",
                     "next": 10031115,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 10031116,
                     "content": "I want compensation for emotional damage.",
                     "next": 10031117,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -9667,17 +9749,21 @@
                     "id": 10031205,
                     "content": "Yeah, singing is hard.",
                     "next": 10031206,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 10031207,
                     "content": "I'm not bad at music. Don't lump me in with you.",
                     "next": 10031208,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -10249,17 +10335,21 @@
                     "id": 10032207,
                     "content": "He told you we're not tabloid hacks!",
                     "next": 10032209,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 10032208,
                     "content": "One more word about tabloid hack, and I'll shove this dirty rag — straight from the rubbish bin — down your throat.",
                     "next": 10032209,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -10474,17 +10564,21 @@
                     "id": 10032502,
                     "content": "Of course. I'm a genius.",
                     "next": 10032503,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   },
                   {
                     "id": 10032504,
                     "content": "There wasn't much to find in the theatre, so it didn't take long.",
                     "next": 10032505,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   }
                 ]
               },
@@ -10597,17 +10691,21 @@
                     "id": 10032526,
                     "content": "A fisherman.",
                     "next": 10032527,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 10032528,
                     "content": "Chief Sibylle.",
                     "next": 10032529,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -10826,17 +10924,21 @@
                     "id": 10032703,
                     "content": "...Doesn't seem like he's involved.",
                     "next": 10032704,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 10032705,
                     "content": "That depends on how much you're willing to cooperate. This officer's gun isn't exactly known for its patience.",
                     "next": 10032706,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               },
@@ -10945,17 +11047,21 @@
                     "id": 10032722,
                     "content": "If you can provide important clues about the murder case, your sentence might be reduced.",
                     "next": 10032723,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 10032724,
                     "content": "Hardship isn't an excuse for crime. There's nothing we can do.",
                     "next": 10032725,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   }
                 ]
               },
@@ -11931,17 +12037,21 @@
                     "id": 10033511,
                     "content": "Thank you for caring about me.",
                     "next": 10033512,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 10033513,
                     "content": "I'm fine, really.",
                     "next": 10033514,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   }
                 ]
               },
@@ -11996,17 +12106,21 @@
                     "id": 10033521,
                     "content": "She hasn't fulfilled her promise yet.",
                     "next": 10033522,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 10033523,
                     "content": "She just saved my life.",
                     "next": 10033524,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   }
                 ]
               },
@@ -12593,9 +12707,11 @@
                     "id": 10034229,
                     "content": "Thank you, Mommy Outsider.",
                     "next": 10034230,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -13234,17 +13350,21 @@
                     "id": 10033971,
                     "content": "Can I trust them?",
                     "next": 10033972,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 10033973,
                     "content": "...Even in a hospital bed, you're still thinking about helping me?",
                     "next": 10033974,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   }
                 ]
               },
@@ -13407,25 +13527,31 @@
                     "id": 10035209,
                     "content": "It's tough, isn't it? Protecting the people and following orders are both your duties.",
                     "next": 10035210,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 10035211,
                     "content": "Just follow your heart.",
                     "next": 10035212,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 10035213,
                     "content": "They summon us when it suits them and kick us out when they're done. I'm so fed up with this arrogant 13th Legion.",
                     "next": 10035214,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -13558,17 +13684,21 @@
                     "id": 10035233,
                     "content": "We'll go with you. I want to help you fix your regrets.",
                     "next": 10035235,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 10035234,
                     "content": "Just you and us?",
                     "next": 10035235,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               },
@@ -16252,25 +16382,31 @@
                     "id": 11011527,
                     "content": "(Stay silent)",
                     "next": 11011528,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 11011529,
                     "content": "Receiving enough support gives us a better chance of victory. A victory in your name, sir.",
                     "next": 11011530,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 11011533,
                     "content": "Since you're so full of courage, why don't you come to the front yourself?",
                     "next": 11011534,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -17626,17 +17762,21 @@
                     "id": 11018005,
                     "content": "Trust Katya",
                     "next": 11018006,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 11018008,
                     "content": "Do not trust Katya",
                     "next": 11018009,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   }
                 ]
               },
@@ -18252,25 +18392,31 @@
                     "id": 11015105,
                     "content": "Maybe we should just live in the sewers forever.",
                     "next": 11015106,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   },
                   {
                     "id": 11015107,
                     "content": "We should just head out and fight to the death.",
                     "next": 11015108,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 11015110,
                     "content": "...Let's take a deep breath. We'll come up with something.",
                     "next": 11015111,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   }
                 ]
               },
@@ -18713,17 +18859,21 @@
                     "id": 11014405,
                     "content": "(Hold her gently and reassure her you can be trusted.)",
                     "next": 110144071,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 11014406,
                     "content": "(Tell her she needs to be strong and face reality on her own.)",
                     "next": 11014407,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               },
@@ -20170,17 +20320,21 @@
                     "id": 12000904,
                     "content": "Your own rules state admission is ticket-based. I don't see anything about excluding specific groups. ",
                     "next": 12000906,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 12000905,
                     "content": "What kind of attitude is that? I'm reporting you to your manager!",
                     "next": 12000906,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -20777,25 +20931,31 @@
                     "id": 12001354,
                     "content": "But what if it's not good enough? Do you offer after-sale service?",
                     "next": 12001357,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 12001355,
                     "content": "That goes against the most basic rules of fair trade.",
                     "next": 12001357,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 12001356,
                     "content": "How gullible do you think we are?",
                     "next": 12001357,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -22193,17 +22353,21 @@
                     "id": 120101151,
                     "content": "That's very generous of you, but I couldn't possibly...",
                     "next": 12010116,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 120101152,
                     "content": "For real? I'm gonna shop EverSpring straight into bankruptcy!",
                     "next": 12010116,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -22847,17 +23011,21 @@
                     "id": 120104121,
                     "content": "They punish evildoers? That makes them seem less like ordinary beasts.",
                     "next": 12010413,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 120104122,
                     "content": "They sound amazing... Can I take one back to Icelake and keep it?",
                     "next": 12010414,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               },
@@ -23031,17 +23199,21 @@
                     "id": 120104401,
                     "content": "I highly doubt that.",
                     "next": 12010441,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 120104402,
                     "content": "Huh. Guess it's time — yes, I am Yang. I never died — I just got stuck in the Hyperborean Empire.",
                     "next": 12010441,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -23127,17 +23299,21 @@
                     "id": 120105101,
                     "content": "Thank her",
                     "next": 12010511,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 120105102,
                     "content": "Say you could've handled it alone",
                     "next": 12010511,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               },
@@ -24062,17 +24238,21 @@
                     "id": 120120031,
                     "content": "Snow, Lunarian.",
                     "next": 12012005,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 120120032,
                     "content": "The Pure-White Redeemer ☆ Demon King of Light!",
                     "next": 12012007,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -25006,17 +25186,21 @@
                     "id": 120126041,
                     "content": "I'm a Phoxhunter from Hyperborea.",
                     "next": 12012607,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 120126042,
                     "content": "I'm the boss here, you hear me?",
                     "next": 12012607,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -25479,25 +25663,31 @@
                     "id": 120131141,
                     "content": "You eased my fatigue. It's only right that I give it to you.",
                     "next": 12013115,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 120131142,
                     "content": "If it once belonged to someone dear to you... then take it.",
                     "next": 12013116,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 120131143,
                     "content": "Nothing comes free in this world!",
                     "next": 12013117,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               },
@@ -26164,33 +26354,41 @@
                     "id": 120230021,
                     "content": "He did seem... a little pitiful.",
                     "next": 12023003,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 120230022,
                     "content": "Maybe he was wrong, but it didn't feel right to cast him out like that.",
                     "next": 12023003,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 120230023,
                     "content": "Sometimes harsh measures are necessary to keep people in line.",
                     "next": 12023003,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 120230024,
                     "content": "That was badass! He had it coming.",
                     "next": 12023003,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -26498,16 +26696,20 @@
                   {
                     "id": 120136021,
                     "content": "Let's go check on Fushu first.",
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 120136022,
                     "content": "Let's have a look at Mr Qiu's commission.",
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               }
@@ -28565,17 +28767,21 @@
                     "id": 120186141,
                     "content": "They were just trying to help.",
                     "next": 12018616,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 120186142,
                     "content": "Dock three days' pay from each of them!",
                     "next": 12018619,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -29682,17 +29888,21 @@
                     "id": 120223281,
                     "content": "I don't want to stand by and watch Huaxu fall apart. I want to see what I can do.",
                     "next": 12022329,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 120223282,
                     "content": "Too much has happened today... I just want to go back to Icelake.",
                     "next": 12022329,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               },
@@ -31905,17 +32115,21 @@
                     "id": 200006151,
                     "content": "Yes, Your Highness!",
                     "next": 20000619,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 200006152,
                     "content": "How much will the leader of your legion get paid?",
                     "next": 20000618,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               },
@@ -32006,25 +32220,31 @@
                     "id": 200008091,
                     "content": "(She looks rather lethargic. Something seems to be on her mind.)",
                     "next": 20000810,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 200008092,
                     "content": "(You noticed the potted plant she was taking care of, and she was sighing at it.)",
                     "next": 20000811,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 200008093,
                     "content": "Resting might not do much. Why not try going out and doing something fun to lift your spirits?",
                     "next": 20000812,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -32238,17 +32458,21 @@
                     "id": 200009111,
                     "content": "Indeed... If flowers had a choice, they probably wouldn't want to be snipped off.",
                     "next": 20000913,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 200009112,
                     "content": "But maybe that is the flowers' purpose, to have their beauty appreciated by others.",
                     "next": 20000912,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               },
@@ -32279,25 +32503,31 @@
                     "id": 200009151,
                     "content": "I'll do my best to make them survive for as long as I can.",
                     "next": 20000916,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 200009152,
                     "content": "I will cherish the moment of their blossoming.",
                     "next": 20000917,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 200009153,
                     "content": "I actually feel sorry for them as well...",
                     "next": 20000918,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   }
                 ]
               },
@@ -32747,25 +32977,31 @@
                     "id": 200054111,
                     "content": "Kind of like how Charons and Solas look different but are both human?",
                     "next": 20005412,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 200054112,
                     "content": "Kind of like how guns and bows look different but are both ranged weapons?",
                     "next": 20005413,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 200054113,
                     "content": "Kind of like how snow and mist look totally different but are both mainly made of water?",
                     "next": 20005414,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -34269,17 +34505,21 @@
                     "id": 510001041,
                     "content": "Ahhh! I'll drink it myself! Thank you!",
                     "next": 51000105,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 510001042,
                     "content": "(Skillfully sidestep — You're wary of over-the-top kindness from strangers.)",
                     "next": 51000107,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               },
@@ -34407,9 +34647,11 @@
                     "id": 510023041,
                     "content": "(Hand over the journal retrieved from the pit)",
                     "next": 51002305,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 510023042,
@@ -34809,25 +35051,31 @@
                     "id": 510004031,
                     "content": "Umm... {性别:I am a man.|I am not your daughter.}",
                     "next": 51000490,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 510004032,
                     "content": "Please calm down. Are you looking for someone? I'll keep an eye out for you.",
                     "next": 51000490,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 510004033,
                     "content": "Mum!!!",
                     "next": 51000404,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -35467,25 +35715,31 @@
                     "id": 510020031,
                     "content": "Why don't you go treasure hunting yourself?",
                     "next": 51002004,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 510020032,
                     "content": "Could you briefly describe this treasure?",
                     "next": 51002006,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 510020033,
                     "content": "You are not trying to defraud, are you?",
                     "next": 51002008,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   }
                 ]
               },
@@ -36974,17 +37228,21 @@
                     "id": 510049091,
                     "content": "Relax. I'm not here to threaten you.",
                     "next": 51004910,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 510049092,
                     "content": "Gesture like she does.",
                     "next": 51004911,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -37038,25 +37296,31 @@
                     "id": 510049171,
                     "content": "But it won't change anything. It only gets you in trouble.",
                     "next": 51004918,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 510049172,
                     "content": "Despite enduring such a great misfortune, you still keep on writing. I truly admire your courage.",
                     "next": 51004923,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 510049173,
                     "content": "This \"prescription\" is now in my hands. Better pay up if you want it back.",
                     "next": 51004927,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -37598,17 +37862,21 @@
                     "id": 510038021,
                     "content": "Do you need help?",
                     "next": 51003803,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 510038022,
                     "content": "Unlike me, you're obviously a Sola.",
                     "next": 51003804,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   }
                 ]
               },
@@ -37959,33 +38227,41 @@
                     "id": 51008003,
                     "content": "I'm not buying, but I can find you a buyer if we split it fifty-fifty.",
                     "next": 51008009,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 51008004,
                     "content": "Do you need help?",
                     "next": 51008009,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 51008005,
                     "content": "This is illegal in the Empire. You should leave if you don't want any trouble.",
                     "next": 51008006,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 51008007,
                     "content": "Ahem! The Legion commissioned me to search the likes of you. Show me your travel permit!",
                     "next": 51008008,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -38402,25 +38678,31 @@
                     "id": 510051051,
                     "content": "I don't judge and I don't care. I've got things to do here, and that's why I'm staying for now.",
                     "next": 51005106,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 510051052,
                     "content": "It's my first visit to a large city like this. The place has a unique vibe. I've met plenty of interesting people and had some bizarre adventures here. Truth be told, I'm not very used to it...",
                     "next": 51005107,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 510051053,
                     "content": "Feels just like home!",
                     "next": 51005108,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -38462,25 +38744,31 @@
                     "id": 510051111,
                     "content": "Just a bunch of second-hand stuff with no real value.",
                     "next": 51005112,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 510051112,
                     "content": "I have to ask this first — these aren't... stolen, by any chance?",
                     "next": 51005113,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 510051113,
                     "content": "Where did you get them? Count me in!",
                     "next": 51005114,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -38509,17 +38797,32 @@
                   {
                     "id": 510051151,
                     "content": "(You pick up a prescription. A seemingly seditious poem is written behind it.)",
-                    "next": 51005117
+                    "next": 51005117,
+                    "imprCheck": [
+                      1011,
+                      "Benefit",
+                      20
+                    ]
                   },
                   {
                     "id": 510051152,
                     "content": "(You pick up a box of paper stars. Its owner probably had a wish they wanted to fulfil.)",
-                    "next": 51005117
+                    "next": 51005117,
+                    "imprCheck": [
+                      1011,
+                      "Morality",
+                      20
+                    ]
                   },
                   {
                     "id": 510051153,
                     "content": "(You pick up a key that looks rather familiar — you remember seeing a similar key at Henrik's place.)",
-                    "next": 51005117
+                    "next": 51005117,
+                    "imprCheck": [
+                      1011,
+                      "Wisdom",
+                      20
+                    ]
                   }
                 ]
               },
@@ -38580,25 +38883,31 @@
                     "id": 510051251,
                     "content": "Will these coins be enough?",
                     "next": 51005126,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 510051252,
                     "content": "What about my 20% discount?",
                     "next": 51005127,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 510051253,
                     "content": "Outta here.",
                     "next": 51005128,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -38741,41 +39050,51 @@
                     "id": 510052081,
                     "content": "Always try to play it \"safe\" in Icelake. Going the extra mile will just get yourself and others into trouble. It really isn't worth it.",
                     "next": 51005209,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 510052082,
                     "content": "Life is seldom a breeze. The only thing we can do in Icelake is stick to our principles.",
                     "next": 51005209,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 510052083,
                     "content": "Not everyone believes in the \"city laws\". It makes you wonder how many people break the rules in the dark.",
                     "next": 51005209,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 510052084,
                     "content": "The people here cling to their hopes, faiths, and circumstances... These are all they have. They try to hold on, and then bad things happen.",
                     "next": 51005209,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 510052085,
                     "content": "The city's like powder kegs ready to explode! Lamenting Lake shall vaporize and give us a show!",
                     "next": 51005209,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -38846,17 +39165,21 @@
                     "id": 510053031,
                     "content": "(Take a closer look at his notes)",
                     "next": 51005304,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 510053032,
                     "content": "(Leave silently)",
                     "next": 51005306,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   }
                 ]
               },
@@ -39011,25 +39334,31 @@
                     "id": 510054061,
                     "content": "They're raw, aren't they? I'm good.",
                     "next": 51005407,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 510054062,
                     "content": "(Take a cautious bite and muster a compliment)",
                     "next": 51005408,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 510054063,
                     "content": "Even if I were starving, I'd rather eat ice and snow.",
                     "next": 51005409,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -39135,17 +39464,21 @@
                     "id": 510056011,
                     "content": "(You notice bloodstains on the Borealberry peels.)",
                     "next": 51005602,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 510056012,
                     "content": "(You notice the bloodstains on Marcus's clothes.)",
                     "next": 51005603,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   }
                 ]
               },
@@ -39327,17 +39660,21 @@
                     "id": 510057121,
                     "content": "(Be honest and tell him it's very delicious and people will definitely love it.)",
                     "next": 51005713,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 510057122,
                     "content": "(Lie to Marcus by saying that the dish is good but ordinary. Advise him to take good care of himself first and find another job once he gets better.)",
                     "next": 51005716,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   }
                 ]
               },
@@ -39430,25 +39767,31 @@
                     "id": 510058021,
                     "content": "Aren't all the chests in this city mine?",
                     "next": 51005803,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   },
                   {
                     "id": 510058022,
                     "content": "Sorry. I didn't know this chest belonged to you.",
                     "next": 51005804,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 510058023,
                     "content": "This chest doesn't have your names on it.",
                     "next": 51005807,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               },
@@ -39758,17 +40101,21 @@
                     "id": 510071161,
                     "content": "These stars obviously hold sentimental value. Is it really okay to let someone else take them away?",
                     "next": 51007117,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 510071162,
                     "content": "(Unfolds another star and reads the message aloud.)",
                     "next": 51007119,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -40381,25 +40728,31 @@
                     "id": 510060171,
                     "content": "The name might make some people uncomfortable.",
                     "next": 51006018,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 510060172,
                     "content": "It might scare off potential clients.",
                     "next": 51006019,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 510060173,
                     "content": "I like it. We should look into edible insects.",
                     "next": 51006020,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -40847,25 +41200,31 @@
                     "id": 510067091,
                     "content": "That's understandable. I wouldn't want to compete against an unbeatable record either.",
                     "next": 51006710,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 510067092,
                     "content": "So you were using me to get back at Outsider.",
                     "next": 51006712,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 510067093,
                     "content": "You're too slow, Outsider. That's just embarrassing. Maybe it's time for a career switch.",
                     "next": 51006715,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -41246,7 +41605,12 @@
                 "options": [
                   {
                     "id": 51007913,
-                    "content": "I'm not quite sure how to ride this... Why don't you go first and show me?"
+                    "content": "I'm not quite sure how to ride this... Why don't you go first and show me?",
+                    "imprCheck": [
+                      1011,
+                      "Empathy",
+                      50
+                    ]
                   }
                 ]
               }
@@ -41357,17 +41721,21 @@
                     "id": 51007924,
                     "content": "You okay?",
                     "next": 51007926,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 51007925,
                     "content": "I didn't quite catch how you finish the ride — mind showing me again?",
                     "next": 51007926,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -41425,25 +41793,31 @@
                     "id": 51007503,
                     "content": "(He's wearing a neatly kept, well-made uniform — looks like he might be a student.)",
                     "next": 51007504,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 51007506,
                     "content": "(It's not really safe for a kid to be out here alone.)",
                     "next": 51007507,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 51007509,
                     "content": "(Ask if there's any reward involved.)",
                     "next": 51007510,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               },
@@ -41504,17 +41878,21 @@
                     "id": 51007516,
                     "content": "I am the Flame of Rebirth, Guardian of Icelake, the Glorious One, originally from Purgatorio Island — {nickname}!",
                     "next": 51007517,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   },
                   {
                     "id": 51007519,
                     "content": "I'm Sibylle.",
                     "next": 51007520,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   }
                 ]
               },
@@ -41829,7 +42207,6 @@
                 "id": 51007571,
                 "content": "But he was the first person who ever gave me a different answer about where Charons come from. I've always wondered about it since... But I never saw him again.",
                 "npc": 700011,
-                "next": 51007576,
                 "options": [
                   {
                     "id": 51007572,
@@ -41844,12 +42221,6 @@
                 ]
               },
               {
-                "id": 51007576,
-                "content": "Hmm... everyone seems to have a different answer for Question #3. Looks like I'll need lots more samples.",
-                "npc": 700011,
-                "next": 51007577
-              },
-              {
                 "id": 51007573,
                 "content": "Mhm... if you both say so, then it must be true!",
                 "npc": 700011,
@@ -41862,6 +42233,12 @@
                 "next": 51007576
               },
               {
+                "id": 51007576,
+                "content": "Hmm... everyone seems to have a different answer for Question #3. Looks like I'll need lots more samples.",
+                "npc": 700011,
+                "next": 51007577
+              },
+              {
                 "id": 51007577,
                 "content": "Next up — Question #4...",
                 "npc": 700011,
@@ -41870,25 +42247,31 @@
                     "id": 51007578,
                     "content": "I'm gonna stop you right there. Your questions are making me uncomfortable. I'm done.",
                     "next": 51007581,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 51007579,
                     "content": "Actually, I just remembered I've got somewhere to be.",
                     "next": 51007581,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 51007580,
                     "content": "More questions? That'll cost you extra.",
                     "next": 51007581,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               },
@@ -42071,25 +42454,31 @@
                     "id": 51007628,
                     "content": "Maybe it was a sample bottle or something used for experiments.",
                     "next": 51007629,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 51007631,
                     "content": "Sounds like a legend come to life. Pretty fascinating.",
                     "next": 51007632,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 51007636,
                     "content": "That rat sounds like it could've eaten you whole.",
                     "next": 51007637,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -42236,17 +42625,21 @@
                     "id": 51007653,
                     "content": "They have feelings if you believe they do.",
                     "next": 51007654,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 51007656,
                     "content": "Feelings aren't only shared through words. You can tell a lot just by watching what they do.",
                     "next": 51007657,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   }
                 ]
               },
@@ -42524,17 +42917,21 @@
                     "id": 51007696,
                     "content": "Please don't throw accusations around without any proof.",
                     "next": 51007697,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 51007698,
                     "content": "Bingo! Yeah, it's me. You're welcome.",
                     "next": 51007699,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -42763,17 +43160,21 @@
                     "id": 51007726,
                     "content": "(Tell him the truth)",
                     "next": 51007728,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 51007727,
                     "content": "(Hesitate whether to tell him the truth)",
                     "next": 51007728,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   }
                 ]
               },
@@ -42887,9 +43288,11 @@
                     "id": 51007746,
                     "content": "Maybe not here... but somewhere out there, I believe someone is doing the best they can to help.",
                     "next": 51007747,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   }
                 ]
               },
@@ -43149,17 +43552,21 @@
                     "id": 510091111,
                     "content": "Is this... going to cost me?",
                     "next": 51009112,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 510091112,
                     "content": "What a beautiful weapon. May I try it out?",
                     "next": 51009113,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   }
                 ]
               },
@@ -43502,25 +43909,31 @@
                     "id": 510092251,
                     "content": "So all this was just a glorified sales pitch!?",
                     "next": 51009226,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 510092252,
                     "content": "Sorry... I guess I don't really have much of an eye for this kind of thing.",
                     "next": 51009228,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 510092253,
                     "content": "(Snatch the dye and down it in one go)",
                     "next": 51009230,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -44330,17 +44743,21 @@
                     "id": 510093951,
                     "content": "You've got it all wrong.",
                     "next": 51009486,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 510093952,
                     "content": "Good. We don't need a third wheel.",
                     "next": 51009486,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -44936,17 +45353,21 @@
                     "id": 510096361,
                     "content": "That was me.",
                     "next": 51009637,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 510096362,
                     "content": "Well, not to brag, but that skilled Phoxhunter is yours truly.",
                     "next": 51009637,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -45339,17 +45760,21 @@
                     "id": 510095461,
                     "content": "...Yes. We all have to live with the consequences of our actions.",
                     "next": 51009706,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 510095462,
                     "content": "...It wasn't your fault. You couldn't have known how it would end.",
                     "next": 51009707,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   }
                 ]
               },
@@ -45454,33 +45879,41 @@
                     "id": 510096291,
                     "content": "I don't think so. He never meant for any of it to happen.",
                     "next": 51009720,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 510096292,
                     "content": "Two lives were lost because of him. That's not something you can take back.",
                     "next": 51009720,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 510096293,
                     "content": "He's spent years trying to atone. That has to count for something.",
                     "next": 51009720,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 510096294,
                     "content": "You know him better than I do. Trust what you've seen — and how you feel. I can't speak for you.",
                     "next": 51009720,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   }
                 ]
               },
@@ -45571,25 +46004,31 @@
                     "id": 510096391,
                     "content": "Is it just me... or is this crate actually talking?",
                     "next": 51009730,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 510096392,
                     "content": "Who's hiding in there? You'd better show yourself.",
                     "next": 51009731,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 510096393,
                     "content": "Cool — a genie in a box? Do I get three wishes?",
                     "next": 51009732,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -45921,25 +46360,31 @@
                     "id": 510096871,
                     "content": "That's me.",
                     "next": 51009778,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 510096872,
                     "content": "Sounds like you've been doing your research.",
                     "next": 51009779,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 510096873,
                     "content": "Nah — I'm the White Demon from Purgatorio Island.",
                     "next": 51009780,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -47176,17 +47621,21 @@
                     "id": 510099291,
                     "content": "She'll see it.",
                     "next": 51010020,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 510099292,
                     "content": "Leaving Icelake takes time to arrange — she may still be around.",
                     "next": 51010020,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
                   }
                 ]
               },
@@ -47916,17 +48365,21 @@
                     "id": 510100471,
                     "content": "So you weren't joking about that!?",
                     "next": 51010138,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 510100472,
                     "content": "Hey, what about that \"Detective Giselle\" play you still owe me?",
                     "next": 51010139,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -48053,17 +48506,21 @@
                     "id": 51012112,
                     "content": "Thank you for your kindness.",
                     "next": 51012114,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 51012113,
                     "content": "Is that all? Bring me something truly worthy.",
                     "next": 51012114,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -48149,25 +48606,31 @@
                     "id": 51100003,
                     "content": "If Lord Argent is guarding you, what use have you for me?",
                     "next": 51100004,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 51100006,
                     "content": "Are you in some kind of trouble, sir?",
                     "next": 51100007,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 51100009,
                     "content": "Strange... I've been dead for ages. How is it you can still see me?",
                     "next": 51100010,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -48264,25 +48727,31 @@
                     "id": 51100021,
                     "content": "Go home, sir. It's too dangerous out here.",
                     "next": 51100022,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 51100023,
                     "content": "If you're braving danger like this, then it must be for something that's very important to you.",
                     "next": 51100024,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 51100025,
                     "content": "Cut the crap. You're not faking an injury to shake me down, are you?",
                     "next": 51100026,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -48342,7 +48811,12 @@
                   {
                     "id": 51100033,
                     "content": "Should I really spend time and energy escorting this old man through danger?",
-                    "next": 51100036
+                    "next": 51100036,
+                    "imprCheck": [
+                      1011,
+                      "Chaos",
+                      20
+                    ]
                   }
                 ]
               },
@@ -48521,17 +48995,21 @@
                     "id": 51100054,
                     "content": "A knock to the head like that... could well have been a concussion. You might've been seeing things.",
                     "next": 51100055,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 51100052,
                     "content": "Sounds like a narrow escape. Whether or not it was Taihao, you could call it a blessing in disguise.",
                     "next": 51100053,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ]
                   }
                 ]
               },
@@ -48590,7 +49068,12 @@
                   {
                     "id": 51100063,
                     "content": "You've never tried playing a leaf like a flute, but maybe — just maybe — you've a knack for it. You decide to give it a try.",
-                    "next": 51100065
+                    "next": 51100065,
+                    "imprCheck": [
+                      1011,
+                      "Empathy",
+                      20
+                    ]
                   }
                 ]
               },
@@ -48988,33 +49471,41 @@
                     "id": 51100110,
                     "content": "Wanna guess what I was laughing at earlier?",
                     "next": 51100111,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   },
                   {
                     "id": 51100107,
                     "content": "All your symptoms point to a concussion. You never met the real Lord Argent at all.",
                     "next": 51100111,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 51100108,
                     "content": "It wasn't Lord Argent who saved you — it was this man who happened by. Either way, you lived. That's blessing enough, isn't it?",
                     "next": 51100111,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 51100109,
                     "content": "I wasn't sent by Lord Argent to protect you either — but I'm still charging you for my trouble.",
                     "next": 51100111,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               },
@@ -49081,17 +49572,21 @@
                     "id": 51100125,
                     "content": "Maybe this was Taihao's plan all along.",
                     "next": 51100126,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 51100121,
                     "content": "I think you owe Kezhou a thank you.",
                     "next": 51100122,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Morality",
+                      3
+                    ]
                   }
                 ]
               },
@@ -49227,17 +49722,21 @@
                     "id": 51100146,
                     "content": "It's still worth it, for conscience's sake.",
                     "next": 51100147,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 51100145,
                     "content": "But it still counts — doesn't matter what others think.",
                     "next": 51100147,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Morality",
+                      3
+                    ]
                   }
                 ]
               },
@@ -49527,17 +50026,21 @@
                     "id": 51101049,
                     "content": "I'm guessing their worth lies in the stories behind them, right?",
                     "next": 51101050,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 51101051,
                     "content": "Guess I'll have to rough you up 'til you admit you're secretly loaded.",
                     "next": 51101052,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -50575,17 +51078,21 @@
                     "id": 51104034,
                     "content": "Can we play the riddle game for a free cake too?",
                     "next": 51104036,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 51104035,
                     "content": "Those two kids earlier seemed to get a special deal...",
                     "next": 51104036,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ]
                   }
                 ]
               },
@@ -50925,17 +51432,21 @@
                     "id": 51104086,
                     "content": "So the Magistrate of Yingtian once had family, too...",
                     "next": 51104088,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 51104087,
                     "content": "A bit of a handful... could it be Kezhou?",
                     "next": 51104088,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ]
                   }
                 ]
               },
@@ -51218,25 +51729,31 @@
                     "id": 51105003,
                     "content": "If you're afraid, it's better to be honest about it.",
                     "next": 51105004,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 51105005,
                     "content": "If Lord Argent is watching over you, why do you still need Nana?",
                     "next": 51105006,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 51105007,
                     "content": "You can only pick one to protect you — Lord Argent or Nana. Who's it going to be?",
                     "next": 51105008,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -51340,7 +51857,6 @@
                 "id": 51105022,
                 "content": "Waah... waaaahhh!",
                 "npc": 700329,
-                "next": 51105026,
                 "options": [
                   {
                     "id": 51105023,
@@ -51364,25 +51880,31 @@
                     "id": 51105028,
                     "content": "Lord Argent sent me.",
                     "next": 51105029,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   },
                   {
                     "id": 51105031,
                     "content": "Your Nana sent me.",
                     "next": 51105032,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 51105034,
                     "content": "I'm a Phoxhunter.",
                     "next": 51105035,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               },
@@ -51739,17 +52261,21 @@
                     "id": 51105067,
                     "content": "I've found a way for you to see her — but it'll only last for half an hour.",
                     "next": 51105068,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 51105069,
                     "content": "I've found a way for you to see her — but it'll only last for half an hour, and it'll cost you extra.",
                     "next": 51105070,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               },
@@ -51941,9 +52467,11 @@
                     "id": 51105100,
                     "content": "Are you sad it wasn't Nana?",
                     "next": 51105101,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ]
                   }
                 ]
               },
@@ -52077,25 +52605,31 @@
                     "id": 51105119,
                     "content": "I thought you were scared of Loomhoppers.",
                     "next": 51105120,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 51105121,
                     "content": "Does pretending to be Pingping count as lying?",
                     "next": 51105122,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   },
                   {
                     "id": 51105123,
                     "content": "Now that they're both gone... do you feel lonely?",
                     "next": 51105124,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ]
                   }
                 ]
               },
@@ -52178,17 +52712,21 @@
                     "id": 51103003,
                     "content": "(The vibrations seem to follow some kind of pattern. Best take a closer look.)",
                     "next": 51103004,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 51103005,
                     "content": "(Is this thing about to blow!? Toss it — quick!)",
                     "next": 51103006,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -52313,17 +52851,21 @@
                     "id": 51103023,
                     "content": "Um... well...",
                     "next": 51103025,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 51103024,
                     "content": "What's in it for us? Any prizes?",
                     "next": 51103025,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               },
@@ -52430,17 +52972,21 @@
                     "id": 51125001,
                     "content": "(This man seems troubled. Maybe he needs help.)",
                     "next": 51125003,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 51125002,
                     "content": "(Something here spells trouble. Best not to get involved.)",
                     "next": 51125003,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -52816,17 +53362,21 @@
                     "id": 51125068,
                     "content": "If he wants the part that badly, let him have it.",
                     "next": 51125070,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 51125069,
                     "content": "Fine. But it'll cost you extra.",
                     "next": 51125070,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               },
@@ -53237,17 +53787,21 @@
                     "id": 51151034,
                     "content": "It doesn't look like they're willing to go.",
                     "next": 51151036,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 51151035,
                     "content": "They're chickening out!",
                     "next": 51151036,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -54705,7 +55259,12 @@
                   {
                     "id": 51114002,
                     "content": "Oh? He's paying...",
-                    "next": 51114004
+                    "next": 51114004,
+                    "imprCheck": [
+                      1041,
+                      "Chaos",
+                      50
+                    ]
                   }
                 ]
               },
@@ -54828,25 +55387,31 @@
                     "id": 51114024,
                     "content": "How about I go and buy another two the same size?",
                     "next": 51114025,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 51114026,
                     "content": "Why not slice them and share?",
                     "next": 51114027,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 51114028,
                     "content": "I'm a foreigner, and I'm in a growth spurt too. Best give both to me.",
                     "next": 51114029,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -55052,7 +55617,12 @@
                   {
                     "id": 51118013,
                     "content": "(Think about how you can help her.)",
-                    "next": 51118015
+                    "next": 51118015,
+                    "imprCheck": [
+                      1041,
+                      "Empathy",
+                      20
+                    ]
                   }
                 ]
               },
@@ -55283,17 +55853,21 @@
                     "id": 51118048,
                     "content": "Your brother's working hard and doesn't want you to worry.",
                     "next": 51118049,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 51118052,
                     "content": "Your brother's in a big business war — every second counts!",
                     "next": 51118053,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ]
                   }
                 ]
               },
@@ -55519,17 +56093,21 @@
                     "id": 51153018,
                     "content": "Maybe. What's in it for me?",
                     "next": 51153019,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 51153020,
                     "content": "With Sable Bi'an everywhere, you're worried about the road, aren't you?",
                     "next": 51153021,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ]
                   }
                 ]
               },
@@ -55812,17 +56390,21 @@
                     "id": 51153059,
                     "content": "Well... I've come this far. Might as well see it through.",
                     "next": 51153060,
-                    "impr": {
-                      "Empathy": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ]
                   },
                   {
                     "id": 51153061,
                     "content": "Pull another trip like this, and I'll be charging extra.",
                     "next": 51153062,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Benefit",
+                      3
+                    ]
                   }
                 ]
               },
@@ -55901,17 +56483,21 @@
                     "id": 51154002,
                     "content": "Go on, then. What is it?",
                     "next": 51154004,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ]
                   },
                   {
                     "id": 51154003,
                     "content": "Drop the creepy smile. Spit it out.",
                     "next": 51154004,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -55984,25 +56570,31 @@
                     "id": 51154014,
                     "content": "How much?",
                     "next": 51154017,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 51154015,
                     "content": "I'm a Phoxhunter. You're giving it to me for free.",
                     "next": 51154017,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   },
                   {
                     "id": 51154016,
                     "content": "You're not handing over something this good for nothing, are you?",
                     "next": 51154017,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Morality",
+                      3
+                    ]
                   }
                 ]
               },
@@ -56104,17 +56696,21 @@
                     "id": 51155007,
                     "content": "The black market's getting out of hand. We have to stop this.",
                     "next": 51155009,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 51155008,
                     "content": "Woah, seriously? We should leg it.",
                     "next": 51155009,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -56152,17 +56748,21 @@
                     "id": 51155203,
                     "content": "Easy. I'm just here to buy some \"Finale Flare\".",
                     "next": 51155205,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 51155204,
                     "content": "I'm Mr Qiu's honoured guest.",
                     "next": 51155205,
-                    "impr": {
-                      "Wisdom": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ]
                   }
                 ]
               },
@@ -56181,17 +56781,21 @@
                     "id": 51155207,
                     "content": "Careful is fine. But money's money, isn't it?",
                     "next": 51155209,
-                    "impr": {
-                      "Benefit": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Benefit",
+                      3
+                    ]
                   },
                   {
                     "id": 51155208,
                     "content": "Fine. Stay right here. I'll drag that old codger over and you can ask him yourself.",
                     "next": 51155209,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },
@@ -56539,17 +57143,21 @@
                     "id": 51155611,
                     "content": "Looks like we got the wrong end of the stick. We owe them an apology.",
                     "next": 51155612,
-                    "impr": {
-                      "Morality": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Morality",
+                      3
+                    ]
                   },
                   {
                     "id": 51155613,
                     "content": "Next time you cry wolf like that, I'm dumping you in Huaxu and taking Lunocarp back to Icelake.",
                     "next": 51155614,
-                    "impr": {
-                      "Chaos": 3
-                    }
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
                   }
                 ]
               },

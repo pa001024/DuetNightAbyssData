@@ -1,0 +1,282 @@
+[
+  {
+    "id": 10001,
+    "name": "音符·墨玉",
+    "desc": "奏响进击的旋律。",
+    "icon": "T_Fashion_Weapon22",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10002,
+    "name": "音符·鎏金",
+    "desc": "奏响进击的旋律。",
+    "icon": "T_Fashion_Weapon23",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10003,
+    "name": "音符·涅白",
+    "desc": "奏响进击的旋律。",
+    "icon": "T_Fashion_Weapon02",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10004,
+    "name": "音符·白樱",
+    "desc": "奏响进击的旋律。",
+    "icon": "T_Fashion_Weapon01",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10005,
+    "name": "蝴蝶结·墨玉",
+    "desc": "蝴蝶了却了飞翔的故梦。",
+    "icon": "T_Fashion_Weapon16",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10006,
+    "name": "蝴蝶结·涅白",
+    "desc": "蝴蝶了却了飞翔的故梦。",
+    "icon": "T_Fashion_Weapon15",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10007,
+    "name": "蝴蝶结·锈红",
+    "desc": "蝴蝶了却了飞翔的故梦。",
+    "icon": "T_Fashion_Weapon13",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10008,
+    "name": "蝴蝶结·薄荷",
+    "desc": "蝴蝶了却了飞翔的故梦。",
+    "icon": "T_Fashion_Weapon14",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10009,
+    "name": "玫瑰·锈红",
+    "desc": "于硝烟中绽放。",
+    "icon": "T_Fashion_Weapon17",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10010,
+    "name": "玫瑰·墨玉",
+    "desc": "于硝烟中绽放。",
+    "icon": "T_Fashion_Weapon20",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10011,
+    "name": "玫瑰·黛蓝",
+    "desc": "于硝烟中绽放。",
+    "icon": "T_Fashion_Weapon18",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10012,
+    "name": "玫瑰·涅白",
+    "desc": "于硝烟中绽放。",
+    "icon": "T_Fashion_Weapon19",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10013,
+    "name": "片翼·墨玉",
+    "desc": "被神遗弃的羽翼。",
+    "icon": "T_Fashion_Weapon03",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10014,
+    "name": "片翼·黛蓝",
+    "desc": "被神遗弃的羽翼。",
+    "icon": "T_Fashion_Weapon05",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10015,
+    "name": "片翼·鎏金",
+    "desc": "被神遗弃的羽翼。",
+    "icon": "T_Fashion_Weapon09",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10016,
+    "name": "片翼·涅白",
+    "desc": "被神遗弃的羽翼。",
+    "icon": "T_Fashion_Weapon06",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10017,
+    "name": "小鸡啾啾·本色",
+    "desc": "阿特拉西亚大陆知名童话故事《啾啾的奇妙冒险》中的主角——一只名叫啾啾的小鸡，讲述啾啾每天在不同的位置苏醒，结识不同的友人，踏上奇妙冒险寻找鸡生意义，揭开反派阴谋的故事。",
+    "icon": "T_Fashion_Weapon21",
+    "rarity": 4,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10018,
+    "name": "小鸡啾啾·涅白",
+    "desc": "阿特拉西亚大陆知名童话故事《啾啾的奇妙冒险》中的主角——一只名叫啾啾的小鸡，讲述啾啾每天在不同的位置苏醒，结识不同的友人，踏上奇妙冒险寻找鸡生意义，揭开反派阴谋的故事。",
+    "icon": "T_Fashion_Weapon25",
+    "rarity": 4,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10019,
+    "name": "小鸡啾啾·焦糖",
+    "desc": "阿特拉西亚大陆知名童话故事《啾啾的奇妙冒险》中的主角——一只名叫啾啾的小鸡，讲述啾啾每天在不同的位置苏醒，结识不同的友人，踏上奇妙冒险寻找鸡生意义，揭开反派阴谋的故事。",
+    "icon": "T_Fashion_Weapon24",
+    "rarity": 4,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10020,
+    "name": "小鸡啾啾·黛蓝",
+    "desc": "阿特拉西亚大陆知名童话故事《啾啾的奇妙冒险》中的主角——一只名叫啾啾的小鸡，讲述啾啾每天在不同的位置苏醒，结识不同的友人，踏上奇妙冒险寻找鸡生意义，揭开反派阴谋的故事。",
+    "icon": "T_Fashion_Weapon26",
+    "rarity": 4,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10021,
+    "name": "乌乌·本色",
+    "desc": "乌乌随身携带款，灌注着铁匠皎皎饱满的灵感和热情，让人随时随地想起那由乌乌不断鼓动的热烈炉火。",
+    "icon": "T_Fashion_Weapon12",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10022,
+    "name": "幻想之龙·六六",
+    "desc": "龙在任何时代都拥有万千拥趸，它强大、野性却又因鲜有人见而显得疏远朦胧。正是这朦胧的概念，为人们搭建起肆意挥洒想象的无垠热土。",
+    "icon": "T_Fashion_Weapon10",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10023,
+    "name": "蛋皎玩偶",
+    "desc": "蛋壳之下还是蛋壳，蛋壳之下就是蛋壳，绝对不是皎皎，绝对！",
+    "icon": "T_Fashion_Weapon27",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10024,
+    "name": "趴趴海星·薄荷",
+    "desc": "海星会梦到流星吗？",
+    "icon": "T_Fashion_Weapon33",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10025,
+    "name": "趴趴海星·白樱",
+    "desc": "海星会梦到流星吗？",
+    "icon": "T_Fashion_Weapon31",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10026,
+    "name": "趴趴海星·焦糖",
+    "desc": "海星会梦到流星吗？",
+    "icon": "T_Fashion_Weapon32",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10027,
+    "name": "缤纷海螺·杏黄",
+    "desc": "为什么不问问缤纷海螺呢。",
+    "icon": "T_Fashion_Weapon30",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10028,
+    "name": "缤纷海螺·黛蓝",
+    "desc": "为什么不问问缤纷海螺呢。",
+    "icon": "T_Fashion_Weapon29",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10029,
+    "name": "缤纷海螺·晴蓝",
+    "desc": "为什么不问问缤纷海螺呢。",
+    "icon": "T_Fashion_Weapon28",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10030,
+    "name": "龙渊穗·锈红",
+    "desc": "穗为缰，缚神君。",
+    "icon": "T_Fashion_Weapon34_01",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 10031,
+    "name": "龙渊穗·绛紫",
+    "desc": "穗为缰，缚神君。",
+    "icon": "T_Fashion_Weapon34_02",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 10032,
+    "name": "龙渊穗·涅白",
+    "desc": "穗为缰，缚神君。",
+    "icon": "T_Fashion_Weapon34",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 10033,
+    "name": "龙纹坠·锈红",
+    "desc": "蟠龙栖玄玉。",
+    "icon": "T_Fashion_Weapon35_01",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 10034,
+    "name": "龙纹坠·绛紫",
+    "desc": "蟠龙栖玄玉。",
+    "icon": "T_Fashion_Weapon35_02",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 10035,
+    "name": "龙纹坠·涅白",
+    "desc": "蟠龙栖玄玉。",
+    "icon": "T_Fashion_Weapon35",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  }
+]

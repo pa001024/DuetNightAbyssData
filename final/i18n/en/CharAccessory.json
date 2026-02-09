@@ -1,0 +1,2258 @@
+[
+  {
+    "id": 10001,
+    "name": "Chickie JoeJoe",
+    "desc": "The protagonist of the well-known fairy tale \"JoeJoe's Bizarre Adventure\" across the Atlasia Continent. This chickie named JoeJoe awakens in new places each day, befriends interesting characters, and embarks on bizarre quests to discover the meaning of life and thwart villainous plots.",
+    "icon": "T_Fashion_Head_YellowChick",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 10002,
+    "name": "Chickie JoeJoe: Opaque White",
+    "desc": "The protagonist of the well-known fairy tale \"JoeJoe's Bizarre Adventure\" across the Atlasia Continent. This chickie named JoeJoe awakens in new places each day, befriends interesting characters, and embarks on bizarre quests to discover the meaning of life and thwart villainous plots.",
+    "icon": "T_Fashion_Head_WhiteChick",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 10003,
+    "name": "Chickie JoeJoe: Caramel",
+    "desc": "The protagonist of the well-known fairy tale \"JoeJoe's Bizarre Adventure\" across the Atlasia Continent. This chickie named JoeJoe awakens in new places each day, befriends interesting characters, and embarks on bizarre quests to discover the meaning of life and thwart villainous plots.",
+    "icon": "T_Fashion_Head_BrownChick",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 10004,
+    "name": "Chickie JoeJoe: Azure",
+    "desc": "The protagonist of the well-known fairy tale \"JoeJoe's Bizarre Adventure\" across the Atlasia Continent. This chickie named JoeJoe awakens in new places each day, befriends interesting characters, and embarks on bizarre quests to discover the meaning of life and thwart villainous plots.",
+    "icon": "T_Fashion_Head_BlackChick",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 10005,
+    "name": "Verdant Sprout",
+    "desc": "WARNING: NON-EDIBLE!",
+    "icon": "T_Fashion_Head_Sprout",
+    "rarity": 3,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 10006,
+    "name": "Verdant Sprout: Gilt",
+    "desc": "WARNING: NON-EDIBLE!",
+    "icon": "T_Fashion_Head_YellowSprout",
+    "rarity": 3,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 10007,
+    "name": "Verdant Sprout: Celeste",
+    "desc": "WARNING: NON-EDIBLE!",
+    "icon": "T_Fashion_Head_BlueSprout",
+    "rarity": 3,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 10008,
+    "name": "Verdant Sprout: Rust Red",
+    "desc": "WARNING: NON-EDIBLE!",
+    "icon": "T_Fashion_Head_RedSprout",
+    "rarity": 3,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 10009,
+    "name": "Cinder",
+    "desc": "Filled with the boundless inspiration and fervour of Lunosmith, this portable Cinder always reminds you of the vibrant forge flames fanned by it.",
+    "icon": "T_Fashion_Head_Wuwu",
+    "rarity": 4,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 10010,
+    "name": "Bowknot",
+    "desc": "An emblem of elegance, the embodiment of grace — or perhaps, just a butterfly unable to flutter its wings.",
+    "icon": "T_Fashion_Head_Bow",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10011,
+    "name": "Bowknot: Opaque White",
+    "desc": "An emblem of elegance, the embodiment of grace — or perhaps, just a butterfly unable to flutter its wings.",
+    "icon": "T_Fashion_Head_SilverBow",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
+    "id": 10012,
+    "name": "Bowknot: Rust Red",
+    "desc": "An emblem of elegance, the embodiment of grace — or perhaps, just a butterfly unable to flutter its wings.",
+    "icon": "T_Fashion_Head_RedBow",
+    "rarity": 4,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 10013,
+    "name": "Bowknot: White Sakura",
+    "desc": "An emblem of elegance, the embodiment of grace — or perhaps, just a butterfly unable to flutter its wings.",
+    "icon": "T_Fashion_Head_PinkBow",
+    "rarity": 4,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 10015,
+    "name": "Lunoeggy Plush Doll",
+    "desc": "Under the eggshell is still eggshell, absolutely not luno, never!",
+    "icon": "T_Fashion_Head_EggJiao",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10016,
+    "name": "Mood: Bubbly",
+    "desc": "This is how I feel today.",
+    "icon": "T_Fashion_Head_Bubble",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10017,
+    "name": "Mood: Snowy",
+    "desc": "This is how I feel today.",
+    "icon": "T_Fashion_Head_Snow",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10018,
+    "name": "Mood: Rainy",
+    "desc": "This is how I feel today.",
+    "icon": "T_Fashion_Head_Rain",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10019,
+    "name": "Mood: Rainbow",
+    "desc": "This is how I feel today.",
+    "icon": "T_Fashion_Head_Rainbow",
+    "rarity": 4,
+    "unlock": "Source: Starter Gift Chest Ⅳ"
+  },
+  {
+    "id": 10020,
+    "name": "Brain Teaser",
+    "desc": "Wearing this makes you exceptionally adept at \"drilling\" into difficult problems.",
+    "icon": "T_Fashion_Head16",
+    "rarity": 4,
+    "unlock": "Available at Lunoeggy's Impression Shop"
+  },
+  {
+    "id": 10021,
+    "name": "Mask of Genesis: Gilt",
+    "desc": "A mask that honours the forebears of Huaxu. Wearing it evokes an epic vision of innumerable warriors arrayed in armour, their faces veiled, sculpting the cosmos for a realm of everlasting peace.",
+    "icon": "T_Fashion_Head_GoldenMask",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 10022,
+    "name": "Mask of Genesis: Leaden Grey",
+    "desc": "A mask that honours the forebears of Huaxu. Wearing it evokes an epic vision of innumerable warriors arrayed in armour, their faces veiled, sculpting the cosmos for a realm of everlasting peace.",
+    "icon": "T_Fashion_Head_SilverMask",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 10023,
+    "name": "Mask of Fertility",
+    "desc": "In the past, this mask was used as a medium for divine communication. Today, those who seek the grace of the divine turn their prayers towards the lofty towers of Elysium from afar.",
+    "icon": "T_Fashion_Head_FoxMask",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 10024,
+    "name": "Please Hold Forever",
+    "desc": "The number you've dialled is unavailable. Not today, not tomorrow... not ever.",
+    "icon": "T_Fashion_Head18",
+    "rarity": 4,
+    "unlock": "Available at Lunoeggy's Impression Shop"
+  },
+  {
+    "id": 10026,
+    "name": "Genius Promoter: Azure",
+    "desc": "Ads are everywhere. Yes, even here. No, you can't skip this one either.",
+    "icon": "T_Fashion_Head19",
+    "rarity": 4,
+    "unlock": "Available at Lunoeggy's Impression Shop"
+  },
+  {
+    "id": 10027,
+    "name": "Genius Promoter: Emerald Green",
+    "desc": "Ads are everywhere. Yes, even here. No, you can't skip this one either.",
+    "icon": "T_Fashion_Head20",
+    "rarity": 4,
+    "unlock": "Available at Lunoeggy's Impression Shop"
+  },
+  {
+    "id": 10028,
+    "name": "Lightbulb Moment",
+    "desc": "One spark of brilliance.",
+    "icon": "T_Fashion_Head17",
+    "rarity": 4,
+    "unlock": "Available at Lunoeggy's Impression Shop"
+  },
+  {
+    "id": 10029,
+    "name": "Tales of Icelake",
+    "desc": "A promotional trinket tossed in with every glass of \"Tales of Icelake.\"",
+    "icon": "T_Fashion_Head21",
+    "rarity": 4,
+    "unlock": "Available at Lunoeggy's Impression Shop"
+  },
+  {
+    "id": 10030,
+    "name": "Exquisite Umbrella",
+    "desc": "Elegant craftsmanship. Technically functional — for your action figures, perhaps.",
+    "icon": "T_Fashion_Head09",
+    "rarity": 4,
+    "unlock": "Available at Lunoeggy's Impression Shop"
+  },
+  {
+    "id": 10031,
+    "name": "Solar Aureole",
+    "desc": "Not even molten flame can scorch a loyal tear.",
+    "icon": "T_Fashion_Weapon11",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10032,
+    "name": "Ribbon Bowknot",
+    "desc": "A flutter of silk, dancing on the breeze — waiting to grace its next lucky strand of hair.",
+    "icon": "T_Fashion_Head07",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 10035,
+    "name": "Kitty Headpiece",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world do justice to the magical allure of these feline ears.",
+    "icon": "T_Fashion_Head_CatEar",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10037,
+    "name": "Mood: Thumb-Up",
+    "desc": "This is how I feel today.",
+    "icon": "T_Fashion_Head13",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10038,
+    "name": "Mood: Amazed",
+    "desc": "This is how I feel today.",
+    "icon": "T_Fashion_Head14",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10039,
+    "name": "Mood: Confused",
+    "desc": "This is how I feel today.",
+    "icon": "T_Fashion_Head10",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10040,
+    "name": "Mood: Resigned",
+    "desc": "This is how I feel today.",
+    "icon": "T_Fashion_Head15",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10041,
+    "name": "Mood: Angry",
+    "desc": "This is how I feel today.",
+    "icon": "T_Fashion_Head02",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10042,
+    "name": "Mood: Inspired",
+    "desc": "This is how I feel today.",
+    "icon": "T_Fashion_Head01",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10043,
+    "name": "Mood: Complicated",
+    "desc": "This is how I feel today.",
+    "icon": "T_Fashion_Head03",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10044,
+    "name": "Mood: Wrong",
+    "desc": "This is how I feel today.",
+    "icon": "T_Fashion_Head11",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10045,
+    "name": "Mood: Correct",
+    "desc": "This is how I feel today.",
+    "icon": "T_Fashion_Head12",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10046,
+    "name": "Kitty Headpiece: Dark Jade",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world do justice to the magical allure of these feline ears.",
+    "icon": "T_Fashion_Head_DarkCatEar",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10047,
+    "name": "Kitty Headpiece: White Sakura",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world do justice to the magical allure of these feline ears.",
+    "icon": "T_Fashion_Head_PinkCatEar",
+    "rarity": 4,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 10048,
+    "name": "Kitty Headpiece: Leaden Grey",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world do justice to the magical allure of these feline ears.",
+    "icon": "T_Fashion_Head_GreyCatEar",
+    "rarity": 4,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 10049,
+    "name": "Frostar Halo",
+    "desc": "A coronet cast in aurora's light, bearing witness to vows of warmth and love.",
+    "icon": "T_Fashion_Head26",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10050,
+    "name": "Nightingale of Dreams",
+    "desc": "The little bird has left its cosy nest. What story will it bring back this time?",
+    "icon": "T_Fashion_Head22",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10052,
+    "name": "Headpiece: Fortune's Favour",
+    "desc": "Among the people of Huaxu, there lingers a fondness for a hardy creature of ages past — a sentiment now woven into this ornament.",
+    "icon": "T_Fashion_Head27",
+    "rarity": 4,
+    "unlock": "Available at Lunoeggy's Impression Shop"
+  },
+  {
+    "id": 10053,
+    "name": "Midsummer Shades: Dark Jade",
+    "desc": "No blaze of sun can keep us from carrying an entire summer within our gaze.",
+    "icon": "T_Fashion_Head28",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 10054,
+    "name": "Midsummer Shades: Rust Red",
+    "desc": "No blaze of sun can keep us from carrying an entire summer within our gaze.",
+    "icon": "T_Fashion_Head30",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 10055,
+    "name": "Midsummer Shades: White Sakura",
+    "desc": "No blaze of sun can keep us from carrying an entire summer within our gaze.",
+    "icon": "T_Fashion_Head29",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 10056,
+    "name": "Mounted Head of Zhuyin: Violet",
+    "desc": "What is done cannot be undone.",
+    "icon": "T_Fashion_Head33_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10057,
+    "name": "Phoxfox Headpiece: Dark Jade",
+    "desc": "After hearing the seasoned traveller's tale, some became fanatical in their devotion to the Phoxfox. Wearing this headpiece is one of the ways they show it.",
+    "icon": "T_Fashion_Head24",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10058,
+    "name": "Nightingale of Dreams: Opaque White",
+    "desc": "The little bird has left its cosy nest. What story will it bring back this time?",
+    "icon": "T_Fashion_Head22_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10059,
+    "name": "Nightingale of Dreams: White Sakura",
+    "desc": "The little bird has left its cosy nest. What story will it bring back this time?",
+    "icon": "T_Fashion_Head22_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10060,
+    "name": "Nightingale of Dreams: Apricot",
+    "desc": "The little bird has left its cosy nest. What story will it bring back this time?",
+    "icon": "T_Fashion_Head22_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10061,
+    "name": "Mounted Head of Zhuyin: Gilt",
+    "desc": "What is done cannot be undone.",
+    "icon": "T_Fashion_Head33_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10062,
+    "name": "Mounted Head of Zhuyin: Opaque White",
+    "desc": "What is done cannot be undone.",
+    "icon": "T_Fashion_Head33_04",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10063,
+    "name": "Mounted Head of Zhuyin: Rust Red",
+    "desc": "What is done cannot be undone.",
+    "icon": "T_Fashion_Head33_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10064,
+    "name": "Midsummer Shades: Gilt",
+    "desc": "No blaze of sun can keep us from carrying an entire summer within our gaze.",
+    "icon": "T_Fashion_Head31",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 10065,
+    "name": "Phoxfox Headpiece: Caramel",
+    "desc": "After hearing the seasoned traveller's tale, some became fanatical in their devotion to the Phoxfox. Wearing this headpiece is one of the ways they show it.",
+    "icon": "T_Fashion_Head25",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10066,
+    "name": "Phoxfox Headpiece: Opaque White",
+    "desc": "After hearing the seasoned traveller's tale, some became fanatical in their devotion to the Phoxfox. Wearing this headpiece is one of the ways they show it.",
+    "icon": "T_Fashion_Head23",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10067,
+    "name": "Wealthspring",
+    "desc": "Wishing you good fortune~",
+    "icon": "T_Fashion_Head34",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10068,
+    "name": "Cosmic Lunacy: Gilt",
+    "desc": "Let Heaven's law come to an end.",
+    "icon": "T_Fashion_Head39",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 10069,
+    "name": "Cosmic Lunacy: Violet",
+    "desc": "Let Heaven's law come to an end.",
+    "icon": "T_Fashion_Head39_03",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 10070,
+    "name": "Cosmic Lunacy: Leaden Grey",
+    "desc": "Let Heaven's law come to an end.",
+    "icon": "T_Fashion_Head39_01",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 10071,
+    "name": "Cosmic Lunacy: Celeste",
+    "desc": "Let Heaven's law come to an end.",
+    "icon": "T_Fashion_Head39_02",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 10072,
+    "name": "Windstrider Headpiece: Opaque White",
+    "desc": "Wind at your heels, luck on your side.",
+    "icon": "T_Fashion_Head36",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10073,
+    "name": "Windstrider Headpiece: Apricot",
+    "desc": "Wind at your heels, luck on your side.",
+    "icon": "T_Fashion_Head36_01",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10074,
+    "name": "Windstrider Headpiece: Caramel",
+    "desc": "Wind at your heels, luck on your side.",
+    "icon": "T_Fashion_Head36_03",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10075,
+    "name": "Windstrider Headpiece: Dark Jade",
+    "desc": "Wind at your heels, luck on your side.",
+    "icon": "T_Fashion_Head36_02",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10076,
+    "name": "Trailing Glory Headpiece: Mint",
+    "desc": "Framed by emerald plumes, it catches the light of sun and moon, gilding the world below.",
+    "icon": "T_Fashion_Head35",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10077,
+    "name": "Trailing Glory Headpiece: Opaque White",
+    "desc": "Framed by emerald plumes, it catches the light of sun and moon, gilding the world below.",
+    "icon": "T_Fashion_Head35_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10078,
+    "name": "Trailing Glory Headpiece: Violet",
+    "desc": "Framed by emerald plumes, it catches the light of sun and moon, gilding the world below.",
+    "icon": "T_Fashion_Head35_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10079,
+    "name": "Trailing Glory Headpiece: Rust Red",
+    "desc": "Framed by emerald plumes, it catches the light of sun and moon, gilding the world below.",
+    "icon": "T_Fashion_Head35_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10080,
+    "name": "Frostar Crown: Gilt",
+    "desc": "Crowned in the blessings of stars and frost.",
+    "icon": "T_Fashion_Head38_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10081,
+    "name": "Frostar Crown: Leaden Grey",
+    "desc": "Crowned in the blessings of stars and frost.",
+    "icon": "T_Fashion_Head38_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10082,
+    "name": "Frostar Crown: Dark Jade",
+    "desc": "Crowned in the blessings of stars and frost.",
+    "icon": "T_Fashion_Head38",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10083,
+    "name": "Fluffy Bunny Headpiece: Opaque White",
+    "desc": "Fancy a little bunny fluff?",
+    "icon": "T_Fashion_Head37",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10084,
+    "name": "Fluffy Bunny Headpiece: Caramel",
+    "desc": "Fancy a little bunny fluff?",
+    "icon": "T_Fashion_Head37_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10085,
+    "name": "Fluffy Bunny Headpiece: Dark Jade",
+    "desc": "Fancy a little bunny fluff?",
+    "icon": "T_Fashion_Head37_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10086,
+    "name": "Fluffy Bunny Headpiece: Dark Blue",
+    "desc": "Fancy a little bunny fluff?",
+    "icon": "T_Fashion_Head37_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10087,
+    "name": "Silverscale",
+    "desc": "Silver scale, jade scale, red scale... dead scale. Wait — what fish is this supposed to be?",
+    "icon": "T_Fashion_Head40",
+    "rarity": 4,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 10088,
+    "name": "Deadscale",
+    "desc": "Silver scale, jade scale, red scale... dead scale. Wait — what fish is this supposed to be?",
+    "icon": "T_Fashion_Head44",
+    "rarity": 4,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 10089,
+    "name": "Redscale",
+    "desc": "Silver scale, jade scale, red scale... dead scale. Wait — what fish is this supposed to be?",
+    "icon": "T_Fashion_Head41",
+    "rarity": 4,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 11001,
+    "name": "UI_Accessory_Name_11001",
+    "desc": "UI_Accessory_Desc_11001",
+    "icon": "",
+    "rarity": 0,
+    "unlock": ""
+  },
+  {
+    "id": 11002,
+    "name": "Stellar Blooms",
+    "desc": "As the fireworks bloom, they lift my soul into a lonely sea of stars.",
+    "icon": "T_Fashion_Fx07_01",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 11003,
+    "name": "Summer Burst",
+    "desc": "A seed of summer drops from the clouds, where spray and searing sand bloom into a fleeting eternity.",
+    "icon": "T_Fashion_Fx08_01",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 11004,
+    "name": "Flare Cascading",
+    "desc": "A crimson loong soars with a spark between its jaws, spilling star-rain across the mortal world.",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 12001,
+    "name": "Indigo Whisper",
+    "desc": "A celadon teacup, brimful of half a life's bitters and sweets — yet a whole landscape rests in your hands.",
+    "icon": "T_Fashion_Hat03",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
+    "id": 12002,
+    "name": "Rain Walker",
+    "desc": "A brim neither too wide nor too narrow — just enough for an unhurried stroll in a gentle drizzle.",
+    "icon": "T_Fashion_Hat04",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
+    "id": 12003,
+    "name": "Skyward Salute",
+    "desc": "Cast your hopes and your future to the sky.",
+    "icon": "T_Fashion_Hat01",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
+    "id": 12004,
+    "name": "Lilting Breeze",
+    "desc": "At the bend in the corridor, a ribbon flutters in the breeze.",
+    "icon": "T_Fashion_Hat02",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
+    "id": 12121,
+    "name": "Starry Hopes",
+    "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
+    "icon": "T_Fashion_Head46",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
+    "id": 12122,
+    "name": "乌乌头套",
+    "desc": "现在，谁是真的乌乌？",
+    "icon": "T_Fashion_Head48",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12123,
+    "name": "魔王头套",
+    "desc": "现在，谁是真的光之魔王大人？",
+    "icon": "T_Fashion_Head49",
+    "rarity": 4,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 12124,
+    "name": "奇妙纸袋·本色",
+    "desc": "套上纸袋以后仿佛有种神奇的魔力，让人不再压抑自己的天性。",
+    "icon": "T_Fashion_Head50",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13001,
+    "name": "Windstrider Waistpiece: Opaque White",
+    "desc": "Wind at your heels, luck on your side.",
+    "icon": "T_Fashion_Waist16",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13002,
+    "name": "Windstrider Waistpiece: Apricot",
+    "desc": "Wind at your heels, luck on your side.",
+    "icon": "T_Fashion_Waist16_01",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13003,
+    "name": "Windstrider Waistpiece: Caramel",
+    "desc": "Wind at your heels, luck on your side.",
+    "icon": "T_Fashion_Waist16_03",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13004,
+    "name": "Windstrider Waistpiece: Dark Jade",
+    "desc": "Wind at your heels, luck on your side.",
+    "icon": "T_Fashion_Waist16_02",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13005,
+    "name": "Mist-veiled Parasol: Gilt",
+    "desc": "Woven from the night's shadow, it gathers the world's rain and haze, folding them into a hush.",
+    "icon": "T_Fashion_Waist17",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13006,
+    "name": "Mist-veiled Parasol: Dark Jade",
+    "desc": "Woven from the night's shadow, it gathers the world's rain and haze, folding them into a hush.",
+    "icon": "T_Fashion_Waist17_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13007,
+    "name": "Mist-veiled Parasol: Rust Red",
+    "desc": "Woven from the night's shadow, it gathers the world's rain and haze, folding them into a hush.",
+    "icon": "T_Fashion_Waist17_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13008,
+    "name": "Mist-veiled Parasol: Dark Blue",
+    "desc": "Woven from the night's shadow, it gathers the world's rain and haze, folding them into a hush.",
+    "icon": "T_Fashion_Waist17_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13009,
+    "name": "Snap Kitty Waistpiece: Opaque White",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a feline tail.",
+    "icon": "T_Fashion_Waist11",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13010,
+    "name": "Snap Kitty Waistpiece: Dark Jade",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a feline tail.",
+    "icon": "T_Fashion_Waist11_02",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13011,
+    "name": "Snap Kitty Waistpiece: White Sakura",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a feline tail.",
+    "icon": "T_Fashion_Waist11_01",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13012,
+    "name": "Snap Kitty Waistpiece: Leaden Grey",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a feline tail.",
+    "icon": "T_Fashion_Waist11_03",
+    "rarity": 4,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 13013,
+    "name": "Swing Kitty Waistpiece: Opaque White",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a feline tail.",
+    "icon": "T_Fashion_Waist10",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13014,
+    "name": "Swing Kitty Waistpiece: Dark Jade",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a feline tail.",
+    "icon": "T_Fashion_Waist10_02",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13015,
+    "name": "Swing Kitty Waistpiece: White Sakura",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a feline tail.",
+    "icon": "T_Fashion_Waist10_01",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13016,
+    "name": "Swing Kitty Waistpiece: Leaden Grey",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a feline tail.",
+    "icon": "T_Fashion_Waist10_03",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13017,
+    "name": "Fluffy Bunny Waistpiece: Opaque White",
+    "desc": "Fancy a little bunny fluff?",
+    "icon": "T_Fashion_Waist14",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13018,
+    "name": "Fluffy Bunny Waistpiece: Caramel",
+    "desc": "Fancy a little bunny fluff?",
+    "icon": "T_Fashion_Waist14_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13019,
+    "name": "Fluffy Bunny Waistpiece: Dark Jade",
+    "desc": "Fancy a little bunny fluff?",
+    "icon": "T_Fashion_Waist14_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13020,
+    "name": "Fluffy Bunny Waistpiece: Dark Blue",
+    "desc": "Fancy a little bunny fluff?",
+    "icon": "T_Fashion_Waist14_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20001,
+    "name": "Sage's Spectacles",
+    "desc": "Wisdom precisely encircled in those round frames, greatly magnifying the wearer's aura of sagacity.",
+    "icon": "T_Fashion_Face_Glasses",
+    "rarity": 4,
+    "unlock": "Source: Starter Gift Chest Ⅰ"
+  },
+  {
+    "id": 20002,
+    "name": "Sage's Spectacles: Rust Red",
+    "desc": "Wisdom precisely encircled in those round frames, greatly magnifying the wearer's aura of sagacity.",
+    "icon": "T_Fashion_Face_RedGlasses",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 20003,
+    "name": "Sage's Spectacles: Leaden Grey",
+    "desc": "Wisdom precisely encircled in those round frames, greatly magnifying the wearer's aura of sagacity.",
+    "icon": "T_Fashion_Face_TransparentGlasses",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 20004,
+    "name": "Sage's Spectacles: Caramel",
+    "desc": "Wisdom precisely encircled in those round frames, greatly magnifying the wearer's aura of sagacity.",
+    "icon": "T_Fashion_Face_HawksbillGlasses",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 20005,
+    "name": "Ascetic's Blindfold",
+    "desc": "Eyes are but obstacles to truly observing and perceiving the world.",
+    "icon": "T_Fashion_Face_EyeMask",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20006,
+    "name": "Ascetic's Blindfold: Opaque White",
+    "desc": "Eyes are but obstacles to truly observing and perceiving the world.",
+    "icon": "T_Fashion_Face_WhiteBandage",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20007,
+    "name": "Ascetic's Blindfold: Rust Red",
+    "desc": "Eyes are but obstacles to truly observing and perceiving the world.",
+    "icon": "T_Fashion_Face_RedBandage",
+    "rarity": 4,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 20008,
+    "name": "Arclight Butterfly",
+    "desc": "A butterfly that waltzes through tempests, providing a silent vigil for those unsettled by the roar of thunder, until the storm quiets and the fear subsides.",
+    "icon": "T_Fashion_Face_Butterfly01",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 20009,
+    "name": "Arclight Butterfly: Celeste",
+    "desc": "A butterfly that waltzes through tempests, providing a silent vigil for those unsettled by the roar of thunder, until the storm quiets and the fear subsides.",
+    "icon": "T_Fashion_Face_WhiteButterfly01",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 20010,
+    "name": "Arclight Butterfly: White Sakura",
+    "desc": "A butterfly that waltzes through tempests, providing a silent vigil for those unsettled by the roar of thunder, until the storm quiets and the fear subsides.",
+    "icon": "T_Fashion_Face_PinkButterfly01",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 20011,
+    "name": "Arclight Butterfly: Leaden Grey",
+    "desc": "A butterfly that waltzes through tempests, providing a silent vigil for those unsettled by the roar of thunder, until the storm quiets and the fear subsides.",
+    "icon": "T_Fashion_Face_BlackButterfly01",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 20012,
+    "name": "Mistborn Butterfly",
+    "desc": "According to the lore of certain Charon tribes, this ethereal butterfly emerges each day from the white blossoms of Mother Embla, only to fade into the dusky mists of Father Ask.",
+    "icon": "T_Fashion_Face_Butterfly02",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 20013,
+    "name": "Mistborn Butterfly: Mint",
+    "desc": "According to the lore of certain Charon tribes, this ethereal butterfly emerges each day from the white blossoms of Mother Embla, only to fade into the dusky mists of Father Ask.",
+    "icon": "T_Fashion_Face_CyanButterfly02",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 20014,
+    "name": "Mistborn Butterfly: Rust Red",
+    "desc": "According to the lore of certain Charon tribes, this ethereal butterfly emerges each day from the white blossoms of Mother Embla, only to fade into the dusky mists of Father Ask.",
+    "icon": "T_Fashion_Face_RedButterfly02",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 20015,
+    "name": "Mistborn Butterfly: Leaden Grey",
+    "desc": "According to the lore of certain Charon tribes, this ethereal butterfly emerges each day from the white blossoms of Mother Embla, only to fade into the dusky mists of Father Ask.",
+    "icon": "T_Fashion_Face_GreyButterfly02",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 20016,
+    "name": "Bandage Wrap",
+    "desc": "A swift solution for sudden discomfort.",
+    "icon": "T_Fashion_Face_Bandage",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20017,
+    "name": "Bandage Wrap: Dark Jade",
+    "desc": "A swift solution for sudden discomfort.",
+    "icon": "T_Fashion_Face_BlackBandage",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20018,
+    "name": "Bandage Wrap: White Sakura",
+    "desc": "A swift solution for sudden discomfort.",
+    "icon": "T_Fashion_Face_PinkBandage",
+    "rarity": 4,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 20019,
+    "name": "Bandage Wrap: Celeste",
+    "desc": "A swift solution for sudden discomfort.",
+    "icon": "T_Fashion_Face_BlueBandage",
+    "rarity": 4,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 20020,
+    "name": "Life Sustainer",
+    "desc": "Poisonous fog, fire, smoke, sand and dust... This simple structure interprets that sustaining the possibility of survival is never easy.",
+    "icon": "T_Fashion_Face_ArmyMask",
+    "rarity": 3,
+    "unlock": "Available at Lunoeggy's Impression Shop"
+  },
+  {
+    "id": 20021,
+    "name": "Skyward Plume",
+    "desc": "Yearnings for the sky could not transcend earthly bounds. The outstretched wings speak volumes of the longing for freedom.",
+    "icon": "T_Fashion_Face_Wing",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 20022,
+    "name": "Reversed Magician's Flower: Rust Red",
+    "desc": "Always keeps the audience wondering whether the next moment will reveal a dove or a rose.",
+    "icon": "T_Fashion_Face_RedFlower",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 20023,
+    "name": "Upright Magician's Flower: Opaque White",
+    "desc": "Always keeps the audience wondering whether the next moment will reveal a dove or a rose.",
+    "icon": "T_Fashion_Face_WhiteFlower",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 20024,
+    "name": "Lunosmith's Moustache",
+    "desc": "This fake moustache lends its wearer an air of gravitas and wisdom, though it demands occasional adjustments to ensure it stays firmly in place.",
+    "icon": "T_Fashion_Face_Beard",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 20025,
+    "name": "Valve of Perception",
+    "desc": "Broaden your perspective and see the world unfold before your eyes.",
+    "icon": "T_Fashion_Face_Valve",
+    "rarity": 4,
+    "unlock": "Available at Lunoeggy's Impression Shop"
+  },
+  {
+    "id": 20026,
+    "name": "Yesterday No More",
+    "desc": "Though the past cannot be relived, let neither your dreams nor the traces of your existence fade into silence.",
+    "icon": "T_Fashion_Face06",
+    "rarity": 5,
+    "unlock": ""
+  },
+  {
+    "id": 20027,
+    "name": "Monocle of Knowledge",
+    "desc": "A crimson charm sways beside the monocle, catching the breeze — as if some scholar, somewhere, just flipped a page and murmured, \"...hm.\"",
+    "icon": "T_Fashion_Face03",
+    "rarity": 4,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 20028,
+    "name": "Centre of the Party",
+    "desc": "Bubbly, bright, and impossible to ignore.",
+    "icon": "T_Fashion_Face01",
+    "rarity": 4,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 20029,
+    "name": "Buttoneer",
+    "desc": "For those who'd like to avoid any eye contact.",
+    "icon": "T_Fashion_Face04",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20030,
+    "name": "Banished Oni Mask",
+    "desc": "Once worn in defiance of the light. Now cast aside — lest it provoke the gods again.",
+    "icon": "T_Fashion_Face05",
+    "rarity": 3,
+    "unlock": "Available at Lunoeggy's Impression Shop"
+  },
+  {
+    "id": 20031,
+    "name": "Filbert's Kisses",
+    "desc": "Oink~ Oink~ Oiiiiink~",
+    "icon": "T_Fashion_Face02",
+    "rarity": 4,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 20032,
+    "name": "Ascetic's Blindfold: Caramel",
+    "desc": "Eyes are but obstacles to truly observing and perceiving the world.",
+    "icon": "T_Fashion_Face09",
+    "rarity": 4,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 20033,
+    "name": "Buttoneer: White Sakura",
+    "desc": "For those who'd like to avoid any eye contact.",
+    "icon": "T_Fashion_Face08",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20034,
+    "name": "Buttoneer: Mint",
+    "desc": "For those who'd like to avoid any eye contact.",
+    "icon": "T_Fashion_Face07",
+    "rarity": 4,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 20035,
+    "name": "Skyward Plume: Opaque White",
+    "desc": "Yearnings for the sky could not transcend earthly bounds. The outstretched wings speak volumes of the longing for freedom.",
+    "icon": "T_Fashion_Face10",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 20036,
+    "name": "Butterfly Dream: Azure",
+    "desc": "Even through veiled sight, the world's splendour may still be felt.",
+    "icon": "T_Fashion_Face13",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 20037,
+    "name": "Butterfly Dream: Opaque White",
+    "desc": "Even through veiled sight, the world's splendour may still be felt.",
+    "icon": "T_Fashion_Face11",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 20038,
+    "name": "Butterfly Dream: Dark Jade",
+    "desc": "Even through veiled sight, the world's splendour may still be felt.",
+    "icon": "T_Fashion_Face14",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 20039,
+    "name": "Reflective Glasses",
+    "desc": "Wisdom, framed to perfection. These reflective specs greatly magnify an air of intelligence... or at least, make you look incredibly reflective.",
+    "icon": "T_Fashion_Face12",
+    "rarity": 4,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 20040,
+    "name": "Glimmering Ripples: Opaque White",
+    "desc": "What is it that shimmers in their eyes — tears, or the soft ripples of moonlight?",
+    "icon": "T_Fashion_Face16",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20041,
+    "name": "Frostar Beard",
+    "desc": "Children, are you ready for your presents?",
+    "icon": "T_Fashion_Face17",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20042,
+    "name": "Sigil of Zhuyin: Violet",
+    "desc": "What is done cannot be undone.",
+    "icon": "T_Fashion_Face15",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20043,
+    "name": "Loongscale Shades",
+    "desc": "Shielding you from glare and dust, they lay bare what is real and what is not.",
+    "icon": "T_Fashion_Face21_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20045,
+    "name": "Glimmering Ripples: Violet",
+    "desc": "What is it that shimmers in their eyes — tears, or the soft ripples of moonlight?",
+    "icon": "T_Fashion_Face16_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20046,
+    "name": "Glimmering Ripples: Azure",
+    "desc": "What is it that shimmers in their eyes — tears, or the soft ripples of moonlight?",
+    "icon": "T_Fashion_Face16_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20047,
+    "name": "Glimmering Ripples: White Sakura",
+    "desc": "What is it that shimmers in their eyes — tears, or the soft ripples of moonlight?",
+    "icon": "T_Fashion_Face16_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20049,
+    "name": "Sigil of Zhuyin: Gilt",
+    "desc": "What is done cannot be undone.",
+    "icon": "T_Fashion_Face15_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20050,
+    "name": "Sigil of Zhuyin: Opaque White",
+    "desc": "What is done cannot be undone.",
+    "icon": "T_Fashion_Face15_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20051,
+    "name": "Sigil of Zhuyin: Rust Red",
+    "desc": "What is done cannot be undone.",
+    "icon": "T_Fashion_Face15_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20063,
+    "name": "Loong Insight: Opaque White",
+    "desc": "Shielding you from glare and dust, they lay bare what is real and what is not.",
+    "icon": "T_Fashion_Face21_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20064,
+    "name": "Loong Insight: Violet",
+    "desc": "Shielding you from glare and dust, they lay bare what is real and what is not.",
+    "icon": "T_Fashion_Face21_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20065,
+    "name": "Loong Insight: White Sakura",
+    "desc": "Shielding you from glare and dust, they lay bare what is real and what is not.",
+    "icon": "T_Fashion_Face21",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20066,
+    "name": "Blaze of Order: Gilt",
+    "desc": "By the law of Heaven, set this age of turmoil aright.",
+    "icon": "T_Fashion_Face20",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20067,
+    "name": "Blaze of Order: Opaque White",
+    "desc": "By the law of Heaven, set this age of turmoil aright.",
+    "icon": "T_Fashion_Face20_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20068,
+    "name": "Blaze of Order: Violet",
+    "desc": "By the law of Heaven, set this age of turmoil aright.",
+    "icon": "T_Fashion_Face20_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20069,
+    "name": "Blaze of Order: Rust Red",
+    "desc": "By the law of Heaven, set this age of turmoil aright.",
+    "icon": "T_Fashion_Face20_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20070,
+    "name": "Cool Shades: Dark Jade",
+    "desc": "Me? Just a living legend.",
+    "icon": "T_Fashion_Face19",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20071,
+    "name": "Cool Shades: White Sakura",
+    "desc": "Me? Just a living legend.",
+    "icon": "T_Fashion_Face19_01",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20072,
+    "name": "Cool Shades: Leaden Grey",
+    "desc": "Me? Just a living legend.",
+    "icon": "T_Fashion_Face19_03",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20073,
+    "name": "Cool Shades: Apricot",
+    "desc": "Me? Just a living legend.",
+    "icon": "T_Fashion_Face19_02",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20074,
+    "name": "Drift of Auspice: Gilt",
+    "desc": "Let evil find no foothold; let misfortune be kept at bay.",
+    "icon": "T_Fashion_Face18_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20075,
+    "name": "Drift of Auspice: Opaque White",
+    "desc": "Let evil find no foothold; let misfortune be kept at bay.",
+    "icon": "T_Fashion_Face18_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20076,
+    "name": "Drift of Auspice: Dark Jade",
+    "desc": "Let evil find no foothold; let misfortune be kept at bay.",
+    "icon": "T_Fashion_Face18",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20077,
+    "name": "Drift of Auspice: Rust Red",
+    "desc": "Let evil find no foothold; let misfortune be kept at bay.",
+    "icon": "T_Fashion_Face18_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 21001,
+    "name": "UI_Accessory_Name_21001",
+    "desc": "UI_Accessory_Desc_21001",
+    "icon": "",
+    "rarity": 0,
+    "unlock": ""
+  },
+  {
+    "id": 21002,
+    "name": "Stellar Flight",
+    "desc": "Drift between the stars and listen to whispers from ages past.",
+    "icon": "T_Fashion_Fx07_02",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 21003,
+    "name": "Splash Streak",
+    "desc": "Skim the waves and streak forward atop the surf.",
+    "icon": "T_Fashion_Fx08_02",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 21004,
+    "name": "Flare Flowing",
+    "desc": "Firelight gives chase through swaying starlight; the river of stars stirs, and a loong drifts overhead.",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 30001,
+    "name": "Lantern",
+    "desc": "A beacon of light to keep by your side. A constant source of comfort on your journey.",
+    "icon": "T_Fashion_Back_Lantern",
+    "rarity": 3,
+    "unlock": "Available at Lunoeggy's Impression Shop"
+  },
+  {
+    "id": 30002,
+    "name": "Cirrus Gourd",
+    "desc": "With cirrus rolling the sun and moon, a thousand thoughts scattered in; with a gourd contains a universe, ten thousand rhymes hidden in.",
+    "icon": "T_Fashion_Waist_Gourd",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30003,
+    "name": "Noctoyager",
+    "desc": "Life is like a lonely cruise through the boundless darkness of the night. The river weeps, with thorny thickets lining its sorrowful shores.",
+    "icon": "T_Fashion_Waist_Card",
+    "rarity": 4,
+    "unlock": "Obtainable from Quests"
+  },
+  {
+    "id": 30004,
+    "name": "Phoxichor Canister",
+    "desc": "An Aeolipile-designed container for safely holding Phoxichor. Still wildly collectible — even when empty.",
+    "icon": "T_Fashion_Waist06",
+    "rarity": 3,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 30005,
+    "name": "Miner's Lamp",
+    "desc": "A beacon in the depths — brighter than fear, steadier than breath.",
+    "icon": "T_Fashion_Waist03",
+    "rarity": 3,
+    "unlock": "Available at Lunoeggy's Impression Shop"
+  },
+  {
+    "id": 30006,
+    "name": "Porchlight of Home",
+    "desc": "Hung by doorways for the lost, the late, and those still finding their way home.",
+    "icon": "T_Fashion_Waist04",
+    "rarity": 3,
+    "unlock": "Available at Lunoeggy's Impression Shop"
+  },
+  {
+    "id": 30007,
+    "name": "Days of Spin",
+    "desc": "A leek that whispers \"one more spin~\" to your soul.",
+    "icon": "T_Fashion_Waist01",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30008,
+    "name": "Jade of Yin and Yang",
+    "desc": "Dark and light, in jade confined; heaven and earth, in arc aligned.",
+    "icon": "T_Fashion_Waist02",
+    "rarity": 4,
+    "unlock": "Source: Starter Gift Chest Ⅲ"
+  },
+  {
+    "id": 30009,
+    "name": "Dice of Fate",
+    "desc": "Toss it. Trust it. Try again when it ruins your life.",
+    "icon": "T_Fashion_Waist05",
+    "rarity": 4,
+    "unlock": "Available at Lunoeggy's Impression Shop"
+  },
+  {
+    "id": 30016,
+    "name": "Moonveil Night",
+    "desc": "Forged beneath a full moon, this famed sabre holds its glow. Tilt the blade gently — moonlight ripples across the steel.",
+    "icon": "T_Fashion_Waist_Katana",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30017,
+    "name": "Tale of a Plush Doll",
+    "desc": "When the storybook closes, true magic begins — with the courage gifted to us by its tales, we embrace a world far from perfect.",
+    "icon": "T_Fashion_Waist07",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30018,
+    "name": "Bunny Charm: Opaque White",
+    "desc": "A tender gleam parts the night, and the moon's gentle glow guides you home.",
+    "icon": "T_Fashion_Waist09",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30019,
+    "name": "Frostar Snowman",
+    "desc": "Wrapped in the children's warm memories, the snowman slumbers through the long winter night.",
+    "icon": "T_Fashion_Waist08",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30020,
+    "name": "Celestial Scepter",
+    "desc": "Hold the authority of the heavens in your very hand.",
+    "icon": "T_Fashion_Waist15",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30021,
+    "name": "Axeident",
+    "desc": "Moral of the story? If an axe falls into a lake, it's probably headed for an innocent nymph's skull.",
+    "icon": "T_Fashion_Head06",
+    "rarity": 4,
+    "unlock": "Available at Lunoeggy's Impression Shop"
+  },
+  {
+    "id": 30022,
+    "name": "Tale of a Plush Doll: White Sakura",
+    "desc": "When the storybook closes, true magic begins — with the courage gifted to us by its tales, we embrace a world far from perfect.",
+    "icon": "T_Fashion_Waist07_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30023,
+    "name": "Tale of a Plush Doll: Dark Jade",
+    "desc": "When the storybook closes, true magic begins — with the courage gifted to us by its tales, we embrace a world far from perfect.",
+    "icon": "T_Fashion_Waist07_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30024,
+    "name": "Tale of a Plush Doll: Celeste",
+    "desc": "When the storybook closes, true magic begins — with the courage gifted to us by its tales, we embrace a world far from perfect.",
+    "icon": "T_Fashion_Waist07_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30025,
+    "name": "Bunny Charm: Rust Red",
+    "desc": "A tender gleam parts the night, and the moon's gentle glow guides you home.",
+    "icon": "T_Fashion_Waist09_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30026,
+    "name": "Bunny Charm: White Sakura",
+    "desc": "A tender gleam parts the night, and the moon's gentle glow guides you home.",
+    "icon": "T_Fashion_Waist09_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30027,
+    "name": "Bunny Charm: Gilt",
+    "desc": "A tender gleam parts the night, and the moon's gentle glow guides you home.",
+    "icon": "T_Fashion_Waist09_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30028,
+    "name": "Celestial Scepter: Opaque White",
+    "desc": "Hold the authority of the heavens in your very hand.",
+    "icon": "T_Fashion_Waist15_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30029,
+    "name": "Celestial Scepter: Violet",
+    "desc": "Hold the authority of the heavens in your very hand.",
+    "icon": "T_Fashion_Waist15_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30030,
+    "name": "Celestial Scepter: Rust Red",
+    "desc": "Hold the authority of the heavens in your very hand.",
+    "icon": "T_Fashion_Waist15_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30031,
+    "name": "Ledger of Affluence",
+    "desc": "With a light flick of golden beads, fate itself is tallied.",
+    "icon": "T_Fashion_Waist13",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 31001,
+    "name": "胜利动作·悠游水岸",
+    "desc": "可变更胜利动作。",
+    "icon": "T_Fashion_SettlementAction_01",
+    "rarity": 5,
+    "unlock": ""
+  },
+  {
+    "id": 31002,
+    "name": "胜利动作·睥睨山河",
+    "desc": "可变更胜利动作。",
+    "icon": "T_Fashion_SettlementAction_02",
+    "rarity": 5,
+    "unlock": ""
+  },
+  {
+    "id": 40001,
+    "name": "Phoxfox Tail",
+    "desc": "The most subtle changes in humidity can not escape the perception of a phoxfox tail. Sophisticated travelers often observe whether a phoxfox in a rainy night would solo dance or not, thus to determine when the clouds will be dispersed, and when the moonlight will return.",
+    "icon": "T_Fashion_Back12",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40002,
+    "name": "Cambay Commandment",
+    "desc": "The blade is protective but also hurtful, who carries the dignity and faith of the successive masters of itself. Over the years, it has passed on exhortations from ancient times to the present world.",
+    "icon": "T_Fashion_Back_Sword",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40003,
+    "name": "Vehicle Wheel",
+    "desc": "Give me a lever, and I'll spin the world. Or at least this tyre.",
+    "icon": "T_Fashion_Back03",
+    "rarity": 4,
+    "unlock": "Available at Lunoeggy's Impression Shop"
+  },
+  {
+    "id": 40005,
+    "name": "Nightowl Feathers",
+    "desc": "Sink into the darkness and hunt for the light.",
+    "icon": "T_Fashion_Back05",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 40007,
+    "name": "Hymn to the Wind",
+    "desc": "Wings on the breeze, arms to the sky — sing, soar, and never look down.",
+    "icon": "T_Fashion_Back13",
+    "rarity": 5,
+    "unlock": "Source: Starter Gift Chest Ⅱ"
+  },
+  {
+    "id": 40008,
+    "name": "Backpiece: Fortune's Favour",
+    "desc": "Among the people of Huaxu, there lingers a fondness for a hardy creature of ages past — a sentiment now woven into this ornament.",
+    "icon": "T_Fashion_Back20",
+    "rarity": 4,
+    "unlock": "Available at Lunoeggy's Impression Shop"
+  },
+  {
+    "id": 40009,
+    "name": "Frostar Wings",
+    "desc": "Fragile though they seem, such wings can still bear children safely through the harshest of winters.",
+    "icon": "T_Fashion_Back21",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40011,
+    "name": "Frostar Bell",
+    "desc": "Jingle bells, jingle bells, jingle all the way~",
+    "icon": "T_Fashion_Back19",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40012,
+    "name": "Reverse Scale of Zhuyin: Violet",
+    "desc": "What is done cannot be undone.",
+    "icon": "T_Fashion_Back22",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40014,
+    "name": "Lightborne Plume Backpiece",
+    "desc": "O wings, soft as a fledgling's, carry my longing and fly towards the horizon where the light awaits.",
+    "icon": "T_Fashion_Back15",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40015,
+    "name": "Lightborne Plume Waistpiece",
+    "desc": "O wings, soft as a fledgling's, carry my longing and fly towards the horizon where the light awaits.",
+    "icon": "T_Fashion_Back26",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40016,
+    "name": "Phoxfox Backpiece: Dark Jade",
+    "desc": "After hearing the seasoned traveller's tale, some became fanatical in their devotion to the Phoxfox. Wearing this waistpiece is one of the ways they show it.",
+    "icon": "T_Fashion_Back17",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40017,
+    "name": "Phoxfox Tail: Dark Jade",
+    "desc": "The most subtle changes in humidity can not escape the perception of a phoxfox tail. Sophisticated travelers often observe whether a phoxfox in a rainy night would solo dance or not, thus to determine when the clouds will be dispersed, and when the moonlight will return.",
+    "icon": "T_Fashion_Back12_04",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40018,
+    "name": "Phoxfox Tail: Apricot",
+    "desc": "The most subtle changes in humidity can not escape the perception of a phoxfox tail. Sophisticated travelers often observe whether a phoxfox in a rainy night would solo dance or not, thus to determine when the clouds will be dispersed, and when the moonlight will return.",
+    "icon": "T_Fashion_Back12_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40019,
+    "name": "Phoxfox Tail: White Sakura",
+    "desc": "The most subtle changes in humidity can not escape the perception of a phoxfox tail. Sophisticated travelers often observe whether a phoxfox in a rainy night would solo dance or not, thus to determine when the clouds will be dispersed, and when the moonlight will return.",
+    "icon": "T_Fashion_Back12_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40020,
+    "name": "Phoxfox Tail: Rust Red",
+    "desc": "The most subtle changes in humidity can not escape the perception of a phoxfox tail. Sophisticated travelers often observe whether a phoxfox in a rainy night would solo dance or not, thus to determine when the clouds will be dispersed, and when the moonlight will return.",
+    "icon": "T_Fashion_Back12_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40021,
+    "name": "Reverse Scale of Zhuyin: Gilt",
+    "desc": "What is done cannot be undone.",
+    "icon": "T_Fashion_Back25",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40022,
+    "name": "Reverse Scale of Zhuyin: Opaque White",
+    "desc": "What is done cannot be undone.",
+    "icon": "T_Fashion_Back23",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40023,
+    "name": "Reverse Scale of Zhuyin: Rust Red",
+    "desc": "What is done cannot be undone.",
+    "icon": "T_Fashion_Back24",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40024,
+    "name": "Phoxfox Backpiece: Caramel",
+    "desc": "After hearing the seasoned traveller's tale, some became fanatical in their devotion to the Phoxfox. Wearing this waistpiece is one of the ways they show it.",
+    "icon": "T_Fashion_Back16",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40025,
+    "name": "Phoxfox Backpiece: Opaque White",
+    "desc": "After hearing the seasoned traveller's tale, some became fanatical in their devotion to the Phoxfox. Wearing this waistpiece is one of the ways they show it.",
+    "icon": "T_Fashion_Back18",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40029,
+    "name": "Unbounded Ascent: Gilt",
+    "desc": "The sky was never off-limits. Anyone can ascend.",
+    "icon": "T_Fashion_Back34_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40030,
+    "name": "Unbounded Ascent: Opaque White",
+    "desc": "The sky was never off-limits. Anyone can ascend.",
+    "icon": "T_Fashion_Back34",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40031,
+    "name": "Unbounded Ascent: Violet",
+    "desc": "The sky was never off-limits. Anyone can ascend.",
+    "icon": "T_Fashion_Back34_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40032,
+    "name": "Unbounded Ascent: Rust Red",
+    "desc": "The sky was never off-limits. Anyone can ascend.",
+    "icon": "T_Fashion_Back34_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40033,
+    "name": "Jade of Yin and Yang Backpiece",
+    "desc": "Dark and light, in jade confined; heaven and earth, in arc aligned.",
+    "icon": "T_Fashion_Back35",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40038,
+    "name": "Lightborne Plume Backpiece: Dark Blue",
+    "desc": "O wings, soft as a fledgling's, carry my longing and fly towards the horizon where the light awaits.",
+    "icon": "T_Fashion_Back30_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40039,
+    "name": "Lightborne Plume Backpiece: Dark Jade",
+    "desc": "O wings, soft as a fledgling's, carry my longing and fly towards the horizon where the light awaits.",
+    "icon": "T_Fashion_Back30",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40040,
+    "name": "Lightborne Plume Backpiece: Rust Red",
+    "desc": "O wings, soft as a fledgling's, carry my longing and fly towards the horizon where the light awaits.",
+    "icon": "T_Fashion_Back30_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40041,
+    "name": "Lightborne Plume Waistpiece: Dark Blue",
+    "desc": "O wings, soft as a fledgling's, carry my longing and fly towards the horizon where the light awaits.",
+    "icon": "T_Fashion_Back31_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40042,
+    "name": "Lightborne Plume Waistpiece: Dark Jade",
+    "desc": "O wings, soft as a fledgling's, carry my longing and fly towards the horizon where the light awaits.",
+    "icon": "T_Fashion_Back31",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40043,
+    "name": "Lightborne Plume Waistpiece: Rust Red",
+    "desc": "O wings, soft as a fledgling's, carry my longing and fly towards the horizon where the light awaits.",
+    "icon": "T_Fashion_Back31_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40044,
+    "name": "Trailing Glory Backpiece: Mint",
+    "desc": "Framed by emerald plumes, it catches the light of sun and moon, gilding the world below.",
+    "icon": "T_Fashion_Back32_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40045,
+    "name": "Trailing Glory Backpiece: Opaque White",
+    "desc": "Framed by emerald plumes, it catches the light of sun and moon, gilding the world below.",
+    "icon": "T_Fashion_Back32",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40046,
+    "name": "Trailing Glory Backpiece: Violet",
+    "desc": "Framed by emerald plumes, it catches the light of sun and moon, gilding the world below.",
+    "icon": "T_Fashion_Back32_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40047,
+    "name": "Trailing Glory Backpiece: Rust Red",
+    "desc": "Framed by emerald plumes, it catches the light of sun and moon, gilding the world below.",
+    "icon": "T_Fashion_Back32_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40048,
+    "name": "Blade of Order: Gilt",
+    "desc": "It takes force to end strife.",
+    "icon": "T_Fashion_Back36",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40049,
+    "name": "Blade of Order: Opaque White",
+    "desc": "It takes force to end strife.",
+    "icon": "T_Fashion_Back36_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40050,
+    "name": "Blade of Order: Violet",
+    "desc": "It takes force to end strife.",
+    "icon": "T_Fashion_Back36_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40051,
+    "name": "Blade of Order: Rust Red",
+    "desc": "It takes force to end strife.",
+    "icon": "T_Fashion_Back36_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40052,
+    "name": "Frostar Cape: Rust Red",
+    "desc": "A snowflake settles on your shoulder, starlight-draped, and sleeps through the long winter.",
+    "icon": "T_Fashion_Back33_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40053,
+    "name": "Frostar Cape: Opaque White",
+    "desc": "A snowflake settles on your shoulder, starlight-draped, and sleeps through the long winter.",
+    "icon": "T_Fashion_Back33",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40054,
+    "name": "Frostar Cape: Dark Jade",
+    "desc": "A snowflake settles on your shoulder, starlight-draped, and sleeps through the long winter.",
+    "icon": "T_Fashion_Back33_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 50001,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": ""
+  },
+  {
+    "id": 50002,
+    "name": "Argent Flare",
+    "desc": "{空格}",
+    "icon": "T_Fashion_Fx03",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 50003,
+    "name": "银烛玩偶",
+    "desc": "{空格}",
+    "icon": "T_Fashion_Fx11",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
+    "id": 60001,
+    "name": "{空格}",
+    "desc": "{空格}",
+    "icon": "",
+    "rarity": 5,
+    "unlock": ""
+  },
+  {
+    "id": 60002,
+    "name": "Stardust Mirage",
+    "desc": "Wave goodbye and bid the stars farewell.",
+    "icon": "T_Fashion_Fx04",
+    "rarity": 4,
+    "unlock": "Available though Myriad"
+  },
+  {
+    "id": 70001,
+    "name": "Flow of Grace",
+    "desc": "A butterfly flutters, stirring midsummer from its slumber.",
+    "icon": "T_Fashion_Fx01",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 70002,
+    "name": "Quack Force: Azure",
+    "desc": "The road ahead is looking quackingly bright.",
+    "icon": "T_Fashion_Fx05_03",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 70003,
+    "name": "Flare Blossom: Gilt",
+    "desc": "A loong soars and breathes fire; our songs carry on through the night.",
+    "icon": "T_Fashion_Head_YellowChick",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 70011,
+    "name": "Flow of Grace: Rust Red",
+    "desc": "A butterfly flutters, stirring midsummer from its slumber.",
+    "icon": "T_Fashion_Fx01_02",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 70012,
+    "name": "Flow of Grace: Dark Jade",
+    "desc": "A butterfly flutters, stirring midsummer from its slumber.",
+    "icon": "T_Fashion_Fx01_04",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 70013,
+    "name": "Flow of Grace: Opaque White",
+    "desc": "A butterfly flutters, stirring midsummer from its slumber.",
+    "icon": "T_Fashion_Fx01_01",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 70021,
+    "name": "Quack Force: Gilt",
+    "desc": "The road ahead is looking quackingly bright.",
+    "icon": "T_Fashion_Fx05_01",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 70022,
+    "name": "Quack Force: Rust Red",
+    "desc": "The road ahead is looking quackingly bright.",
+    "icon": "T_Fashion_Fx05_04",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 70023,
+    "name": "Quack Force: Opaque White",
+    "desc": "The road ahead is looking quackingly bright.",
+    "icon": "T_Fashion_Fx05_02",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 70031,
+    "name": "Flare Blossom: Rust Red",
+    "desc": "A loong soars and breathes fire; our songs carry on through the night.",
+    "icon": "T_Fashion_Head_YellowChick",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 70032,
+    "name": "Flare Blossom: Opaque White",
+    "desc": "A loong soars and breathes fire; our songs carry on through the night.",
+    "icon": "T_Fashion_Head_YellowChick",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 70033,
+    "name": "Flare Blossom: Dark Blue",
+    "desc": "A loong soars and breathes fire; our songs carry on through the night.",
+    "icon": "T_Fashion_Head_YellowChick",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 80001,
+    "name": "Midsummer Rendezvous",
+    "desc": "Bearing pansies, butterflies await the star's arrival to begin the ball's grand overture.",
+    "icon": "T_Fashion_Fx02",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 80002,
+    "name": "Ripple Melody: Opaque White",
+    "desc": "Bubbles bloom as the shoals surge forth to join the ocean's jubilant song.",
+    "icon": "T_Fashion_Fx06_03",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 80003,
+    "name": "Supreme Grace: Gilt",
+    "desc": "Blood for the bond, gold for the covenant; a blessing sworn to endure through the ages.",
+    "icon": "T_Fashion_Fx09_02",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 80011,
+    "name": "Midsummer Rendezvous: Rust Red",
+    "desc": "Bearing pansies, butterflies await the star's arrival to begin the ball's grand overture.",
+    "icon": "T_Fashion_Fx02_02",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 80012,
+    "name": "Midsummer Rendezvous: Dark Jade",
+    "desc": "Bearing pansies, butterflies await the star's arrival to begin the ball's grand overture.",
+    "icon": "T_Fashion_Fx02_04",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 80013,
+    "name": "Midsummer Rendezvous: Opaque White",
+    "desc": "Bearing pansies, butterflies await the star's arrival to begin the ball's grand overture.",
+    "icon": "T_Fashion_Fx02_01",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 80021,
+    "name": "Ripple Melody: Azure",
+    "desc": "Bubbles bloom as the shoals surge forth to join the ocean's jubilant song.",
+    "icon": "T_Fashion_Fx06_01",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 80022,
+    "name": "Ripple Melody: Rust Red",
+    "desc": "Bubbles bloom as the shoals surge forth to join the ocean's jubilant song.",
+    "icon": "T_Fashion_Fx06_02",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 80023,
+    "name": "Ripple Melody: Gilt",
+    "desc": "Bubbles bloom as the shoals surge forth to join the ocean's jubilant song.",
+    "icon": "T_Fashion_Fx06_04",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 80031,
+    "name": "Supreme Grace: Rust Red",
+    "desc": "Blood for the bond, gold for the covenant; a blessing sworn to endure through the ages.",
+    "icon": "T_Fashion_Fx09_01",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 80032,
+    "name": "Supreme Grace: Violet",
+    "desc": "Blood for the bond, gold for the covenant; a blessing sworn to endure through the ages.",
+    "icon": "T_Fashion_Fx09_03",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  },
+  {
+    "id": 80033,
+    "name": "Supreme Grace: Opaque White",
+    "desc": "Blood for the bond, gold for the covenant; a blessing sworn to endure through the ages.",
+    "icon": "T_Fashion_Fx09",
+    "rarity": 5,
+    "unlock": "Available though Prism Exchange"
+  }
+]

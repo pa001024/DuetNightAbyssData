@@ -1,0 +1,346 @@
+[
+  {
+    "id": 3010101,
+    "name": "空軍一號",
+    "desc": "釣了一天魚的勇者絕不能空手回家，好在今天魚市降價，80銅幣一條。",
+    "icon": "T_Head_Claymore_Kongjun",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010102,
+    "name": "群星之焰",
+    "desc": "群星與群星在相撞的前一刻吻別，粉碎的呢喃化作天外的尾焰，癡心的相擁恍若銀河的吐息。",
+    "icon": "T_Head_Claymore_Qunxing",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010103,
+    "name": "UI_WeaponSkin_Name_3010103",
+    "desc": "UI_WeaponSkin_Des_3010103",
+    "icon": "T_Head_Claymore_Rongyao",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010104,
+    "name": "父輩餘蔭·重劍",
+    "desc": "一柄頗為特殊的重劍，象徵著父親的鞭策——呃，我的意思是說，父愛如山。",
+    "icon": "T_Head_Claymore_Fubei",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010105,
+    "name": "大喵不工",
+    "desc": "喵！",
+    "icon": "T_Head_Claymore_Damiao",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010106,
+    "name": "勢如破竹·重劍",
+    "desc": "真正的大師不需要武器，一節斷竹，一根枯枝，也能譜寫無人可擋的傳說。",
+    "icon": "T_Head_Claymore_Shiru",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010107,
+    "name": "大荒宴",
+    "desc": "開天闢地，宴撫八荒。",
+    "icon": "T_Head_Claymore_Dahuang",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010108,
+    "name": "糖福祿·重劍",
+    "desc": "冰糖葫蘆竹籤兒串。",
+    "icon": "T_Head_Claymore_Tangfu",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010201,
+    "name": "空軍二號",
+    "desc": "適用於單手劍。\n冷凍後兼具力量和味道的雪紋魚，重點是──就算肉罐頭和保鮮紙會過期，它也不會過期。",
+    "icon": "T_Head_Sword_Kongjun",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010202,
+    "name": "父輩餘蔭",
+    "desc": "一柄頗為特殊的劍，象徵著父親的鞭策──呃，我的意思是說，父愛如山。",
+    "icon": "T_Head_Sword_Fubei",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010203,
+    "name": "喵手回春",
+    "desc": "喵嗚~",
+    "icon": "T_Head_Sword_Miaoshou",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010204,
+    "name": "勢如破竹·單手劍",
+    "desc": "真正的大師不需要武器，一節斷竹，一根枯枝，也能譜寫無人可擋的傳說。",
+    "icon": "T_Head_Sword_Shiru",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010205,
+    "name": "糖福祿·單手劍",
+    "desc": "冰糖葫蘆竹籤兒串。",
+    "icon": "T_Head_Sword_Tangfu",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010301,
+    "name": "喚日急板",
+    "desc": "太陽在哪裡呀太陽在哪裡？太陽就在我們的手心裡。",
+    "icon": "T_Head_Bow_Huanri",
+    "rarity": 5,
+    "unlock": "通過萬華獲得"
+  },
+  {
+    "id": 3010302,
+    "name": "杯弓喵影",
+    "desc": "嗚喵嗷！",
+    "icon": "T_Head_Bow_Beigong",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010303,
+    "name": "驚弓之喵",
+    "desc": "喵嗚嗚！",
+    "icon": "T_Head_Bow_jinggong",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010401,
+    "name": "夏夜弦音",
+    "desc": "一抹清音，驚醒了少女的淺夢，撥動了夏日的心弦。",
+    "icon": "T_Head_Polearm_Xiaye",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010402,
+    "name": "踏浪舞曲",
+    "desc": "浪花在舞者的足尖躍動，海風裹挾著一整個盛夏，將高潮在此定格。",
+    "icon": "T_Head_Polearm_Talang",
+    "rarity": 5,
+    "unlock": "通過萬華獲得"
+  },
+  {
+    "id": 3010403,
+    "name": "父輩餘蔭·長柄",
+    "desc": "一柄頗為特殊的長柄武器，象徵著父親的鞭策——呃，我的意思是說，父愛如山。",
+    "icon": "T_Head_Polearm_Fubei",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010404,
+    "name": "喵突猛進",
+    "desc": "喵——！",
+    "icon": "T_Head_Polearm_Miaotu",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010405,
+    "name": "勢如破竹·長柄",
+    "desc": "真正的大師不需要武器，一節斷竹，一根枯枝，也能譜寫無人可擋的傳說。",
+    "icon": "T_Head_Polearm_Shiru",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010406,
+    "name": "糖福祿·長柄",
+    "desc": "冰糖葫蘆竹籤兒串。",
+    "icon": "T_Head_Polearm_Tangfu",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010407,
+    "name": "碧霄吟·長柄",
+    "desc": "塵囂無染，碧波破浪。",
+    "icon": "T_Head_Polearm_Bixiao",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010501,
+    "name": "大浪淘鯊",
+    "desc": "小鯊魚能有什麼壞心思。",
+    "icon": "T_Head_Machinegun_Dalang",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010502,
+    "name": "電橘他一號",
+    "desc": "喵♪喵喵喵♪喵喵♪♪",
+    "icon": "T_Head_Machinegun_Dianju",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010503,
+    "name": "碧霄吟·突擊槍",
+    "desc": "塵囂無染，碧波破浪。",
+    "icon": "T_Head_Machinegun_Bixiao",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010601,
+    "name": "父輩餘蔭·雙刀",
+    "desc": "一柄頗為特殊的雙刀，象徵著父親的鞭策——呃，我的意思是說，父愛如山。",
+    "icon": "T_Head_Dualblade_Fubei",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010603,
+    "name": "貓貓祟祟",
+    "desc": "咪喵喵~",
+    "icon": "T_Head_Dualblade_Maomao",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010605,
+    "name": "勢如破竹·雙刀",
+    "desc": "真正的大師不需要武器，一節斷竹，一根枯枝，也能譜寫無人可擋的傳說。",
+    "icon": "T_Head_Dualblade_Shiru",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010607,
+    "name": "糖福祿·雙刀",
+    "desc": "冰糖葫蘆竹籤兒串。",
+    "icon": "T_Head_Dualblade_Tangfu",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010701,
+    "name": "父輩餘蔭·太刀",
+    "desc": "一柄頗為特殊的太刀，象徵著父親的鞭策——呃，我的意思是說，父愛如山。",
+    "icon": "T_Head_Katana_Fubei",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010703,
+    "name": "我是貓",
+    "desc": "喵喵喵喵嗚，喵喵咪喵喵喵喵，喵喵咪咪喵。",
+    "icon": "T_Head_Katana_Woshi",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010705,
+    "name": "勢如破竹·太刀",
+    "desc": "真正的大師不需要武器，一節斷竹，一根枯枝，也能譜寫無人可擋的傳說。",
+    "icon": "T_Head_Katana_Shiru",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010707,
+    "name": "糖福祿·太刀",
+    "desc": "冰糖葫蘆竹籤兒串。",
+    "icon": "T_Head_Katana_Tangfu",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010801,
+    "name": "父輩餘蔭·鞭刃",
+    "desc": "一柄頗為特殊的鞭刃，象徵著父親的鞭策——呃，我的意思是說，父愛如山。",
+    "icon": "T_Head_Swordwhip_Fubei",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010802,
+    "name": "喵喵香腸",
+    "desc": "口苗口苗口苗————",
+    "icon": "T_Head_Swordwhip_Miaomiao",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010803,
+    "name": "勢如破竹·鞭刃",
+    "desc": "真正的大師不需要武器，一節斷竹，一根枯枝，也能譜寫無人可擋的傳說。",
+    "icon": "T_Head_Swordwhip_Shiru",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010804,
+    "name": "糖福祿·鞭刃",
+    "desc": "冰糖葫蘆竹籤兒串。",
+    "icon": "T_Head_Swordwhip_Tangfu",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010805,
+    "name": "碧霄吟·鞭刃",
+    "desc": "塵囂無染，碧波破浪。",
+    "icon": "T_Head_Swordwhip_Bixiao",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010901,
+    "name": "大橘已定",
+    "desc": "喵~~~",
+    "icon": "T_Head_Cannon_Daju",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3011001,
+    "name": "電橘他二號",
+    "desc": "喵嗚♪喵喵喵♪喵喵♪♪",
+    "icon": "T_Head_Shotgun_Dianju",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3011101,
+    "name": "貓餅一號",
+    "desc": "喵。",
+    "icon": "T_Head_Pistol_Maobing",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3011201,
+    "name": "貓餅二號",
+    "desc": "喵喵。",
+    "icon": "T_Head_Crossbow_Maobing",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  }
+]

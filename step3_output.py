@@ -32,6 +32,11 @@ from processor.robot_equip_processor import RobotEquipProcessor
 from processor.mount_processor import MountProcessor
 from processor.title_processor import TitleProcessor
 from processor.npc_processor import NpcProcessor
+from processor.char_accessory_processor import CharAccessoryProcessor
+from processor.weapon_accessory_processor import WeaponAccessoryProcessor
+from processor.weapon_skin_processor import WeaponSkinProcessor
+from processor.head_sculpture_processor import HeadSculptureProcessor
+from processor.impression_shop_processor import ImpressionShopProcessor
 from processor.rouge_processor import (
     RougeLikeBlessingProcessor,
     RougeLikeContractProcessor,
@@ -250,6 +255,11 @@ class FinalProcessor:
             "Mount": MountProcessor,
             "Title": TitleProcessor,
             "Npc": NpcProcessor,
+            "CharAccessory": CharAccessoryProcessor,
+            "WeaponAccessory": WeaponAccessoryProcessor,
+            "WeaponSkin": WeaponSkinProcessor,
+            "HeadSculpture": HeadSculptureProcessor,
+            "ImpressionShop": ImpressionShopProcessor,
             "RougeLikeBlessing": RougeLikeBlessingProcessor,
             "RougeLikeContract": RougeLikeContractProcessor,
             "RougeLikeRoom": RougeLikeRoomProcessor,
@@ -390,6 +400,11 @@ if __name__ == "__main__":
         "Mount",
         "Title",
         "Npc",
+        "CharAccessory",
+        "WeaponAccessory",
+        "WeaponSkin",
+        "HeadSculpture",
+        "ImpressionShop",
         "RougeLikeBlessing",
         "RougeLikeContract",
         "RougeLikeRoom",
