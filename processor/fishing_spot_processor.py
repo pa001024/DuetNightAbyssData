@@ -73,6 +73,17 @@ class FishingSpotProcessor(BaseProcessor):
             "fishIds": fish_ids,
             "showFishIds": show_fish_ids,
             "weights": spot_data.get("FishWeight", []),
+            "extraReward": spot_data.get("ExtraReward"),
+            "extraRewardProb": spot_data.get("ExtraRewardProb", 0),
+            "petId": spot_data.get("PetId"),
+            "petProb": spot_data.get("PetProb", 0),
         }
+
+        if not processed_spot["extraRewardProb"]:
+            del processed_spot["extraRewardProb"]
+            del processed_spot["extraReward"]
+        if not processed_spot["petProb"]:
+            del processed_spot["petProb"]
+            del processed_spot["petId"]
 
         return processed_spot

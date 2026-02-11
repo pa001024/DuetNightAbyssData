@@ -10,6 +10,7 @@ class RewardProcessor(BaseProcessor):
         self.mod_data = data_loader.load_json("Mod.json")
         self.resource_data = data_loader.load_json("Resource.json")
         self.draft_data = data_loader.load_json("Draft.json")
+        self.mount_data = data_loader.load_json("Mount.json")
 
     def process_item(self, item_data, language, processed_ids=None):
         """
@@ -170,6 +171,10 @@ class RewardProcessor(BaseProcessor):
         elif item_type == "Reward":
             # Reward类型不需要添加名称，返回None
             return None
+        elif item_type == "Mount":
+            # 查询Mount.json
+            mount_item = self.mount_data.get(str(item_id), {})
+            return self.get_translated_text(mount_item.get("MountName", ""))
         elif item_type == "Draft":
             # 特殊处理Draft类型，根据ProductType和ProductId获取产物名称
             draft_item = self.draft_data.get(str(item_id), {})
@@ -243,7 +248,7 @@ class RewardProcessor(BaseProcessor):
                     )
 
                 if name_field:
-                    return self.data_loader.translate(item_info.get(name_field, ""))
+                    return self.get_translated_text(item_info.get(name_field, ""))
             except Exception as e:
                 # 加载失败时，尝试直接翻译item_id
                 translated = self.get_translated_text(str(item_id))

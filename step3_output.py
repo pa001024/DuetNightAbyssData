@@ -19,6 +19,7 @@ from processor.resource_processor import ResourceProcessor
 from processor.dyn_quest_processor import DynQuestProcessor
 from processor.quest_chain_processor import QuestChainProcessor
 from processor.quest_story_processor import QuestStoryProcessor
+from processor.party_topic_processor import PartyTopicProcessor
 from processor.region_processor import RegionProcessor
 from processor.sub_region_processor import SubRegionProcessor
 from processor.region_point_processor import RegionPointProcessor
@@ -242,6 +243,7 @@ class FinalProcessor:
             "DynQuest": DynQuestProcessor,
             "QuestChain": QuestChainProcessor,
             "QuestStory": QuestStoryProcessor,
+            "PartyTopic": PartyTopicProcessor,
             "Region": RegionProcessor,
             "SubRegion": SubRegionProcessor,
             "RegionPoint": RegionPointProcessor,
@@ -387,6 +389,7 @@ if __name__ == "__main__":
         "Resource",
         "QuestChain",
         "QuestStory",
+        "PartyTopic",
         "Region",
         "SubRegion",
         "RegionPoint",

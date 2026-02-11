@@ -27,10 +27,13 @@ class QuestChainProcessor(BaseProcessor):
             for quest_id, quest_data in obj.items():
                 item = {
                     "id": int(quest_id),
+                    "sr": quest_data.get("SubRegionId", 0),
                     "next": quest_data.get("nextQuestIds", {}),
                 }
                 if not item["next"]:
                     del item["next"]
+                if not item["sr"]:
+                    del item["sr"]
                 rst.append(item)
             if rst:
                 return rst

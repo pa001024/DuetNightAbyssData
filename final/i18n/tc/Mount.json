@@ -10,7 +10,7 @@
     "resourceId": 49999,
     "fly": 1,
     "access": [
-      "Text_MountQuest01"
+      "完成任務「虬先生的投資」獲取"
     ]
   },
   {
@@ -23,7 +23,7 @@
     "sort": 100,
     "resourceId": 49998,
     "access": [
-      "Text_SHOP_MAINTAB_GACHA"
+      "稜鏡商店限時兌換"
     ]
   },
   {
@@ -37,7 +37,7 @@
     "resourceId": 49997,
     "fly": 1,
     "access": [
-      "Shop_Main"
+      "商店"
     ]
   },
   {
@@ -51,7 +51,7 @@
     "resourceId": 49996,
     "fly": 1,
     "access": [
-      "Shop_Main"
+      "商店"
     ]
   }
 ]

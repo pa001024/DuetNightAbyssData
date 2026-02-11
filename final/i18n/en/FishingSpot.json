@@ -32,7 +32,11 @@
       10,
       0,
       0
-    ]
+    ],
+    "extraReward": 301001,
+    "extraRewardProb": 0.1,
+    "petId": 4931,
+    "petProb": 0.5
   },
   {
     "id": 10110301,
@@ -67,7 +71,11 @@
       10,
       0,
       0
-    ]
+    ],
+    "extraReward": 301002,
+    "extraRewardProb": 0.1,
+    "petId": 4932,
+    "petProb": 0.5
   },
   {
     "id": 10170101,
@@ -102,7 +110,11 @@
       10,
       0,
       0
-    ]
+    ],
+    "extraReward": 301003,
+    "extraRewardProb": 0.1,
+    "petId": 4932,
+    "petProb": 0.5
   },
   {
     "id": 10410601,
@@ -137,7 +149,11 @@
       10,
       0,
       0
-    ]
+    ],
+    "extraReward": 301007,
+    "extraRewardProb": 0.1,
+    "petId": 4941,
+    "petProb": 0.5
   },
   {
     "id": 10410701,
@@ -172,7 +188,11 @@
       10,
       0,
       0
-    ]
+    ],
+    "extraReward": 301006,
+    "extraRewardProb": 0.1,
+    "petId": 4941,
+    "petProb": 0.5
   },
   {
     "id": 10410801,
@@ -207,7 +227,11 @@
       10,
       0,
       0
-    ]
+    ],
+    "extraReward": 301004,
+    "extraRewardProb": 0.1,
+    "petId": 4941,
+    "petProb": 0.5
   },
   {
     "id": 10410901,
@@ -242,7 +266,11 @@
       10,
       0,
       0
-    ]
+    ],
+    "extraReward": 301008,
+    "extraRewardProb": 0.1,
+    "petId": 4941,
+    "petProb": 0.5
   },
   {
     "id": 10411001,
@@ -277,6 +305,10 @@
       10,
       0,
       0
-    ]
+    ],
+    "extraReward": 301005,
+    "extraRewardProb": 0.1,
+    "petId": 4941,
+    "petProb": 0.5
   }
 ]

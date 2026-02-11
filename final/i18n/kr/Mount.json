@@ -10,7 +10,7 @@
     "resourceId": 49999,
     "fly": 1,
     "access": [
-      "Text_MountQuest01"
+      "퀘스트 [규선생의 투자]를 완료하여 획득"
     ]
   },
   {
@@ -23,7 +23,7 @@
     "sort": 100,
     "resourceId": 49998,
     "access": [
-      "Text_SHOP_MAINTAB_GACHA"
+      "프리즘 상점 기간 한정 교환"
     ]
   },
   {
@@ -37,7 +37,7 @@
     "resourceId": 49997,
     "fly": 1,
     "access": [
-      "Shop_Main"
+      "상점"
     ]
   },
   {
@@ -51,7 +51,7 @@
     "resourceId": 49996,
     "fly": 1,
     "access": [
-      "Shop_Main"
+      "상점"
     ]
   }
 ]

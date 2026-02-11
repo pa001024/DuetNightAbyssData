@@ -195,6 +195,10 @@ class ShopItemProcessor(BaseProcessor):
                 if price_name_key:
                     price_name = self.get_translated_text(price_name_key, language)
 
+        item_condition_text = self._get_item_condition_text(
+            shop_item_data.get("ItemCondition"), language
+        )
+
         processed_shop_item = {
             "id": item_id,
             "itemType": shop_item_data.get("ItemType"),
@@ -209,12 +213,16 @@ class ShopItemProcessor(BaseProcessor):
             "sequence": shop_item_data.get("Sequence"),
             "startTime": shop_item_data.get("StartTime"),
             "endTime": shop_item_data.get("EndTime"),
-            "unlock": shop_item_data.get("UnlockLevel"),
         }
+        unlock_level = shop_item_data.get("UnlockLevel")
+        if unlock_level is not None:
+            processed_shop_item["lv"] = unlock_level
         if not processed_shop_item.get("limit"):
             del processed_shop_item["limit"]
         if not processed_shop_item.get("endTime"):
             del processed_shop_item["endTime"]
+        if item_condition_text:
+            processed_shop_item["cond"] = item_condition_text
         if shop_item_data.get("Require"):
             processed_shop_item["require"] = shop_item_data.get("Require")
         if shop_item_data.get("UnlockRaidPoint"):
@@ -223,7 +231,33 @@ class ShopItemProcessor(BaseProcessor):
             )
         if shop_item_data.get("IsSpPopup"):
             processed_shop_item["isSpPopup"] = 1
+        if item_id == 140291:
+            del processed_shop_item["cond"]
+            processed_shop_item["require"] = 140269
+
         return processed_shop_item
+
+    def _get_item_condition_text(self, item_conditions, language):
+        """解析商品条件并返回翻译后的条件文本"""
+        if not item_conditions:
+            return ""
+
+        condition_ids = (
+            item_conditions if isinstance(item_conditions, list) else [item_conditions]
+        )
+        condition_texts = []
+
+        for condition_id in condition_ids:
+            condition_data = self.condition_data.get(str(condition_id), {})
+            condition_text_key = condition_data.get("ConditionText")
+            if not condition_text_key:
+                continue
+
+            condition_text = self.get_translated_text(condition_text_key, language)
+            if condition_text and condition_text not in condition_texts:
+                condition_texts.append(condition_text)
+
+        return "；".join(condition_texts)
 
     def process_all_items(self, items, language):
         """重写父类方法，以ShopTab为分组处理所有商店物品

@@ -46,14 +46,16 @@ class MountProcessor(BaseProcessor):
             "resourceIcon": resource_icon_name,
             "rarity": mount_rarity,
             "sort": sort_priority,
-            "resourceId": resource_id
+            "resourceId": resource_id,
         }
 
         # 只添加非 null 值的字段
         if fly_license is not None:
             processed_mount["fly"] = fly_license
         if access_key:
-            processed_mount["access"] = access_key
+            processed_mount["access"] = [
+                self.get_access_text(key, language) for key in access_key if key
+            ]
 
         return processed_mount
 
@@ -71,7 +73,8 @@ class MountProcessor(BaseProcessor):
 
         # 提取图标名称
         import re
-        match = re.search(r'T_([^.]+)\.', icon_path)
+
+        match = re.search(r"T_([^.]+)\.", icon_path)
         if match:
             return match.group(1)
         return ""

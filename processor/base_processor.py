@@ -13,7 +13,6 @@ class BaseProcessor:
         self.condition_data = data_loader.load_json("Condition.json")
         # 预加载所有语言的对话数据
         self.dialogue_data_cache = {}
-        self._load_all_dialogue_data()
 
     def _load_all_dialogue_data(self):
         """预加载所有语言的对话数据到缓存中"""
@@ -57,6 +56,8 @@ class BaseProcessor:
         Returns:
             dict: 对话数据，如果未找到返回 None
         """
+        if not self.dialogue_data_cache:
+            self._load_all_dialogue_data()
         language = language if language else self.data_loader.language
         lang_cache = self.dialogue_data_cache.get(language, {})
         return lang_cache.get(str(dialogue_id))
@@ -393,6 +394,13 @@ class BaseProcessor:
 
         return []
 
+    def get_access_text(self, access_key, language=""):
+        """获取访问文本"""
+        if "access_data" not in self.__dict__ or not self.access_data:
+            self.access_data = self.data_loader.load_json("Access.json")
+        access = self.access_data.get(access_key, {})
+        return self.get_translated_text(access.get("AccessText", access_key), language)
+
     def get_translated_text(self, text_key, language=""):
         """从i18n数据中获取翻译文本"""
         # 从i18n_data中查找
@@ -405,6 +413,10 @@ class BaseProcessor:
         # 获取当前语言
         language = language if language else self.data_loader.language
 
+        if language == "cn":
+            cn_alt = self.i18n_data_cn_alt.get(text_key, {}).get("TextMapContent", "")
+            if cn_alt:
+                return cn_alt
         # 根据当前语言获取对应字段
         # 语言映射：cn->TextMapContent, en->ContentEN, jp->ContentJP, kr->ContentKR, fr->ContentFR, tc->ContentTC
         language_field_map = {
@@ -438,9 +450,7 @@ class BaseProcessor:
                     break
         if content[:-4] == "{空格}":
             content = content.replace("{空格}", " ")
-        return content or self.i18n_data_cn_alt.get(text_key, {}).get(
-            "TextMapContent", text_key
-        )
+        return content or text_key
 
     def get_translated_dialogue(self, dialogue_key, language=""):
         """获取翻译后的对话文本

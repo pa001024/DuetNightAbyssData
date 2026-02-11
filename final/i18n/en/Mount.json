@@ -10,7 +10,7 @@
     "resourceId": 49999,
     "fly": 1,
     "access": [
-      "Text_MountQuest01"
+      "Source: Complete the quest \"Mr Qiu's Investment\""
     ]
   },
   {
@@ -23,7 +23,7 @@
     "sort": 100,
     "resourceId": 49998,
     "access": [
-      "Text_SHOP_MAINTAB_GACHA"
+      "Source: Limited-Time Exchange in the Prism Shop"
     ]
   },
   {
@@ -37,7 +37,7 @@
     "resourceId": 49997,
     "fly": 1,
     "access": [
-      "Shop_Main"
+      "Shop"
     ]
   },
   {
@@ -51,7 +51,7 @@
     "resourceId": 49996,
     "fly": 1,
     "access": [
-      "Shop_Main"
+      "Shop"
     ]
   }
 ]
