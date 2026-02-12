@@ -1,0 +1,368 @@
+[
+  {
+    "id": "Mon.Strong.Blood",
+    "name": "Ordonnateur — Pourriture cramoisie",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Pourriture cramoisie crée périodiquement une zone de [Marais putride] autour de lui.\n[Marais putride] : inflige des dégâts continus aux ennemis dans la zone, tout en soignant les alliés se trouvant dans la même aire.",
+    "vars": {
+      "间隔时间": 10.0,
+      "持续时间": 10,
+      "最大召唤数量": 3,
+      "每次召唤数量": 3,
+      "召唤延迟": 2,
+      "BUFF延迟": 0.5,
+      "DOT伤害": 0.3,
+      "DOT间隔": 2,
+      "伤害类型": [
+        "Dot",
+        "PhantomAvoid",
+        "Blood"
+      ],
+      "HOT回复": 0.02,
+      "HOT间隔": 2,
+      "飞行速度": 600,
+      "命中延迟": 2
+    }
+  },
+  {
+    "id": "Mon.Strong.Burst",
+    "name": "Ordonnateur — Déflagration",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Déflagration déclenche périodiquement une explosion centrée sur lui, projetant les ennemis alentour.",
+    "vars": {
+      "间隔时间": 13,
+      "预警延迟": 2.5,
+      "伤害倍率": 0.65,
+      "伤害类型": [
+        "PhantomAvoid",
+        "Burst"
+      ],
+      "半径": 400,
+      "削韧值": 100,
+      "受击类型": "HitFly_XY500Z1000"
+    }
+  },
+  {
+    "id": "Mon.Strong.Burst.Double",
+    "name": "Ordonnateur — Déflagration",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Déflagration déclenche périodiquement une explosion centrée sur lui, projetant les ennemis alentour.",
+    "vars": {
+      "间隔时间": 5,
+      "预警延迟": 2.5,
+      "伤害倍率": 0.65,
+      "伤害类型": [
+        "PhantomAvoid",
+        "Burst"
+      ],
+      "半径": 400,
+      "削韧值": 100,
+      "受击类型": "HitFly_XY500Z1000"
+    }
+  },
+  {
+    "id": "Mon.Strong.Burst.Triple",
+    "name": "Ordonnateur — Déflagration",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Déflagration déclenche périodiquement une explosion centrée sur lui, projetant les ennemis alentour.",
+    "vars": {
+      "间隔时间": 5,
+      "预警延迟": 2.5,
+      "伤害倍率": 0.65,
+      "伤害类型": [
+        "PhantomAvoid",
+        "Burst"
+      ],
+      "半径": 400,
+      "削韧值": 100,
+      "受击类型": "HitFly_XY500Z1000"
+    }
+  },
+  {
+    "id": "Mon.Strong.Fade",
+    "name": "Ordonnateur — Flétrissure",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Flétrissure invoque régulièrement trois [Rayons flétrissants].\nCes rayons persistent 10 s et tournent autour de l’Ordonnateur, infligeant des dégâts aux cibles touchées et réduisant leur Lucidité.",
+    "vars": {
+      "间隔时间": 15,
+      "预警延迟": 0.2,
+      "持续时间": 12.5
+    }
+  },
+  {
+    "id": "Mon.Strong.Frozen",
+    "name": "Ordonnateur — Morsure de givre",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nLorsqu’un Ordonnateur — Morsure de givre est touché par une attaque à distance, il projette des pointes de glace vers l’attaquant, infligeant des dégâts et appliquant 1 cumul de [Ralentissement].\n[Ralentissement] : réduit la Vitesse d’attaque et la Vitesse de déplacement pendant 3 s, jusqu’à 5 cumuls.",
+    "vars": {
+      "飞行速度": 1500,
+      "持续时间": 5,
+      "追踪速度": 100,
+      "追踪范围": 150,
+      "伤害倍率": 0.1,
+      "伤害类型": [
+        "PhantomAvoid"
+      ],
+      "BUFF延迟": 3,
+      "时间膨胀倍率": 0.96,
+      "最大层数": 5
+    }
+  },
+  {
+    "id": "Mon.Strong.IceOrb",
+    "name": "Ordonnateur — Geôle de givre",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Geôle de givre crée périodiquement une [Geôle de givre] sous les pieds d’une cible ennemie, ralentissant les unités dans la zone. Après 2.5 s, la zone explose et inflige des dégâts aux ennemis pris dans le rayon.",
+    "vars": {
+      "间隔时间": 10,
+      "技能作用距离": 2500,
+      "持续时间": 4,
+      "最大召唤数量": 8,
+      "每次召唤数量": 1,
+      "BUFF延迟": 0.5,
+      "时间膨胀倍率": 0.5,
+      "伤害倍率": 0.65,
+      "伤害类型": [
+        "PhantomAvoid",
+        "IceOrb"
+      ]
+    }
+  },
+  {
+    "id": "Mon.Strong.Kamikaze",
+    "name": "Ordonnateur — Sacrifice",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nLorsque l’Ordonnateur — Sacrifice est vaincu, il explose et inflige des dégâts de zone aux ennemis alentours.",
+    "vars": {
+      "飞行速度": 0,
+      "持续时间": 5,
+      "生效延迟": 2.5,
+      "半径": 400,
+      "伤害倍率": 0.65,
+      "伤害类型": [
+        "PhantomAvoid"
+      ],
+      "受击类型": "LightHit",
+      "削韧值": 200
+    }
+  },
+  {
+    "id": "Mon.Strong.Poison",
+    "name": "Ordonnateur — Corrosion",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Corrosion génère régulièrement une flaque de [Venin] sous ses pieds. Les adversaires se tenant dans cette zone voient leur défense réduite et subissent des dégâts continus.\nTant qu’il est en vie, l’Ordonnateur — Corrosion accélère également la perte de Sérum.",
+    "vars": {
+      "间隔时间": 10,
+      "持续时间": 10,
+      "最大召唤数量": 15,
+      "每次召唤数量": 1,
+      "召唤延迟": 3,
+      "BUFF延迟": 0.5,
+      "加成": {
+        "防御": -0.9
+      },
+      "DOT伤害": 0.1,
+      "DOT间隔": 2,
+      "伤害类型": [
+        "Dot",
+        "PhantomAvoid",
+        "Poison"
+      ]
+    }
+  },
+  {
+    "id": "Mon.Strong.Poison.Double",
+    "name": "Ordonnateur — Corrosion",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Corrosion génère régulièrement une flaque de [Venin] sous ses pieds. Les adversaires se tenant dans cette zone voient leur défense réduite et subissent des dégâts continus.\nTant qu’il est en vie, l’Ordonnateur — Corrosion accélère également la perte de Sérum.",
+    "vars": {
+      "间隔时间": 5,
+      "持续时间": 10,
+      "最大召唤数量": 15,
+      "每次召唤数量": 1,
+      "召唤延迟": 3,
+      "BUFF延迟": 0.5,
+      "加成": {
+        "防御": -0.9
+      },
+      "DOT伤害": 0.1,
+      "DOT间隔": 2,
+      "伤害类型": [
+        "Dot",
+        "PhantomAvoid",
+        "Poison"
+      ]
+    }
+  },
+  {
+    "id": "Mon.Strong.Poison.Triple",
+    "name": "Ordonnateur — Corrosion",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Corrosion génère régulièrement une flaque de [Venin] sous ses pieds. Les adversaires se tenant dans cette zone voient leur défense réduite et subissent des dégâts continus.\nTant qu’il est en vie, l’Ordonnateur — Corrosion accélère également la perte de Sérum.",
+    "vars": {
+      "间隔时间": 5,
+      "持续时间": 10,
+      "最大召唤数量": 15,
+      "每次召唤数量": 1,
+      "召唤延迟": 3,
+      "BUFF延迟": 0.5,
+      "加成": {
+        "防御": -0.9
+      },
+      "DOT伤害": 0.1,
+      "DOT间隔": 2,
+      "伤害类型": [
+        "Dot",
+        "PhantomAvoid",
+        "Poison"
+      ]
+    }
+  },
+  {
+    "id": "Mon.Strong.Reflect",
+    "name": "Ordonnateur — Feu résiduel",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Feu résiduel s’imprègne périodiquement d’un [État de Feu résiduel] qui dure 2.5 s. S’il subit des dégâts durant cette période, l’état se dissipe immédiatement et déclenche une explosion infligeant des dégâts aux ennemis proches.",
+    "vars": {
+      "间隔时间": 7,
+      "BUFF延迟": 2.5,
+      "伤害倍率": 0.65,
+      "伤害类型": [
+        "PhantomAvoid",
+        "Reflect"
+      ],
+      "半径": 400,
+      "受击类型": "LightHit"
+    }
+  },
+  {
+    "id": "Mon.Strong.Reflect.Double",
+    "name": "Ordonnateur — Feu résiduel",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Feu résiduel s’imprègne périodiquement d’un [État de Feu résiduel] qui dure 2.5 s. S’il subit des dégâts durant cette période, l’état se dissipe immédiatement et déclenche une explosion infligeant des dégâts aux ennemis proches.",
+    "vars": {
+      "间隔时间": 6,
+      "BUFF延迟": 2.5,
+      "伤害倍率": 0.65,
+      "伤害类型": [
+        "PhantomAvoid",
+        "Reflect"
+      ],
+      "半径": 400,
+      "受击类型": "LightHit"
+    }
+  },
+  {
+    "id": "Mon.Strong.Reflect.Triple",
+    "name": "Ordonnateur — Feu résiduel",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Feu résiduel s’imprègne périodiquement d’un [État de Feu résiduel] qui dure 2.5 s. S’il subit des dégâts durant cette période, l’état se dissipe immédiatement et déclenche une explosion infligeant des dégâts aux ennemis proches.",
+    "vars": {
+      "间隔时间": 6,
+      "BUFF延迟": 2.5,
+      "伤害倍率": 0.65,
+      "伤害类型": [
+        "PhantomAvoid",
+        "Reflect"
+      ],
+      "半径": 400,
+      "受击类型": "LightHit"
+    }
+  },
+  {
+    "id": "Mon.Strong.Revenge",
+    "name": "Ordonnateur — Représailles",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nLorsqu’un Ordonnateur — Représailles est vaincu, les alliés proches gagnent [Renforcé].\n[Renforcé] : augmente l’Attaque, la Défense, la Vitesse d’attaque et la Vitesse de déplacement pendant 20 s.",
+    "vars": {
+      "BUFF延迟": 20,
+      "最大层数": 3,
+      "加成": {
+        "防御": 0.5,
+        "攻击": 0.5,
+        "技能速度": 0.4,
+        "移动速度": 0.4
+      }
+    }
+  },
+  {
+    "id": "Mon.Strong.Shield",
+    "name": "Ordonnateur — Gardien",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Gardien invoque périodiquement une [Barrière protectrice] autour de lui.\nLa [Barrière protectrice] dure 9 s et bloque toutes les balles et projectiles venant de l’extérieur.",
+    "vars": {
+      "间隔时间": 15,
+      "持续时间": 9,
+      "最大召唤数量": 1,
+      "每次召唤数量": 1
+    }
+  },
+  {
+    "id": "Mon.Strong.Threefold",
+    "name": "Ordonnateur — Spectre",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nAu début du combat, l’Ordonnateur — Spectre invoque 2 [Spectre]. Ces entités subissent davantage de dégâts, mais reproduisent exactement les techniques de combat de leur invocateur.",
+    "vars": {
+      "伤害加成倍率": 1.5,
+      "BUFF延迟": -1
+    }
+  },
+  {
+    "id": "Mon.Strong.Thunder",
+    "name": "Ordonnateur — Éclair foudroyant",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Éclair foudroyant émet périodiquement des [Orbes électriques] autour de lui.\n[Orbe électrique] : émet une décharge toutes les 0.5 s, infligeant des dégâts aux ennemis proches. Disparaît si elle subit une attaque.",
+    "vars": {
+      "间隔时间": 5,
+      "预警延迟": 2.5,
+      "持续时间": 1,
+      "伤害间隔": 0.5,
+      "伤害倍率": 0.1,
+      "伤害类型": [
+        "PhantomAvoid"
+      ],
+      "半径": 200
+    }
+  },
+  {
+    "id": "Mon.Strong.ThunderLaser",
+    "name": "Ordonnateur — Tempête électrique",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Tempête électrique génère périodiquement plusieurs [Cataclysmes foudroyants] autour de lui. Ceux-ci pivotent en continu et infligent des dégâts à tout ennemi qu’ils touchent.",
+    "vars": {
+      "间隔时间": 10,
+      "持续时间": 10,
+      "最大召唤数量": 8,
+      "每次召唤数量": 6,
+      "伤害倍率": 0.4,
+      "伤害类型": [
+        "PhantomAvoid",
+        "ThunderLaser"
+      ],
+      "半径": 50
+    }
+  },
+  {
+    "id": "Mon.Strong.ThunderLaser.Double",
+    "name": "Ordonnateur — Tempête électrique",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Tempête électrique génère périodiquement plusieurs [Cataclysmes foudroyants] autour de lui. Ceux-ci pivotent en continu et infligent des dégâts à tout ennemi qu’ils touchent.",
+    "vars": {
+      "间隔时间": 12,
+      "持续时间": 10,
+      "最大召唤数量": 8,
+      "每次召唤数量": 6,
+      "伤害倍率": 0.4,
+      "伤害类型": [
+        "PhantomAvoid",
+        "ThunderLaser"
+      ],
+      "半径": 50
+    }
+  },
+  {
+    "id": "Mon.Strong.ThunderLaser.Triple",
+    "name": "Ordonnateur — Tempête électrique",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Tempête électrique génère périodiquement plusieurs [Cataclysmes foudroyants] autour de lui. Ceux-ci pivotent en continu et infligent des dégâts à tout ennemi qu’ils touchent.",
+    "vars": {
+      "间隔时间": 12,
+      "持续时间": 10,
+      "最大召唤数量": 8,
+      "每次召唤数量": 6,
+      "伤害倍率": 0.4,
+      "伤害类型": [
+        "PhantomAvoid",
+        "ThunderLaser"
+      ],
+      "半径": 50
+    }
+  },
+  {
+    "id": "Mon.Strong.Vampire",
+    "name": "Ordonnateur — Bain de sang",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Bain de sang récupère des PV chaque fois qu’il inflige des dégâts.",
+    "vars": {
+      "吸血比例": 0.02
+    }
+  }
+]

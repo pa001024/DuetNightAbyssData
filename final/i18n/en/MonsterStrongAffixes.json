@@ -1,0 +1,368 @@
+[
+  {
+    "id": "Mon.Strong.Blood",
+    "name": "Primander - Decay",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Decay periodically creates a [Decaying Swamp] around itself.\n[Decaying Swamp]: Deals periodic damage to enemies within its radius, while simultaneously healing allies inside.",
+    "vars": {
+      "间隔时间": 10.0,
+      "持续时间": 10,
+      "最大召唤数量": 3,
+      "每次召唤数量": 3,
+      "召唤延迟": 2,
+      "BUFF延迟": 0.5,
+      "DOT伤害": 0.3,
+      "DOT间隔": 2,
+      "伤害类型": [
+        "Dot",
+        "PhantomAvoid",
+        "Blood"
+      ],
+      "HOT回复": 0.02,
+      "HOT间隔": 2,
+      "飞行速度": 600,
+      "命中延迟": 2
+    }
+  },
+  {
+    "id": "Mon.Strong.Burst",
+    "name": "Primander - Blast",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Blast periodically triggers an explosion centred on itself, launching nearby hostile units into the air.",
+    "vars": {
+      "间隔时间": 13,
+      "预警延迟": 2.5,
+      "伤害倍率": 0.65,
+      "伤害类型": [
+        "PhantomAvoid",
+        "Burst"
+      ],
+      "半径": 400,
+      "削韧值": 100,
+      "受击类型": "HitFly_XY500Z1000"
+    }
+  },
+  {
+    "id": "Mon.Strong.Burst.Double",
+    "name": "Primander - Blast",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Blast periodically triggers an explosion centred on itself, launching nearby hostile units into the air.",
+    "vars": {
+      "间隔时间": 5,
+      "预警延迟": 2.5,
+      "伤害倍率": 0.65,
+      "伤害类型": [
+        "PhantomAvoid",
+        "Burst"
+      ],
+      "半径": 400,
+      "削韧值": 100,
+      "受击类型": "HitFly_XY500Z1000"
+    }
+  },
+  {
+    "id": "Mon.Strong.Burst.Triple",
+    "name": "Primander - Blast",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Blast periodically triggers an explosion centred on itself, launching nearby hostile units into the air.",
+    "vars": {
+      "间隔时间": 5,
+      "预警延迟": 2.5,
+      "伤害倍率": 0.65,
+      "伤害类型": [
+        "PhantomAvoid",
+        "Burst"
+      ],
+      "半径": 400,
+      "削韧值": 100,
+      "受击类型": "HitFly_XY500Z1000"
+    }
+  },
+  {
+    "id": "Mon.Strong.Fade",
+    "name": "Primander - Wither",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Wither periodically unleashes 3 rotating [Withering Beams].\n[Withering Beam]: Lasts for 10s. Circles the Primander, dealing damage to targets on contact and reducing their Sanity.",
+    "vars": {
+      "间隔时间": 15,
+      "预警延迟": 0.2,
+      "持续时间": 12.5
+    }
+  },
+  {
+    "id": "Mon.Strong.Frozen",
+    "name": "Primander - Frostbite",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nWhen Primander – Frostbite is hit by a ranged weapon, it retaliates by firing icicles at the attacker, dealing damage and applying 1 stack of [Slowness].\n[Slowness]: Reduces Attack Speed and Movement Speed for 3s, up to 5 stacks.",
+    "vars": {
+      "飞行速度": 1500,
+      "持续时间": 5,
+      "追踪速度": 100,
+      "追踪范围": 150,
+      "伤害倍率": 0.1,
+      "伤害类型": [
+        "PhantomAvoid"
+      ],
+      "BUFF延迟": 3,
+      "时间膨胀倍率": 0.96,
+      "最大层数": 5
+    }
+  },
+  {
+    "id": "Mon.Strong.IceOrb",
+    "name": "Primander - Icehell",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Icehell periodically summons an [Icehell] beneath hostile targets.\n[Icehell]: Slows targets within its radius, then detonates after 2.5s, dealing AoE damage to all hostile targets in range.",
+    "vars": {
+      "间隔时间": 10,
+      "技能作用距离": 2500,
+      "持续时间": 4,
+      "最大召唤数量": 8,
+      "每次召唤数量": 1,
+      "BUFF延迟": 0.5,
+      "时间膨胀倍率": 0.5,
+      "伤害倍率": 0.65,
+      "伤害类型": [
+        "PhantomAvoid",
+        "IceOrb"
+      ]
+    }
+  },
+  {
+    "id": "Mon.Strong.Kamikaze",
+    "name": "Primander - Sacrifice",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Sacrifice explodes upon defeat, dealing damage to all hostile targets within range.",
+    "vars": {
+      "飞行速度": 0,
+      "持续时间": 5,
+      "生效延迟": 2.5,
+      "半径": 400,
+      "伤害倍率": 0.65,
+      "伤害类型": [
+        "PhantomAvoid"
+      ],
+      "受击类型": "LightHit",
+      "削韧值": 200
+    }
+  },
+  {
+    "id": "Mon.Strong.Poison",
+    "name": "Primander - Corrosion",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Corrosion periodically generates a pool of [Venom] beneath its feet.\n[Venom]: Inflicts a DEF reduction and deals periodic damage to targets within its area.\nAdditionally, Primander – Corrosion accelerates Serum decay while alive.",
+    "vars": {
+      "间隔时间": 10,
+      "持续时间": 10,
+      "最大召唤数量": 15,
+      "每次召唤数量": 1,
+      "召唤延迟": 3,
+      "BUFF延迟": 0.5,
+      "加成": {
+        "防御": -0.9
+      },
+      "DOT伤害": 0.1,
+      "DOT间隔": 2,
+      "伤害类型": [
+        "Dot",
+        "PhantomAvoid",
+        "Poison"
+      ]
+    }
+  },
+  {
+    "id": "Mon.Strong.Poison.Double",
+    "name": "Primander - Corrosion",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Corrosion periodically generates a pool of [Venom] beneath its feet.\n[Venom]: Inflicts a DEF reduction and deals periodic damage to targets within its area.\nAdditionally, Primander – Corrosion accelerates Serum decay while alive.",
+    "vars": {
+      "间隔时间": 5,
+      "持续时间": 10,
+      "最大召唤数量": 15,
+      "每次召唤数量": 1,
+      "召唤延迟": 3,
+      "BUFF延迟": 0.5,
+      "加成": {
+        "防御": -0.9
+      },
+      "DOT伤害": 0.1,
+      "DOT间隔": 2,
+      "伤害类型": [
+        "Dot",
+        "PhantomAvoid",
+        "Poison"
+      ]
+    }
+  },
+  {
+    "id": "Mon.Strong.Poison.Triple",
+    "name": "Primander - Corrosion",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Corrosion periodically generates a pool of [Venom] beneath its feet.\n[Venom]: Inflicts a DEF reduction and deals periodic damage to targets within its area.\nAdditionally, Primander – Corrosion accelerates Serum decay while alive.",
+    "vars": {
+      "间隔时间": 5,
+      "持续时间": 10,
+      "最大召唤数量": 15,
+      "每次召唤数量": 1,
+      "召唤延迟": 3,
+      "BUFF延迟": 0.5,
+      "加成": {
+        "防御": -0.9
+      },
+      "DOT伤害": 0.1,
+      "DOT间隔": 2,
+      "伤害类型": [
+        "Dot",
+        "PhantomAvoid",
+        "Poison"
+      ]
+    }
+  },
+  {
+    "id": "Mon.Strong.Reflect",
+    "name": "Primander - Glimmer",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Glimmer periodically applies [Glimmer] to itself.\n[Glimmer]: Lasts for 2.5s. During this time, taking damage will trigger an explosion that deals AoE damage to hostile targets within range.",
+    "vars": {
+      "间隔时间": 7,
+      "BUFF延迟": 2.5,
+      "伤害倍率": 0.65,
+      "伤害类型": [
+        "PhantomAvoid",
+        "Reflect"
+      ],
+      "半径": 400,
+      "受击类型": "LightHit"
+    }
+  },
+  {
+    "id": "Mon.Strong.Reflect.Double",
+    "name": "Primander - Glimmer",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Glimmer periodically applies [Glimmer] to itself.\n[Glimmer]: Lasts for 2.5s. During this time, taking damage will trigger an explosion that deals AoE damage to hostile targets within range.",
+    "vars": {
+      "间隔时间": 6,
+      "BUFF延迟": 2.5,
+      "伤害倍率": 0.65,
+      "伤害类型": [
+        "PhantomAvoid",
+        "Reflect"
+      ],
+      "半径": 400,
+      "受击类型": "LightHit"
+    }
+  },
+  {
+    "id": "Mon.Strong.Reflect.Triple",
+    "name": "Primander - Glimmer",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Glimmer periodically applies [Glimmer] to itself.\n[Glimmer]: Lasts for 2.5s. During this time, taking damage will trigger an explosion that deals AoE damage to hostile targets within range.",
+    "vars": {
+      "间隔时间": 6,
+      "BUFF延迟": 2.5,
+      "伤害倍率": 0.65,
+      "伤害类型": [
+        "PhantomAvoid",
+        "Reflect"
+      ],
+      "半径": 400,
+      "受击类型": "LightHit"
+    }
+  },
+  {
+    "id": "Mon.Strong.Revenge",
+    "name": "Primander - Revenge",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Revenge empowers nearby allies when defeated.\n[Empowered]: Increases ATK, DEF, Movement Speed, and Attack Speed for 20s.",
+    "vars": {
+      "BUFF延迟": 20,
+      "最大层数": 3,
+      "加成": {
+        "防御": 0.5,
+        "攻击": 0.5,
+        "技能速度": 0.4,
+        "移动速度": 0.4
+      }
+    }
+  },
+  {
+    "id": "Mon.Strong.Shield",
+    "name": "Primander - Guard",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Guard periodically summons a [Guardian Field] around itself.\n[Guardian Field]: Lasts for 9s and blocks all incoming hostile bullets and projectiles.",
+    "vars": {
+      "间隔时间": 15,
+      "持续时间": 9,
+      "最大召唤数量": 1,
+      "每次召唤数量": 1
+    }
+  },
+  {
+    "id": "Mon.Strong.Threefold",
+    "name": "Primander - Phantom",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Phantom summons 2 [Phantom(s)] at the start of battle.\n[Phantom]: Takes increased damage but mirrors its summoner's combat abilities.",
+    "vars": {
+      "伤害加成倍率": 1.5,
+      "BUFF延迟": -1
+    }
+  },
+  {
+    "id": "Mon.Strong.Thunder",
+    "name": "Primander - Thunderclap",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Thunderclap periodically releases [Electro Orbs] that radiate outward.\n[Electro Orb]: Discharges electricity every 0.5s, dealing damage to nearby hostile targets. Disappears after being attacked.",
+    "vars": {
+      "间隔时间": 5,
+      "预警延迟": 2.5,
+      "持续时间": 1,
+      "伤害间隔": 0.5,
+      "伤害倍率": 0.1,
+      "伤害类型": [
+        "PhantomAvoid"
+      ],
+      "半径": 200
+    }
+  },
+  {
+    "id": "Mon.Strong.ThunderLaser",
+    "name": "Primander - Thunderstorm",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Thunderstorm periodically summons multiple [Thunder Hells] around itself.\n[Thunder Hell]: Spins across the field relentlessly, dealing damage to any hostile target on contact.",
+    "vars": {
+      "间隔时间": 10,
+      "持续时间": 10,
+      "最大召唤数量": 8,
+      "每次召唤数量": 6,
+      "伤害倍率": 0.4,
+      "伤害类型": [
+        "PhantomAvoid",
+        "ThunderLaser"
+      ],
+      "半径": 50
+    }
+  },
+  {
+    "id": "Mon.Strong.ThunderLaser.Double",
+    "name": "Primander - Thunderstorm",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Thunderstorm periodically summons multiple [Thunder Hells] around itself.\n[Thunder Hell]: Spins across the field relentlessly, dealing damage to any hostile target on contact.",
+    "vars": {
+      "间隔时间": 12,
+      "持续时间": 10,
+      "最大召唤数量": 8,
+      "每次召唤数量": 6,
+      "伤害倍率": 0.4,
+      "伤害类型": [
+        "PhantomAvoid",
+        "ThunderLaser"
+      ],
+      "半径": 50
+    }
+  },
+  {
+    "id": "Mon.Strong.ThunderLaser.Triple",
+    "name": "Primander - Thunderstorm",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Thunderstorm periodically summons multiple [Thunder Hells] around itself.\n[Thunder Hell]: Spins across the field relentlessly, dealing damage to any hostile target on contact.",
+    "vars": {
+      "间隔时间": 12,
+      "持续时间": 10,
+      "最大召唤数量": 8,
+      "每次召唤数量": 6,
+      "伤害倍率": 0.4,
+      "伤害类型": [
+        "PhantomAvoid",
+        "ThunderLaser"
+      ],
+      "半径": 50
+    }
+  },
+  {
+    "id": "Mon.Strong.Vampire",
+    "name": "Primander - Bloodbath",
+    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Bloodbath restores its own HP when it deals damage.",
+    "vars": {
+      "吸血比例": 0.02
+    }
+  }
+]

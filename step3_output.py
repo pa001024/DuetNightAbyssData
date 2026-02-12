@@ -38,6 +38,7 @@ from processor.weapon_accessory_processor import WeaponAccessoryProcessor
 from processor.weapon_skin_processor import WeaponSkinProcessor
 from processor.head_sculpture_processor import HeadSculptureProcessor
 from processor.impression_shop_processor import ImpressionShopProcessor
+from processor.monster_strong_affixes_processor import MonsterStrongAffixesProcessor
 from processor.rouge_processor import (
     RougeLikeBlessingProcessor,
     RougeLikeContractProcessor,
@@ -262,6 +263,7 @@ class FinalProcessor:
             "WeaponSkin": WeaponSkinProcessor,
             "HeadSculpture": HeadSculptureProcessor,
             "ImpressionShop": ImpressionShopProcessor,
+            "MonsterStrongAffixes": MonsterStrongAffixesProcessor,
             "RougeLikeBlessing": RougeLikeBlessingProcessor,
             "RougeLikeContract": RougeLikeContractProcessor,
             "RougeLikeRoom": RougeLikeRoomProcessor,
@@ -408,6 +410,7 @@ if __name__ == "__main__":
         "WeaponSkin",
         "HeadSculpture",
         "ImpressionShop",
+        "MonsterStrongAffixes",
         "RougeLikeBlessing",
         "RougeLikeContract",
         "RougeLikeRoom",
