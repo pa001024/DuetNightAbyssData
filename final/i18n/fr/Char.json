@@ -15734,7 +15734,7 @@
       "[Chute foudroyante] niveau +2 ; [Effleurer les cieux] niveau +1.",
       "Les Attaques plongeantes au corps à corps infligent des Dégâts Électro supplémentaires équivalents à 12% de la Puissance de compétence de Yuming, jusqu’à un maximum de 36%.",
       "[Écailles sinistres] niveau +2 ; [Effleurer les cieux] niveau +1.",
-      "Sous l’état [Éveil de Xuanjiao], la Pénétration de tous les Attributs augmente de 25%.\nAprès avoir déclenché cumulativement 6 effets de dégâts de [Fureur foudroyante], une instance supplémentaire de dégâts de [Fureur foudroyante], équivalente à son multiplicateur initial de 130%, est infligée à toutes les cibles affectées. Cet effet ne peut être déclenché qu’une fois toutes les 0.60 s."
+      "Sous l’état [Éveil de Xuanjiao], la Pénétration de tous les Attributs augmente de 25%.\nAprès avoir déclenché cumulativement 6 effets de dégâts de [Fureur foudroyante], une instance supplémentaire de dégâts de [Fureur foudroyante], équivalente à son multiplicateur initial de 130%, est infligée à toutes les cibles affectées. Cet effet ne peut être déclenché qu’une fois toutes les 6 s."
     ]
   },
   {

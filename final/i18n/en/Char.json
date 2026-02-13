@@ -15734,7 +15734,7 @@
       "[Precipitous Thunderfall] Level +2; [Soaring Sky-High] Level +1.",
       "Plunging Attack deals additional Electro damage equal to 12% of Yuming's Skill Intensity, with a maximum of 36%.",
       "[Grimscales] Level +2; [Soaring Sky-High] Level +1.",
-      "During [Xuanjiao Manifest], increases PEN stats by 25%. After triggering [Thunderous Onslaught] 6 times, deals an additional instance of [Thunderous Onslaught] damage at 130% of its original multiplier to all targets affected. Can trigger once every 0.60s."
+      "During [Xuanjiao Manifest], increases PEN stats by 25%. After triggering [Thunderous Onslaught] 6 times, deals an additional instance of [Thunderous Onslaught] damage at 130% of its original multiplier to all targets affected. Can trigger once every 6s."
     ]
   },
   {

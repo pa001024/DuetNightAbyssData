@@ -1897,8 +1897,6 @@ class CharProcessor(BaseProcessor):
             # 替换参数占位符 - 每个溯源描述可能有多个参数
             # 按照顺序替换 #1, #2, #3... 等占位符
             for param_idx, parameter in enumerate(char_grade_parameter):
-                placeholder = f"#{param_idx + 1}"
-
                 # 计算参数值
                 if isinstance(parameter, (int, float)):
                     param_value = parameter
@@ -1958,7 +1956,11 @@ class CharProcessor(BaseProcessor):
                 else:
                     param_value = str(parameter)
 
-                grade_desc = grade_desc.replace(placeholder, str(param_value))
+                # 使用精确占位符替换，避免 #1 误替换 #10、#11 等双位占位符
+                placeholder_pattern = rf"#{param_idx + 1}(?!\d)"
+                grade_desc = re.sub(
+                    placeholder_pattern, lambda _: str(param_value), grade_desc
+                )
 
             traces.append(grade_desc)
 
